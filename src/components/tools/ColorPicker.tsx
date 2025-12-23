@@ -1,0 +1,188 @@
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
+
+export default function ColorPicker() {
+  const t = useTranslations('tools');
+  const [color, setColor] = useState('#3b82f6');
+  const [recentColors, setRecentColors] = useState<string[]>([]);
+  const [copied, setCopied] = useState('');
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  // Convert hex to RGB
+  const hexToRgb = (hex: string) => {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16),
+    } : { r: 0, g: 0, b: 0 };
+  };
+
+  // Convert RGB to HSL
+  const rgbToHsl = (r: number, g: number, b: number) => {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h = 0, s = 0;
+    const l = (max + min) / 2;
+
+    if (max !== min) {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+        case g: h = ((b - r) / d + 2) / 6; break;
+        case b: h = ((r - g) / d + 4) / 6; break;
+      }
+    }
+    return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l * 100) };
+  };
+
+  const rgb = hexToRgb(color);
+  const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+
+  const colorFormats = [
+    { label: 'HEX', value: color.toUpperCase() },
+    { label: 'RGB', value: `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` },
+    { label: 'RGBA', value: `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 1)` },
+    { label: 'HSL', value: `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)` },
+  ];
+
+  const copyValue = async (label: string, value: string) => {
+    await navigator.clipboard.writeText(value);
+    setCopied(label);
+    setTimeout(() => setCopied(''), 2000);
+  };
+
+  const addToRecent = (newColor: string) => {
+    setRecentColors(prev => {
+      const filtered = prev.filter(c => c !== newColor);
+      return [newColor, ...filtered].slice(0, 12);
+    });
+  };
+
+  const handleColorChange = (newColor: string) => {
+    setColor(newColor);
+    addToRecent(newColor);
+  };
+
+  // Preset colors
+  const presetColors = [
+    '#ef4444', '#f97316', '#f59e0b', '#eab308', '#84cc16', '#22c55e',
+    '#10b981', '#14b8a6', '#06b6d4', '#0ea5e9', '#3b82f6', '#6366f1',
+    '#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e', '#000000',
+    '#374151', '#6b7280', '#9ca3af', '#d1d5db', '#f3f4f6', '#ffffff',
+  ];
+
+  return (
+    <div className="space-y-6">
+      {/* Main Color Display */}
+      <div className="flex gap-6 items-start">
+        <div
+          className="w-48 h-48 rounded-xl border-4 border-gray-700 shadow-lg"
+          style={{ backgroundColor: color }}
+        />
+        <div className="flex-1 space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-2">{t('colorPicker.selectColor')}</label>
+            <input
+              type="color"
+              value={color}
+              onChange={(e) => handleColorChange(e.target.value)}
+              className="w-full h-12 cursor-pointer rounded-lg"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">HEX</label>
+            <input
+              type="text"
+              value={color}
+              onChange={(e) => {
+                if (/^#[0-9a-fA-F]{6}$/.test(e.target.value)) {
+                  handleColorChange(e.target.value);
+                }
+              }}
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg font-mono"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Color Values */}
+      <div className="grid grid-cols-2 gap-3">
+        {colorFormats.map(({ label, value }) => (
+          <div key={label} className="p-3 bg-gray-800 rounded-lg">
+            <div className="flex justify-between items-center mb-1">
+              <span className="text-xs text-gray-300">{label}</span>
+              <button
+                onClick={() => copyValue(label, value)}
+                className={`text-xs px-2 py-0.5 rounded ${copied === label ? 'bg-green-600' : 'bg-gray-700'}`}
+              >
+                {copied === label ? t('copied') : t('copy')}
+              </button>
+            </div>
+            <div className="font-mono text-sm truncate">{value}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Preset Colors */}
+      <div>
+        <label className="block text-sm font-medium mb-2">{t('colorPicker.presets')}</label>
+        <div className="flex flex-wrap gap-2">
+          {presetColors.map((c) => (
+            <button
+              key={c}
+              onClick={() => handleColorChange(c)}
+              className={`w-8 h-8 rounded-lg border-2 transition-transform hover:scale-110 ${
+                color === c ? 'border-white' : 'border-transparent'
+              }`}
+              style={{ backgroundColor: c }}
+              title={c}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Recent Colors */}
+      {recentColors.length > 0 && (
+        <div>
+          <label className="block text-sm font-medium mb-2">{t('colorPicker.recent')}</label>
+          <div className="flex flex-wrap gap-2">
+            {recentColors.map((c, i) => (
+              <button
+                key={`${c}-${i}`}
+                onClick={() => setColor(c)}
+                className={`w-8 h-8 rounded-lg border-2 transition-transform hover:scale-110 ${
+                  color === c ? 'border-white' : 'border-gray-600'
+                }`}
+                style={{ backgroundColor: c }}
+                title={c}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Color Info */}
+      <div className="bg-gray-800 rounded-lg p-4">
+        <h3 className="text-sm font-medium mb-3">{t('colorPicker.info')}</h3>
+        <div className="grid grid-cols-3 gap-4 text-center">
+          <div>
+            <div className="text-2xl font-bold text-red-400">{rgb.r}</div>
+            <div className="text-xs text-gray-300">{t('colorPicker.red')}</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-green-400">{rgb.g}</div>
+            <div className="text-xs text-gray-300">{t('colorPicker.green')}</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-blue-400">{rgb.b}</div>
+            <div className="text-xs text-gray-300">{t('colorPicker.blue')}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

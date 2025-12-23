@@ -1,0 +1,249 @@
+'use client';
+
+import dynamic from 'next/dynamic';
+
+// Dynamically import tool components
+const toolComponents: Record<string, React.ComponentType> = {
+  'json-formatter': dynamic(() => import('./JsonFormatter')),
+  'base64': dynamic(() => import('./Base64')),
+  'uuid-generator': dynamic(() => import('./UuidGenerator')),
+  'url-encoder': dynamic(() => import('./UrlEncoder')),
+  'password-generator': dynamic(() => import('./PasswordGenerator')),
+  'hash-generator': dynamic(() => import('./HashGenerator')),
+  'qr-generator': dynamic(() => import('./QrGenerator')),
+  'color-converter': dynamic(() => import('./ColorConverter')),
+  'timestamp-converter': dynamic(() => import('./TimestampConverter')),
+  'word-counter': dynamic(() => import('./WordCounter')),
+  'case-converter': dynamic(() => import('./CaseConverter')),
+  'html-encoder': dynamic(() => import('./HtmlEncoder')),
+  'markdown-preview': dynamic(() => import('./MarkdownPreview')),
+  'lorem-ipsum': dynamic(() => import('./LoremIpsum')),
+  'regex-tester': dynamic(() => import('./RegexTester')),
+  // New tools
+  'jwt-decoder': dynamic(() => import('./JwtDecoder')),
+  'diff-checker': dynamic(() => import('./DiffChecker')),
+  'json-to-csv': dynamic(() => import('./JsonToCsv')),
+  'image-to-base64': dynamic(() => import('./ImageToBase64')),
+  'cron-generator': dynamic(() => import('./CronGenerator')),
+  'text-to-slug': dynamic(() => import('./TextToSlug')),
+  'number-base-converter': dynamic(() => import('./NumberBaseConverter')),
+  'json-path-tester': dynamic(() => import('./JsonPathTester')),
+  // Batch 2 tools
+  'xml-formatter': dynamic(() => import('./XmlFormatter')),
+  'chinese-converter': dynamic(() => import('./ChineseConverter')),
+  'unit-converter': dynamic(() => import('./UnitConverter')),
+  'gradient-generator': dynamic(() => import('./GradientGenerator')),
+  'unicode-converter': dynamic(() => import('./UnicodeConverter')),
+  // Batch 3 tools
+  'code-minifier': dynamic(() => import('./CodeMinifier')),
+  'sql-formatter': dynamic(() => import('./SqlFormatter')),
+  'pinyin-converter': dynamic(() => import('./PinyinConverter')),
+  'color-picker': dynamic(() => import('./ColorPicker')),
+  'aspect-ratio': dynamic(() => import('./AspectRatioCalculator')),
+  // Batch 4 tools
+  'css-beautifier': dynamic(() => import('./CssBeautifier')),
+  'js-beautifier': dynamic(() => import('./JsBeautifier')),
+  'html-preview': dynamic(() => import('./HtmlPreview')),
+  'ip-lookup': dynamic(() => import('./IpLookup')),
+  'morse-code': dynamic(() => import('./MorseCode')),
+  // Batch 5 tools
+  'random-generator': dynamic(() => import('./RandomGenerator')),
+  'text-reverser': dynamic(() => import('./TextReverser')),
+  'line-counter': dynamic(() => import('./LineCounter')),
+  'string-escape': dynamic(() => import('./StringEscape')),
+  'yaml-json': dynamic(() => import('./YamlJson')),
+  // Batch 6 tools
+  'date-calculator': dynamic(() => import('./DateCalculator')),
+  'text-deduplicator': dynamic(() => import('./TextDeduplicator')),
+  'color-blender': dynamic(() => import('./ColorBlender')),
+  'json-sorter': dynamic(() => import('./JsonSorter')),
+  'placeholder-image': dynamic(() => import('./PlaceholderImage')),
+  // Batch 7 tools
+  'text-encryption': dynamic(() => import('./TextEncryption')),
+  'file-hash': dynamic(() => import('./FileHash')),
+  'html-table-generator': dynamic(() => import('./HtmlTableGenerator')),
+  'json-schema-validator': dynamic(() => import('./JsonSchemaValidator')),
+  'regex-patterns': dynamic(() => import('./RegexPatterns')),
+  // Batch 8 tools
+  'byte-counter': dynamic(() => import('./ByteCounter')),
+  'json-to-typescript': dynamic(() => import('./JsonToTypescript')),
+  'svg-optimizer': dynamic(() => import('./SvgOptimizer')),
+  'text-to-binary': dynamic(() => import('./TextToBinary')),
+  'markdown-to-html': dynamic(() => import('./MarkdownToHtml')),
+  // Batch 9 tools
+  'html-minifier': dynamic(() => import('./HtmlMinifier')),
+  'json-diff': dynamic(() => import('./JsonDiff')),
+  'base32': dynamic(() => import('./Base32')),
+  'epoch-converter': dynamic(() => import('./EpochConverter')),
+  'css-unit-converter': dynamic(() => import('./CssUnitConverter')),
+  // Batch 10 tools
+  'text-statistics': dynamic(() => import('./TextStatistics')),
+  'hex-editor': dynamic(() => import('./HexEditor')),
+  'color-palette': dynamic(() => import('./ColorPalette')),
+  'http-status': dynamic(() => import('./HttpStatus')),
+  'json-to-yaml': dynamic(() => import('./JsonToYaml')),
+  'data-uri': dynamic(() => import('./DataUri')),
+  'text-compare': dynamic(() => import('./TextCompare')),
+  'json-to-go': dynamic(() => import('./JsonToGo')),
+  'html-to-jsx': dynamic(() => import('./HtmlToJsx')),
+  'chmod-calculator': dynamic(() => import('./ChmodCalculator')),
+  // Batch 11 tools
+  'barcode-generator': dynamic(() => import('./BarcodeGenerator')),
+  'text-to-speech': dynamic(() => import('./TextToSpeech')),
+  'url-parser': dynamic(() => import('./UrlParser')),
+  'json-to-xml': dynamic(() => import('./JsonToXml')),
+  'text-wrapper': dynamic(() => import('./TextWrapper')),
+  'csv-to-json': dynamic(() => import('./CsvToJson')),
+  'html-entity': dynamic(() => import('./HtmlEntityConverter')),
+  'number-formatter': dynamic(() => import('./NumberFormatter')),
+  // Batch 12 - Security Tools
+  'hmac-generator': dynamic(() => import('./HmacGenerator')),
+  'password-strength': dynamic(() => import('./PasswordStrength')),
+  'totp-generator': dynamic(() => import('./TotpGenerator')),
+  // Batch 13 - Network Tools
+  'user-agent-parser': dynamic(() => import('./UserAgentParser')),
+  'cidr-calculator': dynamic(() => import('./CidrCalculator')),
+  'http-header-parser': dynamic(() => import('./HttpHeaderParser')),
+  // Batch 14 - Math Tools
+  'percentage-calculator': dynamic(() => import('./PercentageCalculator')),
+  'statistics-calculator': dynamic(() => import('./StatisticsCalculator')),
+  'scientific-calculator': dynamic(() => import('./ScientificCalculator')),
+  // Batch 15 - Text Tools
+  'text-sorter': dynamic(() => import('./TextSorter')),
+  'text-extractor': dynamic(() => import('./TextExtractor')),
+  'emoji-picker': dynamic(() => import('./EmojiPicker')),
+  // Batch 16 - Converter Tools
+  'json-to-sql': dynamic(() => import('./JsonToSql')),
+  'toml-json': dynamic(() => import('./TomlJson')),
+  'json-to-java': dynamic(() => import('./JsonToJava')),
+  'json-to-python': dynamic(() => import('./JsonToPython')),
+  'json-to-kotlin': dynamic(() => import('./JsonToKotlin')),
+  // Batch 17 - Image Tools
+  'image-compressor': dynamic(() => import('./ImageCompressor')),
+  'image-converter': dynamic(() => import('./ImageConverter')),
+  'favicon-generator': dynamic(() => import('./FaviconGenerator')),
+  'image-cropper': dynamic(() => import('./ImageCropper')),
+  // Batch 18 - Development Tools
+  'gitignore-generator': dynamic(() => import('./GitignoreGenerator')),
+  'docker-compose-generator': dynamic(() => import('./DockerComposeGenerator')),
+  'package-json-generator': dynamic(() => import('./PackageJsonGenerator')),
+  // Batch 19 - New Popular Tools
+  'json-minifier': dynamic(() => import('./JsonMinifier')),
+  'timezone-converter': dynamic(() => import('./TimezoneConverter')),
+  'color-contrast-checker': dynamic(() => import('./ColorContrastChecker')),
+  'markdown-table-generator': dynamic(() => import('./MarkdownTableGenerator')),
+  'base58': dynamic(() => import('./Base58')),
+  // Batch 20 - SEO & Development Tools
+  'meta-tag-generator': dynamic(() => import('./MetaTagGenerator')),
+  'robots-txt-generator': dynamic(() => import('./RobotsTxtGenerator')),
+  'opengraph-preview': dynamic(() => import('./OpenGraphPreview')),
+  'css-grid-generator': dynamic(() => import('./CssGridGenerator')),
+  'css-flexbox-generator': dynamic(() => import('./CssFlexboxGenerator')),
+  'jwt-generator': dynamic(() => import('./JwtGenerator')),
+  'cron-explainer': dynamic(() => import('./CronExplainer')),
+  'json-to-graphql': dynamic(() => import('./JsonToGraphql')),
+  'sql-to-mongo': dynamic(() => import('./SqlToMongo')),
+  // Batch 21 - Code & CSS Tools
+  'json-to-csharp': dynamic(() => import('./JsonToCsharp')),
+  'json-to-rust': dynamic(() => import('./JsonToRust')),
+  'json-to-swift': dynamic(() => import('./JsonToSwift')),
+  'css-minifier': dynamic(() => import('./CssMinifier')),
+  'js-minifier': dynamic(() => import('./JsMinifier')),
+  'box-shadow-generator': dynamic(() => import('./BoxShadowGenerator')),
+  'border-radius-generator': dynamic(() => import('./BorderRadiusGenerator')),
+  'text-to-ascii-art': dynamic(() => import('./TextToAsciiArt')),
+  // Batch 22 - Utility Tools
+  'color-shades-generator': dynamic(() => import('./ColorShadesGenerator')),
+  'json-flattener': dynamic(() => import('./JsonFlattener')),
+  'base85': dynamic(() => import('./Base85')),
+  'html-to-markdown': dynamic(() => import('./HtmlToMarkdown')),
+  'regex-generator': dynamic(() => import('./RegexGenerator')),
+  'url-shortener-preview': dynamic(() => import('./UrlShortenerPreview')),
+  // Batch 23 - More Utility Tools
+  'json-viewer': dynamic(() => import('./JsonViewer')),
+  'xml-to-json': dynamic(() => import('./XmlToJson')),
+  'ip-address-generator': dynamic(() => import('./IpAddressGenerator')),
+  'css-gradient-text': dynamic(() => import('./CssGradientText')),
+  'sitemap-generator': dynamic(() => import('./SitemapGenerator')),
+  // Batch 24 - Advanced Tools
+  'json-to-php': dynamic(() => import('./JsonToPhp')),
+  'css-filter-generator': dynamic(() => import('./CssFilterGenerator')),
+  'text-diff-patch': dynamic(() => import('./TextDiffPatch')),
+  'encoding-detector': dynamic(() => import('./EncodingDetector')),
+  // Batch 25 - More Tools
+  'css-clip-path-generator': dynamic(() => import('./CssClipPathGenerator')),
+  'uuid-validator': dynamic(() => import('./UuidValidator')),
+  'text-hash-comparator': dynamic(() => import('./TextHashComparator')),
+  'json-path-finder': dynamic(() => import('./JsonPathFinder')),
+  'canvas-drawing': dynamic(() => import('./CanvasDrawing')),
+  // Batch 26 - New Tools
+  'json-escape': dynamic(() => import('./JsonEscape')),
+  'css-animation-generator': dynamic(() => import('./CssAnimationGenerator')),
+  'text-case-counter': dynamic(() => import('./TextCaseCounter')),
+  'dns-lookup': dynamic(() => import('./DnsLookup')),
+  'image-resizer': dynamic(() => import('./ImageResizer')),
+  // Batch 27 - Popular Overseas Tools
+  'ssl-checker': dynamic(() => import('./SslChecker')),
+  'whois-lookup': dynamic(() => import('./WhoisLookup')),
+  'port-reference': dynamic(() => import('./PortScanner')),
+  'privacy-policy-generator': dynamic(() => import('./PrivacyPolicyGenerator')),
+  'terms-generator': dynamic(() => import('./TermsGenerator')),
+  'cookie-policy-generator': dynamic(() => import('./CookiePolicyGenerator')),
+  'json-to-tsv': dynamic(() => import('./JsonToTsv')),
+  'csv-viewer': dynamic(() => import('./CsvViewer')),
+  'htaccess-generator': dynamic(() => import('./HtaccessGenerator')),
+  'nginx-config-generator': dynamic(() => import('./NginxConfigGenerator')),
+  'curl-converter': dynamic(() => import('./CurlConverter')),
+  'reading-time-calculator': dynamic(() => import('./ReadingTimeCalculator')),
+  // Batch 28 - New Popular Tools
+  'open-graph-generator': dynamic(() => import('./OpenGraphGenerator')),
+  'twitter-card-generator': dynamic(() => import('./TwitterCardGenerator')),
+  'mime-type-lookup': dynamic(() => import('./MimeTypeLookup')),
+  'http-status-codes': dynamic(() => import('./HttpStatusCodes')),
+  'string-obfuscator': dynamic(() => import('./StringObfuscator')),
+  'text-cleaner': dynamic(() => import('./TextCleaner')),
+  'list-randomizer': dynamic(() => import('./ListRandomizer')),
+  'sql-generator': dynamic(() => import('./SqlGenerator')),
+  // Batch 29 - New Tools from toolfk.com
+  'htaccess-to-nginx': dynamic(() => import('./HtaccessToNginx')),
+  'js-obfuscator': dynamic(() => import('./JsObfuscator')),
+  'image-watermark': dynamic(() => import('./ImageWatermark')),
+  'svg-to-image': dynamic(() => import('./SvgToImage')),
+  'hex-base64-converter': dynamic(() => import('./HexBase64Converter')),
+  // Batch 30 - More Tools
+  'pdf-to-base64': dynamic(() => import('./PdfToBase64')),
+  'audio-to-base64': dynamic(() => import('./AudioToBase64')),
+  'video-to-base64': dynamic(() => import('./VideoToBase64')),
+  'file-size-calculator': dynamic(() => import('./FileSizeCalculator')),
+  'ascii-table': dynamic(() => import('./AsciiTable')),
+  // Batch 31 - More Tools
+  'text-to-hex': dynamic(() => import('./TextToHex')),
+  'css-variables-generator': dynamic(() => import('./CssVariablesGenerator')),
+  'lorem-picsum': dynamic(() => import('./LoremPicsum')),
+  'regex-escape': dynamic(() => import('./RegexEscape')),
+  'html-to-text': dynamic(() => import('./HtmlToText')),
+  'binary-to-decimal': dynamic(() => import('./BinaryToDecimal')),
+  'octal-converter': dynamic(() => import('./OctalConverter')),
+  'text-to-nato': dynamic(() => import('./TextToNato')),
+  'crc32-calculator': dynamic(() => import('./Crc32Calculator')),
+  'mac-address-generator': dynamic(() => import('./MacAddressGenerator')),
+  // Batch 32 - New Popular Tools (to reach 200)
+  'ip-validator': dynamic(() => import('./IpValidator')),
+  'json-merger': dynamic(() => import('./JsonMerger')),
+  'text-template': dynamic(() => import('./TextTemplate')),
+  'base-calculator': dynamic(() => import('./BaseCalculator')),
+  'color-name-finder': dynamic(() => import('./ColorNameFinder')),
+  'char-frequency': dynamic(() => import('./CharFrequency')),
+  'json-to-dart': dynamic(() => import('./JsonToDart')),
+  'sql-to-json': dynamic(() => import('./SqlToJson')),
+};
+
+export default function ToolWrapper({ slug }: { slug: string }) {
+  const ToolComponent = toolComponents[slug];
+
+  if (!ToolComponent) {
+    return <div className="text-center text-gray-300">Tool not found</div>;
+  }
+
+  return <ToolComponent />;
+}
