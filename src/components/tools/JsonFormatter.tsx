@@ -22,7 +22,7 @@ export default function JsonFormatter() {
       setOutput(JSON.stringify(parsed, null, 2));
       setError('');
     } catch (_e) {
-      setError(tg('json.invalidJson') + ': ' + (e as Error).message);
+      setError(tg('json.invalidJson') + ': ' + (_e as Error).message);
       setOutput('');
     }
   };
@@ -38,7 +38,7 @@ export default function JsonFormatter() {
       setOutput(JSON.stringify(parsed));
       setError('');
     } catch (_e) {
-      setError(tg('json.invalidJson') + ': ' + (e as Error).message);
+      setError(tg('json.invalidJson') + ': ' + (_e as Error).message);
       setOutput('');
     }
   };

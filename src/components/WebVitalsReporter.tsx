@@ -43,7 +43,7 @@ export default function WebVitalsReporter({
     });
 
     // 动态导入 web-vitals 库
-    import('web-vitals').then(({ onCLS, onFCP, onFID, onINP, onLCP, onTTFB }) => {
+    import('web-vitals').then(({ onCLS, onFCP, onINP, onLCP, onTTFB }) => {
       // 创建报告函数
       const handleMetric = (metric: {
         name: string;
@@ -66,7 +66,6 @@ export default function WebVitalsReporter({
       // 注册所有 Core Web Vitals 指标
       onCLS(handleMetric);
       onFCP(handleMetric);
-      onFID(handleMetric);
       onINP(handleMetric);
       onLCP(handleMetric);
       onTTFB(handleMetric);

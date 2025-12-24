@@ -24,7 +24,7 @@ export default function QrGenerator() {
       });
       setQrDataUrl(dataUrl);
     } catch (_err) {
-      console.error('Error generating QR code:', err);
+      console.error('Error generating QR code:', _err);
     }
   };
 

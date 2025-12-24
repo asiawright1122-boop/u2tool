@@ -94,7 +94,7 @@ export default function JsonSchemaValidator() {
       setErrors(validationErrors);
       setIsValid(validationErrors.length === 0);
     } catch (_e) {
-      setErrors([{ path: 'parse', message: (e as Error).message }]);
+      setErrors([{ path: 'parse', message: (_e as Error).message }]);
       setIsValid(false);
     }
   };

@@ -94,7 +94,7 @@ export default function JsonToDart() {
       setError('');
       setOutput(jsonToDart(input, className));
     } catch (_e) {
-      setError(e instanceof Error ? e.message : 'Invalid JSON');
+      setError(_e instanceof Error ? _e.message : 'Invalid JSON');
       setOutput('');
     }
   };

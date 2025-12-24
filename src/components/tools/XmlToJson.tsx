@@ -89,7 +89,7 @@ export default function XmlToJson() {
       const json = parseXml(input);
       setOutput(JSON.stringify(json, null, 2));
     } catch (_e) {
-      setOutput(`Error: ${e instanceof Error ? e.message : 'Invalid XML'}`);
+      setOutput(`Error: ${_e instanceof Error ? _e.message : 'Invalid XML'}`);
     }
   };
 

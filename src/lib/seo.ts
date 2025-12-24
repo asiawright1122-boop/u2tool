@@ -153,7 +153,33 @@ interface CollectionPageJsonLd extends JsonLdBase {
   };
 }
 
-export type JsonLdData = WebSiteJsonLd | SoftwareApplicationJsonLd | BreadcrumbListJsonLd | OrganizationJsonLd | FAQPageJsonLd | ItemListJsonLd | CollectionPageJsonLd | HowToJsonLd;
+// HowTo JSON-LD 接口（用于工具使用说明）
+interface HowToJsonLd extends JsonLdBase {
+  '@type': 'HowTo';
+  name: string;
+  description: string;
+  step: Array<{
+    '@type': 'HowToStep';
+    position: number;
+    name: string;
+    text: string;
+  }>;
+  totalTime?: string;
+}
+
+// Speakable JSON-LD 接口（用于语音搜索优化）
+interface SpeakableJsonLd extends JsonLdBase {
+  '@type': 'WebPage';
+  name: string;
+  description: string;
+  url: string;
+  speakable: {
+    '@type': 'SpeakableSpecification';
+    cssSelector: string[];
+  };
+}
+
+export type JsonLdData = WebSiteJsonLd | SoftwareApplicationJsonLd | BreadcrumbListJsonLd | OrganizationJsonLd | FAQPageJsonLd | ItemListJsonLd | CollectionPageJsonLd | HowToJsonLd | SpeakableJsonLd;
 
 // Organization JSON-LD 接口
 interface OrganizationJsonLd extends JsonLdBase {
@@ -450,20 +476,6 @@ export function generateCollectionPageJsonLd(params: {
   };
 }
 
-// HowTo JSON-LD 接口（用于工具使用说明）
-interface HowToJsonLd extends JsonLdBase {
-  '@type': 'HowTo';
-  name: string;
-  description: string;
-  step: Array<{
-    '@type': 'HowToStep';
-    position: number;
-    name: string;
-    text: string;
-  }>;
-  totalTime?: string;
-}
-
 /**
  * 生成 HowTo JSON-LD 结构化数据（用于工具使用说明）
  * @param params - HowTo 参数
@@ -644,18 +656,6 @@ export function generateToolBreadcrumbs(
     { name: toolsLabel, path: '/tools' },
     { name: toolName },
   ];
-}
-
-// Speakable JSON-LD 接口（用于语音搜索优化）
-interface SpeakableJsonLd extends JsonLdBase {
-  '@type': 'WebPage';
-  name: string;
-  description: string;
-  url: string;
-  speakable: {
-    '@type': 'SpeakableSpecification';
-    cssSelector: string[];
-  };
 }
 
 /**

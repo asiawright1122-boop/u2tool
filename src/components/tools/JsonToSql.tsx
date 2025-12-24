@@ -110,7 +110,7 @@ export default function JsonToSql() {
       const sql = jsonToSql(input, { tableName, includeCreate, dialect });
       setOutput(sql);
     } catch (_e) {
-      setError(e instanceof Error ? e.message : tg('errorProcessing'));
+      setError(_e instanceof Error ? _e.message : tg('errorProcessing'));
       setOutput('');
     }
   }, [input, tableName, includeCreate, dialect]);

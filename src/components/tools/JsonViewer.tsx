@@ -78,7 +78,7 @@ export default function JsonViewer() {
       setError('');
       setExpanded(new Set(['root']));
     } catch (_e) {
-      setError(e instanceof Error ? e.message : tg('errorInvalidJson'));
+      setError(_e instanceof Error ? _e.message : tg('errorInvalidJson'));
       setParsed(null);
     }
   };

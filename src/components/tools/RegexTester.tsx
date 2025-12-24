@@ -38,7 +38,7 @@ export default function RegexTester() {
       }
       return results;
     } catch (_e) {
-      setError((e as Error).message);
+      setError((_e as Error).message);
       return [];
     }
   }, [pattern, flags, testString]);

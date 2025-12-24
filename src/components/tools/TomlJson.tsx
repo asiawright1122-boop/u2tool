@@ -149,7 +149,7 @@ export default function TomlJson() {
         setOutput(jsonToToml(parsed));
       }
     } catch (_err) {
-      setError(err instanceof Error ? err.message : tg('errorProcessing'));
+      setError(_err instanceof Error ? _err.message : tg('errorProcessing'));
       setOutput('');
     }
   };

@@ -61,7 +61,7 @@ export default function JsonMerger() {
       const result = mergeJsonObjects(json1, json2, strategy);
       setOutput(result);
     } catch (_e) {
-      setError(e instanceof Error ? e.message : 'Invalid JSON');
+      setError(_e instanceof Error ? _e.message : 'Invalid JSON');
       setOutput('');
     }
   };

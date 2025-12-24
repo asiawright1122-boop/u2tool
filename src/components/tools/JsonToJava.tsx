@@ -154,7 +154,7 @@ export default function JsonToJava() {
       const allClasses = [result.main, ...result.nested].join('\n\n');
       setOutput(allClasses);
     } catch (_err) {
-      setError(err instanceof Error ? err.message : tg('errorProcessing'));
+      setError(_err instanceof Error ? _err.message : tg('errorProcessing'));
       setOutput('');
     }
   };
