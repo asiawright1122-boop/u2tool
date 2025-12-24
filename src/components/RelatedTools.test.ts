@@ -139,7 +139,7 @@ describe('Property 7: Internal Linking Completeness', () => {
         }
         
         // 验证链接是双向的（如果 A 链接到 B，B 也应该能链接到 A）
-        for (const [slug, relatedSlugs] of links) {
+        for (const [_slug, relatedSlugs] of links) {
           for (const relatedSlug of relatedSlugs) {
             const reverseLinks = links.get(relatedSlug);
             // 由于 maxCount 限制，反向链接可能不存在，但这是可接受的

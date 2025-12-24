@@ -34,7 +34,7 @@ export default function JwtDecoder() {
       
       setDecoded({ header, payload, signature: parts[2] });
       setError('');
-    } catch (e) {
+    } catch (_e) {
       setError(tj('invalidToken'));
       setDecoded(null);
     }

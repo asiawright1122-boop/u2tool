@@ -4,7 +4,7 @@
  * 支持跨分类推荐和热门工具优先
  */
 
-import { Tool, tools, categories } from '@/config/tools';
+import { Tool, tools } from '@/config/tools';
 
 // 相关性分数配置
 const RELEVANCE_WEIGHTS = {

@@ -85,7 +85,7 @@ export default function Base58() {
     try {
       setOutput(encodeBase58(input));
       setError('');
-    } catch (e) {
+    } catch (_e) {
       setError(t('errorEncoding'));
       setOutput('');
     }

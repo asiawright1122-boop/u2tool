@@ -33,7 +33,7 @@ export default function HtmlMinifier() {
         line = line.trim();
         if (line.match(/^<\/\w/)) indent--;
         const spaces = '  '.repeat(Math.max(0, indent));
-        if (line.match(/^<\w[^>]*[^\/]>.*$/)) indent++;
+        if (line.match(/^<\w[^>]*[^/]>.*$/)) indent++;
         return spaces + line;
       });
       setOutput(formatted.join('\n'));

@@ -140,10 +140,10 @@ describe('Translation Property-Based Tests', () => {
     );
     
     // Report missing keys
-    let totalMissing = 0;
+    let _totalMissing = 0;
     for (const lang of otherLanguages) {
       const missing = missingKeysByLang[lang];
-      totalMissing += missing.length;
+      _totalMissing += missing.length;
       if (missing.length > 0) {
         console.warn(`[Property Test] Missing ${missing.length} keys in ${lang}.json:`, missing.slice(0, 5));
       }

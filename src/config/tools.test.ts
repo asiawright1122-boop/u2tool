@@ -10,7 +10,7 @@ import pt from '../messages/pt.json';
 import ja from '../messages/ja.json';
 
 const languageFiles = { en, zh, es, pt, ja };
-const languageNames = Object.keys(languageFiles);
+const _languageNames = Object.keys(languageFiles);
 
 /**
  * **Feature: add-new-tools, Property 1: 分类翻译完整性**

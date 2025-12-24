@@ -25,7 +25,7 @@ export default function TextCleaner() {
     }
 
     if (options.removePunctuation) {
-      result = result.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
+      result = result.replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, '');
     }
 
     if (options.removeExtraSpaces) {

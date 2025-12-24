@@ -21,7 +21,7 @@ function parseMarkdown(md: string): string {
     // Links
     .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" class="text-blue-400 hover:underline" target="_blank">$1</a>')
     // Unordered lists
-    .replace(/^\- (.*$)/gim, '<li class="ml-4">$1</li>')
+    .replace(/^- (.*$)/gim, '<li class="ml-4">$1</li>')
     // Line breaks
     .replace(/\n/gim, '<br>');
 

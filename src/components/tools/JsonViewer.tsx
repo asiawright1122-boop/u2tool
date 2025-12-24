@@ -17,14 +17,6 @@ function TreeNode({ keyName, value, depth, expanded, toggleExpand, path, itemsLa
   const isObject = value !== null && typeof value === 'object';
   const isArray = Array.isArray(value);
   const isExpanded = expanded.has(path);
-  
-  const getValueColor = (val: unknown): string => {
-    if (val === null) return 'text-gray-300';
-    if (typeof val === 'string') return 'text-green-400';
-    if (typeof val === 'number') return 'text-blue-400';
-    if (typeof val === 'boolean') return 'text-yellow-400';
-    return 'text-white';
-  };
 
   const renderValue = () => {
     if (value === null) return <span className="text-gray-300">null</span>;
@@ -85,7 +77,7 @@ export default function JsonViewer() {
       setParsed(data);
       setError('');
       setExpanded(new Set(['root']));
-    } catch (e) {
+    } catch (_e) {
       setError(e instanceof Error ? e.message : tg('errorInvalidJson'));
       setParsed(null);
     }

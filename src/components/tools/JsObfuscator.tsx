@@ -41,7 +41,8 @@ export default function JsObfuscator() {
 
     // Unicode escape for identifiers
     if (options.unicodeEscape) {
-      const keywords = ['function', 'var', 'let', 'const', 'if', 'else', 'for', 'while', 'return', 'class', 'new', 'this', 'true', 'false', 'null', 'undefined', 'typeof', 'instanceof', 'try', 'catch', 'throw', 'finally', 'switch', 'case', 'break', 'continue', 'default', 'do', 'in', 'of', 'async', 'await', 'export', 'import', 'from', 'as', 'extends', 'super', 'static', 'get', 'set', 'yield', 'delete', 'void', 'with', 'debugger'];
+      // 保留关键字列表供未来使用
+      const _keywords = ['function', 'var', 'let', 'const', 'if', 'else', 'for', 'while', 'return', 'class', 'new', 'this', 'true', 'false', 'null', 'undefined', 'typeof', 'instanceof', 'try', 'catch', 'throw', 'finally', 'switch', 'case', 'break', 'continue', 'default', 'do', 'in', 'of', 'async', 'await', 'export', 'import', 'from', 'as', 'extends', 'super', 'static', 'get', 'set', 'yield', 'delete', 'void', 'with', 'debugger'];
       
       // Add wrapper function
       result = `(function(){${result}})();`;

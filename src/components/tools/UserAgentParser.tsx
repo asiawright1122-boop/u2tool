@@ -21,30 +21,30 @@ export function parseUserAgent(ua: string): ParsedUA {
   if (!ua) return result;
 
   // Browser detection
-  if (/Edg\/(\d+[\.\d]*)/.test(ua)) {
+  if (/Edg\/(\d+[.\d]*)/.test(ua)) {
     result.browser = { name: 'Edge', version: RegExp.$1 };
-  } else if (/OPR\/(\d+[\.\d]*)/.test(ua) || /Opera\/(\d+[\.\d]*)/.test(ua)) {
+  } else if (/OPR\/(\d+[.\d]*)/.test(ua) || /Opera\/(\d+[.\d]*)/.test(ua)) {
     result.browser = { name: 'Opera', version: RegExp.$1 };
-  } else if (/Chrome\/(\d+[\.\d]*)/.test(ua)) {
+  } else if (/Chrome\/(\d+[.\d]*)/.test(ua)) {
     result.browser = { name: 'Chrome', version: RegExp.$1 };
-  } else if (/Firefox\/(\d+[\.\d]*)/.test(ua)) {
+  } else if (/Firefox\/(\d+[.\d]*)/.test(ua)) {
     result.browser = { name: 'Firefox', version: RegExp.$1 };
-  } else if (/Safari\/(\d+[\.\d]*)/.test(ua) && /Version\/(\d+[\.\d]*)/.test(ua)) {
+  } else if (/Safari\/(\d+[.\d]*)/.test(ua) && /Version\/(\d+[.\d]*)/.test(ua)) {
     result.browser = { name: 'Safari', version: RegExp.$1 };
-  } else if (/MSIE (\d+[\.\d]*)/.test(ua) || /Trident.*rv:(\d+[\.\d]*)/.test(ua)) {
+  } else if (/MSIE (\d+[.\d]*)/.test(ua) || /Trident.*rv:(\d+[.\d]*)/.test(ua)) {
     result.browser = { name: 'Internet Explorer', version: RegExp.$1 };
   }
 
   // OS detection
-  if (/Windows NT (\d+[\.\d]*)/.test(ua)) {
+  if (/Windows NT (\d+[.\d]*)/.test(ua)) {
     const version = RegExp.$1;
     const winVersions: Record<string, string> = {
       '10.0': '10/11', '6.3': '8.1', '6.2': '8', '6.1': '7', '6.0': 'Vista', '5.1': 'XP'
     };
     result.os = { name: 'Windows', version: winVersions[version] || version };
-  } else if (/Mac OS X (\d+[_\.\d]*)/.test(ua)) {
+  } else if (/Mac OS X (\d+[_.\d]*)/.test(ua)) {
     result.os = { name: 'macOS', version: RegExp.$1.replace(/_/g, '.') };
-  } else if (/Android (\d+[\.\d]*)/.test(ua)) {
+  } else if (/Android (\d+[.\d]*)/.test(ua)) {
     result.os = { name: 'Android', version: RegExp.$1 };
     result.device.type = 'Mobile';
   } else if (/iPhone|iPad|iPod/.test(ua)) {
@@ -59,11 +59,11 @@ export function parseUserAgent(ua: string): ParsedUA {
   }
 
   // Engine detection
-  if (/AppleWebKit\/(\d+[\.\d]*)/.test(ua)) {
+  if (/AppleWebKit\/(\d+[.\d]*)/.test(ua)) {
     result.engine = { name: 'WebKit', version: RegExp.$1 };
   } else if (/Gecko\/(\d+)/.test(ua)) {
     result.engine = { name: 'Gecko', version: RegExp.$1 };
-  } else if (/Trident\/(\d+[\.\d]*)/.test(ua)) {
+  } else if (/Trident\/(\d+[.\d]*)/.test(ua)) {
     result.engine = { name: 'Trident', version: RegExp.$1 };
   }
 

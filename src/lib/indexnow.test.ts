@@ -4,7 +4,7 @@
  * 验证批量 URL 提交的效率
  */
 
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import {
   isValidIndexNowKey,
   generateIndexNowKey,

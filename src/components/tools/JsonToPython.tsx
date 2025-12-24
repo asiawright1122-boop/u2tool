@@ -150,7 +150,7 @@ export default function JsonToPython() {
       const imports = generateImports(options, hasNull, result.nested.length > 0);
       const allClasses = [...result.nested, result.main].join('\n\n');
       setOutput(imports + allClasses);
-    } catch (err) {
+    } catch (_err) {
       setError(err instanceof Error ? err.message : tg('errorProcessing'));
       setOutput('');
     }

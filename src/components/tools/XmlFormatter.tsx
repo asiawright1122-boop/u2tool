@@ -54,7 +54,7 @@ export default function XmlFormatter() {
       }
       setOutput(formatXml(input));
       setError('');
-    } catch (e) {
+    } catch (_e) {
       setError(t('xml.invalidXml'));
       setOutput('');
     }
@@ -75,7 +75,7 @@ export default function XmlFormatter() {
       }
       setOutput(minifyXml(input));
       setError('');
-    } catch (e) {
+    } catch (_e) {
       setError(t('xml.invalidXml'));
       setOutput('');
     }

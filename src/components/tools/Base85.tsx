@@ -82,7 +82,7 @@ export default function Base85() {
       } else {
         setOutput(decode(input));
       }
-    } catch (e) {
+    } catch (_e) {
       setOutput(`${tg('error')}: ${e instanceof Error ? e.message : tg('errorInvalidInput')}`);
     }
   };

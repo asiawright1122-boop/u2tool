@@ -43,7 +43,7 @@ export default function JsonToCsv() {
 
       setOutput([header, ...rows].join('\n'));
       setError('');
-    } catch (e) {
+    } catch (_e) {
       setError(t('errorInvalidJson'));
       setOutput('');
     }
@@ -99,7 +99,7 @@ export default function JsonToCsv() {
 
       setOutput(JSON.stringify(data, null, 2));
       setError('');
-    } catch (e) {
+    } catch (_e) {
       setError(t('errorInvalidFormat'));
       setOutput('');
     }

@@ -43,7 +43,6 @@ export default function TextToHex() {
     }
 
     const sep = getSeparatorChar(separator);
-    const prefix = separator === '0x' ? '0x' : '';
     
     let result = bytes.map(b => {
       const hexStr = b.toString(16).padStart(2, '0');

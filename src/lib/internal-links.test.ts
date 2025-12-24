@@ -148,7 +148,7 @@ describe('Internal Links - Property Tests', () => {
       
       // 应该有同分类和跨分类的工具
       const sameCategoryCount = mixedTools.filter(t => t.category === testTool.category).length;
-      const crossCategoryCount = mixedTools.filter(t => t.category !== testTool.category).length;
+      const _crossCategoryCount = mixedTools.filter(t => t.category !== testTool.category).length;
       
       // 如果有足够的工具，应该有混合
       if (mixedTools.length >= 4) {

@@ -148,7 +148,7 @@ export default function TomlJson() {
         const parsed = JSON.parse(input);
         setOutput(jsonToToml(parsed));
       }
-    } catch (err) {
+    } catch (_err) {
       setError(err instanceof Error ? err.message : tg('errorProcessing'));
       setOutput('');
     }

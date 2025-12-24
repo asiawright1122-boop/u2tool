@@ -28,7 +28,7 @@ export default function JsonMinifier() {
         minified: minified.length,
         saved: Math.round((1 - minified.length / input.length) * 100)
       });
-    } catch (e) {
+    } catch (_e) {
       setError(t('json.invalidJson'));
       setOutput('');
       setStats(null);
@@ -46,7 +46,7 @@ export default function JsonMinifier() {
       setOutput(JSON.stringify(parsed, null, 2));
       setError('');
       setStats(null);
-    } catch (e) {
+    } catch (_e) {
       setError(t('json.invalidJson'));
       setOutput('');
     }

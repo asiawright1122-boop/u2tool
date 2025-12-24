@@ -38,7 +38,7 @@ export default function NumberBaseConverter() {
 
       setResults(converted);
       setError('');
-    } catch (e) {
+    } catch (_e) {
       setError(t('errorInvalidInput'));
       setResults([]);
     }

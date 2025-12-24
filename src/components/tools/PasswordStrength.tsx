@@ -34,7 +34,7 @@ export function analyzePassword(password: string): StrengthResult {
   const hasLower = /[a-z]/.test(password);
   const hasUpper = /[A-Z]/.test(password);
   const hasNumber = /[0-9]/.test(password);
-  const hasSymbol = /[!@#$%^&*()_+\-=\[\]{}|;:,.<>?]/.test(password);
+  const hasSymbol = /[!@#$%^&*()_+\-=[\]{}|;:,.<>?]/.test(password);
 
   if (hasLower) score += 1;
   if (hasUpper) score += 1;
@@ -172,7 +172,7 @@ export default function PasswordStrength() {
                 <span className={/[a-z]/.test(password) ? 'text-green-400' : 'text-gray-300'}>a-z</span>
                 <span className={/[A-Z]/.test(password) ? 'text-green-400' : 'text-gray-300'}>A-Z</span>
                 <span className={/[0-9]/.test(password) ? 'text-green-400' : 'text-gray-300'}>0-9</span>
-                <span className={/[!@#$%^&*()_+\-=\[\]{}|;:,.<>?]/.test(password) ? 'text-green-400' : 'text-gray-300'}>!@#</span>
+                <span className={/[!@#$%^&*()_+\-=[\]{}|;:,.<>?]/.test(password) ? 'text-green-400' : 'text-gray-300'}>!@#</span>
               </div>
             </div>
           </div>

@@ -116,7 +116,7 @@ address:
     try {
       const parsed = parseYaml(yaml);
       setJson(JSON.stringify(parsed, null, 2));
-    } catch (e) {
+    } catch (_e) {
       setError(t('invalidYaml'));
     }
   };
@@ -126,7 +126,7 @@ address:
     try {
       const parsed = JSON.parse(json);
       setYaml(jsonToYaml(parsed));
-    } catch (e) {
+    } catch (_e) {
       setError(t('invalidJson'));
     }
   };

@@ -48,7 +48,8 @@ export default function TimezoneConverter() {
     try {
       const sourceDate = new Date(`${inputDate}T${inputTime}:00`);
       
-      const sourceFormatted = sourceDate.toLocaleString('en-US', {
+      // 格式化源时区时间（保留供调试使用）
+      const _sourceFormatted = sourceDate.toLocaleString('en-US', {
         timeZone: sourceTimezone,
         year: 'numeric',
         month: '2-digit',
@@ -77,7 +78,7 @@ export default function TimezoneConverter() {
         time: timePart,
         full: targetFormatted
       });
-    } catch (e) {
+    } catch (_e) {
       setResult(null);
     }
   };

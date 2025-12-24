@@ -17,7 +17,7 @@ export default function Base64() {
     }
     try {
       setOutput(btoa(unescape(encodeURIComponent(input))));
-    } catch (e) {
+    } catch (_e) {
       setOutput(tg('errorEncoding'));
     }
   };
@@ -29,7 +29,7 @@ export default function Base64() {
     }
     try {
       setOutput(decodeURIComponent(escape(atob(input))));
-    } catch (e) {
+    } catch (_e) {
       setOutput(tg('errorInvalidBase64'));
     }
   };

@@ -47,7 +47,8 @@ function buildIndexNowUrl(
   config: IndexNowConfig,
   endpoint: string
 ): string {
-  const host = config.host || new URL(SEO_CONFIG.siteUrl).host;
+  // host 用于验证 URL 归属（保留供未来使用）
+  const _host = config.host || new URL(SEO_CONFIG.siteUrl).host;
   const params = new URLSearchParams({
     url,
     key: config.key,

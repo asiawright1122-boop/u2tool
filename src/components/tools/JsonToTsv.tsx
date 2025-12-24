@@ -44,7 +44,7 @@ export default function JsonToTsv() {
 
       setOutput(rows.join('\n'));
       setError('');
-    } catch (err) {
+    } catch (_err) {
       setError(tg('errorInvalidJson'));
       setOutput('');
     }

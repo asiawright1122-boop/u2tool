@@ -24,7 +24,7 @@ export default function UrlEncoder() {
     }
     try {
       setOutput(decodeURIComponent(input));
-    } catch (e) {
+    } catch (_e) {
       setOutput('Error: Invalid URL encoding');
     }
   };

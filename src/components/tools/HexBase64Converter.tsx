@@ -62,7 +62,7 @@ export default function HexBase64Converter() {
       } else {
         setOutput(base64ToHex(input));
       }
-    } catch (e) {
+    } catch (_e) {
       setError(e instanceof Error ? e.message : tg('errorProcessing'));
       setOutput('');
     }

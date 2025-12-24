@@ -61,7 +61,7 @@ INSERT INTO users (id, name, email, age) VALUES (2, 'Jane', 'jane@example.com', 
         return;
       }
       setOutput(JSON.stringify(result, null, 2));
-    } catch (e) {
+    } catch (_e) {
       setError(e instanceof Error ? e.message : 'Parse error');
       setOutput('');
     }

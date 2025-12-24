@@ -90,7 +90,7 @@ export default function JwtGenerator() {
       }
       
       setPayload(JSON.stringify(parsed, null, 2));
-    } catch (e) {
+    } catch (_e) {
       // ignore
     }
   };

@@ -48,7 +48,7 @@ export default function WhoisLookup() {
         nameServers: ['ns1.example.com', 'ns2.example.com'],
         dnssec: 'unsigned',
       });
-    } catch (err) {
+    } catch (_err) {
       setError(tg('errorProcessing'));
     } finally {
       setLoading(false);

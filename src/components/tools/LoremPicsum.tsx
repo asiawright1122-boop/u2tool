@@ -47,12 +47,6 @@ export default function LoremPicsum() {
     return `![Random image](${imageUrl})`;
   };
 
-  const generateCssCode = (): string => {
-    return `background-image: url('${imageUrl}');
-background-size: cover;
-background-position: center;`;
-  };
-
   const presetSizes = [
     { label: '1920×1080 (HD)', width: 1920, height: 1080 },
     { label: '1280×720 (720p)', width: 1280, height: 720 },

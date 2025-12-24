@@ -39,7 +39,7 @@ export default function StringObfuscator() {
           setOutput(input.split('').reverse().join(''));
           break;
       }
-    } catch (e) {
+    } catch (_e) {
       setOutput(t('error'));
     }
   };

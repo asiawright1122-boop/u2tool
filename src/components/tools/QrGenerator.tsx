@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import QRCode from 'qrcode';
 
@@ -8,7 +8,6 @@ export default function QrGenerator() {
   const t = useTranslations('tools');
   const [input, setInput] = useState('https://example.com');
   const [qrDataUrl, setQrDataUrl] = useState('');
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const generateQR = async () => {
     if (!input.trim()) return;
@@ -24,7 +23,7 @@ export default function QrGenerator() {
         },
       });
       setQrDataUrl(dataUrl);
-    } catch (err) {
+    } catch (_err) {
       console.error('Error generating QR code:', err);
     }
   };

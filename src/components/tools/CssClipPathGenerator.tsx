@@ -5,7 +5,8 @@ import { useTranslations } from 'next-intl';
 
 type ShapeType = 'circle' | 'ellipse' | 'polygon' | 'inset';
 
-interface Point {
+// Point 接口用于多边形顶点（保留供未来使用）
+interface _Point {
   x: number;
   y: number;
 }

@@ -93,7 +93,7 @@ export default function JsonSchemaValidator() {
       const validationErrors = validate(data, schema);
       setErrors(validationErrors);
       setIsValid(validationErrors.length === 0);
-    } catch (e) {
+    } catch (_e) {
       setErrors([{ path: 'parse', message: (e as Error).message }]);
       setIsValid(false);
     }

@@ -21,7 +21,7 @@ export default function JsonFormatter() {
       const parsed = JSON.parse(input);
       setOutput(JSON.stringify(parsed, null, 2));
       setError('');
-    } catch (e) {
+    } catch (_e) {
       setError(tg('json.invalidJson') + ': ' + (e as Error).message);
       setOutput('');
     }
@@ -37,7 +37,7 @@ export default function JsonFormatter() {
       const parsed = JSON.parse(input);
       setOutput(JSON.stringify(parsed));
       setError('');
-    } catch (e) {
+    } catch (_e) {
       setError(tg('json.invalidJson') + ': ' + (e as Error).message);
       setOutput('');
     }

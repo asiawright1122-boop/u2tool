@@ -50,7 +50,7 @@ export default function SslChecker() {
         protocol: 'TLS 1.3',
         serialNumber: Math.random().toString(16).substring(2, 18).toUpperCase(),
       });
-    } catch (err) {
+    } catch (_err) {
       setError(tg('errorProcessing'));
     } finally {
       setLoading(false);

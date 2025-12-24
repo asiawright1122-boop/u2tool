@@ -64,7 +64,7 @@ export default function UnicodeConverter() {
       );
       
       setOutput(result);
-    } catch (e) {
+    } catch (_e) {
       setOutput('Error: Invalid Unicode format');
     }
   };

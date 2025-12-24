@@ -52,7 +52,7 @@ export default function JsonPathTester() {
 
       setResult(JSON.stringify(current, null, 2));
       setError('');
-    } catch (e) {
+    } catch (_e) {
       setError((e as Error).message);
       setResult('');
     }

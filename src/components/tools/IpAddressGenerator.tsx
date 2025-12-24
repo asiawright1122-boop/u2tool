@@ -30,7 +30,7 @@ export default function IpAddressGenerator() {
 
   const generatePublicIPv4 = (): string => {
     let ip: string;
-    do {
+    while (true) {
       ip = generateIPv4();
       const parts = ip.split('.').map(Number);
       // Exclude private, loopback, and reserved ranges
@@ -42,7 +42,7 @@ export default function IpAddressGenerator() {
         parts[0] === 0 ||
         parts[0] >= 224;
       if (!isPrivate) break;
-    } while (true);
+    }
     return ip;
   };
 

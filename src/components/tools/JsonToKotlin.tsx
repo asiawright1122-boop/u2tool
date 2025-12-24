@@ -152,7 +152,7 @@ export default function JsonToKotlin() {
       const result = generateKotlinClass(parsed, options.className, options);
       const allClasses = [result.main, ...result.nested].join('\n\n');
       setOutput(allClasses);
-    } catch (err) {
+    } catch (_err) {
       setError(err instanceof Error ? err.message : tg('errorProcessing'));
       setOutput('');
     }
