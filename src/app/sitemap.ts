@@ -13,11 +13,6 @@ function generateSitemapAlternates(path: string) {
   };
 }
 
-// 生成工具的 OG 图片 URL（用于图片 sitemap）
-function generateToolImageUrl(toolName: string, locale: string, icon: string): string {
-  return `${BASE_URL}/api/og?title=${encodeURIComponent(toolName)}&locale=${locale}&icon=${encodeURIComponent(icon)}`;
-}
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [];
   const now = new Date();
@@ -52,13 +47,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
-    // 添加每个工具页面（包含图片信息）
+    // 添加每个工具页面
     for (const tool of tools) {
       // 热门工具优先级更高
       const priority = tool.popular ? 0.8 : 0.7;
-      
-      // 生成工具名称（简化版，实际应使用翻译）
-      const toolName = tool.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
       
       routes.push({
         url: `${BASE_URL}/${locale}/tools/${tool.slug}`,
@@ -66,8 +58,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: 'monthly',
         priority,
         alternates: generateSitemapAlternates(`/tools/${tool.slug}`),
-        // 图片 sitemap 信息（Next.js 15 支持）
-        images: [generateToolImageUrl(toolName, locale, tool.icon)],
+        // 注意：移除 images 字段，因为 OG 图片 URL 包含查询参数（&），
+        // Next.js sitemap 生成器不会自动转义为 &amp;，导致 XML 解析错误
       });
     }
   }
