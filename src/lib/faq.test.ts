@@ -100,14 +100,17 @@ describe('FAQ System - Property Tests', () => {
       // 验证 JSON-LD 结构
       expect(jsonLd['@context']).toBe('https://schema.org');
       expect(jsonLd['@type']).toBe('FAQPage');
-      expect(jsonLd.mainEntity).toHaveLength(3);
+      
+      // 使用类型断言访问 FAQPage 特有属性
+      const faqPageJsonLd = jsonLd as { mainEntity: Array<{ '@type': string; name: string; acceptedAnswer: { '@type': string; text: string } }> };
+      expect(faqPageJsonLd.mainEntity).toHaveLength(3);
 
       // 验证每个问题的结构
       for (let i = 0; i < testFaqs.length; i++) {
-        expect(jsonLd.mainEntity[i]['@type']).toBe('Question');
-        expect(jsonLd.mainEntity[i].name).toBe(testFaqs[i].question);
-        expect(jsonLd.mainEntity[i].acceptedAnswer['@type']).toBe('Answer');
-        expect(jsonLd.mainEntity[i].acceptedAnswer.text).toBe(testFaqs[i].answer);
+        expect(faqPageJsonLd.mainEntity[i]['@type']).toBe('Question');
+        expect(faqPageJsonLd.mainEntity[i].name).toBe(testFaqs[i].question);
+        expect(faqPageJsonLd.mainEntity[i].acceptedAnswer['@type']).toBe('Answer');
+        expect(faqPageJsonLd.mainEntity[i].acceptedAnswer.text).toBe(testFaqs[i].answer);
       }
     });
 

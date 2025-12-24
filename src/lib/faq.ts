@@ -4,6 +4,8 @@
  * 支持多语言、自然语言问题格式、JSON-LD 输出
  */
 
+import { generateFAQJsonLd as generateFAQJsonLdFromSeo, type JsonLdData } from './seo';
+
 // FAQ 项目接口
 export interface FAQItem {
   question: string;
@@ -14,20 +16,6 @@ export interface FAQItem {
 export interface ToolFAQ {
   slug: string;
   faqs: Record<string, FAQItem[]>; // locale -> FAQs
-}
-
-// FAQ JSON-LD Schema 接口
-interface FAQPageJsonLd {
-  '@context': 'https://schema.org';
-  '@type': 'FAQPage';
-  mainEntity: Array<{
-    '@type': 'Question';
-    name: string;
-    acceptedAnswer: {
-      '@type': 'Answer';
-      text: string;
-    };
-  }>;
 }
 
 // 问题模式前缀（用于生成自然语言问题）
@@ -435,22 +423,12 @@ export function generateGenericFAQs(
 
 /**
  * 生成 FAQ JSON-LD 结构化数据
+ * 使用 seo.ts 中的函数确保类型一致性
  * @param faqs - FAQ 项目数组
  * @returns FAQPage JSON-LD 对象
  */
-export function generateFAQJsonLd(faqs: FAQItem[]): FAQPageJsonLd {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  };
+export function generateFAQJsonLd(faqs: FAQItem[]): JsonLdData {
+  return generateFAQJsonLdFromSeo(faqs);
 }
 
 /**
@@ -458,7 +436,7 @@ export function generateFAQJsonLd(faqs: FAQItem[]): FAQPageJsonLd {
  * @param jsonLd - JSON-LD 对象
  * @returns JSON 字符串
  */
-export function faqJsonLdToString(jsonLd: FAQPageJsonLd): string {
+export function faqJsonLdToString(jsonLd: JsonLdData): string {
   return JSON.stringify(jsonLd);
 }
 
