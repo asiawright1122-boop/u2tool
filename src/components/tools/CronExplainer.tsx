@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type TranslateFunc = (key: string, values?: Record<string, string | number>) => string;
@@ -118,7 +118,6 @@ function getNextRuns(cron: string, count: number = 5): Date[] {
 }
 
 export default function CronExplainer() {
-  const t = useTranslations('tools');
   const tc = useTranslations('tools.cron-explainer');
   const [cron, setCron] = useState('0 9 * * 1-5');
   const [explanation, setExplanation] = useState('');

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function ColorPicker() {
@@ -8,7 +8,6 @@ export default function ColorPicker() {
   const [color, setColor] = useState('#3b82f6');
   const [recentColors, setRecentColors] = useState<string[]>([]);
   const [copied, setCopied] = useState('');
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   // Convert hex to RGB
   const hexToRgb = (hex: string) => {

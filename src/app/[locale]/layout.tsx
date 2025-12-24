@@ -7,6 +7,7 @@ import { SEO_CONFIG, getVerificationTags } from '@/lib/seo';
 
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import WebVitalsReporter from '@/components/WebVitalsReporter';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';
 
@@ -191,7 +192,8 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   
-  if (!routing.locales.includes(locale as any)) {
+  // 验证 locale 是否在支持的语言列表中
+  if (!routing.locales.includes(locale as typeof routing.locales[number])) {
     notFound();
   }
 
@@ -248,6 +250,8 @@ export default async function LocaleLayout({
             <main className="flex-grow pt-16">{children}</main>
             <Footer />
           </div>
+          {/* Web Vitals 监控 */}
+          <WebVitalsReporter />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -126,6 +126,18 @@ const nextConfig = {
       },
     ];
   },
+  
+  // URL 重写规则
+  async rewrites() {
+    return [
+      // IndexNow key 验证文件重写
+      // 将 /{key}.txt 重写到 API 路由
+      {
+        source: '/:key([a-zA-Z0-9]{32}).txt',
+        destination: '/api/indexnow-key/:key',
+      },
+    ];
+  },
 };
 
 module.exports = withNextIntl(nextConfig);

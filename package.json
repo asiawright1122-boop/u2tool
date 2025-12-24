@@ -11,7 +11,13 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:e2e:report": "playwright show-report"
+    "test:e2e:report": "playwright show-report",
+    "submit:google": "npx ts-node scripts/submit-urls.ts --engine=google",
+    "submit:bing": "npx ts-node scripts/submit-urls.ts --engine=bing",
+    "submit:baidu": "npx ts-node scripts/submit-urls.ts --engine=baidu",
+    "submit:indexnow": "npx ts-node scripts/submit-urls.ts --engine=indexnow",
+    "submit:all": "npx ts-node scripts/submit-urls.ts --engine=all",
+    "submit:dry-run": "npx ts-node scripts/submit-urls.ts --engine=all --dry-run"
   },
   "dependencies": {
     "dijkstrajs": "^1.0.3",
@@ -20,7 +26,8 @@
     "qrcode": "^1.5.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "web-vitals": "^5.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",

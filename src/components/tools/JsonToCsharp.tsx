@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 
 export default function JsonToCsharp() {
   const t = useTranslations('tools.json-to-csharp');
-  const tg = useTranslations('tools');
   const [input, setInput] = useState('{\n  "id": 1,\n  "name": "John Doe",\n  "email": "john@example.com",\n  "isActive": true,\n  "tags": ["developer", "designer"],\n  "address": {\n    "street": "123 Main St",\n    "city": "New York"\n  }\n}');
   const [output, setOutput] = useState('');
   const [className, setClassName] = useState('Root');

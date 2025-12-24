@@ -36,12 +36,6 @@ export default function ImageToBase64() {
     return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
   };
 
-  const copyBase64 = async () => {
-    await navigator.clipboard.writeText(base64);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   const copyDataUrl = async () => {
     await navigator.clipboard.writeText(base64);
     setCopied(true);

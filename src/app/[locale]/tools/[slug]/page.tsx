@@ -5,15 +5,18 @@ import { routing } from '@/i18n/routing';
 import ToolWrapper from '@/components/tools/ToolWrapper';
 import Breadcrumb from '@/components/Breadcrumb';
 import RelatedTools from '@/components/RelatedTools';
+import ToolFAQ from '@/components/ToolFAQ';
 import {
   SEO_CONFIG,
   generateAlternates,
   generateSoftwareApplicationJsonLd,
   generateHowToJsonLd,
+  generateSpeakableJsonLd,
   getToolHowToSteps,
   truncateText,
   jsonLdToString,
 } from '@/lib/seo';
+import { getToolFAQs, generateFAQJsonLd } from '@/lib/faq';
 
 // 生成静态参数（所有工具和语言组合）
 export function generateStaticParams() {
@@ -71,8 +74,21 @@ export async function generateMetadata({
     totalTime: 'PT2M', // 预计 2 分钟
   });
 
+  // 生成 FAQ JSON-LD（常见问题）
+  const faqs = getToolFAQs(slug, locale, category?.id);
+  const faqJsonLd = generateFAQJsonLd(faqs);
+
+  // 生成 Speakable JSON-LD（语音搜索优化）
+  const speakableJsonLd = generateSpeakableJsonLd({
+    name: toolName,
+    description: seoDescription,
+    locale,
+    path: `/tools/${slug}`,
+    cssSelectors: ['h1', '.tool-description', '.faq-answer'],
+  });
+
   // 合并多个 JSON-LD
-  const jsonLd = [softwareJsonLd, howToJsonLd];
+  const jsonLd = [softwareJsonLd, howToJsonLd, faqJsonLd, speakableJsonLd];
 
   // 生成动态 OG 图片 URL
   const ogImageUrl = `${SEO_CONFIG.siteUrl}/api/og?title=${encodeURIComponent(toolName)}&locale=${locale}&icon=${encodeURIComponent(tool.icon)}`;
@@ -133,6 +149,9 @@ export default async function ToolPage({
   const toolName = t(`${slug}.name`);
   const categoryName = tCategories(tool.category);
   
+  // 获取工具 FAQ（优先使用分类特定 FAQ，回退到通用 FAQ）
+  const faqs = getToolFAQs(slug, locale, tool.category);
+  
   // 生成面包屑导航项目（首页 > 分类 > 工具名称）
   const breadcrumbItems = [
     { name: tSite('name'), path: '' },
@@ -154,13 +173,19 @@ export default async function ToolPage({
         <div className="text-center mb-8">
           <span className="text-5xl mb-4 block">{tool.icon}</span>
           <h1 className="text-3xl font-bold mb-2">{toolName}</h1>
-          <p className="text-gray-300">{t(`${slug}.description`)}</p>
+          <p className="text-gray-300 tool-description">{t(`${slug}.description`)}</p>
         </div>
 
         {/* Tool Component */}
         <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
           <ToolWrapper slug={slug} />
         </div>
+
+        {/* FAQ 区块 */}
+        <ToolFAQ 
+          faqs={faqs} 
+          toolName={toolName}
+        />
 
         {/* 相关工具 */}
         <RelatedTools 

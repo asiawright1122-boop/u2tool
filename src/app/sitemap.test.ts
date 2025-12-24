@@ -221,3 +221,48 @@ describe('Property 4: Sitemap Completeness', () => {
     }
   });
 });
+
+// Property 6: Sitemap Validity (图片 sitemap)
+describe('Property 6: Sitemap Validity - Image Sitemap', () => {
+  // 生成工具的 OG 图片 URL
+  function generateToolImageUrl(toolName: string, locale: string, icon: string): string {
+    return `${SEO_CONFIG.siteUrl}/api/og?title=${encodeURIComponent(toolName)}&locale=${locale}&icon=${encodeURIComponent(icon)}`;
+  }
+
+  it('should generate valid image URLs for tools', () => {
+    const testTool = tools[0];
+    const toolName = testTool.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    
+    for (const locale of SEO_LOCALES) {
+      const imageUrl = generateToolImageUrl(toolName, locale, testTool.icon);
+      
+      // 验证 URL 格式
+      expect(imageUrl).toContain('/api/og');
+      expect(imageUrl).toContain('title=');
+      expect(imageUrl).toContain(`locale=${locale}`);
+      expect(imageUrl).toContain('icon=');
+    }
+  });
+
+  it('should encode special characters in image URLs', () => {
+    const toolName = 'JSON Formatter & Validator';
+    const imageUrl = generateToolImageUrl(toolName, 'en', '📋');
+    
+    // 验证特殊字符被编码
+    expect(imageUrl).not.toContain('&V'); // & 应该被编码
+    expect(imageUrl).toContain(encodeURIComponent('&'));
+  });
+
+  it('should generate unique image URLs for each tool', () => {
+    const imageUrls = new Set<string>();
+    
+    for (const tool of tools.slice(0, 10)) {
+      const toolName = tool.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+      const imageUrl = generateToolImageUrl(toolName, 'en', tool.icon);
+      imageUrls.add(imageUrl);
+    }
+    
+    // 所有 URL 应该是唯一的
+    expect(imageUrls.size).toBe(Math.min(10, tools.length));
+  });
+});

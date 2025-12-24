@@ -12,7 +12,7 @@ export default function CssGridGenerator() {
   const [columnSizes, setColumnSizes] = useState<string[]>(['1fr', '1fr', '1fr']);
   const [rowSizes, setRowSizes] = useState<string[]>(['auto', 'auto', 'auto']);
   const [justifyItems, setJustifyItems] = useState('stretch');
-  const [alignItems, setAlignItems] = useState('stretch');
+  const [alignItems] = useState('stretch');
   const [copied, setCopied] = useState(false);
 
   const updateColumns = (newCols: number) => {

@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 
 export default function HtmlToJsx() {
   const t = useTranslations('tools.html-to-jsx');
-  const tg = useTranslations('tools');
   const [html, setHtml] = useState('');
   const [jsx, setJsx] = useState('');
   const [copied, setCopied] = useState(false);

@@ -645,3 +645,118 @@ export function generateToolBreadcrumbs(
     { name: toolName },
   ];
 }
+
+// Speakable JSON-LD 接口（用于语音搜索优化）
+interface SpeakableJsonLd extends JsonLdBase {
+  '@type': 'WebPage';
+  name: string;
+  description: string;
+  url: string;
+  speakable: {
+    '@type': 'SpeakableSpecification';
+    cssSelector: string[];
+  };
+}
+
+/**
+ * 生成 Speakable JSON-LD 结构化数据（用于语音搜索优化）
+ * 标记页面中适合语音朗读的内容区域
+ * @param params - Speakable 参数
+ * @returns Speakable JSON-LD 对象
+ */
+export function generateSpeakableJsonLd(params: {
+  name: string;
+  description: string;
+  locale: string;
+  path: string;
+  cssSelectors?: string[];
+}): SpeakableJsonLd {
+  // 默认的 speakable 选择器（工具描述和 FAQ 答案）
+  const defaultSelectors = [
+    'h1',                    // 页面标题
+    '.tool-description',     // 工具描述
+    '.faq-answer',           // FAQ 答案
+  ];
+  
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: params.name,
+    description: params.description,
+    url: getCanonicalUrl(params.locale, params.path),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: params.cssSelectors || defaultSelectors,
+    },
+  };
+}
+
+// AggregateRating JSON-LD 接口（预留，用于用户评分）
+interface AggregateRatingJsonLd {
+  '@type': 'AggregateRating';
+  ratingValue: number;
+  ratingCount: number;
+  bestRating: number;
+  worstRating: number;
+}
+
+/**
+ * 生成 AggregateRating JSON-LD 结构化数据（预留）
+ * 用于显示工具的用户评分
+ * @param params - 评分参数
+ * @returns AggregateRating JSON-LD 对象
+ */
+export function generateAggregateRatingJsonLd(params: {
+  ratingValue: number;
+  ratingCount: number;
+  bestRating?: number;
+  worstRating?: number;
+}): AggregateRatingJsonLd {
+  return {
+    '@type': 'AggregateRating',
+    ratingValue: params.ratingValue,
+    ratingCount: params.ratingCount,
+    bestRating: params.bestRating || 5,
+    worstRating: params.worstRating || 1,
+  };
+}
+
+// VideoObject JSON-LD 接口（预留，用于视频教程）
+interface VideoObjectJsonLd extends JsonLdBase {
+  '@type': 'VideoObject';
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  duration?: string;
+  contentUrl?: string;
+  embedUrl?: string;
+}
+
+/**
+ * 生成 VideoObject JSON-LD 结构化数据（预留）
+ * 用于工具的视频教程
+ * @param params - 视频参数
+ * @returns VideoObject JSON-LD 对象
+ */
+export function generateVideoObjectJsonLd(params: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  duration?: string;
+  contentUrl?: string;
+  embedUrl?: string;
+}): VideoObjectJsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: params.name,
+    description: params.description,
+    thumbnailUrl: params.thumbnailUrl,
+    uploadDate: params.uploadDate,
+    ...(params.duration && { duration: params.duration }),
+    ...(params.contentUrl && { contentUrl: params.contentUrl }),
+    ...(params.embedUrl && { embedUrl: params.embedUrl }),
+  };
+}
