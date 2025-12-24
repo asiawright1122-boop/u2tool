@@ -115,17 +115,8 @@ const nextConfig = {
     ];
   },
   
-  // 性能优化：重定向规则
-  async redirects() {
-    return [
-      // 将根路径重定向到默认语言
-      {
-        source: '/',
-        destination: '/en',
-        permanent: false,
-      },
-    ];
-  },
+  // 注意：根路径重定向由 middleware 处理，支持基于 IP 的语言检测
+  // 不要在这里添加 '/' -> '/en' 的重定向，否则会覆盖 middleware 的语言检测逻辑
   
   // URL 重写规则（如需要可在此添加）
   // 注意：IndexNow key 文件直接放在 public 目录下，无需重写
