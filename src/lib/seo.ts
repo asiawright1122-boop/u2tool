@@ -421,28 +421,31 @@ export function getKeywords(locale: string): readonly string[] {
 
 /**
  * 生成站长验证 meta 标签对象
+ * 符合 Next.js Metadata API 的 verification 格式
  * @returns 验证标签对象
  */
-export function getVerificationTags(): Record<string, string> {
-  const tags: Record<string, string> = {};
-  
-  if (SEO_CONFIG.verification.google) {
-    tags['google-site-verification'] = SEO_CONFIG.verification.google;
-  }
-  if (SEO_CONFIG.verification.bing) {
-    tags['msvalidate.01'] = SEO_CONFIG.verification.bing;
-  }
-  if (SEO_CONFIG.verification.baidu) {
-    tags['baidu-site-verification'] = SEO_CONFIG.verification.baidu;
-  }
-  if (SEO_CONFIG.verification.yandex) {
-    tags['yandex-verification'] = SEO_CONFIG.verification.yandex;
-  }
-  if (SEO_CONFIG.verification.so360) {
-    tags['360-site-verification'] = SEO_CONFIG.verification.so360;
-  }
-  
-  return tags;
+export function getVerificationTags() {
+  return {
+    // Google Search Console
+    google: SEO_CONFIG.verification.google || undefined,
+    // Yandex Webmaster
+    yandex: SEO_CONFIG.verification.yandex || undefined,
+    // 其他验证（百度、Bing、360等）
+    other: {
+      // 百度站长平台
+      ...(SEO_CONFIG.verification.baidu && {
+        'baidu-site-verification': [SEO_CONFIG.verification.baidu],
+      }),
+      // Bing Webmaster
+      ...(SEO_CONFIG.verification.bing && {
+        'msvalidate.01': [SEO_CONFIG.verification.bing],
+      }),
+      // 360站长平台
+      ...(SEO_CONFIG.verification.so360 && {
+        '360-site-verification': [SEO_CONFIG.verification.so360],
+      }),
+    },
+  };
 }
 
 
