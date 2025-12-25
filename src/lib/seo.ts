@@ -26,8 +26,8 @@ export const SEO_CONFIG = {
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || '',
     bing: process.env.BING_SITE_VERIFICATION || '',
-    baidu: process.env.BAIDU_SITE_VERIFICATION || '',
-    yandex: process.env.YANDEX_SITE_VERIFICATION || '',
+    baidu: process.env.BAIDU_SITE_VERIFICATION || 'codeva-DaI2NqB1Qi',
+    yandex: process.env.YANDEX_SITE_VERIFICATION || 'd3e0d052e17a742e',
     so360: process.env.SO360_SITE_VERIFICATION || '',
   },
   // 关键词（按语言）
