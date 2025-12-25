@@ -11,6 +11,14 @@ const handleI18nRouting = createMiddleware(routing);
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
+  // 跳过搜索引擎验证文件（百度、Google等）
+  if (pathname.includes('baidu_verify') || 
+      pathname.includes('google') || 
+      pathname.endsWith('.html') ||
+      pathname.endsWith('.txt')) {
+    return NextResponse.next();
+  }
+  
   // 获取用户保存的语言偏好（从cookie）
   const savedLocale = request.cookies.get(LOCALE_COOKIE)?.value as Locale | undefined;
   
@@ -96,6 +104,13 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // 匹配所有路径，排除静态文件和API
-  matcher: '/((?!api|_next|_vercel|.*\\..*).*)',
+  // 匹配所有路径，排除静态文件、API和验证文件
+  matcher: [
+    // 匹配所有路径，但排除以下内容：
+    // - api 路由
+    // - _next 静态文件
+    // - _vercel 内部路由
+    // - 带扩展名的文件（.html, .txt, .xml, .ico 等）
+    '/((?!api|_next|_vercel|.*\\..*|baidu_verify.*|google.*).*)',
+  ],
 };
