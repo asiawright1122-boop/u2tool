@@ -5,18 +5,34 @@ import { routing, locales, countryToLocale, type Locale } from './i18n/routing';
 // 语言偏好Cookie名称
 const LOCALE_COOKIE = 'NEXT_LOCALE';
 
+// 搜索引擎爬虫 User-Agent 正则表达式
+// 包含百度、Google、Bing、Yandex 等主流搜索引擎爬虫
+const SEARCH_ENGINE_BOTS = /Baiduspider|Googlebot|bingbot|Slurp|DuckDuckBot|YandexBot|Sogou|360Spider|Bytespider/i;
+
 // 创建 next-intl middleware
 const handleI18nRouting = createMiddleware(routing);
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const userAgent = request.headers.get('user-agent') || '';
   
-  // 跳过搜索引擎验证文件（百度、Google等）
+  // 检测是否为搜索引擎爬虫
+  const isSearchEngineBot = SEARCH_ENGINE_BOTS.test(userAgent);
+  
+  // 跳过搜索引擎验证文件（百度、Google等）- 直接放行，不做任何处理
   if (pathname.includes('baidu_verify') || 
       pathname.includes('google') || 
       pathname.endsWith('.html') ||
       pathname.endsWith('.txt')) {
     return NextResponse.next();
+  }
+  
+  // 对搜索引擎爬虫访问根路径时，使用 rewrite 而非 redirect
+  // 这样爬虫可以看到页面内容（包括 meta 验证标签），而不会收到 307 重定向
+  if (isSearchEngineBot && pathname === '/') {
+    const url = request.nextUrl.clone();
+    url.pathname = '/zh'; // 默认 rewrite 到中文版本（百度主要面向中文用户）
+    return NextResponse.rewrite(url);
   }
   
   // 获取用户保存的语言偏好（从cookie）
