@@ -7,6 +7,7 @@ import {
   generateAlternates, 
   generateOgImageUrl,
   generateItemListJsonLd,
+  getCategoryKeywords,
   jsonLdToString,
 } from '@/lib/seo';
 import { categories, getToolsByCategory, ToolCategory } from '@/config/tools';
@@ -39,9 +40,13 @@ export async function generateMetadata({
   const title = `${categoryName} - ${t('nav.tools')}`;
   const description = t('site.description');
   
+  // 获取分类关键词
+  const keywords = getCategoryKeywords(id, locale);
+  
   return {
     title,
     description,
+    keywords: keywords.length > 0 ? keywords : [categoryName, 'online tools', 'free tools'],
     alternates: generateAlternates(locale, `/tools/category/${id}`),
     openGraph: {
       title: `${title} | ${SEO_CONFIG.siteName}`,

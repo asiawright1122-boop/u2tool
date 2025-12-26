@@ -31,15 +31,74 @@ export const SEO_CONFIG = {
     // 360站长平台验证码 - 硬编码以确保可靠性
     so360: process.env.SO360_SITE_VERIFICATION || 'a9a62516e3a7977830175b7fb2eb1f66',
   },
-  // 关键词（按语言）
+  // 全局关键词（按语言）- 用于首页和通用页面
   keywords: {
-    en: ['online tools', 'developer tools', 'free tools', 'JSON formatter', 'Base64 encoder', 'UUID generator', 'code converter', 'web tools'],
-    zh: ['在线工具', '开发者工具', '免费工具', 'JSON格式化', 'Base64编码', 'UUID生成器', '代码转换', '网页工具'],
-    es: ['herramientas en línea', 'herramientas de desarrollo', 'herramientas gratuitas', 'formateador JSON'],
-    pt: ['ferramentas online', 'ferramentas de desenvolvedor', 'ferramentas gratuitas', 'formatador JSON'],
-    ja: ['オンラインツール', '開発者ツール', '無料ツール', 'JSONフォーマッター', 'Base64エンコーダー'],
+    en: [
+      // 品牌词
+      'online tools', 'developer tools', 'free tools', 'web tools', 'dev utilities',
+      // 核心工具词
+      'JSON formatter', 'Base64 encoder', 'UUID generator', 'code converter',
+      'hash generator', 'QR code generator', 'password generator',
+      // 长尾关键词
+      'free online tools no signup', 'browser-based tools', 'instant tools',
+      'developer toolkit', 'programming utilities', 'code tools online',
+      // 功能词
+      'encode decode', 'format beautify', 'convert transform', 'generate create',
+    ],
+    zh: [
+      // 品牌词
+      '在线工具', '开发者工具', '免费工具', '网页工具', '程序员工具箱',
+      // 核心工具词
+      'JSON格式化', 'Base64编码', 'UUID生成器', '代码转换', '哈希生成器',
+      '二维码生成', '密码生成器', '时间戳转换',
+      // 长尾关键词
+      '免费在线工具', '无需注册', '浏览器工具', '即时工具',
+      '开发工具集', '编程工具', '代码工具',
+      // 功能词
+      '编码解码', '格式化美化', '转换工具', '生成器',
+    ],
+    es: [
+      // 品牌词
+      'herramientas en línea', 'herramientas de desarrollo', 'herramientas gratuitas',
+      'utilidades web', 'caja de herramientas del desarrollador',
+      // 核心工具词
+      'formateador JSON', 'codificador Base64', 'generador UUID',
+      'convertidor de código', 'generador de hash', 'generador de QR',
+      // 长尾关键词
+      'herramientas online gratis', 'sin registro', 'herramientas del navegador',
+      // 功能词
+      'codificar decodificar', 'formatear embellecer', 'convertir transformar',
+    ],
+    pt: [
+      // 品牌词
+      'ferramentas online', 'ferramentas de desenvolvedor', 'ferramentas gratuitas',
+      'utilitários web', 'caixa de ferramentas do desenvolvedor',
+      // 核心工具词
+      'formatador JSON', 'codificador Base64', 'gerador UUID',
+      'conversor de código', 'gerador de hash', 'gerador de QR',
+      // 长尾关键词
+      'ferramentas online grátis', 'sem registro', 'ferramentas do navegador',
+      // 功能词
+      'codificar decodificar', 'formatar embelezar', 'converter transformar',
+    ],
+    ja: [
+      // 品牌词
+      'オンラインツール', '開発者ツール', '無料ツール', 'ウェブツール', '開発ツールキット',
+      // 核心工具词
+      'JSONフォーマッター', 'Base64エンコーダー', 'UUID生成', 'コード変換',
+      'ハッシュ生成', 'QRコード生成', 'パスワード生成',
+      // 长尾关键词
+      '無料オンラインツール', '登録不要', 'ブラウザツール', '即時ツール',
+      // 功能词
+      'エンコードデコード', 'フォーマット整形', '変換ツール', 'ジェネレーター',
+    ],
   },
 } as const;
+
+// 从独立的关键词配置文件导入
+// 包含全面的多语言关键词和长尾关键词配置
+import { CATEGORY_KEYWORDS, TOOL_KEYWORDS } from './seo-keywords';
+export { CATEGORY_KEYWORDS, TOOL_KEYWORDS };
 
 /**
  * 生成规范 URL（不带尾部斜杠）
@@ -418,6 +477,30 @@ export function generateItemListJsonLd(
 export function getKeywords(locale: string): readonly string[] {
   const localeKey = locale as keyof typeof SEO_CONFIG.keywords;
   return SEO_CONFIG.keywords[localeKey] || SEO_CONFIG.keywords.en;
+}
+
+/**
+ * 获取分类关键词
+ * @param category - 分类 ID
+ * @param locale - 语言代码
+ * @returns 分类关键词数组
+ */
+export function getCategoryKeywords(category: string, locale: string): string[] {
+  const categoryData = CATEGORY_KEYWORDS[category];
+  if (!categoryData) return [];
+  return categoryData[locale] || categoryData['en'] || [];
+}
+
+/**
+ * 获取工具关键词
+ * @param slug - 工具 slug
+ * @param locale - 语言代码
+ * @returns 工具关键词数组
+ */
+export function getToolKeywords(slug: string, locale: string): string[] {
+  const toolData = TOOL_KEYWORDS[slug];
+  if (!toolData) return [];
+  return toolData[locale] || toolData['en'] || [];
 }
 
 /**

@@ -112,7 +112,7 @@
       "name": "Base64エンコーダー",
       "description": "テキストをBase64にエンコード、またはBase64をデコード。",
       "seo_title": "無料Base64エンコーダー＆デコーダー",
-      "seo_description": "Base64文字列を無料でオンラインエンコード・デコード。"
+      "seo_description": "テキストをBase64にエンコード、またはBase64文字列を無料でオンラインで即座にデコード。データアップロード不要の安全なブラウザツール。"
     },
     "json": {
       "invalidJson": "無効なJSON"
@@ -1057,7 +1057,7 @@
       "name": "TOML/JSONコンバーター",
       "description": "TOMLとJSON形式を双方向に変換。",
       "seo_title": "無料オンラインTOML JSONコンバーター",
-      "seo_description": "TOMLをJSONに、またはJSONをTOMLに無料でオンライン変換。"
+      "seo_description": "TOMLをJSONに、またはJSONをTOMLに無料でオンライン変換。シンタックスハイライト付きで設定ファイルを検証・フォーマット。"
     },
     "json-to-java": {
       "className": "クラス名",
@@ -1073,7 +1073,7 @@
       "name": "JSON to Java",
       "description": "JSONデータをJava POJOクラスに変換、Lombokサポート。",
       "seo_title": "無料オンラインJSON to Javaコンバーター",
-      "seo_description": "JSONをJavaクラスに無料でオンライン変換。Lombokアノテーション対応。"
+      "seo_description": "JSONをJavaクラスに無料でオンライン変換。Lombokアノテーション、getter/setter、builderパターンに対応。Java API開発に必須。"
     },
     "json-to-python": {
       "className": "クラス名",
@@ -1087,7 +1087,7 @@
       "name": "JSON to Python",
       "description": "JSONデータをPython dataclass、Pydantic、TypedDictに変換。",
       "seo_title": "無料オンラインJSON to Pythonコンバーター",
-      "seo_description": "JSONをPython dataclassやPydanticモデルに無料でオンライン変換。"
+      "seo_description": "JSONをPython dataclassまたはPydanticモデルに無料でオンライン変換。バリデーション付きの型安全なPythonコードを生成。"
     },
     "json-to-kotlin": {
       "className": "クラス名",
@@ -1106,7 +1106,7 @@
       "name": "JSON to Kotlin",
       "description": "JSONデータをKotlin data classに変換、シリアライゼーションサポート。",
       "seo_title": "無料オンラインJSON to Kotlinコンバーター",
-      "seo_description": "JSONをKotlin data classに無料でオンライン変換。Moshi、Gson、Kotlinx対応。"
+      "seo_description": "JSONをKotlinデータクラスに無料でオンライン変換。Moshi、Gson、Kotlinxシリアライゼーションアノテーションに対応。Android開発に必須。"
     },
     "imageCompressor": {
       "quality": "品質",
@@ -1322,7 +1322,7 @@
       "name": "JSONフォーマッター",
       "description": "JSONデータの整形と美化、シンタックスハイライト対応。JSONの検証と一般的なエラーの修正。",
       "seo_title": "無料オンラインJSONフォーマッター＆バリデーター",
-      "seo_description": "JSONデータを無料でオンライン整形、美化、検証。シンタックスハイライト、エラー検出、簡単コピー。",
+      "seo_description": "JSONデータを無料でオンラインでフォーマット、整形、検証。シンタックスハイライト、エラー検出、簡単コピー機能付き。開発者に最適。",
       "inputPlaceholder": "{\"key\": \"value\"}",
       "outputPlaceholder": "整形されたJSONがここに表示されます..."
     },
@@ -1330,86 +1330,86 @@
       "name": "UUIDジェネレーター",
       "description": "ランダムなUUID (v4) を即座に生成。",
       "seo_title": "無料オンラインUUIDジェネレーター",
-      "seo_description": "ランダムなUUID v4文字列を無料でオンライン生成。"
+      "seo_description": "ランダムなUUID v4文字列を無料でオンライン生成。複数UUIDの一括生成に対応。安全で高速、ブラウザ内で完結。開発者に最適。"
     },
     "url-encoder": {
       "name": "URLエンコーダー",
       "description": "URLを安全にエンコードまたはデコード。",
       "seo_title": "無料URLエンコーダー＆デコーダー",
-      "seo_description": "URLを無料でオンラインエンコード・デコード。"
+      "seo_description": "URLとクエリ文字列を無料でオンラインでエンコード・デコード。Web開発のための特殊文字の安全な処理。高速で安全なブラウザツール。"
     },
     "password-generator": {
       "name": "パスワードジェネレーター",
       "description": "強力で安全なランダムパスワードを生成。",
       "seo_title": "無料強力パスワードジェネレーター",
-      "seo_description": "安全なランダムパスワードを無料でオンライン生成。",
+      "seo_description": "安全なランダムパスワードを無料でオンライン生成。長さをカスタマイズし、大文字、小文字、数字、記号を含める。データの保存やアップロードなし。",
       "selectOption": "少なくとも1つのオプションを選択してください"
     },
     "hash-generator": {
       "name": "ハッシュジェネレーター",
       "description": "テキストからMD5、SHA-1、SHA-256ハッシュを生成。",
       "seo_title": "無料MD5、SHAハッシュジェネレーター",
-      "seo_description": "MD5、SHA-1、SHA-256ハッシュを無料でオンライン生成。"
+      "seo_description": "MD5、SHA-1、SHA-256、SHA-512ハッシュを無料でオンライン生成。データアップロード不要の安全なブラウザツール。ファイル整合性検証に最適。"
     },
     "qr-generator": {
       "name": "QRコードジェネレーター",
       "description": "テキストやURLからQRコードを生成。",
       "seo_title": "無料QRコードジェネレーター",
-      "seo_description": "QRコードを無料でオンライン生成。"
+      "seo_description": "テキスト、URL、データから無料でオンラインでQRコードを生成。高品質PNG画像としてダウンロード。サイズとエラー訂正レベルをカスタマイズ。"
     },
     "color-converter": {
       "name": "カラーコンバーター",
       "description": "HEX、RGB、HSL形式間で色を変換。",
       "seo_title": "無料カラーコンバーター HEX RGB HSL",
-      "seo_description": "色を無料でオンライン変換。"
+      "seo_description": "HEX、RGB、HSL、HSV形式間で無料でオンラインで色を変換。ライブプレビュー付きの即時カラーフォーマット変換。デザイナーに必須。"
     },
     "timestamp-converter": {
       "name": "タイムスタンプコンバーター",
       "description": "Unixタイムスタンプを読みやすい日付に変換。",
       "seo_title": "無料Unixタイムスタンプコンバーター",
-      "seo_description": "Unixタイムスタンプを無料でオンライン変換。"
+      "seo_description": "Unixタイムスタンプを人間が読める日付に、日付をタイムスタンプに無料でオンライン変換。複数の日付形式とタイムゾーンに対応。"
     },
     "word-counter": {
       "name": "文字数カウンター",
       "description": "単語、文字、文、段落をカウント。",
       "seo_title": "無料文字数・単語数カウンター",
-      "seo_description": "単語と文字を無料でオンラインカウント。"
+      "seo_description": "単語数、文字数、文数、段落数を無料でオンラインでカウント。読書時間の見積もりと詳細なテキスト統計を取得。ライターや編集者に最適。"
     },
     "case-converter": {
       "name": "大文字小文字変換",
       "description": "テキストを大文字、小文字などに変換。",
       "seo_title": "無料大文字小文字変換ツール",
-      "seo_description": "大文字小文字を無料でオンライン変換。"
+      "seo_description": "テキストの大文字小文字を無料でオンライン変換。大文字、小文字、タイトルケース、センテンスケース、キャメルケース、スネークケースに変換。"
     },
     "html-encoder": {
       "name": "HTMLエンコーダー",
       "description": "特殊文字をHTMLエンティティにエンコード。",
       "seo_title": "無料HTMLエンコーダー",
-      "seo_description": "HTMLエンティティを無料でオンラインエンコード・デコード。"
+      "seo_description": "HTMLエンティティを無料でオンラインでエンコード・デコード。Web開発のための特殊文字の安全な処理。XSS攻撃を防ぎ、HTMLを正しく表示。"
     },
     "markdown-preview": {
       "name": "Markdownプレビュー",
       "description": "Markdownを書いてライブプレビュー。",
       "seo_title": "無料Markdownエディター",
-      "seo_description": "Markdownを無料でオンライン作成・プレビュー。"
+      "seo_description": "Markdownを無料でオンラインで書いてプレビュー。シンタックスハイライト付きのライブプレビューとHTML出力。ドキュメントやブログに最適。"
     },
     "lorem-ipsum": {
       "name": "Lorem Ipsumジェネレーター",
       "description": "デザイン用のプレースホルダーテキストを生成。",
       "seo_title": "無料Lorem Ipsumジェネレーター",
-      "seo_description": "Lorem Ipsumテキストを無料でオンライン生成。"
+      "seo_description": "Lorem Ipsumプレースホルダーテキストを無料でオンライン生成。モックアップやデザイン用の段落、文、単語を作成。Webデザイナーに必須。"
     },
     "regex-tester": {
       "name": "正規表現テスター",
       "description": "リアルタイムマッチングで正規表現をテスト。",
       "seo_title": "無料正規表現テスター",
-      "seo_description": "正規表現を無料でオンラインテスト・デバッグ。"
+      "seo_description": "正規表現を無料でオンラインでテスト・デバッグ。シンタックスハイライトとマッチグループ付きのリアルタイムマッチング。開発者に必須。"
     },
     "jwt-decoder": {
       "name": "JWTデコーダー",
       "description": "JWTトークンをデコードしてHeader、Payload、署名を表示。",
       "seo_title": "無料JWTデコーダー",
-      "seo_description": "JWTトークンを無料でオンラインデコード。",
+      "seo_description": "JWT（JSON Web Token）を無料でオンラインでデコード・検査。検証なしでヘッダー、ペイロード、署名を表示。認証デバッグに必須。",
       "enterToken": "JWTトークンを入力してください",
       "invalidFormat": "無効なJWT形式",
       "invalidToken": "無効なJWTトークン",
@@ -1424,19 +1424,19 @@
       "name": "差分チェッカー",
       "description": "2つのテキストを比較して差分をハイライト表示。",
       "seo_title": "無料テキスト差分チェッカー",
-      "seo_description": "テキストの差分を無料でオンライン比較。"
+      "seo_description": "2つのテキストを無料でオンライン比較。追加、削除、変更されたコンテンツを並べて表示でハイライト。コードレビューに必須。"
     },
     "json-to-csv": {
       "name": "JSON to CSV",
       "description": "JSONをCSVに変換、またはCSVをJSONに変換。",
       "seo_title": "無料JSON to CSVコンバーター",
-      "seo_description": "JSONとCSVを無料でオンライン変換。"
+      "seo_description": "JSONをCSVに、またはCSVをJSONに無料でオンライン変換。ネストされたオブジェクトと配列を処理。データエクスポートに最適。"
     },
     "image-to-base64": {
       "name": "画像 to Base64",
       "description": "画像をBase64エンコードに変換。HTMLやCSSで使用可能。",
       "seo_title": "無料画像 to Base64コンバーター",
-      "seo_description": "画像をBase64に無料でオンライン変換。",
+      "seo_description": "画像をBase64エンコード文字列に無料でオンライン変換。PNG、JPG、GIF、SVG形式に対応。CSS、HTML、JSONへの画像埋め込みに最適。",
       "uploadHint": "クリックしてアップロードまたはドラッグ&ドロップ",
       "supportedFormats": "PNG, JPG, GIF, SVG, WebP",
       "copyDataUrl": "Data URLをコピー",
@@ -1449,7 +1449,7 @@
       "name": "Cron式ジェネレーター",
       "description": "Cron式を視覚的に生成・解析。",
       "seo_title": "無料Cron式ジェネレーター",
-      "seo_description": "Cron式を無料でオンライン生成・解析。",
+      "seo_description": "cron式を無料でオンラインで生成・解析。一般的なプリセットと人間が読める説明付きのビジュアルエディタ。タスクスケジューリングに必須。",
       "presets": "クイックプリセット",
       "minute": "分 (0-59)",
       "hour": "時 (0-23)",
@@ -1488,19 +1488,19 @@
       "name": "テキスト to Slug",
       "description": "テキストをURL用のslug形式に変換。",
       "seo_title": "無料テキスト to Slugコンバーター",
-      "seo_description": "テキストをslugに無料でオンライン変換。"
+      "seo_description": "テキストをURL対応のslug形式に無料でオンライン変換。特殊文字を削除し、unicodeを処理し、SEOフレンドリーなURLを作成。"
     },
     "number-base-converter": {
       "name": "進数変換",
       "description": "2進数、8進数、10進数、16進数間で数値を変換。",
       "seo_title": "無料進数変換ツール",
-      "seo_description": "進数を無料でオンライン変換。"
+      "seo_description": "2進数、8進数、10進数、16進数を無料でオンライン変換。大きな数値と即時変換に対応。プログラマーや学生に必須。"
     },
     "json-path-tester": {
       "name": "JSONPathテスター",
       "description": "JSONデータに対してJSONPath式をテストおよび評価します。",
       "seo_title": "無料オンラインJSONPathテスター",
-      "seo_description": "JSONPath式を無料でオンラインテストおよびデバッグ。",
+      "seo_description": "JSONPath式を無料でオンラインでテスト・デバッグ。リアルタイム結果とシンタックスハイライト付きでJSONデータをクエリ。API開発に必須。",
       "jsonData": "JSONデータ",
       "jsonPlaceholder": "{\"name\": \"John\", \"users\": [{\"name\": \"Alice\"}, {\"name\": \"Bob\"}]}",
       "expression": "JSONPath式",
@@ -1516,19 +1516,19 @@
       "name": "XMLフォーマッター",
       "description": "XMLデータの整形と圧縮、構文検証。",
       "seo_title": "無料XMLフォーマッター",
-      "seo_description": "XMLを無料でオンライン整形・圧縮。"
+      "seo_description": "XMLデータを無料でオンラインでフォーマット、整形、圧縮。シンタックスハイライト、エラー検出、ツリービュー。API開発に必須。"
     },
     "chinese-converter": {
       "name": "中国語変換",
       "description": "簡体字と繁体字を相互変換。",
       "seo_title": "無料中国語簡繁変換",
-      "seo_description": "簡体字と繁体字を無料でオンライン変換。"
+      "seo_description": "簡体字中国語と繁体字中国語を無料でオンライン変換。フレーズサポート付きの正確な文字変換。中国語コンテンツのローカライズに必須。"
     },
     "unit-converter": {
       "name": "単位変換",
       "description": "長さ、重量、温度、面積などの単位を変換。",
       "seo_title": "無料単位変換ツール",
-      "seo_description": "各種単位を無料でオンライン変換。",
+      "seo_description": "各種単位を無料でオンライン変換：長さ、重さ、温度、面積、体積、速度、データ。クイックリファレンス表と即時変換。",
       "enterValue": "値を入力",
       "swapUnits": "単位を交換"
     },
@@ -1536,19 +1536,19 @@
       "name": "グラデーション生成",
       "description": "CSSグラデーションを視覚的に作成。",
       "seo_title": "無料CSSグラデーション生成",
-      "seo_description": "CSSグラデーションを無料でオンライン作成。"
+      "seo_description": "CSSグラデーションを無料でオンライン作成。CSSとTailwindコード付きの線形・放射状グラデーションを生成。カラーピッカー付きビジュアルエディタ。"
     },
     "unicode-converter": {
       "name": "Unicode変換",
       "description": "テキストとUnicodeエンコーディングを相互変換。",
       "seo_title": "無料Unicode変換ツール",
-      "seo_description": "テキストとUnicodeを無料でオンライン変換。"
+      "seo_description": "テキストとUnicodeエンコーディングを無料でオンライン変換。HTMLエンティティ、CSSエスケープシーケンス、各種Unicode形式に対応。"
     },
     "code-minifier": {
       "name": "コード圧縮",
       "description": "HTML、CSS、JSコードを圧縮してファイルサイズを削減。",
       "seo_title": "無料コード圧縮ツール",
-      "seo_description": "HTML、CSS、JSを無料でオンライン圧縮。",
+      "seo_description": "HTML、CSS、JavaScriptコードを無料でオンライン圧縮。ファイルサイズを削減し、ページ読み込み速度を向上。Webパフォーマンス最適化に必須。",
       "codeType": "コードタイプ",
       "placeholder": "{type} コードを入力して圧縮...",
       "original": "元のサイズ",
@@ -1559,187 +1559,187 @@
       "name": "SQLフォーマッター",
       "description": "SQLクエリを整形して可読性を向上。",
       "seo_title": "無料SQLフォーマッター",
-      "seo_description": "SQLを無料でオンライン整形。"
+      "seo_description": "SQLクエリを無料でオンラインでフォーマット・整形。シンタックスハイライトとインデント付きで複数のSQL方言に対応。データベース開発に必須。"
     },
     "pinyin-converter": {
       "name": "ピンイン変換",
       "description": "中国語をピンインに変換。声調付きも対応。",
       "seo_title": "無料ピンイン変換ツール",
-      "seo_description": "中国語をピンインに無料でオンライン変換。"
+      "seo_description": "中国語文字をピンインに無料でオンライン変換。声調記号と数字声調に対応。中国語学習と発音ガイドに必須。"
     },
     "color-picker": {
       "name": "カラーピッカー",
       "description": "色を選択してHEX、RGB、HSL値を取得。",
       "seo_title": "無料カラーピッカー",
-      "seo_description": "色を選択して各種形式の値を取得。"
+      "seo_description": "HEX、RGB、HSL形式で色を選択し、色の値を無料でオンライン取得。プリセットパレットと最近の色を備えたビジュアルカラーピッカー。"
     },
     "aspect-ratio": {
       "name": "アスペクト比計算",
       "description": "アスペクト比を計算し、比率を維持してリサイズ。",
       "seo_title": "無料アスペクト比計算ツール",
-      "seo_description": "アスペクト比を無料でオンライン計算。"
+      "seo_description": "アスペクト比を計算し、画像を比例的にリサイズ。16:9、4:3、1:1などの一般的な比率に対応。動画編集やレスポンシブデザインに最適。"
     },
     "css-beautifier": {
       "name": "CSS整形",
       "description": "CSSコードを整形・美化。圧縮と整形に対応。",
       "seo_title": "無料CSS整形ツール",
-      "seo_description": "CSSを無料でオンライン整形・圧縮。"
+      "seo_description": "CSSコードを無料でオンラインでフォーマット、整形、圧縮。カスタマイズ可能なインデント付きシンタックスハイライト。Web開発者に最適。"
     },
     "js-beautifier": {
       "name": "JavaScript整形",
       "description": "JavaScriptコードを整形・美化。圧縮と整形に対応。",
       "seo_title": "無料JavaScript整形ツール",
-      "seo_description": "JavaScriptを無料でオンライン整形・圧縮。"
+      "seo_description": "JavaScriptコードを無料でオンラインでフォーマット、整形、圧縮。カスタマイズ可能なインデント付きシンタックスハイライト。開発者に最適。"
     },
     "html-preview": {
       "name": "HTMLプレビュー",
       "description": "HTMLコードをリアルタイムでプレビュー。CSSとJavaScript対応。",
       "seo_title": "無料HTMLプレビューツール",
-      "seo_description": "HTMLをリアルタイムで無料プレビュー。"
+      "seo_description": "HTMLコードを無料でオンラインでリアルタイムプレビュー。入力時に即座に更新されるライブレンダリング。Web開発やHTML学習に最適。"
     },
     "ip-lookup": {
       "name": "IPアドレス検索",
       "description": "IPアドレスの位置情報、ISPなどを検索。",
       "seo_title": "無料IPアドレス検索ツール",
-      "seo_description": "IPアドレスの位置情報を無料でオンライン検索。"
+      "seo_description": "IPアドレスの地理位置情報を無料でオンライン検索。国、都市、ISP、タイムゾーン、座標を取得。ネットワークトラブルシューティングに最適。"
     },
     "morse-code": {
       "name": "モールス信号変換",
       "description": "テキストをモールス信号に変換、またはその逆。",
       "seo_title": "無料モールス信号変換ツール",
-      "seo_description": "モールス信号とテキストを無料でオンライン変換。音声再生対応。"
+      "seo_description": "テキストをモールス信号に、またはモールス信号をテキストに無料でオンライン変換。速度調整可能なオーディオ再生に対応。学習に最適。"
     },
     "random-generator": {
       "name": "乱数ジェネレーター",
       "description": "指定範囲内の乱数を生成。一括生成と重複なしオプション対応。",
       "seo_title": "無料乱数ジェネレーター",
-      "seo_description": "乱数を無料でオンライン生成。"
+      "seo_description": "乱数を無料でオンライン生成。カスタム範囲、ユニークな数字、複数の結果に対応。ゲーム、抽選、ランダム選択に最適。"
     },
     "text-reverser": {
       "name": "テキスト反転",
       "description": "テキストの文字、単語、行の順序を反転。",
       "seo_title": "無料テキスト反転ツール",
-      "seo_description": "テキストを無料でオンライン反転。"
+      "seo_description": "テキストの文字、単語、行を無料でオンラインで反転。複数の反転モードと即時プレビュー。パズル、エンコーディング、テキスト操作に最適。"
     },
     "line-counter": {
       "name": "行数カウンター",
       "description": "テキストの行数をカウント。重複削除、空行削除、ソート対応。",
       "seo_title": "無料行数カウンター",
-      "seo_description": "テキストの行数を無料でオンラインカウント。"
+      "seo_description": "行数をカウントし、重複を削除し、テキストを無料でオンラインでソート。合計、空、ユニーク行の統計を取得。データクリーニングに最適。"
     },
     "string-escape": {
       "name": "文字列エスケープ",
       "description": "JSON、HTML、URL、JavaScript形式の文字列をエスケープ/アンエスケープ。",
       "seo_title": "無料文字列エスケープツール",
-      "seo_description": "文字列を無料でオンラインエスケープ。"
+      "seo_description": "各種プログラミング言語の文字列を無料でオンラインでエスケープ・アンエスケープ。JSON、HTML、URL、正規表現に対応。開発者に最適。"
     },
     "yaml-json": {
       "name": "YAML/JSON変換",
       "description": "YAMLとJSON形式を相互変換。",
       "seo_title": "無料YAML JSON変換ツール",
-      "seo_description": "YAMLとJSONを無料でオンライン変換。"
+      "seo_description": "YAMLをJSONに、またはJSONをYAMLに無料でオンライン変換。シンタックスハイライト付きで設定ファイルを検証・フォーマット。DevOpsに最適。"
     },
     "date-calculator": {
       "name": "日付計算機",
       "description": "2つの日付の差を計算、または日付に日数を加減算。",
       "seo_title": "無料日付計算機",
-      "seo_description": "日付の差と加減算を無料でオンライン計算。"
+      "seo_description": "日付の差分を計算し、日数を加減算。日付間の日数、週数、月数、年数を取得。プロジェクト計画やスケジューリングに最適。"
     },
     "text-deduplicator": {
       "name": "テキスト重複削除",
       "description": "テキストから重複行を削除し、ユニークな内容のみを保持。",
       "seo_title": "無料テキスト重複削除ツール",
-      "seo_description": "テキストの重複行を無料でオンライン削除。"
+      "seo_description": "テキストから重複行を無料でオンラインで削除。大文字小文字を区別するマッチングと行トリミングに対応。データクリーニングに最適。"
     },
     "color-blender": {
       "name": "カラーブレンダー",
       "description": "2色を混合してグラデーションステップを生成。",
       "seo_title": "無料カラーブレンダー",
-      "seo_description": "色を混合してグラデーションを無料でオンライン生成。"
+      "seo_description": "2つの色をブレンドし、グラデーションステップを無料でオンライン生成。カスタマイズ可能なステップで滑らかな色の遷移を作成。デザイナーに最適。"
     },
     "json-sorter": {
       "name": "JSONソーター",
       "description": "JSONオブジェクトをキー名でソート。",
       "seo_title": "無料JSONソーター",
-      "seo_description": "JSONキーを無料でオンラインソート。"
+      "seo_description": "JSONキーを無料でオンラインでアルファベット順にソート。昇順・降順とネストされたオブジェクトのソートに対応。API開発に最適。"
     },
     "placeholder-image": {
       "name": "プレースホルダー画像生成",
       "description": "カスタムサイズと色のプレースホルダー画像を生成。",
       "seo_title": "無料プレースホルダー画像生成",
-      "seo_description": "プレースホルダー画像を無料でオンライン生成。"
+      "seo_description": "カスタムサイズと色のプレースホルダー画像を無料でオンライン生成。モックアップ、ワイヤーフレーム、Webデザインに最適。PNGでダウンロード。"
     },
     "text-encryption": {
       "name": "テキスト暗号化",
       "description": "AES暗号化でテキストを暗号化・復号化。",
       "seo_title": "無料テキスト暗号化ツール",
-      "seo_description": "AES暗号化でテキストを無料でオンライン暗号化・復号化。"
+      "seo_description": "AES-256暗号化でテキストを無料でオンラインで暗号化・復号化。パスワード保護付きの安全なブラウザ暗号化。サーバーへのデータアップロードなし。"
     },
     "file-hash": {
       "name": "ファイルハッシュ計算",
       "description": "ファイルのMD5、SHA-1、SHA-256、SHA-512ハッシュを計算。",
       "seo_title": "無料ファイルハッシュ計算ツール",
-      "seo_description": "ファイルハッシュを無料でオンライン計算。"
+      "seo_description": "ファイルハッシュ（MD5、SHA-1、SHA-256、SHA-512）を無料でオンライン計算。ファイルの整合性を検証し、変更を検出。安全なブラウザ処理。"
     },
     "html-table-generator": {
       "name": "HTMLテーブル生成",
       "description": "行と列をカスタマイズしてHTMLテーブルを視覚的に生成。",
       "seo_title": "無料HTMLテーブル生成ツール",
-      "seo_description": "HTMLテーブルを無料でオンライン生成。"
+      "seo_description": "ビジュアルエディタでHTMLテーブルを無料でオンライン生成。行、列、ヘッダー、スタイルをカスタマイズ。クリーンなHTMLコードをエクスポート。"
     },
     "json-schema-validator": {
       "name": "JSON Schema検証",
       "description": "JSON SchemaでJSONデータを検証。",
       "seo_title": "無料JSON Schema検証ツール",
-      "seo_description": "JSON Schemaを無料でオンライン検証。"
+      "seo_description": "JSON SchemaでJSONデータを無料でオンライン検証。draft-04、draft-06、draft-07スキーマに対応。詳細なエラーメッセージを取得。"
     },
     "regex-patterns": {
       "name": "正規表現パターン集",
       "description": "メール、URL、電話番号などの一般的な正規表現パターン。",
       "seo_title": "無料正規表現パターン集",
-      "seo_description": "開発者向けの一般的な正規表現パターン。"
+      "seo_description": "メール、URL、電話、IPアドレス、日付などの一般的な正規表現パターンを無料でオンライン閲覧。ワンクリックでコードにコピー。開発者リファレンス。"
     },
     "byte-counter": {
       "name": "バイトカウンター",
       "description": "UTF-8、UTF-16、ASCIIエンコーディングでテキストのバイト数を計算。",
       "seo_title": "無料バイトカウンター",
-      "seo_description": "テキストのバイト数を無料でオンライン計算。"
+      "seo_description": "UTF-8、UTF-16などのエンコーディングでテキストバイト数を無料でオンラインカウント。文字数、単語数、バイトサイズを取得。データサイズ見積もりに必須。"
     },
     "json-to-typescript": {
       "name": "JSON to TypeScript",
       "description": "JSONデータをTypeScriptインターフェース定義に変換。",
       "seo_title": "無料JSON to TypeScriptコンバーター",
-      "seo_description": "JSONをTypeScriptインターフェースに無料でオンライン変換。"
+      "seo_description": "JSONをTypeScriptインターフェースと型に無料でオンライン変換。オプショナルプロパティとネスト型を持つ型安全なコードを生成。TypeScript開発者に必須。"
     },
     "svg-optimizer": {
       "name": "SVG最適化",
       "description": "SVGコードを最適化・圧縮してファイルサイズを削減。",
       "seo_title": "無料SVG最適化ツール",
-      "seo_description": "SVGファイルを無料でオンライン最適化・圧縮。"
+      "seo_description": "SVGファイルを無料でオンラインで最適化・圧縮。不要なメタデータを削除し、コードを圧縮し、ファイルサイズを削減。Webパフォーマンス最適化に最適。"
     },
     "text-to-binary": {
       "name": "テキスト⇔バイナリ変換",
       "description": "テキストをバイナリに変換、またはバイナリをテキストに変換。",
       "seo_title": "無料テキストバイナリ変換ツール",
-      "seo_description": "テキストとバイナリを無料でオンライン変換。"
+      "seo_description": "テキストをバイナリコードに、またはバイナリをテキストに無料でオンライン変換。ASCIIとUnicodeエンコーディングに対応。バイナリ学習に最適。"
     },
     "markdown-to-html": {
       "name": "Markdown to HTML",
       "description": "MarkdownテキストをHTMLコードに変換。",
       "seo_title": "無料Markdown to HTMLコンバーター",
-      "seo_description": "MarkdownをHTMLに無料でオンライン変換。"
+      "seo_description": "MarkdownをHTMLに無料でオンライン変換。テーブル、コードブロック、タスクリスト付きのGitHub Flavored Markdownに対応。HTMLをプレビュー・コピー。"
     },
     "html-minifier": {
       "name": "HTML圧縮",
       "description": "HTMLコードを圧縮・整形してファイルサイズを削減。",
       "seo_title": "無料HTML圧縮ツール",
-      "seo_description": "HTMLコードを無料でオンライン圧縮・整形。"
+      "seo_description": "HTMLコードを無料でオンラインで圧縮。空白、コメントを削除し、属性を最適化。ファイルサイズを削減し、ページ読み込み速度を向上。"
     },
     "json-diff": {
       "name": "JSON比較",
       "description": "2つのJSONオブジェクトを比較して差異を見つけます。",
       "seo_title": "無料オンラインJSON比較ツール",
-      "seo_description": "2つのJSONオブジェクトを比較して差異を無料でオンライン検出。",
+      "seo_description": "2つのJSONオブジェクトを比較し、差分を無料でオンラインで検出。追加、削除、変更された値を並べて表示でハイライト。APIデバッグに必須。",
       "json1": "JSON 1",
       "json2": "JSON 2",
       "placeholder": "{\"key\": \"value\"}",
@@ -1751,68 +1751,68 @@
       "name": "Base32エンコーダー",
       "description": "テキストをBase32にエンコード、またはBase32をデコード。",
       "seo_title": "無料Base32エンコーダー＆デコーダー",
-      "seo_description": "Base32を無料でオンラインエンコード・デコード。"
+      "seo_description": "テキストをBase32にエンコード、またはBase32文字列を無料でオンラインでデコード。RFC 4648標準エンコーディングに対応。TOTPシークレットに最適。"
     },
     "epoch-converter": {
       "name": "Epoch変換",
       "description": "Epoch/Unixタイムスタンプと日時を相互変換。",
       "seo_title": "無料Epoch時間変換ツール",
-      "seo_description": "Epochタイムスタンプを無料でオンライン変換。"
+      "seo_description": "Unixエポックタイムスタンプを人間が読める日付に、またはその逆に無料でオンライン変換。ミリ秒と秒に対応。開発者とログ分析に必須。"
     },
     "css-unit-converter": {
       "name": "CSS単位変換",
       "description": "px、rem、em、pt、vw、vhなどのCSS単位を変換。",
       "seo_title": "無料CSS単位変換ツール",
-      "seo_description": "CSS単位を無料でオンライン変換。"
+      "seo_description": "CSS単位（px、em、rem、%、vw、vh）を無料でオンライン変換。ベースフォントサイズでレスポンシブ値を計算。レスポンシブWebデザインに必須。"
     },
     "text-statistics": {
       "name": "テキスト統計",
       "description": "文字、単語、文、段落などの詳細な統計情報。",
       "seo_title": "無料テキスト統計ツール",
-      "seo_description": "テキスト統計を無料でオンライン分析。"
+      "seo_description": "テキスト統計を無料でオンライン分析。単語数、文字数、文数、読書時間、可読性スコアを取得。ライターや編集者に最適。"
     },
     "hex-editor": {
       "name": "16進数エディター",
       "description": "テキストと16進数を相互変換、バイトデータを表示。",
       "seo_title": "無料16進数エディター",
-      "seo_description": "テキストと16進数を無料でオンライン変換。"
+      "seo_description": "テキストを16進数に、16進数をテキストに無料でオンライン変換。ASCIIプレビュー付きで16進データを表示・編集。デバッグとバイナリデータ分析に必須。"
     },
     "color-palette": {
       "name": "カラーパレット生成",
       "description": "色階、補色、類似色、三角配色を生成。",
       "seo_title": "無料カラーパレット生成ツール",
-      "seo_description": "カラーパレットを無料でオンライン生成。"
+      "seo_description": "カラーパレットと配色を無料でオンライン生成。補色、類似色、トライアド、モノクロマティックパレットを作成。CSS、SCSS、JSON形式でエクスポート。"
     },
     "http-status": {
       "name": "HTTPステータスコード",
       "description": "HTTPステータスコードの意味を検索。",
       "seo_title": "HTTPステータスコードリファレンス",
-      "seo_description": "HTTPステータスコードリファレンスガイド。"
+      "seo_description": "HTTPステータスコードリファレンスガイドを無料でオンライン閲覧。1xx、2xx、3xx、4xx、5xxステータスコードの説明と使用例を学習。開発者必須。"
     },
     "json-to-yaml": {
       "name": "JSON to YAML",
       "description": "JSONデータをYAML形式に変換。",
       "seo_title": "無料JSON to YAMLコンバーター",
-      "seo_description": "JSONをYAMLに無料でオンライン変換。"
+      "seo_description": "JSONをYAML形式に無料でオンライン変換。適切なインデントとフォーマットでデータ構造を保持。設定ファイルとDevOpsワークフローに最適。"
     },
     "data-uri": {
       "name": "Data URI生成",
       "description": "ファイルをData URI形式に変換してHTML/CSSに埋め込み。",
       "seo_title": "無料Data URI生成ツール",
-      "seo_description": "Data URIを無料でオンライン生成。",
+      "seo_description": "ファイルやテキストからData URIを無料でオンライン生成。画像、フォント、ファイルをbase64データURLに変換。CSSやHTMLへのアセット埋め込みに最適。",
       "output": "Data URI"
     },
     "text-compare": {
       "name": "テキスト類似度比較",
       "description": "2つのテキストの類似度を比較、編集距離を計算。",
       "seo_title": "無料テキスト類似度比較ツール",
-      "seo_description": "テキスト類似度を無料でオンライン比較。"
+      "seo_description": "テキストの類似度を比較し、差分を無料でオンラインで検出。レーベンシュタイン距離、類似度パーセンテージを計算し、変更をハイライト。コンテンツレビューに必須。"
     },
     "json-to-go": {
       "name": "JSON to Go構造体",
       "description": "JSONデータをGo言語の構造体定義に変換。",
       "seo_title": "無料JSON to Go構造体コンバーター",
-      "seo_description": "JSONをGo構造体に無料でオンライン変換。",
+      "seo_description": "JSONをGo構造体に無料でオンライン変換。適切なフィールドタグとネスト構造体サポート付きの型安全なGoコードを生成。Go API開発に必須。",
       "structName": "構造体名",
       "input": "JSON入力",
       "output": "Go構造体"
@@ -1821,7 +1821,7 @@
       "name": "HTML to JSX",
       "description": "HTMLコードをReact JSX形式に変換します。",
       "seo_title": "無料オンラインHTML to JSXコンバーター",
-      "seo_description": "HTMLコードをReact JSX形式に無料でオンライン変換。",
+      "seo_description": "HTMLコードをReact JSX形式に無料でオンライン変換。classをclassNameに、styleを文字列からオブジェクトに変換し、自己終了タグを修正。React開発者に必須。",
       "htmlInput": "HTML入力",
       "jsxOutput": "JSX出力",
       "placeholder": "<div class=\"container\">...</div>",
@@ -1832,25 +1832,25 @@
       "name": "chmod計算機",
       "description": "Linux/Unixファイル権限を8進数とシンボリック表記で計算。",
       "seo_title": "無料chmod計算機",
-      "seo_description": "ファイル権限を無料でオンライン計算。"
+      "seo_description": "Unixファイルパーミッション（chmod）を無料でオンライン計算。数値表記とシンボリック表記を変換。所有者、グループ、その他の読み取り、書き込み、実行権限を可視化。"
     },
     "barcode-generator": {
       "name": "バーコード生成",
       "description": "Code 128、Code 39、EAN-13、UPC形式のバーコードを生成。",
       "seo_title": "無料バーコード生成ツール",
-      "seo_description": "バーコードを無料でオンライン生成。"
+      "seo_description": "バーコードを無料でオンライン生成。Code128、Code39、EAN-13、UPC-Aなどの形式に対応。PNGまたはSVGでダウンロード。在庫管理と製品ラベリングに最適。"
     },
     "text-to-speech": {
       "name": "テキスト読み上げ",
       "description": "テキストを音声に変換、音声・速度・ピッチを調整可能。",
       "seo_title": "無料テキスト読み上げツール",
-      "seo_description": "テキストを無料でオンライン読み上げ。"
+      "seo_description": "テキストを音声に無料でオンライン変換。複数の声と言語、調整可能な速度とピッチ。音声をダウンロードまたはブラウザで再生。アクセシビリティに最適。"
     },
     "url-parser": {
       "name": "URLパーサー",
       "description": "URLコンポーネントを解析、プロトコル、ホスト、パス、クエリパラメータを表示。",
       "seo_title": "無料URLパーサー",
-      "seo_description": "URLを無料でオンライン解析。",
+      "seo_description": "URLを無料でオンラインで解析・分析。プロトコル、ホスト、ポート、パス、クエリパラメータ、ハッシュを抽出。URLコンポーネントをエンコード・デコード。Web開発に必須。",
       "urlLabel": "URL",
       "protocol": "プロトコル",
       "hostname": "ホスト名",
@@ -1868,109 +1868,109 @@
       "name": "JSON to XML",
       "description": "JSONデータをXML形式に変換。",
       "seo_title": "無料JSON to XMLコンバーター",
-      "seo_description": "JSONをXMLに無料でオンライン変換。"
+      "seo_description": "JSONをXML形式に無料でオンライン変換。適切な要素のネストと属性でデータ構造を保持。API統合とデータ変換に最適。"
     },
     "text-wrapper": {
       "name": "テキスト折り返し",
       "description": "指定した幅でテキストを折り返し。",
       "seo_title": "無料テキスト折り返しツール",
-      "seo_description": "テキストを無料でオンライン折り返し。"
+      "seo_description": "テキストを指定幅に無料でオンラインで折り返し。単語境界または固定位置で改行を追加。コードコメント、メール、ドキュメントのフォーマットに最適。"
     },
     "csv-to-json": {
       "name": "CSV to JSON",
       "description": "CSVデータをJSON形式に変換、区切り文字をカスタマイズ可能。",
       "seo_title": "無料CSV to JSONコンバーター",
-      "seo_description": "CSVをJSONに無料でオンライン変換。"
+      "seo_description": "CSVをJSON形式に無料でオンライン変換。カスタム区切り文字とヘッダーでCSVを解析。ネストされたオブジェクトと配列に対応。データインポートとAPI統合に最適。"
     },
     "html-entity": {
       "name": "HTMLエンティティ変換",
       "description": "HTMLエンティティをエンコード・デコード、特殊文字と記号を含む。",
       "seo_title": "無料HTMLエンティティ変換ツール",
-      "seo_description": "HTMLエンティティを無料でオンライン変換。"
+      "seo_description": "HTMLエンティティを無料でオンライン変換。特殊文字をHTMLエンティティにエンコードし、エンティティを文字にデコード。XSS攻撃を防ぎ、HTMLを正しく表示。"
     },
     "number-formatter": {
       "name": "数値フォーマット",
       "description": "異なるロケールで数値をフォーマット、小数・通貨・パーセントスタイル対応。",
       "seo_title": "無料数値フォーマットツール",
-      "seo_description": "数値を無料でオンラインフォーマット。"
+      "seo_description": "異なるロケールで数値を無料でオンラインでフォーマット。千の位区切り、小数点以下、通貨記号、パーセント形式を追加。国際化に必須。"
     },
     "hmac-generator": {
       "name": "HMACジェネレーター",
       "description": "SHA-1、SHA-256、SHA-512アルゴリズムでHMAC署名を生成。",
       "seo_title": "無料オンラインHMACジェネレーター",
-      "seo_description": "HMAC署名を無料でオンライン生成。"
+      "seo_description": "MD5、SHA-1、SHA-256、SHA-512アルゴリズムでHMAC署名を無料でオンライン生成。APIとデータ整合性検証のための安全なメッセージ認証。"
     },
     "password-strength": {
       "name": "パスワード強度チェッカー",
       "description": "パスワードの長さ、文字タイプ、パターンをチェックして強度を分析。",
       "seo_title": "無料パスワード強度チェッカー",
-      "seo_description": "パスワード強度を無料でオンラインチェック。"
+      "seo_description": "パスワード強度を無料でオンラインチェック。エントロピースコア、クラック時間の見積もり、改善提案を含む詳細分析を取得。セキュリティに必須。"
     },
     "totp-generator": {
       "name": "TOTPジェネレーター",
       "description": "Google Authenticator互換の時間ベースワンタイムパスワードを生成。",
       "seo_title": "無料オンラインTOTPジェネレーター",
-      "seo_description": "TOTPワンタイムパスワードを無料でオンライン生成。"
+      "seo_description": "TOTPワンタイムパスワードを無料でオンライン生成。カスタムシークレットキーと時間間隔でGoogle Authenticator互換コードに対応。2FAテスト用。"
     },
     "user-agent-parser": {
       "name": "User Agentパーサー",
       "description": "User Agent文字列を解析してブラウザ、OS、デバイス情報を識別。",
       "seo_title": "無料オンラインUser Agentパーサー",
-      "seo_description": "User Agent文字列を無料でオンライン解析。"
+      "seo_description": "User Agent文字列を無料でオンライン解析。ブラウザ、OS、デバイスタイプ、バージョン情報を抽出。Web分析とデバイス検出に必須。"
     },
     "cidr-calculator": {
       "name": "CIDR計算機",
       "description": "IPアドレス範囲、サブネットマスク、使用可能ホスト数を計算。",
       "seo_title": "無料オンラインCIDR計算機",
-      "seo_description": "CIDRサブネット情報を無料でオンライン計算。"
+      "seo_description": "CIDRサブネット情報を無料でオンライン計算。ネットワークアドレス、ブロードキャストアドレス、ホスト範囲、サブネットマスクを取得。ネットワーク管理者に必須。"
     },
     "http-header-parser": {
       "name": "HTTPヘッダーパーサー",
       "description": "HTTPヘッダーを解析してフォーマット、各ヘッダーの説明を表示。",
       "seo_title": "無料オンラインHTTPヘッダーパーサー",
-      "seo_description": "HTTPヘッダーを無料でオンライン解析。"
+      "seo_description": "HTTPヘッダーを無料でオンライン解析。リクエストとレスポンスヘッダーを詳細な説明付きで分析。APIデバッグとWeb開発に必須。"
     },
     "percentage-calculator": {
       "name": "パーセント計算機",
       "description": "パーセント、パーセント変化、増減値を計算。",
       "seo_title": "無料オンラインパーセント計算機",
-      "seo_description": "パーセント、変化率、比率を無料でオンライン計算。"
+      "seo_description": "パーセンテージ、パーセント変化、比率を無料でオンライン計算。XがYの何パーセントか、パーセントで増減を計算。数学と金融に必須。"
     },
     "statistics-calculator": {
       "name": "統計計算機",
       "description": "平均値、中央値、最頻値、標準偏差、分散などを計算。",
       "seo_title": "無料オンライン統計計算機",
-      "seo_description": "平均値、中央値、最頻値、標準偏差などの統計指標を無料でオンライン計算。"
+      "seo_description": "統計指標を無料でオンライン計算。平均、中央値、最頻値、標準偏差、分散などを取得。データ分析と研究に必須。"
     },
     "scientific-calculator": {
       "name": "関数電卓",
       "description": "三角関数、対数、指数などの科学計算機能を搭載。",
       "seo_title": "無料オンライン関数電卓",
-      "seo_description": "sin、cos、tan、log、ln、sqrt などの関数を備えた無料オンライン関数電卓。"
+      "seo_description": "sin、cos、tan、log、ln、sqrt、累乗などの関数を備えた無料オンライン科学計算機。括弧と複雑な式に対応。学生とエンジニア向け。"
     },
     "text-sorter": {
       "name": "テキストソーター",
       "description": "テキスト行をアルファベット順、数値順、長さ順などでソート。",
       "seo_title": "無料オンラインテキストソーター",
-      "seo_description": "テキスト行をアルファベット順、数値順、自然順、長さ順で無料オンラインソート。"
+      "seo_description": "テキスト行をアルファベット順、数値順、自然順、長さ順で無料でオンラインソート。昇順・降順に対応。データ整理に必須。"
     },
     "text-extractor": {
       "name": "テキスト抽出ツール",
       "description": "テキストからメール、URL、電話番号、IPアドレスなどを抽出。",
       "seo_title": "無料オンラインテキスト抽出ツール",
-      "seo_description": "テキストからメール、URL、電話番号、IPアドレス、ハッシュタグ、メンションを無料でオンライン抽出。"
+      "seo_description": "テキストからメール、URL、電話番号、IPアドレス、ハッシュタグ、メンションを無料でオンライン抽出。ワンクリックで一括抽出。データマイニングに必須。"
     },
     "emoji-picker": {
       "name": "絵文字ピッカー",
       "description": "カテゴリ別に絵文字を閲覧、検索、ワンクリックでコピー。",
       "seo_title": "無料オンライン絵文字ピッカー",
-      "seo_description": "カテゴリ別に絵文字を閲覧・コピー。名前で検索してワンクリックでコピー。"
+      "seo_description": "カテゴリ別に絵文字を無料でオンライン閲覧・コピー。肌の色のバリエーション付きで名前で絵文字を検索。ワンクリックでクリップボードにコピー。SNSに最適。"
     },
     "json-to-sql": {
       "name": "JSON to SQL",
       "description": "JSON配列をSQL INSERT文に変換、CREATE TABLEサポート。",
       "seo_title": "無料オンラインJSON to SQLコンバーター",
-      "seo_description": "JSONデータをSQL INSERT文に無料でオンライン変換。MySQL、PostgreSQL、SQLite対応。",
+      "seo_description": "JSONデータをSQL INSERT文に無料でオンライン変換。MySQL、PostgreSQL、SQLite構文に対応。データベースインポート用の一括挿入生成。",
       "tableName": "テーブル名",
       "dialect": "方言",
       "includeCreate": "CREATE TABLEを含める",
@@ -1983,37 +1983,37 @@
       "name": "画像圧縮ツール",
       "description": "品質を維持しながら画像を圧縮してファイルサイズを削減。",
       "seo_title": "無料オンライン画像圧縮ツール",
-      "seo_description": "画像を無料でオンライン圧縮。品質調整可能でファイルサイズを削減。"
+      "seo_description": "画像を無料でオンライン圧縮。調整可能な品質でPNG、JPEG、WebPファイルサイズを削減。バッチ圧縮に対応。Web最適化に最適。"
     },
     "image-converter": {
       "name": "画像フォーマット変換",
       "description": "PNG、JPEG、WebP形式間で画像を変換。",
       "seo_title": "無料オンライン画像フォーマット変換",
-      "seo_description": "PNG、JPEG、WebP形式間で画像を無料でオンライン変換。"
+      "seo_description": "PNG、JPEG、WebP、GIF形式間で画像を無料でオンライン変換。品質設定付きのバッチ変換。Web最適化と互換性に最適。"
     },
     "favicon-generator": {
       "name": "Faviconジェネレーター",
       "description": "任意の画像から複数サイズのファビコンを生成。",
       "seo_title": "無料オンラインFaviconジェネレーター",
-      "seo_description": "複数サイズ（16x16、32x32、48x48、64x64）のファビコンを無料でオンライン生成。"
+      "seo_description": "複数サイズ（16x16、32x32、48x48、64x64）のファビコンを無料でオンライン生成。画像をアップロードしてファビコンパックをダウンロード。Webサイトブランディングに必須。"
     },
     "image-cropper": {
       "name": "画像トリミングツール",
       "description": "自由またはアスペクト比固定で画像をトリミング。",
       "seo_title": "無料オンライン画像トリミングツール",
-      "seo_description": "カスタムまたはプリセットのアスペクト比で画像を無料でオンライントリミング。"
+      "seo_description": "カスタムまたはプリセットのアスペクト比で画像を無料でオンラインクロップ。1:1、4:3、16:9、フリーフォームクロップに対応。クロップした画像を即座にダウンロード。"
     },
     "gitignore-generator": {
       "name": ".gitignoreジェネレーター",
       "description": "様々なプロジェクトタイプと言語用の.gitignoreファイルを生成。",
       "seo_title": "無料オンライン.gitignoreジェネレーター",
-      "seo_description": "Node.js、Python、Java、Go等の.gitignoreファイルを無料でオンライン生成。"
+      "seo_description": "Node.js、Python、Java、Go、Rubyなど用の.gitignoreファイルを無料でオンライン生成。テンプレートを選択してルールをカスタマイズ。"
     },
     "docker-compose-generator": {
       "name": "Docker Composeジェネレーター",
       "description": "MySQL、Redis、Nginx等の一般的なサービスを含むdocker-compose.ymlを生成。",
       "seo_title": "無料オンラインDocker Composeジェネレーター",
-      "seo_description": "MySQL、PostgreSQL、Redis、Nginx等を含むdocker-compose.ymlを無料でオンライン生成。",
+      "seo_description": "MySQL、PostgreSQL、Redis、Nginxなどのサービスを含むdocker-compose.ymlファイルを無料でオンライン生成。YAMLプレビューと検証付きビジュアルエディタ。",
       "version": "Composeバージョン",
       "databases": "データベース",
       "messaging": "メッセージングと検索",
@@ -2029,19 +2029,19 @@
       "name": "package.jsonジェネレーター",
       "description": "カスタム設定とスクリプトを含むpackage.jsonファイルを生成。",
       "seo_title": "無料オンラインpackage.jsonジェネレーター",
-      "seo_description": "カスタムスクリプト、依存関係、設定を含むpackage.jsonを無料でオンライン生成。"
+      "seo_description": "カスタムスクリプト、依存関係、devDependencies、設定を含むpackage.jsonファイルを無料でオンライン生成。npm検索付きビジュアルエディタ。"
     },
     "json-minifier": {
       "name": "JSON圧縮ツール",
       "description": "空白とフォーマットを削除してJSONを圧縮し、ファイルサイズを削減。",
       "seo_title": "無料オンラインJSON圧縮ツール",
-      "seo_description": "JSONデータを無料でオンライン圧縮。空白を削除してファイルサイズを削減。"
+      "seo_description": "JSONデータを無料でオンライン圧縮。空白とコメントを削除し、ファイルサイズを最大60%削減。API最適化に必須。"
     },
     "timezone-converter": {
       "name": "タイムゾーン変換",
       "description": "世界時計付きで異なるタイムゾーン間の時間を変換。",
       "seo_title": "無料オンラインタイムゾーン変換",
-      "seo_description": "異なるタイムゾーン間で時間を無料でオンライン変換。主要都市の世界時計付き。",
+      "seo_description": "タイムゾーン間の時間を無料でオンライン変換。主要都市、DST対応、会議プランナー付きの世界時計。グローバルチーム調整に必須。",
       "date": "日付",
       "time": "時間",
       "now": "現在",
@@ -2055,7 +2055,7 @@
       "name": "カラーコントラストチェッカー",
       "description": "WCAGアクセシビリティ基準に準拠したカラーコントラスト比をチェック。",
       "seo_title": "無料オンラインカラーコントラストチェッカー - WCAG",
-      "seo_description": "WCAG AAおよびAAAアクセシビリティ基準のカラーコントラスト比を無料でオンラインチェック。",
+      "seo_description": "WCAG AAおよびAAA準拠のカラーコントラスト比を無料でオンラインチェック。前景色と背景色をテストし、即座に合格/不合格結果を表示。",
       "swapColors": "色を交換",
       "sampleText": "素早い茶色の狐が怠け者の犬を飛び越える。",
       "smallText": "アクセシビリティテスト用の小さいテキストサンプル。",
@@ -2073,7 +2073,7 @@
       "name": "Markdownテーブルジェネレーター",
       "description": "ビジュアルエディタとライブプレビューでMarkdownテーブルを作成・編集。",
       "seo_title": "無料オンラインMarkdownテーブルジェネレーター",
-      "seo_description": "ビジュアルエディタでMarkdownテーブルを無料でオンライン生成。ライブプレビューと配置オプション付き。",
+      "seo_description": "ビジュアルエディタでMarkdownテーブルを無料でオンライン生成。ライブプレビュー、列配置、CSVインポート。GitHub READMEに最適。",
       "addRow": "+ 行を追加",
       "addColumn": "+ 列を追加",
       "loadSample": "サンプルを読み込み",
@@ -2093,7 +2093,7 @@
       "name": "Base58 エンコード/デコード",
       "description": "ビットコインや暗号通貨で使用されるBase58文字列をエンコード・デコード。",
       "seo_title": "無料オンラインBase58エンコーダー＆デコーダー",
-      "seo_description": "Base58文字列を無料でオンラインエンコード・デコード。ビットコインアドレスで使用。",
+      "seo_description": "Base58文字列を無料でオンラインでエンコード・デコード。ビットコインアドレス、IPFSハッシュ、暗号通貨ウォレットで使用。安全なブラウザベースツール。",
       "encodeBtn": "Base58にエンコード",
       "decodeBtn": "Base58からデコード",
       "placeholder": "エンコードするテキストまたはデコードするBase58を入力...",
@@ -2105,13 +2105,13 @@
       "name": "Metaタグジェネレーター",
       "description": "SEO metaタグ、Open Graph、Twitter Cardタグを生成。",
       "seo_title": "無料オンラインMetaタグジェネレーター - SEOツール",
-      "seo_description": "SEO metaタグ、Open Graph、Twitter Cardタグを無料でオンライン生成。"
+      "seo_description": "SEOメタタグ、Open Graph、Twitter Cardタグを無料でオンライン生成。検索結果とソーシャルメディア共有でのページ表示をプレビュー。"
     },
     "robots-txt-generator": {
       "name": "robots.txtジェネレーター",
       "description": "検索エンジンクローラーを制御するrobots.txtファイルを生成。",
       "seo_title": "無料オンラインrobots.txtジェネレーター",
-      "seo_description": "ウェブサイト用のrobots.txtファイルを無料でオンライン生成。",
+      "seo_description": "ウェブサイト用のrobots.txtファイルを無料でオンライン生成。allow/disallowルール、サイトマップリンク、クロール遅延設定で検索エンジンクローラーを制御。",
       "allowAll": "すべて許可",
       "blockAll": "すべてブロック",
       "standard": "標準",
@@ -2130,13 +2130,13 @@
       "name": "Open Graphプレビュー",
       "description": "ソーシャルメディアでシェアされた時のページ表示をプレビュー。",
       "seo_title": "無料オンラインOpen Graphプレビューツール",
-      "seo_description": "Facebook、Twitter、LinkedInのソーシャルシェアカードを無料でオンラインプレビュー。"
+      "seo_description": "Facebook、Twitter、LinkedInなどのソーシャルメディア共有カードを無料でオンラインプレビュー。公開前にOpen GraphとTwitter Cardメタタグをテスト。"
     },
     "css-grid-generator": {
       "name": "CSS Gridジェネレーター",
       "description": "ライブプレビュー付きのビジュアルCSS Gridレイアウトジェネレーター。",
       "seo_title": "無料オンラインCSS Gridジェネレーター",
-      "seo_description": "ライブプレビュー付きでCSS Gridレイアウトを無料でオンライン生成。",
+      "seo_description": "ライブプレビュー付きでCSS Gridレイアウトを無料でオンラインで視覚的に生成。行、列、ギャップ、配置をカスタマイズ。レスポンシブWebデザイン用にCSSコードをコピー。",
       "columns": "列数",
       "rows": "行数",
       "gap": "間隔 (px)",
@@ -2156,19 +2156,19 @@
       "name": "CSS Flexboxジェネレーター",
       "description": "ライブプレビュー付きのビジュアルCSS Flexboxレイアウトジェネレーター。",
       "seo_title": "無料オンラインCSS Flexboxジェネレーター",
-      "seo_description": "ライブプレビュー付きでCSS Flexboxレイアウトを無料でオンライン生成。"
+      "seo_description": "ライブプレビュー付きでCSS Flexboxレイアウトを無料でオンラインで視覚的に生成。方向、ラップ、justify、alignプロパティをカスタマイズ。CSSコードを即座にコピー。"
     },
     "jwt-generator": {
       "name": "JWTジェネレーター",
       "description": "カスタムペイロードと秘密鍵でJSON Web Tokenを生成。",
       "seo_title": "無料オンラインJWTジェネレーター",
-      "seo_description": "カスタムクレームとHMAC署名付きJWTトークンを無料でオンライン生成。"
+      "seo_description": "カスタムクレーム、有効期限、HMAC/RSA署名付きのJWTトークンを無料でオンライン生成。API認証と認可テスト用のアクセストークンを作成。"
     },
     "cron-explainer": {
       "name": "Cron式エクスプレイナー",
       "description": "cron式を人間が読める形式で説明し、次回実行時刻を表示。",
       "seo_title": "無料オンラインCron式エクスプレイナー",
-      "seo_description": "cron式を人間が読める説明に無料でオンライン変換。",
+      "seo_description": "人間が読める説明でcron式を無料でオンラインで理解。次回実行時間付きでcron構文を解析・検証。スケジューリング向け。",
       "expression": "Cron式",
       "minute": "分",
       "hour": "時",
@@ -2228,7 +2228,7 @@
       "name": "JSON to GraphQL",
       "description": "JSONオブジェクトをGraphQLスキーマタイプに変換。",
       "seo_title": "無料オンラインJSON to GraphQLコンバーター",
-      "seo_description": "JSONをGraphQLスキーマタイプに無料でオンライン変換。",
+      "seo_description": "JSONをGraphQLスキーマタイプに無料でオンライン変換。JSONデータから型定義、クエリ、ミューテーションを生成。GraphQL API開発に必須。",
       "typeName": "タイプ名",
       "loadSample": "サンプルを読み込み",
       "jsonInput": "JSON入力",
@@ -2244,7 +2244,7 @@
       "mongoQuery": "MongoDBクエリ",
       "examples": "例",
       "seo_title": "無料オンラインSQL to MongoDBコンバーター",
-      "seo_description": "SQLクエリをMongoDBクエリに無料でオンライン変換。",
+      "seo_description": "SQLクエリをMongoDBクエリに無料でオンライン変換。SELECT、INSERT、UPDATE、DELETEをfind、insertOne、updateOneに変換。",
       "exampleInsert": "INSERT",
       "exampleSelectProjection": "プロジェクション付きSELECT",
       "exampleDelete": "DELETE",
@@ -2259,7 +2259,7 @@
       "convert": "変換",
       "copy": "コピー",
       "seo_title": "無料オンラインJSON to C#コンバーター",
-      "seo_description": "JSONをC#クラスに無料でオンライン変換。",
+      "seo_description": "JSONをプロパティ、コンストラクタ、JSONシリアライゼーション属性付きのC#クラスに無料でオンライン変換。null許容型とネストされたクラスに対応。",
       "className": "クラス名",
       "useProperties": "プロパティを使用",
       "useNullable": "Nullable型を使用",
@@ -2281,7 +2281,7 @@
       "outputPlaceholder": "Rust構造体がここに表示されます...",
       "errorInvalidJson": "// エラー：無効なJSON入力",
       "seo_title": "無料オンラインJSON to Rustコンバーター",
-      "seo_description": "JSONをRust構造体に無料でオンライン変換。"
+      "seo_description": "JSONをserde deriveマクロ付きのRust構造体に無料でオンライン変換。null許容フィールド用のOption型で型安全なコードを生成。"
     },
     "json-to-swift": {
       "name": "JSON to Swift",
@@ -2296,7 +2296,7 @@
       "outputPlaceholder": "Swift構造体がここに表示されます...",
       "errorInvalidJson": "// エラー：無効なJSON入力",
       "seo_title": "無料オンラインJSON to Swiftコンバーター",
-      "seo_description": "JSONをSwift構造体に無料でオンライン変換。"
+      "seo_description": "JSONをCodableプロトコル準拠のSwift構造体に無料でオンライン変換。API統合用のCodingKeys付き型安全モデルを生成。"
     },
     "css-minifier": {
       "name": "CSS圧縮",
@@ -2306,7 +2306,7 @@
       "minify": "圧縮",
       "copy": "コピー",
       "seo_title": "無料オンラインCSS圧縮ツール",
-      "seo_description": "CSSコードを無料でオンライン圧縮・最小化。"
+      "seo_description": "CSSコードを無料でオンライン圧縮。空白、コメントを削除し、セレクタを最適化。ファイルサイズを削減し、ページ読み込み速度を向上。"
     },
     "js-minifier": {
       "name": "JavaScript圧縮",
@@ -2316,7 +2316,7 @@
       "minify": "圧縮",
       "copy": "コピー",
       "seo_title": "無料オンラインJavaScript圧縮ツール",
-      "seo_description": "JavaScriptコードを無料でオンライン圧縮・最小化。",
+      "seo_description": "JavaScriptコードを無料でオンライン圧縮。空白、コメントを削除し、変数名を短縮。ファイルサイズを削減し、読み込みを高速化。",
       "inputPlaceholder": "JavaScriptコードを入力...",
       "outputPlaceholder": "圧縮されたコードがここに表示されます..."
     },
@@ -2326,7 +2326,7 @@
       "output": "CSS出力",
       "copy": "CSSをコピー",
       "seo_title": "無料オンラインCSSボックスシャドウ生成ツール",
-      "seo_description": "ビジュアルエディタでCSS box-shadowを無料でオンライン生成。",
+      "seo_description": "ビジュアルエディタでCSS box-shadowを無料でオンライン生成。オフセット、ブラー、スプレッド、色をカスタマイズ。ワンクリックでCSSコードをコピー。",
       "shadowLayers": "シャドウレイヤー",
       "addLayer": "+ レイヤー追加",
       "layer": "レイヤー {index}",
@@ -2348,7 +2348,7 @@
       "output": "CSS出力",
       "copy": "CSSをコピー",
       "seo_title": "無料オンラインCSS角丸生成ツール",
-      "seo_description": "ビジュアルエディタでCSS border-radiusを無料でオンライン生成。",
+      "seo_description": "ビジュアルエディタでCSS border-radiusを無料でオンライン生成。各コーナーにカスタム値で角丸を作成。CSSコードを即座にコピー。",
       "cornerRadius": "角の半径",
       "linkAll": "すべてリンク",
       "topLeft": "左上",
@@ -2373,7 +2373,7 @@
       "convert": "変換",
       "copy": "コピー",
       "seo_title": "無料オンラインテキストASCIIアート変換ツール",
-      "seo_description": "テキストをASCIIアートに無料でオンライン変換。",
+      "seo_description": "テキストをASCIIアートに無料でオンライン変換。複数のフォントスタイルと文字セットが利用可能。ターミナルバナーやクリエイティブプロジェクトに最適。",
       "placeholder": "テキストを入力 (A-Z, 0-9, スペース)",
       "character": "文字",
       "charBlock": "█ ブロック",
@@ -2390,7 +2390,7 @@
       "output": "CSS出力",
       "copy": "コピー",
       "seo_title": "無料オンラインカラーシェード生成ツール",
-      "seo_description": "任意の色からシェードとティントを無料でオンライン生成。",
+      "seo_description": "任意の色から色調とティントを無料でオンライン生成。カスタマイズ可能なステップで明るい・暗いバリエーションを作成。CSSやデザインツールにエクスポート。",
       "baseColor": "ベースカラー",
       "numberOfShades": "シェード数: {count}",
       "copyCssVariables": "CSS変数をコピー"
@@ -2402,7 +2402,7 @@
       "output": "結果",
       "copy": "コピー",
       "seo_title": "無料オンラインJSONフラット化ツール",
-      "seo_description": "ネストされたJSONオブジェクトを無料でオンラインフラット化。",
+      "seo_description": "ネストされたJSONオブジェクトを無料でオンラインでフラット化または展開。深い構造をドット表記に変換、またはその逆。データ変換とAPIに必須。",
       "mode": "モード",
       "flatten": "フラット化",
       "unflatten": "復元",
@@ -2423,7 +2423,7 @@
       "inputPlaceholderDecode": "デコードするBase85を入力...",
       "outputPlaceholder": "結果がここに表示されます...",
       "seo_title": "無料オンラインBase85エンコーダー/デコーダー",
-      "seo_description": "Base85データを無料でオンラインでエンコード・デコード。"
+      "seo_description": "Base85 (Ascii85) データを無料でオンラインでエンコード・デコード。PDFファイル、PostScript、データ圧縮で使用。安全なブラウザベースツール。"
     },
     "html-to-markdown": {
       "name": "HTML to Markdown",
@@ -2433,14 +2433,14 @@
       "convert": "変換",
       "copy": "コピー",
       "seo_title": "無料オンラインHTML to Markdownコンバーター",
-      "seo_description": "HTMLをMarkdown形式に無料でオンライン変換。"
+      "seo_description": "HTMLをMarkdown形式に無料でオンライン変換。フォーマット、リンク、画像、コードブロックを保持。Markdownベースシステムへのコンテンツ移行に最適。"
     },
     "regex-generator": {
       "name": "正規表現生成",
       "description": "一般的なパターンで正規表現を生成・テスト。",
       "copy": "パターンをコピー",
       "seo_title": "無料オンライン正規表現生成ツール",
-      "seo_description": "正規表現を無料でオンライン生成・テスト。",
+      "seo_description": "正規表現を無料でオンラインで生成・テスト。ビジュアルヘルパーでパターンを構築し、サンプルテキストに対してテスト。パターンマッチングタスクに必須。",
       "commonPatterns": "一般的なパターン",
       "customPattern": "カスタムパターン",
       "testString": "テスト文字列",
@@ -2484,7 +2484,7 @@
       "input": "入力テキスト",
       "copy": "結果をコピー",
       "seo_title": "無料オンライン短縮URLプレビューツール",
-      "seo_description": "短縮URLを無料でオンラインプレビュー・分析。",
+      "seo_description": "短縮URLを無料でオンラインでプレビュー・分析。bit.ly、tinyurlなどの短縮リンクを展開して宛先を確認。クリック前に安全性をチェック。",
       "note": "注意：ブラウザのセキュリティ制限により、実際のURL展開にはサーバーサイドリクエストが必要です。このツールは短縮URLを識別し、そのドメインを表示します。",
       "placeholder": "短縮URLを含むテキストを貼り付け (bit.ly, tinyurl.com, t.co など)...",
       "analyzing": "分析中...",
@@ -2501,7 +2501,7 @@
       "description": "JSONデータをツリー構造で表示・探索。",
       "input": "JSON入力",
       "seo_title": "無料オンラインJSONビューアー",
-      "seo_description": "JSONデータをツリー構造で無料でオンライン表示・探索。",
+      "seo_description": "JSONデータをツリー構造で無料でオンライン表示・探索。ノードの展開・折りたたみ、値の検索、パスのコピー。APIデバッグに必須。",
       "inputPlaceholder": "JSONをここに貼り付け...",
       "parseView": "解析して表示",
       "expandAll": "すべて展開",
@@ -2516,14 +2516,14 @@
       "convert": "変換",
       "copy": "コピー",
       "seo_title": "無料オンラインXML to JSONコンバーター",
-      "seo_description": "XMLをJSON形式に無料でオンライン変換。"
+      "seo_description": "XMLをJSON形式に無料でオンライン変換。属性、名前空間、ネストされた要素を保持。API統合とデータ変換に最適。"
     },
     "ip-address-generator": {
       "name": "IPアドレス生成",
       "description": "ランダムなIPアドレスを生成（IPv4、IPv6、プライベート、パブリック）。",
       "copy": "すべてコピー",
       "seo_title": "無料オンラインIPアドレス生成ツール",
-      "seo_description": "ランダムなIPアドレスを無料でオンライン生成。",
+      "seo_description": "ランダムなIPアドレスを無料でオンライン生成。カスタム範囲でIPv4とIPv6形式に対応。テスト、開発、ネットワークシミュレーションに最適。",
       "ipType": "IPタイプ",
       "ipv4Random": "IPv4（ランダム）",
       "ipv6": "IPv6",
@@ -2539,7 +2539,7 @@
       "output": "CSS出力",
       "copy": "CSSをコピー",
       "seo_title": "無料オンラインCSSグラデーションテキスト生成ツール",
-      "seo_description": "CSSでグラデーションテキスト効果を無料でオンライン作成。",
+      "seo_description": "CSSでグラデーションテキスト効果を無料でオンライン作成。ライブプレビュー付きでテキストに線形・放射状グラデーションを適用。CSSコードをコピー。",
       "text": "テキスト",
       "color1": "色 1",
       "color2": "色 2",
@@ -2561,7 +2561,7 @@
       "output": "サイトマップ出力",
       "copy": "コピー",
       "seo_title": "無料オンラインサイトマップ生成ツール",
-      "seo_description": "ウェブサイト用のXMLサイトマップを無料でオンライン生成。",
+      "seo_description": "ウェブサイト用のXMLサイトマップを無料でオンライン生成。優先度、更新頻度、最終更新日付きでURLを追加。SEOと検索インデックスに必須。",
       "baseUrl": "ベースURL",
       "urls": "URLリスト",
       "addUrl": "+ URLを追加",
@@ -2581,7 +2581,7 @@
       "outputPlaceholder": "PHP配列がここに表示されます...",
       "errorInvalidJson": "// エラー：無効なJSON入力",
       "seo_title": "無料オンラインJSON to PHPコンバーター",
-      "seo_description": "JSONをPHP配列構文に無料でオンライン変換。"
+      "seo_description": "JSONをPHP配列構文に無料でオンライン変換。適切なエスケープとフォーマットで連想配列を生成。PHPバックエンド開発に必須。"
     },
     "css-filter-generator": {
       "name": "CSSフィルター生成",
@@ -2589,7 +2589,7 @@
       "output": "CSS出力",
       "copy": "CSSをコピー",
       "seo_title": "無料オンラインCSSフィルター生成ツール",
-      "seo_description": "ビジュアルエディタでCSSフィルター効果を無料でオンライン生成。",
+      "seo_description": "ビジュアルエディタでCSSフィルター効果を無料でオンライン生成。ブラー、明るさ、コントラスト、グレースケールなどを適用。CSSコードをコピー。",
       "reset": "リセット",
       "uploadImage": "画像をアップロード",
       "blur": "ぼかし",
@@ -2612,7 +2612,7 @@
       "name": "テキスト差分とパッチ",
       "description": "テキストパッチを作成・適用。",
       "seo_title": "無料オンラインテキスト差分・パッチツール",
-      "seo_description": "テキストパッチを無料でオンライン作成・適用。",
+      "seo_description": "テキストパッチを無料でオンラインで作成・適用。統一diff形式のパッチを生成し、テキストに適用。バージョン管理とコードレビューに必須。",
       "createPatch": "パッチを作成",
       "applyPatch": "パッチを適用",
       "originalText": "元のテキスト",
@@ -2628,7 +2628,7 @@
       "description": "テキストとファイルのエンコーディングを検出。",
       "input": "入力",
       "seo_title": "無料オンラインエンコーディング検出ツール",
-      "seo_description": "テキストとファイルのエンコーディングを無料でオンライン検出。",
+      "seo_description": "テキストとファイルのエンコーディングを無料でオンライン検出。UTF-8、UTF-16、ISO-8859などの文字エンコーディングを識別。国際テキスト処理に必須。",
       "placeholder": "テキストを貼り付けてエンコーディングを検出...",
       "analyzeText": "テキストを分析",
       "uploadFile": "ファイルをアップロード",
@@ -2641,67 +2641,67 @@
       "name": "CSS クリップパス生成",
       "description": "ビジュアルエディタでCSS clip-path形状を作成。",
       "seo_title": "無料オンラインCSS クリップパス生成ツール",
-      "seo_description": "ビジュアルエディタでCSS clip-path形状を無料でオンライン作成。"
+      "seo_description": "ビジュアルエディタでCSS clip-path形状を無料でオンライン作成。ポリゴン、円、楕円、カスタムパスをデザイン。クリエイティブレイアウト用にCSSコードをコピー。"
     },
     "uuid-validator": {
       "name": "UUIDバリデーター",
       "description": "UUID文字列を検証・分析。",
       "seo_title": "無料オンラインUUIDバリデーター",
-      "seo_description": "UUID文字列を無料でオンライン検証・分析。"
+      "seo_description": "UUID文字列を無料でオンラインで検証・分析。UUIDのフォーマット、バージョン、バリアントをチェック。UUID v1とv7からタイムスタンプを抽出。デバッグに必須。"
     },
     "text-hash-comparator": {
       "name": "テキストハッシュ比較",
       "description": "ハッシュ値でテキストを比較。",
       "seo_title": "無料オンラインテキストハッシュ比較ツール",
-      "seo_description": "ハッシュ値でテキストを無料でオンライン比較。"
+      "seo_description": "ハッシュ値でテキストを無料でオンライン比較。MD5、SHA-1、SHA-256ハッシュを並べて生成・比較。ファイル整合性検証に必須。"
     },
     "json-path-finder": {
       "name": "JSONパスファインダー",
       "description": "JSONデータからパスを検索・コピー。",
       "seo_title": "無料オンラインJSONパスファインダー",
-      "seo_description": "JSONデータからパスを無料でオンライン検索・コピー。"
+      "seo_description": "データからJSONパスを無料でオンラインで検索・コピー。任意の値をクリックしてJSONPath式を取得。API開発とデータ抽出に必須。"
     },
     "canvas-drawing": {
       "name": "キャンバス描画",
       "description": "ブラシと消しゴムのシンプルな描画ツール。",
       "seo_title": "無料オンラインキャンバス描画ツール",
-      "seo_description": "ブラシと消しゴムのシンプルな描画ツールを無料でオンライン使用。"
+      "seo_description": "ブラシと消しゴム付きのシンプルな描画ツールを無料でオンライン使用。ブラシサイズ、色、不透明度をカスタマイズ。PNGでダウンロード。"
     },
     "json-escape": {
       "name": "JSONエスケープ/アンエスケープ",
       "description": "JSON文字列をエスケープ・アンエスケープ。",
       "seo_title": "無料オンラインJSONエスケープ/アンエスケープツール",
-      "seo_description": "JSON文字列を無料でオンラインエスケープ・アンエスケープ。"
+      "seo_description": "JSON文字列を無料でオンラインでエスケープ・アンエスケープ。特殊文字、引用符、制御文字を処理。文字列へのJSON埋め込みに必須。"
     },
     "css-animation-generator": {
       "name": "CSSアニメーション生成",
       "description": "ビジュアルエディタでCSSアニメーションを作成。",
       "seo_title": "無料オンラインCSSアニメーション生成ツール",
-      "seo_description": "ビジュアルエディタでCSSアニメーションを無料でオンライン作成。"
+      "seo_description": "ビジュアルエディタでCSSアニメーションを無料でオンライン作成。キーフレーム、タイミング関数、アニメーションプロパティをデザイン。CSSコードをコピー。"
     },
     "text-case-counter": {
       "name": "テキスト大文字小文字カウンター",
       "description": "大文字、小文字、その他の文字タイプをカウント。",
       "seo_title": "無料オンラインテキスト大文字小文字カウンター",
-      "seo_description": "大文字、小文字、その他の文字タイプを無料でオンラインカウント。"
+      "seo_description": "大文字、小文字、数字、スペース、特殊文字を無料でオンラインカウント。詳細な文字タイプ統計を取得。テキスト分析に必須。"
     },
     "dns-lookup": {
       "name": "DNS検索",
       "description": "任意のドメインのDNSレコードを検索。",
       "seo_title": "無料オンラインDNS検索ツール",
-      "seo_description": "任意のドメインのDNSレコードを無料でオンライン検索。"
+      "seo_description": "任意のドメインのDNSレコードを無料でオンライン検索。A、AAAA、MX、TXT、NS、CNAME、SOAレコードをクエリ。ドメイントラブルシューティングに必須。"
     },
     "image-resizer": {
       "name": "画像リサイズ",
       "description": "画像をカスタムサイズにリサイズ。",
       "seo_title": "無料オンライン画像リサイズツール",
-      "seo_description": "画像をカスタムサイズに無料でオンラインリサイズ。"
+      "seo_description": "画像をカスタムサイズに無料でオンラインリサイズ。アスペクト比を維持または正確な幅と高さを設定。PNG、JPEG、WebP形式に対応。即座にダウンロード。"
     },
     "ssl-checker": {
       "name": "SSL証明書チェッカー",
       "description": "任意のドメインのSSL証明書の有効性と詳細を確認。",
       "seo_title": "無料オンラインSSL証明書チェッカー",
-      "seo_description": "SSL証明書の有効性と有効期限を無料でオンラインチェック。",
+      "seo_description": "SSL証明書の有効性と有効期限を無料でオンラインチェック。証明書チェーン、発行者、セキュリティ詳細を検証。Webサイトセキュリティに必須。",
       "checking": "確認中...",
       "check": "SSLを確認",
       "valid": "SSL証明書は有効です",
@@ -2720,7 +2720,7 @@
       "name": "WHOIS検索",
       "description": "ドメイン登録情報を検索。",
       "seo_title": "無料オンラインWHOIS検索ツール",
-      "seo_description": "ドメイン登録と所有権情報を無料でオンライン検索。",
+      "seo_description": "ドメイン登録と所有権情報を無料でオンライン検索。レジストラ、作成日、有効期限、ネームサーバーを取得。ドメインリサーチツール。",
       "loading": "検索中...",
       "lookup": "WHOIS検索",
       "registrar": "レジストラ",
@@ -2736,7 +2736,7 @@
       "name": "WebSocketテスター",
       "description": "WebSocket接続をテストし、メッセージを送受信。",
       "seo_title": "無料オンラインWebSocketテスター",
-      "seo_description": "WebSocket接続をテストし、メッセージを無料でオンライン送受信。",
+      "seo_description": "WebSocket接続をテストし、メッセージを無料でオンラインで送受信。カスタムヘッダーとプロトコルに対応。リアルタイムアプリ開発に必須。",
       "serverUrl": "WebSocketサーバーURL",
       "connect": "接続",
       "disconnect": "切断",
@@ -2762,7 +2762,7 @@
       "name": "ポートスキャナー",
       "description": "一般的なネットワークポートとサービスのリファレンスガイド。",
       "seo_title": "無料オンラインポートスキャナーとリファレンス",
-      "seo_description": "一般的なネットワークポートとそのサービスを無料でオンライン検索。",
+      "seo_description": "一般的なネットワークポートとそのサービスを無料でオンライン検索。ポート番号またはサービス名で検索。管理者と開発者のリファレンス。",
       "note": "このツールは一般的なネットワークポートとそのサービスに関する情報を提供します。セキュリティ上の理由から、実際のポートスキャンにはサーバーサイドの実装が必要です。",
       "searchPorts": "ポートを検索",
       "searchPlaceholder": "ポート番号またはサービスで検索...",
@@ -2805,25 +2805,25 @@
       "name": "ポートリファレンス",
       "description": "一般的なネットワークポートとサービスのリファレンスガイド。",
       "seo_title": "ネットワークポートリファレンスガイド",
-      "seo_description": "一般的なネットワークポートとサービスの完全リファレンスガイド。"
+      "seo_description": "一般的なネットワークポートとサービスの完全リファレンスガイド。ウェルノウンポート(0-1023)、登録ポート、動的ポートを閲覧。ネットワーキングに必須。"
     },
     "privacy-policy-generator": {
       "name": "プライバシーポリシー生成",
       "description": "ウェブサイト用のプライバシーポリシーを生成。",
       "seo_title": "無料オンラインプライバシーポリシー生成ツール",
-      "seo_description": "ウェブサイト用のカスタムプライバシーポリシーを無料でオンライン生成。"
+      "seo_description": "ウェブサイト用のカスタマイズされたプライバシーポリシーを無料でオンライン生成。データ収集、Cookie、ユーザー権利をカバー。GDPR準拠テンプレート。"
     },
     "terms-generator": {
       "name": "利用規約生成",
       "description": "ウェブサイト用の利用規約を生成。",
       "seo_title": "無料オンライン利用規約生成ツール",
-      "seo_description": "ウェブサイト用のカスタム利用規約を無料でオンライン生成。"
+      "seo_description": "ウェブサイト用のカスタマイズされた利用規約を無料でオンライン生成。ユーザー契約、責任、知的財産、紛争解決をカバー。"
     },
     "cookie-policy-generator": {
       "name": "Cookieポリシー生成",
       "description": "ウェブサイト用のCookieポリシーを生成。",
       "seo_title": "無料オンラインCookieポリシー生成ツール",
-      "seo_description": "ウェブサイト用のカスタムCookieポリシーを無料でオンライン生成。",
+      "seo_description": "ウェブサイト用のカスタマイズされたCookieポリシーを無料でオンライン生成。Cookieの種類、目的、同意オプションを説明。GDPR準拠。",
       "websiteName": "ウェブサイト名",
       "websiteUrl": "ウェブサイトURL",
       "contactEmail": "連絡先メール",
@@ -2847,19 +2847,19 @@
       "convert": "TSVに変換",
       "copy": "出力をコピー",
       "seo_title": "無料オンラインJSON→TSV変換ツール",
-      "seo_description": "JSON配列をTSV形式に無料でオンライン変換。"
+      "seo_description": "JSON配列をTSV（タブ区切り値）形式に無料でオンライン変換。ネストされたオブジェクトと配列を処理。スプレッドシートインポートとデータ分析に最適。"
     },
     "csv-viewer": {
       "name": "CSVビューアー",
       "description": "CSVデータをテーブル形式で表示・解析。",
       "seo_title": "無料オンラインCSVビューアー",
-      "seo_description": "CSVデータをテーブル形式で無料でオンライン表示・解析。"
+      "seo_description": "CSVデータをテーブル形式で無料でオンライン表示・解析。カスタム区切り文字、ヘッダー、大きなファイルに対応。データを簡単にソート、フィルター、検索。"
     },
     "htaccess-generator": {
       "name": ".htaccess生成",
       "description": "Apacheサーバー用の.htaccess設定を生成。",
       "seo_title": "無料オンライン.htaccess生成ツール",
-      "seo_description": "Apacheサーバー用の.htaccess設定を無料でオンライン生成。",
+      "seo_description": "Apacheサーバー用の.htaccess設定を無料でオンライン生成。リダイレクト、リライト、セキュリティルール、キャッシュディレクティブを作成。",
       "urlSettings": "URLとSSL設定",
       "forceHttps": "HTTPSを強制",
       "forceWww": "WWWプレフィックスを強制",
@@ -2880,7 +2880,7 @@
       "name": "Nginx設定生成",
       "description": "Nginxサーバー設定ファイルを生成。",
       "seo_title": "無料オンラインNginx設定生成ツール",
-      "seo_description": "Nginxサーバー設定ファイルを無料でオンライン生成。",
+      "seo_description": "Nginxサーバー設定ファイルを無料でオンライン生成。サーバーブロック、SSL設定、プロキシルール、キャッシュを作成。モダンWebデプロイメントに必須。",
       "serverName": "サーバー名",
       "rootPath": "ルートパス",
       "proxyPass": "プロキシパス（オプション）",
@@ -2897,7 +2897,7 @@
       "name": "cURL変換",
       "description": "cURLコマンドを各種プログラミング言語のコードに変換。",
       "seo_title": "無料オンラインcURL→コード変換ツール",
-      "seo_description": "cURLコマンドをJavaScript、Python、PHP、Go、Javaコードに無料でオンライン変換。",
+      "seo_description": "cURLコマンドをJavaScript、Python、PHP、Go、Javaコードに無料でオンライン変換。ヘッダー、ボディ、認証を解析。API統合に必須。",
       "curlCommand": "cURLコマンド",
       "placeholder": "cURLコマンドを貼り付け...",
       "outputLanguage": "出力言語",
@@ -2914,7 +2914,7 @@
       "name": "読書時間計算機",
       "description": "テキストや記事の読書時間を計算します。",
       "seo_title": "無料オンライン読書時間計算機",
-      "seo_description": "あらゆるテキストの読書時間と文字数を無料でオンライン計算。",
+      "seo_description": "任意のテキストの読書時間と単語数を無料でオンライン計算。平均、遅い、速い読者の見積もりを取得。コンテンツクリエイターに最適。",
       "pasteText": "テキストを貼り付け",
       "placeholder": "読書時間を計算したい記事、ブログ投稿、またはテキストをここに貼り付け...",
       "readingSpeed": "読書速度：",
@@ -2940,25 +2940,25 @@
       "name": "Open Graph ジェネレーター",
       "description": "ソーシャルメディア共有用のOpen Graphメタタグを生成します。",
       "seo_title": "無料オンラインOpen Graphジェネレーター",
-      "seo_description": "FacebookやLinkedInなどのソーシャルプラットフォーム用のOpen Graphメタタグをオンラインで無料で生成します。"
+      "seo_description": "Facebook、LinkedInなどのソーシャルプラットフォーム用のOpen Graphメタタグを無料でオンライン生成。ソーシャルメディアで共有時のコンテンツ表示をプレビュー。"
     },
     "twitter-card-generator": {
       "name": "Twitterカードジェネレーター",
       "description": "ツイートプレビューを改善するためのTwitterカードメタタグを生成します。",
       "seo_title": "無料オンラインTwitterカードジェネレーター",
-      "seo_description": "リッチなツイートプレビュー用のTwitterカードメタタグをオンラインで無料で生成します。"
+      "seo_description": "リッチなツイートプレビュー用のTwitter Cardメタタグを無料でオンライン生成。サマリー、大きな画像、プレイヤーカードに対応。"
     },
     "mime-type-lookup": {
       "name": "MIMEタイプ検索",
       "description": "拡張子または説明からMIMEタイプを検索します。",
       "seo_title": "無料オンラインMIMEタイプ検索ツール",
-      "seo_description": "ファイル拡張子または説明からMIMEタイプをオンラインで無料で検索します。"
+      "seo_description": "ファイル拡張子または説明でMIMEタイプを無料でオンライン検索。Web開発用のコンテンツタイプの完全なデータベース。HTTPヘッダーに必須。"
     },
     "http-status-codes": {
       "name": "HTTPステータスコード",
       "description": "すべてのHTTPステータスコードのリファレンスガイド。",
       "seo_title": "HTTPステータスコードリファレンス",
-      "seo_description": "すべてのHTTPステータスコードとその意味の完全なリファレンスガイド。",
+      "seo_description": "すべてのHTTPステータスコードとその意味の完全リファレンスガイド。1xx、2xx、3xx、4xx、5xxコードの説明を閲覧。開発者必須。",
       "searchPlaceholder": "ステータスコードを検索...",
       "allCategories": "すべてのカテゴリ",
       "informational": "1xx 情報",
@@ -2972,7 +2972,7 @@
       "name": "文字列難読化",
       "description": "様々なエンコード方法で文字列を難読化。",
       "seo_title": "無料オンライン文字列難読化ツール",
-      "seo_description": "Base64、Hex、HTMLエンティティ、URLエンコード、ROT13を使用してオンラインで無料で文字列を難読化。",
+      "seo_description": "Base64、Hex、HTMLエンティティ、URLエンコーディング、ROT13を使用して文字列を無料でオンライン難読化。保護のための複数のエンコーディングレイヤー。",
       "input": "入力文字列",
       "inputPlaceholder": "難読化するテキストを入力...",
       "obfuscate": "難読化",
@@ -2990,7 +2990,7 @@
       "name": "テキストクリーナー",
       "description": "スペースや空行などを削除してテキストを整理・整形します。",
       "seo_title": "無料オンラインテキストクリーナー",
-      "seo_description": "余分なスペース、空行、HTMLタグなどを削除してテキストをオンラインで無料で整理・整形します。",
+      "seo_description": "余分なスペース、空行、HTMLタグなどを削除してテキストを無料でオンラインでクリーン・フォーマット。空白を正規化し、一般的なフォーマット問題を修正。",
       "input": "入力テキスト",
       "clear": "クリア",
       "cleanedText": "クリーン済みテキスト",
@@ -3012,7 +3012,7 @@
       "name": "リストランダマイザー",
       "description": "リストの項目をシャッフルしてランダム化します。",
       "seo_title": "無料オンラインリストランダマイザー",
-      "seo_description": "項目や名前のリストをオンラインで無料でシャッフルしてランダム化します。",
+      "seo_description": "アイテムや名前のリストを無料でオンラインでシャッフル・ランダム化。ランダム選択、抽選、公平な順序付けに最適。安全なランダム化。",
       "originalList": "元のリスト",
       "randomizedList": "ランダム化されたリスト",
       "clear": "クリア",
@@ -3024,13 +3024,13 @@
       "name": "SQLジェネレーター",
       "description": "一般的な操作用のSQLクエリを生成します。",
       "seo_title": "無料オンラインSQLジェネレーター",
-      "seo_description": "SELECT、INSERT、UPDATE、DELETE、CREATE TABLE操作用のSQLクエリをオンラインで無料で生成します。"
+      "seo_description": "SELECT、INSERT、UPDATE、DELETE、CREATE TABLEのSQLクエリを無料でオンライン生成。シンタックスハイライト付きビジュアルクエリビルダー。"
     },
     "htaccess-to-nginx": {
       "name": "htaccess から Nginx 変換",
       "description": "Apache .htaccess ルールを Nginx 設定に変換します。",
       "seo_title": "無料オンライン htaccess から Nginx 変換ツール",
-      "seo_description": "Apache htaccess ルールを Nginx 設定に無料でオンライン変換。",
+      "seo_description": "Apache htaccessルールをNginx設定に無料でオンライン変換。リダイレクト、リライト、セキュリティルールを変換。サーバー移行とデプロイメントに必須。",
       "htaccessInput": ".htaccess 入力",
       "nginxOutput": "Nginx 出力",
       "loadSample": "サンプルを読み込む",
@@ -3042,7 +3042,7 @@
       "name": "JavaScript 難読化",
       "description": "JavaScript コードを難読化してソースを保護します。",
       "seo_title": "無料オンライン JavaScript 難読化ツール",
-      "seo_description": "JavaScript コードを無料でオンライン難読化・保護。",
+      "seo_description": "JavaScriptコードを無料でオンラインで難読化・保護。変数名の変更、文字列のエンコード、デッドコードの追加。知的財産を保護。",
       "inputCode": "JavaScript 入力",
       "obfuscatedCode": "難読化された出力",
       "loadSample": "サンプルを読み込む",
@@ -3060,7 +3060,7 @@
       "name": "画像ウォーターマーク",
       "description": "画像にテキストウォーターマークを追加します。",
       "seo_title": "無料オンライン画像ウォーターマークツール",
-      "seo_description": "画像にテキストウォーターマークを無料でオンライン追加。",
+      "seo_description": "画像にテキスト透かしを無料でオンラインで追加。フォント、サイズ、色、不透明度、位置をカスタマイズ。写真やアートワークを不正使用から保護。",
       "uploadImage": "画像をアップロード",
       "watermarkText": "ウォーターマークテキスト",
       "textPlaceholder": "ウォーターマークテキストを入力...",
@@ -3081,7 +3081,7 @@
       "name": "SVG から画像変換",
       "description": "SVG ファイルを PNG、JPEG、WebP 画像に変換します。",
       "seo_title": "無料オンライン SVG から画像変換ツール",
-      "seo_description": "SVG を PNG、JPEG、WebP に無料でオンライン変換。",
+      "seo_description": "SVGをPNG、JPEG、WebPに無料でオンライン変換。カスタムサイズと背景色を設定。Webおよび印刷用のベクターグラフィックスのエクスポートに最適。",
       "uploadSvg": "SVG ファイルをアップロード",
       "svgCode": "SVG コード",
       "loadSample": "サンプルを読み込む",
@@ -3097,7 +3097,7 @@
       "name": "16進数 Base64 変換",
       "description": "16進数と Base64 エンコード間で変換します。",
       "seo_title": "無料オンライン 16進数 Base64 変換ツール",
-      "seo_description": "16進数と Base64 間を無料でオンライン変換。",
+      "seo_description": "HexとBase64を無料でオンライン変換。16進数をBase64にエンコード、またはBase64を16進数にデコード。暗号化とデータエンコーディングタスクに必須。",
       "hexToBase64": "16進数 → Base64",
       "base64ToHex": "Base64 → 16進数",
       "swap": "入れ替え",
@@ -3112,7 +3112,7 @@
       "name": "PDF から Base64",
       "description": "PDF ファイルを Base64 エンコードに変換します。",
       "seo_title": "無料オンライン PDF から Base64 変換ツール",
-      "seo_description": "PDF ファイルを Base64 エンコードに無料でオンライン変換。",
+      "seo_description": "PDFファイルをBase64エンコーディングに無料でオンライン変換。HTML、JSON、データURIにPDFを埋め込み。サーバーへのファイルアップロードなしの安全なブラウザ変換。",
       "dropzone": "PDF ファイルをここにドロップまたはクリックしてアップロード",
       "acceptedFormat": "対応形式：PDF",
       "errorNotPdf": "PDF ファイルを選択してください",
@@ -3129,7 +3129,7 @@
       "name": "音声から Base64",
       "description": "音声ファイルを Base64 エンコードに変換します。",
       "seo_title": "無料オンライン音声から Base64 変換ツール",
-      "seo_description": "音声ファイルを Base64 エンコードに無料でオンライン変換。",
+      "seo_description": "音声ファイルをBase64エンコーディングに無料でオンライン変換。MP3、WAV、OGG形式に対応。HTML、JSON、データURIに音声を埋め込み。",
       "dropzone": "音声ファイルをここにドロップまたはクリックしてアップロード",
       "acceptedFormats": "対応：MP3、WAV、OGG、WebM、AAC、FLAC",
       "errorNotAudio": "音声ファイルを選択してください",
@@ -3145,7 +3145,7 @@
       "name": "動画から Base64",
       "description": "動画ファイルを Base64 エンコードに変換します。",
       "seo_title": "無料オンライン動画から Base64 変換ツール",
-      "seo_description": "動画ファイルを Base64 エンコードに無料でオンライン変換。",
+      "seo_description": "動画ファイルをBase64エンコーディングに無料でオンライン変換。MP4、WebMなどの形式に対応。HTML、JSON、データURIに動画を埋め込み。ブラウザベース処理。",
       "dropzone": "動画ファイルをここにドロップまたはクリックしてアップロード",
       "maxSize": "最大ファイルサイズ：10MB",
       "errorNotVideo": "動画ファイルを選択してください",
@@ -3164,7 +3164,7 @@
       "name": "ファイルサイズ計算機",
       "description": "異なるファイルサイズ単位間で変換します。",
       "seo_title": "無料オンラインファイルサイズ計算機",
-      "seo_description": "バイト、KB、MB、GB、TB などの単位間を無料でオンライン変換。",
+      "seo_description": "バイト、KB、MB、GB、TBなどを無料でオンライン変換。バイナリ(1024)または10進数(1000)単位でファイルサイズを計算。ストレージ計画に必須。",
       "inputValue": "入力値",
       "unit": "単位",
       "base": "基数",
@@ -3182,7 +3182,7 @@
       "name": "ASCII テーブル",
       "description": "完全な ASCII 文字参照テーブル。",
       "seo_title": "ASCII テーブル - 文字コード参照",
-      "seo_description": "10進数、16進数、8進数、2進数値を含む完全な ASCII テーブル。",
+      "seo_description": "10進数、16進数、8進数、2進数値を含む完全なASCIIテーブル。説明付きの128個すべてのASCII文字を閲覧。プログラマー必須リファレンス。",
       "searchPlaceholder": "文字、コード、または説明で検索...",
       "showExtended": "拡張 ASCII を表示（128-255）",
       "selectedChar": "選択した文字",
@@ -3205,7 +3205,7 @@
       "name": "テキストから16進数",
       "description": "テキストと16進数を相互変換します。",
       "seo_title": "無料オンラインテキストから16進数変換ツール",
-      "seo_description": "テキストを16進数エンコードに変換、または16進数をテキストにデコード。",
+      "seo_description": "テキストを16進数エンコーディングに変換、または16進数をテキストに無料でオンラインデコード。UTF-8とASCIIエンコーディングに対応。デバッグとデータ分析に必須。",
       "encoding": "エンコード",
       "separator": "区切り文字",
       "sepSpace": "スペース",
@@ -3230,7 +3230,7 @@
       "name": "CSS 変数ジェネレーター",
       "description": "ビジュアルエディターで CSS カスタムプロパティ（変数）を生成。",
       "seo_title": "無料オンライン CSS 変数ジェネレーター",
-      "seo_description": "ビジュアルカラーピッカーで CSS カスタムプロパティを生成し、CSS、SCSS、JavaScript にエクスポート。",
+      "seo_description": "ビジュアルカラーピッカーでCSSカスタムプロパティを生成し、CSS、SCSS、JavaScriptにエクスポート。一貫したテーマのためのデザイントークンを作成。",
       "prefix": "プレフィックス",
       "prefixPlaceholder": "例: app",
       "scope": "スコープ",
@@ -3257,7 +3257,7 @@
       "name": "Lorem Picsum",
       "description": "Picsum Photos からランダムなプレースホルダー画像を生成。",
       "seo_title": "無料オンライン Lorem Picsum 画像ジェネレーター",
-      "seo_description": "カスタムサイズ、グレースケール、ぼかし効果のランダムプレースホルダー画像を生成。",
+      "seo_description": "カスタムサイズ、グレースケール、ブラー効果付きのランダムプレースホルダー画像を生成。モックアップとプロトタイピングに最適。",
       "width": "幅",
       "height": "高さ",
       "seed": "シード",
@@ -3278,7 +3278,7 @@
       "name": "正規表現エスケープ",
       "description": "正規表現の特殊文字をエスケープまたはアンエスケープ。",
       "seo_title": "無料オンライン正規表現エスケープツール",
-      "seo_description": "正規表現で使用する特殊文字を無料でオンラインエスケープ。",
+      "seo_description": "正規表現で使用する特殊文字を無料でオンラインでエスケープ。. * + ? ^ $ { } [ ] \\ | ( ) などのメタ文字を処理。",
       "mode": "モード",
       "escape": "エスケープ",
       "unescape": "アンエスケープ",
@@ -3300,7 +3300,7 @@
       "name": "HTML からテキスト",
       "description": "HTML をプレーンテキストに変換し、すべてのタグを削除。",
       "seo_title": "無料オンライン HTML からテキスト変換ツール",
-      "seo_description": "HTML をプレーンテキストに変換し、すべてのタグを削除してコンテンツ構造を保持。",
+      "seo_description": "HTMLをプレーンテキストに変換し、すべてのタグを削除してコンテンツ構造を保持。リンク、リスト、テーブルをインテリジェントに処理。",
       "preserveLinks": "リンクを (URL) として保持",
       "preserveLineBreaks": "改行を保持",
       "preserveLists": "リスト形式を保持",
@@ -3321,7 +3321,7 @@
       "name": "2進数/10進数変換",
       "description": "2進数、10進数、16進数間で相互変換。",
       "seo_title": "無料オンライン2進数10進数変換ツール",
-      "seo_description": "2進数、10進数、16進数間で簡単に変換。",
+      "seo_description": "2進数から10進数、10進数から2進数、2進数から16進数、16進数から2進数を無料でオンライン変換。大きな数値と即時変換に対応。",
       "mode": "変換モード",
       "binToDec": "2進数 → 10進数",
       "decToBin": "10進数 → 2進数",
@@ -3349,7 +3349,7 @@
       "name": "8進数変換",
       "description": "8進数と他の基数間で変換。",
       "seo_title": "無料オンライン8進数変換ツール",
-      "seo_description": "8進数、10進数、2進数、16進数間で変換。",
+      "seo_description": "8進数から10進数、2進数、16進数に無料でオンライン変換。10進数、2進数、16進数から8進数への変換も可能。Unixパーミッションに必須。",
       "mode": "変換モード",
       "octToDec": "8進数 → 10進数",
       "decToOct": "10進数 → 8進数",
@@ -3376,7 +3376,7 @@
       "name": "NATOフォネティックアルファベット変換",
       "description": "テキストをNATOフォネティックアルファベット（Alpha、Bravo、Charlie...）に変換。",
       "seo_title": "無料オンラインNATOフォネティックアルファベット変換ツール",
-      "seo_description": "テキストをNATO/ICAOフォネティックアルファベットに変換。",
+      "seo_description": "文字と数字をNATOフォネティックアルファベットの単語に無料でオンライン変換。明確なコミュニケーションのためのAlpha、Bravo、Charlie形式。",
       "separator": "区切り文字",
       "sepNewline": "改行",
       "sepDash": "ダッシュ",
@@ -3397,7 +3397,7 @@
       "name": "CRC32計算機",
       "description": "テキストまたはデータのCRC32チェックサムを計算。",
       "seo_title": "無料オンラインCRC32計算ツール",
-      "seo_description": "任意のテキストのCRC32チェックサムを素早く計算。",
+      "seo_description": "ブラウザでテキストまたはアップロードファイルのCRC32チェックサムを計算。データ整合性を検証し、伝送エラーを検出。安全なブラウザベース処理。",
       "inputMode": "入力モード",
       "modeText": "テキスト",
       "modeFile": "ファイル",
@@ -3420,7 +3420,7 @@
       "name": "MACアドレス生成",
       "description": "ランダムなMACアドレスを生成、複数の形式をサポート。",
       "seo_title": "無料オンラインMACアドレス生成ツール",
-      "seo_description": "複数の形式とオプションでランダムなMACアドレスを生成。",
+      "seo_description": "プレフィックス、セパレータ、ビットフラグオプション付きのランダムMACアドレスを生成。ユニキャスト/マルチキャストフラグに対応。",
       "generate": "生成",
       "copy": "コピー",
       "count": "生成数",
@@ -3452,7 +3452,7 @@
       "name": "cURL からコード",
       "description": "cURL コマンドを複数のプログラミング言語のコードに変換します。",
       "seo_title": "無料オンライン cURL からコード変換ツール",
-      "seo_description": "cURL コマンドを JavaScript、Python、PHP、Go、Java、C#、Ruby、Rust コードに無料で変換。",
+      "seo_description": "cURLコマンドをJavaScript、Python、PHP、Go、Java、C#、Ruby、Rustコードに無料でオンライン変換。ヘッダー、ボディ、認証を解析。",
       "curlInput": "cURL コマンド",
       "placeholder": "cURL コマンドを貼り付け...",
       "targetLanguage": "ターゲット言語",
@@ -3475,7 +3475,7 @@
       "name": "IPアドレス検証",
       "description": "IPv4およびIPv6アドレスを詳細情報付きで検証します。",
       "seo_title": "無料オンラインIPアドレス検証ツール",
-      "seo_description": "IPv4およびIPv6アドレスをオンラインで検証。プライベート、ループバック、マルチキャストかどうかを確認。",
+      "seo_description": "IPv4およびIPv6アドレスを無料でオンライン検証。IPがプライベート、ループバック、マルチキャスト、予約済みかどうかをチェック。",
       "inputLabel": "IPアドレス",
       "placeholder": "IPアドレスを入力（例：192.168.1.1）",
       "validate": "検証",
@@ -3497,7 +3497,7 @@
       "name": "JSONマージャー",
       "description": "異なる戦略で複数のJSONオブジェクトをマージします。",
       "seo_title": "無料オンラインJSONマージャー",
-      "seo_description": "shallow、deep、concat戦略でJSONオブジェクトをオンラインでマージ。",
+      "seo_description": "シャロー、ディープ、またはconcat戦略でJSONオブジェクトをオンラインでマージ。複数のJSONファイルを1つに結合。配列とネストされたオブジェクトをインテリジェントに処理。",
       "strategy": "マージ戦略",
       "shallow": "シャローマージ",
       "deep": "ディープマージ",
@@ -3514,7 +3514,7 @@
       "name": "テキストテンプレート",
       "description": "テキストテンプレート内の変数を値で置換します。",
       "seo_title": "無料オンラインテキストテンプレートエンジン",
-      "seo_description": "シンプルなテキストテンプレートエンジン。{{ 変数 }}を値で置換。",
+      "seo_description": "シンプルなテキストテンプレートエンジン。{{ 変数 }} をデータの値で置換。ループ、条件、ネストされたオブジェクトに対応。",
       "template": "テンプレート",
       "templatePlaceholder": "{{ 変数 }}を含むテンプレートを入力...",
       "syntaxHint": "変数には{{ 変数名 }}構文を使用",
@@ -3528,7 +3528,7 @@
       "name": "基数計算機",
       "description": "異なる基数で計算を実行します。",
       "seo_title": "無料オンライン基数計算機",
-      "seo_description": "2進数、8進数、10進数、16進数で計算。算術演算とビット演算をサポート。",
+      "seo_description": "2進数、8進数、10進数、16進数で計算。AND、OR、XOR、NOT、シフトなどの算術演算とビット演算に対応。",
       "base": "基数",
       "binary": "2進数",
       "octal": "8進数",
@@ -3548,7 +3548,7 @@
       "name": "カラー名検索",
       "description": "任意の色値に最も近い色名を検索します。",
       "seo_title": "無料オンラインカラー名検索",
-      "seo_description": "任意の16進数色値に最も近い名前付きカラーを検索。",
+      "seo_description": "任意の16進数カラー値に最も近い名前付きカラーを検索。CSSカラー名、X11カラー、Webセーフカラーを閲覧。デザイナー向け。",
       "inputLabel": "色",
       "find": "色名を検索",
       "closestColors": "最も近い色",
@@ -3558,7 +3558,7 @@
       "name": "文字頻度分析",
       "description": "テキスト内の文字頻度を分析します。",
       "seo_title": "無料オンライン文字頻度分析ツール",
-      "seo_description": "テキスト内の文字の頻度と分布を分析。",
+      "seo_description": "テキスト内の文字頻度と分布を分析。各文字のカウント、パーセンテージ、ビジュアルチャートを取得。暗号化とテキスト分析向け。",
       "inputLabel": "テキスト",
       "placeholder": "分析するテキストを入力...",
       "ignoreSpaces": "スペースを無視",
@@ -3571,7 +3571,7 @@
       "name": "JSON から Dart",
       "description": "JSON を fromJson と toJson メソッド付きの Dart クラスに変換します。",
       "seo_title": "無料オンライン JSON から Dart 変換ツール",
-      "seo_description": "JSON を factory コンストラクタとシリアライズメソッド付きの Dart クラスコードに変換。",
+      "seo_description": "JSONをファクトリコンストラクタとシリアライゼーションメソッド付きのDartクラスコードに変換。null安全とネストされたクラスに対応。",
       "className": "クラス名",
       "convert": "変換"
     },
@@ -3579,7 +3579,7 @@
       "name": "SQL から JSON",
       "description": "SQL INSERT 文を JSON 配列に変換します。",
       "seo_title": "無料オンライン SQL から JSON 変換ツール",
-      "seo_description": "SQL INSERT 文を JSON 配列形式に変換。",
+      "seo_description": "SQL INSERT文をJSON配列形式に変換。複数のINSERT文を解析してデータを抽出。データベース移行とデータエクスポートタスクに最適。",
       "sqlInput": "SQL INSERT 文",
       "placeholder": "SQL INSERT 文を入力...",
       "convert": "変換",
@@ -3604,7 +3604,7 @@
       "name": "JSONフォーマッター",
       "description": "JSONデータの整形と美化、シンタックスハイライト対応。JSONの検証と一般的なエラーの修正。",
       "seo_title": "無料オンラインJSONフォーマッター＆バリデーター",
-      "seo_description": "JSONデータを無料でオンライン整形、美化、検証。シンタックスハイライト、エラー検出、簡単コピー。",
+      "seo_description": "JSONデータを無料でオンラインでフォーマット、整形、検証。シンタックスハイライト、エラー検出、簡単コピー機能付き。開発者に最適。",
       "inputPlaceholder": "{\"key\": \"value\"}",
       "outputPlaceholder": "整形されたJSONがここに表示されます..."
     },
@@ -3612,92 +3612,92 @@
       "name": "Base64エンコーダー",
       "description": "テキストをBase64にエンコード、またはBase64をデコード。",
       "seo_title": "無料Base64エンコーダー＆デコーダー",
-      "seo_description": "Base64文字列を無料でオンラインエンコード・デコード。"
+      "seo_description": "テキストをBase64にエンコード、またはBase64文字列を無料でオンラインで即座にデコード。データアップロード不要の安全なブラウザツール。"
     },
     "uuid-generator": {
       "name": "UUIDジェネレーター",
       "description": "ランダムなUUID (v4) を即座に生成。",
       "seo_title": "無料オンラインUUIDジェネレーター",
-      "seo_description": "ランダムなUUID v4文字列を無料でオンライン生成。"
+      "seo_description": "ランダムなUUID v4文字列を無料でオンライン生成。複数UUIDの一括生成に対応。安全で高速、ブラウザ内で完結。開発者に最適。"
     },
     "url-encoder": {
       "name": "URLエンコーダー",
       "description": "URLを安全にエンコードまたはデコード。",
       "seo_title": "無料URLエンコーダー＆デコーダー",
-      "seo_description": "URLを無料でオンラインエンコード・デコード。"
+      "seo_description": "URLとクエリ文字列を無料でオンラインでエンコード・デコード。Web開発のための特殊文字の安全な処理。高速で安全なブラウザツール。"
     },
     "password-generator": {
       "name": "パスワードジェネレーター",
       "description": "強力で安全なランダムパスワードを生成。",
       "seo_title": "無料強力パスワードジェネレーター",
-      "seo_description": "安全なランダムパスワードを無料でオンライン生成。",
+      "seo_description": "安全なランダムパスワードを無料でオンライン生成。長さをカスタマイズし、大文字、小文字、数字、記号を含める。データの保存やアップロードなし。",
       "selectOption": "少なくとも1つのオプションを選択してください"
     },
     "hash-generator": {
       "name": "ハッシュジェネレーター",
       "description": "テキストからMD5、SHA-1、SHA-256ハッシュを生成。",
       "seo_title": "無料MD5、SHAハッシュジェネレーター",
-      "seo_description": "MD5、SHA-1、SHA-256ハッシュを無料でオンライン生成。"
+      "seo_description": "MD5、SHA-1、SHA-256、SHA-512ハッシュを無料でオンライン生成。データアップロード不要の安全なブラウザツール。ファイル整合性検証に最適。"
     },
     "qr-generator": {
       "name": "QRコードジェネレーター",
       "description": "テキストやURLからQRコードを生成。",
       "seo_title": "無料QRコードジェネレーター",
-      "seo_description": "QRコードを無料でオンライン生成。"
+      "seo_description": "テキスト、URL、データから無料でオンラインでQRコードを生成。高品質PNG画像としてダウンロード。サイズとエラー訂正レベルをカスタマイズ。"
     },
     "color-converter": {
       "name": "カラーコンバーター",
       "description": "HEX、RGB、HSL形式間で色を変換。",
       "seo_title": "無料カラーコンバーター HEX RGB HSL",
-      "seo_description": "色を無料でオンライン変換。"
+      "seo_description": "HEX、RGB、HSL、HSV形式間で無料でオンラインで色を変換。ライブプレビュー付きの即時カラーフォーマット変換。デザイナーに必須。"
     },
     "timestamp-converter": {
       "name": "タイムスタンプコンバーター",
       "description": "Unixタイムスタンプを読みやすい日付に変換。",
       "seo_title": "無料Unixタイムスタンプコンバーター",
-      "seo_description": "Unixタイムスタンプを無料でオンライン変換。"
+      "seo_description": "Unixタイムスタンプを人間が読める日付に、日付をタイムスタンプに無料でオンライン変換。複数の日付形式とタイムゾーンに対応。"
     },
     "word-counter": {
       "name": "文字数カウンター",
       "description": "単語、文字、文、段落をカウント。",
       "seo_title": "無料文字数・単語数カウンター",
-      "seo_description": "単語と文字を無料でオンラインカウント。"
+      "seo_description": "単語数、文字数、文数、段落数を無料でオンラインでカウント。読書時間の見積もりと詳細なテキスト統計を取得。ライターや編集者に最適。"
     },
     "case-converter": {
       "name": "大文字小文字変換",
       "description": "テキストを大文字、小文字などに変換。",
       "seo_title": "無料大文字小文字変換ツール",
-      "seo_description": "大文字小文字を無料でオンライン変換。"
+      "seo_description": "テキストの大文字小文字を無料でオンライン変換。大文字、小文字、タイトルケース、センテンスケース、キャメルケース、スネークケースに変換。"
     },
     "html-encoder": {
       "name": "HTMLエンコーダー",
       "description": "特殊文字をHTMLエンティティにエンコード。",
       "seo_title": "無料HTMLエンコーダー",
-      "seo_description": "HTMLエンティティを無料でオンラインエンコード・デコード。"
+      "seo_description": "HTMLエンティティを無料でオンラインでエンコード・デコード。Web開発のための特殊文字の安全な処理。XSS攻撃を防ぎ、HTMLを正しく表示。"
     },
     "markdown-preview": {
       "name": "Markdownプレビュー",
       "description": "Markdownを書いてライブプレビュー。",
       "seo_title": "無料Markdownエディター",
-      "seo_description": "Markdownを無料でオンライン作成・プレビュー。"
+      "seo_description": "Markdownを無料でオンラインで書いてプレビュー。シンタックスハイライト付きのライブプレビューとHTML出力。ドキュメントやブログに最適。"
     },
     "lorem-ipsum": {
       "name": "Lorem Ipsumジェネレーター",
       "description": "デザイン用のプレースホルダーテキストを生成。",
       "seo_title": "無料Lorem Ipsumジェネレーター",
-      "seo_description": "Lorem Ipsumテキストを無料でオンライン生成。"
+      "seo_description": "Lorem Ipsumプレースホルダーテキストを無料でオンライン生成。モックアップやデザイン用の段落、文、単語を作成。Webデザイナーに必須。"
     },
     "regex-tester": {
       "name": "正規表現テスター",
       "description": "リアルタイムマッチングで正規表現をテスト。",
       "seo_title": "無料正規表現テスター",
-      "seo_description": "正規表現を無料でオンラインテスト・デバッグ。"
+      "seo_description": "正規表現を無料でオンラインでテスト・デバッグ。シンタックスハイライトとマッチグループ付きのリアルタイムマッチング。開発者に必須。"
     },
     "jwt-decoder": {
       "name": "JWTデコーダー",
       "description": "JWTトークンをデコードしてHeader、Payload、署名を表示。",
       "seo_title": "無料JWTデコーダー",
-      "seo_description": "JWTトークンを無料でオンラインデコード。",
+      "seo_description": "JWT（JSON Web Token）を無料でオンラインでデコード・検査。検証なしでヘッダー、ペイロード、署名を表示。認証デバッグに必須。",
       "enterToken": "JWTトークンを入力してください",
       "invalidFormat": "無効なJWT形式",
       "invalidToken": "無効なJWTトークン",
@@ -3712,19 +3712,19 @@
       "name": "差分チェッカー",
       "description": "2つのテキストを比較して差分をハイライト表示。",
       "seo_title": "無料テキスト差分チェッカー",
-      "seo_description": "テキストの差分を無料でオンライン比較。"
+      "seo_description": "2つのテキストを無料でオンライン比較。追加、削除、変更されたコンテンツを並べて表示でハイライト。コードレビューに必須。"
     },
     "json-to-csv": {
       "name": "JSON to CSV",
       "description": "JSONをCSVに変換、またはCSVをJSONに変換。",
       "seo_title": "無料JSON to CSVコンバーター",
-      "seo_description": "JSONとCSVを無料でオンライン変換。"
+      "seo_description": "JSONをCSVに、またはCSVをJSONに無料でオンライン変換。ネストされたオブジェクトと配列を処理。データエクスポートに最適。"
     },
     "image-to-base64": {
       "name": "画像 to Base64",
       "description": "画像をBase64エンコードに変換。HTMLやCSSで使用可能。",
       "seo_title": "無料画像 to Base64コンバーター",
-      "seo_description": "画像をBase64に無料でオンライン変換。",
+      "seo_description": "画像をBase64エンコード文字列に無料でオンライン変換。PNG、JPG、GIF、SVG形式に対応。CSS、HTML、JSONへの画像埋め込みに最適。",
       "uploadHint": "クリックしてアップロードまたはドラッグ&ドロップ",
       "supportedFormats": "PNG, JPG, GIF, SVG, WebP",
       "copyDataUrl": "Data URLをコピー",
@@ -3737,7 +3737,7 @@
       "name": "Cron式ジェネレーター",
       "description": "Cron式を視覚的に生成・解析。",
       "seo_title": "無料Cron式ジェネレーター",
-      "seo_description": "Cron式を無料でオンライン生成・解析。",
+      "seo_description": "cron式を無料でオンラインで生成・解析。一般的なプリセットと人間が読める説明付きのビジュアルエディタ。タスクスケジューリングに必須。",
       "presets": "クイックプリセット",
       "minute": "分 (0-59)",
       "hour": "時 (0-23)",
@@ -3776,19 +3776,19 @@
       "name": "テキスト to Slug",
       "description": "テキストをURL用のslug形式に変換。",
       "seo_title": "無料テキスト to Slugコンバーター",
-      "seo_description": "テキストをslugに無料でオンライン変換。"
+      "seo_description": "テキストをURL対応のslug形式に無料でオンライン変換。特殊文字を削除し、unicodeを処理し、SEOフレンドリーなURLを作成。"
     },
     "number-base-converter": {
       "name": "進数変換",
       "description": "2進数、8進数、10進数、16進数間で数値を変換。",
       "seo_title": "無料進数変換ツール",
-      "seo_description": "進数を無料でオンライン変換。"
+      "seo_description": "2進数、8進数、10進数、16進数を無料でオンライン変換。大きな数値と即時変換に対応。プログラマーや学生に必須。"
     },
     "json-path-tester": {
       "name": "JSONPathテスター",
       "description": "JSONデータに対してJSONPath式をテストおよび評価します。",
       "seo_title": "無料オンラインJSONPathテスター",
-      "seo_description": "JSONPath式を無料でオンラインテストおよびデバッグ。",
+      "seo_description": "JSONPath式を無料でオンラインでテスト・デバッグ。リアルタイム結果とシンタックスハイライト付きでJSONデータをクエリ。API開発に必須。",
       "jsonData": "JSONデータ",
       "jsonPlaceholder": "{\"name\": \"John\", \"users\": [{\"name\": \"Alice\"}, {\"name\": \"Bob\"}]}",
       "expression": "JSONPath式",
@@ -3804,19 +3804,19 @@
       "name": "XMLフォーマッター",
       "description": "XMLデータの整形と圧縮、構文検証。",
       "seo_title": "無料XMLフォーマッター",
-      "seo_description": "XMLを無料でオンライン整形・圧縮。"
+      "seo_description": "XMLデータを無料でオンラインでフォーマット、整形、圧縮。シンタックスハイライト、エラー検出、ツリービュー。API開発に必須。"
     },
     "chinese-converter": {
       "name": "中国語変換",
       "description": "簡体字と繁体字を相互変換。",
       "seo_title": "無料中国語簡繁変換",
-      "seo_description": "簡体字と繁体字を無料でオンライン変換。"
+      "seo_description": "簡体字中国語と繁体字中国語を無料でオンライン変換。フレーズサポート付きの正確な文字変換。中国語コンテンツのローカライズに必須。"
     },
     "unit-converter": {
       "name": "単位変換",
       "description": "長さ、重量、温度、面積などの単位を変換。",
       "seo_title": "無料単位変換ツール",
-      "seo_description": "各種単位を無料でオンライン変換。",
+      "seo_description": "各種単位を無料でオンライン変換：長さ、重さ、温度、面積、体積、速度、データ。クイックリファレンス表と即時変換。",
       "enterValue": "値を入力",
       "swapUnits": "単位を交換"
     },
@@ -3824,19 +3824,19 @@
       "name": "グラデーション生成",
       "description": "CSSグラデーションを視覚的に作成。",
       "seo_title": "無料CSSグラデーション生成",
-      "seo_description": "CSSグラデーションを無料でオンライン作成。"
+      "seo_description": "CSSグラデーションを無料でオンライン作成。CSSとTailwindコード付きの線形・放射状グラデーションを生成。カラーピッカー付きビジュアルエディタ。"
     },
     "unicode-converter": {
       "name": "Unicode変換",
       "description": "テキストとUnicodeエンコーディングを相互変換。",
       "seo_title": "無料Unicode変換ツール",
-      "seo_description": "テキストとUnicodeを無料でオンライン変換。"
+      "seo_description": "テキストとUnicodeエンコーディングを無料でオンライン変換。HTMLエンティティ、CSSエスケープシーケンス、各種Unicode形式に対応。"
     },
     "code-minifier": {
       "name": "コード圧縮",
       "description": "HTML、CSS、JSコードを圧縮してファイルサイズを削減。",
       "seo_title": "無料コード圧縮ツール",
-      "seo_description": "HTML、CSS、JSを無料でオンライン圧縮。",
+      "seo_description": "HTML、CSS、JavaScriptコードを無料でオンライン圧縮。ファイルサイズを削減し、ページ読み込み速度を向上。Webパフォーマンス最適化に必須。",
       "codeType": "コードタイプ",
       "placeholder": "{type} コードを入力して圧縮...",
       "original": "元のサイズ",
@@ -3847,187 +3847,187 @@
       "name": "SQLフォーマッター",
       "description": "SQLクエリを整形して可読性を向上。",
       "seo_title": "無料SQLフォーマッター",
-      "seo_description": "SQLを無料でオンライン整形。"
+      "seo_description": "SQLクエリを無料でオンラインでフォーマット・整形。シンタックスハイライトとインデント付きで複数のSQL方言に対応。データベース開発に必須。"
     },
     "pinyin-converter": {
       "name": "ピンイン変換",
       "description": "中国語をピンインに変換。声調付きも対応。",
       "seo_title": "無料ピンイン変換ツール",
-      "seo_description": "中国語をピンインに無料でオンライン変換。"
+      "seo_description": "中国語文字をピンインに無料でオンライン変換。声調記号と数字声調に対応。中国語学習と発音ガイドに必須。"
     },
     "color-picker": {
       "name": "カラーピッカー",
       "description": "色を選択してHEX、RGB、HSL値を取得。",
       "seo_title": "無料カラーピッカー",
-      "seo_description": "色を選択して各種形式の値を取得。"
+      "seo_description": "HEX、RGB、HSL形式で色を選択し、色の値を無料でオンライン取得。プリセットパレットと最近の色を備えたビジュアルカラーピッカー。"
     },
     "aspect-ratio": {
       "name": "アスペクト比計算",
       "description": "アスペクト比を計算し、比率を維持してリサイズ。",
       "seo_title": "無料アスペクト比計算ツール",
-      "seo_description": "アスペクト比を無料でオンライン計算。"
+      "seo_description": "アスペクト比を計算し、画像を比例的にリサイズ。16:9、4:3、1:1などの一般的な比率に対応。動画編集やレスポンシブデザインに最適。"
     },
     "css-beautifier": {
       "name": "CSS整形",
       "description": "CSSコードを整形・美化。圧縮と整形に対応。",
       "seo_title": "無料CSS整形ツール",
-      "seo_description": "CSSを無料でオンライン整形・圧縮。"
+      "seo_description": "CSSコードを無料でオンラインでフォーマット、整形、圧縮。カスタマイズ可能なインデント付きシンタックスハイライト。Web開発者に最適。"
     },
     "js-beautifier": {
       "name": "JavaScript整形",
       "description": "JavaScriptコードを整形・美化。圧縮と整形に対応。",
       "seo_title": "無料JavaScript整形ツール",
-      "seo_description": "JavaScriptを無料でオンライン整形・圧縮。"
+      "seo_description": "JavaScriptコードを無料でオンラインでフォーマット、整形、圧縮。カスタマイズ可能なインデント付きシンタックスハイライト。開発者に最適。"
     },
     "html-preview": {
       "name": "HTMLプレビュー",
       "description": "HTMLコードをリアルタイムでプレビュー。CSSとJavaScript対応。",
       "seo_title": "無料HTMLプレビューツール",
-      "seo_description": "HTMLをリアルタイムで無料プレビュー。"
+      "seo_description": "HTMLコードを無料でオンラインでリアルタイムプレビュー。入力時に即座に更新されるライブレンダリング。Web開発やHTML学習に最適。"
     },
     "ip-lookup": {
       "name": "IPアドレス検索",
       "description": "IPアドレスの位置情報、ISPなどを検索。",
       "seo_title": "無料IPアドレス検索ツール",
-      "seo_description": "IPアドレスの位置情報を無料でオンライン検索。"
+      "seo_description": "IPアドレスの地理位置情報を無料でオンライン検索。国、都市、ISP、タイムゾーン、座標を取得。ネットワークトラブルシューティングに最適。"
     },
     "morse-code": {
       "name": "モールス信号変換",
       "description": "テキストをモールス信号に変換、またはその逆。",
       "seo_title": "無料モールス信号変換ツール",
-      "seo_description": "モールス信号とテキストを無料でオンライン変換。音声再生対応。"
+      "seo_description": "テキストをモールス信号に、またはモールス信号をテキストに無料でオンライン変換。速度調整可能なオーディオ再生に対応。学習に最適。"
     },
     "random-generator": {
       "name": "乱数ジェネレーター",
       "description": "指定範囲内の乱数を生成。一括生成と重複なしオプション対応。",
       "seo_title": "無料乱数ジェネレーター",
-      "seo_description": "乱数を無料でオンライン生成。"
+      "seo_description": "乱数を無料でオンライン生成。カスタム範囲、ユニークな数字、複数の結果に対応。ゲーム、抽選、ランダム選択に最適。"
     },
     "text-reverser": {
       "name": "テキスト反転",
       "description": "テキストの文字、単語、行の順序を反転。",
       "seo_title": "無料テキスト反転ツール",
-      "seo_description": "テキストを無料でオンライン反転。"
+      "seo_description": "テキストの文字、単語、行を無料でオンラインで反転。複数の反転モードと即時プレビュー。パズル、エンコーディング、テキスト操作に最適。"
     },
     "line-counter": {
       "name": "行数カウンター",
       "description": "テキストの行数をカウント。重複削除、空行削除、ソート対応。",
       "seo_title": "無料行数カウンター",
-      "seo_description": "テキストの行数を無料でオンラインカウント。"
+      "seo_description": "行数をカウントし、重複を削除し、テキストを無料でオンラインでソート。合計、空、ユニーク行の統計を取得。データクリーニングに最適。"
     },
     "string-escape": {
       "name": "文字列エスケープ",
       "description": "JSON、HTML、URL、JavaScript形式の文字列をエスケープ/アンエスケープ。",
       "seo_title": "無料文字列エスケープツール",
-      "seo_description": "文字列を無料でオンラインエスケープ。"
+      "seo_description": "各種プログラミング言語の文字列を無料でオンラインでエスケープ・アンエスケープ。JSON、HTML、URL、正規表現に対応。開発者に最適。"
     },
     "yaml-json": {
       "name": "YAML/JSON変換",
       "description": "YAMLとJSON形式を相互変換。",
       "seo_title": "無料YAML JSON変換ツール",
-      "seo_description": "YAMLとJSONを無料でオンライン変換。"
+      "seo_description": "YAMLをJSONに、またはJSONをYAMLに無料でオンライン変換。シンタックスハイライト付きで設定ファイルを検証・フォーマット。DevOpsに最適。"
     },
     "date-calculator": {
       "name": "日付計算機",
       "description": "2つの日付の差を計算、または日付に日数を加減算。",
       "seo_title": "無料日付計算機",
-      "seo_description": "日付の差と加減算を無料でオンライン計算。"
+      "seo_description": "日付の差分を計算し、日数を加減算。日付間の日数、週数、月数、年数を取得。プロジェクト計画やスケジューリングに最適。"
     },
     "text-deduplicator": {
       "name": "テキスト重複削除",
       "description": "テキストから重複行を削除し、ユニークな内容のみを保持。",
       "seo_title": "無料テキスト重複削除ツール",
-      "seo_description": "テキストの重複行を無料でオンライン削除。"
+      "seo_description": "テキストから重複行を無料でオンラインで削除。大文字小文字を区別するマッチングと行トリミングに対応。データクリーニングに最適。"
     },
     "color-blender": {
       "name": "カラーブレンダー",
       "description": "2色を混合してグラデーションステップを生成。",
       "seo_title": "無料カラーブレンダー",
-      "seo_description": "色を混合してグラデーションを無料でオンライン生成。"
+      "seo_description": "2つの色をブレンドし、グラデーションステップを無料でオンライン生成。カスタマイズ可能なステップで滑らかな色の遷移を作成。デザイナーに最適。"
     },
     "json-sorter": {
       "name": "JSONソーター",
       "description": "JSONオブジェクトをキー名でソート。",
       "seo_title": "無料JSONソーター",
-      "seo_description": "JSONキーを無料でオンラインソート。"
+      "seo_description": "JSONキーを無料でオンラインでアルファベット順にソート。昇順・降順とネストされたオブジェクトのソートに対応。API開発に最適。"
     },
     "placeholder-image": {
       "name": "プレースホルダー画像生成",
       "description": "カスタムサイズと色のプレースホルダー画像を生成。",
       "seo_title": "無料プレースホルダー画像生成",
-      "seo_description": "プレースホルダー画像を無料でオンライン生成。"
+      "seo_description": "カスタムサイズと色のプレースホルダー画像を無料でオンライン生成。モックアップ、ワイヤーフレーム、Webデザインに最適。PNGでダウンロード。"
     },
     "text-encryption": {
       "name": "テキスト暗号化",
       "description": "AES暗号化でテキストを暗号化・復号化。",
       "seo_title": "無料テキスト暗号化ツール",
-      "seo_description": "AES暗号化でテキストを無料でオンライン暗号化・復号化。"
+      "seo_description": "AES-256暗号化でテキストを無料でオンラインで暗号化・復号化。パスワード保護付きの安全なブラウザ暗号化。サーバーへのデータアップロードなし。"
     },
     "file-hash": {
       "name": "ファイルハッシュ計算",
       "description": "ファイルのMD5、SHA-1、SHA-256、SHA-512ハッシュを計算。",
       "seo_title": "無料ファイルハッシュ計算ツール",
-      "seo_description": "ファイルハッシュを無料でオンライン計算。"
+      "seo_description": "ファイルハッシュ（MD5、SHA-1、SHA-256、SHA-512）を無料でオンライン計算。ファイルの整合性を検証し、変更を検出。安全なブラウザ処理。"
     },
     "html-table-generator": {
       "name": "HTMLテーブル生成",
       "description": "行と列をカスタマイズしてHTMLテーブルを視覚的に生成。",
       "seo_title": "無料HTMLテーブル生成ツール",
-      "seo_description": "HTMLテーブルを無料でオンライン生成。"
+      "seo_description": "ビジュアルエディタでHTMLテーブルを無料でオンライン生成。行、列、ヘッダー、スタイルをカスタマイズ。クリーンなHTMLコードをエクスポート。"
     },
     "json-schema-validator": {
       "name": "JSON Schema検証",
       "description": "JSON SchemaでJSONデータを検証。",
       "seo_title": "無料JSON Schema検証ツール",
-      "seo_description": "JSON Schemaを無料でオンライン検証。"
+      "seo_description": "JSON SchemaでJSONデータを無料でオンライン検証。draft-04、draft-06、draft-07スキーマに対応。詳細なエラーメッセージを取得。"
     },
     "regex-patterns": {
       "name": "正規表現パターン集",
       "description": "メール、URL、電話番号などの一般的な正規表現パターン。",
       "seo_title": "無料正規表現パターン集",
-      "seo_description": "開発者向けの一般的な正規表現パターン。"
+      "seo_description": "メール、URL、電話、IPアドレス、日付などの一般的な正規表現パターンを無料でオンライン閲覧。ワンクリックでコードにコピー。開発者リファレンス。"
     },
     "byte-counter": {
       "name": "バイトカウンター",
       "description": "UTF-8、UTF-16、ASCIIエンコーディングでテキストのバイト数を計算。",
       "seo_title": "無料バイトカウンター",
-      "seo_description": "テキストのバイト数を無料でオンライン計算。"
+      "seo_description": "UTF-8、UTF-16などのエンコーディングでテキストバイト数を無料でオンラインカウント。文字数、単語数、バイトサイズを取得。データサイズ見積もりに必須。"
     },
     "json-to-typescript": {
       "name": "JSON to TypeScript",
       "description": "JSONデータをTypeScriptインターフェース定義に変換。",
       "seo_title": "無料JSON to TypeScriptコンバーター",
-      "seo_description": "JSONをTypeScriptインターフェースに無料でオンライン変換。"
+      "seo_description": "JSONをTypeScriptインターフェースと型に無料でオンライン変換。オプショナルプロパティとネスト型を持つ型安全なコードを生成。TypeScript開発者に必須。"
     },
     "svg-optimizer": {
       "name": "SVG最適化",
       "description": "SVGコードを最適化・圧縮してファイルサイズを削減。",
       "seo_title": "無料SVG最適化ツール",
-      "seo_description": "SVGファイルを無料でオンライン最適化・圧縮。"
+      "seo_description": "SVGファイルを無料でオンラインで最適化・圧縮。不要なメタデータを削除し、コードを圧縮し、ファイルサイズを削減。Webパフォーマンス最適化に最適。"
     },
     "text-to-binary": {
       "name": "テキスト⇔バイナリ変換",
       "description": "テキストをバイナリに変換、またはバイナリをテキストに変換。",
       "seo_title": "無料テキストバイナリ変換ツール",
-      "seo_description": "テキストとバイナリを無料でオンライン変換。"
+      "seo_description": "テキストをバイナリコードに、またはバイナリをテキストに無料でオンライン変換。ASCIIとUnicodeエンコーディングに対応。バイナリ学習に最適。"
     },
     "markdown-to-html": {
       "name": "Markdown to HTML",
       "description": "MarkdownテキストをHTMLコードに変換。",
       "seo_title": "無料Markdown to HTMLコンバーター",
-      "seo_description": "MarkdownをHTMLに無料でオンライン変換。"
+      "seo_description": "MarkdownをHTMLに無料でオンライン変換。テーブル、コードブロック、タスクリスト付きのGitHub Flavored Markdownに対応。HTMLをプレビュー・コピー。"
     },
     "html-minifier": {
       "name": "HTML圧縮",
       "description": "HTMLコードを圧縮・整形してファイルサイズを削減。",
       "seo_title": "無料HTML圧縮ツール",
-      "seo_description": "HTMLコードを無料でオンライン圧縮・整形。"
+      "seo_description": "HTMLコードを無料でオンラインで圧縮。空白、コメントを削除し、属性を最適化。ファイルサイズを削減し、ページ読み込み速度を向上。"
     },
     "json-diff": {
       "name": "JSON比較",
       "description": "2つのJSONオブジェクトを比較して差異を見つけます。",
       "seo_title": "無料オンラインJSON比較ツール",
-      "seo_description": "2つのJSONオブジェクトを比較して差異を無料でオンライン検出。",
+      "seo_description": "2つのJSONオブジェクトを比較し、差分を無料でオンラインで検出。追加、削除、変更された値を並べて表示でハイライト。APIデバッグに必須。",
       "json1": "JSON 1",
       "json2": "JSON 2",
       "placeholder": "{\"key\": \"value\"}",
@@ -4039,68 +4039,68 @@
       "name": "Base32エンコーダー",
       "description": "テキストをBase32にエンコード、またはBase32をデコード。",
       "seo_title": "無料Base32エンコーダー＆デコーダー",
-      "seo_description": "Base32を無料でオンラインエンコード・デコード。"
+      "seo_description": "テキストをBase32にエンコード、またはBase32文字列を無料でオンラインでデコード。RFC 4648標準エンコーディングに対応。TOTPシークレットに最適。"
     },
     "epoch-converter": {
       "name": "Epoch変換",
       "description": "Epoch/Unixタイムスタンプと日時を相互変換。",
       "seo_title": "無料Epoch時間変換ツール",
-      "seo_description": "Epochタイムスタンプを無料でオンライン変換。"
+      "seo_description": "Unixエポックタイムスタンプを人間が読める日付に、またはその逆に無料でオンライン変換。ミリ秒と秒に対応。開発者とログ分析に必須。"
     },
     "css-unit-converter": {
       "name": "CSS単位変換",
       "description": "px、rem、em、pt、vw、vhなどのCSS単位を変換。",
       "seo_title": "無料CSS単位変換ツール",
-      "seo_description": "CSS単位を無料でオンライン変換。"
+      "seo_description": "CSS単位（px、em、rem、%、vw、vh）を無料でオンライン変換。ベースフォントサイズでレスポンシブ値を計算。レスポンシブWebデザインに必須。"
     },
     "text-statistics": {
       "name": "テキスト統計",
       "description": "文字、単語、文、段落などの詳細な統計情報。",
       "seo_title": "無料テキスト統計ツール",
-      "seo_description": "テキスト統計を無料でオンライン分析。"
+      "seo_description": "テキスト統計を無料でオンライン分析。単語数、文字数、文数、読書時間、可読性スコアを取得。ライターや編集者に最適。"
     },
     "hex-editor": {
       "name": "16進数エディター",
       "description": "テキストと16進数を相互変換、バイトデータを表示。",
       "seo_title": "無料16進数エディター",
-      "seo_description": "テキストと16進数を無料でオンライン変換。"
+      "seo_description": "テキストを16進数に、16進数をテキストに無料でオンライン変換。ASCIIプレビュー付きで16進データを表示・編集。デバッグとバイナリデータ分析に必須。"
     },
     "color-palette": {
       "name": "カラーパレット生成",
       "description": "色階、補色、類似色、三角配色を生成。",
       "seo_title": "無料カラーパレット生成ツール",
-      "seo_description": "カラーパレットを無料でオンライン生成。"
+      "seo_description": "カラーパレットと配色を無料でオンライン生成。補色、類似色、トライアド、モノクロマティックパレットを作成。CSS、SCSS、JSON形式でエクスポート。"
     },
     "http-status": {
       "name": "HTTPステータスコード",
       "description": "HTTPステータスコードの意味を検索。",
       "seo_title": "HTTPステータスコードリファレンス",
-      "seo_description": "HTTPステータスコードリファレンスガイド。"
+      "seo_description": "HTTPステータスコードリファレンスガイドを無料でオンライン閲覧。1xx、2xx、3xx、4xx、5xxステータスコードの説明と使用例を学習。開発者必須。"
     },
     "json-to-yaml": {
       "name": "JSON to YAML",
       "description": "JSONデータをYAML形式に変換。",
       "seo_title": "無料JSON to YAMLコンバーター",
-      "seo_description": "JSONをYAMLに無料でオンライン変換。"
+      "seo_description": "JSONをYAML形式に無料でオンライン変換。適切なインデントとフォーマットでデータ構造を保持。設定ファイルとDevOpsワークフローに最適。"
     },
     "data-uri": {
       "name": "Data URI生成",
       "description": "ファイルをData URI形式に変換してHTML/CSSに埋め込み。",
       "seo_title": "無料Data URI生成ツール",
-      "seo_description": "Data URIを無料でオンライン生成。",
+      "seo_description": "ファイルやテキストからData URIを無料でオンライン生成。画像、フォント、ファイルをbase64データURLに変換。CSSやHTMLへのアセット埋め込みに最適。",
       "output": "Data URI"
     },
     "text-compare": {
       "name": "テキスト類似度比較",
       "description": "2つのテキストの類似度を比較、編集距離を計算。",
       "seo_title": "無料テキスト類似度比較ツール",
-      "seo_description": "テキスト類似度を無料でオンライン比較。"
+      "seo_description": "テキストの類似度を比較し、差分を無料でオンラインで検出。レーベンシュタイン距離、類似度パーセンテージを計算し、変更をハイライト。コンテンツレビューに必須。"
     },
     "json-to-go": {
       "name": "JSON to Go構造体",
       "description": "JSONデータをGo言語の構造体定義に変換。",
       "seo_title": "無料JSON to Go構造体コンバーター",
-      "seo_description": "JSONをGo構造体に無料でオンライン変換。",
+      "seo_description": "JSONをGo構造体に無料でオンライン変換。適切なフィールドタグとネスト構造体サポート付きの型安全なGoコードを生成。Go API開発に必須。",
       "structName": "構造体名",
       "input": "JSON入力",
       "output": "Go構造体"
@@ -4109,7 +4109,7 @@
       "name": "HTML to JSX",
       "description": "HTMLコードをReact JSX形式に変換します。",
       "seo_title": "無料オンラインHTML to JSXコンバーター",
-      "seo_description": "HTMLコードをReact JSX形式に無料でオンライン変換。",
+      "seo_description": "HTMLコードをReact JSX形式に無料でオンライン変換。classをclassNameに、styleを文字列からオブジェクトに変換し、自己終了タグを修正。React開発者に必須。",
       "htmlInput": "HTML入力",
       "jsxOutput": "JSX出力",
       "placeholder": "<div class=\"container\">...</div>",
@@ -4120,25 +4120,25 @@
       "name": "chmod計算機",
       "description": "Linux/Unixファイル権限を8進数とシンボリック表記で計算。",
       "seo_title": "無料chmod計算機",
-      "seo_description": "ファイル権限を無料でオンライン計算。"
+      "seo_description": "Unixファイルパーミッション（chmod）を無料でオンライン計算。数値表記とシンボリック表記を変換。所有者、グループ、その他の読み取り、書き込み、実行権限を可視化。"
     },
     "barcode-generator": {
       "name": "バーコード生成",
       "description": "Code 128、Code 39、EAN-13、UPC形式のバーコードを生成。",
       "seo_title": "無料バーコード生成ツール",
-      "seo_description": "バーコードを無料でオンライン生成。"
+      "seo_description": "バーコードを無料でオンライン生成。Code128、Code39、EAN-13、UPC-Aなどの形式に対応。PNGまたはSVGでダウンロード。在庫管理と製品ラベリングに最適。"
     },
     "text-to-speech": {
       "name": "テキスト読み上げ",
       "description": "テキストを音声に変換、音声・速度・ピッチを調整可能。",
       "seo_title": "無料テキスト読み上げツール",
-      "seo_description": "テキストを無料でオンライン読み上げ。"
+      "seo_description": "テキストを音声に無料でオンライン変換。複数の声と言語、調整可能な速度とピッチ。音声をダウンロードまたはブラウザで再生。アクセシビリティに最適。"
     },
     "url-parser": {
       "name": "URLパーサー",
       "description": "URLコンポーネントを解析、プロトコル、ホスト、パス、クエリパラメータを表示。",
       "seo_title": "無料URLパーサー",
-      "seo_description": "URLを無料でオンライン解析。",
+      "seo_description": "URLを無料でオンラインで解析・分析。プロトコル、ホスト、ポート、パス、クエリパラメータ、ハッシュを抽出。URLコンポーネントをエンコード・デコード。Web開発に必須。",
       "urlLabel": "URL",
       "protocol": "プロトコル",
       "hostname": "ホスト名",
@@ -4156,109 +4156,109 @@
       "name": "JSON to XML",
       "description": "JSONデータをXML形式に変換。",
       "seo_title": "無料JSON to XMLコンバーター",
-      "seo_description": "JSONをXMLに無料でオンライン変換。"
+      "seo_description": "JSONをXML形式に無料でオンライン変換。適切な要素のネストと属性でデータ構造を保持。API統合とデータ変換に最適。"
     },
     "text-wrapper": {
       "name": "テキスト折り返し",
       "description": "指定した幅でテキストを折り返し。",
       "seo_title": "無料テキスト折り返しツール",
-      "seo_description": "テキストを無料でオンライン折り返し。"
+      "seo_description": "テキストを指定幅に無料でオンラインで折り返し。単語境界または固定位置で改行を追加。コードコメント、メール、ドキュメントのフォーマットに最適。"
     },
     "csv-to-json": {
       "name": "CSV to JSON",
       "description": "CSVデータをJSON形式に変換、区切り文字をカスタマイズ可能。",
       "seo_title": "無料CSV to JSONコンバーター",
-      "seo_description": "CSVをJSONに無料でオンライン変換。"
+      "seo_description": "CSVをJSON形式に無料でオンライン変換。カスタム区切り文字とヘッダーでCSVを解析。ネストされたオブジェクトと配列に対応。データインポートとAPI統合に最適。"
     },
     "html-entity": {
       "name": "HTMLエンティティ変換",
       "description": "HTMLエンティティをエンコード・デコード、特殊文字と記号を含む。",
       "seo_title": "無料HTMLエンティティ変換ツール",
-      "seo_description": "HTMLエンティティを無料でオンライン変換。"
+      "seo_description": "HTMLエンティティを無料でオンライン変換。特殊文字をHTMLエンティティにエンコードし、エンティティを文字にデコード。XSS攻撃を防ぎ、HTMLを正しく表示。"
     },
     "number-formatter": {
       "name": "数値フォーマット",
       "description": "異なるロケールで数値をフォーマット、小数・通貨・パーセントスタイル対応。",
       "seo_title": "無料数値フォーマットツール",
-      "seo_description": "数値を無料でオンラインフォーマット。"
+      "seo_description": "異なるロケールで数値を無料でオンラインでフォーマット。千の位区切り、小数点以下、通貨記号、パーセント形式を追加。国際化に必須。"
     },
     "hmac-generator": {
       "name": "HMACジェネレーター",
       "description": "SHA-1、SHA-256、SHA-512アルゴリズムでHMAC署名を生成。",
       "seo_title": "無料オンラインHMACジェネレーター",
-      "seo_description": "HMAC署名を無料でオンライン生成。"
+      "seo_description": "MD5、SHA-1、SHA-256、SHA-512アルゴリズムでHMAC署名を無料でオンライン生成。APIとデータ整合性検証のための安全なメッセージ認証。"
     },
     "password-strength": {
       "name": "パスワード強度チェッカー",
       "description": "パスワードの長さ、文字タイプ、パターンをチェックして強度を分析。",
       "seo_title": "無料パスワード強度チェッカー",
-      "seo_description": "パスワード強度を無料でオンラインチェック。"
+      "seo_description": "パスワード強度を無料でオンラインチェック。エントロピースコア、クラック時間の見積もり、改善提案を含む詳細分析を取得。セキュリティに必須。"
     },
     "totp-generator": {
       "name": "TOTPジェネレーター",
       "description": "Google Authenticator互換の時間ベースワンタイムパスワードを生成。",
       "seo_title": "無料オンラインTOTPジェネレーター",
-      "seo_description": "TOTPワンタイムパスワードを無料でオンライン生成。"
+      "seo_description": "TOTPワンタイムパスワードを無料でオンライン生成。カスタムシークレットキーと時間間隔でGoogle Authenticator互換コードに対応。2FAテスト用。"
     },
     "user-agent-parser": {
       "name": "User Agentパーサー",
       "description": "User Agent文字列を解析してブラウザ、OS、デバイス情報を識別。",
       "seo_title": "無料オンラインUser Agentパーサー",
-      "seo_description": "User Agent文字列を無料でオンライン解析。"
+      "seo_description": "User Agent文字列を無料でオンライン解析。ブラウザ、OS、デバイスタイプ、バージョン情報を抽出。Web分析とデバイス検出に必須。"
     },
     "cidr-calculator": {
       "name": "CIDR計算機",
       "description": "IPアドレス範囲、サブネットマスク、使用可能ホスト数を計算。",
       "seo_title": "無料オンラインCIDR計算機",
-      "seo_description": "CIDRサブネット情報を無料でオンライン計算。"
+      "seo_description": "CIDRサブネット情報を無料でオンライン計算。ネットワークアドレス、ブロードキャストアドレス、ホスト範囲、サブネットマスクを取得。ネットワーク管理者に必須。"
     },
     "http-header-parser": {
       "name": "HTTPヘッダーパーサー",
       "description": "HTTPヘッダーを解析してフォーマット、各ヘッダーの説明を表示。",
       "seo_title": "無料オンラインHTTPヘッダーパーサー",
-      "seo_description": "HTTPヘッダーを無料でオンライン解析。"
+      "seo_description": "HTTPヘッダーを無料でオンライン解析。リクエストとレスポンスヘッダーを詳細な説明付きで分析。APIデバッグとWeb開発に必須。"
     },
     "percentage-calculator": {
       "name": "パーセント計算機",
       "description": "パーセント、パーセント変化、増減値を計算。",
       "seo_title": "無料オンラインパーセント計算機",
-      "seo_description": "パーセント、変化率、比率を無料でオンライン計算。"
+      "seo_description": "パーセンテージ、パーセント変化、比率を無料でオンライン計算。XがYの何パーセントか、パーセントで増減を計算。数学と金融に必須。"
     },
     "statistics-calculator": {
       "name": "統計計算機",
       "description": "平均値、中央値、最頻値、標準偏差、分散などを計算。",
       "seo_title": "無料オンライン統計計算機",
-      "seo_description": "平均値、中央値、最頻値、標準偏差などの統計指標を無料でオンライン計算。"
+      "seo_description": "統計指標を無料でオンライン計算。平均、中央値、最頻値、標準偏差、分散などを取得。データ分析と研究に必須。"
     },
     "scientific-calculator": {
       "name": "関数電卓",
       "description": "三角関数、対数、指数などの科学計算機能を搭載。",
       "seo_title": "無料オンライン関数電卓",
-      "seo_description": "sin、cos、tan、log、ln、sqrt などの関数を備えた無料オンライン関数電卓。"
+      "seo_description": "sin、cos、tan、log、ln、sqrt、累乗などの関数を備えた無料オンライン科学計算機。括弧と複雑な式に対応。学生とエンジニア向け。"
     },
     "text-sorter": {
       "name": "テキストソーター",
       "description": "テキスト行をアルファベット順、数値順、長さ順などでソート。",
       "seo_title": "無料オンラインテキストソーター",
-      "seo_description": "テキスト行をアルファベット順、数値順、自然順、長さ順で無料オンラインソート。"
+      "seo_description": "テキスト行をアルファベット順、数値順、自然順、長さ順で無料でオンラインソート。昇順・降順に対応。データ整理に必須。"
     },
     "text-extractor": {
       "name": "テキスト抽出ツール",
       "description": "テキストからメール、URL、電話番号、IPアドレスなどを抽出。",
       "seo_title": "無料オンラインテキスト抽出ツール",
-      "seo_description": "テキストからメール、URL、電話番号、IPアドレス、ハッシュタグ、メンションを無料でオンライン抽出。"
+      "seo_description": "テキストからメール、URL、電話番号、IPアドレス、ハッシュタグ、メンションを無料でオンライン抽出。ワンクリックで一括抽出。データマイニングに必須。"
     },
     "emoji-picker": {
       "name": "絵文字ピッカー",
       "description": "カテゴリ別に絵文字を閲覧、検索、ワンクリックでコピー。",
       "seo_title": "無料オンライン絵文字ピッカー",
-      "seo_description": "カテゴリ別に絵文字を閲覧・コピー。名前で検索してワンクリックでコピー。"
+      "seo_description": "カテゴリ別に絵文字を無料でオンライン閲覧・コピー。肌の色のバリエーション付きで名前で絵文字を検索。ワンクリックでクリップボードにコピー。SNSに最適。"
     },
     "json-to-sql": {
       "name": "JSON to SQL",
       "description": "JSON配列をSQL INSERT文に変換、CREATE TABLEサポート。",
       "seo_title": "無料オンラインJSON to SQLコンバーター",
-      "seo_description": "JSONデータをSQL INSERT文に無料でオンライン変換。MySQL、PostgreSQL、SQLite対応。",
+      "seo_description": "JSONデータをSQL INSERT文に無料でオンライン変換。MySQL、PostgreSQL、SQLite構文に対応。データベースインポート用の一括挿入生成。",
       "tableName": "テーブル名",
       "dialect": "方言",
       "includeCreate": "CREATE TABLEを含める",
@@ -4271,61 +4271,61 @@
       "name": "TOML/JSONコンバーター",
       "description": "TOMLとJSON形式を双方向に変換。",
       "seo_title": "無料オンラインTOML JSONコンバーター",
-      "seo_description": "TOMLをJSONに、またはJSONをTOMLに無料でオンライン変換。"
+      "seo_description": "TOMLをJSONに、またはJSONをTOMLに無料でオンライン変換。シンタックスハイライト付きで設定ファイルを検証・フォーマット。"
     },
     "json-to-java": {
       "name": "JSON to Java",
       "description": "JSONデータをJava POJOクラスに変換、Lombokサポート。",
       "seo_title": "無料オンラインJSON to Javaコンバーター",
-      "seo_description": "JSONをJavaクラスに無料でオンライン変換。Lombokアノテーション対応。"
+      "seo_description": "JSONをJavaクラスに無料でオンライン変換。Lombokアノテーション、getter/setter、builderパターンに対応。Java API開発に必須。"
     },
     "json-to-python": {
       "name": "JSON to Python",
       "description": "JSONデータをPython dataclass、Pydantic、TypedDictに変換。",
       "seo_title": "無料オンラインJSON to Pythonコンバーター",
-      "seo_description": "JSONをPython dataclassやPydanticモデルに無料でオンライン変換。"
+      "seo_description": "JSONをPython dataclassまたはPydanticモデルに無料でオンライン変換。バリデーション付きの型安全なPythonコードを生成。"
     },
     "json-to-kotlin": {
       "name": "JSON to Kotlin",
       "description": "JSONデータをKotlin data classに変換、シリアライゼーションサポート。",
       "seo_title": "無料オンラインJSON to Kotlinコンバーター",
-      "seo_description": "JSONをKotlin data classに無料でオンライン変換。Moshi、Gson、Kotlinx対応。"
+      "seo_description": "JSONをKotlinデータクラスに無料でオンライン変換。Moshi、Gson、Kotlinxシリアライゼーションアノテーションに対応。Android開発に必須。"
     },
     "image-compressor": {
       "name": "画像圧縮ツール",
       "description": "品質を維持しながら画像を圧縮してファイルサイズを削減。",
       "seo_title": "無料オンライン画像圧縮ツール",
-      "seo_description": "画像を無料でオンライン圧縮。品質調整可能でファイルサイズを削減。"
+      "seo_description": "画像を無料でオンライン圧縮。調整可能な品質でPNG、JPEG、WebPファイルサイズを削減。バッチ圧縮に対応。Web最適化に最適。"
     },
     "image-converter": {
       "name": "画像フォーマット変換",
       "description": "PNG、JPEG、WebP形式間で画像を変換。",
       "seo_title": "無料オンライン画像フォーマット変換",
-      "seo_description": "PNG、JPEG、WebP形式間で画像を無料でオンライン変換。"
+      "seo_description": "PNG、JPEG、WebP、GIF形式間で画像を無料でオンライン変換。品質設定付きのバッチ変換。Web最適化と互換性に最適。"
     },
     "favicon-generator": {
       "name": "Faviconジェネレーター",
       "description": "任意の画像から複数サイズのファビコンを生成。",
       "seo_title": "無料オンラインFaviconジェネレーター",
-      "seo_description": "複数サイズ（16x16、32x32、48x48、64x64）のファビコンを無料でオンライン生成。"
+      "seo_description": "複数サイズ（16x16、32x32、48x48、64x64）のファビコンを無料でオンライン生成。画像をアップロードしてファビコンパックをダウンロード。Webサイトブランディングに必須。"
     },
     "image-cropper": {
       "name": "画像トリミングツール",
       "description": "自由またはアスペクト比固定で画像をトリミング。",
       "seo_title": "無料オンライン画像トリミングツール",
-      "seo_description": "カスタムまたはプリセットのアスペクト比で画像を無料でオンライントリミング。"
+      "seo_description": "カスタムまたはプリセットのアスペクト比で画像を無料でオンラインクロップ。1:1、4:3、16:9、フリーフォームクロップに対応。クロップした画像を即座にダウンロード。"
     },
     "gitignore-generator": {
       "name": ".gitignoreジェネレーター",
       "description": "様々なプロジェクトタイプと言語用の.gitignoreファイルを生成。",
       "seo_title": "無料オンライン.gitignoreジェネレーター",
-      "seo_description": "Node.js、Python、Java、Go等の.gitignoreファイルを無料でオンライン生成。"
+      "seo_description": "Node.js、Python、Java、Go、Rubyなど用の.gitignoreファイルを無料でオンライン生成。テンプレートを選択してルールをカスタマイズ。"
     },
     "docker-compose-generator": {
       "name": "Docker Composeジェネレーター",
       "description": "MySQL、Redis、Nginx等の一般的なサービスを含むdocker-compose.ymlを生成。",
       "seo_title": "無料オンラインDocker Composeジェネレーター",
-      "seo_description": "MySQL、PostgreSQL、Redis、Nginx等を含むdocker-compose.ymlを無料でオンライン生成。",
+      "seo_description": "MySQL、PostgreSQL、Redis、Nginxなどのサービスを含むdocker-compose.ymlファイルを無料でオンライン生成。YAMLプレビューと検証付きビジュアルエディタ。",
       "version": "Composeバージョン",
       "databases": "データベース",
       "messaging": "メッセージングと検索",
@@ -4341,19 +4341,19 @@
       "name": "package.jsonジェネレーター",
       "description": "カスタム設定とスクリプトを含むpackage.jsonファイルを生成。",
       "seo_title": "無料オンラインpackage.jsonジェネレーター",
-      "seo_description": "カスタムスクリプト、依存関係、設定を含むpackage.jsonを無料でオンライン生成。"
+      "seo_description": "カスタムスクリプト、依存関係、devDependencies、設定を含むpackage.jsonファイルを無料でオンライン生成。npm検索付きビジュアルエディタ。"
     },
     "json-minifier": {
       "name": "JSON圧縮ツール",
       "description": "空白とフォーマットを削除してJSONを圧縮し、ファイルサイズを削減。",
       "seo_title": "無料オンラインJSON圧縮ツール",
-      "seo_description": "JSONデータを無料でオンライン圧縮。空白を削除してファイルサイズを削減。"
+      "seo_description": "JSONデータを無料でオンライン圧縮。空白とコメントを削除し、ファイルサイズを最大60%削減。API最適化に必須。"
     },
     "timezone-converter": {
       "name": "タイムゾーン変換",
       "description": "世界時計付きで異なるタイムゾーン間の時間を変換。",
       "seo_title": "無料オンラインタイムゾーン変換",
-      "seo_description": "異なるタイムゾーン間で時間を無料でオンライン変換。主要都市の世界時計付き。",
+      "seo_description": "タイムゾーン間の時間を無料でオンライン変換。主要都市、DST対応、会議プランナー付きの世界時計。グローバルチーム調整に必須。",
       "date": "日付",
       "time": "時間",
       "now": "現在",
@@ -4367,7 +4367,7 @@
       "name": "カラーコントラストチェッカー",
       "description": "WCAGアクセシビリティ基準に準拠したカラーコントラスト比をチェック。",
       "seo_title": "無料オンラインカラーコントラストチェッカー - WCAG",
-      "seo_description": "WCAG AAおよびAAAアクセシビリティ基準のカラーコントラスト比を無料でオンラインチェック。",
+      "seo_description": "WCAG AAおよびAAA準拠のカラーコントラスト比を無料でオンラインチェック。前景色と背景色をテストし、即座に合格/不合格結果を表示。",
       "swapColors": "色を交換",
       "sampleText": "素早い茶色の狐が怠け者の犬を飛び越える。",
       "smallText": "アクセシビリティテスト用の小さいテキストサンプル。",
@@ -4385,7 +4385,7 @@
       "name": "Markdownテーブルジェネレーター",
       "description": "ビジュアルエディタとライブプレビューでMarkdownテーブルを作成・編集。",
       "seo_title": "無料オンラインMarkdownテーブルジェネレーター",
-      "seo_description": "ビジュアルエディタでMarkdownテーブルを無料でオンライン生成。ライブプレビューと配置オプション付き。",
+      "seo_description": "ビジュアルエディタでMarkdownテーブルを無料でオンライン生成。ライブプレビュー、列配置、CSVインポート。GitHub READMEに最適。",
       "addRow": "+ 行を追加",
       "addColumn": "+ 列を追加",
       "loadSample": "サンプルを読み込み",
@@ -4405,7 +4405,7 @@
       "name": "Base58 エンコード/デコード",
       "description": "ビットコインや暗号通貨で使用されるBase58文字列をエンコード・デコード。",
       "seo_title": "無料オンラインBase58エンコーダー＆デコーダー",
-      "seo_description": "Base58文字列を無料でオンラインエンコード・デコード。ビットコインアドレスで使用。",
+      "seo_description": "Base58文字列を無料でオンラインでエンコード・デコード。ビットコインアドレス、IPFSハッシュ、暗号通貨ウォレットで使用。安全なブラウザベースツール。",
       "encodeBtn": "Base58にエンコード",
       "decodeBtn": "Base58からデコード",
       "placeholder": "エンコードするテキストまたはデコードするBase58を入力...",
@@ -4417,13 +4417,13 @@
       "name": "Metaタグジェネレーター",
       "description": "SEO metaタグ、Open Graph、Twitter Cardタグを生成。",
       "seo_title": "無料オンラインMetaタグジェネレーター - SEOツール",
-      "seo_description": "SEO metaタグ、Open Graph、Twitter Cardタグを無料でオンライン生成。"
+      "seo_description": "SEOメタタグ、Open Graph、Twitter Cardタグを無料でオンライン生成。検索結果とソーシャルメディア共有でのページ表示をプレビュー。"
     },
     "robots-txt-generator": {
       "name": "robots.txtジェネレーター",
       "description": "検索エンジンクローラーを制御するrobots.txtファイルを生成。",
       "seo_title": "無料オンラインrobots.txtジェネレーター",
-      "seo_description": "ウェブサイト用のrobots.txtファイルを無料でオンライン生成。",
+      "seo_description": "ウェブサイト用のrobots.txtファイルを無料でオンライン生成。allow/disallowルール、サイトマップリンク、クロール遅延設定で検索エンジンクローラーを制御。",
       "allowAll": "すべて許可",
       "blockAll": "すべてブロック",
       "standard": "標準",
@@ -4442,13 +4442,13 @@
       "name": "Open Graphプレビュー",
       "description": "ソーシャルメディアでシェアされた時のページ表示をプレビュー。",
       "seo_title": "無料オンラインOpen Graphプレビューツール",
-      "seo_description": "Facebook、Twitter、LinkedInのソーシャルシェアカードを無料でオンラインプレビュー。"
+      "seo_description": "Facebook、Twitter、LinkedInなどのソーシャルメディア共有カードを無料でオンラインプレビュー。公開前にOpen GraphとTwitter Cardメタタグをテスト。"
     },
     "css-grid-generator": {
       "name": "CSS Gridジェネレーター",
       "description": "ライブプレビュー付きのビジュアルCSS Gridレイアウトジェネレーター。",
       "seo_title": "無料オンラインCSS Gridジェネレーター",
-      "seo_description": "ライブプレビュー付きでCSS Gridレイアウトを無料でオンライン生成。",
+      "seo_description": "ライブプレビュー付きでCSS Gridレイアウトを無料でオンラインで視覚的に生成。行、列、ギャップ、配置をカスタマイズ。レスポンシブWebデザイン用にCSSコードをコピー。",
       "columns": "列数",
       "rows": "行数",
       "gap": "間隔 (px)",
@@ -4468,19 +4468,19 @@
       "name": "CSS Flexboxジェネレーター",
       "description": "ライブプレビュー付きのビジュアルCSS Flexboxレイアウトジェネレーター。",
       "seo_title": "無料オンラインCSS Flexboxジェネレーター",
-      "seo_description": "ライブプレビュー付きでCSS Flexboxレイアウトを無料でオンライン生成。"
+      "seo_description": "ライブプレビュー付きでCSS Flexboxレイアウトを無料でオンラインで視覚的に生成。方向、ラップ、justify、alignプロパティをカスタマイズ。CSSコードを即座にコピー。"
     },
     "jwt-generator": {
       "name": "JWTジェネレーター",
       "description": "カスタムペイロードと秘密鍵でJSON Web Tokenを生成。",
       "seo_title": "無料オンラインJWTジェネレーター",
-      "seo_description": "カスタムクレームとHMAC署名付きJWTトークンを無料でオンライン生成。"
+      "seo_description": "カスタムクレーム、有効期限、HMAC/RSA署名付きのJWTトークンを無料でオンライン生成。API認証と認可テスト用のアクセストークンを作成。"
     },
     "cron-explainer": {
       "name": "Cron式エクスプレイナー",
       "description": "cron式を人間が読める形式で説明し、次回実行時刻を表示。",
       "seo_title": "無料オンラインCron式エクスプレイナー",
-      "seo_description": "cron式を人間が読める説明に無料でオンライン変換。",
+      "seo_description": "人間が読める説明でcron式を無料でオンラインで理解。次回実行時間付きでcron構文を解析・検証。スケジューリング向け。",
       "expression": "Cron式",
       "minute": "分",
       "hour": "時",
@@ -4540,7 +4540,7 @@
       "name": "JSON to GraphQL",
       "description": "JSONオブジェクトをGraphQLスキーマタイプに変換。",
       "seo_title": "無料オンラインJSON to GraphQLコンバーター",
-      "seo_description": "JSONをGraphQLスキーマタイプに無料でオンライン変換。",
+      "seo_description": "JSONをGraphQLスキーマタイプに無料でオンライン変換。JSONデータから型定義、クエリ、ミューテーションを生成。GraphQL API開発に必須。",
       "typeName": "タイプ名",
       "loadSample": "サンプルを読み込み",
       "jsonInput": "JSON入力",
@@ -4556,7 +4556,7 @@
       "mongoQuery": "MongoDBクエリ",
       "examples": "例",
       "seo_title": "無料オンラインSQL to MongoDBコンバーター",
-      "seo_description": "SQLクエリをMongoDBクエリに無料でオンライン変換。",
+      "seo_description": "SQLクエリをMongoDBクエリに無料でオンライン変換。SELECT、INSERT、UPDATE、DELETEをfind、insertOne、updateOneに変換。",
       "exampleInsert": "INSERT",
       "exampleSelectProjection": "プロジェクション付きSELECT",
       "exampleDelete": "DELETE",
@@ -4571,7 +4571,7 @@
       "convert": "変換",
       "copy": "コピー",
       "seo_title": "無料オンラインJSON to C#コンバーター",
-      "seo_description": "JSONをC#クラスに無料でオンライン変換。",
+      "seo_description": "JSONをプロパティ、コンストラクタ、JSONシリアライゼーション属性付きのC#クラスに無料でオンライン変換。null許容型とネストされたクラスに対応。",
       "className": "クラス名",
       "useProperties": "プロパティを使用",
       "useNullable": "Nullable型を使用",
@@ -4593,7 +4593,7 @@
       "outputPlaceholder": "Rust構造体がここに表示されます...",
       "errorInvalidJson": "// エラー：無効なJSON入力",
       "seo_title": "無料オンラインJSON to Rustコンバーター",
-      "seo_description": "JSONをRust構造体に無料でオンライン変換。"
+      "seo_description": "JSONをserde deriveマクロ付きのRust構造体に無料でオンライン変換。null許容フィールド用のOption型で型安全なコードを生成。"
     },
     "json-to-swift": {
       "name": "JSON to Swift",
@@ -4608,7 +4608,7 @@
       "outputPlaceholder": "Swift構造体がここに表示されます...",
       "errorInvalidJson": "// エラー：無効なJSON入力",
       "seo_title": "無料オンラインJSON to Swiftコンバーター",
-      "seo_description": "JSONをSwift構造体に無料でオンライン変換。"
+      "seo_description": "JSONをCodableプロトコル準拠のSwift構造体に無料でオンライン変換。API統合用のCodingKeys付き型安全モデルを生成。"
     },
     "css-minifier": {
       "name": "CSS圧縮",
@@ -4618,7 +4618,7 @@
       "minify": "圧縮",
       "copy": "コピー",
       "seo_title": "無料オンラインCSS圧縮ツール",
-      "seo_description": "CSSコードを無料でオンライン圧縮・最小化。"
+      "seo_description": "CSSコードを無料でオンライン圧縮。空白、コメントを削除し、セレクタを最適化。ファイルサイズを削減し、ページ読み込み速度を向上。"
     },
     "js-minifier": {
       "name": "JavaScript圧縮",
@@ -4628,7 +4628,7 @@
       "minify": "圧縮",
       "copy": "コピー",
       "seo_title": "無料オンラインJavaScript圧縮ツール",
-      "seo_description": "JavaScriptコードを無料でオンライン圧縮・最小化。",
+      "seo_description": "JavaScriptコードを無料でオンライン圧縮。空白、コメントを削除し、変数名を短縮。ファイルサイズを削減し、読み込みを高速化。",
       "inputPlaceholder": "JavaScriptコードを入力...",
       "outputPlaceholder": "圧縮されたコードがここに表示されます..."
     },
@@ -4638,7 +4638,7 @@
       "output": "CSS出力",
       "copy": "CSSをコピー",
       "seo_title": "無料オンラインCSSボックスシャドウ生成ツール",
-      "seo_description": "ビジュアルエディタでCSS box-shadowを無料でオンライン生成。",
+      "seo_description": "ビジュアルエディタでCSS box-shadowを無料でオンライン生成。オフセット、ブラー、スプレッド、色をカスタマイズ。ワンクリックでCSSコードをコピー。",
       "shadowLayers": "シャドウレイヤー",
       "addLayer": "+ レイヤー追加",
       "layer": "レイヤー {index}",
@@ -4660,7 +4660,7 @@
       "output": "CSS出力",
       "copy": "CSSをコピー",
       "seo_title": "無料オンラインCSS角丸生成ツール",
-      "seo_description": "ビジュアルエディタでCSS border-radiusを無料でオンライン生成。",
+      "seo_description": "ビジュアルエディタでCSS border-radiusを無料でオンライン生成。各コーナーにカスタム値で角丸を作成。CSSコードを即座にコピー。",
       "cornerRadius": "角の半径",
       "linkAll": "すべてリンク",
       "topLeft": "左上",
@@ -4685,7 +4685,7 @@
       "convert": "変換",
       "copy": "コピー",
       "seo_title": "無料オンラインテキストASCIIアート変換ツール",
-      "seo_description": "テキストをASCIIアートに無料でオンライン変換。",
+      "seo_description": "テキストをASCIIアートに無料でオンライン変換。複数のフォントスタイルと文字セットが利用可能。ターミナルバナーやクリエイティブプロジェクトに最適。",
       "placeholder": "テキストを入力 (A-Z, 0-9, スペース)",
       "character": "文字",
       "charBlock": "█ ブロック",
@@ -4702,7 +4702,7 @@
       "output": "CSS出力",
       "copy": "コピー",
       "seo_title": "無料オンラインカラーシェード生成ツール",
-      "seo_description": "任意の色からシェードとティントを無料でオンライン生成。",
+      "seo_description": "任意の色から色調とティントを無料でオンライン生成。カスタマイズ可能なステップで明るい・暗いバリエーションを作成。CSSやデザインツールにエクスポート。",
       "baseColor": "ベースカラー",
       "numberOfShades": "シェード数: {count}",
       "copyCssVariables": "CSS変数をコピー"
@@ -4714,7 +4714,7 @@
       "output": "結果",
       "copy": "コピー",
       "seo_title": "無料オンラインJSONフラット化ツール",
-      "seo_description": "ネストされたJSONオブジェクトを無料でオンラインフラット化。",
+      "seo_description": "ネストされたJSONオブジェクトを無料でオンラインでフラット化または展開。深い構造をドット表記に変換、またはその逆。データ変換とAPIに必須。",
       "mode": "モード",
       "flatten": "フラット化",
       "unflatten": "復元",
@@ -4735,7 +4735,7 @@
       "inputPlaceholderDecode": "デコードするBase85を入力...",
       "outputPlaceholder": "結果がここに表示されます...",
       "seo_title": "無料オンラインBase85エンコーダー/デコーダー",
-      "seo_description": "Base85データを無料でオンラインでエンコード・デコード。"
+      "seo_description": "Base85 (Ascii85) データを無料でオンラインでエンコード・デコード。PDFファイル、PostScript、データ圧縮で使用。安全なブラウザベースツール。"
     },
     "html-to-markdown": {
       "name": "HTML to Markdown",
@@ -4745,14 +4745,14 @@
       "convert": "変換",
       "copy": "コピー",
       "seo_title": "無料オンラインHTML to Markdownコンバーター",
-      "seo_description": "HTMLをMarkdown形式に無料でオンライン変換。"
+      "seo_description": "HTMLをMarkdown形式に無料でオンライン変換。フォーマット、リンク、画像、コードブロックを保持。Markdownベースシステムへのコンテンツ移行に最適。"
     },
     "regex-generator": {
       "name": "正規表現生成",
       "description": "一般的なパターンで正規表現を生成・テスト。",
       "copy": "パターンをコピー",
       "seo_title": "無料オンライン正規表現生成ツール",
-      "seo_description": "正規表現を無料でオンライン生成・テスト。",
+      "seo_description": "正規表現を無料でオンラインで生成・テスト。ビジュアルヘルパーでパターンを構築し、サンプルテキストに対してテスト。パターンマッチングタスクに必須。",
       "commonPatterns": "一般的なパターン",
       "customPattern": "カスタムパターン",
       "testString": "テスト文字列",
@@ -4796,7 +4796,7 @@
       "input": "入力テキスト",
       "copy": "結果をコピー",
       "seo_title": "無料オンライン短縮URLプレビューツール",
-      "seo_description": "短縮URLを無料でオンラインプレビュー・分析。",
+      "seo_description": "短縮URLを無料でオンラインでプレビュー・分析。bit.ly、tinyurlなどの短縮リンクを展開して宛先を確認。クリック前に安全性をチェック。",
       "note": "注意：ブラウザのセキュリティ制限により、実際のURL展開にはサーバーサイドリクエストが必要です。このツールは短縮URLを識別し、そのドメインを表示します。",
       "placeholder": "短縮URLを含むテキストを貼り付け (bit.ly, tinyurl.com, t.co など)...",
       "analyzing": "分析中...",
@@ -4813,7 +4813,7 @@
       "description": "JSONデータをツリー構造で表示・探索。",
       "input": "JSON入力",
       "seo_title": "無料オンラインJSONビューアー",
-      "seo_description": "JSONデータをツリー構造で無料でオンライン表示・探索。",
+      "seo_description": "JSONデータをツリー構造で無料でオンライン表示・探索。ノードの展開・折りたたみ、値の検索、パスのコピー。APIデバッグに必須。",
       "inputPlaceholder": "JSONをここに貼り付け...",
       "parseView": "解析して表示",
       "expandAll": "すべて展開",
@@ -4828,14 +4828,14 @@
       "convert": "変換",
       "copy": "コピー",
       "seo_title": "無料オンラインXML to JSONコンバーター",
-      "seo_description": "XMLをJSON形式に無料でオンライン変換。"
+      "seo_description": "XMLをJSON形式に無料でオンライン変換。属性、名前空間、ネストされた要素を保持。API統合とデータ変換に最適。"
     },
     "ip-address-generator": {
       "name": "IPアドレス生成",
       "description": "ランダムなIPアドレスを生成（IPv4、IPv6、プライベート、パブリック）。",
       "copy": "すべてコピー",
       "seo_title": "無料オンラインIPアドレス生成ツール",
-      "seo_description": "ランダムなIPアドレスを無料でオンライン生成。",
+      "seo_description": "ランダムなIPアドレスを無料でオンライン生成。カスタム範囲でIPv4とIPv6形式に対応。テスト、開発、ネットワークシミュレーションに最適。",
       "ipType": "IPタイプ",
       "ipv4Random": "IPv4（ランダム）",
       "ipv6": "IPv6",
@@ -4851,7 +4851,7 @@
       "output": "CSS出力",
       "copy": "CSSをコピー",
       "seo_title": "無料オンラインCSSグラデーションテキスト生成ツール",
-      "seo_description": "CSSでグラデーションテキスト効果を無料でオンライン作成。",
+      "seo_description": "CSSでグラデーションテキスト効果を無料でオンライン作成。ライブプレビュー付きでテキストに線形・放射状グラデーションを適用。CSSコードをコピー。",
       "text": "テキスト",
       "color1": "色 1",
       "color2": "色 2",
@@ -4873,7 +4873,7 @@
       "output": "サイトマップ出力",
       "copy": "コピー",
       "seo_title": "無料オンラインサイトマップ生成ツール",
-      "seo_description": "ウェブサイト用のXMLサイトマップを無料でオンライン生成。",
+      "seo_description": "ウェブサイト用のXMLサイトマップを無料でオンライン生成。優先度、更新頻度、最終更新日付きでURLを追加。SEOと検索インデックスに必須。",
       "baseUrl": "ベースURL",
       "urls": "URLリスト",
       "addUrl": "+ URLを追加",
@@ -4893,7 +4893,7 @@
       "outputPlaceholder": "PHP配列がここに表示されます...",
       "errorInvalidJson": "// エラー：無効なJSON入力",
       "seo_title": "無料オンラインJSON to PHPコンバーター",
-      "seo_description": "JSONをPHP配列構文に無料でオンライン変換。"
+      "seo_description": "JSONをPHP配列構文に無料でオンライン変換。適切なエスケープとフォーマットで連想配列を生成。PHPバックエンド開発に必須。"
     },
     "css-filter-generator": {
       "name": "CSSフィルター生成",
@@ -4901,7 +4901,7 @@
       "output": "CSS出力",
       "copy": "CSSをコピー",
       "seo_title": "無料オンラインCSSフィルター生成ツール",
-      "seo_description": "ビジュアルエディタでCSSフィルター効果を無料でオンライン生成。",
+      "seo_description": "ビジュアルエディタでCSSフィルター効果を無料でオンライン生成。ブラー、明るさ、コントラスト、グレースケールなどを適用。CSSコードをコピー。",
       "reset": "リセット",
       "uploadImage": "画像をアップロード",
       "blur": "ぼかし",
@@ -4924,7 +4924,7 @@
       "name": "テキスト差分とパッチ",
       "description": "テキストパッチを作成・適用。",
       "seo_title": "無料オンラインテキスト差分・パッチツール",
-      "seo_description": "テキストパッチを無料でオンライン作成・適用。",
+      "seo_description": "テキストパッチを無料でオンラインで作成・適用。統一diff形式のパッチを生成し、テキストに適用。バージョン管理とコードレビューに必須。",
       "createPatch": "パッチを作成",
       "applyPatch": "パッチを適用",
       "originalText": "元のテキスト",
@@ -4940,7 +4940,7 @@
       "description": "テキストとファイルのエンコーディングを検出。",
       "input": "入力",
       "seo_title": "無料オンラインエンコーディング検出ツール",
-      "seo_description": "テキストとファイルのエンコーディングを無料でオンライン検出。",
+      "seo_description": "テキストとファイルのエンコーディングを無料でオンライン検出。UTF-8、UTF-16、ISO-8859などの文字エンコーディングを識別。国際テキスト処理に必須。",
       "placeholder": "テキストを貼り付けてエンコーディングを検出...",
       "analyzeText": "テキストを分析",
       "uploadFile": "ファイルをアップロード",
@@ -4953,67 +4953,67 @@
       "name": "CSS クリップパス生成",
       "description": "ビジュアルエディタでCSS clip-path形状を作成。",
       "seo_title": "無料オンラインCSS クリップパス生成ツール",
-      "seo_description": "ビジュアルエディタでCSS clip-path形状を無料でオンライン作成。"
+      "seo_description": "ビジュアルエディタでCSS clip-path形状を無料でオンライン作成。ポリゴン、円、楕円、カスタムパスをデザイン。クリエイティブレイアウト用にCSSコードをコピー。"
     },
     "uuid-validator": {
       "name": "UUIDバリデーター",
       "description": "UUID文字列を検証・分析。",
       "seo_title": "無料オンラインUUIDバリデーター",
-      "seo_description": "UUID文字列を無料でオンライン検証・分析。"
+      "seo_description": "UUID文字列を無料でオンラインで検証・分析。UUIDのフォーマット、バージョン、バリアントをチェック。UUID v1とv7からタイムスタンプを抽出。デバッグに必須。"
     },
     "text-hash-comparator": {
       "name": "テキストハッシュ比較",
       "description": "ハッシュ値でテキストを比較。",
       "seo_title": "無料オンラインテキストハッシュ比較ツール",
-      "seo_description": "ハッシュ値でテキストを無料でオンライン比較。"
+      "seo_description": "ハッシュ値でテキストを無料でオンライン比較。MD5、SHA-1、SHA-256ハッシュを並べて生成・比較。ファイル整合性検証に必須。"
     },
     "json-path-finder": {
       "name": "JSONパスファインダー",
       "description": "JSONデータからパスを検索・コピー。",
       "seo_title": "無料オンラインJSONパスファインダー",
-      "seo_description": "JSONデータからパスを無料でオンライン検索・コピー。"
+      "seo_description": "データからJSONパスを無料でオンラインで検索・コピー。任意の値をクリックしてJSONPath式を取得。API開発とデータ抽出に必須。"
     },
     "canvas-drawing": {
       "name": "キャンバス描画",
       "description": "ブラシと消しゴムのシンプルな描画ツール。",
       "seo_title": "無料オンラインキャンバス描画ツール",
-      "seo_description": "ブラシと消しゴムのシンプルな描画ツールを無料でオンライン使用。"
+      "seo_description": "ブラシと消しゴム付きのシンプルな描画ツールを無料でオンライン使用。ブラシサイズ、色、不透明度をカスタマイズ。PNGでダウンロード。"
     },
     "json-escape": {
       "name": "JSONエスケープ/アンエスケープ",
       "description": "JSON文字列をエスケープ・アンエスケープ。",
       "seo_title": "無料オンラインJSONエスケープ/アンエスケープツール",
-      "seo_description": "JSON文字列を無料でオンラインエスケープ・アンエスケープ。"
+      "seo_description": "JSON文字列を無料でオンラインでエスケープ・アンエスケープ。特殊文字、引用符、制御文字を処理。文字列へのJSON埋め込みに必須。"
     },
     "css-animation-generator": {
       "name": "CSSアニメーション生成",
       "description": "ビジュアルエディタでCSSアニメーションを作成。",
       "seo_title": "無料オンラインCSSアニメーション生成ツール",
-      "seo_description": "ビジュアルエディタでCSSアニメーションを無料でオンライン作成。"
+      "seo_description": "ビジュアルエディタでCSSアニメーションを無料でオンライン作成。キーフレーム、タイミング関数、アニメーションプロパティをデザイン。CSSコードをコピー。"
     },
     "text-case-counter": {
       "name": "テキスト大文字小文字カウンター",
       "description": "大文字、小文字、その他の文字タイプをカウント。",
       "seo_title": "無料オンラインテキスト大文字小文字カウンター",
-      "seo_description": "大文字、小文字、その他の文字タイプを無料でオンラインカウント。"
+      "seo_description": "大文字、小文字、数字、スペース、特殊文字を無料でオンラインカウント。詳細な文字タイプ統計を取得。テキスト分析に必須。"
     },
     "dns-lookup": {
       "name": "DNS検索",
       "description": "任意のドメインのDNSレコードを検索。",
       "seo_title": "無料オンラインDNS検索ツール",
-      "seo_description": "任意のドメインのDNSレコードを無料でオンライン検索。"
+      "seo_description": "任意のドメインのDNSレコードを無料でオンライン検索。A、AAAA、MX、TXT、NS、CNAME、SOAレコードをクエリ。ドメイントラブルシューティングに必須。"
     },
     "image-resizer": {
       "name": "画像リサイズ",
       "description": "画像をカスタムサイズにリサイズ。",
       "seo_title": "無料オンライン画像リサイズツール",
-      "seo_description": "画像をカスタムサイズに無料でオンラインリサイズ。"
+      "seo_description": "画像をカスタムサイズに無料でオンラインリサイズ。アスペクト比を維持または正確な幅と高さを設定。PNG、JPEG、WebP形式に対応。即座にダウンロード。"
     },
     "ssl-checker": {
       "name": "SSL証明書チェッカー",
       "description": "任意のドメインのSSL証明書の有効性と詳細を確認。",
       "seo_title": "無料オンラインSSL証明書チェッカー",
-      "seo_description": "SSL証明書の有効性と有効期限を無料でオンラインチェック。",
+      "seo_description": "SSL証明書の有効性と有効期限を無料でオンラインチェック。証明書チェーン、発行者、セキュリティ詳細を検証。Webサイトセキュリティに必須。",
       "checking": "確認中...",
       "check": "SSLを確認",
       "valid": "SSL証明書は有効です",
@@ -5032,7 +5032,7 @@
       "name": "WHOIS検索",
       "description": "ドメイン登録情報を検索。",
       "seo_title": "無料オンラインWHOIS検索ツール",
-      "seo_description": "ドメイン登録と所有権情報を無料でオンライン検索。",
+      "seo_description": "ドメイン登録と所有権情報を無料でオンライン検索。レジストラ、作成日、有効期限、ネームサーバーを取得。ドメインリサーチツール。",
       "loading": "検索中...",
       "lookup": "WHOIS検索",
       "registrar": "レジストラ",
@@ -5048,7 +5048,7 @@
       "name": "WebSocketテスター",
       "description": "WebSocket接続をテストし、メッセージを送受信。",
       "seo_title": "無料オンラインWebSocketテスター",
-      "seo_description": "WebSocket接続をテストし、メッセージを無料でオンライン送受信。",
+      "seo_description": "WebSocket接続をテストし、メッセージを無料でオンラインで送受信。カスタムヘッダーとプロトコルに対応。リアルタイムアプリ開発に必須。",
       "serverUrl": "WebSocketサーバーURL",
       "connect": "接続",
       "disconnect": "切断",
@@ -5074,7 +5074,7 @@
       "name": "ポートスキャナー",
       "description": "一般的なネットワークポートとサービスのリファレンスガイド。",
       "seo_title": "無料オンラインポートスキャナーとリファレンス",
-      "seo_description": "一般的なネットワークポートとそのサービスを無料でオンライン検索。",
+      "seo_description": "一般的なネットワークポートとそのサービスを無料でオンライン検索。ポート番号またはサービス名で検索。管理者と開発者のリファレンス。",
       "note": "このツールは一般的なネットワークポートとそのサービスに関する情報を提供します。セキュリティ上の理由から、実際のポートスキャンにはサーバーサイドの実装が必要です。",
       "searchPorts": "ポートを検索",
       "searchPlaceholder": "ポート番号またはサービスで検索...",
@@ -5117,25 +5117,25 @@
       "name": "ポートリファレンス",
       "description": "一般的なネットワークポートとサービスのリファレンスガイド。",
       "seo_title": "ネットワークポートリファレンスガイド",
-      "seo_description": "一般的なネットワークポートとサービスの完全リファレンスガイド。"
+      "seo_description": "一般的なネットワークポートとサービスの完全リファレンスガイド。ウェルノウンポート(0-1023)、登録ポート、動的ポートを閲覧。ネットワーキングに必須。"
     },
     "privacy-policy-generator": {
       "name": "プライバシーポリシー生成",
       "description": "ウェブサイト用のプライバシーポリシーを生成。",
       "seo_title": "無料オンラインプライバシーポリシー生成ツール",
-      "seo_description": "ウェブサイト用のカスタムプライバシーポリシーを無料でオンライン生成。"
+      "seo_description": "ウェブサイト用のカスタマイズされたプライバシーポリシーを無料でオンライン生成。データ収集、Cookie、ユーザー権利をカバー。GDPR準拠テンプレート。"
     },
     "terms-generator": {
       "name": "利用規約生成",
       "description": "ウェブサイト用の利用規約を生成。",
       "seo_title": "無料オンライン利用規約生成ツール",
-      "seo_description": "ウェブサイト用のカスタム利用規約を無料でオンライン生成。"
+      "seo_description": "ウェブサイト用のカスタマイズされた利用規約を無料でオンライン生成。ユーザー契約、責任、知的財産、紛争解決をカバー。"
     },
     "cookie-policy-generator": {
       "name": "Cookieポリシー生成",
       "description": "ウェブサイト用のCookieポリシーを生成。",
       "seo_title": "無料オンラインCookieポリシー生成ツール",
-      "seo_description": "ウェブサイト用のカスタムCookieポリシーを無料でオンライン生成。",
+      "seo_description": "ウェブサイト用のカスタマイズされたCookieポリシーを無料でオンライン生成。Cookieの種類、目的、同意オプションを説明。GDPR準拠。",
       "websiteName": "ウェブサイト名",
       "websiteUrl": "ウェブサイトURL",
       "contactEmail": "連絡先メール",
@@ -5159,19 +5159,19 @@
       "convert": "TSVに変換",
       "copy": "出力をコピー",
       "seo_title": "無料オンラインJSON→TSV変換ツール",
-      "seo_description": "JSON配列をTSV形式に無料でオンライン変換。"
+      "seo_description": "JSON配列をTSV（タブ区切り値）形式に無料でオンライン変換。ネストされたオブジェクトと配列を処理。スプレッドシートインポートとデータ分析に最適。"
     },
     "csv-viewer": {
       "name": "CSVビューアー",
       "description": "CSVデータをテーブル形式で表示・解析。",
       "seo_title": "無料オンラインCSVビューアー",
-      "seo_description": "CSVデータをテーブル形式で無料でオンライン表示・解析。"
+      "seo_description": "CSVデータをテーブル形式で無料でオンライン表示・解析。カスタム区切り文字、ヘッダー、大きなファイルに対応。データを簡単にソート、フィルター、検索。"
     },
     "htaccess-generator": {
       "name": ".htaccess生成",
       "description": "Apacheサーバー用の.htaccess設定を生成。",
       "seo_title": "無料オンライン.htaccess生成ツール",
-      "seo_description": "Apacheサーバー用の.htaccess設定を無料でオンライン生成。",
+      "seo_description": "Apacheサーバー用の.htaccess設定を無料でオンライン生成。リダイレクト、リライト、セキュリティルール、キャッシュディレクティブを作成。",
       "urlSettings": "URLとSSL設定",
       "forceHttps": "HTTPSを強制",
       "forceWww": "WWWプレフィックスを強制",
@@ -5192,7 +5192,7 @@
       "name": "Nginx設定生成",
       "description": "Nginxサーバー設定ファイルを生成。",
       "seo_title": "無料オンラインNginx設定生成ツール",
-      "seo_description": "Nginxサーバー設定ファイルを無料でオンライン生成。",
+      "seo_description": "Nginxサーバー設定ファイルを無料でオンライン生成。サーバーブロック、SSL設定、プロキシルール、キャッシュを作成。モダンWebデプロイメントに必須。",
       "serverName": "サーバー名",
       "rootPath": "ルートパス",
       "proxyPass": "プロキシパス（オプション）",
@@ -5209,7 +5209,7 @@
       "name": "cURL変換",
       "description": "cURLコマンドを各種プログラミング言語のコードに変換。",
       "seo_title": "無料オンラインcURL→コード変換ツール",
-      "seo_description": "cURLコマンドをJavaScript、Python、PHP、Go、Javaコードに無料でオンライン変換。",
+      "seo_description": "cURLコマンドをJavaScript、Python、PHP、Go、Javaコードに無料でオンライン変換。ヘッダー、ボディ、認証を解析。API統合に必須。",
       "curlCommand": "cURLコマンド",
       "placeholder": "cURLコマンドを貼り付け...",
       "outputLanguage": "出力言語",
@@ -5226,7 +5226,7 @@
       "name": "読書時間計算機",
       "description": "テキストや記事の読書時間を計算します。",
       "seo_title": "無料オンライン読書時間計算機",
-      "seo_description": "あらゆるテキストの読書時間と文字数を無料でオンライン計算。",
+      "seo_description": "任意のテキストの読書時間と単語数を無料でオンライン計算。平均、遅い、速い読者の見積もりを取得。コンテンツクリエイターに最適。",
       "pasteText": "テキストを貼り付け",
       "placeholder": "読書時間を計算したい記事、ブログ投稿、またはテキストをここに貼り付け...",
       "readingSpeed": "読書速度：",
@@ -5252,25 +5252,25 @@
       "name": "Open Graph ジェネレーター",
       "description": "ソーシャルメディア共有用のOpen Graphメタタグを生成します。",
       "seo_title": "無料オンラインOpen Graphジェネレーター",
-      "seo_description": "FacebookやLinkedInなどのソーシャルプラットフォーム用のOpen Graphメタタグをオンラインで無料で生成します。"
+      "seo_description": "Facebook、LinkedInなどのソーシャルプラットフォーム用のOpen Graphメタタグを無料でオンライン生成。ソーシャルメディアで共有時のコンテンツ表示をプレビュー。"
     },
     "twitter-card-generator": {
       "name": "Twitterカードジェネレーター",
       "description": "ツイートプレビューを改善するためのTwitterカードメタタグを生成します。",
       "seo_title": "無料オンラインTwitterカードジェネレーター",
-      "seo_description": "リッチなツイートプレビュー用のTwitterカードメタタグをオンラインで無料で生成します。"
+      "seo_description": "リッチなツイートプレビュー用のTwitter Cardメタタグを無料でオンライン生成。サマリー、大きな画像、プレイヤーカードに対応。"
     },
     "mime-type-lookup": {
       "name": "MIMEタイプ検索",
       "description": "拡張子または説明からMIMEタイプを検索します。",
       "seo_title": "無料オンラインMIMEタイプ検索ツール",
-      "seo_description": "ファイル拡張子または説明からMIMEタイプをオンラインで無料で検索します。"
+      "seo_description": "ファイル拡張子または説明でMIMEタイプを無料でオンライン検索。Web開発用のコンテンツタイプの完全なデータベース。HTTPヘッダーに必須。"
     },
     "http-status-codes": {
       "name": "HTTPステータスコード",
       "description": "すべてのHTTPステータスコードのリファレンスガイド。",
       "seo_title": "HTTPステータスコードリファレンス",
-      "seo_description": "すべてのHTTPステータスコードとその意味の完全なリファレンスガイド。",
+      "seo_description": "すべてのHTTPステータスコードとその意味の完全リファレンスガイド。1xx、2xx、3xx、4xx、5xxコードの説明を閲覧。開発者必須。",
       "searchPlaceholder": "ステータスコードを検索...",
       "allCategories": "すべてのカテゴリ",
       "informational": "1xx 情報",
@@ -5284,7 +5284,7 @@
       "name": "文字列難読化",
       "description": "様々なエンコード方法で文字列を難読化。",
       "seo_title": "無料オンライン文字列難読化ツール",
-      "seo_description": "Base64、Hex、HTMLエンティティ、URLエンコード、ROT13を使用してオンラインで無料で文字列を難読化。",
+      "seo_description": "Base64、Hex、HTMLエンティティ、URLエンコーディング、ROT13を使用して文字列を無料でオンライン難読化。保護のための複数のエンコーディングレイヤー。",
       "input": "入力文字列",
       "inputPlaceholder": "難読化するテキストを入力...",
       "obfuscate": "難読化",
@@ -5302,7 +5302,7 @@
       "name": "テキストクリーナー",
       "description": "スペースや空行などを削除してテキストを整理・整形します。",
       "seo_title": "無料オンラインテキストクリーナー",
-      "seo_description": "余分なスペース、空行、HTMLタグなどを削除してテキストをオンラインで無料で整理・整形します。",
+      "seo_description": "余分なスペース、空行、HTMLタグなどを削除してテキストを無料でオンラインでクリーン・フォーマット。空白を正規化し、一般的なフォーマット問題を修正。",
       "input": "入力テキスト",
       "clear": "クリア",
       "cleanedText": "クリーン済みテキスト",
@@ -5324,7 +5324,7 @@
       "name": "リストランダマイザー",
       "description": "リストの項目をシャッフルしてランダム化します。",
       "seo_title": "無料オンラインリストランダマイザー",
-      "seo_description": "項目や名前のリストをオンラインで無料でシャッフルしてランダム化します。",
+      "seo_description": "アイテムや名前のリストを無料でオンラインでシャッフル・ランダム化。ランダム選択、抽選、公平な順序付けに最適。安全なランダム化。",
       "originalList": "元のリスト",
       "randomizedList": "ランダム化されたリスト",
       "clear": "クリア",
@@ -5336,13 +5336,13 @@
       "name": "SQLジェネレーター",
       "description": "一般的な操作用のSQLクエリを生成します。",
       "seo_title": "無料オンラインSQLジェネレーター",
-      "seo_description": "SELECT、INSERT、UPDATE、DELETE、CREATE TABLE操作用のSQLクエリをオンラインで無料で生成します。"
+      "seo_description": "SELECT、INSERT、UPDATE、DELETE、CREATE TABLEのSQLクエリを無料でオンライン生成。シンタックスハイライト付きビジュアルクエリビルダー。"
     },
     "htaccess-to-nginx": {
       "name": "htaccess から Nginx 変換",
       "description": "Apache .htaccess ルールを Nginx 設定に変換します。",
       "seo_title": "無料オンライン htaccess から Nginx 変換ツール",
-      "seo_description": "Apache htaccess ルールを Nginx 設定に無料でオンライン変換。",
+      "seo_description": "Apache htaccessルールをNginx設定に無料でオンライン変換。リダイレクト、リライト、セキュリティルールを変換。サーバー移行とデプロイメントに必須。",
       "htaccessInput": ".htaccess 入力",
       "nginxOutput": "Nginx 出力",
       "loadSample": "サンプルを読み込む",
@@ -5354,7 +5354,7 @@
       "name": "JavaScript 難読化",
       "description": "JavaScript コードを難読化してソースを保護します。",
       "seo_title": "無料オンライン JavaScript 難読化ツール",
-      "seo_description": "JavaScript コードを無料でオンライン難読化・保護。",
+      "seo_description": "JavaScriptコードを無料でオンラインで難読化・保護。変数名の変更、文字列のエンコード、デッドコードの追加。知的財産を保護。",
       "inputCode": "JavaScript 入力",
       "obfuscatedCode": "難読化された出力",
       "loadSample": "サンプルを読み込む",
@@ -5372,7 +5372,7 @@
       "name": "画像ウォーターマーク",
       "description": "画像にテキストウォーターマークを追加します。",
       "seo_title": "無料オンライン画像ウォーターマークツール",
-      "seo_description": "画像にテキストウォーターマークを無料でオンライン追加。",
+      "seo_description": "画像にテキスト透かしを無料でオンラインで追加。フォント、サイズ、色、不透明度、位置をカスタマイズ。写真やアートワークを不正使用から保護。",
       "uploadImage": "画像をアップロード",
       "watermarkText": "ウォーターマークテキスト",
       "textPlaceholder": "ウォーターマークテキストを入力...",
@@ -5393,7 +5393,7 @@
       "name": "SVG から画像変換",
       "description": "SVG ファイルを PNG、JPEG、WebP 画像に変換します。",
       "seo_title": "無料オンライン SVG から画像変換ツール",
-      "seo_description": "SVG を PNG、JPEG、WebP に無料でオンライン変換。",
+      "seo_description": "SVGをPNG、JPEG、WebPに無料でオンライン変換。カスタムサイズと背景色を設定。Webおよび印刷用のベクターグラフィックスのエクスポートに最適。",
       "uploadSvg": "SVG ファイルをアップロード",
       "svgCode": "SVG コード",
       "loadSample": "サンプルを読み込む",
@@ -5409,7 +5409,7 @@
       "name": "16進数 Base64 変換",
       "description": "16進数と Base64 エンコード間で変換します。",
       "seo_title": "無料オンライン 16進数 Base64 変換ツール",
-      "seo_description": "16進数と Base64 間を無料でオンライン変換。",
+      "seo_description": "HexとBase64を無料でオンライン変換。16進数をBase64にエンコード、またはBase64を16進数にデコード。暗号化とデータエンコーディングタスクに必須。",
       "hexToBase64": "16進数 → Base64",
       "base64ToHex": "Base64 → 16進数",
       "swap": "入れ替え",
@@ -5424,7 +5424,7 @@
       "name": "PDF から Base64",
       "description": "PDF ファイルを Base64 エンコードに変換します。",
       "seo_title": "無料オンライン PDF から Base64 変換ツール",
-      "seo_description": "PDF ファイルを Base64 エンコードに無料でオンライン変換。",
+      "seo_description": "PDFファイルをBase64エンコーディングに無料でオンライン変換。HTML、JSON、データURIにPDFを埋め込み。サーバーへのファイルアップロードなしの安全なブラウザ変換。",
       "dropzone": "PDF ファイルをここにドロップまたはクリックしてアップロード",
       "acceptedFormat": "対応形式：PDF",
       "errorNotPdf": "PDF ファイルを選択してください",
@@ -5441,7 +5441,7 @@
       "name": "音声から Base64",
       "description": "音声ファイルを Base64 エンコードに変換します。",
       "seo_title": "無料オンライン音声から Base64 変換ツール",
-      "seo_description": "音声ファイルを Base64 エンコードに無料でオンライン変換。",
+      "seo_description": "音声ファイルをBase64エンコーディングに無料でオンライン変換。MP3、WAV、OGG形式に対応。HTML、JSON、データURIに音声を埋め込み。",
       "dropzone": "音声ファイルをここにドロップまたはクリックしてアップロード",
       "acceptedFormats": "対応：MP3、WAV、OGG、WebM、AAC、FLAC",
       "errorNotAudio": "音声ファイルを選択してください",
@@ -5457,7 +5457,7 @@
       "name": "動画から Base64",
       "description": "動画ファイルを Base64 エンコードに変換します。",
       "seo_title": "無料オンライン動画から Base64 変換ツール",
-      "seo_description": "動画ファイルを Base64 エンコードに無料でオンライン変換。",
+      "seo_description": "動画ファイルをBase64エンコーディングに無料でオンライン変換。MP4、WebMなどの形式に対応。HTML、JSON、データURIに動画を埋め込み。ブラウザベース処理。",
       "dropzone": "動画ファイルをここにドロップまたはクリックしてアップロード",
       "maxSize": "最大ファイルサイズ：10MB",
       "errorNotVideo": "動画ファイルを選択してください",
@@ -5476,7 +5476,7 @@
       "name": "ファイルサイズ計算機",
       "description": "異なるファイルサイズ単位間で変換します。",
       "seo_title": "無料オンラインファイルサイズ計算機",
-      "seo_description": "バイト、KB、MB、GB、TB などの単位間を無料でオンライン変換。",
+      "seo_description": "バイト、KB、MB、GB、TBなどを無料でオンライン変換。バイナリ(1024)または10進数(1000)単位でファイルサイズを計算。ストレージ計画に必須。",
       "inputValue": "入力値",
       "unit": "単位",
       "base": "基数",
@@ -5494,7 +5494,7 @@
       "name": "ASCII テーブル",
       "description": "完全な ASCII 文字参照テーブル。",
       "seo_title": "ASCII テーブル - 文字コード参照",
-      "seo_description": "10進数、16進数、8進数、2進数値を含む完全な ASCII テーブル。",
+      "seo_description": "10進数、16進数、8進数、2進数値を含む完全なASCIIテーブル。説明付きの128個すべてのASCII文字を閲覧。プログラマー必須リファレンス。",
       "searchPlaceholder": "文字、コード、または説明で検索...",
       "showExtended": "拡張 ASCII を表示（128-255）",
       "selectedChar": "選択した文字",
@@ -5517,7 +5517,7 @@
       "name": "テキストから16進数",
       "description": "テキストと16進数を相互変換します。",
       "seo_title": "無料オンラインテキストから16進数変換ツール",
-      "seo_description": "テキストを16進数エンコードに変換、または16進数をテキストにデコード。",
+      "seo_description": "テキストを16進数エンコーディングに変換、または16進数をテキストに無料でオンラインデコード。UTF-8とASCIIエンコーディングに対応。デバッグとデータ分析に必須。",
       "encoding": "エンコード",
       "separator": "区切り文字",
       "sepSpace": "スペース",
@@ -5542,7 +5542,7 @@
       "name": "CSS 変数ジェネレーター",
       "description": "ビジュアルエディターで CSS カスタムプロパティ（変数）を生成。",
       "seo_title": "無料オンライン CSS 変数ジェネレーター",
-      "seo_description": "ビジュアルカラーピッカーで CSS カスタムプロパティを生成し、CSS、SCSS、JavaScript にエクスポート。",
+      "seo_description": "ビジュアルカラーピッカーでCSSカスタムプロパティを生成し、CSS、SCSS、JavaScriptにエクスポート。一貫したテーマのためのデザイントークンを作成。",
       "prefix": "プレフィックス",
       "prefixPlaceholder": "例: app",
       "scope": "スコープ",
@@ -5569,7 +5569,7 @@
       "name": "Lorem Picsum",
       "description": "Picsum Photos からランダムなプレースホルダー画像を生成。",
       "seo_title": "無料オンライン Lorem Picsum 画像ジェネレーター",
-      "seo_description": "カスタムサイズ、グレースケール、ぼかし効果のランダムプレースホルダー画像を生成。",
+      "seo_description": "カスタムサイズ、グレースケール、ブラー効果付きのランダムプレースホルダー画像を生成。モックアップとプロトタイピングに最適。",
       "width": "幅",
       "height": "高さ",
       "seed": "シード",
@@ -5590,7 +5590,7 @@
       "name": "正規表現エスケープ",
       "description": "正規表現の特殊文字をエスケープまたはアンエスケープ。",
       "seo_title": "無料オンライン正規表現エスケープツール",
-      "seo_description": "正規表現で使用する特殊文字を無料でオンラインエスケープ。",
+      "seo_description": "正規表現で使用する特殊文字を無料でオンラインでエスケープ。. * + ? ^ $ { } [ ] \\ | ( ) などのメタ文字を処理。",
       "mode": "モード",
       "escape": "エスケープ",
       "unescape": "アンエスケープ",
@@ -5612,7 +5612,7 @@
       "name": "HTML からテキスト",
       "description": "HTML をプレーンテキストに変換し、すべてのタグを削除。",
       "seo_title": "無料オンライン HTML からテキスト変換ツール",
-      "seo_description": "HTML をプレーンテキストに変換し、すべてのタグを削除してコンテンツ構造を保持。",
+      "seo_description": "HTMLをプレーンテキストに変換し、すべてのタグを削除してコンテンツ構造を保持。リンク、リスト、テーブルをインテリジェントに処理。",
       "preserveLinks": "リンクを (URL) として保持",
       "preserveLineBreaks": "改行を保持",
       "preserveLists": "リスト形式を保持",
@@ -5633,7 +5633,7 @@
       "name": "2進数/10進数変換",
       "description": "2進数、10進数、16進数間で相互変換。",
       "seo_title": "無料オンライン2進数10進数変換ツール",
-      "seo_description": "2進数、10進数、16進数間で簡単に変換。",
+      "seo_description": "2進数から10進数、10進数から2進数、2進数から16進数、16進数から2進数を無料でオンライン変換。大きな数値と即時変換に対応。",
       "mode": "変換モード",
       "binToDec": "2進数 → 10進数",
       "decToBin": "10進数 → 2進数",
@@ -5661,7 +5661,7 @@
       "name": "8進数変換",
       "description": "8進数と他の基数間で変換。",
       "seo_title": "無料オンライン8進数変換ツール",
-      "seo_description": "8進数、10進数、2進数、16進数間で変換。",
+      "seo_description": "8進数から10進数、2進数、16進数に無料でオンライン変換。10進数、2進数、16進数から8進数への変換も可能。Unixパーミッションに必須。",
       "mode": "変換モード",
       "octToDec": "8進数 → 10進数",
       "decToOct": "10進数 → 8進数",
@@ -5688,7 +5688,7 @@
       "name": "NATOフォネティックアルファベット変換",
       "description": "テキストをNATOフォネティックアルファベット（Alpha、Bravo、Charlie...）に変換。",
       "seo_title": "無料オンラインNATOフォネティックアルファベット変換ツール",
-      "seo_description": "テキストをNATO/ICAOフォネティックアルファベットに変換。",
+      "seo_description": "文字と数字をNATOフォネティックアルファベットの単語に無料でオンライン変換。明確なコミュニケーションのためのAlpha、Bravo、Charlie形式。",
       "separator": "区切り文字",
       "sepNewline": "改行",
       "sepDash": "ダッシュ",
@@ -5709,7 +5709,7 @@
       "name": "CRC32計算機",
       "description": "テキストまたはデータのCRC32チェックサムを計算。",
       "seo_title": "無料オンラインCRC32計算ツール",
-      "seo_description": "任意のテキストのCRC32チェックサムを素早く計算。",
+      "seo_description": "ブラウザでテキストまたはアップロードファイルのCRC32チェックサムを計算。データ整合性を検証し、伝送エラーを検出。安全なブラウザベース処理。",
       "inputMode": "入力モード",
       "modeText": "テキスト",
       "modeFile": "ファイル",
@@ -5732,7 +5732,7 @@
       "name": "MACアドレス生成",
       "description": "ランダムなMACアドレスを生成、複数の形式をサポート。",
       "seo_title": "無料オンラインMACアドレス生成ツール",
-      "seo_description": "複数の形式とオプションでランダムなMACアドレスを生成。",
+      "seo_description": "プレフィックス、セパレータ、ビットフラグオプション付きのランダムMACアドレスを生成。ユニキャスト/マルチキャストフラグに対応。",
       "generate": "生成",
       "copy": "コピー",
       "count": "生成数",

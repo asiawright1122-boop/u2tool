@@ -112,7 +112,7 @@
       "name": "Base64 编解码",
       "description": "即时将文本编码为 Base64 或将 Base64 解码为文本。",
       "seo_title": "免费在线 Base64 编码解码工具",
-      "seo_description": "免费在线编码和解码 Base64 字符串。快速、安全，在浏览器中运行。"
+      "seo_description": "免费在线即时编码文本为 Base64 或解码 Base64 字符串。安全的浏览器工具，无需上传数据。适用于开发者和数据编码任务。"
     },
     "json": {
       "invalidJson": "无效的 JSON"
@@ -1057,7 +1057,7 @@
       "name": "TOML/JSON 转换器",
       "description": "在 TOML 和 JSON 格式之间双向转换。",
       "seo_title": "免费在线 TOML JSON 转换器",
-      "seo_description": "免费在线将 TOML 转换为 JSON，或将 JSON 转换为 TOML。"
+      "seo_description": "免费在线将 TOML 转换为 JSON 或 JSON 转换为 TOML。验证和格式化配置文件，支持语法高亮。Rust 和 Python 项目必备。"
     },
     "json-to-java": {
       "className": "类名",
@@ -1073,7 +1073,7 @@
       "name": "JSON 转 Java",
       "description": "将 JSON 数据转换为 Java POJO 类，支持 Lombok 注解。",
       "seo_title": "免费在线 JSON 转 Java 工具",
-      "seo_description": "免费在线将 JSON 转换为 Java 类，支持 Lombok 注解。"
+      "seo_description": "免费在线将 JSON 转换为 Java 类。支持 Lombok 注解、getter/setter 和 builder 模式。Java API 开发和数据建模必备。"
     },
     "json-to-python": {
       "className": "类名",
@@ -1087,7 +1087,7 @@
       "name": "JSON 转 Python",
       "description": "将 JSON 数据转换为 Python dataclass、Pydantic 或 TypedDict。",
       "seo_title": "免费在线 JSON 转 Python 工具",
-      "seo_description": "免费在线将 JSON 转换为 Python dataclass 或 Pydantic 模型。"
+      "seo_description": "免费在线将 JSON 转换为 Python dataclass 或 Pydantic 模型。生成带验证的类型安全 Python 代码。Python API 开发必备。"
     },
     "json-to-kotlin": {
       "className": "类名",
@@ -1106,7 +1106,7 @@
       "name": "JSON 转 Kotlin",
       "description": "将 JSON 数据转换为 Kotlin data class，支持序列化注解。",
       "seo_title": "免费在线 JSON 转 Kotlin 工具",
-      "seo_description": "免费在线将 JSON 转换为 Kotlin data class，支持 Moshi、Gson、Kotlinx。"
+      "seo_description": "免费在线将 JSON 转换为 Kotlin 数据类。支持 Moshi、Gson 和 Kotlinx 序列化注解。Android 和 Kotlin 后端开发必备。"
     },
     "imageCompressor": {
       "quality": "质量",
@@ -1322,7 +1322,7 @@
       "name": "JSON 格式化工具",
       "description": "格式化和美化 JSON 数据，支持语法高亮。验证 JSON 并修复常见错误。",
       "seo_title": "免费在线 JSON 格式化与验证工具",
-      "seo_description": "免费在线格式化、美化和验证 JSON 数据。语法高亮，错误检测，轻松复制。",
+      "seo_description": "免费在线格式化、美化和验证 JSON 数据。支持语法高亮、错误检测、自动格式化和一键复制。开发者和 API 测试的完美工具。",
       "inputPlaceholder": "{\"key\": \"value\"}",
       "outputPlaceholder": "格式化后的 JSON 将显示在这里..."
     },
@@ -1330,86 +1330,86 @@
       "name": "UUID 生成器",
       "description": "即时生成随机 UUID (v4)。支持单个或批量复制。",
       "seo_title": "免费在线 UUID 生成器 - 生成 UUID v4",
-      "seo_description": "免费在线生成随机 UUID v4 字符串。支持批量生成。"
+      "seo_description": "免费在线生成随机 UUID v4 字符串。支持批量生成多个 UUID。安全、快速，完全在浏览器中运行。适用于开发者和数据库 ID 生成。"
     },
     "url-encoder": {
       "name": "URL 编解码",
       "description": "安全地编码或解码 URL 和查询字符串。",
       "seo_title": "免费在线 URL 编码解码工具",
-      "seo_description": "免费在线编码和解码 URL。安全处理特殊字符。"
+      "seo_description": "免费在线编码和解码 URL 及查询字符串。安全处理特殊字符，适用于 Web 开发。快速、安全的浏览器工具。API 和 Web 开发者必备。"
     },
     "password-generator": {
       "name": "密码生成器",
       "description": "生成强大、安全的随机密码，支持自定义选项。",
       "seo_title": "免费在线强密码生成器",
-      "seo_description": "免费在线生成安全随机密码。自定义长度、字符和复杂度。",
+      "seo_description": "免费在线生成安全随机密码。自定义长度，包含大小写字母、数字和符号。为账户和安全创建强密码。不存储或上传任何数据。",
       "selectOption": "请至少选择一个选项"
     },
     "hash-generator": {
       "name": "哈希生成器",
       "description": "从文本生成 MD5、SHA-1、SHA-256 哈希值。",
       "seo_title": "免费在线 MD5、SHA 哈希生成器",
-      "seo_description": "免费在线生成 MD5、SHA-1、SHA-256、SHA-512 哈希值。"
+      "seo_description": "免费在线生成 MD5、SHA-1、SHA-256、SHA-512 哈希值。安全的浏览器哈希工具，无需上传数据。适用于文件完整性验证和安全应用。"
     },
     "qr-generator": {
       "name": "二维码生成器",
       "description": "从文本或 URL 生成二维码。下载为 PNG 格式。",
       "seo_title": "免费在线二维码生成器",
-      "seo_description": "免费在线从文本或 URL 生成二维码。下载为 PNG 图片。"
+      "seo_description": "免费在线从文本、URL 或数据生成二维码。下载高质量 PNG 图片。自定义大小和纠错级别。适用于营销、分享链接和名片制作。"
     },
     "color-converter": {
       "name": "颜色转换器",
       "description": "在 HEX、RGB 和 HSL 格式之间转换颜色。",
       "seo_title": "免费在线颜色转换器 - HEX RGB HSL",
-      "seo_description": "免费在线在 HEX、RGB 和 HSL 格式之间转换颜色。"
+      "seo_description": "免费在线转换 HEX、RGB、HSL、HSV 颜色格式。即时颜色格式转换，实时预览。Web 设计师、开发者和数字艺术家的必备工具。"
     },
     "timestamp-converter": {
       "name": "时间戳转换器",
       "description": "将 Unix 时间戳转换为可读日期，反之亦然。",
       "seo_title": "免费在线 Unix 时间戳转换器",
-      "seo_description": "免费在线将 Unix 时间戳转换为日期，或将日期转换为时间戳。"
+      "seo_description": "免费在线将 Unix 时间戳转换为可读日期，或将日期转换为时间戳。支持多种日期格式和时区。开发者处理 API 和数据库的必备工具。"
     },
     "word-counter": {
       "name": "字数统计",
       "description": "统计文本中的字数、字符数、句子数和段落数。",
       "seo_title": "免费在线字数统计和字符计数器",
-      "seo_description": "免费在线统计字数、字符数、句子数和段落数。"
+      "seo_description": "免费在线统计字数、字符数、句子数和段落数。获取阅读时间估算和详细文本统计。作家和编辑的完美工具。"
     },
     "case-converter": {
       "name": "大小写转换",
       "description": "将文本转换为大写、小写、标题格式等。",
       "seo_title": "免费在线文本大小写转换器",
-      "seo_description": "免费在线转换文本大小写。大写、小写、标题格式、句子格式。"
+      "seo_description": "免费在线转换文本大小写。转换为大写、小写、标题格式、句子格式、驼峰命名和下划线命名。开发者和作家的必备工具。"
     },
     "html-encoder": {
       "name": "HTML 编解码",
       "description": "将特殊字符编码为 HTML 实体或解码回来。",
       "seo_title": "免费在线 HTML 编码解码器",
-      "seo_description": "免费在线编码和解码 HTML 实体。安全处理特殊字符。"
+      "seo_description": "免费在线编码和解码 HTML 实体。安全处理特殊字符用于 Web 开发。防止 XSS 攻击并正确显示 HTML。"
     },
     "markdown-preview": {
       "name": "Markdown 预览",
       "description": "编写 Markdown 并实时预览。导出为 HTML。",
       "seo_title": "免费在线 Markdown 编辑器和预览",
-      "seo_description": "免费在线编写和预览 Markdown。实时预览和 HTML 导出。"
+      "seo_description": "免费在线编写和预览 Markdown。实时预览，支持语法高亮和 HTML 导出。适用于文档、README 文件和博客文章。"
     },
     "lorem-ipsum": {
       "name": "Lorem Ipsum 生成器",
       "description": "为您的设计和原型生成占位文本。",
       "seo_title": "免费在线 Lorem Ipsum 生成器",
-      "seo_description": "免费在线生成 Lorem Ipsum 占位文本。段落、句子或单词。"
+      "seo_description": "免费在线生成 Lorem Ipsum 占位文本。为模型和设计创建段落、句子或单词。Web 设计师和开发者的必备工具。"
     },
     "regex-tester": {
       "name": "正则表达式测试",
       "description": "实时测试正则表达式，支持匹配高亮。",
       "seo_title": "免费在线正则表达式测试和调试器",
-      "seo_description": "免费在线测试和调试正则表达式。实时匹配和高亮显示。"
+      "seo_description": "免费在线测试和调试正则表达式。实时匹配，支持语法高亮和匹配组。开发者和数据处理的必备工具。"
     },
     "jwt-decoder": {
       "name": "JWT 解码器",
       "description": "解码和查看 JWT Token 的 Header、Payload 和签名信息。",
       "seo_title": "免费在线 JWT 解码器",
-      "seo_description": "免费在线解码 JWT Token，查看 Header、Payload 和过期时间。",
+      "seo_description": "免费在线解码和检查 JWT（JSON Web Token）。查看头部、载荷和签名，无需验证。调试 Web 应用程序身份验证和 API 安全的必备工具。",
       "enterToken": "请输入 JWT Token",
       "invalidFormat": "无效的 JWT 格式",
       "invalidToken": "无效的 JWT Token",
@@ -1424,19 +1424,19 @@
       "name": "文本对比",
       "description": "比较两段文本的差异，高亮显示添加和删除的内容。",
       "seo_title": "免费在线文本对比工具",
-      "seo_description": "免费在线比较两段文本的差异，高亮显示变化内容。"
+      "seo_description": "免费在线比较两段文本。高亮显示添加、删除和更改的内容，支持并排视图。代码审查和文档比较的必备工具。"
     },
     "json-to-csv": {
       "name": "JSON 转 CSV",
       "description": "将 JSON 数据转换为 CSV 格式，或将 CSV 转换为 JSON。",
       "seo_title": "免费在线 JSON 转 CSV 工具",
-      "seo_description": "免费在线将 JSON 转换为 CSV，或将 CSV 转换为 JSON。"
+      "seo_description": "免费在线将 JSON 转换为 CSV 或 CSV 转换为 JSON。处理嵌套对象和数组，支持自定义分隔符。适用于数据导出和电子表格工作。"
     },
     "image-to-base64": {
       "name": "图片转 Base64",
       "description": "将图片转换为 Base64 编码，可用于 HTML 和 CSS。",
       "seo_title": "免费在线图片转 Base64 工具",
-      "seo_description": "免费在线将图片转换为 Base64 编码字符串。",
+      "seo_description": "免费在线将图片转换为 Base64 编码字符串。支持 PNG、JPG、GIF 和 SVG 格式。适用于在 CSS、HTML 和 JSON 中嵌入图片。",
       "uploadHint": "点击上传或拖放文件",
       "supportedFormats": "PNG, JPG, GIF, SVG, WebP",
       "copyDataUrl": "复制 Data URL",
@@ -1449,7 +1449,7 @@
       "name": "Cron 表达式生成器",
       "description": "可视化生成和解析 Cron 定时任务表达式。",
       "seo_title": "免费在线 Cron 表达式生成器",
-      "seo_description": "免费在线生成和解析 Cron 表达式，支持常用预设。",
+      "seo_description": "免费在线生成和解析 cron 表达式。可视化编辑器，包含常用预设和人类可读描述。任务调度和自动化的必备工具。",
       "presets": "快速预设",
       "minute": "分钟 (0-59)",
       "hour": "小时 (0-23)",
@@ -1488,19 +1488,19 @@
       "name": "文本转 Slug",
       "description": "将文本转换为 URL 友好的 slug 格式。",
       "seo_title": "免费在线文本转 Slug 工具",
-      "seo_description": "免费在线将文本转换为 URL 友好的 slug 格式。"
+      "seo_description": "免费在线将文本转换为 URL 友好的 slug 格式。删除特殊字符，处理 unicode，创建 SEO 友好的 URL。Web 开发必备工具。"
     },
     "number-base-converter": {
       "name": "进制转换器",
       "description": "在二进制、八进制、十进制和十六进制之间转换数字。",
       "seo_title": "免费在线进制转换器",
-      "seo_description": "免费在线转换二进制、八进制、十进制、十六进制数字。"
+      "seo_description": "免费在线转换二进制、八进制、十进制和十六进制。支持大数字和即时转换。程序员和学生的必备工具。"
     },
     "json-path-tester": {
       "name": "JSONPath 测试器",
       "description": "针对 JSON 数据测试和评估 JSONPath 表达式。",
       "seo_title": "免费在线 JSONPath 测试器",
-      "seo_description": "免费在线测试和调试 JSONPath 表达式。",
+      "seo_description": "免费在线测试和调试 JSONPath 表达式。实时结果和语法高亮查询 JSON 数据。API 开发和数据提取的必备工具。",
       "jsonData": "JSON 数据",
       "jsonPlaceholder": "{\"name\": \"John\", \"users\": [{\"name\": \"Alice\"}, {\"name\": \"Bob\"}]}",
       "expression": "JSONPath 表达式",
@@ -1516,19 +1516,19 @@
       "name": "XML 格式化",
       "description": "格式化和压缩 XML 数据，验证 XML 语法。",
       "seo_title": "免费在线 XML 格式化工具",
-      "seo_description": "免费在线格式化、美化和压缩 XML 数据。"
+      "seo_description": "免费在线格式化、美化和压缩 XML 数据。语法高亮、错误检测和树形视图。API 开发和配置文件的必备工具。"
     },
     "chinese-converter": {
       "name": "繁简体转换",
       "description": "将简体中文转换为繁体中文，或将繁体转换为简体。",
       "seo_title": "免费在线繁简体转换工具",
-      "seo_description": "免费在线转换简体中文和繁体中文。"
+      "seo_description": "免费在线转换简体中文和繁体中文。准确的字符转换，支持词组。中文内容本地化的必备工具。"
     },
     "unit-converter": {
       "name": "单位换算器",
       "description": "在长度、重量、温度、面积等单位之间转换。",
       "seo_title": "免费在线单位换算器",
-      "seo_description": "免费在线转换各种单位：长度、重量、温度、面积、体积等。",
+      "seo_description": "免费在线转换各种单位：长度、重量、温度、面积、体积、速度和数据。快速参考表和所有测量的即时转换。",
       "enterValue": "输入数值",
       "swapUnits": "交换单位"
     },
@@ -1536,19 +1536,19 @@
       "name": "渐变色生成器",
       "description": "可视化创建 CSS 渐变色，支持线性和径向渐变。",
       "seo_title": "免费在线 CSS 渐变色生成器",
-      "seo_description": "免费在线创建 CSS 渐变色，生成 CSS 和 Tailwind 代码。"
+      "seo_description": "免费在线创建 CSS 渐变。生成线性和径向渐变，输出 CSS 和 Tailwind 代码。可视化编辑器，支持颜色选择器和预设模板。"
     },
     "unicode-converter": {
       "name": "Unicode 编解码",
       "description": "在文本和 Unicode 编码之间转换，支持多种格式。",
       "seo_title": "免费在线 Unicode 编解码工具",
-      "seo_description": "免费在线转换文本和 Unicode 编码，支持 HTML 和 CSS 格式。"
+      "seo_description": "免费在线转换文本和 Unicode 编码。支持 HTML 实体、CSS 转义序列和各种 Unicode 格式。国际化的必备工具。"
     },
     "code-minifier": {
       "name": "代码压缩",
       "description": "压缩 HTML、CSS、JavaScript 代码，减小文件体积。",
       "seo_title": "免费在线代码压缩工具",
-      "seo_description": "免费在线压缩 HTML、CSS、JS 代码。",
+      "seo_description": "免费在线压缩 HTML、CSS 和 JavaScript 代码。减小文件大小，提高页面加载速度。Web 性能优化和部署的必备工具。",
       "codeType": "代码类型",
       "placeholder": "输入 {type} 代码进行压缩...",
       "original": "原始",
@@ -1559,187 +1559,187 @@
       "name": "SQL 格式化",
       "description": "格式化和美化 SQL 查询语句，提高可读性。",
       "seo_title": "免费在线 SQL 格式化工具",
-      "seo_description": "免费在线格式化和美化 SQL 语句。"
+      "seo_description": "免费在线格式化和美化 SQL 查询。支持多种 SQL 方言，语法高亮和缩进。数据库开发和调试的必备工具。"
     },
     "pinyin-converter": {
       "name": "汉字转拼音",
       "description": "将中文汉字转换为拼音，支持带声调和不带声调。",
       "seo_title": "免费在线汉字转拼音工具",
-      "seo_description": "免费在线将中文汉字转换为拼音。"
+      "seo_description": "免费在线将中文字符转换为拼音。支持声调标记和数字声调。中文学习和发音指南的必备工具。"
     },
     "color-picker": {
       "name": "在线取色器",
       "description": "选择颜色并获取 HEX、RGB、HSL 等多种格式的颜色值。",
       "seo_title": "免费在线取色器",
-      "seo_description": "免费在线选择颜色，获取多种格式颜色值。"
+      "seo_description": "免费在线选择颜色并获取 HEX、RGB、HSL 格式的颜色值。可视化颜色选择器，支持预设调色板和最近使用的颜色。设计师必备。"
     },
     "aspect-ratio": {
       "name": "宽高比计算器",
       "description": "计算图片或视频的宽高比，支持等比例缩放。",
       "seo_title": "免费在线宽高比计算器",
-      "seo_description": "免费在线计算宽高比，支持等比例缩放。"
+      "seo_description": "免费在线计算宽高比并按比例调整图片大小。支持 16:9、4:3、1:1 等常见比例。视频编辑和响应式设计必备。"
     },
     "css-beautifier": {
       "name": "CSS 格式化",
       "description": "格式化和美化 CSS 代码，支持压缩和美化。",
       "seo_title": "免费在线 CSS 格式化工具",
-      "seo_description": "免费在线格式化、美化和压缩 CSS 代码。"
+      "seo_description": "免费在线格式化、美化和压缩 CSS 代码。语法高亮，支持自定义缩进。Web 开发者和前端优化必备。"
     },
     "js-beautifier": {
       "name": "JavaScript 格式化",
       "description": "格式化和美化 JavaScript 代码，支持压缩和美化。",
       "seo_title": "免费在线 JavaScript 格式化工具",
-      "seo_description": "免费在线格式化、美化和压缩 JavaScript 代码。"
+      "seo_description": "免费在线格式化、美化和压缩 JavaScript 代码。语法高亮，支持自定义缩进。Web 开发者和代码优化必备。"
     },
     "html-preview": {
       "name": "HTML 在线预览",
       "description": "实时预览 HTML 代码效果，支持 CSS 和 JavaScript。",
       "seo_title": "免费在线 HTML 预览工具",
-      "seo_description": "免费在线实时预览 HTML 代码效果。"
+      "seo_description": "免费在线实时预览 HTML 代码。输入时即时更新的实时渲染。Web 开发、学习 HTML 和快速原型设计必备。"
     },
     "ip-lookup": {
       "name": "IP 地址查询",
       "description": "查询 IP 地址的地理位置、运营商等信息。",
       "seo_title": "免费在线 IP 地址查询工具",
-      "seo_description": "免费在线查询 IP 地址的地理位置和运营商信息。"
+      "seo_description": "免费在线查询 IP 地址地理位置。获取国家、城市、ISP、时区和坐标。网络故障排除和安全分析必备。"
     },
     "morse-code": {
       "name": "摩斯密码转换",
       "description": "将文本转换为摩斯密码，或将摩斯密码转换为文本。",
       "seo_title": "免费在线摩斯密码转换器",
-      "seo_description": "免费在线转换摩斯密码和文本，支持播放声音。"
+      "seo_description": "免费在线将文本转换为摩尔斯电码或将摩尔斯电码转换为文本。支持音频播放，可调节速度。学习和通信爱好者必备。"
     },
     "random-generator": {
       "name": "随机数生成器",
       "description": "生成指定范围内的随机数，支持批量生成和去重。",
       "seo_title": "免费在线随机数生成器",
-      "seo_description": "免费在线生成随机数，支持自定义范围和批量生成。"
+      "seo_description": "免费在线生成随机数。支持自定义范围、唯一数字和多个结果。游戏、抽奖和随机选择任务必备。"
     },
     "text-reverser": {
       "name": "文本反转",
       "description": "反转文本的字符、单词或行顺序。",
       "seo_title": "免费在线文本反转工具",
-      "seo_description": "免费在线反转文本字符、单词或行。"
+      "seo_description": "免费在线反转文本字符、单词或行。多种反转模式，即时预览。谜题、编码和文本处理任务必备。"
     },
     "line-counter": {
       "name": "行数统计",
       "description": "统计文本行数，支持去重、删除空行和排序。",
       "seo_title": "免费在线行数统计工具",
-      "seo_description": "免费在线统计文本行数，支持去重和排序。"
+      "seo_description": "免费在线统计行数、删除重复行和排序文本。获取总行数、空行数和唯一行数统计。数据清理和文本处理必备。"
     },
     "string-escape": {
       "name": "字符串转义",
       "description": "转义或反转义字符串，支持 JSON、HTML、URL、JavaScript 格式。",
       "seo_title": "免费在线字符串转义工具",
-      "seo_description": "免费在线转义和反转义字符串。"
+      "seo_description": "免费在线转义和反转义各种编程语言的字符串。支持 JSON、HTML、URL 和正则表达式转义。开发者和数据处理必备。"
     },
     "yaml-json": {
       "name": "YAML/JSON 转换",
       "description": "在 YAML 和 JSON 格式之间相互转换。",
       "seo_title": "免费在线 YAML JSON 转换器",
-      "seo_description": "免费在线将 YAML 转换为 JSON，或将 JSON 转换为 YAML。"
+      "seo_description": "免费在线将 YAML 转换为 JSON 或 JSON 转换为 YAML。验证和格式化配置文件，支持语法高亮。DevOps 和配置管理必备。"
     },
     "date-calculator": {
       "name": "日期计算器",
       "description": "计算两个日期之间的差值，或在日期上加减天数。",
       "seo_title": "免费在线日期计算器",
-      "seo_description": "免费在线计算日期差值和日期加减。"
+      "seo_description": "免费在线计算日期差异和加减天数。获取日期之间的天数、周数、月数和年数。项目规划和日程安排必备。"
     },
     "text-deduplicator": {
       "name": "文本去重",
       "description": "删除文本中的重复行，保留唯一内容。",
       "seo_title": "免费在线文本去重工具",
-      "seo_description": "免费在线删除重复行，文本去重。"
+      "seo_description": "免费在线删除文本中的重复行。支持区分大小写匹配和行修剪。数据清理和列表处理任务必备。"
     },
     "color-blender": {
       "name": "颜色混合器",
       "description": "混合两种颜色，生成渐变色阶。",
       "seo_title": "免费在线颜色混合器",
-      "seo_description": "免费在线混合颜色，生成渐变色。"
+      "seo_description": "免费在线混合两种颜色并生成渐变步骤。创建平滑的颜色过渡，支持自定义步数。设计师和调色板创建必备。"
     },
     "json-sorter": {
       "name": "JSON 排序",
       "description": "按键名对 JSON 对象进行排序。",
       "seo_title": "免费在线 JSON 排序工具",
-      "seo_description": "免费在线对 JSON 键进行排序。"
+      "seo_description": "免费在线按字母顺序排序 JSON 键。支持升序和降序，嵌套对象排序。API 开发和数据组织必备。"
     },
     "placeholder-image": {
       "name": "占位图生成器",
       "description": "生成自定义尺寸和颜色的占位图片。",
       "seo_title": "免费在线占位图生成器",
-      "seo_description": "免费在线生成占位图片。"
+      "seo_description": "免费在线生成自定义尺寸和颜色的占位图片。适用于模型、线框图和网页设计原型。下载为 PNG 格式。"
     },
     "text-encryption": {
       "name": "文本加密",
       "description": "使用 AES 加密算法对文本进行加密和解密。",
       "seo_title": "免费在线文本加密工具",
-      "seo_description": "免费在线使用 AES 加密和解密文本。"
+      "seo_description": "免费在线使用 AES-256 加密和解密文本。安全的浏览器加密，支持密码保护。数据不会上传到服务器。"
     },
     "file-hash": {
       "name": "文件哈希计算器",
       "description": "计算文件的 MD5、SHA-1、SHA-256、SHA-512 哈希值。",
       "seo_title": "免费在线文件哈希计算器",
-      "seo_description": "免费在线计算文件哈希值。"
+      "seo_description": "免费在线计算文件哈希值（MD5、SHA-1、SHA-256、SHA-512）。验证文件完整性并检测更改。安全的浏览器处理。"
     },
     "html-table-generator": {
       "name": "HTML 表格生成器",
       "description": "可视化生成 HTML 表格，自定义行列数。",
       "seo_title": "免费在线 HTML 表格生成器",
-      "seo_description": "免费在线生成 HTML 表格。"
+      "seo_description": "免费在线使用可视化编辑器生成 HTML 表格。自定义行、列、标题和样式。导出干净的 HTML 代码用于网站。"
     },
     "json-schema-validator": {
       "name": "JSON Schema 验证器",
       "description": "根据 JSON Schema 验证 JSON 数据。",
       "seo_title": "免费在线 JSON Schema 验证器",
-      "seo_description": "免费在线验证 JSON Schema。"
+      "seo_description": "免费在线根据 JSON Schema 验证 JSON 数据。支持 draft-04、draft-06 和 draft-07 模式。获取详细的错误消息和验证报告。"
     },
     "regex-patterns": {
       "name": "正则表达式库",
       "description": "常用正则表达式模式：邮箱、网址、电话等。",
       "seo_title": "免费正则表达式模式库",
-      "seo_description": "开发者常用正则表达式模式。"
+      "seo_description": "免费在线浏览常用正则表达式模式：邮箱、URL、电话、IP 地址、日期等。一键复制并在代码中使用。开发者参考。"
     },
     "byte-counter": {
       "name": "字节计数器",
       "description": "计算文本的字节数，支持 UTF-8、UTF-16、ASCII 编码。",
       "seo_title": "免费在线字节计数器",
-      "seo_description": "免费在线计算文本字节数。"
+      "seo_description": "免费在线统计 UTF-8、UTF-16 等编码的文本字节数。获取字符数、字数和字节大小。数据大小估算必备。"
     },
     "json-to-typescript": {
       "name": "JSON 转 TypeScript",
       "description": "将 JSON 数据转换为 TypeScript 接口定义。",
       "seo_title": "免费在线 JSON 转 TypeScript 工具",
-      "seo_description": "免费在线将 JSON 转换为 TypeScript 接口。"
+      "seo_description": "免费在线将 JSON 转换为 TypeScript 接口和类型。生成带可选属性和嵌套类型的类型安全代码。TypeScript 开发者必备。"
     },
     "svg-optimizer": {
       "name": "SVG 优化器",
       "description": "优化和压缩 SVG 代码，减小文件体积。",
       "seo_title": "免费在线 SVG 优化器",
-      "seo_description": "免费在线优化和压缩 SVG 文件。"
+      "seo_description": "免费在线优化和压缩 SVG 文件。删除不必要的元数据，压缩代码，减小文件大小。Web 性能优化必备。"
     },
     "text-to-binary": {
       "name": "文本转二进制",
       "description": "将文本转换为二进制，或将二进制转换为文本。",
       "seo_title": "免费在线文本二进制转换器",
-      "seo_description": "免费在线转换文本和二进制。"
+      "seo_description": "免费在线将文本转换为二进制代码或将二进制转换为文本。支持 ASCII 和 Unicode 编码。学习二进制和数据编码概念必备。"
     },
     "markdown-to-html": {
       "name": "Markdown 转 HTML",
       "description": "将 Markdown 文本转换为 HTML 代码。",
       "seo_title": "免费在线 Markdown 转 HTML 工具",
-      "seo_description": "免费在线将 Markdown 转换为 HTML。"
+      "seo_description": "免费在线将 Markdown 转换为 HTML。支持 GitHub 风格 Markdown，包括表格、代码块和任务列表。预览并复制干净的 HTML 输出。"
     },
     "html-minifier": {
       "name": "HTML 压缩器",
       "description": "压缩和美化 HTML 代码，减小文件体积。",
       "seo_title": "免费在线 HTML 压缩工具",
-      "seo_description": "免费在线压缩和美化 HTML 代码。"
+      "seo_description": "免费在线压缩 HTML 代码。删除空白、注释并优化属性。减小文件大小，提高页面加载速度。"
     },
     "json-diff": {
       "name": "JSON 差异比较",
       "description": "比较两个 JSON 对象并找出差异。",
       "seo_title": "免费在线 JSON 差异比较工具",
-      "seo_description": "免费在线比较两个 JSON 对象并找出差异。",
+      "seo_description": "免费在线比较两个 JSON 对象并查找差异。高亮显示添加、删除和更改的值，支持并排视图。API 调试必备。",
       "json1": "JSON 1",
       "json2": "JSON 2",
       "placeholder": "{\"key\": \"value\"}",
@@ -1751,68 +1751,68 @@
       "name": "Base32 编解码",
       "description": "将文本编码为 Base32 或将 Base32 解码为文本。",
       "seo_title": "免费在线 Base32 编解码工具",
-      "seo_description": "免费在线编码和解码 Base32 字符串。"
+      "seo_description": "免费在线将文本编码为 Base32 或解码 Base32 字符串。支持 RFC 4648 标准编码。适用于 TOTP 密钥和安全数据编码。"
     },
     "epoch-converter": {
       "name": "Epoch 时间转换器",
       "description": "在 Epoch/Unix 时间戳和日期时间之间转换。",
       "seo_title": "免费在线 Epoch 时间转换器",
-      "seo_description": "免费在线转换 Epoch 时间戳。"
+      "seo_description": "免费在线将 Unix 时间戳转换为可读日期，反之亦然。支持毫秒和秒。开发者和日志分析必备。"
     },
     "css-unit-converter": {
       "name": "CSS 单位转换器",
       "description": "在 px、rem、em、pt、vw、vh 等 CSS 单位之间转换。",
       "seo_title": "免费在线 CSS 单位转换器",
-      "seo_description": "免费在线转换 CSS 单位。"
+      "seo_description": "免费在线转换 CSS 单位（px、em、rem、%、vw、vh）。使用基础字体大小计算响应式值。响应式网页设计和开发必备。"
     },
     "text-statistics": {
       "name": "文本统计分析",
       "description": "详细统计文本的字符、单词、句子、段落等信息。",
       "seo_title": "免费在线文本统计分析工具",
-      "seo_description": "免费在线统计文本字符、单词、句子、段落等。"
+      "seo_description": "免费在线分析文本统计。获取字数、字符数、句子数、阅读时间和可读性评分。作家和编辑必备。"
     },
     "hex-editor": {
       "name": "十六进制编辑器",
       "description": "在文本和十六进制之间转换，查看字节数据。",
       "seo_title": "免费在线十六进制编辑器",
-      "seo_description": "免费在线转换文本和十六进制。"
+      "seo_description": "免费在线将文本转换为十六进制，或将十六进制转换为文本。查看和编辑十六进制数据，支持 ASCII 预览。调试和二进制数据分析必备。"
     },
     "color-palette": {
       "name": "调色板生成器",
       "description": "根据基础颜色生成色阶、互补色、类似色等配色方案。",
       "seo_title": "免费在线调色板生成器",
-      "seo_description": "免费在线生成配色方案和调色板。"
+      "seo_description": "免费在线生成调色板和配色方案。创建互补色、类似色、三色和单色调色板。导出为 CSS、SCSS 或 JSON 格式。"
     },
     "http-status": {
       "name": "HTTP 状态码查询",
       "description": "查询 HTTP 状态码的含义和用途。",
       "seo_title": "免费 HTTP 状态码查询工具",
-      "seo_description": "查询 HTTP 状态码含义。"
+      "seo_description": "免费在线浏览 HTTP 状态码参考指南。了解 1xx、2xx、3xx、4xx 和 5xx 状态码的描述和用例。开发者必备。"
     },
     "json-to-yaml": {
       "name": "JSON 转 YAML",
       "description": "将 JSON 数据转换为 YAML 格式。",
       "seo_title": "免费在线 JSON 转 YAML 工具",
-      "seo_description": "免费在线将 JSON 转换为 YAML。"
+      "seo_description": "免费在线将 JSON 转换为 YAML 格式。保留数据结构，正确缩进和格式化。配置文件和 DevOps 工作流必备。"
     },
     "data-uri": {
       "name": "Data URI 生成器",
       "description": "将文件转换为 Data URI 格式，可直接嵌入 HTML/CSS。",
       "seo_title": "免费在线 Data URI 生成器",
-      "seo_description": "免费在线生成 Data URI。",
+      "seo_description": "免费在线从文件或文本生成 Data URI。将图片、字体和文件转换为 base64 数据 URL。适用于在 CSS 和 HTML 中嵌入资源。",
       "output": "Data URI"
     },
     "text-compare": {
       "name": "文本相似度比较",
       "description": "比较两段文本的相似度，计算编辑距离。",
       "seo_title": "免费在线文本相似度比较工具",
-      "seo_description": "免费在线比较文本相似度。"
+      "seo_description": "免费在线比较文本相似度并查找差异。计算编辑距离、相似度百分比并高亮显示更改。内容审核必备。"
     },
     "json-to-go": {
       "name": "JSON 转 Go 结构体",
       "description": "将 JSON 数据转换为 Go 语言结构体定义。",
       "seo_title": "免费在线 JSON 转 Go 结构体工具",
-      "seo_description": "免费在线将 JSON 转换为 Go 结构体。",
+      "seo_description": "免费在线将 JSON 转换为 Go 结构体。生成带有正确字段标签和嵌套结构体支持的类型安全 Go 代码。Go API 开发必备。",
       "structName": "结构体名称",
       "input": "JSON 输入",
       "output": "Go 结构体"
@@ -1821,7 +1821,7 @@
       "name": "HTML 转 JSX",
       "description": "将 HTML 代码转换为 React JSX 格式。",
       "seo_title": "免费在线 HTML 转 JSX 转换器",
-      "seo_description": "免费在线将 HTML 代码转换为 React JSX 格式。",
+      "seo_description": "免费在线将 HTML 代码转换为 React JSX 格式。将 class 转换为 className，style 字符串转换为对象，修复自闭合标签。React 开发者必备。",
       "htmlInput": "HTML 输入",
       "jsxOutput": "JSX 输出",
       "placeholder": "<div class=\"container\">...</div>",
@@ -1832,25 +1832,25 @@
       "name": "权限计算器",
       "description": "计算 Linux/Unix 文件权限的八进制和符号表示。",
       "seo_title": "免费在线 chmod 权限计算器",
-      "seo_description": "免费在线计算文件权限。"
+      "seo_description": "免费在线计算 Unix 文件权限（chmod）。在数字和符号表示法之间转换。可视化所有者、组、其他用户的读、写、执行权限。"
     },
     "barcode-generator": {
       "name": "条形码生成器",
       "description": "生成 Code 128、Code 39、EAN-13、UPC 格式的条形码。",
       "seo_title": "免费在线条形码生成器",
-      "seo_description": "免费在线生成条形码。"
+      "seo_description": "免费在线生成条形码。支持 Code128、Code39、EAN-13、UPC-A 等格式。下载为 PNG 或 SVG。库存和产品标签必备。"
     },
     "text-to-speech": {
       "name": "文字转语音",
       "description": "将文本转换为语音，可调节语音、语速和音调。",
       "seo_title": "免费在线文字转语音工具",
-      "seo_description": "免费在线将文字转换为语音。"
+      "seo_description": "免费在线将文本转换为语音。多种声音和语言，可调节速度和音调。下载音频或在浏览器中收听。无障碍访问必备。"
     },
     "url-parser": {
       "name": "URL 解析器",
       "description": "解析和分析 URL 组件，包括协议、主机、路径和查询参数。",
       "seo_title": "免费在线 URL 解析器",
-      "seo_description": "免费在线解析和分析 URL。",
+      "seo_description": "免费在线解析和分析 URL。提取协议、主机、端口、路径、查询参数和哈希。编码和解码 URL 组件。Web 开发必备。",
       "urlLabel": "URL",
       "protocol": "协议",
       "hostname": "主机名",
@@ -1868,109 +1868,109 @@
       "name": "JSON 转 XML",
       "description": "将 JSON 数据转换为 XML 格式。",
       "seo_title": "免费在线 JSON 转 XML 工具",
-      "seo_description": "免费在线将 JSON 转换为 XML。"
+      "seo_description": "免费在线将 JSON 转换为 XML 格式。保留数据结构，正确嵌套元素和属性。API 集成和数据转换必备。"
     },
     "text-wrapper": {
       "name": "文本换行器",
       "description": "将文本按指定宽度换行。",
       "seo_title": "免费在线文本换行工具",
-      "seo_description": "免费在线按指定宽度换行文本。"
+      "seo_description": "免费在线将文本换行到指定宽度。在单词边界或固定位置添加换行符。格式化代码注释、邮件和文档必备。"
     },
     "csv-to-json": {
       "name": "CSV 转 JSON",
       "description": "将 CSV 数据转换为 JSON 格式，支持自定义分隔符。",
       "seo_title": "免费在线 CSV 转 JSON 工具",
-      "seo_description": "免费在线将 CSV 转换为 JSON。"
+      "seo_description": "免费在线将 CSV 转换为 JSON 格式。使用自定义分隔符和标题解析 CSV。支持嵌套对象和数组。数据导入和 API 集成必备。"
     },
     "html-entity": {
       "name": "HTML 实体转换器",
       "description": "编码和解码 HTML 实体，包括特殊字符和符号。",
       "seo_title": "免费在线 HTML 实体转换器",
-      "seo_description": "免费在线转换 HTML 实体。"
+      "seo_description": "免费在线转换 HTML 实体。将特殊字符编码为 HTML 实体，将实体解码为字符。防止 XSS 攻击并正确显示 HTML。"
     },
     "number-formatter": {
       "name": "数字格式化",
       "description": "以不同地区格式显示数字，支持小数、货币和百分比样式。",
       "seo_title": "免费在线数字格式化工具",
-      "seo_description": "免费在线以不同地区格式显示数字。"
+      "seo_description": "免费在线以不同区域设置格式化数字。添加千位分隔符、小数位、货币符号和百分比格式。国际化必备。"
     },
     "hmac-generator": {
       "name": "HMAC 生成器",
       "description": "使用 SHA-1、SHA-256、SHA-512 算法生成 HMAC 签名。",
       "seo_title": "免费在线 HMAC 生成器",
-      "seo_description": "免费在线生成 HMAC 签名，支持多种哈希算法。"
+      "seo_description": "免费在线使用 MD5、SHA-1、SHA-256、SHA-512 算法生成 HMAC 签名。API 和数据完整性验证的安全消息认证。"
     },
     "password-strength": {
       "name": "密码强度检测",
       "description": "分析密码强度，检测长度、字符种类和常见模式。",
       "seo_title": "免费在线密码强度检测器",
-      "seo_description": "免费在线检测密码强度，获取改进建议。"
+      "seo_description": "免费在线检查密码强度。获取详细分析，包括熵值评分、破解时间估算和改进建议。安全必备。"
     },
     "totp-generator": {
       "name": "TOTP 生成器",
       "description": "生成基于时间的一次性密码，兼容 Google Authenticator。",
       "seo_title": "免费在线 TOTP 生成器",
-      "seo_description": "免费在线生成 TOTP 一次性密码。"
+      "seo_description": "免费在线生成 TOTP 一次性密码。支持 Google Authenticator 兼容代码，自定义密钥和时间间隔。2FA 测试必备。"
     },
     "user-agent-parser": {
       "name": "User Agent 解析器",
       "description": "解析 User Agent 字符串，识别浏览器、操作系统和设备信息。",
       "seo_title": "免费在线 User Agent 解析器",
-      "seo_description": "免费在线解析 User Agent 字符串。"
+      "seo_description": "免费在线解析 User Agent 字符串。提取浏览器、操作系统、设备类型和版本信息。Web 分析和设备检测必备。"
     },
     "cidr-calculator": {
       "name": "CIDR 计算器",
       "description": "计算 IP 地址范围、子网掩码和可用主机数。",
       "seo_title": "免费在线 CIDR 计算器",
-      "seo_description": "免费在线计算 CIDR 子网信息。"
+      "seo_description": "免费在线计算 CIDR 子网信息。获取网络地址、广播地址、主机范围和子网掩码。网络管理员必备。"
     },
     "http-header-parser": {
       "name": "HTTP Header 解析器",
       "description": "解析和格式化 HTTP 头信息，显示每个头的含义。",
       "seo_title": "免费在线 HTTP Header 解析器",
-      "seo_description": "免费在线解析 HTTP 头信息。"
+      "seo_description": "免费在线解析 HTTP 头。分析请求和响应头，提供详细解释。API 调试和 Web 开发必备。"
     },
     "percentage-calculator": {
       "name": "百分比计算器",
       "description": "计算百分比、百分比变化、增减比例等。",
       "seo_title": "免费在线百分比计算器",
-      "seo_description": "免费在线计算百分比、变化率和比例。"
+      "seo_description": "免费在线计算百分比、百分比变化和比率。计算 X 是 Y 的百分之几，按百分比增加/减少。数学和金融必备。"
     },
     "statistics-calculator": {
       "name": "统计计算器",
       "description": "计算平均值、中位数、众数、标准差、方差等统计指标。",
       "seo_title": "免费在线统计计算器",
-      "seo_description": "免费在线计算平均值、中位数、众数、标准差等统计指标。"
+      "seo_description": "免费在线计算统计指标。获取平均值、中位数、众数、标准差、方差等。数据分析和研究必备。"
     },
     "scientific-calculator": {
       "name": "科学计算器",
       "description": "支持三角函数、对数、指数等科学计算功能。",
       "seo_title": "免费在线科学计算器",
-      "seo_description": "免费在线科学计算器，支持 sin、cos、tan、log、ln、sqrt 等函数。"
+      "seo_description": "免费在线科学计算器，支持 sin、cos、tan、log、ln、sqrt、幂等函数。支持括号和复杂表达式。学生和工程师必备。"
     },
     "text-sorter": {
       "name": "文本排序器",
       "description": "按字母、数字或长度对文本行进行排序，支持多种选项。",
       "seo_title": "免费在线文本排序器",
-      "seo_description": "免费在线按字母、数字、自然顺序或长度对文本行进行排序。"
+      "seo_description": "免费在线按字母、数字、自然顺序或长度排序文本行。支持升序和降序。数据组织必备。"
     },
     "text-extractor": {
       "name": "文本提取器",
       "description": "从文本中提取邮箱、网址、电话号码、IP 地址等信息。",
       "seo_title": "免费在线文本提取器",
-      "seo_description": "免费在线从文本中提取邮箱、网址、电话、IP 地址、话题标签和@提及。"
+      "seo_description": "免费在线从文本中提取邮箱、URL、电话号码、IP 地址、标签和提及。一键批量提取。数据挖掘必备。"
     },
     "emoji-picker": {
       "name": "Emoji 选择器",
       "description": "按分类浏览、搜索和一键复制表情符号。",
       "seo_title": "免费在线 Emoji 选择器",
-      "seo_description": "按分类浏览和复制表情符号，支持搜索和一键复制。"
+      "seo_description": "免费在线按类别浏览和复制表情符号。按名称搜索表情符号，支持肤色变体。一键复制到剪贴板。社交媒体和消息必备。"
     },
     "json-to-sql": {
       "name": "JSON 转 SQL",
       "description": "将 JSON 数组转换为 SQL INSERT 语句，支持 CREATE TABLE。",
       "seo_title": "免费在线 JSON 转 SQL 工具",
-      "seo_description": "免费在线将 JSON 数据转换为 SQL INSERT 语句，支持 MySQL、PostgreSQL、SQLite。",
+      "seo_description": "免费在线将 JSON 数据转换为 SQL INSERT 语句。支持 MySQL、PostgreSQL、SQLite 语法。批量插入生成用于数据库导入。",
       "tableName": "表名",
       "dialect": "数据库类型",
       "includeCreate": "包含 CREATE TABLE",
@@ -1983,37 +1983,37 @@
       "name": "图片压缩器",
       "description": "压缩图片以减小文件大小，同时保持质量。",
       "seo_title": "免费在线图片压缩器",
-      "seo_description": "免费在线压缩图片，可调节质量减小文件大小。"
+      "seo_description": "免费在线压缩图片。调整质量减小 PNG、JPEG、WebP 文件大小。支持批量压缩。Web 优化必备。"
     },
     "image-converter": {
       "name": "图片格式转换器",
       "description": "在 PNG、JPEG 和 WebP 格式之间转换图片。",
       "seo_title": "免费在线图片格式转换器",
-      "seo_description": "免费在线在 PNG、JPEG 和 WebP 格式之间转换图片。"
+      "seo_description": "免费在线转换 PNG、JPEG、WebP、GIF 格式图片。批量转换，支持质量设置。Web 优化和兼容性必备。"
     },
     "favicon-generator": {
       "name": "Favicon 生成器",
       "description": "从任意图片生成多种尺寸的网站图标。",
       "seo_title": "免费在线 Favicon 生成器",
-      "seo_description": "免费在线生成多种尺寸（16x16、32x32、48x48、64x64）的网站图标。"
+      "seo_description": "免费在线生成多种尺寸（16x16、32x32、48x48、64x64）的网站图标。上传图片并下载图标包。网站品牌必备。"
     },
     "image-cropper": {
       "name": "图片裁剪器",
       "description": "自由裁剪或按固定比例裁剪图片。",
       "seo_title": "免费在线图片裁剪器",
-      "seo_description": "免费在线裁剪图片，支持自定义或预设宽高比。"
+      "seo_description": "免费在线裁剪图片，支持自定义或预设宽高比。支持 1:1、4:3、16:9 和自由裁剪。即时下载裁剪后的图片。"
     },
     "gitignore-generator": {
       "name": ".gitignore 生成器",
       "description": "为各种项目类型和编程语言生成 .gitignore 文件。",
       "seo_title": "免费在线 .gitignore 生成器",
-      "seo_description": "免费在线为 Node.js、Python、Java、Go 等生成 .gitignore 文件。"
+      "seo_description": "免费在线为 Node.js、Python、Java、Go、Ruby 等生成 .gitignore 文件。选择模板并自定义规则。保持仓库整洁。"
     },
     "docker-compose-generator": {
       "name": "Docker Compose 生成器",
       "description": "生成包含 MySQL、Redis、Nginx 等常用服务的 docker-compose.yml 文件。",
       "seo_title": "免费在线 Docker Compose 生成器",
-      "seo_description": "免费在线生成包含 MySQL、PostgreSQL、Redis、Nginx 等服务的 docker-compose.yml 文件。",
+      "seo_description": "免费在线生成包含 MySQL、PostgreSQL、Redis、Nginx 等服务的 docker-compose.yml 文件。可视化编辑器，支持 YAML 预览和验证。",
       "version": "Compose 版本",
       "databases": "数据库",
       "messaging": "消息队列和搜索",
@@ -2029,19 +2029,19 @@
       "name": "package.json 生成器",
       "description": "生成自定义配置和脚本的 package.json 文件。",
       "seo_title": "免费在线 package.json 生成器",
-      "seo_description": "免费在线生成包含自定义脚本、依赖和配置的 package.json 文件。"
+      "seo_description": "免费在线生成包含自定义脚本、依赖项、开发依赖项和配置的 package.json 文件。可视化编辑器，支持 npm 注册表搜索。"
     },
     "json-minifier": {
       "name": "JSON 压缩器",
       "description": "压缩 JSON，移除空白和格式化以减小文件大小。",
       "seo_title": "免费在线 JSON 压缩器",
-      "seo_description": "免费在线压缩 JSON 数据，移除空白减小文件大小。"
+      "seo_description": "免费在线压缩 JSON 数据。删除空白和注释，文件大小最多可减少 60%。API 优化必备。"
     },
     "timezone-converter": {
       "name": "时区转换器",
       "description": "在全球不同时区之间转换时间，附带世界时钟。",
       "seo_title": "免费在线时区转换器",
-      "seo_description": "免费在线在不同时区之间转换时间，显示主要城市时间。",
+      "seo_description": "免费在线转换时区时间。世界时钟，支持主要城市、夏令时和会议规划。全球团队协调必备。",
       "date": "日期",
       "time": "时间",
       "now": "现在",
@@ -2055,7 +2055,7 @@
       "name": "颜色对比度检查器",
       "description": "检查颜色对比度是否符合 WCAG 无障碍标准。",
       "seo_title": "免费在线颜色对比度检查器 - WCAG",
-      "seo_description": "免费在线检查颜色对比度是否符合 WCAG AA 和 AAA 无障碍标准。",
+      "seo_description": "免费在线检查 WCAG AA 和 AAA 无障碍合规的颜色对比度。测试前景和背景颜色，即时显示通过/失败结果。",
       "swapColors": "交换颜色",
       "sampleText": "狐狸的快速棕色跳过了懒惰的狗。",
       "smallText": "用于无障碍测试的小号文本示例。",
@@ -2073,7 +2073,7 @@
       "name": "Markdown 表格生成器",
       "description": "使用可视化编辑器创建和编辑 Markdown 表格，实时预览。",
       "seo_title": "免费在线 Markdown 表格生成器",
-      "seo_description": "免费在线使用可视化编辑器生成 Markdown 表格，支持实时预览和对齐选项。",
+      "seo_description": "免费在线使用可视化编辑器生成 Markdown 表格。实时预览、列对齐和 CSV 导入。GitHub README 和文档必备。",
       "addRow": "+ 添加行",
       "addColumn": "+ 添加列",
       "loadSample": "加载示例",
@@ -2093,7 +2093,7 @@
       "name": "Base58 编码/解码",
       "description": "编码和解码 Base58 字符串，用于比特币和加密货币。",
       "seo_title": "免费在线 Base58 编码解码器",
-      "seo_description": "免费在线编码和解码 Base58 字符串，用于比特币地址。",
+      "seo_description": "免费在线编码和解码 Base58 字符串。用于比特币地址、IPFS 哈希和加密货币钱包。安全的浏览器编码工具。",
       "encodeBtn": "编码为 Base58",
       "decodeBtn": "从 Base58 解码",
       "placeholder": "输入要编码的文本或要解码的 Base58...",
@@ -2105,13 +2105,13 @@
       "name": "Meta 标签生成器",
       "description": "生成 SEO meta 标签、Open Graph 和 Twitter Card 标签。",
       "seo_title": "免费在线 Meta 标签生成器 - SEO 工具",
-      "seo_description": "免费在线生成 SEO meta 标签、Open Graph 和 Twitter Card 标签。"
+      "seo_description": "免费在线生成 SEO meta 标签、Open Graph 和 Twitter Card 标签。预览页面在搜索结果和社交媒体分享中的显示效果。"
     },
     "robots-txt-generator": {
       "name": "robots.txt 生成器",
       "description": "生成 robots.txt 文件以控制搜索引擎爬虫。",
       "seo_title": "免费在线 robots.txt 生成器",
-      "seo_description": "免费在线为您的网站生成 robots.txt 文件。",
+      "seo_description": "免费在线为网站生成 robots.txt 文件。使用允许/禁止规则、站点地图链接和爬取延迟设置控制搜索引擎爬虫。",
       "allowAll": "允许全部",
       "blockAll": "禁止全部",
       "standard": "标准",
@@ -2130,13 +2130,13 @@
       "name": "Open Graph 预览",
       "description": "预览页面在社交媒体分享时的显示效果。",
       "seo_title": "免费在线 Open Graph 预览工具",
-      "seo_description": "免费在线预览 Facebook、Twitter 和 LinkedIn 的社交分享卡片。"
+      "seo_description": "免费在线预览 Facebook、Twitter、LinkedIn 等社交媒体分享卡片。发布前测试 Open Graph 和 Twitter Card meta 标签。"
     },
     "css-grid-generator": {
       "name": "CSS Grid 生成器",
       "description": "可视化 CSS Grid 布局生成器，实时预览。",
       "seo_title": "免费在线 CSS Grid 生成器",
-      "seo_description": "免费在线可视化生成 CSS Grid 布局，支持实时预览。",
+      "seo_description": "免费在线使用实时预览可视化生成 CSS Grid 布局。自定义行、列、间距和对齐。复制 CSS 代码用于响应式网页设计。",
       "columns": "列数",
       "rows": "行数",
       "gap": "间距 (px)",
@@ -2156,19 +2156,19 @@
       "name": "CSS Flexbox 生成器",
       "description": "可视化 CSS Flexbox 布局生成器，实时预览。",
       "seo_title": "免费在线 CSS Flexbox 生成器",
-      "seo_description": "免费在线可视化生成 CSS Flexbox 布局，支持实时预览。"
+      "seo_description": "免费在线使用实时预览可视化生成 CSS Flexbox 布局。自定义方向、换行、对齐属性。即时复制 CSS 代码。"
     },
     "jwt-generator": {
       "name": "JWT 生成器",
       "description": "使用自定义载荷和密钥生成 JSON Web Token。",
       "seo_title": "免费在线 JWT 生成器",
-      "seo_description": "免费在线生成带有自定义声明和 HMAC 签名的 JWT 令牌。"
+      "seo_description": "免费在线生成带有自定义声明、过期时间和 HMAC/RSA 签名的 JWT 令牌。创建用于 API 认证和授权测试的访问令牌。"
     },
     "cron-explainer": {
       "name": "Cron 表达式解释器",
       "description": "将 cron 表达式解释为人类可读格式，显示下次运行时间。",
       "seo_title": "免费在线 Cron 表达式解释器",
-      "seo_description": "免费在线将 cron 表达式转换为人类可读的解释。",
+      "seo_description": "免费在线使用人类可读的解释理解 cron 表达式。解析和验证 cron 语法，显示下次执行时间。任务调度必备。",
       "expression": "Cron 表达式",
       "minute": "分钟",
       "hour": "小时",
@@ -2228,7 +2228,7 @@
       "name": "JSON 转 GraphQL",
       "description": "将 JSON 对象转换为 GraphQL schema 类型。",
       "seo_title": "免费在线 JSON 转 GraphQL 工具",
-      "seo_description": "免费在线将 JSON 转换为 GraphQL schema 类型。",
+      "seo_description": "免费在线将 JSON 转换为 GraphQL 模式类型。从 JSON 数据生成类型定义、查询和变更。GraphQL API 开发必备。",
       "typeName": "类型名称",
       "loadSample": "加载示例",
       "jsonInput": "JSON 输入",
@@ -2244,7 +2244,7 @@
       "mongoQuery": "MongoDB 查询",
       "examples": "示例",
       "seo_title": "免费在线 SQL 转 MongoDB 工具",
-      "seo_description": "免费在线将 SQL 查询转换为 MongoDB 查询。",
+      "seo_description": "免费在线将 SQL 查询转换为 MongoDB 查询。将 SELECT、INSERT、UPDATE、DELETE 转换为 find、insertOne、updateOne。数据库迁移工具。",
       "exampleSimpleSelect": "简单 SELECT",
       "exampleSelectProjection": "带投影的 SELECT",
       "exampleInsert": "INSERT",
@@ -2259,7 +2259,7 @@
       "convert": "转换",
       "copy": "复制",
       "seo_title": "免费在线 JSON 转 C# 工具",
-      "seo_description": "免费在线将 JSON 转换为 C# 类。",
+      "seo_description": "免费在线将 JSON 转换为带有属性、构造函数和 JSON 序列化特性的 C# 类。支持可空类型和嵌套类。",
       "className": "类名",
       "useProperties": "使用属性",
       "useNullable": "可空类型",
@@ -2281,7 +2281,7 @@
       "outputPlaceholder": "Rust 结构体将显示在这里...",
       "errorInvalidJson": "// 错误：无效的 JSON 输入",
       "seo_title": "免费在线 JSON 转 Rust 工具",
-      "seo_description": "免费在线将 JSON 转换为 Rust 结构体。"
+      "seo_description": "免费在线将 JSON 转换为带有 serde derive 宏的 Rust 结构体。为可空字段生成带有 Option 类型的类型安全代码。"
     },
     "json-to-swift": {
       "name": "JSON 转 Swift",
@@ -2296,7 +2296,7 @@
       "outputPlaceholder": "Swift 结构体将显示在这里...",
       "errorInvalidJson": "// 错误：无效的 JSON 输入",
       "seo_title": "免费在线 JSON 转 Swift 工具",
-      "seo_description": "免费在线将 JSON 转换为 Swift 结构体。"
+      "seo_description": "免费在线将 JSON 转换为符合 Codable 协议的 Swift 结构体。生成带有 CodingKeys 的类型安全模型用于 API 集成。"
     },
     "css-minifier": {
       "name": "CSS 压缩器",
@@ -2306,7 +2306,7 @@
       "minify": "压缩",
       "copy": "复制",
       "seo_title": "免费在线 CSS 压缩工具",
-      "seo_description": "免费在线压缩和精简 CSS 代码。"
+      "seo_description": "免费在线压缩 CSS 代码。删除空白、注释并优化选择器。减小文件大小，提高页面加载速度。"
     },
     "js-minifier": {
       "name": "JavaScript 压缩器",
@@ -2318,7 +2318,7 @@
       "seo_title": "免费在线 JavaScript 压缩工具",
       "inputPlaceholder": "输入 JavaScript 代码...",
       "outputPlaceholder": "压缩后的代码将显示在这里...",
-      "seo_description": "免费在线压缩和精简 JavaScript 代码。"
+      "seo_description": "免费在线压缩 JavaScript 代码。删除空白、注释并缩短变量名。减小文件大小，加快加载速度。"
     },
     "box-shadow-generator": {
       "name": "阴影生成器",
@@ -2326,7 +2326,7 @@
       "output": "CSS 输出",
       "copy": "复制 CSS",
       "seo_title": "免费在线 CSS 阴影生成器",
-      "seo_description": "免费在线可视化生成 CSS box-shadow。",
+      "seo_description": "免费在线使用可视化编辑器生成 CSS box-shadow。自定义偏移、模糊、扩展和颜色。一键复制 CSS 代码。",
       "shadowLayers": "阴影图层",
       "addLayer": "+ 添加图层",
       "layer": "图层 {index}",
@@ -2348,7 +2348,7 @@
       "output": "CSS 输出",
       "copy": "复制 CSS",
       "seo_title": "免费在线 CSS 圆角生成器",
-      "seo_description": "免费在线可视化生成 CSS border-radius。",
+      "seo_description": "免费在线使用可视化编辑器生成 CSS border-radius。为每个角创建自定义圆角值。即时复制 CSS 代码。",
       "cornerRadius": "圆角半径",
       "linkAll": "联动全部",
       "topLeft": "左上",
@@ -2373,7 +2373,7 @@
       "convert": "转换",
       "copy": "复制",
       "seo_title": "免费在线文字转 ASCII 艺术工具",
-      "seo_description": "免费在线将文字转换为 ASCII 艺术字。",
+      "seo_description": "免费在线将文本转换为 ASCII 艺术。多种字体样式和字符集可用。适用于终端横幅、注释和创意项目。",
       "placeholder": "输入文字 (A-Z, 0-9, 空格)",
       "character": "字符",
       "charBlock": "█ 方块",
@@ -2390,7 +2390,7 @@
       "output": "CSS 输出",
       "copy": "复制",
       "seo_title": "免费在线颜色色阶生成器",
-      "seo_description": "免费在线从任意颜色生成色阶和色调。",
+      "seo_description": "免费在线从任何颜色生成色调和色度。创建更浅和更深的变体，支持自定义步数。导出到 CSS 或设计工具。",
       "baseColor": "基础颜色",
       "numberOfShades": "色阶数量: {count}",
       "copyCssVariables": "复制 CSS 变量"
@@ -2402,7 +2402,7 @@
       "output": "结果",
       "copy": "复制",
       "seo_title": "免费在线 JSON 扁平化工具",
-      "seo_description": "免费在线扁平化或还原嵌套的 JSON 对象。",
+      "seo_description": "免费在线展平或还原嵌套 JSON 对象。将深层结构转换为点表示法，反之亦然。数据转换和 API 必备。",
       "mode": "模式",
       "flatten": "扁平化",
       "unflatten": "还原",
@@ -2423,7 +2423,7 @@
       "inputPlaceholderDecode": "输入要解码的 Base85...",
       "outputPlaceholder": "结果将显示在这里...",
       "seo_title": "免费在线 Base85 编解码器",
-      "seo_description": "免费在线编码和解码 Base85 数据。"
+      "seo_description": "免费在线编码和解码 Base85 (Ascii85) 数据。用于 PDF 文件、PostScript 和数据压缩。安全的浏览器编码工具。"
     },
     "html-to-markdown": {
       "name": "HTML 转 Markdown",
@@ -2433,14 +2433,14 @@
       "convert": "转换",
       "copy": "复制",
       "seo_title": "免费在线 HTML 转 Markdown 工具",
-      "seo_description": "免费在线将 HTML 转换为 Markdown 格式。"
+      "seo_description": "免费在线将 HTML 转换为 Markdown 格式。保留格式、链接、图片和代码块。适用于将内容迁移到基于 Markdown 的系统。"
     },
     "regex-generator": {
       "name": "正则表达式生成器",
       "description": "生成和测试常用正则表达式。",
       "copy": "复制表达式",
       "seo_title": "免费在线正则表达式生成器",
-      "seo_description": "免费在线生成和测试正则表达式。",
+      "seo_description": "免费在线生成和测试正则表达式。使用可视化助手构建模式并针对示例文本测试。模式匹配任务必备。",
       "commonPatterns": "常用模式",
       "customPattern": "自定义模式",
       "testString": "测试字符串",
@@ -2484,7 +2484,7 @@
       "input": "输入文本",
       "copy": "复制结果",
       "seo_title": "免费在线短链接预览工具",
-      "seo_description": "免费在线预览和分析短链接。",
+      "seo_description": "免费在线预览和分析短链接。展开 bit.ly、tinyurl 等短链接查看目标地址。点击前检查安全性。",
       "note": "注意：由于浏览器安全限制，实际的 URL 展开需要服务器端请求。此工具可识别短链接并显示其域名。",
       "placeholder": "粘贴包含短链接的文本 (bit.ly, tinyurl.com, t.co 等)...",
       "analyzing": "分析中...",
@@ -2501,7 +2501,7 @@
       "description": "以树形结构查看和浏览 JSON 数据。",
       "input": "JSON 输入",
       "seo_title": "免费在线 JSON 查看器",
-      "seo_description": "免费在线以树形结构查看和浏览 JSON 数据。",
+      "seo_description": "免费在线以树形结构查看和探索 JSON 数据。展开和折叠节点、搜索值并复制路径。API 调试必备。",
       "inputPlaceholder": "在此粘贴 JSON...",
       "parseView": "解析并查看",
       "expandAll": "全部展开",
@@ -2516,14 +2516,14 @@
       "convert": "转换",
       "copy": "复制",
       "seo_title": "免费在线 XML 转 JSON 工具",
-      "seo_description": "免费在线将 XML 转换为 JSON 格式。"
+      "seo_description": "免费在线将 XML 转换为 JSON 格式。保留属性、命名空间和嵌套元素。API 集成和数据转换必备。"
     },
     "ip-address-generator": {
       "name": "IP 地址生成器",
       "description": "生成随机 IP 地址（IPv4、IPv6、私有、公共）。",
       "copy": "复制全部",
       "seo_title": "免费在线 IP 地址生成器",
-      "seo_description": "免费在线生成随机 IP 地址。",
+      "seo_description": "免费在线生成随机 IP 地址。支持 IPv4 和 IPv6 格式，可自定义范围。测试、开发和网络模拟必备。",
       "ipType": "IP 类型",
       "ipv4Random": "IPv4（随机）",
       "ipv6": "IPv6",
@@ -2539,7 +2539,7 @@
       "output": "CSS 输出",
       "copy": "复制 CSS",
       "seo_title": "免费在线 CSS 渐变文字生成器",
-      "seo_description": "免费在线使用 CSS 创建渐变文字效果。",
+      "seo_description": "免费在线使用 CSS 创建渐变文本效果。将线性和径向渐变应用于文本，支持实时预览。复制 CSS 代码用于 Web 项目。",
       "text": "文本",
       "color1": "颜色 1",
       "color2": "颜色 2",
@@ -2561,7 +2561,7 @@
       "output": "网站地图输出",
       "copy": "复制",
       "seo_title": "免费在线网站地图生成器",
-      "seo_description": "免费在线为您的网站生成 XML 网站地图。",
+      "seo_description": "免费在线为网站生成 XML 站点地图。添加 URL 及优先级、更改频率和最后修改日期。SEO 和搜索索引必备。",
       "baseUrl": "基础 URL",
       "urls": "URL 列表",
       "addUrl": "+ 添加 URL",
@@ -2581,7 +2581,7 @@
       "outputPlaceholder": "PHP 数组将显示在这里...",
       "errorInvalidJson": "// 错误：无效的 JSON 输入",
       "seo_title": "免费在线 JSON 转 PHP 工具",
-      "seo_description": "免费在线将 JSON 转换为 PHP 数组语法。"
+      "seo_description": "免费在线将 JSON 转换为 PHP 数组语法。生成带有正确转义和格式的关联数组。PHP 后端开发必备。"
     },
     "css-filter-generator": {
       "name": "CSS 滤镜生成器",
@@ -2589,7 +2589,7 @@
       "output": "CSS 输出",
       "copy": "复制 CSS",
       "seo_title": "免费在线 CSS 滤镜生成器",
-      "seo_description": "免费在线可视化生成 CSS 滤镜效果。",
+      "seo_description": "免费在线使用可视化编辑器生成 CSS 滤镜效果。应用模糊、亮度、对比度、灰度等效果。复制 CSS 代码用于项目。",
       "reset": "重置",
       "uploadImage": "上传图片",
       "blur": "模糊",
@@ -2612,7 +2612,7 @@
       "name": "文本差异与补丁",
       "description": "创建和应用文本补丁。",
       "seo_title": "免费在线文本差异与补丁工具",
-      "seo_description": "免费在线创建和应用文本补丁。",
+      "seo_description": "免费在线创建和应用文本补丁。生成统一 diff 格式补丁并应用到文本。版本控制和代码审查必备。",
       "createPatch": "创建补丁",
       "applyPatch": "应用补丁",
       "originalText": "原始文本",
@@ -2628,7 +2628,7 @@
       "description": "检测文本和文件编码。",
       "input": "输入",
       "seo_title": "免费在线编码检测器",
-      "seo_description": "免费在线检测文本和文件编码。",
+      "seo_description": "免费在线检测文本和文件编码。识别 UTF-8、UTF-16、ISO-8859 等字符编码。处理国际文本必备。",
       "placeholder": "粘贴文本以检测编码...",
       "analyzeText": "分析文本",
       "uploadFile": "上传文件",
@@ -2641,67 +2641,67 @@
       "name": "CSS 裁剪路径生成器",
       "description": "可视化创建 CSS clip-path 形状。",
       "seo_title": "免费在线 CSS 裁剪路径生成器",
-      "seo_description": "免费在线可视化创建 CSS clip-path 形状。"
+      "seo_description": "免费在线使用可视化编辑器创建 CSS clip-path 形状。设计多边形、圆形、椭圆和自定义路径。复制 CSS 代码用于创意布局。"
     },
     "uuid-validator": {
       "name": "UUID 验证器",
       "description": "验证和分析 UUID 字符串。",
       "seo_title": "免费在线 UUID 验证器",
-      "seo_description": "免费在线验证和分析 UUID 字符串。"
+      "seo_description": "免费在线验证和分析 UUID 字符串。检查 UUID 的格式、版本和变体。从 UUID v1 和 v7 提取时间戳。调试必备。"
     },
     "text-hash-comparator": {
       "name": "文本哈希比较器",
       "description": "通过哈希值比较文本。",
       "seo_title": "免费在线文本哈希比较器",
-      "seo_description": "免费在线通过哈希值比较文本。"
+      "seo_description": "免费在线通过哈希值比较文本。并排生成和比较 MD5、SHA-1、SHA-256 哈希值。文件完整性验证必备。"
     },
     "json-path-finder": {
       "name": "JSON 路径查找器",
       "description": "从 JSON 数据中查找和复制路径。",
       "seo_title": "免费在线 JSON 路径查找器",
-      "seo_description": "免费在线从 JSON 数据中查找和复制路径。"
+      "seo_description": "免费在线从数据中查找和复制 JSON 路径。点击任何值获取其 JSONPath 表达式。API 开发和数据提取必备。"
     },
     "canvas-drawing": {
       "name": "画布绘图",
       "description": "简单的画笔和橡皮擦绘图工具。",
       "seo_title": "免费在线画布绘图工具",
-      "seo_description": "免费在线简单的画笔和橡皮擦绘图工具。"
+      "seo_description": "免费在线简单绘图工具，支持画笔和橡皮擦。自定义画笔大小、颜色和不透明度。下载作品为 PNG 图片。"
     },
     "json-escape": {
       "name": "JSON 转义/反转义",
       "description": "转义和反转义 JSON 字符串。",
       "seo_title": "免费在线 JSON 转义/反转义工具",
-      "seo_description": "免费在线转义和反转义 JSON 字符串。"
+      "seo_description": "免费在线转义和反转义 JSON 字符串。处理特殊字符、引号和控制字符。在字符串中嵌入 JSON 必备。"
     },
     "css-animation-generator": {
       "name": "CSS 动画生成器",
       "description": "可视化创建 CSS 动画。",
       "seo_title": "免费在线 CSS 动画生成器",
-      "seo_description": "免费在线可视化创建 CSS 动画。"
+      "seo_description": "免费在线使用可视化编辑器创建 CSS 动画。设计关键帧、时间函数和动画属性。复制 CSS 代码用于 Web 项目。"
     },
     "text-case-counter": {
       "name": "文本大小写统计",
       "description": "统计大写、小写和其他字符类型。",
       "seo_title": "免费在线文本大小写统计工具",
-      "seo_description": "免费在线统计大写、小写和其他字符类型。"
+      "seo_description": "免费在线统计大写、小写、数字、空格和特殊字符。获取详细的字符类型统计。文本分析必备。"
     },
     "dns-lookup": {
       "name": "DNS 查询",
       "description": "查询任意域名的 DNS 记录。",
       "seo_title": "免费在线 DNS 查询工具",
-      "seo_description": "免费在线查询任意域名的 DNS 记录。"
+      "seo_description": "免费在线查询任何域名的 DNS 记录。查询 A、AAAA、MX、TXT、NS、CNAME 和 SOA 记录。域名故障排除和验证必备。"
     },
     "image-resizer": {
       "name": "图片尺寸调整",
       "description": "将图片调整为自定义尺寸。",
       "seo_title": "免费在线图片尺寸调整工具",
-      "seo_description": "免费在线将图片调整为自定义尺寸。"
+      "seo_description": "免费在线将图片调整为自定义尺寸。保持宽高比或设置精确的宽度和高度。支持 PNG、JPEG、WebP 格式。即时下载。"
     },
     "ssl-checker": {
       "name": "SSL 证书检查器",
       "description": "检查任意域名的 SSL 证书有效性和详情。",
       "seo_title": "免费在线 SSL 证书检查器",
-      "seo_description": "免费在线检查 SSL 证书有效性和过期日期。",
+      "seo_description": "免费在线检查 SSL 证书有效性和过期日期。验证证书链、颁发者和安全详情。网站安全必备。",
       "checking": "检查中...",
       "check": "检查 SSL",
       "valid": "SSL 证书有效",
@@ -2720,7 +2720,7 @@
       "name": "WHOIS 查询",
       "description": "查询域名注册信息。",
       "seo_title": "免费在线 WHOIS 查询工具",
-      "seo_description": "免费在线查询域名注册和所有权信息。",
+      "seo_description": "免费在线查询域名注册和所有权信息。获取注册商、创建日期、过期日期和域名服务器。域名研究工具。",
       "loading": "查询中...",
       "lookup": "WHOIS 查询",
       "registrar": "注册商",
@@ -2736,7 +2736,7 @@
       "name": "WebSocket 测试器",
       "description": "测试 WebSocket 连接并发送/接收消息。",
       "seo_title": "免费在线 WebSocket 测试器",
-      "seo_description": "免费在线测试 WebSocket 连接，发送和接收消息。",
+      "seo_description": "免费在线测试 WebSocket 连接、发送和接收消息。支持自定义头和协议。实时应用开发必备。",
       "serverUrl": "WebSocket 服务器 URL",
       "connect": "连接",
       "disconnect": "断开",
@@ -2762,7 +2762,7 @@
       "name": "端口扫描器",
       "description": "常用网络端口和服务参考指南。",
       "seo_title": "免费在线端口扫描器和参考",
-      "seo_description": "免费在线查询常用网络端口及其服务。",
+      "seo_description": "免费在线查询常见网络端口及其服务。按端口号或服务名称搜索。网络管理员和开发者参考。",
       "note": "此工具提供常用网络端口及其服务的信息。出于安全原因，实际端口扫描需要服务器端实现。",
       "searchPorts": "搜索端口",
       "searchPlaceholder": "按端口号或服务搜索...",
@@ -2805,25 +2805,25 @@
       "name": "端口参考",
       "description": "常用网络端口和服务参考指南。",
       "seo_title": "网络端口参考指南",
-      "seo_description": "常用网络端口和服务完整参考指南。"
+      "seo_description": "常见网络端口和服务的完整参考指南。浏览知名端口 (0-1023)、注册端口和动态端口。网络必备。"
     },
     "privacy-policy-generator": {
       "name": "隐私政策生成器",
       "description": "为您的网站生成隐私政策。",
       "seo_title": "免费在线隐私政策生成器",
-      "seo_description": "免费在线为您的网站生成自定义隐私政策。"
+      "seo_description": "免费在线为网站生成自定义隐私政策。涵盖数据收集、Cookie 和用户权利。GDPR 和 CCPA 合规模板。"
     },
     "terms-generator": {
       "name": "服务条款生成器",
       "description": "为您的网站生成服务条款。",
       "seo_title": "免费在线服务条款生成器",
-      "seo_description": "免费在线为您的网站生成自定义服务条款。"
+      "seo_description": "免费在线为网站生成自定义服务条款。涵盖用户协议、责任、知识产权和争议解决。"
     },
     "cookie-policy-generator": {
       "name": "Cookie 政策生成器",
       "description": "为您的网站生成 Cookie 政策。",
       "seo_title": "免费在线 Cookie 政策生成器",
-      "seo_description": "免费在线为您的网站生成自定义 Cookie 政策。",
+      "seo_description": "免费在线为网站生成自定义 Cookie 政策。解释 Cookie 类型、用途和同意选项。GDPR 和 CCPA 合规。",
       "websiteName": "网站名称",
       "websiteUrl": "网站 URL",
       "contactEmail": "联系邮箱",
@@ -2847,19 +2847,19 @@
       "convert": "转换为 TSV",
       "copy": "复制输出",
       "seo_title": "免费在线 JSON 转 TSV 转换器",
-      "seo_description": "免费在线将 JSON 数组转换为 TSV 格式。"
+      "seo_description": "免费在线将 JSON 数组转换为 TSV（制表符分隔值）格式。处理嵌套对象和数组。电子表格导入和数据分析必备。"
     },
     "csv-viewer": {
       "name": "CSV 查看器",
       "description": "以表格形式查看和解析 CSV 数据。",
       "seo_title": "免费在线 CSV 查看器",
-      "seo_description": "免费在线以表格形式查看和解析 CSV 数据。"
+      "seo_description": "免费在线以表格格式查看和解析 CSV 数据。支持自定义分隔符、标题和大文件。轻松排序、过滤和搜索数据。"
     },
     "htaccess-generator": {
       "name": ".htaccess 生成器",
       "description": "为 Apache 服务器生成 .htaccess 配置。",
       "seo_title": "免费在线 .htaccess 生成器",
-      "seo_description": "免费在线为 Apache 服务器生成 .htaccess 配置。",
+      "seo_description": "免费在线为 Apache 服务器生成 .htaccess 配置。创建重定向、重写、安全规则和缓存指令。Web 托管必备。",
       "urlSettings": "URL 和 SSL 设置",
       "forceHttps": "强制 HTTPS",
       "forceWww": "强制 WWW 前缀",
@@ -2880,7 +2880,7 @@
       "name": "Nginx 配置生成器",
       "description": "生成 Nginx 服务器配置文件。",
       "seo_title": "免费在线 Nginx 配置生成器",
-      "seo_description": "免费在线生成 Nginx 服务器配置文件。",
+      "seo_description": "免费在线生成 Nginx 服务器配置文件。创建服务器块、SSL 设置、代理规则和缓存。现代 Web 部署必备。",
       "serverName": "服务器名称",
       "rootPath": "根目录路径",
       "proxyPass": "代理转发（可选）",
@@ -2897,7 +2897,7 @@
       "name": "cURL 转换器",
       "description": "将 cURL 命令转换为多种编程语言代码。",
       "seo_title": "免费在线 cURL 转代码转换器",
-      "seo_description": "免费在线将 cURL 命令转换为 JavaScript、Python、PHP、Go 和 Java 代码。",
+      "seo_description": "免费在线将 cURL 命令转换为 JavaScript、Python、PHP、Go 和 Java 代码。解析头、正文和认证。API 集成必备。",
       "curlCommand": "cURL 命令",
       "placeholder": "粘贴您的 cURL 命令...",
       "outputLanguage": "输出语言",
@@ -2914,7 +2914,7 @@
       "name": "阅读时间计算器",
       "description": "计算任何文本或文章的阅读时间。",
       "seo_title": "免费在线阅读时间计算器",
-      "seo_description": "免费在线计算任何文本的阅读时间和字数。",
+      "seo_description": "免费在线计算任何文本的阅读时间和字数。获取平均、慢速和快速读者的估算。内容创作者必备。",
       "pasteText": "粘贴文本",
       "placeholder": "在此粘贴文章、博客帖子或任何文本以计算阅读时间...",
       "readingSpeed": "阅读速度：",
@@ -2940,25 +2940,25 @@
       "name": "Open Graph 生成器",
       "description": "为社交媒体分享生成 Open Graph 元标签。",
       "seo_title": "免费在线 Open Graph 生成器",
-      "seo_description": "免费在线为 Facebook、LinkedIn 等社交平台生成 Open Graph 元标签。"
+      "seo_description": "免费在线为 Facebook、LinkedIn 等社交平台生成 Open Graph meta 标签。预览内容在社交媒体分享时的显示效果。"
     },
     "twitter-card-generator": {
       "name": "Twitter 卡片生成器",
       "description": "为更好的推文预览生成 Twitter 卡片元标签。",
       "seo_title": "免费在线 Twitter 卡片生成器",
-      "seo_description": "免费在线生成 Twitter 卡片元标签以获得丰富的推文预览。"
+      "seo_description": "免费在线生成 Twitter Card meta 标签以获得丰富的推文预览。支持摘要、大图和播放器卡片。优化 Twitter 分享。"
     },
     "mime-type-lookup": {
       "name": "MIME 类型查询",
       "description": "通过扩展名或描述搜索 MIME 类型。",
       "seo_title": "免费在线 MIME 类型查询工具",
-      "seo_description": "免费在线通过文件扩展名或描述搜索 MIME 类型。"
+      "seo_description": "免费在线按文件扩展名或描述搜索 MIME 类型。Web 开发的完整内容类型数据库。HTTP 头必备。"
     },
     "http-status-codes": {
       "name": "HTTP 状态码",
       "description": "所有 HTTP 状态码的参考指南。",
       "seo_title": "HTTP 状态码参考手册",
-      "seo_description": "所有 HTTP 状态码及其含义的完整参考指南。",
+      "seo_description": "所有 HTTP 状态码及其含义的完整参考指南。浏览 1xx、2xx、3xx、4xx 和 5xx 代码的描述。开发者必备。",
       "searchPlaceholder": "搜索状态码...",
       "allCategories": "所有类别",
       "informational": "1xx 信息性",
@@ -2972,7 +2972,7 @@
       "name": "字符串混淆器",
       "description": "使用多种编码方法混淆字符串。",
       "seo_title": "免费在线字符串混淆器",
-      "seo_description": "免费在线使用 Base64、Hex、HTML 实体、URL 编码和 ROT13 混淆字符串。",
+      "seo_description": "免费在线使用 Base64、Hex、HTML 实体、URL 编码和 ROT13 混淆字符串。多层编码保护。用于测试目的。",
       "input": "输入字符串",
       "inputPlaceholder": "输入要混淆的文本...",
       "obfuscate": "混淆",
@@ -2990,7 +2990,7 @@
       "name": "文本清理器",
       "description": "清理和格式化文本，移除空格、空行等。",
       "seo_title": "免费在线文本清理工具",
-      "seo_description": "免费在线清理和格式化文本，移除多余空格、空行、HTML 标签等。",
+      "seo_description": "免费在线清理和格式化文本，删除多余空格、空行、HTML 标签等。规范化空白并修复常见格式问题。",
       "input": "输入文本",
       "clear": "清空",
       "cleanedText": "清理后文本",
@@ -3012,7 +3012,7 @@
       "name": "列表随机化工具",
       "description": "打乱和随机化项目列表。",
       "seo_title": "免费在线列表随机化工具",
-      "seo_description": "免费在线打乱和随机化项目或名称列表。",
+      "seo_description": "免费在线打乱和随机化项目或名称列表。适用于随机选择、抽奖和公平排序。安全随机化。",
       "originalList": "原始列表",
       "randomizedList": "随机化列表",
       "clear": "清除",
@@ -3024,13 +3024,13 @@
       "name": "SQL 生成器",
       "description": "为常用操作生成 SQL 查询语句。",
       "seo_title": "免费在线 SQL 生成器",
-      "seo_description": "免费在线为 SELECT、INSERT、UPDATE、DELETE 和 CREATE TABLE 操作生成 SQL 查询。"
+      "seo_description": "免费在线生成 SELECT、INSERT、UPDATE、DELETE 和 CREATE TABLE 的 SQL 查询。可视化查询构建器，支持语法高亮。"
     },
     "htaccess-to-nginx": {
       "name": "htaccess 转 Nginx 转换器",
       "description": "将 Apache .htaccess 规则转换为 Nginx 配置。",
       "seo_title": "免费在线 htaccess 转 Nginx 转换器",
-      "seo_description": "免费在线将 Apache htaccess 规则转换为 Nginx 配置。",
+      "seo_description": "免费在线将 Apache htaccess 规则转换为 Nginx 配置。转换重定向、重写和安全规则。服务器迁移和部署必备。",
       "htaccessInput": ".htaccess 输入",
       "nginxOutput": "Nginx 输出",
       "loadSample": "加载示例",
@@ -3042,7 +3042,7 @@
       "name": "JavaScript 混淆器",
       "description": "混淆 JavaScript 代码以保护源代码。",
       "seo_title": "免费在线 JavaScript 混淆器",
-      "seo_description": "免费在线混淆和保护 JavaScript 代码。",
+      "seo_description": "免费在线混淆和保护 JavaScript 代码。重命名变量、编码字符串并添加死代码。保护您的知识产权。",
       "inputCode": "JavaScript 输入",
       "obfuscatedCode": "混淆后的输出",
       "loadSample": "加载示例",
@@ -3060,7 +3060,7 @@
       "name": "图片水印",
       "description": "为图片添加文字水印。",
       "seo_title": "免费在线图片水印工具",
-      "seo_description": "免费在线为图片添加文字水印。",
+      "seo_description": "免费在线为图片添加文字水印。自定义字体、大小、颜色、不透明度和位置。保护照片和艺术作品免受未经授权的使用。",
       "uploadImage": "上传图片",
       "watermarkText": "水印文字",
       "textPlaceholder": "输入水印文字...",
@@ -3081,7 +3081,7 @@
       "name": "SVG 转图片",
       "description": "将 SVG 文件转换为 PNG、JPEG 或 WebP 图片。",
       "seo_title": "免费在线 SVG 转图片转换器",
-      "seo_description": "免费在线将 SVG 转换为 PNG、JPEG、WebP。",
+      "seo_description": "免费在线将 SVG 转换为 PNG、JPEG、WebP。设置自定义尺寸和背景颜色。适用于导出矢量图形用于 Web 和打印。",
       "uploadSvg": "上传 SVG 文件",
       "svgCode": "SVG 代码",
       "loadSample": "加载示例",
@@ -3097,7 +3097,7 @@
       "name": "十六进制 Base64 转换器",
       "description": "在十六进制和 Base64 编码之间转换。",
       "seo_title": "免费在线十六进制 Base64 转换器",
-      "seo_description": "免费在线在十六进制和 Base64 之间转换。",
+      "seo_description": "免费在线转换 Hex 和 Base64。将十六进制编码为 Base64 或将 Base64 解码为十六进制。加密和数据编码任务必备。",
       "hexToBase64": "十六进制 → Base64",
       "base64ToHex": "Base64 → 十六进制",
       "swap": "交换",
@@ -3112,7 +3112,7 @@
       "name": "PDF 转 Base64",
       "description": "将 PDF 文件转换为 Base64 编码。",
       "seo_title": "免费在线 PDF 转 Base64 转换器",
-      "seo_description": "免费在线将 PDF 文件转换为 Base64 编码。",
+      "seo_description": "免费在线将 PDF 文件转换为 Base64 编码。在 HTML、JSON 或数据 URI 中嵌入 PDF。安全的浏览器转换，无需上传文件到服务器。",
       "dropzone": "拖放 PDF 文件到此处或点击上传",
       "acceptedFormat": "支持格式：PDF",
       "errorNotPdf": "请选择 PDF 文件",
@@ -3129,7 +3129,7 @@
       "name": "音频转 Base64",
       "description": "将音频文件转换为 Base64 编码。",
       "seo_title": "免费在线音频转 Base64 转换器",
-      "seo_description": "免费在线将音频文件转换为 Base64 编码。",
+      "seo_description": "免费在线将音频文件转换为 Base64 编码。支持 MP3、WAV、OGG 格式。在 HTML、JSON 或数据 URI 中嵌入音频。",
       "dropzone": "拖放音频文件到此处或点击上传",
       "acceptedFormats": "支持：MP3、WAV、OGG、WebM、AAC、FLAC",
       "errorNotAudio": "请选择音频文件",
@@ -3145,7 +3145,7 @@
       "name": "视频转 Base64",
       "description": "将视频文件转换为 Base64 编码。",
       "seo_title": "免费在线视频转 Base64 转换器",
-      "seo_description": "免费在线将视频文件转换为 Base64 编码。",
+      "seo_description": "免费在线将视频文件转换为 Base64 编码。支持 MP4、WebM 等格式。在 HTML、JSON 或数据 URI 中嵌入视频。浏览器处理。",
       "dropzone": "拖放视频文件到此处或点击上传",
       "maxSize": "最大文件大小：10MB",
       "errorNotVideo": "请选择视频文件",
@@ -3164,7 +3164,7 @@
       "name": "文件大小计算器",
       "description": "在不同文件大小单位之间转换。",
       "seo_title": "免费在线文件大小计算器",
-      "seo_description": "免费在线在字节、KB、MB、GB、TB 等单位之间转换。",
+      "seo_description": "免费在线转换字节、KB、MB、GB、TB 等单位。使用二进制 (1024) 或十进制 (1000) 单位计算文件大小。存储规划必备。",
       "inputValue": "输入值",
       "unit": "单位",
       "base": "进制",
@@ -3182,7 +3182,7 @@
       "name": "ASCII 码表",
       "description": "完整的 ASCII 字符参考表。",
       "seo_title": "ASCII 码表 - 字符编码参考",
-      "seo_description": "包含十进制、十六进制、八进制和二进制值的完整 ASCII 表。",
+      "seo_description": "完整的 ASCII 表，包含十进制、十六进制、八进制和二进制值。浏览所有 128 个 ASCII 字符及其描述。程序员必备参考。",
       "searchPlaceholder": "按字符、编码或描述搜索...",
       "showExtended": "显示扩展 ASCII（128-255）",
       "selectedChar": "选中的字符",
@@ -3205,7 +3205,7 @@
       "name": "文本转十六进制",
       "description": "文本与十六进制相互转换。",
       "seo_title": "免费在线文本转十六进制转换器",
-      "seo_description": "免费在线将文本转换为十六进制编码，或将十六进制解码为文本。",
+      "seo_description": "免费在线将文本转换为十六进制编码，或将十六进制解码为文本。支持 UTF-8 和 ASCII 编码。调试和数据分析必备。",
       "encoding": "编码",
       "separator": "分隔符",
       "sepSpace": "空格",
@@ -3230,7 +3230,7 @@
       "name": "CSS 变量生成器",
       "description": "使用可视化编辑器生成 CSS 自定义属性（变量）。",
       "seo_title": "免费在线 CSS 变量生成器",
-      "seo_description": "使用可视化颜色选择器生成 CSS 自定义属性，并导出为 CSS、SCSS 或 JavaScript。",
+      "seo_description": "使用可视化颜色选择器生成 CSS 自定义属性，导出为 CSS、SCSS 或 JavaScript。创建设计令牌以实现项目间一致的主题。",
       "prefix": "前缀",
       "prefixPlaceholder": "例如 app",
       "scope": "作用域",
@@ -3257,7 +3257,7 @@
       "name": "Lorem Picsum",
       "description": "从 Picsum Photos 生成随机占位图片。",
       "seo_title": "免费在线 Lorem Picsum 图片生成器",
-      "seo_description": "生成具有自定义尺寸、灰度和模糊效果的随机占位图片。",
+      "seo_description": "生成自定义尺寸、灰度和模糊效果的随机占位图片。适用于模型、线框图和网页设计原型。",
       "width": "宽度",
       "height": "高度",
       "seed": "种子",
@@ -3278,7 +3278,7 @@
       "name": "正则转义",
       "description": "转义或反转义正则表达式特殊字符。",
       "seo_title": "免费在线正则转义工具",
-      "seo_description": "免费在线转义正则表达式中的特殊字符。",
+      "seo_description": "免费在线转义正则表达式中使用的特殊字符。处理元字符如 . * + ? ^ $ { } [ ] \\ | ( )。模式构建必备。",
       "mode": "模式",
       "escape": "转义",
       "unescape": "反转义",
@@ -3300,7 +3300,7 @@
       "name": "HTML 转文本",
       "description": "将 HTML 转换为纯文本，去除所有标签。",
       "seo_title": "免费在线 HTML 转文本转换器",
-      "seo_description": "将 HTML 转换为纯文本，去除所有标签并保留内容结构。",
+      "seo_description": "将 HTML 转换为纯文本，删除所有标签并保留内容结构。智能处理链接、列表和表格。内容提取必备。",
       "preserveLinks": "保留链接为 (URL)",
       "preserveLineBreaks": "保留换行",
       "preserveLists": "保留列表格式",
@@ -3321,7 +3321,7 @@
       "name": "二进制/十进制转换",
       "description": "在二进制、十进制和十六进制之间相互转换。",
       "seo_title": "免费在线二进制十进制转换器",
-      "seo_description": "在二进制、十进制和十六进制之间轻松转换数字。",
+      "seo_description": "免费在线转换二进制到十进制、十进制到二进制、二进制到十六进制、十六进制到二进制。支持大数字和即时转换。",
       "mode": "转换模式",
       "binToDec": "二进制 → 十进制",
       "decToBin": "十进制 → 二进制",
@@ -3349,7 +3349,7 @@
       "name": "八进制转换器",
       "description": "在八进制和其他进制之间转换。",
       "seo_title": "免费在线八进制转换器",
-      "seo_description": "在八进制、十进制、二进制和十六进制之间转换。",
+      "seo_description": "免费在线将八进制转换为十进制、二进制和十六进制。也可从十进制、二进制或十六进制转换为八进制。Unix 权限和编程必备。",
       "mode": "转换模式",
       "octToDec": "八进制 → 十进制",
       "decToOct": "十进制 → 八进制",
@@ -3376,7 +3376,7 @@
       "name": "北约音标字母转换",
       "description": "将文本转换为北约音标字母（Alpha、Bravo、Charlie...）。",
       "seo_title": "免费在线北约音标字母转换器",
-      "seo_description": "将文本转换为北约/ICAO音标字母。",
+      "seo_description": "免费在线将字母和数字转换为 NATO 音标字母单词。Alpha、Bravo、Charlie 格式用于清晰通信。无线电和电话必备。",
       "separator": "分隔符",
       "sepNewline": "换行",
       "sepDash": "短横线",
@@ -3397,7 +3397,7 @@
       "name": "CRC32 计算器",
       "description": "计算文本或数据的 CRC32 校验和。",
       "seo_title": "免费在线 CRC32 计算器",
-      "seo_description": "快速计算任意文本的 CRC32 校验和。",
+      "seo_description": "在浏览器中计算文本或上传文件的 CRC32 校验和。验证数据完整性并检测传输错误。安全的浏览器处理。",
       "inputMode": "输入模式",
       "modeText": "文本",
       "modeFile": "文件",
@@ -3420,7 +3420,7 @@
       "name": "MAC 地址生成器",
       "description": "生成随机 MAC 地址，支持多种格式。",
       "seo_title": "免费在线 MAC 地址生成器",
-      "seo_description": "生成随机 MAC 地址，支持多种格式和选项。",
+      "seo_description": "生成带有前缀、分隔符和位标志选项的随机 MAC 地址。支持单播/多播和通用/本地标志。测试和开发必备。",
       "generate": "生成",
       "copy": "复制",
       "count": "生成数量",
@@ -3452,7 +3452,7 @@
       "name": "cURL 转代码",
       "description": "将 cURL 命令转换为多种编程语言代码。",
       "seo_title": "免费在线 cURL 转代码转换器",
-      "seo_description": "免费在线将 cURL 命令转换为 JavaScript、Python、PHP、Go、Java、C#、Ruby 和 Rust 代码。",
+      "seo_description": "免费在线将 cURL 命令转换为 JavaScript、Python、PHP、Go、Java、C#、Ruby 和 Rust 代码。解析带有头、正文和认证的请求。",
       "curlInput": "cURL 命令",
       "placeholder": "粘贴您的 cURL 命令...",
       "targetLanguage": "目标语言",
@@ -3475,7 +3475,7 @@
       "name": "IP 地址验证器",
       "description": "验证 IPv4 和 IPv6 地址，显示详细信息。",
       "seo_title": "免费在线 IP 地址验证器",
-      "seo_description": "在线验证 IPv4 和 IPv6 地址，检查是否为私有、回环或多播地址。",
+      "seo_description": "免费在线验证 IPv4 和 IPv6 地址。检查 IP 是否为私有、回环、多播或保留地址。获取任何 IP 格式的详细信息。",
       "inputLabel": "IP 地址",
       "placeholder": "输入 IP 地址（如 192.168.1.1）",
       "validate": "验证",
@@ -3497,7 +3497,7 @@
       "name": "JSON 合并器",
       "description": "使用不同策略合并多个 JSON 对象。",
       "seo_title": "免费在线 JSON 合并器",
-      "seo_description": "在线合并 JSON 对象，支持浅合并、深合并和数组连接。",
+      "seo_description": "使用浅合并、深合并或连接策略在线合并 JSON 对象。将多个 JSON 文件合并为一个。智能处理数组和嵌套对象。",
       "strategy": "合并策略",
       "shallow": "浅合并",
       "deep": "深合并",
@@ -3514,7 +3514,7 @@
       "name": "文本模板",
       "description": "用值替换文本模板中的变量。",
       "seo_title": "免费在线文本模板引擎",
-      "seo_description": "简单的文本模板引擎，用值替换 {{ 变量 }}。",
+      "seo_description": "简单的文本模板引擎。用数据中的值替换 {{ 变量 }}。支持循环、条件和嵌套对象。生成动态内容。",
       "template": "模板",
       "templatePlaceholder": "输入包含 {{ 变量 }} 的模板...",
       "syntaxHint": "使用 {{ 变量名 }} 语法定义变量",
@@ -3528,7 +3528,7 @@
       "name": "进制计算器",
       "description": "在不同进制下进行计算。",
       "seo_title": "免费在线进制计算器",
-      "seo_description": "支持二进制、八进制、十进制和十六进制计算，包括算术和位运算。",
+      "seo_description": "在二进制、八进制、十进制和十六进制中计算。支持算术和位运算如 AND、OR、XOR、NOT、移位。底层编程必备。",
       "base": "进制",
       "binary": "二进制",
       "octal": "八进制",
@@ -3548,7 +3548,7 @@
       "name": "颜色名称查找",
       "description": "查找任意颜色值最接近的颜色名称。",
       "seo_title": "免费在线颜色名称查找",
-      "seo_description": "查找任意十六进制颜色值最接近的命名颜色。",
+      "seo_description": "为任何十六进制颜色值查找最接近的命名颜色。浏览 CSS 颜色名称、X11 颜色和网页安全颜色。设计师和无障碍合规必备。",
       "inputLabel": "颜色",
       "find": "查找颜色名称",
       "closestColors": "最接近的颜色",
@@ -3558,7 +3558,7 @@
       "name": "字符频率分析器",
       "description": "分析文本中的字符频率。",
       "seo_title": "免费在线字符频率分析器",
-      "seo_description": "分析文本中字符的频率和分布。",
+      "seo_description": "分析文本中的字符频率和分布。获取每个字符的计数、百分比和可视化图表。加密和文本分析必备。",
       "inputLabel": "文本",
       "placeholder": "输入要分析的文本...",
       "ignoreSpaces": "忽略空格",
@@ -3571,7 +3571,7 @@
       "name": "JSON 转 Dart",
       "description": "将 JSON 转换为 Dart 类，包含 fromJson 和 toJson 方法。",
       "seo_title": "免费在线 JSON 转 Dart 转换器",
-      "seo_description": "将 JSON 转换为 Dart 类代码，包含工厂构造函数和序列化方法。",
+      "seo_description": "将 JSON 转换为带有工厂构造函数和序列化方法的 Dart 类代码。支持空安全和嵌套类。Flutter 应用开发必备。",
       "className": "类名",
       "convert": "转换"
     },
@@ -3579,7 +3579,7 @@
       "name": "SQL 转 JSON",
       "description": "将 SQL INSERT 语句转换为 JSON 数组。",
       "seo_title": "免费在线 SQL 转 JSON 转换器",
-      "seo_description": "将 SQL INSERT 语句转换为 JSON 数组格式。",
+      "seo_description": "将 SQL INSERT 语句转换为 JSON 数组格式。解析多个 INSERT 语句并提取数据。数据库迁移和数据导出任务必备。",
       "sqlInput": "SQL INSERT 语句",
       "placeholder": "输入 SQL INSERT 语句...",
       "convert": "转换",
@@ -3604,7 +3604,7 @@
       "name": "JSON 格式化工具",
       "description": "格式化和美化 JSON 数据，支持语法高亮。验证 JSON 并修复常见错误。",
       "seo_title": "免费在线 JSON 格式化与验证工具",
-      "seo_description": "免费在线格式化、美化和验证 JSON 数据。语法高亮，错误检测，轻松复制。",
+      "seo_description": "免费在线格式化、美化和验证 JSON 数据。支持语法高亮、错误检测、自动格式化和一键复制。开发者和 API 测试的完美工具。",
       "inputPlaceholder": "{\"key\": \"value\"}",
       "outputPlaceholder": "格式化后的 JSON 将显示在这里..."
     },
@@ -3612,92 +3612,92 @@
       "name": "Base64 编解码",
       "description": "即时将文本编码为 Base64 或将 Base64 解码为文本。",
       "seo_title": "免费在线 Base64 编码解码工具",
-      "seo_description": "免费在线编码和解码 Base64 字符串。快速、安全，在浏览器中运行。"
+      "seo_description": "免费在线即时编码文本为 Base64 或解码 Base64 字符串。安全的浏览器工具，无需上传数据。适用于开发者和数据编码任务。"
     },
     "uuid-generator": {
       "name": "UUID 生成器",
       "description": "即时生成随机 UUID (v4)。支持单个或批量复制。",
       "seo_title": "免费在线 UUID 生成器 - 生成 UUID v4",
-      "seo_description": "免费在线生成随机 UUID v4 字符串。支持批量生成。"
+      "seo_description": "免费在线生成随机 UUID v4 字符串。支持批量生成多个 UUID。安全、快速，完全在浏览器中运行。适用于开发者和数据库 ID 生成。"
     },
     "url-encoder": {
       "name": "URL 编解码",
       "description": "安全地编码或解码 URL 和查询字符串。",
       "seo_title": "免费在线 URL 编码解码工具",
-      "seo_description": "免费在线编码和解码 URL。安全处理特殊字符。"
+      "seo_description": "免费在线编码和解码 URL 及查询字符串。安全处理特殊字符，适用于 Web 开发。快速、安全的浏览器工具。API 和 Web 开发者必备。"
     },
     "password-generator": {
       "name": "密码生成器",
       "description": "生成强大、安全的随机密码，支持自定义选项。",
       "seo_title": "免费在线强密码生成器",
-      "seo_description": "免费在线生成安全随机密码。自定义长度、字符和复杂度。",
+      "seo_description": "免费在线生成安全随机密码。自定义长度，包含大小写字母、数字和符号。为账户和安全创建强密码。不存储或上传任何数据。",
       "selectOption": "请至少选择一个选项"
     },
     "hash-generator": {
       "name": "哈希生成器",
       "description": "从文本生成 MD5、SHA-1、SHA-256 哈希值。",
       "seo_title": "免费在线 MD5、SHA 哈希生成器",
-      "seo_description": "免费在线生成 MD5、SHA-1、SHA-256、SHA-512 哈希值。"
+      "seo_description": "免费在线生成 MD5、SHA-1、SHA-256、SHA-512 哈希值。安全的浏览器哈希工具，无需上传数据。适用于文件完整性验证和安全应用。"
     },
     "qr-generator": {
       "name": "二维码生成器",
       "description": "从文本或 URL 生成二维码。下载为 PNG 格式。",
       "seo_title": "免费在线二维码生成器",
-      "seo_description": "免费在线从文本或 URL 生成二维码。下载为 PNG 图片。"
+      "seo_description": "免费在线从文本、URL 或数据生成二维码。下载高质量 PNG 图片。自定义大小和纠错级别。适用于营销、分享链接和名片制作。"
     },
     "color-converter": {
       "name": "颜色转换器",
       "description": "在 HEX、RGB 和 HSL 格式之间转换颜色。",
       "seo_title": "免费在线颜色转换器 - HEX RGB HSL",
-      "seo_description": "免费在线在 HEX、RGB 和 HSL 格式之间转换颜色。"
+      "seo_description": "免费在线转换 HEX、RGB、HSL、HSV 颜色格式。即时颜色格式转换，实时预览。Web 设计师、开发者和数字艺术家的必备工具。"
     },
     "timestamp-converter": {
       "name": "时间戳转换器",
       "description": "将 Unix 时间戳转换为可读日期，反之亦然。",
       "seo_title": "免费在线 Unix 时间戳转换器",
-      "seo_description": "免费在线将 Unix 时间戳转换为日期，或将日期转换为时间戳。"
+      "seo_description": "免费在线将 Unix 时间戳转换为可读日期，或将日期转换为时间戳。支持多种日期格式和时区。开发者处理 API 和数据库的必备工具。"
     },
     "word-counter": {
       "name": "字数统计",
       "description": "统计文本中的字数、字符数、句子数和段落数。",
       "seo_title": "免费在线字数统计和字符计数器",
-      "seo_description": "免费在线统计字数、字符数、句子数和段落数。"
+      "seo_description": "免费在线统计字数、字符数、句子数和段落数。获取阅读时间估算和详细文本统计。作家和编辑的完美工具。"
     },
     "case-converter": {
       "name": "大小写转换",
       "description": "将文本转换为大写、小写、标题格式等。",
       "seo_title": "免费在线文本大小写转换器",
-      "seo_description": "免费在线转换文本大小写。大写、小写、标题格式、句子格式。"
+      "seo_description": "免费在线转换文本大小写。转换为大写、小写、标题格式、句子格式、驼峰命名和下划线命名。开发者和作家的必备工具。"
     },
     "html-encoder": {
       "name": "HTML 编解码",
       "description": "将特殊字符编码为 HTML 实体或解码回来。",
       "seo_title": "免费在线 HTML 编码解码器",
-      "seo_description": "免费在线编码和解码 HTML 实体。安全处理特殊字符。"
+      "seo_description": "免费在线编码和解码 HTML 实体。安全处理特殊字符用于 Web 开发。防止 XSS 攻击并正确显示 HTML。"
     },
     "markdown-preview": {
       "name": "Markdown 预览",
       "description": "编写 Markdown 并实时预览。导出为 HTML。",
       "seo_title": "免费在线 Markdown 编辑器和预览",
-      "seo_description": "免费在线编写和预览 Markdown。实时预览和 HTML 导出。"
+      "seo_description": "免费在线编写和预览 Markdown。实时预览，支持语法高亮和 HTML 导出。适用于文档、README 文件和博客文章。"
     },
     "lorem-ipsum": {
       "name": "Lorem Ipsum 生成器",
       "description": "为您的设计和原型生成占位文本。",
       "seo_title": "免费在线 Lorem Ipsum 生成器",
-      "seo_description": "免费在线生成 Lorem Ipsum 占位文本。段落、句子或单词。"
+      "seo_description": "免费在线生成 Lorem Ipsum 占位文本。为模型和设计创建段落、句子或单词。Web 设计师和开发者的必备工具。"
     },
     "regex-tester": {
       "name": "正则表达式测试",
       "description": "实时测试正则表达式，支持匹配高亮。",
       "seo_title": "免费在线正则表达式测试和调试器",
-      "seo_description": "免费在线测试和调试正则表达式。实时匹配和高亮显示。"
+      "seo_description": "免费在线测试和调试正则表达式。实时匹配，支持语法高亮和匹配组。开发者和数据处理的必备工具。"
     },
     "jwt-decoder": {
       "name": "JWT 解码器",
       "description": "解码和查看 JWT Token 的 Header、Payload 和签名信息。",
       "seo_title": "免费在线 JWT 解码器",
-      "seo_description": "免费在线解码 JWT Token，查看 Header、Payload 和过期时间。",
+      "seo_description": "免费在线解码和检查 JWT（JSON Web Token）。查看头部、载荷和签名，无需验证。调试 Web 应用程序身份验证和 API 安全的必备工具。",
       "enterToken": "请输入 JWT Token",
       "invalidFormat": "无效的 JWT 格式",
       "invalidToken": "无效的 JWT Token",
@@ -3712,19 +3712,19 @@
       "name": "文本对比",
       "description": "比较两段文本的差异，高亮显示添加和删除的内容。",
       "seo_title": "免费在线文本对比工具",
-      "seo_description": "免费在线比较两段文本的差异，高亮显示变化内容。"
+      "seo_description": "免费在线比较两段文本。高亮显示添加、删除和更改的内容，支持并排视图。代码审查和文档比较的必备工具。"
     },
     "json-to-csv": {
       "name": "JSON 转 CSV",
       "description": "将 JSON 数据转换为 CSV 格式，或将 CSV 转换为 JSON。",
       "seo_title": "免费在线 JSON 转 CSV 工具",
-      "seo_description": "免费在线将 JSON 转换为 CSV，或将 CSV 转换为 JSON。"
+      "seo_description": "免费在线将 JSON 转换为 CSV 或 CSV 转换为 JSON。处理嵌套对象和数组，支持自定义分隔符。适用于数据导出和电子表格工作。"
     },
     "image-to-base64": {
       "name": "图片转 Base64",
       "description": "将图片转换为 Base64 编码，可用于 HTML 和 CSS。",
       "seo_title": "免费在线图片转 Base64 工具",
-      "seo_description": "免费在线将图片转换为 Base64 编码字符串。",
+      "seo_description": "免费在线将图片转换为 Base64 编码字符串。支持 PNG、JPG、GIF 和 SVG 格式。适用于在 CSS、HTML 和 JSON 中嵌入图片。",
       "uploadHint": "点击上传或拖放文件",
       "supportedFormats": "PNG, JPG, GIF, SVG, WebP",
       "copyDataUrl": "复制 Data URL",
@@ -3737,7 +3737,7 @@
       "name": "Cron 表达式生成器",
       "description": "可视化生成和解析 Cron 定时任务表达式。",
       "seo_title": "免费在线 Cron 表达式生成器",
-      "seo_description": "免费在线生成和解析 Cron 表达式，支持常用预设。",
+      "seo_description": "免费在线生成和解析 cron 表达式。可视化编辑器，包含常用预设和人类可读描述。任务调度和自动化的必备工具。",
       "presets": "快速预设",
       "minute": "分钟 (0-59)",
       "hour": "小时 (0-23)",
@@ -3776,19 +3776,19 @@
       "name": "文本转 Slug",
       "description": "将文本转换为 URL 友好的 slug 格式。",
       "seo_title": "免费在线文本转 Slug 工具",
-      "seo_description": "免费在线将文本转换为 URL 友好的 slug 格式。"
+      "seo_description": "免费在线将文本转换为 URL 友好的 slug 格式。删除特殊字符，处理 unicode，创建 SEO 友好的 URL。Web 开发必备工具。"
     },
     "number-base-converter": {
       "name": "进制转换器",
       "description": "在二进制、八进制、十进制和十六进制之间转换数字。",
       "seo_title": "免费在线进制转换器",
-      "seo_description": "免费在线转换二进制、八进制、十进制、十六进制数字。"
+      "seo_description": "免费在线转换二进制、八进制、十进制和十六进制。支持大数字和即时转换。程序员和学生的必备工具。"
     },
     "json-path-tester": {
       "name": "JSONPath 测试器",
       "description": "针对 JSON 数据测试和评估 JSONPath 表达式。",
       "seo_title": "免费在线 JSONPath 测试器",
-      "seo_description": "免费在线测试和调试 JSONPath 表达式。",
+      "seo_description": "免费在线测试和调试 JSONPath 表达式。实时结果和语法高亮查询 JSON 数据。API 开发和数据提取的必备工具。",
       "jsonData": "JSON 数据",
       "jsonPlaceholder": "{\"name\": \"John\", \"users\": [{\"name\": \"Alice\"}, {\"name\": \"Bob\"}]}",
       "expression": "JSONPath 表达式",
@@ -3804,19 +3804,19 @@
       "name": "XML 格式化",
       "description": "格式化和压缩 XML 数据，验证 XML 语法。",
       "seo_title": "免费在线 XML 格式化工具",
-      "seo_description": "免费在线格式化、美化和压缩 XML 数据。"
+      "seo_description": "免费在线格式化、美化和压缩 XML 数据。语法高亮、错误检测和树形视图。API 开发和配置文件的必备工具。"
     },
     "chinese-converter": {
       "name": "繁简体转换",
       "description": "将简体中文转换为繁体中文，或将繁体转换为简体。",
       "seo_title": "免费在线繁简体转换工具",
-      "seo_description": "免费在线转换简体中文和繁体中文。"
+      "seo_description": "免费在线转换简体中文和繁体中文。准确的字符转换，支持词组。中文内容本地化的必备工具。"
     },
     "unit-converter": {
       "name": "单位换算器",
       "description": "在长度、重量、温度、面积等单位之间转换。",
       "seo_title": "免费在线单位换算器",
-      "seo_description": "免费在线转换各种单位：长度、重量、温度、面积、体积等。",
+      "seo_description": "免费在线转换各种单位：长度、重量、温度、面积、体积、速度和数据。快速参考表和所有测量的即时转换。",
       "enterValue": "输入数值",
       "swapUnits": "交换单位"
     },
@@ -3824,19 +3824,19 @@
       "name": "渐变色生成器",
       "description": "可视化创建 CSS 渐变色，支持线性和径向渐变。",
       "seo_title": "免费在线 CSS 渐变色生成器",
-      "seo_description": "免费在线创建 CSS 渐变色，生成 CSS 和 Tailwind 代码。"
+      "seo_description": "免费在线创建 CSS 渐变。生成线性和径向渐变，输出 CSS 和 Tailwind 代码。可视化编辑器，支持颜色选择器和预设模板。"
     },
     "unicode-converter": {
       "name": "Unicode 编解码",
       "description": "在文本和 Unicode 编码之间转换，支持多种格式。",
       "seo_title": "免费在线 Unicode 编解码工具",
-      "seo_description": "免费在线转换文本和 Unicode 编码，支持 HTML 和 CSS 格式。"
+      "seo_description": "免费在线转换文本和 Unicode 编码。支持 HTML 实体、CSS 转义序列和各种 Unicode 格式。国际化的必备工具。"
     },
     "code-minifier": {
       "name": "代码压缩",
       "description": "压缩 HTML、CSS、JavaScript 代码，减小文件体积。",
       "seo_title": "免费在线代码压缩工具",
-      "seo_description": "免费在线压缩 HTML、CSS、JS 代码。",
+      "seo_description": "免费在线压缩 HTML、CSS 和 JavaScript 代码。减小文件大小，提高页面加载速度。Web 性能优化和部署的必备工具。",
       "codeType": "代码类型",
       "placeholder": "输入 {type} 代码进行压缩...",
       "original": "原始",
@@ -3847,187 +3847,187 @@
       "name": "SQL 格式化",
       "description": "格式化和美化 SQL 查询语句，提高可读性。",
       "seo_title": "免费在线 SQL 格式化工具",
-      "seo_description": "免费在线格式化和美化 SQL 语句。"
+      "seo_description": "免费在线格式化和美化 SQL 查询。支持多种 SQL 方言，语法高亮和缩进。数据库开发和调试的必备工具。"
     },
     "pinyin-converter": {
       "name": "汉字转拼音",
       "description": "将中文汉字转换为拼音，支持带声调和不带声调。",
       "seo_title": "免费在线汉字转拼音工具",
-      "seo_description": "免费在线将中文汉字转换为拼音。"
+      "seo_description": "免费在线将中文字符转换为拼音。支持声调标记和数字声调。中文学习和发音指南的必备工具。"
     },
     "color-picker": {
       "name": "在线取色器",
       "description": "选择颜色并获取 HEX、RGB、HSL 等多种格式的颜色值。",
       "seo_title": "免费在线取色器",
-      "seo_description": "免费在线选择颜色，获取多种格式颜色值。"
+      "seo_description": "免费在线选择颜色并获取 HEX、RGB、HSL 格式的颜色值。可视化颜色选择器，支持预设调色板和最近使用的颜色。设计师必备。"
     },
     "aspect-ratio": {
       "name": "宽高比计算器",
       "description": "计算图片或视频的宽高比，支持等比例缩放。",
       "seo_title": "免费在线宽高比计算器",
-      "seo_description": "免费在线计算宽高比，支持等比例缩放。"
+      "seo_description": "免费在线计算宽高比并按比例调整图片大小。支持 16:9、4:3、1:1 等常见比例。视频编辑和响应式设计必备。"
     },
     "css-beautifier": {
       "name": "CSS 格式化",
       "description": "格式化和美化 CSS 代码，支持压缩和美化。",
       "seo_title": "免费在线 CSS 格式化工具",
-      "seo_description": "免费在线格式化、美化和压缩 CSS 代码。"
+      "seo_description": "免费在线格式化、美化和压缩 CSS 代码。语法高亮，支持自定义缩进。Web 开发者和前端优化必备。"
     },
     "js-beautifier": {
       "name": "JavaScript 格式化",
       "description": "格式化和美化 JavaScript 代码，支持压缩和美化。",
       "seo_title": "免费在线 JavaScript 格式化工具",
-      "seo_description": "免费在线格式化、美化和压缩 JavaScript 代码。"
+      "seo_description": "免费在线格式化、美化和压缩 JavaScript 代码。语法高亮，支持自定义缩进。Web 开发者和代码优化必备。"
     },
     "html-preview": {
       "name": "HTML 在线预览",
       "description": "实时预览 HTML 代码效果，支持 CSS 和 JavaScript。",
       "seo_title": "免费在线 HTML 预览工具",
-      "seo_description": "免费在线实时预览 HTML 代码效果。"
+      "seo_description": "免费在线实时预览 HTML 代码。输入时即时更新的实时渲染。Web 开发、学习 HTML 和快速原型设计必备。"
     },
     "ip-lookup": {
       "name": "IP 地址查询",
       "description": "查询 IP 地址的地理位置、运营商等信息。",
       "seo_title": "免费在线 IP 地址查询工具",
-      "seo_description": "免费在线查询 IP 地址的地理位置和运营商信息。"
+      "seo_description": "免费在线查询 IP 地址地理位置。获取国家、城市、ISP、时区和坐标。网络故障排除和安全分析必备。"
     },
     "morse-code": {
       "name": "摩斯密码转换",
       "description": "将文本转换为摩斯密码，或将摩斯密码转换为文本。",
       "seo_title": "免费在线摩斯密码转换器",
-      "seo_description": "免费在线转换摩斯密码和文本，支持播放声音。"
+      "seo_description": "免费在线将文本转换为摩尔斯电码或将摩尔斯电码转换为文本。支持音频播放，可调节速度。学习和通信爱好者必备。"
     },
     "random-generator": {
       "name": "随机数生成器",
       "description": "生成指定范围内的随机数，支持批量生成和去重。",
       "seo_title": "免费在线随机数生成器",
-      "seo_description": "免费在线生成随机数，支持自定义范围和批量生成。"
+      "seo_description": "免费在线生成随机数。支持自定义范围、唯一数字和多个结果。游戏、抽奖和随机选择任务必备。"
     },
     "text-reverser": {
       "name": "文本反转",
       "description": "反转文本的字符、单词或行顺序。",
       "seo_title": "免费在线文本反转工具",
-      "seo_description": "免费在线反转文本字符、单词或行。"
+      "seo_description": "免费在线反转文本字符、单词或行。多种反转模式，即时预览。谜题、编码和文本处理任务必备。"
     },
     "line-counter": {
       "name": "行数统计",
       "description": "统计文本行数，支持去重、删除空行和排序。",
       "seo_title": "免费在线行数统计工具",
-      "seo_description": "免费在线统计文本行数，支持去重和排序。"
+      "seo_description": "免费在线统计行数、删除重复行和排序文本。获取总行数、空行数和唯一行数统计。数据清理和文本处理必备。"
     },
     "string-escape": {
       "name": "字符串转义",
       "description": "转义或反转义字符串，支持 JSON、HTML、URL、JavaScript 格式。",
       "seo_title": "免费在线字符串转义工具",
-      "seo_description": "免费在线转义和反转义字符串。"
+      "seo_description": "免费在线转义和反转义各种编程语言的字符串。支持 JSON、HTML、URL 和正则表达式转义。开发者和数据处理必备。"
     },
     "yaml-json": {
       "name": "YAML/JSON 转换",
       "description": "在 YAML 和 JSON 格式之间相互转换。",
       "seo_title": "免费在线 YAML JSON 转换器",
-      "seo_description": "免费在线将 YAML 转换为 JSON，或将 JSON 转换为 YAML。"
+      "seo_description": "免费在线将 YAML 转换为 JSON 或 JSON 转换为 YAML。验证和格式化配置文件，支持语法高亮。DevOps 和配置管理必备。"
     },
     "date-calculator": {
       "name": "日期计算器",
       "description": "计算两个日期之间的差值，或在日期上加减天数。",
       "seo_title": "免费在线日期计算器",
-      "seo_description": "免费在线计算日期差值和日期加减。"
+      "seo_description": "免费在线计算日期差异和加减天数。获取日期之间的天数、周数、月数和年数。项目规划和日程安排必备。"
     },
     "text-deduplicator": {
       "name": "文本去重",
       "description": "删除文本中的重复行，保留唯一内容。",
       "seo_title": "免费在线文本去重工具",
-      "seo_description": "免费在线删除重复行，文本去重。"
+      "seo_description": "免费在线删除文本中的重复行。支持区分大小写匹配和行修剪。数据清理和列表处理任务必备。"
     },
     "color-blender": {
       "name": "颜色混合器",
       "description": "混合两种颜色，生成渐变色阶。",
       "seo_title": "免费在线颜色混合器",
-      "seo_description": "免费在线混合颜色，生成渐变色。"
+      "seo_description": "免费在线混合两种颜色并生成渐变步骤。创建平滑的颜色过渡，支持自定义步数。设计师和调色板创建必备。"
     },
     "json-sorter": {
       "name": "JSON 排序",
       "description": "按键名对 JSON 对象进行排序。",
       "seo_title": "免费在线 JSON 排序工具",
-      "seo_description": "免费在线对 JSON 键进行排序。"
+      "seo_description": "免费在线按字母顺序排序 JSON 键。支持升序和降序，嵌套对象排序。API 开发和数据组织必备。"
     },
     "placeholder-image": {
       "name": "占位图生成器",
       "description": "生成自定义尺寸和颜色的占位图片。",
       "seo_title": "免费在线占位图生成器",
-      "seo_description": "免费在线生成占位图片。"
+      "seo_description": "免费在线生成自定义尺寸和颜色的占位图片。适用于模型、线框图和网页设计原型。下载为 PNG 格式。"
     },
     "text-encryption": {
       "name": "文本加密",
       "description": "使用 AES 加密算法对文本进行加密和解密。",
       "seo_title": "免费在线文本加密工具",
-      "seo_description": "免费在线使用 AES 加密和解密文本。"
+      "seo_description": "免费在线使用 AES-256 加密和解密文本。安全的浏览器加密，支持密码保护。数据不会上传到服务器。"
     },
     "file-hash": {
       "name": "文件哈希计算器",
       "description": "计算文件的 MD5、SHA-1、SHA-256、SHA-512 哈希值。",
       "seo_title": "免费在线文件哈希计算器",
-      "seo_description": "免费在线计算文件哈希值。"
+      "seo_description": "免费在线计算文件哈希值（MD5、SHA-1、SHA-256、SHA-512）。验证文件完整性并检测更改。安全的浏览器处理。"
     },
     "html-table-generator": {
       "name": "HTML 表格生成器",
       "description": "可视化生成 HTML 表格，自定义行列数。",
       "seo_title": "免费在线 HTML 表格生成器",
-      "seo_description": "免费在线生成 HTML 表格。"
+      "seo_description": "免费在线使用可视化编辑器生成 HTML 表格。自定义行、列、标题和样式。导出干净的 HTML 代码用于网站。"
     },
     "json-schema-validator": {
       "name": "JSON Schema 验证器",
       "description": "根据 JSON Schema 验证 JSON 数据。",
       "seo_title": "免费在线 JSON Schema 验证器",
-      "seo_description": "免费在线验证 JSON Schema。"
+      "seo_description": "免费在线根据 JSON Schema 验证 JSON 数据。支持 draft-04、draft-06 和 draft-07 模式。获取详细的错误消息和验证报告。"
     },
     "regex-patterns": {
       "name": "正则表达式库",
       "description": "常用正则表达式模式：邮箱、网址、电话等。",
       "seo_title": "免费正则表达式模式库",
-      "seo_description": "开发者常用正则表达式模式。"
+      "seo_description": "免费在线浏览常用正则表达式模式：邮箱、URL、电话、IP 地址、日期等。一键复制并在代码中使用。开发者参考。"
     },
     "byte-counter": {
       "name": "字节计数器",
       "description": "计算文本的字节数，支持 UTF-8、UTF-16、ASCII 编码。",
       "seo_title": "免费在线字节计数器",
-      "seo_description": "免费在线计算文本字节数。"
+      "seo_description": "免费在线统计 UTF-8、UTF-16 等编码的文本字节数。获取字符数、字数和字节大小。数据大小估算必备。"
     },
     "json-to-typescript": {
       "name": "JSON 转 TypeScript",
       "description": "将 JSON 数据转换为 TypeScript 接口定义。",
       "seo_title": "免费在线 JSON 转 TypeScript 工具",
-      "seo_description": "免费在线将 JSON 转换为 TypeScript 接口。"
+      "seo_description": "免费在线将 JSON 转换为 TypeScript 接口和类型。生成带可选属性和嵌套类型的类型安全代码。TypeScript 开发者必备。"
     },
     "svg-optimizer": {
       "name": "SVG 优化器",
       "description": "优化和压缩 SVG 代码，减小文件体积。",
       "seo_title": "免费在线 SVG 优化器",
-      "seo_description": "免费在线优化和压缩 SVG 文件。"
+      "seo_description": "免费在线优化和压缩 SVG 文件。删除不必要的元数据，压缩代码，减小文件大小。Web 性能优化必备。"
     },
     "text-to-binary": {
       "name": "文本转二进制",
       "description": "将文本转换为二进制，或将二进制转换为文本。",
       "seo_title": "免费在线文本二进制转换器",
-      "seo_description": "免费在线转换文本和二进制。"
+      "seo_description": "免费在线将文本转换为二进制代码或将二进制转换为文本。支持 ASCII 和 Unicode 编码。学习二进制和数据编码概念必备。"
     },
     "markdown-to-html": {
       "name": "Markdown 转 HTML",
       "description": "将 Markdown 文本转换为 HTML 代码。",
       "seo_title": "免费在线 Markdown 转 HTML 工具",
-      "seo_description": "免费在线将 Markdown 转换为 HTML。"
+      "seo_description": "免费在线将 Markdown 转换为 HTML。支持 GitHub 风格 Markdown，包括表格、代码块和任务列表。预览并复制干净的 HTML 输出。"
     },
     "html-minifier": {
       "name": "HTML 压缩器",
       "description": "压缩和美化 HTML 代码，减小文件体积。",
       "seo_title": "免费在线 HTML 压缩工具",
-      "seo_description": "免费在线压缩和美化 HTML 代码。"
+      "seo_description": "免费在线压缩 HTML 代码。删除空白、注释并优化属性。减小文件大小，提高页面加载速度。"
     },
     "json-diff": {
       "name": "JSON 差异比较",
       "description": "比较两个 JSON 对象并找出差异。",
       "seo_title": "免费在线 JSON 差异比较工具",
-      "seo_description": "免费在线比较两个 JSON 对象并找出差异。",
+      "seo_description": "免费在线比较两个 JSON 对象并查找差异。高亮显示添加、删除和更改的值，支持并排视图。API 调试必备。",
       "json1": "JSON 1",
       "json2": "JSON 2",
       "placeholder": "{\"key\": \"value\"}",
@@ -4039,68 +4039,68 @@
       "name": "Base32 编解码",
       "description": "将文本编码为 Base32 或将 Base32 解码为文本。",
       "seo_title": "免费在线 Base32 编解码工具",
-      "seo_description": "免费在线编码和解码 Base32 字符串。"
+      "seo_description": "免费在线将文本编码为 Base32 或解码 Base32 字符串。支持 RFC 4648 标准编码。适用于 TOTP 密钥和安全数据编码。"
     },
     "epoch-converter": {
       "name": "Epoch 时间转换器",
       "description": "在 Epoch/Unix 时间戳和日期时间之间转换。",
       "seo_title": "免费在线 Epoch 时间转换器",
-      "seo_description": "免费在线转换 Epoch 时间戳。"
+      "seo_description": "免费在线将 Unix 时间戳转换为可读日期，反之亦然。支持毫秒和秒。开发者和日志分析必备。"
     },
     "css-unit-converter": {
       "name": "CSS 单位转换器",
       "description": "在 px、rem、em、pt、vw、vh 等 CSS 单位之间转换。",
       "seo_title": "免费在线 CSS 单位转换器",
-      "seo_description": "免费在线转换 CSS 单位。"
+      "seo_description": "免费在线转换 CSS 单位（px、em、rem、%、vw、vh）。使用基础字体大小计算响应式值。响应式网页设计和开发必备。"
     },
     "text-statistics": {
       "name": "文本统计分析",
       "description": "详细统计文本的字符、单词、句子、段落等信息。",
       "seo_title": "免费在线文本统计分析工具",
-      "seo_description": "免费在线统计文本字符、单词、句子、段落等。"
+      "seo_description": "免费在线分析文本统计。获取字数、字符数、句子数、阅读时间和可读性评分。作家和编辑必备。"
     },
     "hex-editor": {
       "name": "十六进制编辑器",
       "description": "在文本和十六进制之间转换，查看字节数据。",
       "seo_title": "免费在线十六进制编辑器",
-      "seo_description": "免费在线转换文本和十六进制。"
+      "seo_description": "免费在线将文本转换为十六进制，或将十六进制转换为文本。查看和编辑十六进制数据，支持 ASCII 预览。调试和二进制数据分析必备。"
     },
     "color-palette": {
       "name": "调色板生成器",
       "description": "根据基础颜色生成色阶、互补色、类似色等配色方案。",
       "seo_title": "免费在线调色板生成器",
-      "seo_description": "免费在线生成配色方案和调色板。"
+      "seo_description": "免费在线生成调色板和配色方案。创建互补色、类似色、三色和单色调色板。导出为 CSS、SCSS 或 JSON 格式。"
     },
     "http-status": {
       "name": "HTTP 状态码查询",
       "description": "查询 HTTP 状态码的含义和用途。",
       "seo_title": "免费 HTTP 状态码查询工具",
-      "seo_description": "查询 HTTP 状态码含义。"
+      "seo_description": "免费在线浏览 HTTP 状态码参考指南。了解 1xx、2xx、3xx、4xx 和 5xx 状态码的描述和用例。开发者必备。"
     },
     "json-to-yaml": {
       "name": "JSON 转 YAML",
       "description": "将 JSON 数据转换为 YAML 格式。",
       "seo_title": "免费在线 JSON 转 YAML 工具",
-      "seo_description": "免费在线将 JSON 转换为 YAML。"
+      "seo_description": "免费在线将 JSON 转换为 YAML 格式。保留数据结构，正确缩进和格式化。配置文件和 DevOps 工作流必备。"
     },
     "data-uri": {
       "name": "Data URI 生成器",
       "description": "将文件转换为 Data URI 格式，可直接嵌入 HTML/CSS。",
       "seo_title": "免费在线 Data URI 生成器",
-      "seo_description": "免费在线生成 Data URI。",
+      "seo_description": "免费在线从文件或文本生成 Data URI。将图片、字体和文件转换为 base64 数据 URL。适用于在 CSS 和 HTML 中嵌入资源。",
       "output": "Data URI"
     },
     "text-compare": {
       "name": "文本相似度比较",
       "description": "比较两段文本的相似度，计算编辑距离。",
       "seo_title": "免费在线文本相似度比较工具",
-      "seo_description": "免费在线比较文本相似度。"
+      "seo_description": "免费在线比较文本相似度并查找差异。计算编辑距离、相似度百分比并高亮显示更改。内容审核必备。"
     },
     "json-to-go": {
       "name": "JSON 转 Go 结构体",
       "description": "将 JSON 数据转换为 Go 语言结构体定义。",
       "seo_title": "免费在线 JSON 转 Go 结构体工具",
-      "seo_description": "免费在线将 JSON 转换为 Go 结构体。",
+      "seo_description": "免费在线将 JSON 转换为 Go 结构体。生成带有正确字段标签和嵌套结构体支持的类型安全 Go 代码。Go API 开发必备。",
       "structName": "结构体名称",
       "input": "JSON 输入",
       "output": "Go 结构体"
@@ -4109,7 +4109,7 @@
       "name": "HTML 转 JSX",
       "description": "将 HTML 代码转换为 React JSX 格式。",
       "seo_title": "免费在线 HTML 转 JSX 转换器",
-      "seo_description": "免费在线将 HTML 代码转换为 React JSX 格式。",
+      "seo_description": "免费在线将 HTML 代码转换为 React JSX 格式。将 class 转换为 className，style 字符串转换为对象，修复自闭合标签。React 开发者必备。",
       "htmlInput": "HTML 输入",
       "jsxOutput": "JSX 输出",
       "placeholder": "<div class=\"container\">...</div>",
@@ -4120,25 +4120,25 @@
       "name": "权限计算器",
       "description": "计算 Linux/Unix 文件权限的八进制和符号表示。",
       "seo_title": "免费在线 chmod 权限计算器",
-      "seo_description": "免费在线计算文件权限。"
+      "seo_description": "免费在线计算 Unix 文件权限（chmod）。在数字和符号表示法之间转换。可视化所有者、组、其他用户的读、写、执行权限。"
     },
     "barcode-generator": {
       "name": "条形码生成器",
       "description": "生成 Code 128、Code 39、EAN-13、UPC 格式的条形码。",
       "seo_title": "免费在线条形码生成器",
-      "seo_description": "免费在线生成条形码。"
+      "seo_description": "免费在线生成条形码。支持 Code128、Code39、EAN-13、UPC-A 等格式。下载为 PNG 或 SVG。库存和产品标签必备。"
     },
     "text-to-speech": {
       "name": "文字转语音",
       "description": "将文本转换为语音，可调节语音、语速和音调。",
       "seo_title": "免费在线文字转语音工具",
-      "seo_description": "免费在线将文字转换为语音。"
+      "seo_description": "免费在线将文本转换为语音。多种声音和语言，可调节速度和音调。下载音频或在浏览器中收听。无障碍访问必备。"
     },
     "url-parser": {
       "name": "URL 解析器",
       "description": "解析和分析 URL 组件，包括协议、主机、路径和查询参数。",
       "seo_title": "免费在线 URL 解析器",
-      "seo_description": "免费在线解析和分析 URL。",
+      "seo_description": "免费在线解析和分析 URL。提取协议、主机、端口、路径、查询参数和哈希。编码和解码 URL 组件。Web 开发必备。",
       "urlLabel": "URL",
       "protocol": "协议",
       "hostname": "主机名",
@@ -4156,109 +4156,109 @@
       "name": "JSON 转 XML",
       "description": "将 JSON 数据转换为 XML 格式。",
       "seo_title": "免费在线 JSON 转 XML 工具",
-      "seo_description": "免费在线将 JSON 转换为 XML。"
+      "seo_description": "免费在线将 JSON 转换为 XML 格式。保留数据结构，正确嵌套元素和属性。API 集成和数据转换必备。"
     },
     "text-wrapper": {
       "name": "文本换行器",
       "description": "将文本按指定宽度换行。",
       "seo_title": "免费在线文本换行工具",
-      "seo_description": "免费在线按指定宽度换行文本。"
+      "seo_description": "免费在线将文本换行到指定宽度。在单词边界或固定位置添加换行符。格式化代码注释、邮件和文档必备。"
     },
     "csv-to-json": {
       "name": "CSV 转 JSON",
       "description": "将 CSV 数据转换为 JSON 格式，支持自定义分隔符。",
       "seo_title": "免费在线 CSV 转 JSON 工具",
-      "seo_description": "免费在线将 CSV 转换为 JSON。"
+      "seo_description": "免费在线将 CSV 转换为 JSON 格式。使用自定义分隔符和标题解析 CSV。支持嵌套对象和数组。数据导入和 API 集成必备。"
     },
     "html-entity": {
       "name": "HTML 实体转换器",
       "description": "编码和解码 HTML 实体，包括特殊字符和符号。",
       "seo_title": "免费在线 HTML 实体转换器",
-      "seo_description": "免费在线转换 HTML 实体。"
+      "seo_description": "免费在线转换 HTML 实体。将特殊字符编码为 HTML 实体，将实体解码为字符。防止 XSS 攻击并正确显示 HTML。"
     },
     "number-formatter": {
       "name": "数字格式化",
       "description": "以不同地区格式显示数字，支持小数、货币和百分比样式。",
       "seo_title": "免费在线数字格式化工具",
-      "seo_description": "免费在线以不同地区格式显示数字。"
+      "seo_description": "免费在线以不同区域设置格式化数字。添加千位分隔符、小数位、货币符号和百分比格式。国际化必备。"
     },
     "hmac-generator": {
       "name": "HMAC 生成器",
       "description": "使用 SHA-1、SHA-256、SHA-512 算法生成 HMAC 签名。",
       "seo_title": "免费在线 HMAC 生成器",
-      "seo_description": "免费在线生成 HMAC 签名，支持多种哈希算法。"
+      "seo_description": "免费在线使用 MD5、SHA-1、SHA-256、SHA-512 算法生成 HMAC 签名。API 和数据完整性验证的安全消息认证。"
     },
     "password-strength": {
       "name": "密码强度检测",
       "description": "分析密码强度，检测长度、字符种类和常见模式。",
       "seo_title": "免费在线密码强度检测器",
-      "seo_description": "免费在线检测密码强度，获取改进建议。"
+      "seo_description": "免费在线检查密码强度。获取详细分析，包括熵值评分、破解时间估算和改进建议。安全必备。"
     },
     "totp-generator": {
       "name": "TOTP 生成器",
       "description": "生成基于时间的一次性密码，兼容 Google Authenticator。",
       "seo_title": "免费在线 TOTP 生成器",
-      "seo_description": "免费在线生成 TOTP 一次性密码。"
+      "seo_description": "免费在线生成 TOTP 一次性密码。支持 Google Authenticator 兼容代码，自定义密钥和时间间隔。2FA 测试必备。"
     },
     "user-agent-parser": {
       "name": "User Agent 解析器",
       "description": "解析 User Agent 字符串，识别浏览器、操作系统和设备信息。",
       "seo_title": "免费在线 User Agent 解析器",
-      "seo_description": "免费在线解析 User Agent 字符串。"
+      "seo_description": "免费在线解析 User Agent 字符串。提取浏览器、操作系统、设备类型和版本信息。Web 分析和设备检测必备。"
     },
     "cidr-calculator": {
       "name": "CIDR 计算器",
       "description": "计算 IP 地址范围、子网掩码和可用主机数。",
       "seo_title": "免费在线 CIDR 计算器",
-      "seo_description": "免费在线计算 CIDR 子网信息。"
+      "seo_description": "免费在线计算 CIDR 子网信息。获取网络地址、广播地址、主机范围和子网掩码。网络管理员必备。"
     },
     "http-header-parser": {
       "name": "HTTP Header 解析器",
       "description": "解析和格式化 HTTP 头信息，显示每个头的含义。",
       "seo_title": "免费在线 HTTP Header 解析器",
-      "seo_description": "免费在线解析 HTTP 头信息。"
+      "seo_description": "免费在线解析 HTTP 头。分析请求和响应头，提供详细解释。API 调试和 Web 开发必备。"
     },
     "percentage-calculator": {
       "name": "百分比计算器",
       "description": "计算百分比、百分比变化、增减比例等。",
       "seo_title": "免费在线百分比计算器",
-      "seo_description": "免费在线计算百分比、变化率和比例。"
+      "seo_description": "免费在线计算百分比、百分比变化和比率。计算 X 是 Y 的百分之几，按百分比增加/减少。数学和金融必备。"
     },
     "statistics-calculator": {
       "name": "统计计算器",
       "description": "计算平均值、中位数、众数、标准差、方差等统计指标。",
       "seo_title": "免费在线统计计算器",
-      "seo_description": "免费在线计算平均值、中位数、众数、标准差等统计指标。"
+      "seo_description": "免费在线计算统计指标。获取平均值、中位数、众数、标准差、方差等。数据分析和研究必备。"
     },
     "scientific-calculator": {
       "name": "科学计算器",
       "description": "支持三角函数、对数、指数等科学计算功能。",
       "seo_title": "免费在线科学计算器",
-      "seo_description": "免费在线科学计算器，支持 sin、cos、tan、log、ln、sqrt 等函数。"
+      "seo_description": "免费在线科学计算器，支持 sin、cos、tan、log、ln、sqrt、幂等函数。支持括号和复杂表达式。学生和工程师必备。"
     },
     "text-sorter": {
       "name": "文本排序器",
       "description": "按字母、数字或长度对文本行进行排序，支持多种选项。",
       "seo_title": "免费在线文本排序器",
-      "seo_description": "免费在线按字母、数字、自然顺序或长度对文本行进行排序。"
+      "seo_description": "免费在线按字母、数字、自然顺序或长度排序文本行。支持升序和降序。数据组织必备。"
     },
     "text-extractor": {
       "name": "文本提取器",
       "description": "从文本中提取邮箱、网址、电话号码、IP 地址等信息。",
       "seo_title": "免费在线文本提取器",
-      "seo_description": "免费在线从文本中提取邮箱、网址、电话、IP 地址、话题标签和@提及。"
+      "seo_description": "免费在线从文本中提取邮箱、URL、电话号码、IP 地址、标签和提及。一键批量提取。数据挖掘必备。"
     },
     "emoji-picker": {
       "name": "Emoji 选择器",
       "description": "按分类浏览、搜索和一键复制表情符号。",
       "seo_title": "免费在线 Emoji 选择器",
-      "seo_description": "按分类浏览和复制表情符号，支持搜索和一键复制。"
+      "seo_description": "免费在线按类别浏览和复制表情符号。按名称搜索表情符号，支持肤色变体。一键复制到剪贴板。社交媒体和消息必备。"
     },
     "json-to-sql": {
       "name": "JSON 转 SQL",
       "description": "将 JSON 数组转换为 SQL INSERT 语句，支持 CREATE TABLE。",
       "seo_title": "免费在线 JSON 转 SQL 工具",
-      "seo_description": "免费在线将 JSON 数据转换为 SQL INSERT 语句，支持 MySQL、PostgreSQL、SQLite。",
+      "seo_description": "免费在线将 JSON 数据转换为 SQL INSERT 语句。支持 MySQL、PostgreSQL、SQLite 语法。批量插入生成用于数据库导入。",
       "tableName": "表名",
       "dialect": "数据库类型",
       "includeCreate": "包含 CREATE TABLE",
@@ -4271,13 +4271,13 @@
       "name": "TOML/JSON 转换器",
       "description": "在 TOML 和 JSON 格式之间双向转换。",
       "seo_title": "免费在线 TOML JSON 转换器",
-      "seo_description": "免费在线将 TOML 转换为 JSON，或将 JSON 转换为 TOML。"
+      "seo_description": "免费在线将 TOML 转换为 JSON 或 JSON 转换为 TOML。验证和格式化配置文件，支持语法高亮。Rust 和 Python 项目必备。"
     },
     "json-to-java": {
       "name": "JSON 转 Java",
       "description": "将 JSON 数据转换为 Java POJO 类，支持 Lombok 注解。",
       "seo_title": "免费在线 JSON 转 Java 工具",
-      "seo_description": "免费在线将 JSON 转换为 Java 类，支持 Lombok 注解。",
+      "seo_description": "免费在线将 JSON 转换为 Java 类。支持 Lombok 注解、getter/setter 和 builder 模式。Java API 开发和数据建模必备。",
       "className": "类名",
       "packageName": "包名",
       "useLombok": "使用 Lombok @Data",
@@ -4293,49 +4293,49 @@
       "name": "JSON 转 Python",
       "description": "将 JSON 数据转换为 Python dataclass、Pydantic 或 TypedDict。",
       "seo_title": "免费在线 JSON 转 Python 工具",
-      "seo_description": "免费在线将 JSON 转换为 Python dataclass 或 Pydantic 模型。"
+      "seo_description": "免费在线将 JSON 转换为 Python dataclass 或 Pydantic 模型。生成带验证的类型安全 Python 代码。Python API 开发必备。"
     },
     "json-to-kotlin": {
       "name": "JSON 转 Kotlin",
       "description": "将 JSON 数据转换为 Kotlin data class，支持序列化注解。",
       "seo_title": "免费在线 JSON 转 Kotlin 工具",
-      "seo_description": "免费在线将 JSON 转换为 Kotlin data class，支持 Moshi、Gson、Kotlinx。"
+      "seo_description": "免费在线将 JSON 转换为 Kotlin 数据类。支持 Moshi、Gson 和 Kotlinx 序列化注解。Android 和 Kotlin 后端开发必备。"
     },
     "image-compressor": {
       "name": "图片压缩器",
       "description": "压缩图片以减小文件大小，同时保持质量。",
       "seo_title": "免费在线图片压缩器",
-      "seo_description": "免费在线压缩图片，可调节质量减小文件大小。"
+      "seo_description": "免费在线压缩图片。调整质量减小 PNG、JPEG、WebP 文件大小。支持批量压缩。Web 优化必备。"
     },
     "image-converter": {
       "name": "图片格式转换器",
       "description": "在 PNG、JPEG 和 WebP 格式之间转换图片。",
       "seo_title": "免费在线图片格式转换器",
-      "seo_description": "免费在线在 PNG、JPEG 和 WebP 格式之间转换图片。"
+      "seo_description": "免费在线转换 PNG、JPEG、WebP、GIF 格式图片。批量转换，支持质量设置。Web 优化和兼容性必备。"
     },
     "favicon-generator": {
       "name": "Favicon 生成器",
       "description": "从任意图片生成多种尺寸的网站图标。",
       "seo_title": "免费在线 Favicon 生成器",
-      "seo_description": "免费在线生成多种尺寸（16x16、32x32、48x48、64x64）的网站图标。"
+      "seo_description": "免费在线生成多种尺寸（16x16、32x32、48x48、64x64）的网站图标。上传图片并下载图标包。网站品牌必备。"
     },
     "image-cropper": {
       "name": "图片裁剪器",
       "description": "自由裁剪或按固定比例裁剪图片。",
       "seo_title": "免费在线图片裁剪器",
-      "seo_description": "免费在线裁剪图片，支持自定义或预设宽高比。"
+      "seo_description": "免费在线裁剪图片，支持自定义或预设宽高比。支持 1:1、4:3、16:9 和自由裁剪。即时下载裁剪后的图片。"
     },
     "gitignore-generator": {
       "name": ".gitignore 生成器",
       "description": "为各种项目类型和编程语言生成 .gitignore 文件。",
       "seo_title": "免费在线 .gitignore 生成器",
-      "seo_description": "免费在线为 Node.js、Python、Java、Go 等生成 .gitignore 文件。"
+      "seo_description": "免费在线为 Node.js、Python、Java、Go、Ruby 等生成 .gitignore 文件。选择模板并自定义规则。保持仓库整洁。"
     },
     "docker-compose-generator": {
       "name": "Docker Compose 生成器",
       "description": "生成包含 MySQL、Redis、Nginx 等常用服务的 docker-compose.yml 文件。",
       "seo_title": "免费在线 Docker Compose 生成器",
-      "seo_description": "免费在线生成包含 MySQL、PostgreSQL、Redis、Nginx 等服务的 docker-compose.yml 文件。",
+      "seo_description": "免费在线生成包含 MySQL、PostgreSQL、Redis、Nginx 等服务的 docker-compose.yml 文件。可视化编辑器，支持 YAML 预览和验证。",
       "version": "Compose 版本",
       "databases": "数据库",
       "messaging": "消息队列和搜索",
@@ -4351,19 +4351,19 @@
       "name": "package.json 生成器",
       "description": "生成自定义配置和脚本的 package.json 文件。",
       "seo_title": "免费在线 package.json 生成器",
-      "seo_description": "免费在线生成包含自定义脚本、依赖和配置的 package.json 文件。"
+      "seo_description": "免费在线生成包含自定义脚本、依赖项、开发依赖项和配置的 package.json 文件。可视化编辑器，支持 npm 注册表搜索。"
     },
     "json-minifier": {
       "name": "JSON 压缩器",
       "description": "压缩 JSON，移除空白和格式化以减小文件大小。",
       "seo_title": "免费在线 JSON 压缩器",
-      "seo_description": "免费在线压缩 JSON 数据，移除空白减小文件大小。"
+      "seo_description": "免费在线压缩 JSON 数据。删除空白和注释，文件大小最多可减少 60%。API 优化必备。"
     },
     "timezone-converter": {
       "name": "时区转换器",
       "description": "在全球不同时区之间转换时间，附带世界时钟。",
       "seo_title": "免费在线时区转换器",
-      "seo_description": "免费在线在不同时区之间转换时间，显示主要城市时间。",
+      "seo_description": "免费在线转换时区时间。世界时钟，支持主要城市、夏令时和会议规划。全球团队协调必备。",
       "date": "日期",
       "time": "时间",
       "now": "现在",
@@ -4377,7 +4377,7 @@
       "name": "颜色对比度检查器",
       "description": "检查颜色对比度是否符合 WCAG 无障碍标准。",
       "seo_title": "免费在线颜色对比度检查器 - WCAG",
-      "seo_description": "免费在线检查颜色对比度是否符合 WCAG AA 和 AAA 无障碍标准。",
+      "seo_description": "免费在线检查 WCAG AA 和 AAA 无障碍合规的颜色对比度。测试前景和背景颜色，即时显示通过/失败结果。",
       "swapColors": "交换颜色",
       "sampleText": "狐狸的快速棕色跳过了懒惰的狗。",
       "smallText": "用于无障碍测试的小号文本示例。",
@@ -4395,7 +4395,7 @@
       "name": "Markdown 表格生成器",
       "description": "使用可视化编辑器创建和编辑 Markdown 表格，实时预览。",
       "seo_title": "免费在线 Markdown 表格生成器",
-      "seo_description": "免费在线使用可视化编辑器生成 Markdown 表格，支持实时预览和对齐选项。",
+      "seo_description": "免费在线使用可视化编辑器生成 Markdown 表格。实时预览、列对齐和 CSV 导入。GitHub README 和文档必备。",
       "addRow": "+ 添加行",
       "addColumn": "+ 添加列",
       "loadSample": "加载示例",
@@ -4415,7 +4415,7 @@
       "name": "Base58 编码/解码",
       "description": "编码和解码 Base58 字符串，用于比特币和加密货币。",
       "seo_title": "免费在线 Base58 编码解码器",
-      "seo_description": "免费在线编码和解码 Base58 字符串，用于比特币地址。",
+      "seo_description": "免费在线编码和解码 Base58 字符串。用于比特币地址、IPFS 哈希和加密货币钱包。安全的浏览器编码工具。",
       "encodeBtn": "编码为 Base58",
       "decodeBtn": "从 Base58 解码",
       "placeholder": "输入要编码的文本或要解码的 Base58...",
@@ -4427,13 +4427,13 @@
       "name": "Meta 标签生成器",
       "description": "生成 SEO meta 标签、Open Graph 和 Twitter Card 标签。",
       "seo_title": "免费在线 Meta 标签生成器 - SEO 工具",
-      "seo_description": "免费在线生成 SEO meta 标签、Open Graph 和 Twitter Card 标签。"
+      "seo_description": "免费在线生成 SEO meta 标签、Open Graph 和 Twitter Card 标签。预览页面在搜索结果和社交媒体分享中的显示效果。"
     },
     "robots-txt-generator": {
       "name": "robots.txt 生成器",
       "description": "生成 robots.txt 文件以控制搜索引擎爬虫。",
       "seo_title": "免费在线 robots.txt 生成器",
-      "seo_description": "免费在线为您的网站生成 robots.txt 文件。",
+      "seo_description": "免费在线为网站生成 robots.txt 文件。使用允许/禁止规则、站点地图链接和爬取延迟设置控制搜索引擎爬虫。",
       "allowAll": "允许全部",
       "blockAll": "禁止全部",
       "standard": "标准",
@@ -4452,13 +4452,13 @@
       "name": "Open Graph 预览",
       "description": "预览页面在社交媒体分享时的显示效果。",
       "seo_title": "免费在线 Open Graph 预览工具",
-      "seo_description": "免费在线预览 Facebook、Twitter 和 LinkedIn 的社交分享卡片。"
+      "seo_description": "免费在线预览 Facebook、Twitter、LinkedIn 等社交媒体分享卡片。发布前测试 Open Graph 和 Twitter Card meta 标签。"
     },
     "css-grid-generator": {
       "name": "CSS Grid 生成器",
       "description": "可视化 CSS Grid 布局生成器，实时预览。",
       "seo_title": "免费在线 CSS Grid 生成器",
-      "seo_description": "免费在线可视化生成 CSS Grid 布局，支持实时预览。",
+      "seo_description": "免费在线使用实时预览可视化生成 CSS Grid 布局。自定义行、列、间距和对齐。复制 CSS 代码用于响应式网页设计。",
       "columns": "列数",
       "rows": "行数",
       "gap": "间距 (px)",
@@ -4478,19 +4478,19 @@
       "name": "CSS Flexbox 生成器",
       "description": "可视化 CSS Flexbox 布局生成器，实时预览。",
       "seo_title": "免费在线 CSS Flexbox 生成器",
-      "seo_description": "免费在线可视化生成 CSS Flexbox 布局，支持实时预览。"
+      "seo_description": "免费在线使用实时预览可视化生成 CSS Flexbox 布局。自定义方向、换行、对齐属性。即时复制 CSS 代码。"
     },
     "jwt-generator": {
       "name": "JWT 生成器",
       "description": "使用自定义载荷和密钥生成 JSON Web Token。",
       "seo_title": "免费在线 JWT 生成器",
-      "seo_description": "免费在线生成带有自定义声明和 HMAC 签名的 JWT 令牌。"
+      "seo_description": "免费在线生成带有自定义声明、过期时间和 HMAC/RSA 签名的 JWT 令牌。创建用于 API 认证和授权测试的访问令牌。"
     },
     "cron-explainer": {
       "name": "Cron 表达式解释器",
       "description": "将 cron 表达式解释为人类可读格式，显示下次运行时间。",
       "seo_title": "免费在线 Cron 表达式解释器",
-      "seo_description": "免费在线将 cron 表达式转换为人类可读的解释。",
+      "seo_description": "免费在线使用人类可读的解释理解 cron 表达式。解析和验证 cron 语法，显示下次执行时间。任务调度必备。",
       "expression": "Cron 表达式",
       "minute": "分钟",
       "hour": "小时",
@@ -4550,7 +4550,7 @@
       "name": "JSON 转 GraphQL",
       "description": "将 JSON 对象转换为 GraphQL schema 类型。",
       "seo_title": "免费在线 JSON 转 GraphQL 工具",
-      "seo_description": "免费在线将 JSON 转换为 GraphQL schema 类型。",
+      "seo_description": "免费在线将 JSON 转换为 GraphQL 模式类型。从 JSON 数据生成类型定义、查询和变更。GraphQL API 开发必备。",
       "typeName": "类型名称",
       "loadSample": "加载示例",
       "jsonInput": "JSON 输入",
@@ -4566,7 +4566,7 @@
       "mongoQuery": "MongoDB 查询",
       "examples": "示例",
       "seo_title": "免费在线 SQL 转 MongoDB 工具",
-      "seo_description": "免费在线将 SQL 查询转换为 MongoDB 查询。",
+      "seo_description": "免费在线将 SQL 查询转换为 MongoDB 查询。将 SELECT、INSERT、UPDATE、DELETE 转换为 find、insertOne、updateOne。数据库迁移工具。",
       "exampleSimpleSelect": "简单 SELECT",
       "exampleSelectProjection": "带投影的 SELECT",
       "exampleInsert": "INSERT",
@@ -4581,7 +4581,7 @@
       "convert": "转换",
       "copy": "复制",
       "seo_title": "免费在线 JSON 转 C# 工具",
-      "seo_description": "免费在线将 JSON 转换为 C# 类。",
+      "seo_description": "免费在线将 JSON 转换为带有属性、构造函数和 JSON 序列化特性的 C# 类。支持可空类型和嵌套类。",
       "className": "类名",
       "useProperties": "使用属性",
       "useNullable": "可空类型",
@@ -4603,7 +4603,7 @@
       "outputPlaceholder": "Rust 结构体将显示在这里...",
       "errorInvalidJson": "// 错误：无效的 JSON 输入",
       "seo_title": "免费在线 JSON 转 Rust 工具",
-      "seo_description": "免费在线将 JSON 转换为 Rust 结构体。"
+      "seo_description": "免费在线将 JSON 转换为带有 serde derive 宏的 Rust 结构体。为可空字段生成带有 Option 类型的类型安全代码。"
     },
     "json-to-swift": {
       "name": "JSON 转 Swift",
@@ -4618,7 +4618,7 @@
       "outputPlaceholder": "Swift 结构体将显示在这里...",
       "errorInvalidJson": "// 错误：无效的 JSON 输入",
       "seo_title": "免费在线 JSON 转 Swift 工具",
-      "seo_description": "免费在线将 JSON 转换为 Swift 结构体。"
+      "seo_description": "免费在线将 JSON 转换为符合 Codable 协议的 Swift 结构体。生成带有 CodingKeys 的类型安全模型用于 API 集成。"
     },
     "css-minifier": {
       "name": "CSS 压缩器",
@@ -4628,7 +4628,7 @@
       "minify": "压缩",
       "copy": "复制",
       "seo_title": "免费在线 CSS 压缩工具",
-      "seo_description": "免费在线压缩和精简 CSS 代码。"
+      "seo_description": "免费在线压缩 CSS 代码。删除空白、注释并优化选择器。减小文件大小，提高页面加载速度。"
     },
     "js-minifier": {
       "name": "JavaScript 压缩器",
@@ -4640,7 +4640,7 @@
       "seo_title": "免费在线 JavaScript 压缩工具",
       "inputPlaceholder": "输入 JavaScript 代码...",
       "outputPlaceholder": "压缩后的代码将显示在这里...",
-      "seo_description": "免费在线压缩和精简 JavaScript 代码。"
+      "seo_description": "免费在线压缩 JavaScript 代码。删除空白、注释并缩短变量名。减小文件大小，加快加载速度。"
     },
     "box-shadow-generator": {
       "name": "阴影生成器",
@@ -4648,7 +4648,7 @@
       "output": "CSS 输出",
       "copy": "复制 CSS",
       "seo_title": "免费在线 CSS 阴影生成器",
-      "seo_description": "免费在线可视化生成 CSS box-shadow。",
+      "seo_description": "免费在线使用可视化编辑器生成 CSS box-shadow。自定义偏移、模糊、扩展和颜色。一键复制 CSS 代码。",
       "shadowLayers": "阴影图层",
       "addLayer": "+ 添加图层",
       "layer": "图层 {index}",
@@ -4670,7 +4670,7 @@
       "output": "CSS 输出",
       "copy": "复制 CSS",
       "seo_title": "免费在线 CSS 圆角生成器",
-      "seo_description": "免费在线可视化生成 CSS border-radius。",
+      "seo_description": "免费在线使用可视化编辑器生成 CSS border-radius。为每个角创建自定义圆角值。即时复制 CSS 代码。",
       "cornerRadius": "圆角半径",
       "linkAll": "联动全部",
       "topLeft": "左上",
@@ -4695,7 +4695,7 @@
       "convert": "转换",
       "copy": "复制",
       "seo_title": "免费在线文字转 ASCII 艺术工具",
-      "seo_description": "免费在线将文字转换为 ASCII 艺术字。",
+      "seo_description": "免费在线将文本转换为 ASCII 艺术。多种字体样式和字符集可用。适用于终端横幅、注释和创意项目。",
       "placeholder": "输入文字 (A-Z, 0-9, 空格)",
       "character": "字符",
       "charBlock": "█ 方块",
@@ -4712,7 +4712,7 @@
       "output": "CSS 输出",
       "copy": "复制",
       "seo_title": "免费在线颜色色阶生成器",
-      "seo_description": "免费在线从任意颜色生成色阶和色调。",
+      "seo_description": "免费在线从任何颜色生成色调和色度。创建更浅和更深的变体，支持自定义步数。导出到 CSS 或设计工具。",
       "baseColor": "基础颜色",
       "numberOfShades": "色阶数量: {count}",
       "copyCssVariables": "复制 CSS 变量"
@@ -4724,7 +4724,7 @@
       "output": "结果",
       "copy": "复制",
       "seo_title": "免费在线 JSON 扁平化工具",
-      "seo_description": "免费在线扁平化或还原嵌套的 JSON 对象。",
+      "seo_description": "免费在线展平或还原嵌套 JSON 对象。将深层结构转换为点表示法，反之亦然。数据转换和 API 必备。",
       "mode": "模式",
       "flatten": "扁平化",
       "unflatten": "还原",
@@ -4745,7 +4745,7 @@
       "inputPlaceholderDecode": "输入要解码的 Base85...",
       "outputPlaceholder": "结果将显示在这里...",
       "seo_title": "免费在线 Base85 编解码器",
-      "seo_description": "免费在线编码和解码 Base85 数据。"
+      "seo_description": "免费在线编码和解码 Base85 (Ascii85) 数据。用于 PDF 文件、PostScript 和数据压缩。安全的浏览器编码工具。"
     },
     "html-to-markdown": {
       "name": "HTML 转 Markdown",
@@ -4755,14 +4755,14 @@
       "convert": "转换",
       "copy": "复制",
       "seo_title": "免费在线 HTML 转 Markdown 工具",
-      "seo_description": "免费在线将 HTML 转换为 Markdown 格式。"
+      "seo_description": "免费在线将 HTML 转换为 Markdown 格式。保留格式、链接、图片和代码块。适用于将内容迁移到基于 Markdown 的系统。"
     },
     "regex-generator": {
       "name": "正则表达式生成器",
       "description": "生成和测试常用正则表达式。",
       "copy": "复制表达式",
       "seo_title": "免费在线正则表达式生成器",
-      "seo_description": "免费在线生成和测试正则表达式。",
+      "seo_description": "免费在线生成和测试正则表达式。使用可视化助手构建模式并针对示例文本测试。模式匹配任务必备。",
       "commonPatterns": "常用模式",
       "customPattern": "自定义模式",
       "testString": "测试字符串",
@@ -4806,7 +4806,7 @@
       "input": "输入文本",
       "copy": "复制结果",
       "seo_title": "免费在线短链接预览工具",
-      "seo_description": "免费在线预览和分析短链接。",
+      "seo_description": "免费在线预览和分析短链接。展开 bit.ly、tinyurl 等短链接查看目标地址。点击前检查安全性。",
       "note": "注意：由于浏览器安全限制，实际的 URL 展开需要服务器端请求。此工具可识别短链接并显示其域名。",
       "placeholder": "粘贴包含短链接的文本 (bit.ly, tinyurl.com, t.co 等)...",
       "analyzing": "分析中...",
@@ -4823,7 +4823,7 @@
       "description": "以树形结构查看和浏览 JSON 数据。",
       "input": "JSON 输入",
       "seo_title": "免费在线 JSON 查看器",
-      "seo_description": "免费在线以树形结构查看和浏览 JSON 数据。",
+      "seo_description": "免费在线以树形结构查看和探索 JSON 数据。展开和折叠节点、搜索值并复制路径。API 调试必备。",
       "inputPlaceholder": "在此粘贴 JSON...",
       "parseView": "解析并查看",
       "expandAll": "全部展开",
@@ -4838,14 +4838,14 @@
       "convert": "转换",
       "copy": "复制",
       "seo_title": "免费在线 XML 转 JSON 工具",
-      "seo_description": "免费在线将 XML 转换为 JSON 格式。"
+      "seo_description": "免费在线将 XML 转换为 JSON 格式。保留属性、命名空间和嵌套元素。API 集成和数据转换必备。"
     },
     "ip-address-generator": {
       "name": "IP 地址生成器",
       "description": "生成随机 IP 地址（IPv4、IPv6、私有、公共）。",
       "copy": "复制全部",
       "seo_title": "免费在线 IP 地址生成器",
-      "seo_description": "免费在线生成随机 IP 地址。",
+      "seo_description": "免费在线生成随机 IP 地址。支持 IPv4 和 IPv6 格式，可自定义范围。测试、开发和网络模拟必备。",
       "ipType": "IP 类型",
       "ipv4Random": "IPv4（随机）",
       "ipv6": "IPv6",
@@ -4861,7 +4861,7 @@
       "output": "CSS 输出",
       "copy": "复制 CSS",
       "seo_title": "免费在线 CSS 渐变文字生成器",
-      "seo_description": "免费在线使用 CSS 创建渐变文字效果。",
+      "seo_description": "免费在线使用 CSS 创建渐变文本效果。将线性和径向渐变应用于文本，支持实时预览。复制 CSS 代码用于 Web 项目。",
       "text": "文本",
       "color1": "颜色 1",
       "color2": "颜色 2",
@@ -4883,7 +4883,7 @@
       "output": "网站地图输出",
       "copy": "复制",
       "seo_title": "免费在线网站地图生成器",
-      "seo_description": "免费在线为您的网站生成 XML 网站地图。",
+      "seo_description": "免费在线为网站生成 XML 站点地图。添加 URL 及优先级、更改频率和最后修改日期。SEO 和搜索索引必备。",
       "baseUrl": "基础 URL",
       "urls": "URL 列表",
       "addUrl": "+ 添加 URL",
@@ -4903,7 +4903,7 @@
       "outputPlaceholder": "PHP 数组将显示在这里...",
       "errorInvalidJson": "// 错误：无效的 JSON 输入",
       "seo_title": "免费在线 JSON 转 PHP 工具",
-      "seo_description": "免费在线将 JSON 转换为 PHP 数组语法。"
+      "seo_description": "免费在线将 JSON 转换为 PHP 数组语法。生成带有正确转义和格式的关联数组。PHP 后端开发必备。"
     },
     "css-filter-generator": {
       "name": "CSS 滤镜生成器",
@@ -4911,7 +4911,7 @@
       "output": "CSS 输出",
       "copy": "复制 CSS",
       "seo_title": "免费在线 CSS 滤镜生成器",
-      "seo_description": "免费在线可视化生成 CSS 滤镜效果。",
+      "seo_description": "免费在线使用可视化编辑器生成 CSS 滤镜效果。应用模糊、亮度、对比度、灰度等效果。复制 CSS 代码用于项目。",
       "reset": "重置",
       "uploadImage": "上传图片",
       "blur": "模糊",
@@ -4934,7 +4934,7 @@
       "name": "文本差异与补丁",
       "description": "创建和应用文本补丁。",
       "seo_title": "免费在线文本差异与补丁工具",
-      "seo_description": "免费在线创建和应用文本补丁。",
+      "seo_description": "免费在线创建和应用文本补丁。生成统一 diff 格式补丁并应用到文本。版本控制和代码审查必备。",
       "createPatch": "创建补丁",
       "applyPatch": "应用补丁",
       "originalText": "原始文本",
@@ -4950,7 +4950,7 @@
       "description": "检测文本和文件编码。",
       "input": "输入",
       "seo_title": "免费在线编码检测器",
-      "seo_description": "免费在线检测文本和文件编码。",
+      "seo_description": "免费在线检测文本和文件编码。识别 UTF-8、UTF-16、ISO-8859 等字符编码。处理国际文本必备。",
       "placeholder": "粘贴文本以检测编码...",
       "analyzeText": "分析文本",
       "uploadFile": "上传文件",
@@ -4963,67 +4963,67 @@
       "name": "CSS 裁剪路径生成器",
       "description": "可视化创建 CSS clip-path 形状。",
       "seo_title": "免费在线 CSS 裁剪路径生成器",
-      "seo_description": "免费在线可视化创建 CSS clip-path 形状。"
+      "seo_description": "免费在线使用可视化编辑器创建 CSS clip-path 形状。设计多边形、圆形、椭圆和自定义路径。复制 CSS 代码用于创意布局。"
     },
     "uuid-validator": {
       "name": "UUID 验证器",
       "description": "验证和分析 UUID 字符串。",
       "seo_title": "免费在线 UUID 验证器",
-      "seo_description": "免费在线验证和分析 UUID 字符串。"
+      "seo_description": "免费在线验证和分析 UUID 字符串。检查 UUID 的格式、版本和变体。从 UUID v1 和 v7 提取时间戳。调试必备。"
     },
     "text-hash-comparator": {
       "name": "文本哈希比较器",
       "description": "通过哈希值比较文本。",
       "seo_title": "免费在线文本哈希比较器",
-      "seo_description": "免费在线通过哈希值比较文本。"
+      "seo_description": "免费在线通过哈希值比较文本。并排生成和比较 MD5、SHA-1、SHA-256 哈希值。文件完整性验证必备。"
     },
     "json-path-finder": {
       "name": "JSON 路径查找器",
       "description": "从 JSON 数据中查找和复制路径。",
       "seo_title": "免费在线 JSON 路径查找器",
-      "seo_description": "免费在线从 JSON 数据中查找和复制路径。"
+      "seo_description": "免费在线从数据中查找和复制 JSON 路径。点击任何值获取其 JSONPath 表达式。API 开发和数据提取必备。"
     },
     "canvas-drawing": {
       "name": "画布绘图",
       "description": "简单的画笔和橡皮擦绘图工具。",
       "seo_title": "免费在线画布绘图工具",
-      "seo_description": "免费在线简单的画笔和橡皮擦绘图工具。"
+      "seo_description": "免费在线简单绘图工具，支持画笔和橡皮擦。自定义画笔大小、颜色和不透明度。下载作品为 PNG 图片。"
     },
     "json-escape": {
       "name": "JSON 转义/反转义",
       "description": "转义和反转义 JSON 字符串。",
       "seo_title": "免费在线 JSON 转义/反转义工具",
-      "seo_description": "免费在线转义和反转义 JSON 字符串。"
+      "seo_description": "免费在线转义和反转义 JSON 字符串。处理特殊字符、引号和控制字符。在字符串中嵌入 JSON 必备。"
     },
     "css-animation-generator": {
       "name": "CSS 动画生成器",
       "description": "可视化创建 CSS 动画。",
       "seo_title": "免费在线 CSS 动画生成器",
-      "seo_description": "免费在线可视化创建 CSS 动画。"
+      "seo_description": "免费在线使用可视化编辑器创建 CSS 动画。设计关键帧、时间函数和动画属性。复制 CSS 代码用于 Web 项目。"
     },
     "text-case-counter": {
       "name": "文本大小写统计",
       "description": "统计大写、小写和其他字符类型。",
       "seo_title": "免费在线文本大小写统计工具",
-      "seo_description": "免费在线统计大写、小写和其他字符类型。"
+      "seo_description": "免费在线统计大写、小写、数字、空格和特殊字符。获取详细的字符类型统计。文本分析必备。"
     },
     "dns-lookup": {
       "name": "DNS 查询",
       "description": "查询任意域名的 DNS 记录。",
       "seo_title": "免费在线 DNS 查询工具",
-      "seo_description": "免费在线查询任意域名的 DNS 记录。"
+      "seo_description": "免费在线查询任何域名的 DNS 记录。查询 A、AAAA、MX、TXT、NS、CNAME 和 SOA 记录。域名故障排除和验证必备。"
     },
     "image-resizer": {
       "name": "图片尺寸调整",
       "description": "将图片调整为自定义尺寸。",
       "seo_title": "免费在线图片尺寸调整工具",
-      "seo_description": "免费在线将图片调整为自定义尺寸。"
+      "seo_description": "免费在线将图片调整为自定义尺寸。保持宽高比或设置精确的宽度和高度。支持 PNG、JPEG、WebP 格式。即时下载。"
     },
     "ssl-checker": {
       "name": "SSL 证书检查器",
       "description": "检查任意域名的 SSL 证书有效性和详情。",
       "seo_title": "免费在线 SSL 证书检查器",
-      "seo_description": "免费在线检查 SSL 证书有效性和过期日期。",
+      "seo_description": "免费在线检查 SSL 证书有效性和过期日期。验证证书链、颁发者和安全详情。网站安全必备。",
       "checking": "检查中...",
       "check": "检查 SSL",
       "valid": "SSL 证书有效",
@@ -5042,7 +5042,7 @@
       "name": "WHOIS 查询",
       "description": "查询域名注册信息。",
       "seo_title": "免费在线 WHOIS 查询工具",
-      "seo_description": "免费在线查询域名注册和所有权信息。",
+      "seo_description": "免费在线查询域名注册和所有权信息。获取注册商、创建日期、过期日期和域名服务器。域名研究工具。",
       "loading": "查询中...",
       "lookup": "WHOIS 查询",
       "registrar": "注册商",
@@ -5058,7 +5058,7 @@
       "name": "WebSocket 测试器",
       "description": "测试 WebSocket 连接并发送/接收消息。",
       "seo_title": "免费在线 WebSocket 测试器",
-      "seo_description": "免费在线测试 WebSocket 连接，发送和接收消息。",
+      "seo_description": "免费在线测试 WebSocket 连接、发送和接收消息。支持自定义头和协议。实时应用开发必备。",
       "serverUrl": "WebSocket 服务器 URL",
       "connect": "连接",
       "disconnect": "断开",
@@ -5084,7 +5084,7 @@
       "name": "端口扫描器",
       "description": "常用网络端口和服务参考指南。",
       "seo_title": "免费在线端口扫描器和参考",
-      "seo_description": "免费在线查询常用网络端口及其服务。",
+      "seo_description": "免费在线查询常见网络端口及其服务。按端口号或服务名称搜索。网络管理员和开发者参考。",
       "note": "此工具提供常用网络端口及其服务的信息。出于安全原因，实际端口扫描需要服务器端实现。",
       "searchPorts": "搜索端口",
       "searchPlaceholder": "按端口号或服务搜索...",
@@ -5127,25 +5127,25 @@
       "name": "端口参考",
       "description": "常用网络端口和服务参考指南。",
       "seo_title": "网络端口参考指南",
-      "seo_description": "常用网络端口和服务完整参考指南。"
+      "seo_description": "常见网络端口和服务的完整参考指南。浏览知名端口 (0-1023)、注册端口和动态端口。网络必备。"
     },
     "privacy-policy-generator": {
       "name": "隐私政策生成器",
       "description": "为您的网站生成隐私政策。",
       "seo_title": "免费在线隐私政策生成器",
-      "seo_description": "免费在线为您的网站生成自定义隐私政策。"
+      "seo_description": "免费在线为网站生成自定义隐私政策。涵盖数据收集、Cookie 和用户权利。GDPR 和 CCPA 合规模板。"
     },
     "terms-generator": {
       "name": "服务条款生成器",
       "description": "为您的网站生成服务条款。",
       "seo_title": "免费在线服务条款生成器",
-      "seo_description": "免费在线为您的网站生成自定义服务条款。"
+      "seo_description": "免费在线为网站生成自定义服务条款。涵盖用户协议、责任、知识产权和争议解决。"
     },
     "cookie-policy-generator": {
       "name": "Cookie 政策生成器",
       "description": "为您的网站生成 Cookie 政策。",
       "seo_title": "免费在线 Cookie 政策生成器",
-      "seo_description": "免费在线为您的网站生成自定义 Cookie 政策。",
+      "seo_description": "免费在线为网站生成自定义 Cookie 政策。解释 Cookie 类型、用途和同意选项。GDPR 和 CCPA 合规。",
       "websiteName": "网站名称",
       "websiteUrl": "网站 URL",
       "contactEmail": "联系邮箱",
@@ -5169,19 +5169,19 @@
       "convert": "转换为 TSV",
       "copy": "复制输出",
       "seo_title": "免费在线 JSON 转 TSV 转换器",
-      "seo_description": "免费在线将 JSON 数组转换为 TSV 格式。"
+      "seo_description": "免费在线将 JSON 数组转换为 TSV（制表符分隔值）格式。处理嵌套对象和数组。电子表格导入和数据分析必备。"
     },
     "csv-viewer": {
       "name": "CSV 查看器",
       "description": "以表格形式查看和解析 CSV 数据。",
       "seo_title": "免费在线 CSV 查看器",
-      "seo_description": "免费在线以表格形式查看和解析 CSV 数据。"
+      "seo_description": "免费在线以表格格式查看和解析 CSV 数据。支持自定义分隔符、标题和大文件。轻松排序、过滤和搜索数据。"
     },
     "htaccess-generator": {
       "name": ".htaccess 生成器",
       "description": "为 Apache 服务器生成 .htaccess 配置。",
       "seo_title": "免费在线 .htaccess 生成器",
-      "seo_description": "免费在线为 Apache 服务器生成 .htaccess 配置。",
+      "seo_description": "免费在线为 Apache 服务器生成 .htaccess 配置。创建重定向、重写、安全规则和缓存指令。Web 托管必备。",
       "urlSettings": "URL 和 SSL 设置",
       "forceHttps": "强制 HTTPS",
       "forceWww": "强制 WWW 前缀",
@@ -5202,7 +5202,7 @@
       "name": "Nginx 配置生成器",
       "description": "生成 Nginx 服务器配置文件。",
       "seo_title": "免费在线 Nginx 配置生成器",
-      "seo_description": "免费在线生成 Nginx 服务器配置文件。",
+      "seo_description": "免费在线生成 Nginx 服务器配置文件。创建服务器块、SSL 设置、代理规则和缓存。现代 Web 部署必备。",
       "serverName": "服务器名称",
       "rootPath": "根目录路径",
       "proxyPass": "代理转发（可选）",
@@ -5219,7 +5219,7 @@
       "name": "cURL 转换器",
       "description": "将 cURL 命令转换为多种编程语言代码。",
       "seo_title": "免费在线 cURL 转代码转换器",
-      "seo_description": "免费在线将 cURL 命令转换为 JavaScript、Python、PHP、Go 和 Java 代码。",
+      "seo_description": "免费在线将 cURL 命令转换为 JavaScript、Python、PHP、Go 和 Java 代码。解析头、正文和认证。API 集成必备。",
       "curlCommand": "cURL 命令",
       "placeholder": "粘贴您的 cURL 命令...",
       "outputLanguage": "输出语言",
@@ -5236,7 +5236,7 @@
       "name": "阅读时间计算器",
       "description": "计算任何文本或文章的阅读时间。",
       "seo_title": "免费在线阅读时间计算器",
-      "seo_description": "免费在线计算任何文本的阅读时间和字数。",
+      "seo_description": "免费在线计算任何文本的阅读时间和字数。获取平均、慢速和快速读者的估算。内容创作者必备。",
       "pasteText": "粘贴文本",
       "placeholder": "在此粘贴文章、博客帖子或任何文本以计算阅读时间...",
       "readingSpeed": "阅读速度：",
@@ -5262,25 +5262,25 @@
       "name": "Open Graph 生成器",
       "description": "为社交媒体分享生成 Open Graph 元标签。",
       "seo_title": "免费在线 Open Graph 生成器",
-      "seo_description": "免费在线为 Facebook、LinkedIn 等社交平台生成 Open Graph 元标签。"
+      "seo_description": "免费在线为 Facebook、LinkedIn 等社交平台生成 Open Graph meta 标签。预览内容在社交媒体分享时的显示效果。"
     },
     "twitter-card-generator": {
       "name": "Twitter 卡片生成器",
       "description": "为更好的推文预览生成 Twitter 卡片元标签。",
       "seo_title": "免费在线 Twitter 卡片生成器",
-      "seo_description": "免费在线生成 Twitter 卡片元标签以获得丰富的推文预览。"
+      "seo_description": "免费在线生成 Twitter Card meta 标签以获得丰富的推文预览。支持摘要、大图和播放器卡片。优化 Twitter 分享。"
     },
     "mime-type-lookup": {
       "name": "MIME 类型查询",
       "description": "通过扩展名或描述搜索 MIME 类型。",
       "seo_title": "免费在线 MIME 类型查询工具",
-      "seo_description": "免费在线通过文件扩展名或描述搜索 MIME 类型。"
+      "seo_description": "免费在线按文件扩展名或描述搜索 MIME 类型。Web 开发的完整内容类型数据库。HTTP 头必备。"
     },
     "http-status-codes": {
       "name": "HTTP 状态码",
       "description": "所有 HTTP 状态码的参考指南。",
       "seo_title": "HTTP 状态码参考手册",
-      "seo_description": "所有 HTTP 状态码及其含义的完整参考指南。",
+      "seo_description": "所有 HTTP 状态码及其含义的完整参考指南。浏览 1xx、2xx、3xx、4xx 和 5xx 代码的描述。开发者必备。",
       "searchPlaceholder": "搜索状态码...",
       "allCategories": "所有类别",
       "informational": "1xx 信息性",
@@ -5294,7 +5294,7 @@
       "name": "字符串混淆器",
       "description": "使用多种编码方法混淆字符串。",
       "seo_title": "免费在线字符串混淆器",
-      "seo_description": "免费在线使用 Base64、Hex、HTML 实体、URL 编码和 ROT13 混淆字符串。",
+      "seo_description": "免费在线使用 Base64、Hex、HTML 实体、URL 编码和 ROT13 混淆字符串。多层编码保护。用于测试目的。",
       "input": "输入字符串",
       "inputPlaceholder": "输入要混淆的文本...",
       "obfuscate": "混淆",
@@ -5312,7 +5312,7 @@
       "name": "文本清理器",
       "description": "清理和格式化文本，移除空格、空行等。",
       "seo_title": "免费在线文本清理工具",
-      "seo_description": "免费在线清理和格式化文本，移除多余空格、空行、HTML 标签等。",
+      "seo_description": "免费在线清理和格式化文本，删除多余空格、空行、HTML 标签等。规范化空白并修复常见格式问题。",
       "input": "输入文本",
       "clear": "清空",
       "cleanedText": "清理后文本",
@@ -5334,7 +5334,7 @@
       "name": "列表随机化工具",
       "description": "打乱和随机化项目列表。",
       "seo_title": "免费在线列表随机化工具",
-      "seo_description": "免费在线打乱和随机化项目或名称列表。",
+      "seo_description": "免费在线打乱和随机化项目或名称列表。适用于随机选择、抽奖和公平排序。安全随机化。",
       "originalList": "原始列表",
       "randomizedList": "随机化列表",
       "clear": "清除",
@@ -5346,13 +5346,13 @@
       "name": "SQL 生成器",
       "description": "为常用操作生成 SQL 查询语句。",
       "seo_title": "免费在线 SQL 生成器",
-      "seo_description": "免费在线为 SELECT、INSERT、UPDATE、DELETE 和 CREATE TABLE 操作生成 SQL 查询。"
+      "seo_description": "免费在线生成 SELECT、INSERT、UPDATE、DELETE 和 CREATE TABLE 的 SQL 查询。可视化查询构建器，支持语法高亮。"
     },
     "htaccess-to-nginx": {
       "name": "htaccess 转 Nginx 转换器",
       "description": "将 Apache .htaccess 规则转换为 Nginx 配置。",
       "seo_title": "免费在线 htaccess 转 Nginx 转换器",
-      "seo_description": "免费在线将 Apache htaccess 规则转换为 Nginx 配置。",
+      "seo_description": "免费在线将 Apache htaccess 规则转换为 Nginx 配置。转换重定向、重写和安全规则。服务器迁移和部署必备。",
       "htaccessInput": ".htaccess 输入",
       "nginxOutput": "Nginx 输出",
       "loadSample": "加载示例",
@@ -5364,7 +5364,7 @@
       "name": "JavaScript 混淆器",
       "description": "混淆 JavaScript 代码以保护源代码。",
       "seo_title": "免费在线 JavaScript 混淆器",
-      "seo_description": "免费在线混淆和保护 JavaScript 代码。",
+      "seo_description": "免费在线混淆和保护 JavaScript 代码。重命名变量、编码字符串并添加死代码。保护您的知识产权。",
       "inputCode": "JavaScript 输入",
       "obfuscatedCode": "混淆后的输出",
       "loadSample": "加载示例",
@@ -5382,7 +5382,7 @@
       "name": "图片水印",
       "description": "为图片添加文字水印。",
       "seo_title": "免费在线图片水印工具",
-      "seo_description": "免费在线为图片添加文字水印。",
+      "seo_description": "免费在线为图片添加文字水印。自定义字体、大小、颜色、不透明度和位置。保护照片和艺术作品免受未经授权的使用。",
       "uploadImage": "上传图片",
       "watermarkText": "水印文字",
       "textPlaceholder": "输入水印文字...",
@@ -5403,7 +5403,7 @@
       "name": "SVG 转图片",
       "description": "将 SVG 文件转换为 PNG、JPEG 或 WebP 图片。",
       "seo_title": "免费在线 SVG 转图片转换器",
-      "seo_description": "免费在线将 SVG 转换为 PNG、JPEG、WebP。",
+      "seo_description": "免费在线将 SVG 转换为 PNG、JPEG、WebP。设置自定义尺寸和背景颜色。适用于导出矢量图形用于 Web 和打印。",
       "uploadSvg": "上传 SVG 文件",
       "svgCode": "SVG 代码",
       "loadSample": "加载示例",
@@ -5419,7 +5419,7 @@
       "name": "十六进制 Base64 转换器",
       "description": "在十六进制和 Base64 编码之间转换。",
       "seo_title": "免费在线十六进制 Base64 转换器",
-      "seo_description": "免费在线在十六进制和 Base64 之间转换。",
+      "seo_description": "免费在线转换 Hex 和 Base64。将十六进制编码为 Base64 或将 Base64 解码为十六进制。加密和数据编码任务必备。",
       "hexToBase64": "十六进制 → Base64",
       "base64ToHex": "Base64 → 十六进制",
       "swap": "交换",
@@ -5434,7 +5434,7 @@
       "name": "PDF 转 Base64",
       "description": "将 PDF 文件转换为 Base64 编码。",
       "seo_title": "免费在线 PDF 转 Base64 转换器",
-      "seo_description": "免费在线将 PDF 文件转换为 Base64 编码。",
+      "seo_description": "免费在线将 PDF 文件转换为 Base64 编码。在 HTML、JSON 或数据 URI 中嵌入 PDF。安全的浏览器转换，无需上传文件到服务器。",
       "dropzone": "拖放 PDF 文件到此处或点击上传",
       "acceptedFormat": "支持格式：PDF",
       "errorNotPdf": "请选择 PDF 文件",
@@ -5451,7 +5451,7 @@
       "name": "音频转 Base64",
       "description": "将音频文件转换为 Base64 编码。",
       "seo_title": "免费在线音频转 Base64 转换器",
-      "seo_description": "免费在线将音频文件转换为 Base64 编码。",
+      "seo_description": "免费在线将音频文件转换为 Base64 编码。支持 MP3、WAV、OGG 格式。在 HTML、JSON 或数据 URI 中嵌入音频。",
       "dropzone": "拖放音频文件到此处或点击上传",
       "acceptedFormats": "支持：MP3、WAV、OGG、WebM、AAC、FLAC",
       "errorNotAudio": "请选择音频文件",
@@ -5467,7 +5467,7 @@
       "name": "视频转 Base64",
       "description": "将视频文件转换为 Base64 编码。",
       "seo_title": "免费在线视频转 Base64 转换器",
-      "seo_description": "免费在线将视频文件转换为 Base64 编码。",
+      "seo_description": "免费在线将视频文件转换为 Base64 编码。支持 MP4、WebM 等格式。在 HTML、JSON 或数据 URI 中嵌入视频。浏览器处理。",
       "dropzone": "拖放视频文件到此处或点击上传",
       "maxSize": "最大文件大小：10MB",
       "errorNotVideo": "请选择视频文件",
@@ -5486,7 +5486,7 @@
       "name": "文件大小计算器",
       "description": "在不同文件大小单位之间转换。",
       "seo_title": "免费在线文件大小计算器",
-      "seo_description": "免费在线在字节、KB、MB、GB、TB 等单位之间转换。",
+      "seo_description": "免费在线转换字节、KB、MB、GB、TB 等单位。使用二进制 (1024) 或十进制 (1000) 单位计算文件大小。存储规划必备。",
       "inputValue": "输入值",
       "unit": "单位",
       "base": "进制",
@@ -5504,7 +5504,7 @@
       "name": "ASCII 码表",
       "description": "完整的 ASCII 字符参考表。",
       "seo_title": "ASCII 码表 - 字符编码参考",
-      "seo_description": "包含十进制、十六进制、八进制和二进制值的完整 ASCII 表。",
+      "seo_description": "完整的 ASCII 表，包含十进制、十六进制、八进制和二进制值。浏览所有 128 个 ASCII 字符及其描述。程序员必备参考。",
       "searchPlaceholder": "按字符、编码或描述搜索...",
       "showExtended": "显示扩展 ASCII（128-255）",
       "selectedChar": "选中的字符",
@@ -5527,7 +5527,7 @@
       "name": "文本转十六进制",
       "description": "文本与十六进制相互转换。",
       "seo_title": "免费在线文本转十六进制转换器",
-      "seo_description": "免费在线将文本转换为十六进制编码，或将十六进制解码为文本。",
+      "seo_description": "免费在线将文本转换为十六进制编码，或将十六进制解码为文本。支持 UTF-8 和 ASCII 编码。调试和数据分析必备。",
       "encoding": "编码",
       "separator": "分隔符",
       "sepSpace": "空格",
@@ -5552,7 +5552,7 @@
       "name": "CSS 变量生成器",
       "description": "使用可视化编辑器生成 CSS 自定义属性（变量）。",
       "seo_title": "免费在线 CSS 变量生成器",
-      "seo_description": "使用可视化颜色选择器生成 CSS 自定义属性，并导出为 CSS、SCSS 或 JavaScript。",
+      "seo_description": "使用可视化颜色选择器生成 CSS 自定义属性，导出为 CSS、SCSS 或 JavaScript。创建设计令牌以实现项目间一致的主题。",
       "prefix": "前缀",
       "prefixPlaceholder": "例如 app",
       "scope": "作用域",
@@ -5579,7 +5579,7 @@
       "name": "Lorem Picsum",
       "description": "从 Picsum Photos 生成随机占位图片。",
       "seo_title": "免费在线 Lorem Picsum 图片生成器",
-      "seo_description": "生成具有自定义尺寸、灰度和模糊效果的随机占位图片。",
+      "seo_description": "生成自定义尺寸、灰度和模糊效果的随机占位图片。适用于模型、线框图和网页设计原型。",
       "width": "宽度",
       "height": "高度",
       "seed": "种子",
@@ -5600,7 +5600,7 @@
       "name": "正则转义",
       "description": "转义或反转义正则表达式特殊字符。",
       "seo_title": "免费在线正则转义工具",
-      "seo_description": "免费在线转义正则表达式中的特殊字符。",
+      "seo_description": "免费在线转义正则表达式中使用的特殊字符。处理元字符如 . * + ? ^ $ { } [ ] \\ | ( )。模式构建必备。",
       "mode": "模式",
       "escape": "转义",
       "unescape": "反转义",
@@ -5622,7 +5622,7 @@
       "name": "HTML 转文本",
       "description": "将 HTML 转换为纯文本，去除所有标签。",
       "seo_title": "免费在线 HTML 转文本转换器",
-      "seo_description": "将 HTML 转换为纯文本，去除所有标签并保留内容结构。",
+      "seo_description": "将 HTML 转换为纯文本，删除所有标签并保留内容结构。智能处理链接、列表和表格。内容提取必备。",
       "preserveLinks": "保留链接为 (URL)",
       "preserveLineBreaks": "保留换行",
       "preserveLists": "保留列表格式",
@@ -5643,7 +5643,7 @@
       "name": "二进制/十进制转换",
       "description": "在二进制、十进制和十六进制之间相互转换。",
       "seo_title": "免费在线二进制十进制转换器",
-      "seo_description": "在二进制、十进制和十六进制之间轻松转换数字。",
+      "seo_description": "免费在线转换二进制到十进制、十进制到二进制、二进制到十六进制、十六进制到二进制。支持大数字和即时转换。",
       "mode": "转换模式",
       "binToDec": "二进制 → 十进制",
       "decToBin": "十进制 → 二进制",
@@ -5671,7 +5671,7 @@
       "name": "八进制转换器",
       "description": "在八进制和其他进制之间转换。",
       "seo_title": "免费在线八进制转换器",
-      "seo_description": "在八进制、十进制、二进制和十六进制之间转换。",
+      "seo_description": "免费在线将八进制转换为十进制、二进制和十六进制。也可从十进制、二进制或十六进制转换为八进制。Unix 权限和编程必备。",
       "mode": "转换模式",
       "octToDec": "八进制 → 十进制",
       "decToOct": "十进制 → 八进制",
@@ -5698,7 +5698,7 @@
       "name": "北约音标字母转换",
       "description": "将文本转换为北约音标字母（Alpha、Bravo、Charlie...）。",
       "seo_title": "免费在线北约音标字母转换器",
-      "seo_description": "将文本转换为北约/ICAO音标字母。",
+      "seo_description": "免费在线将字母和数字转换为 NATO 音标字母单词。Alpha、Bravo、Charlie 格式用于清晰通信。无线电和电话必备。",
       "separator": "分隔符",
       "sepNewline": "换行",
       "sepDash": "短横线",
@@ -5719,7 +5719,7 @@
       "name": "CRC32 计算器",
       "description": "计算文本或数据的 CRC32 校验和。",
       "seo_title": "免费在线 CRC32 计算器",
-      "seo_description": "快速计算任意文本的 CRC32 校验和。",
+      "seo_description": "在浏览器中计算文本或上传文件的 CRC32 校验和。验证数据完整性并检测传输错误。安全的浏览器处理。",
       "inputMode": "输入模式",
       "modeText": "文本",
       "modeFile": "文件",
@@ -5742,7 +5742,7 @@
       "name": "MAC 地址生成器",
       "description": "生成随机 MAC 地址，支持多种格式。",
       "seo_title": "免费在线 MAC 地址生成器",
-      "seo_description": "生成随机 MAC 地址，支持多种格式和选项。",
+      "seo_description": "生成带有前缀、分隔符和位标志选项的随机 MAC 地址。支持单播/多播和通用/本地标志。测试和开发必备。",
       "generate": "生成",
       "copy": "复制",
       "count": "生成数量",

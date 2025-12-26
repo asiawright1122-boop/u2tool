@@ -5,6 +5,7 @@
  */
 
 import { generateFAQJsonLd as generateFAQJsonLdFromSeo, type JsonLdData } from './seo';
+import { getToolSpecificFAQs } from './tool-specific-faqs';
 
 // FAQ 项目接口
 export interface FAQItem {
@@ -288,6 +289,7 @@ const DEFAULT_FAQ_TEMPLATES: Record<string, FAQItem[]> = {
 
 /**
  * 获取工具的 FAQ 内容
+ * 优先返回工具专属 FAQ，否则返回分类通用 FAQ
  * @param slug - 工具 slug
  * @param locale - 语言代码
  * @param category - 工具分类
@@ -298,7 +300,13 @@ export function getToolFAQs(
   locale: string,
   category?: string
 ): FAQItem[] {
-  // 首先尝试获取分类特定的 FAQ
+  // 首先尝试获取工具专属 FAQ
+  const specificFaqs = getToolSpecificFAQs(slug, locale);
+  if (specificFaqs && specificFaqs.length >= 3) {
+    return specificFaqs;
+  }
+
+  // 然后尝试获取分类特定的 FAQ
   if (category && GENERIC_FAQ_TEMPLATES[category]) {
     const categoryFaqs = GENERIC_FAQ_TEMPLATES[category][locale];
     if (categoryFaqs && categoryFaqs.length >= 3) {

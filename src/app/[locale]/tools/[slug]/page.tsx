@@ -13,6 +13,8 @@ import {
   generateHowToJsonLd,
   generateSpeakableJsonLd,
   getToolHowToSteps,
+  getToolKeywords,
+  getCategoryKeywords,
   truncateText,
   jsonLdToString,
 } from '@/lib/seo';
@@ -93,10 +95,18 @@ export async function generateMetadata({
   // 生成动态 OG 图片 URL
   const ogImageUrl = `${SEO_CONFIG.siteUrl}/api/og?title=${encodeURIComponent(toolName)}&locale=${locale}&icon=${encodeURIComponent(tool.icon)}`;
 
+  // 获取工具特定关键词，回退到分类关键词
+  const toolKeywords = getToolKeywords(slug, locale);
+  const categoryKeywords = getCategoryKeywords(category?.id || '', locale);
+  // 合并关键词：工具关键词 + 分类关键词（去重）
+  const keywords = toolKeywords.length > 0 
+    ? [...new Set([...toolKeywords, ...categoryKeywords.slice(0, 3)])]
+    : [...categoryKeywords, toolName, 'online tool', 'free'];
+
   return {
     title,
     description,
-    keywords: [toolName, category?.id || 'tools', 'online tool', 'free', 'developer'],
+    keywords,
     // hreflang alternates
     alternates: generateAlternates(locale, `/tools/${slug}`),
     // Open Graph 标签
