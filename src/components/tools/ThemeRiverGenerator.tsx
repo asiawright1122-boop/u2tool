@@ -70,7 +70,7 @@ export default function ThemeRiverGenerator() {
         const textColor = '#e5e7eb';
 
         // Convert data to ECharts format: [date, value, seriesName]
-        const riverData = data.map(item => [item.date, item.value, item.series]);
+        const riverData: [string, number, string][] = data.map(item => [item.date, item.value, item.series]);
 
         // Extract unique series names for legend
         const seriesNames = Array.from(new Set(data.map(item => item.series)));
