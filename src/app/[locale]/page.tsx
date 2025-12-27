@@ -3,25 +3,26 @@ import { Link } from '@/i18n/routing';
 import { tools, getPopularTools } from '@/config/tools';
 import PopularToolsCarousel from '@/components/PopularToolsCarousel';
 import RandomToolButton from '@/components/RandomToolButton';
-import { 
-  SEO_CONFIG, 
-  generateAlternates, 
+import CategoryList from '@/components/CategoryList';
+import {
+  SEO_CONFIG,
+  generateAlternates,
   generateWebSiteJsonLd,
   generateOrganizationJsonLd,
   generateFAQJsonLd,
   getKeywords,
   getHomepageFAQs,
-  jsonLdToString 
+  jsonLdToString
 } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'site' });
-  
+
   const title = t('tagline');
   const description = t('description');
   const keywords = getKeywords(locale);
-  
+
   return {
     title,
     description,
@@ -63,7 +64,7 @@ function StructuredData({ locale }: { locale: string }) {
   const organizationJsonLd = generateOrganizationJsonLd(locale);
   const faqs = getHomepageFAQs(locale);
   const faqJsonLd = generateFAQJsonLd(faqs);
-  
+
   return (
     <>
       <script
@@ -95,14 +96,17 @@ export default async function HomePage({
     <div className="min-h-screen">
       {/* WebSite + Organization JSON-LD 结构化数据 */}
       <StructuredData locale={locale} />
-      
+
+      {/* Category List Module */}
+      <CategoryList />
+
       {/* Hero Section */}
       <section className="relative py-24 px-4 overflow-hidden">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-black pointer-events-none" />
         <div className="absolute top-20 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-        
+
         <div className="relative max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight">
             {t('home.hero.title')}
@@ -110,13 +114,13 @@ export default async function HomePage({
           <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
             {t('home.hero.subtitle')}
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/tools" className="btn-primary text-lg px-8 py-4 rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all">
               {t('home.hero.cta')}
             </Link>
-            <RandomToolButton 
-              tools={popularTools.slice(0, 20)} 
+            <RandomToolButton
+              tools={popularTools.slice(0, 20)}
               rotateInterval={3000}
               className="btn-secondary text-lg px-8 py-4 rounded-xl border-2 border-gray-700 hover:border-gray-600"
             />
@@ -155,13 +159,13 @@ export default async function HomePage({
               </svg>
             </Link>
           </div>
-          
-          <PopularToolsCarousel 
-            tools={popularTools} 
-            displayCount={12} 
-            rotateInterval={10000} 
+
+          <PopularToolsCarousel
+            tools={popularTools}
+            displayCount={12}
+            rotateInterval={10000}
           />
-          
+
           <div className="mt-8 text-center md:hidden">
             <Link href="/tools" className="btn-secondary px-6 py-3 rounded-lg">
               {t('nav.viewAllTools')}
@@ -175,7 +179,7 @@ export default async function HomePage({
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">{t('home.features.title')}</h2>
           <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">{t('home.features.subtitle')}</p>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 bg-gray-800/50 border border-gray-700/50 rounded-2xl hover:border-blue-500/30 transition-colors">
               <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4">
@@ -186,7 +190,7 @@ export default async function HomePage({
               <h3 className="text-xl font-semibold mb-2">{t('home.features.fast.title')}</h3>
               <p className="text-gray-300">{t('home.features.fast.desc')}</p>
             </div>
-            
+
             <div className="p-6 bg-gray-800/50 border border-gray-700/50 rounded-2xl hover:border-purple-500/30 transition-colors">
               <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,7 +200,7 @@ export default async function HomePage({
               <h3 className="text-xl font-semibold mb-2">{t('home.features.secure.title')}</h3>
               <p className="text-gray-300">{t('home.features.secure.desc')}</p>
             </div>
-            
+
             <div className="p-6 bg-gray-800/50 border border-gray-700/50 rounded-2xl hover:border-green-500/30 transition-colors">
               <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

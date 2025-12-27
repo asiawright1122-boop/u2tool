@@ -4,6 +4,18 @@
     "tagline": "开发者免费在线工具",
     "description": "100+ 免费在线工具，适用于开发者、设计师和创作者。JSON 格式化、Base64 编码、UUID 生成器等。"
   },
+  "categories": {
+    "text": "文本工具",
+    "encoding": "编码转换",
+    "generators": "生成器",
+    "converters": "格式转换",
+    "development": "开发工具",
+    "security": "安全工具",
+    "network": "网络工具",
+    "image": "图片工具",
+    "math": "数学计算",
+    "charts": "图表制作"
+  },
   "nav": {
     "home": "首页",
     "tools": "工具",
@@ -3762,7 +3774,8 @@
         "tip2": "点击添加行以添加更多项目",
         "tip3": "启用环形以创建中心空心的环形图",
         "tip4": "启用玫瑰以创建南丁格尔玫瑰图",
-        "tip5": "启用显示百分比以显示各项比例"
+        "tip5": "启用显示百分比以显示各项比例",
+        "tip6": "从CSV文件导入数据（名称,数值格式）"
       },
       "importCsv": "导入CSV",
       "csvFormat": "CSV格式：名称,数值（每行一个）",
@@ -3871,7 +3884,8 @@
         "tip2": "添加多个系列以比较组",
         "tip3": "调整符号大小",
         "tip4": "自定义轴名称",
-        "tip5": "导出为PNG或SVG"
+        "tip5": "导出为PNG或SVG",
+        "tip6": "从CSV文件导入数据（x,y格式）"
       },
       "importCsv": "导入CSV",
       "csvFormat": "CSV格式：x,y（每行一个）",

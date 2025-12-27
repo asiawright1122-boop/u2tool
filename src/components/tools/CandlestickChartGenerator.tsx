@@ -366,60 +366,62 @@ export default function CandlestickChartGenerator() {
                 + {t('addData')}
               </button>
             </div>
-            <div className="space-y-2 max-h-64 overflow-y-auto p-2 bg-gray-900 border border-gray-700 rounded-lg">
-              <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_auto] gap-1 text-xs text-gray-400 px-1">
-                <span>{t('date')}</span>
-                <span>{t('open')}</span>
-                <span>{t('close')}</span>
-                <span>{t('low')}</span>
-                <span>{t('high')}</span>
-                <span></span>
-              </div>
-              {data.map((item, index) => (
-                <div key={index} className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_auto] gap-1 items-center">
-                  <input
-                    type="date"
-                    value={item.date}
-                    onChange={(e) => updateDataItem(index, 'date', e.target.value)}
-                    className="tool-input text-xs"
-                  />
-                  <input
-                    type="number"
-                    value={item.open}
-                    onChange={(e) => updateDataItem(index, 'open', e.target.value)}
-                    className="tool-input text-xs"
-                    step="0.01"
-                  />
-                  <input
-                    type="number"
-                    value={item.close}
-                    onChange={(e) => updateDataItem(index, 'close', e.target.value)}
-                    className="tool-input text-xs"
-                    step="0.01"
-                  />
-                  <input
-                    type="number"
-                    value={item.low}
-                    onChange={(e) => updateDataItem(index, 'low', e.target.value)}
-                    className="tool-input text-xs"
-                    step="0.01"
-                  />
-                  <input
-                    type="number"
-                    value={item.high}
-                    onChange={(e) => updateDataItem(index, 'high', e.target.value)}
-                    className="tool-input text-xs"
-                    step="0.01"
-                  />
-                  <button
-                    onClick={() => removeDataItem(index)}
-                    className="btn-secondary btn-sm text-red-400 hover:text-red-300"
-                    disabled={data.length <= 1}
-                  >
-                    ✕
-                  </button>
+            <div className="max-h-64 overflow-auto p-2 bg-gray-900 border border-gray-700 rounded-lg">
+              <div className="min-w-[600px] space-y-2">
+                <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_auto] gap-1 text-xs text-gray-400 px-1">
+                  <span>{t('date')}</span>
+                  <span>{t('open')}</span>
+                  <span>{t('close')}</span>
+                  <span>{t('low')}</span>
+                  <span>{t('high')}</span>
+                  <span></span>
                 </div>
-              ))}
+                {data.map((item, index) => (
+                  <div key={index} className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_auto] gap-1 items-center">
+                    <input
+                      type="date"
+                      value={item.date}
+                      onChange={(e) => updateDataItem(index, 'date', e.target.value)}
+                      className="tool-input text-xs"
+                    />
+                    <input
+                      type="number"
+                      value={item.open}
+                      onChange={(e) => updateDataItem(index, 'open', e.target.value)}
+                      className="tool-input text-xs"
+                      step="0.01"
+                    />
+                    <input
+                      type="number"
+                      value={item.close}
+                      onChange={(e) => updateDataItem(index, 'close', e.target.value)}
+                      className="tool-input text-xs"
+                      step="0.01"
+                    />
+                    <input
+                      type="number"
+                      value={item.low}
+                      onChange={(e) => updateDataItem(index, 'low', e.target.value)}
+                      className="tool-input text-xs"
+                      step="0.01"
+                    />
+                    <input
+                      type="number"
+                      value={item.high}
+                      onChange={(e) => updateDataItem(index, 'high', e.target.value)}
+                      className="tool-input text-xs"
+                      step="0.01"
+                    />
+                    <button
+                      onClick={() => removeDataItem(index)}
+                      className="btn-secondary btn-sm text-red-400 hover:text-red-300"
+                      disabled={data.length <= 1}
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

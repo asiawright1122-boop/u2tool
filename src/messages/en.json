@@ -4,6 +4,18 @@
     "tagline": "Free Online Tools for Developers",
     "description": "100+ free online tools for developers, designers, and creators. JSON formatter, Base64 encoder, UUID generator, and more."
   },
+  "categories": {
+    "text": "Text Tools",
+    "encoding": "Encoders & Decoders",
+    "generators": "Generators",
+    "converters": "Converters",
+    "development": "Development",
+    "security": "Security",
+    "network": "Network",
+    "image": "Image Tools",
+    "math": "Math & Calc",
+    "charts": "Charts"
+  },
   "nav": {
     "home": "Home",
     "tools": "Tools",
@@ -3755,7 +3767,8 @@
         "tip2": "Click Add Row to add more items",
         "tip3": "Enable Donut for hollow center donut chart",
         "tip4": "Enable Rose for nightingale rose diagram",
-        "tip5": "Enable Show Percentage to display item proportions"
+        "tip5": "Enable Show Percentage to display item proportions",
+        "tip6": "Import data from CSV file (name,value format)"
       },
       "importCsv": "Import CSV",
       "csvFormat": "CSV format: name,value (one per line)",
@@ -3864,7 +3877,8 @@
         "tip2": "Add multiple series to compare groups",
         "tip3": "Adjust symbol size for visibility",
         "tip4": "Customize axis names",
-        "tip5": "Export as PNG or SVG"
+        "tip5": "Export as PNG or SVG",
+        "tip6": "Import data from CSV file (x,y format)"
       },
       "importCsv": "Import CSV",
       "csvFormat": "CSV format: x,y (one per line)",
