@@ -259,6 +259,34 @@ export const CATEGORY_KEYWORDS: Record<string, Record<string, string[]>> = {
       '16進数計算機', '基数変換', 'アスペクト比計算',
     ],
   },
+  // 图表工具分类
+  charts: {
+    en: [
+      'chart tools', 'chart generator', 'data visualization', 'bar chart maker', 'pie chart generator',
+      'line chart creator', 'graph maker online', 'free chart tools', 'chart builder', 'data charts',
+      'online chart generator free', 'create charts online', 'visualization tools',
+    ],
+    zh: [
+      '图表工具', '图表生成器', '数据可视化', '柱状图制作', '饼图生成器', '折线图创建',
+      '在线图表制作', '免费图表工具', '图表构建器', '数据图表', '免费在线图表生成',
+      '在线创建图表', '可视化工具',
+    ],
+    es: [
+      'herramientas de gráficos', 'generador de gráficos', 'visualización de datos', 'creador de gráficos de barras',
+      'generador de gráficos circulares', 'creador de gráficos de líneas', 'creador de gráficos online',
+      'herramientas de gráficos gratis', 'constructor de gráficos',
+    ],
+    pt: [
+      'ferramentas de gráficos', 'gerador de gráficos', 'visualização de dados', 'criador de gráficos de barras',
+      'gerador de gráficos de pizza', 'criador de gráficos de linha', 'criador de gráficos online',
+      'ferramentas de gráficos grátis', 'construtor de gráficos',
+    ],
+    ja: [
+      'チャートツール', 'グラフ生成', 'データ可視化', '棒グラフ作成', '円グラフ生成',
+      '折れ線グラフ作成', 'オンライングラフ作成', '無料チャートツール', 'グラフビルダー',
+      'データチャート', 'オンラインチャート生成', '可視化ツール',
+    ],
+  },
 };
 
 
@@ -1722,5 +1750,14 @@ export const TOOL_KEYWORDS: Record<string, Record<string, string[]>> = {
     es: ['hash de archivo', 'generador de hash de archivo', 'calcular hash de archivo'],
     pt: ['hash de arquivo', 'gerador de hash de arquivo', 'calcular hash de arquivo'],
     ja: ['ファイルハッシュ', 'ファイルハッシュ生成', 'ファイルハッシュを計算', 'オンラインファイルハッシュ'],
+  },
+
+  // ==================== 图表工具 ====================
+  'bar-chart-generator': {
+    en: ['bar chart generator', 'bar chart maker', 'create bar chart online', 'bar graph generator', 'column chart maker', 'bar chart tool free', 'online bar chart creator', 'data bar chart', 'export bar chart PNG SVG', 'free bar chart generator'],
+    zh: ['柱状图生成器', '柱状图制作', '在线创建柱状图', '条形图生成器', '柱形图制作', '免费柱状图工具', '在线柱状图创建', '数据柱状图', '导出柱状图PNG SVG', '免费在线柱状图生成器'],
+    es: ['generador de gráficos de barras', 'creador de gráficos de barras', 'crear gráfico de barras online', 'generador de gráficos de columnas', 'herramienta de gráficos de barras gratis', 'exportar gráfico de barras PNG SVG'],
+    pt: ['gerador de gráficos de barras', 'criador de gráficos de barras', 'criar gráfico de barras online', 'gerador de gráficos de colunas', 'ferramenta de gráficos de barras grátis', 'exportar gráfico de barras PNG SVG'],
+    ja: ['棒グラフ生成', '棒グラフ作成', 'オンライン棒グラフ作成', 'バーチャート生成', '柱グラフ作成', '無料棒グラフツール', 'オンライン棒グラフ作成', 'データ棒グラフ', '棒グラフPNG SVGエクスポート', '無料棒グラフ生成'],
   },
 };

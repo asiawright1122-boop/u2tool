@@ -4,12 +4,14 @@ import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 
 // Simple markdown parser (for basic features)
+// 注意：为避免 SEO 问题（页面已有 H1），markdown 中的标题降级处理：
+// # -> h2, ## -> h3, ### -> h4
 function parseMarkdown(md: string): string {
   const html = md
-    // Headers
-    .replace(/^### (.*$)/gim, '<h3 class="text-lg font-bold mt-4 mb-2">$1</h3>')
-    .replace(/^## (.*$)/gim, '<h2 class="text-xl font-bold mt-4 mb-2">$1</h2>')
-    .replace(/^# (.*$)/gim, '<h1 class="text-2xl font-bold mt-4 mb-2">$1</h1>')
+    // Headers（降级处理：# -> h2, ## -> h3, ### -> h4）
+    .replace(/^### (.*$)/gim, '<h4 class="text-base font-bold mt-4 mb-2">$1</h4>')
+    .replace(/^## (.*$)/gim, '<h3 class="text-lg font-bold mt-4 mb-2">$1</h3>')
+    .replace(/^# (.*$)/gim, '<h2 class="text-xl font-bold mt-4 mb-2">$1</h2>')
     // Bold
     .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
     // Italic
@@ -60,20 +62,22 @@ code blocks
   return (
     <div className="space-y-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        {/* Editor */}
+        {/* Editor 列 */}
         <div>
-          <label className="block text-sm font-medium mb-2">{t('markdown.editor')}</label>
+          <div className="flex justify-between items-center mb-2 h-8">
+            <label className="text-sm font-medium">{t('markdown.editor')}</label>
+          </div>
           <textarea
-            className="tool-textarea h-96"
+            className="h-96 w-full bg-gray-900 border border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-100 focus:outline-none focus:border-blue-500 resize-none"
             value={markdown}
             onChange={(e) => setMarkdown(e.target.value)}
             placeholder={t('inputPlaceholder')}
           />
         </div>
 
-        {/* Preview */}
+        {/* Preview 列 */}
         <div>
-          <div className="flex justify-between items-center mb-2">
+          <div className="flex justify-between items-center mb-2 h-8">
             <label className="text-sm font-medium">{t('markdown.preview')}</label>
             <button
               onClick={copyHtml}
@@ -83,7 +87,7 @@ code blocks
             </button>
           </div>
           <div
-            className="h-96 bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-auto prose prose-invert max-w-none"
+            className="h-96 bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-auto text-gray-100"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>

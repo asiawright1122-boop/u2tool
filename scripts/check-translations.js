@@ -36,7 +36,8 @@ locales.forEach(locale => {
     });
 
     if (missing.length > 0) {
-      console.log(`\n[${locale}] Missing ${missing.length} translations.`);
+      console.log(`\n[${locale}] Missing ${missing.length} translations:`);
+      missing.forEach(slug => console.log(`  - ${slug}`));
     } else {
       console.log(`\n[${locale}] All clear!`);
     }

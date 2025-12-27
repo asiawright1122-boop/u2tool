@@ -236,6 +236,28 @@ const toolComponents: Record<string, React.ComponentType> = {
   'char-frequency': dynamic(() => import('./CharFrequency')),
   'json-to-dart': dynamic(() => import('./JsonToDart')),
   'sql-to-json': dynamic(() => import('./SqlToJson')),
+  // Batch 33 - Chart Tools (数据图表工具)
+  'bar-chart-generator': dynamic(() => import('./BarChartGenerator')),
+  'line-chart-generator': dynamic(() => import('./LineChartGenerator')),
+  'pie-chart-generator': dynamic(() => import('./PieChartGenerator')),
+  'radar-chart-generator': dynamic(() => import('./RadarChartGenerator')),
+  'scatter-chart-generator': dynamic(() => import('./ScatterChartGenerator')),
+  'area-chart-generator': dynamic(() => import('./AreaChartGenerator')),
+  'funnel-chart-generator': dynamic(() => import('./FunnelChartGenerator')),
+  'gauge-chart-generator': dynamic(() => import('./GaugeChartGenerator')),
+  'heatmap-chart-generator': dynamic(() => import('./HeatmapChartGenerator')),
+  'treemap-chart-generator': dynamic(() => import('./TreemapChartGenerator')),
+  // Batch 34 - New Chart Tools (新增图表工具)
+  'doughnut-chart-generator': dynamic(() => import('./DoughnutChartGenerator')),
+  'sankey-chart-generator': dynamic(() => import('./SankeyChartGenerator')),
+  'sunburst-chart-generator': dynamic(() => import('./SunburstChartGenerator')),
+  'candlestick-chart-generator': dynamic(() => import('./CandlestickChartGenerator')),
+  'boxplot-chart-generator': dynamic(() => import('./BoxplotChartGenerator')),
+  'wordcloud-generator': dynamic(() => import('./WordCloudGenerator')),
+  'graph-chart-generator': dynamic(() => import('./GraphChartGenerator')),
+  'calendar-heatmap-generator': dynamic(() => import('./CalendarHeatmapGenerator')),
+  'polar-bar-chart-generator': dynamic(() => import('./PolarBarChartGenerator')),
+  'parallel-chart-generator': dynamic(() => import('./ParallelChartGenerator')),
 };
 
 export default function ToolWrapper({ slug }: { slug: string }) {

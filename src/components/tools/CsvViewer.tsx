@@ -1,13 +1,26 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function CsvViewer() {
   const t = useTranslations('tools');
-  const [input, setInput] = useState(() => t('csvViewer.defaultInput'));
+  
+  // 初始化状态
+  const [isInitialized, setIsInitialized] = useState(false);
+  
+  // 使用空字符串初始化，在 useEffect 中设置翻译值
+  const [input, setInput] = useState('');
   const [delimiter, setDelimiter] = useState(',');
   const [hasHeader, setHasHeader] = useState(true);
+
+  // 初始化翻译值（只在组件挂载时执行一次）
+  useEffect(() => {
+    if (!isInitialized) {
+      setInput(t('csvViewer.defaultInput'));
+      setIsInitialized(true);
+    }
+  }, [t, isInitialized]);
 
   const parseCSV = (text: string, delim: string): string[][] => {
     const lines = text.trim().split('\n');

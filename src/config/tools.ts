@@ -1,4 +1,4 @@
-export type ToolCategory = 'text' | 'encoding' | 'generators' | 'converters' | 'development' | 'security' | 'network' | 'image' | 'math';
+export type ToolCategory = 'text' | 'encoding' | 'generators' | 'converters' | 'development' | 'security' | 'network' | 'image' | 'math' | 'charts';
 
 export interface Tool {
   slug: string;
@@ -274,6 +274,30 @@ export const tools: Tool[] = [
   { slug: 'char-frequency', category: 'text', icon: '📊', component: 'CharFrequency', popular: true },
   { slug: 'json-to-dart', category: 'converters', icon: '🎯', component: 'JsonToDart', popular: true },
   { slug: 'sql-to-json', category: 'converters', icon: '🗃️', component: 'SqlToJson', popular: true },
+  
+  // Batch 33 - Chart Tools (数据图表工具)
+  { slug: 'bar-chart-generator', category: 'charts', icon: '📊', component: 'BarChartGenerator', popular: true },
+  { slug: 'line-chart-generator', category: 'charts', icon: '📈', component: 'LineChartGenerator', popular: true },
+  { slug: 'pie-chart-generator', category: 'charts', icon: '🥧', component: 'PieChartGenerator', popular: true },
+  { slug: 'radar-chart-generator', category: 'charts', icon: '🎯', component: 'RadarChartGenerator', popular: true },
+  { slug: 'scatter-chart-generator', category: 'charts', icon: '⚬', component: 'ScatterChartGenerator', popular: true },
+  { slug: 'area-chart-generator', category: 'charts', icon: '📉', component: 'AreaChartGenerator', popular: true },
+  { slug: 'funnel-chart-generator', category: 'charts', icon: '🔻', component: 'FunnelChartGenerator', popular: true },
+  { slug: 'gauge-chart-generator', category: 'charts', icon: '🎛️', component: 'GaugeChartGenerator', popular: true },
+  { slug: 'heatmap-chart-generator', category: 'charts', icon: '🔥', component: 'HeatmapChartGenerator', popular: true },
+  { slug: 'treemap-chart-generator', category: 'charts', icon: '🌳', component: 'TreemapChartGenerator', popular: true },
+  
+  // Batch 34 - New Chart Tools (新增图表工具)
+  { slug: 'doughnut-chart-generator', category: 'charts', icon: '🍩', component: 'DoughnutChartGenerator', popular: true },
+  { slug: 'sankey-chart-generator', category: 'charts', icon: '🔀', component: 'SankeyChartGenerator', popular: true },
+  { slug: 'sunburst-chart-generator', category: 'charts', icon: '☀️', component: 'SunburstChartGenerator', popular: true },
+  { slug: 'candlestick-chart-generator', category: 'charts', icon: '📈', component: 'CandlestickChartGenerator', popular: true },
+  { slug: 'boxplot-chart-generator', category: 'charts', icon: '📦', component: 'BoxplotChartGenerator', popular: true },
+  { slug: 'wordcloud-generator', category: 'charts', icon: '☁️', component: 'WordCloudGenerator', popular: true },
+  { slug: 'graph-chart-generator', category: 'charts', icon: '🕸️', component: 'GraphChartGenerator', popular: true },
+  { slug: 'calendar-heatmap-generator', category: 'charts', icon: '📅', component: 'CalendarHeatmapGenerator', popular: true },
+  { slug: 'polar-bar-chart-generator', category: 'charts', icon: '🎯', component: 'PolarBarChartGenerator', popular: true },
+  { slug: 'parallel-chart-generator', category: 'charts', icon: '📊', component: 'ParallelChartGenerator', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [
@@ -286,6 +310,7 @@ export const categories: { id: ToolCategory; icon: string }[] = [
   { id: 'network', icon: '🌐' },
   { id: 'image', icon: '🖼️' },
   { id: 'math', icon: '🔢' },
+  { id: 'charts', icon: '📈' },
 ];
 
 export function getToolsByCategory(category: ToolCategory): Tool[] {

@@ -31,22 +31,27 @@ export default function ToolsPageClient() {
   return (
     <div className="min-h-screen py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* h1 标题：页面主标题，SEO 重要 */}
-        <h1 className="text-4xl font-bold mb-8 text-center">{t('nav.tools')}</h1>
+        {/* 分类导航区域 - 与下方工具卡片网格宽度一致 */}
+        <div className="mb-12">
+          {/* h1 标题：页面主标题，SEO 重要 */}
+          <h1 className="text-4xl font-bold mb-6 text-center">{t('nav.tools')}</h1>
 
-        {/* 分类快速导航 */}
-        <nav className="mb-12 flex flex-wrap justify-center gap-3" aria-label="Tool categories">
-          {categories.map((cat) => (
-            <Link
-              key={cat.id}
-              href={`/tools/category/${cat.id}`}
-              className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-full hover:bg-gray-700 hover:border-gray-600 transition-colors flex items-center gap-2 text-sm"
-            >
-              <span>{cat.icon}</span>
-              {t(`categories.${cat.id}`)}
-            </Link>
-          ))}
-        </nav>
+          {/* 分类快速导航 - 5列网格对称布局 */}
+          <nav aria-label="Tool categories">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+              {categories.map((cat) => (
+                <Link
+                  key={cat.id}
+                  href={`/tools/category/${cat.id}`}
+                  className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-700 hover:border-gray-600 transition-colors flex items-center justify-center gap-2 text-sm whitespace-nowrap"
+                >
+                  <span>{cat.icon}</span>
+                  {t(`categories.${cat.id}`)}
+                </Link>
+              ))}
+            </div>
+          </nav>
+        </div>
 
         {categories.map((cat) => {
           const categoryTools = getToolsByCategory(cat.id);

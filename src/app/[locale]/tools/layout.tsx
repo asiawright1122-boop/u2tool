@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { tools } from '@/config/tools';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://toolbox.example.com';
 
@@ -36,5 +37,10 @@ export default function ToolsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <ScrollToTop />
+      {children}
+    </>
+  );
 }
