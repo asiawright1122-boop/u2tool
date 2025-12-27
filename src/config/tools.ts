@@ -17,7 +17,7 @@ export const tools: Tool[] = [
   { slug: 'jwt-decoder', category: 'encoding', icon: '🎫', component: 'JwtDecoder', popular: true },
   { slug: 'xml-formatter', category: 'encoding', icon: '📰', component: 'XmlFormatter', popular: true },
   { slug: 'unicode-converter', category: 'encoding', icon: '🔣', component: 'UnicodeConverter' },
-  
+
   // Generators
   { slug: 'uuid-generator', category: 'generators', icon: '🆔', component: 'UuidGenerator', popular: true },
   { slug: 'password-generator', category: 'security', icon: '🔑', component: 'PasswordGenerator', popular: true },
@@ -26,7 +26,7 @@ export const tools: Tool[] = [
   { slug: 'lorem-ipsum', category: 'generators', icon: '📝', component: 'LoremIpsum' },
   { slug: 'cron-generator', category: 'generators', icon: '⏱️', component: 'CronGenerator' },
   { slug: 'gradient-generator', category: 'generators', icon: '🌈', component: 'GradientGenerator', popular: true },
-  
+
   // Text Tools
   { slug: 'word-counter', category: 'text', icon: '🔢', component: 'WordCounter', popular: true },
   { slug: 'case-converter', category: 'text', icon: 'Aa', component: 'CaseConverter' },
@@ -35,7 +35,7 @@ export const tools: Tool[] = [
   { slug: 'text-to-slug', category: 'text', icon: '🔤', component: 'TextToSlug' },
   { slug: 'chinese-converter', category: 'text', icon: '繁', component: 'ChineseConverter', popular: true },
   { slug: 'pinyin-converter', category: 'text', icon: '拼', component: 'PinyinConverter' },
-  
+
   // Converters
   { slug: 'color-converter', category: 'converters', icon: '🎨', component: 'ColorConverter', popular: true },
   { slug: 'timestamp-converter', category: 'converters', icon: '⏰', component: 'TimestampConverter' },
@@ -43,7 +43,7 @@ export const tools: Tool[] = [
   { slug: 'image-to-base64', category: 'image', icon: '🖼️', component: 'ImageToBase64' },
   { slug: 'number-base-converter', category: 'math', icon: '🔢', component: 'NumberBaseConverter' },
   { slug: 'unit-converter', category: 'converters', icon: '📏', component: 'UnitConverter', popular: true },
-  
+
   // Development
   { slug: 'regex-tester', category: 'development', icon: '🔍', component: 'RegexTester' },
   { slug: 'json-path-tester', category: 'development', icon: '🛤️', component: 'JsonPathTester' },
@@ -56,42 +56,42 @@ export const tools: Tool[] = [
   { slug: 'html-preview', category: 'development', icon: '👁️', component: 'HtmlPreview', popular: true },
   { slug: 'ip-lookup', category: 'network', icon: '🌐', component: 'IpLookup', popular: true },
   { slug: 'morse-code', category: 'encoding', icon: '📡', component: 'MorseCode' },
-  
+
   // Batch 5 tools
   { slug: 'random-generator', category: 'generators', icon: '🎲', component: 'RandomGenerator' },
   { slug: 'text-reverser', category: 'text', icon: '🔄', component: 'TextReverser' },
   { slug: 'line-counter', category: 'text', icon: '📋', component: 'LineCounter' },
   { slug: 'string-escape', category: 'encoding', icon: '🔒', component: 'StringEscape' },
   { slug: 'yaml-json', category: 'converters', icon: '📄', component: 'YamlJson', popular: true },
-  
+
   // Batch 6 tools
   { slug: 'date-calculator', category: 'converters', icon: '📅', component: 'DateCalculator', popular: true },
   { slug: 'text-deduplicator', category: 'text', icon: '🧹', component: 'TextDeduplicator' },
   { slug: 'color-blender', category: 'converters', icon: '🎨', component: 'ColorBlender' },
   { slug: 'json-sorter', category: 'encoding', icon: '🔀', component: 'JsonSorter' },
   { slug: 'placeholder-image', category: 'image', icon: '🖼️', component: 'PlaceholderImage' },
-  
+
   // Batch 7 tools
   { slug: 'text-encryption', category: 'security', icon: '🔐', component: 'TextEncryption', popular: true },
   { slug: 'file-hash', category: 'security', icon: '📁', component: 'FileHash' },
   { slug: 'html-table-generator', category: 'generators', icon: '📊', component: 'HtmlTableGenerator' },
   { slug: 'json-schema-validator', category: 'development', icon: '✅', component: 'JsonSchemaValidator' },
   { slug: 'regex-patterns', category: 'development', icon: '📚', component: 'RegexPatterns' },
-  
+
   // Batch 8 tools
   { slug: 'byte-counter', category: 'text', icon: '📏', component: 'ByteCounter' },
   { slug: 'json-to-typescript', category: 'converters', icon: '🔷', component: 'JsonToTypescript', popular: true },
   { slug: 'svg-optimizer', category: 'image', icon: '🎨', component: 'SvgOptimizer' },
   { slug: 'text-to-binary', category: 'encoding', icon: '01', component: 'TextToBinary' },
   { slug: 'markdown-to-html', category: 'converters', icon: '📝', component: 'MarkdownToHtml' },
-  
+
   // Batch 9 tools
   { slug: 'html-minifier', category: 'development', icon: '📦', component: 'HtmlMinifier' },
   { slug: 'json-diff', category: 'development', icon: '🔍', component: 'JsonDiff', popular: true },
   { slug: 'base32', category: 'encoding', icon: '🔢', component: 'Base32' },
   { slug: 'epoch-converter', category: 'converters', icon: '⏱️', component: 'EpochConverter' },
   { slug: 'css-unit-converter', category: 'converters', icon: '📐', component: 'CssUnitConverter' },
-  
+
   // Batch 10 tools
   { slug: 'text-statistics', category: 'text', icon: '📊', component: 'TextStatistics', popular: true },
   { slug: 'hex-editor', category: 'encoding', icon: '🔢', component: 'HexEditor' },
@@ -103,7 +103,7 @@ export const tools: Tool[] = [
   { slug: 'json-to-go', category: 'converters', icon: '🐹', component: 'JsonToGo' },
   { slug: 'html-to-jsx', category: 'converters', icon: '⚛️', component: 'HtmlToJsx', popular: true },
   { slug: 'chmod-calculator', category: 'math', icon: '🔐', component: 'ChmodCalculator' },
-  
+
   // Batch 11 tools
   { slug: 'barcode-generator', category: 'image', icon: '📊', component: 'BarcodeGenerator', popular: true },
   { slug: 'text-to-speech', category: 'text', icon: '🔊', component: 'TextToSpeech' },
@@ -113,52 +113,52 @@ export const tools: Tool[] = [
   { slug: 'csv-to-json', category: 'converters', icon: '📊', component: 'CsvToJson' },
   { slug: 'html-entity', category: 'encoding', icon: '🔣', component: 'HtmlEntityConverter' },
   { slug: 'number-formatter', category: 'converters', icon: '🔢', component: 'NumberFormatter' },
-  
+
   // Batch 12 - New Security Tools
   { slug: 'hmac-generator', category: 'security', icon: '🔏', component: 'HmacGenerator' },
   { slug: 'password-strength', category: 'security', icon: '💪', component: 'PasswordStrength' },
   { slug: 'totp-generator', category: 'security', icon: '🔐', component: 'TotpGenerator' },
-  
+
   // Batch 13 - New Network Tools
   { slug: 'user-agent-parser', category: 'network', icon: '🔍', component: 'UserAgentParser' },
   { slug: 'cidr-calculator', category: 'network', icon: '🔢', component: 'CidrCalculator' },
   { slug: 'http-header-parser', category: 'network', icon: '📋', component: 'HttpHeaderParser' },
-  
+
   // Batch 14 - New Math Tools
   { slug: 'percentage-calculator', category: 'math', icon: '%', component: 'PercentageCalculator' },
   { slug: 'statistics-calculator', category: 'math', icon: '📊', component: 'StatisticsCalculator' },
   { slug: 'scientific-calculator', category: 'math', icon: '🔬', component: 'ScientificCalculator' },
-  
+
   // Batch 15 - New Text Tools
   { slug: 'text-sorter', category: 'text', icon: '🔤', component: 'TextSorter' },
   { slug: 'text-extractor', category: 'text', icon: '🔍', component: 'TextExtractor' },
   { slug: 'emoji-picker', category: 'text', icon: '😀', component: 'EmojiPicker' },
-  
+
   // Batch 16 - New Converter Tools
   { slug: 'json-to-sql', category: 'converters', icon: '🗃️', component: 'JsonToSql' },
   { slug: 'toml-json', category: 'converters', icon: '📄', component: 'TomlJson' },
   { slug: 'json-to-java', category: 'converters', icon: '☕', component: 'JsonToJava' },
   { slug: 'json-to-python', category: 'converters', icon: '🐍', component: 'JsonToPython' },
   { slug: 'json-to-kotlin', category: 'converters', icon: '🟣', component: 'JsonToKotlin' },
-  
+
   // Batch 17 - Image Tools
   { slug: 'image-compressor', category: 'image', icon: '📦', component: 'ImageCompressor' },
   { slug: 'image-converter', category: 'image', icon: '🔄', component: 'ImageConverter' },
   { slug: 'favicon-generator', category: 'image', icon: '🎨', component: 'FaviconGenerator' },
   { slug: 'image-cropper', category: 'image', icon: '✂️', component: 'ImageCropper' },
-  
+
   // Batch 18 - Development Tools
   { slug: 'gitignore-generator', category: 'development', icon: '📁', component: 'GitignoreGenerator' },
   { slug: 'docker-compose-generator', category: 'development', icon: '🐳', component: 'DockerComposeGenerator' },
   { slug: 'package-json-generator', category: 'development', icon: '📦', component: 'PackageJsonGenerator' },
-  
+
   // Batch 19 - New Popular Tools
   { slug: 'json-minifier', category: 'encoding', icon: '📦', component: 'JsonMinifier', popular: true },
   { slug: 'timezone-converter', category: 'converters', icon: '🌍', component: 'TimezoneConverter', popular: true },
   { slug: 'color-contrast-checker', category: 'development', icon: '🎨', component: 'ColorContrastChecker', popular: true },
   { slug: 'markdown-table-generator', category: 'generators', icon: '📊', component: 'MarkdownTableGenerator', popular: true },
   { slug: 'base58', category: 'encoding', icon: '₿', component: 'Base58' },
-  
+
   // Batch 20 - SEO & Development Tools
   { slug: 'meta-tag-generator', category: 'generators', icon: '🏷️', component: 'MetaTagGenerator', popular: true },
   { slug: 'robots-txt-generator', category: 'generators', icon: '🤖', component: 'RobotsTxtGenerator' },
@@ -169,7 +169,7 @@ export const tools: Tool[] = [
   { slug: 'cron-explainer', category: 'development', icon: '⏰', component: 'CronExplainer' },
   { slug: 'json-to-graphql', category: 'converters', icon: '◈', component: 'JsonToGraphql' },
   { slug: 'sql-to-mongo', category: 'converters', icon: '🍃', component: 'SqlToMongo' },
-  
+
   // Batch 21 - Code & CSS Tools
   { slug: 'json-to-csharp', category: 'converters', icon: '🔷', component: 'JsonToCsharp' },
   { slug: 'json-to-rust', category: 'converters', icon: '🦀', component: 'JsonToRust' },
@@ -179,7 +179,7 @@ export const tools: Tool[] = [
   { slug: 'box-shadow-generator', category: 'generators', icon: '🌑', component: 'BoxShadowGenerator', popular: true },
   { slug: 'border-radius-generator', category: 'generators', icon: '⬜', component: 'BorderRadiusGenerator' },
   { slug: 'text-to-ascii-art', category: 'text', icon: '🎨', component: 'TextToAsciiArt' },
-  
+
   // Batch 22 - Utility Tools
   { slug: 'color-shades-generator', category: 'generators', icon: '🎨', component: 'ColorShadesGenerator', popular: true },
   { slug: 'json-flattener', category: 'encoding', icon: '📋', component: 'JsonFlattener' },
@@ -187,34 +187,34 @@ export const tools: Tool[] = [
   { slug: 'html-to-markdown', category: 'converters', icon: '📝', component: 'HtmlToMarkdown', popular: true },
   { slug: 'regex-generator', category: 'development', icon: '🔍', component: 'RegexGenerator', popular: true },
   { slug: 'url-shortener-preview', category: 'network', icon: '🔗', component: 'UrlShortenerPreview' },
-  
+
   // Batch 23 - More Utility Tools
   { slug: 'json-viewer', category: 'encoding', icon: '👁️', component: 'JsonViewer', popular: true },
   { slug: 'xml-to-json', category: 'converters', icon: '📄', component: 'XmlToJson', popular: true },
   { slug: 'ip-address-generator', category: 'network', icon: '🌐', component: 'IpAddressGenerator' },
   { slug: 'css-gradient-text', category: 'generators', icon: '✨', component: 'CssGradientText', popular: true },
   { slug: 'sitemap-generator', category: 'generators', icon: '🗺️', component: 'SitemapGenerator' },
-  
+
   // Batch 24 - Advanced Tools
   { slug: 'json-to-php', category: 'converters', icon: '🐘', component: 'JsonToPhp' },
   { slug: 'css-filter-generator', category: 'generators', icon: '🎭', component: 'CssFilterGenerator', popular: true },
   { slug: 'text-diff-patch', category: 'text', icon: '📝', component: 'TextDiffPatch' },
   { slug: 'encoding-detector', category: 'encoding', icon: '🔍', component: 'EncodingDetector' },
-  
+
   // Batch 25 - More Tools
   { slug: 'css-clip-path-generator', category: 'generators', icon: '✂️', component: 'CssClipPathGenerator', popular: true },
   { slug: 'uuid-validator', category: 'development', icon: '✅', component: 'UuidValidator' },
   { slug: 'text-hash-comparator', category: 'security', icon: '🔐', component: 'TextHashComparator' },
   { slug: 'json-path-finder', category: 'development', icon: '🔎', component: 'JsonPathFinder', popular: true },
   { slug: 'canvas-drawing', category: 'image', icon: '🎨', component: 'CanvasDrawing' },
-  
+
   // Batch 26 - New Tools
   { slug: 'json-escape', category: 'encoding', icon: '🔒', component: 'JsonEscape' },
   { slug: 'css-animation-generator', category: 'generators', icon: '🎬', component: 'CssAnimationGenerator', popular: true },
   { slug: 'text-case-counter', category: 'text', icon: '🔠', component: 'TextCaseCounter' },
   { slug: 'dns-lookup', category: 'network', icon: '🌐', component: 'DnsLookup', popular: true },
   { slug: 'image-resizer', category: 'image', icon: '📐', component: 'ImageResizer', popular: true },
-  
+
   // Batch 27 - Popular Overseas Tools
   { slug: 'ssl-checker', category: 'network', icon: '🔒', component: 'SslChecker', popular: true },
   { slug: 'whois-lookup', category: 'network', icon: '🔍', component: 'WhoisLookup', popular: true },
@@ -264,7 +264,7 @@ export const tools: Tool[] = [
   { slug: 'text-to-nato', category: 'text', icon: '📻', component: 'TextToNato' },
   { slug: 'crc32-calculator', category: 'development', icon: '✅', component: 'Crc32Calculator' },
   { slug: 'mac-address-generator', category: 'network', icon: '🖧', component: 'MacAddressGenerator' },
-  
+
   // Batch 32 - New Popular Tools (to reach 200)
   { slug: 'ip-validator', category: 'network', icon: '✅', component: 'IpValidator', popular: true },
   { slug: 'json-merger', category: 'encoding', icon: '🔗', component: 'JsonMerger', popular: true },
@@ -274,7 +274,7 @@ export const tools: Tool[] = [
   { slug: 'char-frequency', category: 'text', icon: '📊', component: 'CharFrequency', popular: true },
   { slug: 'json-to-dart', category: 'converters', icon: '🎯', component: 'JsonToDart', popular: true },
   { slug: 'sql-to-json', category: 'converters', icon: '🗃️', component: 'SqlToJson', popular: true },
-  
+
   // Batch 33 - Chart Tools (数据图表工具)
   { slug: 'bar-chart-generator', category: 'charts', icon: '📊', component: 'BarChartGenerator', popular: true },
   { slug: 'line-chart-generator', category: 'charts', icon: '📈', component: 'LineChartGenerator', popular: true },
@@ -286,7 +286,7 @@ export const tools: Tool[] = [
   { slug: 'gauge-chart-generator', category: 'charts', icon: '🎛️', component: 'GaugeChartGenerator', popular: true },
   { slug: 'heatmap-chart-generator', category: 'charts', icon: '🔥', component: 'HeatmapChartGenerator', popular: true },
   { slug: 'treemap-chart-generator', category: 'charts', icon: '🌳', component: 'TreemapChartGenerator', popular: true },
-  
+
   // Batch 34 - New Chart Tools (新增图表工具)
   { slug: 'doughnut-chart-generator', category: 'charts', icon: '🍩', component: 'DoughnutChartGenerator', popular: true },
   { slug: 'sankey-chart-generator', category: 'charts', icon: '🔀', component: 'SankeyChartGenerator', popular: true },
@@ -298,6 +298,12 @@ export const tools: Tool[] = [
   { slug: 'calendar-heatmap-generator', category: 'charts', icon: '📅', component: 'CalendarHeatmapGenerator', popular: true },
   { slug: 'polar-bar-chart-generator', category: 'charts', icon: '🎯', component: 'PolarBarChartGenerator', popular: true },
   { slug: 'parallel-chart-generator', category: 'charts', icon: '📊', component: 'ParallelChartGenerator', popular: true },
+  { slug: 'bubble-chart-generator', category: 'charts', icon: '🫧', component: 'BubbleChartGenerator', popular: true },
+  { slug: 'tree-chart-generator', category: 'charts', icon: '🌳', component: 'TreeChartGenerator', popular: true },
+  { slug: 'theme-river-generator', category: 'charts', icon: '🌊', component: 'ThemeRiverGenerator', popular: true },
+  { slug: 'gantt-chart-generator', category: 'charts', icon: '📅', component: 'GanttChartGenerator', popular: true },
+  { slug: 'venn-diagram-generator', category: 'charts', icon: '🔵', component: 'VennDiagramGenerator', popular: true },
+  { slug: 'timeline-chart-generator', category: 'charts', icon: '⏳', component: 'TimelineChartGenerator', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [

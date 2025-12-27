@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 
 // Dynamically import tool components
-const toolComponents: Record<string, React.ComponentType> = {
+const TOOL_COMPONENTS_MAP: Record<string, React.ComponentType> = {
   'json-formatter': dynamic(() => import('./JsonFormatter')),
   'base64': dynamic(() => import('./Base64')),
   'uuid-generator': dynamic(() => import('./UuidGenerator')),
@@ -237,34 +237,43 @@ const toolComponents: Record<string, React.ComponentType> = {
   'json-to-dart': dynamic(() => import('./JsonToDart')),
   'sql-to-json': dynamic(() => import('./SqlToJson')),
   // Batch 33 - Chart Tools (数据图表工具)
-  'bar-chart-generator': dynamic(() => import('./BarChartGenerator')),
-  'line-chart-generator': dynamic(() => import('./LineChartGenerator')),
-  'pie-chart-generator': dynamic(() => import('./PieChartGenerator')),
-  'radar-chart-generator': dynamic(() => import('./RadarChartGenerator')),
-  'scatter-chart-generator': dynamic(() => import('./ScatterChartGenerator')),
-  'area-chart-generator': dynamic(() => import('./AreaChartGenerator')),
-  'funnel-chart-generator': dynamic(() => import('./FunnelChartGenerator')),
-  'gauge-chart-generator': dynamic(() => import('./GaugeChartGenerator')),
-  'heatmap-chart-generator': dynamic(() => import('./HeatmapChartGenerator')),
-  'treemap-chart-generator': dynamic(() => import('./TreemapChartGenerator')),
+  'bar-chart-generator': dynamic(() => import('./BarChartGenerator'), { ssr: false }),
+  'line-chart-generator': dynamic(() => import('./LineChartGenerator'), { ssr: false }),
+  'pie-chart-generator': dynamic(() => import('./PieChartGenerator'), { ssr: false }),
+  'radar-chart-generator': dynamic(() => import('./RadarChartGenerator'), { ssr: false }),
+  'scatter-chart-generator': dynamic(() => import('./ScatterChartGenerator'), { ssr: false }),
+  'area-chart-generator': dynamic(() => import('./AreaChartGenerator'), { ssr: false }),
+  'funnel-chart-generator': dynamic(() => import('./FunnelChartGenerator'), { ssr: false }),
+  'gauge-chart-generator': dynamic(() => import('./GaugeChartGenerator'), { ssr: false }),
+  'heatmap-chart-generator': dynamic(() => import('./HeatmapChartGenerator'), { ssr: false }),
+  'treemap-chart-generator': dynamic(() => import('./TreemapChartGenerator'), { ssr: false }),
   // Batch 34 - New Chart Tools (新增图表工具)
-  'doughnut-chart-generator': dynamic(() => import('./DoughnutChartGenerator')),
-  'sankey-chart-generator': dynamic(() => import('./SankeyChartGenerator')),
-  'sunburst-chart-generator': dynamic(() => import('./SunburstChartGenerator')),
-  'candlestick-chart-generator': dynamic(() => import('./CandlestickChartGenerator')),
-  'boxplot-chart-generator': dynamic(() => import('./BoxplotChartGenerator')),
-  'wordcloud-generator': dynamic(() => import('./WordCloudGenerator')),
-  'graph-chart-generator': dynamic(() => import('./GraphChartGenerator')),
-  'calendar-heatmap-generator': dynamic(() => import('./CalendarHeatmapGenerator')),
-  'polar-bar-chart-generator': dynamic(() => import('./PolarBarChartGenerator')),
-  'parallel-chart-generator': dynamic(() => import('./ParallelChartGenerator')),
+  'doughnut-chart-generator': dynamic(() => import('./DoughnutChartGenerator'), { ssr: false }),
+  'sankey-chart-generator': dynamic(() => import('./SankeyChartGenerator'), { ssr: false }),
+  'sunburst-chart-generator': dynamic(() => import('./SunburstChartGenerator'), { ssr: false }),
+  'candlestick-chart-generator': dynamic(() => import('./CandlestickChartGenerator'), { ssr: false }),
+  'boxplot-chart-generator': dynamic(() => import('./BoxplotChartGenerator'), { ssr: false }),
+  'wordcloud-generator': dynamic(() => import('./WordCloudGenerator'), { ssr: false }),
+  'graph-chart-generator': dynamic(() => import('./GraphChartGenerator'), { ssr: false }),
+  'calendar-heatmap-generator': dynamic(() => import('./CalendarHeatmapGenerator'), { ssr: false }),
+  'polar-bar-chart-generator': dynamic(() => import('./PolarBarChartGenerator'), { ssr: false }),
+  'parallel-chart-generator': dynamic(() => import('./ParallelChartGenerator'), { ssr: false }),
+  'bubble-chart-generator': dynamic(() => import('./BubbleChartGenerator'), { ssr: false }),
+  'tree-chart-generator': dynamic(() => import('./TreeChartGenerator'), { ssr: false }),
+  'theme-river-generator': dynamic(() => import('./ThemeRiverGenerator'), { ssr: false }),
+  'gantt-chart-generator': dynamic(() => import('./GanttChartGenerator'), { ssr: false }),
+  'venn-diagram-generator': dynamic(() => import('./VennDiagramGenerator'), { ssr: false }),
+  'timeline-chart-generator': dynamic(() => import('./TimelineChartGenerator'), { ssr: false }),
 };
 
 export default function ToolWrapper({ slug }: { slug: string }) {
-  const ToolComponent = toolComponents[slug];
+  const ToolComponent = TOOL_COMPONENTS_MAP[slug];
 
+  console.log('ToolWrapper: slug received:', slug);
+  console.log('ToolWrapper: component found?', !!ToolComponent);
   if (!ToolComponent) {
-    return <div className="text-center text-gray-300">Tool not found</div>;
+    console.log('ToolWrapper: Valid keys:', Object.keys(TOOL_COMPONENTS_MAP).filter(k => k.includes('chart')));
+    return <div className="text-center text-gray-300">Tool not found: {slug}</div>;
   }
 
   return <ToolComponent />;
