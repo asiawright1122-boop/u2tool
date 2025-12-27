@@ -62,7 +62,7 @@ export default function WordCloudGenerator() {
   // 从文本生成词频
   const generateFromText = useCallback(() => {
     if (!textInput.trim()) return;
-    
+
     // 简单的词频统计
     const wordMap = new Map<string, number>();
     const words = textInput
@@ -70,17 +70,17 @@ export default function WordCloudGenerator() {
       .replace(/[^\w\s\u4e00-\u9fa5]/g, ' ')
       .split(/\s+/)
       .filter(w => w.length > 1);
-    
+
     words.forEach(word => {
       wordMap.set(word, (wordMap.get(word) || 0) + 1);
     });
-    
+
     // 转换为数组并排序
     const wordArray = Array.from(wordMap.entries())
       .map(([name, value]) => ({ name, value: value * 10 }))
       .sort((a, b) => b.value - a.value)
       .slice(0, 100); // 最多100个词
-    
+
     if (wordArray.length > 0) {
       setWords(wordArray);
     }
@@ -340,14 +340,14 @@ export default function WordCloudGenerator() {
                     type="text"
                     value={word.name}
                     onChange={(e) => updateWordItem(index, 'name', e.target.value)}
-                    className="tool-input flex-1 min-w-[120px]"
+                    className="tool-input flex-[2] min-w-[100px]"
                     placeholder={t('word')}
                   />
                   <input
                     type="number"
                     value={word.value}
                     onChange={(e) => updateWordItem(index, 'value', e.target.value)}
-                    className="tool-input w-24"
+                    className="tool-input w-20 shrink-0"
                     placeholder={t('weight')}
                   />
                   <button

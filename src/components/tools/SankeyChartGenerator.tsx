@@ -356,7 +356,7 @@ export default function SankeyChartGenerator() {
                   <select
                     value={link.source}
                     onChange={(e) => updateLink(index, 'source', e.target.value)}
-                    className="tool-input w-28 min-w-[100px]"
+                    className="tool-input flex-1 min-w-[80px]"
                   >
                     {nodes.map(n => (
                       <option key={n.name} value={n.name}>{n.name}</option>
@@ -366,7 +366,7 @@ export default function SankeyChartGenerator() {
                   <select
                     value={link.target}
                     onChange={(e) => updateLink(index, 'target', e.target.value)}
-                    className="tool-input w-28 min-w-[100px]"
+                    className="tool-input flex-1 min-w-[80px]"
                   >
                     {nodes.map(n => (
                       <option key={n.name} value={n.name}>{n.name}</option>
@@ -376,7 +376,7 @@ export default function SankeyChartGenerator() {
                     type="number"
                     value={link.value}
                     onChange={(e) => updateLink(index, 'value', e.target.value)}
-                    className="tool-input w-24 min-w-[80px]"
+                    className="tool-input w-20 shrink-0"
                     placeholder={t('value')}
                   />
                   <button

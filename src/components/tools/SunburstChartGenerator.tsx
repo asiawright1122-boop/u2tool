@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
@@ -48,10 +48,12 @@ export default function SunburstChartGenerator() {
       children: [
         { name: 'Category A1', value: 100 },
         { name: 'Category A2', value: 80 },
-        { name: 'Category A3', children: [
-          { name: 'Category A3-1', value: 30 },
-          { name: 'Category A3-2', value: 20 },
-        ]},
+        {
+          name: 'Category A3', children: [
+            { name: 'Category A3-1', value: 30 },
+            { name: 'Category A3-2', value: 20 },
+          ]
+        },
       ],
     },
     {
@@ -75,22 +77,25 @@ export default function SunburstChartGenerator() {
 
   const chartRef = useRef<ReactECharts>(null);
 
-  // 解析 JSON 数据
-  const parseData = useCallback((): SunburstNode[] => {
+  // 解析 JSON 数据 - 使用 useMemo 避免在渲染期间调用 setState
+  const parsedData = useMemo((): { data: SunburstNode[]; error: string } => {
     try {
       const parsed = JSON.parse(jsonInput);
-      setParseError('');
-      return parsed;
+      return { data: parsed, error: '' };
     } catch {
-      setParseError(t('invalidJson'));
-      return [];
+      return { data: [], error: t('invalidJson') };
     }
   }, [jsonInput, t]);
+
+  // 使用 useEffect 更新错误状态
+  useEffect(() => {
+    setParseError(parsedData.error);
+  }, [parsedData.error]);
 
   // 生成 ECharts 配置
   const getChartOption = useCallback((): EChartsOption => {
     const colors = colorThemes[colorTheme];
-    const data = parseData();
+    const data = parsedData.data;
 
     return {
       backgroundColor: '#1f2937',
@@ -148,7 +153,7 @@ export default function SunburstChartGenerator() {
         },
       ],
     };
-  }, [chartTitle, colorTheme, showLabel, innerRadius, outerRadius, parseData]);
+  }, [chartTitle, colorTheme, showLabel, innerRadius, outerRadius, parsedData]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
@@ -172,16 +177,20 @@ export default function SunburstChartGenerator() {
       {
         name: 'Technology',
         children: [
-          { name: 'Frontend', children: [
-            { name: 'React', value: 40 },
-            { name: 'Vue', value: 30 },
-            { name: 'Angular', value: 20 },
-          ]},
-          { name: 'Backend', children: [
-            { name: 'Node.js', value: 35 },
-            { name: 'Python', value: 30 },
-            { name: 'Java', value: 25 },
-          ]},
+          {
+            name: 'Frontend', children: [
+              { name: 'React', value: 40 },
+              { name: 'Vue', value: 30 },
+              { name: 'Angular', value: 20 },
+            ]
+          },
+          {
+            name: 'Backend', children: [
+              { name: 'Node.js', value: 35 },
+              { name: 'Python', value: 30 },
+              { name: 'Java', value: 25 },
+            ]
+          },
         ],
       },
       {

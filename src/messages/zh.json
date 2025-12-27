@@ -3694,7 +3694,9 @@
         "jun": "六月",
         "series1": "系列1",
         "series2": "系列2",
-        "series3": "系列3"
+        "series3": "系列3",
+        "sales": "销售额",
+        "profit": "利润"
       },
       "importCsv": "导入CSV",
       "csvFormat": "CSV格式：类别,系列1,系列2,...（第一行为标题）",
@@ -3747,7 +3749,12 @@
         "categoryB": "类别B",
         "categoryC": "类别C",
         "categoryD": "类别D",
-        "categoryE": "类别E"
+        "categoryE": "类别E",
+        "direct": "直接访问",
+        "email": "邮件营销",
+        "affiliate": "联盟推广",
+        "video": "视频广告",
+        "search": "搜索引擎"
       },
       "tips": {
         "title": "提示",
@@ -3797,13 +3804,14 @@
       "themeSunset": "日落",
       "themeForest": "森林",
       "sampleData": {
-        "indicator1": "销售",
-        "indicator2": "市场",
-        "indicator3": "开发",
-        "indicator4": "支持",
-        "indicator5": "管理",
-        "series1": "团队A",
-        "series2": "团队B"
+        "sales": "销售",
+        "admin": "行政",
+        "tech": "技术",
+        "support": "客服",
+        "develop": "研发",
+        "marketing": "市场",
+        "budget": "预算",
+        "actual": "实际"
       },
       "tips": {
         "title": "提示",
@@ -3811,7 +3819,8 @@
         "tip2": "添加多个系列以比较不同数据集",
         "tip3": "调整填充透明度以提高可见性",
         "tip4": "选择多边形或圆形形状",
-        "tip5": "点击下载PNG或下载SVG保存"
+        "tip5": "点击下载PNG或下载SVG保存",
+        "tip6": "使用CSV导入批量添加数据"
       },
       "importCsv": "导入CSV",
       "csvFormat": "CSV格式：指标,数值1,数值2,...（每行一个）",
@@ -3850,7 +3859,11 @@
       "sampleData": {
         "series1": "组A",
         "series2": "组B",
-        "series3": "组C"
+        "series3": "组C",
+        "height": "身高组",
+        "weight": "体重组",
+        "heightLabel": "身高 (cm)",
+        "weightLabel": "体重 (kg)"
       },
       "tips": {
         "title": "提示",
@@ -3952,11 +3965,16 @@
       "themeSunset": "日落",
       "themeForest": "森林",
       "sampleData": {
-        "stage1": "访客",
-        "stage2": "线索",
-        "stage3": "潜客",
-        "stage4": "谈判",
-        "stage5": "成交"
+        "visit": "访问",
+        "inquiry": "咨询",
+        "order": "下单",
+        "click": "点击",
+        "show": "展示",
+        "awareness": "认知",
+        "interest": "兴趣",
+        "consideration": "考虑",
+        "intent": "意向",
+        "purchase": "购买"
       },
       "tips": {
         "title": "提示",
@@ -4090,7 +4108,22 @@
         "root": "根节点",
         "child1": "子节点1",
         "child2": "子节点2",
-        "child3": "子节点3"
+        "child3": "子节点3",
+        "categoryA": "类别A",
+        "categoryB": "类别B",
+        "categoryC": "类别C",
+        "categoryD": "类别D",
+        "tech": "科技",
+        "software": "软件",
+        "hardware": "硬件",
+        "services": "服务",
+        "finance": "金融",
+        "banking": "银行",
+        "insurance": "保险",
+        "healthcare": "医疗",
+        "pharma": "制药",
+        "medical": "医疗器械",
+        "energy": "能源"
       },
       "tips": {
         "title": "提示",
@@ -4183,10 +4216,12 @@
       "themeSunset": "日落",
       "themeForest": "森林",
       "sampleData": {
-        "source1": "源A",
-        "source2": "源B",
-        "target1": "目标X",
-        "target2": "目标Y"
+        "visit": "访问",
+        "browse": "浏览",
+        "cart": "购物车",
+        "checkout": "结账",
+        "purchase": "购买",
+        "leave": "离开"
       },
       "tips": {
         "title": "提示",
@@ -4195,14 +4230,6 @@
         "tip3": "调整节点宽度和间距",
         "tip4": "选择方向",
         "tip5": "导出为PNG或SVG"
-      },
-      "sampleData": {
-        "visit": "访问",
-        "browse": "浏览",
-        "cart": "购物车",
-        "checkout": "结账",
-        "purchase": "购买",
-        "leave": "离开"
       },
       "nodeA": "A",
       "nodeB": "B",
@@ -4486,6 +4513,21 @@
       "themeSunset": "日落",
       "themeForest": "森林",
       "themeGithub": "GitHub",
+      "themeGreen": "绿色",
+      "themeBlue": "蓝色",
+      "themePurple": "紫色",
+      "themeOrange": "橙色",
+      "randomData": "随机数据",
+      "importJson": "导入JSON",
+      "statistics": "统计信息",
+      "totalDays": "总天数",
+      "totalValue": "总数值",
+      "maxValue": "最大值",
+      "avgValue": "平均值",
+      "jsonFormat": "JSON格式",
+      "import": "导入",
+      "cancel": "取消",
+      "invalidJson": "无效的JSON格式",
       "tips": {
         "title": "提示",
         "tip1": "输入日期和数值对",

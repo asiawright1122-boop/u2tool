@@ -34,16 +34,16 @@ const defaultDataValues = [
 function parseCSV(csvText: string): { category: string; value: number }[] {
   const lines = csvText.trim().split('\n');
   const result: { category: string; value: number }[] = [];
-  
+
   for (const line of lines) {
     const trimmedLine = line.trim();
     if (!trimmedLine) continue;
-    
+
     // 支持逗号或制表符分隔
-    const parts = trimmedLine.includes('\t') 
-      ? trimmedLine.split('\t') 
+    const parts = trimmedLine.includes('\t')
+      ? trimmedLine.split('\t')
       : trimmedLine.split(',');
-    
+
     if (parts.length >= 2) {
       const category = parts[0].trim();
       const value = parseFloat(parts[1].trim());
@@ -52,22 +52,22 @@ function parseCSV(csvText: string): { category: string; value: number }[] {
       }
     }
   }
-  
+
   return result;
 }
 
 export default function BarChartGenerator() {
   const t = useTranslations('tools.bar-chart-generator');
   const tg = useTranslations('tools');
-  
+
   // 使用 useId 生成稳定的基础 ID
   const baseId = useId();
   // 计数器用于生成新行 ID
   const [idCounter, setIdCounter] = useState(100);
   const [isInitialized, setIsInitialized] = useState(false);
-  
+
   // 图表数据 - 使用静态初始值
-  const [data, setData] = useState<DataRow[]>(() => 
+  const [data, setData] = useState<DataRow[]>(() =>
     defaultDataValues.map(item => ({ id: item.id, category: item.categoryKey, value: item.value }))
   );
 
@@ -82,10 +82,10 @@ export default function BarChartGenerator() {
   useEffect(() => {
     if (!isInitialized) {
       setChartTitle(t('defaultTitle'));
-      setData(defaultDataValues.map(item => ({ 
-        id: item.id, 
-        category: t(`sampleData.${item.categoryKey}`), 
-        value: item.value 
+      setData(defaultDataValues.map(item => ({
+        id: item.id,
+        category: t(`sampleData.${item.categoryKey}`),
+        value: item.value
       })));
       setIsInitialized(true);
     }
@@ -116,7 +116,7 @@ export default function BarChartGenerator() {
 
   // 更新数据行
   const updateRow = (id: string, field: 'category' | 'value', value: string | number) => {
-    setData(data.map(row => 
+    setData(data.map(row =>
       row.id === id ? { ...row, [field]: field === 'value' ? Number(value) || 0 : value } : row
     ));
   };
@@ -137,8 +137,8 @@ export default function BarChartGenerator() {
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { 
-          fontSize: 18, 
+        textStyle: {
+          fontSize: 18,
           fontWeight: 'bold',
           color: '#fff', // 标题使用纯白色
         },
@@ -162,11 +162,11 @@ export default function BarChartGenerator() {
       xAxis: {
         type: horizontal ? 'value' : 'category',
         data: horizontal ? undefined : categories,
-        splitLine: { 
+        splitLine: {
           show: showGrid,
           lineStyle: { color: axisLineColor },
         },
-        axisLine: { 
+        axisLine: {
           show: true,
           lineStyle: { color: axisLineColor },
         },
@@ -175,11 +175,11 @@ export default function BarChartGenerator() {
       yAxis: {
         type: horizontal ? 'category' : 'value',
         data: horizontal ? categories : undefined,
-        splitLine: { 
+        splitLine: {
           show: showGrid,
           lineStyle: { color: axisLineColor },
         },
-        axisLine: { 
+        axisLine: {
           show: true,
           lineStyle: { color: axisLineColor },
         },
@@ -212,7 +212,7 @@ export default function BarChartGenerator() {
         pixelRatio: 2,
         backgroundColor: '#1f2937', // 使用深色背景导出
       });
-      
+
       const link = document.createElement('a');
       link.download = `bar-chart-${Date.now()}.${format}`;
       link.href = url;
@@ -253,7 +253,7 @@ export default function BarChartGenerator() {
     reader.onload = (e) => {
       const csvText = e.target?.result as string;
       const parsedData = parseCSV(csvText);
-      
+
       if (parsedData.length > 0) {
         const newData = parsedData.map((item, index) => ({
           id: `${baseId}-csv-${idCounter + index}`,
@@ -268,7 +268,7 @@ export default function BarChartGenerator() {
       }
     };
     reader.readAsText(file);
-    
+
     // 重置文件输入，允许重复选择同一文件
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
@@ -424,12 +424,13 @@ export default function BarChartGenerator() {
         {/* 右侧：图表预览 */}
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
+          <div className="rounded-lg border border-gray-700 overflow-hidden bg-gray-800" style={{ minHeight: '400px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
               style={{ height: '400px', width: '100%' }}
               notMerge={true}
+              theme="dark"
             />
           </div>
         </div>

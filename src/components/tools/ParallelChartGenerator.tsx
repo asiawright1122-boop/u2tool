@@ -374,21 +374,21 @@ export default function ParallelChartGenerator() {
                     type="text"
                     value={dim.name}
                     onChange={(e) => updateDimension(index, 'name', e.target.value)}
-                    className="tool-input flex-1 min-w-[120px]"
+                    className="tool-input flex-[2] min-w-[80px]"
                     placeholder={t('dimensionName')}
                   />
                   <input
                     type="number"
                     value={dim.min}
                     onChange={(e) => updateDimension(index, 'min', e.target.value)}
-                    className="tool-input w-24"
+                    className="tool-input w-16 shrink-0"
                     placeholder="Min"
                   />
                   <input
                     type="number"
                     value={dim.max}
                     onChange={(e) => updateDimension(index, 'max', e.target.value)}
-                    className="tool-input w-24"
+                    className="tool-input w-16 shrink-0"
                     placeholder="Max"
                   />
                   <button

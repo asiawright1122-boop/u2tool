@@ -233,19 +233,19 @@ export default function CandlestickChartGenerator() {
     const sampleData: CandlestickData[] = [];
     let basePrice = 100;
     const startDate = new Date('2024-01-01');
-    
+
     for (let i = 0; i < 30; i++) {
       const date = new Date(startDate);
       date.setDate(date.getDate() + i);
       // 跳过周末
       if (date.getDay() === 0 || date.getDay() === 6) continue;
-      
+
       const change = (Math.random() - 0.48) * 5;
       const open = basePrice;
       const close = basePrice + change;
       const high = Math.max(open, close) + Math.random() * 3;
       const low = Math.min(open, close) - Math.random() * 3;
-      
+
       sampleData.push({
         date: date.toISOString().split('T')[0],
         open: +open.toFixed(2),
@@ -253,10 +253,10 @@ export default function CandlestickChartGenerator() {
         low: +low.toFixed(2),
         high: +high.toFixed(2),
       });
-      
+
       basePrice = close;
     }
-    
+
     setData(sampleData);
     setChartTitle(t('sampleTitle'));
   };
@@ -367,7 +367,7 @@ export default function CandlestickChartGenerator() {
               </button>
             </div>
             <div className="space-y-2 max-h-64 overflow-y-auto p-2 bg-gray-900 border border-gray-700 rounded-lg">
-              <div className="grid grid-cols-6 gap-1 text-xs text-gray-400 px-1">
+              <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_auto] gap-1 text-xs text-gray-400 px-1">
                 <span>{t('date')}</span>
                 <span>{t('open')}</span>
                 <span>{t('close')}</span>
@@ -376,7 +376,7 @@ export default function CandlestickChartGenerator() {
                 <span></span>
               </div>
               {data.map((item, index) => (
-                <div key={index} className="grid grid-cols-6 gap-1 items-center">
+                <div key={index} className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_auto] gap-1 items-center">
                   <input
                     type="date"
                     value={item.date}

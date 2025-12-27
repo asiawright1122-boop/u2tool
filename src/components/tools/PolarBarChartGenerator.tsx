@@ -305,14 +305,14 @@ export default function PolarBarChartGenerator() {
                     type="text"
                     value={item.name}
                     onChange={(e) => updateDataItem(index, 'name', e.target.value)}
-                    className="tool-input flex-1 min-w-[120px]"
+                    className="tool-input flex-[2] min-w-[100px]"
                     placeholder={t('namePlaceholder')}
                   />
                   <input
                     type="number"
                     value={item.value}
                     onChange={(e) => updateDataItem(index, 'value', e.target.value)}
-                    className="tool-input w-24"
+                    className="tool-input w-20 shrink-0"
                     placeholder={t('valuePlaceholder')}
                   />
                   <button

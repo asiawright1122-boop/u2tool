@@ -3687,7 +3687,9 @@
         "jun": "June",
         "series1": "Series 1",
         "series2": "Series 2",
-        "series3": "Series 3"
+        "series3": "Series 3",
+        "sales": "Sales",
+        "profit": "Profit"
       },
       "importCsv": "Import CSV",
       "csvFormat": "CSV format: category,series1,series2,... (first row is header)",
@@ -3740,7 +3742,12 @@
         "categoryB": "Category B",
         "categoryC": "Category C",
         "categoryD": "Category D",
-        "categoryE": "Category E"
+        "categoryE": "Category E",
+        "direct": "Direct Access",
+        "email": "Email Marketing",
+        "affiliate": "Affiliate",
+        "video": "Video Ads",
+        "search": "Search Engine"
       },
       "tips": {
         "title": "Tips",
@@ -3790,13 +3797,14 @@
       "themeSunset": "Sunset",
       "themeForest": "Forest",
       "sampleData": {
-        "indicator1": "Sales",
-        "indicator2": "Marketing",
-        "indicator3": "Development",
-        "indicator4": "Support",
-        "indicator5": "Management",
-        "series1": "Team A",
-        "series2": "Team B"
+        "sales": "Sales",
+        "admin": "Administration",
+        "tech": "Technology",
+        "support": "Customer Support",
+        "develop": "Development",
+        "marketing": "Marketing",
+        "budget": "Budget",
+        "actual": "Actual"
       },
       "tips": {
         "title": "Tips",
@@ -3804,7 +3812,8 @@
         "tip2": "Add multiple series to compare different datasets",
         "tip3": "Adjust fill opacity for better visibility",
         "tip4": "Choose between polygon and circle shapes",
-        "tip5": "Click Download PNG or Download SVG to save"
+        "tip5": "Click Download PNG or Download SVG to save",
+        "tip6": "Use CSV import to add data in bulk"
       },
       "importCsv": "Import CSV",
       "csvFormat": "CSV format: indicator,value1,value2,... (one per line)",
@@ -3843,7 +3852,11 @@
       "sampleData": {
         "series1": "Group A",
         "series2": "Group B",
-        "series3": "Group C"
+        "series3": "Group C",
+        "height": "Height Group",
+        "weight": "Weight Group",
+        "heightLabel": "Height (cm)",
+        "weightLabel": "Weight (kg)"
       },
       "tips": {
         "title": "Tips",
@@ -3945,11 +3958,16 @@
       "themeSunset": "Sunset",
       "themeForest": "Forest",
       "sampleData": {
-        "stage1": "Visitors",
-        "stage2": "Leads",
-        "stage3": "Prospects",
-        "stage4": "Negotiations",
-        "stage5": "Closed"
+        "visit": "Visit",
+        "inquiry": "Inquiry",
+        "order": "Order",
+        "click": "Click",
+        "show": "Show",
+        "awareness": "Awareness",
+        "interest": "Interest",
+        "consideration": "Consideration",
+        "intent": "Intent",
+        "purchase": "Purchase"
       },
       "tips": {
         "title": "Tips",
@@ -4083,7 +4101,22 @@
         "root": "Root",
         "child1": "Child 1",
         "child2": "Child 2",
-        "child3": "Child 3"
+        "child3": "Child 3",
+        "categoryA": "Category A",
+        "categoryB": "Category B",
+        "categoryC": "Category C",
+        "categoryD": "Category D",
+        "tech": "Technology",
+        "software": "Software",
+        "hardware": "Hardware",
+        "services": "Services",
+        "finance": "Finance",
+        "banking": "Banking",
+        "insurance": "Insurance",
+        "healthcare": "Healthcare",
+        "pharma": "Pharmaceuticals",
+        "medical": "Medical Devices",
+        "energy": "Energy"
       },
       "tips": {
         "title": "Tips",
@@ -4176,10 +4209,12 @@
       "themeSunset": "Sunset",
       "themeForest": "Forest",
       "sampleData": {
-        "source1": "Source A",
-        "source2": "Source B",
-        "target1": "Target X",
-        "target2": "Target Y"
+        "visit": "Visit",
+        "browse": "Browse",
+        "cart": "Cart",
+        "checkout": "Checkout",
+        "purchase": "Purchase",
+        "leave": "Leave"
       },
       "tips": {
         "title": "Tips",
@@ -4188,14 +4223,6 @@
         "tip3": "Adjust node width and gap",
         "tip4": "Choose orientation",
         "tip5": "Export as PNG or SVG"
-      },
-      "sampleData": {
-        "visit": "Visit",
-        "browse": "Browse",
-        "cart": "Cart",
-        "checkout": "Checkout",
-        "purchase": "Purchase",
-        "leave": "Leave"
       },
       "nodeA": "A",
       "nodeB": "B",
@@ -4479,6 +4506,21 @@
       "themeSunset": "Sunset",
       "themeForest": "Forest",
       "themeGithub": "GitHub",
+      "themeGreen": "Green",
+      "themeBlue": "Blue",
+      "themePurple": "Purple",
+      "themeOrange": "Orange",
+      "randomData": "Random Data",
+      "importJson": "Import JSON",
+      "statistics": "Statistics",
+      "totalDays": "Total Days",
+      "totalValue": "Total Value",
+      "maxValue": "Max Value",
+      "avgValue": "Avg Value",
+      "jsonFormat": "JSON Format",
+      "import": "Import",
+      "cancel": "Cancel",
+      "invalidJson": "Invalid JSON format",
       "tips": {
         "title": "Tips",
         "tip1": "Enter date and value pairs",
