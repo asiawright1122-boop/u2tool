@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const en = require('../src/messages/en.json');
 const zh = require('../src/messages/zh.json');
 const es = require('../src/messages/es.json');

@@ -51,7 +51,7 @@ export async function generateMetadata({
 
   // 确保 title 长度 < 60 字符
   const title = truncateText(seoTitle, SEO_CONFIG.titleMaxLength);
-  
+
   // 确保 description 长度在 120-160 字符之间
   let description = seoDescription;
   if (description.length > SEO_CONFIG.descriptionMaxLength) {
@@ -99,7 +99,7 @@ export async function generateMetadata({
   const toolKeywords = getToolKeywords(slug, locale);
   const categoryKeywords = getCategoryKeywords(category?.id || '', locale);
   // 合并关键词：工具关键词 + 分类关键词（去重）
-  const keywords = toolKeywords.length > 0 
+  const keywords = toolKeywords.length > 0
     ? [...new Set([...toolKeywords, ...categoryKeywords.slice(0, 3)])]
     : [...categoryKeywords, toolName, 'online tool', 'free'];
 
@@ -153,18 +153,18 @@ export default async function ToolPage({
 
   const t = await getTranslations({ locale, namespace: 'tools' });
   const tCategories = await getTranslations({ locale, namespace: 'categories' });
-  const tSite = await getTranslations({ locale, namespace: 'site' });
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
 
   // 获取工具名称和分类名称
   const toolName = t(`${slug}.name`);
   const categoryName = tCategories(tool.category);
-  
+
   // 获取工具 FAQ（优先使用分类特定 FAQ，回退到通用 FAQ）
   const faqs = getToolFAQs(slug, locale, tool.category);
-  
+
   // 生成面包屑导航项目（首页 > 分类 > 工具名称）
   const breadcrumbItems = [
-    { name: tSite('name'), path: '' },
+    { name: tNav('home'), path: '/' },
     { name: categoryName, path: `/tools/category/${tool.category}` },
     { name: toolName },
   ];
@@ -173,9 +173,9 @@ export default async function ToolPage({
     <div className="min-h-screen py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* 面包屑导航 */}
-        <Breadcrumb 
-          items={breadcrumbItems} 
-          locale={locale} 
+        <Breadcrumb
+          items={breadcrumbItems}
+          locale={locale}
           className="mb-6"
         />
 
@@ -192,15 +192,15 @@ export default async function ToolPage({
         </div>
 
         {/* FAQ 区块 */}
-        <ToolFAQ 
-          faqs={faqs} 
+        <ToolFAQ
+          faqs={faqs}
           toolName={toolName}
         />
 
         {/* 相关工具 */}
-        <RelatedTools 
-          currentSlug={slug} 
-          category={tool.category} 
+        <RelatedTools
+          currentSlug={slug}
+          category={tool.category}
           maxCount={6}
         />
       </div>

@@ -51,7 +51,7 @@ export default function VennDiagramGenerator() {
 
     const activeSets = getVisibleSets();
 
-    const updateSet = (index: number, field: keyof VennSet, value: any) => {
+    const updateSet = (index: number, field: keyof VennSet, value: string | number) => {
         const newSets = [...sets];
         newSets[index] = { ...newSets[index], [field]: value };
         setSets(newSets);

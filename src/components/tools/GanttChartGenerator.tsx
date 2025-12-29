@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
-import * as echarts from 'echarts';
 import type { EChartsOption } from 'echarts';
 
 interface GanttTask {
@@ -124,7 +123,12 @@ export default function GanttChartGenerator() {
         const axisMin = minDate - dayMs * 2;
         const axisMax = maxDate + dayMs * 2;
 
-        function renderItem(params: any, api: any) {
+        function renderItem(params: { dataIndex: number }, api: {
+            value: (index: number) => number;
+            coord: (point: [number, number]) => [number, number];
+            size: (point: [number, number]) => [number, number];
+            style: () => { fill: string };
+        }) {
             const categoryIndex = api.value(0);
             const startTime = api.value(1);
             const endTime = api.value(2);
@@ -199,7 +203,7 @@ export default function GanttChartGenerator() {
                 textStyle: { fontSize: 18, fontWeight: 'bold', color: '#fff' },
             },
             tooltip: {
-                formatter: (params: any) => {
+                formatter: (params: { dataIndex: number; marker: string }) => {
                     const task = chartTasks[params.dataIndex];
                     if (!task) return '';
                     return `${params.marker} <b>${task.name}</b><br/>
@@ -269,7 +273,7 @@ export default function GanttChartGenerator() {
         setTasks(tasks.filter(t => t.id !== taskId));
     };
 
-    const updateTask = (taskId: string, field: keyof GanttTask, value: any) => {
+    const updateTask = (taskId: string, field: keyof GanttTask, value: string | number) => {
         setTasks(tasks.map(t =>
             t.id === taskId ? { ...t, [field]: value } : t
         ));

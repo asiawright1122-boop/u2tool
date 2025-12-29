@@ -493,7 +493,7 @@ async function submitBatch(
 }
 
 // 失败 URL 记录接口
-interface FailedBatch {
+interface _FailedBatch {
   batch: number;
   urlCount: number;
   error: string;
@@ -664,7 +664,6 @@ async function main(): Promise<void> {
   
   // 提交
   const results: SubmissionResult[] = [];
-  let successCount = 0;
   let failedCount = 0;
   
   for (let i = 0; i < batches.length; i++) {
@@ -672,7 +671,6 @@ async function main(): Promise<void> {
     results.push(result);
     
     if (result.success) {
-      successCount += result.urlCount;
       process.stdout.write(`✅ 批次 ${i + 1}/${batches.length} `);
     } else {
       failedCount += result.urlCount;

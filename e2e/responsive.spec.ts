@@ -1,4 +1,4 @@
-import { test, expect, devices } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 test.describe('响应式设计测试', () => {
   test('桌面端布局正确', async ({ page }) => {

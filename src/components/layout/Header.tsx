@@ -5,7 +5,7 @@ import { Link, useRouter, usePathname as useI18nPathname } from '@/i18n/routing'
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
-import { locales, localeNames, type Locale } from '@/i18n';
+import { locales, localeNames, type Locale } from '@/i18n/routing';
 import { categories, tools } from '@/config/tools';
 
 export default function Header() {
@@ -39,12 +39,12 @@ export default function Header() {
         const toolName = t(`tools.${tool.slug}.name`).toLowerCase();
         const toolDesc = t(`tools.${tool.slug}.description`).toLowerCase();
         const categoryName = t(`categories.${tool.category}`).toLowerCase();
-        
+
         // Match against name, description, category, or slug
-        return toolName.includes(query) || 
-               toolDesc.includes(query) || 
-               categoryName.includes(query) ||
-               tool.slug.toLowerCase().includes(query);
+        return toolName.includes(query) ||
+          toolDesc.includes(query) ||
+          categoryName.includes(query) ||
+          tool.slug.toLowerCase().includes(query);
       });
       setSearchResults(results);
       setShowSearchResults(true);
@@ -98,16 +98,16 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all"
           >
             {t('nav.home')}
           </Link>
-          
+
           {/* Tools Dropdown - Only Categories */}
           <div className="relative" ref={dropdownRef}>
-            <button 
+            <button
               onClick={() => setToolsDropdownOpen(!toolsDropdownOpen)}
               className="flex items-center gap-1 px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-all"
             >
@@ -116,7 +116,7 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            
+
             {toolsDropdownOpen && (
               <div className="absolute left-0 top-full mt-2 w-56 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl py-2">
                 {categories.map((cat) => {
@@ -136,7 +136,7 @@ export default function Header() {
                   );
                 })}
                 <div className="border-t border-gray-700 mt-2 pt-2">
-                  <Link 
+                  <Link
                     href="/tools"
                     className="flex items-center justify-center gap-2 px-4 py-2 text-blue-400 hover:text-blue-300 transition-colors"
                     onClick={() => setToolsDropdownOpen(false)}
@@ -177,7 +177,7 @@ export default function Header() {
                 </button>
               )}
             </div>
-            
+
             {/* Search Results Dropdown */}
             {showSearchResults && (
               <div className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-50">
@@ -231,9 +231,8 @@ export default function Header() {
                 <button
                   key={locale}
                   onClick={() => handleLocaleChange(locale)}
-                  className={`block w-full text-left px-4 py-2.5 text-sm hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg ${
-                    locale === currentLocale ? 'text-blue-400 bg-gray-700/50' : 'text-gray-300'
-                  }`}
+                  className={`block w-full text-left px-4 py-2.5 text-sm hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg ${locale === currentLocale ? 'text-blue-400 bg-gray-700/50' : 'text-gray-300'
+                    }`}
                 >
                   {localeNames[locale]}
                 </button>
@@ -242,7 +241,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-gray-400 hover:text-white lg:hidden"
           >
@@ -261,21 +260,21 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-gray-900 border-t border-gray-800">
           <div className="px-4 py-4 space-y-2">
-            <Link 
+            <Link
               href="/"
               className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg"
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('nav.home')}
             </Link>
-            <Link 
+            <Link
               href="/tools"
               className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg"
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('nav.tools')}
             </Link>
-            
+
             <div className="pt-2 border-t border-gray-800">
               <p className="px-4 py-2 text-xs text-gray-500 uppercase">{t('home.categories')}</p>
               {categories.map((cat) => {

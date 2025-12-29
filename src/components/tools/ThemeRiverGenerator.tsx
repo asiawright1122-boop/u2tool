@@ -144,7 +144,7 @@ export default function ThemeRiverGenerator() {
         setData(data.filter(d => d.id !== id));
     };
 
-    const updateDataPoint = (id: string, field: keyof RiverItem, value: any) => {
+    const updateDataPoint = (id: string, field: keyof RiverItem, value: string | number) => {
         setData(data.map(d => d.id === id ? { ...d, [field]: value } : d));
     };
 

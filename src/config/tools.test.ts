@@ -26,7 +26,7 @@ describe('Property 1: Category Translation Completeness', () => {
         fc.constantFrom(...categoryIds),
         (categoryId: ToolCategory) => {
           for (const [lang, messages] of Object.entries(languageFiles)) {
-            const categoryTranslations = (messages as any).categories;
+            const categoryTranslations = (messages as { categories: Record<string, string> }).categories;
             expect(
               categoryTranslations[categoryId],
               `Category "${categoryId}" missing translation in ${lang}.json`
@@ -47,10 +47,10 @@ describe('Property 1: Category Translation Completeness', () => {
     );
   });
 
-  it('should have all 9 categories defined', () => {
+  it('should have all 10 categories defined', () => {
     const expectedCategories: ToolCategory[] = [
       'text', 'encoding', 'generators', 'converters', 'development',
-      'security', 'network', 'image', 'math'
+      'security', 'network', 'image', 'math', 'charts'
     ];
     
     expect(categories.map(c => c.id).sort()).toEqual(expectedCategories.sort());

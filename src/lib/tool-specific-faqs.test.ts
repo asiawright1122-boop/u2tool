@@ -24,6 +24,15 @@ const TOP_TOOLS = [
 // 支持的语言
 const LOCALES = ['en', 'zh', 'es', 'pt', 'ja'];
 
+interface FAQItem {
+  '@type': string;
+  name: string;
+  acceptedAnswer: {
+    '@type': string;
+    text: string;
+  };
+}
+
 describe('Tool Specific FAQs', () => {
   describe('FAQ Content Validation', () => {
     it('should have specific FAQs for all top tools', () => {
@@ -92,7 +101,7 @@ describe('Tool Specific FAQs', () => {
         const jsonStr = faqJsonLdToString(jsonLd);
         const parsed = JSON.parse(jsonStr);
 
-        parsed.mainEntity.forEach((item: any, index: number) => {
+        parsed.mainEntity.forEach((item: FAQItem, index: number) => {
           // 验证 Question 结构
           expect(item['@type']).toBe('Question');
           expect(item.name).toBe(faqs[index].question);

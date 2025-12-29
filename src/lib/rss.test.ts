@@ -15,8 +15,15 @@ import {
   RSSItem,
 } from './rss';
 
+interface MockTool {
+  slug: string;
+  icon: string;
+  category: string;
+  tags: string[];
+}
+
 // 测试用的模拟工具
-const mockTool = {
+const mockTool: MockTool = {
   slug: 'json-formatter',
   icon: '📝',
   category: 'formatters',
@@ -48,7 +55,7 @@ describe('RSS Feed - Property Tests', () => {
     // 测试 RSS Item 生成
     it('should generate RSS item with all required fields', () => {
       const item = generateRSSItem(
-        mockTool as any,
+        mockTool as Parameters<typeof generateRSSItem>[0],
         'en',
         'JSON Formatter',
         'Format and beautify JSON data'
@@ -66,7 +73,7 @@ describe('RSS Feed - Property Tests', () => {
     // 测试 media:thumbnail 存在
     it('should include media:thumbnail in RSS items', () => {
       const item = generateRSSItem(
-        mockTool as any,
+        mockTool as Parameters<typeof generateRSSItem>[0],
         'en',
         'JSON Formatter',
         'Format JSON'
@@ -80,7 +87,7 @@ describe('RSS Feed - Property Tests', () => {
     it('should generate valid RSS XML for all locales', () => {
       for (const locale of locales) {
         const items: RSSItem[] = [
-          generateRSSItem(mockTool as any, locale, 'Test Tool', 'Test description'),
+          generateRSSItem(mockTool as Parameters<typeof generateRSSItem>[0], locale, 'Test Tool', 'Test description'),
         ];
 
         const rssXml = generateRSSXml({
@@ -143,7 +150,7 @@ describe('RSS Feed - Property Tests', () => {
     it('should generate valid Atom XML for all locales', () => {
       for (const locale of locales) {
         const items: RSSItem[] = [
-          generateRSSItem(mockTool as any, locale, 'Test Tool', 'Test description'),
+          generateRSSItem(mockTool as Parameters<typeof generateRSSItem>[0], locale, 'Test Tool', 'Test description'),
         ];
 
         const atomXml = generateAtomXml({
@@ -165,7 +172,7 @@ describe('RSS Feed - Property Tests', () => {
     // 测试分类 RSS Feed
     it('should support category-specific RSS feeds', () => {
       const items: RSSItem[] = [
-        generateRSSItem(mockTool as any, 'en', 'JSON Formatter', 'Format JSON'),
+        generateRSSItem(mockTool as Parameters<typeof generateRSSItem>[0], 'en', 'JSON Formatter', 'Format JSON'),
       ];
 
       const rssXml = generateRSSXml({

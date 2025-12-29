@@ -1,0 +1,2472 @@
+{
+  "Tips": {
+    "es": "Consejos",
+    "pt": "Dicas",
+    "fr": "Conseils",
+    "de": "Tipps",
+    "ru": "Советы",
+    "ja": "ヒント",
+    "ko": "팁",
+    "ar": "نصائح"
+  },
+  "How do I use this tool?": {
+    "es": "¿Cómo uso esta herramienta?",
+    "pt": "Como usar esta ferramenta?",
+    "fr": "Comment utiliser cet outil ?",
+    "de": "Wie benutze ich dieses Werkzeug?",
+    "ru": "Как пользоваться этим инструментом?",
+    "ja": "このツールの使い方は？",
+    "ko": "이 도구는 어떻게 사용하나요?",
+    "ar": "كيف أستخدم هذه الأداة؟"
+  },
+  "Is this tool free to use?": {
+    "es": "¿Es esta herramienta gratuita?",
+    "pt": "Esta ferramenta é gratuita?",
+    "fr": "Cet outil est-il gratuit ?",
+    "de": "Ist dieses Werkzeug kostenlos?",
+    "ru": "Этот инструмент бесплатный?",
+    "ja": "このツールは無料ですか？",
+    "ko": "이 도구는 무료인가요?",
+    "ar": "هل هذه الأداة مجانية؟"
+  },
+  "Is my data private and secure?": {
+    "es": "¿Son mis datos privados y seguros?",
+    "pt": "Meus dados são privados e seguros?",
+    "fr": "Mes données sont-elles privées et sécurisées ?",
+    "de": "Sind meine Daten privat und sicher?",
+    "ru": "Мои данные конфиденциальны и безопасны?",
+    "ja": "データはプライベートで安全ですか？",
+    "ko": "내 데이터는 안전한가요?",
+    "ar": "هل بياناتي خاصة وآمنة؟"
+  },
+  "Enter your data in the input area, configure any options as needed, and click the action button. Results will appear in the output area.": {
+    "es": "Ingrese sus datos en el área de entrada, configure las opciones según sea necesario y haga clic en el botón de acción. Los resultados aparecerán en el área de salida.",
+    "pt": "Insira seus dados na área de entrada, configure as opções conforme necessário e clique no botão de ação. Os resultados aparecerão na área de saída.",
+    "fr": "Entrez vos données dans la zone de saisie, configurez les options si nécessaire et cliquez sur le bouton d'action. Les résultats apparaîtront dans la zone de sortie.",
+    "de": "Geben Sie Ihre Daten in den Eingabebereich ein, konfigurieren Sie die Optionen nach Bedarf und klicken Sie auf die Aktionsschaltfläche. Die Ergebnisse werden im Ausgabebereich angezeigt.",
+    "ru": "Введите данные в поле ввода, настройте параметры и нажмите кнопку действия. Результаты появятся в поле вывода.",
+    "ja": "入力エリアにデータを入力し、必要に応じてオプションを設定して、アクションボタンをクリックしてください。結果は出力エリアに表示されます。",
+    "ko": "입력 영역에 데이터를 입력하고 필요한 옵션을 구성한 다음 실행 버튼을 클릭하세요. 결과가 출력 영역에 나타납니다.",
+    "ar": "أدخل بياناتك في منطقة الإدخال، وقم بتكوين أي خيارات حسب الحاجة، وانقر فوق زر الإجراء. ستظهر النتائج في منطقة الإخراج."
+  },
+  "Yes, this tool is completely free to use.": {
+    "es": "Sí, esta herramienta es completamente gratuita.",
+    "pt": "Sim, esta ferramenta é totalmente gratuita.",
+    "fr": "Oui, cet outil est entièrement gratuit.",
+    "de": "Ja, dieses Werkzeug ist völlig kostenlos.",
+    "ru": "Да, этот инструмент полностью бесплатен.",
+    "ja": "はい、このツールは完全に無料で使用できます。",
+    "ko": "네, 이 도구는 완전히 무료입니다.",
+    "ar": "نعم، هذه الأداة مجانية بالكامل."
+  },
+  "Yes, all processing happens locally in your browser. Your data never leaves your device.": {
+    "es": "Sí, todo el procesamiento ocurre localmente en su navegador. Sus datos nunca salen de su dispositivo.",
+    "pt": "Sim, todo o processamento ocorre localmente no seu navegador. Seus dados nunca saem do seu dispositivo.",
+    "fr": "Oui, tout le traitement se fait localement dans votre navigateur. Vos données ne quittent jamais votre appareil.",
+    "de": "Ja, die gesamte Verarbeitung erfolgt lokal in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät.",
+    "ru": "Да, вся обработка происходит локально в вашем браузере. Ваши данные никогда не покидают ваше устройство.",
+    "ja": "はい、すべての処理はブラウザ内でローカルに行われます。データがデバイスから送信されることはありません。",
+    "ko": "네, 모든 처리는 브라우저에서 로컬로 수행됩니다. 데이터는 장치를 떠나지 않습니다.",
+    "ar": "نعم، تتم جميع المعالجات محليًا في متصفحك. بياناتك لا تغادر جهازك أبدًا."
+  },
+  "Bar Chart Generator": {
+    "es": "Generador de gráficos de barras",
+    "pt": "Gerador de Gráficos de Barras",
+    "fr": "Générateur de graphiques à barres",
+    "de": "Balkendiagramm-Generator",
+    "ru": "Генератор столбчатых диаграмм",
+    "ja": "棒グラフ作成",
+    "ko": "막대 차트 생성기",
+    "ar": "مولد المخططات الشريطية"
+  },
+  "Line Chart Generator": {
+    "es": "Generador de gráficos de líneas",
+    "pt": "Gerador de Gráficos de Linhas",
+    "fr": "Générateur de graphiques linéaires",
+    "de": "Liniendiagramm-Generator",
+    "ru": "Генератор линейных графиков",
+    "ja": "折れ線グラフ作成",
+    "ko": "선 차트 생성기",
+    "ar": "مولد المخططات الخطية"
+  },
+  "Pie Chart Generator": {
+    "es": "Generador de gráficos circulares",
+    "pt": "Gerador de Gráficos de Pizza",
+    "fr": "Générateur de camemberts",
+    "de": "Kreisdiagramm-Generator",
+    "ru": "Генератор круговых диаграмм",
+    "ja": "円グラフ作成",
+    "ko": "파이 차트 생성기",
+    "ar": "مولد المخططات الدائرية"
+  },
+  "Scatter Chart Generator": {
+    "es": "Generador de gráficos de dispersión",
+    "pt": "Gerador de Gráficos de Dispersão",
+    "fr": "Générateur de nuages de points",
+    "de": "Streudiagramm-Generator",
+    "ru": "Генератор точечных диаграмм",
+    "ja": "散布図作成",
+    "ko": "산점도 생성기",
+    "ar": "مولد المخططات المبعثرة"
+  },
+  "Area Chart Generator": {
+    "es": "Generador de gráficos de área",
+    "pt": "Gerador de Gráficos de Área",
+    "fr": "Générateur de graphiques en aires",
+    "de": "Flächendiagramm-Generator",
+    "ru": "Генератор диаграмм с областями",
+    "ja": "面グラフ作成",
+    "ko": "영역 차트 생성기",
+    "ar": "مولد المخططات المساحية"
+  },
+  "Radar Chart Generator": {
+    "es": "Generador de gráficos de radar",
+    "pt": "Gerador de Gráficos de Radar",
+    "fr": "Générateur de graphiques radar",
+    "de": "Netzdiagramm-Generator",
+    "ru": "Генератор лепестковых диаграмм",
+    "ja": "レーダーチャート作成",
+    "ko": "레이더 차트 생성기",
+    "ar": "مولد المخططات الرادارية"
+  },
+  "Sunburst Chart Generator": {
+    "es": "Generador de gráficos Sunburst",
+    "pt": "Gerador de Gráficos Sunburst",
+    "fr": "Générateur de graphiques en rayons",
+    "de": "Sunburst-Diagramm-Generator",
+    "ru": "Генератор диаграмм Sunburst",
+    "ja": "サンバーストチャート作成",
+    "ko": "선버스트 차트 생성기",
+    "ar": "مولد مخططات أشعة الشمس"
+  },
+  "Tree Chart Generator": {
+    "es": "Generador de gráficos de árbol",
+    "pt": "Gerador de Gráficos de Árvore",
+    "fr": "Générateur de diagrammes en arbre",
+    "de": "Baumdiagramm-Generator",
+    "ru": "Генератор древовидных диаграмм",
+    "ja": "ツリーチャート作成",
+    "ko": "트리 차트 생성기",
+    "ar": "مولد المخططات الشجرية"
+  },
+  "Treemap Chart Generator": {
+    "es": "Generador de Treemaps",
+    "pt": "Gerador de Treemaps",
+    "fr": "Générateur de Treemaps",
+    "de": "Treemap-Generator",
+    "ru": "Генератор карт дерева",
+    "ja": "ツリーマップ作成",
+    "ko": "트리맵 생성기",
+    "ar": "مولد الخرائط الشجرية"
+  },
+  "Funnel Chart Generator": {
+    "es": "Generador de gráficos de embudo",
+    "pt": "Gerador de Gráficos de Funil",
+    "fr": "Générateur de graphiques en entonnoir",
+    "de": "Trichterdiagramm-Generator",
+    "ru": "Генератор воронкообразных диаграмм",
+    "ja": "ファンネルチャート作成",
+    "ko": "깔때기 차트 생성기",
+    "ar": "مولد المخططات القمعية"
+  },
+  "Sankey Chart Generator": {
+    "es": "Generador de gráficos Sankey",
+    "pt": "Gerador de Gráficos Sankey",
+    "fr": "Générateur de diagrammes Sankey",
+    "de": "Sankey-Diagramm-Generator",
+    "ru": "Генератор диаграмм Санки",
+    "ja": "サンキーダイアグラム作成",
+    "ko": "생키 다이어그램 생성기",
+    "ar": "مولد مخططات سانكي"
+  },
+  "Venn Diagram Generator": {
+    "es": "Generador de diagramas de Venn",
+    "pt": "Gerador de Diagramas de Venn",
+    "fr": "Générateur de diagrammes de Venn",
+    "de": "Venn-Diagramm-Generator",
+    "ru": "Генератор диаграмм Венна",
+    "ja": "ベン図作成",
+    "ko": "벤 다이어그램 생성기",
+    "ar": "مولد مخططات فين"
+  },
+  "Gantt Chart Generator": {
+    "es": "Generador de diagramas de Gantt",
+    "pt": "Gerador de Gráficos de Gantt",
+    "fr": "Générateur de diagrammes de Gantt",
+    "de": "Gantt-Diagramm-Generator",
+    "ru": "Генератор диаграмм Ганта",
+    "ja": "ガントチャート作成",
+    "ko": "간트 차트 생성기",
+    "ar": "مولد مخططات غانت"
+  },
+  "Timeline Chart Generator": {
+    "es": "Generador de líneas de tiempo",
+    "pt": "Gerador de Linhas do Tempo",
+    "fr": "Générateur de chronologies",
+    "de": "Zeitstrahl-Generator",
+    "ru": "Генератор временных шкал",
+    "ja": "タイムライン作成",
+    "ko": "타임라인 차트 생성기",
+    "ar": "مولد الجداول الزمنية"
+  },
+  "Parallel Coordinates Generator": {
+    "es": "Generador de coordenadas paralelas",
+    "pt": "Gerador de Coordenadas Paralelas",
+    "fr": "Générateur de coordonnées parallèles",
+    "de": "Parallele-Koordinaten-Generator",
+    "ru": "Генератор параллельных координат",
+    "ja": "平行座標プロット作成",
+    "ko": "평행 좌표 생성기",
+    "ar": "مولد الإحداثيات المتوازية"
+  },
+  "Bubble Chart Generator": {
+    "es": "Generador de gráficos de burbujas",
+    "pt": "Gerador de Gráficos de Bolhas",
+    "fr": "Générateur de graphiques à bulles",
+    "de": "Blasendiagramm-Generator",
+    "ru": "Генератор пузырьковых диаграмм",
+    "ja": "バブルチャート作成",
+    "ko": "버블 차트 생성기",
+    "ar": "مولد المخططات الفقاعية"
+  },
+  "Heatmap Generator": {
+    "es": "Generador de mapas de calor",
+    "pt": "Gerador de Mapas de Calor",
+    "fr": "Générateur de cartes thermiques",
+    "de": "Heatmap-Generator",
+    "ru": "Генератор тепловых карт",
+    "ja": "ヒートマップ作成",
+    "ko": "히트맵 생성기",
+    "ar": "مولد الخرائط الحرارية"
+  },
+  "ThemeRiver Generator": {
+    "es": "Generador ThemeRiver",
+    "pt": "Gerador ThemeRiver",
+    "fr": "Générateur ThemeRiver",
+    "de": "ThemeRiver-Generator",
+    "ru": "Генератор ThemeRiver",
+    "ja": "ThemeRiver作成",
+    "ko": "테마리버 생성기",
+    "ar": "مولد ThemeRiver"
+  },
+  "Copy": {
+    "es": "Copiar",
+    "pt": "Copiar",
+    "fr": "Copier",
+    "de": "Kopieren",
+    "ru": "Копировать",
+    "ja": "コピー",
+    "ko": "복사",
+    "ar": "نسخ"
+  },
+  "Paste": {
+    "es": "Pegar",
+    "pt": "Colar",
+    "fr": "Coller",
+    "de": "Einfügen",
+    "ru": "Вставить",
+    "ja": "貼り付け",
+    "ko": "붙여넣기",
+    "ar": "لصق"
+  },
+  "Clear": {
+    "es": "Limpiar",
+    "pt": "Limpar",
+    "fr": "Effacer",
+    "de": "Löschen",
+    "ru": "Очистить",
+    "ja": "クリア",
+    "ko": "지우기",
+    "ar": "مسح"
+  },
+  "Load": {
+    "es": "Cargar",
+    "pt": "Carregar",
+    "fr": "Charger",
+    "de": "Laden",
+    "ru": "Загрузить",
+    "ja": "読み込み",
+    "ko": "불러오기",
+    "ar": "تحميل"
+  },
+  "Save": {
+    "es": "Guardar",
+    "pt": "Salvar",
+    "fr": "Enregistrer",
+    "de": "Speichern",
+    "ru": "Сохранить",
+    "ja": "保存",
+    "ko": "저장",
+    "ar": "حفظ"
+  },
+  "Download": {
+    "es": "Descargar",
+    "pt": "Baixar",
+    "fr": "Télécharger",
+    "de": "Herunterladen",
+    "ru": "Скачать",
+    "ja": "ダウンロード",
+    "ko": "다운로드",
+    "ar": "تنزيل"
+  },
+  "Search": {
+    "es": "Buscar",
+    "pt": "Buscar",
+    "fr": "Rechercher",
+    "de": "Suchen",
+    "ru": "Поиск",
+    "ja": "検索",
+    "ko": "검색",
+    "ar": "بحث"
+  },
+  "Input": {
+    "es": "Entrada",
+    "pt": "Entrada",
+    "fr": "Entrée",
+    "de": "Eingabe",
+    "ru": "Ввод",
+    "ja": "入力",
+    "ko": "입력",
+    "ar": "إدخال"
+  },
+  "Output": {
+    "es": "Salida",
+    "pt": "Saída",
+    "fr": "Sortie",
+    "de": "Ausgabe",
+    "ru": "Вывод",
+    "ja": "出力",
+    "ko": "출력",
+    "ar": "إخراج"
+  },
+  "Result": {
+    "es": "Resultado",
+    "pt": "Resultado",
+    "fr": "Résultat",
+    "de": "Ergebnis",
+    "ru": "Результат",
+    "ja": "結果",
+    "ko": "결과",
+    "ar": "نتيجة"
+  },
+  "Convert": {
+    "es": "Convertir",
+    "pt": "Converter",
+    "fr": "Convertir",
+    "de": "Konvertieren",
+    "ru": "Конвертировать",
+    "ja": "変換",
+    "ko": "변환",
+    "ar": "تحويل"
+  },
+  "Calculate": {
+    "es": "Calcular",
+    "pt": "Calcular",
+    "fr": "Calculer",
+    "de": "Berechnen",
+    "ru": "Рассчитать",
+    "ja": "計算",
+    "ko": "계산",
+    "ar": "حساب"
+  },
+  "Generate": {
+    "es": "Generar",
+    "pt": "Gerar",
+    "fr": "Générer",
+    "de": "Generieren",
+    "ru": "Генерировать",
+    "ja": "生成",
+    "ko": "생성",
+    "ar": "توليد"
+  },
+  "Add": {
+    "es": "Añadir",
+    "pt": "Adicionar",
+    "fr": "Ajouter",
+    "de": "Hinzufügen",
+    "ru": "Добавить",
+    "ja": "追加",
+    "ko": "추가",
+    "ar": "إضافة"
+  },
+  "Edit": {
+    "es": "Editar",
+    "pt": "Editar",
+    "fr": "Modifier",
+    "de": "Bearbeiten",
+    "ru": "Редактировать",
+    "ja": "編集",
+    "ko": "편집",
+    "ar": "تعديل"
+  },
+  "Delete": {
+    "es": "Eliminar",
+    "pt": "Excluir",
+    "fr": "Supprimer",
+    "de": "Löschen",
+    "ru": "Удалить",
+    "ja": "削除",
+    "ko": "삭제",
+    "ar": "حذف"
+  },
+  "Remove": {
+    "es": "Quitar",
+    "pt": "Remover",
+    "fr": "Retirer",
+    "de": "Entfernen",
+    "ru": "Убрать",
+    "ja": "削除",
+    "ko": "제거",
+    "ar": "إزالة"
+  },
+  "Close": {
+    "es": "Cerrar",
+    "pt": "Fechar",
+    "fr": "Fermer",
+    "de": "Schließen",
+    "ru": "Закрыть",
+    "ja": "閉じる",
+    "ko": "닫기",
+    "ar": "إغلاق"
+  },
+  "Open": {
+    "es": "Abrir",
+    "pt": "Abrir",
+    "fr": "Ouvrir",
+    "de": "Öffnen",
+    "ru": "Открыть",
+    "ja": "開く",
+    "ko": "열기",
+    "ar": "فتح"
+  },
+  "Select": {
+    "es": "Seleccionar",
+    "pt": "Selecionar",
+    "fr": "Sélectionner",
+    "de": "Auswählen",
+    "ru": "Выбрать",
+    "ja": "選択",
+    "ko": "선택",
+    "ar": "تحديد"
+  },
+  "Cancel": {
+    "es": "Cancelar",
+    "pt": "Cancelar",
+    "fr": "Annuler",
+    "de": "Abbrechen",
+    "ru": "Отмена",
+    "ja": "キャンセル",
+    "ko": "취소",
+    "ar": "إلغاء"
+  },
+  "Confirm": {
+    "es": "Confirmar",
+    "pt": "Confirmar",
+    "fr": "Confirmer",
+    "de": "Bestätigen",
+    "ru": "Подтвердить",
+    "ja": "確認",
+    "ko": "확인",
+    "ar": "تأكيد"
+  },
+  "Name": {
+    "es": "Nombre",
+    "pt": "Nome",
+    "fr": "Nom",
+    "de": "Name",
+    "ru": "Имя",
+    "ja": "名前",
+    "ko": "이름",
+    "ar": "اسم"
+  },
+  "Value": {
+    "es": "Valor",
+    "pt": "Valor",
+    "fr": "Valeur",
+    "de": "Wert",
+    "ru": "Значение",
+    "ja": "値",
+    "ko": "값",
+    "ar": "قيمة"
+  },
+  "Type": {
+    "es": "Tipo",
+    "pt": "Tipo",
+    "fr": "Type",
+    "de": "Typ",
+    "ru": "Тип",
+    "ja": "タイプ",
+    "ko": "유형",
+    "ar": "نوع"
+  },
+  "Size": {
+    "es": "Tamaño",
+    "pt": "Tamanho",
+    "fr": "Taille",
+    "de": "Größe",
+    "ru": "Размер",
+    "ja": "サイズ",
+    "ko": "크기",
+    "ar": "حجم"
+  },
+  "Length": {
+    "es": "Longitud",
+    "pt": "Comprimento",
+    "fr": "Longueur",
+    "de": "Länge",
+    "ru": "Длина",
+    "ja": "長さ",
+    "ko": "길이",
+    "ar": "طول"
+  },
+  "Width": {
+    "es": "Ancho",
+    "pt": "Largura",
+    "fr": "Largeur",
+    "de": "Breite",
+    "ru": "Ширина",
+    "ja": "幅",
+    "ko": "너비",
+    "ar": "عرض"
+  },
+  "Height": {
+    "es": "Alto",
+    "pt": "Altura",
+    "fr": "Hauteur",
+    "de": "Höhe",
+    "ru": "Высота",
+    "ja": "高さ",
+    "ko": "높이",
+    "ar": "ارتفاع"
+  },
+  "Status": {
+    "es": "Estado",
+    "pt": "Estado",
+    "fr": "Statut",
+    "de": "Status",
+    "ru": "Статус",
+    "ja": "ステータス",
+    "ko": "상태",
+    "ar": "حالة"
+  },
+  "Mode": {
+    "es": "Modo",
+    "pt": "Modo",
+    "fr": "Mode",
+    "de": "Modus",
+    "ru": "Режим",
+    "ja": "モード",
+    "ko": "모드",
+    "ar": "وضع"
+  },
+  "Settings": {
+    "es": "Configuración",
+    "pt": "Configurações",
+    "fr": "Paramètres",
+    "de": "Einstellungen",
+    "ru": "Настройки",
+    "ja": "設定",
+    "ko": "설정",
+    "ar": "إعدادات"
+  },
+  "Options": {
+    "es": "Opciones",
+    "pt": "Opções",
+    "fr": "Options",
+    "de": "Optionen",
+    "ru": "Опции",
+    "ja": "オプション",
+    "ko": "옵션",
+    "ar": "خيارات"
+  },
+  "Format": {
+    "es": "Formato",
+    "pt": "Formato",
+    "fr": "Format",
+    "de": "Format",
+    "ru": "Формат",
+    "ja": "形式",
+    "ko": "형식",
+    "ar": "تنسيق"
+  },
+  "Preview": {
+    "es": "Vista previa",
+    "pt": "Visualização",
+    "fr": "Aperçu",
+    "de": "Vorschau",
+    "ru": "Предпросмотр",
+    "ja": "プレビュー",
+    "ko": "미리보기",
+    "ar": "معاينة"
+  },
+  "Error": {
+    "es": "Error",
+    "pt": "Erro",
+    "fr": "Erreur",
+    "de": "Fehler",
+    "ru": "Ошибка",
+    "ja": "エラー",
+    "ko": "오류",
+    "ar": "خطأ"
+  },
+  "Success": {
+    "es": "Éxito",
+    "pt": "Sucesso",
+    "fr": "Succès",
+    "de": "Erfolg",
+    "ru": "Успех",
+    "ja": "成功",
+    "ko": "성공",
+    "ar": "نجاح"
+  },
+  "Warning": {
+    "es": "Advertencia",
+    "pt": "Aviso",
+    "fr": "Avertissement",
+    "de": "Warnung",
+    "ru": "Предупреждение",
+    "ja": "警告",
+    "ko": "경고",
+    "ar": "تحذير"
+  },
+  "Info": {
+    "es": "Info",
+    "pt": "Info",
+    "fr": "Info",
+    "de": "Info",
+    "ru": "Инфо",
+    "ja": "情報",
+    "ko": "정보",
+    "ar": "معلومات"
+  },
+  "Time": {
+    "es": "Tiempo",
+    "pt": "Tempo",
+    "fr": "Temps",
+    "de": "Zeit",
+    "ru": "Время",
+    "ja": "時間",
+    "ko": "시간",
+    "ar": "وقت"
+  },
+  "Date": {
+    "es": "Fecha",
+    "pt": "Data",
+    "fr": "Date",
+    "de": "Datum",
+    "ru": "Дата",
+    "ja": "日付",
+    "ko": "날짜",
+    "ar": "تاريخ"
+  },
+  "Year": {
+    "es": "Año",
+    "pt": "Ano",
+    "fr": "Année",
+    "de": "Jahr",
+    "ru": "Год",
+    "ja": "年",
+    "ko": "년",
+    "ar": "سنة"
+  },
+  "Month": {
+    "es": "Mes",
+    "pt": "Mês",
+    "fr": "Mois",
+    "de": "Monat",
+    "ru": "Месяц",
+    "ja": "月",
+    "ko": "월",
+    "ar": "شهر"
+  },
+  "Week": {
+    "es": "Semana",
+    "pt": "Semana",
+    "fr": "Semaine",
+    "de": "Woche",
+    "ru": "Неделя",
+    "ja": "週",
+    "ko": "주",
+    "ar": "أسبوع"
+  },
+  "Day": {
+    "es": "Día",
+    "pt": "Dia",
+    "fr": "Jour",
+    "de": "Tag",
+    "ru": "День",
+    "ja": "日",
+    "ko": "일",
+    "ar": "يوم"
+  },
+  "Hour": {
+    "es": "Hora",
+    "pt": "Hora",
+    "fr": "Heure",
+    "de": "Stunde",
+    "ru": "Час",
+    "ja": "時",
+    "ko": "시",
+    "ar": "ساعة"
+  },
+  "Minute": {
+    "es": "Minuto",
+    "pt": "Minuto",
+    "fr": "Minute",
+    "de": "Minute",
+    "ru": "Минута",
+    "ja": "分",
+    "ko": "분",
+    "ar": "دقيقة"
+  },
+  "Second": {
+    "es": "Segundo",
+    "pt": "Segundo",
+    "fr": "Seconde",
+    "de": "Sekunde",
+    "ru": "Секунда",
+    "ja": "秒",
+    "ko": "초",
+    "ar": "ثانية"
+  },
+  "File": {
+    "es": "Archivo",
+    "pt": "Arquivo",
+    "fr": "Fichier",
+    "de": "Datei",
+    "ru": "Файл",
+    "ja": "ファイル",
+    "ko": "파일",
+    "ar": "ملف"
+  },
+  "Text": {
+    "es": "Texto",
+    "pt": "Texto",
+    "fr": "Texte",
+    "de": "Text",
+    "ru": "Текст",
+    "ja": "テキスト",
+    "ko": "텍스트",
+    "ar": "نص"
+  },
+  "Image": {
+    "es": "Imagen",
+    "pt": "Imagem",
+    "fr": "Image",
+    "de": "Bild",
+    "ru": "Изображение",
+    "ja": "画像",
+    "ko": "이미지",
+    "ar": "صورة"
+  },
+  "Link": {
+    "es": "Enlace",
+    "pt": "Link",
+    "fr": "Lien",
+    "de": "Link",
+    "ru": "Ссылка",
+    "ja": "リンク",
+    "ko": "링크",
+    "ar": "رابط"
+  },
+  "Code": {
+    "es": "Código",
+    "pt": "Código",
+    "fr": "Code",
+    "de": "Code",
+    "ru": "Код",
+    "ja": "コード",
+    "ko": "코드",
+    "ar": "كود"
+  },
+  "Bytes": {
+    "es": "Bytes",
+    "pt": "Bytes",
+    "fr": "Octets",
+    "de": "Bytes",
+    "ru": "Байт",
+    "ja": "バイト",
+    "ko": "바이트",
+    "ar": "بايت"
+  },
+  "Lines": {
+    "es": "Líneas",
+    "pt": "Linhas",
+    "fr": "Lignes",
+    "de": "Zeilen",
+    "ru": "Строки",
+    "ja": "行",
+    "ko": "줄",
+    "ar": "أسطر"
+  },
+  "Words": {
+    "es": "Palabras",
+    "pt": "Palavras",
+    "fr": "Mots",
+    "de": "Wörter",
+    "ru": "Слова",
+    "ja": "単語",
+    "ko": "단어",
+    "ar": "كلمات"
+  },
+  "Chars": {
+    "es": "Caracteres",
+    "pt": "Caracteres",
+    "fr": "Caractères",
+    "de": "Zeichen",
+    "ru": "Символы",
+    "ja": "文字",
+    "ko": "문자",
+    "ar": "محارف"
+  },
+  "Hash": {
+    "es": "Hash",
+    "pt": "Hash",
+    "fr": "Hachage",
+    "de": "Hash",
+    "ru": "Хэш",
+    "ja": "ハッシュ",
+    "ko": "해시",
+    "ar": "تجزئة"
+  },
+  "Encoding": {
+    "es": "Codificación",
+    "pt": "Codificação",
+    "fr": "Encodage",
+    "de": "Kodierung",
+    "ru": "Кодировка",
+    "ja": "エンコード",
+    "ko": "인코딩",
+    "ar": "تشفير"
+  },
+  "Decoding": {
+    "es": "Decodificación",
+    "pt": "Decodificação",
+    "fr": "Décodage",
+    "de": "Dekodierung",
+    "ru": "Декодировка",
+    "ja": "デコード",
+    "ko": "디코딩",
+    "ar": "فك التشفير"
+  },
+  "Encrypt": {
+    "es": "Encriptar",
+    "pt": "Criptografar",
+    "fr": "Chiffrer",
+    "de": "Verschlüsseln",
+    "ru": "Зашифровать",
+    "ja": "暗号化",
+    "ko": "암호화",
+    "ar": "تشفير"
+  },
+  "Decrypt": {
+    "es": "Desencriptar",
+    "pt": "Descriptografar",
+    "fr": "Déchiffrer",
+    "de": "Entschlüsseln",
+    "ru": "Расшифровать",
+    "ja": "復号化",
+    "ko": "복호화",
+    "ar": "فك التشفير"
+  },
+  "Red": {
+    "es": "Rojo",
+    "pt": "Vermelho",
+    "fr": "Rouge",
+    "de": "Rot",
+    "ru": "Красный",
+    "ja": "赤",
+    "ko": "빨강",
+    "ar": "أحمر"
+  },
+  "Green": {
+    "es": "Verde",
+    "pt": "Verde",
+    "fr": "Vert",
+    "de": "Grün",
+    "ru": "Зеленый",
+    "ja": "緑",
+    "ko": "초록",
+    "ar": "اخضر"
+  },
+  "Blue": {
+    "es": "Azul",
+    "pt": "Azul",
+    "fr": "Bleu",
+    "de": "Blau",
+    "ru": "Синий",
+    "ja": "青",
+    "ko": "파랑",
+    "ar": "أزرق"
+  },
+  "Black": {
+    "es": "Negro",
+    "pt": "Preto",
+    "fr": "Noir",
+    "de": "Schwarz",
+    "ru": "Черный",
+    "ja": "黒",
+    "ko": "검정",
+    "ar": "أسود"
+  },
+  "White": {
+    "es": "Blanco",
+    "pt": "Branco",
+    "fr": "Blanc",
+    "de": "Weiß",
+    "ru": "Белый",
+    "ja": "白",
+    "ko": "흰색",
+    "ar": "أبيض"
+  },
+  "Node": {
+    "es": "Nodo",
+    "pt": "Nó",
+    "fr": "Nœud",
+    "de": "Knoten",
+    "ru": "Узел",
+    "ja": "ノード",
+    "ko": "노드",
+    "ar": "عقدة"
+  },
+  "Category": {
+    "es": "Categoría",
+    "pt": "Categoria",
+    "fr": "Catégorie",
+    "de": "Kategorie",
+    "ru": "Категория",
+    "ja": "カテゴリ",
+    "ko": "카테고리",
+    "ar": "فئة"
+  },
+  "Group": {
+    "es": "Grupo",
+    "pt": "Grupo",
+    "fr": "Groupe",
+    "de": "Gruppe",
+    "ru": "Группа",
+    "ja": "グループ",
+    "ko": "그룹",
+    "ar": "مجموعة"
+  },
+  "Graph Chart Generator": {
+    "es": "Generador de gráficos de grafos",
+    "pt": "Gerador de gráficos de grafos",
+    "fr": "Générateur de graphiques",
+    "de": "Graph-Chart-Generator",
+    "ru": "Генератор графов",
+    "ja": "グラフチャート生成",
+    "ko": "그래프 차트 생성기",
+    "ar": "مولد الرسوم البيانية"
+  },
+  "Load Sample": {
+    "es": "Cargar ejemplo",
+    "pt": "Carregar exemplo",
+    "fr": "Charger un exemple",
+    "de": "Beispiel laden",
+    "ru": "Загрузить пример",
+    "ja": "サンプルを読み込む",
+    "ko": "샘플 불러오기",
+    "ar": "تحميل نموذج"
+  },
+  "Download PNG": {
+    "es": "Descargar PNG",
+    "pt": "Baixar PNG",
+    "fr": "Télécharger PNG",
+    "de": "PNG herunterladen",
+    "ru": "Скачать PNG",
+    "ja": "PNGをダウンロード",
+    "ko": "PNG 다운로드",
+    "ar": "تنزيل PNG"
+  },
+  "Download SVG": {
+    "es": "Descargar SVG",
+    "pt": "Baixar SVG",
+    "fr": "Télécharger SVG",
+    "de": "SVG herunterladen",
+    "ru": "Скачать SVG",
+    "ja": "SVGをダウンロード",
+    "ko": "SVG 다운로드",
+    "ar": "تنزيل SVG"
+  },
+  "Show Label": {
+    "es": "Mostrar etiqueta",
+    "pt": "Mostrar rótulo",
+    "fr": "Afficher l'étiquette",
+    "de": "Label anzeigen",
+    "ru": "Показать метку",
+    "ja": "ラベルを表示",
+    "ko": "라벨 표시",
+    "ar": "إظهار التسمية"
+  },
+  "Color Theme": {
+    "es": "Tema de color",
+    "pt": "Tema de cores",
+    "fr": "Thème de couleur",
+    "de": "Farbthema",
+    "ru": "Цветовая тема",
+    "ja": "カラーテーマ",
+    "ko": "색상 테마",
+    "ar": "نسق الألوان"
+  },
+  "Home": {
+    "es": "Inicio",
+    "pt": "Início",
+    "fr": "Accueil",
+    "de": "Startseite",
+    "ru": "Главная",
+    "ja": "ホーム",
+    "ko": "홈",
+    "ar": "الرئيسية"
+  },
+  "Tools": {
+    "es": "Herramientas",
+    "pt": "Ferramentas",
+    "fr": "Outils",
+    "de": "Werkzeuge",
+    "ru": "Инструменты",
+    "ja": "ツール",
+    "ko": "도구",
+    "ar": "أدوات"
+  },
+  "About": {
+    "es": "Sobre nosotros",
+    "pt": "Sobre",
+    "fr": "À propos",
+    "de": "Über uns",
+    "ru": "О нас",
+    "ja": "概要",
+    "ko": "소개",
+    "ar": "حول"
+  },
+  "View All Tools": {
+    "es": "Ver todas las herramientas",
+    "pt": "Ver Todas as Ferramentas",
+    "fr": "Voir tous les outils",
+    "de": "Alle Tools anzeigen",
+    "ru": "Посмотреть все инструменты",
+    "ja": "すべてのツールを見る",
+    "ko": "모든 도구 보기",
+    "ar": "عرض جميع الأدوات"
+  },
+  "Search tools...": {
+    "es": "Buscar herramientas...",
+    "pt": "Pesquisar ferramentas...",
+    "fr": "Rechercher des outils...",
+    "de": "Werkzeuge suchen...",
+    "ru": "Поиск инструментов...",
+    "ja": "ツールを検索...",
+    "ko": "도구 검색...",
+    "ar": "بحث عن أدوات..."
+  },
+  "Link Editor": {
+    "es": "Editor de enlaces",
+    "pt": "Editor de links",
+    "fr": "Éditeur de liens",
+    "de": "Link-Editor",
+    "ru": "Редактор связей",
+    "ja": "リンクエディタ",
+    "ko": "링크 편집기",
+    "ar": "محرر الروابط"
+  },
+  "Add Link": {
+    "es": "Añadir enlace",
+    "pt": "Adicionar link",
+    "fr": "Ajouter un lien",
+    "de": "Link hinzufügen",
+    "ru": "Добавить связь",
+    "ja": "リンクを追加",
+    "ko": "링크 추가",
+    "ar": "إضافة رابط"
+  },
+  "Node Editor": {
+    "es": "Editor de nodos",
+    "pt": "Editor de nós",
+    "fr": "Éditeur de nœuds",
+    "de": "Knoten-Editor",
+    "ru": "Редактор узлов",
+    "ja": "ノードエディタ",
+    "ko": "노드 편집기",
+    "ar": "محرر العقد"
+  },
+  "Add Node": {
+    "es": "Añadir nodo",
+    "pt": "Adicionar nó",
+    "fr": "Ajouter un nœud",
+    "de": "Knoten hinzufügen",
+    "ru": "Добавить узел",
+    "ja": "ノードを追加",
+    "ko": "노드 추가",
+    "ar": "إضافة عقدة"
+  },
+  "Category A": {
+    "es": "Categoría A",
+    "pt": "Categoria A",
+    "fr": "Catégorie A",
+    "de": "Kategorie A",
+    "ru": "Категория A",
+    "ja": "カテゴリ A",
+    "ko": "카테고리 A",
+    "ar": "فئة أ"
+  },
+  "Category B": {
+    "es": "Categoría B",
+    "pt": "Categoria B",
+    "fr": "Catégorie B",
+    "de": "Kategorie B",
+    "ru": "Категория B",
+    "ja": "カテゴリ B",
+    "ko": "카테고리 B",
+    "ar": "فئة ب"
+  },
+  "Category C": {
+    "es": "Categoría C",
+    "pt": "Categoria C",
+    "fr": "Catégorie C",
+    "de": "Kategorie C",
+    "ru": "Категория C",
+    "ja": "カテゴリ C",
+    "ko": "카테고리 C",
+    "ar": "فئة ج"
+  },
+  "Collapse All": {
+    "es": "Contraer todo",
+    "pt": "Recolher tudo",
+    "fr": "Tout réduire",
+    "de": "Alles einklappen",
+    "ru": "Свернуть все",
+    "ja": "すべて折りたたむ",
+    "ko": "모두 접기",
+    "ar": "طي الكل"
+  },
+  "Expand All": {
+    "es": "Expandir todo",
+    "pt": "Expandir tudo",
+    "fr": "Tout développer",
+    "de": "Alles ausklappen",
+    "ru": "Развернуть все",
+    "ja": "すべて展開",
+    "ko": "모두 펼치기",
+    "ar": "توسيع الكل"
+  },
+  "Chart Settings": {
+    "es": "Configuración del gráfico",
+    "pt": "Configurações do gráfico",
+    "fr": "Paramètres du graphique",
+    "de": "Diagramm-Einstellungen",
+    "ru": "Настройки графика",
+    "ja": "チャート設定",
+    "ko": "차트 설정",
+    "ar": "إعدادات الرسم البياني"
+  },
+  "Chart Preview": {
+    "es": "Vista previa del gráfico",
+    "pt": "Pré-visualização do gráfico",
+    "fr": "Aperçu du graphique",
+    "de": "Diagramm-Vorschau",
+    "ru": "Предпросмотр графика",
+    "ja": "チャートプレビュー",
+    "ko": "차트 미리보기",
+    "ar": "معاينة الرسم البياني"
+  },
+  "Chart Title": {
+    "es": "Título del gráfico",
+    "pt": "Título do gráfico",
+    "fr": "Titre du graphique",
+    "de": "Diagrammtitel",
+    "ru": "Заголовок графика",
+    "ja": "チャートタイトル",
+    "ko": "차트 제목",
+    "ar": "عنوان الرسم البياني"
+  },
+  "Add nodes and links": {
+    "es": "Añade nodos y enlaces",
+    "pt": "Adicione nós e links",
+    "fr": "Ajoutez des nœuds et des liens",
+    "de": "Fügen Sie Knoten und Links hinzu",
+    "ru": "Добавьте узлы и связи",
+    "ja": "ノードとリンクを追加",
+    "ko": "노드 및 링크 추가",
+    "ar": "أضف عقدًا وروابط"
+  },
+  "Choose layout type": {
+    "es": "Elige el tipo de diseño",
+    "pt": "Escolha o tipo de layout",
+    "fr": "Choisissez le type de mise en page",
+    "de": "Wählen Sie den Layout-Typ",
+    "ru": "Выберите тип макета",
+    "ja": "レイアウトタイプを選択",
+    "ko": "레이아웃 유형 선택",
+    "ar": "اختر نوع التخطيط"
+  },
+  "Adjust repulsion force": {
+    "es": "Ajusta la fuerza de repulsión",
+    "pt": "Ajuste a força de repulsão",
+    "fr": "Ajustez la force de répulsion",
+    "de": "Passen Sie die Abstoßungskraft an",
+    "ru": "Настройте силу отталкивания",
+    "ja": "反発力を調整",
+    "ko": "반발력 조정",
+    "ar": "ضبط قوة التنافر"
+  },
+  "repulsion": {
+    "es": "Fuerza de repulsión",
+    "pt": "Repulsão",
+    "fr": "Répulsion",
+    "de": "Abstoßung",
+    "ru": "Отталкивание",
+    "ja": "反発力",
+    "ko": "반발력",
+    "ar": "تنافر"
+  },
+  "layout": {
+    "es": "Diseño",
+    "pt": "Layout",
+    "fr": "Mise en page",
+    "de": "Layout",
+    "ru": "Макет",
+    "ja": "レイアウト",
+    "ko": "레이아웃",
+    "ar": "تخطيط"
+  },
+  "force": {
+    "es": "Fuerza",
+    "pt": "Força",
+    "fr": "Force",
+    "de": "Kraft",
+    "ru": "Сила",
+    "ja": "力",
+    "ko": "포스",
+    "ar": "قوة"
+  },
+  "circular": {
+    "es": "Circular",
+    "pt": "Circular",
+    "fr": "Circulaire",
+    "de": "Kreisförmig",
+    "ru": "Круговой",
+    "ja": "円形",
+    "ko": "원형",
+    "ar": "دائري"
+  },
+  "circular layout": {
+    "es": "Diseño circular",
+    "pt": "Layout circular",
+    "fr": "Disposition circulaire",
+    "de": "Kreisförmiges Layout",
+    "ru": "Круговой макет",
+    "ja": "円形レイアウト",
+    "ko": "원형 레이아웃",
+    "ar": "تخطيط دائري"
+  },
+  "force layout": {
+    "es": "Diseño de fuerza",
+    "pt": "Layout de força",
+    "fr": "Disposition de force",
+    "de": "Kraft-Layout",
+    "ru": "Силовой макет",
+    "ja": "力指向レイアウト",
+    "ko": "포스 레이아웃",
+    "ar": "تخطيط القوة"
+  },
+  "Charts & Visualization": {
+    "es": "Gráficos y Visualización",
+    "pt": "Gráficos e Visualização",
+    "fr": "Graphiques et visualisation",
+    "de": "Diagramme & Visualisierung",
+    "ru": "Графики и визуализация",
+    "ja": "チャートと視覚化",
+    "ko": "차트 및 시각화",
+    "ar": "الرسوم البيانية والتصور"
+  },
+  "Text Tools": {
+    "es": "Herramientas de texto",
+    "pt": "Ferramentas de texto",
+    "fr": "Outils de texte",
+    "de": "Text-Tools",
+    "ru": "Текстовые инструменты",
+    "ja": "テキストツール",
+    "ko": "텍스트 도구",
+    "ar": "أدوات النص"
+  },
+  "Encoding & Decoding": {
+    "es": "Codificación y decodificación",
+    "pt": "Codificação e Decodificação",
+    "fr": "Encodage et décodage",
+    "de": "Kodierung & Dekodierung",
+    "ru": "Кодирование и декодирование",
+    "ja": "エンコードとデコード",
+    "ko": "인코딩 및 디코딩",
+    "ar": "التشفير وفك التشفير"
+  },
+  "Generators": {
+    "es": "Generadores",
+    "pt": "Geradores",
+    "fr": "Générateurs",
+    "de": "Generatoren",
+    "ru": "Генераторы",
+    "ja": "ジェネレーター",
+    "ko": "생성기",
+    "ar": "المولدات"
+  },
+  "Converters": {
+    "es": "Convertidores",
+    "pt": "Conversores",
+    "fr": "Convertisseurs",
+    "de": "Konverter",
+    "ru": "Конвертеры",
+    "ja": "コンバーター",
+    "ko": "변환기",
+    "ar": "محولات"
+  },
+  "Development": {
+    "es": "Desarrollo",
+    "pt": "Desenvolvimento",
+    "fr": "Développement",
+    "de": "Entwicklung",
+    "ru": "Разработка",
+    "ja": "開発",
+    "ko": "개발",
+    "ar": "تطوير"
+  },
+  "Security": {
+    "es": "Seguridad",
+    "pt": "Segurança",
+    "fr": "Sécurité",
+    "de": "Sicherheit",
+    "ru": "Безопасность",
+    "ja": "セキュリティ",
+    "ko": "보안",
+    "ar": "أمان"
+  },
+  "Network": {
+    "es": "Red",
+    "pt": "Rede",
+    "fr": "Réseau",
+    "de": "Netzwerk",
+    "ru": "Сеть",
+    "ja": "ネットワーク",
+    "ko": "네트워크",
+    "ar": "شبكة"
+  },
+  "Image Tools": {
+    "es": "Herramientas de imagen",
+    "pt": "Ferramentas de imagem",
+    "fr": "Outils d'image",
+    "de": "Bild-Tools",
+    "ru": "Инструменты изображений",
+    "ja": "画像ツール",
+    "ko": "이미지 도구",
+    "ar": "أدوات الصورة"
+  },
+  "Math & Calculators": {
+    "es": "Matemáticas y calculadoras",
+    "pt": "Matemática e Calculadoras",
+    "fr": "Mathématiques et calculatrices",
+    "de": "Mathe & Rechner",
+    "ru": "Математика и калькуляторы",
+    "ja": "数学と電卓",
+    "ko": "수학 및 계산기",
+    "ar": "الرياضيات والحاسبات"
+  },
+  "Create graph/network charts online. Visualize relationships and export as PNG/SVG.": {
+    "es": "Cree gráficos de grafos/redes en línea. Visualice relaciones y exporte como PNG/SVG.",
+    "pt": "Crie gráficos de grafos/redes online. Visualize relacionamentos e exporte como PNG/SVG.",
+    "fr": "Créez des graphiques de graphes/réseaux en ligne. Visualisez les relations et exportez au format PNG/SVG.",
+    "de": "Erstellen Sie Graph-/Netzwerkdiagramme online. Visualisieren Sie Beziehungen und exportieren Sie als PNG/SVG.",
+    "ru": "Создавайте графики/сетевые диаграммы онлайн. Визуализируйте отношения и экспортируйте в PNG/SVG.",
+    "ja": "グラフ/ネットワークチャートをオンラインで作成します。関係を視覚化し、PNG/SVGとしてエクスポートします。",
+    "ko": "온라인에서 그래프/네트워크 차트 생성. 관계 시각화 및 PNG/SVG 내보내기.",
+    "ar": "إنشاء مخططات بيانية/شبكة عبر الإنترنت. تصور العلاقات وتصديرها بتنسيق PNG/SVG."
+  },
+  "Network Structure": {
+    "es": "Estructura de red",
+    "pt": "Estrutura de Rede",
+    "fr": "Structure du réseau",
+    "de": "Netzwerkstruktur",
+    "ru": "Структура сети",
+    "ja": "ネットワーク構造",
+    "ko": "네트워크 구조",
+    "ar": "هيكل الشبكة"
+  },
+  "Relationship Graph": {
+    "es": "Gráfico de relaciones",
+    "pt": "Gráfico de Relacionamento",
+    "fr": "Graphique de relations",
+    "de": "Beziehungsdiagramm",
+    "ru": "Граф отношений",
+    "ja": "関係グラフ",
+    "ko": "관계 그래프",
+    "ar": "رسم بياني للعلاقات"
+  },
+  "Default": {
+    "es": "Predeterminado",
+    "pt": "Padrão",
+    "fr": "Défaut",
+    "de": "Standard",
+    "ru": "По умолчанию",
+    "ja": "デフォルト",
+    "ko": "기본",
+    "ar": "افتراضي"
+  },
+  "Ocean": {
+    "es": "Océano",
+    "pt": "Oceano",
+    "fr": "Océan",
+    "de": "Ozean",
+    "ru": "Океан",
+    "ja": "オーシャン",
+    "ko": "오션",
+    "ar": "محيط"
+  },
+  "Sunset": {
+    "es": "Atardecer",
+    "pt": "Pôr do sol",
+    "fr": "Coucher de soleil",
+    "de": "Sonnenuntergang",
+    "ru": "Закат",
+    "ja": "サンセット",
+    "ko": "석양",
+    "ar": "غروب"
+  },
+  "Forest": {
+    "es": "Bosque",
+    "pt": "Floresta",
+    "fr": "Forêt",
+    "de": "Wald",
+    "ru": "Лес",
+    "ja": "フォレスト",
+    "ko": "숲",
+    "ar": "غابة"
+  },
+  "Force": {
+    "es": "Fuerza",
+    "pt": "Força",
+    "fr": "Force",
+    "de": "Kraft",
+    "ru": "Сила",
+    "ja": "力",
+    "ko": "포스",
+    "ar": "قوة"
+  },
+  "Circular": {
+    "es": "Circular",
+    "pt": "Circular",
+    "fr": "Circulaire",
+    "de": "Kreisförmig",
+    "ru": "Круговой",
+    "ja": "円形",
+    "ko": "원형",
+    "ar": "دائري"
+  },
+  "Node Name": {
+    "es": "Nombre del nodo",
+    "pt": "Nome do Nó",
+    "fr": "Nom du nœud",
+    "de": "Knotenname",
+    "ru": "Имя узла",
+    "ja": "ノード名",
+    "ko": "노드 이름",
+    "ar": "اسم العقدة"
+  },
+  "Node Size": {
+    "es": "Tamaño del nodo",
+    "pt": "Tamanho do Nó",
+    "fr": "Taille du nœud",
+    "de": "Knotengröße",
+    "ru": "Размер узла",
+    "ja": "ノードサイズ",
+    "ko": "노드 크기",
+    "ar": "حجم العقدة"
+  },
+  "Source": {
+    "es": "Fuente",
+    "pt": "Fonte",
+    "fr": "Source",
+    "de": "Quelle",
+    "ru": "Источник",
+    "ja": "ソース",
+    "ko": "소스",
+    "ar": "مصدر"
+  },
+  "Target": {
+    "es": "Objetivo",
+    "pt": "Alvo",
+    "fr": "Cible",
+    "de": "Ziel",
+    "ru": "Цель",
+    "ja": "ターゲット",
+    "ko": "타겟",
+    "ar": "هدف"
+  },
+  "Free Online Tools": {
+    "es": "Herramientas en línea gratuitas",
+    "pt": "Ferramentas Online Gratuitas",
+    "fr": "Outils en ligne gratuits",
+    "de": "Kostenlose Online-Tools",
+    "ru": "Бесплатные онлайн-инструменты",
+    "ja": "無料のオンラインツール",
+    "ko": "무료 온라인 도구",
+    "ar": "أدوات مجانية عبر الإنترنت"
+  },
+  "Boost your productivity with our collection of free developer tools. No signup required, works entirely in your browser.": {
+    "es": "Aumente su productividad con nuestra colección de herramientas gratuitas para desarrolladores. No requiere registro, funciona completamente en su navegador.",
+    "pt": "Aumente sua produtividade com nossa coleção de ferramentas gratuitas para desenvolvedores. Sem cadastro, funciona inteiramente no seu navegador.",
+    "fr": "Boostez votre productivité avec notre collection d'outils gratuits pour développeurs. Aucune inscription requise, fonctionne entièrement dans votre navigateur.",
+    "de": "Steigern Sie Ihre Produktivität mit unserer Sammlung kostenloser Entwicklertools. Keine Anmeldung erforderlich, läuft vollständig in Ihrem Browser.",
+    "ru": "Повысьте продуктивность с нашей коллекцией бесплатных инструментов для разработчиков. Без регистрации, работает полностью в браузере.",
+    "ja": "無料の開発者ツールコレクションで生産性を向上させましょう。登録不要、すべてブラウザで動作します。",
+    "ko": "무료 개발자 도구 모음으로 생산성을 높이세요. 가입 필요 없음, 브라우저에서 완전히 작동합니다.",
+    "ar": "عزز إنتاجيتك مع مجموعتنا من أدوات المطورين المجانية. لا يلزم التسجيل، وتعمل بالكامل في متصفحك."
+  },
+  "Browse Tools": {
+    "es": "Explorar herramientas",
+    "pt": "Explorar Ferramentas",
+    "fr": "Parcourir les outils",
+    "de": "Tools durchsuchen",
+    "ru": "Обзор инструментов",
+    "ja": "ツールを見る",
+    "ko": "도구 찾아보기",
+    "ar": "تصفح الأدوات"
+  },
+  "Try JSON Formatter": {
+    "es": "Pruebe el formateador JSON",
+    "pt": "Teste o Formatador JSON",
+    "fr": "Essayer le formateur JSON",
+    "de": "JSON-Formatierer ausprobieren",
+    "ru": "Попробовать JSON Formatter",
+    "ja": "JSONフォーマッターを試す",
+    "ko": "JSON 포맷터 사용해보기",
+    "ar": "جرب منسق JSON"
+  },
+  "Try": {
+    "es": "Probar",
+    "pt": "Testar",
+    "fr": "Essayer",
+    "de": "Versuchen",
+    "ru": "Попробовать",
+    "ja": "試す",
+    "ko": "체험",
+    "ar": "جرب"
+  },
+  "100% Free & Open Source": {
+    "es": "100% Gratis y de Código Abierto",
+    "pt": "100% Gratuito e Código Aberto",
+    "fr": "100% gratuit et open source",
+    "de": "100% kostenlos & Open Source",
+    "ru": "100% бесплатно и с открытым исходным кодом",
+    "ja": "100%無料＆オープンソース",
+    "ko": "100% 무료 및 오픈 소스",
+    "ar": "100٪ مجاني ومفتوح المصدر"
+  },
+  "Free Tools": {
+    "es": "Herramientas gratuitas",
+    "pt": "Ferramentas Gratuitas",
+    "fr": "Outils gratuits",
+    "de": "Kostenlose Tools",
+    "ru": "Бесплатные инструменты",
+    "ja": "無料ツール",
+    "ko": "무료 도구",
+    "ar": "أدوات مجانية"
+  },
+  "Data Upload": {
+    "es": "Carga de datos",
+    "pt": "Upload de Dados",
+    "fr": "Téléchargement de données",
+    "de": "Daten-Upload",
+    "ru": "Загрузка данных",
+    "ja": "データアップロード",
+    "ko": "데이터 업로드",
+    "ar": "تحميل البيانات"
+  },
+  "Free Forever": {
+    "es": "Gratis para siempre",
+    "pt": "Gratuito para Sempre",
+    "fr": "Gratuit pour toujours",
+    "de": "Für immer kostenlos",
+    "ru": "Бесплатно навсегда",
+    "ja": "永久無料",
+    "ko": "평생 무료",
+    "ar": "مجاني للأبد"
+  },
+  "Why Choose Us?": {
+    "es": "¿Por qué elegirnos?",
+    "pt": "Por que nos escolher?",
+    "fr": "Pourquoi nous choisir ?",
+    "de": "Warum uns wählen?",
+    "ru": "Почему выбирают нас?",
+    "ja": "選ばれる理由",
+    "ko": "우리를 선택해야 하는 이유",
+    "ar": "لماذا تختارنا؟"
+  },
+  "Built for developers, by developers. Fast, secure, and always free.": {
+    "es": "Construido para desarrolladores, por desarrolladores. Rápido, seguro y siempre gratuito.",
+    "pt": "Feito para desenvolvedores, por desenvolvedores. Rápido, seguro e sempre gratuito.",
+    "fr": "Conçu pour les développurs, par des développeurs. Rapide, sécurisé et toujours gratuit.",
+    "de": "Von Entwicklern für Entwickler gebaut. Schnell, sicher und immer kostenlos.",
+    "ru": "Создано разработчиками для разработчиков. Быстро, безопасно и всегда бесплатно.",
+    "ja": "開発者による開発者のためのツール。高速、安全、そして常に無料。",
+    "ko": "개발자가 만든, 개발자를 위한 도구. 빠르고 안전하며 언제나 무료입니다.",
+    "ar": "بنيت للمطورين ، من قبل المطورين. سريعة وآمنة ومجانية دائما."
+  },
+  "Lightning Fast": {
+    "es": "Ultrarrápido",
+    "pt": "Ultra Rápido",
+    "fr": "Ultra rapide",
+    "de": "Blitzschnell",
+    "ru": "Молниеносно",
+    "ja": "超高速",
+    "ko": "초고속",
+    "ar": "سريع البرق"
+  },
+  "All tools run locally in your browser. No server uploads, instant results.": {
+    "es": "Todas las herramientas se ejecutan localmente en su navegador. Sin cargas al servidor, resultados instantáneos.",
+    "pt": "Todas as ferramentas rodam localmente no seu navegador. Sem uploads para servidor, resultados instantâneos.",
+    "fr": "Tous les outils s'exécutent localement dans votre navigateur. Aucun téléchargement serveur, résultats instantanés.",
+    "de": "Alle Tools laufen lokal in Ihrem Browser. Keine Server-Uploads, sofortige Ergebnisse.",
+    "ru": "Все инструменты работают локально в вашем браузере. Без отправка на сервер, мгновенные результаты.",
+    "ja": "すべてのツールはブラウザ内でローカルに実行されます。サーバーへのアップロードなし、即座に結果が出ます。",
+    "ko": "모든 도구는 브라우저에서 로컬로 실행됩니다. 서버 업로드 없음, 즉각적인 결과.",
+    "ar": "تعمل جميع الأدوات محليا في متصفحك. لا تحميلات الخادم ، نتائج فورية."
+  },
+  "100% Secure": {
+    "es": "100% Seguro",
+    "pt": "100% Seguro",
+    "fr": "100% sécurisé",
+    "de": "100% Sicher",
+    "ru": "100% Безопасно",
+    "ja": "100%安全",
+    "ko": "100% 보안",
+    "ar": "100٪ آمن"
+  },
+  "Your data never leaves your device. Complete privacy guaranteed.": {
+    "es": "Sus datos nunca salen de su dispositivo. Privacidad completa garantizada.",
+    "pt": "Seus dados nunca saem do seu dispositivo. Privacidade completa garantida.",
+    "fr": "Vos données ne quittent jamais votre appareil. Confidentialité totale garantie.",
+    "de": "Ihre Daten verlassen niemals Ihr Gerät. Volle Privatsphäre garantiert.",
+    "ru": "Ваши данные никогда не покидают ваше устройство. Полная конфиденциальность гарантирована.",
+    "ja": "データがデバイスから離れることはありません。完全なプライバシーが保証されます。",
+    "ko": "데이터는 기기를 절대 벗어나지 않습니다. 완벽한 개인정보 보호 보장.",
+    "ar": "بياناتك لا تترك جهازك أبدا. الخصوصية الكاملة مضمونة."
+  },
+  "Multi-Language": {
+    "es": "Multilingüe",
+    "pt": "Multi-idioma",
+    "fr": "Multilingue",
+    "de": "Mehrsprachig",
+    "ru": "Мультиязычность",
+    "ja": "多言語対応",
+    "ko": "다국어 지원",
+    "ar": "متعدد اللغات"
+  },
+  "Available in 10 languages: English, Chinese, Spanish, Portuguese, Japanese, Russian, French, Arabic, German, Korean.": {
+    "es": "Disponible en 10 idiomas: inglés, chino, español, portugués, japonés, ruso, francés, árabe, alemán, coreano.",
+    "pt": "Disponível em 10 idiomas: inglês, chinês, espanhol, português, japonês, russo, francês, árabe, alemão, coreano.",
+    "fr": "Disponible en 10 langues : anglais, chinois, espagnol, portugais, japonais, russe, français, arabe, allemand, coréen.",
+    "de": "Verfügbar in 10 Sprachen: Englisch, Chinesisch, Spanisch, Portugiesisch, Japanisch, Russisch, Französisch, Arabisch, Deutsch, Koreanisch.",
+    "ru": "Доступно на 10 языках: английский, китайский, испанский, португальский, японский, русский, французский, арабский, немецкий, корейский.",
+    "ja": "英語、中国語、スペイン語、ポルトガル語、日本語、ロシア語、フランス語、アラビア語、ドイツ語、韓国語の10言語に対応。",
+    "ko": "영어, 중국어, 스페인어, 포르투갈어, 일본어, 러시아어, 프랑스어, 아랍어, 독일어, 한국어 등 10개 언어로 제공됩니다.",
+    "ar": "متوفر بـ 10 لغات: الإنجليزية والصينية والإسبانية والبرتغالية واليابانية والروسية والفرنسية والعربية والألمانية والكورية."
+  },
+  "Tool Categories": {
+    "es": "Categorías de herramientas",
+    "pt": "Categorias de Ferramentas",
+    "fr": "Catégories d'outils",
+    "de": "Tool-Kategorien",
+    "ru": "Категории инструментов",
+    "ja": "ツールカテゴリ",
+    "ko": "도구 카테고리",
+    "ar": "فئات الأدوات"
+  },
+  "Find the right tool for your needs": {
+    "es": "Encuentre la herramienta adecuada para sus necesidades",
+    "pt": "Encontre a ferramenta certa para suas necessidades",
+    "fr": "Trouvez le bon outil pour vos besoins",
+    "de": "Finden Sie das richtige Tool für Ihre Bedürfnisse",
+    "ru": "Найдите подходящий инструмент для ваших нужд",
+    "ja": "ニーズに合ったツールを見つける",
+    "ko": "필요에 맞는 도구 찾기",
+    "ar": "اعثر على الأداة المناسبة لاحتياجاتك"
+  },
+  "Popular Tools": {
+    "es": "Herramientas populares",
+    "pt": "Ferramentas Populares",
+    "fr": "Outils populaires",
+    "de": "Beliebte Tools",
+    "ru": "Популярные инструменты",
+    "ja": "人気のツール",
+    "ko": "인기 도구",
+    "ar": "أدوات شائعة"
+  },
+  "Most used tools by our community": {
+    "es": "Herramientas más utilizadas por nuestra comunidad",
+    "pt": "Ferramentas mais usadas pela nossa comunidade",
+    "fr": "Les outils les plus utilisés par notre communauté",
+    "de": "Von unserer Community am häufigsten genutzte Tools",
+    "ru": "Самые используемые инструменты нашего сообщества",
+    "ja": "コミュニティで最も使用されているツール",
+    "ko": "커뮤니티에서 가장 많이 사용되는 도구",
+    "ar": "الأدوات الأكثر استخداما من قبل مجتمعنا"
+  },
+  "Ready to Get Started?": {
+    "es": "¿Listo para empezar?",
+    "pt": "Pronto para começar?",
+    "fr": "Prêt à commencer ?",
+    "de": "Bereit loszulegen?",
+    "ru": "Готовы начать?",
+    "ja": "始める準備はできましたか？",
+    "ko": "시작할 준비가 되셨나요?",
+    "ar": "مستعد للبدء؟"
+  },
+  "Start using our free tools today. No registration, no limits, just productivity.": {
+    "es": "Empiece a usar nuestras herramientas gratuitas hoy. Sin registro, sin límites, solo productividad.",
+    "pt": "Comece a usar nossas ferramentas gratuitas hoje. Sem registro, sem limites, apenas produtividade.",
+    "fr": "Commencez à utiliser nos outils gratuits dès aujourd'hui. Pas d'inscription, pas de limites, juste de la productivité.",
+    "de": "Beginnen Sie noch heute mit unseren kostenlosen Tools. Keine Registrierung, keine Limits, nur Produktivität.",
+    "ru": "Начните использовать наши бесплатные инструменты уже сегодня. Без регистрации, без ограничений, только продуктивность.",
+    "ja": "今すぐ無料ツールを使い始めましょう。登録なし、制限なし、生産性のみ。",
+    "ko": "오늘 바로 무료 도구를 사용해 보세요. 등록 없음, 제한 없음, 생산성 향상.",
+    "ar": "ابدأ في استخدام أدواتنا المجانية اليوم. لا تسجيل ، لا حدود ، مجرد إنتاجية."
+  },
+  "Start Now": {
+    "es": "Empezar ahora",
+    "pt": "Começar agora",
+    "fr": "Commencer maintenant",
+    "de": "Jetzt starten",
+    "ru": "Начать сейчас",
+    "ja": "今すぐ開始",
+    "ko": "지금 시작하기",
+    "ar": "ابدأ الآن"
+  },
+  "Related Tools": {
+    "es": "Herramientas relacionadas",
+    "pt": "Ferramentas Relacionadas",
+    "fr": "Outils associés",
+    "de": "Ähnliche Tools",
+    "ru": "Похожие инструменты",
+    "ja": "関連ツール",
+    "ko": "관련 도구",
+    "ar": "أدوات ذات صلة"
+  },
+  "Privacy Policy": {
+    "es": "Política de Privacidad",
+    "pt": "Política de Privacidade",
+    "fr": "Politique de confidentialité",
+    "de": "Datenschutzrichtlinie",
+    "ru": "Политика конфиденциальности",
+    "ja": "プライバシーポリシー",
+    "ko": "개인정보 처리방침",
+    "ar": "سياسة الخصوصية"
+  },
+  "Terms of Service": {
+    "es": "Términos de Servicio",
+    "pt": "Termos de Serviço",
+    "fr": "Conditions d'utilisation",
+    "de": "Nutzungsbedingungen",
+    "ru": "Условия использования",
+    "ja": "利用規約",
+    "ko": "이용 약관",
+    "ar": "شروط الخدمة"
+  },
+  "© 2024 ToolBox. All rights reserved.": {
+    "es": "© 2024 ToolBox. Todos los derechos reservados.",
+    "pt": "© 2024 ToolBox. Todos os direitos reservados.",
+    "fr": "© 2024 ToolBox. Tous droits réservés.",
+    "de": "© 2024 ToolBox. Alle Rechte vorbehalten.",
+    "ru": "© 2024 ToolBox. Все права защищены.",
+    "ja": "© 2024 ToolBox. 全著作権所有。",
+    "ko": "© 2024 ToolBox. 판권 소유.",
+    "ar": "© 2024 ToolBox. جميع الحقوق محفوظة."
+  },
+  "Chinese Converter": {
+    "es": "Convertidor chino",
+    "pt": "Conversor Chinês",
+    "fr": "Convertisseur chinois",
+    "de": "Chinesischer Konverter",
+    "ru": "Китайский конвертер",
+    "ja": "中国語コンバーター",
+    "ko": "중국어 변환기",
+    "ar": "محول صيني"
+  },
+  "Color Converter": {
+    "es": "Convertidor de color",
+    "pt": "Conversor de Cores",
+    "fr": "Convertisseur de couleurs",
+    "de": "Farbkonverter",
+    "ru": "Конвертер цветов",
+    "ja": "カラーコンバーター",
+    "ko": "색상 변환기",
+    "ar": "محول الألوان"
+  },
+  "JSON to CSV": {
+    "es": "JSON a CSV",
+    "pt": "JSON para CSV",
+    "fr": "JSON vers CSV",
+    "de": "JSON zu CSV",
+    "ru": "JSON в CSV",
+    "ja": "JSONからCSV",
+    "ko": "JSON CSV 변환",
+    "ar": "JSON إلى CSV"
+  },
+  "Unit Converter": {
+    "es": "Convertidor de unidades",
+    "pt": "Conversor de Unidades",
+    "fr": "Convertisseur d'unités",
+    "de": "Einheitenumrechner",
+    "ru": "Конвертер величин",
+    "ja": "単位変換",
+    "ko": "단위 변환기",
+    "ar": "محول الوحدات"
+  },
+  "Code Minifier": {
+    "es": "Minificador de código",
+    "pt": "Minificador de Código",
+    "fr": "Minificateur de code",
+    "de": "Code-Minifizierer",
+    "ru": "Минификатор кода",
+    "ja": "コード圧縮",
+    "ko": "코드 압축기",
+    "ar": "مصغر الكود"
+  },
+  "Color Picker": {
+    "es": "Selector de color",
+    "pt": "Seletor de Cores",
+    "fr": "Sélecteur de couleur",
+    "de": "Farbwähler",
+    "ru": "Выбор цвета",
+    "ja": "カラーピッカー",
+    "ko": "색상 선택기",
+    "ar": "منتقي الألوان"
+  },
+  "HTML Preview": {
+    "es": "Vista previa HTML",
+    "pt": "Pré-visualização HTML",
+    "fr": "Aperçu HTML",
+    "de": "HTML-Vorschau",
+    "ru": "HTML предпросмотр",
+    "ja": "HTMLプレビュー",
+    "ko": "HTML 미리보기",
+    "ar": "معاينة HTML"
+  },
+  "IP Lookup": {
+    "es": "Búsqueda de IP",
+    "pt": "Consulta de IP",
+    "fr": "Recherche IP",
+    "de": "IP-Suche",
+    "ru": "Поиск IP",
+    "ja": "IP検索",
+    "ko": "IP 조회",
+    "ar": "البحث عن IP"
+  },
+  "YAML/JSON Converter": {
+    "es": "Convertidor YAML/JSON",
+    "pt": "Conversor YAML/JSON",
+    "fr": "Convertisseur YAML/JSON",
+    "de": "YAML/JSON-Konverter",
+    "ru": "Конвертер YAML/JSON",
+    "ja": "YAML/JSON変換",
+    "ko": "YAML/JSON 변환기",
+    "ar": "محول YAML/JSON"
+  },
+  "Date Calculator": {
+    "es": "Calculadora de fechas",
+    "pt": "Calculadora de Datas",
+    "fr": "Calculateur de date",
+    "de": "Datumsrechner",
+    "ru": "Калькулятор дат",
+    "ja": "日付計算機",
+    "ko": "날짜 계산기",
+    "ar": "حاسبة التاريخ"
+  },
+  "Text Encryption": {
+    "es": "Encriptación de texto",
+    "pt": "Criptografia de Texto",
+    "fr": "Chiffrement de texte",
+    "de": "Textverschlüsselung",
+    "ru": "Шифрование текста",
+    "ja": "テキスト暗号化",
+    "ko": "텍스트 암호화",
+    "ar": "تشفير النص"
+  },
+  "JSON to TypeScript": {
+    "es": "JSON a TypeScript",
+    "pt": "JSON para TypeScript",
+    "fr": "JSON vers TypeScript",
+    "de": "JSON zu TypeScript",
+    "ru": "JSON в TypeScript",
+    "ja": "JSONからTypeScript",
+    "ko": "JSON TypeScript 변환",
+    "ar": "JSON إلى TypeScript"
+  },
+  "JSON Formatter": {
+    "es": "Formateador JSON",
+    "pt": "Formatador JSON",
+    "fr": "Formateur JSON",
+    "de": "JSON-Formatierer",
+    "ru": "JSON форматировщик",
+    "ja": "JSONフォーマッター",
+    "ko": "JSON 포맷터",
+    "ar": "منسق JSON"
+  },
+  "Base64 Encoder/Decoder": {
+    "es": "Codificador/Decodificador Base64",
+    "pt": "Codificador/Decodificador Base64",
+    "fr": "Encodeur/Décodeur Base64",
+    "de": "Base64 Encoder/Decoder",
+    "ru": "Base64 Кодировщик/Декодировщик",
+    "ja": "Base64エンコーダー/デコーダー",
+    "ko": "Base64 인코더/디코더",
+    "ar": "مشفر/فك تشفير Base64"
+  },
+  "UUID Generator": {
+    "es": "Generador de UUID",
+    "pt": "Gerador de UUID",
+    "fr": "Générateur UUID",
+    "de": "UUID-Generator",
+    "ru": "Генератор UUID",
+    "ja": "UUIDジェネレーター",
+    "ko": "UUID 생성기",
+    "ar": "مولد UUID"
+  },
+  "Password Generator": {
+    "es": "Generador de contraseñas",
+    "pt": "Gerador de Senhas",
+    "fr": "Générateur de mots de passe",
+    "de": "Passwort-Generator",
+    "ru": "Генератор паролей",
+    "ja": "パスワード生成",
+    "ko": "비밀번호 생성기",
+    "ar": "مولد كلمات المرور"
+  },
+  "QR Code Generator": {
+    "es": "Generador de código QR",
+    "pt": "Gerador de QR Code",
+    "fr": "Générateur de QR Code",
+    "de": "QR-Code-Generator",
+    "ru": "Генератор QR-кода",
+    "ja": "QRコード生成",
+    "ko": "QR 코드 생성기",
+    "ar": "مولد رمز الاستجابة السريعة"
+  },
+  "Word Counter": {
+    "es": "Contador de palabras",
+    "pt": "Contador de Palavras",
+    "fr": "Compteur de mots",
+    "de": "Wortzähler",
+    "ru": "Счетчик слов",
+    "ja": "文字数カウント",
+    "ko": "단어 수 계산기",
+    "ar": "عداد الكلمات"
+  },
+  "Diff Checker": {
+    "es": "Comparador de texto",
+    "pt": "Verificador de Diferenças",
+    "fr": "Comparateur de texte",
+    "de": "Unterschiedsprüfer",
+    "ru": "Сравнение текста",
+    "ja": "差分チェッカー",
+    "ko": "텍스트 비교",
+    "ar": "مدقق الاختلافات"
+  },
+  "Case Converter": {
+    "es": "Convertidor de mayúsculas/minúsculas",
+    "pt": "Conversor de Maiúsculas/Minúsculas",
+    "fr": "Convertisseur de casse",
+    "de": "Groß-/Kleinschreibung-Konverter",
+    "ru": "Конвертер регистра",
+    "ja": "大文字・小文字変換",
+    "ko": "대소문자 변환기",
+    "ar": "محول الحالة"
+  },
+  "Text to Slug": {
+    "es": "Texto a Slug",
+    "pt": "Texto para Slug",
+    "fr": "Texte en Slug",
+    "de": "Text zu Slug",
+    "ru": "Текст в Slug",
+    "ja": "テキストからスラッグ",
+    "ko": "텍스트 슬러그 변환",
+    "ar": "نص إلى Slug"
+  },
+  "Pinyin Converter": {
+    "es": "Convertidor Pinyin",
+    "pt": "Conversor Pinyin",
+    "fr": "Convertisseur Pinyin",
+    "de": "Pinyin-Konverter",
+    "ru": "Конвертер пиньинь",
+    "ja": "ピンイン変換",
+    "ko": "병음 변환기",
+    "ar": "محول بينيين"
+  },
+  "Text Reverser": {
+    "es": "Inversor de texto",
+    "pt": "Inversor de Texto",
+    "fr": "Inverseur de texte",
+    "de": "Textumkehrer",
+    "ru": "Реверс текста",
+    "ja": "テキスト反転",
+    "ko": "텍스트 뒤집기",
+    "ar": "عكس النص"
+  },
+  "Line Counter": {
+    "es": "Contador de líneas",
+    "pt": "Contador de Linhas",
+    "fr": "Compteur de lignes",
+    "de": "Zeilenzähler",
+    "ru": "Счетчик строк",
+    "ja": "行数カウント",
+    "ko": "줄 수 계산기",
+    "ar": "عداد الخطوط"
+  },
+  "Text Deduplicator": {
+    "es": "Eliminador de duplicados",
+    "pt": "Removedor de Duplicatas",
+    "fr": "Dédubionneur de texte",
+    "de": "Text-Entduplizierer",
+    "ru": "Удаление дубликатов",
+    "ja": "重複行削除",
+    "ko": "텍스트 중복 제거",
+    "ar": "مزيل التكرار"
+  },
+  "Byte Counter": {
+    "es": "Contador de bytes",
+    "pt": "Contador de Bytes",
+    "fr": "Compteur d'octets",
+    "de": "Byte-Zähler",
+    "ru": "Счетчик байтов",
+    "ja": "バイト数カウント",
+    "ko": "바이트 계산기",
+    "ar": "عداد البايت"
+  },
+  "Text Statistics": {
+    "es": "Estadísticas de texto",
+    "pt": "Estatísticas de Texto",
+    "fr": "Statistiques de texte",
+    "de": "Textstatistiken",
+    "ru": "Статистика текста",
+    "ja": "テキスト統計",
+    "ko": "텍스트 통계",
+    "ar": "إحصائيات النص"
+  },
+  "Text Similarity Compare": {
+    "es": "Comparar similitud de texto",
+    "pt": "Comparar Similaridade de Texto",
+    "fr": "Comparer la similarité de texte",
+    "de": "Textähnlichkeitsvergleich",
+    "ru": "Сравнение сходства текста",
+    "ja": "テキスト類似度比較",
+    "ko": "텍스트 유사도 비교",
+    "ar": "مقارنة تشابه النص"
+  },
+  "Text to Speech": {
+    "es": "Texto a voz",
+    "pt": "Texto para Fala",
+    "fr": "Texte à la parole",
+    "de": "Text-zu-Sprache",
+    "ru": "Текст в речь",
+    "ja": "テキスト読み上げ",
+    "ko": "텍스트 음성 변환",
+    "ar": "تحويل النص إلى كلام"
+  },
+  "Text Wrapper": {
+    "es": "Envoltura de texto",
+    "pt": "Quebra de Linha de Texto",
+    "fr": "Enveloppeur de texte",
+    "de": "Textumbruch",
+    "ru": "Перенос текста",
+    "ja": "テキスト折り返し",
+    "ko": "텍스트 줄바꿈",
+    "ar": "تغليف النص"
+  },
+  "Text Sorter": {
+    "es": "Ordenador de texto",
+    "pt": "Ordenador de Texto",
+    "fr": "Trieur de texte",
+    "de": "Textsortierer",
+    "ru": "Сортировка текста",
+    "ja": "テキストソート",
+    "ko": "텍스트 정렬기",
+    "ar": "فرز النص"
+  },
+  "Text Extractor": {
+    "es": "Extractor de texto",
+    "pt": "Extrator de Texto",
+    "fr": "Extracteur de texte",
+    "de": "Textextraktor",
+    "ru": "Извлечение текста",
+    "ja": "テキスト抽出",
+    "ko": "텍스트 추출기",
+    "ar": "مستخرج النص"
+  },
+  "Emoji Picker": {
+    "es": "Selector de emojis",
+    "pt": "Seletor de Emojis",
+    "fr": "Sélecteur d'emojis",
+    "de": "Emoji-Wähler",
+    "ru": "Выбор эмодзи",
+    "ja": "絵文字ピッカー",
+    "ko": "이모티콘 선택기",
+    "ar": "منتقي الرموز التعبيرية"
+  },
+  "Text to ASCII Art": {
+    "es": "Texto a arte ASCII",
+    "pt": "Texto para Arte ASCII",
+    "fr": "Texte en art ASCII",
+    "de": "Text zu ASCII-Kunst",
+    "ru": "Текст в ASCII-арт",
+    "ja": "テキストからASCIIアート",
+    "ko": "텍스트 ASCII 아트 변환",
+    "ar": "نص إلى فن ASCII"
+  },
+  "Text Diff & Patch": {
+    "es": "Diferencias y parches de texto",
+    "pt": "Diferenças e Patches de Texto",
+    "fr": "Différence et patch de texte",
+    "de": "Text Diff & Patch",
+    "ru": "Сравнение и патч текста",
+    "ja": "テキスト差分とパッチ",
+    "ko": "텍스트 차이 및 패치",
+    "ar": "اختلاف النص والتصحيح"
+  },
+  "Text Case Counter": {
+    "es": "Contador de mayúsculas/minúsculas",
+    "pt": "Contador de Maiúsculas/Minúsculas",
+    "fr": "Compteur de casse",
+    "de": "Groß-/Kleinschreibungszähler",
+    "ru": "Счетчик регистра",
+    "ja": "大文字・小文字カウント",
+    "ko": "대소문자 계산기",
+    "ar": "عداد حالة النص"
+  },
+  "Reading Time Calculator": {
+    "es": "Calculadora de tiempo de lectura",
+    "pt": "Calculadora de Tempo de Leitura",
+    "fr": "Calculateur de temps de lecture",
+    "de": "Lesezeit-Rechner",
+    "ru": "Калькулятор времени чтения",
+    "ja": "読書時間計算機",
+    "ko": "읽기 시간 계산기",
+    "ar": "حاسبة وقت القراءة"
+  },
+  "Text Cleaner": {
+    "es": "Limpiador de texto",
+    "pt": "Limpador de Texto",
+    "fr": "Nettoyeur de texte",
+    "de": "Textreiniger",
+    "ru": "Очистка текста",
+    "ja": "テキストクリーナー",
+    "ko": "텍스트 클리너",
+    "ar": "منظف النص"
+  },
+  "List Randomizer": {
+    "es": "Aleatorizador de listas",
+    "pt": "Randomizador de Listas",
+    "fr": "Générateur de liste aléatoire",
+    "de": "Listen-Zufallsgenerator",
+    "ru": "Рандомизатор списка",
+    "ja": "リストランダム化",
+    "ko": "목록 무작위 섞기",
+    "ar": "عشوائي القائمة"
+  },
+  "HTML to Text": {
+    "es": "HTML a texto",
+    "pt": "HTML para Texto",
+    "fr": "HTML en texte",
+    "de": "HTML zu Text",
+    "ru": "HTML в текст",
+    "ja": "HTMLからテキスト",
+    "ko": "HTML 텍스트 변환",
+    "ar": "HTML إلى نص"
+  },
+  "Text to NATO": {
+    "es": "Texto a NATO",
+    "pt": "Texto para OTAN",
+    "fr": "Texte en OTAN",
+    "de": "Text zu NATO",
+    "ru": "Текст в NATO",
+    "ja": "テキストからNATOフォネティック",
+    "ko": "텍스트 NATO 변환",
+    "ar": "نص إلى الناتو"
+  },
+  "Text Template": {
+    "es": "Plantilla de texto",
+    "pt": "Modelo de Texto",
+    "fr": "Modèle de texte",
+    "de": "Textvorlage",
+    "ru": "Шаблон текста",
+    "ja": "テキストテンプレート",
+    "ko": "텍스트 템플릿",
+    "ar": "قالب النص"
+  },
+  "Character Frequency Analyzer": {
+    "es": "Analizador de frecuencia de caracteres",
+    "pt": "Analisador de Frequência de Caracteres",
+    "fr": "Analyseur de fréquence de caractères",
+    "de": "Zeichenhäufigkeitsanalysator",
+    "ru": "Анализ частоты символов",
+    "ja": "文字出現頻度分析",
+    "ko": "문자 빈도 분석기",
+    "ar": "محلل تردد الأحرف"
+  },
+  "JWT Decoder": {
+    "es": "Decodificador JWT",
+    "pt": "Decodificador JWT",
+    "fr": "Décodeur JWT",
+    "de": "JWT-Decoder",
+    "ru": "Декодер JWT",
+    "ja": "JWTデコーダー",
+    "ko": "JWT 디코더",
+    "ar": "فك تشفير JWT"
+  },
+  "HTML Encoder/Decoder": {
+    "es": "Codificador/Decodificador HTML",
+    "pt": "Codificador/Decodificador HTML",
+    "fr": "Encodeur/Décodeur HTML",
+    "de": "HTML Encoder/Decoder",
+    "ru": "HTML кодировщик/декодировщик",
+    "ja": "HTMLエンコーダー/デコーダー",
+    "ko": "HTML 인코더/디코더",
+    "ar": "مشفر/فك تشفير HTML"
+  },
+  "XML Formatter": {
+    "es": "Formateador XML",
+    "pt": "Formatador XML",
+    "fr": "Formateur XML",
+    "de": "XML-Formatierer",
+    "ru": "XML форматировщик",
+    "ja": "XMLフォーマッター",
+    "ko": "XML 포맷터",
+    "ar": "منسق XML"
+  },
+  "Unicode Converter": {
+    "es": "Convertidor Unicode",
+    "pt": "Conversor Unicode",
+    "fr": "Convertisseur Unicode",
+    "de": "Unicode-Konverter",
+    "ru": "Конвертер Unicode",
+    "ja": "Unicode変換",
+    "ko": "유니코드 변환기",
+    "ar": "محول يونيكود"
+  },
+  "Color Palette Generator": {
+    "es": "Generador de paletas de colores",
+    "pt": "Gerador de Paleta de Cores",
+    "fr": "Générateur de palettes de couleurs",
+    "de": "Farbpaletten-Generator",
+    "ru": "Генератор цветовой палитры",
+    "ja": "カラーパレット生成",
+    "ko": "색상 팔레트 생성기",
+    "ar": "مولد لوحة الألوان"
+  },
+  "Markdown Table Generator": {
+    "es": "Generador de tablas Markdown",
+    "pt": "Gerador de Tabelas Markdown",
+    "fr": "Générateur de tableaux Markdown",
+    "de": "Markdown-Tabellen-Generator",
+    "ru": "Генератор таблиц Markdown",
+    "ja": "Markdownテーブル生成",
+    "ko": "마크다운 테이블 생성기",
+    "ar": "مولد جداول Markdown"
+  },
+  "Meta Tag Generator": {
+    "es": "Generador de etiquetas Meta",
+    "pt": "Gerador de Meta Tags",
+    "fr": "Générateur de balises Meta",
+    "de": "Meta-Tag-Generator",
+    "ru": "Генератор мета-тегов",
+    "ja": "メタタグ生成",
+    "ko": "메타 태그 생성기",
+    "ar": "مولد علامات الميتا"
+  },
+  "Robots.txt Generator": {
+    "es": "Generador de robots.txt",
+    "pt": "Gerador de robots.txt",
+    "fr": "Générateur de robots.txt",
+    "de": "Robots.txt-Generator",
+    "ru": "Генератор robots.txt",
+    "ja": "robots.txt生成",
+    "ko": "robots.txt 생성기",
+    "ar": "مولد robots.txt"
+  },
+  "CSS Grid Generator": {
+    "es": "Generador de CSS Grid",
+    "pt": "Gerador de CSS Grid",
+    "fr": "Générateur de grille CSS",
+    "de": "CSS-Grid-Generator",
+    "ru": "Генератор CSS Grid",
+    "ja": "CSS Grid生成",
+    "ko": "CSS 그리드 생성기",
+    "ar": "مولد شبكة CSS"
+  },
+  "CSS Flexbox Generator": {
+    "es": "Generador de CSS Flexbox",
+    "pt": "Gerador de CSS Flexbox",
+    "fr": "Générateur de Flexbox CSS",
+    "de": "CSS-Flexbox-Generator",
+    "ru": "Генератор CSS Flexbox",
+    "ja": "CSS Flexbox生成",
+    "ko": "CSS 플렉스박스 생성기",
+    "ar": "مولد CSS Flexbox"
+  },
+  "Box Shadow Generator": {
+    "es": "Generador de sombras",
+    "pt": "Gerador de Sombra de Caixa",
+    "fr": "Générateur d'ombres",
+    "de": "Box-Shadow-Generator",
+    "ru": "Генератор теней",
+    "ja": "ボックスシャドウ生成",
+    "ko": "그림자 생성기",
+    "ar": "مولد ظل الصندوق"
+  },
+  "Border Radius Generator": {
+    "es": "Generador de bordes redondeados",
+    "pt": "Gerador de Raio de Borda",
+    "fr": "Générateur de rayon de bordure",
+    "de": "Border-Radius-Generator",
+    "ru": "Генератор радиуса границ",
+    "ja": "ボーダー半径生成",
+    "ko": "테두리 반경 생성기",
+    "ar": "مولد نصف قطر الحدود"
+  },
+  "Color Shades Generator": {
+    "es": "Generador de tonos de color",
+    "pt": "Gerador de Tons de Cor",
+    "fr": "Générateur de nuances de couleurs",
+    "de": "Farbschattierungen-Generator",
+    "ru": "Генератор оттенков цвета",
+    "ja": "色合い生成",
+    "ko": "색상 음영 생성기",
+    "ar": "مولد درجات الألوان"
+  },
+  "CSS Gradient Text": {
+    "es": "Texto degradado CSS",
+    "pt": "Texto Gradiente CSS",
+    "fr": "Texte dégradé CSS",
+    "de": "CSS-Farbverlaufstext",
+    "ru": "Градиентный текст CSS",
+    "ja": "CSSグラデーションテキスト",
+    "ko": "CSS 그라디언트 텍스트",
+    "ar": "نص متدرج CSS"
+  },
+  "Sitemap Generator": {
+    "es": "Generador de mapas del sitio",
+    "pt": "Gerador de Sitemap",
+    "fr": "Générateur de sitemap",
+    "de": "Sitemap-Generator",
+    "ru": "Генератор карты сайта",
+    "ja": "サイトマップ生成",
+    "ko": "사이트맵 생성기",
+    "ar": "مولد خريطة الموقع"
+  },
+  "CSS Filter Generator": {
+    "es": "Generador de filtros CSS",
+    "pt": "Gerador de Filtros CSS",
+    "fr": "Générateur de filtres CSS",
+    "de": "CSS-Filter-Generator",
+    "ru": "Генератор CSS фильтров",
+    "ja": "CSSフィルター生成",
+    "ko": "CSS 필터 생성기",
+    "ar": "مولد مرشحات CSS"
+  },
+  "CSS Clip Path Generator": {
+    "es": "Generador de Clip Path CSS",
+    "pt": "Gerador de Clip Path CSS",
+    "fr": "Générateur de chemin de détourage CSS",
+    "de": "CSS-Clip-Path-Generator",
+    "ru": "Генератор CSS Clip Path",
+    "ja": "CSSクリップパス生成",
+    "ko": "CSS 클립 패스 생성기",
+    "ar": "مولد مسار مقطع CSS"
+  },
+  "CSS Animation Generator": {
+    "es": "Generador de animaciones CSS",
+    "pt": "Gerador de Animações CSS",
+    "fr": "Générateur d'animations CSS",
+    "de": "CSS-Animations-Generator",
+    "ru": "Генератор CSS анимаций",
+    "ja": "CSSアニメーション生成",
+    "ko": "CSS 애니메이션 생성기",
+    "ar": "مولد رسوم متحركة CSS"
+  },
+  "Privacy Policy Generator": {
+    "es": "Generador de políticas de privacidad",
+    "pt": "Gerador de Política de Privacidade",
+    "fr": "Générateur de politique de confidentialité",
+    "de": "Datenschutzrichtlinien-Generator",
+    "ru": "Генератор политики конфиденциальности",
+    "ja": "プライバシーポリシー生成",
+    "ko": "개인정보 처리방침 생성기",
+    "ar": "مولد سياسة الخصوصية"
+  },
+  "Terms of Service Generator": {
+    "es": "Generador de términos de servicio",
+    "pt": "Gerador de Termos de Serviço",
+    "fr": "Générateur de conditions d'utilisation",
+    "de": "Nutzungsbedingungen-Generator",
+    "ru": "Генератор условий использования",
+    "ja": "利用規約生成",
+    "ko": "이용약관 생성기",
+    "ar": "مولد شروط الخدمة"
+  },
+  "Cookie Policy Generator": {
+    "es": "Generador de políticas de cookies",
+    "pt": "Gerador de Política de Cookies",
+    "fr": "Générateur de politique de cookies",
+    "de": "Cookie-Richtlinien-Generator",
+    "ru": "Генератор политики использования файлов cookie",
+    "ja": "クッキーポリシー生成",
+    "ko": "쿠키 정책 생성기",
+    "ar": "مولد سياسة ملفات تعريف الارتباط"
+  },
+  "Open Graph Generator": {
+    "es": "Generador Open Graph",
+    "pt": "Gerador Open Graph",
+    "fr": "Générateur Open Graph",
+    "de": "Open-Graph-Generator",
+    "ru": "Генератор Open Graph",
+    "ja": "Open Graph生成",
+    "ko": "오픈 그래프 생성기",
+    "ar": "مولد الرسم البياني المفتوح"
+  },
+  "Twitter Card Generator": {
+    "es": "Generador de Twitter Cards",
+    "pt": "Gerador de Twitter Cards",
+    "fr": "Générateur de cartes Twitter",
+    "de": "Twitter-Card-Generator",
+    "ru": "Генератор Twitter Card",
+    "ja": "Twitterカード生成",
+    "ko": "트위터 카드 생성기",
+    "ar": "مولد بطاقة تويتر"
+  },
+  "Timestamp Converter": {
+    "es": "Convertidor de marcas de tiempo",
+    "pt": "Conversor de Timestamp",
+    "fr": "Convertisseur d'horodatage",
+    "de": "Zeitstempel-Konverter",
+    "ru": "Конвертер временных меток",
+    "ja": "タイムスタンプ変換",
+    "ko": "타임스탬프 변환기",
+    "ar": "محول الطابع الزمني"
+  },
+  "expandAll": {
+    "es": "Expandir todo",
+    "pt": "Expandir Tudo",
+    "fr": "Tout développer",
+    "de": "Alles ausklappen",
+    "ru": "Развернуть все",
+    "ja": "すべて展開",
+    "ko": "모두 펼치기",
+    "ar": "توسيع الكل"
+  },
+  "collapseAll": {
+    "es": "Contraer todo",
+    "pt": "Recolher Tudo",
+    "fr": "Tout réduire",
+    "de": "Alles einklappen",
+    "ru": "Свернуть все",
+    "ja": "すべて折りたたむ",
+    "ko": "모두 접기",
+    "ar": "طي الكل"
+  }
+}

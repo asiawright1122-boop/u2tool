@@ -7,6 +7,7 @@
  */
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { FAQItem, generateFAQJsonLd, faqJsonLdToString } from '@/lib/faq';
 
 interface ToolFAQProps {
@@ -47,9 +48,8 @@ function FAQItemComponent({
         >
           <span className="font-medium text-white pr-4">{faq.question}</span>
           <svg
-            className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200 ${
-              isExpanded ? 'rotate-180' : ''
-            }`}
+            className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''
+              }`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -63,13 +63,12 @@ function FAQItemComponent({
           </svg>
         </button>
       </h3>
-      
+
       {/* 答案内容 */}
       <div
         id={`faq-answer-${index}`}
-        className={`overflow-hidden transition-all duration-200 ${
-          isExpanded ? 'max-h-96' : 'max-h-0'
-        }`}
+        className={`overflow-hidden transition-all duration-200 ${isExpanded ? 'max-h-96' : 'max-h-0'
+          }`}
         role="region"
         aria-labelledby={`faq-question-${index}`}
       >
@@ -91,6 +90,8 @@ export default function ToolFAQ({
   defaultExpanded = false,
   className = '',
 }: ToolFAQProps) {
+  const tg = useTranslations('tools');
+
   // 管理每个 FAQ 项目的展开状态
   const [expandedItems, setExpandedItems] = useState<Set<number>>(
     defaultExpanded ? new Set(faqs.map((_, i) => i)) : new Set([0]) // 默认展开第一个
@@ -143,7 +144,7 @@ export default function ToolFAQ({
           onClick={toggleAll}
           className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
         >
-          {expandedItems.size === faqs.length ? 'Collapse All' : 'Expand All'}
+          {expandedItems.size === faqs.length ? tg('collapseAll') : tg('expandAll')}
         </button>
       </div>
 

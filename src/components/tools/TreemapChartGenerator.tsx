@@ -148,7 +148,7 @@ export default function TreemapChartGenerator() {
   // 生成 ECharts 配置
   const getChartOption = useCallback((): EChartsOption => {
     const colors = colorThemes[colorTheme];
-    const textColor = '#e5e7eb';
+    const _textColor = '#e5e7eb'; // 保留以备将来使用
 
     // 转换数据格式
     const convertData = (nodes: TreemapNode[]): object[] => {

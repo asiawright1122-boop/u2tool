@@ -3,9 +3,9 @@ import fs from 'fs';
 import path from 'path';
 import * as fc from 'fast-check';
 
-// Load all translation files
+// Load all translation files - all 10 supported languages
 const messagesDir = path.join(process.cwd(), 'src/messages');
-const languages = ['en', 'zh', 'es', 'ja', 'pt'] as const;
+const languages = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'] as const;
 type Language = typeof languages[number];
 
 function loadTranslations(lang: string): Record<string, unknown> {

@@ -269,10 +269,7 @@ const TOOL_COMPONENTS_MAP: Record<string, React.ComponentType> = {
 export default function ToolWrapper({ slug }: { slug: string }) {
   const ToolComponent = TOOL_COMPONENTS_MAP[slug];
 
-  console.log('ToolWrapper: slug received:', slug);
-  console.log('ToolWrapper: component found?', !!ToolComponent);
   if (!ToolComponent) {
-    console.log('ToolWrapper: Valid keys:', Object.keys(TOOL_COMPONENTS_MAP).filter(k => k.includes('chart')));
     return <div className="text-center text-gray-300">Tool not found: {slug}</div>;
   }
 

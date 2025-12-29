@@ -3,7 +3,6 @@
  * 为 hash-generator, timestamp-converter, color-converter, url-encoder, jwt-decoder 提供 FAQ
  */
 
-import type { FAQItem } from './faq';
 import type { ToolSpecificFAQ } from './tool-specific-faqs';
 
 // 额外 5 个热门工具的 FAQ 配置

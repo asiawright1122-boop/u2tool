@@ -20,8 +20,8 @@ const colorThemes = {
   forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#1b4332'],
 };
 
-// 线条样式
-const lineStyles = {
+// 线条样式（保留以备将来使用）
+const _lineStyles = {
   solid: 'solid',
   dashed: 'dashed',
   dotted: 'dotted',

@@ -218,7 +218,7 @@ describe('Structured Data - Property Tests', () => {
       });
       const faq = generateFAQJsonLd([{ question: 'Q?', answer: 'A' }]);
 
-      const str = jsonLdToString([app, faq] as any);
+      const str = jsonLdToString([app, faq] as Parameters<typeof jsonLdToString>[0]);
       expect(typeof str).toBe('string');
       const parsed = JSON.parse(str);
       expect(Array.isArray(parsed)).toBe(true);

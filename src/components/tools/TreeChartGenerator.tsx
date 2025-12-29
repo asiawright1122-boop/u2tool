@@ -61,8 +61,8 @@ export default function TreeChartGenerator() {
     }, [t, isInitialized, baseId]);
 
     const buildTree = useCallback((nodeList: TreeNode[]) => {
-        const nodeMap = new Map<string, any>();
-        let root = null;
+        const nodeMap = new Map<string, { name: string; value?: number; children: { name: string; value?: number; children: unknown[] }[] }>();
+        let root: { name: string; value?: number; children: unknown[] } | null = null;
 
         // Create map of nodes
         nodeList.forEach(node => {
@@ -178,7 +178,7 @@ export default function TreeChartGenerator() {
         setNodes(nodes.filter(n => !idsToDelete.has(n.id)));
     };
 
-    const updateNode = (id: string, field: keyof TreeNode, value: any) => {
+    const updateNode = (id: string, field: keyof TreeNode, value: string | number | null) => {
         setNodes(nodes.map(n => n.id === id ? { ...n, [field]: value } : n));
     };
 
@@ -266,7 +266,7 @@ export default function TreeChartGenerator() {
                                         <label className="block text-sm font-medium mb-1">{t('orientation')}</label>
                                         <select
                                             value={orient}
-                                            onChange={(e) => setOrient(e.target.value as any)}
+                                            onChange={(e) => setOrient(e.target.value as 'LR' | 'RL' | 'TB' | 'BT')}
                                             className="tool-input"
                                         >
                                             <option value="LR">{t('orientLR')}</option>

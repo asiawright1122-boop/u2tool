@@ -98,8 +98,8 @@ export default function BubbleChartGenerator() {
             },
             tooltip: {
                 trigger: 'item',
-                formatter: (params: any) => {
-                    const { data, seriesName, name } = params;
+                formatter: (params: { data: [number, number, number, string, string?]; seriesName: string }) => {
+                    const { data, seriesName } = params;
                     // data is [x, y, r, id, name]
                     const label = data[4] ? `${data[4]}<br/>` : '';
                     return `${seriesName}<br/>${label}X: ${data[0]}<br/>Y: ${data[1]}<br/>Size: ${data[2]}`;
@@ -139,7 +139,7 @@ export default function BubbleChartGenerator() {
                 name: s.name,
                 type: 'scatter',
                 data: s.data.map(p => [p.x, p.y, p.r, p.id, p.name]),
-                symbolSize: (data: any[]) => data[2], // Use radius as size
+                symbolSize: (data: number[]) => data[2], // Use radius as size
                 itemStyle: {
                     shadowBlur: 10,
                     shadowColor: 'rgba(25, 100, 150, 0.5)',
@@ -183,7 +183,7 @@ export default function BubbleChartGenerator() {
         }
     };
 
-    const updatePoint = (seriesIndex: number, pointId: string, field: keyof BubblePoint, value: any) => {
+    const updatePoint = (seriesIndex: number, pointId: string, field: keyof BubblePoint, value: string | number) => {
         const newSeries = [...series];
         newSeries[seriesIndex].data = newSeries[seriesIndex].data.map(p =>
             p.id === pointId ? { ...p, [field]: value } : p

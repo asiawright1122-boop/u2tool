@@ -52,7 +52,7 @@
       },
       "i18n": {
         "title": "Multi-Language",
-        "desc": "Available in 5 languages: English, Chinese, Spanish, Portuguese, Japanese."
+        "desc": "Available in 10 languages: English, Chinese, Spanish, Portuguese, Japanese, Russian, French, Arabic, German, Korean."
       }
     },
     "categories": "Tool Categories",
@@ -4473,6 +4473,9 @@
       "themeOcean": "Ocean",
       "themeSunset": "Sunset",
       "themeForest": "Forest",
+      "categoryA": "Category A",
+      "categoryB": "Category B",
+      "categoryC": "Category C",
       "sampleData": {
         "node1": "Node A",
         "node2": "Node B",
@@ -4486,9 +4489,6 @@
         "tip4": "Set node sizes",
         "tip5": "Export as PNG or SVG"
       },
-      "categoryA": "Category A",
-      "categoryB": "Category B",
-      "categoryC": "Category C",
       "node": "Node"
     },
     "calendar-heatmap-generator": {

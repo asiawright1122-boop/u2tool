@@ -69,8 +69,8 @@ export default function HeatmapChartGenerator() {
 
   const chartRef = useRef<ReactECharts>(null);
 
-  // 生成唯一 ID
-  const generateId = useCallback(() => {
+  // 生成唯一 ID（保留以备将来使用）
+  const _generateId = useCallback(() => {
     const newId = `${baseId}-${idCounter}`;
     setIdCounter(prev => prev + 1);
     return newId;
