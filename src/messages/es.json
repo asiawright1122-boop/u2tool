@@ -7080,10 +7080,34 @@
       "content": "Si tiene alguna pregunta sobre estos Términos de servicio, comuníquese con nosotros."
     }
   },
+  "about": {
+    "title": "Acerca de U2Tool",
+    "intro": "U2Tool es una colección completa de herramientas en línea gratuitas diseñadas para desarrolladores, diseñadores y usuarios cotidianos. Nuestra misión es proporcionar utilidades rápidas, seguras y fáciles de usar que se ejecutan completamente en su navegador.",
+    "mission": {
+      "title": "Nuestra Misión",
+      "content": "Creemos que las herramientas esenciales para desarrolladores deben ser gratuitas y accesibles para todos. U2Tool fue creado para proporcionar una solución integral para tareas comunes como codificación, formateo, generación y conversión de datos sin requerir instalación de software ni registro de cuenta."
+    },
+    "features": {
+      "title": "Características Principales",
+      "free": "100% Gratis - Todas las herramientas son completamente gratuitas sin costos ocultos",
+      "privacy": "Privacidad Primero - Todo el procesamiento ocurre en su navegador, sus datos nunca salen de su dispositivo",
+      "fast": "Ultra Rápido - Sin viajes al servidor significa resultados instantáneos",
+      "multilingual": "Multilingüe - Disponible en 10 idiomas para servir a usuarios de todo el mundo"
+    },
+    "technology": {
+      "title": "Tecnología",
+      "content": "U2Tool está construido con tecnologías web modernas incluyendo Next.js, React y TypeScript. Priorizamos el rendimiento, la accesibilidad y la experiencia del usuario en todo lo que construimos."
+    },
+    "contact": {
+      "title": "Contáctenos",
+      "content": "¿Tiene preguntas, sugerencias o comentarios? Nos encantaría saber de usted. Comuníquese con nosotros a través de nuestros canales de contacto."
+    }
+  },
   "footer": {
     "copyright": "© 2024 Caja de herramientas. Reservados todos los derechos.",
     "privacy": "política de privacidad",
-    "terms": "Términos de servicio"
+    "terms": "Términos de servicio",
+    "about": "Acerca de"
   },
   "errors": {
     "notFound": {

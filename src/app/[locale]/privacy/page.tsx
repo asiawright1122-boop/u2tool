@@ -1,48 +1,55 @@
-'use client';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { SEO_CONFIG, generateAlternates, generateOgImageUrl } from '@/lib/seo';
+import PrivacyPageClient from './PrivacyPageClient';
 
-import { useTranslations } from 'next-intl';
+/**
+ * 生成 Privacy 页面的 SEO 元数据
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'privacy' });
+  
+  const title = t('title');
+  const description = t('intro');
+  
+  return {
+    title,
+    description,
+    alternates: generateAlternates(locale, '/privacy'),
+    openGraph: {
+      title: `${title} | ${SEO_CONFIG.siteName}`,
+      description,
+      url: `/${locale}/privacy`,
+      siteName: SEO_CONFIG.siteName,
+      locale,
+      type: 'website',
+      images: [
+        {
+          url: generateOgImageUrl({ title, locale }),
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | ${SEO_CONFIG.siteName}`,
+      description,
+      images: [generateOgImageUrl({ title, locale })],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 export default function PrivacyPage() {
-  const t = useTranslations('privacy');
-
-  return (
-    <div className="max-w-4xl mx-auto px-4 py-12 min-h-screen">
-      <h1 className="text-3xl font-bold mb-8">{t('title')}</h1>
-      <p className="text-sm text-gray-400 mb-8">{t('lastUpdated')}</p>
-      
-      <div className="space-y-8 text-gray-300">
-        <p className="text-lg">{t('intro')}</p>
-
-        <section className="bg-gray-800/50 p-6 rounded-xl border border-gray-700/50">
-          <h2 className="text-xl font-semibold text-white mb-4">{t('dataCollection.title')}</h2>
-          <p>{t('dataCollection.content')}</p>
-        </section>
-
-        <section className="bg-gray-800/50 p-6 rounded-xl border border-gray-700/50">
-          <h2 className="text-xl font-semibold text-white mb-4">{t('localProcessing.title')}</h2>
-          <p>{t('localProcessing.content')}</p>
-        </section>
-
-        <section className="bg-gray-800/50 p-6 rounded-xl border border-gray-700/50">
-          <h2 className="text-xl font-semibold text-white mb-4">{t('cookies.title')}</h2>
-          <p>{t('cookies.content')}</p>
-        </section>
-
-        <section className="bg-gray-800/50 p-6 rounded-xl border border-gray-700/50">
-          <h2 className="text-xl font-semibold text-white mb-4">{t('thirdParty.title')}</h2>
-          <p>{t('thirdParty.content')}</p>
-        </section>
-
-        <section className="bg-gray-800/50 p-6 rounded-xl border border-gray-700/50">
-          <h2 className="text-xl font-semibold text-white mb-4">{t('changes.title')}</h2>
-          <p>{t('changes.content')}</p>
-        </section>
-
-        <section className="bg-gray-800/50 p-6 rounded-xl border border-gray-700/50">
-          <h2 className="text-xl font-semibold text-white mb-4">{t('contact.title')}</h2>
-          <p>{t('contact.content')}</p>
-        </section>
-      </div>
-    </div>
-  );
+  return <PrivacyPageClient />;
 }

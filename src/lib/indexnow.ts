@@ -27,6 +27,29 @@ const MAX_BATCH_SIZE = 10000;
 // 默认批量大小
 const DEFAULT_BATCH_SIZE = 100;
 
+// 指数退避配置
+const RETRY_CONFIG = {
+  maxRetries: 5,
+  baseDelayMs: 1000, // 1s, 2s, 4s, 8s, 16s
+};
+
+/**
+ * 延迟函数
+ * @param ms - 延迟毫秒数
+ */
+function delay(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * 计算指数退避延迟
+ * @param attempt - 当前尝试次数（从0开始）
+ * @returns 延迟毫秒数
+ */
+export function calculateBackoffDelay(attempt: number): number {
+  return RETRY_CONFIG.baseDelayMs * Math.pow(2, attempt);
+}
+
 /**
  * 获取 IndexNow key（从环境变量）
  * @returns IndexNow key 或 undefined
@@ -119,7 +142,7 @@ export async function notifyIndexNow(
 }
 
 /**
- * 批量通知 IndexNow URL 更新
+ * 批量通知 IndexNow URL 更新（带指数退避重试）
  * @param urls - 要通知的 URL 数组
  * @param config - IndexNow 配置
  * @param batchSize - 每批次的 URL 数量（默认 100）
@@ -129,45 +152,70 @@ export async function batchNotifyIndexNow(
   urls: string[],
   config: IndexNowConfig,
   batchSize: number = DEFAULT_BATCH_SIZE
-): Promise<{ success: boolean; message: string; urlCount: number }[]> {
-  const results: { success: boolean; message: string; urlCount: number }[] = [];
+): Promise<{ success: boolean; message: string; urlCount: number; retries?: number }[]> {
+  const results: { success: boolean; message: string; urlCount: number; retries?: number }[] = [];
   
-  // 限制批量大小
+  // 限制批量大小不超过 MAX_BATCH_SIZE
   const effectiveBatchSize = Math.min(batchSize, MAX_BATCH_SIZE);
   
   // 分批处理
   for (let i = 0; i < urls.length; i += effectiveBatchSize) {
     const batch = urls.slice(i, i + effectiveBatchSize);
+    const batchNumber = Math.floor(i / effectiveBatchSize) + 1;
     
-    try {
-      const body = buildBatchRequestBody(batch, config);
-      
-      const response = await fetch(INDEXNOW_ENDPOINTS.api, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json; charset=utf-8',
-        },
-        body: JSON.stringify(body),
-      });
+    let lastError: string = '';
+    let success = false;
+    let retries = 0;
+    
+    // 指数退避重试
+    for (let attempt = 0; attempt <= RETRY_CONFIG.maxRetries; attempt++) {
+      try {
+        const body = buildBatchRequestBody(batch, config);
+        
+        const response = await fetch(INDEXNOW_ENDPOINTS.api, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+          },
+          body: JSON.stringify(body),
+        });
 
-      if (response.ok || response.status === 202) {
-        results.push({
-          success: true,
-          message: `Batch ${Math.floor(i / effectiveBatchSize) + 1} submitted successfully`,
-          urlCount: batch.length,
-        });
-      } else {
-        results.push({
-          success: false,
-          message: `Batch failed with status ${response.status}`,
-          urlCount: batch.length,
-        });
+        if (response.ok || response.status === 202) {
+          success = true;
+          retries = attempt;
+          break;
+        } else {
+          lastError = `Status ${response.status}`;
+          
+          // 如果是客户端错误（4xx），不重试
+          if (response.status >= 400 && response.status < 500) {
+            break;
+          }
+        }
+      } catch (error) {
+        lastError = error instanceof Error ? error.message : 'Unknown error';
       }
-    } catch (error) {
+      
+      // 如果不是最后一次尝试，等待后重试
+      if (attempt < RETRY_CONFIG.maxRetries) {
+        const delayMs = calculateBackoffDelay(attempt);
+        await delay(delayMs);
+      }
+    }
+    
+    if (success) {
+      results.push({
+        success: true,
+        message: `Batch ${batchNumber} submitted successfully`,
+        urlCount: batch.length,
+        retries,
+      });
+    } else {
       results.push({
         success: false,
-        message: `Batch error: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        message: `Batch ${batchNumber} failed after ${RETRY_CONFIG.maxRetries} retries: ${lastError}`,
         urlCount: batch.length,
+        retries: RETRY_CONFIG.maxRetries,
       });
     }
   }

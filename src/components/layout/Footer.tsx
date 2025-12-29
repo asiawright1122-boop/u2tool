@@ -17,6 +17,9 @@ export default function Footer() {
           </div>
           
           <div className="flex gap-6 text-sm text-gray-400">
+            <Link href="/about" className="hover:text-white transition-colors">
+              {t('footer.about')}
+            </Link>
             <Link href="/privacy" className="hover:text-white transition-colors">
               {t('footer.privacy')}
             </Link>

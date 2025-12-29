@@ -5,7 +5,7 @@
  */
 
 // 支持的语言列表（与 i18n/routing.ts 保持同步）
-export const SEO_LOCALES = ['en', 'zh', 'es', 'pt', 'ja'] as const;
+export const SEO_LOCALES = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'] as const;
 export type SeoLocale = (typeof SEO_LOCALES)[number];
 
 // SEO 配置常量
@@ -92,6 +92,66 @@ export const SEO_CONFIG = {
       // 功能词
       'エンコードデコード', 'フォーマット整形', '変換ツール', 'ジェネレーター',
     ],
+    ru: [
+      // 品牌词
+      'онлайн инструменты', 'инструменты разработчика', 'бесплатные инструменты',
+      'веб утилиты', 'набор инструментов разработчика',
+      // 核心工具词
+      'форматирование JSON', 'кодировщик Base64', 'генератор UUID',
+      'конвертер кода', 'генератор хэша', 'генератор QR кода',
+      // 长尾关键词
+      'бесплатные онлайн инструменты', 'без регистрации', 'браузерные инструменты',
+      // 功能词
+      'кодировать декодировать', 'форматировать', 'конвертировать', 'генерировать',
+    ],
+    fr: [
+      // 品牌词
+      'outils en ligne', 'outils de développeur', 'outils gratuits',
+      'utilitaires web', 'boîte à outils développeur',
+      // 核心工具词
+      'formateur JSON', 'encodeur Base64', 'générateur UUID',
+      'convertisseur de code', 'générateur de hash', 'générateur QR',
+      // 长尾关键词
+      'outils en ligne gratuits', 'sans inscription', 'outils navigateur',
+      // 功能词
+      'encoder décoder', 'formater embellir', 'convertir transformer', 'générer créer',
+    ],
+    ar: [
+      // 品牌词
+      'أدوات عبر الإنترنت', 'أدوات المطورين', 'أدوات مجانية',
+      'أدوات الويب', 'مجموعة أدوات المطور',
+      // 核心工具词
+      'منسق JSON', 'مشفر Base64', 'مولد UUID',
+      'محول الكود', 'مولد التجزئة', 'مولد رمز QR',
+      // 长尾关键词
+      'أدوات مجانية عبر الإنترنت', 'بدون تسجيل', 'أدوات المتصفح',
+      // 功能词
+      'تشفير فك التشفير', 'تنسيق تجميل', 'تحويل', 'توليد إنشاء',
+    ],
+    de: [
+      // 品牌词
+      'Online-Tools', 'Entwickler-Tools', 'kostenlose Tools',
+      'Web-Utilities', 'Entwickler-Toolkit',
+      // 核心工具词
+      'JSON-Formatierer', 'Base64-Encoder', 'UUID-Generator',
+      'Code-Konverter', 'Hash-Generator', 'QR-Code-Generator',
+      // 长尾关键词
+      'kostenlose Online-Tools', 'ohne Registrierung', 'Browser-Tools',
+      // 功能词
+      'kodieren dekodieren', 'formatieren verschönern', 'konvertieren transformieren', 'generieren erstellen',
+    ],
+    ko: [
+      // 品牌词
+      '온라인 도구', '개발자 도구', '무료 도구',
+      '웹 유틸리티', '개발자 툴킷',
+      // 核心工具词
+      'JSON 포맷터', 'Base64 인코더', 'UUID 생성기',
+      '코드 변환기', '해시 생성기', 'QR 코드 생성기',
+      // 长尾关键词
+      '무료 온라인 도구', '가입 불필요', '브라우저 도구',
+      // 功能词
+      '인코딩 디코딩', '포맷 정리', '변환 도구', '생성기',
+    ],
   },
 } as const;
 
@@ -159,7 +219,9 @@ interface JsonLdBase {
 interface WebSiteJsonLd extends JsonLdBase {
   '@type': 'WebSite';
   name: string;
+  alternateName?: string;
   url: string;
+  inLanguage?: string;
   potentialAction?: {
     '@type': 'SearchAction';
     target: {
@@ -284,7 +346,9 @@ export function generateWebSiteJsonLd(locale: string): WebSiteJsonLd {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: SEO_CONFIG.siteName,
+    alternateName: 'U2Tool - Free Online Developer Tools',
     url: getCanonicalUrl(locale, ''),
+    inLanguage: locale,
     potentialAction: {
       '@type': 'SearchAction',
       target: {
@@ -635,6 +699,41 @@ export function getToolHowToSteps(
       { name: '処理', text: '処理ボタンをクリックしてデータを変換します。' },
       { name: 'コピーまたはダウンロード', text: '結果をクリップボードにコピーするか、ファイルとしてダウンロードします。' },
     ],
+    ru: [
+      { name: 'Откройте инструмент', text: `Перейдите на страницу инструмента ${toolName}.` },
+      { name: 'Введите данные', text: 'Введите данные в текстовое поле или загрузите файл.' },
+      { name: 'Настройте параметры', text: 'При необходимости настройте параметры.' },
+      { name: 'Обработка', text: 'Нажмите кнопку обработки для преобразования данных.' },
+      { name: 'Скопируйте или скачайте', text: 'Скопируйте результат в буфер обмена или скачайте как файл.' },
+    ],
+    fr: [
+      { name: 'Ouvrir l\'outil', text: `Accédez à la page de l'outil ${toolName}.` },
+      { name: 'Entrez vos données', text: 'Saisissez vos données dans la zone de texte ou téléchargez un fichier.' },
+      { name: 'Configurez les options', text: 'Ajustez les paramètres selon vos besoins.' },
+      { name: 'Traiter', text: 'Cliquez sur le bouton de traitement pour transformer vos données.' },
+      { name: 'Copier ou télécharger', text: 'Copiez le résultat dans le presse-papiers ou téléchargez-le.' },
+    ],
+    ar: [
+      { name: 'افتح الأداة', text: `انتقل إلى صفحة أداة ${toolName}.` },
+      { name: 'أدخل بياناتك', text: 'أدخل بياناتك في منطقة النص أو قم بتحميل ملف.' },
+      { name: 'تكوين الخيارات', text: 'اضبط الإعدادات حسب الحاجة.' },
+      { name: 'معالجة', text: 'انقر على زر المعالجة لتحويل بياناتك.' },
+      { name: 'نسخ أو تنزيل', text: 'انسخ النتيجة إلى الحافظة أو قم بتنزيلها كملف.' },
+    ],
+    de: [
+      { name: 'Tool öffnen', text: `Navigieren Sie zur ${toolName}-Tool-Seite.` },
+      { name: 'Daten eingeben', text: 'Geben Sie Ihre Daten in das Textfeld ein oder laden Sie eine Datei hoch.' },
+      { name: 'Optionen konfigurieren', text: 'Passen Sie die Einstellungen nach Bedarf an.' },
+      { name: 'Verarbeiten', text: 'Klicken Sie auf die Schaltfläche zum Verarbeiten Ihrer Daten.' },
+      { name: 'Kopieren oder herunterladen', text: 'Kopieren Sie das Ergebnis in die Zwischenablage oder laden Sie es herunter.' },
+    ],
+    ko: [
+      { name: '도구 열기', text: `${toolName} 도구 페이지로 이동합니다.` },
+      { name: '데이터 입력', text: '텍스트 영역에 데이터를 입력하거나 파일을 업로드합니다.' },
+      { name: '옵션 구성', text: '필요에 따라 설정을 조정합니다.' },
+      { name: '처리', text: '처리 버튼을 클릭하여 데이터를 변환합니다.' },
+      { name: '복사 또는 다운로드', text: '결과를 클립보드에 복사하거나 파일로 다운로드합니다.' },
+    ],
   };
   
   return steps[locale] || steps.en;
@@ -711,6 +810,56 @@ export function getHomepageFAQs(locale: string): Array<{ question: string; answe
       {
         question: 'これらのツールを使用する際、データは安全ですか？',
         answer: 'はい、完全に安全です。すべてのツールはブラウザ内で完全に実行され、データがデバイスから離れることはありません。',
+      },
+    ],
+    ru: [
+      {
+        question: 'Эти инструменты бесплатны?',
+        answer: 'Да, все инструменты на U2Tool полностью бесплатны. Регистрация или оплата не требуется.',
+      },
+      {
+        question: 'Безопасны ли мои данные при использовании этих инструментов?',
+        answer: 'Абсолютно. Все инструменты работают полностью в вашем браузере. Ваши данные никогда не покидают ваше устройство.',
+      },
+    ],
+    fr: [
+      {
+        question: 'Ces outils sont-ils gratuits?',
+        answer: 'Oui, tous les outils sur U2Tool sont entièrement gratuits. Aucune inscription ni paiement requis.',
+      },
+      {
+        question: 'Mes données sont-elles sécurisées lors de l\'utilisation de ces outils?',
+        answer: 'Absolument. Tous les outils fonctionnent entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil.',
+      },
+    ],
+    ar: [
+      {
+        question: 'هل هذه الأدوات مجانية؟',
+        answer: 'نعم، جميع الأدوات على U2Tool مجانية تماماً. لا يلزم التسجيل أو الدفع.',
+      },
+      {
+        question: 'هل بياناتي آمنة عند استخدام هذه الأدوات؟',
+        answer: 'بالتأكيد. جميع الأدوات تعمل بالكامل في متصفحك. بياناتك لا تغادر جهازك أبداً.',
+      },
+    ],
+    de: [
+      {
+        question: 'Sind diese Tools kostenlos?',
+        answer: 'Ja, alle Tools auf U2Tool sind völlig kostenlos. Keine Registrierung oder Zahlung erforderlich.',
+      },
+      {
+        question: 'Sind meine Daten bei der Verwendung dieser Tools sicher?',
+        answer: 'Absolut. Alle Tools laufen vollständig in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät.',
+      },
+    ],
+    ko: [
+      {
+        question: '이 도구들은 무료인가요?',
+        answer: '네, U2Tool의 모든 도구는 완전히 무료입니다. 등록이나 결제가 필요 없습니다.',
+      },
+      {
+        question: '이 도구를 사용할 때 내 데이터는 안전한가요?',
+        answer: '물론입니다. 모든 도구는 브라우저에서 완전히 실행됩니다. 데이터는 절대 기기를 떠나지 않습니다.',
       },
     ],
   };

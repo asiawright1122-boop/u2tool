@@ -27,6 +27,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: generateSitemapAlternates(''),
     });
 
+    // 添加 About 页面
+    routes.push({
+      url: `${BASE_URL}/${locale}/about`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: generateSitemapAlternates('/about'),
+    });
+
+    // 添加 Privacy 页面
+    routes.push({
+      url: `${BASE_URL}/${locale}/privacy`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+      alternates: generateSitemapAlternates('/privacy'),
+    });
+
+    // 添加 Terms 页面
+    routes.push({
+      url: `${BASE_URL}/${locale}/terms`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+      alternates: generateSitemapAlternates('/terms'),
+    });
+
     // 添加工具列表页
     routes.push({
       url: `${BASE_URL}/${locale}/tools`,

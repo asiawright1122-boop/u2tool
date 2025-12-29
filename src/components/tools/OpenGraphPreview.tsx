@@ -182,7 +182,7 @@ export default function OpenGraphPreview() {
         ) : (
           <img 
             src={image} 
-            alt="" 
+            alt={title || 'Open Graph preview image'} 
             className="w-full h-full object-cover" 
             onError={() => setImageError(true)} 
           />

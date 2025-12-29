@@ -20,8 +20,8 @@ function parseMarkdown(md: string): string {
     .replace(/```([\s\S]*?)```/gim, '<pre class="bg-gray-900 p-3 rounded my-2 overflow-x-auto"><code>$1</code></pre>')
     // Inline code
     .replace(/`(.*?)`/gim, '<code class="bg-gray-900 px-1 rounded">$1</code>')
-    // Links
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" class="text-blue-400 hover:underline" target="_blank">$1</a>')
+    // Links - 添加 rel="noopener noreferrer" 提高安全性
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>')
     // Unordered lists
     .replace(/^- (.*$)/gim, '<li class="ml-4">$1</li>')
     // Line breaks

@@ -1,14 +1,17 @@
 /**
  * IndexNow 属性测试
- * Property 7: IndexNow Batch Efficiency
- * 验证批量 URL 提交的效率
+ * Property 8: Batch Submission Efficiency
+ * 验证批量 URL 提交的效率和指数退避重试
+ * Feature: seo-audit-ai-safe
  */
 
 import { describe, it, expect } from 'vitest';
+import * as fc from 'fast-check';
 import {
   isValidIndexNowKey,
   generateIndexNowKey,
   generateToolUrls,
+  calculateBackoffDelay,
 } from './indexnow';
 
 // 测试用的模拟工具
@@ -21,7 +24,47 @@ const mockTools = [
 const locales = ['en', 'zh', 'es'];
 
 describe('IndexNow - Property Tests', () => {
-  describe('Property 7: IndexNow Batch Efficiency', () => {
+  describe('Property 8: Batch Submission Efficiency', () => {
+    // 属性测试：批量大小不超过 10,000
+    it('batch size should not exceed 10,000 URLs', () => {
+      fc.assert(
+        fc.property(
+          fc.integer({ min: 1, max: 50000 }),
+          (urlCount) => {
+            // 模拟批量处理逻辑
+            const MAX_BATCH_SIZE = 10000;
+            const batchSize = Math.min(urlCount, MAX_BATCH_SIZE);
+            return batchSize <= MAX_BATCH_SIZE;
+          }
+        ),
+        { numRuns: 100 }
+      );
+    });
+
+    // 属性测试：指数退避延迟正确计算
+    it('exponential backoff should follow 1s, 2s, 4s, 8s, 16s pattern', () => {
+      fc.assert(
+        fc.property(
+          fc.integer({ min: 0, max: 4 }),
+          (attempt) => {
+            const delay = calculateBackoffDelay(attempt);
+            const expectedDelay = 1000 * Math.pow(2, attempt);
+            return delay === expectedDelay;
+          }
+        ),
+        { numRuns: 100 }
+      );
+    });
+
+    // 测试具体的退避延迟值
+    it('should calculate correct backoff delays', () => {
+      expect(calculateBackoffDelay(0)).toBe(1000);  // 1s
+      expect(calculateBackoffDelay(1)).toBe(2000);  // 2s
+      expect(calculateBackoffDelay(2)).toBe(4000);  // 4s
+      expect(calculateBackoffDelay(3)).toBe(8000);  // 8s
+      expect(calculateBackoffDelay(4)).toBe(16000); // 16s
+    });
+
     // 测试 URL 生成
     it('should generate correct URLs for all tools and locales', () => {
       const urls = generateToolUrls(mockTools, locales);

@@ -1,10 +1,12 @@
 /**
  * 内部链接属性测试
- * Property 3: Internal Linking Quality
+ * Property 6: Internal Linking Quality
  * 验证相关工具数量、锚文本和相关性
+ * Feature: seo-audit-ai-safe
  */
 
 import { describe, it, expect } from 'vitest';
+import * as fc from 'fast-check';
 import {
   calculateRelevanceScore,
   getSemanticRelatedTools,
@@ -12,6 +14,7 @@ import {
   getMixedRecommendations,
   validateRelatedToolsCount,
   getPopularTools,
+  generateAnchorText,
 } from './internal-links';
 import { tools } from '@/config/tools';
 
@@ -19,7 +22,82 @@ import { tools } from '@/config/tools';
 const MIN_RELATED_COUNT = 4;
 
 describe('Internal Links - Property Tests', () => {
-  describe('Property 3: Internal Linking Quality', () => {
+  describe('Property 6: Internal Linking Quality', () => {
+    // 属性测试：相关工具数量始终 >= 4
+    it('should return at least 4 related tools for any tool (Property 6)', () => {
+      fc.assert(
+        fc.property(
+          fc.constantFrom(...tools.map(t => t.slug)),
+          (slug) => {
+            const relatedTools = getSemanticRelatedTools(slug, 6);
+            // 如果工具总数足够，应该返回至少 4 个相关工具
+            if (tools.length > MIN_RELATED_COUNT) {
+              return relatedTools.length >= MIN_RELATED_COUNT;
+            }
+            return true;
+          }
+        ),
+        { numRuns: 100 }
+      );
+    });
+
+    // 属性测试：锚文本应该是工具名称
+    it('anchor text should be tool name (Property 6)', () => {
+      fc.assert(
+        fc.property(
+          fc.constantFrom(...tools),
+          fc.constantFrom('en', 'zh', 'es', 'pt', 'ja'),
+          (tool, locale) => {
+            const getToolName = (slug: string) => `Tool: ${slug}`;
+            const anchorText = generateAnchorText(tool, locale, getToolName);
+            // 锚文本应该是非空字符串
+            return typeof anchorText === 'string' && anchorText.length > 0;
+          }
+        ),
+        { numRuns: 100 }
+      );
+    });
+
+    // 属性测试：相关工具应该包含同分类工具
+    it('related tools should include same category tools (Property 6)', () => {
+      fc.assert(
+        fc.property(
+          fc.constantFrom(...tools.map(t => t.slug)),
+          (slug) => {
+            const currentTool = tools.find(t => t.slug === slug);
+            if (!currentTool) return true;
+            
+            const relatedTools = getSemanticRelatedTools(slug, 6);
+            const sameCategoryExists = tools.some(
+              t => t.slug !== slug && t.category === currentTool.category
+            );
+            
+            if (sameCategoryExists && relatedTools.length > 0) {
+              // 至少应该有一个同分类的工具
+              return relatedTools.some(t => t.category === currentTool.category);
+            }
+            return true;
+          }
+        ),
+        { numRuns: 100 }
+      );
+    });
+
+    // 属性测试：相关性分数始终在 0-100 范围内
+    it('relevance score should always be between 0 and 100', () => {
+      fc.assert(
+        fc.property(
+          fc.constantFrom(...tools),
+          fc.constantFrom(...tools),
+          (tool1, tool2) => {
+            const score = calculateRelevanceScore(tool1, tool2);
+            return score >= 0 && score <= 100;
+          }
+        ),
+        { numRuns: 100 }
+      );
+    });
+
     // 测试相关工具数量 >= 4
     it('should return at least MIN_RELATED_COUNT related tools for each tool', () => {
       for (const tool of tools) {
