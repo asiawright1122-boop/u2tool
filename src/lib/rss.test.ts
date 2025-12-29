@@ -20,6 +20,7 @@ interface MockTool {
   icon: string;
   category: string;
   tags: string[];
+  component: string;
 }
 
 // 测试用的模拟工具
@@ -28,6 +29,7 @@ const mockTool: MockTool = {
   icon: '📝',
   category: 'formatters',
   tags: ['json', 'format'],
+  component: 'JsonFormatter',
 };
 
 const locales = ['en', 'zh', 'es', 'pt', 'ja'];

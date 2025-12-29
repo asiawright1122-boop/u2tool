@@ -98,8 +98,9 @@ export default function BubbleChartGenerator() {
             },
             tooltip: {
                 trigger: 'item',
-                formatter: (params: { data: [number, number, number, string, string?]; seriesName: string }) => {
-                    const { data, seriesName } = params;
+                formatter: (params) => {
+                    const p = params as unknown as { data: [number, number, number, string, string?]; seriesName: string };
+                    const { data, seriesName } = p;
                     // data is [x, y, r, id, name]
                     const label = data[4] ? `${data[4]}<br/>` : '';
                     return `${seriesName}<br/>${label}X: ${data[0]}<br/>Y: ${data[1]}<br/>Size: ${data[2]}`;

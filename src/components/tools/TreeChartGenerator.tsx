@@ -61,8 +61,13 @@ export default function TreeChartGenerator() {
     }, [t, isInitialized, baseId]);
 
     const buildTree = useCallback((nodeList: TreeNode[]) => {
-        const nodeMap = new Map<string, { name: string; value?: number; children: { name: string; value?: number; children: unknown[] }[] }>();
-        let root: { name: string; value?: number; children: unknown[] } | null = null;
+        interface TreeNodeData {
+            name: string;
+            value?: number;
+            children: TreeNodeData[];
+        }
+        const nodeMap = new Map<string, TreeNodeData>();
+        let root: TreeNodeData | null = null;
 
         // Create map of nodes
         nodeList.forEach(node => {
@@ -77,10 +82,10 @@ export default function TreeChartGenerator() {
         nodeList.forEach(node => {
             const currentNode = nodeMap.get(node.id);
             if (node.parentId === null) {
-                root = currentNode;
+                root = currentNode ?? null;
             } else {
                 const parent = nodeMap.get(node.parentId);
-                if (parent) {
+                if (parent && currentNode) {
                     parent.children.push(currentNode);
                 } else {
                     // If parent not found, treat as root or orphan (here we just ignore or handle as separate tree)

@@ -123,12 +123,8 @@ export default function GanttChartGenerator() {
         const axisMin = minDate - dayMs * 2;
         const axisMax = maxDate + dayMs * 2;
 
-        function renderItem(params: { dataIndex: number }, api: {
-            value: (index: number) => number;
-            coord: (point: [number, number]) => [number, number];
-            size: (point: [number, number]) => [number, number];
-            style: () => { fill: string };
-        }) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        function renderItem(_params: any, api: any) {
             const categoryIndex = api.value(0);
             const startTime = api.value(1);
             const endTime = api.value(2);
@@ -203,10 +199,11 @@ export default function GanttChartGenerator() {
                 textStyle: { fontSize: 18, fontWeight: 'bold', color: '#fff' },
             },
             tooltip: {
-                formatter: (params: { dataIndex: number; marker: string }) => {
-                    const task = chartTasks[params.dataIndex];
+                formatter: (params) => {
+                    const p = params as { dataIndex: number; marker: string };
+                    const task = chartTasks[p.dataIndex];
                     if (!task) return '';
-                    return `${params.marker} <b>${task.name}</b><br/>
+                    return `${p.marker} <b>${task.name}</b><br/>
                             ${t('start')}: ${task.startDate}<br/>
                             ${t('end')}: ${task.endDate}<br/>
                             ${t('progress')}: ${task.progress}%`;
