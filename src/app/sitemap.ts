@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { tools, categories } from '@/config/tools';
 import { SEO_CONFIG, SEO_LOCALES } from '@/lib/seo';
+import { blogPosts } from '@/config/blog';
 
 const BASE_URL = SEO_CONFIG.siteUrl;
 
@@ -35,6 +36,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
       alternates: generateSitemapAlternates('/about'),
     });
+
+    // 添加 Blog 列表页
+    routes.push({
+      url: `${BASE_URL}/${locale}/blog`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+      alternates: generateSitemapAlternates('/blog'),
+    });
+
+    // 添加博客文章页面
+    for (const post of blogPosts) {
+      routes.push({
+        url: `${BASE_URL}/${locale}/blog/${post.slug}`,
+        lastModified: new Date(post.updatedAt || post.publishedAt),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+        alternates: generateSitemapAlternates(`/blog/${post.slug}`),
+      });
+    }
 
     // 添加 Privacy 页面
     routes.push({

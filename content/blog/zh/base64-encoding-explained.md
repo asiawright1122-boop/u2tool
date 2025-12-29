@@ -1,0 +1,110 @@
+# Base64编码原理详解及在线工具推荐
+
+Base64是一种基于64个可打印字符来表示二进制数据的编码方式。它在Web开发、数据传输、邮件附件等场景中被广泛使用。本文将详细介绍Base64的工作原理，并推荐实用的在线工具。
+
+## 什么是Base64编码？
+
+Base64编码使用以下64个字符来表示数据：
+- 大写字母：A-Z（26个）
+- 小写字母：a-z（26个）
+- 数字：0-9（10个）
+- 特殊字符：+ 和 /（2个）
+
+此外，= 用作填充字符。
+
+## Base64编码原理
+
+Base64编码的核心原理是将3个字节（24位）的数据转换为4个Base64字符（每个字符6位）。
+
+### 编码步骤
+
+1. 将输入数据转换为二进制
+2. 每6位分为一组
+3. 将每组转换为对应的Base64字符
+4. 如果最后不足3字节，用=填充
+
+### 示例
+
+将 "Hi" 编码为Base64：
+
+```
+H = 01001000
+i = 01101001
+
+合并：010010 000110 1001xx
+
+填充后：010010 000110 100100
+
+对应：S      G      k      =
+
+结果：SGk=
+```
+
+## 常见使用场景
+
+### 1. 图片内联
+
+在HTML/CSS中直接嵌入图片：
+
+```html
+<img src="data:image/png;base64,iVBORw0KGgo..." />
+```
+
+### 2. API数据传输
+
+在JSON中传输二进制数据：
+
+```json
+{
+  "file": "SGVsbG8gV29ybGQh",
+  "filename": "hello.txt"
+}
+```
+
+### 3. 邮件附件
+
+MIME协议使用Base64编码邮件附件。
+
+### 4. JWT Token
+
+JSON Web Token使用Base64URL编码。
+
+## 推荐工具
+
+### U2Tool Base64编码器
+
+[U2Tool Base64编码器](https://www.u2tool.com/zh/tools/base64-encoder) 提供：
+
+- ✅ 文本和文件的Base64编码/解码
+- ✅ 支持图片转Base64
+- ✅ 支持Base64URL格式
+- ✅ 完全在浏览器中运行，数据安全
+
+### 使用方法
+
+1. 访问 [Base64编码器](https://www.u2tool.com/zh/tools/base64-encoder)
+2. 输入要编码的文本或上传文件
+3. 点击"编码"按钮
+4. 复制结果
+
+## Base64的优缺点
+
+### 优点
+- 可以在文本协议中传输二进制数据
+- 编码后的数据只包含可打印字符
+- 广泛支持，几乎所有编程语言都有实现
+
+### 缺点
+- 编码后数据增大约33%
+- 不是加密，不能用于安全目的
+
+## 总结
+
+Base64是一种简单但非常实用的编码方式。理解其原理可以帮助你更好地处理数据传输问题。推荐使用 [U2Tool Base64工具](https://www.u2tool.com/zh/tools/base64-encoder) 进行日常的编码解码工作。
+
+---
+
+**相关工具**：
+- [Base64解码器](https://www.u2tool.com/zh/tools/base64-decoder)
+- [URL编码器](https://www.u2tool.com/zh/tools/url-encoder)
+- [图片转Base64](https://www.u2tool.com/zh/tools/image-to-base64)
