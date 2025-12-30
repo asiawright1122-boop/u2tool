@@ -27,10 +27,10 @@ export default function ListRandomizer() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="block text-sm font-medium text-gray-300">{t('originalList')}</label>
+            <label className="tool-label mb-0">{t('originalList')}</label>
             <button
               onClick={() => setInput('')}
-              className="text-xs text-red-400 hover:text-red-300"
+              className="text-xs text-red-600 dark:text-red-400 hover:text-red-500 dark:hover:text-red-300"
             >
               {t('clear')}
             </button>
@@ -39,17 +39,17 @@ export default function ListRandomizer() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             rows={12}
-            className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 font-mono"
+            className="tool-textarea"
             placeholder={t('placeholder')}
           />
         </div>
 
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="block text-sm font-medium text-gray-300">{t('randomizedList')}</label>
+            <label className="tool-label mb-0">{t('randomizedList')}</label>
             <button
               onClick={() => navigator.clipboard.writeText(output)}
-              className="text-xs text-blue-400 hover:text-blue-300"
+              className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
             >
               {t('copyResult')}
             </button>
@@ -58,7 +58,7 @@ export default function ListRandomizer() {
             readOnly
             value={output}
             rows={12}
-            className="w-full bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-green-400 font-mono"
+            className="tool-textarea text-green-600 dark:text-green-400"
           />
         </div>
       </div>

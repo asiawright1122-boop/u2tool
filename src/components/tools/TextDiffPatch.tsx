@@ -81,11 +81,11 @@ export default function TextDiffPatch() {
     <div className="space-y-6">
       <div className="flex gap-4">
         <button onClick={() => setMode('create')}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${mode === 'create' ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'}`}>
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${mode === 'create' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}>
           {t('createPatch')}
         </button>
         <button onClick={() => setMode('apply')}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${mode === 'apply' ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'}`}>
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${mode === 'apply' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}>
           {t('applyPatch')}
         </button>
       </div>
@@ -94,26 +94,26 @@ export default function TextDiffPatch() {
         <>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">{t('originalText')}</label>
+              <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('originalText')}</label>
               <textarea value={original} onChange={(e) => setOriginal(e.target.value)}
-                className="w-full h-48 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm" />
+                className="w-full h-48 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">{t('modifiedText')}</label>
+              <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('modifiedText')}</label>
               <textarea value={modified} onChange={(e) => setModified(e.target.value)}
-                className="w-full h-48 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm" />
+                className="w-full h-48 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm" />
             </div>
           </div>
           <button onClick={createPatch}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
+            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors text-white">
             {t('createPatch')}
           </button>
           {patch && (
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">{t('generatedPatch')}</label>
-              <pre className="bg-gray-700 rounded-lg p-4 font-mono text-sm overflow-x-auto">
+              <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('generatedPatch')}</label>
+              <pre className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm overflow-x-auto">
                 {patch.split('\n').map((line, i) => (
-                  <div key={i} className={line.startsWith('+') ? 'text-green-400' : line.startsWith('-') ? 'text-red-400' : line.startsWith('@@') ? 'text-blue-400' : 'text-gray-300'}>
+                  <div key={i} className={line.startsWith('+') ? 'text-green-600 dark:text-green-400' : line.startsWith('-') ? 'text-red-600 dark:text-red-400' : line.startsWith('@@') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-300'}>
                     {line}
                   </div>
                 ))}
@@ -125,26 +125,26 @@ export default function TextDiffPatch() {
         <>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">{t('originalText')}</label>
+              <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('originalText')}</label>
               <textarea value={original} onChange={(e) => setOriginal(e.target.value)}
-                className="w-full h-40 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm" />
+                className="w-full h-40 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">{t('patch')}</label>
+              <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('patch')}</label>
               <textarea value={patchInput} onChange={(e) => setPatchInput(e.target.value)}
-                className="w-full h-40 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm"
+                className="w-full h-40 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
                 placeholder={t('patchPlaceholder')} />
             </div>
           </div>
           <button onClick={applyPatch}
-            className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium transition-colors">
+            className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium transition-colors text-white">
             {t('applyPatch')}
           </button>
           {patchResult && (
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">{t('result')}</label>
+              <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('result')}</label>
               <textarea value={patchResult} readOnly
-                className="w-full h-40 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm" />
+                className="w-full h-40 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm" />
             </div>
           )}
         </>

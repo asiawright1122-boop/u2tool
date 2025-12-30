@@ -60,7 +60,7 @@ export default function RelatedTools({
 
   return (
     <section className={`mt-12 ${className}`} aria-labelledby="related-tools-heading">
-      <h2 id="related-tools-heading" className="text-xl font-semibold mb-4 text-gray-200">
+      <h2 id="related-tools-heading" className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
         {tNav('relatedTools')}
       </h2>
       
@@ -74,13 +74,13 @@ export default function RelatedTools({
               <Link
                 key={tool.slug}
                 href={`/tools/${tool.slug}`}
-                className="flex flex-col items-center p-3 bg-gray-800/50 border border-gray-700/50 rounded-lg hover:border-blue-500/30 hover:bg-gray-800 transition-all group"
+                className="flex flex-col items-center p-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 rounded-lg hover:border-blue-500/30 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all group"
                 title={toolName}
               >
                 <span className="text-2xl mb-2 group-hover:scale-110 transition-transform" aria-hidden="true">
                   {tool.icon}
                 </span>
-                <span className="text-sm text-gray-300 text-center line-clamp-2 group-hover:text-white transition-colors">
+                <span className="text-sm text-gray-700 dark:text-gray-300 text-center line-clamp-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                   {toolName}
                 </span>
               </Link>

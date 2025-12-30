@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { ThemeProvider } from 'next-themes';
 import { routing } from '@/i18n/routing';
 import { SEO_CONFIG, getVerificationTags } from '@/lib/seo';
 
@@ -243,16 +244,23 @@ export default async function LocaleLayout({
         {/* === 语言和地区优化 === */}
         <meta httpEquiv="Content-Language" content={locale} />
       </head>
-      <body className="bg-black text-white min-h-screen font-sans">
-        <NextIntlClientProvider messages={messages}>
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow pt-16">{children}</main>
-            <Footer />
-          </div>
-          {/* Web Vitals 监控 */}
-          <WebVitalsReporter />
-        </NextIntlClientProvider>
+      <body className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen font-sans">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+          disableTransitionOnChange={false}
+        >
+          <NextIntlClientProvider messages={messages}>
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <main className="flex-grow pt-16">{children}</main>
+              <Footer />
+            </div>
+            {/* Web Vitals 监控 */}
+            <WebVitalsReporter />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

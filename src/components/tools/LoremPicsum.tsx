@@ -62,7 +62,7 @@ export default function LoremPicsum() {
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-300">
+              <label className="tool-label">
                 {t('width')} (px)
               </label>
               <input
@@ -71,11 +71,11 @@ export default function LoremPicsum() {
                 onChange={(e) => setWidth(parseInt(e.target.value) || 0)}
                 min="1"
                 max="5000"
-                className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+                className="tool-input"
               />
             </div>
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-300">
+              <label className="tool-label">
                 {t('height')} (px)
               </label>
               <input
@@ -84,7 +84,7 @@ export default function LoremPicsum() {
                 onChange={(e) => setHeight(parseInt(e.target.value) || 0)}
                 min="1"
                 max="5000"
-                className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+                className="tool-input"
               />
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function LoremPicsum() {
               <button
                 key={preset.label}
                 onClick={() => { setWidth(preset.width); setHeight(preset.height); }}
-                className="px-3 py-1 text-sm bg-gray-700 text-gray-300 rounded hover:bg-gray-600"
+                className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
               >
                 {preset.label}
               </button>
@@ -103,7 +103,7 @@ export default function LoremPicsum() {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-300">
+              <label className="tool-label">
                 {t('seed')} ({t('optional')})
               </label>
               <input
@@ -111,11 +111,11 @@ export default function LoremPicsum() {
                 value={seed}
                 onChange={(e) => { setSeed(e.target.value); setImageId(''); }}
                 placeholder={t('seedPlaceholder')}
-                className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+                className="tool-input"
               />
             </div>
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-300">
+              <label className="tool-label">
                 {t('imageId')} ({t('optional')})
               </label>
               <input
@@ -123,7 +123,7 @@ export default function LoremPicsum() {
                 value={imageId}
                 onChange={(e) => { setImageId(e.target.value); setSeed(''); }}
                 placeholder="0-1084"
-                className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+                className="tool-input"
               />
             </div>
           </div>
@@ -136,11 +136,11 @@ export default function LoremPicsum() {
                 onChange={(e) => setGrayscale(e.target.checked)}
                 className="w-4 h-4 text-blue-600 rounded"
               />
-              <span className="text-sm text-gray-300">{t('grayscale')}</span>
+              <span className="text-sm text-gray-600 dark:text-gray-300">{t('grayscale')}</span>
             </label>
 
             <div className="flex items-center gap-2">
-              <label className="text-sm text-gray-300">{t('blur')}:</label>
+              <label className="text-sm text-gray-600 dark:text-gray-300">{t('blur')}:</label>
               <input
                 type="range"
                 value={blur}
@@ -149,13 +149,13 @@ export default function LoremPicsum() {
                 max="10"
                 className="w-24"
               />
-              <span className="text-sm text-gray-300">{blur}</span>
+              <span className="text-sm text-gray-600 dark:text-gray-300">{blur}</span>
             </div>
           </div>
 
           <button
             onClick={generateUrl}
-            className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="btn-primary w-full"
           >
             {t('generate')}
           </button>
@@ -164,8 +164,8 @@ export default function LoremPicsum() {
             <div className="space-y-3">
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <label className="text-sm font-medium text-gray-300">{t('imageUrl')}</label>
-                  <button onClick={() => handleCopy(imageUrl)} className="text-sm text-blue-600 hover:text-blue-800">
+                  <label className="tool-label mb-0">{t('imageUrl')}</label>
+                  <button onClick={() => handleCopy(imageUrl)} className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">
                     {t('copy')}
                   </button>
                 </div>
@@ -173,18 +173,18 @@ export default function LoremPicsum() {
                   type="text"
                   value={imageUrl}
                   readOnly
-                  className="w-full p-2 bg-gray-900 border border-gray-600 rounded-lg text-gray-100 font-mono text-sm"
+                  className="tool-input font-mono text-sm"
                 />
               </div>
 
               <div className="grid grid-cols-1 gap-2">
-                <div className="flex items-center justify-between p-2 bg-gray-900 rounded">
-                  <code className="text-xs text-gray-300 truncate flex-1">{generateHtmlCode()}</code>
-                  <button onClick={() => handleCopy(generateHtmlCode())} className="ml-2 text-xs text-blue-600">HTML</button>
+                <div className="flex items-center justify-between p-2 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded">
+                  <code className="text-xs text-gray-600 dark:text-gray-300 truncate flex-1">{generateHtmlCode()}</code>
+                  <button onClick={() => handleCopy(generateHtmlCode())} className="ml-2 text-xs text-blue-600 dark:text-blue-400">HTML</button>
                 </div>
-                <div className="flex items-center justify-between p-2 bg-gray-900 rounded">
-                  <code className="text-xs text-gray-300 truncate flex-1">{generateMarkdownCode()}</code>
-                  <button onClick={() => handleCopy(generateMarkdownCode())} className="ml-2 text-xs text-blue-600">Markdown</button>
+                <div className="flex items-center justify-between p-2 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded">
+                  <code className="text-xs text-gray-600 dark:text-gray-300 truncate flex-1">{generateMarkdownCode()}</code>
+                  <button onClick={() => handleCopy(generateMarkdownCode())} className="ml-2 text-xs text-blue-600 dark:text-blue-400">Markdown</button>
                 </div>
               </div>
             </div>
@@ -192,8 +192,8 @@ export default function LoremPicsum() {
         </div>
 
         <div className="space-y-4">
-          <h3 className="font-medium text-gray-100">{t('preview')}</h3>
-          <div className="border border-gray-600 rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center min-h-[300px]">
+          <h3 className="font-medium text-gray-900 dark:text-gray-100">{t('preview')}</h3>
+          <div className="border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center min-h-[300px]">
             {imageUrl ? (
               <img
                 src={imageUrl}
@@ -201,15 +201,15 @@ export default function LoremPicsum() {
                 className="max-w-full max-h-[400px] object-contain"
               />
             ) : (
-              <p className="text-gray-300">{t('noPreview')}</p>
+              <p className="text-gray-500 dark:text-gray-300">{t('noPreview')}</p>
             )}
           </div>
         </div>
       </div>
 
-      <div className="p-4 bg-blue-50 rounded-lg">
-        <h3 className="font-medium text-blue-800 mb-2">{t('info')}</h3>
-        <p className="text-sm text-blue-700">{t('infoText')}</p>
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
+        <h3 className="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('info')}</h3>
+        <p className="text-sm text-blue-700 dark:text-blue-400">{t('infoText')}</p>
       </div>
     </div>
   );

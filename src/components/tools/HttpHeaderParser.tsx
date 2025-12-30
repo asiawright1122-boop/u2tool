@@ -89,7 +89,7 @@ X-Requested-With: XMLHttpRequest`;
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={t('httpHeader.placeholder')}
-          className="w-full h-48 p-3 bg-gray-900 border border-gray-700 rounded-lg font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full h-48 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
       </div>
 
@@ -99,20 +99,20 @@ X-Requested-With: XMLHttpRequest`;
 
       {headers.length > 0 && (
         <div className="space-y-3">
-          <div className="text-sm font-medium">{t('httpHeader.parsed')} ({headers.length})</div>
+          <div className="text-sm font-medium text-gray-900 dark:text-white">{t('httpHeader.parsed')} ({headers.length})</div>
           <div className="space-y-2">
             {headers.map((header, index) => (
-              <div key={index} className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
+              <div key={index} className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
                 <div className="flex flex-wrap items-start gap-2">
-                  <span className="px-2 py-1 bg-blue-600 rounded text-sm font-medium">
+                  <span className="px-2 py-1 bg-blue-600 text-white rounded text-sm font-medium">
                     {header.name}
                   </span>
-                  <span className="flex-1 font-mono text-sm text-gray-300 break-all">
+                  <span className="flex-1 font-mono text-sm text-gray-600 dark:text-gray-300 break-all">
                     {header.value}
                   </span>
                 </div>
                 {header.description && (
-                  <div className="mt-2 text-xs text-gray-300">{header.description}</div>
+                  <div className="mt-2 text-xs text-gray-500 dark:text-gray-300">{header.description}</div>
                 )}
               </div>
             ))}

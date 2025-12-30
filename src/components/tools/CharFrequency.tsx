@@ -45,21 +45,21 @@ export default function CharFrequency() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('inputLabel')}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('inputLabel')}</label>
         <textarea value={input} onChange={(e) => setInput(e.target.value)}
-          className="w-full h-32 bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
+          className="w-full h-32 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
           placeholder={t('placeholder')} />
       </div>
 
       <div className="flex gap-4">
-        <label className="flex items-center gap-2 text-sm text-gray-300">
+        <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
           <input type="checkbox" checked={ignoreSpaces} onChange={(e) => setIgnoreSpaces(e.target.checked)}
-            className="rounded bg-gray-700 border-gray-600" />
+            className="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600" />
           {t('ignoreSpaces')}
         </label>
-        <label className="flex items-center gap-2 text-sm text-gray-300">
+        <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
           <input type="checkbox" checked={caseSensitive} onChange={(e) => setCaseSensitive(e.target.checked)}
-            className="rounded bg-gray-700 border-gray-600" />
+            className="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600" />
           {t('caseSensitive')}
         </label>
       </div>
@@ -71,19 +71,19 @@ export default function CharFrequency() {
 
       {results.length > 0 && (
         <div className="space-y-2">
-          <div className="flex justify-between text-sm text-gray-400">
+          <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400">
             <span>{t('uniqueChars')}: {results.length}</span>
             <span>{t('totalChars')}: {results.reduce((sum, r) => sum + r.count, 0)}</span>
           </div>
           <div className="max-h-80 overflow-y-auto space-y-1">
             {results.map((r, i) => (
-              <div key={i} className="flex items-center gap-3 p-2 bg-gray-700 rounded">
-                <span className="w-8 text-center font-mono text-blue-400">{r.char}</span>
-                <div className="flex-1 h-4 bg-gray-600 rounded overflow-hidden">
+              <div key={i} className="flex items-center gap-3 p-2 bg-gray-100 dark:bg-gray-700 rounded">
+                <span className="w-8 text-center font-mono text-blue-600 dark:text-blue-400">{r.char}</span>
+                <div className="flex-1 h-4 bg-gray-200 dark:bg-gray-600 rounded overflow-hidden">
                   <div className="h-full bg-blue-500" style={{ width: `${(r.count / maxCount) * 100}%` }} />
                 </div>
-                <span className="w-12 text-right text-sm text-gray-300">{r.count}</span>
-                <span className="w-16 text-right text-sm text-gray-400">{r.percentage.toFixed(1)}%</span>
+                <span className="w-12 text-right text-sm text-gray-700 dark:text-gray-300">{r.count}</span>
+                <span className="w-16 text-right text-sm text-gray-500 dark:text-gray-400">{r.percentage.toFixed(1)}%</span>
               </div>
             ))}
           </div>

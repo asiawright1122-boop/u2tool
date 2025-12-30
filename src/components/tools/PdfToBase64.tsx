@@ -111,8 +111,8 @@ export default function PdfToBase64() {
         />
         <label htmlFor="pdf-input" className="cursor-pointer">
           <div className="text-4xl mb-4">📄</div>
-          <p className="text-gray-300 mb-2">{t('dropzone')}</p>
-          <p className="text-sm text-gray-300">{t('acceptedFormat')}</p>
+          <p className="text-gray-600 dark:text-gray-300 mb-2">{t('dropzone')}</p>
+          <p className="text-sm text-gray-600 dark:text-gray-300">{t('acceptedFormat')}</p>
         </label>
       </div>
 
@@ -123,18 +123,18 @@ export default function PdfToBase64() {
       )}
 
       {fileName && (
-        <div className="p-4 bg-gray-900 rounded-lg">
+        <div className="p-4 bg-gray-100 dark:bg-gray-900 rounded-lg">
           <div className="flex items-center justify-between">
             <div>
-              <p className="font-medium text-gray-100">{fileName}</p>
-              <p className="text-sm text-gray-300">
+              <p className="font-medium text-gray-900 dark:text-gray-100">{fileName}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {t('originalSize')}: {formatFileSize(fileSize)} | 
                 Base64: {formatFileSize(base64.length)}
               </p>
             </div>
             <button
               onClick={handleClear}
-              className="text-gray-300 hover:text-gray-200"
+              className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-200"
             >
               ✕
             </button>
@@ -150,13 +150,13 @@ export default function PdfToBase64() {
             onChange={toggleDataUri}
             className="w-4 h-4 text-blue-600 rounded"
           />
-          <span className="text-sm text-gray-300">{t('includeDataUri')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('includeDataUri')}</span>
         </label>
       </div>
 
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300">
             {t('base64Output')}
           </label>
           {base64 && (
@@ -172,13 +172,13 @@ export default function PdfToBase64() {
           value={base64}
           readOnly
           placeholder={t('outputPlaceholder')}
-          className="w-full h-64 p-3 border border-gray-600 rounded-lg bg-gray-900 text-gray-100 font-mono text-xs"
+          className="w-full h-64 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-mono text-xs"
         />
       </div>
 
-      <div className="p-4 bg-blue-50 rounded-lg">
-        <h3 className="font-medium text-blue-800 mb-2">{t('info')}</h3>
-        <p className="text-sm text-blue-700">{t('infoText')}</p>
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+        <h3 className="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('info')}</h3>
+        <p className="text-sm text-blue-700 dark:text-blue-400">{t('infoText')}</p>
       </div>
     </div>
   );

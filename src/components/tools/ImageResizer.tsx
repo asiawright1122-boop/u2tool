@@ -77,57 +77,57 @@ export default function ImageResizer() {
       <canvas ref={canvasRef} className="hidden" />
       
       {!image ? (
-        <label className="block border-2 border-dashed border-gray-700 rounded-lg p-8 text-center cursor-pointer hover:border-gray-600">
+        <label className="block border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-8 text-center cursor-pointer hover:border-gray-400 dark:hover:border-gray-600 bg-gray-50 dark:bg-transparent">
           <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
-          <div className="text-gray-300">{t('imageResizer.dropzone')}</div>
+          <div className="text-gray-600 dark:text-gray-300">{t('imageResizer.dropzone')}</div>
         </label>
       ) : (
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <div className="text-sm text-gray-300 mb-2">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
                 {t('imageResizer.original')}: {originalSize.width} × {originalSize.height}
               </div>
-              <img src={image} alt="Original" className="max-w-full h-auto rounded-lg border border-gray-700" />
+              <img src={image} alt="Original" className="max-w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700" />
             </div>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div>
-                  <label className="block text-sm text-gray-300 mb-1">{t('imageResizer.width')}</label>
+                  <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('imageResizer.width')}</label>
                   <input
                     type="number"
                     value={newWidth}
                     onChange={(e) => handleWidthChange(Number(e.target.value))}
-                    className="w-24 bg-gray-900 border border-gray-700 rounded px-3 py-2"
+                    className="w-24 tool-input"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-300 mb-1">{t('imageResizer.height')}</label>
+                  <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('imageResizer.height')}</label>
                   <input
                     type="number"
                     value={newHeight}
                     onChange={(e) => handleHeightChange(Number(e.target.value))}
-                    className="w-24 bg-gray-900 border border-gray-700 rounded px-3 py-2"
+                    className="w-24 tool-input"
                   />
                 </div>
                 <label className="flex items-center gap-2 mt-5">
                   <input type="checkbox" checked={lockRatio} onChange={(e) => setLockRatio(e.target.checked)} />
-                  <span className="text-sm text-gray-300">{t('imageResizer.lockRatio')}</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-300">{t('imageResizer.lockRatio')}</span>
                 </label>
               </div>
               <div className="flex gap-3">
-                <button onClick={resizeImage} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg">
+                <button onClick={resizeImage} className="btn-primary">
                   {t('imageResizer.resize')}
                 </button>
-                <button onClick={() => { setImage(null); setResizedImage(null); }} className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg">
+                <button onClick={() => { setImage(null); setResizedImage(null); }} className="btn-secondary">
                   {t('clear')}
                 </button>
               </div>
               {resizedImage && (
                 <div>
-                  <div className="text-sm text-gray-300 mb-2">{t('imageResizer.resized')}: {newWidth} × {newHeight}</div>
-                  <img src={resizedImage} alt="Resized" className="max-w-full h-auto rounded-lg border border-gray-700" />
-                  <button onClick={downloadImage} className="mt-2 px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg">
+                  <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('imageResizer.resized')}: {newWidth} × {newHeight}</div>
+                  <img src={resizedImage} alt="Resized" className="max-w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700" />
+                  <button onClick={downloadImage} className="mt-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg">
                     {t('download')}
                   </button>
                 </div>

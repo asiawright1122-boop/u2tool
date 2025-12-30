@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 interface TimelineEvent {
     id: number;
@@ -44,6 +45,7 @@ export default function TimelineChartGenerator() {
     const [direction, setDirection] = useState<'vertical' | 'horizontal'>('vertical');
 
     const chartRef = useRef<ReactECharts>(null);
+    const chartTheme = useChartTheme();
 
     const getChartOption = useCallback((): EChartsOption => {
         const colors = colorThemes[colorTheme];
@@ -61,7 +63,7 @@ export default function TimelineChartGenerator() {
                 formatter: `{year|${event.year}}\n{title|${event.title}}`,
                 rich: {
                     year: { fontSize: 14, fontWeight: 700, color: colors[0], padding: [5, 0] },
-                    title: { fontSize: 12, color: '#e5e7eb' },
+                    title: { fontSize: 12, color: chartTheme.labelColor },
                 }
             },
             tooltip: {
@@ -77,11 +79,11 @@ export default function TimelineChartGenerator() {
         }));
 
         return {
-            backgroundColor: '#1f2937',
+            backgroundColor: chartTheme.backgroundColor,
             title: {
                 text: chartTitle,
                 left: 'center',
-                textStyle: { fontSize: 18, fontWeight: 'bold', color: '#fff' },
+                textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
             },
             tooltip: { trigger: 'item' },
             grid: {
@@ -115,7 +117,7 @@ export default function TimelineChartGenerator() {
                 }
             ]
         };
-    }, [events, chartTitle, colorTheme, direction, t]);
+    }, [events, chartTitle, colorTheme, direction, t, chartTheme]);
 
     const addEvent = () => {
         const nextId = events.length > 0 ? Math.max(...events.map(e => e.id)) + 1 : 1;
@@ -145,7 +147,7 @@ export default function TimelineChartGenerator() {
             const url = echartInstance.getDataURL({
                 type: format,
                 pixelRatio: 2,
-                backgroundColor: '#1f2937',
+                backgroundColor: chartTheme.backgroundColor,
             });
             const link = document.createElement('a');
             link.download = `timeline-chart-${Date.now()}.${format}`;
@@ -177,7 +179,7 @@ export default function TimelineChartGenerator() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="space-y-4">
-                    <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 space-y-3">
+                    <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-3">
                         <label className="block text-sm font-medium">{t('settings')}</label>
                         <input
                             type="text"
@@ -217,10 +219,10 @@ export default function TimelineChartGenerator() {
                         </div>
                         <div className="space-y-3 max-h-[600px] overflow-y-auto">
                             {events.map((event, index) => (
-                                <div key={event.id} className="p-3 bg-gray-900 border border-gray-700 rounded-lg space-y-2">
+                                <div key={event.id} className="p-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg space-y-2">
                                     <div className="flex justify-between">
                                         <span className="text-xs text-gray-500">#{index + 1}</span>
-                                        <button onClick={() => removeEvent(index)} className="text-red-400 hover:text-red-300">✕</button>
+                                        <button onClick={() => removeEvent(index)} className="text-red-500 dark:text-red-400 hover:text-red-400 dark:hover:text-red-300">✕</button>
                                     </div>
                                     <div className="grid grid-cols-2 gap-2">
                                         <input
@@ -253,7 +255,7 @@ export default function TimelineChartGenerator() {
 
                 <div>
                     <h3 className="text-sm font-medium mb-2">{t('chartPreview')}</h3>
-                    <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '600px' }}>
+                    <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '600px' }}>
                         <ReactECharts
                             ref={chartRef}
                             option={getChartOption()}
@@ -263,9 +265,9 @@ export default function TimelineChartGenerator() {
                     </div>
                 </div>
             </div>
-            <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300 mt-4">
+            <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300 mt-4">
                 <p className="font-medium mb-1">💡 {t('tipsTitle')}</p>
-                <ul className="space-y-0.5 text-blue-400">
+                <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
                     <li>• {t('tip1')}</li>
                     <li>• {t('tip2')}</li>
                 </ul>

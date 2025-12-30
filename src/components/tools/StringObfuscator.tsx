@@ -46,13 +46,13 @@ export default function StringObfuscator() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
-      <div className="bg-gray-800 p-6 rounded-xl border border-gray-700">
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('input')}</label>
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
           rows={4}
-          className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 font-mono"
+          className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
           placeholder={t('inputPlaceholder')}
         />
       </div>
@@ -60,37 +60,37 @@ export default function StringObfuscator() {
       <div className="flex flex-wrap gap-4">
         <button
           onClick={() => setMethod('base64')}
-          className={`px-4 py-2 rounded-lg transition-colors ${method === 'base64' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}
+          className={`px-4 py-2 rounded-lg transition-colors ${method === 'base64' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodBase64')}
         </button>
         <button
           onClick={() => setMethod('hex')}
-          className={`px-4 py-2 rounded-lg transition-colors ${method === 'hex' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}
+          className={`px-4 py-2 rounded-lg transition-colors ${method === 'hex' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodHex')}
         </button>
         <button
           onClick={() => setMethod('html')}
-          className={`px-4 py-2 rounded-lg transition-colors ${method === 'html' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}
+          className={`px-4 py-2 rounded-lg transition-colors ${method === 'html' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodHtml')}
         </button>
         <button
           onClick={() => setMethod('url')}
-          className={`px-4 py-2 rounded-lg transition-colors ${method === 'url' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}
+          className={`px-4 py-2 rounded-lg transition-colors ${method === 'url' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodUrl')}
         </button>
         <button
           onClick={() => setMethod('rot13')}
-          className={`px-4 py-2 rounded-lg transition-colors ${method === 'rot13' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}
+          className={`px-4 py-2 rounded-lg transition-colors ${method === 'rot13' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodRot13')}
         </button>
         <button
           onClick={() => setMethod('reverse')}
-          className={`px-4 py-2 rounded-lg transition-colors ${method === 'reverse' ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}
+          className={`px-4 py-2 rounded-lg transition-colors ${method === 'reverse' ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
         >
           {t('methodReverse')}
         </button>
@@ -106,12 +106,12 @@ export default function StringObfuscator() {
       </div>
 
       {output && (
-        <div className="bg-gray-800 p-6 rounded-xl border border-gray-700">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
           <div className="flex justify-between items-center mb-2">
-            <label className="block text-sm font-medium text-gray-300">{t('result')} ({method})</label>
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-300">{t('result')} ({method})</label>
             <button
               onClick={() => navigator.clipboard.writeText(output)}
-              className="text-sm text-blue-400 hover:text-blue-300"
+              className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
             >
               {t('copy')}
             </button>
@@ -120,7 +120,7 @@ export default function StringObfuscator() {
             readOnly
             value={output}
             rows={4}
-            className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-green-400 font-mono"
+            className="w-full bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-green-600 dark:text-green-400 font-mono"
           />
         </div>
       )}

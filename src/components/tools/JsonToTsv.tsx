@@ -70,27 +70,27 @@ export default function JsonToTsv() {
 
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('jsonInput')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('jsonInput')}</label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="w-full h-64 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 font-mono text-sm focus:outline-none focus:border-blue-500"
+            className="w-full h-64 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
             placeholder={t('jsonPlaceholder')}
           />
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('tsvOutput')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('tsvOutput')}</label>
           <textarea
             value={output}
             readOnly
-            className="w-full h-64 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 font-mono text-sm focus:outline-none"
+            className="w-full h-64 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none"
             placeholder={t('tsvPlaceholder')}
           />
         </div>
       </div>
 
       {error && (
-        <div className="p-3 bg-red-900/30 border border-red-700 rounded-lg text-red-400 text-sm">
+        <div className="p-3 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm">
           {error}
         </div>
       )}

@@ -139,11 +139,11 @@ export default function TotpGenerator() {
             value={secret}
             onChange={(e) => setSecret(e.target.value.toUpperCase().replace(/[^A-Z2-7]/g, ''))}
             placeholder={t('totp.secretPlaceholder')}
-            className="flex-1 p-3 bg-gray-900 border border-gray-700 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="flex-1 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100"
           />
           <button
             onClick={handleGenerateSecret}
-            className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm"
+            className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg text-sm"
           >
             {t('generate')}
           </button>
@@ -156,17 +156,17 @@ export default function TotpGenerator() {
             {copiedSecret ? t('copied') : t('copy')}
           </button>
         </div>
-        <p className="mt-1 text-xs text-gray-300">{t('totp.secretHint')}</p>
+        <p className="mt-1 text-xs text-gray-600 dark:text-gray-300">{t('totp.secretHint')}</p>
       </div>
 
-      <div className="p-6 bg-gray-900 border border-gray-700 rounded-lg text-center">
-        <div className="text-sm text-gray-300 mb-2">{t('totp.currentCode')}</div>
+      <div className="p-6 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-center">
+        <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('totp.currentCode')}</div>
         <div className="text-4xl font-mono font-bold tracking-widest mb-4">
           {code.slice(0, 3)} {code.slice(3)}
         </div>
         <div className="flex items-center justify-center gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-32 bg-gray-700 rounded-full h-2">
+            <div className="w-32 bg-gray-300 dark:bg-gray-700 rounded-full h-2">
               <div
                 className={`h-2 rounded-full transition-all duration-1000 ${
                   timeLeft <= 5 ? 'bg-red-500' : timeLeft <= 10 ? 'bg-yellow-500' : 'bg-green-500'
@@ -174,7 +174,7 @@ export default function TotpGenerator() {
                 style={{ width: `${(timeLeft / 30) * 100}%` }}
               />
             </div>
-            <span className="text-sm text-gray-300">{timeLeft}s</span>
+            <span className="text-sm text-gray-600 dark:text-gray-300">{timeLeft}s</span>
           </div>
           <button
             onClick={copyCode}
@@ -188,9 +188,9 @@ export default function TotpGenerator() {
         </div>
       </div>
 
-      <div className="p-4 bg-gray-900/50 border border-gray-700 rounded-lg">
+      <div className="p-4 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-lg">
         <div className="text-sm font-medium mb-2">{t('totp.howItWorks')}</div>
-        <ul className="text-sm text-gray-300 space-y-1">
+        <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
           <li>• {t('totp.step1')}</li>
           <li>• {t('totp.step2')}</li>
           <li>• {t('totp.step3')}</li>

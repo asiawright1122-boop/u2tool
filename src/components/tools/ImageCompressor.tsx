@@ -106,7 +106,7 @@ export default function ImageCompressor() {
       {/* Quality Control */}
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('quality')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('quality')}:</label>
           <input
             type="range"
             min="10"
@@ -115,11 +115,11 @@ export default function ImageCompressor() {
             onChange={(e) => setQuality(Number(e.target.value))}
             className="w-32"
           />
-          <span className="text-sm font-mono w-12">{quality}%</span>
+          <span className="text-sm font-mono w-12 text-gray-900 dark:text-white">{quality}%</span>
         </div>
         <button
           onClick={clearAll}
-          className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded text-sm"
+          className="px-3 py-1.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-900 dark:text-white"
         >
           {t('clear')}
         </button>
@@ -128,7 +128,7 @@ export default function ImageCompressor() {
       {/* File Input */}
       <div
         onClick={() => fileInputRef.current?.click()}
-        className="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-500 transition-colors"
+        className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-400 dark:hover:border-gray-500 transition-colors bg-gray-50 dark:bg-transparent"
       >
         <input
           ref={fileInputRef}
@@ -138,8 +138,8 @@ export default function ImageCompressor() {
           className="hidden"
         />
         <div className="text-4xl mb-2">🖼️</div>
-        <p className="text-gray-300">{t('dropzone')}</p>
-        {fileName && <p className="text-sm text-gray-300 mt-2">{fileName}</p>}
+        <p className="text-gray-600 dark:text-gray-300">{t('dropzone')}</p>
+        {fileName && <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{fileName}</p>}
       </div>
 
       {/* Preview */}
@@ -147,10 +147,10 @@ export default function ImageCompressor() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label className="text-sm font-medium text-gray-300">{t('original')}</label>
-              <span className="text-sm text-gray-300">{formatSize(originalSize)}</span>
+              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('original')}</label>
+              <span className="text-sm text-gray-600 dark:text-gray-300">{formatSize(originalSize)}</span>
             </div>
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
+            <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
               <img
                 src={originalImage}
                 alt="Original"
@@ -161,14 +161,14 @@ export default function ImageCompressor() {
 
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label className="text-sm font-medium text-gray-300">{t('compressed')}</label>
+              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('compressed')}</label>
               {compressedSize > 0 && (
-                <span className="text-sm text-green-400">
+                <span className="text-sm text-green-600 dark:text-green-400">
                   {formatSize(compressedSize)} ({t('saved')} {getSavingsPercent()}%)
                 </span>
               )}
             </div>
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
+            <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
               {compressedImage ? (
                 <img
                   src={compressedImage}
@@ -176,7 +176,7 @@ export default function ImageCompressor() {
                   className="max-w-full max-h-64 object-contain"
                 />
               ) : (
-                <p className="text-gray-300">{t('compressFirst')}</p>
+                <p className="text-gray-600 dark:text-gray-300">{t('compressFirst')}</p>
               )}
             </div>
           </div>
@@ -189,14 +189,14 @@ export default function ImageCompressor() {
           <button
             onClick={compressImage}
             disabled={isProcessing}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
+            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium text-white"
           >
             {isProcessing ? t('processing') : t('compress')}
           </button>
           {compressedImage && (
             <button
               onClick={downloadCompressed}
-              className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium"
+              className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium text-white"
             >
               {t('download')}
             </button>
@@ -207,17 +207,17 @@ export default function ImageCompressor() {
       {/* Stats */}
       {compressedSize > 0 && (
         <div className="grid grid-cols-3 gap-4 text-center">
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="text-2xl font-bold text-blue-400">{formatSize(originalSize)}</div>
-            <div className="text-sm text-gray-300">{t('originalSize')}</div>
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{formatSize(originalSize)}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('originalSize')}</div>
           </div>
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="text-2xl font-bold text-green-400">{formatSize(compressedSize)}</div>
-            <div className="text-sm text-gray-300">{t('compressedSize')}</div>
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+            <div className="text-2xl font-bold text-green-600 dark:text-green-400">{formatSize(compressedSize)}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('compressedSize')}</div>
           </div>
-          <div className="bg-gray-800 rounded-lg p-4">
-            <div className="text-2xl font-bold text-yellow-400">{getSavingsPercent()}%</div>
-            <div className="text-sm text-gray-300">{t('reduction')}</div>
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+            <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">{getSavingsPercent()}%</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('reduction')}</div>
           </div>
         </div>
       )}

@@ -35,12 +35,12 @@ export default function NumberFormatter() {
     <div className="space-y-4">
       <div className="grid md:grid-cols-4 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('numberFormat.number')}</label>
-          <input type="text" value={number} onChange={(e) => setNumber(e.target.value)} className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono" />
+          <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200">{t('numberFormat.number')}</label>
+          <input type="text" value={number} onChange={(e) => setNumber(e.target.value)} className="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-gray-100" />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">{t('numberFormat.style')}</label>
-          <select value={style} onChange={(e) => setStyle(e.target.value as typeof style)} className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg">
+          <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200">{t('numberFormat.style')}</label>
+          <select value={style} onChange={(e) => setStyle(e.target.value as typeof style)} className="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100">
             <option value="decimal">{t('numberFormat.decimal')}</option>
             <option value="currency">{t('numberFormat.currency')}</option>
             <option value="percent">{t('numberFormat.percent')}</option>
@@ -48,8 +48,8 @@ export default function NumberFormatter() {
         </div>
         {style === 'currency' && (
           <div>
-            <label className="block text-sm font-medium mb-2">{t('numberFormat.currencyCode')}</label>
-            <select value={currency} onChange={(e) => setCurrency(e.target.value)} className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg">
+            <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-200">{t('numberFormat.currencyCode')}</label>
+            <select value={currency} onChange={(e) => setCurrency(e.target.value)} className="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100">
               <option value="USD">USD ($)</option>
               <option value="EUR">EUR (€)</option>
               <option value="GBP">GBP (£)</option>
@@ -61,10 +61,10 @@ export default function NumberFormatter() {
       </div>
       <div className="grid md:grid-cols-3 gap-3">
         {formats.map(({ locale, formatted }) => (
-          <div key={locale} onClick={() => copy(formatted)} className="bg-gray-800 rounded-lg p-4 cursor-pointer hover:bg-gray-700 transition-colors">
-            <p className="text-sm text-gray-300 mb-1">{locale}</p>
-            <p className="text-lg font-mono">{formatted}</p>
-            {copied === formatted && <span className="text-xs text-green-400">{t('copied')}</span>}
+          <div key={locale} onClick={() => copy(formatted)} className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">{locale}</p>
+            <p className="text-lg font-mono text-gray-900 dark:text-gray-100">{formatted}</p>
+            {copied === formatted && <span className="text-xs text-green-600 dark:text-green-400">{t('copied')}</span>}
           </div>
         ))}
       </div>

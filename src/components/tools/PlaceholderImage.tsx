@@ -64,29 +64,29 @@ export default function PlaceholderImage() {
     <div className="space-y-4">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('width')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('width')}</label>
           <input
             type="number"
             value={width}
             min={1}
             max={2000}
             onChange={(e) => setWidth(Math.min(2000, Math.max(1, Number(e.target.value))))}
-            className="w-full bg-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('height')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('height')}</label>
           <input
             type="number"
             value={height}
             min={1}
             max={2000}
             onChange={(e) => setHeight(Math.min(2000, Math.max(1, Number(e.target.value))))}
-            className="w-full bg-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('bgColor')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('bgColor')}</label>
           <div className="flex gap-2">
             <input
               type="color"
@@ -98,12 +98,12 @@ export default function PlaceholderImage() {
               type="text"
               value={bgColor}
               onChange={(e) => setBgColor(e.target.value)}
-              className="flex-1 bg-gray-700 rounded-lg px-2 py-2 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="flex-1 bg-gray-100 dark:bg-gray-700 rounded-lg px-2 py-2 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('textColor')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('textColor')}</label>
           <div className="flex gap-2">
             <input
               type="color"
@@ -115,48 +115,48 @@ export default function PlaceholderImage() {
               type="text"
               value={textColor}
               onChange={(e) => setTextColor(e.target.value)}
-              className="flex-1 bg-gray-700 rounded-lg px-2 py-2 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="flex-1 bg-gray-100 dark:bg-gray-700 rounded-lg px-2 py-2 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
         </div>
       </div>
 
       <div>
-        <label className="block text-sm text-gray-300 mb-1">{t('customText')}</label>
+        <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('customText')}</label>
         <input
           type="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder={`${width} × ${height}`}
-          className="w-full bg-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
         />
       </div>
 
       <div className="flex gap-2 flex-wrap">
         <button
           onClick={generateImage}
-          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-white"
         >
           {t('generate')}
         </button>
         <button
           onClick={downloadImage}
-          className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
+          className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors text-white"
         >
           {tg('download')} PNG
         </button>
         <button
           onClick={copyDataUrl}
-          className="px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded-lg transition-colors"
+          className="px-4 py-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-700 rounded-lg transition-colors text-gray-900 dark:text-white"
         >
           {tg('copy')} Data URL
         </button>
       </div>
 
-      <div className="bg-gray-700 rounded-lg p-4 flex justify-center items-center overflow-auto">
+      <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 flex justify-center items-center overflow-auto">
         <canvas
           ref={canvasRef}
-          className="max-w-full border border-gray-600 rounded"
+          className="max-w-full border border-gray-300 dark:border-gray-600 rounded"
           style={{ maxHeight: '400px' }}
         />
       </div>
@@ -169,7 +169,7 @@ export default function PlaceholderImage() {
           <button
             key={`${w}x${h}`}
             onClick={() => { setWidth(w); setHeight(h); }}
-            className="px-3 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors"
+            className="px-3 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm transition-colors text-gray-900 dark:text-white"
           >
             {w}×{h}
           </button>

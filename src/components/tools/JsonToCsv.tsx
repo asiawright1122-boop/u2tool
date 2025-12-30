@@ -144,7 +144,7 @@ export default function JsonToCsv() {
       </div>
 
       {error && (
-        <div className="p-3 bg-red-900/50 border border-red-700 rounded-lg text-red-300 text-sm">
+        <div className="tool-error">
           {error}
         </div>
       )}
@@ -152,16 +152,16 @@ export default function JsonToCsv() {
       {output && (
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium">{t('output')}</label>
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</label>
             <div className="flex gap-2">
               <button
                 onClick={copyOutput}
-                className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+                className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
               >
                 {copied ? t('copied') : t('copy')}
               </button>
               {output.includes(',') && !output.startsWith('[') && (
-                <button onClick={downloadCsv} className="text-sm px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded">
+                <button onClick={downloadCsv} className="text-sm px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded">
                   {t('download')} CSV
                 </button>
               )}

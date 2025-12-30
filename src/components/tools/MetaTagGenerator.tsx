@@ -86,7 +86,7 @@ export default function MetaTagGenerator() {
           rows={2}
           placeholder={t('metaTagGenerator.descriptionPlaceholder')}
         />
-        <div className="text-xs text-gray-300 mt-1">{description.length} {t('metaTagGenerator.characters')}</div>
+        <div className="text-xs text-gray-600 dark:text-gray-300 mt-1">{description.length} {t('metaTagGenerator.characters')}</div>
       </div>
 
       <div>
@@ -179,7 +179,7 @@ export default function MetaTagGenerator() {
           <label className="text-sm font-medium">{t('metaTagGenerator.generatedMetaTags')}</label>
           <button
             onClick={copyOutput}
-            className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+            className={`text-sm px-3 py-1 rounded text-white ${copied ? 'bg-green-600' : 'bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600'}`}
           >
             {copied ? t('copied') : t('copy')}
           </button>

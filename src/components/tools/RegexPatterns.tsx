@@ -53,31 +53,31 @@ export default function RegexPatterns() {
   return (
     <div className="space-y-4">
       {selectedPattern && (
-        <div className="bg-gray-800 rounded p-4 space-y-3">
+        <div className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-4 space-y-3">
           <div className="flex justify-between items-center">
-            <span className="font-medium">{t(`regexPatterns.${selectedPattern.name}`)}</span>
+            <span className="font-medium text-gray-900 dark:text-white">{t(`regexPatterns.${selectedPattern.name}`)}</span>
             <button
               onClick={() => setSelectedPattern(null)}
-              className="text-gray-300 hover:text-white"
+              className="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white"
             >
               ✕
             </button>
           </div>
-          <code className="block bg-gray-900 p-2 rounded text-sm text-green-400 break-all">
+          <code className="block bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-2 rounded text-sm text-green-600 dark:text-green-400 break-all">
             {selectedPattern.pattern}
           </code>
           <div>
-            <label className="block text-sm text-gray-300 mb-1">{t('regexPatterns.test')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('regexPatterns.test')}</label>
             <input
               type="text"
               value={testInput}
               onChange={(e) => setTestInput(e.target.value)}
-              className="w-full bg-gray-900 rounded p-2"
+              className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded p-2 text-gray-900 dark:text-white"
               placeholder={selectedPattern.example}
             />
           </div>
           {testInput && (
-            <div className={`text-sm ${isMatch ? 'text-green-400' : 'text-red-400'}`}>
+            <div className={`text-sm ${isMatch ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
               {isMatch ? '✅ ' + t('regexPatterns.match') : '❌ ' + t('regexPatterns.noMatch')}
             </div>
           )}
@@ -88,22 +88,22 @@ export default function RegexPatterns() {
         {patterns.map((p) => (
           <div
             key={p.name}
-            className="bg-gray-800 rounded p-3 flex items-center justify-between hover:bg-gray-750"
+            className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 flex items-center justify-between hover:bg-gray-200 dark:hover:bg-gray-750"
           >
             <div className="flex-1 min-w-0">
-              <div className="font-medium text-sm">{t(`regexPatterns.${p.name}`)}</div>
-              <code className="text-xs text-gray-300 truncate block">{p.pattern}</code>
+              <div className="font-medium text-sm text-gray-900 dark:text-white">{t(`regexPatterns.${p.name}`)}</div>
+              <code className="text-xs text-gray-500 dark:text-gray-300 truncate block">{p.pattern}</code>
             </div>
             <div className="flex gap-2 ml-2">
               <button
                 onClick={() => testPattern(p)}
-                className="text-xs bg-gray-700 hover:bg-gray-600 px-2 py-1 rounded"
+                className="text-xs bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 px-2 py-1 rounded"
               >
                 {t('regexPatterns.tryIt')}
               </button>
               <button
                 onClick={() => copyPattern(p.pattern)}
-                className="text-xs bg-blue-600 hover:bg-blue-700 px-2 py-1 rounded"
+                className="text-xs bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded"
               >
                 {copied === p.pattern ? '✓' : t('copy')}
               </button>

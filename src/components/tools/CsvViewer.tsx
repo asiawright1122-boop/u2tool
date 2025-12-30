@@ -65,11 +65,11 @@ export default function CsvViewer() {
     <div className="space-y-6">
       <div className="flex flex-wrap gap-4 items-center">
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('csvJson.delimiter')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('csvJson.delimiter')}</label>
           <select
             value={delimiter}
             onChange={(e) => setDelimiter(e.target.value)}
-            className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500"
+            className="tool-select"
           >
             <option value=",">{t('csvViewer.delimiterComma')}</option>
             <option value=";">{t('csvViewer.delimiterSemicolon')}</option>
@@ -82,9 +82,9 @@ export default function CsvViewer() {
             type="checkbox"
             checked={hasHeader}
             onChange={(e) => setHasHeader(e.target.checked)}
-            className="w-4 h-4 rounded"
+            className="tool-checkbox"
           />
-          <span>{t('csvJson.hasHeader')}</span>
+          <span className="text-gray-700 dark:text-gray-300">{t('csvJson.hasHeader')}</span>
         </label>
         <button
           onClick={downloadCSV}
@@ -95,31 +95,31 @@ export default function CsvViewer() {
       </div>
 
       <div>
-        <label className="block text-sm text-gray-300 mb-2">{t('csvViewer.csvInput')}</label>
+        <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('csvViewer.csvInput')}</label>
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="w-full h-40 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 font-mono text-sm focus:outline-none focus:border-blue-500"
+          className="tool-textarea"
           placeholder={t('csvViewer.csvPlaceholder')}
         />
       </div>
 
       <div>
         <div className="flex items-center justify-between mb-2">
-          <label className="text-sm text-gray-300">{t('csvViewer.tablePreview')}</label>
-          <span className="text-sm text-gray-300">
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('csvViewer.tablePreview')}</label>
+          <span className="text-sm text-gray-600 dark:text-gray-300">
             {t('csvViewer.stats', { rows: rows.length, columns: columnsCount })}
           </span>
         </div>
         
-        <div className="overflow-x-auto border border-gray-700 rounded-lg">
+        <div className="overflow-x-auto border border-gray-200 dark:border-gray-700 rounded-lg">
           <table className="w-full">
             {hasHeader && headers.length > 0 && (
-              <thead className="bg-gray-800">
+              <thead className="bg-gray-100 dark:bg-gray-800">
                 <tr>
-                  <th className="py-2 px-4 text-left text-xs text-gray-300 border-r border-gray-700">#</th>
+                  <th className="py-2 px-4 text-left text-xs text-gray-600 dark:text-gray-300 border-r border-gray-200 dark:border-gray-700">#</th>
                   {headers.map((header, i) => (
-                    <th key={i} className="py-2 px-4 text-left font-semibold border-r border-gray-700 last:border-r-0">
+                    <th key={i} className="py-2 px-4 text-left font-semibold text-gray-900 dark:text-white border-r border-gray-200 dark:border-gray-700 last:border-r-0">
                       {header}
                     </th>
                   ))}
@@ -128,13 +128,13 @@ export default function CsvViewer() {
             )}
             <tbody>
               {rows.map((row, rowIndex) => (
-                <tr key={rowIndex} className="border-t border-gray-700 hover:bg-gray-800/50">
-                  <td className="py-2 px-4 text-xs text-gray-300 border-r border-gray-700">
+                <tr key={rowIndex} className="border-t border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                  <td className="py-2 px-4 text-xs text-gray-600 dark:text-gray-300 border-r border-gray-200 dark:border-gray-700">
                     {rowIndex + 1}
                   </td>
                   {row.map((cell, cellIndex) => (
-                    <td key={cellIndex} className="py-2 px-4 border-r border-gray-700 last:border-r-0">
-                      {cell || <span className="text-gray-300">—</span>}
+                    <td key={cellIndex} className="py-2 px-4 text-gray-900 dark:text-white border-r border-gray-200 dark:border-gray-700 last:border-r-0">
+                      {cell || <span className="text-gray-400 dark:text-gray-500">—</span>}
                     </td>
                   ))}
                 </tr>
@@ -143,14 +143,14 @@ export default function CsvViewer() {
           </table>
           
           {rows.length === 0 && (
-            <div className="text-center py-8 text-gray-300">
+            <div className="text-center py-8 text-gray-500 dark:text-gray-400">
               {t('csvViewer.noData')}
             </div>
           )}
         </div>
       </div>
 
-      <div className="p-4 bg-gray-800/50 rounded-lg text-sm text-gray-300">
+      <div className="p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-sm text-gray-600 dark:text-gray-300">
         <p>💡 {t('csvViewer.tip')}</p>
       </div>
     </div>

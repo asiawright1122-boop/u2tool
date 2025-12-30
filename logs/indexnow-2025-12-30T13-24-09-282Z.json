@@ -1,0 +1,100 @@
+{
+  "timestamp": "2025-12-30T13:24:09.283Z",
+  "config": {
+    "siteUrl": "https://www.u2tool.com",
+    "indexNowKey": "35151298...",
+    "dryRun": false,
+    "locale": "all",
+    "category": "all",
+    "batchSize": 100
+  },
+  "summary": {
+    "totalUrls": 1055,
+    "successUrls": 1055,
+    "failedUrls": 0,
+    "successRate": "100.00%",
+    "totalBatches": 11,
+    "successBatches": 11,
+    "failedBatches": 0
+  },
+  "results": [
+    {
+      "batch": 1,
+      "urlCount": 100,
+      "success": true,
+      "message": "HTTP 202 - 提交成功",
+      "timestamp": "2025-12-30T13:23:57.238Z"
+    },
+    {
+      "batch": 2,
+      "urlCount": 100,
+      "success": true,
+      "message": "HTTP 200 - 提交成功",
+      "timestamp": "2025-12-30T13:23:59.158Z"
+    },
+    {
+      "batch": 3,
+      "urlCount": 100,
+      "success": true,
+      "message": "HTTP 200 - 提交成功",
+      "timestamp": "2025-12-30T13:24:00.186Z"
+    },
+    {
+      "batch": 4,
+      "urlCount": 100,
+      "success": true,
+      "message": "HTTP 200 - 提交成功",
+      "timestamp": "2025-12-30T13:24:01.445Z"
+    },
+    {
+      "batch": 5,
+      "urlCount": 100,
+      "success": true,
+      "message": "HTTP 200 - 提交成功",
+      "timestamp": "2025-12-30T13:24:02.515Z"
+    },
+    {
+      "batch": 6,
+      "urlCount": 100,
+      "success": true,
+      "message": "HTTP 200 - 提交成功",
+      "timestamp": "2025-12-30T13:24:03.536Z"
+    },
+    {
+      "batch": 7,
+      "urlCount": 100,
+      "success": true,
+      "message": "HTTP 200 - 提交成功",
+      "timestamp": "2025-12-30T13:24:04.512Z"
+    },
+    {
+      "batch": 8,
+      "urlCount": 100,
+      "success": true,
+      "message": "HTTP 200 - 提交成功",
+      "timestamp": "2025-12-30T13:24:05.509Z"
+    },
+    {
+      "batch": 9,
+      "urlCount": 100,
+      "success": true,
+      "message": "HTTP 200 - 提交成功",
+      "timestamp": "2025-12-30T13:24:06.609Z"
+    },
+    {
+      "batch": 10,
+      "urlCount": 100,
+      "success": true,
+      "message": "HTTP 200 - 提交成功",
+      "timestamp": "2025-12-30T13:24:07.734Z"
+    },
+    {
+      "batch": 11,
+      "urlCount": 55,
+      "success": true,
+      "message": "HTTP 200 - 提交成功",
+      "timestamp": "2025-12-30T13:24:08.700Z"
+    }
+  ],
+  "failedBatchDetails": []
+}

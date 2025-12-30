@@ -138,65 +138,65 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
       <div className="grid md:grid-cols-2 gap-6">
         <div className="space-y-4">
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('termsGenerator.websiteName')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.websiteName')}</label>
             <input
               type="text"
               value={config.websiteName}
               onChange={(e) => setConfig({ ...config, websiteName: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder={t('termsGenerator.websiteNamePlaceholder')}
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('termsGenerator.websiteUrl')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.websiteUrl')}</label>
             <input
               type="text"
               value={config.websiteUrl}
               onChange={(e) => setConfig({ ...config, websiteUrl: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder={t('termsGenerator.websiteUrlPlaceholder')}
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('termsGenerator.companyName')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.companyName')}</label>
             <input
               type="text"
               value={config.companyName}
               onChange={(e) => setConfig({ ...config, companyName: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder={t('termsGenerator.companyNamePlaceholder')}
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('termsGenerator.contactEmail')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.contactEmail')}</label>
             <input
               type="email"
               value={config.email}
               onChange={(e) => setConfig({ ...config, email: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder={t('termsGenerator.contactEmailPlaceholder')}
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('termsGenerator.governingLawCountry')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.governingLawCountry')}</label>
             <input
               type="text"
               value={config.country}
               onChange={(e) => setConfig({ ...config, country: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder={t('termsGenerator.governingLawCountryPlaceholder')}
             />
           </div>
         </div>
 
         <div className="space-y-3">
-          <label className="block text-sm text-gray-300 mb-2">{t('termsGenerator.featuresTitle')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.featuresTitle')}</label>
           {[
             { key: 'allowsUserContent', label: t('termsGenerator.features.allowsUserContent') },
             { key: 'hasSubscription', label: t('termsGenerator.features.hasSubscription') },
             { key: 'hasRefundPolicy', label: t('termsGenerator.features.hasRefundPolicy') },
           ].map(({ key, label }) => (
-            <label key={key} className="flex items-center gap-3 cursor-pointer p-2 hover:bg-gray-800 rounded">
+            <label key={key} className="flex items-center gap-3 cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded text-gray-700 dark:text-white">
               <input
                 type="checkbox"
                 checked={config[key as keyof typeof config] as boolean}
@@ -224,11 +224,11 @@ ${config.companyName ? `**${config.companyName}**\n` : ''}${config.email ? `Emai
 
       {output && (
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('termsGenerator.generatedOutput')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('termsGenerator.generatedOutput')}</label>
           <textarea
             value={output}
             readOnly
-            className="w-full h-96 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 font-mono text-sm focus:outline-none"
+            className="w-full h-96 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none"
           />
         </div>
       )}

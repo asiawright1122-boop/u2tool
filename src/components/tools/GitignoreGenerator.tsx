@@ -379,7 +379,7 @@ export default function GitignoreGenerator() {
       <div className="space-y-4">
         {categories.map((category) => (
           <div key={category.name}>
-            <label className="text-sm font-medium text-gray-300 block mb-2">{category.name}</label>
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300 block mb-2">{category.name}</label>
             <div className="flex flex-wrap gap-2">
               {category.ids.map((id) => {
                 const template = TEMPLATES.find((t) => t.id === id);
@@ -391,7 +391,7 @@ export default function GitignoreGenerator() {
                     className={`px-3 py-1.5 rounded text-sm ${
                       selectedTemplates.includes(id)
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                     }`}
                   >
                     {template.name}
@@ -405,12 +405,12 @@ export default function GitignoreGenerator() {
 
       {/* Custom Content */}
       <div>
-        <label className="text-sm font-medium text-gray-300 block mb-2">{t('custom')}</label>
+        <label className="text-sm font-medium text-gray-700 dark:text-gray-300 block mb-2">{t('custom')}</label>
         <textarea
           value={customContent}
           onChange={(e) => setCustomContent(e.target.value)}
           placeholder={t('customPlaceholder')}
-          className="w-full h-32 bg-gray-800 border border-gray-700 rounded-lg p-4 font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full h-32 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-gray-100 resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
       </div>
 
@@ -419,13 +419,13 @@ export default function GitignoreGenerator() {
         <button
           onClick={generate}
           disabled={selectedTemplates.length === 0 && !customContent.trim()}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium text-white"
         >
           {t('generate')}
         </button>
         <button
           onClick={clearAll}
-          className="px-6 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg font-medium"
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg font-medium text-gray-900 dark:text-gray-100"
         >
           {t('clear')}
         </button>
@@ -435,17 +435,17 @@ export default function GitignoreGenerator() {
       {output && (
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">.gitignore</label>
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">.gitignore</label>
             <div className="flex gap-2">
               <button
                 onClick={copyOutput}
-                className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs"
+                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-xs text-gray-900 dark:text-gray-100"
               >
                 {t('copy')}
               </button>
               <button
                 onClick={downloadOutput}
-                className="px-2 py-1 bg-green-600 hover:bg-green-700 rounded text-xs"
+                className="px-2 py-1 bg-green-600 hover:bg-green-700 rounded text-xs text-white"
               >
                 {t('download')}
               </button>
@@ -454,7 +454,7 @@ export default function GitignoreGenerator() {
           <textarea
             value={output}
             readOnly
-            className="w-full h-96 bg-gray-800 border border-gray-700 rounded-lg p-4 font-mono text-sm resize-none"
+            className="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-gray-100 resize-none"
           />
         </div>
       )}

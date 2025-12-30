@@ -186,50 +186,50 @@ export default function JsonToJava() {
       {/* Options */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('className')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('className')}</label>
           <input
             type="text"
             value={options.className}
             onChange={(e) => setOptions({ ...options, className: e.target.value })}
-            className="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm"
+            className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('packageName')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('packageName')}</label>
           <input
             type="text"
             value={options.packageName}
             onChange={(e) => setOptions({ ...options, packageName: e.target.value })}
-            className="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm"
+            className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label className="flex items-center gap-2 text-sm">
+          <label className="flex items-center gap-2 text-sm text-gray-600 dark:text-white">
             <input
               type="checkbox"
               checked={options.useLombok}
               onChange={(e) => setOptions({ ...options, useLombok: e.target.checked })}
-              className="rounded bg-gray-700 border-gray-600"
+              className="rounded bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
             {t('useLombok')}
           </label>
-          <label className="flex items-center gap-2 text-sm">
+          <label className="flex items-center gap-2 text-sm text-gray-600 dark:text-white">
             <input
               type="checkbox"
               checked={options.useGettersSetters}
               onChange={(e) => setOptions({ ...options, useGettersSetters: e.target.checked })}
               disabled={options.useLombok}
-              className="rounded bg-gray-700 border-gray-600"
+              className="rounded bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
             {t('useGettersSetters')}
           </label>
-          <label className="flex items-center gap-2 text-sm">
+          <label className="flex items-center gap-2 text-sm text-gray-600 dark:text-white">
             <input
               type="checkbox"
               checked={options.useBuilder}
               onChange={(e) => setOptions({ ...options, useBuilder: e.target.checked })}
               disabled={!options.useLombok}
-              className="rounded bg-gray-700 border-gray-600"
+              className="rounded bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
             {t('useBuilder')}
           </label>
@@ -240,10 +240,10 @@ export default function JsonToJava() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">JSON</label>
+            <label className="text-sm font-medium text-gray-600 dark:text-gray-300">JSON</label>
             <button
               onClick={loadSample}
-              className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs"
+              className="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-xs"
             >
               {t('loadSample')}
             </button>
@@ -252,17 +252,17 @@ export default function JsonToJava() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={t('inputPlaceholder')}
-            className="w-full h-96 bg-gray-800 border border-gray-700 rounded-lg p-4 font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full h-96 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">Java</label>
+            <label className="text-sm font-medium text-gray-600 dark:text-gray-300">Java</label>
             <button
               onClick={copyOutput}
               disabled={!output}
-              className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs disabled:opacity-50"
+              className="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-xs disabled:opacity-50"
             >
               {t('copy')}
             </button>
@@ -271,7 +271,7 @@ export default function JsonToJava() {
             value={output}
             readOnly
             placeholder={t('outputPlaceholder')}
-            className="w-full h-96 bg-gray-800 border border-gray-700 rounded-lg p-4 font-mono text-sm resize-none"
+            className="w-full h-96 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none"
           />
         </div>
       </div>
@@ -281,7 +281,7 @@ export default function JsonToJava() {
         <button
           onClick={convert}
           disabled={!input.trim()}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
         >
           {t('convert')}
         </button>
@@ -289,7 +289,7 @@ export default function JsonToJava() {
 
       {/* Error */}
       {error && (
-        <div className="p-4 bg-red-900/50 border border-red-700 rounded-lg text-red-300">
+        <div className="p-4 bg-red-100 dark:bg-red-900/50 border border-red-400 dark:border-red-700 rounded-lg text-red-700 dark:text-red-300">
           {error}
         </div>
       )}

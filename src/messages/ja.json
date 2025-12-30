@@ -20,6 +20,7 @@
     "home": "ホーム",
     "tools": "ツール",
     "about": "概要",
+    "blog": "ブログ",
     "viewAllTools": "すべてのツールを見る",
     "searchPlaceholder": "ツールを検索...",
     "noResults": "ツールが見つかりません",
@@ -71,6 +72,8 @@
     "copy": "コピー",
     "clear": "クリア",
     "add": "追加",
+    "expandAll": "すべて展開",
+    "collapseAll": "すべて折りたたむ",
     "generate": "生成",
     "convert": "変換",
     "format": "形式",
@@ -107,7 +110,7 @@
       "global": "グローバル",
       "caseInsensitive": "大文字と小文字を区別しない",
       "multiline": "複数行",
-      "dotall": "ドートール",
+      "dotall": "ドットオール",
       "atIndex": "インデックスで"
     },
     "password": {
@@ -152,7 +155,7 @@
     },
     "wordCounter": {
       "words": "単語",
-      "characters": "キャラクター",
+      "characters": "文字",
       "sentences": "文",
       "paragraphs": "段落",
       "readingTime": "読書時間",
@@ -217,7 +220,7 @@
       "linear": "リニア",
       "radial": "ラジアル",
       "css": "CSS",
-      "tailwind": "追い風",
+      "tailwind": "Tailwind",
       "sunset": "サンセット",
       "ocean": "オーシャン",
       "forest": "フォレスト",
@@ -265,7 +268,7 @@
       "codeType": "コードの種類"
     },
     "sql": {
-      "loadExample": "負荷の例"
+      "loadExample": "サンプルを読み込む"
     },
     "pinyin": {
       "placeholder": "中国語のテキストを入力してください...",
@@ -445,14 +448,14 @@
     },
     "tableGen": {
       "rows": "行",
-      "cols": "コラム",
+      "cols": "列",
       "hasHeader": "ヘッダーあり",
       "header": "ヘッダ",
-      "cell": "細胞",
+      "cell": "セル",
       "preview": "プレビュー"
     },
     "schemaValidator": {
-      "loadExample": "負荷の例",
+      "loadExample": "サンプルを読み込む",
       "jsonPlaceholder": "JSONデータを入力してください...",
       "schemaPlaceholder": "JSON スキーマを入力してください...",
       "validate": "検証する",
@@ -489,7 +492,7 @@
     },
     "byteCounter": {
       "placeholder": "バイト数をカウントするテキストを入力してください...",
-      "characters": "キャラクター",
+      "characters": "文字",
       "bytes": "バイト",
       "lines": "行",
       "size": "ファイルサイズ"
@@ -591,7 +594,7 @@
       "read": "読む(r)",
       "write": "書く(w)",
       "execute": "実行(x)",
-      "command": "指示"
+      "command": "コマンド"
     },
     "barcode": {
       "text": "テキスト/データ",
@@ -612,7 +615,7 @@
       "pathname": "パス",
       "search": "クエリ文字列",
       "hash": "ハッシュ",
-      "origin": "起源",
+      "origin": "オリジン",
       "queryParams": "クエリパラメータ",
       "invalid": "無効な URL"
     },
@@ -679,9 +682,9 @@
       "claims": {
         "iss": "発行者",
         "sub": "主題",
-        "aud": "観客",
+        "aud": "オーディエンス",
         "exp": "有効期限",
-        "nbf": "以前はありませんでした",
+        "nbf": "有効開始日時",
         "iat": "発行日",
         "jti": "JWT ID"
       }
@@ -693,7 +696,7 @@
       "authorPlaceholder": "ジョン・ドゥ",
       "description": "説明 (150 ～ 160 文字を推奨)",
       "descriptionPlaceholder": "ページの簡単な説明...",
-      "characters": "キャラクター",
+      "characters": "文字",
       "keywords": "キーワード (カンマ区切り)",
       "keywordsPlaceholder": "ウェブ、開発、ツール",
       "ogImageUrl": "OG Image URL",
@@ -818,7 +821,7 @@
       "alignBaseline": "ベースライン",
       "flexWrap": "フレックスラップ",
       "wrapNoWrap": "ラップなし",
-      "wrapWrap": "包む",
+      "wrapWrap": "折り返す",
       "wrapWrapReverse": "ラップリバース",
       "gap": "ギャップ (ピクセル)",
       "items": "アイテム",
@@ -893,8 +896,8 @@
     "pwStrength": {
       "password": "パスワード",
       "placeholder": "パスワードを入力して確認してください...",
-      "show": "見せる",
-      "hide": "隠れる",
+      "show": "表示",
+      "hide": "非表示",
       "strength": "強さ",
       "score": "スコア",
       "length": "長さ",
@@ -953,7 +956,7 @@
     "httpHeader": {
       "input": "HTTP Headers",
       "placeholder": "HTTP ヘッダーを 1 行に 1 つずつ入力します...",
-      "loadExample": "負荷の例",
+      "loadExample": "サンプルを読み込む",
       "parse": "解析する",
       "parsed": "解析されたヘッダー"
     },
@@ -1000,7 +1003,7 @@
       "tableName": "テーブル名",
       "dialect": "SQL Dialect",
       "includeCreate": "CREATE TABLE を含める",
-      "loadExample": "負荷の例",
+      "loadExample": "サンプルを読み込む",
       "jsonPlaceholder": "JSON 配列を入力してください..."
     },
     "emoji": {
@@ -1026,7 +1029,7 @@
     "extractor": {
       "type": "抽出タイプ",
       "extract": "抽出する",
-      "loadExample": "負荷の例",
+      "loadExample": "サンプルを読み込む",
       "placeholder": "抽出するテキストを入力してください...",
       "found": "見つかった",
       "copyAll": "すべてコピー",
@@ -1054,7 +1057,7 @@
       "removeEmpty": "空行の削除",
       "removeDuplicates": "重複の削除",
       "sort": "選別",
-      "loadExample": "負荷の例",
+      "loadExample": "サンプルを読み込む",
       "lines": "行",
       "placeholder": "テキストを 1 行に 1 項目ずつ入力してください...",
       "sortTypes": "並べ替えの種類",
@@ -1084,7 +1087,7 @@
     "json-to-java": {
       "className": "クラス名",
       "packageName": "パッケージ名",
-      "useLombok": "ロンボク島 @Data を使用する",
+      "useLombok": "Lombok @Data を使用",
       "useGettersSetters": "ゲッター/セッターの生成",
       "useBuilder": "@Builder を使用する",
       "loadSample": "サンプルを読み込む",
@@ -1223,7 +1226,7 @@
       "private": "プライベートパッケージ",
       "scripts": "スクリプト",
       "scriptName": "スクリプト名",
-      "scriptCommand": "指示",
+      "scriptCommand": "コマンド",
       "commonScripts": "一般的なスクリプト",
       "generate": "生成",
       "copy": "コピー",
@@ -1880,7 +1883,7 @@
       "pathname": "パス",
       "search": "クエリ文字列",
       "hash": "ハッシュ",
-      "origin": "起源",
+      "origin": "オリジン",
       "queryParams": "クエリパラメータ",
       "invalid": "無効な URL",
       "defaultPort": "（デフォルト）",
@@ -1996,7 +1999,7 @@
       "tableName": "テーブル名",
       "dialect": "方言",
       "includeCreate": "CREATE TABLE を含める",
-      "loadExample": "負荷の例",
+      "loadExample": "サンプルを読み込む",
       "jsonPlaceholder": "JSON 配列を入力してください...",
       "input": "入力",
       "output": "出力"
@@ -2105,7 +2108,7 @@
       "center": "中心",
       "right": "右",
       "header": "ヘッダ",
-      "cell": "細胞",
+      "cell": "セル",
       "removeRow": "行を削除",
       "removeColumn": "列を削除する",
       "markdownOutput": "マークダウン出力",
@@ -2942,7 +2945,7 @@
       "readingSpeed": "読み取り速度:",
       "wpm": "WPM",
       "words": "単語",
-      "characters": "キャラクター",
+      "characters": "文字",
       "sentences": "文",
       "paragraphs": "段落",
       "readingTime": "読書時間",
@@ -3026,7 +3029,7 @@
       "removePunctuation": "句読点を削除する",
       "lowercase": "小文字に変換",
       "uppercase": "大文字に変換",
-      "characters": "キャラクター",
+      "characters": "文字",
       "lines": "行",
       "placeholder": "ここにテキストを貼り付けます..."
     },
@@ -3976,7 +3979,7 @@
         "inquiry": "問い合わせ",
         "order": "注文",
         "click": "クリック",
-        "show": "見せる",
+        "show": "表示",
         "awareness": "意識",
         "interest": "興味",
         "consideration": "考慮",
@@ -5410,7 +5413,7 @@
       "pathname": "パス",
       "search": "クエリ文字列",
       "hash": "ハッシュ",
-      "origin": "起源",
+      "origin": "オリジン",
       "queryParams": "クエリパラメータ",
       "invalid": "無効な URL",
       "defaultPort": "（デフォルト）",
@@ -5526,7 +5529,7 @@
       "tableName": "テーブル名",
       "dialect": "方言",
       "includeCreate": "CREATE TABLE を含める",
-      "loadExample": "負荷の例",
+      "loadExample": "サンプルを読み込む",
       "jsonPlaceholder": "JSON 配列を入力してください...",
       "input": "入力",
       "output": "出力"
@@ -5659,7 +5662,7 @@
       "center": "中心",
       "right": "右",
       "header": "ヘッダ",
-      "cell": "細胞",
+      "cell": "セル",
       "removeRow": "行を削除",
       "removeColumn": "列を削除",
       "markdownOutput": "マークダウン出力",
@@ -6496,7 +6499,7 @@
       "readingSpeed": "読み取り速度:",
       "wpm": "WPM",
       "words": "単語",
-      "characters": "キャラクター",
+      "characters": "文字",
       "sentences": "文",
       "paragraphs": "段落",
       "readingTime": "読書時間",
@@ -6580,7 +6583,7 @@
       "removePunctuation": "句読点を削除する",
       "lowercase": "小文字に変換",
       "uppercase": "大文字に変換",
-      "characters": "キャラクター",
+      "characters": "文字",
       "lines": "行",
       "placeholder": "ここにテキストを貼り付けます..."
     },
@@ -7110,6 +7113,12 @@
     "about": "概要",
     "blog": "ブログ"
   },
+  "theme": {
+    "toggle": "テーマを切り替え",
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
+  },
   "blog": {
     "title": "ブログ",
     "description": "開発者向けチュートリアル、ツールガイド、技術的な洞察で生産性を向上させましょう。",
@@ -7119,7 +7128,10 @@
     "noPosts": "まだ記事がありません。お楽しみに！",
     "readMore": "続きを読む",
     "publishedOn": "公開日",
-    "author": "著者"
+    "author": "著者",
+    "featured": "注目記事",
+    "relatedPosts": "関連記事",
+    "relatedTools": "おすすめツール"
   },
   "errors": {
     "notFound": {

@@ -97,11 +97,11 @@ export default function BinaryToDecimal() {
     <div className="space-y-6">
       <div className="flex flex-wrap gap-4 items-center">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('mode')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
           <select
             value={mode}
             onChange={(e) => { setMode(e.target.value as ConversionMode); setOutput(''); setError(''); }}
-            className="p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             <option value="binToDec">{t('binToDec')}</option>
             <option value="decToBin">{t('decToBin')}</option>
@@ -112,11 +112,11 @@ export default function BinaryToDecimal() {
 
         {(mode === 'decToBin' || mode === 'hexToBin') && (
           <div className="flex items-center gap-2">
-            <label className="text-sm text-gray-300">{t('bitLength')}:</label>
+            <label className="text-sm text-gray-600 dark:text-gray-300">{t('bitLength')}:</label>
             <select
               value={bitLength}
               onChange={(e) => setBitLength(parseInt(e.target.value) as 8 | 16 | 32 | 64)}
-              className="p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+              className="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             >
               <option value="8">{t('bit8')}</option>
               <option value="16">{t('bit16')}</option>
@@ -136,20 +136,20 @@ export default function BinaryToDecimal() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
             {t('input')}
           </label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={t('inputPlaceholder')}
-            className="w-full h-32 p-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-100 font-mono"
+            className="w-full h-32 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"
           />
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
               {t('output')}
             </label>
             {output && (
@@ -165,13 +165,13 @@ export default function BinaryToDecimal() {
             value={mode === 'decToBin' || mode === 'hexToBin' ? formatBinary(output) : output}
             readOnly
             placeholder={t('outputPlaceholder')}
-            className="w-full h-32 p-3 border border-gray-600 rounded-lg bg-gray-900 text-gray-100 font-mono"
+            className="w-full h-32 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-mono"
           />
         </div>
       </div>
 
       {error && (
-        <div className="p-3 bg-red-50 text-red-600 rounded-lg">
+        <div className="p-3 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 rounded-lg">
           {error}
         </div>
       )}
@@ -185,9 +185,9 @@ export default function BinaryToDecimal() {
         </button>
       </div>
 
-      <div className="p-4 bg-blue-50 rounded-lg">
-        <h3 className="font-medium text-blue-800 mb-2">{t('quickRef')}</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-blue-700">
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+        <h3 className="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('quickRef')}</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-blue-700 dark:text-blue-400">
           <div>0 = 0000</div>
           <div>1 = 0001</div>
           <div>2 = 0010</div>

@@ -60,7 +60,7 @@ export default function RegexGenerator() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('commonPatterns')}</label>
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('commonPatterns')}</label>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {COMMON_PATTERNS.map((pattern) => (
             <button key={pattern.id}
@@ -75,51 +75,51 @@ export default function RegexGenerator() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           {selectedPattern ? t(`patterns.${COMMON_PATTERNS.find(p => p.id === selectedPattern)?.descKey}`) : t('customPattern')}
         </label>
         <input type="text" value={currentPattern}
           onChange={(e) => { setCustomPattern(e.target.value); setSelectedPattern(''); }}
-          className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono"
+          className="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono"
           placeholder={t('placeholder')} />
       </div>
 
       <div className="flex gap-4">
-        <label className="flex items-center gap-2 text-gray-300">
+        <label className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
           <input type="checkbox" checked={flags.g} onChange={(e) => setFlags({...flags, g: e.target.checked})} /> {t('flagGlobal')}
         </label>
-        <label className="flex items-center gap-2 text-gray-300">
+        <label className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
           <input type="checkbox" checked={flags.i} onChange={(e) => setFlags({...flags, i: e.target.checked})} /> {t('flagCaseInsensitive')}
         </label>
-        <label className="flex items-center gap-2 text-gray-300">
+        <label className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
           <input type="checkbox" checked={flags.m} onChange={(e) => setFlags({...flags, m: e.target.checked})} /> {t('flagMultiline')}
         </label>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('testString')}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('testString')}</label>
         <textarea value={testString} onChange={(e) => setTestString(e.target.value)}
-          className="w-full h-32 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white"
+          className="w-full h-32 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
           placeholder={t('testPlaceholder')} />
       </div>
 
       <div className="flex gap-4">
         <button onClick={testPattern}
-          className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium transition-colors text-white">
           {t('testPattern')}
         </button>
         <button onClick={copyPattern} disabled={!currentPattern}
-          className="px-6 py-2 bg-gray-600 hover:bg-gray-9000 disabled:opacity-50 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-500 disabled:opacity-50 rounded-lg font-medium transition-colors">
           {t('copy')}
         </button>
       </div>
 
       {matches.length > 0 && (
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('matches')} ({matches.length})</label>
-          <div className="bg-gray-700 rounded-lg p-4 space-y-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('matches')} ({matches.length})</label>
+          <div className="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg p-4 space-y-2">
             {matches.map((match, i) => (
-              <div key={i} className="px-3 py-2 bg-gray-600 rounded font-mono text-green-400">{match}</div>
+              <div key={i} className="px-3 py-2 bg-white dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded font-mono text-green-600 dark:text-green-400">{match}</div>
             ))}
           </div>
         </div>

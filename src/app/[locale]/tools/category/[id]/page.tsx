@@ -109,28 +109,28 @@ export default async function CategoryPage({
         dangerouslySetInnerHTML={{ __html: jsonLdToString(itemListJsonLd) }}
       />
       
-      <div className="min-h-screen py-12 px-4">
+      <div className="min-h-screen py-12 px-4 bg-white dark:bg-transparent">
         <div className="max-w-6xl mx-auto">
           {/* 面包屑导航 */}
-          <nav className="mb-6 text-sm text-gray-400">
-            <Link href="/" className="hover:text-white transition-colors">
+          <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
+            <Link href="/" className="hover:text-gray-900 dark:hover:text-white transition-colors">
               {t('nav.home')}
             </Link>
             <span className="mx-2">/</span>
-            <Link href="/tools" className="hover:text-white transition-colors">
+            <Link href="/tools" className="hover:text-gray-900 dark:hover:text-white transition-colors">
               {t('nav.tools')}
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-white">{categoryName}</span>
+            <span className="text-gray-900 dark:text-white">{categoryName}</span>
           </nav>
           
           {/* 页面标题 */}
-          <h1 className="text-4xl font-bold mb-4 flex items-center gap-3">
+          <h1 className="text-4xl font-bold mb-4 flex items-center gap-3 text-gray-900 dark:text-white">
             <span className="text-5xl">{category.icon}</span>
             {categoryName}
           </h1>
           
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-400 mb-8">
             {categoryTools.length} {t('home.toolsCount')}
           </p>
           
@@ -140,15 +140,15 @@ export default async function CategoryPage({
               <Link
                 key={tool.slug}
                 href={`/tools/${tool.slug}`}
-                className="tool-card p-4 bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-750 hover:border-gray-600 transition-colors"
+                className="tool-card p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-750 hover:border-gray-300 dark:hover:border-gray-600 transition-colors"
               >
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">{tool.icon}</span>
                   <div>
-                    <h2 className="font-medium text-white">
+                    <h2 className="font-medium text-gray-900 dark:text-white">
                       {t(`tools.${tool.slug}.name`)}
                     </h2>
-                    <p className="text-sm text-gray-300 line-clamp-2">
+                    <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
                       {t(`tools.${tool.slug}.description`)}
                     </p>
                   </div>
@@ -161,7 +161,7 @@ export default async function CategoryPage({
           <div className="mt-16 text-center">
             <Link
               href="/tools"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-lg transition-colors"
             >
               ← {t('nav.viewAllTools')}
             </Link>

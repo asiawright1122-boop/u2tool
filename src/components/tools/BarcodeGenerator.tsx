@@ -39,7 +39,7 @@ export default function BarcodeGenerator() {
   const renderBarcode = () => {
     const bars = generateCode128(text);
     return (
-      <svg viewBox={`0 0 ${bars.length * 2} 100`} className="w-full h-24 bg-gray-800">
+      <svg viewBox={`0 0 ${bars.length * 2} 100`} className="w-full h-24 bg-white dark:bg-gray-800">
         {bars.split('').map((b, i) => (
           b === '1' && <rect key={i} x={i * 2} y="10" width="2" height="80" fill="black" />
         ))}
@@ -51,12 +51,12 @@ export default function BarcodeGenerator() {
     <div className="space-y-4">
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('barcode.text')}</label>
-          <input type="text" value={text} onChange={(e) => setText(e.target.value)} className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg" />
+          <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('barcode.text')}</label>
+          <input type="text" value={text} onChange={(e) => setText(e.target.value)} className="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">{t('barcode.format')}</label>
-          <select value={format} onChange={(e) => setFormat(e.target.value as typeof format)} className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg">
+          <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('barcode.format')}</label>
+          <select value={format} onChange={(e) => setFormat(e.target.value as typeof format)} className="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white">
             <option value="code128">Code 128</option>
             <option value="code39">Code 39</option>
             <option value="ean13">EAN-13</option>
@@ -64,9 +64,9 @@ export default function BarcodeGenerator() {
           </select>
         </div>
       </div>
-      <div className="bg-gray-800 rounded-lg p-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
         {renderBarcode()}
-        <p className="text-center text-black mt-2 font-mono">{text}</p>
+        <p className="text-center text-gray-900 dark:text-black mt-2 font-mono">{text}</p>
       </div>
     </div>
   );

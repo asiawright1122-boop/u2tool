@@ -112,23 +112,23 @@ export default function MacAddressGenerator() {
     <div className="space-y-6">
       <div className="flex flex-wrap gap-4 items-center">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('count')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('count')}:</label>
           <input
             type="number"
             value={count}
             onChange={(e) => setCount(parseInt(e.target.value) || 1)}
             min="1"
             max="100"
-            className="w-24 p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="w-20 h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
         </div>
 
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('separator')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('separator')}:</label>
           <select
             value={separator}
             onChange={(e) => setSeparator(e.target.value as Separator)}
-            className="p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="w-32 h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             <option value=":">{t('sepColon')}</option>
             <option value="-">{t('sepHyphen')}</option>
@@ -143,7 +143,7 @@ export default function MacAddressGenerator() {
             onChange={(e) => setUppercase(e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded"
           />
-          <span className="text-sm text-gray-300">{t('uppercase')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('uppercase')}</span>
         </label>
 
         <button
@@ -157,7 +157,7 @@ export default function MacAddressGenerator() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-4">
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-200">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
               {t('prefix')}
             </label>
             <input
@@ -165,9 +165,9 @@ export default function MacAddressGenerator() {
               value={prefix}
               onChange={(e) => setPrefix(e.target.value)}
               placeholder={t('prefixPlaceholder')}
-              className="w-full p-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-100 font-mono placeholder-gray-500"
+              className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono placeholder-gray-500"
             />
-            <p className="text-xs text-gray-300">{t('prefixHint')}</p>
+            <p className="text-xs text-gray-600 dark:text-gray-300">{t('prefixHint')}</p>
           </div>
 
           <div className="space-y-3">
@@ -178,7 +178,7 @@ export default function MacAddressGenerator() {
                 onChange={(e) => setLocallyAdministered(e.target.checked)}
                 className="w-4 h-4 text-blue-600 rounded"
               />
-              <span className="text-sm text-gray-300">{t('locallyAdministered')}</span>
+              <span className="text-sm text-gray-600 dark:text-gray-300">{t('locallyAdministered')}</span>
             </label>
 
             <label className="flex items-center gap-2 cursor-pointer">
@@ -188,12 +188,12 @@ export default function MacAddressGenerator() {
                 onChange={(e) => setMulticast(e.target.checked)}
                 className="w-4 h-4 text-blue-600 rounded"
               />
-              <span className="text-sm text-gray-300">{t('multicast')}</span>
+              <span className="text-sm text-gray-600 dark:text-gray-300">{t('multicast')}</span>
             </label>
           </div>
 
           {error && (
-            <div className="p-3 bg-red-900/30 text-red-400 rounded-lg">
+            <div className="p-3 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-lg">
               {error}
             </div>
           )}
@@ -208,7 +208,7 @@ export default function MacAddressGenerator() {
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="block text-sm font-medium text-gray-200">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
               {t('output')}
             </label>
             {output && (
@@ -224,14 +224,14 @@ export default function MacAddressGenerator() {
             value={output}
             readOnly
             placeholder={t('outputPlaceholder')}
-            className="w-full h-72 p-3 border border-gray-600 rounded-lg bg-gray-900 text-gray-100 font-mono placeholder-gray-500"
+            className="w-full h-72 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-mono placeholder-gray-500"
           />
         </div>
       </div>
 
-      <div className="p-4 bg-blue-900/30 border border-blue-800 rounded-lg">
-        <h3 className="font-medium text-blue-300 mb-2">{t('info')}</h3>
-        <p className="text-sm text-blue-400">{t('infoText')}</p>
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg">
+        <h3 className="font-medium text-blue-700 dark:text-blue-300 mb-2">{t('info')}</h3>
+        <p className="text-sm text-blue-600 dark:text-blue-400">{t('infoText')}</p>
       </div>
     </div>
   );

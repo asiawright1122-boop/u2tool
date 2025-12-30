@@ -8,14 +8,14 @@ import { Skeleton } from '@/components/ui/Skeleton';
  */
 export default function ToolPageLoading() {
   return (
-    <div className="min-h-screen py-12 px-4">
+    <div className="min-h-screen py-12 px-4 bg-white dark:bg-black">
       <div className="max-w-4xl mx-auto">
         {/* 面包屑骨架 */}
         <div className="flex items-center gap-2 mb-6">
           <Skeleton width={60} height={20} />
-          <span className="text-gray-500">/</span>
+          <span className="text-gray-400 dark:text-gray-500">/</span>
           <Skeleton width={80} height={20} />
-          <span className="text-gray-500">/</span>
+          <span className="text-gray-400 dark:text-gray-500">/</span>
           <Skeleton width={120} height={20} />
         </div>
 
@@ -40,7 +40,7 @@ export default function ToolPageLoading() {
         </div>
 
         {/* 工具内容骨架 */}
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+        <div className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
           <Skeleton height={300} className="mb-4" />
           <div className="flex gap-4">
             <Skeleton width={100} height={40} />

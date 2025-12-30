@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 interface BubblePoint {
     id: string;
@@ -45,6 +46,7 @@ export default function BubbleChartGenerator() {
     const [yAxisName, setYAxisName] = useState('Y');
 
     const chartRef = useRef<ReactECharts>(null);
+    const chartTheme = useChartTheme();
 
     const generateId = useCallback(() => {
         const newId = `${baseId}-${idCounter}`;
@@ -86,15 +88,13 @@ export default function BubbleChartGenerator() {
 
     const getChartOption = useCallback((): EChartsOption => {
         const colors = colorThemes[colorTheme];
-        const textColor = '#e5e7eb';
-        const axisLineColor = '#4b5563';
 
         return {
-            backgroundColor: '#1f2937',
+            backgroundColor: chartTheme.backgroundColor,
             title: {
                 text: chartTitle,
                 left: 'center',
-                textStyle: { fontSize: 18, fontWeight: 'bold', color: '#fff' },
+                textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
             },
             tooltip: {
                 trigger: 'item',
@@ -109,7 +109,7 @@ export default function BubbleChartGenerator() {
             legend: {
                 show: showLegend,
                 bottom: 10,
-                textStyle: { color: textColor },
+                textStyle: { color: chartTheme.legendText },
             },
             grid: {
                 left: '3%',
@@ -121,18 +121,18 @@ export default function BubbleChartGenerator() {
             xAxis: {
                 type: 'value',
                 name: xAxisName,
-                nameTextStyle: { color: textColor },
-                splitLine: { show: true, lineStyle: { color: axisLineColor, type: 'dashed' } },
-                axisLine: { show: true, lineStyle: { color: axisLineColor } },
-                axisLabel: { color: textColor },
+                nameTextStyle: { color: chartTheme.axisLabelColor },
+                splitLine: { show: true, lineStyle: { color: chartTheme.splitLineColor, type: 'dashed' } },
+                axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
+                axisLabel: { color: chartTheme.axisLabelColor },
             },
             yAxis: {
                 type: 'value',
                 name: yAxisName,
-                nameTextStyle: { color: textColor },
-                splitLine: { show: true, lineStyle: { color: axisLineColor, type: 'dashed' } },
-                axisLine: { show: true, lineStyle: { color: axisLineColor } },
-                axisLabel: { color: textColor },
+                nameTextStyle: { color: chartTheme.axisLabelColor },
+                splitLine: { show: true, lineStyle: { color: chartTheme.splitLineColor, type: 'dashed' } },
+                axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
+                axisLabel: { color: chartTheme.axisLabelColor },
                 scale: true,
             },
             color: colors,
@@ -198,7 +198,7 @@ export default function BubbleChartGenerator() {
             const url = echartInstance.getDataURL({
                 type: format,
                 pixelRatio: 2,
-                backgroundColor: '#1f2937',
+                backgroundColor: chartTheme.backgroundColor,
             });
             const link = document.createElement('a');
             link.download = `bubble-chart-${Date.now()}.${format}`;
@@ -236,7 +236,7 @@ export default function BubbleChartGenerator() {
                 <div className="space-y-4">
                     <div>
                         <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-                        <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+                        <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
                             <div>
                                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                                 <input
@@ -307,27 +307,27 @@ export default function BubbleChartGenerator() {
 
                         <div className="space-y-4 max-h-[600px] overflow-y-auto">
                             {series.map((s, sIndex) => (
-                                <div key={s.id} className="bg-gray-900 border border-gray-700 rounded-lg p-3">
+                                <div key={s.id} className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3">
                                     <div className="flex items-center gap-2 mb-2">
                                         <input
                                             type="text"
                                             value={s.name}
                                             onChange={(e) => updateSeriesName(s.id, e.target.value)}
-                                            className="flex-1 px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                                            className="flex-1 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                             placeholder={t('seriesName')}
                                         />
                                         <button
                                             onClick={() => removeSeries(s.id)}
-                                            className="text-red-400 hover:text-red-300 disabled:opacity-50"
+                                            className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 disabled:opacity-50"
                                             disabled={series.length <= 1}
                                         >
                                             ✕
                                         </button>
                                     </div>
 
-                                    <div className="max-h-64 overflow-auto p-1 bg-gray-900 border border-gray-700 rounded-lg">
+                                    <div className="max-h-64 overflow-auto p-1 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
                                         <div className="min-w-[400px]">
-                                            <div className="grid grid-cols-[1fr_1fr_1fr_1fr_auto] gap-1 text-xs text-gray-400 px-1 mb-1">
+                                            <div className="grid grid-cols-[1fr_1fr_1fr_1fr_auto] gap-1 text-xs text-gray-500 dark:text-gray-400 px-1 mb-1">
                                                 <span>{t('pointName')}</span>
                                                 <span>X</span>
                                                 <span>Y</span>
@@ -340,30 +340,30 @@ export default function BubbleChartGenerator() {
                                                         type="text"
                                                         value={p.name || ''}
                                                         onChange={(e) => updatePoint(sIndex, p.id, 'name', e.target.value)}
-                                                        className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                                                        className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                                         placeholder="Opt"
                                                     />
                                                     <input
                                                         type="number"
                                                         value={p.x}
                                                         onChange={(e) => updatePoint(sIndex, p.id, 'x', Number(e.target.value) || 0)}
-                                                        className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                                                        className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                                     />
                                                     <input
                                                         type="number"
                                                         value={p.y}
                                                         onChange={(e) => updatePoint(sIndex, p.id, 'y', Number(e.target.value) || 0)}
-                                                        className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                                                        className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                                     />
                                                     <input
                                                         type="number"
                                                         value={p.r}
                                                         onChange={(e) => updatePoint(sIndex, p.id, 'r', Number(e.target.value) || 0)}
-                                                        className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                                                        className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                                     />
                                                     <button
                                                         onClick={() => removePoint(sIndex, p.id)}
-                                                        className="text-red-400 hover:text-red-300 disabled:opacity-50"
+                                                        className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 disabled:opacity-50"
                                                         disabled={s.data.length <= 1}
                                                     >
                                                         ✕
@@ -374,7 +374,7 @@ export default function BubbleChartGenerator() {
                                     </div>
                                     <button
                                         onClick={() => addPoint(sIndex)}
-                                        className="mt-2 text-xs text-blue-400 hover:text-blue-300"
+                                        className="mt-2 text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
                                     >
                                         + {t('addPoint')}
                                     </button>
@@ -386,7 +386,7 @@ export default function BubbleChartGenerator() {
 
                 <div>
                     <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-                    <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
+                    <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
                         <ReactECharts
                             ref={chartRef}
                             option={getChartOption()}
@@ -398,9 +398,9 @@ export default function BubbleChartGenerator() {
             </div>
 
             {/* Tips */}
-            <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+            <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
                 <p className="font-medium mb-1">💡 {t('tipsTitle')}</p>
-                <ul className="space-y-0.5 text-blue-400">
+                <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
                     <li>• {t('tip1')}</li>
                     <li>• {t('tip2')}</li>
                 </ul>

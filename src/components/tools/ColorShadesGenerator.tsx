@@ -66,23 +66,23 @@ export default function ColorShadesGenerator() {
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('baseColor')}</label>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('baseColor')}</label>
           <div className="flex gap-2">
             <input type="color" value={baseColor} onChange={(e) => setBaseColor(e.target.value)}
               className="w-16 h-10 rounded cursor-pointer" />
             <input type="text" value={baseColor} onChange={(e) => setBaseColor(e.target.value)}
-              className="flex-1 px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono" />
+              className="flex-1 px-3 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono" />
           </div>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('numberOfShades', { count: shadeCount })}</label>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('numberOfShades', { count: shadeCount })}</label>
           <input type="range" min="5" max="15" value={shadeCount}
             onChange={(e) => setShadeCount(parseInt(e.target.value))}
             className="w-full mt-2" />
         </div>
         <div className="flex items-end">
           <button onClick={copyAll}
-            className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
+            className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors text-white">
             {t('copyCssVariables')}
           </button>
         </div>
@@ -95,16 +95,16 @@ export default function ColorShadesGenerator() {
             <div className="h-20 rounded-lg transition-transform group-hover:scale-105"
               style={{ backgroundColor: shade }} />
             <div className="mt-1 text-center">
-              <div className="text-xs text-gray-300">{(index + 1) * 100}</div>
-              <div className="text-xs font-mono text-gray-300">{shade}</div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">{(index + 1) * 100}</div>
+              <div className="text-xs font-mono text-gray-600 dark:text-gray-300">{shade}</div>
             </div>
           </div>
         ))}
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('output')}</label>
-        <pre className="bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-400 overflow-x-auto">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('output')}</label>
+        <pre className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400 overflow-x-auto">
           {shades.map((shade, i) => `--color-${(i + 1) * 100}: ${shade};`).join('\n')}
         </pre>
       </div>

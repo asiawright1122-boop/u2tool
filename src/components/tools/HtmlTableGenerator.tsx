@@ -67,28 +67,28 @@ export default function HtmlTableGenerator() {
     <div className="space-y-4">
       <div className="flex flex-wrap gap-4 items-center">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('tableGen.rows')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('tableGen.rows')}:</label>
           <input
             type="number"
             min="1"
             max="20"
             value={rows}
             onChange={(e) => updateSize(parseInt(e.target.value) || 1, cols)}
-            className="w-16 bg-gray-800 rounded px-2 py-1 text-center"
+            className="w-16 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded px-2 py-1 text-center"
           />
         </div>
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('tableGen.cols')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('tableGen.cols')}:</label>
           <input
             type="number"
             min="1"
             max="10"
             value={cols}
             onChange={(e) => updateSize(rows, parseInt(e.target.value) || 1)}
-            className="w-16 bg-gray-800 rounded px-2 py-1 text-center"
+            className="w-16 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded px-2 py-1 text-center"
           />
         </div>
-        <label className="flex items-center gap-2 text-sm">
+        <label className="flex items-center gap-2 text-sm text-gray-900 dark:text-white">
           <input
             type="checkbox"
             checked={hasHeader}
@@ -110,7 +110,7 @@ export default function HtmlTableGenerator() {
                       type="text"
                       value={cell}
                       onChange={(e) => updateCell(i, j, e.target.value)}
-                      className={`w-full bg-gray-800 rounded px-2 py-1 text-sm ${
+                      className={`w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded px-2 py-1 text-sm ${
                         i === 0 && hasHeader ? 'font-bold' : ''
                       }`}
                       placeholder={i === 0 && hasHeader ? t('tableGen.header') : t('tableGen.cell')}
@@ -125,28 +125,28 @@ export default function HtmlTableGenerator() {
 
       <div>
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm text-gray-300">HTML</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">HTML</label>
           <button
             onClick={copyHtml}
-            className="text-sm text-blue-400 hover:text-blue-300"
+            className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
           >
             {copied ? t('copied') : t('copy')}
           </button>
         </div>
-        <pre className="bg-gray-800 rounded p-3 text-sm text-green-400 overflow-x-auto">
+        <pre className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded p-3 text-sm text-green-600 dark:text-green-400 overflow-x-auto">
           {generateHtml()}
         </pre>
       </div>
 
       <div>
-        <label className="text-sm text-gray-300 mb-2 block">{t('tableGen.preview')}</label>
-        <div className="bg-gray-800 rounded p-4 overflow-x-auto">
-          <table className="border-collapse border border-gray-600 text-black">
+        <label className="text-sm text-gray-600 dark:text-gray-300 mb-2 block">{t('tableGen.preview')}</label>
+        <div className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded p-4 overflow-x-auto">
+          <table className="border-collapse border border-gray-400 dark:border-gray-600 text-black">
             {hasHeader && data.length > 0 && (
               <thead>
                 <tr>
                   {data[0].map((cell, j) => (
-                    <th key={j} className="border border-gray-600 px-3 py-2 bg-gray-100">
+                    <th key={j} className="border border-gray-400 dark:border-gray-600 px-3 py-2 bg-gray-200 dark:bg-gray-100 text-gray-900">
                       {cell || '\u00A0'}
                     </th>
                   ))}
@@ -157,7 +157,7 @@ export default function HtmlTableGenerator() {
               {data.slice(hasHeader ? 1 : 0).map((row, i) => (
                 <tr key={i}>
                   {row.map((cell, j) => (
-                    <td key={j} className="border border-gray-600 px-3 py-2">
+                    <td key={j} className="border border-gray-400 dark:border-gray-600 px-3 py-2 bg-white text-gray-900">
                       {cell || '\u00A0'}
                     </td>
                   ))}

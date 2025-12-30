@@ -44,7 +44,7 @@ export default function QrGenerator() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium mb-2">{t('input')}</label>
+        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
         <textarea
           className="tool-textarea h-24"
           value={input}
@@ -65,7 +65,7 @@ export default function QrGenerator() {
       </div>
 
       {qrDataUrl && (
-        <div className="flex justify-center p-4 bg-gray-800 rounded-lg">
+        <div className="flex justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
           <img src={qrDataUrl} alt="QR Code" className="max-w-[300px]" />
         </div>
       )}

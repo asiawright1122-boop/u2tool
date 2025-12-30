@@ -88,24 +88,24 @@ export default function DiffChecker() {
       {showDiff && (
         <>
           <div className="flex gap-4 text-sm">
-            <span className="text-green-400">+ {stats.added} {t('diffChecker.added')}</span>
-            <span className="text-red-400">- {stats.removed} {t('diffChecker.removed')}</span>
-            <span className="text-gray-300">{stats.same} {t('diffChecker.unchanged')}</span>
+            <span className="text-green-600 dark:text-green-400">+ {stats.added} {t('diffChecker.added')}</span>
+            <span className="text-red-600 dark:text-red-400">- {stats.removed} {t('diffChecker.removed')}</span>
+            <span className="text-gray-600 dark:text-gray-300">{stats.same} {t('diffChecker.unchanged')}</span>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-4 font-mono text-sm overflow-x-auto">
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 font-mono text-sm overflow-x-auto">
             {diff.map((line, i) => (
               <div
                 key={i}
                 className={`px-2 py-0.5 ${
                   line.type === 'added'
-                    ? 'bg-green-900/30 text-green-300'
+                    ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
                     : line.type === 'removed'
-                    ? 'bg-red-900/30 text-red-300'
-                    : 'text-gray-300'
+                    ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300'
+                    : 'text-gray-700 dark:text-gray-300'
                 }`}
               >
-                <span className="inline-block w-6 text-gray-300">
+                <span className="inline-block w-6 text-gray-500 dark:text-gray-300">
                   {line.type === 'added' ? '+' : line.type === 'removed' ? '-' : ' '}
                 </span>
                 {line.value || ' '}

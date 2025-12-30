@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 颜色主题预设
 const colorThemes = {
@@ -94,28 +95,29 @@ export default function GraphChartGenerator() {
   ]);
 
   const chartRef = useRef<ReactECharts>(null);
+  const chartTheme = useChartTheme();
 
   // 生成 ECharts 配置
   const getChartOption = useCallback((): EChartsOption => {
     const colors = colorThemes[colorTheme];
 
     return {
-      backgroundColor: '#1f2937',
+      backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
         top: 10,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: '#fff' },
+        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
       },
       tooltip: {
-        backgroundColor: 'rgba(31, 41, 55, 0.9)',
-        borderColor: '#374151',
-        textStyle: { color: '#e5e7eb' },
+        backgroundColor: chartTheme.tooltipBg,
+        borderColor: chartTheme.tooltipBorder,
+        textStyle: { color: chartTheme.tooltipText },
       },
       legend: {
         data: categories.map(c => c.name),
         top: 35,
-        textStyle: { color: '#e5e7eb' },
+        textStyle: { color: chartTheme.legendText },
       },
       color: colors,
       series: [
@@ -129,7 +131,7 @@ export default function GraphChartGenerator() {
           label: {
             show: showLabel,
             position: 'right',
-            color: '#e5e7eb',
+            color: chartTheme.labelColor,
           },
           lineStyle: {
             color: 'source',
@@ -155,7 +157,7 @@ export default function GraphChartGenerator() {
         },
       ],
     };
-  }, [chartTitle, colorTheme, layout, showLabel, repulsion, categories, nodes, links]);
+  }, [chartTitle, colorTheme, layout, showLabel, repulsion, categories, nodes, links, chartTheme]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
@@ -164,7 +166,7 @@ export default function GraphChartGenerator() {
       const url = echartInstance.getDataURL({
         type: format === 'svg' ? 'svg' : 'png',
         pixelRatio: 2,
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
       });
       const link = document.createElement('a');
       link.download = `graph-chart-${Date.now()}.${format}`;
@@ -294,7 +296,7 @@ export default function GraphChartGenerator() {
           {/* 图表设置 */}
           <div>
             <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-            <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
               <div>
                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
@@ -367,7 +369,7 @@ export default function GraphChartGenerator() {
                 + {t('addNode')}
               </button>
             </div>
-            <div className="space-y-2 max-h-40 overflow-y-auto p-2 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-2 max-h-40 overflow-y-auto p-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
               {nodes.map((node, index) => (
                 <div key={index} className="flex gap-1 items-center text-sm">
                   <input
@@ -413,7 +415,7 @@ export default function GraphChartGenerator() {
                 + {t('addLink')}
               </button>
             </div>
-            <div className="space-y-2 max-h-32 overflow-y-auto p-2 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-2 max-h-32 overflow-y-auto p-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
               {links.map((link, index) => (
                 <div key={index} className="flex gap-2 items-center text-sm">
                   <select
@@ -450,7 +452,7 @@ export default function GraphChartGenerator() {
         {/* 右侧：图表预览 */}
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
+          <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
@@ -462,9 +464,9 @@ export default function GraphChartGenerator() {
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
         <p className="font-medium mb-1">💡 {t('tips.title')}</p>
-        <ul className="space-y-0.5 text-blue-400">
+        <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

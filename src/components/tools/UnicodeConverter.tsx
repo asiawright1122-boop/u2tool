@@ -97,23 +97,23 @@ export default function UnicodeConverter() {
 
       {/* Format Selection */}
       <div>
-        <label className="block text-sm font-medium mb-2">{t('unicode.format')}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('unicode.format')}</label>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setFormat('unicode')}
-            className={`px-4 py-2 rounded-lg text-sm ${format === 'unicode' ? 'bg-blue-600' : 'bg-gray-800'}`}
+            className={`px-4 py-2 rounded-lg text-sm ${format === 'unicode' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white'}`}
           >
             Unicode (\u0000)
           </button>
           <button
             onClick={() => setFormat('html')}
-            className={`px-4 py-2 rounded-lg text-sm ${format === 'html' ? 'bg-blue-600' : 'bg-gray-800'}`}
+            className={`px-4 py-2 rounded-lg text-sm ${format === 'html' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white'}`}
           >
             HTML (&#0000;)
           </button>
           <button
             onClick={() => setFormat('css')}
-            className={`px-4 py-2 rounded-lg text-sm ${format === 'css' ? 'bg-blue-600' : 'bg-gray-800'}`}
+            className={`px-4 py-2 rounded-lg text-sm ${format === 'css' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-white'}`}
           >
             CSS (\0000)
           </button>
@@ -134,13 +134,13 @@ export default function UnicodeConverter() {
 
       {/* Quick Examples */}
       <div>
-        <label className="block text-sm font-medium mb-2">{t('unicode.examples')}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('unicode.examples')}</label>
         <div className="flex flex-wrap gap-2">
           {examples.map((ex) => (
             <button
               key={ex.text}
               onClick={() => setInput(ex.text)}
-              className="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 rounded text-sm"
+              className="px-3 py-1.5 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded text-sm text-gray-700 dark:text-white"
             >
               {ex.text} ({ex.desc})
             </button>
@@ -151,10 +151,10 @@ export default function UnicodeConverter() {
       {output && (
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium">{t('output')}</label>
+            <label className="text-sm font-medium text-gray-700 dark:text-white">{t('output')}</label>
             <button
               onClick={copyOutput}
-              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-white'}`}
             >
               {copied ? t('copied') : t('copy')}
             </button>
@@ -169,13 +169,13 @@ export default function UnicodeConverter() {
       )}
 
       {/* Reference */}
-      <div className="bg-gray-800 rounded-lg p-4 text-sm text-gray-300">
+      <div className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-sm text-gray-600 dark:text-gray-300">
         <p className="mb-2">{t('unicode.reference')}:</p>
         <ul className="list-disc list-inside space-y-1">
-          <li><code className="text-blue-400">\u4E2D</code> → 中 (Unicode)</li>
-          <li><code className="text-blue-400">&#20013;</code> → 中 (HTML Decimal)</li>
-          <li><code className="text-blue-400">&#x4E2D;</code> → 中 (HTML Hex)</li>
-          <li><code className="text-blue-400">\4E2D</code> → 中 (CSS)</li>
+          <li><code className="text-blue-600 dark:text-blue-400">\u4E2D</code> → 中 (Unicode)</li>
+          <li><code className="text-blue-600 dark:text-blue-400">&#20013;</code> → 中 (HTML Decimal)</li>
+          <li><code className="text-blue-600 dark:text-blue-400">&#x4E2D;</code> → 中 (HTML Hex)</li>
+          <li><code className="text-blue-600 dark:text-blue-400">\4E2D</code> → 中 (CSS)</li>
         </ul>
       </div>
     </div>

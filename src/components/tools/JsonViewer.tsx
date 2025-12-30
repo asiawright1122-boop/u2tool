@@ -19,7 +19,7 @@ function TreeNode({ keyName, value, depth, expanded, toggleExpand, path, itemsLa
   const isExpanded = expanded.has(path);
 
   const renderValue = () => {
-    if (value === null) return <span className="text-gray-300">null</span>;
+    if (value === null) return <span className="text-gray-600 dark:text-gray-300">null</span>;
     if (typeof value === 'string') return <span className="text-green-400">&quot;{value}&quot;</span>;
     if (typeof value === 'number') return <span className="text-blue-400">{value}</span>;
     if (typeof value === 'boolean') return <span className="text-yellow-400">{value.toString()}</span>;
@@ -30,7 +30,7 @@ function TreeNode({ keyName, value, depth, expanded, toggleExpand, path, itemsLa
     return (
       <div className="flex items-center" style={{ paddingLeft: `${depth * 20}px` }}>
         <span className="text-purple-400">{keyName}</span>
-        <span className="text-gray-300 mx-1">:</span>
+        <span className="text-gray-600 dark:text-gray-300 mx-1">:</span>
         {renderValue()}
       </div>
     );
@@ -44,11 +44,11 @@ function TreeNode({ keyName, value, depth, expanded, toggleExpand, path, itemsLa
     <div>
       <div className="flex items-center cursor-pointer" style={{ paddingLeft: `${depth * 20}px` }}
         onClick={() => toggleExpand(path)}>
-        <span className="text-gray-300 mr-1">{isExpanded ? '▼' : '▶'}</span>
+        <span className="text-gray-600 dark:text-gray-300 mr-1">{isExpanded ? '▼' : '▶'}</span>
         <span className="text-purple-400">{keyName}</span>
-        <span className="text-gray-300 mx-1">:</span>
-        <span className="text-gray-300">{bracket[0]}</span>
-        {!isExpanded && <span className="text-gray-300 ml-1">{itemsLabel(count)}{bracket[1]}</span>}
+        <span className="text-gray-600 dark:text-gray-300 mx-1">:</span>
+        <span className="text-gray-600 dark:text-gray-300">{bracket[0]}</span>
+        {!isExpanded && <span className="text-gray-600 dark:text-gray-300 ml-1">{itemsLabel(count)}{bracket[1]}</span>}
       </div>
       {isExpanded && (
         <>
@@ -56,7 +56,7 @@ function TreeNode({ keyName, value, depth, expanded, toggleExpand, path, itemsLa
             <TreeNode key={`${path}.${k}`} keyName={isArray ? `[${k}]` : k} value={v}
               depth={depth + 1} expanded={expanded} toggleExpand={toggleExpand} path={`${path}.${k}`} itemsLabel={itemsLabel} />
           ))}
-          <div style={{ paddingLeft: `${depth * 20}px` }} className="text-gray-300">{bracket[1]}</div>
+          <div style={{ paddingLeft: `${depth * 20}px` }} className="text-gray-600 dark:text-gray-300">{bracket[1]}</div>
         </>
       )}
     </div>
@@ -107,9 +107,9 @@ export default function JsonViewer() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('input')}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea value={input} onChange={(e) => setInput(e.target.value)}
-          className="w-full h-48 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm"
+          className="w-full h-48 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
           placeholder={t('inputPlaceholder')} />
       </div>
 
@@ -118,19 +118,19 @@ export default function JsonViewer() {
           {t('parseView')}
         </button>
         <button onClick={expandAll} disabled={!parsed}
-          className="px-6 py-2 bg-gray-600 hover:bg-gray-9000 disabled:opacity-50 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-500 disabled:opacity-50 rounded-lg font-medium transition-colors">
           {t('expandAll')}
         </button>
         <button onClick={() => setExpanded(new Set(['root']))} disabled={!parsed}
-          className="px-6 py-2 bg-gray-600 hover:bg-gray-9000 disabled:opacity-50 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-500 disabled:opacity-50 rounded-lg font-medium transition-colors">
           {t('collapseAll')}
         </button>
       </div>
 
-      {error && <div className="text-red-400 bg-red-900/30 rounded-lg p-4">{error}</div>}
+      {error && <div className="text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-900/30 rounded-lg p-4">{error}</div>}
 
       {parsed !== null && (
-        <div className="bg-gray-700 rounded-lg p-4 font-mono text-sm overflow-x-auto">
+        <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm overflow-x-auto">
           <TreeNode keyName="root" value={parsed} depth={0} expanded={expanded} toggleExpand={toggleExpand} path="root" itemsLabel={(count) => t('items', { count })} />
         </div>
       )}

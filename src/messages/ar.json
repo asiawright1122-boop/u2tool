@@ -20,6 +20,7 @@
     "home": "الرئيسية",
     "tools": "أدوات",
     "about": "حول",
+    "blog": "المدونة",
     "viewAllTools": "عرض جميع الأدوات",
     "searchPlaceholder": "بحث عن أدوات...",
     "noResults": "لم يتم العثور على أدوات",
@@ -71,6 +72,8 @@
     "copy": "نسخ",
     "clear": "مسح",
     "add": "إضافة",
+    "expandAll": "توسيع الكل",
+    "collapseAll": "طي الكل",
     "generate": "توليد",
     "convert": "تحويل",
     "format": "تنسيق",
@@ -107,7 +110,7 @@
       "global": "عالمي",
       "caseInsensitive": "حساس لحالة الأحرف",
       "multiline": "متعدد الأسطر",
-      "dotall": "دوتال",
+      "dotall": "Dotall",
       "atIndex": "في الفهرس"
     },
     "password": {
@@ -217,7 +220,7 @@
       "linear": "خطي",
       "radial": "شعاعي",
       "css": "CSS",
-      "tailwind": "الريح الخلفية",
+      "tailwind": "Tailwind",
       "sunset": "غروب",
       "ocean": "محيط",
       "forest": "غابة",
@@ -515,7 +518,7 @@
       "binaryPlaceholder": "أدخل ثنائي..."
     },
     "mdToHtml": {
-      "mdPlaceholder": "أدخل تخفيض السعر...",
+      "mdPlaceholder": "أدخل Markdown...",
       "preview": "معاينة"
     },
     "epoch": {
@@ -535,7 +538,7 @@
     },
     "textStats": {
       "placeholder": "أدخل النص للتحليل الإحصائي...",
-      "chars": "الشخصيات",
+      "chars": "أحرف",
       "charsNoSpace": "لا مسافات",
       "words": "كلمات",
       "uniqueWords": "كلمات فريدة",
@@ -608,8 +611,8 @@
     "urlParser": {
       "protocol": "بروتوكول",
       "hostname": "اسم المضيف",
-      "port": "ميناء",
-      "pathname": "طريق",
+      "port": "المنفذ",
+      "pathname": "المسار",
       "search": "سلسلة الاستعلام",
       "hash": "تجزئة",
       "origin": "أصل",
@@ -618,7 +621,7 @@
     },
     "textWrapper": {
       "width": "عرض الخط",
-      "chars": "الشخصيات",
+      "chars": "أحرف",
       "placeholder": "أدخل نصًا للالتفاف...",
       "wrap": "التفاف النص"
     },
@@ -795,7 +798,7 @@
       },
       "generate": "إنشاء شروط الخدمة",
       "copyToClipboard": "نسخ إلى الحافظة",
-      "generatedOutput": "شروط الخدمة التي تم إنشاؤها (تخفيض السعر)"
+      "generatedOutput": "شروط الخدمة التي تم إنشاؤها (Markdown)"
     },
     "cssFlexboxGenerator": {
       "direction": "اتجاه",
@@ -850,7 +853,7 @@
       },
       "generate": "إنشاء سياسة الخصوصية",
       "copyToClipboard": "نسخ إلى الحافظة",
-      "generatedOutput": "سياسة الخصوصية التي تم إنشاؤها (تخفيض السعر)"
+      "generatedOutput": "سياسة الخصوصية التي تم إنشاؤها (Markdown)"
     },
     "openGraphPreview": {
       "defaultTitle": "صفحتي الرائعة",
@@ -1410,8 +1413,8 @@
       "seo_description": "Encode and decode HTML entities online for free. Handle special characters safely for web development. Prevent XSS attacks and display HTML correctly."
     },
     "markdown-preview": {
-      "name": "معاينة تخفيض السعر",
-      "description": "اكتب تخفيض السعر وشاهد المعاينة المباشرة. تصدير إلى HTML.",
+      "name": "معاينة Markdown",
+      "description": "اكتب Markdown وشاهد المعاينة المباشرة. تصدير إلى HTML.",
       "seo_title": "Free Markdown Editor & Preview Online",
       "seo_description": "Write and preview Markdown online for free. Live preview with syntax highlighting and HTML export. Perfect for documentation, README files, and blog posts."
     },
@@ -1746,7 +1749,7 @@
       "seo_description": "Convert text to binary code or binary to text online for free. Support ASCII and Unicode encoding. Perfect for learning binary and data encoding concepts."
     },
     "markdown-to-html": {
-      "name": "تخفيض السعر إلى HTML",
+      "name": "Markdown إلى HTML",
       "description": "تحويل نص Markdown إلى كود HTML.",
       "seo_title": "Free Markdown to HTML Converter",
       "seo_description": "Convert Markdown to HTML online for free. Support GitHub Flavored Markdown with tables, code blocks, and task lists. Preview and copy clean HTML output."
@@ -1876,8 +1879,8 @@
       "urlLabel": "URL",
       "protocol": "بروتوكول",
       "hostname": "اسم المضيف",
-      "port": "ميناء",
-      "pathname": "طريق",
+      "port": "المنفذ",
+      "pathname": "المسار",
       "search": "سلسلة الاستعلام",
       "hash": "تجزئة",
       "origin": "أصل",
@@ -2108,7 +2111,7 @@
       "cell": "خلية",
       "removeRow": "إزالة الصف",
       "removeColumn": "إزالة العمود",
-      "markdownOutput": "إخراج تخفيض السعر",
+      "markdownOutput": "إخراج Markdown",
       "preview": "معاينة"
     },
     "base58": {
@@ -2448,10 +2451,10 @@
       "seo_description": "Encode and decode Base85 (Ascii85) data online for free. Used in PDF files, PostScript, and data compression. Secure browser-based encoding tool."
     },
     "html-to-markdown": {
-      "name": "HTML إلى تخفيض السعر",
+      "name": "HTML إلى Markdown",
       "description": "تحويل HTML إلى تنسيق Markdown.",
       "input": "HTML Input",
-      "output": "إخراج تخفيض السعر",
+      "output": "إخراج Markdown",
       "convert": "تحويل",
       "copy": "نسخ",
       "seo_title": "Free HTML to Markdown Converter Online",
@@ -2790,7 +2793,7 @@
       "searchPlaceholder": "البحث عن طريق رقم المنفذ أو الخدمة...",
       "lookupPort": "بحث عن منفذ محدد",
       "portPlaceholder": "أدخل رقم المنفذ...",
-      "port": "ميناء",
+      "port": "المنفذ",
       "service": "خدمة",
       "descriptionLabel": "وصف",
       "unknownPort": "منفذ خدمة غير معروف أو مخصص",
@@ -2856,7 +2859,7 @@
       "marketingCookies": "ملفات تعريف الارتباط الخاصة بالتسويق/الإعلان",
       "generate": "إنشاء سياسة ملفات تعريف الارتباط",
       "copy": "نسخ إلى الحافظة",
-      "output": "سياسة ملفات تعريف الارتباط التي تم إنشاؤها (تخفيض السعر)"
+      "output": "سياسة ملفات تعريف الارتباط التي تم إنشاؤها (Markdown)"
     },
     "json-to-tsv": {
       "name": "محول JSON إلى TSV",
@@ -3395,8 +3398,8 @@
       "errorConversion": "خطأ في التحويل"
     },
     "text-to-nato": {
-      "name": "نص إلى الناتو",
-      "description": "تحويل النص إلى الأبجدية الصوتية لحلف شمال الأطلسي.",
+      "name": "نص إلى أبجدية NATO الصوتية",
+      "description": "تحويل النص إلى أبجدية NATO الصوتية (Alpha, Bravo, Charlie...).",
       "seo_title": "Text to NATO Phonetic Alphabet Converter",
       "seo_description": "Convert letters and numbers to NATO phonetic alphabet words online for free. Alpha, Bravo, Charlie format for clear communication. For radio and phone.",
       "separator": "فاصل",
@@ -4940,9 +4943,9 @@
       "seo_description": "تشفير وفك تشفير كيانات HTML عبر الإنترنت مجانًا. التعامل مع الشخصيات الخاصة بأمان لتطوير الويب. منع هجمات XSS وعرض HTML بشكل صحيح."
     },
     "markdown-preview": {
-      "name": "معاينة تخفيض السعر",
-      "description": "اكتب تخفيض السعر وشاهد المعاينة المباشرة. تصدير إلى HTML.",
-      "seo_title": "محرر تخفيض السعر المجاني والمعاينة عبر الإنترنت",
+      "name": "معاينة Markdown",
+      "description": "اكتب Markdown وشاهد المعاينة المباشرة. تصدير إلى HTML.",
+      "seo_title": "محرر Markdown المجاني والمعاينة عبر الإنترنت",
       "seo_description": "قم بكتابة ومعاينة Markdown عبر الإنترنت مجانًا. معاينة مباشرة مع تسليط الضوء على بناء الجملة وتصدير HTML. مثالي للوثائق وملفات README ومشاركات المدونات."
     },
     "lorem-ipsum": {
@@ -5276,9 +5279,9 @@
       "seo_description": "تحويل النص إلى رمز ثنائي أو ثنائي إلى نص عبر الإنترنت مجانًا. دعم ترميز ASCII وUnicode. مثالية لتعلم المفاهيم الثنائية وترميز البيانات."
     },
     "markdown-to-html": {
-      "name": "تخفيض السعر إلى HTML",
+      "name": "Markdown إلى HTML",
       "description": "تحويل نص Markdown إلى كود HTML.",
-      "seo_title": "تخفيض السعر المجاني لتحويل HTML",
+      "seo_title": "محول Markdown إلى HTML مجاني",
       "seo_description": "قم بتحويل Markdown إلى HTML عبر الإنترنت مجانًا. دعم GitHub Flavoured Markdown مع الجداول وكتل التعليمات البرمجية وقوائم المهام. معاينة ونسخ مخرجات HTML النظيفة."
     },
     "html-minifier": {
@@ -5406,8 +5409,8 @@
       "urlLabel": "URL",
       "protocol": "بروتوكول",
       "hostname": "اسم المضيف",
-      "port": "ميناء",
-      "pathname": "طريق",
+      "port": "المنفذ",
+      "pathname": "المسار",
       "search": "سلسلة الاستعلام",
       "hash": "تجزئة",
       "origin": "أصل",
@@ -5648,7 +5651,7 @@
     "markdown-table-generator": {
       "name": "مولد جداول Markdown",
       "description": "قم بإنشاء جداول Markdown وتحريرها باستخدام المحرر المرئي والمعاينة المباشرة.",
-      "seo_title": "مولد جدول تخفيض السعر مجانًا على الإنترنت",
+      "seo_title": "مولد جدول Markdown مجانًا على الإنترنت",
       "seo_description": "قم بإنشاء جداول Markdown باستخدام المحرر المرئي عبر الإنترنت مجانًا. المعاينة المباشرة ومحاذاة الأعمدة واستيراد ملف CSV. مثالي للملفات التمهيدية والمستندات الخاصة بـ GitHub.",
       "addRow": "+ إضافة صف",
       "addColumn": "+ إضافة عمود",
@@ -5662,7 +5665,7 @@
       "cell": "خلية",
       "removeRow": "إزالة الصف",
       "removeColumn": "إزالة العمود",
-      "markdownOutput": "إخراج تخفيض السعر",
+      "markdownOutput": "إخراج Markdown",
       "preview": "معاينة"
     },
     "base58": {
@@ -6005,7 +6008,7 @@
       "name": "HTML to Markdown",
       "description": "تحويل HTML إلى تنسيق Markdown.",
       "input": "HTML Input",
-      "output": "إخراج تخفيض السعر",
+      "output": "إخراج Markdown",
       "convert": "تحويل",
       "copy": "نسخ",
       "seo_title": "HTML مجاني لتحويل Markdown عبر الإنترنت",
@@ -6344,7 +6347,7 @@
       "searchPlaceholder": "البحث عن طريق رقم المنفذ أو الخدمة...",
       "lookupPort": "بحث عن منفذ محدد",
       "portPlaceholder": "أدخل رقم المنفذ...",
-      "port": "ميناء",
+      "port": "المنفذ",
       "service": "خدمة",
       "descriptionLabel": "وصف",
       "unknownPort": "منفذ خدمة غير معروف أو مخصص",
@@ -6410,7 +6413,7 @@
       "marketingCookies": "ملفات تعريف الارتباط الخاصة بالتسويق/الإعلان",
       "generate": "إنشاء سياسة ملفات تعريف الارتباط",
       "copy": "نسخ إلى الحافظة",
-      "output": "سياسة ملفات تعريف الارتباط التي تم إنشاؤها (تخفيض السعر)"
+      "output": "سياسة ملفات تعريف الارتباط التي تم إنشاؤها (Markdown)"
     },
     "json-to-tsv": {
       "name": "JSON to TSV Converter",
@@ -6949,10 +6952,10 @@
       "errorConversion": "خطأ في التحويل"
     },
     "text-to-nato": {
-      "name": "نص إلى الناتو",
-      "description": "تحويل النص إلى الأبجدية الصوتية لحلف شمال الأطلسي.",
-      "seo_title": "النص إلى محول الأبجدية الصوتية الناتو",
-      "seo_description": "قم بتحويل الحروف والأرقام إلى كلمات الأبجدية الصوتية لحلف الناتو عبر الإنترنت مجانًا. تنسيق Alpha وBravo وCharlie للتواصل الواضح. للراديو والهاتف.",
+      "name": "نص إلى أبجدية NATO الصوتية",
+      "description": "تحويل النص إلى أبجدية NATO الصوتية (Alpha, Bravo, Charlie...).",
+      "seo_title": "محول النص إلى أبجدية NATO الصوتية",
+      "seo_description": "قم بتحويل الحروف والأرقام إلى كلمات أبجدية NATO الصوتية عبر الإنترنت مجانًا. تنسيق Alpha وBravo وCharlie للتواصل الواضح. للراديو والهاتف.",
       "separator": "فاصل",
       "sepNewline": "خط جديد",
       "sepDash": "اندفاعة",
@@ -7110,6 +7113,12 @@
     "about": "حول",
     "blog": "المدونة"
   },
+  "theme": {
+    "toggle": "تبديل السمة",
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام"
+  },
   "blog": {
     "title": "المدونة",
     "description": "دروس للمطورين وأدلة الأدوات ورؤى تقنية لتعزيز إنتاجيتك.",
@@ -7119,7 +7128,10 @@
     "noPosts": "لا توجد مقالات بعد. تحقق مرة أخرى قريباً!",
     "readMore": "اقرأ المزيد",
     "publishedOn": "نُشر في",
-    "author": "الكاتب"
+    "author": "الكاتب",
+    "featured": "مميز",
+    "relatedPosts": "مقالات ذات صلة",
+    "relatedTools": "أدوات موصى بها"
   },
   "errors": {
     "notFound": {

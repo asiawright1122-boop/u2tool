@@ -107,9 +107,9 @@ export default function CidrCalculator() {
           value={cidr}
           onChange={(e) => setCidr(e.target.value)}
           placeholder="192.168.1.0/24"
-          className="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full p-3 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
-        {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
+        {error && <p className="mt-1 text-sm text-red-600 dark:text-red-500">{error}</p>}
       </div>
 
       <div>
@@ -122,7 +122,7 @@ export default function CidrCalculator() {
                 const ip = cidr.split('/')[0] || '192.168.1.0';
                 setCidr(`${ip}/${prefix}`);
               }}
-              className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm"
+              className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm"
             >
               /{prefix}
             </button>
@@ -132,41 +132,41 @@ export default function CidrCalculator() {
 
       {result && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300">{t('cidr.networkAddress')}</div>
-            <div className="font-mono text-lg">{result.networkAddress}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('cidr.networkAddress')}</div>
+            <div className="font-mono text-lg text-gray-900 dark:text-white">{result.networkAddress}</div>
           </div>
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300">{t('cidr.broadcastAddress')}</div>
-            <div className="font-mono text-lg">{result.broadcastAddress}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('cidr.broadcastAddress')}</div>
+            <div className="font-mono text-lg text-gray-900 dark:text-white">{result.broadcastAddress}</div>
           </div>
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300">{t('cidr.firstHost')}</div>
-            <div className="font-mono text-lg">{result.firstHost}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('cidr.firstHost')}</div>
+            <div className="font-mono text-lg text-gray-900 dark:text-white">{result.firstHost}</div>
           </div>
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300">{t('cidr.lastHost')}</div>
-            <div className="font-mono text-lg">{result.lastHost}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('cidr.lastHost')}</div>
+            <div className="font-mono text-lg text-gray-900 dark:text-white">{result.lastHost}</div>
           </div>
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300">{t('cidr.subnetMask')}</div>
-            <div className="font-mono text-lg">{result.subnetMask}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('cidr.subnetMask')}</div>
+            <div className="font-mono text-lg text-gray-900 dark:text-white">{result.subnetMask}</div>
           </div>
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300">{t('cidr.wildcardMask')}</div>
-            <div className="font-mono text-lg">{result.wildcardMask}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('cidr.wildcardMask')}</div>
+            <div className="font-mono text-lg text-gray-900 dark:text-white">{result.wildcardMask}</div>
           </div>
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300">{t('cidr.totalHosts')}</div>
-            <div className="font-mono text-lg">{result.totalHosts.toLocaleString()}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('cidr.totalHosts')}</div>
+            <div className="font-mono text-lg text-gray-900 dark:text-white">{result.totalHosts.toLocaleString()}</div>
           </div>
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300">{t('cidr.usableHosts')}</div>
-            <div className="font-mono text-lg">{result.usableHosts.toLocaleString()}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('cidr.usableHosts')}</div>
+            <div className="font-mono text-lg text-gray-900 dark:text-white">{result.usableHosts.toLocaleString()}</div>
           </div>
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg col-span-full">
-            <div className="text-sm text-gray-300">{t('cidr.binaryMask')}</div>
-            <div className="font-mono text-sm break-all">{result.binaryMask}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg col-span-full">
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('cidr.binaryMask')}</div>
+            <div className="font-mono text-sm break-all text-gray-900 dark:text-white">{result.binaryMask}</div>
           </div>
         </div>
       )}

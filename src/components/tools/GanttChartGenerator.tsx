@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 interface GanttTask {
     id: string;
@@ -47,6 +48,7 @@ export default function GanttChartGenerator() {
     const [colorTheme, setColorTheme] = useState<keyof typeof colorThemes>('default');
 
     const chartRef = useRef<ReactECharts>(null);
+    const chartTheme = useChartTheme();
 
     const generateId = useCallback(() => {
         const newId = `${baseId}-${idCounter}`;
@@ -85,8 +87,6 @@ export default function GanttChartGenerator() {
 
     const getChartOption = useCallback((): EChartsOption => {
         const colors = colorThemes[colorTheme];
-        const textColor = '#e5e7eb';
-        const axisLineColor = '#4b5563';
 
         // Prepare data for custom series
         // Reverse tasks so the first task appears at the TOP of the Y-axis
@@ -192,11 +192,11 @@ export default function GanttChartGenerator() {
         }
 
         return {
-            backgroundColor: '#1f2937',
+            backgroundColor: chartTheme.backgroundColor,
             title: {
                 text: chartTitle,
                 left: 'center',
-                textStyle: { fontSize: 18, fontWeight: 'bold', color: '#fff' },
+                textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
             },
             tooltip: {
                 formatter: (params) => {
@@ -220,20 +220,20 @@ export default function GanttChartGenerator() {
                 min: axisMin,
                 max: axisMax,
                 axisLabel: {
-                    color: textColor,
+                    color: chartTheme.axisLabelColor,
                     formatter: (value: number) => {
                         const d = new Date(value);
                         return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
                     },
                     hideOverlap: true
                 },
-                splitLine: { show: true, lineStyle: { color: axisLineColor, type: 'dashed', opacity: 0.3 } },
+                splitLine: { show: true, lineStyle: { color: chartTheme.splitLineColor, type: 'dashed', opacity: 0.3 } },
             },
             yAxis: {
                 type: 'category',
                 data: categories,
-                axisLabel: { color: textColor },
-                axisLine: { show: true, lineStyle: { color: axisLineColor } },
+                axisLabel: { color: chartTheme.axisLabelColor },
+                axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
             },
             series: [
                 {
@@ -250,7 +250,7 @@ export default function GanttChartGenerator() {
                 }
             ]
         };
-    }, [tasks, chartTitle, colorTheme, t]);
+    }, [tasks, chartTitle, colorTheme, t, chartTheme]);
 
     const addTask = () => {
         const today = new Date();
@@ -282,7 +282,7 @@ export default function GanttChartGenerator() {
             const url = echartInstance.getDataURL({
                 type: format,
                 pixelRatio: 2,
-                backgroundColor: '#1f2937',
+                backgroundColor: chartTheme.backgroundColor,
             });
             const link = document.createElement('a');
             link.download = `gantt-chart-${Date.now()}.${format}`;
@@ -315,7 +315,7 @@ export default function GanttChartGenerator() {
                 <div className="space-y-4">
                     <div>
                         <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-                        <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+                        <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
                             <div>
                                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                                 <input
@@ -351,8 +351,8 @@ export default function GanttChartGenerator() {
                             </button>
                         </div>
 
-                        <div className="space-y-2 max-h-[600px] overflow-y-auto bg-gray-900 border border-gray-700 rounded-lg p-3">
-                            <div className="grid grid-cols-[1.5fr_1fr_1fr_0.8fr_auto] gap-2 text-xs text-gray-400 mb-2 px-1">
+                    <div className="space-y-2 max-h-[600px] overflow-y-auto bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-3">
+                            <div className="grid grid-cols-[1.5fr_1fr_1fr_0.8fr_auto] gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2 px-1">
                                 <span>{t('taskName')}</span>
                                 <span>{t('start')}</span>
                                 <span>{t('end')}</span>
@@ -365,19 +365,19 @@ export default function GanttChartGenerator() {
                                         type="text"
                                         value={task.name}
                                         onChange={(e) => updateTask(task.id, 'name', e.target.value)}
-                                        className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                                        className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                     />
                                     <input
                                         type="date"
                                         value={task.startDate}
                                         onChange={(e) => updateTask(task.id, 'startDate', e.target.value)}
-                                        className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                                        className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                     />
                                     <input
                                         type="date"
                                         value={task.endDate}
                                         onChange={(e) => updateTask(task.id, 'endDate', e.target.value)}
-                                        className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                                        className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                     />
                                     <input
                                         type="number"
@@ -385,11 +385,11 @@ export default function GanttChartGenerator() {
                                         max="100"
                                         value={task.progress}
                                         onChange={(e) => updateTask(task.id, 'progress', parseInt(e.target.value) || 0)}
-                                        className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                                        className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                     />
                                     <button
                                         onClick={() => removeTask(task.id)}
-                                        className="text-red-400 hover:text-red-300"
+                                        className="text-red-600 dark:text-red-400 hover:text-red-500 dark:hover:text-red-300"
                                     >
                                         ✕
                                     </button>
@@ -401,7 +401,7 @@ export default function GanttChartGenerator() {
 
                 <div>
                     <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-                    <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '500px' }}>
+                    <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '500px' }}>
                         <ReactECharts
                             ref={chartRef}
                             option={getChartOption()}
@@ -413,9 +413,9 @@ export default function GanttChartGenerator() {
             </div>
 
             {/* Tips */}
-            <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+            <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
                 <p className="font-medium mb-1">💡 {t('tipsTitle')}</p>
-                <ul className="space-y-0.5 text-blue-400">
+                <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
                     <li>• {t('tip1')}</li>
                     <li>• {t('tip2')}</li>
                 </ul>

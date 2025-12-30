@@ -36,31 +36,31 @@ export default function JsonEscape() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('input')}</label>
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={t('jsonEscape.placeholder')}
-          className="w-full h-40 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"
+          className="w-full h-40 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
       <div className="flex gap-3">
-        <button onClick={escapeJson} className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium">
+        <button onClick={escapeJson} className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium">
           {t('jsonEscape.escape')}
         </button>
-        <button onClick={unescapeJson} className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium">
+        <button onClick={unescapeJson} className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium">
           {t('jsonEscape.unescape')}
         </button>
       </div>
 
       <div>
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm font-medium text-gray-300">{t('output')}</label>
+          <label className="text-sm font-medium text-gray-600 dark:text-gray-300">{t('output')}</label>
           <button
             onClick={copyToClipboard}
             disabled={!output}
-            className="px-3 py-1 bg-gray-700 hover:bg-gray-600 disabled:opacity-50 rounded text-sm"
+            className="px-3 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white disabled:opacity-50 rounded text-sm"
           >
             {copied ? t('copied') : t('copy')}
           </button>
@@ -68,7 +68,7 @@ export default function JsonEscape() {
         <textarea
           value={output}
           readOnly
-          className="w-full h-40 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm"
+          className="w-full h-40 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm"
         />
       </div>
     </div>

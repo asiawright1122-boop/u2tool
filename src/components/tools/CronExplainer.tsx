@@ -154,46 +154,46 @@ export default function CronExplainer() {
 
       {/* Field Labels */}
       <div className="grid grid-cols-5 gap-2 text-center text-sm">
-        <div className="p-2 bg-gray-800 rounded">
-          <div className="font-mono text-blue-400">{cron.split(/\s+/)[0] || '*'}</div>
-          <div className="text-gray-300 text-xs mt-1">{tc('minute')}</div>
-          <div className="text-gray-300 text-xs">0-59</div>
+        <div className="p-2 bg-gray-100 dark:bg-gray-800 rounded">
+          <div className="font-mono text-blue-600 dark:text-blue-400">{cron.split(/\s+/)[0] || '*'}</div>
+          <div className="text-gray-600 dark:text-gray-300 text-xs mt-1">{tc('minute')}</div>
+          <div className="text-gray-500 dark:text-gray-300 text-xs">0-59</div>
         </div>
-        <div className="p-2 bg-gray-800 rounded">
-          <div className="font-mono text-green-400">{cron.split(/\s+/)[1] || '*'}</div>
-          <div className="text-gray-300 text-xs mt-1">{tc('hour')}</div>
-          <div className="text-gray-300 text-xs">0-23</div>
+        <div className="p-2 bg-gray-100 dark:bg-gray-800 rounded">
+          <div className="font-mono text-green-600 dark:text-green-400">{cron.split(/\s+/)[1] || '*'}</div>
+          <div className="text-gray-600 dark:text-gray-300 text-xs mt-1">{tc('hour')}</div>
+          <div className="text-gray-500 dark:text-gray-300 text-xs">0-23</div>
         </div>
-        <div className="p-2 bg-gray-800 rounded">
-          <div className="font-mono text-yellow-400">{cron.split(/\s+/)[2] || '*'}</div>
-          <div className="text-gray-300 text-xs mt-1">{tc('day')}</div>
-          <div className="text-gray-300 text-xs">1-31</div>
+        <div className="p-2 bg-gray-100 dark:bg-gray-800 rounded">
+          <div className="font-mono text-yellow-600 dark:text-yellow-400">{cron.split(/\s+/)[2] || '*'}</div>
+          <div className="text-gray-600 dark:text-gray-300 text-xs mt-1">{tc('day')}</div>
+          <div className="text-gray-500 dark:text-gray-300 text-xs">1-31</div>
         </div>
-        <div className="p-2 bg-gray-800 rounded">
-          <div className="font-mono text-purple-400">{cron.split(/\s+/)[3] || '*'}</div>
-          <div className="text-gray-300 text-xs mt-1">{tc('month')}</div>
-          <div className="text-gray-300 text-xs">1-12</div>
+        <div className="p-2 bg-gray-100 dark:bg-gray-800 rounded">
+          <div className="font-mono text-purple-600 dark:text-purple-400">{cron.split(/\s+/)[3] || '*'}</div>
+          <div className="text-gray-600 dark:text-gray-300 text-xs mt-1">{tc('month')}</div>
+          <div className="text-gray-500 dark:text-gray-300 text-xs">1-12</div>
         </div>
-        <div className="p-2 bg-gray-800 rounded">
-          <div className="font-mono text-red-400">{cron.split(/\s+/)[4] || '*'}</div>
-          <div className="text-gray-300 text-xs mt-1">{tc('weekday')}</div>
-          <div className="text-gray-300 text-xs">0-6</div>
+        <div className="p-2 bg-gray-100 dark:bg-gray-800 rounded">
+          <div className="font-mono text-red-600 dark:text-red-400">{cron.split(/\s+/)[4] || '*'}</div>
+          <div className="text-gray-600 dark:text-gray-300 text-xs mt-1">{tc('weekday')}</div>
+          <div className="text-gray-500 dark:text-gray-300 text-xs">0-6</div>
         </div>
       </div>
 
       {/* Explanation */}
-      <div className="p-4 bg-blue-900/20 border border-blue-800 rounded-lg">
-        <h3 className="text-sm font-medium text-blue-400 mb-2">{tc('explanation')}</h3>
-        <p className="text-lg">{explanation}</p>
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+        <h3 className="text-sm font-medium text-blue-700 dark:text-blue-400 mb-2">{tc('explanation')}</h3>
+        <p className="text-lg text-gray-900 dark:text-white">{explanation}</p>
       </div>
 
       {/* Next Runs */}
       {nextRuns.length > 0 && (
-        <div className="p-4 bg-gray-800 rounded-lg">
-          <h3 className="text-sm font-medium mb-3">{tc('nextRuns')}</h3>
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+          <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">{tc('nextRuns')}</h3>
           <div className="space-y-2">
             {nextRuns.map((date, i) => (
-              <div key={i} className="text-sm text-gray-300 font-mono">
+              <div key={i} className="text-sm text-gray-600 dark:text-gray-300 font-mono">
                 {date.toLocaleString()}
               </div>
             ))}
@@ -203,29 +203,29 @@ export default function CronExplainer() {
 
       {/* Examples */}
       <div>
-        <h3 className="text-sm font-medium mb-3">{tc('examples')}</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">{tc('examples')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           {examples.map((ex, i) => (
             <button
               key={i}
               onClick={() => setCron(ex.cron)}
-              className="p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors"
+              className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
-              <code className="text-blue-400">{ex.cron}</code>
-              <div className="text-sm text-gray-300 mt-1">{tc(ex.descKey)}</div>
+              <code className="text-blue-600 dark:text-blue-400">{ex.cron}</code>
+              <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">{tc(ex.descKey)}</div>
             </button>
           ))}
         </div>
       </div>
 
       {/* Special Characters */}
-      <div className="p-4 bg-gray-800/50 rounded-lg text-sm">
-        <h3 className="font-medium mb-2">{tc('specialChars')}</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-gray-300">
-          <div><code className="text-blue-400">*</code> - {tc('anyValue')}</div>
-          <div><code className="text-blue-400">,</code> - {tc('valueList')}</div>
-          <div><code className="text-blue-400">-</code> - {tc('range')}</div>
-          <div><code className="text-blue-400">/</code> - {tc('stepValues')}</div>
+      <div className="p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-sm">
+        <h3 className="font-medium text-gray-900 dark:text-white mb-2">{tc('specialChars')}</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-gray-600 dark:text-gray-300">
+          <div><code className="text-blue-600 dark:text-blue-400">*</code> - {tc('anyValue')}</div>
+          <div><code className="text-blue-600 dark:text-blue-400">,</code> - {tc('valueList')}</div>
+          <div><code className="text-blue-600 dark:text-blue-400">-</code> - {tc('range')}</div>
+          <div><code className="text-blue-600 dark:text-blue-400">/</code> - {tc('stepValues')}</div>
         </div>
       </div>
     </div>

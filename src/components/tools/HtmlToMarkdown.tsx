@@ -84,26 +84,26 @@ export default function HtmlToMarkdown() {
     <div className="space-y-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('input')}</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
           <textarea value={input} onChange={(e) => setInput(e.target.value)}
-            className="w-full h-80 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm"
+            className="w-full h-80 px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
             placeholder={t('inputPlaceholder')} />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('output')}</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
           <textarea value={output} readOnly
-            className="w-full h-80 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm"
+            className="w-full h-80 px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
             placeholder={t('outputPlaceholder')} />
         </div>
       </div>
 
       <div className="flex gap-4">
         <button onClick={convert}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
           {t('convert')}
         </button>
         <button onClick={copyToClipboard} disabled={!output}
-          className="px-6 py-2 bg-gray-600 hover:bg-gray-9000 disabled:opacity-50 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 text-gray-900 dark:text-white disabled:opacity-50 rounded-lg font-medium transition-colors">
           {t('copy')}
         </button>
       </div>

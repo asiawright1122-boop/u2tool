@@ -71,42 +71,42 @@ export default function UrlShortenerPreview() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-yellow-900/30 border border-yellow-600 rounded-lg p-4">
-        <p className="text-yellow-400 text-sm">
+      <div className="bg-yellow-50 dark:bg-yellow-900/30 border border-yellow-300 dark:border-yellow-600 rounded-lg p-4">
+        <p className="text-yellow-700 dark:text-yellow-400 text-sm">
           {t('note')}
         </p>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('input')}</label>
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea value={input} onChange={(e) => setInput(e.target.value)}
-          className="w-full h-40 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white"
+          className="w-full h-40 px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
           placeholder={t('placeholder')} />
       </div>
 
       <div className="flex gap-4">
         <button onClick={analyzeUrls} disabled={loading || !input}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 rounded-lg font-medium transition-colors text-white">
           {loading ? t('analyzing') : t('analyzeUrls')}
         </button>
         <button onClick={copyResults} disabled={results.length === 0}
-          className="px-6 py-2 bg-gray-600 hover:bg-gray-9000 disabled:opacity-50 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 disabled:opacity-50 rounded-lg font-medium transition-colors text-gray-700 dark:text-white">
           {t('copy')}
         </button>
       </div>
 
       {results.length > 0 && (
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('results')}</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('results')}</label>
           <div className="space-y-2">
             {results.map((result, index) => (
-              <div key={index} className={`p-4 rounded-lg ${result.status === 'error' ? 'bg-red-900/30' : 'bg-gray-700'}`}>
-                <div className="font-mono text-sm text-blue-400 break-all">{result.shortUrl}</div>
+              <div key={index} className={`p-4 rounded-lg ${result.status === 'error' ? 'bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700' : 'bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600'}`}>
+                <div className="font-mono text-sm text-blue-600 dark:text-blue-400 break-all">{result.shortUrl}</div>
                 {result.expandedUrl && (
-                  <div className="font-mono text-sm text-green-400 break-all mt-1">→ {result.expandedUrl}</div>
+                  <div className="font-mono text-sm text-green-600 dark:text-green-400 break-all mt-1">→ {result.expandedUrl}</div>
                 )}
                 {result.error && (
-                  <div className="text-sm text-red-400 mt-1">{result.error}</div>
+                  <div className="text-sm text-red-600 dark:text-red-400 mt-1">{result.error}</div>
                 )}
               </div>
             ))}
@@ -115,12 +115,12 @@ export default function UrlShortenerPreview() {
       )}
 
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('supportedServices')}</label>
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('supportedServices')}</label>
         <div className="flex flex-wrap gap-2">
           {shortenerDomains.slice(0, 20).map((domain) => (
-            <span key={domain} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">{domain}</span>
+            <span key={domain} className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-xs text-gray-600 dark:text-gray-300">{domain}</span>
           ))}
-          <span className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">{t('moreServices', { count: shortenerDomains.length - 20 })}</span>
+          <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-xs text-gray-600 dark:text-gray-300">{t('moreServices', { count: shortenerDomains.length - 20 })}</span>
         </div>
       </div>
     </div>

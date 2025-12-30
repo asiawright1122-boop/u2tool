@@ -61,27 +61,27 @@ export default function UuidValidator() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
           {t('uuidValidator.input')}
         </label>
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={t('uuidValidator.placeholder')}
-          className="w-full h-40 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full h-40 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
       </div>
 
       <div className="flex gap-3">
         <button
           onClick={handleValidate}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors text-white"
         >
           {t('uuidValidator.validate')}
         </button>
         <button
           onClick={() => { setInput(''); setResults([]); }}
-          className="px-6 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg font-medium transition-colors"
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg font-medium transition-colors text-gray-700 dark:text-white"
         >
           {t('clear')}
         </button>
@@ -90,8 +90,8 @@ export default function UuidValidator() {
       {results.length > 0 && (
         <>
           <div className="flex gap-4 text-sm">
-            <span className="text-green-400">✓ {t('uuidValidator.valid')}: {validCount}</span>
-            <span className="text-red-400">✗ {t('uuidValidator.invalid')}: {invalidCount}</span>
+            <span className="text-green-600 dark:text-green-400">✓ {t('uuidValidator.valid')}: {validCount}</span>
+            <span className="text-red-600 dark:text-red-400">✗ {t('uuidValidator.invalid')}: {invalidCount}</span>
           </div>
 
           <div className="space-y-2">
@@ -100,19 +100,19 @@ export default function UuidValidator() {
                 key={index}
                 className={`p-3 rounded-lg border ${
                   item.result.isValid
-                    ? 'bg-green-900/20 border-green-700'
-                    : 'bg-red-900/20 border-red-700'
+                    ? 'bg-green-50 dark:bg-green-900/20 border-green-300 dark:border-green-700'
+                    : 'bg-red-50 dark:bg-red-900/20 border-red-300 dark:border-red-700'
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <code className="text-sm font-mono">{item.uuid}</code>
+                  <code className="text-sm font-mono text-gray-900 dark:text-white">{item.uuid}</code>
                   {item.result.isValid ? (
                     <div className="flex gap-3 text-sm">
-                      <span className="text-green-400">{item.result.version}</span>
-                      <span className="text-gray-300">{item.result.variant}</span>
+                      <span className="text-green-600 dark:text-green-400">{item.result.version}</span>
+                      <span className="text-gray-600 dark:text-gray-300">{item.result.variant}</span>
                     </div>
                   ) : (
-                    <span className="text-red-400 text-sm">{t('uuidValidator.invalidFormat')}</span>
+                    <span className="text-red-600 dark:text-red-400 text-sm">{t('uuidValidator.invalidFormat')}</span>
                   )}
                 </div>
               </div>
@@ -121,9 +121,9 @@ export default function UuidValidator() {
         </>
       )}
 
-      <div className="bg-gray-800/50 rounded-lg p-4">
-        <h3 className="font-medium mb-2">{t('uuidValidator.versions')}</h3>
-        <ul className="text-sm text-gray-300 space-y-1">
+      <div className="bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+        <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('uuidValidator.versions')}</h3>
+        <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
           <li>• v1 - {t('uuidValidator.v1Desc')}</li>
           <li>• v4 - {t('uuidValidator.v4Desc')}</li>
           <li>• v5 - {t('uuidValidator.v5Desc')}</li>

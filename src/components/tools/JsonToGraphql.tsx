@@ -170,15 +170,15 @@ export default function JsonToGraphql() {
         </div>
       )}
 
-      <div className="p-4 bg-gray-800/50 rounded-lg text-sm">
-        <h3 className="font-medium mb-2">{tg('typeInference')}</h3>
-        <div className="grid grid-cols-2 gap-2 text-gray-300">
-          <div>String → <code className="text-green-400">String</code></div>
-          <div>Integer → <code className="text-green-400">Int</code></div>
-          <div>Float → <code className="text-green-400">Float</code></div>
-          <div>Boolean → <code className="text-green-400">Boolean</code></div>
-          <div>UUID → <code className="text-green-400">ID</code></div>
-          <div>ISO Date → <code className="text-green-400">DateTime</code></div>
+      <div className="p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-sm">
+        <h3 className="font-medium mb-2 text-gray-900 dark:text-white">{tg('typeInference')}</h3>
+        <div className="grid grid-cols-2 gap-2 text-gray-600 dark:text-gray-300">
+          <div>String → <code className="text-green-600 dark:text-green-400">String</code></div>
+          <div>Integer → <code className="text-green-600 dark:text-green-400">Int</code></div>
+          <div>Float → <code className="text-green-600 dark:text-green-400">Float</code></div>
+          <div>Boolean → <code className="text-green-600 dark:text-green-400">Boolean</code></div>
+          <div>UUID → <code className="text-green-600 dark:text-green-400">ID</code></div>
+          <div>ISO Date → <code className="text-green-600 dark:text-green-400">DateTime</code></div>
         </div>
       </div>
     </div>

@@ -74,9 +74,9 @@ INSERT INTO users (id, name, email, age) VALUES (2, 'Jane', 'jane@example.com', 
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('sqlInput')}</label>
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('sqlInput')}</label>
         <textarea value={input} onChange={(e) => setInput(e.target.value)}
-          className="w-full h-40 bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white font-mono text-sm"
+          className="w-full h-40 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm"
           placeholder={t('placeholder')} />
       </div>
       
@@ -85,23 +85,23 @@ INSERT INTO users (id, name, email, age) VALUES (2, 'Jane', 'jane@example.com', 
         {t('convert')}
       </button>
 
-      {error && <div className="p-3 bg-red-900/30 border border-red-700 rounded-lg text-red-400">{error}</div>}
+      {error && <div className="p-3 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 rounded-lg text-red-600 dark:text-red-400">{error}</div>}
 
       {output && (
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">JSON</label>
-            <button onClick={handleCopy} className="text-sm text-blue-400 hover:text-blue-300">{t('copy')}</button>
+            <label className="text-sm font-medium text-gray-600 dark:text-gray-300">JSON</label>
+            <button onClick={handleCopy} className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300">{t('copy')}</button>
           </div>
-          <pre className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-green-400 font-mono text-sm overflow-auto max-h-64">
+          <pre className="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-green-600 dark:text-green-400 font-mono text-sm overflow-auto max-h-64">
             {output}
           </pre>
         </div>
       )}
 
-      <div className="text-sm text-gray-400">
+      <div className="text-sm text-gray-500 dark:text-gray-400">
         <p>{t('supportedFormat')}</p>
-        <code className="text-xs bg-gray-700 px-2 py-1 rounded">INSERT INTO table (col1, col2) VALUES (val1, val2);</code>
+        <code className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-gray-900 dark:text-white">INSERT INTO table (col1, col2) VALUES (val1, val2);</code>
       </div>
     </div>
   );

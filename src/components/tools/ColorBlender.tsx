@@ -56,7 +56,7 @@ export default function ColorBlender() {
     <div className="space-y-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('color1')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('color1')}</label>
           <div className="flex gap-2">
             <input
               type="color"
@@ -68,12 +68,12 @@ export default function ColorBlender() {
               type="text"
               value={color1}
               onChange={(e) => setColor1(e.target.value)}
-              className="flex-1 bg-gray-700 rounded-lg px-3 py-2 text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('color2')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('color2')}</label>
           <div className="flex gap-2">
             <input
               type="color"
@@ -85,31 +85,31 @@ export default function ColorBlender() {
               type="text"
               value={color2}
               onChange={(e) => setColor2(e.target.value)}
-              className="flex-1 bg-gray-700 rounded-lg px-3 py-2 text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('steps')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('steps')}</label>
           <input
             type="number"
             value={steps}
             min={1}
             max={20}
             onChange={(e) => setSteps(Math.min(20, Math.max(1, Number(e.target.value))))}
-            className="w-full bg-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
       </div>
 
       <button
         onClick={copyAll}
-        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
       >
         {tg('copy')} {tg('all')}
       </button>
 
-      <div className="bg-gray-700 rounded-lg p-4">
+      <div className="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4">
         <div className="flex h-16 rounded-lg overflow-hidden mb-4">
           {blendedColors.map((color, i) => (
             <div
@@ -125,14 +125,14 @@ export default function ColorBlender() {
           {blendedColors.map((color, i) => (
             <div
               key={i}
-              className="flex flex-col items-center cursor-pointer hover:bg-gray-600 rounded p-2 transition-colors"
+              className="flex flex-col items-center cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 rounded p-2 transition-colors"
               onClick={() => copyColor(color)}
             >
               <div
                 className="w-10 h-10 rounded-lg mb-1"
                 style={{ backgroundColor: color }}
               />
-              <span className="text-xs font-mono text-gray-300">{color}</span>
+              <span className="text-xs font-mono text-gray-600 dark:text-gray-300">{color}</span>
             </div>
           ))}
         </div>

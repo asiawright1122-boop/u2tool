@@ -74,33 +74,33 @@ export default function MarkdownToHtml() {
     <div className="space-y-4">
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-1">Markdown</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">Markdown</label>
           <textarea
             value={markdown}
             onChange={(e) => setMarkdown(e.target.value)}
-            className="w-full h-64 bg-gray-800 rounded p-3 font-mono text-sm"
+            className="w-full h-64 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-gray-100"
             placeholder={t('mdToHtml.mdPlaceholder')}
           />
         </div>
         <div>
           <div className="flex justify-between items-center mb-1">
-            <label className="text-sm text-gray-300">HTML</label>
-            <button onClick={copyHtml} className="text-sm text-blue-400 hover:text-blue-300">
+            <label className="text-sm text-gray-600 dark:text-gray-300">HTML</label>
+            <button onClick={copyHtml} className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300">
               {copied ? t('copied') : t('copy')}
             </button>
           </div>
           <textarea
             value={html}
             readOnly
-            className="w-full h-64 bg-gray-800 rounded p-3 font-mono text-sm text-green-400"
+            className="w-full h-64 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-green-600 dark:text-green-400"
           />
         </div>
       </div>
 
       <div>
-        <label className="block text-sm text-gray-300 mb-2">{t('mdToHtml.preview')}</label>
+        <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('mdToHtml.preview')}</label>
         <div 
-          className="bg-gray-800 text-black rounded p-4 prose prose-sm max-w-none"
+          className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded p-4 prose prose-sm max-w-none"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>

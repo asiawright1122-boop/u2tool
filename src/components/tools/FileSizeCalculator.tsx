@@ -94,27 +94,27 @@ export default function FileSizeCalculator() {
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="tool-label">
             {t('inputValue')}
           </label>
           <input
             type="number"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="tool-input"
             min="0"
             step="any"
           />
         </div>
 
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="tool-label">
             {t('unit')}
           </label>
           <select
             value={inputUnit}
             onChange={(e) => setInputUnit(e.target.value as Unit)}
-            className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="tool-input"
           >
             {units.map((unit) => (
               <option key={unit} value={unit}>
@@ -125,13 +125,13 @@ export default function FileSizeCalculator() {
         </div>
 
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="tool-label">
             {t('base')}
           </label>
           <select
             value={base}
             onChange={(e) => setBase(e.target.value as Base)}
-            className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="tool-input"
           >
             <option value="binary">{t('binary')} (1024)</option>
             <option value="decimal">{t('decimal')} (1000)</option>
@@ -141,20 +141,20 @@ export default function FileSizeCalculator() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-4">
-          <h3 className="font-medium text-gray-100">{t('byteConversions')}</h3>
+          <h3 className="font-medium text-gray-900 dark:text-gray-100">{t('byteConversions')}</h3>
           <div className="space-y-2">
             {conversions.map(({ unit, value, label }) => (
               <div
                 key={unit}
                 className={`p-3 rounded-lg ${
                   unit === inputUnit
-                    ? 'bg-blue-900/50 border border-blue-600'
-                    : 'bg-gray-900'
+                    ? 'bg-blue-100 dark:bg-blue-900/50 border border-blue-400 dark:border-blue-600'
+                    : 'bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700'
                 }`}
               >
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-300">{label}</span>
-                  <span className="font-mono text-gray-100">
+                  <span className="text-sm text-gray-600 dark:text-gray-300">{label}</span>
+                  <span className="font-mono text-gray-900 dark:text-gray-100">
                     {formatNumber(value)}
                   </span>
                 </div>
@@ -164,13 +164,13 @@ export default function FileSizeCalculator() {
         </div>
 
         <div className="space-y-4">
-          <h3 className="font-medium text-gray-100">{t('bitConversions')}</h3>
+          <h3 className="font-medium text-gray-900 dark:text-gray-100">{t('bitConversions')}</h3>
           <div className="space-y-2">
             {bitConversions.map(({ label, value }) => (
-              <div key={label} className="p-3 bg-gray-900 rounded-lg">
+              <div key={label} className="p-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-300">{label}</span>
-                  <span className="font-mono text-gray-100">
+                  <span className="text-sm text-gray-600 dark:text-gray-300">{label}</span>
+                  <span className="font-mono text-gray-900 dark:text-gray-100">
                     {formatNumber(value)}
                   </span>
                 </div>
@@ -178,18 +178,18 @@ export default function FileSizeCalculator() {
             ))}
           </div>
 
-          <div className="p-4 bg-green-50 rounded-lg">
-            <h4 className="font-medium text-green-800 mb-2">{t('totalBytes')}</h4>
-            <p className="font-mono text-lg text-green-700">
+          <div className="p-4 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-700 rounded-lg">
+            <h4 className="font-medium text-green-800 dark:text-green-300 mb-2">{t('totalBytes')}</h4>
+            <p className="font-mono text-lg text-green-700 dark:text-green-400">
               {bytes.toLocaleString('en-US')} {t('bytes')}
             </p>
           </div>
         </div>
       </div>
 
-      <div className="p-4 bg-blue-50 rounded-lg">
-        <h3 className="font-medium text-blue-800 mb-2">{t('info')}</h3>
-        <div className="text-sm text-blue-700 space-y-1">
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
+        <h3 className="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('info')}</h3>
+        <div className="text-sm text-blue-700 dark:text-blue-400 space-y-1">
           <p>• <strong>{t('binary')}:</strong> {t('binaryDesc')}</p>
           <p>• <strong>{t('decimal')}:</strong> {t('decimalDesc')}</p>
         </div>

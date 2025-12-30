@@ -136,7 +136,7 @@ export default function HtmlToText() {
             onChange={(e) => setPreserveLinks(e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded"
           />
-          <span className="text-sm text-gray-300">{t('preserveLinks')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('preserveLinks')}</span>
         </label>
 
         <label className="flex items-center gap-2 cursor-pointer">
@@ -146,7 +146,7 @@ export default function HtmlToText() {
             onChange={(e) => setPreserveLineBreaks(e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded"
           />
-          <span className="text-sm text-gray-300">{t('preserveLineBreaks')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('preserveLineBreaks')}</span>
         </label>
 
         <label className="flex items-center gap-2 cursor-pointer">
@@ -156,7 +156,7 @@ export default function HtmlToText() {
             onChange={(e) => setPreserveLists(e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded"
           />
-          <span className="text-sm text-gray-300">{t('preserveLists')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('preserveLists')}</span>
         </label>
 
         <button
@@ -169,20 +169,20 @@ export default function HtmlToText() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300">
             {t('htmlInput')}
           </label>
           <textarea
             value={html}
             onChange={(e) => setHtml(e.target.value)}
             placeholder={t('htmlPlaceholder')}
-            className="w-full h-64 p-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-100 font-mono text-sm"
+            className="w-full h-64 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono text-sm"
           />
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-300">
               {t('textOutput')}
             </label>
             {text && (
@@ -198,7 +198,7 @@ export default function HtmlToText() {
             value={text}
             readOnly
             placeholder={t('textPlaceholder')}
-            className="w-full h-64 p-3 border border-gray-600 rounded-lg bg-gray-900 text-gray-100"
+            className="w-full h-64 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100"
           />
         </div>
       </div>
@@ -212,9 +212,9 @@ export default function HtmlToText() {
         </button>
       </div>
 
-      <div className="p-4 bg-blue-50 rounded-lg">
-        <h3 className="font-medium text-blue-800 mb-2">{t('features')}</h3>
-        <ul className="text-sm text-blue-700 space-y-1">
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+        <h3 className="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('features')}</h3>
+        <ul className="text-sm text-blue-700 dark:text-blue-400 space-y-1">
           <li>• {t('feature1')}</li>
           <li>• {t('feature2')}</li>
           <li>• {t('feature3')}</li>

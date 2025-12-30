@@ -29,12 +29,12 @@ export default function ToolsPageClient() {
   }, [categoryParam]);
 
   return (
-    <div className="min-h-screen py-12 px-4">
+    <div className="min-h-screen py-12 px-4 bg-white dark:bg-transparent">
       <div className="max-w-6xl mx-auto">
         {/* 分类导航区域 - 与下方工具卡片网格宽度一致 */}
         <div className="mb-12">
           {/* h1 标题：页面主标题，SEO 重要 */}
-          <h1 className="text-4xl font-bold mb-6 text-center">{t('nav.tools')}</h1>
+          <h1 className="text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white">{t('nav.tools')}</h1>
 
           {/* 分类快速导航 - 5列网格对称布局 */}
           <nav aria-label="Tool categories">
@@ -43,7 +43,7 @@ export default function ToolsPageClient() {
                 <Link
                   key={cat.id}
                   href={`/tools/category/${cat.id}`}
-                  className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-700 hover:border-gray-600 transition-colors flex items-center justify-center gap-2 text-sm whitespace-nowrap"
+                  className="px-3 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors flex items-center justify-center gap-2 text-sm whitespace-nowrap text-gray-700 dark:text-gray-200"
                 >
                   <span>{cat.icon}</span>
                   {t(`categories.${cat.id}`)}
@@ -66,11 +66,11 @@ export default function ToolsPageClient() {
               {/* h2 标题：分类标题，带链接到分类页面 */}
               <Link 
                 href={`/tools/category/${cat.id}`}
-                className="text-2xl font-bold mb-6 flex items-center gap-2 hover:text-blue-400 transition-colors group"
+                className="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
               >
                 <span>{cat.icon}</span>
                 {t(`categories.${cat.id}`)}
-                <span className="text-sm text-gray-500 group-hover:text-blue-400">
+                <span className="text-sm text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-400">
                   ({categoryTools.length})
                 </span>
               </Link>
@@ -79,14 +79,14 @@ export default function ToolsPageClient() {
                   <Link
                     key={tool.slug}
                     href={`/tools/${tool.slug}`}
-                    className="tool-card p-4 bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-750 hover:border-gray-600 transition-colors"
+                    className="tool-card p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-750 hover:border-gray-300 dark:hover:border-gray-600 transition-colors"
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">{tool.icon}</span>
                       <div>
                         {/* h3 标题：工具名称，正确的标题层级 */}
-                        <h3 className="font-medium text-white">{t(`tools.${tool.slug}.name`)}</h3>
-                        <p className="text-sm text-gray-300 line-clamp-2">
+                        <h3 className="font-medium text-gray-900 dark:text-white">{t(`tools.${tool.slug}.name`)}</h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
                           {t(`tools.${tool.slug}.description`)}
                         </p>
                       </div>

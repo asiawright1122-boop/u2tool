@@ -51,34 +51,34 @@ export default function TextTemplate() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
           {t('template')}
         </label>
         <textarea
           value={template}
           onChange={(e) => setTemplate(e.target.value)}
-          className="w-full h-32 bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white font-mono text-sm focus:outline-none focus:border-blue-500"
+          className="w-full h-32 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-blue-500"
           placeholder={t('templatePlaceholder')}
         />
-        <p className="text-xs text-gray-400 mt-1">{t('syntaxHint')}</p>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{t('syntaxHint')}</p>
       </div>
 
       {detectedVars.length > 0 && (
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('variables')} ({detectedVars.length})
           </label>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {detectedVars.map(varName => (
               <div key={varName} className="flex items-center gap-2">
-                <span className="text-sm text-blue-400 font-mono min-w-[100px]">
+                <span className="text-sm text-blue-600 dark:text-blue-400 font-mono min-w-[100px]">
                   {`{{ ${varName} }}`}
                 </span>
                 <input
                   type="text"
                   value={variables[varName] || ''}
                   onChange={(e) => handleVariableChange(varName, e.target.value)}
-                  className="flex-1 bg-gray-700 border border-gray-600 rounded px-3 py-1 text-white text-sm focus:outline-none focus:border-blue-500"
+                  className="flex-1 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded px-3 py-1 text-gray-900 dark:text-white text-sm focus:outline-none focus:border-blue-500"
                   placeholder={t('valuePlaceholder')}
                 />
               </div>
@@ -97,15 +97,15 @@ export default function TextTemplate() {
       {output && (
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">{t('result')}</label>
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('result')}</label>
             <button
               onClick={handleCopy}
-              className="text-sm text-blue-400 hover:text-blue-300"
+              className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
             >
               {t('copy')}
             </button>
           </div>
-          <pre className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-green-400 font-mono text-sm whitespace-pre-wrap">
+          <pre className="w-full bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-green-600 dark:text-green-400 font-mono text-sm whitespace-pre-wrap">
             {output}
           </pre>
         </div>

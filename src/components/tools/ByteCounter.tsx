@@ -27,41 +27,41 @@ export default function ByteCounter() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm text-gray-300 mb-1">{t('input')}</label>
+        <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('input')}</label>
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
-          className="w-full h-40 bg-gray-800 rounded p-3 text-white font-mono text-sm"
+          className="w-full h-40 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 text-gray-900 dark:text-white font-mono text-sm"
           placeholder={t('byteCounter.placeholder')}
         />
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div className="bg-gray-800 rounded p-4 text-center">
-          <div className="text-2xl font-bold text-blue-400">{charCount}</div>
-          <div className="text-sm text-gray-300">{t('byteCounter.characters')}</div>
+        <div className="bg-gray-100 dark:bg-gray-800 rounded p-4 text-center">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{charCount}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">{t('byteCounter.characters')}</div>
         </div>
-        <div className="bg-gray-800 rounded p-4 text-center">
-          <div className="text-2xl font-bold text-green-400">{utf8Bytes}</div>
-          <div className="text-sm text-gray-300">UTF-8 {t('byteCounter.bytes')}</div>
+        <div className="bg-gray-100 dark:bg-gray-800 rounded p-4 text-center">
+          <div className="text-2xl font-bold text-green-600 dark:text-green-400">{utf8Bytes}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">UTF-8 {t('byteCounter.bytes')}</div>
         </div>
-        <div className="bg-gray-800 rounded p-4 text-center">
-          <div className="text-2xl font-bold text-yellow-400">{utf16Bytes}</div>
-          <div className="text-sm text-gray-300">UTF-16 {t('byteCounter.bytes')}</div>
+        <div className="bg-gray-100 dark:bg-gray-800 rounded p-4 text-center">
+          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">{utf16Bytes}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">UTF-16 {t('byteCounter.bytes')}</div>
         </div>
-        <div className="bg-gray-800 rounded p-4 text-center">
-          <div className="text-2xl font-bold text-purple-400">{asciiBytes}</div>
-          <div className="text-sm text-gray-300">ASCII {t('byteCounter.bytes')}</div>
+        <div className="bg-gray-100 dark:bg-gray-800 rounded p-4 text-center">
+          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{asciiBytes}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">ASCII {t('byteCounter.bytes')}</div>
         </div>
-        <div className="bg-gray-800 rounded p-4 text-center">
-          <div className="text-2xl font-bold text-pink-400">{lineCount}</div>
-          <div className="text-sm text-gray-300">{t('byteCounter.lines')}</div>
+        <div className="bg-gray-100 dark:bg-gray-800 rounded p-4 text-center">
+          <div className="text-2xl font-bold text-pink-600 dark:text-pink-400">{lineCount}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">{t('byteCounter.lines')}</div>
         </div>
-        <div className="bg-gray-800 rounded p-4 text-center">
-          <div className="text-2xl font-bold text-orange-400">
+        <div className="bg-gray-100 dark:bg-gray-800 rounded p-4 text-center">
+          <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">
             {utf8Bytes > 1024 ? (utf8Bytes / 1024).toFixed(2) + ' KB' : utf8Bytes + ' B'}
           </div>
-          <div className="text-sm text-gray-300">{t('byteCounter.size')}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">{t('byteCounter.size')}</div>
         </div>
       </div>
     </div>

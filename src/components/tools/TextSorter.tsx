@@ -113,15 +113,15 @@ export default function TextSorter() {
   return (
     <div className="space-y-4">
       {/* 控制面板 */}
-      <div className="p-4 bg-gray-800 rounded-lg space-y-4">
+      <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg space-y-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {/* 排序类型 */}
           <div>
-            <label className="block text-xs text-gray-300 mb-1">{t('sorter.sortType')}</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('sorter.sortType')}</label>
             <select
               value={sortType}
               onChange={(e) => setSortType(e.target.value as SortType)}
-              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-sm"
+              className="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
             >
               <option value="alphabetical">{t('sorter.alphabetical')}</option>
               <option value="numerical">{t('sorter.numerical')}</option>
@@ -132,11 +132,11 @@ export default function TextSorter() {
           
           {/* 排序顺序 */}
           <div>
-            <label className="block text-xs text-gray-300 mb-1">{t('sorter.order')}</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('sorter.order')}</label>
             <select
               value={order}
               onChange={(e) => setOrder(e.target.value as SortOrder)}
-              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-sm"
+              className="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
             >
               <option value="asc">{t('sorter.ascending')}</option>
               <option value="desc">{t('sorter.descending')}</option>
@@ -146,39 +146,39 @@ export default function TextSorter() {
 
         {/* 选项 */}
         <div className="flex flex-wrap gap-4">
-          <label className="flex items-center gap-2 text-sm">
+          <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-200">
             <input
               type="checkbox"
               checked={caseSensitive}
               onChange={(e) => setCaseSensitive(e.target.checked)}
-              className="rounded bg-gray-700 border-gray-600"
+              className="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
             {t('sorter.caseSensitive')}
           </label>
-          <label className="flex items-center gap-2 text-sm">
+          <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-200">
             <input
               type="checkbox"
               checked={trimLines}
               onChange={(e) => setTrimLines(e.target.checked)}
-              className="rounded bg-gray-700 border-gray-600"
+              className="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
             {t('sorter.trimLines')}
           </label>
-          <label className="flex items-center gap-2 text-sm">
+          <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-200">
             <input
               type="checkbox"
               checked={removeEmpty}
               onChange={(e) => setRemoveEmpty(e.target.checked)}
-              className="rounded bg-gray-700 border-gray-600"
+              className="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
             {t('sorter.removeEmpty')}
           </label>
-          <label className="flex items-center gap-2 text-sm">
+          <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-200">
             <input
               type="checkbox"
               checked={removeDups}
               onChange={(e) => setRemoveDups(e.target.checked)}
-              className="rounded bg-gray-700 border-gray-600"
+              className="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
             {t('sorter.removeDuplicates')}
           </label>
@@ -188,19 +188,19 @@ export default function TextSorter() {
         <div className="flex gap-2">
           <button
             onClick={handleSort}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded text-sm font-medium"
+            className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded text-sm font-medium text-white"
           >
             {t('sorter.sort')}
           </button>
           <button
             onClick={loadExample}
-            className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm"
+            className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
           >
             {t('sorter.loadExample')}
           </button>
           <button
             onClick={handleClear}
-            className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm"
+            className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
           >
             {t('clear')}
           </button>
@@ -212,28 +212,28 @@ export default function TextSorter() {
         {/* 输入 */}
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm text-gray-300">{t('input')}</label>
-            <span className="text-xs text-gray-300">{inputLines} {t('sorter.lines')}</span>
+            <label className="text-sm text-gray-700 dark:text-gray-300">{t('input')}</label>
+            <span className="text-xs text-gray-500 dark:text-gray-300">{inputLines} {t('sorter.lines')}</span>
           </div>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={t('sorter.placeholder')}
-            className="w-full h-64 px-3 py-2 bg-gray-800 border border-gray-700 rounded font-mono text-sm resize-none focus:outline-none focus:border-blue-500"
+            className="w-full h-64 px-3 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-gray-100 resize-none focus:outline-none focus:border-blue-500"
           />
         </div>
 
         {/* 输出 */}
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm text-gray-300">{t('output')}</label>
+            <label className="text-sm text-gray-700 dark:text-gray-300">{t('output')}</label>
             <div className="flex items-center gap-2">
-              <span className="text-xs text-gray-300">{outputLines} {t('sorter.lines')}</span>
+              <span className="text-xs text-gray-500 dark:text-gray-300">{outputLines} {t('sorter.lines')}</span>
               <button
                 onClick={handleCopy}
                 disabled={!output}
                 className={`px-2 py-1 text-xs rounded ${
-                  copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'
+                  copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'
                 } disabled:opacity-50`}
               >
                 {copied ? t('copied') : t('copy')}
@@ -243,13 +243,13 @@ export default function TextSorter() {
           <textarea
             value={output}
             readOnly
-            className="w-full h-64 px-3 py-2 bg-gray-800 border border-gray-700 rounded font-mono text-sm resize-none"
+            className="w-full h-64 px-3 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-gray-100 resize-none"
           />
         </div>
       </div>
 
       {/* 说明 */}
-      <div className="p-3 bg-gray-800/50 rounded-lg text-xs text-gray-300">
+      <div className="p-3 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-xs text-gray-600 dark:text-gray-300">
         <div className="font-medium mb-1">{t('sorter.sortTypes')}</div>
         <ul className="list-disc list-inside space-y-1">
           <li><strong>{t('sorter.alphabetical')}</strong>: {t('sorter.alphabeticalDesc')}</li>

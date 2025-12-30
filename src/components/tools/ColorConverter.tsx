@@ -67,13 +67,13 @@ export default function ColorConverter() {
     <div className="space-y-6">
       {/* Color Preview */}
       <div
-        className="w-full h-32 rounded-lg border border-gray-700"
+        className="w-full h-32 rounded-lg border border-gray-200 dark:border-gray-700"
         style={{ backgroundColor: hex }}
       />
 
       {/* Color Picker */}
       <div>
-        <label className="block text-sm font-medium mb-2">{t('color.preview')}</label>
+        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('color.preview')}</label>
         <input
           type="color"
           value={hex}
@@ -83,12 +83,12 @@ export default function ColorConverter() {
       </div>
 
       {/* HEX */}
-      <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
+      <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm font-medium">HEX</label>
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">HEX</label>
           <button
             onClick={() => copyValue('hex', hex)}
-            className={`text-xs px-2 py-1 rounded ${copied === 'hex' ? 'bg-green-600' : 'bg-gray-700'}`}
+            className={`text-xs px-2 py-1 rounded ${copied === 'hex' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
           >
             {copied === 'hex' ? t('copied') : t('copy')}
           </button>
@@ -97,17 +97,17 @@ export default function ColorConverter() {
           type="text"
           value={hex}
           onChange={(e) => updateFromHex(e.target.value)}
-          className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded font-mono"
+          className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded font-mono text-gray-900 dark:text-gray-100"
         />
       </div>
 
       {/* RGB */}
-      <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
+      <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm font-medium">RGB</label>
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">RGB</label>
           <button
             onClick={() => copyValue('rgb', `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`)}
-            className={`text-xs px-2 py-1 rounded ${copied === 'rgb' ? 'bg-green-600' : 'bg-gray-700'}`}
+            className={`text-xs px-2 py-1 rounded ${copied === 'rgb' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
           >
             {copied === 'rgb' ? t('copied') : t('copy')}
           </button>
@@ -115,14 +115,14 @@ export default function ColorConverter() {
         <div className="grid grid-cols-3 gap-2">
           {(['r', 'g', 'b'] as const).map((c) => (
             <div key={c}>
-              <label className="text-xs text-gray-300 uppercase">{c}</label>
+              <label className="text-xs text-gray-500 dark:text-gray-300 uppercase">{c}</label>
               <input
                 type="number"
                 min="0"
                 max="255"
                 value={rgb[c]}
                 onChange={(e) => updateFromRgb({ ...rgb, [c]: parseInt(e.target.value) || 0 })}
-                className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-sm"
+                className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-gray-100"
               />
             </div>
           ))}
@@ -130,17 +130,17 @@ export default function ColorConverter() {
       </div>
 
       {/* HSL */}
-      <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
+      <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm font-medium">HSL</label>
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">HSL</label>
           <button
             onClick={() => copyValue('hsl', `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`)}
-            className={`text-xs px-2 py-1 rounded ${copied === 'hsl' ? 'bg-green-600' : 'bg-gray-700'}`}
+            className={`text-xs px-2 py-1 rounded ${copied === 'hsl' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
           >
             {copied === 'hsl' ? t('copied') : t('copy')}
           </button>
         </div>
-        <div className="font-mono text-sm">
+        <div className="font-mono text-sm text-gray-700 dark:text-gray-300">
           hsl({hsl.h}, {hsl.s}%, {hsl.l}%)
         </div>
       </div>

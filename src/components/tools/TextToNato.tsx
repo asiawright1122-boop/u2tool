@@ -62,11 +62,11 @@ export default function TextToNato() {
     <div className="space-y-6">
       <div className="flex flex-wrap gap-4 items-center">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('separator')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('separator')}:</label>
           <select
             value={separator}
             onChange={(e) => setSeparator(e.target.value as 'newline' | 'dash' | 'space')}
-            className="p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             <option value="newline">{t('sepNewline')}</option>
             <option value="dash">{t('sepDash')}</option>
@@ -81,7 +81,7 @@ export default function TextToNato() {
             onChange={(e) => setShowOriginal(e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded"
           />
-          <span className="text-sm text-gray-300">{t('showOriginal')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('showOriginal')}</span>
         </label>
 
         <button
@@ -94,20 +94,20 @@ export default function TextToNato() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300">
             {t('textInput')}
           </label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={t('textPlaceholder')}
-            className="w-full h-48 p-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-300">
               {t('natoOutput')}
             </label>
             {output && (
@@ -123,7 +123,7 @@ export default function TextToNato() {
             value={output}
             readOnly
             placeholder={t('natoPlaceholder')}
-            className="w-full h-48 p-3 border border-gray-600 rounded-lg bg-gray-900 text-gray-100 font-mono"
+            className="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-mono"
           />
         </div>
       </div>
@@ -137,13 +137,13 @@ export default function TextToNato() {
         </button>
       </div>
 
-      <div className="p-4 bg-gray-900 rounded-lg">
-        <h3 className="font-medium text-gray-100 mb-3">{t('alphabet')}</h3>
+      <div className="p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-3">{t('alphabet')}</h3>
         <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-2 text-sm">
           {Object.entries(NATO_ALPHABET).slice(0, 26).map(([letter, word]) => (
-            <div key={letter} className="p-2 bg-gray-800 rounded text-center">
+            <div key={letter} className="p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-center">
               <div className="font-bold text-blue-600">{letter}</div>
-              <div className="text-gray-300 text-xs">{word}</div>
+              <div className="text-gray-600 dark:text-gray-300 text-xs">{word}</div>
             </div>
           ))}
         </div>

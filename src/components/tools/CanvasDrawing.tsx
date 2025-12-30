@@ -85,7 +85,7 @@ export default function CanvasDrawing() {
           <input type="color" value={color} onChange={(e) => setColor(e.target.value)} className="w-8 h-8 rounded cursor-pointer" />
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-300">{t('canvas.size')}:</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('canvas.size')}:</span>
           <input
             type="range"
             min="1"
@@ -94,26 +94,26 @@ export default function CanvasDrawing() {
             onChange={(e) => setBrushSize(Number(e.target.value))}
             className="w-24"
           />
-          <span className="text-sm w-8">{brushSize}</span>
+          <span className="text-sm w-8 text-gray-900 dark:text-white">{brushSize}</span>
         </div>
         <div className="flex gap-2">
           <button
             onClick={() => setTool('brush')}
-            className={`px-3 py-1 rounded ${tool === 'brush' ? 'bg-blue-600' : 'bg-gray-700'}`}
+            className={`px-3 py-1 rounded text-white ${tool === 'brush' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700'}`}
           >
             {t('canvas.brush')}
           </button>
           <button
             onClick={() => setTool('eraser')}
-            className={`px-3 py-1 rounded ${tool === 'eraser' ? 'bg-blue-600' : 'bg-gray-700'}`}
+            className={`px-3 py-1 rounded text-white ${tool === 'eraser' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700'}`}
           >
             {t('canvas.eraser')}
           </button>
         </div>
-        <button onClick={clearCanvas} className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded">
+        <button onClick={clearCanvas} className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded">
           {t('clear')}
         </button>
-        <button onClick={downloadImage} className="px-3 py-1 bg-green-600 hover:bg-green-700 rounded">
+        <button onClick={downloadImage} className="px-3 py-1 bg-green-600 hover:bg-green-700 text-white rounded">
           {t('download')}
         </button>
       </div>
@@ -125,7 +125,7 @@ export default function CanvasDrawing() {
         onMouseUp={stopDrawing}
         onMouseOut={stopDrawing}
         onMouseMove={draw}
-        className="border border-gray-700 rounded-lg cursor-crosshair w-full"
+        className="border border-gray-300 dark:border-gray-700 rounded-lg cursor-crosshair w-full"
       />
     </div>
   );

@@ -99,44 +99,44 @@ export default function EncodingDetector() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('input')}</label>
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea value={input} onChange={(e) => setInput(e.target.value)}
-          className="w-full h-40 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm"
+          className="w-full h-40 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
           placeholder={t('placeholder')} />
       </div>
 
       <div className="flex gap-4">
         <button onClick={analyzeText}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
           {t('analyzeText')}
         </button>
         <button onClick={() => fileInputRef.current?.click()}
-          className="px-6 py-2 bg-gray-600 hover:bg-gray-9000 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-500 rounded-lg font-medium transition-colors">
           {t('uploadFile')}
         </button>
         <input ref={fileInputRef} type="file" onChange={handleFileUpload} className="hidden" />
       </div>
 
       {fileInfo && (
-        <div className="bg-gray-700 rounded-lg p-4">
-          <div className="text-gray-300">{t('file')}: {fileInfo.name}</div>
-          <div className="text-gray-300 text-sm">{t('size')}: {fileInfo.size} bytes</div>
+        <div className="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4">
+          <div className="text-gray-700 dark:text-gray-300">{t('file')}: {fileInfo.name}</div>
+          <div className="text-gray-600 dark:text-gray-300 text-sm">{t('size')}: {fileInfo.size} bytes</div>
         </div>
       )}
 
       {results.length > 0 && (
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('results')}</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('results')}</label>
           <div className="space-y-2">
             {results.map((result, index) => (
-              <div key={index} className="bg-gray-700 rounded-lg p-4">
+              <div key={index} className="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4">
                 <div className="flex justify-between items-center">
-                  <span className="font-medium text-white">{result.encoding}</span>
-                  <span className={`px-2 py-1 rounded text-sm ${
-                    result.confidence >= 90 ? 'bg-green-600' : result.confidence >= 70 ? 'bg-yellow-600' : 'bg-gray-600'
+                  <span className="font-medium text-gray-900 dark:text-white">{result.encoding}</span>
+                  <span className={`px-2 py-1 rounded text-sm text-white ${
+                    result.confidence >= 90 ? 'bg-green-600' : result.confidence >= 70 ? 'bg-yellow-600' : 'bg-gray-500 dark:bg-gray-600'
                   }`}>{result.confidence}% {t('confidence')}</span>
                 </div>
-                <div className="text-gray-300 text-sm mt-1">{result.details}</div>
+                <div className="text-gray-600 dark:text-gray-300 text-sm mt-1">{result.details}</div>
               </div>
             ))}
           </div>

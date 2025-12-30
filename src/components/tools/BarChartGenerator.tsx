@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 数据行类型
 interface DataRow {
@@ -93,6 +94,7 @@ export default function BarChartGenerator() {
 
   const chartRef = useRef<ReactECharts>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const chartTheme = useChartTheme();
 
   // 生成唯一 ID（使用计数器避免 Hydration 错误）
   const generateId = useCallback(() => {
@@ -127,20 +129,15 @@ export default function BarChartGenerator() {
     const values = data.map(d => d.value);
     const colors = colorThemes[colorTheme];
 
-    // 深色主题下的文字颜色配置
-    const textColor = '#e5e7eb'; // gray-200，确保在深色背景上可读
-    const axisLineColor = '#4b5563'; // gray-600
-
     return {
-      // 设置深色背景
-      backgroundColor: '#1f2937', // gray-800
+      backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
         textStyle: {
           fontSize: 18,
           fontWeight: 'bold',
-          color: '#fff', // 标题使用纯白色
+          color: chartTheme.textColor,
         },
       },
       tooltip: {
@@ -150,7 +147,7 @@ export default function BarChartGenerator() {
       legend: {
         show: showLegend,
         bottom: 10,
-        textStyle: { color: textColor }, // 图例文字颜色
+        textStyle: { color: chartTheme.legendText },
       },
       grid: {
         left: '3%',
@@ -164,26 +161,26 @@ export default function BarChartGenerator() {
         data: horizontal ? undefined : categories,
         splitLine: {
           show: showGrid,
-          lineStyle: { color: axisLineColor },
+          lineStyle: { color: chartTheme.splitLineColor },
         },
         axisLine: {
           show: true,
-          lineStyle: { color: axisLineColor },
+          lineStyle: { color: chartTheme.axisLineColor },
         },
-        axisLabel: { color: textColor }, // X轴标签颜色
+        axisLabel: { color: chartTheme.axisLabelColor },
       },
       yAxis: {
         type: horizontal ? 'category' : 'value',
         data: horizontal ? categories : undefined,
         splitLine: {
           show: showGrid,
-          lineStyle: { color: axisLineColor },
+          lineStyle: { color: chartTheme.splitLineColor },
         },
         axisLine: {
           show: true,
-          lineStyle: { color: axisLineColor },
+          lineStyle: { color: chartTheme.axisLineColor },
         },
-        axisLabel: { color: textColor }, // Y轴标签颜色
+        axisLabel: { color: chartTheme.axisLabelColor },
       },
       series: [
         {
@@ -196,12 +193,12 @@ export default function BarChartGenerator() {
           label: {
             show: true,
             position: horizontal ? 'right' : 'top',
-            color: '#fff', // 数据标签使用白色
+            color: chartTheme.labelColor,
           },
         },
       ],
     };
-  }, [data, chartTitle, colorTheme, showLegend, showGrid, horizontal, t]);
+  }, [data, chartTitle, colorTheme, showLegend, showGrid, horizontal, t, chartTheme]);
 
   // 导出图表为 PNG/SVG
   const exportChart = (format: 'png' | 'svg') => {
@@ -210,7 +207,7 @@ export default function BarChartGenerator() {
       const url = echartInstance.getDataURL({
         type: format === 'svg' ? 'svg' : 'png',
         pixelRatio: 2,
-        backgroundColor: '#1f2937', // 使用深色背景导出
+        backgroundColor: chartTheme.backgroundColor,
       });
 
       const link = document.createElement('a');
@@ -309,7 +306,7 @@ export default function BarChartGenerator() {
           {/* 图表设置 */}
           <div>
             <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-            <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
@@ -376,10 +373,10 @@ export default function BarChartGenerator() {
               </button>
             </div>
 
-            <div className="bg-gray-900 border border-gray-700 rounded-lg p-3 overflow-x-auto">
+            <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3 overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-gray-700">
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
                     <th className="text-left py-2 px-2 font-medium">{t('category')}</th>
                     <th className="text-left py-2 px-2 font-medium">{t('value')}</th>
                     <th className="w-10"></th>
@@ -387,13 +384,13 @@ export default function BarChartGenerator() {
                 </thead>
                 <tbody>
                   {data.map((row) => (
-                    <tr key={row.id} className="border-b border-gray-800 last:border-b-0">
+                    <tr key={row.id} className="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
                       <td className="py-2 px-2">
                         <input
                           type="text"
                           value={row.category}
                           onChange={(e) => updateRow(row.id, 'category', e.target.value)}
-                          className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                          className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
                       <td className="py-2 px-2">
@@ -401,7 +398,7 @@ export default function BarChartGenerator() {
                           type="number"
                           value={row.value}
                           onChange={(e) => updateRow(row.id, 'value', e.target.value)}
-                          className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                          className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
                       <td className="py-2 px-2">
@@ -424,7 +421,7 @@ export default function BarChartGenerator() {
         {/* 右侧：图表预览 */}
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden bg-gray-800" style={{ minHeight: '400px' }}>
+          <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style={{ minHeight: '400px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
@@ -437,9 +434,9 @@ export default function BarChartGenerator() {
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
         <p className="font-medium mb-1">💡 {t('tips.title')}</p>
-        <ul className="space-y-0.5 text-blue-400">
+        <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

@@ -96,12 +96,12 @@ export default function HttpStatusCodes() {
   });
 
   const getBadgeColor = (code: number) => {
-    if (code >= 100 && code < 200) return 'bg-gray-9000/20 text-gray-300 border-gray-500/30';
-    if (code >= 200 && code < 300) return 'bg-green-500/20 text-green-400 border-green-500/30';
-    if (code >= 300 && code < 400) return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
-    if (code >= 400 && code < 500) return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
-    if (code >= 500 && code < 600) return 'bg-red-500/20 text-red-400 border-red-500/30';
-    return 'bg-gray-9000/20 text-gray-300';
+    if (code >= 100 && code < 200) return 'bg-gray-200 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 border-gray-400/30 dark:border-gray-500/30';
+    if (code >= 200 && code < 300) return 'bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 border-green-500/30';
+    if (code >= 300 && code < 400) return 'bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 border-blue-500/30';
+    if (code >= 400 && code < 500) return 'bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 border-yellow-500/30';
+    if (code >= 500 && code < 600) return 'bg-red-100 dark:bg-red-500/20 text-red-700 dark:text-red-400 border-red-500/30';
+    return 'bg-gray-200 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300';
   };
 
   return (
@@ -112,12 +112,12 @@ export default function HttpStatusCodes() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder={t('searchPlaceholder')}
-          className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500"
+          className="flex-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
         />
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500"
+          className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
         >
           <option value="all">{t('allCategories')}</option>
           <option value="1xx">{t('informational')}</option>
@@ -130,18 +130,18 @@ export default function HttpStatusCodes() {
 
       <div className="grid grid-cols-1 gap-4">
         {filtered.map((item) => (
-          <div key={item.code} className="bg-gray-800 border border-gray-700 rounded-xl p-6 flex flex-col md:flex-row gap-4 md:items-start hover:border-gray-600 transition-colors">
+          <div key={item.code} className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl p-6 flex flex-col md:flex-row gap-4 md:items-start hover:border-gray-400 dark:hover:border-gray-600 transition-colors">
             <div className={`flex-shrink-0 w-24 h-16 flex items-center justify-center rounded-lg border text-xl font-bold font-mono ${getBadgeColor(item.code)}`}>
               {item.code}
             </div>
             <div>
-              <h3 className="text-lg font-bold text-white mb-2">{item.status}</h3>
-              <p className="text-gray-300 leading-relaxed">{item.desc}</p>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{item.status}</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{item.desc}</p>
             </div>
           </div>
         ))}
         {filtered.length === 0 && (
-          <div className="text-center py-12 text-gray-300">
+          <div className="text-center py-12 text-gray-500 dark:text-gray-300">
             {t('noResults')}
           </div>
         )}

@@ -95,37 +95,37 @@ export default function Base85() {
     <div className="space-y-6">
       <div className="flex gap-4">
         <button onClick={() => setMode('encode')}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${mode === 'encode' ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'}`}>
+          className={`px-4 py-2 rounded-lg font-medium transition-colors text-white ${mode === 'encode' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}>
           Encode
         </button>
         <button onClick={() => setMode('decode')}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${mode === 'decode' ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'}`}>
+          className={`px-4 py-2 rounded-lg font-medium transition-colors text-white ${mode === 'decode' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}>
           Decode
         </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('input')}</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
           <textarea value={input} onChange={(e) => setInput(e.target.value)}
-            className="w-full h-60 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm"
+            className="w-full h-60 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
             placeholder={mode === 'encode' ? t('inputPlaceholderEncode') : t('inputPlaceholderDecode')} />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('output')}</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
           <textarea value={output} readOnly
-            className="w-full h-60 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm"
+            className="w-full h-60 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
             placeholder={t('outputPlaceholder')} />
         </div>
       </div>
 
       <div className="flex gap-4">
         <button onClick={process}
-          className="px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors">
           {mode === 'encode' ? t('encode') : t('decode')}
         </button>
         <button onClick={copyToClipboard} disabled={!output}
-          className="px-6 py-2 bg-gray-600 hover:bg-gray-9000 disabled:opacity-50 rounded-lg font-medium transition-colors">
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-500 disabled:opacity-50 rounded-lg font-medium transition-colors">
           {t('copy')}
         </button>
       </div>

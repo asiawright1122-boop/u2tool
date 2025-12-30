@@ -72,24 +72,24 @@ export default function GradientGenerator() {
     <div className="space-y-6">
       {/* Preview */}
       <div
-        className="w-full h-48 rounded-xl border border-gray-700"
+        className="w-full h-48 rounded-xl border border-gray-300 dark:border-gray-700"
         style={{ background: css }}
       />
 
       {/* Type & Angle */}
       <div className="flex flex-wrap gap-4">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('gradient.type')}</label>
+          <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('gradient.type')}</label>
           <div className="flex gap-2">
             <button
               onClick={() => setType('linear')}
-              className={`px-4 py-2 rounded-lg ${type === 'linear' ? 'bg-blue-600' : 'bg-gray-800'}`}
+              className={`px-4 py-2 rounded-lg text-white ${type === 'linear' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-800'}`}
             >
               {t('gradient.linear')}
             </button>
             <button
               onClick={() => setType('radial')}
-              className={`px-4 py-2 rounded-lg ${type === 'radial' ? 'bg-blue-600' : 'bg-gray-800'}`}
+              className={`px-4 py-2 rounded-lg text-white ${type === 'radial' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-800'}`}
             >
               {t('gradient.radial')}
             </button>
@@ -98,7 +98,7 @@ export default function GradientGenerator() {
 
         {type === 'linear' && (
           <div className="flex-1 min-w-[200px]">
-            <label className="block text-sm font-medium mb-2">{t('gradient.angle')}: {angle}°</label>
+            <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('gradient.angle')}: {angle}°</label>
             <input
               type="range"
               min="0"
@@ -114,18 +114,18 @@ export default function GradientGenerator() {
       {/* Color Stops */}
       <div>
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm font-medium">{t('gradient.colors')}</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-white">{t('gradient.colors')}</label>
           <button
             onClick={addColor}
             disabled={colors.length >= 5}
-            className="text-sm px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded disabled:opacity-50"
+            className="text-sm px-3 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded disabled:opacity-50 text-gray-900 dark:text-white"
           >
             + {t('gradient.addColor')}
           </button>
         </div>
         <div className="space-y-3">
           {colors.map((stop, index) => (
-            <div key={index} className="flex items-center gap-3 p-3 bg-gray-800 rounded-lg">
+            <div key={index} className="flex items-center gap-3 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <input
                 type="color"
                 value={stop.color}
@@ -136,7 +136,7 @@ export default function GradientGenerator() {
                 type="text"
                 value={stop.color}
                 onChange={(e) => updateColor(index, 'color', e.target.value)}
-                className="w-24 px-2 py-1 bg-gray-900 border border-gray-700 rounded font-mono text-sm"
+                className="w-24 px-2 py-1 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white"
               />
               <div className="flex-1 flex items-center gap-2">
                 <input
@@ -147,12 +147,12 @@ export default function GradientGenerator() {
                   onChange={(e) => updateColor(index, 'position', parseInt(e.target.value))}
                   className="flex-1"
                 />
-                <span className="text-sm text-gray-300 w-12">{stop.position}%</span>
+                <span className="text-sm text-gray-600 dark:text-gray-300 w-12">{stop.position}%</span>
               </div>
               {colors.length > 2 && (
                 <button
                   onClick={() => removeColor(index)}
-                  className="p-1 text-red-400 hover:text-red-300"
+                  className="p-1 text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300"
                 >
                   ✕
                 </button>
@@ -164,13 +164,13 @@ export default function GradientGenerator() {
 
       {/* Presets */}
       <div>
-        <label className="block text-sm font-medium mb-2">{t('gradient.presets')}</label>
+        <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('gradient.presets')}</label>
         <div className="flex flex-wrap gap-2">
           {presets.map((preset) => (
             <button
               key={preset.nameKey}
               onClick={() => setColors(preset.colors)}
-              className="px-3 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm"
+              className="px-3 py-2 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm text-gray-900 dark:text-white"
             >
               {t(`gradient.${preset.nameKey}`)}
             </button>
@@ -180,32 +180,32 @@ export default function GradientGenerator() {
 
       {/* CSS Output */}
       <div className="space-y-3">
-        <div className="p-4 bg-gray-800 rounded-lg">
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm text-gray-300">CSS</span>
+            <span className="text-sm text-gray-600 dark:text-gray-300">CSS</span>
             <button
               onClick={() => copyValue('css', `background: ${css};`)}
-              className={`text-xs px-2 py-1 rounded ${copied === 'css' ? 'bg-green-600' : 'bg-gray-700'}`}
+              className={`text-xs px-2 py-1 rounded text-white ${copied === 'css' ? 'bg-green-600' : 'bg-gray-500 dark:bg-gray-700'}`}
             >
               {copied === 'css' ? t('copied') : t('copy')}
             </button>
           </div>
-          <code className="text-sm text-green-400 break-all">
+          <code className="text-sm text-green-700 dark:text-green-400 break-all">
             background: {css};
           </code>
         </div>
 
-        <div className="p-4 bg-gray-800 rounded-lg">
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm text-gray-300">Tailwind CSS</span>
+            <span className="text-sm text-gray-600 dark:text-gray-300">Tailwind CSS</span>
             <button
               onClick={() => copyValue('tailwind', `bg-gradient-to-r from-[${colors[0].color}] to-[${colors[colors.length-1].color}]`)}
-              className={`text-xs px-2 py-1 rounded ${copied === 'tailwind' ? 'bg-green-600' : 'bg-gray-700'}`}
+              className={`text-xs px-2 py-1 rounded text-white ${copied === 'tailwind' ? 'bg-green-600' : 'bg-gray-500 dark:bg-gray-700'}`}
             >
               {copied === 'tailwind' ? t('copied') : t('copy')}
             </button>
           </div>
-          <code className="text-sm text-blue-400 break-all">
+          <code className="text-sm text-blue-700 dark:text-blue-400 break-all">
             bg-gradient-to-r from-[{colors[0].color}] to-[{colors[colors.length-1].color}]
           </code>
         </div>

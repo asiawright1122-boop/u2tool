@@ -138,46 +138,46 @@ ${config.websiteUrl ? `Website: ${config.websiteUrl}` : ''}
       <div className="grid md:grid-cols-2 gap-6">
         <div className="space-y-4">
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('websiteName')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('websiteName')}</label>
             <input
               type="text"
               value={config.websiteName}
               onChange={(e) => setConfig({ ...config, websiteName: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder="My Website"
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('websiteUrl')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('websiteUrl')}</label>
             <input
               type="text"
               value={config.websiteUrl}
               onChange={(e) => setConfig({ ...config, websiteUrl: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder="https://example.com"
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('contactEmail')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('contactEmail')}</label>
             <input
               type="email"
               value={config.email}
               onChange={(e) => setConfig({ ...config, email: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder="privacy@example.com"
             />
           </div>
         </div>
 
         <div className="space-y-3">
-          <label className="block text-sm text-gray-300 mb-2">{t('cookieTypes')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('cookieTypes')}</label>
           {[
             { key: 'essentialCookies', label: t('essentialCookies') },
             { key: 'functionalCookies', label: t('functionalCookies') },
             { key: 'analyticsCookies', label: t('analyticsCookies') },
             { key: 'marketingCookies', label: t('marketingCookies') },
           ].map(({ key, label }) => (
-            <label key={key} className="flex items-center gap-3 cursor-pointer p-2 hover:bg-gray-800 rounded">
+            <label key={key} className="flex items-center gap-3 cursor-pointer p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded">
               <input
                 type="checkbox"
                 checked={config[key as keyof typeof config] as boolean}
@@ -185,7 +185,7 @@ ${config.websiteUrl ? `Website: ${config.websiteUrl}` : ''}
                 disabled={key === 'essentialCookies'}
                 className="w-4 h-4 rounded disabled:opacity-50"
               />
-              <span className={key === 'essentialCookies' ? 'text-gray-300' : ''}>{label}</span>
+              <span className={key === 'essentialCookies' ? 'text-gray-500 dark:text-gray-300' : 'text-gray-900 dark:text-white'}>{label}</span>
             </label>
           ))}
         </div>
@@ -206,11 +206,11 @@ ${config.websiteUrl ? `Website: ${config.websiteUrl}` : ''}
 
       {output && (
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('output')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
           <textarea
             value={output}
             readOnly
-            className="w-full h-96 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 font-mono text-sm focus:outline-none"
+            className="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none"
           />
         </div>
       )}

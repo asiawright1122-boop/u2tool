@@ -20,6 +20,7 @@
     "home": "Início",
     "tools": "Ferramentas",
     "about": "Sobre",
+    "blog": "Blog",
     "viewAllTools": "Ver Todas as Ferramentas",
     "searchPlaceholder": "Pesquisar ferramentas...",
     "noResults": "Nenhuma ferramenta encontrada",
@@ -71,6 +72,8 @@
     "copy": "Copiar",
     "clear": "Limpar",
     "add": "Adicionar",
+    "expandAll": "Expandir tudo",
+    "collapseAll": "Recolher tudo",
     "generate": "Gerar",
     "convert": "Converter",
     "format": "Formato",
@@ -107,7 +110,7 @@
       "global": "Global",
       "caseInsensitive": "Insensível a maiúsculas e minúsculas",
       "multiline": "Multilinha",
-      "dotall": "Dotal",
+      "dotall": "Dotall",
       "atIndex": "no índice"
     },
     "password": {
@@ -217,7 +220,7 @@
       "linear": "Linear",
       "radial": "Radial",
       "css": "CSS",
-      "tailwind": "Vento favorável",
+      "tailwind": "Tailwind",
       "sunset": "Pôr do sol",
       "ocean": "Oceano",
       "forest": "Floresta",
@@ -693,7 +696,7 @@
       "authorPlaceholder": "John Doe",
       "description": "Descrição (150-160 caracteres recomendados)",
       "descriptionPlaceholder": "Uma breve descrição da sua página...",
-      "characters": "personagens",
+      "characters": "caracteres",
       "keywords": "Palavras-chave (separadas por vírgula)",
       "keywordsPlaceholder": "web, desenvolvimento, ferramentas",
       "ogImageUrl": "OG Image URL",
@@ -1305,7 +1308,7 @@
     "caseCounter": {
       "placeholder": "Digite o texto para analisar...",
       "total": "Total de caracteres",
-      "letters": "Cartas",
+      "letters": "Letras",
       "uppercase": "Maiúsculas",
       "lowercase": "Minúsculas",
       "digits": "Dígitos",
@@ -1746,7 +1749,7 @@
       "seo_description": "Convert text to binary code or binary to text online for free. Support ASCII and Unicode encoding. Perfect for learning binary and data encoding concepts."
     },
     "markdown-to-html": {
-      "name": "Remarcação para HTML",
+      "name": "Markdown para HTML",
       "description": "Converta texto Markdown em código HTML.",
       "seo_title": "Free Markdown to HTML Converter",
       "seo_description": "Convert Markdown to HTML online for free. Support GitHub Flavored Markdown with tables, code blocks, and task lists. Preview and copy clean HTML output."
@@ -2100,10 +2103,10 @@
       "addColumn": "+ Adicionar coluna",
       "loadSample": "Carregar exemplo",
       "columnAlignment": "Alinhamento de coluna",
-      "col": "Coronel",
+      "col": "Coluna",
       "left": "Esquerda",
       "center": "Centro",
-      "right": "Certo",
+      "right": "Direita",
       "header": "Cabeçalho",
       "cell": "Célula",
       "removeRow": "Remover linha",
@@ -3395,8 +3398,8 @@
       "errorConversion": "Erro de conversão"
     },
     "text-to-nato": {
-      "name": "Texto para OTAN",
-      "description": "Converta texto para o alfabeto fonético da OTAN.",
+      "name": "Texto para Alfabeto Fonético NATO",
+      "description": "Converta texto para o alfabeto fonético NATO (Alpha, Bravo, Charlie...).",
       "seo_title": "Text to NATO Phonetic Alphabet Converter",
       "seo_description": "Convert letters and numbers to NATO phonetic alphabet words online for free. Alpha, Bravo, Charlie format for clear communication. For radio and phone.",
       "separator": "Separador",
@@ -5276,7 +5279,7 @@
       "seo_description": "Converta texto em código binário ou binário em texto online gratuitamente. Suporta codificação ASCII e Unicode. Perfeito para aprender conceitos binários e de codificação de dados."
     },
     "markdown-to-html": {
-      "name": "Remarcação para HTML",
+      "name": "Markdown para HTML",
       "description": "Converta texto Markdown em código HTML.",
       "seo_title": "Conversor gratuito de Markdown para HTML",
       "seo_description": "Converta Markdown em HTML online gratuitamente. Apoie o GitHub Flavored Markdown com tabelas, blocos de código e listas de tarefas. Visualize e copie a saída HTML limpa."
@@ -5654,10 +5657,10 @@
       "addColumn": "+ Adicionar coluna",
       "loadSample": "Carregar exemplo",
       "columnAlignment": "Alinhamento de coluna",
-      "col": "Coronel",
+      "col": "Coluna",
       "left": "Esquerda",
       "center": "Centro",
-      "right": "Certo",
+      "right": "Direita",
       "header": "Cabeçalho",
       "cell": "Célula",
       "removeRow": "Remover linha",
@@ -6949,10 +6952,10 @@
       "errorConversion": "Erro de conversão"
     },
     "text-to-nato": {
-      "name": "Texto para OTAN",
-      "description": "Converta texto para o alfabeto fonético da OTAN.",
-      "seo_title": "Conversor de texto para alfabeto fonético da OTAN",
-      "seo_description": "Converta letras e números em palavras do alfabeto fonético da OTAN online gratuitamente. Formato Alpha, Bravo, Charlie para comunicação clara. Para rádio e telefone.",
+      "name": "Texto para Alfabeto Fonético NATO",
+      "description": "Converta texto para o alfabeto fonético NATO (Alpha, Bravo, Charlie...).",
+      "seo_title": "Conversor de Texto para Alfabeto Fonético NATO",
+      "seo_description": "Converta letras e números em palavras do alfabeto fonético NATO online gratuitamente. Formato Alpha, Bravo, Charlie para comunicação clara. Para rádio e telefone.",
       "separator": "Separador",
       "sepNewline": "Nova linha",
       "sepDash": "Traço",
@@ -7110,6 +7113,12 @@
     "about": "Sobre",
     "blog": "Blog"
   },
+  "theme": {
+    "toggle": "Alternar tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
   "blog": {
     "title": "Blog",
     "description": "Tutoriais para desenvolvedores, guias de ferramentas e insights técnicos para aumentar sua produtividade.",
@@ -7119,7 +7128,10 @@
     "noPosts": "Ainda não há posts. Volte em breve!",
     "readMore": "Leia mais",
     "publishedOn": "Publicado em",
-    "author": "Autor"
+    "author": "Autor",
+    "featured": "Destaque",
+    "relatedPosts": "Posts relacionados",
+    "relatedTools": "Ferramentas recomendadas"
   },
   "errors": {
     "notFound": {

@@ -44,8 +44,8 @@ export default function ColorPalette() {
 
   const ColorBox = ({ color }: { color: string }) => (
     <div onClick={() => copy(color)} className="cursor-pointer group">
-      <div className="h-16 rounded-lg border border-gray-600" style={{ backgroundColor: color }} />
-      <p className="text-xs text-center mt-1 text-gray-300 group-hover:text-white">{copied === color ? '✓' : color}</p>
+      <div className="h-16 rounded-lg border border-gray-300 dark:border-gray-600" style={{ backgroundColor: color }} />
+      <p className="text-xs text-center mt-1 text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">{copied === color ? '✓' : color}</p>
     </div>
   );
 
@@ -53,23 +53,23 @@ export default function ColorPalette() {
     <div className="space-y-6">
       <div className="flex items-center gap-4">
         <input type="color" value={baseColor} onChange={(e) => setBaseColor(e.target.value)} className="w-16 h-16 rounded cursor-pointer" />
-        <input type="text" value={baseColor} onChange={(e) => setBaseColor(e.target.value)} className="px-3 py-2 bg-gray-800 border border-gray-700 rounded font-mono" />
+        <input type="text" value={baseColor} onChange={(e) => setBaseColor(e.target.value)} className="px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-gray-900 dark:text-white" />
       </div>
       <div>
-        <h3 className="font-medium mb-2">{t('palette.shades')}</h3>
+        <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('palette.shades')}</h3>
         <div className="grid grid-cols-9 gap-2">{shades.map((c, i) => <ColorBox key={i} color={c} />)}</div>
       </div>
       <div className="grid md:grid-cols-3 gap-4">
         <div>
-          <h3 className="font-medium mb-2">{t('palette.complementary')}</h3>
+          <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('palette.complementary')}</h3>
           <div className="grid grid-cols-2 gap-2"><ColorBox color={baseColor} /><ColorBox color={complementary} /></div>
         </div>
         <div>
-          <h3 className="font-medium mb-2">{t('palette.analogous')}</h3>
+          <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('palette.analogous')}</h3>
           <div className="grid grid-cols-3 gap-2">{analogous.map((c, i) => <ColorBox key={i} color={c} />)}</div>
         </div>
         <div>
-          <h3 className="font-medium mb-2">{t('palette.triadic')}</h3>
+          <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('palette.triadic')}</h3>
           <div className="grid grid-cols-3 gap-2">{triadic.map((c, i) => <ColorBox key={i} color={c} />)}</div>
         </div>
       </div>

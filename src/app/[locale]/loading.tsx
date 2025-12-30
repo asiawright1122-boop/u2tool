@@ -8,7 +8,7 @@ import { Skeleton, ToolsListSkeleton } from '@/components/ui/Skeleton';
  */
 export default function HomePageLoading() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-black">
       {/* Hero 区域骨架 */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -31,7 +31,7 @@ export default function HomePageLoading() {
       </section>
 
       {/* 分类区域骨架 */}
-      <section className="py-12 px-4 bg-gray-900/50">
+      <section className="py-12 px-4 bg-gray-100 dark:bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
           <Skeleton 
             width={200} 

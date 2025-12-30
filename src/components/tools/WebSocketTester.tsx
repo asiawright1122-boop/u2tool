@@ -126,7 +126,7 @@ export default function WebSocketTester() {
       <div className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex-1">
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
               {t('serverUrl')}
             </label>
             <input
@@ -135,7 +135,7 @@ export default function WebSocketTester() {
               onChange={(e) => setUrl(e.target.value)}
               placeholder="wss://example.com/socket"
               disabled={isConnected}
-              className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100 placeholder-gray-500 disabled:opacity-50"
+              className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50"
             />
           </div>
           <div className="flex items-end gap-2">
@@ -159,13 +159,13 @@ export default function WebSocketTester() {
         </div>
 
         <div className="flex flex-wrap gap-2">
-          <span className="text-sm text-gray-300">{t('quickConnect')}:</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('quickConnect')}:</span>
           {sampleUrls.map((sample) => (
             <button
               key={sample.url}
               onClick={() => setUrl(sample.url)}
               disabled={isConnected}
-              className="text-sm px-3 py-1 bg-gray-700 text-gray-300 rounded hover:bg-gray-600 disabled:opacity-50"
+              className="text-sm px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-300 dark:hover:bg-gray-600 disabled:opacity-50"
             >
               {sample.label}
             </button>
@@ -179,24 +179,24 @@ export default function WebSocketTester() {
             isConnected ? 'bg-green-500' : isConnecting ? 'bg-yellow-500 animate-pulse' : 'bg-red-500'
           }`}
         />
-        <span className="text-sm text-gray-300">
+        <span className="text-sm text-gray-600 dark:text-gray-300">
           {isConnected ? t('statusConnected') : isConnecting ? t('statusConnecting') : t('statusDisconnected')}
         </span>
       </div>
 
-      <div className="border border-gray-600 rounded-lg overflow-hidden">
-        <div className="flex items-center justify-between p-3 bg-gray-800 border-b border-gray-600">
-          <span className="font-medium text-gray-300">{t('messages')}</span>
+      <div className="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
+        <div className="flex items-center justify-between p-3 bg-gray-100 dark:bg-gray-800 border-b border-gray-300 dark:border-gray-600">
+          <span className="font-medium text-gray-700 dark:text-gray-300">{t('messages')}</span>
           <button
             onClick={clearMessages}
-            className="text-sm text-gray-300 hover:text-gray-200"
+            className="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-200"
           >
             {t('clear')}
           </button>
         </div>
-        <div className="h-80 overflow-y-auto p-4 space-y-2 bg-gray-900">
+        <div className="h-80 overflow-y-auto p-4 space-y-2 bg-gray-50 dark:bg-gray-900">
           {messages.length === 0 ? (
-            <div className="text-center text-gray-300 py-8">
+            <div className="text-center text-gray-500 dark:text-gray-300 py-8">
               {t('noMessages')}
             </div>
           ) : (
@@ -212,7 +212,7 @@ export default function WebSocketTester() {
                 }`}
               >
                 {msg.type === 'system' ? (
-                  <span className="text-gray-300 italic">
+                  <span className="text-gray-500 dark:text-gray-300 italic">
                     [{formatTime(msg.timestamp)}] {msg.content}
                   </span>
                 ) : (
@@ -220,13 +220,13 @@ export default function WebSocketTester() {
                     className={`max-w-[80%] p-2 rounded-lg ${
                       msg.type === 'sent'
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-700 text-gray-100'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'
                     }`}
                   >
                     <div className="break-all font-mono text-xs">{msg.content}</div>
                     <div
                       className={`text-xs mt-1 ${
-                        msg.type === 'sent' ? 'text-blue-200' : 'text-gray-300'
+                        msg.type === 'sent' ? 'text-blue-200' : 'text-gray-500 dark:text-gray-300'
                       }`}
                     >
                       {formatTime(msg.timestamp)}
@@ -248,7 +248,7 @@ export default function WebSocketTester() {
           onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
           placeholder={t('messagePlaceholder')}
           disabled={!isConnected}
-          className="flex-1 p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100 placeholder-gray-500 disabled:opacity-50"
+          className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 disabled:opacity-50"
         />
         <button
           onClick={sendMessage}
@@ -259,9 +259,9 @@ export default function WebSocketTester() {
         </button>
       </div>
 
-      <div className="p-4 bg-yellow-900/30 border border-yellow-700 rounded-lg">
-        <h3 className="font-medium text-yellow-300 mb-2">{t('note')}</h3>
-        <p className="text-sm text-yellow-400">{t('noteText')}</p>
+      <div className="p-4 bg-yellow-50 dark:bg-yellow-900/30 border border-yellow-300 dark:border-yellow-700 rounded-lg">
+        <h3 className="font-medium text-yellow-700 dark:text-yellow-300 mb-2">{t('note')}</h3>
+        <p className="text-sm text-yellow-600 dark:text-yellow-400">{t('noteText')}</p>
       </div>
     </div>
   );

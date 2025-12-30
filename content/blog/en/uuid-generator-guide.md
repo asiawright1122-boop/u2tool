@@ -103,10 +103,3 @@ const filename = `${uuid()}.pdf`;
 ## Conclusion
 
 UUID is an essential tool in distributed systems. Choose the appropriate UUID version based on your specific needs, and use [U2Tool UUID Generator](https://www.u2tool.com/en/tools/uuid-generator) to quickly generate the UUIDs you need.
-
----
-
-**Related Tools**:
-- [ULID Generator](https://www.u2tool.com/en/tools/ulid-generator)
-- [Random String Generator](https://www.u2tool.com/en/tools/random-string-generator)
-- [Hash Generator](https://www.u2tool.com/en/tools/hash-generator)

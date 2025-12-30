@@ -176,26 +176,26 @@ export default function TimezoneConverter() {
       </div>
 
       {result && (
-        <div className="p-6 bg-gray-800 rounded-lg">
+        <div className="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
           <div className="flex justify-between items-start mb-4">
-            <h3 className="text-lg font-medium">{tz('convertedTime')}</h3>
+            <h3 className="text-lg font-medium text-gray-900 dark:text-white">{tz('convertedTime')}</h3>
             <button
               onClick={copyResult}
-              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-white'}`}
             >
               {copied ? t('copied') : t('copy')}
             </button>
           </div>
-          <div className="text-3xl font-bold text-blue-400 mb-2">{result.time}</div>
-          <div className="text-xl text-gray-300">{result.date}</div>
-          <div className="text-sm text-gray-300 mt-2">
+          <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">{result.time}</div>
+          <div className="text-xl text-gray-700 dark:text-gray-300">{result.date}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300 mt-2">
             {timezones.find(tz => tz.id === targetTimezone)?.name}
           </div>
         </div>
       )}
 
-      <div className="p-4 bg-gray-800/50 rounded-lg">
-        <h3 className="text-sm font-medium mb-3">{tz('worldClock')}</h3>
+      <div className="p-4 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">{tz('worldClock')}</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {['UTC', 'America/New_York', 'Europe/London', 'Asia/Tokyo'].map((tz) => {
             const now = new Date();
@@ -207,9 +207,9 @@ export default function TimezoneConverter() {
             });
             const tzInfo = timezones.find(t => t.id === tz);
             return (
-              <div key={tz} className="text-center p-2 bg-gray-700/50 rounded">
-                <div className="text-lg font-mono">{time}</div>
-                <div className="text-xs text-gray-300">{tzInfo?.name?.split(' ')[0]}</div>
+              <div key={tz} className="text-center p-2 bg-white dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded">
+                <div className="text-lg font-mono text-gray-900 dark:text-white">{time}</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300">{tzInfo?.name?.split(' ')[0]}</div>
               </div>
             );
           })}

@@ -74,7 +74,7 @@ export default function IpValidator() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
           {t('inputLabel')}
         </label>
         <div className="flex gap-2">
@@ -84,7 +84,7 @@ export default function IpValidator() {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleValidate()}
             placeholder={t('placeholder')}
-            className="flex-1 bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+            className="flex-1 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
           />
           <button
             onClick={handleValidate}
@@ -96,36 +96,36 @@ export default function IpValidator() {
       </div>
 
       {result && (
-        <div className={`p-4 rounded-lg ${result.isValid ? 'bg-green-900/30 border border-green-700' : 'bg-red-900/30 border border-red-700'}`}>
+        <div className={`p-4 rounded-lg ${result.isValid ? 'bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-700' : 'bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-700'}`}>
           <div className="flex items-center gap-2 mb-3">
-            <span className={`text-2xl ${result.isValid ? 'text-green-400' : 'text-red-400'}`}>
+            <span className={`text-2xl ${result.isValid ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
               {result.isValid ? '✓' : '✗'}
             </span>
-            <span className={`font-semibold ${result.isValid ? 'text-green-400' : 'text-red-400'}`}>
+            <span className={`font-semibold ${result.isValid ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
               {result.isValid ? t('valid') : t('invalid')}
             </span>
           </div>
           
           {result.isValid && (
-            <div className="space-y-2 text-gray-300">
-              <p><span className="text-gray-400">{t('type')}:</span> {result.type}</p>
+            <div className="space-y-2 text-gray-600 dark:text-gray-300">
+              <p><span className="text-gray-500 dark:text-gray-400">{t('type')}:</span> {result.type}</p>
               {result.type === 'IPv4' && (
                 <>
-                  <p><span className="text-gray-400">{t('class')}:</span> {result.details.class}</p>
-                  <p><span className="text-gray-400">{t('private')}:</span> {result.details.isPrivate ? t('yes') : t('no')}</p>
-                  <p><span className="text-gray-400">{t('loopback')}:</span> {result.details.isLoopback ? t('yes') : t('no')}</p>
-                  <p><span className="text-gray-400">{t('multicast')}:</span> {result.details.isMulticast ? t('yes') : t('no')}</p>
+                  <p><span className="text-gray-500 dark:text-gray-400">{t('class')}:</span> {result.details.class}</p>
+                  <p><span className="text-gray-500 dark:text-gray-400">{t('private')}:</span> {result.details.isPrivate ? t('yes') : t('no')}</p>
+                  <p><span className="text-gray-500 dark:text-gray-400">{t('loopback')}:</span> {result.details.isLoopback ? t('yes') : t('no')}</p>
+                  <p><span className="text-gray-500 dark:text-gray-400">{t('multicast')}:</span> {result.details.isMulticast ? t('yes') : t('no')}</p>
                 </>
               )}
               {result.type === 'IPv6' && (
-                <p><span className="text-gray-400">{t('loopback')}:</span> {result.details.isLoopback ? t('yes') : t('no')}</p>
+                <p><span className="text-gray-500 dark:text-gray-400">{t('loopback')}:</span> {result.details.isLoopback ? t('yes') : t('no')}</p>
               )}
             </div>
           )}
         </div>
       )}
 
-      <div className="text-sm text-gray-400">
+      <div className="text-sm text-gray-500 dark:text-gray-400">
         <p className="font-medium mb-2">{t('examples')}:</p>
         <ul className="list-disc list-inside space-y-1">
           <li>192.168.1.1 (IPv4 {t('privateAddress')})</li>

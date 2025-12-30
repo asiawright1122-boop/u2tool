@@ -265,17 +265,17 @@ export default function EmojiPicker() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder={t('emoji.searchPlaceholder')}
-          className="w-full px-4 py-3 pl-10 bg-gray-800 border border-gray-700 rounded-lg text-sm focus:outline-none focus:border-blue-500"
+          className="w-full px-4 py-3 pl-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
         />
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-300">🔍</span>
+        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300">🔍</span>
       </div>
 
       {/* 分类标签 */}
       <div className="flex gap-1 overflow-x-auto pb-2">
         <button
           onClick={() => setSelectedCategory('all')}
-          className={`px-3 py-2 rounded-lg text-sm whitespace-nowrap ${
-            selectedCategory === 'all' ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'
+          className={`px-3 py-2 rounded-lg text-sm whitespace-nowrap text-white ${
+            selectedCategory === 'all' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600'
           }`}
         >
           {t('all')}
@@ -284,8 +284,8 @@ export default function EmojiPicker() {
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-3 py-2 rounded-lg text-sm whitespace-nowrap flex items-center gap-1 ${
-              selectedCategory === cat ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'
+            className={`px-3 py-2 rounded-lg text-sm whitespace-nowrap flex items-center gap-1 text-white ${
+              selectedCategory === cat ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600'
             }`}
           >
             <span>{categoryIcons[cat]}</span>
@@ -296,15 +296,15 @@ export default function EmojiPicker() {
 
       {/* 最近使用 */}
       {recentEmojis.length > 0 && !search && (
-        <div className="p-3 bg-gray-800 rounded-lg">
-          <div className="text-xs text-gray-300 mb-2">{t('emoji.recent')}</div>
+        <div className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
+          <div className="text-xs text-gray-600 dark:text-gray-300 mb-2">{t('emoji.recent')}</div>
           <div className="flex flex-wrap gap-1">
             {recentEmojis.map((emoji, index) => (
               <button
                 key={index}
                 onClick={() => handleCopy(emoji)}
-                className={`w-10 h-10 text-2xl rounded hover:bg-gray-700 transition-colors ${
-                  copied === emoji ? 'bg-green-600/30' : ''
+                className={`w-10 h-10 text-2xl rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors ${
+                  copied === emoji ? 'bg-green-100 dark:bg-green-600/30' : ''
                 }`}
                 title={copied === emoji ? t('copied') : t('emoji.clickToCopy')}
               >
@@ -317,13 +317,13 @@ export default function EmojiPicker() {
 
 
       {/* Emoji 网格 */}
-      <div className="p-4 bg-gray-800 rounded-lg">
+      <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
         <div className="flex justify-between items-center mb-3">
-          <span className="text-sm text-gray-300">
+          <span className="text-sm text-gray-600 dark:text-gray-300">
             {filteredEmojis.length} {t('emoji.emojis')}
           </span>
           {copied && (
-            <span className="text-xs text-green-400">{copied} {t('copied')}</span>
+            <span className="text-xs text-green-600 dark:text-green-400">{copied} {t('copied')}</span>
           )}
         </div>
         
@@ -333,8 +333,8 @@ export default function EmojiPicker() {
               <button
                 key={index}
                 onClick={() => handleCopy(item.emoji)}
-                className={`w-10 h-10 text-2xl rounded hover:bg-gray-700 transition-colors ${
-                  copied === item.emoji ? 'bg-green-600/30' : ''
+                className={`w-10 h-10 text-2xl rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors ${
+                  copied === item.emoji ? 'bg-green-100 dark:bg-green-600/30' : ''
                 }`}
                 title={item.name}
               >
@@ -343,15 +343,15 @@ export default function EmojiPicker() {
             ))}
           </div>
         ) : (
-          <div className="text-center text-gray-300 py-8">
+          <div className="text-center text-gray-600 dark:text-gray-300 py-8">
             {t('emoji.noResults')}
           </div>
         )}
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-gray-800/50 rounded-lg text-xs text-gray-300">
-        <div className="font-medium mb-1">{t('emoji.howToUse')}</div>
+      <div className="p-3 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-xs text-gray-600 dark:text-gray-300">
+        <div className="font-medium text-gray-900 dark:text-white mb-1">{t('emoji.howToUse')}</div>
         <ul className="list-disc list-inside space-y-1">
           <li>{t('emoji.tip1')}</li>
           <li>{t('emoji.tip2')}</li>

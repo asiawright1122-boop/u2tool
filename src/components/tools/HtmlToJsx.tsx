@@ -48,17 +48,17 @@ export default function HtmlToJsx() {
     <div className="space-y-4">
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('htmlInput')}</label>
-          <textarea value={html} onChange={(e) => setHtml(e.target.value)} className="w-full h-64 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm" placeholder={t('placeholder')} />
+          <label className="block text-sm font-medium mb-2 text-gray-900 dark:text-white">{t('htmlInput')}</label>
+          <textarea value={html} onChange={(e) => setHtml(e.target.value)} className="w-full h-64 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('placeholder')} />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">{t('jsxOutput')}</label>
-          <textarea value={jsx} readOnly className="w-full h-64 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm" />
+          <label className="block text-sm font-medium mb-2 text-gray-900 dark:text-white">{t('jsxOutput')}</label>
+          <textarea value={jsx} readOnly className="w-full h-64 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" />
         </div>
       </div>
       <div className="flex gap-2">
         <button onClick={convert} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('convert')}</button>
-        <button onClick={copy} className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">{copied ? t('copy') : t('copy')}</button>
+        <button onClick={copy} className="px-4 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-700">{copied ? t('copy') : t('copy')}</button>
       </div>
     </div>
   );

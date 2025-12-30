@@ -10,7 +10,7 @@ export interface BlogPost {
   author: string;
   tags: string[];
   featured?: boolean;
-  // 多语言内容在 content 目录中以 Markdown 文件形式存储
+  relatedTools?: string[]; // 相关工具的 slug 列表
 }
 
 // 博客文章列表
@@ -21,6 +21,7 @@ export const blogPosts: BlogPost[] = [
     author: 'U2Tool Team',
     tags: ['json', 'formatter', 'developer-tools'],
     featured: true,
+    relatedTools: ['json-formatter', 'json-to-csv', 'xml-formatter'],
   },
   {
     slug: 'base64-encoding-explained',
@@ -28,6 +29,7 @@ export const blogPosts: BlogPost[] = [
     author: 'U2Tool Team',
     tags: ['base64', 'encoding', 'tutorial'],
     featured: true,
+    relatedTools: ['base64', 'image-to-base64', 'url-encoder'],
   },
   {
     slug: 'uuid-generator-guide',
@@ -35,6 +37,7 @@ export const blogPosts: BlogPost[] = [
     author: 'U2Tool Team',
     tags: ['uuid', 'generator', 'guide'],
     featured: false,
+    relatedTools: ['uuid-generator', 'password-generator', 'hash-generator'],
   },
 ];
 

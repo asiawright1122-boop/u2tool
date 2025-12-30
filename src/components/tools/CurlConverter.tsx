@@ -215,22 +215,22 @@ ${headers}
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm text-gray-300 mb-2">{t('curlCommand')}</label>
+        <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('curlCommand')}</label>
         <textarea
           value={curlCommand}
           onChange={(e) => setCurlCommand(e.target.value)}
-          className="w-full h-32 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 font-mono text-sm focus:outline-none focus:border-blue-500"
+          className="w-full h-32 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-500"
           placeholder={t('placeholder')}
         />
       </div>
 
       <div className="flex flex-wrap gap-4 items-center">
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('outputLanguage')}</label>
+          <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('outputLanguage')}</label>
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value as OutputLanguage)}
-            className="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+            className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-500"
           >
             <option value="javascript">{t('langJavaScript')}</option>
             <option value="python">{t('langPython')}</option>
@@ -256,8 +256,8 @@ ${headers}
 
       {output && (
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('generatedCode')}</label>
-          <pre className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 font-mono text-sm overflow-x-auto">
+          <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('generatedCode')}</label>
+          <pre className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 overflow-x-auto">
             <code>{output}</code>
           </pre>
         </div>

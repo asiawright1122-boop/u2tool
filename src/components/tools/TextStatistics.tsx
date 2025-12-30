@@ -25,7 +25,7 @@ export default function TextStatistics() {
 
   return (
     <div className="space-y-4">
-      <textarea value={text} onChange={(e) => setText(e.target.value)} className="w-full h-48 p-3 bg-gray-800 border border-gray-700 rounded-lg" placeholder={t('textStats.placeholder')} />
+      <textarea value={text} onChange={(e) => setText(e.target.value)} className="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textStats.placeholder')} />
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {[
           { label: t('textStats.chars'), value: stats.chars },
@@ -41,9 +41,9 @@ export default function TextStatistics() {
           { label: t('textStats.readTime'), value: `${stats.readTime} min` },
           { label: t('textStats.speakTime'), value: `${stats.speakTime} min` },
         ].map((s, i) => (
-          <div key={i} className="bg-gray-800 rounded-lg p-3 text-center">
-            <p className="text-2xl font-bold text-blue-400">{s.value}</p>
-            <p className="text-sm text-gray-300">{s.label}</p>
+          <div key={i} className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3 text-center">
+            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">{s.value}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{s.label}</p>
           </div>
         ))}
       </div>

@@ -49,30 +49,30 @@ export default function HtmlEntityConverter() {
   return (
     <div className="space-y-4">
       <div className="flex gap-2">
-        <button onClick={() => setMode('encode')} className={`px-4 py-2 rounded ${mode === 'encode' ? 'bg-blue-600' : 'bg-gray-700'}`}>{t('encode')}</button>
-        <button onClick={() => setMode('decode')} className={`px-4 py-2 rounded ${mode === 'decode' ? 'bg-blue-600' : 'bg-gray-700'}`}>{t('decode')}</button>
+        <button onClick={() => setMode('encode')} className={`px-4 py-2 rounded ${mode === 'encode' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}>{t('encode')}</button>
+        <button onClick={() => setMode('decode')} className={`px-4 py-2 rounded ${mode === 'decode' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white'}`}>{t('decode')}</button>
       </div>
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('input')}</label>
-          <textarea value={input} onChange={(e) => setInput(e.target.value)} className="w-full h-48 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm" placeholder={mode === 'encode' ? '<div>Hello & World</div>' : '&lt;div&gt;Hello &amp; World&lt;/div&gt;'} />
+          <label className="tool-label">{t('input')}</label>
+          <textarea value={input} onChange={(e) => setInput(e.target.value)} className="tool-textarea" placeholder={mode === 'encode' ? '<div>Hello & World</div>' : '&lt;div&gt;Hello &amp; World&lt;/div&gt;'} />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">{t('output')}</label>
-          <textarea value={output} readOnly className="w-full h-48 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm" />
+          <label className="tool-label">{t('output')}</label>
+          <textarea value={output} readOnly className="tool-textarea" />
         </div>
       </div>
       <div className="flex gap-2">
-        <button onClick={convert} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('convert')}</button>
-        <button onClick={copy} className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">{copied ? t('copied') : t('copy')}</button>
+        <button onClick={convert} className="btn-primary">{t('convert')}</button>
+        <button onClick={copy} className="btn-secondary">{copied ? t('copied') : t('copy')}</button>
       </div>
-      <div className="bg-gray-800 rounded-lg p-4">
-        <h3 className="font-medium mb-2">{t('htmlEntity.common')}</h3>
+      <div className="tool-panel">
+        <h3 className="font-medium mb-2 text-gray-900 dark:text-white">{t('htmlEntity.common')}</h3>
         <div className="grid grid-cols-4 md:grid-cols-8 gap-2 text-sm">
           {Object.entries(entities).slice(0, 24).map(([char, entity]) => (
-            <div key={entity} className="bg-gray-700 rounded p-2 text-center">
-              <span className="text-lg">{char}</span>
-              <p className="text-xs text-gray-300 truncate">{entity}</p>
+            <div key={entity} className="bg-gray-200 dark:bg-gray-700 rounded p-2 text-center">
+              <span className="text-lg text-gray-900 dark:text-white">{char}</span>
+              <p className="text-xs text-gray-600 dark:text-gray-300 truncate">{entity}</p>
             </div>
           ))}
         </div>

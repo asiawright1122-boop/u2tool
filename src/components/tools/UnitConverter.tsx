@@ -109,7 +109,7 @@ export default function UnitConverter() {
     <div className="space-y-6">
       {/* Category Selection */}
       <div>
-        <label className="block text-sm font-medium mb-2">{t('unit.category')}</label>
+        <label className="tool-label">{t('unit.category')}</label>
         <div className="flex flex-wrap gap-2">
           {(Object.keys(units) as UnitCategory[]).map((cat) => (
             <button
@@ -121,7 +121,7 @@ export default function UnitConverter() {
                 setToUnit(unitKeys[1] || unitKeys[0]);
               }}
               className={`px-4 py-2 rounded-lg text-sm transition-colors ${
-                category === cat ? 'bg-blue-600 text-white' : 'bg-gray-800 hover:bg-gray-700'
+                category === cat ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700'
               }`}
             >
               {t(`unit.${cat}`)}
@@ -133,19 +133,19 @@ export default function UnitConverter() {
       {/* Conversion */}
       <div className="grid md:grid-cols-[1fr,auto,1fr] gap-4 items-end">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('unit.from')}</label>
+          <label className="tool-label">{t('unit.from')}</label>
           <div className="flex gap-2">
             <input
               type="number"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg"
+              className="flex-1 tool-input"
               placeholder={tu('enterValue')}
             />
             <select
               value={fromUnit}
               onChange={(e) => setFromUnit(e.target.value)}
-              className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg"
+              className="tool-input w-auto"
             >
               {categoryUnits.map(([key, def]) => (
                 <option key={key} value={key}>{def.name}</option>
@@ -156,22 +156,22 @@ export default function UnitConverter() {
 
         <button
           onClick={swapUnits}
-          className="p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors"
+          className="p-3 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-colors"
           title={tu('swapUnits')}
         >
           ⇄
         </button>
 
         <div>
-          <label className="block text-sm font-medium mb-2">{t('unit.to')}</label>
+          <label className="tool-label">{t('unit.to')}</label>
           <div className="flex gap-2">
-            <div className="flex-1 px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg font-mono">
+            <div className="flex-1 px-4 py-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-white">
               {result || '0'}
             </div>
             <select
               value={toUnit}
               onChange={(e) => setToUnit(e.target.value)}
-              className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg"
+              className="tool-input w-auto"
             >
               {categoryUnits.map(([key, def]) => (
                 <option key={key} value={key}>{def.name}</option>
@@ -185,7 +185,7 @@ export default function UnitConverter() {
         <div className="flex justify-center">
           <button
             onClick={copyResult}
-            className={`px-6 py-2 rounded-lg ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+            className={`px-6 py-2 rounded-lg text-white ${copied ? 'bg-green-600' : 'bg-gray-600 dark:bg-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600'}`}
           >
             {copied ? t('copied') : t('copy')} {t('result')}
           </button>
@@ -193,12 +193,12 @@ export default function UnitConverter() {
       )}
 
       {/* Quick Reference */}
-      <div className="bg-gray-800 rounded-lg p-4">
-        <h3 className="text-sm font-medium mb-3">{t('unit.quickRef')}</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-gray-300">
+      <div className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+        <h3 className="text-sm font-medium mb-3 text-gray-900 dark:text-white">{t('unit.quickRef')}</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-gray-600 dark:text-gray-300">
           {categoryUnits.slice(0, 6).map(([key, def]) => (
             <div key={key}>
-              <span className="text-blue-400">{key}</span> = {def.name}
+              <span className="text-blue-600 dark:text-blue-400">{key}</span> = {def.name}
             </div>
           ))}
         </div>

@@ -102,14 +102,14 @@ export default function ImageConverter() {
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('targetFormat')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('targetFormat')}:</label>
           <select
             value={targetFormat}
             onChange={(e) => {
               setTargetFormat(e.target.value as ImageFormat);
               setConvertedImage(null);
             }}
-            className="bg-gray-700 border border-gray-600 rounded px-3 py-1.5 text-sm"
+            className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white"
           >
             {formats.map((f) => (
               <option key={f.value} value={f.value}>
@@ -121,7 +121,7 @@ export default function ImageConverter() {
 
         {targetFormat !== 'png' && (
           <div className="flex items-center gap-2">
-            <label className="text-sm text-gray-300">{t('quality')}:</label>
+            <label className="text-sm text-gray-600 dark:text-gray-300">{t('quality')}:</label>
             <input
               type="range"
               min="10"
@@ -136,7 +136,7 @@ export default function ImageConverter() {
 
         <button
           onClick={clearAll}
-          className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded text-sm"
+          className="px-3 py-1.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-sm"
         >
           {t('clear')}
         </button>
@@ -145,7 +145,7 @@ export default function ImageConverter() {
       {/* File Input */}
       <div
         onClick={() => fileInputRef.current?.click()}
-        className="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-500 transition-colors"
+        className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
       >
         <input
           ref={fileInputRef}
@@ -155,9 +155,9 @@ export default function ImageConverter() {
           className="hidden"
         />
         <div className="text-4xl mb-2">🖼️</div>
-        <p className="text-gray-300">{t('dropzone')}</p>
+        <p className="text-gray-600 dark:text-gray-300">{t('dropzone')}</p>
         {fileName && (
-          <p className="text-sm text-gray-300 mt-2">
+          <p className="text-sm text-gray-500 dark:text-gray-300 mt-2">
             {fileName} ({originalFormat})
           </p>
         )}
@@ -168,11 +168,11 @@ export default function ImageConverter() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label className="text-sm font-medium text-gray-300">
+              <label className="text-sm font-medium text-gray-600 dark:text-gray-300">
                 {t('original')} ({originalFormat})
               </label>
             </div>
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
+            <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
               <img
                 src={originalImage}
                 alt="Original"
@@ -183,11 +183,11 @@ export default function ImageConverter() {
 
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label className="text-sm font-medium text-gray-300">
+              <label className="text-sm font-medium text-gray-600 dark:text-gray-300">
                 {t('converted')} ({targetFormat.toUpperCase()})
               </label>
             </div>
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
+            <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
               {convertedImage ? (
                 <img
                   src={convertedImage}
@@ -195,7 +195,7 @@ export default function ImageConverter() {
                   className="max-w-full max-h-64 object-contain"
                 />
               ) : (
-                <p className="text-gray-300">{t('convertFirst')}</p>
+                <p className="text-gray-500 dark:text-gray-300">{t('convertFirst')}</p>
               )}
             </div>
           </div>
@@ -208,14 +208,14 @@ export default function ImageConverter() {
           <button
             onClick={convertImage}
             disabled={isProcessing}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
+            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
           >
             {isProcessing ? t('processing') : t('convert')}
           </button>
           {convertedImage && (
             <button
               onClick={downloadConverted}
-              className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium"
+              className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium"
             >
               {t('download')}
             </button>
@@ -224,20 +224,20 @@ export default function ImageConverter() {
       )}
 
       {/* Format Info */}
-      <div className="bg-gray-800 rounded-lg p-4">
-        <h3 className="font-medium mb-3">{t('formatInfo')}</h3>
+      <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+        <h3 className="font-medium mb-3 text-gray-900 dark:text-white">{t('formatInfo')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
           <div>
-            <div className="font-medium text-blue-400">PNG</div>
-            <p className="text-gray-300">{t('pngDesc')}</p>
+            <div className="font-medium text-blue-600 dark:text-blue-400">PNG</div>
+            <p className="text-gray-600 dark:text-gray-300">{t('pngDesc')}</p>
           </div>
           <div>
-            <div className="font-medium text-green-400">JPEG</div>
-            <p className="text-gray-300">{t('jpegDesc')}</p>
+            <div className="font-medium text-green-600 dark:text-green-400">JPEG</div>
+            <p className="text-gray-600 dark:text-gray-300">{t('jpegDesc')}</p>
           </div>
           <div>
-            <div className="font-medium text-purple-400">WebP</div>
-            <p className="text-gray-300">{t('webpDesc')}</p>
+            <div className="font-medium text-purple-600 dark:text-purple-400">WebP</div>
+            <p className="text-gray-600 dark:text-gray-300">{t('webpDesc')}</p>
           </div>
         </div>
       </div>

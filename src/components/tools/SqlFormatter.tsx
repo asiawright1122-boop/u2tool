@@ -96,10 +96,10 @@ export default function SqlFormatter() {
     <div className="space-y-4">
       <div>
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm font-medium">{t('input')}</label>
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-200">{t('input')}</label>
           <button
             onClick={() => setInput(exampleSql)}
-            className="text-xs px-2 py-1 bg-gray-800 hover:bg-gray-700 rounded"
+            className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded text-gray-900 dark:text-gray-100"
           >
             {t('sql.loadExample')}
           </button>
@@ -128,10 +128,10 @@ export default function SqlFormatter() {
       {output && (
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium">{t('output')}</label>
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-200">{t('output')}</label>
             <button
               onClick={copyOutput}
-              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'}`}
             >
               {copied ? t('copied') : t('copy')}
             </button>

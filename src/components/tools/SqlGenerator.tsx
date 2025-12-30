@@ -58,8 +58,8 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
-      <div className="bg-gray-800 p-6 rounded-xl border border-gray-700">
-        <label className="block text-sm font-medium text-gray-300 mb-4">{t('sqlGenerator.commandType')}</label>
+      <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-4">{t('sqlGenerator.commandType')}</label>
         <div className="flex flex-wrap gap-2 mb-6">
           {(['SELECT', 'INSERT', 'UPDATE', 'DELETE', 'CREATE TABLE'] as Command[]).map((cmd) => (
             <button
@@ -68,7 +68,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 command === cmd
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
               {cmd}
@@ -79,71 +79,71 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-1">{t('sqlGenerator.tableName')}</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.tableName')}</label>
               <input
                 type="text"
                 value={tableName}
                 onChange={(e) => setTableName(e.target.value)}
-                className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
               />
             </div>
 
             {command !== 'DELETE' && command !== 'CREATE TABLE' && (
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">{t('sqlGenerator.columns')}</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.columns')}</label>
                 <input
                   type="text"
                   value={columns}
                   onChange={(e) => setColumns(e.target.value)}
-                  className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                  className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
                 />
               </div>
             )}
 
             {command === 'INSERT' && (
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">{t('sqlGenerator.values')}</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.values')}</label>
                 <input
                   type="text"
                   value={values}
                   onChange={(e) => setValues(e.target.value)}
-                  className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                  className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
                 />
               </div>
             )}
 
             {command === 'UPDATE' && (
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">{t('sqlGenerator.setUpdates')}</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.setUpdates')}</label>
                 <input
                   type="text"
                   value={updates}
                   onChange={(e) => setUpdates(e.target.value)}
-                  className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                  className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
                 />
               </div>
             )}
 
             {command === 'CREATE TABLE' && (
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">{t('sqlGenerator.schemaDefinition')}</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.schemaDefinition')}</label>
                 <textarea
                   value={tableSchema}
                   onChange={(e) => setTableSchema(e.target.value)}
                   rows={6}
-                  className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                  className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
                 />
               </div>
             )}
 
             {(command === 'SELECT' || command === 'UPDATE' || command === 'DELETE') && (
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">{t('sqlGenerator.whereClause')}</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.whereClause')}</label>
                 <input
                   type="text"
                   value={where}
                   onChange={(e) => setWhere(e.target.value)}
-                  className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                  className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
                 />
               </div>
             )}
@@ -151,21 +151,21 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
             {command === 'SELECT' && (
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1">{t('sqlGenerator.orderBy')}</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.orderBy')}</label>
                   <input
                     type="text"
                     value={orderBy}
                     onChange={(e) => setOrderBy(e.target.value)}
-                    className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                    className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1">{t('sqlGenerator.limit')}</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('sqlGenerator.limit')}</label>
                   <input
                     type="text"
                     value={limit}
                     onChange={(e) => setLimit(e.target.value)}
-                    className="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 font-mono"
+                    className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 font-mono"
                   />
                 </div>
               </div>
@@ -174,10 +174,10 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
 
           <div>
              <div className="flex justify-between items-center mb-2">
-              <label className="block text-sm font-medium text-gray-300">{t('sqlGenerator.generatedSql')}</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('sqlGenerator.generatedSql')}</label>
               <button
                 onClick={() => navigator.clipboard.writeText(generateSql())}
-                className="text-xs text-blue-400 hover:text-blue-300"
+                className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300"
               >
                 {t('sqlGenerator.copySql')}
               </button>
@@ -186,7 +186,7 @@ ${tableSchema.split('\n').map(line => '  ' + line.trim()).join('\n')}
               readOnly
               value={generateSql()}
               rows={16}
-              className="w-full bg-black border border-gray-700 rounded-xl px-4 py-3 text-green-400 font-mono text-sm leading-relaxed"
+              className="w-full bg-gray-900 dark:bg-black border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-green-600 dark:text-green-400 font-mono text-sm leading-relaxed"
             />
           </div>
         </div>

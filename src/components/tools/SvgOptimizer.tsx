@@ -74,57 +74,57 @@ export default function SvgOptimizer() {
     <div className="space-y-4">
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('input')} SVG</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('input')} SVG</label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="w-full h-48 bg-gray-800 rounded p-3 font-mono text-sm"
+            className="w-full h-48 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-white"
             placeholder={t('svgOptimizer.placeholder')}
           />
         </div>
         <div>
           <div className="flex justify-between items-center mb-1">
-            <label className="text-sm text-gray-300">{t('output')}</label>
-            <button onClick={copyOutput} className="text-sm text-blue-400 hover:text-blue-300">
+            <label className="text-sm text-gray-600 dark:text-gray-300">{t('output')}</label>
+            <button onClick={copyOutput} className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
               {copied ? t('copied') : t('copy')}
             </button>
           </div>
           <textarea
             value={output}
             readOnly
-            className="w-full h-48 bg-gray-800 rounded p-3 font-mono text-sm text-green-400"
+            className="w-full h-48 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded p-3 font-mono text-sm text-green-600 dark:text-green-400"
           />
         </div>
       </div>
 
       <button
         onClick={optimize}
-        className="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded font-medium"
+        className="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded font-medium text-white"
       >
         {t('svgOptimizer.optimize')}
       </button>
 
       {stats.original > 0 && (
         <div className="grid grid-cols-3 gap-4">
-          <div className="bg-gray-800 rounded p-3 text-center">
-            <div className="text-lg font-bold">{formatSize(stats.original)}</div>
-            <div className="text-sm text-gray-300">{t('svgOptimizer.original')}</div>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 text-center">
+            <div className="text-lg font-bold text-gray-900 dark:text-white">{formatSize(stats.original)}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('svgOptimizer.original')}</div>
           </div>
-          <div className="bg-gray-800 rounded p-3 text-center">
-            <div className="text-lg font-bold text-green-400">{formatSize(stats.optimized)}</div>
-            <div className="text-sm text-gray-300">{t('svgOptimizer.optimized')}</div>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 text-center">
+            <div className="text-lg font-bold text-green-600 dark:text-green-400">{formatSize(stats.optimized)}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('svgOptimizer.optimized')}</div>
           </div>
-          <div className="bg-gray-800 rounded p-3 text-center">
-            <div className="text-lg font-bold text-blue-400">{stats.saved}%</div>
-            <div className="text-sm text-gray-300">{t('svgOptimizer.saved')}</div>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 text-center">
+            <div className="text-lg font-bold text-blue-600 dark:text-blue-400">{stats.saved}%</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">{t('svgOptimizer.saved')}</div>
           </div>
         </div>
       )}
 
       {output && (
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('svgOptimizer.preview')}</label>
-          <div className="bg-gray-800 rounded p-4 flex justify-center" dangerouslySetInnerHTML={{ __html: output }} />
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('svgOptimizer.preview')}</label>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-4 flex justify-center" dangerouslySetInnerHTML={{ __html: output }} />
         </div>
       )}
     </div>

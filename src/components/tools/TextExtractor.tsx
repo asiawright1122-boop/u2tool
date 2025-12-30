@@ -105,14 +105,14 @@ export default function TextExtractor() {
   return (
     <div className="space-y-4">
       {/* 控制面板 */}
-      <div className="p-4 bg-gray-800 rounded-lg space-y-4">
+      <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg space-y-4">
         <div className="flex flex-wrap gap-4 items-end">
           <div className="flex-1 min-w-[200px]">
-            <label className="block text-xs text-gray-300 mb-1">{t('extractor.type')}</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('extractor.type')}</label>
             <select
               value={extractType}
               onChange={(e) => setExtractType(e.target.value as ExtractType | 'all')}
-              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-sm"
+              className="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-white"
             >
               {extractTypes.map(({ value, label }) => (
                 <option key={value} value={value}>{label}</option>
@@ -123,19 +123,19 @@ export default function TextExtractor() {
           <div className="flex gap-2">
             <button
               onClick={handleExtract}
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded text-sm font-medium"
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded text-sm font-medium text-white"
             >
               {t('extractor.extract')}
             </button>
             <button
               onClick={loadExample}
-              className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm"
+              className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-700 dark:text-white"
             >
               {t('extractor.loadExample')}
             </button>
             <button
               onClick={handleClear}
-              className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm"
+              className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-700 dark:text-white"
             >
               {t('clear')}
             </button>
@@ -145,26 +145,26 @@ export default function TextExtractor() {
 
       {/* 输入区域 */}
       <div>
-        <label className="block text-sm text-gray-300 mb-2">{t('input')}</label>
+        <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={t('extractor.placeholder')}
-          className="w-full h-40 px-3 py-2 bg-gray-800 border border-gray-700 rounded font-mono text-sm resize-none focus:outline-none focus:border-blue-500"
+          className="w-full h-40 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none focus:outline-none focus:border-blue-500"
         />
       </div>
 
       {/* 结果区域 */}
       <div>
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm text-gray-300">
+          <label className="text-sm text-gray-600 dark:text-gray-300">
             {t('result')} ({totalResults} {t('extractor.found')})
           </label>
           {results.length > 0 && (
             <button
               onClick={handleCopyAll}
               className={`px-2 py-1 text-xs rounded ${
-                copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'
+                copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-white'
               }`}
             >
               {copied ? t('copied') : t('extractor.copyAll')}
@@ -174,16 +174,16 @@ export default function TextExtractor() {
 
         {/* 单类型结果 */}
         {results.length > 0 && (
-          <div className="p-4 bg-gray-800 rounded-lg space-y-2 max-h-64 overflow-y-auto">
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg space-y-2 max-h-64 overflow-y-auto">
             {results.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between p-2 bg-gray-700/50 rounded group"
+                className="flex items-center justify-between p-2 bg-gray-100 dark:bg-gray-700/50 rounded group"
               >
-                <span className="font-mono text-sm break-all">{item}</span>
+                <span className="font-mono text-sm break-all text-gray-900 dark:text-white">{item}</span>
                 <button
                   onClick={() => handleCopy(item)}
-                  className="px-2 py-1 text-xs bg-gray-600 hover:bg-gray-9000 rounded opacity-0 group-hover:opacity-100 transition-opacity ml-2 shrink-0"
+                  className="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 rounded opacity-0 group-hover:opacity-100 transition-opacity ml-2 shrink-0 text-gray-700 dark:text-white"
                 >
                   {t('copy')}
                 </button>
@@ -197,9 +197,9 @@ export default function TextExtractor() {
           <div className="space-y-3">
             {(Object.entries(allResults) as [ExtractType, string[]][]).map(([type, items]) => (
               items.length > 0 && (
-                <div key={type} className="p-3 bg-gray-800 rounded-lg">
+                <div key={type} className="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-blue-400">
+                    <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
                       {extractTypes.find(t => t.value === type)?.label} ({items.length})
                     </span>
                   </div>
@@ -207,12 +207,12 @@ export default function TextExtractor() {
                     {items.map((item, index) => (
                       <div
                         key={index}
-                        className="flex items-center justify-between p-2 bg-gray-700/50 rounded group text-sm"
+                        className="flex items-center justify-between p-2 bg-gray-100 dark:bg-gray-700/50 rounded group text-sm"
                       >
-                        <span className="font-mono break-all">{item}</span>
+                        <span className="font-mono break-all text-gray-900 dark:text-white">{item}</span>
                         <button
                           onClick={() => handleCopy(item)}
-                          className="px-2 py-1 text-xs bg-gray-600 hover:bg-gray-9000 rounded opacity-0 group-hover:opacity-100 transition-opacity ml-2 shrink-0"
+                          className="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 rounded opacity-0 group-hover:opacity-100 transition-opacity ml-2 shrink-0 text-gray-700 dark:text-white"
                         >
                           {t('copy')}
                         </button>
@@ -227,14 +227,14 @@ export default function TextExtractor() {
 
         {/* 无结果提示 */}
         {totalResults === 0 && input && (
-          <div className="p-4 bg-gray-800 rounded-lg text-center text-gray-300">
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-center text-gray-600 dark:text-gray-300">
             {t('extractor.noResults')}
           </div>
         )}
       </div>
 
       {/* 说明 */}
-      <div className="p-3 bg-gray-800/50 rounded-lg text-xs text-gray-300">
+      <div className="p-3 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg text-xs text-gray-600 dark:text-gray-300">
         <div className="font-medium mb-1">{t('extractor.supportedTypes')}</div>
         <ul className="list-disc list-inside space-y-1">
           <li><strong>{t('extractor.email')}</strong>: user@example.com</li>

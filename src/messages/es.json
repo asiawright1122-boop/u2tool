@@ -20,6 +20,7 @@
     "home": "Hogar",
     "tools": "Herramientas",
     "about": "Acerca de",
+    "blog": "Blog",
     "viewAllTools": "Ver todas las herramientas",
     "searchPlaceholder": "Herramientas de búsqueda...",
     "noResults": "No se encontraron herramientas",
@@ -69,8 +70,10 @@
     "input": "Aporte",
     "output": "Producción",
     "copy": "Copiar",
-    "clear": "Claro",
+    "clear": "Limpiar",
     "add": "Agregar",
+    "expandAll": "Expandir todo",
+    "collapseAll": "Contraer todo",
     "generate": "Generar",
     "convert": "Convertir",
     "format": "Formato",
@@ -141,7 +144,7 @@
       "hex": "HEX",
       "rgb": "RGB",
       "hsl": "HSL",
-      "preview": "Avance"
+      "preview": "Vista previa"
     },
     "timestamp": {
       "currentTime": "Hora actual",
@@ -173,7 +176,7 @@
     },
     "markdown": {
       "editor": "Editor",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "exportHtml": "Exportar HTML"
     },
     "lorem": {
@@ -217,7 +220,7 @@
       "linear": "Lineal",
       "radial": "Radial",
       "css": "CSS",
-      "tailwind": "Viento de cola",
+      "tailwind": "Tailwind",
       "sunset": "Atardecer",
       "ocean": "Océano",
       "forest": "Bosque",
@@ -322,9 +325,9 @@
     },
     "htmlPreview": {
       "htmlCode": "HTML Code",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "refresh": "Actualizar vista previa",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "placeholder": "Introduce el código HTML..."
     },
     "ipLookup": {
@@ -358,7 +361,7 @@
       "unique": "Único"
     },
     "textReverser": {
-      "reverseChars": "Personajes inversos",
+      "reverseChars": "Invertir caracteres",
       "reverseWords": "Palabras inversas",
       "reverseLines": "Líneas inversas",
       "placeholder": "Ingrese el texto para revertir..."
@@ -448,8 +451,8 @@
       "cols": "columnas",
       "hasHeader": "Tiene encabezado",
       "header": "Encabezamiento",
-      "cell": "Celúla",
-      "preview": "Avance"
+      "cell": "Celda",
+      "preview": "Vista previa"
     },
     "schemaValidator": {
       "loadExample": "Cargar ejemplo",
@@ -504,7 +507,7 @@
       "original": "Original",
       "optimized": "Optimizado",
       "saved": "Guardado",
-      "preview": "Avance"
+      "preview": "Vista previa"
     },
     "textBinary": {
       "toBinary": "Texto a binario",
@@ -516,7 +519,7 @@
     },
     "mdToHtml": {
       "mdPlaceholder": "Introduzca la reducción...",
-      "preview": "Avance"
+      "preview": "Vista previa"
     },
     "epoch": {
       "current": "Hora de la época actual",
@@ -535,7 +538,7 @@
     },
     "textStats": {
       "placeholder": "Introduzca texto para análisis estadístico...",
-      "chars": "Personajes",
+      "chars": "Caracteres",
       "charsNoSpace": "Sin espacios",
       "words": "Palabras",
       "uniqueWords": "Palabras únicas",
@@ -568,7 +571,7 @@
       "fileName": "Nombre del archivo",
       "fileSize": "Tamaño de archivo",
       "fileType": "Tipo de archivo",
-      "preview": "Avance"
+      "preview": "Vista previa"
     },
     "textCompare": {
       "text1": "Texto 1",
@@ -609,7 +612,7 @@
       "protocol": "Protocolo",
       "hostname": "Nombre de host",
       "port": "Puerto",
-      "pathname": "Camino",
+      "pathname": "Ruta",
       "search": "Cadena de consulta",
       "hash": "Picadillo",
       "origin": "Origen",
@@ -618,7 +621,7 @@
     },
     "textWrapper": {
       "width": "Ancho de línea",
-      "chars": "personajes",
+      "chars": "caracteres",
       "placeholder": "Ingrese el texto para ajustar...",
       "wrap": "Ajustar texto"
     },
@@ -693,7 +696,7 @@
       "authorPlaceholder": "Juan Pérez",
       "description": "Descripción (se recomiendan entre 150 y 160 caracteres)",
       "descriptionPlaceholder": "Una breve descripción de su página...",
-      "characters": "personajes",
+      "characters": "caracteres",
       "keywords": "Palabras clave (separadas por comas)",
       "keywordsPlaceholder": "web, desarrollo, herramientas",
       "ogImageUrl": "OG Image URL",
@@ -732,7 +735,7 @@
       "typeProfile": "Perfil",
       "typeVideo": "Video",
       "typeMusic": "Música",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "ogPreviewAlt": "OG Preview",
       "noImage": "Sin imagen",
       "previewTitleFallback": "Título",
@@ -757,7 +760,7 @@
       "siteUsernamePlaceholder": "@sitio web",
       "creatorUsername": "Creador (@nombredeusuario)",
       "creatorUsernamePlaceholder": "@autor",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "previewImageFallback": "Imagen",
       "previewTitleFallback": "Título",
       "previewDescriptionFallback": "Descripción",
@@ -822,7 +825,7 @@
       "wrapWrapReverse": "Envolver al revés",
       "gap": "Espacio (px)",
       "items": "Elementos",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "generatedCss": "CSS generado",
       "quickReference": "Referencia rápida",
       "quickReferenceJustify": "Controla la alineación a lo largo del eje principal.",
@@ -880,7 +883,7 @@
         "twitter": "Gorjeo",
         "linkedin": "LinkedIn"
       },
-      "preview": "Avance",
+      "preview": "Vista previa",
       "recommendations": {
         "title": "Recomendaciones",
         "imageSize": "Tamaño de imagen: 1200x630 píxeles (relación 1,91:1)",
@@ -899,7 +902,7 @@
       "score": "Puntaje",
       "length": "Longitud",
       "chars": "caracteres",
-      "charTypes": "Tipos de personajes",
+      "charTypes": "Tipos de caracteres",
       "weak": "Débil",
       "fair": "Justo",
       "good": "Bien",
@@ -1069,7 +1072,7 @@
       "jsonToToml": "JSON → TOML",
       "indent": "Sangrar",
       "loadSample": "Cargar muestra",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "swap": "Intercambio",
       "copy": "Copiar",
       "convert": "Convertir",
@@ -1132,13 +1135,13 @@
     },
     "imageCompressor": {
       "quality": "Calidad",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "dropzone": "Haga clic o arrastre la imagen para comprimirla",
       "original": "Original",
       "compressed": "Comprimido",
       "saved": "Guardado",
       "compressFirst": "Comprimir imagen primero",
-      "processing": "Tratamiento...",
+      "processing": "Procesando...",
       "compress": "Comprimir",
       "download": "Descargar",
       "originalSize": "Tamaño original",
@@ -1148,12 +1151,12 @@
     "imageConverter": {
       "targetFormat": "Formato de destino",
       "quality": "Calidad",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "dropzone": "Haga clic o arrastre la imagen para convertir",
       "original": "Original",
       "converted": "Convertido",
       "convertFirst": "Convertir imagen primero",
-      "processing": "Tratamiento...",
+      "processing": "Procesando...",
       "convert": "Convertir",
       "download": "Descargar",
       "formatInfo": "Información de formato",
@@ -1163,11 +1166,11 @@
     },
     "favicon": {
       "sizes": "Tallas",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "dropzone": "Haga clic o arrastre la imagen para generar favicons",
       "hint": "Recomendado: Imagen cuadrada de al menos 256x256",
       "original": "Imagen original",
-      "processing": "Tratamiento...",
+      "processing": "Procesando...",
       "generate": "Generar favicons",
       "generated": "Favicones generados",
       "downloadAll": "Descargar todo",
@@ -1177,13 +1180,13 @@
     },
     "imageCropper": {
       "aspectRatio": "Relación de aspecto",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "dropzone": "Haga clic o arrastre la imagen para recortarla",
       "selectArea": "Seleccionar área de cultivo",
       "changeImage": "Cambiar imagen",
       "width": "Ancho",
       "height": "Altura",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "cropFirst": "Recortar imagen primero",
       "crop": "Cultivo",
       "download": "Descargar"
@@ -1195,7 +1198,7 @@
       "custom": "Reglas personalizadas",
       "customPlaceholder": "Agregar patrones de ignorar personalizados...",
       "generate": "Generar",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "copy": "Copiar",
       "download": "Descargar"
     },
@@ -1205,7 +1208,7 @@
       "messaging": "Mensajería y búsqueda",
       "utilities": "Utilidades",
       "generate": "Generar",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "copy": "Copiar",
       "download": "Descargar",
       "note": "Nota: Recuerde cambiar las contraseñas predeterminadas antes de usarlas en producción."
@@ -1230,7 +1233,7 @@
       "download": "Descargar"
     },
     "clipPath": {
-      "preview": "Avance",
+      "preview": "Vista previa",
       "presets": "Preajustes",
       "value": "Valor de ruta de recorte",
       "syntax": "Referencia de sintaxis",
@@ -1292,7 +1295,7 @@
       "duration": "Duración (es)",
       "timing": "Función de sincronización",
       "iteration": "Iteración",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "bounce": "Rebotar",
       "pulse": "Legumbres",
       "shake": "Agitar",
@@ -1410,7 +1413,7 @@
       "seo_description": "Encode and decode HTML entities online for free. Handle special characters safely for web development. Prevent XSS attacks and display HTML correctly."
     },
     "markdown-preview": {
-      "name": "Vista previa de rebajas",
+      "name": "Vista previa de Markdown",
       "description": "Escriba Markdown y vea una vista previa en vivo. Exportar a HTML.",
       "seo_title": "Free Markdown Editor & Preview Online",
       "seo_description": "Write and preview Markdown online for free. Live preview with syntax highlighting and HTML export. Perfect for documentation, README files, and blog posts."
@@ -1746,7 +1749,7 @@
       "seo_description": "Convert text to binary code or binary to text online for free. Support ASCII and Unicode encoding. Perfect for learning binary and data encoding concepts."
     },
     "markdown-to-html": {
-      "name": "Rebaja a HTML",
+      "name": "Markdown a HTML",
       "description": "Convierta texto Markdown a código HTML.",
       "seo_title": "Free Markdown to HTML Converter",
       "seo_description": "Convert Markdown to HTML online for free. Support GitHub Flavored Markdown with tables, code blocks, and task lists. Preview and copy clean HTML output."
@@ -1877,7 +1880,7 @@
       "protocol": "Protocolo",
       "hostname": "Nombre de host",
       "port": "Puerto",
-      "pathname": "Camino",
+      "pathname": "Ruta",
       "search": "Cadena de consulta",
       "hash": "Picadillo",
       "origin": "Origen",
@@ -2041,7 +2044,7 @@
       "messaging": "Mensajería y búsqueda",
       "utilities": "Utilidades",
       "generate": "Generar",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "copy": "Copiar",
       "download": "Descargar",
       "outputLabel": "docker-compose.yml",
@@ -2092,7 +2095,7 @@
       "presetDarkOnYellow": "Oscuro sobre amarillo"
     },
     "markdown-table-generator": {
-      "name": "Generador de tablas de rebajas",
+      "name": "Generador de tablas Markdown",
       "description": "Cree y edite tablas de Markdown con editor visual y vista previa en vivo.",
       "seo_title": "Free Markdown Table Generator Online",
       "seo_description": "Generate Markdown tables with visual editor online for free. Live preview, column alignment, and CSV import. Perfect for GitHub READMEs and docs.",
@@ -2105,11 +2108,11 @@
       "center": "Centro",
       "right": "Bien",
       "header": "Encabezamiento",
-      "cell": "Celúla",
+      "cell": "Celda",
       "removeRow": "Quitar fila",
       "removeColumn": "Quitar columna",
-      "markdownOutput": "Salida de rebajas",
-      "preview": "Avance"
+      "markdownOutput": "Salida Markdown",
+      "preview": "Vista previa"
     },
     "base58": {
       "name": "Codificador/Decodificador Base58",
@@ -2171,7 +2174,7 @@
       "col": "Col {índice}",
       "rowSizes": "Tamaños de fila",
       "row": "Fila {índice}",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "generatedCss": "CSS generado"
     },
     "css-flexbox-generator": {
@@ -2362,7 +2365,7 @@
       "inset": "Recuadro",
       "boxColor": "Color de la caja",
       "borderRadius": "Radio del borde",
-      "preview": "Avance"
+      "preview": "Vista previa"
     },
     "border-radius-generator": {
       "name": "Generador de radio de borde",
@@ -2385,7 +2388,7 @@
       "presetDrop": "Gota",
       "presetMessage": "Mensaje",
       "boxColor": "Color de la caja",
-      "preview": "Avance"
+      "preview": "Vista previa"
     },
     "text-to-ascii-art": {
       "name": "Texto a arte ASCII",
@@ -2448,10 +2451,10 @@
       "seo_description": "Encode and decode Base85 (Ascii85) data online for free. Used in PDF files, PostScript, and data compression. Secure browser-based encoding tool."
     },
     "html-to-markdown": {
-      "name": "HTML a rebajas",
+      "name": "HTML a Markdown",
       "description": "Convierta HTML a formato Markdown.",
       "input": "HTML Input",
-      "output": "Salida de rebajas",
+      "output": "Salida Markdown",
       "convert": "Convertir",
       "copy": "Copiar",
       "seo_title": "Free HTML to Markdown Converter Online",
@@ -2773,7 +2776,7 @@
       "statusConnecting": "Conectando...",
       "statusDisconnected": "Desconectado",
       "messages": "Mensajes",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "noMessages": "Aún no hay mensajes. Conéctese a un servidor WebSocket para comenzar.",
       "messagePlaceholder": "Escribe un mensaje...",
       "send": "Enviar",
@@ -3014,7 +3017,7 @@
       "seo_title": "Free Text Cleaner Online",
       "seo_description": "Clean and format text by removing extra spaces, empty lines, HTML tags, and more online for free. Normalize whitespace and fix common formatting issues.",
       "input": "Texto de entrada",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "cleanedText": "Texto limpio",
       "copyResult": "Copiar resultado",
       "options": "Opciones",
@@ -3037,7 +3040,7 @@
       "seo_description": "Shuffle and randomize lists of items or names online for free. Perfect for random selection, lottery draws, and fair ordering. Secure randomization.",
       "originalList": "Lista original",
       "randomizedList": "Lista aleatoria",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "copyResult": "Copiar resultado",
       "shuffleList": "Lista aleatoria",
       "placeholder": "Ingrese su lista aquí (un elemento por línea)..."
@@ -3112,7 +3115,7 @@
       "scale": "Escala",
       "backgroundColor": "Color de fondo",
       "transparentBackground": "Fondo transparente",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "noPreview": "Ingrese el código SVG o cargue un archivo"
     },
     "hex-base64-converter": {
@@ -3291,7 +3294,7 @@
       "generate": "Generar imagen",
       "imageUrl": "URL de la imagen",
       "copy": "Copiar",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "noPreview": "Haga clic en Generar para obtener una vista previa de la imagen.",
       "info": "Información",
       "infoText": "Utiliza la API de fotos de Picsum. Seed garantiza la misma imagen para obtener resultados consistentes. ID de imagen (0-1084) selecciona una foto específica."
@@ -3395,13 +3398,13 @@
       "errorConversion": "Error de conversión"
     },
     "text-to-nato": {
-      "name": "Texto a la OTAN",
-      "description": "Convierta texto al alfabeto fonético de la OTAN.",
+      "name": "Texto a Alfabeto Fonético NATO",
+      "description": "Convierta texto al alfabeto fonético NATO (Alpha, Bravo, Charlie...).",
       "seo_title": "Text to NATO Phonetic Alphabet Converter",
       "seo_description": "Convert letters and numbers to NATO phonetic alphabet words online for free. Alpha, Bravo, Charlie format for clear communication. For radio and phone.",
       "separator": "Separador",
-      "sepNewline": "Nueva linea",
-      "sepDash": "Estrellarse",
+      "sepNewline": "Nueva línea",
+      "sepDash": "Guión",
       "sepSpace": "Espacio",
       "showOriginal": "Mostrar carácter original",
       "loadSample": "Cargar muestra",
@@ -4940,7 +4943,7 @@
       "seo_description": "Codifique y decodifique entidades HTML en línea de forma gratuita. Maneje caracteres especiales de forma segura para el desarrollo web. Evite ataques XSS y muestre HTML correctamente."
     },
     "markdown-preview": {
-      "name": "Vista previa de rebajas",
+      "name": "Vista previa de Markdown",
       "description": "Escriba Markdown y vea una vista previa en vivo. Exportar a HTML.",
       "seo_title": "Editor de Markdown gratuito y vista previa en línea",
       "seo_description": "Escriba y obtenga una vista previa de Markdown en línea de forma gratuita. Vista previa en vivo con resaltado de sintaxis y exportación HTML. Perfecto para documentación, archivos README y publicaciones de blogs."
@@ -5276,7 +5279,7 @@
       "seo_description": "Convierta texto a código binario o binario a texto en línea de forma gratuita. Admite codificación ASCII y Unicode. Perfecto para aprender conceptos de codificación de datos y binarios."
     },
     "markdown-to-html": {
-      "name": "Rebaja a HTML",
+      "name": "Markdown a HTML",
       "description": "Convierta texto Markdown a código HTML.",
       "seo_title": "Convertidor gratuito de Markdown a HTML",
       "seo_description": "Convierta Markdown a HTML en línea de forma gratuita. Admite GitHub Flavored Markdown con tablas, bloques de código y listas de tareas. Obtenga una vista previa y copie la salida HTML limpia."
@@ -5407,7 +5410,7 @@
       "protocol": "Protocolo",
       "hostname": "Nombre de host",
       "port": "Puerto",
-      "pathname": "Camino",
+      "pathname": "Ruta",
       "search": "Cadena de consulta",
       "hash": "Picadillo",
       "origin": "Origen",
@@ -5595,7 +5598,7 @@
       "messaging": "Mensajería y búsqueda",
       "utilities": "Utilidades",
       "generate": "Generar",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "copy": "Copiar",
       "download": "Descargar",
       "outputLabel": "docker-compose.yml",
@@ -5646,7 +5649,7 @@
       "presetDarkOnYellow": "Oscuro sobre amarillo"
     },
     "markdown-table-generator": {
-      "name": "Generador de tablas de rebajas",
+      "name": "Generador de tablas Markdown",
       "description": "Cree y edite tablas de Markdown con editor visual y vista previa en vivo.",
       "seo_title": "Generador gratuito de tablas de rebajas en línea",
       "seo_description": "Genere tablas Markdown con editor visual en línea de forma gratuita. Vista previa en vivo, alineación de columnas e importación CSV. Perfecto para documentos README y documentos de GitHub.",
@@ -5659,11 +5662,11 @@
       "center": "Centro",
       "right": "Bien",
       "header": "Encabezamiento",
-      "cell": "Celúla",
+      "cell": "Celda",
       "removeRow": "Quitar fila",
       "removeColumn": "Quitar columna",
-      "markdownOutput": "Salida de rebajas",
-      "preview": "Avance"
+      "markdownOutput": "Salida Markdown",
+      "preview": "Vista previa"
     },
     "base58": {
       "name": "Codificador/Decodificador Base58",
@@ -5725,7 +5728,7 @@
       "col": "Col {índice}",
       "rowSizes": "Tamaños de fila",
       "row": "Fila {índice}",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "generatedCss": "CSS generado"
     },
     "css-flexbox-generator": {
@@ -5916,7 +5919,7 @@
       "inset": "Recuadro",
       "boxColor": "Color de la caja",
       "borderRadius": "Radio del borde",
-      "preview": "Avance"
+      "preview": "Vista previa"
     },
     "border-radius-generator": {
       "name": "Generador de radio de borde",
@@ -5939,7 +5942,7 @@
       "presetDrop": "Gota",
       "presetMessage": "Mensaje",
       "boxColor": "Color de la caja",
-      "preview": "Avance"
+      "preview": "Vista previa"
     },
     "text-to-ascii-art": {
       "name": "Texto a arte ASCII",
@@ -6005,7 +6008,7 @@
       "name": "HTML to Markdown",
       "description": "Convierta HTML a formato Markdown.",
       "input": "HTML Input",
-      "output": "Salida de rebajas",
+      "output": "Salida Markdown",
       "convert": "Convertir",
       "copy": "Copiar",
       "seo_title": "Convertidor gratuito de HTML a Markdown en línea",
@@ -6327,7 +6330,7 @@
       "statusConnecting": "Conectando...",
       "statusDisconnected": "Desconectado",
       "messages": "Mensajes",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "noMessages": "Aún no hay mensajes. Conéctese a un servidor WebSocket para comenzar.",
       "messagePlaceholder": "Escribe un mensaje...",
       "send": "Enviar",
@@ -6568,7 +6571,7 @@
       "seo_title": "Limpiador de texto gratuito en línea",
       "seo_description": "Limpie y dé formato al texto eliminando espacios adicionales, líneas vacías, etiquetas HTML y más en línea de forma gratuita. Normalice los espacios en blanco y solucione problemas de formato comunes.",
       "input": "Texto de entrada",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "cleanedText": "Texto limpio",
       "copyResult": "Copiar resultado",
       "options": "Opciones",
@@ -6591,7 +6594,7 @@
       "seo_description": "Mezcla y aleatoriza listas de elementos o nombres en línea de forma gratuita. Perfecto para selecciones aleatorias, sorteos de lotería y pedidos justos. Aleatorización segura.",
       "originalList": "Lista original",
       "randomizedList": "Lista aleatoria",
-      "clear": "Claro",
+      "clear": "Limpiar",
       "copyResult": "Copiar resultado",
       "shuffleList": "Lista aleatoria",
       "placeholder": "Ingrese su lista aquí (un elemento por línea)..."
@@ -6666,7 +6669,7 @@
       "scale": "Escala",
       "backgroundColor": "Color de fondo",
       "transparentBackground": "Fondo transparente",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "noPreview": "Ingrese el código SVG o cargue un archivo"
     },
     "hex-base64-converter": {
@@ -6845,7 +6848,7 @@
       "generate": "Generar imagen",
       "imageUrl": "URL de la imagen",
       "copy": "Copiar",
-      "preview": "Avance",
+      "preview": "Vista previa",
       "noPreview": "Haga clic en Generar para obtener una vista previa de la imagen.",
       "info": "Información",
       "infoText": "Utiliza la API de fotos de Picsum. Seed garantiza la misma imagen para obtener resultados consistentes. ID de imagen (0-1084) selecciona una foto específica."
@@ -6949,13 +6952,13 @@
       "errorConversion": "Error de conversión"
     },
     "text-to-nato": {
-      "name": "Texto a la OTAN",
-      "description": "Convierta texto al alfabeto fonético de la OTAN.",
-      "seo_title": "Convertidor de texto a alfabeto fonético de la OTAN",
-      "seo_description": "Convierta letras y números en palabras del alfabeto fonético de la OTAN en línea de forma gratuita. Formato Alpha, Bravo, Charlie para una comunicación clara. Para radio y teléfono.",
+      "name": "Texto a Alfabeto Fonético NATO",
+      "description": "Convierta texto al alfabeto fonético NATO (Alpha, Bravo, Charlie...).",
+      "seo_title": "Convertidor de Texto a Alfabeto Fonético NATO",
+      "seo_description": "Convierta letras y números en palabras del alfabeto fonético NATO en línea de forma gratuita. Formato Alpha, Bravo, Charlie para una comunicación clara. Para radio y teléfono.",
       "separator": "Separador",
-      "sepNewline": "Nueva linea",
-      "sepDash": "Estrellarse",
+      "sepNewline": "Nueva línea",
+      "sepDash": "Guión",
       "sepSpace": "Espacio",
       "showOriginal": "Mostrar carácter original",
       "loadSample": "Cargar muestra",
@@ -7110,6 +7113,12 @@
     "about": "Acerca de",
     "blog": "Blog"
   },
+  "theme": {
+    "toggle": "Cambiar tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
   "blog": {
     "title": "Blog",
     "description": "Tutoriales para desarrolladores, guías de herramientas e información técnica para aumentar tu productividad.",
@@ -7119,7 +7128,10 @@
     "noPosts": "Aún no hay publicaciones. ¡Vuelve pronto!",
     "readMore": "Leer más",
     "publishedOn": "Publicado el",
-    "author": "Autor"
+    "author": "Autor",
+    "featured": "Destacado",
+    "relatedPosts": "Artículos relacionados",
+    "relatedTools": "Herramientas recomendadas"
   },
   "errors": {
     "notFound": {

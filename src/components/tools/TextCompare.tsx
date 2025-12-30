@@ -48,31 +48,31 @@ export default function TextCompare() {
     <div className="space-y-4">
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('textCompare.text1')}</label>
-          <textarea value={text1} onChange={(e) => setText1(e.target.value)} className="w-full h-40 p-3 bg-gray-800 border border-gray-700 rounded-lg" placeholder={t('textCompare.placeholder')} />
+          <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('textCompare.text1')}</label>
+          <textarea value={text1} onChange={(e) => setText1(e.target.value)} className="w-full h-40 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textCompare.placeholder')} />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">{t('textCompare.text2')}</label>
-          <textarea value={text2} onChange={(e) => setText2(e.target.value)} className="w-full h-40 p-3 bg-gray-800 border border-gray-700 rounded-lg" placeholder={t('textCompare.placeholder')} />
+          <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('textCompare.text2')}</label>
+          <textarea value={text2} onChange={(e) => setText2(e.target.value)} className="w-full h-40 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('textCompare.placeholder')} />
         </div>
       </div>
       {similarity && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <div className="bg-gray-800 rounded-lg p-4 text-center">
-            <p className="text-3xl font-bold text-blue-400">{similarity.charSim}%</p>
-            <p className="text-sm text-gray-300">{t('textCompare.charSimilarity')}</p>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
+            <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">{similarity.charSim}%</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{t('textCompare.charSimilarity')}</p>
           </div>
-          <div className="bg-gray-800 rounded-lg p-4 text-center">
-            <p className="text-3xl font-bold text-green-400">{similarity.wordSim}%</p>
-            <p className="text-sm text-gray-300">{t('textCompare.wordSimilarity')}</p>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
+            <p className="text-3xl font-bold text-green-600 dark:text-green-400">{similarity.wordSim}%</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{t('textCompare.wordSimilarity')}</p>
           </div>
-          <div className="bg-gray-800 rounded-lg p-4 text-center">
-            <p className="text-3xl font-bold text-yellow-400">{similarity.distance}</p>
-            <p className="text-sm text-gray-300">{t('textCompare.editDistance')}</p>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
+            <p className="text-3xl font-bold text-yellow-600 dark:text-yellow-400">{similarity.distance}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{t('textCompare.editDistance')}</p>
           </div>
-          <div className="bg-gray-800 rounded-lg p-4 text-center">
-            <p className="text-3xl font-bold text-purple-400">{similarity.common}/{similarity.total}</p>
-            <p className="text-sm text-gray-300">{t('textCompare.commonWords')}</p>
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
+            <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">{similarity.common}/{similarity.total}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{t('textCompare.commonWords')}</p>
           </div>
         </div>
       )}

@@ -138,23 +138,23 @@ export default function JsonToSql() {
   return (
     <div className="space-y-4">
       {/* 控制面板 */}
-      <div className="p-4 bg-gray-800 rounded-lg space-y-4">
+      <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg space-y-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>
-            <label className="block text-xs text-gray-300 mb-1">{t('tableName')}</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('tableName')}</label>
             <input
               type="text"
               value={tableName}
               onChange={(e) => setTableName(e.target.value)}
-              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-sm"
+              className="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-white"
             />
           </div>
           <div>
-            <label className="block text-xs text-gray-300 mb-1">{t('dialect')}</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('dialect')}</label>
             <select
               value={dialect}
               onChange={(e) => setDialect(e.target.value as 'mysql' | 'postgresql' | 'sqlite')}
-              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-sm"
+              className="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded text-sm text-gray-900 dark:text-white"
             >
               <option value="mysql">MySQL</option>
               <option value="postgresql">PostgreSQL</option>
@@ -164,24 +164,24 @@ export default function JsonToSql() {
         </div>
         
         <div className="flex flex-wrap gap-4 items-center">
-          <label className="flex items-center gap-2 text-sm">
+          <label className="flex items-center gap-2 text-sm text-gray-600 dark:text-white">
             <input
               type="checkbox"
               checked={includeCreate}
               onChange={(e) => setIncludeCreate(e.target.checked)}
-              className="rounded bg-gray-700 border-gray-600"
+              className="rounded bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
             {t('includeCreate')}
           </label>
           
           <div className="flex gap-2 ml-auto">
-            <button onClick={handleConvert} className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded text-sm font-medium">
+            <button onClick={handleConvert} className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded text-sm font-medium">
               {tg('convert')}
             </button>
-            <button onClick={loadExample} className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm">
+            <button onClick={loadExample} className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-sm">
               {t('loadExample')}
             </button>
-            <button onClick={handleClear} className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm">
+            <button onClick={handleClear} className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-sm">
               {tg('clear')}
             </button>
           </div>
@@ -192,21 +192,21 @@ export default function JsonToSql() {
       {/* 输入输出区域 */}
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-2">JSON {tg('input')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">JSON {tg('input')}</label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={t('inputPlaceholder')}
-            className="w-full h-64 px-3 py-2 bg-gray-800 border border-gray-700 rounded font-mono text-sm resize-none focus:outline-none focus:border-blue-500"
+            className="w-full h-64 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none focus:outline-none focus:border-blue-500"
           />
         </div>
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm text-gray-300">SQL {tg('output')}</label>
+            <label className="text-sm text-gray-600 dark:text-gray-300">SQL {tg('output')}</label>
             <button
               onClick={handleCopy}
               disabled={!output}
-              className={`px-2 py-1 text-xs rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'} disabled:opacity-50`}
+              className={`px-2 py-1 text-xs rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'} disabled:opacity-50`}
             >
               {copied ? tg('copied') : tg('copy')}
             </button>
@@ -214,7 +214,7 @@ export default function JsonToSql() {
           <textarea
             value={error || output}
             readOnly
-            className={`w-full h-64 px-3 py-2 bg-gray-800 border border-gray-700 rounded font-mono text-sm resize-none ${error ? 'text-red-400' : ''}`}
+            className={`w-full h-64 px-3 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-sm text-gray-900 dark:text-white resize-none ${error ? 'text-red-600 dark:text-red-400' : ''}`}
           />
         </div>
       </div>

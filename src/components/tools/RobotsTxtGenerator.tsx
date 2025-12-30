@@ -95,9 +95,9 @@ export default function RobotsTxtGenerator() {
       </div>
 
       {rules.map((rule, index) => (
-        <div key={index} className="p-4 bg-gray-800 rounded-lg space-y-3">
+        <div key={index} className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg space-y-3">
           <div className="flex justify-between items-center">
-            <h3 className="font-medium">{tr('rule', { index: index + 1 })}</h3>
+            <h3 className="font-medium text-gray-900 dark:text-white">{tr('rule', { index: index + 1 })}</h3>
             {rules.length > 1 && (
               <button onClick={() => removeRule(index)} className="text-red-400 hover:text-red-300 text-sm">
                 {tr('remove')}
@@ -106,7 +106,7 @@ export default function RobotsTxtGenerator() {
           </div>
           
           <div>
-            <label className="block text-sm text-gray-300 mb-1">{tr('userAgent')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{tr('userAgent')}</label>
             <input
               type="text"
               value={rule.userAgent}
@@ -117,7 +117,7 @@ export default function RobotsTxtGenerator() {
           </div>
           
           <div>
-            <label className="block text-sm text-gray-300 mb-1">{tr('allow')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{tr('allow')}</label>
             <textarea
               value={rule.allow.join('\n')}
               onChange={(e) => updateRule(index, 'allow', e.target.value.split('\n'))}
@@ -128,7 +128,7 @@ export default function RobotsTxtGenerator() {
           </div>
           
           <div>
-            <label className="block text-sm text-gray-300 mb-1">{tr('disallow')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{tr('disallow')}</label>
             <textarea
               value={rule.disallow.join('\n')}
               onChange={(e) => updateRule(index, 'disallow', e.target.value.split('\n'))}

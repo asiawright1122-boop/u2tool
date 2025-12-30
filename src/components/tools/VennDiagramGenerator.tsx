@@ -118,8 +118,8 @@ export default function VennDiagramGenerator() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="space-y-4">
-                    <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg space-y-3">
-                        <label className="block text-sm font-medium">{t('settings')}</label>
+                    <div className="p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg space-y-3">
+                        <label className="block text-sm font-medium text-gray-700 dark:text-white">{t('settings')}</label>
                         <div>
                             <input
                                 type="text"
@@ -152,15 +152,15 @@ export default function VennDiagramGenerator() {
                     </div>
 
                     <div className="space-y-3">
-                        <h3 className="text-sm font-medium">{t('dataEditor')}</h3>
+                        <h3 className="text-sm font-medium text-gray-700 dark:text-white">{t('dataEditor')}</h3>
                         {activeSets.map((set, index) => (
-                            <div key={index} className="p-3 bg-gray-900 border border-gray-700 rounded-lg space-y-2">
+                            <div key={index} className="p-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg space-y-2">
                                 <div className="flex items-center gap-2">
                                     <div
                                         className="w-4 h-4 rounded-full"
                                         style={{ backgroundColor: set.color }}
                                     />
-                                    <span className="text-sm font-medium text-gray-300">Set {index + 1}</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Set {index + 1}</span>
                                 </div>
                                 <input
                                     type="text"
@@ -190,8 +190,8 @@ export default function VennDiagramGenerator() {
                 </div>
 
                 <div>
-                    <h3 className="text-sm font-medium mb-2">{t('chartPreview')}</h3>
-                    <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 flex justify-center overflow-auto">
+                    <h3 className="text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</h3>
+                    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex justify-center overflow-auto">
                         <svg
                             ref={svgRef}
                             width="600"
@@ -232,9 +232,9 @@ export default function VennDiagramGenerator() {
                     <p className="mt-2 text-xs text-gray-500 text-center">{t('dragNote')}</p>
                 </div>
             </div>
-            <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300 mt-4">
+            <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300 mt-4">
                 <p className="font-medium mb-1">💡 {t('tipsTitle')}</p>
-                <ul className="space-y-0.5 text-blue-400">
+                <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
                     <li>• {t('tip1')}</li>
                     <li>• {t('tip2')}</li>
                 </ul>

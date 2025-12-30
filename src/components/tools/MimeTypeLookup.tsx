@@ -96,31 +96,31 @@ export default function MimeTypeLookup() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder={t('searchPlaceholder') || 'Search MIME types...'}
-          className="w-full bg-gray-800 border border-gray-700 rounded-xl px-6 py-4 text-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+          className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl px-6 py-4 text-lg text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
         />
       </div>
 
-      <div className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left">
             <thead>
-              <tr className="bg-gray-900 border-b border-gray-700">
-                <th className="px-6 py-4 font-semibold text-gray-300 w-32">Extension</th>
-                <th className="px-6 py-4 font-semibold text-gray-300 w-64">MIME Type</th>
-                <th className="px-6 py-4 font-semibold text-gray-300">Description</th>
+              <tr className="bg-gray-100 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+                <th className="px-6 py-4 font-semibold text-gray-700 dark:text-gray-300 w-32">Extension</th>
+                <th className="px-6 py-4 font-semibold text-gray-700 dark:text-gray-300 w-64">MIME Type</th>
+                <th className="px-6 py-4 font-semibold text-gray-700 dark:text-gray-300">Description</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-700">
+            <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
               {filtered.map((item, index) => (
-                <tr key={index} className="hover:bg-gray-700/50 transition-colors">
-                  <td className="px-6 py-4 font-mono text-blue-400">{item.ext}</td>
-                  <td className="px-6 py-4 font-mono text-green-400 break-all">{item.mime}</td>
-                  <td className="px-6 py-4 text-gray-300">{item.desc}</td>
+                <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                  <td className="px-6 py-4 font-mono text-blue-600 dark:text-blue-400">{item.ext}</td>
+                  <td className="px-6 py-4 font-mono text-green-600 dark:text-green-400 break-all">{item.mime}</td>
+                  <td className="px-6 py-4 text-gray-600 dark:text-gray-300">{item.desc}</td>
                 </tr>
               ))}
               {filtered.length === 0 && (
                 <tr>
-                  <td colSpan={3} className="px-6 py-8 text-center text-gray-300">
+                  <td colSpan={3} className="px-6 py-8 text-center text-gray-600 dark:text-gray-300">
                     No matching MIME types found.
                   </td>
                 </tr>
@@ -129,7 +129,7 @@ export default function MimeTypeLookup() {
           </table>
         </div>
       </div>
-      <div className="mt-4 text-right text-gray-300 text-sm">
+      <div className="mt-4 text-right text-gray-600 dark:text-gray-300 text-sm">
         Showing {filtered.length} results
       </div>
     </div>

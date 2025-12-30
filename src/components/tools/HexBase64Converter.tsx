@@ -94,20 +94,20 @@ export default function HexBase64Converter() {
       <div className="flex items-center justify-center gap-4">
         <button
           onClick={() => { setMode('hex-to-base64'); setOutput(''); setError(''); }}
-          className={`px-4 py-2 rounded-lg ${mode === 'hex-to-base64' ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+          className={`px-4 py-2 rounded-lg text-white ${mode === 'hex-to-base64' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}
         >
           {t('hexToBase64')}
         </button>
         <button
           onClick={swap}
-          className="p-2 bg-gray-700 hover:bg-gray-600 rounded-lg"
+          className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg"
           title={t('swap')}
         >
           ⇄
         </button>
         <button
           onClick={() => { setMode('base64-to-hex'); setOutput(''); setError(''); }}
-          className={`px-4 py-2 rounded-lg ${mode === 'base64-to-hex' ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+          className={`px-4 py-2 rounded-lg text-white ${mode === 'base64-to-hex' ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-700 hover:bg-gray-600 dark:hover:bg-gray-600'}`}
         >
           {t('base64ToHex')}
         </button>
@@ -116,7 +116,7 @@ export default function HexBase64Converter() {
       <div className="flex gap-2">
         <button
           onClick={loadSample}
-          className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm"
+          className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg text-sm"
         >
           {t('loadSample')}
         </button>
@@ -140,13 +140,13 @@ export default function HexBase64Converter() {
           <textarea
             value={output}
             readOnly
-            className="tool-textarea h-40 font-mono bg-gray-800"
+            className="tool-textarea h-40 font-mono"
           />
         </div>
       </div>
 
       {error && (
-        <div className="p-3 bg-red-900/20 border border-red-800 rounded-lg text-red-400 text-sm">
+        <div className="p-3 bg-red-100 dark:bg-red-900/20 border border-red-300 dark:border-red-800 rounded-lg text-red-700 dark:text-red-400 text-sm">
           {error}
         </div>
       )}
@@ -154,29 +154,29 @@ export default function HexBase64Converter() {
       <div className="flex justify-center gap-3">
         <button
           onClick={convert}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg"
         >
           {tg('convert')}
         </button>
         <button
           onClick={copyOutput}
-          className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg"
+          className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg"
           disabled={!output}
         >
           {copied ? tg('copied') : tg('copy')}
         </button>
       </div>
 
-      <div className="p-4 bg-gray-800 rounded-lg text-sm">
-        <h3 className="font-medium mb-2">{t('examples')}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
+      <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm">
+        <h3 className="font-medium mb-2 text-gray-900 dark:text-white">{t('examples')}</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600 dark:text-gray-300">
           <div>
-            <p className="font-medium text-gray-300">Hex:</p>
-            <code className="text-blue-400">48 65 6C 6C 6F</code>
+            <p className="font-medium text-gray-700 dark:text-gray-300">Hex:</p>
+            <code className="text-blue-600 dark:text-blue-400">48 65 6C 6C 6F</code>
           </div>
           <div>
-            <p className="font-medium text-gray-300">Base64:</p>
-            <code className="text-green-400">SGVsbG8=</code>
+            <p className="font-medium text-gray-700 dark:text-gray-300">Base64:</p>
+            <code className="text-green-600 dark:text-green-400">SGVsbG8=</code>
           </div>
         </div>
       </div>

@@ -115,7 +115,7 @@ export default function SvgToImage() {
           <div className="flex gap-2">
             <button
               onClick={loadSample}
-              className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm"
+              className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-white rounded-lg text-sm"
             >
               {t('loadSample')}
             </button>
@@ -210,15 +210,15 @@ export default function SvgToImage() {
 
         {/* Preview */}
         <div className="space-y-4">
-          <label className="block text-sm font-medium">{t('preview')}</label>
-          <div className="p-4 bg-gray-800 rounded-lg min-h-[300px] flex items-center justify-center"
-               style={{ backgroundImage: 'linear-gradient(45deg, #333 25%, transparent 25%), linear-gradient(-45deg, #333 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #333 75%), linear-gradient(-45deg, transparent 75%, #333 75%)', backgroundSize: '20px 20px', backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px' }}>
+          <label className="block text-sm font-medium text-gray-700 dark:text-white">{t('preview')}</label>
+          <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg min-h-[300px] flex items-center justify-center"
+               style={{ backgroundImage: 'linear-gradient(45deg, #ddd 25%, transparent 25%), linear-gradient(-45deg, #ddd 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ddd 75%), linear-gradient(-45deg, transparent 75%, #ddd 75%)', backgroundSize: '20px 20px', backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px' }}>
             {previewUrl ? (
               <img src={previewUrl} alt="Preview" className="max-w-full max-h-[400px] object-contain" />
             ) : svgCode ? (
               <div dangerouslySetInnerHTML={{ __html: svgCode }} className="max-w-full max-h-[400px]" />
             ) : (
-              <div className="text-gray-300 text-center">
+              <div className="text-gray-500 dark:text-gray-300 text-center">
                 <p className="text-4xl mb-2">📷</p>
                 <p>{t('noPreview')}</p>
               </div>

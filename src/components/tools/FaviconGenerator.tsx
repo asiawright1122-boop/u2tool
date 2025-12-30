@@ -115,7 +115,7 @@ export default function FaviconGenerator() {
     <div className="space-y-6">
       {/* Size Selection */}
       <div className="flex flex-wrap items-center gap-4">
-        <label className="text-sm text-gray-300">{t('sizes')}:</label>
+        <label className="text-sm text-gray-700 dark:text-gray-300">{t('sizes')}:</label>
         <div className="flex flex-wrap gap-2">
           {FAVICON_SIZES.map((size) => (
             <button
@@ -124,7 +124,7 @@ export default function FaviconGenerator() {
               className={`px-3 py-1 rounded text-sm ${
                 selectedSizes.includes(size)
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
               {size}x{size}
@@ -133,7 +133,7 @@ export default function FaviconGenerator() {
         </div>
         <button
           onClick={clearAll}
-          className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded text-sm ml-auto"
+          className="px-3 py-1.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm ml-auto text-gray-900 dark:text-gray-100"
         >
           {t('clear')}
         </button>
@@ -142,7 +142,7 @@ export default function FaviconGenerator() {
       {/* File Input */}
       <div
         onClick={() => fileInputRef.current?.click()}
-        className="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-500 transition-colors"
+        className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
       >
         <input
           ref={fileInputRef}
@@ -152,15 +152,15 @@ export default function FaviconGenerator() {
           className="hidden"
         />
         <div className="text-4xl mb-2">🎨</div>
-        <p className="text-gray-300">{t('dropzone')}</p>
-        <p className="text-xs text-gray-300 mt-1">{t('hint')}</p>
-        {fileName && <p className="text-sm text-gray-300 mt-2">{fileName}</p>}
+        <p className="text-gray-700 dark:text-gray-300">{t('dropzone')}</p>
+        <p className="text-xs text-gray-500 dark:text-gray-300 mt-1">{t('hint')}</p>
+        {fileName && <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{fileName}</p>}
       </div>
 
       {/* Original Preview */}
       {originalImage && (
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-4">
-          <label className="text-sm font-medium text-gray-300 block mb-2">{t('original')}</label>
+        <div className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-300 block mb-2">{t('original')}</label>
           <div className="flex items-center justify-center">
             <img
               src={originalImage}
@@ -177,7 +177,7 @@ export default function FaviconGenerator() {
           <button
             onClick={generateFavicons}
             disabled={isProcessing || selectedSizes.length === 0}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
+            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium text-white"
           >
             {isProcessing ? t('processing') : t('generate')}
           </button>
@@ -188,10 +188,10 @@ export default function FaviconGenerator() {
       {favicons.length > 0 && (
         <div className="space-y-4">
           <div className="flex justify-between items-center">
-            <label className="text-sm font-medium text-gray-300">{t('generated')}</label>
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('generated')}</label>
             <button
               onClick={downloadAll}
-              className="px-3 py-1.5 bg-green-600 hover:bg-green-700 rounded text-sm"
+              className="px-3 py-1.5 bg-green-600 hover:bg-green-700 rounded text-sm text-white"
             >
               {t('downloadAll')}
             </button>
@@ -201,7 +201,7 @@ export default function FaviconGenerator() {
             {favicons.map((favicon) => (
               <div
                 key={favicon.size}
-                className="bg-gray-800 border border-gray-700 rounded-lg p-4 text-center"
+                className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center"
               >
                 <div className="flex items-center justify-center h-20 mb-2">
                   <img
@@ -211,12 +211,12 @@ export default function FaviconGenerator() {
                     className="pixelated"
                   />
                 </div>
-                <div className="text-sm text-gray-300 mb-2">
+                <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
                   {favicon.size}x{favicon.size}
                 </div>
                 <button
                   onClick={() => downloadFavicon(favicon)}
-                  className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs w-full"
+                  className="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-xs w-full text-gray-900 dark:text-gray-100"
                 >
                   {t('download')}
                 </button>
@@ -225,17 +225,17 @@ export default function FaviconGenerator() {
           </div>
 
           {/* HTML Code */}
-          <div className="bg-gray-800 border border-gray-700 rounded-lg p-4">
+          <div className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
             <div className="flex justify-between items-center mb-2">
-              <label className="text-sm font-medium text-gray-300">{t('htmlCode')}</label>
+              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('htmlCode')}</label>
               <button
                 onClick={copyHtml}
-                className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs"
+                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-xs text-gray-900 dark:text-gray-100"
               >
                 {t('copy')}
               </button>
             </div>
-            <pre className="text-sm text-gray-300 overflow-x-auto">
+            <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto">
               <code>{generateIcoHtml()}</code>
             </pre>
           </div>

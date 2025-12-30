@@ -140,7 +140,7 @@ console.log(calculateSum(5, 10));`);
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap gap-4 p-4 bg-gray-800 rounded-lg">
+      <div className="flex flex-wrap gap-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
         <label className="flex items-center gap-2 cursor-pointer">
           <input
             type="checkbox"
@@ -148,7 +148,7 @@ console.log(calculateSum(5, 10));`);
             onChange={(e) => setOptions({ ...options, renameVariables: e.target.checked })}
             className="w-4 h-4"
           />
-          <span className="text-sm">{t('renameVariables')}</span>
+          <span className="text-sm text-gray-700 dark:text-white">{t('renameVariables')}</span>
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -157,7 +157,7 @@ console.log(calculateSum(5, 10));`);
             onChange={(e) => setOptions({ ...options, stringEncoding: e.target.checked })}
             className="w-4 h-4"
           />
-          <span className="text-sm">{t('stringEncoding')}</span>
+          <span className="text-sm text-gray-700 dark:text-white">{t('stringEncoding')}</span>
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -166,7 +166,7 @@ console.log(calculateSum(5, 10));`);
             onChange={(e) => setOptions({ ...options, unicodeEscape: e.target.checked })}
             className="w-4 h-4"
           />
-          <span className="text-sm">{t('unicodeEscape')}</span>
+          <span className="text-sm text-gray-700 dark:text-white">{t('unicodeEscape')}</span>
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -175,7 +175,7 @@ console.log(calculateSum(5, 10));`);
             onChange={(e) => setOptions({ ...options, deadCodeInjection: e.target.checked })}
             className="w-4 h-4"
           />
-          <span className="text-sm">{t('deadCodeInjection')}</span>
+          <span className="text-sm text-gray-700 dark:text-white">{t('deadCodeInjection')}</span>
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -184,14 +184,14 @@ console.log(calculateSum(5, 10));`);
             onChange={(e) => setOptions({ ...options, controlFlowFlattening: e.target.checked })}
             className="w-4 h-4"
           />
-          <span className="text-sm">{t('controlFlowFlattening')}</span>
+          <span className="text-sm text-gray-700 dark:text-white">{t('controlFlowFlattening')}</span>
         </label>
       </div>
 
       <div className="flex gap-2">
         <button
           onClick={loadSample}
-          className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm"
+          className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-lg text-sm"
         >
           {t('loadSample')}
         </button>
@@ -213,7 +213,7 @@ console.log(calculateSum(5, 10));`);
           <textarea
             value={output}
             readOnly
-            className="tool-textarea h-72 font-mono text-sm bg-gray-800"
+            className="tool-textarea h-72 font-mono text-sm bg-gray-100 dark:bg-gray-800"
           />
         </div>
       </div>
@@ -221,22 +221,22 @@ console.log(calculateSum(5, 10));`);
       <div className="flex justify-center gap-3">
         <button
           onClick={obfuscate}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg"
         >
           {t('obfuscate')}
         </button>
         <button
           onClick={copyOutput}
-          className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg"
+          className="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-lg"
           disabled={!output}
         >
           {copied ? tg('copied') : tg('copy')}
         </button>
       </div>
 
-      <div className="p-4 bg-blue-900/20 border border-blue-800 rounded-lg text-sm">
-        <p className="text-blue-400 font-medium mb-2">{t('info')}</p>
-        <p className="text-gray-300">{t('infoText')}</p>
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg text-sm">
+        <p className="text-blue-700 dark:text-blue-400 font-medium mb-2">{t('info')}</p>
+        <p className="text-blue-600 dark:text-gray-300">{t('infoText')}</p>
       </div>
     </div>
   );

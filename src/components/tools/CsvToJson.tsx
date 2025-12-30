@@ -42,8 +42,8 @@ export default function CsvToJson() {
     <div className="space-y-4">
       <div className="flex items-center gap-4 flex-wrap">
         <div className="flex items-center gap-2">
-          <label className="text-sm">{t('csvJson.delimiter')}:</label>
-          <select value={delimiter} onChange={(e) => setDelimiter(e.target.value)} className="px-3 py-2 bg-gray-800 border border-gray-700 rounded">
+          <label className="text-sm text-gray-700 dark:text-gray-300">{t('csvJson.delimiter')}:</label>
+          <select value={delimiter} onChange={(e) => setDelimiter(e.target.value)} className="tool-select-sm">
             <option value=",">,</option>
             <option value=";">;</option>
             <option value="\t">{t('csvToJson.delimiterTab')}</option>
@@ -51,23 +51,23 @@ export default function CsvToJson() {
           </select>
         </div>
         <label className="flex items-center gap-2 cursor-pointer">
-          <input type="checkbox" checked={hasHeader} onChange={(e) => setHasHeader(e.target.checked)} className="w-4 h-4" />
-          <span className="text-sm">{t('csvJson.hasHeader')}</span>
+          <input type="checkbox" checked={hasHeader} onChange={(e) => setHasHeader(e.target.checked)} className="tool-checkbox" />
+          <span className="text-sm text-gray-700 dark:text-gray-300">{t('csvJson.hasHeader')}</span>
         </label>
       </div>
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('csvToJson.csv')}</label>
-          <textarea value={csv} onChange={(e) => setCsv(e.target.value)} className="w-full h-64 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm" placeholder={t('csvToJson.csvPlaceholder')} />
+          <label className="tool-label">{t('csvToJson.csv')}</label>
+          <textarea value={csv} onChange={(e) => setCsv(e.target.value)} className="tool-textarea-tall" placeholder={t('csvToJson.csvPlaceholder')} />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">{t('csvToJson.json')}</label>
-          <textarea value={json} readOnly className="w-full h-64 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm" />
+          <label className="tool-label">{t('csvToJson.json')}</label>
+          <textarea value={json} readOnly className="tool-textarea-tall" />
         </div>
       </div>
       <div className="flex gap-2">
-        <button onClick={convert} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('convert')}</button>
-        <button onClick={copy} className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">{copied ? t('copied') : t('copy')}</button>
+        <button onClick={convert} className="btn-primary">{t('convert')}</button>
+        <button onClick={copy} className="btn-secondary">{copied ? t('copied') : t('copy')}</button>
       </div>
     </div>
   );

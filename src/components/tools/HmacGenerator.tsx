@@ -52,32 +52,32 @@ export default function HmacGenerator() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium mb-2">{t('hmac.message')}</label>
+        <label className="tool-label">{t('hmac.message')}</label>
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder={t('hmac.messagePlaceholder')}
-          className="w-full h-32 p-3 bg-gray-900 border border-gray-700 rounded-lg font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="tool-textarea h-32"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">{t('hmac.secretKey')}</label>
+        <label className="tool-label">{t('hmac.secretKey')}</label>
         <input
           type="text"
           value={secretKey}
           onChange={(e) => setSecretKey(e.target.value)}
           placeholder={t('hmac.keyPlaceholder')}
-          className="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="tool-input font-mono text-sm"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">{t('hmac.algorithm')}</label>
+        <label className="tool-label">{t('hmac.algorithm')}</label>
         <select
           value={algorithm}
           onChange={(e) => setAlgorithm(e.target.value as Algorithm)}
-          className="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="tool-input"
         >
           <option value="SHA-1">SHA-1</option>
           <option value="SHA-256">SHA-256</option>
@@ -95,13 +95,13 @@ export default function HmacGenerator() {
 
       {result && (
         <div>
-          <label className="block text-sm font-medium mb-2">{t('result')}</label>
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
+          <label className="tool-label">{t('result')}</label>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
             <div className="flex items-start justify-between gap-4">
-              <code className="font-mono text-sm break-all text-green-400">{result}</code>
+              <code className="font-mono text-sm break-all text-green-600 dark:text-green-400">{result}</code>
               <button
                 onClick={copyResult}
-                className={`px-3 py-1 rounded text-sm whitespace-nowrap ${
+                className={`px-3 py-1 rounded text-sm whitespace-nowrap text-white ${
                   copied ? 'bg-green-600' : 'bg-blue-600 hover:bg-blue-700'
                 }`}
               >

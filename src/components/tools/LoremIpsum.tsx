@@ -78,11 +78,11 @@ export default function LoremIpsum() {
     <div className="space-y-4">
       <div className="flex flex-wrap gap-4 items-end">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('lorem.type')}</label>
+          <label className="tool-label">{t('lorem.type')}</label>
           <select
             value={type}
             onChange={(e) => setType(e.target.value as typeof type)}
-            className="px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg h-[42px]"
+            className="tool-input h-[42px]"
           >
             <option value="paragraphs">{t('lorem.paragraphs')}</option>
             <option value="sentences">{t('lorem.sentences')}</option>
@@ -91,14 +91,14 @@ export default function LoremIpsum() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-2">{t('count')}</label>
+          <label className="tool-label">{t('count')}</label>
           <input
             type="number"
             min="1"
             max="100"
             value={count}
             onChange={(e) => setCount(Math.min(100, Math.max(1, parseInt(e.target.value) || 1)))}
-            className="w-24 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg h-[42px]"
+            className="w-24 tool-input h-[42px]"
           />
         </div>
 
@@ -110,10 +110,10 @@ export default function LoremIpsum() {
       {output && (
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium">{t('output')}</label>
+            <label className="tool-label mb-0">{t('output')}</label>
             <button
               onClick={copyOutput}
-              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`text-sm px-3 py-1 rounded text-white ${copied ? 'bg-green-600' : 'bg-gray-600 dark:bg-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600'}`}
             >
               {copied ? t('copied') : t('copy')}
             </button>

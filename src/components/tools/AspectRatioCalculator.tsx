@@ -84,56 +84,56 @@ export default function AspectRatioCalculator() {
     <div className="space-y-6">
       {/* Original Dimensions */}
       <div>
-        <label className="block text-sm font-medium mb-3">{t('aspect.original')}</label>
+        <label className="block text-sm font-medium text-gray-900 dark:text-white mb-3">{t('aspect.original')}</label>
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-xs text-gray-300 mb-1">{t('aspect.width')}</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.width')}</label>
             <input
               type="number"
               value={width}
               onChange={(e) => handleWidthChange(parseInt(e.target.value) || 0)}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg"
+              className="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white"
             />
           </div>
           <div>
-            <label className="block text-xs text-gray-300 mb-1">{t('aspect.height')}</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.height')}</label>
             <input
               type="number"
               value={height}
               onChange={(e) => handleHeightChange(parseInt(e.target.value) || 0)}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg"
+              className="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white"
             />
           </div>
         </div>
       </div>
 
       {/* Aspect Ratio Display */}
-      <div className="p-6 bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-xl text-center">
-        <div className="text-sm text-gray-300 mb-2">{t('aspect.ratio')}</div>
-        <div className="text-4xl font-bold">{ratio}</div>
+      <div className="p-6 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-xl text-center">
+        <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('aspect.ratio')}</div>
+        <div className="text-4xl font-bold text-gray-900 dark:text-white">{ratio}</div>
       </div>
 
       {/* Common Ratios */}
       <div>
-        <label className="block text-sm font-medium mb-2">{t('aspect.common')}</label>
+        <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('aspect.common')}</label>
         <div className="flex flex-wrap gap-2">
           {commonRatioKeys.map((r) => (
             <button
               key={r.name}
               onClick={() => applyRatio(r.w, r.h)}
-              className="px-3 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm"
+              className="px-3 py-2 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-sm text-gray-900 dark:text-white"
             >
               <span className="font-medium">{r.name}</span>
-              <span className="text-gray-300 ml-1 text-xs">({t(`aspect.${r.descKey}`)})</span>
+              <span className="text-gray-600 dark:text-gray-300 ml-1 text-xs">({t(`aspect.${r.descKey}`)})</span>
             </button>
           ))}
         </div>
       </div>
 
       {/* Resize Calculator */}
-      <div className="border-t border-gray-700 pt-6">
+      <div className="border-t border-gray-300 dark:border-gray-700 pt-6">
         <div className="flex items-center justify-between mb-3">
-          <label className="text-sm font-medium">{t('aspect.resize')}</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-white">{t('aspect.resize')}</label>
           <label className="flex items-center gap-2 cursor-pointer">
             <input
               type="checkbox"
@@ -141,40 +141,40 @@ export default function AspectRatioCalculator() {
               onChange={(e) => setLockRatio(e.target.checked)}
               className="w-4 h-4 rounded"
             />
-            <span className="text-sm">{t('aspect.lockRatio')}</span>
+            <span className="text-sm text-gray-900 dark:text-white">{t('aspect.lockRatio')}</span>
           </label>
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-xs text-gray-300 mb-1">{t('aspect.newWidth')}</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.newWidth')}</label>
             <input
               type="number"
               value={newWidth}
               onChange={(e) => handleNewWidthChange(parseInt(e.target.value) || 0)}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg"
+              className="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white"
             />
           </div>
           <div>
-            <label className="block text-xs text-gray-300 mb-1">{t('aspect.newHeight')}</label>
+            <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{t('aspect.newHeight')}</label>
             <input
               type="number"
               value={newHeight}
               onChange={(e) => handleNewHeightChange(parseInt(e.target.value) || 0)}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg"
+              className="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white"
             />
           </div>
         </div>
       </div>
 
       {/* Result */}
-      <div className="flex items-center justify-between p-4 bg-gray-800 rounded-lg">
+      <div className="flex items-center justify-between p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
         <div>
-          <span className="text-gray-300 text-sm">{t('result')}:</span>
-          <span className="ml-2 font-mono text-lg">{newWidth} × {newHeight}</span>
+          <span className="text-gray-600 dark:text-gray-300 text-sm">{t('result')}:</span>
+          <span className="ml-2 font-mono text-lg text-gray-900 dark:text-white">{newWidth} × {newHeight}</span>
         </div>
         <button
           onClick={copyDimensions}
-          className={`px-4 py-2 rounded-lg ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+          className={`px-4 py-2 rounded-lg text-white ${copied ? 'bg-green-600' : 'bg-gray-600 dark:bg-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600'}`}
         >
           {copied ? t('copied') : t('copy')}
         </button>

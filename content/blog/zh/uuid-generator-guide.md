@@ -103,10 +103,3 @@ const filename = `${uuid()}.pdf`;
 ## 总结
 
 UUID是分布式系统中不可或缺的工具。根据你的具体需求选择合适的UUID版本，并使用 [U2Tool UUID生成器](https://www.u2tool.com/zh/tools/uuid-generator) 快速生成所需的UUID。
-
----
-
-**相关工具**：
-- [ULID生成器](https://www.u2tool.com/zh/tools/ulid-generator)
-- [随机字符串生成器](https://www.u2tool.com/zh/tools/random-string-generator)
-- [哈希生成器](https://www.u2tool.com/zh/tools/hash-generator)

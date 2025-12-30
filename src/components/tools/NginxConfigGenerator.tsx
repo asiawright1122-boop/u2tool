@@ -161,39 +161,39 @@ server {
       <div className="grid md:grid-cols-2 gap-6">
         <div className="space-y-4">
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('serverName')} (Domain)</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('serverName')} (Domain)</label>
             <input
               type="text"
               value={config.serverName}
               onChange={(e) => setConfig({ ...config, serverName: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder={t('exampleDomain')}
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('rootPath')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('rootPath')}</label>
             <input
               type="text"
               value={config.rootPath}
               onChange={(e) => setConfig({ ...config, rootPath: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder="/var/www/html"
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('proxyPass')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('proxyPass')}</label>
             <input
               type="text"
               value={config.proxyPass}
               onChange={(e) => setConfig({ ...config, proxyPass: e.target.value })}
-              className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
               placeholder="http://localhost:3000"
             />
           </div>
         </div>
 
         <div className="space-y-4">
-          <h3 className="font-semibold">{t('features')}</h3>
+          <h3 className="font-semibold text-gray-900 dark:text-white">{t('features')}</h3>
           {[
             { key: 'enableSsl', label: t('enableSsl') },
             { key: 'enableGzip', label: t('enableGzip') },
@@ -218,14 +218,14 @@ server {
                 value={config.sslCertPath}
                 onChange={(e) => setConfig({ ...config, sslCertPath: e.target.value })}
                 placeholder="SSL Certificate Path"
-                className="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-sm"
+                className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
               />
               <input
                 type="text"
                 value={config.sslKeyPath}
                 onChange={(e) => setConfig({ ...config, sslKeyPath: e.target.value })}
                 placeholder="SSL Key Path"
-                className="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-sm"
+                className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
               />
             </div>
           )}
@@ -237,7 +237,7 @@ server {
                 value={config.phpSocket}
                 onChange={(e) => setConfig({ ...config, phpSocket: e.target.value })}
                 placeholder="PHP-FPM Socket Path"
-                className="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-sm"
+                className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
               />
             </div>
           )}
@@ -259,11 +259,11 @@ server {
 
       {output && (
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('output')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
           <textarea
             value={output}
             readOnly
-            className="w-full h-96 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 font-mono text-sm focus:outline-none"
+            className="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none"
           />
         </div>
       )}

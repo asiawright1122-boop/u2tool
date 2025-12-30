@@ -101,10 +101,3 @@ JSON Web Tokens use Base64URL encoding.
 ## Conclusion
 
 Base64 is a simple but very practical encoding method. Understanding its principles helps you better handle data transmission. I recommend using [U2Tool Base64 Tools](https://www.u2tool.com/en/tools/base64-encoder) for daily encoding/decoding tasks.
-
----
-
-**Related Tools**:
-- [Base64 Decoder](https://www.u2tool.com/en/tools/base64-decoder)
-- [URL Encoder](https://www.u2tool.com/en/tools/url-encoder)
-- [Image to Base64](https://www.u2tool.com/en/tools/image-to-base64)

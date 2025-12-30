@@ -20,6 +20,7 @@
     "home": "Главная",
     "tools": "Инструменты",
     "about": "О нас",
+    "blog": "Блог",
     "viewAllTools": "Посмотреть все инструменты",
     "searchPlaceholder": "Поиск инструментов...",
     "noResults": "Инструменты не найдены",
@@ -71,6 +72,8 @@
     "copy": "Копировать",
     "clear": "Очистить",
     "add": "Добавить",
+    "expandAll": "Развернуть все",
+    "collapseAll": "Свернуть все",
     "generate": "Генерировать",
     "convert": "Конвертировать",
     "format": "Формат",
@@ -107,7 +110,7 @@
       "global": "Глобальный",
       "caseInsensitive": "Нечувствителен к регистру",
       "multiline": "Многострочный",
-      "dotall": "Доталл",
+      "dotall": "Dotall",
       "atIndex": "по индексу"
     },
     "password": {
@@ -217,7 +220,7 @@
       "linear": "Линейный",
       "radial": "Радиальный",
       "css": "CSS",
-      "tailwind": "Попутный ветер",
+      "tailwind": "Tailwind",
       "sunset": "Закат",
       "ocean": "Океан",
       "forest": "Лес",
@@ -795,7 +798,7 @@
       },
       "generate": "Создать Условия использования",
       "copyToClipboard": "Копировать в буфер обмена",
-      "generatedOutput": "Сгенерированные условия обслуживания (уценка)"
+      "generatedOutput": "Сгенерированные условия обслуживания (Markdown)"
     },
     "cssFlexboxGenerator": {
       "direction": "Направление",
@@ -850,7 +853,7 @@
       },
       "generate": "Создать политику конфиденциальности",
       "copyToClipboard": "Копировать в буфер обмена",
-      "generatedOutput": "Сгенерированная политика конфиденциальности (уценка)"
+      "generatedOutput": "Сгенерированная политика конфиденциальности (Markdown)"
     },
     "openGraphPreview": {
       "defaultTitle": "Моя классная страница",
@@ -2690,9 +2693,9 @@
       "seo_description": "Simple drawing tool with brush and eraser online for free. Customize brush size, color, and opacity. Download artwork as PNG. Perfect for quick sketches."
     },
     "json-escape": {
-      "name": "JSON Escape/Unescape",
+      "name": "JSON Экранирование/Удаление",
       "description": "Экранирование и удаление экранирования строк JSON.",
-      "seo_title": "Free JSON Escape/Unescape Tool Online",
+      "seo_title": "Бесплатный инструмент JSON Escape/Unescape онлайн",
       "seo_description": "Escape and unescape JSON strings online for free. Handle special characters, quotes, and control characters. Essential for embedding JSON in strings."
     },
     "css-animation-generator": {
@@ -2856,7 +2859,7 @@
       "marketingCookies": "Маркетинговые/рекламные файлы cookie",
       "generate": "Создать политику использования файлов cookie",
       "copy": "Копировать в буфер обмена",
-      "output": "Политика создания файлов cookie (уценка)"
+      "output": "Политика создания файлов cookie (Markdown)"
     },
     "json-to-tsv": {
       "name": "Конвертер JSON в TSV",
@@ -6410,7 +6413,7 @@
       "marketingCookies": "Маркетинговые/рекламные файлы cookie",
       "generate": "Создать политику использования файлов cookie",
       "copy": "Копировать в буфер обмена",
-      "output": "Политика создания файлов cookie (уценка)"
+      "output": "Политика создания файлов cookie (Markdown)"
     },
     "json-to-tsv": {
       "name": "JSON to TSV Converter",
@@ -7110,6 +7113,12 @@
     "about": "О нас",
     "blog": "Блог"
   },
+  "theme": {
+    "toggle": "Сменить тему",
+    "light": "Светлая",
+    "dark": "Тёмная",
+    "system": "Системная"
+  },
   "blog": {
     "title": "Блог",
     "description": "Руководства для разработчиков, гайды по инструментам и технические советы для повышения продуктивности.",
@@ -7119,7 +7128,10 @@
     "noPosts": "Пока нет статей. Загляните позже!",
     "readMore": "Читать далее",
     "publishedOn": "Опубликовано",
-    "author": "Автор"
+    "author": "Автор",
+    "featured": "Избранное",
+    "relatedPosts": "Похожие статьи",
+    "relatedTools": "Рекомендуемые инструменты"
   },
   "errors": {
     "notFound": {

@@ -185,13 +185,13 @@ export default function ImageCropper() {
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('aspectRatio')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('aspectRatio')}:</label>
           <select
             value={aspectRatio?.toString() || 'free'}
             onChange={(e) =>
               handleAspectRatioChange(e.target.value === 'free' ? null : parseFloat(e.target.value))
             }
-            className="bg-gray-700 border border-gray-600 rounded px-3 py-1.5 text-sm"
+            className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white"
           >
             {ASPECT_RATIOS.map((r) => (
               <option key={r.label} value={r.value?.toString() || 'free'}>
@@ -202,7 +202,7 @@ export default function ImageCropper() {
         </div>
         <button
           onClick={clearAll}
-          className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded text-sm"
+          className="px-3 py-1.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-sm"
         >
           {t('clear')}
         </button>
@@ -212,7 +212,7 @@ export default function ImageCropper() {
       {!originalImage && (
         <div
           onClick={() => fileInputRef.current?.click()}
-          className="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-500 transition-colors"
+          className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
         >
           <input
             ref={fileInputRef}
@@ -222,7 +222,7 @@ export default function ImageCropper() {
             className="hidden"
           />
           <div className="text-4xl mb-2">✂️</div>
-          <p className="text-gray-300">{t('dropzone')}</p>
+          <p className="text-gray-600 dark:text-gray-300">{t('dropzone')}</p>
         </div>
       )}
 
@@ -231,10 +231,10 @@ export default function ImageCropper() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label className="text-sm font-medium text-gray-300">{t('selectArea')}</label>
+              <label className="text-sm font-medium text-gray-600 dark:text-gray-300">{t('selectArea')}</label>
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs"
+                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-xs"
               >
                 {t('changeImage')}
               </button>
@@ -248,7 +248,7 @@ export default function ImageCropper() {
             </div>
             <div
               ref={containerRef}
-              className="relative bg-gray-800 border border-gray-700 rounded-lg overflow-hidden cursor-move"
+              className="relative bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden cursor-move"
               onMouseDown={handleMouseDown}
               onMouseMove={handleMouseMove}
               onMouseUp={handleMouseUp}
@@ -273,21 +273,21 @@ export default function ImageCropper() {
             {/* Size inputs */}
             <div className="flex gap-4 mt-4">
               <div className="flex items-center gap-2">
-                <label className="text-sm text-gray-300">{t('width')}:</label>
+                <label className="text-sm text-gray-600 dark:text-gray-300">{t('width')}:</label>
                 <input
                   type="number"
                   value={Math.round(cropArea.width)}
                   onChange={(e) => handleSizeChange('width', parseInt(e.target.value) || 0)}
-                  className="w-20 bg-gray-700 border border-gray-600 rounded px-2 py-1 text-sm"
+                  className="w-20 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm text-gray-900 dark:text-white"
                 />
               </div>
               <div className="flex items-center gap-2">
-                <label className="text-sm text-gray-300">{t('height')}:</label>
+                <label className="text-sm text-gray-600 dark:text-gray-300">{t('height')}:</label>
                 <input
                   type="number"
                   value={Math.round(cropArea.height)}
                   onChange={(e) => handleSizeChange('height', parseInt(e.target.value) || 0)}
-                  className="w-20 bg-gray-700 border border-gray-600 rounded px-2 py-1 text-sm"
+                  className="w-20 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm text-gray-900 dark:text-white"
                 />
               </div>
             </div>
@@ -295,9 +295,9 @@ export default function ImageCropper() {
 
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label className="text-sm font-medium text-gray-300">{t('preview')}</label>
+              <label className="text-sm font-medium text-gray-600 dark:text-gray-300">{t('preview')}</label>
             </div>
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
+            <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
               {croppedImage ? (
                 <img
                   src={croppedImage}
@@ -305,7 +305,7 @@ export default function ImageCropper() {
                   className="max-w-full max-h-64 object-contain"
                 />
               ) : (
-                <p className="text-gray-300">{t('cropFirst')}</p>
+                <p className="text-gray-500 dark:text-gray-300">{t('cropFirst')}</p>
               )}
             </div>
           </div>
@@ -317,14 +317,14 @@ export default function ImageCropper() {
         <div className="flex justify-center gap-4">
           <button
             onClick={cropImage}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium"
+            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium"
           >
             {t('crop')}
           </button>
           {croppedImage && (
             <button
               onClick={downloadCropped}
-              className="px-6 py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium"
+              className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium"
             >
               {t('download')}
             </button>

@@ -61,49 +61,49 @@ export default function JsonSorter() {
         <select
           value={order}
           onChange={(e) => setOrder(e.target.value as SortOrder)}
-          className="bg-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
         >
           <option value="asc">{t('ascending')}</option>
           <option value="desc">{t('descending')}</option>
         </select>
         <button
           onClick={sortJson}
-          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-white"
         >
           {t('sort')}
         </button>
         <button
           onClick={copyOutput}
           disabled={!output}
-          className="px-4 py-2 bg-gray-600 hover:bg-gray-700 disabled:opacity-50 rounded-lg transition-colors"
+          className="px-4 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-700 disabled:opacity-50 rounded-lg transition-colors text-gray-900 dark:text-gray-100"
         >
           {tg('copy')}
         </button>
       </div>
 
       {error && (
-        <div className="p-3 bg-red-900/50 border border-red-500 rounded-lg text-red-300 text-sm">
+        <div className="p-3 bg-red-100 dark:bg-red-900/50 border border-red-300 dark:border-red-500 rounded-lg text-red-700 dark:text-red-300 text-sm">
           {error}
         </div>
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{tg('input')}</label>
+          <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="w-full h-80 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            className="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}
             spellCheck={false}
           />
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{tg('output')}</label>
+          <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{tg('output')}</label>
           <textarea
             value={output}
             readOnly
-            className="w-full h-80 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            className="w-full h-80 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
           />
         </div>
       </div>

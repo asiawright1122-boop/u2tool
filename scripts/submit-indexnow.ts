@@ -14,6 +14,11 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import * as dotenv from 'dotenv';
+
+// 加载环境变量（优先 .env.local，然后 .env）
+dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
 
 // 配置
 const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';

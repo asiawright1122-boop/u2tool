@@ -104,7 +104,7 @@ export default function CssGridGenerator() {
           <div className="space-y-2">
             {columnSizes.map((size, i) => (
               <div key={i} className="flex items-center gap-3">
-                <span className="text-sm text-gray-300 w-16 shrink-0 whitespace-nowrap">{tg('col', { index: i + 1 })}:</span>
+                <span className="text-sm text-gray-600 dark:text-gray-300 w-16 shrink-0 whitespace-nowrap">{tg('col', { index: i + 1 })}:</span>
                 <select
                   value={size}
                   onChange={(e) => {
@@ -125,7 +125,7 @@ export default function CssGridGenerator() {
           <div className="space-y-2">
             {rowSizes.map((size, i) => (
               <div key={i} className="flex items-center gap-3">
-                <span className="text-sm text-gray-300 w-16 shrink-0 whitespace-nowrap">{tg('row', { index: i + 1 })}:</span>
+                <span className="text-sm text-gray-600 dark:text-gray-300 w-16 shrink-0 whitespace-nowrap">{tg('row', { index: i + 1 })}:</span>
                 <select
                   value={size}
                   onChange={(e) => {
@@ -145,9 +145,9 @@ export default function CssGridGenerator() {
 
       {/* Preview */}
       <div>
-        <label className="block text-sm font-medium mb-2">{tg('preview')}</label>
+        <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{tg('preview')}</label>
         <div
-          className="p-4 bg-gray-800 rounded-lg min-h-[200px]"
+          className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[200px]"
           style={{
             display: 'grid',
             gridTemplateColumns: columnSizes.join(' '),
@@ -160,7 +160,7 @@ export default function CssGridGenerator() {
           {Array.from({ length: columns * rows }).map((_, i) => (
             <div
               key={i}
-              className="bg-blue-600/50 border border-blue-400 rounded p-2 text-center text-sm"
+              className="bg-blue-600/50 border border-blue-400 rounded p-2 text-center text-sm text-gray-900 dark:text-white"
             >
               {i + 1}
             </div>

@@ -217,7 +217,7 @@ Options -Indexes`);
       <div className="flex gap-2 mb-4">
         <button
           onClick={loadSample}
-          className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm"
+          className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg text-sm"
         >
           {t('loadSample')}
         </button>
@@ -239,7 +239,7 @@ Options -Indexes`);
           <textarea
             value={output}
             readOnly
-            className="tool-textarea h-80 font-mono text-sm bg-gray-800"
+            className="tool-textarea h-80 font-mono text-sm bg-gray-100 dark:bg-gray-800"
           />
         </div>
       </div>
@@ -247,22 +247,22 @@ Options -Indexes`);
       <div className="flex justify-center gap-3">
         <button
           onClick={convert}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg"
         >
           {tg('convert')}
         </button>
         <button
           onClick={copyOutput}
-          className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg"
+          className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg"
           disabled={!output}
         >
           {copied ? tg('copied') : tg('copy')}
         </button>
       </div>
 
-      <div className="p-4 bg-yellow-900/20 border border-yellow-800 rounded-lg text-sm">
-        <p className="text-yellow-400 font-medium mb-2">{t('note')}</p>
-        <p className="text-gray-300">{t('noteText')}</p>
+      <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-800 rounded-lg text-sm">
+        <p className="text-yellow-700 dark:text-yellow-400 font-medium mb-2">{t('note')}</p>
+        <p className="text-gray-700 dark:text-gray-300">{t('noteText')}</p>
       </div>
     </div>
   );

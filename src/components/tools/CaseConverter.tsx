@@ -29,7 +29,7 @@ export default function CaseConverter() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{tg('input')}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{tg('input')}</label>
         <textarea
           className="tool-textarea"
           value={input}
@@ -47,17 +47,17 @@ export default function CaseConverter() {
           {conversions.map(({ id, label, fn }) => {
             const result = fn(input);
             return (
-              <div key={id} className="p-3 bg-gray-900 border border-gray-700 rounded-lg">
+              <div key={id} className="p-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm font-medium text-blue-400">{label}</span>
+                  <span className="text-sm font-medium text-blue-600 dark:text-blue-400">{label}</span>
                   <button
                     onClick={() => copyResult(id, result)}
-                    className={`text-xs px-2 py-1 rounded ${copied === id ? 'bg-green-600' : 'bg-gray-700'}`}
+                    className={`text-xs px-2 py-1 rounded ${copied === id ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
                   >
                     {copied === id ? tg('copied') : tg('copy')}
                   </button>
                 </div>
-                <div className="text-sm break-all">{result}</div>
+                <div className="text-sm break-all text-gray-900 dark:text-gray-100">{result}</div>
               </div>
             );
           })}

@@ -256,35 +256,35 @@ Options -Indexes
                   value={config.error404}
                   onChange={(e) => setConfig({ ...config, error404: e.target.value })}
                   placeholder="404 page path"
-                  className="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-sm"
+                  className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
                 />
                 <input
                   type="text"
                   value={config.error500}
                   onChange={(e) => setConfig({ ...config, error500: e.target.value })}
                   placeholder="500 page path"
-                  className="w-full bg-gray-800 border border-gray-700 rounded px-3 py-2 text-sm"
+                  className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
                 />
               </div>
             )}
           </div>
 
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('blockIps')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('blockIps')}</label>
             <textarea
               value={config.blockIps}
               onChange={(e) => setConfig({ ...config, blockIps: e.target.value })}
-              className="w-full h-20 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 font-mono text-sm"
+              className="w-full h-20 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 font-mono text-sm text-gray-900 dark:text-white"
               placeholder="192.168.1.1&#10;10.0.0.0/8"
             />
           </div>
 
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('redirects')}</label>
+            <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('redirects')}</label>
             <textarea
               value={config.redirects}
               onChange={(e) => setConfig({ ...config, redirects: e.target.value })}
-              className="w-full h-20 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 font-mono text-sm"
+              className="w-full h-20 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 font-mono text-sm text-gray-900 dark:text-white"
               placeholder="/old-page /new-page&#10;/blog /articles"
             />
           </div>
@@ -306,11 +306,11 @@ Options -Indexes
 
       {output && (
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('output')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('output')}</label>
           <textarea
             value={output}
             readOnly
-            className="w-full h-96 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 font-mono text-sm focus:outline-none"
+            className="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 font-mono text-sm text-gray-900 dark:text-white focus:outline-none"
           />
         </div>
       )}

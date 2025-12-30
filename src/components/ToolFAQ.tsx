@@ -36,19 +36,19 @@ function FAQItemComponent({
   onToggle: () => void;
 }) {
   return (
-    <div className="border border-gray-700 rounded-lg overflow-hidden">
+    <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
       {/* 问题标题（h3 语义化） */}
       <h3 className="m-0">
         <button
           type="button"
           onClick={onToggle}
-          className="w-full flex items-center justify-between p-4 text-left bg-gray-800/50 hover:bg-gray-800 transition-colors"
+          className="w-full flex items-center justify-between p-4 text-left bg-gray-100 dark:bg-gray-800/50 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
           aria-expanded={isExpanded}
           aria-controls={`faq-answer-${index}`}
         >
-          <span className="font-medium text-white pr-4">{faq.question}</span>
+          <span className="font-medium text-gray-900 dark:text-white pr-4">{faq.question}</span>
           <svg
-            className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''
+            className={`w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''
               }`}
             fill="none"
             stroke="currentColor"
@@ -72,7 +72,7 @@ function FAQItemComponent({
         role="region"
         aria-labelledby={`faq-question-${index}`}
       >
-        <div className="p-4 bg-gray-900/50 text-gray-300 leading-relaxed faq-answer">
+        <div className="p-4 bg-gray-50 dark:bg-gray-900/50 text-gray-700 dark:text-gray-300 leading-relaxed faq-answer">
           {faq.answer}
         </div>
       </div>
@@ -136,13 +136,13 @@ export default function ToolFAQ({
 
       {/* 标题区域（h2 语义化） */}
       <div className="flex items-center justify-between mb-4">
-        <h2 id="faq-heading" className="text-xl font-bold text-white">
+        <h2 id="faq-heading" className="text-xl font-bold text-gray-900 dark:text-white">
           FAQ - {toolName}
         </h2>
         <button
           type="button"
           onClick={toggleAll}
-          className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+          className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 transition-colors"
         >
           {expandedItems.size === faqs.length ? tg('collapseAll') : tg('expandAll')}
         </button>
@@ -189,18 +189,18 @@ export function ToolFAQStatic({
       />
 
       {/* 标题（h2 语义化） */}
-      <h2 id="faq-heading-static" className="text-xl font-bold text-white mb-4">
+      <h2 id="faq-heading-static" className="text-xl font-bold text-gray-900 dark:text-white mb-4">
         FAQ - {toolName}
       </h2>
 
       {/* FAQ 列表（全部展开，便于 SEO） */}
       <div className="space-y-4" role="list">
         {faqs.map((faq, index) => (
-          <div key={index} className="border border-gray-700 rounded-lg overflow-hidden">
-            <h3 className="p-4 bg-gray-800/50 font-medium text-white m-0">
+          <div key={index} className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+            <h3 className="p-4 bg-gray-100 dark:bg-gray-800/50 font-medium text-gray-900 dark:text-white m-0">
               {faq.question}
             </h3>
-            <div className="p-4 bg-gray-900/50 text-gray-300 leading-relaxed faq-answer">
+            <div className="p-4 bg-gray-50 dark:bg-gray-900/50 text-gray-700 dark:text-gray-300 leading-relaxed faq-answer">
               {faq.answer}
             </div>
           </div>

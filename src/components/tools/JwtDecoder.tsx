@@ -68,7 +68,7 @@ export default function JwtDecoder() {
       </button>
 
       {error && (
-        <div className="p-3 bg-red-900/50 border border-red-700 rounded-lg text-red-300 text-sm">
+        <div className="p-3 bg-red-100 dark:bg-red-900/50 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-300 text-sm">
           {error}
         </div>
       )}
@@ -76,38 +76,38 @@ export default function JwtDecoder() {
       {decoded && (
         <div className="space-y-4">
           {/* Header */}
-          <div className="bg-gray-800 rounded-lg overflow-hidden">
-            <div className="flex justify-between items-center px-4 py-2 bg-blue-900/30 border-b border-gray-700">
-              <span className="font-medium text-blue-400">{tj('header')}</span>
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+            <div className="flex justify-between items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 border-b border-gray-300 dark:border-gray-700">
+              <span className="font-medium text-blue-700 dark:text-blue-400">{tj('header')}</span>
               <button
                 onClick={() => copySection('header', JSON.stringify(decoded.header, null, 2))}
-                className="text-xs px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded"
+                className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-gray-900 dark:text-white"
               >
                 {copied === 'header' ? t('copied') : t('copy')}
               </button>
             </div>
-            <pre className="p-4 text-sm overflow-x-auto">
+            <pre className="p-4 text-sm overflow-x-auto text-gray-900 dark:text-white">
               {JSON.stringify(decoded.header, null, 2)}
             </pre>
           </div>
 
           {/* Payload */}
-          <div className="bg-gray-800 rounded-lg overflow-hidden">
-            <div className="flex justify-between items-center px-4 py-2 bg-purple-900/30 border-b border-gray-700">
-              <span className="font-medium text-purple-400">{tj('payload')}</span>
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+            <div className="flex justify-between items-center px-4 py-2 bg-purple-100 dark:bg-purple-900/30 border-b border-gray-300 dark:border-gray-700">
+              <span className="font-medium text-purple-700 dark:text-purple-400">{tj('payload')}</span>
               <button
                 onClick={() => copySection('payload', JSON.stringify(decoded.payload, null, 2))}
-                className="text-xs px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded"
+                className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-gray-900 dark:text-white"
               >
                 {copied === 'payload' ? t('copied') : t('copy')}
               </button>
             </div>
-            <pre className="p-4 text-sm overflow-x-auto">
+            <pre className="p-4 text-sm overflow-x-auto text-gray-900 dark:text-white">
               {JSON.stringify(decoded.payload, null, 2)}
             </pre>
             {/* Show formatted dates for common claims */}
             {(decoded.payload.exp !== undefined || decoded.payload.iat !== undefined || decoded.payload.nbf !== undefined) && (
-              <div className="px-4 pb-4 text-xs text-gray-300 space-y-1 border-t border-gray-700 pt-3">
+              <div className="px-4 pb-4 text-xs text-gray-600 dark:text-gray-300 space-y-1 border-t border-gray-300 dark:border-gray-700 pt-3">
                 {decoded.payload.iat !== undefined && (
                   <div>{tj('issuedAt')}: {formatDate(Number(decoded.payload.iat))}</div>
                 )}
@@ -122,17 +122,17 @@ export default function JwtDecoder() {
           </div>
 
           {/* Signature */}
-          <div className="bg-gray-800 rounded-lg overflow-hidden">
-            <div className="flex justify-between items-center px-4 py-2 bg-green-900/30 border-b border-gray-700">
-              <span className="font-medium text-green-400">{tj('signature')}</span>
+          <div className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+            <div className="flex justify-between items-center px-4 py-2 bg-green-100 dark:bg-green-900/30 border-b border-gray-300 dark:border-gray-700">
+              <span className="font-medium text-green-700 dark:text-green-400">{tj('signature')}</span>
               <button
                 onClick={() => copySection('signature', decoded.signature)}
-                className="text-xs px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded"
+                className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-gray-900 dark:text-white"
               >
                 {copied === 'signature' ? t('copied') : t('copy')}
               </button>
             </div>
-            <div className="p-4 text-sm text-gray-300 break-all">
+            <div className="p-4 text-sm text-gray-700 dark:text-gray-300 break-all">
               {decoded.signature}
             </div>
           </div>

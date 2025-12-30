@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 颜色主题预设
 const colorThemes = {
@@ -68,6 +69,7 @@ export default function HeatmapChartGenerator() {
   }, [t, isInitialized]);
 
   const chartRef = useRef<ReactECharts>(null);
+  const chartTheme = useChartTheme();
 
   // 生成唯一 ID（保留以备将来使用）
   const _generateId = useCallback(() => {
@@ -157,14 +159,13 @@ export default function HeatmapChartGenerator() {
   // 生成 ECharts 配置
   const getChartOption = useCallback((): EChartsOption => {
     const colors = colorThemes[colorTheme];
-    const textColor = '#e5e7eb';
 
     return {
-      backgroundColor: '#1f2937',
+      backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: '#fff' },
+        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
       },
       tooltip: {
         position: 'top',
@@ -184,15 +185,15 @@ export default function HeatmapChartGenerator() {
         type: 'category',
         data: xAxisData,
         splitArea: { show: true },
-        axisLabel: { color: textColor },
-        axisLine: { lineStyle: { color: '#4b5563' } },
+        axisLabel: { color: chartTheme.axisLabelColor },
+        axisLine: { lineStyle: { color: chartTheme.axisLineColor } },
       },
       yAxis: {
         type: 'category',
         data: yAxisData,
         splitArea: { show: true },
-        axisLabel: { color: textColor },
-        axisLine: { lineStyle: { color: '#4b5563' } },
+        axisLabel: { color: chartTheme.axisLabelColor },
+        axisLine: { lineStyle: { color: chartTheme.axisLineColor } },
       },
       visualMap: {
         min: minValue,
@@ -202,7 +203,7 @@ export default function HeatmapChartGenerator() {
         left: 'center',
         bottom: '0%',
         inRange: { color: colors },
-        textStyle: { color: textColor },
+        textStyle: { color: chartTheme.legendText },
       },
       series: [
         {
@@ -211,7 +212,7 @@ export default function HeatmapChartGenerator() {
           data: heatmapData,
           label: {
             show: showLabels,
-            color: '#fff',
+            color: chartTheme.labelColor,
             fontSize: 10,
           },
           emphasis: {
@@ -220,7 +221,7 @@ export default function HeatmapChartGenerator() {
         },
       ],
     };
-  }, [xAxisData, yAxisData, heatmapData, chartTitle, colorTheme, showLabels, minValue, maxValue]);
+  }, [xAxisData, yAxisData, heatmapData, chartTitle, colorTheme, showLabels, minValue, maxValue, chartTheme]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
@@ -229,7 +230,7 @@ export default function HeatmapChartGenerator() {
       const url = echartInstance.getDataURL({
         type: format === 'svg' ? 'svg' : 'png',
         pixelRatio: 2,
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
       });
       const link = document.createElement('a');
       link.download = `heatmap-chart-${Date.now()}.${format}`;
@@ -311,7 +312,7 @@ export default function HeatmapChartGenerator() {
           {/* 图表设置 */}
           <div>
             <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-            <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
@@ -386,10 +387,10 @@ export default function HeatmapChartGenerator() {
               </div>
             </div>
 
-            <div className="bg-gray-900 border border-gray-700 rounded-lg p-3 overflow-x-auto max-h-64">
+            <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3 overflow-x-auto max-h-64">
               <table className="text-sm">
                 <thead>
-                  <tr className="border-b border-gray-700">
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
                     <th className="py-1 px-1"></th>
                     {xAxisData.map((label, i) => (
                       <th key={i} className="py-1 px-1">
@@ -398,11 +399,11 @@ export default function HeatmapChartGenerator() {
                             type="text"
                             value={label}
                             onChange={(e) => updateXAxisLabel(i, e.target.value)}
-                            className="w-14 px-1 py-0.5 bg-gray-800 border border-gray-600 rounded text-gray-100 text-xs"
+                            className="w-14 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-xs"
                           />
                           <button
                             onClick={() => deleteXAxis(i)}
-                            className="text-red-400 hover:text-red-300 disabled:opacity-50 text-xs"
+                            className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 disabled:opacity-50 text-xs"
                             disabled={xAxisData.length <= 2}
                           >
                             ✕
@@ -414,18 +415,18 @@ export default function HeatmapChartGenerator() {
                 </thead>
                 <tbody>
                   {yAxisData.map((yLabel, j) => (
-                    <tr key={j} className="border-b border-gray-800 last:border-b-0">
+                    <tr key={j} className="border-b border-gray-200 dark:border-gray-800 last:border-b-0">
                       <td className="py-1 px-1">
                         <div className="flex items-center gap-1">
                           <input
                             type="text"
                             value={yLabel}
                             onChange={(e) => updateYAxisLabel(j, e.target.value)}
-                            className="w-14 px-1 py-0.5 bg-gray-800 border border-gray-600 rounded text-gray-100 text-xs"
+                            className="w-14 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-xs"
                           />
                           <button
                             onClick={() => deleteYAxis(j)}
-                            className="text-red-400 hover:text-red-300 disabled:opacity-50 text-xs"
+                            className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 disabled:opacity-50 text-xs"
                             disabled={yAxisData.length <= 2}
                           >
                             ✕
@@ -438,7 +439,7 @@ export default function HeatmapChartGenerator() {
                             type="number"
                             value={getHeatmapValue(i, j)}
                             onChange={(e) => updateHeatmapValue(i, j, Number(e.target.value) || 0)}
-                            className="w-14 px-1 py-0.5 bg-gray-800 border border-gray-600 rounded text-gray-100 text-xs text-center"
+                            className="w-14 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-xs text-center"
                           />
                         </td>
                       ))}
@@ -453,7 +454,7 @@ export default function HeatmapChartGenerator() {
         {/* 右侧：图表预览 */}
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
+          <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
@@ -465,9 +466,9 @@ export default function HeatmapChartGenerator() {
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
         <p className="font-medium mb-1">💡 {t('tips.title')}</p>
-        <ul className="space-y-0.5 text-blue-400">
+        <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

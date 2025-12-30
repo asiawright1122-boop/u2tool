@@ -20,7 +20,7 @@ export function Skeleton({
   height,
   animation = 'pulse',
 }: SkeletonProps) {
-  const baseClasses = 'bg-gray-700';
+  const baseClasses = 'bg-gray-200 dark:bg-gray-700';
   
   const variantClasses = {
     text: 'rounded',
@@ -53,7 +53,7 @@ export function Skeleton({
  */
 export function ToolCardSkeleton() {
   return (
-    <div className="p-4 bg-gray-800 border border-gray-700 rounded-lg">
+    <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
       <div className="flex items-center gap-3">
         <Skeleton variant="circular" width={40} height={40} />
         <div className="flex-1">

@@ -113,11 +113,11 @@ export default function TextToHex() {
     <div className="space-y-6">
       <div className="flex flex-wrap gap-4 items-center">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('encoding')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('encoding')}:</label>
           <select
             value={encoding}
             onChange={(e) => setEncoding(e.target.value as Encoding)}
-            className="p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             <option value="utf8">UTF-8</option>
             <option value="ascii">ASCII</option>
@@ -126,11 +126,11 @@ export default function TextToHex() {
         </div>
 
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('separator')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('separator')}:</label>
           <select
             value={separator}
             onChange={(e) => setSeparator(e.target.value as Separator)}
-            className="p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             <option value="space">{t('sepSpace')}</option>
             <option value="none">{t('sepNone')}</option>
@@ -146,7 +146,7 @@ export default function TextToHex() {
             onChange={(e) => setUppercase(e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded"
           />
-          <span className="text-sm text-gray-300">{t('uppercase')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('uppercase')}</span>
         </label>
 
         <button
@@ -160,7 +160,7 @@ export default function TextToHex() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-300">
               {t('textInput')}
             </label>
             {text && (
@@ -176,13 +176,13 @@ export default function TextToHex() {
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder={t('textPlaceholder')}
-            className="w-full h-48 p-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-100 font-mono"
+            className="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"
           />
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="block text-sm font-medium text-gray-600 dark:text-gray-300">
               {t('hexOutput')}
             </label>
             {hex && (
@@ -198,7 +198,7 @@ export default function TextToHex() {
             value={hex}
             onChange={(e) => setHex(e.target.value)}
             placeholder={t('hexPlaceholder')}
-            className="w-full h-48 p-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-100 font-mono"
+            className="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"
           />
         </div>
       </div>
@@ -212,15 +212,15 @@ export default function TextToHex() {
         </button>
         <button
           onClick={handleSwap}
-          className="px-6 py-2 bg-gray-700 text-gray-300 rounded-lg hover:bg-gray-600 transition-colors"
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
         >
           ⇄ {t('swap')}
         </button>
       </div>
 
-      <div className="p-4 bg-blue-50 rounded-lg">
-        <h3 className="font-medium text-blue-800 mb-2">{t('info')}</h3>
-        <p className="text-sm text-blue-700">{t('infoText')}</p>
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
+        <h3 className="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('info')}</h3>
+        <p className="text-sm text-blue-700 dark:text-blue-400">{t('infoText')}</p>
       </div>
     </div>
   );

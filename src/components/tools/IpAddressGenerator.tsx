@@ -66,9 +66,9 @@ export default function IpAddressGenerator() {
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('ipType')}</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('ipType')}</label>
           <select value={ipType} onChange={(e) => setIpType(e.target.value as typeof ipType)}
-            className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white">
+            className="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white">
             <option value="ipv4">{t('ipv4Random')}</option>
             <option value="ipv6">{t('ipv6')}</option>
             <option value="private">{t('privateIpv4')}</option>
@@ -76,18 +76,18 @@ export default function IpAddressGenerator() {
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('count')}: {count}</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('count')}: {count}</label>
           <input type="range" min="1" max="100" value={count}
             onChange={(e) => setCount(parseInt(e.target.value))}
             className="w-full mt-2" />
         </div>
         <div className="flex items-end gap-2">
           <button onClick={generate}
-            className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors">
+            className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
             {t('generate')}
           </button>
           <button onClick={copyToClipboard} disabled={generated.length === 0}
-            className="px-4 py-2 bg-gray-600 hover:bg-gray-9000 disabled:opacity-50 rounded-lg font-medium transition-colors">
+            className="px-4 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 text-gray-900 dark:text-white disabled:opacity-50 rounded-lg font-medium transition-colors">
             {t('copy')}
           </button>
         </div>
@@ -95,14 +95,14 @@ export default function IpAddressGenerator() {
 
       {generated.length > 0 && (
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('generatedIps')} ({generated.length})
           </label>
-          <div className="bg-gray-700 rounded-lg p-4 max-h-96 overflow-y-auto">
+          <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 max-h-96 overflow-y-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
               {generated.map((ip, index) => (
                 <div key={index} onClick={() => navigator.clipboard.writeText(ip)}
-                  className="px-3 py-2 bg-gray-600 rounded font-mono text-sm text-green-400 cursor-pointer hover:bg-gray-9000">
+                  className="px-3 py-2 bg-white dark:bg-gray-600 rounded font-mono text-sm text-green-600 dark:text-green-400 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500">
                   {ip}
                 </div>
               ))}

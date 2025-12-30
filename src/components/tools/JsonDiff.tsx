@@ -52,29 +52,29 @@ export default function JsonDiff() {
     <div className="space-y-4">
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('json1')}</label>
-          <textarea value={json1} onChange={(e) => setJson1(e.target.value)} className="w-full h-48 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm" placeholder={t('placeholder')} />
+          <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('json1')}</label>
+          <textarea value={json1} onChange={(e) => setJson1(e.target.value)} className="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('placeholder')} />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">{t('json2')}</label>
-          <textarea value={json2} onChange={(e) => setJson2(e.target.value)} className="w-full h-48 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm" placeholder={t('placeholder')} />
+          <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('json2')}</label>
+          <textarea value={json2} onChange={(e) => setJson2(e.target.value)} className="w-full h-48 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white" placeholder={t('placeholder')} />
         </div>
       </div>
       <button onClick={compare} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('compare')}</button>
-      {error && <p className="text-red-400">{error}</p>}
+      {error && <p className="text-red-600 dark:text-red-400">{error}</p>}
       {diff.length > 0 && (
-        <div className="bg-gray-800 rounded-lg p-4">
-          <h3 className="font-medium mb-2">{t('differences')}: {diff.length}</h3>
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+          <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('differences')}: {diff.length}</h3>
           <div className="space-y-2 max-h-64 overflow-auto">
             {diff.map((d, i) => (
-              <div key={i} className={`p-2 rounded text-sm ${d.type === 'added' ? 'bg-green-900/50' : d.type === 'removed' ? 'bg-red-900/50' : 'bg-yellow-900/50'}`}>
+              <div key={i} className={`p-2 rounded text-sm ${d.type === 'added' ? 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200' : d.type === 'removed' ? 'bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-200' : 'bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200'}`}>
                 <span className="font-mono">{d.path}</span>: {d.type === 'added' ? `+ ${d.val2}` : d.type === 'removed' ? `- ${d.val1}` : `${d.val1} → ${d.val2}`}
               </div>
             ))}
           </div>
         </div>
       )}
-      {diff.length === 0 && !error && json1 && json2 && <p className="text-green-400">{t('identical')}</p>}
+      {diff.length === 0 && !error && json1 && json2 && <p className="text-green-600 dark:text-green-400">{t('identical')}</p>}
     </div>
   );
 }

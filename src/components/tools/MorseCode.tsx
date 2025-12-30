@@ -110,12 +110,12 @@ export default function MorseCode() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm text-gray-300">{t('text')}</label>
+            <label className="text-sm text-gray-600 dark:text-gray-300">{t('text')}</label>
             <div className="flex gap-2">
               <button
                 onClick={copyText}
                 disabled={!text}
-                className="px-3 py-1 text-sm bg-gray-600 hover:bg-gray-700 disabled:opacity-50 rounded transition-colors"
+                className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 disabled:opacity-50 rounded transition-colors"
               >
                 {t('copy')}
               </button>
@@ -130,14 +130,14 @@ export default function MorseCode() {
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
-            className="w-full h-48 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            className="w-full h-48 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
             placeholder={t('textPlaceholder')}
           />
         </div>
 
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm text-gray-300">{t('morse')}</label>
+            <label className="text-sm text-gray-600 dark:text-gray-300">{t('morse')}</label>
             <div className="flex gap-2">
               <button
                 onClick={morseToText}
@@ -148,7 +148,7 @@ export default function MorseCode() {
               <button
                 onClick={copyMorse}
                 disabled={!morse}
-                className="px-3 py-1 text-sm bg-gray-600 hover:bg-gray-700 disabled:opacity-50 rounded transition-colors"
+                className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 disabled:opacity-50 rounded transition-colors"
               >
                 {t('copy')}
               </button>
@@ -164,19 +164,19 @@ export default function MorseCode() {
           <textarea
             value={morse}
             onChange={(e) => setMorse(e.target.value)}
-            className="w-full h-48 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            className="w-full h-48 bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
             placeholder={t('morsePlaceholder')}
           />
         </div>
       </div>
 
-      <div className="bg-gray-700 rounded-lg p-4">
-        <h3 className="text-sm text-gray-300 mb-2">{t('reference')}</h3>
+      <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+        <h3 className="text-sm text-gray-700 dark:text-gray-300 mb-2">{t('reference')}</h3>
         <div className="grid grid-cols-6 sm:grid-cols-9 md:grid-cols-12 gap-2 text-xs font-mono">
           {Object.entries(MORSE_CODE).slice(0, 36).map(([char, code]) => (
             <div key={char} className="text-center">
-              <div className="text-white">{char === ' ' ? '␣' : char}</div>
-              <div className="text-gray-300">{code}</div>
+              <div className="text-gray-900 dark:text-white">{char === ' ' ? '␣' : char}</div>
+              <div className="text-gray-600 dark:text-gray-300">{code}</div>
             </div>
           ))}
         </div>

@@ -90,7 +90,7 @@ export default function StringEscape() {
         <select
           value={format}
           onChange={(e) => setFormat(e.target.value as typeof format)}
-          className="bg-gray-700 rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
         >
           <option value="json">JSON</option>
           <option value="html">HTML</option>
@@ -99,20 +99,20 @@ export default function StringEscape() {
         </select>
         <button
           onClick={escape}
-          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-white"
         >
           {t('escape')}
         </button>
         <button
           onClick={unescape}
-          className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
+          className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors text-white"
         >
           {t('unescape')}
         </button>
         <button
           onClick={copyOutput}
           disabled={!output}
-          className="px-4 py-2 bg-gray-600 hover:bg-gray-700 disabled:opacity-50 rounded-lg transition-colors"
+          className="px-4 py-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-700 disabled:opacity-50 rounded-lg transition-colors text-gray-900 dark:text-white"
         >
           {tg('copy')}
         </button>
@@ -120,21 +120,21 @@ export default function StringEscape() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{tg('input')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="w-full h-64 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            className="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}
           />
         </div>
 
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{tg('output')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
           <textarea
             value={output}
             readOnly
-            className="w-full h-64 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            className="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
           />
         </div>
       </div>

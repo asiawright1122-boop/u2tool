@@ -103,9 +103,9 @@ export default function JsonToDart() {
     <div className="space-y-4">
       <div className="flex gap-4 items-end">
         <div className="flex-1">
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('className')}</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">{t('className')}</label>
           <input type="text" value={className} onChange={(e) => setClassName(e.target.value)}
-            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white" />
+            className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white" />
         </div>
         <button onClick={handleConvert} className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
           {t('convert')}
@@ -113,17 +113,17 @@ export default function JsonToDart() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">JSON</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">JSON</label>
           <textarea value={input} onChange={(e) => setInput(e.target.value)}
-            className="w-full h-64 bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white font-mono text-sm" />
+            className="w-full h-64 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">Dart</label>
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">Dart</label>
           <textarea value={output} readOnly
-            className="w-full h-64 bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-green-400 font-mono text-sm" />
+            className="w-full h-64 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-green-600 dark:text-green-400 font-mono text-sm" />
         </div>
       </div>
-      {error && <div className="p-3 bg-red-900/30 border border-red-700 rounded-lg text-red-400">{error}</div>}
+      {error && <div className="p-3 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400">{error}</div>}
     </div>
   );
 }

@@ -63,30 +63,30 @@ export default function PercentageCalculator() {
   return (
     <div className="space-y-6">
       {/* 计算 X 的 Y% */}
-      <div className="p-4 bg-gray-800 rounded-lg">
-        <h3 className="text-sm font-medium mb-3">{t('percent.whatIsPercent')}</h3>
+      <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <h3 className="text-sm font-medium mb-3 text-gray-900 dark:text-white">{t('percent.whatIsPercent')}</h3>
         <div className="flex items-center gap-2 flex-wrap">
           <input
             type="number"
             value={percent1}
             onChange={(e) => setPercent1(e.target.value)}
-            className="w-24 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-center"
+            className="w-24 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
             placeholder="25"
           />
-          <span className="text-gray-300">% {t('percent.of')}</span>
+          <span className="text-gray-600 dark:text-gray-300">% {t('percent.of')}</span>
           <input
             type="number"
             value={value1}
             onChange={(e) => setValue1(e.target.value)}
-            className="w-32 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-center"
+            className="w-32 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
             placeholder="100"
           />
-          <span className="text-gray-300">=</span>
+          <span className="text-gray-600 dark:text-gray-300">=</span>
           <div className="flex items-center gap-2">
-            <span className="font-mono text-lg text-green-400">{result1.toFixed(2)}</span>
+            <span className="font-mono text-lg text-green-600 dark:text-green-400">{result1.toFixed(2)}</span>
             <button
               onClick={() => copyResult(result1.toFixed(2), 'r1')}
-              className={`px-2 py-1 text-xs rounded ${copied === 'r1' ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`px-2 py-1 text-xs rounded ${copied === 'r1' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
             >
               {copied === 'r1' ? '✓' : t('copy')}
             </button>
@@ -95,30 +95,30 @@ export default function PercentageCalculator() {
       </div>
 
       {/* X 是 Y 的百分之几 */}
-      <div className="p-4 bg-gray-800 rounded-lg">
-        <h3 className="text-sm font-medium mb-3">{t('percent.whatPercentIs')}</h3>
+      <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <h3 className="text-sm font-medium mb-3 text-gray-900 dark:text-white">{t('percent.whatPercentIs')}</h3>
         <div className="flex items-center gap-2 flex-wrap">
           <input
             type="number"
             value={part}
             onChange={(e) => setPart(e.target.value)}
-            className="w-32 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-center"
+            className="w-32 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
             placeholder="25"
           />
-          <span className="text-gray-300">{t('percent.isWhatPercentOf')}</span>
+          <span className="text-gray-600 dark:text-gray-300">{t('percent.isWhatPercentOf')}</span>
           <input
             type="number"
             value={whole}
             onChange={(e) => setWhole(e.target.value)}
-            className="w-32 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-center"
+            className="w-32 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
             placeholder="100"
           />
-          <span className="text-gray-300">=</span>
+          <span className="text-gray-600 dark:text-gray-300">=</span>
           <div className="flex items-center gap-2">
-            <span className="font-mono text-lg text-green-400">{result2.toFixed(2)}%</span>
+            <span className="font-mono text-lg text-green-600 dark:text-green-400">{result2.toFixed(2)}%</span>
             <button
               onClick={() => copyResult(result2.toFixed(2) + '%', 'r2')}
-              className={`px-2 py-1 text-xs rounded ${copied === 'r2' ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`px-2 py-1 text-xs rounded ${copied === 'r2' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
             >
               {copied === 'r2' ? '✓' : t('copy')}
             </button>
@@ -127,33 +127,33 @@ export default function PercentageCalculator() {
       </div>
 
       {/* 百分比变化 */}
-      <div className="p-4 bg-gray-800 rounded-lg">
-        <h3 className="text-sm font-medium mb-3">{t('percent.percentChange')}</h3>
+      <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <h3 className="text-sm font-medium mb-3 text-gray-900 dark:text-white">{t('percent.percentChange')}</h3>
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-gray-300">{t('percent.from')}</span>
+          <span className="text-gray-600 dark:text-gray-300">{t('percent.from')}</span>
           <input
             type="number"
             value={oldValue}
             onChange={(e) => setOldValue(e.target.value)}
-            className="w-32 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-center"
+            className="w-32 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
             placeholder="80"
           />
-          <span className="text-gray-300">{t('percent.to')}</span>
+          <span className="text-gray-600 dark:text-gray-300">{t('percent.to')}</span>
           <input
             type="number"
             value={newValue}
             onChange={(e) => setNewValue(e.target.value)}
-            className="w-32 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-center"
+            className="w-32 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
             placeholder="100"
           />
-          <span className="text-gray-300">=</span>
+          <span className="text-gray-600 dark:text-gray-300">=</span>
           <div className="flex items-center gap-2">
-            <span className={`font-mono text-lg ${result3 >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+            <span className={`font-mono text-lg ${result3 >= 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
               {result3 >= 0 ? '+' : ''}{result3.toFixed(2)}%
             </span>
             <button
               onClick={() => copyResult((result3 >= 0 ? '+' : '') + result3.toFixed(2) + '%', 'r3')}
-              className={`px-2 py-1 text-xs rounded ${copied === 'r3' ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`px-2 py-1 text-xs rounded ${copied === 'r3' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
             >
               {copied === 'r3' ? '✓' : t('copy')}
             </button>
@@ -162,20 +162,20 @@ export default function PercentageCalculator() {
       </div>
 
       {/* 增减百分比 */}
-      <div className="p-4 bg-gray-800 rounded-lg">
-        <h3 className="text-sm font-medium mb-3">{t('percent.increaseDecrease')}</h3>
+      <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <h3 className="text-sm font-medium mb-3 text-gray-900 dark:text-white">{t('percent.increaseDecrease')}</h3>
         <div className="flex items-center gap-2 flex-wrap">
           <input
             type="number"
             value={baseValue}
             onChange={(e) => setBaseValue(e.target.value)}
-            className="w-32 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-center"
+            className="w-32 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
             placeholder="100"
           />
           <select
             value={isIncrease ? 'increase' : 'decrease'}
             onChange={(e) => setIsIncrease(e.target.value === 'increase')}
-            className="px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg"
+            className="px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white"
           >
             <option value="increase">{t('percent.increase')}</option>
             <option value="decrease">{t('percent.decrease')}</option>
@@ -184,16 +184,16 @@ export default function PercentageCalculator() {
             type="number"
             value={changePercent}
             onChange={(e) => setChangePercent(e.target.value)}
-            className="w-24 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-center"
+            className="w-24 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
             placeholder="20"
           />
-          <span className="text-gray-300">%</span>
-          <span className="text-gray-300">=</span>
+          <span className="text-gray-600 dark:text-gray-300">%</span>
+          <span className="text-gray-600 dark:text-gray-300">=</span>
           <div className="flex items-center gap-2">
-            <span className="font-mono text-lg text-green-400">{result4.toFixed(2)}</span>
+            <span className="font-mono text-lg text-green-600 dark:text-green-400">{result4.toFixed(2)}</span>
             <button
               onClick={() => copyResult(result4.toFixed(2), 'r4')}
-              className={`px-2 py-1 text-xs rounded ${copied === 'r4' ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`px-2 py-1 text-xs rounded ${copied === 'r4' ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
             >
               {copied === 'r4' ? '✓' : t('copy')}
             </button>
@@ -202,24 +202,24 @@ export default function PercentageCalculator() {
       </div>
 
       {/* 常用百分比参考 */}
-      <div className="p-4 bg-gray-800/50 rounded-lg">
-        <h3 className="text-sm font-medium mb-3">{t('percent.quickRef')}</h3>
+      <div className="p-4 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <h3 className="text-sm font-medium mb-3 text-gray-900 dark:text-white">{t('percent.quickRef')}</h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-          <div className="text-center p-2 bg-gray-900 rounded">
-            <div className="text-gray-300">10%</div>
-            <div className="font-mono">÷ 10</div>
+          <div className="text-center p-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded">
+            <div className="text-gray-600 dark:text-gray-300">10%</div>
+            <div className="font-mono text-gray-900 dark:text-white">÷ 10</div>
           </div>
-          <div className="text-center p-2 bg-gray-900 rounded">
-            <div className="text-gray-300">25%</div>
-            <div className="font-mono">÷ 4</div>
+          <div className="text-center p-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded">
+            <div className="text-gray-600 dark:text-gray-300">25%</div>
+            <div className="font-mono text-gray-900 dark:text-white">÷ 4</div>
           </div>
-          <div className="text-center p-2 bg-gray-900 rounded">
-            <div className="text-gray-300">50%</div>
-            <div className="font-mono">÷ 2</div>
+          <div className="text-center p-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded">
+            <div className="text-gray-600 dark:text-gray-300">50%</div>
+            <div className="font-mono text-gray-900 dark:text-white">÷ 2</div>
           </div>
-          <div className="text-center p-2 bg-gray-900 rounded">
-            <div className="text-gray-300">75%</div>
-            <div className="font-mono">× 0.75</div>
+          <div className="text-center p-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded">
+            <div className="text-gray-600 dark:text-gray-300">75%</div>
+            <div className="font-mono text-gray-900 dark:text-white">× 0.75</div>
           </div>
         </div>
       </div>

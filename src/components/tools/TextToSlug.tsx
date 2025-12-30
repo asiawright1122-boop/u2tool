@@ -47,11 +47,11 @@ export default function TextToSlug() {
 
       <div className="flex flex-wrap gap-4">
         <div>
-          <label className="block text-xs text-gray-300 mb-1">Separator</label>
+          <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">Separator</label>
           <select
             value={separator}
             onChange={(e) => setSeparator(e.target.value)}
-            className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg"
+            className="px-3 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100"
           >
             <option value="-">Hyphen (-)</option>
             <option value="_">Underscore (_)</option>
@@ -59,7 +59,7 @@ export default function TextToSlug() {
           </select>
         </div>
         <div className="flex items-end">
-          <label className="flex items-center gap-2 cursor-pointer">
+          <label className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-200">
             <input
               type="checkbox"
               checked={lowercase}
@@ -73,16 +73,16 @@ export default function TextToSlug() {
 
       <div>
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm font-medium">Slug</label>
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-200">Slug</label>
           <button
             onClick={copySlug}
-            className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+            className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'}`}
           >
             {copied ? t('copied') : t('copy')}
           </button>
         </div>
-        <div className="p-4 bg-gray-800 rounded-lg font-mono break-all">
-          {slug || <span className="text-gray-300">slug-will-appear-here</span>}
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg font-mono break-all text-gray-900 dark:text-gray-100">
+          {slug || <span className="text-gray-500 dark:text-gray-300">slug-will-appear-here</span>}
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ export default function UrlEncoder() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium mb-2">{t('input')}</label>
+        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
         <textarea
           className="tool-textarea"
           value={input}
@@ -61,11 +61,11 @@ export default function UrlEncoder() {
 
       <div>
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm font-medium">{t('output')}</label>
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</label>
           {output && (
             <button
               onClick={copyOutput}
-              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100'}`}
             >
               {copied ? t('copied') : t('copy')}
             </button>

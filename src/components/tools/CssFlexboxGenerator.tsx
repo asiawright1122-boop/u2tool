@@ -102,9 +102,9 @@ export default function CssFlexboxGenerator() {
 
       {/* Preview */}
       <div>
-        <label className="block text-sm font-medium mb-2">{t('cssFlexboxGenerator.preview')}</label>
+        <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('cssFlexboxGenerator.preview')}</label>
         <div
-          className="p-4 bg-gray-800 rounded-lg min-h-[200px]"
+          className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[200px]"
           style={{
             display: 'flex',
             flexDirection: flexDirection as 'row' | 'row-reverse' | 'column' | 'column-reverse',
@@ -117,7 +117,7 @@ export default function CssFlexboxGenerator() {
           {Array.from({ length: itemCount }).map((_, i) => (
             <div
               key={i}
-              className="bg-purple-600/50 border border-purple-400 rounded p-4 text-center"
+              className="bg-purple-600/50 border border-purple-400 rounded p-4 text-center text-gray-900 dark:text-white"
               style={{ minWidth: '60px', minHeight: '60px' }}
             >
               {i + 1}
@@ -141,23 +141,23 @@ export default function CssFlexboxGenerator() {
       </div>
 
       {/* Quick Reference */}
-      <div className="p-4 bg-gray-800/50 rounded-lg">
-        <h3 className="text-sm font-medium mb-3">{t('cssFlexboxGenerator.quickReference')}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
+      <div className="p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg">
+        <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">{t('cssFlexboxGenerator.quickReference')}</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600 dark:text-gray-300">
           <div>
-            <p className="font-medium text-white mb-1">justify-content</p>
+            <p className="font-medium text-gray-900 dark:text-white mb-1">justify-content</p>
             <p>{t('cssFlexboxGenerator.quickReferenceJustify')}</p>
           </div>
           <div>
-            <p className="font-medium text-white mb-1">align-items</p>
+            <p className="font-medium text-gray-900 dark:text-white mb-1">align-items</p>
             <p>{t('cssFlexboxGenerator.quickReferenceAlign')}</p>
           </div>
           <div>
-            <p className="font-medium text-white mb-1">flex-direction</p>
+            <p className="font-medium text-gray-900 dark:text-white mb-1">flex-direction</p>
             <p>{t('cssFlexboxGenerator.quickReferenceDirection')}</p>
           </div>
           <div>
-            <p className="font-medium text-white mb-1">flex-wrap</p>
+            <p className="font-medium text-gray-900 dark:text-white mb-1">flex-wrap</p>
             <p>{t('cssFlexboxGenerator.quickReferenceWrap')}</p>
           </div>
         </div>

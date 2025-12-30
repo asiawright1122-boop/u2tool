@@ -54,12 +54,12 @@ export default function PasswordGenerator() {
   return (
     <div className="space-y-6">
       {/* Password Display */}
-      <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
+      <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
         <div className="flex items-center justify-between">
-          <span className="font-mono text-lg break-all select-all">{password}</span>
+          <span className="font-mono text-lg break-all select-all text-gray-900 dark:text-gray-100">{password}</span>
           <button
             onClick={copyPassword}
-            className={`ml-4 px-4 py-2 rounded ${copied ? 'bg-green-600' : 'bg-blue-600 hover:bg-blue-700'}`}
+            className={`ml-4 px-4 py-2 rounded text-white ${copied ? 'bg-green-600' : 'bg-blue-600 hover:bg-blue-700'}`}
           >
             {copied ? t('copied') : t('copy')}
           </button>
@@ -68,7 +68,7 @@ export default function PasswordGenerator() {
 
       {/* Length Slider */}
       <div>
-        <label className="block text-sm font-medium mb-2">
+        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
           {t('length')}: {length}
         </label>
         <input
@@ -89,7 +89,7 @@ export default function PasswordGenerator() {
           { key: 'numbers', label: t('password.numbers') },
           { key: 'symbols', label: t('password.symbols') },
         ].map(({ key, label }) => (
-          <label key={key} className="flex items-center gap-2 cursor-pointer">
+          <label key={key} className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-300">
             <input
               type="checkbox"
               checked={options[key as keyof typeof options]}

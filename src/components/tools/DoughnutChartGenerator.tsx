@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 颜色主题预设
 const colorThemes = {
@@ -52,31 +53,32 @@ export default function DoughnutChartGenerator() {
   ]);
 
   const chartRef = useRef<ReactECharts>(null);
+  const chartTheme = useChartTheme();
 
   // 生成 ECharts 配置
   const getChartOption = useCallback((): EChartsOption => {
     const colors = colorThemes[colorTheme];
 
     return {
-      backgroundColor: '#1f2937',
+      backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
         top: 15,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: '#fff' },
+        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
       },
       tooltip: {
         trigger: 'item',
         formatter: '{a} <br/>{b}: {c} ({d}%)',
-        backgroundColor: 'rgba(31, 41, 55, 0.9)',
-        borderColor: '#374151',
-        textStyle: { color: '#e5e7eb' },
+        backgroundColor: chartTheme.tooltipBg,
+        borderColor: chartTheme.tooltipBorder,
+        textStyle: { color: chartTheme.tooltipText },
       },
       legend: {
         show: showLegend,
         orient: 'horizontal',
         bottom: 15,
-        textStyle: { color: '#e5e7eb' },
+        textStyle: { color: chartTheme.legendText },
       },
       color: colors,
       series: [
@@ -89,12 +91,12 @@ export default function DoughnutChartGenerator() {
           roseType: roseType === 'none' ? undefined : roseType,
           itemStyle: {
             borderRadius: 8,
-            borderColor: '#1f2937',
+            borderColor: chartTheme.backgroundColor,
             borderWidth: 2,
           },
           label: {
             show: showLabel,
-            color: '#e5e7eb',
+            color: chartTheme.labelColor,
             formatter: '{b}: {d}%',
             overflow: 'break',
             width: 80,
@@ -115,13 +117,13 @@ export default function DoughnutChartGenerator() {
             show: showLabel,
             length: 15,
             length2: 20,
-            lineStyle: { color: '#6b7280' },
+            lineStyle: { color: chartTheme.axisLabelColor },
           },
           data: data,
         },
       ],
     };
-  }, [chartTitle, colorTheme, showLegend, showLabel, innerRadius, outerRadius, roseType, data]);
+  }, [chartTitle, colorTheme, showLegend, showLabel, innerRadius, outerRadius, roseType, data, chartTheme]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
@@ -130,7 +132,7 @@ export default function DoughnutChartGenerator() {
       const url = echartInstance.getDataURL({
         type: format === 'svg' ? 'svg' : 'png',
         pixelRatio: 2,
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
       });
       const link = document.createElement('a');
       link.download = `doughnut-chart-${Date.now()}.${format}`;
@@ -204,7 +206,7 @@ export default function DoughnutChartGenerator() {
           {/* 图表设置 */}
           <div>
             <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-            <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
               <div>
                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
@@ -299,7 +301,7 @@ export default function DoughnutChartGenerator() {
                 + {t('addItem')}
               </button>
             </div>
-            <div className="space-y-2 max-h-64 overflow-y-auto p-3 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-2 max-h-64 overflow-y-auto p-3 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
               {data.map((item, index) => (
                 <div key={index} className="flex gap-2 items-center">
                   <input
@@ -332,7 +334,7 @@ export default function DoughnutChartGenerator() {
         {/* 右侧：图表预览 */}
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '480px' }}>
+          <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '480px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
@@ -344,9 +346,9 @@ export default function DoughnutChartGenerator() {
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
         <p className="font-medium mb-1">💡 {t('tips.title')}</p>
-        <ul className="space-y-0.5 text-blue-400">
+        <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

@@ -232,11 +232,11 @@ export default function DockerComposeGenerator() {
     <div className="space-y-6">
       {/* Version Selection */}
       <div className="flex items-center gap-4">
-        <label className="text-sm text-gray-300">{t('version')}:</label>
+        <label className="text-sm text-gray-600 dark:text-gray-300">{t('version')}:</label>
         <select
           value={composeVersion}
           onChange={(e) => setComposeVersion(e.target.value)}
-          className="bg-gray-700 border border-gray-600 rounded px-3 py-1.5 text-sm"
+          className="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded px-3 py-1.5 text-sm"
         >
           <option value="3.8">3.8</option>
           <option value="3.9">3.9</option>
@@ -248,7 +248,7 @@ export default function DockerComposeGenerator() {
       <div className="space-y-4">
         {categories.map((category) => (
           <div key={category.name}>
-            <label className="text-sm font-medium text-gray-300 block mb-2">{category.name}</label>
+            <label className="text-sm font-medium text-gray-600 dark:text-gray-300 block mb-2">{category.name}</label>
             <div className="flex flex-wrap gap-2">
               {category.ids.map((id) => {
                 const service = SERVICES.find((s) => s.id === id);
@@ -260,7 +260,7 @@ export default function DockerComposeGenerator() {
                     className={`px-3 py-1.5 rounded text-sm ${
                       selectedServices.includes(id)
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                     }`}
                   >
                     {service.name}
@@ -277,13 +277,13 @@ export default function DockerComposeGenerator() {
         <button
           onClick={generate}
           disabled={selectedServices.length === 0}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed text-white rounded-lg font-medium"
         >
           {t('generate')}
         </button>
         <button
           onClick={clearAll}
-          className="px-6 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg font-medium"
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg font-medium"
         >
           {t('clear')}
         </button>
@@ -293,17 +293,17 @@ export default function DockerComposeGenerator() {
       {output && (
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">{t('outputLabel')}</label>
+            <label className="text-sm font-medium text-gray-600 dark:text-gray-300">{t('outputLabel')}</label>
             <div className="flex gap-2">
               <button
                 onClick={copyOutput}
-                className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs"
+                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-xs"
               >
                 {t('copy')}
               </button>
               <button
                 onClick={downloadOutput}
-                className="px-2 py-1 bg-green-600 hover:bg-green-700 rounded text-xs"
+                className="px-2 py-1 bg-green-600 hover:bg-green-700 text-white rounded text-xs"
               >
                 {t('download')}
               </button>
@@ -312,13 +312,13 @@ export default function DockerComposeGenerator() {
           <textarea
             value={output}
             readOnly
-            className="w-full h-96 bg-gray-800 border border-gray-700 rounded-lg p-4 font-mono text-sm resize-none"
+            className="w-full h-96 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none"
           />
         </div>
       )}
 
       {/* Info */}
-      <div className="bg-gray-800 rounded-lg p-4 text-sm text-gray-300">
+      <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 text-sm text-gray-600 dark:text-gray-300">
         <p>{t('note')}</p>
       </div>
     </div>

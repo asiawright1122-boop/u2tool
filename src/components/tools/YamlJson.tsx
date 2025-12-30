@@ -137,7 +137,7 @@ address:
   return (
     <div className="space-y-4">
       {error && (
-        <div className="p-3 bg-red-900/50 border border-red-500 rounded-lg text-red-300 text-sm">
+        <div className="tool-error">
           {error}
         </div>
       )}
@@ -145,17 +145,17 @@ address:
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm text-gray-300">YAML</label>
+            <label className="text-sm text-gray-600 dark:text-gray-300">YAML</label>
             <div className="flex gap-2">
               <button
                 onClick={copyYaml}
-                className="px-3 py-1 text-sm bg-gray-600 hover:bg-gray-700 rounded transition-colors"
+                className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 rounded transition-colors"
               >
                 {tg('copy')}
               </button>
               <button
                 onClick={yamlToJson}
-                className="px-3 py-1 text-sm bg-blue-600 hover:bg-blue-700 rounded transition-colors"
+                className="px-3 py-1 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors"
               >
                 → JSON
               </button>
@@ -164,7 +164,7 @@ address:
           <textarea
             value={yaml}
             onChange={(e) => setYaml(e.target.value)}
-            className="w-full h-80 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            className="tool-textarea-tall"
             placeholder={t('yamlPlaceholder')}
             spellCheck={false}
           />
@@ -172,17 +172,17 @@ address:
 
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm text-gray-300">JSON</label>
+            <label className="text-sm text-gray-600 dark:text-gray-300">JSON</label>
             <div className="flex gap-2">
               <button
                 onClick={jsonToYamlConvert}
-                className="px-3 py-1 text-sm bg-green-600 hover:bg-green-700 rounded transition-colors"
+                className="px-3 py-1 text-sm bg-green-600 hover:bg-green-700 text-white rounded transition-colors"
               >
                 ← YAML
               </button>
               <button
                 onClick={copyJson}
-                className="px-3 py-1 text-sm bg-gray-600 hover:bg-gray-700 rounded transition-colors"
+                className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 rounded transition-colors"
               >
                 {tg('copy')}
               </button>
@@ -191,7 +191,7 @@ address:
           <textarea
             value={json}
             onChange={(e) => setJson(e.target.value)}
-            className="w-full h-80 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            className="tool-textarea-tall"
             placeholder={t('jsonPlaceholder')}
             spellCheck={false}
           />

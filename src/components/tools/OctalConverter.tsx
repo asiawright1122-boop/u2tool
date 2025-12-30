@@ -116,11 +116,11 @@ export default function OctalConverter() {
     <div className="space-y-6">
       <div className="flex flex-wrap gap-4 items-center">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('mode')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
           <select
             value={mode}
             onChange={(e) => { setMode(e.target.value as ConversionMode); setOutput(''); setError(''); }}
-            className="p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="tool-input w-auto"
           >
             <option value="octToDec">{t('octToDec')}</option>
             <option value="decToOct">{t('decToOct')}</option>
@@ -133,7 +133,7 @@ export default function OctalConverter() {
 
         <button
           onClick={loadSample}
-          className="text-sm text-blue-600 hover:text-blue-800"
+          className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
         >
           {t('loadSample')}
         </button>
@@ -141,26 +141,26 @@ export default function OctalConverter() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="tool-label">
             {t('input')}
           </label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={t('inputPlaceholder')}
-            className="w-full h-32 p-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-100 font-mono"
+            className="tool-textarea h-32"
           />
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="tool-label mb-0">
               {t('output')}
             </label>
             {output && (
               <button
                 onClick={handleCopy}
-                className="text-sm text-blue-600 hover:text-blue-800"
+                className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
               >
                 {t('copy')}
               </button>
@@ -170,13 +170,13 @@ export default function OctalConverter() {
             value={output}
             readOnly
             placeholder={t('outputPlaceholder')}
-            className="w-full h-32 p-3 border border-gray-600 rounded-lg bg-gray-900 text-gray-100 font-mono"
+            className="tool-textarea h-32"
           />
         </div>
       </div>
 
       {error && (
-        <div className="p-3 bg-red-50 text-red-600 rounded-lg">
+        <div className="tool-error">
           {error}
         </div>
       )}
@@ -184,15 +184,15 @@ export default function OctalConverter() {
       <div className="flex justify-center">
         <button
           onClick={convert}
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="btn-primary"
         >
           {t('convert')}
         </button>
       </div>
 
-      <div className="p-4 bg-blue-50 rounded-lg">
-        <h3 className="font-medium text-blue-800 mb-2">{t('info')}</h3>
-        <p className="text-sm text-blue-700">{t('infoText')}</p>
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
+        <h3 className="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('info')}</h3>
+        <p className="text-sm text-blue-700 dark:text-blue-400">{t('infoText')}</p>
       </div>
     </div>
   );

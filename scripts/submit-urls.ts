@@ -11,9 +11,16 @@
  *   npx ts-node scripts/submit-urls.ts --engine=all
  */
 
+import * as dotenv from 'dotenv';
+
+// 加载环境变量
+dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
+
 // 配置
-const SITE_URL = process.env.SITE_URL || 'https://devtoolbox.co';
-const LOCALES = ['en', 'zh', 'es', 'pt', 'ja'];
+const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';
+// 所有支持的语言（与 src/i18n/routing.ts 保持同步）
+const LOCALES = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'];
 
 // API 配置（从环境变量读取）
 const CONFIG = {
@@ -59,14 +66,82 @@ function parseArgs(): { engine: string; dryRun: boolean; urls?: string[] } {
   return { engine, dryRun, urls: urls.length > 0 ? urls : undefined };
 }
 
-// 生成所有工具 URL（简化版，实际应从 tools 配置读取）
+// 完整的工具列表
+const ALL_TOOL_SLUGS = [
+  // Encoding & Decoding
+  'json-formatter', 'base64', 'url-encoder', 'html-encoder', 'jwt-decoder',
+  'xml-formatter', 'unicode-converter', 'morse-code', 'json-minifier', 'base32',
+  'base58', 'string-escape', 'json-sorter', 'hex-editor', 'data-uri',
+  'text-to-binary', 'html-entity', 'json-flattener', 'base85', 'json-viewer',
+  'encoding-detector', 'json-escape', 'hex-base64-converter', 'pdf-to-base64',
+  'audio-to-base64', 'video-to-base64', 'ascii-table', 'text-to-hex', 'json-merger',
+  // Generators
+  'uuid-generator', 'lorem-ipsum', 'cron-generator', 'gradient-generator',
+  'color-palette', 'barcode-generator', 'html-table-generator', 'random-generator',
+  'markdown-table-generator', 'meta-tag-generator', 'robots-txt-generator',
+  'css-grid-generator', 'css-flexbox-generator', 'box-shadow-generator',
+  'border-radius-generator', 'color-shades-generator', 'css-gradient-text',
+  'sitemap-generator', 'css-filter-generator', 'css-clip-path-generator',
+  'css-animation-generator', 'privacy-policy-generator', 'terms-generator',
+  'cookie-policy-generator', 'open-graph-generator', 'twitter-card-generator',
+  // Text Tools
+  'word-counter', 'case-converter', 'markdown-preview', 'diff-checker',
+  'text-to-slug', 'chinese-converter', 'pinyin-converter', 'text-reverser',
+  'line-counter', 'text-deduplicator', 'byte-counter', 'text-statistics',
+  'text-compare', 'text-to-speech', 'text-wrapper', 'text-sorter', 'text-extractor',
+  'emoji-picker', 'text-to-ascii-art', 'text-diff-patch', 'text-case-counter',
+  'html-to-text', 'text-to-nato', 'text-template', 'char-frequency', 'text-cleaner',
+  'list-randomizer', 'reading-time-calculator',
+  // Converters
+  'color-converter', 'timestamp-converter', 'json-to-csv', 'unit-converter',
+  'yaml-json', 'date-calculator', 'color-blender', 'json-to-typescript',
+  'markdown-to-html', 'epoch-converter', 'css-unit-converter', 'json-to-yaml',
+  'json-to-go', 'html-to-jsx', 'json-to-xml', 'csv-to-json', 'number-formatter',
+  'json-to-sql', 'toml-json', 'json-to-java', 'json-to-python', 'json-to-kotlin',
+  'timezone-converter', 'json-to-graphql', 'sql-to-mongo', 'json-to-csharp',
+  'json-to-rust', 'json-to-swift', 'html-to-markdown', 'xml-to-json', 'json-to-php',
+  'json-to-tsv', 'csv-viewer', 'file-size-calculator', 'color-name-finder',
+  'json-to-dart', 'sql-to-json',
+  // Development
+  'regex-tester', 'json-path-tester', 'code-minifier', 'sql-formatter',
+  'color-picker', 'css-beautifier', 'js-beautifier', 'html-preview', 'html-minifier',
+  'json-diff', 'json-schema-validator', 'regex-patterns', 'gitignore-generator',
+  'docker-compose-generator', 'package-json-generator', 'color-contrast-checker',
+  'opengraph-preview', 'cron-explainer', 'css-minifier', 'js-minifier',
+  'regex-generator', 'uuid-validator', 'json-path-finder', 'htaccess-generator',
+  'nginx-config-generator', 'curl-converter', 'mime-type-lookup', 'http-status-codes',
+  'sql-generator', 'htaccess-to-nginx', 'css-variables-generator', 'regex-escape',
+  'crc32-calculator',
+  // Security
+  'password-generator', 'hash-generator', 'text-encryption', 'file-hash',
+  'hmac-generator', 'password-strength', 'totp-generator', 'jwt-generator',
+  'text-hash-comparator', 'string-obfuscator', 'js-obfuscator',
+  // Network
+  'ip-lookup', 'url-parser', 'http-status', 'user-agent-parser', 'cidr-calculator',
+  'http-header-parser', 'url-shortener-preview', 'ip-address-generator', 'ssl-checker',
+  'whois-lookup', 'port-reference', 'dns-lookup', 'mac-address-generator', 'ip-validator',
+  // Image
+  'qr-generator', 'image-to-base64', 'placeholder-image', 'svg-optimizer',
+  'image-compressor', 'image-converter', 'favicon-generator', 'image-cropper',
+  'canvas-drawing', 'image-resizer', 'image-watermark', 'svg-to-image', 'lorem-picsum',
+  // Math
+  'number-base-converter', 'aspect-ratio', 'chmod-calculator', 'percentage-calculator',
+  'statistics-calculator', 'scientific-calculator', 'binary-to-decimal',
+  'octal-converter', 'base-calculator',
+  // Charts (图表工具)
+  'bar-chart-generator', 'line-chart-generator', 'pie-chart-generator',
+  'radar-chart-generator', 'scatter-chart-generator', 'area-chart-generator',
+  'funnel-chart-generator', 'gauge-chart-generator', 'heatmap-chart-generator',
+  'treemap-chart-generator', 'doughnut-chart-generator', 'sankey-chart-generator',
+  'sunburst-chart-generator', 'candlestick-chart-generator', 'boxplot-chart-generator',
+  'wordcloud-generator', 'graph-chart-generator', 'calendar-heatmap-generator',
+  'polar-bar-chart-generator', 'parallel-chart-generator', 'bubble-chart-generator',
+  'tree-chart-generator', 'theme-river-generator', 'gantt-chart-generator',
+  'venn-diagram-generator', 'timeline-chart-generator',
+];
+
+// 生成所有工具 URL
 function generateAllUrls(): string[] {
-  // 这里简化处理，实际应该导入 tools 配置
-  const sampleSlugs = [
-    'json-formatter', 'base64', 'uuid-generator', 'hash-generator',
-    'url-encoder', 'timestamp-converter', 'color-converter', 'qr-generator',
-  ];
-  
   const urls: string[] = [];
   
   // 首页
@@ -75,9 +150,17 @@ function generateAllUrls(): string[] {
     urls.push(`${SITE_URL}/${locale}/tools`);
   }
   
+  // 分类页面
+  const categories = ['text', 'encoding', 'generators', 'converters', 'development', 'security', 'network', 'image', 'math', 'charts'];
+  for (const locale of LOCALES) {
+    for (const category of categories) {
+      urls.push(`${SITE_URL}/${locale}/tools/category/${category}`);
+    }
+  }
+  
   // 工具页面
   for (const locale of LOCALES) {
-    for (const slug of sampleSlugs) {
+    for (const slug of ALL_TOOL_SLUGS) {
       urls.push(`${SITE_URL}/${locale}/tools/${slug}`);
     }
   }

@@ -65,7 +65,7 @@ export default function SslChecker() {
           value={domain}
           onChange={(e) => setDomain(e.target.value)}
           placeholder="example.com"
-          className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500"
+          className="flex-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500"
           onKeyDown={(e) => e.key === 'Enter' && checkSSL()}
         />
         <button
@@ -78,59 +78,59 @@ export default function SslChecker() {
       </div>
 
       {error && (
-        <div className="p-4 bg-red-900/30 border border-red-700 rounded-lg text-red-400">
+        <div className="p-4 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 rounded-lg text-red-600 dark:text-red-400">
           {error}
         </div>
       )}
 
       {result && (
         <div className="space-y-4">
-          <div className={`p-4 rounded-lg border ${result.valid ? 'bg-green-900/30 border-green-700' : 'bg-red-900/30 border-red-700'}`}>
+          <div className={`p-4 rounded-lg border ${result.valid ? 'bg-green-50 dark:bg-green-900/30 border-green-300 dark:border-green-700' : 'bg-red-50 dark:bg-red-900/30 border-red-300 dark:border-red-700'}`}>
             <div className="flex items-center gap-2">
               <span className="text-2xl">{result.valid ? '✅' : '❌'}</span>
-              <span className="text-lg font-semibold">
+              <span className="text-lg font-semibold text-gray-900 dark:text-white">
                 {result.valid ? t('valid') : t('invalid')}
               </span>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('issuer')}</div>
-              <div className="font-mono">{result.issuer}</div>
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('issuer')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{result.issuer}</div>
             </div>
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('subject')}</div>
-              <div className="font-mono">{result.subject}</div>
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('subject')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{result.subject}</div>
             </div>
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('validFrom')}</div>
-              <div className="font-mono">{result.validFrom}</div>
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('validFrom')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{result.validFrom}</div>
             </div>
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('validTo')}</div>
-              <div className="font-mono">{result.validTo}</div>
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('validTo')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{result.validTo}</div>
             </div>
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('daysRemaining')}</div>
-              <div className={`font-mono text-xl ${result.daysRemaining < 30 ? 'text-yellow-400' : 'text-green-400'}`}>
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('daysRemaining')}</div>
+              <div className={`font-mono text-xl ${result.daysRemaining < 30 ? 'text-yellow-600 dark:text-yellow-400' : 'text-green-600 dark:text-green-400'}`}>
                 {result.daysRemaining} {t('days')}
               </div>
             </div>
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('protocol')}</div>
-              <div className="font-mono">{result.protocol}</div>
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('protocol')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{result.protocol}</div>
             </div>
           </div>
 
-          <div className="p-4 bg-gray-800 rounded-lg">
-            <div className="text-sm text-gray-300 mb-1">{t('serialNumber')}</div>
-            <div className="font-mono text-sm break-all">{result.serialNumber}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('serialNumber')}</div>
+            <div className="font-mono text-sm break-all text-gray-900 dark:text-white">{result.serialNumber}</div>
           </div>
         </div>
       )}
 
-      <div className="p-4 bg-gray-800/50 rounded-lg text-sm text-gray-300">
+      <div className="p-4 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300">
         <p>{t('note')}</p>
       </div>
     </div>

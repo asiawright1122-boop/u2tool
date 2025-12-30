@@ -20,6 +20,7 @@
     "home": "Startseite",
     "tools": "Werkzeuge",
     "about": "Über uns",
+    "blog": "Blog",
     "viewAllTools": "Alle Tools anzeigen",
     "searchPlaceholder": "Werkzeuge suchen...",
     "noResults": "Keine Werkzeuge gefunden",
@@ -71,6 +72,8 @@
     "copy": "Kopieren",
     "clear": "Löschen",
     "add": "Hinzufügen",
+    "expandAll": "Alles ausklappen",
+    "collapseAll": "Alles einklappen",
     "generate": "Generieren",
     "convert": "Konvertieren",
     "format": "Format",
@@ -107,7 +110,7 @@
       "global": "Global",
       "caseInsensitive": "Groß- und Kleinschreibung wird nicht beachtet",
       "multiline": "Mehrzeilig",
-      "dotall": "Alles klar",
+      "dotall": "Dotall",
       "atIndex": "am Index"
     },
     "password": {
@@ -217,7 +220,7 @@
       "linear": "Linear",
       "radial": "Radial",
       "css": "CSS",
-      "tailwind": "Rückenwind",
+      "tailwind": "Tailwind",
       "sunset": "Sonnenuntergang",
       "ocean": "Ozean",
       "forest": "Wald",
@@ -535,7 +538,7 @@
     },
     "textStats": {
       "placeholder": "Geben Sie Text für die statistische Analyse ein...",
-      "chars": "Charaktere",
+      "chars": "Zeichen",
       "charsNoSpace": "Keine Leerzeichen",
       "words": "Wörter",
       "uniqueWords": "Einzigartige Wörter",
@@ -608,17 +611,17 @@
     "urlParser": {
       "protocol": "Protokoll",
       "hostname": "Hostname",
-      "port": "Hafen",
-      "pathname": "Weg",
+      "port": "Port",
+      "pathname": "Pfad",
       "search": "Abfragezeichenfolge",
       "hash": "Hash",
-      "origin": "Herkunft",
+      "origin": "Origin",
       "queryParams": "Abfrageparameter",
       "invalid": "Ungültige URL"
     },
     "textWrapper": {
       "width": "Linienbreite",
-      "chars": "Charaktere",
+      "chars": "Zeichen",
       "placeholder": "Geben Sie den umzubrechenden Text ein...",
       "wrap": "Text umbrechen"
     },
@@ -1876,11 +1879,11 @@
       "urlLabel": "URL",
       "protocol": "Protokoll",
       "hostname": "Hostname",
-      "port": "Hafen",
-      "pathname": "Weg",
+      "port": "Port",
+      "pathname": "Pfad",
       "search": "Abfragezeichenfolge",
       "hash": "Hash",
-      "origin": "Herkunft",
+      "origin": "Origin",
       "queryParams": "Abfrageparameter",
       "invalid": "Ungültige URL",
       "defaultPort": "(Standard)",
@@ -2034,7 +2037,7 @@
     "docker-compose-generator": {
       "name": "Docker Compose Generator",
       "description": "Generieren Sie docker-compose.yml-Dateien mit gängigen Diensten wie MySQL, Redis, Nginx.",
-      "seo_title": "Free Docker Compose Generator Online",
+      "seo_title": "Kostenloser Docker Compose Generator Online",
       "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, Redis, Nginx, and more services online for free. Visual editor with YAML preview and validation.",
       "version": "Version verfassen",
       "databases": "Datenbanken",
@@ -2690,9 +2693,9 @@
       "seo_description": "Simple drawing tool with brush and eraser online for free. Customize brush size, color, and opacity. Download artwork as PNG. Perfect for quick sketches."
     },
     "json-escape": {
-      "name": "JSON Escape/Unescape",
+      "name": "JSON Escape/Unescape Werkzeug",
       "description": "Escape- und Unescape-JSON-Strings.",
-      "seo_title": "Free JSON Escape/Unescape Tool Online",
+      "seo_title": "Kostenloses JSON Escape/Unescape Werkzeug Online",
       "seo_description": "Escape and unescape JSON strings online for free. Handle special characters, quotes, and control characters. Essential for embedding JSON in strings."
     },
     "css-animation-generator": {
@@ -2790,7 +2793,7 @@
       "searchPlaceholder": "Suche nach Portnummer oder Dienst...",
       "lookupPort": "Suchen Sie nach einem spezifischen Port",
       "portPlaceholder": "Portnummer eingeben...",
-      "port": "Hafen",
+      "port": "Port",
       "service": "Service",
       "descriptionLabel": "Beschreibung",
       "unknownPort": "Unbekannter oder benutzerdefinierter Service-Port",
@@ -5406,11 +5409,11 @@
       "urlLabel": "URL",
       "protocol": "Protokoll",
       "hostname": "Hostname",
-      "port": "Hafen",
-      "pathname": "Weg",
+      "port": "Port",
+      "pathname": "Pfad",
       "search": "Abfragezeichenfolge",
       "hash": "Hash",
-      "origin": "Herkunft",
+      "origin": "Origin",
       "queryParams": "Abfrageparameter",
       "invalid": "Ungültige URL",
       "defaultPort": "(Standard)",
@@ -6344,7 +6347,7 @@
       "searchPlaceholder": "Suche nach Portnummer oder Dienst...",
       "lookupPort": "Suchen Sie nach einem spezifischen Port",
       "portPlaceholder": "Portnummer eingeben...",
-      "port": "Hafen",
+      "port": "Port",
       "service": "Service",
       "descriptionLabel": "Beschreibung",
       "unknownPort": "Unbekannter oder benutzerdefinierter Service-Port",
@@ -7110,6 +7113,12 @@
     "about": "Über uns",
     "blog": "Blog"
   },
+  "theme": {
+    "toggle": "Thema wechseln",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
   "blog": {
     "title": "Blog",
     "description": "Entwickler-Tutorials, Tool-Anleitungen und technische Einblicke zur Steigerung Ihrer Produktivität.",
@@ -7119,7 +7128,10 @@
     "noPosts": "Noch keine Beiträge. Schauen Sie bald wieder vorbei!",
     "readMore": "Weiterlesen",
     "publishedOn": "Veröffentlicht am",
-    "author": "Autor"
+    "author": "Autor",
+    "featured": "Empfohlen",
+    "relatedPosts": "Ähnliche Artikel",
+    "relatedTools": "Empfohlene Tools"
   },
   "errors": {
     "notFound": {

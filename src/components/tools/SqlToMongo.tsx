@@ -233,16 +233,16 @@ export default function SqlToMongo() {
       )}
 
       <div>
-        <h3 className="text-sm font-medium mb-3">{t('examples')}</h3>
+        <h3 className="text-sm font-medium mb-3 text-gray-900 dark:text-white">{t('examples')}</h3>
         <div className="space-y-2">
           {examples.map((ex, i) => (
             <button
               key={i}
               onClick={() => setInput(ex.sql)}
-              className="w-full p-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700 transition-colors"
+              className="w-full p-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
-              <div className="text-sm text-gray-300">{t(ex.descKey)}</div>
-              <code className="text-blue-400 text-sm">{ex.sql}</code>
+              <div className="text-sm text-gray-600 dark:text-gray-300">{t(ex.descKey)}</div>
+              <code className="text-blue-600 dark:text-blue-400 text-sm">{ex.sql}</code>
             </button>
           ))}
         </div>

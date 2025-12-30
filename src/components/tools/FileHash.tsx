@@ -73,7 +73,7 @@ export default function FileHash() {
     <div className="space-y-4">
       <div
         onClick={() => fileInputRef.current?.click()}
-        className="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500 transition-colors"
+        className="tool-dropzone"
       >
         <input
           ref={fileInputRef}
@@ -82,18 +82,18 @@ export default function FileHash() {
           className="hidden"
         />
         <div className="text-4xl mb-2">📁</div>
-        <p className="text-gray-300">{t('fileHash.dropzone')}</p>
+        <p className="text-gray-600 dark:text-gray-300">{t('fileHash.dropzone')}</p>
       </div>
 
       {fileName && (
-        <div className="bg-gray-800 rounded p-4">
+        <div className="tool-panel">
           <div className="flex justify-between text-sm">
-            <span className="text-gray-300">{t('fileHash.fileName')}:</span>
-            <span>{fileName}</span>
+            <span className="text-gray-600 dark:text-gray-300">{t('fileHash.fileName')}:</span>
+            <span className="text-gray-900 dark:text-white">{fileName}</span>
           </div>
           <div className="flex justify-between text-sm mt-1">
-            <span className="text-gray-300">{t('fileHash.fileSize')}:</span>
-            <span>{fileSize}</span>
+            <span className="text-gray-600 dark:text-gray-300">{t('fileHash.fileSize')}:</span>
+            <span className="text-gray-900 dark:text-white">{fileSize}</span>
           </div>
         </div>
       )}
@@ -101,24 +101,24 @@ export default function FileHash() {
       {loading && (
         <div className="text-center py-4">
           <div className="animate-spin text-2xl">⏳</div>
-          <p className="text-gray-300 mt-2">{t('fileHash.calculating')}</p>
+          <p className="text-gray-600 dark:text-gray-300 mt-2">{t('fileHash.calculating')}</p>
         </div>
       )}
 
       {hashes && (
         <div className="space-y-3">
           {Object.entries(hashes).map(([algo, hash]) => (
-            <div key={algo} className="bg-gray-800 rounded p-3">
+            <div key={algo} className="tool-panel">
               <div className="flex justify-between items-center mb-1">
-                <span className="text-sm text-gray-300 uppercase">{algo}</span>
+                <span className="text-sm text-gray-600 dark:text-gray-300 uppercase">{algo}</span>
                 <button
                   onClick={() => copyHash(hash)}
-                  className="text-xs text-blue-400 hover:text-blue-300"
+                  className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
                 >
                   {t('copy')}
                 </button>
               </div>
-              <code className="text-xs text-green-400 break-all">{hash}</code>
+              <code className="text-xs text-green-600 dark:text-green-400 break-all">{hash}</code>
             </div>
           ))}
         </div>

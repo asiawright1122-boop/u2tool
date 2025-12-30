@@ -49,19 +49,19 @@ export default function ChmodCalculator() {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-4">
-        <label className="text-sm font-medium">{t('chmod.octal')}:</label>
-        <input type="text" value={octal} onChange={(e) => handleOctal(e.target.value)} maxLength={3} className="w-24 px-3 py-2 bg-gray-800 border border-gray-700 rounded font-mono text-xl text-center" />
-        <button onClick={() => copy(`chmod ${octal}`)} className="px-3 py-2 bg-gray-600 rounded hover:bg-gray-700">{copied ? '✓' : t('copy')}</button>
+        <label className="text-sm font-medium text-gray-900 dark:text-white">{t('chmod.octal')}:</label>
+        <input type="text" value={octal} onChange={(e) => handleOctal(e.target.value)} maxLength={3} className="w-24 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded font-mono text-xl text-center text-gray-900 dark:text-white" />
+        <button onClick={() => copy(`chmod ${octal}`)} className="px-3 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-700">{copied ? '✓' : t('copy')}</button>
       </div>
-      <div className="bg-gray-800 rounded-lg p-4">
-        <p className="text-sm text-gray-300 mb-2">{t('chmod.symbolic')}:</p>
-        <p className="font-mono text-xl">{calcSymbolic(perms)}</p>
+      <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('chmod.symbolic')}:</p>
+        <p className="font-mono text-xl text-gray-900 dark:text-white">{calcSymbolic(perms)}</p>
       </div>
       <div className="grid md:grid-cols-3 gap-4">
         {(['owner', 'group', 'other'] as const).map(who => (
-          <div key={who} className="bg-gray-800 rounded-lg p-4">
-            <h3 className="font-medium mb-3 capitalize">{t(`chmod.${who}`)}</h3>
-            <div className="space-y-2">
+          <div key={who} className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+            <h3 className="font-medium mb-3 capitalize text-gray-900 dark:text-white">{t(`chmod.${who}`)}</h3>
+            <div className="space-y-2 text-gray-900 dark:text-white">
               <Checkbox who={who} perm="r" label={t('chmod.read')} />
               <Checkbox who={who} perm="w" label={t('chmod.write')} />
               <Checkbox who={who} perm="x" label={t('chmod.execute')} />
@@ -69,9 +69,9 @@ export default function ChmodCalculator() {
           </div>
         ))}
       </div>
-      <div className="bg-gray-800 rounded-lg p-4">
-        <p className="text-sm text-gray-300 mb-2">{t('chmod.command')}:</p>
-        <code className="font-mono">chmod {octal} filename</code>
+      <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('chmod.command')}:</p>
+        <code className="font-mono text-gray-900 dark:text-white">chmod {octal} filename</code>
       </div>
     </div>
   );

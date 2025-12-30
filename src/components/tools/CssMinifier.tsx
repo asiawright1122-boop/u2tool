@@ -105,41 +105,41 @@ export default function CssMinifier() {
     <div className="space-y-6">
       {stats.original > 0 && (
         <div className="grid grid-cols-3 gap-4">
-          <div className="bg-gray-700 rounded-lg p-4 text-center">
-            <div className="text-2xl font-bold text-white">{formatBytes(stats.original)}</div>
-            <div className="text-sm text-gray-300">Original Size</div>
+          <div className="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4 text-center">
+            <div className="text-2xl font-bold text-gray-900 dark:text-white">{formatBytes(stats.original)}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Original Size</div>
           </div>
-          <div className="bg-gray-700 rounded-lg p-4 text-center">
-            <div className="text-2xl font-bold text-green-400">{formatBytes(stats.minified)}</div>
-            <div className="text-sm text-gray-300">Minified Size</div>
+          <div className="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4 text-center">
+            <div className="text-2xl font-bold text-green-600 dark:text-green-400">{formatBytes(stats.minified)}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Minified Size</div>
           </div>
-          <div className="bg-gray-700 rounded-lg p-4 text-center">
-            <div className="text-2xl font-bold text-blue-400">{stats.saved}%</div>
-            <div className="text-sm text-gray-300">Size Reduced</div>
+          <div className="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4 text-center">
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.saved}%</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Size Reduced</div>
           </div>
         </div>
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('input')}
           </label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="w-full h-80 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm"
+            className="w-full h-80 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
             placeholder={t('inputPlaceholder')}
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('output')}
           </label>
           <textarea
             value={output}
             readOnly
-            className="w-full h-80 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm"
+            className="w-full h-80 px-4 py-3 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white font-mono text-sm"
             placeholder={t('outputPlaceholder')}
           />
         </div>
@@ -148,14 +148,14 @@ export default function CssMinifier() {
       <div className="flex gap-4">
         <button
           onClick={minify}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           {t('minify')}
         </button>
         <button
           onClick={copyToClipboard}
           disabled={!output}
-          className="px-6 py-2 bg-gray-600 hover:bg-gray-9000 disabled:opacity-50 rounded-lg font-medium transition-colors"
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-500 disabled:opacity-50 rounded-lg font-medium transition-colors"
         >
           {t('copy')}
         </button>

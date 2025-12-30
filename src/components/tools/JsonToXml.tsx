@@ -44,18 +44,18 @@ export default function JsonToXml() {
     <div className="space-y-4">
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-2">JSON</label>
-          <textarea value={json} onChange={(e) => setJson(e.target.value)} className="w-full h-64 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm" placeholder='{"name": "John", "age": 30}' />
+          <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">JSON</label>
+          <textarea value={json} onChange={(e) => setJson(e.target.value)} className="w-full h-64 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-gray-100" placeholder='{"name": "John", "age": 30}' />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">XML</label>
-          <textarea value={xml} readOnly className="w-full h-64 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm" />
+          <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">XML</label>
+          <textarea value={xml} readOnly className="w-full h-64 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-gray-100" />
         </div>
       </div>
-      {error && <p className="text-red-400">{error}</p>}
+      {error && <p className="text-red-600 dark:text-red-400">{error}</p>}
       <div className="flex gap-2">
         <button onClick={convert} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">{t('convert')}</button>
-        <button onClick={copy} className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">{copied ? t('copied') : t('copy')}</button>
+        <button onClick={copy} className="px-4 py-2 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-700">{copied ? t('copied') : t('copy')}</button>
       </div>
     </div>
   );

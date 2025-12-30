@@ -45,7 +45,7 @@ export default function Breadcrumb({ items, locale, className = '' }: Breadcrumb
         aria-label="Breadcrumb" 
         className={`text-sm ${className}`}
       >
-        <ol className="flex flex-wrap items-center gap-1 text-gray-400">
+        <ol className="flex flex-wrap items-center gap-1 text-gray-500 dark:text-gray-400">
           {items.map((item, index) => {
             const isLast = index === items.length - 1;
             
@@ -54,7 +54,7 @@ export default function Breadcrumb({ items, locale, className = '' }: Breadcrumb
                 {/* 分隔符（第一项之后显示） */}
                 {index > 0 && (
                   <svg 
-                    className="w-4 h-4 mx-1 text-gray-600" 
+                    className="w-4 h-4 mx-1 text-gray-400 dark:text-gray-600" 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ export default function Breadcrumb({ items, locale, className = '' }: Breadcrumb
                 {isLast || !item.path ? (
                   // 最后一项或无路径：显示为文本
                   <span 
-                    className="text-gray-300 font-medium truncate max-w-[200px] sm:max-w-none"
+                    className="text-gray-700 dark:text-gray-300 font-medium truncate max-w-[200px] sm:max-w-none"
                     aria-current={isLast ? 'page' : undefined}
                   >
                     {item.name}
@@ -82,7 +82,7 @@ export default function Breadcrumb({ items, locale, className = '' }: Breadcrumb
                   // 有路径：显示为链接
                   <Link 
                     href={item.path}
-                    className="hover:text-blue-400 transition-colors truncate max-w-[150px] sm:max-w-none"
+                    className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors truncate max-w-[150px] sm:max-w-none"
                   >
                     {item.name}
                   </Link>

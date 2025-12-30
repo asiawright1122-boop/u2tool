@@ -69,18 +69,18 @@ export default function DnsLookup() {
           onChange={(e) => setDomain(e.target.value)}
           placeholder={t('dnsLookup.placeholder')}
           onKeyDown={(e) => e.key === 'Enter' && lookupDns()}
-          className="flex-1 bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500"
+          className="flex-1 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500"
         />
         <button
           onClick={lookupDns}
           disabled={loading || !domain.trim()}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-700 rounded-lg font-medium"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-700 text-white rounded-lg font-medium"
         >
           {loading ? t('dnsLookup.loading') : t('dnsLookup.lookup')}
         </button>
       </div>
 
-      {error && <div className="text-red-400 text-sm">{error}</div>}
+      {error && <div className="text-red-600 dark:text-red-400 text-sm">{error}</div>}
 
       {results.length > 0 && (
         <div className="space-y-2">
@@ -88,14 +88,14 @@ export default function DnsLookup() {
             const typeResults = results.filter(r => r.type === type);
             if (typeResults.length === 0) return null;
             return (
-              <div key={type} className="bg-gray-800 rounded-lg p-4">
-                <div className="text-sm font-medium text-blue-400 mb-2">
+              <div key={type} className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
+                <div className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-2">
                   {t('dnsLookup.records', { type })}
                 </div>
                 {typeResults.map((r, i) => (
-                  <div key={i} className="flex justify-between items-center py-1 border-b border-gray-700 last:border-0">
-                    <code className="text-sm font-mono text-gray-300">{r.value}</code>
-                    {r.ttl && <span className="text-xs text-gray-300">{t('dnsLookup.ttl', { ttl: r.ttl })}</span>}
+                  <div key={i} className="flex justify-between items-center py-1 border-b border-gray-300 dark:border-gray-700 last:border-0">
+                    <code className="text-sm font-mono text-gray-700 dark:text-gray-300">{r.value}</code>
+                    {r.ttl && <span className="text-xs text-gray-500 dark:text-gray-300">{t('dnsLookup.ttl', { ttl: r.ttl })}</span>}
                   </div>
                 ))}
               </div>
@@ -104,9 +104,9 @@ export default function DnsLookup() {
         </div>
       )}
 
-      <div className="bg-gray-800/50 rounded-lg p-4">
-        <h3 className="font-medium mb-2">{t('dnsLookup.recordTypes')}</h3>
-        <ul className="text-sm text-gray-300 space-y-1">
+      <div className="bg-gray-100 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
+        <h3 className="font-medium mb-2 text-gray-900 dark:text-white">{t('dnsLookup.recordTypes')}</h3>
+        <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
           {recordTypes.map(type => (
             <li key={type}>• {type} - {t(`dnsLookup.recordDesc.${type}`)}</li>
           ))}

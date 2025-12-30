@@ -44,10 +44,10 @@ export default function CssClipPathGenerator() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Preview */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             {t('clipPath.preview')}
           </label>
-          <div className="bg-gray-900 border border-gray-700 rounded-lg p-8 flex items-center justify-center min-h-[300px]">
+          <div className="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-8 flex items-center justify-center min-h-[300px]">
             <div
               className="w-48 h-48 bg-gradient-to-br from-blue-500 to-purple-600"
               style={{ clipPath }}
@@ -58,7 +58,7 @@ export default function CssClipPathGenerator() {
         {/* Controls */}
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               {t('clipPath.presets')}
             </label>
             <div className="grid grid-cols-5 gap-2">
@@ -66,7 +66,7 @@ export default function CssClipPathGenerator() {
                 <button
                   key={preset}
                   onClick={() => handlePreset(preset)}
-                  className="p-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-xs transition-colors"
+                  className="p-2 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-lg text-xs transition-colors text-gray-900 dark:text-white"
                 >
                   {t(`clipPath.preset${preset.charAt(0).toUpperCase() + preset.slice(1)}`)}
                 </button>
@@ -75,22 +75,22 @@ export default function CssClipPathGenerator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               {t('clipPath.value')}
             </label>
             <textarea
               value={clipPath}
               onChange={(e) => setClipPath(e.target.value)}
-              className="w-full h-24 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full h-24 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               {t('output')}
             </label>
-            <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
-              <code className="text-sm text-green-400 font-mono">
+            <div className="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-4">
+              <code className="text-sm text-green-700 dark:text-green-400 font-mono">
                 clip-path: {clipPath};
               </code>
             </div>
@@ -98,20 +98,20 @@ export default function CssClipPathGenerator() {
 
           <button
             onClick={copyToClipboard}
-            className="w-full px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors"
+            className="w-full px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors text-white"
           >
             {copied ? t('copied') : t('copy')}
           </button>
         </div>
       </div>
 
-      <div className="bg-gray-800/50 rounded-lg p-4">
-        <h3 className="font-medium mb-2">{t('clipPath.syntax')}</h3>
-        <ul className="text-sm text-gray-300 space-y-1">
-          <li>• <code className="text-blue-400">circle(radius at x y)</code> - {t('clipPath.circleDesc')}</li>
-          <li>• <code className="text-blue-400">ellipse(rx ry at x y)</code> - {t('clipPath.ellipseDesc')}</li>
-          <li>• <code className="text-blue-400">polygon(x1 y1, x2 y2, ...)</code> - {t('clipPath.polygonDesc')}</li>
-          <li>• <code className="text-blue-400">inset(top right bottom left round radius)</code> - {t('clipPath.insetDesc')}</li>
+      <div className="bg-gray-100 dark:bg-gray-800/50 rounded-lg p-4">
+        <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('clipPath.syntax')}</h3>
+        <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+          <li>• <code className="text-blue-600 dark:text-blue-400">circle(radius at x y)</code> - {t('clipPath.circleDesc')}</li>
+          <li>• <code className="text-blue-600 dark:text-blue-400">ellipse(rx ry at x y)</code> - {t('clipPath.ellipseDesc')}</li>
+          <li>• <code className="text-blue-600 dark:text-blue-400">polygon(x1 y1, x2 y2, ...)</code> - {t('clipPath.polygonDesc')}</li>
+          <li>• <code className="text-blue-600 dark:text-blue-400">inset(top right bottom left round radius)</code> - {t('clipPath.insetDesc')}</li>
         </ul>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 漏斗数据行类型
 interface FunnelDataRow {
@@ -66,6 +67,7 @@ export default function FunnelChartGenerator() {
   }, [t, isInitialized]);
 
   const chartRef = useRef<ReactECharts>(null);
+  const chartTheme = useChartTheme();
 
   // 生成唯一 ID
   const generateId = useCallback(() => {
@@ -106,14 +108,13 @@ export default function FunnelChartGenerator() {
   // 生成 ECharts 配置
   const getChartOption = useCallback((): EChartsOption => {
     const colors = colorThemes[colorTheme];
-    const textColor = '#e5e7eb';
 
     return {
-      backgroundColor: '#1f2937',
+      backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: '#fff' },
+        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
       },
       tooltip: {
         trigger: 'item',
@@ -124,7 +125,7 @@ export default function FunnelChartGenerator() {
         orient: 'vertical',
         left: 'left',
         top: 'middle',
-        textStyle: { color: textColor },
+        textStyle: { color: chartTheme.legendText },
       },
       color: colors,
       series: [
@@ -145,15 +146,15 @@ export default function FunnelChartGenerator() {
           label: {
             show: showLabels,
             position: 'inside',
-            color: '#fff',
+            color: chartTheme.labelColor,
             formatter: '{b}\n{c}',
           },
           labelLine: {
             length: 10,
-            lineStyle: { width: 1, type: 'solid', color: textColor },
+            lineStyle: { width: 1, type: 'solid', color: chartTheme.axisLabelColor },
           },
           itemStyle: {
-            borderColor: '#1f2937',
+            borderColor: chartTheme.backgroundColor,
             borderWidth: 1,
           },
           emphasis: {
@@ -167,7 +168,7 @@ export default function FunnelChartGenerator() {
         },
       ],
     };
-  }, [data, chartTitle, colorTheme, showLegend, showLabels, sortOrder, funnelAlign]);
+  }, [data, chartTitle, colorTheme, showLegend, showLabels, sortOrder, funnelAlign, chartTheme]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
@@ -176,7 +177,7 @@ export default function FunnelChartGenerator() {
       const url = echartInstance.getDataURL({
         type: format === 'svg' ? 'svg' : 'png',
         pixelRatio: 2,
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
       });
       const link = document.createElement('a');
       link.download = `funnel-chart-${Date.now()}.${format}`;
@@ -229,7 +230,7 @@ export default function FunnelChartGenerator() {
           {/* 图表设置 */}
           <div>
             <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-            <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
@@ -314,10 +315,10 @@ export default function FunnelChartGenerator() {
               </button>
             </div>
 
-            <div className="bg-gray-900 border border-gray-700 rounded-lg p-3 overflow-x-auto">
+            <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3 overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-gray-700">
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
                     <th className="text-left py-2 px-2 font-medium">{t('stageName')}</th>
                     <th className="text-left py-2 px-2 font-medium">{t('value')}</th>
                     <th className="text-left py-2 px-2 font-medium">{t('conversionRate')}</th>
@@ -326,13 +327,13 @@ export default function FunnelChartGenerator() {
                 </thead>
                 <tbody>
                   {data.map((row, index) => (
-                    <tr key={row.id} className="border-b border-gray-800 last:border-b-0">
+                    <tr key={row.id} className="border-b border-gray-200 dark:border-gray-800 last:border-b-0">
                       <td className="py-2 px-2">
                         <input
                           type="text"
                           value={row.name}
                           onChange={(e) => updateRow(row.id, 'name', e.target.value)}
-                          className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                          className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
                       <td className="py-2 px-2">
@@ -340,16 +341,16 @@ export default function FunnelChartGenerator() {
                           type="number"
                           value={row.value}
                           onChange={(e) => updateRow(row.id, 'value', e.target.value)}
-                          className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                          className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
-                      <td className="py-2 px-2 text-gray-400">
+                      <td className="py-2 px-2 text-gray-500 dark:text-gray-400">
                         {getConversionRate(index)}
                       </td>
                       <td className="py-2 px-2">
                         <button
                           onClick={() => deleteRow(row.id)}
-                          className="text-red-400 hover:text-red-300 disabled:opacity-50"
+                          className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 disabled:opacity-50"
                           disabled={data.length <= 1}
                         >
                           ✕
@@ -366,7 +367,7 @@ export default function FunnelChartGenerator() {
         {/* 右侧：图表预览 */}
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
+          <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
@@ -378,9 +379,9 @@ export default function FunnelChartGenerator() {
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
         <p className="font-medium mb-1">💡 {t('tips.title')}</p>
-        <ul className="space-y-0.5 text-blue-400">
+        <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

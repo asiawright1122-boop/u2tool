@@ -130,7 +130,7 @@ export default function VideoToBase64() {
       <div
         onDrop={handleDrop}
         onDragOver={(e) => e.preventDefault()}
-        className="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center hover:border-blue-500 transition-colors"
+        className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-blue-500 transition-colors bg-gray-50 dark:bg-transparent"
       >
         <input
           type="file"
@@ -141,36 +141,36 @@ export default function VideoToBase64() {
         />
         <label htmlFor="video-input" className="cursor-pointer">
           <div className="text-4xl mb-4">🎬</div>
-          <p className="text-gray-300 mb-2">{t('dropzone')}</p>
-          <p className="text-sm text-gray-300">{t('maxSize')}</p>
+          <p className="text-gray-600 dark:text-gray-300 mb-2">{t('dropzone')}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-300">{t('maxSize')}</p>
         </label>
       </div>
 
       {error && (
-        <div className="p-3 bg-red-100 text-red-700 rounded-lg">
+        <div className="tool-error">
           {error}
         </div>
       )}
 
       {isLoading && (
-        <div className="p-4 bg-blue-50 rounded-lg text-center">
+        <div className="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-center">
           <div className="animate-spin inline-block w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full mb-2"></div>
-          <p className="text-blue-700">{t('processing')}</p>
+          <p className="text-blue-700 dark:text-blue-400">{t('processing')}</p>
         </div>
       )}
 
       {fileName && !isLoading && (
-        <div className="p-4 bg-gray-900 rounded-lg space-y-3">
+        <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg space-y-3">
           <div className="flex items-center justify-between">
             <div>
-              <p className="font-medium text-gray-100">{fileName}</p>
-              <p className="text-sm text-gray-300">
+              <p className="font-medium text-gray-900 dark:text-gray-100">{fileName}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 {mimeType} | {t('originalSize')}: {formatFileSize(fileSize)} | Base64: {formatFileSize(base64.length)}
               </p>
             </div>
             <button
               onClick={handleClear}
-              className="text-gray-300 hover:text-gray-200"
+              className="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-200"
             >
               ✕
             </button>
@@ -191,19 +191,19 @@ export default function VideoToBase64() {
             onChange={toggleDataUri}
             className="w-4 h-4 text-blue-600 rounded"
           />
-          <span className="text-sm text-gray-300">{t('includeDataUri')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('includeDataUri')}</span>
         </label>
       </div>
 
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="tool-label mb-0">
             {t('base64Output')}
           </label>
           {base64 && (
             <button
               onClick={handleCopy}
-              className="text-sm text-blue-600 hover:text-blue-800"
+              className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
             >
               {t('copy')}
             </button>
@@ -213,13 +213,13 @@ export default function VideoToBase64() {
           value={base64}
           readOnly
           placeholder={t('outputPlaceholder')}
-          className="w-full h-48 p-3 border border-gray-600 rounded-lg bg-gray-900 text-gray-100 font-mono text-xs"
+          className="tool-textarea text-xs"
         />
       </div>
 
-      <div className="p-4 bg-yellow-50 rounded-lg">
-        <h3 className="font-medium text-yellow-800 mb-2">{t('warning')}</h3>
-        <p className="text-sm text-yellow-700">{t('warningText')}</p>
+      <div className="p-4 bg-yellow-50 dark:bg-yellow-900/30 border border-yellow-200 dark:border-yellow-700 rounded-lg">
+        <h3 className="font-medium text-yellow-800 dark:text-yellow-300 mb-2">{t('warning')}</h3>
+        <p className="text-sm text-yellow-700 dark:text-yellow-400">{t('warningText')}</p>
       </div>
     </div>
   );

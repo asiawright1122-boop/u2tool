@@ -62,7 +62,7 @@ export default function ImageToBase64() {
     <div className="space-y-4">
       {/* Upload Area */}
       <div
-        className="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center hover:border-blue-500 transition-colors cursor-pointer"
+        className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-blue-500 transition-colors cursor-pointer bg-gray-50 dark:bg-transparent"
         onClick={() => fileInputRef.current?.click()}
       >
         <input
@@ -73,24 +73,24 @@ export default function ImageToBase64() {
           className="hidden"
         />
         <div className="text-4xl mb-4">🖼️</div>
-        <p className="text-gray-300 mb-2">{ti('uploadHint')}</p>
-        <p className="text-xs text-gray-300">{ti('supportedFormats')}</p>
+        <p className="text-gray-600 dark:text-gray-300 mb-2">{ti('uploadHint')}</p>
+        <p className="text-xs text-gray-500 dark:text-gray-300">{ti('supportedFormats')}</p>
       </div>
 
       {fileInfo && (
-        <div className="bg-gray-800 rounded-lg p-4">
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
           <div className="flex items-center gap-4">
             {preview && (
               <img
                 src={preview}
                 alt="Preview"
-                className="w-20 h-20 object-contain bg-gray-900 rounded"
+                className="w-20 h-20 object-contain bg-white dark:bg-gray-900 rounded"
               />
             )}
             <div className="flex-1">
-              <p className="font-medium truncate">{fileInfo.name}</p>
-              <p className="text-sm text-gray-300">{fileInfo.type}</p>
-              <p className="text-sm text-gray-300">{fileInfo.size}</p>
+              <p className="font-medium text-gray-900 dark:text-white truncate">{fileInfo.name}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">{fileInfo.type}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">{fileInfo.size}</p>
             </div>
             <button onClick={clearAll} className="btn-secondary text-sm">
               {t('clear')}

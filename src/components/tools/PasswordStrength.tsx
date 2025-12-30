@@ -122,19 +122,19 @@ export default function PasswordStrength() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium mb-2">{t('pwStrength.password')}</label>
+        <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{t('pwStrength.password')}</label>
         <div className="relative">
           <input
             type={showPassword ? 'text' : 'password'}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder={t('pwStrength.placeholder')}
-            className="w-full p-3 pr-20 bg-gray-900 border border-gray-700 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full p-3 pr-20 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-1 text-sm text-gray-300 hover:text-white"
+            className="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-1 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
           >
             {showPassword ? t('pwStrength.hide') : t('pwStrength.show')}
           </button>
@@ -145,42 +145,42 @@ export default function PasswordStrength() {
         <>
           <div>
             <div className="flex justify-between mb-2">
-              <span className="text-sm font-medium">{t('pwStrength.strength')}</span>
+              <span className="text-sm font-medium text-gray-900 dark:text-white">{t('pwStrength.strength')}</span>
               <span className={`text-sm font-medium ${getTextColorClass(result.color)}`}>
                 {t(`pwStrength.${result.label}`)}
               </span>
             </div>
-            <div className="w-full bg-gray-700 rounded-full h-3">
+            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
               <div
                 className={`h-3 rounded-full transition-all duration-300 ${getColorClass(result.color)}`}
                 style={{ width: `${Math.min(100, (result.score / 7) * 100)}%` }}
               />
             </div>
-            <div className="mt-1 text-xs text-gray-300">
+            <div className="mt-1 text-xs text-gray-600 dark:text-gray-300">
               {t('pwStrength.score')}: {result.score}/7
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4 text-sm">
-            <div className="p-3 bg-gray-900 rounded-lg">
-              <div className="text-gray-300 mb-1">{t('pwStrength.length')}</div>
-              <div className="font-mono">{password.length} {t('pwStrength.chars')}</div>
+            <div className="p-3 bg-gray-100 dark:bg-gray-900 rounded-lg">
+              <div className="text-gray-600 dark:text-gray-300 mb-1">{t('pwStrength.length')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{password.length} {t('pwStrength.chars')}</div>
             </div>
-            <div className="p-3 bg-gray-900 rounded-lg">
-              <div className="text-gray-300 mb-1">{t('pwStrength.charTypes')}</div>
+            <div className="p-3 bg-gray-100 dark:bg-gray-900 rounded-lg">
+              <div className="text-gray-600 dark:text-gray-300 mb-1">{t('pwStrength.charTypes')}</div>
               <div className="flex gap-2">
-                <span className={/[a-z]/.test(password) ? 'text-green-400' : 'text-gray-300'}>a-z</span>
-                <span className={/[A-Z]/.test(password) ? 'text-green-400' : 'text-gray-300'}>A-Z</span>
-                <span className={/[0-9]/.test(password) ? 'text-green-400' : 'text-gray-300'}>0-9</span>
-                <span className={/[!@#$%^&*()_+\-=[\]{}|;:,.<>?]/.test(password) ? 'text-green-400' : 'text-gray-300'}>!@#</span>
+                <span className={/[a-z]/.test(password) ? 'text-green-600 dark:text-green-400' : 'text-gray-400 dark:text-gray-300'}>a-z</span>
+                <span className={/[A-Z]/.test(password) ? 'text-green-600 dark:text-green-400' : 'text-gray-400 dark:text-gray-300'}>A-Z</span>
+                <span className={/[0-9]/.test(password) ? 'text-green-600 dark:text-green-400' : 'text-gray-400 dark:text-gray-300'}>0-9</span>
+                <span className={/[!@#$%^&*()_+\-=[\]{}|;:,.<>?]/.test(password) ? 'text-green-600 dark:text-green-400' : 'text-gray-400 dark:text-gray-300'}>!@#</span>
               </div>
             </div>
           </div>
 
           {result.suggestions.length > 0 && (
-            <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-              <div className="text-sm font-medium mb-2">{t('pwStrength.suggestions')}</div>
-              <ul className="text-sm text-gray-300 space-y-1">
+            <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
+              <div className="text-sm font-medium text-gray-900 dark:text-white mb-2">{t('pwStrength.suggestions')}</div>
+              <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 {result.suggestions.map((suggestion, index) => (
                   <li key={index}>• {t(`pwStrength.suggest.${suggestion}`)}</li>
                 ))}

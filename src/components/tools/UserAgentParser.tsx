@@ -111,12 +111,12 @@ export default function UserAgentParser() {
             value={userAgent}
             onChange={(e) => setUserAgent(e.target.value)}
             placeholder={t('uaParser.placeholder')}
-            className="flex-1 h-24 p-3 bg-gray-900 border border-gray-700 rounded-lg font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="flex-1 h-24 p-3 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-gray-100"
           />
         </div>
         <button
           onClick={useCurrentUA}
-          className="mt-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm"
+          className="mt-2 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg text-sm"
         >
           {t('uaParser.useCurrent')}
         </button>
@@ -124,35 +124,35 @@ export default function UserAgentParser() {
 
       {parsed && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300 mb-2">{t('uaParser.browser')}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('uaParser.browser')}</div>
             <div className="text-lg font-medium">{parsed.browser.name}</div>
             {parsed.browser.version && (
-              <div className="text-sm text-gray-300">{t('uaParser.version')}: {parsed.browser.version}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">{t('uaParser.version')}: {parsed.browser.version}</div>
             )}
           </div>
 
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300 mb-2">{t('uaParser.os')}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('uaParser.os')}</div>
             <div className="text-lg font-medium">{parsed.os.name}</div>
             {parsed.os.version && (
-              <div className="text-sm text-gray-300">{t('uaParser.version')}: {parsed.os.version}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">{t('uaParser.version')}: {parsed.os.version}</div>
             )}
           </div>
 
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300 mb-2">{t('uaParser.device')}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('uaParser.device')}</div>
             <div className="text-lg font-medium">{parsed.device.type}</div>
             {parsed.device.vendor && (
-              <div className="text-sm text-gray-300">{parsed.device.vendor} {parsed.device.model}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">{parsed.device.vendor} {parsed.device.model}</div>
             )}
           </div>
 
-          <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <div className="text-sm text-gray-300 mb-2">{t('uaParser.engine')}</div>
+          <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('uaParser.engine')}</div>
             <div className="text-lg font-medium">{parsed.engine.name}</div>
             {parsed.engine.version && (
-              <div className="text-sm text-gray-300">{t('uaParser.version')}: {parsed.engine.version}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300">{t('uaParser.version')}: {parsed.engine.version}</div>
             )}
           </div>
         </div>

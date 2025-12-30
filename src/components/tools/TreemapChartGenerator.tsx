@@ -4,6 +4,7 @@ import React, { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 树图节点类型
 interface TreemapNode {
@@ -64,6 +65,7 @@ export default function TreemapChartGenerator() {
   }, [t, isInitialized]);
 
   const chartRef = useRef<ReactECharts>(null);
+  const chartTheme = useChartTheme();
 
   // 生成唯一 ID
   const generateId = useCallback(() => {
@@ -161,11 +163,11 @@ export default function TreemapChartGenerator() {
     };
 
     return {
-      backgroundColor: '#1f2937',
+      backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: '#fff' },
+        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
       },
       tooltip: {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -185,23 +187,23 @@ export default function TreemapChartGenerator() {
           label: {
             show: showLabels,
             formatter: '{b}',
-            color: '#fff',
+            color: chartTheme.labelColor,
             fontSize: 12,
           },
           upperLabel: {
             show: true,
             height: 30,
-            color: '#fff',
+            color: chartTheme.labelColor,
           },
           itemStyle: {
-            borderColor: '#1f2937',
+            borderColor: chartTheme.backgroundColor,
             borderWidth: 2,
             gapWidth: 2,
           },
           levels: [
             {
               itemStyle: {
-                borderColor: '#1f2937',
+                borderColor: chartTheme.backgroundColor,
                 borderWidth: 0,
                 gapWidth: 5,
               },
@@ -209,12 +211,12 @@ export default function TreemapChartGenerator() {
             },
             {
               itemStyle: {
-                borderColor: '#374151',
+                borderColor: chartTheme.splitLineColor,
                 borderWidth: 5,
                 gapWidth: 1,
               },
               emphasis: {
-                itemStyle: { borderColor: '#4b5563' },
+                itemStyle: { borderColor: chartTheme.axisLineColor },
               },
             },
             {
@@ -230,14 +232,14 @@ export default function TreemapChartGenerator() {
             show: showBreadcrumb,
             left: 'center',
             top: 'bottom',
-            itemStyle: { color: '#374151', borderColor: '#4b5563' },
-            emphasis: { itemStyle: { color: '#4b5563' } },
+            itemStyle: { color: chartTheme.splitLineColor, borderColor: chartTheme.axisLineColor },
+            emphasis: { itemStyle: { color: chartTheme.axisLineColor } },
           },
           data: convertData(data),
         },
       ],
     };
-  }, [data, chartTitle, colorTheme, showLabels, showBreadcrumb, leafDepth, t]);
+  }, [data, chartTitle, colorTheme, showLabels, showBreadcrumb, leafDepth, t, chartTheme]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
@@ -246,7 +248,7 @@ export default function TreemapChartGenerator() {
       const url = echartInstance.getDataURL({
         type: format === 'svg' ? 'svg' : 'png',
         pixelRatio: 2,
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
       });
       const link = document.createElement('a');
       link.download = `treemap-chart-${Date.now()}.${format}`;
@@ -304,33 +306,33 @@ export default function TreemapChartGenerator() {
   const renderNodeList = (nodes: TreemapNode[], level: number = 0): React.ReactElement[] => {
     return nodes.map(node => (
       <div key={node.id} style={{ marginLeft: level * 16 }}>
-        <div className="flex items-center gap-2 py-1 border-b border-gray-800">
+        <div className="flex items-center gap-2 py-1 border-b border-gray-200 dark:border-gray-800">
           <input
             type="text"
             value={node.name}
             onChange={(e) => updateNode(node.id, 'name', e.target.value)}
-            className="flex-1 px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+            className="flex-1 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
           />
           <input
             type="number"
             value={node.value}
             onChange={(e) => updateNode(node.id, 'value', e.target.value)}
-            className="w-20 px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+            className="w-20 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
             disabled={node.children && node.children.length > 0}
           />
-          <span className="text-gray-400 text-xs w-12">
+          <span className="text-gray-500 dark:text-gray-400 text-xs w-12">
             {total > 0 ? ((node.children && node.children.length > 0 ? calculateTotal([node]) : node.value) / total * 100).toFixed(1) : 0}%
           </span>
           <button
             onClick={() => addNode(node.id)}
-            className="text-blue-400 hover:text-blue-300 text-xs"
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-xs"
             title={t('addChild')}
           >
             +
           </button>
           <button
             onClick={() => deleteNode(node.id)}
-            className="text-red-400 hover:text-red-300 disabled:opacity-50"
+            className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 disabled:opacity-50"
             disabled={data.length <= 1 && !node.children}
           >
             ✕
@@ -365,7 +367,7 @@ export default function TreemapChartGenerator() {
           {/* 图表设置 */}
           <div>
             <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-            <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
@@ -435,8 +437,8 @@ export default function TreemapChartGenerator() {
               </button>
             </div>
 
-            <div className="bg-gray-900 border border-gray-700 rounded-lg p-3 max-h-80 overflow-y-auto">
-              <div className="flex items-center gap-2 py-1 border-b border-gray-700 text-xs text-gray-400 font-medium">
+            <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3 max-h-80 overflow-y-auto">
+              <div className="flex items-center gap-2 py-1 border-b border-gray-200 dark:border-gray-700 text-xs text-gray-500 dark:text-gray-400 font-medium">
                 <span className="flex-1">{t('nodeName')}</span>
                 <span className="w-20">{t('value')}</span>
                 <span className="w-12">%</span>
@@ -450,7 +452,7 @@ export default function TreemapChartGenerator() {
         {/* 右侧：图表预览 */}
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
+          <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
@@ -462,9 +464,9 @@ export default function TreemapChartGenerator() {
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
         <p className="font-medium mb-1">💡 {t('tips.title')}</p>
-        <ul className="space-y-0.5 text-blue-400">
+        <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

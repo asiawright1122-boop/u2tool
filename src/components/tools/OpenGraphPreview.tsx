@@ -194,8 +194,8 @@ export default function OpenGraphPreview() {
   return (
     <div className="space-y-6">
       {/* 模式选择 */}
-      <div className="flex gap-4 p-4 bg-gray-800/50 rounded-lg">
-        <label className="flex items-center gap-2 cursor-pointer">
+      <div className="flex gap-4 p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg">
+        <label className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-200">
           <input
             type="radio"
             name="mode"
@@ -205,7 +205,7 @@ export default function OpenGraphPreview() {
           />
           <span>{t('openGraphPreview.modeFetch')}</span>
         </label>
-        <label className="flex items-center gap-2 cursor-pointer">
+        <label className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-200">
           <input
             type="radio"
             name="mode"
@@ -310,11 +310,11 @@ export default function OpenGraphPreview() {
 
       {/* 抓取模式下显示获取到的信息（只读） */}
       {mode === 'fetch' && title && (
-        <div className="p-4 bg-gray-800/30 rounded-lg space-y-2 text-sm">
-          <div><span className="text-gray-400">{t('openGraphPreview.title')}:</span> {title}</div>
-          <div><span className="text-gray-400">{t('openGraphPreview.description')}:</span> {description || '-'}</div>
-          <div><span className="text-gray-400">{t('openGraphPreview.siteName')}:</span> {siteName || '-'}</div>
-          <div><span className="text-gray-400">{t('openGraphPreview.imageUrl')}:</span> {image || '-'}</div>
+        <div className="p-4 bg-gray-100 dark:bg-gray-800/30 rounded-lg space-y-2 text-sm">
+          <div><span className="text-gray-500 dark:text-gray-400">{t('openGraphPreview.title')}:</span> <span className="text-gray-900 dark:text-gray-100">{title}</span></div>
+          <div><span className="text-gray-500 dark:text-gray-400">{t('openGraphPreview.description')}:</span> <span className="text-gray-900 dark:text-gray-100">{description || '-'}</span></div>
+          <div><span className="text-gray-500 dark:text-gray-400">{t('openGraphPreview.siteName')}:</span> <span className="text-gray-900 dark:text-gray-100">{siteName || '-'}</span></div>
+          <div><span className="text-gray-500 dark:text-gray-400">{t('openGraphPreview.imageUrl')}:</span> <span className="text-gray-900 dark:text-gray-100">{image || '-'}</span></div>
         </div>
       )}
 
@@ -322,19 +322,19 @@ export default function OpenGraphPreview() {
       <div className="flex gap-2">
         <button
           onClick={() => setPreviewType('facebook')}
-          className={`px-4 py-2 rounded ${previewType === 'facebook' ? 'bg-blue-600' : 'bg-gray-700'}`}
+          className={`px-4 py-2 rounded ${previewType === 'facebook' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
         >
           {t('openGraphPreview.platform.facebook')}
         </button>
         <button
           onClick={() => setPreviewType('twitter')}
-          className={`px-4 py-2 rounded ${previewType === 'twitter' ? 'bg-blue-400' : 'bg-gray-700'}`}
+          className={`px-4 py-2 rounded ${previewType === 'twitter' ? 'bg-blue-400 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
         >
           {t('openGraphPreview.platform.twitter')}
         </button>
         <button
           onClick={() => setPreviewType('linkedin')}
-          className={`px-4 py-2 rounded ${previewType === 'linkedin' ? 'bg-blue-700' : 'bg-gray-700'}`}
+          className={`px-4 py-2 rounded ${previewType === 'linkedin' ? 'bg-blue-700 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100'}`}
         >
           {t('openGraphPreview.platform.linkedin')}
         </button>
@@ -345,23 +345,23 @@ export default function OpenGraphPreview() {
         <label className="block text-sm font-medium mb-2">{t('openGraphPreview.preview')}</label>
         
         {previewType === 'facebook' && (
-          <div className="max-w-[500px] bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+          <div className="max-w-[500px] bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
             {renderImage('aspect-[1.91/1]')}
-            <div className="p-3 border-t border-gray-700">
-              <div className="text-xs text-gray-300 uppercase">{getHostname(url)}</div>
-              <div className="text-gray-100 font-semibold mt-1">{truncate(title, 60)}</div>
-              <div className="text-gray-300 text-sm mt-1">{truncate(description, 150)}</div>
+            <div className="p-3 border-t border-gray-200 dark:border-gray-700">
+              <div className="text-xs text-gray-500 dark:text-gray-300 uppercase">{getHostname(url)}</div>
+              <div className="text-gray-900 dark:text-gray-100 font-semibold mt-1">{truncate(title, 60)}</div>
+              <div className="text-gray-600 dark:text-gray-300 text-sm mt-1">{truncate(description, 150)}</div>
             </div>
           </div>
         )}
 
         {previewType === 'twitter' && (
-          <div className="max-w-[500px] bg-gray-800 rounded-2xl overflow-hidden border border-gray-700">
+          <div className="max-w-[500px] bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
             {renderImage('aspect-[2/1]')}
             <div className="p-3">
-              <div className="text-gray-100 font-bold">{truncate(title, 70)}</div>
-              <div className="text-gray-300 text-sm mt-1">{truncate(description, 125)}</div>
-              <div className="text-gray-300 text-sm mt-2 flex items-center gap-1">
+              <div className="text-gray-900 dark:text-gray-100 font-bold">{truncate(title, 70)}</div>
+              <div className="text-gray-600 dark:text-gray-300 text-sm mt-1">{truncate(description, 125)}</div>
+              <div className="text-gray-500 dark:text-gray-300 text-sm mt-2 flex items-center gap-1">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
@@ -372,11 +372,11 @@ export default function OpenGraphPreview() {
         )}
 
         {previewType === 'linkedin' && (
-          <div className="max-w-[500px] bg-gray-800 rounded-lg overflow-hidden border border-gray-600">
+          <div className="max-w-[500px] bg-white dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
             {renderImage('aspect-[1.91/1]')}
             <div className="p-3">
-              <div className="text-gray-100 font-semibold">{truncate(title, 100)}</div>
-              <div className="text-gray-300 text-xs mt-1">{getHostname(url)}</div>
+              <div className="text-gray-900 dark:text-gray-100 font-semibold">{truncate(title, 100)}</div>
+              <div className="text-gray-500 dark:text-gray-300 text-xs mt-1">{getHostname(url)}</div>
             </div>
           </div>
         )}
@@ -399,9 +399,9 @@ export default function OpenGraphPreview() {
       </div>
 
       {/* Recommendations */}
-      <div className="p-4 bg-gray-800/50 rounded-lg text-sm">
-        <h3 className="font-medium mb-2">{t('openGraphPreview.recommendations.title')}</h3>
-        <ul className="space-y-1 text-gray-300">
+      <div className="p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-sm">
+        <h3 className="font-medium mb-2 text-gray-900 dark:text-gray-100">{t('openGraphPreview.recommendations.title')}</h3>
+        <ul className="space-y-1 text-gray-600 dark:text-gray-300">
           <li>• {t('openGraphPreview.recommendations.imageSize')}</li>
           <li>• {t('openGraphPreview.recommendations.titleLength')}</li>
           <li>• {t('openGraphPreview.recommendations.descriptionLength')}</li>

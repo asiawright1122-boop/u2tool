@@ -20,6 +20,7 @@
     "home": "Accueil",
     "tools": "Outils",
     "about": "À propos",
+    "blog": "Blog",
     "viewAllTools": "Voir tous les outils",
     "searchPlaceholder": "Rechercher des outils...",
     "noResults": "Aucun outil trouvé",
@@ -71,6 +72,8 @@
     "copy": "Copier",
     "clear": "Effacer",
     "add": "Ajouter",
+    "expandAll": "Tout développer",
+    "collapseAll": "Tout réduire",
     "generate": "Générer",
     "convert": "Convertir",
     "format": "Format",
@@ -217,7 +220,7 @@
       "linear": "Linéaire",
       "radial": "Radial",
       "css": "CSS",
-      "tailwind": "Vent arrière",
+      "tailwind": "Tailwind",
       "sunset": "Coucher de soleil",
       "ocean": "Océan",
       "forest": "Forêt",
@@ -515,7 +518,7 @@
       "binaryPlaceholder": "Entrez le binaire..."
     },
     "mdToHtml": {
-      "mdPlaceholder": "Entrez la démarque...",
+      "mdPlaceholder": "Entrez le Markdown...",
       "preview": "Aperçu"
     },
     "epoch": {
@@ -535,7 +538,7 @@
     },
     "textStats": {
       "placeholder": "Saisir du texte pour l'analyse statistique...",
-      "chars": "Personnages",
+      "chars": "Caractères",
       "charsNoSpace": "Aucun espace",
       "words": "Mots",
       "uniqueWords": "Mots uniques",
@@ -618,7 +621,7 @@
     },
     "textWrapper": {
       "width": "Largeur de ligne",
-      "chars": "personnages",
+      "chars": "caractères",
       "placeholder": "Saisissez le texte à envelopper...",
       "wrap": "Retour à la ligne du texte"
     },
@@ -1410,7 +1413,7 @@
       "seo_description": "Encode and decode HTML entities online for free. Handle special characters safely for web development. Prevent XSS attacks and display HTML correctly."
     },
     "markdown-preview": {
-      "name": "Aperçu de la démarque",
+      "name": "Aperçu Markdown",
       "description": "Écrivez Markdown et voyez l'aperçu en direct. Exporter au format HTML.",
       "seo_title": "Free Markdown Editor & Preview Online",
       "seo_description": "Write and preview Markdown online for free. Live preview with syntax highlighting and HTML export. Perfect for documentation, README files, and blog posts."
@@ -1746,7 +1749,7 @@
       "seo_description": "Convert text to binary code or binary to text online for free. Support ASCII and Unicode encoding. Perfect for learning binary and data encoding concepts."
     },
     "markdown-to-html": {
-      "name": "Démarquage au HTML",
+      "name": "Markdown vers HTML",
       "description": "Convertissez le texte Markdown en code HTML.",
       "seo_title": "Free Markdown to HTML Converter",
       "seo_description": "Convert Markdown to HTML online for free. Support GitHub Flavored Markdown with tables, code blocks, and task lists. Preview and copy clean HTML output."
@@ -2108,7 +2111,7 @@
       "cell": "Cellule",
       "removeRow": "Supprimer la ligne",
       "removeColumn": "Supprimer la colonne",
-      "markdownOutput": "Sortie de démarque",
+      "markdownOutput": "Sortie Markdown",
       "preview": "Aperçu"
     },
     "base58": {
@@ -2451,7 +2454,7 @@
       "name": "HTML vers Markdown",
       "description": "Convertissez le HTML au format Markdown.",
       "input": "HTML Input",
-      "output": "Sortie de démarque",
+      "output": "Sortie Markdown",
       "convert": "Convertir",
       "copy": "Copier",
       "seo_title": "Free HTML to Markdown Converter Online",
@@ -3395,8 +3398,8 @@
       "errorConversion": "Erreur de conversion"
     },
     "text-to-nato": {
-      "name": "Texte en OTAN",
-      "description": "Convertissez le texte en alphabet phonétique OTAN.",
+      "name": "Texte vers Alphabet Phonétique NATO",
+      "description": "Convertissez le texte en alphabet phonétique NATO (Alpha, Bravo, Charlie...).",
       "seo_title": "Text to NATO Phonetic Alphabet Converter",
       "seo_description": "Convert letters and numbers to NATO phonetic alphabet words online for free. Alpha, Bravo, Charlie format for clear communication. For radio and phone.",
       "separator": "Séparateur",
@@ -4940,7 +4943,7 @@
       "seo_description": "Encodez et décodez les entités HTML en ligne gratuitement. Gérez les caractères spéciaux en toute sécurité pour le développement Web. Empêchez les attaques XSS et affichez correctement le HTML."
     },
     "markdown-preview": {
-      "name": "Aperçu de la démarque",
+      "name": "Aperçu Markdown",
       "description": "Écrivez Markdown et voyez l'aperçu en direct. Exporter au format HTML.",
       "seo_title": "Éditeur Markdown gratuit et aperçu en ligne",
       "seo_description": "Écrivez et prévisualisez Markdown en ligne gratuitement. Aperçu en direct avec coloration syntaxique et exportation HTML. Parfait pour la documentation, les fichiers README et les articles de blog."
@@ -5276,7 +5279,7 @@
       "seo_description": "Convertissez gratuitement du texte en code binaire ou du binaire en texte en ligne. Prend en charge l'encodage ASCII et Unicode. Parfait pour apprendre les concepts de codage binaire et de données."
     },
     "markdown-to-html": {
-      "name": "Démarquage au HTML",
+      "name": "Markdown vers HTML",
       "description": "Convertissez le texte Markdown en code HTML.",
       "seo_title": "Convertisseur gratuit de Markdown en HTML",
       "seo_description": "Convertissez Markdown en HTML en ligne gratuitement. Prenez en charge GitHub Flavored Markdown avec des tableaux, des blocs de code et des listes de tâches. Prévisualisez et copiez une sortie HTML propre."
@@ -5648,7 +5651,7 @@
     "markdown-table-generator": {
       "name": "Générateur de tableaux Markdown",
       "description": "Créez et modifiez des tableaux Markdown avec un éditeur visuel et un aperçu en direct.",
-      "seo_title": "Générateur de table de démarque gratuit en ligne",
+      "seo_title": "Générateur de table Markdown gratuit en ligne",
       "seo_description": "Générez gratuitement des tableaux Markdown avec un éditeur visuel en ligne. Aperçu en direct, alignement des colonnes et importation CSV. Parfait pour les README et les documents GitHub.",
       "addRow": "+ Ajouter une ligne",
       "addColumn": "+ Ajouter une colonne",
@@ -5662,7 +5665,7 @@
       "cell": "Cellule",
       "removeRow": "Supprimer la ligne",
       "removeColumn": "Supprimer la colonne",
-      "markdownOutput": "Sortie de démarque",
+      "markdownOutput": "Sortie Markdown",
       "preview": "Aperçu"
     },
     "base58": {
@@ -6005,7 +6008,7 @@
       "name": "HTML to Markdown",
       "description": "Convertissez le HTML au format Markdown.",
       "input": "HTML Input",
-      "output": "Sortie de démarque",
+      "output": "Sortie Markdown",
       "convert": "Convertir",
       "copy": "Copier",
       "seo_title": "Convertisseur HTML en Markdown gratuit en ligne",
@@ -7110,6 +7113,12 @@
     "about": "À propos",
     "blog": "Blog"
   },
+  "theme": {
+    "toggle": "Changer de thème",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
   "blog": {
     "title": "Blog",
     "description": "Tutoriels pour développeurs, guides d'outils et conseils techniques pour booster votre productivité.",
@@ -7119,7 +7128,10 @@
     "noPosts": "Pas encore d'articles. Revenez bientôt!",
     "readMore": "Lire la suite",
     "publishedOn": "Publié le",
-    "author": "Auteur"
+    "author": "Auteur",
+    "featured": "À la une",
+    "relatedPosts": "Articles connexes",
+    "relatedTools": "Outils recommandés"
   },
   "errors": {
     "notFound": {

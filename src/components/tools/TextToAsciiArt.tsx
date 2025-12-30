@@ -74,7 +74,7 @@ export default function TextToAsciiArt() {
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="md:col-span-3">
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('input')}
           </label>
           <input
@@ -82,18 +82,18 @@ export default function TextToAsciiArt() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             maxLength={20}
-            className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white"
+            className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
             placeholder={t('placeholder')}
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('character')}
           </label>
           <select
             value={char}
             onChange={(e) => setChar(e.target.value)}
-            className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white"
+            className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white"
           >
             <option value="█">{t('charBlock')}</option>
             <option value="#">{t('charHash')}</option>
@@ -108,24 +108,24 @@ export default function TextToAsciiArt() {
       <div className="flex gap-4">
         <button
           onClick={convert}
-          className="px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-medium transition-colors"
+          className="px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-medium transition-colors text-white"
         >
           {t('convert')}
         </button>
         <button
           onClick={copyToClipboard}
           disabled={!output}
-          className="px-6 py-2 bg-gray-600 hover:bg-gray-9000 disabled:opacity-50 rounded-lg font-medium transition-colors"
+          className="px-6 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 disabled:opacity-50 rounded-lg font-medium transition-colors text-gray-700 dark:text-white"
         >
           {t('copy')}
         </button>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
           {t('output')}
         </label>
-        <pre className="w-full min-h-[200px] px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-green-400 font-mono text-sm overflow-x-auto whitespace-pre">
+        <pre className="w-full min-h-[200px] px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-green-600 dark:text-green-400 font-mono text-sm overflow-x-auto whitespace-pre">
           {output || t('outputPlaceholder')}
         </pre>
       </div>

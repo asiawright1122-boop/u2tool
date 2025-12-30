@@ -182,12 +182,12 @@ export default async function ToolPage({
         {/* Tool Header */}
         <div className="text-center mb-8">
           <span className="text-5xl mb-4 block">{tool.icon}</span>
-          <h1 className="text-3xl font-bold mb-2">{toolName}</h1>
-          <p className="text-gray-300 tool-description">{t(`${slug}.description`)}</p>
+          <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">{toolName}</h1>
+          <p className="text-gray-600 dark:text-gray-300 tool-description">{t(`${slug}.description`)}</p>
         </div>
 
         {/* Tool Component */}
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-sm">
           <ToolWrapper slug={slug} />
         </div>
 

@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 颜色主题预设
 const colorThemes = {
@@ -76,6 +77,7 @@ export default function SunburstChartGenerator() {
   const [parseError, setParseError] = useState<string>('');
 
   const chartRef = useRef<ReactECharts>(null);
+  const chartTheme = useChartTheme();
 
   // 解析 JSON 数据 - 使用 useMemo 避免在渲染期间调用 setState
   const parsedData = useMemo((): { data: SunburstNode[]; error: string } => {
@@ -98,19 +100,19 @@ export default function SunburstChartGenerator() {
     const data = parsedData.data;
 
     return {
-      backgroundColor: '#1f2937',
+      backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
         top: 10,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: '#fff' },
+        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
       },
       tooltip: {
         trigger: 'item',
         formatter: '{b}: {c}',
-        backgroundColor: 'rgba(31, 41, 55, 0.9)',
-        borderColor: '#374151',
-        textStyle: { color: '#e5e7eb' },
+        backgroundColor: chartTheme.tooltipBg,
+        borderColor: chartTheme.tooltipBorder,
+        textStyle: { color: chartTheme.tooltipText },
       },
       color: colors,
       series: [
@@ -148,12 +150,12 @@ export default function SunburstChartGenerator() {
             },
           ],
           label: {
-            color: '#e5e7eb',
+            color: chartTheme.labelColor,
           },
         },
       ],
     };
-  }, [chartTitle, colorTheme, showLabel, innerRadius, outerRadius, parsedData]);
+  }, [chartTitle, colorTheme, showLabel, innerRadius, outerRadius, parsedData, chartTheme]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
@@ -162,7 +164,7 @@ export default function SunburstChartGenerator() {
       const url = echartInstance.getDataURL({
         type: format === 'svg' ? 'svg' : 'png',
         pixelRatio: 2,
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
       });
       const link = document.createElement('a');
       link.download = `sunburst-chart-${Date.now()}.${format}`;
@@ -258,10 +260,10 @@ export default function SunburstChartGenerator() {
         <div className="space-y-4">
           {/* 图表设置 */}
           <div>
-            <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-            <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartSettings')}</label>
+            <div className="space-y-3 p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   value={chartTitle}
@@ -272,7 +274,7 @@ export default function SunburstChartGenerator() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
                   onChange={(e) => setColorTheme(e.target.value as keyof typeof colorThemes)}
@@ -287,7 +289,7 @@ export default function SunburstChartGenerator() {
 
               <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <label className="block text-sm font-medium mb-1">{t('innerRadius')}: {innerRadius}%</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('innerRadius')}: {innerRadius}%</label>
                   <input
                     type="range"
                     min={0}
@@ -298,7 +300,7 @@ export default function SunburstChartGenerator() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-1">{t('outerRadius')}: {outerRadius}%</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('outerRadius')}: {outerRadius}%</label>
                   <input
                     type="range"
                     min={50}
@@ -310,7 +312,7 @@ export default function SunburstChartGenerator() {
                 </div>
               </div>
 
-              <label className="flex items-center gap-2 cursor-pointer text-sm">
+              <label className="flex items-center gap-2 cursor-pointer text-sm text-gray-700 dark:text-white">
                 <input
                   type="checkbox"
                   checked={showLabel}
@@ -325,7 +327,7 @@ export default function SunburstChartGenerator() {
           {/* JSON 数据编辑 */}
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label className="block text-sm font-medium">{t('dataEditor')}</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-white">{t('dataEditor')}</label>
               <button onClick={formatJson} className="btn-secondary btn-sm">
                 {t('formatJson')}
               </button>
@@ -337,15 +339,15 @@ export default function SunburstChartGenerator() {
               placeholder={t('jsonPlaceholder')}
             />
             {parseError && (
-              <p className="text-red-400 text-sm mt-1">{parseError}</p>
+              <p className="text-red-600 dark:text-red-400 text-sm mt-1">{parseError}</p>
             )}
           </div>
         </div>
 
         {/* 右侧：图表预览 */}
         <div>
-          <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
+          <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</label>
+          <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
@@ -357,9 +359,9 @@ export default function SunburstChartGenerator() {
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
         <p className="font-medium mb-1">💡 {t('tips.title')}</p>
-        <ul className="space-y-0.5 text-blue-400">
+        <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

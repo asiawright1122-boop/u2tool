@@ -217,7 +217,7 @@ dc = "eqdc20"`);
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('mode')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('mode')}:</label>
           <select
             value={mode}
             onChange={(e) => {
@@ -226,7 +226,7 @@ dc = "eqdc20"`);
               setOutput('');
               setError('');
             }}
-            className="bg-gray-700 border border-gray-600 rounded px-3 py-1.5 text-sm"
+            className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white"
           >
             <option value="toml-to-json">{t('tomlToJson')}</option>
             <option value="json-to-toml">{t('jsonToToml')}</option>
@@ -235,11 +235,11 @@ dc = "eqdc20"`);
         
         {mode === 'toml-to-json' && (
           <div className="flex items-center gap-2">
-            <label className="text-sm text-gray-300">{t('indent')}:</label>
+            <label className="text-sm text-gray-600 dark:text-gray-300">{t('indent')}:</label>
             <select
               value={indentSize}
               onChange={(e) => setIndentSize(Number(e.target.value))}
-              className="bg-gray-700 border border-gray-600 rounded px-3 py-1.5 text-sm"
+              className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white"
             >
               <option value={2}>2 spaces</option>
               <option value={4}>4 spaces</option>
@@ -250,14 +250,14 @@ dc = "eqdc20"`);
         
         <button
           onClick={loadSample}
-          className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded text-sm"
+          className="px-3 py-1.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-700 dark:text-white"
         >
           {t('loadSample')}
         </button>
         
         <button
           onClick={clearAll}
-          className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded text-sm"
+          className="px-3 py-1.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-700 dark:text-white"
         >
           {t('clear')}
         </button>
@@ -267,7 +267,7 @@ dc = "eqdc20"`);
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">
+            <label className="text-sm font-medium text-gray-600 dark:text-gray-300">
               {mode === 'toml-to-json' ? 'TOML' : 'JSON'}
             </label>
           </div>
@@ -275,19 +275,19 @@ dc = "eqdc20"`);
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={mode === 'toml-to-json' ? t('tomlPlaceholder') : t('jsonPlaceholder')}
-            className="w-full h-80 bg-gray-800 border border-gray-700 rounded-lg p-4 font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full h-80 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">
+            <label className="text-sm font-medium text-gray-600 dark:text-gray-300">
               {mode === 'toml-to-json' ? 'JSON' : 'TOML'}
             </label>
             <div className="flex gap-2">
               <button
                 onClick={swap}
-                className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs"
+                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-xs text-gray-700 dark:text-white"
                 title={t('swap')}
               >
                 ⇄ {t('swap')}
@@ -295,7 +295,7 @@ dc = "eqdc20"`);
               <button
                 onClick={copyOutput}
                 disabled={!output}
-                className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs disabled:opacity-50"
+                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-xs disabled:opacity-50 text-gray-700 dark:text-white"
               >
                 {t('copy')}
               </button>
@@ -305,7 +305,7 @@ dc = "eqdc20"`);
             value={output}
             readOnly
             placeholder={t('outputPlaceholder')}
-            className="w-full h-80 bg-gray-800 border border-gray-700 rounded-lg p-4 font-mono text-sm resize-none"
+            className="w-full h-80 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none"
           />
         </div>
       </div>
@@ -315,7 +315,7 @@ dc = "eqdc20"`);
         <button
           onClick={convert}
           disabled={!input.trim()}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium text-white"
         >
           {t('convert')}
         </button>
@@ -323,7 +323,7 @@ dc = "eqdc20"`);
 
       {/* Error */}
       {error && (
-        <div className="p-4 bg-red-900/50 border border-red-700 rounded-lg text-red-300">
+        <div className="p-4 bg-red-100 dark:bg-red-900/50 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-300">
           {error}
         </div>
       )}

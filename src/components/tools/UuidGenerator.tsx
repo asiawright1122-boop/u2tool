@@ -30,14 +30,14 @@ export default function UuidGenerator() {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-4">
-        <label className="text-sm font-medium">{t('count')}:</label>
+        <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('count')}:</label>
         <input
           type="number"
           min="1"
           max="100"
           value={count}
           onChange={(e) => setCount(Math.min(100, Math.max(1, parseInt(e.target.value) || 1)))}
-          className="w-20 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg"
+          className="w-20 px-3 py-2 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-gray-100"
         />
         <button onClick={generateUuids} className="btn-primary">
           {t('generate')}
@@ -51,12 +51,12 @@ export default function UuidGenerator() {
         {uuids.map((uuid, index) => (
           <div
             key={index}
-            className="flex items-center justify-between p-3 bg-gray-900 border border-gray-700 rounded-lg font-mono text-sm"
+            className="flex items-center justify-between p-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-gray-100"
           >
             <span className="select-all">{uuid}</span>
             <button
               onClick={() => copySingle(uuid)}
-              className="text-xs px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded"
+              className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-gray-900 dark:text-gray-100"
             >
               {t('copy')}
             </button>

@@ -73,13 +73,13 @@ export default function CronGenerator() {
     <div className="space-y-6">
       {/* Presets */}
       <div>
-        <label className="block text-sm font-medium mb-2">{tc('presets')}</label>
+        <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{tc('presets')}</label>
         <div className="flex flex-wrap gap-2">
           {presets.map((preset) => (
             <button
               key={preset.value}
               onClick={() => applyPreset(preset.value)}
-              className="px-3 py-1.5 text-sm bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors"
+              className="px-3 py-1.5 text-sm bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-colors"
             >
               {preset.label}
             </button>
@@ -90,75 +90,75 @@ export default function CronGenerator() {
       {/* Fields */}
       <div className="grid grid-cols-5 gap-4">
         <div>
-          <label className="block text-xs text-gray-300 mb-1">{tc('minute')}</label>
+          <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('minute')}</label>
           <input
             type="text"
             value={minute}
             onChange={(e) => setMinute(e.target.value)}
-            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-center"
+            className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label className="block text-xs text-gray-300 mb-1">{tc('hour')}</label>
+          <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('hour')}</label>
           <input
             type="text"
             value={hour}
             onChange={(e) => setHour(e.target.value)}
-            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-center"
+            className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label className="block text-xs text-gray-300 mb-1">{tc('day')}</label>
+          <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('day')}</label>
           <input
             type="text"
             value={dayOfMonth}
             onChange={(e) => setDayOfMonth(e.target.value)}
-            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-center"
+            className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label className="block text-xs text-gray-300 mb-1">{tc('month')}</label>
+          <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('month')}</label>
           <input
             type="text"
             value={month}
             onChange={(e) => setMonth(e.target.value)}
-            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-center"
+            className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label className="block text-xs text-gray-300 mb-1">{tc('weekday')}</label>
+          <label className="block text-xs text-gray-600 dark:text-gray-300 mb-1">{tc('weekday')}</label>
           <input
             type="text"
             value={dayOfWeek}
             onChange={(e) => setDayOfWeek(e.target.value)}
-            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-center"
+            className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-center text-gray-900 dark:text-white"
           />
         </div>
       </div>
 
       {/* Result */}
-      <div className="bg-gray-800 rounded-lg p-6">
+      <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6">
         <div className="flex items-center justify-between mb-4">
-          <span className="text-sm text-gray-300">{tc('expression')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{tc('expression')}</span>
           <button
             onClick={copyExpression}
-            className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+            className={`text-sm px-3 py-1 rounded text-white ${copied ? 'bg-green-600' : 'bg-gray-600 dark:bg-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600'}`}
           >
             {copied ? t('copied') : t('copy')}
           </button>
         </div>
-        <div className="text-2xl font-mono text-center mb-4">{expression}</div>
-        <div className="text-center text-gray-300">{description}</div>
+        <div className="text-2xl font-mono text-center mb-4 text-gray-900 dark:text-white">{expression}</div>
+        <div className="text-center text-gray-600 dark:text-gray-300">{description}</div>
       </div>
 
       {/* Reference */}
-      <div className="text-xs text-gray-300">
+      <div className="text-xs text-gray-600 dark:text-gray-300">
         <p className="mb-2">{tc('specialChars')}:</p>
         <ul className="list-disc list-inside space-y-1">
-          <li><code className="bg-gray-800 px-1">*</code> - {tc('anyValue')}</li>
-          <li><code className="bg-gray-800 px-1">,</code> - {tc('valueList')}</li>
-          <li><code className="bg-gray-800 px-1">-</code> - {tc('range')}</li>
-          <li><code className="bg-gray-800 px-1">/</code> - {tc('step')}</li>
+          <li><code className="bg-gray-200 dark:bg-gray-800 px-1 text-gray-900 dark:text-white">*</code> - {tc('anyValue')}</li>
+          <li><code className="bg-gray-200 dark:bg-gray-800 px-1 text-gray-900 dark:text-white">,</code> - {tc('valueList')}</li>
+          <li><code className="bg-gray-200 dark:bg-gray-800 px-1 text-gray-900 dark:text-white">-</code> - {tc('range')}</li>
+          <li><code className="bg-gray-200 dark:bg-gray-800 px-1 text-gray-900 dark:text-white">/</code> - {tc('step')}</li>
         </ul>
       </div>
     </div>

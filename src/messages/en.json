@@ -20,6 +20,7 @@
     "home": "Home",
     "tools": "Tools",
     "about": "About",
+    "blog": "Blog",
     "viewAllTools": "View All Tools",
     "searchPlaceholder": "Search tools...",
     "noResults": "No tools found",
@@ -71,6 +72,8 @@
     "copy": "Copy",
     "clear": "Clear",
     "add": "Add",
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
     "generate": "Generate",
     "convert": "Convert",
     "format": "Format",
@@ -7110,6 +7113,12 @@
     "about": "About",
     "blog": "Blog"
   },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
   "blog": {
     "title": "Blog",
     "description": "Developer tutorials, tool guides, and tech insights to boost your productivity.",
@@ -7119,7 +7128,10 @@
     "noPosts": "No posts yet. Check back soon!",
     "readMore": "Read More",
     "publishedOn": "Published on",
-    "author": "Author"
+    "author": "Author",
+    "featured": "Featured",
+    "relatedPosts": "Related Posts",
+    "relatedTools": "Recommended Tools"
   },
   "errors": {
     "notFound": {

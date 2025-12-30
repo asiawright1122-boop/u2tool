@@ -122,10 +122,10 @@ export default function JwtGenerator() {
         <div className="flex justify-between items-center mb-2">
           <label className="text-sm font-medium">{t('jwt.payload')}</label>
           <div className="flex gap-2">
-            <button onClick={() => addClaim('iat')} className="text-xs px-2 py-1 bg-gray-700 rounded hover:bg-gray-600">+iat</button>
-            <button onClick={() => addClaim('exp')} className="text-xs px-2 py-1 bg-gray-700 rounded hover:bg-gray-600">+exp</button>
-            <button onClick={() => addClaim('nbf')} className="text-xs px-2 py-1 bg-gray-700 rounded hover:bg-gray-600">+nbf</button>
-            <button onClick={() => addClaim('jti')} className="text-xs px-2 py-1 bg-gray-700 rounded hover:bg-gray-600">+jti</button>
+            <button onClick={() => addClaim('iat')} className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-600">+iat</button>
+            <button onClick={() => addClaim('exp')} className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-600">+exp</button>
+            <button onClick={() => addClaim('nbf')} className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-600">+nbf</button>
+            <button onClick={() => addClaim('jti')} className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-600">+jti</button>
           </div>
         </div>
         <textarea
@@ -137,7 +137,7 @@ export default function JwtGenerator() {
       </div>
 
       {error && (
-        <div className="text-red-400 text-sm bg-red-900/20 p-2 rounded">{error}</div>
+        <div className="text-red-600 dark:text-red-400 text-sm bg-red-100 dark:bg-red-900/20 p-2 rounded">{error}</div>
       )}
 
       <button onClick={generateToken} className="btn-primary">
@@ -150,12 +150,12 @@ export default function JwtGenerator() {
             <label className="text-sm font-medium">{t('jwt.generatedToken')}</label>
             <button
               onClick={copyToken}
-              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'}`}
             >
               {copied ? t('copied') : t('copy')}
             </button>
           </div>
-          <div className="p-4 bg-gray-800 rounded-lg break-all font-mono text-sm">
+          <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg break-all font-mono text-sm">
             <span className="text-red-400">{token.split('.')[0]}</span>.
             <span className="text-purple-400">{token.split('.')[1]}</span>.
             <span className="text-blue-400">{token.split('.')[2]}</span>
@@ -163,9 +163,9 @@ export default function JwtGenerator() {
         </div>
       )}
 
-      <div className="p-4 bg-gray-800/50 rounded-lg text-sm">
-        <h3 className="font-medium mb-2">{t('jwt.commonClaims')}</h3>
-        <div className="grid grid-cols-2 gap-2 text-gray-300">
+      <div className="p-4 bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg text-sm">
+        <h3 className="font-medium mb-2 text-gray-900 dark:text-white">{t('jwt.commonClaims')}</h3>
+        <div className="grid grid-cols-2 gap-2 text-gray-600 dark:text-gray-300">
           <div><code className="text-blue-400">iss</code> - {t('jwt.claims.iss')}</div>
           <div><code className="text-blue-400">sub</code> - {t('jwt.claims.sub')}</div>
           <div><code className="text-blue-400">aud</code> - {t('jwt.claims.aud')}</div>

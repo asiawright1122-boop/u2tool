@@ -64,19 +64,19 @@ export default function PopularToolsCarousel({
                   <Link
                     key={tool.slug}
                     href={`/tools/${tool.slug}`}
-                    className="group p-6 bg-gray-800/50 border border-gray-700/50 rounded-xl hover:bg-gray-800 hover:border-gray-600 hover:shadow-xl hover:shadow-black/20 transition-all"
+                    className="group p-6 bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-black/20 transition-all"
                   >
                     <div className="flex items-start gap-4">
                       <span className="text-4xl group-hover:scale-110 transition-transform">{tool.icon}</span>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg mb-1 group-hover:text-blue-400 transition-colors">
+                        <h3 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                           {t(`tools.${tool.slug}.name`)}
                         </h3>
-                        <p className="text-sm text-gray-300 line-clamp-2">
+                        <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
                           {t(`tools.${tool.slug}.description`)}
                         </p>
-                        <span className="inline-flex items-center gap-1 mt-3 text-xs text-gray-400">
-                          <span className="px-2 py-0.5 bg-gray-700/50 rounded">{t(`categories.${tool.category}`)}</span>
+                        <span className="inline-flex items-center gap-1 mt-3 text-xs text-gray-500 dark:text-gray-400">
+                          <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-700/50 rounded">{t(`categories.${tool.category}`)}</span>
                         </span>
                       </div>
                     </div>
@@ -92,7 +92,7 @@ export default function PopularToolsCarousel({
       <div className="flex items-center justify-center gap-4 mt-8">
         <button
           onClick={goToPrev}
-          className="p-2 rounded-lg bg-gray-800/50 border border-gray-700/50 hover:bg-gray-700 hover:border-gray-600 transition-colors"
+          className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 hover:bg-gray-200 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors text-gray-700 dark:text-white"
           aria-label="Previous"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,7 +109,7 @@ export default function PopularToolsCarousel({
               className={`w-2 h-2 rounded-full transition-all ${
                 currentPage === index 
                   ? 'w-6 bg-blue-500' 
-                  : 'bg-gray-600 hover:bg-gray-500'
+                  : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
               }`}
               aria-label={`Page ${index + 1}`}
             />
@@ -118,7 +118,7 @@ export default function PopularToolsCarousel({
 
         <button
           onClick={goToNext}
-          className="p-2 rounded-lg bg-gray-800/50 border border-gray-700/50 hover:bg-gray-700 hover:border-gray-600 transition-colors"
+          className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 hover:bg-gray-200 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors text-gray-700 dark:text-white"
           aria-label="Next"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,7 +128,7 @@ export default function PopularToolsCarousel({
       </div>
 
       {/* Page Info */}
-      <p className="text-center text-sm text-gray-400 mt-3">
+      <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">
         {currentPage + 1} / {totalPages}
       </p>
     </div>

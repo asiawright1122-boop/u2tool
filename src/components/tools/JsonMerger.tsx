@@ -73,11 +73,11 @@ export default function JsonMerger() {
   return (
     <div className="space-y-4">
       <div className="flex gap-4 items-center">
-        <label className="text-sm text-gray-300">{t('strategy')}:</label>
+        <label className="text-sm text-gray-600 dark:text-gray-300">{t('strategy')}:</label>
         <select
           value={strategy}
           onChange={(e) => setStrategy(e.target.value as MergeStrategy)}
-          className="bg-gray-700 border border-gray-600 rounded px-3 py-1 text-white"
+          className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-900 dark:text-white"
         >
           <option value="shallow">{t('shallow')}</option>
           <option value="deep">{t('deep')}</option>
@@ -87,24 +87,24 @@ export default function JsonMerger() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             JSON 1
           </label>
           <textarea
             value={json1}
             onChange={(e) => setJson1(e.target.value)}
-            className="w-full h-48 bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white font-mono text-sm focus:outline-none focus:border-blue-500"
+            className="w-full h-48 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-blue-500"
             placeholder={t('inputPlaceholder')}
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             JSON 2
           </label>
           <textarea
             value={json2}
             onChange={(e) => setJson2(e.target.value)}
-            className="w-full h-48 bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white font-mono text-sm focus:outline-none focus:border-blue-500"
+            className="w-full h-48 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-900 dark:text-white font-mono text-sm focus:outline-none focus:border-blue-500"
             placeholder={t('inputPlaceholder')}
           />
         </div>
@@ -118,7 +118,7 @@ export default function JsonMerger() {
       </button>
 
       {error && (
-        <div className="p-3 bg-red-900/30 border border-red-700 rounded-lg text-red-400">
+        <div className="p-3 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400">
           {error}
         </div>
       )}
@@ -126,21 +126,21 @@ export default function JsonMerger() {
       {output && (
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">{t('result')}</label>
+            <label className="text-sm font-medium text-gray-600 dark:text-gray-300">{t('result')}</label>
             <button
               onClick={handleCopy}
-              className="text-sm text-blue-400 hover:text-blue-300"
+              className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
             >
               {t('copy')}
             </button>
           </div>
-          <pre className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-green-400 font-mono text-sm overflow-auto max-h-64">
+          <pre className="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-3 text-green-600 dark:text-green-400 font-mono text-sm overflow-auto max-h-64">
             {output}
           </pre>
         </div>
       )}
 
-      <div className="text-sm text-gray-400 space-y-1">
+      <div className="text-sm text-gray-500 dark:text-gray-400 space-y-1">
         <p><strong>{t('shallow')}:</strong> {t('shallowDesc')}</p>
         <p><strong>{t('deep')}:</strong> {t('deepDesc')}</p>
         <p><strong>{t('concat')}:</strong> {t('concatDesc')}</p>

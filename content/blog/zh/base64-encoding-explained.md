@@ -101,10 +101,3 @@ JSON Web Token使用Base64URL编码。
 ## 总结
 
 Base64是一种简单但非常实用的编码方式。理解其原理可以帮助你更好地处理数据传输问题。推荐使用 [U2Tool Base64工具](https://www.u2tool.com/zh/tools/base64-encoder) 进行日常的编码解码工作。
-
----
-
-**相关工具**：
-- [Base64解码器](https://www.u2tool.com/zh/tools/base64-decoder)
-- [URL编码器](https://www.u2tool.com/zh/tools/url-encoder)
-- [图片转Base64](https://www.u2tool.com/zh/tools/image-to-base64)

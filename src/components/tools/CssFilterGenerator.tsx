@@ -86,9 +86,9 @@ export default function CssFilterGenerator() {
           <div className="flex flex-wrap gap-2 mb-4">
             {presets.map((preset) => (
               <button key={preset.nameKey} onClick={() => applyPreset(preset.values)}
-                className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm">{t(preset.nameKey)}</button>
+                className="px-3 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-900 dark:text-gray-100">{t(preset.nameKey)}</button>
             ))}
-            <button onClick={reset} className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded text-sm">{t('reset')}</button>
+            <button onClick={reset} className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded text-sm text-white">{t('reset')}</button>
           </div>
 
           {[
@@ -103,7 +103,7 @@ export default function CssFilterGenerator() {
             { label: t('opacity'), value: opacity, set: setOpacity, min: 0, max: 100, unit: '%' },
           ].map(({ label, value, set, min, max, unit }) => (
             <div key={label}>
-              <label className="block text-sm text-gray-300 mb-1">{label}: {value}{unit}</label>
+              <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{label}: {value}{unit}</label>
               <input type="range" min={min} max={max} value={value}
                 onChange={(e) => set(parseInt(e.target.value))} className="w-full" />
             </div>
@@ -111,17 +111,17 @@ export default function CssFilterGenerator() {
         </div>
 
         <div className="space-y-4">
-          <div className="bg-gray-700 rounded-lg p-4">
+          <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
             <input type="file" ref={fileInputRef} onChange={handleFileUpload} accept="image/*" className="hidden" />
             <button onClick={() => fileInputRef.current?.click()}
-              className="mb-4 px-4 py-2 bg-gray-600 hover:bg-gray-9000 rounded text-sm">{t('uploadImage')}</button>
+              className="mb-4 px-4 py-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 rounded text-sm text-gray-900 dark:text-gray-100">{t('uploadImage')}</button>
             <img src={imageUrl} alt="Preview" className="w-full rounded-lg"
               style={{ filter: getFilterString() }} />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">{t('output')}</label>
-            <pre className="bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-400">{getCss()}</pre>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('output')}</label>
+            <pre className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400">{getCss()}</pre>
           </div>
 
           <button onClick={copyToClipboard}

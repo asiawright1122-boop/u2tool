@@ -137,16 +137,16 @@ export default function MarkdownTableGenerator() {
       </div>
 
       {/* Alignment Controls */}
-      <div className="p-4 bg-gray-800 rounded-lg">
-        <h3 className="text-sm font-medium mb-3">{tm('columnAlignment')}</h3>
+      <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <h3 className="text-sm font-medium mb-3 text-gray-900 dark:text-white">{tm('columnAlignment')}</h3>
         <div className="flex flex-wrap gap-4">
           {alignments.map((align, i) => (
             <div key={i} className="flex items-center gap-2">
-              <span className="text-sm text-gray-300">{tm('col')} {i + 1}:</span>
+              <span className="text-sm text-gray-600 dark:text-gray-300">{tm('col')} {i + 1}:</span>
               <select
                 value={align}
                 onChange={(e) => updateAlignment(i, e.target.value as Alignment)}
-                className="bg-gray-700 border border-gray-600 rounded px-2 py-1 text-sm"
+                className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-2 py-1 text-sm text-gray-900 dark:text-white"
               >
                 <option value="left">{tm('left')}</option>
                 <option value="center">{tm('center')}</option>
@@ -162,25 +162,25 @@ export default function MarkdownTableGenerator() {
         <table className="w-full border-collapse">
           <tbody>
             {data.map((row, rowIndex) => (
-              <tr key={rowIndex} className={rowIndex === 0 ? 'bg-gray-700' : ''}>
+              <tr key={rowIndex} className={rowIndex === 0 ? 'bg-gray-200 dark:bg-gray-700' : ''}>
                 {row.map((cell, colIndex) => (
-                  <td key={colIndex} className="border border-gray-600 p-0">
+                  <td key={colIndex} className="border border-gray-300 dark:border-gray-600 p-0">
                     <input
                       type="text"
                       value={cell}
                       onChange={(e) => updateCell(rowIndex, colIndex, e.target.value)}
-                      className={`w-full px-3 py-2 bg-transparent border-none focus:outline-none focus:ring-1 focus:ring-blue-500 ${
+                      className={`w-full px-3 py-2 bg-transparent border-none focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-900 dark:text-white ${
                         rowIndex === 0 ? 'font-bold' : ''
                       }`}
                       placeholder={rowIndex === 0 ? tm('header') : tm('cell')}
                     />
                   </td>
                 ))}
-                <td className="border border-gray-600 p-1 w-10">
+                <td className="border border-gray-300 dark:border-gray-600 p-1 w-10">
                   {rowIndex > 0 && (
                     <button
                       onClick={() => removeRow(rowIndex)}
-                      className="text-red-400 hover:text-red-300 p-1"
+                      className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 p-1"
                       title={tm('removeRow')}
                     >
                       ✕
@@ -191,10 +191,10 @@ export default function MarkdownTableGenerator() {
             ))}
             <tr>
               {data[0]?.map((_, colIndex) => (
-                <td key={colIndex} className="border border-gray-600 p-1 text-center">
+                <td key={colIndex} className="border border-gray-300 dark:border-gray-600 p-1 text-center">
                   <button
                     onClick={() => removeColumn(colIndex)}
-                    className="text-red-400 hover:text-red-300 p-1 text-sm"
+                    className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 p-1 text-sm"
                     title={tm('removeColumn')}
                   >
                     ✕
@@ -225,15 +225,15 @@ export default function MarkdownTableGenerator() {
 
       {/* Preview */}
       <div>
-        <h3 className="text-sm font-medium mb-2">{tm('preview')}</h3>
-        <div className="p-4 bg-gray-800 rounded-lg overflow-x-auto">
+        <h3 className="text-sm font-medium mb-2 text-gray-900 dark:text-white">{tm('preview')}</h3>
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
               <tr>
                 {data[0]?.map((cell, i) => (
                   <th
                     key={i}
-                    className={`border border-gray-600 px-4 py-2 bg-gray-700 ${
+                    className={`border border-gray-300 dark:border-gray-600 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white ${
                       alignments[i] === 'center' ? 'text-center' : 
                       alignments[i] === 'right' ? 'text-right' : 'text-left'
                     }`}
@@ -249,7 +249,7 @@ export default function MarkdownTableGenerator() {
                   {row.map((cell, colIndex) => (
                     <td
                       key={colIndex}
-                      className={`border border-gray-600 px-4 py-2 ${
+                      className={`border border-gray-300 dark:border-gray-600 px-4 py-2 text-gray-900 dark:text-white ${
                         alignments[colIndex] === 'center' ? 'text-center' : 
                         alignments[colIndex] === 'right' ? 'text-right' : 'text-left'
                       }`}

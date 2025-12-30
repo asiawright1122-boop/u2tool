@@ -17,9 +17,9 @@ function parseMarkdown(md: string): string {
     // Italic
     .replace(/\*(.*?)\*/gim, '<em>$1</em>')
     // Code blocks
-    .replace(/```([\s\S]*?)```/gim, '<pre class="bg-gray-900 p-3 rounded my-2 overflow-x-auto"><code>$1</code></pre>')
+    .replace(/```([\s\S]*?)```/gim, '<pre class="bg-gray-100 dark:bg-gray-900 p-3 rounded my-2 overflow-x-auto"><code>$1</code></pre>')
     // Inline code
-    .replace(/`(.*?)`/gim, '<code class="bg-gray-900 px-1 rounded">$1</code>')
+    .replace(/`(.*?)`/gim, '<code class="bg-gray-100 dark:bg-gray-900 px-1 rounded">$1</code>')
     // Links - 添加 rel="noopener noreferrer" 提高安全性
     .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>')
     // Unordered lists
@@ -68,7 +68,7 @@ code blocks
             <label className="text-sm font-medium">{t('markdown.editor')}</label>
           </div>
           <textarea
-            className="h-96 w-full bg-gray-900 border border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-100 focus:outline-none focus:border-blue-500 resize-none"
+            className="h-96 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-500 resize-none"
             value={markdown}
             onChange={(e) => setMarkdown(e.target.value)}
             placeholder={t('inputPlaceholder')}
@@ -87,7 +87,7 @@ code blocks
             </button>
           </div>
           <div
-            className="h-96 bg-gray-900 border border-gray-700 rounded-lg p-4 overflow-auto text-gray-100"
+            className="h-96 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-4 overflow-auto text-gray-900 dark:text-gray-100"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>

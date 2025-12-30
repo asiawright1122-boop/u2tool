@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 散点数据点类型
 interface ScatterPoint {
@@ -122,6 +123,7 @@ export default function ScatterChartGenerator() {
 
   const chartRef = useRef<ReactECharts>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const chartTheme = useChartTheme();
 
   // 生成唯一 ID
   const generateId = useCallback(() => {
@@ -181,15 +183,13 @@ export default function ScatterChartGenerator() {
   // 生成 ECharts 配置
   const getChartOption = useCallback((): EChartsOption => {
     const colors = colorThemes[colorTheme];
-    const textColor = '#e5e7eb';
-    const axisLineColor = '#4b5563';
 
     return {
-      backgroundColor: '#1f2937',
+      backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: '#fff' },
+        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
       },
       tooltip: {
         trigger: 'item',
@@ -202,7 +202,7 @@ export default function ScatterChartGenerator() {
       legend: {
         show: showLegend,
         bottom: 10,
-        textStyle: { color: textColor },
+        textStyle: { color: chartTheme.legendText },
       },
       grid: {
         left: '3%',
@@ -214,18 +214,18 @@ export default function ScatterChartGenerator() {
       xAxis: {
         type: 'value',
         name: xAxisName,
-        nameTextStyle: { color: textColor },
-        splitLine: { show: showGrid, lineStyle: { color: axisLineColor } },
-        axisLine: { show: true, lineStyle: { color: axisLineColor } },
-        axisLabel: { color: textColor },
+        nameTextStyle: { color: chartTheme.axisLabelColor },
+        splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
+        axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
+        axisLabel: { color: chartTheme.axisLabelColor },
       },
       yAxis: {
         type: 'value',
         name: yAxisName,
-        nameTextStyle: { color: textColor },
-        splitLine: { show: showGrid, lineStyle: { color: axisLineColor } },
-        axisLine: { show: true, lineStyle: { color: axisLineColor } },
-        axisLabel: { color: textColor },
+        nameTextStyle: { color: chartTheme.axisLabelColor },
+        splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
+        axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
+        axisLabel: { color: chartTheme.axisLabelColor },
       },
       color: colors,
       series: series.map((s, index) => ({
@@ -236,7 +236,7 @@ export default function ScatterChartGenerator() {
         itemStyle: { color: colors[index % colors.length] },
       })),
     };
-  }, [series, chartTitle, colorTheme, showLegend, showGrid, symbolSize, xAxisName, yAxisName]);
+  }, [series, chartTitle, colorTheme, showLegend, showGrid, symbolSize, xAxisName, yAxisName, chartTheme]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
@@ -245,7 +245,7 @@ export default function ScatterChartGenerator() {
       const url = echartInstance.getDataURL({
         type: format === 'svg' ? 'svg' : 'png',
         pixelRatio: 2,
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
       });
       const link = document.createElement('a');
       link.download = `scatter-chart-${Date.now()}.${format}`;
@@ -373,7 +373,7 @@ export default function ScatterChartGenerator() {
           {/* 图表设置 */}
           <div>
             <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-            <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
@@ -466,17 +466,17 @@ export default function ScatterChartGenerator() {
 
             <div className="space-y-3 max-h-80 overflow-y-auto">
               {series.map((s, sIndex) => (
-                <div key={s.id} className="bg-gray-900 border border-gray-700 rounded-lg p-3">
+                <div key={s.id} className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3">
                   <div className="flex items-center gap-2 mb-2">
                     <input
                       type="text"
                       value={s.name}
                       onChange={(e) => updateSeriesName(s.id, e.target.value)}
-                      className="flex-1 px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                      className="flex-1 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                     />
                     <button
                       onClick={() => deleteSeries(s.id)}
-                      className="text-red-400 hover:text-red-300 disabled:opacity-50"
+                      className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 disabled:opacity-50"
                       disabled={series.length <= 1}
                     >
                       ✕
@@ -484,7 +484,7 @@ export default function ScatterChartGenerator() {
                   </div>
                   <table className="w-full text-sm">
                     <thead>
-                      <tr className="border-b border-gray-700">
+                      <tr className="border-b border-gray-200 dark:border-gray-700">
                         <th className="text-left py-1 px-1 font-medium">X</th>
                         <th className="text-left py-1 px-1 font-medium">Y</th>
                         <th className="w-8"></th>
@@ -492,13 +492,13 @@ export default function ScatterChartGenerator() {
                     </thead>
                     <tbody>
                       {s.data.map((p) => (
-                        <tr key={p.id} className="border-b border-gray-800 last:border-b-0">
+                        <tr key={p.id} className="border-b border-gray-200 dark:border-gray-800 last:border-b-0">
                           <td className="py-1 px-1">
                             <input
                               type="number"
                               value={p.x}
                               onChange={(e) => updatePoint(sIndex, p.id, 'x', Number(e.target.value) || 0)}
-                              className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                              className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                             />
                           </td>
                           <td className="py-1 px-1">
@@ -506,13 +506,13 @@ export default function ScatterChartGenerator() {
                               type="number"
                               value={p.y}
                               onChange={(e) => updatePoint(sIndex, p.id, 'y', Number(e.target.value) || 0)}
-                              className="w-full px-2 py-1 bg-gray-800 border border-gray-600 rounded text-gray-100 text-sm"
+                              className="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                             />
                           </td>
                           <td className="py-1 px-1">
                             <button
                               onClick={() => deletePoint(sIndex, p.id)}
-                              className="text-red-400 hover:text-red-300 disabled:opacity-50 text-xs"
+                              className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 disabled:opacity-50 text-xs"
                               disabled={s.data.length <= 1}
                             >
                               ✕
@@ -524,7 +524,7 @@ export default function ScatterChartGenerator() {
                   </table>
                   <button
                     onClick={() => addPoint(sIndex)}
-                    className="mt-2 text-xs text-blue-400 hover:text-blue-300"
+                    className="mt-2 text-xs text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
                   >
                     + {t('addPoint')}
                   </button>
@@ -537,7 +537,7 @@ export default function ScatterChartGenerator() {
         {/* 右侧：图表预览 */}
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
+          <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
@@ -549,9 +549,9 @@ export default function ScatterChartGenerator() {
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
         <p className="font-medium mb-1">💡 {t('tips.title')}</p>
-        <ul className="space-y-0.5 text-blue-400">
+        <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

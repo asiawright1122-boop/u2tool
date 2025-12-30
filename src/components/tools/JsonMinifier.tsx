@@ -107,18 +107,18 @@ export default function JsonMinifier() {
       </div>
 
       {stats && (
-        <div className="grid grid-cols-3 gap-4 p-4 bg-gray-800 rounded-lg">
+        <div className="grid grid-cols-3 gap-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
           <div className="text-center">
-            <div className="text-2xl font-bold text-blue-400">{stats.original}</div>
-            <div className="text-sm text-gray-300">Original (bytes)</div>
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.original}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Original (bytes)</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-green-400">{stats.minified}</div>
-            <div className="text-sm text-gray-300">Minified (bytes)</div>
+            <div className="text-2xl font-bold text-green-600 dark:text-green-400">{stats.minified}</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Minified (bytes)</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-purple-400">{stats.saved}%</div>
-            <div className="text-sm text-gray-300">Saved</div>
+            <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{stats.saved}%</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Saved</div>
           </div>
         </div>
       )}

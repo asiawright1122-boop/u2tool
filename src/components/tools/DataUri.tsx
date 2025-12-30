@@ -40,28 +40,28 @@ export default function DataUri() {
 
   return (
     <div className="space-y-4">
-      <div className="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500 transition-colors" onClick={() => fileRef.current?.click()}>
+      <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500 transition-colors bg-gray-50 dark:bg-transparent" onClick={() => fileRef.current?.click()}>
         <input ref={fileRef} type="file" onChange={handleFile} className="hidden" />
-        <p className="text-gray-300">{t('dataUri.dropzone')}</p>
+        <p className="text-gray-600 dark:text-gray-300">{t('dataUri.dropzone')}</p>
       </div>
       {fileInfo && (
-        <div className="bg-gray-800 rounded-lg p-4 grid grid-cols-3 gap-4 text-sm">
-          <div><span className="text-gray-300">{t('dataUri.fileName')}:</span> {fileInfo.name}</div>
-          <div><span className="text-gray-300">{t('dataUri.fileSize')}:</span> {fileInfo.size}</div>
-          <div><span className="text-gray-300">{t('dataUri.fileType')}:</span> {fileInfo.type}</div>
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 grid grid-cols-3 gap-4 text-sm text-gray-900 dark:text-white">
+          <div><span className="text-gray-600 dark:text-gray-300">{t('dataUri.fileName')}:</span> {fileInfo.name}</div>
+          <div><span className="text-gray-600 dark:text-gray-300">{t('dataUri.fileSize')}:</span> {fileInfo.size}</div>
+          <div><span className="text-gray-600 dark:text-gray-300">{t('dataUri.fileType')}:</span> {fileInfo.type}</div>
         </div>
       )}
       <div>
-        <label className="block text-sm font-medium mb-2">{td('output')}</label>
-        <textarea value={dataUri} readOnly className="w-full h-40 p-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-xs break-all" />
+        <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">{td('output')}</label>
+        <textarea value={dataUri} readOnly className="w-full h-40 p-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-xs break-all text-gray-900 dark:text-white" />
       </div>
       <div className="flex gap-2">
         <button onClick={copy} disabled={!dataUri} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50">{copied ? t('copied') : t('copy')}</button>
-        <button onClick={clear} className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">{t('clear')}</button>
+        <button onClick={clear} className="px-4 py-2 bg-gray-500 dark:bg-gray-600 text-white rounded hover:bg-gray-600 dark:hover:bg-gray-700">{t('clear')}</button>
       </div>
       {dataUri && dataUri.startsWith('data:image') && (
-        <div className="bg-gray-800 rounded-lg p-4">
-          <p className="text-sm text-gray-300 mb-2">{t('dataUri.preview')}</p>
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('dataUri.preview')}</p>
           <img src={dataUri} alt="Preview" className="max-w-full max-h-64 mx-auto" />
         </div>
       )}

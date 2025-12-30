@@ -162,8 +162,8 @@ export default function Base58() {
         />
       </div>
 
-      <div className="p-4 bg-gray-800/50 rounded-lg text-sm text-gray-300">
-        <h3 className="font-medium text-white mb-2">{tb('aboutTitle')}</h3>
+      <div className="p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-sm text-gray-600 dark:text-gray-300">
+        <h3 className="font-medium text-gray-900 dark:text-white mb-2">{tb('aboutTitle')}</h3>
         <p className="mb-2">
           {tb('aboutText')}
         </p>

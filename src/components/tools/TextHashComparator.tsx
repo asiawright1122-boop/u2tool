@@ -46,7 +46,7 @@ export default function TextHashComparator() {
         <select
           value={algorithm}
           onChange={(e) => setAlgorithm(e.target.value)}
-          className="bg-gray-900 border border-gray-700 rounded-lg px-4 py-2"
+          className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 text-gray-900 dark:text-gray-100"
         >
           {algorithms.map(algo => (
             <option key={algo} value={algo}>{algo}</option>
@@ -56,33 +56,33 @@ export default function TextHashComparator() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('hashCompare.text1')}
           </label>
           <textarea
             value={text1}
             onChange={(e) => setText1(e.target.value)}
             placeholder={t('hashCompare.placeholder')}
-            className="w-full h-32 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"
+            className="w-full h-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"
           />
           {hash1 && (
-            <div className="mt-2 p-2 bg-gray-800 rounded text-xs font-mono break-all text-gray-300">
+            <div className="mt-2 p-2 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono break-all text-gray-600 dark:text-gray-300">
               {hash1}
             </div>
           )}
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
             {t('hashCompare.text2')}
           </label>
           <textarea
             value={text2}
             onChange={(e) => setText2(e.target.value)}
             placeholder={t('hashCompare.placeholder')}
-            className="w-full h-32 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"
+            className="w-full h-32 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"
           />
           {hash2 && (
-            <div className="mt-2 p-2 bg-gray-800 rounded text-xs font-mono break-all text-gray-300">
+            <div className="mt-2 p-2 bg-gray-100 dark:bg-gray-800 rounded text-xs font-mono break-all text-gray-600 dark:text-gray-300">
               {hash2}
             </div>
           )}
@@ -92,7 +92,7 @@ export default function TextHashComparator() {
       <button
         onClick={handleCompare}
         disabled={isComparing || !text1 || !text2}
-        className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-700 rounded-lg font-medium transition-colors"
+        className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 dark:disabled:bg-gray-700 text-white disabled:text-gray-500 dark:disabled:text-gray-400 rounded-lg font-medium transition-colors"
       >
         {isComparing ? t('hashCompare.comparing') : t('hashCompare.compare')}
       </button>

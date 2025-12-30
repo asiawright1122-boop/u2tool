@@ -119,7 +119,7 @@ export default function AsciiTable() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder={t('searchPlaceholder')}
-            className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="w-full p-2 border border-gray-200 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
         </div>
         <label className="flex items-center gap-2 cursor-pointer">
@@ -129,7 +129,7 @@ export default function AsciiTable() {
             onChange={(e) => setShowExtended(e.target.checked)}
             className="w-4 h-4 text-blue-600 rounded"
           />
-          <span className="text-sm text-gray-300">{t('showExtended')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('showExtended')}</span>
         </label>
       </div>
 
@@ -146,36 +146,36 @@ export default function AsciiTable() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
             <div>
-              <span className="text-gray-300">{t('decimal')}:</span>
+              <span className="text-gray-600 dark:text-gray-300">{t('decimal')}:</span>
               <span className="ml-2 font-mono text-gray-100">{selectedChar.dec}</span>
             </div>
             <div>
-              <span className="text-gray-300">{t('hex')}:</span>
+              <span className="text-gray-600 dark:text-gray-300">{t('hex')}:</span>
               <span className="ml-2 font-mono text-gray-100">0x{selectedChar.hex}</span>
             </div>
             <div>
-              <span className="text-gray-300">{t('octal')}:</span>
+              <span className="text-gray-600 dark:text-gray-300">{t('octal')}:</span>
               <span className="ml-2 font-mono text-gray-100">0{selectedChar.oct}</span>
             </div>
             <div>
-              <span className="text-gray-300">{t('binary')}:</span>
+              <span className="text-gray-600 dark:text-gray-300">{t('binary')}:</span>
               <span className="ml-2 font-mono text-gray-100">{selectedChar.bin}</span>
             </div>
           </div>
-          <p className="mt-2 text-gray-300">{selectedChar.description}</p>
+          <p className="mt-2 text-gray-600 dark:text-gray-300">{selectedChar.description}</p>
         </div>
       )}
 
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-gray-800">
-              <th className="p-2 text-left font-medium text-gray-200">{t('decimal')}</th>
-              <th className="p-2 text-left font-medium text-gray-200">{t('hex')}</th>
-              <th className="p-2 text-left font-medium text-gray-200">{t('octal')}</th>
-              <th className="p-2 text-left font-medium text-gray-200">{t('binary')}</th>
-              <th className="p-2 text-left font-medium text-gray-200">{t('char')}</th>
-              <th className="p-2 text-left font-medium text-gray-200">{t('descriptionHeader')}</th>
+            <tr className="bg-gray-100 dark:bg-gray-800">
+              <th className="p-2 text-left font-medium text-gray-700 dark:text-gray-200">{t('decimal')}</th>
+              <th className="p-2 text-left font-medium text-gray-700 dark:text-gray-200">{t('hex')}</th>
+              <th className="p-2 text-left font-medium text-gray-700 dark:text-gray-200">{t('octal')}</th>
+              <th className="p-2 text-left font-medium text-gray-700 dark:text-gray-200">{t('binary')}</th>
+              <th className="p-2 text-left font-medium text-gray-700 dark:text-gray-200">{t('char')}</th>
+              <th className="p-2 text-left font-medium text-gray-700 dark:text-gray-200">{t('descriptionHeader')}</th>
             </tr>
           </thead>
           <tbody>
@@ -183,12 +183,12 @@ export default function AsciiTable() {
               <tr
                 key={c.dec}
                 onClick={() => setSelectedChar(c)}
-                className="border-b border-gray-700 hover:bg-gray-800 cursor-pointer"
+                className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
               >
-                <td className="p-2 font-mono text-gray-100">{c.dec}</td>
-                <td className="p-2 font-mono text-gray-100">0x{c.hex}</td>
-                <td className="p-2 font-mono text-gray-100">0{c.oct}</td>
-                <td className="p-2 font-mono text-gray-100">{c.bin}</td>
+                <td className="p-2 font-mono text-gray-900 dark:text-gray-100">{c.dec}</td>
+                <td className="p-2 font-mono text-gray-900 dark:text-gray-100">0x{c.hex}</td>
+                <td className="p-2 font-mono text-gray-900 dark:text-gray-100">0{c.oct}</td>
+                <td className="p-2 font-mono text-gray-900 dark:text-gray-100">{c.bin}</td>
                 <td className="p-2">
                   <button
                     onClick={(e) => {
@@ -197,12 +197,12 @@ export default function AsciiTable() {
                         copyToClipboard(String.fromCharCode(c.dec));
                       }
                     }}
-                    className="px-2 py-1 bg-gray-700 rounded font-mono text-gray-100 hover:bg-gray-600"
+                    className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded font-mono text-gray-900 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600"
                   >
                     {c.char}
                   </button>
                 </td>
-                <td className="p-2 text-gray-300 truncate max-w-xs">{c.description}</td>
+                <td className="p-2 text-gray-600 dark:text-gray-300 truncate max-w-xs">{c.description}</td>
               </tr>
             ))}
           </tbody>
@@ -210,37 +210,37 @@ export default function AsciiTable() {
       </div>
 
       {filteredChars.length === 0 && (
-        <div className="text-center py-8 text-gray-300">
+        <div className="text-center py-8 text-gray-600 dark:text-gray-300">
           {t('noResults')}
         </div>
       )}
 
-      <div className="p-4 bg-gray-800 rounded-lg">
-        <h3 className="font-medium text-gray-100 mb-2">{t('quickReference')}</h3>
+      <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+        <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-2">{t('quickReference')}</h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
           <div>
-            <span className="text-gray-300">0-31:</span>
-            <span className="ml-2 text-gray-100">{t('controlChars')}</span>
+            <span className="text-gray-600 dark:text-gray-300">0-31:</span>
+            <span className="ml-2 text-gray-900 dark:text-gray-100">{t('controlChars')}</span>
           </div>
           <div>
-            <span className="text-gray-300">32-47:</span>
-            <span className="ml-2 text-gray-100">{t('punctuation')}</span>
+            <span className="text-gray-600 dark:text-gray-300">32-47:</span>
+            <span className="ml-2 text-gray-900 dark:text-gray-100">{t('punctuation')}</span>
           </div>
           <div>
-            <span className="text-gray-300">48-57:</span>
-            <span className="ml-2 text-gray-100">{t('digits')}</span>
+            <span className="text-gray-600 dark:text-gray-300">48-57:</span>
+            <span className="ml-2 text-gray-900 dark:text-gray-100">{t('digits')}</span>
           </div>
           <div>
-            <span className="text-gray-300">65-90:</span>
-            <span className="ml-2 text-gray-100">{t('uppercase')}</span>
+            <span className="text-gray-600 dark:text-gray-300">65-90:</span>
+            <span className="ml-2 text-gray-900 dark:text-gray-100">{t('uppercase')}</span>
           </div>
           <div>
-            <span className="text-gray-300">97-122:</span>
-            <span className="ml-2 text-gray-100">{t('lowercase')}</span>
+            <span className="text-gray-600 dark:text-gray-300">97-122:</span>
+            <span className="ml-2 text-gray-900 dark:text-gray-100">{t('lowercase')}</span>
           </div>
           <div>
-            <span className="text-gray-300">128-255:</span>
-            <span className="ml-2 text-gray-100">{t('extended')}</span>
+            <span className="text-gray-600 dark:text-gray-300">128-255:</span>
+            <span className="ml-2 text-gray-900 dark:text-gray-100">{t('extended')}</span>
           </div>
         </div>
       </div>

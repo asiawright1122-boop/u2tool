@@ -66,22 +66,22 @@ export default function RegexTester() {
     <div className="space-y-4">
       {/* Pattern Input */}
       <div>
-        <label className="block text-sm font-medium mb-2">{t('regex.pattern')}</label>
+        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('regex.pattern')}</label>
         <div className="flex items-center gap-2">
-          <span className="text-gray-300">/</span>
+          <span className="text-gray-500 dark:text-gray-300">/</span>
           <input
             type="text"
             value={pattern}
             onChange={(e) => setPattern(e.target.value)}
-            className="flex-1 px-3 py-2 bg-gray-900 border border-gray-700 rounded font-mono"
+            className="flex-1 px-3 py-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded font-mono text-gray-900 dark:text-white"
             placeholder={t('regex.pattern')}
           />
-          <span className="text-gray-300">/</span>
+          <span className="text-gray-500 dark:text-gray-300">/</span>
           <input
             type="text"
             value={flags}
             onChange={(e) => setFlags(e.target.value)}
-            className="w-16 px-3 py-2 bg-gray-900 border border-gray-700 rounded font-mono"
+            className="w-16 px-3 py-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded font-mono text-gray-900 dark:text-white"
             placeholder="flags"
           />
         </div>
@@ -109,7 +109,7 @@ export default function RegexTester() {
 
       {/* Error */}
       {error && (
-        <div className="p-3 bg-red-900/50 border border-red-700 rounded-lg text-red-300 text-sm">
+        <div className="p-3 bg-red-100 dark:bg-red-900/50 border border-red-300 dark:border-red-700 rounded-lg text-red-600 dark:text-red-300 text-sm">
           {error}
         </div>
       )}
@@ -127,11 +127,11 @@ export default function RegexTester() {
 
       {/* Highlighted Result */}
       <div>
-        <label className="block text-sm font-medium mb-2">
+        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
           {t('result')} ({matches.length} {t('match')}{matches.length !== 1 ? 'es' : ''})
         </label>
         <div
-          className="p-4 bg-gray-900 border border-gray-700 rounded-lg font-mono text-sm whitespace-pre-wrap"
+          className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm whitespace-pre-wrap text-gray-900 dark:text-white"
           dangerouslySetInnerHTML={{ __html: highlightedText }}
         />
       </div>
@@ -139,13 +139,13 @@ export default function RegexTester() {
       {/* Matches List */}
       {matches.length > 0 && (
         <div>
-          <label className="block text-sm font-medium mb-2">{t('matches')}</label>
+          <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('matches')}</label>
           <div className="space-y-2">
             {matches.map((m, i) => (
-              <div key={i} className="p-2 bg-gray-900 border border-gray-700 rounded text-sm">
-                <span className="text-gray-300">#{i + 1}</span>
-                <span className="mx-2 text-blue-400 font-mono">&quot;{m.match}&quot;</span>
-                <span className="text-gray-300">{t('regex.atIndex')} {m.index}</span>
+              <div key={i} className="p-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded text-sm">
+                <span className="text-gray-500 dark:text-gray-300">#{i + 1}</span>
+                <span className="mx-2 text-blue-600 dark:text-blue-400 font-mono">&quot;{m.match}&quot;</span>
+                <span className="text-gray-500 dark:text-gray-300">{t('regex.atIndex')} {m.index}</span>
               </div>
             ))}
           </div>

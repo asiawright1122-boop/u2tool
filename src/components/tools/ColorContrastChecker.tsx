@@ -127,47 +127,47 @@ export default function ColorContrastChecker() {
       </div>
 
       {/* Contrast Ratio */}
-      <div className="p-6 bg-gray-800 rounded-lg text-center">
+      <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg text-center">
         <div className="text-5xl font-bold mb-2" style={{
           color: ratio >= 7 ? '#22c55e' : ratio >= 4.5 ? '#eab308' : '#ef4444'
         }}>
           {ratio.toFixed(2)}:1
         </div>
-        <div className="text-gray-300">{t('colorContrast.contrastRatio')}</div>
+        <div className="text-gray-600 dark:text-gray-300">{t('colorContrast.contrastRatio')}</div>
       </div>
 
       {/* WCAG Results */}
       <div className="grid grid-cols-2 gap-4">
-        <div className="p-4 bg-gray-800 rounded-lg">
-          <h3 className="font-medium mb-3">{t('colorContrast.normalText')}</h3>
-          <div className="space-y-2">
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+          <h3 className="font-medium mb-3 text-gray-900 dark:text-white">{t('colorContrast.normalText')}</h3>
+          <div className="space-y-2 text-gray-900 dark:text-white">
             <div className="flex justify-between items-center">
               <span>AA (4.5:1)</span>
-              <span className={`px-2 py-1 rounded text-sm ${wcagNormal.aa ? 'bg-green-600' : 'bg-red-600'}`}>
+              <span className={`px-2 py-1 rounded text-sm text-white ${wcagNormal.aa ? 'bg-green-600' : 'bg-red-600'}`}>
                 {wcagNormal.aa ? `✓ ${t('colorContrast.pass')}` : `✗ ${t('colorContrast.fail')}`}
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span>AAA (7:1)</span>
-              <span className={`px-2 py-1 rounded text-sm ${wcagNormal.aaa ? 'bg-green-600' : 'bg-red-600'}`}>
+              <span className={`px-2 py-1 rounded text-sm text-white ${wcagNormal.aaa ? 'bg-green-600' : 'bg-red-600'}`}>
                 {wcagNormal.aaa ? `✓ ${t('colorContrast.pass')}` : `✗ ${t('colorContrast.fail')}`}
               </span>
             </div>
           </div>
         </div>
 
-        <div className="p-4 bg-gray-800 rounded-lg">
-          <h3 className="font-medium mb-3">{t('colorContrast.largeText')}</h3>
-          <div className="space-y-2">
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+          <h3 className="font-medium mb-3 text-gray-900 dark:text-white">{t('colorContrast.largeText')}</h3>
+          <div className="space-y-2 text-gray-900 dark:text-white">
             <div className="flex justify-between items-center">
               <span>AA (3:1)</span>
-              <span className={`px-2 py-1 rounded text-sm ${wcagLarge.aa ? 'bg-green-600' : 'bg-red-600'}`}>
+              <span className={`px-2 py-1 rounded text-sm text-white ${wcagLarge.aa ? 'bg-green-600' : 'bg-red-600'}`}>
                 {wcagLarge.aa ? `✓ ${t('colorContrast.pass')}` : `✗ ${t('colorContrast.fail')}`}
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span>AAA (4.5:1)</span>
-              <span className={`px-2 py-1 rounded text-sm ${wcagLarge.aaa ? 'bg-green-600' : 'bg-red-600'}`}>
+              <span className={`px-2 py-1 rounded text-sm text-white ${wcagLarge.aaa ? 'bg-green-600' : 'bg-red-600'}`}>
                 {wcagLarge.aaa ? `✓ ${t('colorContrast.pass')}` : `✗ ${t('colorContrast.fail')}`}
               </span>
             </div>
@@ -177,13 +177,13 @@ export default function ColorContrastChecker() {
 
       {/* Presets */}
       <div>
-        <h3 className="text-sm font-medium mb-3">{t('colorContrast.presets')}</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">{t('colorContrast.presets')}</h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
           {presets.map((preset, i) => (
             <button
               key={i}
               onClick={() => { setForeground(preset.fg); setBackground(preset.bg); }}
-              className="p-3 rounded-lg border border-gray-700 hover:border-gray-500 transition-colors text-left"
+              className="p-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-colors text-left"
               style={{ backgroundColor: preset.bg, color: preset.fg }}
             >
               <div className="font-medium text-sm">{tc(preset.nameKey)}</div>
@@ -194,8 +194,8 @@ export default function ColorContrastChecker() {
       </div>
 
       {/* Info */}
-      <div className="p-4 bg-gray-800/50 rounded-lg text-sm text-gray-300">
-        <h3 className="font-medium text-white mb-2">{t('colorContrast.guidelines')}</h3>
+      <div className="p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-sm text-gray-600 dark:text-gray-300">
+        <h3 className="font-medium text-gray-900 dark:text-white mb-2">{t('colorContrast.guidelines')}</h3>
         <ul className="space-y-1">
           <li>• {tc('guidelinesAA')}</li>
           <li>• {tc('guidelinesAAA')}</li>

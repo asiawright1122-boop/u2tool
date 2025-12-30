@@ -53,21 +53,21 @@ export default function LineCounter() {
   return (
     <div className="space-y-4">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-gray-700 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-blue-400">{stats.total}</div>
-          <div className="text-sm text-gray-300">{t('totalLines')}</div>
+        <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.total}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">{t('totalLines')}</div>
         </div>
-        <div className="bg-gray-700 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-green-400">{stats.nonEmpty}</div>
-          <div className="text-sm text-gray-300">{t('nonEmptyLines')}</div>
+        <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-green-600 dark:text-green-400">{stats.nonEmpty}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">{t('nonEmptyLines')}</div>
         </div>
-        <div className="bg-gray-700 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-yellow-400">{stats.empty}</div>
-          <div className="text-sm text-gray-300">{t('emptyLines')}</div>
+        <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">{stats.empty}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">{t('emptyLines')}</div>
         </div>
-        <div className="bg-gray-700 rounded-lg p-4 text-center">
-          <div className="text-2xl font-bold text-purple-400">{stats.unique}</div>
-          <div className="text-sm text-gray-300">{t('uniqueLines')}</div>
+        <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{stats.unique}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">{t('uniqueLines')}</div>
         </div>
       </div>
 
@@ -95,18 +95,18 @@ export default function LineCounter() {
             type="checkbox"
             checked={ignoreEmpty}
             onChange={(e) => setIgnoreEmpty(e.target.checked)}
-            className="w-4 h-4 rounded bg-gray-700 border-gray-600"
+            className="w-4 h-4 rounded bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
           />
-          <span className="text-sm text-gray-300">{t('ignoreEmpty')}</span>
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('ignoreEmpty')}</span>
         </label>
       </div>
 
       <div>
-        <label className="block text-sm text-gray-300 mb-2">{tg('input')}</label>
+        <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="w-full h-64 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+          className="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
           placeholder={t('placeholder')}
         />
       </div>

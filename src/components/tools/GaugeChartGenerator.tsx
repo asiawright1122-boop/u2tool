@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 颜色主题预设
 const colorThemes = {
@@ -40,29 +41,29 @@ export default function GaugeChartGenerator() {
   const [gaugeType, setGaugeType] = useState<'default' | 'stage' | 'grade'>('default');
 
   const chartRef = useRef<ReactECharts>(null);
+  const chartTheme = useChartTheme();
 
   // 生成 ECharts 配置
   const getChartOption = useCallback((): EChartsOption => {
     const colors = colorThemes[colorTheme];
-    const textColor = '#e5e7eb';
 
     // 根据类型生成不同的配置
     if (gaugeType === 'stage') {
       return {
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
         title: {
           text: chartTitle,
           left: 'center',
-          top: 10, // 标题固定在顶部
-          textStyle: { fontSize: 16, fontWeight: 'bold', color: '#fff' },
+          top: 10,
+          textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
         },
         series: [
           {
             type: 'gauge',
             startAngle: 180,
             endAngle: 0,
-            center: ['50%', '78%'], // 仪表盘中心下移，与标题保持距离
-            radius: '70%', // 进一步减小半径
+            center: ['50%', '78%'],
+            radius: '70%',
             min: minValue,
             max: maxValue,
             splitNumber: 8,
@@ -87,16 +88,16 @@ export default function GaugeChartGenerator() {
             },
             axisTick: { length: 8, lineStyle: { color: 'auto', width: 2 } },
             splitLine: { length: 12, lineStyle: { color: 'auto', width: 3 } },
-            axisLabel: { color: textColor, fontSize: 11, distance: -38 }, // 调整刻度标签位置
-            title: { show: false }, // 隐藏系列标题，使用图表标题
+            axisLabel: { color: chartTheme.axisLabelColor, fontSize: 11, distance: -38 },
+            title: { show: false },
             detail: {
               fontSize: 32,
               offsetCenter: [0, '-30%'],
               valueAnimation: true,
               formatter: `{value}${unit}`,
-              color: '#fff', // 使用白色，与指针颜色区分
+              color: chartTheme.textColor,
               fontWeight: 'bold',
-              backgroundColor: 'rgba(31, 41, 55, 0.8)', // 添加半透明背景
+              backgroundColor: chartTheme.tooltipBg,
               borderRadius: 4,
               padding: [4, 8],
             },
@@ -108,18 +109,18 @@ export default function GaugeChartGenerator() {
 
     if (gaugeType === 'grade') {
       return {
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
         title: {
           text: chartTitle,
           left: 'center',
-          top: 10, // 标题固定在顶部
-          textStyle: { fontSize: 16, fontWeight: 'bold', color: '#fff' },
+          top: 10,
+          textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
         },
         series: [
           {
             type: 'gauge',
-            center: ['50%', '65%'], // 仪表盘中心下移
-            radius: '75%', // 减小半径
+            center: ['50%', '65%'],
+            radius: '75%',
             startAngle: 200,
             endAngle: -20,
             min: minValue,
@@ -141,10 +142,10 @@ export default function GaugeChartGenerator() {
               },
             },
             pointer: { show: showPointer, length: '55%', width: 6 },
-            axisLine: { lineStyle: { width: 25, color: [[1, '#374151']] } },
-            axisTick: { distance: -38, splitNumber: 5, lineStyle: { width: 2, color: '#999' } },
-            splitLine: { distance: -42, length: 12, lineStyle: { width: 2, color: '#999' } },
-            axisLabel: { distance: -15, color: textColor, fontSize: 11 },
+            axisLine: { lineStyle: { width: 25, color: [[1, chartTheme.splitLineColor]] } },
+            axisTick: { distance: -38, splitNumber: 5, lineStyle: { width: 2, color: chartTheme.axisLabelColor } },
+            splitLine: { distance: -42, length: 12, lineStyle: { width: 2, color: chartTheme.axisLabelColor } },
+            axisLabel: { distance: -15, color: chartTheme.axisLabelColor, fontSize: 11 },
             anchor: { show: true, size: 16, itemStyle: { borderColor: colors.start, borderWidth: 2 } },
             title: { show: false },
             detail: {
@@ -156,7 +157,7 @@ export default function GaugeChartGenerator() {
               fontSize: 32,
               fontWeight: 'bolder',
               formatter: `{value}${unit}`,
-              color: '#fff', // 使用白色确保可读性
+              color: chartTheme.textColor,
             },
             data: [{ value: value }],
           },
@@ -166,18 +167,18 @@ export default function GaugeChartGenerator() {
 
     // 默认仪表盘
     return {
-      backgroundColor: '#1f2937',
+      backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
-        top: 10, // 标题固定在顶部
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: '#fff' },
+        top: 10,
+        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
       },
       series: [
         {
           type: 'gauge',
-          center: ['50%', '65%'], // 仪表盘中心下移
-          radius: '75%', // 减小半径
+          center: ['50%', '65%'],
+          radius: '75%',
           min: minValue,
           max: maxValue,
           progress: {
@@ -185,10 +186,10 @@ export default function GaugeChartGenerator() {
             width: 16,
             itemStyle: { color: colors.start },
           },
-          axisLine: { lineStyle: { width: 16, color: [[1, '#374151']] } },
+          axisLine: { lineStyle: { width: 16, color: [[1, chartTheme.splitLineColor]] } },
           axisTick: { show: false },
-          splitLine: { length: 12, lineStyle: { width: 2, color: '#999' } },
-          axisLabel: { distance: 18, color: textColor, fontSize: 11 },
+          splitLine: { length: 12, lineStyle: { width: 2, color: chartTheme.axisLabelColor } },
+          axisLabel: { distance: 18, color: chartTheme.axisLabelColor, fontSize: 11 },
           anchor: {
             show: true,
             showAbove: true,
@@ -201,7 +202,7 @@ export default function GaugeChartGenerator() {
             fontSize: 32,
             offsetCenter: [0, '70%'],
             formatter: `{value}${unit}`,
-            color: '#fff', // 使用白色确保可读性
+            color: chartTheme.textColor,
             fontWeight: 'bold',
           },
           pointer: {
@@ -214,7 +215,7 @@ export default function GaugeChartGenerator() {
         },
       ],
     };
-  }, [chartTitle, value, minValue, maxValue, unit, colorTheme, showPointer, showProgress, gaugeType, t]);
+  }, [chartTitle, value, minValue, maxValue, unit, colorTheme, showPointer, showProgress, gaugeType, t, chartTheme]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
@@ -223,7 +224,7 @@ export default function GaugeChartGenerator() {
       const url = echartInstance.getDataURL({
         type: format === 'svg' ? 'svg' : 'png',
         pixelRatio: 2,
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
       });
       const link = document.createElement('a');
       link.download = `gauge-chart-${Date.now()}.${format}`;
@@ -278,7 +279,7 @@ export default function GaugeChartGenerator() {
           {/* 图表设置 */}
           <div>
             <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-            <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
               <div>
                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
@@ -417,7 +418,7 @@ export default function GaugeChartGenerator() {
         {/* 右侧：图表预览 */}
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
+          <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
@@ -429,9 +430,9 @@ export default function GaugeChartGenerator() {
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
         <p className="font-medium mb-1">💡 {t('tips.title')}</p>
-        <ul className="space-y-0.5 text-blue-400">
+        <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

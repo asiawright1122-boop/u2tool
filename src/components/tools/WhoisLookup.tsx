@@ -63,7 +63,7 @@ export default function WhoisLookup() {
           value={domain}
           onChange={(e) => setDomain(e.target.value)}
           placeholder="example.com"
-          className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500"
+          className="flex-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-500"
           onKeyDown={(e) => e.key === 'Enter' && lookup()}
         />
         <button
@@ -76,54 +76,54 @@ export default function WhoisLookup() {
       </div>
 
       {error && (
-        <div className="p-4 bg-red-900/30 border border-red-700 rounded-lg text-red-400">
+        <div className="p-4 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400">
           {error}
         </div>
       )}
 
       {result && (
         <div className="space-y-4">
-          <div className="p-4 bg-blue-900/30 border border-blue-700 rounded-lg">
-            <div className="text-lg font-semibold">{result.domain}</div>
+          <div className="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
+            <div className="text-lg font-semibold text-gray-900 dark:text-white">{result.domain}</div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('registrar')}</div>
-              <div className="font-mono">{result.registrar}</div>
+            <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('registrar')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{result.registrar}</div>
             </div>
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('dnssec')}</div>
-              <div className="font-mono">{result.dnssec}</div>
+            <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('dnssec')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{result.dnssec}</div>
             </div>
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('createdDate')}</div>
-              <div className="font-mono">{result.createdDate}</div>
+            <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('createdDate')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{result.createdDate}</div>
             </div>
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('expiryDate')}</div>
-              <div className="font-mono">{result.expiryDate}</div>
+            <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('expiryDate')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{result.expiryDate}</div>
             </div>
-            <div className="p-4 bg-gray-800 rounded-lg">
-              <div className="text-sm text-gray-300 mb-1">{t('updatedDate')}</div>
-              <div className="font-mono">{result.updatedDate}</div>
+            <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div className="text-sm text-gray-600 dark:text-gray-300 mb-1">{t('updatedDate')}</div>
+              <div className="font-mono text-gray-900 dark:text-white">{result.updatedDate}</div>
             </div>
           </div>
 
-          <div className="p-4 bg-gray-800 rounded-lg">
-            <div className="text-sm text-gray-300 mb-2">{t('nameServers')}</div>
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('nameServers')}</div>
             <div className="space-y-1">
               {result.nameServers.map((ns, i) => (
-                <div key={i} className="font-mono text-sm">{ns}</div>
+                <div key={i} className="font-mono text-sm text-gray-900 dark:text-white">{ns}</div>
               ))}
             </div>
           </div>
 
-          <div className="p-4 bg-gray-800 rounded-lg">
-            <div className="text-sm text-gray-300 mb-2">{t('domainStatus')}</div>
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+            <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('domainStatus')}</div>
             <div className="flex flex-wrap gap-2">
               {result.status.map((status, i) => (
-                <span key={i} className="px-2 py-1 bg-gray-700 rounded text-sm font-mono">
+                <span key={i} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-sm font-mono text-gray-700 dark:text-white">
                   {status}
                 </span>
               ))}
@@ -132,7 +132,7 @@ export default function WhoisLookup() {
         </div>
       )}
 
-      <div className="p-4 bg-gray-800/50 rounded-lg text-sm text-gray-300">
+      <div className="p-4 bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300">
         <p>{t('note')}</p>
       </div>
     </div>

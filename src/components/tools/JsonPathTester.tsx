@@ -90,7 +90,7 @@ export default function JsonPathTester() {
           type="text"
           value={path}
           onChange={(e) => setPath(e.target.value)}
-          className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500"
+          className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
           placeholder={t('expressionPlaceholder')}
         />
         <div className="flex flex-wrap gap-2 mt-2">
@@ -98,7 +98,7 @@ export default function JsonPathTester() {
             <button
               key={ex.path}
               onClick={() => setPath(ex.path)}
-              className="text-xs px-2 py-1 bg-gray-800 hover:bg-gray-700 rounded"
+              className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-700 dark:text-white rounded"
               title={t(ex.descKey)}
             >
               {ex.path}
@@ -112,7 +112,7 @@ export default function JsonPathTester() {
       </button>
 
       {error && (
-        <div className="p-3 bg-red-900/50 border border-red-700 rounded-lg text-red-300 text-sm">
+        <div className="p-3 bg-red-100 dark:bg-red-900/50 border border-red-400 dark:border-red-700 rounded-lg text-red-700 dark:text-red-300 text-sm">
           {error}
         </div>
       )}
@@ -120,15 +120,15 @@ export default function JsonPathTester() {
       {result && (
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium">{t('result')}</label>
+            <label className="text-sm font-medium text-gray-600 dark:text-white">{t('result')}</label>
             <button
               onClick={copyResult}
-              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'}`}
+              className={`text-sm px-3 py-1 rounded ${copied ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'}`}
             >
               {copied ? tg('copied') : tg('copy')}
             </button>
           </div>
-          <pre className="p-4 bg-gray-800 rounded-lg overflow-x-auto text-sm">
+          <pre className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-x-auto text-sm text-gray-900 dark:text-white">
             {result}
           </pre>
         </div>

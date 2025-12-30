@@ -29,9 +29,9 @@ export default function TextCaseCounter() {
   }, [text]);
 
   const StatCard = ({ label, value, percent }: { label: string; value: number; percent?: string }) => (
-    <div className="bg-gray-800 rounded-lg p-4">
-      <div className="text-2xl font-bold text-white">{value}</div>
-      <div className="text-sm text-gray-300">{label}</div>
+    <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+      <div className="text-2xl font-bold text-gray-900 dark:text-white">{value}</div>
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       {percent && <div className="text-xs text-blue-400 mt-1">{percent}%</div>}
     </div>
   );
@@ -39,12 +39,12 @@ export default function TextCaseCounter() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('input')}</label>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('input')}</label>
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder={t('caseCounter.placeholder')}
-          className="w-full h-40 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"
+          className="w-full h-40 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
@@ -59,8 +59,8 @@ export default function TextCaseCounter() {
       </div>
 
       {stats.letters > 0 && (
-        <div className="bg-gray-800 rounded-lg p-4">
-          <div className="text-sm text-gray-300 mb-2">{t('caseCounter.ratio')}</div>
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+          <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('caseCounter.ratio')}</div>
           <div className="flex h-4 rounded overflow-hidden">
             <div
               className="bg-blue-500"

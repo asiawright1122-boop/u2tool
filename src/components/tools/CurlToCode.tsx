@@ -278,12 +278,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="tool-label mb-0">
               {t('curlInput')}
             </label>
             <button
               onClick={() => setCurlCommand(sampleCurl)}
-              className="text-sm text-blue-600 hover:text-blue-800"
+              className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
             >
               {t('loadSample')}
             </button>
@@ -292,17 +292,17 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             value={curlCommand}
             onChange={(e) => setCurlCommand(e.target.value)}
             placeholder={t('placeholder')}
-            className="w-full h-48 p-3 border border-gray-600 rounded-lg bg-gray-800 text-gray-100 font-mono text-sm"
+            className="tool-textarea"
           />
           
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="tool-label">
               {t('targetLanguage')}
             </label>
             <select
               value={selectedLang}
               onChange={(e) => setSelectedLang(e.target.value as Language)}
-              className="w-full p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+              className="tool-input"
             >
               {languages.map((lang) => (
                 <option key={lang.value} value={lang.value}>
@@ -314,13 +314,13 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
           <button
             onClick={handleConvert}
-            className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="btn-primary w-full"
           >
             {t('convert')}
           </button>
 
           {error && (
-            <div className="p-3 bg-red-100 text-red-700 rounded-lg text-sm">
+            <div className="tool-error">
               {error}
             </div>
           )}
@@ -328,27 +328,27 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="tool-label mb-0">
               {t('codeOutput')}
             </label>
             {output && (
               <button
                 onClick={handleCopy}
-                className="text-sm text-blue-600 hover:text-blue-800"
+                className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
               >
                 {t('copy')}
               </button>
             )}
           </div>
-          <pre className="w-full h-96 p-3 border border-gray-600 rounded-lg bg-gray-900 text-gray-100 font-mono text-sm overflow-auto whitespace-pre-wrap">
+          <pre className="w-full h-96 p-3 border border-gray-200 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-mono text-sm overflow-auto whitespace-pre-wrap">
             {output || t('outputPlaceholder')}
           </pre>
         </div>
       </div>
 
-      <div className="p-4 bg-blue-50 rounded-lg">
-        <h3 className="font-medium text-blue-800 mb-2">{t('supportedFeatures')}</h3>
-        <ul className="text-sm text-blue-700 space-y-1">
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
+        <h3 className="font-medium text-blue-800 dark:text-blue-300 mb-2">{t('supportedFeatures')}</h3>
+        <ul className="text-sm text-blue-700 dark:text-blue-400 space-y-1">
           <li>• {t('feature1')}</li>
           <li>• {t('feature2')}</li>
           <li>• {t('feature3')}</li>

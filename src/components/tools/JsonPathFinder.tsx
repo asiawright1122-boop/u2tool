@@ -84,29 +84,29 @@ export default function JsonPathFinder() {
   return (
     <div className="space-y-6">
       <div className="flex gap-3">
-        <button onClick={loadSample} className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm">
+        <button onClick={loadSample} className="btn-secondary text-sm">
           {t('jsonPathFinder.loadSample')}
         </button>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">{t('input')}</label>
+        <label className="tool-label">{t('input')}</label>
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={t('jsonPathFinder.placeholder')}
-          className="w-full h-48 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white font-mono text-sm focus:ring-2 focus:ring-blue-500"
+          className="tool-textarea"
         />
       </div>
 
       <button
         onClick={handleAnalyze}
-        className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors"
+        className="btn-primary"
       >
         {t('jsonPathFinder.analyze')}
       </button>
 
-      {error && <div className="text-red-400 text-sm">{error}</div>}
+      {error && <div className="tool-error">{error}</div>}
 
       {results.length > 0 && (
         <>
@@ -115,18 +115,18 @@ export default function JsonPathFinder() {
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder={t('jsonPathFinder.search')}
-            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-sm"
+            className="tool-input"
           />
-          <div className="text-sm text-gray-300">{filteredResults.length} {t('jsonPathFinder.paths')}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">{filteredResults.length} {t('jsonPathFinder.paths')}</div>
           <div className="max-h-96 overflow-y-auto space-y-1">
             {filteredResults.map((item, i) => (
-              <div key={i} className="flex items-center gap-2 p-2 bg-gray-800 rounded hover:bg-gray-700 group">
-                <code className="flex-1 text-sm font-mono text-blue-400">{item.path}</code>
-                <span className="text-xs text-gray-300">{item.type}</span>
-                <span className="text-sm text-gray-300 truncate max-w-[200px]">{String(item.value)}</span>
+              <div key={i} className="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-200 dark:hover:bg-gray-700 group">
+                <code className="flex-1 text-sm font-mono text-blue-600 dark:text-blue-400">{item.path}</code>
+                <span className="text-xs text-gray-500 dark:text-gray-300">{item.type}</span>
+                <span className="text-sm text-gray-600 dark:text-gray-300 truncate max-w-[200px]">{String(item.value)}</span>
                 <button
                   onClick={() => copyPath(item.path)}
-                  className="opacity-0 group-hover:opacity-100 px-2 py-1 bg-gray-600 rounded text-xs"
+                  className="opacity-0 group-hover:opacity-100 px-2 py-1 bg-gray-300 dark:bg-gray-600 text-gray-900 dark:text-white rounded text-xs"
                 >
                   {copied === item.path ? '✓' : t('copy')}
                 </button>

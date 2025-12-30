@@ -126,20 +126,20 @@ export default function JsonSchemaValidator() {
 
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-1">JSON</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">JSON</label>
           <textarea
             value={jsonInput}
             onChange={(e) => setJsonInput(e.target.value)}
-            className="w-full h-48 bg-gray-800 rounded p-3 font-mono text-sm"
+            className="w-full h-48 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-gray-100"
             placeholder={t('schemaValidator.jsonPlaceholder')}
           />
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-1">JSON Schema</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">JSON Schema</label>
           <textarea
             value={schemaInput}
             onChange={(e) => setSchemaInput(e.target.value)}
-            className="w-full h-48 bg-gray-800 rounded p-3 font-mono text-sm"
+            className="w-full h-48 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 font-mono text-sm text-gray-900 dark:text-gray-100"
             placeholder={t('schemaValidator.schemaPlaceholder')}
           />
         </div>
@@ -153,7 +153,7 @@ export default function JsonSchemaValidator() {
       </button>
 
       {isValid !== null && (
-        <div className={`p-4 rounded ${isValid ? 'bg-green-900/50' : 'bg-red-900/50'}`}>
+        <div className={`p-4 rounded ${isValid ? 'bg-green-100 dark:bg-green-900/50' : 'bg-red-100 dark:bg-red-900/50'}`}>
           <div className="flex items-center gap-2 mb-2">
             <span className="text-xl">{isValid ? '✅' : '❌'}</span>
             <span className="font-medium">

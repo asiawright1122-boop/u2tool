@@ -79,7 +79,7 @@ export default function ColorPicker() {
       {/* Main Color Display */}
       <div className="flex gap-6 items-start">
         <div
-          className="w-48 h-48 rounded-xl border-4 border-gray-700 shadow-lg"
+          className="w-48 h-48 rounded-xl border-4 border-gray-300 dark:border-gray-700 shadow-lg"
           style={{ backgroundColor: color }}
         />
         <div className="flex-1 space-y-4">
@@ -102,7 +102,7 @@ export default function ColorPicker() {
                   handleColorChange(e.target.value);
                 }
               }}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg font-mono"
+              className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-gray-100"
             />
           </div>
         </div>
@@ -111,9 +111,9 @@ export default function ColorPicker() {
       {/* Color Values */}
       <div className="grid grid-cols-2 gap-3">
         {colorFormats.map(({ label, value }) => (
-          <div key={label} className="p-3 bg-gray-800 rounded-lg">
+          <div key={label} className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
             <div className="flex justify-between items-center mb-1">
-              <span className="text-xs text-gray-300">{label}</span>
+              <span className="text-xs text-gray-600 dark:text-gray-300">{label}</span>
               <button
                 onClick={() => copyValue(label, value)}
                 className={`text-xs px-2 py-0.5 rounded ${copied === label ? 'bg-green-600' : 'bg-gray-700'}`}
@@ -165,20 +165,20 @@ export default function ColorPicker() {
       )}
 
       {/* Color Info */}
-      <div className="bg-gray-800 rounded-lg p-4">
+      <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
         <h3 className="text-sm font-medium mb-3">{t('colorPicker.info')}</h3>
         <div className="grid grid-cols-3 gap-4 text-center">
           <div>
-            <div className="text-2xl font-bold text-red-400">{rgb.r}</div>
-            <div className="text-xs text-gray-300">{t('colorPicker.red')}</div>
+            <div className="text-2xl font-bold text-red-500 dark:text-red-400">{rgb.r}</div>
+            <div className="text-xs text-gray-600 dark:text-gray-300">{t('colorPicker.red')}</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-green-400">{rgb.g}</div>
-            <div className="text-xs text-gray-300">{t('colorPicker.green')}</div>
+            <div className="text-2xl font-bold text-green-500 dark:text-green-400">{rgb.g}</div>
+            <div className="text-xs text-gray-600 dark:text-gray-300">{t('colorPicker.green')}</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-blue-400">{rgb.b}</div>
-            <div className="text-xs text-gray-300">{t('colorPicker.blue')}</div>
+            <div className="text-2xl font-bold text-blue-500 dark:text-blue-400">{rgb.b}</div>
+            <div className="text-xs text-gray-600 dark:text-gray-300">{t('colorPicker.blue')}</div>
           </div>
         </div>
       </div>

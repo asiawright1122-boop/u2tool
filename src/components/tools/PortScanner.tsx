@@ -52,31 +52,31 @@ export default function PortScanner() {
 
   return (
     <div className="space-y-6">
-      <div className="p-4 bg-blue-900/30 border border-blue-700 rounded-lg">
-        <p className="text-sm">
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg">
+        <p className="text-sm text-blue-700 dark:text-blue-300">
           🔍 {t('note')}
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('searchPorts')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('searchPorts')}</label>
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder={t('searchPlaceholder')}
-            className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500"
+            className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500"
           />
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{t('lookupPort')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('lookupPort')}</label>
           <input
             type="number"
             value={customPort}
             onChange={(e) => setCustomPort(e.target.value)}
             placeholder={t('portPlaceholder')}
-            className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500"
+            className="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:border-blue-500"
             min="1"
             max="65535"
           />
@@ -84,15 +84,15 @@ export default function PortScanner() {
       </div>
 
       {customPort && (
-        <div className="p-4 bg-gray-800 rounded-lg">
-          <div className="text-lg font-semibold mb-2">{t('port')} {customPort}</div>
+        <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+          <div className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">{t('port')} {customPort}</div>
           {customPortInfo ? (
             <div className="space-y-2">
-              <div><span className="text-gray-300">{t('service')}:</span> {customPortInfo.service}</div>
-              <div><span className="text-gray-300">{t('descriptionLabel')}:</span> {t(customPortInfo.descKey)}</div>
+              <div><span className="text-gray-600 dark:text-gray-300">{t('service')}:</span> <span className="text-gray-900 dark:text-white">{customPortInfo.service}</span></div>
+              <div><span className="text-gray-600 dark:text-gray-300">{t('descriptionLabel')}:</span> <span className="text-gray-900 dark:text-white">{t(customPortInfo.descKey)}</span></div>
             </div>
           ) : (
-            <div className="text-gray-300">
+            <div className="text-gray-600 dark:text-gray-300">
               {parseInt(customPort) >= 1 && parseInt(customPort) <= 65535
                 ? t('unknownPort')
                 : t('invalidPort')}
@@ -102,48 +102,48 @@ export default function PortScanner() {
       )}
 
       <div>
-        <h3 className="text-lg font-semibold mb-4">{t('commonPorts')}</h3>
+        <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">{t('commonPorts')}</h3>
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-gray-700">
-                <th className="text-left py-3 px-4">{t('port')}</th>
-                <th className="text-left py-3 px-4">{t('service')}</th>
-                <th className="text-left py-3 px-4">{t('descriptionLabel')}</th>
+              <tr className="border-b border-gray-300 dark:border-gray-700">
+                <th className="text-left py-3 px-4 text-gray-900 dark:text-white">{t('port')}</th>
+                <th className="text-left py-3 px-4 text-gray-900 dark:text-white">{t('service')}</th>
+                <th className="text-left py-3 px-4 text-gray-900 dark:text-white">{t('descriptionLabel')}</th>
               </tr>
             </thead>
             <tbody>
               {filteredPorts.map((port) => (
-                <tr key={port.port} className="border-b border-gray-800 hover:bg-gray-800/50">
-                  <td className="py-3 px-4 font-mono text-blue-400">{port.port}</td>
-                  <td className="py-3 px-4 font-semibold">{port.service}</td>
-                  <td className="py-3 px-4 text-gray-300">{t(port.descKey)}</td>
+                <tr key={port.port} className="border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                  <td className="py-3 px-4 font-mono text-blue-600 dark:text-blue-400">{port.port}</td>
+                  <td className="py-3 px-4 font-semibold text-gray-900 dark:text-white">{port.service}</td>
+                  <td className="py-3 px-4 text-gray-600 dark:text-gray-300">{t(port.descKey)}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
         {filteredPorts.length === 0 && (
-          <div className="text-center py-8 text-gray-300">
+          <div className="text-center py-8 text-gray-600 dark:text-gray-300">
             {t('noResults')}
           </div>
         )}
       </div>
 
-      <div className="p-4 bg-gray-800/50 rounded-lg">
-        <h4 className="font-semibold mb-2">{t('portRanges')}</h4>
+      <div className="p-4 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">{t('portRanges')}</h4>
         <div className="grid md:grid-cols-3 gap-4 text-sm">
           <div>
-            <span className="text-blue-400">0-1023:</span>
-            <span className="text-gray-300 ml-2">{t('wellKnown')}</span>
+            <span className="text-blue-600 dark:text-blue-400">0-1023:</span>
+            <span className="text-gray-600 dark:text-gray-300 ml-2">{t('wellKnown')}</span>
           </div>
           <div>
-            <span className="text-blue-400">1024-49151:</span>
-            <span className="text-gray-300 ml-2">{t('registered')}</span>
+            <span className="text-blue-600 dark:text-blue-400">1024-49151:</span>
+            <span className="text-gray-600 dark:text-gray-300 ml-2">{t('registered')}</span>
           </div>
           <div>
-            <span className="text-blue-400">49152-65535:</span>
-            <span className="text-gray-300 ml-2">{t('dynamic')}</span>
+            <span className="text-blue-600 dark:text-blue-400">49152-65535:</span>
+            <span className="text-gray-600 dark:text-gray-300 ml-2">{t('dynamic')}</span>
           </div>
         </div>
       </div>

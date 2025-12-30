@@ -102,23 +102,23 @@ export default function StatisticsCalculator() {
     <div className="space-y-6">
       {/* 输入区域 */}
       <div>
-        <label className="block text-sm font-medium mb-2">
+        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
           {t('stats.inputLabel')}
         </label>
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="w-full h-32 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full h-32 px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           placeholder="10, 20, 30, 40, 50"
         />
-        <p className="text-xs text-gray-300 mt-1">
+        <p className="text-xs text-gray-500 dark:text-gray-300 mt-1">
           {t('stats.inputHint')}
         </p>
       </div>
 
       {/* 方差类型选择 */}
       <div className="flex items-center gap-4">
-        <span className="text-sm text-gray-300">{t('stats.varianceType')}:</span>
+        <span className="text-sm text-gray-600 dark:text-gray-300">{t('stats.varianceType')}:</span>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
             type="radio"
@@ -126,7 +126,7 @@ export default function StatisticsCalculator() {
             onChange={() => setIsPopulation(true)}
             className="text-blue-500"
           />
-          <span className="text-sm">{t('stats.population')}</span>
+          <span className="text-sm text-gray-900 dark:text-white">{t('stats.population')}</span>
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -135,15 +135,15 @@ export default function StatisticsCalculator() {
             onChange={() => setIsPopulation(false)}
             className="text-blue-500"
           />
-          <span className="text-sm">{t('stats.sample')}</span>
+          <span className="text-sm text-gray-900 dark:text-white">{t('stats.sample')}</span>
         </label>
       </div>
 
       {/* 数据概览 */}
-      <div className="p-4 bg-gray-800/50 rounded-lg">
-        <h3 className="text-sm font-medium mb-2">{t('stats.dataOverview')}</h3>
-        <div className="text-sm text-gray-300">
-          {t('stats.count')}: <span className="text-white font-mono">{numbers.length}</span>
+      <div className="p-4 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <h3 className="text-sm font-medium mb-2 text-gray-900 dark:text-white">{t('stats.dataOverview')}</h3>
+        <div className="text-sm text-gray-600 dark:text-gray-300">
+          {t('stats.count')}: <span className="text-gray-900 dark:text-white font-mono">{numbers.length}</span>
         </div>
       </div>
 
@@ -259,14 +259,14 @@ function ResultCard({
   copyLabel: string;
 }) {
   return (
-    <div className="p-4 bg-gray-800 rounded-lg">
-      <div className="text-xs text-gray-300 mb-1">{label}</div>
+    <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+      <div className="text-xs text-gray-500 dark:text-gray-300 mb-1">{label}</div>
       <div className="flex items-center justify-between">
-        <span className="font-mono text-lg text-green-400">{value}</span>
+        <span className="font-mono text-lg text-green-600 dark:text-green-400">{value}</span>
         <button
           onClick={() => onCopy(value, id)}
           className={`px-2 py-1 text-xs rounded ${
-            copied === id ? 'bg-green-600' : 'bg-gray-700 hover:bg-gray-600'
+            copied === id ? 'bg-green-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600'
           }`}
         >
           {copied === id ? '✓' : copyLabel}

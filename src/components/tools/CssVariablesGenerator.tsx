@@ -109,22 +109,22 @@ export default function CssVariablesGenerator() {
     <div className="space-y-6">
       <div className="flex flex-wrap gap-4 items-center">
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('prefix')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('prefix')}:</label>
           <input
             type="text"
             value={prefix}
             onChange={(e) => setPrefix(e.target.value)}
             placeholder={t('prefixPlaceholder')}
-            className="w-24 p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="w-24 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
         </div>
 
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-300">{t('scope')}:</label>
+          <label className="text-sm text-gray-600 dark:text-gray-300">{t('scope')}:</label>
           <select
             value={scope}
             onChange={(e) => setScope(e.target.value)}
-            className="p-2 border border-gray-600 rounded-lg bg-gray-800 text-gray-100"
+            className="p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             <option value=":root">:root</option>
             <option value="body">body</option>
@@ -134,11 +134,11 @@ export default function CssVariablesGenerator() {
         </div>
 
         <div className="flex gap-2">
-          <span className="text-sm text-gray-300">{t('presets')}:</span>
-          <button onClick={() => loadPreset('light')} className="text-sm px-2 py-1 bg-gray-700 rounded hover:bg-gray-600">
+          <span className="text-sm text-gray-600 dark:text-gray-300">{t('presets')}:</span>
+          <button onClick={() => loadPreset('light')} className="text-sm px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white">
             {t('presetLight')}
           </button>
-          <button onClick={() => loadPreset('dark')} className="text-sm px-2 py-1 bg-gray-800 text-white rounded hover:bg-gray-700">
+          <button onClick={() => loadPreset('dark')} className="text-sm px-2 py-1 bg-gray-700 dark:bg-gray-800 text-white rounded hover:bg-gray-600 dark:hover:bg-gray-700">
             {t('presetDark')}
           </button>
           <button onClick={() => loadPreset('brand')} className="text-sm px-2 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200">
@@ -160,11 +160,11 @@ export default function CssVariablesGenerator() {
 
         <div className="space-y-2">
           {variables.map((variable) => (
-            <div key={variable.id} className="flex items-center gap-2 p-2 bg-gray-900 rounded-lg">
+            <div key={variable.id} className="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-900 rounded-lg">
               <select
                 value={variable.type}
                 onChange={(e) => updateVariable(variable.id, 'type', e.target.value)}
-                className="w-24 p-2 text-sm border border-gray-600 rounded bg-gray-800 text-gray-100"
+                className="w-24 p-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
               >
                 <option value="color">{t('typeColor')}</option>
                 <option value="size">{t('typeSize')}</option>
@@ -176,7 +176,7 @@ export default function CssVariablesGenerator() {
                 value={variable.name}
                 onChange={(e) => updateVariable(variable.id, 'name', e.target.value)}
                 placeholder={t('varNamePlaceholder')}
-                className="flex-1 p-2 text-sm border border-gray-600 rounded bg-gray-800 text-gray-100 font-mono"
+                className="flex-1 p-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"
               />
               {variable.type === 'color' ? (
                 <div className="flex items-center gap-1">
@@ -190,7 +190,7 @@ export default function CssVariablesGenerator() {
                     type="text"
                     value={variable.value}
                     onChange={(e) => updateVariable(variable.id, 'value', e.target.value)}
-                    className="w-28 p-2 text-sm border border-gray-600 rounded bg-gray-800 text-gray-100 font-mono"
+                    className="w-28 p-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"
                   />
                 </div>
               ) : (
@@ -199,7 +199,7 @@ export default function CssVariablesGenerator() {
                   value={variable.value}
                   onChange={(e) => updateVariable(variable.id, 'value', e.target.value)}
                   placeholder={t('varValuePlaceholder')}
-                  className="w-40 p-2 text-sm border border-gray-600 rounded bg-gray-800 text-gray-100 font-mono"
+                  className="w-40 p-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-mono"
                 />
               )}
               <button
@@ -216,36 +216,36 @@ export default function CssVariablesGenerator() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="text-sm font-medium text-gray-300">{t('cssLabel')}</label>
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('cssLabel')}</label>
             <button onClick={() => handleCopy(cssOutput)} className="text-sm text-blue-600 hover:text-blue-800">
               {t('copy')}
             </button>
           </div>
-          <pre className="h-48 p-3 bg-gray-900 text-green-400 rounded-lg overflow-auto text-xs font-mono">
+          <pre className="h-48 p-3 bg-gray-100 dark:bg-gray-900 text-green-700 dark:text-green-400 rounded-lg overflow-auto text-xs font-mono">
             {cssOutput || t('noOutput')}
           </pre>
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="text-sm font-medium text-gray-300">{t('scssLabel')}</label>
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('scssLabel')}</label>
             <button onClick={() => handleCopy(scssOutput)} className="text-sm text-blue-600 hover:text-blue-800">
               {t('copy')}
             </button>
           </div>
-          <pre className="h-48 p-3 bg-gray-900 text-pink-400 rounded-lg overflow-auto text-xs font-mono">
+          <pre className="h-48 p-3 bg-gray-100 dark:bg-gray-900 text-pink-700 dark:text-pink-400 rounded-lg overflow-auto text-xs font-mono">
             {scssOutput || t('noOutput')}
           </pre>
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label className="text-sm font-medium text-gray-300">{t('jsLabel')}</label>
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('jsLabel')}</label>
             <button onClick={() => handleCopy(jsOutput)} className="text-sm text-blue-600 hover:text-blue-800">
               {t('copy')}
             </button>
           </div>
-          <pre className="h-48 p-3 bg-gray-900 text-yellow-400 rounded-lg overflow-auto text-xs font-mono">
+          <pre className="h-48 p-3 bg-gray-100 dark:bg-gray-900 text-yellow-700 dark:text-yellow-400 rounded-lg overflow-auto text-xs font-mono">
             {jsOutput || t('noOutput')}
           </pre>
         </div>

@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 interface RiverItem {
     id: string;
@@ -36,6 +37,7 @@ export default function ThemeRiverGenerator() {
     const [showLegend, setShowLegend] = useState(true);
 
     const chartRef = useRef<ReactECharts>(null);
+    const chartTheme = useChartTheme();
 
     const generateId = useCallback(() => {
         const newId = `${baseId}-${idCounter}`;
@@ -67,7 +69,6 @@ export default function ThemeRiverGenerator() {
 
     const getChartOption = useCallback((): EChartsOption => {
         const colors = colorThemes[colorTheme];
-        const textColor = '#e5e7eb';
 
         // Convert data to ECharts format: [date, value, seriesName]
         const riverData: [string, number, string][] = data.map(item => [item.date, item.value, item.series]);
@@ -76,11 +77,11 @@ export default function ThemeRiverGenerator() {
         const seriesNames = Array.from(new Set(data.map(item => item.series)));
 
         return {
-            backgroundColor: '#1f2937',
+            backgroundColor: chartTheme.backgroundColor,
             title: {
                 text: chartTitle,
                 left: 'center',
-                textStyle: { fontSize: 18, fontWeight: 'bold', color: '#fff' },
+                textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
             },
             tooltip: {
                 trigger: 'axis',
@@ -93,13 +94,13 @@ export default function ThemeRiverGenerator() {
                 show: showLegend,
                 bottom: 10,
                 data: seriesNames,
-                textStyle: { color: textColor },
+                textStyle: { color: chartTheme.legendText },
             },
             singleAxis: {
                 top: 50,
                 bottom: 50,
                 axisTick: {},
-                axisLabel: { color: textColor },
+                axisLabel: { color: chartTheme.axisLabelColor },
                 type: 'time',
                 axisPointer: {
                     animation: true,
@@ -107,7 +108,7 @@ export default function ThemeRiverGenerator() {
                 },
                 splitLine: {
                     show: true,
-                    lineStyle: { type: 'dashed', opacity: 0.2 },
+                    lineStyle: { type: 'dashed', opacity: 0.2, color: chartTheme.splitLineColor },
                 },
             },
             color: colors,
@@ -124,7 +125,7 @@ export default function ThemeRiverGenerator() {
                 },
             ],
         };
-    }, [data, chartTitle, colorTheme, showLegend]);
+    }, [data, chartTitle, colorTheme, showLegend, chartTheme]);
 
     const addDataPoint = () => {
         const newId = generateId();
@@ -154,7 +155,7 @@ export default function ThemeRiverGenerator() {
             const url = echartInstance.getDataURL({
                 type: format,
                 pixelRatio: 2,
-                backgroundColor: '#1f2937',
+                backgroundColor: chartTheme.backgroundColor,
             });
             const link = document.createElement('a');
             link.download = `theme-river-${Date.now()}.${format}`;
@@ -193,10 +194,10 @@ export default function ThemeRiverGenerator() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-                        <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+                        <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartSettings')}</label>
+                        <div className="space-y-3 p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
                             <div>
-                                <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                                <label className="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('chartTitle')}</label>
                                 <input
                                     type="text"
                                     value={chartTitle}
@@ -207,7 +208,7 @@ export default function ThemeRiverGenerator() {
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                                <label className="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('colorTheme')}</label>
                                 <select
                                     value={colorTheme}
                                     onChange={(e) => setColorTheme(e.target.value as keyof typeof colorThemes)}
@@ -221,7 +222,7 @@ export default function ThemeRiverGenerator() {
                             </div>
 
                             <div>
-                                <label className="flex items-center gap-2 cursor-pointer">
+                                <label className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-white">
                                     <input
                                         type="checkbox"
                                         checked={showLegend}
@@ -236,15 +237,15 @@ export default function ThemeRiverGenerator() {
 
                     <div>
                         <div className="flex justify-between items-center mb-2">
-                            <label className="text-sm font-medium">{t('dataEditor')}</label>
+                            <label className="text-sm font-medium text-gray-700 dark:text-white">{t('dataEditor')}</label>
                             <button onClick={addDataPoint} className="btn-secondary btn-sm">
                                 + {t('addPoint')}
                             </button>
                         </div>
 
-                        <div className="max-h-[500px] overflow-y-auto border border-gray-700 rounded-lg">
-                            <table className="w-full text-sm text-left text-gray-400">
-                                <thead className="text-xs uppercase bg-gray-900 text-gray-400 sticky top-0">
+                        <div className="max-h-[500px] overflow-y-auto border border-gray-200 dark:border-gray-700 rounded-lg">
+                            <table className="w-full text-sm text-left text-gray-600 dark:text-gray-400">
+                                <thead className="text-xs uppercase bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 sticky top-0">
                                     <tr>
                                         <th className="px-3 py-2">{t('date')}</th>
                                         <th className="px-3 py-2">{t('value')}</th>
@@ -254,13 +255,13 @@ export default function ThemeRiverGenerator() {
                                 </thead>
                                 <tbody>
                                     {data.map((item) => (
-                                        <tr key={item.id} className="bg-gray-800 border-b border-gray-700 hover:bg-gray-700">
+                                        <tr key={item.id} className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700">
                                             <td className="px-2 py-2">
                                                 <input
                                                     type="date"
                                                     value={item.date}
                                                     onChange={(e) => updateDataPoint(item.id, 'date', e.target.value)}
-                                                    className="bg-transparent border-none w-full text-white focus:ring-0 px-0"
+                                                    className="bg-transparent border-none w-full text-gray-900 dark:text-white focus:ring-0 px-0"
                                                 />
                                             </td>
                                             <td className="px-2 py-2">
@@ -268,7 +269,7 @@ export default function ThemeRiverGenerator() {
                                                     type="number"
                                                     value={item.value}
                                                     onChange={(e) => updateDataPoint(item.id, 'value', Number(e.target.value))}
-                                                    className="bg-transparent border-none w-full text-white focus:ring-0 px-0"
+                                                    className="bg-transparent border-none w-full text-gray-900 dark:text-white focus:ring-0 px-0"
                                                 />
                                             </td>
                                             <td className="px-2 py-2">
@@ -276,13 +277,13 @@ export default function ThemeRiverGenerator() {
                                                     type="text"
                                                     value={item.series}
                                                     onChange={(e) => updateDataPoint(item.id, 'series', e.target.value)}
-                                                    className="bg-transparent border-none w-full text-white focus:ring-0 px-0"
+                                                    className="bg-transparent border-none w-full text-gray-900 dark:text-white focus:ring-0 px-0"
                                                 />
                                             </td>
                                             <td className="px-2 py-2 text-right">
                                                 <button
                                                     onClick={() => deleteDataPoint(item.id)}
-                                                    className="text-red-400 hover:text-red-300 disabled:opacity-50"
+                                                    className="text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 disabled:opacity-50"
                                                     disabled={data.length <= 1}
                                                 >
                                                     ✕
@@ -297,8 +298,8 @@ export default function ThemeRiverGenerator() {
                 </div>
 
                 <div>
-                    <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-                    <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '500px' }}>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</label>
+                    <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '500px' }}>
                         <ReactECharts
                             ref={chartRef}
                             option={getChartOption()}
@@ -310,9 +311,9 @@ export default function ThemeRiverGenerator() {
             </div>
 
             {/* Tips */}
-            <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+            <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
                 <p className="font-medium mb-1">💡 {t('tipsTitle')}</p>
-                <ul className="space-y-0.5 text-blue-400">
+                <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
                     <li>• {t('tip1')}</li>
                     <li>• {t('tip2')}</li>
                 </ul>

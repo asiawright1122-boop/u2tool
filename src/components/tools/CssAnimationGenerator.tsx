@@ -59,13 +59,13 @@ export default function CssAnimationGenerator() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">{t('cssAnimation.preset')}</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('cssAnimation.preset')}</label>
             <div className="grid grid-cols-4 gap-2">
               {presetKeys.map((key) => (
                 <button
                   key={key}
                   onClick={() => setAnimation(key)}
-                  className={`p-2 rounded text-xs ${animation === key ? 'bg-blue-600' : 'bg-gray-800 hover:bg-gray-700'}`}
+                  className={`p-2 rounded text-xs text-white ${animation === key ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-800 hover:bg-gray-600 dark:hover:bg-gray-700'}`}
                 >
                   {t(`cssAnimation.${key}`)}
                 </button>
@@ -75,32 +75,32 @@ export default function CssAnimationGenerator() {
 
           <div className="grid grid-cols-3 gap-4">
             <div>
-              <label className="block text-sm text-gray-300 mb-1">{t('cssAnimation.duration')}</label>
+              <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.duration')}</label>
               <input
                 type="number"
                 value={duration}
                 onChange={(e) => setDuration(e.target.value)}
                 min="0.1"
                 step="0.1"
-                className="w-full bg-gray-900 border border-gray-700 rounded px-3 py-2"
+                className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white"
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-300 mb-1">{t('cssAnimation.timing')}</label>
+              <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.timing')}</label>
               <select
                 value={timing}
                 onChange={(e) => setTiming(e.target.value)}
-                className="w-full bg-gray-900 border border-gray-700 rounded px-3 py-2"
+                className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white"
               >
                 {timingFunctions.map(tf => <option key={tf} value={tf}>{tf}</option>)}
               </select>
             </div>
             <div>
-              <label className="block text-sm text-gray-300 mb-1">{t('cssAnimation.iteration')}</label>
+              <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.iteration')}</label>
               <select
                 value={iteration}
                 onChange={(e) => setIteration(e.target.value)}
-                className="w-full bg-gray-900 border border-gray-700 rounded px-3 py-2"
+                className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white"
               >
                 {iterations.map(i => <option key={i} value={i}>{i}</option>)}
               </select>
@@ -109,8 +109,8 @@ export default function CssAnimationGenerator() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">{t('cssAnimation.preview')}</label>
-          <div className="bg-gray-900 border border-gray-700 rounded-lg p-8 flex items-center justify-center min-h-[200px]">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('cssAnimation.preview')}</label>
+          <div className="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-8 flex items-center justify-center min-h-[200px]">
             <div
               className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"
               style={{ animation: `${animation} ${duration}s ${timing} ${iteration}` }}
@@ -121,12 +121,12 @@ export default function CssAnimationGenerator() {
 
       <div>
         <div className="flex justify-between items-center mb-2">
-          <label className="text-sm font-medium text-gray-300">{t('output')}</label>
-          <button onClick={copyToClipboard} className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm">
+          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</label>
+          <button onClick={copyToClipboard} className="px-3 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-900 dark:text-white">
             {copied ? t('copied') : t('copy')}
           </button>
         </div>
-        <pre className="bg-gray-900 border border-gray-700 rounded-lg p-4 text-sm font-mono text-green-400 overflow-x-auto">
+        <pre className="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-4 text-sm font-mono text-green-700 dark:text-green-400 overflow-x-auto">
           {fullCSS}
         </pre>
       </div>

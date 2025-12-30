@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactECharts from 'echarts-for-react';
 import type { EChartsOption } from 'echarts';
+import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 颜色主题预设
 const colorThemes = {
@@ -80,6 +81,7 @@ export default function ParallelChartGenerator() {
   }, [t, isInitialized]);
 
   const chartRef = useRef<ReactECharts>(null);
+  const chartTheme = useChartTheme();
 
 
   // 生成 ECharts 配置
@@ -92,11 +94,11 @@ export default function ParallelChartGenerator() {
       name: dim.name,
       min: dim.min,
       max: dim.max,
-      nameTextStyle: { color: '#e5e7eb' },
-      axisLine: { lineStyle: { color: '#4b5563' } },
-      axisTick: { lineStyle: { color: '#4b5563' } },
-      axisLabel: { color: '#9ca3af' },
-      splitLine: { lineStyle: { color: '#374151' } },
+      nameTextStyle: { color: chartTheme.axisLabelColor },
+      axisLine: { lineStyle: { color: chartTheme.axisLineColor } },
+      axisTick: { lineStyle: { color: chartTheme.axisLineColor } },
+      axisLabel: { color: chartTheme.axisLabelColor },
+      splitLine: { lineStyle: { color: chartTheme.splitLineColor } },
     }));
 
     // 构建数据系列
@@ -113,23 +115,23 @@ export default function ParallelChartGenerator() {
     }));
 
     return {
-      backgroundColor: '#1f2937',
+      backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
         top: 15,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: '#fff' },
+        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
       },
       tooltip: {
         trigger: 'item',
-        backgroundColor: 'rgba(31, 41, 55, 0.9)',
-        borderColor: '#374151',
-        textStyle: { color: '#e5e7eb' },
+        backgroundColor: chartTheme.tooltipBg,
+        borderColor: chartTheme.tooltipBorder,
+        textStyle: { color: chartTheme.tooltipText },
       },
       legend: {
         show: showLegend,
         bottom: 10,
-        textStyle: { color: '#e5e7eb' },
+        textStyle: { color: chartTheme.legendText },
         data: seriesNames,
       },
       parallelAxis: parallelAxis,
@@ -142,16 +144,16 @@ export default function ParallelChartGenerator() {
           type: 'value',
           nameLocation: 'end',
           nameGap: 20,
-          nameTextStyle: { color: '#e5e7eb', fontSize: 12 },
-          axisLine: { lineStyle: { color: '#4b5563' } },
-          axisTick: { lineStyle: { color: '#4b5563' } },
-          axisLabel: { color: '#9ca3af' },
+          nameTextStyle: { color: chartTheme.axisLabelColor, fontSize: 12 },
+          axisLine: { lineStyle: { color: chartTheme.axisLineColor } },
+          axisTick: { lineStyle: { color: chartTheme.axisLineColor } },
+          axisLabel: { color: chartTheme.axisLabelColor },
           splitLine: { show: false },
         },
       },
       series: series,
     };
-  }, [chartTitle, colorTheme, showLegend, lineWidth, lineOpacity, smooth, dimensions, seriesNames, data]);
+  }, [chartTitle, colorTheme, showLegend, lineWidth, lineOpacity, smooth, dimensions, seriesNames, data, chartTheme]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
@@ -160,7 +162,7 @@ export default function ParallelChartGenerator() {
       const url = echartInstance.getDataURL({
         type: format === 'svg' ? 'svg' : 'png',
         pixelRatio: 2,
-        backgroundColor: '#1f2937',
+        backgroundColor: chartTheme.backgroundColor,
       });
       const link = document.createElement('a');
       link.download = `parallel-chart-${Date.now()}.${format}`;
@@ -284,8 +286,8 @@ export default function ParallelChartGenerator() {
         <div className="space-y-4">
           {/* 图表设置 */}
           <div>
-            <label className="block text-sm font-medium mb-2">{t('chartSettings')}</label>
-            <div className="space-y-3 p-4 bg-gray-900 border border-gray-700 rounded-lg">
+            <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('chartSettings')}</label>
+            <div className="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
                 <label className="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
@@ -362,12 +364,12 @@ export default function ParallelChartGenerator() {
           {/* 维度编辑 */}
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label className="block text-sm font-medium">{t('dimensionEditor')}</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('dimensionEditor')}</label>
               <button onClick={addDimension} className="btn-secondary btn-sm">
                 + {t('addDimension')}
               </button>
             </div>
-            <div className="space-y-2 max-h-40 overflow-y-auto p-2 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-2 max-h-40 overflow-y-auto p-2 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               {dimensions.map((dim, index) => (
                 <div key={index} className="flex gap-2 items-center">
                   <input
@@ -406,14 +408,14 @@ export default function ParallelChartGenerator() {
           {/* 数据系列编辑 */}
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label className="block text-sm font-medium">{t('seriesEditor')}</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">{t('seriesEditor')}</label>
               <button onClick={addSeries} className="btn-secondary btn-sm">
                 + {t('addSeries')}
               </button>
             </div>
-            <div className="space-y-3 max-h-48 overflow-y-auto p-2 bg-gray-900 border border-gray-700 rounded-lg">
+            <div className="space-y-3 max-h-48 overflow-y-auto p-2 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               {data.map((row, rowIndex) => (
-                <div key={rowIndex} className="space-y-1 p-2 bg-gray-800 rounded">
+                <div key={rowIndex} className="space-y-1 p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded">
                   <div className="flex gap-2 items-center">
                     <input
                       type="text"
@@ -450,8 +452,8 @@ export default function ParallelChartGenerator() {
 
         {/* 右侧：图表预览 */}
         <div>
-          <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div className="rounded-lg border border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
+          <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('chartPreview')}</label>
+          <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
             <ReactECharts
               ref={chartRef}
               option={getChartOption()}
@@ -463,9 +465,9 @@ export default function ParallelChartGenerator() {
       </div>
 
       {/* 使用说明 */}
-      <div className="p-3 bg-blue-900/30 border border-blue-700 rounded-lg text-sm text-blue-300">
+      <div className="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
         <p className="font-medium mb-1">💡 {t('tips.title')}</p>
-        <ul className="space-y-0.5 text-blue-400">
+        <ul className="space-y-0.5 text-blue-600 dark:text-blue-400">
           <li>• {t('tips.tip1')}</li>
           <li>• {t('tips.tip2')}</li>
           <li>• {t('tips.tip3')}</li>

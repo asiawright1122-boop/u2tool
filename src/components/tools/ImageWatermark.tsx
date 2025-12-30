@@ -222,21 +222,21 @@ export default function ImageWatermark() {
           <button
             onClick={downloadImage}
             disabled={!image}
-            className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg"
+            className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg"
           >
             {tg('download')}
           </button>
         </div>
 
         {/* Preview */}
-        <div className="lg:col-span-2 flex items-center justify-center p-4 bg-gray-800 rounded-lg min-h-[400px]">
+        <div className="lg:col-span-2 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[400px]">
           {image ? (
             <canvas
               ref={canvasRef}
-              className="max-w-full max-h-[500px] object-contain border border-gray-600 rounded"
+              className="max-w-full max-h-[500px] object-contain border border-gray-300 dark:border-gray-600 rounded"
             />
           ) : (
-            <div className="text-gray-300 text-center">
+            <div className="text-gray-500 dark:text-gray-300 text-center">
               <p className="text-4xl mb-2">🖼️</p>
               <p>{t('noImage')}</p>
             </div>

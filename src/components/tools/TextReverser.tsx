@@ -36,7 +36,7 @@ export default function TextReverser() {
         <button
           onClick={() => setMode('chars')}
           className={`px-4 py-2 rounded-lg transition-colors ${
-            mode === 'chars' ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'
+            mode === 'chars' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
           }`}
         >
           {t('reverseChars')}
@@ -44,7 +44,7 @@ export default function TextReverser() {
         <button
           onClick={() => setMode('words')}
           className={`px-4 py-2 rounded-lg transition-colors ${
-            mode === 'words' ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'
+            mode === 'words' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
           }`}
         >
           {t('reverseWords')}
@@ -52,7 +52,7 @@ export default function TextReverser() {
         <button
           onClick={() => setMode('lines')}
           className={`px-4 py-2 rounded-lg transition-colors ${
-            mode === 'lines' ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'
+            mode === 'lines' ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white'
           }`}
         >
           {t('reverseLines')}
@@ -60,7 +60,7 @@ export default function TextReverser() {
         <button
           onClick={copyResult}
           disabled={!reversed}
-          className="px-4 py-2 bg-gray-600 hover:bg-gray-700 disabled:opacity-50 rounded-lg transition-colors"
+          className="px-4 py-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-700 disabled:opacity-50 rounded-lg transition-colors text-gray-900 dark:text-white"
         >
           {tg('copy')}
         </button>
@@ -68,21 +68,21 @@ export default function TextReverser() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{tg('input')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('input')}</label>
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className="w-full h-64 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            className="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
             placeholder={t('placeholder')}
           />
         </div>
 
         <div>
-          <label className="block text-sm text-gray-300 mb-2">{tg('output')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{tg('output')}</label>
           <textarea
             value={reversed}
             readOnly
-            className="w-full h-64 bg-gray-700 rounded-lg px-4 py-3 text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
+            className="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white font-mono focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"
           />
         </div>
       </div>

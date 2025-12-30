@@ -53,10 +53,3 @@ When choosing a JSON formatter, consider these factors:
 ## Conclusion
 
 For daily development work, I recommend [U2Tool JSON Formatter](https://www.u2tool.com/en/tools/json-formatter). It's completely free, secure, and feature-rich. If you need a command-line tool, consider using jq.
-
----
-
-**Related Tools**:
-- [JSON to YAML Converter](https://www.u2tool.com/en/tools/json-to-yaml)
-- [JSON to CSV Converter](https://www.u2tool.com/en/tools/json-to-csv)
-- [JSON Minifier](https://www.u2tool.com/en/tools/json-minifier)

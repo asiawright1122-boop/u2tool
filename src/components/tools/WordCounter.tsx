@@ -22,7 +22,7 @@ export default function WordCounter() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium mb-2">{t('input')}</label>
+        <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('input')}</label>
         <textarea
           className="tool-textarea h-64"
           value={text}
@@ -52,9 +52,9 @@ export default function WordCounter() {
 
 function StatCard({ label, value }: { label: string; value: number }) {
   return (
-    <div className="p-4 bg-gray-900 border border-gray-700 rounded-lg text-center">
-      <div className="text-3xl font-bold text-blue-400">{value.toLocaleString()}</div>
-      <div className="text-sm text-gray-300">{label}</div>
+    <div className="p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-center">
+      <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{value.toLocaleString()}</div>
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
     </div>
   );
 }

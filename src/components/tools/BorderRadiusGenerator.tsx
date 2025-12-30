@@ -62,15 +62,15 @@ export default function BorderRadiusGenerator() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium text-white">{t('cornerRadius')}</h3>
+            <h3 className="text-lg font-medium text-gray-900 dark:text-white">{t('cornerRadius')}</h3>
             <div className="flex items-center gap-4">
-              <label className="flex items-center gap-2 text-gray-300">
+              <label className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                 <input type="checkbox" checked={linked} onChange={(e) => setLinked(e.target.checked)}
-                  className="rounded bg-gray-700 border-gray-600" />
+                  className="rounded bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600" />
                 {t('linkAll')}
               </label>
               <select value={unit} onChange={(e) => setUnit(e.target.value as 'px' | '%')}
-                className="bg-gray-700 border border-gray-600 rounded px-2 py-1 text-white">
+                className="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded px-2 py-1 text-gray-900 dark:text-white">
                 <option value="px">px</option>
                 <option value="%">%</option>
               </select>
@@ -79,25 +79,25 @@ export default function BorderRadiusGenerator() {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm text-gray-300 mb-2">{t('topLeft')}: {topLeft}{unit}</label>
+              <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('topLeft')}: {topLeft}{unit}</label>
               <input type="range" min="0" max={unit === '%' ? 50 : 100} value={topLeft}
                 onChange={(e) => handleChange('topLeft', parseInt(e.target.value))}
                 className="w-full" />
             </div>
             <div>
-              <label className="block text-sm text-gray-300 mb-2">{t('topRight')}: {topRight}{unit}</label>
+              <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('topRight')}: {topRight}{unit}</label>
               <input type="range" min="0" max={unit === '%' ? 50 : 100} value={topRight}
                 onChange={(e) => handleChange('topRight', parseInt(e.target.value))}
                 className="w-full" />
             </div>
             <div>
-              <label className="block text-sm text-gray-300 mb-2">{t('bottomLeft')}: {bottomLeft}{unit}</label>
+              <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('bottomLeft')}: {bottomLeft}{unit}</label>
               <input type="range" min="0" max={unit === '%' ? 50 : 100} value={bottomLeft}
                 onChange={(e) => handleChange('bottomLeft', parseInt(e.target.value))}
                 className="w-full" />
             </div>
             <div>
-              <label className="block text-sm text-gray-300 mb-2">{t('bottomRight')}: {bottomRight}{unit}</label>
+              <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('bottomRight')}: {bottomRight}{unit}</label>
               <input type="range" min="0" max={unit === '%' ? 50 : 100} value={bottomRight}
                 onChange={(e) => handleChange('bottomRight', parseInt(e.target.value))}
                 className="w-full" />
@@ -105,11 +105,11 @@ export default function BorderRadiusGenerator() {
           </div>
 
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('presets')}</label>
+            <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('presets')}</label>
             <div className="flex flex-wrap gap-2">
               {presets.map((preset) => (
                 <button key={preset.name} onClick={() => applyPreset(preset.values)}
-                  className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm text-gray-300">
+                  className="px-3 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-700 dark:text-gray-300">
                   {preset.name}
                 </button>
               ))}
@@ -117,15 +117,15 @@ export default function BorderRadiusGenerator() {
           </div>
 
           <div>
-            <label className="block text-sm text-gray-300 mb-2">{t('boxColor')}</label>
+            <label className="block text-sm text-gray-700 dark:text-gray-300 mb-2">{t('boxColor')}</label>
             <input type="color" value={boxColor} onChange={(e) => setBoxColor(e.target.value)}
               className="w-full h-10 rounded cursor-pointer" />
           </div>
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-lg font-medium text-white">{t('preview')}</h3>
-          <div className="bg-gray-600 rounded-lg p-8 flex items-center justify-center min-h-[300px]">
+          <h3 className="text-lg font-medium text-gray-900 dark:text-white">{t('preview')}</h3>
+          <div className="bg-gray-200 dark:bg-gray-600 rounded-lg p-8 flex items-center justify-center min-h-[300px]">
             <div className="w-48 h-48 transition-all duration-200"
               style={{
                 backgroundColor: boxColor,
@@ -134,8 +134,8 @@ export default function BorderRadiusGenerator() {
           </div>
           
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">{t('output')}</label>
-            <div className="bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-400">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('output')}</label>
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 font-mono text-sm text-green-600 dark:text-green-400">
               {getCss()}
             </div>
           </div>

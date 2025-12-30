@@ -34,24 +34,24 @@ export default function HttpStatus() {
   );
 
   const getColor = (code: string) => {
-    if (code.startsWith('2')) return 'bg-green-900/50 border-green-700';
-    if (code.startsWith('3')) return 'bg-blue-900/50 border-blue-700';
-    if (code.startsWith('4')) return 'bg-yellow-900/50 border-yellow-700';
-    if (code.startsWith('5')) return 'bg-red-900/50 border-red-700';
-    return 'bg-gray-800 border-gray-700';
+    if (code.startsWith('2')) return 'bg-green-100 dark:bg-green-900/50 border-green-300 dark:border-green-700';
+    if (code.startsWith('3')) return 'bg-blue-100 dark:bg-blue-900/50 border-blue-300 dark:border-blue-700';
+    if (code.startsWith('4')) return 'bg-yellow-100 dark:bg-yellow-900/50 border-yellow-300 dark:border-yellow-700';
+    if (code.startsWith('5')) return 'bg-red-100 dark:bg-red-900/50 border-red-300 dark:border-red-700';
+    return 'bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-700';
   };
 
   return (
     <div className="space-y-4">
-      <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg" placeholder={t('httpStatus.search')} />
+      <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('httpStatus.search')} />
       <div className="grid md:grid-cols-2 gap-3 max-h-[500px] overflow-auto">
         {filtered.map(([code, info]) => (
           <div key={code} className={`p-4 rounded-lg border ${getColor(code)}`}>
             <div className="flex items-center gap-3">
-              <span className="text-2xl font-bold">{code}</span>
-              <span className="font-medium">{info.name}</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">{code}</span>
+              <span className="font-medium text-gray-900 dark:text-white">{info.name}</span>
             </div>
-            <p className="text-sm text-gray-300 mt-1">{info.desc}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{info.desc}</p>
           </div>
         ))}
       </div>

@@ -194,29 +194,29 @@ export default function JsonToKotlin() {
       {/* Options */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('className')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('className')}</label>
           <input
             type="text"
             value={options.className}
             onChange={(e) => setOptions({ ...options, className: e.target.value })}
-            className="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm"
+            className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('packageName')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('packageName')}</label>
           <input
             type="text"
             value={options.packageName}
             onChange={(e) => setOptions({ ...options, packageName: e.target.value })}
-            className="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm"
+            className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
           />
         </div>
         <div>
-          <label className="block text-sm text-gray-300 mb-1">{t('serializer')}</label>
+          <label className="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('serializer')}</label>
           <select
             value={options.useMoshi ? 'moshi' : options.useGson ? 'gson' : options.useKotlinx ? 'kotlinx' : 'none'}
             onChange={(e) => handleSerializerChange(e.target.value as 'none' | 'moshi' | 'gson' | 'kotlinx')}
-            className="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm"
+            className="w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-2 text-sm text-gray-900 dark:text-white"
           >
             <option value="none">{t('noSerializer')}</option>
             <option value="moshi">Moshi</option>
@@ -225,21 +225,21 @@ export default function JsonToKotlin() {
           </select>
         </div>
         <div className="flex flex-col gap-2 justify-center">
-          <label className="flex items-center gap-2 text-sm">
+          <label className="flex items-center gap-2 text-sm text-gray-600 dark:text-white">
             <input
               type="checkbox"
               checked={options.useDataClass}
               onChange={(e) => setOptions({ ...options, useDataClass: e.target.checked })}
-              className="rounded bg-gray-700 border-gray-600"
+              className="rounded bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
             {t('useDataClass')}
           </label>
-          <label className="flex items-center gap-2 text-sm">
+          <label className="flex items-center gap-2 text-sm text-gray-600 dark:text-white">
             <input
               type="checkbox"
               checked={options.useNullable}
               onChange={(e) => setOptions({ ...options, useNullable: e.target.checked })}
-              className="rounded bg-gray-700 border-gray-600"
+              className="rounded bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600"
             />
             {t('useNullable')}
           </label>
@@ -250,10 +250,10 @@ export default function JsonToKotlin() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">{t('input')}</label>
+            <label className="text-sm font-medium text-gray-600 dark:text-gray-300">{t('input')}</label>
             <button
               onClick={loadSample}
-              className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs"
+              className="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-xs"
             >
               {t('loadSample')}
             </button>
@@ -262,17 +262,17 @@ export default function JsonToKotlin() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder={t('inputPlaceholder')}
-            className="w-full h-96 bg-gray-800 border border-gray-700 rounded-lg p-4 font-mono text-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full h-96 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-300">{t('output')}</label>
+            <label className="text-sm font-medium text-gray-600 dark:text-gray-300">{t('output')}</label>
             <button
               onClick={copyOutput}
               disabled={!output}
-              className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-xs disabled:opacity-50"
+              className="px-2 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded text-xs disabled:opacity-50"
             >
               {t('copy')}
             </button>
@@ -281,7 +281,7 @@ export default function JsonToKotlin() {
             value={output}
             readOnly
             placeholder={t('outputPlaceholder')}
-            className="w-full h-96 bg-gray-800 border border-gray-700 rounded-lg p-4 font-mono text-sm resize-none"
+            className="w-full h-96 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 font-mono text-sm text-gray-900 dark:text-white resize-none"
           />
         </div>
       </div>
@@ -291,7 +291,7 @@ export default function JsonToKotlin() {
         <button
           onClick={convert}
           disabled={!input.trim()}
-          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg font-medium"
         >
           {t('convert')}
         </button>
@@ -299,7 +299,7 @@ export default function JsonToKotlin() {
 
       {/* Error */}
       {error && (
-        <div className="p-4 bg-red-900/50 border border-red-700 rounded-lg text-red-300">
+        <div className="p-4 bg-red-100 dark:bg-red-900/50 border border-red-400 dark:border-red-700 rounded-lg text-red-700 dark:text-red-300">
           {error}
         </div>
       )}

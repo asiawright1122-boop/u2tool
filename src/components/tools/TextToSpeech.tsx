@@ -40,20 +40,20 @@ export default function TextToSpeech() {
 
   return (
     <div className="space-y-4">
-      <textarea value={text} onChange={(e) => setText(e.target.value)} className="w-full h-40 p-3 bg-gray-800 border border-gray-700 rounded-lg" placeholder={t('tts.placeholder')} />
+      <textarea value={text} onChange={(e) => setText(e.target.value)} className="w-full h-40 p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white" placeholder={t('tts.placeholder')} />
       <div className="grid md:grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-2">{t('tts.voice')}</label>
-          <select value={voice} onChange={(e) => setVoice(Number(e.target.value))} className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg">
+          <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.voice')}</label>
+          <select value={voice} onChange={(e) => setVoice(Number(e.target.value))} className="w-full p-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white">
             {voices.map((v, i) => <option key={i} value={i}>{v.name} ({v.lang})</option>)}
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">{t('tts.rate')}: {rate}</label>
+          <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.rate')}: {rate}</label>
           <input type="range" min="0.5" max="2" step="0.1" value={rate} onChange={(e) => setRate(Number(e.target.value))} className="w-full" />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">{t('tts.pitch')}: {pitch}</label>
+          <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('tts.pitch')}: {pitch}</label>
           <input type="range" min="0.5" max="2" step="0.1" value={pitch} onChange={(e) => setPitch(Number(e.target.value))} className="w-full" />
         </div>
       </div>
