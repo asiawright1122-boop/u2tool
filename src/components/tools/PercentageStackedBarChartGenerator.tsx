@@ -117,7 +117,10 @@ export default function PercentageStackedBarChartGenerator() {
       itemStyle: { color: colors[idx % colors.length] },
       label: {
         show: true,
-        formatter: (params: { value: number }) => `${params.value}%`,
+        formatter: (params: unknown) => {
+          const p = params as { value: number };
+          return `${p.value}%`;
+        },
         color: '#fff',
       },
     }));
@@ -133,7 +136,7 @@ export default function PercentageStackedBarChartGenerator() {
         trigger: 'axis',
         axisPointer: { type: 'shadow' },
         formatter: (params: unknown) => {
-          const items = params as Array<{ seriesName: string; value: number; marker: string }>;
+          const items = params as Array<{ seriesName: string; value: number; marker: string; axisValue?: string }>;
           let result = `${items[0]?.axisValue || ''}<br/>`;
           items.forEach(item => {
             result += `${item.marker} ${item.seriesName}: ${item.value}%<br/>`;

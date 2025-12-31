@@ -282,6 +282,14 @@ const TOOL_COMPONENTS_MAP: Record<string, React.ComponentType> = {
   'half-doughnut-chart-generator': dynamic(() => import('./HalfDoughnutChartGenerator'), { ssr: false }),
   'nested-pie-chart-generator': dynamic(() => import('./NestedPieChartGenerator'), { ssr: false }),
   'pictorial-bar-chart-generator': dynamic(() => import('./PictorialBarChartGenerator'), { ssr: false }),
+  // Batch 37 - New Popular Tools (热门低竞争工具)
+  'env-parser': dynamic(() => import('./EnvParser')),
+  'json-schema-generator': dynamic(() => import('./JsonSchemaGenerator')),
+  'time-calculator': dynamic(() => import('./TimeCalculator')),
+  'batch-timestamp-converter': dynamic(() => import('./BatchTimestampConverter')),
+  'regex-visualizer': dynamic(() => import('./RegexVisualizer')),
+  'crontab-calendar': dynamic(() => import('./CrontabCalendar')),
+  'fake-data-generator': dynamic(() => import('./FakeDataGenerator')),
 };
 
 export default function ToolWrapper({ slug }: { slug: string }) {

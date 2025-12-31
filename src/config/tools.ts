@@ -324,6 +324,15 @@ export const tools: Tool[] = [
   { slug: 'half-doughnut-chart-generator', category: 'charts', icon: '🌙', component: 'HalfDoughnutChartGenerator', popular: true },
   { slug: 'nested-pie-chart-generator', category: 'charts', icon: '🥧', component: 'NestedPieChartGenerator', popular: true },
   { slug: 'pictorial-bar-chart-generator', category: 'charts', icon: '📊', component: 'PictorialBarChartGenerator', popular: true },
+
+  // Batch 37 - New Popular Tools (热门低竞争工具)
+  { slug: 'env-parser', category: 'development', icon: '📄', component: 'EnvParser', popular: true },
+  { slug: 'json-schema-generator', category: 'development', icon: '📋', component: 'JsonSchemaGenerator', popular: true },
+  { slug: 'time-calculator', category: 'converters', icon: '⏱️', component: 'TimeCalculator', popular: true },
+  { slug: 'batch-timestamp-converter', category: 'converters', icon: '📅', component: 'BatchTimestampConverter', popular: true },
+  { slug: 'regex-visualizer', category: 'development', icon: '🔍', component: 'RegexVisualizer', popular: true },
+  { slug: 'crontab-calendar', category: 'development', icon: '📆', component: 'CrontabCalendar', popular: true },
+  { slug: 'fake-data-generator', category: 'generators', icon: '🎭', component: 'FakeDataGenerator', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [

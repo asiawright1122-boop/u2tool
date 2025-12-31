@@ -142,7 +142,10 @@ export default function PositiveNegativeBarChartGenerator() {
             label: {
               show: true,
               position: 'right',
-              formatter: (params: { value: number }) => params.value.toString(),
+              formatter: (params: unknown) => {
+                const p = params as { value: number };
+                return p.value.toString();
+              },
               color: chartTheme.labelColor,
             },
           },
@@ -176,7 +179,10 @@ export default function PositiveNegativeBarChartGenerator() {
           label: {
             show: true,
             position: 'top',
-            formatter: (params: { value: number }) => params.value.toString(),
+            formatter: (params: unknown) => {
+              const p = params as { value: number };
+              return p.value.toString();
+            },
             color: chartTheme.labelColor,
           },
         },

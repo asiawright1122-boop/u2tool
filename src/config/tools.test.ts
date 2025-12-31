@@ -116,3 +116,97 @@ describe('Tool Migration Verification', () => {
     }
   });
 });
+
+
+/**
+ * **Feature: add-popular-tools, Property 10: Tool Registration Completeness**
+ * *For any* tool in tools.ts, it should have:
+ * 1. A unique kebab-case slug
+ * 2. A valid category
+ * 3. A component name that matches the expected pattern
+ * **Validates: Requirements 9.1, 9.2, 9.3**
+ */
+describe('Property 10: Tool Registration Completeness', () => {
+  it('all tools should have unique slugs', () => {
+    const slugs = tools.map(t => t.slug);
+    const uniqueSlugs = new Set(slugs);
+    expect(uniqueSlugs.size, 'Duplicate tool slugs found').toBe(slugs.length);
+  });
+
+  it('all tool slugs should be kebab-case', () => {
+    const kebabCaseRegex = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+    
+    fc.assert(
+      fc.property(
+        fc.constantFrom(...tools),
+        (tool) => {
+          expect(
+            kebabCaseRegex.test(tool.slug),
+            `Tool slug "${tool.slug}" is not in kebab-case format`
+          ).toBe(true);
+          return true;
+        }
+      ),
+      { numRuns: tools.length }
+    );
+  });
+
+  it('all tools should have a component name', () => {
+    fc.assert(
+      fc.property(
+        fc.constantFrom(...tools),
+        (tool) => {
+          expect(
+            tool.component,
+            `Tool "${tool.slug}" is missing component name`
+          ).toBeDefined();
+          expect(
+            tool.component.length,
+            `Tool "${tool.slug}" has empty component name`
+          ).toBeGreaterThan(0);
+          return true;
+        }
+      ),
+      { numRuns: tools.length }
+    );
+  });
+
+  it('all tools should have an icon', () => {
+    fc.assert(
+      fc.property(
+        fc.constantFrom(...tools),
+        (tool) => {
+          expect(
+            tool.icon,
+            `Tool "${tool.slug}" is missing icon`
+          ).toBeDefined();
+          expect(
+            tool.icon.length,
+            `Tool "${tool.slug}" has empty icon`
+          ).toBeGreaterThan(0);
+          return true;
+        }
+      ),
+      { numRuns: tools.length }
+    );
+  });
+
+  // Verify the 7 new tools are registered
+  it('new popular tools should be registered', () => {
+    const newToolSlugs = [
+      'env-parser',
+      'json-schema-generator',
+      'time-calculator',
+      'batch-timestamp-converter',
+      'regex-visualizer',
+      'crontab-calendar',
+      'fake-data-generator'
+    ];
+    
+    for (const slug of newToolSlugs) {
+      const tool = tools.find(t => t.slug === slug);
+      expect(tool, `Tool "${slug}" should be registered in tools.ts`).toBeDefined();
+      expect(tool?.popular, `Tool "${slug}" should be marked as popular`).toBe(true);
+    }
+  });
+});

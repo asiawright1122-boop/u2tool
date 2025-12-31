@@ -4,7 +4,7 @@
 > 
 > 最后更新: 2025-12-31
 > 
-> 工具总数: **242 个**
+> 工具总数: **249 个**
 
 ---
 
@@ -131,8 +131,9 @@
 | 23 | `cookie-policy-generator` | 🍪 | CookiePolicyGenerator | |
 | 24 | `open-graph-generator` | 🖼️ | OpenGraphGenerator | ✅ |
 | 25 | `twitter-card-generator` | 🐦 | TwitterCardGenerator | ✅ |
+| 26 | `fake-data-generator` | 🎭 | FakeDataGenerator | ✅ |
 
-**小计: 25 个工具**
+**小计: 26 个工具**
 
 ---
 
@@ -177,8 +178,10 @@
 | 35 | `color-name-finder` | 🎨 | ColorNameFinder | ✅ |
 | 36 | `json-to-dart` | 🎯 | JsonToDart | ✅ |
 | 37 | `sql-to-json` | 🗃️ | SqlToJson | ✅ |
+| 38 | `time-calculator` | ⏱️ | TimeCalculator | ✅ |
+| 39 | `batch-timestamp-converter` | 📅 | BatchTimestampConverter | ✅ |
 
-**小计: 37 个工具**
+**小计: 39 个工具**
 
 ---
 
@@ -219,8 +222,12 @@
 | 31 | `css-variables-generator` | 🎨 | CssVariablesGenerator | |
 | 32 | `regex-escape` | 🔒 | RegexEscape | |
 | 33 | `crc32-calculator` | ✅ | Crc32Calculator | |
+| 34 | `env-parser` | 📄 | EnvParser | ✅ |
+| 35 | `json-schema-generator` | 📋 | JsonSchemaGenerator | ✅ |
+| 36 | `regex-visualizer` | 🔍 | RegexVisualizer | ✅ |
+| 37 | `crontab-calendar` | 📆 | CrontabCalendar | ✅ |
 
-**小计: 33 个工具**
+**小计: 37 个工具**
 
 ---
 
@@ -402,6 +409,7 @@
 - `terms-generator` - 服务条款
 - `open-graph-generator` - Open Graph
 - `twitter-card-generator` - Twitter Card
+- `fake-data-generator` - 假数据生成
 
 ### 转换器类热门工具
 - `color-converter` - 颜色转换
@@ -418,6 +426,8 @@
 - `color-name-finder` - 颜色名称查找
 - `json-to-dart` - JSON 转 Dart
 - `sql-to-json` - SQL 转 JSON
+- `time-calculator` - 时间计算器
+- `batch-timestamp-converter` - 批量时间戳转换
 
 ### 开发类热门工具
 - `code-minifier` - 代码压缩
@@ -434,6 +444,10 @@
 - `nginx-config-generator` - Nginx 配置
 - `curl-converter` - cURL 转换
 - `http-status-codes` - HTTP 状态码
+- `env-parser` - 环境变量解析器
+- `json-schema-generator` - JSON Schema 生成器
+- `regex-visualizer` - 正则表达式可视化
+- `crontab-calendar` - Crontab 日历
 
 ### 安全类热门工具
 - `password-generator` - 密码生成
@@ -557,19 +571,20 @@ const toolSlug = 'your-tool-slug';
 |------|------|
 | 📝 文本工具 | 28 |
 | 🔐 编码工具 | 28 |
-| ⚡ 生成器 | 25 |
-| 🔄 转换器 | 37 |
-| 💻 开发工具 | 33 |
+| ⚡ 生成器 | 26 |
+| 🔄 转换器 | 39 |
+| 💻 开发工具 | 37 |
 | 🔒 安全工具 | 11 |
 | 🌐 网络工具 | 15 |
 | 🖼️ 图像工具 | 14 |
 | 🔢 数学工具 | 9 |
 | 📈 图表工具 | 42 |
-| **总计** | **242** |
+| **总计** | **249** |
 
 ---
 
 ## 更新日志
 
+- **2025-12-31**: 添加 7 个新热门工具 (env-parser, json-schema-generator, time-calculator, batch-timestamp-converter, regex-visualizer, crontab-calendar, fake-data-generator)
 - **2025-12-31**: 添加 8 个新图表工具 (percentage-stacked-bar-chart-generator, mixed-chart-generator, ring-progress-chart-generator, liquid-fill-chart-generator, multi-ring-chart-generator, half-doughnut-chart-generator, nested-pie-chart-generator, pictorial-bar-chart-generator)
 - **2025-12-31**: 初始版本，记录 234 个工具
