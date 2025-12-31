@@ -237,6 +237,7 @@ export default function FakeDataGenerator() {
   const t = useTranslations('tools.fake-data-generator');
   const tg = useTranslations('tools');
   
+  const [mounted, setMounted] = useState(false);
   const [count, setCount] = useState(10);
   const [locale, setLocale] = useState('en');
   const [fields, setFields] = useState<Field[]>([
@@ -248,6 +249,12 @@ export default function FakeDataGenerator() {
   const [tableName, setTableName] = useState('users');
   const [copied, setCopied] = useState(false);
   const [editingCell, setEditingCell] = useState<{ row: number; field: string } | null>(null);
+  const [editValue, setEditValue] = useState('');
+
+  // Ensure client-side only rendering for dynamic content
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Update field names when locale changes
   useEffect(() => {
@@ -291,11 +298,27 @@ export default function FakeDataGenerator() {
 
   const handleClear = () => setData([]);
 
-  // Update a single cell value
-  const updateCell = (rowIndex: number, fieldName: string, value: string) => {
-    setData(prev => prev.map((row, idx) => 
-      idx === rowIndex ? { ...row, [fieldName]: value } : row
-    ));
+  // Start editing a cell
+  const startEditing = (rowIndex: number, fieldName: string, currentValue: string) => {
+    setEditingCell({ row: rowIndex, field: fieldName });
+    setEditValue(currentValue);
+  };
+
+  // Save the edited value
+  const saveEdit = () => {
+    if (editingCell) {
+      setData(prev => prev.map((row, idx) => 
+        idx === editingCell.row ? { ...row, [editingCell.field]: editValue } : row
+      ));
+      setEditingCell(null);
+      setEditValue('');
+    }
+  };
+
+  // Cancel editing
+  const cancelEdit = () => {
+    setEditingCell(null);
+    setEditValue('');
   };
 
   const exportJson = () => {
@@ -410,7 +433,9 @@ export default function FakeDataGenerator() {
                   className="flex-1 h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                 >
                   {FIELD_TYPES.map(type => (
-                    <option key={type} value={type}>{(TYPE_DISPLAY_NAMES[locale] || TYPE_DISPLAY_NAMES.en)[type]}</option>
+                    <option key={type} value={type}>
+                      {mounted ? (TYPE_DISPLAY_NAMES[locale] || TYPE_DISPLAY_NAMES.en)[type] : TYPE_DISPLAY_NAMES.en[type]}
+                    </option>
                   ))}
                 </select>
                 <button
@@ -509,12 +534,14 @@ export default function FakeDataGenerator() {
                         {editingCell?.row === index && editingCell?.field === field.name ? (
                           <input
                             type="text"
-                            value={row[field.name]}
-                            onChange={(e) => updateCell(index, field.name, e.target.value)}
-                            onBlur={() => setEditingCell(null)}
+                            value={editValue}
+                            onChange={(e) => setEditValue(e.target.value)}
+                            onBlur={saveEdit}
                             onKeyDown={(e) => {
-                              if (e.key === 'Enter' || e.key === 'Escape') {
-                                setEditingCell(null);
+                              if (e.key === 'Enter') {
+                                saveEdit();
+                              } else if (e.key === 'Escape') {
+                                cancelEdit();
                               }
                             }}
                             autoFocus
@@ -522,8 +549,8 @@ export default function FakeDataGenerator() {
                           />
                         ) : (
                           <div
-                            onClick={() => setEditingCell({ row: index, field: field.name })}
-                            className="px-3 py-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-gray-900 dark:text-gray-100"
+                            onClick={() => startEditing(index, field.name, row[field.name] || '')}
+                            className="px-3 py-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-gray-900 dark:text-gray-100 min-h-[28px]"
                             title={t('clickToEdit')}
                           >
                             {row[field.name]}
