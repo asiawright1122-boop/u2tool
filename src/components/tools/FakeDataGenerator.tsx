@@ -11,7 +11,7 @@ interface Field {
   type: FieldType;
 }
 
-// Localized field names for each language
+// Localized field names for each language (for database column names)
 const FIELD_NAMES: Record<string, Record<FieldType, string>> = {
   en: { name: 'name', firstName: 'first_name', lastName: 'last_name', email: 'email', phone: 'phone', address: 'address', city: 'city', country: 'country', company: 'company', jobTitle: 'job_title', date: 'date', number: 'number', uuid: 'uuid', url: 'url', username: 'username' },
   zh: { name: '姓名', firstName: '名', lastName: '姓', email: '邮箱', phone: '电话', address: '地址', city: '城市', country: '国家', company: '公司', jobTitle: '职位', date: '日期', number: '数字', uuid: 'uuid', url: '网址', username: '用户名' },
@@ -20,9 +20,23 @@ const FIELD_NAMES: Record<string, Record<FieldType, string>> = {
   es: { name: 'nombre', firstName: 'nombre', lastName: 'apellido', email: 'correo', phone: 'teléfono', address: 'dirección', city: 'ciudad', country: 'país', company: 'empresa', jobTitle: 'cargo', date: 'fecha', number: 'número', uuid: 'uuid', url: 'url', username: 'usuario' },
   pt: { name: 'nome', firstName: 'nome', lastName: 'sobrenome', email: 'email', phone: 'telefone', address: 'endereço', city: 'cidade', country: 'país', company: 'empresa', jobTitle: 'cargo', date: 'data', number: 'número', uuid: 'uuid', url: 'url', username: 'usuário' },
   fr: { name: 'nom', firstName: 'prénom', lastName: 'nom', email: 'email', phone: 'téléphone', address: 'adresse', city: 'ville', country: 'pays', company: 'entreprise', jobTitle: 'poste', date: 'date', number: 'numéro', uuid: 'uuid', url: 'url', username: 'utilisateur' },
-  de: { name: 'name', firstName: 'vorname', lastName: 'nachname', email: 'email', phone: 'telefon', address: 'adresse', city: 'stadt', country: 'land', company: 'firma', jobTitle: 'position', date: 'datum', number: 'nummer', uuid: 'uuid', url: 'url', username: 'benutzername' },
+  de: { name: 'Name', firstName: 'Vorname', lastName: 'Nachname', email: 'E-Mail', phone: 'Telefon', address: 'Adresse', city: 'Stadt', country: 'Land', company: 'Firma', jobTitle: 'Position', date: 'Datum', number: 'Nummer', uuid: 'UUID', url: 'URL', username: 'Benutzername' },
   ru: { name: 'имя', firstName: 'имя', lastName: 'фамилия', email: 'почта', phone: 'телефон', address: 'адрес', city: 'город', country: 'страна', company: 'компания', jobTitle: 'должность', date: 'дата', number: 'номер', uuid: 'uuid', url: 'url', username: 'пользователь' },
   ar: { name: 'الاسم', firstName: 'الاسم', lastName: 'اللقب', email: 'البريد', phone: 'الهاتف', address: 'العنوان', city: 'المدينة', country: 'البلد', company: 'الشركة', jobTitle: 'المنصب', date: 'التاريخ', number: 'الرقم', uuid: 'uuid', url: 'الرابط', username: 'المستخدم' },
+};
+
+// Localized type display names for dropdown (more user-friendly)
+const TYPE_DISPLAY_NAMES: Record<string, Record<FieldType, string>> = {
+  en: { name: 'Full Name', firstName: 'First Name', lastName: 'Last Name', email: 'Email', phone: 'Phone', address: 'Address', city: 'City', country: 'Country', company: 'Company', jobTitle: 'Job Title', date: 'Date', number: 'Number', uuid: 'UUID', url: 'URL', username: 'Username' },
+  zh: { name: '全名', firstName: '名', lastName: '姓', email: '邮箱', phone: '电话', address: '地址', city: '城市', country: '国家', company: '公司', jobTitle: '职位', date: '日期', number: '数字', uuid: 'UUID', url: '网址', username: '用户名' },
+  ja: { name: '氏名', firstName: '名', lastName: '姓', email: 'メール', phone: '電話', address: '住所', city: '都市', country: '国', company: '会社', jobTitle: '役職', date: '日付', number: '番号', uuid: 'UUID', url: 'URL', username: 'ユーザー名' },
+  ko: { name: '전체 이름', firstName: '이름', lastName: '성', email: '이메일', phone: '전화', address: '주소', city: '도시', country: '국가', company: '회사', jobTitle: '직책', date: '날짜', number: '숫자', uuid: 'UUID', url: 'URL', username: '사용자명' },
+  es: { name: 'Nombre Completo', firstName: 'Nombre', lastName: 'Apellido', email: 'Correo', phone: 'Teléfono', address: 'Dirección', city: 'Ciudad', country: 'País', company: 'Empresa', jobTitle: 'Cargo', date: 'Fecha', number: 'Número', uuid: 'UUID', url: 'URL', username: 'Usuario' },
+  pt: { name: 'Nome Completo', firstName: 'Nome', lastName: 'Sobrenome', email: 'Email', phone: 'Telefone', address: 'Endereço', city: 'Cidade', country: 'País', company: 'Empresa', jobTitle: 'Cargo', date: 'Data', number: 'Número', uuid: 'UUID', url: 'URL', username: 'Usuário' },
+  fr: { name: 'Nom Complet', firstName: 'Prénom', lastName: 'Nom', email: 'Email', phone: 'Téléphone', address: 'Adresse', city: 'Ville', country: 'Pays', company: 'Entreprise', jobTitle: 'Poste', date: 'Date', number: 'Numéro', uuid: 'UUID', url: 'URL', username: 'Utilisateur' },
+  de: { name: 'Vollständiger Name', firstName: 'Vorname', lastName: 'Nachname', email: 'E-Mail', phone: 'Telefon', address: 'Adresse', city: 'Stadt', country: 'Land', company: 'Firma', jobTitle: 'Position', date: 'Datum', number: 'Nummer', uuid: 'UUID', url: 'URL', username: 'Benutzername' },
+  ru: { name: 'Полное имя', firstName: 'Имя', lastName: 'Фамилия', email: 'Почта', phone: 'Телефон', address: 'Адрес', city: 'Город', country: 'Страна', company: 'Компания', jobTitle: 'Должность', date: 'Дата', number: 'Номер', uuid: 'UUID', url: 'URL', username: 'Пользователь' },
+  ar: { name: 'الاسم الكامل', firstName: 'الاسم الأول', lastName: 'اللقب', email: 'البريد الإلكتروني', phone: 'الهاتف', address: 'العنوان', city: 'المدينة', country: 'البلد', company: 'الشركة', jobTitle: 'المنصب', date: 'التاريخ', number: 'الرقم', uuid: 'UUID', url: 'الرابط', username: 'اسم المستخدم' },
 };
 
 // Phone formats by locale
@@ -388,7 +402,7 @@ export default function FakeDataGenerator() {
                   className="flex-1 h-10 px-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                 >
                   {FIELD_TYPES.map(type => (
-                    <option key={type} value={type}>{t(`types.${type}`)}</option>
+                    <option key={type} value={type}>{(TYPE_DISPLAY_NAMES[locale] || TYPE_DISPLAY_NAMES.en)[type]}</option>
                   ))}
                 </select>
                 <button
