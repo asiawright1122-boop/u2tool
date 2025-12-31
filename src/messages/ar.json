@@ -3531,14 +3531,14 @@
     "text-template": {
       "name": "قالب النص",
       "description": "استبدال المتغيرات في قوالب النص بالقيم.",
-      "seo_title": "Free Text Template Engine Online",
-      "seo_description": "Simple text template engine. Replace {{ variables }} with values from your data. Support loops, conditionals, and nested objects. Generate dynamic content.",
+      "seo_title": "محرك قوالب النص المجاني عبر الإنترنت",
+      "seo_description": "محرك قوالب نص بسيط. استبدل '{{' المتغيرات '}}' بقيم من بياناتك. يدعم الحلقات والشروط والكائنات المتداخلة. إنشاء محتوى ديناميكي.",
       "template": "نموذج",
-      "templatePlaceholder": "أدخل القالب الذي يحتوي على {{ متغيرات }}...",
-      "syntaxHint": "استخدم بناء الجملة {{variableName }} للمتغيرات",
+      "templatePlaceholder": "أدخل القالب الذي يحتوي على '{{' متغيرات '}}'...",
+      "syntaxHint": "استخدم بناء الجملة '{{' variableName '}}' للمتغيرات",
       "variables": "المتغيرات",
       "valuePlaceholder": "أدخل القيمة",
-      "process": "قالب العملية",
+      "process": "معالجة القالب",
       "result": "نتيجة",
       "copy": "نسخ"
     },
@@ -5692,7 +5692,7 @@
       "description": "إنشاء JSON Schema من بيانات JSON نموذجية. يدعم Draft-07 و Draft-2020-12.",
       "seo_title": "مولد JSON Schema المجاني عبر الإنترنت",
       "seo_description": "إنشاء JSON Schema من بيانات JSON نموذجية عبر الإنترنت مجانًا. يدعم Draft-07 و Draft-2020-12. استنتاج الأنواع تلقائيًا.",
-      "inputPlaceholder": "{\n  \"name\": \"أحمد\",\n  \"age\": 30,\n  \"email\": \"ahmed@example.com\"\n}",
+      "inputPlaceholder": "'{'\n  \"name\": \"أحمد\",\n  \"age\": 30,\n  \"email\": \"ahmed@example.com\"\n'}'",
       "generate": "إنشاء Schema",
       "draft": "إصدار Schema",
       "includeExamples": "تضمين الأمثلة",
@@ -5748,7 +5748,7 @@
       "seo_title": "مُصوِّر التعبيرات النمطية المجاني عبر الإنترنت",
       "seo_description": "تصور التعبيرات النمطية كمخططات سكة حديد عبر الإنترنت مجانًا. اختبار الأنماط، رؤية التطابقات المميزة. تصدير كـ SVG أو PNG.",
       "pattern": "نمط Regex",
-      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$",
+      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]'{2,}'$",
       "testString": "سلسلة الاختبار",
       "testStringPlaceholder": "أدخل نصًا لاختباره مقابل النمط",
       "visualize": "تصور",
@@ -5774,7 +5774,8 @@
       "scheduledRun": "تنفيذ مجدول",
       "today": "اليوم",
       "prevMonth": "الشهر السابق",
-      "nextMonth": "الشهر التالي"
+      "nextMonth": "الشهر التالي",
+      "formatHint": "التنسيق: دقيقة ساعة يوم-الشهر شهر يوم-الأسبوع (مثال: 0 9 * * 1-5)"
     },
     "fake-data-generator": {
       "name": "مولد البيانات الوهمية",

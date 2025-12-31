@@ -3531,14 +3531,14 @@
     "text-template": {
       "name": "Modèle de texte",
       "description": "Remplacez les variables dans les modèles de texte par des valeurs.",
-      "seo_title": "Free Text Template Engine Online",
-      "seo_description": "Simple text template engine. Replace {{ variables }} with values from your data. Support loops, conditionals, and nested objects. Generate dynamic content.",
+      "seo_title": "Moteur de modèle de texte gratuit en ligne",
+      "seo_description": "Moteur de modèle de texte simple. Remplacez '{{' variables '}}' par des valeurs de vos données. Prend en charge les boucles, les conditions et les objets imbriqués. Générez du contenu dynamique.",
       "template": "Modèle",
-      "templatePlaceholder": "Entrez le modèle avec {{ variables }}...",
-      "syntaxHint": "Utiliser la syntaxe {{ variableName }} pour les variables",
+      "templatePlaceholder": "Entrez le modèle avec '{{' variables '}}'...",
+      "syntaxHint": "Utiliser la syntaxe '{{' variableName '}}' pour les variables",
       "variables": "Variables",
       "valuePlaceholder": "Entrez la valeur",
-      "process": "Modèle de processus",
+      "process": "Traiter le modèle",
       "result": "Résultat",
       "copy": "Copier"
     },
@@ -5563,7 +5563,7 @@
       "description": "Générez un JSON Schema à partir de données JSON d'exemple. Supporte Draft-07 et Draft-2020-12.",
       "seo_title": "Générateur de JSON Schema Gratuit en Ligne",
       "seo_description": "Générez un JSON Schema à partir de données JSON d'exemple en ligne gratuitement. Supporte Draft-07 et Draft-2020-12. Inférence automatique des types.",
-      "inputPlaceholder": "{\n  \"name\": \"Jean\",\n  \"age\": 30,\n  \"email\": \"jean@example.com\"\n}",
+      "inputPlaceholder": "'{'\n  \"name\": \"Jean\",\n  \"age\": 30,\n  \"email\": \"jean@example.com\"\n'}'",
       "generate": "Générer le Schema",
       "draft": "Version du Schema",
       "includeExamples": "Inclure des Exemples",
@@ -5619,7 +5619,7 @@
       "seo_title": "Visualiseur de Regex Gratuit en Ligne",
       "seo_description": "Visualisez les expressions régulières sous forme de diagrammes de chemin de fer en ligne gratuitement. Testez les motifs, voyez les correspondances surlignées. Exportez en SVG ou PNG.",
       "pattern": "Motif Regex",
-      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$",
+      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]'{2,}'$",
       "testString": "Chaîne de Test",
       "testStringPlaceholder": "Entrez du texte à tester contre le motif",
       "visualize": "Visualiser",
@@ -5645,7 +5645,8 @@
       "scheduledRun": "Exécution Planifiée",
       "today": "Aujourd'hui",
       "prevMonth": "Mois Précédent",
-      "nextMonth": "Mois Suivant"
+      "nextMonth": "Mois Suivant",
+      "formatHint": "Format : minute heure jour-du-mois mois jour-de-la-semaine (ex., 0 9 * * 1-5)"
     },
     "fake-data-generator": {
       "name": "Générateur de Données Fictives",

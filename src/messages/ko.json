@@ -3531,14 +3531,14 @@
     "text-template": {
       "name": "텍스트 템플릿",
       "description": "텍스트 템플릿의 변수를 값으로 바꿉니다.",
-      "seo_title": "Free Text Template Engine Online",
-      "seo_description": "Simple text template engine. Replace {{ variables }} with values from your data. Support loops, conditionals, and nested objects. Generate dynamic content.",
-      "template": "주형",
-      "templatePlaceholder": "{{ 변수 }}가 포함된 템플릿을 입력하세요...",
-      "syntaxHint": "변수에는 {{variableName }} 구문을 사용하세요.",
+      "seo_title": "무료 온라인 텍스트 템플릿 엔진",
+      "seo_description": "간단한 텍스트 템플릿 엔진. '{{' 변수 '}}'를 데이터의 값으로 대체합니다. 루프, 조건문, 중첩 객체를 지원합니다. 동적 콘텐츠를 생성합니다.",
+      "template": "템플릿",
+      "templatePlaceholder": "'{{' 변수 '}}'가 포함된 템플릿을 입력하세요...",
+      "syntaxHint": "변수에는 '{{' variableName '}}' 구문을 사용하세요.",
       "variables": "변수",
       "valuePlaceholder": "값을 입력하세요",
-      "process": "프로세스 템플릿",
+      "process": "템플릿 처리",
       "result": "결과",
       "copy": "복사"
     },
@@ -5686,7 +5686,7 @@
       "description": "샘플 JSON 데이터에서 JSON Schema를 생성합니다. Draft-07 및 Draft-2020-12 지원.",
       "seo_title": "무료 온라인 JSON Schema 생성기",
       "seo_description": "샘플 JSON 데이터에서 JSON Schema를 온라인에서 무료로 생성하세요. Draft-07 및 Draft-2020-12 지원. 타입 자동 추론.",
-      "inputPlaceholder": "{\n  \"name\": \"홍길동\",\n  \"age\": 30,\n  \"email\": \"hong@example.com\"\n}",
+      "inputPlaceholder": "'{'\n  \"name\": \"홍길동\",\n  \"age\": 30,\n  \"email\": \"hong@example.com\"\n'}'",
       "generate": "Schema 생성",
       "draft": "Schema 버전",
       "includeExamples": "예제 포함",
@@ -5742,7 +5742,7 @@
       "seo_title": "무료 온라인 정규식 시각화 도구",
       "seo_description": "정규식을 철도 다이어그램으로 온라인에서 무료로 시각화하세요. 패턴 테스트, 매치 하이라이트. SVG 또는 PNG로 내보내기.",
       "pattern": "정규식 패턴",
-      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$",
+      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]'{2,}'$",
       "testString": "테스트 문자열",
       "testStringPlaceholder": "테스트할 텍스트 입력",
       "visualize": "시각화",
@@ -5768,7 +5768,8 @@
       "scheduledRun": "예약된 실행",
       "today": "오늘",
       "prevMonth": "이전 달",
-      "nextMonth": "다음 달"
+      "nextMonth": "다음 달",
+      "formatHint": "형식: 분 시 일 월 요일 (예: 0 9 * * 1-5)"
     },
     "fake-data-generator": {
       "name": "가짜 데이터 생성기",

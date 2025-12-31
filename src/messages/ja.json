@@ -3531,14 +3531,14 @@
     "text-template": {
       "name": "テキストテンプレート",
       "description": "テキスト テンプレート内の変数を値に置き換えます。",
-      "seo_title": "Free Text Template Engine Online",
-      "seo_description": "Simple text template engine. Replace {{ variables }} with values from your data. Support loops, conditionals, and nested objects. Generate dynamic content.",
+      "seo_title": "無料オンラインテキストテンプレートエンジン",
+      "seo_description": "シンプルなテキストテンプレートエンジン。'{{' 変数 '}}' をデータの値に置き換えます。ループ、条件、ネストされたオブジェクトをサポート。動的コンテンツを生成。",
       "template": "テンプレート",
-      "templatePlaceholder": "{{ 変数 }} を含むテンプレートを入力してください...",
-      "syntaxHint": "変数には {{ variableName }} 構文を使用します",
+      "templatePlaceholder": "'{{' 変数 '}}' を含むテンプレートを入力してください...",
+      "syntaxHint": "変数には '{{' variableName '}}' 構文を使用します",
       "variables": "変数",
       "valuePlaceholder": "値を入力してください",
-      "process": "プロセステンプレート",
+      "process": "テンプレートを処理",
       "result": "結果",
       "copy": "コピー"
     },
@@ -5686,7 +5686,7 @@
       "description": "サンプルJSONデータからJSON Schemaを生成。Draft-07とDraft-2020-12をサポート。",
       "seo_title": "無料オンラインJSON Schema生成器",
       "seo_description": "サンプルJSONデータからJSON Schemaをオンラインで無料生成。Draft-07とDraft-2020-12をサポート。型を自動推論。",
-      "inputPlaceholder": "{\n  \"name\": \"田中\",\n  \"age\": 30,\n  \"email\": \"tanaka@example.com\"\n}",
+      "inputPlaceholder": "'{'\n  \"name\": \"田中\",\n  \"age\": 30,\n  \"email\": \"tanaka@example.com\"\n'}'",
       "generate": "Schema生成",
       "draft": "Schemaバージョン",
       "includeExamples": "例を含める",
@@ -5742,7 +5742,7 @@
       "seo_title": "無料オンライン正規表現ビジュアライザー",
       "seo_description": "正規表現を鉄道図としてオンラインで無料視覚化。パターンをテスト、マッチをハイライト表示。SVGまたはPNGでエクスポート。",
       "pattern": "正規表現パターン",
-      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$",
+      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]'{2,}'$",
       "testString": "テスト文字列",
       "testStringPlaceholder": "テストするテキストを入力",
       "visualize": "視覚化",
@@ -5768,7 +5768,8 @@
       "scheduledRun": "スケジュール実行",
       "today": "今日",
       "prevMonth": "前月",
-      "nextMonth": "翌月"
+      "nextMonth": "翌月",
+      "formatHint": "形式：分 時 日 月 曜日 (例：0 9 * * 1-5)"
     },
     "fake-data-generator": {
       "name": "ダミーデータ生成器",

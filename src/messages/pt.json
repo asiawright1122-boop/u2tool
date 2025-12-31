@@ -3531,14 +3531,14 @@
     "text-template": {
       "name": "Modelo de Texto",
       "description": "Substitua variáveis ​​em modelos de texto por valores.",
-      "seo_title": "Free Text Template Engine Online",
-      "seo_description": "Simple text template engine. Replace {{ variables }} with values from your data. Support loops, conditionals, and nested objects. Generate dynamic content.",
+      "seo_title": "Motor de modelo de texto gratuito online",
+      "seo_description": "Motor de modelo de texto simples. Substitua '{{' variáveis '}}' por valores dos seus dados. Suporta loops, condicionais e objetos aninhados. Gere conteúdo dinâmico.",
       "template": "Modelo",
-      "templatePlaceholder": "Insira o modelo com {{ variáveis ​​}}...",
-      "syntaxHint": "Use a sintaxe {{variableName }} para variáveis",
+      "templatePlaceholder": "Insira o modelo com '{{' variáveis '}}'...",
+      "syntaxHint": "Use a sintaxe '{{' variableName '}}' para variáveis",
       "variables": "Variáveis",
       "valuePlaceholder": "Insira o valor",
-      "process": "Modelo de Processo",
+      "process": "Processar modelo",
       "result": "Resultado",
       "copy": "Copiar"
     },
@@ -5563,7 +5563,7 @@
       "description": "Gere JSON Schema a partir de dados JSON de amostra. Suporta Draft-07 e Draft-2020-12.",
       "seo_title": "Gerador de JSON Schema Gratuito Online",
       "seo_description": "Gere JSON Schema a partir de dados JSON de amostra online gratuitamente. Suporta Draft-07 e Draft-2020-12. Inferência automática de tipos.",
-      "inputPlaceholder": "{\n  \"name\": \"João\",\n  \"age\": 30,\n  \"email\": \"joao@example.com\"\n}",
+      "inputPlaceholder": "'{'\n  \"name\": \"João\",\n  \"age\": 30,\n  \"email\": \"joao@example.com\"\n'}'",
       "generate": "Gerar Schema",
       "draft": "Versão do Schema",
       "includeExamples": "Incluir Exemplos",
@@ -5619,7 +5619,7 @@
       "seo_title": "Visualizador de Regex Gratuito Online",
       "seo_description": "Visualize expressões regulares como diagramas de ferrovia online gratuitamente. Teste padrões, veja correspondências destacadas. Exporte como SVG ou PNG.",
       "pattern": "Padrão Regex",
-      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$",
+      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]'{2,}'$",
       "testString": "String de Teste",
       "testStringPlaceholder": "Digite texto para testar contra o padrão",
       "visualize": "Visualizar",
@@ -5645,7 +5645,8 @@
       "scheduledRun": "Execução Agendada",
       "today": "Hoje",
       "prevMonth": "Mês Anterior",
-      "nextMonth": "Próximo Mês"
+      "nextMonth": "Próximo Mês",
+      "formatHint": "Formato: minuto hora dia-do-mês mês dia-da-semana (ex., 0 9 * * 1-5)"
     },
     "fake-data-generator": {
       "name": "Gerador de Dados Falsos",

@@ -5563,7 +5563,7 @@
       "description": "Generieren Sie JSON Schema aus Beispiel-JSON-Daten. Unterstützt Draft-07 und Draft-2020-12.",
       "seo_title": "Kostenloser Online JSON Schema Generator",
       "seo_description": "Generieren Sie JSON Schema aus Beispiel-JSON-Daten kostenlos online. Unterstützt Draft-07 und Draft-2020-12. Automatische Typinferenz.",
-      "inputPlaceholder": "{\n  \"name\": \"Hans\",\n  \"age\": 30,\n  \"email\": \"hans@example.com\"\n}",
+      "inputPlaceholder": "'{'\n  \"name\": \"Hans\",\n  \"age\": 30,\n  \"email\": \"hans@example.com\"\n'}'",
       "generate": "Schema generieren",
       "draft": "Schema-Version",
       "includeExamples": "Beispiele einschließen",
@@ -5619,7 +5619,7 @@
       "seo_title": "Kostenloser Online Regex-Visualisierer",
       "seo_description": "Visualisieren Sie reguläre Ausdrücke als Eisenbahndiagramme kostenlos online. Testen Sie Muster, sehen Sie hervorgehobene Übereinstimmungen. Exportieren Sie als SVG oder PNG.",
       "pattern": "Regex-Muster",
-      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$",
+      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]'{2,}'$",
       "testString": "Testzeichenfolge",
       "testStringPlaceholder": "Text zum Testen gegen das Muster eingeben",
       "visualize": "Visualisieren",
@@ -5645,7 +5645,8 @@
       "scheduledRun": "Geplante Ausführung",
       "today": "Heute",
       "prevMonth": "Vorheriger Monat",
-      "nextMonth": "Nächster Monat"
+      "nextMonth": "Nächster Monat",
+      "formatHint": "Format: Minute Stunde Tag-des-Monats Monat Wochentag (z.B., 0 9 * * 1-5)"
     },
     "fake-data-generator": {
       "name": "Fake-Daten-Generator",

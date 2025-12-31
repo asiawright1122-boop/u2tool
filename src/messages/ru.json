@@ -3531,14 +3531,14 @@
     "text-template": {
       "name": "Шаблон текста",
       "description": "Замените переменные в текстовых шаблонах значениями.",
-      "seo_title": "Free Text Template Engine Online",
-      "seo_description": "Simple text template engine. Replace {{ variables }} with values from your data. Support loops, conditionals, and nested objects. Generate dynamic content.",
+      "seo_title": "Бесплатный онлайн-движок текстовых шаблонов",
+      "seo_description": "Простой движок текстовых шаблонов. Замените '{{' переменные '}}' значениями из ваших данных. Поддержка циклов, условий и вложенных объектов. Генерируйте динамический контент.",
       "template": "Шаблон",
-      "templatePlaceholder": "Введите шаблон с {{ переменными }}...",
-      "syntaxHint": "Используйте синтаксис {{variableName }} для переменных.",
+      "templatePlaceholder": "Введите шаблон с '{{' переменными '}}'...",
+      "syntaxHint": "Используйте синтаксис '{{' variableName '}}' для переменных.",
       "variables": "Переменные",
       "valuePlaceholder": "Введите значение",
-      "process": "Шаблон процесса",
+      "process": "Обработать шаблон",
       "result": "Результат",
       "copy": "Копировать"
     },
@@ -5563,7 +5563,7 @@
       "description": "Генерируйте JSON Schema из примера JSON данных. Поддержка Draft-07 и Draft-2020-12.",
       "seo_title": "Бесплатный онлайн генератор JSON Schema",
       "seo_description": "Генерируйте JSON Schema из примера JSON данных онлайн бесплатно. Поддержка Draft-07 и Draft-2020-12. Автоматический вывод типов.",
-      "inputPlaceholder": "{\n  \"name\": \"Иван\",\n  \"age\": 30,\n  \"email\": \"ivan@example.com\"\n}",
+      "inputPlaceholder": "'{'\n  \"name\": \"Иван\",\n  \"age\": 30,\n  \"email\": \"ivan@example.com\"\n'}'",
       "generate": "Сгенерировать Schema",
       "draft": "Версия Schema",
       "includeExamples": "Включить примеры",
@@ -5619,7 +5619,7 @@
       "seo_title": "Бесплатный онлайн визуализатор регулярных выражений",
       "seo_description": "Визуализируйте регулярные выражения в виде железнодорожных диаграмм онлайн бесплатно. Тестируйте шаблоны, смотрите выделенные совпадения. Экспорт в SVG или PNG.",
       "pattern": "Шаблон Regex",
-      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$",
+      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]'{2,}'$",
       "testString": "Тестовая строка",
       "testStringPlaceholder": "Введите текст для проверки по шаблону",
       "visualize": "Визуализировать",
@@ -5645,7 +5645,8 @@
       "scheduledRun": "Запланированный запуск",
       "today": "Сегодня",
       "prevMonth": "Предыдущий месяц",
-      "nextMonth": "Следующий месяц"
+      "nextMonth": "Следующий месяц",
+      "formatHint": "Формат: минута час день-месяца месяц день-недели (напр., 0 9 * * 1-5)"
     },
     "fake-data-generator": {
       "name": "Генератор фейковых данных",

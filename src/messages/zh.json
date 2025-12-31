@@ -3531,14 +3531,14 @@
     "text-template": {
       "name": "文本模板",
       "description": "将文本模板中的变量替换为值。",
-      "seo_title": "Free Text Template Engine Online",
-      "seo_description": "Simple text template engine. Replace {{ variables }} with values from your data. Support loops, conditionals, and nested objects. Generate dynamic content.",
+      "seo_title": "免费在线文本模板引擎",
+      "seo_description": "简单的文本模板引擎。用数据中的值替换 '{{' 变量 '}}'。支持循环、条件和嵌套对象。生成动态内容。",
       "template": "模板",
-      "templatePlaceholder": "输入带有 {{ 变量 }} 的模板...",
-      "syntaxHint": "对变量使用 {{ variableName }} 语法",
+      "templatePlaceholder": "输入带有 '{{' 变量 '}}' 的模板...",
+      "syntaxHint": "对变量使用 '{{' variableName '}}' 语法",
       "variables": "变量",
       "valuePlaceholder": "输入值",
-      "process": "流程模板",
+      "process": "处理模板",
       "result": "结果",
       "copy": "复制"
     },
@@ -5686,7 +5686,7 @@
       "description": "从示例 JSON 数据生成 JSON Schema。支持 Draft-07 和 Draft-2020-12。",
       "seo_title": "免费在线 JSON Schema 生成器",
       "seo_description": "免费在线从示例 JSON 数据生成 JSON Schema。支持 Draft-07 和 Draft-2020-12。自动推断类型。",
-      "inputPlaceholder": "{\n  \"name\": \"张三\",\n  \"age\": 30,\n  \"email\": \"zhangsan@example.com\"\n}",
+      "inputPlaceholder": "'{'\n  \"name\": \"张三\",\n  \"age\": 30,\n  \"email\": \"zhangsan@example.com\"\n'}'",
       "generate": "生成 Schema",
       "draft": "Schema 版本",
       "includeExamples": "包含示例",
@@ -5742,7 +5742,7 @@
       "seo_title": "免费在线正则表达式可视化器",
       "seo_description": "免费在线将正则表达式可视化为铁路图。测试模式，高亮显示匹配。导出为 SVG 或 PNG。",
       "pattern": "正则表达式",
-      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$",
+      "patternPlaceholder": "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]'{2,}'$",
       "testString": "测试字符串",
       "testStringPlaceholder": "输入要测试的文本",
       "visualize": "可视化",
@@ -5768,7 +5768,8 @@
       "scheduledRun": "计划运行",
       "today": "今天",
       "prevMonth": "上个月",
-      "nextMonth": "下个月"
+      "nextMonth": "下个月",
+      "formatHint": "格式：分钟 小时 日 月 星期 (例如：0 9 * * 1-5)"
     },
     "fake-data-generator": {
       "name": "假数据生成器",

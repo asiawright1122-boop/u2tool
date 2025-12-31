@@ -228,7 +228,7 @@ export default function CrontabCalendar() {
           placeholder={t('expressionPlaceholder')}
         />
         <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-          Format: minute hour day-of-month month day-of-week (e.g., 0 9 * * 1-5)
+          {t('formatHint')}
         </p>
       </div>
 
