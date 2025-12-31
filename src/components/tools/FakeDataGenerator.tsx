@@ -247,6 +247,7 @@ export default function FakeDataGenerator() {
   const [data, setData] = useState<Record<string, string>[]>([]);
   const [tableName, setTableName] = useState('users');
   const [copied, setCopied] = useState(false);
+  const [editingCell, setEditingCell] = useState<{ row: number; field: string } | null>(null);
 
   // Update field names when locale changes
   useEffect(() => {
@@ -289,6 +290,13 @@ export default function FakeDataGenerator() {
   }, [count, locale, fields]);
 
   const handleClear = () => setData([]);
+
+  // Update a single cell value
+  const updateCell = (rowIndex: number, fieldName: string, value: string) => {
+    setData(prev => prev.map((row, idx) => 
+      idx === rowIndex ? { ...row, [fieldName]: value } : row
+    ));
+  };
 
   const exportJson = () => {
     const json = JSON.stringify(data, null, 2);
@@ -497,8 +505,30 @@ export default function FakeDataGenerator() {
                   <tr key={index}>
                     <td className="px-4 py-2 text-gray-500 dark:text-gray-400">{index + 1}</td>
                     {fields.map(field => (
-                      <td key={field.id} className="px-4 py-2 text-gray-900 dark:text-gray-100">
-                        {row[field.name]}
+                      <td key={field.id} className="px-1 py-1">
+                        {editingCell?.row === index && editingCell?.field === field.name ? (
+                          <input
+                            type="text"
+                            value={row[field.name]}
+                            onChange={(e) => updateCell(index, field.name, e.target.value)}
+                            onBlur={() => setEditingCell(null)}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === 'Escape') {
+                                setEditingCell(null);
+                              }
+                            }}
+                            autoFocus
+                            className="w-full px-2 py-1 border border-blue-500 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                          />
+                        ) : (
+                          <div
+                            onClick={() => setEditingCell({ row: index, field: field.name })}
+                            className="px-3 py-1 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 rounded text-gray-900 dark:text-gray-100"
+                            title={t('clickToEdit')}
+                          >
+                            {row[field.name]}
+                          </div>
+                        )}
                       </td>
                     ))}
                   </tr>
