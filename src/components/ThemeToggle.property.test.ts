@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, beforeEach } from 'vitest';
 import * as fc from 'fast-check';
 
 /**
@@ -94,13 +94,6 @@ describe('Theme Persistence Properties', () => {
 });
 
 describe('HTML Class Application Properties', () => {
-  /**
-   * Helper function to determine the expected class based on resolved theme
-   */
-  const getExpectedClass = (resolvedTheme: 'light' | 'dark'): string | null => {
-    return resolvedTheme === 'dark' ? 'dark' : null;
-  };
-
   /**
    * Helper function to simulate applying theme class to HTML element
    */

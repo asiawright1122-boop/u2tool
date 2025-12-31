@@ -264,6 +264,24 @@ const TOOL_COMPONENTS_MAP: Record<string, React.ComponentType> = {
   'gantt-chart-generator': dynamic(() => import('./GanttChartGenerator'), { ssr: false }),
   'venn-diagram-generator': dynamic(() => import('./VennDiagramGenerator'), { ssr: false }),
   'timeline-chart-generator': dynamic(() => import('./TimelineChartGenerator'), { ssr: false }),
+  // Batch 35 - New Chart Tools from 67tool.com (新增图表工具)
+  'nightingale-rose-chart-generator': dynamic(() => import('./NightingaleRoseChartGenerator'), { ssr: false }),
+  'grouped-bar-chart-generator': dynamic(() => import('./GroupedBarChartGenerator'), { ssr: false }),
+  'stacked-bar-chart-generator': dynamic(() => import('./StackedBarChartGenerator'), { ssr: false }),
+  'grouped-line-chart-generator': dynamic(() => import('./GroupedLineChartGenerator'), { ssr: false }),
+  'step-line-chart-generator': dynamic(() => import('./StepLineChartGenerator'), { ssr: false }),
+  'waterfall-chart-generator': dynamic(() => import('./WaterfallChartGenerator'), { ssr: false }),
+  'stacked-area-chart-generator': dynamic(() => import('./StackedAreaChartGenerator'), { ssr: false }),
+  'positive-negative-bar-chart-generator': dynamic(() => import('./PositiveNegativeBarChartGenerator'), { ssr: false }),
+  // Batch 36 - New Chart Tools (新增图表工具)
+  'percentage-stacked-bar-chart-generator': dynamic(() => import('./PercentageStackedBarChartGenerator'), { ssr: false }),
+  'mixed-chart-generator': dynamic(() => import('./MixedChartGenerator'), { ssr: false }),
+  'ring-progress-chart-generator': dynamic(() => import('./RingProgressChartGenerator'), { ssr: false }),
+  'liquid-fill-chart-generator': dynamic(() => import('./LiquidFillChartGenerator'), { ssr: false }),
+  'multi-ring-chart-generator': dynamic(() => import('./MultiRingChartGenerator'), { ssr: false }),
+  'half-doughnut-chart-generator': dynamic(() => import('./HalfDoughnutChartGenerator'), { ssr: false }),
+  'nested-pie-chart-generator': dynamic(() => import('./NestedPieChartGenerator'), { ssr: false }),
+  'pictorial-bar-chart-generator': dynamic(() => import('./PictorialBarChartGenerator'), { ssr: false }),
 };
 
 export default function ToolWrapper({ slug }: { slug: string }) {

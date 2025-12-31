@@ -393,7 +393,7 @@ function validateFAQPage(
 function validateSoftwareApplication(
   data: Record<string, unknown>,
   errors: SchemaError[],
-  warnings: SchemaWarning[]
+  _warnings: SchemaWarning[]
 ): void {
   // 验证 offers
   const offers = data.offers as Record<string, unknown>;
@@ -406,7 +406,7 @@ function validateSoftwareApplication(
       });
     }
     if (offers.price === undefined) {
-      warnings.push({
+      _warnings.push({
         type: 'SoftwareApplication',
         field: 'offers.price',
         message: 'Offer should have a price',
@@ -414,7 +414,7 @@ function validateSoftwareApplication(
       });
     }
     if (!offers.priceCurrency) {
-      warnings.push({
+      _warnings.push({
         type: 'SoftwareApplication',
         field: 'offers.priceCurrency',
         message: 'Offer should have a priceCurrency',
@@ -489,7 +489,7 @@ function validateItemList(
 function validateHowTo(
   data: Record<string, unknown>,
   errors: SchemaError[],
-  warnings: SchemaWarning[]
+  _warnings: SchemaWarning[]
 ): void {
   const steps = data.step as unknown[];
   

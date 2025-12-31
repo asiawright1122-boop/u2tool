@@ -17,32 +17,6 @@ function getToolFiles(): string[] {
   return files.filter(f => f.endsWith('.tsx') && f !== 'ToolWrapper.tsx');
 }
 
-// Check if a className string has proper light/dark mode support
-function hasProperDualModeSupport(content: string): { valid: boolean; issues: string[] } {
-  const issues: string[] = [];
-  
-  // Patterns that indicate hardcoded dark-only styles (problematic)
-  const darkOnlyPatterns = [
-    // bg-gray-800/900 without light mode equivalent
-    /className="[^"]*(?<!dark:)bg-gray-8[09]0(?![^"]*bg-gray-[12]00)[^"]*"/g,
-    // text-white without dark: prefix and no light mode text color
-    /className="[^"]*(?<!dark:)text-white(?![^"]*text-gray-[789]00)[^"]*"/g,
-    // border-gray-700 without light mode equivalent
-    /className="[^"]*(?<!dark:)border-gray-700(?![^"]*border-gray-[23]00)[^"]*"/g,
-  ];
-  
-  // These patterns are acceptable (have both light and dark modes)
-  const acceptablePatterns = [
-    /bg-gray-100\s+dark:bg-gray-8[09]0/,
-    /bg-white\s+dark:bg-gray-8[09]0/,
-    /text-gray-[6789]00\s+dark:text-gray-[234]00/,
-    /text-gray-900\s+dark:text-white/,
-    /border-gray-[23]00\s+dark:border-gray-[67]00/,
-  ];
-  
-  return { valid: issues.length === 0, issues };
-}
-
 describe('Light Mode Style Consistency', () => {
   const toolFiles = getToolFiles();
   

@@ -9,10 +9,8 @@ import { describe, it, expect } from 'vitest';
 import * as fc from 'fast-check';
 import {
   validateJsonLd,
-  validateSchemaType,
   validateToolPageSchemaTypes,
   SUPPORTED_SCHEMA_TYPES,
-  type StructuredDataValidationResult,
 } from './structured-data-validator';
 
 describe('Structured Data Validator - Property Tests', () => {

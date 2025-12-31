@@ -304,6 +304,26 @@ export const tools: Tool[] = [
   { slug: 'gantt-chart-generator', category: 'charts', icon: '📅', component: 'GanttChartGenerator', popular: true },
   { slug: 'venn-diagram-generator', category: 'charts', icon: '🔵', component: 'VennDiagramGenerator', popular: true },
   { slug: 'timeline-chart-generator', category: 'charts', icon: '⏳', component: 'TimelineChartGenerator', popular: true },
+
+  // Batch 35 - New Chart Tools from 67tool.com (新增图表工具)
+  { slug: 'nightingale-rose-chart-generator', category: 'charts', icon: '🌹', component: 'NightingaleRoseChartGenerator', popular: true },
+  { slug: 'grouped-bar-chart-generator', category: 'charts', icon: '📊', component: 'GroupedBarChartGenerator', popular: true },
+  { slug: 'stacked-bar-chart-generator', category: 'charts', icon: '📊', component: 'StackedBarChartGenerator', popular: true },
+  { slug: 'grouped-line-chart-generator', category: 'charts', icon: '📈', component: 'GroupedLineChartGenerator', popular: true },
+  { slug: 'step-line-chart-generator', category: 'charts', icon: '📶', component: 'StepLineChartGenerator', popular: true },
+  { slug: 'waterfall-chart-generator', category: 'charts', icon: '💧', component: 'WaterfallChartGenerator', popular: true },
+  { slug: 'stacked-area-chart-generator', category: 'charts', icon: '📉', component: 'StackedAreaChartGenerator', popular: true },
+  { slug: 'positive-negative-bar-chart-generator', category: 'charts', icon: '📊', component: 'PositiveNegativeBarChartGenerator', popular: true },
+
+  // Batch 36 - New Chart Tools (新增图表工具)
+  { slug: 'percentage-stacked-bar-chart-generator', category: 'charts', icon: '📊', component: 'PercentageStackedBarChartGenerator', popular: true },
+  { slug: 'mixed-chart-generator', category: 'charts', icon: '📈', component: 'MixedChartGenerator', popular: true },
+  { slug: 'ring-progress-chart-generator', category: 'charts', icon: '⭕', component: 'RingProgressChartGenerator', popular: true },
+  { slug: 'liquid-fill-chart-generator', category: 'charts', icon: '💧', component: 'LiquidFillChartGenerator', popular: true },
+  { slug: 'multi-ring-chart-generator', category: 'charts', icon: '🎯', component: 'MultiRingChartGenerator', popular: true },
+  { slug: 'half-doughnut-chart-generator', category: 'charts', icon: '🌙', component: 'HalfDoughnutChartGenerator', popular: true },
+  { slug: 'nested-pie-chart-generator', category: 'charts', icon: '🥧', component: 'NestedPieChartGenerator', popular: true },
+  { slug: 'pictorial-bar-chart-generator', category: 'charts', icon: '📊', component: 'PictorialBarChartGenerator', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [

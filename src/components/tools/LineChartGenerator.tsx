@@ -21,12 +21,8 @@ const colorThemes = {
   forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#1b4332'],
 };
 
-// 线条样式
-const lineStyles = {
-  solid: 'solid' as const,
-  dashed: 'dashed' as const,
-  dotted: 'dotted' as const,
-};
+// 线条样式类型
+type LineStyleType = 'solid' | 'dashed' | 'dotted';
 
 // 默认数据（不依赖翻译）
 const defaultCategories = ['jan', 'feb', 'mar', 'apr', 'may', 'jun'];
@@ -104,7 +100,7 @@ export default function LineChartGenerator() {
   const [showGrid, setShowGrid] = useState(true);
   const [smooth, setSmooth] = useState(false);
   const [areaFill, setAreaFill] = useState(false);
-  const [lineStyle, setLineStyle] = useState<keyof typeof lineStyles>('solid');
+  const [lineStyle, setLineStyle] = useState<LineStyleType>('solid');
 
   // 初始化翻译值（只在组件挂载时执行一次）
   useEffect(() => {
@@ -391,7 +387,7 @@ export default function LineChartGenerator() {
                 <label className="block text-sm font-medium mb-1">{t('lineStyle')}</label>
                 <select
                   value={lineStyle}
-                  onChange={(e) => setLineStyle(e.target.value as keyof typeof lineStyles)}
+                  onChange={(e) => setLineStyle(e.target.value as LineStyleType)}
                   className="tool-input"
                 >
                   <option value="solid">{t('styleSolid')}</option>

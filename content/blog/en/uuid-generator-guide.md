@@ -100,6 +100,31 @@ const filename = `${uuid()}.pdf`;
 3. **Deterministic Needs**: Use UUID v5
 4. **High Performance**: Consider ULID or Snowflake ID
 
+## FAQ
+
+### What is the difference between UUID and GUID?
+
+UUID and GUID (Globally Unique Identifier) are essentially the same thing. GUID is Microsoft's implementation of UUID. Both follow the same specification and produce compatible identifiers.
+
+### Is UUID truly unique?
+
+While not mathematically guaranteed to be unique, the probability of UUID collision is astronomically low. For UUID v4, the chance of generating two identical UUIDs is about 1 in 2^122, making collisions practically impossible.
+
+### Which UUID version should I use?
+
+- Use **UUID v4** for most web applications (simple, secure)
+- Use **UUID v7** for database primary keys (time-ordered, better indexing)
+- Use **UUID v5** when you need deterministic UUIDs from the same input
+- Avoid **UUID v1** unless you specifically need time-based ordering
+
+### Can UUIDs be decoded or reversed?
+
+UUID v4 (random) cannot be decoded as it contains no meaningful information. UUID v1 can reveal the timestamp and MAC address used to generate it. UUID v5 cannot be reversed to find the original input.
+
+### Are UUIDs good for URLs?
+
+Yes, UUIDs are commonly used in URLs for resource identification. They're unpredictable (preventing enumeration attacks) and globally unique. However, they're longer than auto-increment IDs, which may affect URL readability.
+
 ## Conclusion
 
 UUID is an essential tool in distributed systems. Choose the appropriate UUID version based on your specific needs, and use [U2Tool UUID Generator](https://www.u2tool.com/en/tools/uuid-generator) to quickly generate the UUIDs you need.

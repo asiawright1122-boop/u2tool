@@ -98,6 +98,32 @@ JSON Web Tokens use Base64URL encoding.
 - Encoded data is ~33% larger
 - Not encryption, don't use for security
 
+## FAQ
+
+### Is Base64 encryption?
+
+No, Base64 is encoding, not encryption. It doesn't provide any security - anyone can decode Base64 data. Never use Base64 to protect sensitive information. Use proper encryption algorithms like AES for security.
+
+### Why does Base64 increase file size?
+
+Base64 converts 3 bytes into 4 characters, resulting in approximately 33% size increase. This is because it uses only 64 printable characters to represent 256 possible byte values.
+
+### What is Base64URL?
+
+Base64URL is a URL-safe variant of Base64. It replaces `+` with `-` and `/` with `_`, and often omits padding `=`. It's commonly used in JWT tokens and URL parameters.
+
+### When should I use Base64?
+
+Use Base64 when you need to:
+- Embed images in HTML/CSS (data URIs)
+- Transmit binary data in JSON APIs
+- Store binary data in text-only systems
+- Encode email attachments (MIME)
+
+### Can Base64 encode any file type?
+
+Yes, Base64 can encode any binary data, including images, PDFs, executables, and any other file type. The encoded result is always plain text.
+
 ## Conclusion
 
 Base64 is a simple but very practical encoding method. Understanding its principles helps you better handle data transmission. I recommend using [U2Tool Base64 Tools](https://www.u2tool.com/en/tools/base64-encoder) for daily encoding/decoding tasks.

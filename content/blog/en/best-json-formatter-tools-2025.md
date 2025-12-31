@@ -50,6 +50,33 @@ When choosing a JSON formatter, consider these factors:
 | Usability | Is the interface user-friendly? |
 | Performance | Does it support large files? |
 
+## FAQ
+
+### What is JSON formatting?
+
+JSON formatting (also called beautifying or pretty-printing) adds proper indentation and line breaks to minified JSON, making it human-readable. It doesn't change the data, only the visual presentation.
+
+### Is it safe to use online JSON formatters?
+
+It depends on the tool. Some formatters upload your data to servers, which poses security risks. Tools like U2Tool JSON Formatter run entirely in your browser, so your data never leaves your device.
+
+### What's the difference between JSON validation and formatting?
+
+Validation checks if JSON syntax is correct and reports errors. Formatting makes valid JSON readable by adding indentation. Most tools do both - they validate first, then format if valid.
+
+### Can JSON formatters handle large files?
+
+Browser-based formatters can typically handle files up to several megabytes. For very large files (100MB+), consider using command-line tools like jq or desktop applications.
+
+### Why is my JSON invalid?
+
+Common JSON errors include:
+- Missing or extra commas
+- Unquoted keys (keys must be in double quotes)
+- Single quotes instead of double quotes
+- Trailing commas after the last item
+- Comments (JSON doesn't support comments)
+
 ## Conclusion
 
 For daily development work, I recommend [U2Tool JSON Formatter](https://www.u2tool.com/en/tools/json-formatter). It's completely free, secure, and feature-rich. If you need a command-line tool, consider using jq.
