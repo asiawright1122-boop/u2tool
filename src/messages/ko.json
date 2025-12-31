@@ -3303,7 +3303,7 @@
       "name": "정규식 탈출",
       "description": "특수 정규식 문자를 이스케이프하거나 이스케이프 해제합니다.",
       "seo_title": "Free Regex Escape Tool Online",
-      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ { } [ ] \\ | ( ). Essential for patterns.",
+      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns.",
       "mode": "모드",
       "escape": "이스케이프",
       "unescape": "이스케이프 해제",
@@ -3319,7 +3319,7 @@
       "swap": "교환",
       "specialChars": "특수 문자",
       "info": "정보",
-      "infoText": "다음 특수 정규식 문자를 이스케이프합니다: \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "다음 특수 정규식 문자를 이스케이프합니다: \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML 텍스트 변환",
@@ -7800,7 +7800,7 @@
       "name": "정규식 탈출",
       "description": "특수 정규식 문자를 이스케이프하거나 이스케이프 해제합니다.",
       "seo_title": "무료 정규식 탈출 도구 온라인",
-      "seo_description": "무료로 온라인에서 정규식에 사용하기 위해 특수 문자를 이스케이프 처리하세요. 와 같은 메타문자를 처리합니다. * + ? ^ $ { } [ ] \\ | ( ). 패턴에 필수적입니다.",
+      "seo_description": "무료로 온라인에서 정규식에 사용하기 위해 특수 문자를 이스케이프 처리하세요. 와 같은 메타문자를 처리합니다. * + ? ^ $ '{' '}' [ ] \\ '|' ( ). 패턴에 필수적입니다.",
       "mode": "모드",
       "escape": "이스케이프",
       "unescape": "이스케이프 해제",
@@ -7816,7 +7816,7 @@
       "swap": "교환",
       "specialChars": "특수 문자",
       "info": "정보",
-      "infoText": "다음 특수 정규식 문자를 이스케이프합니다: \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "다음 특수 정규식 문자를 이스케이프합니다: \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML 텍스트 변환",

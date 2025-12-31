@@ -3303,7 +3303,7 @@
       "name": "Évasion d'expression régulière",
       "description": "Échapper ou annuler l'échappement des caractères regex spéciaux.",
       "seo_title": "Free Regex Escape Tool Online",
-      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ { } [ ] \\ | ( ). Essential for patterns.",
+      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns.",
       "mode": "Mode",
       "escape": "S'échapper",
       "unescape": "Une évasion",
@@ -3319,7 +3319,7 @@
       "swap": "Échanger",
       "specialChars": "Caractères spéciaux",
       "info": "Information",
-      "infoText": "Échappe ces caractères regex spéciaux : \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "Échappe ces caractères regex spéciaux : \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML en texte",
@@ -7677,7 +7677,7 @@
       "name": "Évasion d'expression régulière",
       "description": "Échapper ou annuler l'échappement des caractères regex spéciaux.",
       "seo_title": "Outil d'évasion Regex gratuit en ligne",
-      "seo_description": "Échappez gratuitement aux caractères spéciaux pour les utiliser dans les expressions régulières en ligne. Gérez les métacaractères comme . * + ? ^ $ { } [ ] \\ | ( ). Indispensable pour les patrons.",
+      "seo_description": "Échappez gratuitement aux caractères spéciaux pour les utiliser dans les expressions régulières en ligne. Gérez les métacaractères comme . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Indispensable pour les patrons.",
       "mode": "Mode",
       "escape": "S'échapper",
       "unescape": "Une évasion",
@@ -7693,7 +7693,7 @@
       "swap": "Échanger",
       "specialChars": "Caractères spéciaux",
       "info": "Information",
-      "infoText": "Échappe ces caractères regex spéciaux : \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "Échappe ces caractères regex spéciaux : \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML en texte",

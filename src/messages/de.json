@@ -3303,7 +3303,7 @@
       "name": "Regex-Escape",
       "description": "Spezielle Regex-Zeichen mit Escape- oder Unescape-Zeichen versehen.",
       "seo_title": "Free Regex Escape Tool Online",
-      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ { } [ ] \\ | ( ). Essential for patterns.",
+      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns.",
       "mode": "Modus",
       "escape": "Flucht",
       "unescape": "Unflucht",
@@ -3319,7 +3319,7 @@
       "swap": "Tauschen",
       "specialChars": "Sonderzeichen",
       "info": "Information",
-      "infoText": "Entgeht diesen speziellen Regex-Zeichen: \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "Entgeht diesen speziellen Regex-Zeichen: \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML zu Text",
@@ -7677,7 +7677,7 @@
       "name": "Regex-Escape",
       "description": "Spezielle Regex-Zeichen mit Escape- oder Unescape-Zeichen versehen.",
       "seo_title": "Kostenloses Regex-Escape-Tool online",
-      "seo_description": "Escape-Sonderzeichen zur Verwendung in regulären Ausdrücken online kostenlos. Behandeln Sie Metazeichen wie . * + ? ^ $ { } [ ] \\ | ( ). Unverzichtbar für Muster.",
+      "seo_description": "Escape-Sonderzeichen zur Verwendung in regulären Ausdrücken online kostenlos. Behandeln Sie Metazeichen wie . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Unverzichtbar für Muster.",
       "mode": "Modus",
       "escape": "Flucht",
       "unescape": "Unflucht",
@@ -7693,7 +7693,7 @@
       "swap": "Tauschen",
       "specialChars": "Sonderzeichen",
       "info": "Information",
-      "infoText": "Entgeht diesen speziellen Regex-Zeichen: \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "Entgeht diesen speziellen Regex-Zeichen: \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML zu Text",

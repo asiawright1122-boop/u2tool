@@ -3303,7 +3303,7 @@
       "name": "正则表达式转义",
       "description": "转义或取消转义特殊正则表达式字符。",
       "seo_title": "Free Regex Escape Tool Online",
-      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ { } [ ] \\ | ( ). Essential for patterns.",
+      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns.",
       "mode": "模式",
       "escape": "转义",
       "unescape": "反转义",
@@ -3319,7 +3319,7 @@
       "swap": "交换",
       "specialChars": "特殊字符",
       "info": "信息",
-      "infoText": "转义这些特殊的正则表达式字符： \\ ^ $ 。 | ？ * + ( ) [ ] { }"
+      "infoText": "转义这些特殊的正则表达式字符： \\ ^ $ 。 '|' ？ * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML 到文本",
@@ -7800,7 +7800,7 @@
       "name": "正则表达式转义",
       "description": "转义或取消转义特殊正则表达式字符。",
       "seo_title": "免费在线正则表达式转义工具",
-      "seo_description": "免费在线转义正则表达式中使用的特殊字符。处理诸如 之类的元字符。 * + ? ^ $ { } [ ] \\ | ( )。对于图案来说必不可少。",
+      "seo_description": "免费在线转义正则表达式中使用的特殊字符。处理诸如 之类的元字符。 * + ? ^ $ '{' '}' [ ] \\ '|' ( )。对于图案来说必不可少。",
       "mode": "模式",
       "escape": "转义",
       "unescape": "反转义",
@@ -7816,7 +7816,7 @@
       "swap": "交换",
       "specialChars": "特殊字符",
       "info": "信息",
-      "infoText": "转义这些特殊的正则表达式字符： \\ ^ $ 。 | ？ * + ( ) [ ] { }"
+      "infoText": "转义这些特殊的正则表达式字符： \\ ^ $ 。 '|' ？ * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML to Text",

@@ -3303,7 +3303,7 @@
       "name": "Escape de expresiones regulares",
       "description": "Escapar o eliminar caracteres de expresiones regulares especiales.",
       "seo_title": "Free Regex Escape Tool Online",
-      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ { } [ ] \\ | ( ). Essential for patterns.",
+      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns.",
       "mode": "Modo",
       "escape": "Escapar",
       "unescape": "escapar",
@@ -3319,7 +3319,7 @@
       "swap": "Intercambio",
       "specialChars": "Personajes especiales",
       "info": "Información",
-      "infoText": "Escapa de estos caracteres de expresiones regulares especiales: \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "Escapa de estos caracteres de expresiones regulares especiales: \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML a texto",
@@ -7677,7 +7677,7 @@
       "name": "Escape de expresiones regulares",
       "description": "Escapar o eliminar caracteres de expresiones regulares especiales.",
       "seo_title": "Herramienta gratuita de escape de expresiones regulares en línea",
-      "seo_description": "Escape de caracteres especiales para usarlos en expresiones regulares en línea de forma gratuita. Maneja metacaracteres como . *+? ^ $ { } [ ] \\ | ( ). Esencial para patrones.",
+      "seo_description": "Escape de caracteres especiales para usarlos en expresiones regulares en línea de forma gratuita. Maneja metacaracteres como . *+? ^ $ '{' '}' [ ] \\ '|' ( ). Esencial para patrones.",
       "mode": "Modo",
       "escape": "Escapar",
       "unescape": "escapar",
@@ -7693,7 +7693,7 @@
       "swap": "Intercambio",
       "specialChars": "Personajes especiales",
       "info": "Información",
-      "infoText": "Escapa de estos caracteres de expresiones regulares especiales: \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "Escapa de estos caracteres de expresiones regulares especiales: \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML to Text",

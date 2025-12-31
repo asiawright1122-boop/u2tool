@@ -3303,7 +3303,7 @@
       "name": "Escape Regex",
       "description": "Escape ou remova o escape de caracteres regex especiais.",
       "seo_title": "Free Regex Escape Tool Online",
-      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ { } [ ] \\ | ( ). Essential for patterns.",
+      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns.",
       "mode": "Modo",
       "escape": "Escapar",
       "unescape": "Desescape",
@@ -3319,7 +3319,7 @@
       "swap": "Trocar",
       "specialChars": "Personagens Especiais",
       "info": "Informação",
-      "infoText": "Escapa destes caracteres regex especiais: \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "Escapa destes caracteres regex especiais: \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML para Texto",
@@ -7677,7 +7677,7 @@
       "name": "Escape Regex",
       "description": "Escape ou remova o escape de caracteres regex especiais.",
       "seo_title": "Ferramenta de escape Regex gratuita on-line",
-      "seo_description": "Escape de caracteres especiais para uso em expressões regulares online gratuitamente. Lidar com metacaracteres como . * + ? ^ $ { } [ ] \\ | ( ). Essencial para padrões.",
+      "seo_description": "Escape de caracteres especiais para uso em expressões regulares online gratuitamente. Lidar com metacaracteres como . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essencial para padrões.",
       "mode": "Modo",
       "escape": "Escapar",
       "unescape": "Desescape",
@@ -7693,7 +7693,7 @@
       "swap": "Trocar",
       "specialChars": "Personagens Especiais",
       "info": "Informação",
-      "infoText": "Escapa destes caracteres regex especiais: \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "Escapa destes caracteres regex especiais: \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML para Texto",

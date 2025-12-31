@@ -3303,7 +3303,7 @@
       "name": "正規表現のエスケープ",
       "description": "特殊な正規表現文字をエスケープまたはエスケープ解除します。",
       "seo_title": "Free Regex Escape Tool Online",
-      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ { } [ ] \\ | ( ). Essential for patterns.",
+      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns.",
       "mode": "モード",
       "escape": "逃げる",
       "unescape": "アンエスケープ",
@@ -3319,7 +3319,7 @@
       "swap": "スワップ",
       "specialChars": "特殊文字",
       "info": "情報",
-      "infoText": "次の特殊な正規表現文字をエスケープします: \\ ^ $ 。 | ? * + ( ) [ ] { }"
+      "infoText": "次の特殊な正規表現文字をエスケープします: \\ ^ $ 。 '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTMLからテキスト",
@@ -7816,7 +7816,7 @@
       "swap": "スワップ",
       "specialChars": "特殊文字",
       "info": "情報",
-      "infoText": "次の特殊な正規表現文字をエスケープします: \\ ^ $ 。 | ? * + ( ) [ ] { }"
+      "infoText": "次の特殊な正規表現文字をエスケープします: \\ ^ $ 。 '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTMLからテキスト",

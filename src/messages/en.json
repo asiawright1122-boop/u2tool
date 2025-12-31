@@ -3303,7 +3303,7 @@
       "name": "Regex Escape",
       "description": "Escape or unescape special regex characters.",
       "seo_title": "Free Regex Escape Tool Online",
-      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ { } [ ] \\ | ( ). Essential for patterns.",
+      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns.",
       "mode": "Mode",
       "escape": "Escape",
       "unescape": "Unescape",
@@ -3319,7 +3319,7 @@
       "swap": "Swap",
       "specialChars": "Special Characters",
       "info": "Information",
-      "infoText": "Escapes these special regex characters: \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "Escapes these special regex characters: \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML to Text",
@@ -7800,7 +7800,7 @@
       "name": "Regex Escape",
       "description": "Escape or unescape special regex characters.",
       "seo_title": "Free Regex Escape Tool Online",
-      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ { } [ ] \\ | ( ). Essential for patterns.",
+      "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns.",
       "mode": "Mode",
       "escape": "Escape",
       "unescape": "Unescape",
@@ -7816,7 +7816,7 @@
       "swap": "Swap",
       "specialChars": "Special Characters",
       "info": "Information",
-      "infoText": "Escapes these special regex characters: \\ ^ $ . | ? * + ( ) [ ] { }"
+      "infoText": "Escapes these special regex characters: \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'"
     },
     "html-to-text": {
       "name": "HTML to Text",
