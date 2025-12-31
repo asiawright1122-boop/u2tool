@@ -8,6 +8,7 @@ import { useState, useRef, useEffect } from 'react';
 import { locales, localeNames, type Locale } from '@/i18n/routing';
 import { categories, tools } from '@/config/tools';
 import ThemeToggle from '@/components/ThemeToggle';
+import Logo from '@/components/Logo';
 
 export default function Header() {
   const t = useTranslations();
@@ -91,7 +92,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo - 使用相对路径，i18n Link 会自动添加 locale */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="text-2xl">🧰</span>
+          <Logo width={32} height={32} />
           <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             {t('site.name')}
           </span>

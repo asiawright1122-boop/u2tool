@@ -52,7 +52,7 @@ export default async function BlogPostPage({ params }: Props) {
       
       <div className="min-h-screen bg-white dark:bg-black">
         {/* Header */}
-        <header className="border-b border-gray-200 dark:border-zinc-800">
+        <header className="border-b border-gray-200 dark:border-zinc-800 bg-white dark:bg-black">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
             <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-zinc-500 hover:text-gray-900 dark:hover:text-white mb-8 transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
@@ -80,7 +80,7 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
 
         {/* Content */}
-        <article className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 py-16 bg-white dark:bg-black">
           <ReactMarkdown 
             remarkPlugins={[remarkGfm]}
             components={{

@@ -254,7 +254,7 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <div className="flex flex-col min-h-screen">
               <Header />
-              <main className="flex-grow pt-16">{children}</main>
+              <main className="flex-grow pt-16 bg-white dark:bg-black">{children}</main>
               <Footer />
             </div>
             {/* Web Vitals 监控 */}

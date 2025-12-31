@@ -42,31 +42,31 @@ export default async function BlogPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: jsonLdToString(breadcrumbJsonLd) }}
       />
       
-      <div className="min-h-screen bg-[#121212]">
+      <div className="min-h-screen bg-white dark:bg-[#121212]">
         {/* Category Header */}
-        <header className="bg-gradient-to-r from-blue-600/20 via-purple-600/10 to-transparent border-b border-white/5">
+        <header className="bg-gradient-to-r from-blue-100 dark:from-blue-600/20 via-purple-50 dark:via-purple-600/10 to-transparent border-b border-gray-200 dark:border-white/5">
           <div className="max-w-5xl mx-auto px-6 py-16">
-            <p className="text-blue-400 text-sm font-medium mb-3 uppercase tracking-wider">
+            <p className="text-blue-600 dark:text-blue-400 text-sm font-medium mb-3 uppercase tracking-wider">
               {t('title')}
             </p>
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              开发者工具与技术教程
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              {t('title')}
             </h1>
-            <p className="text-lg text-gray-400 max-w-2xl leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
               {t('description')}
             </p>
           </div>
         </header>
 
         {/* Posts List */}
-        <main className="max-w-5xl mx-auto px-6 py-12">
+        <main className="max-w-5xl mx-auto px-6 py-12 bg-white dark:bg-[#121212]">
           {posts.length > 0 ? (
             <div className="space-y-10">
               {posts.map((post) => (
                 <article key={post.slug} className="group">
                   <Link href={`/blog/${post.slug}`} className="block">
                     {/* Title */}
-                    <h2 className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors mb-3 leading-snug">
+                    <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-3 leading-snug">
                       {post.title}
                     </h2>
                     
@@ -87,12 +87,12 @@ export default async function BlogPage({ params }: Props) {
                     </div>
                     
                     {/* Description */}
-                    <p className="text-gray-400 leading-relaxed mb-4 line-clamp-3">
+                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 line-clamp-3">
                       {post.description}
                     </p>
                     
                     {/* Read More */}
-                    <span className="inline-flex items-center gap-2 text-blue-400 font-medium text-sm group-hover:gap-3 transition-all">
+                    <span className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium text-sm group-hover:gap-3 transition-all">
                       {t('readMore')}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -101,7 +101,7 @@ export default async function BlogPage({ params }: Props) {
                   </Link>
                   
                   {/* Divider */}
-                  <div className="mt-10 border-b border-gray-800/50" />
+                  <div className="mt-10 border-b border-gray-200 dark:border-gray-800/50" />
                 </article>
               ))}
             </div>

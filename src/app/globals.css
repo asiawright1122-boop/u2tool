@@ -38,14 +38,19 @@ html {
   overflow-x: hidden;
 }
 
+/* 基础背景色 - 不使用 !important 以允许页面覆盖 */
+html:not(.dark) body {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+html.dark body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
   /* 性能优化：启用 GPU 加速 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
