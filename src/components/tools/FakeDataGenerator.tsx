@@ -19,12 +19,24 @@ const generators: Record<FieldType, (locale: string) => string> = {
       zh: ['伟', '芳', '娜', '秀英', '敏', '静', '丽', '强'],
       ja: ['太郎', '花子', '一郎', '美咲', '健太', '愛', '翔太', '結衣'],
       ko: ['민준', '서연', '예준', '서윤', '도윤', '지우', '시우', '하윤'],
+      es: ['Carlos', 'María', 'José', 'Ana', 'Luis', 'Carmen', 'Miguel', 'Rosa'],
+      pt: ['João', 'Maria', 'Pedro', 'Ana', 'Carlos', 'Lucia', 'Paulo', 'Fernanda'],
+      fr: ['Jean', 'Marie', 'Pierre', 'Sophie', 'Michel', 'Isabelle', 'François', 'Claire'],
+      de: ['Hans', 'Anna', 'Peter', 'Maria', 'Klaus', 'Ursula', 'Wolfgang', 'Helga'],
+      ru: ['Иван', 'Мария', 'Александр', 'Анна', 'Дмитрий', 'Елена', 'Сергей', 'Ольга'],
+      ar: ['محمد', 'فاطمة', 'أحمد', 'عائشة', 'علي', 'زينب', 'عمر', 'مريم'],
     };
     const lastNames: Record<string, string[]> = {
       en: ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis'],
       zh: ['王', '李', '张', '刘', '陈', '杨', '赵', '黄'],
       ja: ['佐藤', '鈴木', '高橋', '田中', '伊藤', '渡辺', '山本', '中村'],
       ko: ['김', '이', '박', '최', '정', '강', '조', '윤'],
+      es: ['García', 'Rodríguez', 'Martínez', 'López', 'González', 'Hernández', 'Pérez', 'Sánchez'],
+      pt: ['Silva', 'Santos', 'Oliveira', 'Souza', 'Rodrigues', 'Ferreira', 'Alves', 'Pereira'],
+      fr: ['Martin', 'Bernard', 'Dubois', 'Thomas', 'Robert', 'Richard', 'Petit', 'Durand'],
+      de: ['Müller', 'Schmidt', 'Schneider', 'Fischer', 'Weber', 'Meyer', 'Wagner', 'Becker'],
+      ru: ['Иванов', 'Смирнов', 'Кузнецов', 'Попов', 'Васильев', 'Петров', 'Соколов', 'Михайлов'],
+      ar: ['الأحمد', 'المحمد', 'العلي', 'الحسن', 'الخالد', 'السعيد', 'الناصر', 'الرشيد'],
     };
     const first = firstNames[locale] || firstNames.en;
     const last = lastNames[locale] || lastNames.en;
@@ -36,6 +48,12 @@ const generators: Record<FieldType, (locale: string) => string> = {
       zh: ['伟', '芳', '娜', '秀英', '敏', '静', '丽', '强'],
       ja: ['太郎', '花子', '一郎', '美咲', '健太', '愛', '翔太', '結衣'],
       ko: ['민준', '서연', '예준', '서윤', '도윤', '지우', '시우', '하윤'],
+      es: ['Carlos', 'María', 'José', 'Ana', 'Luis', 'Carmen', 'Miguel', 'Rosa'],
+      pt: ['João', 'Maria', 'Pedro', 'Ana', 'Carlos', 'Lucia', 'Paulo', 'Fernanda'],
+      fr: ['Jean', 'Marie', 'Pierre', 'Sophie', 'Michel', 'Isabelle', 'François', 'Claire'],
+      de: ['Hans', 'Anna', 'Peter', 'Maria', 'Klaus', 'Ursula', 'Wolfgang', 'Helga'],
+      ru: ['Иван', 'Мария', 'Александр', 'Анна', 'Дмитрий', 'Елена', 'Сергей', 'Ольга'],
+      ar: ['محمد', 'فاطمة', 'أحمد', 'عائشة', 'علي', 'زينب', 'عمر', 'مريم'],
     };
     const list = names[locale] || names.en;
     return list[Math.floor(Math.random() * list.length)];
@@ -46,6 +64,12 @@ const generators: Record<FieldType, (locale: string) => string> = {
       zh: ['王', '李', '张', '刘', '陈', '杨', '赵', '黄'],
       ja: ['佐藤', '鈴木', '高橋', '田中', '伊藤', '渡辺', '山本', '中村'],
       ko: ['김', '이', '박', '최', '정', '강', '조', '윤'],
+      es: ['García', 'Rodríguez', 'Martínez', 'López', 'González', 'Hernández', 'Pérez', 'Sánchez'],
+      pt: ['Silva', 'Santos', 'Oliveira', 'Souza', 'Rodrigues', 'Ferreira', 'Alves', 'Pereira'],
+      fr: ['Martin', 'Bernard', 'Dubois', 'Thomas', 'Robert', 'Richard', 'Petit', 'Durand'],
+      de: ['Müller', 'Schmidt', 'Schneider', 'Fischer', 'Weber', 'Meyer', 'Wagner', 'Becker'],
+      ru: ['Иванов', 'Смирнов', 'Кузнецов', 'Попов', 'Васильев', 'Петров', 'Соколов', 'Михайлов'],
+      ar: ['الأحمد', 'المحمد', 'العلي', 'الحسن', 'الخالد', 'السعيد', 'الناصر', 'الرشيد'],
     };
     const list = names[locale] || names.en;
     return list[Math.floor(Math.random() * list.length)];
@@ -75,6 +99,12 @@ const generators: Record<FieldType, (locale: string) => string> = {
       zh: ['北京', '上海', '广州', '深圳', '杭州', '成都'],
       ja: ['東京', '大阪', '名古屋', '札幌', '福岡', '京都'],
       ko: ['서울', '부산', '인천', '대구', '대전', '광주'],
+      es: ['Madrid', 'Barcelona', 'Valencia', 'Sevilla', 'Bilbao', 'Málaga'],
+      pt: ['São Paulo', 'Rio de Janeiro', 'Lisboa', 'Porto', 'Brasília', 'Salvador'],
+      fr: ['Paris', 'Lyon', 'Marseille', 'Toulouse', 'Nice', 'Bordeaux'],
+      de: ['Berlin', 'München', 'Hamburg', 'Frankfurt', 'Köln', 'Stuttgart'],
+      ru: ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Казань', 'Сочи'],
+      ar: ['القاهرة', 'دبي', 'الرياض', 'جدة', 'بيروت', 'عمان'],
     };
     const list = cities[locale] || cities.en;
     return list[Math.floor(Math.random() * list.length)];
@@ -85,6 +115,12 @@ const generators: Record<FieldType, (locale: string) => string> = {
       zh: ['中国', '美国', '日本', '韩国', '英国', '德国'],
       ja: ['日本', 'アメリカ', '中国', '韓国', 'イギリス', 'ドイツ'],
       ko: ['한국', '미국', '일본', '중국', '영국', '독일'],
+      es: ['España', 'México', 'Argentina', 'Colombia', 'Chile', 'Perú'],
+      pt: ['Brasil', 'Portugal', 'Angola', 'Moçambique', 'Cabo Verde', 'Guiné-Bissau'],
+      fr: ['France', 'Canada', 'Belgique', 'Suisse', 'Maroc', 'Algérie'],
+      de: ['Deutschland', 'Österreich', 'Schweiz', 'Luxemburg', 'Liechtenstein', 'Belgien'],
+      ru: ['Россия', 'Украина', 'Беларусь', 'Казахстан', 'Узбекистан', 'Грузия'],
+      ar: ['مصر', 'السعودية', 'الإمارات', 'الأردن', 'لبنان', 'المغرب'],
     };
     const list = countries[locale] || countries.en;
     return list[Math.floor(Math.random() * list.length)];
@@ -133,6 +169,12 @@ const LOCALES = [
   { value: 'zh', label: '中文' },
   { value: 'ja', label: '日本語' },
   { value: 'ko', label: '한국어' },
+  { value: 'es', label: 'Español' },
+  { value: 'pt', label: 'Português' },
+  { value: 'fr', label: 'Français' },
+  { value: 'de', label: 'Deutsch' },
+  { value: 'ru', label: 'Русский' },
+  { value: 'ar', label: 'العربية' },
 ];
 
 export default function FakeDataGenerator() {
@@ -283,18 +325,18 @@ export default function FakeDataGenerator() {
         </div>
         <div className="space-y-2">
           {fields.map((field) => (
-            <div key={field.id} className="flex gap-2 items-center">
+            <div key={field.id} className="grid grid-cols-[1fr_1fr_auto] gap-2 items-center">
               <input
                 type="text"
                 value={field.name}
                 onChange={(e) => updateField(field.id, { name: e.target.value })}
                 placeholder={t('fieldName')}
-                className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
               />
               <select
                 value={field.type}
                 onChange={(e) => updateField(field.id, { type: e.target.value as FieldType })}
-                className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
               >
                 {FIELD_TYPES.map(type => (
                   <option key={type} value={type}>{t(`types.${type}`)}</option>
@@ -302,7 +344,7 @@ export default function FakeDataGenerator() {
               </select>
               <button
                 onClick={() => removeField(field.id)}
-                className="px-3 py-2 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg"
+                className="px-3 py-2 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg whitespace-nowrap"
                 disabled={fields.length <= 1}
               >
                 {t('removeField')}
