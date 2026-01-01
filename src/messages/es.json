@@ -1731,7 +1731,7 @@
       "seo_description": "Count text bytes in UTF-8, UTF-16, and other encodings online for free. Get character count, word count, and byte size. Essential for data size estimation."
     },
     "json-to-typescript": {
-      "name": "JSON a mecanografiado",
+      "name": "JSON to TypeScript",
       "description": "Convierta datos JSON en definiciones de interfaz TypeScript.",
       "seo_title": "Free JSON to TypeScript Converter",
       "seo_description": "Convert JSON to TypeScript interfaces and types online for free. Generate type-safe code with optional properties and nested types. Essential for TS devs."
@@ -1834,13 +1834,13 @@
       "seo_description": "Compare text similarity and find differences online for free. Calculate Levenshtein distance and similarity percentage. Essential for content review."
     },
     "json-to-go": {
-      "name": "JSON para ir a la estructura",
+      "name": "JSON to Go Struct",
       "description": "Convierta datos JSON en definiciones de estructuras Go.",
       "seo_title": "Free JSON to Go Struct Converter",
       "seo_description": "Convert JSON to Go structs online for free. Generate type-safe Go code with proper field tags and nested struct support. Essential for Go API development.",
       "structName": "Nombre de la estructura",
       "input": "JSON Input",
-      "output": "Ir a estructura"
+      "output": "Go Struct"
     },
     "html-to-jsx": {
       "name": "HTML a JSX",
@@ -2293,17 +2293,17 @@
       "errorInvalidJson": "// Error: entrada JSON no válida"
     },
     "json-to-rust": {
-      "name": "JSON a óxido",
+      "name": "JSON to Rust",
       "description": "Convierta objetos JSON en estructuras Rust.",
       "input": "JSON Input",
-      "output": "Salida de óxido",
+      "output": "Rust Output",
       "convert": "Convertir",
       "copy": "Copiar",
       "structName": "Nombre de la estructura",
       "useSerde": "utilizar serde",
       "useOptionForNull": "Utilice la opción para nulo",
       "inputPlaceholder": "Pegue JSON aquí...",
-      "outputPlaceholder": "Las estructuras de óxido aparecerán aquí...",
+      "outputPlaceholder": "Las estructuras Rust aparecerán aquí...",
       "errorInvalidJson": "// Error: entrada JSON no válida",
       "seo_title": "Free JSON to Rust Converter Online",
       "seo_description": "Convert JSON to Rust structs with serde derive macros online for free. Generate type-safe code with Option types for nullable fields. For Rust development."
@@ -2312,7 +2312,7 @@
       "name": "JSON a Swift",
       "description": "Convierta objetos JSON en estructuras Swift.",
       "input": "JSON Input",
-      "output": "Salida rápida",
+      "output": "Swift Output",
       "convert": "Convertir",
       "copy": "Copiar",
       "structName": "Nombre de la estructura",
@@ -2919,21 +2919,21 @@
       "output": "Configuración de Nginx generada"
     },
     "curl-converter": {
-      "name": "Convertidor de rizos",
+      "name": "Convertidor cURL",
       "description": "Convierta comandos cURL a código en varios idiomas.",
-      "seo_title": "Free cURL to Code Converter Online",
-      "seo_description": "Convert cURL commands to JavaScript, Python, PHP, Go, and Java code online for free. Parse headers, body, and authentication. Essential for API integration.",
-      "curlCommand": "Comando rizo",
+      "seo_title": "Convertidor cURL a Código Gratis Online",
+      "seo_description": "Convierte comandos cURL a código JavaScript, Python, PHP, Go y Java gratis online. Analiza headers, body y autenticación. Esencial para integración de APIs.",
+      "curlCommand": "Comando cURL",
       "placeholder": "Pega tu comando cURL aquí...",
       "outputLanguage": "Idioma de salida",
       "convert": "Convertir",
       "copyCode": "Copiar código",
       "generatedCode": "Código generado",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "Python (solicitudes)",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "Ir (red/http)",
-      "langJava": "Java (Cliente HTTP)"
+      "langGo": "Go (net/http)",
+      "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {
       "name": "Calculadora de tiempo de lectura",
@@ -3467,11 +3467,11 @@
       "errorInvalidPrefix": "Prefijo no válido. Utilice 6 o 12 dígitos hexadecimales."
     },
     "curl-to-code": {
-      "name": "enrollar para codificar",
+      "name": "cURL a Código",
       "description": "Convierta comandos cURL en código en múltiples lenguajes de programación.",
-      "seo_title": "Free Online cURL to Code Converter",
-      "seo_description": "Convert cURL commands to JavaScript, Python, PHP, Go, Java, C#, Ruby and Rust code online for free. Parse requests with headers, body, and authentication.",
-      "curlInput": "Comando rizo",
+      "seo_title": "Convertidor cURL a Código Gratis Online",
+      "seo_description": "Convierte comandos cURL a código JavaScript, Python, PHP, Go, Java, C#, Ruby y Rust gratis online. Analiza requests con headers, body y autenticación.",
+      "curlInput": "Comando cURL",
       "placeholder": "Pega tu comando cURL...",
       "targetLanguage": "Lengua de llegada",
       "convert": "Convertir",
@@ -3586,8 +3586,8 @@
       "totalChars": "Personajes totales"
     },
     "json-to-dart": {
-      "name": "JSON a Dardo",
-      "description": "Convierta la clase JSON a Dart con los métodos fromJson y toJson.",
+      "name": "JSON to Dart",
+      "description": "Convierta JSON a clase Dart con los métodos fromJson y toJson.",
       "seo_title": "Free JSON to Dart Converter Online",
       "seo_description": "Convert JSON to Dart class code with factory constructors and serialization methods. Support null safety and nested classes. For Flutter app development.",
       "className": "Nombre de clase",
@@ -6190,7 +6190,7 @@
       "seo_description": "Convierta JSON a estructuras Go en línea de forma gratuita. Genere código Go con seguridad de tipos con etiquetas de campo adecuadas y soporte de estructuras anidadas. Esencial para el desarrollo de Go API.",
       "structName": "Nombre de la estructura",
       "input": "JSON Input",
-      "output": "Ir a estructura"
+      "output": "Go Struct"
     },
     "html-to-jsx": {
       "name": "HTML to JSX",
@@ -6471,7 +6471,7 @@
     "markdown-table-generator": {
       "name": "Generador de tablas Markdown",
       "description": "Cree y edite tablas de Markdown con editor visual y vista previa en vivo.",
-      "seo_title": "Generador gratuito de tablas de rebajas en línea",
+      "seo_title": "Generador gratuito de tablas Markdown en línea",
       "seo_description": "Genere tablas Markdown con editor visual en línea de forma gratuita. Vista previa en vivo, alineación de columnas e importación CSV. Perfecto para documentos README y documentos de GitHub.",
       "addRow": "+ Agregar fila",
       "addColumn": "+ Agregar columna",
@@ -6670,14 +6670,14 @@
       "name": "JSON to Rust",
       "description": "Convierta objetos JSON en estructuras Rust.",
       "input": "JSON Input",
-      "output": "Salida de óxido",
+      "output": "Rust Output",
       "convert": "Convertir",
       "copy": "Copiar",
       "structName": "Nombre de la estructura",
       "useSerde": "utilizar serde",
       "useOptionForNull": "Utilice la opción para nulo",
       "inputPlaceholder": "Pegue JSON aquí...",
-      "outputPlaceholder": "Las estructuras de óxido aparecerán aquí...",
+      "outputPlaceholder": "Las estructuras Rust aparecerán aquí...",
       "errorInvalidJson": "// Error: entrada JSON no válida",
       "seo_title": "Convertidor gratuito de JSON a Rust en línea",
       "seo_description": "Convierta estructuras JSON a Rust con macros derivadas serde en línea de forma gratuita. Genere código con seguridad de tipos con tipos de opciones para campos que aceptan valores NULL. Para el desarrollo de Rust."
@@ -6686,7 +6686,7 @@
       "name": "JSON to Swift",
       "description": "Convierta objetos JSON en estructuras Swift.",
       "input": "JSON Input",
-      "output": "Salida rápida",
+      "output": "Swift Output",
       "convert": "Convertir",
       "copy": "Copiar",
       "structName": "Nombre de la estructura",
@@ -7293,21 +7293,21 @@
       "output": "Configuración de Nginx generada"
     },
     "curl-converter": {
-      "name": "Convertidor de rizos",
+      "name": "Convertidor cURL",
       "description": "Convierta comandos cURL a código en varios idiomas.",
-      "seo_title": "Convertidor gratuito de cURL a código en línea",
-      "seo_description": "Convierta comandos cURL a código JavaScript, Python, PHP, Go y Java en línea de forma gratuita. Analice encabezados, cuerpo y autenticación. Esencial para la integración de API.",
-      "curlCommand": "Comando rizo",
+      "seo_title": "Convertidor cURL a Código Gratis Online",
+      "seo_description": "Convierte comandos cURL a código JavaScript, Python, PHP, Go y Java gratis online. Analiza headers, body y autenticación. Esencial para integración de APIs.",
+      "curlCommand": "Comando cURL",
       "placeholder": "Pega tu comando cURL aquí...",
       "outputLanguage": "Idioma de salida",
       "convert": "Convertir",
       "copyCode": "Copiar código",
       "generatedCode": "Código generado",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "Python (solicitudes)",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "Ir (red/http)",
-      "langJava": "Java (Cliente HTTP)"
+      "langGo": "Go (net/http)",
+      "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {
       "name": "Calculadora de tiempo de lectura",

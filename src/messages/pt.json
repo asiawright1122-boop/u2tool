@@ -1840,7 +1840,7 @@
       "seo_description": "Convert JSON to Go structs online for free. Generate type-safe Go code with proper field tags and nested struct support. Essential for Go API development.",
       "structName": "Nome da estrutura",
       "input": "JSON Input",
-      "output": "Vá estruturar"
+      "output": "Go Struct"
     },
     "html-to-jsx": {
       "name": "HTML para JSX",
@@ -2296,14 +2296,14 @@
       "name": "JSON para ferrugem",
       "description": "Converta objetos JSON em estruturas Rust.",
       "input": "JSON Input",
-      "output": "Saída de ferrugem",
+      "output": "Rust Output",
       "convert": "Converter",
       "copy": "Copiar",
       "structName": "Nome da estrutura",
       "useSerde": "Usar Serde",
       "useOptionForNull": "Use opção para nulo",
       "inputPlaceholder": "Cole JSON aqui...",
-      "outputPlaceholder": "Estruturas de ferrugem aparecerão aqui...",
+      "outputPlaceholder": "Estruturas Rust aparecerão aqui...",
       "errorInvalidJson": "// Erro: entrada JSON inválida",
       "seo_title": "Free JSON to Rust Converter Online",
       "seo_description": "Convert JSON to Rust structs with serde derive macros online for free. Generate type-safe code with Option types for nullable fields. For Rust development."
@@ -2312,7 +2312,7 @@
       "name": "JSON para Swift",
       "description": "Converta objetos JSON em estruturas Swift.",
       "input": "JSON Input",
-      "output": "Saída rápida",
+      "output": "Swift Output",
       "convert": "Converter",
       "copy": "Copiar",
       "structName": "Nome da estrutura",
@@ -2930,10 +2930,10 @@
       "copyCode": "Copiar código",
       "generatedCode": "Código gerado",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "Python (solicitações)",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "Ir (rede/http)",
-      "langJava": "Java (HttpCliente)"
+      "langGo": "Go (net/http)",
+      "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {
       "name": "Calculadora de Tempo de Leitura",
@@ -6190,7 +6190,7 @@
       "seo_description": "Converta estruturas JSON em Go online gratuitamente. Gere código Go com segurança de tipo com tags de campo adequadas e suporte a estrutura aninhada. Essencial para o desenvolvimento da API Go.",
       "structName": "Nome da estrutura",
       "input": "JSON Input",
-      "output": "Vá estruturar"
+      "output": "Go Struct"
     },
     "html-to-jsx": {
       "name": "HTML to JSX",
@@ -6670,14 +6670,14 @@
       "name": "JSON to Rust",
       "description": "Converta objetos JSON em estruturas Rust.",
       "input": "JSON Input",
-      "output": "Saída de ferrugem",
+      "output": "Rust Output",
       "convert": "Converter",
       "copy": "Copiar",
       "structName": "Nome da estrutura",
       "useSerde": "Usar Serde",
       "useOptionForNull": "Use opção para nulo",
       "inputPlaceholder": "Cole JSON aqui...",
-      "outputPlaceholder": "Estruturas de ferrugem aparecerão aqui...",
+      "outputPlaceholder": "Estruturas Rust aparecerão aqui...",
       "errorInvalidJson": "// Erro: entrada JSON inválida",
       "seo_title": "Conversor JSON para Rust online grátis",
       "seo_description": "Converta estruturas JSON em Rust com macros derivadas serde online gratuitamente. Gere código de tipo seguro com tipos de opção para campos anuláveis. Para desenvolvimento de Rust."
@@ -6686,7 +6686,7 @@
       "name": "JSON to Swift",
       "description": "Converta objetos JSON em estruturas Swift.",
       "input": "JSON Input",
-      "output": "Saída rápida",
+      "output": "Swift Output",
       "convert": "Converter",
       "copy": "Copiar",
       "structName": "Nome da estrutura",
@@ -7304,10 +7304,10 @@
       "copyCode": "Copiar código",
       "generatedCode": "Código gerado",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "Python (solicitações)",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "Ir (rede/http)",
-      "langJava": "Java (HttpCliente)"
+      "langGo": "Go (net/http)",
+      "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {
       "name": "Calculadora de Tempo de Leitura",

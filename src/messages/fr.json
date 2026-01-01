@@ -1834,13 +1834,13 @@
       "seo_description": "Compare text similarity and find differences online for free. Calculate Levenshtein distance and similarity percentage. Essential for content review."
     },
     "json-to-go": {
-      "name": "JSON à structurer",
+      "name": "JSON to Go Struct",
       "description": "Convertissez les données JSON en définitions de structure Go.",
       "seo_title": "Free JSON to Go Struct Converter",
       "seo_description": "Convert JSON to Go structs online for free. Generate type-safe Go code with proper field tags and nested struct support. Essential for Go API development.",
       "structName": "Nom de la structure",
       "input": "JSON Input",
-      "output": "Allez Struct"
+      "output": "Go Struct"
     },
     "html-to-jsx": {
       "name": "HTML vers JSX",
@@ -2296,7 +2296,7 @@
       "name": "JSON vers Rust",
       "description": "Convertissez les objets JSON en structures Rust.",
       "input": "JSON Input",
-      "output": "Sortie de rouille",
+      "output": "Rust Output",
       "convert": "Convertir",
       "copy": "Copier",
       "structName": "Nom de la structure",
@@ -2309,10 +2309,10 @@
       "seo_description": "Convert JSON to Rust structs with serde derive macros online for free. Generate type-safe code with Option types for nullable fields. For Rust development."
     },
     "json-to-swift": {
-      "name": "JSON vers Swift",
+      "name": "JSON to Swift",
       "description": "Convertissez les objets JSON en structures Swift.",
       "input": "JSON Input",
-      "output": "Sortie rapide",
+      "output": "Swift Output",
       "convert": "Convertir",
       "copy": "Copier",
       "structName": "Nom de la structure",
@@ -2930,9 +2930,9 @@
       "copyCode": "Copier le code",
       "generatedCode": "Code généré",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "Python (requêtes)",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "Aller (net/http)",
+      "langGo": "Go (net/http)",
       "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {
@@ -3586,7 +3586,7 @@
       "totalChars": "Caractères totaux"
     },
     "json-to-dart": {
-      "name": "JSON vers Dart",
+      "name": "JSON to Dart",
       "description": "Convertissez JSON en classe Dart avec les méthodes fromJson et toJson.",
       "seo_title": "Free JSON to Dart Converter Online",
       "seo_description": "Convert JSON to Dart class code with factory constructors and serialization methods. Support null safety and nested classes. For Flutter app development.",
@@ -6190,7 +6190,7 @@
       "seo_description": "Convertissez gratuitement des structures JSON en Go en ligne. Générez du code Go de type sécurisé avec des balises de champ appropriées et une prise en charge des structures imbriquées. Indispensable pour le développement de l'API Go.",
       "structName": "Nom de la structure",
       "input": "JSON Input",
-      "output": "Allez Struct"
+      "output": "Go Struct"
     },
     "html-to-jsx": {
       "name": "HTML to JSX",
@@ -6670,7 +6670,7 @@
       "name": "JSON to Rust",
       "description": "Convertissez les objets JSON en structures Rust.",
       "input": "JSON Input",
-      "output": "Sortie de rouille",
+      "output": "Rust Output",
       "convert": "Convertir",
       "copy": "Copier",
       "structName": "Nom de la structure",
@@ -6686,7 +6686,7 @@
       "name": "JSON to Swift",
       "description": "Convertissez les objets JSON en structures Swift.",
       "input": "JSON Input",
-      "output": "Sortie rapide",
+      "output": "Swift Output",
       "convert": "Convertir",
       "copy": "Copier",
       "structName": "Nom de la structure",
@@ -7304,9 +7304,9 @@
       "copyCode": "Copier le code",
       "generatedCode": "Code généré",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "Python (requêtes)",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "Aller (net/http)",
+      "langGo": "Go (net/http)",
       "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {

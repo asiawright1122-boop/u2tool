@@ -384,8 +384,8 @@
       "error": "خطأ في التحويل"
     },
     "yamlJson": {
-      "yamlPlaceholder": "أدخل يامل...",
-      "jsonPlaceholder": "أدخل جسون...",
+      "yamlPlaceholder": "أدخل YAML...",
+      "jsonPlaceholder": "أدخل JSON...",
       "invalidYaml": "YAML غير صالح",
       "invalidJson": "تنسيق JSON غير صالح"
     },
@@ -422,7 +422,7 @@
       "descending": "تنازلي (ي-أ)",
       "sort": "نوع",
       "invalidJson": "تنسيق JSON غير صالح",
-      "placeholder": "أدخل جسون..."
+      "placeholder": "أدخل JSON..."
     },
     "placeholder": {
       "width": "عرض",
@@ -499,7 +499,7 @@
     },
     "jsonTs": {
       "interfaceName": "اسم الواجهة",
-      "jsonPlaceholder": "أدخل جسون..."
+      "jsonPlaceholder": "أدخل JSON..."
     },
     "svgOptimizer": {
       "placeholder": "لصق كود SVG...",
@@ -1076,8 +1076,8 @@
       "swap": "تبديل",
       "copy": "نسخ",
       "convert": "تحويل",
-      "tomlPlaceholder": "أدخل تومل...",
-      "jsonPlaceholder": "أدخل جسون...",
+      "tomlPlaceholder": "أدخل TOML...",
+      "jsonPlaceholder": "أدخل JSON...",
       "outputPlaceholder": "سيظهر الناتج هنا...",
       "name": "محول TOML/JSON",
       "description": "التحويل بين تنسيقات TOML وJSON ثنائي الاتجاه.",
@@ -1095,7 +1095,7 @@
       "convert": "تحويل",
       "inputPlaceholder": "أدخل كائن JSON...",
       "outputPlaceholder": "سيظهر كود جافا هنا...",
-      "name": "JSON إلى جافا",
+      "name": "JSON to Java",
       "description": "قم بتحويل بيانات JSON إلى فئات Java POJO بدعم Lombok.",
       "seo_title": "Free JSON to Java Converter Online",
       "seo_description": "Convert JSON to Java classes online for free. Support Lombok, getters/setters, and builder patterns. Perfect for API development and data modeling."
@@ -1109,7 +1109,7 @@
       "convert": "تحويل",
       "inputPlaceholder": "أدخل كائن JSON...",
       "outputPlaceholder": "سيظهر كود بايثون هنا...",
-      "name": "JSON إلى بايثون",
+      "name": "JSON to Python",
       "description": "قم بتحويل بيانات JSON إلى فئة بيانات Python أو Pydantic أو TypedDict.",
       "seo_title": "Free JSON to Python Converter Online",
       "seo_description": "Convert JSON to Python dataclass or Pydantic models online for free. Generate type-safe Python code with validation. Essential for Python API development."
@@ -1128,7 +1128,7 @@
       "convert": "تحويل",
       "inputPlaceholder": "أدخل كائن JSON...",
       "outputPlaceholder": "سيظهر كود Kotlin هنا...",
-      "name": "JSON إلى كوتلين",
+      "name": "JSON to Kotlin",
       "description": "تحويل بيانات JSON إلى فئات بيانات Kotlin مع دعم التسلسل.",
       "seo_title": "Free JSON to Kotlin Converter Online",
       "seo_description": "Convert JSON to Kotlin data classes online for free. Support Moshi, Gson, and Kotlinx annotations. Perfect for Android and Kotlin backend development."
@@ -1275,7 +1275,7 @@
     },
     "jsonPathFinder": {
       "loadSample": "تحميل نموذج",
-      "placeholder": "أدخل جسون...",
+      "placeholder": "أدخل JSON...",
       "analyze": "تحليل",
       "search": "البحث عن المسارات أو القيم...",
       "paths": "تم العثور على المسارات"
@@ -1425,7 +1425,7 @@
       "seo_description": "Generate Lorem Ipsum placeholder text online for free. Create paragraphs, sentences, or words for mockups and designs. Perfect for web designers and developers."
     },
     "regex-tester": {
-      "name": "اختبار ريجكس",
+      "name": "Regex Tester",
       "description": "اختبر التعبيرات العادية من خلال المطابقة والتمييز في الوقت الفعلي.",
       "seo_title": "Free Regex Tester & Debugger Online",
       "seo_description": "Test and debug regular expressions online for free. Real-time matching with syntax highlighting and match groups. Perfect for developers and data processing."
@@ -1611,7 +1611,7 @@
       "seo_description": "Format, beautify and minify CSS code online for free. Syntax highlighting with customizable indentation. Perfect for web developers and front-end optimization."
     },
     "js-beautifier": {
-      "name": "جافا سكريبت تجميل",
+      "name": "JavaScript Beautifier",
       "description": "قم بتنسيق وتجميل تعليمات JavaScript البرمجية باستخدام خيارات التصغير والتجميل.",
       "seo_title": "Free JavaScript Beautifier Online",
       "seo_description": "Format, beautify and minify JavaScript code online for free. Syntax highlighting with customizable indentation. Perfect for web developers and optimization."
@@ -1834,13 +1834,13 @@
       "seo_description": "Compare text similarity and find differences online for free. Calculate Levenshtein distance and similarity percentage. Essential for content review."
     },
     "json-to-go": {
-      "name": "JSON للذهاب إلى الهيكل",
+      "name": "JSON to Go Struct",
       "description": "تحويل بيانات JSON إلى تعريفات بنية Go.",
       "seo_title": "Free JSON to Go Struct Converter",
       "seo_description": "Convert JSON to Go structs online for free. Generate type-safe Go code with proper field tags and nested struct support. Essential for Go API development.",
       "structName": "اسم الهيكل",
       "input": "JSON Input",
-      "output": "اذهب إلى الهيكل"
+      "output": "Go Struct"
     },
     "html-to-jsx": {
       "name": "HTML إلى JSX",
@@ -2035,7 +2035,7 @@
       "seo_description": "Generate .gitignore files for Node.js, Python, Java, Go, Ruby, and more online for free. Select templates and customize rules. Keep repositories clean."
     },
     "docker-compose-generator": {
-      "name": "دوكر يؤلف مولد",
+      "name": "Docker Compose Generator",
       "description": "قم بإنشاء ملفات docker-compose.yml باستخدام الخدمات الشائعة مثل MySQL وRedis وNginx.",
       "seo_title": "Free Docker Compose Generator Online",
       "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, Redis, Nginx, and more services online for free. Visual editor with YAML preview and validation.",
@@ -2184,7 +2184,7 @@
       "seo_description": "Generate CSS Flexbox layouts visually with live preview online for free. Customize direction, wrap, justify, and align properties. Copy CSS code instantly."
     },
     "jwt-generator": {
-      "name": "مولد جي دبليو تي",
+      "name": "JWT Generator",
       "description": "قم بإنشاء رموز ويب JSON مع حمولة مخصصة ومفتاح سري.",
       "seo_title": "Free JWT Generator Online",
       "seo_description": "Generate JWT tokens with custom claims, expiration, and HMAC/RSA signing online for free. Create access tokens for API authentication and authorization testing."
@@ -2293,26 +2293,26 @@
       "errorInvalidJson": "// خطأ: إدخال JSON غير صالح"
     },
     "json-to-rust": {
-      "name": "JSON إلى الصدأ",
+      "name": "JSON to Rust",
       "description": "تحويل كائنات JSON إلى بنيات Rust.",
       "input": "JSON Input",
-      "output": "إخراج الصدأ",
+      "output": "Rust Output",
       "convert": "تحويل",
       "copy": "نسخ",
       "structName": "اسم الهيكل",
       "useSerde": "استخدم سيردي",
       "useOptionForNull": "استخدم الخيار لـ null",
       "inputPlaceholder": "الصق JSON هنا...",
-      "outputPlaceholder": "سوف تظهر هنا هياكل الصدأ ...",
+      "outputPlaceholder": "ستظهر هنا هياكل Rust ...",
       "errorInvalidJson": "// خطأ: إدخال JSON غير صالح",
       "seo_title": "Free JSON to Rust Converter Online",
       "seo_description": "Convert JSON to Rust structs with serde derive macros online for free. Generate type-safe code with Option types for nullable fields. For Rust development."
     },
     "json-to-swift": {
-      "name": "JSON إلى سويفت",
+      "name": "JSON to Swift",
       "description": "تحويل كائنات JSON إلى بنيات Swift.",
       "input": "JSON Input",
-      "output": "إخراج سويفت",
+      "output": "Swift Output",
       "convert": "تحويل",
       "copy": "نسخ",
       "structName": "اسم الهيكل",
@@ -2334,7 +2334,7 @@
       "seo_description": "Minify and compress CSS code online for free. Remove whitespace, comments, and optimize selectors. Reduce file size and improve page load speed."
     },
     "js-minifier": {
-      "name": "جافا سكريبت المصغر",
+      "name": "JavaScript Minifier",
       "description": "تصغير وضغط كود JavaScript.",
       "input": "JavaScript Input",
       "output": "الإخراج المصغر",
@@ -2461,7 +2461,7 @@
       "seo_description": "Convert HTML to Markdown format online for free. Preserve formatting, links, images, and code blocks. Perfect for migrating content to Markdown-based systems."
     },
     "regex-generator": {
-      "name": "مولد ريجكس",
+      "name": "Regex Generator",
       "description": "إنشاء واختبار التعبيرات العادية ذات الأنماط الشائعة.",
       "copy": "نسخ النمط",
       "seo_title": "Free Regex Generator Online",
@@ -2522,7 +2522,7 @@
       "unableToExpand": "غير قادر على التوسيع (يتطلب طلبًا من جانب الخادم)"
     },
     "json-viewer": {
-      "name": "عارض جيسون",
+      "name": "JSON Viewer",
       "description": "عرض واستكشاف بيانات JSON في بنية شجرة.",
       "input": "JSON Input",
       "seo_title": "Free JSON Viewer Online",
@@ -2919,21 +2919,21 @@
       "output": "تكوين Nginx الذي تم إنشاؤه"
     },
     "curl-converter": {
-      "name": "محول الضفيرة",
+      "name": "محول cURL",
       "description": "تحويل أوامر cURL إلى تعليمات برمجية بلغات مختلفة.",
-      "seo_title": "Free cURL to Code Converter Online",
-      "seo_description": "Convert cURL commands to JavaScript, Python, PHP, Go, and Java code online for free. Parse headers, body, and authentication. Essential for API integration.",
-      "curlCommand": "أمر الضفيرة",
+      "seo_title": "محول cURL إلى كود مجاني أونلاين",
+      "seo_description": "حول أوامر cURL إلى كود JavaScript و Python و PHP و Go و Java مجاناً أونلاين. تحليل الرؤوس والجسم والمصادقة. أساسي لتكامل API.",
+      "curlCommand": "أمر cURL",
       "placeholder": "الصق أمر cURL هنا...",
       "outputLanguage": "لغة الإخراج",
       "convert": "تحويل",
       "copyCode": "نسخ الرمز",
       "generatedCode": "الكود الذي تم إنشاؤه",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "بايثون (الطلبات)",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "اذهب (صافي/http)",
-      "langJava": "جافا (httpClient)"
+      "langGo": "Go (net/http)",
+      "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {
       "name": "حاسبة وقت القراءة",
@@ -3064,7 +3064,7 @@
       "noteText": "يتعامل هذا المحول مع قواعد htaccess الشائعة. قد تتطلب التكوينات المعقدة تعديلًا يدويًا."
     },
     "js-obfuscator": {
-      "name": "جافا سكريبت Obfuscator",
+      "name": "JavaScript Obfuscator",
       "description": "قم بتشويش تعليمات JavaScript البرمجية لحماية مصدرك.",
       "seo_title": "Free JavaScript Obfuscator Online",
       "seo_description": "Obfuscate and protect JavaScript code online for free. Rename variables, encode strings, and add dead code. Protect your intellectual property.",
@@ -3300,7 +3300,7 @@
       "infoText": "يستخدم Picsum Photos API. تضمن البذور نفس الصورة للحصول على نتائج متسقة. معرف الصورة (0-1084) يحدد صورة معينة."
     },
     "regex-escape": {
-      "name": "ريجكس الهروب",
+      "name": "Regex Escape",
       "description": "الهروب أو إلغاء الهروب من أحرف regex الخاصة.",
       "seo_title": "Free Regex Escape Tool Online",
       "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns.",
@@ -3467,11 +3467,11 @@
       "errorInvalidPrefix": "بادئة غير صالحة. استخدم 6 أو 12 رقمًا سداسيًا."
     },
     "curl-to-code": {
-      "name": "الضفيرة إلى التعليمات البرمجية",
+      "name": "cURL إلى كود",
       "description": "تحويل أوامر cURL إلى تعليمات برمجية بلغات برمجة متعددة.",
-      "seo_title": "Free Online cURL to Code Converter",
-      "seo_description": "Convert cURL commands to JavaScript, Python, PHP, Go, Java, C#, Ruby and Rust code online for free. Parse requests with headers, body, and authentication.",
-      "curlInput": "أمر الضفيرة",
+      "seo_title": "محول cURL إلى كود مجاني أونلاين",
+      "seo_description": "حول أوامر cURL إلى كود JavaScript و Python و PHP و Go و Java و C# و Ruby و Rust مجاناً أونلاين. تحليل الطلبات مع الرؤوس والجسم والمصادقة.",
+      "curlInput": "أمر cURL",
       "placeholder": "الصق أمر cURL...",
       "targetLanguage": "اللغة المستهدفة",
       "convert": "تحويل",
@@ -3512,7 +3512,7 @@
       "loopbackAddress": "عنوان الاسترجاع"
     },
     "json-merger": {
-      "name": "دمج جيسون",
+      "name": "JSON Merger",
       "description": "دمج كائنات JSON متعددة باستراتيجيات مختلفة.",
       "seo_title": "Free JSON Merger Online",
       "seo_description": "Merge JSON objects online with shallow, deep, or concat strategies. Combine multiple JSON files into one. Handle arrays and nested objects intelligently.",
@@ -3526,7 +3526,7 @@
       "merge": "دمج",
       "result": "نتيجة",
       "copy": "نسخ",
-      "inputPlaceholder": "أدخل جسون..."
+      "inputPlaceholder": "أدخل JSON..."
     },
     "text-template": {
       "name": "قالب النص",
@@ -3586,7 +3586,7 @@
       "totalChars": "مجموع الشخصيات"
     },
     "json-to-dart": {
-      "name": "JSON إلى دارت",
+      "name": "JSON to Dart",
       "description": "قم بتحويل فئة JSON إلى Dart باستخدام أساليب fromJson وtoJson.",
       "seo_title": "Free JSON to Dart Converter Online",
       "seo_description": "Convert JSON to Dart class code with factory constructors and serialization methods. Support null safety and nested classes. For Flutter app development.",
@@ -4295,7 +4295,7 @@
       },
       "innerRadius": "الشعاع الداخلي",
       "outerRadius": "الشعاع الخارجي",
-      "formatJson": "تنسيق جيسون",
+      "formatJson": "تنسيق JSON",
       "jsonPlaceholder": "أدخل بيانات JSON...",
       "invalidJson": "تنسيق JSON غير صالح",
       "categoryA": "فئة أ",
@@ -4528,7 +4528,7 @@
       "themePurple": "أرجواني",
       "themeOrange": "البرتقالي",
       "randomData": "بيانات عشوائية",
-      "importJson": "استيراد جسون",
+      "importJson": "استيراد JSON",
       "statistics": "إحصائيات",
       "totalDays": "إجمالي الأيام",
       "totalValue": "القيمة الإجمالية",
@@ -5904,7 +5904,7 @@
       "seo_description": "قم بإنشاء نص نائب لوريم إيبسوم عبر الإنترنت مجانًا. قم بإنشاء فقرات أو جمل أو كلمات للنماذج والتصميمات. مثالي لمصممي ومطوري الويب."
     },
     "regex-tester": {
-      "name": "اختبار ريجكس",
+      "name": "Regex Tester",
       "description": "اختبر التعبيرات العادية من خلال المطابقة والتمييز في الوقت الفعلي.",
       "seo_title": "اختبار Regex ومصحح الأخطاء مجانًا عبر الإنترنت",
       "seo_description": "اختبار وتصحيح التعبيرات العادية عبر الإنترنت مجانًا. المطابقة في الوقت الحقيقي مع تمييز بناء الجملة ومجموعات المطابقة. مثالية للمطورين ومعالجة البيانات."
@@ -6319,7 +6319,7 @@
       "seo_description": "قم بتحويل بنيات JSON إلى Go عبر الإنترنت مجانًا. قم بإنشاء كود Go آمن للنوع مع علامات الحقول المناسبة ودعم البنية المتداخلة. ضروري لتطوير Go API.",
       "structName": "اسم الهيكل",
       "input": "JSON Input",
-      "output": "اذهب إلى الهيكل"
+      "output": "Go Struct"
     },
     "html-to-jsx": {
       "name": "HTML to JSX",
@@ -6538,7 +6538,7 @@
       "seo_description": "قم بإنشاء ملفات .gitignore لـ Node.js وPython وJava وGo وRuby والمزيد عبر الإنترنت مجانًا. حدد القوالب وقم بتخصيص القواعد. حافظ على مستودعاتك نظيفة."
     },
     "docker-compose-generator": {
-      "name": "دوكر يؤلف مولد",
+      "name": "Docker Compose Generator",
       "description": "قم بإنشاء ملفات docker-compose.yml باستخدام الخدمات الشائعة مثل MySQL وRedis وNginx.",
       "seo_title": "دوكر يؤلف مولد مجاني على الإنترنت",
       "seo_description": "أنشئ ملفات docker-compose.yml باستخدام MySQL وPostgreSQL وRedis وNginx والمزيد من الخدمات عبر الإنترنت مجانًا. محرر مرئي مع معاينة YAML والتحقق من صحتها.",
@@ -6799,23 +6799,23 @@
       "name": "JSON to Rust",
       "description": "تحويل كائنات JSON إلى بنيات Rust.",
       "input": "JSON Input",
-      "output": "إخراج الصدأ",
+      "output": "Rust Output",
       "convert": "تحويل",
       "copy": "نسخ",
       "structName": "اسم الهيكل",
       "useSerde": "استخدم سيردي",
       "useOptionForNull": "استخدم الخيار لـ null",
       "inputPlaceholder": "الصق JSON هنا...",
-      "outputPlaceholder": "سوف تظهر هنا هياكل الصدأ ...",
+      "outputPlaceholder": "ستظهر هنا هياكل Rust ...",
       "errorInvalidJson": "// خطأ: إدخال JSON غير صالح",
       "seo_title": "برنامج تحويل JSON إلى Rust المجاني عبر الإنترنت",
-      "seo_description": "قم بتحويل بنيات JSON إلى Rust باستخدام وحدات الماكرو المشتقة من serde عبر الإنترنت مجانًا. قم بإنشاء كود النوع الآمن مع أنواع الخيارات للحقول الخالية. لتطوير الصدأ."
+      "seo_description": "قم بتحويل بنيات JSON إلى Rust باستخدام وحدات الماكرو المشتقة من serde عبر الإنترنت مجانًا. قم بإنشاء كود النوع الآمن مع أنواع الخيارات للحقول الخالية. لتطوير Rust."
     },
     "json-to-swift": {
       "name": "JSON to Swift",
       "description": "تحويل كائنات JSON إلى بنيات Swift.",
       "input": "JSON Input",
-      "output": "إخراج سويفت",
+      "output": "Swift Output",
       "convert": "تحويل",
       "copy": "نسخ",
       "structName": "اسم الهيكل",
@@ -6964,7 +6964,7 @@
       "seo_description": "قم بتحويل تنسيق HTML إلى تنسيق Markdown عبر الإنترنت مجانًا. الحفاظ على التنسيق والروابط والصور وكتل التعليمات البرمجية. مثالية لترحيل المحتوى إلى الأنظمة القائمة على Markdown."
     },
     "regex-generator": {
-      "name": "مولد ريجكس",
+      "name": "Regex Generator",
       "description": "إنشاء واختبار التعبيرات العادية ذات الأنماط الشائعة.",
       "copy": "نسخ النمط",
       "seo_title": "مولد Regex المجاني على الإنترنت",
@@ -7422,21 +7422,21 @@
       "output": "تكوين Nginx الذي تم إنشاؤه"
     },
     "curl-converter": {
-      "name": "محول الضفيرة",
+      "name": "محول cURL",
       "description": "تحويل أوامر cURL إلى تعليمات برمجية بلغات مختلفة.",
-      "seo_title": "الضفيرة الحرة لتحويل التعليمات البرمجية على الإنترنت",
-      "seo_description": "قم بتحويل أوامر cURL إلى JavaScript وPython وPHP وGo وJava عبر الإنترنت مجانًا. تحليل الرؤوس والنص والمصادقة. ضروري لتكامل API.",
-      "curlCommand": "أمر الضفيرة",
+      "seo_title": "محول cURL إلى كود مجاني أونلاين",
+      "seo_description": "حول أوامر cURL إلى كود JavaScript و Python و PHP و Go و Java مجاناً أونلاين. تحليل الرؤوس والجسم والمصادقة. أساسي لتكامل API.",
+      "curlCommand": "أمر cURL",
       "placeholder": "الصق أمر cURL هنا...",
       "outputLanguage": "لغة الإخراج",
       "convert": "تحويل",
       "copyCode": "نسخ الرمز",
       "generatedCode": "الكود الذي تم إنشاؤه",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "بايثون (الطلبات)",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "اذهب (صافي/http)",
-      "langJava": "جافا (httpClient)"
+      "langGo": "Go (net/http)",
+      "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {
       "name": "حاسبة وقت القراءة",
@@ -7803,7 +7803,7 @@
       "infoText": "يستخدم Picsum Photos API. تضمن البذور نفس الصورة للحصول على نتائج متسقة. معرف الصورة (0-1084) يحدد صورة معينة."
     },
     "regex-escape": {
-      "name": "ريجكس الهروب",
+      "name": "Regex Escape",
       "description": "الهروب أو إلغاء الهروب من أحرف regex الخاصة.",
       "seo_title": "أداة الهروب Regex المجانية على الإنترنت",
       "seo_description": "يمكنك الهروب من الأحرف الخاصة لاستخدامها في التعبيرات العادية عبر الإنترنت مجانًا. التعامل مع الأحرف الأولية مثل . * + ؟ ^ $ '{' '}' [ ] \\ '|' ( ). ضروري للأنماط.",

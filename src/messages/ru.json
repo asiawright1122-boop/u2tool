@@ -1840,7 +1840,7 @@
       "seo_description": "Convert JSON to Go structs online for free. Generate type-safe Go code with proper field tags and nested struct support. Essential for Go API development.",
       "structName": "Имя структуры",
       "input": "JSON Input",
-      "output": "Перейти к структуре"
+      "output": "Go Struct"
     },
     "html-to-jsx": {
       "name": "HTML в JSX",
@@ -2296,7 +2296,7 @@
       "name": "JSON в Rust",
       "description": "Преобразование объектов JSON в структуры Rust.",
       "input": "JSON Input",
-      "output": "Выход ржавчины",
+      "output": "Rust Output",
       "convert": "Конвертировать",
       "copy": "Копировать",
       "structName": "Имя структуры",
@@ -2312,7 +2312,7 @@
       "name": "JSON в Swift",
       "description": "Преобразуйте объекты JSON в структуры Swift.",
       "input": "JSON Input",
-      "output": "Быстрый вывод",
+      "output": "Swift Output",
       "convert": "Конвертировать",
       "copy": "Копировать",
       "structName": "Имя структуры",
@@ -2930,9 +2930,9 @@
       "copyCode": "Копировать код",
       "generatedCode": "Сгенерированный код",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "Питон (запросы)",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "Перейти (сеть/http)",
+      "langGo": "Go (net/http)",
       "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {
@@ -6190,7 +6190,7 @@
       "seo_description": "Конвертируйте структуры JSON в Go онлайн бесплатно. Создавайте типобезопасный код Go с правильными тегами полей и поддержкой вложенных структур. Необходим для разработки Go API.",
       "structName": "Имя структуры",
       "input": "JSON Input",
-      "output": "Перейти к структуре"
+      "output": "Go Struct"
     },
     "html-to-jsx": {
       "name": "HTML to JSX",
@@ -6670,7 +6670,7 @@
       "name": "JSON to Rust",
       "description": "Преобразование объектов JSON в структуры Rust.",
       "input": "JSON Input",
-      "output": "Выход ржавчины",
+      "output": "Rust Output",
       "convert": "Конвертировать",
       "copy": "Копировать",
       "structName": "Имя структуры",
@@ -6686,7 +6686,7 @@
       "name": "JSON to Swift",
       "description": "Преобразуйте объекты JSON в структуры Swift.",
       "input": "JSON Input",
-      "output": "Быстрый вывод",
+      "output": "Swift Output",
       "convert": "Конвертировать",
       "copy": "Копировать",
       "structName": "Имя структуры",
@@ -7304,9 +7304,9 @@
       "copyCode": "Копировать код",
       "generatedCode": "Сгенерированный код",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "Питон (запросы)",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "Перейти (сеть/http)",
+      "langGo": "Go (net/http)",
       "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {

@@ -2919,21 +2919,21 @@
       "output": "生成的 Nginx 配置"
     },
     "curl-converter": {
-      "name": "卷曲转换器",
+      "name": "cURL 转换器",
       "description": "将 cURL 命令转换为各种语言的代码。",
-      "seo_title": "Free cURL to Code Converter Online",
-      "seo_description": "Convert cURL commands to JavaScript, Python, PHP, Go, and Java code online for free. Parse headers, body, and authentication. Essential for API integration.",
-      "curlCommand": "卷曲命令",
+      "seo_title": "免费在线 cURL 代码转换器",
+      "seo_description": "免费在线将 cURL 命令转换为 JavaScript、Python、PHP、Go 和 Java 代码。解析请求头、请求体和身份验证。API 集成必备工具。",
+      "curlCommand": "cURL 命令",
       "placeholder": "将您的 cURL 命令粘贴到此处...",
       "outputLanguage": "输出语言",
       "convert": "转换",
       "copyCode": "复制代码",
       "generatedCode": "生成的代码",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "Python（请求）",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "去（网络/http）",
-      "langJava": "Java（Http客户端）"
+      "langGo": "Go (net/http)",
+      "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {
       "name": "阅读时间计算器",
@@ -3467,11 +3467,11 @@
       "errorInvalidPrefix": "前缀无效。使用 6 或 12 个十六进制数字。"
     },
     "curl-to-code": {
-      "name": "卷曲到代码",
+      "name": "cURL 转代码",
       "description": "将 cURL 命令转换为多种编程语言的代码。",
-      "seo_title": "Free Online cURL to Code Converter",
-      "seo_description": "Convert cURL commands to JavaScript, Python, PHP, Go, Java, C#, Ruby and Rust code online for free. Parse requests with headers, body, and authentication.",
-      "curlInput": "卷曲命令",
+      "seo_title": "免费在线 cURL 转代码工具",
+      "seo_description": "免费在线将 cURL 命令转换为 JavaScript、Python、PHP、Go、Java、C#、Ruby 和 Rust 代码。支持解析请求头、请求体和身份验证。",
+      "curlInput": "cURL 命令",
       "placeholder": "粘贴您的 cURL 命令...",
       "targetLanguage": "目标语言",
       "convert": "转换",
@@ -7416,21 +7416,21 @@
       "output": "生成的 Nginx 配置"
     },
     "curl-converter": {
-      "name": "卷曲转换器",
+      "name": "cURL 转换器",
       "description": "将 cURL 命令转换为各种语言的代码。",
-      "seo_title": "免费在线 cURL 到代码转换器",
-      "seo_description": "免费在线将 cURL 命令转换为 JavaScript、Python、PHP、Go 和 Java 代码。解析标头、正文和身份验证。 API 集成必不可少。",
-      "curlCommand": "卷曲命令",
+      "seo_title": "免费在线 cURL 代码转换器",
+      "seo_description": "免费在线将 cURL 命令转换为 JavaScript、Python、PHP、Go 和 Java 代码。解析请求头、请求体和身份验证。API 集成必备工具。",
+      "curlCommand": "cURL 命令",
       "placeholder": "将您的 cURL 命令粘贴到此处...",
       "outputLanguage": "输出语言",
       "convert": "转换",
       "copyCode": "复制代码",
       "generatedCode": "生成的代码",
       "langJavaScript": "JavaScript (fetch)",
-      "langPython": "Python（请求）",
+      "langPython": "Python (requests)",
       "langPhp": "PHP (cURL)",
-      "langGo": "去（网络/http）",
-      "langJava": "Java（Http客户端）"
+      "langGo": "Go (net/http)",
+      "langJava": "Java (HttpClient)"
     },
     "reading-time-calculator": {
       "name": "阅读时间计算器",
