@@ -2,9 +2,9 @@
 
 > 本文档记录项目中所有已注册的工具，方便查阅和避免添加重复工具。
 > 
-> 最后更新: 2025-12-31
+> 最后更新: 2026-01-01
 > 
-> 工具总数: **249 个**
+> 工具总数: **263 个**
 
 ---
 
@@ -293,8 +293,22 @@
 | 12 | `image-watermark` | 💧 | ImageWatermark | ✅ |
 | 13 | `svg-to-image` | 🖼️ | SvgToImage | |
 | 14 | `lorem-picsum` | 🖼️ | LoremPicsum | |
+| 15 | `image-collage` | 🖼️ | ImageCollage | ✅ |
+| 16 | `image-splitter` | ✂️ | ImageSplitter | ✅ |
+| 17 | `image-rounder` | ⭕ | ImageRounder | |
+| 18 | `image-border` | 🖼️ | ImageBorder | |
+| 19 | `image-flip-rotate` | 🔄 | ImageFlipRotate | |
+| 20 | `image-adjustment` | 🎨 | ImageAdjustment | ✅ |
+| 21 | `image-frosted-glass` | 🌫️ | ImageFrostedGlass | |
+| 22 | `image-to-ico` | 🎯 | ImageToIco | ✅ |
+| 23 | `gif-maker` | 🎬 | GifMaker | ✅ |
+| 24 | `gif-splitter` | ✂️ | GifSplitter | |
+| 25 | `gif-compressor` | 📦 | GifCompressor | |
+| 26 | `image-to-webp` | 🌐 | ImageToWebp | ✅ |
+| 27 | `exif-viewer` | 📷 | ExifViewer | ✅ |
+| 28 | `color-extractor` | 🎨 | ColorExtractor | ✅ |
 
-**小计: 14 个工具**
+**小计: 28 个工具**
 
 ---
 
@@ -468,6 +482,14 @@
 - `barcode-generator` - 条形码生成
 - `image-resizer` - 图片调整大小
 - `image-watermark` - 图片水印
+- `image-collage` - 图片拼接
+- `image-splitter` - 图片分割
+- `image-adjustment` - 图片调整
+- `image-to-ico` - 图片转ICO
+- `gif-maker` - GIF制作
+- `image-to-webp` - 图片转WebP
+- `exif-viewer` - EXIF查看器
+- `color-extractor` - 图片取色
 
 ### 数学类热门工具
 - `base-calculator` - 进制计算器
@@ -576,15 +598,16 @@ const toolSlug = 'your-tool-slug';
 | 💻 开发工具 | 37 |
 | 🔒 安全工具 | 11 |
 | 🌐 网络工具 | 15 |
-| 🖼️ 图像工具 | 14 |
+| 🖼️ 图像工具 | 28 |
 | 🔢 数学工具 | 9 |
 | 📈 图表工具 | 42 |
-| **总计** | **249** |
+| **总计** | **263** |
 
 ---
 
 ## 更新日志
 
+- **2026-01-01**: 添加 14 个新图像工具 (image-collage, image-splitter, image-rounder, image-border, image-flip-rotate, image-adjustment, image-frosted-glass, image-to-ico, gif-maker, gif-splitter, gif-compressor, image-to-webp, exif-viewer, color-extractor)
 - **2025-12-31**: 添加 7 个新热门工具 (env-parser, json-schema-generator, time-calculator, batch-timestamp-converter, regex-visualizer, crontab-calendar, fake-data-generator)
 - **2025-12-31**: 添加 8 个新图表工具 (percentage-stacked-bar-chart-generator, mixed-chart-generator, ring-progress-chart-generator, liquid-fill-chart-generator, multi-ring-chart-generator, half-doughnut-chart-generator, nested-pie-chart-generator, pictorial-bar-chart-generator)
 - **2025-12-31**: 初始版本，记录 234 个工具

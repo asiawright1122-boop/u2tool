@@ -290,6 +290,21 @@ const TOOL_COMPONENTS_MAP: Record<string, React.ComponentType> = {
   'regex-visualizer': dynamic(() => import('./RegexVisualizer')),
   'crontab-calendar': dynamic(() => import('./CrontabCalendar')),
   'fake-data-generator': dynamic(() => import('./FakeDataGenerator')),
+  // Batch 38 - Image Tools (图像工具)
+  'image-collage': dynamic(() => import('./ImageCollage')),
+  'image-splitter': dynamic(() => import('./ImageSplitter')),
+  'image-rounder': dynamic(() => import('./ImageRounder')),
+  'image-border': dynamic(() => import('./ImageBorder')),
+  'image-flip-rotate': dynamic(() => import('./ImageFlipRotate')),
+  'image-adjustment': dynamic(() => import('./ImageAdjustment')),
+  'image-frosted-glass': dynamic(() => import('./ImageFrostedGlass')),
+  'image-to-ico': dynamic(() => import('./ImageToIco')),
+  'gif-maker': dynamic(() => import('./GifMaker'), { ssr: false }),
+  'gif-splitter': dynamic(() => import('./GifSplitter'), { ssr: false }),
+  'gif-compressor': dynamic(() => import('./GifCompressor'), { ssr: false }),
+  'image-to-webp': dynamic(() => import('./ImageToWebp')),
+  'exif-viewer': dynamic(() => import('./ExifViewer')),
+  'color-extractor': dynamic(() => import('./ColorExtractor')),
 };
 
 export default function ToolWrapper({ slug }: { slug: string }) {

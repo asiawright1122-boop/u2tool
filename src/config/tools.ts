@@ -333,6 +333,22 @@ export const tools: Tool[] = [
   { slug: 'regex-visualizer', category: 'development', icon: '🔍', component: 'RegexVisualizer', popular: true },
   { slug: 'crontab-calendar', category: 'development', icon: '📆', component: 'CrontabCalendar', popular: true },
   { slug: 'fake-data-generator', category: 'generators', icon: '🎭', component: 'FakeDataGenerator', popular: true },
+
+  // Batch 38 - New Image Tools (新增图片工具)
+  { slug: 'image-collage', category: 'image', icon: '🖼️', component: 'ImageCollage', popular: true },
+  { slug: 'image-splitter', category: 'image', icon: '✂️', component: 'ImageSplitter', popular: true },
+  { slug: 'image-rounder', category: 'image', icon: '⭕', component: 'ImageRounder', popular: true },
+  { slug: 'image-border', category: 'image', icon: '🖼️', component: 'ImageBorder', popular: true },
+  { slug: 'image-flip-rotate', category: 'image', icon: '🔄', component: 'ImageFlipRotate', popular: true },
+  { slug: 'image-adjustment', category: 'image', icon: '🎨', component: 'ImageAdjustment', popular: true },
+  { slug: 'image-frosted-glass', category: 'image', icon: '🌫️', component: 'ImageFrostedGlass', popular: true },
+  { slug: 'image-to-ico', category: 'image', icon: '🎯', component: 'ImageToIco', popular: true },
+  { slug: 'gif-maker', category: 'image', icon: '🎬', component: 'GifMaker', popular: true },
+  { slug: 'gif-splitter', category: 'image', icon: '📽️', component: 'GifSplitter', popular: true },
+  { slug: 'gif-compressor', category: 'image', icon: '📦', component: 'GifCompressor', popular: true },
+  { slug: 'image-to-webp', category: 'image', icon: '🌐', component: 'ImageToWebp', popular: true },
+  { slug: 'exif-viewer', category: 'image', icon: '📷', component: 'ExifViewer', popular: true },
+  { slug: 'color-extractor', category: 'image', icon: '🎨', component: 'ColorExtractor', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [

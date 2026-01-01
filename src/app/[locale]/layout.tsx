@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from 'next-themes';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { routing } from '@/i18n/routing';
 import { SEO_CONFIG, getVerificationTags } from '@/lib/seo';
 
@@ -262,6 +263,10 @@ export default async function LocaleLayout({
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
+      {/* Google Analytics */}
+      {process.env.NEXT_PUBLIC_GA_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      )}
     </html>
   );
 }
