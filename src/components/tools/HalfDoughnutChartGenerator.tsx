@@ -252,7 +252,7 @@ export default function HalfDoughnutChartGenerator() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <th className="text-left py-2 px-2 font-medium">{t('name')}</th>
+                    <th className="text-left py-2 px-2 font-medium">{t('nameLabel')}</th>
                     <th className="text-left py-2 px-2 font-medium">{t('value')}</th>
                     <th className="w-10"></th>
                   </tr>
