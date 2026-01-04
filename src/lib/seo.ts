@@ -576,8 +576,8 @@ export function getVerificationTags() {
   return {
     // Google Search Console
     google: SEO_CONFIG.verification.google || undefined,
-    // Yandex Webmaster
-    yandex: SEO_CONFIG.verification.yandex || undefined,
+    // 注意：Yandex 验证通过 layout.tsx 中的手动 meta 标签添加
+    // 因为 Next.js metadata API 可能不支持 yandex verification
     // 其他验证（百度、Bing、360等）
     other: {
       // 百度站长平台
