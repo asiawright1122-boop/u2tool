@@ -1,6 +1,15 @@
+/**
+ * next-intl 请求配置
+ * 
+ * 注意：此文件不再加载翻译！
+ * 翻译加载已移到布局层的 Server Component 中，
+ * 以避免翻译文件被打包到 Edge Function 中。
+ * 
+ * @see Requirements 2.2
+ */
+
 import { getRequestConfig } from 'next-intl/server';
 import { routing } from './routing';
-import { loadBaseMessages, type SupportedLocale } from '@/lib/translations';
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
@@ -9,12 +18,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
 
-  // 使用新的按需加载器加载基础翻译
-  // 工具特定翻译将在工具页面按需加载
-  const messages = await loadBaseMessages(locale as SupportedLocale);
-
+  // 不在这里加载翻译！
+  // 翻译将在布局层的 Server Component 中按需加载
+  // 这样可以避免翻译文件被打包到 Edge Function 中
   return {
     locale,
-    messages,
+    messages: {}, // 空对象，翻译在布局层加载
   };
 });

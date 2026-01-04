@@ -33,8 +33,8 @@ export default function MixedChartGenerator() {
   const t = useTranslations('tools.mixed-chart-generator');
   const tg = useTranslations('tools');
 
-  const baseId = useId();
-  const [idCounter, setIdCounter] = useState(100);
+  const _baseId = useId();
+  const [_idCounter, _setIdCounter] = useState(100);
   const [isInitialized, setIsInitialized] = useState(false);
 
   const [data, setData] = useState<DataRow[]>(() =>
@@ -67,10 +67,10 @@ export default function MixedChartGenerator() {
   const chartTheme = useChartTheme();
 
   const generateId = useCallback(() => {
-    const newId = `${baseId}-${idCounter}`;
-    setIdCounter(prev => prev + 1);
+    const newId = `${_baseId}-${_idCounter}`;
+    _setIdCounter(prev => prev + 1);
     return newId;
-  }, [baseId, idCounter]);
+  }, [_baseId, _idCounter]);
 
   const addRow = () => {
     const newId = generateId();

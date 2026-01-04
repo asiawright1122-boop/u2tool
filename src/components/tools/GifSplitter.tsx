@@ -79,7 +79,7 @@ export default function GifSplitter() {
     setSelectedFrames([]);
   };
 
-  const downloadSingle = (frame: GifFrame) => {
+  const _downloadSingle = (frame: GifFrame) => {
     const link = document.createElement('a');
     link.href = frame.dataUrl;
     link.download = `frame-${frame.index + 1}.png`;

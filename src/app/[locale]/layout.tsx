@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from 'next-themes';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { routing } from '@/i18n/routing';
 import { SEO_CONFIG, getVerificationTags } from '@/lib/seo';
+import { loadBaseMessages, type SupportedLocale } from '@/lib/translations';
 
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -183,7 +183,11 @@ export function generateStaticParams() {
 /**
  * 语言布局组件
  * 动态设置 HTML lang 属性，确保正确的语言标识
- * @see Requirements 1.2
+ * 
+ * 注意：翻译在此处加载，而不是在 i18n/request.ts 中，
+ * 以避免翻译文件被打包到 Edge Function 中。
+ * 
+ * @see Requirements 1.2, 2.1, 2.3, 2.4
  */
 export default async function LocaleLayout({
   children,
@@ -199,8 +203,9 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  // 显式传递 locale 以确保加载正确的翻译文件
-  const messages = await getMessages({ locale });
+  // 在布局层加载基础翻译
+  // 这样可以避免翻译文件被打包到 Edge Function 中
+  const messages = await loadBaseMessages(locale as SupportedLocale);
 
   return (
     // 动态设置 lang 属性，确保搜索引擎和辅助技术正确识别页面语言

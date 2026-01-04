@@ -10,12 +10,10 @@ import * as fc from 'fast-check';
 import {
   loadLegacyMessages,
   clearTranslationCache,
-  getCacheStats,
 } from './translations';
 
 // 直接定义 locales，避免导入 next-intl 相关模块
 const locales = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'] as const;
-type Locale = typeof locales[number];
 
 describe('Translation Loader', () => {
   beforeEach(() => {

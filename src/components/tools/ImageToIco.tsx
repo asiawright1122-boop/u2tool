@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 const ICO_SIZES = [16, 32, 48, 64, 128, 256];

@@ -20,10 +20,10 @@ const colorThemes = {
 
 export default function GroupedBarChartGenerator() {
   const t = useTranslations('tools.grouped-bar-chart-generator');
-  const tg = useTranslations('tools');
+  const _tg = useTranslations('tools');
 
-  const baseId = useId();
-  const [idCounter, setIdCounter] = useState(100);
+  const _baseId = useId();
+  const [_idCounter, _setIdCounter] = useState(100);
   const [isInitialized, setIsInitialized] = useState(false);
 
   const [categories, setCategories] = useState<string[]>(['Q1', 'Q2', 'Q3', 'Q4']);

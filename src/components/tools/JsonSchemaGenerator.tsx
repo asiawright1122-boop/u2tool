@@ -22,7 +22,7 @@ function inferType(value: JsonValue): string {
 function generateSchema(
   value: JsonValue,
   options: SchemaOptions,
-  key?: string
+  _key?: string
 ): Record<string, unknown> {
   const type = inferType(value);
   const schema: Record<string, unknown> = {};

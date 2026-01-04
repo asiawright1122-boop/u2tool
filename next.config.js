@@ -1,5 +1,14 @@
 const createNextIntlPlugin = require('next-intl/plugin');
 
+/**
+ * Next.js 配置
+ * 
+ * 使用 next-intl 插件，但翻译加载在布局层进行。
+ * i18n/request.ts 返回空 messages，避免翻译被打包到 Edge Function。
+ * 
+ * @see .kiro/specs/middleware-size-optimization/
+ */
+
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
@@ -31,8 +40,8 @@ const nextConfig = {
   
   // 性能优化：优化打包
   experimental: {
-    // 优化包导入
-    optimizePackageImports: ['next-intl', 'lucide-react'],
+    // 优化包导入（移除 next-intl，因为不再使用插件）
+    optimizePackageImports: ['lucide-react'],
   },
   
   // 性能优化：HTTP 头部缓存策略

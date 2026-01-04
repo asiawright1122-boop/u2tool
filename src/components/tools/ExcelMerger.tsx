@@ -81,7 +81,7 @@ export default function ExcelMerger() {
     }
 
     try {
-      let mergedData: Record<string, unknown>[] = [];
+      const mergedData: Record<string, unknown>[] = [];
 
       if (mergeMode === 'vertical') {
         // Collect all headers
@@ -102,7 +102,7 @@ export default function ExcelMerger() {
         
         for (let i = 0; i < maxRows; i++) {
           const row: Record<string, unknown> = {};
-          selectedSheets.forEach((sheet, sheetIdx) => {
+          selectedSheets.forEach((sheet, _sheetIdx) => {
             const prefix = selectedSheets.length > 1 ? `${sheet.name}_` : '';
             sheet.headers.forEach(h => {
               row[`${prefix}${h}`] = sheet.data[i]?.[h] ?? '';
