@@ -1,11 +1,7 @@
 /**
  * next-intl 请求配置
  * 
- * 注意：此文件不再加载翻译！
- * 翻译加载已移到布局层的 Server Component 中，
- * 以避免翻译文件被打包到 Edge Function 中。
- * 
- * @see Requirements 2.2
+ * 加载翻译文件供 next-intl 使用
  */
 
 import { getRequestConfig } from 'next-intl/server';
@@ -18,11 +14,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
 
-  // 不在这里加载翻译！
-  // 翻译将在布局层的 Server Component 中按需加载
-  // 这样可以避免翻译文件被打包到 Edge Function 中
+  // 加载完整翻译文件
+  const messages = (await import(`@/messages/${locale}.json`)).default;
+  
   return {
     locale,
-    messages: {}, // 空对象，翻译在布局层加载
+    messages,
   };
 });
