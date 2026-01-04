@@ -2496,6 +2496,68 @@
       "errorInvalidFile": "Bitte laden Sie eine gültige CSV-Datei hoch"
     }
   },
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "lastUpdated": "Letzte Aktualisierung: Dezember 2024",
+    "intro": "Wir nehmen Ihre Privatsphäre ernst. Diese Datenschutzrichtlinie erläutert, wie wir mit Ihren Daten umgehen, wenn Sie unsere Online-Tools nutzen.",
+    "dataCollection": {
+      "title": "Datenerfassung",
+      "content": "Wir erheben, speichern oder übermitteln keine Ihrer personenbezogenen Daten. Alle Tools laufen vollständig in Ihrem Browser und Ihre Daten verlassen nie Ihr Gerät."
+    },
+    "localProcessing": {
+      "title": "Lokale Verarbeitung",
+      "content": "Die gesamte Datenverarbeitung erfolgt lokal in Ihrem Browser. Wir haben keinen Zugriff auf die Informationen, die Sie in unsere Tools eingeben."
+    },
+    "cookies": {
+      "title": "Kekse",
+      "content": "Wir können wesentliche Cookies für grundlegende Funktionen wie Spracheinstellungen verwenden. Wir verwenden keine Tracking- oder Werbecookies."
+    },
+    "thirdParty": {
+      "title": "Dienste Dritter",
+      "content": "Wir geben Ihre Daten nicht an Drittanbieter weiter. Unsere Tools sind so konzipiert, dass sie nach dem Laden vollständig offline funktionieren."
+    },
+    "changes": {
+      "title": "Änderungen an dieser Richtlinie",
+      "content": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Alle Änderungen werden auf dieser Seite veröffentlicht."
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "content": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte."
+    }
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Letzte Aktualisierung: Dezember 2024",
+    "intro": "Durch die Nutzung unserer Online-Tools stimmen Sie diesen Nutzungsbedingungen zu. Bitte lesen Sie sie sorgfältig durch.",
+    "useOfService": {
+      "title": "Nutzung des Dienstes",
+      "content": "Unsere Tools werden für den persönlichen und kommerziellen Gebrauch kostenlos zur Verfügung gestellt. Sie können sie nutzen, ohne ein Konto zu erstellen oder persönliche Daten anzugeben."
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "content": "Unsere Werkzeuge werden „wie besehen“ ohne jegliche Gewährleistung bereitgestellt. Wir haften nicht für Schäden oder Verluste, die durch den Einsatz unserer Werkzeuge entstehen."
+    },
+    "limitations": {
+      "title": "Einschränkungen",
+      "content": "Obwohl wir bestrebt sind, sicherzustellen, dass unsere Werkzeuge ordnungsgemäß funktionieren, können wir keine Garantie für Genauigkeit oder Zuverlässigkeit übernehmen. Überprüfen Sie stets kritische Ergebnisse."
+    },
+    "intellectualProperty": {
+      "title": "Geistiges Eigentum",
+      "content": "Der Quellcode und das Design unserer Tools sind urheberrechtlich geschützt. Die von unseren Tools generierte Ausgabe gehört jedoch Ihnen."
+    },
+    "prohibited": {
+      "title": "Verbotene Verwendung",
+      "content": "Sie dürfen unsere Tools nicht für illegale Zwecke oder in einer Weise verwenden, die unseren Service beschädigen, deaktivieren oder beeinträchtigen könnte."
+    },
+    "changes": {
+      "title": "Änderungen der Bedingungen",
+      "content": "Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Mit der weiteren Nutzung unserer Werkzeuge erklären Sie sich mit etwaigen Änderungen einverstanden."
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "content": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte."
+    }
+  },
   "tools": {
     "input": "Eingabe",
     "output": "Ausgabe",

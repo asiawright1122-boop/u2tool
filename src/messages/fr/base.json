@@ -2496,6 +2496,68 @@
       "errorInvalidFile": "Veuillez télécharger un fichier CSV valide"
     }
   },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour : décembre 2024",
+    "intro": "Nous prenons votre vie privée au sérieux. Cette politique de confidentialité explique comment nous traitons vos informations lorsque vous utilisez nos outils en ligne.",
+    "dataCollection": {
+      "title": "Collecte de données",
+      "content": "Nous ne collectons, ne stockons ni ne transmettons aucune de vos données personnelles. Tous les outils fonctionnent entièrement dans votre navigateur et vos données ne quittent jamais votre appareil."
+    },
+    "localProcessing": {
+      "title": "Traitement local",
+      "content": "Tout le traitement des données s'effectue localement dans votre navigateur. Nous n’avons accès aux informations que vous saisissez dans nos outils."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content": "Nous pouvons utiliser des cookies essentiels pour des fonctionnalités de base telles que les préférences linguistiques. Nous n'utilisons pas de cookies de suivi ou publicitaires."
+    },
+    "thirdParty": {
+      "title": "Services tiers",
+      "content": "Nous ne partageons vos données avec aucun service tiers. Nos outils sont conçus pour fonctionner complètement hors ligne une fois chargés."
+    },
+    "changes": {
+      "title": "Modifications de cette politique",
+      "content": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Tout changement sera publié sur cette page."
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "content": "Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter."
+    }
+  },
+  "terms": {
+    "title": "Conditions d'utilisation",
+    "lastUpdated": "Dernière mise à jour : décembre 2024",
+    "intro": "En utilisant nos outils en ligne, vous acceptez ces conditions d'utilisation. Veuillez les lire attentivement.",
+    "useOfService": {
+      "title": "Utilisation du Service",
+      "content": "Nos outils sont fournis gratuitement pour un usage personnel et commercial. Vous pouvez les utiliser sans créer de compte ni fournir d'informations personnelles."
+    },
+    "disclaimer": {
+      "title": "Clause de non-responsabilité",
+      "content": "Nos outils sont fournis « tels quels » sans aucune garantie. Nous ne sommes pas responsables des dommages ou pertes résultant de l'utilisation de nos outils."
+    },
+    "limitations": {
+      "title": "Limites",
+      "content": "Bien que nous nous efforcions de garantir le bon fonctionnement de nos outils, nous ne garantissons ni l'exactitude ni la fiabilité. Vérifiez toujours les résultats critiques."
+    },
+    "intellectualProperty": {
+      "title": "Propriété intellectuelle",
+      "content": "Le code source et la conception de nos outils sont protégés par le droit d'auteur. Cependant, le résultat généré par nos outils vous appartient."
+    },
+    "prohibited": {
+      "title": "Utilisation interdite",
+      "content": "Vous ne pouvez pas utiliser nos outils à des fins illégales ou de quelque manière que ce soit qui pourrait endommager, désactiver ou altérer notre service."
+    },
+    "changes": {
+      "title": "Modifications des conditions",
+      "content": "Nous nous réservons le droit de modifier les présentes Conditions de Service à tout moment. L'utilisation continue de nos outils vaut acceptation de toute modification."
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "content": "Si vous avez des questions concernant ces conditions d'utilisation, veuillez nous contacter."
+    }
+  },
   "tools": {
     "input": "Entrée",
     "output": "Sortie",
