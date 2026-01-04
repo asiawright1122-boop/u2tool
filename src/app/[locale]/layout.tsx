@@ -237,6 +237,9 @@ export default async function LocaleLayout({
         {/* === 搜索引擎优化：头条搜索 === */}
         <meta name="bytedance-verification-code" content={process.env.BYTEDANCE_VERIFICATION || ''} />
         
+        {/* === 搜索引擎优化：Yandex Webmaster === */}
+        <meta name="yandex-verification" content={SEO_CONFIG.verification.yandex || ''} />
+        
         {/* === 安全优化 === */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
@@ -252,7 +255,7 @@ export default async function LocaleLayout({
           enableSystem={true}
           disableTransitionOnChange={false}
         >
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             <div className="flex flex-col min-h-screen">
               <Header />
               <main className="flex-grow pt-16 bg-white dark:bg-black">{children}</main>

@@ -138,9 +138,10 @@ curl -H 'Content-Type:text/plain' \
 
 ### 4.2 验证方式（已配置）
 
-当前已配置 HTML 文件验证：
-- 验证文件：`public/yandex_d3e0d052e17a742e.html`
-- 验证码：`d3e0d052e17a742e`
+当前已配置 Meta 标签验证：
+- Meta 标签：`<meta name="yandex-verification" content="8ca42f005723223b" />`
+- 验证码：`8ca42f005723223b`
+- 位置：自动添加到所有页面的 `<head>` 部分（通过 `src/app/[locale]/layout.tsx`）
 
 ### 4.3 提交 Sitemap
 
