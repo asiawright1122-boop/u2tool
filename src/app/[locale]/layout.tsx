@@ -240,6 +240,9 @@ export default async function LocaleLayout({
         {/* === 搜索引擎优化：Yandex Webmaster === */}
         <meta name="yandex-verification" content={SEO_CONFIG.verification.yandex || ''} />
         
+        {/* === 搜索引擎优化：360站长平台 === */}
+        <meta name="360-site-verification" content={SEO_CONFIG.verification.so360 || ''} />
+        
         {/* === 安全优化 === */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />

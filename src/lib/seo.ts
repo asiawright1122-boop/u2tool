@@ -29,7 +29,7 @@ export const SEO_CONFIG = {
     baidu: process.env.BAIDU_SITE_VERIFICATION || 'codeva-DaI2NqB1Qi',
     yandex: process.env.YANDEX_SITE_VERIFICATION || '8ca42f005723223b',
     // 360站长平台验证码 - 硬编码以确保可靠性
-    so360: process.env.SO360_SITE_VERIFICATION || 'a9a62516e3a7977830175b7fb2eb1f66',
+    so360: process.env.SO360_SITE_VERIFICATION || '70ab60d8d7fc4015d4b2161dcd2e7c5a',
   },
   // 全局关键词（按语言）- 用于首页和通用页面
   keywords: {
