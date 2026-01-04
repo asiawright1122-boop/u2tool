@@ -1,4 +1,4 @@
-export type ToolCategory = 'text' | 'encoding' | 'generators' | 'converters' | 'development' | 'security' | 'network' | 'image' | 'math' | 'charts';
+export type ToolCategory = 'text' | 'encoding' | 'generators' | 'converters' | 'development' | 'security' | 'network' | 'image' | 'math' | 'charts' | 'office';
 
 export interface Tool {
   slug: string;
@@ -349,6 +349,15 @@ export const tools: Tool[] = [
   { slug: 'image-to-webp', category: 'image', icon: '🌐', component: 'ImageToWebp', popular: true },
   { slug: 'exif-viewer', category: 'image', icon: '📷', component: 'ExifViewer', popular: true },
   { slug: 'color-extractor', category: 'image', icon: '🎨', component: 'ColorExtractor', popular: true },
+
+  // Batch 39 - Office Tools (办公工具)
+  { slug: 'invoice-generator', category: 'office', icon: '🧾', component: 'InvoiceGenerator', popular: true },
+  { slug: 'resume-builder', category: 'office', icon: '📋', component: 'ResumeBuilder', popular: true },
+  { slug: 'signature-pad', category: 'office', icon: '✍️', component: 'SignaturePad', popular: true },
+  { slug: 'pomodoro-timer', category: 'office', icon: '🍅', component: 'PomodoroTimer', popular: true },
+  { slug: 'meeting-notes', category: 'office', icon: '📝', component: 'MeetingNotes', popular: true },
+  { slug: 'business-days-calculator', category: 'office', icon: '📅', component: 'BusinessDaysCalculator', popular: true },
+  { slug: 'salary-calculator', category: 'office', icon: '💰', component: 'SalaryCalculator', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [
@@ -362,6 +371,7 @@ export const categories: { id: ToolCategory; icon: string }[] = [
   { id: 'image', icon: '🖼️' },
   { id: 'math', icon: '🔢' },
   { id: 'charts', icon: '📈' },
+  { id: 'office', icon: '📄' },
 ];
 
 export function getToolsByCategory(category: ToolCategory): Tool[] {

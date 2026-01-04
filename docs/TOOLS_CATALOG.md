@@ -4,7 +4,7 @@
 > 
 > 最后更新: 2026-01-01
 > 
-> 工具总数: **263 个**
+> 工具总数: **270 个**
 
 ---
 
@@ -21,6 +21,7 @@
   - [🖼️ 图像工具 (Image)](#️-图像工具-image)
   - [🔢 数学工具 (Math)](#-数学工具-math)
   - [📈 图表工具 (Charts)](#-图表工具-charts)
+  - [📄 办公工具 (Office)](#-办公工具-office)
 - [热门工具列表](#热门工具列表)
 - [添加新工具指南](#添加新工具指南)
 
@@ -381,9 +382,25 @@
 
 ---
 
+### 📄 办公工具 (Office)
+
+| # | Slug | 图标 | 组件名 | 热门 |
+|---|------|------|--------|------|
+| 1 | `invoice-generator` | 🧾 | InvoiceGenerator | ✅ |
+| 2 | `resume-builder` | 📋 | ResumeBuilder | ✅ |
+| 3 | `signature-pad` | ✍️ | SignaturePad | ✅ |
+| 4 | `pomodoro-timer` | 🍅 | PomodoroTimer | ✅ |
+| 5 | `meeting-notes` | 📝 | MeetingNotes | ✅ |
+| 6 | `business-days-calculator` | 📅 | BusinessDaysCalculator | ✅ |
+| 7 | `salary-calculator` | 💰 | SalaryCalculator | ✅ |
+
+**小计: 7 个工具**
+
+---
+
 ## 热门工具列表
 
-以下是标记为热门 (`popular: true`) 的工具，共 **97 个**：
+以下是标记为热门 (`popular: true`) 的工具，共 **104 个**：
 
 
 ### 编码类热门工具
@@ -494,6 +511,15 @@
 ### 数学类热门工具
 - `base-calculator` - 进制计算器
 
+### 办公类热门工具
+- `invoice-generator` - 发票生成器
+- `resume-builder` - 简历生成器
+- `signature-pad` - 电子签名板
+- `pomodoro-timer` - 番茄钟计时器
+- `meeting-notes` - 会议记录
+- `business-days-calculator` - 工作日计算器
+- `salary-calculator` - 工资计算器
+
 ### 图表类热门工具 (全部 34 个)
 - 所有图表工具均为热门工具
 
@@ -564,6 +590,7 @@
 | `image` | 图像工具 | 🖼️ | 图片处理 |
 | `math` | 数学工具 | 🔢 | 计算、转换 |
 | `charts` | 图表工具 | 📈 | 数据可视化图表 |
+| `office` | 办公工具 | 📄 | 办公效率工具 |
 
 ### 检查清单
 
@@ -601,12 +628,14 @@ const toolSlug = 'your-tool-slug';
 | 🖼️ 图像工具 | 28 |
 | 🔢 数学工具 | 9 |
 | 📈 图表工具 | 42 |
-| **总计** | **263** |
+| 📄 办公工具 | 7 |
+| **总计** | **270** |
 
 ---
 
 ## 更新日志
 
+- **2026-01-01**: 添加 7 个办公工具 (invoice-generator, resume-builder, signature-pad, pomodoro-timer, meeting-notes, business-days-calculator, salary-calculator)
 - **2026-01-01**: 添加 14 个新图像工具 (image-collage, image-splitter, image-rounder, image-border, image-flip-rotate, image-adjustment, image-frosted-glass, image-to-ico, gif-maker, gif-splitter, gif-compressor, image-to-webp, exif-viewer, color-extractor)
 - **2025-12-31**: 添加 7 个新热门工具 (env-parser, json-schema-generator, time-calculator, batch-timestamp-converter, regex-visualizer, crontab-calendar, fake-data-generator)
 - **2025-12-31**: 添加 8 个新图表工具 (percentage-stacked-bar-chart-generator, mixed-chart-generator, ring-progress-chart-generator, liquid-fill-chart-generator, multi-ring-chart-generator, half-doughnut-chart-generator, nested-pie-chart-generator, pictorial-bar-chart-generator)

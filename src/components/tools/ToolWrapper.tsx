@@ -305,6 +305,14 @@ const TOOL_COMPONENTS_MAP: Record<string, React.ComponentType> = {
   'image-to-webp': dynamic(() => import('./ImageToWebp')),
   'exif-viewer': dynamic(() => import('./ExifViewer')),
   'color-extractor': dynamic(() => import('./ColorExtractor')),
+  // Batch 39 - Office Tools (办公工具)
+  'invoice-generator': dynamic(() => import('./InvoiceGenerator')),
+  'resume-builder': dynamic(() => import('./ResumeBuilder')),
+  'signature-pad': dynamic(() => import('./SignaturePad')),
+  'pomodoro-timer': dynamic(() => import('./PomodoroTimer')),
+  'meeting-notes': dynamic(() => import('./MeetingNotes')),
+  'business-days-calculator': dynamic(() => import('./BusinessDaysCalculator')),
+  'salary-calculator': dynamic(() => import('./SalaryCalculator')),
 };
 
 export default function ToolWrapper({ slug }: { slug: string }) {
