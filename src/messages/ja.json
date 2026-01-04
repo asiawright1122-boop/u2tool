@@ -6138,6 +6138,16 @@
       "address": "住所",
       "summary": "職務要約",
       "summaryPlaceholder": "職歴とキャリア目標を簡潔に記述してください...",
+      "skillLevel": "スキルレベル",
+      "noSkills": "上のボタンをクリックしてスキルを追加",
+      "placeholders": {
+        "name": "山田太郎",
+        "title": "シニアソフトウェアエンジニア",
+        "email": "taro.yamada@example.com",
+        "phone": "+81 90-1234-5678",
+        "location": "東京都渋谷区",
+        "website": "https://example.com"
+      },
       "experience": "職歴",
       "company": "会社",
       "position": "役職",

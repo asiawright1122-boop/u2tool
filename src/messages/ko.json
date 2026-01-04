@@ -6138,6 +6138,16 @@
       "address": "주소",
       "summary": "자기소개",
       "summaryPlaceholder": "전문 배경과 경력 목표를 간략히 작성하세요...",
+      "skillLevel": "기술 수준",
+      "noSkills": "위 버튼을 클릭하여 기술을 추가하세요",
+      "placeholders": {
+        "name": "홍길동",
+        "title": "시니어 소프트웨어 엔지니어",
+        "email": "gildong.hong@example.com",
+        "phone": "+82 10-1234-5678",
+        "location": "서울특별시 강남구",
+        "website": "https://example.com"
+      },
       "experience": "경력",
       "company": "회사",
       "position": "직책",

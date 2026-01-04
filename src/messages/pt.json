@@ -6015,6 +6015,16 @@
       "address": "Endereço",
       "summary": "Resumo Profissional",
       "summaryPlaceholder": "Escreva um breve resumo da sua experiência profissional e objetivos...",
+      "skillLevel": "Nível de habilidade",
+      "noSkills": "Clique no botão acima para adicionar habilidades",
+      "placeholders": {
+        "name": "João Silva",
+        "title": "Engenheiro de Software Sênior",
+        "email": "joao.silva@example.com",
+        "phone": "+55 11 98765-4321",
+        "location": "São Paulo, Brasil",
+        "website": "https://example.com"
+      },
       "experience": "Experiência Profissional",
       "company": "Empresa",
       "position": "Cargo",

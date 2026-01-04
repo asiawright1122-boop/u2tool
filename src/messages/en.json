@@ -6138,6 +6138,16 @@
       "address": "Address",
       "summary": "Professional Summary",
       "summaryPlaceholder": "Write a brief summary of your professional background and career objectives...",
+      "skillLevel": "Skill Level",
+      "noSkills": "Click the button above to add skills",
+      "placeholders": {
+        "name": "John Doe",
+        "title": "Senior Software Engineer",
+        "email": "john.doe@example.com",
+        "phone": "+1 (555) 123-4567",
+        "location": "San Francisco, CA",
+        "website": "https://example.com"
+      },
       "experience": "Work Experience",
       "company": "Company",
       "position": "Position",

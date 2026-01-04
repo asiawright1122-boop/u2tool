@@ -6015,6 +6015,16 @@
       "address": "Adresse",
       "summary": "Résumé Professionnel",
       "summaryPlaceholder": "Rédigez un bref résumé de votre parcours professionnel et de vos objectifs...",
+      "skillLevel": "Niveau de compétence",
+      "noSkills": "Cliquez sur le bouton ci-dessus pour ajouter des compétences",
+      "placeholders": {
+        "name": "Jean Dupont",
+        "title": "Ingénieur Logiciel Senior",
+        "email": "jean.dupont@example.com",
+        "phone": "+33 6 12 34 56 78",
+        "location": "Paris, France",
+        "website": "https://example.com"
+      },
       "experience": "Expérience Professionnelle",
       "company": "Entreprise",
       "position": "Poste",

@@ -6015,6 +6015,16 @@
       "address": "Dirección",
       "summary": "Resumen Profesional",
       "summaryPlaceholder": "Escribe un breve resumen de tu experiencia profesional y objetivos...",
+      "skillLevel": "Nivel de habilidad",
+      "noSkills": "Haz clic en el botón de arriba para agregar habilidades",
+      "placeholders": {
+        "name": "Juan García",
+        "title": "Ingeniero de Software Senior",
+        "email": "juan.garcia@example.com",
+        "phone": "+34 612 345 678",
+        "location": "Madrid, España",
+        "website": "https://example.com"
+      },
       "experience": "Experiencia Laboral",
       "company": "Empresa",
       "position": "Puesto",
