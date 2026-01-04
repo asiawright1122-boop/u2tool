@@ -224,7 +224,7 @@ export default function GroupedBarChartGenerator() {
         <input ref={fileInputRef} type="file" accept=".csv,.txt" onChange={handleCsvImport} className="hidden" />
         <button onClick={() => exportChart('png')} className="btn-secondary">📥 {t('downloadPng')}</button>
         <button onClick={() => exportChart('svg')} className="btn-secondary">📥 {t('downloadSvg')}</button>
-        <button onClick={clearData} className="btn-secondary">🗑️ {tg('clear')}</button>
+        <button onClick={clearData} className="btn-secondary">🗑️ {t('clear')}</button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
