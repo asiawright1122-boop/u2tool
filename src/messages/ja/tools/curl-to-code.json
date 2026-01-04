@@ -1,0 +1,19 @@
+{
+  "curlInput": "cURLコマンド",
+  "placeholder": "cURL コマンドを貼り付けます...",
+  "targetLanguage": "対象言語",
+  "convert": "変換",
+  "copy": "コピー",
+  "codeOutput": "生成されたコード",
+  "outputPlaceholder": "生成されたコードがここに表示されます...",
+  "loadSample": "サンプルを読み込む",
+  "errorEmpty": "cURLコマンドを入力してください",
+  "errorInvalid": "無効な cURL コマンドです",
+  "errorNoUrl": "URLを解析できませんでした",
+  "errorParsing": "cURL コマンドの解析エラー",
+  "supportedFeatures": "サポートされている機能",
+  "feature1": "HTTP methods (-X)",
+  "feature2": "ヘッダー (-H)",
+  "feature3": "リクエストボディ (-d、--data)",
+  "feature4": "8つのプログラミング言語をサポート"
+}

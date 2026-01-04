@@ -1,0 +1,19 @@
+{
+  "curlInput": "cURL 명령",
+  "placeholder": "cURL 명령을 붙여넣으세요...",
+  "targetLanguage": "대상 언어",
+  "convert": "변환",
+  "copy": "복사",
+  "codeOutput": "생성된 코드",
+  "outputPlaceholder": "생성된 코드가 여기에 표시됩니다...",
+  "loadSample": "샘플 불러오기",
+  "errorEmpty": "cURL 명령을 입력하세요.",
+  "errorInvalid": "잘못된 cURL 명령",
+  "errorNoUrl": "URL을 구문 분석할 수 없습니다.",
+  "errorParsing": "cURL 명령을 구문 분석하는 중 오류가 발생했습니다.",
+  "supportedFeatures": "지원되는 기능",
+  "feature1": "HTTP methods (-X)",
+  "feature2": "헤더(-H)",
+  "feature3": "요청 본문(-d, --data)",
+  "feature4": "8가지 프로그래밍 언어 지원"
+}

@@ -1,0 +1,22 @@
+{
+  "serverUrl": "WebSocket Server URL",
+  "connect": "يتصل",
+  "disconnect": "قطع الاتصال",
+  "connecting_btn": "جارٍ الاتصال...",
+  "connecting": "جارٍ الاتصال بـ {url}...",
+  "connected": "تم الاتصال بنجاح",
+  "disconnected": "غير متصل (الرمز: {code})",
+  "errorConnection": "حدث خطأ في الاتصال",
+  "errorInvalidUrl": "عنوان URL لـ WebSocket غير صالح",
+  "quickConnect": "اتصال سريع",
+  "statusConnected": "متصل",
+  "statusConnecting": "جارٍ الاتصال...",
+  "statusDisconnected": "غير متصل",
+  "messages": "رسائل",
+  "clear": "مسح",
+  "noMessages": "لا توجد رسائل حتى الآن. اتصل بخادم WebSocket للبدء.",
+  "messagePlaceholder": "اكتب رسالة...",
+  "send": "يرسل",
+  "note": "ملحوظة",
+  "noteText": "قد لا تقبل بعض خوادم WebSocket الاتصالات من المتصفحات بسبب قيود CORS. خادم الصدى هو خادم اختبار عام يردد أي رسالة ترسلها."
+}

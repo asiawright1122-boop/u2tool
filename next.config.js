@@ -60,7 +60,7 @@ const nextConfig = {
       },
       {
         // HTML 页面缓存（1小时，可重新验证）
-        source: '/:locale(en|zh|es|pt|ja)/:path*',
+        source: '/:locale(en|zh|es|pt|ja|ko|fr|de|ru|ar)/:path*',
         headers: [
           {
             key: 'Cache-Control',

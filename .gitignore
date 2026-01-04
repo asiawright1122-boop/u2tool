@@ -5,6 +5,7 @@ node_modules
 
 # Testing
 coverage
+test-results
 
 # Next.js
 .next/
@@ -36,3 +37,8 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Logs and reports (generated files)
+logs/*.json
+reports/*.json
+reports/*.md

@@ -358,6 +358,32 @@ export const tools: Tool[] = [
   { slug: 'meeting-notes', category: 'office', icon: '📝', component: 'MeetingNotes', popular: true },
   { slug: 'business-days-calculator', category: 'office', icon: '📅', component: 'BusinessDaysCalculator', popular: true },
   { slug: 'salary-calculator', category: 'office', icon: '💰', component: 'SalaryCalculator', popular: true },
+
+  // Batch 40 - Excel & PDF Tools (Excel 和 PDF 工具)
+  { slug: 'excel-to-json', category: 'office', icon: '📊', component: 'ExcelToJson', popular: true },
+  { slug: 'json-to-excel', category: 'office', icon: '📑', component: 'JsonToExcel', popular: true },
+  { slug: 'excel-viewer', category: 'office', icon: '👁️', component: 'ExcelViewer', popular: true },
+  { slug: 'excel-merger', category: 'office', icon: '🔗', component: 'ExcelMerger', popular: true },
+  { slug: 'pdf-to-image', category: 'office', icon: '🖼️', component: 'PdfToImage', popular: true },
+  { slug: 'image-to-pdf', category: 'office', icon: '📄', component: 'ImageToPdf', popular: true },
+  { slug: 'pdf-merger', category: 'office', icon: '📎', component: 'PdfMerger', popular: true },
+  { slug: 'pdf-splitter', category: 'office', icon: '✂️', component: 'PdfSplitter', popular: true },
+  { slug: 'pdf-compressor', category: 'office', icon: '📦', component: 'PdfCompressor', popular: true },
+  { slug: 'pdf-rotator', category: 'office', icon: '🔄', component: 'PdfRotator', popular: true },
+
+  // Batch 41 - New Utility Tools (新实用工具)
+  { slug: 'markdown-editor', category: 'text', icon: '📝', component: 'MarkdownEditor', popular: true },
+  { slug: 'world-clock', category: 'office', icon: '🌍', component: 'WorldClock', popular: true },
+  { slug: 'stopwatch', category: 'office', icon: '⏱️', component: 'Stopwatch', popular: true },
+  { slug: 'countdown-timer', category: 'office', icon: '⏳', component: 'CountdownTimer', popular: true },
+  { slug: 'note-pad', category: 'office', icon: '📒', component: 'NotePad', popular: true },
+
+  // Batch 42 - Document Converter Tools (文档转换工具)
+  { slug: 'pdf-to-text', category: 'office', icon: '📄', component: 'PdfToText', popular: true },
+  { slug: 'word-to-txt', category: 'office', icon: '📝', component: 'WordToTxt', popular: true },
+  { slug: 'word-to-html', category: 'office', icon: '🌐', component: 'WordToHtml', popular: true },
+  { slug: 'excel-to-csv', category: 'office', icon: '📊', component: 'ExcelToCsv', popular: true },
+  { slug: 'csv-to-excel', category: 'office', icon: '📑', component: 'CsvToExcel', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [

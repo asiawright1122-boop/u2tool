@@ -47,10 +47,10 @@ describe('Property 1: Category Translation Completeness', () => {
     );
   });
 
-  it('should have all 10 categories defined', () => {
+  it('should have all 11 categories defined', () => {
     const expectedCategories: ToolCategory[] = [
       'text', 'encoding', 'generators', 'converters', 'development',
-      'security', 'network', 'image', 'math', 'charts'
+      'security', 'network', 'image', 'math', 'charts', 'office'
     ];
     
     expect(categories.map(c => c.id).sort()).toEqual(expectedCategories.sort());

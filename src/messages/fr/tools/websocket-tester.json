@@ -1,0 +1,22 @@
+{
+  "serverUrl": "WebSocket Server URL",
+  "connect": "Connecter",
+  "disconnect": "Déconnecter",
+  "connecting_btn": "De liaison...",
+  "connecting": "Connexion à {url}...",
+  "connected": "Connecté avec succès",
+  "disconnected": "Déconnecté (code : {code})",
+  "errorConnection": "Une erreur de connexion s'est produite",
+  "errorInvalidUrl": "URL WebSocket invalide",
+  "quickConnect": "Connexion rapide",
+  "statusConnected": "Connecté",
+  "statusConnecting": "De liaison...",
+  "statusDisconnected": "Déconnecté",
+  "messages": "Messages",
+  "clear": "Effacer",
+  "noMessages": "Aucun message pour l'instant. Connectez-vous à un serveur WebSocket pour démarrer.",
+  "messagePlaceholder": "Tapez un message...",
+  "send": "Envoyer",
+  "note": "Note",
+  "noteText": "Certains serveurs WebSocket peuvent ne pas accepter les connexions des navigateurs en raison des restrictions CORS. Le serveur d'écho est un serveur de test public qui renvoie tout message que vous envoyez."
+}

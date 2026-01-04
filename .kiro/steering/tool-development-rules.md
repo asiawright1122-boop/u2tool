@@ -38,19 +38,38 @@ grep -i "your-keyword" docs/TOOLS_CATALOG.md
 - 使用 `export default` 导出组件
 - 组件名称必须与 ToolWrapper.tsx 中的导入路径一致
 
-### 4. 翻译文件 (src/messages/*.json)
-- **必须**在所有语言文件中添加翻译：
-  - `en.json` (英文)
-  - `zh.json` (中文)
-  - `ja.json` (日文)
-  - `ko.json` (韩文)
-  - `es.json` (西班牙文)
-  - `pt.json` (葡萄牙文)
-  - `fr.json` (法文)
-  - `de.json` (德文)
-  - `ru.json` (俄文)
-  - `ar.json` (阿拉伯文)
-- 翻译键格式：`tools.{tool-slug}.name`, `tools.{tool-slug}.description`, `tools.{tool-slug}.seo_title`, `tools.{tool-slug}.seo_description`
+### 4. 翻译文件
+
+翻译文件采用模块化结构，分为基础翻译和工具详细翻译：
+
+#### 文件结构
+```
+src/messages/
+├── {locale}.json          # 原始完整翻译文件（保留用于兼容）
+├── {locale}/
+│   ├── base.json          # 基础翻译（包含工具的 name, description, seo_* 等）
+│   └── tools/
+│       └── {slug}.json    # 工具详细翻译（detailed_description, usage_steps, usage_examples）
+```
+
+#### 添加新工具翻译
+
+**必须**在所有 10 种语言中添加翻译：
+
+1. **在 `src/messages/{locale}.json` 中添加完整翻译**（主要翻译文件）：
+   - `en.json`, `zh.json`, `ja.json`, `ko.json`, `es.json`, `pt.json`, `fr.json`, `de.json`, `ru.json`, `ar.json`
+   - 翻译键格式：`tools.{tool-slug}.name`, `tools.{tool-slug}.description`, `tools.{tool-slug}.seo_title`, `tools.{tool-slug}.seo_description`
+
+2. **运行迁移脚本更新拆分文件**：
+   ```bash
+   npx tsx scripts/split-translations.ts
+   ```
+   这会自动更新 `base.json` 和 `tools/{slug}.json` 文件
+
+#### 翻译内容说明
+
+- **base.json 包含**：name, description, seo_title, seo_description, inputPlaceholder 等（所有页面需要）
+- **tools/{slug}.json 包含**：detailed_description, usage_steps, usage_examples（仅工具详情页按需加载）
 
 ### 5. 更新工具目录 (docs/TOOLS_CATALOG.md) ⭐ 新增
 - **必须**在完成工具添加后更新工具目录文档
@@ -68,6 +87,17 @@ grep -i "your-keyword" docs/TOOLS_CATALOG.md
 2. **翻译缺失导致的问题**：
    - 某些语言环境下工具名称显示为翻译键
    - 页面渲染错误
+   - **MISSING_MESSAGE 错误**：切换语言时出现 `Could not resolve 'tools.xxx.inputPlaceholder'` 等错误
+
+3. **翻译键不完整导致的语言切换错误** ⚠️ 重要：
+   - 如果组件使用了 `t('inputPlaceholder')` 等翻译键，必须在所有 10 种语言的翻译文件中添加对应的键
+   - 常见需要添加的翻译键包括：
+     - `inputPlaceholder` - 输入框占位符
+     - `copy`, `copied` - 复制按钮
+     - `clear` - 清空按钮
+     - `input`, `output` - 输入/输出标签
+     - `convert`, `generate`, `format` - 操作按钮
+   - 如果工具有自定义 UI 命名空间（如 `stopwatchUI`），必须在所有语言中添加完整的键
 
 ## 检查清单
 
@@ -87,6 +117,9 @@ const toolSlug = 'your-tool-slug';
   }
 });
 "
+
+# 运行迁移脚本更新拆分文件
+npx tsx scripts/split-translations.ts
 
 # 检查工具目录是否已更新
 grep -q 'your-tool-slug' docs/TOOLS_CATALOG.md && echo '✓ 工具目录已更新' || echo '✗ 工具目录未更新'
@@ -152,6 +185,61 @@ grep '工具总数' docs/TOOLS_CATALOG.md
 - [ ] 2. 在 `src/config/tools.ts` 添加工具配置
 - [ ] 3. 在 `src/components/tools/ToolWrapper.tsx` 添加动态导入
 - [ ] 4. 创建 `src/components/tools/[ComponentName].tsx` 组件文件
-- [ ] 5. 在所有 10 个语言文件中添加翻译
-- [ ] 6. 更新 `docs/TOOLS_CATALOG.md` 工具目录文档
-- [ ] 7. 运行检查脚本验证配置正确
+- [ ] 5. 在所有 10 个语言文件 `src/messages/{locale}.json` 中添加翻译
+- [ ] 6. **检查组件使用的所有翻译键是否在所有语言中存在** ⚠️ 新增
+- [ ] 7. 运行 `npx tsx scripts/split-translations.ts` 更新拆分文件
+- [ ] 8. 更新 `docs/TOOLS_CATALOG.md` 工具目录文档
+- [ ] 9. 运行 `npm run test` 验证翻译完整性
+- [ ] 10. 运行检查脚本验证配置正确
+
+---
+
+## 🔍 翻译键完整性检查 ⚠️ 重要
+
+### 问题背景
+
+2025-01-04 修复了一个严重问题：多个工具缺少 `inputPlaceholder` 等翻译键，导致切换语言时出现 `MISSING_MESSAGE` 错误。
+
+### 必须检查的翻译键
+
+如果组件中使用了以下翻译调用，必须确保所有 10 种语言都有对应的翻译：
+
+```typescript
+// 常见的翻译键使用方式
+t('inputPlaceholder')      // 输入框占位符
+t('copy')                  // 复制按钮
+t('copied')                // 已复制提示
+t('clear')                 // 清空按钮
+t('input')                 // 输入标签
+t('output')                // 输出标签
+t('convert')               // 转换按钮
+t('generate')              // 生成按钮
+t('format')                // 格式化按钮
+t('download')              // 下载按钮
+```
+
+### 自定义 UI 命名空间
+
+如果工具有自定义 UI 命名空间（如 `stopwatchUI`、`countdownTimer`），必须：
+
+1. 在 `tools` 对象下创建对应的命名空间
+2. 在所有 10 种语言中添加完整的键
+3. 确保键名与组件中使用的完全一致
+
+### 检查脚本
+
+添加新工具后，运行以下命令检查翻译键是否完整：
+
+```bash
+# 运行测试检查翻译完整性
+npm run test -- --run src/messages/translations.test.ts
+
+# 如果测试输出 "Missing X keys in Y.json"，需要补充缺失的翻译
+```
+
+### 修复缺失翻译的步骤
+
+1. 确定缺失的翻译键和语言
+2. 在对应的 `src/messages/{locale}.json` 文件中添加翻译
+3. 运行 `npx tsx scripts/split-translations.ts` 更新拆分文件
+4. 再次运行测试确认修复成功

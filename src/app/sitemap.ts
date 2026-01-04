@@ -14,6 +14,16 @@ function generateSitemapAlternates(path: string) {
   };
 }
 
+/**
+ * 主sitemap
+ * 包含所有页面：静态页面（首页、About、Blog、分类等）和工具页面
+ * 
+ * 注意：Next.js App Router只支持一个主sitemap.ts文件
+ * 如果需要分片，需要使用动态路由或generateSitemaps函数
+ * 
+ * 访问方式：
+ * - /sitemap.xml - 主sitemap（包含所有URL）
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [];
   const now = new Date();

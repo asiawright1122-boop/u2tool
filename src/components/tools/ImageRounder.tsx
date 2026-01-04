@@ -133,7 +133,7 @@ export default function ImageRounder() {
           <button
             onClick={downloadImage}
             disabled={!image}
-            className="w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-400 disabled:cursor-not-allowed rounded-lg"
+            className="w-full px-4 py-2 bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-300 dark:disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg"
           >
             {tg('download')} PNG
           </button>
@@ -147,7 +147,7 @@ export default function ImageRounder() {
               className="max-w-full max-h-[500px] object-contain"
             />
           ) : (
-            <div className="text-gray-500 text-center">
+            <div className="text-gray-500 dark:text-gray-400 text-center">
               <p className="text-4xl mb-2">⭕</p>
               <p>{t('noImage')}</p>
             </div>

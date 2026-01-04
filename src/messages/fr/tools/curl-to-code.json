@@ -1,0 +1,19 @@
+{
+  "curlInput": "Commande cURL",
+  "placeholder": "Collez votre commande cURL...",
+  "targetLanguage": "Langue cible",
+  "convert": "Convertir",
+  "copy": "Copier",
+  "codeOutput": "Code généré",
+  "outputPlaceholder": "Le code généré apparaîtra ici...",
+  "loadSample": "Charger un exemple",
+  "errorEmpty": "Veuillez entrer une commande cURL",
+  "errorInvalid": "Commande cURL invalide",
+  "errorNoUrl": "Impossible d'analyser l'URL",
+  "errorParsing": "Erreur lors de l'analyse de la commande cURL",
+  "supportedFeatures": "Fonctionnalités prises en charge",
+  "feature1": "HTTP methods (-X)",
+  "feature2": "En-têtes (-H)",
+  "feature3": "Corps de la requête (-d, --data)",
+  "feature4": "8 langages de programmation pris en charge"
+}

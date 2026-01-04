@@ -2,9 +2,9 @@
 
 > 本文档记录项目中所有已注册的工具，方便查阅和避免添加重复工具。
 > 
-> 最后更新: 2026-01-01
+> 最后更新: 2026-01-04
 > 
-> 工具总数: **270 个**
+> 工具总数: **290 个**
 
 ---
 
@@ -61,8 +61,9 @@
 | 26 | `text-to-nato` | 📻 | TextToNato | |
 | 27 | `text-template` | 📝 | TextTemplate | ✅ |
 | 28 | `char-frequency` | 📊 | CharFrequency | ✅ |
+| 29 | `markdown-editor` | 📝 | MarkdownEditor | ✅ |
 
-**小计: 28 个工具**
+**小计: 29 个工具**
 
 ---
 
@@ -393,14 +394,33 @@
 | 5 | `meeting-notes` | 📝 | MeetingNotes | ✅ |
 | 6 | `business-days-calculator` | 📅 | BusinessDaysCalculator | ✅ |
 | 7 | `salary-calculator` | 💰 | SalaryCalculator | ✅ |
+| 8 | `excel-to-json` | 📊 | ExcelToJson | ✅ |
+| 9 | `json-to-excel` | 📑 | JsonToExcel | ✅ |
+| 10 | `excel-viewer` | 👁️ | ExcelViewer | ✅ |
+| 11 | `excel-merger` | 🔗 | ExcelMerger | ✅ |
+| 12 | `pdf-to-image` | 🖼️ | PdfToImage | ✅ |
+| 13 | `image-to-pdf` | 📄 | ImageToPdf | ✅ |
+| 14 | `pdf-merger` | 📎 | PdfMerger | ✅ |
+| 15 | `pdf-splitter` | ✂️ | PdfSplitter | ✅ |
+| 16 | `pdf-compressor` | 📦 | PdfCompressor | ✅ |
+| 17 | `pdf-rotator` | 🔄 | PdfRotator | ✅ |
+| 18 | `world-clock` | 🌍 | WorldClock | ✅ |
+| 19 | `stopwatch` | ⏱️ | Stopwatch | ✅ |
+| 20 | `countdown-timer` | ⏳ | CountdownTimer | ✅ |
+| 21 | `note-pad` | 📒 | NotePad | ✅ |
+| 22 | `pdf-to-text` | 📄 | PdfToText | ✅ |
+| 23 | `word-to-txt` | 📝 | WordToTxt | ✅ |
+| 24 | `word-to-html` | 🌐 | WordToHtml | ✅ |
+| 25 | `excel-to-csv` | 📊 | ExcelToCsv | ✅ |
+| 26 | `csv-to-excel` | 📋 | CsvToExcel | ✅ |
 
-**小计: 7 个工具**
+**小计: 26 个工具**
 
 ---
 
 ## 热门工具列表
 
-以下是标记为热门 (`popular: true`) 的工具，共 **104 个**：
+以下是标记为热门 (`popular: true`) 的工具，共 **119 个**：
 
 
 ### 编码类热门工具
@@ -519,6 +539,11 @@
 - `meeting-notes` - 会议记录
 - `business-days-calculator` - 工作日计算器
 - `salary-calculator` - 工资计算器
+- `pdf-to-text` - PDF转文本
+- `word-to-txt` - Word转文本
+- `word-to-html` - Word转HTML
+- `excel-to-csv` - Excel转CSV
+- `csv-to-excel` - CSV转Excel
 
 ### 图表类热门工具 (全部 34 个)
 - 所有图表工具均为热门工具
@@ -618,7 +643,7 @@ const toolSlug = 'your-tool-slug';
 
 | 分类 | 数量 |
 |------|------|
-| 📝 文本工具 | 28 |
+| 📝 文本工具 | 29 |
 | 🔐 编码工具 | 28 |
 | ⚡ 生成器 | 26 |
 | 🔄 转换器 | 39 |
@@ -628,13 +653,14 @@ const toolSlug = 'your-tool-slug';
 | 🖼️ 图像工具 | 28 |
 | 🔢 数学工具 | 9 |
 | 📈 图表工具 | 42 |
-| 📄 办公工具 | 7 |
-| **总计** | **270** |
+| 📄 办公工具 | 21 |
+| **总计** | **285** |
 
 ---
 
 ## 更新日志
 
+- **2026-01-04**: 添加 5 个新工具 (markdown-editor, world-clock, stopwatch, countdown-timer, note-pad)
 - **2026-01-01**: 添加 7 个办公工具 (invoice-generator, resume-builder, signature-pad, pomodoro-timer, meeting-notes, business-days-calculator, salary-calculator)
 - **2026-01-01**: 添加 14 个新图像工具 (image-collage, image-splitter, image-rounder, image-border, image-flip-rotate, image-adjustment, image-frosted-glass, image-to-ico, gif-maker, gif-splitter, gif-compressor, image-to-webp, exif-viewer, color-extractor)
 - **2025-12-31**: 添加 7 个新热门工具 (env-parser, json-schema-generator, time-calculator, batch-timestamp-converter, regex-visualizer, crontab-calendar, fake-data-generator)

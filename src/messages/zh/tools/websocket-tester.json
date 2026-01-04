@@ -1,0 +1,22 @@
+{
+  "serverUrl": "WebSocket Server URL",
+  "connect": "连接",
+  "disconnect": "断开",
+  "connecting_btn": "正在连接...",
+  "connecting": "正在连接到 {url}...",
+  "connected": "连接成功",
+  "disconnected": "已断开连接（代码：{code}）",
+  "errorConnection": "发生连接错误",
+  "errorInvalidUrl": "无效的 WebSocket URL",
+  "quickConnect": "快速连接",
+  "statusConnected": "已连接",
+  "statusConnecting": "正在连接...",
+  "statusDisconnected": "已断开连接",
+  "messages": "留言",
+  "clear": "清除",
+  "noMessages": "还没有消息。连接到 WebSocket 服务器以启动。",
+  "messagePlaceholder": "输入消息...",
+  "send": "发送",
+  "note": "笔记",
+  "noteText": "由于 CORS 限制，某些 WebSocket 服务器可能不接受来自浏览器的连接。回显服务器是一个公共测试服务器，它回显您发送的任何消息。"
+}

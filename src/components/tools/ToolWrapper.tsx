@@ -313,6 +313,29 @@ const TOOL_COMPONENTS_MAP: Record<string, React.ComponentType> = {
   'meeting-notes': dynamic(() => import('./MeetingNotes')),
   'business-days-calculator': dynamic(() => import('./BusinessDaysCalculator')),
   'salary-calculator': dynamic(() => import('./SalaryCalculator')),
+  // Batch 40 - Excel & PDF Tools (Excel 和 PDF 工具)
+  'excel-to-json': dynamic(() => import('./ExcelToJson')),
+  'json-to-excel': dynamic(() => import('./JsonToExcel')),
+  'excel-viewer': dynamic(() => import('./ExcelViewer')),
+  'excel-merger': dynamic(() => import('./ExcelMerger')),
+  'pdf-to-image': dynamic(() => import('./PdfToImage'), { ssr: false }),
+  'image-to-pdf': dynamic(() => import('./ImageToPdf'), { ssr: false }),
+  'pdf-merger': dynamic(() => import('./PdfMerger'), { ssr: false }),
+  'pdf-splitter': dynamic(() => import('./PdfSplitter'), { ssr: false }),
+  'pdf-compressor': dynamic(() => import('./PdfCompressor'), { ssr: false }),
+  'pdf-rotator': dynamic(() => import('./PdfRotator'), { ssr: false }),
+  // Batch 41 - New Utility Tools (新实用工具)
+  'markdown-editor': dynamic(() => import('./MarkdownEditor')),
+  'world-clock': dynamic(() => import('./WorldClock')),
+  'stopwatch': dynamic(() => import('./Stopwatch')),
+  'countdown-timer': dynamic(() => import('./CountdownTimer')),
+  'note-pad': dynamic(() => import('./NotePad')),
+  // Batch 42 - Document Converter Tools
+  'pdf-to-text': dynamic(() => import('./PdfToText')),
+  'word-to-txt': dynamic(() => import('./WordToTxt')),
+  'word-to-html': dynamic(() => import('./WordToHtml')),
+  'excel-to-csv': dynamic(() => import('./ExcelToCsv')),
+  'csv-to-excel': dynamic(() => import('./CsvToExcel')),
 };
 
 export default function ToolWrapper({ slug }: { slug: string }) {

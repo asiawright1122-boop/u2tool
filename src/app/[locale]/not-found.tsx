@@ -1,5 +1,19 @@
+import { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+
+/**
+ * 404 页面元数据
+ * 设置 noindex 防止搜索引擎索引404页面
+ */
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: true, // 允许跟随链接，但不索引当前页面
+  },
+  title: '404 - Page Not Found',
+  description: 'The page you are looking for could not be found.',
+};
 
 /**
  * 404 页面组件

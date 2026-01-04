@@ -1,0 +1,19 @@
+{
+  "curlInput": "Команда cURL",
+  "placeholder": "Вставьте команду cURL...",
+  "targetLanguage": "Целевой язык",
+  "convert": "Конвертировать",
+  "copy": "Копировать",
+  "codeOutput": "Сгенерированный код",
+  "outputPlaceholder": "Здесь появится сгенерированный код...",
+  "loadSample": "Загрузить пример",
+  "errorEmpty": "Пожалуйста, введите команду cURL",
+  "errorInvalid": "Неверная команда cURL",
+  "errorNoUrl": "Не удалось проанализировать URL.",
+  "errorParsing": "Ошибка анализа команды cURL",
+  "supportedFeatures": "Поддерживаемые функции",
+  "feature1": "HTTP methods (-X)",
+  "feature2": "Заголовки (-H)",
+  "feature3": "Тело запроса (-d, --data)",
+  "feature4": "Поддерживается 8 языков программирования"
+}

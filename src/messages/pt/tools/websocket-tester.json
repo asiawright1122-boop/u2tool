@@ -1,0 +1,22 @@
+{
+  "serverUrl": "WebSocket Server URL",
+  "connect": "Conectar",
+  "disconnect": "Desconectar",
+  "connecting_btn": "Conectando...",
+  "connecting": "Conectando a {url}...",
+  "connected": "Conectado com sucesso",
+  "disconnected": "Desconectado (código: {code})",
+  "errorConnection": "Ocorreu um erro de conexão",
+  "errorInvalidUrl": "URL WebSocket inválido",
+  "quickConnect": "Conexão rápida",
+  "statusConnected": "Conectado",
+  "statusConnecting": "Conectando...",
+  "statusDisconnected": "Desconectado",
+  "messages": "Mensagens",
+  "clear": "Limpar",
+  "noMessages": "Nenhuma mensagem ainda. Conecte-se a um servidor WebSocket para começar.",
+  "messagePlaceholder": "Digite uma mensagem...",
+  "send": "Enviar",
+  "note": "Observação",
+  "noteText": "Alguns servidores WebSocket podem não aceitar conexões de navegadores devido a restrições de CORS. O servidor de eco é um servidor de teste público que ecoa qualquer mensagem enviada."
+}

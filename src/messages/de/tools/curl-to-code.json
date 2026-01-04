@@ -1,0 +1,19 @@
+{
+  "curlInput": "cURL-Befehl",
+  "placeholder": "Fügen Sie Ihren cURL-Befehl ein...",
+  "targetLanguage": "Zielsprache",
+  "convert": "Konvertieren",
+  "copy": "Kopieren",
+  "codeOutput": "Generierter Code",
+  "outputPlaceholder": "Der generierte Code wird hier angezeigt ...",
+  "loadSample": "Beispiel laden",
+  "errorEmpty": "Bitte geben Sie einen cURL-Befehl ein",
+  "errorInvalid": "Ungültiger cURL-Befehl",
+  "errorNoUrl": "Die URL konnte nicht geparst werden",
+  "errorParsing": "Fehler beim Parsen des cURL-Befehls",
+  "supportedFeatures": "Unterstützte Funktionen",
+  "feature1": "HTTP methods (-X)",
+  "feature2": "Überschriften (-H)",
+  "feature3": "Anfragetext (-d, --data)",
+  "feature4": "8 Programmiersprachen unterstützt"
+}

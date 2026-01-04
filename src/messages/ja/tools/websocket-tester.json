@@ -1,0 +1,22 @@
+{
+  "serverUrl": "WebSocket Server URL",
+  "connect": "接続する",
+  "disconnect": "切断する",
+  "connecting_btn": "接続中...",
+  "connecting": "{url} に接続中...",
+  "connected": "正常に接続されました",
+  "disconnected": "切断されました (コード: {code})",
+  "errorConnection": "接続エラーが発生しました",
+  "errorInvalidUrl": "無効な WebSocket URL",
+  "quickConnect": "クイックコネクト",
+  "statusConnected": "接続済み",
+  "statusConnecting": "接続中...",
+  "statusDisconnected": "切断されました",
+  "messages": "メッセージ",
+  "clear": "クリア",
+  "noMessages": "まだメッセージはありません。 WebSocket サーバーに接続して開始します。",
+  "messagePlaceholder": "メッセージを入力してください...",
+  "send": "送信",
+  "note": "注記",
+  "noteText": "一部の WebSocket サーバーは、CORS 制限によりブラウザからの接続を受け入れない場合があります。エコー サーバーは、送信したメッセージをエコー バックする公開テスト サーバーです。"
+}

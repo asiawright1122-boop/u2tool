@@ -1,0 +1,19 @@
+{
+  "curlInput": "cURL 命令",
+  "placeholder": "粘贴您的 cURL 命令...",
+  "targetLanguage": "目标语言",
+  "convert": "转换",
+  "copy": "复制",
+  "codeOutput": "生成的代码",
+  "outputPlaceholder": "生成的代码将出现在这里...",
+  "loadSample": "加载示例",
+  "errorEmpty": "请输入 cURL 命令",
+  "errorInvalid": "cURL 命令无效",
+  "errorNoUrl": "无法解析网址",
+  "errorParsing": "解析 cURL 命令时出错",
+  "supportedFeatures": "支持的功能",
+  "feature1": "HTTP methods (-X)",
+  "feature2": "标头 (-H)",
+  "feature3": "请求正文（-d，--data）",
+  "feature4": "支持 8 种编程语言"
+}

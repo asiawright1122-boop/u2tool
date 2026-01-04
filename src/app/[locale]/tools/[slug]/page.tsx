@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { tools, getToolBySlug, categories } from '@/config/tools';
 import { routing } from '@/i18n/routing';
 import ToolWrapper from '@/components/tools/ToolWrapper';
@@ -19,6 +19,7 @@ import {
   jsonLdToString,
 } from '@/lib/seo';
 import { getToolFAQs, generateFAQJsonLd } from '@/lib/faq';
+import { loadToolMessages, type SupportedLocale } from '@/lib/translations';
 
 // 生成静态参数（所有工具和语言组合）
 export function generateStaticParams() {
@@ -41,13 +42,15 @@ export async function generateMetadata({
   const tool = getToolBySlug(slug);
   if (!tool) return {};
 
-  const t = await getTranslations({ locale, namespace: 'tools' });
   const category = categories.find(c => c.id === tool.category);
 
-  // 获取翻译文本
-  const toolName = t(`${slug}.name`);
-  const seoTitle = t(`${slug}.seo_title`);
-  const seoDescription = t(`${slug}.seo_description`);
+  // 加载工具特定翻译
+  const toolMessages = await loadToolMessages(locale as SupportedLocale, slug);
+  
+  // 获取翻译文本（直接从工具翻译中获取）
+  const toolName = (toolMessages as Record<string, string>).name || slug;
+  const seoTitle = (toolMessages as Record<string, string>).seo_title || toolName;
+  const seoDescription = (toolMessages as Record<string, string>).seo_description || (toolMessages as Record<string, string>).description || '';
 
   // 确保 title 长度 < 60 字符
   const title = truncateText(seoTitle, SEO_CONFIG.titleMaxLength);
@@ -151,12 +154,23 @@ export default async function ToolPage({
     notFound();
   }
 
-  const t = await getTranslations({ locale, namespace: 'tools' });
+  // 设置请求 locale
+  setRequestLocale(locale);
+
+  // 加载工具特定翻译
+  const toolMessages = await loadToolMessages(locale as SupportedLocale, slug);
+  const toolData = toolMessages as Record<string, unknown>;
+
   const tCategories = await getTranslations({ locale, namespace: 'categories' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const tCommon = await getTranslations({ locale });
 
   // 获取工具名称和分类名称
-  const toolName = t(`${slug}.name`);
+  const toolName = (toolData.name as string) || slug;
+  const toolDescription = (toolData.description as string) || '';
+  const detailedDescription = (toolData.detailed_description as string) || '';
+  const usageSteps = toolData.usage_steps as string[] | undefined;
+  const usageExamples = toolData.usage_examples as string[] | undefined;
   const categoryName = tCategories(tool.category);
 
   // 获取工具 FAQ（优先使用分类特定 FAQ，回退到通用 FAQ）
@@ -181,15 +195,65 @@ export default async function ToolPage({
 
         {/* Tool Header */}
         <div className="text-center mb-8">
-          <span className="text-5xl mb-4 block">{tool.icon}</span>
+          <span 
+            className="text-5xl mb-4 block"
+            aria-label={toolName}
+            role="img"
+          >
+            {tool.icon}
+          </span>
           <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">{toolName}</h1>
-          <p className="text-gray-600 dark:text-gray-300 tool-description">{t(`${slug}.description`)}</p>
+          <p className="text-gray-600 dark:text-gray-300 tool-description">{toolDescription}</p>
         </div>
 
+        {/* 详细描述 */}
+        {detailedDescription && (
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-6 shadow-sm">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{tCommon('tools.toolIntroduction')}</h2>
+            <div 
+              className="text-gray-700 dark:text-gray-300 leading-relaxed tool-detailed-description"
+              dangerouslySetInnerHTML={{ 
+                __html: detailedDescription.replace(/\n/g, '<br />')
+              }}
+            />
+          </div>
+        )}
+
         {/* Tool Component */}
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-sm">
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-sm mb-6">
           <ToolWrapper slug={slug} />
         </div>
+
+        {/* 使用说明 */}
+        {(usageSteps || usageExamples) && (
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-6 shadow-sm">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{tCommon('tools.usageInstructions')}</h2>
+            
+            {usageSteps && Array.isArray(usageSteps) && (
+              <>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{tCommon('tools.usageSteps')}</h3>
+                <ol className="list-decimal list-inside space-y-2 mb-6">
+                  {usageSteps.map((step: string, i: number) => (
+                    <li key={i} className="text-gray-700 dark:text-gray-300">{step}</li>
+                  ))}
+                </ol>
+              </>
+            )}
+            
+            {usageExamples && Array.isArray(usageExamples) && (
+              <>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{tCommon('tools.usageExamples')}</h3>
+                <div className="space-y-3">
+                  {usageExamples.map((example: string, i: number) => (
+                    <div key={i} className="bg-gray-100 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-700">
+                      <code className="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap break-words">{example}</code>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        )}
 
         {/* FAQ 区块 */}
         <ToolFAQ

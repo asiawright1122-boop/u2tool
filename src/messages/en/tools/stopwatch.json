@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Online Stopwatch is a precise timing tool with accuracy to one-hundredth of a second (10 milliseconds). Supports start, stop, reset, and lap functions. The lap feature records multiple split times and automatically marks the fastest and slowest laps. Displays individual lap time and cumulative total time. Clean and intuitive interface with large font display for easy viewing. Suitable for sports training, cooking timing, study timing, and various other scenarios. All timing happens locally in your browser, no internet connection required.",
+  "usage_steps": [
+    "Open the Stopwatch tool page",
+    "Click the green 'Start' button to begin timing",
+    "Click 'Lap' during timing to record split times",
+    "Click the red 'Stop' button to pause timing",
+    "Click 'Start' again to continue timing",
+    "Click 'Reset' to clear all records"
+  ],
+  "usage_examples": [
+    "Record running laps and times during sports training",
+    "Precise timing while cooking",
+    "Pomodoro technique timing for studying",
+    "Test how long tasks take to complete"
+  ]
+}
