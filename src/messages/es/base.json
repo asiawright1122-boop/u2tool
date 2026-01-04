@@ -954,7 +954,7 @@
       "blockAll": "Bloquear todo",
       "standard": "Estándar",
       "wordpress": "WordPress",
-      "rule": "Regla {índice}",
+      "rule": "Regla {index}",
       "remove": "Eliminar",
       "userAgent": "Agente de usuario",
       "allow": "Permitir (uno por línea)",
@@ -984,9 +984,9 @@
       "center": "Centro",
       "end": "Fin",
       "columnSizes": "Tamaños de columna",
-      "col": "Col {índice}",
+      "col": "Col {index}",
       "rowSizes": "Tamaños de fila",
-      "row": "Fila {índice}",
+      "row": "Fila {index}",
       "preview": "Vista previa",
       "generatedCss": "CSS generado"
     },
@@ -1167,7 +1167,7 @@
       "seo_description": "Genere CSS box-shadow con un editor visual en línea de forma gratuita. Personalice el desplazamiento, el desenfoque, la extensión y el color. Copie código CSS con un clic para sus proyectos.",
       "shadowLayers": "Capas de sombra",
       "addLayer": "+ Agregar capa",
-      "layer": "Capa {índice}",
+      "layer": "Capa {index}",
       "remove": "Eliminar",
       "offsetX": "Desplazamiento X",
       "offsetY": "Compensación Y",
@@ -1344,7 +1344,7 @@
       "parseView": "Analizar y ver",
       "expandAll": "Expandir todo",
       "collapseAll": "Contraer todo",
-      "items": "{contar} artículos"
+      "items": "{count} artículos"
     },
     "xml-to-json": {
       "name": "XML to JSON",
@@ -3135,7 +3135,7 @@
       "csvInput": "CSV Input",
       "csvPlaceholder": "Pega tus datos CSV aquí...",
       "tablePreview": "Vista previa de la tabla",
-      "stats": "{filas} filas × {columnas} columnas",
+      "stats": "{rows} filas × {columns} columnas",
       "noData": "No hay datos para mostrar. Ingrese el contenido CSV arriba.",
       "tip": "Consejo: Puede pegar datos directamente desde Excel o Google Sheets. La herramienta detectará automáticamente el formato."
     },
@@ -4684,7 +4684,7 @@
       "blockAll": "Bloquear todo",
       "standard": "Estándar",
       "wordpress": "WordPress",
-      "rule": "Regla {índice}",
+      "rule": "Regla {index}",
       "remove": "Eliminar",
       "userAgent": "Agente de usuario",
       "allow": "Permitir (uno por línea)",
@@ -4716,9 +4716,9 @@
       "center": "Centro",
       "end": "Fin",
       "columnSizes": "Tamaños de columna",
-      "col": "Col {índice}",
+      "col": "Col {index}",
       "rowSizes": "Tamaños de fila",
-      "row": "Fila {índice}",
+      "row": "Fila {index}",
       "preview": "Vista previa",
       "generatedCss": "CSS generado",
       "copied": "¡Copiado!",
@@ -4910,7 +4910,7 @@
       "seo_description": "Generate CSS box-shadow with visual editor online for free. Customize offset, blur, spread, and color. Copy CSS code with one click for your projects.",
       "shadowLayers": "Capas de sombra",
       "addLayer": "+ Agregar capa",
-      "layer": "Capa {índice}",
+      "layer": "Capa {index}",
       "remove": "Eliminar",
       "offsetX": "Desplazamiento X",
       "offsetY": "Compensación Y",
@@ -5089,7 +5089,7 @@
       "parseView": "Analizar y ver",
       "expandAll": "Expandir todo",
       "collapseAll": "Contraer todo",
-      "items": "{contar} artículos"
+      "items": "{count} artículos"
     },
     "xml-to-json": {
       "name": "XML a JSON",

@@ -954,7 +954,7 @@
       "blockAll": "Bloquear tudo",
       "standard": "Padrão",
       "wordpress": "WordPress",
-      "rule": "Regra {índice}",
+      "rule": "Regra {index}",
       "remove": "Remover",
       "userAgent": "Agente do usuário",
       "allow": "Permitir (um por linha)",
@@ -984,9 +984,9 @@
       "center": "Centro",
       "end": "Fim",
       "columnSizes": "Tamanhos de coluna",
-      "col": "Coluna {índice}",
+      "col": "Coluna {index}",
       "rowSizes": "Tamanhos de linha",
-      "row": "Linha {índice}",
+      "row": "Linha {index}",
       "preview": "Visualização",
       "generatedCss": "CSS gerado"
     },
@@ -1167,7 +1167,7 @@
       "seo_description": "Gere box-shadow CSS com editor visual online gratuitamente. Personalize deslocamento, desfoque, propagação e cor. Copie o código CSS com um clique para seus projetos.",
       "shadowLayers": "Camadas de sombra",
       "addLayer": "+ Adicionar camada",
-      "layer": "Camada {índice}",
+      "layer": "Camada {index}",
       "remove": "Remover",
       "offsetX": "Deslocamento X",
       "offsetY": "Deslocamento Y",
@@ -1329,7 +1329,7 @@
       "analyzeUrls": "Analisar URLs",
       "results": "Resultados",
       "supportedServices": "Serviços de URL curto suportados",
-      "moreServices": "+{contar} mais",
+      "moreServices": "+{count} mais",
       "noShortUrls": "Nenhum URL curto encontrado",
       "noShortUrlsError": "Nenhum URL curto reconhecido na entrada",
       "unableToExpand": "Não é possível expandir (requer solicitação do servidor)"
@@ -1344,7 +1344,7 @@
       "parseView": "Analisar e visualizar",
       "expandAll": "Expandir tudo",
       "collapseAll": "Recolher tudo",
-      "items": "{contar} itens"
+      "items": "{count} itens"
     },
     "xml-to-json": {
       "name": "XML to JSON",
@@ -3135,7 +3135,7 @@
       "csvInput": "CSV Input",
       "csvPlaceholder": "Cole seus dados CSV aqui...",
       "tablePreview": "Visualização da tabela",
-      "stats": "{linhas} linhas × {colunas} colunas",
+      "stats": "{rows} linhas × {columns} colunas",
       "noData": "Não há dados para exibir. Insira o conteúdo CSV acima.",
       "tip": "Dica: você pode colar dados diretamente do Excel ou do Planilhas Google. A ferramenta detectará automaticamente o formato."
     },
@@ -4684,7 +4684,7 @@
       "blockAll": "Bloquear tudo",
       "standard": "Padrão",
       "wordpress": "WordPress",
-      "rule": "Regra {índice}",
+      "rule": "Regra {index}",
       "remove": "Remover",
       "userAgent": "Agente do usuário",
       "allow": "Permitir (um por linha)",
@@ -4716,9 +4716,9 @@
       "center": "Centro",
       "end": "Fim",
       "columnSizes": "Tamanhos de coluna",
-      "col": "Coluna {índice}",
+      "col": "Coluna {index}",
       "rowSizes": "Tamanhos de linha",
-      "row": "Linha {índice}",
+      "row": "Linha {index}",
       "preview": "Visualização",
       "generatedCss": "CSS gerado",
       "copied": "Copiado!",
@@ -4910,7 +4910,7 @@
       "seo_description": "Generate CSS box-shadow with visual editor online for free. Customize offset, blur, spread, and color. Copy CSS code with one click for your projects.",
       "shadowLayers": "Camadas de sombra",
       "addLayer": "+ Adicionar camada",
-      "layer": "Camada {índice}",
+      "layer": "Camada {index}",
       "remove": "Remover",
       "offsetX": "Deslocamento X",
       "offsetY": "Deslocamento Y",
@@ -5074,7 +5074,7 @@
       "analyzeUrls": "Analisar URLs",
       "results": "Resultados",
       "supportedServices": "Serviços de URL curto suportados",
-      "moreServices": "+{contar} mais",
+      "moreServices": "+{count} mais",
       "noShortUrls": "Nenhum URL curto encontrado",
       "noShortUrlsError": "Nenhum URL curto reconhecido na entrada",
       "unableToExpand": "Não é possível expandir (requer solicitação do servidor)"
@@ -5089,7 +5089,7 @@
       "parseView": "Analisar e visualizar",
       "expandAll": "Expandir tudo",
       "collapseAll": "Recolher tudo",
-      "items": "{contar} itens"
+      "items": "{count} itens"
     },
     "xml-to-json": {
       "name": "XML para JSON",
