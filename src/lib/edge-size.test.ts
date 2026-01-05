@@ -107,26 +107,40 @@ describe('Edge Function Size Optimization', () => {
   });
 
   /**
-   * 验证 i18n/request.ts 返回空 messages
+   * 验证 i18n/request.ts 的翻译加载不会影响 Edge Function
+   * 
+   * 虽然 i18n/request.ts 现在加载翻译，但由于 middleware.ts 不导入它，
+   * 翻译文件不会被打包到 Edge Function 中。
+   * 
+   * 这个测试验证：
+   * 1. i18n/request.ts 存在
+   * 2. middleware.ts 不导入 i18n/request.ts
    */
-  it('i18n/request.ts should return empty messages', () => {
+  it('i18n/request.ts translations should not affect Edge Function', () => {
     const requestPath = 'src/i18n/request.ts';
+    const middlewarePath = 'src/middleware.ts';
     
     if (!fs.existsSync(requestPath)) {
       console.warn('跳过测试: i18n/request.ts 不存在');
       return;
     }
 
-    const content = fs.readFileSync(requestPath, 'utf-8');
+    if (!fs.existsSync(middlewarePath)) {
+      console.warn('跳过测试: middleware.ts 不存在');
+      return;
+    }
+
+    const middlewareContent = fs.readFileSync(middlewarePath, 'utf-8');
     
-    // 检查是否返回空 messages
-    expect(content).toContain('messages: {}');
+    // 关键检查：middleware.ts 不应该导入 i18n/request.ts
+    // 这确保翻译文件不会被打包到 Edge Function
+    expect(middlewareContent).not.toContain("from '@/i18n/request'");
+    expect(middlewareContent).not.toContain('from "@/i18n/request"');
+    expect(middlewareContent).not.toContain("from './i18n/request'");
+    expect(middlewareContent).not.toContain('from "../i18n/request"');
     
-    // 检查是否不导入翻译加载器（检查 import 语句，而非注释）
-    expect(content).not.toMatch(/import\s+.*loadBaseMessages/);
-    expect(content).not.toMatch(/import\s+.*loadToolMessages/);
-    
-    // 检查是否不动态导入翻译文件
-    expect(content).not.toMatch(/import\s*\(\s*[`'"]@\/messages/);
+    // middleware 也不应该导入 next-intl/middleware
+    expect(middlewareContent).not.toContain("from 'next-intl/middleware'");
+    expect(middlewareContent).not.toContain('from "next-intl/middleware"');
   });
 });
