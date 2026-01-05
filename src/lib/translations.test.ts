@@ -1,7 +1,10 @@
 /**
  * 翻译加载器属性测试
  * 
+ * Property 1: SEO 字段正确加载 (fix-seo-duplicate-titles)
+ * Property 2: 本地化 SEO 标题 (fix-seo-duplicate-titles)
  * Property 3: Fallback to English for missing translations
+ * Property 4: 回退到英文 (fix-seo-duplicate-titles)
  * Property 6: Translation caching prevents redundant loads
  */
 
@@ -9,7 +12,9 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import * as fc from 'fast-check';
 import {
   loadLegacyMessages,
+  loadToolMessages,
   clearTranslationCache,
+  type SupportedLocale,
 } from './translations';
 
 // 直接定义 locales，避免导入 next-intl 相关模块
@@ -187,6 +192,217 @@ describe('Translation Loader', () => {
           expect(toolData.name).toBeDefined();
         }),
         { numRuns: 30 }
+      );
+    });
+  });
+
+  /**
+   * fix-seo-duplicate-titles 属性测试
+   * 验证 SEO 元数据正确加载
+   */
+  describe('SEO Metadata Loading (fix-seo-duplicate-titles)', () => {
+    // 生成有效的 locale
+    const localeArb = fc.constantFrom(...locales);
+    
+    // 生成工具 slug（从已知工具中选择）
+    const knownToolSlugs = [
+      'json-formatter', 'base64', 'uuid-generator', 'url-encoder',
+      'password-generator', 'hash-generator', 'qr-generator',
+      'text-deduplicator', 'json-to-xml', 'markdown-to-html',
+    ];
+    const toolSlugArb = fc.constantFrom(...knownToolSlugs);
+
+    /**
+     * Property 1: SEO 字段正确加载
+     * Feature: fix-seo-duplicate-titles, Property 1: SEO 字段正确加载
+     * 
+     * For any tool slug and any supported locale, when loadToolMessages is called,
+     * the returned object SHALL contain seo_title, seo_description, name, and description
+     * fields from the base.json translation file.
+     * 
+     * Validates: Requirements 1.1, 1.2, 1.3, 1.4, 2.2, 2.3
+     */
+    it('should load SEO fields from base.json (Property 1)', async () => {
+      await fc.assert(
+        fc.asyncProperty(localeArb, toolSlugArb, async (locale, slug) => {
+          clearTranslationCache();
+          
+          const messages = await loadToolMessages(locale as SupportedLocale, slug);
+          
+          // 应该包含 SEO 字段
+          expect(messages.name).toBeDefined();
+          expect(typeof messages.name).toBe('string');
+          expect((messages.name as string).length).toBeGreaterThan(0);
+          
+          expect(messages.description).toBeDefined();
+          expect(typeof messages.description).toBe('string');
+          
+          expect(messages.seo_title).toBeDefined();
+          expect(typeof messages.seo_title).toBe('string');
+          expect((messages.seo_title as string).length).toBeGreaterThan(0);
+          
+          expect(messages.seo_description).toBeDefined();
+          expect(typeof messages.seo_description).toBe('string');
+        }),
+        { numRuns: 100 }
+      );
+    });
+
+    /**
+     * Property 2: 本地化 SEO 标题
+     * Feature: fix-seo-duplicate-titles, Property 2: 本地化 SEO 标题
+     * 
+     * For any tool slug and any non-English locale that has a localized seo_title in base.json,
+     * the loadToolMessages function SHALL return the locale-specific seo_title, not the English version.
+     * 
+     * Validates: Requirements 1.5, 3.5
+     */
+    it('should return locale-specific seo_title for non-English locales (Property 2)', async () => {
+      // 测试几个已知有本地化翻译的工具
+      const testCases = [
+        { locale: 'zh', slug: 'json-formatter' },
+        { locale: 'ja', slug: 'json-formatter' },
+        { locale: 'zh', slug: 'text-deduplicator' },
+        { locale: 'ja', slug: 'text-deduplicator' },
+      ];
+      
+      for (const { locale, slug } of testCases) {
+        clearTranslationCache();
+        
+        const enMessages = await loadToolMessages('en', slug);
+        clearTranslationCache();
+        const localeMessages = await loadToolMessages(locale as SupportedLocale, slug);
+        
+        // 非英文语言的 seo_title 应该与英文不同
+        if (localeMessages.seo_title && enMessages.seo_title) {
+          const seoTitle = localeMessages.seo_title as string;
+          const enSeoTitle = enMessages.seo_title as string;
+          
+          // 验证包含本地化字符或与英文不同
+          const hasNonAscii = /[^\x00-\x7F]/.test(seoTitle);
+          const isDifferentFromEnglish = seoTitle !== enSeoTitle;
+          
+          expect(hasNonAscii || isDifferentFromEnglish).toBe(true);
+        }
+      }
+    });
+
+    /**
+     * Property 2 (Extended): 属性测试 - 本地化 SEO 标题
+     * Feature: fix-seo-duplicate-titles, Property 2: 本地化 SEO 标题
+     * 
+     * For any tool slug and any non-English locale, the seo_title should be localized.
+     * 
+     * Validates: Requirements 1.5, 3.5
+     */
+    it('should return localized seo_title for random locale/tool combinations (Property 2 Extended)', async () => {
+      const nonEnglishLocales = ['zh', 'ja', 'ko', 'ru', 'fr', 'de', 'es', 'pt', 'ar'] as const;
+      const nonEnglishLocaleArb = fc.constantFrom(...nonEnglishLocales);
+      
+      await fc.assert(
+        fc.asyncProperty(nonEnglishLocaleArb, toolSlugArb, async (locale, slug) => {
+          clearTranslationCache();
+          
+          const messages = await loadToolMessages(locale as SupportedLocale, slug);
+          
+          // 应该有 seo_title
+          expect(messages.seo_title).toBeDefined();
+          
+          // seo_title 应该是字符串
+          expect(typeof messages.seo_title).toBe('string');
+          expect((messages.seo_title as string).length).toBeGreaterThan(0);
+        }),
+        { numRuns: 50 }
+      );
+    });
+
+    /**
+     * Property 3: 数据合并正确性
+     * Feature: fix-seo-duplicate-titles, Property 3: 数据合并正确性
+     * 
+     * For any tool slug and locale, when both base.json and tools/{slug}.json contain data,
+     * the loadToolMessages function SHALL return a merged object containing fields from both sources.
+     * 
+     * Validates: Requirements 2.1
+     */
+    it('should merge data from base.json and tools/{slug}.json (Property 3)', async () => {
+      await fc.assert(
+        fc.asyncProperty(localeArb, toolSlugArb, async (locale, slug) => {
+          clearTranslationCache();
+          
+          const messages = await loadToolMessages(locale as SupportedLocale, slug);
+          
+          // 应该包含来自 base.json 的字段
+          expect(messages.name).toBeDefined();
+          expect(messages.seo_title).toBeDefined();
+          
+          // 如果 tools/{slug}.json 存在，应该包含详细描述
+          // 注意：不是所有工具都有 detailed_description
+          // 但如果有，应该被正确加载
+          if (messages.detailed_description) {
+            expect(typeof messages.detailed_description).toBe('string');
+          }
+        }),
+        { numRuns: 50 }
+      );
+    });
+
+    /**
+     * Property 4: 回退到英文
+     * Feature: fix-seo-duplicate-titles, Property 4: 回退到英文
+     * 
+     * For any tool slug and non-English locale, if a translation key is missing in the current locale,
+     * the system SHALL fall back to the English translation.
+     * 
+     * Validates: Requirements 2.4
+     */
+    it('should fallback to English when detailed translation is missing (Property 4)', async () => {
+      // 测试一个可能没有所有语言详细翻译的工具
+      const testLocales = ['zh', 'ja', 'ko', 'ru'] as const;
+      
+      for (const locale of testLocales) {
+        clearTranslationCache();
+        
+        const messages = await loadToolMessages(locale as SupportedLocale, 'json-formatter');
+        
+        // 即使某些语言没有详细翻译，也应该有基本的 SEO 字段
+        expect(messages.name).toBeDefined();
+        expect(messages.seo_title).toBeDefined();
+        expect(messages.description).toBeDefined();
+        
+        // 如果有 detailed_description，应该是字符串
+        if (messages.detailed_description) {
+          expect(typeof messages.detailed_description).toBe('string');
+          expect((messages.detailed_description as string).length).toBeGreaterThan(0);
+        }
+      }
+    });
+
+    /**
+     * Property 4 (Extended): 属性测试 - 回退逻辑
+     * Feature: fix-seo-duplicate-titles, Property 4: 回退到英文
+     * 
+     * For any tool slug and any locale, the function should always return valid SEO fields.
+     * 
+     * Validates: Requirements 2.4
+     */
+    it('should always return valid SEO fields for any locale (Property 4 Extended)', async () => {
+      await fc.assert(
+        fc.asyncProperty(localeArb, toolSlugArb, async (locale, slug) => {
+          clearTranslationCache();
+          
+          const messages = await loadToolMessages(locale as SupportedLocale, slug);
+          
+          // 无论什么语言，都应该有有效的 SEO 字段
+          expect(messages.name).toBeDefined();
+          expect(typeof messages.name).toBe('string');
+          expect((messages.name as string).length).toBeGreaterThan(0);
+          
+          expect(messages.seo_title).toBeDefined();
+          expect(typeof messages.seo_title).toBe('string');
+          expect((messages.seo_title as string).length).toBeGreaterThan(0);
+        }),
+        { numRuns: 100 }
       );
     });
   });

@@ -69,13 +69,18 @@ export async function loadBaseMessages(locale: SupportedLocale): Promise<Message
 /**
  * 加载工具特定翻译
  * 
- * 工具翻译包含：name, description, seo_title, seo_description, 
- * detailed_description, usage_steps, usage_examples
+ * 工具翻译合并多个来源：
+ * 1. base.json 中的 tool.{slug} 对象（包含本地化的 name, description, seo_title, seo_description）
+ * 2. base.json 中的 tools.{slug} 对象（备用来源）
+ * 3. tools/{slug}.json 文件（包含 detailed_description, usage_steps, usage_examples）
+ * 
+ * 优先级：tool.{slug} > tools.{slug} > tools/{slug}.json
  * 
  * @param locale - 语言代码
  * @param toolSlug - 工具的 slug
- * @returns 工具翻译对象
+ * @returns 合并后的工具翻译对象
  * @see Requirements 1.3, 2.4, 3.3
+ * @see fix-seo-duplicate-titles spec
  */
 export async function loadToolMessages(
   locale: SupportedLocale,
@@ -88,26 +93,51 @@ export async function loadToolMessages(
     return translationCache.get(cacheKey)!;
   }
   
+  // 1. 从 base.json 加载工具基础信息
+  let baseToolData: Messages = {};
   try {
-    // 尝试加载工具特定翻译文件
-    const messages = (await import(`@/messages/${locale}/tools/${toolSlug}.json`)).default;
-    translationCache.set(cacheKey, messages);
-    return messages;
+    const baseMessages = await loadBaseMessages(locale);
+    
+    // 优先从 tool.{slug} 加载（包含本地化的 SEO 翻译）
+    const toolObj = baseMessages.tool as Record<string, Messages> | undefined;
+    if (toolObj && toolObj[toolSlug]) {
+      baseToolData = { ...toolObj[toolSlug] };
+    }
+    
+    // 如果 tool.{slug} 没有数据，尝试从 tools.{slug} 加载
+    const toolsObj = baseMessages.tools as Record<string, Messages> | undefined;
+    if (toolsObj && toolsObj[toolSlug]) {
+      // 合并，但 tool.{slug} 的数据优先
+      baseToolData = { ...toolsObj[toolSlug], ...baseToolData };
+    }
   } catch {
-    // 如果当前语言的工具翻译不存在，回退到英文
+    // 如果加载失败，baseToolData 保持为空对象
+  }
+  
+  // 2. 加载工具详细翻译（detailed_description, usage_steps, usage_examples）
+  let detailedMessages: Messages = {};
+  try {
+    detailedMessages = (await import(`@/messages/${locale}/tools/${toolSlug}.json`)).default;
+  } catch {
+    // 如果当前语言的详细翻译不存在，尝试回退到英文
     if (locale !== 'en') {
       try {
-        const messages = (await import(`@/messages/en/tools/${toolSlug}.json`)).default;
-        translationCache.set(cacheKey, messages);
-        return messages;
+        detailedMessages = (await import(`@/messages/en/tools/${toolSlug}.json`)).default;
       } catch {
-        // 英文也没有，返回空对象
-        return {};
+        // 英文也没有，detailedMessages 保持为空对象
       }
     }
-    // 英文也没有，返回空对象
-    return {};
   }
+  
+  // 3. 合并所有来源，baseToolData 优先（包含本地化的 SEO 翻译）
+  const mergedMessages: Messages = {
+    ...detailedMessages,
+    ...baseToolData,
+  };
+  
+  // 缓存合并后的结果
+  translationCache.set(cacheKey, mergedMessages);
+  return mergedMessages;
 }
 
 /**

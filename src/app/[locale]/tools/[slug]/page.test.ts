@@ -144,3 +144,56 @@ describe('Property 2: Metadata Length Constraints', () => {
     }
   });
 });
+
+
+// fix-seo-duplicate-titles: 验证 SEO 元数据本地化
+describe('SEO Metadata Localization (fix-seo-duplicate-titles)', () => {
+  it('应该为不同语言返回不同的 seo_title', async () => {
+    // 这个测试验证 loadToolMessages 返回本地化的 SEO 标题
+    const { loadToolMessages, clearTranslationCache } = await import('@/lib/translations');
+    
+    const testCases = [
+      { locale: 'zh', slug: 'json-formatter', expectedNonAscii: true },
+      { locale: 'ja', slug: 'json-formatter', expectedNonAscii: true },
+      { locale: 'ko', slug: 'json-formatter', expectedNonAscii: true },
+    ];
+    
+    for (const { locale, slug, expectedNonAscii } of testCases) {
+      clearTranslationCache();
+      const messages = await loadToolMessages(locale as 'zh' | 'ja' | 'ko', slug);
+      
+      expect(messages.seo_title).toBeDefined();
+      expect(typeof messages.seo_title).toBe('string');
+      
+      if (expectedNonAscii) {
+        // 验证包含非 ASCII 字符（本地化字符）
+        const hasNonAscii = /[^\x00-\x7F]/.test(messages.seo_title as string);
+        expect(hasNonAscii).toBe(true);
+      }
+    }
+  });
+
+  it('应该为所有工具返回有效的 SEO 字段', async () => {
+    const { loadToolMessages, clearTranslationCache } = await import('@/lib/translations');
+    
+    const tools = ['json-formatter', 'base64', 'uuid-generator', 'url-encoder'];
+    const locales = ['en', 'zh', 'ja'] as const;
+    
+    for (const locale of locales) {
+      for (const slug of tools) {
+        clearTranslationCache();
+        const messages = await loadToolMessages(locale, slug);
+        
+        // 验证必需的 SEO 字段
+        expect(messages.name).toBeDefined();
+        expect(messages.seo_title).toBeDefined();
+        expect(messages.description).toBeDefined();
+        expect(messages.seo_description).toBeDefined();
+        
+        // 验证字段不为空
+        expect((messages.name as string).length).toBeGreaterThan(0);
+        expect((messages.seo_title as string).length).toBeGreaterThan(0);
+      }
+    }
+  });
+});
