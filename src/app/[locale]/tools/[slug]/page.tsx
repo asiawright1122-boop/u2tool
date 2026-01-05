@@ -21,16 +21,24 @@ import {
 import { getToolFAQs, generateFAQJsonLd } from '@/lib/faq';
 import { loadToolMessages, type SupportedLocale } from '@/lib/translations';
 
-// 生成静态参数（所有工具和语言组合）
+// 生成静态参数（仅预渲染热门工具，减少构建日志大小）
+// 非热门工具将在首次访问时按需生成并缓存
+// @see https://vercel.link/build-log-size-limit
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
+  // 仅预渲染热门工具，减少构建时间和日志大小
+  // 其他工具将通过 dynamicParams = true 按需生成
+  const popularTools = tools.filter(t => t.popular);
   for (const locale of routing.locales) {
-    for (const tool of tools) {
+    for (const tool of popularTools) {
       params.push({ locale, slug: tool.slug });
     }
   }
   return params;
 }
+
+// 允许非预渲染的工具页面按需生成
+export const dynamicParams = true;
 
 // 生成 SEO 元数据
 export async function generateMetadata({

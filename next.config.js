@@ -6,6 +6,12 @@ const createNextIntlPlugin = require('next-intl/plugin');
  * 使用 next-intl 插件，但翻译加载在布局层进行。
  * i18n/request.ts 返回空 messages，避免翻译被打包到 Edge Function。
  * 
+ * 构建优化：
+ * - 仅预渲染热门工具页面，减少构建日志大小（避免超过 Vercel 4MB 限制）
+ * - 非热门工具通过 dynamicParams = true 按需生成并缓存
+ * - @see src/app/[locale]/tools/[slug]/page.tsx
+ * - @see https://vercel.link/build-log-size-limit
+ * 
  * @see .kiro/specs/middleware-size-optimization/
  */
 

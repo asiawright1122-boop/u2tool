@@ -122,8 +122,11 @@ describe('Edge Function Size Optimization', () => {
     // 检查是否返回空 messages
     expect(content).toContain('messages: {}');
     
-    // 检查是否不导入翻译加载器
-    expect(content).not.toContain('loadBaseMessages');
-    expect(content).not.toContain('loadToolMessages');
+    // 检查是否不导入翻译加载器（检查 import 语句，而非注释）
+    expect(content).not.toMatch(/import\s+.*loadBaseMessages/);
+    expect(content).not.toMatch(/import\s+.*loadToolMessages/);
+    
+    // 检查是否不动态导入翻译文件
+    expect(content).not.toMatch(/import\s*\(\s*[`'"]@\/messages/);
   });
 });
