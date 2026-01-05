@@ -18,14 +18,21 @@
     "office": "Herramientas de oficina"
   },
   "nav": {
-    "home": "Hogar",
+    "home": "Inicio",
     "tools": "Herramientas",
+    "toolCategories": "Categorías de Herramientas",
     "about": "Acerca de",
     "blog": "Blog",
+    "ranking": "Ranking",
+    "newest": "Más Recientes",
+    "hottest": "Más Populares",
     "viewAllTools": "Ver todas las herramientas",
     "searchPlaceholder": "Herramientas de búsqueda...",
     "noResults": "No se encontraron herramientas",
-    "relatedTools": "Herramientas relacionadas"
+    "moreResults": "más resultados",
+    "relatedTools": "Herramientas relacionadas",
+    "more": "Más",
+    "categories": "Categorías"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "Herramientas gratuitas",
-      "upload": "Carga de datos",
-      "free": "Gratis para siempre"
+      "usageCount": "Veces de uso",
+      "usageValue": "100K+",
+      "free": "Gratis para siempre",
+      "visitors": "Visitantes"
     },
     "features": {
       "title": "¿Por qué elegirnos?",
@@ -62,12 +71,19 @@
     "toolsCount": "herramientas",
     "popular": "Herramientas populares",
     "popularDesc": "Herramientas más utilizadas por nuestra comunidad",
+    "viewMore": "Ver más",
+    "backToAll": "Volver a todo",
+    "allCategories": "Todas las categorías",
+    "recentTools": "Herramientas recientes",
+    "featuredTools": "Herramientas destacadas",
+    "myTools": "Mis herramientas",
     "cta": {
       "title": "¿Listo para empezar?",
       "desc": "Comience a utilizar nuestras herramientas gratuitas hoy. Sin registro, sin límites, solo productividad."
     }
   },
   "tools": {
+    "popular": "Popular",
     "input": "Aporte",
     "output": "Producción",
     "copy": "Copiar",
@@ -1413,7 +1429,7 @@
       "description": "Formatee y embellezca datos JSON con resaltado de sintaxis. Valide JSON y corrija errores comunes.",
       "seo_title": "Free JSON Formatter & Validator Online",
       "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers.",
-      "inputPlaceholder": "{\"clave\": \"valor\"}",
+      "inputPlaceholder": "Ingrese datos JSON aquí...",
       "outputPlaceholder": "JSON formateado aparecerá aquí...",
       "detailed_description": "Formateador JSON es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Formateador JSON, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Formateador JSON puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Formateador JSON inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
       "usage_steps": [
@@ -10264,7 +10280,7 @@
       "description": "Formatee y embellezca datos JSON con resaltado de sintaxis. Valide JSON y corrija errores comunes.",
       "seo_title": "Formateador y validador JSON gratuito en línea",
       "seo_description": "Formatee, embellezca y valide datos JSON en línea de forma gratuita. Resaltado de sintaxis, detección de errores y copia sencilla. Perfecto para desarrolladores.",
-      "inputPlaceholder": "{\"clave\": \"valor\"}",
+      "inputPlaceholder": "Ingrese datos JSON aquí...",
       "outputPlaceholder": "JSON formateado aparecerá aquí..."
     },
     "base64": {

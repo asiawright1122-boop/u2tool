@@ -20,12 +20,19 @@
   "nav": {
     "home": "Accueil",
     "tools": "Outils",
+    "toolCategories": "Catégories d'Outils",
     "about": "À propos",
     "blog": "Blog",
+    "ranking": "Classement",
+    "newest": "Plus Récents",
+    "hottest": "Plus Populaires",
     "viewAllTools": "Voir tous les outils",
     "searchPlaceholder": "Rechercher des outils...",
     "noResults": "Aucun outil trouvé",
-    "relatedTools": "Outils associés"
+    "moreResults": "résultats supplémentaires",
+    "relatedTools": "Outils associés",
+    "more": "Plus",
+    "categories": "Catégories"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "Outils gratuits",
-      "upload": "Téléchargement de données",
-      "free": "Gratuit pour toujours"
+      "usageCount": "Nombre d'utilisations",
+      "usageValue": "100K+",
+      "free": "Gratuit pour toujours",
+      "visitors": "Visiteurs"
     },
     "features": {
       "title": "Pourquoi nous choisir ?",
@@ -62,6 +71,12 @@
     "toolsCount": "outils",
     "popular": "Outils populaires",
     "popularDesc": "Les outils les plus utilisés par notre communauté",
+    "viewMore": "Voir plus",
+    "backToAll": "Retour à tout",
+    "allCategories": "Toutes les catégories",
+    "recentTools": "Outils récents",
+    "featuredTools": "Outils en vedette",
+    "myTools": "Mes outils",
     "cta": {
       "title": "Prêt à commencer ?",
       "desc": "Commencez à utiliser nos outils gratuits dès aujourd'hui. Pas d'inscription, pas de limites, juste de la productivité."
@@ -2559,6 +2574,7 @@
     }
   },
   "tools": {
+    "popular": "Populaire",
     "input": "Entrée",
     "output": "Sortie",
     "copy": "Copier",

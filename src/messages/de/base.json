@@ -20,12 +20,19 @@
   "nav": {
     "home": "Startseite",
     "tools": "Werkzeuge",
+    "toolCategories": "Werkzeugkategorien",
     "about": "Über uns",
     "blog": "Blog",
+    "ranking": "Rangliste",
+    "newest": "Neueste",
+    "hottest": "Beliebteste",
     "viewAllTools": "Alle Tools anzeigen",
     "searchPlaceholder": "Werkzeuge suchen...",
     "noResults": "Keine Werkzeuge gefunden",
-    "relatedTools": "Ähnliche Tools"
+    "moreResults": "weitere Ergebnisse",
+    "relatedTools": "Ähnliche Tools",
+    "more": "Mehr",
+    "categories": "Kategorien"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "Kostenlose Tools",
-      "upload": "Daten-Upload",
-      "free": "Für immer kostenlos"
+      "usageCount": "Nutzungszähler",
+      "usageValue": "100K+",
+      "free": "Für immer kostenlos",
+      "visitors": "Besucher"
     },
     "features": {
       "title": "Warum uns wählen?",
@@ -62,6 +71,12 @@
     "toolsCount": "Werkzeuge",
     "popular": "Beliebte Tools",
     "popularDesc": "Von unserer Community am häufigsten genutzte Tools",
+    "viewMore": "Mehr anzeigen",
+    "backToAll": "Zurück zu allen",
+    "allCategories": "Alle Kategorien",
+    "recentTools": "Neueste Tools",
+    "featuredTools": "Empfohlene Tools",
+    "myTools": "Meine Tools",
     "cta": {
       "title": "Bereit loszulegen?",
       "desc": "Beginnen Sie noch heute mit unseren kostenlosen Tools. Keine Registrierung, keine Limits, nur Produktivität."
@@ -2559,6 +2574,7 @@
     }
   },
   "tools": {
+    "popular": "Beliebt",
     "input": "Eingabe",
     "output": "Ausgabe",
     "copy": "Kopieren",

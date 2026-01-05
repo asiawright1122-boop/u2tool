@@ -20,12 +20,19 @@
   "nav": {
     "home": "Home",
     "tools": "Tools",
+    "toolCategories": "Tool Categories",
     "about": "About",
     "blog": "Blog",
+    "ranking": "Ranking",
+    "newest": "Newest",
+    "hottest": "Most Popular",
     "viewAllTools": "View All Tools",
     "searchPlaceholder": "Search tools...",
     "noResults": "No tools found",
-    "relatedTools": "Related Tools"
+    "moreResults": "more results",
+    "relatedTools": "Related Tools",
+    "more": "More",
+    "categories": "Categories"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "Free Tools",
-      "upload": "Data Upload",
-      "free": "Free Forever"
+      "usageCount": "Usage Count",
+      "usageValue": "100K+",
+      "free": "Free Forever",
+      "visitors": "Visitors"
     },
     "features": {
       "title": "Why Choose Us?",
@@ -62,12 +71,19 @@
     "toolsCount": "tools",
     "popular": "Popular Tools",
     "popularDesc": "Most used tools by our community",
+    "viewMore": "View More",
+    "backToAll": "Back to All",
+    "allCategories": "All Categories",
+    "recentTools": "Recent Tools",
+    "featuredTools": "Featured Tools",
+    "myTools": "My Tools",
     "cta": {
       "title": "Ready to Get Started?",
       "desc": "Start using our free tools today. No registration, no limits, just productivity."
     }
   },
   "tools": {
+    "popular": "Popular",
     "input": "Input",
     "output": "Output",
     "copy": "Copy",
@@ -1413,7 +1429,7 @@
       "description": "Format and beautify JSON data with syntax highlighting. Validate JSON and fix common errors.",
       "seo_title": "Free JSON Formatter & Validator Online",
       "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers.",
-      "inputPlaceholder": "{\"key\": \"value\"}",
+      "inputPlaceholder": "Enter JSON data here...",
       "outputPlaceholder": "Formatted JSON will appear here...",
       "detailed_description": "JSON Formatter is a practical online tool that helps you quickly complete various tasks. Using JSON Formatter, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON Formatter can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON Formatter immediately to experience fast, secure, and free online tool services.",
       "usage_steps": [
@@ -10326,7 +10342,7 @@
       "description": "Format and beautify JSON data with syntax highlighting. Validate JSON and fix common errors.",
       "seo_title": "Free JSON Formatter & Validator Online",
       "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers.",
-      "inputPlaceholder": "{\"key\": \"value\"}",
+      "inputPlaceholder": "Enter JSON data here...",
       "outputPlaceholder": "Formatted JSON will appear here..."
     },
     "base64": {

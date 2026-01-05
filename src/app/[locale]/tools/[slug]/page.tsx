@@ -192,7 +192,7 @@ export default async function ToolPage({
   ];
 
   return (
-    <div className="min-h-screen py-12 px-4">
+    <div className="py-8 px-4">
       <div className="max-w-4xl mx-auto">
         {/* 面包屑导航 */}
         <Breadcrumb

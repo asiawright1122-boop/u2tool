@@ -20,12 +20,19 @@
   "nav": {
     "home": "ホーム",
     "tools": "ツール",
+    "toolCategories": "ツールカテゴリー",
     "about": "概要",
     "blog": "ブログ",
+    "ranking": "ランキング",
+    "newest": "最新リリース",
+    "hottest": "人気ツール",
     "viewAllTools": "すべてのツールを見る",
     "searchPlaceholder": "ツールを検索...",
     "noResults": "ツールが見つかりません",
-    "relatedTools": "関連ツール"
+    "moreResults": "件の結果",
+    "relatedTools": "関連ツール",
+    "more": "もっと見る",
+    "categories": "カテゴリー"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "無料ツール",
-      "upload": "データアップロード",
-      "free": "永久無料"
+      "usageCount": "利用回数",
+      "usageValue": "10万+",
+      "free": "永久無料",
+      "visitors": "訪問者数"
     },
     "features": {
       "title": "選ばれる理由",
@@ -62,6 +71,12 @@
     "toolsCount": "ツール",
     "popular": "人気のツール",
     "popularDesc": "コミュニティで最も使用されているツール",
+    "viewMore": "もっと見る",
+    "backToAll": "すべてに戻る",
+    "allCategories": "すべてのカテゴリ",
+    "recentTools": "最新ツール",
+    "featuredTools": "おすすめツール",
+    "myTools": "マイツール",
     "cta": {
       "title": "始める準備はできましたか？",
       "desc": "今すぐ無料ツールを使い始めましょう。登録なし、制限なし、生産性のみ。"
@@ -2379,6 +2394,7 @@
     }
   },
   "tools": {
+    "popular": "人気",
     "input": "入力",
     "output": "出力",
     "copy": "コピー",

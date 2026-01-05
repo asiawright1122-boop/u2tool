@@ -20,12 +20,19 @@
   "nav": {
     "home": "首页",
     "tools": "工具",
+    "toolCategories": "工具分类",
     "about": "关于",
     "blog": "博客",
+    "ranking": "排行榜",
+    "newest": "最新发布",
+    "hottest": "热度最高",
     "viewAllTools": "查看全部工具",
     "searchPlaceholder": "搜索工具...",
     "noResults": "未找到工具",
-    "relatedTools": "相关工具"
+    "moreResults": "更多结果",
+    "relatedTools": "相关工具",
+    "more": "更多",
+    "categories": "分类"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "免费工具",
-      "upload": "数据上传",
-      "free": "永久免费"
+      "usageCount": "使用次数",
+      "usageValue": "10W+",
+      "free": "永久免费",
+      "visitors": "访问量"
     },
     "features": {
       "title": "为什么选择我们？",
@@ -62,12 +71,19 @@
     "toolsCount": "个工具",
     "popular": "热门工具",
     "popularDesc": "社区最常用的工具",
+    "viewMore": "查看更多",
+    "backToAll": "返回全部",
+    "allCategories": "全部分类",
+    "recentTools": "最新工具",
+    "featuredTools": "精选工具",
+    "myTools": "我的工具",
     "cta": {
       "title": "准备好开始了吗？",
       "desc": "立即开始使用我们的免费工具。无需注册，没有限制，只有高效。"
     }
   },
   "tools": {
+    "popular": "热门",
     "input": "输入",
     "output": "输出",
     "copy": "复制",
@@ -1515,7 +1531,7 @@
       "description": "通过语法突出显示格式化和美化 JSON 数据。验证 JSON 并修复常见错误。",
       "seo_title": "Json Formatter - 免费在线编码解码工具 | U2Tool",
       "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers.",
-      "inputPlaceholder": "{“键”：“值”}",
+      "inputPlaceholder": "在此输入 JSON 数据...",
       "outputPlaceholder": "格式化的 JSON 将出现在这里...",
       "detailed_description": "编码解码工具可以帮助您在不同编码格式之间转换数据，包括 Base64、URL 编码、HTML 实体等。 Json Formatter 是一个强大的在线格式化工具，可以帮助您快速格式化和美化代码或数据。 使用 Json Formatter，您可以轻松地将压缩或混乱的代码转换为格式良好的、易于阅读的格式。 这个工具支持实时预览，让您立即看到格式化结果，无需等待。 无论您是开发者、设计师还是数据分析师，Json Formatter 都能帮助您提高工作效率。 所有处理都在浏览器本地完成，确保您的数据安全，不会上传到任何服务器。 立即使用 Json Formatter，体验快速、安全、免费的在线工具服务。",
       "usage_steps": [
@@ -2056,9 +2072,9 @@
       ]
     },
     "jwt-decoder": {
-      "name": "智威汤逊解码器",
+      "name": "JWT 解码器",
       "description": "解码并检查 JWT 令牌。查看标头、有效负载和签名。",
-      "seo_title": "Jwt Decoder - 免费在线编码解码工具 | U2Tool",
+      "seo_title": "JWT 解码器 - 免费在线编码解码工具 | U2Tool",
       "seo_description": "Decode and inspect JWT (JSON Web Tokens) online for free. View header, payload, and signature without verification. Essential for debugging auth.",
       "enterToken": "请输入 JWT 令牌",
       "invalidFormat": "JWT 格式无效",
@@ -2557,7 +2573,7 @@
       "result": "结果"
     },
     "gradient-generator": {
-      "name": "梯度发生器",
+      "name": "渐变生成器",
       "description": "使用线性和径向选项直观地创建 CSS 渐变。",
       "seo_title": "Gradient Generator - 免费在线生成器工具 | U2Tool",
       "seo_description": "Create CSS gradients online for free. Generate linear and radial gradients with CSS and Tailwind code. Visual editor with color picker and preset templates.",
@@ -2596,7 +2612,7 @@
       ]
     },
     "unicode-converter": {
-      "name": "统一码转换器",
+      "name": "Unicode 转换器",
       "description": "在多种格式的文本和 Unicode 编码之间进行转换。",
       "seo_title": "Unicode Converter - 免费在线编码解码工具 | U2Tool",
       "seo_description": "Convert text and Unicode encoding online for free. Support HTML entities, CSS escape sequences, and various Unicode formats. Essential for internationalization.",
@@ -3090,7 +3106,7 @@
       ]
     },
     "line-counter": {
-      "name": "排队计数器",
+      "name": "行数统计器",
       "description": "计算文本中的行数，并提供删除重复项、空行和排序的选项。",
       "seo_title": "Line Counter - 免费在线文本工具 | U2Tool",
       "seo_description": "Count lines, remove duplicates, and sort text online for free. Get statistics for total, empty, and unique lines. Perfect for data cleaning and text processing.",
@@ -3795,7 +3811,7 @@
       "seo_description": "Compare two JSON objects and find differences online for free. Highlight added, removed, and changed values with side-by-side view. Essential for API debugging.",
       "json1": "JSON 1",
       "json2": "JSON 2",
-      "placeholder": "{“键”：“值”}",
+      "placeholder": "在此输入 JSON 数据...",
       "compare": "比较",
       "differences": "差异",
       "identical": "两个 JSON 对象是相同的",
@@ -4726,7 +4742,7 @@
       ]
     },
     "totp-generator": {
-      "name": "TOTP发生器",
+      "name": "TOTP 生成器",
       "description": "生成与 Google Authenticator 兼容的基于时间的一次性密码。",
       "seo_title": "Totp Generator - 免费在线安全工具 | U2Tool",
       "seo_description": "Generate TOTP one-time passwords online for free. Support Google Authenticator compatible codes with custom secret keys and time intervals. For 2FA testing.",
@@ -5878,9 +5894,9 @@
       ]
     },
     "jwt-generator": {
-      "name": "智威汤逊生成器",
+      "name": "JWT 生成器",
       "description": "使用自定义负载和密钥生成 JSON Web 令牌。",
-      "seo_title": "Jwt Generator - 免费在线安全工具 | U2Tool",
+      "seo_title": "JWT 生成器 - 免费在线安全工具 | U2Tool",
       "seo_description": "Generate JWT tokens with custom claims, expiration, and HMAC/RSA signing online for free. Create access tokens for API authentication and authorization testing.",
       "detailed_description": "安全工具提供加密、哈希、密码生成等安全相关功能，保护您的数据安全。 Jwt Generator 是一个便捷的在线生成器，可以快速生成各种类型的数据。 使用 Jwt Generator，您可以轻松创建符合特定格式要求的数据，无需手动编写。 这个工具支持多种配置选项，让您可以根据需要定制生成的内容。 无论您需要生成测试数据、示例内容还是随机值，Jwt Generator 都能满足您的需求。 所有生成都在浏览器本地完成，确保您的隐私安全，不会上传任何数据。 立即使用 Jwt Generator，体验快速、安全、免费的在线工具服务。",
       "usage_steps": [
@@ -8625,7 +8641,7 @@
       "obfuscate": "混淆",
       "renameVariables": "重命名变量",
       "stringEncoding": "字符串编码",
-      "unicodeEscape": "统一码转义",
+      "unicodeEscape": "Unicode 转义",
       "deadCodeInjection": "死代码注入",
       "controlFlowFlattening": "控制流扁平化",
       "info": "信息",
@@ -15873,7 +15889,7 @@
       "description": "通过语法突出显示格式化和美化 JSON 数据。验证 JSON 并修复常见错误。",
       "seo_title": "免费的在线 JSON 格式化程序和验证程序",
       "seo_description": "免费在线格式化、美化和验证 JSON 数据。语法突出显示、错误检测和轻松复制。非常适合开发人员。",
-      "inputPlaceholder": "{“键”：“值”}",
+      "inputPlaceholder": "在此输入 JSON 数据...",
       "outputPlaceholder": "格式化的 JSON 将出现在这里..."
     },
     "base64": {
@@ -16089,13 +16105,13 @@
       "swapUnits": "交换单位"
     },
     "gradient-generator": {
-      "name": "梯度发生器",
+      "name": "渐变生成器",
       "description": "使用线性和径向选项直观地创建 CSS 渐变。",
       "seo_title": "免费在线 CSS 渐变生成器",
       "seo_description": "免费在线创建 CSS 渐变。使用 CSS 和 Tailwind 代码生成线性和径向渐变。带有颜色选择器和预设模板的可视化编辑器。"
     },
     "unicode-converter": {
-      "name": "统一码转换器",
+      "name": "Unicode 转换器",
       "description": "在多种格式的文本和 Unicode 编码之间进行转换。",
       "seo_title": "免费在线 Unicode 转换器",
       "seo_description": "免费在线转换文本和 Unicode 编码。支持 HTML 实体、CSS 转义序列和各种 Unicode 格式。国际化必不可少。"
@@ -16178,9 +16194,9 @@
       "seo_description": "免费在线反转文本字符、单词或行。具有即时预览的多种反转模式。非常适合拼图、编码和文本操作。"
     },
     "line-counter": {
-      "name": "排队计数器",
+      "name": "行数统计器",
       "description": "计算文本中的行数，并提供删除重复项、空行和排序的选项。",
-      "seo_title": "在线免费排队柜台",
+      "seo_title": "免费在线行数统计器",
       "seo_description": "免费在线计算行数、删除重复项和排序文本。获取总行、空行和唯一行的统计信息。非常适合数据清理和文本处理。"
     },
     "string-escape": {
@@ -16298,7 +16314,7 @@
       "seo_description": "免费在线比较两个 JSON 对象并查找差异。通过并排视图突出显示添加、删除和更改的值。对于 API 调试至关重要。",
       "json1": "JSON 1",
       "json2": "JSON 2",
-      "placeholder": "{“键”：“值”}",
+      "placeholder": "在此输入 JSON 数据...",
       "compare": "比较",
       "differences": "差异",
       "identical": "两个 JSON 对象是相同的"
@@ -17630,7 +17646,7 @@
       "obfuscate": "混淆",
       "renameVariables": "重命名变量",
       "stringEncoding": "字符串编码",
-      "unicodeEscape": "统一码转义",
+      "unicodeEscape": "Unicode 转义",
       "deadCodeInjection": "死代码注入",
       "controlFlowFlattening": "控制流扁平化",
       "info": "信息",

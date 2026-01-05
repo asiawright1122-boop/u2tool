@@ -20,12 +20,19 @@
   "nav": {
     "home": "Home",
     "tools": "Tools",
+    "toolCategories": "Tool Categories",
     "about": "About",
     "blog": "Blog",
+    "ranking": "Ranking",
+    "newest": "Newest",
+    "hottest": "Most Popular",
     "viewAllTools": "View All Tools",
     "searchPlaceholder": "Search tools...",
     "noResults": "No tools found",
-    "relatedTools": "Related Tools"
+    "moreResults": "more results",
+    "relatedTools": "Related Tools",
+    "more": "More",
+    "categories": "Categories"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "Free Tools",
-      "upload": "Data Upload",
-      "free": "Free Forever"
+      "usageCount": "Usage Count",
+      "usageValue": "100K+",
+      "free": "Free Forever",
+      "visitors": "Visitors"
     },
     "features": {
       "title": "Why Choose Us?",
@@ -62,6 +71,12 @@
     "toolsCount": "tools",
     "popular": "Popular Tools",
     "popularDesc": "Most used tools by our community",
+    "viewMore": "View More",
+    "backToAll": "Back to All",
+    "allCategories": "All Categories",
+    "recentTools": "Recent Tools",
+    "featuredTools": "Featured Tools",
+    "myTools": "My Tools",
     "cta": {
       "title": "Ready to Get Started?",
       "desc": "Start using our free tools today. No registration, no limits, just productivity."
@@ -2379,6 +2394,7 @@
     }
   },
   "tools": {
+    "popular": "Popular",
     "input": "Input",
     "output": "Output",
     "copy": "Copy",

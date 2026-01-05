@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/routing';
 import { 
@@ -83,6 +83,10 @@ export default async function CategoryPage({
   params: Promise<{ locale: string; id: string }>;
 }) {
   const { locale, id } = await params;
+  
+  // 设置请求 locale，确保 Link 组件正确处理 locale 前缀
+  setRequestLocale(locale);
+  
   const t = await getTranslations({ locale });
   
   // 验证分类是否存在

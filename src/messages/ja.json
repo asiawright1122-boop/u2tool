@@ -20,12 +20,19 @@
   "nav": {
     "home": "ホーム",
     "tools": "ツール",
+    "toolCategories": "ツールカテゴリー",
     "about": "概要",
     "blog": "ブログ",
+    "ranking": "ランキング",
+    "newest": "最新リリース",
+    "hottest": "人気ツール",
     "viewAllTools": "すべてのツールを見る",
     "searchPlaceholder": "ツールを検索...",
     "noResults": "ツールが見つかりません",
-    "relatedTools": "関連ツール"
+    "moreResults": "件の結果",
+    "relatedTools": "関連ツール",
+    "more": "もっと見る",
+    "categories": "カテゴリー"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "無料ツール",
-      "upload": "データアップロード",
-      "free": "永久無料"
+      "usageCount": "利用回数",
+      "usageValue": "10万+",
+      "free": "永久無料",
+      "visitors": "訪問者数"
     },
     "features": {
       "title": "選ばれる理由",
@@ -62,12 +71,19 @@
     "toolsCount": "ツール",
     "popular": "人気のツール",
     "popularDesc": "コミュニティで最も使用されているツール",
+    "viewMore": "もっと見る",
+    "backToAll": "すべてに戻る",
+    "allCategories": "すべてのカテゴリ",
+    "recentTools": "最新ツール",
+    "featuredTools": "おすすめツール",
+    "myTools": "マイツール",
     "cta": {
       "title": "始める準備はできましたか？",
       "desc": "今すぐ無料ツールを使い始めましょう。登録なし、制限なし、生産性のみ。"
     }
   },
   "tools": {
+    "popular": "人気",
     "input": "入力",
     "output": "出力",
     "copy": "コピー",
@@ -1413,7 +1429,7 @@
       "description": "構文の強調表示を使用して JSON データをフォーマットし、美しくします。 JSON を検証し、一般的なエラーを修正します。",
       "seo_title": "Free JSON Formatter & Validator Online",
       "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers.",
-      "inputPlaceholder": "{\"キー\": \"値\"}",
+      "inputPlaceholder": "ここにJSONデータを入力...",
       "outputPlaceholder": "フォーマットされた JSON がここに表示されます...",
       "detailed_description": "JSONフォーマッター は、さまざまなタスクを迅速に完了するのに役立つ実用的なオンラインツールです。JSONフォーマッター を使用すると、ソフトウェアやプラグインをインストールすることなく、さまざまなデータを簡単に処理できます。このツールはシンプルなインターフェースで使いやすく、すぐに使い始めて効率的に使用できます。開発者、デザイナー、または一般ユーザーであっても、JSONフォーマッター は作業効率の向上に役立ちます。すべての処理はブラウザでローカルに実行されるため、データの安全性が確保され、サーバーにアップロードされることはありません。JSONフォーマッター をすぐに使用して、高速で安全な無料のオンラインツールサービスを体験してください。",
       "usage_steps": [
@@ -10248,7 +10264,7 @@
       "description": "構文の強調表示を使用して JSON データをフォーマットし、美しくします。 JSON を検証し、一般的なエラーを修正します。",
       "seo_title": "オンラインの無料の JSON フォーマッタとバリデータ",
       "seo_description": "JSON データをオンラインで無料でフォーマット、整形、検証します。構文の強調表示、エラー検出、簡単なコピー。開発者に最適です。",
-      "inputPlaceholder": "{\"キー\": \"値\"}",
+      "inputPlaceholder": "ここにJSONデータを入力...",
       "outputPlaceholder": "フォーマットされた JSON がここに表示されます..."
     },
     "base64": {

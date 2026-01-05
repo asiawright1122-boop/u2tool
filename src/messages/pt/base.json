@@ -20,12 +20,19 @@
   "nav": {
     "home": "Início",
     "tools": "Ferramentas",
+    "toolCategories": "Categorias de Ferramentas",
     "about": "Sobre",
     "blog": "Blog",
+    "ranking": "Ranking",
+    "newest": "Mais Recentes",
+    "hottest": "Mais Populares",
     "viewAllTools": "Ver Todas as Ferramentas",
     "searchPlaceholder": "Pesquisar ferramentas...",
     "noResults": "Nenhuma ferramenta encontrada",
-    "relatedTools": "Ferramentas Relacionadas"
+    "moreResults": "mais resultados",
+    "relatedTools": "Ferramentas Relacionadas",
+    "more": "Mais",
+    "categories": "Categorias"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "Ferramentas Gratuitas",
-      "upload": "Upload de Dados",
-      "free": "Gratuito para Sempre"
+      "usageCount": "Vezes de uso",
+      "usageValue": "100K+",
+      "free": "Gratuito para Sempre",
+      "visitors": "Visitantes"
     },
     "features": {
       "title": "Por que nos escolher?",
@@ -62,6 +71,12 @@
     "toolsCount": "ferramentas",
     "popular": "Ferramentas Populares",
     "popularDesc": "Ferramentas mais usadas pela nossa comunidade",
+    "viewMore": "Ver mais",
+    "backToAll": "Voltar para tudo",
+    "allCategories": "Todas as categorias",
+    "recentTools": "Ferramentas recentes",
+    "featuredTools": "Ferramentas em destaque",
+    "myTools": "Minhas ferramentas",
     "cta": {
       "title": "Pronto para começar?",
       "desc": "Comece a usar nossas ferramentas gratuitas hoje. Sem registro, sem limites, apenas produtividade."
@@ -2559,6 +2574,7 @@
     }
   },
   "tools": {
+    "popular": "Popular",
     "input": "Entrada",
     "output": "Saída",
     "copy": "Copiar",

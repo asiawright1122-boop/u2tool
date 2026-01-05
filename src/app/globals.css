@@ -437,3 +437,242 @@ img, video {
   mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
 }
+
+
+/* ============================================
+ * Sidebar Navigation Styles
+ * ============================================ */
+
+/* 侧边栏分类项 */
+.sidebar-item {
+  @apply flex items-center gap-3 px-3 py-2.5 rounded-lg 
+         transition-all duration-200
+         text-gray-600 dark:text-gray-400 
+         hover:bg-gray-100 dark:hover:bg-gray-800 
+         hover:text-gray-900 dark:hover:text-white;
+}
+
+/* 侧边栏分类项 - 活动状态 */
+.sidebar-item-active {
+  @apply bg-blue-50 dark:bg-blue-900/30 
+         text-blue-600 dark:text-blue-400 
+         border-l-3 border-blue-500;
+}
+
+/* 侧边栏分类计数徽章 */
+.sidebar-badge {
+  @apply text-xs px-1.5 py-0.5 rounded-full
+         bg-gray-200 dark:bg-gray-700 
+         text-gray-500 dark:text-gray-400;
+}
+
+.sidebar-badge-active {
+  @apply bg-blue-100 dark:bg-blue-800 
+         text-blue-600 dark:text-blue-300;
+}
+
+/* ============================================
+ * Mobile Bottom Navigation Styles
+ * ============================================ */
+
+/* 移动端底部导航 */
+.mobile-bottom-nav {
+  @apply fixed bottom-0 left-0 right-0 z-50
+         bg-white dark:bg-gray-900 
+         border-t border-gray-200 dark:border-gray-800;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 移动端导航项 */
+.mobile-nav-item {
+  @apply flex flex-col items-center gap-1 px-3 py-2 
+         transition-colors
+         text-gray-600 dark:text-gray-400 
+         hover:text-blue-600 dark:hover:text-blue-400;
+}
+
+.mobile-nav-item-active {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+/* 移动端分类面板 */
+.mobile-category-panel {
+  @apply absolute bottom-16 left-0 right-0 
+         bg-white dark:bg-gray-900 
+         rounded-t-2xl p-4 
+         max-h-[60vh] overflow-y-auto;
+}
+
+/* 移动端分类网格 */
+.mobile-category-grid {
+  @apply grid grid-cols-4 gap-3;
+}
+
+/* 移动端分类项 */
+.mobile-category-item {
+  @apply flex flex-col items-center gap-1 p-3 rounded-xl 
+         transition-colors
+         text-gray-600 dark:text-gray-400 
+         hover:bg-gray-100 dark:hover:bg-gray-800;
+}
+
+.mobile-category-item-active {
+  @apply bg-blue-50 dark:bg-blue-900/30 
+         text-blue-600 dark:text-blue-400;
+}
+
+/* ============================================
+ * Layout Responsive Styles
+ * ============================================ */
+
+/* 主内容区域 - 响应式边距 */
+.main-content {
+  @apply transition-all duration-300;
+}
+
+/* 桌面端：左侧边栏展开 */
+@media (min-width: 1024px) {
+  .main-content-with-sidebar {
+    margin-left: 200px;
+  }
+  
+  .main-content-with-right-sidebar {
+    margin-right: 280px;
+  }
+}
+
+/* 平板端：左侧边栏折叠 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-content-with-sidebar {
+    margin-left: 64px;
+  }
+}
+
+/* 移动端：底部导航空间 */
+@media (max-width: 767px) {
+  .main-content-with-mobile-nav {
+    padding-bottom: 80px;
+  }
+}
+
+/* ============================================
+ * Tool Card Variants
+ * ============================================ */
+
+/* 网格视图卡片 */
+.tool-card-grid {
+  @apply p-4 bg-white dark:bg-gray-800/50 
+         border border-gray-200 dark:border-gray-700/50 
+         rounded-xl transition-all duration-200
+         hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10;
+}
+
+/* 列表视图卡片 */
+.tool-card-list {
+  @apply p-4 bg-white dark:bg-gray-800/50 
+         border border-gray-200 dark:border-gray-700/50 
+         rounded-lg transition-all duration-200
+         hover:border-blue-500/50 hover:bg-gray-50 dark:hover:bg-gray-800;
+}
+
+/* 紧凑视图卡片 */
+.tool-card-compact {
+  @apply p-2 bg-white dark:bg-gray-800/50 
+         border border-gray-200 dark:border-gray-700/50 
+         rounded-lg transition-all duration-200
+         hover:border-blue-500/50;
+}
+
+/* 热门工具徽章 */
+.tool-badge-popular {
+  @apply inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-full
+         bg-orange-100 dark:bg-orange-900/30 
+         text-orange-600 dark:text-orange-400;
+}
+
+/* ============================================
+ * Stats Panel Styles
+ * ============================================ */
+
+.stats-panel {
+  @apply p-4 bg-white dark:bg-gray-800/50 
+         border border-gray-200 dark:border-gray-700/50 
+         rounded-xl;
+}
+
+.stats-item {
+  @apply flex items-center gap-3 p-3 
+         bg-gray-50 dark:bg-gray-900/50 
+         rounded-lg;
+}
+
+.stats-icon {
+  @apply w-10 h-10 flex items-center justify-center 
+         rounded-lg text-lg;
+}
+
+.stats-icon-blue {
+  @apply bg-blue-100 dark:bg-blue-900/30;
+}
+
+.stats-icon-green {
+  @apply bg-green-100 dark:bg-green-900/30;
+}
+
+.stats-icon-purple {
+  @apply bg-purple-100 dark:bg-purple-900/30;
+}
+
+/* ============================================
+ * Recent Tools List Styles
+ * ============================================ */
+
+.recent-tools-list {
+  @apply space-y-2;
+}
+
+.recent-tool-item {
+  @apply flex items-center gap-3 p-2 
+         rounded-lg transition-colors
+         hover:bg-gray-100 dark:hover:bg-gray-800;
+}
+
+/* ============================================
+ * Featured Tools Grid Styles
+ * ============================================ */
+
+.featured-category-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.featured-category-title {
+  @apply flex items-center gap-2 text-lg font-semibold 
+         text-gray-900 dark:text-white 
+         hover:text-blue-600 dark:hover:text-blue-400 
+         transition-colors;
+}
+
+.featured-tools-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+}
+
+/* ============================================
+ * Safe Area Insets (iOS)
+ * ============================================ */
+
+.safe-area-inset-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-inset-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* ============================================
+ * Border Width Utilities
+ * ============================================ */
+
+.border-l-3 {
+  border-left-width: 3px;
+}
+

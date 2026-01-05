@@ -9,6 +9,7 @@ import { loadBaseMessages, type SupportedLocale } from '@/lib/translations';
 
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import GlobalSidebar from '@/components/layout/GlobalSidebar';
 import WebVitalsReporter from '@/components/WebVitalsReporter';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';
@@ -264,10 +265,19 @@ export default async function LocaleLayout({
           disableTransitionOnChange={false}
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <div className="flex flex-col min-h-screen">
+            <div className="min-h-screen">
+              {/* 全局侧边栏 */}
+              <GlobalSidebar />
+              {/* 顶部导航 */}
               <Header />
-              <main className="flex-grow pt-16 bg-white dark:bg-black">{children}</main>
-              <Footer />
+              {/* 主内容区域 - 响应式左边距和顶部内边距 */}
+              <main className="ml-0 md:ml-[64px] lg:ml-[220px] pt-16 pb-20 md:pb-0 min-h-screen bg-white dark:bg-black">
+                {children}
+              </main>
+              {/* 页脚 - 响应式左边距 */}
+              <div className="ml-0 md:ml-[64px] lg:ml-[220px]">
+                <Footer />
+              </div>
             </div>
             {/* Web Vitals 监控 */}
             <WebVitalsReporter />

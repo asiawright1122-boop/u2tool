@@ -20,12 +20,19 @@
   "nav": {
     "home": "홈",
     "tools": "도구",
+    "toolCategories": "도구 카테고리",
     "about": "소개",
     "blog": "블로그",
+    "ranking": "랭킹",
+    "newest": "최신 출시",
+    "hottest": "인기 도구",
     "viewAllTools": "모든 도구 보기",
     "searchPlaceholder": "도구 검색...",
     "noResults": "도구를 찾을 수 없습니다.",
-    "relatedTools": "관련 도구"
+    "moreResults": "개 더 보기",
+    "relatedTools": "관련 도구",
+    "more": "더보기",
+    "categories": "카테고리"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "무료 도구",
-      "upload": "데이터 업로드",
-      "free": "평생 무료"
+      "usageCount": "사용 횟수",
+      "usageValue": "10만+",
+      "free": "평생 무료",
+      "visitors": "방문자"
     },
     "features": {
       "title": "우리를 선택해야 하는 이유",
@@ -62,6 +71,12 @@
     "toolsCount": "도구",
     "popular": "인기 도구",
     "popularDesc": "커뮤니티에서 가장 많이 사용되는 도구",
+    "viewMore": "더 보기",
+    "backToAll": "전체로 돌아가기",
+    "allCategories": "모든 카테고리",
+    "recentTools": "최신 도구",
+    "featuredTools": "추천 도구",
+    "myTools": "내 도구",
     "cta": {
       "title": "시작할 준비가 되셨나요?",
       "desc": "오늘 바로 무료 도구를 사용해 보세요. 등록 없음, 제한 없음, 생산성 향상."
@@ -2379,6 +2394,7 @@
     }
   },
   "tools": {
+    "popular": "인기",
     "input": "입력",
     "output": "출력",
     "copy": "복사",

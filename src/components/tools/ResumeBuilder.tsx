@@ -208,30 +208,81 @@ export default function ResumeBuilder() {
       </div>
 
       {activeTab === 'edit' ? (
-        <div className="grid lg:grid-cols-2 gap-6">
-          <div className="space-y-6">
-            <section className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
-              <h3 className="font-semibold text-gray-900 dark:text-white">{t('personalInfo')}</h3>
-              <div className="flex items-center gap-4">
-                <div className="relative">
-                  {photo ? <img src={photo} alt="Photo" className="w-20 h-20 rounded-full object-cover" /> : <div className="w-20 h-20 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-2xl">👤</div>}
-                  <input ref={fileInputRef} type="file" accept="image/*" onChange={handlePhotoUpload} className="hidden" />
-                  <button onClick={() => fileInputRef.current?.click()} className="absolute -bottom-1 -right-1 w-8 h-8 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700">📷</button>
-                </div>
-                <div className="flex-1 grid grid-cols-2 gap-2">
-                  <input value={name} onChange={e => setName(e.target.value)} placeholder={t('placeholders.name')} className="col-span-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
-                  <input value={title} onChange={e => setTitle(e.target.value)} placeholder={t('placeholders.title')} className="col-span-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
-                </div>
+        <div className="max-w-4xl mx-auto space-y-6">
+          {/* 个人信息 */}
+          <section className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
+            <h3 className="font-semibold text-gray-900 dark:text-white">{t('personalInfo')}</h3>
+            <div className="flex items-center gap-4">
+              <div className="relative">
+                {photo ? <img src={photo} alt="Photo" className="w-20 h-20 rounded-full object-cover" /> : <div className="w-20 h-20 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-2xl">👤</div>}
+                <input ref={fileInputRef} type="file" accept="image/*" onChange={handlePhotoUpload} className="hidden" />
+                <button onClick={() => fileInputRef.current?.click()} className="absolute -bottom-1 -right-1 w-8 h-8 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700">📷</button>
               </div>
-              <div className="grid grid-cols-2 gap-2">
-                <input value={email} onChange={e => setEmail(e.target.value)} placeholder={t('placeholders.email')} type="email" className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
-                <input value={phone} onChange={e => setPhone(e.target.value)} placeholder={t('placeholders.phone')} className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
-                <input value={location} onChange={e => setLocation(e.target.value)} placeholder={t('placeholders.location')} className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
-                <input value={website} onChange={e => setWebsite(e.target.value)} placeholder={t('placeholders.website')} className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+              <div className="flex-1 grid grid-cols-2 gap-2">
+                <input value={name} onChange={e => setName(e.target.value)} placeholder={t('placeholders.name')} className="col-span-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+                <input value={title} onChange={e => setTitle(e.target.value)} placeholder={t('placeholders.title')} className="col-span-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
               </div>
-              <textarea value={summary} onChange={e => setSummary(e.target.value)} placeholder={t('summaryPlaceholder')} rows={3} className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white resize-none" />
-            </section>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <input value={email} onChange={e => setEmail(e.target.value)} placeholder={t('placeholders.email')} type="email" className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+              <input value={phone} onChange={e => setPhone(e.target.value)} placeholder={t('placeholders.phone')} className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+              <input value={location} onChange={e => setLocation(e.target.value)} placeholder={t('placeholders.location')} className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+              <input value={website} onChange={e => setWebsite(e.target.value)} placeholder={t('placeholders.website')} className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
+            </div>
+            <textarea value={summary} onChange={e => setSummary(e.target.value)} placeholder={t('summaryPlaceholder')} rows={3} className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white resize-none" />
+          </section>
 
+          {/* 工作经历 */}
+          <section className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
+            <div className="flex justify-between items-center">
+              <h3 className="font-semibold text-gray-900 dark:text-white">{t('experience')}</h3>
+              <button onClick={addExperience} className="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700">{t('addExperience')}</button>
+            </div>
+            {experiences.map(exp => (
+              <div key={exp.id} className="border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
+                <div className="flex justify-between">
+                  <input value={exp.company} onChange={e => updateExperience(exp.id, 'company', e.target.value)} placeholder={t('company')} className="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <button onClick={() => removeExperience(exp.id)} className="ml-2 text-red-500 hover:text-red-700">🗑️</button>
+                </div>
+                <input value={exp.position} onChange={e => updateExperience(exp.id, 'position', e.target.value)} placeholder={t('position')} className="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                <div className="flex gap-2 items-center">
+                  <input type="month" value={exp.startDate} onChange={e => updateExperience(exp.id, 'startDate', e.target.value)} className="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <span className="text-gray-500">-</span>
+                  <input type="month" value={exp.endDate} onChange={e => updateExperience(exp.id, 'endDate', e.target.value)} disabled={exp.current} className="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm disabled:opacity-50" />
+                  <label className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400">
+                    <input type="checkbox" checked={exp.current} onChange={e => updateExperience(exp.id, 'current', e.target.checked)} />
+                    {t('present')}
+                  </label>
+                </div>
+                <textarea value={exp.description} onChange={e => updateExperience(exp.id, 'description', e.target.value)} placeholder={t('jobDescription')} rows={2} className="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm resize-none" />
+              </div>
+            ))}
+          </section>
+
+          {/* 教育背景 */}
+          <section className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
+            <div className="flex justify-between items-center">
+              <h3 className="font-semibold text-gray-900 dark:text-white">{t('education')}</h3>
+              <button onClick={addEducation} className="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700">{t('addEducation')}</button>
+            </div>
+            {educations.map(edu => (
+              <div key={edu.id} className="border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
+                <div className="flex justify-between">
+                  <input value={edu.school} onChange={e => updateEducation(edu.id, 'school', e.target.value)} placeholder={t('school')} className="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <button onClick={() => removeEducation(edu.id)} className="ml-2 text-red-500 hover:text-red-700">🗑️</button>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <input value={edu.degree} onChange={e => updateEducation(edu.id, 'degree', e.target.value)} placeholder={t('degree')} className="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input value={edu.field} onChange={e => updateEducation(edu.id, 'field', e.target.value)} placeholder={t('fieldOfStudy')} className="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input type="month" value={edu.graduationDate} onChange={e => updateEducation(edu.id, 'graduationDate', e.target.value)} className="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                  <input value={edu.gpa || ''} onChange={e => updateEducation(edu.id, 'gpa', e.target.value)} placeholder={t('gpa')} className="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
+                </div>
+              </div>
+            ))}
+          </section>
+
+          {/* 技能和语言 - 并排显示 */}
+          <div className="grid md:grid-cols-2 gap-6">
             <section className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
               <h3 className="font-semibold text-gray-900 dark:text-white">{t('skills')}</h3>
               <div className="flex gap-2">
@@ -271,56 +322,6 @@ export default function ResumeBuilder() {
                   ))}
                 </div>
               )}
-            </section>
-          </div>
-
-
-          <div className="space-y-6">
-            <section className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
-              <div className="flex justify-between items-center">
-                <h3 className="font-semibold text-gray-900 dark:text-white">{t('experience')}</h3>
-                <button onClick={addExperience} className="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700">{t('addExperience')}</button>
-              </div>
-              {experiences.map(exp => (
-                <div key={exp.id} className="border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
-                  <div className="flex justify-between">
-                    <input value={exp.company} onChange={e => updateExperience(exp.id, 'company', e.target.value)} placeholder={t('company')} className="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                    <button onClick={() => removeExperience(exp.id)} className="ml-2 text-red-500 hover:text-red-700">🗑️</button>
-                  </div>
-                  <input value={exp.position} onChange={e => updateExperience(exp.id, 'position', e.target.value)} placeholder={t('position')} className="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                  <div className="flex gap-2 items-center">
-                    <input type="month" value={exp.startDate} onChange={e => updateExperience(exp.id, 'startDate', e.target.value)} className="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                    <span className="text-gray-500">-</span>
-                    <input type="month" value={exp.endDate} onChange={e => updateExperience(exp.id, 'endDate', e.target.value)} disabled={exp.current} className="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm disabled:opacity-50" />
-                    <label className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400">
-                      <input type="checkbox" checked={exp.current} onChange={e => updateExperience(exp.id, 'current', e.target.checked)} />
-                      {t('present')}
-                    </label>
-                  </div>
-                  <textarea value={exp.description} onChange={e => updateExperience(exp.id, 'description', e.target.value)} placeholder={t('jobDescription')} rows={2} className="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm resize-none" />
-                </div>
-              ))}
-            </section>
-
-            <section className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-4">
-              <div className="flex justify-between items-center">
-                <h3 className="font-semibold text-gray-900 dark:text-white">{t('education')}</h3>
-                <button onClick={addEducation} className="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700">{t('addEducation')}</button>
-              </div>
-              {educations.map(edu => (
-                <div key={edu.id} className="border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
-                  <div className="flex justify-between">
-                    <input value={edu.school} onChange={e => updateEducation(edu.id, 'school', e.target.value)} placeholder={t('school')} className="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                    <button onClick={() => removeEducation(edu.id)} className="ml-2 text-red-500 hover:text-red-700">🗑️</button>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    <input value={edu.degree} onChange={e => updateEducation(edu.id, 'degree', e.target.value)} placeholder={t('degree')} className="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                    <input value={edu.field} onChange={e => updateEducation(edu.id, 'field', e.target.value)} placeholder={t('fieldOfStudy')} className="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                    <input type="month" value={edu.graduationDate} onChange={e => updateEducation(edu.id, 'graduationDate', e.target.value)} className="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                    <input value={edu.gpa || ''} onChange={e => updateEducation(edu.id, 'gpa', e.target.value)} placeholder={t('gpa')} className="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                  </div>
-                </div>
-              ))}
             </section>
           </div>
         </div>

@@ -19,10 +19,8 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 禁用 Turbopack（解决中文路径 bug）
-  // 参考: https://github.com/vercel/next.js/issues/turbopack-unicode
+  // Turbopack 配置 - 明确设置根目录
   turbopack: {
-    // 设置根目录以避免检测到其他包含中文的路径
     root: __dirname,
   },
   

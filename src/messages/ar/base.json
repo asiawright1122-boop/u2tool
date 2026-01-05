@@ -20,12 +20,19 @@
   "nav": {
     "home": "الرئيسية",
     "tools": "أدوات",
+    "toolCategories": "فئات الأدوات",
     "about": "حول",
     "blog": "المدونة",
+    "ranking": "الترتيب",
+    "newest": "الأحدث",
+    "hottest": "الأكثر شعبية",
     "viewAllTools": "عرض جميع الأدوات",
     "searchPlaceholder": "بحث عن أدوات...",
     "noResults": "لم يتم العثور على أدوات",
-    "relatedTools": "أدوات ذات صلة"
+    "moreResults": "نتائج إضافية",
+    "relatedTools": "أدوات ذات صلة",
+    "more": "المزيد",
+    "categories": "الفئات"
   },
   "home": {
     "hero": {
@@ -38,8 +45,10 @@
     },
     "stats": {
       "tools": "أدوات مجانية",
-      "upload": "تحميل البيانات",
-      "free": "مجاني للأبد"
+      "usageCount": "عدد الاستخدامات",
+      "usageValue": "+100K",
+      "free": "مجاني للأبد",
+      "visitors": "الزوار"
     },
     "features": {
       "title": "لماذا تختارنا؟",
@@ -62,6 +71,12 @@
     "toolsCount": "أدوات",
     "popular": "أدوات شائعة",
     "popularDesc": "الأدوات الأكثر استخداما من قبل مجتمعنا",
+    "viewMore": "عرض المزيد",
+    "backToAll": "العودة للكل",
+    "allCategories": "جميع الفئات",
+    "recentTools": "أدوات حديثة",
+    "featuredTools": "أدوات مميزة",
+    "myTools": "أدواتي",
     "cta": {
       "title": "مستعد للبدء؟",
       "desc": "ابدأ في استخدام أدواتنا المجانية اليوم. لا تسجيل ، لا حدود ، مجرد إنتاجية."
@@ -2559,6 +2574,7 @@
     }
   },
   "tools": {
+    "popular": "شائع",
     "input": "إدخال",
     "output": "إخراج",
     "copy": "نسخ",
