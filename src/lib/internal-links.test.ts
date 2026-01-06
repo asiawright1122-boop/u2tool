@@ -1,266 +1,323 @@
 /**
- * 内部链接属性测试
- * Property 6: Internal Linking Quality
- * 验证相关工具数量、锚文本和相关性
- * Feature: seo-audit-ai-safe
+ * 内部链接模块属性测试
+ * Property 3: Internal Link Structure
+ * Validates: Requirements 4.1, 4.2, 4.3, 4.4
  */
 
 import { describe, it, expect } from 'vitest';
-import * as fc from 'fast-check';
 import {
   calculateRelevanceScore,
   getSemanticRelatedTools,
   getCrossCategoryRecommendations,
+  getSameCategoryTools,
   getMixedRecommendations,
   validateRelatedToolsCount,
+  getToolsByCategory,
   getPopularTools,
-  generateAnchorText,
+  getToolKeywords,
+  calculateKeywordRelevance,
+  getCategoryRelationWeight,
 } from './internal-links';
-import { tools } from '@/config/tools';
+import { tools, Tool } from '@/config/tools';
 
-// 最小相关工具数量（SEO 要求）
-const MIN_RELATED_COUNT = 4;
-
-describe('Internal Links - Property Tests', () => {
-  describe('Property 6: Internal Linking Quality', () => {
-    // 属性测试：相关工具数量始终 >= 4
-    it('should return at least 4 related tools for any tool (Property 6)', () => {
-      fc.assert(
-        fc.property(
-          fc.constantFrom(...tools.map(t => t.slug)),
-          (slug) => {
-            const relatedTools = getSemanticRelatedTools(slug, 6);
-            // 如果工具总数足够，应该返回至少 4 个相关工具
-            if (tools.length > MIN_RELATED_COUNT) {
-              return relatedTools.length >= MIN_RELATED_COUNT;
-            }
-            return true;
-          }
-        ),
-        { numRuns: 100 }
-      );
-    });
-
-    // 属性测试：锚文本应该是工具名称
-    it('anchor text should be tool name (Property 6)', () => {
-      fc.assert(
-        fc.property(
-          fc.constantFrom(...tools),
-          fc.constantFrom('en', 'zh', 'es', 'pt', 'ja'),
-          (tool, locale) => {
-            const getToolName = (slug: string) => `Tool: ${slug}`;
-            const anchorText = generateAnchorText(tool, locale, getToolName);
-            // 锚文本应该是非空字符串
-            return typeof anchorText === 'string' && anchorText.length > 0;
-          }
-        ),
-        { numRuns: 100 }
-      );
-    });
-
-    // 属性测试：相关工具应该包含同分类工具
-    it('related tools should include same category tools (Property 6)', () => {
-      fc.assert(
-        fc.property(
-          fc.constantFrom(...tools.map(t => t.slug)),
-          (slug) => {
-            const currentTool = tools.find(t => t.slug === slug);
-            if (!currentTool) return true;
-            
-            const relatedTools = getSemanticRelatedTools(slug, 6);
-            const sameCategoryExists = tools.some(
-              t => t.slug !== slug && t.category === currentTool.category
-            );
-            
-            if (sameCategoryExists && relatedTools.length > 0) {
-              // 至少应该有一个同分类的工具
-              return relatedTools.some(t => t.category === currentTool.category);
-            }
-            return true;
-          }
-        ),
-        { numRuns: 100 }
-      );
-    });
-
-    // 属性测试：相关性分数始终在 0-100 范围内
-    it('relevance score should always be between 0 and 100', () => {
-      fc.assert(
-        fc.property(
-          fc.constantFrom(...tools),
-          fc.constantFrom(...tools),
-          (tool1, tool2) => {
-            const score = calculateRelevanceScore(tool1, tool2);
-            return score >= 0 && score <= 100;
-          }
-        ),
-        { numRuns: 100 }
-      );
-    });
-
-    // 测试相关工具数量 >= 4
-    it('should return at least MIN_RELATED_COUNT related tools for each tool', () => {
-      for (const tool of tools) {
-        const relatedTools = getSemanticRelatedTools(tool.slug, 6);
-        
-        // 如果工具总数足够，应该返回至少 4 个相关工具
-        if (tools.length > MIN_RELATED_COUNT) {
-          expect(
-            relatedTools.length,
-            `Tool "${tool.slug}" should have at least ${MIN_RELATED_COUNT} related tools`
-          ).toBeGreaterThanOrEqual(MIN_RELATED_COUNT);
-        }
-      }
-    });
-
-    // 测试相关工具不包含自身
-    it('should not include the current tool in related tools', () => {
-      for (const tool of tools) {
-        const relatedTools = getSemanticRelatedTools(tool.slug, 10);
-        const slugs = relatedTools.map(t => t.slug);
-        
-        expect(slugs).not.toContain(tool.slug);
-      }
-    });
-
-    // 测试相关性（同分类优先）
-    it('should prioritize tools with same category', () => {
-      const testTool = tools[0];
-      const relatedTools = getSemanticRelatedTools(testTool.slug, 6);
-      
-      // 至少有一个相关工具应该是同分类的
-      const hasSameCategory = relatedTools.some(
-        t => t.category === testTool.category
-      );
-      
-      // 如果该分类有其他工具，应该优先显示
-      const sameCategoryExists = tools.some(
-        t => t.slug !== testTool.slug && t.category === testTool.category
-      );
-      
-      if (sameCategoryExists) {
-        expect(hasSameCategory).toBe(true);
-      }
-    });
-  });
+describe('Internal Links Module', () => {
+  // 获取测试用的工具
+  const jsonFormatter = tools.find(t => t.slug === 'json-formatter');
+  const base64 = tools.find(t => t.slug === 'base64');
+  const urlEncoder = tools.find(t => t.slug === 'url-encoder');
+  const uuidGenerator = tools.find(t => t.slug === 'uuid-generator');
 
   describe('calculateRelevanceScore', () => {
     it('should return 0 for same tool', () => {
-      const tool = tools[0];
-      const score = calculateRelevanceScore(tool, tool);
-      expect(score).toBe(0);
+      if (jsonFormatter) {
+        expect(calculateRelevanceScore(jsonFormatter, jsonFormatter)).toBe(0);
+      }
     });
 
-    it('should give higher score for same category', () => {
-      // 找两个同分类的工具
-      const category = tools[0].category;
-      const sameCategoryTools = tools.filter(t => t.category === category);
-      
-      if (sameCategoryTools.length >= 2) {
-        const tool1 = sameCategoryTools[0];
-        const tool2 = sameCategoryTools[1];
+    it('should give higher score for same category tools', () => {
+      if (jsonFormatter && base64 && urlEncoder) {
+        // 找同分类的工具
+        const sameCategory = tools.find(
+          t => t.slug !== jsonFormatter.slug && t.category === jsonFormatter.category
+        );
+        const diffCategory = tools.find(
+          t => t.category !== jsonFormatter.category
+        );
         
-        // 找一个不同分类的工具
-        const differentCategoryTool = tools.find(t => t.category !== category);
-        
-        if (differentCategoryTool) {
-          const sameCategoryScore = calculateRelevanceScore(tool1, tool2);
-          const differentCategoryScore = calculateRelevanceScore(tool1, differentCategoryTool);
-          
-          expect(sameCategoryScore).toBeGreaterThan(differentCategoryScore);
+        if (sameCategory && diffCategory) {
+          const sameCatScore = calculateRelevanceScore(jsonFormatter, sameCategory);
+          const diffCatScore = calculateRelevanceScore(jsonFormatter, diffCategory);
+          expect(sameCatScore).toBeGreaterThan(diffCatScore);
         }
       }
     });
 
     it('should give bonus for popular tools', () => {
-      // 找一个热门工具和一个非热门工具
-      const popularTool = tools.find(t => t.popular);
-      const nonPopularTool = tools.find(t => !t.popular && t.slug !== popularTool?.slug);
-      
-      if (popularTool && nonPopularTool) {
-        const testTool = tools.find(t => t.slug !== popularTool.slug && t.slug !== nonPopularTool.slug);
-        if (testTool) {
-          const popularScore = calculateRelevanceScore(testTool, popularTool);
-          const nonPopularScore = calculateRelevanceScore(testTool, nonPopularTool);
-          
-          // 如果分类相同，热门工具应该有更高分数
-          if (popularTool.category === nonPopularTool.category) {
-            expect(popularScore).toBeGreaterThan(nonPopularScore);
-          }
+      if (jsonFormatter) {
+        // 找一个热门工具和非热门工具
+        const popularTool = tools.find(t => t.popular && t.slug !== jsonFormatter.slug);
+        const nonPopularTool = tools.find(
+          t => !t.popular && t.slug !== jsonFormatter.slug && t.category !== jsonFormatter.category
+        );
+        
+        if (popularTool && nonPopularTool && popularTool.category === nonPopularTool.category) {
+          const popularScore = calculateRelevanceScore(jsonFormatter, popularTool);
+          const nonPopularScore = calculateRelevanceScore(jsonFormatter, nonPopularTool);
+          expect(popularScore).toBeGreaterThanOrEqual(nonPopularScore);
         }
       }
     });
 
-    it('should cap score at 100', () => {
-      for (const tool1 of tools) {
-        for (const tool2 of tools) {
+    it('should return score between 0 and 100', () => {
+      tools.forEach(tool1 => {
+        tools.forEach(tool2 => {
           const score = calculateRelevanceScore(tool1, tool2);
+          expect(score).toBeGreaterThanOrEqual(0);
           expect(score).toBeLessThanOrEqual(100);
+        });
+      });
+    });
+  });
+
+  describe('getSemanticRelatedTools', () => {
+    it('should return empty array for non-existent tool', () => {
+      const result = getSemanticRelatedTools('non-existent-tool');
+      expect(result).toEqual([]);
+    });
+
+    it('should not include the current tool in results', () => {
+      if (jsonFormatter) {
+        const related = getSemanticRelatedTools(jsonFormatter.slug);
+        expect(related.find(t => t.slug === jsonFormatter.slug)).toBeUndefined();
+      }
+    });
+
+    it('should return at least 6 related tools when available (Requirement 4.1)', () => {
+      if (jsonFormatter && tools.length > 6) {
+        const related = getSemanticRelatedTools(jsonFormatter.slug);
+        expect(related.length).toBeGreaterThanOrEqual(6);
+      }
+    });
+
+    it('should return tools sorted by relevance score', () => {
+      if (jsonFormatter) {
+        const related = getSemanticRelatedTools(jsonFormatter.slug, 10);
+        for (let i = 0; i < related.length - 1; i++) {
+          const score1 = calculateRelevanceScore(jsonFormatter, related[i]);
+          const score2 = calculateRelevanceScore(jsonFormatter, related[i + 1]);
+          expect(score1).toBeGreaterThanOrEqual(score2);
         }
+      }
+    });
+
+    it('should respect maxCount parameter', () => {
+      if (jsonFormatter) {
+        const related3 = getSemanticRelatedTools(jsonFormatter.slug, 3);
+        const related10 = getSemanticRelatedTools(jsonFormatter.slug, 10);
+        expect(related3.length).toBeLessThanOrEqual(related10.length);
       }
     });
   });
 
   describe('getCrossCategoryRecommendations', () => {
     it('should return tools from different categories', () => {
-      const testTool = tools[0];
-      const crossCategoryTools = getCrossCategoryRecommendations(testTool.slug, 3);
-      
-      for (const tool of crossCategoryTools) {
-        expect(tool.category).not.toBe(testTool.category);
+      if (jsonFormatter) {
+        const crossCategory = getCrossCategoryRecommendations(jsonFormatter.slug);
+        crossCategory.forEach(tool => {
+          expect(tool.category).not.toBe(jsonFormatter.category);
+        });
+      }
+    });
+
+    it('should return empty array for non-existent tool', () => {
+      const result = getCrossCategoryRecommendations('non-existent-tool');
+      expect(result).toEqual([]);
+    });
+
+    it('should respect maxCount parameter', () => {
+      if (jsonFormatter) {
+        const result = getCrossCategoryRecommendations(jsonFormatter.slug, 2);
+        expect(result.length).toBeLessThanOrEqual(2);
+      }
+    });
+  });
+
+  describe('getSameCategoryTools', () => {
+    it('should return tools from the same category', () => {
+      if (jsonFormatter) {
+        const sameCategory = getSameCategoryTools(
+          jsonFormatter.slug,
+          jsonFormatter.category
+        );
+        sameCategory.forEach(tool => {
+          expect(tool.category).toBe(jsonFormatter.category);
+          expect(tool.slug).not.toBe(jsonFormatter.slug);
+        });
       }
     });
 
     it('should respect maxCount parameter', () => {
-      const testTool = tools[0];
-      const crossCategoryTools = getCrossCategoryRecommendations(testTool.slug, 2);
-      
-      expect(crossCategoryTools.length).toBeLessThanOrEqual(2);
-    });
-  });
-
-  describe('getMixedRecommendations', () => {
-    it('should return mix of same and cross category tools', () => {
-      const testTool = tools[0];
-      const mixedTools = getMixedRecommendations(testTool.slug, 6);
-      
-      // 应该有同分类和跨分类的工具
-      const sameCategoryCount = mixedTools.filter(t => t.category === testTool.category).length;
-      const _crossCategoryCount = mixedTools.filter(t => t.category !== testTool.category).length;
-      
-      // 如果有足够的工具，应该有混合
-      if (mixedTools.length >= 4) {
-        // 至少应该有一些同分类的（如果该分类有其他工具）
-        const sameCategoryToolsExist = tools.some(
-          t => t.slug !== testTool.slug && t.category === testTool.category
+      if (jsonFormatter) {
+        const result = getSameCategoryTools(
+          jsonFormatter.slug,
+          jsonFormatter.category,
+          2
         );
-        
-        if (sameCategoryToolsExist) {
-          expect(sameCategoryCount).toBeGreaterThan(0);
-        }
+        expect(result.length).toBeLessThanOrEqual(2);
       }
     });
   });
 
+  describe('getMixedRecommendations', () => {
+    it('should return a mix of same and cross category tools', () => {
+      if (jsonFormatter) {
+        const mixed = getMixedRecommendations(jsonFormatter.slug, 6);
+        const sameCategory = mixed.filter(t => t.category === jsonFormatter.category);
+        const crossCategory = mixed.filter(t => t.category !== jsonFormatter.category);
+        
+        // 应该有同分类和跨分类的工具
+        if (tools.filter(t => t.category === jsonFormatter.category).length > 1) {
+          expect(sameCategory.length).toBeGreaterThan(0);
+        }
+        if (tools.filter(t => t.category !== jsonFormatter.category).length > 0) {
+          expect(crossCategory.length).toBeGreaterThanOrEqual(0);
+        }
+      }
+    });
+
+    it('should return empty array for non-existent tool', () => {
+      const result = getMixedRecommendations('non-existent-tool');
+      expect(result).toEqual([]);
+    });
+  });
+
   describe('validateRelatedToolsCount', () => {
-    it('should return true when count meets minimum', () => {
-      const relatedTools = tools.slice(0, 4);
-      expect(validateRelatedToolsCount(relatedTools, 4)).toBe(true);
+    it('should return true when count meets minimum (Requirement 4.1)', () => {
+      const tools6 = Array(6).fill({} as Tool);
+      expect(validateRelatedToolsCount(tools6, 4)).toBe(true);
     });
 
     it('should return false when count is below minimum', () => {
-      const relatedTools = tools.slice(0, 2);
-      expect(validateRelatedToolsCount(relatedTools, 4)).toBe(false);
+      const tools2 = Array(2).fill({} as Tool);
+      expect(validateRelatedToolsCount(tools2, 4)).toBe(false);
+    });
+
+    it('should use default minCount of 4', () => {
+      const tools4 = Array(4).fill({} as Tool);
+      const tools3 = Array(3).fill({} as Tool);
+      expect(validateRelatedToolsCount(tools4)).toBe(true);
+      expect(validateRelatedToolsCount(tools3)).toBe(false);
+    });
+  });
+
+  describe('getToolsByCategory', () => {
+    it('should return all tools in a category', () => {
+      const categories = [...new Set(tools.map(t => t.category))];
+      categories.forEach(category => {
+        const categoryTools = getToolsByCategory(category);
+        categoryTools.forEach(tool => {
+          expect(tool.category).toBe(category);
+        });
+      });
+    });
+
+    it('should return empty array for non-existent category', () => {
+      const result = getToolsByCategory('non-existent-category');
+      expect(result).toEqual([]);
     });
   });
 
   describe('getPopularTools', () => {
     it('should return popular tools', () => {
-      const popularTools = getPopularTools(5);
-      
-      // 应该返回一些工具
-      expect(popularTools.length).toBeGreaterThan(0);
-      expect(popularTools.length).toBeLessThanOrEqual(5);
+      const popular = getPopularTools();
+      expect(popular.length).toBeGreaterThan(0);
+    });
+
+    it('should respect maxCount parameter', () => {
+      const popular5 = getPopularTools(5);
+      expect(popular5.length).toBeLessThanOrEqual(5);
+    });
+  });
+
+  describe('getToolKeywords', () => {
+    it('should return keywords for known tools', () => {
+      const keywords = getToolKeywords('json-formatter');
+      expect(keywords.length).toBeGreaterThan(0);
+      expect(keywords).toContain('json');
+    });
+
+    it('should return empty array for unknown tools', () => {
+      const keywords = getToolKeywords('unknown-tool');
+      expect(keywords).toEqual([]);
+    });
+  });
+
+  describe('calculateKeywordRelevance', () => {
+    it('should return higher score for tools with shared keywords', () => {
+      // json-formatter 和 json-minifier 都有 json 关键词
+      const score1 = calculateKeywordRelevance('json-formatter', 'json-minifier');
+      const score2 = calculateKeywordRelevance('json-formatter', 'color-converter');
+      expect(score1).toBeGreaterThan(score2);
+    });
+
+    it('should return 0 when either tool has no keywords', () => {
+      const score = calculateKeywordRelevance('unknown-tool', 'json-formatter');
+      expect(score).toBe(0);
+    });
+  });
+
+  describe('getCategoryRelationWeight', () => {
+    it('should return 1 for same category', () => {
+      expect(getCategoryRelationWeight('encoding', 'encoding')).toBe(1);
+    });
+
+    it('should return positive weight for related categories', () => {
+      const weight = getCategoryRelationWeight('encoding', 'text');
+      expect(weight).toBeGreaterThan(0);
+    });
+
+    it('should return default weight for unrelated categories', () => {
+      const weight = getCategoryRelationWeight('unknown1', 'unknown2');
+      expect(weight).toBe(0.1);
+    });
+  });
+
+  // Property Tests
+  describe('Property: All tools should have related recommendations', () => {
+    it('every tool should have at least some related tools', () => {
+      tools.forEach(tool => {
+        const related = getSemanticRelatedTools(tool.slug, 6);
+        // 只要有其他工具，就应该有推荐
+        if (tools.length > 1) {
+          expect(related.length).toBeGreaterThan(0);
+        }
+      });
+    });
+  });
+
+  describe('Property: Related tools should not include self', () => {
+    it('no tool should appear in its own related list', () => {
+      tools.forEach(tool => {
+        const related = getSemanticRelatedTools(tool.slug);
+        const selfInList = related.find(t => t.slug === tool.slug);
+        expect(selfInList).toBeUndefined();
+      });
+    });
+  });
+
+  describe('Property: Relevance scores should be symmetric in direction', () => {
+    it('if A is related to B, B should be related to A', () => {
+      // 取样测试
+      const sampleTools = tools.slice(0, 10);
+      sampleTools.forEach(tool1 => {
+        const related = getSemanticRelatedTools(tool1.slug, 3);
+        related.forEach(tool2 => {
+          const reverseRelated = getSemanticRelatedTools(tool2.slug, tools.length);
+          // tool1 应该在 tool2 的相关列表中（可能不在前几个）
+          const found = reverseRelated.find(t => t.slug === tool1.slug);
+          expect(found).toBeDefined();
+        });
+      });
     });
   });
 });

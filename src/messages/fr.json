@@ -17,6 +17,58 @@
     "charts": "Graphiques et visualisation",
     "office": "Outils de bureau"
   },
+  "categories_seo": {
+    "text": {
+      "seo_title": "Outils de Texte en Ligne Gratuits - Compteur de Mots et Plus",
+      "seo_description": "Puissants outils gratuits de traitement de texte : compteur de mots, convertisseur de casse, inverseur de texte, compteur de lignes et suppresseur de doublons. Traitez le texte instantanément."
+    },
+    "encoding": {
+      "seo_title": "Outils d'Encodage - JSON, Base64, Encodeur HTML en Ligne",
+      "seo_description": "Outils d'encodage en ligne gratuits pour le formatage JSON, l'encodage/décodage Base64, l'encodage d'entités HTML et plus. Rapide, sécurisé et sans inscription."
+    },
+    "generators": {
+      "seo_title": "Générateurs en Ligne - UUID, Lorem Ipsum, Expressions Cron",
+      "seo_description": "Générez des UUIDs, du texte Lorem Ipsum, des expressions cron, des tableaux HTML et plus avec nos outils générateurs gratuits. Résultats instantanés, sans inscription."
+    },
+    "converters": {
+      "seo_title": "Convertisseurs en Ligne Gratuits - Couleur, Date, Unités, YAML/JSON",
+      "seo_description": "Convertissez couleurs, dates, unités, YAML en JSON et plus avec nos outils convertisseurs gratuits. Conversions rapides et précises dans votre navigateur."
+    },
+    "development": {
+      "seo_title": "Outils pour Développeurs - Testeur Regex, Formateur de Code",
+      "seo_description": "Outils essentiels pour développeurs : testeur d'expressions régulières, formateur SQL, testeur de chemins JSON, embellisseur de code et plus. Outils gratuits pour programmeurs."
+    },
+    "security": {
+      "seo_title": "Outils de Sécurité - Générateur de Mots de Passe, Hash, Chiffrement",
+      "seo_description": "Outils de sécurité en ligne gratuits pour la génération de mots de passe, le calcul de hash, le chiffrement de texte et le hachage de fichiers. Protégez vos données avec des outils basés sur navigateur."
+    },
+    "network": {
+      "seo_title": "Outils Réseau - Recherche IP, Encodeur URL et Plus",
+      "seo_description": "Utilitaires réseau gratuits incluant la recherche IP, l'encodeur/décodeur d'URL et plus. Vérifiez les informations réseau et encodez les URLs instantanément."
+    },
+    "image": {
+      "seo_title": "Outils d'Image - Générateur QR, Convertisseur Base64 et Plus",
+      "seo_description": "Outils d'image en ligne gratuits pour la génération de codes QR, la conversion d'image en Base64, les images de placeholder et plus. Traitez les images dans votre navigateur."
+    },
+    "math": {
+      "seo_title": "Outils Mathématiques - Convertisseur de Bases, Calculateur de Ratio",
+      "seo_description": "Outils mathématiques en ligne gratuits incluant le convertisseur de bases numériques, le calculateur de ratio d'aspect et plus. Effectuez des calculs instantanément dans votre navigateur."
+    },
+    "charts": {
+      "seo_title": "Générateur de Graphiques - Barres, Lignes, Camemberts et Plus",
+      "seo_description": "Créez de beaux graphiques en ligne avec nos outils générateurs gratuits. Générez des graphiques à barres, en lignes, camemberts et plus sans aucun logiciel."
+    },
+    "office": {
+      "seo_title": "Outils de Bureau - PDF, Créateur de CV et Productivité",
+      "seo_description": "Outils de bureau en ligne gratuits pour le traitement PDF, la création de CV et la productivité. Créez des documents professionnels sans installer de logiciel."
+    }
+  },
+  "pages": {
+    "tools": {
+      "seo_title": "100+ Outils en Ligne Gratuits pour Développeurs et Designers | U2Tool",
+      "seo_description": "Découvrez 100+ outils en ligne gratuits pour développeurs, designers et créateurs. Formateur JSON, convertisseur d'images, outils PDF, générateur de code et plus. Rapide, sécurisé, sans inscription."
+    }
+  },
   "nav": {
     "home": "Accueil",
     "tools": "Outils",
@@ -12728,6 +12780,19 @@
     "contact": {
       "title": "Contactez-nous",
       "content": "Vous avez des questions, des suggestions ou des commentaires? Nous serions ravis de vous entendre. Contactez-nous via nos canaux de communication."
+    },
+    "stats": {
+      "tools": "Outils Gratuits",
+      "free": "Gratuit Pour Toujours",
+      "languages": "Langues",
+      "dataCollected": "Données Collectées"
+    },
+    "trust": {
+      "title": "Pourquoi Nous Faire Confiance",
+      "secure": "Sécurisé et Privé",
+      "browserBased": "Basé sur le Navigateur",
+      "noTracking": "Pas de Suivi",
+      "noAds": "Pas de Publicité"
     }
   },
   "footer": {

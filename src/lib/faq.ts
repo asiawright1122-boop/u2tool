@@ -956,37 +956,50 @@ const DEFAULT_FAQ_TEMPLATES: Record<string, FAQItem[]> = {
 /**
  * 获取工具的 FAQ 内容
  * 优先返回工具专属 FAQ，否则返回分类通用 FAQ
+ * 自动增强 FAQ 内容，添加工具特定术语
  * @param slug - 工具 slug
  * @param locale - 语言代码
  * @param category - 工具分类
+ * @param toolName - 工具名称（可选，用于增强内容）
  * @returns FAQ 项目数组
  */
 export function getToolFAQs(
   slug: string,
   locale: string,
-  category?: string
+  category?: string,
+  toolName?: string
 ): FAQItem[] {
+  let faqs: FAQItem[];
+  
   // 首先尝试获取工具专属 FAQ
   const specificFaqs = getToolSpecificFAQs(slug, locale);
   if (specificFaqs && specificFaqs.length >= 3) {
-    return specificFaqs;
-  }
-
-  // 然后尝试获取分类特定的 FAQ
-  if (category && GENERIC_FAQ_TEMPLATES[category]) {
+    faqs = specificFaqs;
+  } else if (category && GENERIC_FAQ_TEMPLATES[category]) {
+    // 然后尝试获取分类特定的 FAQ
     const categoryFaqs = GENERIC_FAQ_TEMPLATES[category][locale];
     if (categoryFaqs && categoryFaqs.length >= 3) {
-      return categoryFaqs;
+      faqs = categoryFaqs;
+    } else {
+      // 回退到英文分类 FAQ
+      const enCategoryFaqs = GENERIC_FAQ_TEMPLATES[category]['en'];
+      if (enCategoryFaqs && enCategoryFaqs.length >= 3) {
+        faqs = enCategoryFaqs;
+      } else {
+        faqs = DEFAULT_FAQ_TEMPLATES[locale] || DEFAULT_FAQ_TEMPLATES['en'];
+      }
     }
-    // 回退到英文分类 FAQ
-    const enCategoryFaqs = GENERIC_FAQ_TEMPLATES[category]['en'];
-    if (enCategoryFaqs && enCategoryFaqs.length >= 3) {
-      return enCategoryFaqs;
-    }
+  } else {
+    // 回退到默认 FAQ
+    faqs = DEFAULT_FAQ_TEMPLATES[locale] || DEFAULT_FAQ_TEMPLATES['en'];
   }
 
-  // 回退到默认 FAQ
-  return DEFAULT_FAQ_TEMPLATES[locale] || DEFAULT_FAQ_TEMPLATES['en'];
+  // 如果提供了工具名称，增强 FAQ 内容
+  if (toolName) {
+    faqs = enhanceFAQContent(faqs, slug, toolName, locale);
+  }
+
+  return faqs;
 }
 
 /**
@@ -1187,6 +1200,218 @@ export function generateFAQJsonLd(faqs: FAQItem[]): JsonLdData {
  */
 export function faqJsonLdToString(jsonLd: JsonLdData): string {
   return JSON.stringify(jsonLd);
+}
+
+/**
+ * 工具特定术语映射
+ * 用于在 FAQ 中添加工具相关的专业术语
+ */
+export const TOOL_TERMINOLOGY: Record<string, Record<string, string[]>> = {
+  // JSON 相关工具
+  'json-formatter': {
+    en: ['JSON syntax', 'indentation', 'minification', 'pretty print', 'validation'],
+    zh: ['JSON 语法', '缩进', '压缩', '美化输出', '验证'],
+  },
+  'json-validator': {
+    en: ['JSON schema', 'syntax validation', 'error detection', 'RFC 8259'],
+    zh: ['JSON 模式', '语法验证', '错误检测', 'RFC 8259 标准'],
+  },
+  // 编码工具
+  'base64': {
+    en: ['Base64 encoding', 'binary data', 'ASCII representation', 'URL-safe encoding'],
+    zh: ['Base64 编码', '二进制数据', 'ASCII 表示', 'URL 安全编码'],
+  },
+  'url-encoder': {
+    en: ['percent encoding', 'URI components', 'special characters', 'RFC 3986'],
+    zh: ['百分号编码', 'URI 组件', '特殊字符', 'RFC 3986 标准'],
+  },
+  // 哈希工具
+  'hash-generator': {
+    en: ['cryptographic hash', 'MD5', 'SHA-256', 'checksum', 'message digest'],
+    zh: ['加密哈希', 'MD5', 'SHA-256', '校验和', '消息摘要'],
+  },
+  // 图像工具
+  'image-compressor': {
+    en: ['lossy compression', 'lossless compression', 'quality settings', 'file size reduction'],
+    zh: ['有损压缩', '无损压缩', '质量设置', '文件大小优化'],
+  },
+  'image-converter': {
+    en: ['image format', 'PNG', 'JPEG', 'WebP', 'format conversion'],
+    zh: ['图像格式', 'PNG', 'JPEG', 'WebP', '格式转换'],
+  },
+  // 文本工具
+  'word-counter': {
+    en: ['word count', 'character count', 'reading time', 'text statistics'],
+    zh: ['字数统计', '字符计数', '阅读时间', '文本统计'],
+  },
+  'text-diff': {
+    en: ['diff algorithm', 'text comparison', 'change detection', 'line-by-line'],
+    zh: ['差异算法', '文本比较', '变更检测', '逐行对比'],
+  },
+  // 颜色工具
+  'color-converter': {
+    en: ['HEX', 'RGB', 'HSL', 'color space', 'color model'],
+    zh: ['HEX', 'RGB', 'HSL', '色彩空间', '颜色模型'],
+  },
+  // 时间工具
+  'timestamp-converter': {
+    en: ['Unix timestamp', 'epoch time', 'ISO 8601', 'timezone conversion'],
+    zh: ['Unix 时间戳', '纪元时间', 'ISO 8601', '时区转换'],
+  },
+  // 正则工具
+  'regex-tester': {
+    en: ['regular expression', 'pattern matching', 'capture groups', 'regex flags'],
+    zh: ['正则表达式', '模式匹配', '捕获组', '正则标志'],
+  },
+  // UUID 工具
+  'uuid-generator': {
+    en: ['UUID v4', 'GUID', 'unique identifier', 'RFC 4122'],
+    zh: ['UUID v4', 'GUID', '唯一标识符', 'RFC 4122 标准'],
+  },
+  // QR 码工具
+  'qr-generator': {
+    en: ['QR code', 'error correction', 'encoding capacity', 'scan distance'],
+    zh: ['二维码', '纠错级别', '编码容量', '扫描距离'],
+  },
+  // 密码工具
+  'password-generator': {
+    en: ['entropy', 'cryptographic randomness', 'password strength', 'character set'],
+    zh: ['熵值', '加密随机性', '密码强度', '字符集'],
+  },
+};
+
+/**
+ * 获取工具特定术语
+ * @param slug - 工具 slug
+ * @param locale - 语言代码
+ * @returns 术语数组
+ */
+export function getToolTerminology(slug: string, locale: string): string[] {
+  const toolTerms = TOOL_TERMINOLOGY[slug];
+  if (!toolTerms) {
+    return [];
+  }
+  return toolTerms[locale] || toolTerms['en'] || [];
+}
+
+/**
+ * 检测 FAQ 是否过于模板化
+ * @param faqs - FAQ 数组
+ * @param toolName - 工具名称
+ * @returns 模板化评分 (0-100, 越高越模板化)
+ */
+export function detectTemplatePatterns(faqs: FAQItem[], toolName: string): {
+  score: number;
+  issues: string[];
+} {
+  const issues: string[] = [];
+  let templateScore = 0;
+
+  // 检查是否所有问题都使用相同的模式
+  const questionStarts = faqs.map(f => f.question.split(' ').slice(0, 3).join(' '));
+  const uniqueStarts = new Set(questionStarts);
+  if (uniqueStarts.size < faqs.length * 0.5) {
+    templateScore += 20;
+    issues.push('Questions use repetitive patterns');
+  }
+
+  // 检查答案是否过于通用（不包含工具名称）
+  const answersWithToolName = faqs.filter(f => 
+    f.answer.toLowerCase().includes(toolName.toLowerCase())
+  );
+  if (answersWithToolName.length < faqs.length * 0.3) {
+    templateScore += 15;
+    issues.push('Answers lack tool-specific references');
+  }
+
+  // 检查答案长度是否过于相似
+  const answerLengths = faqs.map(f => f.answer.length);
+  const avgLength = answerLengths.reduce((a, b) => a + b, 0) / answerLengths.length;
+  const lengthVariance = answerLengths.reduce((sum, len) => 
+    sum + Math.pow(len - avgLength, 2), 0
+  ) / answerLengths.length;
+  if (lengthVariance < 100) {
+    templateScore += 15;
+    issues.push('Answer lengths are too uniform');
+  }
+
+  // 检查是否缺少技术术语
+  const technicalTerms = ['API', 'format', 'encode', 'decode', 'convert', 'generate', 
+    'validate', 'parse', 'compress', 'hash', 'encrypt', 'algorithm'];
+  const hasTerms = faqs.some(f => 
+    technicalTerms.some(term => f.answer.toLowerCase().includes(term.toLowerCase()))
+  );
+  if (!hasTerms) {
+    templateScore += 20;
+    issues.push('Missing technical terminology');
+  }
+
+  // 检查是否有重复的答案片段
+  const answerPhrases = faqs.flatMap(f => {
+    const words = f.answer.split(/\s+/);
+    const phrases: string[] = [];
+    for (let i = 0; i < words.length - 4; i++) {
+      phrases.push(words.slice(i, i + 5).join(' ').toLowerCase());
+    }
+    return phrases;
+  });
+  const phraseCount = new Map<string, number>();
+  answerPhrases.forEach(p => phraseCount.set(p, (phraseCount.get(p) || 0) + 1));
+  const duplicatePhrases = Array.from(phraseCount.values()).filter(c => c > 1).length;
+  if (duplicatePhrases > answerPhrases.length * 0.1) {
+    templateScore += 30;
+    issues.push('Answers contain repetitive phrases');
+  }
+
+  return {
+    score: Math.min(100, templateScore),
+    issues,
+  };
+}
+
+/**
+ * 增强 FAQ 内容，添加工具特定信息
+ * @param faqs - 原始 FAQ 数组
+ * @param slug - 工具 slug
+ * @param toolName - 工具名称
+ * @param locale - 语言代码
+ * @returns 增强后的 FAQ 数组
+ */
+export function enhanceFAQContent(
+  faqs: FAQItem[],
+  slug: string,
+  toolName: string,
+  locale: string
+): FAQItem[] {
+  const terminology = getToolTerminology(slug, locale);
+  
+  if (terminology.length === 0) {
+    return faqs;
+  }
+
+  return faqs.map((faq, index) => {
+    // 如果答案已经包含术语，不做修改
+    const hasTerms = terminology.some(term => 
+      faq.answer.toLowerCase().includes(term.toLowerCase())
+    );
+    if (hasTerms) {
+      return faq;
+    }
+
+    // 为第一个 FAQ 添加术语说明
+    if (index === 0 && terminology.length > 0) {
+      const termList = terminology.slice(0, 3).join(', ');
+      const enhancedAnswer = locale === 'zh'
+        ? `${faq.answer} 该工具支持 ${termList} 等功能。`
+        : locale === 'ja'
+        ? `${faq.answer} このツールは ${termList} などをサポートしています。`
+        : `${faq.answer} This tool supports ${termList} and more.`;
+      
+      return { ...faq, answer: enhancedAnswer };
+    }
+
+    return faq;
+  });
 }
 
 /**

@@ -17,6 +17,58 @@
     "charts": "Gráficos y visualización",
     "office": "Herramientas de oficina"
   },
+  "categories_seo": {
+    "text": {
+      "seo_title": "Herramientas de Texto Online Gratis - Contador de Palabras y Más",
+      "seo_description": "Potentes herramientas gratuitas de procesamiento de texto: contador de palabras, conversor de mayúsculas, inversor de texto, contador de líneas y eliminador de duplicados. Procesa texto al instante."
+    },
+    "encoding": {
+      "seo_title": "Herramientas de Codificación - JSON, Base64, Codificador HTML Online",
+      "seo_description": "Herramientas gratuitas de codificación online para formateo JSON, codificación/decodificación Base64, codificación de entidades HTML y más. Rápido, seguro y sin registro."
+    },
+    "generators": {
+      "seo_title": "Generadores Online - UUID, Lorem Ipsum, Expresiones Cron",
+      "seo_description": "Genera UUIDs, texto Lorem Ipsum, expresiones cron, tablas HTML y más con nuestras herramientas generadoras gratuitas. Resultados instantáneos, sin registro."
+    },
+    "converters": {
+      "seo_title": "Convertidores Online Gratis - Color, Fecha, Unidades, YAML/JSON",
+      "seo_description": "Convierte colores, fechas, unidades, YAML a JSON y más con nuestras herramientas convertidoras gratuitas. Conversiones rápidas y precisas en tu navegador."
+    },
+    "development": {
+      "seo_title": "Herramientas para Desarrolladores - Probador Regex, Formateador de Código",
+      "seo_description": "Herramientas esenciales para desarrolladores: probador de expresiones regulares, formateador SQL, probador de rutas JSON, embellecedor de código y más. Herramientas gratuitas para programadores."
+    },
+    "security": {
+      "seo_title": "Herramientas de Seguridad - Generador de Contraseñas, Hash, Cifrado",
+      "seo_description": "Herramientas de seguridad online gratuitas para generación de contraseñas, cálculo de hash, cifrado de texto y hash de archivos. Protege tus datos con herramientas basadas en navegador."
+    },
+    "network": {
+      "seo_title": "Herramientas de Red - Búsqueda IP, Codificador URL y Más",
+      "seo_description": "Utilidades de red gratuitas incluyendo búsqueda de IP, codificador/decodificador de URL y más. Verifica información de red y codifica URLs al instante."
+    },
+    "image": {
+      "seo_title": "Herramientas de Imagen - Generador QR, Conversor Base64 y Más",
+      "seo_description": "Herramientas de imagen online gratuitas para generación de códigos QR, conversión de imagen a Base64, imágenes de marcador de posición y más. Procesa imágenes en tu navegador."
+    },
+    "math": {
+      "seo_title": "Herramientas Matemáticas - Conversor de Bases, Calculadora de Proporción",
+      "seo_description": "Herramientas matemáticas online gratuitas incluyendo conversor de bases numéricas, calculadora de proporción de aspecto y más. Realiza cálculos al instante en tu navegador."
+    },
+    "charts": {
+      "seo_title": "Generador de Gráficos - Barras, Líneas, Circulares y Más",
+      "seo_description": "Crea gráficos hermosos online con nuestras herramientas generadoras gratuitas. Genera gráficos de barras, líneas, circulares y más sin ningún software."
+    },
+    "office": {
+      "seo_title": "Herramientas de Oficina - PDF, Creador de CV y Productividad",
+      "seo_description": "Herramientas de oficina online gratuitas para procesamiento de PDF, creación de currículum y productividad. Crea documentos profesionales sin instalar software."
+    }
+  },
+  "pages": {
+    "tools": {
+      "seo_title": "100+ Herramientas Online Gratis para Desarrolladores y Diseñadores | U2Tool",
+      "seo_description": "Descubre 100+ herramientas online gratuitas para desarrolladores, diseñadores y creadores. Formateador JSON, conversor de imágenes, herramientas PDF, generador de código y más. Rápido, seguro, sin registro."
+    }
+  },
   "nav": {
     "home": "Inicio",
     "tools": "Herramientas",
@@ -12728,6 +12780,19 @@
     "contact": {
       "title": "Contáctenos",
       "content": "¿Tiene preguntas, sugerencias o comentarios? Nos encantaría saber de usted. Comuníquese con nosotros a través de nuestros canales de contacto."
+    },
+    "stats": {
+      "tools": "Herramientas Gratis",
+      "free": "Gratis Siempre",
+      "languages": "Idiomas",
+      "dataCollected": "Datos Recopilados"
+    },
+    "trust": {
+      "title": "Por Qué Confiar en Nosotros",
+      "secure": "Seguro y Privado",
+      "browserBased": "Basado en Navegador",
+      "noTracking": "Sin Rastreo",
+      "noAds": "Sin Anuncios"
     }
   },
   "footer": {

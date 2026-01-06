@@ -17,6 +17,58 @@
     "charts": "Diagramme & Visualisierung",
     "office": "Büro-Tools"
   },
+  "categories_seo": {
+    "text": {
+      "seo_title": "Kostenlose Online Text-Tools - Wortzähler, Groß-/Kleinschreibung",
+      "seo_description": "Leistungsstarke kostenlose Textverarbeitungs-Tools: Wortzähler, Groß-/Kleinschreibung-Konverter, Textumkehrer, Zeilenzähler und Duplikat-Entferner. Text sofort verarbeiten."
+    },
+    "encoding": {
+      "seo_title": "Kodierungs-Tools - JSON, Base64, HTML-Encoder Online",
+      "seo_description": "Kostenlose Online-Kodierungs-Tools für JSON-Formatierung, Base64-Kodierung/Dekodierung, HTML-Entity-Kodierung und mehr. Schnell, sicher und ohne Registrierung."
+    },
+    "generators": {
+      "seo_title": "Online-Generatoren - UUID, Lorem Ipsum, Cron-Ausdrücke",
+      "seo_description": "Generieren Sie UUIDs, Lorem Ipsum-Text, Cron-Ausdrücke, HTML-Tabellen und mehr mit unseren kostenlosen Online-Generator-Tools. Sofortige Ergebnisse, ohne Anmeldung."
+    },
+    "converters": {
+      "seo_title": "Kostenlose Online-Konverter - Farbe, Datum, Einheiten, YAML/JSON",
+      "seo_description": "Konvertieren Sie Farben, Daten, Einheiten, YAML zu JSON und mehr mit unseren kostenlosen Online-Konverter-Tools. Schnelle, genaue Konvertierungen in Ihrem Browser."
+    },
+    "development": {
+      "seo_title": "Entwickler-Tools - Regex-Tester, Code-Formatierer und Mehr",
+      "seo_description": "Wesentliche Entwickler-Tools: Regex-Tester, SQL-Formatierer, JSON-Pfad-Tester, Code-Verschönerer und mehr. Kostenlose Online-Tools für Programmierer."
+    },
+    "security": {
+      "seo_title": "Sicherheits-Tools - Passwort-Generator, Hash, Verschlüsselung",
+      "seo_description": "Kostenlose Online-Sicherheits-Tools für Passwort-Generierung, Hash-Berechnung, Text-Verschlüsselung und Datei-Hashing. Schützen Sie Ihre Daten mit Browser-basierten Tools."
+    },
+    "network": {
+      "seo_title": "Netzwerk-Tools - IP-Suche, URL-Encoder und Mehr",
+      "seo_description": "Kostenlose Netzwerk-Utilities einschließlich IP-Suche, URL-Encoder/Decoder und mehr. Überprüfen Sie Netzwerkinformationen und kodieren Sie URLs sofort."
+    },
+    "image": {
+      "seo_title": "Bild-Tools - QR-Generator, Base64-Konverter und Mehr",
+      "seo_description": "Kostenlose Online-Bild-Tools für QR-Code-Generierung, Bild-zu-Base64-Konvertierung, Platzhalterbilder und mehr. Verarbeiten Sie Bilder in Ihrem Browser."
+    },
+    "math": {
+      "seo_title": "Mathe-Tools - Zahlenkonverter, Seitenverhältnis-Rechner",
+      "seo_description": "Kostenlose Online-Mathe-Tools einschließlich Zahlenbasis-Konverter, Seitenverhältnis-Rechner und mehr. Führen Sie Berechnungen sofort in Ihrem Browser durch."
+    },
+    "charts": {
+      "seo_title": "Diagramm-Generator - Balken-, Linien-, Kreisdiagramme und Mehr",
+      "seo_description": "Erstellen Sie schöne Diagramme online mit unseren kostenlosen Generator-Tools. Generieren Sie Balken-, Linien-, Kreisdiagramme und mehr ohne Software."
+    },
+    "office": {
+      "seo_title": "Büro-Tools - PDF, Lebenslauf-Ersteller und Produktivität",
+      "seo_description": "Kostenlose Online-Büro-Tools für PDF-Verarbeitung, Lebenslauf-Erstellung und Produktivität. Erstellen Sie professionelle Dokumente ohne Software-Installation."
+    }
+  },
+  "pages": {
+    "tools": {
+      "seo_title": "100+ Kostenlose Online-Tools für Entwickler und Designer | U2Tool",
+      "seo_description": "Entdecken Sie 100+ kostenlose Online-Tools für Entwickler, Designer und Kreative. JSON-Formatierer, Bildkonverter, PDF-Tools, Code-Generator und mehr. Schnell, sicher, ohne Registrierung."
+    }
+  },
   "nav": {
     "home": "Startseite",
     "tools": "Werkzeuge",
@@ -12728,6 +12780,19 @@
     "contact": {
       "title": "Kontaktieren Sie uns",
       "content": "Haben Sie Fragen, Vorschläge oder Feedback? Wir würden gerne von Ihnen hören. Kontaktieren Sie uns über unsere Kontaktkanäle."
+    },
+    "stats": {
+      "tools": "Kostenlose Tools",
+      "free": "Für Immer Kostenlos",
+      "languages": "Sprachen",
+      "dataCollected": "Gesammelte Daten"
+    },
+    "trust": {
+      "title": "Warum Uns Vertrauen",
+      "secure": "Sicher und Privat",
+      "browserBased": "Browser-basiert",
+      "noTracking": "Kein Tracking",
+      "noAds": "Keine Werbung"
     }
   },
   "footer": {

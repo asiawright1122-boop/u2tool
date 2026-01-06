@@ -93,11 +93,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/icons/icon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/icons/icon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icons/icon-32x32.svg', sizes: '32x32', type: 'image/svg+xml' },
+      { url: '/icons/icon-16x16.svg', sizes: '16x16', type: 'image/svg+xml' },
     ],
     apple: [
-      { url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/icons/apple-touch-icon.svg', sizes: '180x180', type: 'image/svg+xml' },
     ],
     other: [
       { rel: 'mask-icon', url: '/icons/safari-pinned-tab.svg', color: SEO_CONFIG.themeColor },

@@ -357,3 +357,274 @@ export function generateImprovementSuggestions(
   
   return [...new Set(suggestions)]; // 去重
 }
+
+
+/**
+ * 增强的内容质量评估结果
+ */
+export interface EnhancedContentQualityResult extends ContentAnalysisResult {
+  depthScore: number;           // 0-100, 内容深度分数
+  readabilityScore: number;     // 0-100, 可读性分数
+  keywordRelevance: number;     // 0-100, 关键词相关性
+  overallScore: number;         // 0-100, 综合分数
+  suggestions: string[];        // 改进建议
+}
+
+/**
+ * 计算内容深度分数
+ * 基于字数、段落数、列表项等
+ * @param content - 要分析的内容
+ * @returns 深度分数 (0-100)
+ */
+export function calculateContentDepth(content: string): number {
+  if (!content || content.length === 0) {
+    return 0;
+  }
+  
+  // 计算字数
+  const wordCount = content.split(/\s+/).filter(w => w.length > 0).length;
+  
+  // 计算段落数
+  const paragraphs = content.split(/\n\n+/).filter(p => p.trim().length > 0);
+  const paragraphCount = paragraphs.length;
+  
+  // 计算句子数
+  const sentences = content.split(/[.!?。！？]+/).filter(s => s.trim().length > 0);
+  const sentenceCount = sentences.length;
+  
+  // 检测列表项（有序和无序）
+  const listItems = content.match(/^[\s]*[-*•\d.]+\s+/gm) || [];
+  const listItemCount = listItems.length;
+  
+  // 检测代码块
+  const codeBlocks = content.match(/```[\s\S]*?```|`[^`]+`/g) || [];
+  const codeBlockCount = codeBlocks.length;
+  
+  // 计算深度分数
+  let score = 0;
+  
+  // 字数评分（200字以上得满分）
+  score += Math.min(wordCount / 200 * 30, 30);
+  
+  // 段落评分（3段以上得满分）
+  score += Math.min(paragraphCount / 3 * 20, 20);
+  
+  // 句子评分（10句以上得满分）
+  score += Math.min(sentenceCount / 10 * 20, 20);
+  
+  // 列表项加分（有列表加分）
+  score += Math.min(listItemCount / 5 * 15, 15);
+  
+  // 代码块加分（有代码示例加分）
+  score += Math.min(codeBlockCount / 2 * 15, 15);
+  
+  return Math.min(Math.max(score, 0), 100);
+}
+
+/**
+ * 计算可读性分数
+ * 基于平均句子长度和词汇复杂度
+ * @param content - 要分析的内容
+ * @returns 可读性分数 (0-100)
+ */
+export function calculateReadability(content: string): number {
+  if (!content || content.length === 0) {
+    return 0;
+  }
+  
+  const words = content.split(/\s+/).filter(w => w.length > 0);
+  const sentences = content.split(/[.!?。！？]+/).filter(s => s.trim().length > 0);
+  
+  if (words.length === 0 || sentences.length === 0) {
+    return 0;
+  }
+  
+  // 平均句子长度（理想范围：15-20词）
+  const avgSentenceLength = words.length / sentences.length;
+  let sentenceLengthScore = 100;
+  if (avgSentenceLength < 10) {
+    sentenceLengthScore = avgSentenceLength * 10;
+  } else if (avgSentenceLength > 25) {
+    sentenceLengthScore = Math.max(100 - (avgSentenceLength - 25) * 5, 0);
+  }
+  
+  // 平均词长（理想范围：4-6字符）
+  const avgWordLength = words.reduce((sum, w) => sum + w.length, 0) / words.length;
+  let wordLengthScore = 100;
+  if (avgWordLength < 3) {
+    wordLengthScore = avgWordLength * 33;
+  } else if (avgWordLength > 8) {
+    wordLengthScore = Math.max(100 - (avgWordLength - 8) * 15, 0);
+  }
+  
+  // 综合可读性分数
+  return (sentenceLengthScore * 0.6 + wordLengthScore * 0.4);
+}
+
+/**
+ * 计算关键词相关性
+ * @param content - 要分析的内容
+ * @param targetKeywords - 目标关键词数组
+ * @returns 相关性分数 (0-100)
+ */
+export function calculateKeywordRelevance(
+  content: string,
+  targetKeywords: string[]
+): number {
+  if (!content || targetKeywords.length === 0) {
+    return 0;
+  }
+  
+  const lowerContent = content.toLowerCase();
+  let matchedKeywords = 0;
+  let totalOccurrences = 0;
+  
+  for (const keyword of targetKeywords) {
+    const lowerKeyword = keyword.toLowerCase();
+    if (lowerContent.includes(lowerKeyword)) {
+      matchedKeywords++;
+      // 计算出现次数
+      const regex = new RegExp(lowerKeyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      const matches = content.match(regex);
+      totalOccurrences += matches ? matches.length : 0;
+    }
+  }
+  
+  // 关键词覆盖率（占50%权重）
+  const coverageScore = (matchedKeywords / targetKeywords.length) * 50;
+  
+  // 关键词密度（占50%权重，理想密度1-3%）
+  const words = content.split(/\s+/).length;
+  const density = (totalOccurrences / words) * 100;
+  let densityScore = 50;
+  if (density < 0.5) {
+    densityScore = density * 100;
+  } else if (density > 4) {
+    densityScore = Math.max(50 - (density - 4) * 10, 0);
+  }
+  
+  return Math.min(coverageScore + densityScore, 100);
+}
+
+/**
+ * 评估内容质量（增强版）
+ * @param content - 要分析的内容
+ * @param targetKeywords - 目标关键词数组（可选）
+ * @returns 增强的内容质量评估结果
+ */
+export function evaluateContentQuality(
+  content: string,
+  targetKeywords: string[] = []
+): EnhancedContentQualityResult {
+  // 基础分析
+  const baseResult = analyzeContentUniqueness(content);
+  
+  // 计算深度分数
+  const depthScore = calculateContentDepth(content);
+  
+  // 计算可读性分数
+  const readabilityScore = calculateReadability(content);
+  
+  // 计算关键词相关性
+  const keywordRelevance = targetKeywords.length > 0
+    ? calculateKeywordRelevance(content, targetKeywords)
+    : 50; // 无目标关键词时给予中等分数
+  
+  // 计算综合分数
+  const overallScore = (
+    baseResult.uniquenessScore * 0.25 +
+    depthScore * 0.25 +
+    readabilityScore * 0.25 +
+    keywordRelevance * 0.25
+  );
+  
+  // 生成改进建议
+  const suggestions = generateEnhancedSuggestions({
+    ...baseResult,
+    depthScore,
+    readabilityScore,
+    keywordRelevance,
+    overallScore,
+    suggestions: [],
+  });
+  
+  return {
+    ...baseResult,
+    depthScore,
+    readabilityScore,
+    keywordRelevance,
+    overallScore,
+    suggestions,
+  };
+}
+
+/**
+ * 生成增强的改进建议
+ * @param result - 增强的内容质量评估结果
+ * @returns 改进建议数组
+ */
+function generateEnhancedSuggestions(
+  result: EnhancedContentQualityResult
+): string[] {
+  const suggestions = generateImprovementSuggestions(result);
+  
+  if (result.depthScore < 60) {
+    suggestions.push('增加内容深度：添加更多段落、列表或代码示例');
+  }
+  
+  if (result.readabilityScore < 60) {
+    suggestions.push('提高可读性：使用更短的句子和更简单的词汇');
+  }
+  
+  if (result.keywordRelevance < 50) {
+    suggestions.push('增加关键词相关性：在内容中自然地包含目标关键词');
+  }
+  
+  if (result.overallScore < 70) {
+    suggestions.push('综合质量需要提升：关注独特性、深度、可读性和关键词相关性');
+  }
+  
+  return [...new Set(suggestions)];
+}
+
+/**
+ * 比较两个内容的相似度
+ * @param content1 - 第一个内容
+ * @param content2 - 第二个内容
+ * @returns 相似度分数 (0-100)
+ */
+export function compareContentSimilarity(
+  content1: string,
+  content2: string
+): number {
+  if (!content1 || !content2) {
+    return 0;
+  }
+  
+  // 提取词汇
+  const words1 = new Set(content1.toLowerCase().split(/\s+/).filter(w => w.length > 2));
+  const words2 = new Set(content2.toLowerCase().split(/\s+/).filter(w => w.length > 2));
+  
+  // 计算 Jaccard 相似度
+  const intersection = new Set([...words1].filter(w => words2.has(w)));
+  const union = new Set([...words1, ...words2]);
+  
+  if (union.size === 0) {
+    return 0;
+  }
+  
+  return (intersection.size / union.size) * 100;
+}
+
+/**
+ * 检测内容是否需要人工审核
+ * @param result - 内容分析结果
+ * @returns 是否需要审核
+ */
+export function needsManualReview(result: ContentAnalysisResult): boolean {
+  return (
+    result.uniquenessScore < 70 ||
+    result.templateSimilarity > 40 ||
+    result.flags.some(f => f.severity === 'error')
+  );
+}

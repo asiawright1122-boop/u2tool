@@ -4,9 +4,14 @@ import {
   SEO_CONFIG, 
   generateAlternates, 
   generateOgImageUrl,
-  generateOrganizationJsonLd,
   jsonLdToString,
+  type ExtendedJsonLdData,
 } from '@/lib/seo';
+import {
+  generateEnhancedOrganizationJsonLd,
+  getOrganizationInfo,
+  getTrustSignals,
+} from '@/lib/eeat';
 import AboutPageClient from './AboutPageClient';
 
 /**
@@ -54,7 +59,7 @@ export async function generateMetadata({
 
 /**
  * About 页面（服务端组件）
- * 包含 Organization JSON-LD 结构化数据
+ * 包含增强的 Organization JSON-LD 结构化数据和信任信号
  */
 export default async function AboutPage({
   params,
@@ -63,17 +68,21 @@ export default async function AboutPage({
 }) {
   const { locale } = await params;
   
-  // 生成 Organization JSON-LD
-  const organizationJsonLd = generateOrganizationJsonLd(locale);
+  // 获取组织信息和信任信号
+  const organizationInfo = getOrganizationInfo();
+  const trustSignals = getTrustSignals(locale);
+  
+  // 生成增强的 Organization JSON-LD
+  const organizationJsonLd = generateEnhancedOrganizationJsonLd(organizationInfo, locale);
   
   return (
     <>
       {/* Organization JSON-LD 结构化数据 */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: jsonLdToString(organizationJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdToString(organizationJsonLd as ExtendedJsonLdData) }}
       />
-      <AboutPageClient />
+      <AboutPageClient trustSignals={trustSignals} />
     </>
   );
 }

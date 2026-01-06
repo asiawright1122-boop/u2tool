@@ -17,6 +17,58 @@
     "charts": "차트 및 시각화",
     "office": "오피스 도구"
   },
+  "categories_seo": {
+    "text": {
+      "seo_title": "무료 온라인 텍스트 도구 - 글자 수 세기, 대소문자 변환",
+      "seo_description": "글자 수 세기, 대소문자 변환, 텍스트 뒤집기, 줄 수 세기, 중복 제거 등 강력한 무료 텍스트 처리 도구. 브라우저에서 즉시 텍스트 처리."
+    },
+    "encoding": {
+      "seo_title": "인코딩 및 디코딩 도구 - JSON, Base64, HTML 인코더",
+      "seo_description": "JSON 포맷팅, Base64 인코딩/디코딩, HTML 엔티티 인코딩 등을 위한 무료 온라인 인코딩 도구. 빠르고 안전하며 가입 불필요."
+    },
+    "generators": {
+      "seo_title": "온라인 생성기 도구 - UUID, Lorem Ipsum, Cron 표현식",
+      "seo_description": "UUID, Lorem Ipsum 텍스트, Cron 표현식, HTML 테이블 등을 생성하는 무료 온라인 생성기 도구. 즉시 결과, 가입 불필요."
+    },
+    "converters": {
+      "seo_title": "무료 온라인 변환 도구 - 색상, 날짜, 단위, YAML/JSON 변환",
+      "seo_description": "색상, 날짜, 단위, YAML에서 JSON으로의 변환 등을 위한 무료 온라인 변환 도구. 브라우저에서 빠르고 정확한 변환."
+    },
+    "development": {
+      "seo_title": "개발자 도구 - 정규식 테스터, 코드 포맷터",
+      "seo_description": "정규식 테스터, SQL 포맷터, JSON 경로 테스터, 코드 정리 등 프로그래머를 위한 필수 무료 온라인 개발 도구."
+    },
+    "security": {
+      "seo_title": "보안 도구 - 비밀번호 생성기, 해시, 암호화",
+      "seo_description": "비밀번호 생성, 해시 계산, 텍스트 암호화, 파일 해싱을 위한 무료 온라인 보안 도구. 브라우저 기반 도구로 데이터 보호."
+    },
+    "network": {
+      "seo_title": "네트워크 도구 - IP 조회, URL 인코더",
+      "seo_description": "IP 조회, URL 인코딩/디코딩 등을 포함한 무료 네트워크 유틸리티. 네트워크 정보 확인 및 URL 즉시 인코딩."
+    },
+    "image": {
+      "seo_title": "이미지 도구 - QR 코드 생성기, Base64 변환기",
+      "seo_description": "QR 코드 생성, 이미지를 Base64로 변환, 플레이스홀더 이미지 등을 위한 무료 온라인 이미지 도구. 브라우저에서 이미지 처리."
+    },
+    "math": {
+      "seo_title": "수학 및 계산기 도구 - 진수 변환, 화면 비율 계산",
+      "seo_description": "진수 변환, 화면 비율 계산기 등을 포함한 무료 온라인 수학 도구. 브라우저에서 즉시 계산 수행."
+    },
+    "charts": {
+      "seo_title": "차트 생성 도구 - 막대 차트, 선 차트, 원형 차트",
+      "seo_description": "무료 온라인 차트 생성 도구로 아름다운 차트 만들기. 소프트웨어 없이 막대 차트, 선 차트, 원형 차트 등 생성."
+    },
+    "office": {
+      "seo_title": "오피스 도구 - PDF 처리, 이력서 작성, 생산성",
+      "seo_description": "PDF 처리, 이력서 작성, 생산성 향상을 위한 무료 온라인 오피스 도구. 소프트웨어 설치 없이 전문 문서 작성."
+    }
+  },
+  "pages": {
+    "tools": {
+      "seo_title": "100개 이상의 무료 온라인 도구 - 개발자 및 디자이너용 | U2Tool",
+      "seo_description": "개발자, 디자이너, 크리에이터를 위한 100개 이상의 무료 온라인 도구 발견. JSON 포맷터, 이미지 변환기, PDF 도구, 코드 생성기 등. 빠르고 안전하며 가입 불필요."
+    }
+  },
   "nav": {
     "home": "홈",
     "tools": "도구",
@@ -110,6 +162,19 @@
     "contact": {
       "title": "문의하기",
       "content": "질문, 제안 또는 피드백이 있으신가요? 여러분의 의견을 듣고 싶습니다. 연락 채널을 통해 문의해 주세요."
+    },
+    "stats": {
+      "tools": "무료 도구",
+      "free": "영원히 무료",
+      "languages": "지원 언어",
+      "dataCollected": "수집된 데이터"
+    },
+    "trust": {
+      "title": "신뢰할 수 있는 이유",
+      "secure": "안전하고 비공개",
+      "browserBased": "브라우저 기반",
+      "noTracking": "추적 없음",
+      "noAds": "광고 없음"
     }
   },
   "blog": {
@@ -146,7 +211,7 @@
       "description": "구문 강조를 사용하여 JSON 데이터의 형식을 지정하고 아름답게 만듭니다. JSON을 검증하고 일반적인 오류를 수정하세요.",
       "seo_title": "무료 JSON 포맷터 및 유효성 검사기 온라인",
       "seo_description": "온라인에서 무료로 JSON 데이터의 형식을 지정하고, 아름답게 하고, 유효성을 검사하세요. 구문 강조, 오류 감지 및 간편한 복사. 개발자에게 적합합니다.",
-      "inputPlaceholder": "{\"키\": \"값\"}",
+      "inputPlaceholder": "여기에 JSON 데이터 입력...",
       "outputPlaceholder": "형식화된 JSON이 여기에 표시됩니다..."
     },
     "base64": {
@@ -3680,7 +3745,7 @@
       "description": "구문 강조를 사용하여 JSON 데이터의 형식을 지정하고 아름답게 만듭니다. JSON을 검증하고 일반적인 오류를 수정하세요.",
       "seo_title": "Free JSON Formatter & Validator Online",
       "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers.",
-      "inputPlaceholder": "{\"키\": \"값\"}",
+      "inputPlaceholder": "여기에 JSON 데이터 입력...",
       "outputPlaceholder": "형식화된 JSON이 여기에 표시됩니다..."
     },
     "uuid-generator": {

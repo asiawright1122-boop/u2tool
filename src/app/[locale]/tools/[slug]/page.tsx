@@ -17,9 +17,15 @@ import {
   getCategoryKeywords,
   truncateText,
   jsonLdToString,
+  generateOrganizationJsonLd,
+  type ExtendedJsonLdData,
 } from '@/lib/seo';
 import { getToolFAQs, generateFAQJsonLd } from '@/lib/faq';
 import { loadToolMessages, type SupportedLocale } from '@/lib/translations';
+import {
+  getToolAuthor,
+  generateExpertJsonLd,
+} from '@/lib/eeat';
 
 // 生成静态参数（仅预渲染热门工具，减少构建日志大小）
 // 非热门工具将在首次访问时按需生成并缓存
@@ -100,8 +106,15 @@ export async function generateMetadata({
     cssSelectors: ['h1', '.tool-description', '.faq-answer'],
   });
 
+  // 生成作者/专家 JSON-LD（E-E-A-T 信号）
+  const author = getToolAuthor(slug);
+  const authorJsonLd = generateExpertJsonLd(author);
+
+  // 生成组织 JSON-LD
+  const organizationJsonLd = generateOrganizationJsonLd(locale);
+
   // 合并多个 JSON-LD
-  const jsonLd = [softwareJsonLd, howToJsonLd, faqJsonLd, speakableJsonLd];
+  const jsonLd: ExtendedJsonLdData[] = [softwareJsonLd, howToJsonLd, faqJsonLd, speakableJsonLd, authorJsonLd, organizationJsonLd];
 
   // 生成动态 OG 图片 URL
   const ogImageUrl = `${SEO_CONFIG.siteUrl}/api/og?title=${encodeURIComponent(toolName)}&locale=${locale}&icon=${encodeURIComponent(tool.icon)}`;

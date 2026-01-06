@@ -13,22 +13,22 @@ import {
 
 describe('首页 SEO 元数据', () => {
   describe('generateAlternates', () => {
-    it('应该为首页生成正确的 alternates', () => {
+    it('应该为首页生成正确的 alternates（绝对 URL）', () => {
       const alternates = generateAlternates('en', '');
       
-      expect(alternates.canonical).toBe('/en');
+      expect(alternates.canonical).toBe(`${SEO_CONFIG.siteUrl}/en`);
       expect(alternates.languages).toBeDefined();
       
-      // 验证所有语言都有对应的 URL
+      // 验证所有语言都有对应的 URL（绝对 URL）
       for (const locale of SEO_CONFIG.locales) {
-        expect(alternates.languages[locale]).toBe(`/${locale}`);
+        expect(alternates.languages[locale]).toBe(`${SEO_CONFIG.siteUrl}/${locale}`);
       }
     });
 
-    it('应该为所有支持的语言生成 alternates', () => {
+    it('应该为所有支持的语言生成 alternates（绝对 URL）', () => {
       for (const locale of SEO_CONFIG.locales) {
         const alternates = generateAlternates(locale, '');
-        expect(alternates.canonical).toBe(`/${locale}`);
+        expect(alternates.canonical).toBe(`${SEO_CONFIG.siteUrl}/${locale}`);
       }
     });
   });
@@ -79,16 +79,16 @@ describe('Property 5: Social Media Tags Completeness', () => {
     }
   });
 
-  it('*For any* locale, alternates 应该包含所有支持的语言', () => {
+  it('*For any* locale, alternates 应该包含所有支持的语言（绝对 URL）', () => {
     for (const locale of SEO_CONFIG.locales) {
       const alternates = generateAlternates(locale, '');
       
-      // 验证 canonical URL
-      expect(alternates.canonical).toBe(`/${locale}`);
+      // 验证 canonical URL（绝对 URL）
+      expect(alternates.canonical).toBe(`${SEO_CONFIG.siteUrl}/${locale}`);
       
-      // 验证所有语言都有对应的 URL
+      // 验证所有语言都有对应的 URL（绝对 URL）
       for (const l of SEO_CONFIG.locales) {
-        expect(alternates.languages[l]).toBe(`/${l}`);
+        expect(alternates.languages[l]).toBe(`${SEO_CONFIG.siteUrl}/${l}`);
       }
     }
   });

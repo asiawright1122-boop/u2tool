@@ -195,15 +195,17 @@ export function generateHreflangLinks(path: string = ''): Record<string, string>
 
 /**
  * 生成 alternates 对象（用于 Next.js Metadata API）
+ * 使用绝对 URL 以确保搜索引擎正确识别规范页面
  * @param locale - 当前语言
  * @param path - 路径（不含 locale 前缀）
- * @returns alternates 对象
+ * @returns alternates 对象，包含绝对 canonical URL 和语言版本
  */
 export function generateAlternates(locale: string, path: string = '') {
+  const baseUrl = SEO_CONFIG.siteUrl;
   return {
-    canonical: `/${locale}${path}`,
+    canonical: `${baseUrl}/${locale}${path}`,
     languages: Object.fromEntries(
-      SEO_CONFIG.locales.map(l => [l, `/${l}${path}`])
+      SEO_CONFIG.locales.map(l => [l, `${baseUrl}/${l}${path}`])
     ),
   };
 }
@@ -244,6 +246,23 @@ interface SoftwareApplicationJsonLd extends JsonLdBase {
     price: string;
     priceCurrency: string;
   };
+  // 增强字段
+  datePublished?: string;
+  dateModified?: string;
+  author?: {
+    '@type': 'Person' | 'Organization';
+    name: string;
+    url?: string;
+  };
+  aggregateRating?: {
+    '@type': 'AggregateRating';
+    ratingValue: number;
+    ratingCount: number;
+    bestRating: number;
+    worstRating: number;
+  };
+  softwareVersion?: string;
+  featureList?: string[];
 }
 
 interface BreadcrumbItem {
@@ -303,6 +322,10 @@ interface SpeakableJsonLd extends JsonLdBase {
 
 export type JsonLdData = WebSiteJsonLd | SoftwareApplicationJsonLd | BreadcrumbListJsonLd | OrganizationJsonLd | FAQPageJsonLd | ItemListJsonLd | CollectionPageJsonLd | HowToJsonLd | SpeakableJsonLd;
 
+// 导入 PersonJsonLd 类型用于扩展
+import type { PersonJsonLd } from './eeat';
+export type ExtendedJsonLdData = JsonLdData | PersonJsonLd;
+
 // Organization JSON-LD 接口
 interface OrganizationJsonLd extends JsonLdBase {
   '@type': 'Organization';
@@ -310,6 +333,20 @@ interface OrganizationJsonLd extends JsonLdBase {
   url: string;
   logo?: string;
   sameAs?: string[];
+  // 增强字段
+  description?: string;
+  foundingDate?: string;
+  contactPoint?: {
+    '@type': 'ContactPoint';
+    contactType: string;
+    email?: string;
+    url?: string;
+    availableLanguage?: string[];
+  };
+  address?: {
+    '@type': 'PostalAddress';
+    addressCountry?: string;
+  };
 }
 
 // FAQ JSON-LD 接口
@@ -371,8 +408,21 @@ export function generateSoftwareApplicationJsonLd(params: {
   category: string;
   locale: string;
   slug: string;
+  datePublished?: string;
+  dateModified?: string;
+  author?: {
+    name: string;
+    url?: string;
+    type?: 'Person' | 'Organization';
+  };
+  aggregateRating?: {
+    ratingValue: number;
+    ratingCount: number;
+  };
+  softwareVersion?: string;
+  featureList?: string[];
 }): SoftwareApplicationJsonLd {
-  return {
+  const jsonLd: SoftwareApplicationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: params.name,
@@ -386,6 +436,43 @@ export function generateSoftwareApplicationJsonLd(params: {
       priceCurrency: 'USD',
     },
   };
+
+  // 添加可选字段
+  if (params.datePublished) {
+    jsonLd.datePublished = params.datePublished;
+  }
+  
+  if (params.dateModified) {
+    jsonLd.dateModified = params.dateModified;
+  }
+  
+  if (params.author) {
+    jsonLd.author = {
+      '@type': params.author.type || 'Organization',
+      name: params.author.name,
+      ...(params.author.url && { url: params.author.url }),
+    };
+  }
+  
+  if (params.aggregateRating) {
+    jsonLd.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: params.aggregateRating.ratingValue,
+      ratingCount: params.aggregateRating.ratingCount,
+      bestRating: 5,
+      worstRating: 1,
+    };
+  }
+  
+  if (params.softwareVersion) {
+    jsonLd.softwareVersion = params.softwareVersion;
+  }
+  
+  if (params.featureList && params.featureList.length > 0) {
+    jsonLd.featureList = params.featureList;
+  }
+
+  return jsonLd;
 }
 
 /**
@@ -418,7 +505,7 @@ export function generateBreadcrumbJsonLd(
  * @param data - JSON-LD 数据对象
  * @returns JSON 字符串
  */
-export function jsonLdToString(data: JsonLdData | JsonLdData[]): string {
+export function jsonLdToString(data: ExtendedJsonLdData | ExtendedJsonLdData[]): string {
   return JSON.stringify(data);
 }
 
@@ -472,21 +559,57 @@ export function encodeUrlPath(url: string): string {
 /**
  * 生成 Organization JSON-LD 结构化数据
  * @param locale - 语言代码
+ * @param options - 可选配置
  * @returns Organization JSON-LD 对象
  */
-export function generateOrganizationJsonLd(locale: string): OrganizationJsonLd {
-  return {
+export function generateOrganizationJsonLd(
+  locale: string,
+  options?: {
+    description?: string;
+    foundingDate?: string;
+    contactEmail?: string;
+    socialLinks?: string[];
+  }
+): OrganizationJsonLd {
+  const jsonLd: OrganizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SEO_CONFIG.siteName,
     url: getCanonicalUrl(locale, ''),
     logo: `${SEO_CONFIG.siteUrl}/icons/icon-512x512.png`,
-    sameAs: [
-      // 可以添加社交媒体链接
-      // 'https://twitter.com/toolbox',
-      // 'https://github.com/toolbox',
+    sameAs: options?.socialLinks || [
+      // 社交媒体链接（可配置）
+      // 'https://twitter.com/u2tool',
+      // 'https://github.com/u2tool',
     ],
   };
+
+  // 添加描述
+  if (options?.description) {
+    jsonLd.description = options.description;
+  }
+
+  // 添加成立日期
+  if (options?.foundingDate) {
+    jsonLd.foundingDate = options.foundingDate;
+  }
+
+  // 添加联系点
+  jsonLd.contactPoint = {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    url: getCanonicalUrl(locale, '/contact'),
+    availableLanguage: [...SEO_CONFIG.locales],
+    ...(options?.contactEmail && { email: options.contactEmail }),
+  };
+
+  // 添加地址（可选）
+  jsonLd.address = {
+    '@type': 'PostalAddress',
+    addressCountry: 'US',
+  };
+
+  return jsonLd;
 }
 
 /**
@@ -880,17 +1003,49 @@ export interface BreadcrumbNavItem {
  * @param homeLabel - 首页标签
  * @param toolsLabel - 工具列表标签
  * @param toolName - 当前工具名称
+ * @param categoryLabel - 分类标签（可选）
+ * @param categoryId - 分类 ID（可选）
  * @returns 面包屑项目数组
  */
 export function generateToolBreadcrumbs(
   homeLabel: string,
   toolsLabel: string,
-  toolName: string
+  toolName: string,
+  categoryLabel?: string,
+  categoryId?: string
+): BreadcrumbNavItem[] {
+  const items: BreadcrumbNavItem[] = [
+    { name: homeLabel, path: '' },
+    { name: toolsLabel, path: '/tools' },
+  ];
+  
+  // 如果提供了分类信息，添加分类层级
+  if (categoryLabel && categoryId) {
+    items.push({ name: categoryLabel, path: `/tools/category/${categoryId}` });
+  }
+  
+  // 添加当前工具（最后一项，无路径）
+  items.push({ name: toolName });
+  
+  return items;
+}
+
+/**
+ * 生成分类页面的面包屑项目
+ * @param homeLabel - 首页标签
+ * @param toolsLabel - 工具列表标签
+ * @param categoryLabel - 分类标签
+ * @returns 面包屑项目数组
+ */
+export function generateCategoryBreadcrumbs(
+  homeLabel: string,
+  toolsLabel: string,
+  categoryLabel: string
 ): BreadcrumbNavItem[] {
   return [
     { name: homeLabel, path: '' },
     { name: toolsLabel, path: '/tools' },
-    { name: toolName },
+    { name: categoryLabel },
   ];
 }
 

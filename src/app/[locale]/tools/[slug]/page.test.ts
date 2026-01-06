@@ -37,12 +37,12 @@ describe('工具页面 SEO 元数据', () => {
   });
 
   describe('generateAlternates for tool pages', () => {
-    it('应该为工具页面生成正确的 alternates', () => {
+    it('应该为工具页面生成正确的 alternates（绝对 URL）', () => {
       const alternates = generateAlternates('en', '/tools/json-formatter');
       
-      expect(alternates.canonical).toBe('/en/tools/json-formatter');
-      expect(alternates.languages['en']).toBe('/en/tools/json-formatter');
-      expect(alternates.languages['zh']).toBe('/zh/tools/json-formatter');
+      expect(alternates.canonical).toBe(`${SEO_CONFIG.siteUrl}/en/tools/json-formatter`);
+      expect(alternates.languages['en']).toBe(`${SEO_CONFIG.siteUrl}/en/tools/json-formatter`);
+      expect(alternates.languages['zh']).toBe(`${SEO_CONFIG.siteUrl}/zh/tools/json-formatter`);
     });
   });
 
@@ -133,12 +133,12 @@ describe('Property 2: Metadata Length Constraints', () => {
       for (const slug of testSlugs) {
         const alternates = generateAlternates(locale, `/tools/${slug}`);
         
-        // 验证 canonical URL
-        expect(alternates.canonical).toBe(`/${locale}/tools/${slug}`);
+        // 验证 canonical URL（绝对 URL）
+        expect(alternates.canonical).toBe(`${SEO_CONFIG.siteUrl}/${locale}/tools/${slug}`);
         
-        // 验证所有语言都有对应的 URL
+        // 验证所有语言都有对应的 URL（绝对 URL）
         for (const l of SEO_CONFIG.locales) {
-          expect(alternates.languages[l]).toBe(`/${l}/tools/${slug}`);
+          expect(alternates.languages[l]).toBe(`${SEO_CONFIG.siteUrl}/${l}/tools/${slug}`);
         }
       }
     }

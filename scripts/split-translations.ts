@@ -17,7 +17,9 @@ const LOCALES = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
 // 基础翻译的键（这些会保留在 base.json 中）
 const BASE_KEYS = [
   'site',
-  'categories', 
+  'categories',
+  'categories_seo', // 分类页面 SEO 元数据
+  'pages', // 页面级 SEO 元数据（如 tools 列表页）
   'nav',
   'home',
   'footer',

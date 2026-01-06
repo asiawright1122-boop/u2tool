@@ -21,6 +21,7 @@ export function generateStaticParams() {
 
 /**
  * 生成分类页面的 SEO 元数据
+ * 使用 categories_seo 命名空间中的独特 SEO 标题和描述
  */
 export async function generateMetadata({
   params,
@@ -37,8 +38,9 @@ export async function generateMetadata({
   }
   
   const categoryName = t(`categories.${id}`);
-  const title = `${categoryName} - ${t('nav.tools')}`;
-  const description = t('site.description');
+  // 使用分类特定的 SEO 元数据，如果不存在则回退到默认格式
+  const title = t(`categories_seo.${id}.seo_title`, { defaultValue: `${categoryName} - ${t('nav.tools')}` });
+  const description = t(`categories_seo.${id}.seo_description`, { defaultValue: t('site.description') });
   
   // 获取分类关键词
   const keywords = getCategoryKeywords(id, locale);

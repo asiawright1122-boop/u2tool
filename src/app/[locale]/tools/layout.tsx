@@ -2,8 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { tools } from '@/config/tools';
 import ScrollToTop from '@/components/ScrollToTop';
-
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://toolbox.example.com';
+import { SEO_CONFIG } from '@/lib/seo';
 
 // 工具列表页的 SEO 元数据
 export async function generateMetadata({
@@ -13,21 +12,22 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'site' });
+  const baseUrl = SEO_CONFIG.siteUrl;
 
   return {
     title: `All ${tools.length}+ Developer Tools | ToolBox`,
     description: t('description'),
     alternates: {
-      canonical: `/${locale}/tools`,
+      canonical: `${baseUrl}/${locale}/tools`,
       languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `/${l}/tools`])
+        routing.locales.map((l) => [l, `${baseUrl}/${l}/tools`])
       ),
     },
     openGraph: {
       title: `All ${tools.length}+ Developer Tools | ToolBox`,
       description: t('description'),
       type: 'website',
-      url: `${BASE_URL}/${locale}/tools`,
+      url: `${baseUrl}/${locale}/tools`,
     },
   };
 }

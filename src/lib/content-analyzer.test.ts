@@ -297,3 +297,285 @@ describe('Content Analyzer - Property Tests', () => {
     });
   });
 });
+
+
+// 导入新增的函数
+import {
+  calculateContentDepth,
+  calculateReadability,
+  calculateKeywordRelevance,
+  evaluateContentQuality,
+  compareContentSimilarity,
+  needsManualReview,
+} from './content-analyzer';
+
+describe('Enhanced Content Analysis', () => {
+  describe('calculateContentDepth', () => {
+    it('should return 0 for empty content', () => {
+      expect(calculateContentDepth('')).toBe(0);
+    });
+
+    it('should give higher scores for longer content', () => {
+      const shortContent = 'This is short.';
+      const longContent = `
+        This is a much longer piece of content that contains multiple paragraphs.
+        
+        It has various sections and provides detailed information about the topic.
+        The content includes examples and explanations that help users understand.
+        
+        - First point
+        - Second point
+        - Third point
+        
+        In conclusion, this content is comprehensive and well-structured.
+      `;
+      
+      const shortScore = calculateContentDepth(shortContent);
+      const longScore = calculateContentDepth(longContent);
+      
+      expect(longScore).toBeGreaterThan(shortScore);
+    });
+
+    it('should give bonus for list items', () => {
+      const withoutList = 'This is content without any list items. Just plain text.';
+      const withList = `
+        This is content with list items:
+        - First item
+        - Second item
+        - Third item
+      `;
+      
+      const withoutListScore = calculateContentDepth(withoutList);
+      const withListScore = calculateContentDepth(withList);
+      
+      expect(withListScore).toBeGreaterThan(withoutListScore);
+    });
+
+    it('should always return value between 0 and 100', () => {
+      fc.assert(
+        fc.property(
+          fc.string({ minLength: 0, maxLength: 2000 }),
+          (content) => {
+            const score = calculateContentDepth(content);
+            return score >= 0 && score <= 100;
+          }
+        ),
+        { numRuns: 100 }
+      );
+    });
+  });
+
+  describe('calculateReadability', () => {
+    it('should return 0 for empty content', () => {
+      expect(calculateReadability('')).toBe(0);
+    });
+
+    it('should give reasonable scores for normal content', () => {
+      const normalContent = 'This is a normal sentence. It has average length. The words are simple.';
+      const score = calculateReadability(normalContent);
+      
+      expect(score).toBeGreaterThan(50);
+      expect(score).toBeLessThanOrEqual(100);
+    });
+
+    it('should penalize very long sentences', () => {
+      const shortSentences = 'Short sentence here. Simple words used. Easy to read.';
+      const longSentence = 'This is an extremely long sentence that goes on and on and on with many words and clauses and phrases that make it very difficult to read and understand for most people who are trying to quickly scan the content.';
+      
+      const shortScore = calculateReadability(shortSentences);
+      const longScore = calculateReadability(longSentence);
+      
+      // 长句子应该有较低的可读性分数
+      expect(longScore).toBeLessThan(80);
+    });
+
+    it('should always return value between 0 and 100', () => {
+      fc.assert(
+        fc.property(
+          fc.string({ minLength: 1, maxLength: 1000 }),
+          (content) => {
+            const score = calculateReadability(content);
+            return score >= 0 && score <= 100;
+          }
+        ),
+        { numRuns: 100 }
+      );
+    });
+  });
+
+  describe('calculateKeywordRelevance', () => {
+    it('should return 0 for empty content', () => {
+      expect(calculateKeywordRelevance('', ['keyword'])).toBe(0);
+    });
+
+    it('should return 0 for empty keywords', () => {
+      expect(calculateKeywordRelevance('Some content', [])).toBe(0);
+    });
+
+    it('should give higher scores when keywords are present', () => {
+      const content = 'JSON formatter tool helps you format JSON data easily.';
+      const relevantKeywords = ['JSON', 'formatter', 'format'];
+      const irrelevantKeywords = ['Python', 'database', 'server'];
+      
+      const relevantScore = calculateKeywordRelevance(content, relevantKeywords);
+      const irrelevantScore = calculateKeywordRelevance(content, irrelevantKeywords);
+      
+      expect(relevantScore).toBeGreaterThan(irrelevantScore);
+    });
+
+    it('should always return value between 0 and 100', () => {
+      fc.assert(
+        fc.property(
+          fc.string({ minLength: 10, maxLength: 500 }),
+          fc.array(fc.string({ minLength: 2, maxLength: 20 }), { minLength: 1, maxLength: 10 }),
+          (content, keywords) => {
+            const score = calculateKeywordRelevance(content, keywords);
+            return score >= 0 && score <= 100;
+          }
+        ),
+        { numRuns: 100 }
+      );
+    });
+  });
+
+  describe('evaluateContentQuality', () => {
+    it('should return all required fields', () => {
+      const content = 'This is a test content for quality evaluation.';
+      const result = evaluateContentQuality(content);
+      
+      expect(result).toHaveProperty('uniquenessScore');
+      expect(result).toHaveProperty('templateSimilarity');
+      expect(result).toHaveProperty('sentenceVariety');
+      expect(result).toHaveProperty('keywordDensity');
+      expect(result).toHaveProperty('depthScore');
+      expect(result).toHaveProperty('readabilityScore');
+      expect(result).toHaveProperty('keywordRelevance');
+      expect(result).toHaveProperty('overallScore');
+      expect(result).toHaveProperty('suggestions');
+      expect(result).toHaveProperty('flags');
+    });
+
+    it('should give higher overall scores for quality content', () => {
+      const lowQualityContent = 'Short.';
+      const highQualityContent = `
+        JSON Formatter is a comprehensive online tool designed for developers.
+        
+        It provides the following features:
+        - Format and beautify JSON data
+        - Validate JSON syntax
+        - Minify JSON for production
+        - Copy or download results
+        
+        Simply paste your JSON code and get instant results. The tool runs
+        entirely in your browser, ensuring your data stays private and secure.
+      `;
+      
+      const lowResult = evaluateContentQuality(lowQualityContent);
+      const highResult = evaluateContentQuality(highQualityContent);
+      
+      expect(highResult.overallScore).toBeGreaterThan(lowResult.overallScore);
+    });
+
+    it('should include suggestions for low-quality content', () => {
+      const lowQualityContent = 'Bad.';
+      const result = evaluateContentQuality(lowQualityContent);
+      
+      expect(result.suggestions.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('compareContentSimilarity', () => {
+    it('should return 0 for empty content', () => {
+      expect(compareContentSimilarity('', 'some content')).toBe(0);
+      expect(compareContentSimilarity('some content', '')).toBe(0);
+    });
+
+    it('should return high similarity for identical content', () => {
+      const content = 'This is some test content for comparison.';
+      const similarity = compareContentSimilarity(content, content);
+      
+      expect(similarity).toBe(100);
+    });
+
+    it('should return low similarity for different content', () => {
+      const content1 = 'JSON formatter tool for developers.';
+      const content2 = 'Python database server configuration.';
+      const similarity = compareContentSimilarity(content1, content2);
+      
+      expect(similarity).toBeLessThan(50);
+    });
+
+    it('should return moderate similarity for related content', () => {
+      const content1 = 'JSON formatter tool helps format JSON data.';
+      const content2 = 'JSON beautifier tool helps beautify JSON code.';
+      const similarity = compareContentSimilarity(content1, content2);
+      
+      expect(similarity).toBeGreaterThan(30);
+      expect(similarity).toBeLessThan(100);
+    });
+
+    it('should always return value between 0 and 100', () => {
+      fc.assert(
+        fc.property(
+          fc.string({ minLength: 10, maxLength: 200 }),
+          fc.string({ minLength: 10, maxLength: 200 }),
+          (content1, content2) => {
+            const similarity = compareContentSimilarity(content1, content2);
+            return similarity >= 0 && similarity <= 100;
+          }
+        ),
+        { numRuns: 100 }
+      );
+    });
+  });
+
+  describe('needsManualReview', () => {
+    it('should return true for low uniqueness score', () => {
+      const result: ContentAnalysisResult = {
+        uniquenessScore: 50,
+        templateSimilarity: 30,
+        sentenceVariety: 60,
+        keywordDensity: 1,
+        flags: [],
+      };
+      
+      expect(needsManualReview(result)).toBe(true);
+    });
+
+    it('should return true for high template similarity', () => {
+      const result: ContentAnalysisResult = {
+        uniquenessScore: 80,
+        templateSimilarity: 50,
+        sentenceVariety: 60,
+        keywordDensity: 1,
+        flags: [],
+      };
+      
+      expect(needsManualReview(result)).toBe(true);
+    });
+
+    it('should return true for error flags', () => {
+      const result: ContentAnalysisResult = {
+        uniquenessScore: 80,
+        templateSimilarity: 20,
+        sentenceVariety: 60,
+        keywordDensity: 1,
+        flags: [{ type: 'too-short', severity: 'error', message: 'Too short' }],
+      };
+      
+      expect(needsManualReview(result)).toBe(true);
+    });
+
+    it('should return false for high-quality content', () => {
+      const result: ContentAnalysisResult = {
+        uniquenessScore: 85,
+        templateSimilarity: 20,
+        sentenceVariety: 70,
+        keywordDensity: 1.5,
+        flags: [],
+      };
+      
+      expect(needsManualReview(result)).toBe(false);
+    });
+  });
+});

@@ -13,6 +13,10 @@ import {
   validateFAQs,
   MIN_FAQ_COUNT,
   FAQItem,
+  getToolTerminology,
+  detectTemplatePatterns,
+  enhanceFAQContent,
+  TOOL_TERMINOLOGY,
 } from './faq';
 
 // 直接定义测试用的 locales 和工具样本，避免导入触发 next-intl
@@ -263,6 +267,185 @@ describe('FAQ System - Property Tests', () => {
       const result = validateFAQs(emptyAnswerFaqs);
       expect(result.valid).toBe(false);
       expect(result.errors.some(e => e.includes('empty answer'))).toBe(true);
+    });
+  });
+
+  describe('Tool Terminology - Property Tests', () => {
+    // 测试工具术语获取
+    it('should return terminology for known tools', () => {
+      const knownTools = Object.keys(TOOL_TERMINOLOGY);
+      
+      for (const slug of knownTools) {
+        const terms = getToolTerminology(slug, 'en');
+        expect(
+          terms.length,
+          `Tool "${slug}" should have terminology defined`
+        ).toBeGreaterThan(0);
+      }
+    });
+
+    // 测试未知工具返回空数组
+    it('should return empty array for unknown tools', () => {
+      const terms = getToolTerminology('unknown-tool-xyz', 'en');
+      expect(terms).toEqual([]);
+    });
+
+    // 测试中文术语回退到英文
+    it('should fallback to English terminology when locale not available', () => {
+      const enTerms = getToolTerminology('json-formatter', 'en');
+      const unknownLocaleTerms = getToolTerminology('json-formatter', 'unknown');
+      
+      // 如果未知语言没有定义，应该回退到英文
+      expect(unknownLocaleTerms).toEqual(enTerms);
+    });
+  });
+
+  describe('Template Pattern Detection - Property Tests', () => {
+    // 测试模板化检测
+    it('should detect highly templated FAQs', () => {
+      const templatedFaqs: FAQItem[] = [
+        { question: 'How do I use this tool?', answer: 'Enter data and click button.' },
+        { question: 'How do I format data?', answer: 'Enter data and click button.' },
+        { question: 'How do I convert data?', answer: 'Enter data and click button.' },
+      ];
+
+      const result = detectTemplatePatterns(templatedFaqs, 'Test Tool');
+      
+      // 高度模板化的内容应该有较高的分数
+      expect(result.score).toBeGreaterThan(30);
+      expect(result.issues.length).toBeGreaterThan(0);
+    });
+
+    // 测试非模板化内容
+    it('should give low score to diverse FAQs', () => {
+      const diverseFaqs: FAQItem[] = [
+        { 
+          question: 'How do I use the JSON Formatter?', 
+          answer: 'The JSON Formatter tool helps you format and validate JSON data. Simply paste your JSON in the input area and click Format.' 
+        },
+        { 
+          question: 'What encoding does this tool support?', 
+          answer: 'This tool supports UTF-8 encoding by default, which covers most international characters and symbols used in JSON documents.' 
+        },
+        { 
+          question: 'Can I validate JSON schema?', 
+          answer: 'Yes, the JSON Formatter includes basic validation. For advanced schema validation, use our dedicated JSON Schema Validator tool.' 
+        },
+      ];
+
+      const result = detectTemplatePatterns(diverseFaqs, 'JSON Formatter');
+      
+      // 多样化的内容应该有较低的分数
+      expect(result.score).toBeLessThan(50);
+    });
+
+    // 测试检测缺少工具名称引用
+    it('should detect when answers lack tool-specific references', () => {
+      const genericFaqs: FAQItem[] = [
+        { question: 'How do I use this?', answer: 'Enter data and click button.' },
+        { question: 'Is it free?', answer: 'Yes, completely free.' },
+        { question: 'Is my data safe?', answer: 'Yes, processed locally.' },
+      ];
+
+      const result = detectTemplatePatterns(genericFaqs, 'Specific Tool Name');
+      
+      expect(result.issues.some(i => i.includes('tool-specific'))).toBe(true);
+    });
+  });
+
+  describe('FAQ Content Enhancement - Property Tests', () => {
+    // 测试内容增强
+    it('should enhance FAQs with tool terminology', () => {
+      const basicFaqs: FAQItem[] = [
+        { question: 'How do I use this tool?', answer: 'Enter your data and click process.' },
+        { question: 'Is it free?', answer: 'Yes, completely free.' },
+        { question: 'Is my data safe?', answer: 'Yes, processed locally.' },
+      ];
+
+      const enhanced = enhanceFAQContent(basicFaqs, 'json-formatter', 'JSON Formatter', 'en');
+      
+      // 增强后的第一个答案应该包含术语
+      expect(enhanced[0].answer.length).toBeGreaterThan(basicFaqs[0].answer.length);
+      expect(enhanced[0].answer).toContain('supports');
+    });
+
+    // 测试已有术语的 FAQ 不被修改
+    it('should not modify FAQs that already contain terminology', () => {
+      const faqsWithTerms: FAQItem[] = [
+        { 
+          question: 'How do I use this tool?', 
+          answer: 'This tool supports JSON syntax validation and pretty print formatting.' 
+        },
+        { question: 'Is it free?', answer: 'Yes, completely free.' },
+        { question: 'Is my data safe?', answer: 'Yes, processed locally.' },
+      ];
+
+      const enhanced = enhanceFAQContent(faqsWithTerms, 'json-formatter', 'JSON Formatter', 'en');
+      
+      // 第一个答案已经包含术语，不应该被修改
+      expect(enhanced[0].answer).toBe(faqsWithTerms[0].answer);
+    });
+
+    // 测试未知工具不被增强
+    it('should not modify FAQs for unknown tools', () => {
+      const basicFaqs: FAQItem[] = [
+        { question: 'How do I use this tool?', answer: 'Enter your data.' },
+        { question: 'Is it free?', answer: 'Yes.' },
+        { question: 'Is my data safe?', answer: 'Yes.' },
+      ];
+
+      const enhanced = enhanceFAQContent(basicFaqs, 'unknown-tool', 'Unknown Tool', 'en');
+      
+      // 未知工具的 FAQ 应该保持不变
+      expect(enhanced).toEqual(basicFaqs);
+    });
+
+    // 测试中文增强
+    it('should enhance FAQs in Chinese', () => {
+      const basicFaqs: FAQItem[] = [
+        { question: '如何使用此工具？', answer: '输入数据并点击处理。' },
+        { question: '免费吗？', answer: '是的，完全免费。' },
+        { question: '数据安全吗？', answer: '是的，本地处理。' },
+      ];
+
+      const enhanced = enhanceFAQContent(basicFaqs, 'json-formatter', 'JSON Formatter', 'zh');
+      
+      // 增强后的第一个答案应该包含中文术语
+      expect(enhanced[0].answer.length).toBeGreaterThan(basicFaqs[0].answer.length);
+      expect(enhanced[0].answer).toContain('该工具支持');
+    });
+  });
+
+  describe('getToolFAQs with Enhancement - Property Tests', () => {
+    // 测试带工具名称的 FAQ 获取
+    it('should return enhanced FAQs when toolName is provided', () => {
+      const faqs = getToolFAQs('json-formatter', 'en', 'formatters', 'JSON Formatter');
+      
+      expect(faqs.length).toBeGreaterThanOrEqual(MIN_FAQ_COUNT);
+      
+      // 验证 FAQ 有效性
+      const validation = validateFAQs(faqs);
+      expect(validation.valid).toBe(true);
+    });
+
+    // 测试所有已知工具的增强 FAQ
+    it('should return valid enhanced FAQs for all known tools', () => {
+      const toolsWithTerms = Object.keys(TOOL_TERMINOLOGY);
+      
+      for (const slug of toolsWithTerms) {
+        const faqs = getToolFAQs(slug, 'en', 'formatters', slug);
+        
+        expect(
+          faqs.length,
+          `Tool "${slug}" should have at least ${MIN_FAQ_COUNT} FAQs`
+        ).toBeGreaterThanOrEqual(MIN_FAQ_COUNT);
+        
+        const validation = validateFAQs(faqs);
+        expect(
+          validation.valid,
+          `FAQs for tool "${slug}" should be valid. Errors: ${validation.errors.join(', ')}`
+        ).toBe(true);
+      }
     });
   });
 });

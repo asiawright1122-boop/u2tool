@@ -12,6 +12,7 @@ import ToolsPageClient from './ToolsPageClient';
 
 /**
  * 生成工具列表页面的 SEO 元数据
+ * 使用 pages.tools 命名空间中的独特 SEO 标题和描述
  * @see Requirements 8.3
  */
 export async function generateMetadata({
@@ -22,9 +23,9 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale });
   
-  const title = t('nav.tools');
-  // 使用 site.description 作为工具列表页面的描述
-  const description = t('site.description');
+  // 使用工具列表页面特定的 SEO 元数据，如果不存在则回退到默认值
+  const title = t('pages.tools.seo_title', { defaultValue: t('nav.tools') });
+  const description = t('pages.tools.seo_description', { defaultValue: t('site.description') });
   
   return {
     title,

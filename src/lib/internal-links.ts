@@ -11,6 +11,8 @@ const RELEVANCE_WEIGHTS = {
   sameCategory: 40,      // 同分类
   popularBonus: 15,      // 热门工具加成
   crossCategory: 5,      // 跨分类推荐基础分
+  keywordMatch: 25,      // 关键词匹配加成
+  recentUpdate: 10,      // 最近更新加成
 };
 
 // 热门工具列表（基于使用频率）
@@ -26,6 +28,90 @@ const POPULAR_TOOLS = new Set([
   'jwt-decoder',
   'regex-tester',
 ]);
+
+// 工具关键词映射（用于语义相关性计算）
+const TOOL_KEYWORDS: Record<string, string[]> = {
+  // 编码/解码类
+  'base64': ['encode', 'decode', 'encoding', 'binary', 'text'],
+  'url-encoder': ['encode', 'decode', 'url', 'uri', 'percent'],
+  'html-encoder': ['encode', 'decode', 'html', 'entities', 'escape'],
+  'jwt-decoder': ['jwt', 'token', 'decode', 'auth', 'json'],
+  
+  // 格式化类
+  'json-formatter': ['json', 'format', 'beautify', 'minify', 'validate'],
+  'json-minifier': ['json', 'minify', 'compress', 'format'],
+  'xml-formatter': ['xml', 'format', 'beautify', 'validate'],
+  'sql-formatter': ['sql', 'format', 'beautify', 'query'],
+  'css-formatter': ['css', 'format', 'beautify', 'style'],
+  'html-formatter': ['html', 'format', 'beautify', 'markup'],
+  
+  // 生成器类
+  'uuid-generator': ['uuid', 'guid', 'generate', 'unique', 'id'],
+  'hash-generator': ['hash', 'md5', 'sha', 'generate', 'checksum'],
+  'password-generator': ['password', 'generate', 'random', 'secure'],
+  'qr-generator': ['qr', 'code', 'generate', 'barcode'],
+  'lorem-ipsum': ['lorem', 'ipsum', 'text', 'generate', 'placeholder'],
+  
+  // 转换器类
+  'timestamp-converter': ['timestamp', 'date', 'time', 'convert', 'unix'],
+  'color-converter': ['color', 'hex', 'rgb', 'hsl', 'convert'],
+  'number-base-converter': ['number', 'base', 'binary', 'hex', 'convert'],
+  'unit-converter': ['unit', 'convert', 'measurement', 'length', 'weight'],
+  'case-converter': ['case', 'convert', 'text', 'upper', 'lower', 'camel'],
+  
+  // 文本处理类
+  'regex-tester': ['regex', 'regular', 'expression', 'test', 'match'],
+  'diff-checker': ['diff', 'compare', 'text', 'difference'],
+  'word-counter': ['word', 'count', 'character', 'text', 'statistics'],
+  'text-to-slug': ['slug', 'url', 'text', 'convert', 'seo'],
+  'markdown-preview': ['markdown', 'preview', 'render', 'md'],
+};
+
+// 分类关联性（跨分类推荐权重）
+const CATEGORY_RELATIONS: Record<string, Record<string, number>> = {
+  'encoding': { 'text': 0.6, 'converter': 0.5, 'generator': 0.3 },
+  'formatter': { 'text': 0.5, 'converter': 0.4, 'encoding': 0.3 },
+  'generator': { 'text': 0.4, 'encoding': 0.3, 'converter': 0.3 },
+  'converter': { 'encoding': 0.5, 'formatter': 0.4, 'text': 0.4 },
+  'text': { 'formatter': 0.5, 'encoding': 0.4, 'converter': 0.4 },
+  'image': { 'generator': 0.3, 'converter': 0.3 },
+  'time': { 'converter': 0.5, 'generator': 0.3 },
+  'security': { 'generator': 0.5, 'encoding': 0.4 },
+};
+
+/**
+ * 获取工具的关键词
+ */
+export function getToolKeywords(slug: string): string[] {
+  return TOOL_KEYWORDS[slug] || [];
+}
+
+/**
+ * 计算两个工具之间的关键词相关性
+ */
+export function calculateKeywordRelevance(tool1Slug: string, tool2Slug: string): number {
+  const keywords1 = getToolKeywords(tool1Slug);
+  const keywords2 = getToolKeywords(tool2Slug);
+  
+  if (keywords1.length === 0 || keywords2.length === 0) {
+    return 0;
+  }
+  
+  const set1 = new Set(keywords1);
+  const matchCount = keywords2.filter(k => set1.has(k)).length;
+  
+  // 计算 Jaccard 相似度
+  const unionSize = new Set([...keywords1, ...keywords2]).size;
+  return unionSize > 0 ? (matchCount / unionSize) * RELEVANCE_WEIGHTS.keywordMatch : 0;
+}
+
+/**
+ * 获取分类关联权重
+ */
+export function getCategoryRelationWeight(category1: string, category2: string): number {
+  if (category1 === category2) return 1;
+  return CATEGORY_RELATIONS[category1]?.[category2] || 0.1;
+}
 
 /**
  * 计算两个工具之间的相关性分数
@@ -45,14 +131,19 @@ export function calculateRelevanceScore(tool1: Tool, tool2: Tool): number {
   if (tool1.category === tool2.category) {
     score += RELEVANCE_WEIGHTS.sameCategory;
   } else {
-    // 跨分类基础分
-    score += RELEVANCE_WEIGHTS.crossCategory;
+    // 跨分类基础分 + 分类关联权重
+    const relationWeight = getCategoryRelationWeight(tool1.category, tool2.category);
+    score += RELEVANCE_WEIGHTS.crossCategory + (relationWeight * 15);
   }
 
   // 热门工具加成
   if (POPULAR_TOOLS.has(tool2.slug) || tool2.popular) {
     score += RELEVANCE_WEIGHTS.popularBonus;
   }
+
+  // 关键词相关性加成
+  const keywordScore = calculateKeywordRelevance(tool1.slug, tool2.slug);
+  score += keywordScore;
 
   // 限制最大分数为 100
   return Math.min(score, 100);
@@ -82,8 +173,12 @@ export function getSemanticRelatedTools(
     }))
     .sort((a, b) => b.score - a.score);
 
+  // 确保返回至少 minCount 个工具（如果有足够的工具）
+  const minCount = Math.min(6, tools.length - 1);
+  const resultCount = Math.max(maxCount, minCount);
+  
   // 返回前 N 个
-  return scoredTools.slice(0, maxCount).map(item => item.tool);
+  return scoredTools.slice(0, resultCount).map(item => item.tool);
 }
 
 /**
