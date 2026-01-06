@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from 'next-themes';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/react';
 import { routing } from '@/i18n/routing';
 import { SEO_CONFIG, getVerificationTags } from '@/lib/seo';
 import { loadBaseMessages, type SupportedLocale } from '@/lib/translations';
@@ -288,6 +289,8 @@ export default async function LocaleLayout({
       {process.env.NEXT_PUBLIC_GA_ID && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       )}
+      {/* Vercel Analytics */}
+      <Analytics />
     </html>
   );
 }
