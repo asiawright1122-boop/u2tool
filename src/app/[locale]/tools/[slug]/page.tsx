@@ -63,8 +63,48 @@ export async function generateMetadata({
   
   // 获取翻译文本（直接从工具翻译中获取）
   const toolName = (toolMessages as Record<string, string>).name || slug;
-  const seoTitle = (toolMessages as Record<string, string>).seo_title || toolName;
-  const seoDescription = (toolMessages as Record<string, string>).seo_description || (toolMessages as Record<string, string>).description || '';
+  const toolDescription = (toolMessages as Record<string, string>).description || '';
+  
+  // 使用本地化模板生成 SEO 标题和描述，确保每个语言都有唯一的内容
+  // 优先使用翻译文件中的 seo_title/seo_description，如果没有则使用模板生成
+  const rawSeoTitle = (toolMessages as Record<string, string>).seo_title;
+  const rawSeoDescription = (toolMessages as Record<string, string>).seo_description;
+  
+  // 检查是否是真正本地化的内容（非英文语言应包含非ASCII字符）
+  const isLocalizedTitle = locale === 'en' || (rawSeoTitle && /[^\x00-\x7F]/.test(rawSeoTitle));
+  const isLocalizedDesc = locale === 'en' || (rawSeoDescription && /[^\x00-\x7F]/.test(rawSeoDescription));
+  
+  // SEO 标题模板（按语言）
+  const seoTitleTemplates: Record<string, string> = {
+    en: `Free ${toolName} Online | U2Tool`,
+    zh: `${toolName} - 免费在线工具 | U2Tool`,
+    ja: `${toolName} - 無料オンラインツール | U2Tool`,
+    ko: `${toolName} - 무료 온라인 도구 | U2Tool`,
+    es: `${toolName} Gratis Online | U2Tool`,
+    pt: `${toolName} Grátis Online | U2Tool`,
+    fr: `${toolName} Gratuit en Ligne | U2Tool`,
+    de: `${toolName} Kostenlos Online | U2Tool`,
+    ru: `${toolName} - Бесплатный Онлайн | U2Tool`,
+    ar: `${toolName} - أداة مجانية عبر الإنترنت | U2Tool`,
+  };
+  
+  // SEO 描述模板（按语言）
+  const seoDescTemplates: Record<string, string> = {
+    en: `Use ${toolName} online for free. ${toolDescription} No registration required, instant results in your browser.`,
+    zh: `免费在线使用${toolName}。${toolDescription} 无需注册，浏览器即时获取结果。`,
+    ja: `${toolName}を無料でオンライン使用。${toolDescription} 登録不要、ブラウザで即座に結果を取得。`,
+    ko: `${toolName}을(를) 무료로 온라인에서 사용하세요. ${toolDescription} 등록 불필요, 브라우저에서 즉시 결과 확인.`,
+    es: `Use ${toolName} en línea gratis. ${toolDescription} Sin registro, resultados instantáneos en su navegador.`,
+    pt: `Use ${toolName} online gratuitamente. ${toolDescription} Sem registro, resultados instantâneos no navegador.`,
+    fr: `Utilisez ${toolName} en ligne gratuitement. ${toolDescription} Sans inscription, résultats instantanés.`,
+    de: `Verwenden Sie ${toolName} kostenlos online. ${toolDescription} Keine Registrierung, sofortige Ergebnisse.`,
+    ru: `Используйте ${toolName} онлайн бесплатно. ${toolDescription} Без регистрации, мгновенные результаты.`,
+    ar: `استخدم ${toolName} مجانًا عبر الإنترنت. ${toolDescription} بدون تسجيل، نتائج فورية.`,
+  };
+  
+  // 使用本地化的 SEO 数据，或回退到模板
+  const seoTitle = isLocalizedTitle && rawSeoTitle ? rawSeoTitle : (seoTitleTemplates[locale] || seoTitleTemplates.en);
+  const seoDescription = isLocalizedDesc && rawSeoDescription ? rawSeoDescription : (seoDescTemplates[locale] || seoDescTemplates.en);
 
   // 确保 title 长度 < 60 字符
   const title = truncateText(seoTitle, SEO_CONFIG.titleMaxLength);

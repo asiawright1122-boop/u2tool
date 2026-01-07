@@ -2975,39 +2975,38 @@
       ]
     },
     "html-preview": {
-      "name": "HTML 实时预览",
-      "description": "支持 CSS 和 JavaScript 的 HTML 代码实时预览工具。",
-      "seo_title": "免费在线 HTML 预览工具 - 实时 HTML 查看器和编辑器 | U2Tool",
-      "seo_description": "使用我们免费的 HTML 预览工具实时预览 HTML 代码。支持 CSS 和 JavaScript 实时渲染。适用于网页开发、学习 HTML 和快速原型设计。",
-      "detailed_description": "我们免费的 HTML 预览工具让您可以在浏览器中即时编写和预览 HTML 代码。这个实时 HTML 查看器在您输入时实时渲染代码，准确显示网页的最终效果。非常适合测试代码片段的网页开发者、学习 HTML 的学生以及设计布局原型的设计师。HTML 预览支持完整的 CSS 样式和 JavaScript 执行，因此您可以测试包含交互元素的完整网页。与其他 HTML 编辑器不同，此工具完全在浏览器中运行，您的代码永远不会离开您的设备，确保完全隐私。用它来调试 HTML 问题、尝试新的 CSS 属性或快速分享代码示例。分屏界面并排显示代码和预览，提高开发效率。无需安装或注册，只需粘贴 HTML 即可立即看到结果。",
+      "name": "HTML 预览",
+      "description": "通过 CSS 和 JavaScript 支持实时预览 HTML 代码。",
+      "seo_title": "Html Preview - 免费在线开发工具 | U2Tool",
+      "seo_description": "Preview HTML code in real-time online for free. Live rendering with instant updates as you type. Perfect for web development and quick prototyping.",
+      "detailed_description": "开发工具为开发者提供代码格式化、验证、测试等功能，提高开发效率。 Html Preview 是一个实用的在线工具，可以帮助您快速完成各种任务。 使用 Html Preview，您可以轻松处理各种数据，无需安装任何软件或插件。 这个工具界面简洁，操作方便，让您能够快速上手并高效使用。 无论您是开发者、设计师还是普通用户，Html Preview 都能帮助您提高工作效率。 所有处理都在浏览器本地完成，确保您的数据安全，不会上传到任何服务器。 立即使用 Html Preview，体验快速、安全、免费的在线工具服务。",
       "usage_steps": [
-        "在编辑器面板中粘贴或输入您的 HTML 代码",
-        "查看实时预览随您输入实时更新",
-        "在 <style> 标签内或使用内联样式添加 CSS",
-        "在 <script> 标签内添加 JavaScript 实现交互功能",
-        "如需要可点击刷新手动更新预览"
+        "打开 Html Preview 工具页面",
+        "在输入框中输入或粘贴您要处理的内容",
+        "根据需要调整工具选项和设置",
+        "点击处理按钮，查看结果",
+        "复制或下载处理后的结果"
       ],
       "usage_examples": [
-        "测试包含 HTML、CSS 和 JavaScript 的响应式导航菜单",
-        "在发送前预览邮件模板确保正确渲染",
-        "通过即时查看编辑变化来调试 CSS 布局问题"
+        "使用 Html Preview 处理您的数据",
+        "快速获得处理结果，无需等待"
       ],
       "faqs": [
         {
-          "question": "HTML 预览工具是免费的吗？",
-          "answer": "是的，HTML 预览工具完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+          "question": "Html Preview 是免费的吗？",
+          "answer": "是的，Html Preview 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
         },
         {
-          "question": "使用 HTML 预览工具安全吗？",
-          "answer": "绝对安全。所有代码处理都在您的浏览器本地完成，代码不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
-        },
-        {
-          "question": "支持 JavaScript 吗？",
-          "answer": "是的，HTML 预览工具完全支持 JavaScript 执行，您可以测试包含交互功能的完整网页。"
+          "question": "使用 Html Preview 安全吗？",
+          "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
         },
         {
           "question": "需要安装软件吗？",
-          "answer": "不需要。HTML 预览工具是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+          "answer": "不需要。Html Preview 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+        },
+        {
+          "question": "处理速度如何？",
+          "answer": "由于所有处理都在浏览器本地完成，Html Preview 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ]
     },
@@ -5571,51 +5570,50 @@
       "copy": "复制"
     },
     "color-contrast-checker": {
-      "name": "颜色对比度检查器",
-      "description": "检查颜色对比度以确保 WCAG 无障碍访问合规性。",
-      "seo_title": "免费在线颜色对比度检查器 - WCAG AA/AAA 无障碍检测 | U2Tool",
-      "seo_description": "使用我们免费的颜色对比度检查器检测 WCAG AA 和 AAA 无障碍访问合规性。测试前景色和背景色对比度，即时显示通过/失败结果。适用于网页设计和无障碍优化。",
+      "name": "颜色对比检查器",
+      "description": "检查颜色对比度以确保 WCAG 辅助功能合规性。",
+      "seo_title": "Color Contrast Checker - 免费在线开发工具 | U2Tool",
+      "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance online for free. Test foreground and background colors with instant pass/fail results.",
       "swapColors": "交换颜色",
       "sampleText": "敏捷的棕色狐狸跳过了那只懒狗。",
-      "smallText": "用于无障碍测试的小文本示例。",
-      "guidelinesAA": "AA级：普通文本最低对比度 4.5:1，大文本 3:1",
-      "guidelinesAAA": "AAA级：普通文本增强对比度 7:1，大文本 4.5:1",
+      "smallText": "用于可访问性测试的小文本示例。",
+      "guidelinesAA": "AA: Minimum contrast for normal text (4.5:1) and large text (3:1)",
+      "guidelinesAAA": "AAA: Enhanced contrast for normal text (7:1) and large text (4.5:1)",
       "guidelinesLarge": "大文本：18pt (24px) 或 14pt (18.5px) 粗体",
       "presetBlackOnWhite": "白底黑字",
       "presetWhiteOnBlack": "黑底白字",
-      "presetDarkGrayOnLight": "浅底深灰",
-      "presetBlueOnWhite": "白底蓝字",
+      "presetDarkGrayOnLight": "浅灰色",
+      "presetBlueOnWhite": "白底蓝",
       "presetWhiteOnBlue": "蓝底白字",
-      "presetDarkOnYellow": "黄底深色",
-      "detailed_description": "我们免费的颜色对比度检查器帮助设计师和开发者确保网站符合 WCAG 无障碍访问标准。颜色对比度对于视觉障碍用户（包括色盲和低视力用户）至关重要。此工具根据 WCAG 2.1 指南计算前景色（文本）和背景色之间的对比度。WCAG AA 级要求普通文本最低对比度为 4.5:1，大文本（18pt 或 14pt 粗体）为 3:1。AAA 级要求普通文本 7:1，大文本 4.5:1。只需输入十六进制颜色代码或使用颜色选择器测试组合。工具即时显示 AA 和 AAA 合规级别的通过/失败结果。是创建人人可读的无障碍网站、移动应用和数字内容的必备工具。",
+      "presetDarkOnYellow": "暗黄色",
+      "detailed_description": "开发工具为开发者提供代码格式化、验证、测试等功能，提高开发效率。 Color Contrast Checker 是一个实用的在线工具，可以帮助您快速完成各种任务。 使用 Color Contrast Checker，您可以轻松处理各种数据，无需安装任何软件或插件。 这个工具界面简洁，操作方便，让您能够快速上手并高效使用。 无论您是开发者、设计师还是普通用户，Color Contrast Checker 都能帮助您提高工作效率。 所有处理都在浏览器本地完成，确保您的数据安全，不会上传到任何服务器。 立即使用 Color Contrast Checker，体验快速、安全、免费的在线工具服务。",
       "usage_steps": [
-        "使用十六进制代码或颜色选择器输入前景色（文本颜色）",
-        "使用十六进制代码或颜色选择器输入背景色",
-        "即时查看计算出的对比度",
-        "检查 WCAG AA 和 AAA 级别的通过/失败状态",
-        "使用预设组合或交换颜色测试其他方案"
+        "打开 Color Contrast Checker 工具页面",
+        "在输入框中输入或粘贴您要处理的内容",
+        "根据需要调整工具选项和设置",
+        "点击处理按钮，查看结果",
+        "复制或下载处理后的结果"
       ],
       "usage_examples": [
-        "测试您的品牌颜色（如 #1a73e8 白底）是否符合正文文本的 WCAG AA 标准",
-        "在发布前验证按钮文本对比度是否满足无障碍要求",
-        "检查深色模式配色方案是否提供足够的可读性对比度"
+        "使用 Color Contrast Checker 处理您的数据",
+        "快速获得处理结果，无需等待"
       ],
       "faqs": [
         {
-          "question": "颜色对比度检查器是免费的吗？",
-          "answer": "是的，颜色对比度检查器完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+          "question": "Color Contrast Checker 是免费的吗？",
+          "answer": "是的，Color Contrast Checker 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
         },
         {
-          "question": "使用颜色对比度检查器安全吗？",
+          "question": "使用 Color Contrast Checker 安全吗？",
           "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
         },
         {
-          "question": "什么是 WCAG 标准？",
-          "answer": "WCAG（Web Content Accessibility Guidelines）是网页内容无障碍指南，定义了使网页内容对残障人士更易访问的标准。"
+          "question": "需要安装软件吗？",
+          "answer": "不需要。Color Contrast Checker 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
         },
         {
-          "question": "需要安装软件吗？",
-          "answer": "不需要。颜色对比度检查器是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+          "question": "处理速度如何？",
+          "answer": "由于所有处理都在浏览器本地完成，Color Contrast Checker 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ]
     },
@@ -5854,57 +5852,55 @@
       ]
     },
     "css-grid-generator": {
-      "name": "CSS Grid 布局生成器",
-      "description": "具有实时预览功能的可视化 CSS Grid 网格布局生成器。",
-      "seo_title": "免费在线 CSS Grid 布局生成器 - 可视化网格设计工具 | U2Tool",
-      "seo_description": "使用我们免费的 CSS Grid 生成器可视化创建网格布局。自定义行、列、间距和对齐方式，实时预览效果。一键复制响应式 CSS 代码，适用于网页设计开发。",
-      "columns": "列数",
+      "name": "CSS 网格生成器",
+      "description": "具有实时预览功能的可视化 CSS 网格布局生成器。",
+      "seo_title": "Css Grid Generator - 免费在线生成器工具 | U2Tool",
+      "seo_description": "Generate CSS Grid layouts visually with live preview online for free. Customize rows, columns, gaps, and alignment. Copy CSS code for responsive web design.",
+      "columns": "列",
       "rows": "行数",
       "gap": "间距（像素）",
       "justifyItems": "项目对齐",
       "stretch": "拉伸",
-      "start": "起始",
-      "center": "居中",
-      "end": "末端",
-      "columnSizes": "列宽设置",
+      "start": "开始",
+      "center": "中心",
+      "end": "结尾",
+      "columnSizes": "色谱柱尺寸",
       "col": "列{index}",
-      "rowSizes": "行高设置",
+      "rowSizes": "行大小",
       "row": "行{index}",
       "preview": "预览",
       "generatedCss": "生成的CSS",
-      "detailed_description": "我们免费的 CSS Grid 生成器帮助网页开发者无需从头编写代码即可创建复杂的网格布局。CSS Grid 是一个强大的二维布局系统，通过精确控制行和列彻底改变了网页设计。使用这个可视化 CSS Grid 构建器，您可以定义列数和行数，使用 fr 单位、像素或百分比设置自定义尺寸，并调整网格项之间的间距。实时预览准确显示您的布局效果，便于尝试不同配置。非常适合创建响应式网站布局、卡片网格、图片画廊和仪表板设计。直接将生成的 CSS 代码复制到您的项目中。兼容所有现代浏览器，包括 Chrome、Firefox、Safari 和 Edge。",
+      "detailed_description": "生成器工具可以快速创建各种类型的数据，如 UUID、密码、二维码、Lorem Ipsum 文本等。 Css Grid Generator 是一个便捷的在线生成器，可以快速生成各种类型的数据。 使用 Css Grid Generator，您可以轻松创建符合特定格式要求的数据，无需手动编写。 这个工具支持多种配置选项，让您可以根据需要定制生成的内容。 无论您需要生成测试数据、示例内容还是随机值，Css Grid Generator 都能满足您的需求。 所有生成都在浏览器本地完成，确保您的隐私安全，不会上传任何数据。 立即使用 Css Grid Generator，体验快速、安全、免费的在线工具服务。",
       "usage_steps": [
-        "设置网格布局的列数和行数",
-        "使用 fr 单位、px 或百分比调整列宽和行高",
-        "设置间距值控制网格项之间的空间",
-        "选择项目对齐方式（拉伸、起始、居中、末端）",
-        "预览布局效果并复制生成的 CSS 代码"
+        "打开 Css Grid Generator 工具页面",
+        "根据需要配置生成选项（如长度、格式等）",
+        "点击生成按钮，查看生成结果",
+        "复制或下载生成的内容"
       ],
       "usage_examples": [
-        "使用 1fr 1fr 1fr 创建等宽的 3 列响应式卡片布局",
-        "构建带侧边栏（250px）和主内容区（1fr）的仪表板布局",
-        "设计 4 列 20px 间距的图片画廊网格"
+        "使用 Css Grid Generator 生成符合要求的数据",
+        "可以配置各种参数来定制生成结果"
       ],
       "faqs": [
         {
-          "question": "CSS Grid 生成器是免费的吗？",
-          "answer": "是的，CSS Grid 生成器完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+          "question": "Css Grid Generator 是免费的吗？",
+          "answer": "是的，Css Grid Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
         },
         {
-          "question": "使用 CSS Grid 生成器安全吗？",
+          "question": "使用 Css Grid Generator 安全吗？",
           "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
         },
         {
-          "question": "生成的代码兼容哪些浏览器？",
-          "answer": "生成的 CSS Grid 代码兼容所有现代浏览器，包括 Chrome、Firefox、Safari、Edge 等。"
+          "question": "可以批量生成吗？",
+          "answer": "是的，Css Grid Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
         },
         {
           "question": "需要安装软件吗？",
-          "answer": "不需要。CSS Grid 生成器是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+          "answer": "不需要。Css Grid Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
         },
         {
           "question": "处理速度如何？",
-          "answer": "由于所有处理都在浏览器本地完成，CSS Grid 生成器的处理速度非常快，实时预览布局变化。"
+          "answer": "由于所有处理都在浏览器本地完成，Css Grid Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ],
       "copied": "已复制！",
@@ -9086,56 +9082,55 @@
       ]
     },
     "ascii-table": {
-      "name": "ASCII 码表",
-      "description": "完整的 ASCII 字符编码参考表。",
-      "seo_title": "ASCII 码表 - 完整字符编码参考对照表 | U2Tool",
-      "seo_description": "完整的 ASCII 码表，包含十进制、十六进制、八进制和二进制值。浏览全部 128 个 ASCII 字符及描述。程序员和开发者必备的 ASCII 编码参考工具。",
+      "name": "ASCII 表",
+      "description": "完整的 ASCII 字符参考表。",
+      "seo_title": "ASCII Table - Character Code Reference",
+      "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential reference for programmers.",
       "searchPlaceholder": "按字符、代码或描述搜索...",
       "showExtended": "显示扩展 ASCII (128-255)",
-      "selectedChar": "选中的字符",
+      "selectedChar": "选定的角色",
       "decimal": "十进制",
       "hex": "十六进制",
       "octal": "八进制",
       "binary": "二进制",
-      "char": "字符",
+      "char": "查尔",
       "descriptionHeader": "描述",
       "noResults": "没有找到匹配的字符",
       "quickReference": "快速参考",
       "controlChars": "控制字符",
       "punctuation": "标点符号",
       "digits": "数字 (0-9)",
-      "uppercase": "大写字母 (A-Z)",
-      "lowercase": "小写字母 (a-z)",
+      "uppercase": "大写 (A-Z)",
+      "lowercase": "小写 (a-z)",
       "extended": "扩展 ASCII",
-      "detailed_description": "我们完整的 ASCII 码表提供了全部 128 个标准 ASCII 字符以及扩展 ASCII（128-255）的参考。ASCII（美国信息交换标准代码）是计算机和电子设备中使用的基本字符编码标准。这个 ASCII 编码对照表显示每个字符的十进制、十六进制、八进制和二进制值，对于处理底层数据、网络协议或文件格式的程序员来说至关重要。表格包括控制字符（0-31）如 NULL、TAB 和换行符；可打印字符包括字母、数字和符号；以及用于特殊符号的扩展 ASCII 字符。使用搜索功能可以通过代码或描述快速查找任何字符。非常适合调试字符编码问题、理解转义序列或学习计算机字符表示。收藏这个 ASCII 参考表，方便开发时快速查阅。",
+      "detailed_description": "编码解码工具可以帮助您在不同编码格式之间转换数据，包括 Base64、URL 编码、HTML 实体等。 Ascii Table 是一个实用的在线工具，可以帮助您快速完成各种任务。 使用 Ascii Table，您可以轻松处理各种数据，无需安装任何软件或插件。 这个工具界面简洁，操作方便，让您能够快速上手并高效使用。 无论您是开发者、设计师还是普通用户，Ascii Table 都能帮助您提高工作效率。 所有处理都在浏览器本地完成，确保您的数据安全，不会上传到任何服务器。 立即使用 Ascii Table，体验快速、安全、免费的在线工具服务。",
       "usage_steps": [
-        "浏览 ASCII 码表查找字符编码",
-        "使用搜索框按代码或描述查找特定字符",
-        "点击任意字符查看其所有编码表示",
-        "切换显示扩展 ASCII 查看 128-255 字符",
-        "使用快速参考部分跳转到特定字符范围"
+        "打开 Ascii Table 工具页面",
+        "在输入框中输入或粘贴您要处理的内容",
+        "根据需要调整工具选项和设置",
+        "点击处理按钮，查看结果",
+        "复制或下载处理后的结果"
       ],
       "usage_examples": [
-        "查找换行符的 ASCII 码（十进制 10，十六进制 0A）",
-        "查询大写字母 A 的十六进制值（十进制 65，十六进制 41）",
-        "检查控制字符代码用于解析文本文件和协议"
+        "使用 Ascii Table 处理您的数据",
+        "快速获得处理结果，无需等待"
       ],
       "faqs": [
         {
-          "question": "ASCII 码表是免费的吗？",
-          "answer": "是的，ASCII 码表完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+          "question": "Ascii Table 是免费的吗？",
+          "answer": "是的，Ascii Table 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
         },
         {
-          "question": "使用 ASCII 码表安全吗？",
+          "question": "使用 Ascii Table 安全吗？",
           "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
         },
         {
-          "question": "什么是 ASCII 编码？",
-          "answer": "ASCII 是美国信息交换标准代码，是计算机中最基本的字符编码标准，定义了 128 个字符的数字表示。"
+          "question": "需要安装软件吗？",
+          "answer": "不需要。Ascii Table 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
         },
         {
-          "question": "需要安装软件吗？",
-          "answer": "不需要。ASCII 码表是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+          "question": "处理速度如何？",
+          "answer": "由于所有处理都在浏览器本地完成，Ascii Table 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ]
     },
@@ -12019,10 +12014,10 @@
       ]
     },
     "gantt-chart-generator": {
-      "name": "甘特图制作工具",
-      "seo_title": "免费在线甘特图制作工具 - 项目时间线生成器 | U2Tool",
-      "seo_description": "使用我们免费的甘特图制作工具在线创建专业项目时间表。可视化项目进度、跟踪任务完成情况、管理依赖关系。支持导出PNG/SVG格式，无需注册即可使用。",
-      "title": "甘特图制作工具",
+      "name": "甘特图生成器",
+      "seo_title": "Gantt Chart Generator - 免费在线图表工具 | U2Tool",
+      "seo_description": "免费在线Gantt Chart Generator工具，快速、安全、无需注册。支持多种格式，处理速度快，数据安全有保障。立即使用，提升您的工作效率。 适用于开发者、设计师和所有需要图表工具的用户。",
+      "title": "甘特图生成器",
       "description": "创建甘特图以可视化项目进度和时间表。",
       "defaultTitle": "项目进度表",
       "chartSettings": "图表设置",
@@ -12037,8 +12032,8 @@
       "addTask": "添加任务",
       "taskName": "任务名称",
       "start": "开始",
-      "end": "结束",
-      "progress": "进度",
+      "end": "结尾",
+      "progress": "进步",
       "newTask": "新任务",
       "chartPreview": "预览",
       "downloadPng": "下载PNG",
@@ -12047,42 +12042,40 @@
       "tip1": "甘特图非常适合项目管理",
       "tip2": "输入开始和结束日期以自动计算持续时间",
       "confirmClear": "全部清除？",
-      "sampleTask1": "需求分析",
+      "sampleTask1": "要求",
       "sampleTask2": "设计",
-      "sampleTask3": "开发",
-      "detailed_description": "我们免费的甘特图制作工具帮助项目经理和团队轻松可视化项目时间线。甘特图是一种水平条形图，显示项目任务与时间的关系，是项目规划和跟踪的必备工具。使用这个甘特图生成器，您可以通过添加任务的开始日期、结束日期和进度百分比来创建专业的项目进度表。可视化时间线有助于识别任务依赖关系、重叠活动和潜在瓶颈。适用于敏捷开发冲刺、建筑项目、营销活动和软件开发周期。将甘特图导出为PNG或SVG格式用于演示和报告。无需注册，在浏览器中即可开始创建项目时间线。",
+      "sampleTask3": "发展",
+      "detailed_description": "图表可视化工具可以快速生成各种类型的图表，用于数据可视化。 Gantt Chart Generator 是一个便捷的在线生成器，可以快速生成各种类型的数据。 使用 Gantt Chart Generator，您可以轻松创建符合特定格式要求的数据，无需手动编写。 这个工具支持多种配置选项，让您可以根据需要定制生成的内容。 无论您需要生成测试数据、示例内容还是随机值，Gantt Chart Generator 都能满足您的需求。 所有生成都在浏览器本地完成，确保您的隐私安全，不会上传任何数据。 立即使用 Gantt Chart Generator，体验快速、安全、免费的在线工具服务。",
       "usage_steps": [
-        "点击添加任务创建您的第一个项目任务",
-        "为每个任务输入任务名称、开始日期和结束日期",
-        "设置进度百分比以跟踪完成状态",
-        "选择与您项目风格匹配的颜色主题",
-        "预览甘特图并下载为PNG或SVG格式"
+        "打开 Gantt Chart Generator 工具页面",
+        "根据需要配置生成选项（如长度、格式等）",
+        "点击生成按钮，查看生成结果",
+        "复制或下载生成的内容"
       ],
       "usage_examples": [
-        "创建软件开发冲刺时间线，包含规划、开发、测试和部署阶段",
-        "制作营销活动甘特图，显示内容创建、审核和发布日期",
-        "规划建筑项目，包含地基、框架、电气和装修等里程碑"
+        "使用 Gantt Chart Generator 生成符合要求的数据",
+        "可以配置各种参数来定制生成结果"
       ],
       "faqs": [
         {
-          "question": "甘特图制作工具是免费的吗？",
-          "answer": "是的，甘特图制作工具完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+          "question": "Gantt Chart Generator 是免费的吗？",
+          "answer": "是的，Gantt Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
         },
         {
-          "question": "使用甘特图制作工具安全吗？",
+          "question": "使用 Gantt Chart Generator 安全吗？",
           "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
         },
         {
           "question": "可以批量生成吗？",
-          "answer": "是的，甘特图制作工具支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+          "answer": "是的，Gantt Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
         },
         {
           "question": "需要安装软件吗？",
-          "answer": "不需要。甘特图制作工具是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+          "answer": "不需要。Gantt Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
         },
         {
           "question": "处理速度如何？",
-          "answer": "由于所有处理都在浏览器本地完成，甘特图制作工具的处理速度非常快，通常可以在几毫秒内完成。"
+          "answer": "由于所有处理都在浏览器本地完成，Gantt Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
         }
       ]
     },
@@ -18265,17 +18258,5 @@
       "backHome": "返回首页",
       "browseTools": "浏览工具"
     }
-  },
-  "compare": {
-    "compare": "对比",
-    "pageTitle": "{tools} - 工具对比",
-    "pageDescription": "对比 {tools} 的功能和特性。找到最适合您需求的工具。",
-    "featureComparison": "功能对比",
-    "feature": "功能",
-    "similarities": "相似点",
-    "differences": "差异点",
-    "recommendation": "推荐",
-    "tryTool": "试用此工具",
-    "viewAll": "查看所有工具"
   }
 }
