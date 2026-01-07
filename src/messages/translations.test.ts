@@ -207,6 +207,204 @@ describe('Translation Property-Based Tests', () => {
 
 
 /**
+ * Property 5: Ranking SEO Translations Completeness
+ * **Feature: semrush-seo-issues, Property 5: Ranking SEO Translations Completeness**
+ * **Validates: Requirements 4.1, 4.3, 4.4**
+ * 
+ * *For any* locale in the supported languages, the translation file SHALL contain
+ * complete ranking_seo keys for both "newest" and "popular" types with non-empty
+ * seo_title and seo_description.
+ */
+describe('Property 5: Ranking SEO Translations Completeness', () => {
+  const translations: Record<Language, Record<string, unknown>> = {} as Record<Language, Record<string, unknown>>;
+
+  // Load all translations before tests
+  languages.forEach(lang => {
+    translations[lang] = loadTranslations(lang);
+  });
+
+  // Required ranking_seo keys
+  const requiredRankingSeoKeys = [
+    'ranking_seo.newest.seo_title',
+    'ranking_seo.newest.seo_description',
+    'ranking_seo.popular.seo_title',
+    'ranking_seo.popular.seo_description',
+  ];
+
+  // Description length constraints
+  const DESCRIPTION_MIN_LENGTH = 120;
+  const DESCRIPTION_MAX_LENGTH = 160;
+  const TITLE_MAX_LENGTH = 60;
+
+  it('Property 5.1: All languages should have complete ranking_seo namespace', () => {
+    const langArbitrary = fc.constantFrom(...languages);
+    
+    fc.assert(
+      fc.property(langArbitrary, (lang: Language) => {
+        const missingKeys: string[] = [];
+        
+        for (const key of requiredRankingSeoKeys) {
+          const value = getNestedValue(translations[lang], key);
+          if (value === undefined || value === null) {
+            missingKeys.push(key);
+          }
+        }
+        
+        if (missingKeys.length > 0) {
+          console.warn(`[Property 5.1] Missing ranking_seo keys in ${lang}.json:`, missingKeys);
+          return false;
+        }
+        return true;
+      }),
+      { numRuns: languages.length * 3 }
+    );
+  });
+
+  it('Property 5.2: All ranking_seo values should be non-empty strings', () => {
+    const langArbitrary = fc.constantFrom(...languages);
+    const keyArbitrary = fc.constantFrom(...requiredRankingSeoKeys);
+    
+    fc.assert(
+      fc.property(langArbitrary, keyArbitrary, (lang: Language, key: string) => {
+        const value = getNestedValue(translations[lang], key);
+        
+        if (typeof value !== 'string') {
+          console.warn(`[Property 5.2] ${key} in ${lang}.json is not a string:`, typeof value);
+          return false;
+        }
+        
+        if (value.trim().length === 0) {
+          console.warn(`[Property 5.2] ${key} in ${lang}.json is empty`);
+          return false;
+        }
+        
+        return true;
+      }),
+      { numRuns: languages.length * requiredRankingSeoKeys.length }
+    );
+  });
+
+  it('Property 5.3: Ranking seo_description length should be appropriate for each language', () => {
+    const langArbitrary = fc.constantFrom(...languages);
+    const descriptionKeys = requiredRankingSeoKeys.filter(k => k.includes('seo_description'));
+    const keyArbitrary = fc.constantFrom(...descriptionKeys);
+    
+    // CJK languages (Chinese, Japanese, Korean) have different character density
+    // Each CJK character conveys more information than Latin characters
+    // So we use different thresholds for these languages
+    const CJK_LANGUAGES = ['zh', 'ja', 'ko'];
+    const CJK_MIN_LENGTH = 70;  // ~70 CJK chars ≈ 120 Latin chars in information density
+    const CJK_MAX_LENGTH = 140; // ~140 CJK chars ≈ 160 Latin chars (Korean uses more chars)
+    
+    // Arabic also has different character density
+    const ARABIC_LANGUAGES = ['ar'];
+    const ARABIC_MIN_LENGTH = 100;
+    const ARABIC_MAX_LENGTH = 180;
+    
+    fc.assert(
+      fc.property(langArbitrary, keyArbitrary, (lang: Language, key: string) => {
+        const value = getNestedValue(translations[lang], key) as string;
+        
+        if (!value) {
+          return false;
+        }
+        
+        const length = value.length;
+        
+        // Determine appropriate thresholds based on language
+        let minLength = DESCRIPTION_MIN_LENGTH;
+        let maxLength = DESCRIPTION_MAX_LENGTH;
+        
+        if (CJK_LANGUAGES.includes(lang)) {
+          minLength = CJK_MIN_LENGTH;
+          maxLength = CJK_MAX_LENGTH;
+        } else if (ARABIC_LANGUAGES.includes(lang)) {
+          minLength = ARABIC_MIN_LENGTH;
+          maxLength = ARABIC_MAX_LENGTH;
+        }
+        
+        if (length < minLength) {
+          console.warn(`[Property 5.3] ${key} in ${lang}.json is too short: ${length} chars (min: ${minLength})`);
+          return false;
+        }
+        
+        if (length > maxLength) {
+          console.warn(`[Property 5.3] ${key} in ${lang}.json is too long: ${length} chars (max: ${maxLength})`);
+          return false;
+        }
+        
+        return true;
+      }),
+      { numRuns: languages.length * descriptionKeys.length }
+    );
+  });
+
+  it('Property 5.4: Ranking seo_title length should not exceed 60 characters', () => {
+    const langArbitrary = fc.constantFrom(...languages);
+    const titleKeys = requiredRankingSeoKeys.filter(k => k.includes('seo_title'));
+    const keyArbitrary = fc.constantFrom(...titleKeys);
+    
+    fc.assert(
+      fc.property(langArbitrary, keyArbitrary, (lang: Language, key: string) => {
+        const value = getNestedValue(translations[lang], key) as string;
+        
+        if (!value) {
+          return false;
+        }
+        
+        const length = value.length;
+        
+        if (length > TITLE_MAX_LENGTH) {
+          console.warn(`[Property 5.4] ${key} in ${lang}.json is too long: ${length} chars (max: ${TITLE_MAX_LENGTH})`);
+          return false;
+        }
+        
+        return true;
+      }),
+      { numRuns: languages.length * titleKeys.length }
+    );
+  });
+
+  it('Property 5.5: Ranking seo_description should be unique per type across languages', () => {
+    // Collect all descriptions by type
+    const newestDescriptions: Map<string, string[]> = new Map();
+    const popularDescriptions: Map<string, string[]> = new Map();
+    
+    for (const lang of languages) {
+      const newestDesc = getNestedValue(translations[lang], 'ranking_seo.newest.seo_description') as string;
+      const popularDesc = getNestedValue(translations[lang], 'ranking_seo.popular.seo_description') as string;
+      
+      if (newestDesc) {
+        if (!newestDescriptions.has(newestDesc)) {
+          newestDescriptions.set(newestDesc, []);
+        }
+        newestDescriptions.get(newestDesc)!.push(lang);
+      }
+      
+      if (popularDesc) {
+        if (!popularDescriptions.has(popularDesc)) {
+          popularDescriptions.set(popularDesc, []);
+        }
+        popularDescriptions.get(popularDesc)!.push(lang);
+      }
+    }
+    
+    // Check for duplicates (same description used in multiple languages is OK for localization)
+    // But newest and popular should have different descriptions within the same language
+    for (const lang of languages) {
+      const newestDesc = getNestedValue(translations[lang], 'ranking_seo.newest.seo_description') as string;
+      const popularDesc = getNestedValue(translations[lang], 'ranking_seo.popular.seo_description') as string;
+      
+      expect(
+        newestDesc,
+        `newest and popular descriptions should be different in ${lang}.json`
+      ).not.toBe(popularDesc);
+    }
+  });
+});
+
+
+/**
  * Property-Based Tests for Hardcoded Strings Detection
  * **Feature: code-quality-review, Property 2: Hardcoded String Detection**
  * **Validates: Requirements 5.3**

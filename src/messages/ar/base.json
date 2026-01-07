@@ -69,6 +69,16 @@
       "seo_description": "اكتشف أكثر من 100 أداة مجانية عبر الإنترنت للمطورين والمصممين والمبدعين. منسق JSON، محول الصور، أدوات PDF، مولد الأكواد والمزيد. سريع وآمن وبدون تسجيل."
     }
   },
+  "ranking_seo": {
+    "newest": {
+      "seo_title": "أدوات جديدة - أحدث الإصدارات | U2Tool",
+      "seo_description": "اكتشف أحدث الأدوات على U2Tool. دمج Excel، حاسبة الراتب، ملاحظات الاجتماعات، مؤقت بومودورو والمزيد. جميع الأدوات مجانية بدون تسجيل، استخدمها مباشرة في متصفحك. تحديثات أسبوعية."
+    },
+    "popular": {
+      "seo_title": "الأدوات الشائعة - الأكثر استخداماً | U2Tool",
+      "seo_description": "استكشف ترتيب الأدوات الأكثر شعبية على U2Tool. منسق JSON، مشفر Base64، مولد رمز QR، مولد كلمات المرور والمزيد. يستخدمها ملايين المطورين حول العالم مجاناً."
+    }
+  },
   "nav": {
     "home": "الرئيسية",
     "tools": "أدوات",
@@ -488,22 +498,8 @@
     "html-preview": {
       "name": "معاينة HTML",
       "description": "قم بمعاينة تعليمات HTML البرمجية في الوقت الفعلي باستخدام دعم CSS وJavaScript.",
-      "seo_title": "معاينة HTML مجانية على الإنترنت - محرر HTML مباشر | U2Tool",
-      "seo_description": "قم بمعاينة كود HTML في الوقت الفعلي عبر الإنترنت مجانًا. العرض المباشر مع التحديثات الفورية أثناء الكتابة. مثالي لتطوير الويب والنماذج الأولية السريعة.",
-      "detailed_description": "توفر أداة معاينة HTML الخاصة بنا بيئة عرض في الوقت الفعلي لـ HTML وCSS وJavaScript. اكتب الكود وشاهد النتيجة فورًا - مثالي للنماذج الأولية السريعة واختبار مقتطفات الكود وتعلم تطوير الويب. يدعم ميزات HTML5 الحديثة وتنسيق CSS3.",
-      "usage_steps": [
-        "1. أدخل كود HTML في المحرر",
-        "2. أضف أنماط CSS اختياريًا",
-        "3. أضف JavaScript للتفاعلية",
-        "4. شاهد المعاينة المباشرة في الوقت الفعلي",
-        "5. انسخ الكود الجاهز لمشروعك"
-      ],
-      "usage_examples": [
-        "اختبار مقتطفات HTML بسرعة",
-        "فحص تخطيطات CSS قبل الدمج",
-        "تصحيح أخطاء وظائف JavaScript",
-        "تعلم وتجربة تطوير الويب"
-      ]
+      "seo_title": "معاينة HTML مجانية على الإنترنت",
+      "seo_description": "قم بمعاينة كود HTML في الوقت الفعلي عبر الإنترنت مجانًا. العرض المباشر مع التحديثات الفورية أثناء الكتابة. مثالي لتطوير الويب والنماذج الأولية السريعة."
     },
     "ip-lookup": {
       "name": "البحث عن IP",
@@ -986,22 +982,8 @@
     "color-contrast-checker": {
       "name": "مدقق تباين الألوان",
       "description": "تحقق من نسبة تباين الألوان للتأكد من توافقها مع إمكانية الوصول إلى WCAG.",
-      "seo_title": "مدقق تباين الألوان مجانًا عبر الإنترنت - WCAG AA/AAA | U2Tool",
+      "seo_title": "مدقق تباين الألوان مجانًا عبر الإنترنت - WCAG",
       "seo_description": "تحقق من نسبة تباين الألوان لتوافق إمكانية الوصول إلى WCAG AA وAAA عبر الإنترنت مجانًا. اختبر الألوان الأمامية والخلفية مع نتائج تمرير/فشل فورية.",
-      "detailed_description": "يساعدك مدقق تباين الألوان لدينا على إنشاء تصميمات ويب يمكن الوصول إليها تتوافق مع إرشادات WCAG 2.1. اختبر مجموعات الألوان للنص العادي (4.5:1 لـ AA)، والنص الكبير (3:1 لـ AA)، والتوافق المحسن (7:1 لـ AAA). أداة لا غنى عنها للمصممين والمطورين الذين يريدون إنشاء مواقع ويب شاملة.",
-      "usage_steps": [
-        "1. اختر لون المقدمة (النص)",
-        "2. اختر لون الخلفية",
-        "3. شاهد نسبة التباين المحسوبة",
-        "4. تحقق من توافق WCAG AA وAAA",
-        "5. اضبط الألوان حتى تحقق التوافق المطلوب"
-      ],
-      "usage_examples": [
-        "فحص أنظمة ألوان المواقع لإمكانية الوصول",
-        "اختبار قابلية قراءة النص على خلفيات ملونة",
-        "إنشاء لوحات ألوان متوافقة مع WCAG",
-        "تحسين التباين للأزرار والروابط"
-      ],
       "swapColors": "مبادلة الألوان",
       "sampleText": "يقفز الثعلب البني السريع فوق الكلب الكسول.",
       "smallText": "عينة نصية صغيرة لاختبار إمكانية الوصول.",
@@ -1081,22 +1063,8 @@
     "css-grid-generator": {
       "name": "مولد شبكة CSS",
       "description": "مولد تخطيط الشبكة المرئية CSS مع المعاينة المباشرة.",
-      "seo_title": "مولد CSS Grid مجاني على الإنترنت - تخطيطات متجاوبة | U2Tool",
+      "seo_title": "مولد شبكة CSS مجاني على الإنترنت",
       "seo_description": "قم بإنشاء تخطيطات CSS Grid بشكل مرئي مع المعاينة المباشرة عبر الإنترنت مجانًا. تخصيص الصفوف والأعمدة والفجوات والمحاذاة. انسخ كود CSS لتصميم الويب سريع الاستجابة.",
-      "detailed_description": "مولد CSS Grid الخاص بنا هو أداة مرئية قوية تبسط إنشاء تخطيطات الشبكة المعقدة. حدد الصفوف والأعمدة بوحدات مرنة (fr، px، %، auto)، واضبط المسافات وشاهد التغييرات فورًا في المعاينة المباشرة. مثالي لتصميم الويب المتجاوب ولوحات المعلومات والواجهات الحديثة القائمة على CSS Grid.",
-      "usage_steps": [
-        "1. حدد عدد الأعمدة والصفوف",
-        "2. حدد أحجام الأعمدة والصفوف (1fr، 200px، auto، إلخ)",
-        "3. اضبط الفجوة بين العناصر",
-        "4. اختر محاذاة العناصر",
-        "5. شاهد المعاينة وانسخ كود CSS المُنشأ"
-      ],
-      "usage_examples": [
-        "إنشاء تخطيطات مواقع ويب متجاوبة",
-        "شبكات لوحات المعلومات بعرض أعمدة مختلف",
-        "معارض الصور بتوزيع متساوٍ",
-        "تخطيطات المدونات مع الشريط الجانبي والمحتوى الرئيسي"
-      ],
       "columns": "أعمدة",
       "rows": "الصفوف",
       "gap": "الفجوة (بكسل)",
@@ -2139,24 +2107,10 @@
       "decimalDesc": "يستخدم 1000 كمضاعف (KB، MB، GB). تستخدم من قبل الشركات المصنعة للتخزين."
     },
     "ascii-table": {
-      "name": "جدول ASCII",
+      "name": "ASCII Table",
       "description": "أكمل الجدول المرجعي لأحرف ASCII.",
-      "seo_title": "جدول ASCII على الإنترنت - مرجع رموز الأحرف | U2Tool",
+      "seo_title": "ASCII Table - Character Code Reference",
       "seo_description": "أكمل جدول ASCII بالقيم العشرية والست عشرية والثمانية والثنائية. تصفح جميع أحرف ASCII البالغ عددها 128 حرفًا مع الأوصاف. مرجع أساسي للمبرمجين.",
-      "detailed_description": "يوفر جدول ASCII التفاعلي الخاص بنا مرجعًا كاملاً لجميع أحرف ASCII القياسية البالغ عددها 128 حرفًا، بالإضافة إلى ASCII الموسع (128-255). ابحث حسب الحرف أو الرمز أو الوصف وشاهد فورًا القيم العشرية والست عشرية والثمانية والثنائية. لا غنى عنه للمبرمجين ومسؤولي النظام وكل من يعمل مع ترميز الأحرف.",
-      "usage_steps": [
-        "1. تصفح الجدول أو استخدم البحث",
-        "2. انقر على حرف للتفاصيل",
-        "3. شاهد القيم العشرية والست عشرية والثمانية والثنائية",
-        "4. فعّل ASCII الموسع للأحرف 128-255",
-        "5. استخدم المرجع السريع لمجموعات الأحرف الشائعة"
-      ],
-      "usage_examples": [
-        "البحث عن رموز الأحرف للبرمجة",
-        "تحديد أحرف التحكم",
-        "إيجاد قيم hex لتطوير الويب",
-        "فهم الترميز الثنائي للأحرف"
-      ],
       "searchPlaceholder": "البحث حسب الحرف أو الرمز أو الوصف...",
       "showExtended": "عرض ASCII الممتد (128-255)",
       "selectedChar": "الشخصية المختارة",
@@ -2697,9 +2651,9 @@
   "compare": {
     "compare": "مقارنة",
     "pageTitle": "{tools} - مقارنة الأدوات",
-    "pageDescription": "قارن ميزات وقدرات {tools}. اعثر على أفضل أداة لاحتياجاتك.",
+    "pageDescription": "قارن ميزات وإمكانيات {tools}. اعثر على أفضل أداة لاحتياجاتك.",
     "featureComparison": "مقارنة الميزات",
-    "feature": "ميزة",
+    "feature": "الميزة",
     "similarities": "أوجه التشابه",
     "differences": "الاختلافات",
     "recommendation": "التوصية",
@@ -4293,7 +4247,7 @@
     "html-preview": {
       "name": "معاينة HTML",
       "description": "قم بمعاينة تعليمات HTML البرمجية في الوقت الفعلي باستخدام دعم CSS وJavaScript.",
-      "seo_title": "معاينة HTML مجانية على الإنترنت - محرر HTML مباشر | U2Tool",
+      "seo_title": "Free HTML Preview Online",
       "seo_description": "Preview HTML code in real-time online for free. Live rendering with instant updates as you type. Perfect for web development and quick prototyping."
     },
     "ip-lookup": {
@@ -4761,7 +4715,7 @@
     "color-contrast-checker": {
       "name": "مدقق تباين الألوان",
       "description": "تحقق من نسبة تباين الألوان للتأكد من توافقها مع إمكانية الوصول إلى WCAG.",
-      "seo_title": "مدقق تباين الألوان مجانًا عبر الإنترنت - WCAG AA/AAA | U2Tool",
+      "seo_title": "Free Color Contrast Checker Online - WCAG",
       "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance online for free. Test foreground and background colors with instant pass/fail results.",
       "swapColors": "مبادلة الألوان",
       "sampleText": "يقفز الثعلب البني السريع فوق الكلب الكسول.",
@@ -4854,7 +4808,7 @@
     "css-grid-generator": {
       "name": "مولد شبكة CSS",
       "description": "مولد تخطيط الشبكة المرئية CSS مع المعاينة المباشرة.",
-      "seo_title": "مولد CSS Grid مجاني على الإنترنت - تخطيطات متجاوبة | U2Tool",
+      "seo_title": "Free CSS Grid Generator Online",
       "seo_description": "Generate CSS Grid layouts visually with live preview online for free. Customize rows, columns, gaps, and alignment. Copy CSS code for responsive web design.",
       "columns": "أعمدة",
       "rows": "الصفوف",
@@ -5916,7 +5870,7 @@
     "ascii-table": {
       "name": "جدول أسكي",
       "description": "أكمل الجدول المرجعي لأحرف ASCII.",
-      "seo_title": "جدول ASCII على الإنترنت - مرجع رموز الأحرف | U2Tool",
+      "seo_title": "ASCII Table - Character Code Reference",
       "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential reference for programmers.",
       "searchPlaceholder": "البحث حسب الحرف أو الرمز أو الوصف...",
       "showExtended": "عرض ASCII الممتد (128-255)",
@@ -7484,8 +7438,8 @@
     },
     "gantt-chart-generator": {
       "name": "مولد مخططات غانت",
-      "seo_title": "مولد مخططات غانت مجاني عبر الإنترنت - جداول المشاريع | U2Tool",
-      "seo_description": "أنشئ مخططات غانت احترافية عبر الإنترنت باستخدام مولدنا المجاني. تصور جداول المشاريع وتقدم المهام والتبعيات. تصدير إلى PNG/SVG فوراً.",
+      "seo_title": "Free Online Gantt Chart Generator",
+      "seo_description": "Create professional Gantt charts online. Visualize project schedules, task progress and dependencies. Export for free.",
       "title": "مولد مخططات غانت",
       "description": "قم بإنشاء مخططات جانت لتصور تقدم المشروع والجداول الزمنية.",
       "defaultTitle": "الجدول الزمني للمشروع",
@@ -7595,7 +7549,6 @@
       "roseType": "نوع الوردة",
       "roseTypeArea": "منطقة",
       "roseTypeRadius": "نصف القطر",
-      "columnName": "الاسم",
       "category": "الفئة",
       "value": "القيمة",
       "item": "العنصر",
@@ -8011,15 +7964,7 @@
         "sep": "سبتمبر",
         "oct": "أكتوبر",
         "nov": "نوفمبر",
-        "dec": "ديسمبر",
-        "q1": "الربع الأول",
-        "q2": "الربع الثاني",
-        "q3": "الربع الثالث",
-        "q4": "الربع الرابع",
-        "q5": "الربع الخامس",
-        "q6": "الربع السادس",
-        "q7": "الربع السابع",
-        "q8": "الربع الثامن"
+        "dec": "ديسمبر"
       },
       "csvImportSuccess": "تم استيراد {count} صفوف من البيانات",
       "csvImportError": "تنسيق CSV غير صالح. المتوقع: الفئة، القيمة",
@@ -8864,7 +8809,6 @@
       "endDate": "تاريخ الانتهاء",
       "present": "حتى الآن",
       "description": "الوصف",
-      "descriptionPlaceholder": "صف مسؤولياتك وإنجازاتك...",
       "addExperience": "+ إضافة خبرة",
       "education": "التعليم",
       "school": "المدرسة/الجامعة",
@@ -8887,25 +8831,12 @@
         "intermediate": "متوسط",
         "basic": "مبتدئ"
       },
-      "projects": "المشاريع",
-      "projectName": "اسم المشروع",
-      "projectLink": "رابط المشروع",
-      "technologies": "التقنيات",
-      "projectDescPlaceholder": "وصف المشروع...",
-      "addProject": "إضافة مشروع",
-      "certifications": "الشهادات",
-      "certName": "اسم الشهادة",
-      "issuer": "الجهة المانحة",
-      "date": "التاريخ",
-      "addCertification": "إضافة شهادة",
-      "optional": "اختياري",
       "edit": "تحرير",
       "preview": "معاينة",
       "selectTemplate": "اختر القالب",
       "accentColor": "لون التمييز",
       "photo": "الصورة",
       "uploadPhoto": "رفع صورة",
-      "photoHint": "الحد الأقصى 5 ميجابايت، JPG/PNG",
       "jobTitle": "المسمى الوظيفي",
       "location": "الموقع",
       "website": "الموقع الإلكتروني",
@@ -8926,18 +8857,10 @@
       "templates": {
         "professional": "احترافي",
         "professionalDesc": "تصميم نظيف وكلاسيكي",
-        "executive": "تنفيذي",
-        "executiveDesc": "أسلوب رسمي للأعمال",
         "minimal": "بسيط",
         "minimalDesc": "تصميم أنيق ومبسط",
         "creative": "إبداعي",
-        "creativeDesc": "تصميم حديث وملفت",
-        "tech": "تقني",
-        "techDesc": "موجه للمطورين",
-        "elegant": "أنيق",
-        "elegantDesc": "خط serif راقي",
-        "bold": "جريء",
-        "boldDesc": "تأثير بصري قوي"
+        "creativeDesc": "تصميم حديث وملفت"
       },
       "downloadPdf": "تحميل PDF",
       "yourName": "اسمك",

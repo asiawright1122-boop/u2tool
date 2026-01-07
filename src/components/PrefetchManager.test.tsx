@@ -82,7 +82,6 @@ describe('PrefetchManager Properties', () => {
         '/tools/json-formatter',
         '/en/tools/json-formatter',
         '/zh/tools/category/text',
-        '/compare/json-formatter/xml-formatter',
       ];
       
       testUrls.forEach(url => {

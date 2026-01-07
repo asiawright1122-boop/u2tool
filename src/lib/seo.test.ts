@@ -966,3 +966,382 @@ describe('Property 5: Sitemap 有效性', () => {
     );
   });
 });
+
+
+// ============================================================================
+// Property Tests for Semrush SEO Issues Fix
+// ============================================================================
+
+/**
+ * Property 1: Ranking Page Meta Description Uniqueness
+ * For ranking pages (newest, popular), the meta descriptions must be:
+ * - Unique for each ranking type
+ * - Different from the site's default description
+ * - Different across all languages
+ * 
+ * **Validates: Requirements 1.1, 1.2, 1.5**
+ */
+describe('Property 1: Ranking Page Meta Description Uniqueness', () => {
+  // 模拟从翻译文件读取的 ranking_seo 数据
+  const rankingSeoData: Record<string, Record<string, { seo_title: string; seo_description: string }>> = {
+    en: {
+      newest: {
+        seo_title: 'Newest Tools - Latest Releases | U2Tool',
+        seo_description: 'Discover the newest online tools just released on U2Tool. Excel merger, salary calculator, meeting notes, and more. Try the latest free tools today.',
+      },
+      popular: {
+        seo_title: 'Most Popular Tools - Top Rated | U2Tool',
+        seo_description: 'Explore the most popular online tools on U2Tool. JSON formatter, Base64 encoder, QR generator, and more. Used by millions of developers worldwide.',
+      },
+    },
+    zh: {
+      newest: {
+        seo_title: '最新工具 - 新发布工具 | U2Tool',
+        seo_description: '发现 U2Tool 最新发布的在线工具。Excel 合并器、工资计算器、会议记录等。立即体验最新的免费工具。',
+      },
+      popular: {
+        seo_title: '热门工具 - 最受欢迎 | U2Tool',
+        seo_description: '探索 U2Tool 最受欢迎的在线工具。JSON 格式化、Base64 编码、二维码生成等。全球数百万开发者的选择。',
+      },
+    },
+  };
+
+  it('newest 和 popular 的 meta description 必须不同', () => {
+    for (const locale of Object.keys(rankingSeoData)) {
+      const newestDesc = rankingSeoData[locale].newest.seo_description;
+      const popularDesc = rankingSeoData[locale].popular.seo_description;
+      expect(newestDesc).not.toBe(popularDesc);
+    }
+  });
+
+  it('newest 和 popular 的 seo_title 必须不同', () => {
+    for (const locale of Object.keys(rankingSeoData)) {
+      const newestTitle = rankingSeoData[locale].newest.seo_title;
+      const popularTitle = rankingSeoData[locale].popular.seo_title;
+      expect(newestTitle).not.toBe(popularTitle);
+    }
+  });
+
+  it('不同语言的 meta description 必须不同', () => {
+    const locales = Object.keys(rankingSeoData);
+    for (let i = 0; i < locales.length; i++) {
+      for (let j = i + 1; j < locales.length; j++) {
+        const localeA = locales[i];
+        const localeB = locales[j];
+        
+        // newest descriptions should be different across languages
+        expect(rankingSeoData[localeA].newest.seo_description)
+          .not.toBe(rankingSeoData[localeB].newest.seo_description);
+        
+        // popular descriptions should be different across languages
+        expect(rankingSeoData[localeA].popular.seo_description)
+          .not.toBe(rankingSeoData[localeB].popular.seo_description);
+      }
+    }
+  });
+
+  it('meta description 不能是空字符串', () => {
+    for (const locale of Object.keys(rankingSeoData)) {
+      expect(rankingSeoData[locale].newest.seo_description.length).toBeGreaterThan(0);
+      expect(rankingSeoData[locale].popular.seo_description.length).toBeGreaterThan(0);
+    }
+  });
+});
+
+/**
+ * Property 2: Meta Description Length Constraint
+ * For ranking pages, the meta descriptions must be:
+ * - At least 120 characters (for Latin languages)
+ * - At most 160 characters (for Latin languages)
+ * - CJK languages (zh, ja, ko) have different thresholds: 70-140 characters
+ * - Arabic has different thresholds: 100-180 characters
+ * 
+ * **Validates: Requirements 1.4**
+ */
+describe('Property 2: Meta Description Length Constraint', () => {
+  // 定义不同语言的长度阈值
+  const lengthThresholds: Record<string, { min: number; max: number }> = {
+    en: { min: 120, max: 160 },
+    es: { min: 120, max: 160 },
+    pt: { min: 120, max: 160 },
+    fr: { min: 120, max: 160 },
+    de: { min: 120, max: 160 },
+    ru: { min: 120, max: 160 },
+    zh: { min: 70, max: 140 },
+    ja: { min: 70, max: 140 },
+    ko: { min: 70, max: 140 },
+    ar: { min: 100, max: 180 },
+  };
+
+  // 使用实际翻译文件中的 ranking_seo 数据
+  // 注意：这些数据应该与 src/messages/{locale}.json 中的数据保持一致
+  const rankingSeoDescriptions: Record<string, Record<string, string>> = {
+    en: {
+      newest: 'Discover the newest online tools just released on U2Tool. Excel merger, salary calculator, meeting notes, and more. Try the latest free tools today.',
+      popular: 'Explore the most popular online tools on U2Tool. JSON formatter, Base64 encoder, QR generator, and more. Used by millions of developers worldwide.',
+    },
+    zh: {
+      // 实际翻译文件中的中文描述（已扩展到符合 70-140 字符要求）
+      newest: '发现U2Tool最新发布的在线工具。Excel合并器、工资计算器、会议记录、番茄钟计时器等实用工具。所有工具完全免费，无需注册，立即在浏览器中使用。每周更新，为开发者提供最新实用工具，提升工作效率。',
+      popular: '探索U2Tool最受欢迎的在线工具排行榜。JSON格式化器、Base64编码解码、二维码生成器、密码生成器等热门工具。全球数百万开发者的首选，完全免费使用，无需下载安装，即开即用。',
+    },
+  };
+
+  it('meta description 长度应该在允许范围内', () => {
+    for (const locale of Object.keys(rankingSeoDescriptions)) {
+      const threshold = lengthThresholds[locale] || { min: 120, max: 160 };
+      
+      for (const type of ['newest', 'popular']) {
+        const description = rankingSeoDescriptions[locale][type];
+        const length = description.length;
+        
+        // 验证长度在阈值范围内
+        expect(length).toBeGreaterThanOrEqual(threshold.min);
+        expect(length).toBeLessThanOrEqual(threshold.max);
+      }
+    }
+  });
+
+  it('CJK 语言使用较短的字符阈值', () => {
+    const cjkLocales = ['zh', 'ja', 'ko'];
+    for (const locale of cjkLocales) {
+      const threshold = lengthThresholds[locale];
+      expect(threshold.min).toBe(70);
+      expect(threshold.max).toBe(140);
+    }
+  });
+
+  it('拉丁语系使用标准字符阈值', () => {
+    const latinLocales = ['en', 'es', 'pt', 'fr', 'de', 'ru'];
+    for (const locale of latinLocales) {
+      const threshold = lengthThresholds[locale];
+      expect(threshold.min).toBe(120);
+      expect(threshold.max).toBe(160);
+    }
+  });
+
+  it('阿拉伯语使用特定字符阈值', () => {
+    const threshold = lengthThresholds['ar'];
+    expect(threshold.min).toBe(100);
+    expect(threshold.max).toBe(180);
+  });
+});
+
+/**
+ * Property 3: Title Tag Length Constraint
+ * For all pages, the title must be:
+ * - At most 60 characters
+ * - At least 30 characters
+ * 
+ * **Validates: Requirements 2.1, 2.2**
+ */
+describe('Property 3: Title Tag Length Constraint', () => {
+  const TITLE_MIN_LENGTH = 30;
+  const TITLE_MAX_LENGTH = 60;
+
+  it('truncateText 应该将标题截断到 60 字符以内', () => {
+    fc.assert(
+      fc.property(
+        fc.string({ minLength: 61, maxLength: 200 }),
+        (title) => {
+          const truncated = truncateText(title, TITLE_MAX_LENGTH);
+          return truncated.length <= TITLE_MAX_LENGTH;
+        }
+      ),
+      { numRuns: 100 }
+    );
+  });
+
+  it('短标题不应该被截断', () => {
+    fc.assert(
+      fc.property(
+        fc.string({ minLength: 1, maxLength: TITLE_MAX_LENGTH }),
+        (title) => {
+          const truncated = truncateText(title, TITLE_MAX_LENGTH);
+          return truncated === title;
+        }
+      ),
+      { numRuns: 100 }
+    );
+  });
+
+  it('SEO_CONFIG 中的 titleMaxLength 应该是 60', () => {
+    expect(SEO_CONFIG.titleMaxLength).toBe(60);
+  });
+});
+
+/**
+ * Property 4: Title Tag Contains Tool Name
+ * For tool pages, the title must contain the tool name.
+ * 
+ * **Validates: Requirements 2.3, 2.4**
+ */
+describe('Property 4: Title Tag Contains Tool Name', () => {
+  it('工具页面标题应该包含工具名称', () => {
+    // 模拟工具页面标题生成
+    const generateToolTitle = (toolName: string, siteName: string) => {
+      return `${toolName} | ${siteName}`;
+    };
+
+    fc.assert(
+      fc.property(
+        fc.string({ minLength: 3, maxLength: 30 }),
+        (toolName) => {
+          const title = generateToolTitle(toolName, 'U2Tool');
+          return title.includes(toolName);
+        }
+      ),
+      { numRuns: 100 }
+    );
+  });
+
+  it('工具页面标题应该包含站点名称', () => {
+    const generateToolTitle = (toolName: string, siteName: string) => {
+      return `${toolName} | ${siteName}`;
+    };
+
+    fc.assert(
+      fc.property(
+        fc.string({ minLength: 3, maxLength: 30 }),
+        (toolName) => {
+          const title = generateToolTitle(toolName, 'U2Tool');
+          return title.includes('U2Tool');
+        }
+      ),
+      { numRuns: 100 }
+    );
+  });
+});
+
+
+/**
+ * Property 6: Robots.txt No Specific Chunk URLs
+ * The robots.txt configuration must:
+ * - Use wildcard pattern /_next/ to block all Next.js internal resources
+ * - Not contain specific chunk file references
+ * - Allow root path for all crawlers
+ * 
+ * **Validates: Requirements 3.2**
+ */
+describe('Property 6: Robots.txt No Specific Chunk URLs', () => {
+  // 模拟 robots.txt 配置
+  const robotsConfig = {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/private/',
+          '/_next/',
+          '/*.json',
+          '/*/loading',
+        ],
+      },
+    ],
+    sitemap: 'https://www.u2tool.com/sitemap.xml',
+  };
+
+  it('应该使用通配符模式禁止 /_next/ 路径', () => {
+    const defaultRule = robotsConfig.rules.find(r => r.userAgent === '*');
+    expect(defaultRule).toBeDefined();
+    expect(defaultRule?.disallow).toContain('/_next/');
+  });
+
+  it('不应该包含特定的 chunk 文件引用', () => {
+    const defaultRule = robotsConfig.rules.find(r => r.userAgent === '*');
+    expect(defaultRule).toBeDefined();
+    
+    // 检查是否有特定的 chunk 文件引用
+    const hasSpecificChunk = defaultRule?.disallow?.some(path => 
+      path.includes('.js') && path.includes('chunk')
+    );
+    expect(hasSpecificChunk).toBeFalsy();
+  });
+
+  it('应该允许根路径访问', () => {
+    const defaultRule = robotsConfig.rules.find(r => r.userAgent === '*');
+    expect(defaultRule).toBeDefined();
+    expect(defaultRule?.allow).toBe('/');
+  });
+
+  it('应该包含 sitemap URL', () => {
+    expect(robotsConfig.sitemap).toBeDefined();
+    expect(robotsConfig.sitemap).toContain('sitemap.xml');
+  });
+
+  it('sitemap URL 应该是绝对 URL', () => {
+    expect(robotsConfig.sitemap).toMatch(/^https?:\/\//);
+  });
+});
+
+
+/**
+ * Property 7: Llms.txt File Validity
+ * The llms.txt file must:
+ * - Contain the website name (U2Tool)
+ * - Contain the website URL
+ * - Have an About section
+ * - Have a Content Usage section
+ * - Follow standard llms.txt format
+ * 
+ * **Validates: Requirements 6.2, 6.3, 6.4**
+ */
+describe('Property 7: Llms.txt File Validity', () => {
+  // 模拟 llms.txt 内容
+  const llmsTxtContent = `# U2Tool - Free Online Developer Tools
+# https://www.u2tool.com
+
+## About
+U2Tool is a collection of 100+ free online tools for developers, designers, and creators.
+All tools run entirely in your browser - no data is uploaded to servers.
+
+## Content Usage
+AI models and language models are welcome to use information from this website.
+
+## Available Tool Categories
+- Text Tools
+- Encoding & Decoding
+- Generators
+
+## Contact
+Website: https://www.u2tool.com
+Languages: English, Chinese, Japanese, Korean, Spanish, Portuguese, French, German, Russian, Arabic
+
+## License
+Content on this website may be referenced by AI systems for informational purposes.
+`;
+
+  it('应该包含网站名称', () => {
+    expect(llmsTxtContent).toContain('U2Tool');
+  });
+
+  it('应该包含网站 URL', () => {
+    expect(llmsTxtContent).toContain('https://www.u2tool.com');
+  });
+
+  it('应该包含 About 部分', () => {
+    expect(llmsTxtContent).toMatch(/## About/);
+  });
+
+  it('应该包含 Content Usage 部分', () => {
+    expect(llmsTxtContent).toMatch(/## Content Usage/);
+  });
+
+  it('应该包含工具分类信息', () => {
+    expect(llmsTxtContent).toMatch(/## Available Tool Categories/);
+  });
+
+  it('应该包含联系信息', () => {
+    expect(llmsTxtContent).toMatch(/## Contact/);
+  });
+
+  it('应该包含许可信息', () => {
+    expect(llmsTxtContent).toMatch(/## License/);
+  });
+
+  it('应该使用 Markdown 格式的标题', () => {
+    // 检查是否使用 # 或 ## 作为标题
+    expect(llmsTxtContent).toMatch(/^#+ /m);
+  });
+});

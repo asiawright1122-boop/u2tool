@@ -69,6 +69,16 @@
       "seo_description": "发现100+款免费在线工具，适用于开发者、设计师和创作者。JSON格式化、图片转换、PDF处理、代码生成器等。快速安全，无需注册。"
     }
   },
+  "ranking_seo": {
+    "newest": {
+      "seo_title": "最新工具 - 新发布工具推荐 | U2Tool",
+      "seo_description": "发现U2Tool最新发布的在线工具。Excel合并器、工资计算器、会议记录、番茄钟计时器等实用工具。所有工具完全免费，无需注册，立即在浏览器中使用。每周更新，为开发者提供最新实用工具，提升工作效率。"
+    },
+    "popular": {
+      "seo_title": "热门工具 - 最受欢迎工具排行 | U2Tool",
+      "seo_description": "探索U2Tool最受欢迎的在线工具排行榜。JSON格式化器、Base64编码解码、二维码生成器、密码生成器等热门工具。全球数百万开发者的首选，完全免费使用，无需下载安装，即开即用。"
+    }
+  },
   "nav": {
     "home": "首页",
     "tools": "工具",
@@ -18258,5 +18268,17 @@
       "backHome": "返回首页",
       "browseTools": "浏览工具"
     }
+  },
+  "compare": {
+    "compare": "比较",
+    "pageTitle": "{tools} - 工具对比",
+    "pageDescription": "比较 {tools} 的功能和特性，找到最适合您需求的工具。",
+    "featureComparison": "功能对比",
+    "feature": "功能",
+    "similarities": "相似之处",
+    "differences": "不同之处",
+    "recommendation": "推荐",
+    "tryTool": "试用此工具",
+    "viewAll": "查看所有工具"
   }
 }

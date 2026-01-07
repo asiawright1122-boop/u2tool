@@ -20,6 +20,7 @@ const BASE_KEYS = [
   'categories',
   'categories_seo', // 分类页面 SEO 元数据
   'pages', // 页面级 SEO 元数据（如 tools 列表页）
+  'ranking_seo', // 排行榜页面 SEO 元数据
   'nav',
   'home',
   'footer',

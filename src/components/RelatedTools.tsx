@@ -22,8 +22,6 @@ interface RelatedToolsProps {
   className?: string;
   /** 是否使用语义相关算法（默认 true） */
   useSemantic?: boolean;
-  /** 是否显示对比链接（默认 true） */
-  showCompareLinks?: boolean;
 }
 
 // 最小相关工具数量（SEO 要求）
@@ -39,11 +37,9 @@ export default function RelatedTools({
   maxCount = 6,
   className = '',
   useSemantic = true,
-  showCompareLinks = true,
 }: RelatedToolsProps) {
   const t = useTranslations('tools');
   const tNav = useTranslations('nav');
-  const tCompare = useTranslations('compare');
 
   // 获取相关工具（使用语义算法或简单分类过滤）
   const relatedTools = useSemantic
@@ -75,29 +71,19 @@ export default function RelatedTools({
             const toolName = t(`${tool.slug}.name`);
             
             return (
-              <div key={tool.slug} className="flex flex-col">
-                <Link
-                  href={`/tools/${tool.slug}`}
-                  className="flex flex-col items-center p-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 rounded-lg hover:border-blue-500/30 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all group"
-                  title={toolName}
-                >
-                  <span className="text-2xl mb-2 group-hover:scale-110 transition-transform" aria-hidden="true">
-                    {tool.icon}
-                  </span>
-                  <span className="text-sm text-gray-700 dark:text-gray-300 text-center line-clamp-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
-                    {toolName}
-                  </span>
-                </Link>
-                {showCompareLinks && (
-                  <Link
-                    href={`/compare/${currentSlug}/${tool.slug}`}
-                    className="mt-1 text-xs text-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline"
-                    title={`${tCompare('compare')}: ${t(`${currentSlug}.name`)} vs ${toolName}`}
-                  >
-                    {tCompare('compare')}
-                  </Link>
-                )}
-              </div>
+              <Link
+                key={tool.slug}
+                href={`/tools/${tool.slug}`}
+                className="flex flex-col items-center p-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 rounded-lg hover:border-blue-500/30 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all group"
+                title={toolName}
+              >
+                <span className="text-2xl mb-2 group-hover:scale-110 transition-transform" aria-hidden="true">
+                  {tool.icon}
+                </span>
+                <span className="text-sm text-gray-700 dark:text-gray-300 text-center line-clamp-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+                  {toolName}
+                </span>
+              </Link>
             );
           })}
         </div>
@@ -127,6 +113,6 @@ export function getRelatedTools(
   
   // 回退到简单分类过滤
   return getToolsByCategory(category)
-    .filter(tool => tool.slug !== currentSlug)
+    .filter((tool: Tool) => tool.slug !== currentSlug)
     .slice(0, maxCount);
 }

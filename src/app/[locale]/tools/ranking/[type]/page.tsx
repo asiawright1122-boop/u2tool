@@ -83,8 +83,9 @@ export async function generateMetadata({
   }
   
   const rankingName = type === 'newest' ? t('nav.newest') : t('nav.hottest');
-  const title = `${rankingName} - ${t('nav.ranking')}`;
-  const description = t('site.description');
+  const rankingType = type as 'newest' | 'popular';
+  const title = t(`ranking_seo.${rankingType}.seo_title`);
+  const description = t(`ranking_seo.${rankingType}.seo_description`);
   const config = RANKING_CONFIG[type as RankingType];
   
   return {
