@@ -55,13 +55,20 @@
 ### Files to Modify
 - `src/lib/seo.ts` - 增强 generateSoftwareApplicationJsonLd 函数
 - `src/app/[locale]/tools/[slug]/page.tsx` - 使用增强的 schema
+- `src/config/tool-metadata.ts` - 新建文件，存储工具元数据
 
 ### Acceptance Criteria
-- [ ] 添加 datePublished 字段
-- [ ] 添加 dateModified 字段
-- [ ] 添加 featureList 字段
-- [ ] 添加 softwareVersion 字段
-- [ ] 测试通过
+- [x] 添加 datePublished 字段
+- [x] 添加 dateModified 字段
+- [x] 添加 featureList 字段
+- [x] 添加 softwareVersion 字段
+- [x] 测试通过
+
+### 完成情况
+- 创建了 `src/config/tool-metadata.ts` 文件，包含工具元数据配置
+- 为 15 个热门工具添加了特定的元数据（功能列表、版本等）
+- 更新了 `src/app/[locale]/tools/[slug]/page.tsx` 使用增强的 schema
+- 所有 1644 个测试通过
 
 ---
 
@@ -74,7 +81,14 @@
 - `scripts/validate-structured-data-enhanced.ts` - 增强的验证脚本
 
 ### Acceptance Criteria
-- [ ] 验证 FAQ JSON-LD 格式
-- [ ] 验证 HowTo JSON-LD 格式
-- [ ] 验证 SoftwareApplication JSON-LD 格式
-- [ ] 报告缺失字段和错误
+- [x] 验证 FAQ JSON-LD 格式
+- [x] 验证 HowTo JSON-LD 格式
+- [x] 验证 SoftwareApplication JSON-LD 格式
+- [x] 报告缺失字段和错误
+
+### 完成情况
+- 创建了 `scripts/validate-structured-data-enhanced.ts` 验证脚本
+- 验证 ISO 8601 日期格式
+- 验证 ISO 8601 时间间隔格式
+- 验证 FAQ 和 HowTo 内容完整性
+- 验证结果：290 个工具，0 个错误，275 个警告（使用默认元数据）

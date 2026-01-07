@@ -13,6 +13,7 @@ import {
   generateHowToJsonLd,
   generateSpeakableJsonLd,
   getToolHowToSteps,
+  getToolHowToTotalTime,
   getToolKeywords,
   getCategoryKeywords,
   truncateText,
@@ -26,6 +27,7 @@ import {
   getToolAuthor,
   generateExpertJsonLd,
 } from '@/lib/eeat';
+import { getToolMetadata } from '@/config/tool-metadata';
 
 // 生成静态参数（仅预渲染热门工具，减少构建日志大小）
 // 非热门工具将在首次访问时按需生成并缓存
@@ -115,22 +117,38 @@ export async function generateMetadata({
     description = truncateText(description, SEO_CONFIG.descriptionMaxLength);
   }
 
-  // 生成 SoftwareApplication JSON-LD
+  // 获取工具元数据（发布日期、版本、功能列表等）
+  const toolMetadata = getToolMetadata(slug);
+  
+  // 获取作者信息
+  const author = getToolAuthor(slug);
+
+  // 生成 SoftwareApplication JSON-LD（增强版）
   const softwareJsonLd = generateSoftwareApplicationJsonLd({
     name: toolName,
     description: seoDescription,
     category: category?.id || 'DeveloperApplication',
     locale,
     slug,
+    datePublished: toolMetadata.datePublished,
+    dateModified: toolMetadata.dateModified,
+    softwareVersion: toolMetadata.softwareVersion,
+    featureList: toolMetadata.featureList,
+    author: {
+      name: author.name,
+      url: author.url,
+      type: 'Organization',
+    },
   });
 
   // 生成 HowTo JSON-LD（工具使用说明）
-  const howToSteps = getToolHowToSteps(toolName, locale);
+  const howToSteps = getToolHowToSteps(toolName, locale, slug);
+  const howToTotalTime = getToolHowToTotalTime(slug);
   const howToJsonLd = generateHowToJsonLd({
     name: `How to use ${toolName}`,
     description: seoDescription,
     steps: howToSteps,
-    totalTime: 'PT2M', // 预计 2 分钟
+    totalTime: howToTotalTime,
   });
 
   // 生成 FAQ JSON-LD（常见问题）
@@ -147,7 +165,6 @@ export async function generateMetadata({
   });
 
   // 生成作者/专家 JSON-LD（E-E-A-T 信号）
-  const author = getToolAuthor(slug);
   const authorJsonLd = generateExpertJsonLd(author);
 
   // 生成组织 JSON-LD
