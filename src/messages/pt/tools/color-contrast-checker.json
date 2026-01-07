@@ -1,14 +1,16 @@
 {
-  "detailed_description": "Verificador de contraste de cores é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Verificador de contraste de cores, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Verificador de contraste de cores pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Verificador de contraste de cores imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "Nosso verificador de contraste de cores ajuda você a criar designs web acessíveis que cumprem as diretrizes WCAG 2.1. Teste combinações de cores para texto normal (4.5:1 para AA), texto grande (3:1 para AA) e conformidade aprimorada (7:1 para AAA). Indispensável para designers e desenvolvedores que querem criar sites inclusivos.",
   "usage_steps": [
-    "Abra a página da ferramenta Verificador de contraste de cores",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Selecione a cor de primeiro plano (texto)",
+    "2. Selecione a cor de fundo",
+    "3. Consulte a proporção de contraste calculada",
+    "4. Verifique a conformidade WCAG AA e AAA",
+    "5. Ajuste as cores até alcançar a conformidade desejada"
   ],
   "usage_examples": [
-    "Use Verificador de contraste de cores para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Verificar a acessibilidade de esquemas de cores de sites",
+    "Testar a legibilidade do texto em fundos coloridos",
+    "Criar paletas de cores em conformidade com WCAG",
+    "Otimizar o contraste para botões e links"
   ]
 }

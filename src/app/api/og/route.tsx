@@ -1,6 +1,7 @@
 /**
  * 动态 OG 图片生成 API
  * 使用 Next.js ImageResponse 生成 1200x630 像素的 OG 图片
+ * @see Requirements 2.4 - OG 图片缓存优化
  */
 
 import { ImageResponse } from 'next/og';
@@ -11,6 +12,10 @@ export const runtime = 'edge';
 // OG 图片尺寸
 const OG_WIDTH = 1200;
 const OG_HEIGHT = 630;
+
+// 缓存配置
+const CACHE_MAX_AGE = 60 * 60 * 24 * 7; // 7 天
+const CACHE_STALE_WHILE_REVALIDATE = 60 * 60 * 24; // 1 天
 
 // 品牌颜色
 const BRAND_COLORS = {
@@ -40,7 +45,23 @@ export async function GET(request: NextRequest) {
     };
     const subtitle = subtitles[locale] || subtitles.en;
 
-    return new ImageResponse(
+    // 生成基于参数的缓存键（用于 ETag）
+    const cacheKey = `og-${title}-${locale}-${icon}`;
+    const etag = `"${Buffer.from(cacheKey).toString('base64').slice(0, 32)}"`;
+
+    // 检查 If-None-Match 头部
+    const ifNoneMatch = request.headers.get('if-none-match');
+    if (ifNoneMatch === etag) {
+      return new Response(null, {
+        status: 304,
+        headers: {
+          'ETag': etag,
+          'Cache-Control': `public, max-age=${CACHE_MAX_AGE}, stale-while-revalidate=${CACHE_STALE_WHILE_REVALIDATE}`,
+        },
+      });
+    }
+
+    const imageResponse = new ImageResponse(
       (
         <div
           style={{
@@ -153,8 +174,15 @@ export async function GET(request: NextRequest) {
       {
         width: OG_WIDTH,
         height: OG_HEIGHT,
+        headers: {
+          'Cache-Control': `public, max-age=${CACHE_MAX_AGE}, stale-while-revalidate=${CACHE_STALE_WHILE_REVALIDATE}`,
+          'ETag': etag,
+          'Vary': 'Accept',
+        },
       }
     );
+
+    return imageResponse;
   } catch (error) {
     console.error('OG Image generation error:', error);
     

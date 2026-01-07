@@ -488,8 +488,8 @@
     "html-preview": {
       "name": "Aperçu HTML",
       "description": "Prévisualisez le code HTML en temps réel avec la prise en charge CSS et JavaScript.",
-      "seo_title": "Aperçu HTML gratuit en ligne",
-      "seo_description": "Prévisualisez gratuitement le code HTML en temps réel en ligne. Rendu en direct avec mises à jour instantanées au fur et à mesure que vous tapez. Parfait pour le développement Web et le prototypage rapide."
+      "seo_title": "Aperçu HTML Gratuit en Ligne - Rendu en Temps Réel | U2Tool",
+      "seo_description": "Prévisualisez le code HTML en temps réel en ligne gratuitement. Rendu en direct avec mises à jour instantanées. Parfait pour le développement web et le prototypage rapide."
     },
     "ip-lookup": {
       "name": "Recherche IP",
@@ -1051,10 +1051,10 @@
       "seo_description": "Prévisualisez gratuitement en ligne les cartes de partage des réseaux sociaux pour Facebook, Twitter, LinkedIn et bien plus encore. Testez les balises méta Open Graph et Twitter Card avant de publier."
     },
     "css-grid-generator": {
-      "name": "Générateur de grille CSS",
+      "name": "Générateur CSS Grid",
       "description": "Générateur de mise en page Visual CSS Grid avec aperçu en direct.",
-      "seo_title": "Générateur de grille CSS gratuit en ligne",
-      "seo_description": "Générez visuellement des mises en page de grille CSS avec un aperçu en direct en ligne gratuitement. Personnalisez les lignes, les colonnes, les espaces et l'alignement. Copiez le code CSS pour une conception Web réactive.",
+      "seo_title": "Générateur CSS Grid Gratuit en Ligne - Mises en Page Responsives | U2Tool",
+      "seo_description": "Générez visuellement des mises en page CSS Grid avec aperçu en direct en ligne gratuitement. Personnalisez lignes, colonnes, espaces et alignement. Copiez le code CSS pour un design web responsive.",
       "columns": "Colonnes",
       "rows": "Lignes",
       "gap": "Écart (px)",
@@ -2097,18 +2097,18 @@
       "decimalDesc": "Utilise 1 000 comme multiplicateur (Ko, Mo, Go). Utilisé par les fabricants de stockage."
     },
     "ascii-table": {
-      "name": "ASCII Table",
+      "name": "Table ASCII",
       "description": "Table complète de référence des caractères ASCII.",
-      "seo_title": "ASCII Table - Character Code Reference",
-      "seo_description": "Tableau ASCII complet avec des valeurs décimales, hexadécimales, octales et binaires. Parcourez les 128 caractères ASCII avec des descriptions. Référence essentielle pour les programmeurs.",
+      "seo_title": "Table ASCII - Référence des Codes de Caractères | U2Tool",
+      "seo_description": "Table ASCII complète avec valeurs décimales, hexadécimales, octales et binaires. Parcourez les 128 caractères ASCII avec descriptions. Référence essentielle pour les programmeurs et développeurs.",
       "searchPlaceholder": "Recherche par caractère, code ou description...",
       "showExtended": "Afficher l'ASCII étendu (128-255)",
       "selectedChar": "Caractère sélectionné",
       "decimal": "Décimal",
-      "hex": "Hex",
+      "hex": "Hexadécimal",
       "octal": "Octal",
       "binary": "Binaire",
-      "char": "Carboniser",
+      "char": "Caractère",
       "descriptionHeader": "Description",
       "noResults": "Aucun caractère correspondant trouvé",
       "quickReference": "Référence rapide",
@@ -2637,6 +2637,18 @@
       "title": "Contactez-nous",
       "content": "Si vous avez des questions concernant ces conditions d'utilisation, veuillez nous contacter."
     }
+  },
+  "compare": {
+    "compare": "Comparer",
+    "pageTitle": "{tools} - Comparaison d'outils",
+    "pageDescription": "Comparez les fonctionnalités et capacités de {tools}. Trouvez le meilleur outil pour vos besoins.",
+    "featureComparison": "Comparaison des fonctionnalités",
+    "feature": "Fonctionnalité",
+    "similarities": "Similitudes",
+    "differences": "Différences",
+    "recommendation": "Recommandation",
+    "tryTool": "Essayer cet outil",
+    "viewAll": "Voir tous les outils"
   },
   "tools": {
     "popular": "Populaire",
@@ -4225,7 +4237,7 @@
     "html-preview": {
       "name": "Aperçu HTML",
       "description": "Prévisualisez le code HTML en temps réel avec la prise en charge CSS et JavaScript.",
-      "seo_title": "Free HTML Preview Online",
+      "seo_title": "Aperçu HTML Gratuit en Ligne - Éditeur HTML en Direct | U2Tool",
       "seo_description": "Preview HTML code in real-time online for free. Live rendering with instant updates as you type. Perfect for web development and quick prototyping."
     },
     "ip-lookup": {
@@ -4693,8 +4705,8 @@
     "color-contrast-checker": {
       "name": "Vérificateur de contraste de couleur",
       "description": "Vérifiez le rapport de contraste des couleurs pour vérifier la conformité en matière d'accessibilité aux WCAG.",
-      "seo_title": "Free Color Contrast Checker Online - WCAG",
-      "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance online for free. Test foreground and background colors with instant pass/fail results.",
+      "seo_title": "Vérificateur de Contraste de Couleur Gratuit en Ligne - WCAG AA/AAA | U2Tool",
+      "seo_description": "Vérifiez gratuitement en ligne le rapport de contraste des couleurs pour la conformité en matière d'accessibilité aux WCAG AA et AAA. Testez les couleurs de premier plan et d'arrière-plan avec des résultats de réussite/échec instantanés.",
       "swapColors": "Échanger les couleurs",
       "sampleText": "Le renard brun rapide saute par-dessus le chien paresseux.",
       "smallText": "Petit échantillon de texte pour les tests d'accessibilité.",
@@ -4786,7 +4798,7 @@
     "css-grid-generator": {
       "name": "Générateur de grille CSS",
       "description": "Générateur de mise en page Visual CSS Grid avec aperçu en direct.",
-      "seo_title": "Free CSS Grid Generator Online",
+      "seo_title": "Générateur CSS Grid Gratuit en Ligne - Mises en Page Responsives | U2Tool",
       "seo_description": "Generate CSS Grid layouts visually with live preview online for free. Customize rows, columns, gaps, and alignment. Copy CSS code for responsive web design.",
       "columns": "Colonnes",
       "rows": "Lignes",
@@ -5848,7 +5860,7 @@
     "ascii-table": {
       "name": "Tableau ASCII",
       "description": "Table complète de référence des caractères ASCII.",
-      "seo_title": "ASCII Table - Character Code Reference",
+      "seo_title": "Table ASCII en Ligne - Référence des Codes de Caractères | U2Tool",
       "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential reference for programmers.",
       "searchPlaceholder": "Recherche par caractère, code ou description...",
       "showExtended": "Afficher l'ASCII étendu (128-255)",
@@ -7416,8 +7428,8 @@
     },
     "gantt-chart-generator": {
       "name": "Générateur de diagrammes de Gantt",
-      "seo_title": "Free Online Gantt Chart Generator",
-      "seo_description": "Create professional Gantt charts online. Visualize project schedules, task progress and dependencies. Export for free.",
+      "seo_title": "Générateur de Diagrammes de Gantt Gratuit en Ligne - Calendriers de Projets | U2Tool",
+      "seo_description": "Créez des diagrammes de Gantt professionnels en ligne avec notre générateur gratuit. Visualisez les calendriers de projets, la progression des tâches et les dépendances. Exportez en PNG/SVG instantanément.",
       "title": "Générateur de diagrammes de Gantt",
       "description": "Créez des diagrammes de Gantt pour visualiser l'avancement et les calendriers du projet.",
       "defaultTitle": "Calendrier du projet",

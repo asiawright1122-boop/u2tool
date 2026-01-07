@@ -488,8 +488,22 @@
     "html-preview": {
       "name": "HTML-Vorschau",
       "description": "Vorschau des HTML-Codes in Echtzeit mit CSS- und JavaScript-Unterstützung.",
-      "seo_title": "Kostenlose HTML-Vorschau online",
-      "seo_description": "Sehen Sie sich den HTML-Code kostenlos online in Echtzeit an. Live-Rendering mit sofortigen Updates während der Eingabe. Perfekt für Webentwicklung und schnelles Prototyping."
+      "seo_title": "Kostenlose HTML-Vorschau Online - Live HTML Editor | U2Tool",
+      "seo_description": "Sehen Sie sich den HTML-Code kostenlos online in Echtzeit an. Live-Rendering mit sofortigen Updates während der Eingabe. Perfekt für Webentwicklung und schnelles Prototyping.",
+      "detailed_description": "Unser HTML-Vorschau-Tool bietet eine Echtzeit-Rendering-Umgebung für HTML, CSS und JavaScript. Schreiben Sie Code und sehen Sie sofort das Ergebnis - ideal für schnelles Prototyping, das Testen von Code-Snippets und das Lernen von Webentwicklung. Unterstützt moderne HTML5-Features und CSS3-Styling.",
+      "usage_steps": [
+        "1. Geben Sie Ihren HTML-Code in den Editor ein",
+        "2. Fügen Sie optional CSS-Styles hinzu",
+        "3. Ergänzen Sie JavaScript für Interaktivität",
+        "4. Sehen Sie die Live-Vorschau in Echtzeit",
+        "5. Kopieren Sie den fertigen Code für Ihr Projekt"
+      ],
+      "usage_examples": [
+        "HTML-Snippets schnell testen",
+        "CSS-Layouts vor der Integration prüfen",
+        "JavaScript-Funktionen debuggen",
+        "Webentwicklung lernen und experimentieren"
+      ]
     },
     "ip-lookup": {
       "name": "IP-Suche",
@@ -972,8 +986,22 @@
     "color-contrast-checker": {
       "name": "Farbkontrastprüfer",
       "description": "Überprüfen Sie das Farbkontrastverhältnis auf Einhaltung der WCAG-Barrierefreiheit.",
-      "seo_title": "Kostenloser Online-Farbkontrastprüfer - WCAG",
+      "seo_title": "Kostenloser Farbkontrast-Checker Online - WCAG AA/AAA Prüfung | U2Tool",
       "seo_description": "Überprüfen Sie online kostenlos das Farbkontrastverhältnis für die WCAG AA- und AAA-Zugänglichkeitskonformität. Testen Sie Vordergrund- und Hintergrundfarben mit sofortigen Pass/Fail-Ergebnissen.",
+      "detailed_description": "Unser Farbkontrast-Checker hilft Ihnen, barrierefreie Webdesigns zu erstellen, die den WCAG 2.1 Richtlinien entsprechen. Testen Sie Farbkombinationen für normalen Text (4.5:1 für AA), großen Text (3:1 für AA) und erweiterte Konformität (7:1 für AAA). Unverzichtbar für Designer und Entwickler, die inklusive Websites erstellen möchten.",
+      "usage_steps": [
+        "1. Wählen Sie die Vordergrundfarbe (Text)",
+        "2. Wählen Sie die Hintergrundfarbe",
+        "3. Sehen Sie das berechnete Kontrastverhältnis",
+        "4. Prüfen Sie die WCAG AA und AAA Konformität",
+        "5. Passen Sie Farben an, bis die gewünschte Konformität erreicht ist"
+      ],
+      "usage_examples": [
+        "Website-Farbschemata auf Barrierefreiheit prüfen",
+        "Lesbarkeit von Text auf farbigen Hintergründen testen",
+        "WCAG-konforme Farbpaletten erstellen",
+        "Kontrast für Buttons und Links optimieren"
+      ],
       "swapColors": "Farben tauschen",
       "sampleText": "Der schnelle Braunfuchs springt über den faulen Hund.",
       "smallText": "Kleines Textbeispiel zum Testen der Barrierefreiheit.",
@@ -1053,8 +1081,22 @@
     "css-grid-generator": {
       "name": "CSS-Grid-Generator",
       "description": "Visueller CSS-Grid-Layoutgenerator mit Live-Vorschau.",
-      "seo_title": "Kostenloser CSS-Grid-Generator online",
+      "seo_title": "Kostenloser CSS Grid Generator Online - Responsive Layouts | U2Tool",
       "seo_description": "Erstellen Sie CSS-Grid-Layouts visuell mit Live-Vorschau online und kostenlos. Passen Sie Zeilen, Spalten, Lücken und Ausrichtung an. Kopieren Sie CSS-Code für responsives Webdesign.",
+      "detailed_description": "Unser CSS Grid Generator ist ein leistungsstarkes visuelles Tool, das die Erstellung komplexer Grid-Layouts vereinfacht. Definieren Sie Zeilen und Spalten mit flexiblen Einheiten (fr, px, %, auto), passen Sie Abstände an und sehen Sie Änderungen sofort in der Live-Vorschau. Perfekt für responsive Webdesigns, Dashboard-Layouts und moderne CSS-Grid-basierte Benutzeroberflächen.",
+      "usage_steps": [
+        "1. Legen Sie die Anzahl der Spalten und Zeilen fest",
+        "2. Definieren Sie Spalten- und Zeilengrößen (1fr, 200px, auto, etc.)",
+        "3. Passen Sie den Abstand (gap) zwischen den Elementen an",
+        "4. Wählen Sie die Ausrichtung der Elemente",
+        "5. Sehen Sie die Vorschau und kopieren Sie den generierten CSS-Code"
+      ],
+      "usage_examples": [
+        "Responsive Website-Layouts erstellen",
+        "Dashboard-Grids mit unterschiedlichen Spaltenbreiten",
+        "Bildergalerien mit gleichmäßiger Verteilung",
+        "Blog-Layouts mit Sidebar und Hauptinhalt"
+      ],
       "columns": "Spalten",
       "rows": "Reihen",
       "gap": "Lücke (px)",
@@ -2097,10 +2139,24 @@
       "decimalDesc": "Verwendet 1000 als Multiplikator (KB, MB, GB). Wird von Speicherherstellern verwendet."
     },
     "ascii-table": {
-      "name": "ASCII Table",
+      "name": "ASCII-Tabelle",
       "description": "Vollständige Referenztabelle für ASCII-Zeichen.",
-      "seo_title": "ASCII Table - Character Code Reference",
+      "seo_title": "ASCII-Tabelle Online - Zeichencode-Referenz | U2Tool",
       "seo_description": "Vollständige ASCII-Tabelle mit Dezimal-, Hex-, Oktal- und Binärwerten. Durchsuchen Sie alle 128 ASCII-Zeichen mit Beschreibungen. Unverzichtbare Referenz für Programmierer.",
+      "detailed_description": "Unsere interaktive ASCII-Tabelle bietet eine vollständige Referenz aller 128 Standard-ASCII-Zeichen sowie erweitertes ASCII (128-255). Suchen Sie nach Zeichen, Code oder Beschreibung und sehen Sie sofort Dezimal-, Hexadezimal-, Oktal- und Binärwerte. Unverzichtbar für Programmierer, Systemadministratoren und alle, die mit Zeichenkodierung arbeiten.",
+      "usage_steps": [
+        "1. Durchsuchen Sie die Tabelle oder nutzen Sie die Suchfunktion",
+        "2. Klicken Sie auf ein Zeichen für Details",
+        "3. Sehen Sie Dezimal-, Hex-, Oktal- und Binärwerte",
+        "4. Aktivieren Sie erweitertes ASCII für Zeichen 128-255",
+        "5. Nutzen Sie die Schnellreferenz für häufige Zeichengruppen"
+      ],
+      "usage_examples": [
+        "Zeichencodes für Programmierung nachschlagen",
+        "Steuerzeichen identifizieren",
+        "Hexadezimalwerte für Webentwicklung finden",
+        "Binärkodierung von Zeichen verstehen"
+      ],
       "searchPlaceholder": "Suchen Sie nach Zeichen, Code oder Beschreibung ...",
       "showExtended": "Erweitertes ASCII anzeigen (128-255)",
       "selectedChar": "Ausgewählter Charakter",
@@ -2637,6 +2693,18 @@
       "title": "Kontaktieren Sie uns",
       "content": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte."
     }
+  },
+  "compare": {
+    "compare": "Vergleichen",
+    "pageTitle": "{tools} - Werkzeugvergleich",
+    "pageDescription": "Vergleichen Sie die Funktionen und Fähigkeiten von {tools}. Finden Sie das beste Werkzeug für Ihre Bedürfnisse.",
+    "featureComparison": "Funktionsvergleich",
+    "feature": "Funktion",
+    "similarities": "Gemeinsamkeiten",
+    "differences": "Unterschiede",
+    "recommendation": "Empfehlung",
+    "tryTool": "Dieses Tool ausprobieren",
+    "viewAll": "Alle Tools anzeigen"
   },
   "tools": {
     "popular": "Beliebt",
@@ -4225,7 +4293,7 @@
     "html-preview": {
       "name": "HTML-Vorschau",
       "description": "Vorschau des HTML-Codes in Echtzeit mit CSS- und JavaScript-Unterstützung.",
-      "seo_title": "Free HTML Preview Online",
+      "seo_title": "Kostenlose HTML-Vorschau Online - Live HTML Editor | U2Tool",
       "seo_description": "Preview HTML code in real-time online for free. Live rendering with instant updates as you type. Perfect for web development and quick prototyping."
     },
     "ip-lookup": {
@@ -4693,7 +4761,7 @@
     "color-contrast-checker": {
       "name": "Farbkontrastprüfer",
       "description": "Überprüfen Sie das Farbkontrastverhältnis auf Einhaltung der WCAG-Barrierefreiheit.",
-      "seo_title": "Free Color Contrast Checker Online - WCAG",
+      "seo_title": "Kostenloser Farbkontrast-Checker Online - WCAG AA/AAA Prüfung | U2Tool",
       "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance online for free. Test foreground and background colors with instant pass/fail results.",
       "swapColors": "Farben tauschen",
       "sampleText": "Der schnelle Braunfuchs springt über den faulen Hund.",
@@ -4786,7 +4854,7 @@
     "css-grid-generator": {
       "name": "CSS-Grid-Generator",
       "description": "Visueller CSS-Grid-Layoutgenerator mit Live-Vorschau.",
-      "seo_title": "Free CSS Grid Generator Online",
+      "seo_title": "Kostenloser CSS Grid Generator Online - Responsive Layouts | U2Tool",
       "seo_description": "Generate CSS Grid layouts visually with live preview online for free. Customize rows, columns, gaps, and alignment. Copy CSS code for responsive web design.",
       "columns": "Spalten",
       "rows": "Reihen",
@@ -5848,7 +5916,7 @@
     "ascii-table": {
       "name": "ASCII-Tabelle",
       "description": "Vollständige Referenztabelle für ASCII-Zeichen.",
-      "seo_title": "ASCII Table - Character Code Reference",
+      "seo_title": "ASCII-Tabelle Online - Zeichencode-Referenz | U2Tool",
       "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential reference for programmers.",
       "searchPlaceholder": "Suchen Sie nach Zeichen, Code oder Beschreibung ...",
       "showExtended": "Erweitertes ASCII anzeigen (128-255)",
@@ -7416,8 +7484,8 @@
     },
     "gantt-chart-generator": {
       "name": "Gantt-Diagramm-Generator",
-      "seo_title": "Free Online Gantt Chart Generator",
-      "seo_description": "Create professional Gantt charts online. Visualize project schedules, task progress and dependencies. Export for free.",
+      "seo_title": "Kostenloser Online Gantt-Diagramm-Generator - Projektzeitpläne | U2Tool",
+      "seo_description": "Erstellen Sie professionelle Gantt-Diagramme online mit unserem kostenlosen Generator. Visualisieren Sie Projektzeitpläne, Aufgabenfortschritt und Abhängigkeiten. Sofort als PNG/SVG exportieren.",
       "title": "Gantt-Diagramm-Generator",
       "description": "Erstellen Sie Gantt-Diagramme, um den Projektfortschritt und die Zeitpläne zu visualisieren.",
       "defaultTitle": "Projektplan",

@@ -1,14 +1,16 @@
 {
-  "detailed_description": "Gerador de CSS Grid é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Gerador de CSS Grid, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Gerador de CSS Grid pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Gerador de CSS Grid imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "Nosso gerador CSS Grid é uma ferramenta visual poderosa que simplifica a criação de layouts de grade complexos. Defina linhas e colunas com unidades flexíveis (fr, px, %, auto), ajuste espaçamentos e veja as mudanças instantaneamente na visualização ao vivo. Perfeito para design web responsivo, layouts de dashboard e interfaces modernas baseadas em CSS Grid.",
   "usage_steps": [
-    "Abra a página da ferramenta Gerador de CSS Grid",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Defina o número de colunas e linhas",
+    "2. Defina os tamanhos de colunas e linhas (1fr, 200px, auto, etc.)",
+    "3. Ajuste o espaçamento entre elementos",
+    "4. Selecione o alinhamento dos elementos",
+    "5. Visualize a prévia e copie o código CSS gerado"
   ],
   "usage_examples": [
-    "Use Gerador de CSS Grid para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Criar layouts de sites responsivos",
+    "Grades de dashboard com diferentes larguras de coluna",
+    "Galerias de imagens com distribuição uniforme",
+    "Layouts de blog com barra lateral e conteúdo principal"
   ]
 }

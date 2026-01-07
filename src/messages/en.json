@@ -2189,19 +2189,20 @@
     "html-preview": {
       "name": "HTML Preview",
       "description": "Preview HTML code in real-time with CSS and JavaScript support.",
-      "seo_title": "Free HTML Preview Online",
-      "seo_description": "Preview HTML code in real-time online for free. Live rendering with instant updates as you type. Perfect for web development and quick prototyping.",
-      "detailed_description": "HTML Preview is a practical online tool that helps you quickly complete various tasks. Using HTML Preview, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, HTML Preview can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use HTML Preview immediately to experience fast, secure, and free online tool services.",
+      "seo_title": "Free HTML Preview Online - Live HTML Viewer & Editor | U2Tool",
+      "seo_description": "Preview HTML code in real-time with our free HTML preview tool. Live rendering with CSS and JavaScript support. Perfect for web development, learning HTML, and quick prototyping.",
+      "detailed_description": "Our free HTML preview tool lets you write and preview HTML code instantly in your browser. This live HTML viewer renders your code in real-time as you type, showing exactly how your webpage will look. Perfect for web developers testing code snippets, students learning HTML, and designers prototyping layouts. The HTML preview supports full CSS styling and JavaScript execution, so you can test complete web pages including interactive elements. Unlike other HTML editors, this tool runs entirely in your browser - your code never leaves your device, ensuring complete privacy. Use it to debug HTML issues, experiment with new CSS properties, or quickly share code examples. The split-view interface shows your code and preview side by side for efficient development. No installation or signup required - just paste your HTML and see the results instantly.",
       "usage_steps": [
-        "Open the HTML Preview tool page",
-        "Enter or paste the content you want to process in the input box",
-        "Adjust tool options and settings as needed",
-        "Click the process button to view the results",
-        "Copy or download the processed results"
+        "Paste or type your HTML code in the editor panel",
+        "View the live preview updating in real-time as you type",
+        "Add CSS styles within <style> tags or inline styles",
+        "Include JavaScript within <script> tags for interactivity",
+        "Click refresh to manually update the preview if needed"
       ],
       "usage_examples": [
-        "Use HTML Preview to process your data",
-        "Get processing results quickly without waiting"
+        "Test a responsive navigation menu with HTML, CSS, and JavaScript",
+        "Preview an email template before sending to ensure proper rendering",
+        "Debug CSS layout issues by seeing changes instantly as you edit"
       ]
     },
     "ip-lookup": {
@@ -3473,8 +3474,8 @@
     "color-contrast-checker": {
       "name": "Color Contrast Checker",
       "description": "Check color contrast ratio for WCAG accessibility compliance.",
-      "seo_title": "Free Color Contrast Checker Online - WCAG",
-      "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance online for free. Test foreground and background colors with instant pass/fail results.",
+      "seo_title": "Free Color Contrast Checker Online - WCAG AA/AAA Accessibility | U2Tool",
+      "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance with our free color contrast checker. Test foreground and background colors with instant pass/fail results.",
       "swapColors": "Swap colors",
       "sampleText": "The quick brown fox jumps over the lazy dog.",
       "smallText": "Small text sample for accessibility testing.",
@@ -3487,17 +3488,18 @@
       "presetBlueOnWhite": "Blue on White",
       "presetWhiteOnBlue": "White on Blue",
       "presetDarkOnYellow": "Dark on Yellow",
-      "detailed_description": "Color Contrast Checker is a practical online tool that helps you quickly complete various tasks. Using Color Contrast Checker, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Color Contrast Checker can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Color Contrast Checker immediately to experience fast, secure, and free online tool services.",
+      "detailed_description": "Our free color contrast checker helps designers and developers ensure their websites meet WCAG accessibility standards. Color contrast is crucial for users with visual impairments, including color blindness and low vision. This tool calculates the contrast ratio between foreground (text) and background colors according to WCAG 2.1 guidelines. WCAG Level AA requires a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text (18pt or 14pt bold). Level AAA requires 7:1 for normal text and 4.5:1 for large text. Simply enter your hex color codes or use the color picker to test combinations. The tool instantly shows pass/fail results for both AA and AAA compliance levels. Essential for creating accessible websites, mobile apps, and digital content that everyone can read.",
       "usage_steps": [
-        "Open the Color Contrast Checker tool page",
-        "Enter or paste the content you want to process in the input box",
-        "Adjust tool options and settings as needed",
-        "Click the process button to view the results",
-        "Copy or download the processed results"
+        "Enter your foreground (text) color using hex code or color picker",
+        "Enter your background color using hex code or color picker",
+        "View the calculated contrast ratio instantly",
+        "Check pass/fail status for WCAG AA and AAA levels",
+        "Use preset combinations or swap colors to test alternatives"
       ],
       "usage_examples": [
-        "Use Color Contrast Checker to process your data",
-        "Get processing results quickly without waiting"
+        "Test if your brand colors (#1a73e8 on white) meet WCAG AA standards for body text",
+        "Verify button text contrast meets accessibility requirements before launch",
+        "Check if your dark mode color scheme provides sufficient contrast for readability"
       ]
     },
     "markdown-table-generator": {
@@ -3638,8 +3640,8 @@
     "css-grid-generator": {
       "name": "CSS Grid Generator",
       "description": "Visual CSS Grid layout generator with live preview.",
-      "seo_title": "Free CSS Grid Generator Online",
-      "seo_description": "Generate CSS Grid layouts visually with live preview online for free. Customize rows, columns, gaps, and alignment. Copy CSS code for responsive web design.",
+      "seo_title": "Free CSS Grid Generator Online - Visual Layout Builder | U2Tool",
+      "seo_description": "Generate CSS Grid layouts visually with our free CSS grid generator. Customize rows, columns, gaps, and alignment with live preview. Copy responsive CSS code instantly.",
       "columns": "Columns",
       "rows": "Rows",
       "gap": "Gap (px)",
@@ -3654,17 +3656,18 @@
       "row": "Row {index}",
       "preview": "Preview",
       "generatedCss": "Generated CSS",
-      "detailed_description": "CSS Grid Generator is a practical online tool that helps you quickly complete various tasks. Using CSS Grid Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, CSS Grid Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use CSS Grid Generator immediately to experience fast, secure, and free online tool services.",
+      "detailed_description": "Our free CSS Grid generator helps web developers create complex grid layouts without writing code from scratch. CSS Grid is a powerful two-dimensional layout system that revolutionized web design by enabling precise control over rows and columns. With this visual CSS grid builder, you can define the number of columns and rows, set custom sizes using fr units, pixels, or percentages, and adjust gaps between grid items. The live preview shows exactly how your layout will look, making it easy to experiment with different configurations. Perfect for creating responsive website layouts, card grids, image galleries, and dashboard designs. Copy the generated CSS code directly into your project. Works with all modern browsers including Chrome, Firefox, Safari, and Edge.",
       "usage_steps": [
-        "Open the CSS Grid Generator tool page",
-        "Enter or paste the content you want to process in the input box",
-        "Adjust tool options and settings as needed",
-        "Click the process button to view the results",
-        "Copy or download the processed results"
+        "Set the number of columns and rows for your grid layout",
+        "Adjust column and row sizes using fr units, px, or percentages",
+        "Set the gap value to control spacing between grid items",
+        "Choose justify-items alignment (stretch, start, center, end)",
+        "Preview your layout and copy the generated CSS code"
       ],
       "usage_examples": [
-        "Use CSS Grid Generator to process your data",
-        "Get processing results quickly without waiting"
+        "Create a 3-column responsive card layout with equal widths using 1fr 1fr 1fr",
+        "Build a dashboard layout with a sidebar (250px) and main content area (1fr)",
+        "Design an image gallery grid with 4 columns and 20px gaps"
       ],
       "copied": "Copied!",
       "copy": "Copy"
@@ -5516,8 +5519,8 @@
     "ascii-table": {
       "name": "ASCII Table",
       "description": "Complete ASCII character reference table.",
-      "seo_title": "ASCII Table - Character Code Reference",
-      "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential reference for programmers.",
+      "seo_title": "ASCII Table - Complete Character Code Reference Chart | U2Tool",
+      "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential ASCII code reference for programmers and developers.",
       "searchPlaceholder": "Search by character, code, or description...",
       "showExtended": "Show Extended ASCII (128-255)",
       "selectedChar": "Selected Character",
@@ -5535,17 +5538,18 @@
       "uppercase": "Uppercase (A-Z)",
       "lowercase": "Lowercase (a-z)",
       "extended": "Extended ASCII",
-      "detailed_description": "ASCII Table is a practical online tool that helps you quickly complete various tasks. Using ASCII Table, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, ASCII Table can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use ASCII Table immediately to experience fast, secure, and free online tool services.",
+      "detailed_description": "Our comprehensive ASCII table provides a complete reference for all 128 standard ASCII characters plus extended ASCII (128-255). ASCII (American Standard Code for Information Interchange) is the fundamental character encoding standard used in computers and electronic devices. This ASCII code chart displays each character with its decimal, hexadecimal, octal, and binary values - essential for programmers working with low-level data, network protocols, or file formats. The table includes control characters (0-31) like NULL, TAB, and newline; printable characters including letters, numbers, and symbols; and extended ASCII characters for special symbols. Use the search function to quickly find any character by its code or description. Perfect for debugging character encoding issues, understanding escape sequences, or learning about computer character representation. Bookmark this ASCII reference chart for quick access during development.",
       "usage_steps": [
-        "Open the ASCII Table tool page",
-        "Enter or paste the content you want to process in the input box",
-        "Adjust tool options and settings as needed",
-        "Click the process button to view the results",
-        "Copy or download the processed results"
+        "Browse the ASCII table to find character codes",
+        "Use the search box to find specific characters by code or description",
+        "Click on any character to see all its code representations",
+        "Toggle 'Show Extended ASCII' to view characters 128-255",
+        "Use quick reference sections to jump to specific character ranges"
       ],
       "usage_examples": [
-        "Use ASCII Table to process your data",
-        "Get processing results quickly without waiting"
+        "Find the ASCII code for newline character (decimal 10, hex 0A)",
+        "Look up the hex value for uppercase 'A' (decimal 65, hex 41)",
+        "Check control character codes for parsing text files and protocols"
       ]
     },
     "text-to-hex": {
@@ -7587,10 +7591,10 @@
       ]
     },
     "gantt-chart-generator": {
-      "name": "Gantt Chart Generator",
-      "seo_title": "Free Online Gantt Chart Generator",
-      "seo_description": "Create professional Gantt charts online. Visualize project schedules, task progress and dependencies. Export for free.",
-      "title": "Gantt Chart Generator",
+      "name": "Gantt Chart Maker",
+      "seo_title": "Free Gantt Chart Maker Online - Create Project Timelines | U2Tool",
+      "seo_description": "Create professional Gantt charts online with our free Gantt chart maker. Visualize project schedules, track task progress, manage dependencies. Export to PNG/SVG instantly.",
+      "title": "Gantt Chart Maker",
       "description": "Create Gantt charts to visualize project progress and schedules.",
       "defaultTitle": "Project Schedule",
       "chartSettings": "Chart Settings",
@@ -7618,17 +7622,18 @@
       "sampleTask1": "Requirements",
       "sampleTask2": "Design",
       "sampleTask3": "Development",
-      "detailed_description": "Gantt Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Gantt Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Gantt Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Gantt Chart Generator immediately to experience fast, secure, and free online tool services.",
+      "detailed_description": "Our free Gantt chart maker helps project managers and teams visualize project timelines with ease. A Gantt chart is a horizontal bar chart that shows project tasks against time, making it essential for project planning and tracking. With this Gantt chart generator, you can create professional project schedules by adding tasks with start dates, end dates, and progress percentages. The visual timeline helps identify task dependencies, overlapping activities, and potential bottlenecks. Perfect for agile sprints, construction projects, marketing campaigns, and software development cycles. Export your Gantt charts as PNG or SVG for presentations and reports. No signup required - start creating your project timeline instantly in your browser.",
       "usage_steps": [
-        "Open the Gantt Chart Generator tool page",
-        "Enter or paste the content you want to process in the input box",
-        "Adjust tool options and settings as needed",
-        "Click the process button to view the results",
-        "Copy or download the processed results"
+        "Click 'Add Task' to create your first project task",
+        "Enter task name, start date, and end date for each task",
+        "Set progress percentage to track completion status",
+        "Choose a color theme that matches your project style",
+        "Preview your Gantt chart and download as PNG or SVG"
       ],
       "usage_examples": [
-        "Use Gantt Chart Generator to process your data",
-        "Get processing results quickly without waiting"
+        "Create a software development sprint timeline with phases like Planning, Development, Testing, and Deployment",
+        "Build a marketing campaign Gantt chart showing content creation, review, and launch dates",
+        "Plan a construction project with milestones for foundation, framing, electrical, and finishing"
       ]
     },
     "venn-diagram-generator": {
@@ -12711,5 +12716,17 @@
       "backHome": "Back to Home",
       "browseTools": "Browse Tools"
     }
+  },
+  "compare": {
+    "compare": "Compare",
+    "pageTitle": "{tools} - Tool Comparison",
+    "pageDescription": "Compare features and capabilities of {tools}. Find the best tool for your needs.",
+    "featureComparison": "Feature Comparison",
+    "feature": "Feature",
+    "similarities": "Similarities",
+    "differences": "Differences",
+    "recommendation": "Recommendation",
+    "tryTool": "Try this tool",
+    "viewAll": "View all tools"
   }
 }

@@ -6,6 +6,7 @@
 
 import type { FAQItem } from './faq';
 import { EXTRA_TOOL_FAQS } from './tool-specific-faqs-extra';
+import { EXTRA_TOOL_FAQS_2 } from './tool-specific-faqs-extra-2';
 
 // 工具专属 FAQ 配置接口
 export interface ToolSpecificFAQ {
@@ -606,6 +607,7 @@ const BASE_TOOL_FAQS: ToolSpecificFAQ[] = [
 export const TOOL_SPECIFIC_FAQS: ToolSpecificFAQ[] = [
   ...BASE_TOOL_FAQS,
   ...EXTRA_TOOL_FAQS,
+  ...EXTRA_TOOL_FAQS_2,
 ];
 
 /**

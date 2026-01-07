@@ -1,14 +1,15 @@
 {
-  "detailed_description": "ASCII Table is a practical online tool that helps you quickly complete various tasks. Using ASCII Table, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, ASCII Table can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use ASCII Table immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "Our comprehensive ASCII table provides a complete reference for all 128 standard ASCII characters plus extended ASCII (128-255). ASCII (American Standard Code for Information Interchange) is the fundamental character encoding standard used in computers and electronic devices. This ASCII code chart displays each character with its decimal, hexadecimal, octal, and binary values - essential for programmers working with low-level data, network protocols, or file formats. The table includes control characters (0-31) like NULL, TAB, and newline; printable characters including letters, numbers, and symbols; and extended ASCII characters for special symbols. Use the search function to quickly find any character by its code or description. Perfect for debugging character encoding issues, understanding escape sequences, or learning about computer character representation. Bookmark this ASCII reference chart for quick access during development.",
   "usage_steps": [
-    "Open the ASCII Table tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Browse the ASCII table to find character codes",
+    "Use the search box to find specific characters by code or description",
+    "Click on any character to see all its code representations",
+    "Toggle 'Show Extended ASCII' to view characters 128-255",
+    "Use quick reference sections to jump to specific character ranges"
   ],
   "usage_examples": [
-    "Use ASCII Table to process your data",
-    "Get processing results quickly without waiting"
+    "Find the ASCII code for newline character (decimal 10, hex 0A)",
+    "Look up the hex value for uppercase 'A' (decimal 65, hex 41)",
+    "Check control character codes for parsing text files and protocols"
   ]
 }

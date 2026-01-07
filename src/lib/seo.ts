@@ -505,7 +505,8 @@ export function generateBreadcrumbJsonLd(
  * @param data - JSON-LD 数据对象
  * @returns JSON 字符串
  */
-export function jsonLdToString(data: ExtendedJsonLdData | ExtendedJsonLdData[]): string {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function jsonLdToString(data: any): string {
   return JSON.stringify(data);
 }
 
@@ -778,14 +779,28 @@ export function generateHowToJsonLd(params: {
 
 /**
  * 生成工具使用步骤（多语言）
+ * 优先使用工具特定的 HowTo 步骤，如果没有则使用通用步骤
  * @param toolName - 工具名称
  * @param locale - 语言代码
- * @returns 使用步骤数组
+ * @param slug - 工具 slug（可选，用于获取特定步骤）
+ * @returns 使用步骤数组和总时间
  */
 export function getToolHowToSteps(
   toolName: string,
-  locale: string
+  locale: string,
+  slug?: string
 ): Array<{ name: string; text: string }> {
+  // 如果提供了 slug，尝试获取工具特定的 HowTo 步骤
+  if (slug) {
+    // 动态导入以避免循环依赖
+    const { getToolSpecificHowTo } = require('./tool-specific-howto');
+    const specificHowTo = getToolSpecificHowTo(slug, locale);
+    if (specificHowTo) {
+      return specificHowTo.steps;
+    }
+  }
+  
+  // 回退到通用步骤
   const steps: Record<string, Array<{ name: string; text: string }>> = {
     en: [
       { name: 'Open the tool', text: `Navigate to the ${toolName} tool page.` },
@@ -860,6 +875,22 @@ export function getToolHowToSteps(
   };
   
   return steps[locale] || steps.en;
+}
+
+/**
+ * 获取工具 HowTo 的总时间
+ * @param slug - 工具 slug
+ * @returns ISO 8601 格式的时间，如 "PT2M" 表示 2 分钟
+ */
+export function getToolHowToTotalTime(slug: string): string {
+  // 动态导入以避免循环依赖
+  const { getToolSpecificHowTo } = require('./tool-specific-howto');
+  const specificHowTo = getToolSpecificHowTo(slug, 'en');
+  if (specificHowTo) {
+    return specificHowTo.totalTime;
+  }
+  // 默认时间：2 分钟
+  return 'PT2M';
 }
 
 /**

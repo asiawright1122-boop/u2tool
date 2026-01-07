@@ -1,14 +1,15 @@
 {
-  "detailed_description": "Color Contrast Checker is a practical online tool that helps you quickly complete various tasks. Using Color Contrast Checker, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Color Contrast Checker can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Color Contrast Checker immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "Our free color contrast checker helps designers and developers ensure their websites meet WCAG accessibility standards. Color contrast is crucial for users with visual impairments, including color blindness and low vision. This tool calculates the contrast ratio between foreground (text) and background colors according to WCAG 2.1 guidelines. WCAG Level AA requires a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text (18pt or 14pt bold). Level AAA requires 7:1 for normal text and 4.5:1 for large text. Simply enter your hex color codes or use the color picker to test combinations. The tool instantly shows pass/fail results for both AA and AAA compliance levels. Essential for creating accessible websites, mobile apps, and digital content that everyone can read.",
   "usage_steps": [
-    "Open the Color Contrast Checker tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Enter your foreground (text) color using hex code or color picker",
+    "Enter your background color using hex code or color picker",
+    "View the calculated contrast ratio instantly",
+    "Check pass/fail status for WCAG AA and AAA levels",
+    "Use preset combinations or swap colors to test alternatives"
   ],
   "usage_examples": [
-    "Use Color Contrast Checker to process your data",
-    "Get processing results quickly without waiting"
+    "Test if your brand colors (#1a73e8 on white) meet WCAG AA standards for body text",
+    "Verify button text contrast meets accessibility requirements before launch",
+    "Check if your dark mode color scheme provides sufficient contrast for readability"
   ]
 }

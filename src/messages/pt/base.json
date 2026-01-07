@@ -488,8 +488,8 @@
     "html-preview": {
       "name": "Pré-visualização HTML",
       "description": "Visualize o código HTML em tempo real com suporte a CSS e JavaScript.",
-      "seo_title": "Pré-visualização HTML gratuita on-line",
-      "seo_description": "Visualize o código HTML em tempo real online gratuitamente. Renderização ao vivo com atualizações instantâneas enquanto você digita. Perfeito para desenvolvimento web e prototipagem rápida."
+      "seo_title": "Pré-visualização HTML Grátis Online - Renderização em Tempo Real | U2Tool",
+      "seo_description": "Visualize código HTML em tempo real online gratuitamente. Renderização ao vivo com atualizações instantâneas enquanto você digita. Perfeito para desenvolvimento web e prototipagem rápida."
     },
     "ip-lookup": {
       "name": "Consulta de IP",
@@ -972,13 +972,13 @@
     "color-contrast-checker": {
       "name": "Verificador de contraste de cores",
       "description": "Verifique a taxa de contraste de cores para conformidade com acessibilidade das WCAG.",
-      "seo_title": "Verificador de contraste de cores online gratuito - WCAG",
-      "seo_description": "Verifique a taxa de contraste de cores para conformidade com acessibilidade WCAG AA e AAA online gratuitamente. Teste as cores de primeiro plano e de fundo com resultados instantâneos de aprovação/reprovação.",
+      "seo_title": "Verificador de Contraste de Cores Grátis - Acessibilidade WCAG | U2Tool",
+      "seo_description": "Verifique a taxa de contraste de cores para conformidade WCAG AA e AAA online gratuitamente. Teste cores de primeiro plano e fundo com resultados instantâneos de aprovação/reprovação. Ferramenta essencial para web designers.",
       "swapColors": "Trocar cores",
       "sampleText": "A rápida raposa marrom salta sobre o cachorro preguiçoso.",
       "smallText": "Pequeno exemplo de texto para testes de acessibilidade.",
-      "guidelinesAA": "AA: Minimum contrast for normal text (4.5:1) and large text (3:1)",
-      "guidelinesAAA": "AAA: Enhanced contrast for normal text (7:1) and large text (4.5:1)",
+      "guidelinesAA": "AA: Contraste mínimo para texto normal (4.5:1) e texto grande (3:1)",
+      "guidelinesAAA": "AAA: Contraste aprimorado para texto normal (7:1) e texto grande (4.5:1)",
       "guidelinesLarge": "Texto grande: 18pt (24px) ou 14pt (18,5px) em negrito",
       "presetBlackOnWhite": "Preto sobre branco",
       "presetWhiteOnBlack": "Branco sobre preto",
@@ -1053,8 +1053,8 @@
     "css-grid-generator": {
       "name": "Gerador de CSS Grid",
       "description": "Gerador de layout de grade visual CSS com visualização ao vivo.",
-      "seo_title": "Gerador de grade CSS gratuito online",
-      "seo_description": "Gere layouts de grade CSS visualmente com visualização ao vivo online gratuitamente. Personalize linhas, colunas, lacunas e alinhamento. Copie o código CSS para web design responsivo.",
+      "seo_title": "Gerador CSS Grid Grátis Online - Layouts Responsivos | U2Tool",
+      "seo_description": "Gere layouts CSS Grid visualmente com visualização ao vivo online gratuitamente. Personalize linhas, colunas, lacunas e alinhamento. Copie código CSS para web design responsivo.",
       "columns": "Colunas",
       "rows": "Linhas",
       "gap": "Lacuna (px)",
@@ -2097,26 +2097,26 @@
       "decimalDesc": "Usa 1000 como multiplicador (KB, MB, GB). Usado por fabricantes de armazenamento."
     },
     "ascii-table": {
-      "name": "ASCII Table",
+      "name": "Tabela ASCII",
       "description": "Tabela completa de referência de caracteres ASCII.",
-      "seo_title": "ASCII Table - Character Code Reference",
-      "seo_description": "Tabela ASCII completa com valores decimais, hexadecimais, octais e binários. Navegue por todos os 128 caracteres ASCII com descrições. Referência essencial para programadores.",
+      "seo_title": "Tabela ASCII - Referência de Códigos de Caracteres | U2Tool",
+      "seo_description": "Tabela ASCII completa com valores decimais, hexadecimais, octais e binários. Navegue por todos os 128 caracteres ASCII com descrições. Referência essencial para programadores e desenvolvedores.",
       "searchPlaceholder": "Pesquise por caractere, código ou descrição...",
       "showExtended": "Mostrar ASCII estendido (128-255)",
-      "selectedChar": "Personagem Selecionado",
+      "selectedChar": "Caractere Selecionado",
       "decimal": "Decimal",
-      "hex": "Feitiço",
-      "octal": "octal",
+      "hex": "Hexadecimal",
+      "octal": "Octal",
       "binary": "Binário",
-      "char": "Caráter",
+      "char": "Caractere",
       "descriptionHeader": "Descrição",
       "noResults": "Nenhum caractere correspondente encontrado",
       "quickReference": "Referência rápida",
-      "controlChars": "Personagens de controle",
+      "controlChars": "Caracteres de controle",
       "punctuation": "Pontuação e Símbolos",
       "digits": "Dígitos (0-9)",
       "uppercase": "Maiúsculas (A-Z)",
-      "lowercase": "Letras minúsculas (a-z)",
+      "lowercase": "Minúsculas (a-z)",
       "extended": "ASCII estendido"
     },
     "text-to-hex": {
@@ -2637,6 +2637,18 @@
       "title": "Contate-nos",
       "content": "Se você tiver alguma dúvida sobre estes Termos de Serviço, entre em contato conosco."
     }
+  },
+  "compare": {
+    "compare": "Comparar",
+    "pageTitle": "{tools} - Comparação de ferramentas",
+    "pageDescription": "Compare os recursos e capacidades de {tools}. Encontre a melhor ferramenta para suas necessidades.",
+    "featureComparison": "Comparação de recursos",
+    "feature": "Recurso",
+    "similarities": "Semelhanças",
+    "differences": "Diferenças",
+    "recommendation": "Recomendação",
+    "tryTool": "Experimentar esta ferramenta",
+    "viewAll": "Ver todas as ferramentas"
   },
   "tools": {
     "popular": "Popular",
@@ -4225,7 +4237,7 @@
     "html-preview": {
       "name": "Pré-visualização HTML",
       "description": "Visualize o código HTML em tempo real com suporte a CSS e JavaScript.",
-      "seo_title": "Free HTML Preview Online",
+      "seo_title": "Visualização HTML Grátis Online - Editor HTML ao Vivo | U2Tool",
       "seo_description": "Preview HTML code in real-time online for free. Live rendering with instant updates as you type. Perfect for web development and quick prototyping."
     },
     "ip-lookup": {
@@ -4693,7 +4705,7 @@
     "color-contrast-checker": {
       "name": "Verificador de contraste de cores",
       "description": "Verifique a taxa de contraste de cores para conformidade com acessibilidade das WCAG.",
-      "seo_title": "Free Color Contrast Checker Online - WCAG",
+      "seo_title": "Verificador de Contraste de Cores Grátis Online - WCAG AA/AAA | U2Tool",
       "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance online for free. Test foreground and background colors with instant pass/fail results.",
       "swapColors": "Trocar cores",
       "sampleText": "A rápida raposa marrom salta sobre o cachorro preguiçoso.",
@@ -4786,7 +4798,7 @@
     "css-grid-generator": {
       "name": "Gerador de CSS Grid",
       "description": "Gerador de layout de grade visual CSS com visualização ao vivo.",
-      "seo_title": "Free CSS Grid Generator Online",
+      "seo_title": "Gerador CSS Grid Grátis Online - Layouts Responsivos | U2Tool",
       "seo_description": "Generate CSS Grid layouts visually with live preview online for free. Customize rows, columns, gaps, and alignment. Copy CSS code for responsive web design.",
       "columns": "Colunas",
       "rows": "Linhas",
@@ -5848,7 +5860,7 @@
     "ascii-table": {
       "name": "Tabela ASCII",
       "description": "Tabela completa de referência de caracteres ASCII.",
-      "seo_title": "ASCII Table - Character Code Reference",
+      "seo_title": "Tabela ASCII Online - Referência de Códigos de Caracteres | U2Tool",
       "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential reference for programmers.",
       "searchPlaceholder": "Pesquise por caractere, código ou descrição...",
       "showExtended": "Mostrar ASCII estendido (128-255)",
@@ -7416,8 +7428,8 @@
     },
     "gantt-chart-generator": {
       "name": "Gerador de Gráficos de Gantt",
-      "seo_title": "Free Online Gantt Chart Generator",
-      "seo_description": "Create professional Gantt charts online. Visualize project schedules, task progress and dependencies. Export for free.",
+      "seo_title": "Gerador de Gráficos de Gantt Grátis Online - Cronogramas de Projetos | U2Tool",
+      "seo_description": "Crie gráficos de Gantt profissionais online com nosso gerador gratuito. Visualize cronogramas de projetos, progresso de tarefas e dependências. Exporte para PNG/SVG instantaneamente.",
       "title": "Gerador de Gráficos de Gantt",
       "description": "Crie gráficos de Gantt para visualizar o progresso e os cronogramas do projeto.",
       "defaultTitle": "Cronograma do Projeto",

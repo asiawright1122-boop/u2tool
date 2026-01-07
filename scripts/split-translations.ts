@@ -33,6 +33,7 @@ const BASE_KEYS = [
   'tool', // 保留 tool 命名空间（如果存在）
   'privacy', // 隐私政策页面
   'terms', // 服务条款页面
+  'compare', // 工具对比页面
 ];
 
 // tools 对象中需要保留在 base.json 的通用 UI 键

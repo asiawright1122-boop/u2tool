@@ -2458,6 +2458,18 @@
       "content": "If you have any questions about these Terms of Service, please contact us."
     }
   },
+  "compare": {
+    "compare": "Compare",
+    "pageTitle": "{tools} - Tool Comparison",
+    "pageDescription": "Compare features and capabilities of {tools}. Find the best tool for your needs.",
+    "featureComparison": "Feature Comparison",
+    "feature": "Feature",
+    "similarities": "Similarities",
+    "differences": "Differences",
+    "recommendation": "Recommendation",
+    "tryTool": "Try this tool",
+    "viewAll": "View all tools"
+  },
   "tools": {
     "popular": "Popular",
     "input": "Input",
@@ -4045,8 +4057,8 @@
     "html-preview": {
       "name": "HTML Preview",
       "description": "Preview HTML code in real-time with CSS and JavaScript support.",
-      "seo_title": "Free HTML Preview Online",
-      "seo_description": "Preview HTML code in real-time online for free. Live rendering with instant updates as you type. Perfect for web development and quick prototyping."
+      "seo_title": "Free HTML Preview Online - Live HTML Viewer & Editor | U2Tool",
+      "seo_description": "Preview HTML code in real-time with our free HTML preview tool. Live rendering with CSS and JavaScript support. Perfect for web development, learning HTML, and quick prototyping."
     },
     "ip-lookup": {
       "name": "IP Lookup",
@@ -4513,8 +4525,8 @@
     "color-contrast-checker": {
       "name": "Color Contrast Checker",
       "description": "Check color contrast ratio for WCAG accessibility compliance.",
-      "seo_title": "Free Color Contrast Checker Online - WCAG",
-      "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance online for free. Test foreground and background colors with instant pass/fail results.",
+      "seo_title": "Free Color Contrast Checker Online - WCAG AA/AAA Accessibility | U2Tool",
+      "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance with our free color contrast checker. Test foreground and background colors with instant pass/fail results.",
       "swapColors": "Swap colors",
       "sampleText": "The quick brown fox jumps over the lazy dog.",
       "smallText": "Small text sample for accessibility testing.",
@@ -4606,8 +4618,8 @@
     "css-grid-generator": {
       "name": "CSS Grid Generator",
       "description": "Visual CSS Grid layout generator with live preview.",
-      "seo_title": "Free CSS Grid Generator Online",
-      "seo_description": "Generate CSS Grid layouts visually with live preview online for free. Customize rows, columns, gaps, and alignment. Copy CSS code for responsive web design.",
+      "seo_title": "Free CSS Grid Generator Online - Visual Layout Builder | U2Tool",
+      "seo_description": "Generate CSS Grid layouts visually with our free CSS grid generator. Customize rows, columns, gaps, and alignment with live preview. Copy responsive CSS code instantly.",
       "columns": "Columns",
       "rows": "Rows",
       "gap": "Gap (px)",
@@ -5668,8 +5680,8 @@
     "ascii-table": {
       "name": "ASCII Table",
       "description": "Complete ASCII character reference table.",
-      "seo_title": "ASCII Table - Character Code Reference",
-      "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential reference for programmers.",
+      "seo_title": "ASCII Table - Complete Character Code Reference Chart | U2Tool",
+      "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential ASCII code reference for programmers and developers.",
       "searchPlaceholder": "Search by character, code, or description...",
       "showExtended": "Show Extended ASCII (128-255)",
       "selectedChar": "Selected Character",
@@ -7235,10 +7247,10 @@
       "tip2": "Each data point requires date, value and series name"
     },
     "gantt-chart-generator": {
-      "name": "Gantt Chart Generator",
-      "seo_title": "Free Online Gantt Chart Generator",
-      "seo_description": "Create professional Gantt charts online. Visualize project schedules, task progress and dependencies. Export for free.",
-      "title": "Gantt Chart Generator",
+      "name": "Gantt Chart Maker",
+      "seo_title": "Free Gantt Chart Maker Online - Create Project Timelines | U2Tool",
+      "seo_description": "Create professional Gantt charts online with our free Gantt chart maker. Visualize project schedules, track task progress, manage dependencies. Export to PNG/SVG instantly.",
+      "title": "Gantt Chart Maker",
       "description": "Create Gantt charts to visualize project progress and schedules.",
       "defaultTitle": "Project Schedule",
       "chartSettings": "Chart Settings",

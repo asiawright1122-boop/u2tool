@@ -488,8 +488,8 @@
     "html-preview": {
       "name": "HTMLプレビュー",
       "description": "CSS と JavaScript のサポートにより、HTML コードをリアルタイムでプレビューします。",
-      "seo_title": "オンラインでの無料の HTML プレビュー",
-      "seo_description": "無料で HTML コードをオンラインでリアルタイムにプレビューできます。入力すると即座に更新されるライブ レンダリング。 Web 開発や素早いプロトタイピングに最適です。"
+      "seo_title": "無料HTMLプレビューツール - リアルタイムレンダリング | U2Tool",
+      "seo_description": "HTMLコードをリアルタイムでプレビュー。CSS/JavaScriptサポート付きで即座にレンダリング。Web開発、プロトタイピング、コード学習に最適な無料オンラインツール。"
     },
     "ip-lookup": {
       "name": "IP検索",
@@ -972,13 +972,13 @@
     "color-contrast-checker": {
       "name": "カラーコントラストチェッカー",
       "description": "WCAG アクセシビリティ準拠の色のコントラスト比を確認してください。",
-      "seo_title": "無料のオンライン カラー コントラスト チェッカー - WCAG",
-      "seo_description": "WCAG AA および AAA アクセシビリティ コンプライアンスのカラー コントラスト比をオンラインで無料で確認できます。前景色と背景色をテストして、合否結果を即座に得ます。",
+      "seo_title": "無料カラーコントラストチェッカー - WCAGアクセシビリティ検証 | U2Tool",
+      "seo_description": "WCAG AA/AAAアクセシビリティ基準に準拠したカラーコントラスト比をオンラインで無料チェック。前景色と背景色をテストして即座に合否判定。Webデザイナー必携ツール。",
       "swapColors": "色を交換する",
       "sampleText": "素早い茶色のキツネが怠惰な犬を飛び越えます。",
       "smallText": "アクセシビリティ テスト用の小さなテキスト サンプル。",
-      "guidelinesAA": "AA: Minimum contrast for normal text (4.5:1) and large text (3:1)",
-      "guidelinesAAA": "AAA: Enhanced contrast for normal text (7:1) and large text (4.5:1)",
+      "guidelinesAA": "AA: 通常テキスト(4.5:1)と大きなテキスト(3:1)の最小コントラスト",
+      "guidelinesAAA": "AAA: 通常テキスト(7:1)と大きなテキスト(4.5:1)の強化コントラスト",
       "guidelinesLarge": "大きなテキスト: 18pt (24px) または 14pt (18.5px) 太字",
       "presetBlackOnWhite": "白地に黒",
       "presetWhiteOnBlack": "黒地に白",
@@ -1053,8 +1053,8 @@
     "css-grid-generator": {
       "name": "CSS Grid生成",
       "description": "ライブ プレビューを備えたビジュアル CSS グリッド レイアウト ジェネレーター。",
-      "seo_title": "オンラインで無料の CSS グリッド ジェネレーター",
-      "seo_description": "オンラインのライブ プレビューを使用して、CSS グリッド レイアウトを視覚的に無料で生成します。行、列、ギャップ、配置をカスタマイズします。レスポンシブ Web デザイン用の CSS コードをコピーします。",
+      "seo_title": "無料CSS Gridジェネレーター - レスポンシブレイアウト作成 | U2Tool",
+      "seo_description": "CSS Gridレイアウトをビジュアルに生成。行、列、ギャップ、配置をカスタマイズしてリアルタイムプレビュー。レスポンシブWebデザイン用CSSコードを即座にコピー。",
       "columns": "コラム",
       "rows": "行",
       "gap": "ギャップ (ピクセル)",
@@ -2097,10 +2097,10 @@
       "decimalDesc": "乗数として 1000 を使用します (KB、MB、GB)。ストレージメーカーによって使用されています。"
     },
     "ascii-table": {
-      "name": "ASCII Table",
+      "name": "ASCII表",
       "description": "完全な ASCII 文字参照テーブル。",
-      "seo_title": "ASCII Table - Character Code Reference",
-      "seo_description": "10 進数、16 進数、8 進数、およびバイナリ値を含む完全な ASCII テーブル。 128 個の ASCII 文字すべてを説明とともに参照します。プログラマーにとって必須のリファレンス。",
+      "seo_title": "ASCII表 - 文字コード一覧・変換リファレンス | U2Tool",
+      "seo_description": "完全なASCII文字コード表。10進数、16進数、8進数、2進数値を含む128文字すべてを検索可能。プログラマー・開発者必携のリファレンスツール。",
       "searchPlaceholder": "文字、コード、または説明で検索...",
       "showExtended": "拡張 ASCII を表示 (128-255)",
       "selectedChar": "選択したキャラクター",
@@ -2108,7 +2108,7 @@
       "hex": "16進数",
       "octal": "8進数",
       "binary": "バイナリ",
-      "char": "シャア",
+      "char": "文字",
       "descriptionHeader": "説明",
       "noResults": "一致する文字が見つかりません",
       "quickReference": "クイックリファレンス",
@@ -2457,6 +2457,18 @@
       "title": "お問い合わせ",
       "content": "これらの利用規約についてご質問がある場合は、お問い合わせください。"
     }
+  },
+  "compare": {
+    "compare": "比較",
+    "pageTitle": "{tools} - ツール比較",
+    "pageDescription": "{tools} の機能と特徴を比較します。ニーズに最適なツールを見つけてください。",
+    "featureComparison": "機能比較",
+    "feature": "機能",
+    "similarities": "類似点",
+    "differences": "相違点",
+    "recommendation": "おすすめ",
+    "tryTool": "このツールを試す",
+    "viewAll": "すべてのツールを見る"
   },
   "tools": {
     "popular": "人気",
@@ -4045,7 +4057,7 @@
     "html-preview": {
       "name": "HTMLプレビュー",
       "description": "CSS と JavaScript のサポートにより、HTML コードをリアルタイムでプレビューします。",
-      "seo_title": "Free HTML Preview Online",
+      "seo_title": "無料HTMLプレビュー オンライン - ライブHTMLエディタ | U2Tool",
       "seo_description": "Preview HTML code in real-time online for free. Live rendering with instant updates as you type. Perfect for web development and quick prototyping."
     },
     "ip-lookup": {
@@ -4513,7 +4525,7 @@
     "color-contrast-checker": {
       "name": "カラーコントラストチェッカー",
       "description": "WCAG アクセシビリティ準拠の色のコントラスト比を確認してください。",
-      "seo_title": "Free Color Contrast Checker Online - WCAG",
+      "seo_title": "無料カラーコントラストチェッカー オンライン - WCAG AA/AAA | U2Tool",
       "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance online for free. Test foreground and background colors with instant pass/fail results.",
       "swapColors": "色を交換する",
       "sampleText": "素早い茶色のキツネが怠惰な犬を飛び越えます。",
@@ -4606,7 +4618,7 @@
     "css-grid-generator": {
       "name": "CSS Grid生成",
       "description": "ライブ プレビューを備えたビジュアル CSS グリッド レイアウト ジェネレーター。",
-      "seo_title": "Free CSS Grid Generator Online",
+      "seo_title": "無料CSS Gridジェネレーター オンライン - レスポンシブレイアウト | U2Tool",
       "seo_description": "Generate CSS Grid layouts visually with live preview online for free. Customize rows, columns, gaps, and alignment. Copy CSS code for responsive web design.",
       "columns": "コラム",
       "rows": "行",
@@ -5668,7 +5680,7 @@
     "ascii-table": {
       "name": "アスキーテーブル",
       "description": "完全な ASCII 文字参照テーブル。",
-      "seo_title": "ASCII Table - Character Code Reference",
+      "seo_title": "ASCIIテーブル オンライン - 文字コードリファレンス | U2Tool",
       "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential reference for programmers.",
       "searchPlaceholder": "文字、コード、または説明で検索...",
       "showExtended": "拡張 ASCII を表示 (128-255)",
@@ -7236,8 +7248,8 @@
     },
     "gantt-chart-generator": {
       "name": "ガントチャート作成",
-      "seo_title": "Free Online Gantt Chart Generator",
-      "seo_description": "Create professional Gantt charts online. Visualize project schedules, task progress and dependencies. Export for free.",
+      "seo_title": "無料オンラインガントチャート作成ツール - プロジェクトタイムライン | U2Tool",
+      "seo_description": "無料のガントチャート作成ツールでプロジェクトスケジュールをオンラインで作成。タスク進捗の可視化、依存関係の管理。PNG/SVG形式で即座にエクスポート。",
       "title": "ガントチャート作成",
       "description": "ガント チャートを作成して、プロジェクトの進捗状況とスケジュールを視覚化します。",
       "defaultTitle": "プロジェクトスケジュール",

@@ -48,7 +48,7 @@ function checkForDebugStatements(filePath: string): { hasDebug: boolean; issues:
   }
   
   // 跳过 web-vitals 相关文件（有意的调试输出）
-  if (filePath.includes('web-vitals') || filePath.includes('WebVitals')) {
+  if (filePath.includes('web-vitals') || filePath.includes('WebVitals') || filePath.includes('performance-monitor')) {
     return { hasDebug: false, issues: [] };
   }
   
