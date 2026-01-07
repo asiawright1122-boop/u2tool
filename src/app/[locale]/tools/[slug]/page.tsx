@@ -136,7 +136,7 @@ export async function generateMetadata({
     featureList: toolMetadata.featureList,
     author: {
       name: author.name,
-      url: author.url,
+      url: SEO_CONFIG.siteUrl,
       type: 'Organization',
     },
   });
