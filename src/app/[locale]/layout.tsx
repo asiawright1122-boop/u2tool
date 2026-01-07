@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { ThemeProvider } from 'next-themes';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { routing } from '@/i18n/routing';
 import { SEO_CONFIG, getVerificationTags } from '@/lib/seo';
 import { loadBaseMessages, type SupportedLocale } from '@/lib/translations';
@@ -292,6 +293,8 @@ export default async function LocaleLayout({
       )}
       {/* Vercel Analytics */}
       <Analytics />
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </html>
   );
 }
