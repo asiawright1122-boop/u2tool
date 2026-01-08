@@ -31,7 +31,7 @@ const defaultDataValues = [
 
 export default function MixedChartGenerator() {
   const t = useTranslations('tools.mixed-chart-generator');
-  const tg = useTranslations('tools');
+  const _tg = useTranslations('tools');
 
   const _baseId = useId();
   const [_idCounter, _setIdCounter] = useState(100);

@@ -13,8 +13,8 @@ import { getRequestConfig } from 'next-intl/server';
 import { routing } from './routing';
 
 // 支持的语言列表
-const supportedLocales = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'] as const;
-type SupportedLocale = typeof supportedLocales[number];
+const _supportedLocales = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'] as const;
+type _SupportedLocale = typeof _supportedLocales[number];
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;

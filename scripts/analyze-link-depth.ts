@@ -8,7 +8,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 // 支持的语言
-const LOCALES = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'];
+const _LOCALES = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'];
 
 // 页面类型
 type PageType = 'home' | 'tools-list' | 'category' | 'tool' | 'static' | 'ranking';
@@ -101,7 +101,7 @@ function getRankingPages(): string[] {
  * - 工具页: 2 (从工具列表) 或 3 (从分类页)
  * - 静态页: 1 (从首页直接链接)
  */
-function calculatePageDepth(pageType: PageType, fromCategory: boolean = false): number {
+function _calculatePageDepth(pageType: PageType, _fromCategory: boolean = false): number {
   switch (pageType) {
     case 'home':
       return 0;

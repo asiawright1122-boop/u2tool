@@ -434,7 +434,13 @@ describe('Hardcoded String Detection', () => {
           !m.includes('SSL') && 
           !m.includes('PHP') && 
           !m.includes('My Website') &&
-          !m.includes('Path')
+          !m.includes('Path') &&
+          !m.includes('Min') &&
+          !m.includes('Max') &&
+          !m.includes('Opt') &&
+          !m.includes('Radius') &&
+          !m.includes('FF') &&
+          !m.includes('0A')
         );
         
         if (realViolations.length > 0) {

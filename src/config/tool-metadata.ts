@@ -235,10 +235,10 @@ export function getToolMetadata(slug: string): ToolMetadata {
 /**
  * 获取工具功能列表（多语言）
  * @param slug - 工具 slug
- * @param locale - 语言代码
+ * @param _locale - 语言代码
  * @returns 功能列表
  */
-export function getToolFeatureList(slug: string, locale: string): string[] {
+export function getToolFeatureList(slug: string, _locale: string): string[] {
   const metadata = getToolMetadata(slug);
   // 目前只返回英文功能列表
   // 未来可以扩展为多语言支持

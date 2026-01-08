@@ -4,8 +4,6 @@
  * @see Requirements 8.3
  */
 
-import { tools } from '@/config/tools';
-
 // 工具关键词映射
 const TOOL_KEYWORDS: Record<string, string[]> = {
   'json-formatter': ['JSON', 'json', 'JSON 格式化', 'JSON formatter'],

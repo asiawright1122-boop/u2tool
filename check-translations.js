@@ -1,4 +1,4 @@
-const fs = require('fs');
+import * as fs from 'fs';
 const base = JSON.parse(fs.readFileSync('src/messages/es/base.json', 'utf8'));
 console.log('ES base.json keys:', Object.keys(base).join(', '));
 console.log('nav:', !!base.nav);

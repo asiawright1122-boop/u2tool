@@ -167,6 +167,7 @@ describe('SEO Metadata Localization (fix-seo-duplicate-titles)', () => {
       
       if (expectedNonAscii) {
         // 验证包含非 ASCII 字符（本地化字符）
+        // eslint-disable-next-line no-control-regex
         const hasNonAscii = /[^\x00-\x7F]/.test(messages.seo_title as string);
         expect(hasNonAscii).toBe(true);
       }

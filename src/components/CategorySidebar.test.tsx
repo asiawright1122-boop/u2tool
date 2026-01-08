@@ -8,8 +8,8 @@ import { describe, it, expect } from 'vitest';
 import * as fc from 'fast-check';
 import { tools, ToolCategory, getToolsByCategory } from '@/config/tools';
 
-// 获取所有有效的分类
-const validCategories: ToolCategory[] = ['text', 'dev', 'image', 'converter', 'generator', 'calculator', 'security', 'data', 'datetime', 'other'];
+// 获取所有有效的分类（与 ToolCategory 类型定义保持一致）
+const validCategories: ToolCategory[] = ['text', 'encoding', 'generators', 'converters', 'development', 'security', 'network', 'image', 'math', 'charts', 'office'];
 
 // 生成有效的分类
 const categoryArb = fc.constantFrom(...validCategories);
@@ -87,7 +87,7 @@ describe('CategorySidebar Properties', () => {
           if (result.length < 2) return; // 跳过工具太少的情况
           
           // 找到第一个非热门工具的位置
-          let firstNonPopularIndex = result.findIndex(tool => !tool.popular);
+          const firstNonPopularIndex = result.findIndex(tool => !tool.popular);
           
           if (firstNonPopularIndex === -1) {
             // 所有工具都是热门的，这是有效的

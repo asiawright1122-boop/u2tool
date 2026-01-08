@@ -16,7 +16,7 @@ interface StatItemProps {
 /**
  * 统计项组件
  */
-function StatItem({ icon, value, label, className = '' }: StatItemProps) {
+function _StatItem({ icon, value, label, className = '' }: StatItemProps) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <div className="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-500 dark:text-blue-400">

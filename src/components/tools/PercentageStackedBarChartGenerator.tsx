@@ -29,7 +29,7 @@ const defaultDataValues = [
 
 export default function PercentageStackedBarChartGenerator() {
   const t = useTranslations('tools.percentage-stacked-bar-chart-generator');
-  const tg = useTranslations('tools');
+  const _tg = useTranslations('tools');
 
   const _baseId = useId();
   const [_idCounter, _setIdCounter] = useState(100);

@@ -35,6 +35,8 @@ const BASE_KEYS = [
   'privacy', // 隐私政策页面
   'terms', // 服务条款页面
   'compare', // 工具对比页面
+  'countries', // 国家名称翻译（税费计算器等）
+  'tax', // 税费相关翻译（申报状态、扣除项等）
 ];
 
 // tools 对象中需要保留在 base.json 的通用 UI 键

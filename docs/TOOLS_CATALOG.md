@@ -2,9 +2,9 @@
 
 > 本文档记录项目中所有已注册的工具，方便查阅和避免添加重复工具。
 > 
-> 最后更新: 2026-01-04
+> 最后更新: 2026-01-08
 > 
-> 工具总数: **290 个**
+> 工具总数: **338 个**
 
 ---
 
@@ -62,8 +62,9 @@
 | 27 | `text-template` | 📝 | TextTemplate | ✅ |
 | 28 | `char-frequency` | 📊 | CharFrequency | ✅ |
 | 29 | `markdown-editor` | 📝 | MarkdownEditor | ✅ |
+| 30 | `typing-speed-test` | ⌨️ | TypingSpeedTest | ✅ |
 
-**小计: 29 个工具**
+**小计: 30 个工具**
 
 ---
 
@@ -99,8 +100,9 @@
 | 26 | `ascii-table` | 📋 | AsciiTable | |
 | 27 | `text-to-hex` | 🔢 | TextToHex | |
 | 28 | `json-merger` | 🔗 | JsonMerger | ✅ |
+| 29 | `morse-code-player` | 📻 | MorseCodePlayer | ✅ |
 
-**小计: 28 个工具**
+**小计: 29 个工具**
 
 ---
 
@@ -134,8 +136,9 @@
 | 24 | `open-graph-generator` | 🖼️ | OpenGraphGenerator | ✅ |
 | 25 | `twitter-card-generator` | 🐦 | TwitterCardGenerator | ✅ |
 | 26 | `fake-data-generator` | 🎭 | FakeDataGenerator | ✅ |
+| 27 | `chinese-lorem-ipsum` | 中 | ChineseLoremIpsum | ✅ |
 
-**小计: 26 个工具**
+**小计: 27 个工具**
 
 ---
 
@@ -228,8 +231,10 @@
 | 35 | `json-schema-generator` | 📋 | JsonSchemaGenerator | ✅ |
 | 36 | `regex-visualizer` | 🔍 | RegexVisualizer | ✅ |
 | 37 | `crontab-calendar` | 📆 | CrontabCalendar | ✅ |
+| 38 | `screen-resolution-tester` | 🖥️ | ScreenResolutionTester | ✅ |
+| 39 | `keyboard-tester` | ⌨️ | KeyboardTester | ✅ |
 
-**小计: 37 个工具**
+**小计: 39 个工具**
 
 ---
 
@@ -272,8 +277,9 @@
 | 13 | `port-reference` | 🚪 | PortScanner | |
 | 14 | `mac-address-generator` | 🖧 | MacAddressGenerator | |
 | 15 | `ip-validator` | ✅ | IpValidator | ✅ |
+| 16 | `ip-subnet-calculator` | 🌐 | IpSubnetCalculator | ✅ |
 
-**小计: 15 个工具**
+**小计: 16 个工具**
 
 ---
 
@@ -309,8 +315,10 @@
 | 26 | `image-to-webp` | 🌐 | ImageToWebp | ✅ |
 | 27 | `exif-viewer` | 📷 | ExifViewer | ✅ |
 | 28 | `color-extractor` | 🎨 | ColorExtractor | ✅ |
+| 29 | `text-to-image` | 🖼️ | TextToImage | ✅ |
+| 30 | `text-to-handwriting` | ✍️ | TextToHandwriting | ✅ |
 
-**小计: 28 个工具**
+**小计: 30 个工具**
 
 ---
 
@@ -327,8 +335,17 @@
 | 7 | `binary-to-decimal` | 🔢 | BinaryToDecimal | |
 | 8 | `octal-converter` | 🧮 | OctalConverter | |
 | 9 | `base-calculator` | 🧮 | BaseCalculator | ✅ |
+| 10 | `loan-calculator` | 💰 | LoanCalculator | ✅ |
+| 11 | `bmi-calculator` | ⚖️ | BmiCalculator | ✅ |
+| 12 | `age-calculator` | 🎂 | AgeCalculator | ✅ |
+| 13 | `tip-calculator` | 💵 | TipCalculator | ✅ |
+| 14 | `discount-calculator` | 🏷️ | DiscountCalculator | ✅ |
+| 15 | `compound-interest-calculator` | 📈 | CompoundInterestCalculator | ✅ |
+| 16 | `binary-calculator` | 01 | BinaryCalculator | ✅ |
+| 17 | `hex-calculator` | 0x | HexCalculator | ✅ |
+| 18 | `aspect-ratio-calculator-enhanced` | 📐 | AspectRatioCalculatorEnhanced | ✅ |
 
-**小计: 9 个工具**
+**小计: 18 个工具**
 
 ---
 
@@ -643,23 +660,28 @@ const toolSlug = 'your-tool-slug';
 
 | 分类 | 数量 |
 |------|------|
-| 📝 文本工具 | 29 |
-| 🔐 编码工具 | 28 |
-| ⚡ 生成器 | 26 |
-| 🔄 转换器 | 39 |
-| 💻 开发工具 | 37 |
+| 📝 文本工具 | 35 |
+| 🔐 编码工具 | 29 |
+| ⚡ 生成器 | 27 |
+| 🔄 转换器 | 43 |
+| 💻 开发工具 | 42 |
 | 🔒 安全工具 | 11 |
-| 🌐 网络工具 | 15 |
-| 🖼️ 图像工具 | 28 |
-| 🔢 数学工具 | 9 |
+| 🌐 网络工具 | 17 |
+| 🖼️ 图像工具 | 31 |
+| 🔢 数学工具 | 24 |
 | 📈 图表工具 | 42 |
-| 📄 办公工具 | 21 |
-| **总计** | **285** |
+| 📄 办公工具 | 26 |
+| 🏃 生活工具 | 11 |
+| 🎮 娱乐工具 | 7 |
+| 💰 财务工具 | 4 |
+| **总计** | **338** |
 
 ---
 
 ## 更新日志
 
+- **2026-01-08**: 添加 31 个新热门工具 (Batch 3: currency-converter, roi-calculator, mortgage-calculator, tax-calculator, calorie-calculator, water-intake-calculator, sleep-calculator, due-date-calculator, love-calculator, decision-wheel, name-generator, random-picker, coin-flipper, dice-roller, team-generator, countdown-days-calculator, fuel-cost-calculator, electricity-cost-calculator, gpa-calculator, pace-calculator, shoe-size-converter, ring-size-calculator, bra-size-calculator, concrete-calculator, paint-calculator, tile-calculator, instagram-font-generator, social-media-size-guide, keyword-density-checker, text-summarizer, paraphrase-tool, graphql-formatter, code-screenshot-generator, number-system-converter, subnet-calculator-enhanced)
+- **2026-01-07**: 添加 17 个新热门工具 (loan-calculator, bmi-calculator, age-calculator, tip-calculator, discount-calculator, compound-interest-calculator, binary-calculator, hex-calculator, ip-subnet-calculator, aspect-ratio-calculator-enhanced, chinese-lorem-ipsum, text-to-image, text-to-handwriting, screen-resolution-tester, keyboard-tester, typing-speed-test, morse-code-player)
 - **2026-01-04**: 添加 5 个新工具 (markdown-editor, world-clock, stopwatch, countdown-timer, note-pad)
 - **2026-01-01**: 添加 7 个办公工具 (invoice-generator, resume-builder, signature-pad, pomodoro-timer, meeting-notes, business-days-calculator, salary-calculator)
 - **2026-01-01**: 添加 14 个新图像工具 (image-collage, image-splitter, image-rounder, image-border, image-flip-rotate, image-adjustment, image-frosted-glass, image-to-ico, gif-maker, gif-splitter, gif-compressor, image-to-webp, exif-viewer, color-extractor)

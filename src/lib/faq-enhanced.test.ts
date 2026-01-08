@@ -5,7 +5,7 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import * as fc from 'fast-check';
+import fc from 'fast-check';
 import {
   detectQuestionCategory,
   extractKeywords,
@@ -15,7 +15,6 @@ import {
   mergeCategoryFAQs,
   groupFAQsByCategory,
   generateFAQJsonLd,
-  DEFAULT_FAQ_CONFIG,
   type EnhancedFAQ,
 } from './faq-enhanced';
 import { tools } from '@/config/tools';

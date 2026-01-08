@@ -5,7 +5,7 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import * as fc from 'fast-check';
+import fc from 'fast-check';
 import {
   getSemanticRelatedTools,
   calculateRelevanceScore,
@@ -14,7 +14,7 @@ import {
   getCategoryRelationWeight,
   getCrossCategoryRecommendations,
 } from './internal-links';
-import { tools, type Tool } from '@/config/tools';
+import { tools } from '@/config/tools';
 
 // 有效的工具 slugs
 const validToolSlugs = tools.map(t => t.slug);
@@ -69,7 +69,7 @@ describe('Internal Links - Property Tests', () => {
           // 找一个不同分类的工具
           const otherTool = tools.find(t => t.category !== category);
           if (otherTool) {
-            const diffScore = calculateRelevanceScore(tool1, otherTool);
+            const _diffScore = calculateRelevanceScore(tool1, otherTool);
             
             // 同分类分数应该更高（除非有很强的关键词匹配）
             // 这里只检查分数在合理范围内

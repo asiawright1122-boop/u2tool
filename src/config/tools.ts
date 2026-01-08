@@ -1,4 +1,4 @@
-export type ToolCategory = 'text' | 'encoding' | 'generators' | 'converters' | 'development' | 'security' | 'network' | 'image' | 'math' | 'charts' | 'office';
+export type ToolCategory = 'text' | 'encoding' | 'generators' | 'converters' | 'development' | 'security' | 'network' | 'image' | 'math' | 'charts' | 'office' | 'lifestyle' | 'finance' | 'fun';
 
 export interface Tool {
   slug: string;
@@ -384,6 +384,73 @@ export const tools: Tool[] = [
   { slug: 'word-to-html', category: 'office', icon: '🌐', component: 'WordToHtml', popular: true },
   { slug: 'excel-to-csv', category: 'office', icon: '📊', component: 'ExcelToCsv', popular: true },
   { slug: 'csv-to-excel', category: 'office', icon: '📑', component: 'CsvToExcel', popular: true },
+
+  // Batch 43 - Popular Calculator Tools (热门计算器工具)
+  { slug: 'loan-calculator', category: 'math', icon: '💰', component: 'LoanCalculator', popular: true },
+  { slug: 'bmi-calculator', category: 'math', icon: '⚖️', component: 'BmiCalculator', popular: true },
+  { slug: 'age-calculator', category: 'math', icon: '🎂', component: 'AgeCalculator', popular: true },
+  { slug: 'tip-calculator', category: 'math', icon: '💵', component: 'TipCalculator', popular: true },
+  { slug: 'discount-calculator', category: 'math', icon: '🏷️', component: 'DiscountCalculator', popular: true },
+  { slug: 'compound-interest-calculator', category: 'math', icon: '📈', component: 'CompoundInterestCalculator', popular: true },
+  { slug: 'binary-calculator', category: 'math', icon: '01', component: 'BinaryCalculator', popular: true },
+  { slug: 'hex-calculator', category: 'math', icon: '0x', component: 'HexCalculator', popular: true },
+  { slug: 'ip-subnet-calculator', category: 'network', icon: '🌐', component: 'IpSubnetCalculator', popular: true },
+  { slug: 'aspect-ratio-calculator-enhanced', category: 'math', icon: '📐', component: 'AspectRatioCalculatorEnhanced', popular: true },
+
+  // Batch 44 - Text & Utility Tools (文本和实用工具)
+  { slug: 'chinese-lorem-ipsum', category: 'generators', icon: '中', component: 'ChineseLoremIpsum', popular: true },
+  { slug: 'text-to-image', category: 'image', icon: '🖼️', component: 'TextToImage', popular: true },
+  { slug: 'text-to-handwriting', category: 'image', icon: '✍️', component: 'TextToHandwriting', popular: true },
+  { slug: 'screen-resolution-tester', category: 'development', icon: '🖥️', component: 'ScreenResolutionTester', popular: true },
+  { slug: 'keyboard-tester', category: 'development', icon: '⌨️', component: 'KeyboardTester', popular: true },
+  { slug: 'typing-speed-test', category: 'text', icon: '⌨️', component: 'TypingSpeedTest', popular: true },
+  { slug: 'morse-code-player', category: 'encoding', icon: '📻', component: 'MorseCodePlayer', popular: true },
+
+  // Batch 45 - Popular Tools Batch 3 (欧美流行工具第三批)
+  // Finance Tools
+  { slug: 'currency-converter', category: 'finance', icon: '💱', component: 'CurrencyConverter', popular: true },
+  { slug: 'roi-calculator', category: 'finance', icon: '📈', component: 'RoiCalculator', popular: true },
+  { slug: 'mortgage-calculator', category: 'finance', icon: '🏠', component: 'MortgageCalculator', popular: true },
+  { slug: 'tax-calculator', category: 'finance', icon: '🧾', component: 'TaxCalculator', popular: true },
+  // Health Tools
+  { slug: 'calorie-calculator', category: 'lifestyle', icon: '🔥', component: 'CalorieCalculator', popular: true },
+  { slug: 'water-intake-calculator', category: 'lifestyle', icon: '💧', component: 'WaterIntakeCalculator', popular: true },
+  { slug: 'sleep-calculator', category: 'lifestyle', icon: '😴', component: 'SleepCalculator', popular: true },
+  { slug: 'due-date-calculator', category: 'lifestyle', icon: '👶', component: 'DueDateCalculator', popular: true },
+  // Entertainment Tools
+  { slug: 'love-calculator', category: 'fun', icon: '❤️', component: 'LoveCalculator', popular: true },
+  { slug: 'decision-wheel', category: 'fun', icon: '🎡', component: 'DecisionWheel', popular: true },
+  { slug: 'name-generator', category: 'fun', icon: '📛', component: 'NameGenerator', popular: true },
+  { slug: 'random-picker', category: 'fun', icon: '🎯', component: 'RandomPicker', popular: true },
+  { slug: 'coin-flipper', category: 'fun', icon: '🪙', component: 'CoinFlipper', popular: true },
+  { slug: 'dice-roller', category: 'fun', icon: '🎲', component: 'DiceRoller', popular: true },
+  { slug: 'team-generator', category: 'fun', icon: '👥', component: 'TeamGenerator', popular: true },
+  // Daily Calculators
+  { slug: 'countdown-days-calculator', category: 'lifestyle', icon: '📅', component: 'CountdownDaysCalculator', popular: true },
+  { slug: 'fuel-cost-calculator', category: 'lifestyle', icon: '⛽', component: 'FuelCostCalculator', popular: true },
+  { slug: 'electricity-cost-calculator', category: 'lifestyle', icon: '⚡', component: 'ElectricityCostCalculator', popular: true },
+  { slug: 'gpa-calculator', category: 'math', icon: '🎓', component: 'GpaCalculator', popular: true },
+  { slug: 'pace-calculator', category: 'lifestyle', icon: '🏃', component: 'PaceCalculator', popular: true },
+  // Size Converters
+  { slug: 'shoe-size-converter', category: 'converters', icon: '👟', component: 'ShoeSizeConverter', popular: true },
+  { slug: 'ring-size-calculator', category: 'converters', icon: '💍', component: 'RingSizeCalculator', popular: true },
+  { slug: 'bra-size-calculator', category: 'converters', icon: '👙', component: 'BraSizeCalculator', popular: true },
+  // Home Improvement
+  { slug: 'concrete-calculator', category: 'math', icon: '🧱', component: 'ConcreteCalculator', popular: true },
+  { slug: 'paint-calculator', category: 'math', icon: '🎨', component: 'PaintCalculator', popular: true },
+  { slug: 'tile-calculator', category: 'math', icon: '🔲', component: 'TileCalculator', popular: true },
+  // Social Media Tools
+  { slug: 'instagram-font-generator', category: 'text', icon: '📸', component: 'InstagramFontGenerator', popular: true },
+  { slug: 'social-media-size-guide', category: 'image', icon: '📱', component: 'SocialMediaSizeGuide', popular: true },
+  // SEO/Content Tools
+  { slug: 'keyword-density-checker', category: 'text', icon: '🔑', component: 'KeywordDensityChecker', popular: true },
+  { slug: 'text-summarizer', category: 'text', icon: '📝', component: 'TextSummarizer', popular: true },
+  { slug: 'paraphrase-tool', category: 'text', icon: '🔄', component: 'ParaphraseTool', popular: true },
+  // Development Tools
+  { slug: 'graphql-formatter', category: 'development', icon: '◈', component: 'GraphqlFormatter', popular: true },
+  { slug: 'code-screenshot-generator', category: 'development', icon: '📷', component: 'CodeScreenshotGenerator', popular: true },
+  { slug: 'number-system-converter', category: 'converters', icon: '🔢', component: 'NumberSystemConverter', popular: true },
+  { slug: 'subnet-calculator-enhanced', category: 'network', icon: '🌐', component: 'SubnetCalculatorEnhanced', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [
@@ -398,6 +465,9 @@ export const categories: { id: ToolCategory; icon: string }[] = [
   { id: 'math', icon: '🔢' },
   { id: 'charts', icon: '📈' },
   { id: 'office', icon: '📄' },
+  { id: 'lifestyle', icon: '🏃' },
+  { id: 'finance', icon: '💰' },
+  { id: 'fun', icon: '🎮' },
 ];
 
 export function getToolsByCategory(category: ToolCategory): Tool[] {

@@ -5,7 +5,7 @@
  */
 
 import { type FAQItem, getToolFAQs, generateGenericFAQs } from './faq';
-import { tools, type Tool } from '@/config/tools';
+import { tools } from '@/config/tools';
 
 // 增强 FAQ 接口
 export interface EnhancedFAQ extends FAQItem {

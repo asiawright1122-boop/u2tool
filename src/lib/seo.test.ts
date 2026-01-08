@@ -692,7 +692,7 @@ describe('Property 1: Canonical URL 格式验证', () => {
       fc.property(localeArb, pathArb, (locale, path) => {
         const alternates = generateAlternates(locale, path);
         // 相对路径以 / 开头但不以 http 开头
-        return !alternates.canonical.match(/^\/[^\/]/);
+        return !alternates.canonical.match(/^\/[^/]/);
       }),
       { numRuns: 100 }
     );
@@ -801,7 +801,7 @@ describe('Property 3: Hreflang 互惠性', () => {
   it('hreflang 链接必须是互惠的', () => {
     fc.assert(
       fc.property(pathArb, (path) => {
-        const links = generateHreflangLinks(path);
+        const _links = generateHreflangLinks(path);
         
         // 对于每个语言 A，检查它链接到的每个语言 B
         // 语言 B 的 hreflang 也应该链接回语言 A
@@ -1136,7 +1136,7 @@ describe('Property 2: Meta Description Length Constraint', () => {
  * **Validates: Requirements 2.1, 2.2**
  */
 describe('Property 3: Title Tag Length Constraint', () => {
-  const TITLE_MIN_LENGTH = 30;
+  const _TITLE_MIN_LENGTH = 30;
   const TITLE_MAX_LENGTH = 60;
 
   it('truncateText 应该将标题截断到 60 字符以内', () => {

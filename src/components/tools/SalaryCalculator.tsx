@@ -33,7 +33,7 @@ export default function SalaryCalculator() {
   const [hoursPerWeek, setHoursPerWeek] = useState<number>(40);
   const [taxRate, setTaxRate] = useState<number>(25);
 
-  const currencySymbol = CURRENCIES.find(c => c.code === currency)?.symbol || '$';
+  const _currencySymbol = CURRENCIES.find(c => c.code === currency)?.symbol || '$';
 
   const calculations = useMemo(() => {
     if (!amount || amount <= 0) return null;

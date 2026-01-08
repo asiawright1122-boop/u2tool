@@ -21,12 +21,12 @@ import { createRequire } from 'module';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const require = createRequire(import.meta.url);
+const _require = createRequire(import.meta.url);
 
 // 使用 require 导入 CommonJS 模块
-const toolsConfig = require(path.join(__dirname, '../src/config/tools.ts'));
+const toolsConfig = _require(path.join(__dirname, '../src/config/tools.ts'));
 const tools = toolsConfig.tools;
-const categories = toolsConfig.categories;
+const _categories = toolsConfig.categories;
 const getToolBySlug = toolsConfig.getToolBySlug;
 
 // 工具内容模板
@@ -65,8 +65,8 @@ const categoryDescriptions: Record<string, string> = {
 // 生成工具详细描述
 function generateDetailedDescription(
   toolName: string,
-  category: string,
-  slug: string
+  _category: string,
+  _slug: string
 ): string {
   const categoryDesc = categoryDescriptions[category] || '实用工具';
   
@@ -196,7 +196,7 @@ function generateExamples(toolName: string, slug: string): string[] {
 }
 
 // 生成常见问题
-function generateFAQs(toolName: string, slug: string, category: string): Array<{ question: string; answer: string }> {
+function generateFAQs(toolName: string, slug: string, _category: string): Array<{ question: string; answer: string }> {
   const faqs: Array<{ question: string; answer: string }> = [];
 
   // 通用 FAQ
@@ -267,7 +267,7 @@ function generateSEOTitle(toolName: string, category: string): string {
 }
 
 // 生成 SEO 描述
-function generateSEODescription(toolName: string, category: string, slug: string): string {
+function generateSEODescription(toolName: string, category: string, _slug: string): string {
   const categoryName = categoryNames[category] || '工具';
   const baseDesc = `免费在线${toolName}工具，快速、安全、无需注册。支持多种格式，处理速度快，数据安全有保障。立即使用，提升您的工作效率。`;
   
@@ -333,7 +333,7 @@ function main() {
     }
   } else if (categoryArg) {
     const category = categoryArg.split('=')[1];
-    toolsToProcess = tools.filter((t: any) => t.category === category);
+    toolsToProcess = tools.filter((t: { category: string }) => t.category === category);
   } else if (allArg) {
     toolsToProcess = tools;
   } else {

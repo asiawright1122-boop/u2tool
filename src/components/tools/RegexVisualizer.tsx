@@ -286,7 +286,7 @@ export default function RegexVisualizer() {
 
   // Highlight matches in test string
   const highlightedString = testString && matches.length > 0 ? (() => {
-    let result = [];
+    const result = [];
     let lastIndex = 0;
     
     for (const match of matches) {

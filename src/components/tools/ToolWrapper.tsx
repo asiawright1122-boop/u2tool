@@ -336,6 +336,69 @@ const TOOL_COMPONENTS_MAP: Record<string, React.ComponentType> = {
   'word-to-html': dynamic(() => import('./WordToHtml')),
   'excel-to-csv': dynamic(() => import('./ExcelToCsv')),
   'csv-to-excel': dynamic(() => import('./CsvToExcel')),
+  // Batch 43 - Popular Calculator Tools (热门计算器工具)
+  'loan-calculator': dynamic(() => import('./LoanCalculator')),
+  'bmi-calculator': dynamic(() => import('./BmiCalculator')),
+  'age-calculator': dynamic(() => import('./AgeCalculator')),
+  'tip-calculator': dynamic(() => import('./TipCalculator')),
+  'discount-calculator': dynamic(() => import('./DiscountCalculator')),
+  'compound-interest-calculator': dynamic(() => import('./CompoundInterestCalculator')),
+  'binary-calculator': dynamic(() => import('./BinaryCalculator')),
+  'hex-calculator': dynamic(() => import('./HexCalculator')),
+  'ip-subnet-calculator': dynamic(() => import('./IpSubnetCalculator')),
+  'aspect-ratio-calculator-enhanced': dynamic(() => import('./AspectRatioCalculatorEnhanced')),
+  // Batch 44 - Text & Utility Tools (文本和实用工具)
+  'chinese-lorem-ipsum': dynamic(() => import('./ChineseLoremIpsum')),
+  'text-to-image': dynamic(() => import('./TextToImage')),
+  'text-to-handwriting': dynamic(() => import('./TextToHandwriting')),
+  'screen-resolution-tester': dynamic(() => import('./ScreenResolutionTester')),
+  'keyboard-tester': dynamic(() => import('./KeyboardTester')),
+  'typing-speed-test': dynamic(() => import('./TypingSpeedTest')),
+  'morse-code-player': dynamic(() => import('./MorseCodePlayer')),
+  // Batch 45 - Popular Tools Batch 3
+  'currency-converter': dynamic(() => import('./CurrencyConverter')),
+  'roi-calculator': dynamic(() => import('./RoiCalculator')),
+  'mortgage-calculator': dynamic(() => import('./MortgageCalculator')),
+  'tax-calculator': dynamic(() => import('./TaxCalculator')),
+  // Health Tools
+  'calorie-calculator': dynamic(() => import('./CalorieCalculator')),
+  'water-intake-calculator': dynamic(() => import('./WaterIntakeCalculator')),
+  'sleep-calculator': dynamic(() => import('./SleepCalculator')),
+  'due-date-calculator': dynamic(() => import('./DueDateCalculator')),
+  // Entertainment Tools
+  'love-calculator': dynamic(() => import('./LoveCalculator')),
+  'decision-wheel': dynamic(() => import('./DecisionWheel'), { ssr: false }),
+  'name-generator': dynamic(() => import('./NameGenerator')),
+  'random-picker': dynamic(() => import('./RandomPicker')),
+  'coin-flipper': dynamic(() => import('./CoinFlipper')),
+  'dice-roller': dynamic(() => import('./DiceRoller')),
+  'team-generator': dynamic(() => import('./TeamGenerator')),
+  // Daily Calculators
+  'countdown-days-calculator': dynamic(() => import('./CountdownDaysCalculator')),
+  'fuel-cost-calculator': dynamic(() => import('./FuelCostCalculator')),
+  'electricity-cost-calculator': dynamic(() => import('./ElectricityCostCalculator')),
+  'gpa-calculator': dynamic(() => import('./GpaCalculator')),
+  'pace-calculator': dynamic(() => import('./PaceCalculator')),
+  // Size Converters
+  'shoe-size-converter': dynamic(() => import('./ShoeSizeConverter')),
+  'ring-size-calculator': dynamic(() => import('./RingSizeCalculator')),
+  'bra-size-calculator': dynamic(() => import('./BraSizeCalculator')),
+  // Home Improvement
+  'concrete-calculator': dynamic(() => import('./ConcreteCalculator')),
+  'paint-calculator': dynamic(() => import('./PaintCalculator')),
+  'tile-calculator': dynamic(() => import('./TileCalculator')),
+  // Social Media Tools
+  'instagram-font-generator': dynamic(() => import('./InstagramFontGenerator')),
+  'social-media-size-guide': dynamic(() => import('./SocialMediaSizeGuide')),
+  // SEO/Content Tools
+  'keyword-density-checker': dynamic(() => import('./KeywordDensityChecker')),
+  'text-summarizer': dynamic(() => import('./TextSummarizer')),
+  'paraphrase-tool': dynamic(() => import('./ParaphraseTool')),
+  // Development Tools
+  'graphql-formatter': dynamic(() => import('./GraphqlFormatter')),
+  'code-screenshot-generator': dynamic(() => import('./CodeScreenshotGenerator')),
+  'number-system-converter': dynamic(() => import('./NumberSystemConverter')),
+  'subnet-calculator-enhanced': dynamic(() => import('./SubnetCalculatorEnhanced')),
 };
 
 export default function ToolWrapper({ slug }: { slug: string }) {

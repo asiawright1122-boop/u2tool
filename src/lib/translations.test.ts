@@ -279,6 +279,7 @@ describe('Translation Loader', () => {
           const enSeoTitle = enMessages.seo_title as string;
           
           // 验证包含本地化字符或与英文不同
+          // eslint-disable-next-line no-control-regex
           const hasNonAscii = /[^\x00-\x7F]/.test(seoTitle);
           const isDifferentFromEnglish = seoTitle !== enSeoTitle;
           

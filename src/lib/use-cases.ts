@@ -4,7 +4,7 @@
  * @see Requirements 7.1, 7.3, 7.5
  */
 
-import { tools, type Tool } from '@/config/tools';
+import { tools } from '@/config/tools';
 
 // 用户角色类型
 export type UserPersona = 'developer' | 'designer' | 'marketer' | 'general';
@@ -205,7 +205,7 @@ const USE_CASE_TEMPLATES: Record<string, UseCase[]> = {
  */
 export function getUseCasesForTool(
   toolSlug: string,
-  locale: string = 'en'
+  _locale: string = 'en'
 ): UseCase[] {
   const tool = tools.find(t => t.slug === toolSlug);
   if (!tool) return [];

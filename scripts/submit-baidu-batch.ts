@@ -6,8 +6,8 @@
  */
 
 import * as dotenv from 'dotenv';
-import * as fs from 'fs';
-import * as path from 'path';
+import * as _fs from 'fs';
+import * as _path from 'path';
 
 dotenv.config({ path: '.env.local' });
 dotenv.config({ path: '.env' });
@@ -15,14 +15,14 @@ dotenv.config({ path: '.env' });
 const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';
 const BAIDU_TOKEN = process.env.BAIDU_PUSH_TOKEN || '';
 const BAIDU_SITE = process.env.BAIDU_SITE || SITE_URL;
-const BAIDU_ENDPOINT = 'http://data.zz.baidu.com/urls';
+const _BAIDU_ENDPOINT = 'http://data.zz.baidu.com/urls';
 const MAX_BATCH_SIZE = 2000; // 百度限制
 
 // 从 submit-urls.ts 导入 URL 生成逻辑
-const LOCALES = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'];
+const _LOCALES = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'];
 
 // 简化的工具列表（实际应该从 tools.ts 读取）
-const ALL_TOOL_SLUGS = [
+const _ALL_TOOL_SLUGS = [
   'json-formatter', 'base64', 'uuid-generator', 'url-encoder', 'password-generator',
   'hash-generator', 'qr-generator', 'color-converter', 'timestamp-converter',
   // ... 更多工具
@@ -51,7 +51,7 @@ function batchUrls(urls: string[], batchSize: number): string[][] {
   return batches;
 }
 
-async function submitBatch(urls: string[], batchIndex: number): Promise<{ success: boolean; message: string }> {
+async function submitBatch(urls: string[], _batchIndex: number): Promise<{ success: boolean; message: string }> {
   if (!BAIDU_TOKEN) {
     return { success: false, message: '未配置 BAIDU_PUSH_TOKEN' };
   }

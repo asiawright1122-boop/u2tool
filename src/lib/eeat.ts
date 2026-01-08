@@ -216,10 +216,10 @@ export function generateEnhancedOrganizationJsonLd(
 
 /**
  * 获取工具页面的作者信息
- * @param toolSlug - 工具 slug
+ * @param _toolSlug - 工具 slug
  * @returns 专家信息
  */
-export function getToolAuthor(toolSlug: string): ExpertInfo {
+export function getToolAuthor(_toolSlug: string): ExpertInfo {
   // 可以根据工具类型返回不同的专家信息
   // 目前返回默认专家
   return DEFAULT_EXPERT;
@@ -235,10 +235,10 @@ export function getOrganizationInfo(): OrganizationInfo {
 
 /**
  * 生成信任信号数据
- * @param locale - 语言代码
+ * @param _locale - 语言代码
  * @returns 信任信号对象
  */
-export function getTrustSignals(locale: string): {
+export function getTrustSignals(_locale: string): {
   totalTools: number;
   freeToUse: boolean;
   noRegistration: boolean;

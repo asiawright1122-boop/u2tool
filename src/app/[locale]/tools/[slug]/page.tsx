@@ -28,6 +28,7 @@ import {
   generateExpertJsonLd,
 } from '@/lib/eeat';
 import { getToolMetadata } from '@/config/tool-metadata';
+import { extendTitle } from '@/lib/seo-title';
 
 // 生成静态参数（仅预渲染热门工具，减少构建日志大小）
 // 非热门工具将在首次访问时按需生成并缓存
@@ -73,7 +74,9 @@ export async function generateMetadata({
   const rawSeoDescription = (toolMessages as Record<string, string>).seo_description;
   
   // 检查是否是真正本地化的内容（非英文语言应包含非ASCII字符）
+  // eslint-disable-next-line no-control-regex
   const isLocalizedTitle = locale === 'en' || (rawSeoTitle && /[^\x00-\x7F]/.test(rawSeoTitle));
+  // eslint-disable-next-line no-control-regex
   const isLocalizedDesc = locale === 'en' || (rawSeoDescription && /[^\x00-\x7F]/.test(rawSeoDescription));
   
   // SEO 标题模板（按语言）
@@ -108,8 +111,14 @@ export async function generateMetadata({
   const seoTitle = isLocalizedTitle && rawSeoTitle ? rawSeoTitle : (seoTitleTemplates[locale] || seoTitleTemplates.en);
   const seoDescription = isLocalizedDesc && rawSeoDescription ? rawSeoDescription : (seoDescTemplates[locale] || seoDescTemplates.en);
 
-  // 确保 title 长度 < 60 字符
-  const title = truncateText(seoTitle, SEO_CONFIG.titleMaxLength);
+  // 使用 extendTitle 确保标题长度在 50-60 字符之间
+  const extendedTitleResult = extendTitle(seoTitle, locale);
+  
+  // 确保 title 长度在目标范围内（50-60 字符）
+  // extendTitle 已经处理了长度约束，但仍需确保不超过 SEO 最大长度
+  const title = extendedTitleResult.finalLength <= SEO_CONFIG.titleMaxLength 
+    ? extendedTitleResult.extended 
+    : truncateText(extendedTitleResult.extended, SEO_CONFIG.titleMaxLength);
 
   // 确保 description 长度在 120-160 字符之间
   let description = seoDescription;

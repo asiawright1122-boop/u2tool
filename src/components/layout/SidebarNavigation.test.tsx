@@ -5,7 +5,7 @@
  * @see Requirements 1.1, 1.6, 8.1
  */
 
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import fc from 'fast-check';
 import { categories, getToolsByCategory } from '@/config/tools';
 

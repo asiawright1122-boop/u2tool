@@ -35,7 +35,7 @@ interface MetadataValidationResult {
   warnings: Array<{ field: string; message: string }>;
 }
 
-interface StructuredDataValidationResult {
+interface _StructuredDataValidationResult {
   isValid: boolean;
   errors: Array<{ type: string; field: string; message: string }>;
   warnings: Array<{ type: string; field: string; message: string }>;
@@ -154,7 +154,7 @@ function analyzeContentUniqueness(content: string): ContentAnalysisResult {
 function validateMetadata(
   title: string | undefined,
   description: string | undefined,
-  locale: string
+  _locale: string
 ): MetadataValidationResult {
   const errors: Array<{ field: string; message: string }> = [];
   const warnings: Array<{ field: string; message: string }> = [];

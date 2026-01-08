@@ -38,7 +38,7 @@ export default function InvoiceGenerator() {
     { id: '1', description: '', quantity: 1, unitPrice: 0 }
   ]);
 
-  const currencySymbol = CURRENCIES.find(c => c.code === currency)?.symbol || '$';
+  const _currencySymbol = CURRENCIES.find(c => c.code === currency)?.symbol || '$';
 
   const addItem = () => {
     setItems([...items, { id: Date.now().toString(), description: '', quantity: 1, unitPrice: 0 }]);
@@ -128,7 +128,7 @@ export default function InvoiceGenerator() {
           <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
             <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-3">{t('invoice.items')}</h3>
             <div className="space-y-2">
-              {items.map((item, index) => (
+              {items.map((item) => (
                 <div key={item.id} className="grid grid-cols-12 gap-2 items-center">
                   <input type="text" value={item.description} onChange={(e) => updateItem(item.id, 'description', e.target.value)}
                     placeholder={t('invoice.description')} className="col-span-5 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-sm" />

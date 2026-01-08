@@ -71,6 +71,88 @@ src/messages/
 - **base.json 包含**：name, description, seo_title, seo_description, inputPlaceholder 等（所有页面需要）
 - **tools/{slug}.json 包含**：detailed_description, usage_steps, usage_examples（仅工具详情页按需加载）
 
+### 4.1 工具介绍和使用方法 ⭐ 必须添加
+
+**每个新工具必须包含以下三个字段**，用于工具详情页展示：
+
+1. **`detailed_description`** - 工具详细介绍（一段完整的描述文字）
+2. **`usage_steps`** - 使用步骤（数组，5-6 个步骤）
+3. **`usage_examples`** - 使用示例（数组，2-3 个示例）
+
+#### 翻译键格式
+
+```json
+{
+  "tools": {
+    "your-tool-slug": {
+      "name": "工具名称",
+      "description": "简短描述",
+      "seo_title": "SEO 标题",
+      "seo_description": "SEO 描述",
+      "detailed_description": "详细的工具介绍，说明工具的功能、用途和特点...",
+      "usage_steps": [
+        "打开工具页面",
+        "输入或粘贴内容",
+        "调整选项设置",
+        "点击处理按钮",
+        "复制或下载结果"
+      ],
+      "usage_examples": [
+        "使用场景示例 1",
+        "使用场景示例 2"
+      ]
+    }
+  }
+}
+```
+
+#### 多语言要求
+
+- **英文 (en.json)**：必须提供准确、专业的英文描述
+- **其他语言**：可以使用模板化翻译，但必须确保所有 10 种语言都有对应内容
+
+#### 示例（以 Loan Calculator 为例）
+
+**英文版本**：
+```json
+{
+  "loan-calculator": {
+    "detailed_description": "Loan Calculator is a comprehensive financial tool that helps you calculate loan payments, total interest, and view detailed amortization schedules...",
+    "usage_steps": [
+      "Enter the loan amount (principal)",
+      "Input the annual interest rate",
+      "Specify the loan term in months",
+      "Select your preferred payment frequency",
+      "View the calculated payment amount and total interest"
+    ],
+    "usage_examples": [
+      "Calculate monthly mortgage payments for a home purchase",
+      "Compare different loan terms to find the best option"
+    ]
+  }
+}
+```
+
+**中文版本**：
+```json
+{
+  "loan-calculator": {
+    "detailed_description": "贷款计算器是一款实用的在线工具，帮助您快速计算贷款还款额、总利息和查看详细的还款计划...",
+    "usage_steps": [
+      "打开贷款计算器工具页面",
+      "在输入框中输入贷款金额",
+      "设置年利率和贷款期限",
+      "选择还款频率",
+      "查看计算结果"
+    ],
+    "usage_examples": [
+      "使用贷款计算器计算房贷月供",
+      "比较不同贷款方案"
+    ]
+  }
+}
+```
+
 ### 5. 更新工具目录 (docs/TOOLS_CATALOG.md) ⭐ 新增
 - **必须**在完成工具添加后更新工具目录文档
 - 在对应分类表格中添加新工具
@@ -186,11 +268,12 @@ grep '工具总数' docs/TOOLS_CATALOG.md
 - [ ] 3. 在 `src/components/tools/ToolWrapper.tsx` 添加动态导入
 - [ ] 4. 创建 `src/components/tools/[ComponentName].tsx` 组件文件
 - [ ] 5. 在所有 10 个语言文件 `src/messages/{locale}.json` 中添加翻译
-- [ ] 6. **检查组件使用的所有翻译键是否在所有语言中存在** ⚠️ 新增
-- [ ] 7. 运行 `npx tsx scripts/split-translations.ts` 更新拆分文件
-- [ ] 8. 更新 `docs/TOOLS_CATALOG.md` 工具目录文档
-- [ ] 9. 运行 `npm run test` 验证翻译完整性
-- [ ] 10. 运行检查脚本验证配置正确
+- [ ] 6. **添加 `detailed_description`、`usage_steps`、`usage_examples`** ⭐ 必须
+- [ ] 7. **检查组件使用的所有翻译键是否在所有语言中存在**
+- [ ] 8. 运行 `npx tsx scripts/split-translations.ts` 更新拆分文件
+- [ ] 9. 更新 `docs/TOOLS_CATALOG.md` 工具目录文档
+- [ ] 10. 运行 `npm run test` 验证翻译完整性
+- [ ] 11. 运行检查脚本验证配置正确
 
 ---
 
@@ -243,3 +326,52 @@ npm run test -- --run src/messages/translations.test.ts
 2. 在对应的 `src/messages/{locale}.json` 文件中添加翻译
 3. 运行 `npx tsx scripts/split-translations.ts` 更新拆分文件
 4. 再次运行测试确认修复成功
+
+---
+
+## 📖 工具介绍完整性检查 ⭐ 重要
+
+### 问题背景
+
+2025-01-07 发现新添加的工具缺少 `detailed_description`、`usage_steps` 和 `usage_examples` 字段，导致工具详情页显示不完整。
+
+### 必须包含的字段
+
+每个工具在所有 10 种语言中都必须包含：
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `detailed_description` | string | 工具详细介绍（100-300 字） |
+| `usage_steps` | string[] | 使用步骤（5-6 个步骤） |
+| `usage_examples` | string[] | 使用示例（2-3 个示例） |
+
+### 检查脚本
+
+添加新工具后，运行以下命令检查工具介绍是否完整：
+
+```bash
+# 检查工具介绍是否完整
+node -e "
+const fs = require('fs');
+const toolSlug = 'your-tool-slug';
+const requiredFields = ['detailed_description', 'usage_steps', 'usage_examples'];
+['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'].forEach(lang => {
+  const data = JSON.parse(fs.readFileSync('src/messages/' + lang + '.json', 'utf8'));
+  const tool = data.tools && data.tools[toolSlug];
+  if (!tool) {
+    console.log('✗', lang, '- Tool not found');
+    return;
+  }
+  const missing = requiredFields.filter(f => !tool[f]);
+  if (missing.length === 0) {
+    console.log('✓', lang, '- Complete');
+  } else {
+    console.log('✗', lang, '- Missing:', missing.join(', '));
+  }
+});
+"
+```
+
+### 批量添加工具介绍
+
+如果需要为多个工具批量添加介绍，可以参考 `scripts/add-tool-descriptions.js` 脚本模板（已删除，但可按需重新创建）。

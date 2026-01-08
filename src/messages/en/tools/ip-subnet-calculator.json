@@ -1,0 +1,15 @@
+{
+  "detailed_description": "IP Subnet Calculator helps network administrators calculate subnet information from IP addresses and subnet masks. Get network address, broadcast address, first and last usable hosts, and total usable host count. Essential for network planning and troubleshooting.",
+  "usage_steps": [
+    "Enter an IP address",
+    "Select or enter the subnet mask (CIDR notation supported)",
+    "View calculated network information",
+    "See usable host range and count",
+    "Check wildcard mask for ACL configuration"
+  ],
+  "usage_examples": [
+    "Plan network subnets",
+    "Calculate usable IP ranges",
+    "Configure network devices"
+  ]
+}

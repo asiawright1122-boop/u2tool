@@ -12,7 +12,7 @@ import * as path from 'path';
 function create16x16BmpData(): Buffer {
   const width = 16;
   const height = 16;
-  const bpp = 32; // 32 bits per pixel (BGRA)
+  const _bpp = 32; // 32 bits per pixel (BGRA)
   const rowSize = width * 4;
   const imageSize = rowSize * height;
   

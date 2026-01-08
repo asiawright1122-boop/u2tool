@@ -140,7 +140,7 @@ describe('Multi-language SEO', () => {
       const links = generateHreflangLinks(path);
       
       // 对于每个语言，验证它的 hreflang 链接集合是相同的
-      ALL_LOCALES.forEach(locale1 => {
+      ALL_LOCALES.forEach(_locale1 => {
         ALL_LOCALES.forEach(locale2 => {
           // 从 locale1 页面应该能链接到 locale2 页面
           expect(links[locale2]).toBeDefined();

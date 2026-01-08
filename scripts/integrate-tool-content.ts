@@ -17,7 +17,7 @@ import { createRequire } from 'module';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const require = createRequire(import.meta.url);
+const _require = createRequire(import.meta.url);
 
 // 支持的语言
 const LOCALES = ['zh', 'en', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'];
@@ -37,13 +37,27 @@ const toolNameTranslations: Record<string, string> = {
   // ... 更多翻译
 };
 
+// 工具内容接口
+interface ToolContent {
+  name: string;
+  description: string;
+  detailedDescription?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  usage?: {
+    steps?: string[];
+    examples?: string[];
+  };
+  faqs?: Array<{ question: string; answer: string }>;
+}
+
 // 读取生成的内容
-function readToolContent(slug: string): any {
+function readToolContent(slug: string): ToolContent | null {
   const contentPath = path.join(__dirname, '../content/tools', `${slug}.json`);
   if (!fs.existsSync(contentPath)) {
     return null;
   }
-  return JSON.parse(fs.readFileSync(contentPath, 'utf-8'));
+  return JSON.parse(fs.readFileSync(contentPath, 'utf-8')) as ToolContent;
 }
 
 // 更新翻译文件
@@ -108,8 +122,10 @@ function updateTranslationFile(locale: string, dryRun: boolean = false): void {
       }
       
       // 添加使用说明（新字段）
-      messages.tools[slug].usage_steps = content.usage.steps;
-      messages.tools[slug].usage_examples = content.usage.examples;
+      if (content.usage) {
+        messages.tools[slug].usage_steps = content.usage.steps;
+        messages.tools[slug].usage_examples = content.usage.examples;
+      }
       
       // FAQ 已经通过 getToolFAQs 函数处理，这里可以添加额外的 FAQ
       if (content.faqs && content.faqs.length > 0) {

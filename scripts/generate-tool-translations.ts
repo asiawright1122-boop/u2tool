@@ -7,9 +7,9 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 const MESSAGES_DIR = path.join(__dirname, '../src/messages');
-const LOCALES = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'];
+const _LOCALES = ['en', 'zh', 'es', 'pt', 'ja', 'ru', 'fr', 'ar', 'de', 'ko'];
 
-interface ToolData {
+interface _ToolData {
   slug: string;
   name: string;
   description: string;
@@ -22,7 +22,7 @@ interface ToolData {
 /**
  * 读取JSON文件
  */
-function readJsonFile(filePath: string): any {
+function readJsonFile(filePath: string): Record<string, unknown> {
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
     return JSON.parse(content);
@@ -35,7 +35,7 @@ function readJsonFile(filePath: string): any {
 /**
  * 写入JSON文件
  */
-function writeJsonFile(filePath: string, data: any): void {
+function writeJsonFile(filePath: string, data: Record<string, unknown>): void {
   const content = JSON.stringify(data, null, 2);
   fs.writeFileSync(filePath, content, 'utf-8');
 }
@@ -45,8 +45,8 @@ function writeJsonFile(filePath: string, data: any): void {
  */
 function generateDetailedDescription(
   toolName: string,
-  description: string,
-  category: string,
+  _description: string,
+  _category: string,
   locale: string
 ): string {
   const categoryNames: Record<string, Record<string, string>> = {
@@ -183,6 +183,7 @@ function generateDetailedDescription(
   };
 
   const categoryName = categoryNames[locale]?.[category] || category;
+  const _categoryNameUnused = categoryName; // Keep for potential future use
   
   const templates: Record<string, string> = {
     en: `${toolName} is a practical online tool that helps you quickly complete various tasks. Using ${toolName}, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, ${toolName} can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use ${toolName} immediately to experience fast, secure, and free online tool services.`,
@@ -350,9 +351,9 @@ function main() {
 
     let updated = 0;
     for (const [slug, zhTool] of Object.entries(tools)) {
-      const tool = zhTool as any;
+      const tool = zhTool as Record<string, unknown>;
       // 确保localeTool是对象，不是字符串或其他类型
-      let localeTool: any = localeTools[slug];
+      let localeTool: Record<string, unknown> = localeTools[slug] as Record<string, unknown>;
       if (!localeTool || typeof localeTool !== 'object' || Array.isArray(localeTool)) {
         localeTool = {};
       }
@@ -378,11 +379,12 @@ function main() {
 
       // 如果中文有详细描述，但目标语言没有或包含中文，则生成
       if (tool.detailed_description) {
-        if (!localeTool.detailed_description || hasChinese(localeTool.detailed_description)) {
+        const localeDesc = localeTool.detailed_description as string | undefined;
+        if (!localeDesc || hasChinese(localeDesc)) {
           localeTool.detailed_description = generateDetailedDescription(
             toolName,
-            localeTool.description || tool.description || '',
-            tool.category || '',
+            (localeTool.description as string) || (tool.description as string) || '',
+            (tool.category as string) || '',
             locale
           );
           updated++;

@@ -16,7 +16,7 @@ export default function ToolsPageClient() {
   const t = useTranslations();
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get('category');
-  const [activeCategory, setActiveCategory] = useState<string | undefined>(categoryParam || undefined);
+  const [_activeCategory, setActiveCategory] = useState<string | undefined>(categoryParam || undefined);
 
   // 处理分类锚点滚动
   useEffect(() => {

@@ -12,7 +12,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { SEO_CONFIG, generateAlternates, generateHreflangLinks } from '../src/lib/seo';
-import { tools } from '../src/config/tools';
+// tools import removed - not used in this file
 
 interface ValidationError {
   type: 'canonical' | 'hreflang' | 'duplicate' | 'missing' | 'favicon';
@@ -22,7 +22,7 @@ interface ValidationError {
   actual?: string;
 }
 
-interface ValidationWarning {
+interface _ValidationWarning {
   type: string;
   url?: string;
   message: string;
@@ -31,7 +31,7 @@ interface ValidationWarning {
 interface ValidationResult {
   passed: boolean;
   errors: ValidationError[];
-  warnings: ValidationWarning[];
+  warnings: _ValidationWarning[];
 }
 
 // 颜色输出
@@ -48,7 +48,7 @@ const colors = {
  */
 function validateFavicon(): ValidationResult {
   const errors: ValidationError[] = [];
-  const warnings: ValidationWarning[] = [];
+  const warnings: _ValidationWarning[] = [];
 
   console.log(colors.blue('\n📁 验证 Favicon 文件...'));
 
@@ -87,7 +87,7 @@ function validateFavicon(): ValidationResult {
  */
 function validateCanonicalUrls(): ValidationResult {
   const errors: ValidationError[] = [];
-  const warnings: ValidationWarning[] = [];
+  const warnings: _ValidationWarning[] = [];
 
   console.log(colors.blue('\n🔗 验证 Canonical URL 格式...'));
 
@@ -158,7 +158,7 @@ function validateCanonicalUrls(): ValidationResult {
  */
 function validateHreflangTags(): ValidationResult {
   const errors: ValidationError[] = [];
-  const warnings: ValidationWarning[] = [];
+  const warnings: _ValidationWarning[] = [];
 
   console.log(colors.blue('\n🌐 验证 Hreflang 标签...'));
 
@@ -228,7 +228,7 @@ function validateHreflangTags(): ValidationResult {
  */
 function checkDuplicates(): ValidationResult {
   const errors: ValidationError[] = [];
-  const warnings: ValidationWarning[] = [];
+  const warnings: _ValidationWarning[] = [];
 
   console.log(colors.blue('\n📝 检查重复标题和描述...'));
 
@@ -249,7 +249,7 @@ function checkDuplicates(): ValidationResult {
               
               // 检查 seo_title
               if (data.seo_title) {
-                const key = `${locale}:${data.seo_title}`;
+                const _key = `${locale}:${data.seo_title}`;
                 if (!titles.has(data.seo_title)) {
                   titles.set(data.seo_title, []);
                 }
@@ -267,7 +267,7 @@ function checkDuplicates(): ValidationResult {
           }
         }
       }
-    } catch (e) {
+    } catch (_e) {
       warnings.push({
         type: 'duplicate',
         message: `无法读取 ${locale} 的翻译文件`,

@@ -382,7 +382,7 @@ describe('Enhanced Content Analysis', () => {
       const shortSentences = 'Short sentence here. Simple words used. Easy to read.';
       const longSentence = 'This is an extremely long sentence that goes on and on and on with many words and clauses and phrases that make it very difficult to read and understand for most people who are trying to quickly scan the content.';
       
-      const shortScore = calculateReadability(shortSentences);
+      const _shortScore = calculateReadability(shortSentences);
       const longScore = calculateReadability(longSentence);
       
       // 长句子应该有较低的可读性分数

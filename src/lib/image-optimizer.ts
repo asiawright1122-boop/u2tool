@@ -95,12 +95,12 @@ export function optimizeImage(
 /**
  * 生成模糊占位符
  * @param src - 原始图片路径
- * @param metadata - 图片元数据（可选）
+ * @param _metadata - 图片元数据（可选）
  * @returns 占位符字符串（Base64 或 CSS 颜色）
  */
 export function generatePlaceholder(
   src: string,
-  metadata?: Partial<ImageMetadata>
+  _metadata?: Partial<ImageMetadata>
 ): string {
   // 如果有预生成的占位符，直接返回
   if (src.includes('placeholder=')) {

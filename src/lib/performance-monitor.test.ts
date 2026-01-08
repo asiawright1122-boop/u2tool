@@ -5,19 +5,16 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import * as fc from 'fast-check';
+import fc from 'fast-check';
 import {
   analyzeMetrics,
-  generateRecommendations,
   isMetricExceedingThreshold,
   getMetricThreshold,
   formatReport,
-  logReportWarnings,
-  type PerformanceReport,
   type MetricName,
   type WebVitalsMetric,
 } from './performance-monitor';
-import { getPageType, type PageType } from './web-vitals';
+import { getPageType } from './web-vitals';
 
 // 生成随机指标名称
 const metricNameArb = fc.constantFrom<MetricName>('LCP', 'INP', 'CLS', 'FCP', 'FID', 'TTFB');
