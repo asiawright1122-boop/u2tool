@@ -3797,11 +3797,11 @@
     },
     "json-to-kotlin": {
       "className": "Nom de la classe",
-      "packageName": "Nom du package",
-      "serializer": "Sérialiseur",
+      "packageName": "Nom du paquet",
+      "serializer": "Serialiseur",
       "noSerializer": "Aucun",
-      "useDataClass": "Utiliser une classe de données",
-      "useNullable": "Utiliser des types optionnels",
+      "useDataClass": "Utiliser la classe de données",
+      "useNullable": "Utiliser des types nullable",
       "input": "Entrée JSON",
       "output": "Sortie Kotlin",
       "loadSample": "Charger un exemple",
@@ -3809,10 +3809,10 @@
       "convert": "Convertir",
       "inputPlaceholder": "Entrez un objet JSON...",
       "outputPlaceholder": "Le code Kotlin apparaîtra ici...",
-      "name": "JSON to Kotlin",
-      "description": "Convertir des données JSON en classes de données Kotlin avec le support de la sérialisation.",
-      "seo_title": "Convertisseur JSON to Kotlin en ligne gratuit",
-      "seo_description": "Convertissez vos données JSON en classes de données Kotlin en ligne gratuitement. Prise en charge de Moshi, Gson et les annotations Kotlinx. Parfait pour le développement Android et le backend Kotlin."
+      "name": "JSON vers Kotlin",
+      "description": "Convertissez les données JSON en classes de données Kotlin avec la prise en charge de la sérialisation.",
+      "seo_title": "Convertisseur JSON vers Kotlin en ligne gratuit",
+      "seo_description": "Convertissez JSON en classes de données Kotlin en ligne gratuitement. Prend en charge Moshi, Gson et les annotations Kotlinx. Idéal pour le développement Android et backend Kotlin."
     },
     "imageCompressor": {
       "quality": "Qualité",
