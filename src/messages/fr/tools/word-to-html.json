@@ -1,11 +1,15 @@
 {
-  "detailed_description": "Convertit Word en HTML.",
+  "detailed_description": "Le convertisseur Word à HTML transforme des documents Microsoft Word (.docx) en code HTML propre. Préserve le formatage de base comme les titres, gras, italique et les listes. Idéal pour la publication sur le web.",
   "usage_steps": [
-    "Télécharger fichier Word",
-    "Attendre conversion",
-    "Télécharger HTML"
+    "Ouvrez la page de l'outil Word à HTML",
+    "Glissez-déposez un fichier DOCX ou cliquez pour sélectionner",
+    "Attendez la fin de la conversion",
+    "Apercevez le HTML ou visualisez le code source",
+    "Copiez le code HTML ou téléchargez-le sous forme de fichier HTML"
   ],
   "usage_examples": [
-    "Convertir Word pour le web"
+    "Convertir des documents Word pour la publication sur le web",
+    "Extrayez du contenu formaté sous forme d'HTML",
+    "Créer des pages web à partir de fichiers Word"
   ]
 }

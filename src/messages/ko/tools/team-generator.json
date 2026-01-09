@@ -1,15 +1,15 @@
 {
-  "detailed_description": "Team Generator randomly divides a list of people into balanced teams.",
+  "detailed_description": "팀 생성기는 사람 목록을 무작위로 균형 잡힌 팀으로 나눕니다.",
   "usage_steps": [
-    "Enter participant names",
-    "Set number of teams",
-    "Click generate",
-    "View team assignments",
-    "Shuffle if needed"
+    "참가자 이름 입력",
+    "팀 수 설정",
+    "생성하기 클릭",
+    "팀 할당 확인",
+    "필요시 다시 섞기"
   ],
   "usage_examples": [
-    "Create sports teams",
-    "Divide class into groups",
-    "Organize game teams"
+    "스포츠 팀 생성",
+    "반을 그룹으로 나누기",
+    "게임 팀 조직"
   ]
 }

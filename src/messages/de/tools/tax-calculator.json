@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Der Steuerrechner ist ein umfassendes Einkommensteuer-Schätzungstool, das Ihnen hilft, die Bundessteuer basierend auf den Steuerklassen 2024 zu berechnen. Geben Sie Ihr Bruttoeinkommen und Ihren Steuerstatus ein, um geschätzte Steuer, effektiven Steuersatz und Nettogehalt zu erhalten. Sehen Sie die detaillierte Aufschlüsselung nach Steuerklassen und vergleichen Sie Standard- vs. Einzelabzüge.",
+  "detailed_description": "Der Steuerrechner ist ein umfassendes Tool zur Einkommensteuerschätzung, das Ihnen hilft, die Bundessteuer basierend auf den Steuersätzen 2024 zu berechnen. Geben Sie Ihr Bruttoeinkommen und Ihren Einzahlungsstatus ein, um die geschätzte Steuer, den effektiven Steuersatz und den Nettolohn zu erhalten. Sehen Sie sich die detaillierte Aufschlüsselung nach Steuersätzen an und vergleichen Sie Standardabzug und auflösende Abzüge.",
   "usage_steps": [
     "Geben Sie Ihr jährliches Bruttoeinkommen ein",
-    "Wählen Sie Ihren Steuerstatus",
-    "Wählen Sie Standard- oder Einzelabzüge",
-    "Sehen Sie Ihre geschätzte Steuerschuld",
+    "Wählen Sie Ihren Einzahlungsstatus",
+    "Wählen Sie zwischen Standardabzug und auflösenden Abzügen",
+    "Sehen Sie Ihre geschätzte Steuerpflichtigkeit",
     "Überprüfen Sie Ihren effektiven Steuersatz",
-    "Sehen Sie die Steuerklassenaufschlüsselung"
+    "Sehen Sie die Steuersatzstaffelung"
   ],
   "usage_examples": [
-    "Steuern für ein Gehalt von 75.000 $ schätzen",
-    "Steuerauswirkungen verschiedener Steuerstatus vergleichen",
-    "Abzüge planen, um die Steuerschuld zu reduzieren"
+    "Berechnen Sie Steuern für ein Gehalt von 75.000 USD",
+    "Vergleichen Sie den Steuerimpact verschiedener Einzahlungsstatus",
+    "Planen Sie Abzüge, um die Steuerpflichtigkeit zu reduzieren"
   ]
 }

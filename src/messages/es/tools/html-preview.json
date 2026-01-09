@@ -1,16 +1,15 @@
 {
-  "detailed_description": "Nuestra herramienta de vista previa HTML proporciona un entorno de renderizado en tiempo real para HTML, CSS y JavaScript. Escribe código y ve el resultado instantáneamente - ideal para prototipado rápido, prueba de fragmentos de código y aprendizaje de desarrollo web. Soporta características modernas de HTML5 y estilos CSS3.",
+  "detailed_description": "Nuestra herramienta gratuita de previsualización HTML te permite escribir y previsualizar código HTML instantáneamente en tu navegador. Este visor HTML en vivo renderiza tu código en tiempo real mientras escribís, mostrándote exactamente cómo se verá tu página web. Perfecto para los desarrolladores web que prueban fragmentos de código, los estudiantes que aprenden HTML y los diseñadores que prototipan diseños. La previsualización HTML soporta estilos CSS completos y la ejecución de JavaScript, por lo que puedes probar páginas web completas, incluyendo elementos interactivos. Diferente a otras herramientas de edición HTML, esta herramienta se ejecuta completamente en tu navegador - tu código nunca sale de tu dispositivo, garantizando la privacidad total. Úsala para depurar problemas de HTML, experimentar con nuevas propiedades CSS o compartir ejemplos de código de manera rápida. La interfaz de vista dividida muestra tu código y la previsualización al lado para un desarrollo eficiente. No requiere instalación ni registro - simplemente pega tu HTML y ve los resultados instantáneos.",
   "usage_steps": [
-    "1. Ingresa tu código HTML en el editor",
-    "2. Añade estilos CSS opcionalmente",
-    "3. Añade JavaScript para interactividad",
-    "4. Ve la vista previa en vivo en tiempo real",
-    "5. Copia el código terminado para tu proyecto"
+    "Pega o escribe tu código HTML en la pestaña de editor",
+    "Visualiza la previsualización en vivo actualizándose en tiempo real mientras escribes",
+    "Añade estilos CSS dentro de las etiquetas <style> o estilos inline",
+    "Incluye JavaScript dentro de las etiquetas <script> para interactividad",
+    "Haz clic en refrescar para actualizar manualmente la previsualización si es necesario"
   ],
   "usage_examples": [
-    "Probar fragmentos HTML rápidamente",
-    "Verificar layouts CSS antes de integrar",
-    "Depurar funciones JavaScript",
-    "Aprender y experimentar con desarrollo web"
+    "Prueba un menú de navegación responsivo con HTML, CSS y JavaScript",
+    "Previsualiza un plantilla de correo electrónico antes de enviar para asegurarte de que se renderiza correctamente",
+    "Depura problemas de diseño de CSS viendo los cambios instantáneos mientras editas"
   ]
 }

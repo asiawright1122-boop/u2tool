@@ -1,19 +1,17 @@
 {
-  "curlInput": "cURL 命令",
-  "placeholder": "粘贴您的 cURL 命令...",
-  "targetLanguage": "目标语言",
-  "convert": "转换",
-  "copy": "复制",
-  "codeOutput": "生成的代码",
-  "outputPlaceholder": "生成的代码将出现在这里...",
-  "loadSample": "加载示例",
-  "errorEmpty": "请输入 cURL 命令",
-  "errorInvalid": "cURL 命令无效",
-  "errorNoUrl": "无法解析网址",
-  "errorParsing": "解析 cURL 命令时出错",
-  "supportedFeatures": "支持的功能",
-  "feature1": "HTTP methods (-X)",
-  "feature2": "标头 (-H)",
-  "feature3": "请求正文（-d，--data）",
-  "feature4": "支持 8 种编程语言"
+  "detailed_description": "cURL转代码是一款开发者工具，可以将cURL命令转换为多种编程语言的等效代码。只需粘贴您的cURL命令，即可立即获取JavaScript（fetch）、Python（requests）、PHP（cURL）、Go（net/http）、Java（HttpClient）、C#（HttpClient）、Ruby（Net::HTTP）和Rust（reqwest）的工作代码。该工具会自动从您的cURL命令中解析HTTP方法、头部、请求正文和身份验证。非常适合API集成、测试和文档。所有转换都在您的浏览器本地进行，以确保安全。",
+  "usage_steps": [
+    "在输入字段中粘贴您的cURL命令",
+    "从下拉菜单中选择您的目标编程语言",
+    "点击转换以生成代码",
+    "在输出面板中查看生成的代码",
+    "点击复制以将代码复制到剪贴板",
+    "使用加载示例查看cURL命令示例"
+  ],
+  "usage_examples": [
+    "将API文档中的cURL示例转换为您的首选语言",
+    "从浏览器DevTools的cURL导出中生成fetch代码",
+    "为API自动化脚本创建Python请求代码",
+    "转换带有头部和身份验证的复杂cURL命令"
+  ]
 }

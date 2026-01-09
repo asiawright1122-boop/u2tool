@@ -1,14 +1,15 @@
 {
-  "detailed_description": "Calculadora de Edad es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Usando Calculadora de Edad, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya seas desarrollador, diseñador o usuario general, Calculadora de Edad puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y no se subirá a ningún servidor.",
+  "detailed_description": "La Calculadora de Edad ofrece cálculos precisos de edad en años, meses y días. Además de la cálculo básico de edad, muestra los días totales vividos, semanas, meses y horas. También calcula cuántos días faltan hasta tu próximo cumpleaños, ideal para el conteo regresivo de cumpleaños y verificación de edad.",
   "usage_steps": [
-    "Abrir la página de la herramienta Calculadora de Edad",
-    "Ingresar o pegar el contenido a procesar en el cuadro de entrada",
-    "Ajustar las opciones y configuraciones de la herramienta según sea necesario",
-    "Hacer clic en el botón de procesar para ver los resultados",
-    "Copiar o descargar los resultados procesados"
+    "Ingresa tu fecha de nacimiento",
+    "Opcionalmente cambia la fecha de referencia (por defecto es hoy)",
+    "Verifica tu edad exacta en años, meses y días",
+    "Mira los días, semanas, meses y horas vividos en total",
+    "Revisa los días hasta tu próximo cumpleaños"
   ],
   "usage_examples": [
-    "Usar Calculadora de Edad para procesar tus datos",
-    "Obtener resultados de procesamiento rápidamente sin esperar"
+    "Calcula la edad exacta para documentos oficiales",
+    "Descubre cuántos días faltan hasta tu próximo cumpleaños",
+    "Calcula la diferencia de edad entre dos fechas"
   ]
 }

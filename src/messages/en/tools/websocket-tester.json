@@ -1,22 +1,17 @@
 {
-  "serverUrl": "WebSocket Server URL",
-  "connect": "Connect",
-  "disconnect": "Disconnect",
-  "connecting_btn": "Connecting...",
-  "connecting": "Connecting to {url}...",
-  "connected": "Connected successfully",
-  "disconnected": "Disconnected (code: {code})",
-  "errorConnection": "Connection error occurred",
-  "errorInvalidUrl": "Invalid WebSocket URL",
-  "quickConnect": "Quick Connect",
-  "statusConnected": "Connected",
-  "statusConnecting": "Connecting...",
-  "statusDisconnected": "Disconnected",
-  "messages": "Messages",
-  "clear": "Clear",
-  "noMessages": "No messages yet. Connect to a WebSocket server to start.",
-  "messagePlaceholder": "Type a message...",
-  "send": "Send",
-  "note": "Note",
-  "noteText": "Some WebSocket servers may not accept connections from browsers due to CORS restrictions. The echo server is a public test server that echoes back any message you send."
+  "detailed_description": "WebSocket Tester is a powerful online tool for testing and debugging WebSocket connections in real-time. It allows developers to connect to any WebSocket server, send messages, and view incoming responses instantly. The tool supports the standard WebSocket protocol (ws:// and wss://), making it perfect for testing chat applications, live data feeds, gaming servers, and other real-time communication systems. With features like connection status monitoring, message history, and quick connect to test servers, this tool is essential for any developer working with WebSocket-based applications. All testing happens directly in your browser with no data sent to external servers.",
+  "usage_steps": [
+    "Enter the WebSocket server URL (ws:// or wss://)",
+    "Click Connect to establish the WebSocket connection",
+    "Type your message in the input field",
+    "Click Send to transmit the message to the server",
+    "View received messages in the message history panel",
+    "Click Disconnect when finished testing"
+  ],
+  "usage_examples": [
+    "Test WebSocket echo servers to verify connection functionality",
+    "Debug real-time chat application message handling",
+    "Monitor live data feeds from WebSocket APIs",
+    "Verify WebSocket server responses during development"
+  ]
 }

@@ -1,14 +1,15 @@
 {
-  "detailed_description": "IP-Subnetz-Rechner ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit IP-Subnetz-Rechner können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und es effizient nutzen können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, IP-Subnetz-Rechner kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser, wodurch die Sicherheit Ihrer Daten gewährleistet ist und nicht auf einen Server hochgeladen wird.",
+  "detailed_description": "Der IP-Subnetz-Rechner hilft Netzwerkadministratoren, Subnetzinformationen aus IP-Adressen und Subnetzmasken zu berechnen. Erhalten Sie Netzwerkadresse, Broadcast-Adresse, erste und letzte nutzbare Hosts und die Gesamtzahl der nutzbaren Hosts. Unentbehrlich für Netzwerkplanung und Fehlerbehebung.",
   "usage_steps": [
-    "IP-Subnetz-Rechner-Tool-Seite öffnen",
-    "Inhalt zum Verarbeiten in das Eingabefeld eingeben oder einfügen",
-    "Tool-Optionen und Einstellungen nach Bedarf anpassen",
-    "Auf die Verarbeitungsschaltfläche klicken, um Ergebnisse anzuzeigen",
-    "Verarbeitete Ergebnisse kopieren oder herunterladen"
+    "Geben Sie eine IP-Adresse ein",
+    "Wählen Sie oder geben Sie die Subnetzmaske ein (CIDR-Notation unterstützt)",
+    "Sehen Sie sich die berechneten Netzwerkinformationen an",
+    "Sehen Sie den nutzbaren Host-Reichweite und die Anzahl",
+    "Prüfen Sie die Wildcard-Maske für ACL-Konfigurationen"
   ],
   "usage_examples": [
-    "IP-Subnetz-Rechner verwenden, um Ihre Daten zu verarbeiten",
-    "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten"
+    "Netzwerksubnete planen",
+    "Nutzbare IP-Reichweiten berechnen",
+    "Netzwerkgeräte konfigurieren"
   ]
 }

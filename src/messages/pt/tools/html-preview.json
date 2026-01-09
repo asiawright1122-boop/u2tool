@@ -1,16 +1,15 @@
 {
-  "detailed_description": "Nossa ferramenta de visualização HTML fornece um ambiente de renderização em tempo real para HTML, CSS e JavaScript. Escreva código e veja o resultado instantaneamente - ideal para prototipagem rápida, teste de trechos de código e aprendizado de desenvolvimento web. Suporta recursos modernos de HTML5 e estilização CSS3.",
+  "detailed_description": "Nossa ferramenta de visualização HTML gratuita permite que você escreva e visualize código HTML instantaneamente no seu navegador. Este visualizador HTML em tempo real renderiza seu código em tempo real à medida que você digita, mostrando exatamente como sua página web aparecerá. Perfeito para desenvolvedores web testando trechos de código, estudantes aprendendo HTML e designers prototipando layouts. A visualização HTML suporta estilização completa com CSS e execução de JavaScript, então você pode testar páginas web completas, incluindo elementos interativos. Diferente de outras ferramentas de edição HTML, esta ferramenta roda inteiramente no seu navegador - seu código nunca sai do seu dispositivo, garantindo total privacidade. Use para depurar problemas de HTML, experimentar novas propriedades de CSS ou compartilhar exemplos de código rapidamente. A interface em modo split mostra seu código e visualização lado a lado para desenvolvimento eficiente. Não há instalação ou cadastro necessários - apenas cole ou digite seu HTML e veja os resultados instantaneamente.",
   "usage_steps": [
-    "1. Digite seu código HTML no editor",
-    "2. Adicione estilos CSS opcionalmente",
-    "3. Adicione JavaScript para interatividade",
-    "4. Veja a visualização ao vivo em tempo real",
-    "5. Copie o código finalizado para seu projeto"
+    "Cole ou digite seu código HTML no painel de edição",
+    "Visualize a pré-visualização em tempo real atualizando conforme você digita",
+    "Adicione estilos CSS dentro de tags <style> ou estilos inline",
+    "Inclua JavaScript dentro de tags <script> para interatividade",
+    "Clique em atualizar para atualizar manualmente a pré-visualização se necessário"
   ],
   "usage_examples": [
-    "Testar trechos HTML rapidamente",
-    "Verificar layouts CSS antes de integrar",
-    "Depurar funções JavaScript",
-    "Aprender e experimentar com desenvolvimento web"
+    "Teste um menu de navegação responsivo com HTML, CSS e JavaScript",
+    "Visualize um modelo de e-mail antes de enviar para garantir a renderização correta",
+    "Depure problemas de layout CSS vendo as mudanças instantaneamente ao editar"
   ]
 }

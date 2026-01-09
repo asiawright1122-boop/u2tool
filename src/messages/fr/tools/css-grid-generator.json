@@ -1,16 +1,15 @@
 {
-  "detailed_description": "Notre générateur CSS Grid est un outil visuel puissant qui simplifie la création de mises en page de grille complexes. Définissez des lignes et des colonnes avec des unités flexibles (fr, px, %, auto), ajustez les espacements et voyez les changements instantanément dans l'aperçu en direct. Parfait pour le design web responsive, les mises en page de tableau de bord et les interfaces modernes basées sur CSS Grid.",
+  "detailed_description": "Notre générateur de CSS Grid gratuit aide les développeurs web à créer des layouts de grille complexes sans écrire de code à partir de zéro. CSS Grid est un puissant système de mise en page bidimensionnel qui a révolutionné la conception web en permettant un contrôle précis sur les lignes et les colonnes. Avec ce constructeur de mise en page visuelle CSS, vous pouvez définir le nombre de colonnes et de lignes, définir des tailles personnalisées en utilisant les unités fr, px ou %, et ajuster les espaces entre les éléments de grille. L'aperçu en direct montre exactement comment votre layout se présentera, ce qui facilite l'expérimentation avec différentes configurations. Parfait pour créer des layouts de sites web réactifs, des grilles de cartes, des galeries d'images et des designs de tableau de bord. Copiez directement le code CSS généré dans votre projet. Fonctionne avec tous les navigateurs modernes, y compris Chrome, Firefox, Safari et Edge.",
   "usage_steps": [
-    "1. Définissez le nombre de colonnes et de lignes",
-    "2. Définissez les tailles des colonnes et des lignes (1fr, 200px, auto, etc.)",
-    "3. Ajustez l'espacement entre les éléments",
-    "4. Sélectionnez l'alignement des éléments",
-    "5. Visualisez l'aperçu et copiez le code CSS généré"
+    "Définissez le nombre de colonnes et de lignes pour votre layout de grille",
+    "Adaptez les tailles des colonnes et des lignes en utilisant les unités fr, px ou %",
+    "Définissez la valeur d'espace pour contrôler l'espacement entre les éléments de grille",
+    "Choisissez l'alignement justify-items (étirer, début, centre, fin)",
+    "Aperçu de votre layout et copiez le code CSS généré"
   ],
   "usage_examples": [
-    "Créer des mises en page de sites web responsives",
-    "Grilles de tableau de bord avec différentes largeurs de colonnes",
-    "Galeries d'images avec distribution uniforme",
-    "Mises en page de blog avec barre latérale et contenu principal"
+    "Créez un layout de cartes réactif à 3 colonnes avec des largeurs égales en utilisant 1fr 1fr 1fr",
+    "Construisez un layout de tableau de bord avec un sidebar (250px) et une zone de contenu principale (1fr)",
+    "Concevez une grille de galérie d'images avec 4 colonnes et 20px d'espace"
   ]
 }

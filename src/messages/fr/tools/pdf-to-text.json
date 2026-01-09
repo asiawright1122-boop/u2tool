@@ -1,11 +1,14 @@
 {
-  "detailed_description": "Outil pour extraire le texte des PDF.",
+  "detailed_description": "PDF vers Texte est un outil en ligne gratuit qui extrait le contenu texte des documents PDF. Téléchargez simplement votre fichier PDF et obtenez un texte propre et lisible instantanément. Prend en charge les PDF multi-pages avec des marqueurs de page clairs. Toute la traitement se fait dans votre navigateur - vos fichiers ne sont jamais téléversés sur un serveur.",
   "usage_steps": [
-    "Télécharger le fichier PDF",
-    "Attendre extraction",
-    "Télécharger TXT"
+    "Ouvrez la page de l'outil PDF vers Texte",
+    "Glissez-déposez un fichier PDF ou cliquez pour sélectionner",
+    "Attendez que l'extraction de texte soit terminée",
+    "Copiez le texte extrait ou téléchargez au format TXT"
   ],
   "usage_examples": [
-    "Convertir rapports PDF en texte"
+    "Extrait de texte des documents scannés",
+    "Conversion de rapports PDF en texte modifiable",
+    "Copie de contenu des livres électroniques PDF"
   ]
 }

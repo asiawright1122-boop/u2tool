@@ -1,16 +1,15 @@
 {
-  "detailed_description": "Farbkontrastprüfer ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Farbkontrastprüfer können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Farbkontrastprüfer kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Farbkontrastprüfer sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Unser kostenloses Farbkontrastprüfer hilft Designern und Entwicklern, ihre Websites an den WCAG-Handhabungskriterien zu erfüllen. Farbkontrast ist entscheidend für Benutzer mit visuellen Beeinträchtigungen, einschließlich Farbsinnlosigkeit und niedriger Sehfähigkeit. Diese Werkzeug berechnet das Kontrastverhältnis zwischen Vor- und Hintergrundfarben gemäß den WCAG 2,1-Leitlinien. WCAG Level AA erfordert ein Mindestkontrastverhältnis von 4,5:1 für normale Text und 3:1 für große Text (18pt oder 14pt fett). Level AAA erfordert 7:1 für normale Text und 4,5:1 für große Text. Einfach Ihre hexadezimale Farbkodierungen eingeben oder den Farbpicker verwenden, um Kombinationen zu testen. Das Werkzeug zeigt sofort Pass/Fail-Ergebnisse für beide AA und AAA-Handhabungsebenen an. Wichtig für die Erstellung barrierefreier Websites, Mobilapp und digitale Inhalte, die jeder lesen kann.",
   "usage_steps": [
-    "Öffnen Sie die Farbkontrastprüfer-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Geben Sie Ihre Vorgrundfarbe (Text) mit hexadezimaler Kodierung oder Farbpicker ein",
+    "Geben Sie Ihre Hintergrundfarbe mit hexadezimaler Kodierung oder Farbpicker ein",
+    "Siehe das berechnete Kontrastverhältnis sofort",
+    "Prüfen Sie Pass/Fail-Ergebnisse für WCAG AA und AAA-Ebenen",
+    "Verwenden Sie vordefinierte Kombinationen oder tauschen Sie Farben aus, um Alternativen zu testen"
   ],
   "usage_examples": [
-    "Website-Farbschemata auf Barrierefreiheit prüfen",
-    "Lesbarkeit von Text auf farbigen Hintergründen testen",
-    "WCAG-konforme Farbpaletten erstellen",
-    "Kontrast für Buttons und Links optimieren"
+    "Prüfen Sie, ob Ihre Markenfarben (#1a73e8 auf Weiß) für den Körpertext die WCAG AA-Handhabungsstandards erfüllen",
+    "Bestätigen Sie, dass der Textkontrast für die Barrierefreiheit bei der Veröffentlichung erfüllt ist",
+    "Prüfen Sie, ob Ihre Dunkelmodus-Farbschema ausreichenden Kontrast für die Lesbarkeit bietet"
   ]
 }

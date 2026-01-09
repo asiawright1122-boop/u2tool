@@ -1,22 +1,17 @@
 {
-  "serverUrl": "WebSocket Server URL",
-  "connect": "Conectar",
-  "disconnect": "Desconectar",
-  "connecting_btn": "Conectando...",
-  "connecting": "Conectándose a {url}....",
-  "connected": "Conectado exitosamente",
-  "disconnected": "Desconectado (código: {código})",
-  "errorConnection": "Se produjo un error de conexión",
-  "errorInvalidUrl": "URL de WebSocket no válida",
-  "quickConnect": "Conexión rápida",
-  "statusConnected": "Conectado",
-  "statusConnecting": "Conectando...",
-  "statusDisconnected": "Desconectado",
-  "messages": "Mensajes",
-  "clear": "Limpiar",
-  "noMessages": "Aún no hay mensajes. Conéctese a un servidor WebSocket para comenzar.",
-  "messagePlaceholder": "Escribe un mensaje...",
-  "send": "Enviar",
-  "note": "Nota",
-  "noteText": "Es posible que algunos servidores WebSocket no acepten conexiones desde navegadores debido a restricciones de CORS. El servidor de eco es un servidor de prueba público que responde cualquier mensaje que envíe."
+  "detailed_description": "WebSocket Tester es una herramienta en línea potente para probar y depurar conexiones WebSocket en tiempo real. Permite a los desarrolladores conectarse a cualquier servidor WebSocket, enviar mensajes y ver las respuestas entrantes instantáneamente. La herramienta admite el protocolo WebSocket estándar (ws:// y wss://), lo que la hace perfecta para probar aplicaciones de chat, fuentes de datos en vivo, servidores de juegos y otros sistemas de comunicación en tiempo real. Con características como monitoreo de estado de conexión, historial de mensajes y conexión rápida a servidores de prueba, esta herramienta es esencial para cualquier desarrollador que trabaje con aplicaciones basadas en WebSocket. Todo el proceso de prueba ocurre directamente en tu navegador sin enviar datos a servidores externos.",
+  "usage_steps": [
+    "Ingresa la URL del servidor WebSocket (ws:// o wss://)",
+    "Haz clic en Conectar para establecer la conexión WebSocket",
+    "Escribe tu mensaje en el campo de entrada",
+    "Haz clic en Enviar para transmitir el mensaje al servidor",
+    "Verifica los mensajes recibidos en el panel de historial de mensajes",
+    "Haz clic en Desconectar cuando hayas terminado de probar"
+  ],
+  "usage_examples": [
+    "Prueba servidores de eco WebSocket para verificar la funcionalidad de conexión",
+    "Depura el manejo de mensajes en aplicaciones de chat en tiempo real",
+    "Monitorea fuentes de datos en vivo de APIs WebSocket",
+    "Verifica las respuestas del servidor WebSocket durante el desarrollo"
+  ]
 }

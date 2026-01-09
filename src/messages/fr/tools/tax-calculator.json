@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Le Calculateur d'Impôts est un outil complet d'estimation de l'impôt sur le revenu qui vous aide à calculer l'impôt fédéral basé sur les tranches d'imposition 2024. Entrez votre revenu brut et votre situation fiscale pour obtenir l'impôt estimé, le taux effectif et le salaire net. Consultez la répartition détaillée par tranches d'imposition et comparez les déductions standard vs détaillées.",
+  "detailed_description": "Le Calculateur d'impôts est un outil d'estimation d'impôt sur le revenu complet qui vous aide à calculer l'impôt sur le revenu fédéral en fonction des tranches d'impôt 2024. Saisissez votre revenu brut et votre statut de déclaration pour obtenir l'impôt estimé, le taux effectif et le salaire net. Consultez le breakdown détaillé par tranche d'impôt et comparez les déductions standard et détaillées.",
   "usage_steps": [
-    "Entrez votre revenu brut annuel",
-    "Sélectionnez votre situation fiscale",
+    "Saisissez votre revenu annuel brut",
+    "Sélectionnez votre statut de déclaration",
     "Choisissez les déductions standard ou détaillées",
-    "Consultez votre obligation fiscale estimée",
-    "Vérifiez votre taux d'imposition effectif",
-    "Consultez la répartition par tranches d'imposition"
+    "Consultez votre responsabilité fiscale estimée",
+    "Vérifiez votre taux effectif d'impôt",
+    "Voyez le breakdown des tranches d'impôt"
   ],
   "usage_examples": [
-    "Estimer les impôts pour un salaire de 75 000 $",
-    "Comparer l'impact fiscal de différentes situations fiscales",
-    "Planifier les déductions pour réduire l'obligation fiscale"
+    "Estimez les impôts pour un salaire de 75 000 $",
+    "Comparez l'impact fiscal de différents statuts de déclaration",
+    "Planifiez les déductions pour réduire la responsabilité fiscale"
   ]
 }

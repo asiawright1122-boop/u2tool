@@ -1,19 +1,17 @@
 {
-  "curlInput": "cURL Command",
-  "placeholder": "Paste your cURL command...",
-  "targetLanguage": "Target Language",
-  "convert": "Convert",
-  "copy": "Copy",
-  "codeOutput": "Generated Code",
-  "outputPlaceholder": "Generated code will appear here...",
-  "loadSample": "Load Sample",
-  "errorEmpty": "Please enter a cURL command",
-  "errorInvalid": "Invalid cURL command",
-  "errorNoUrl": "Could not parse URL",
-  "errorParsing": "Error parsing cURL command",
-  "supportedFeatures": "Supported Features",
-  "feature1": "HTTP methods (-X)",
-  "feature2": "Headers (-H)",
-  "feature3": "Request body (-d, --data)",
-  "feature4": "8 programming languages supported"
+  "detailed_description": "cURL to Code is a developer tool that converts cURL commands into equivalent code in multiple programming languages. Simply paste your cURL command and instantly get working code for JavaScript (fetch), Python (requests), PHP (cURL), Go (net/http), Java (HttpClient), C# (HttpClient), Ruby (Net::HTTP), and Rust (reqwest). The tool automatically parses HTTP methods, headers, request bodies, and authentication from your cURL command. Perfect for API integration, testing, and documentation. All conversion happens locally in your browser for security.",
+  "usage_steps": [
+    "Paste your cURL command in the input field",
+    "Select your target programming language from the dropdown",
+    "Click Convert to generate the code",
+    "Review the generated code in the output panel",
+    "Click Copy to copy the code to clipboard",
+    "Use Load Sample to see an example cURL command"
+  ],
+  "usage_examples": [
+    "Convert API documentation cURL examples to your preferred language",
+    "Generate fetch code from browser DevTools cURL exports",
+    "Create Python requests code for API automation scripts",
+    "Convert complex cURL commands with headers and authentication"
+  ]
 }

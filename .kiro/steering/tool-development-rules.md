@@ -52,19 +52,85 @@ src/messages/
 │       └── {slug}.json    # 工具详细翻译（detailed_description, usage_steps, usage_examples）
 ```
 
-#### 添加新工具翻译
+#### 添加新工具翻译（推荐使用 AI 自动翻译）
 
-**必须**在所有 10 种语言中添加翻译：
+**推荐流程**：只需编写英文翻译，然后使用 AI 自动翻译到其他 9 种语言。
 
-1. **在 `src/messages/{locale}.json` 中添加完整翻译**（主要翻译文件）：
-   - `en.json`, `zh.json`, `ja.json`, `ko.json`, `es.json`, `pt.json`, `fr.json`, `de.json`, `ru.json`, `ar.json`
-   - 翻译键格式：`tools.{tool-slug}.name`, `tools.{tool-slug}.description`, `tools.{tool-slug}.seo_title`, `tools.{tool-slug}.seo_description`
+##### 步骤 1：添加英文翻译
 
-2. **运行迁移脚本更新拆分文件**：
-   ```bash
-   npx tsx scripts/split-translations.ts
-   ```
-   这会自动更新 `base.json` 和 `tools/{slug}.json` 文件
+在 `src/messages/en.json` 中添加完整的英文翻译：
+
+```json
+{
+  "tools": {
+    "your-tool-slug": {
+      "name": "Tool Name",
+      "description": "Brief description of the tool",
+      "seo_title": "Free Tool Name Online - Feature Keywords",
+      "seo_description": "Use our free online tool to... Include benefits and keywords.",
+      "detailed_description": "Detailed description about the tool...",
+      "usage_steps": [
+        "Step 1: Open the tool",
+        "Step 2: Enter your data",
+        "Step 3: Configure options",
+        "Step 4: Click process",
+        "Step 5: Copy or download results"
+      ],
+      "usage_examples": [
+        "Example use case 1",
+        "Example use case 2"
+      ]
+    }
+  }
+}
+```
+
+##### 步骤 2：运行 AI 翻译脚本
+
+```bash
+# 自动翻译到其他 9 种语言（zh, ja, ko, es, pt, fr, de, ru, ar）
+npx tsx scripts/ai-translate-tool.ts your-tool-slug
+```
+
+AI 翻译会自动：
+- 使用本土化表达（非直译）
+- 优化 SEO 标题和描述
+- 包含各语言的搜索关键词（如中文的"免费"、"在线"）
+
+##### 步骤 3：更新拆分文件
+
+```bash
+npx tsx scripts/split-translations.ts
+```
+
+##### 环境配置
+
+AI 翻译需要 SiliconFlow API Key，在 `.env.local` 中配置：
+
+```
+SILICONFLOW_API_KEY=sk-your-api-key
+```
+
+获取地址：https://cloud.siliconflow.cn/
+
+##### 模型选择
+
+脚本支持两种翻译模型：
+
+| 模型 | 说明 | 使用场景 |
+|------|------|----------|
+| `Qwen/Qwen2.5-7B-Instruct` | 通用大模型（默认） | 含 SEO 优化，适合工具翻译 |
+| `tencent/Hunyuan-MT-7B` | 腾讯混元翻译模型 | 专业翻译，质量更高 |
+
+使用混元翻译模型：
+```bash
+USE_HUNYUAN=true npx tsx scripts/ai-translate-tool.ts your-tool-slug
+```
+
+##### 备选方案：手动翻译
+
+如果不使用 AI 翻译，需要手动在所有 10 种语言文件中添加翻译：
+- `en.json`, `zh.json`, `ja.json`, `ko.json`, `es.json`, `pt.json`, `fr.json`, `de.json`, `ru.json`, `ar.json`
 
 #### 翻译内容说明
 

@@ -4775,6 +4775,21 @@
       "description": "Test WebSocket connections and send/receive messages.",
       "seo_title": "Free WebSocket Tester Online",
       "seo_description": "Test WebSocket connections, send and receive messages online for free. Support custom headers and protocols. Essential for real-time application development.",
+      "detailed_description": "WebSocket Tester is a powerful online tool for testing and debugging WebSocket connections in real-time. It allows developers to connect to any WebSocket server, send messages, and view incoming responses instantly. The tool supports the standard WebSocket protocol (ws:// and wss://), making it perfect for testing chat applications, live data feeds, gaming servers, and other real-time communication systems. With features like connection status monitoring, message history, and quick connect to test servers, this tool is essential for any developer working with WebSocket-based applications. All testing happens directly in your browser with no data sent to external servers.",
+      "usage_steps": [
+        "Enter the WebSocket server URL (ws:// or wss://)",
+        "Click Connect to establish the WebSocket connection",
+        "Type your message in the input field",
+        "Click Send to transmit the message to the server",
+        "View received messages in the message history panel",
+        "Click Disconnect when finished testing"
+      ],
+      "usage_examples": [
+        "Test WebSocket echo servers to verify connection functionality",
+        "Debug real-time chat application message handling",
+        "Monitor live data feeds from WebSocket APIs",
+        "Verify WebSocket server responses during development"
+      ],
       "serverUrl": "WebSocket Server URL",
       "connect": "Connect",
       "disconnect": "Disconnect",
@@ -4837,7 +4852,21 @@
       "descRedis": "Redis Database",
       "descHttpAlt": "HTTP Alternate",
       "descHttpsAlt": "HTTPS Alternate",
-      "descMongodb": "MongoDB Database"
+      "descMongodb": "MongoDB Database",
+      "detailed_description": "Port Scanner is a comprehensive reference tool for network administrators and developers to look up common network ports and their associated services. The tool provides detailed information about well-known ports (0-1023), registered ports (1024-49151), and dynamic/private ports (49152-65535). You can search by port number or service name to quickly find information about protocols like HTTP, HTTPS, SSH, FTP, MySQL, PostgreSQL, and many more. This reference guide is essential for network configuration, firewall setup, and troubleshooting connectivity issues. Note: This is a reference tool that provides port information; actual port scanning requires server-side implementation for security reasons.",
+      "usage_steps": [
+        "Use the search box to find ports by number or service name",
+        "Enter a specific port number in the lookup field for detailed info",
+        "Browse the common ports reference table",
+        "View port ranges and their classifications",
+        "Use the information for network configuration and troubleshooting"
+      ],
+      "usage_examples": [
+        "Look up which service uses port 443 (HTTPS)",
+        "Find the default port for MySQL database connections",
+        "Reference port ranges when configuring firewall rules",
+        "Identify unknown ports during network troubleshooting"
+      ]
     },
     "port-reference": {
       "name": "Port Reference",
@@ -5958,7 +5987,22 @@
       "feature1": "HTTP methods (-X)",
       "feature2": "Headers (-H)",
       "feature3": "Request body (-d, --data)",
-      "feature4": "8 programming languages supported"
+      "feature4": "8 programming languages supported",
+      "detailed_description": "cURL to Code is a developer tool that converts cURL commands into equivalent code in multiple programming languages. Simply paste your cURL command and instantly get working code for JavaScript (fetch), Python (requests), PHP (cURL), Go (net/http), Java (HttpClient), C# (HttpClient), Ruby (Net::HTTP), and Rust (reqwest). The tool automatically parses HTTP methods, headers, request bodies, and authentication from your cURL command. Perfect for API integration, testing, and documentation. All conversion happens locally in your browser for security.",
+      "usage_steps": [
+        "Paste your cURL command in the input field",
+        "Select your target programming language from the dropdown",
+        "Click Convert to generate the code",
+        "Review the generated code in the output panel",
+        "Click Copy to copy the code to clipboard",
+        "Use Load Sample to see an example cURL command"
+      ],
+      "usage_examples": [
+        "Convert API documentation cURL examples to your preferred language",
+        "Generate fetch code from browser DevTools cURL exports",
+        "Create Python requests code for API automation scripts",
+        "Convert complex cURL commands with headers and authentication"
+      ]
     },
     "ip-validator": {
       "name": "IP Address Validator",

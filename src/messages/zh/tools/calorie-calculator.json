@@ -1,15 +1,15 @@
 {
-  "detailed_description": "卡路里计算器使用 Mifflin-St Jeor 公式帮助您确定每日卡路里需求，支持根据不同活动水平调整。",
+  "detailed_description": "卡路里计算器帮助您使用Mifflin-St Jeor方程确定每日所需卡路里。",
   "usage_steps": [
     "输入您的年龄",
     "输入体重和身高",
     "选择性别",
     "选择活动水平",
-    "查看 BMR 和 TDEE 结果"
+    "查看BMR和TDEE"
   ],
   "usage_examples": [
     "计算减重所需卡路里",
-    "确定维持体重的热量",
-    "规划增肌热量摄入"
+    "确定维持体重所需卡路里",
+    "规划卡路里盈余"
   ]
 }

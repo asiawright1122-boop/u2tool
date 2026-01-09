@@ -1,16 +1,15 @@
 {
-  "detailed_description": "Notre vérificateur de contraste de couleur vous aide à créer des designs web accessibles conformes aux directives WCAG 2.1. Testez les combinaisons de couleurs pour le texte normal (4.5:1 pour AA), le grand texte (3:1 pour AA) et la conformité améliorée (7:1 pour AAA). Indispensable pour les designers et développeurs souhaitant créer des sites web inclusifs.",
+  "detailed_description": "Notre vérificateur de contraste couleurs gratuit aide les concepteurs et développeurs à s'assurer que leurs sites web respectent les normes d'accessibilité WCAG. Le contraste de couleur est crucial pour les utilisateurs ayant des déficiences visuelles, y compris la cécité colorée et la vision faible. Ce outil calcule le rapport de contraste entre les couleurs de texte (arrière-plan) et de fond selon les directives WCAG 2.1. WCAG Level AA exige un rapport de contraste minimal de 4,5:1 pour le texte normal et de 3:1 pour le texte grand (18pt ou 14pt en gras). Level AAA exige 7:1 pour le texte normal et 4,5:1 pour le texte grand. Entrez simplement vos codes hexadécimaux de couleur ou utilisez le pickeur de couleur pour tester des combinaisons. L'outil affiche instantanément les résultats en pass/fail pour les niveaux AA et AAA. Essentiel pour créer des sites web, applications mobiles et du contenu numérique accessible que tout le monde peut lire.",
   "usage_steps": [
-    "1. Sélectionnez la couleur de premier plan (texte)",
-    "2. Sélectionnez la couleur d'arrière-plan",
-    "3. Consultez le rapport de contraste calculé",
-    "4. Vérifiez la conformité WCAG AA et AAA",
-    "5. Ajustez les couleurs jusqu'à atteindre la conformité souhaitée"
+    "Entrez votre couleur de texte (arrière-plan) en utilisant un code hexadécimal ou le pickeur de couleur",
+    "Entrez votre couleur de fond en utilisant un code hexadimal ou le pickeur de couleur",
+    "Vérifiez le rapport de contraste calculé instantanément",
+    "Vérifiez le statut en pass/fail pour les niveaux AA et AAA de WCAG",
+    "Utilisez des combinaisons prédéfinies ou échangez les couleurs pour tester des alternatives"
   ],
   "usage_examples": [
-    "Vérifier l'accessibilité des schémas de couleurs de sites web",
-    "Tester la lisibilité du texte sur des arrière-plans colorés",
-    "Créer des palettes de couleurs conformes WCAG",
-    "Optimiser le contraste pour les boutons et liens"
+    "Testez si vos couleurs de marque (#1a73e8 sur blanc) respectent les normes WCAG AA pour le texte du corps",
+    "Vérifiez le contraste du texte des boutons avant de lancer pour satisfaire aux exigences d'accessibilité",
+    "Vérifiez si votre schéma de couleur en mode sombre fournit un contraste suffisant pour la lisibilité"
   ]
 }

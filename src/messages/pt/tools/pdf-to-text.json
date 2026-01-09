@@ -1,11 +1,14 @@
 {
-  "detailed_description": "Ferramenta para extrair texto de PDF.",
+  "detailed_description": "PDF para Texto é uma ferramenta online gratuita que extrai conteúdo textual de documentos PDF. Basta uploadar seu arquivo PDF e obter texto limpo e legível instantaneamente. Suporta PDFs de múltiplas páginas com marcadores de página claros. Todos os processamentos são feitos no seu navegador - seus arquivos nunca são enviados para qualquer servidor.",
   "usage_steps": [
-    "Carregar arquivo PDF",
-    "Aguardar extração",
-    "Baixar TXT"
+    "Abra a página da ferramenta PDF para Texto",
+    "Arraste e solte um arquivo PDF ou clique para selecionar",
+    "Aguarde a conclusão da extração de texto",
+    "Copie o texto extraído ou baixe como arquivo TXT"
   ],
   "usage_examples": [
-    "Converter relatórios PDF para texto"
+    "Extrair texto de documentos escaneados",
+    "Converter relatórios PDF em texto editável",
+    "Copiar conteúdo de e-books PDF"
   ]
 }

@@ -1,22 +1,17 @@
 {
-  "serverUrl": "WebSocket Server URL",
-  "connect": "Verbinden",
-  "disconnect": "Trennen",
-  "connecting_btn": "Verbinden...",
-  "connecting": "Verbindung zu {url} wird hergestellt...",
-  "connected": "Erfolgreich verbunden",
-  "disconnected": "Nicht verbunden (Code: {code})",
-  "errorConnection": "Es ist ein Verbindungsfehler aufgetreten",
-  "errorInvalidUrl": "Ungültige WebSocket-URL",
-  "quickConnect": "Schnellverbindung",
-  "statusConnected": "Verbunden",
-  "statusConnecting": "Verbinden...",
-  "statusDisconnected": "Getrennt",
-  "messages": "Nachrichten",
-  "clear": "Löschen",
-  "noMessages": "Noch keine Nachrichten. Stellen Sie zum Starten eine Verbindung zu einem WebSocket-Server her.",
-  "messagePlaceholder": "Geben Sie eine Nachricht ein...",
-  "send": "Schicken",
-  "note": "Notiz",
-  "noteText": "Einige WebSocket-Server akzeptieren aufgrund von CORS-Einschränkungen möglicherweise keine Verbindungen von Browsern. Der Echo-Server ist ein öffentlicher Testserver, der jede von Ihnen gesendete Nachricht zurückgibt."
+  "detailed_description": "WebSocket-Tester ist ein leistungsstarkes Online-Tool zur Echtzeit-Prüfung und Fehlerbehebung von WebSocket-Verbindungen. Entwickler können sich mit jedem WebSocket-Server verbinden, Nachrichten senden und eingehende Antworten sofort anzeigen lassen. Das Tool unterstützt das Standard-WebSocket-Protokoll (ws:// und wss://), was es perfekt für den Test von Chat-Anwendungen, Live-Datenfeeds, Gaming-Servern und anderen Echtzeit-Kommunikationssystemen macht. Mit Funktionen wie Überwachung des Verbindungszustands, Nachrichtenverlauf und schnellem Verbindungsaufbau zu Testservern ist dieses Tool unverzichtbar für jeden Entwickler, der mit WebSocket-basierten Anwendungen arbeitet. Alle Tests erfolgen direkt in Ihrem Browser, ohne dass Daten an externe Server gesendet werden.",
+  "usage_steps": [
+    "Geben Sie die WebSocket-Server-URL (ws:// oder wss://) ein",
+    "Klicken Sie auf 'Verbinden', um die WebSocket-Verbindung herzustellen",
+    "Geben Sie Ihre Nachricht im Eingabefeld ein",
+    "Klicken Sie auf 'Senden', um die Nachricht an den Server zu senden",
+    "Sehen Sie empfangene Nachrichten im Nachrichtenverlauf-Panel",
+    "Klicken Sie auf 'Trennen', wenn Sie das Testen beenden"
+  ],
+  "usage_examples": [
+    "Testen Sie WebSocket Echo-Server, um die Verbindungsfunktion zu überprüfen",
+    "Fehlersuchen in der Nachrichtenverarbeitung von Echtzeit-Chat-Anwendungen",
+    "Überwachen Sie Live-Datenfeeds von WebSocket-APIs",
+    "Überprüfen Sie WebSocket-Server-Antworten während der Entwicklung"
+  ]
 }

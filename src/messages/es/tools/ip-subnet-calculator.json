@@ -1,14 +1,15 @@
 {
-  "detailed_description": "Calculadora de Subred IP es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Usando Calculadora de Subred IP, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya seas desarrollador, diseñador o usuario general, Calculadora de Subred IP puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y no se subirá a ningún servidor.",
+  "detailed_description": "El Calculador de Subredes IP ayuda a los administradores de redes a calcular información de subredes a partir de direcciones IP y máscaras de subred. Obten la dirección de red, la dirección de difusión, los primeros y últimos hosts utilizables, y el recuento total de hosts utilizables. Esencial para la planificación de redes y la resolución de problemas.",
   "usage_steps": [
-    "Abrir la página de la herramienta Calculadora de Subred IP",
-    "Ingresar o pegar el contenido a procesar en el cuadro de entrada",
-    "Ajustar las opciones y configuraciones de la herramienta según sea necesario",
-    "Hacer clic en el botón de procesar para ver los resultados",
-    "Copiar o descargar los resultados procesados"
+    "Ingresa una dirección IP",
+    "Selecciona o ingresa la máscara de subred (admitida la notación CIDR)",
+    "Verifica la información de red calculada",
+    "Mira el rango y el recuento de hosts utilizables",
+    "Verifica la máscara de wildcard para la configuración de ACL"
   ],
   "usage_examples": [
-    "Usar Calculadora de Subred IP para procesar tus datos",
-    "Obtener resultados de procesamiento rápidamente sin esperar"
+    "Planifica subredes de red",
+    "Calcula rangos de IP utilizables",
+    "Configura dispositivos de red"
   ]
 }

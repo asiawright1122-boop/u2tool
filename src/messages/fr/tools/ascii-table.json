@@ -1,16 +1,15 @@
 {
-  "detailed_description": "Notre table ASCII interactive fournit une référence complète des 128 caractères ASCII standard, ainsi que l'ASCII étendu (128-255). Recherchez par caractère, code ou description et voyez instantanément les valeurs décimales, hexadécimales, octales et binaires. Indispensable pour les programmeurs, administrateurs système et toute personne travaillant avec l'encodage de caractères.",
+  "detailed_description": "Notre table ASCII complète fournit une référence complète pour tous les 128 caractères ASCII standards plus l'ASCII étendu (128-255). ASCII (American Standard Code for Information Interchange) est la norme d'encodage de caractères fondamentale utilisée dans les ordinateurs et les appareils électroniques. Ce tableau de code ASCII affiche chaque caractère avec ses valeurs décimales, hexadécimales, octales et binaires - essentiel pour les programmeurs travaillant avec des données de bas niveau, des protocoles réseau ou des formats de fichiers. Le tableau inclut les caractères de contrôle (0-31) tels que NULL, TAB et newline ; les caractères imprimables incluant les lettres, les nombres et les symboles ; et les caractères ASCII étendus pour des symboles spéciaux. Utilisez la fonction de recherche pour trouver rapidement tout caractère par son code ou sa description. Idéal pour le débogage des problèmes d'encodage des caractères, la compréhension des séquences d'échappement ou l'apprentissage de la représentation des caractères informatiques. Ajoutez cette carte de référence ASCII à vos favoris pour un accès rapide pendant le développement.",
   "usage_steps": [
-    "1. Parcourez le tableau ou utilisez la fonction de recherche",
-    "2. Cliquez sur un caractère pour voir les détails",
-    "3. Consultez les valeurs décimales, hex, octales et binaires",
-    "4. Activez l'ASCII étendu pour les caractères 128-255",
-    "5. Utilisez la référence rapide pour les groupes de caractères courants"
+    "Naviguez dans la table ASCII pour trouver les codes des caractères",
+    "Utilisez la boîte de recherche pour trouver des caractères spécifiques par code ou description",
+    "Cliquez sur tout caractère pour voir toutes ses représentations de code",
+    "Basculez sur 'Afficher l'ASCII étendu' pour voir les caractères 128-255",
+    "Utilisez les sections de référence rapide pour sauter vers des plages de caractères spécifiques"
   ],
   "usage_examples": [
-    "Rechercher des codes de caractères pour la programmation",
-    "Identifier les caractères de contrôle",
-    "Trouver des valeurs hexadécimales pour le développement web",
-    "Comprendre l'encodage binaire des caractères"
+    "Trouvez le code ASCII pour le caractère retour à la ligne (décimal 10, hexadécimal 0A)",
+    "Recherchez la valeur hexadécimale pour la majuscule 'A' (décimal 65, hexadécimal 41)",
+    "Vérifiez les codes des caractères de contrôle pour analyser les fichiers de texte et les protocoles"
   ]
 }
