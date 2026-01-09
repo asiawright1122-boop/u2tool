@@ -3621,18 +3621,18 @@
       "serializer": "シリアライザ",
       "noSerializer": "なし",
       "useDataClass": "データクラスを使用",
-      "useNullable": "ヌル可能な型を使用",
+      "useNullable": " nullable タイプを使用",
       "input": "JSON 入力",
       "output": "Kotlin 出力",
       "loadSample": "サンプルをロード",
       "copy": "コピー",
       "convert": "変換",
       "inputPlaceholder": "JSON オブジェクトを入力...",
-      "outputPlaceholder": "Kotlin コードが表示されます...",
+      "outputPlaceholder": "Kotlin コードがここに表示されます...",
       "name": "JSON to Kotlin",
-      "description": "JSON データを Kotlin データクラスに変換し、シリアライゼーションをサポートします。",
-      "seo_title": "無料のオンライン JSON to Kotlin 変換ツール",
-      "seo_description": "JSON を Kotlin データクラスに無料でオンラインで変換。Moshi、Gson、Kotlinx アノテーションをサポート。Android と Kotlin バックエンド開発に最適です。"
+      "description": "シリアライゼーションサポート付きで JSON データを Kotlin データクラスに変換。",
+      "seo_title": "無料 JSON to Kotlin コンバータオンライン",
+      "seo_description": "無料でオンラインで JSON を Kotlin データクラスに変換。Moshi、Gson、Kotlinx アノテーションをサポート。Android と Kotlin バックエンド開発に最適。"
     },
     "imageCompressor": {
       "quality": "品質",

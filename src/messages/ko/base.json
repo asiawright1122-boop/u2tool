@@ -3618,21 +3618,21 @@
     "json-to-kotlin": {
       "className": "클래스 이름",
       "packageName": "패키지 이름",
-      "serializer": "시리얼라이저 사용",
+      "serializer": "시리얼라이저",
       "noSerializer": "없음",
       "useDataClass": "데이터 클래스 사용",
-      "useNullable": "널 타입 사용",
+      "useNullable": " nullable 타입 사용",
       "input": "JSON 입력",
       "output": "Kotlin 출력",
       "loadSample": "샘플 로드",
       "copy": "복사",
       "convert": "변환",
-      "inputPlaceholder": "JSON 객체 입력...",
+      "inputPlaceholder": "JSON 객체를 입력하세요...",
       "outputPlaceholder": "Kotlin 코드가 여기에 표시됩니다...",
-      "name": "JSON to Kotlin",
-      "description": "JSON 데이터를 Kotlin 데이터 클래스로 변환하는 시리얼라이제이션 지원 도구입니다.",
+      "name": "JSON to Kotlin 변환기",
+      "description": "시리얼라이제이션 지원을 포함한 JSON 데이터를 Kotlin 데이터 클래스로 변환합니다.",
       "seo_title": "무료 JSON to Kotlin 변환기 온라인",
-      "seo_description": "JSON을 Kotlin 데이터 클래스로 온라인에서 무료로 변환하세요. Moshi, Gson, Kotlinx 애노테이션 지원. 안드로이드와 Kotlin 백엔드 개발에 이상적입니다."
+      "seo_description": "온라인으로 무료로 JSON을 Kotlin 데이터 클래스로 변환하세요. Moshi, Gson, 및 Kotlinx 애너테이션을 지원합니다. Android 및 Kotlin 백엔드 개발에 최적화됨."
     },
     "imageCompressor": {
       "quality": "품질",

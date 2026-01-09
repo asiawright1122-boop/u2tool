@@ -1263,32 +1263,32 @@
     "json-to-kotlin": {
       "className": "클래스 이름",
       "packageName": "패키지 이름",
-      "serializer": "시리얼라이저 사용",
+      "serializer": "시리얼라이저",
       "noSerializer": "없음",
       "useDataClass": "데이터 클래스 사용",
-      "useNullable": "널 타입 사용",
+      "useNullable": " nullable 타입 사용",
       "input": "JSON 입력",
       "output": "Kotlin 출력",
       "loadSample": "샘플 로드",
       "copy": "복사",
       "convert": "변환",
-      "inputPlaceholder": "JSON 객체 입력...",
+      "inputPlaceholder": "JSON 객체를 입력하세요...",
       "outputPlaceholder": "Kotlin 코드가 여기에 표시됩니다...",
-      "name": "JSON to Kotlin",
-      "description": "JSON 데이터를 Kotlin 데이터 클래스로 변환하는 시리얼라이제이션 지원 도구입니다.",
+      "name": "JSON to Kotlin 변환기",
+      "description": "시리얼라이제이션 지원을 포함한 JSON 데이터를 Kotlin 데이터 클래스로 변환합니다.",
       "seo_title": "무료 JSON to Kotlin 변환기 온라인",
-      "seo_description": "JSON을 Kotlin 데이터 클래스로 온라인에서 무료로 변환하세요. Moshi, Gson, Kotlinx 애노테이션 지원. 안드로이드와 Kotlin 백엔드 개발에 이상적입니다.",
-      "detailed_description": "JSON to Kotlin은 다양한 작업을 빠르게 완료하는 실용적인 온라인 도구입니다. JSON to Kotlin을 사용하면 소프트웨어나 플러그인을 설치하지 않고도 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있어 사용하기 쉽고 빠르게 시작할 수 있으며 효율적으로 사용할 수 있습니다. 개발자, 디자이너, 일반 사용자 등 누구에게나 도움이 됩니다. JSON to Kotlin은 브라우저에서 로컬로 모든 처리를 수행하여 데이터 보안을 보장하며 서버에 업로드되지 않습니다. JSON to Kotlin을 즉시 사용하여 빠르고 안전하며 무료 온라인 도구 서비스를 경험해보세요.",
+      "seo_description": "온라인으로 무료로 JSON을 Kotlin 데이터 클래스로 변환하세요. Moshi, Gson, 및 Kotlinx 애너테이션을 지원합니다. Android 및 Kotlin 백엔드 개발에 최적화됨.",
+      "detailed_description": "JSON to Kotlin은 다양한 작업을 빠르게 완료하는 데 도움이 되는 실용적인 온라인 도구입니다. JSON to Kotlin을 사용하면 소프트웨어나 플러그인을 설치하지 않고도 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있어 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너, 일반 사용자를 불문하고 JSON to Kotlin은 작업 효율성을 향상시키는 데 도움이 됩니다. 모든 처리는 브라우저에서 로컬로 수행되어 데이터 보안이 보장되며, 어떤 서버에도 업로드되지 않습니다. 지금 JSON to Kotlin을 사용하여 빠르고 안전한 무료 온라인 도구 서비스를 경험해보세요.",
       "usage_steps": [
-        "JSON to Kotlin 도구 페이지 열기",
-        "입력 상자에 처리할 내용을 입력하거나 붙여넣기",
-        "필요에 따라 도구 옵션과 설정 조정",
-        "변환 버튼 클릭하여 결과 확인",
-        "처리 결과 복사 또는 다운로드"
+        "JSON to Kotlin 도구 페이지를 엽니다",
+        "처리하고 싶은 내용을 입력 상자에 입력하거나 붙여넣습니다",
+        "필요에 따라 도구 옵션과 설정을 조정합니다",
+        "처리 버튼을 클릭하여 결과를 확인합니다",
+        "처리된 결과를 복사하거나 다운로드합니다"
       ],
       "usage_examples": [
-        "JSON to Kotlin을 사용하여 데이터 처리",
-        "대기하지 않고 처리 결과 빠르게 얻기"
+        "JSON to Kotlin을 사용하여 데이터를 처리합니다",
+        "처리 결과를 빠르게 얻어야 할 때"
       ]
     },
     "imageCompressor": {

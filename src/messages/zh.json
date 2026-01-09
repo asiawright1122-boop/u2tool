@@ -1347,28 +1347,28 @@
       "noSerializer": "无",
       "useDataClass": "使用数据类",
       "useNullable": "使用可空类型",
-      "input": "JSON输入",
-      "output": "Kotlin输出",
+      "input": "JSON 输入",
+      "output": "Kotlin 输出",
       "loadSample": "加载示例",
       "copy": "复制",
       "convert": "转换",
-      "inputPlaceholder": "输入JSON对象...",
-      "outputPlaceholder": "Kotlin代码将出现...",
-      "name": "JSON to Kotlin",
-      "description": "将JSON数据转换为Kotlin数据类并支持序列化。",
-      "seo_title": "在线免费JSON to Kotlin转换器",
-      "seo_description": "在线免费将JSON转换为Kotlin数据类。支持Moshi、Gson和Kotlinx注解。适用于Android和Kotlin后端开发。",
-      "detailed_description": "JSON to Kotlin是一个实用的在线工具，帮助你快速完成各种任务。使用JSON to Kotlin，你可以轻松处理各种数据，无需安装任何软件或插件。该工具界面简单易用，让你可以快速上手并高效使用。无论是开发者、设计师还是普通用户，JSON to Kotlin都能帮助你提高工作效率。所有处理都在你的浏览器中本地完成，确保数据安全，不会上传到任何服务器。立即使用JSON to Kotlin，体验快速、安全且免费的在线工具服务。",
+      "inputPlaceholder": "输入 JSON 对象...",
+      "outputPlaceholder": "Kotlin 代码将在此显示...",
+      "name": "JSON 转 Kotlin",
+      "description": "将 JSON 数据转换为支持序列化的 Kotlin 数据类。",
+      "seo_title": "免费在线 JSON 转 Kotlin 转换器",
+      "seo_description": "免费在线将 JSON 转换为 Kotlin 数据类。支持 Moshi、Gson 和 Kotlinx 注解。适用于 Android 和 Kotlin 后端开发。",
+      "detailed_description": "JSON 转 Kotlin 是一款实用的在线工具，帮助您快速完成各种任务。使用 JSON 转 Kotlin，您可以轻松处理各种数据，无需安装任何软件或插件。此工具界面简洁，易于使用，让您快速上手并高效使用。无论是开发者、设计师还是普通用户，JSON 转 Kotlin 都能帮助您提高工作效率。所有处理均在您的浏览器中本地完成，确保您的数据安全，不会上传到任何服务器。立即使用 JSON 转 Kotlin，体验快速、安全、免费的在线工具服务。",
       "usage_steps": [
-        "打开JSON to Kotlin工具页面",
-        "在输入框中输入或粘贴要处理的内容",
+        "打开 JSON 转 Kotlin 工具页面",
+        "在输入框中输入或粘贴您要处理的内容",
         "根据需要调整工具选项和设置",
         "点击处理按钮查看结果",
-        "复制或下载处理结果"
+        "复制或下载处理后的结果"
       ],
       "usage_examples": [
-        "使用JSON to Kotlin处理你的数据",
-        "无需等待即可快速获得处理结果"
+        "使用 JSON 转 Kotlin 处理您的数据",
+        "快速获得处理结果，无需等待"
       ],
       "faqs": [
         {
@@ -2202,7 +2202,7 @@
       "copy": "复制"
     },
     "diff-checker": {
-      "name": "Diff Checker",
+      "name": "文本差异对比",
       "description": "比较两段文本并突出显示其中的差异。",
       "seo_title": "在线免费文本差异检查器",
       "seo_description": "在线免费比较两段文本。使用两侧视图突出显示添加、删除和更改的内容。适用于代码审查和文档比较。",
@@ -2278,7 +2278,7 @@
       ]
     },
     "image-to-base64": {
-      "name": "Image to Base64",
+      "name": "图片转Base64",
       "description": "将图片转换为Base64编码，适用于HTML和CSS。",
       "seo_title": "在线免费Image to Base64转换器",
       "seo_description": "在线将图片转换为Base64编码字符串，无需注册。支持PNG、JPG、GIF和SVG格式，适用于嵌入CSS、HTML和JSON数据。",
@@ -3591,8 +3591,8 @@
       ]
     },
     "json-schema-validator": {
-      "name": "JSON Schema Validator",
-      "description": "Validate JSON data against JSON Schema.",
+      "name": "JSON Schema验证器",
+      "description": "根据JSON Schema验证JSON数据的有效性。",
       "seo_title": "在线免费JSON Schema验证器",
       "seo_description": "在线免费验证JSON数据。支持draft-04、draft-06和draft-07架构。获取详细的错误信息和验证报告。",
       "detailed_description": "JSON Schema Validator 是一款实用的在线工具，帮助您快速完成各种任务。使用 JSON Schema Validator，您可以轻松处理各种数据，无需安装任何软件或插件。该工具界面简单，易于使用，让您能够快速上手并高效使用。无论是开发人员、设计师还是普通用户，JSON Schema Validator 都能帮助您提高工作效率。所有处理都在您的浏览器中本地进行，确保数据安全，不会上传到任何服务器。立即使用 JSON Schema Validator，体验快速、安全且免费的在线工具服务。",
@@ -3699,7 +3699,7 @@
       ]
     },
     "json-to-typescript": {
-      "name": "JSON to TypeScript",
+      "name": "JSON转TypeScript",
       "description": "将JSON数据转换为TypeScript接口定义。",
       "seo_title": "在线免费JSON转TypeScript转换器",
       "seo_description": "在线免费将JSON转换为TypeScript接口和类型。生成类型安全的代码，支持可选属性和嵌套类型。对于TS开发者来说是必不可少的。",
@@ -3891,8 +3891,8 @@
       ]
     },
     "json-diff": {
-      "name": "JSON Diff",
-      "description": "Compare two JSON objects and find differences.",
+      "name": "JSON差异对比",
+      "description": "比较两个JSON对象并找出差异。",
       "seo_title": "在线JSON差异比较工具，免费使用",
       "seo_description": "在线比较两个JSON对象并找到差异，无需注册即可免费使用。突出显示新增、删除和更改的值，支持侧边对比视图。适用于API调试。",
       "json1": "JSON 1",
@@ -4085,7 +4085,7 @@
       ]
     },
     "hex-editor": {
-      "name": "Hex Editor",
+      "name": "十六进制编辑器",
       "description": "转换文本和十六进制，查看字节数据。",
       "seo_title": "免费Hex编辑器在线",
       "seo_description": "在线免费将文本转换为十六进制，或将十六进制转换为文本。查看并编辑十六进制数据，带有ASCII预览。适用于调试和二进制数据分析。",
@@ -4942,8 +4942,8 @@
       ]
     },
     "http-header-parser": {
-      "name": "HTTP Header Parser",
-      "description": "Parse and format HTTP headers with descriptions for each header.",
+      "name": "HTTP头解析器",
+      "description": "解析和格式化HTTP头信息，并提供每个头的说明。",
       "seo_title": "在线免费HTTP头解析器",
       "seo_description": "在线免费解析HTTP头，详细分析请求和响应头。适用于API调试和网页开发。",
       "detailed_description": "HTTP Header Parser 是一款实用的在线工具，帮助您快速完成各种任务。使用HTTP Header Parser，您可以轻松处理各种数据，无需安装任何软件或插件。该工具界面简洁易用，让您快速上手并高效使用。无论是开发人员、设计师还是普通用户，HTTP Header Parser 都能帮助您提高工作效率。所有处理都在您的浏览器中本地完成，确保数据安全，不会上传到任何服务器。立即使用HTTP Header Parser，体验快速、安全且免费的在线工具服务。",
@@ -5242,8 +5242,8 @@
       "inputPlaceholder": "在此粘贴 JSON..."
     },
     "image-compressor": {
-      "name": "Image Compressor",
-      "description": "Compress images to reduce file size while maintaining quality.",
+      "name": "图片压缩器",
+      "description": "压缩图片以减小文件大小，同时保持图片质量。",
       "seo_title": "免费在线图片压缩工具",
       "seo_description": "在线免费压缩图片。调整质量减少PNG、JPEG、WebP文件大小。支持批量压缩。适合网页优化。",
       "detailed_description": "Image Compressor 是一款实用的在线工具，帮助您快速完成各种任务。使用 Image Compressor，您无需安装任何软件或插件即可轻松处理各种数据。该工具界面简洁，操作简单，让您快速上手并高效使用。无论是开发者、设计师还是普通用户，Image Compressor 都能帮助您提高工作效率。所有处理都在您的浏览器中本地完成，确保数据安全，不会上传到任何服务器。立即使用 Image Compressor，体验快速、安全且免费的在线工具服务。",
@@ -5434,8 +5434,8 @@
       ]
     },
     "docker-compose-generator": {
-      "name": "Docker Compose Generator",
-      "description": "Generate docker-compose.yml files with common services like MySQL, Redis, Nginx.",
+      "name": "Docker Compose生成器",
+      "description": "生成包含MySQL、Redis、Nginx等常用服务的docker-compose.yml文件。",
       "seo_title": "免费在线Docker Compose生成器",
       "seo_description": "在线生成docker-compose.yml文件，支持MySQL、PostgreSQL、Redis、Nginx等服务，无需注册。可视化编辑器，支持YAML预览和验证。",
       "version": "Compose版本",
@@ -5897,8 +5897,8 @@
       ]
     },
     "css-grid-generator": {
-      "name": "CSS Grid Generator",
-      "description": "Visual CSS Grid布局生成器，实时预览。",
+      "name": "CSS Grid生成器",
+      "description": "可视化CSS Grid布局生成器，实时预览效果。",
       "seo_title": "免费CSS Grid生成器在线 - 视觉布局构建器 | U2Tool",
       "seo_description": "使用我们的免费CSS网格生成器生成视觉网格布局。自定义行、列、间距和对齐方式，并实时预览。立即复制响应式CSS代码。",
       "columns": "列",
@@ -6326,8 +6326,8 @@
       ]
     },
     "json-to-swift": {
-      "name": "JSON to Swift",
-      "description": "将JSON对象转换为Swift结构体。",
+      "name": "JSON转Swift",
+      "description": "将JSON对象转换为Swift结构体定义。",
       "input": "JSON输入",
       "output": "Swift输出",
       "convert": "转换",
@@ -6459,8 +6459,8 @@
       ]
     },
     "box-shadow-generator": {
-      "name": "Box Shadow Generator",
-      "description": "Generate CSS box-shadow with visual editor.",
+      "name": "CSS阴影生成器",
+      "description": "使用可视化编辑器生成CSS box-shadow阴影效果。",
       "output": "CSS 输出",
       "copy": "复制 CSS",
       "seo_title": "免费 CSS Box Shadow 在线生成器",
@@ -6670,8 +6670,8 @@
       ]
     },
     "json-flattener": {
-      "name": "JSON Flattener",
-      "description": "Flatten or unflatten nested JSON objects.",
+      "name": "JSON扁平化工具",
+      "description": "将嵌套的JSON对象扁平化或反扁平化。",
       "input": "JSON 输入",
       "output": "结果",
       "copy": "复制",
@@ -6931,8 +6931,8 @@
       ]
     },
     "json-viewer": {
-      "name": "JSON Viewer",
-      "description": "View and explore JSON data in a tree structure.",
+      "name": "JSON查看器",
+      "description": "以树形结构查看和浏览JSON数据。",
       "input": "JSON 输入",
       "seo_title": "在线免费JSON查看器",
       "seo_description": "在线免费查看和探索JSON数据的树状结构。展开和折叠节点，搜索值，复制路径。适用于API调试。",
@@ -7120,8 +7120,8 @@
       ]
     },
     "sitemap-generator": {
-      "name": "Sitemap Generator",
-      "description": "Generate XML sitemaps for your website.",
+      "name": "网站地图生成器",
+      "description": "为您的网站生成XML格式的网站地图。",
       "output": "Sitemap Output",
       "copy": "Copy",
       "seo_title": "免费在线Sitemap生成器",
@@ -7512,7 +7512,7 @@
       ]
     },
     "canvas-drawing": {
-      "name": "Canvas Drawing",
+      "name": "画布绘图工具",
       "description": "简单绘图工具，配有画笔和橡皮擦。",
       "seo_title": "在线免费画布绘图工具",
       "seo_description": "在线免费画布绘图工具，配有画笔和橡皮擦。自定义画笔大小、颜色和透明度。以PNG格式下载作品。适合快速草图。",
@@ -7548,8 +7548,8 @@
       ]
     },
     "json-escape": {
-      "name": "JSON Escape/Unescape",
-      "description": "Escape and unescape JSON strings.",
+      "name": "JSON转义工具",
+      "description": "对JSON字符串进行转义和反转义处理。",
       "seo_title": "在线免费JSON Escape/Unescape工具",
       "seo_description": "在线免费处理JSON字符串，快速转义和反转义特殊字符、引号和控制字符。适用于嵌入JSON到字符串中。",
       "detailed_description": "JSON Escape/Unescape 是一款实用的在线工具，帮助您快速完成各种任务。使用JSON Escape/Unescape，您可以轻松处理各种数据，无需安装任何软件或插件。该工具界面简洁易用，让您快速上手并高效使用。无论是开发人员、设计师还是普通用户，JSON Escape/Unescape 都能帮助您提高工作效率。所有处理都在您的浏览器中本地完成，确保数据安全，不会上传到任何服务器。立即使用JSON Escape/Unescape，体验快速、安全且免费的在线工具服务。",
@@ -8041,8 +8041,8 @@
       ]
     },
     "cookie-policy-generator": {
-      "name": "Cookie Policy Generator",
-      "description": "Generate a cookie policy for your website.",
+      "name": "Cookie政策生成器",
+      "description": "为您的网站生成Cookie使用政策。",
       "seo_title": "免费Cookie政策生成器在线",
       "seo_description": "在线生成符合GDPR和CCPA要求的个性化Cookie政策。解释Cookie类型、用途和同意选项。无需注册，免费使用。",
       "websiteName": "网站名称",
@@ -8139,8 +8139,8 @@
       ]
     },
     "csv-viewer": {
-      "name": "CSV Viewer",
-      "description": "View and parse CSV data in a table format.",
+      "name": "CSV查看器",
+      "description": "以表格形式查看和解析CSV数据。",
       "seo_title": "免费在线CSV查看器",
       "seo_description": "在线免费查看和解析CSV数据。支持自定义分隔符、表头和大文件。轻松排序、筛选和搜索数据。",
       "detailed_description": "CSV Viewer 是一款实用的在线工具，帮助您快速完成各种任务。使用 CSV Viewer，您可以轻松处理各种数据，无需安装任何软件或插件。该工具界面简单易用，让您快速上手并高效使用。无论是开发人员、设计师还是普通用户，CSV Viewer 都能帮助您提高工作效率。所有处理都在您的浏览器中本地进行，确保数据安全，不会上传到任何服务器。立即使用 CSV Viewer，体验快速、安全且免费的在线工具服务。",
@@ -9351,7 +9351,7 @@
       ]
     },
     "lorem-picsum": {
-      "name": "Lorem Picsum",
+      "name": "随机图片生成器",
       "description": "从Picsum Photos生成随机的占位符图片。",
       "seo_title": "免费在线Lorem Picsum图片生成器",
       "seo_description": "生成具有自定义尺寸、灰度和模糊效果的随机占位符图片。完美适用于原型设计、线框图和网页设计。",

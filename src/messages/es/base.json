@@ -3796,23 +3796,23 @@
       "seo_description": "Convierte JSON a modelos de Python dataclass o Pydantic online de forma gratuita. Genera código Python seguro en tipo con validación. Es esencial para el desarrollo de API de Python."
     },
     "json-to-kotlin": {
-      "className": "Clase de nombre",
-      "packageName": "Paquete de nombre",
+      "className": "Nombre de Clase",
+      "packageName": "Nombre del Paquete",
       "serializer": "Serializador",
       "noSerializer": "Ninguno",
-      "useDataClass": "Usar clases de datos",
+      "useDataClass": "Usar clase de datos",
       "useNullable": "Usar tipos nulos",
       "input": "Entrada JSON",
       "output": "Salida Kotlin",
-      "loadSample": "Cargar muestra",
+      "loadSample": "Cargar Ejemplo",
       "copy": "Copiar",
       "convert": "Convertir",
-      "inputPlaceholder": "Introducir objeto JSON...",
-      "outputPlaceholder": "Código Kotlin aparecerá aquí...",
-      "name": "JSON a Kotlin",
-      "description": "Convierte datos JSON a clases de datos Kotlin con soporte de serialización.",
-      "seo_title": "Convertidor JSON a Kotlin gratuito en línea",
-      "seo_description": "Convierte JSON a clases de datos Kotlin en línea de forma gratuita. Soporta Moshi, Gson y anotaciones Kotlinx. Perfecto para el desarrollo de Android y backend en Kotlin."
+      "inputPlaceholder": "Introduce un objeto JSON...",
+      "outputPlaceholder": "El código Kotlin aparecerá aquí...",
+      "name": "Convertidor JSON a Kotlin",
+      "description": "Convierte datos JSON en clases de datos Kotlin con soporte de serialización.",
+      "seo_title": "Convertidor JSON a Kotlin Online Gratuito",
+      "seo_description": "Convierte JSON a clases de datos Kotlin en línea de forma gratuita. Soporte para Moshi, Gson y anotaciones Kotlinx. Ideal para desarrollo Android y backend en Kotlin."
     },
     "imageCompressor": {
       "quality": "Calidad",
