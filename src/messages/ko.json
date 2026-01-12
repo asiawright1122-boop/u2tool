@@ -2781,8 +2781,8 @@
     "http-status": {
       "name": "HTTP 상태 코드",
       "description": "HTTP 상태 코드와 그 의미를 확인하세요.",
-      "seo_title": "HTTP 상태 코드 참조",
-      "seo_description": "자유롭게 HTTP 상태 코드 참조 가이드를 온라인에서 확인하세요. 1xx, 2xx, 3xx, 4xx, 5xx 상태 코드에 대한 설명과 사용 사례를 배우세요.",
+      "seo_title": "HTTP 상태 코드 완전 참조 가이드",
+      "seo_description": "완전한 HTTP 상태 코드 참조. 1xx, 2xx, 3xx, 4xx, 5xx 코드의 의미를 알아보세요.",
       "detailed_description": "HTTP 상태 코드는 다양한 작업을 빠르게 완료하는 실용적인 온라인 도구입니다. HTTP 상태 코드를 사용하면 어떤 소프트웨어나 플러그인도 설치하지 않고 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있어 사용하기 쉬우며, 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너 또는 일반 사용자 모두 HTTP 상태 코드는 작업 효율성을 향상시키는 데 도움이 됩니다. 모든 처리는 브라우저에서 로컬로 이루어지므로 데이터 보안을 보장하며 서버에 업로드되지 않습니다. HTTP 상태 코드를 즉시 사용하여 빠르고 안전하며 무료 온라인 도구 서비스를 경험해보세요.",
       "usage_steps": [
         "HTTP 상태 코드 도구 페이지를 열기",
@@ -5182,8 +5182,8 @@
     "http-status-codes": {
       "name": "HTTP 상태 코드",
       "description": "모든 HTTP 상태 코드를 참조할 수 있는 가이드.",
-      "seo_title": "HTTP 상태 코드 참조",
-      "seo_description": "모든 HTTP 상태 코드와 그 의미에 대한 완전한 참조 가이드. 1xx, 2xx, 3xx, 4xx, 5xx 코드를 설명과 함께 검토하세요. 개발자 필수 도구.",
+      "seo_title": "HTTP 상태 코드 조회 도구",
+      "seo_description": "HTTP 상태 코드를 온라인으로 조회하세요. 웹 개발자를 위한 빠른 참조 도구.",
       "searchPlaceholder": "상태 코드 검색...",
       "allCategories": "모든 카테고리",
       "informational": "1xx 정보",
@@ -5898,8 +5898,8 @@
     "crc32-calculator": {
       "name": "CRC32 계산기",
       "description": "텍스트나 파일의 CRC32를 계산하세요.",
-      "seo_title": "온라인 CRC32 체크섬 계산기",
-      "seo_description": "브라우저에서 텍스트나 업로드한 파일의 CRC32 체크섬을 계산하세요. 데이터의 일관성을 확인하고 전송 오류를 검출하세요. 보안 브라우저 기반 처리.",
+      "seo_title": "CRC32 체크섬 계산기 - 무료 온라인 도구",
+      "seo_description": "무료 온라인 CRC32 체크섬 계산기. 파일 및 텍스트의 CRC32 해시 값을 빠르게 계산합니다.",
       "inputMode": "입력 모드",
       "modeText": "텍스트",
       "modeFile": "파일",
@@ -5933,8 +5933,8 @@
     "mac-address-generator": {
       "name": "MAC 주소 생성기",
       "description": "옵션을 사용하여 임의의 MAC 주소를 생성합니다.",
-      "seo_title": "온라인 MAC 주소 생성기",
-      "seo_description": "접두사, 구분자, 비트 플래그 옵션으로 무작위 MAC 주소 생성. 유니캐스트/멀티캐스트, 유니버설/로컬 플래그 지원. 테스트 및 개발용.",
+      "seo_title": "MAC 주소 생성기 - 무료 온라인 도구",
+      "seo_description": "무료 온라인 MAC 주소 생성기. 랜덤 또는 사용자 정의 MAC 주소를 생성합니다.",
       "count": "개수",
       "separator": "구분자",
       "sepColon": "콜론(:)",
@@ -6625,8 +6625,8 @@
     "funnel-chart-generator": {
       "name": "파이 차트 생성기",
       "description": "온라인으로 파이 차트를 생성하세요. 전환 과정을 시각화하고 PNG/SVG로 내보내세요.",
-      "seo_title": "무료 온라인 파이 차트 생성기",
-      "seo_description": "무료로 온라인에서 전문적인 파이 차트를 생성하세요. 전환 파이프를 시각화하세요. PNG 또는 SVG로 내보내세요.",
+      "seo_title": "무료 온라인 퍼널 차트 생성기",
+      "seo_description": "무료 온라인 퍼널 차트 생성기. 판매 퍼널, 전환율 등을 시각화하세요. PNG/SVG로 내보내기.",
       "chartTitle": "차트 제목",
       "chartTitlePlaceholder": "차트 제목 입력",
       "colorTheme": "색상 테마",
@@ -8871,8 +8871,8 @@
     "batch-timestamp-converter": {
       "name": "批量时间戳转换器",
       "description": "一次转换多个时间戳。自动检测格式并导出结果。",
-      "seo_title": "免费在线批量时间戳转换器",
-      "seo_description": "免费在线批量转换时间戳。自动检测Unix秒、毫秒、ISO 8601。导出为CSV或JSON格式。",
+      "seo_title": "무료 온라인 일괄 타임스탬프 변환기",
+      "seo_description": "무료 온라인 일괄 타임스탬프 변환기. 여러 타임스탬프를 한 번에 날짜/시간으로 변환합니다.",
       "inputPlaceholder": "1704067200\n1704067200000\n2024-01-01T00:00:00Z",
       "convert": "全部转换",
       "timezone": "输出时区",
@@ -13988,8 +13988,8 @@
     "http-status": {
       "name": "HTTP Status Codes",
       "description": "HTTP 상태 코드와 그 의미를 찾아보세요.",
-      "seo_title": "HTTP Status Codes Reference",
-      "seo_description": "HTTP 상태 코드 참조 가이드를 온라인에서 무료로 찾아보세요. 설명 및 사용 사례와 함께 1xx, 2xx, 3xx, 4xx 및 5xx 상태 코드에 대해 알아보세요."
+      "seo_title": "HTTP 상태 코드 완전 참조 가이드",
+      "seo_description": "완전한 HTTP 상태 코드 참조. 1xx, 2xx, 3xx, 4xx, 5xx 코드의 의미를 알아보세요."
     },
     "json-to-yaml": {
       "name": "JSON to YAML",
@@ -15183,8 +15183,8 @@
     "http-status-codes": {
       "name": "HTTP Status Codes",
       "description": "모든 HTTP 상태 코드에 대한 참조 가이드입니다.",
-      "seo_title": "HTTP Status Codes Reference",
-      "seo_description": "모든 HTTP 상태 코드와 그 의미에 대한 완전한 참조 가이드입니다. 설명과 함께 1xx, 2xx, 3xx, 4xx 및 5xx 코드를 찾아보세요. 개발자 필수.",
+      "seo_title": "HTTP 상태 코드 조회 도구",
+      "seo_description": "HTTP 상태 코드를 온라인으로 조회하세요. 웹 개발자를 위한 빠른 참조 도구.",
       "searchPlaceholder": "상태 코드 검색...",
       "allCategories": "모든 카테고리",
       "informational": "1xx 정보",
@@ -15622,8 +15622,8 @@
     "crc32-calculator": {
       "name": "CRC32 Calculator",
       "description": "텍스트 또는 파일에 대한 CRC32를 계산합니다.",
-      "seo_title": "CRC32 Checksum Calculator Online",
-      "seo_description": "브라우저에서 텍스트 또는 업로드된 파일에 대한 CRC32 체크섬을 계산합니다. 데이터 무결성을 확인하고 전송 오류를 감지합니다. 안전한 브라우저 기반 처리.",
+      "seo_title": "CRC32 체크섬 계산기 - 무료 온라인 도구",
+      "seo_description": "무료 온라인 CRC32 체크섬 계산기. 파일 및 텍스트의 CRC32 해시 값을 빠르게 계산합니다.",
       "inputMode": "입력 모드",
       "modeText": "텍스트",
       "modeFile": "파일",
@@ -15645,8 +15645,8 @@
     "mac-address-generator": {
       "name": "MAC Address Generator",
       "description": "옵션을 사용하여 임의의 MAC 주소를 생성합니다.",
-      "seo_title": "MAC Address Generator Online",
-      "seo_description": "접두사, 구분 기호 및 비트 플래그 옵션을 사용하여 임의의 MAC 주소를 생성합니다. 유니캐스트/멀티캐스트 및 범용/로컬 플래그를 지원합니다. 테스트 및 개발용.",
+      "seo_title": "MAC 주소 생성기 - 무료 온라인 도구",
+      "seo_description": "무료 온라인 MAC 주소 생성기. 랜덤 또는 사용자 정의 MAC 주소를 생성합니다.",
       "count": "개수",
       "separator": "구분자",
       "sepColon": "콜론(:)",

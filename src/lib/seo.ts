@@ -196,17 +196,24 @@ export function generateHreflangLinks(path: string = ''): Record<string, string>
 /**
  * 生成 alternates 对象（用于 Next.js Metadata API）
  * 使用绝对 URL 以确保搜索引擎正确识别规范页面
+ * 包含 x-default 指向默认语言版本（SEO 最佳实践）
  * @param locale - 当前语言
  * @param path - 路径（不含 locale 前缀）
  * @returns alternates 对象，包含绝对 canonical URL 和语言版本
+ * @see https://developers.google.com/search/docs/specialty/international/localized-versions
  */
 export function generateAlternates(locale: string, path: string = '') {
   const baseUrl = SEO_CONFIG.siteUrl;
   return {
     canonical: `${baseUrl}/${locale}${path}`,
-    languages: Object.fromEntries(
-      SEO_CONFIG.locales.map(l => [l, `${baseUrl}/${l}${path}`])
-    ),
+    languages: {
+      // 所有支持的语言版本
+      ...Object.fromEntries(
+        SEO_CONFIG.locales.map(l => [l, `${baseUrl}/${l}${path}`])
+      ),
+      // x-default 指向默认语言（英文），用于未匹配任何语言的用户
+      'x-default': `${baseUrl}/${SEO_CONFIG.defaultLocale}${path}`,
+    },
   };
 }
 

@@ -68,18 +68,11 @@ export async function generateMetadata({
   const toolName = (toolMessages as Record<string, string>).name || slug;
   const toolDescription = (toolMessages as Record<string, string>).description || '';
   
-  // 使用本地化模板生成 SEO 标题和描述，确保每个语言都有唯一的内容
-  // 优先使用翻译文件中的 seo_title/seo_description，如果没有则使用模板生成
+  // 获取翻译文件中的 SEO 数据
   const rawSeoTitle = (toolMessages as Record<string, string>).seo_title;
   const rawSeoDescription = (toolMessages as Record<string, string>).seo_description;
   
-  // 检查是否是真正本地化的内容（非英文语言应包含非ASCII字符）
-  // eslint-disable-next-line no-control-regex
-  const isLocalizedTitle = locale === 'en' || (rawSeoTitle && /[^\x00-\x7F]/.test(rawSeoTitle));
-  // eslint-disable-next-line no-control-regex
-  const isLocalizedDesc = locale === 'en' || (rawSeoDescription && /[^\x00-\x7F]/.test(rawSeoDescription));
-  
-  // SEO 标题模板（按语言）
+  // SEO 标题模板（仅在翻译文件中没有 seo_title 时使用）
   const seoTitleTemplates: Record<string, string> = {
     en: `Free ${toolName} Online | U2Tool`,
     zh: `${toolName} - 免费在线工具 | U2Tool`,
@@ -93,7 +86,7 @@ export async function generateMetadata({
     ar: `${toolName} - أداة مجانية عبر الإنترنت | U2Tool`,
   };
   
-  // SEO 描述模板（按语言）
+  // SEO 描述模板（仅在翻译文件中没有 seo_description 时使用）
   const seoDescTemplates: Record<string, string> = {
     en: `Use ${toolName} online for free. ${toolDescription} No registration required, instant results in your browser.`,
     zh: `免费在线使用${toolName}。${toolDescription} 无需注册，浏览器即时获取结果。`,
@@ -107,9 +100,10 @@ export async function generateMetadata({
     ar: `استخدم ${toolName} مجانًا عبر الإنترنت. ${toolDescription} بدون تسجيل، نتائج فورية.`,
   };
   
-  // 使用本地化的 SEO 数据，或回退到模板
-  const seoTitle = isLocalizedTitle && rawSeoTitle ? rawSeoTitle : (seoTitleTemplates[locale] || seoTitleTemplates.en);
-  const seoDescription = isLocalizedDesc && rawSeoDescription ? rawSeoDescription : (seoDescTemplates[locale] || seoDescTemplates.en);
+  // 直接使用翻译文件中的 SEO 数据，仅在缺失时回退到模板
+  // 注意：不再使用 ASCII 字符检测，因为拉丁语系语言（es, pt, fr, de）的翻译也是有效的
+  const seoTitle = rawSeoTitle || (seoTitleTemplates[locale] || seoTitleTemplates.en);
+  const seoDescription = rawSeoDescription || (seoDescTemplates[locale] || seoDescTemplates.en);
 
   // 使用 extendTitle 确保标题长度在 50-60 字符之间
   const extendedTitleResult = extendTitle(seoTitle, locale);
