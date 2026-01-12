@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O gerador de caracteres invisíveis cria vários caracteres Unicode invisíveis como espaços de largura zero. Também inclui um detector.",
+  "usage_steps": [
+    "Selecione o tipo de caractere invisível",
+    "Defina o número de repetições",
+    "Copie os caracteres invisíveis",
+    "Cole onde precisar",
+    "Use o detector para encontrar caracteres ocultos"
+  ],
+  "usage_examples": [
+    "Criar mensagens em branco",
+    "Adicionar marcas d'água invisíveis",
+    "Testar processamento de texto"
+  ]
+}

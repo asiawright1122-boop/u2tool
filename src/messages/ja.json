@@ -109,7 +109,8 @@
     "moreResults": "件の結果",
     "relatedTools": "関連ツール",
     "more": "もっと見る",
-    "categories": "カテゴリー"
+    "categories": "カテゴリー",
+    "launches": "ローンチ"
   },
   "home": {
     "hero": {
@@ -1638,7 +1639,7 @@
       ]
     },
     "timestamp-converter": {
-      "name": "Timestamp Converter",
+      "name": "タイムスタンプ変換",
       "description": "Unixタイムスタンプを人間が読みやすい日付に変換し、逆も行けるオンラインツールです。",
       "seo_title": "無料 Unixタイムスタンプ変換 オンライン",
       "seo_description": "無料でオンラインでUnixタイムスタンプを人間が読みやすい日付に変換し、逆も行ける。複数の日付フォーマットと時区をサポート。開発者向け。",
@@ -1695,8 +1696,8 @@
     "html-encoder": {
       "name": "HTMLエンコーダー/デコーダー",
       "description": "特殊文字を HTML エンティティにエンコードするか、デコードして戻します。",
-      "seo_title": "Free HTML Encoder & Decoder Online",
-      "seo_description": "Encode and decode HTML entities online for free. Handle special characters safely for web development. Prevent XSS attacks and display HTML correctly.",
+      "seo_title": "無料オンラインHTMLエンコーダー＆デコーダー",
+      "seo_description": "HTMLエンティティを無料でオンラインエンコード・デコード。Web開発で特殊文字を安全に処理し、XSS攻撃を防止、HTMLを正しく表示。",
       "detailed_description": "HTMLエンコーダー/デコーダー は、さまざまなタスクを迅速に完了するのに役立つ実用的なオンラインツールです。HTMLエンコーダー/デコーダー を使用すると、ソフトウェアやプラグインをインストールすることなく、さまざまなデータを簡単に処理できます。このツールはシンプルなインターフェースで使いやすく、すぐに使い始めて効率的に使用できます。開発者、デザイナー、または一般ユーザーであっても、HTMLエンコーダー/デコーダー は作業効率の向上に役立ちます。すべての処理はブラウザでローカルに実行されるため、データの安全性が確保され、サーバーにアップロードされることはありません。HTMLエンコーダー/デコーダー をすぐに使用して、高速で安全な無料のオンラインツールサービスを体験してください。",
       "usage_steps": [
         "HTMLエンコーダー/デコーダー ツールページを開く",
@@ -2124,8 +2125,8 @@
     "pinyin-converter": {
       "name": "ピンイン変換",
       "description": "中国語の文字を声調付きまたは声調なしでピンインに変換します。",
-      "seo_title": "Free Chinese to Pinyin Converter",
-      "seo_description": "Convert Chinese characters to Pinyin online for free. Support tone marks and numbered tones. Essential for Chinese language learning and pronunciation guides.",
+      "seo_title": "無料中国語ピンイン変換ツール",
+      "seo_description": "中国語をピンインに無料でオンライン変換。声調記号と数字声調に対応。中国語学習と発音ガイドに必須のツール。",
       "detailed_description": "Pinyin Converter は、さまざまなタスクを迅速に完了するのに役立つ実用的なオンラインツールです。Pinyin Converter を使用すると、ソフトウェアやプラグインをインストールすることなく、さまざまなデータを簡単に処理できます。このツールはシンプルなインターフェースで使いやすく、すぐに使い始めて効率的に使用できます。開発者、デザイナー、または一般ユーザーであっても、Pinyin Converter は作業効率の向上に役立ちます。すべての処理はブラウザでローカルに実行されるため、データの安全性が確保され、サーバーにアップロードされることはありません。Pinyin Converter をすぐに使用して、高速で安全な無料のオンラインツールサービスを体験してください。",
       "usage_steps": [
         "Pinyin Converter ツールページを開く",
@@ -2501,7 +2502,7 @@
       ]
     },
     "json-schema-validator": {
-      "name": "JSON Schema Validator",
+      "name": "JSONスキーマバリデーター",
       "description": "JSONデータをJSON Schemaに照合して検証します。",
       "seo_title": "無料JSON Schema Validatorオンライン",
       "seo_description": "無料でオンラインでJSONデータをJSON Schemaに照合して検証します。draft-04、draft-06、draft-07のスキーマに対応しています。詳細なエラーメッセージと検証レポートを取得できます。",
@@ -2555,7 +2556,7 @@
       ]
     },
     "json-to-typescript": {
-      "name": "JSON to TypeScript",
+      "name": "JSONからTypeScript変換",
       "description": "JSONデータをTypeScriptインターフェース定義に変換します。",
       "seo_title": "無料のJSON to TypeScriptコンバータ",
       "seo_description": "オンラインでJSONをTypeScriptインターフェースに無料で変換。オプションプロパティやネストタイプの型安全コードを生成。TS開発者に欠かせないツールです。",
@@ -2877,8 +2878,8 @@
     "html-to-jsx": {
       "name": "HTMLからJSXへ",
       "description": "HTML コードを React JSX 形式に変換します。",
-      "seo_title": "Free HTML to JSX Converter Online",
-      "seo_description": "Convert HTML code to React JSX format online for free. Transform class to className, style strings to objects. Essential for React developers.",
+      "seo_title": "無料オンラインHTMLからJSX変換",
+      "seo_description": "HTMLコードをReact JSX形式に無料でオンライン変換。classをclassNameに、スタイル文字列をオブジェクトに変換。React開発者必須ツール。",
       "htmlInput": "HTML Input",
       "jsxOutput": "JSX Output",
       "placeholder": "<div class=\"container\">...</div>",
@@ -2898,7 +2899,7 @@
       ]
     },
     "chmod-calculator": {
-      "name": "Chmod Calculator",
+      "name": "Chmod計算機",
       "description": "Linux/Unixファイルのパーミッションを八進数やシンボリック表記で計算します。",
       "seo_title": "無料 Chmod Calculator オンライン",
       "seo_description": "Unixファイルパーミッション (chmod) を無料でオンラインで計算。八進数とシンボリック表記を相互に変換。読み取り、書き込み、実行権限を視覚化。",
@@ -3002,8 +3003,8 @@
     "text-wrapper": {
       "name": "テキスト折り返し",
       "description": "指定した線幅でテキストを折り返す。",
-      "seo_title": "Free Text Wrapper Online",
-      "seo_description": "Wrap text to specified width online for free. Add line breaks at word boundaries or fixed positions. Perfect for formatting code comments and documentation.",
+      "seo_title": "無料オンラインテキスト折り返しツール",
+      "seo_description": "指定幅でテキストを無料でオンライン折り返し。単語境界または固定位置で改行を追加。コードコメントやドキュメントの整形に最適。",
       "detailed_description": "Text Wrapper は、さまざまなタスクを迅速に完了するのに役立つ実用的なオンラインツールです。Text Wrapper を使用すると、ソフトウェアやプラグインをインストールすることなく、さまざまなデータを簡単に処理できます。このツールはシンプルなインターフェースで使いやすく、すぐに使い始めて効率的に使用できます。開発者、デザイナー、または一般ユーザーであっても、Text Wrapper は作業効率の向上に役立ちます。すべての処理はブラウザでローカルに実行されるため、データの安全性が確保され、サーバーにアップロードされることはありません。Text Wrapper をすぐに使用して、高速で安全な無料のオンラインツールサービスを体験してください。",
       "usage_steps": [
         "Text Wrapper ツールページを開く",
@@ -3020,8 +3021,8 @@
     "csv-to-json": {
       "name": "CSVからJSONへ",
       "description": "カスタマイズ可能な区切り文字を使用して CSV データを JSON 形式に変換します。",
-      "seo_title": "Free CSV to JSON Converter Online",
-      "seo_description": "Convert CSV to JSON format online for free. Parse CSV with custom delimiters and headers. Support nested objects and arrays. Perfect for data import.",
+      "seo_title": "無料オンラインCSVからJSON変換",
+      "seo_description": "CSVをJSON形式に無料でオンライン変換。カスタム区切り文字とヘッダーでCSVを解析。ネストされたオブジェクトと配列に対応。データインポートに最適。",
       "detailed_description": "CSVからJSONへ は、さまざまなタスクを迅速に完了するのに役立つ実用的なオンラインツールです。CSVからJSONへ を使用すると、ソフトウェアやプラグインをインストールすることなく、さまざまなデータを簡単に処理できます。このツールはシンプルなインターフェースで使いやすく、すぐに使い始めて効率的に使用できます。開発者、デザイナー、または一般ユーザーであっても、CSVからJSONへ は作業効率の向上に役立ちます。すべての処理はブラウザでローカルに実行されるため、データの安全性が確保され、サーバーにアップロードされることはありません。CSVからJSONへ をすぐに使用して、高速で安全な無料のオンラインツールサービスを体験してください。",
       "usage_steps": [
         "CSVからJSONへ ツールページを開く",
@@ -3092,8 +3093,8 @@
     "password-strength": {
       "name": "パスワード強度チェッカー",
       "description": "長さ、文字の種類、一般的なパターンを確認して、パスワードの強度を分析します。",
-      "seo_title": "Free Password Strength Checker Online",
-      "seo_description": "Check password strength online for free. Get detailed analysis with entropy score, crack time estimate, and improvement suggestions. Essential for security.",
+      "seo_title": "無料オンラインパスワード強度チェッカー",
+      "seo_description": "パスワード強度を無料でオンラインチェック。エントロピースコア、解読時間推定、改善提案を含む詳細分析。セキュリティに必須。",
       "detailed_description": "Password Strength は、さまざまなタスクを迅速に完了するのに役立つ実用的なオンラインツールです。Password Strength を使用すると、ソフトウェアやプラグインをインストールすることなく、さまざまなデータを簡単に処理できます。このツールはシンプルなインターフェースで使いやすく、すぐに使い始めて効率的に使用できます。開発者、デザイナー、または一般ユーザーであっても、Password Strength は作業効率の向上に役立ちます。すべての処理はブラウザでローカルに実行されるため、データの安全性が確保され、サーバーにアップロードされることはありません。Password Strength をすぐに使用して、高速で安全な無料のオンラインツールサービスを体験してください。",
       "usage_steps": [
         "Password Strength ツールページを開く",
@@ -3290,8 +3291,8 @@
     "json-to-sql": {
       "name": "JSONからSQLへ",
       "description": "CREATE TABLE サポートを使用して、JSON 配列を SQL INSERT ステートメントに変換します。",
-      "seo_title": "Free JSON to SQL Converter Online",
-      "seo_description": "Convert JSON data to SQL INSERT statements online for free. Support MySQL, PostgreSQL, SQLite syntax. Bulk insert generation for database import.",
+      "seo_title": "無料オンラインJSONからSQL変換",
+      "seo_description": "JSONデータをSQL INSERT文に無料でオンライン変換。MySQL、PostgreSQL、SQLite構文に対応。データベースインポート用の一括挿入生成。",
       "tableName": "テーブル名",
       "dialect": "方言",
       "includeCreate": "CREATE TABLE を含める",
@@ -3645,8 +3646,8 @@
       "copy": "コピー"
     },
     "opengraph-preview": {
-      "name": "Open Graph Preview",
-      "description": "Preview how your page will look when shared on social media.",
+      "name": "Open Graphプレビュー",
+      "description": "ソーシャルメディアで共有した際のページ表示をプレビュー。",
       "seo_title": "無料のOpen Graphプレビュー工具有る",
       "seo_description": "Facebook, Twitter, LinkedInなどのソーシャルメディアのシェアカードをオンラインで無料でプレビュー。公開前にOpen GraphやTwitter Cardのメタタグをテスト。",
       "detailed_description": "Open Graph Previewは、さまざまなタスクを素早く完了できる実用的なオンラインツールです。Open Graph Previewを使用すれば、ソフトウェアやプラグインをインストールすることなく、さまざまなデータを簡単に処理できます。このツールはシンプルなインターフェースで、使いやすいので、すぐに使用し、効率的に使用できます。開発者、デザイナー、または一般ユーザーにとっても、Open Graph Previewは作業効率を向上させるのに役立ちます。すべての処理はブラウザ内で行われ、データの安全性を確保し、サーバーにアップロードされることはありません。Open Graph Previewを使用して、高速で安全で無料のオンラインツールサービスをすぐに体験してください。",
@@ -4532,8 +4533,8 @@
       ]
     },
     "css-clip-path-generator": {
-      "name": "CSS Clip Path Generator",
-      "description": "Create CSS clip-path shapes with visual editor.",
+      "name": "CSSクリップパス生成",
+      "description": "ビジュアルエディターでCSSクリップパス形状を作成。",
       "seo_title": "無料 CSS Clip Path Generator オンライン",
       "seo_description": "無料でオンラインでCSS clip-path形状を作成。視覚エディタを使用して多角形、円、楕円、カスタムパスを設計。CSSコードをコピーしてクリエイティブなレイアウトを作成。",
       "detailed_description": "CSS Clip Path Generatorは、様々なタスクを素早く完了するための実用的なオンラインツールです。CSS Clip Path Generatorを使用すると、ソフトウェアやプラグインをインストールすることなく、様々なデータを簡単に処理できます。このツールはシンプルなインターフェースで、使いやすく、すぐに始めることができます。開発者、デザイナー、または一般ユーザーにとっても、CSS Clip Path Generatorは作業効率を向上させるのに役立ちます。すべての処理はブラウザ内で行われ、データセキュリティを確保し、サーバーにアップロードされることはありません。CSS Clip Path Generatorをすぐに使用して、高速で安全で無料のオンラインツールサービスを体験してください。",
@@ -4570,8 +4571,8 @@
     "text-hash-comparator": {
       "name": "テキスト ハッシュ コンパレータ",
       "description": "テキストをハッシュ値で比較します。",
-      "seo_title": "Free Text Hash Comparator Online",
-      "seo_description": "Compare text by their hash values online for free. Generate and compare MD5, SHA-1, SHA-256 hashes side by side. Essential for file integrity verification.",
+      "seo_title": "無料オンラインテキストハッシュ比較",
+      "seo_description": "ハッシュ値でテキストを無料でオンライン比較。MD5、SHA-1、SHA-256ハッシュを並べて生成・比較。ファイル整合性検証に必須。",
       "detailed_description": "テキスト ハッシュ コンパレータ は、さまざまなタスクを迅速に完了するのに役立つ実用的なオンラインツールです。テキスト ハッシュ コンパレータ を使用すると、ソフトウェアやプラグインをインストールすることなく、さまざまなデータを簡単に処理できます。このツールはシンプルなインターフェースで使いやすく、すぐに使い始めて効率的に使用できます。開発者、デザイナー、または一般ユーザーであっても、テキスト ハッシュ コンパレータ は作業効率の向上に役立ちます。すべての処理はブラウザでローカルに実行されるため、データの安全性が確保され、サーバーにアップロードされることはありません。テキスト ハッシュ コンパレータ をすぐに使用して、高速で安全な無料のオンラインツールサービスを体験してください。",
       "usage_steps": [
         "テキスト ハッシュ コンパレータ ツールページを開く",
@@ -4586,8 +4587,8 @@
       ]
     },
     "json-path-finder": {
-      "name": "JSON Path Finder",
-      "description": "Find and copy JSON paths from your data.",
+      "name": "JSONパスファインダー",
+      "description": "データからJSONパスを検索してコピー。",
       "seo_title": "無料のJSON Path Finderオンライン",
       "seo_description": "データからJSONパスをオンラインで簡単に探してコピーできます。任意の値をクリックしてJSONPath表現を取得。API開発やデータ抽出に必須です。",
       "detailed_description": "JSON Path Finderは、さまざまなタスクを素早く完了するための実用的なオンラインツールです。JSON Path Finderを使用すると、ソフトウェアやプラグインをインストールせずにさまざまなデータを処理できます。このツールはシンプルなインターフェースで、使いやすいのですぐに使用できます。開発者、デザイナー、または一般ユーザーにとっても、JSON Path Finderは作業効率を向上させるのに役立ちます。すべての処理はブラウザ内で行われ、データセキュリティが保たれます。サーバーにアップロードされることはありません。JSON Path Finderをすぐに使用して、高速で安全で無料のオンラインツールサービスを体験してください。",
@@ -5271,8 +5272,8 @@
     "list-randomizer": {
       "name": "リストランダム化",
       "description": "アイテムのリストをシャッフルしてランダム化します。",
-      "seo_title": "Free List Randomizer Online",
-      "seo_description": "Shuffle and randomize lists of items or names online for free. Perfect for random selection, lottery draws, and fair ordering. Secure randomization.",
+      "seo_title": "無料オンラインリストランダマイザー",
+      "seo_description": "アイテムや名前のリストを無料でオンラインシャッフル・ランダム化。抽選、くじ引き、公平な順序付けに最適。安全なランダム化。",
       "originalList": "オリジナルリスト",
       "randomizedList": "ランダム化されたリスト",
       "clear": "クリア",
@@ -5428,8 +5429,8 @@
     "hex-base64-converter": {
       "name": "16進数Base64コンバータ",
       "description": "16 進数と Base64 エンコーディングの間で変換します。",
-      "seo_title": "Free Hex Base64 Converter Online",
-      "seo_description": "Convert between Hex and Base64 online for free. Encode hexadecimal to Base64 or decode Base64 to hex. Essential for cryptography and data encoding tasks.",
+      "seo_title": "無料オンラインHex Base64変換",
+      "seo_description": "HexとBase64を無料でオンライン相互変換。16進数をBase64にエンコード、またはBase64を16進数にデコード。暗号化とデータエンコードに必須。",
       "hexToBase64": "16 進数 → Base64",
       "base64ToHex": "Base64 → 16 進数",
       "swap": "スワップ",
@@ -5455,8 +5456,8 @@
     "pdf-to-base64": {
       "name": "PDF から Base64 へ",
       "description": "PDF ファイルを Base64 エンコードに変換します。",
-      "seo_title": "Free PDF to Base64 Converter Online",
-      "seo_description": "Convert PDF files to Base64 encoding online for free. Embed PDFs in HTML, JSON, or data URIs. Secure browser-based conversion with no file upload to servers.",
+      "seo_title": "無料オンラインPDFからBase64変換",
+      "seo_description": "PDFファイルをBase64エンコードに無料でオンライン変換。HTML、JSON、データURIにPDFを埋め込み。サーバーへのアップロード不要の安全なブラウザ変換。",
       "dropzone": "PDF ファイルをここにドロップするか、クリックしてアップロードします",
       "acceptedFormat": "受け入れられる形式: PDF",
       "errorNotPdf": "PDFファイルを選択してください",
@@ -5484,8 +5485,8 @@
     "audio-to-base64": {
       "name": "オーディオをBase64に変換",
       "description": "オーディオ ファイルを Base64 エンコードに変換します。",
-      "seo_title": "Free Audio to Base64 Converter Online",
-      "seo_description": "Convert audio files to Base64 encoding online for free. Support MP3, WAV, OGG formats. Embed audio in HTML, JSON, or data URIs. Browser-based processing.",
+      "seo_title": "無料オンライン音声からBase64変換",
+      "seo_description": "音声ファイルをBase64エンコードに無料でオンライン変換。MP3、WAV、OGG形式に対応。HTML、JSON、データURIに音声を埋め込み。ブラウザ処理。",
       "dropzone": "音声ファイルをここにドロップするか、クリックしてアップロードします",
       "acceptedFormats": "サポート: MP3、WAV、OGG、WebM、AAC、FLAC",
       "errorNotAudio": "音声ファイルを選択してください",
@@ -5932,8 +5933,8 @@
     "mac-address-generator": {
       "name": "MACアドレスジェネレータ",
       "description": "オプションを使用してランダムな MAC アドレスを生成します。",
-      "seo_title": "MAC Address Generator Online",
-      "seo_description": "Generate random MAC addresses with prefix, separator, and bit flag options. Support unicast/multicast and universal/local flags. For testing and development.",
+      "seo_title": "オンラインMACアドレス生成",
+      "seo_description": "プレフィックス、区切り文字、ビットフラグオプションでランダムMACアドレスを生成。ユニキャスト/マルチキャスト、ユニバーサル/ローカルフラグに対応。テストと開発用。",
       "count": "カウント",
       "separator": "セパレータ",
       "sepColon": "コロン (:)",
@@ -6150,8 +6151,8 @@
     "char-frequency": {
       "name": "文字出現頻度分析",
       "description": "テキスト内の文字の頻度を分析します。",
-      "seo_title": "Free Character Frequency Analyzer Online",
-      "seo_description": "Analyze character frequency and distribution in text. Get counts, percentages, and visual charts for each character. For cryptography and text analysis.",
+      "seo_title": "無料オンライン文字頻度分析",
+      "seo_description": "テキスト内の文字頻度と分布を分析。各文字のカウント、パーセンテージ、視覚的チャートを取得。暗号化とテキスト分析用。",
       "inputLabel": "テキスト",
       "placeholder": "分析するテキストを入力してください...",
       "ignoreSpaces": "スペースを無視する",
@@ -7377,8 +7378,8 @@
     "polar-bar-chart-generator": {
       "name": "極棒グラフジェネレーター",
       "description": "オンラインで極棒グラフを作成します。データを放射状に視覚化し、PNG/SVG としてエクスポートします。",
-      "seo_title": "Free Online Polar Bar Chart Generator",
-      "seo_description": "Create professional polar bar charts online for free. Visualize data in polar coordinates. Export as PNG or SVG.",
+      "seo_title": "無料オンライン極座標棒グラフ生成",
+      "seo_description": "プロフェッショナルな極座標棒グラフを無料でオンライン作成。極座標でデータを可視化。PNGまたはSVGでエクスポート。",
       "chartTitle": "チャートタイトル",
       "chartTitlePlaceholder": "グラフのタイトルを入力してください",
       "colorTheme": "カラーテーマ",
@@ -7449,8 +7450,8 @@
     "parallel-chart-generator": {
       "name": "平行チャートジェネレーター",
       "description": "平行座標チャートをオンラインで作成します。多次元データを比較し、PNG/SVG としてエクスポートします。",
-      "seo_title": "Free Online Parallel Chart Generator",
-      "seo_description": "Create professional parallel coordinate charts online for free. Compare multi-dimensional data. Export as PNG or SVG.",
+      "seo_title": "無料オンライン平行座標チャート生成",
+      "seo_description": "プロフェッショナルな平行座標チャートを無料でオンライン作成。多次元データを比較。PNGまたはSVGでエクスポート。",
       "chartTitle": "チャートタイトル",
       "chartTitlePlaceholder": "グラフのタイトルを入力してください",
       "colorTheme": "カラーテーマ",
@@ -7559,7 +7560,7 @@
       ]
     },
     "tree-chart-generator": {
-      "name": "Tree Chart Generator",
+      "name": "ツリーチャート生成",
       "seo_title": "無料オンラインツリー図ジェネレーター",
       "seo_description": "無料でプロフェッショナルなツリー図を作成。階層構造を視覚化。PNGやSVGとしてエクスポート。",
       "title": "ツリー図ジェネレーター",
@@ -7744,8 +7745,8 @@
     },
     "timeline-chart-generator": {
       "name": "タイムライン作成",
-      "seo_title": "Free Online Timeline Chart Generator",
-      "seo_description": "Create vertical or horizontal timeline charts online. Visualize history, milestones, and processes. Export for free.",
+      "seo_title": "無料オンラインタイムラインチャート生成",
+      "seo_description": "縦型または横型のタイムラインチャートをオンライン作成。歴史、マイルストーン、プロセスを可視化。無料でエクスポート。",
       "title": "タイムライン作成",
       "description": "タイムライン チャートを作成して、一連のイベントを表示します。",
       "defaultTitle": "会社のマイルストーン",
@@ -8930,7 +8931,7 @@
       ]
     },
     "crontab-calendar": {
-      "name": "Crontab Calendar",
+      "name": "Crontabカレンダー",
       "description": "カレンダーでcronスケジュールを視覚化。ジョブの実行時期を見てみましょう。",
       "seo_title": "無料でオンラインのCrontab Calendarビジュアライザ",
       "seo_description": "オンラインで無料でカレンダーでcronスケジュールを視覚化。次の実行時期、スケジュールされたランの月別ビューを確認できます。",
@@ -11484,7 +11485,17 @@
       ],
       "anyGender": "どちらの性別でも可",
       "neutral": "中性的",
-      "clickToGenerate": "生成をクリック"
+      "clickToGenerate": "生成をクリック",
+      "origins": {
+        "english": "英語/アメリカ",
+        "spanish": "スペイン語/ヒスパニック",
+        "french": "フランス語",
+        "german": "ドイツ語",
+        "japanese": "日本語",
+        "chinese": "中国語",
+        "korean": "韓国語",
+        "any": "すべての起源"
+      }
     },
     "random-picker": {
       "name": "ランダムピッカーウェブサイト",
@@ -12398,6 +12409,1105 @@
         "IP範囲を計算",
         "ネットワークアーキテクチャを設計"
       ]
+    },
+    "iban-validator": {
+      "name": "IBAN検証ツール",
+      "description": "ヨーロッパ諸国のIBAN銀行口座番号を検証・解析します。",
+      "seo_title": "無料のIBAN検証ツール – IBAN番号をチェック",
+      "seo_description": "IBAN銀行口座番号をオンラインで無料で検証できます。形式、国コード、チェックサムを確認できます。ヨーロッパ全域の国をサポートしています。迅速かつ安全です。",
+      "inputLabel": "IBANを入力してください",
+      "placeholder": "例: DE89370400440532013000",
+      "validate": "検証",
+      "valid": "有効なIBAN",
+      "invalid": "無効なIBAN",
+      "country": "国",
+      "checkDigits": "チェックディジット",
+      "bankCode": "銀行コード",
+      "bban": "BBAN（基本銀行口座番号）",
+      "formatted": "形式化されたIBAN",
+      "copy": "コピー",
+      "exampleIbans": "IBANの例",
+      "errors": {
+        "empty": "IBANを入力してください",
+        "invalidFormat": "IBANの形式が無効です",
+        "unknownCountry": "国コードが不明です",
+        "invalidLength": "長さが不正確です（期待値：{expected}文字、実際には{actual}文字）",
+        "invalidChecksum": "チェックサムが無効です。IBANが正しくない可能性があります"
+      },
+      "detailed_description": "IBAN検証ツールは、国際銀行口座番号（IBAN）を検証するための包括的なツールです。ヨーロッパ全域の国のIBAN番号の形式、国コード、長さ、チェックサムをチェックします。また、IBANを解析して銀行コード、国情報、BBANの詳細を表示します。",
+      "usage_steps": [
+        "入力フィールドにIBAN番号を入力または貼り付けます",
+        "「検証」ボタンをクリックしてIBANをチェックします",
+        "国情報や銀行情報を含む検証結果を確認します",
+        "例IBANを使用して異なる国の形式をテストします",
+        "銀行送金に使用するために形式化されたIBANをコピーします"
+      ],
+      "usage_examples": [
+        "国際銀行送金前にIBANを確認する",
+        "顧客から提供された銀行口座番号をチェックする",
+        "支払い処理システムでのIBAN形式の検証"
+      ]
+    },
+    "vat-calculator": {
+      "name": "VAT計算機",
+      "description": "ヨーロッパ各国の異なるVAT（付加価値税）率を計算します。",
+      "seo_title": "無料VAT計算機（オンライン） – EU税務計算ツール",
+      "seo_description": "ヨーロッパ各国のVATをオンラインで無料で計算できます。VATを加算または差し引くことができ、標準税率および割引税率にも対応しています。EU全域の国が対象です。",
+      "amount": "金額",
+      "calculationMode": "計算モード",
+      "addVat": "金額にVATを加算",
+      "removeVat": "金額からVATを差し引く",
+      "vatOnly": "VATのみを計算",
+      "useCustomRate": "カスタムVAT率を使用",
+      "customRate": "カスタム税率",
+      "country": "国",
+      "rateType": "税率の種類",
+      "standardRate": "標準税率",
+      "reducedRate": "割引税率",
+      "reducedRates": "割引税率（複数）",
+      "superReducedRate": "超割引税率",
+      "netAmount": "純額",
+      "vatAmount": "VAT額",
+      "grossAmount": "総額",
+      "euVatRates": "EUのVAT税率一覧",
+      "detailed_description": "VAT計算機は、ヨーロッパ各国における付加価値税を計算するための包括的なツールです。EU加盟国すべての標準税率、割引税率、超割引税率に対応しています。純額にVATを加算したり、総額からVATを差し引いたり、VATのみを計算したりできます。",
+      "usage_steps": [
+        "VATを計算したい金額を入力します",
+        "計算モード（VATの加算、差し引き、またはVATのみ）を選択します",
+        "国を選択するか、カスタムVAT率を入力します",
+        "税率の種類（標準税率、割引税率、超割引税率）を選択します",
+        "計算された純額、VAT額、総額を確認します"
+      ],
+      "usage_examples": [
+        "請求書やビジネス取引のVATを計算する",
+        "VAT込みの価格から純額を算出する",
+        "EU各国のVAT率を比較する"
+      ]
+    },
+    "carbon-footprint-calculator": {
+      "name": "カーボンフットプリント計算機",
+      "description": "交通、エネルギー、ライフスタイルから個人のカーボンフットプリントを計算します。",
+      "seo_title": "無料カーボンフットプリント計算機 - CO2排出量計算",
+      "seo_description": "カーボンフットプリントを無料でオンライン計算。交通、家庭エネルギー、食事からのCO2排出量を追跡。",
+      "monthly": "月間",
+      "yearly": "年間",
+      "month": "月",
+      "year": "年",
+      "transportation": "交通",
+      "carDistance": "車の走行距離",
+      "petrol": "ガソリン",
+      "diesel": "ディーゼル",
+      "hybrid": "ハイブリッド",
+      "electric": "電気",
+      "flightHours": "飛行時間",
+      "shortHaul": "短距離 (<3時間)",
+      "mediumHaul": "中距離 (3-6時間)",
+      "longHaul": "長距離 (>6時間)",
+      "trainDistance": "電車の距離",
+      "busDistance": "バスの距離",
+      "homeEnergy": "家庭エネルギー",
+      "electricity": "電気",
+      "naturalGas": "天然ガス",
+      "heatingOil": "暖房用オイル",
+      "lifestyle": "ライフスタイル",
+      "dietType": "食事タイプ",
+      "diets": {
+        "meat": "肉食中心",
+        "average": "平均的",
+        "vegetarian": "ベジタリアン",
+        "vegan": "ヴィーガン"
+      },
+      "results": "あなたのカーボンフットプリント",
+      "total": "合計",
+      "treesNeeded": "相殺に必要な木",
+      "trees": "本/年",
+      "levels": {
+        "low": "低影響",
+        "average": "平均",
+        "high": "高影響",
+        "veryHigh": "非常に高い影響"
+      },
+      "detailed_description": "カーボンフットプリント計算機は、交通、家庭エネルギー使用、食事の選択からCO2排出量を計算します。",
+      "usage_steps": [
+        "月間または年間の計算期間を選択",
+        "交通データを入力",
+        "家庭エネルギー消費を入力",
+        "食事タイプを選択",
+        "総カーボンフットプリントを確認"
+      ],
+      "usage_examples": [
+        "個人の環境への影響を追跡",
+        "異なるライフスタイル選択を比較",
+        "カーボンオフセット戦略を計画"
+      ]
+    },
+    "gdpr-consent-generator": {
+      "name": "GDPR同意生成ツール",
+      "description": "GDPR準拠のCookie同意バナーとプライバシーポリシーテンプレートを生成します。",
+      "seo_title": "無料GDPR Cookie同意生成ツール",
+      "seo_description": "GDPR準拠のCookie同意バナーとプライバシーポリシーを無料でオンライン生成。",
+      "websiteName": "ウェブサイト名",
+      "websiteUrl": "ウェブサイトURL",
+      "companyName": "会社名",
+      "privacyEmail": "プライバシー連絡先メール",
+      "cookieTypes": "Cookieの種類",
+      "cookies": {
+        "necessary": "必須",
+        "analytics": "分析",
+        "marketing": "マーケティング",
+        "preferences": "設定"
+      },
+      "position": "バナー位置",
+      "positionTop": "上部",
+      "positionBottom": "下部",
+      "theme": "テーマ",
+      "themeLight": "ライト",
+      "themeDark": "ダーク",
+      "htmlCode": "HTMLコード",
+      "cssCode": "CSSコード",
+      "privacyPolicy": "プライバシーポリシーテンプレート",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "bannerTitle": "Cookie同意",
+      "decline": "拒否",
+      "customize": "カスタマイズ",
+      "acceptAll": "すべて承認",
+      "disclaimer": "このジェネレーターは参考用のテンプレートを提供します。",
+      "detailed_description": "GDPR同意生成ツールは、欧州データ保護規制に準拠したCookie同意バナーを作成します。",
+      "usage_steps": [
+        "ウェブサイト情報を入力",
+        "Cookieの種類を選択",
+        "バナー位置とテーマを選択",
+        "コードをコピー",
+        "プライバシーポリシーをカスタマイズ"
+      ],
+      "usage_examples": [
+        "ウェブサイトにGDPR準拠のCookie同意を追加",
+        "プライバシーポリシー文書を作成",
+        "Cookie設定管理を実装"
+      ]
+    },
+    "metric-imperial-converter": {
+      "name": "メートル法・ヤードポンド法変換",
+      "description": "長さ、重量、体積などのメートル法とヤードポンド法の単位を変換します。",
+      "seo_title": "無料メートル法ヤードポンド法変換",
+      "seo_description": "メートル法とヤードポンド法の単位を無料でオンライン変換。",
+      "categories": {
+        "length": "長さ",
+        "weight": "重量",
+        "volume": "体積",
+        "temperature": "温度",
+        "area": "面積",
+        "speed": "速度"
+      },
+      "from": "変換元",
+      "to": "変換先",
+      "swap": "入れ替え",
+      "metric": "メートル法",
+      "imperial": "ヤードポンド法",
+      "quickReference": "クイックリファレンス",
+      "detailed_description": "メートル法・ヤードポンド法変換は、長さ、重量、体積、温度、面積、速度の変換をサポートします。",
+      "usage_steps": [
+        "変換カテゴリを選択",
+        "変換する値を入力",
+        "元の単位を選択",
+        "変換先の単位を選択",
+        "結果を確認"
+      ],
+      "usage_examples": [
+        "キロメートルをマイルに変換",
+        "キログラムをポンドに変換",
+        "摂氏を華氏に変換"
+      ]
+    },
+    "bic-swift-lookup": {
+      "name": "BIC/SWIFTコード検索",
+      "description": "国際銀行送金用のBIC/SWIFTコードを検索・検証します。",
+      "seo_title": "無料BIC SWIFTコード検索",
+      "seo_description": "BIC/SWIFTコードを無料でオンライン検索・検証。",
+      "inputLabel": "BIC/SWIFTコードを入力",
+      "placeholder": "例: DEUTDEFF",
+      "formatHint": "形式: 8または11文字",
+      "lookup": "検索",
+      "validBic": "有効なBIC/SWIFTコード",
+      "bankCode": "銀行コード",
+      "country": "国",
+      "locationCode": "所在地コード",
+      "branchCode": "支店コード",
+      "headOffice": "本店",
+      "specificBranch": "特定支店",
+      "bankInformation": "銀行情報",
+      "bankName": "銀行名",
+      "city": "都市",
+      "branch": "支店",
+      "copyBic": "BICをコピー",
+      "bicStructure": "BIC/SWIFTコード構造",
+      "structure": {
+        "bank": "銀行コード",
+        "country": "国",
+        "location": "所在地",
+        "branch": "支店（任意）"
+      },
+      "sampleCodes": "サンプルBICコード",
+      "errors": {
+        "empty": "BIC/SWIFTコードを入力してください",
+        "invalidFormat": "無効なBIC形式",
+        "unknownCountry": "不明な国コード"
+      },
+      "detailed_description": "BIC/SWIFT検索ツールは、国際送金に使用される銀行識別コードを検証し情報を提供します。",
+      "usage_steps": [
+        "BIC/SWIFTコードを入力",
+        "検索をクリック",
+        "コード構造を確認",
+        "銀行詳細を確認",
+        "サンプルコードを探索"
+      ],
+      "usage_examples": [
+        "国際送金前にBICコードを確認",
+        "SWIFTコードから銀行情報を検索",
+        "国境を越えた取引の支払い詳細を検証"
+      ]
+    },
+    "color-blindness-simulator": {
+      "name": "色覚障害シミュレーター",
+      "description": "さまざまなタイプの色覚障害を持つ人にとって色や画像がどのように見えるかをシミュレートします。",
+      "seo_title": "無料のオンライン色覚障害シミュレーター – アクセシビリティツール",
+      "seo_description": "オンラインで無料で色覚障害をシミュレートできます。プロタノピア、デュテラノピア、トリタノピアの人にとって色や画像がどのように見えるかをテストしましょう。アクセシブデザインに不可欠です。",
+      "selectColor": "色の選択",
+      "uploadImage": "画像のアップロード（オプション）",
+      "colorComparison": "色の比較",
+      "imagePreview": "画像プレビュー",
+      "original": "元の画像",
+      "aboutTitle": "色覚障害について",
+      "aboutDescription": "世界中で約8%の男性と0.5%の女性が色覚障害を持っています。このシミュレーターを使ってデザインをテストすることで、コンテンツがすべての人にとってアクセス可能であることを確認できます。",
+      "types": {
+        "normal": "正常",
+        "protanopia": "プロタノピア",
+        "deuteranopia": "デュテラノピア",
+        "tritanopia": "トリタノピア",
+        "achromatopsia": "全色盲"
+      },
+      "detailed_description": "色覚障害シミュレーターは、デザイナーや開発者が自分の作成した色や画像がさまざまなタイプの色覚障害を持つ人にとってどのように見えるかをテストするのに役立ちます。プロタノピア、デュテラノピア、トリタノピア、および完全な色覚障害のシミュレーションに対応しています。",
+      "usage_steps": [
+        "カラーピッカーを使って色を選択するか、16進数コードを入力してください",
+        "オプションとして画像をアップロードしてテストできます",
+        "異なる色覚障害のタイプをクリックしてシミュレーションを確認します",
+        "すべてのタイプで色がどのように見えるかを比較します",
+        "画像プレビューを使って完全な画像シミュレーションを確認します"
+      ],
+      "usage_examples": [
+        "ウェブサイトの配色をアクセシビリティの観点からテストする",
+        "チャートやグラフの色が区別できるかを確認する",
+        "UI要素がすべてのユーザーにとって見えやすいかを確認する"
+      ]
+    },
+    "credit-card-validator": {
+      "name": "クレジットカード検証ツール",
+      "description": "ルーンアルゴリズムを使用してクレジットカード番号を検証し、カードの種類を判定します。",
+      "seo_title": "無料のオンラインクレジットカード検証ツール – ルーンチェック",
+      "seo_description": "クレジットカード番号をオンラインで無料で検証できます。ルーンアルゴリズムを用いて番号の有効性を確認し、Visa、Mastercard、Amexなどのカード種類を識別します。",
+      "cardNumber": "カード番号",
+      "inputPlaceholder": "カード番号を入力してください...",
+      "validate": "検証",
+      "valid": "有効",
+      "invalid": "無効",
+      "luhnCheck": "ルーンチェック",
+      "passed": "検証に合格",
+      "failed": "検証に失敗",
+      "digits": "数字",
+      "digitsCount": "数字の総数",
+      "disclaimer": "このツールはカード番号の数学的な構造のみを検証します。カードが有効か、残高があるかは確認できません。信頼できないウェブサイトでは実際のカード番号を入力しないでください。",
+      "supportedCards": "対応するカード種類",
+      "detailed_description": "このクレジットカード検証ツールは、ルーンアルゴリズムを用いてクレジットカード番号が数学的に有効かどうかをチェックします。カードの種類（Visa、Mastercard、Amexなど）を自動的に判定し、詳細な検証結果を提供します。テストや開発目的のみに使用してください。",
+      "usage_steps": [
+        "入力フィールドにクレジットカード番号を入力します",
+        "番号は自動的にスペースでフォーマットされます",
+        "「検証」をクリックしてカードをチェックします",
+        "カードの種類、発行元、ルーンチェックの結果を確認します",
+        "数字の総数を確認してさらに検証を行います"
+      ],
+      "usage_examples": [
+        "支払いフォームの検証ロジックをテストする",
+        "処理前にカード番号の形式を確認する",
+        "番号の先頭文字からカード種類を識別する"
+      ]
+    },
+    "email-validator": {
+      "name": "メールアドレス検証",
+      "description": "メールアドレスの形式を検証し、一般的なタイプミスや使い捨てドメインをチェックします。",
+      "seo_title": "無料メールアドレス検証ツール - 形式チェック",
+      "seo_description": "メールアドレスを無料でオンライン検証。形式チェック、タイプミス検出、使い捨てメール識別。一括検証対応。",
+      "inputLabel": "Enter Email Addresses",
+      "inputPlaceholder": "1行に1つのメールアドレスを入力...",
+      "validate": "検証",
+      "valid": "Valid",
+      "invalid": "無効",
+      "localPart": "ローカル部分",
+      "domain": "ドメイン",
+      "tld": "TLD",
+      "freeProvider": "無料プロバイダー",
+      "disposable": "使い捨て",
+      "didYouMean": "もしかして",
+      "detailed_description": "Email Validator helps you verify email addresses for correct format and common issues. It detects typos in popular domains, identifies disposable email services, and validates the overall structure. Perfect for cleaning email lists and preventing invalid signups.",
+      "usage_steps": [
+        "Enter one or more email addresses (one per line)",
+        "Click Validate to check all emails",
+        "Review results showing valid and invalid addresses",
+        "Check for typo suggestions and disposable domain warnings",
+        "Use the summary to see total valid and invalid counts"
+      ],
+      "usage_examples": [
+        "Validate email lists before sending campaigns",
+        "Check user input during registration",
+        "Clean up contact databases"
+      ]
+    },
+    "phone-formatter": {
+      "name": "電話番号フォーマッター",
+      "description": "国際標準に従って電話番号をフォーマットします。",
+      "seo_title": "無料電話番号フォーマッター - 国際形式",
+      "seo_description": "電話番号を国際標準形式に無料でフォーマット。14カ国以上対応。国番号付き。",
+      "country": "国",
+      "phoneNumber": "電話番号",
+      "inputPlaceholder": "電話番号を入力...",
+      "includeDialCode": "国番号を含める",
+      "format": "フォーマット",
+      "formatPattern": "フォーマットパターン",
+      "example": "例",
+      "result": "結果",
+      "copy": "Copy",
+      "allFormats": "すべての国のフォーマット",
+      "detailed_description": "電話番号フォーマッターは、生の電話番号を適切な国際形式に変換します。14カ国以上から選択し、国番号付きの正しくフォーマットされた番号を取得できます。",
+      "usage_steps": [
+        "Select the target country from the dropdown",
+        "Enter the phone number digits",
+        "Choose whether to include the country dial code",
+        "Click Format to generate the formatted number",
+        "Copy the result to clipboard"
+      ],
+      "usage_examples": [
+        "Format phone numbers for international calling",
+        "Standardize contact lists for CRM systems",
+        "Prepare phone numbers for SMS campaigns"
+      ]
+    },
+    "aspect-ratio-resizer": {
+      "name": "アスペクト比リサイザー",
+      "description": "特定のアスペクト比やソーシャルメディアサイズに画像をリサイズします。",
+      "seo_title": "無料アスペクト比リサイザー - 画像リサイズツール",
+      "seo_description": "画像を任意のアスペクト比に無料でリサイズ。Instagram、Facebook、YouTube、Twitter用のプリセットサイズ。",
+      "uploadImage": "画像をアップロード",
+      "originalSize": "元のサイズ",
+      "width": "Width",
+      "height": "高さ",
+      "lockAspectRatio": "アスペクト比を固定",
+      "presetRatios": "プリセット比率",
+      "socialMediaSizes": "ソーシャルメディアサイズ",
+      "outputSize": "出力サイズ",
+      "download": "ダウンロード",
+      "preview": "プレビュー",
+      "detailed_description": "アスペクト比リサイザーは、アスペクト比を維持または変更しながら画像を特定のサイズにリサイズするのに役立ちます。一般的な比率（16:9、4:3、1:1）やソーシャルメディアプラットフォーム用のプリセットが含まれています。",
+      "usage_steps": [
+        "Upload an image using the file input",
+        "View the original dimensions",
+        "Enter custom width and height or use presets",
+        "Toggle aspect ratio lock as needed",
+        "Click Download to save the resized image"
+      ],
+      "usage_examples": [
+        "Resize photos for social media posts",
+        "Create thumbnails with specific dimensions",
+        "Prepare images for website banners"
+      ]
+    },
+    "markdown-to-pdf": {
+      "name": "Markdown to PDF",
+      "description": "カスタマイズ可能なスタイルでMarkdownドキュメントをPDFに変換。",
+      "seo_title": "無料オンラインMarkdownからPDF変換",
+      "seo_description": "MarkdownをPDFに無料でオンライン変換。見出し、リスト、表、コードブロックに対応。フォントサイズとページサイズをカスタマイズ可能。アップロード不要。",
+      "documentTitle": "ドキュメントタイトル",
+      "fontSize": "フォントサイズ",
+      "pageSize": "ページサイズ",
+      "markdownInput": "Markdown Input",
+      "inputPlaceholder": "Markdownを入力...",
+      "preview": "プレビュー",
+      "generatePdf": "Generate PDF",
+      "clear": "Clear",
+      "supportedSyntax": "Supported Markdown Syntax",
+      "headings": "見出し (# ## ###)",
+      "boldItalic": "太字 & 斜体",
+      "lists": "リスト (- または 1.)",
+      "codeBlocks": "コードブロック",
+      "tables": "テーブル",
+      "blockquotes": "引用",
+      "horizontalRules": "水平線",
+      "inlineCode": "インラインコード",
+      "detailed_description": "Markdown to PDF converter transforms your Markdown documents into professionally formatted PDF files. Supports headings, lists, tables, code blocks, blockquotes, and more. Customize font size and page size before generating.",
+      "usage_steps": [
+        "Enter or paste your Markdown content",
+        "Set the document title for the PDF",
+        "Choose font size and page size",
+        "Preview the formatted output",
+        "Click Generate PDF to create and download"
+      ],
+      "usage_examples": [
+        "Convert documentation to PDF for sharing",
+        "Create printable reports from Markdown notes",
+        "Generate PDF versions of README files"
+      ]
+    },
+    "speech-timer": {
+      "name": "スピーチタイマー",
+      "description": "スピーチやプレゼンの時間を計測",
+      "seo_title": "無料オンラインスピーチタイマー",
+      "seo_description": "無料オンラインスピーチタイマー。スピーチ時間の追跡と単語数の推定。",
+      "detailed_description": "スピーチタイマーは効果的にスピーチを練習するためのツールです。",
+      "usage_steps": [
+        "目標時間を設定",
+        "テキストを入力して単語数を計算",
+        "開始をクリック",
+        "進捗を監視",
+        "アラートを受信"
+      ],
+      "usage_examples": [
+        "TEDスタイルのプレゼン練習",
+        "学会発表の時間計測",
+        "面接プレゼンの準備"
+      ],
+      "duration": "時間",
+      "minutes": "分",
+      "wordsPerMinute": "1分あたりの単語数",
+      "estimatedWords": "推定単語数",
+      "start": "開始",
+      "pause": "一時停止",
+      "reset": "リセット",
+      "timeRemaining": "残り時間",
+      "speechText": "スピーチテキスト",
+      "speechPlaceholder": "ここにスピーチを貼り付け...",
+      "wordCount": "単語数",
+      "speakingPace": "話速",
+      "slow": "ゆっくり",
+      "normal": "普通",
+      "fast": "速い",
+      "timeUp": "時間です！",
+      "presets": "プリセット",
+      "targetDuration": "目標時間",
+      "min": "分",
+      "words": "語",
+      "remaining": "残り"
+    },
+    "habit-tracker": {
+      "name": "習慣トラッカー",
+      "description": "毎日の習慣を追跡し、連続記録を構築",
+      "seo_title": "無料オンライン習慣トラッカー",
+      "seo_description": "無料オンライン習慣トラッカー。毎日の習慣を構築・維持。",
+      "detailed_description": "習慣トラッカーは毎日の習慣を構築・維持するためのツールです。",
+      "usage_steps": [
+        "新しい習慣を追加",
+        "習慣をクリックして今日完了をマーク",
+        "連続記録を確認",
+        "週間完了率を追跡",
+        "不要な習慣を削除"
+      ],
+      "usage_examples": [
+        "毎日の運動を追跡",
+        "読書習慣を監視",
+        "瞑想の練習を構築"
+      ],
+      "addHabit": "習慣を追加",
+      "habitName": "習慣名",
+      "habitPlaceholder": "習慣名を入力...",
+      "selectIcon": "アイコンを選択",
+      "add": "追加",
+      "cancel": "キャンセル",
+      "streak": "連続",
+      "days": "日",
+      "today": "今日",
+      "completed": "完了",
+      "noHabits": "まだ習慣がありません。最初の習慣を追加しましょう！",
+      "deleteConfirm": "この習慣を削除しますか？",
+      "completedToday": "今日完了",
+      "weeklyProgress": "週間進捗",
+      "habit": "習慣",
+      "tip": "ヒント：日をクリックして完了をマークします。毎日習慣を完了してストリークを構築しましょう！"
+    },
+    "flip-text": {
+      "name": "テキスト反転",
+      "description": "テキストを上下反転、ミラー、逆転",
+      "seo_title": "無料オンラインテキスト反転ジェネレーター",
+      "seo_description": "無料オンラインテキスト反転ジェネレーター。上下逆さま、ミラー、逆転テキストを作成。",
+      "detailed_description": "テキスト反転ジェネレーターはテキストを創造的に変換します。",
+      "usage_steps": [
+        "入力欄にテキストを入力",
+        "すべての反転バリエーションを即座に表示",
+        "任意の結果をクリックしてコピー",
+        "反転したテキストをどこにでも貼り付け",
+        "様々な効果のために異なるテキストを試す"
+      ],
+      "usage_examples": [
+        "ユニークなSNS投稿を作成",
+        "面白いユーザー名を作成",
+        "友達にクリエイティブなメッセージを送信"
+      ],
+      "inputLabel": "テキスト入力",
+      "inputPlaceholder": "ここにテキストを入力...",
+      "upsideDown": "上下逆さま",
+      "mirror": "ミラー",
+      "reversed": "逆転",
+      "upsideDownReversed": "逆さま+逆転",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "mirrored": "ミラー",
+      "outputPlaceholder": "結果がここに表示されます...",
+      "aboutTitle": "フリップテキストについて",
+      "aboutDescription": "フリップテキストは特殊なUnicode文字を使用して、上下逆さまやミラーテキスト効果を作成します。これらの文字はほとんどのウェブサイトやソーシャルメディアプラットフォームで動作します。"
+    },
+    "small-text-generator": {
+      "name": "小さい文字ジェネレーター",
+      "description": "上付き、下付き、スモールキャップス文字を生成",
+      "seo_title": "無料オンライン小さい文字ジェネレーター",
+      "seo_description": "無料オンライン小さい文字ジェネレーター。上付き、下付き、スモールキャップス文字を作成。",
+      "detailed_description": "小さい文字ジェネレーターは上付き、下付き、スモールキャップスを含む小さな文字バリエーションを作成します。",
+      "usage_steps": [
+        "入力欄にテキストを入力",
+        "上付き、下付き、スモールキャップスバージョンを表示",
+        "お好みのスタイルをクリックしてコピー",
+        "小さい文字をどこにでも貼り付け",
+        "他のテキストと組み合わせて効果を出す"
+      ],
+      "usage_examples": [
+        "ユニークなInstagramプロフィールを作成",
+        "数学記号を作成",
+        "クリエイティブなユーザー名をデザイン"
+      ],
+      "inputLabel": "テキスト入力",
+      "inputPlaceholder": "ここにテキストを入力...",
+      "superscript": "上付き",
+      "subscript": "下付き",
+      "smallCaps": "スモールキャップス",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "outputPlaceholder": "結果がここに表示されます...",
+      "usageTitle": "使用のヒント",
+      "usageDescription": "小さいテキストはほとんどのソーシャルメディアプラットフォームで動作します。一部の文字には小さいバージョンがなく、通常のテキストとして表示されます。"
+    },
+    "strikethrough-text": {
+      "name": "取り消し線テキスト",
+      "description": "取り消し線、下線、クロスアウトテキストを生成",
+      "seo_title": "無料オンライン取り消し線テキストジェネレーター",
+      "seo_description": "無料オンライン取り消し線テキストジェネレーター。取り消し線、下線、スラッシュテキストを作成。",
+      "detailed_description": "取り消し線テキストジェネレーターは様々なテキスト装飾スタイルを作成します。",
+      "usage_steps": [
+        "入力欄にテキストを入力",
+        "すべての取り消し線バリエーションを表示",
+        "お好みのスタイルをクリックしてコピー",
+        "スタイル付きテキストをどこにでも貼り付け",
+        "強調や訂正に使用"
+      ],
+      "usage_examples": [
+        "文書で訂正を表示",
+        "SNS投稿で強調を作成",
+        "プロフィール用の装飾テキストを作成"
+      ],
+      "inputLabel": "テキスト入力",
+      "inputPlaceholder": "ここにテキストを入力...",
+      "strikethrough": "取り消し線",
+      "underline": "下線",
+      "crosshatch": "クロスハッチ",
+      "slash": "スラッシュ",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "outputPlaceholder": "結果がここに表示されます...",
+      "usageTitle": "使用のヒント",
+      "usage1": "ほとんどのソーシャルメディアプラットフォームで動作します",
+      "usage2": "スタイル付きテキストをどこにでもコピー＆ペーストできます",
+      "usage3": "一部のアプリではすべてのスタイルが正しく表示されない場合があります"
+    },
+    "roman-numeral-converter": {
+      "name": "ローマ数字変換器",
+      "description": "ローマ数字とアラビア数字の相互変換",
+      "seo_title": "無料オンラインローマ数字変換器",
+      "seo_description": "無料オンラインローマ数字変換器。ローマ数字をアラビア数字に変換、またはその逆。",
+      "detailed_description": "ローマ数字変換器はローマ数字とアラビア数字間で変換します。",
+      "usage_steps": [
+        "変換方向を選択",
+        "ローマ数字またはアラビア数字を入力",
+        "変換をクリックして結果を表示",
+        "変換された値をコピー",
+        "参照チャートを使用してヘルプを得る"
+      ],
+      "usage_examples": [
+        "年をローマ数字に変換",
+        "時計のローマ数字をデコード",
+        "ローマ数字システムを学習"
+      ],
+      "arabicToRoman": "アラビア → ローマ",
+      "romanToArabic": "ローマ → アラビア",
+      "arabicNumber": "アラビア数字",
+      "romanNumeral": "ローマ数字",
+      "arabicPlaceholder": "数字を入力（1-3999）...",
+      "romanPlaceholder": "ローマ数字を入力...",
+      "result": "結果",
+      "convert": "変換",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "invalidInput": "無効な入力",
+      "referenceTitle": "参照チャート"
+    },
+    "binary-to-text": {
+      "name": "バイナリからテキスト",
+      "description": "バイナリとテキストの相互変換",
+      "seo_title": "無料オンラインバイナリテキスト変換器",
+      "seo_description": "無料オンラインバイナリテキスト変換器。バイナリコードをテキストに変換、またはテキストをバイナリに変換。",
+      "detailed_description": "バイナリテキスト変換器はバイナリコードと読み取り可能なテキスト間で変換します。",
+      "usage_steps": [
+        "変換モードを選択",
+        "バイナリコードまたはテキストを入力",
+        "変換をクリックして結果を表示",
+        "変換された出力をコピー",
+        "スワップボタンでモードを素早く切り替え"
+      ],
+      "usage_examples": [
+        "バイナリメッセージをデコード",
+        "バイナリエンコーディングを学習",
+        "秘密のバイナリメッセージを作成"
+      ],
+      "binaryToText": "バイナリ → テキスト",
+      "textToBinary": "テキスト → バイナリ",
+      "binaryInput": "バイナリ入力",
+      "textInput": "テキスト入力",
+      "binaryOutput": "バイナリ出力",
+      "textOutput": "テキスト出力",
+      "binaryPlaceholder": "バイナリを入力（例: 01001000 01101001）...",
+      "textPlaceholder": "変換するテキストを入力...",
+      "outputPlaceholder": "結果がここに表示されます...",
+      "convert": "変換",
+      "swap": "スワップ",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "invalidBinary": "無効なバイナリ入力",
+      "exampleTitle": "例",
+      "text": "テキスト",
+      "binary": "バイナリ"
+    },
+    "fraction-calculator": {
+      "name": "分数計算機",
+      "description": "分数の加減乗除計算",
+      "seo_title": "無料オンライン分数計算機",
+      "seo_description": "無料オンライン分数計算機。分数の加減乗除を簡単に計算し、約分された結果と小数値を取得。",
+      "detailed_description": "分数計算機は分数の加減乗除を行い、結果は自動的に最簡分数に約分され、小数値も表示されます。",
+      "usage_steps": [
+        "最初の分数を入力",
+        "演算子を選択",
+        "2番目の分数を入力",
+        "計算をクリックして結果を表示",
+        "約分された分数と小数値を確認"
+      ],
+      "usage_examples": [
+        "数学の宿題を解く",
+        "レシピの分量を計算",
+        "比率と割合を扱う"
+      ],
+      "fraction1": "分数 1",
+      "fraction2": "分数 2",
+      "result": "結果",
+      "calculate": "計算",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "addition": "加算",
+      "subtraction": "減算",
+      "multiplication": "乗算",
+      "division": "除算"
+    },
+    "percentage-change-calculator": {
+      "name": "パーセント変化計算機",
+      "description": "2つの値間のパーセント増減を計算",
+      "seo_title": "無料オンラインパーセント変化計算機",
+      "seo_description": "無料オンラインパーセント変化計算機。2つの値間のパーセント増加または減少を計算。",
+      "detailed_description": "パーセント変化計算機は2つの値間のパーセント増加または減少を計算し、価格変動、成長率、データ比較の分析に使用します。",
+      "usage_steps": [
+        "元の値を入力",
+        "新しい値を入力",
+        "計算をクリックしてパーセント変化を表示",
+        "増加か減少かを確認",
+        "結果をコピー"
+      ],
+      "usage_examples": [
+        "価格変動を計算",
+        "売上成長を分析",
+        "パフォーマンス指標を比較"
+      ],
+      "oldValue": "元の値",
+      "newValue": "新しい値",
+      "oldValuePlaceholder": "元の値を入力...",
+      "newValuePlaceholder": "新しい値を入力...",
+      "calculate": "計算",
+      "swap": "入れ替え",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "percentageChange": "パーセント変化",
+      "increase": "増加",
+      "decrease": "減少",
+      "difference": "差",
+      "formula": "公式",
+      "formulaText": "((新 - 旧) / |旧|) × 100%",
+      "example1Title": "株価",
+      "example1": "投資変動を追跡",
+      "example2Title": "給与",
+      "example2": "昇給率を計算",
+      "example3Title": "売上",
+      "example3": "成長率を測定"
+    },
+    "random-color-generator": {
+      "name": "ランダムカラージェネレーター",
+      "description": "HEX、RGB、HSL形式でランダムな色を生成",
+      "seo_title": "無料オンラインランダムカラージェネレーター",
+      "seo_description": "無料オンラインランダムカラージェネレーター。HEX、RGB、HSL値でランダムな色を生成し、デザインプロジェクト用のカラーパレットを作成。",
+      "detailed_description": "ランダムカラージェネレーターは複数の形式出力（HEX、RGB、HSL）でランダムな色を作成します。デザインのインスピレーションやクリエイティブプロジェクト用に単色またはパレット全体を生成します。",
+      "usage_steps": [
+        "生成する色の数を設定",
+        "お好みの色形式を選択",
+        "生成をクリックしてランダムな色を作成",
+        "任意の色をクリックして値をコピー",
+        "すべてコピーでパレット全体を取得"
+      ],
+      "usage_examples": [
+        "デザインの色のインスピレーションを見つける",
+        "ウェブサイト用のカラーパレットを生成",
+        "アート用のランダムな配色を作成"
+      ],
+      "count": "色の数",
+      "format": "形式",
+      "generate": "生成",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "copyAll": "すべてコピー",
+      "clickToCopy": "クリックしてコピー",
+      "palettePreview": "パレットプレビュー"
+    },
+    "anagram-solver": {
+      "name": "アナグラムソルバー",
+      "description": "手違いの文字から全ての可能な単語を見つけ出します",
+      "seo_title": "無料アナグラムソルバー オンライン - 単語検索ツール",
+      "seo_description": "無料のオンラインアナグラムソルバー。手違いの文字から全ての可能な単語を見つけ出します。Scrabbleやクロスワードパズルなどの単語ゲームに最適です。",
+      "detailed_description": "アナグラムソルバーは、あなたが提供した文字を並べ替えて作成できるすべての有効な英語の単語を見つけるのに役立ちます。単語ゲーム、パズル、語彙の構築に最適です。",
+      "usage_steps": [
+        "手違いの文字を入力",
+        "全ての可能な単語の組み合わせを確認",
+        "個別の単語をコピーする",
+        "単語ゲームに結果を使用",
+        "異なる文字の組み合わせを試す"
+      ],
+      "usage_examples": [
+        "Scrabbleのパズルを解く",
+        "クロスワードの答えを見つける",
+        "新しい語彙を発見"
+      ],
+      "inputLabel": "文字を入力",
+      "inputPlaceholder": "手違いの文字を入力して解読...",
+      "results": "結果",
+      "noResults": "単語が見つかりませんでした。異なる文字を試してください。",
+      "copy": "コピー",
+      "copied": "コピーされました！",
+      "tipTitle": "ヒント",
+      "tipDescription": "2-15文字を入力してすべての可能な英語の単語を見つけます。結果は長さでソートされます。"
+    },
+    "word-unscrambler": {
+      "name": "ワードアナライザー",
+      "description": "シャッフルされた文字からすべての可能な単語を見つけます",
+      "seo_title": "無料ワードアナライザー オンライン - 文字シャッフルツール",
+      "seo_description": "無料のオンラインワードアナライザー。シャッフルされた文字から作成できるすべての単語を見つけます。Scrabble、Words with Friends、および単語パズルに最適。",
+      "detailed_description": "ワードアナライザーはシャッフルされた文字からすべての可能な単語を見つけます。結果は単語の長さにグループ化され、ゲームに最適な単語を見つけることが簡単です。",
+      "usage_steps": [
+        "シャッフルされた文字を入力",
+        "長さにグループ化された単語を表示",
+        "必要な単語をコピー",
+        "ワードゲームに使用",
+        "高得点の単語を見つける"
+      ],
+      "usage_examples": [
+        "Scrabbleで勝つ",
+        "単語パズルを解く",
+        "語彙を改善"
+      ],
+      "inputLabel": "シャッフルされた文字を入力",
+      "inputPlaceholder": "ここに文字を入力...",
+      "found": "見つかりました",
+      "words": "単語",
+      "letters": "文字",
+      "copyAll": "すべてコピー",
+      "copied": "コピーしました！",
+      "noResults": "単語が見つかりませんでした"
+    },
+    "text-to-pdf": {
+      "name": "テキストからPDF",
+      "description": "プレーンテキストをPDFドキュメントに変換",
+      "seo_title": "無料オンラインテキストからPDF変換ツール",
+      "seo_description": "無料オンラインテキストからPDF変換ツール。プレーンテキストからプロフェッショナルなPDFドキュメントを作成。フォント、サイズ、ページレイアウトをカスタマイズ。",
+      "detailed_description": "テキストからPDF変換ツールは、プレーンテキストをプロフェッショナルなPDFドキュメントに変換します。フォント、サイズ、ページ形式をカスタマイズして、希望通りのドキュメントを作成できます。",
+      "usage_steps": [
+        "テキストを入力または貼り付け",
+        "オプションでタイトルを追加",
+        "フォントとサイズを設定",
+        "ページサイズを選択（A4またはレター）",
+        "PDFをダウンロード"
+      ],
+      "usage_examples": [
+        "印刷可能なドキュメントを作成",
+        "メモをPDFとして保存",
+        "シンプルなレポートを生成"
+      ],
+      "title": "タイトル",
+      "optional": "オプション",
+      "titlePlaceholder": "ドキュメントタイトル...",
+      "fontSize": "フォントサイズ",
+      "font": "フォント",
+      "pageSize": "ページサイズ",
+      "content": "内容",
+      "contentPlaceholder": "ここにテキストを入力...",
+      "characters": "文字",
+      "generating": "生成中...",
+      "downloadPdf": "PDFをダウンロード",
+      "preview": "プレビュー",
+      "previewPlaceholder": "テキストがここに表示されます..."
+    },
+    "unit-price-calculator": {
+      "name": "単価計算機",
+      "description": "単価を比較して最もお得な商品を見つける",
+      "seo_title": "無料オンライン単価計算機 - 商品価値を比較",
+      "seo_description": "無料オンライン単価計算機。単価を比較して最もお得な商品を見つけます。賢い買い物と価格比較に最適。",
+      "detailed_description": "単価計算機は、異なるサイズと価格の商品を比較して、最もお得な商品を見つけるのに役立ちます。各商品の価格と数量を入力するだけで、どれが最も単価が安いかがわかります。",
+      "usage_steps": [
+        "商品名を入力（オプション）",
+        "価格を入力",
+        "数量と単位を入力",
+        "単価を比較",
+        "最もお得な商品を見つける"
+      ],
+      "usage_examples": [
+        "スーパーの価格を比較",
+        "最もお得なまとめ買いを見つける",
+        "賢い買い物の決定"
+      ],
+      "item": "商品",
+      "productName": "商品名",
+      "namePlaceholder": "例：ブランドA",
+      "price": "価格",
+      "quantity": "数量",
+      "unitPrice": "単価",
+      "addItem": "商品を追加",
+      "bestValue": "最もお得",
+      "bestValueMessage": "ハイライトされた商品が単価最安です！",
+      "tipTitle": "買い物のヒント",
+      "tipDescription": "買い物の際は常に単価を比較しましょう。大きいパッケージが必ずしも単価が安いとは限りません！"
+    },
+    "bionic-reading-converter": {
+      "name": "バイオニックリーディング変換",
+      "description": "テキストをバイオニックリーディング形式に変換して速読",
+      "seo_title": "無料オンラインバイオニックリーディング変換ツール",
+      "seo_description": "無料オンラインバイオニックリーディング変換ツール。単語の先頭を太字にしてテキストを変換。より速く読み、集中力を向上。",
+      "detailed_description": "バイオニックリーディング変換ツールは、各単語の最初の文字を太字にしてテキストを変換し、人工的な注視点を作成して目を導き、より速く読み、理解力を向上させます。",
+      "usage_steps": [
+        "テキストを貼り付け",
+        "注視強度を調整",
+        "バイオニックテキストをプレビュー",
+        "HTML出力をコピー",
+        "ドキュメントで使用"
+      ],
+      "usage_examples": [
+        "読書速度を上げる",
+        "読書中の集中力を向上",
+        "ディスレクシアの支援"
+      ],
+      "inputLabel": "テキストを入力",
+      "inputPlaceholder": "変換するテキストをここに貼り付け...",
+      "fixationStrength": "注視強度",
+      "light": "弱",
+      "medium": "中",
+      "strong": "強",
+      "preview": "プレビュー",
+      "previewPlaceholder": "変換されたテキストがここに表示されます...",
+      "copyHtml": "HTMLをコピー",
+      "copied": "コピーしました！",
+      "whatIsBionic": "バイオニックリーディングとは？",
+      "bionicDescription": "バイオニックリーディングは、単語の最初の文字をハイライトして注視点を作成し、脳がより速く単語を完成させるのを助ける方法です。",
+      "benefits": "メリット",
+      "benefit1": "読書速度が最大50%向上",
+      "benefit2": "集中力と記憶力の向上",
+      "benefit3": "目の疲れを軽減",
+      "htmlOutput": "HTML出力",
+      "noOutput": "まだ出力がありません"
+    },
+    "palindrome-checker": {
+      "name": "回文チェッカー",
+      "description": "テキストが前後同じかどうかをチェック",
+      "seo_title": "無料オンライン回文チェッカー - 単語とフレーズをテスト",
+      "seo_description": "無料オンライン回文チェッカー。単語、フレーズ、文が前後同じかどうかをテスト。言語愛好家のための楽しい単語ツール。",
+      "detailed_description": "回文チェッカーは、テキストが前後同じかどうかをテストします。スペース、句読点、大文字小文字を無視して、フレーズや文に隠れた回文を見つけることができます。",
+      "usage_steps": [
+        "単語またはフレーズを入力",
+        "比較オプションを選択",
+        "回文かどうかを確認",
+        "有名な回文の例を試す",
+        "自分の回文を作成"
+      ],
+      "usage_examples": [
+        "単語の回文をテスト",
+        "フレーズの回文を見つける",
+        "教育的な単語ゲーム"
+      ],
+      "inputLabel": "テキストを入力",
+      "inputPlaceholder": "単語またはフレーズを入力...",
+      "ignoreCase": "大文字小文字を無視",
+      "ignoreSpaces": "スペースを無視",
+      "ignorePunctuation": "句読点を無視",
+      "isPalindrome": "回文です！",
+      "notPalindrome": "回文ではありません",
+      "processedText": "処理されたテキスト",
+      "forward": "順方向",
+      "backward": "逆方向",
+      "examples": "これらの例を試してください"
+    },
+    "character-map": {
+      "name": "文字マップ",
+      "description": "特殊文字と記号を閲覧してコピー",
+      "seo_title": "無料オンライン文字マップ - 特殊記号とUnicode",
+      "seo_description": "無料オンライン文字マップ。特殊文字、記号、絵文字、Unicode文字を閲覧してコピー。クリックで任意の文字を即座にコピー。",
+      "detailed_description": "文字マップは、数千の特殊文字、記号、絵文字に簡単にアクセスできます。カテゴリで閲覧するか検索して完璧な文字を見つけ、クリックしてコピーします。",
+      "usage_steps": [
+        "文字カテゴリを閲覧",
+        "または特定の文字を検索",
+        "任意の文字をクリックしてコピー",
+        "必要な場所に貼り付け",
+        "最近使用した文字を表示"
+      ],
+      "usage_examples": [
+        "ドキュメントに記号を追加",
+        "テキストに絵文字を挿入",
+        "数学記号を見つける"
+      ],
+      "searchPlaceholder": "文字を検索...",
+      "arrows": "矢印",
+      "math": "数学",
+      "currency": "通貨",
+      "punctuation": "句読点",
+      "shapes": "図形",
+      "emoji": "絵文字",
+      "hands": "手",
+      "hearts": "ハート",
+      "weather": "天気",
+      "music": "音楽",
+      "tech": "テクノロジー",
+      "recentlyUsed": "最近使用",
+      "searchResults": "検索結果",
+      "tip": "任意の文字をクリックしてクリップボードにコピー"
+    },
+    "text-repeater": {
+      "name": "テキストリピーター",
+      "description": "カスタム区切り文字でテキストを複数回繰り返す",
+      "seo_title": "無料オンラインテキストリピーター - テキスト複製ツール",
+      "seo_description": "無料オンラインテキストリピーター。カスタム区切り文字で任意のテキストを複数回繰り返します。テスト、コンテンツ埋め、パターン作成に最適。",
+      "detailed_description": "テキストリピーターは、必要な回数だけテキストを複製します。様々な区切り文字から選択し、オプションで番号を追加できます。テスト、サンプルデータの作成、コンテンツの埋め込みに最適です。",
+      "usage_steps": [
+        "繰り返すテキストを入力",
+        "繰り返し回数を設定",
+        "区切り文字の種類を選択",
+        "オプションで番号を追加",
+        "結果をコピーまたはダウンロード"
+      ],
+      "usage_examples": [
+        "テストデータを作成",
+        "プレースホルダーコンテンツを埋める",
+        "パターンを生成"
+      ],
+      "inputLabel": "繰り返すテキスト",
+      "inputPlaceholder": "ここにテキストを入力...",
+      "repeatCount": "繰り返し回数",
+      "separator": "区切り文字",
+      "newline": "改行",
+      "space": "スペース",
+      "comma": "カンマ",
+      "semicolon": "セミコロン",
+      "tab": "タブ",
+      "none": "なし",
+      "addNumbering": "番号を追加",
+      "result": "結果",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "download": "ダウンロード",
+      "resultPlaceholder": "結果がここに表示されます...",
+      "characters": "文字",
+      "lines": "行"
+    },
+    "fake-name-generator": {
+      "name": "偽名ジェネレーター",
+      "description": "異なる国からランダムでリアルな名前を生成",
+      "seo_title": "無料オンライン偽名ジェネレーター - ランダム名前生成",
+      "seo_description": "無料オンライン偽名ジェネレーター。異なる国や文化からランダムでリアルな名前を生成。テスト、執筆、プライバシー保護に最適。",
+      "detailed_description": "偽名ジェネレーターは、様々な国や文化からリアルなランダム名前を作成します。テスト、創作、またはプレースホルダー名が必要な時に名前を生成します。",
+      "usage_steps": [
+        "国/文化を選択",
+        "性別の好みを選択",
+        "名前の数を設定",
+        "生成をクリック",
+        "必要な名前をコピー"
+      ],
+      "usage_examples": [
+        "テストユーザーデータを作成",
+        "架空のキャラクターに名前を付ける",
+        "プライバシー保護"
+      ],
+      "country": "国/文化",
+      "english": "英語（米国/英国）",
+      "chinese": "中国語",
+      "japanese": "日本語",
+      "korean": "韓国語",
+      "german": "ドイツ語",
+      "spanish": "スペイン語",
+      "gender": "性別",
+      "random": "ランダム",
+      "male": "男性",
+      "female": "女性",
+      "count": "数",
+      "generate": "名前を生成",
+      "generatedNames": "生成された名前",
+      "copyAll": "すべてコピー",
+      "copied": "コピーしました！",
+      "disclaimer": "免責事項",
+      "disclaimerText": "これらの名前はランダムに生成されており、実在の人物との類似は偶然です。責任を持って使用してください。"
+    },
+    "invisible-character-generator": {
+      "name": "不可視文字ジェネレーター",
+      "description": "不可視のUnicode文字を生成・検出",
+      "seo_title": "無料オンライン不可視文字ジェネレーター - ゼロ幅文字",
+      "seo_description": "無料オンライン不可視文字ジェネレーター。ゼロ幅スペースやその他の不可視Unicode文字を生成。テキスト内の隠し文字を検出。",
+      "detailed_description": "不可視文字ジェネレーターは、ゼロ幅スペースなど様々な不可視Unicode文字を作成します。テキスト内の隠し文字を見つける検出機能も含まれています。",
+      "usage_steps": [
+        "不可視文字の種類を選択",
+        "繰り返し回数を設定",
+        "不可視文字をコピー",
+        "必要な場所に貼り付け",
+        "検出機能で隠し文字を見つける"
+      ],
+      "usage_examples": [
+        "空白メッセージを作成",
+        "不可視の透かしを追加",
+        "テキスト処理をテスト"
+      ],
+      "selectCharacter": "文字タイプを選択",
+      "repeatCount": "繰り返し回数",
+      "characters": "文字",
+      "copy": "コピー",
+      "copied": "コピーしました！",
+      "allCharacters": "すべての不可視文字",
+      "detectTitle": "不可視文字を検出",
+      "detectPlaceholder": "不可視文字を検出するテキストをここに貼り付け...",
+      "found": "見つかりました",
+      "noInvisibleFound": "不可視文字は検出されませんでした",
+      "useCases": "一般的な用途",
+      "useCase1": "空白のSNS投稿を作成",
+      "useCase2": "不可視のテキスト透かしを追加",
+      "useCase3": "テキスト処理システムをテスト"
     }
   },
   "tool": {
@@ -14802,5 +15912,120 @@
       "perChildPerYear": "子供1人あたり年間",
       "perDependent": "扶養家族1人あたり"
     }
+  },
+  "launches": {
+    "title": "製品リリース",
+    "subtitle": "世界中のメーカーがリリースした最新の製品とツールを見つけよう",
+    "description": "世界中のメーカーがリリースした最新の製品とツールを見つけよう",
+    "pageTitle": "製品リリース - 新しいツールと製品を見つけよう",
+    "pageDescription": "世界中のメーカーの最新の製品リリースを探検。革新的なツール、アプリ、サービスを見つけ、あなた自身の製品を無料で投稿しよう。",
+    "featured": "おすすめ",
+    "launchedOn": "リリース日",
+    "about": "について",
+    "screenshots": "スクリーンショット",
+    "links": "リンク",
+    "tags": "タグ",
+    "visitWebsite": "ウェブサイトを訪れる",
+    "relatedProducts": "関連する製品",
+    "submitProduct": "製品を投稿する",
+    "backToAllProducts": "すべての製品に戻る",
+    "noProductsInCategory": "このカテゴリにはまだ製品がありません",
+    "beFirstToSubmit": "このカテゴリで最初に製品を投稿する!",
+    "categoryProductCount": "{count} 製品",
+    "allCategories": "すべて",
+    "sortBy": "並び替え方法",
+    "breadcrumb": {
+      "home": "ホーム",
+      "launches": "リリース"
+    },
+    "seo": {
+      "productSuffix": "製品リリース | U2Tool",
+      "categorySuffix": "製品 | U2Tool",
+      "categoryDescription": "世界中のメーカーがリリースした最高の {category} 製品とツールを見つけよう。革新的なソリューションを見つけましょう。"
+    },
+    "stats": {
+      "totalLaunches": "合計リリース",
+      "liveProducts": "ライブ製品",
+      "totalUpvotes": "合計アップボート",
+      "totalViews": "合計ビュー",
+      "featured": "おすすめ",
+      "featuredProducts": "おすすめ製品"
+    },
+    "sort": {
+      "newest": "新しい順",
+      "popular": "人気順",
+      "featured": "おすすめ"
+    },
+    "filter": {
+      "all": "すべて",
+      "newest": "新しい順",
+      "popular": "人気順",
+      "featured": "おすすめ"
+    },
+    "categories": {
+      "ai-tools": "AIツール",
+      "developer-tools": "開発者ツール",
+      "design-tools": "デザインツール",
+      "productivity": "生産性",
+      "marketing": "マーケティング",
+      "finance": "金融",
+      "education": "教育",
+      "entertainment": "エンターテインメント",
+      "other": "その他"
+    },
+    "submit": {
+      "pageTitle": "あなたの製品を投稿する",
+      "pageDescription": "U2Toolに製品を投稿しておすすめに。数千人のユーザーに発見される機会を得ましょう。",
+      "title": "あなたの製品を投稿する",
+      "subtitle": "数千人のユーザーにあなたの製品を見つけさせる",
+      "productName": "製品名",
+      "productNamePlaceholder": "製品名を入力してください",
+      "tagline": "キャッチフレーズ",
+      "taglinePlaceholder": "短い、魅力的な説明（最大100文字）",
+      "taglineHint": "{count}/100文字",
+      "description": "説明",
+      "descriptionPlaceholder": "製品の詳細を説明してください...",
+      "websiteUrl": "ウェブサイトURL",
+      "websiteUrlPlaceholder": "https://your-product.com",
+      "logoUrl": "ロゴURL",
+      "logoUrlPlaceholder": "https://your-product.com/logo.png",
+      "logoHint": "推奨：200x200px、PNGまたはJPG",
+      "category": "カテゴリ",
+      "selectCategory": "カテゴリを選択してください",
+      "makerName": "あなたの名前",
+      "makerNamePlaceholder": "John Doe",
+      "makerEmail": "あなたのメールアドレス",
+      "makerEmailPlaceholder": "john@example.com",
+      "emailHint": "製品が承認された際に通知します",
+      "twitterUrl": "Twitter URL（任意）",
+      "twitterUrlPlaceholder": "https://twitter.com/yourproduct",
+      "githubUrl": "GitHub URL（任意）",
+      "githubUrlPlaceholder": "https://github.com/yourproduct",
+      "submitButton": "製品を投稿する",
+      "submitting": "投稿中...",
+      "success": "製品が成功して投稿されました！",
+      "successMessage": "あなたの製品が承認されました。承認が完了すると通知します。",
+      "error": "製品の投稿に失敗しました",
+      "validation": {
+        "nameRequired": "製品名が必要です",
+        "taglineRequired": "キャッチフレーズが必要です",
+        "taglineTooLong": "キャッチフレーズは100文字以下でなければなりません",
+        "descriptionRequired": "説明が必要です",
+        "websiteRequired": "ウェブサイトURLが必要です",
+        "websiteInvalid": "有効なURLを入力してください",
+        "categoryRequired": "カテゴリを選択してください",
+        "makerNameRequired": "あなたの名前が必要です",
+        "makerEmailRequired": "あなたのメールアドレスが必要です",
+        "makerEmailInvalid": "有効なメールアドレスを入力してください"
+      }
+    },
+    "upvote": {
+      "upvote": "アップボート",
+      "upvoted": "アップボート済み"
+    },
+    "loading": "読み込み中...",
+    "loadMore": "もっと読み込む",
+    "noProducts": "製品が見つかりません",
+    "noProductsDescription": "最初に製品を投稿する!"
   }
 }

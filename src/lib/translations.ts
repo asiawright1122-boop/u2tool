@@ -29,7 +29,7 @@ function isValidLocale(locale: string): locale is SupportedLocale {
 /**
  * 加载基础翻译
  * 
- * 基础翻译包含：site, categories, nav, home, common UI strings
+ * 基础翻译包含：site, categories, nav, home, common UI strings, launches 等
  * 这些翻译在所有页面都需要
  * 
  * @param locale - 语言代码
@@ -45,24 +45,17 @@ export async function loadBaseMessages(locale: SupportedLocale): Promise<Message
   }
   
   try {
-    // 尝试加载新的拆分文件结构
-    const messages = (await import(`@/messages/${locale}/base.json`)).default;
+    // 加载完整的翻译文件（包含所有命名空间如 launches）
+    const messages = (await import(`@/messages/${locale}.json`)).default;
     translationCache.set(cacheKey, messages);
     return messages;
   } catch {
-    // 如果新结构不存在，回退到旧的单一文件
-    try {
-      const messages = (await import(`@/messages/${locale}.json`)).default;
-      translationCache.set(cacheKey, messages);
-      return messages;
-    } catch {
-      // 如果当前语言失败，回退到英文
-      if (locale !== 'en') {
-        console.warn(`Failed to load base messages for ${locale}, falling back to English`);
-        return loadBaseMessages('en');
-      }
-      throw new Error(`Failed to load base messages for ${locale}`);
+    // 如果当前语言失败，回退到英文
+    if (locale !== 'en') {
+      console.warn(`Failed to load base messages for ${locale}, falling back to English`);
+      return loadBaseMessages('en');
     }
+    throw new Error(`Failed to load base messages for ${locale}`);
   }
 }
 

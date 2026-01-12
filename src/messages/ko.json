@@ -109,7 +109,8 @@
     "moreResults": "개 더 보기",
     "relatedTools": "관련 도구",
     "more": "더보기",
-    "categories": "카테고리"
+    "categories": "카테고리",
+    "launches": "출시"
   },
   "home": {
     "hero": {
@@ -2124,8 +2125,8 @@
     "pinyin-converter": {
       "name": "병음 변환기",
       "description": "성조 유무에 관계없이 중국어 문자를 병음으로 변환합니다.",
-      "seo_title": "Free Chinese to Pinyin Converter",
-      "seo_description": "Convert Chinese characters to Pinyin online for free. Support tone marks and numbered tones. Essential for Chinese language learning and pronunciation guides.",
+      "seo_title": "무료 온라인 중국어 병음 변환기",
+      "seo_description": "중국어를 병음으로 무료 온라인 변환. 성조 기호와 숫자 성조 지원. 중국어 학습과 발음 가이드에 필수 도구.",
       "detailed_description": "병음 변환기은 다양한 작업을 빠르게 완료하는 데 도움이 되는 실용적인 온라인 도구입니다. 병음 변환기을 사용하면 소프트웨어나 플러그인을 설치하지 않고도 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있으며 사용하기 쉬워 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너 또는 일반 사용자이든 병음 변환기은 작업 효율성을 향상시키는 데 도움이 될 수 있습니다. 모든 처리는 브라우저에서 로컬로 수행되므로 데이터 보안이 보장되며 서버에 업로드되지 않습니다. 병음 변환기을 즉시 사용하여 빠르고 안전하며 무료인 온라인 도구 서비스를 경험하세요.",
       "usage_steps": [
         "병음 변환기 도구 페이지 열기",
@@ -2555,7 +2556,7 @@
       ]
     },
     "json-to-typescript": {
-      "name": "JSON to TypeScript",
+      "name": "JSON에서 TypeScript 변환",
       "description": "JSON 데이터를 TypeScript 인터페이스 정의로 변환합니다.",
       "seo_title": "무료 JSON to TypeScript 변환기",
       "seo_description": "온라인으로 JSON을 TypeScript 인터페이스와 타입으로 무료로 변환하세요. 선택적 속성과 내부 타입을 포함한 타입 안전 코드를 생성하세요. TS 개발자에게 필수 도구입니다.",
@@ -2707,8 +2708,8 @@
     "css-unit-converter": {
       "name": "CSS 단위 변환기",
       "description": "px, rem, em, pt, vw, vh와 같은 CSS 단위 간에 변환합니다.",
-      "seo_title": "Free CSS Unit Converter Online",
-      "seo_description": "Convert CSS units (px, em, rem, %, vw, vh) online for free. Calculate responsive values with base font size. Essential for responsive web design.",
+      "seo_title": "무료 온라인 CSS 단위 변환기",
+      "seo_description": "CSS 단위(px, em, rem, %, vw, vh)를 무료로 온라인 변환. 기본 글꼴 크기로 반응형 값 계산. 반응형 웹 디자인에 필수.",
       "detailed_description": "CSS 단위 변환기은 다양한 작업을 빠르게 완료하는 데 도움이 되는 실용적인 온라인 도구입니다. CSS 단위 변환기을 사용하면 소프트웨어나 플러그인을 설치하지 않고도 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있으며 사용하기 쉬워 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너 또는 일반 사용자이든 CSS 단위 변환기은 작업 효율성을 향상시키는 데 도움이 될 수 있습니다. 모든 처리는 브라우저에서 로컬로 수행되므로 데이터 보안이 보장되며 서버에 업로드되지 않습니다. CSS 단위 변환기을 즉시 사용하여 빠르고 안전하며 무료인 온라인 도구 서비스를 경험하세요.",
       "usage_steps": [
         "CSS 단위 변환기 도구 페이지 열기",
@@ -2877,8 +2878,8 @@
     "html-to-jsx": {
       "name": "HTML을 JSX로",
       "description": "HTML 코드를 React JSX 형식으로 변환합니다.",
-      "seo_title": "Free HTML to JSX Converter Online",
-      "seo_description": "Convert HTML code to React JSX format online for free. Transform class to className, style strings to objects. Essential for React developers.",
+      "seo_title": "무료 온라인 HTML에서 JSX 변환기",
+      "seo_description": "HTML 코드를 React JSX 형식으로 무료 온라인 변환. class를 className으로, 스타일 문자열을 객체로 변환. React 개발자 필수 도구.",
       "htmlInput": "HTML Input",
       "jsxOutput": "JSX Output",
       "placeholder": "<div class=\"컨테이너\">...</div>",
@@ -3002,8 +3003,8 @@
     "text-wrapper": {
       "name": "텍스트 줄바꿈",
       "description": "지정된 선 너비로 텍스트를 줄 바꿈합니다.",
-      "seo_title": "Free Text Wrapper Online",
-      "seo_description": "Wrap text to specified width online for free. Add line breaks at word boundaries or fixed positions. Perfect for formatting code comments and documentation.",
+      "seo_title": "무료 온라인 텍스트 줄바꿈 도구",
+      "seo_description": "지정된 너비로 텍스트를 무료로 온라인 줄바꿈. 단어 경계 또는 고정 위치에서 줄바꿈 추가. 코드 주석과 문서 서식에 적합.",
       "detailed_description": "텍스트 줄바꿈은 다양한 작업을 빠르게 완료하는 데 도움이 되는 실용적인 온라인 도구입니다. 텍스트 줄바꿈을 사용하면 소프트웨어나 플러그인을 설치하지 않고도 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있으며 사용하기 쉬워 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너 또는 일반 사용자이든 텍스트 줄바꿈은 작업 효율성을 향상시키는 데 도움이 될 수 있습니다. 모든 처리는 브라우저에서 로컬로 수행되므로 데이터 보안이 보장되며 서버에 업로드되지 않습니다. 텍스트 줄바꿈을 즉시 사용하여 빠르고 안전하며 무료인 온라인 도구 서비스를 경험하세요.",
       "usage_steps": [
         "텍스트 줄바꿈 도구 페이지 열기",
@@ -3020,8 +3021,8 @@
     "csv-to-json": {
       "name": "CSV를 JSON으로",
       "description": "사용자 정의 가능한 구분 기호를 사용하여 CSV 데이터를 JSON 형식으로 변환합니다.",
-      "seo_title": "Free CSV to JSON Converter Online",
-      "seo_description": "Convert CSV to JSON format online for free. Parse CSV with custom delimiters and headers. Support nested objects and arrays. Perfect for data import.",
+      "seo_title": "무료 온라인 CSV에서 JSON 변환기",
+      "seo_description": "CSV를 JSON 형식으로 무료 온라인 변환. 사용자 정의 구분자와 헤더로 CSV 파싱. 중첩 객체와 배열 지원. 데이터 가져오기에 적합.",
       "detailed_description": "CSV를 JSON으로은 다양한 작업을 빠르게 완료하는 데 도움이 되는 실용적인 온라인 도구입니다. CSV를 JSON으로을 사용하면 소프트웨어나 플러그인을 설치하지 않고도 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있으며 사용하기 쉬워 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너 또는 일반 사용자이든 CSV를 JSON으로은 작업 효율성을 향상시키는 데 도움이 될 수 있습니다. 모든 처리는 브라우저에서 로컬로 수행되므로 데이터 보안이 보장되며 서버에 업로드되지 않습니다. CSV를 JSON으로을 즉시 사용하여 빠르고 안전하며 무료인 온라인 도구 서비스를 경험하세요.",
       "usage_steps": [
         "CSV를 JSON으로 도구 페이지 열기",
@@ -3092,8 +3093,8 @@
     "password-strength": {
       "name": "비밀번호 강도 검사기",
       "description": "길이, 문자 유형, 일반적인 패턴을 확인하여 비밀번호 강도를 분석합니다.",
-      "seo_title": "Free Password Strength Checker Online",
-      "seo_description": "Check password strength online for free. Get detailed analysis with entropy score, crack time estimate, and improvement suggestions. Essential for security.",
+      "seo_title": "무료 온라인 비밀번호 강도 검사기",
+      "seo_description": "비밀번호 강도를 무료로 온라인 검사. 엔트로피 점수, 해독 시간 추정, 개선 제안을 포함한 상세 분석. 보안에 필수.",
       "detailed_description": "비밀번호 강도 검사기은 다양한 작업을 빠르게 완료하는 데 도움이 되는 실용적인 온라인 도구입니다. 비밀번호 강도 검사기을 사용하면 소프트웨어나 플러그인을 설치하지 않고도 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있으며 사용하기 쉬워 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너 또는 일반 사용자이든 비밀번호 강도 검사기은 작업 효율성을 향상시키는 데 도움이 될 수 있습니다. 모든 처리는 브라우저에서 로컬로 수행되므로 데이터 보안이 보장되며 서버에 업로드되지 않습니다. 비밀번호 강도 검사기을 즉시 사용하여 빠르고 안전하며 무료인 온라인 도구 서비스를 경험하세요.",
       "usage_steps": [
         "비밀번호 강도 검사기 도구 페이지 열기",
@@ -3290,8 +3291,8 @@
     "json-to-sql": {
       "name": "JSON에서 SQL로",
       "description": "CREATE TABLE 지원을 사용하여 JSON 배열을 SQL INSERT 문으로 변환합니다.",
-      "seo_title": "Free JSON to SQL Converter Online",
-      "seo_description": "Convert JSON data to SQL INSERT statements online for free. Support MySQL, PostgreSQL, SQLite syntax. Bulk insert generation for database import.",
+      "seo_title": "무료 온라인 JSON에서 SQL 변환기",
+      "seo_description": "JSON 데이터를 SQL INSERT 문으로 무료 온라인 변환. MySQL, PostgreSQL, SQLite 구문 지원. 데이터베이스 가져오기용 대량 삽입 생성.",
       "tableName": "테이블 이름",
       "dialect": "방언",
       "includeCreate": "CREATE TABLE 포함",
@@ -4570,8 +4571,8 @@
     "text-hash-comparator": {
       "name": "텍스트 해시 비교기",
       "description": "해시 값으로 텍스트를 비교합니다.",
-      "seo_title": "Free Text Hash Comparator Online",
-      "seo_description": "Compare text by their hash values online for free. Generate and compare MD5, SHA-1, SHA-256 hashes side by side. Essential for file integrity verification.",
+      "seo_title": "무료 온라인 텍스트 해시 비교기",
+      "seo_description": "해시 값으로 텍스트를 무료로 온라인 비교. MD5, SHA-1, SHA-256 해시를 나란히 생성 및 비교. 파일 무결성 검증에 필수.",
       "detailed_description": "텍스트 해시 비교기은 다양한 작업을 빠르게 완료하는 데 도움이 되는 실용적인 온라인 도구입니다. 텍스트 해시 비교기을 사용하면 소프트웨어나 플러그인을 설치하지 않고도 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있으며 사용하기 쉬워 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너 또는 일반 사용자이든 텍스트 해시 비교기은 작업 효율성을 향상시키는 데 도움이 될 수 있습니다. 모든 처리는 브라우저에서 로컬로 수행되므로 데이터 보안이 보장되며 서버에 업로드되지 않습니다. 텍스트 해시 비교기을 즉시 사용하여 빠르고 안전하며 무료인 온라인 도구 서비스를 경험하세요.",
       "usage_steps": [
         "텍스트 해시 비교기 도구 페이지 열기",
@@ -4997,8 +4998,8 @@
     "htaccess-generator": {
       "name": ".htaccess 생성기",
       "description": "Apache 서버에 대한 .htaccess 구성을 생성합니다.",
-      "seo_title": "Free .htaccess Generator Online",
-      "seo_description": "Generate .htaccess configuration for Apache servers online for free. Create redirects, rewrites, security rules, and caching directives. Web hosting essential.",
+      "seo_title": "무료 온라인 .htaccess 생성기",
+      "seo_description": "Apache 서버용 .htaccess 구성을 무료로 온라인 생성. 리디렉션, 리라이트, 보안 규칙, 캐싱 지시문 생성. 웹 호스팅 필수 도구.",
       "urlSettings": "URL & SSL Settings",
       "forceHttps": "강제 HTTPS",
       "forceWww": "강제 WWW 접두사",
@@ -5271,8 +5272,8 @@
     "list-randomizer": {
       "name": "목록 무작위 섞기",
       "description": "항목 목록을 섞고 무작위로 지정합니다.",
-      "seo_title": "Free List Randomizer Online",
-      "seo_description": "Shuffle and randomize lists of items or names online for free. Perfect for random selection, lottery draws, and fair ordering. Secure randomization.",
+      "seo_title": "무료 온라인 목록 무작위화 도구",
+      "seo_description": "항목이나 이름 목록을 무료로 온라인 셔플 및 무작위화. 무작위 선택, 추첨, 공정한 순서 지정에 적합. 안전한 무작위화.",
       "originalList": "원본 목록",
       "randomizedList": "무작위 목록",
       "clear": "지우기",
@@ -5428,8 +5429,8 @@
     "hex-base64-converter": {
       "name": "16진수 Base64 변환기",
       "description": "16진수와 Base64 인코딩 간을 변환합니다.",
-      "seo_title": "Free Hex Base64 Converter Online",
-      "seo_description": "Convert between Hex and Base64 online for free. Encode hexadecimal to Base64 or decode Base64 to hex. Essential for cryptography and data encoding tasks.",
+      "seo_title": "무료 온라인 Hex Base64 변환기",
+      "seo_description": "Hex와 Base64를 무료로 온라인 상호 변환. 16진수를 Base64로 인코딩하거나 Base64를 16진수로 디코딩. 암호화와 데이터 인코딩에 필수.",
       "hexToBase64": "16진수 → Base64",
       "base64ToHex": "Base64 → 16진수",
       "swap": "교환",
@@ -5455,8 +5456,8 @@
     "pdf-to-base64": {
       "name": "PDF를 Base64로",
       "description": "PDF 파일을 Base64 인코딩으로 변환합니다.",
-      "seo_title": "Free PDF to Base64 Converter Online",
-      "seo_description": "Convert PDF files to Base64 encoding online for free. Embed PDFs in HTML, JSON, or data URIs. Secure browser-based conversion with no file upload to servers.",
+      "seo_title": "무료 온라인 PDF에서 Base64 변환기",
+      "seo_description": "PDF 파일을 Base64 인코딩으로 무료 온라인 변환. HTML, JSON, 데이터 URI에 PDF 삽입. 서버 업로드 없이 안전한 브라우저 변환.",
       "dropzone": "여기에 PDF 파일을 놓거나 클릭하여 업로드하세요.",
       "acceptedFormat": "허용되는 형식: PDF",
       "errorNotPdf": "PDF 파일을 선택하세요",
@@ -5484,8 +5485,8 @@
     "audio-to-base64": {
       "name": "Base64로의 오디오",
       "description": "오디오 파일을 Base64 인코딩으로 변환합니다.",
-      "seo_title": "Free Audio to Base64 Converter Online",
-      "seo_description": "Convert audio files to Base64 encoding online for free. Support MP3, WAV, OGG formats. Embed audio in HTML, JSON, or data URIs. Browser-based processing.",
+      "seo_title": "무료 온라인 오디오에서 Base64 변환기",
+      "seo_description": "오디오 파일을 Base64 인코딩으로 무료 온라인 변환. MP3, WAV, OGG 형식 지원. HTML, JSON, 데이터 URI에 오디오 삽입. 브라우저 처리.",
       "dropzone": "여기에 오디오 파일을 놓거나 클릭하여 업로드하세요.",
       "acceptedFormats": "지원: MP3, WAV, OGG, WebM, AAC, FLAC",
       "errorNotAudio": "오디오 파일을 선택하세요",
@@ -5932,8 +5933,8 @@
     "mac-address-generator": {
       "name": "MAC 주소 생성기",
       "description": "옵션을 사용하여 임의의 MAC 주소를 생성합니다.",
-      "seo_title": "MAC Address Generator Online",
-      "seo_description": "Generate random MAC addresses with prefix, separator, and bit flag options. Support unicast/multicast and universal/local flags. For testing and development.",
+      "seo_title": "온라인 MAC 주소 생성기",
+      "seo_description": "접두사, 구분자, 비트 플래그 옵션으로 무작위 MAC 주소 생성. 유니캐스트/멀티캐스트, 유니버설/로컬 플래그 지원. 테스트 및 개발용.",
       "count": "개수",
       "separator": "구분자",
       "sepColon": "콜론(:)",
@@ -6150,8 +6151,8 @@
     "char-frequency": {
       "name": "문자 빈도 분석기",
       "description": "텍스트의 문자 빈도를 분석합니다.",
-      "seo_title": "Free Character Frequency Analyzer Online",
-      "seo_description": "Analyze character frequency and distribution in text. Get counts, percentages, and visual charts for each character. For cryptography and text analysis.",
+      "seo_title": "무료 온라인 문자 빈도 분석기",
+      "seo_description": "텍스트의 문자 빈도와 분포 분석. 각 문자의 개수, 백분율, 시각적 차트 제공. 암호학과 텍스트 분석용.",
       "inputLabel": "텍스트",
       "placeholder": "분석할 텍스트를 입력하세요...",
       "ignoreSpaces": "공백 무시",
@@ -7377,8 +7378,8 @@
     "polar-bar-chart-generator": {
       "name": "극 막대 차트 생성기",
       "description": "온라인으로 극 막대 차트를 만드세요. 데이터를 방사형으로 시각화하고 PNG/SVG로 내보냅니다.",
-      "seo_title": "Free Online Polar Bar Chart Generator",
-      "seo_description": "Create professional polar bar charts online for free. Visualize data in polar coordinates. Export as PNG or SVG.",
+      "seo_title": "무료 온라인 극좌표 막대 차트 생성기",
+      "seo_description": "전문적인 극좌표 막대 차트를 무료로 온라인 생성. 극좌표로 데이터 시각화. PNG 또는 SVG로 내보내기.",
       "chartTitle": "차트 제목",
       "chartTitlePlaceholder": "차트 제목을 입력하세요",
       "colorTheme": "색상 테마",
@@ -7449,8 +7450,8 @@
     "parallel-chart-generator": {
       "name": "평행 차트 생성기",
       "description": "온라인으로 평행 좌표 차트를 만드세요. 다차원 데이터를 비교하고 PNG/SVG로 내보냅니다.",
-      "seo_title": "Free Online Parallel Chart Generator",
-      "seo_description": "Create professional parallel coordinate charts online for free. Compare multi-dimensional data. Export as PNG or SVG.",
+      "seo_title": "무료 온라인 평행 좌표 차트 생성기",
+      "seo_description": "전문적인 평행 좌표 차트를 무료로 온라인 생성. 다차원 데이터 비교. PNG 또는 SVG로 내보내기.",
       "chartTitle": "차트 제목",
       "chartTitlePlaceholder": "차트 제목을 입력하세요",
       "colorTheme": "색상 테마",
@@ -7707,8 +7708,8 @@
     },
     "venn-diagram-generator": {
       "name": "벤 다이어그램 생성기",
-      "seo_title": "Free Online Venn Diagram Generator",
-      "seo_description": "Create 2-set or 3-set Venn diagrams online. Visualize logical relationships and overlaps. Free and easy to use.",
+      "seo_title": "무료 온라인 벤 다이어그램 생성기",
+      "seo_description": "2집합 또는 3집합 벤 다이어그램을 온라인 생성. 논리적 관계와 겹침 시각화. 무료로 쉽게 사용.",
       "title": "벤 다이어그램 생성기",
       "description": "세트 간의 논리적 관계를 표시하는 벤다이어그램을 만듭니다.",
       "defaultTitle": "벤다이어그램 예",
@@ -7744,8 +7745,8 @@
     },
     "timeline-chart-generator": {
       "name": "타임라인 차트 생성기",
-      "seo_title": "Free Online Timeline Chart Generator",
-      "seo_description": "Create vertical or horizontal timeline charts online. Visualize history, milestones, and processes. Export for free.",
+      "seo_title": "무료 온라인 타임라인 차트 생성기",
+      "seo_description": "세로 또는 가로 타임라인 차트를 온라인 생성. 역사, 마일스톤, 프로세스 시각화. 무료로 내보내기.",
       "title": "타임라인 차트 생성기",
       "description": "이벤트 순서를 표시하는 타임라인 차트를 만듭니다.",
       "defaultTitle": "회사 연혁",
@@ -11491,7 +11492,17 @@
       ],
       "anyGender": "모든 성별",
       "neutral": "중립",
-      "clickToGenerate": "생성하기 클릭"
+      "clickToGenerate": "생성하기 클릭",
+      "origins": {
+        "english": "영어/미국",
+        "spanish": "스페인어/히스패닉",
+        "french": "프랑스어",
+        "german": "독일어",
+        "japanese": "일본어",
+        "chinese": "중국어",
+        "korean": "한국어",
+        "any": "모든 출신"
+      }
     },
     "random-picker": {
       "name": "랜덤 피커",
@@ -12405,6 +12416,1101 @@
         "IP 범위 계산",
         "네트워크 아키텍처 설계"
       ]
+    },
+    "iban-validator": {
+      "name": "IBAN 검증기",
+      "description": "유럽 국가의 IBAN 은행 계좌 번호를 검증하고 파싱합니다.",
+      "seo_title": "무료 IBAN 검증기 – IBAN 번호 확인",
+      "seo_description": "온라인에서 IBAN 은행 계좌 번호를 무료로 검증하세요. 형식, 국가 코드, 체크섬을 확인할 수 있습니다. 모든 유럽 국가를 지원합니다. 빠르고 안전합니다.",
+      "inputLabel": "IBAN을 입력하세요",
+      "placeholder": "예: DE89370400440532013000",
+      "validate": "검증",
+      "valid": "유효한 IBAN",
+      "invalid": "무효한 IBAN",
+      "country": "국가",
+      "checkDigits": "체크 숫자",
+      "bankCode": "은행 코드",
+      "bban": "BBAN (기본 은행 계좌 번호)",
+      "formatted": "형식이 맞게 정리된 IBAN",
+      "copy": "복사",
+      "exampleIbans": "예시 IBAN들",
+      "errors": {
+        "empty": "IBAN을 입력해 주세요",
+        "invalidFormat": "잘못된 IBAN 형식",
+        "unknownCountry": "알 수 없는 국가 코드",
+        "invalidLength": "예상 문자 수와 다릅니다: 예상 {expected}, 실제 {actual}",
+        "invalidChecksum": "체크섬이 잘못되었습니다 – IBAN이 올바르지 않을 수 있습니다"
+      },
+      "detailed_description": "IBAN 검증기는 국제 은행 계좌 번호(IBAN)를 검증하기 위한 종합적인 도구입니다. 모든 유럽 국가의 IBAN 번호에 대해 형식, 국가 코드, 길이, 체크섬을 확인합니다. 또한 IBAN을 파싱하여 은행 코드, 국가 정보, BBAN 세부 정보를 표시합니다.",
+      "usage_steps": [
+        "입력 필드에 IBAN 번호를 입력하거나 붙여넣습니다",
+        "검증 버튼을 클릭하여 IBAN을 확인합니다",
+        "국가 및 은행 정보를 포함한 검증 결과를 확인합니다",
+        "예시 IBAN을 사용하여 다양한 국가의 형식을 테스트합니다",
+        "은행 송금에 사용할 수 있도록 형식이 맞게 정리된 IBAN을 복사합니다"
+      ],
+      "usage_examples": [
+        "국제 은행 송금 전에 IBAN을 확인하세요",
+        "고객이 제공한 은행 계좌 번호를 검증하세요",
+        "결제 처리 시스템에서 IBAN 형식을 검증하세요"
+      ]
+    },
+    "vat-calculator": {
+      "name": "VAT 계산기",
+      "description": "유럽 국가별로 다른 VAT(부가가치세)를 계산할 수 있는 도구입니다.",
+      "seo_title": "무료 VAT 계산기 - EU 세금 계산기",
+      "seo_description": "유럽 국가의 VAT를 온라인으로 무료로 계산하세요. VAT를 추가하거나 제거할 수 있으며, 표준 요율 및 할인 요율도 지원됩니다. 모든 EU 국가가 포함됩니다.",
+      "amount": "금액",
+      "calculationMode": "계산 모드",
+      "addVat": "금액에 VAT 추가",
+      "removeVat": "금액에서 VAT 제거",
+      "vatOnly": "VAT만 계산",
+      "useCustomRate": "사용자 정의 VAT 요율 사용",
+      "customRate": "사용자 정의 요율",
+      "country": "국가",
+      "rateType": "요율 유형",
+      "standardRate": "표준 요율",
+      "reducedRate": "할인 요율",
+      "reducedRates": "할인 요율들",
+      "superReducedRate": "초특별 할인 요율",
+      "netAmount": "순액",
+      "vatAmount": "VAT 금액",
+      "grossAmount": "총액",
+      "euVatRates": "EU VAT 요율 참조",
+      "detailed_description": "VAT 계산기는 유럽 전역의 부가가치세를 계산하기 위한 종합적인 도구입니다. 모든 EU 회원국의 표준 요율, 할인 요율, 초특별 할인 요율을 지원합니다. 순액에 VAT를 추가하거나 총액에서 VAT를 제거하거나, VAT 부분만 계산할 수 있습니다.",
+      "usage_steps": [
+        "VAT를 계산하고자 하는 금액을 입력하세요",
+        "계산 모드(VAT 추가, VAT 제거, VAT만 계산)를 선택하세요",
+        "국가를 선택하거나 사용자 정의 VAT 요율을 입력하세요",
+        "요율 유형(표준, 할인, 초특별 할인)을 선택하세요",
+        "계산된 순액, VAT 금액, 총액을 확인하세요"
+      ],
+      "usage_examples": [
+        "인보이스 및 비즈니스 거래의 VAT를 계산하세요",
+        "VAT가 포함된 가격에서 순가격을 구하십시오",
+        "다양한 EU 국가의 VAT 요율을 비교하세요"
+      ]
+    },
+    "carbon-footprint-calculator": {
+      "name": "탄소발자국 계산기",
+      "description": "교통, 에너지 사용, 생활습관을 통한 개인의 탄소발자국을 계산해 보세요.",
+      "seo_title": "무료 탄소발자국 계산기 – CO2 배출량 측정 도구",
+      "seo_description": "온라인으로 무료로 탄소발자국을 계산하세요. 교통, 가정 에너지 사용, 식단으로 인한 CO2 배출량을 추적하고 개인별 감축 팁을 얻으세요.",
+      "monthly": "월간",
+      "yearly": "연간",
+      "month": "월",
+      "year": "년",
+      "transportation": "교통",
+      "carDistance": "자동차 거리",
+      "petrol": "휘발유",
+      "diesel": "디젤",
+      "hybrid": "하이브리드",
+      "electric": "전기",
+      "flightHours": "비행 시간",
+      "shortHaul": "단거리 (<3시간)",
+      "mediumHaul": "중거리 (3-6시간)",
+      "longHaul": "장거리 (>6시간)",
+      "trainDistance": "기차 거리",
+      "busDistance": "버스 거리",
+      "homeEnergy": "가정 에너지",
+      "electricity": "전기",
+      "naturalGas": "천연가스",
+      "heatingOil": "난방유",
+      "lifestyle": "라이프스타일",
+      "dietType": "식단 유형",
+      "diets": {
+        "meat": "육식 위주",
+        "average": "평균",
+        "vegetarian": "채식주의자",
+        "vegan": "비건"
+      },
+      "results": "당신의 탄소 발자국",
+      "total": "총계",
+      "treesNeeded": "상쇄에 필요한 나무",
+      "trees": "그루/년",
+      "levels": {
+        "low": "낮은 영향",
+        "average": "평균",
+        "high": "높은 영향",
+        "veryHigh": "매우 높은 영향"
+      },
+      "detailed_description": "탄소발자국 계산기는 교통, 가정 에너지 사용, 식단 선택으로 인한 CO2 배출량을 계산하여 환경에 미치는 영향을 측정하는 데 도움을 줍니다. 이 도구는 귀하의 탄소발자국에 대한 상세한 분석을 제공하며, 배출량을 상쇄하기 위해 필요한 나무의 수도 보여줍니다.",
+      "usage_steps": [
+        "월간 또는 연간 계산 기간을 선택하세요",
+        "교통 관련 데이터(자동차, 항공기, 기차, 버스)를 입력하세요",
+        "가정 에너지 사용량(전기, 가스, 난방)을 입력하세요",
+        "식단 유형을 선택하세요",
+        "총 탄소발자국 및 배출량 분석 결과를 확인하세요"
+      ],
+      "usage_examples": [
+        "시간 경과에 따른 개인의 환경 영향을 추적하세요",
+        "다양한 생활습관의 탄소발자국을 비교하세요",
+        "개인 또는 기업을 위한 탄소 상쇄 전략을 계획하세요"
+      ]
+    },
+    "gdpr-consent-generator": {
+      "name": "GDPR 동의서 생성기",
+      "description": "GDPR 규정을 준수하는 쿠키 동의 배너 및 개인정보 보호 정책 템플릿을 생성합니다.",
+      "seo_title": "무료 GDPR 쿠키 동의서 생성기 – 개인정보 보호 정책 생성기",
+      "seo_description": "온라인에서 GDPR 규정을 준수하는 쿠키 동의 배너와 개인정보 보호 정책을 무료로 생성하세요. 웹사이트에 맞게 HTML/CSS 코드를 커스터마이징할 수 있습니다. EU 개인정보 보호법을 준수합니다.",
+      "websiteName": "웹사이트 이름",
+      "websiteUrl": "웹사이트 URL",
+      "companyName": "회사 이름",
+      "privacyEmail": "개인정보 문의 이메일",
+      "cookieTypes": "쿠키 유형",
+      "cookies": {
+        "necessary": "필수",
+        "analytics": "분석",
+        "marketing": "마케팅",
+        "preferences": "환경설정"
+      },
+      "position": "배너 위치",
+      "positionTop": "상단",
+      "positionBottom": "하단",
+      "theme": "테마",
+      "themeLight": "라이트",
+      "themeDark": "다크",
+      "htmlCode": "HTML 코드",
+      "cssCode": "CSS 코드",
+      "privacyPolicy": "개인정보 보호 정책 템플릿",
+      "copy": "복사",
+      "copied": "복사 완료!",
+      "bannerTitle": "쿠키 동의",
+      "decline": "거부",
+      "customize": "커스터마이징",
+      "acceptAll": "전체 동의",
+      "disclaimer": "이 도구는 참고용 템플릿만 제공합니다. 특정 상황에 대한 완전한 GDPR 준수를 위해 법률 전문가와 상담하시기 바랍니다.",
+      "detailed_description": "GDPR 동의서 생성기는 유럽 데이터 보호 규정을 준수하는 쿠키 동의 배너 및 개인정보 보호 정책 템플릿을 제공합니다. 웹사이트에 사용할 수 있는 HTML 및 CSS 코드를 생성하며, 다양한 쿠키 유형, 배너 위치, 테마를 선택할 수 있습니다.",
+      "usage_steps": [
+        "웹사이트 및 회사 정보를 입력하세요",
+        "웹사이트에서 사용하는 쿠키 유형을 선택하세요",
+        "배너 위치와 테마를 선택하세요",
+        "생성된 HTML 및 CSS 코드를 복사하세요",
+        "자신의 필요에 맞게 개인정보 보호 정책 템플릿을 커스터마이징하세요"
+      ],
+      "usage_examples": [
+        "웹사이트에 GDPR 규정을 준수하는 쿠키 동의 기능을 추가하세요",
+        "EU 규정에 맞는 개인정보 보호 정책 문서를 생성하세요",
+        "사용자의 쿠키 설정을 관리하세요"
+      ]
+    },
+    "bic-swift-lookup": {
+      "name": "BIC/SWIFT 조회",
+      "description": "국제 은행 송금에 사용되는 BIC/SWIFT 코드를 조회하고 유효성을 확인합니다.",
+      "seo_title": "무료 BIC/SWIFT 코드 조회 서비스 – 은행 코드 검증기",
+      "seo_description": "온라인에서 BIC/SWIFT 코드를 무료로 조회하고 유효성을 확인하세요. 코드를 통해 은행 정보를 찾을 수 있습니다. 국제 송금에 필수적입니다.",
+      "inputLabel": "BIC/SWIFT 코드를 입력하세요",
+      "placeholder": "예: DEUTDEFF",
+      "formatHint": "형식: 8자리 또는 11자리 (예: DEUTDEFF 또는 DEUTDEFFXXX)",
+      "lookup": "조회",
+      "validBic": "유효한 BIC/SWIFT 코드",
+      "bankCode": "은행 코드",
+      "country": "국가",
+      "locationCode": "지역 코드",
+      "branchCode": "지점 코드",
+      "headOffice": "본사",
+      "specificBranch": "특정 지점",
+      "bankInformation": "은행 정보",
+      "bankName": "은행 이름",
+      "city": "도시",
+      "branch": "지점",
+      "copyBic": "BIC 코드 복사",
+      "bicStructure": "BIC/SWIFT 코드 구조",
+      "structure": {
+        "bank": "은행 코드",
+        "country": "국가",
+        "location": "지역",
+        "branch": "지점 (선택 사항)"
+      },
+      "sampleCodes": "샘플 BIC 코드",
+      "errors": {
+        "empty": "BIC/SWIFT 코드를 입력해 주세요.",
+        "invalidFormat": "잘못된 형식입니다. 8자리 또는 11자리의 영숫자로 구성되어야 합니다.",
+        "unknownCountry": "알 수 없는 국가 코드"
+      },
+      "detailed_description": "BIC/SWIFT 조회 도구는 국제 송금에 사용되는 은행 식별 코드(BIC)의 유효성을 확인하고 관련 정보를 제공합니다. BIC 코드를 입력하여 형식을 검증하고 은행, 국가, 지점에 대한 세부 정보를 확인하세요. 정확한 국제 결제를 위해 필수적입니다.",
+      "usage_steps": [
+        "입력 필드에 BIC/SWIFT 코드를 입력하세요",
+        "조회를 클릭하여 은행 정보를 확인하세요",
+        "분석된 코드 구조(은행, 국가, 지역, 지점)를 확인하세요",
+        "데이터베이스에 있는 경우 은행 정보를 확인하세요",
+        "샘플 코드를 사용하여 다양한 은행을 살펴보세요"
+      ],
+      "usage_examples": [
+        "국제 송금 전에 BIC 코드를 확인하세요",
+        "SWIFT 코드로 은행 정보를 조회하세요",
+        "국경 간 거래의 결제 세부 정보를 검증하세요"
+      ]
+    },
+    "metric-imperial-converter": {
+      "name": "미터법/야드파운드법 변환기",
+      "description": "길이, 무게, 부피 등의 미터법과 야드파운드법 단위를 변환합니다.",
+      "seo_title": "무료 미터법 야드파운드법 변환기",
+      "seo_description": "미터법과 야드파운드법 단위를 무료로 온라인 변환.",
+      "categories": {
+        "length": "길이",
+        "weight": "무게",
+        "volume": "부피",
+        "temperature": "온도",
+        "area": "면적",
+        "speed": "속도"
+      },
+      "from": "변환 전",
+      "to": "변환 후",
+      "swap": "교환",
+      "metric": "미터법",
+      "imperial": "야드파운드법",
+      "quickReference": "빠른 참조",
+      "detailed_description": "미터법/야드파운드법 변환기는 길이, 무게, 부피, 온도, 면적, 속도 변환을 지원합니다.",
+      "usage_steps": [
+        "변환 카테고리 선택",
+        "변환할 값 입력",
+        "원본 단위 선택",
+        "대상 단위 선택",
+        "결과 확인"
+      ],
+      "usage_examples": [
+        "킬로미터를 마일로 변환",
+        "킬로그램을 파운드로 변환",
+        "섭씨를 화씨로 변환"
+      ]
+    },
+    "email-validator": {
+      "name": "이메일 유효성 검사기",
+      "description": "이메일 주소의 유효성을 확인하고 일반적인 오타나 일회용 도메인을 검출합니다.",
+      "seo_title": "무료 이메일 유효성 검사기 – 이메일 형식 확인",
+      "seo_description": "온라인에서 이메일 주소를 무료로 검사하세요. 형식을 확인하고, 오타를 발견하며, 일회용 이메일을 식별하고, 도메인의 유효성을 검증합니다. 대량 검사도 지원됩니다.",
+      "inputLabel": "이메일 주소를 입력하세요",
+      "inputPlaceholder": "각 줄에 하나의 이메일 주소를 입력하세요...",
+      "validate": "유효성 검사",
+      "valid": "유효",
+      "invalid": "무효",
+      "localPart": "로컬 부분",
+      "domain": "도메인",
+      "tld": "최상위 도메인(TLD)",
+      "freeProvider": "무료 제공자",
+      "disposable": "일회용 이메일",
+      "didYouMean": "혹시 이것을 말씀하시는 건가요?",
+      "detailed_description": "이메일 유효성 검사기는 이메일 주소의 형식과 일반적인 문제점을 확인하는 데 도움을 줍니다. 인기 있는 도메인에서의 오타를 감지하고, 일회용 이메일 서비스를 식별하며, 전체 구조의 유효성을 검증합니다. 이메일 리스트를 정리하고 무효한 가입을 방지하는 데 이상적입니다.",
+      "usage_steps": [
+        "하나 이상의 이메일 주소를 입력하세요 (각 줄에 하나씩)",
+        "‘유효성 검사’를 클릭하여 모든 이메일을 확인하세요",
+        "유효한 주소와 무효한 주소가 표시된 결과를 검토하세요",
+        "오타 수정 사항과 일회용 도메인에 대한 경고를 확인하세요",
+        "요약을 통해 유효한 주소와 무효한 주소의 총 수를 확인하세요"
+      ],
+      "usage_examples": [
+        "캠페인을 보내기 전에 이메일 리스트를 검사하세요",
+        "등록 과정에서 사용자가 입력한 이메일을 확인하세요",
+        "연락처 데이터베이스를 정리하세요"
+      ]
+    },
+    "credit-card-validator": {
+      "name": "신용카드 유효성 검사기(Credit Card Validator)",
+      "description": "룬 알고리즘(Luhn Algorithm)을 사용하여 신용카드 번호의 유효성을 검사하고 카드 유형을 확인합니다.",
+      "seo_title": "무료 온라인 신용카드 유효성 검사기 – 룬 체크(Luhn Check)",
+      "seo_description": "온라인에서 신용카드 번호를 무료로 검사하세요. 룬 알고리즘을 활용하여 카드 번호의 유효성을 확인하며, 비자(Visa), 마스터카드(Mastercard), 아메릭스(Amex) 등의 카드 유형도 감지합니다.",
+      "cardNumber": "신용카드 번호",
+      "inputPlaceholder": "신용카드 번호를 입력하세요...",
+      "validate": "유효성 검사",
+      "valid": "유효",
+      "invalid": "무효",
+      "luhnCheck": "룬 체크(Luhn Check)",
+      "passed": "검사에 통과",
+      "failed": "검사에 실패",
+      "digits": "카드 번호의 숫자",
+      "digitsCount": "카드 번호의 자릿수",
+      "disclaimer": "이 도구는 카드 번호의 수학적 구조만을 검사합니다. 카드가 실제로 사용 가능한지 또는 잔액이 있는지는 확인하지 않습니다. 신뢰할 수 없는 웹사이트에는 실제 카드 번호를 절대 입력하지 마세요.",
+      "supportedCards": "지원되는 카드 유형",
+      "detailed_description": "신용카드 유효성 검사기는 룬 알고리즘을 사용하여 신용카드 번호가 수학적으로 유효한지 확인합니다. 카드 유형(비자, 마스터카드, 아메릭스 등)을 자동으로 감지하고 상세한 검사 결과를 제공합니다. 테스트 및 개발 목적으로만 사용하십시오.",
+      "usage_steps": [
+        "입력 필드에 신용카드 번호를 입력하세요",
+        "입력된 번호는 자동으로 공백으로 포맷됩니다",
+        "‘유효성 검사(Validate)’를 클릭하여 카드 정보를 확인하세요",
+        "카드 유형, 발급사, 룬 체크 결과를 확인하세요",
+        "카드 번호의 자릿수도 확인하여 추가적으로 유효성을 검사하세요"
+      ],
+      "usage_examples": [
+        "결제 양식의 유효성 검사 로직을 테스트합니다",
+        "처리 전에 카드 번호의 형식을 확인합니다",
+        "카드 번호의 접두사를 통해 카드 유형을 식별합니다"
+      ]
+    },
+    "color-blindness-simulator": {
+      "name": "색맹 시뮬레이터",
+      "description": "다양한 유형의 색맹을 가진 사람들에게 색상과 이미지가 어떻게 보이는지 시뮬레이션합니다.",
+      "seo_title": "무료 색맹 시뮬레이터 온라인 - 접근성 도구",
+      "seo_description": "온라인에서 색맹을 무료로 시뮬레이션해 보세요. 프로타노피아, 데우테라노피아, 트리타노피아를 가진 사람들에게 색상과 이미지가 어떻게 보이는지 테스트할 수 있습니다. 접근성 있는 디자인을 위해 필수적입니다.",
+      "selectColor": "색상 선택",
+      "uploadImage": "이미지 업로드 (선택 사항)",
+      "colorComparison": "색상 비교",
+      "imagePreview": "이미지 미리보기",
+      "original": "원본 이미지",
+      "aboutTitle": "색맹에 대하여",
+      "aboutDescription": "전 세계적으로 남성의 약 8%, 여성의 약 0.5%가 색맹을 앓고 있습니다. 이 시뮬레이터를 사용하여 디자인을 테스트하면 모든 사용자가 콘텐츠를 쉽게 이해할 수 있도록 할 수 있습니다.",
+      "types": {
+        "normal": "정상 시력",
+        "protanopia": "프로타노피아",
+        "deuteranopia": "데우테라노피아",
+        "tritanopia": "트리타노피아",
+        "achromatopsia": "무색증"
+      },
+      "detailed_description": "색맹 시뮬레이터는 디자이너와 개발자가 자신의 색상과 이미지가 다양한 색각 장애를 가진 사람들에게 어떻게 보이는지 테스트하는 데 도움을 줍니다. 프로타노피아, 데우테라노피아, 트리타노피아, 완전한 색맹까지 모두 시뮬레이션할 수 있습니다.",
+      "usage_steps": [
+        "컬러 피커를 사용하여 색상을 선택하거나 16진수 코드를 입력하세요",
+        "원하는 경우 이미지를 업로드하여 테스트하세요",
+        "다양한 색맹 유형을 클릭하여 시뮬레이션 결과를 확인하세요",
+        "색상이 모든 유형의 사용자에게 어떻게 보이는지 비교하세요",
+        "이미지 미리보기 기능을 사용하여 전체 이미지의 시뮬레이션 결과를 확인하세요"
+      ],
+      "usage_examples": [
+        "웹사이트의 색상 구성을 접근성 측면에서 테스트하세요",
+        "차트와 그래프의 색상이 구별 가능한지 확인하세요",
+        "모든 사용자가 UI 요소를 쉽게 볼 수 있는지 확인하세요"
+      ]
+    },
+    "aspect-ratio-resizer": {
+      "name": "아스펙트 비율 조정기(Aspect Ratio Resizer)",
+      "description": "이미지를 특정 아스펙트 비율이나 소셜 미디어 크기로 조정합니다.",
+      "seo_title": "무료 온라인 아스펙트 비율 조정기 - 이미지 크기 조정 도구",
+      "seo_description": "온라인에서 이미지를 원하는 아스펙트 비율로 무료로 조정하세요. 인스타그램, 페이스북, 유튜브, 트위터용 사전 설정된 크기가 제공됩니다. 비율을 고정하거나 사용자 지정 크기를 설정할 수 있습니다.",
+      "uploadImage": "이미지 업로드",
+      "originalSize": "원본 크기",
+      "width": "가로 크기",
+      "height": "세로 크기",
+      "lockAspectRatio": "아스펙트 비율 고정",
+      "presetRatios": "사전 설정된 비율",
+      "socialMediaSizes": "소셜 미디어 크기",
+      "outputSize": "출력 크기",
+      "download": "다운로드",
+      "preview": "미리 보기",
+      "detailed_description": "아스펙트 비율 조정기를 사용하면 이미지의 크기를 조정하면서도 아스펙트 비율을 유지하거나 변경할 수 있습니다. 일반적인 비율(16:9, 4:3, 1:1)과 소셜 미디어 플랫폼(인스타그램, 페이스북, 유튜브, 트위터)에 맞는 사전 설정값이 포함되어 있습니다.",
+      "usage_steps": [
+        "파일을 통해 이미지를 업로드합니다."
+      ],
+      "usage_examples": [
+        "소셜 미디어 게시물용 사진 크기 조정",
+        "특정 크기의 썸네일 생성",
+        "웹사이트 배너용 이미지 준비"
+      ]
+    },
+    "markdown-to-pdf": {
+      "name": "마크다운 to PDF",
+      "description": "마크다운 문서를 사용자 정의 가능한 스타일링으로 PDF로 변환합니다.",
+      "seo_title": "무료 마크다운 to PDF 온라인 변환기",
+      "seo_description": "마크다운을 온라인에서 무료로 PDF로 변환하세요. 제목, 목록, 표, 코드 블록 등을 지원합니다. 글꼴 크기와 페이지 크기를 자유롭게 설정할 수 있으며, 파일 업로드가 필요하지 않습니다.",
+      "documentTitle": "문서 제목",
+      "fontSize": "글꼴 크기",
+      "pageSize": "페이지 크기",
+      "markdownInput": "마크다운 입력란",
+      "inputPlaceholder": "여기에 마크다운 내용을 입력하세요...",
+      "preview": "미리 보기",
+      "generatePdf": "PDF 생성",
+      "clear": "삭제",
+      "supportedSyntax": "지원되는 마크다운 구문",
+      "headings": "제목 (# ## ###)",
+      "boldItalic": "굵은 글씨 & 기울임꼴",
+      "lists": "목록 (- 또는 1.)",
+      "codeBlocks": "코드 블록",
+      "tables": "표",
+      "blockquotes": "블록 인용문",
+      "horizontalRules": "가로 줄",
+      "inlineCode": "내장 코드",
+      "detailed_description": "마크다운 to PDF 변환기는 마크다운 문서를 전문적으로 포맷된 PDF 파일로 변환합니다. 제목, 목록, 표, 코드 블록, 블록 인용문 등을 지원합니다. 생성 전에 글꼴 크기와 페이지 크기를 설정할 수 있습니다.",
+      "usage_steps": [
+        "마크다운 콘텐츠를 입력하거나 복사하여 붙여넣기",
+        "PDF 문서의 제목을 설정하세요",
+        "글꼴 크기와 페이지 크기를 선택하세요",
+        "포맷된 결과를 미리 보세요",
+        "PDF 생성을 클릭하여 파일을 다운로드하세요"
+      ],
+      "usage_examples": [
+        "문서를 PDF로 변환하여 공유하세요",
+        "마크다운 노트에서 인쇄 가능한 보고서를 만들어 보세요",
+        "README 파일의 PDF 버전을 생성하세요"
+      ]
+    },
+    "phone-formatter": {
+      "name": "전화번호 포맷터",
+      "description": "국제 표준에 따라 전화번호를 포맷합니다.",
+      "seo_title": "무료 전화번호 포맷터 - 국제 형식",
+      "seo_description": "전화번호를 국제 표준 형식으로 무료 포맷. 14개국 이상 지원.",
+      "country": "국가",
+      "phoneNumber": "전화번호",
+      "inputPlaceholder": "전화번호 입력...",
+      "includeDialCode": "국가 코드 포함",
+      "format": "포맷",
+      "formatPattern": "포맷 패턴",
+      "example": "예시",
+      "result": "결과",
+      "copy": "Copy",
+      "allFormats": "모든 국가 형식",
+      "detailed_description": "전화번호 포맷터는 원시 전화번호를 적절한 국제 형식으로 변환합니다. 14개국 이상에서 선택하고 국가 코드가 포함된 올바른 형식의 번호를 얻으세요.",
+      "usage_steps": [
+        "Select the target country from the dropdown",
+        "Enter the phone number digits",
+        "Choose whether to include the country dial code",
+        "Click Format to generate the formatted number",
+        "Copy the result to clipboard"
+      ],
+      "usage_examples": [
+        "Format phone numbers for international calling",
+        "Standardize contact lists for CRM systems",
+        "Prepare phone numbers for SMS campaigns"
+      ]
+    },
+    "speech-timer": {
+      "name": "스피치 타이머",
+      "description": "발표와 프레젠테이션을 단어 수 추정으로 시간을 관리하세요",
+      "seo_title": "무료 스피치 타이머 온라인 - 단어 수로 발표 타이머",
+      "seo_description": "무료 온라인 스피치 타이머. 발표 시간을 추적하고 단어 수를 추정하고, 쉽게 사용할 수 있는 타이머 도구로 발표를 연습하세요.",
+      "detailed_description": "스피치 타이머는 발표자가 효과적으로 발표와 연습을 도와주는 전문 발표 시간 관리 도구입니다. 실시간 카운트다운, 발표 속도 기반 단어 수 추정, 시간이 다가오면 시각적인 경고를 제공합니다.",
+      "usage_steps": [
+        "목표 발표 시간을 설정하세요",
+        "선택 사항으로 발표 텍스트를 입력하여 단어 수를 계산하세요",
+        "시작을 클릭하여 카운트다운을 시작하세요",
+        "시각적 진행 표시기를 모니터링하세요",
+        "시간이 거의 다가오면 경고를 받으세요"
+      ],
+      "usage_examples": [
+        "TED 스타일의 발표 연습",
+        "학술 회의 발표 시간 관리",
+        "면접 발표 준비"
+      ],
+      "duration": "지속 시간",
+      "minutes": "분",
+      "wordsPerMinute": "분당 단어 수",
+      "estimatedWords": "추정 단어 수",
+      "start": "시작",
+      "pause": "일시정지",
+      "reset": "리셋",
+      "timeRemaining": "남은 시간",
+      "speechText": "발표 텍스트 (선택 사항)",
+      "speechPlaceholder": "단어 수를 계산하기 위해 발표를 붙여넣어 주세요...",
+      "wordCount": "단어 수",
+      "speakingPace": "발표 속도",
+      "slow": "느리게",
+      "normal": "보통",
+      "fast": "빠르게",
+      "timeUp": "시간이 다되었습니다!",
+      "presets": "프리셋",
+      "targetDuration": "목표 시간",
+      "min": "분",
+      "words": "단어",
+      "remaining": "남은 시간"
+    },
+    "random-color-generator": {
+      "name": "랜덤 색상 생성기",
+      "description": "HEX, RGB, HSL 형식으로 랜덤 색상 생성",
+      "seo_title": "무료 온라인 랜덤 색상 생성기",
+      "seo_description": "무료 온라인 랜덤 색상 생성기. HEX, RGB, HSL 값으로 랜덤 색상을 생성하고 디자인 프로젝트용 색상 팔레트를 만드세요.",
+      "detailed_description": "랜덤 색상 생성기는 여러 형식 출력(HEX, RGB, HSL)으로 랜덤 색상을 만듭니다. 디자인 영감과 창의적 프로젝트를 위해 단일 색상 또는 전체 팔레트를 생성합니다.",
+      "usage_steps": [
+        "생성할 색상 수 설정",
+        "선호하는 색상 형식 선택",
+        "생성 클릭하여 랜덤 색상 만들기",
+        "색상 클릭하여 값 복사",
+        "모두 복사로 전체 팔레트 가져오기"
+      ],
+      "usage_examples": [
+        "디자인 색상 영감 찾기",
+        "웹사이트용 색상 팔레트 생성",
+        "예술을 위한 랜덤 색상 구성 만들기"
+      ],
+      "count": "색상 수",
+      "format": "형식",
+      "generate": "생성",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "copyAll": "모두 복사",
+      "clickToCopy": "클릭하여 복사",
+      "palettePreview": "팔레트 미리보기"
+    },
+    "habit-tracker": {
+      "name": "습관 추적기",
+      "description": "매일 습관을 추적하여 연속 일관성을 만들어보세요",
+      "seo_title": "무료 온라인 습관 추적기 - 매일 습관 추적 도구",
+      "seo_description": "매일 습관을 만들고 유지하는 무료 온라인 습관 추적기. 연속 일관성을 추적하고 진행 상황을 모니터링하여 목표를 달성하세요. 간단한 습관 추적 도구로 쉽게 사용하세요.",
+      "detailed_description": "습관 추적기는 매일 습관을 만들고 유지하는 간단하지만 강력한 도구입니다. 여러 습관을 추적하고, 연속 일관성을 확인하여 동기부여를 받고, 모든 데이터를 브라우저에서 로컬로 저장합니다.",
+      "usage_steps": [
+        "이름과 아이콘을 사용하여 새로운 습관을 추가하세요",
+        "오늘 완료한 습관을 클릭하여 마크하세요",
+        "각 습관의 현재 연속 일관성을 확인하세요",
+        "주간 완료율을 추적하세요",
+        "추적하고 싶지 않은 습관을 삭제하세요"
+      ],
+      "usage_examples": [
+        "매일 운동 루틴 추적",
+        "독서 습관 모니터링",
+        "수행冥想 연습 만들기"
+      ],
+      "addHabit": "습관 추가",
+      "habitName": "습관 이름",
+      "habitPlaceholder": "습관 이름을 입력하세요...",
+      "selectIcon": "아이콘 선택",
+      "add": "추가",
+      "cancel": "취소",
+      "streak": "연속 일관성",
+      "days": "일",
+      "today": "오늘",
+      "completed": "완료",
+      "noHabits": "아직 습관이 없습니다. 첫 번째 습관을 추가하세요!",
+      "deleteConfirm": "이 습관을 삭제하시겠습니까?",
+      "completedToday": "오늘 완료",
+      "weeklyProgress": "주간 진행 상황",
+      "habit": "습관",
+      "tip": "팁: 날짜를 클릭하여 완료로 표시하세요. 매일 습관을 완료하여 연속 기록을 쌓으세요!"
+    },
+    "flip-text": {
+      "name": "텍스트 뒤집기",
+      "description": "텍스트를 상하 반전, 미러, 역순으로 변환",
+      "seo_title": "무료 온라인 텍스트 뒤집기 생성기",
+      "seo_description": "무료 온라인 텍스트 뒤집기 생성기. 거꾸로, 미러, 역순 텍스트 생성.",
+      "detailed_description": "텍스트 뒤집기 생성기는 텍스트를 창의적으로 변환합니다.",
+      "usage_steps": [
+        "입력란에 텍스트 입력",
+        "모든 뒤집기 변형 즉시 확인",
+        "원하는 결과 클릭하여 복사",
+        "뒤집힌 텍스트를 어디든 붙여넣기",
+        "다양한 효과를 위해 다른 텍스트 시도"
+      ],
+      "usage_examples": [
+        "독특한 소셜 미디어 게시물 만들기",
+        "재미있는 사용자 이름 만들기",
+        "친구에게 창의적인 메시지 보내기"
+      ],
+      "inputLabel": "텍스트 입력",
+      "inputPlaceholder": "여기에 텍스트 입력...",
+      "upsideDown": "거꾸로",
+      "mirror": "미러",
+      "reversed": "역순",
+      "upsideDownReversed": "거꾸로+역순",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "mirrored": "미러",
+      "outputPlaceholder": "결과가 여기에 표시됩니다...",
+      "aboutTitle": "뒤집기 텍스트 정보",
+      "aboutDescription": "뒤집기 텍스트는 특수 유니코드 문자를 사용하여 거꾸로 및 미러 텍스트 효과를 만듭니다. 이러한 문자는 대부분의 웹사이트와 소셜 미디어 플랫폼에서 작동합니다."
+    },
+    "roman-numeral-converter": {
+      "name": "로마 숫자 변환기",
+      "description": "로마 숫자와 아라비아 숫자 상호 변환",
+      "seo_title": "무료 온라인 로마 숫자 변환기",
+      "seo_description": "무료 온라인 로마 숫자 변환기. 로마 숫자를 아라비아 숫자로 변환하거나 그 반대로.",
+      "detailed_description": "로마 숫자 변환기는 로마 숫자와 아라비아 숫자 간에 변환합니다.",
+      "usage_steps": [
+        "변환 방향 선택",
+        "로마 숫자 또는 아라비아 숫자 입력",
+        "변환 클릭하여 결과 확인",
+        "변환된 값 복사",
+        "참조 차트 사용하여 도움 받기"
+      ],
+      "usage_examples": [
+        "연도를 로마 숫자로 변환",
+        "시계의 로마 숫자 디코딩",
+        "로마 숫자 시스템 학습"
+      ],
+      "arabicToRoman": "아라비아 → 로마",
+      "romanToArabic": "로마 → 아라비아",
+      "arabicNumber": "아라비아 숫자",
+      "romanNumeral": "로마 숫자",
+      "arabicPlaceholder": "숫자 입력 (1-3999)...",
+      "romanPlaceholder": "로마 숫자 입력...",
+      "result": "결과",
+      "convert": "변환",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "invalidInput": "잘못된 입력",
+      "referenceTitle": "참조 차트"
+    },
+    "strikethrough-text": {
+      "name": "취소선 텍스트",
+      "description": "취소선, 밑줄, 가로줄 텍스트 생성",
+      "seo_title": "무료 온라인 취소선 텍스트 생성기",
+      "seo_description": "무료 온라인 취소선 텍스트 생성기. 취소선, 밑줄, 슬래시 텍스트 생성.",
+      "detailed_description": "취소선 텍스트 생성기는 다양한 텍스트 장식 스타일을 만듭니다.",
+      "usage_steps": [
+        "입력란에 텍스트 입력",
+        "모든 취소선 변형 확인",
+        "원하는 스타일 클릭하여 복사",
+        "스타일이 적용된 텍스트를 어디든 붙여넣기",
+        "강조나 수정에 사용"
+      ],
+      "usage_examples": [
+        "문서에서 수정 표시",
+        "소셜 게시물에서 강조 만들기",
+        "프로필용 장식 텍스트 만들기"
+      ],
+      "inputLabel": "텍스트 입력",
+      "inputPlaceholder": "여기에 텍스트 입력...",
+      "strikethrough": "취소선",
+      "underline": "밑줄",
+      "crosshatch": "교차선",
+      "slash": "슬래시",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "outputPlaceholder": "결과가 여기에 표시됩니다...",
+      "usageTitle": "사용 팁",
+      "usage1": "대부분의 소셜 미디어 플랫폼에서 작동합니다",
+      "usage2": "스타일이 적용된 텍스트를 어디든 복사하여 붙여넣으세요",
+      "usage3": "일부 앱에서는 모든 스타일이 올바르게 표시되지 않을 수 있습니다"
+    },
+    "small-text-generator": {
+      "name": "작은 글자 생성기",
+      "description": "위첨자, 아래첨자, 작은 대문자 텍스트 생성",
+      "seo_title": "무료 온라인 작은 글자 생성기",
+      "seo_description": "무료 온라인 작은 글자 생성기. 위첨자, 아래첨자, 작은 대문자 텍스트 생성.",
+      "detailed_description": "작은 글자 생성기는 위첨자, 아래첨자, 작은 대문자를 포함한 작은 텍스트 변형을 만듭니다.",
+      "usage_steps": [
+        "입력란에 텍스트 입력",
+        "위첨자, 아래첨자, 작은 대문자 버전 확인",
+        "원하는 스타일 클릭하여 복사",
+        "작은 텍스트를 어디든 붙여넣기",
+        "다른 텍스트와 결합하여 효과 만들기"
+      ],
+      "usage_examples": [
+        "독특한 인스타그램 바이오 만들기",
+        "수학 표기법 만들기",
+        "창의적인 사용자 이름 디자인"
+      ],
+      "inputLabel": "텍스트 입력",
+      "inputPlaceholder": "여기에 텍스트 입력...",
+      "superscript": "위첨자",
+      "subscript": "아래첨자",
+      "smallCaps": "작은 대문자",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "outputPlaceholder": "결과가 여기에 표시됩니다...",
+      "usageTitle": "사용 팁",
+      "usageDescription": "작은 텍스트는 대부분의 소셜 미디어 플랫폼에서 작동합니다. 일부 문자는 작은 버전이 없어 일반 텍스트로 표시됩니다."
+    },
+    "binary-to-text": {
+      "name": "이진수-텍스트 변환",
+      "description": "이진수와 텍스트 상호 변환",
+      "seo_title": "무료 온라인 이진수 텍스트 변환기",
+      "seo_description": "무료 온라인 이진수 텍스트 변환기. 이진 코드를 텍스트로 변환하거나 텍스트를 이진수로 변환.",
+      "detailed_description": "이진수 텍스트 변환기는 이진 코드와 읽을 수 있는 텍스트 간에 변환합니다.",
+      "usage_steps": [
+        "변환 모드 선택",
+        "이진 코드 또는 텍스트 입력",
+        "변환 클릭하여 결과 확인",
+        "변환된 출력 복사",
+        "스왑 버튼으로 모드 빠르게 전환"
+      ],
+      "usage_examples": [
+        "이진 메시지 디코딩",
+        "이진 인코딩 학습",
+        "비밀 이진 메시지 만들기"
+      ],
+      "binaryToText": "이진수 → 텍스트",
+      "textToBinary": "텍스트 → 이진수",
+      "binaryInput": "이진수 입력",
+      "textInput": "텍스트 입력",
+      "binaryOutput": "이진수 출력",
+      "textOutput": "텍스트 출력",
+      "binaryPlaceholder": "이진수 입력 (예: 01001000 01101001)...",
+      "textPlaceholder": "변환할 텍스트 입력...",
+      "outputPlaceholder": "결과가 여기에 표시됩니다...",
+      "convert": "변환",
+      "swap": "교환",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "invalidBinary": "잘못된 이진수 입력",
+      "exampleTitle": "예시",
+      "text": "텍스트",
+      "binary": "이진수"
+    },
+    "fraction-calculator": {
+      "name": "분수 계산기",
+      "description": "분수 덧셈, 뺄셈, 곱셈, 나눗셈 계산",
+      "seo_title": "무료 온라인 분수 계산기",
+      "seo_description": "무료 온라인 분수 계산기. 분수의 덧셈, 뺄셈, 곱셈, 나눗셈을 쉽게 계산하고 약분된 결과와 소수값을 얻으세요.",
+      "detailed_description": "분수 계산기는 분수의 사칙연산을 수행하며, 결과는 자동으로 기약분수로 약분되고 소수값도 표시됩니다.",
+      "usage_steps": [
+        "첫 번째 분수 입력",
+        "연산자 선택",
+        "두 번째 분수 입력",
+        "계산 클릭하여 결과 확인",
+        "약분된 분수와 소수값 확인"
+      ],
+      "usage_examples": [
+        "수학 숙제 문제 풀기",
+        "레시피 계량 계산",
+        "비율과 비례 다루기"
+      ],
+      "fraction1": "분수 1",
+      "fraction2": "분수 2",
+      "result": "결과",
+      "calculate": "계산",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "addition": "덧셈",
+      "subtraction": "뺄셈",
+      "multiplication": "곱셈",
+      "division": "나눗셈"
+    },
+    "percentage-change-calculator": {
+      "name": "백분율 변화 계산기",
+      "description": "두 값 사이의 백분율 증감 계산",
+      "seo_title": "무료 온라인 백분율 변화 계산기",
+      "seo_description": "무료 온라인 백분율 변화 계산기. 두 값 사이의 백분율 증가 또는 감소를 계산.",
+      "detailed_description": "백분율 변화 계산기는 두 값 사이의 백분율 증가 또는 감소를 계산하며, 가격 변동, 성장률, 데이터 비교 분석에 사용됩니다.",
+      "usage_steps": [
+        "원래 값 입력",
+        "새 값 입력",
+        "계산 클릭하여 백분율 변화 확인",
+        "증가인지 감소인지 확인",
+        "결과 복사"
+      ],
+      "usage_examples": [
+        "가격 변동 계산",
+        "매출 성장 분석",
+        "성과 지표 비교"
+      ],
+      "oldValue": "원래 값",
+      "newValue": "새 값",
+      "oldValuePlaceholder": "원래 값 입력...",
+      "newValuePlaceholder": "새 값 입력...",
+      "calculate": "계산",
+      "swap": "교환",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "percentageChange": "백분율 변화",
+      "increase": "증가",
+      "decrease": "감소",
+      "difference": "차이",
+      "formula": "공식",
+      "formulaText": "((새값 - 이전값) / |이전값|) × 100%",
+      "example1Title": "주가",
+      "example1": "투자 변동 추적",
+      "example2Title": "급여",
+      "example2": "인상률 계산",
+      "example3Title": "매출",
+      "example3": "성장률 측정"
+    },
+    "anagram-solver": {
+      "name": "애너그램 해결자",
+      "description": "스크램블된 글자에서 모든 가능한 단어를 찾아보세요",
+      "seo_title": "무료 애너그램 해결자 온라인 - 단어 찾기 도구",
+      "seo_description": "무료 온라인 애너그램 해결자. 스크램블된 글자에서 모든 가능한 단어를 찾아보세요. 스크랙블과 크로스워드 퍼즐과 같은 단어 게임에 완벽합니다.",
+      "detailed_description": "애너그램 해결자는 제공한 글자를 재조합하여 형성할 수 있는 모든 유효한 영어 단어를 찾아드립니다. 단어 게임, 퍼즐, 어휘 구축에 이상적입니다.",
+      "usage_steps": [
+        "스크램블된 글자를 입력하세요",
+        "모든 가능한 단어 조합을 확인하세요",
+        "단어를 복사할 수 있습니다",
+        "단어 게임에 사용하세요",
+        "다른 글자 조합을 시도하세요"
+      ],
+      "usage_examples": [
+        "스크랙블 퍼즐 해결",
+        "크로스워드 답변 찾기",
+        "새로운 어휘 발견"
+      ],
+      "inputLabel": "글자 입력",
+      "inputPlaceholder": "스크램블된 글자를 입력하세요...",
+      "results": "결과",
+      "noResults": "단어를 찾을 수 없습니다. 다른 글자를 시도하세요.",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "tipTitle": "팁",
+      "tipDescription": "2-15 글자를 입력하여 모든 가능한 영어 단어를 찾아보세요. 결과는 길이에 따라 정렬됩니다."
+    },
+    "word-unscrambler": {
+      "name": "단어 혼란 해제 도구",
+      "description": "혼란된 글자를 찾아 모든 가능한 단어를 찾아보세요",
+      "seo_title": "무료 온라인 단어 혼란 해제 도구 - 글자 혼란 해제 도구",
+      "seo_description": "무료 온라인 단어 혼란 해제 도구. 혼란된 글자로 모든 가능한 단어를 찾아보세요. 스캇빌, 워즈 위드 프렌즈, 단어 퍼즐에 완벽합니다.",
+      "detailed_description": "단어 혼란 해제 도구는 혼란된 글자로 모든 가능한 단어를 찾아냅니다. 결과는 단어 길이별로 그룹화되어 있어 게임에 가장 적합한 단어를 쉽게 찾을 수 있습니다.",
+      "usage_steps": [
+        "혼란된 글자를 입력하세요",
+        "길이별로 그룹화된 단어를 확인하세요",
+        "필요한 단어를 복사하세요",
+        "단어 게임에 사용하세요",
+        "고득점 단어를 찾아보세요"
+      ],
+      "usage_examples": [
+        "스캇빌에서 이기세요",
+        "단어 퍼즐을 해결하세요",
+        "용어력을 향상시켜보세요"
+      ],
+      "inputLabel": "혼란된 글자를 입력하세요",
+      "inputPlaceholder": "여기서 글자를 입력하세요...",
+      "found": " 찾았습니다",
+      "words": "단어",
+      "letters": "글자",
+      "copyAll": "모두 복사",
+      "copied": "복사되었습니다!",
+      "noResults": "단어가 없습니다"
+    },
+    "text-to-pdf": {
+      "name": "텍스트를 PDF로",
+      "description": "일반 텍스트를 PDF 문서로 변환",
+      "seo_title": "무료 온라인 텍스트를 PDF로 변환기",
+      "seo_description": "무료 온라인 텍스트를 PDF로 변환기. 일반 텍스트에서 전문적인 PDF 문서를 만드세요. 글꼴, 크기, 페이지 레이아웃을 사용자 정의하세요.",
+      "detailed_description": "텍스트를 PDF로 변환기는 일반 텍스트를 전문적인 PDF 문서로 변환합니다. 글꼴, 크기, 페이지 형식을 사용자 정의하여 원하는 대로 문서를 만드세요.",
+      "usage_steps": [
+        "텍스트를 입력하거나 붙여넣기",
+        "선택적으로 제목 추가",
+        "글꼴과 크기 설정 선택",
+        "페이지 크기 선택 (A4 또는 레터)",
+        "PDF 다운로드 클릭"
+      ],
+      "usage_examples": [
+        "인쇄 가능한 문서 만들기",
+        "메모를 PDF로 저장",
+        "간단한 보고서 생성"
+      ],
+      "title": "제목",
+      "optional": "선택사항",
+      "titlePlaceholder": "문서 제목...",
+      "fontSize": "글꼴 크기",
+      "font": "글꼴",
+      "pageSize": "페이지 크기",
+      "content": "내용",
+      "contentPlaceholder": "여기에 텍스트를 입력하세요...",
+      "characters": "문자",
+      "generating": "생성 중...",
+      "downloadPdf": "PDF 다운로드",
+      "preview": "미리보기",
+      "previewPlaceholder": "텍스트가 여기에 표시됩니다..."
+    },
+    "unit-price-calculator": {
+      "name": "단가 계산기",
+      "description": "단가를 비교하여 최고의 가치를 찾으세요",
+      "seo_title": "무료 온라인 단가 계산기 - 제품 가치 비교",
+      "seo_description": "무료 온라인 단가 계산기. 단가를 비교하여 최고의 거래를 찾으세요. 현명한 쇼핑과 가격 비교에 완벽합니다.",
+      "detailed_description": "단가 계산기는 다양한 크기와 가격의 제품을 비교하여 최고의 가치를 찾는 데 도움이 됩니다. 각 항목의 가격과 수량을 입력하면 어떤 것이 단가가 가장 낮은지 확인할 수 있습니다.",
+      "usage_steps": [
+        "제품 이름 입력 (선택사항)",
+        "가격 입력",
+        "수량과 단위 입력",
+        "단가 비교",
+        "최고의 가치 찾기"
+      ],
+      "usage_examples": [
+        "식료품 가격 비교",
+        "최고의 대량 구매 찾기",
+        "현명한 쇼핑 결정"
+      ],
+      "item": "항목",
+      "productName": "제품 이름",
+      "namePlaceholder": "예: 브랜드 A",
+      "price": "가격",
+      "quantity": "수량",
+      "unitPrice": "단가",
+      "addItem": "항목 추가",
+      "bestValue": "최고의 가치",
+      "bestValueMessage": "강조 표시된 항목이 단가가 가장 낮습니다!",
+      "tipTitle": "쇼핑 팁",
+      "tipDescription": "쇼핑할 때 항상 단가를 비교하세요. 큰 패키지가 항상 단가가 저렴한 것은 아닙니다!"
+    },
+    "bionic-reading-converter": {
+      "name": "바이오닉 리딩 변환기",
+      "description": "텍스트를 바이오닉 리딩 형식으로 변환하여 빠르게 읽기",
+      "seo_title": "무료 온라인 바이오닉 리딩 변환기 - 속독 도구",
+      "seo_description": "무료 온라인 바이오닉 리딩 변환기. 단어 시작 부분을 굵게 하여 텍스트를 변환합니다. 더 빠르게 읽고 집중력을 향상시키세요.",
+      "detailed_description": "바이오닉 리딩 변환기는 각 단어의 첫 글자를 굵게 하여 텍스트를 변환하고, 인공적인 고정점을 만들어 눈을 안내하고 더 빠르게 읽고 이해력을 향상시킵니다.",
+      "usage_steps": [
+        "텍스트 붙여넣기",
+        "고정 강도 조정",
+        "바이오닉 텍스트 미리보기",
+        "HTML 출력 복사",
+        "문서에서 사용"
+      ],
+      "usage_examples": [
+        "읽기 속도 향상",
+        "읽는 동안 집중력 향상",
+        "난독증 도움"
+      ],
+      "inputLabel": "텍스트 입력",
+      "inputPlaceholder": "변환할 텍스트를 여기에 붙여넣으세요...",
+      "fixationStrength": "고정 강도",
+      "light": "약함",
+      "medium": "중간",
+      "strong": "강함",
+      "preview": "미리보기",
+      "previewPlaceholder": "변환된 텍스트가 여기에 표시됩니다...",
+      "copyHtml": "HTML 복사",
+      "copied": "복사되었습니다!",
+      "whatIsBionic": "바이오닉 리딩이란?",
+      "bionicDescription": "바이오닉 리딩은 단어의 첫 글자를 강조하여 고정점을 만들어 뇌가 단어를 더 빨리 완성하도록 돕는 방법입니다.",
+      "benefits": "장점",
+      "benefit1": "최대 50% 빠른 읽기",
+      "benefit2": "더 나은 집중력과 기억력",
+      "benefit3": "눈의 피로 감소",
+      "htmlOutput": "HTML 출력",
+      "noOutput": "아직 출력이 없습니다"
+    },
+    "palindrome-checker": {
+      "name": "회문 검사기",
+      "description": "텍스트가 앞뒤로 같은지 확인",
+      "seo_title": "무료 온라인 회문 검사기 - 단어와 구문 테스트",
+      "seo_description": "무료 온라인 회문 검사기. 단어, 구문 또는 문장이 앞뒤로 같은지 테스트합니다. 언어 애호가를 위한 재미있는 단어 도구.",
+      "detailed_description": "회문 검사기는 텍스트가 앞뒤로 같은지 테스트합니다. 공백, 구두점, 대소문자를 무시하여 구문과 문장에 숨겨진 회문을 찾을 수 있습니다.",
+      "usage_steps": [
+        "단어 또는 구문 입력",
+        "비교 옵션 선택",
+        "회문인지 확인",
+        "유명한 회문 예시 시도",
+        "자신만의 회문 만들기"
+      ],
+      "usage_examples": [
+        "단어 회문 테스트",
+        "구문 회문 찾기",
+        "교육적 단어 게임"
+      ],
+      "inputLabel": "텍스트 입력",
+      "inputPlaceholder": "단어 또는 구문을 입력하세요...",
+      "ignoreCase": "대소문자 무시",
+      "ignoreSpaces": "공백 무시",
+      "ignorePunctuation": "구두점 무시",
+      "isPalindrome": "회문입니다!",
+      "notPalindrome": "회문이 아닙니다",
+      "processedText": "처리된 텍스트",
+      "forward": "정방향",
+      "backward": "역방향",
+      "examples": "이 예시들을 시도해 보세요"
+    },
+    "character-map": {
+      "name": "문자 맵",
+      "description": "특수 문자와 기호 찾아보기 및 복사",
+      "seo_title": "무료 온라인 문자 맵 - 특수 기호 및 유니코드",
+      "seo_description": "무료 온라인 문자 맵. 특수 문자, 기호, 이모지, 유니코드 문자를 찾아보고 복사하세요. 클릭하면 즉시 복사됩니다.",
+      "detailed_description": "문자 맵은 수천 개의 특수 문자, 기호, 이모지에 쉽게 접근할 수 있습니다. 카테고리별로 찾아보거나 검색하여 완벽한 문자를 찾고 클릭하여 복사하세요.",
+      "usage_steps": [
+        "문자 카테고리 찾아보기",
+        "또는 특정 문자 검색",
+        "문자를 클릭하여 복사",
+        "필요한 곳에 붙여넣기",
+        "최근 사용한 문자 보기"
+      ],
+      "usage_examples": [
+        "문서에 기호 추가",
+        "텍스트에 이모지 삽입",
+        "수학 기호 찾기"
+      ],
+      "searchPlaceholder": "문자 검색...",
+      "arrows": "화살표",
+      "math": "수학",
+      "currency": "통화",
+      "punctuation": "구두점",
+      "shapes": "도형",
+      "emoji": "이모지",
+      "hands": "손",
+      "hearts": "하트",
+      "weather": "날씨",
+      "music": "음악",
+      "tech": "기술",
+      "recentlyUsed": "최근 사용",
+      "searchResults": "검색 결과",
+      "tip": "문자를 클릭하여 클립보드에 복사"
+    },
+    "text-repeater": {
+      "name": "텍스트 반복기",
+      "description": "사용자 정의 구분자로 텍스트를 여러 번 반복",
+      "seo_title": "무료 온라인 텍스트 반복기 - 텍스트 복제 도구",
+      "seo_description": "무료 온라인 텍스트 반복기. 사용자 정의 구분자로 텍스트를 여러 번 반복합니다. 테스트, 콘텐츠 채우기, 패턴 생성에 완벽합니다.",
+      "detailed_description": "텍스트 반복기는 필요한 만큼 텍스트를 복제합니다. 다양한 구분자 중에서 선택하고 선택적으로 번호를 추가할 수 있습니다. 테스트, 샘플 데이터 생성, 콘텐츠 채우기에 적합합니다.",
+      "usage_steps": [
+        "반복할 텍스트 입력",
+        "반복 횟수 설정",
+        "구분자 유형 선택",
+        "선택적으로 번호 추가",
+        "결과 복사 또는 다운로드"
+      ],
+      "usage_examples": [
+        "테스트 데이터 생성",
+        "플레이스홀더 콘텐츠 채우기",
+        "패턴 생성"
+      ],
+      "inputLabel": "반복할 텍스트",
+      "inputPlaceholder": "여기에 텍스트를 입력하세요...",
+      "repeatCount": "반복 횟수",
+      "separator": "구분자",
+      "newline": "줄바꿈",
+      "space": "공백",
+      "comma": "쉼표",
+      "semicolon": "세미콜론",
+      "tab": "탭",
+      "none": "없음",
+      "addNumbering": "번호 추가",
+      "result": "결과",
+      "copy": "복사",
+      "copied": "복사되었습니다!",
+      "download": "다운로드",
+      "resultPlaceholder": "결과가 여기에 표시됩니다...",
+      "characters": "문자",
+      "lines": "줄"
+    },
+    "fake-name-generator": {
+      "name": "가짜 이름 생성기",
+      "description": "다양한 국가에서 무작위 실제 이름 생성",
+      "seo_title": "무료 온라인 가짜 이름 생성기 - 무작위 이름 생성",
+      "seo_description": "무료 온라인 가짜 이름 생성기. 다양한 국가와 문화에서 무작위 실제 이름을 생성합니다. 테스트, 글쓰기, 개인정보 보호에 완벽합니다.",
+      "detailed_description": "가짜 이름 생성기는 다양한 국가와 문화에서 실제적인 무작위 이름을 만듭니다. 테스트, 창작 글쓰기 또는 플레이스홀더 이름이 필요할 때 이름을 생성합니다.",
+      "usage_steps": [
+        "국가/문화 선택",
+        "성별 선호도 선택",
+        "이름 수 설정",
+        "생성 클릭",
+        "필요한 이름 복사"
+      ],
+      "usage_examples": [
+        "테스트 사용자 데이터 생성",
+        "가상 캐릭터 이름 짓기",
+        "개인정보 보호"
+      ],
+      "country": "국가/문화",
+      "english": "영어 (미국/영국)",
+      "chinese": "중국어",
+      "japanese": "일본어",
+      "korean": "한국어",
+      "german": "독일어",
+      "spanish": "스페인어",
+      "gender": "성별",
+      "random": "무작위",
+      "male": "남성",
+      "female": "여성",
+      "count": "수",
+      "generate": "이름 생성",
+      "generatedNames": "생성된 이름",
+      "copyAll": "모두 복사",
+      "copied": "복사되었습니다!",
+      "disclaimer": "면책 조항",
+      "disclaimerText": "이 이름들은 무작위로 생성되었으며 실제 인물과의 유사성은 우연의 일치입니다. 책임감 있게 사용하세요."
+    },
+    "invisible-character-generator": {
+      "name": "보이지 않는 문자 생성기",
+      "description": "보이지 않는 유니코드 문자 생성 및 감지",
+      "seo_title": "무료 온라인 보이지 않는 문자 생성기 - 제로 너비 문자",
+      "seo_description": "무료 온라인 보이지 않는 문자 생성기. 제로 너비 공백 및 기타 보이지 않는 유니코드 문자를 생성합니다. 텍스트에서 숨겨진 문자를 감지합니다.",
+      "detailed_description": "보이지 않는 문자 생성기는 제로 너비 공백과 같은 다양한 보이지 않는 유니코드 문자를 만듭니다. 텍스트에서 숨겨진 문자를 찾는 감지기도 포함되어 있습니다.",
+      "usage_steps": [
+        "보이지 않는 문자 유형 선택",
+        "반복 횟수 설정",
+        "보이지 않는 문자 복사",
+        "필요한 곳에 붙여넣기",
+        "감지기로 숨겨진 문자 찾기"
+      ],
+      "usage_examples": [
+        "빈 메시지 만들기",
+        "보이지 않는 워터마크 추가",
+        "텍스트 처리 테스트"
+      ],
+      "selectCharacter": "문자 유형 선택",
+      "repeatCount": "반복 횟수",
+      "characters": "문자",
+      "copy": "복사",
+      "copied": "복사되었습니다!",
+      "allCharacters": "모든 보이지 않는 문자",
+      "detectTitle": "보이지 않는 문자 감지",
+      "detectPlaceholder": "보이지 않는 문자를 감지할 텍스트를 여기에 붙여넣으세요...",
+      "found": "발견됨",
+      "noInvisibleFound": "보이지 않는 문자가 감지되지 않았습니다",
+      "useCases": "일반적인 용도",
+      "useCase1": "빈 소셜 미디어 게시물 만들기",
+      "useCase2": "보이지 않는 텍스트 워터마크 추가",
+      "useCase3": "텍스트 처리 시스템 테스트"
     }
   },
   "tool": {
@@ -14809,5 +15915,120 @@
       "perChildPerYear": "자녀당 연간",
       "perDependent": "부양가족당"
     }
+  },
+  "launches": {
+    "title": "제품 출시",
+    "subtitle": "세계 각지의 제작자들이 출시한 최신 제품과 도구를 발견하세요",
+    "description": "세계 각지의 제작자들이 출시한 최신 제품과 도구를 발견하세요",
+    "pageTitle": "제품 출시 - 새로운 도구와 제품을 발견하세요",
+    "pageDescription": "세계 각지의 제작자들이 출시한 최신 제품을 탐험하세요. 혁신적인 도구, 앱, 서비스를 찾아보세요. 자신의 제품을 무료로 제출하세요.",
+    "featured": "추천",
+    "launchedOn": "출시 일자",
+    "about": "정보",
+    "screenshots": "스크린샷",
+    "links": "링크",
+    "tags": "태그",
+    "visitWebsite": "웹사이트 방문",
+    "relatedProducts": "관련 제품",
+    "submitProduct": "제품 제출",
+    "backToAllProducts": "모든 제품으로 돌아가기",
+    "noProductsInCategory": "이 카테고리에 아직 제품이 없습니다",
+    "beFirstToSubmit": "이 카테고리에서 최초로 제품을 제출하세요!",
+    "categoryProductCount": "{count} 개의 제품",
+    "allCategories": "모든 카테고리",
+    "sortBy": "정렬 기준",
+    "breadcrumb": {
+      "home": "홈",
+      "launches": "출시"
+    },
+    "seo": {
+      "productSuffix": "제품 출시 | U2Tool",
+      "categorySuffix": "제품 | U2Tool",
+      "categoryDescription": "최고의 {category} 제품과 도구를 발견하세요. 세계 각지의 제작자들이 출시한 혁신적인 솔루션을 찾아보세요."
+    },
+    "stats": {
+      "totalLaunches": "총 출시",
+      "liveProducts": "운영 중 제품",
+      "totalUpvotes": "총 투표",
+      "totalViews": "총 뷰",
+      "featured": "추천",
+      "featuredProducts": "추천 제품"
+    },
+    "sort": {
+      "newest": "최신",
+      "popular": "인기",
+      "featured": "추천"
+    },
+    "filter": {
+      "all": "모든 것",
+      "newest": "최신",
+      "popular": "인기",
+      "featured": "추천"
+    },
+    "categories": {
+      "ai-tools": "AI 도구",
+      "developer-tools": "개발자 도구",
+      "design-tools": "디자인 도구",
+      "productivity": "생산성",
+      "marketing": "마케팅",
+      "finance": "금융",
+      "education": "교육",
+      "entertainment": "엔터테인먼트",
+      "other": "기타"
+    },
+    "submit": {
+      "pageTitle": "제품 제출",
+      "pageDescription": "U2Tool에 추천되는 제품을 제출하세요. 천만 사용자에 의해 발견됩니다.",
+      "title": "제품 제출",
+      "subtitle": "천만 사용자에 의해 제품이 발견됩니다",
+      "productName": "제품 이름",
+      "productNamePlaceholder": "제품 이름을 입력하세요",
+      "tagline": "태그라인",
+      "taglinePlaceholder": "단짝한 설명 (최대 100자)",
+      "taglineHint": "{count}/100 자",
+      "description": "설명",
+      "descriptionPlaceholder": "제품을 자세히 설명하세요...",
+      "websiteUrl": "웹사이트 URL",
+      "websiteUrlPlaceholder": "https://your-product.com",
+      "logoUrl": "로고 URL",
+      "logoUrlPlaceholder": "https://your-product.com/logo.png",
+      "logoHint": "권장: 200x200px, PNG 또는 JPG",
+      "category": "카테고리",
+      "selectCategory": "카테고리 선택",
+      "makerName": "귀하의 이름",
+      "makerNamePlaceholder": "John Doe",
+      "makerEmail": "귀하의 이메일",
+      "makerEmailPlaceholder": "john@example.com",
+      "emailHint": "제품이 승인되면 알림을 받습니다",
+      "twitterUrl": "Twitter URL (선택 사항)",
+      "twitterUrlPlaceholder": "https://twitter.com/yourproduct",
+      "githubUrl": "GitHub URL (선택 사항)",
+      "githubUrlPlaceholder": "https://github.com/yourproduct",
+      "submitButton": "제품 제출",
+      "submitting": "제출 중...",
+      "success": "제품 제출 성공!",
+      "successMessage": "귀하의 제품이 검토를 위해 제출되었습니다. 승인되면 알림을 드리겠습니다.",
+      "error": "제품 제출 실패",
+      "validation": {
+        "nameRequired": "제품 이름이 필요합니다",
+        "taglineRequired": "태그라인이 필요합니다",
+        "taglineTooLong": "태그라인은 100자 이하여야 합니다",
+        "descriptionRequired": "설명이 필요합니다",
+        "websiteRequired": "웹사이트 URL이 필요합니다",
+        "websiteInvalid": "유효한 URL을 입력하세요",
+        "categoryRequired": "카테고리를 선택하세요",
+        "makerNameRequired": "귀하의 이름이 필요합니다",
+        "makerEmailRequired": "귀하의 이메일이 필요합니다",
+        "makerEmailInvalid": "유효한 이메일을 입력하세요"
+      }
+    },
+    "upvote": {
+      "upvote": "추천",
+      "upvoted": "추천됨"
+    },
+    "loading": "로드 중...",
+    "loadMore": "더보기",
+    "noProducts": "제품이 없습니다",
+    "noProductsDescription": "첫 번째로 제품을 제출하세요!"
   }
 }

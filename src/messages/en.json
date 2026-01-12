@@ -109,7 +109,8 @@
     "moreResults": "more results",
     "relatedTools": "Related Tools",
     "more": "More",
-    "categories": "Categories"
+    "categories": "Categories",
+    "launches": "Launches"
   },
   "home": {
     "hero": {
@@ -11543,7 +11544,17 @@
       ],
       "anyGender": "Any Gender",
       "neutral": "Neutral",
-      "clickToGenerate": "Click To Generate"
+      "clickToGenerate": "Click To Generate",
+      "origins": {
+        "english": "English/American",
+        "spanish": "Spanish/Hispanic",
+        "french": "French",
+        "german": "German",
+        "japanese": "Japanese",
+        "chinese": "Chinese",
+        "korean": "Korean",
+        "any": "Any Origin"
+      }
     },
     "random-picker": {
       "name": "Random Picker",
@@ -12455,7 +12466,1106 @@
         "Design network architecture"
       ]
     },
-    "calculate": "Calculate"
+    "iban-validator": {
+      "name": "IBAN Validator",
+      "description": "Validate and parse IBAN bank account numbers from European countries.",
+      "seo_title": "Free IBAN Validator Online - Check IBAN Numbers",
+      "seo_description": "Validate IBAN bank account numbers online for free. Check format, country code, and checksum. Supports all European countries. Fast and secure.",
+      "inputLabel": "Enter IBAN",
+      "placeholder": "e.g., DE89370400440532013000",
+      "validate": "Validate",
+      "valid": "Valid IBAN",
+      "invalid": "Invalid IBAN",
+      "country": "Country",
+      "checkDigits": "Check Digits",
+      "bankCode": "Bank Code",
+      "bban": "BBAN (Basic Bank Account Number)",
+      "formatted": "Formatted IBAN",
+      "copy": "Copy",
+      "exampleIbans": "Example IBANs",
+      "errors": {
+        "empty": "Please enter an IBAN",
+        "invalidFormat": "Invalid IBAN format",
+        "unknownCountry": "Unknown country code",
+        "invalidLength": "Invalid length: expected {expected} characters, got {actual}",
+        "invalidChecksum": "Invalid checksum - IBAN may be incorrect"
+      },
+      "detailed_description": "IBAN Validator is a comprehensive tool for validating International Bank Account Numbers (IBAN). It checks the format, country code, length, and checksum of IBAN numbers from all European countries. The tool also parses the IBAN to show bank code, country information, and BBAN details.",
+      "usage_steps": [
+        "Enter or paste an IBAN number in the input field",
+        "Click the Validate button to check the IBAN",
+        "View validation results including country and bank information",
+        "Use example IBANs to test different country formats",
+        "Copy the formatted IBAN for use in bank transfers"
+      ],
+      "usage_examples": [
+        "Verify IBAN before making international bank transfers",
+        "Check customer-provided bank account numbers",
+        "Validate IBAN format for payment processing systems"
+      ]
+    },
+    "vat-calculator": {
+      "name": "VAT Calculator",
+      "description": "Calculate VAT (Value Added Tax) for European countries with different rates.",
+      "seo_title": "Free VAT Calculator Online - EU Tax Calculator",
+      "seo_description": "Calculate VAT for European countries online for free. Add or remove VAT, support for standard and reduced rates. All EU countries included.",
+      "amount": "Amount",
+      "calculationMode": "Calculation Mode",
+      "addVat": "Add VAT to amount",
+      "removeVat": "Remove VAT from amount",
+      "vatOnly": "Calculate VAT only",
+      "useCustomRate": "Use custom VAT rate",
+      "customRate": "Custom Rate",
+      "country": "Country",
+      "rateType": "Rate Type",
+      "standardRate": "Standard Rate",
+      "reducedRate": "Reduced Rate",
+      "reducedRates": "Reduced Rates",
+      "superReducedRate": "Super Reduced Rate",
+      "netAmount": "Net Amount",
+      "vatAmount": "VAT Amount",
+      "grossAmount": "Gross Amount",
+      "euVatRates": "EU VAT Rates Reference",
+      "detailed_description": "VAT Calculator is a comprehensive tool for calculating Value Added Tax across European countries. It supports standard, reduced, and super-reduced VAT rates for all EU member states. You can add VAT to a net amount, remove VAT from a gross amount, or calculate the VAT portion only.",
+      "usage_steps": [
+        "Enter the amount you want to calculate VAT for",
+        "Select the calculation mode (add VAT, remove VAT, or VAT only)",
+        "Choose a country or enter a custom VAT rate",
+        "Select the rate type (standard, reduced, or super-reduced)",
+        "View the calculated net amount, VAT amount, and gross amount"
+      ],
+      "usage_examples": [
+        "Calculate VAT for invoices and business transactions",
+        "Determine net price from VAT-inclusive prices",
+        "Compare VAT rates across different EU countries"
+      ]
+    },
+    "carbon-footprint-calculator": {
+      "name": "Carbon Footprint Calculator",
+      "description": "Calculate your personal carbon footprint from transportation, energy, and lifestyle.",
+      "seo_title": "Free Carbon Footprint Calculator - CO2 Emissions Calculator",
+      "seo_description": "Calculate your carbon footprint online for free. Track CO2 emissions from transportation, home energy, and diet. Get personalized reduction tips.",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "month": "month",
+      "year": "year",
+      "transportation": "Transportation",
+      "carDistance": "Car Distance",
+      "petrol": "Petrol",
+      "diesel": "Diesel",
+      "hybrid": "Hybrid",
+      "electric": "Electric",
+      "flightHours": "Flight Hours",
+      "shortHaul": "Short Haul (<3h)",
+      "mediumHaul": "Medium Haul (3-6h)",
+      "longHaul": "Long Haul (>6h)",
+      "trainDistance": "Train Distance",
+      "busDistance": "Bus Distance",
+      "homeEnergy": "Home Energy",
+      "electricity": "Electricity",
+      "naturalGas": "Natural Gas",
+      "heatingOil": "Heating Oil",
+      "lifestyle": "Lifestyle",
+      "dietType": "Diet Type",
+      "diets": {
+        "meat": "Heavy Meat Eater",
+        "average": "Average",
+        "vegetarian": "Vegetarian",
+        "vegan": "Vegan"
+      },
+      "results": "Your Carbon Footprint",
+      "total": "Total",
+      "treesNeeded": "Trees needed to offset",
+      "trees": "trees per year",
+      "levels": {
+        "low": "Low Impact",
+        "average": "Average",
+        "high": "High Impact",
+        "veryHigh": "Very High Impact"
+      },
+      "detailed_description": "Carbon Footprint Calculator helps you measure your environmental impact by calculating CO2 emissions from transportation, home energy use, and dietary choices. The tool provides a comprehensive breakdown of your carbon footprint and shows how many trees would be needed to offset your emissions.",
+      "usage_steps": [
+        "Select monthly or yearly calculation period",
+        "Enter your transportation data (car, flights, train, bus)",
+        "Input your home energy consumption (electricity, gas, heating)",
+        "Select your diet type",
+        "View your total carbon footprint and emission breakdown"
+      ],
+      "usage_examples": [
+        "Track personal environmental impact over time",
+        "Compare carbon footprint of different lifestyle choices",
+        "Plan carbon offset strategies for individuals or businesses"
+      ]
+    },
+    "gdpr-consent-generator": {
+      "name": "GDPR Consent Generator",
+      "description": "Generate GDPR-compliant cookie consent banners and privacy policy templates.",
+      "seo_title": "Free GDPR Cookie Consent Generator - Privacy Policy Generator",
+      "seo_description": "Generate GDPR-compliant cookie consent banners and privacy policies online for free. Customizable HTML/CSS code for your website. EU privacy law compliant.",
+      "websiteName": "Website Name",
+      "websiteUrl": "Website URL",
+      "companyName": "Company Name",
+      "privacyEmail": "Privacy Contact Email",
+      "cookieTypes": "Cookie Types",
+      "cookies": {
+        "necessary": "Necessary",
+        "analytics": "Analytics",
+        "marketing": "Marketing",
+        "preferences": "Preferences"
+      },
+      "position": "Banner Position",
+      "positionTop": "Top",
+      "positionBottom": "Bottom",
+      "theme": "Theme",
+      "themeLight": "Light",
+      "themeDark": "Dark",
+      "htmlCode": "HTML Code",
+      "cssCode": "CSS Code",
+      "privacyPolicy": "Privacy Policy Template",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "bannerTitle": "Cookie Consent",
+      "decline": "Decline",
+      "customize": "Customize",
+      "acceptAll": "Accept All",
+      "disclaimer": "This generator provides templates for reference only. Please consult a legal professional to ensure full GDPR compliance for your specific situation.",
+      "detailed_description": "GDPR Consent Generator creates customizable cookie consent banners and privacy policy templates that comply with European data protection regulations. Generate ready-to-use HTML and CSS code for your website, with options for different cookie types, banner positions, and themes.",
+      "usage_steps": [
+        "Enter your website and company information",
+        "Select which cookie types your website uses",
+        "Choose banner position and theme",
+        "Copy the generated HTML and CSS code",
+        "Customize the privacy policy template for your needs"
+      ],
+      "usage_examples": [
+        "Add GDPR-compliant cookie consent to websites",
+        "Create privacy policy documents for EU compliance",
+        "Implement cookie preference management for users"
+      ]
+    },
+    "metric-imperial-converter": {
+      "name": "Metric Imperial Converter",
+      "description": "Convert between metric and imperial units for length, weight, volume, and more.",
+      "seo_title": "Free Metric Imperial Converter - Unit Conversion Calculator",
+      "seo_description": "Convert between metric and imperial units online for free. Length, weight, volume, temperature, area, and speed conversions. Fast and accurate.",
+      "categories": {
+        "length": "Length",
+        "weight": "Weight",
+        "volume": "Volume",
+        "temperature": "Temperature",
+        "area": "Area",
+        "speed": "Speed"
+      },
+      "from": "From",
+      "to": "To",
+      "swap": "Swap units",
+      "metric": "Metric",
+      "imperial": "Imperial",
+      "quickReference": "Quick Reference",
+      "detailed_description": "Metric Imperial Converter is a comprehensive unit conversion tool that supports length, weight, volume, temperature, area, and speed conversions. Easily convert between metric units (meters, kilograms, liters) and imperial units (feet, pounds, gallons) with instant results.",
+      "usage_steps": [
+        "Select a conversion category (length, weight, volume, etc.)",
+        "Enter the value you want to convert",
+        "Choose the source unit from the dropdown",
+        "Select the target unit for conversion",
+        "View the converted result instantly"
+      ],
+      "usage_examples": [
+        "Convert kilometers to miles for travel planning",
+        "Convert kilograms to pounds for weight tracking",
+        "Convert Celsius to Fahrenheit for weather comparison"
+      ]
+    },
+    "bic-swift-lookup": {
+      "name": "BIC/SWIFT Lookup",
+      "description": "Look up and validate BIC/SWIFT codes for international bank transfers.",
+      "seo_title": "Free BIC SWIFT Code Lookup - Bank Code Validator",
+      "seo_description": "Look up and validate BIC/SWIFT codes online for free. Find bank information from codes. Essential for international wire transfers.",
+      "inputLabel": "Enter BIC/SWIFT Code",
+      "placeholder": "e.g., DEUTDEFF",
+      "formatHint": "Format: 8 or 11 characters (e.g., DEUTDEFF or DEUTDEFFXXX)",
+      "lookup": "Look Up",
+      "validBic": "Valid BIC/SWIFT Code",
+      "bankCode": "Bank Code",
+      "country": "Country",
+      "locationCode": "Location Code",
+      "branchCode": "Branch Code",
+      "headOffice": "Head Office",
+      "specificBranch": "Specific Branch",
+      "bankInformation": "Bank Information",
+      "bankName": "Bank Name",
+      "city": "City",
+      "branch": "Branch",
+      "copyBic": "Copy BIC",
+      "bicStructure": "BIC/SWIFT Code Structure",
+      "structure": {
+        "bank": "Bank Code",
+        "country": "Country",
+        "location": "Location",
+        "branch": "Branch (optional)"
+      },
+      "sampleCodes": "Sample BIC Codes",
+      "errors": {
+        "empty": "Please enter a BIC/SWIFT code",
+        "invalidFormat": "Invalid BIC format. Must be 8 or 11 alphanumeric characters.",
+        "unknownCountry": "Unknown country code"
+      },
+      "detailed_description": "BIC/SWIFT Lookup tool validates and provides information about Bank Identifier Codes (BIC) used for international wire transfers. Enter a BIC code to verify its format and get details about the bank, country, and branch. Essential for ensuring accurate international payments.",
+      "usage_steps": [
+        "Enter a BIC/SWIFT code in the input field",
+        "Click Look Up to validate and get bank information",
+        "View the parsed code structure (bank, country, location, branch)",
+        "Check bank details if available in the database",
+        "Use sample codes to explore different banks"
+      ],
+      "usage_examples": [
+        "Verify BIC codes before making international transfers",
+        "Look up bank information from SWIFT codes",
+        "Validate payment details for cross-border transactions"
+      ]
+    },
+    "email-validator": {
+      "name": "Email Validator",
+      "description": "Validate email addresses and check for common typos and disposable domains.",
+      "seo_title": "Free Email Validator Online - Check Email Format",
+      "seo_description": "Validate email addresses online for free. Check format, detect typos, identify disposable emails, and verify domain. Bulk validation supported.",
+      "inputLabel": "Enter Email Addresses",
+      "inputPlaceholder": "Enter one email per line...",
+      "validate": "Validate",
+      "valid": "Valid",
+      "invalid": "Invalid",
+      "localPart": "Local Part",
+      "domain": "Domain",
+      "tld": "TLD",
+      "freeProvider": "Free Provider",
+      "disposable": "Disposable",
+      "didYouMean": "Did you mean",
+      "detailed_description": "Email Validator helps you verify email addresses for correct format and common issues. It detects typos in popular domains, identifies disposable email services, and validates the overall structure. Perfect for cleaning email lists and preventing invalid signups.",
+      "usage_steps": [
+        "Enter one or more email addresses (one per line)",
+        "Click Validate to check all emails",
+        "Review results showing valid and invalid addresses",
+        "Check for typo suggestions and disposable domain warnings",
+        "Use the summary to see total valid and invalid counts"
+      ],
+      "usage_examples": [
+        "Validate email lists before sending campaigns",
+        "Check user input during registration",
+        "Clean up contact databases"
+      ]
+    },
+    "phone-formatter": {
+      "name": "Phone Number Formatter",
+      "description": "Format phone numbers according to international standards for different countries.",
+      "seo_title": "Free Phone Number Formatter Online - International Format",
+      "seo_description": "Format phone numbers to international standards online for free. Support for 14+ countries including US, UK, China, Japan. Include dial codes.",
+      "country": "Country",
+      "phoneNumber": "Phone Number",
+      "inputPlaceholder": "Enter phone number digits...",
+      "includeDialCode": "Include country dial code",
+      "format": "Format",
+      "formatPattern": "Format Pattern",
+      "example": "Example",
+      "result": "Formatted Number",
+      "copy": "Copy",
+      "allFormats": "All Country Formats",
+      "detailed_description": "Phone Number Formatter converts raw phone numbers into properly formatted international formats. Select from 14+ countries and get correctly formatted numbers with optional country dial codes. Perfect for standardizing contact information.",
+      "usage_steps": [
+        "Select the target country from the dropdown",
+        "Enter the phone number digits",
+        "Choose whether to include the country dial code",
+        "Click Format to generate the formatted number",
+        "Copy the result to clipboard"
+      ],
+      "usage_examples": [
+        "Format phone numbers for international calling",
+        "Standardize contact lists for CRM systems",
+        "Prepare phone numbers for SMS campaigns"
+      ]
+    },
+    "credit-card-validator": {
+      "name": "Credit Card Validator",
+      "description": "Validate credit card numbers using the Luhn algorithm and detect card type.",
+      "seo_title": "Free Credit Card Validator Online - Luhn Check",
+      "seo_description": "Validate credit card numbers online for free. Uses Luhn algorithm to verify card numbers. Detects Visa, Mastercard, Amex, and more.",
+      "cardNumber": "Card Number",
+      "inputPlaceholder": "Enter card number...",
+      "validate": "Validate",
+      "valid": "Valid",
+      "invalid": "Invalid",
+      "luhnCheck": "Luhn Check",
+      "passed": "Passed",
+      "failed": "Failed",
+      "digits": "Digits",
+      "digitsCount": "digits",
+      "disclaimer": "This tool only validates the mathematical structure of card numbers. It does not verify if the card is active or has funds. Never enter real card numbers on untrusted websites.",
+      "supportedCards": "Supported Card Types",
+      "detailed_description": "Credit Card Validator checks if a credit card number is mathematically valid using the Luhn algorithm. It automatically detects the card type (Visa, Mastercard, Amex, etc.) and provides detailed validation results. For testing and development purposes only.",
+      "usage_steps": [
+        "Enter a credit card number in the input field",
+        "The number will be automatically formatted with spaces",
+        "Click Validate to check the card",
+        "View the card type, issuer, and Luhn check result",
+        "Check the digit count for additional validation"
+      ],
+      "usage_examples": [
+        "Test payment form validation logic",
+        "Verify card number format before processing",
+        "Identify card type from number prefix"
+      ]
+    },
+    "color-blindness-simulator": {
+      "name": "Color Blindness Simulator",
+      "description": "Simulate how colors and images appear to people with different types of color blindness.",
+      "seo_title": "Free Color Blindness Simulator Online - Accessibility Tool",
+      "seo_description": "Simulate color blindness online for free. Test how colors and images appear to people with protanopia, deuteranopia, tritanopia. Essential for accessible design.",
+      "selectColor": "Select Color",
+      "uploadImage": "Upload Image (Optional)",
+      "colorComparison": "Color Comparison",
+      "imagePreview": "Image Preview",
+      "original": "Original",
+      "aboutTitle": "About Color Blindness",
+      "aboutDescription": "Color blindness affects approximately 8% of men and 0.5% of women worldwide. Testing your designs with this simulator helps ensure your content is accessible to everyone.",
+      "types": {
+        "normal": "Normal",
+        "protanopia": "Protanopia",
+        "deuteranopia": "Deuteranopia",
+        "tritanopia": "Tritanopia",
+        "achromatopsia": "Achromatopsia"
+      },
+      "detailed_description": "Color Blindness Simulator helps designers and developers test how their colors and images appear to people with various types of color vision deficiency. Supports protanopia, deuteranopia, tritanopia, and complete color blindness simulation.",
+      "usage_steps": [
+        "Select a color using the color picker or enter a hex code",
+        "Optionally upload an image to test",
+        "Click on different color blindness types to see simulations",
+        "Compare how the color appears across all types",
+        "Use the image preview to see full image simulations"
+      ],
+      "usage_examples": [
+        "Test website color schemes for accessibility",
+        "Verify chart and graph colors are distinguishable",
+        "Ensure UI elements are visible to all users"
+      ]
+    },
+    "aspect-ratio-resizer": {
+      "name": "Aspect Ratio Resizer",
+      "description": "Resize images to specific aspect ratios or social media dimensions.",
+      "seo_title": "Free Aspect Ratio Resizer Online - Image Resize Tool",
+      "seo_description": "Resize images to any aspect ratio online for free. Preset sizes for Instagram, Facebook, YouTube, Twitter. Lock ratio or set custom dimensions.",
+      "uploadImage": "Upload Image",
+      "originalSize": "Original Size",
+      "width": "Width",
+      "height": "Height",
+      "lockAspectRatio": "Lock Aspect Ratio",
+      "presetRatios": "Preset Ratios",
+      "socialMediaSizes": "Social Media Sizes",
+      "outputSize": "Output Size",
+      "download": "Download",
+      "preview": "Preview",
+      "detailed_description": "Aspect Ratio Resizer helps you resize images to specific dimensions while maintaining or changing the aspect ratio. Includes presets for common ratios (16:9, 4:3, 1:1) and social media platforms (Instagram, Facebook, YouTube, Twitter).",
+      "usage_steps": [
+        "Upload an image using the file input",
+        "View the original dimensions",
+        "Enter custom width and height or use presets",
+        "Toggle aspect ratio lock as needed",
+        "Click Download to save the resized image"
+      ],
+      "usage_examples": [
+        "Resize photos for social media posts",
+        "Create thumbnails with specific dimensions",
+        "Prepare images for website banners"
+      ]
+    },
+    "markdown-to-pdf": {
+      "name": "Markdown to PDF",
+      "description": "Convert Markdown documents to PDF with customizable styling.",
+      "seo_title": "Free Markdown to PDF Converter Online",
+      "seo_description": "Convert Markdown to PDF online for free. Support for headings, lists, tables, code blocks. Customizable font size and page size. No upload required.",
+      "documentTitle": "Document Title",
+      "fontSize": "Font Size",
+      "pageSize": "Page Size",
+      "markdownInput": "Markdown Input",
+      "inputPlaceholder": "Enter your markdown here...",
+      "preview": "Preview",
+      "generatePdf": "Generate PDF",
+      "clear": "Clear",
+      "supportedSyntax": "Supported Markdown Syntax",
+      "headings": "Headings (# ## ###)",
+      "boldItalic": "Bold & Italic",
+      "lists": "Lists (- or 1.)",
+      "codeBlocks": "Code Blocks",
+      "tables": "Tables",
+      "blockquotes": "Blockquotes",
+      "horizontalRules": "Horizontal Rules",
+      "inlineCode": "Inline Code",
+      "detailed_description": "Markdown to PDF converter transforms your Markdown documents into professionally formatted PDF files. Supports headings, lists, tables, code blocks, blockquotes, and more. Customize font size and page size before generating.",
+      "usage_steps": [
+        "Enter or paste your Markdown content",
+        "Set the document title for the PDF",
+        "Choose font size and page size",
+        "Preview the formatted output",
+        "Click Generate PDF to create and download"
+      ],
+      "usage_examples": [
+        "Convert documentation to PDF for sharing",
+        "Create printable reports from Markdown notes",
+        "Generate PDF versions of README files"
+      ]
+    },
+    "calculate": "Calculate",
+    "speech-timer": {
+      "name": "Speech Timer",
+      "description": "Time your speeches and presentations with word count estimation",
+      "seo_title": "Free Speech Timer Online - Presentation Timer with Word Count",
+      "seo_description": "Free online speech timer for presentations. Track speaking time, estimate word count, and practice your speeches with our easy-to-use timer tool.",
+      "detailed_description": "Speech Timer is a professional presentation timing tool that helps speakers practice and deliver speeches effectively. It provides real-time countdown, word count estimation based on speaking pace, and visual alerts when time is running low.",
+      "usage_steps": [
+        "Set your target speech duration",
+        "Optionally enter your speech text for word count",
+        "Click start to begin the countdown",
+        "Monitor the visual progress indicator",
+        "Receive alerts when time is almost up"
+      ],
+      "usage_examples": [
+        "Practice TED-style presentations",
+        "Time academic conference talks",
+        "Prepare for job interview presentations"
+      ],
+      "targetDuration": "Target Duration",
+      "duration": "Duration",
+      "minutes": "minutes",
+      "min": "min",
+      "wordsPerMinute": "Words per minute",
+      "estimatedWords": "Estimated words",
+      "words": "words",
+      "remaining": "Remaining",
+      "start": "Start",
+      "pause": "Pause",
+      "reset": "Reset",
+      "timeRemaining": "Time Remaining",
+      "speechText": "Speech Text (optional)",
+      "speechPlaceholder": "Paste your speech here to count words...",
+      "wordCount": "Word Count",
+      "speakingPace": "Speaking Pace",
+      "slow": "Slow",
+      "normal": "Normal",
+      "fast": "Fast",
+      "timeUp": "Time's Up!",
+      "presets": "Presets"
+    },
+    "habit-tracker": {
+      "name": "Habit Tracker",
+      "description": "Track your daily habits and build streaks",
+      "seo_title": "Free Habit Tracker Online - Daily Habit Tracking Tool",
+      "seo_description": "Free online habit tracker to build and maintain daily habits. Track streaks, monitor progress, and achieve your goals with our simple habit tracking tool.",
+      "detailed_description": "Habit Tracker is a simple yet powerful tool for building and maintaining daily habits. Track multiple habits, view your streaks, and stay motivated with visual progress indicators. All data is stored locally in your browser.",
+      "usage_steps": [
+        "Add a new habit with a name and icon",
+        "Click on a habit to mark it complete for today",
+        "View your current streak for each habit",
+        "Track your weekly completion rate",
+        "Delete habits you no longer want to track"
+      ],
+      "usage_examples": [
+        "Track daily exercise routines",
+        "Monitor reading habits",
+        "Build meditation practice"
+      ],
+      "addHabit": "Add Habit",
+      "habit": "Habit",
+      "habitName": "Habit Name",
+      "habitPlaceholder": "Enter habit name...",
+      "selectIcon": "Select Icon",
+      "add": "Add",
+      "cancel": "Cancel",
+      "streak": "Streak",
+      "days": "days",
+      "today": "Today",
+      "completed": "Completed",
+      "noHabits": "No habits yet. Add your first habit!",
+      "deleteConfirm": "Delete this habit?",
+      "completedToday": "Completed today",
+      "weeklyProgress": "Weekly Progress",
+      "tip": "Tip: Click on a day to mark it complete. Build your streak by completing habits daily!"
+    },
+    "flip-text": {
+      "name": "Flip Text",
+      "description": "Flip text upside down, mirror, or reverse",
+      "seo_title": "Free Flip Text Generator Online - Upside Down & Mirror Text",
+      "seo_description": "Free online flip text generator. Create upside down text, mirror text, and reversed text for social media, fun messages, and creative content.",
+      "detailed_description": "Flip Text Generator transforms your text in creative ways. Create upside down text (ʇxǝʇ), mirror text, reversed text, and more. Perfect for social media posts, usernames, and fun messages.",
+      "usage_steps": [
+        "Enter your text in the input field",
+        "View all flip variations instantly",
+        "Click on any result to copy it",
+        "Paste the flipped text anywhere you want",
+        "Try different text for various effects"
+      ],
+      "usage_examples": [
+        "Create unique social media posts",
+        "Make fun usernames",
+        "Send creative messages to friends"
+      ],
+      "inputLabel": "Enter Text",
+      "inputPlaceholder": "Type your text here...",
+      "upsideDown": "Upside Down",
+      "mirrored": "Mirrored",
+      "mirror": "Mirror",
+      "reversed": "Reversed",
+      "upsideDownReversed": "Upside Down + Reversed",
+      "outputPlaceholder": "Result will appear here...",
+      "aboutTitle": "About Flip Text",
+      "aboutDescription": "Flip text uses special Unicode characters to create upside down and mirrored text effects. These characters work on most websites and social media platforms.",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "strikethrough-text": {
+      "name": "Strikethrough Text",
+      "description": "Generate strikethrough, underline, and crossed text",
+      "seo_title": "Free Strikethrough Text Generator Online - Cross Out Text Tool",
+      "seo_description": "Free online strikethrough text generator. Create crossed out text, underlined text, and slashed text for social media and messaging apps.",
+      "detailed_description": "Strikethrough Text Generator creates various text decoration styles including strikethrough (t̶e̶x̶t̶), underline, crosshatch, and slash effects. Works on most social media platforms and messaging apps.",
+      "usage_steps": [
+        "Enter your text in the input field",
+        "View all strikethrough variations",
+        "Click copy on your preferred style",
+        "Paste the styled text anywhere",
+        "Use for emphasis or corrections"
+      ],
+      "usage_examples": [
+        "Show corrections in documents",
+        "Create emphasis in social posts",
+        "Make decorative text for profiles"
+      ],
+      "inputLabel": "Enter Text",
+      "inputPlaceholder": "Type your text here...",
+      "strikethrough": "Strikethrough",
+      "underline": "Underline",
+      "crosshatch": "Crosshatch",
+      "slash": "Slash",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "outputPlaceholder": "Result will appear here...",
+      "usageTitle": "Usage Tips",
+      "usage1": "Works on most social media platforms",
+      "usage2": "Copy and paste the styled text anywhere",
+      "usage3": "Some apps may not display all styles correctly"
+    },
+    "small-text-generator": {
+      "name": "Small Text Generator",
+      "description": "Generate superscript, subscript, and small caps text",
+      "seo_title": "Free Small Text Generator Online - Tiny Text & Superscript",
+      "seo_description": "Free online small text generator. Create superscript, subscript, and small caps text for social media bios, comments, and creative content.",
+      "detailed_description": "Small Text Generator creates tiny text variations including superscript (ˢᵐᵃˡˡ), subscript (ₛₘₐₗₗ), and small caps (sᴍᴀʟʟ). Perfect for social media bios, unique usernames, and creative content.",
+      "usage_steps": [
+        "Enter your text in the input field",
+        "View superscript, subscript, and small caps versions",
+        "Click copy on your preferred style",
+        "Paste the small text anywhere",
+        "Combine with other text for effects"
+      ],
+      "usage_examples": [
+        "Create unique Instagram bios",
+        "Make mathematical notations",
+        "Design creative usernames"
+      ],
+      "inputLabel": "Enter Text",
+      "inputPlaceholder": "Type your text here...",
+      "superscript": "Superscript",
+      "subscript": "Subscript",
+      "smallCaps": "Small Caps",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "outputPlaceholder": "Result will appear here...",
+      "usageTitle": "Usage Tips",
+      "usageDescription": "Small text works on most social media platforms. Some characters may not have small versions and will appear as normal text."
+    },
+    "binary-to-text": {
+      "name": "Binary to Text",
+      "description": "Convert binary to text and text to binary",
+      "seo_title": "Free Binary to Text Converter Online - Binary Translator",
+      "seo_description": "Free online binary to text converter. Translate binary code to readable text and convert text to binary. Easy-to-use binary translator tool.",
+      "detailed_description": "Binary to Text Converter translates between binary code and readable text. Convert binary sequences like 01001000 01101001 to text, or encode your messages into binary format.",
+      "usage_steps": [
+        "Select conversion mode (Binary to Text or Text to Binary)",
+        "Enter binary code or text in the input field",
+        "Click Convert to see the result",
+        "Copy the converted output",
+        "Use swap button to quickly switch modes"
+      ],
+      "usage_examples": [
+        "Decode binary messages",
+        "Learn binary encoding",
+        "Create secret binary messages"
+      ],
+      "binaryToText": "Binary → Text",
+      "textToBinary": "Text → Binary",
+      "binaryInput": "Binary Input",
+      "textInput": "Text Input",
+      "binaryOutput": "Binary Output",
+      "textOutput": "Text Output",
+      "binaryPlaceholder": "Enter binary (e.g., 01001000 01101001)...",
+      "textPlaceholder": "Enter text to convert...",
+      "outputPlaceholder": "Result will appear here...",
+      "convert": "Convert",
+      "swap": "Swap",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "invalidBinary": "Invalid binary input",
+      "exampleTitle": "Example",
+      "text": "Text",
+      "binary": "Binary"
+    },
+    "roman-numeral-converter": {
+      "name": "Roman Numeral Converter",
+      "description": "Convert between Roman numerals and Arabic numbers",
+      "seo_title": "Free Roman Numeral Converter Online - Roman Number Calculator",
+      "seo_description": "Free online Roman numeral converter. Convert Roman numerals to Arabic numbers and vice versa. Easy Roman numeral calculator and translator.",
+      "detailed_description": "Roman Numeral Converter translates between Roman numerals (I, V, X, L, C, D, M) and Arabic numbers (1-3999). Perfect for history students, clock makers, and anyone working with Roman numerals.",
+      "usage_steps": [
+        "Select conversion direction",
+        "Enter a Roman numeral or Arabic number",
+        "Click Convert to see the result",
+        "Copy the converted value",
+        "Use the reference chart for help"
+      ],
+      "usage_examples": [
+        "Convert years to Roman numerals",
+        "Decode Roman numerals on clocks",
+        "Learn Roman numeral system"
+      ],
+      "arabicToRoman": "Arabic → Roman",
+      "romanToArabic": "Roman → Arabic",
+      "arabicNumber": "Arabic Number",
+      "romanNumeral": "Roman Numeral",
+      "arabicPlaceholder": "Enter number (1-3999)...",
+      "romanPlaceholder": "Enter Roman numeral...",
+      "result": "Result",
+      "convert": "Convert",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "invalidInput": "Invalid input",
+      "referenceTitle": "Reference Chart"
+    },
+    "fraction-calculator": {
+      "name": "Fraction Calculator",
+      "description": "Calculate fractions with add, subtract, multiply, divide",
+      "seo_title": "Free Fraction Calculator Online - Add, Subtract, Multiply Fractions",
+      "seo_description": "Free online fraction calculator. Add, subtract, multiply, and divide fractions easily. Get simplified results with decimal equivalents.",
+      "detailed_description": "Fraction Calculator performs arithmetic operations on fractions including addition, subtraction, multiplication, and division. Results are automatically simplified to lowest terms with decimal equivalents.",
+      "usage_steps": [
+        "Enter the first fraction (numerator and denominator)",
+        "Select the operation (+, -, ×, ÷)",
+        "Enter the second fraction",
+        "Click Calculate to see the result",
+        "View simplified fraction and decimal value"
+      ],
+      "usage_examples": [
+        "Solve math homework problems",
+        "Calculate recipe measurements",
+        "Work with ratios and proportions"
+      ],
+      "fraction1": "Fraction 1",
+      "fraction2": "Fraction 2",
+      "result": "Result",
+      "calculate": "Calculate",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "addition": "Addition",
+      "subtraction": "Subtraction",
+      "multiplication": "Multiplication",
+      "division": "Division"
+    },
+    "percentage-change-calculator": {
+      "name": "Percentage Change Calculator",
+      "description": "Calculate percentage increase or decrease between values",
+      "seo_title": "Free Percentage Change Calculator Online - Calculate % Increase/Decrease",
+      "seo_description": "Free online percentage change calculator. Calculate percentage increase or decrease between two values. Easy percent change calculator tool.",
+      "detailed_description": "Percentage Change Calculator computes the percentage increase or decrease between two values. Essential for analyzing price changes, growth rates, and comparing data over time.",
+      "usage_steps": [
+        "Enter the original (old) value",
+        "Enter the new value",
+        "Click Calculate to see the percentage change",
+        "View if it's an increase or decrease",
+        "Copy the result for your records"
+      ],
+      "usage_examples": [
+        "Calculate price changes",
+        "Analyze sales growth",
+        "Compare performance metrics"
+      ],
+      "oldValue": "Original Value",
+      "newValue": "New Value",
+      "oldValuePlaceholder": "Enter original value...",
+      "newValuePlaceholder": "Enter new value...",
+      "calculate": "Calculate",
+      "swap": "Swap",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "percentageChange": "Percentage Change",
+      "increase": "Increase",
+      "decrease": "Decrease",
+      "difference": "Difference",
+      "formula": "Formula",
+      "formulaText": "((New - Old) / |Old|) × 100%",
+      "example1Title": "Stock Price",
+      "example1": "Track investment changes",
+      "example2Title": "Salary",
+      "example2": "Calculate raise percentage",
+      "example3Title": "Sales",
+      "example3": "Measure growth rate"
+    },
+    "random-color-generator": {
+      "name": "Random Color Generator",
+      "description": "Generate random colors with HEX, RGB, and HSL values",
+      "seo_title": "Free Random Color Generator Online - Color Palette Generator",
+      "seo_description": "Free online random color generator. Generate random colors with HEX, RGB, and HSL values. Create color palettes for design projects.",
+      "detailed_description": "Random Color Generator creates random colors with multiple format outputs (HEX, RGB, HSL). Generate single colors or entire palettes for design inspiration and creative projects.",
+      "usage_steps": [
+        "Set the number of colors to generate",
+        "Choose your preferred color format",
+        "Click Generate to create random colors",
+        "Click any color to copy its value",
+        "Use Copy All to get the entire palette"
+      ],
+      "usage_examples": [
+        "Find color inspiration for designs",
+        "Generate color palettes for websites",
+        "Create random color schemes for art"
+      ],
+      "count": "Colors",
+      "format": "Format",
+      "generate": "Generate",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "copyAll": "Copy All",
+      "clickToCopy": "Click to copy",
+      "palettePreview": "Palette Preview"
+    },
+    "anagram-solver": {
+      "name": "Anagram Solver",
+      "description": "Find all possible words from scrambled letters",
+      "seo_title": "Free Anagram Solver Online - Word Finder Tool",
+      "seo_description": "Free online anagram solver. Find all possible words from scrambled letters. Perfect for word games like Scrabble and crossword puzzles.",
+      "detailed_description": "Anagram Solver helps you find all valid English words that can be formed by rearranging the letters you provide. Great for word games, puzzles, and vocabulary building.",
+      "usage_steps": [
+        "Enter your scrambled letters",
+        "View all possible word combinations",
+        "Click to copy individual words",
+        "Use results for word games",
+        "Try different letter combinations"
+      ],
+      "usage_examples": [
+        "Solve Scrabble puzzles",
+        "Find crossword answers",
+        "Discover new vocabulary"
+      ],
+      "inputLabel": "Enter Letters",
+      "inputPlaceholder": "Type letters to unscramble...",
+      "results": "Results",
+      "noResults": "No words found. Try different letters.",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "tipTitle": "Tips",
+      "tipDescription": "Enter 2-15 letters to find all possible English words. Results are sorted by length."
+    },
+    "word-unscrambler": {
+      "name": "Word Unscrambler",
+      "description": "Unscramble letters to find all possible words",
+      "seo_title": "Free Word Unscrambler Online - Letter Unscrambler Tool",
+      "seo_description": "Free online word unscrambler. Find all words that can be made from your letters. Perfect for Scrabble, Words with Friends, and word puzzles.",
+      "detailed_description": "Word Unscrambler finds all possible words from your scrambled letters. Results are grouped by word length, making it easy to find the best words for your game.",
+      "usage_steps": [
+        "Enter scrambled letters",
+        "View words grouped by length",
+        "Copy words you need",
+        "Use for word games",
+        "Find high-scoring words"
+      ],
+      "usage_examples": [
+        "Win at Scrabble",
+        "Solve word puzzles",
+        "Improve vocabulary"
+      ],
+      "inputLabel": "Enter Scrambled Letters",
+      "inputPlaceholder": "Type letters here...",
+      "found": "Found",
+      "words": "words",
+      "letters": "letters",
+      "copyAll": "Copy All",
+      "copied": "Copied!",
+      "noResults": "No words found"
+    },
+    "text-to-pdf": {
+      "name": "Text to PDF",
+      "description": "Convert plain text to PDF documents",
+      "seo_title": "Free Text to PDF Converter Online - Create PDF from Text",
+      "seo_description": "Free online text to PDF converter. Create professional PDF documents from plain text. Customize fonts, sizes, and page layout.",
+      "detailed_description": "Text to PDF Converter transforms your plain text into professional PDF documents. Customize font, size, and page format to create documents that look exactly how you want.",
+      "usage_steps": [
+        "Enter or paste your text",
+        "Add an optional title",
+        "Choose font and size settings",
+        "Select page size (A4 or Letter)",
+        "Click Download PDF"
+      ],
+      "usage_examples": [
+        "Create printable documents",
+        "Save notes as PDF",
+        "Generate simple reports"
+      ],
+      "title": "Title",
+      "optional": "optional",
+      "titlePlaceholder": "Document title...",
+      "fontSize": "Font Size",
+      "font": "Font",
+      "pageSize": "Page Size",
+      "content": "Content",
+      "contentPlaceholder": "Enter your text here...",
+      "characters": "characters",
+      "generating": "Generating...",
+      "downloadPdf": "Download PDF",
+      "preview": "Preview",
+      "previewPlaceholder": "Your text will appear here..."
+    },
+    "unit-price-calculator": {
+      "name": "Unit Price Calculator",
+      "description": "Compare prices per unit to find the best value",
+      "seo_title": "Free Unit Price Calculator Online - Compare Product Values",
+      "seo_description": "Free online unit price calculator. Compare prices per unit to find the best deal. Perfect for smart shopping and price comparison.",
+      "detailed_description": "Unit Price Calculator helps you compare products of different sizes and prices to find the best value. Simply enter the price and quantity of each item to see which offers the lowest cost per unit.",
+      "usage_steps": [
+        "Enter product name (optional)",
+        "Input the price",
+        "Enter the quantity and unit",
+        "Compare unit prices",
+        "Find the best value"
+      ],
+      "usage_examples": [
+        "Compare grocery prices",
+        "Find best bulk deals",
+        "Smart shopping decisions"
+      ],
+      "item": "Item",
+      "productName": "Product Name",
+      "namePlaceholder": "e.g., Brand A",
+      "price": "Price",
+      "quantity": "Quantity",
+      "unitPrice": "Unit Price",
+      "addItem": "Add Item",
+      "bestValue": "Best Value",
+      "bestValueMessage": "The highlighted item offers the best value per unit!",
+      "tipTitle": "Shopping Tip",
+      "tipDescription": "Always compare unit prices when shopping. Bigger packages aren't always cheaper per unit!"
+    },
+    "bionic-reading-converter": {
+      "name": "Bionic Reading Converter",
+      "description": "Convert text to bionic reading format for faster reading",
+      "seo_title": "Free Bionic Reading Converter Online - Speed Reading Tool",
+      "seo_description": "Free online bionic reading converter. Transform text to bionic reading format by bolding word beginnings. Read faster and improve focus.",
+      "detailed_description": "Bionic Reading Converter transforms your text by bolding the initial letters of each word, creating artificial fixation points that guide your eyes and help you read faster with better comprehension.",
+      "usage_steps": [
+        "Paste your text",
+        "Adjust fixation strength",
+        "Preview the bionic text",
+        "Copy the HTML output",
+        "Use in your documents"
+      ],
+      "usage_examples": [
+        "Speed up reading",
+        "Improve focus while reading",
+        "Help with dyslexia"
+      ],
+      "inputLabel": "Enter Text",
+      "inputPlaceholder": "Paste your text here to convert...",
+      "fixationStrength": "Fixation Strength",
+      "light": "Light",
+      "medium": "Medium",
+      "strong": "Strong",
+      "preview": "Preview",
+      "previewPlaceholder": "Converted text will appear here...",
+      "copyHtml": "Copy HTML",
+      "copied": "Copied!",
+      "whatIsBionic": "What is Bionic Reading?",
+      "bionicDescription": "Bionic Reading is a method that highlights the initial letters of words to create fixation points, helping your brain complete words faster.",
+      "benefits": "Benefits",
+      "benefit1": "Read up to 50% faster",
+      "benefit2": "Better focus and retention",
+      "benefit3": "Reduced eye strain",
+      "htmlOutput": "HTML Output",
+      "noOutput": "No output yet"
+    },
+    "palindrome-checker": {
+      "name": "Palindrome Checker",
+      "description": "Check if text reads the same forwards and backwards",
+      "seo_title": "Free Palindrome Checker Online - Test Words and Phrases",
+      "seo_description": "Free online palindrome checker. Test if words, phrases, or sentences read the same forwards and backwards. Fun word tool for language lovers.",
+      "detailed_description": "Palindrome Checker tests whether your text reads the same forwards and backwards. It can ignore spaces, punctuation, and case to find hidden palindromes in phrases and sentences.",
+      "usage_steps": [
+        "Enter a word or phrase",
+        "Choose comparison options",
+        "See if it's a palindrome",
+        "Try famous palindrome examples",
+        "Create your own palindromes"
+      ],
+      "usage_examples": [
+        "Test word palindromes",
+        "Find phrase palindromes",
+        "Educational word games"
+      ],
+      "inputLabel": "Enter Text",
+      "inputPlaceholder": "Type a word or phrase...",
+      "ignoreCase": "Ignore case",
+      "ignoreSpaces": "Ignore spaces",
+      "ignorePunctuation": "Ignore punctuation",
+      "isPalindrome": "It's a Palindrome!",
+      "notPalindrome": "Not a Palindrome",
+      "processedText": "Processed text",
+      "forward": "Forward",
+      "backward": "Backward",
+      "examples": "Try These Examples"
+    },
+    "character-map": {
+      "name": "Character Map",
+      "description": "Browse and copy special characters and symbols",
+      "seo_title": "Free Character Map Online - Special Symbols & Unicode",
+      "seo_description": "Free online character map. Browse and copy special characters, symbols, emoji, and Unicode characters. Click to copy any character instantly.",
+      "detailed_description": "Character Map provides easy access to thousands of special characters, symbols, and emoji. Browse by category or search to find the perfect character, then click to copy.",
+      "usage_steps": [
+        "Browse character categories",
+        "Or search for specific characters",
+        "Click any character to copy",
+        "Paste wherever you need",
+        "View recently used characters"
+      ],
+      "usage_examples": [
+        "Add symbols to documents",
+        "Insert emoji in text",
+        "Find mathematical symbols"
+      ],
+      "searchPlaceholder": "Search characters...",
+      "arrows": "Arrows",
+      "math": "Math",
+      "currency": "Currency",
+      "punctuation": "Punctuation",
+      "shapes": "Shapes",
+      "emoji": "Emoji",
+      "hands": "Hands",
+      "hearts": "Hearts",
+      "weather": "Weather",
+      "music": "Music",
+      "tech": "Tech",
+      "recentlyUsed": "Recently Used",
+      "searchResults": "Search Results",
+      "tip": "Click any character to copy it to your clipboard"
+    },
+    "text-repeater": {
+      "name": "Text Repeater",
+      "description": "Repeat text multiple times with custom separators",
+      "seo_title": "Free Text Repeater Online - Duplicate Text Tool",
+      "seo_description": "Free online text repeater. Repeat any text multiple times with custom separators. Perfect for testing, filling content, and creating patterns.",
+      "detailed_description": "Text Repeater duplicates your text as many times as you need. Choose from various separators and optionally add numbering. Great for testing, creating sample data, or filling content.",
+      "usage_steps": [
+        "Enter text to repeat",
+        "Set repeat count",
+        "Choose separator type",
+        "Optionally add numbering",
+        "Copy or download result"
+      ],
+      "usage_examples": [
+        "Create test data",
+        "Fill placeholder content",
+        "Generate patterns"
+      ],
+      "inputLabel": "Text to Repeat",
+      "inputPlaceholder": "Enter text here...",
+      "repeatCount": "Repeat Count",
+      "separator": "Separator",
+      "newline": "New Line",
+      "space": "Space",
+      "comma": "Comma",
+      "semicolon": "Semicolon",
+      "tab": "Tab",
+      "none": "None",
+      "addNumbering": "Add Numbering",
+      "result": "Result",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "download": "Download",
+      "resultPlaceholder": "Result will appear here...",
+      "characters": "characters",
+      "lines": "lines"
+    },
+    "fake-name-generator": {
+      "name": "Fake Name Generator",
+      "description": "Generate random realistic names from different countries",
+      "seo_title": "Free Fake Name Generator Online - Random Name Generator",
+      "seo_description": "Free online fake name generator. Generate random realistic names from different countries and cultures. Perfect for testing, writing, and privacy.",
+      "detailed_description": "Fake Name Generator creates realistic random names from various countries and cultures. Generate names for testing, creative writing, or when you need placeholder names.",
+      "usage_steps": [
+        "Select a country/culture",
+        "Choose gender preference",
+        "Set number of names",
+        "Click Generate",
+        "Copy names you need"
+      ],
+      "usage_examples": [
+        "Create test user data",
+        "Name fictional characters",
+        "Privacy protection"
+      ],
+      "country": "Country/Culture",
+      "english": "English (US/UK)",
+      "chinese": "Chinese",
+      "japanese": "Japanese",
+      "korean": "Korean",
+      "german": "German",
+      "spanish": "Spanish",
+      "gender": "Gender",
+      "random": "Random",
+      "male": "Male",
+      "female": "Female",
+      "count": "Count",
+      "generate": "Generate Names",
+      "generatedNames": "Generated Names",
+      "copyAll": "Copy All",
+      "copied": "Copied!",
+      "disclaimer": "Disclaimer",
+      "disclaimerText": "These names are randomly generated and any resemblance to real persons is coincidental. Use responsibly."
+    },
+    "invisible-character-generator": {
+      "name": "Invisible Character Generator",
+      "description": "Generate and detect invisible Unicode characters",
+      "seo_title": "Free Invisible Character Generator Online - Zero Width Characters",
+      "seo_description": "Free online invisible character generator. Generate zero-width spaces and other invisible Unicode characters. Detect hidden characters in text.",
+      "detailed_description": "Invisible Character Generator creates various invisible Unicode characters like zero-width spaces. Also includes a detector to find hidden characters in text.",
+      "usage_steps": [
+        "Select invisible character type",
+        "Set repeat count",
+        "Copy the invisible characters",
+        "Paste where needed",
+        "Use detector to find hidden chars"
+      ],
+      "usage_examples": [
+        "Create blank messages",
+        "Add invisible watermarks",
+        "Test text processing"
+      ],
+      "selectCharacter": "Select Character Type",
+      "repeatCount": "Repeat Count",
+      "characters": "characters",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "allCharacters": "All Invisible Characters",
+      "detectTitle": "Detect Invisible Characters",
+      "detectPlaceholder": "Paste text here to detect invisible characters...",
+      "found": "found",
+      "noInvisibleFound": "No invisible characters detected",
+      "useCases": "Common Use Cases",
+      "useCase1": "Create blank social media posts",
+      "useCase2": "Add invisible text watermarks",
+      "useCase3": "Test text processing systems"
+    }
   },
   "tool": {
     "json-formatter": {
@@ -14859,5 +15969,120 @@
       "perChildPerYear": "per child per year",
       "perDependent": "per dependent"
     }
+  },
+  "launches": {
+    "title": "Product Launches",
+    "subtitle": "Discover the latest products and tools launched by makers worldwide",
+    "description": "Discover the latest products and tools launched by makers worldwide",
+    "pageTitle": "Product Launches - Discover New Tools & Products",
+    "pageDescription": "Explore the latest product launches from makers worldwide. Find innovative tools, apps, and services. Submit your own product for free.",
+    "featured": "Featured",
+    "launchedOn": "Launched on",
+    "about": "About",
+    "screenshots": "Screenshots",
+    "links": "Links",
+    "tags": "Tags",
+    "visitWebsite": "Visit Website",
+    "relatedProducts": "Related Products",
+    "submitProduct": "Submit Product",
+    "backToAllProducts": "Back to All Products",
+    "noProductsInCategory": "No products in this category yet",
+    "beFirstToSubmit": "Be the first to submit a product in this category!",
+    "categoryProductCount": "{count} products",
+    "allCategories": "All",
+    "sortBy": "Sort by",
+    "breadcrumb": {
+      "home": "Home",
+      "launches": "Launches"
+    },
+    "seo": {
+      "productSuffix": "Product Launch | U2Tool",
+      "categorySuffix": "Products | U2Tool",
+      "categoryDescription": "Discover the best {category} products and tools. Find innovative solutions launched by makers worldwide."
+    },
+    "stats": {
+      "totalLaunches": "Total Launches",
+      "liveProducts": "Live Products",
+      "totalUpvotes": "Total Upvotes",
+      "totalViews": "Total Views",
+      "featured": "Featured",
+      "featuredProducts": "Featured Products"
+    },
+    "sort": {
+      "newest": "Newest",
+      "popular": "Popular",
+      "featured": "Featured"
+    },
+    "filter": {
+      "all": "All",
+      "newest": "Newest",
+      "popular": "Popular",
+      "featured": "Featured"
+    },
+    "categories": {
+      "ai-tools": "AI Tools",
+      "developer-tools": "Developer Tools",
+      "design-tools": "Design Tools",
+      "productivity": "Productivity",
+      "marketing": "Marketing",
+      "finance": "Finance",
+      "education": "Education",
+      "entertainment": "Entertainment",
+      "other": "Other"
+    },
+    "submit": {
+      "pageTitle": "Submit Your Product",
+      "pageDescription": "Submit your product to be featured on U2Tool. Get discovered by thousands of users.",
+      "title": "Submit Your Product",
+      "subtitle": "Get your product discovered by thousands of users",
+      "productName": "Product Name",
+      "productNamePlaceholder": "Enter your product name",
+      "tagline": "Tagline",
+      "taglinePlaceholder": "A short, catchy description (max 100 characters)",
+      "taglineHint": "{count}/100 characters",
+      "description": "Description",
+      "descriptionPlaceholder": "Describe your product in detail...",
+      "websiteUrl": "Website URL",
+      "websiteUrlPlaceholder": "https://your-product.com",
+      "logoUrl": "Logo URL",
+      "logoUrlPlaceholder": "https://your-product.com/logo.png",
+      "logoHint": "Recommended: 200x200px, PNG or JPG",
+      "category": "Category",
+      "selectCategory": "Select a category",
+      "makerName": "Your Name",
+      "makerNamePlaceholder": "John Doe",
+      "makerEmail": "Your Email",
+      "makerEmailPlaceholder": "john@example.com",
+      "emailHint": "We'll notify you when your product is approved",
+      "twitterUrl": "Twitter URL (optional)",
+      "twitterUrlPlaceholder": "https://twitter.com/yourproduct",
+      "githubUrl": "GitHub URL (optional)",
+      "githubUrlPlaceholder": "https://github.com/yourproduct",
+      "submitButton": "Submit Product",
+      "submitting": "Submitting...",
+      "success": "Product submitted successfully!",
+      "successMessage": "Your product has been submitted for review. We'll notify you once it's approved.",
+      "error": "Failed to submit product",
+      "validation": {
+        "nameRequired": "Product name is required",
+        "taglineRequired": "Tagline is required",
+        "taglineTooLong": "Tagline must be 100 characters or less",
+        "descriptionRequired": "Description is required",
+        "websiteRequired": "Website URL is required",
+        "websiteInvalid": "Please enter a valid URL",
+        "categoryRequired": "Please select a category",
+        "makerNameRequired": "Your name is required",
+        "makerEmailRequired": "Your email is required",
+        "makerEmailInvalid": "Please enter a valid email"
+      }
+    },
+    "upvote": {
+      "upvote": "Upvote",
+      "upvoted": "Upvoted"
+    },
+    "loading": "Loading...",
+    "loadMore": "Load More",
+    "noProducts": "No products found",
+    "noProductsDescription": "Be the first to submit a product!"
   }
 }

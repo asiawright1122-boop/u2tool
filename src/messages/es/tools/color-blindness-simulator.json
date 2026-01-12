@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Simulador de Daltonismo ayuda a diseñadores y desarrolladores a comprobar cómo se ven sus colores e imágenes para personas con diferentes tipos de deficiencia en la visión del color. Soporta la simulación de protanopía, deuteranopía, tritanopía y daltonismo completo.",
+  "usage_steps": [
+    "Selecciona un color utilizando el selector de colores o introduce un código hexadecimal",
+    "Opcionalmente, sube una imagen para probar",
+    "Haz clic en los diferentes tipos de daltonismo para ver las simulaciones",
+    "Compara cómo se ve el color en todos los tipos",
+    "Usa la previsualización de imagen para ver las simulaciones completas"
+  ],
+  "usage_examples": [
+    "Prueba los esquemas de colores de un sitio web para garantizar su accesibilidad",
+    "Verifica si los colores de gráficos y tablas son distinguibles",
+    "Asegúrate de que los elementos de la interfaz de usuario sean visibles para todos los usuarios"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Kreditkarten-Validierer prüft, ob eine Kreditkartennummer mathematisch gültig ist, indem er den Luhn-Algorithmus anwendet. Er erkennt automatisch die Kartenart (Visa, Mastercard, Amex usw.) und liefert detaillierte Validierungsergebnisse. Nur für Test- und Entwicklungszwecke geeignet.",
+  "usage_steps": [
+    "Geben Sie eine Kreditkartennummer in das Eingabefeld ein.",
+    "Die Zahl wird automatisch mit Leerzeichen formatiert.",
+    "Klicken Sie auf „Validieren“, um die Karte zu überprüfen.",
+    "Sehen Sie die Kartenart, den Emittenten sowie das Ergebnis der Luhn-Prüfung an.",
+    "Überprüfen Sie die Anzahl der Ziffern für zusätzliche Validierung."
+  ],
+  "usage_examples": [
+    "Prüfen Sie die Validierungslogik von Zahlungsformularen.",
+    "Stellen Sie vor der Verarbeitung die Formatierung der Kartennummer sicher.",
+    "Identifizieren Sie die Kartenart anhand des Nummernvorzeichens."
+  ]
+}

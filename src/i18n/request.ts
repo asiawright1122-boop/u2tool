@@ -26,34 +26,32 @@ export default getRequestConfig(async ({ requestLocale }) => {
   // 在服务端渲染时加载翻译
   // 这不会影响 Edge Function 大小，因为 middleware.ts 不导入此文件
   try {
-    // 优先加载拆分后的 base.json
-    const messages = (await import(`@/messages/${locale}/base.json`)).default;
+    // 加载完整的翻译文件（包含所有命名空间）
+    const messages = (await import(`@/messages/${locale}.json`)).default;
     return {
       locale,
       messages,
     };
   } catch {
-    // 回退到完整的翻译文件
-    try {
-      const messages = (await import(`@/messages/${locale}.json`)).default;
-      return {
-        locale,
-        messages,
-      };
-    } catch {
-      // 最后回退到英文
-      if (locale !== 'en') {
-        const messages = (await import(`@/messages/en/base.json`)).default;
+    // 回退到英文
+    if (locale !== 'en') {
+      try {
+        const messages = (await import(`@/messages/en.json`)).default;
         return {
           locale,
           messages,
         };
+      } catch {
+        return {
+          locale,
+          messages: {},
+        };
       }
-      // 如果英文也失败，返回空对象
-      return {
-        locale,
-        messages: {},
-      };
     }
+    // 如果英文也失败，返回空对象
+    return {
+      locale,
+      messages: {},
+    };
   }
 });

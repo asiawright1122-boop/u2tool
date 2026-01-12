@@ -2,9 +2,9 @@
 
 > 本文档记录项目中所有已注册的工具，方便查阅和避免添加重复工具。
 > 
-> 最后更新: 2026-01-08
+> 最后更新: 2026-01-11
 > 
-> 工具总数: **338 个**
+> 工具总数: **374 个**
 
 ---
 
@@ -662,8 +662,8 @@ const toolSlug = 'your-tool-slug';
 |------|------|
 | 📝 文本工具 | 35 |
 | 🔐 编码工具 | 29 |
-| ⚡ 生成器 | 27 |
-| 🔄 转换器 | 43 |
+| ⚡ 生成器 | 28 |
+| 🔄 转换器 | 44 |
 | 💻 开发工具 | 42 |
 | 🔒 安全工具 | 11 |
 | 🌐 网络工具 | 17 |
@@ -671,15 +671,17 @@ const toolSlug = 'your-tool-slug';
 | 🔢 数学工具 | 24 |
 | 📈 图表工具 | 42 |
 | 📄 办公工具 | 26 |
-| 🏃 生活工具 | 11 |
+| 🏃 生活工具 | 12 |
 | 🎮 娱乐工具 | 7 |
-| 💰 财务工具 | 4 |
-| **总计** | **338** |
+| 💰 财务工具 | 7 |
+| **总计** | **344** |
 
 ---
 
 ## 更新日志
 
+- **2026-01-11**: 添加 10 个新热门工具 (Batch 49: anagram-solver, word-unscrambler, text-to-pdf, unit-price-calculator, bionic-reading-converter, palindrome-checker, character-map, text-repeater, fake-name-generator, invisible-character-generator)
+- **2026-01-10**: 添加 6 个欧洲热门工具 (iban-validator, vat-calculator, carbon-footprint-calculator, gdpr-consent-generator, metric-imperial-converter, bic-swift-lookup)
 - **2026-01-08**: 添加 31 个新热门工具 (Batch 3: currency-converter, roi-calculator, mortgage-calculator, tax-calculator, calorie-calculator, water-intake-calculator, sleep-calculator, due-date-calculator, love-calculator, decision-wheel, name-generator, random-picker, coin-flipper, dice-roller, team-generator, countdown-days-calculator, fuel-cost-calculator, electricity-cost-calculator, gpa-calculator, pace-calculator, shoe-size-converter, ring-size-calculator, bra-size-calculator, concrete-calculator, paint-calculator, tile-calculator, instagram-font-generator, social-media-size-guide, keyword-density-checker, text-summarizer, paraphrase-tool, graphql-formatter, code-screenshot-generator, number-system-converter, subnet-calculator-enhanced)
 - **2026-01-07**: 添加 17 个新热门工具 (loan-calculator, bmi-calculator, age-calculator, tip-calculator, discount-calculator, compound-interest-calculator, binary-calculator, hex-calculator, ip-subnet-calculator, aspect-ratio-calculator-enhanced, chinese-lorem-ipsum, text-to-image, text-to-handwriting, screen-resolution-tester, keyboard-tester, typing-speed-test, morse-code-player)
 - **2026-01-04**: 添加 5 个新工具 (markdown-editor, world-clock, stopwatch, countdown-timer, note-pad)

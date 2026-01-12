@@ -109,7 +109,8 @@
     "moreResults": "نتائج إضافية",
     "relatedTools": "أدوات ذات صلة",
     "more": "المزيد",
-    "categories": "الفئات"
+    "categories": "الفئات",
+    "launches": "الإطلاقات"
   },
   "home": {
     "hero": {
@@ -3762,8 +3763,8 @@
       "outputPlaceholder": "سيظهر الناتج هنا...",
       "name": "محول TOML/JSON",
       "description": "التحويل بين تنسيقات TOML وJSON ثنائي الاتجاه.",
-      "seo_title": "Free TOML JSON Converter Online",
-      "seo_description": "Convert TOML to JSON or JSON to TOML online for free. Validate and format configuration files with syntax highlighting. Essential for Rust and Python projects."
+      "seo_title": "محول TOML إلى JSON مجاني عبر الإنترنت",
+      "seo_description": "حول بين تنسيقات TOML و JSON مجاناً عبر الإنترنت. تحويل ثنائي الاتجاه مع الحفاظ على البنية. مثالي لملفات التكوين."
     },
     "json-to-java": {
       "className": "اسم الفئة",
@@ -3776,7 +3777,7 @@
       "convert": "تحويل",
       "inputPlaceholder": "أدخل كائن JSON...",
       "outputPlaceholder": "سيظهر الكود البرمجي هنا...",
-      "name": "تحويل JSON إلى Java",
+      "name": "JSON إلى Java",
       "description": "تحويل بيانات JSON إلى فئات POJO مع دعم Lombok.",
       "seo_title": "تحويل JSON إلى Java مجاني أونلاين",
       "seo_description": "قم بتحويل JSON إلى فئات Java أونلاين مجانًا. دعم Lombok، Getters/Setters، و patron @Builder. مناسب تمامًا لتطوير API وبناء النماذج."
@@ -3790,7 +3791,7 @@
       "convert": "تحويل",
       "inputPlaceholder": "أدخل объект JSON...",
       "outputPlaceholder": "سيظهر الكود البرمجي هنا...",
-      "name": "تحويل JSON إلى Python",
+      "name": "JSON إلى Python",
       "description": "تحويل بيانات JSON إلى بيانات dataclass في Python أو Pydantic أو TypedDict.",
       "seo_title": "تحويل JSON إلى Python مجاني أونلاين",
       "seo_description": "تحويل JSON إلى بيانات dataclass أو نماذج Pydantic للبرمجة في Python مجاناً أونلاين. أنشئ كود برمجي آمن مع التحقق من النوع. ضروري لتطوير API في Python."
@@ -3809,7 +3810,7 @@
       "convert": "تحويل",
       "inputPlaceholder": "ادخل جسم JSON...",
       "outputPlaceholder": "سيظهر كود Kotlin هنا...",
-      "name": "تحويل JSON إلى Kotlin",
+      "name": "JSON إلى Kotlin",
       "description": "تحويل بيانات JSON إلى فئات بيانات Kotlin بدعم التسلسل.",
       "seo_title": "محوّل JSON إلى Kotlin مجاني عبر الإنترنت",
       "seo_description": "تحويل JSON إلى فئات بيانات Kotlin عبر الإنترنت مجاناً. يدعم Moshi، Gson، وملحقات Kotlinx. مثالي للتنمية في Android وKotlin backend."
@@ -4041,8 +4042,8 @@
     "url-encoder": {
       "name": "أداة تشفير/فك ترميز URL",
       "description": "تشفير أو فك تشفير عناوين URL وسلاسل الاستعلام بأمان.",
-      "seo_title": "Free URL Encoder & Decoder Online",
-      "seo_description": "Encode and decode URLs and query strings online for free. Handle special characters safely for web development. Fast and secure browser tool.",
+      "seo_title": "مشفر ومفكك URL مجاني عبر الإنترنت",
+      "seo_description": "تشفير وفك تشفير عناوين URL مجاناً عبر الإنترنت. معالجة الأحرف الخاصة بأمان لتطوير الويب. ضروري لمعلمات API والروابط.",
       "inputPlaceholder": "أدخل النص هنا..."
     },
     "password-generator": {
@@ -4071,7 +4072,7 @@
       "inputPlaceholder": "أدخل النص هنا..."
     },
     "color-converter": {
-      "name": "محويد الألوان",
+      "name": "محول الألوان",
       "description": "تحويل الألوان بين تنسيقات الهكس، آر بي جي، وألوان HSL.",
       "seo_title": "محويد الألوان مجاني أونلاين - HEX RGB HSL",
       "seo_description": "تحويل الألوان بين تنسيقات الهكس، آر بي جي، وألوان HSL، وHSV أونلاين مجاناً. تحويل فورقي للألوان مع عرض مسبق مباشر. ضروري للمصممين."
@@ -4098,12 +4099,12 @@
     "html-encoder": {
       "name": "مشفر/فك تشفير HTML",
       "description": "قم بتشفير الأحرف الخاصة لكيانات HTML أو فك تشفيرها مرة أخرى.",
-      "seo_title": "Free HTML Encoder & Decoder Online",
-      "seo_description": "Encode and decode HTML entities online for free. Handle special characters safely for web development. Prevent XSS attacks and display HTML correctly.",
+      "seo_title": "مشفر ومفكك HTML مجاني عبر الإنترنت",
+      "seo_description": "تشفير وفك تشفير كيانات HTML مجاناً عبر الإنترنت. معالجة الأحرف الخاصة بأمان لتطوير الويب. منع هجمات XSS وعرض HTML بشكل صحيح.",
       "inputPlaceholder": "أدخل النص هنا..."
     },
     "markdown-preview": {
-      "name": "مقدمة ماركداون",
+      "name": "معاينة Markdown",
       "description": "قم بكتابة ماركداون وشاهد العرض المباشر. تصدير إلى HTML.",
       "seo_title": "محرر ماركداون مجاني وعرضه أونلاين",
       "seo_description": "قم بكتابة ومشاهدة العرض المباشر لماركداون أونلاين بشكل مجاني. العرض المباشر مع تضليل الأسلوب وتصدير إلى HTML. مناسب لتوثيق الملفات وملفات README وكتابات المدونة.",
@@ -4118,8 +4119,8 @@
     "regex-tester": {
       "name": "Regex Tester",
       "description": "اختبر التعبيرات العادية من خلال المطابقة والتمييز في الوقت الفعلي.",
-      "seo_title": "Free Regex Tester & Debugger Online",
-      "seo_description": "Test and debug regular expressions online for free. Real-time matching with syntax highlighting and match groups. Perfect for developers and data processing."
+      "seo_title": "اختبار ومصحح التعبيرات النمطية مجاني عبر الإنترنت",
+      "seo_description": "اختبر وصحح التعبيرات النمطية مجاناً عبر الإنترنت. مطابقة في الوقت الفعلي مع تمييز وشرح للمجموعات."
     },
     "jwt-decoder": {
       "name": "⚗️ مُحَوِّل JWT",
@@ -4141,10 +4142,10 @@
       "copy": "نسخ"
     },
     "diff-checker": {
-      "name": "مدقق الاختلافات",
+      "name": "مقارن الفروقات",
       "description": "مقارنة نصين وتسليط الضوء على الاختلافات بينهما.",
-      "seo_title": "Free Text Diff Checker Online",
-      "seo_description": "Compare two texts online for free. Highlight added, removed, and changed content with side-by-side view. Essential for code review and document comparison."
+      "seo_title": "مقارن الفروقات النصية مجاني عبر الإنترنت",
+      "seo_description": "قارن نصين مجاناً عبر الإنترنت. تمييز المحتوى المضاف والمحذوف والمعدل مع عرض جنباً إلى جنب. ضروري لمراجعة الكود ومقارنة المستندات."
     },
     "json-to-csv": {
       "name": "JSON إلى CSV",
@@ -4225,8 +4226,8 @@
     "json-path-tester": {
       "name": "اختبار JSONPath",
       "description": "اختبار وتقييم تعبيرات JSONPath مقابل بيانات JSON الخاصة بك.",
-      "seo_title": "Free JSONPath Tester Online",
-      "seo_description": "Test and debug JSONPath expressions online for free. Query JSON data with real-time results and syntax highlighting. Essential for API development.",
+      "seo_title": "اختبار JSONPath مجاني عبر الإنترنت",
+      "seo_description": "اختبر وصحح تعبيرات JSONPath مجاناً عبر الإنترنت. استعلم عن بيانات JSON مع معاينة النتائج الفورية.",
       "jsonData": "JSON Data",
       "jsonPlaceholder": "{\"name\": \"John\"، \"users\": [{\"name\": \"Alice\"}، {\"name\": \"Bob\"}]}",
       "expression": "JSONPath Expression",
@@ -4299,14 +4300,14 @@
     "pinyin-converter": {
       "name": "محول بينين",
       "description": "قم بتحويل الحروف الصينية إلى بينين مع أو دون حروف التone.",
-      "seo_title": "محول مجاني بين الحروف الصينية إلى بينين",
-      "seo_description": "قم بتحويل الحروف الصينية إلى بينين أونلاين بشكل مجاني. ندعم علامات التone وحروف التone المعدودة. ضروري للتعلم اللغة الصينية ودليل النطق."
+      "seo_title": "محول الصينية إلى بينيين مجاني",
+      "seo_description": "حول الأحرف الصينية إلى بينيين مجاناً عبر الإنترنت. دعم علامات النغمة والنغمات المرقمة. ضروري لتعلم اللغة الصينية وأدلة النطق."
     },
     "color-picker": {
       "name": "منتقي الألوان",
       "description": "اختر الألوان واحصل على قيم HEX وRGB وHSL بتنسيقات متعددة.",
-      "seo_title": "Free Online Color Picker",
-      "seo_description": "Pick colors and get color values in HEX, RGB, HSL formats online for free. Visual color picker with preset palettes and recent colors. Perfect for designers."
+      "seo_title": "منتقي الألوان مجاني عبر الإنترنت",
+      "seo_description": "اختر الألوان واحصل على قيم الألوان بتنسيقات HEX، RGB، HSL مجاناً عبر الإنترنت. مثالي لتصميم الويب والتطوير."
     },
     "aspect-ratio": {
       "name": "حاسوب نسبة العرض إلى الارتفاع",
@@ -4317,14 +4318,14 @@
     "css-beautifier": {
       "name": "تجميل CSS",
       "description": "قم بتنسيق وتجميل كود CSS باستخدام خيارات التصغير والتجميل.",
-      "seo_title": "Free CSS Beautifier Online",
-      "seo_description": "Format, beautify and minify CSS code online for free. Syntax highlighting with customizable indentation. Perfect for web developers and front-end optimization."
+      "seo_title": "منسق CSS مجاني عبر الإنترنت",
+      "seo_description": "نسق وجمّل وصغّر كود CSS مجاناً عبر الإنترنت. تمييز بناء الجملة مع مسافة بادئة قابلة للتخصيص."
     },
     "js-beautifier": {
-      "name": "JavaScript Beautifier",
+      "name": "منسق JavaScript",
       "description": "قم بتنسيق وتجميل تعليمات JavaScript البرمجية باستخدام خيارات التصغير والتجميل.",
-      "seo_title": "Free JavaScript Beautifier Online",
-      "seo_description": "Format, beautify and minify JavaScript code online for free. Syntax highlighting with customizable indentation. Perfect for web developers and optimization."
+      "seo_title": "منسق JavaScript مجاني عبر الإنترنت",
+      "seo_description": "نسق وجمّل وصغّر كود JavaScript مجاناً عبر الإنترنت. تمييز بناء الجملة مع مسافة بادئة قابلة للتخصيص."
     },
     "html-preview": {
       "name": "مقدمة HTML",
@@ -4371,8 +4372,8 @@
     "yaml-json": {
       "name": "محول YAML/JSON",
       "description": "التحويل بين تنسيقات YAML وJSON.",
-      "seo_title": "Free YAML JSON Converter Online",
-      "seo_description": "Convert YAML to JSON or JSON to YAML online for free. Validate and format config files with syntax highlighting. Essential for DevOps and configuration."
+      "seo_title": "محول YAML JSON مجاني عبر الإنترنت",
+      "seo_description": "حول YAML إلى JSON أو JSON إلى YAML مجاناً عبر الإنترنت. تحقق من صحة البنية وحافظ على تنسيق البيانات."
     },
     "date-calculator": {
       "name": "حاسبة التواريخ",
@@ -4407,8 +4408,8 @@
     "text-encryption": {
       "name": "تشفير النص",
       "description": "تشفير وفك تشفير النص باستخدام تشفير AES بكلمة مرور.",
-      "seo_title": "Free Text Encryption Tool Online",
-      "seo_description": "Encrypt and decrypt text with AES-256 encryption online for free. Secure browser-based encryption with password protection. No data uploaded to servers."
+      "seo_title": "أداة تشفير النص مجانية عبر الإنترنت",
+      "seo_description": "شفر وفك تشفير النص باستخدام تشفير AES-256 مجاناً عبر الإنترنت. آمن ومعالجة من جانب العميل."
     },
     "file-hash": {
       "name": "حاسوب معايرة الملفات",
@@ -4423,7 +4424,7 @@
       "seo_description": "قم بإنشاء جداول HTML باستخدام محرر مرئي أونلاين مجانًا. قم بتعديل الصفوف والعمود والعنوان والتخطيط. استورد رمز HTML النظيف للويب الخاص بك."
     },
     "json-schema-validator": {
-      "name": "��证器 JSON معلم",
+      "name": "مدقق JSON Schema",
       "description": "تحقق من بيانات JSON باستخدام معلم JSON.",
       "seo_title": "مجاني JSON Schema Validator أونلاين",
       "seo_description": "تحقق من بيانات JSON باستخدام معلم JSON أونلاين للحصول على نتائج مجانية. دعم معلمات draft-04 و draft-06 و draft-07. حصل على رسائل خطأ مفصلة وملخصات التحقق."
@@ -4441,7 +4442,7 @@
       "seo_description": "أحصِّل بايتات النص في UTF-8 و UTF-16 وغيرها من الترميزات أونلاين مجانًا. حصل على عد الحروف وعدد الكلمات وحجم البايت. ضروري لتقدير حجم البيانات."
     },
     "json-to-typescript": {
-      "name": "تحويل JSON إلى TypeScript",
+      "name": "JSON إلى TypeScript",
       "description": "قم بتحويل بيانات JSON إلى تعريفات TypeScript.",
       "seo_title": "تحويل JSON إلى TypeScript مجاني",
       "seo_description": "قم بتحويل JSON إلى تعريفات TypeScript عبر الإنترنت مجانًا. أنشئ كودًا آمنًا من الناحية النوعية مع خصائص اختيارية ونوعيات مُستوى متعمق. ضروري للمبرمجين TypeScript."
@@ -4473,8 +4474,8 @@
     "json-diff": {
       "name": "فرق JSON",
       "description": "قارن بين كائنين JSON وابحث عن الاختلافات.",
-      "seo_title": "Free JSON Diff Tool Online",
-      "seo_description": "Compare two JSON objects and find differences online for free. Highlight added, removed, and changed values with side-by-side view. Essential for API debugging.",
+      "seo_title": "أداة مقارنة JSON مجانية عبر الإنترنت",
+      "seo_description": "قارن كائنين JSON واعثر على الاختلافات مجاناً عبر الإنترنت. تمييز الإضافات والحذف والتغييرات.",
       "json1": "JSON 1",
       "json2": "JSON 2",
       "placeholder": "{\"المفتاح\": \"القيمة\"}",
@@ -4491,14 +4492,14 @@
     "epoch-converter": {
       "name": "محول العصر",
       "description": "التحويل بين الطوابع الزمنية Epoch/Unix والوقت والتاريخ.",
-      "seo_title": "Free Epoch Time Converter Online",
-      "seo_description": "Convert Unix epoch timestamps to human-readable dates and vice versa online for free. Support milliseconds and seconds. Essential for developers and logs."
+      "seo_title": "محول وقت Epoch مجاني عبر الإنترنت",
+      "seo_description": "حول طوابع Unix الزمنية إلى تواريخ قابلة للقراءة والعكس مجاناً عبر الإنترنت. دعم الميلي ثانية والثواني."
     },
     "css-unit-converter": {
       "name": "محول وحدات CSS",
       "description": "قم بتحويل الوحدات المختلفة لـ CSS مثل px، rem، em، pt، vw، vh.",
-      "seo_title": "محول وحدات CSS مجاني أونلاين",
-      "seo_description": "قم بتحويل وحدات CSS (px، em، rem، %، vw، vh) أونلاين مجانًا. حساب القيم المتوازنة مع حجم الخط الأساسي. ضروري لتصميم الويب المتوازن."
+      "seo_title": "محول وحدات CSS مجاني عبر الإنترنت",
+      "seo_description": "حول وحدات CSS (px, em, rem, %, vw, vh) مجاناً عبر الإنترنت. احسب القيم المتجاوبة مع حجم الخط الأساسي. ضروري لتصميم الويب المتجاوب."
     },
     "text-statistics": {
       "name": "إحصائيات النص",
@@ -4528,8 +4529,8 @@
     "json-to-yaml": {
       "name": "JSON إلى YAML",
       "description": "تحويل بيانات JSON إلى تنسيق YAML.",
-      "seo_title": "Free JSON to YAML Converter Online",
-      "seo_description": "Convert JSON to YAML format online for free. Preserve data structure with proper indentation and formatting. Perfect for configuration files and DevOps."
+      "seo_title": "محول JSON إلى YAML مجاني عبر الإنترنت",
+      "seo_description": "حول JSON إلى تنسيق YAML مجاناً عبر الإنترنت. حافظ على بنية البيانات والتنسيق."
     },
     "data-uri": {
       "name": "مولد URI البيانات",
@@ -4548,7 +4549,7 @@
       "seo_description": "قارن تشابه النصوص وأجد الاختلافات أونلاين مجاناً. احسب مسافة Levenshtein ونسبة التشابه. ضرورية لمراجعة المحتوى."
     },
     "json-to-go": {
-      "name": "تحويل JSON إلى هيكل Go",
+      "name": "JSON إلى Go Struct",
       "description": "قم بتحويل بيانات JSON إلى تعريفات هيكل Go.",
       "seo_title": "تحويل JSON إلى هيكل Go مجانًا أونلاين",
       "seo_description": "قم بتحويل JSON إلى هيكل Go أونلاين مجانًا. انشئ كود Go آمنًا من الناحية النوعية مع علامات الحقول المناسبة ودعم الهيكل المكرر. ضروري لتطوير API Go.",
@@ -4559,8 +4560,8 @@
     "html-to-jsx": {
       "name": "تحويل HTML إلى JSX",
       "description": "قم بتحويل كود HTML إلى تنسيق JSX في راكونت.",
-      "seo_title": "محول HTML إلى JSX مجاني أونلاين",
-      "seo_description": "قم بتحويل كود HTML إلى تنسيق JSX في راكونت بشكل مجاني عبر الإنترنت. تحويل class إلى className، وتحويل سلاسل الأسلوب إلى أشكال. ضروري لتطوير راكونت.",
+      "seo_title": "محول HTML إلى JSX مجاني عبر الإنترنت",
+      "seo_description": "حول كود HTML إلى تنسيق React JSX مجاناً عبر الإنترنت. حول class إلى className، سلاسل الأنماط إلى كائنات. ضروري لمطوري React.",
       "htmlInput": "إدخال HTML",
       "jsxOutput": "إخراج JSX",
       "placeholder": "<div class=\"container\">...</div>",
@@ -4606,20 +4607,20 @@
     "json-to-xml": {
       "name": "JSON إلى XML",
       "description": "تحويل بيانات JSON إلى تنسيق XML.",
-      "seo_title": "Free JSON to XML Converter Online",
-      "seo_description": "Convert JSON to XML format online for free. Preserve data structure with proper element nesting and attributes. Perfect for API integration and data exchange."
+      "seo_title": "محول JSON إلى XML مجاني عبر الإنترنت",
+      "seo_description": "حول JSON إلى تنسيق XML مجاناً عبر الإنترنت. حافظ على بنية البيانات مع خيارات تنسيق قابلة للتخصيص."
     },
     "text-wrapper": {
       "name": "تغليف النص",
       "description": "التفاف النص بعرض سطر محدد.",
-      "seo_title": "Free Text Wrapper Online",
-      "seo_description": "Wrap text to specified width online for free. Add line breaks at word boundaries or fixed positions. Perfect for formatting code comments and documentation."
+      "seo_title": "أداة التفاف النص مجانية عبر الإنترنت",
+      "seo_description": "لف النص إلى عرض محدد مجاناً عبر الإنترنت. أضف فواصل الأسطر عند حدود الكلمات أو المواضع الثابتة. مثالي لتنسيق تعليقات الكود والتوثيق."
     },
     "csv-to-json": {
       "name": "تحويل CSV إلى JSON",
       "description": "قم بتحويل بيانات CSV إلى تنسيق JSON مع فصل قابل للتخصيص.",
-      "seo_title": "تحويل CSV إلى JSON مجانًا أونلاين",
-      "seo_description": "قم بتحويل CSV إلى JSON مجانًا أونلاين. قم بتحليل CSV باستخدام فواصل وعناوين قابلة للتخصيص. ندعم الأشكال المركبة والأصناف. مناسب تمامًا لاستيراد البيانات."
+      "seo_title": "محول CSV إلى JSON مجاني عبر الإنترنت",
+      "seo_description": "حول CSV إلى تنسيق JSON مجاناً عبر الإنترنت. تحليل CSV مع فواصل ورؤوس مخصصة. دعم الكائنات والمصفوفات المتداخلة. مثالي لاستيراد البيانات."
     },
     "html-entity": {
       "name": "محول وحدات HTML",
@@ -4630,8 +4631,8 @@
     "number-formatter": {
       "name": "منسق الأرقام",
       "description": "تنسيق الأرقام في مناطق مختلفة باستخدام أنماط العلامة العشرية والعملة والنسبة المئوية.",
-      "seo_title": "Free Number Formatter Online",
-      "seo_description": "Format numbers in different locales online for free. Add thousand separators, decimal places, currency symbols, and percentage formatting. Essential for i18n."
+      "seo_title": "منسق الأرقام مجاني عبر الإنترنت",
+      "seo_description": "نسق الأرقام بلغات مختلفة مجاناً عبر الإنترنت. أضف فواصل الآلاف والمنازل العشرية ورموز العملات."
     },
     "hmac-generator": {
       "name": "مولد HMAC",
@@ -4642,14 +4643,14 @@
     "password-strength": {
       "name": "مدقق قوة كلمة المرور",
       "description": "قم بتحليل قوة كلمة المرور عن طريق التحقق من الطول وأنواع الأحرف والأنماط الشائعة.",
-      "seo_title": "Free Password Strength Checker Online",
-      "seo_description": "Check password strength online for free. Get detailed analysis with entropy score, crack time estimate, and improvement suggestions. Essential for security."
+      "seo_title": "فاحص قوة كلمة المرور مجاني عبر الإنترنت",
+      "seo_description": "تحقق من قوة كلمة المرور مجاناً عبر الإنترنت. احصل على تحليل مفصل مع درجة الإنتروبيا، وقت الاختراق المقدر، واقتراحات التحسين. ضروري للأمان."
     },
     "totp-generator": {
       "name": "مولد TOTP",
       "description": "إنشاء رموز محددة الوقت مرة واحدة متوافقة مع Google Authenticator.",
-      "seo_title": "مولد TOTP مجاني أونلاين",
-      "seo_description": "إنشاء رموز TOTP مرة واحدة مجانًا عبر الإنترنت. دعم رموز متوافقة مع Google Authenticator مع مفاتيح سرية مخصصة ومثابرة زمنية. لاختبار الـ 2FA."
+      "seo_title": "مولد TOTP مجاني عبر الإنترنت",
+      "seo_description": "أنشئ كلمات مرور TOTP لمرة واحدة مجاناً عبر الإنترنت. دعم أكواد متوافقة مع Google Authenticator مع مفاتيح سرية وفترات زمنية مخصصة. لاختبار 2FA."
     },
     "user-agent-parser": {
       "name": "تحليل معلومات محرر المستخدم",
@@ -4666,8 +4667,8 @@
     "http-header-parser": {
       "name": "محلل رأس HTTP",
       "description": "تحليل رؤوس HTTP وتنسيقها مع وصف كل رأس.",
-      "seo_title": "Free HTTP Header Parser Online",
-      "seo_description": "Parse HTTP headers online for free. Analyze request and response headers with detailed explanations. Essential for API debugging and web development."
+      "seo_title": "محلل رؤوس HTTP مجاني عبر الإنترنت",
+      "seo_description": "حلل رؤوس HTTP مجاناً عبر الإنترنت. حلل رؤوس الطلب والاستجابة مع الأوصاف."
     },
     "percentage-calculator": {
       "name": "حاسوب نسبة",
@@ -4690,8 +4691,8 @@
     "text-sorter": {
       "name": "فرز النص",
       "description": "قم بفرز أسطر النص أبجديًا أو رقميًا أو حسب الطول باستخدام خيارات متنوعة.",
-      "seo_title": "Free Text Sorter Online",
-      "seo_description": "Sort text lines alphabetically, numerically, naturally, or by length online for free. Support ascending and descending order. Essential for data organization."
+      "seo_title": "مرتب النص مجاني عبر الإنترنت",
+      "seo_description": "رتب أسطر النص أبجدياً، رقمياً، طبيعياً، أو بالطول مجاناً عبر الإنترنت."
     },
     "text-extractor": {
       "name": "منسق النص",
@@ -4702,14 +4703,14 @@
     "emoji-picker": {
       "name": "منتقي الرموز التعبيرية",
       "description": "تصفح الرموز التعبيرية وابحث عنها وانسخها حسب الفئة بنقرة واحدة.",
-      "seo_title": "Free Emoji Picker Online",
-      "seo_description": "Browse and copy emojis by category online for free. Search emojis by name with skin tone variants. One-click copy to clipboard. Perfect for social media."
+      "seo_title": "منتقي الرموز التعبيرية مجاني عبر الإنترنت",
+      "seo_description": "تصفح وانسخ الرموز التعبيرية حسب الفئة مجاناً عبر الإنترنت. ابحث عن الرموز التعبيرية بالاسم مع دعم درجات لون البشرة. مثالي لوسائل التواصل الاجتماعي والرسائل."
     },
     "json-to-sql": {
       "name": "تحويل JSON إلى SQL",
       "description": "قم بتحويل سلاسل JSON إلى عبارات SQL INSERT مع دعم CREATE TABLE.",
-      "seo_title": "تحويل JSON إلى SQL مجاناً أونلاين",
-      "seo_description": "قم بتحويل بيانات JSON إلى عبارات SQL INSERT أونلاين مجاناً. دعم قواعد البيانات MySQL، PostgreSQL، SQLite. إنشاء دفعات لاستيراد قاعدة البيانات.",
+      "seo_title": "محول JSON إلى SQL مجاني عبر الإنترنت",
+      "seo_description": "حول بيانات JSON إلى عبارات SQL INSERT مجاناً عبر الإنترنت. دعم صيغة MySQL، PostgreSQL، SQLite. توليد إدراج جماعي لاستيراد قاعدة البيانات.",
       "tableName": "اسم الجدول",
       "dialect": "لغة الجملة",
       "includeCreate": "أضف CREATE TABLE",
@@ -4722,8 +4723,8 @@
     "image-compressor": {
       "name": "ضغط الصور",
       "description": "ضغط الصور لتقليل حجم الملف دون تأثير على جودتها.",
-      "seo_title": "ضغط الصور مجانًا أونلاين",
-      "seo_description": "ضغط الصور أونلاين مجانًا. تقليل حجم ملفات PNG، JPEG، WebP مع ضبط الجودة. دعم ضغط الملفات بالكامل. مثالي لتحسين تحسين الويب."
+      "seo_title": "ضاغط الصور مجاني عبر الإنترنت",
+      "seo_description": "اضغط الصور مجاناً عبر الإنترنت. قلل حجم ملفات PNG، JPEG، WebP مع جودة قابلة للتعديل. دعم الضغط الجماعي. مثالي لتحسين الويب."
     },
     "image-converter": {
       "name": "محول تنسيق الصور",
@@ -4781,8 +4782,8 @@
     "timezone-converter": {
       "name": "محول التوقيت",
       "description": "قم بتحويل الوقت بين مختلف التوقيتات العالمية مع ساعة العالم.",
-      "seo_title": "محول التوقيت المجاني أونلاين",
-      "seo_description": "قم بتحويل الوقت بين التوقيتات أونلاين مجانًا. ساعة العالم مع مدن رئيسية، دعم التوقيت الصيفي، وجدول اجتماعات. ضروري لتنسيق فرق عالمية.",
+      "seo_title": "محول المناطق الزمنية مجاني عبر الإنترنت",
+      "seo_description": "حول الوقت بين المناطق الزمنية مجاناً عبر الإنترنت. ساعة عالمية مع المدن الرئيسية، دعم التوقيت الصيفي، ومخطط الاجتماعات. ضروري لتنسيق الفرق العالمية.",
       "date": "التاريخ",
       "time": "الوقت",
       "now": "الآن",
@@ -4857,8 +4858,8 @@
     "meta-tag-generator": {
       "name": "مولد علامات الميتا",
       "description": "قم بإنشاء علامات تعريف SEO وOpen Graph وعلامات Twitter Card لموقعك على الويب.",
-      "seo_title": "Free Meta Tag Generator Online - SEO Tools",
-      "seo_description": "Generate SEO meta tags, Open Graph, and Twitter Card tags online for free. Preview how your page appears in search results and social media shares."
+      "seo_title": "مولد علامات Meta مجاني عبر الإنترنت - أدوات SEO",
+      "seo_description": "أنشئ علامات meta SEO، Open Graph، وTwitter Card مجاناً عبر الإنترنت. معاينة كيف ستظهر صفحتك في محركات البحث ووسائل التواصل الاجتماعي."
     },
     "robots-txt-generator": {
       "name": "مولد robots.txt",
@@ -4882,8 +4883,8 @@
       "copy": "نسخ"
     },
     "opengraph-preview": {
-      "name": "مقدمة Open Graph",
-      "description": "اطلع على كيف سيبدو صفحتك عند مشاركتها على وسائل التواصل الاجتماعي.",
+      "name": "معاينة Open Graph",
+      "description": "معاينة كيف ستظهر صفحتك عند مشاركتها على وسائل التواصل الاجتماعي.",
       "seo_title": "أدوات مقدمة Open Graph مجانية أونلاين",
       "seo_description": "اطلع على بطاقات المشاركة على وسائل التواصل الاجتماعي لـ Facebook، Twitter، LinkedIn وغيرها عبر الإنترنت مجانًا. اختبر ميتا تاغات Open Graph و Twitter Card قبل النشر."
     },
@@ -4912,8 +4913,8 @@
     "css-flexbox-generator": {
       "name": "مولد CSS Flexbox",
       "description": "منشئ تخطيط Visual CSS Flexbox مع معاينة مباشرة.",
-      "seo_title": "Free CSS Flexbox Generator Online",
-      "seo_description": "Generate CSS Flexbox layouts visually with live preview online for free. Customize direction, wrap, justify, and align properties. Copy CSS code instantly."
+      "seo_title": "مولد CSS Flexbox مجاني عبر الإنترنت",
+      "seo_description": "أنشئ تخطيطات CSS Flexbox بصرياً مع معاينة مباشرة مجاناً عبر الإنترنت. خصص خصائص flex وانسخ الكود الجاهز للاستخدام."
     },
     "jwt-generator": {
       "name": "JWT Generator",
@@ -5069,8 +5070,8 @@
       "output": "نتيجة التقليل",
       "minify": "تقليل",
       "copy": "نسخ",
-      "seo_title": "أداة تقليل CSS مجانية أونلاين",
-      "seo_description": "تقليل وتضمين كود CSS أونلاين مجانًا. حذف المسافات البيضاء والتعليقات وتحسين الاختيارات. تقليل حجم الملف وتحسين سرعة تحميل الصفحة.",
+      "seo_title": "مصغر CSS مجاني عبر الإنترنت",
+      "seo_description": "صغر واضغط كود CSS مجاناً عبر الإنترنت. أزل المسافات البيضاء، التعليقات، وحسّن للإنتاج. ضروري لأداء الويب.",
       "inputPlaceholder": "أدخل كود CSS...",
       "outputPlaceholder": "ستظهر النتيجة هنا..."
     },
@@ -5155,8 +5156,8 @@
       "description": "إنشاء ظلال الألوان والصبغات من اللون الأساسي.",
       "output": "CSS Output",
       "copy": "نسخ",
-      "seo_title": "Free Color Shades Generator Online",
-      "seo_description": "Generate color shades and tints from any color online for free. Create lighter and darker variations with customizable steps. Export to CSS or design tools.",
+      "seo_title": "مولد درجات الألوان مجاني عبر الإنترنت",
+      "seo_description": "أنشئ درجات وظلال من أي لون مجاناً عبر الإنترنت. أنشئ تنويعات أفتح وأغمق لوحات تصميم متسقة.",
       "baseColor": "اللون الأساسي",
       "numberOfShades": "عدد الظلال: {count}",
       "copyCssVariables": "نسخ متغيرات CSS"
@@ -5188,8 +5189,8 @@
       "inputPlaceholderEncode": "أدخل النص لتشفيره...",
       "inputPlaceholderDecode": "أدخل Base85 لفك تشفيره...",
       "outputPlaceholder": "ستظهر النتيجة هنا...",
-      "seo_title": "حول 85 إكودر/ديكودر مجاني أونلاين",
-      "seo_description": "قم بتشفير وفك تشفير بيانات Base85 (Ascii85) أونلاين مجانًا. يستخدم في ملفات PDF وPostScript وضغط البيانات. أداة تشفير بسيطة ومباشرة عبر المتصفح."
+      "seo_title": "مشفر/مفكك Base85 مجاني عبر الإنترنت",
+      "seo_description": "شفر وفك تشفير بيانات Base85 (Ascii85) مجاناً عبر الإنترنت. يستخدم في ملفات PDF، PostScript، وGit. أكثر كفاءة من Base64."
     },
     "html-to-markdown": {
       "name": "تحويل HTML إلى ماركداون",
@@ -5283,8 +5284,8 @@
       "output": "نتيجة JSON",
       "convert": "تحويل",
       "copy": "نسخ",
-      "seo_title": "تحويل XML إلى JSON مجانًا أونلاين",
-      "seo_description": "قم بتحويل XML إلى JSON مجانًا أونلاين. حافظ على الخصائص، المساحات المسمارية، والإлементات المختبئة. مثالي لتكامل API وتحويل البيانات.",
+      "seo_title": "محول XML إلى JSON مجاني عبر الإنترنت",
+      "seo_description": "حول XML إلى تنسيق JSON مجاناً عبر الإنترنت. حافظ على السمات، مساحات الأسماء، والبنية. مثالي لتكامل API وتحويل البيانات.",
       "inputPlaceholder": "أدخل XML هنا...",
       "outputPlaceholder": "سيظهر النتائج هنا..."
     },
@@ -5292,8 +5293,8 @@
       "name": "генератор-адресов-ип",
       "description": " GEN_ip_address_generator",
       "copy": "نسخ الكل",
-      "seo_title": "генератор-адресов-ип-бесплатно-онлайн",
-      "seo_description": " GEN_ip_address_generator_онлайн-бесплатно. Поддерживает форматы IPv4 и IPv6 с кастомными диапазонами. Идеально для тестирования, разработки и симуляции сети.",
+      "seo_title": "مولد عناوين IP مجاني عبر الإنترنت",
+      "seo_description": "أنشئ عناوين IP عشوائية مجاناً عبر الإنترنت. دعم تنسيقات IPv4 وIPv6 مع نطاقات قابلة للتخصيص. للاختبار والتطوير.",
       "ipType": "نوع IP",
       "ipv4Random": "IPv4 (عشوائي)",
       "ipv6": "IPv6",
@@ -5304,7 +5305,7 @@
       "generatedIps": "العناوين المنشورة"
     },
     "css-gradient-text": {
-      "name": "خريطة النص بالتأثيرات التدرجية",
+      "name": "نص متدرج CSS",
       "description": "قم بإنشاء تأثيرات النص التدرجية باستخدام CSS.",
       "output": "إظهار CSS",
       "copy": "نسخ CSS",
@@ -5408,37 +5409,37 @@
       "confidence": "الثقة"
     },
     "css-clip-path-generator": {
-      "name": "генератор CSS clip-path",
-      "description": "إنشاء أشكال CSS clip-path باستخدام محرر مرئي.",
+      "name": "مولد CSS Clip-Path",
+      "description": "أنشئ أشكال CSS clip-path باستخدام محرر مرئي.",
       "seo_title": "مجاني CSS Clip Path Generator أونلاين",
       "seo_description": "إنشاء أشكال CSS clip-path باستخدام محرر مرئي أونلاين مجانًا. تصميم مضلعات، دوائر، بيضاويات، ومسارات مخصصة. نسخ كود CSS للتنظيمات الإبداعية."
     },
     "uuid-validator": {
       "name": "مدقق UUID",
       "description": "التحقق من صحة وتحليل سلاسل UUID.",
-      "seo_title": "Free UUID Validator Online",
-      "seo_description": "Validate and analyze UUID strings online for free. Check format, version, and variant of UUIDs. Extract timestamp from UUID v1 and v7. Essential for debugging."
+      "seo_title": "مدقق UUID مجاني عبر الإنترنت",
+      "seo_description": "تحقق من صحة وحلل سلاسل UUID مجاناً عبر الإنترنت. تحقق من التنسيق، الإصدار، والمتغير. استخرج معلومات الطابع الزمني من UUID v1."
     },
     "text-hash-comparator": {
       "name": "مقارنة تجزئة النص",
       "description": "قارن النص بقيم التجزئة الخاصة به.",
-      "seo_title": "Free Text Hash Comparator Online",
-      "seo_description": "Compare text by their hash values online for free. Generate and compare MD5, SHA-1, SHA-256 hashes side by side. Essential for file integrity verification."
+      "seo_title": "مقارن تجزئة النص مجاني عبر الإنترنت",
+      "seo_description": "قارن النص بقيم التجزئة مجاناً عبر الإنترنت. أنشئ وقارن تجزئات MD5، SHA-1، SHA-256 جنباً إلى جنب. ضروري للتحقق من سلامة الملفات."
     },
     "json-path-finder": {
-      "name": "جدّي道路上的探索者",
-      "description": "ابحث ونسخ طرق JSON من بياناتك.",
-      "seo_title": "جدّي道路上的探索者 - مجاني أونلاين",
+      "name": "باحث مسار JSON",
+      "description": "ابحث وانسخ مسارات JSON من بياناتك.",
+      "seo_title": "باحث مسار JSON مجاني عبر الإنترنت",
       "seo_description": "ابحث ونسخ طرق JSON من بياناتك أونلاين مجانًا. انقر على أي قيمة لاستخراج التعبير JSONPath الخاص بها. ضروري لتطوير API واستخراج البيانات."
     },
     "canvas-drawing": {
       "name": "رسم قماش",
       "description": "أداة رسم بسيطة مع فرشاة وممحاة.",
-      "seo_title": "Free Canvas Drawing Tool Online",
-      "seo_description": "Simple drawing tool with brush and eraser online for free. Customize brush size, color, and opacity. Download artwork as PNG. Perfect for quick sketches."
+      "seo_title": "أداة الرسم على القماش مجانية عبر الإنترنت",
+      "seo_description": "أداة رسم بسيطة مع فرشاة وممحاة مجاناً عبر الإنترنت. أنشئ رسومات سريعة وصدّرها كصور."
     },
     "json-escape": {
-      "name": "تشفير/فك تشفير JSON",
+      "name": "هروب/إلغاء هروب JSON",
       "description": "تشفير وفك تشفير سلاسل JSON.",
       "seo_title": "أداة تشفير/فك تشفير JSON مجانية أونلاين",
       "seo_description": "تشفير وفك تشفير سلاسل JSON أونلاين مجانية. التعامل مع الأحرف الخاصة، الاقتباسات، والأحرف التحكمية. ضروري لإدراج JSON في سلاسل."
@@ -5457,8 +5458,8 @@
     },
     "dns-lookup": {
       "name": "lookup DNS",
-      "description": "قم بتحقيق سجلات DNS لأي نطاق.",
-      "seo_title": "أدوات البحث عن DNS مجانية أونلاين",
+      "description": "ابحث عن سجلات DNS لأي نطاق.",
+      "seo_title": "أداة بحث DNS مجانية عبر الإنترنت",
       "seo_description": "قم بتحقيق سجلات DNS لأي نطاق أونلاين مجانًا. استفسر عن سجلات A, AAAA, MX, TXT, NS, CNAME, و SOA. أساسي لحل مشاكل النطاقات وتأكيد البيانات."
     },
     "image-resizer": {
@@ -5503,7 +5504,7 @@
       "note": "💡 ملاحظة: هذه إصدار تجربة. للإستخدام في الإنتاج، ادمج مع خدمة API WHOIS."
     },
     "websocket-tester": {
-      "name": "WebSocket Tester",
+      "name": "اختبار WebSocket",
       "description": "اختبار اتصالات WebSocket وإرسال/استقبال الرسائل.",
       "seo_title": "اختبار WebSocket مجاني عبر الإنترنت",
       "seo_description": "اختبار اتصالات WebSocket، وإرسال واستقبال الرسائل عبر الإنترنت مجاناً. دعم العناوين المخصصة والبروتوكولات. ضروري للتنمية التطبيقات الحقيقية الوقتية.",
@@ -5574,8 +5575,8 @@
     "port-reference": {
       "name": "مرجع المنفذ",
       "description": "الدليل المرجعي لمنافذ وخدمات الشبكة المشتركة.",
-      "seo_title": "Network Port Reference Guide",
-      "seo_description": "Complete reference guide for common network ports and services. Browse well-known ports (0-1023), registered ports, and dynamic ports. Essential for networking."
+      "seo_title": "دليل مرجعي لمنافذ الشبكة",
+      "seo_description": "دليل مرجعي كامل لمنافذ الشبكة الشائعة والخدمات. ابحث عن أرقام المنافذ والبروتوكولات."
     },
     "privacy-policy-generator": {
       "name": "مولد سياسة الخصوصية",
@@ -5586,8 +5587,8 @@
     "terms-generator": {
       "name": "مولد شروط الخدمة",
       "description": "إنشاء شروط الخدمة لصفحة الويب الخاصة بك.",
-      "seo_title": "مولد شروط الخدمة المجاني أونلاين",
-      "seo_description": "إنشاء شروط الخدمة المخصصة لصفحة الويب الخاصة بك أونلاين مجانًا. تغطي اتفاقيات المستخدم، المسؤولية، الملكية الفكرية، وحل النزاعات."
+      "seo_title": "مولد شروط الخدمة مجاني عبر الإنترنت",
+      "seo_description": "أنشئ شروط خدمة مخصصة لموقعك مجاناً عبر الإنترنت. تغطي الاستخدام، الخصوصية، المسؤولية والمزيد. قوالب قانونية احترافية."
     },
     "cookie-policy-generator": {
       "name": "مولد سياسة ملفات تعريف الارتباط",
@@ -5628,8 +5629,8 @@
     "htaccess-generator": {
       "name": "مولد .htaccess",
       "description": "إنشاء ملف .htaccess لخوادم Apache.",
-      "seo_title": "مولد .htaccess مجاني أونلاين",
-      "seo_description": "إنشاء ملف .htaccess لخوادم Apache أونلاين مجاناً. قم بإنشاء إعادة توجيهات، إعادة كتابات، قواعد الأمان، وإرشادات التخزين المؤقت. أداة ضرورية للاستضافة.",
+      "seo_title": "مولد .htaccess مجاني عبر الإنترنت",
+      "seo_description": "أنشئ تكوين .htaccess لخوادم Apache مجاناً عبر الإنترنت. أنشئ إعادة التوجيه، إعادة الكتابة، قواعد الأمان، وتوجيهات التخزين المؤقت. ضروري لاستضافة الويب.",
       "urlSettings": "إعدادات URL و SSL",
       "forceHttps": "جبر استخدام HTTPS",
       "forceWww": "جبر استخدام حرف و",
@@ -5716,8 +5717,8 @@
     "twitter-card-generator": {
       "name": "مولد بطاقة تويتر",
       "description": "قم بإنشاء علامات تعريف لبطاقة Twitter للحصول على معاينات أفضل للتغريدات.",
-      "seo_title": "Free Twitter Card Generator Online",
-      "seo_description": "Generate Twitter Card meta tags for rich tweet previews online for free. Support summary, large image, and player cards. Optimize for Twitter sharing."
+      "seo_title": "مولد بطاقة تويتر مجاني عبر الإنترنت",
+      "seo_description": "أنشئ علامات meta لبطاقة تويتر لمعاينات تغريدات غنية مجاناً عبر الإنترنت. دعم بطاقات الملخص، الصورة الكبيرة والمزيد."
     },
     "mime-type-lookup": {
       "name": "بحث نوع MIME",
@@ -5760,8 +5761,8 @@
     "text-cleaner": {
       "name": "منظف النص",
       "description": "قم بتنظيف النص وتنسيقه عن طريق إزالة المسافات والسطور والمزيد.",
-      "seo_title": "Free Text Cleaner Online",
-      "seo_description": "Clean and format text by removing extra spaces, empty lines, HTML tags, and more online for free. Normalize whitespace and fix common formatting issues.",
+      "seo_title": "منظف النص مجاني عبر الإنترنت",
+      "seo_description": "نظف ونسق النص بإزالة المسافات الزائدة، الأسطر الفارغة، علامات HTML والمزيد مجاناً عبر الإنترنت. مثالي لإعداد البيانات وتنسيق المحتوى.",
       "input": "إدخال النص",
       "clear": "مسح",
       "cleanedText": "نص نظيف",
@@ -5782,8 +5783,8 @@
     "list-randomizer": {
       "name": "مزج القائمة العشوائي",
       "description": "تدوير وتشويه قوائم الأسماء أو العناصر.",
-      "seo_title": "مزج القائمة العشوائي مجاني أونلاين",
-      "seo_description": "تدوير وتشويه قوائم الأسماء أو العناصر أونلاين مجاناً. مثالي للاختيار العشوائي، سحب الأسماء، وتنظيم العناصر بشكل عادل. مزج آمن.",
+      "seo_title": "أداة عشوائية القوائم مجانية عبر الإنترنت",
+      "seo_description": "خلط وعشوائية قوائم العناصر أو الأسماء مجاناً عبر الإنترنت. مثالي للاختيار العشوائي، السحوبات، والترتيب العادل. عشوائية آمنة.",
       "originalList": "القائمة الأصلية",
       "randomizedList": "القائمة العشوائية",
       "clear": "ازالة",
@@ -5830,8 +5831,8 @@
     "image-watermark": {
       "name": "صورة العلامة المائية",
       "description": "إضافة علامات مائية نصية إلى الصور.",
-      "seo_title": "Free Image Watermark Tool Online",
-      "seo_description": "Add text watermarks to images online for free. Customize font, size, color, opacity, and position. Protect your photos and artwork from unauthorized use.",
+      "seo_title": "أداة العلامة المائية للصور مجانية عبر الإنترنت",
+      "seo_description": "أضف علامات مائية نصية للصور مجاناً عبر الإنترنت. خصص الخط والحجم واللون والموضع.",
       "uploadImage": "تحميل الصورة",
       "watermarkText": "نص العلامة المائية",
       "textPlaceholder": "أدخل نص العلامة المائية...",
@@ -5851,8 +5852,8 @@
     "svg-to-image": {
       "name": "SVG إلى الصورة",
       "description": "قم بتحويل ملفات SVG إلى صور PNG أو JPEG أو WebP.",
-      "seo_title": "Free SVG to Image Converter Online",
-      "seo_description": "Convert SVG to PNG, JPEG, WebP online for free. Set custom dimensions and background color. Perfect for exporting vector graphics for web and print use.",
+      "seo_title": "محول SVG إلى صورة مجاني عبر الإنترنت",
+      "seo_description": "حول SVG إلى PNG، JPEG، WebP مجاناً عبر الإنترنت. حدد أبعاد مخصصة ولون الخلفية. مثالي لتصدير الرسومات المتجهة.",
       "uploadSvg": "تحميل ملف SVG",
       "svgCode": "SVG Code",
       "loadSample": "تحميل نموذج",
@@ -5867,8 +5868,8 @@
     "hex-base64-converter": {
       "name": "محول هيكس Base64",
       "description": "التحويل بين الترميز الست عشري و Base64.",
-      "seo_title": "Free Hex Base64 Converter Online",
-      "seo_description": "Convert between Hex and Base64 online for free. Encode hexadecimal to Base64 or decode Base64 to hex. Essential for cryptography and data encoding tasks.",
+      "seo_title": "محول Hex Base64 مجاني عبر الإنترنت",
+      "seo_description": "حول بين Hex و Base64 مجاناً عبر الإنترنت. شفر السداسي عشري إلى Base64 أو فك تشفير Base64 إلى hex. ضروري للتشفير وترميز البيانات.",
       "hexToBase64": "سداسي عشري → Base64",
       "base64ToHex": "Base64 → عرافة",
       "swap": "تبديل",
@@ -5882,8 +5883,8 @@
     "pdf-to-base64": {
       "name": "قوات الدفاع الشعبي إلى Base64",
       "description": "تحويل ملفات PDF إلى ترميز Base64.",
-      "seo_title": "Free PDF to Base64 Converter Online",
-      "seo_description": "Convert PDF files to Base64 encoding online for free. Embed PDFs in HTML, JSON, or data URIs. Secure browser-based conversion with no file upload to servers.",
+      "seo_title": "محول PDF إلى Base64 مجاني عبر الإنترنت",
+      "seo_description": "حول ملفات PDF إلى ترميز Base64 مجاناً عبر الإنترنت. ضمّن PDFs في HTML، JSON، أو URIs البيانات. تحويل آمن في المتصفح بدون رفع للخوادم.",
       "dropzone": "قم بإسقاط ملف PDF هنا أو انقر للتحميل",
       "acceptedFormat": "التنسيق المقبول: PDF",
       "errorNotPdf": "الرجاء تحديد ملف PDF",
@@ -5899,8 +5900,8 @@
     "audio-to-base64": {
       "name": "الصوت إلى Base64",
       "description": "تحويل الملفات الصوتية إلى ترميز Base64.",
-      "seo_title": "Free Audio to Base64 Converter Online",
-      "seo_description": "Convert audio files to Base64 encoding online for free. Support MP3, WAV, OGG formats. Embed audio in HTML, JSON, or data URIs. Browser-based processing.",
+      "seo_title": "محول الصوت إلى Base64 مجاني عبر الإنترنت",
+      "seo_description": "حول ملفات الصوت إلى ترميز Base64 مجاناً عبر الإنترنت. دعم تنسيقات MP3، WAV، OGG. ضمّن الصوت في HTML، JSON، أو URIs البيانات. معالجة في المتصفح.",
       "dropzone": "قم بإسقاط الملف الصوتي هنا أو انقر للتحميل",
       "acceptedFormats": "المدعومة: MP3، WAV، OGG، WebM، AAC، FLAC",
       "errorNotAudio": "الرجاء تحديد ملف صوتي",
@@ -5915,8 +5916,8 @@
     "video-to-base64": {
       "name": "محويد الفيديو إلى Base64",
       "description": "تحويل ملفات الفيديو إلى تشفير Base64.",
-      "seo_title": "محويد الفيديو إلى Base64 مجاني عبر الإنترنت",
-      "seo_description": "تحويل ملفات الفيديو إلى تشفير Base64 عبر الإنترنت مجاناً. يدعم صيغاً مثل MP4، WebM، وأكثر. تضمين الفيديوهات في HTML، JSON، أو URIs البياناتية. معالجة قائمة على المتصفح.",
+      "seo_title": "محول الفيديو إلى Base64 مجاني عبر الإنترنت",
+      "seo_description": "حول ملفات الفيديو إلى ترميز Base64 مجاناً عبر الإنترنت. دعم MP4، WebM والمزيد من التنسيقات. ضمّن الفيديو في HTML أو JSON.",
       "dropzone": "أرفق ملف فيديو هنا أو انقر للتحميل",
       "maxSize": "أقصى حجم الملف: 10MB",
       "errorNotVideo": "الرجاء اختيار ملف فيديو",
@@ -6190,8 +6191,8 @@
     "mac-address-generator": {
       "name": "مولد عنوان MAC",
       "description": "إنتاج عناوين MAC عشوائية مع خيارات.",
-      "seo_title": "مولد عنوان MAC عبر الإنترنت",
-      "seo_description": "إنتاج عناوين MAC عشوائية مع خيارات مقدمة، فاصلة، وأعلام ثنائية. دعم علامات التكرار/التنسيقية وعلامات التكرار/التنسيقية العالمية المحلية. للاختبار والتنمية.",
+      "seo_title": "مولد عناوين MAC عبر الإنترنت",
+      "seo_description": "أنشئ عناوين MAC عشوائية مع خيارات البادئة، الفاصل، وعلامات البت. دعم علامات unicast/multicast و universal/local. للاختبار والتطوير.",
       "count": "عدد",
       "separator": "الفاصلة",
       "sepColon": "النقاط العشرية (∶)",
@@ -6291,8 +6292,8 @@
     "base-calculator": {
       "name": "الحاسبة الأساسية",
       "description": "إجراء العمليات الحسابية على قواعد أرقام مختلفة.",
-      "seo_title": "Free Base Calculator Online",
-      "seo_description": "Calculate in binary, octal, decimal, and hexadecimal. Supports arithmetic and bitwise operations like AND, OR, XOR, NOT, shift. For low-level programming.",
+      "seo_title": "حاسبة الأساس مجانية عبر الإنترنت",
+      "seo_description": "احسب بالثنائي، الثماني، العشري، والسداسي عشري. دعم العمليات الحسابية والبتية. ضروري للمبرمجين.",
       "base": "قاعدة الرقم",
       "binary": "ثنائي",
       "octal": "ثماني",
@@ -6311,8 +6312,8 @@
     "color-name-finder": {
       "name": "مكتشف اسم اللون",
       "description": "ابحث عن أقرب اسم لون لأي قيمة لون.",
-      "seo_title": "Free Color Name Finder Online",
-      "seo_description": "Find the closest named color for any hex color value. Browse CSS color names, X11 colors, and web-safe colors. For designers and accessibility compliance.",
+      "seo_title": "باحث اسم اللون مجاني عبر الإنترنت",
+      "seo_description": "اعثر على أقرب لون مسمى لأي قيمة لون hex. تصفح ألوان CSS وألوان الويب.",
       "inputLabel": "لون",
       "find": "البحث عن اسم اللون",
       "closestColors": "أقرب الألوان",
@@ -6321,8 +6322,8 @@
     "char-frequency": {
       "name": "محلل تردد الحروف",
       "description": "تحليل تردد الحروف في النص.",
-      "seo_title": "محلل تردد الحروف مجاني أونلاين",
-      "seo_description": "تحليل تردد وتوزيع الحروف في النص. الحصول على الإحصائيات، النسب، والرسوم البيانية المرئية لكل حرف. للمكافحة الإلكترونية وتحليل النصوص.",
+      "seo_title": "محلل تردد الأحرف مجاني عبر الإنترنت",
+      "seo_description": "حلل تردد وتوزيع الأحرف في النص. احصل على العدد، النسب المئوية، والرسوم البيانية لكل حرف. للتشفير وتحليل النص.",
       "inputLabel": "النص",
       "placeholder": "أدخل النص الذي تريد تحليله...",
       "ignoreSpaces": "تجاهل الفراغات",
@@ -6334,8 +6335,8 @@
     "json-to-dart": {
       "name": "JSON to Dart",
       "description": "قم بتحويل فئة JSON إلى Dart باستخدام أساليب fromJson وtoJson.",
-      "seo_title": "Free JSON to Dart Converter Online",
-      "seo_description": "Convert JSON to Dart class code with factory constructors and serialization methods. Support null safety and nested classes. For Flutter app development.",
+      "seo_title": "محول JSON إلى Dart مجاني عبر الإنترنت",
+      "seo_description": "حول JSON إلى كود فئة Dart مع منشئات المصنع وطرق التسلسل. ضروري لتطوير Flutter.",
       "className": "اسم الفئة",
       "convert": "تحويل"
     },
@@ -7298,8 +7299,8 @@
     "polar-bar-chart-generator": {
       "name": "مولد شريط البيانات البola",
       "description": "أنشئ شريط البيانات البola على الإنترنت. عرض البيانات بطرق متجهة وتصديرها كPNG/SVG.",
-      "seo_title": "مولد شريط البيانات البola مجاني أونلاين",
-      "seo_description": "أنشئ شريط البيانات البola الاحترافي على الإنترنت مجاناً. عرض البيانات باستخدام الإحداثيات البola. تصديرها كPNG أو SVG.",
+      "seo_title": "مولد مخطط الأعمدة القطبية مجاني عبر الإنترنت",
+      "seo_description": "أنشئ مخططات أعمدة قطبية احترافية مجاناً عبر الإنترنت. تصور البيانات في الإحداثيات القطبية. تصدير كـ PNG أو SVG.",
       "chartTitle": "عنوان الرسم البياني",
       "chartTitlePlaceholder": "أدخل عنوان الرسم البياني",
       "colorTheme": "نمط الألوان",
@@ -7358,8 +7359,8 @@
     "parallel-chart-generator": {
       "name": "مولد الرسوم البيانية المتوازية",
       "description": "أنشئ رسوم بيانية متوازية على الإنترنت. قارن البيانات متعددة الأبعاد و 导出 كPNG/SVG.",
-      "seo_title": "مولد الرسوم البيانية المتوازية مجاني أونلاين",
-      "seo_description": "أنشئ رسوم بيانية متوازية مهنية على الإنترنت مجاناً. قارن البيانات متعددة الأبعاد. قم بتصديرها كPNG أو SVG.",
+      "seo_title": "مولد مخطط الإحداثيات المتوازية مجاني عبر الإنترنت",
+      "seo_description": "أنشئ مخططات إحداثيات متوازية احترافية مجاناً عبر الإنترنت. قارن البيانات متعددة الأبعاد. تصدير كـ PNG أو SVG.",
       "chartTitle": "عنوان الرسم البياني",
       "chartTitlePlaceholder": "أدخل عنوان الرسم البياني",
       "colorTheme": "نمط الألوان",
@@ -7444,7 +7445,7 @@
       "tip2": "يمكنك إضافة علامات الاسم لكل فقاعة"
     },
     "tree-chart-generator": {
-      "name": "مولد رسم الشجرة",
+      "name": "مولد مخطط الشجرة",
       "seo_title": "مولد رسم الشجرة مجاني أونلاين",
       "seo_description": "أنشئ رسم شجرة مهنيًا مجانًا أونلاين. عرض الهياكل الهرمية. قم بتصديرها كPNG أو SVG.",
       "title": "مولد رسم الشجرة",
@@ -7555,8 +7556,8 @@
     },
     "venn-diagram-generator": {
       "name": "مولد مخططات فين",
-      "seo_title": "Free Online Venn Diagram Generator",
-      "seo_description": "Create 2-set or 3-set Venn diagrams online. Visualize logical relationships and overlaps. Free and easy to use.",
+      "seo_title": "مولد مخطط فين مجاني عبر الإنترنت",
+      "seo_description": "أنشئ مخططات فين بمجموعتين أو ثلاث مجموعات عبر الإنترنت. تصور العلاقات المنطقية والتداخلات. مجاني وسهل الاستخدام.",
       "title": "مولد مخططات فين",
       "description": "قم بإنشاء مخططات Venn لإظهار العلاقات المنطقية بين المجموعات.",
       "defaultTitle": "مثال على مخطط فين",
@@ -7580,8 +7581,8 @@
     },
     "timeline-chart-generator": {
       "name": "مجمع رسم الجداول الزمنية",
-      "seo_title": "مجمع رسم الجداول الزمنية مجاني أونلاين",
-      "seo_description": "أنشئ جداول زمنية رأسية أو أفقية أونلاين. عرض التاريخ، النقاط المثيرة، والعمليات. استخدمها مجاناً.",
+      "seo_title": "مولد مخطط الجدول الزمني مجاني عبر الإنترنت",
+      "seo_description": "أنشئ مخططات جدول زمني عمودية أو أفقية عبر الإنترنت. تصور التاريخ، المعالم، والعمليات. تصدير مجاني.",
       "title": "مجمع رسم الجداول الزمنية",
       "description": "أنشئ جداول زمنية لتوضيح تسلسل الأحداث.",
       "defaultTitle": "نقاط التحول للشركة",
@@ -8511,7 +8512,7 @@
       "invalidRegex": "نمط نصي غير صالح"
     },
     "crontab-calendar": {
-      "name": "جلسة تقويم crontab",
+      "name": "تقويم Crontab",
       "description": "تقوم بتصوير جدول cron على التقويم. رؤية متى سيتم تشغيل المهام.",
       "seo_title": "مجاني جلسة تقويم crontab على الإنترنت",
       "seo_description": "تقوم بتصوير جدول cron على التقويم عبر الإنترنت مجاناً. رؤية أوقات التنفيذ القادمة، عرض شهرية للتنفيذ المخطط.",
@@ -9684,7 +9685,7 @@
       "commonResolutions": "الأبعاد الشائعة"
     },
     "chinese-lorem-ipsum": {
-      "name": "نص صيني وهمي",
+      "name": "Lorem Ipsum صيني",
       "description": "توليد نص صيني وهمي للتصميم.",
       "seo_title": "مولد نص صيني وهمي مجاني",
       "seo_description": "ولّد نصاً صينياً وهمياً مجاناً عبر الإنترنت.",
@@ -10186,7 +10187,17 @@
       "count": "عدد الأسماء",
       "anyGender": "أي جنس",
       "neutral": "محايد",
-      "clickToGenerate": "انقر للإنشاء"
+      "clickToGenerate": "انقر للإنشاء",
+      "origins": {
+        "english": "إنجليزي/أمريكي",
+        "spanish": "إسباني/لاتيني",
+        "french": "فرنسي",
+        "german": "ألماني",
+        "japanese": "ياباني",
+        "chinese": "صيني",
+        "korean": "كوري",
+        "any": "أي أصل"
+      }
     },
     "random-picker": {
       "name": "مزج عشوائي",
@@ -10788,6 +10799,689 @@
       "class": "الفئة",
       "invalidIp": "عنوان IP غير صالح",
       "invalidCidr": "تدوين CIDR غير صالح"
+    },
+    "iban-validator": {
+      "name": "مvalidر حسابات IBAN مجاني",
+      "description": "تحقق من صحة وتحليل أرقام حسابات IBAN من دول أوروبا.",
+      "seo_title": "مvalidر حسابات IBAN مجاني عبر الإنترنت - تحقق من أرقام IBAN",
+      "seo_description": "تحقق من أرقام حسابات IBAN بنكًا عبر الإنترنت مجانًا. تحقق من صحة النمط، رمز البلد، والرقم التحققي. يدعم جميع دول أوروبا. سريع ومأمون.",
+      "inputLabel": "أدخل IBAN",
+      "placeholder": "مثالًا، DE89370400440532013000",
+      "validate": "تحقق",
+      "valid": "IBAN صالح",
+      "invalid": "IBAN غير صالح",
+      "country": "بلد",
+      "checkDigits": "رقم التحقق",
+      "bankCode": "رمز البنك",
+      "bban": "BBAN (رقم الحساب البنكي الأساسي)",
+      "formatted": "IBAN المعدل",
+      "copy": "نسخ",
+      "exampleIbans": "أمثلة على IBAN",
+      "errors": {
+        "empty": "من فضلك أدخل IBAN",
+        "invalidFormat": "نمط IBAN غير صالح",
+        "unknownCountry": "رمز البلد غير معروف",
+        "invalidLength": "طول غير صالح: توقع {expected} حرف، حصلت {actual}",
+        "invalidChecksum": "رقم التحقق غير صالح - قد يكون IBAN غير صحيح"
+      }
+    },
+    "vat-calculator": {
+      "name": "حاسبة ضريبة القيمة المضافة (VAT Calculator)",
+      "description": "حاسبة لحساب ضريبة القيمة المضافة (VAT) في الدول الأوروبية باستخدام معدلات مختلفة.",
+      "seo_title": "حاسبة ضريبة القيمة المضافة مجانية عبر الإنترنت - حاسبة ضرائب الاتحاد الأوروبي",
+      "seo_description": "حاسبة ضريبة القيمة المضافة مجانًا للدول الأوروبية عبر الإنترنت؛ يمكنك إضافة ضريبة القيمة المضافة إلى المبلغ أو إزالتها، ويدعم البرنامج المعدلات القياسية والمخفضة. تشمل جميع دول الاتحاد الأوروبي.",
+      "amount": "المبلغ",
+      "calculationMode": "طريقة الحساب",
+      "addVat": "إضافة ضريبة القيمة المضافة إلى المبلغ",
+      "removeVat": "إزالة ضريبة القيمة المضافة من المبلغ",
+      "vatOnly": "حساب ضريبة القيمة المضافة فقط",
+      "useCustomRate": "استخدام معدل ضريبة القيمة المضافة المخصص",
+      "customRate": "معدل ضريبة القيمة المضافة المخصص",
+      "country": "الدولة",
+      "rateType": "نوع المعدل",
+      "standardRate": "المعدل القياسي",
+      "reducedRate": "المعدل المخفض",
+      "reducedRates": "المعدلات المخفضة",
+      "superReducedRate": "المعدل المخفض جدًا",
+      "netAmount": "المبلغ الصافي",
+      "vatAmount": "مبلغ ضريبة القيمة المضافة",
+      "grossAmount": "المبلغ الإجمالي",
+      "euVatRates": "مرجع معدلات ضريبة القيمة المضافة في الاتحاد الأوروبي"
+    },
+    "carbon-footprint-calculator": {
+      "name": "حاسبة بصمة الكربون",
+      "description": "حسب بصمة الكربون الخاصة بك الناتجة عن النقل واستهلاك الطاقة وأسلوب الحياة.",
+      "seo_title": "حاسبة بصمة الكربون المجانية - حاسبة انبعاثات ثاني أكسيد الكربون",
+      "seo_description": "حسب بصمة الكربون الخاصة بك عبر الإنترنت مجانًا. تتبع انبعاثات ثاني أكسيد الكربون الناتجة عن النقل واستهلاك الطاقة في المنزل ونمط الحياة، واحصل على نصائح شخصية لتقليلها.",
+      "monthly": "شهري",
+      "yearly": "سنوي",
+      "month": "شهر",
+      "year": "سنة",
+      "transportation": "النقل",
+      "carDistance": "مسافة السيارة",
+      "petrol": "بنزين",
+      "diesel": "ديزل",
+      "hybrid": "هجين",
+      "electric": "كهربائي",
+      "flightHours": "ساعات الطيران",
+      "shortHaul": "قصير المدى (<3 ساعات)",
+      "mediumHaul": "متوسط المدى (3-6 ساعات)",
+      "longHaul": "طويل المدى (>6 ساعات)",
+      "trainDistance": "مسافة القطار",
+      "busDistance": "مسافة الحافلة",
+      "homeEnergy": "طاقة المنزل",
+      "electricity": "الكهرباء",
+      "naturalGas": "الغاز الطبيعي",
+      "heatingOil": "زيت التدفئة",
+      "lifestyle": "نمط الحياة",
+      "dietType": "نوع النظام الغذائي",
+      "diets": {
+        "meat": "آكل لحوم بكثرة",
+        "average": "متوسط",
+        "vegetarian": "نباتي",
+        "vegan": "نباتي صرف"
+      },
+      "results": "بصمتك الكربونية",
+      "total": "المجموع",
+      "treesNeeded": "الأشجار اللازمة للتعويض",
+      "trees": "شجرة في السنة",
+      "levels": {
+        "low": "تأثير منخفض",
+        "average": "متوسط",
+        "high": "تأثير عالي",
+        "veryHigh": "تأثير عالي جداً"
+      }
+    },
+    "gdpr-consent-generator": {
+      "name": "مولد موافقات GDPR",
+      "description": "يقوم بإنشاء رسائل إشعار موافقة على استخدام الكوكيز وقوالب سياسات الخصوصية متوافقة مع لوائح GDPR.",
+      "seo_title": "مولد موافقات الكوكيز GDPR المجاني - مولد سياسات الخصوصية",
+      "seo_description": "قم بإنشاء رسائل إشعار موافقة على استخدام الكوكيز وسياسات الخصوصية متوافقة مع لوائح GDPR عبر الإنترنت مجانًا. يتيح كود HTML/CSS قابل للتخصيص لموقعك الإلكتروني. متوافق مع قوانين الخصوصية الأوروبية.",
+      "websiteName": "اسم الموقع الإلكتروني",
+      "websiteUrl": "عنوان الموقع الإلكتروني",
+      "companyName": "اسم الشركة",
+      "privacyEmail": "بريد الإلكتروني للتواصل المتعلق بالخصوصية",
+      "cookieTypes": "أنواع الكوكيز",
+      "cookies": {
+        "necessary": "ضرورية",
+        "analytics": "تحليلية",
+        "marketing": "تسويقية",
+        "preferences": "التفضيلات"
+      },
+      "position": "موقع الرسالة الإشعارية",
+      "positionTop": "أعلى",
+      "positionBottom": "أسفل",
+      "theme": "التصميم",
+      "themeLight": "فاتح",
+      "themeDark": "داكن",
+      "htmlCode": "كود HTML",
+      "cssCode": "كود CSS",
+      "privacyPolicy": "قالب سياسة الخصوصية",
+      "copy": "نسخ الكود",
+      "copied": "تم نسخ الكود!",
+      "bannerTitle": "موافقة على استخدام الكوكيز",
+      "decline": "رفض",
+      "customize": "تخصيص",
+      "acceptAll": "قبول كل الأنواع",
+      "disclaimer": "يقدم هذا الأداة قوالب للإشارة فقط. يرجى استشارة متخصص قانوني لضمان الامتثال الكامل للوائح GDPR في حالتك الخاصة."
+    },
+    "bic-swift-lookup": {
+      "name": "بحث عن أكواد BIC/SWIFT",
+      "description": "أداة للبحث عن أكواد BIC/SWIFT والتحقق من صحتها لعمليات التحويلات البنكية الدولية.",
+      "seo_title": "بحث مجاني عن أكواد BIC/SWIFT - أداة للتحقق من صحة الأكواد البنكية",
+      "seo_description": "بحث وتحقق مجاني عن أكواد BIC/SWIFT عبر الإنترنت. اعثر على معلومات البنوك من خلال هذه الأكواد. ضروري لعمليات التحويلات البنكية الدولية.",
+      "inputLabel": "أدخل رمز BIC/SWIFT",
+      "placeholder": "مثال: DEUTDEFF",
+      "formatHint": "التنسيق: 8 أو 11 حرفًا (مثل DEUTDEFF أو DEUTDEFFXXX)",
+      "lookup": "ابحث",
+      "validBic": "رمز BIC/SWIFT صحيح",
+      "bankCode": "رمز البنك",
+      "country": "الدولة",
+      "locationCode": "رمز الموقع",
+      "branchCode": "رمز الفرع",
+      "headOffice": "المقر الرئيسي للبنك",
+      "specificBranch": "الفرع المحدد",
+      "bankInformation": "معلومات البنك",
+      "bankName": "اسم البنك",
+      "city": "المدينة",
+      "branch": "الفرع",
+      "copyBic": "نسخة من رمز BIC",
+      "bicStructure": "هيكل رمز BIC/SWIFT",
+      "structure": {
+        "bank": "رمز البنك",
+        "country": "الدولة",
+        "location": "الموقع",
+        "branch": "الفرع (اختياري)"
+      },
+      "sampleCodes": "أمثلة على أكواد BIC",
+      "errors": {
+        "empty": "الرجاء إدخال رمز BIC/SWIFT",
+        "invalidFormat": "تنسيق الرمز غير صحيح. يجب أن يتكون من 8 إلى 11 حرفًا أبجديًا رقميًا",
+        "unknownCountry": "رمز الدولة غير معروف"
+      }
+    },
+    "metric-imperial-converter": {
+      "name": "محول المتري والإمبراطوري",
+      "description": "تحويل بين الوحدات المترية والإمبراطورية للطول والوزن والحجم.",
+      "seo_title": "محول المتري والإمبراطوري المجاني",
+      "seo_description": "تحويل بين الوحدات المترية والإمبراطورية مجاناً عبر الإنترنت.",
+      "categories": {
+        "length": "الطول",
+        "weight": "الوزن",
+        "volume": "الحجم",
+        "temperature": "درجة الحرارة",
+        "area": "المساحة",
+        "speed": "السرعة"
+      },
+      "from": "من",
+      "to": "إلى",
+      "swap": "تبديل",
+      "metric": "متري",
+      "imperial": "إمبراطوري",
+      "quickReference": "مرجع سريع"
+    },
+    "color-blindness-simulator": {
+      "name": "محاكي عمى الألوان",
+      "description": "يساعد في محاكاة كيفية ظهور الألوان والصور لدى الأشخاص الذين يعانون من أنواع مختلفة من عمى الألوان.",
+      "seo_title": "محاكي عمى الألوان مجاني عبر الإنترنت - أداة لتحسين القابلية للوصول",
+      "seo_description": "محاكاة عمى الألوان مجانًا عبر الإنترنت؛ اختبر كيفية ظهور الألوان والصور لدى الأشخاص الذين يعانون من عمى الألوان من نوع بروتانوبيا (Protanopia)، أو ديوتيرانوبيا (Deuteranopia)، أو تريتانوبيا (Tritanopia). أمر ضروري لتحسين تصميم المواقع الإلكترونية لتكون في متناول الجميع.",
+      "selectColor": "اختيار اللون",
+      "uploadImage": "تحميل صورة (اختياري)",
+      "colorComparison": "مقارنة الألوان",
+      "imagePreview": "معاينة الصورة",
+      "original": "الصورة الأصلية",
+      "aboutTitle": "نبذة عن عمى الألوان",
+      "aboutDescription": "يعاني حوالي 8% من الرجال و0.5% من النساء حول العالم من عمى الألوان. اختبار تصاميمك باستخدام هذا المحاكي يساعد في التأكد من أن محتواك متاح للجميع.",
+      "types": {
+        "normal": "طبيعي",
+        "protanopia": "بروتانوبيا",
+        "deuteranopia": "ديوتيرانوبيا",
+        "tritanopia": "تريتانوبيا",
+        "achromatopsia": "أكروماتوبسيا"
+      }
+    },
+    "credit-card-validator": {
+      "name": "مدقق بطاقات الائتمان",
+      "description": "يقوم بالتحقق من صحة أرقام بطاقات الائتمان باستخدام خوارزمية لوهن (Luhn) ويحدد نوع البطاقة.",
+      "seo_title": "أداة مجانية للتحقق من بطاقات الائتمان عبر الإنترنت - فحص لوهن (Luhn)",
+      "seo_description": "تحقق من أرقام بطاقات الائتمان مجانًا عبر الإنترنت. تستخدم خوارزمية لوهن للتحقق من صحة الأرقام، وتحدد أنواع البطاقات مثل فيزا (Visa) وماستركارد (Mastercard) وأميكس (Amex) وغيرها.",
+      "cardNumber": "رقم البطاقة",
+      "inputPlaceholder": "أدخل رقم البطاقة...",
+      "validate": "تحقق من الصحة",
+      "valid": "صحيح",
+      "invalid": "غير صحيح",
+      "luhnCheck": "فحص لوهن (Luhn)",
+      "passed": "نجح الفحص",
+      "failed": "فشل الفحص",
+      "digits": "الأرقام",
+      "digitsCount": "عدد الأرقام",
+      "disclaimer": "تقوم هذه الأداة فقط بالتحقق من الهيكل الرياضي لأرقام البطاقات. لا تقوم بالتحقق من ما إذا كانت البطاقة سارية المفعول أو مملوءة بالأموال. لا تدخل أبدًا أرقام بطاقات حقيقية على مواقع غير موثوقة.",
+      "supportedCards": "أنواع البطاقات المدعومة"
+    },
+    "aspect-ratio-resizer": {
+      "name": "محول نسبة العرض إلى الارتفاع (Aspect Ratio Resizer)",
+      "description": "يساعد في تغيير حجم الصور إلى نسب عرض إلى ارتفاع محددة أو إلى مقاسات مواقع التواصل الاجتماعي.",
+      "seo_title": "محول نسبة العرض إلى الارتفاع مجاني عبر الإنترنت – أداة لتغيير حجم الصور",
+      "seo_description": "قم بتغيير حجم الصور إلى أي نسبة عرض إلى ارتفاع عبر الإنترنت مجانًا. توفر أحجام محددة مسبقًا لإنستغرام، فيسبوك، يوتيوب، تويتر. يمكنك تثبيت نسبة العرض إلى الارتفاع أو تحديد مقاسات مخصصة.",
+      "uploadImage": "تحميل الصورة",
+      "originalSize": "الحجم الأصلي للصورة",
+      "width": "عرض الصورة",
+      "height": "ارتفاع الصورة",
+      "lockAspectRatio": "تثبيت نسبة العرض إلى الارتفاع",
+      "presetRatios": "نسب عرض إلى ارتفاع محددة مسبقًا",
+      "socialMediaSizes": "مقاسات مواقع التواصل الاجتماعي",
+      "outputSize": "الحجم النهائي للصورة بعد التغيير",
+      "download": "تنزيل الصورة المعدلة",
+      "preview": "عرض مسبق للصورة المعدلة"
+    },
+    "markdown-to-pdf": {
+      "name": "تحويل ملفات Markdown إلى PDF",
+      "description": "حول مستندات Markdown إلى PDF مع تنسيق قابل للتخصيص.",
+      "seo_title": "محول Markdown إلى PDF مجاني عبر الإنترنت",
+      "seo_description": "حول Markdown إلى PDF مجاناً عبر الإنترنت. دعم العناوين، القوائم، الجداول، كتل الكود. حجم خط وصفحة قابل للتخصيص. لا حاجة للرفع.",
+      "documentTitle": "عنوان المستند",
+      "fontSize": "حجم الخط",
+      "pageSize": "حجم الصفحة",
+      "markdownInput": "محتوى Markdown المدخل",
+      "inputPlaceholder": "أدخل محتوى Markdown الخاص بك هنا...",
+      "preview": "معاينة",
+      "generatePdf": "إنشاء ملف PDF",
+      "clear": "مسح",
+      "supportedSyntax": "الصيغة المدعومة للغة Markdown",
+      "headings": "العناوين (# ## ###)",
+      "boldItalic": "الخط العريض والخط المائل",
+      "lists": "القوائم (- أو 1.)",
+      "codeBlocks": "كتل الكود",
+      "tables": "الجداول",
+      "blockquotes": "الاقتباسات المنسوقة",
+      "horizontalRules": "الخطوط الأفقية",
+      "inlineCode": "الكود المضمن في النص"
+    },
+    "email-validator": {
+      "name": "مدقق البريد الإلكتروني",
+      "description": "تحقق من صحة عناوين البريد الإلكتروني واكتشف الأخطاء الإملائية والنطاقات المؤقتة.",
+      "seo_title": "مدقق البريد الإلكتروني المجاني - التحقق من التنسيق",
+      "seo_description": "تحقق من عناوين البريد الإلكتروني مجانًا عبر الإنترنت. تحقق من التنسيق واكتشف الأخطاء.",
+      "inputLabel": "Enter Email Addresses",
+      "inputPlaceholder": "أدخل بريدًا إلكترونيًا واحدًا في كل سطر...",
+      "validate": "تحقق",
+      "valid": "Valid",
+      "invalid": "غير صالح",
+      "localPart": "الجزء المحلي",
+      "domain": "النطاق",
+      "tld": "TLD",
+      "freeProvider": "مزود مجاني",
+      "disposable": "مؤقت",
+      "didYouMean": "هل تقصد"
+    },
+    "phone-formatter": {
+      "name": "منسق رقم الهاتف",
+      "description": "تنسيق أرقام الهواتف وفقًا للمعايير الدولية.",
+      "seo_title": "منسق أرقام الهاتف المجاني - التنسيق الدولي",
+      "seo_description": "تنسيق أرقام الهواتف وفقًا للمعايير الدولية مجانًا. دعم أكثر من 14 دولة.",
+      "country": "الدولة",
+      "phoneNumber": "رقم الهاتف",
+      "inputPlaceholder": "أدخل رقم الهاتف...",
+      "includeDialCode": "تضمين رمز الدولة",
+      "format": "تنسيق",
+      "formatPattern": "نمط التنسيق",
+      "example": "مثال",
+      "result": "النتيجة",
+      "copy": "Copy",
+      "allFormats": "جميع التنسيقات"
+    },
+    "speech-timer": {
+      "name": "مدة الحديث",
+      "description": "أدخل وقتك في الحديث وأحسب عدد الكلمات لتقديمك",
+      "seo_title": "مدة الحديث المجانية أونلاين - مقياس الحديث مع تقدير عدد الكلمات",
+      "seo_description": "مقياس الحديث المجاني أونلاين لمقدمات العروض. تتبع وقت الحديث، تقدير عدد الكلمات، وتمرين الحديث مع أداتنا سهلة الاستخدام",
+      "duration": "المدة",
+      "minutes": "الدقائق",
+      "wordsPerMinute": "كلمات في الدقيقة",
+      "estimatedWords": "تقدير الكلمات",
+      "start": "البداية",
+      "pause": "الإيقاف",
+      "reset": "إعادة الإعداد",
+      "timeRemaining": "الوقت المتبقي",
+      "speechText": "نص الحديث (اختياري)",
+      "speechPlaceholder": "ألصق حديثك هنا لحساب عدد الكلمات...",
+      "wordCount": "عدد الكلمات",
+      "speakingPace": "سرعة الحديث",
+      "slow": "بطيء",
+      "normal": "معتدل",
+      "fast": "سريع",
+      "timeUp": "انتهت المدة!",
+      "presets": "إعدادات مسبقة",
+      "targetDuration": "المدة المستهدفة",
+      "min": "دقيقة",
+      "words": "كلمات",
+      "remaining": "المتبقي"
+    },
+    "habit-tracker": {
+      "name": "متابع العادات",
+      "description": "تتبع عاداتك اليومية وأبنِ سلسلة من العادات",
+      "seo_title": "أداة متابعة العادات مجانية عبر الإنترنت - أداة متابعة العادات اليومية",
+      "seo_description": "أداة متابعة العادات مجانية عبر الإنترنت لإنشاء وإبقاء العادات اليومية. تتبع السلسلة، مراقبة التقدم، وتحقيق أهدافك بأداة متابعة العادات البسيطة الخاصة بنا.",
+      "addHabit": "أضف عادة",
+      "habitName": "اسم العادة",
+      "habitPlaceholder": "أدخل اسم العادة...",
+      "selectIcon": "اختر رمز",
+      "add": "أضف",
+      "cancel": "إلغاء",
+      "streak": "السلسلة",
+      "days": "اليوم",
+      "today": "اليوم",
+      "completed": "تم إكمالها",
+      "noHabits": "لا توجد عادات بعد. أضف عادتك الأولى!",
+      "deleteConfirm": "هل تريد حذف هذه العادة?",
+      "completedToday": "تم إكمالها اليوم",
+      "weeklyProgress": "تقدم الأسبوع",
+      "habit": "عادة",
+      "tip": "نصيحة: انقر على يوم لتحديده كمكتمل. ابنِ سلسلتك بإكمال العادات يومياً!"
+    },
+    "flip-text": {
+      "name": "مقلب النصوص",
+      "description": "قم بقلب النصوص رأسًا على عقب، أو مرآة، أو عكسًا",
+      "seo_title": "مولد نصوص مقلوبة مجاني عبر الإنترنت - نص مقلوب ونص مرآة",
+      "seo_description": "مولد نصوص مقلوبة عبر الإنترنت مجاني. أنشئ نصوص مقلوبة رأسًا على عقب، نص مرآة، ونص عكس، وأكثر من ذلك. مثالي للمنشورات الاجتماعية، أسماء المستخدمين، ونصوص المرح.",
+      "inputLabel": "أدخل النص",
+      "inputPlaceholder": "أدخل نصك هنا...",
+      "upsideDown": "مقلوب رأسًا على عقب",
+      "mirror": "مرآة",
+      "reversed": "عكس",
+      "upsideDownReversed": "مقلوب رأسًا على عقب + عكس",
+      "copy": "نسخ",
+      "copied": "نسخ!",
+      "mirrored": "معكوس",
+      "outputPlaceholder": "ستظهر النتيجة هنا...",
+      "aboutTitle": "حول قلب النص",
+      "aboutDescription": "يستخدم قلب النص أحرف يونيكود خاصة لإنشاء تأثيرات نص مقلوب ومعكوس. تعمل هذه الأحرف على معظم المواقع ومنصات التواصل الاجتماعي."
+    },
+    "strikethrough-text": {
+      "name": "مزيل النص",
+      "description": "إنشاء نص ممحى ومدمج ومرسوم",
+      "seo_title": "مزيل النص المجاني عبر الإنترنت - أداة تعديل النص",
+      "seo_description": "مزيل النص المجاني عبر الإنترنت. أنشئ نصوص محذوفة، مدمجة، ومرسومة لوسائل التواصل الاجتماعي وأدوات الرسائل.",
+      "inputLabel": "أدخل النص",
+      "inputPlaceholder": "أدخل نصك هنا...",
+      "strikethrough": "النص الممحى",
+      "underline": "النص المدمج",
+      "crosshatch": "النقش",
+      "slash": "الشقوق",
+      "copy": "نسخ",
+      "copied": "نسخ!",
+      "outputPlaceholder": "ستظهر النتيجة هنا...",
+      "usageTitle": "نصائح الاستخدام",
+      "usage1": "يعمل على معظم منصات التواصل الاجتماعي",
+      "usage2": "انسخ والصق النص المنسق في أي مكان",
+      "usage3": "قد لا تعرض بعض التطبيقات جميع الأنماط بشكل صحيح"
+    },
+    "small-text-generator": {
+      "name": "مولد النصوص الصغيرة",
+      "description": "أنشئ نصوص صغيرة، تعليقية، وأحرف صغيرة",
+      "seo_title": "مولد النصوص الصغيرة مجاني أونلاين - نصوص صغيرة وتعليقية",
+      "seo_description": "مولد النصوص الصغيرة أونلاين مجاني. أنشئ نصوص صغيرة، تعليقية، وأحرف صغيرة لصفحاتك الشخصية على وسائل التواصل الاجتماعي، التعليقات، ومحتوى إبداعي.",
+      "inputLabel": "أدخل النص",
+      "inputPlaceholder": "أدخل نصك هنا...",
+      "superscript": "التعليقية",
+      "subscript": "التعليقية",
+      "smallCaps": "الأحرف الصغيرة",
+      "copy": "نسخ",
+      "copied": "نسخ!",
+      "outputPlaceholder": "ستظهر النتيجة هنا...",
+      "usageTitle": "نصائح الاستخدام",
+      "usageDescription": "يعمل النص الصغير على معظم منصات التواصل الاجتماعي. قد لا تحتوي بعض الأحرف على إصدارات صغيرة وستظهر كنص عادي."
+    },
+    "binary-to-text": {
+      "name": "ثنائي إلى نص",
+      "description": "تحويل بين الثنائي والنص",
+      "seo_title": "محول ثنائي إلى نص مجاني عبر الإنترنت",
+      "seo_description": "محول ثنائي إلى نص مجاني عبر الإنترنت. ترجم الكود الثنائي إلى نص مقروء وحول النص إلى ثنائي.",
+      "binaryToText": "ثنائي → نص",
+      "textToBinary": "نص → ثنائي",
+      "binaryInput": "إدخال ثنائي",
+      "textInput": "إدخال نص",
+      "binaryOutput": "مخرج ثنائي",
+      "textOutput": "مخرج نص",
+      "binaryPlaceholder": "أدخل الثنائي (مثل 01001000 01101001)...",
+      "textPlaceholder": "أدخل النص للتحويل...",
+      "outputPlaceholder": "ستظهر النتيجة هنا...",
+      "convert": "تحويل",
+      "swap": "تبديل",
+      "copy": "نسخ",
+      "copied": "تم النسخ!",
+      "invalidBinary": "إدخال ثنائي غير صالح",
+      "exampleTitle": "مثال",
+      "text": "نص",
+      "binary": "ثنائي"
+    },
+    "roman-numeral-converter": {
+      "name": "محويف الرموز الرومانية",
+      "description": "تحويل بين الرموز الرومانية والأرقام العربية",
+      "seo_title": "محويف الرموز الرومانية مجاني أونلاين - حاسبة الرموز الرومانية",
+      "seo_description": "محويف الرموز الرومانية مجاني أونلاين. تحويل الرموز الرومانية إلى الأرقام العربية والعكس صحيح. حاسبة وتحويل الرموز الرومانية بسهولة.",
+      "arabicToRoman": "عربي → روماني",
+      "romanToArabic": "روماني → عربي",
+      "arabicNumber": "رقم عربي",
+      "romanNumeral": "رمز روماني",
+      "arabicPlaceholder": "أدخل الرقم (1-3999)...",
+      "romanPlaceholder": "أدخل الرمز الروماني...",
+      "result": "النتيجة",
+      "convert": "تحويل",
+      "copy": "نسخ",
+      "copied": "نسخت!",
+      "invalidInput": "إدخال غير صحيح",
+      "referenceTitle": "جدول الاستشارة"
+    },
+    "fraction-calculator": {
+      "name": "حاسبة الكسور",
+      "description": "احسب الكسور بالجمع والطرح والضرب والقسمة",
+      "seo_title": "حاسبة كسور مجانية عبر الإنترنت",
+      "seo_description": "حاسبة كسور مجانية عبر الإنترنت. اجمع واطرح واضرب واقسم الكسور بسهولة. احصل على نتائج مبسطة مع المكافئات العشرية.",
+      "fraction1": "الكسر 1",
+      "fraction2": "الكسر 2",
+      "result": "النتيجة",
+      "calculate": "حساب",
+      "copy": "نسخ",
+      "copied": "تم النسخ!",
+      "addition": "جمع",
+      "subtraction": "طرح",
+      "multiplication": "ضرب",
+      "division": "قسمة"
+    },
+    "percentage-change-calculator": {
+      "name": "حاسبة التغير المئوي",
+      "description": "احسب الزيادة أو النقصان المئوي بين القيم",
+      "seo_title": "حاسبة تغير مئوي مجانية عبر الإنترنت",
+      "seo_description": "حاسبة تغير مئوي مجانية عبر الإنترنت. احسب الزيادة أو النقصان المئوي بين قيمتين.",
+      "oldValue": "القيمة الأصلية",
+      "newValue": "القيمة الجديدة",
+      "oldValuePlaceholder": "أدخل القيمة الأصلية...",
+      "newValuePlaceholder": "أدخل القيمة الجديدة...",
+      "calculate": "حساب",
+      "swap": "تبديل",
+      "copy": "نسخ",
+      "copied": "تم النسخ!",
+      "percentageChange": "التغير المئوي",
+      "increase": "زيادة",
+      "decrease": "نقصان",
+      "difference": "الفرق",
+      "formula": "الصيغة",
+      "formulaText": "((جديد - قديم) / |قديم|) × 100%",
+      "example1Title": "سعر السهم",
+      "example1": "تتبع تغيرات الاستثمار",
+      "example2Title": "الراتب",
+      "example2": "احسب نسبة الزيادة",
+      "example3Title": "المبيعات",
+      "example3": "قس معدل النمو"
+    },
+    "random-color-generator": {
+      "name": "مولد ألوان عشوائية",
+      "description": "إنشاء ألوان عشوائية بقيم HEX و RGB و HSL",
+      "seo_title": "مولد ألوان عشوائية مجاني عبر الإنترنت",
+      "seo_description": "مولد ألوان عشوائية مجاني عبر الإنترنت. أنشئ ألوانًا عشوائية بقيم HEX و RGB و HSL. أنشئ لوحات ألوان لمشاريع التصميم.",
+      "count": "الألوان",
+      "format": "التنسيق",
+      "generate": "إنشاء",
+      "copy": "نسخ",
+      "copied": "تم النسخ!",
+      "copyAll": "نسخ الكل",
+      "clickToCopy": "انقر للنسخ",
+      "palettePreview": "معاينة اللوحة"
+    },
+    "anagram-solver": {
+      "name": "مستطيع الأناجرم",
+      "description": "ابحث عن جميع الكلمات الممكنة من حروف مزجت",
+      "seo_title": "مستطيع الأناجرم مجاني أونلاين - أداة بحث عن الكلمات",
+      "seo_description": "مستطيع الأناجرم مجاني أونلاين. ابحث عن جميع الكلمات الممكنة من حروف مزجت. مثالي للعبة الكلمات مثل Scrabble و الألغاز الصليبية.",
+      "inputLabel": "ادخل الحروف",
+      "inputPlaceholder": "أدخل الحروف لتشكيلها...",
+      "results": "النتائج",
+      "noResults": "لم يتم العثور على كلمات. جرب حروف مختلفة.",
+      "copy": "تكبس",
+      "copied": "تم التكبس!",
+      "tipTitle": "نصائح",
+      "tipDescription": "ادخل من 2 إلى 15 حرفًا للعثور على جميع الكلمات الإنجليزية الممكنة. يتم ترتيب النتائج بناءً على الطول."
+    },
+    "word-unscrambler": {
+      "name": "مفكك الكلمات",
+      "description": "أفكك الأحرف لتحديد جميع الكلمات الممكنة",
+      "seo_title": "مفكك الكلمات المجاني عبر الإنترنت - أداة تحويل الأحرف",
+      "seo_description": "مفكك الكلمات عبر الإنترنت مجاني. اكتشف جميع الكلمات التي يمكن إنشاؤها من أحرفك. مثالي للعاب السكرابل، ألعاب الكلمات، وغزوات الكلمات.",
+      "inputLabel": "ادخل الأحرف الممزوجة",
+      "inputPlaceholder": "أدخل الأحرف هنا...",
+      "found": "تم العثور على",
+      "words": "كلمات",
+      "letters": "حرف",
+      "copyAll": "نسخ الكل",
+      "copied": "نسخت!",
+      "noResults": "لم يتم العثور على كلمات"
+    },
+    "text-to-pdf": {
+      "name": "تحويل النص إلى PDF",
+      "description": "تحويل النص العادي إلى مستندات PDF",
+      "seo_title": "محول نص إلى PDF مجاني عبر الإنترنت",
+      "seo_description": "محول نص إلى PDF مجاني عبر الإنترنت. أنشئ مستندات PDF احترافية من النص العادي. خصص الخطوط والأحجام وتخطيط الصفحة.",
+      "title": "العنوان",
+      "optional": "اختياري",
+      "titlePlaceholder": "عنوان المستند...",
+      "fontSize": "حجم الخط",
+      "font": "الخط",
+      "pageSize": "حجم الصفحة",
+      "content": "المحتوى",
+      "contentPlaceholder": "أدخل نصك هنا...",
+      "characters": "حرف",
+      "generating": "جاري الإنشاء...",
+      "downloadPdf": "تنزيل PDF",
+      "preview": "معاينة",
+      "previewPlaceholder": "سيظهر نصك هنا..."
+    },
+    "unit-price-calculator": {
+      "name": "حاسبة سعر الوحدة",
+      "description": "قارن أسعار الوحدة للعثور على أفضل قيمة",
+      "seo_title": "حاسبة سعر الوحدة مجانية عبر الإنترنت",
+      "seo_description": "حاسبة سعر الوحدة مجانية عبر الإنترنت. قارن أسعار الوحدة للعثور على أفضل صفقة. مثالية للتسوق الذكي.",
+      "item": "العنصر",
+      "productName": "اسم المنتج",
+      "namePlaceholder": "مثال: العلامة التجارية أ",
+      "price": "السعر",
+      "quantity": "الكمية",
+      "unitPrice": "سعر الوحدة",
+      "addItem": "إضافة عنصر",
+      "bestValue": "أفضل قيمة",
+      "bestValueMessage": "العنصر المميز يقدم أفضل قيمة لكل وحدة!",
+      "tipTitle": "نصيحة للتسوق",
+      "tipDescription": "قارن دائمًا أسعار الوحدة عند التسوق. العبوات الأكبر ليست دائمًا أرخص لكل وحدة!"
+    },
+    "bionic-reading-converter": {
+      "name": "محول القراءة البيونية",
+      "description": "تحويل النص إلى تنسيق القراءة البيونية للقراءة الأسرع",
+      "seo_title": "محول القراءة البيونية مجاني عبر الإنترنت",
+      "seo_description": "محول القراءة البيونية مجاني عبر الإنترنت. حول النص بتغميق بدايات الكلمات. اقرأ أسرع وحسن التركيز.",
+      "inputLabel": "أدخل النص",
+      "inputPlaceholder": "الصق نصك هنا للتحويل...",
+      "fixationStrength": "قوة التثبيت",
+      "light": "خفيف",
+      "medium": "متوسط",
+      "strong": "قوي",
+      "preview": "معاينة",
+      "previewPlaceholder": "سيظهر النص المحول هنا...",
+      "copyHtml": "نسخ HTML",
+      "copied": "تم النسخ!",
+      "whatIsBionic": "ما هي القراءة البيونية؟",
+      "bionicDescription": "القراءة البيونية هي طريقة تبرز الحروف الأولى من الكلمات لإنشاء نقاط تثبيت.",
+      "benefits": "الفوائد",
+      "benefit1": "اقرأ أسرع بنسبة تصل إلى 50%",
+      "benefit2": "تركيز واحتفاظ أفضل",
+      "benefit3": "تقليل إجهاد العين",
+      "htmlOutput": "مخرجات HTML",
+      "noOutput": "لا يوجد مخرجات بعد"
+    },
+    "palindrome-checker": {
+      "name": "فاحص المتناظرات",
+      "description": "تحقق مما إذا كان النص يُقرأ بنفس الطريقة للأمام والخلف",
+      "seo_title": "فاحص المتناظرات مجاني عبر الإنترنت",
+      "seo_description": "فاحص المتناظرات مجاني عبر الإنترنت. اختبر ما إذا كانت الكلمات أو العبارات أو الجمل تُقرأ بنفس الطريقة للأمام والخلف.",
+      "inputLabel": "أدخل النص",
+      "inputPlaceholder": "اكتب كلمة أو عبارة...",
+      "ignoreCase": "تجاهل حالة الأحرف",
+      "ignoreSpaces": "تجاهل المسافات",
+      "ignorePunctuation": "تجاهل علامات الترقيم",
+      "isPalindrome": "إنها متناظرة!",
+      "notPalindrome": "ليست متناظرة",
+      "processedText": "النص المعالج",
+      "forward": "للأمام",
+      "backward": "للخلف",
+      "examples": "جرب هذه الأمثلة"
+    },
+    "character-map": {
+      "name": "خريطة الأحرف",
+      "description": "تصفح ونسخ الأحرف الخاصة والرموز",
+      "seo_title": "خريطة الأحرف مجانية عبر الإنترنت - الرموز ويونيكود",
+      "seo_description": "خريطة الأحرف مجانية عبر الإنترنت. تصفح وانسخ الأحرف الخاصة والرموز والإيموجي وأحرف يونيكود.",
+      "searchPlaceholder": "البحث عن أحرف...",
+      "arrows": "الأسهم",
+      "math": "الرياضيات",
+      "currency": "العملة",
+      "punctuation": "علامات الترقيم",
+      "shapes": "الأشكال",
+      "emoji": "إيموجي",
+      "hands": "الأيدي",
+      "hearts": "القلوب",
+      "weather": "الطقس",
+      "music": "الموسيقى",
+      "tech": "التقنية",
+      "recentlyUsed": "المستخدمة مؤخرًا",
+      "searchResults": "نتائج البحث",
+      "tip": "انقر على أي حرف لنسخه"
+    },
+    "text-repeater": {
+      "name": "مكرر النص",
+      "description": "كرر النص عدة مرات مع فواصل مخصصة",
+      "seo_title": "مكرر النص مجاني عبر الإنترنت",
+      "seo_description": "مكرر النص مجاني عبر الإنترنت. كرر أي نص عدة مرات مع فواصل مخصصة. مثالي للاختبار والأنماط.",
+      "inputLabel": "النص للتكرار",
+      "inputPlaceholder": "أدخل النص هنا...",
+      "repeatCount": "عدد التكرارات",
+      "separator": "الفاصل",
+      "newline": "سطر جديد",
+      "space": "مسافة",
+      "comma": "فاصلة",
+      "semicolon": "فاصلة منقوطة",
+      "tab": "تبويب",
+      "none": "لا شيء",
+      "addNumbering": "إضافة ترقيم",
+      "result": "النتيجة",
+      "copy": "نسخ",
+      "copied": "تم النسخ!",
+      "download": "تنزيل",
+      "resultPlaceholder": "ستظهر النتيجة هنا...",
+      "characters": "حرف",
+      "lines": "سطر"
+    },
+    "fake-name-generator": {
+      "name": "مولد الأسماء الوهمية",
+      "description": "إنشاء أسماء عشوائية واقعية من بلدان مختلفة",
+      "seo_title": "مولد الأسماء الوهمية مجاني عبر الإنترنت",
+      "seo_description": "مولد الأسماء الوهمية مجاني عبر الإنترنت. أنشئ أسماء عشوائية واقعية من بلدان وثقافات مختلفة.",
+      "country": "البلد/الثقافة",
+      "english": "الإنجليزية (أمريكا/بريطانيا)",
+      "chinese": "الصينية",
+      "japanese": "اليابانية",
+      "korean": "الكورية",
+      "german": "الألمانية",
+      "spanish": "الإسبانية",
+      "gender": "الجنس",
+      "random": "عشوائي",
+      "male": "ذكر",
+      "female": "أنثى",
+      "count": "العدد",
+      "generate": "إنشاء أسماء",
+      "generatedNames": "الأسماء المُنشأة",
+      "copyAll": "نسخ الكل",
+      "copied": "تم النسخ!",
+      "disclaimer": "إخلاء المسؤولية",
+      "disclaimerText": "هذه الأسماء مُنشأة عشوائيًا وأي تشابه مع أشخاص حقيقيين هو مصادفة."
+    },
+    "invisible-character-generator": {
+      "name": "مولد الأحرف غير المرئية",
+      "description": "إنشاء واكتشاف أحرف يونيكود غير المرئية",
+      "seo_title": "مولد الأحرف غير المرئية مجاني عبر الإنترنت",
+      "seo_description": "مولد الأحرف غير المرئية مجاني عبر الإنترنت. أنشئ مسافات بعرض صفري وأحرف يونيكود غير مرئية أخرى.",
+      "selectCharacter": "اختر نوع الحرف",
+      "repeatCount": "عدد التكرارات",
+      "characters": "حرف",
+      "copy": "نسخ",
+      "copied": "تم النسخ!",
+      "allCharacters": "جميع الأحرف غير المرئية",
+      "detectTitle": "اكتشاف الأحرف غير المرئية",
+      "detectPlaceholder": "الصق النص هنا لاكتشاف الأحرف غير المرئية...",
+      "found": "تم العثور على",
+      "noInvisibleFound": "لم يتم اكتشاف أحرف غير مرئية",
+      "useCases": "حالات الاستخدام الشائعة",
+      "useCase1": "إنشاء منشورات فارغة على وسائل التواصل الاجتماعي",
+      "useCase2": "إضافة علامات مائية نصية غير مرئية",
+      "useCase3": "اختبار أنظمة معالجة النص"
     }
   }
 }

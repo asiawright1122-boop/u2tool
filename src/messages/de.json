@@ -109,7 +109,8 @@
     "moreResults": "weitere Ergebnisse",
     "relatedTools": "Ähnliche Tools",
     "more": "Mehr",
-    "categories": "Kategorien"
+    "categories": "Kategorien",
+    "launches": "Einführungen"
   },
   "home": {
     "hero": {
@@ -1712,7 +1713,7 @@
       "inputPlaceholder": "Hier den Text eingeben..."
     },
     "markdown-preview": {
-      "name": "Markdown Preview",
+      "name": "Markdown-Vorschau",
       "description": "Schreiben Sie Markdown und sehen Sie den lebenden Vorschau. Exportieren Sie in HTML.",
       "seo_title": "Kostenlose Markdown-Editor & Vorschau Online",
       "seo_description": "Schreiben und Vorschau von Markdown online für kostenlos. Live-Vorschau mit Syntaxhervorhebung und HTML-Export. Perfekt für Dokumentation, README-Dateien und Blog-Beiträge.",
@@ -1733,7 +1734,7 @@
     "lorem-ipsum": {
       "name": "Lorem Ipsum Generator",
       "description": "Generiere Platzhaltertext für deine Designs und Mockups.",
-      "seo_title": "Free Lorem Ipsum Generator Online",
+      "seo_title": "Kostenloser Lorem Ipsum Generator Online",
       "seo_description": "Generiere Lorem Ipsum Platzhaltertext online für kostenlos. Erstelle Absätze, Sätze oder Wörter für Mockups und Designs. Perfekt für Webdesigner und Entwickler.",
       "detailed_description": "Der Lorem Ipsum Generator ist eine praktische Online-Tool, das dir dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Lorem Ipsum Generator kannst du verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass du schnell loslegen und effizient arbeiten kannst. Ob du Entwickler, Designer oder ein allgemeiner Nutzer bist, der Lorem Ipsum Generator kann dir helfen, deinen Arbeitsablauf zu verbessern. Alle Verarbeitung erfolgt lokal in deinem Browser, was deine Datensicherheit gewährleistet und sicherstellt, dass deine Daten nicht auf irgendeinem Server hochgeladen werden. Nutze den Lorem Ipsum Generator sofort, um schnell, sicher und kostenlos Online-Tools zu nutzen.",
       "usage_steps": [
@@ -1769,7 +1770,7 @@
     "jwt-decoder": {
       "name": "JWT Decoder",
       "description": "Decode und überprüfen Sie JWT Tokens. Header, Payload und Signature anzeigen.",
-      "seo_title": "Free JWT Decoder Online",
+      "seo_title": "Kostenloser JWT Decoder Online",
       "seo_description": "Decode und inspecten Sie JWT (JSON Web Tokens) online für kostenlos. Header, Payload und Signature anzeigen ohne Überprüfung. Essentiell für die Authentifizierung.",
       "enterToken": "Bitte geben Sie einen JWT Token ein",
       "invalidFormat": "Ungültiger JWT-Format",
@@ -1800,7 +1801,7 @@
     "diff-checker": {
       "name": "Diff Checker",
       "description": "Vergleiche zwei Texte und betone die Unterschiede zwischen ihnen.",
-      "seo_title": "Free Text Diff Checker Online",
+      "seo_title": "Kostenloser Text-Diff-Checker Online",
       "seo_description": "Vergleiche zwei Texte online für kostenlos. Beton added, removed und changed Inhalte mit einem Seitenvergleich. Wichtig für Code-Review und Dokument-Vergleich.",
       "detailed_description": "Diff Checker ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Diff Checker können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, kann Diff Checker Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie sofort Diff Checker, um schnell, sicher und kostenlos Online-Tools zu nutzen.",
       "usage_steps": [
@@ -1916,7 +1917,7 @@
     "text-to-slug": {
       "name": "Text zu Slug",
       "description": "Konvertiere Text in einen URL-freundlichen Slug-Format.",
-      "seo_title": "Free Text to Slug Converter Online",
+      "seo_title": "Kostenloser Text zu Slug Konverter Online",
       "seo_description": "Konvertiere Text in ein URL-freundliches Slug-Format online für kostenlos. Entferne besondere Zeichen, verwalte Unicode und erstelle SEO-freundliche URLs. Ideal für Webentwicklung.",
       "detailed_description": "Text zu Slug ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Text zu Slug können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann Text zu Slug Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitung wird lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie Text zu Slug sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu erleben.",
       "usage_steps": [
@@ -1954,7 +1955,7 @@
     "json-path-tester": {
       "name": "JSONPath Tester",
       "description": "Test und evaluieren Sie JSONPath-Ausdrücke an Ihren JSON-Daten.",
-      "seo_title": "Free JSONPath Tester Online",
+      "seo_title": "Kostenloser JSONPath Tester Online",
       "seo_description": "Testen und Debuggen Sie JSONPath-Ausdrücke online für kostenlos. Suchen Sie nach JSON-Daten mit realzeitigen Ergebnissen und Syntaxhervorhebung. Ein Muss für API-Entwicklung.",
       "jsonData": "JSON-Daten",
       "jsonPlaceholder": "{\"name\": \"John\", \"users\": [{\"name\": \"Alice\"}, {\"name\": \"Bob\"}]}",
@@ -2039,7 +2040,7 @@
       "result": "Ergebnis"
     },
     "gradient-generator": {
-      "name": "Gradient Generator",
+      "name": "Farbverlauf-Generator",
       "description": "Erstelle visuell CSS-Gradienten mit linear und radialen Optionen.",
       "seo_title": "Kostenloser CSS-Gradient-Generator Online",
       "seo_description": "Erstelle CSS-Gradienten online für kostenlos. Generiere linear und radialen Gradienten mit CSS und Tailwind-Code. Visualisierter Editor mit Farbwaage und Vorlagen.",
@@ -2077,7 +2078,7 @@
     "code-minifier": {
       "name": "Code Minifier",
       "description": "Minify HTML, CSS, JavaScript Code, um die Dateigröße zu reduzieren.",
-      "seo_title": "Free Code Minifier Online",
+      "seo_title": "Kostenloser Code Minifier Online",
       "seo_description": "Minify HTML, CSS und JavaScript Code online für kostenlos. Reduzieren Sie die Dateigröße und verbessern Sie die Seitenladegeschwindigkeit. Ein Muss für die Optimierung der Webperformance und die Bereitstellung.",
       "codeType": "Code-Typ",
       "placeholder": "Geben Sie den {type} Code ein, um zu minimieren...",
@@ -2106,7 +2107,7 @@
     "sql-formatter": {
       "name": "SQL Formatter",
       "description": "Format und verfeinern Sie SQL-Anfragen für bessere Lesbarkeit.",
-      "seo_title": "Free SQL Formatter Online",
+      "seo_title": "Kostenloser SQL Formatierer Online",
       "seo_description": "Formatieren und verfeinern Sie SQL-Anfragen online kostenlos. Unterstützung für mehrere SQL-Dialekte mit Syntaxhervorhebung und Einrückungen. Wichtig für die Datenbankentwicklung.",
       "detailed_description": "Der SQL Formatter ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem SQL Formatter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Benutzer sind, kann der SQL Formatter Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitung erfolgt lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und Ihre Daten werden nicht auf irgendeinem Server hochgeladen. Nutzen Sie den SQL Formatter sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
       "usage_steps": [
@@ -2124,8 +2125,8 @@
     "pinyin-converter": {
       "name": "Pinyin-Converter",
       "description": "Konvertiere chinesische Zeichen in Pinyin mit oder ohne Tönen.",
-      "seo_title": "Kostenloser Chinesisch zu Pinyin-Converter",
-      "seo_description": "Konvertiere chinesische Zeichen in Pinyin online für kostenlos. Unterstützung von Tönemarken und gezählten Tönen. Ideal für das Chinesisch-Lernen und Ausspracheführer.",
+      "seo_title": "Kostenloser Chinesisch zu Pinyin Konverter",
+      "seo_description": "Konvertieren Sie chinesische Zeichen in Pinyin kostenlos online. Unterstützt Tonzeichen und nummerierte Töne. Unverzichtbar für Chinesisch-Lernen und Ausspracheführer.",
       "detailed_description": "Das Pinyin-Converter ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Pinyin-Converter können Sie verschiedene Daten ohne die Installation von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Nutzer, das Pinyin-Converter kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitung wird in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie das Pinyin-Converter sofort, um schnell, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
       "usage_steps": [
         "Öffnen Sie die Seite des Pinyin-Converters",
@@ -2178,7 +2179,7 @@
     "css-beautifier": {
       "name": "CSS Beautifier",
       "description": "Format und beauftragen Sie CSS-Code mit Minifizierung und Beauftragenoptionen.",
-      "seo_title": "Free CSS Beautifier Online",
+      "seo_title": "Kostenloser CSS Beautifier Online",
       "seo_description": "Formatieren, beauftragen und minifizieren Sie CSS-Code online kostenlos. Syntaxhervorhebung mit anpassbaren Einrückungen. Perfekt für Webentwickler und Front-End-Optimierung.",
       "detailed_description": "Der CSS-Beauftrager ist eine praktische Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CSS-Beauftrager können Sie verschiedene Daten ohne die Installation von Software oder Plugins verarbeiten. Dieses Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der CSS-Beauftrager Ihnen helfen, Ihre Arbeitswirkungsrate zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den CSS-Beauftrager sofort, um schnelle, sichere und kostenlose Online-Tooldienstleistungen zu erleben.",
       "usage_steps": [
@@ -2196,7 +2197,7 @@
     "js-beautifier": {
       "name": "JavaScript Beautifier",
       "description": "Format und formatieren Sie JavaScript-Code mit Minify- und Beautify-Optionen.",
-      "seo_title": "Free JavaScript Beautifier Online",
+      "seo_title": "Kostenloser JavaScript Beautifier Online",
       "seo_description": "Formatieren und formatieren Sie Ihren JavaScript-Code online kostenlos. Syntaxhervorhebung mit anpassbaren Einrückungen. Perfekt für Webentwickler und Optimierung.",
       "detailed_description": "Der JavaScript Beautifier ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem JavaScript Beautifier können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Benutzer sind, kann der JavaScript Beautifier Ihnen helfen, Ihre Arbeitswirkungsrate zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den JavaScript Beautifier sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu profitieren.",
       "usage_steps": [
@@ -2232,7 +2233,7 @@
     },
     "ip-lookup": {
       "name": "IP Lookup",
-      "description": "Look up IP address location, ISP, and other information.",
+      "description": "Suchen Sie IP-Adress-Standort, ISP und andere Informationen.",
       "seo_title": "Kostenlose IP-Adress-Suche Online",
       "seo_description": "Suchen Sie die Geolocation von IP-Adressen online für kostenlos. Erhalten Sie Informationen zu Land, Stadt, ISP, Zeitzone und Koordinaten. Perfekt für Netzwerkdiagnose und Sicherheitsanalyse.",
       "detailed_description": "IP Lookup ist eine praktische Online-Tools, die Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit IP Lookup können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, IP Lookup kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitung wird lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie IP Lookup sofort, um schnelle, sichere und kostenlose Online-Toolservices zu erleben.",
@@ -2287,7 +2288,7 @@
     "text-reverser": {
       "name": "Text Reverser",
       "description": "Umkehren des Textes, der Zeichen, Wörter oder Zeilen in Texten.",
-      "seo_title": "Free Text Reverser Online",
+      "seo_title": "Kostenloser Text-Umkehrer Online",
       "seo_description": "Umkehren von Textzeichen, Wörtern oder Zeilen online für kostenlos. Mehrere Umkehrmodi mit sofortigem Vorschau. Ideal für Rätsel, Codierung und Textmanipulation.",
       "detailed_description": "Der Text Reverser ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit Text Reverser können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der Text Reverser kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und den Upload auf irgendein Server vermeidet. Nutzen Sie den Text Reverser sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
       "usage_steps": [
@@ -2413,7 +2414,7 @@
     "json-sorter": {
       "name": "JSON Sorter",
       "description": "Sortieren Sie JSON-Objekte nach Schlüsselnamen.",
-      "seo_title": "Free JSON Sorter Online",
+      "seo_title": "Kostenloser JSON Sortierer Online",
       "seo_description": "Sortieren Sie JSON-Schlüssel alphabetisch online für kostenlos. Unterstützung für aufsteigende und absteigende Reihenfolge mit Sortierung von verschachtelten Objekten. Wichtig für die API-Entwicklung.",
       "detailed_description": "Der JSON-Sorter ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem JSON-Sorter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der JSON-Sorter Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den JSON-Sorter sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
       "usage_steps": [
@@ -2429,7 +2430,7 @@
       ]
     },
     "placeholder-image": {
-      "name": "Placeholder Image Generator",
+      "name": "Platzhalter-Bild Generator",
       "description": "Erstelle Platzhalterbilder mit benutzerdefinierten Größen und Farben.",
       "seo_title": "Free Online Placeholder Image Generator",
       "seo_description": "Erstelle Platzhalterbilder mit benutzerdefinierten Dimensionen und Farben online für kostenlos. Perfekt für Mockups, Wireframes und Webdesign-Prototypen. Herunterladen als PNG.",
@@ -2539,7 +2540,7 @@
     "byte-counter": {
       "name": "Byte Counter",
       "description": "Zähle Bytes in Texten mit Unterstützung von UTF-8, UTF-16 und ASCII- Codierung.",
-      "seo_title": "Free Byte Counter Online",
+      "seo_title": "Kostenloser Byte-Zähler Online",
       "seo_description": "Zähle Textbytes in UTF-8, UTF-16 und anderen Codierungen online für kostenlos. Erhalte Zeichenzähle, Wortzähle und Bytes. Wichtig für die Schätzung der Datengröße.",
       "detailed_description": "Der Byte Counter ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Byte Counter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell damit anfangen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der Byte Counter kann Ihnen dabei helfen, Ihre Arbeitswirksamkeit zu verbessern. Alle Verarbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Byte Counter sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
       "usage_steps": [
@@ -2574,8 +2575,8 @@
     },
     "svg-optimizer": {
       "name": "SVG Optimizer",
-      "description": "Optimize and compress SVG code to reduce file size.",
-      "seo_title": "Free SVG Optimizer Online",
+      "description": "Optimieren und komprimieren Sie SVG-Code zur Reduzierung der Dateigröße.",
+      "seo_title": "Kostenloser SVG Optimierer Online",
       "seo_description": "Optimize and compress SVG files online for free. Entfernen Sie unnotwendige Metadaten, minimieren Sie den Code und reduzieren Sie die Dateigröße. Perfekt für die Optimierung der Webleistung.",
       "detailed_description": "Der SVG Optimizer ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem SVG Optimizer können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der SVG Optimizer kann Ihnen helfen, Ihre Arbeitswirkungsrate zu verbessern. Alle Verarbeitungen werden lokal im Webbrowser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendein Server hochgeladen werden. Nutzen Sie den SVG Optimizer sofort, um schnelle, sichere und kostenlose Online-Toolservices zu erleben.",
       "usage_steps": [
@@ -2629,8 +2630,8 @@
     "html-minifier": {
       "name": "HTML-Minifier",
       "description": "Minimieren und verschönern Sie den HTML-Code, um die Dateigröße zu reduzieren.",
-      "seo_title": "Free HTML Minifier Online",
-      "seo_description": "Minify and compress HTML code online for free. Remove whitespace, comments, and optimize attributes. Reduce file size and improve page load speed.",
+      "seo_title": "Kostenloser HTML Minifier Online",
+      "seo_description": "Minifizieren und komprimieren Sie HTML-Code kostenlos online. Entfernen Sie Leerzeichen, Kommentare und optimieren Sie für die Produktion.",
       "detailed_description": "HTML-Minifier ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit HTML-Minifier können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, HTML-Minifier kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie HTML-Minifier sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
       "usage_steps": [
         "Öffnen Sie die HTML-Minifier-Tool-Seite",
@@ -2688,8 +2689,8 @@
     },
     "epoch-converter": {
       "name": "Epoch Converter",
-      "description": "Convert between Epoch/Unix timestamps and date time.",
-      "seo_title": "Free Epoch Time Converter Online",
+      "description": "Konvertieren Sie zwischen Epoch/Unix-Zeitstempeln und Datum/Uhrzeit.",
+      "seo_title": "Kostenloser Epoch Zeit Konverter Online",
       "seo_description": "Konvertieren Sie Unix-Epoch-Zeitstempel in menschlich lesbare Datumsangaben und umgekehrt online kostenlos. Unterstützt Millisekunden und Sekunden. Wichtig für Entwickler und Protokolle.",
       "detailed_description": "Der Epoch Converter ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Epoch Converter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der Epoch Converter kann Ihnen helfen, Ihre Arbeitswirksamkeit zu verbessern. Alle Verarbeitungen werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Epoch Converter sofort, um schnell, sicher und kostenlosen Online-Toolservice zu erleben.",
       "usage_steps": [
@@ -2707,8 +2708,8 @@
     "css-unit-converter": {
       "name": "CSS-Unit-Converter",
       "description": "Konvertiere zwischen CSS-Units wie px, rem, em, pt, vw, vh.",
-      "seo_title": "Free CSS-Unit-Converter Online",
-      "seo_description": "Konvertiere CSS-Units (px, em, rem, %, vw, vh) online für kostenlos. Berechne reaktive Werte mit Basis-Schriftgröße. Wichtig für reaktive Webdesign.",
+      "seo_title": "Kostenloser CSS-Einheiten-Konverter Online",
+      "seo_description": "Konvertieren Sie CSS-Einheiten (px, em, rem, %, vw, vh) kostenlos online. Berechnen Sie responsive Werte mit Basis-Schriftgröße. Unverzichtbar für responsives Webdesign.",
       "detailed_description": "Der CSS-Unit-Converter ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CSS-Unit-Converter können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Sei Sie Entwickler, Designer oder allgemeiner Benutzer, der CSS-Unit-Converter kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitung wird lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den CSS-Unit-Converter sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
       "usage_steps": [
         "Öffnen Sie die Seite des CSS-Unit-Converters",
@@ -2778,7 +2779,7 @@
       ]
     },
     "http-status": {
-      "name": "HTTP Status Codes",
+      "name": "HTTP-Statuscodes",
       "description": "Suchen Sie nach HTTP Status-Codes und deren Bedeutungen.",
       "seo_title": "HTTP Status Codes Referenz",
       "seo_description": "Browsen Sie den kostenlosen online Referenzlehrplan zu HTTP Status-Codes. Lernen Sie 1xx, 2xx, 3xx, 4xx und 5xx Status-Codes mit Beschreibungen und Anwendungsfällen kennen.",
@@ -2854,7 +2855,7 @@
       ]
     },
     "json-to-go": {
-      "name": "JSON in Go-Struktur umwandeln",
+      "name": "JSON zu Go Struct",
       "description": "Wandeln Sie JSON-Daten in Go-Strukturdefinitionen um.",
       "seo_title": "Kostenlose JSON in Go-Struktur-Umwandlung",
       "seo_description": "Wandeln Sie JSON in Go-Strukturen online für free um. Generieren Sie typsichere Go-Code mit richtigen Feldtagen und Unterstützung für eingebettete Strukturen. Notwendig für die Entwicklung von Go-APIs.",
@@ -2877,8 +2878,8 @@
     "html-to-jsx": {
       "name": "HTML zu JSX",
       "description": "Konvertieren Sie HTML-Code in das React JSX-Format.",
-      "seo_title": "Free HTML to JSX Converter Online",
-      "seo_description": "Convert HTML code to React JSX format online for free. Transform class to className, style strings to objects. Essential for React developers.",
+      "seo_title": "Kostenloser HTML zu JSX Konverter Online",
+      "seo_description": "Konvertieren Sie HTML-Code in React JSX-Format kostenlos online. Transformieren Sie class zu className, Style-Strings zu Objekten. Unverzichtbar für React-Entwickler.",
       "htmlInput": "HTML Input",
       "jsxOutput": "JSX Output",
       "placeholder": "<div class=\"container\">...</div>",
@@ -2916,9 +2917,9 @@
       ]
     },
     "barcode-generator": {
-      "name": "Barcode Generator",
+      "name": "Barcode-Generator",
       "description": "Generiere Barcodes im Format Code 128, Code 39, EAN-13 und UPC.",
-      "seo_title": "Free Barcode Generator Online",
+      "seo_title": "Kostenloser Barcode-Generator Online",
       "seo_description": "Erstelle Barcodes online für kostenlos. Unterstützung für Code128, Code39, EAN-13, UPC-A und weitere Formate. Als PNG oder SVG herunterladen. Ideal für Lagerbestand und Produktetikettierung.",
       "detailed_description": "Der Barcode Generator ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Barcode Generator können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der Barcode Generator kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Barcode Generator sofort, um schnell, sicher und kostenlosen Online-Tools zu profitieren.",
       "usage_steps": [
@@ -2954,7 +2955,7 @@
     "url-parser": {
       "name": "URL Parser",
       "description": "Analysieren und interpretieren Sie URL-Components wie Protokoll, Host, Pfad und Query-Parameter.",
-      "seo_title": "Free URL Parser Online",
+      "seo_title": "Kostenloser URL-Parser Online",
       "seo_description": "Analysieren und interpretieren Sie URLs online für kostenlos. Extrahieren Sie Protokoll, Host, Port, Pfad, Query-String, Hash und Codeiere/Decodiere URL-Components.",
       "urlLabel": "URL",
       "protocol": "Protokoll",
@@ -3002,8 +3003,8 @@
     "text-wrapper": {
       "name": "Textumbruch",
       "description": "Text auf eine bestimmte Zeilenbreite umbrechen.",
-      "seo_title": "Free Text Wrapper Online",
-      "seo_description": "Wrap text to specified width online for free. Add line breaks at word boundaries or fixed positions. Perfect for formatting code comments and documentation.",
+      "seo_title": "Kostenloser Textumbruch Online",
+      "seo_description": "Umbrechen Sie Text auf eine bestimmte Breite kostenlos online. Fügen Sie Zeilenumbrüche an Wortgrenzen oder festen Positionen hinzu. Perfekt für Code-Kommentare und Dokumentation.",
       "detailed_description": "Textumbruch ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Textumbruch können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Textumbruch kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Textumbruch sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
       "usage_steps": [
         "Öffnen Sie die Textumbruch-Tool-Seite",
@@ -3021,7 +3022,7 @@
       "name": "CSV zu JSON",
       "description": "Konvertieren Sie CSV-Daten in JSON-Format mit anpassbarem Trennzeichen.",
       "seo_title": "Kostenloser CSV zu JSON Konverter Online",
-      "seo_description": "Konvertieren Sie CSV in JSON-Format online für kostenlos. Verwenden Sie anpassbare Trennzeichen und Header. Unterstützung für verschachtelte Objekte und Arrays. Perfekt für Datenimport.",
+      "seo_description": "Konvertieren Sie CSV in JSON-Format kostenlos online. Parsen Sie CSV mit benutzerdefinierten Trennzeichen und Kopfzeilen. Unterstützt verschachtelte Objekte und Arrays. Perfekt für Datenimport.",
       "detailed_description": "CSV zu JSON ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit CSV zu JSON können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Benutzer sind, CSV zu JSON kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie CSV zu JSON sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu genießen.",
       "usage_steps": [
         "Öffnen Sie die Seite des CSV zu JSON-Tools",
@@ -3036,7 +3037,7 @@
       ]
     },
     "html-entity": {
-      "name": "HTML Entity Converter",
+      "name": "HTML-Entity-Konverter",
       "description": "Konvertieren Sie HTML-Einheiten und decodieren Sie besondere Zeichen und Symbole.",
       "seo_title": "Kostenloser HTML Entity Converter Online",
       "seo_description": "Konvertieren Sie HTML-Einheiten online für kostenlos. Codieren Sie besondere Zeichen in HTML-Einheiten und dekodieren Sie Einheiten in Zeichen. Verhindern Sie XSS-Angriffe und zeigen Sie HTML.",
@@ -3092,8 +3093,8 @@
     "password-strength": {
       "name": "Passwortstärke-Prüfer",
       "description": "Analysieren Sie die Passwortstärke, indem Sie Länge, Zeichentypen und gängige Muster überprüfen.",
-      "seo_title": "Free Password Strength Checker Online",
-      "seo_description": "Check password strength online for free. Get detailed analysis with entropy score, crack time estimate, and improvement suggestions. Essential for security.",
+      "seo_title": "Kostenloser Passwort-Stärke-Checker Online",
+      "seo_description": "Überprüfen Sie die Passwortstärke kostenlos online. Erhalten Sie detaillierte Analyse mit Entropie-Score, geschätzter Knackzeit und Verbesserungsvorschlägen. Unverzichtbar für Sicherheit.",
       "detailed_description": "Passwortstärke-Prüfer ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Passwortstärke-Prüfer können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Passwortstärke-Prüfer kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Passwortstärke-Prüfer sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
       "usage_steps": [
         "Öffnen Sie die Passwortstärke-Prüfer-Tool-Seite",
@@ -3110,8 +3111,8 @@
     "totp-generator": {
       "name": "TOTP-Generator",
       "description": "Generiere zeitbasierte einmalige Kennwörter, die mit Google Authenticator kompatibel sind.",
-      "seo_title": "Free TOTP-Generator Online",
-      "seo_description": "Generiere TOTP-einmalige Kennwörter online für kostenlos. Unterstützung für Google Authenticator-kompatible Codes mit benutzerdefinierten Geheimniskennwörtern und Zeitintervallen. Für 2FA-Tests.",
+      "seo_title": "Kostenloser TOTP Generator Online",
+      "seo_description": "Generieren Sie TOTP Einmalpasswörter kostenlos online. Unterstützt Google Authenticator kompatible Codes mit benutzerdefinierten geheimen Schlüsseln und Zeitintervallen. Für 2FA-Tests.",
       "detailed_description": "Der TOTP-Generator ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem TOTP-Generator können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der TOTP-Generator kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den TOTP-Generator sofort, um schnell, sicher und kostenlosen Online-Tools zu nutzen.",
       "usage_steps": [
         "Öffnen Sie die Seite des TOTP-Generators",
@@ -3163,7 +3164,7 @@
     },
     "http-header-parser": {
       "name": "HTTP Header Parser",
-      "description": "Parse and format HTTP headers with descriptions for each header.",
+      "description": "Parsen und formatieren Sie HTTP-Header mit Beschreibungen für jeden Header.",
       "seo_title": "Kostenloser HTTP Header Parser Online",
       "seo_description": "Parse HTTP Headers online für kostenlos. Analysiere Anforderungs- und Antwortheaders mit detaillierten Erklärungen. Essentiell für API-Debugging und Webentwicklung.",
       "detailed_description": "Der HTTP Header Parser ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem HTTP Header Parser können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der HTTP Header Parser Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den HTTP Header Parser sofort, um schnell, sichere und kostenlose Online-Toolservices zu erleben.",
@@ -3218,7 +3219,7 @@
     "scientific-calculator": {
       "name": "Wissenschaftliche Rechner",
       "description": "Führen Sie wissenschaftliche Berechnungen mit trigonometrischen, logarithmischen und exponentiellen Funktionen durch.",
-      "seo_title": "Free Scientific Calculator Online",
+      "seo_title": "Kostenloser wissenschaftlicher Taschenrechner Online",
       "seo_description": "Free online scientific calculator mit sin, cos, tan, log, ln, sqrt, power und mehr Funktionen. Unterstützung für Klammern und komplexe Ausdrücke. Für Schüler und Studenten.",
       "detailed_description": "Der Wissenschaftliche Rechner ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Wissenschaftlichen Rechner können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell damit anfangen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der Wissenschaftliche Rechner Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Berechnungen werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Wissenschaftlichen Rechner sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
       "usage_steps": [
@@ -3236,7 +3237,7 @@
     "text-sorter": {
       "name": "Text Sorter",
       "description": "Sortieren Sie Textzeilen alphabetisch, nach Zahlen oder nach Länge mit verschiedenen Optionen.",
-      "seo_title": "Kostenloser Text Sorter Online",
+      "seo_title": "Kostenloser Text-Sortierer Online",
       "seo_description": "Sortieren Sie Textzeilen alphabetisch, nach Zahlen, natürlich oder nach Länge online für kostenlos. Unterstützung für aufsteigende und absteigende Reihenfolge. Wichtig für die Datenorganisation.",
       "detailed_description": "Der Text Sorter ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Text Sorter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Nutzer, der Text Sorter kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Text Sorter sofort, um schnell, sicher und kostenlosen Online-Tooldienstleistungen zu genießen.",
       "usage_steps": [
@@ -3254,7 +3255,7 @@
     "text-extractor": {
       "name": "Text Extractor",
       "description": "Extrahieren Sie E-Mails, URLs, Telefonnummern, IP-Adressen und vieles mehr aus Texten.",
-      "seo_title": "Free Text Extractor Online",
+      "seo_title": "Kostenloser Text-Extraktor Online",
       "seo_description": "Extrahieren Sie E-Mails, URLs, Telefonnummern, IP-Adressen, Hashtags und Mentions aus Texten online für kostenlos. Mit einem Klick können Sie in Massen extrahieren. Ideal für Datenmining.",
       "detailed_description": "Der Text Extractor ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Text Extractor können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann Text Extractor Ihnen helfen, Ihre Arbeitswirksamkeit zu verbessern. Alle Verarbeitung erfolgt lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und Ihre Daten nicht auf irgendeinem Server hochladen wird. Nutzen Sie Text Extractor sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu genießen.",
       "usage_steps": [
@@ -3272,8 +3273,8 @@
     "emoji-picker": {
       "name": "Emoji-Wähler",
       "description": "Durchsuchen, suchen und kopieren Sie Emojis nach Kategorie mit einem Klick.",
-      "seo_title": "Free Emoji Picker Online",
-      "seo_description": "Browse and copy emojis by category online for free. Search emojis by name with skin tone variants. One-click copy to clipboard. Perfect for social media.",
+      "seo_title": "Kostenloser Emoji-Picker Online",
+      "seo_description": "Durchsuchen und kopieren Sie Emojis nach Kategorie kostenlos online. Suchen Sie Emojis nach Namen mit Hautton-Unterstützung. Perfekt für Social Media und Messaging.",
       "detailed_description": "Emoji-Wähler ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Emoji-Wähler können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Emoji-Wähler kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Emoji-Wähler sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
       "usage_steps": [
         "Öffnen Sie die Emoji-Wähler-Tool-Seite",
@@ -3290,8 +3291,8 @@
     "json-to-sql": {
       "name": "JSON to SQL",
       "description": "Konvertiere JSON-Arrays in SQL-INSERT-Anweisungen mit Unterstützung für CREATE TABLE.",
-      "seo_title": "Free JSON to SQL Converter Online",
-      "seo_description": "Konvertiere JSON-Daten in SQL-INSERT-Anweisungen online für kostenlos. Unterstützung für MySQL, PostgreSQL und SQLite-Syntax. Generierung von Massenimport für Datenbankimport.",
+      "seo_title": "Kostenloser JSON zu SQL Konverter Online",
+      "seo_description": "Konvertieren Sie JSON-Daten in SQL INSERT-Anweisungen kostenlos online. Unterstützt MySQL, PostgreSQL, SQLite-Syntax. Masseneinfügung für Datenbankimport.",
       "tableName": "Tabellenname",
       "dialect": "Dialekt",
       "includeCreate": "CREATE TABLE einschließen",
@@ -3317,7 +3318,7 @@
       "name": "Bildkompressor",
       "description": "Bildkomprimierung durchführen, um die Dateigröße zu reduzieren, ohne die Qualität zu beeinträchtigen.",
       "seo_title": "Kostenloser Bildkompressor Online",
-      "seo_description": "Komprimieren Sie Bilder online für kostenlos. Reduzieren Sie die Dateigröße von PNG, JPEG und WebP-Dateien mit anpassbarer Qualität. Batch-Komprimierung unterstützt. Perfekt für die Weboptimierung.",
+      "seo_description": "Komprimieren Sie Bilder kostenlos online. Reduzieren Sie PNG, JPEG, WebP Dateigröße mit einstellbarer Qualität. Stapelkomprimierung unterstützt. Perfekt für Web-Optimierung.",
       "detailed_description": "Der Bildkompressor ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Bildkompressor können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder einfach Benutzer sind, kann der Bildkompressor Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Webbrowser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Bildkompressor sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu profitieren.",
       "usage_steps": [
         "Öffnen Sie die Seite des Bildkompressors",
@@ -3451,9 +3452,9 @@
     },
     "json-minifier": {
       "name": "JSON Minifier",
-      "description": "Minify JSON by removing whitespace and formatting to reduce file size.",
-      "seo_title": "Free JSON Minifier Online",
-      "seo_description": "Minify and compress JSON data online for free. Remove whitespace and comments, reduce file size by up to 60%. Essential for API optimization.",
+      "description": "Minifizieren Sie JSON durch Entfernen von Leerzeichen und Formatierung zur Größenreduzierung.",
+      "seo_title": "Kostenloser JSON Minifier Online",
+      "seo_description": "Minifizieren und komprimieren Sie JSON-Daten kostenlos online. Entfernen Sie Leerzeichen und Formatierung zur Größenreduzierung.",
       "detailed_description": "Der JSON Minifier ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem JSON Minifier können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der JSON Minifier Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den JSON Minifier sofort, um schnell, sicher und kostenlosen Online-Tooldienstleistungen zu genießen.",
       "usage_steps": [
         "Öffnen Sie die Seite des JSON Minifiers",
@@ -3471,8 +3472,8 @@
     "timezone-converter": {
       "name": "Zeitzone-Konverter",
       "description": "Konvertiere Zeit zwischen verschiedenen Zeitzonen mit der Weltuhr.",
-      "seo_title": "Kostenloser Zeitzone-Konverter Online",
-      "seo_description": "Konvertiere Zeit zwischen Zeitzonen online für kostenlos. Weltuhr mit wichtigen Städten, Unterstützung für Sommerzeit und Terminplaner. Essentiell für die Koordination globaler Teams.",
+      "seo_title": "Kostenloser Zeitzonen-Konverter Online",
+      "seo_description": "Konvertieren Sie Zeit zwischen Zeitzonen kostenlos online. Weltuhr mit Großstädten, DST-Unterstützung und Meeting-Planer. Unverzichtbar für globale Teamkoordination.",
       "date": "Datum",
       "time": "Uhrzeit",
       "now": "Jetzt",
@@ -3564,9 +3565,9 @@
     },
     "base58": {
       "name": "Base58 Encoder/Decoder",
-      "description": "Encode and decode Base58 strings used in Bitcoin and cryptocurrencies.",
-      "seo_title": "Free Base58 Encoder & Decoder Online",
-      "seo_description": "Encode and decode Base58 strings online for free. Used in Bitcoin addresses, IPFS hashes, and cryptocurrency wallets. Secure browser-based encoding tool.",
+      "description": "Kodieren und dekodieren Sie Base58-Strings, die in Bitcoin und Kryptowährungen verwendet werden.",
+      "seo_title": "Kostenloser Base58 Encoder & Decoder Online",
+      "seo_description": "Kodieren und dekodieren Sie Base58-Strings kostenlos online. Verwendet in Bitcoin, IPFS und anderen Kryptowährungen.",
       "encodeBtn": "Zu Base58 kodieren",
       "decodeBtn": "Von Base58 dekodieren",
       "placeholder": "Text eingeben, um zu kodieren, oder Base58 zu dekodieren...",
@@ -3596,8 +3597,8 @@
     "meta-tag-generator": {
       "name": "Meta Tag Generator",
       "description": "Erstellen Sie SEO-Meta-Tags, Open Graph und Twitter Card-Tags für Ihre Website.",
-      "seo_title": "Free Meta Tag Generator Online - SEO Tools",
-      "seo_description": "Erstellen Sie online SEO-Meta-Tags, Open Graph und Twitter Card-Tags kostenlos. Vorschau, wie Ihre Seite in Suchergebnissen und sozialen Medien angezeigt wird.",
+      "seo_title": "Kostenloser Meta-Tag-Generator Online - SEO Tools",
+      "seo_description": "Generieren Sie SEO Meta-Tags, Open Graph und Twitter Card Tags kostenlos online. Vorschau wie Ihre Seite in Suchmaschinen und sozialen Medien erscheint.",
       "detailed_description": "Der Meta Tag Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Meta Tag Generator können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der Meta Tag Generator Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitung erfolgt lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Meta Tag Generator sofort, um schnell, sicher und kostenlosen Online-Tools zu profitieren.",
       "usage_steps": [
         "Öffnen Sie die Seite des Meta Tag Generators",
@@ -3614,7 +3615,7 @@
     "robots-txt-generator": {
       "name": "robots.txt Generator",
       "description": "Generiere robots.txt-Dateien, um Suchmaschinenroboter zu steuern.",
-      "seo_title": "Free robots.txt Generator Online",
+      "seo_title": "Kostenloser robots.txt Generator Online",
       "seo_description": "Erstelle robots.txt-Dateien für deine Website online für kostenlos. Steuere Suchmaschinenroboter mit Allow/Disallow-Regeln, Sitemap-Links und Crawl-Delay-Einstellungen.",
       "allowAll": "Alle erlauben",
       "blockAll": "Alle blockieren",
@@ -3664,8 +3665,8 @@
     },
     "css-grid-generator": {
       "name": "CSS Grid Generator",
-      "description": "Visual CSS Grid layout generator with live preview.",
-      "seo_title": "Free CSS Grid Generator Online - Visual Layout Builder | U2Tool",
+      "description": "Visueller CSS Grid Layout-Generator mit Live-Vorschau.",
+      "seo_title": "Kostenloser CSS Grid Generator Online - Visueller Layout-Builder",
       "seo_description": "Generieren Sie CSS-Grid-Layouts visuell mit unserem kostenlosen CSS-Grid-Generator. Anpassen Sie Zeilen, Spalten, Abstände und Ausrichtungen mit live-Präview. Kopieren Sie den responsiven CSS-Code sofort.",
       "columns": "Spalten",
       "rows": "Zeilen",
@@ -3699,9 +3700,9 @@
     },
     "css-flexbox-generator": {
       "name": "CSS Flexbox Generator",
-      "description": "Visual CSS Flexbox layout generator with live preview.",
-      "seo_title": "Free CSS Flexbox Generator Online",
-      "seo_description": "Generieren Sie CSS Flexbox-Layouts visuell mit live-Präview online für kostenlos. Anpassen Sie die Richtung, das Verpacken, das Ausrichten und die Ausrichtungseigenschaften. Kopieren Sie den CSS-Code sofort.",
+      "description": "Visueller CSS Flexbox Layout-Generator mit Live-Vorschau.",
+      "seo_title": "Kostenloser CSS Flexbox Generator Online",
+      "seo_description": "Generieren Sie CSS Flexbox-Layouts visuell mit Live-Vorschau kostenlos online. Passen Sie Flex-Eigenschaften an und kopieren Sie gebrauchsfertigen Code.",
       "detailed_description": "Der CSS Flexbox Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CSS Flexbox Generator können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell damit anfangen und effizient arbeiten können. Seien Sie ein Entwickler, ein Designer oder ein allgemeiner Benutzer, der CSS Flexbox Generator kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendein Server hochgeladen werden. Nutzen Sie den CSS Flexbox Generator sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
       "usage_steps": [
         "Öffnen Sie die Seite des CSS Flexbox Generators",
@@ -3948,13 +3949,13 @@
     },
     "css-minifier": {
       "name": "CSS Minifier",
-      "description": "Minify and compress CSS code.",
+      "description": "Minifizieren und komprimieren Sie CSS-Code.",
       "input": "CSS Eingabe",
       "output": "Minified Output",
       "minify": "Minify",
       "copy": "Copy",
-      "seo_title": "Free CSS Minifier Online",
-      "seo_description": "Minify and compress CSS code online for free. Remove whitespace, comments, and optimize selectors. Reduce file size and improve page load speed.",
+      "seo_title": "Kostenloser CSS Minifier Online",
+      "seo_description": "Minifizieren und komprimieren Sie CSS-Code kostenlos online. Entfernen Sie Leerzeichen, Kommentare und optimieren Sie für die Produktion. Unverzichtbar für Web-Performance.",
       "detailed_description": "Der CSS Minifier ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CSS Minifier können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder einfach Benutzer sind, kann der CSS Minifier Ihre Arbeitswirkungsrate verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den CSS Minifier sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu genießen.",
       "usage_steps": [
         "Öffnen Sie die Seite des CSS Minifiers",
@@ -3972,15 +3973,15 @@
     },
     "js-minifier": {
       "name": "JavaScript Minifier",
-      "description": "Minify and compress JavaScript code.",
+      "description": "Minifizieren und komprimieren Sie JavaScript-Code.",
       "input": "JavaScript Input",
       "output": "Minified Output",
       "minify": "Minify",
       "copy": "Copy",
-      "seo_title": "Free JavaScript Minifier Online",
+      "seo_title": "Kostenloser JavaScript Minifier Online",
       "inputPlaceholder": "JavaScript-Code eingeben...",
       "outputPlaceholder": "Hier erscheint der minimierte Code...",
-      "seo_description": "Minify and compress JavaScript code online for free. Remove whitespace, comments, and shorten variable names. Reduce file size for faster loading.",
+      "seo_description": "Minifizieren und komprimieren Sie JavaScript-Code kostenlos online. Entfernen Sie Leerzeichen, Kommentare und optimieren Sie für die Produktion.",
       "detailed_description": "Der JavaScript Minifier ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem JavaScript Minifier können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der JavaScript Minifier Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitungen werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den JavaScript Minifier sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu profitieren.",
       "usage_steps": [
         "Öffnen Sie die Seite des JavaScript Minifiers",
@@ -4099,8 +4100,8 @@
       "description": "Erstellen Sie Farbschattierungen und Töne aus einer Basifarbe.",
       "output": "CSS-Ausgabe",
       "copy": "Kopieren",
-      "seo_title": "Kostenloser Farbschattengenerator Online",
-      "seo_description": "Erstellen Sie Farbschattierungen und Töne von jeder Farbe online für kostenlos. Erstellen Sie leichtere und dunklere Variationen mit anpassbaren Schritten. Exportieren Sie in CSS oder Designwerkzeuge.",
+      "seo_title": "Kostenloser Farbton-Generator Online",
+      "seo_description": "Generieren Sie Farbtöne und Schattierungen aus jeder Farbe kostenlos online. Erstellen Sie hellere und dunklere Variationen für konsistente Design-Paletten.",
       "baseColor": "Basifarbe",
       "numberOfShades": "Anzahl der Schattierungen: {count}",
       "copyCssVariables": "CSS-Variable kopieren",
@@ -4157,7 +4158,7 @@
       "inputPlaceholderDecode": "Base85 zum Dezidieren eingeben...",
       "outputPlaceholder": "Ergebnisse hier erscheinen...",
       "seo_title": "Kostenloser Base85 Encoder/Decoder Online",
-      "seo_description": "Codeieren und Dezidieren von Base85 (Ascii85) Daten online für kostenlos. Verwendet in PDF-Dateien, PostScript und Datenkompression. Sicherer browserbasierter Codeierungs-Tool.",
+      "seo_description": "Kodieren und dekodieren Sie Base85 (Ascii85) Daten kostenlos online. Verwendet in PDF-Dateien, PostScript und Git. Effizienter als Base64.",
       "detailed_description": "Der Base85 Encoder/Decoder ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Base85 Encoder/Decoder können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder einfach Benutzer sind, kann Base85 Encoder/Decoder Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie Base85 Encoder/Decoder sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu erleben.",
       "usage_steps": [
         "Öffnen Sie die Seite des Base85 Encoder/Decoder-Tools",
@@ -4311,8 +4312,8 @@
       "output": "JSON-Ausgabe",
       "convert": "Konvertieren",
       "copy": " kopieren",
-      "seo_title": "Kostenlose XML in JSON Konverter Online",
-      "seo_description": "Konvertiere XML in JSON-Format online für kostenlos. Wahrnehme Attribute, Namespaces und verschachtelte Elemente. Perfekt für API-Integration und Datentransformation.",
+      "seo_title": "Kostenloser XML zu JSON Konverter Online",
+      "seo_description": "Konvertieren Sie XML in JSON-Format kostenlos online. Bewahren Sie Attribute, Namespaces und Struktur. Perfekt für API-Integration und Datentransformation.",
       "detailed_description": "XML in JSON ist eine praktische Online-Tool, das dir verschiedene Aufgaben schnell und einfach ermöglicht. Mit XML in JSON kannst du verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass du schnell und effizient damit arbeiten kannst. Unabhängig davon, ob du Entwickler, Designer oder allgemeiner Nutzer bist, hilft dir XML in JSON, deine Arbeitswirksamkeit zu verbessern. Alle Verarbeitungen werden in deinem Browser lokal durchgeführt, was deine Datensicherheit gewährleistet und sicherstellt, dass deine Daten nicht auf irgendeinem Server hochgeladen werden. Nutze XML in JSON sofort, um schnelle, sichere und kostenlose Online-Tools zu nutzen.",
       "usage_steps": [
         "Öffne die Seite des XML in JSON-Tools",
@@ -4332,8 +4333,8 @@
       "name": "IP-Adresse-Generator",
       "description": "Generiere zufällige IP-Adressen (IPv4, IPv6, private, öffentlich).",
       "copy": "Alles kopieren",
-      "seo_title": "Free IP-Adresse-Generator Online",
-      "seo_description": "Generiere zufällige IP-Adressen online für kostenlos. Unterstützung für IPv4 und IPv6-Formate mit benutzerdefinierten Bereichen. Perfekt für Tests, Entwicklung und Netzwerk-Simulation.",
+      "seo_title": "Kostenloser IP-Adress-Generator Online",
+      "seo_description": "Generieren Sie zufällige IP-Adressen kostenlos online. Unterstützt IPv4 und IPv6 Formate mit anpassbaren Bereichen. Für Tests und Entwicklung.",
       "ipType": "IP-Typ",
       "ipv4Random": "IPv4 (Zufällig)",
       "ipv6": "IPv6",
@@ -4356,7 +4357,7 @@
       ]
     },
     "css-gradient-text": {
-      "name": "CSS Gradient Text",
+      "name": "CSS Farbverlauf-Text",
       "description": "Erstellen Sie gradientenbasierte Texteffekte mit CSS.",
       "output": "CSS-Ausgabe",
       "copy": "CSS kopieren",
@@ -4532,9 +4533,9 @@
       ]
     },
     "css-clip-path-generator": {
-      "name": "CSS Clip Path Generator",
+      "name": "CSS Clip-Path Generator",
       "description": "Erstelle CSS-Clip-Path-Formen mit visuellem Editor.",
-      "seo_title": "Free CSS Clip Path Generator Online",
+      "seo_title": "Kostenloser CSS Clip-Path Generator Online",
       "seo_description": "Erstelle CSS-Clip-Path-Formen mit visuellem Editor online für kostenlos. Gestalte Polygone, Kreise, Ellipsen und benutzerdefinierte Wege. Kopiere den CSS-Code für kreative Layouts.",
       "detailed_description": "Der CSS Clip Path Generator ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CSS Clip Path Generator können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der CSS Clip Path Generator Ihnen helfen, Ihre Arbeitswirkungsrate zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den CSS Clip Path Generator sofort, um schnell, sicher und kostenlosen Online-Tooldienst zu erleben.",
       "usage_steps": [
@@ -4552,8 +4553,8 @@
     "uuid-validator": {
       "name": "UUID-Validator",
       "description": "Validieren und analysieren Sie UUID-Strings.",
-      "seo_title": "Free UUID Validator Online",
-      "seo_description": "Validate and analyze UUID strings online for free. Check format, version, and variant of UUIDs. Extract timestamp from UUID v1 and v7. Essential for debugging.",
+      "seo_title": "Kostenloser UUID-Validator Online",
+      "seo_description": "Validieren und analysieren Sie UUID-Strings kostenlos online. Überprüfen Sie Format, Version und Variante. Extrahieren Sie Zeitstempel-Informationen aus v1 UUIDs.",
       "detailed_description": "UUID-Validator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit UUID-Validator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, UUID-Validator kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie UUID-Validator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
       "usage_steps": [
         "Öffnen Sie die UUID-Validator-Tool-Seite",
@@ -4570,8 +4571,8 @@
     "text-hash-comparator": {
       "name": "Text-Hash-Komparator",
       "description": "Vergleichen Sie Texte anhand ihrer Hashwerte.",
-      "seo_title": "Free Text Hash Comparator Online",
-      "seo_description": "Compare text by their hash values online for free. Generate and compare MD5, SHA-1, SHA-256 hashes side by side. Essential for file integrity verification.",
+      "seo_title": "Kostenloser Text-Hash-Vergleicher Online",
+      "seo_description": "Vergleichen Sie Text anhand ihrer Hash-Werte kostenlos online. Generieren und vergleichen Sie MD5, SHA-1, SHA-256 Hashes nebeneinander. Unverzichtbar für Dateiintegritätsprüfung.",
       "detailed_description": "Text-Hash-Komparator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Text-Hash-Komparator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Text-Hash-Komparator kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Text-Hash-Komparator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
       "usage_steps": [
         "Öffnen Sie die Text-Hash-Komparator-Tool-Seite",
@@ -4586,9 +4587,9 @@
       ]
     },
     "json-path-finder": {
-      "name": "JSON Path Finder",
-      "description": "Find and copy JSON paths from your data.",
-      "seo_title": "Free JSON Path Finder Online",
+      "name": "JSON-Pfad-Finder",
+      "description": "Finden und kopieren Sie JSON-Pfade aus Ihren Daten.",
+      "seo_title": "Kostenloser JSON-Pfad-Finder Online",
       "seo_description": "Find and copy JSON paths from your data online for free. Klicken Sie auf beliebige Werte, um deren JSONPath-Ausdrücke zu erhalten. Unentbehrlich für die API-Entwicklung und die Datenextraktion.",
       "detailed_description": "JSON Path Finder ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON Path Finder können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Benutzer sind, JSON Path Finder kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie JSON Path Finder sofort, um schnell, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
       "usage_steps": [
@@ -4624,7 +4625,7 @@
     "json-escape": {
       "name": "JSON Escape/Unescape",
       "description": "Escape und unescape JSON-Zeichenketten.",
-      "seo_title": "Free JSON Escape/Unescape Tool Online",
+      "seo_title": "Kostenloses JSON Escape/Unescape Tool Online",
       "seo_description": "Escape und unescape JSON-Zeichenketten online für kostenlos. Behandeln Sie besondere Zeichen, Anführungszeichen und Steuerzeichen. Ideal für das Einbetten von JSON in Zeichenketten.",
       "detailed_description": "JSON Escape/Unescape ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON Escape/Unescape können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, JSON Escape/Unescape kann Ihnen helfen, Ihre Arbeitswirkungsrate zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie JSON Escape/Unescape sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
       "usage_steps": [
@@ -4640,9 +4641,9 @@
       ]
     },
     "css-animation-generator": {
-      "name": "CSS Animation Generator",
+      "name": "CSS-Animations-Generator",
       "description": "Erstelle CSS-animations mit visuellem Editor.",
-      "seo_title": "Free CSS Animation Generator Online",
+      "seo_title": "Kostenloser CSS-Animations-Generator Online",
       "seo_description": "Erstelle CSS-animations mit visuellem Editor online für kostenlos. Gestaltung von Keyframes, Zeitfunktionen und Animationseigenschaften. Kopiere CSS-Code für deine Webprojekte.",
       "detailed_description": "Der CSS-Animationen-Generator ist ein praktisches Online-Tool, das dir dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CSS-Animationen-Generator kannst du verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass du schnell loslegen und effizient arbeiten kannst. Unabhängig davon, ob du Entwickler, Designer oder einfach ein Benutzer bist, kann der CSS-Animationen-Generator dir helfen, deine Arbeitswirksamkeit zu verbessern. Alle Verarbeitungsvorgänge werden lokal in deinem Browser durchgeführt, was deine Datensicherheit gewährleistet und sicherstellt, dass deine Daten nicht auf irgendeinem Server hochgeladen werden. Nutze den CSS-Animationen-Generator sofort, um schnelle, sichere und kostenlose Online-Tools zu nutzen.",
       "usage_steps": [
@@ -4660,7 +4661,7 @@
     "text-case-counter": {
       "name": "Text Case Counter",
       "description": "Zähle Groß- und Kleinbuchstaben sowie andere Zeichentypen.",
-      "seo_title": "Free Text Case Counter Online",
+      "seo_title": "Kostenloser Text-Groß-/Kleinschreibung-Zähler Online",
       "seo_description": "Zähle Groß- und Kleinschreibung, Zahlen, Leerzeichen und Sonderzeichen online für kostenlos. Erhalte detaillierte Statistiken zu Zeichentypen. Notwendig für Textanalyse.",
       "detailed_description": "Text Case Counter ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Text Case Counter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann Text Case Counter Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungstätigkeiten werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie Text Case Counter sofort, um schnell, sicher und kostenlosen Online-Tools zu nutzen.",
       "usage_steps": [
@@ -4677,9 +4678,9 @@
     },
     "dns-lookup": {
       "name": "DNS Lookup",
-      "description": "Look up DNS records for any domain.",
-      "seo_title": "Free DNS Lookup Tool Online",
-      "seo_description": "Look up DNS records for any domain online for free. Query A, AAAA, MX, TXT, NS, CNAME, and SOA records. Essential for domain troubleshooting and verification.",
+      "description": "Suchen Sie DNS-Einträge für jede Domain.",
+      "seo_title": "Kostenloses DNS-Lookup-Tool Online",
+      "seo_description": "Suchen Sie DNS-Einträge für jede Domain kostenlos online. Abfrage von A, AAAA, MX, TXT, NS und anderen Eintragstypen.",
       "detailed_description": "DNS Lookup ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit DNS Lookup können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie sich schnell einarbeiten und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann DNS Lookup Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie DNS Lookup sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu genießen.",
       "usage_steps": [
         "Öffnen Sie die DNS Lookup-Tool-Seite",
@@ -4696,8 +4697,8 @@
     "image-resizer": {
       "name": "Bild-Resizer",
       "description": "Ändern Sie die Größe von Bildern auf benutzerdefinierte Abmessungen.",
-      "seo_title": "Free Image Resizer Online",
-      "seo_description": "Resize images to custom dimensions online for free. Maintain aspect ratio or set exact width and height. Support PNG, JPEG, WebP formats. Download instantly.",
+      "seo_title": "Kostenloser Bildgrößenänderer Online",
+      "seo_description": "Ändern Sie Bildgrößen auf benutzerdefinierte Dimensionen kostenlos online. Behalten Sie das Seitenverhältnis bei oder legen Sie genaue Abmessungen fest.",
       "detailed_description": "Bild-Resizer ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Bild-Resizer können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Bild-Resizer kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Bild-Resizer sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
       "usage_steps": [
         "Öffnen Sie die Bild-Resizer-Tool-Seite",
@@ -4905,10 +4906,10 @@
       ]
     },
     "terms-generator": {
-      "name": "Terms of Service Generator",
-      "description": "Generate terms of service for your website.",
-      "seo_title": "Free Terms of Service Generator Online",
-      "seo_description": "Generieren Sie personalisierte Nutzungsbedingungen für Ihre Website online für kostenlos. Die Nutzungsbedingungen decken Vertragsabkommen, Haftung, Urheberrechte und Streitbeilegung ab.",
+      "name": "AGB-Generator",
+      "description": "Generieren Sie Nutzungsbedingungen für Ihre Website.",
+      "seo_title": "Kostenloser AGB-Generator Online",
+      "seo_description": "Generieren Sie angepasste Nutzungsbedingungen für Ihre Website kostenlos online. Deckt Nutzung, Datenschutz, Haftung und mehr ab. Professionelle rechtliche Vorlagen.",
       "detailed_description": "Der Terms of Service Generator ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Terms of Service Generator können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der Terms of Service Generator Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Terms of Service Generator sofort, um schnell, sicher und kostenlosen Online-Tools zu nutzen.",
       "usage_steps": [
         "Öffnen Sie die Seite des Terms of Service Generators",
@@ -4978,9 +4979,9 @@
     },
     "csv-viewer": {
       "name": "CSV Viewer",
-      "description": "View and parse CSV data in a table format.",
-      "seo_title": "Free CSV Viewer Online",
-      "seo_description": "View and parse CSV data in a table format online for free. Support custom delimiters, headers, and large files. Sort, filter, and search your data easily.",
+      "description": "Zeigen und parsen Sie CSV-Daten in Tabellenformat.",
+      "seo_title": "Kostenloser CSV-Viewer Online",
+      "seo_description": "Zeigen und parsen Sie CSV-Daten in Tabellenformat kostenlos online. Sortieren, filtern und durchsuchen Sie Ihre Daten.",
       "detailed_description": "CSV Viewer ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit CSV Viewer können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Sei Sie Entwickler, Designer oder allgemeiner Nutzer, CSV Viewer kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit garantiert und Ihre Daten werden nicht auf irgendeinem Server hochgeladen. Nutzen Sie CSV Viewer sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu genießen.",
       "usage_steps": [
         "Öffnen Sie die Seite des CSV Viewers",
@@ -4997,8 +4998,8 @@
     "htaccess-generator": {
       "name": ".htaccess Generator",
       "description": "Generiere eine .htaccess-Konfiguration für Apache-Server.",
-      "seo_title": "Free .htaccess Generator Online",
-      "seo_description": "Erstelle .htaccess-Konfigurationen für Apache-Server online für kostenlos. Erstelle Redirects, Rewrites, Sicherheitsregeln und Caching-Direktiven. Ein wesentlicher Bestandteil für Web-Hostings.",
+      "seo_title": "Kostenloser .htaccess Generator Online",
+      "seo_description": "Generieren Sie .htaccess-Konfiguration für Apache-Server kostenlos online. Erstellen Sie Weiterleitungen, Rewrites, Sicherheitsregeln und Caching-Direktiven. Web-Hosting unverzichtbar.",
       "urlSettings": "URL & SSL-Einstellungen",
       "forceHttps": "HTTPS zwingen",
       "forceWww": "WWW-Prefix zwingen",
@@ -5060,7 +5061,7 @@
     "curl-converter": {
       "name": "cURL Converter",
       "description": "Konvertieren Sie cURL-Befehle in Code in verschiedenen Sprachen.",
-      "seo_title": "Free cURL to Code Converter Online",
+      "seo_title": "Kostenloser cURL zu Code Konverter Online",
       "seo_description": "Konvertieren Sie cURL-Befehle in JavaScript, Python, PHP, Go und Java-Code online für kostenlos. Analysieren Sie Kopfzeilen, den Inhalt und die Authentifizierung. Unverzichtbar für die API-Integration.",
       "curlCommand": "cURL-Befehl",
       "placeholder": "Fügen Sie Ihren cURL-Befehl hier ein...",
@@ -5089,7 +5090,7 @@
     "reading-time-calculator": {
       "name": "Lesedauer-Rechner",
       "description": "Berechnen Sie die Lesedauer für jeden Text oder Artikel.",
-      "seo_title": "Free Reading Time Calculator Online",
+      "seo_title": "Kostenloser Lesezeit-Rechner Online",
       "seo_description": "Berechnen Sie die Lesedauer und die Wortanzahl für jeden Text online für kostenlos. Erhalten Sie Schätzungen für Durchschnittliche, langsame und schnelle Leser. Perfekt für Inhaltscreators.",
       "pasteText": "Ihr Text einfügen",
       "placeholder": "Fügen Sie Ihren Artikel, Blogbeitrag oder jeden Text hier ein, um die Lesedauer zu berechnen...",
@@ -5145,8 +5146,8 @@
     "twitter-card-generator": {
       "name": "Twitter-Card-Generator",
       "description": "Generieren Sie Twitter-Card-Meta-Tags für eine bessere Tweet-Vorschau.",
-      "seo_title": "Free Twitter Card Generator Online",
-      "seo_description": "Generate Twitter Card meta tags for rich tweet previews online for free. Support summary, large image, and player cards. Optimize for Twitter sharing.",
+      "seo_title": "Kostenloser Twitter Card Generator Online",
+      "seo_description": "Generieren Sie Twitter Card Meta-Tags für reichhaltige Tweet-Vorschauen kostenlos online. Unterstützt Summary-, Large Image-Karten und mehr.",
       "detailed_description": "Twitter-Card-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Twitter-Card-Generator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Twitter-Card-Generator kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Twitter-Card-Generator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
       "usage_steps": [
         "Öffnen Sie die Twitter-Card-Generator-Tool-Seite",
@@ -5180,8 +5181,8 @@
     },
     "http-status-codes": {
       "name": "HTTP Status Codes",
-      "description": "Reference guide for all HTTP status codes.",
-      "seo_title": "HTTP Status Codes Reference",
+      "description": "Referenzhandbuch für alle HTTP-Statuscodes.",
+      "seo_title": "HTTP-Statuscodes Referenz",
       "seo_description": "Complete reference guide for all HTTP status codes and their meanings. Browse 1xx, 2xx, 3xx, 4xx, and 5xx codes with descriptions. Entwickler-Grundlage.",
       "searchPlaceholder": "Suche nach Statuscodes...",
       "allCategories": "Alle Kategorien",
@@ -5237,8 +5238,8 @@
     "text-cleaner": {
       "name": "Textreiniger",
       "description": "Bereinigen und formatieren Sie Text, indem Sie Leerzeichen, Zeilen und mehr entfernen.",
-      "seo_title": "Free Text Cleaner Online",
-      "seo_description": "Clean and format text by removing extra spaces, empty lines, HTML tags, and more online for free. Normalize whitespace and fix common formatting issues.",
+      "seo_title": "Kostenloser Text-Reiniger Online",
+      "seo_description": "Reinigen und formatieren Sie Text durch Entfernen von zusätzlichen Leerzeichen, leeren Zeilen, HTML-Tags und mehr kostenlos online. Perfekt für Datenaufbereitung und Inhaltsformatierung.",
       "input": "Eingabetext",
       "clear": "Löschen",
       "cleanedText": "Bereinigter Text",
@@ -5271,8 +5272,8 @@
     "list-randomizer": {
       "name": "Listen-Zufallsgenerator",
       "description": "Mischen und randomisieren Sie Listen mit Elementen.",
-      "seo_title": "Free List Randomizer Online",
-      "seo_description": "Shuffle and randomize lists of items or names online for free. Perfect for random selection, lottery draws, and fair ordering. Secure randomization.",
+      "seo_title": "Kostenloser Listen-Randomisierer Online",
+      "seo_description": "Mischen und randomisieren Sie Listen von Elementen oder Namen kostenlos online. Perfekt für zufällige Auswahl, Verlosungen und faire Reihenfolge. Sichere Randomisierung.",
       "originalList": "Originalliste",
       "randomizedList": "Randomisierte Liste",
       "clear": "Löschen",
@@ -5367,8 +5368,8 @@
     "image-watermark": {
       "name": "Bildwasserzeichen",
       "description": "Fügen Sie Textwasserzeichen zu Bildern hinzu.",
-      "seo_title": "Free Image Watermark Tool Online",
-      "seo_description": "Add text watermarks to images online for free. Customize font, size, color, opacity, and position. Protect your photos and artwork from unauthorized use.",
+      "seo_title": "Kostenloses Bild-Wasserzeichen-Tool Online",
+      "seo_description": "Fügen Sie Textwasserzeichen zu Bildern kostenlos online hinzu. Passen Sie Schriftart, Größe, Farbe und Position an.",
       "uploadImage": "Bild hochladen",
       "watermarkText": "Wasserzeichentext",
       "textPlaceholder": "Wasserzeichentext eingeben...",
@@ -5400,8 +5401,8 @@
     "svg-to-image": {
       "name": "SVG zu Bild",
       "description": "Konvertieren Sie SVG-Dateien in PNG-, JPEG- oder WebP-Bilder.",
-      "seo_title": "Free SVG to Image Converter Online",
-      "seo_description": "Convert SVG to PNG, JPEG, WebP online for free. Set custom dimensions and background color. Perfect for exporting vector graphics for web and print use.",
+      "seo_title": "Kostenloser SVG zu Bild Konverter Online",
+      "seo_description": "Konvertieren Sie SVG zu PNG, JPEG, WebP kostenlos online. Legen Sie benutzerdefinierte Dimensionen und Hintergrundfarbe fest. Perfekt für den Export von Vektorgrafiken.",
       "uploadSvg": "SVG-Datei hochladen",
       "svgCode": "SVG Code",
       "loadSample": "Beispiel laden",
@@ -5429,7 +5430,7 @@
       "name": "Hex Base64 Konverter",
       "description": "Konvertieren zwischen Hexadezimal- und Base64-Kodierung.",
       "seo_title": "Kostenloser Hex Base64 Konverter Online",
-      "seo_description": "Konvertieren Sie online Hex nach Base64 oder Base64 nach Hex. Unentbehrlich für Kryptographie und Datenkodierungsaufgaben.",
+      "seo_description": "Konvertieren Sie zwischen Hex und Base64 kostenlos online. Kodieren Sie Hexadezimal zu Base64 oder dekodieren Sie Base64 zu Hex. Unverzichtbar für Kryptographie und Datenkodierung.",
       "hexToBase64": "Hex → Base64",
       "base64ToHex": "Base64 → Hex",
       "swap": "Tauschen",
@@ -5455,8 +5456,8 @@
     "pdf-to-base64": {
       "name": "PDF zu Base64",
       "description": "Konvertieren Sie PDF-Dateien in Base64-Kodierung.",
-      "seo_title": "Free PDF to Base64 Converter Online",
-      "seo_description": "Convert PDF files to Base64 encoding online for free. Embed PDFs in HTML, JSON, or data URIs. Secure browser-based conversion with no file upload to servers.",
+      "seo_title": "Kostenloser PDF zu Base64 Konverter Online",
+      "seo_description": "Konvertieren Sie PDF-Dateien in Base64-Kodierung kostenlos online. Betten Sie PDFs in HTML, JSON oder Daten-URIs ein. Sichere Browser-Konvertierung ohne Server-Upload.",
       "dropzone": "Legen Sie die PDF-Datei hier ab oder klicken Sie zum Hochladen",
       "acceptedFormat": "Akzeptiertes Format: PDF",
       "errorNotPdf": "Bitte wählen Sie eine PDF-Datei aus",
@@ -5484,8 +5485,8 @@
     "audio-to-base64": {
       "name": "Audio zu Base64",
       "description": "Konvertieren Sie Audiodateien in Base64-Kodierung.",
-      "seo_title": "Free Audio to Base64 Converter Online",
-      "seo_description": "Convert audio files to Base64 encoding online for free. Support MP3, WAV, OGG formats. Embed audio in HTML, JSON, or data URIs. Browser-based processing.",
+      "seo_title": "Kostenloser Audio zu Base64 Konverter Online",
+      "seo_description": "Konvertieren Sie Audiodateien in Base64-Kodierung kostenlos online. Unterstützt MP3, WAV, OGG-Formate. Betten Sie Audio in HTML, JSON oder Daten-URIs ein. Browser-Verarbeitung.",
       "dropzone": "Legen Sie die Audiodatei hier ab oder klicken Sie zum Hochladen",
       "acceptedFormats": "Unterstützt: MP3, WAV, OGG, WebM, AAC, FLAC",
       "errorNotAudio": "Bitte wählen Sie eine Audiodatei aus",
@@ -5512,8 +5513,8 @@
     "video-to-base64": {
       "name": "Video nach Base64 konvertieren",
       "description": "Konvertieren Sie Videodateien in Base64-Kodierung.",
-      "seo_title": "Kostenloser Online Video nach Base64 Konverter",
-      "seo_description": "Konvertieren Sie Videodateien in Base64-Kodierung online kostenlos. Unterstützung von MP4, WebM und weiteren Formaten. Einfügen von Videos in HTML, JSON oder Daten-URIs. Browserbasierte Verarbeitung.",
+      "seo_title": "Kostenloser Video zu Base64 Konverter Online",
+      "seo_description": "Konvertieren Sie Videodateien in Base64-Kodierung kostenlos online. Unterstützt MP4, WebM und weitere Formate. Betten Sie Video in HTML oder JSON ein.",
       "dropzone": "Ziehen Sie eine Videodatei hierher oder klicken Sie zum Hochladen",
       "maxSize": "Maximale Dateigröße: 10MB",
       "errorNotVideo": "Bitte wählen Sie eine Videodatei aus",
@@ -5752,8 +5753,8 @@
     "html-to-text": {
       "name": "HTML zu Text",
       "description": "Konvertieren Sie HTML in einfachen Text und entfernen Sie alle Tags.",
-      "seo_title": "Free HTML to Text Converter Online",
-      "seo_description": "Convert HTML to plain text, removing all tags and preserving content structure. Handle links, lists, and tables intelligently. For content extraction.",
+      "seo_title": "Kostenloser HTML zu Text Konverter Online",
+      "seo_description": "Konvertieren Sie HTML in reinen Text, entfernen Sie alle Tags und bewahren Sie die Inhaltsstruktur. Perfekt für Inhaltsextraktion und Datenbereinigung.",
       "preserveLinks": "Links beibehalten als (URL)",
       "preserveLineBreaks": "Zeilenumbrüche beibehalten",
       "preserveLists": "Listenformatierung beibehalten",
@@ -5932,8 +5933,8 @@
     "mac-address-generator": {
       "name": "MAC-Adresse-Generator",
       "description": "Erstellen Sie zufällige MAC-Adressen mit Optionen.",
-      "seo_title": "MAC-Adresse-Generator Online",
-      "seo_description": "Erstellen Sie zufällige MAC-Adressen mit Präfix-, Trennzeichen- und Bit-Flag-Optionen. Unterstützung von unicast/multicast und universellen/lokalen Flags. Für Tests und Entwicklung.",
+      "seo_title": "Online MAC-Adress-Generator",
+      "seo_description": "Generieren Sie zufällige MAC-Adressen mit Präfix-, Trennzeichen- und Bit-Flag-Optionen. Unterstützt Unicast/Multicast und Universal/Local-Flags. Für Tests und Entwicklung.",
       "count": "Anzahl",
       "separator": "Trennzeichen",
       "sepColon": "Doppelpunkt (:)",
@@ -6070,7 +6071,7 @@
     "text-template": {
       "name": "Textvorlage",
       "description": "Ersetzen Sie Variablen in Textvorlagen durch Werte.",
-      "seo_title": "Free Text Template Engine Online",
+      "seo_title": "Kostenlose Text-Template-Engine Online",
       "seo_description": "Simple text template engine. Replace {{ variables }} with values from your data. Support loops, conditionals, and nested objects. Generate dynamic content.",
       "template": "Vorlage",
       "templatePlaceholder": "Vorlage mit {{ Variablen }} eingeben...",
@@ -6096,8 +6097,8 @@
     "base-calculator": {
       "name": "Basisrechner",
       "description": "Führen Sie Berechnungen in verschiedenen Zahlenbasen durch.",
-      "seo_title": "Free Base Calculator Online",
-      "seo_description": "Calculate in binary, octal, decimal, and hexadecimal. Supports arithmetic and bitwise operations like AND, OR, XOR, NOT, shift. For low-level programming.",
+      "seo_title": "Kostenloser Basis-Rechner Online",
+      "seo_description": "Rechnen Sie in Binär, Oktal, Dezimal und Hexadezimal. Unterstützt arithmetische und Bit-Operationen. Unverzichtbar für Programmierer.",
       "base": "Zahlenbasis",
       "binary": "Binär",
       "octal": "Oktal",
@@ -6128,8 +6129,8 @@
     "color-name-finder": {
       "name": "Farbnamen-Finder",
       "description": "Finden Sie für jeden Farbwert den nächstgelegenen Farbnamen.",
-      "seo_title": "Free Color Name Finder Online",
-      "seo_description": "Find the closest named color for any hex color value. Browse CSS color names, X11 colors, and web-safe colors. For designers and accessibility compliance.",
+      "seo_title": "Kostenloser Farbnamen-Finder Online",
+      "seo_description": "Finden Sie den nächsten benannten Farbwert für jeden Hex-Farbwert. Durchsuchen Sie CSS-Farbnamen und Web-Farben.",
       "inputLabel": "Farbe",
       "find": "Finden Sie den Farbnamen",
       "closestColors": "Nächste Farben",
@@ -6150,8 +6151,8 @@
     "char-frequency": {
       "name": "Zeichenhäufigkeits-Analyse-Tool",
       "description": "Analyse die Häufigkeit von Zeichen im Text.",
-      "seo_title": "Kostenloses Zeichenhäufigkeits-Analyse-Tool online",
-      "seo_description": "Analyse die Häufigkeit und Verteilung von Zeichen im Text. Erhalte Zählgewichte, Prozente und visuelle Diagramme für jedes Zeichen. Für Kryptographie und Textanalyse.",
+      "seo_title": "Kostenloser Zeichenfrequenz-Analysator Online",
+      "seo_description": "Analysieren Sie Zeichenfrequenz und -verteilung in Text. Erhalten Sie Zählungen, Prozentsätze und visuelle Diagramme für jedes Zeichen. Für Kryptographie und Textanalyse.",
       "inputLabel": "Text",
       "placeholder": "Geben Sie den Text ein, der analysiert werden soll...",
       "ignoreSpaces": "Leerzeichen ignorieren",
@@ -6176,7 +6177,7 @@
       "name": "JSON zu Dart",
       "description": "Konvertieren Sie JSON in Dart-Klassen mit fromJson und toJson Methoden.",
       "seo_title": "Kostenloser JSON zu Dart Konverter Online",
-      "seo_description": "Konvertieren Sie JSON in Dart-Klassen-Code mit Fabrik-Konstruktoren und Serialisierungsmethoden. Unterstützung von Null-Sicherheit und verschachtelten Klassen. Für Flutter-App-Entwicklung.",
+      "seo_description": "Konvertieren Sie JSON in Dart-Klassencode mit Factory-Konstruktoren und Serialisierungsmethoden. Unverzichtbar für Flutter-Entwicklung.",
       "className": "Klassenname",
       "convert": "Konvertieren",
       "detailed_description": "JSON zu Dart ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON zu Dart können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, JSON zu Dart kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie JSON zu Dart sofort, um schnelle, sichere und kostenlose Online-Toolservices zu erleben.",
@@ -6426,7 +6427,7 @@
       ]
     },
     "radar-chart-generator": {
-      "name": "Radar Chart Generator",
+      "name": "Radar-Diagramm-Generator",
       "description": "Erstellen Sie Radardiagramme online. Vergleichen Sie mehrere Dimensionen und exportieren Sie als PNG/SVG.",
       "seo_title": "Kostenloser Online Radar Chart Generator",
       "seo_description": "Erstellen Sie professionelle Radardiagramme online kostenlos. Vergleichen Sie mehrere Dimensionen und Datenreihen. Exportieren Sie als PNG oder SVG.",
@@ -6746,7 +6747,7 @@
       ]
     },
     "heatmap-chart-generator": {
-      "name": "Heatmap Chart Generator",
+      "name": "Heatmap-Generator",
       "description": "Erstellen Sie Heatmap-Charts online. Visualisieren Sie Daten-Dichte und exportieren Sie als PNG/SVG.",
       "seo_title": "Kostenloser Online Heatmap Chart Generator",
       "seo_description": "Erstellen Sie professionelle Heatmap-Charts online kostenlos. Visualisieren Sie Datenmuster. Exportieren Sie als PNG oder SVG.",
@@ -7247,7 +7248,7 @@
       ]
     },
     "graph-chart-generator": {
-      "name": "Graph Chart Generator",
+      "name": "Graph-Diagramm-Generator",
       "description": "Erstellen Sie Online-Grafiknetzdiagramme. Visualisieren Sie Beziehungen und exportieren Sie als PNG/SVG.",
       "seo_title": "Kostenloser Online Graph Chart Generator",
       "seo_description": "Erstellen Sie professionelle Graphikdiagramme online kostenlos. Visualisieren Sie Netzwerkbeziehungen. Exportieren Sie als PNG oder SVG.",
@@ -7378,7 +7379,7 @@
       "name": "Polar-Balkendiagramm-Generator",
       "description": "Erstellen Sie Polar-Balkendiagramme online. Daten radial visualisieren und als PNG/SVG exportieren.",
       "seo_title": "Kostenloser Online Polar-Balkendiagramm-Generator",
-      "seo_description": "Erstellen Sie professionelle Polar-Balkendiagramme online kostenlos. Daten in polaren Koordinaten visualisieren. Als PNG oder SVG exportieren.",
+      "seo_description": "Erstellen Sie professionelle Polar-Balkendiagramme kostenlos online. Visualisieren Sie Daten in Polarkoordinaten. Export als PNG oder SVG.",
       "chartTitle": "Diagrammtitel",
       "chartTitlePlaceholder": "Geben Sie den Diagrammtitel ein",
       "colorTheme": "Farbthema",
@@ -7447,10 +7448,10 @@
       ]
     },
     "parallel-chart-generator": {
-      "name": "Parallel Chart Generator",
+      "name": "Parallelkoordinaten-Generator",
       "description": "Erstellen Sie online Parallelkoordinaten diagramsme. Vergleichen Sie mehrdimensionale Daten und exportieren Sie als PNG/SVG.",
-      "seo_title": "Kostenloser Online Parallel Chart Generator",
-      "seo_description": "Erstellen Sie professionelle Parallelkoordinaten diagramsme online kostenlos. Vergleichen Sie mehrdimensionale Daten. Exportieren Sie als PNG oder SVG.",
+      "seo_title": "Kostenloser Online Parallelkoordinaten-Generator",
+      "seo_description": "Erstellen Sie professionelle Parallelkoordinaten-Diagramme kostenlos online. Vergleichen Sie mehrdimensionale Daten. Export als PNG oder SVG.",
       "chartTitle": "Diagrammtitel",
       "chartTitlePlaceholder": "Geben Sie den Diagrammtitel ein",
       "colorTheme": "Farbthema",
@@ -7707,8 +7708,8 @@
     },
     "venn-diagram-generator": {
       "name": "Venn-Diagramm-Generator",
-      "seo_title": "Free Online Venn Diagram Generator",
-      "seo_description": "Create 2-set or 3-set Venn diagrams online. Visualize logical relationships and overlaps. Free and easy to use.",
+      "seo_title": "Kostenloser Online Venn-Diagramm-Generator",
+      "seo_description": "Erstellen Sie 2- oder 3-Mengen Venn-Diagramme online. Visualisieren Sie logische Beziehungen und Überschneidungen. Kostenlos und einfach zu bedienen.",
       "title": "Venn-Diagramm-Generator",
       "description": "Erstellen Sie Venn-Diagramme, um logische Beziehungen zwischen Mengen darzustellen.",
       "defaultTitle": "Beispiel für ein Venn-Diagramm",
@@ -7744,8 +7745,8 @@
     },
     "timeline-chart-generator": {
       "name": "Zeitstrahlgenerator",
-      "seo_title": "Kostenloser Online Zeitstrahlgenerator",
-      "seo_description": "Erstellen Sie vertikale oder horizontale Zeitstrahldiagramme online. Visualisieren Sie Geschichte, Meilensteine und Prozesse. Kostenlos exportieren.",
+      "seo_title": "Kostenloser Online Zeitstrahl-Generator",
+      "seo_description": "Erstellen Sie vertikale oder horizontale Zeitstrahlen online. Visualisieren Sie Geschichte, Meilensteine und Prozesse. Kostenloser Export.",
       "title": "Zeitstrahlgenerator",
       "description": "Erstellen Sie Zeitstrahldiagramme, um Abfolgen von Ereignissen darzustellen.",
       "defaultTitle": "Firmenmeilensteine",
@@ -7922,7 +7923,7 @@
       ]
     },
     "stacked-bar-chart-generator": {
-      "name": "Stacked Bar Chart Generator",
+      "name": "Gestapeltes Balkendiagramm-Generator",
       "description": "Erstellen Sie online gestapelte Balkendiagramme. Zeigen Sie die Zusammensetzung der Gesamtwerte across Kategorien.",
       "seo_title": "Kostenloser Online Gestapelter Balkendiagramm Generator",
       "seo_description": "Erstellen Sie gestapelte Balkendiagramme online kostenlos. Visualisieren Sie, wie Teile zum Gesamtwert beitragen. Als PNG oder SVG exportieren.",
@@ -8055,7 +8056,7 @@
       ]
     },
     "step-line-chart-generator": {
-      "name": "Step Line Chart Generator",
+      "name": "Stufen-Liniendiagramm-Generator",
       "description": "Erstellen Sie online Schrittkettenlinien Diagramme. Visualisieren Sie diskrete Datenänderungen im Laufe der Zeit.",
       "seo_title": "Kostenloser Online Schrittkettenlinien Diagramm Generator",
       "seo_description": "Erstellen Sie online Schrittkettenlinien Diagramme kostenlos. Zeigen Sie diskrete Datenänderungen mit schrittweisen Übergängen. Als PNG oder SVG exportieren.",
@@ -8195,7 +8196,7 @@
       ]
     },
     "stacked-area-chart-generator": {
-      "name": "Stacked Area Chart Generator",
+      "name": "Gestapeltes Flächendiagramm-Generator",
       "description": "Erstellen Sie online gestapelte Flächendiagramme. Zeigen Sie, wie Komponenten zu Gesamtwerten über die Zeit beitragen.",
       "seo_title": "Kostenloser Online Gestapeltes Flächendiagramm Generator",
       "seo_description": "Erstellen Sie online gestapelte Flächendiagramme kostenlos. Visualisieren Sie kumulative Trends und Kompositionen. Als PNG oder SVG exportieren.",
@@ -10761,7 +10762,7 @@
       ]
     },
     "chinese-lorem-ipsum": {
-      "name": "Chinesisches Lorem Ipsum",
+      "name": "Chinesischer Lorem Ipsum",
       "description": "Erstellen Sie chinesisches Platzhaltertext für Design-Vorlagen.",
       "seo_title": "Kostenloser Chinesisches Lorem Ipsum Generator Online",
       "seo_description": "Erstellen Sie chinesisches Platzhaltertext online kostenlos. Erstellen Sie Absätze, Sätze oder Wörter chinesischer Dummy-Text für Design-Vorlagen.",
@@ -11496,7 +11497,17 @@
       ],
       "anyGender": "Beliebiges Geschlecht",
       "neutral": "Neutral",
-      "clickToGenerate": "Klicken, um zu generieren"
+      "clickToGenerate": "Klicken, um zu generieren",
+      "origins": {
+        "english": "Englisch/Amerikanisch",
+        "spanish": "Spanisch/Hispanisch",
+        "french": "Französisch",
+        "german": "Deutsch",
+        "japanese": "Japanisch",
+        "chinese": "Chinesisch",
+        "korean": "Koreanisch",
+        "any": "Beliebige Herkunft"
+      }
     },
     "random-picker": {
       "name": "Zufallswähler",
@@ -12410,6 +12421,1105 @@
         "IP-Bereiche berechnen",
         "Netzwerkarchitektur entwerfen"
       ]
+    },
+    "iban-validator": {
+      "name": "IBAN-Validierer",
+      "description": "Validiert und analysiert IBAN-Bankkontonummern aus europäischen Ländern.",
+      "seo_title": "Kostenloser IBAN-Validierer online – Überprüfen Sie IBAN-Nummern",
+      "seo_description": "Überprüfen Sie IBAN-Bankkontonummern online kostenlos. Überprüfen Sie Format, Landcode und Prüfziffer. Unterstützt alle europäischen Länder. Schnell und sicher.",
+      "inputLabel": "IBAN eingeben",
+      "placeholder": "z. B. DE89370400440532013000",
+      "validate": "Validieren",
+      "valid": "Gültige IBAN",
+      "invalid": "Ungültige IBAN",
+      "country": "Land",
+      "checkDigits": "Prüfziffern überprüfen",
+      "bankCode": "Bankcode",
+      "bban": "BBAN (Basiskontonummer)",
+      "formatted": "Formatierte IBAN",
+      "copy": "Kopieren",
+      "exampleIbans": "Beispiele für IBAN-Nummern",
+      "errors": {
+        "empty": "Bitte geben Sie eine IBAN ein",
+        "invalidFormat": "Ungültiges IBAN-Format",
+        "unknownCountry": "Unbekannter Landcode",
+        "invalidLength": "Ungültige Länge: Erwartet {erwartete} Zeichen, tatsächlich {tatsächliche} Zeichen",
+        "invalidChecksum": "Ungültige Prüfziffer – Die IBAN könnte falsch sein"
+      },
+      "detailed_description": "Der IBAN-Validierer ist ein umfassendes Tool zur Überprüfung internationaler Bankkontonummern (IBAN). Er überprüft das Format, den Landcode, die Länge und die Prüfziffer von IBAN-Nummern aus allen europäischen Ländern. Das Tool analysiert die IBAN außerdem, um den Bankcode, die Landinformationen sowie weitere Details anzuzeigen.",
+      "usage_steps": [
+        "Geben Sie eine IBAN-Nummer in das Eingabefeld ein oder kleben Sie sie dort an",
+        "Klicken Sie auf die Schaltfläche „Validieren“, um die IBAN zu überprüfen",
+        "Sehen Sie sich die Überprüfungsergebnisse einschließlich Land- und Bankinformationen an",
+        "Verwenden Sie Beispiel-IBAN-Nummern, um verschiedene Landformate zu testen",
+        "Kopieren Sie die formatierte IBAN für die Verwendung bei Banküberweisungen"
+      ],
+      "usage_examples": [
+        "Überprüfen Sie die IBAN vor internationalen Banküberweisungen",
+        "Prüfen Sie von Kunden bereitgestellte Bankkontonummern",
+        "Validieren Sie das IBAN-Format für Zahlungssysteme"
+      ]
+    },
+    "vat-calculator": {
+      "name": "MwSt.-Rechner",
+      "description": "Berechnen Sie die Mehrwertsteuer (MwSt.) für europäische Länder mit unterschiedlichen Steuersätzen.",
+      "seo_title": "Kostenloser MwSt.-Rechner online – EU-MwSt.-Rechner",
+      "seo_description": "Berechnen Sie die MwSt. für europäische Länder kostenlos online. Sie können die MwSt. zu einem Nettobetrag hinzufügen oder vom Bruttobetrag entfernen; Unterstützung für Standard- und ermäßigte Steuersätze. Alle EU-Länder sind enthalten.",
+      "amount": "Betrag",
+      "calculationMode": "Berechnungsmodus",
+      "addVat": "MwSt. zum Betrag hinzufügen",
+      "removeVat": "MwSt. vom Betrag entfernen",
+      "vatOnly": "Nur die MwSt. berechnen",
+      "useCustomRate": "Benutzerdefinierten MwSt.-Satz verwenden",
+      "customRate": "Benutzerdefinierter Steuersatz",
+      "country": "Land",
+      "rateType": "Steuersatztyp",
+      "standardRate": "Standardsteuersatz",
+      "reducedRate": "Ermäßigter Steuersatz",
+      "reducedRates": "Ermäßigte Steuersätze",
+      "superReducedRate": "Superermäßigter Steuersatz",
+      "netAmount": "Nettobetrag",
+      "vatAmount": "MwSt.-Betrag",
+      "grossAmount": "Bruttobetrag",
+      "euVatRates": "Referenz zu den EU-MwSt.-Sätzen",
+      "detailed_description": "Der MwSt.-Rechner ist ein umfassendes Tool zur Berechnung der Mehrwertsteuer in europäischen Ländern. Er unterstützt Standard-, ermäßigte und superermäßigte MwSt.-Sätze für alle EU-Mitgliedstaaten. Sie können die MwSt. zu einem Nettobetrag hinzufügen, die MwSt. vom Bruttobetrag entfernen oder nur den MwSt.-Anteil berechnen.",
+      "usage_steps": [
+        "Geben Sie den Betrag ein, für den Sie die MwSt. berechnen möchten",
+        "Wählen Sie den Berechnungsmodus aus (MwSt. hinzufügen, MwSt. entfernen oder nur die MwSt. berechnen)",
+        "Wählen Sie ein Land aus oder geben Sie einen benutzerdefinierten MwSt.-Satz ein",
+        "Wählen Sie den Steuersatztyp aus (Standard, ermäßigt oder superermäßigt)",
+        "Sehen Sie den berechneten Nettobetrag, den MwSt.-Betrag und den Bruttobetrag an"
+      ],
+      "usage_examples": [
+        "Berechnen Sie die MwSt. für Rechnungen und Geschäftstransaktionen",
+        "Bestimmen Sie den Nettopreis aus preis inklusive MwSt.",
+        "Vergleichen Sie die MwSt.-Sätze in verschiedenen EU-Ländern"
+      ]
+    },
+    "metric-imperial-converter": {
+      "name": "Metrischer-Imperialer-Währungsumrechner",
+      "description": "Umrechnet zwischen metrischen und imperialen Einheiten für Länge, Gewicht, Volumen usw.",
+      "seo_title": "Kostenloser Metrischer-Imperialer-Währungsumrechner – Einheitenumrechnung",
+      "seo_description": "Umrechnen Sie online und kostenlos zwischen metrischen und imperialen Einheiten für Länge, Gewicht, Volumen, Temperatur, Fläche und Geschwindigkeit. Schnell und präzise.",
+      "categories": {
+        "length": "Länge",
+        "weight": "Gewicht",
+        "volume": "Volumen",
+        "temperature": "Temperatur",
+        "area": "Fläche",
+        "speed": "Geschwindigkeit"
+      },
+      "from": "Von",
+      "to": "Zu",
+      "swap": "Einheiten tauschen",
+      "metric": "Metrisch",
+      "imperial": "Imperial",
+      "quickReference": "Schnelle Referenz",
+      "detailed_description": "Der Metrische-Imperialer-Währungsumrechner ist ein umfassendes Tool zur Umrechnung von Einheiten, das Umrechnungen für Länge, Gewicht, Volumen, Temperatur, Fläche und Geschwindigkeit unterstützt. Er ermöglicht die einfache Umrechnung zwischen metrischen Einheiten (Meter, Kilogramm, Liter) und imperialen Einheiten (Fuß, Pfund, Gallonen) mit sofortigen Ergebnissen.",
+      "usage_steps": [
+        "Wählen Sie eine Umrechnungskategorie aus (Länge, Gewicht, Volumen usw.).",
+        "Geben Sie den Wert ein, den Sie umrechnen möchten.",
+        "Wählen Sie die Quelleinheit aus der Dropdown-Liste aus.",
+        "Wählen Sie die Zieleinheit für die Umrechnung aus.",
+        "Sehen Sie das umgerechnete Ergebnis sofort an."
+      ],
+      "usage_examples": [
+        "Konvertieren Sie Kilometer in Meilen für die Reiseplanung.",
+        "Konvertieren Sie Kilogramm in Pfund zur Gewichtsüberwachung.",
+        "Konvertieren Sie Celsius in Fahrenheit für Temperaturvergleiche."
+      ]
+    },
+    "bic-swift-lookup": {
+      "name": "BIC/SWIFT-Auflösung",
+      "description": "Suchen und überprüfen Sie BIC/SWIFT-Code für internationale Banküberweisungen.",
+      "seo_title": "Kostenlose BIC/SWIFT-Code-Auflösung – Bankcode-Validator",
+      "seo_description": "Suchen und überprüfen Sie BIC/SWIFT-Code online kostenlos. Finden Sie Bankinformationen anhand der Codes. Wichtig für internationale Geldüberweisungen.",
+      "inputLabel": "Geben Sie den BIC/SWIFT-Code ein",
+      "placeholder": "z. B. DEUTDEFF",
+      "formatHint": "Format: 8 oder 11 Zeichen (z. B. DEUTDEFF oder DEUTDEFFXXX)",
+      "lookup": "Auflösen",
+      "validBic": "Gültiger BIC/SWIFT-Code",
+      "bankCode": "Bankcode",
+      "country": "Land",
+      "locationCode": "Ortscode",
+      "branchCode": "Filialcode",
+      "headOffice": "Hauptsitz",
+      "specificBranch": "Spezifische Filiale",
+      "bankInformation": "Bankinformationen",
+      "bankName": "Bankname",
+      "city": "Stadt",
+      "branch": "Filiale",
+      "copyBic": "BIC-Kopieren",
+      "bicStructure": "BIC/SWIFT-Code-Struktur",
+      "structure": {
+        "bank": "Bankcode",
+        "country": "Land",
+        "location": "Ort",
+        "branch": "Filiale (optional)"
+      },
+      "sampleCodes": "Beispiele für BIC-Codes",
+      "errors": {
+        "empty": "Bitte geben Sie einen BIC/SWIFT-Code ein",
+        "invalidFormat": "Ungültiges BIC-Format. Muss aus 8 oder 11 alphanumerischen Zeichen bestehen.",
+        "unknownCountry": "Unbekannter Landcode"
+      },
+      "detailed_description": "Das BIC/SWIFT-Auflösungstool überprüft und liefert Informationen zu Bankidentifikationscodes (BIC), die für internationale Geldüberweisungen verwendet werden. Geben Sie einen BIC-Code ein, um dessen Format zu überprüfen und Details zur Bank, zum Land und zur Filiale zu erhalten. Wichtig für die Sicherstellung genauer internationaler Zahlungen.",
+      "usage_steps": [
+        "Geben Sie einen BIC/SWIFT-Code in das Eingabefeld ein",
+        "Klicken Sie auf „Auflösen“, um Bankinformationen zu erhalten",
+        "Sehen Sie sich die analysierte Codestruktur (Bank, Land, Ort, Filiale) an",
+        "Überprüfen Sie Bankdetails, sofern sie im Datenbankverzeichnis vorhanden sind",
+        "Verwenden Sie Beispiele für BIC-Codes, um verschiedene Banken zu erkunden"
+      ],
+      "usage_examples": [
+        "Überprüfen Sie BIC-Codes vor der Durchführung internationaler Überweisungen",
+        "Suchen Sie Bankinformationen anhand von SWIFT-Codes",
+        "Überprüfen Sie Zahlungsdetails für grenzüberschreitende Transaktionen"
+      ]
+    },
+    "carbon-footprint-calculator": {
+      "name": "CO2-Fußabdruck-Rechner",
+      "description": "Berechnen Sie Ihren persönlichen CO2-Fußabdruck aus Transport, Energie und Lebensstil.",
+      "seo_title": "Kostenloser CO2-Fußabdruck-Rechner - CO2-Emissionen berechnen",
+      "seo_description": "Berechnen Sie Ihren CO2-Fußabdruck kostenlos online. Verfolgen Sie CO2-Emissionen aus Transport, Hausenergie und Ernährung.",
+      "monthly": "Monatlich",
+      "yearly": "Jährlich",
+      "month": "Monat",
+      "year": "Jahr",
+      "transportation": "Transport",
+      "carDistance": "Autofahrstrecke",
+      "petrol": "Benzin",
+      "diesel": "Diesel",
+      "hybrid": "Hybrid",
+      "electric": "Elektrisch",
+      "flightHours": "Flugstunden",
+      "shortHaul": "Kurzstrecke (<3h)",
+      "mediumHaul": "Mittelstrecke (3-6h)",
+      "longHaul": "Langstrecke (>6h)",
+      "trainDistance": "Zugstrecke",
+      "busDistance": "Busstrecke",
+      "homeEnergy": "Haushaltsenergie",
+      "electricity": "Strom",
+      "naturalGas": "Erdgas",
+      "heatingOil": "Heizöl",
+      "lifestyle": "Lebensstil",
+      "dietType": "Ernährungstyp",
+      "diets": {
+        "meat": "Viel Fleisch",
+        "average": "Durchschnitt",
+        "vegetarian": "Vegetarisch",
+        "vegan": "Vegan"
+      },
+      "results": "Ihr CO₂-Fußabdruck",
+      "total": "Gesamt",
+      "treesNeeded": "Bäume zur Kompensation",
+      "trees": "Bäume pro Jahr",
+      "levels": {
+        "low": "Geringe Auswirkung",
+        "average": "Durchschnitt",
+        "high": "Hohe Auswirkung",
+        "veryHigh": "Sehr hohe Auswirkung"
+      },
+      "detailed_description": "Der CO2-Fußabdruck-Rechner hilft Ihnen, Ihre Umweltauswirkungen zu messen.",
+      "usage_steps": [
+        "Berechnungszeitraum wählen",
+        "Transportdaten eingeben",
+        "Hausenergieverbrauch eingeben",
+        "Ernährungstyp wählen",
+        "Gesamten CO2-Fußabdruck anzeigen"
+      ],
+      "usage_examples": [
+        "Persönliche Umweltauswirkungen verfolgen",
+        "Verschiedene Lebensstilentscheidungen vergleichen",
+        "CO2-Ausgleichsstrategien planen"
+      ]
+    },
+    "gdpr-consent-generator": {
+      "name": "DSGVO-Einwilligungsgenerator",
+      "description": "Generieren Sie DSGVO-konforme Cookie-Einwilligungsbanner und Datenschutzrichtlinien.",
+      "seo_title": "Kostenloser DSGVO Cookie-Einwilligungsgenerator",
+      "seo_description": "Generieren Sie DSGVO-konforme Cookie-Einwilligungsbanner und Datenschutzrichtlinien kostenlos online.",
+      "websiteName": "Website-Name",
+      "websiteUrl": "Website-URL",
+      "companyName": "Firmenname",
+      "privacyEmail": "Datenschutz-E-Mail",
+      "cookieTypes": "Cookie-Typen",
+      "cookies": {
+        "necessary": "Notwendig",
+        "analytics": "Analyse",
+        "marketing": "Marketing",
+        "preferences": "Präferenzen"
+      },
+      "position": "Banner-Position",
+      "positionTop": "Oben",
+      "positionBottom": "Unten",
+      "theme": "Design",
+      "themeLight": "Hell",
+      "themeDark": "Dunkel",
+      "htmlCode": "HTML-Code",
+      "cssCode": "CSS-Code",
+      "privacyPolicy": "Datenschutzrichtlinie-Vorlage",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "bannerTitle": "Cookie-Einwilligung",
+      "decline": "Ablehnen",
+      "customize": "Anpassen",
+      "acceptAll": "Alle akzeptieren",
+      "disclaimer": "Dieser Generator bietet Vorlagen nur als Referenz.",
+      "detailed_description": "Der DSGVO-Einwilligungsgenerator erstellt anpassbare Cookie-Einwilligungsbanner.",
+      "usage_steps": [
+        "Website-Informationen eingeben",
+        "Cookie-Typen auswählen",
+        "Banner-Position und Design wählen",
+        "Code kopieren",
+        "Datenschutzrichtlinie anpassen"
+      ],
+      "usage_examples": [
+        "DSGVO-konforme Cookie-Einwilligung hinzufügen",
+        "Datenschutzrichtlinien erstellen",
+        "Cookie-Präferenzverwaltung implementieren"
+      ]
+    },
+    "phone-formatter": {
+      "name": "Telefonnummer-Formatierer",
+      "description": "Formatiert Telefonnummern gemäß internationalen Standards für verschiedene Länder.",
+      "seo_title": "Kostenloser Online-Telefonnummer-Formatierer – Internationales Formatieren",
+      "seo_description": "Formatieren Sie Telefonnummern kostenlos online nach internationalen Standards. Unterstützung für mehr als 14 Länder, darunter USA, UK, China, Japan. Inklusive Ländervorwahlen.",
+      "country": "Land",
+      "phoneNumber": "Telefonnummer",
+      "inputPlaceholder": "Geben Sie die Telefonnummer ein...",
+      "includeDialCode": "Ländervorwahl mit einbeziehen",
+      "format": "Formatierung",
+      "formatPattern": "Formatierungsmuster",
+      "example": "Beispiel",
+      "result": "Geformaterte Nummer",
+      "copy": "Kopieren",
+      "allFormats": "Alle Länderformate",
+      "detailed_description": "Der Telefonnummer-Formatierer wandelt unformatierte Telefonnummern in korrekt formatierte internationale Versionen um. Wählen Sie aus mehr als 14 Ländern aus und erhalten Sie richtig formatierte Nummern – mit oder ohne Ländervorwahl. Perfekt zur Standardisierung von Kontaktdaten.",
+      "usage_steps": [
+        "Wählen Sie das Zielland aus der Dropdown-Liste aus",
+        "Geben Sie die Telefonnummer ein",
+        "Wählen Sie aus, ob die Ländervorwahl mit einbezogen werden soll",
+        "Klicken Sie auf „Formatieren“, um die geformatete Nummer zu generieren",
+        "Kopieren Sie das Ergebnis in die Zwischenablage"
+      ],
+      "usage_examples": [
+        "Formatieren Sie Telefonnummern für internationale Anrufe",
+        "Standardisieren Sie Kontaktdatenlisten für CRM-Systeme",
+        "Vorbereiten Sie Telefonnummern für SMS-Kampagnen"
+      ]
+    },
+    "credit-card-validator": {
+      "name": "Kreditkarten-Validierer",
+      "description": "Validiert Kreditkartennummern mithilfe des Luhn-Algorithmus und erkennt die Kartenart.",
+      "seo_title": "Kostenloser Online-Kreditkarten-Validierer – Luhn-Prüfung",
+      "seo_description": "Kreditkartennummern können kostenlos online überprüft werden. Der Luhn-Algorithmus wird verwendet, um die Gültigkeit der Kartennummern zu überprüfen. Erkennung von Visa, Mastercard, Amex und weiteren Kartenarten.",
+      "cardNumber": "Kartennummer",
+      "inputPlaceholder": "Geben Sie die Kartennummer ein...",
+      "validate": "Validieren",
+      "valid": "Gültig",
+      "invalid": "Ungültig",
+      "luhnCheck": "Luhn-Prüfung",
+      "passed": "Bestanden",
+      "failed": "Fehlgeschlagen",
+      "digits": "Ziffern",
+      "digitsCount": "Anzahl der Ziffern",
+      "disclaimer": "Dieses Tool überprüft nur die mathematische Struktur der Kartennummern. Es stellt nicht sicher, ob die Karte aktiv ist oder über ausreichend Guthaben verfügt. Geben Sie niemals echte Kartennummern auf unzuverlässigen Webseiten ein.",
+      "supportedCards": "Unterstützte Kartenarten",
+      "detailed_description": "Der Kreditkarten-Validierer prüft, ob eine Kreditkartennummer mathematisch gültig ist, indem er den Luhn-Algorithmus anwendet. Er erkennt automatisch die Kartenart (Visa, Mastercard, Amex usw.) und liefert detaillierte Validierungsergebnisse. Nur für Test- und Entwicklungszwecke geeignet.",
+      "usage_steps": [
+        "Geben Sie eine Kreditkartennummer in das Eingabefeld ein.",
+        "Die Zahl wird automatisch mit Leerzeichen formatiert.",
+        "Klicken Sie auf „Validieren“, um die Karte zu überprüfen.",
+        "Sehen Sie die Kartenart, den Emittenten sowie das Ergebnis der Luhn-Prüfung an.",
+        "Überprüfen Sie die Anzahl der Ziffern für zusätzliche Validierung."
+      ],
+      "usage_examples": [
+        "Prüfen Sie die Validierungslogik von Zahlungsformularen.",
+        "Stellen Sie vor der Verarbeitung die Formatierung der Kartennummer sicher.",
+        "Identifizieren Sie die Kartenart anhand des Nummernvorzeichens."
+      ]
+    },
+    "color-blindness-simulator": {
+      "name": "Farbenblindheitssimulator",
+      "description": "Simuliert, wie Farben und Bilder für Menschen mit verschiedenen Arten von Farbenblindheit erscheinen.",
+      "seo_title": "Kostenloser Farbenblindheitssimulator online – Tool für Barrierefreiheit",
+      "seo_description": "Simulieren Sie Farbenblindheit online kostenlos. Testen Sie, wie Farben und Bilder für Menschen mit Protanopie, Deuteranopie oder Tritanopie wahrgenommen werden. Wichtig für barrierefreies Design.",
+      "selectColor": "Farbe auswählen",
+      "uploadImage": "Bild hochladen (optional)",
+      "colorComparison": "Farbvergleich",
+      "imagePreview": "Bildvorschau",
+      "original": "Original",
+      "aboutTitle": "Über Farbenblindheit",
+      "aboutDescription": "Farbenblindheit betrifft weltweit etwa 8 % der Männer und 0,5 % der Frauen. Mit diesem Simulator zu testen, hilft dabei, sicherzustellen, dass Ihre Inhalte für alle zugänglich sind.",
+      "types": {
+        "normal": "Normal",
+        "protanopia": "Protanopie",
+        "deuteranopia": "Deuteranopie",
+        "tritanopia": "Tritanopie",
+        "achromatopsia": "Achromatopsie"
+      },
+      "detailed_description": "Der Farbenblindheitssimulator hilft Designern und Entwicklern dabei, zu überprüfen, wie ihre Farben und Bilder für Menschen mit verschiedenen Arten von Sehstörungen erscheinen. Unterstützt die Simulation von Protanopie, Deuteranopie, Tritanopie sowie vollständiger Farbenblindheit.",
+      "usage_steps": [
+        "Eine Farbe mithilfe des Farbwählers auswählen oder einen Hex-Code eingeben",
+        "Optional ein Bild hochladen, um es zu testen",
+        "Auf verschiedene Arten von Farbenblindheit klicken, um die Simulationen anzusehen",
+        "Vergleichen Sie, wie die Farbe bei allen Sehstörungen dargestellt wird",
+        "Verwenden Sie die Bildvorschau, um die vollständigen Bildsimulationen zu betrachten"
+      ],
+      "usage_examples": [
+        "Webseitenfarbschemata auf ihre Barrierefreiheit prüfen",
+        "Überprüfen, ob Farben von Diagrammen und Grafiken unterscheidbar sind",
+        "Stellen Sie sicher, dass Benutzeroberflächenelemente für alle Nutzer sichtbar sind"
+      ]
+    },
+    "markdown-to-pdf": {
+      "name": "Markdown zu PDF",
+      "description": "Konvertieren Sie Markdown-Dokumente in PDFs mit anpassbarer Formatierung.",
+      "seo_title": "Kostenloser Markdown-zu-PDF-Converter online",
+      "seo_description": "Konvertieren Sie Markdown-Dokumente kostenlos online in PDFs. Unterstützung für Überschriften, Listen, Tabellen und Codeblöcke. Anpassbare Schriftgröße und Seitengröße. Kein Upload erforderlich.",
+      "documentTitle": "Dokumentenüberschrift",
+      "fontSize": "Schriftgröße",
+      "pageSize": "Seitengröße",
+      "markdownInput": "Markdown-Eingabe",
+      "inputPlaceholder": "Geben Sie hier Ihren Markdown-Text ein...",
+      "preview": "Vorschau",
+      "generatePdf": "PDF erstellen",
+      "clear": "Löschen",
+      "supportedSyntax": "Unterstützte Markdown-Syntax",
+      "headings": "Überschriften (# ## ###)",
+      "boldItalic": "Fett & Kursiv",
+      "lists": "Listen (- oder 1.)",
+      "codeBlocks": "Codeblöcke",
+      "tables": "Tabellen",
+      "blockquotes": "Blockzitate",
+      "horizontalRules": "Horizontale Linien",
+      "inlineCode": "Eingebetteter Code",
+      "detailed_description": "Der Markdown-zu-PDF-Converter wandelt Ihre Markdown-Dokumente in professionell formatierte PDF-Dateien um. Unterstützt Überschriften, Listen, Tabellen, Codeblöcke und mehr. Passen Sie die Schriftgröße und Seitengröße vor der Erstellung an.",
+      "usage_steps": [
+        "Ihren Markdown-Text eingeben oder einfügen",
+        "Die Dokumentenüberschrift für das PDF festlegen",
+        "Schriftgröße und Seitengröße auswählen",
+        "Die formatierte Ausgabe vor dem Erstellen ansehen",
+        "Auf „PDF erstellen“ klicken, um das PDF zu erstellen und herunterzuladen"
+      ],
+      "usage_examples": [
+        "Dokumentation in PDFs für die Weitergabe konvertieren",
+        "Aus Markdown-Notizen druckbare Berichte erstellen",
+        "PDF-Versionen von README-Dateien generieren"
+      ]
+    },
+    "email-validator": {
+      "name": "E-Mail-Validator",
+      "description": "Validieren Sie E-Mail-Adressen und prüfen Sie auf Tippfehler und Wegwerf-Domains.",
+      "seo_title": "Kostenloser E-Mail-Validator Online - Format prüfen",
+      "seo_description": "Validieren Sie E-Mail-Adressen kostenlos online. Format prüfen, Tippfehler erkennen, Wegwerf-E-Mails identifizieren.",
+      "inputLabel": "Enter Email Addresses",
+      "inputPlaceholder": "Eine E-Mail pro Zeile eingeben...",
+      "validate": "Validieren",
+      "valid": "Valid",
+      "invalid": "Ungültig",
+      "localPart": "Lokaler Teil",
+      "domain": "Domain",
+      "tld": "TLD",
+      "freeProvider": "Kostenloser Anbieter",
+      "disposable": "Wegwerf",
+      "didYouMean": "Meinten Sie",
+      "detailed_description": "Email Validator helps you verify email addresses for correct format and common issues. It detects typos in popular domains, identifies disposable email services, and validates the overall structure. Perfect for cleaning email lists and preventing invalid signups.",
+      "usage_steps": [
+        "Enter one or more email addresses (one per line)",
+        "Click Validate to check all emails",
+        "Review results showing valid and invalid addresses",
+        "Check for typo suggestions and disposable domain warnings",
+        "Use the summary to see total valid and invalid counts"
+      ],
+      "usage_examples": [
+        "Validate email lists before sending campaigns",
+        "Check user input during registration",
+        "Clean up contact databases"
+      ]
+    },
+    "aspect-ratio-resizer": {
+      "name": "Seitenverhältnis-Anpasser",
+      "description": "Bilder auf bestimmte Seitenverhältnisse oder Social-Media-Größen anpassen.",
+      "seo_title": "Kostenloser Seitenverhältnis-Anpasser - Bildgrößen-Tool",
+      "seo_description": "Bilder kostenlos auf beliebige Seitenverhältnisse anpassen. Voreingestellte Größen für Instagram, Facebook, YouTube, Twitter.",
+      "uploadImage": "Bild hochladen",
+      "originalSize": "Originalgröße",
+      "width": "Width",
+      "height": "Höhe",
+      "lockAspectRatio": "Seitenverhältnis sperren",
+      "presetRatios": "Voreingestellte Verhältnisse",
+      "socialMediaSizes": "Social-Media-Größen",
+      "outputSize": "Ausgabegröße",
+      "download": "Herunterladen",
+      "preview": "Vorschau",
+      "detailed_description": "Der Seitenverhältnis-Anpasser hilft Ihnen, Bilder auf bestimmte Abmessungen zu ändern, während das Seitenverhältnis beibehalten oder geändert wird. Enthält Voreinstellungen für gängige Verhältnisse und Social-Media-Plattformen.",
+      "usage_steps": [
+        "Upload an image using the file input",
+        "View the original dimensions",
+        "Enter custom width and height or use presets",
+        "Toggle aspect ratio lock as needed",
+        "Click Download to save the resized image"
+      ],
+      "usage_examples": [
+        "Resize photos for social media posts",
+        "Create thumbnails with specific dimensions",
+        "Prepare images for website banners"
+      ]
+    },
+    "speech-timer": {
+      "name": "Redner-Timer",
+      "description": "Zeitmanagement für Ihre Reden und Präsentationen mit Wortzählung",
+      "seo_title": "Kostenloser Redner-Timer Online - Präsentationstimer mit Wortzählung",
+      "seo_description": "Kostenloser Online-Redner-Timer für Präsentationen. Überwachen Sie Ihre Redezeit, schätzen Sie die Wortzahl und üben Sie Ihre Reden mit unserem einfach zu bedienenden Timer-Tool.",
+      "detailed_description": "Redner-Timer ist ein professionelles Präsentationstiming-Tool, das Redner dabei hilft, Reden effektiv zu üben und zu halten. Es bietet Echtzeit-Countdown, Wortzählung basierend auf der Sprechgeschwindigkeit und visuelle Warnungen, wenn die Zeit knapp wird.",
+      "usage_steps": [
+        "Setzen Sie Ihre geplante Rededauer",
+        "Optional geben Sie Ihren Redetext für die Wortzählung ein",
+        "Klicken Sie auf Start, um den Countdown zu beginnen",
+        "Überwachen Sie den visuellen Fortschrittsindikator",
+        "Erhalten Sie Warnungen, wenn die Zeit fast abgelaufen ist"
+      ],
+      "usage_examples": [
+        "TED-style Präsentationen üben",
+        "Reden auf wissenschaftlichen Konferenzen zeitmanagement",
+        "Bereiten Sie Präsentationen für Vorstellungsgespräche vor"
+      ],
+      "duration": "Dauer",
+      "minutes": "Minuten",
+      "wordsPerMinute": "Wörter pro Minute",
+      "estimatedWords": "Geschätzte Wörter",
+      "start": "Start",
+      "pause": "Pause",
+      "reset": "Neustart",
+      "timeRemaining": "Verbleibende Zeit",
+      "speechText": "Redetext (optional)",
+      "speechPlaceholder": "Fügen Sie Ihren Redetext hier ein, um Wörter zu zählen...",
+      "wordCount": "Wortzählung",
+      "speakingPace": "Sprechtempo",
+      "slow": "Langsam",
+      "normal": "Normal",
+      "fast": "Schnell",
+      "timeUp": "Die Zeit ist abgelaufen!",
+      "presets": "Voreinstellungen",
+      "targetDuration": "Zieldauer",
+      "min": "Min",
+      "words": "Wörter",
+      "remaining": "Verbleibend"
+    },
+    "habit-tracker": {
+      "name": "Gewohnheits-Tracker",
+      "description": "Verfolgen Sie tägliche Gewohnheiten und bauen Sie Serien auf",
+      "seo_title": "Kostenloser Online Gewohnheits-Tracker",
+      "seo_description": "Kostenloser Online Gewohnheits-Tracker zum Aufbauen und Pflegen täglicher Gewohnheiten.",
+      "detailed_description": "Der Gewohnheits-Tracker ist ein Werkzeug zum Aufbauen und Pflegen täglicher Gewohnheiten.",
+      "usage_steps": [
+        "Fügen Sie eine neue Gewohnheit hinzu",
+        "Klicken Sie auf eine Gewohnheit, um sie als heute erledigt zu markieren",
+        "Sehen Sie Ihre aktuelle Serie",
+        "Verfolgen Sie Ihre wöchentliche Abschlussrate",
+        "Löschen Sie Gewohnheiten, die Sie nicht mehr verfolgen möchten"
+      ],
+      "usage_examples": [
+        "Verfolgen Sie tägliche Trainingsroutinen",
+        "Überwachen Sie Lesegewohnheiten",
+        "Bauen Sie Meditationspraxis auf"
+      ],
+      "addHabit": "Gewohnheit Hinzufügen",
+      "habitName": "Gewohnheitsname",
+      "habitPlaceholder": "Gewohnheitsname eingeben...",
+      "selectIcon": "Symbol Auswählen",
+      "add": "Hinzufügen",
+      "cancel": "Abbrechen",
+      "streak": "Serie",
+      "days": "Tage",
+      "today": "Heute",
+      "completed": "Erledigt",
+      "noHabits": "Noch keine Gewohnheiten. Fügen Sie Ihre erste Gewohnheit hinzu!",
+      "deleteConfirm": "Diese Gewohnheit löschen?",
+      "completedToday": "Heute erledigt",
+      "weeklyProgress": "Wöchentlicher Fortschritt",
+      "habit": "Gewohnheit",
+      "tip": "Tipp: Klicken Sie auf einen Tag, um ihn als erledigt zu markieren. Bauen Sie Ihre Serie auf, indem Sie täglich Gewohnheiten abschließen!"
+    },
+    "flip-text": {
+      "name": "Text Umdrehen",
+      "description": "Text auf den Kopf stellen, spiegeln oder umkehren",
+      "seo_title": "Kostenloser Online Text-Umdreh-Generator",
+      "seo_description": "Kostenloser Online Text-Umdreh-Generator. Erstellen Sie auf den Kopf gestellten, gespiegelten und umgekehrten Text.",
+      "detailed_description": "Der Text-Umdreh-Generator verwandelt Ihren Text auf kreative Weise.",
+      "usage_steps": [
+        "Geben Sie Ihren Text in das Eingabefeld ein",
+        "Sehen Sie alle Umdreh-Variationen sofort",
+        "Klicken Sie auf ein Ergebnis zum Kopieren",
+        "Fügen Sie den umgedrehten Text überall ein",
+        "Probieren Sie verschiedene Texte für verschiedene Effekte"
+      ],
+      "usage_examples": [
+        "Erstellen Sie einzigartige Social-Media-Posts",
+        "Machen Sie lustige Benutzernamen",
+        "Senden Sie kreative Nachrichten an Freunde"
+      ],
+      "inputLabel": "Text Eingeben",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein...",
+      "upsideDown": "Auf den Kopf",
+      "mirror": "Spiegel",
+      "reversed": "Umgekehrt",
+      "upsideDownReversed": "Auf den Kopf + Umgekehrt",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "mirrored": "Gespiegelt",
+      "outputPlaceholder": "Das Ergebnis wird hier angezeigt...",
+      "aboutTitle": "Über Flip-Text",
+      "aboutDescription": "Flip-Text verwendet spezielle Unicode-Zeichen, um umgedrehte und gespiegelte Texteffekte zu erstellen. Diese Zeichen funktionieren auf den meisten Websites und Social-Media-Plattformen."
+    },
+    "strikethrough-text": {
+      "name": "Durchgestrichener Text Ersteller",
+      "description": "Erstellen Sie durchgestrichenen, unterstrichenen und durchgestrichenen Text",
+      "seo_title": "Kostenloser Durchgestrichener Text Generator Online - Durchstreichen Werkzeug",
+      "seo_description": "Kostenloser Online-Durchgestrichener Text Generator. Erstellen Sie durchgestrichenen, unterstrichenen und durchgestrichenen Text für soziale Medien und Messaging-Apps.",
+      "detailed_description": "Der Durchgestrichener Text Ersteller erstellt verschiedene Textdekorationen, einschließlich Durchstreichen (t̶e̶x̶t̶), Unterstreichen, Rautenmuster und Schrägstricheffekte. Funktioniert auf den meisten sozialen Medienplattformen und Messaging-Apps.",
+      "usage_steps": [
+        "Geben Sie Ihren Text im Eingabefeld ein",
+        "Betrachten Sie alle Durchgestrichenen Varianten",
+        "Klicken Sie auf Kopieren bei Ihrem bevorzugten Stil",
+        "Fügen Sie den gestylten Text überall ein",
+        "Verwenden Sie zur Betonung oder Korrekturen"
+      ],
+      "usage_examples": [
+        "Zeigen Sie Korrekturen in Dokumenten an",
+        "Erstellen Sie Betonungen in Social-Media-Beiträgen",
+        "Erstellen Sie dekorativen Text für Profile"
+      ],
+      "inputLabel": "Text eingeben",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein...",
+      "strikethrough": "Durchstreichen",
+      "underline": "Unterstreichen",
+      "crosshatch": "Rautenmuster",
+      "slash": "Schrägstrich",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "outputPlaceholder": "Das Ergebnis wird hier angezeigt...",
+      "usageTitle": "Nutzungstipps",
+      "usage1": "Funktioniert auf den meisten Social-Media-Plattformen",
+      "usage2": "Kopieren und fügen Sie den gestylten Text überall ein",
+      "usage3": "Einige Apps zeigen möglicherweise nicht alle Stile korrekt an"
+    },
+    "small-text-generator": {
+      "name": "Kleines Textgenerator",
+      "description": "Erstellen Sie Überschriften, Unterstriche und kleine Schriften",
+      "seo_title": "Kostenloser Kleiner Textgenerator Online - KLEINER TEXT & Überschrift",
+      "seo_description": "Kostenloser Online Kleiner Textgenerator. Erstellen Sie Überschriften, Unterstriche und kleine Schriften für Social-Media-Bios, Kommentare und kreative Inhalte.",
+      "detailed_description": "Der Kleine Textgenerator erstellt kleine Textvarianten einschließlich Überschriften (ˢᵐᵃˡˡ), Unterstrichen (ₛₘₐₗₗ) und kleinen Schriften (sᴍᴀʟʟ). Perfekt für Social-Media-Bios, einzigartige Benutzername und kreative Inhalte.",
+      "usage_steps": [
+        "Geben Sie Ihren Text im Eingabefeld ein",
+        "Betrachten Sie die Versionen in Überschrift, Unterstrich und kleinen Schriften",
+        "Klicken Sie auf Kopieren bei Ihrem bevorzugten Stil",
+        "Fügen Sie den kleinen Text überall ein",
+        "Kombinieren Sie ihn mit anderen Texten für Effekte"
+      ],
+      "usage_examples": [
+        "Erstellen Sie einzigartige Instagram-Bios",
+        "Erstellen Sie mathematische Notationen",
+        "Entwerfen Sie kreative Benutzername"
+      ],
+      "inputLabel": "Text eingeben",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein...",
+      "superscript": "Überschrift",
+      "subscript": "Unterstrich",
+      "smallCaps": "Kleine Schriften",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "outputPlaceholder": "Das Ergebnis wird hier angezeigt...",
+      "usageTitle": "Nutzungstipps",
+      "usageDescription": "Kleiner Text funktioniert auf den meisten Social-Media-Plattformen. Einige Zeichen haben möglicherweise keine kleinen Versionen und werden als normaler Text angezeigt."
+    },
+    "binary-to-text": {
+      "name": "Binär zu Text",
+      "description": "Konvertieren Sie zwischen Binär und Text",
+      "seo_title": "Kostenloser Online Binär zu Text Konverter",
+      "seo_description": "Kostenloser Online Binär zu Text Konverter. Übersetzen Sie Binärcode in lesbaren Text und konvertieren Sie Text in Binär.",
+      "detailed_description": "Der Binär zu Text Konverter übersetzt zwischen Binärcode und lesbarem Text.",
+      "usage_steps": [
+        "Wählen Sie den Konvertierungsmodus",
+        "Geben Sie Binärcode oder Text ein",
+        "Klicken Sie auf Konvertieren, um das Ergebnis zu sehen",
+        "Kopieren Sie die konvertierte Ausgabe",
+        "Verwenden Sie die Tausch-Taste, um schnell den Modus zu wechseln"
+      ],
+      "usage_examples": [
+        "Dekodieren Sie Binärnachrichten",
+        "Lernen Sie Binärkodierung",
+        "Erstellen Sie geheime Binärnachrichten"
+      ],
+      "binaryToText": "Binär → Text",
+      "textToBinary": "Text → Binär",
+      "binaryInput": "Binäre Eingabe",
+      "textInput": "Text Eingabe",
+      "binaryOutput": "Binäre Ausgabe",
+      "textOutput": "Text Ausgabe",
+      "binaryPlaceholder": "Binär eingeben (z.B. 01001000 01101001)...",
+      "textPlaceholder": "Text zum Konvertieren eingeben...",
+      "outputPlaceholder": "Das Ergebnis erscheint hier...",
+      "convert": "Konvertieren",
+      "swap": "Tauschen",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "invalidBinary": "Ungültige Binäreingabe",
+      "exampleTitle": "Beispiel",
+      "text": "Text",
+      "binary": "Binär"
+    },
+    "random-color-generator": {
+      "name": "Zufallsfarben-Generator",
+      "description": "Generieren Sie zufällige Farben mit HEX-, RGB- und HSL-Werten",
+      "seo_title": "Kostenloser Online Zufallsfarben-Generator",
+      "seo_description": "Kostenloser Online Zufallsfarben-Generator. Generieren Sie zufällige Farben mit HEX-, RGB- und HSL-Werten. Erstellen Sie Farbpaletten für Designprojekte.",
+      "detailed_description": "Der Zufallsfarben-Generator erstellt zufällige Farben mit mehreren Ausgabeformaten (HEX, RGB, HSL). Generieren Sie einzelne Farben oder ganze Paletten für Design-Inspiration und kreative Projekte.",
+      "usage_steps": [
+        "Legen Sie die Anzahl der zu generierenden Farben fest",
+        "Wählen Sie Ihr bevorzugtes Farbformat",
+        "Klicken Sie auf Generieren, um zufällige Farben zu erstellen",
+        "Klicken Sie auf eine Farbe, um ihren Wert zu kopieren",
+        "Verwenden Sie Alle Kopieren, um die gesamte Palette zu erhalten"
+      ],
+      "usage_examples": [
+        "Finden Sie Farbinspiration für Designs",
+        "Generieren Sie Farbpaletten für Websites",
+        "Erstellen Sie zufällige Farbschemata für Kunst"
+      ],
+      "count": "Farben",
+      "format": "Format",
+      "generate": "Generieren",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "copyAll": "Alle Kopieren",
+      "clickToCopy": "Klicken zum Kopieren",
+      "palettePreview": "Palettenvorschau"
+    },
+    "roman-numeral-converter": {
+      "name": "Römischer Ziffern-Umrechner",
+      "description": "Konvertieren Sie zwischen römischen und arabischen Ziffern",
+      "seo_title": "Kostenloser Römischer Ziffern-Umrechner Online - Römischer Zahlrechner",
+      "seo_description": "Kostenloser Online-Römischer Ziffern-Umrechner. Konvertieren Sie römische Ziffern in arabische und umgekehrt. Einfacher römischer Zahlrechner und Übersetzer.",
+      "detailed_description": "Der Römischer Ziffern-Umrechner übersetzt zwischen römischen Ziffern (I, V, X, L, C, D, M) und arabischen Ziffern (1-3999). Perfekt für Geschichtsstudenten, Uhrenmacher und alle, die mit römischen Ziffern arbeiten.",
+      "usage_steps": [
+        "Wählen Sie die Umrechnungsrichtung",
+        "Geben Sie eine römische oder arabische Zahl ein",
+        "Klicken Sie auf 'Umrechnen', um das Ergebnis zu sehen",
+        "Kopieren Sie den umgerechneten Wert",
+        "Verwenden Sie die Referenztabelle für Hilfe"
+      ],
+      "usage_examples": [
+        "Jahre in römische Ziffern umrechnen",
+        "Römische Ziffern auf Uhren entschlüsseln",
+        "Über das römische Zahlensystem lernen"
+      ],
+      "arabicToRoman": "Arabisch → Römisches",
+      "romanToArabic": "Römisches → Arabisches",
+      "arabicNumber": "Arabische Zahl",
+      "romanNumeral": "Römische Ziffer",
+      "arabicPlaceholder": "Geben Sie eine Zahl (1-3999) ein...",
+      "romanPlaceholder": "Geben Sie eine römische Ziffer ein...",
+      "result": "Ergebnis",
+      "convert": "Umrechnen",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "invalidInput": "Ungültige Eingabe",
+      "referenceTitle": "Referenztabelle"
+    },
+    "fraction-calculator": {
+      "name": "Bruchrechner",
+      "description": "Berechnen Sie Brüche mit Addition, Subtraktion, Multiplikation, Division",
+      "seo_title": "Kostenloser Online Bruchrechner",
+      "seo_description": "Kostenloser Online Bruchrechner. Addieren, subtrahieren, multiplizieren und dividieren Sie Brüche einfach. Erhalten Sie vereinfachte Ergebnisse mit Dezimaläquivalenten.",
+      "detailed_description": "Der Bruchrechner führt arithmetische Operationen mit Brüchen durch. Die Ergebnisse werden automatisch auf die einfachste Form gekürzt mit Dezimaläquivalenten.",
+      "usage_steps": [
+        "Geben Sie den ersten Bruch ein",
+        "Wählen Sie die Operation",
+        "Geben Sie den zweiten Bruch ein",
+        "Klicken Sie auf Berechnen, um das Ergebnis zu sehen",
+        "Sehen Sie den vereinfachten Bruch und den Dezimalwert"
+      ],
+      "usage_examples": [
+        "Lösen Sie Mathe-Hausaufgaben",
+        "Berechnen Sie Rezeptmengen",
+        "Arbeiten Sie mit Verhältnissen und Proportionen"
+      ],
+      "fraction1": "Bruch 1",
+      "fraction2": "Bruch 2",
+      "result": "Ergebnis",
+      "calculate": "Berechnen",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "addition": "Addition",
+      "subtraction": "Subtraktion",
+      "multiplication": "Multiplikation",
+      "division": "Division"
+    },
+    "percentage-change-calculator": {
+      "name": "Prozentuale Änderung Rechner",
+      "description": "Berechnen Sie die prozentuale Zunahme oder Abnahme zwischen Werten",
+      "seo_title": "Kostenloser Online Prozentuale Änderung Rechner",
+      "seo_description": "Kostenloser Online Rechner für prozentuale Änderung. Berechnen Sie die prozentuale Zunahme oder Abnahme zwischen zwei Werten.",
+      "detailed_description": "Der Prozentuale Änderung Rechner berechnet die prozentuale Zunahme oder Abnahme zwischen zwei Werten, wesentlich für die Analyse von Preisänderungen, Wachstumsraten und Datenvergleichen.",
+      "usage_steps": [
+        "Geben Sie den ursprünglichen Wert ein",
+        "Geben Sie den neuen Wert ein",
+        "Klicken Sie auf Berechnen, um die prozentuale Änderung zu sehen",
+        "Sehen Sie, ob es eine Zunahme oder Abnahme ist",
+        "Kopieren Sie das Ergebnis"
+      ],
+      "usage_examples": [
+        "Berechnen Sie Preisänderungen",
+        "Analysieren Sie Umsatzwachstum",
+        "Vergleichen Sie Leistungskennzahlen"
+      ],
+      "oldValue": "Ursprünglicher Wert",
+      "newValue": "Neuer Wert",
+      "oldValuePlaceholder": "Ursprünglichen Wert eingeben...",
+      "newValuePlaceholder": "Neuen Wert eingeben...",
+      "calculate": "Berechnen",
+      "swap": "Tauschen",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "percentageChange": "Prozentuale Änderung",
+      "increase": "Zunahme",
+      "decrease": "Abnahme",
+      "difference": "Differenz",
+      "formula": "Formel",
+      "formulaText": "((Neu - Alt) / |Alt|) × 100%",
+      "example1Title": "Aktienkurs",
+      "example1": "Verfolgen Sie Investitionsänderungen",
+      "example2Title": "Gehalt",
+      "example2": "Berechnen Sie Erhöhungsprozentsatz",
+      "example3Title": "Umsatz",
+      "example3": "Messen Sie Wachstumsrate"
+    },
+    "anagram-solver": {
+      "name": "Anagrammlöser",
+      "description": "Finden Sie alle möglichen Wörter aus durcheinandergebrachten Buchstaben",
+      "seo_title": "Kostenloser Anagrammlöser Online - Wortfindertool",
+      "seo_description": "Kostenloser Online-Anagrammlöser. Finden Sie alle möglichen Wörter aus durcheinandergebrachten Buchstaben. Perfekt für Wortspiele wie Scrabble und Kreuzworträtsel.",
+      "detailed_description": "Der Anagrammlöser hilft Ihnen, alle gültigen englischen Wörter zu finden, die durch Umsortieren der von Ihnen bereitgestellten Buchstaben gebildet werden. Ideal für Wortspiele, Rätsel und Wortschatzbildung.",
+      "usage_steps": [
+        "Geben Sie Ihre durcheinandergebrachten Buchstaben ein",
+        "Sehen Sie alle möglichen Wortkombinationen an",
+        "Klicken Sie, um einzelne Wörter zu kopieren",
+        "Verwenden Sie die Ergebnisse für Wortspiele",
+        "Versuchen Sie verschiedene Buchstabenkombinationen"
+      ],
+      "usage_examples": [
+        "Lösen Sie Scrabble-Rätsel",
+        "Finden Sie Kreuzworträtsel-Antworten",
+        "Entdecken Sie neue Vokabeln"
+      ],
+      "inputLabel": "Geben Sie Buchstaben ein",
+      "inputPlaceholder": "Geben Sie Buchstaben ein, um zu entwirren...",
+      "results": "Ergebnisse",
+      "noResults": "Keine Wörter gefunden. Versuchen Sie verschiedene Buchstaben.",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "tipTitle": "Tipps",
+      "tipDescription": "Geben Sie 2-15 Buchstaben ein, um alle möglichen englischen Wörter zu finden. Ergebnisse werden nach Länge sortiert."
+    },
+    "word-unscrambler": {
+      "name": "Wortzusammenstellung Entschärfer",
+      "description": "Zusammenstellen Sie Buchstaben, um alle möglichen Wörter zu finden",
+      "seo_title": "Kostenloser Wortzusammenstellung Entschärfer Online - Buchstaben Entschärfer Werkzeug",
+      "seo_description": "Kostenloser Online-Wortzusammenstellung Entschärfer. Finden Sie alle Wörter, die aus Ihren Buchstaben gebildet werden können. Perfekt für Scrabble, Words with Friends und Worträtsel.",
+      "detailed_description": "Der Wortzusammenstellung Entschärfer findet alle möglichen Wörter aus Ihren durcheinandergebrachten Buchstaben. Ergebnisse werden nach Wortlänge gruppiert, was das Auffinden der besten Wörter für Ihr Spiel erleichtert.",
+      "usage_steps": [
+        "Geben Sie durcheinandergebrachte Buchstaben ein",
+        "Betrachten Sie Wörter nach Länge gruppiert",
+        "Kopieren Sie erforderliche Wörter",
+        "Verwenden Sie für Wortspiele",
+        "Finden Sie hochpunktende Wörter"
+      ],
+      "usage_examples": [
+        "Gewinnen Sie bei Scrabble",
+        "Lösen Sie Worträtsel",
+        "Verbessern Sie Ihr Vokabular"
+      ],
+      "inputLabel": "Geben Sie durcheinandergebrachte Buchstaben ein",
+      "inputPlaceholder": "Geben Sie hier Buchstaben ein...",
+      "found": "Gefunden",
+      "words": "Wörter",
+      "letters": "Buchstaben",
+      "copyAll": "Alles kopieren",
+      "copied": "Kopiert!",
+      "noResults": "Keine Wörter gefunden"
+    },
+    "text-to-pdf": {
+      "name": "Text zu PDF",
+      "description": "Konvertieren Sie einfachen Text in PDF-Dokumente",
+      "seo_title": "Kostenloser Text zu PDF Konverter Online",
+      "seo_description": "Kostenloser Online Text zu PDF Konverter. Erstellen Sie professionelle PDF-Dokumente aus einfachem Text. Passen Sie Schriftarten, Größen und Seitenlayout an.",
+      "detailed_description": "Der Text zu PDF Konverter wandelt Ihren einfachen Text in professionelle PDF-Dokumente um. Passen Sie Schriftart, Größe und Seitenformat an.",
+      "usage_steps": [
+        "Geben Sie Ihren Text ein oder fügen Sie ihn ein",
+        "Fügen Sie einen optionalen Titel hinzu",
+        "Wählen Sie Schriftart- und Größeneinstellungen",
+        "Wählen Sie die Seitengröße (A4 oder Letter)",
+        "Klicken Sie auf PDF herunterladen"
+      ],
+      "usage_examples": [
+        "Druckbare Dokumente erstellen",
+        "Notizen als PDF speichern",
+        "Einfache Berichte generieren"
+      ],
+      "title": "Titel",
+      "optional": "optional",
+      "titlePlaceholder": "Dokumenttitel...",
+      "fontSize": "Schriftgröße",
+      "font": "Schriftart",
+      "pageSize": "Seitengröße",
+      "content": "Inhalt",
+      "contentPlaceholder": "Geben Sie hier Ihren Text ein...",
+      "characters": "Zeichen",
+      "generating": "Wird generiert...",
+      "downloadPdf": "PDF herunterladen",
+      "preview": "Vorschau",
+      "previewPlaceholder": "Ihr Text wird hier angezeigt..."
+    },
+    "unit-price-calculator": {
+      "name": "Stückpreisrechner",
+      "description": "Vergleichen Sie Stückpreise, um den besten Wert zu finden",
+      "seo_title": "Kostenloser Stückpreisrechner Online",
+      "seo_description": "Kostenloser Online Stückpreisrechner. Vergleichen Sie Stückpreise, um das beste Angebot zu finden. Perfekt für intelligentes Einkaufen.",
+      "detailed_description": "Der Stückpreisrechner hilft Ihnen, Produkte verschiedener Größen und Preise zu vergleichen, um den besten Wert zu finden.",
+      "usage_steps": [
+        "Geben Sie den Produktnamen ein (optional)",
+        "Geben Sie den Preis ein",
+        "Geben Sie Menge und Einheit ein",
+        "Vergleichen Sie Stückpreise",
+        "Finden Sie den besten Wert"
+      ],
+      "usage_examples": [
+        "Supermarktpreise vergleichen",
+        "Beste Großhandelsangebote finden",
+        "Intelligente Kaufentscheidungen"
+      ],
+      "item": "Artikel",
+      "productName": "Produktname",
+      "namePlaceholder": "z.B. Marke A",
+      "price": "Preis",
+      "quantity": "Menge",
+      "unitPrice": "Stückpreis",
+      "addItem": "Artikel hinzufügen",
+      "bestValue": "Bester Wert",
+      "bestValueMessage": "Der hervorgehobene Artikel bietet den besten Wert pro Einheit!",
+      "tipTitle": "Einkaufstipp",
+      "tipDescription": "Vergleichen Sie beim Einkaufen immer die Stückpreise. Größere Packungen sind nicht immer günstiger pro Einheit!"
+    },
+    "bionic-reading-converter": {
+      "name": "Bionisches Lesen Konverter",
+      "description": "Konvertieren Sie Text in bionisches Leseformat für schnelleres Lesen",
+      "seo_title": "Kostenloser Bionisches Lesen Konverter Online",
+      "seo_description": "Kostenloser Online Bionisches Lesen Konverter. Transformieren Sie Text durch Fettdruck der Wortanfänge. Lesen Sie schneller und verbessern Sie die Konzentration.",
+      "detailed_description": "Der Bionisches Lesen Konverter transformiert Ihren Text durch Fettdruck der Anfangsbuchstaben jedes Wortes und schafft künstliche Fixationspunkte.",
+      "usage_steps": [
+        "Fügen Sie Ihren Text ein",
+        "Passen Sie die Fixationsstärke an",
+        "Vorschau des bionischen Textes",
+        "Kopieren Sie die HTML-Ausgabe",
+        "Verwenden Sie in Ihren Dokumenten"
+      ],
+      "usage_examples": [
+        "Lesegeschwindigkeit erhöhen",
+        "Fokus beim Lesen verbessern",
+        "Bei Legasthenie helfen"
+      ],
+      "inputLabel": "Text eingeben",
+      "inputPlaceholder": "Fügen Sie hier Ihren Text zum Konvertieren ein...",
+      "fixationStrength": "Fixationsstärke",
+      "light": "Leicht",
+      "medium": "Mittel",
+      "strong": "Stark",
+      "preview": "Vorschau",
+      "previewPlaceholder": "Der konvertierte Text wird hier angezeigt...",
+      "copyHtml": "HTML kopieren",
+      "copied": "Kopiert!",
+      "whatIsBionic": "Was ist bionisches Lesen?",
+      "bionicDescription": "Bionisches Lesen ist eine Methode, die die Anfangsbuchstaben von Wörtern hervorhebt, um Fixationspunkte zu schaffen.",
+      "benefits": "Vorteile",
+      "benefit1": "Bis zu 50% schneller lesen",
+      "benefit2": "Bessere Konzentration und Behalten",
+      "benefit3": "Reduziert Augenermüdung",
+      "htmlOutput": "HTML-Ausgabe",
+      "noOutput": "Noch keine Ausgabe"
+    },
+    "palindrome-checker": {
+      "name": "Palindrom-Prüfer",
+      "description": "Prüfen Sie, ob Text vorwärts und rückwärts gleich gelesen wird",
+      "seo_title": "Kostenloser Palindrom-Prüfer Online",
+      "seo_description": "Kostenloser Online Palindrom-Prüfer. Testen Sie, ob Wörter, Phrasen oder Sätze vorwärts und rückwärts gleich gelesen werden.",
+      "detailed_description": "Der Palindrom-Prüfer testet, ob Ihr Text vorwärts und rückwärts gleich gelesen wird. Er kann Leerzeichen, Satzzeichen und Groß-/Kleinschreibung ignorieren.",
+      "usage_steps": [
+        "Geben Sie ein Wort oder eine Phrase ein",
+        "Wählen Sie Vergleichsoptionen",
+        "Sehen Sie, ob es ein Palindrom ist",
+        "Probieren Sie berühmte Beispiele",
+        "Erstellen Sie Ihre eigenen Palindrome"
+      ],
+      "usage_examples": [
+        "Wort-Palindrome testen",
+        "Phrasen-Palindrome finden",
+        "Lehrreiche Wortspiele"
+      ],
+      "inputLabel": "Text eingeben",
+      "inputPlaceholder": "Geben Sie ein Wort oder eine Phrase ein...",
+      "ignoreCase": "Groß-/Kleinschreibung ignorieren",
+      "ignoreSpaces": "Leerzeichen ignorieren",
+      "ignorePunctuation": "Satzzeichen ignorieren",
+      "isPalindrome": "Es ist ein Palindrom!",
+      "notPalindrome": "Kein Palindrom",
+      "processedText": "Verarbeiteter Text",
+      "forward": "Vorwärts",
+      "backward": "Rückwärts",
+      "examples": "Probieren Sie diese Beispiele"
+    },
+    "character-map": {
+      "name": "Zeichentabelle",
+      "description": "Durchsuchen und kopieren Sie Sonderzeichen und Symbole",
+      "seo_title": "Kostenlose Zeichentabelle Online - Symbole und Unicode",
+      "seo_description": "Kostenlose Online Zeichentabelle. Durchsuchen und kopieren Sie Sonderzeichen, Symbole, Emojis und Unicode-Zeichen.",
+      "detailed_description": "Die Zeichentabelle bietet einfachen Zugang zu Tausenden von Sonderzeichen, Symbolen und Emojis. Durchsuchen Sie nach Kategorie oder suchen Sie.",
+      "usage_steps": [
+        "Durchsuchen Sie Zeichenkategorien",
+        "Oder suchen Sie nach bestimmten Zeichen",
+        "Klicken Sie auf ein Zeichen zum Kopieren",
+        "Fügen Sie ein, wo Sie es brauchen",
+        "Sehen Sie kürzlich verwendete Zeichen"
+      ],
+      "usage_examples": [
+        "Symbole zu Dokumenten hinzufügen",
+        "Emojis in Text einfügen",
+        "Mathematische Symbole finden"
+      ],
+      "searchPlaceholder": "Zeichen suchen...",
+      "arrows": "Pfeile",
+      "math": "Mathematik",
+      "currency": "Währung",
+      "punctuation": "Satzzeichen",
+      "shapes": "Formen",
+      "emoji": "Emoji",
+      "hands": "Hände",
+      "hearts": "Herzen",
+      "weather": "Wetter",
+      "music": "Musik",
+      "tech": "Technik",
+      "recentlyUsed": "Kürzlich verwendet",
+      "searchResults": "Suchergebnisse",
+      "tip": "Klicken Sie auf ein Zeichen, um es zu kopieren"
+    },
+    "text-repeater": {
+      "name": "Text-Wiederholer",
+      "description": "Wiederholen Sie Text mehrmals mit benutzerdefinierten Trennzeichen",
+      "seo_title": "Kostenloser Text-Wiederholer Online",
+      "seo_description": "Kostenloser Online Text-Wiederholer. Wiederholen Sie beliebigen Text mehrmals mit benutzerdefinierten Trennzeichen. Perfekt für Tests und Muster.",
+      "detailed_description": "Der Text-Wiederholer dupliziert Ihren Text so oft wie nötig. Wählen Sie aus verschiedenen Trennzeichen und fügen Sie optional eine Nummerierung hinzu.",
+      "usage_steps": [
+        "Geben Sie den zu wiederholenden Text ein",
+        "Legen Sie die Anzahl der Wiederholungen fest",
+        "Wählen Sie den Trennzeichentyp",
+        "Fügen Sie optional eine Nummerierung hinzu",
+        "Kopieren oder laden Sie das Ergebnis herunter"
+      ],
+      "usage_examples": [
+        "Testdaten erstellen",
+        "Platzhalterinhalt füllen",
+        "Muster generieren"
+      ],
+      "inputLabel": "Zu wiederholender Text",
+      "inputPlaceholder": "Geben Sie hier Text ein...",
+      "repeatCount": "Anzahl der Wiederholungen",
+      "separator": "Trennzeichen",
+      "newline": "Neue Zeile",
+      "space": "Leerzeichen",
+      "comma": "Komma",
+      "semicolon": "Semikolon",
+      "tab": "Tabulator",
+      "none": "Keines",
+      "addNumbering": "Nummerierung hinzufügen",
+      "result": "Ergebnis",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "download": "Herunterladen",
+      "resultPlaceholder": "Das Ergebnis wird hier angezeigt...",
+      "characters": "Zeichen",
+      "lines": "Zeilen"
+    },
+    "fake-name-generator": {
+      "name": "Fake-Namen-Generator",
+      "description": "Generieren Sie zufällige realistische Namen aus verschiedenen Ländern",
+      "seo_title": "Kostenloser Fake-Namen-Generator Online",
+      "seo_description": "Kostenloser Online Fake-Namen-Generator. Generieren Sie zufällige realistische Namen aus verschiedenen Ländern und Kulturen.",
+      "detailed_description": "Der Fake-Namen-Generator erstellt realistische zufällige Namen aus verschiedenen Ländern und Kulturen. Generieren Sie Namen für Tests oder kreatives Schreiben.",
+      "usage_steps": [
+        "Wählen Sie ein Land/eine Kultur",
+        "Wählen Sie die Geschlechtspräferenz",
+        "Legen Sie die Anzahl der Namen fest",
+        "Klicken Sie auf Generieren",
+        "Kopieren Sie die benötigten Namen"
+      ],
+      "usage_examples": [
+        "Testbenutzerdaten erstellen",
+        "Fiktive Charaktere benennen",
+        "Datenschutz"
+      ],
+      "country": "Land/Kultur",
+      "english": "Englisch (USA/UK)",
+      "chinese": "Chinesisch",
+      "japanese": "Japanisch",
+      "korean": "Koreanisch",
+      "german": "Deutsch",
+      "spanish": "Spanisch",
+      "gender": "Geschlecht",
+      "random": "Zufällig",
+      "male": "Männlich",
+      "female": "Weiblich",
+      "count": "Anzahl",
+      "generate": "Namen generieren",
+      "generatedNames": "Generierte Namen",
+      "copyAll": "Alle kopieren",
+      "copied": "Kopiert!",
+      "disclaimer": "Haftungsausschluss",
+      "disclaimerText": "Diese Namen werden zufällig generiert und jede Ähnlichkeit mit echten Personen ist zufällig."
+    },
+    "invisible-character-generator": {
+      "name": "Unsichtbare Zeichen Generator",
+      "description": "Generieren und erkennen Sie unsichtbare Unicode-Zeichen",
+      "seo_title": "Kostenloser Unsichtbare Zeichen Generator Online",
+      "seo_description": "Kostenloser Online Unsichtbare Zeichen Generator. Generieren Sie Leerzeichen mit Nullbreite und andere unsichtbare Unicode-Zeichen.",
+      "detailed_description": "Der Unsichtbare Zeichen Generator erstellt verschiedene unsichtbare Unicode-Zeichen wie Leerzeichen mit Nullbreite. Enthält auch einen Detektor.",
+      "usage_steps": [
+        "Wählen Sie den unsichtbaren Zeichentyp",
+        "Legen Sie die Anzahl der Wiederholungen fest",
+        "Kopieren Sie die unsichtbaren Zeichen",
+        "Fügen Sie ein, wo nötig",
+        "Verwenden Sie den Detektor, um versteckte Zeichen zu finden"
+      ],
+      "usage_examples": [
+        "Leere Nachrichten erstellen",
+        "Unsichtbare Wasserzeichen hinzufügen",
+        "Textverarbeitung testen"
+      ],
+      "selectCharacter": "Zeichentyp auswählen",
+      "repeatCount": "Anzahl der Wiederholungen",
+      "characters": "Zeichen",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "allCharacters": "Alle unsichtbaren Zeichen",
+      "detectTitle": "Unsichtbare Zeichen erkennen",
+      "detectPlaceholder": "Fügen Sie hier Text ein, um unsichtbare Zeichen zu erkennen...",
+      "found": "gefunden",
+      "noInvisibleFound": "Keine unsichtbaren Zeichen erkannt",
+      "useCases": "Häufige Anwendungsfälle",
+      "useCase1": "Leere Social-Media-Beiträge erstellen",
+      "useCase2": "Unsichtbare Text-Wasserzeichen hinzufügen",
+      "useCase3": "Textverarbeitungssysteme testen"
     }
   },
   "tool": {
@@ -15050,5 +16160,120 @@
       "perChildPerYear": "pro Kind pro Jahr",
       "perDependent": "pro Unterhaltsberechtigten"
     }
+  },
+  "launches": {
+    "title": "Produktstarts",
+    "subtitle": "Entdecken Sie die neuesten Produkte und Tools, die von Makers weltweit gestartet wurden",
+    "description": "Entdecken Sie die neuesten Produkte und Tools, die von Makers weltweit gestartet wurden",
+    "pageTitle": "Produktstarts - Entdecken Sie neue Tools & Produkte",
+    "pageDescription": "Entdecken Sie die neuesten Produktstarts von Makers weltweit. Finden Sie innovative Tools, Apps und Dienste. Senden Sie Ihr eigenes Produkt kostenlos ein.",
+    "featured": "Vorgestellt",
+    "launchedOn": "Gestartet am",
+    "about": "Über",
+    "screenshots": "Bilder",
+    "links": "Links",
+    "tags": "Tags",
+    "visitWebsite": "Website besuchen",
+    "relatedProducts": "Verwandte Produkte",
+    "submitProduct": "Produkt einreichen",
+    "backToAllProducts": "Zurück zu allen Produkten",
+    "noProductsInCategory": "Bisher keine Produkte in dieser Kategorie",
+    "beFirstToSubmit": "Seien Sie der Erste, der ein Produkt in dieser Kategorie einreicht!",
+    "categoryProductCount": "{count} Produkte",
+    "allCategories": "Alle",
+    "sortBy": "Sortieren nach",
+    "breadcrumb": {
+      "home": "Startseite",
+      "launches": "Produktstarts"
+    },
+    "seo": {
+      "productSuffix": "Produktstart | U2Tool",
+      "categorySuffix": "Produkte | U2Tool",
+      "categoryDescription": "Entdecken Sie die besten {category} Produkte und Tools. Finden Sie innovative Lösungen, die von Makers weltweit gestartet wurden."
+    },
+    "stats": {
+      "totalLaunches": "Gesamtzahl der Starts",
+      "liveProducts": "Aktive Produkte",
+      "totalUpvotes": "Gesamtzahl der Likes",
+      "totalViews": "Gesamtzahl der Ansichten",
+      "featured": "Vorgestellt",
+      "featuredProducts": "Vorgestellte Produkte"
+    },
+    "sort": {
+      "newest": "Neueste",
+      "popular": "Beliebt",
+      "featured": "Vorgestellt"
+    },
+    "filter": {
+      "all": "Alle",
+      "newest": "Neueste",
+      "popular": "Beliebt",
+      "featured": "Vorgestellt"
+    },
+    "categories": {
+      "ai-tools": "KI-Tools",
+      "developer-tools": "Entwickler-Tools",
+      "design-tools": "Design-Tools",
+      "productivity": "Produktivität",
+      "marketing": "Marketing",
+      "finance": "Finanzen",
+      "education": "Bildung",
+      "entertainment": "Unterhaltung",
+      "other": "Andere"
+    },
+    "submit": {
+      "pageTitle": "Ihr Produkt einreichen",
+      "pageDescription": "Reichen Sie Ihr Produkt ein, um auf U2Tool vorgestellt zu werden. Wird von tausenden von Benutzern entdeckt.",
+      "title": "Ihr Produkt einreichen",
+      "subtitle": "Lassen Sie Ihr Produkt von tausenden von Benutzern entdecken",
+      "productName": "Produktname",
+      "productNamePlaceholder": "Geben Sie den Namen Ihres Produkts ein",
+      "tagline": "Slogan",
+      "taglinePlaceholder": "Eine kurze, einprägsame Beschreibung (max. 100 Zeichen)",
+      "taglineHint": "{count}/100 Zeichen",
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Beschreiben Sie Ihr Produkt im Detail...",
+      "websiteUrl": "Website-URL",
+      "websiteUrlPlaceholder": "https://your-product.com",
+      "logoUrl": "Logo-URL",
+      "logoUrlPlaceholder": "https://your-product.com/logo.png",
+      "logoHint": "Empfohlen: 200x200px, PNG oder JPG",
+      "category": "Kategorie",
+      "selectCategory": "Wählen Sie eine Kategorie",
+      "makerName": "Ihr Name",
+      "makerNamePlaceholder": "John Doe",
+      "makerEmail": "Ihre E-Mail",
+      "makerEmailPlaceholder": "john@example.com",
+      "emailHint": "Wir informieren Sie, wenn Ihr Produkt genehmigt wird",
+      "twitterUrl": "Twitter-URL (optional)",
+      "twitterUrlPlaceholder": "https://twitter.com/yourproduct",
+      "githubUrl": "GitHub-URL (optional)",
+      "githubUrlPlaceholder": "https://github.com/yourproduct",
+      "submitButton": "Produkt einreichen",
+      "submitting": "Eingabe...",
+      "success": "Produkt erfolgreich eingereicht!",
+      "successMessage": "Ihr Produkt wurde zur Überprüfung eingereicht. Wir informieren Sie, wenn es genehmigt wird.",
+      "error": "Fehler beim Einreichen des Produkts",
+      "validation": {
+        "nameRequired": "Produktname ist erforderlich",
+        "taglineRequired": "Slogan ist erforderlich",
+        "taglineTooLong": "Slogan muss 100 Zeichen oder weniger sein",
+        "descriptionRequired": "Beschreibung ist erforderlich",
+        "websiteRequired": "Website-URL ist erforderlich",
+        "websiteInvalid": "Bitte geben Sie eine gültige URL ein",
+        "categoryRequired": "Bitte wählen Sie eine Kategorie",
+        "makerNameRequired": "Ihr Name ist erforderlich",
+        "makerEmailRequired": "Ihre E-Mail ist erforderlich",
+        "makerEmailInvalid": "Bitte geben Sie eine gültige E-Mail ein"
+      }
+    },
+    "upvote": {
+      "upvote": "Gefällt mir",
+      "upvoted": "Gefällt mir"
+    },
+    "loading": "Laden...",
+    "loadMore": "Mehr laden",
+    "noProducts": "Keine Produkte gefunden",
+    "noProductsDescription": "Seien Sie der Erste, der ein Produkt einreicht!"
   }
 }

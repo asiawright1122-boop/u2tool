@@ -1,0 +1,15 @@
+{
+  "detailed_description": "L'outil de recherche de codes BIC/SWIFT valide et fournit des informations sur les codes d'identification bancaire (BIC) utilisés pour les virements internationaux. Entrez un code BIC pour vérifier son format et obtenir des détails sur la banque, le pays et la succursale. Essentiel pour garantir des paiements internationaux précis.",
+  "usage_steps": [
+    "Saisissez un code BIC/SWIFT dans la zone de saisie",
+    "Cliquez sur « Rechercher » pour valider et obtenir des informations bancaires",
+    "Affichez la structure du code analysé (banque, pays, localisation, succursale)",
+    "Vérifiez les détails de la banque s'ils sont disponibles dans la base de données",
+    "Utilisez les exemples de codes pour découvrir différentes banques"
+  ],
+  "usage_examples": [
+    "Vérifiez les codes BIC avant de réaliser des virements internationaux",
+    "Recherchez des informations bancaires à partir de codes SWIFT",
+    "Validez les détails des paiements pour les transactions transfrontalières"
+  ]
+}

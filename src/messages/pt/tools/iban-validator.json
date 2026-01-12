@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Validador de IBAN é uma ferramenta completa para validar Números Internacionais de Conta Bancária (IBAN). Verifica o formato, código do país, comprimento e checksum de números IBAN de todos os países europeus. A ferramenta também analisa o IBAN para mostrar o código do banco, informações do país e detalhes do BBAN.",
+  "usage_steps": [
+    "Insira ou cole um número IBAN no campo de entrada",
+    "Clique no botão Validar para verificar o IBAN",
+    "Visualize os resultados da validação, incluindo informações do país e do banco",
+    "Use exemplos de IBAN para testar diferentes formatos de países",
+    "Copie o IBAN formatado para uso em transferências bancárias"
+  ],
+  "usage_examples": [
+    "Verifique o IBAN antes de fazer transferências bancárias internacionais",
+    "Verifique números de contas bancárias fornecidos pelos clientes",
+    "Valide o formato de IBAN para sistemas de processamento de pagamentos"
+  ]
+}

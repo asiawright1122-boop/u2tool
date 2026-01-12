@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le générateur de caractères invisibles crée divers caractères Unicode invisibles comme les espaces de largeur nulle. Inclut également un détecteur.",
+  "usage_steps": [
+    "Sélectionnez le type de caractère invisible",
+    "Définissez le nombre de répétitions",
+    "Copiez les caractères invisibles",
+    "Collez où nécessaire",
+    "Utilisez le détecteur pour trouver les caractères cachés"
+  ],
+  "usage_examples": [
+    "Créer des messages vides",
+    "Ajouter des filigranes invisibles",
+    "Tester le traitement de texte"
+  ]
+}

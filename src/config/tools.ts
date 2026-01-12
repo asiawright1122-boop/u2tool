@@ -451,6 +451,46 @@ export const tools: Tool[] = [
   { slug: 'code-screenshot-generator', category: 'development', icon: '📷', component: 'CodeScreenshotGenerator', popular: true },
   { slug: 'number-system-converter', category: 'converters', icon: '🔢', component: 'NumberSystemConverter', popular: true },
   { slug: 'subnet-calculator-enhanced', category: 'network', icon: '🌐', component: 'SubnetCalculatorEnhanced', popular: true },
+
+  // Batch 46 - European Popular Tools (欧洲热门工具)
+  { slug: 'iban-validator', category: 'finance', icon: '🏦', component: 'IbanValidator', popular: true },
+  { slug: 'vat-calculator', category: 'finance', icon: '💶', component: 'VatCalculator', popular: true },
+  { slug: 'carbon-footprint-calculator', category: 'lifestyle', icon: '🌱', component: 'CarbonFootprintCalculator', popular: true },
+  { slug: 'gdpr-consent-generator', category: 'generators', icon: '🔒', component: 'GdprConsentGenerator', popular: true },
+  { slug: 'metric-imperial-converter', category: 'converters', icon: '📏', component: 'MetricImperialConverter', popular: true },
+  { slug: 'bic-swift-lookup', category: 'finance', icon: '🏧', component: 'BicSwiftLookup', popular: true },
+
+  // Batch 47 - Global Popular Tools (全球热门工具)
+  { slug: 'email-validator', category: 'network', icon: '📧', component: 'EmailValidator', popular: true },
+  { slug: 'phone-formatter', category: 'text', icon: '📱', component: 'PhoneFormatter', popular: true },
+  { slug: 'credit-card-validator', category: 'finance', icon: '💳', component: 'CreditCardValidator', popular: true },
+  { slug: 'color-blindness-simulator', category: 'development', icon: '👁️', component: 'ColorBlindnessSimulator', popular: true },
+  { slug: 'aspect-ratio-resizer', category: 'image', icon: '📐', component: 'AspectRatioResizer', popular: true },
+  { slug: 'markdown-to-pdf', category: 'office', icon: '📄', component: 'MarkdownToPdf', popular: true },
+
+  // Batch 48 - Popular Online Tools (热门在线工具)
+  { slug: 'speech-timer', category: 'office', icon: '🎤', component: 'SpeechTimer', popular: true },
+  { slug: 'habit-tracker', category: 'lifestyle', icon: '✅', component: 'HabitTracker', popular: true },
+  { slug: 'flip-text', category: 'text', icon: '🔄', component: 'FlipText', popular: true },
+  { slug: 'strikethrough-text', category: 'text', icon: '✂️', component: 'StrikethroughText', popular: true },
+  { slug: 'small-text-generator', category: 'text', icon: '🔤', component: 'SmallTextGenerator', popular: true },
+  { slug: 'binary-to-text', category: 'encoding', icon: '01', component: 'BinaryToText', popular: true },
+  { slug: 'roman-numeral-converter', category: 'converters', icon: 'Ⅳ', component: 'RomanNumeralConverter', popular: true },
+  { slug: 'fraction-calculator', category: 'math', icon: '½', component: 'FractionCalculator', popular: true },
+  { slug: 'percentage-change-calculator', category: 'math', icon: '📊', component: 'PercentageChangeCalculator', popular: true },
+  { slug: 'random-color-generator', category: 'generators', icon: '🎨', component: 'RandomColorGenerator', popular: true },
+
+  // Batch 49 - Popular Word & Text Tools (热门文字工具)
+  { slug: 'anagram-solver', category: 'text', icon: '🔀', component: 'AnagramSolver', popular: true },
+  { slug: 'word-unscrambler', category: 'text', icon: '🧩', component: 'WordUnscrambler', popular: true },
+  { slug: 'text-to-pdf', category: 'converters', icon: '📄', component: 'TextToPdf', popular: true },
+  { slug: 'unit-price-calculator', category: 'math', icon: '💲', component: 'UnitPriceCalculator', popular: true },
+  { slug: 'bionic-reading-converter', category: 'text', icon: '👁️', component: 'BionicReadingConverter', popular: true },
+  { slug: 'palindrome-checker', category: 'text', icon: '🔁', component: 'PalindromeChecker', popular: true },
+  { slug: 'character-map', category: 'text', icon: '🔣', component: 'CharacterMap', popular: true },
+  { slug: 'text-repeater', category: 'text', icon: '🔂', component: 'TextRepeater', popular: true },
+  { slug: 'fake-name-generator', category: 'generators', icon: '👤', component: 'FakeNameGenerator', popular: true },
+  { slug: 'invisible-character-generator', category: 'generators', icon: '👻', component: 'InvisibleCharacterGenerator', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [

@@ -108,65 +108,65 @@ export const firstNames: NameData[] = [
   { firstName: 'Lena', gender: 'female', origin: 'german' },
   { firstName: 'Marie', gender: 'female', origin: 'german' },
   
-  // Japanese names - Male
-  { firstName: 'Haruto', gender: 'male', origin: 'japanese' },
-  { firstName: 'Yuto', gender: 'male', origin: 'japanese' },
-  { firstName: 'Sota', gender: 'male', origin: 'japanese' },
-  { firstName: 'Yuki', gender: 'male', origin: 'japanese' },
-  { firstName: 'Hayato', gender: 'male', origin: 'japanese' },
-  { firstName: 'Ren', gender: 'male', origin: 'japanese' },
-  { firstName: 'Kaito', gender: 'male', origin: 'japanese' },
-  { firstName: 'Riku', gender: 'male', origin: 'japanese' },
+  // Japanese names - Male (日本語)
+  { firstName: '陽翔', gender: 'male', origin: 'japanese' },
+  { firstName: '悠斗', gender: 'male', origin: 'japanese' },
+  { firstName: '蒼太', gender: 'male', origin: 'japanese' },
+  { firstName: '悠希', gender: 'male', origin: 'japanese' },
+  { firstName: '隼人', gender: 'male', origin: 'japanese' },
+  { firstName: '蓮', gender: 'male', origin: 'japanese' },
+  { firstName: '海斗', gender: 'male', origin: 'japanese' },
+  { firstName: '陸', gender: 'male', origin: 'japanese' },
   
-  // Japanese names - Female
-  { firstName: 'Yui', gender: 'female', origin: 'japanese' },
-  { firstName: 'Hina', gender: 'female', origin: 'japanese' },
-  { firstName: 'Sakura', gender: 'female', origin: 'japanese' },
-  { firstName: 'Aoi', gender: 'female', origin: 'japanese' },
-  { firstName: 'Mei', gender: 'female', origin: 'japanese' },
-  { firstName: 'Rin', gender: 'female', origin: 'japanese' },
-  { firstName: 'Mio', gender: 'female', origin: 'japanese' },
-  { firstName: 'Yuna', gender: 'female', origin: 'japanese' },
+  // Japanese names - Female (日本語)
+  { firstName: '結衣', gender: 'female', origin: 'japanese' },
+  { firstName: '陽菜', gender: 'female', origin: 'japanese' },
+  { firstName: 'さくら', gender: 'female', origin: 'japanese' },
+  { firstName: '葵', gender: 'female', origin: 'japanese' },
+  { firstName: '芽依', gender: 'female', origin: 'japanese' },
+  { firstName: '凛', gender: 'female', origin: 'japanese' },
+  { firstName: '澪', gender: 'female', origin: 'japanese' },
+  { firstName: '結菜', gender: 'female', origin: 'japanese' },
   
-  // Chinese names - Male
-  { firstName: 'Wei', gender: 'male', origin: 'chinese' },
-  { firstName: 'Jian', gender: 'male', origin: 'chinese' },
-  { firstName: 'Ming', gender: 'male', origin: 'chinese' },
-  { firstName: 'Chen', gender: 'male', origin: 'chinese' },
-  { firstName: 'Hao', gender: 'male', origin: 'chinese' },
-  { firstName: 'Jun', gender: 'male', origin: 'chinese' },
-  { firstName: 'Feng', gender: 'male', origin: 'chinese' },
-  { firstName: 'Long', gender: 'male', origin: 'chinese' },
+  // Chinese names - Male (中文)
+  { firstName: '伟', gender: 'male', origin: 'chinese' },
+  { firstName: '建', gender: 'male', origin: 'chinese' },
+  { firstName: '明', gender: 'male', origin: 'chinese' },
+  { firstName: '辰', gender: 'male', origin: 'chinese' },
+  { firstName: '浩', gender: 'male', origin: 'chinese' },
+  { firstName: '俊', gender: 'male', origin: 'chinese' },
+  { firstName: '峰', gender: 'male', origin: 'chinese' },
+  { firstName: '龙', gender: 'male', origin: 'chinese' },
   
-  // Chinese names - Female
-  { firstName: 'Mei', gender: 'female', origin: 'chinese' },
-  { firstName: 'Ling', gender: 'female', origin: 'chinese' },
-  { firstName: 'Xiu', gender: 'female', origin: 'chinese' },
-  { firstName: 'Yan', gender: 'female', origin: 'chinese' },
-  { firstName: 'Hui', gender: 'female', origin: 'chinese' },
-  { firstName: 'Fang', gender: 'female', origin: 'chinese' },
-  { firstName: 'Jing', gender: 'female', origin: 'chinese' },
-  { firstName: 'Li', gender: 'female', origin: 'chinese' },
+  // Chinese names - Female (中文)
+  { firstName: '美', gender: 'female', origin: 'chinese' },
+  { firstName: '玲', gender: 'female', origin: 'chinese' },
+  { firstName: '秀', gender: 'female', origin: 'chinese' },
+  { firstName: '燕', gender: 'female', origin: 'chinese' },
+  { firstName: '慧', gender: 'female', origin: 'chinese' },
+  { firstName: '芳', gender: 'female', origin: 'chinese' },
+  { firstName: '静', gender: 'female', origin: 'chinese' },
+  { firstName: '丽', gender: 'female', origin: 'chinese' },
   
-  // Korean names - Male
-  { firstName: 'Min-jun', gender: 'male', origin: 'korean' },
-  { firstName: 'Seo-jun', gender: 'male', origin: 'korean' },
-  { firstName: 'Do-yun', gender: 'male', origin: 'korean' },
-  { firstName: 'Ye-jun', gender: 'male', origin: 'korean' },
-  { firstName: 'Si-woo', gender: 'male', origin: 'korean' },
-  { firstName: 'Ha-jun', gender: 'male', origin: 'korean' },
-  { firstName: 'Ji-ho', gender: 'male', origin: 'korean' },
-  { firstName: 'Jun-seo', gender: 'male', origin: 'korean' },
+  // Korean names - Male (한국어)
+  { firstName: '민준', gender: 'male', origin: 'korean' },
+  { firstName: '서준', gender: 'male', origin: 'korean' },
+  { firstName: '도윤', gender: 'male', origin: 'korean' },
+  { firstName: '예준', gender: 'male', origin: 'korean' },
+  { firstName: '시우', gender: 'male', origin: 'korean' },
+  { firstName: '하준', gender: 'male', origin: 'korean' },
+  { firstName: '지호', gender: 'male', origin: 'korean' },
+  { firstName: '준서', gender: 'male', origin: 'korean' },
   
-  // Korean names - Female
-  { firstName: 'Seo-yeon', gender: 'female', origin: 'korean' },
-  { firstName: 'Ha-yoon', gender: 'female', origin: 'korean' },
-  { firstName: 'Ji-woo', gender: 'female', origin: 'korean' },
-  { firstName: 'Seo-yoon', gender: 'female', origin: 'korean' },
-  { firstName: 'Min-seo', gender: 'female', origin: 'korean' },
-  { firstName: 'Ha-eun', gender: 'female', origin: 'korean' },
-  { firstName: 'Yoon-seo', gender: 'female', origin: 'korean' },
-  { firstName: 'Ji-yoo', gender: 'female', origin: 'korean' },
+  // Korean names - Female (한국어)
+  { firstName: '서연', gender: 'female', origin: 'korean' },
+  { firstName: '하윤', gender: 'female', origin: 'korean' },
+  { firstName: '지우', gender: 'female', origin: 'korean' },
+  { firstName: '서윤', gender: 'female', origin: 'korean' },
+  { firstName: '민서', gender: 'female', origin: 'korean' },
+  { firstName: '하은', gender: 'female', origin: 'korean' },
+  { firstName: '윤서', gender: 'female', origin: 'korean' },
+  { firstName: '지유', gender: 'female', origin: 'korean' },
   
   // Gender neutral names
   { firstName: 'Alex', gender: 'neutral', origin: 'english' },
@@ -228,35 +228,35 @@ export const lastNames: LastNameData[] = [
   { lastName: 'Wagner', origin: 'german' },
   { lastName: 'Becker', origin: 'german' },
   
-  // Japanese
-  { lastName: 'Sato', origin: 'japanese' },
-  { lastName: 'Suzuki', origin: 'japanese' },
-  { lastName: 'Takahashi', origin: 'japanese' },
-  { lastName: 'Tanaka', origin: 'japanese' },
-  { lastName: 'Watanabe', origin: 'japanese' },
-  { lastName: 'Ito', origin: 'japanese' },
-  { lastName: 'Yamamoto', origin: 'japanese' },
-  { lastName: 'Nakamura', origin: 'japanese' },
+  // Japanese (日本語)
+  { lastName: '佐藤', origin: 'japanese' },
+  { lastName: '鈴木', origin: 'japanese' },
+  { lastName: '高橋', origin: 'japanese' },
+  { lastName: '田中', origin: 'japanese' },
+  { lastName: '渡辺', origin: 'japanese' },
+  { lastName: '伊藤', origin: 'japanese' },
+  { lastName: '山本', origin: 'japanese' },
+  { lastName: '中村', origin: 'japanese' },
   
-  // Chinese
-  { lastName: 'Wang', origin: 'chinese' },
-  { lastName: 'Li', origin: 'chinese' },
-  { lastName: 'Zhang', origin: 'chinese' },
-  { lastName: 'Liu', origin: 'chinese' },
-  { lastName: 'Chen', origin: 'chinese' },
-  { lastName: 'Yang', origin: 'chinese' },
-  { lastName: 'Huang', origin: 'chinese' },
-  { lastName: 'Zhao', origin: 'chinese' },
+  // Chinese (中文)
+  { lastName: '王', origin: 'chinese' },
+  { lastName: '李', origin: 'chinese' },
+  { lastName: '张', origin: 'chinese' },
+  { lastName: '刘', origin: 'chinese' },
+  { lastName: '陈', origin: 'chinese' },
+  { lastName: '杨', origin: 'chinese' },
+  { lastName: '黄', origin: 'chinese' },
+  { lastName: '赵', origin: 'chinese' },
   
-  // Korean
-  { lastName: 'Kim', origin: 'korean' },
-  { lastName: 'Lee', origin: 'korean' },
-  { lastName: 'Park', origin: 'korean' },
-  { lastName: 'Choi', origin: 'korean' },
-  { lastName: 'Jung', origin: 'korean' },
-  { lastName: 'Kang', origin: 'korean' },
-  { lastName: 'Cho', origin: 'korean' },
-  { lastName: 'Yoon', origin: 'korean' },
+  // Korean (한국어)
+  { lastName: '김', origin: 'korean' },
+  { lastName: '이', origin: 'korean' },
+  { lastName: '박', origin: 'korean' },
+  { lastName: '최', origin: 'korean' },
+  { lastName: '정', origin: 'korean' },
+  { lastName: '강', origin: 'korean' },
+  { lastName: '조', origin: 'korean' },
+  { lastName: '윤', origin: 'korean' },
 ];
 
 export type Gender = 'male' | 'female' | 'neutral' | 'any';
@@ -300,6 +300,12 @@ export function getRandomLastName(origin: Origin = 'any'): string {
 export function generateFullName(gender: Gender = 'any', origin: Origin = 'any'): string {
   const firstName = getRandomFirstName(gender, origin);
   const lastName = getRandomLastName(origin);
+  
+  // For East Asian names (Chinese, Japanese, Korean), surname comes first
+  if (origin === 'chinese' || origin === 'japanese' || origin === 'korean') {
+    return `${lastName}${firstName}`;
+  }
+  
   return `${firstName} ${lastName}`;
 }
 

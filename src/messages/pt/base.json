@@ -109,7 +109,8 @@
     "moreResults": "mais resultados",
     "relatedTools": "Ferramentas Relacionadas",
     "more": "Mais",
-    "categories": "Categorias"
+    "categories": "Categorias",
+    "launches": "Lançamentos"
   },
   "home": {
     "hero": {
@@ -4027,7 +4028,7 @@
     "json-formatter": {
       "name": "Formatador JSON Grátis",
       "description": "Formate e belifique dados JSON com destaque de sintaxe. Valide JSON e corrija erros comuns.",
-      "seo_title": "Free JSON Formatter & Validator Online",
+      "seo_title": "Formatador e Validador JSON Grátis Online",
       "seo_description": "Formate, belifique e valide dados JSON online de forma gratuita. Destaque de sintaxe, deteção de erros e cópia fácil. Perfeito para desenvolvedores.",
       "inputPlaceholder": "Insira os dados JSON aqui...",
       "outputPlaceholder": "O JSON formatado aparecerá aqui..."
@@ -4096,14 +4097,14 @@
       "seo_description": "Converta o caso do texto online de forma gratuita. Transforme para maiúsculas, minúsculas, caso de título, caso de frase, camelCase e snake_case. Para desenvolvedores e escritores."
     },
     "html-encoder": {
-      "name": "HTML Encoder/Decoder",
-      "description": "Encode special characters to HTML entities or decode them back.",
-      "seo_title": "Free HTML Encoder & Decoder Online",
+      "name": "Codificador/Decodificador HTML",
+      "description": "Codifica caracteres especiais em entidades HTML ou decodifica de volta.",
+      "seo_title": "Codificador e Decodificador HTML Grátis Online",
       "seo_description": "Encode and decode HTML entities online for free. Gerencie caracteres especiais de forma segura para desenvolvimento web. Evite ataques XSS e exiba HTML corretamente.",
       "inputPlaceholder": "Insira o texto aqui..."
     },
     "markdown-preview": {
-      "name": "Markdown Preview",
+      "name": "Visualizador Markdown",
       "description": "Escreva Markdown e veja visualização em tempo real. Exporte para HTML.",
       "seo_title": "Editor e Visualizador de Markdown Grátis Online",
       "seo_description": "Escreva e visualize Markdown online de graça. Visualização em tempo real com destaque de sintaxe e exportação para HTML. Perfeito para documentação, arquivos README e postagens de blog.",
@@ -4142,9 +4143,9 @@
     },
     "diff-checker": {
       "name": "Diff Checker",
-      "description": "Compare two texts and highlight the differences between them.",
-      "seo_title": "Free Text Diff Checker Online",
-      "seo_description": "Compare two texts online for free. Highlight added, removed, and changed content with side-by-side view. Essential for code review and document comparison."
+      "description": "Compare dois textos e destaque as diferenças entre eles.",
+      "seo_title": "Comparador de Diferenças de Texto Grátis Online",
+      "seo_description": "Compare dois textos grátis online. Destaque conteúdo adicionado, removido e alterado com visualização lado a lado. Essencial para revisão de código e comparação de documentos."
     },
     "json-to-csv": {
       "name": "JSON para CSV",
@@ -4225,7 +4226,7 @@
     "json-path-tester": {
       "name": "Testador de JSONPath",
       "description": "Teste e avalie expressões JSONPath contra seus dados JSON.",
-      "seo_title": "Free JSONPath Tester Online",
+      "seo_title": "Testador JSONPath Grátis Online",
       "seo_description": "Teste e depure expressões JSONPath online de graça. Consulte dados JSON com resultados em tempo real e destaque de sintaxe. Essencial para o desenvolvimento de APIs.",
       "jsonData": "Dados JSON",
       "jsonPlaceholder": "{\"name\": \"John\", \"users\": [{\"name\": \"Alice\"}, {\"name\": \"Bob\"}]}",
@@ -4292,15 +4293,15 @@
     },
     "sql-formatter": {
       "name": "SQL Formatter",
-      "description": "Format and beautify SQL queries for better readability.",
-      "seo_title": "Free SQL Formatter Online",
-      "seo_description": "Format and beautify SQL queries online for free. Support multiple SQL dialects with syntax highlighting and indentation. Essential for database development."
+      "description": "Formate e embeleze consultas SQL para melhor legibilidade.",
+      "seo_title": "Formatador SQL Grátis Online",
+      "seo_description": "Formate e embeleze consultas SQL grátis online. Suporta múltiplos dialetos SQL com indentação personalizável. Perfeito para desenvolvedores de banco de dados."
     },
     "pinyin-converter": {
       "name": "Conversor Pinyin",
       "description": "Converta caracteres chineses em Pinyin com ou sem tons.",
-      "seo_title": "Free Chinese to Pinyin Converter",
-      "seo_description": "Convert Chinese characters to Pinyin online for free. Support tone marks and numbered tones. Essential for Chinese language learning and pronunciation guides."
+      "seo_title": "Conversor de Chinês para Pinyin Grátis",
+      "seo_description": "Converta caracteres chineses para Pinyin grátis online. Suporta marcas de tom e tons numerados. Essencial para aprendizado de chinês e guias de pronúncia."
     },
     "color-picker": {
       "name": "Escolher Cor",
@@ -4317,13 +4318,13 @@
     "css-beautifier": {
       "name": "CSS Beautifier",
       "description": "Format e belificie o código CSS com opções de minificação e belificação.",
-      "seo_title": "Free CSS Beautifier Online",
+      "seo_title": "Embelezador CSS Grátis Online",
       "seo_description": "Formatar, belificar e minificar código CSS online de graça. Com destaque de sintaxe com indentação personalizável. Perfeito para desenvolvedores web e otimização front-end."
     },
     "js-beautifier": {
-      "name": "JavaScript Beautifier",
+      "name": "Embelezador JavaScript",
       "description": "Format e belificie o código JavaScript com opções de minificação e belificação.",
-      "seo_title": "Free JavaScript Beautifier Online",
+      "seo_title": "Embelezador JavaScript Grátis Online",
       "seo_description": "Formatar, belificar e minificar código JavaScript online de graça. Com destaque de sintaxe com indentação personalizável. Perfeito para desenvolvedores e otimização."
     },
     "html-preview": {
@@ -4437,7 +4438,7 @@
     "byte-counter": {
       "name": "Contador de Bytes",
       "description": "Conte os bytes de texto com suporte a codificações UTF-8, UTF-16 e ASCII.",
-      "seo_title": "Free Byte Counter Online",
+      "seo_title": "Contador de Bytes Grátis Online",
       "seo_description": "Conte os bytes do texto em UTF-8, UTF-16 e outras codificações online de graça. Obtenha contagem de caracteres, contagem de palavras e tamanho em bytes. Essencial para estimativa de tamanho de dados."
     },
     "json-to-typescript": {
@@ -4448,8 +4449,8 @@
     },
     "svg-optimizer": {
       "name": "SVG Optimizer",
-      "description": "Optimize and compress SVG code to reduce file size.",
-      "seo_title": "Free SVG Optimizer Online",
+      "description": "Otimize e comprima código SVG para reduzir o tamanho do arquivo.",
+      "seo_title": "Otimizador SVG Grátis Online",
       "seo_description": "Optimize and compress SVG files online for free. Remove unnecessary metadata, minify code, and reduce file size. Perfeito para otimização de desempenho da web."
     },
     "text-to-binary": {
@@ -4472,7 +4473,7 @@
     },
     "json-diff": {
       "name": "JSON Diff",
-      "description": "Compare two JSON objects and find differences.",
+      "description": "Compare dois objetos JSON e encontre diferenças.",
       "seo_title": "JSON Diff Online - Ferramenta Grátis",
       "seo_description": "Compare two JSON objects and find differences online for free. Destaque valores adicionados, removidos e alterados com visualização lado a lado. Essencial para depuração de API.",
       "json1": "JSON 1",
@@ -4497,8 +4498,8 @@
     "css-unit-converter": {
       "name": "Conversor de unidades CSS",
       "description": "Converta entre unidades CSS como px, rem, em, pt, vw, vh.",
-      "seo_title": "Free CSS Unit Converter Online",
-      "seo_description": "Convert CSS units (px, em, rem, %, vw, vh) online for free. Calculate responsive values with base font size. Essential for responsive web design."
+      "seo_title": "Conversor de Unidades CSS Grátis Online",
+      "seo_description": "Converta unidades CSS (px, em, rem, %, vw, vh) grátis online. Calcule valores responsivos com tamanho de fonte base. Essencial para design web responsivo."
     },
     "text-statistics": {
       "name": "Estatísticas de Texto",
@@ -4559,8 +4560,8 @@
     "html-to-jsx": {
       "name": "HTML para JSX",
       "description": "Converta o código HTML para o formato React JSX.",
-      "seo_title": "Free HTML to JSX Converter Online",
-      "seo_description": "Convert HTML code to React JSX format online for free. Transform class to className, style strings to objects. Essential for React developers.",
+      "seo_title": "Conversor de HTML para JSX Grátis Online",
+      "seo_description": "Converta código HTML para formato React JSX grátis online. Transforme class para className, strings de estilo para objetos. Essencial para desenvolvedores React.",
       "htmlInput": "HTML Input",
       "jsxOutput": "JSX Output",
       "placeholder": "<div class=\"container\">...</div>",
@@ -4582,7 +4583,7 @@
     "text-to-speech": {
       "name": "Text to Speech",
       "description": "Converta texto em fala com voz ajustável, velocidade e tom.",
-      "seo_title": "Free Text to Speech Online",
+      "seo_title": "Texto para Fala Grátis Online",
       "seo_description": "Converta texto em fala online de graça. Várias vozes e idiomas com ajuste de velocidade e tom. Baixe o áudio ou ouça no navegador."
     },
     "url-parser": {
@@ -4612,14 +4613,14 @@
     "text-wrapper": {
       "name": "Quebra de Linha de Texto",
       "description": "Quebra o texto em uma largura de linha especificada.",
-      "seo_title": "Free Text Wrapper Online",
-      "seo_description": "Wrap text to specified width online for free. Add line breaks at word boundaries or fixed positions. Perfect for formatting code comments and documentation."
+      "seo_title": "Quebrador de Texto Grátis Online",
+      "seo_description": "Quebre texto em largura especificada grátis online. Adicione quebras de linha em limites de palavras ou posições fixas. Perfeito para formatar comentários de código e documentação."
     },
     "csv-to-json": {
       "name": "CSV para JSON",
       "description": "Converta dados CSV para o formato JSON com delimitador personalizável.",
-      "seo_title": "Free CSV to JSON Converter Online",
-      "seo_description": "Convert CSV to JSON format online for free. Parse CSV with custom delimiters and headers. Support nested objects and arrays. Perfect for data import."
+      "seo_title": "Conversor de CSV para JSON Grátis Online",
+      "seo_description": "Converta CSV para formato JSON grátis online. Analise CSV com delimitadores e cabeçalhos personalizados. Suporta objetos e arrays aninhados. Perfeito para importação de dados."
     },
     "html-entity": {
       "name": "Conversor de Entidades HTML",
@@ -4642,8 +4643,8 @@
     "password-strength": {
       "name": "Verificador de força de senha",
       "description": "Analise a força da senha verificando comprimento, tipos de caracteres e padrões comuns.",
-      "seo_title": "Free Password Strength Checker Online",
-      "seo_description": "Check password strength online for free. Get detailed analysis with entropy score, crack time estimate, and improvement suggestions. Essential for security."
+      "seo_title": "Verificador de Força de Senha Grátis Online",
+      "seo_description": "Verifique a força de senhas grátis online. Obtenha análise detalhada com pontuação de entropia, tempo estimado de quebra e sugestões de melhoria. Essencial para segurança."
     },
     "totp-generator": {
       "name": "Gerador de TOTP",
@@ -4690,7 +4691,7 @@
     "text-sorter": {
       "name": "Text Sorter",
       "description": "Organize linhas de texto alfabeticamente, numericamente ou por comprimento com várias opções.",
-      "seo_title": "Free Text Sorter Online",
+      "seo_title": "Ordenador de Texto Grátis Online",
       "seo_description": "Organize linhas de texto alfabeticamente, numericamente, naturalmente ou por comprimento online de graça. Suporte para ordem ascendente e descendente. Essencial para organização de dados."
     },
     "text-extractor": {
@@ -4702,8 +4703,8 @@
     "emoji-picker": {
       "name": "Seletor de Emojis",
       "description": "Navegue, pesquise e copie emojis por categoria com um clique.",
-      "seo_title": "Free Emoji Picker Online",
-      "seo_description": "Browse and copy emojis by category online for free. Search emojis by name with skin tone variants. One-click copy to clipboard. Perfect for social media."
+      "seo_title": "Seletor de Emoji Grátis Online",
+      "seo_description": "Navegue e copie emojis por categoria grátis online. Pesquise emojis por nome com suporte a tons de pele. Perfeito para redes sociais e mensagens."
     },
     "json-to-sql": {
       "name": "JSON to SQL",
@@ -4836,9 +4837,9 @@
       "copy": "Copiar"
     },
     "base58": {
-      "name": "Base58 Encoder/Decoder",
-      "description": "Encode and decode Base58 strings used in Bitcoin and cryptocurrencies.",
-      "seo_title": "Free Base58 Encoder & Decoder Online",
+      "name": "Codificador/Decodificador Base58",
+      "description": "Codifique e decodifique strings Base58 usadas em Bitcoin e criptomoedas.",
+      "seo_title": "Codificador e Decodificador Base58 Grátis Online",
       "seo_description": "Encode and decode Base58 strings online for free. Usado em endereços Bitcoin, hashes IPFS e carteiras criptográficas. Ferramenta de codificação segura baseada em navegador.",
       "encodeBtn": "Codificar para Base58",
       "decodeBtn": "Decodificar de Base58",
@@ -5304,7 +5305,7 @@
       "generatedIps": "Endereços IP Gerados"
     },
     "css-gradient-text": {
-      "name": "CSS Gradient Text",
+      "name": "Texto com Gradiente CSS",
       "description": "Crie efeitos de texto com gradiente com CSS.",
       "output": "CSS Output",
       "copy": "Copy CSS",
@@ -5416,19 +5417,19 @@
     "uuid-validator": {
       "name": "Validador UUID",
       "description": "Valide e analise strings UUID.",
-      "seo_title": "Free UUID Validator Online",
-      "seo_description": "Validate and analyze UUID strings online for free. Check format, version, and variant of UUIDs. Extract timestamp from UUID v1 and v7. Essential for debugging."
+      "seo_title": "Validador UUID Grátis Online",
+      "seo_description": "Valide e analise strings UUID grátis online. Verifique formato, versão e variante. Extraia informações de timestamp de UUIDs v1."
     },
     "text-hash-comparator": {
       "name": "Comparador de hash de texto",
       "description": "Compare o texto por seus valores de hash.",
-      "seo_title": "Free Text Hash Comparator Online",
-      "seo_description": "Compare text by their hash values online for free. Generate and compare MD5, SHA-1, SHA-256 hashes side by side. Essential for file integrity verification."
+      "seo_title": "Comparador de Hash de Texto Grátis Online",
+      "seo_description": "Compare texto por seus valores hash grátis online. Gere e compare hashes MD5, SHA-1, SHA-256 lado a lado. Essencial para verificação de integridade de arquivos."
     },
     "json-path-finder": {
-      "name": "JSON Path Finder",
+      "name": "Localizador de Caminhos JSON",
       "description": "Encontre e copie caminhos JSON do seu dados.",
-      "seo_title": "Free JSON Path Finder Online",
+      "seo_title": "Localizador de Caminhos JSON Grátis Online",
       "seo_description": "Encontre e copie caminhos JSON do seu dados online de graça. Clique em qualquer valor para obter sua expressão JSONPath. Essencial para o desenvolvimento de APIs e extração de dados."
     },
     "canvas-drawing": {
@@ -5438,7 +5439,7 @@
       "seo_description": "Ferramenta de desenho simples com pincel e borracha online para uso gratuito. Personalize o tamanho do pincel, a cor e a opacidade. Baixe o artefato como PNG. Perfeito para esboços rápidos."
     },
     "json-escape": {
-      "name": "JSON Escape/Unescape",
+      "name": "Escapar/Desescapar JSON",
       "description": "Escape e desescape strings JSON.",
       "seo_title": "Ferramenta Gratuita de Escape/Desescape JSON Online",
       "seo_description": "Escape e desescape strings JSON online de graça. Manipule caracteres especiais, aspas e caracteres de controle. Essencial para inserir JSON em strings."
@@ -5457,8 +5458,8 @@
     },
     "dns-lookup": {
       "name": "DNS Lookup",
-      "description": "Look up DNS records for any domain.",
-      "seo_title": "Free DNS Lookup Tool Online",
+      "description": "Pesquise registros DNS para qualquer domínio.",
+      "seo_title": "Ferramenta de Pesquisa DNS Grátis Online",
       "seo_description": "Look up DNS records for any domain online for free. Consulte A, AAAA, MX, TXT, NS, CNAME e SOA records. Essencial para resolução de problemas e verificação de domínios."
     },
     "image-resizer": {
@@ -5503,7 +5504,7 @@
       "note": "💡 Nota: Esta é uma versão de demonstração. Para uso em produção, integre-se com um serviço de API WHOIS."
     },
     "websocket-tester": {
-      "name": "WebSocket Tester",
+      "name": "Testador WebSocket",
       "description": "Teste de conexões WebSocket e envio/receber mensagens.",
       "seo_title": "Teste WebSocket Grátis Online",
       "seo_description": "Teste conexões WebSocket, envie e receba mensagens online gratuitamente. Suporta cabeçalhos personalizados e protocolos. Essencial para o desenvolvimento de aplicações em tempo real.",
@@ -5716,8 +5717,8 @@
     "twitter-card-generator": {
       "name": "Gerador de Twitter Cards",
       "description": "Gere metatags de cartão do Twitter para melhores visualizações de tweets.",
-      "seo_title": "Free Twitter Card Generator Online",
-      "seo_description": "Generate Twitter Card meta tags for rich tweet previews online for free. Support summary, large image, and player cards. Optimize for Twitter sharing."
+      "seo_title": "Gerador de Twitter Card Grátis Online",
+      "seo_description": "Gere meta tags de Twitter Card para prévias ricas de tweets grátis online. Suporta cartões de resumo, imagem grande e mais."
     },
     "mime-type-lookup": {
       "name": "Busca de Tipos MIME",
@@ -5760,8 +5761,8 @@
     "text-cleaner": {
       "name": "Limpador de Texto",
       "description": "Limpe e formate o texto removendo espaços, linhas e muito mais.",
-      "seo_title": "Free Text Cleaner Online",
-      "seo_description": "Clean and format text by removing extra spaces, empty lines, HTML tags, and more online for free. Normalize whitespace and fix common formatting issues.",
+      "seo_title": "Limpador de Texto Grátis Online",
+      "seo_description": "Limpe e formate texto removendo espaços extras, linhas vazias, tags HTML e mais grátis online. Perfeito para preparação de dados e formatação de conteúdo.",
       "input": "Texto de entrada",
       "clear": "Limpar",
       "cleanedText": "Texto limpo",
@@ -5782,8 +5783,8 @@
     "list-randomizer": {
       "name": "Randomizador de Listas",
       "description": "Embaralhe e embaralhe listas de itens.",
-      "seo_title": "Free List Randomizer Online",
-      "seo_description": "Shuffle and randomize lists of items or names online for free. Perfect for random selection, lottery draws, and fair ordering. Secure randomization.",
+      "seo_title": "Aleatorizador de Listas Grátis Online",
+      "seo_description": "Embaralhe e aleatorize listas de itens ou nomes grátis online. Perfeito para seleção aleatória, sorteios e ordenação justa. Aleatorização segura.",
       "originalList": "Lista Original",
       "randomizedList": "Lista Randomizada",
       "clear": "Limpar",
@@ -5851,8 +5852,8 @@
     "svg-to-image": {
       "name": "SVG para imagem",
       "description": "Converta arquivos SVG em imagens PNG, JPEG ou WebP.",
-      "seo_title": "Free SVG to Image Converter Online",
-      "seo_description": "Convert SVG to PNG, JPEG, WebP online for free. Set custom dimensions and background color. Perfect for exporting vector graphics for web and print use.",
+      "seo_title": "Conversor de SVG para Imagem Grátis Online",
+      "seo_description": "Converta SVG para PNG, JPEG, WebP grátis online. Defina dimensões personalizadas e cor de fundo. Perfeito para exportar gráficos vetoriais.",
       "uploadSvg": "Carregar arquivo SVG",
       "svgCode": "SVG Code",
       "loadSample": "Carregar exemplo",
@@ -5882,8 +5883,8 @@
     "pdf-to-base64": {
       "name": "PDF para Base64",
       "description": "Converta arquivos PDF para codificação Base64.",
-      "seo_title": "Free PDF to Base64 Converter Online",
-      "seo_description": "Convert PDF files to Base64 encoding online for free. Embed PDFs in HTML, JSON, or data URIs. Secure browser-based conversion with no file upload to servers.",
+      "seo_title": "Conversor de PDF para Base64 Grátis Online",
+      "seo_description": "Converta arquivos PDF para codificação Base64 grátis online. Incorpore PDFs em HTML, JSON ou URIs de dados. Conversão segura no navegador sem upload para servidores.",
       "dropzone": "Solte o arquivo PDF aqui ou clique para fazer upload",
       "acceptedFormat": "Formato aceito: PDF",
       "errorNotPdf": "Selecione um arquivo PDF",
@@ -5899,8 +5900,8 @@
     "audio-to-base64": {
       "name": "Áudio para Base64",
       "description": "Converta arquivos de áudio para codificação Base64.",
-      "seo_title": "Free Audio to Base64 Converter Online",
-      "seo_description": "Convert audio files to Base64 encoding online for free. Support MP3, WAV, OGG formats. Embed audio in HTML, JSON, or data URIs. Browser-based processing.",
+      "seo_title": "Conversor de Áudio para Base64 Grátis Online",
+      "seo_description": "Converta arquivos de áudio para codificação Base64 grátis online. Suporta formatos MP3, WAV, OGG. Incorpore áudio em HTML, JSON ou URIs de dados. Processamento no navegador.",
       "dropzone": "Solte o arquivo de áudio aqui ou clique para fazer upload",
       "acceptedFormats": "Suportado: MP3, WAV, OGG, WebM, AAC, FLAC",
       "errorNotAudio": "Selecione um arquivo de áudio",
@@ -5915,8 +5916,8 @@
     "video-to-base64": {
       "name": "Vídeo para Base64",
       "description": "Converta arquivos de vídeo para codificação Base64.",
-      "seo_title": "Free Video to Base64 Converter Online",
-      "seo_description": "Convert video files to Base64 encoding online for free. Support MP4, WebM, and more formats. Embed videos in HTML, JSON, or data URIs. Browser-based processing.",
+      "seo_title": "Conversor de Vídeo para Base64 Grátis Online",
+      "seo_description": "Converta arquivos de vídeo para codificação Base64 grátis online. Suporta MP4, WebM e mais formatos. Incorpore vídeo em HTML ou JSON.",
       "dropzone": "Solte o arquivo de vídeo aqui ou clique para fazer upload",
       "maxSize": "Tamanho máximo do arquivo: 10MB",
       "errorNotVideo": "Selecione um arquivo de vídeo",
@@ -6291,8 +6292,8 @@
     "base-calculator": {
       "name": "Calculadora Básica",
       "description": "Realize cálculos em diferentes bases numéricas.",
-      "seo_title": "Free Base Calculator Online",
-      "seo_description": "Calculate in binary, octal, decimal, and hexadecimal. Supports arithmetic and bitwise operations like AND, OR, XOR, NOT, shift. For low-level programming.",
+      "seo_title": "Calculadora de Base Grátis Online",
+      "seo_description": "Calcule em binário, octal, decimal e hexadecimal. Suporta operações aritméticas e bit a bit. Essencial para programadores.",
       "base": "Base numérica",
       "binary": "Binário",
       "octal": "octal",
@@ -7487,8 +7488,8 @@
     },
     "theme-river-generator": {
       "name": "Gerador de Rio Tema",
-      "seo_title": "Free Online Theme River Generator",
-      "seo_description": "Create professional theme river charts online for free. Visualize data flow and trends over time. Export as PNG or SVG.",
+      "seo_title": "Gerador de Gráfico Theme River Grátis Online",
+      "seo_description": "Crie gráficos theme river profissionais grátis online. Visualize fluxo de dados e tendências ao longo do tempo. Exporte como PNG ou SVG.",
       "title": "Gerador de Rio Tema",
       "description": "Crie gráficos temáticos de rios mostrando o fluxo de dados ao longo do tempo.",
       "defaultTitle": "Exemplo de rio temático",
@@ -7553,8 +7554,8 @@
     },
     "venn-diagram-generator": {
       "name": "Gerador de Diagramas de Venn",
-      "seo_title": "Free Online Venn Diagram Generator",
-      "seo_description": "Create 2-set or 3-set Venn diagrams online. Visualize logical relationships and overlaps. Free and easy to use.",
+      "seo_title": "Gerador de Diagrama de Venn Grátis Online",
+      "seo_description": "Crie diagramas de Venn de 2 ou 3 conjuntos online. Visualize relações lógicas e sobreposições. Grátis e fácil de usar.",
       "title": "Gerador de Diagramas de Venn",
       "description": "Crie diagramas de Venn para mostrar relacionamentos lógicos entre conjuntos.",
       "defaultTitle": "Exemplo de diagrama de Venn",
@@ -7578,8 +7579,8 @@
     },
     "timeline-chart-generator": {
       "name": "Gerador de Linhas do Tempo",
-      "seo_title": "Free Online Timeline Chart Generator",
-      "seo_description": "Create vertical or horizontal timeline charts online. Visualize history, milestones, and processes. Export for free.",
+      "seo_title": "Gerador de Gráfico de Linha do Tempo Grátis Online",
+      "seo_description": "Crie gráficos de linha do tempo verticais ou horizontais online. Visualize história, marcos e processos. Exporte grátis.",
       "title": "Gerador de Linhas do Tempo",
       "description": "Crie gráficos de linha do tempo para mostrar sequências de eventos.",
       "defaultTitle": "Marcos da empresa",
@@ -9673,7 +9674,7 @@
       "commonResolutions": "Resoluções Comuns"
     },
     "chinese-lorem-ipsum": {
-      "name": "Chinese Lorem Ipsum",
+      "name": "Lorem Ipsum Chinês",
       "description": "Gere texto de placeholder em chinês para protótipos de design.",
       "seo_title": "Gerador Grátis de Lorem Ipsum Chinês Online",
       "seo_description": "Gere texto de placeholder em chinês online de forma gratuita. Crie parágrafos, frases ou palavras de texto falso chinês para protótipos de design.",
@@ -10175,7 +10176,17 @@
       "count": "Número de Nomes",
       "anyGender": "Qualquer Gênero",
       "neutral": "Neutro",
-      "clickToGenerate": "Clique para Gerar"
+      "clickToGenerate": "Clique para Gerar",
+      "origins": {
+        "english": "Inglês/Americano",
+        "spanish": "Espanhol/Hispânico",
+        "french": "Francês",
+        "german": "Alemão",
+        "japanese": "Japonês",
+        "chinese": "Chinês",
+        "korean": "Coreano",
+        "any": "Qualquer Origem"
+      }
     },
     "random-picker": {
       "name": "Sorteio Aleatório",
@@ -10777,6 +10788,732 @@
       "class": "Classe",
       "invalidIp": "Endereço IP inválido",
       "invalidCidr": "Notação CIDR inválida"
+    },
+    "iban-validator": {
+      "name": "Validador de IBAN",
+      "description": "Valida e analisa números de contas bancárias IBAN de países europeus.",
+      "seo_title": "Validador de IBAN Online Gratuito - Verifique Números de IBAN",
+      "seo_description": "Valide números de contas bancárias IBAN online de forma gratuita. Verifique o formato, código do país e checksum. Suporta todos os países europeus. Rápido e seguro.",
+      "inputLabel": "Insira o IBAN",
+      "placeholder": "por exemplo, DE89370400440532013000",
+      "validate": "Validar",
+      "valid": "IBAN válido",
+      "invalid": "IBAN inválido",
+      "country": "País",
+      "checkDigits": "Dígito de Controle",
+      "bankCode": "Código do Banco",
+      "bban": "BBAN (Número Básico da Conta Bancária)",
+      "formatted": "IBAN Formatado",
+      "copy": "Copiar",
+      "exampleIbans": "Exemplos de IBAN",
+      "errors": {
+        "empty": "Por favor, insira um IBAN",
+        "invalidFormat": "Formato de IBAN inválido",
+        "unknownCountry": "Código de país desconhecido",
+        "invalidLength": "Tamanho inválido: esperado {esperado} caracteres, obtido {real}",
+        "invalidChecksum": "Checksum inválido - O IBAN pode estar incorreto"
+      }
+    },
+    "vat-calculator": {
+      "name": "Calculadora de IVA",
+      "description": "Calcule o IVA (Imposto sobre o Valor Acrescentado) para países europeus com taxas diferentes.",
+      "seo_title": "Calculadora de IVA Grátis Online - Calculadora de Impostos da UE",
+      "seo_description": "Calcule o IVA para países europeus de forma gratuita. Adicione ou remova o IVA; suporte para taxas padrão e reduzidas. Todos os países da UE estão incluídos.",
+      "amount": "Quantia",
+      "calculationMode": "Modo de Cálculo",
+      "addVat": "Adicionar IVA à quantia",
+      "removeVat": "Remover IVA da quantia",
+      "vatOnly": "Calcular apenas o IVA",
+      "useCustomRate": "Usar uma taxa de IVA personalizada",
+      "customRate": "Taxa de IVA Personalizada",
+      "country": "País",
+      "rateType": "Tipo de Taxa",
+      "standardRate": "Taxa Padrão",
+      "reducedRate": "Taxa Reduzida",
+      "reducedRates": "Taxas Reduzidas",
+      "superReducedRate": "Taxa Super Reduzida",
+      "netAmount": "Quantia Líquida",
+      "vatAmount": "Quantia de IVA",
+      "grossAmount": "Quantia Bruta",
+      "euVatRates": "Referência de Taxas de IVA da UE"
+    },
+    "carbon-footprint-calculator": {
+      "name": "Calculadora de Pegada de Carbono",
+      "description": "Calcule a sua pegada de carbono pessoal devido ao transporte, energia e estilo de vida.",
+      "seo_title": "Calculadora de Pegada de Carbono Grátis - Calculadora de Emissões de CO2",
+      "seo_description": "Calcule a sua pegada de carbono online gratuitamente. Monitore as emissões de CO2 provenientes de transporte, energia doméstica e dieta. Receba dicas personalizadas para reduzi-la.",
+      "periodo_de_calculo": {
+        "mensal": "Mensal",
+        "anual": "Anual"
+      },
+      "aspectos_a_calcular": [
+        "Transporte",
+        "Energia Doméstica",
+        "Estilo de Vida",
+        "Dieta"
+      ],
+      "opções_de_dieta": {
+        "carne": "Consumidor de carne em excesso",
+        "medio": "Medio",
+        "vegetariano": "Vegetariano",
+        "vegano": "Vegano"
+      },
+      "resultados": "A sua Pegada de Carbono",
+      "total": "Total",
+      "árvores_necessárias": "Árvores necessárias para compensar as emissões",
+      "número_de_árvores_anual": "Número de árvores necessárias por ano",
+      "níveis_de_impacto": {
+        "baixo": "Baixo Impacto",
+        "medio": "Médio",
+        "alto": "Alto Impacto",
+        "muito_alto": "Muito Alto Impacto"
+      },
+      "descrição_detalhada": "A Calculadora de Pegada de Carbono ajuda a medir o seu impacto ambiental, calculando as emissões de CO2 provenientes de transporte, consumo de energia doméstica e escolhas alimentares. O ferramenta fornece uma análise completa da sua pegada de carbono e indica quantas árvores seriam necessárias para compensar as suas emissões.",
+      "passos_de_uso": [
+        "Selecionar o período de cálculo (mensal ou anual)",
+        "Inserir os dados de transporte (carro, voos, trem, ônibus)",
+        "Informar o consumo de energia doméstica (eletricidade, gás, aquecimento)",
+        "Selecionar o tipo de dieta",
+        "Ver a sua pegada de carbono total e a detalhada análise das emissões"
+      ],
+      "exemplos_de_uso": [
+        "Acompanhar o impacto ambiental ao longo do tempo",
+        "Comparar a pegada de carbono de diferentes estilos de vida",
+        "Planejar estratégias de compensação de emissões para indivíduos ou empresas"
+      ],
+      "monthly": "Mensal",
+      "yearly": "Anual",
+      "month": "mês",
+      "year": "ano",
+      "transportation": "Transporte",
+      "carDistance": "Distância de carro",
+      "petrol": "Gasolina",
+      "diesel": "Diesel",
+      "hybrid": "Híbrido",
+      "electric": "Elétrico",
+      "flightHours": "Horas de voo",
+      "shortHaul": "Curta distância (<3h)",
+      "mediumHaul": "Média distância (3-6h)",
+      "longHaul": "Longa distância (>6h)",
+      "trainDistance": "Distância de trem",
+      "busDistance": "Distância de ônibus",
+      "homeEnergy": "Energia doméstica",
+      "electricity": "Eletricidade",
+      "naturalGas": "Gás natural",
+      "heatingOil": "Óleo de aquecimento",
+      "lifestyle": "Estilo de vida",
+      "dietType": "Tipo de dieta",
+      "diets": {
+        "meat": "Grande consumidor de carne",
+        "average": "Médio",
+        "vegetarian": "Vegetariano",
+        "vegan": "Vegano"
+      },
+      "results": "Sua pegada de carbono",
+      "treesNeeded": "Árvores necessárias para compensar",
+      "trees": "árvores por ano",
+      "levels": {
+        "low": "Baixo impacto",
+        "average": "Médio",
+        "high": "Alto impacto",
+        "veryHigh": "Impacto muito alto"
+      }
+    },
+    "gdpr-consent-generator": {
+      "name": "Gerador de Consentimento para o GDPR",
+      "description": "Gera banners de consentimento para cookies e modelos de políticas de privacidade em conformidade com o GDPR.",
+      "seo_title": "Gerador de Consentimento para Cookies do GDPR - Gerador de Políticas de Privacidade",
+      "seo_description": "Gere gratuitamente banners de consentimento para cookies e políticas de privacidade em conformidade com o GDPR. Código HTML/CSS personalizável para o seu website. Em conformidade com a legislação de privacidade da UE.",
+      "websiteName": "Nome do Website",
+      "websiteUrl": "URL do Website",
+      "companyName": "Nome da Empresa",
+      "privacyEmail": "E-mail de Contato para Privacidade",
+      "cookieTypes": "Tipos de Cookies",
+      "cookies": {
+        "necessary": "Necessários",
+        "analytics": "Analíticos",
+        "marketing": "Marketing",
+        "preferences": "Preferências"
+      },
+      "position": "Posição do Banner",
+      "positionTop": "Parte Superior",
+      "positionBottom": "Parte Inferior",
+      "theme": "Tema",
+      "themeLight": "Claro",
+      "themeDark": "Escuro",
+      "htmlCode": "Código HTML",
+      "cssCode": "Código CSS",
+      "privacyPolicy": "Modelo de Política de Privacidade",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "bannerTitle": "Consentimento para Cookies",
+      "decline": "Recusar",
+      "customize": "Personalizar",
+      "acceptAll": "Aceitar Todos",
+      "disclaimer": "Este gerador fornece modelos apenas para referência. Por favor, consulte um profissional legal para garantir a plena conformidade com o GDPR na sua situação específica."
+    },
+    "metric-imperial-converter": {
+      "name": "Conversor de Unidades Métricas e Imperiais",
+      "description": "Converte entre unidades métricas e imperiais para comprimento, peso, volume e muito mais.",
+      "seo_title": "Conversor de Unidades Métricas e Imperiais Grátis - Calculadora de Conversão de Unidades",
+      "seo_description": "Converte online entre unidades métricas e imperiais de forma gratuita. Conversões de comprimento, peso, volume, temperatura, área e velocidade. Rápido e preciso.",
+      "categories": {
+        "comprimento": "Comprimento",
+        "peso": "Peso",
+        "volume": "Volume",
+        "temperatura": "Temperatura",
+        "área": "Área",
+        "velocidade": "Velocidade",
+        "length": "Comprimento",
+        "weight": "Peso",
+        "temperature": "Temperatura",
+        "area": "Área",
+        "speed": "Velocidade"
+      },
+      "from": "De",
+      "to": "Para",
+      "swap": "Trocar unidades",
+      "metric": "Métrico",
+      "imperial": "Imperial",
+      "quickReference": "Referência Rápida"
+    },
+    "bic-swift-lookup": {
+      "name": "Pesquisa de Códigos BIC/SWIFT",
+      "description": "Pesquise e valide códigos BIC/SWIFT para transferências bancárias internacionais.",
+      "seo_title": "Pesquisa gratuita de códigos BIC/SWIFT - Validador de Códigos Bancários",
+      "seo_description": "Pesquise e valide códigos BIC/SWIFT on-line gratuitamente. Encontre informações sobre bancos a partir dos códigos. Essencial para transferências bancárias internacionais.",
+      "inputLabel": "Insira o código BIC/SWIFT",
+      "placeholder": "Ex.: DEUTDEFF",
+      "formatHint": "Formato: 8 ou 11 caracteres (ex.: DEUTDEFF ou DEUTDEFFXXX)",
+      "lookup": "Pesquisar",
+      "validBic": "Código BIC/SWIFT válido",
+      "bankCode": "Código Bancário",
+      "country": "País",
+      "locationCode": "Código de Localização",
+      "branchCode": "Código da Filial",
+      "headOffice": "Sede",
+      "specificBranch": "Filial Específica",
+      "bankInformation": "Informações do Banco",
+      "bankName": "Nome do Banco",
+      "city": "Cidade",
+      "branch": "Filial",
+      "copyBic": "Copiar código BIC",
+      "bicStructure": "Estrutura do código BIC/SWIFT",
+      "structure": {
+        "bank": "Código Bancário",
+        "country": "País",
+        "location": "Localização",
+        "branch": "Filial (opcional)"
+      },
+      "sampleCodes": "Códigos BIC de exemplo",
+      "errors": {
+        "empty": "Por favor, insira um código BIC/SWIFT",
+        "invalidFormat": "Formato inválido. Deve conter 8 ou 11 caracteres alfanuméricos.",
+        "unknownCountry": "Código de país desconhecido"
+      }
+    },
+    "phone-formatter": {
+      "name": "Formatação de Números de Telefone",
+      "description": "Formata números de telefone de acordo com padrões internacionais para diferentes países.",
+      "seo_title": "Formatação de Números de Telefone Grátis on-line - Padrão Internacional",
+      "seo_description": "Formate números de telefone on-line de acordo com padrões internacionais gratuitamente. Suporte para mais de 14 países, incluindo EUA, Reino Unido, China e Japão. Inclui códigos de discagem.",
+      "country": "País",
+      "phoneNumber": "Número de Telefone",
+      "inputPlaceholder": "Insira os dígitos do número de telefone...",
+      "includeDialCode": "Incluir código de discagem do país",
+      "format": "Formato",
+      "formatPattern": "Padrão de Formato",
+      "example": "Exemplo",
+      "result": "Número Formatado",
+      "copy": "Copiar",
+      "allFormats": "Todos os Padrões de País"
+    },
+    "credit-card-validator": {
+      "name": "Validador de Cartões de Crédito",
+      "description": "Valida números de cartões de crédito utilizando o algoritmo Luhn e detecta o tipo do cartão.",
+      "seo_title": "Validador de Cartões de Crédito Gratuito on-line - Verificação Luhn",
+      "seo_description": " valide números de cartões de crédito on-line gratuitamente. Utiliza o algoritmo Luhn para verificar os números dos cartões. Detecta Visa, Mastercard, Amex e outros.",
+      "cardNumber": "Número do Cartão",
+      "inputPlaceholder": "Insira o número do cartão...",
+      "validate": "Validar",
+      "valid": "Válido",
+      "invalid": "Inválido",
+      "luhnCheck": "Verificação Luhn",
+      "passed": "Aprovado",
+      "failed": "Reprovado",
+      "digits": "Dígitos",
+      "digitsCount": "Número de Dígitos",
+      "disclaimer": "Este ferramenta valida apenas a estrutura matemática dos números dos cartões. Não verifica se o cartão está ativo ou se possui fundos. Nunca insira números reais de cartões em websites não confiáveis.",
+      "supportedCards": "Tipos de Cartões Suportados"
+    },
+    "color-blindness-simulator": {
+      "name": "Simulador de Deficiência de Visão de Cor",
+      "description": "Simula como as cores e as imagens aparecem para pessoas com diferentes tipos de deficiência de visão de cor.",
+      "seo_title": "Simulador de Deficiência de Visão de Cor Gratuito Online - Ferramenta de Acessibilidade",
+      "seo_description": "Simule a deficiência de visão de cor online gratuitamente. Teste como as cores e as imagens aparecem para pessoas com protanopia, deuteranopia ou tritanopia. Essencial para um design acessível.",
+      "selectColor": "Selecionar Cor",
+      "uploadImage": "Carregar Imagem (Opcional)",
+      "colorComparison": "Comparação de Cores",
+      "imagePreview": "Pré-visualização da Imagem",
+      "original": "Original",
+      "aboutTitle": "Sobre a Deficiência de Visão de Cor",
+      "aboutDescription": "A deficiência de visão de cor afeta aproximadamente 8% dos homens e 0,5% das mulheres em todo o mundo. Testar seus designs com este simulador ajuda a garantir que seu conteúdo seja acessível a todos.",
+      "types": {
+        "normal": "Normal",
+        "protanopia": "Protanopia",
+        "deuteranopia": "Deuteranopia",
+        "tritanopia": "Tritanopia",
+        "achromatopsia": "Acromatopsia"
+      }
+    },
+    "aspect-ratio-resizer": {
+      "name": "Redutor de Proporção de Imagens",
+      "description": "Redimensiona imagens para proporções específicas ou dimensões de redes sociais.",
+      "seo_title": "Redutor de Proporção de Imagens Gratuito on-line - Ferramenta de Redimensionamento de Imagens",
+      "seo_description": "Redimensione imagens para qualquer proporção on-line de forma gratuita. Tamanhos pré-definidos para Instagram, Facebook, YouTube, Twitter. Bloqueie a proporção ou defina dimensões personalizadas.",
+      "uploadImage": "Carregar Imagem",
+      "originalSize": "Tamanho Original",
+      "width": "Largura",
+      "height": "Altura",
+      "lockAspectRatio": "Bloquear Proporção",
+      "presetRatios": "Proporções Predefinidas",
+      "socialMediaSizes": "Tamanhos para Redes Sociais",
+      "outputSize": "Tamanho de Saída",
+      "download": "Baixar",
+      "preview": "Pré-visualização"
+    },
+    "markdown-to-pdf": {
+      "name": "Markdown para PDF",
+      "description": "Converte documentos em Markdown em arquivos PDF com estilo personalizável.",
+      "seo_title": "Conversor Gratuito de Markdown para PDF Online",
+      "seo_description": "Converte Markdown para PDF online de forma gratuita. Suporte para títulos, listas, tabelas e blocos de código. Tamanho da fonte e tamanho da página personalizáveis. Não é necessário fazer upload.",
+      "documentTitle": "Título do Documento",
+      "fontSize": "Tamanho da Fonte",
+      "pageSize": "Tamanho da Página",
+      "markdownInput": "Campo para inserir o conteúdo em Markdown",
+      "inputPlaceholder": "Insira o seu conteúdo em Markdown aqui...",
+      "preview": "Pré-visualização",
+      "generatePdf": "Gerar PDF",
+      "clear": "Limpar",
+      "supportedSyntax": "Sintaxe de Markdown suportada",
+      "headings": "Títulos (# ## ###)",
+      "boldItalic": "Negrito e Itálico",
+      "lists": "Listas (- ou 1.)",
+      "codeBlocks": "Blocos de Código",
+      "tables": "Tabelas",
+      "blockquotes": "Citações Block",
+      "horizontalRules": "Linhas Horizontais",
+      "inlineCode": "Código Inline"
+    },
+    "email-validator": {
+      "name": "Validador de Email",
+      "description": "Valide endereços de email e verifique erros de digitação e domínios descartáveis.",
+      "seo_title": "Validador de Email Grátis Online - Verificar Formato",
+      "seo_description": "Valide endereços de email online grátis. Verifique formato, detecte erros, identifique emails descartáveis. Validação em lote.",
+      "inputLabel": "Enter Email Addresses",
+      "inputPlaceholder": "Digite um email por linha...",
+      "validate": "Validar",
+      "valid": "Valid",
+      "invalid": "Inválido",
+      "localPart": "Parte Local",
+      "domain": "Domínio",
+      "tld": "TLD",
+      "freeProvider": "Provedor Gratuito",
+      "disposable": "Descartável",
+      "didYouMean": "Você quis dizer"
+    },
+    "speech-timer": {
+      "name": "Temporizador de Discurso",
+      "description": "Controle seu tempo de palestras e apresentações com estimativa de palavras",
+      "seo_title": "Relógio de Palestra Online Gratuito - Relógio de Apresentação com Contagem de Palavras",
+      "seo_description": "Relógio de palestra online gratuito para apresentações. Monitore o tempo de fala, estimative a contagem de palavras e pratique suas palestras com nosso fácil de usar ferramenta de relógio.",
+      "duration": "Duração",
+      "minutes": "minutos",
+      "wordsPerMinute": "Palavras por minuto",
+      "estimatedWords": "Palavras estimadas",
+      "start": "Iniciar",
+      "pause": "Pausar",
+      "reset": "Reiniciar",
+      "timeRemaining": "Tempo Restante",
+      "speechText": "Texto da Palestra (opcional)",
+      "speechPlaceholder": "Cole sua palestra aqui para contar palavras...",
+      "wordCount": "Contagem de Palavras",
+      "speakingPace": "Ritmo de Fala",
+      "slow": "Lento",
+      "normal": "Normal",
+      "fast": "Rápido",
+      "timeUp": "O Tempo Acabou!",
+      "presets": "Pré-definições",
+      "targetDuration": "Duração alvo",
+      "min": "min",
+      "words": "palavras",
+      "remaining": "Restante"
+    },
+    "habit-tracker": {
+      "name": "Rastreador de Hábitos",
+      "description": "Rastreie seus hábitos diários e construa sequências",
+      "seo_title": "Rastreador de Hábitos Grátis Online - Ferramenta de Rastreamento de Hábitos Diários",
+      "seo_description": "Rastreador de hábitos online grátis para construir e manter hábitos diários. Rastree sequências, monitore seu progresso e alcançue seus objetivos com nossa simples ferramenta de rastreamento de hábitos.",
+      "addHabit": "Adicionar Hábito",
+      "habitName": "Nome do Hábito",
+      "habitPlaceholder": "Insira o nome do hábito...",
+      "selectIcon": "Selecionar Ícone",
+      "add": "Adicionar",
+      "cancel": "Cancelar",
+      "streak": "Sequência",
+      "days": "dias",
+      "today": "Hoje",
+      "completed": "Concluído",
+      "noHabits": "Ainda não há hábitos. Adicione o seu primeiro hábito!",
+      "deleteConfirm": "Excluir este hábito?",
+      "completedToday": "Concluído hoje",
+      "weeklyProgress": "Progresso Semanal",
+      "habit": "Hábito",
+      "tip": "Dica: Clique em um dia para marcá-lo como concluído. Construa sua sequência completando hábitos diariamente!"
+    },
+    "flip-text": {
+      "name": "Inverter Texto",
+      "description": "Gira texto ao contrário, espelhado ou reverso",
+      "seo_title": "Gerador de Texto Flip Grátis Online - Texto ao Contrário e Texto Espelhado",
+      "seo_description": "Gerador de texto flip online grátis. Crie texto ao contrário, texto espelhado e texto reverso para redes sociais, mensagens divertidas e conteúdo criativo.",
+      "inputLabel": "Insira Texto",
+      "inputPlaceholder": "Digite seu texto aqui...",
+      "upsideDown": "Ao Contrário",
+      "mirror": "Espelhado",
+      "reversed": "Reverso",
+      "upsideDownReversed": "Ao Contrário + Reverso",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "mirrored": "Espelhado",
+      "outputPlaceholder": "O resultado aparecerá aqui...",
+      "aboutTitle": "Sobre Inverter Texto",
+      "aboutDescription": "Inverter texto usa caracteres Unicode especiais para criar efeitos de texto de cabeça para baixo e espelhado. Esses caracteres funcionam na maioria dos sites e plataformas de mídia social."
+    },
+    "strikethrough-text": {
+      "name": "Texto Riscado",
+      "description": "Gere texto riscado, sublinhado e cruzado",
+      "seo_title": "Gerador de Texto Riscado Grátis Online",
+      "seo_description": "Gerador de texto riscado gratuito online. Crie texto riscado, sublinhado e com barra.",
+      "inputLabel": "Digite o Texto",
+      "inputPlaceholder": "Digite seu texto aquí...",
+      "strikethrough": "Riscado",
+      "underline": "Sublinhado",
+      "crosshatch": "Cruzado",
+      "slash": "Barra",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "outputPlaceholder": "O resultado aparecerá aqui...",
+      "usageTitle": "Dicas de Uso",
+      "usage1": "Funciona na maioria das plataformas de mídia social",
+      "usage2": "Copie e cole o texto estilizado em qualquer lugar",
+      "usage3": "Alguns aplicativos podem não exibir todos os estilos corretamente"
+    },
+    "random-color-generator": {
+      "name": "Gerador de Cores Aleatórias",
+      "description": "Gere cores aleatórias com valores HEX, RGB e HSL",
+      "seo_title": "Gerador de Cores Aleatórias Grátis Online",
+      "seo_description": "Gerador de cores aleatórias gratuito online. Gere cores aleatórias com valores HEX, RGB e HSL. Crie paletas de cores para projetos de design.",
+      "count": "Cores",
+      "format": "Formato",
+      "generate": "Gerar",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "copyAll": "Copiar Tudo",
+      "clickToCopy": "Clique para copiar",
+      "palettePreview": "Prévia da Paleta"
+    },
+    "roman-numeral-converter": {
+      "name": "Conversor de Números Romanos",
+      "description": "Converta entre números romanos e arábicos",
+      "seo_title": "Conversor de Números Romanos Grátis Online",
+      "seo_description": "Conversor de números romanos gratuito online. Converta números romanos para arábicos e vice-versa.",
+      "arabicToRoman": "Arábico → Romano",
+      "romanToArabic": "Romano → Arábico",
+      "arabicNumber": "Número Arábico",
+      "romanNumeral": "Número Romano",
+      "arabicPlaceholder": "Digite número (1-3999)...",
+      "romanPlaceholder": "Digite número romano...",
+      "result": "Resultado",
+      "convert": "Converter",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "invalidInput": "Entrada inválida",
+      "referenceTitle": "Gráfico de Referência"
+    },
+    "small-text-generator": {
+      "name": "Gerador de Texto Pequeno",
+      "description": "Gere texto em sobrescrito, subscrito e versalete",
+      "seo_title": "Gerador de Texto Pequeno Grátis Online",
+      "seo_description": "Gerador de texto pequeno gratuito online. Crie texto em sobrescrito, subscrito e versalete.",
+      "inputLabel": "Digite o Texto",
+      "inputPlaceholder": "Digite seu texto aqui...",
+      "superscript": "Sobrescrito",
+      "subscript": "Subscrito",
+      "smallCaps": "Versalete",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "outputPlaceholder": "O resultado aparecerá aqui...",
+      "usageTitle": "Dicas de Uso",
+      "usageDescription": "O texto pequeno funciona na maioria das plataformas de mídia social. Alguns caracteres podem não ter versões pequenas e aparecerão como texto normal."
+    },
+    "binary-to-text": {
+      "name": "Binário para Texto",
+      "description": "Converta entre binário e texto",
+      "seo_title": "Conversor Binário para Texto Grátis Online",
+      "seo_description": "Conversor binário para texto gratuito online. Traduza código binário para texto legível e converta texto para binário.",
+      "binaryToText": "Binário → Texto",
+      "textToBinary": "Texto → Binário",
+      "binaryInput": "Entrada Binária",
+      "textInput": "Entrada de Texto",
+      "binaryOutput": "Saída Binária",
+      "textOutput": "Saída de Texto",
+      "binaryPlaceholder": "Digite binário (ex. 01001000 01101001)...",
+      "textPlaceholder": "Digite texto para converter...",
+      "outputPlaceholder": "O resultado aparecerá aqui...",
+      "convert": "Converter",
+      "swap": "Trocar",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "invalidBinary": "Entrada binária inválida",
+      "exampleTitle": "Exemplo",
+      "text": "Texto",
+      "binary": "Binário"
+    },
+    "fraction-calculator": {
+      "name": "Calculadora de Frações",
+      "description": "Calcule frações com adição, subtração, multiplicação, divisão",
+      "seo_title": "Calculadora de Frações Grátis Online",
+      "seo_description": "Calculadora de frações gratuita online. Some, subtraia, multiplique e divida frações facilmente. Obtenha resultados simplificados com equivalentes decimais.",
+      "fraction1": "Fração 1",
+      "fraction2": "Fração 2",
+      "result": "Resultado",
+      "calculate": "Calcular",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "addition": "Adição",
+      "subtraction": "Subtração",
+      "multiplication": "Multiplicação",
+      "division": "Divisão"
+    },
+    "percentage-change-calculator": {
+      "name": "Calculadora de Variação Percentual",
+      "description": "Calcule o aumento ou diminuição percentual entre valores",
+      "seo_title": "Calculadora de Variação Percentual Grátis Online",
+      "seo_description": "Calculadora de variação percentual gratuita online. Calcule o aumento ou diminuição percentual entre dois valores.",
+      "oldValue": "Valor Original",
+      "newValue": "Novo Valor",
+      "oldValuePlaceholder": "Digite valor original...",
+      "newValuePlaceholder": "Digite novo valor...",
+      "calculate": "Calcular",
+      "swap": "Trocar",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "percentageChange": "Variação Percentual",
+      "increase": "Aumento",
+      "decrease": "Diminuição",
+      "difference": "Diferença",
+      "formula": "Fórmula",
+      "formulaText": "((Novo - Antigo) / |Antigo|) × 100%",
+      "example1Title": "Preço de Ações",
+      "example1": "Rastreie mudanças de investimento",
+      "example2Title": "Salário",
+      "example2": "Calcule porcentagem de aumento",
+      "example3Title": "Vendas",
+      "example3": "Meça taxa de crescimento"
+    },
+    "anagram-solver": {
+      "name": "Solucionador de Anagramas",
+      "description": "Encontre todas as palavras possíveis a partir de letras embaralhadas",
+      "seo_title": "Solucionador de Anagramas Online Grátis - Ferramenta de Encontrar Palavras",
+      "seo_description": "Solucionador de anagramas online gratuito. Encontre todas as palavras possíveis a partir de letras embaralhadas. Perfeito para jogos de palavras como Scrabble e quebra-cabeças de palavras.",
+      "inputLabel": "Insira Letras",
+      "inputPlaceholder": "Digite letras para desembaralhar...",
+      "results": "Resultados",
+      "noResults": "Nenhuma palavra encontrada. Tente diferentes letras.",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "tipTitle": "Dicas",
+      "tipDescription": "Insira de 2 a 15 letras para encontrar todas as palavras possíveis em inglês. Os resultados são classificados por comprimento."
+    },
+    "word-unscrambler": {
+      "name": "Desajustador de Palavras",
+      "description": "Desajuste letras para encontrar todas as palavras possíveis",
+      "seo_title": "Desajustador de Palavras Online Gratuito - Ferramenta de Desajuste de Letras",
+      "seo_description": "Desajustador de palavras online gratuito. Encontre todas as palavras que podem ser feitas com suas letras. Perfeito para Scrabble, Words with Friends e quebra-cabeças de palavras.",
+      "inputLabel": "Insira Letras Desajustadas",
+      "inputPlaceholder": "Digite letras aqui...",
+      "found": "Encontrado",
+      "words": "palavras",
+      "letters": "letras",
+      "copyAll": "Copiar Tudo",
+      "copied": "Copiado!",
+      "noResults": "Nenhuma palavra encontrada"
+    },
+    "text-to-pdf": {
+      "name": "Texto para PDF",
+      "description": "Converta texto simples em documentos PDF",
+      "seo_title": "Conversor de Texto para PDF Grátis Online",
+      "seo_description": "Conversor de texto para PDF grátis online. Crie documentos PDF profissionais a partir de texto simples. Personalize fontes, tamanhos e layout de página.",
+      "title": "Título",
+      "optional": "opcional",
+      "titlePlaceholder": "Título do documento...",
+      "fontSize": "Tamanho da fonte",
+      "font": "Fonte",
+      "pageSize": "Tamanho da página",
+      "content": "Conteúdo",
+      "contentPlaceholder": "Digite seu texto aqui...",
+      "characters": "caracteres",
+      "generating": "Gerando...",
+      "downloadPdf": "Baixar PDF",
+      "preview": "Visualização",
+      "previewPlaceholder": "Seu texto aparecerá aqui..."
+    },
+    "unit-price-calculator": {
+      "name": "Calculadora de Preço Unitário",
+      "description": "Compare preços por unidade para encontrar o melhor valor",
+      "seo_title": "Calculadora de Preço Unitário Grátis Online",
+      "seo_description": "Calculadora de preço unitário grátis online. Compare preços por unidade para encontrar a melhor oferta. Perfeito para compras inteligentes.",
+      "item": "Item",
+      "productName": "Nome do produto",
+      "namePlaceholder": "ex., Marca A",
+      "price": "Preço",
+      "quantity": "Quantidade",
+      "unitPrice": "Preço unitário",
+      "addItem": "Adicionar item",
+      "bestValue": "Melhor valor",
+      "bestValueMessage": "O item destacado oferece o melhor valor por unidade!",
+      "tipTitle": "Dica de compra",
+      "tipDescription": "Sempre compare preços unitários ao fazer compras. Embalagens maiores nem sempre são mais baratas por unidade!"
+    },
+    "bionic-reading-converter": {
+      "name": "Conversor de Leitura Biônica",
+      "description": "Converta texto para formato de leitura biônica para ler mais rápido",
+      "seo_title": "Conversor de Leitura Biônica Grátis Online",
+      "seo_description": "Conversor de leitura biônica grátis online. Transforme texto destacando o início das palavras. Leia mais rápido e melhore o foco.",
+      "inputLabel": "Digite o texto",
+      "inputPlaceholder": "Cole seu texto aqui para converter...",
+      "fixationStrength": "Intensidade de fixação",
+      "light": "Leve",
+      "medium": "Média",
+      "strong": "Forte",
+      "preview": "Visualização",
+      "previewPlaceholder": "O texto convertido aparecerá aqui...",
+      "copyHtml": "Copiar HTML",
+      "copied": "Copiado!",
+      "whatIsBionic": "O que é leitura biônica?",
+      "bionicDescription": "A leitura biônica é um método que destaca as letras iniciais das palavras para criar pontos de fixação.",
+      "benefits": "Benefícios",
+      "benefit1": "Leia até 50% mais rápido",
+      "benefit2": "Melhor foco e retenção",
+      "benefit3": "Reduz a fadiga ocular",
+      "htmlOutput": "Saída HTML",
+      "noOutput": "Sem saída ainda"
+    },
+    "palindrome-checker": {
+      "name": "Verificador de Palíndromos",
+      "description": "Verifique se o texto é lido da mesma forma para frente e para trás",
+      "seo_title": "Verificador de Palíndromos Grátis Online",
+      "seo_description": "Verificador de palíndromos grátis online. Teste se palavras, frases ou sentenças são lidas da mesma forma para frente e para trás.",
+      "inputLabel": "Digite o texto",
+      "inputPlaceholder": "Digite uma palavra ou frase...",
+      "ignoreCase": "Ignorar maiúsculas",
+      "ignoreSpaces": "Ignorar espaços",
+      "ignorePunctuation": "Ignorar pontuação",
+      "isPalindrome": "É um palíndromo!",
+      "notPalindrome": "Não é um palíndromo",
+      "processedText": "Texto processado",
+      "forward": "Para frente",
+      "backward": "Para trás",
+      "examples": "Experimente estes exemplos"
+    },
+    "character-map": {
+      "name": "Mapa de Caracteres",
+      "description": "Navegue e copie caracteres especiais e símbolos",
+      "seo_title": "Mapa de Caracteres Grátis Online - Símbolos e Unicode",
+      "seo_description": "Mapa de caracteres grátis online. Navegue e copie caracteres especiais, símbolos, emojis e caracteres Unicode.",
+      "searchPlaceholder": "Pesquisar caracteres...",
+      "arrows": "Setas",
+      "math": "Matemática",
+      "currency": "Moeda",
+      "punctuation": "Pontuação",
+      "shapes": "Formas",
+      "emoji": "Emoji",
+      "hands": "Mãos",
+      "hearts": "Corações",
+      "weather": "Clima",
+      "music": "Música",
+      "tech": "Tecnologia",
+      "recentlyUsed": "Usados recentemente",
+      "searchResults": "Resultados da pesquisa",
+      "tip": "Clique em qualquer caractere para copiá-lo"
+    },
+    "text-repeater": {
+      "name": "Repetidor de Texto",
+      "description": "Repita texto várias vezes com separadores personalizados",
+      "seo_title": "Repetidor de Texto Grátis Online",
+      "seo_description": "Repetidor de texto grátis online. Repita qualquer texto várias vezes com separadores personalizados. Perfeito para testes e padrões.",
+      "inputLabel": "Texto para repetir",
+      "inputPlaceholder": "Digite o texto aqui...",
+      "repeatCount": "Número de repetições",
+      "separator": "Separador",
+      "newline": "Nova linha",
+      "space": "Espaço",
+      "comma": "Vírgula",
+      "semicolon": "Ponto e vírgula",
+      "tab": "Tabulação",
+      "none": "Nenhum",
+      "addNumbering": "Adicionar numeração",
+      "result": "Resultado",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "download": "Baixar",
+      "resultPlaceholder": "O resultado aparecerá aqui...",
+      "characters": "caracteres",
+      "lines": "linhas"
+    },
+    "fake-name-generator": {
+      "name": "Gerador de Nomes Falsos",
+      "description": "Gere nomes aleatórios realistas de diferentes países",
+      "seo_title": "Gerador de Nomes Falsos Grátis Online",
+      "seo_description": "Gerador de nomes falsos grátis online. Gere nomes aleatórios realistas de diferentes países e culturas.",
+      "country": "País/Cultura",
+      "english": "Inglês (EUA/Reino Unido)",
+      "chinese": "Chinês",
+      "japanese": "Japonês",
+      "korean": "Coreano",
+      "german": "Alemão",
+      "spanish": "Espanhol",
+      "gender": "Gênero",
+      "random": "Aleatório",
+      "male": "Masculino",
+      "female": "Feminino",
+      "count": "Quantidade",
+      "generate": "Gerar nomes",
+      "generatedNames": "Nomes gerados",
+      "copyAll": "Copiar tudo",
+      "copied": "Copiado!",
+      "disclaimer": "Aviso",
+      "disclaimerText": "Estes nomes são gerados aleatoriamente e qualquer semelhança com pessoas reais é coincidência."
+    },
+    "invisible-character-generator": {
+      "name": "Gerador de Caracteres Invisíveis",
+      "description": "Gere e detecte caracteres Unicode invisíveis",
+      "seo_title": "Gerador de Caracteres Invisíveis Grátis Online",
+      "seo_description": "Gerador de caracteres invisíveis grátis online. Gere espaços de largura zero e outros caracteres Unicode invisíveis.",
+      "selectCharacter": "Selecione o tipo de caractere",
+      "repeatCount": "Número de repetições",
+      "characters": "caracteres",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "allCharacters": "Todos os caracteres invisíveis",
+      "detectTitle": "Detectar caracteres invisíveis",
+      "detectPlaceholder": "Cole o texto aqui para detectar caracteres invisíveis...",
+      "found": "encontrado",
+      "noInvisibleFound": "Nenhum caractere invisível detectado",
+      "useCases": "Casos de uso comuns",
+      "useCase1": "Criar posts em branco nas redes sociais",
+      "useCase2": "Adicionar marcas d'água de texto invisíveis",
+      "useCase3": "Testar sistemas de processamento de texto"
     }
   }
 }

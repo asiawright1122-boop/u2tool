@@ -1,0 +1,15 @@
+{
+  "detailed_description": "BIC/SWIFT Lookup tool validates and provides information about Bank Identifier Codes (BIC) used for international wire transfers. Enter a BIC code to verify its format and get details about the bank, country, and branch. Essential for ensuring accurate international payments.",
+  "usage_steps": [
+    "Enter a BIC/SWIFT code in the input field",
+    "Click Look Up to validate and get bank information",
+    "View the parsed code structure (bank, country, location, branch)",
+    "Check bank details if available in the database",
+    "Use sample codes to explore different banks"
+  ],
+  "usage_examples": [
+    "Verify BIC codes before making international transfers",
+    "Look up bank information from SWIFT codes",
+    "Validate payment details for cross-border transactions"
+  ]
+}

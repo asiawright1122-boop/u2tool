@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Das BIC/SWIFT-Auflösungstool überprüft und liefert Informationen zu Bankidentifikationscodes (BIC), die für internationale Geldüberweisungen verwendet werden. Geben Sie einen BIC-Code ein, um dessen Format zu überprüfen und Details zur Bank, zum Land und zur Filiale zu erhalten. Wichtig für die Sicherstellung genauer internationaler Zahlungen.",
+  "usage_steps": [
+    "Geben Sie einen BIC/SWIFT-Code in das Eingabefeld ein",
+    "Klicken Sie auf „Auflösen“, um Bankinformationen zu erhalten",
+    "Sehen Sie sich die analysierte Codestruktur (Bank, Land, Ort, Filiale) an",
+    "Überprüfen Sie Bankdetails, sofern sie im Datenbankverzeichnis vorhanden sind",
+    "Verwenden Sie Beispiele für BIC-Codes, um verschiedene Banken zu erkunden"
+  ],
+  "usage_examples": [
+    "Überprüfen Sie BIC-Codes vor der Durchführung internationaler Überweisungen",
+    "Suchen Sie Bankinformationen anhand von SWIFT-Codes",
+    "Überprüfen Sie Zahlungsdetails für grenzüberschreitende Transaktionen"
+  ]
+}

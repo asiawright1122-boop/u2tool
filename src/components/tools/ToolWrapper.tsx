@@ -399,6 +399,42 @@ const TOOL_COMPONENTS_MAP: Record<string, React.ComponentType> = {
   'code-screenshot-generator': dynamic(() => import('./CodeScreenshotGenerator')),
   'number-system-converter': dynamic(() => import('./NumberSystemConverter')),
   'subnet-calculator-enhanced': dynamic(() => import('./SubnetCalculatorEnhanced')),
+  // Batch 46 - European Popular Tools (欧洲热门工具)
+  'iban-validator': dynamic(() => import('./IbanValidator')),
+  'vat-calculator': dynamic(() => import('./VatCalculator')),
+  'carbon-footprint-calculator': dynamic(() => import('./CarbonFootprintCalculator')),
+  'gdpr-consent-generator': dynamic(() => import('./GdprConsentGenerator')),
+  'metric-imperial-converter': dynamic(() => import('./MetricImperialConverter')),
+  'bic-swift-lookup': dynamic(() => import('./BicSwiftLookup')),
+  // Batch 47 - Global Popular Tools (全球热门工具)
+  'email-validator': dynamic(() => import('./EmailValidator')),
+  'phone-formatter': dynamic(() => import('./PhoneFormatter')),
+  'credit-card-validator': dynamic(() => import('./CreditCardValidator')),
+  'color-blindness-simulator': dynamic(() => import('./ColorBlindnessSimulator')),
+  'aspect-ratio-resizer': dynamic(() => import('./AspectRatioResizer')),
+  'markdown-to-pdf': dynamic(() => import('./MarkdownToPdf')),
+  // Batch 48 - Popular Online Tools (热门在线工具)
+  'speech-timer': dynamic(() => import('./SpeechTimer')),
+  'habit-tracker': dynamic(() => import('./HabitTracker')),
+  'flip-text': dynamic(() => import('./FlipText')),
+  'strikethrough-text': dynamic(() => import('./StrikethroughText')),
+  'small-text-generator': dynamic(() => import('./SmallTextGenerator')),
+  'binary-to-text': dynamic(() => import('./BinaryToText')),
+  'roman-numeral-converter': dynamic(() => import('./RomanNumeralConverter')),
+  'fraction-calculator': dynamic(() => import('./FractionCalculator')),
+  'percentage-change-calculator': dynamic(() => import('./PercentageChangeCalculator')),
+  'random-color-generator': dynamic(() => import('./RandomColorGenerator')),
+  // Batch 49 - Popular Word & Text Tools
+  'anagram-solver': dynamic(() => import('./AnagramSolver')),
+  'word-unscrambler': dynamic(() => import('./WordUnscrambler')),
+  'text-to-pdf': dynamic(() => import('./TextToPdf')),
+  'unit-price-calculator': dynamic(() => import('./UnitPriceCalculator')),
+  'bionic-reading-converter': dynamic(() => import('./BionicReadingConverter')),
+  'palindrome-checker': dynamic(() => import('./PalindromeChecker')),
+  'character-map': dynamic(() => import('./CharacterMap')),
+  'text-repeater': dynamic(() => import('./TextRepeater')),
+  'fake-name-generator': dynamic(() => import('./FakeNameGenerator')),
+  'invisible-character-generator': dynamic(() => import('./InvisibleCharacterGenerator')),
 };
 
 export default function ToolWrapper({ slug }: { slug: string }) {

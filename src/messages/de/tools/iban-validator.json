@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der IBAN-Validierer ist ein umfassendes Tool zur Überprüfung internationaler Bankkontonummern (IBAN). Er überprüft das Format, den Landcode, die Länge und die Prüfziffer von IBAN-Nummern aus allen europäischen Ländern. Das Tool analysiert die IBAN außerdem, um den Bankcode, die Landinformationen sowie weitere Details anzuzeigen.",
+  "usage_steps": [
+    "Geben Sie eine IBAN-Nummer in das Eingabefeld ein oder kleben Sie sie dort an",
+    "Klicken Sie auf die Schaltfläche „Validieren“, um die IBAN zu überprüfen",
+    "Sehen Sie sich die Überprüfungsergebnisse einschließlich Land- und Bankinformationen an",
+    "Verwenden Sie Beispiel-IBAN-Nummern, um verschiedene Landformate zu testen",
+    "Kopieren Sie die formatierte IBAN für die Verwendung bei Banküberweisungen"
+  ],
+  "usage_examples": [
+    "Überprüfen Sie die IBAN vor internationalen Banküberweisungen",
+    "Prüfen Sie von Kunden bereitgestellte Bankkontonummern",
+    "Validieren Sie das IBAN-Format für Zahlungssysteme"
+  ]
+}

@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { RefreshCw, Copy, Check, User, Users } from 'lucide-react';
-import { generateNames, getAvailableOrigins, originDisplayNames, type Gender, type Origin } from '@/lib/data/names';
+import { generateNames, getAvailableOrigins, type Gender, type Origin } from '@/lib/data/names';
 
 export default function NameGenerator() {
   const t = useTranslations('tools.name-generator');
@@ -68,7 +68,7 @@ export default function NameGenerator() {
           >
             {origins.map((o) => (
               <option key={o} value={o}>
-                {originDisplayNames[o]}
+                {t(`origins.${o}`)}
               </option>
             ))}
           </select>
