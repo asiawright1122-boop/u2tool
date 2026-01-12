@@ -69,6 +69,15 @@ const countryToLocale: Record<string, Locale> = {
 // 搜索引擎爬虫 User-Agent 正则表达式
 const SEARCH_ENGINE_BOTS = /Baiduspider|Googlebot|bingbot|Slurp|DuckDuckBot|YandexBot|Sogou|360Spider|Bytespider/i;
 
+// 工具别名重定向映射（旧 slug -> 新 slug）
+// 用于处理历史 URL 或常见的错误 URL
+const TOOL_REDIRECTS: Record<string, string> = {
+  'base64-encoder': 'base64',
+  'base64-decoder': 'base64',
+  'base64-encode': 'base64',
+  'base64-decode': 'base64',
+};
+
 // ============================================================================
 // 辅助函数
 // ============================================================================
@@ -189,8 +198,24 @@ export default function middleware(request: NextRequest) {
   
   // 检查是否已有 locale 前缀
   if (hasLocalePrefix(pathname)) {
-    // 已有 locale 前缀，更新 cookie 并继续
+    // 已有 locale 前缀，检查是否需要工具别名重定向
     const currentLocale = extractLocale(pathname);
+    const pathWithoutLocale = pathname.replace(`/${currentLocale}`, '');
+    
+    // 检查是否是工具页面且需要重定向
+    const toolMatch = pathWithoutLocale.match(/^\/tools\/([^/]+)$/);
+    if (toolMatch) {
+      const toolSlug = toolMatch[1];
+      const redirectTo = TOOL_REDIRECTS[toolSlug];
+      if (redirectTo) {
+        const url = request.nextUrl.clone();
+        url.pathname = `/${currentLocale}/tools/${redirectTo}`;
+        // 使用 301 永久重定向
+        return NextResponse.redirect(url, { status: 301 });
+      }
+    }
+    
+    // 更新 cookie 并继续
     const savedLocale = request.cookies.get(LOCALE_COOKIE)?.value as Locale | undefined;
     
     const response = NextResponse.next();
@@ -217,7 +242,15 @@ export default function middleware(request: NextRequest) {
     ? `/${detectedLocale}` 
     : `/${detectedLocale}${pathname}`;
   
-  const response = NextResponse.redirect(url);
+  // 对搜索引擎爬虫使用 rewrite 而非 redirect，避免"网页会自动重定向"问题
+  // 这样爬虫可以直接看到页面内容，而不会收到重定向响应
+  if (isSearchEngineBot) {
+    return NextResponse.rewrite(url);
+  }
+  
+  // 对普通用户使用 301 永久重定向（而非默认的 307 临时重定向）
+  // 这告诉浏览器和搜索引擎这是永久性的 URL 变更
+  const response = NextResponse.redirect(url, { status: 301 });
   
   // 设置语言偏好 cookie
   if (!savedLocale) {
