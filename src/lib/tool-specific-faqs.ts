@@ -7,6 +7,63 @@
 import type { FAQItem } from './faq';
 import { EXTRA_TOOL_FAQS } from './tool-specific-faqs-extra';
 import { EXTRA_TOOL_FAQS_2 } from './tool-specific-faqs-extra-2';
+import { GEO_TOOL_FAQS } from './tool-specific-faqs-geo';
+import { GEO_TOOL_FAQS_2 } from './tool-specific-faqs-geo-2';
+import { GEO_TOOL_FAQS_3 } from './tool-specific-faqs-geo-3';
+import { GEO_TOOL_FAQS_4 } from './tool-specific-faqs-geo-4';
+import { GEO_TOOL_FAQS_5 } from './tool-specific-faqs-geo-5';
+import { GEO_TOOL_FAQS_6 } from './tool-specific-faqs-geo-6';
+import { GEO_TOOL_FAQS_7 } from './tool-specific-faqs-geo-7';
+import { GEO_TOOL_FAQS_8 } from './tool-specific-faqs-geo-8';
+import { GEO_TOOL_FAQS_9 } from './tool-specific-faqs-geo-9';
+import { GEO_TOOL_FAQS_10 } from './tool-specific-faqs-geo-10';
+import { GEO_TOOL_FAQS_11 } from './tool-specific-faqs-geo-11';
+import { GEO_TOOL_FAQS_12 } from './tool-specific-faqs-geo-12';
+import { GEO_TOOL_FAQS_13 } from './tool-specific-faqs-geo-13';
+import { GEO_TOOL_FAQS_14 } from './tool-specific-faqs-geo-14';
+import { GEO_TOOL_FAQS_15 } from './tool-specific-faqs-geo-15';
+import { GEO_TOOL_FAQS_16 } from './tool-specific-faqs-geo-16';
+import { GEO_TOOL_FAQS_17 } from './tool-specific-faqs-geo-17';
+import { GEO_TOOL_FAQS_18 } from './tool-specific-faqs-geo-18';
+import { GEO_TOOL_FAQS_19 } from './tool-specific-faqs-geo-19';
+import { GEO_TOOL_FAQS_20 } from './tool-specific-faqs-geo-20';
+import { GEO_TOOL_FAQS_21 } from './tool-specific-faqs-geo-21';
+import { GEO_TOOL_FAQS_22 } from './tool-specific-faqs-geo-22';
+import { GEO_TOOL_FAQS_23 } from './tool-specific-faqs-geo-23';
+import { GEO_TOOL_FAQS_24 } from './tool-specific-faqs-geo-24';
+import { GEO_TOOL_FAQS_25 } from './tool-specific-faqs-geo-25';
+import { GEO_TOOL_FAQS_26 } from './tool-specific-faqs-geo-26';
+import { GEO_TOOL_FAQS_27 } from './tool-specific-faqs-geo-27';
+import { GEO_TOOL_FAQS_28 } from './tool-specific-faqs-geo-28';
+import { GEO_TOOL_FAQS_29 } from './tool-specific-faqs-geo-29';
+import { GEO_TOOL_FAQS_30 } from './tool-specific-faqs-geo-30';
+import { GEO_TOOL_FAQS_31 } from './tool-specific-faqs-geo-31';
+import { GEO_TOOL_FAQS_32 } from './tool-specific-faqs-geo-32';
+import { GEO_TOOL_FAQS_33 } from './tool-specific-faqs-geo-33';
+import { GEO_TOOL_FAQS_34 } from './tool-specific-faqs-geo-34';
+import { GEO_TOOL_FAQS_35 } from './tool-specific-faqs-geo-35';
+import { GEO_TOOL_FAQS_36 } from './tool-specific-faqs-geo-36';
+import { GEO_TOOL_FAQS_37 } from './tool-specific-faqs-geo-37';
+import { GEO_TOOL_FAQS_38 } from './tool-specific-faqs-geo-38';
+import { GEO_TOOL_FAQS_39 } from './tool-specific-faqs-geo-39';
+import { GEO_TOOL_FAQS_40 } from './tool-specific-faqs-geo-40';
+import { GEO_TOOL_FAQS_41 } from './tool-specific-faqs-geo-41';
+import { GEO_TOOL_FAQS_42 } from './tool-specific-faqs-geo-42';
+import { GEO_TOOL_FAQS_43 } from './tool-specific-faqs-geo-43';
+import { GEO_TOOL_FAQS_44 } from './tool-specific-faqs-geo-44';
+import { GEO_TOOL_FAQS_45 } from './tool-specific-faqs-geo-45';
+import { GEO_TOOL_FAQS_46 } from './tool-specific-faqs-geo-46';
+import { GEO_TOOL_FAQS_47 } from './tool-specific-faqs-geo-47';
+import { GEO_TOOL_FAQS_48 } from './tool-specific-faqs-geo-48';
+import { GEO_TOOL_FAQS_49 } from './tool-specific-faqs-geo-49';
+import { GEO_TOOL_FAQS_50 } from './tool-specific-faqs-geo-50';
+import { GEO_TOOL_FAQS_51 } from './tool-specific-faqs-geo-51';
+import { GEO_TOOL_FAQS_52 } from './tool-specific-faqs-geo-52';
+import { GEO_TOOL_FAQS_53 } from './tool-specific-faqs-geo-53';
+import { GEO_TOOL_FAQS_54 } from './tool-specific-faqs-geo-54';
+import { GEO_TOOL_FAQS_55 } from './tool-specific-faqs-geo-55';
+import { GEO_TOOL_FAQS_56 } from './tool-specific-faqs-geo-56';
+import { GEO_TOOL_FAQS_57 } from './tool-specific-faqs-geo-57';
 
 // 工具专属 FAQ 配置接口
 export interface ToolSpecificFAQ {
@@ -608,6 +665,63 @@ export const TOOL_SPECIFIC_FAQS: ToolSpecificFAQ[] = [
   ...BASE_TOOL_FAQS,
   ...EXTRA_TOOL_FAQS,
   ...EXTRA_TOOL_FAQS_2,
+  ...GEO_TOOL_FAQS,
+  ...GEO_TOOL_FAQS_2,
+  ...GEO_TOOL_FAQS_3,
+  ...GEO_TOOL_FAQS_4,
+  ...GEO_TOOL_FAQS_5,
+  ...GEO_TOOL_FAQS_6,
+  ...GEO_TOOL_FAQS_7,
+  ...GEO_TOOL_FAQS_8,
+  ...GEO_TOOL_FAQS_9,
+  ...GEO_TOOL_FAQS_10,
+  ...GEO_TOOL_FAQS_11,
+  ...GEO_TOOL_FAQS_12,
+  ...GEO_TOOL_FAQS_13,
+  ...GEO_TOOL_FAQS_14,
+  ...GEO_TOOL_FAQS_15,
+  ...GEO_TOOL_FAQS_16,
+  ...GEO_TOOL_FAQS_17,
+  ...GEO_TOOL_FAQS_18,
+  ...GEO_TOOL_FAQS_19,
+  ...GEO_TOOL_FAQS_20,
+  ...GEO_TOOL_FAQS_21,
+  ...GEO_TOOL_FAQS_22,
+  ...GEO_TOOL_FAQS_23,
+  ...GEO_TOOL_FAQS_24,
+  ...GEO_TOOL_FAQS_25,
+  ...GEO_TOOL_FAQS_26,
+  ...GEO_TOOL_FAQS_27,
+  ...GEO_TOOL_FAQS_28,
+  ...GEO_TOOL_FAQS_29,
+  ...GEO_TOOL_FAQS_30,
+  ...GEO_TOOL_FAQS_31,
+  ...GEO_TOOL_FAQS_32,
+  ...GEO_TOOL_FAQS_33,
+  ...GEO_TOOL_FAQS_34,
+  ...GEO_TOOL_FAQS_35,
+  ...GEO_TOOL_FAQS_36,
+  ...GEO_TOOL_FAQS_37,
+  ...GEO_TOOL_FAQS_38,
+  ...GEO_TOOL_FAQS_39,
+  ...GEO_TOOL_FAQS_40,
+  ...GEO_TOOL_FAQS_41,
+  ...GEO_TOOL_FAQS_42,
+  ...GEO_TOOL_FAQS_43,
+  ...GEO_TOOL_FAQS_44,
+  ...GEO_TOOL_FAQS_45,
+  ...GEO_TOOL_FAQS_46,
+  ...GEO_TOOL_FAQS_47,
+  ...GEO_TOOL_FAQS_48,
+  ...GEO_TOOL_FAQS_49,
+  ...GEO_TOOL_FAQS_50,
+  ...GEO_TOOL_FAQS_51,
+  ...GEO_TOOL_FAQS_52,
+  ...GEO_TOOL_FAQS_53,
+  ...GEO_TOOL_FAQS_54,
+  ...GEO_TOOL_FAQS_55,
+  ...GEO_TOOL_FAQS_56,
+  ...GEO_TOOL_FAQS_57,
 ];
 
 /**

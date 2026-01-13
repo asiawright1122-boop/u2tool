@@ -6,7 +6,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';
  * 生成 robots.txt 配置
  * 允许主要搜索引擎爬取，禁止 API 和私有路径
  * 支持：Google、Bing、百度、360、搜狗、神马、Yandex、头条等搜索引擎
+ * 支持：AI 爬虫（GPTBot、ClaudeBot、PerplexityBot 等）用于 GEO 优化
  * @see Requirements 4.1, 4.2, 4.3
+ * @see docs/SEO_GEO_COMPREHENSIVE_AUDIT.md
  */
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -192,6 +194,74 @@ export default function robots(): MetadataRoute.Robots {
       {
         // QQ 爬虫
         userAgent: 'QQBot',
+        allow: '/',
+      },
+      // === AI 爬虫（GEO 优化）===
+      // 允许 AI 系统爬取和引用内容，提高 AI 搜索可见性
+      {
+        // OpenAI GPTBot - ChatGPT 训练和检索
+        userAgent: 'GPTBot',
+        allow: '/',
+        disallow: ['/api/', '/private/'],
+      },
+      {
+        // OpenAI ChatGPT 实时浏览
+        userAgent: 'ChatGPT-User',
+        allow: '/',
+      },
+      {
+        // Anthropic Claude 爬虫
+        userAgent: 'ClaudeBot',
+        allow: '/',
+      },
+      {
+        // Anthropic Claude Web 浏览
+        userAgent: 'Claude-Web',
+        allow: '/',
+      },
+      {
+        // Anthropic AI 通用爬虫
+        userAgent: 'anthropic-ai',
+        allow: '/',
+      },
+      {
+        // Perplexity AI 搜索引擎
+        userAgent: 'PerplexityBot',
+        allow: '/',
+      },
+      {
+        // Apple Intelligence / Siri
+        userAgent: 'Applebot-Extended',
+        allow: '/',
+      },
+      {
+        // Google AI (Gemini/Bard) 训练
+        userAgent: 'Google-Extended',
+        allow: '/',
+      },
+      {
+        // Cohere AI
+        userAgent: 'cohere-ai',
+        allow: '/',
+      },
+      {
+        // Meta AI
+        userAgent: 'Meta-ExternalAgent',
+        allow: '/',
+      },
+      {
+        // Amazon AI
+        userAgent: 'Amazonbot',
+        allow: '/',
+      },
+      {
+        // Microsoft Copilot
+        userAgent: 'CopilotBot',
+        allow: '/',
+      },
+      {
+        // Common Crawl (用于 AI 训练数据集)
+        userAgent: 'CCBot',
         allow: '/',
       },
     ],
