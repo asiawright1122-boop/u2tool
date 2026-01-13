@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/routing';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link, routing } from '@/i18n/routing';
 import { getBlogPostContent, getAllBlogSlugs, getAllBlogPostsMeta } from '@/lib/blog';
 import { SEO_CONFIG, generateAlternates, generateBreadcrumbJsonLd, jsonLdToString, getCanonicalUrl } from '@/lib/seo';
 import { tools } from '@/config/tools';
@@ -11,8 +11,16 @@ import remarkGfm from 'remark-gfm';
 
 interface Props { params: Promise<{ locale: string; slug: string }>; }
 
-export async function generateStaticParams() {
-  return getAllBlogSlugs().map((slug) => ({ slug }));
+// 生成静态参数 - 为每个语言和每篇博客生成页面
+export function generateStaticParams() {
+  const slugs = getAllBlogSlugs();
+  const params: { locale: string; slug: string }[] = [];
+  for (const locale of routing.locales) {
+    for (const slug of slugs) {
+      params.push({ locale, slug });
+    }
+  }
+  return params;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -29,6 +37,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { locale, slug } = await params;
+  
+  // 设置请求的语言环境
+  setRequestLocale(locale);
+  
   const t = await getTranslations({ locale, namespace: 'blog' });
   const tTools = await getTranslations({ locale, namespace: 'tools' });
   const post = getBlogPostContent(slug, locale);

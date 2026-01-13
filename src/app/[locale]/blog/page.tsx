@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { getAllBlogPostsMeta } from '@/lib/blog';
 import { SEO_CONFIG, generateAlternates, generateBreadcrumbJsonLd, jsonLdToString } from '@/lib/seo';
@@ -27,6 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPage({ params }: Props) {
   const { locale } = await params;
+  
+  // 设置请求的语言环境
+  setRequestLocale(locale);
+  
   const t = await getTranslations({ locale, namespace: 'blog' });
   const posts = getAllBlogPostsMeta(locale);
   

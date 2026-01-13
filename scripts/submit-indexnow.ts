@@ -22,7 +22,7 @@ dotenv.config({ path: '.env' });
 
 // 配置
 const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';
-const LOCALES = ['en', 'zh', 'es', 'pt', 'ja'];
+const LOCALES = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || '';
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 const DEFAULT_BATCH_SIZE = 100;
@@ -601,7 +601,7 @@ function printReport(results: SubmissionResult[], urls: string[], args: CliArgs)
   console.log('📋 配置信息:');
   console.log(`   站点: ${SITE_URL}`);
   console.log(`   模式: ${args.dryRun ? '测试模式 (DRY RUN)' : '实际提交'}`);
-  console.log(`   语言: ${args.locale || '全部 (en, zh, es, pt, ja)'}`);
+  console.log(`   语言: ${args.locale || '全部 (10种语言)'}`);
   console.log(`   分类: ${args.category || '全部'}`);
   console.log('');
   console.log('📈 提交统计:');
@@ -656,7 +656,7 @@ async function main(): Promise<void> {
   console.log('');
   console.log('配置信息:');
   console.log(`  - 模式: ${args.dryRun ? '🔍 测试模式 (DRY RUN)' : '🚀 实际提交'}`);
-  console.log(`  - 语言: ${args.locale || '全部 (5种)'}`);
+  console.log(`  - 语言: ${args.locale || '全部 (10种)'}`);
   console.log(`  - 分类: ${args.category || '全部'}`);
   console.log(`  - 批次大小: ${args.batchSize}`);
   console.log(`  - IndexNow Key: ${INDEXNOW_KEY ? INDEXNOW_KEY.substring(0, 8) + '...' : '未配置'}`);
