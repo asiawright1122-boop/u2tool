@@ -5,13 +5,13 @@
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 
-一个 SEO 友好、支持多语言的免费在线工具站，提供 200+ 开发者常用工具。基于 Next.js 14 构建，完全免费，无需注册。
+一个 SEO 友好、支持多语言的免费在线工具站，提供 1000+ 开发者常用工具。基于 Next.js 16 构建，完全免费，无需注册。
 
 🌐 **在线访问**: [https://www.u2tool.com](https://www.u2tool.com)
 
 ## ✨ 特性
 
-- 🌍 **多语言支持**: 英语、中文、西班牙语、葡萄牙语、日语
+- 🌍 **多语言支持**: 英语、中文、西班牙语、葡萄牙语、日语、韩语、德语、法语、俄语、阿拉伯语
 - 🔍 **SEO 优化**: 自动生成 sitemap、多语言 hreflang 标签、结构化数据
 - ⚡ **高性能**: 静态生成、边缘部署、Core Web Vitals 优化
 - 🎨 **现代 UI**: Tailwind CSS、暗色主题、响应式设计
@@ -165,7 +165,7 @@ INDEXNOW_KEY=your-indexnow-key
 
 ## 🏗️ 技术栈
 
-- **框架**: [Next.js 14](https://nextjs.org/) (App Router)
+- **框架**: [Next.js 16](https://nextjs.org/) (App Router)
 - **语言**: [TypeScript](https://www.typescriptlang.org/)
 - **样式**: [Tailwind CSS](https://tailwindcss.com/)
 - **国际化**: [next-intl](https://next-intl-docs.vercel.app/)
