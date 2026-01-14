@@ -1,0 +1,15 @@
+{
+  "detailed_description": "CORS测试器检查任何URL的跨域资源共享配置。查看CORS头部，测试预检请求，调试跨域问题。",
+  "usage_steps": [
+    "输入要测试的URL",
+    "选择请求方法",
+    "根据需要添加自定义来源",
+    "发送CORS测试请求",
+    "查看响应中的CORS头部"
+  ],
+  "usage_examples": [
+    "调试CORS错误",
+    "验证API CORS配置",
+    "测试预检请求"
+  ]
+}

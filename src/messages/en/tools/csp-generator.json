@@ -1,0 +1,15 @@
+{
+  "detailed_description": "CSP Generator helps you create Content Security Policy headers to protect your website from XSS and injection attacks. Visual editor for all CSP directives.",
+  "usage_steps": [
+    "Select CSP directives to include",
+    "Configure allowed sources",
+    "Add nonces or hashes if needed",
+    "Generate the CSP header",
+    "Copy and add to your server"
+  ],
+  "usage_examples": [
+    "Secure web applications",
+    "Prevent XSS attacks",
+    "Configure script sources"
+  ]
+}

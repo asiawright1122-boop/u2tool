@@ -1,0 +1,15 @@
+{
+  "detailed_description": "JSON to Protocol Buffers converter transforms JSON data into Protocol Buffers schema definitions. Perfect for developers working with gRPC, microservices, and high-performance data serialization.",
+  "usage_steps": [
+    "Paste your JSON data in the input area",
+    "Configure message name and package options",
+    "Click Convert to generate proto schema",
+    "Review the generated .proto definition",
+    "Copy or download the proto file"
+  ],
+  "usage_examples": [
+    "Generate proto schemas from API responses",
+    "Create gRPC service definitions",
+    "Convert REST APIs to gRPC"
+  ]
+}

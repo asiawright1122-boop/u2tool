@@ -1,0 +1,15 @@
+{
+  "detailed_description": "YAML 验证器检查您的 YAML 文件是否存在语法错误和结构问题。获取带有行号的详细错误信息，快速调试。",
+  "usage_steps": [
+    "粘贴您的 YAML 内容",
+    "点击验证以检查语法",
+    "查看任何错误信息",
+    "根据反馈修复问题",
+    "验证已修正的 YAML"
+  ],
+  "usage_examples": [
+    "验证 Kubernetes 配置",
+    "检查 Docker Compose 文件",
+    "调试 CI/CD 管道"
+  ]
+}

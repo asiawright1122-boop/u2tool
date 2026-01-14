@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Générateur de Formulaire à partir de JSON crée des formulaires HTML à partir de définitions de schémas JSON. Il prend en charge divers types d'entrée, des règles de validation et génère un marquage de formulaire propre et accessible.",
+  "usage_steps": [
+    "Définissez votre schéma de formulaire en JSON",
+    "Configurez les types de champs et les règles de validation",
+    "Cliquez sur Générer pour créer le formulaire",
+    "Aperçuez le formulaire généré",
+    "Copiez le code HTML ou React"
+  ],
+  "usage_examples": [
+    "Prototypage rapide de formulaires",
+    "Génération dynamique de formulaires",
+    "Création de formulaires à partir de schémas API"
+  ]
+}

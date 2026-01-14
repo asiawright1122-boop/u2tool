@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Débogueur JWT décode et vérifie les JSON Web Tokens. Visualisez l'en-tête, le payload et vérifiez les signatures avec des clés secrètes ou publiques pour les algorithmes RS256.",
+  "usage_steps": [
+    "Collez votre token JWT",
+    "Consultez l'en-tête et le payload décodés",
+    "Entrez la clé secrète ou publique",
+    "Vérifiez la signature",
+    "Vérifiez l'expiration et les claims"
+  ],
+  "usage_examples": [
+    "Déboguer les problèmes d'authentification",
+    "Vérifier les signatures de tokens",
+    "Inspecter les claims de tokens"
+  ]
+}

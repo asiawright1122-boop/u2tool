@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Testador de API permite enviar requisições HTTP para qualquer endpoint de API. Suporta todos os métodos HTTP, cabeçalhos personalizados, corpo de requisição e exibe respostas formatadas.",
+  "usage_steps": [
+    "Digite a URL do endpoint da API",
+    "Selecione o método HTTP",
+    "Adicione cabeçalhos se necessário",
+    "Digite o corpo para POST/PUT",
+    "Envie a requisição e veja a resposta"
+  ],
+  "usage_examples": [
+    "Testar endpoints de API",
+    "Depurar respostas de API",
+    "Explorar APIs de terceiros"
+  ]
+}

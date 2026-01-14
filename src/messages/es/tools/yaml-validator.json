@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Validador de YAML verifica tus archivos YAML en busca de errores de sintaxis y problemas estructurales. Recibe mensajes de error detallados con números de línea para depuración rápida.",
+  "usage_steps": [
+    "Pega tu contenido de YAML",
+    "Haz clic en Validar para verificar la sintaxis",
+    "Revisa cualquier mensaje de error",
+    "Arregla los problemas basándote en el feedback",
+    "Verifica el YAML corregido"
+  ],
+  "usage_examples": [
+    "Valida configuraciones de Kubernetes",
+    "Revisa archivos de Docker Compose",
+    "Depura pipelines de CI/CD"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der SRI-Hash-Generator erstellt Subresource Integrity Hashes für externe Ressourcen. Schützen Sie Ihre Website vor kompromittierten CDNs durch Überprüfung der Ressourcenintegrität.",
+  "usage_steps": [
+    "Ressourcen-URL eingeben oder Inhalt einfügen",
+    "Hash-Algorithmus auswählen (SHA-256/384/512)",
+    "SRI-Hash generieren",
+    "Integritätsattribut kopieren",
+    "Zu Ihren script/link-Tags hinzufügen"
+  ],
+  "usage_examples": [
+    "CDN-Ressourcen schützen",
+    "Externe Skripte schützen",
+    "Stylesheet-Integrität überprüfen"
+  ]
+}

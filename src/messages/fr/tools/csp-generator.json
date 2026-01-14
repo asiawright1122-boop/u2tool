@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Générateur CSP vous aide à créer des en-têtes de Politique de Sécurité du Contenu pour protéger votre site web des attaques XSS et d'injection. Éditeur visuel pour toutes les directives CSP.",
+  "usage_steps": [
+    "Sélectionnez les directives CSP à inclure",
+    "Configurez les sources autorisées",
+    "Ajoutez des nonces ou hashes si nécessaire",
+    "Générez l'en-tête CSP",
+    "Copiez et ajoutez à votre serveur"
+  ],
+  "usage_examples": [
+    "Protéger les applications web",
+    "Prévenir les attaques XSS",
+    "Configurer les sources de scripts"
+  ]
+}

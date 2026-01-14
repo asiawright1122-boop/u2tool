@@ -435,6 +435,27 @@ const TOOL_COMPONENTS_MAP: Record<string, React.ComponentType> = {
   'text-repeater': dynamic(() => import('./TextRepeater')),
   'fake-name-generator': dynamic(() => import('./FakeNameGenerator')),
   'invisible-character-generator': dynamic(() => import('./InvisibleCharacterGenerator')),
+  // Batch 50 - Popular Overseas Developer Tools (海外热门开发工具)
+  'json-to-proto': dynamic(() => import('./JsonToProto')),
+  'svg-to-png': dynamic(() => import('./SvgToPng')),
+  'webp-to-png': dynamic(() => import('./WebpToPng')),
+  'png-to-svg': dynamic(() => import('./PngToSvg')),
+  'html-to-pdf': dynamic(() => import('./HtmlToPdf')),
+  'json-to-table': dynamic(() => import('./JsonToTable')),
+  'yaml-validator': dynamic(() => import('./YamlValidator')),
+  'xml-validator': dynamic(() => import('./XmlValidator')),
+  'css-to-tailwind': dynamic(() => import('./CssToTailwind')),
+  'tailwind-to-css': dynamic(() => import('./TailwindToCss')),
+  'svg-editor': dynamic(() => import('./SvgEditor')),
+  'json-to-form': dynamic(() => import('./JsonToForm')),
+  'api-tester': dynamic(() => import('./ApiTester')),
+  'jwt-debugger': dynamic(() => import('./JwtDebugger')),
+  'csp-generator': dynamic(() => import('./CspGenerator')),
+  'sri-hash-generator': dynamic(() => import('./SriHashGenerator')),
+  'cors-tester': dynamic(() => import('./CorsTester')),
+  'json-to-zod': dynamic(() => import('./JsonToZod')),
+  'typescript-to-json': dynamic(() => import('./TypescriptToJson')),
+  'markdown-to-slides': dynamic(() => import('./MarkdownToSlides')),
 };
 
 export default function ToolWrapper({ slug }: { slug: string }) {

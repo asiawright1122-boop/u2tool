@@ -1,0 +1,15 @@
+{
+  "detailed_description": "YAML Validator checks your YAML files for syntax errors and structural issues. Get detailed error messages with line numbers for quick debugging.",
+  "usage_steps": [
+    "Paste your YAML content",
+    "Click Validate to check syntax",
+    "Review any error messages",
+    "Fix issues based on feedback",
+    "Verify the corrected YAML"
+  ],
+  "usage_examples": [
+    "Validate Kubernetes configs",
+    "Check Docker Compose files",
+    "Debug CI/CD pipelines"
+  ]
+}

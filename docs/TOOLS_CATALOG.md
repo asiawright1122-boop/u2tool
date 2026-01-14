@@ -2,9 +2,9 @@
 
 > 本文档记录项目中所有已注册的工具，方便查阅和避免添加重复工具。
 > 
-> 最后更新: 2026-01-11
+> 最后更新: 2026-01-13
 > 
-> 工具总数: **374 个**
+> 工具总数: **394 个**
 
 ---
 
@@ -185,8 +185,20 @@
 | 37 | `sql-to-json` | 🗃️ | SqlToJson | ✅ |
 | 38 | `time-calculator` | ⏱️ | TimeCalculator | ✅ |
 | 39 | `batch-timestamp-converter` | 📅 | BatchTimestampConverter | ✅ |
+| 40 | `json-to-proto` | 📦 | JsonToProto | |
+| 41 | `svg-to-png` | 🖼️ | SvgToPng | |
+| 42 | `webp-to-png` | 🖼️ | WebpToPng | |
+| 43 | `png-to-svg` | 🎨 | PngToSvg | |
+| 44 | `html-to-pdf` | 📄 | HtmlToPdf | |
+| 45 | `json-to-table` | 📊 | JsonToTable | |
+| 46 | `css-to-tailwind` | 🎨 | CssToTailwind | |
+| 47 | `tailwind-to-css` | 🎨 | TailwindToCss | |
+| 48 | `json-to-form` | 📝 | JsonToForm | |
+| 49 | `json-to-zod` | 🔷 | JsonToZod | |
+| 50 | `typescript-to-json` | 🔷 | TypescriptToJson | |
+| 51 | `markdown-to-slides` | 📊 | MarkdownToSlides | |
 
-**小计: 39 个工具**
+**小计: 51 个工具**
 
 ---
 
@@ -233,8 +245,16 @@
 | 37 | `crontab-calendar` | 📆 | CrontabCalendar | ✅ |
 | 38 | `screen-resolution-tester` | 🖥️ | ScreenResolutionTester | ✅ |
 | 39 | `keyboard-tester` | ⌨️ | KeyboardTester | ✅ |
+| 40 | `yaml-validator` | ✅ | YamlValidator | |
+| 41 | `xml-validator` | ✅ | XmlValidator | |
+| 42 | `svg-editor` | 🎨 | SvgEditor | |
+| 43 | `api-tester` | 🌐 | ApiTester | |
+| 44 | `jwt-debugger` | 🔐 | JwtDebugger | |
+| 45 | `csp-generator` | 🔒 | CspGenerator | |
+| 46 | `sri-hash-generator` | 🔐 | SriHashGenerator | |
+| 47 | `cors-tester` | 🌐 | CorsTester | |
 
-**小计: 39 个工具**
+**小计: 47 个工具**
 
 ---
 
@@ -680,6 +700,7 @@ const toolSlug = 'your-tool-slug';
 
 ## 更新日志
 
+- **2026-01-13**: 添加 20 个海外热门开发工具 (Batch 50: json-to-proto, svg-to-png, webp-to-png, png-to-svg, html-to-pdf, json-to-table, yaml-validator, xml-validator, css-to-tailwind, tailwind-to-css, svg-editor, json-to-form, api-tester, jwt-debugger, csp-generator, sri-hash-generator, cors-tester, json-to-zod, typescript-to-json, markdown-to-slides)
 - **2026-01-11**: 添加 10 个新热门工具 (Batch 49: anagram-solver, word-unscrambler, text-to-pdf, unit-price-calculator, bionic-reading-converter, palindrome-checker, character-map, text-repeater, fake-name-generator, invisible-character-generator)
 - **2026-01-10**: 添加 6 个欧洲热门工具 (iban-validator, vat-calculator, carbon-footprint-calculator, gdpr-consent-generator, metric-imperial-converter, bic-swift-lookup)
 - **2026-01-08**: 添加 31 个新热门工具 (Batch 3: currency-converter, roi-calculator, mortgage-calculator, tax-calculator, calorie-calculator, water-intake-calculator, sleep-calculator, due-date-calculator, love-calculator, decision-wheel, name-generator, random-picker, coin-flipper, dice-roller, team-generator, countdown-days-calculator, fuel-cost-calculator, electricity-cost-calculator, gpa-calculator, pace-calculator, shoe-size-converter, ring-size-calculator, bra-size-calculator, concrete-calculator, paint-calculator, tile-calculator, instagram-font-generator, social-media-size-guide, keyword-density-checker, text-summarizer, paraphrase-tool, graphql-formatter, code-screenshot-generator, number-system-converter, subnet-calculator-enhanced)

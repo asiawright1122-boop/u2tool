@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der YAML-Prüfer überprüft Ihre YAML-Dateien auf Syntaxfehler und strukturelle Probleme. Erhalten Sie detaillierte Fehlermeldungen mit Zeilennummern für ein schnelles Debugging.",
+  "usage_steps": [
+    "Fügen Sie Ihren YAML-Text ein",
+    "Klicken Sie auf 'Prüfen', um die Syntax zu überprüfen",
+    "Überprüfen Sie alle Fehlermeldungen",
+    "Beheben Sie Probleme basierend auf den Feedbacks",
+    "Überprüfen Sie das korrigierte YAML"
+  ],
+  "usage_examples": [
+    "Kubernetes-Konfigurationen prüfen",
+    "Docker Compose-Dateien überprüfen",
+    "CI/CD-Pipelines debuggen"
+  ]
+}

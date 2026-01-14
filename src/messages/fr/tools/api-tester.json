@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Testeur d'API vous permet d'envoyer des requêtes HTTP à n'importe quel endpoint d'API. Supporte toutes les méthodes HTTP, en-têtes personnalisés, corps de requête et affiche les réponses formatées.",
+  "usage_steps": [
+    "Entrez l'URL de l'endpoint API",
+    "Sélectionnez la méthode HTTP",
+    "Ajoutez des en-têtes si nécessaire",
+    "Entrez le corps pour POST/PUT",
+    "Envoyez la requête et consultez la réponse"
+  ],
+  "usage_examples": [
+    "Tester les endpoints d'API",
+    "Déboguer les réponses d'API",
+    "Explorer les APIs tierces"
+  ]
+}

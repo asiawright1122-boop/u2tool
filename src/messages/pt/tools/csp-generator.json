@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Gerador CSP ajuda você a criar cabeçalhos de Política de Segurança de Conteúdo para proteger seu site de ataques XSS e injeção. Editor visual para todas as diretivas CSP.",
+  "usage_steps": [
+    "Selecione as diretivas CSP a incluir",
+    "Configure as fontes permitidas",
+    "Adicione nonces ou hashes se necessário",
+    "Gere o cabeçalho CSP",
+    "Copie e adicione ao seu servidor"
+  ],
+  "usage_examples": [
+    "Proteger aplicações web",
+    "Prevenir ataques XSS",
+    "Configurar fontes de scripts"
+  ]
+}

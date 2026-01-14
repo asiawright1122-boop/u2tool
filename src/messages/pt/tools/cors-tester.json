@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Testador CORS verifica a configuração de Cross-Origin Resource Sharing para qualquer URL. Visualize cabeçalhos CORS, teste requisições preflight e depure problemas cross-origin.",
+  "usage_steps": [
+    "Digite a URL para testar",
+    "Selecione o método de requisição",
+    "Adicione origem personalizada se necessário",
+    "Envie a requisição de teste CORS",
+    "Revise os cabeçalhos CORS na resposta"
+  ],
+  "usage_examples": [
+    "Depurar erros CORS",
+    "Verificar configuração CORS de API",
+    "Testar requisições preflight"
+  ]
+}

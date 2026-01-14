@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Generador CSP le ayuda a crear encabezados de Política de Seguridad de Contenido para proteger su sitio web de ataques XSS e inyección. Editor visual para todas las directivas CSP.",
+  "usage_steps": [
+    "Seleccione las directivas CSP a incluir",
+    "Configure las fuentes permitidas",
+    "Agregue nonces o hashes si es necesario",
+    "Genere el encabezado CSP",
+    "Copie y agregue a su servidor"
+  ],
+  "usage_examples": [
+    "Proteger aplicaciones web",
+    "Prevenir ataques XSS",
+    "Configurar fuentes de scripts"
+  ]
+}

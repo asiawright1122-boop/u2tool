@@ -1,0 +1,15 @@
+{
+  "detailed_description": "JSONからProtocol Buffersへの変換ツールは、JSONデータをProtocol Buffersスキーマ定義に変換します。gRPC、マイクロサービス、および高性能データシリアライゼーションを使用する開発者に最適。",
+  "usage_steps": [
+    "入力エリアにJSONデータを貼り付け",
+    "メッセージ名とパッケージオプションを設定",
+    "「変換」をクリックしてprotoスキーマを生成",
+    "生成された.proto定義を確認",
+    "コピーまたはダウンロードしてprotoファイルを取得"
+  ],
+  "usage_examples": [
+    "APIレスポンスからprotoスキーマを生成",
+    "gRPCサービス定義の作成",
+    "REST APIをgRPCに変換"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Probador CORS verifica la configuración de Cross-Origin Resource Sharing para cualquier URL. Vea encabezados CORS, pruebe solicitudes preflight y depure problemas cross-origin.",
+  "usage_steps": [
+    "Ingrese la URL a probar",
+    "Seleccione el método de solicitud",
+    "Agregue origen personalizado si es necesario",
+    "Envíe la solicitud de prueba CORS",
+    "Revise los encabezados CORS en la respuesta"
+  ],
+  "usage_examples": [
+    "Depurar errores CORS",
+    "Verificar configuración CORS de API",
+    "Probar solicitudes preflight"
+  ]
+}

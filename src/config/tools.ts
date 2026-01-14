@@ -491,6 +491,28 @@ export const tools: Tool[] = [
   { slug: 'text-repeater', category: 'text', icon: '🔂', component: 'TextRepeater', popular: true },
   { slug: 'fake-name-generator', category: 'generators', icon: '👤', component: 'FakeNameGenerator', popular: true },
   { slug: 'invisible-character-generator', category: 'generators', icon: '👻', component: 'InvisibleCharacterGenerator', popular: true },
+
+  // Batch 50 - Popular Overseas Developer Tools (海外热门开发工具)
+  { slug: 'json-to-proto', category: 'converters', icon: '📦', component: 'JsonToProto', popular: true },
+  { slug: 'svg-to-png', category: 'image', icon: '🖼️', component: 'SvgToPng', popular: true },
+  { slug: 'webp-to-png', category: 'image', icon: '🔄', component: 'WebpToPng', popular: true },
+  { slug: 'png-to-svg', category: 'image', icon: '✨', component: 'PngToSvg', popular: true },
+  { slug: 'html-to-pdf', category: 'converters', icon: '📄', component: 'HtmlToPdf', popular: true },
+  { slug: 'json-to-table', category: 'converters', icon: '📊', component: 'JsonToTable', popular: true },
+  { slug: 'yaml-validator', category: 'development', icon: '✅', component: 'YamlValidator', popular: true },
+  { slug: 'xml-validator', category: 'development', icon: '✅', component: 'XmlValidator', popular: true },
+  { slug: 'css-to-tailwind', category: 'converters', icon: '🎨', component: 'CssToTailwind', popular: true },
+  { slug: 'tailwind-to-css', category: 'converters', icon: '🎨', component: 'TailwindToCss', popular: true },
+  { slug: 'svg-editor', category: 'image', icon: '✏️', component: 'SvgEditor', popular: true },
+  { slug: 'json-to-form', category: 'generators', icon: '📝', component: 'JsonToForm', popular: true },
+  { slug: 'api-tester', category: 'development', icon: '🔌', component: 'ApiTester', popular: true },
+  { slug: 'jwt-debugger', category: 'security', icon: '🔐', component: 'JwtDebugger', popular: true },
+  { slug: 'csp-generator', category: 'security', icon: '🛡️', component: 'CspGenerator', popular: true },
+  { slug: 'sri-hash-generator', category: 'security', icon: '🔒', component: 'SriHashGenerator', popular: true },
+  { slug: 'cors-tester', category: 'network', icon: '🌐', component: 'CorsTester', popular: true },
+  { slug: 'json-to-zod', category: 'converters', icon: '⚡', component: 'JsonToZod', popular: true },
+  { slug: 'typescript-to-json', category: 'converters', icon: '🔷', component: 'TypescriptToJson', popular: true },
+  { slug: 'markdown-to-slides', category: 'converters', icon: '📽️', component: 'MarkdownToSlides', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [

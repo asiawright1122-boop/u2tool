@@ -1,0 +1,15 @@
+{
+  "detailed_description": "JSON转Protocol Buffers转换器将JSON数据转换为Protocol Buffers模式定义。适用于使用gRPC、微服务和高性能数据序列化的开发者。",
+  "usage_steps": [
+    "将您的JSON数据粘贴到输入区域",
+    "配置消息名称和包选项",
+    "点击转换以生成proto模式",
+    "查看生成的.proto定义",
+    "复制或下载proto文件"
+  ],
+  "usage_examples": [
+    "从API响应生成proto模式",
+    "创建gRPC服务定义",
+    "将REST API转换为gRPC"
+  ]
+}

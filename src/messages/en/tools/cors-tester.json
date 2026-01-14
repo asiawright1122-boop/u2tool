@@ -1,0 +1,15 @@
+{
+  "detailed_description": "CORS Tester checks Cross-Origin Resource Sharing configuration for any URL. View CORS headers, test preflight requests, and debug cross-origin issues.",
+  "usage_steps": [
+    "Enter the URL to test",
+    "Select request method",
+    "Add custom origin if needed",
+    "Send the CORS test request",
+    "Review CORS headers in response"
+  ],
+  "usage_examples": [
+    "Debug CORS errors",
+    "Verify API CORS config",
+    "Test preflight requests"
+  ]
+}

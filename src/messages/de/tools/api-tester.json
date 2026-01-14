@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der API-Tester ermöglicht das Senden von HTTP-Anfragen an jeden API-Endpunkt. Unterstützt alle HTTP-Methoden, benutzerdefinierte Header, Anfragekörper und zeigt formatierte Antworten an.",
+  "usage_steps": [
+    "API-Endpunkt-URL eingeben",
+    "HTTP-Methode auswählen",
+    "Bei Bedarf Header hinzufügen",
+    "Anfragekörper für POST/PUT eingeben",
+    "Anfrage senden und Antwort anzeigen"
+  ],
+  "usage_examples": [
+    "API-Endpunkte testen",
+    "API-Antworten debuggen",
+    "Drittanbieter-APIs erkunden"
+  ]
+}

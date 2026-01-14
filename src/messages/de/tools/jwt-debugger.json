@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der JWT-Debugger dekodiert und verifiziert JSON Web Tokens. Zeigen Sie Header, Payload an und verifizieren Sie Signaturen mit geheimen Schlüsseln oder öffentlichen Schlüsseln für RS256-Algorithmen.",
+  "usage_steps": [
+    "JWT-Token einfügen",
+    "Dekodierten Header und Payload anzeigen",
+    "Geheimen oder öffentlichen Schlüssel eingeben",
+    "Signatur verifizieren",
+    "Ablauf und Claims prüfen"
+  ],
+  "usage_examples": [
+    "Authentifizierungsprobleme debuggen",
+    "Token-Signaturen verifizieren",
+    "Token-Claims inspizieren"
+  ]
+}

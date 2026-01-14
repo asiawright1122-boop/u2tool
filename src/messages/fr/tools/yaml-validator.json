@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Valideur YAML vérifie vos fichiers YAML pour les erreurs de syntaxe et les problèmes structurels. Obtenez des messages d'erreur détaillés avec des numéros de ligne pour un débogage rapide.",
+  "usage_steps": [
+    "Coller votre contenu YAML",
+    "Cliquez sur Valider pour vérifier la syntaxe",
+    "Examinez les messages d'erreur",
+    "Corrigez les problèmes en fonction des retours",
+    "Vérifiez le YAML corrigé"
+  ],
+  "usage_examples": [
+    "Valider les configurations de Kubernetes",
+    "Vérifier les fichiers Docker Compose",
+    "Déboguer les pipelines CI/CD"
+  ]
+}

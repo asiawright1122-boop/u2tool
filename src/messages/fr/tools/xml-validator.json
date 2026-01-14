@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Valideur XML vérifie vos documents XML pour les erreurs de syntaxe et la bien-forméité. Fournit des messages d'erreur détaillés avec les numéros de ligne et de colonne.",
+  "usage_steps": [
+    "Coller votre contenu XML",
+    "Cliquez sur Valider pour vérifier",
+    "Révisez les résultats de la validation",
+    "Corrigez toute erreur signalée",
+    "Re-validez jusqu'à ce que tout soit propre"
+  ],
+  "usage_examples": [
+    "Valider les réponses API",
+    "Vérifier les fichiers de configuration",
+    "Déboguer des messages SOAP"
+  ]
+}

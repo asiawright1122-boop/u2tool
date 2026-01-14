@@ -1,0 +1,15 @@
+{
+  "detailed_description": "SRI Hash Generator creates Subresource Integrity hashes for external resources. Protect your site from compromised CDNs by verifying resource integrity.",
+  "usage_steps": [
+    "Enter resource URL or paste content",
+    "Select hash algorithm (SHA-256/384/512)",
+    "Generate the SRI hash",
+    "Copy the integrity attribute",
+    "Add to your script/link tags"
+  ],
+  "usage_examples": [
+    "Secure CDN resources",
+    "Protect external scripts",
+    "Verify stylesheet integrity"
+  ]
+}

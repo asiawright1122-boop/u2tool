@@ -1,0 +1,15 @@
+{
+  "detailed_description": "JSON to Protocol Buffers 변환기는 JSON 데이터를 Protocol Buffers 스키마 정의로 변환합니다. gRPC, 마이크로서비스, 고성능 데이터 시리얼화를 처리하는 개발자에게 적합합니다.",
+  "usage_steps": [
+    "입력 영역에 JSON 데이터를 붙여넣으세요",
+    "메시지 이름과 패키지 옵션을 설정하세요",
+    "변환을 클릭하여 proto 스키마를 생성하세요",
+    "생성된 .proto 정의를 검토하세요",
+    "proto 파일을 복사하거나 다운로드하세요"
+  ],
+  "usage_examples": [
+    "API 응답에서 proto 스키마를 생성하세요",
+    "gRPC 서비스 정의를 만드세요",
+    "REST API를 gRPC로 변환하세요"
+  ]
+}

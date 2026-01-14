@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Générateur de Hash SRI crée des hashes d'Intégrité des Sous-ressources pour les ressources externes. Protégez votre site des CDN compromis en vérifiant l'intégrité des ressources.",
+  "usage_steps": [
+    "Entrez l'URL de la ressource ou collez le contenu",
+    "Sélectionnez l'algorithme de hash (SHA-256/384/512)",
+    "Générez le hash SRI",
+    "Copiez l'attribut d'intégrité",
+    "Ajoutez à vos balises script/link"
+  ],
+  "usage_examples": [
+    "Protéger les ressources CDN",
+    "Protéger les scripts externes",
+    "Vérifier l'intégrité des feuilles de style"
+  ]
+}

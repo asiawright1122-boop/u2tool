@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Depurador JWT decodifica y verifica JSON Web Tokens. Vea encabezado, payload y verifique firmas usando claves secretas o públicas para algoritmos RS256.",
+  "usage_steps": [
+    "Pegue su token JWT",
+    "Vea el encabezado y payload decodificados",
+    "Ingrese la clave secreta o pública",
+    "Verifique la firma",
+    "Compruebe la expiración y claims"
+  ],
+  "usage_examples": [
+    "Depurar problemas de autenticación",
+    "Verificar firmas de tokens",
+    "Inspeccionar claims de tokens"
+  ]
+}
