@@ -1,0 +1,159 @@
+{
+  "slug": "step-line-chart-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Step Line Chart Generator is a specialized online tool designed to create step line charts, which are particularly useful for visualizing discrete changes in data over time. Unlike traditional line charts that connect data points with straight lines, step line charts use horizontal and vertical lines to connect data points, creating a step-like appearance. This makes it easier to see when changes occur and how values persist over specific intervals. Users can input their data and customize various aspects of the chart, such as the axis labels, color schemes, and data point markers. The tool is ideal for financial analysts, project managers, and researchers who need to present data that changes at distinct points in time, ensuring clarity and precision in their visual representations. The generator supports real-time data updates and allows for the export of charts in multiple formats, making it a versatile and powerful tool for data visualization.",
+      "usage_steps": [
+        "Step 1: Open the Step Line Chart Generator on your web browser and click on the 'Upload Data' button to import your dataset in CSV or Excel format.",
+        "Step 2: In the 'Data Preview' section, review your uploaded data to ensure it is correctly formatted. Adjust column mappings if necessary by selecting the appropriate data type for each column.",
+        "Step 3: Navigate to the 'Chart Settings' panel and choose the 'Step Line' chart type from the dropdown menu. Customize the chart title, axis labels, and legend as needed.",
+        "Step 4: Under the 'Data Series' tab, select the columns that represent your x-axis (time) and y-axis (values). You can add multiple data series by clicking the 'Add Series' button.",
+        "Step 5: Fine-tune the appearance of your chart by adjusting the line color, thickness, and marker styles. Use the 'Background' section to set the chart background color and grid lines.",
+        "Step 6: Once your chart is complete, click the 'Export' button to download it in your preferred format, such as PNG, SVG, or PDF. You can also share the chart directly via a unique URL."
+      ],
+      "usage_examples": [
+        "Example 1: A financial analyst uses the Step Line Chart Generator to visualize stock prices at the close of each trading day, highlighting the exact points where prices changed.",
+        "Example 2: A project manager tracks the progress of a software development project by plotting the number of completed tasks over discrete time intervals, ensuring stakeholders can see clear milestones.",
+        "Example 3: A market researcher analyzes survey responses over a series of weeks, using the tool to show the number of respondents who changed their opinions at specific points in time.",
+        "Example 4: An environmental scientist monitors temperature changes in a specific region, plotting daily high and low temperatures to identify patterns and anomalies over a month."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Step Line Chart Generator 是一款在线图表生成工具，专门用于创建阶梯线图。阶梯线图通过水平和垂直线段来表示数据的变化，适用于展示离散时间点上的数据变化情况。这种图表类型特别适合用于显示那些在特定时间点发生显著变化的数据，例如库存水平、股票价格、或是任何需要精确描绘变化时间点的数据。使用 Step Line Chart Generator，用户可以轻松地将复杂的数据集转化为直观的图表，从而更好地理解和分析数据趋势。工具支持自定义图表样式，包括颜色、线条类型和文字标签，确保用户可以根据自己的需求生成最合适的图表。此外，该工具还提供了数据导入功能，支持 CSV 和 Excel 文件，使得数据处理更加便捷。",
+      "usage_steps": [
+        "Step 1: 访问 Step Line Chart Generator 的主页，点击“创建新图表”按钮。",
+        "Step 2: 在“数据输入”区域选择“手动输入”或“上传文件”方式。如果选择上传文件，支持 CSV 和 Excel 文件格式。",
+        "Step 3: 输入或导入数据后，点击“预览”按钮，查看图表的初步效果。",
+        "Step 4: 在“图表设置”面板中，调整图表的样式，包括线条颜色、宽度、标签样式等。",
+        "Step 5: 如果需要添加特定的时间点标注或注释，可以在“标注”选项卡中进行设置。",
+        "Step 6: 调整完毕后，点击“保存”按钮，选择导出格式（如 PNG、SVG 等），并将图表保存到本地。"
+      ],
+      "usage_examples": [
+        "Example 1: 一家零售公司需要监控其库存水平的变化。使用 Step Line Chart Generator，该公司可以将每月的库存数据导入图表，清晰地展示库存的变化趋势，帮助管理层做出更准确的决策。",
+        "Example 2: 一位股票分析师希望分析某只股票在过去一年中的价格波动。通过 Step Line Chart Generator，分析师可以将每日收盘价数据绘制成阶梯线图，直观地展示价格的离散变化，辅助进行技术分析。",
+        "Example 3: 一家能源公司需要记录和展示其在不同时间段内的电力消耗情况。利用 Step Line Chart Generator，该公司可以将每小时的电力消耗数据绘制成图表，帮助识别高峰时段和低谷时段，优化能源使用。",
+        "Example 4: 一位科研人员需要展示实验中不同时间点的温度变化。通过 Step Line Chart Generator，可以将实验数据导入图表，生成精确的温度变化图，以便在科研报告中直观呈现实验结果。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "ステップラインチャートジェネレーターは、データの離散的な変化を時間とともに視覚化するためのオンラインツールです。このツールは、通常の線グラフとは異なり、データポイント間の遷移を直線ではなく、台形のステップ形式で表現します。これにより、特定の時間点での急激な変化や持続的な状態を明確に表現することが可能になります。ユーザーがこのツールを必要とする主な理由は、金融データの分析、製造プロセスの監視、または任意のプロセスの状態変化の追跡など、特定の時間点での明確な変化を視覚的に表現したい場合です。技術的には、このツールはWebブラウザ上で動作し、HTML5、CSS3、JavaScriptを使用して高品質なグラフィックスを生成します。ユーザーはデータをCSV形式でアップロードしたり、手動で入力したりすることができます。その後、グラフのカスタマイズオプションを使用して、色、軸ラベル、グリッドラインなどの詳細設定を行えます。また、生成されたチャートはPNGやSVG形式でエクスポート可能で、他のドキュメントやウェブサイトに容易に統合できます。",
+      "usage_steps": [
+        "Step 1: ウェブブラウザでストップラインチャートジェネレーターにアクセスし、「新規チャート作成」ボタンをクリックします。",
+        "Step 2: 「データ入力」タブで、CSVファイルをアップロードするか、手動でデータを入力します。データは時間（X軸）と値（Y軸）を含む2つの列で構成されます。",
+        "Step 3: 「デザイン設定」タブで、チャートの色、線のスタイル、軸ラベル、グリッドラインなどの詳細をカスタマイズします。",
+        "Step 4: 「軸設定」タブで、X軸とY軸の範囲、ラベル、スケールを調整します。これにより、データの視覚的な表現を最適化できます。",
+        "Step 5: 「アノテーション」タブで、特定のデータポイントに注釈やラベルを追加します。これは、重要な変更点やイベントを強調表示するために役立ちます。",
+        "Step 6: 「保存と共有」タブで、生成されたチャートをPNGまたはSVG形式でエクスポートします。また、リンクを共有して他のユーザーとチャートを共有することもできます。"
+      ],
+      "usage_examples": [
+        "Example 1: 金融アナリストは、株価の急激な変動を確認するために、特定の時間範囲内の株価データをステップラインチャートで視覚化します。これにより、価格の変動が明確に見えるため、トレンド分析や意思決定に役立ちます。",
+        "Example 2: 製造ラインの管理者は、製品の品質検査結果を追跡するために、各検査ポイントでの合格/不合格データをステップラインチャートで表示します。これにより、品質の変化や改善の傾向を把握できます。",
+        "Example 3: エネルギー会社は、電力消費量の変動を分析するために、時間ごとの消費データをステップラインチャートで表示します。これにより、消費パターンやピーク時間の特定が可能になり、エネルギー管理の最適化に役立ちます。",
+        "Example 4: 研究者は、実験結果の変化を詳細に追跡するために、各試験の結果をステップラインチャートで表現します。これにより、実験過程での具体的な変化点を明確にすることが可能になります。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Step Line Chart Generator는 온라인에서 단계 선 차트를 생성하는 도구입니다. 이 도구는 시간에 따라 데이터의 이산적인 변화를 시각화하는 데 적합합니다. 단계 선 차트는 시간에 따른 데이터의 변화를 명확하게 보여주기 때문에, 특히 데이터가 갑작스럽게 변할 때 유용합니다. 이 도구는 사용자가 데이터를 입력하고, 다양한 옵션을 설정하여 차트를 생성할 수 있게 합니다. 예를 들어, 색상, 라인 스타일, 축 레이블 등을 조정할 수 있습니다. 또한, 생성된 차트는 PNG, SVG 등의 형식으로 다운로드할 수 있어, 보고서나 프레젠테이션에 쉽게 활용할 수 있습니다. Step Line Chart Generator는 웹 기반 도구로, 별도의 설치가 필요하지 않습니다. 이 도구는 데이터 분석가, 프로젝트 매니저, 마케팅 전문가 등 다양한 전문가들이 데이터의 변화를 시각화하고 이해하는 데 도움을 줍니다.",
+      "usage_steps": [
+        "Step 1: Step Line Chart Generator 웹사이트에 접속합니다.",
+        "Step 2: '데이터 입력' 섹션에서 X축과 Y축에 대한 데이터를 CSV 또는 직접 입력합니다.",
+        "Step 3: '차트 설정' 탭에서 차트의 색상, 라인 스타일, 마커 유형 등을 선택합니다.",
+        "Step 4: '축 설정' 탭에서 X축과 Y축의 범위, 레이블, 그리드 라인 등을 조정합니다.",
+        "Step 5: '차트 미리보기' 섹션에서 생성된 차트를 확인하고 필요에 따라 조정합니다.",
+        "Step 6: '차트 다운로드' 버튼을 클릭하여 차트를 PNG 또는 SVG 형식으로 다운로드합니다."
+      ],
+      "usage_examples": [
+        "Example 1: 데이터 분석가는 특정 제품의 월별 판매량 변화를 단계 선 차트로 시각화하여 시장 트렌드를 분석합니다.",
+        "Example 2: 프로젝트 매니저는 프로젝트의 주간 진행 상황을 단계 선 차트로 표현하여 팀원들에게 프로젝트의 현재 상태를 명확하게 전달합니다.",
+        "Example 3: 마케팅 전문가는 특정 캠페인의 일일 클릭률 변화를 단계 선 차트로 표현하여 캠페인의 효과를 평가합니다.",
+        "Example 4: 금융 분석가는 주식 시장의 시간별 가격 변화를 단계 선 차트로 시각화하여 트레이딩 전략을 세웁니다."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Step Line Chart Generator é uma ferramenta online que permite aos usuários criar gráficos de linha degrau, uma representação visual que destaca mudanças discretas nos dados ao longo do tempo. Esses gráficos são particularmente úteis para visualizar dados em intervalos definidos, onde as mudanças ocorrem de forma incremental e não contínua. O uso deste gráfico é essencial em cenários como análise de mercado, monitoramento de processos industriais e análise de dados financeiros, onde a precisão das mudanças de valor em pontos específicos do tempo é crucial.\n\nO Step Line Chart Generator oferece uma interface intuitiva e uma variedade de configurações personalizáveis, permitindo que os usuários ajustem o visual do gráfico para atender às suas necessidades específicas. Os usuários podem adicionar múltiplas séries de dados, personalizar a aparência das linhas, pontos e eixos, além de ajustar a escala e o intervalo dos eixos. A ferramenta suporta exportação dos gráficos em diversos formatos, como PNG, SVG e PDF, facilitando a integração com relatórios e apresentações.\n\nTecnologicamente, o Step Line Chart Generator utiliza bibliotecas de visualização de dados modernas, como D3.js, para renderizar os gráficos de forma eficiente e responsiva. A ferramenta é totalmente baseada em web, não requer instalação e pode ser acessada de qualquer dispositivo com conexão à internet, proporcionando flexibilidade e acessibilidade.",
+      "usage_steps": [
+        "Acesse o Step Line Chart Generator no site e clique no botão 'Adicionar Dados' para iniciar a criação do gráfico.",
+        "Na seção 'Dados', insira os valores de X e Y para cada ponto de dados. Você pode adicionar múltiplos pontos clicando em 'Adicionar Ponto'.",
+        "Personalize a aparência do gráfico navegando até a seção 'Personalização'. Aqui, você pode ajustar a cor das linhas, o estilo dos pontos, o título do gráfico e os rótulos dos eixos.",
+        "Selecione a opção 'Linhas de Referência' para adicionar linhas horizontais ou verticais que ajudem a destacar valores específicos nos dados.",
+        "No painel 'Configurações Avançadas', ajuste a escala dos eixos, definindo o mínimo e o máximo, e escolha o formato de exportação do gráfico.",
+        "Após configurar todos os detalhes, clique em 'Gerar Gráfico' para visualizar o resultado. Você pode então exportar o gráfico nos formatos PNG, SVG ou PDF, clicando no botão 'Exportar'."
+      ],
+      "usage_examples": [
+        "Um analista financeiro pode usar o Step Line Chart Generator para visualizar as mudanças nos preços das ações em intervalos específicos de tempo, destacando os momentos exatos de compra e venda.",
+        "Um engenheiro de produção pode criar gráficos de linha degrau para monitorar as variações de temperatura em um processo industrial, identificando rapidamente os pontos onde ocorreram mudanças significativas.",
+        "Um gerente de marketing pode utilizar a ferramenta para analisar a evolução das métricas de campanhas de marketing ao longo do tempo, como cliques e conversões, para otimizar as estratégias de publicidade.",
+        "Um pesquisador de mercado pode gerar gráficos de linha degrau para comparar as vendas de diferentes produtos em períodos específicos, ajudando a identificar tendências e padrões no comportamento do consumidor."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Générateur de Graphiques en Ligne Échelonnée est un outil en ligne conçu pour créer des graphiques en ligne échelonnée, qui permettent de visualiser des changements discrets dans les données au fil du temps. Technique, cet outil génère des graphiques en ligne échelonnée en utilisant des segments horizontaux et verticaux pour relier les points de données, ce qui met en évidence les moments précis où les données ont changé. Les utilisateurs de ce outil peuvent facilement charger leurs données, ajuster les paramètres de visualisation et exporter les graphiques en différents formats, ce qui le rend indispensable pour l'analyse de données temporelles. Les développeurs, les analystes de données et les professionnels de la finance trouveront cet outil particulièrement utile pour présenter des tendances claires et précises dans des ensembles de données complexes.",
+      "usage_steps": [
+        "Accédez à la page du Générateur de Graphiques en Ligne Échelonnée et cliquez sur le bouton 'Charger des Données' pour importer votre fichier CSV ou Excel.",
+        "Dans la section 'Sélection des Données', choisissez les colonnes qui représentent le temps et les valeurs de données pour votre graphique.",
+        "Personnalisez l'apparence de votre graphique en ajustant les options de style, telles que la couleur des lignes, la largeur et le style des points de données, dans la section 'Paramètres de Style'.",
+        "Configurez les axes du graphique en définissant les limites des axes X et Y, ainsi que les intervalles de graduation, dans la section 'Paramètres des Axes'.",
+        "Prévisualisez votre graphique en cliquant sur le bouton 'Prévisualiser' pour vérifier l'apparence et les ajustements nécessaires.",
+        "Une fois satisfait, exportez le graphique en format PNG, JPEG, SVG ou PDF en utilisant les options de la section 'Exporter'."
+      ],
+      "usage_examples": [
+        "Un analyste financier peut utiliser le Générateur de Graphiques en Ligne Échelonnée pour visualiser les changements de prix d'une action au cours de chaque heure de la journée boursière, mettant en évidence les moments précis de variation.",
+        "Un ingénieur en systèmes peut créer un graphique en ligne échelonnée pour montrer les interruptions de service d'un serveur au fil du temps, facilitant ainsi l'analyse des pannes et la planification de la maintenance.",
+        "Un gestionnaire de projet peut utiliser cet outil pour représenter les étapes d'un projet et leurs dates de début et de fin, offrant une vue claire de l'évolution du projet.",
+        "Un chercheur en sciences environnementales peut générer un graphique en ligne échelonnée pour illustrer les variations de température et de précipitations mensuelles sur plusieurs années, aidant à détecter des tendances climatiques."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Step Line Chart Generator ist ein Online-Tool, das Entwicklern und Datenanalysten die Erstellung von Stufenliniendiagrammen erleichtert. Technisch gesehen, konvertiert das Tool Ihre Datenpunkte in ein visuelles Format, das diskrete Änderungen in der Datenmenge über eine bestimmte Zeitspanne darstellt. Dies ist besonders nützlich, wenn es darum geht, präzise Zeitpunkte von Änderungen zu veranschaulichen, anstatt kontinuierliche Trends. Das Tool unterstützt verschiedene Eingabeformate, darunter CSV-Dateien und manuelle Dateneingabe, und bietet Optionen zur Anpassung des Diagramms, wie Farben, Achsenbeschriftungen und Markierungspunkte. Die Erstellung von Stufenliniendiagrammen ist für Szenarien optimal, in denen Datenpunkte an spezifischen Zeitintervallen aufgezeichnet werden, wie z.B. in der Überwachung von Systemleistungen oder in der Finanzanalyse. Das Tool generiert das Diagramm in Echtzeit, sodass Benutzer sofort sehen können, wie ihre Anpassungen das Endergebnis beeinflussen.",
+      "usage_steps": [
+        "Schritt 1: Öffnen Sie die Seite des Step Line Chart Generators in Ihrem Webbrowser.",
+        "Schritt 2: Klicken Sie auf die Schaltfläche 'Daten hochladen' und wählen Sie eine CSV-Datei mit Ihren Daten aus, oder geben Sie die Daten manuell in das Eingabefeld ein.",
+        "Schritt 3: Verwenden Sie die Schaltfläche 'Zeitraum auswählen', um den Zeitraum zu definieren, den das Diagramm abdecken soll. Sie können spezifische Start- und Enddaten eingeben oder aus vorgegebenen Zeiträumen wählen.",
+        "Schritt 4: Personalisieren Sie das Aussehen des Diagramms mit den Optionen unter 'Design anpassen'. Wählen Sie Farbschemas, Achsenbeschriftungen und Markierungspunkte nach Bedarf aus.",
+        "Schritt 5: Klicken Sie auf 'Vorschau', um ein Preview des generierten Diagramms anzuzeigen. Hier können Sie weitere Anpassungen vornehmen, indem Sie die Einstellungen erneut bearbeiten.",
+        "Schritt 6: Wenn Sie zufrieden sind, klicken Sie auf 'Download', um das Diagramm in einem gewünschten Format (z.B. PNG, PDF) herunterzuladen."
+      ],
+      "usage_examples": [
+        "Beispiel 1: Ein Finanzanalyst verwendet den Step Line Chart Generator, um die Monatswechselkurse einer Währung über ein Jahr darzustellen. Dies hilft ihm, präzise Zeitpunkte von Kursveränderungen zu visualisieren und Trends zu identifizieren.",
+        "Beispiel 2: Ein Systemadministrator nutzt das Tool, um den Speicherverbrauch eines Servers in regelmäßigen Intervallen zu überwachen. Das Stufenliniendiagramm zeigt genau, wann der Speicher zuletzt angepasst wurde und wie sich die Verwendung über die Zeit entwickelt hat.",
+        "Beispiel 3: Ein Marktanalyst erstellt ein Stufenliniendiagramm, um die Verkaufszahlen eines Produkts in verschiedenen Verkaufsperioden zu veranschaulichen. Dies ermöglicht es ihm, die Auswirkungen von Marketingkampagnen und Saisonalität auf die Verkaufstendenzen zu analysieren.",
+        "Beispiel 4: Ein Forscher in der Biologie verwendet den Generator, um die Wachstumsraten von Pflanzen in regelmäßigen Intervallen darzustellen. Das Diagramm hilft ihm, die genauen Zeitpunkte von Wachstumsstößen zu identifizieren und diese mit Umweltfaktoren in Beziehung zu setzen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор Шаговой Линейной Диаграммы предназначен для создания визуальных представлений данных, которые показывают дискретные изменения во времени. Этот инструмент позволяет пользователям генерировать диаграммы шагового типа, где каждое изменение в данных отображается как вертикальный или горизонтальный отрезок, что делает интерпретацию данных более понятной и точной. Шаговые линейные диаграммы особенно полезны для демонстрации данных, которые меняются в определенные моменты времени, такие как цены на акции, показания счетчиков или уровни запасов. Инструмент поддерживает загрузку данных в различных форматах, включая CSV и JSON, и предоставляет расширенные настройки для кастомизации внешнего вида диаграммы, таких как цвета линий, метки осей и сетка. Это делает его незаменимым инструментом для аналитиков, разработчиков и специалистов по данным, которым необходимо наглядно представить изменения в дискретных данных.",
+      "usage_steps": [
+        "Шаг 1: Перейдите на страницу Генератора Шаговой Линейной Диаграммы и выберите вкладку 'Загрузить данные'.",
+        "Шаг 2: Выберите формат данных (CSV или JSON) и загрузите файл с вашими данными, используя кнопку 'Выбрать файл'.",
+        "Шаг 3: После загрузки данных, перейдите на вкладку 'Настройки диаграммы'. Здесь вы можете настроить параметры диаграммы, такие как цвет линий, метки осей и сетку.",
+        "Шаг 4: В разделе 'Дополнительные настройки' выберите, как именно должны отображаться точки данных: в виде маркеров или без них.",
+        "Шаг 5: Нажмите кнопку 'Предварительный просмотр', чтобы увидеть, как будет выглядеть ваша диаграмма. Здесь вы можете внести дополнительные изменения, если это необходимо.",
+        "Шаг 6: Когда диаграмма готова, нажмите кнопку 'Скачать' и выберите формат для сохранения (PNG, SVG или PDF)."
+      ],
+      "usage_examples": [
+        "Пример 1: Финансовый аналитик использует Генератор Шаговой Линейной Диаграммы для визуализации изменения цен на акции в течение дня. Это позволяет более точно определить моменты, когда происходили значительные изменения в цене.",
+        "Пример 2: Инженер по контролю качества использует этот инструмент для отслеживания уровня запасов на складе. Шаговая диаграмма помогает выявить временные интервалы, когда запасы резко снижались, что может указывать на проблемы в цепи поставок.",
+        "Пример 3: Маркетолог создает шаговую линейную диаграмму, чтобы показать изменения в количестве просмотров рекламных кампаний в социальных сетях. Это помогает определить эффективность различных рекламных акций и их временные рамки.",
+        "Пример 4: Научный исследователь использует инструмент для визуализации результатов экспериментов, где изменения в данных происходили в дискретные моменты времени. Шаговая диаграмма позволяет точно представить каждое изменение, что важно для анализа и интерпретации результатов."
+      ]
+    },
+    "ar": {
+      "detailed_description": "心仪工具 Step Line Chart Generator هو أداة عبر الإنترنت تمكن المستخدمين من إنشاء مخططات الخطوات الزمنية بسهولة وفعالية. تقوم هذه الأداة بتوفير تمثيل بصري للبيانات التي تتغير بشكل متقطع على مدار الزمن، مما يجعلها مثالية لتحليل الاتجاهات والتحولات الرئيسية في البيانات. يتميز هذا الأداة بقدرتها على التعامل مع مجموعة واسعة من البيانات، بدءًا من البيانات المالية ووصولاً إلى البيانات العلمية. يمكن للمستخدمين تخصيص العديد من الجوانب الفنية للمخطط، مثل نوع الخط، لون الخط، ونوع العلامات. كما يمكنهم إضافة عناوين رئيسية وفرعية، مع ضبط معلمات المحور الزمني والقيم الرقمية. هذا النوع من المخططات يساعد في فهم التغيرات الفجائية في البيانات بشكل أوضح، مما يوفر رؤية مهمة للمحللين والباحثين والمهتمين بتحليل البيانات.",
+      "usage_steps": [
+        "الخطوة 1: قم بزيارة الموقع الإلكتروني لـ Step Line Chart Generator وانقر على زر 'إنشاء مخطط جديد'.",
+        "الخطوة 2: في قسم 'تحميل البيانات'، اختر بين تحميل ملف CSV أو إدخال البيانات يدويًا باستخدام الخلايا المخصصة.",
+        "الخطوة 3: بعد تحميل البيانات، انتقل إلى قسم 'تخصيص المخطط'. هنا، يمكنك اختيار نوع الخط (ثابت أو متغير)، ولون الخط، ونوع العلامات (دوائر أو مربعات).",
+        "الخطوة 4: قم بإضافة عنوان رئيسي للمخطط في حقل 'العنوان'، وعنوان فرعي إذا كنت ترغب في ذلك.",
+        "الخطوة 5: في قسم 'إعدادات المحور'، قم بضبط نطاق القيم على المحورين السيني والعمودي، وإضافة عناوين للمحورين إذا لزم الأمر.",
+        "الخطوة 6: بمجرد الانتهاء من التخصيص، انقر على زر 'إنشاء المخطط' لرؤية النتيجة. يمكنك بعد ذلك حفظ المخطط بصيغة PNG أو PDF أو مشاركته مباشرة عبر رابط.",
+        "الخطوة 7: إذا كنت بحاجة إلى إجراء تعديلات، يمكنك العودة إلى أي من الأقسام السابقة وتحديث الإعدادات وتحديث المخطط."
+      ],
+      "usage_examples": [
+        "مثال 1: يمكن للمحللين الماليين استخدام Step Line Chart Generator لرسم تغيرات أسعار الأسهم على مدار اليوم، مما يساعد في تحديد الاتجاهات والنقاط الحرجة في التداول.",
+        "مثال 2: الباحثون الطبيون يمكنهم استخدام هذه الأداة لتحليل بيانات المرضى على فترات زمنية محددة، مثل تغيرات ضغط الدم أو مستويات السكر في الدم، مما يوفر رؤية واضحة للتغيرات الصحية.",
+        "مثال 3: شركات التسويق يمكنها استخدام هذه الأداة لتتبع أداء حملات الإعلان عبر منصات متعددة، مثل تغييرات في عدد النقرات أو المبيعات على مدار الوقت.",
+        "مثال 4: المهندسون يمكنهم استخدام Step Line Chart Generator لتحليل البيانات المتعلقة بأداء الأجهزة أو المعدات، مثل تغييرات في درجة الحرارة أو ضغط الهواء، مما يساعد في التحقق من سلامة العمليات."
+      ]
+    }
+  }
+}

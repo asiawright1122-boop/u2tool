@@ -1,0 +1,158 @@
+{
+  "slug": "base85",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Base85 Encoder/Decoder tool facilitates the conversion of data to and from the Base85 encoding format, also known as Ascii85. This encoding method is designed to represent binary data in a compact, printable ASCII format, which is particularly useful for transmitting data over channels that do not support binary data, such as email or text files. Base85 is more efficient than Base64, as it uses 5 ASCII characters to represent 4 bytes of binary data, making it ideal for scenarios where data size and transmission efficiency are critical.\n\nDevelopers and IT professionals often require this tool for tasks such as embedding binary data in text documents, compressing data for transmission, or ensuring data integrity during transfer. For instance, in PDF files, Base85 is used to encode binary streams, making it a crucial tool for anyone working with PDFs or needing to encode binary data in a text-friendly format.\n\nThe tool operates by taking binary data as input and converting it into a Base85 encoded string, or vice versa. The encoding process involves breaking down the binary data into 4-byte blocks, converting each block into a 5-character ASCII string, and handling any padding for incomplete blocks. Decoding reverses this process, converting the ASCII string back into the original binary data. This tool supports both encoding and decoding, making it a versatile utility for a wide range of data manipulation tasks.",
+      "usage_steps": [
+        "Step 1: Open the Base85 Encoder/Decoder tool on the website and navigate to the main interface.",
+        "Step 2: Click on the 'Input' tab to access the input area where you will enter your data.",
+        "Step 3: Paste your binary data or Base85 encoded string into the input field. Ensure the data is correctly formatted for the operation you intend to perform.",
+        "Step 4: Select the operation you wish to perform by clicking the 'Encode' button for encoding binary data to Base85, or the 'Decode' button for decoding Base85 to binary data.",
+        "Step 5: Review the output in the 'Result' tab. The tool will display the encoded or decoded data, which you can then copy or download as needed.",
+        "Step 6: If necessary, refine your input or operation by returning to the 'Input' tab and making adjustments before reprocessing."
+      ],
+      "usage_examples": [
+        "Example 1: A developer needs to embed a binary image file into a PDF document. The Base85 Encoder/Decoder tool is used to convert the image data into a Base85 encoded string, which can then be included in the PDF's content stream.",
+        "Example 2: An IT professional is transmitting a large binary file over a medium that only supports ASCII text, such as email. By using the Base85 Encoder/Decoder tool, the file is converted to a compact Base85 string, reducing the overall size and improving transmission efficiency.",
+        "Example 3: A security analyst is verifying the integrity of a binary file that has been transmitted over a network. By encoding the file to Base85 and comparing the encoded string with a known good copy, the analyst can ensure the data has not been altered during transmission.",
+        "Example 4: A software engineer is developing a script that needs to handle Base85 encoded data from a third-party API. The Base85 Encoder/Decoder tool is used to test and validate the decoding process, ensuring the script can correctly interpret the received data."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Base85 Encoder/Decoder 是一款用于编码和解码 Base85（也称为 Ascii85）数据的工具。Base85 是一种将二进制数据转换为文本字符串的编码方式，相较于常见的 Base64 编码，Base85 在编码后的数据长度上更为紧凑，通常用于需要高效传输和存储二进制数据的场景中。\n\n用户在数据传输、文件存储和安全通信等场景中可能会遇到 Base85 编码的需求。例如，在 PDF 文件中，Base85 编码常用于压缩图像数据，以减少文件大小。此外，Base85 编码在某些网络协议中也被用于传输二进制数据，确保数据的完整性和可读性。\n\nBase85 Encoder/Decoder 工具通过提供简洁的界面，让用户可以轻松地在二进制数据和文本字符串之间进行转换。用户只需输入待编码的二进制数据或待解码的 Base85 文本，工具会自动进行编码或解码操作。技术细节上，Base85 编码采用 5 个字节的二进制数据转换为 8 个字符的文本字符串，每个字符代表 5 位的数据，解码过程则反向进行，将 8 个字符的文本字符串转换回 5 个字节的二进制数据。",
+      "usage_steps": [
+        "步骤 1: 打开 Base85 Encoder/Decoder 工具页面。",
+        "步骤 2: 在『输入数据』文本框中输入您要编码或解码的数据。",
+        "步骤 3: 选择『编码』或『解码』选项，具体取决于您的需求。",
+        "步骤 4: 如果需要，可以选择『显示高级选项』，以调整编码或解码的参数。",
+        "步骤 5: 点击『转换』按钮，工具将自动处理您的数据。",
+        "步骤 6: 查看『输出数据』区域，获取编码或解码后的结果。"
+      ],
+      "usage_examples": [
+        "示例 1: 将 PDF 文件中的图像数据进行 Base85 编码，以减少文件大小，提高传输效率。",
+        "示例 2: 在开发网络应用时，使用 Base85 编码将敏感数据（如用户凭证）编码后传输，确保数据在传输过程中的安全。",
+        "示例 3: 在文件存储系统中，使用 Base85 编码压缩二进制文件，节省存储空间。",
+        "示例 4: 在电子邮件中嵌入二进制附件时，使用 Base85 编码确保附件在传输过程中不会被损坏。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Base85 Encoder/Decoder（Base85エンコーダ/デコーダ）は、データをBase85（Ascii85）形式にエンコードしたりデコードしたりするためのツールです。Base85は、従来のBase64エンコーディングよりも効率的なデータ圧縮を提供します。Base64エンコードでは4文字で3バイトのデータを表現しますが、Base85では5文字で4バイトのデータを表現します。これにより、データのサイズが約20%削減されるため、特に大量のバイナリデータをテキスト形式で転送する際や、ファイルサイズを最小限に抑える必要がある場合に効果的です。\n\nユーザーがこのツールを必要とする主な状況には以下のようなものがあります。まず、電子メールの添付ファイルやWebアプリケーションのデータ転送でバイナリデータをテキスト形式に変換する必要がある場合、Base85エンコーディングは効率的な選択肢となります。また、画像データやPDFファイルをテキスト形式で埋め込む際も、Base85は優れた圧縮効果を提供します。さらに、特定のプログラミング言語やフレームワークでBase85エンコーディング/デコーディングが必要な場合、このツールは便利な手段となります。\n\nこのツールは、ユーザーが入力欄にデータを入力し、エンコードまたはデコードをクリックするだけで、即座に結果を出力します。エンコード処理では、入力されたバイナリデータがBase85形式に変換され、デコード処理ではBase85形式のデータが元のバイナリデータに復元されます。これらの操作は、高性能なアルゴリズムにより高速かつ正確に行われます。",
+      "usage_steps": [
+        "左側の「データ入力」欄に、エンコードまたはデコードしたいデータを入力またはペーストします。",
+        "「エンコード」または「デコード」を選択します。エンコードを選択した場合はバイナリデータ、デコードを選択した場合はBase85形式のデータを入力します。",
+        "「エンコード開始」または「デコード開始」ボタンをクリックします。",
+        "右側の「結果出力」欄に、処理されたデータが表示されます。",
+        "必要に応じて「クリップボードにコピー」ボタンをクリックして、結果をコピーします。",
+        "「クリア」ボタンをクリックして、入力欄と結果欄をクリアします。"
+      ],
+      "usage_examples": [
+        "電子メールに画像ファイルを添付する際、画像データをBase85形式にエンコードして本文に埋め込み、受信者側でデコードして元の画像ファイルを復元します。",
+        "WebアプリケーションでPDFファイルをテキスト形式で送信する必要がある場合、Base85エンコーディングを使用してデータサイズを削減し、転送時間を短縮します。",
+        "特定のプログラミングプロジェクトで、バイナリデータを効率的にテキスト形式に変換してログに記録する必要がある場合、Base85エンコーディングを活用します。",
+        "ファイル転送プロトコルで、バイナリデータを安全に転送するためにBase85形式にエンコードし、受信側でデコードして元のデータを復元します。"
+      ]
+    },
+    "es": {
+      "detailed_description": "El Base85 Encoder/Decoder es una herramienta especializada que permite la codificación y decodificación de datos en formato Base85, también conocido como Ascii85. Este formato de codificación es particularmente eficiente para representar datos binarios en texto legible, lo que lo hace ideal para transmitir datos a través de canales que solo manejan texto, como correos electrónicos o sistemas de archivos de texto. La herramienta utiliza un algoritmo que convierte secuencias de 4 bytes en 5 caracteres ASCII, lo que resulta en una representación más compacta comparada con formatos como Base64. Los usuarios necesitan esta herramienta para diversas aplicaciones, como la transmisión segura de datos binarios, la inclusión de imágenes en documentos de texto, y la optimización del almacenamiento de datos en sistemas que requieren representaciones de texto. La codificación Base85 reduce el tamaño del texto codificado en aproximadamente un 25% en comparación con Base64, lo que puede ser crucial en situaciones donde el ancho de banda o el espacio de almacenamiento son limitados.",
+      "usage_steps": [
+        "Abra la página del Base85 Encoder/Decoder en el sitio web del tool.",
+        "En el panel izquierdo, seleccione la pestaña 'Codificar' si desea transformar datos binarios en texto Base85, o la pestaña 'Decodificar' si desea convertir texto Base85 en datos binarios.",
+        "Introduzca los datos a procesar en el área de texto correspondiente. Para la codificación, pegue los datos binarios; para la decodificación, pegue el texto Base85.",
+        "Si es necesario, ajuste las opciones de formato en la sección 'Opciones' para personalizar la salida, como agregar o eliminar prefijos y sufijos específicos.",
+        "Haga clic en el botón 'Procesar' para iniciar la codificación o decodificación de los datos.",
+        "Una vez completado el proceso, los resultados aparecerán en el área de texto de salida, listos para su uso o descarga."
+      ],
+      "usage_examples": [
+        "Un desarrollador de software necesita enviar una imagen binaria a través de un sistema de correo electrónico que solo admite texto. Utiliza el Base85 Encoder/Decoder para codificar la imagen en texto Base85, la envía por correo, y el destinatario la decodifica para recuperar la imagen original.",
+        "Un ingeniero de sistemas debe incluir un archivo binario en un documento de texto para un informe técnico. Utiliza la herramienta para codificar el archivo en Base85, lo inserta en el documento, y luego lo decodifica cuando el documento es procesado por el sistema de destino.",
+        "Un administrador de redes necesita optimizar la transmisión de datos binarios a través de una conexión de red limitada. Utiliza el Base85 Encoder/Decoder para codificar los datos, reduciendo su tamaño y mejorando la eficiencia de la transmisión.",
+        "Un diseñador gráfico trabaja con archivos de imágenes vectoriales que deben ser incrustados en un documento HTML. Utiliza la herramienta para codificar las imágenes en Base85, las incrusta en el código HTML, y las decodifica en el navegador del usuario final para mostrarlas correctamente."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Base85 Encoder/Decoder é uma ferramenta avançada projetada para codificar e decodificar dados no formato Base85, também conhecido como Ascii85. Este formato de codificação é frequentemente utilizado para compactar dados de maneira mais eficiente do que os métodos tradicionais, como Base64. A codificação Base85 é capaz de representar 4 bytes de dados em 5 caracteres ASCII, resultando em uma redução de cerca de 25% no tamanho dos dados em comparação com o Base64, que usa 4 caracteres para representar 3 bytes de dados.\n\nProfissionais de TI, desenvolvedores e entusiastas de tecnologia podem se beneficiar dessa ferramenta em diversas situações. Por exemplo, ao precisar compactar e transferir arquivos de texto ou binários de maneira eficiente, a codificação Base85 pode ser uma escolha ideal. Além disso, ela é frequentemente utilizada em cenários de impressão de PDFs, onde a compactação de dados é essencial para manter a qualidade e o tamanho dos documentos.\n\nO funcionamento da ferramenta é simples, mas poderoso. Ao inserir os dados desejados, o algoritmo de codificação Base85 é aplicado, convertendo-os em um formato ASCII legível. Para decodificar, o processo é invertido, restaurando os dados originais. A ferramenta suporta tanto a codificação quanto a decodificação, proporcionando flexibilidade e praticidade.",
+      "usage_steps": [
+        "Abra a página do Base85 Encoder/Decoder no site.",
+        "Clique na aba 'Codificar' se desejar codificar dados ou na aba 'Decodificar' se desejar decodificar.",
+        "Cole os dados que deseja processar na área de texto 'Entrada'.",
+        "Se estiver codificando, selecione a opção 'Codificar' e clique no botão 'Processar'.",
+        "Se estiver decodificando, selecione a opção 'Decodificar' e clique no botão 'Processar'.",
+        "Os resultados serão exibidos na área de texto 'Saída'. Você pode copiá-los para uso posterior."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de software precisa compactar um arquivo de configuração binário para ser incluído em um script de instalação. Ele usa o Base85 Encoder/Decoder para codificar o arquivo, reduzindo seu tamanho e facilitando a inclusão no script.",
+        "Um administrador de sistemas precisa transferir um grande conjunto de dados de texto entre servidores. Utilizando a ferramenta, ele codifica os dados em Base85, reduzindo o tempo de transferência e minimizando o uso de largura de banda.",
+        "Um designer gráfico está criando um PDF com imagens de alta resolução. Para otimizar o tamanho do arquivo final, ele utiliza o Base85 Encoder/Decoder para codificar as imagens antes de incorporá-las no documento.",
+        "Um engenheiro de dados precisa decodificar um conjunto de dados que foram compactados em Base85 para análise. Ele usa a ferramenta para decodificar os dados, restaurando o formato original e facilitando a análise subsequente."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Base85 Encoder/Decoder est un outil spécialisé conçu pour encoder et décoder des données au format Base85, également connu sous le nom de Ascii85. Ce format est particulièrement efficace pour compresser des données binaires en format texte tout en maintenant une densité d'information supérieure à d'autres formats d'encodage comme le Base64. L'encodage Base85 utilise un alphabet de 85 caractères, permettant une représentation plus compacte des données binaires.\n\nLes utilisateurs ont besoin de cet outil pour plusieurs raisons. D'abord, il est idéal pour l'encodage de données binaires dans des formats textuels, ce qui est utile pour l'envoi de fichiers dans des systèmes qui ne supportent pas le binaire brut, comme les courriels. Ensuite, il est souvent utilisé dans des applications de compression où la densité des données est cruciale, comme dans les fichiers PDF où Base85 est un format d'encodage standard. Enfin, il est également utile pour les développeurs qui travaillent sur des protocoles de communication nécessitant une transmission de données textuelles compactes.\n\nTechniquement, l'outil fonctionne en transformant des données binaires en une séquence de caractères Base85. Lors de l'encodage, chaque groupe de 4 octets est transformé en 5 caractères Base85. Inversement, lors du décodage, chaque groupe de 5 caractères est converti en 4 octets. Cet outil supporte également des caractères de zéro (z) pour représenter des séquences de zéros en format compact, ce qui améliore encore l'efficacité de l'encodage.",
+      "usage_steps": [
+        "Accédez à l'outil Base85 Encoder/Decoder via le menu 'Outils' et sélectionnez 'Base85'.",
+        "Dans l'interface de l'outil, vous verrez deux zones de texte : 'Données d'entrée' et 'Résultat'.",
+        "Collez ou tapez vos données binaires ou textuelles dans la zone 'Données d'entrée'.",
+        "Choisissez l'option 'Encoder' si vous souhaitez convertir vos données en Base85, ou 'Décoder' si vous avez des données Base85 que vous souhaitez convertir en binaires.",
+        "Cliquez sur le bouton 'Exécuter' pour lancer le processus d'encodage ou de décodage.",
+        "Les résultats apparaîtront dans la zone 'Résultat'. Vous pouvez copier ces résultats pour les utiliser ailleurs."
+      ],
+      "usage_examples": [
+        "Un développeur devant envoyer un fichier binaire par courriel utilise l'outil pour encoder le fichier en Base85, rendant le fichier plus compact et transmissible via le protocole SMTP.",
+        "Un ingénieur en charge de la création de fichiers PDF utilise l'outil pour encoder les images binaires en Base85, optimisant ainsi la taille des fichiers PDF.",
+        "Un administrateur système ayant besoin de transmettre des données sensibles via un canal de communication sécurisé, mais textuel, utilise l'outil pour encoder les données en Base85 avant l'envoi.",
+        "Un développeur travaillant sur un protocole de communication personnalisé utilise l'outil pour encoder les paquets de données en Base85, garantissant une transmission efficace et compacte."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Base85 Encoder/Decoder ist ein spezialisiertes Werkzeug, das Daten in das Base85-Format (auch als Ascii85 bekannt) kodiert und wieder dekodiert. Base85 ist eine binäre-zu-text-Kodierungsmethode, die 4 Bytes in 5 ASCII-Zeichen umwandelt, wobei die Effizienz leicht höher ist als bei anderen gängigen Kodierungen wie Base64. Diese Kodierung wird oft verwendet, um binäre Daten in Textform zu übertragen, ohne dabei die Lesbarkeit oder die Datenintegrität zu beeinträchtigen. Benutzer benötigen dieses Tool, um beispielsweise binäre Dateien effizient in E-Mails zu integrieren, in Textdateien zu speichern oder in Protokolldateien zu schreiben. Die Kodierung erhöht die Komprimierung und ermöglicht eine saubere Darstellung von binären Daten in textbasierten Formaten. Technisch gesehen verwendet der Base85-Encoder/Decoder einen Algorithmus, der die binären Daten in Gruppen von 4 Bytes aufteilt und diese in 5 ASCII-Zeichen umwandelt. Der Dekoder führt diesen Prozess umgekehrt durch, um die ursprünglichen binären Daten wiederherzustellen. Dieses Tool ist besonders nützlich in Szenarien, in denen binäre Daten in textbasierte Formate eingebettet werden müssen, ohne die Datenintegrität zu gefährden.",
+      "usage_steps": [
+        "Öffnen Sie die Base85 Encoder/Decoder Seite auf der Website.",
+        "Wählen Sie im oberen Menü die Option 'Encoder' oder 'Decoder', je nachdem, ob Sie Daten kodieren oder dekodieren möchten.",
+        "Fügen Sie die zu kodierenden oder zu dekodierenden Daten in das Eingabefeld ein. Sie können die Daten auch aus einer Datei laden, indem Sie auf das 'Datei hochladen' Icon klicken.",
+        "Klicken Sie auf die 'Kodieren' oder 'Dekodieren' Schaltfläche, um den Prozess zu starten.",
+        "Das Ergebnis wird im Ausgabefeld angezeigt. Sie können die kodierten oder dekodierten Daten kopieren oder direkt in eine Datei herunterladen, indem Sie auf das 'Herunterladen' Icon klicken.",
+        "Falls erforderlich, können Sie die Einstellungen im 'Erweiterte Optionen' Bereich anpassen, zum Beispiel die Zeichenfolgen-Trennzeichen oder die Ausgabeformatierung."
+      ],
+      "usage_examples": [
+        "Ein Softwareentwickler muss eine binäre Datei in eine E-Mail einbetten, ohne dass die Daten beschädigt werden. Er kodiert die Datei mit Base85, um sicherzustellen, dass die binären Daten in einem textbasierten Format übertragen werden können.",
+        "Ein Systemadministrator möchte binäre Protokolldaten in einem textbasierten Format speichern, um die Datei später mit standardmäßigen Texteditoren zu öffnen. Er verwendet den Base85-Encoder, um die Daten in ASCII-Zeichen umzuwandeln.",
+        "Ein Designer muss ein Vektorgrafikfile (z.B. eine PDF-Datei) in eine E-Mail einbetten, ohne die Datenintegrität zu gefährden. Er kodiert die Datei mit Base85, um sicherzustellen, dass das File sauber übertragen wird.",
+        "Ein Forscher speichert große Mengen an binären Daten in einer Datenbank. Um die Speicherplatznutzung zu optimieren, kodiert er die Daten mit Base85, bevor er sie in die Datenbank einfügt, und dekodiert sie beim Abrufen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Base85 Encoder/Decoder — это мощное онлайн-приложение, предназначенное для кодирования и декодирования данных в формате Base85 (также известный как Ascii85). Base85 — это метод кодирования, который преобразует бинарные данные в текстовую строку, используя 85 символов. Этот формат позволяет более компактно представлять данные по сравнению с Base64, что особенно полезно при передаче больших объёмов информации или при работе с файлами, где важна компактность данных.\n\nИспользование Base85 Encoder/Decoder может быть особенно полезно в различных областях, таких как разработка программного обеспечения, системная интеграция и управление данными. Например, при необходимости передачи бинарных данных по каналам связи, которые поддерживают только текст, Base85 позволяет сохранить целостность данных и уменьшить их размер. Кроме того, этот формат часто используется в системах PDF, где требуется эффективное представление бинарных данных.\n\nРабота инструмента основана на реализации алгоритма Ascii85, который последовательно преобразует группы из 4 байтов (32 бита) в группы из 5 символов (40 бит). Это обеспечивает эффективное кодирование, приближающееся к 80% от исходного размера данных. При декодировании процесс происходит в обратном порядке, позволяя восстановить исходные бинарные данные без потерь.",
+      "usage_steps": [
+        "Откройте страницу Base85 Encoder/Decoder на сайте.",
+        "Перейдите в раздел 'Кодирование' или 'Декодирование' в зависимости от нужной операции.",
+        "Вставьте исходные данные в текстовое поле 'Входные данные'.",
+        "Нажмите кнопку 'Кодировать' или 'Декодировать' для выполнения соответствующей операции.",
+        "Результат появится в текстовом поле 'Выходные данные'.",
+        "Скопируйте результат или сохраните его в файл, если это необходимо."
+      ],
+      "usage_examples": [
+        "Разработчик ПО использует Base85 Encoder/Decoder для кодирования бинарных данных, которые нужно встроить в исходный код программы. Это позволяет представить данные в текстовом формате, удобном для чтения и редактирования.",
+        "Администратор систем использует этот инструмент для кодирования больших файлов перед отправкой через email. Бинарные файлы могут вызывать проблемы с кодировкой при передаче, а Base85 обеспечивает надёжное и компактное представление данных.",
+        "Графический дизайнер использует Base85 для кодирования изображений, которые будут включены в PDF-документ. Это позволяет уменьшить размер файла и улучшить его загрузку.",
+        "Специалист по кибербезопатности использует Base85 Encoder/Decoder для анализа и декодирования зашифрованных сообщений, которые могут содержать бинарные данные. Это помогает в распознавании и восстановлении оригинальной информации."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مُحول Base85 (وهو أيضًا معروف بـ Ascii85) هو أداة متقدمة لتحويل البيانات بين تنسيقي Base85 ونص العرض ASCII. يعتمد هذا المُحول على خوارزمية Ascii85 التي تُستخدم بشكلٍ شائع في تشفير البيانات وضغطها، خاصةً في تطبيقات البريد الإلكتروني وملفات PDF. تقوم خوارزمية Ascii85 بتشفير كل أربعة بايتات (32 بت) في خمسة حروف ASCII، مما يتيح تمثيل البيانات بطريقة أكثر كفاءة ومُناسبة للنقل عبر وسائل الاتصال التي تدعم النصوص فقط. يمكن للمطورين استخدام هذا الأداة لتحويل البيانات إلى تنسيق Base85 لتسهيل النقل والتخزين، ومن ثم تفكيكها عند الحاجة. هذا المُحول مفيد بشكل خاص في سيناريوهات تحتاج إلى تشفير البيانات بطريقة آمنة ومُضغطة، مثل تبادل الملفات الكبيرة عبر الإنترنت أو تخزين البيانات الحساسة في قواعد البيانات.",
+      "usage_steps": [
+        "افتح الصفحة الرئيسية لمُحول Base85 على الموقع.",
+        "حدد الخيار 'ترميز' إذا كنت ترغب في ترميز البيانات، أو 'فك الترميز' إذا كنت ترغب في فك ترميز البيانات.",
+        "أدخل النص الذي تريد ترميزه أو فك ترميزه في الحقل المخصص.",
+        "يمكنك اختيار تحميل ملف يحتوي على البيانات التي تريد ترميزها أو فك ترميزها عن طريق النقر على خيار 'تحميل الملف'.",
+        "اضغط على زر 'تحويل' لبدء العملية.",
+        "ستظهر النتيجة في القسم السفلي من الصفحة، ويمكنك اختيار تحميل النتيجة كملف أو نسخ النص المُحول."
+      ],
+      "usage_examples": [
+        "مطور يرغب في تبادل ملفات PDF كبيرة عبر الإنترنت. يمكنه استخدام مُحول Base85 لترميز الملفات قبل إرسالها، مما يضمن نقل البيانات دون حدوث أي تشويه.",
+        "مهندس أمان يرغب في تخزين البيانات الحساسة في قاعدة بيانات بطريقة آمنة. يمكنه استخدام مُحول Base85 لترميز البيانات قبل تخزينها وفك ترميزها عند الحاجة.",
+        "مصمم ويب يرغب في دمج صور مُضغطة بشكل فعال في موقع ويب. يمكنه استخدام مُحول Base85 لترميز الصور ودمجها مباشرةً في الرمز المصدري للموقع.",
+        "محلل بيانات يرغب في تحليل مجموعات بيانات كبيرة عبر الإنترنت دون الحاجة إلى تحميل الملفات الكبيرة. يمكنه استخدام مُحول Base85 لترميز البيانات ونقلها بشكل أكثر كفاءة."
+      ]
+    }
+  }
+}

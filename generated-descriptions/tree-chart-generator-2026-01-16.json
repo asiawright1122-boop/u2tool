@@ -1,0 +1,175 @@
+{
+  "slug": "tree-chart-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Tree Chart Generator is a powerful web-based tool designed to create hierarchical tree charts, offering both orthogonal and radial layouts. This tool is particularly useful for visualizing complex hierarchical data structures, such as organizational charts, file directories, or family trees. By using graph theory and data visualization techniques, the Tree Chart Generator provides users with a flexible and intuitive way to represent relationships and hierarchies. The tool supports various input formats, including JSON and CSV, allowing users to easily import their data and customize the visual appearance of the tree chart. The orthogonal layout ensures that edges are drawn at right angles, making the chart easier to read, while the radial layout arranges nodes in a circular pattern, providing a more aesthetically pleasing and compact representation. This tool is invaluable for project managers, data scientists, and anyone who needs to communicate hierarchical data in a clear and visually appealing manner.",
+      "usage_steps": [
+        "Step 1: Open the Tree Chart Generator and click on the 'Upload Data' button to import your hierarchical data in JSON or CSV format.",
+        "Step 2: Once your data is uploaded, select the 'Layout' option from the top menu and choose between 'Orthogonal' or 'Radial' layout to define the visual structure of your tree chart.",
+        "Step 3: Customize the appearance of your tree chart by using the 'Style' settings. Adjust node colors, edge styles, and font sizes to match your preferences or brand guidelines.",
+        "Step 4: Utilize the 'Node Labels' section to specify which data attributes should be displayed as labels on the nodes. This can include names, IDs, or any other relevant information.",
+        "Step 5: If needed, enable the 'Interactive Mode' to allow users to expand or collapse branches of the tree chart by clicking on the nodes, providing a dynamic and user-friendly experience.",
+        "Step 6: Once your tree chart is complete, click on the 'Export' button to download the chart as an image file (PNG, SVG) or as a JSON file for further editing or integration into other applications."
+      ],
+      "usage_examples": [
+        "Example 1: A project manager uses the Tree Chart Generator to create an organizational chart for a large company, visualizing the hierarchical structure of departments and employees. The orthogonal layout helps in clearly showing the reporting lines and team compositions.",
+        "Example 2: A data scientist imports a JSON file containing a file directory structure to generate a visual representation of the folder hierarchy. The radial layout is chosen to fit the chart into a compact circular format, making it easier to see the overall structure at a glance.",
+        "Example 3: A genealogist uses the Tree Chart Generator to create a family tree, inputting data from a CSV file that includes names, birth dates, and relationships. The tool's node labeling options are used to display key information, and the radial layout is selected for a visually appealing presentation.",
+        "Example 4: A software developer uses the Tree Chart Generator to visualize the dependency tree of a complex software project, with modules and libraries represented as nodes. The interactive mode is enabled to allow team members to explore the dependencies in detail, expanding and collapsing branches as needed."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Tree Chart Generator 是一款强大的在线工具，专为需要创建复杂层次结构图的用户设计。该工具支持两种布局方式：正交布局和径向布局。正交布局通过水平或垂直线条连接节点，适合展示线性或分支较少的层级关系；径向布局则通过环形结构展示层级，适合展示多分支的复杂层级关系。用户可以通过简单的拖放操作或输入节点数据来构建图表，工具会自动调整布局以确保图形的清晰度和美观度。Tree Chart Generator 不仅适用于数据科学家和工程师，也适合产品经理、教育工作者等需要清晰展示层级关系的用户。例如，产品经理可以用它来展示产品的功能模块，教育工作者可以用它来讲解生物分类结构。通过 Tree Chart Generator，用户可以轻松创建专业且具有视觉吸引力的层级图表，提升报告和演示的说服力。",
+      "usage_steps": [
+        "Step 1: 访问 Tree Chart Generator 的主页，点击“开始创建”按钮进入编辑界面。",
+        "Step 2: 在左侧的“节点管理”区域，点击“添加根节点”按钮，输入根节点的名称和描述。",
+        "Step 3: 选择已创建的根节点，点击“添加子节点”按钮，输入子节点的名称和描述。重复此步骤以添加更多子节点。",
+        "Step 4: 在顶部菜单栏中选择“布局”选项，选择“正交布局”或“径向布局”，工具会自动调整图表的显示方式。",
+        "Step 5: 通过右侧的“样式设置”面板，调整节点的颜色、大小和边框样式，以满足个性化需求。",
+        "Step 6: 完成图表设计后，点击“导出”按钮，选择导出格式（如 PNG、SVG 或 PDF），保存图表至本地或直接分享链接。"
+      ],
+      "usage_examples": [
+        "Example 1: 一家软件公司的产品经理需要展示产品的功能模块和子功能之间的关系，通过 Tree Chart Generator 可以快速生成清晰的层级图表，帮助团队成员和客户更好地理解产品结构。",
+        "Example 2: 教育机构的教师在教授生物分类学时，可以使用 Tree Chart Generator 创建生物分类树，帮助学生直观地理解不同生物之间的分类关系，提高教学效果。",
+        "Example 3: 企业管理者在规划公司组织结构时，利用 Tree Chart Generator 生成组织结构图，展示不同部门和岗位之间的隶属关系，便于管理和沟通。",
+        "Example 4: 数据分析师在处理复杂的数据集时，可以通过 Tree Chart Generator 创建数据层级图，帮助识别数据的层次结构，为数据分析提供可视化支持。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Tree Chart Generatorは、階層構造を視覚化するツールで、直交配置と放射配置の2つのレイアウトを提供しています。このツールは、組織の構造、プロジェクトのタスクの依存関係、またはデータの階層的な関連性を効果的に表現したい場合に最適です。ユーザーは intuitive なインターフェースを通じて、データを入力し、視覚的なツリーチャートを作成することができます。ツリーチャートは、各ノードが子ノードと親ノードとの関係を示すことで、複雑な情報を整理し、理解しやすくします。また、ツールは real-time に変更を反映し、ユーザーがチャートの外観や構造を微調整できるように設計されています。直交配置は、ノード間のつながりを直線で表示し、読みやすさを重視しています。一方、放射配置は、中央のノードから放射状に子ノードを配置することで、全体像を一覧性高く表示します。このツールは、データの可視化に必要な高度な機能を備えながら、シンプルで使いやすいデザインを実現しています。",
+      "usage_steps": [
+        "Step 1: ツールを開き、「新しいチャート」ボタンをクリックして、新しいプロジェクトを作成します。",
+        "Step 2: 「データ入力」タブで、階層構造を CSV または JSON 形式でアップロードします。または、手動で入力することもできます。",
+        "Step 3: 「レイアウト選択」タブで、直交配置と放射配置のいずれかを選択します。選択後、プレビューが自動的に更新されます。",
+        "Step 4: 「カスタマイズ」タブで、ノードの色、フォント、サイズ等の外観を調整します。また、エッジのスタイルや太さも設定できます。",
+        "Step 5: 「設定」タブで、チャートの全体的な設定を行います。例えば、背景色やグリッドの表示などを調整できます。",
+        "Step 6: 「保存」または「エクスポート」ボタンをクリックして、チャートを画像や PDF 形式で保存します。また、URLを共有することも可能です。"
+      ],
+      "usage_examples": [
+        "Example 1: 企業の組織図作成 - 人事部門が社内の役職やチームの構造を明確に視覚化するため、Tree Chart Generatorを使って組織図を作成します。直交配置を使用することで、各部署間の関係を明確に表現できます。",
+        "Example 2: プロジェクトマネジメント - プロジェクトマネージャーがタスクの依存関係を示す階層図を作成します。放射配置を使用することで、プロジェクトの全体像を一覧性高く表示し、進捗を効果的に管理できます。",
+        "Example 3: 学術研究のデータ可視化 - 研究者が複雑なデータの階層関係を視覚的に表現するために、Tree Chart Generatorを利用します。カスタマイズ機能を活用して、データの特徴を強調することができます。",
+        "Example 4: ウェブサイトのサイトマップ作成 - ウェブデザイナーがウェブサイトのページ構成を整理するために、Tree Chart Generatorを使ってサイトマップを作成します。直交配置を使用することで、ページ間のリンク関係を明確に表示できます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Tree Chart Generator는 계층적인 트리 차트를 생성하는 도구로, 직교(orthogonal) 및 방사형(radial) 레이아웃을 지원합니다. 이 도구는 데이터의 계층적 구조를 시각화하여 이해하기 쉽게 표현합니다. 사용자는 노드(node)와 엣지(edge)를 통해 복잡한 관계를 명확하게 표현할 수 있으며, 이는 특히 조직 차트, 가계도, 프로젝트 구조 등의 시각화에 매우 유용합니다. Tree Chart Generator는 사용자가 데이터를 입력하고, 다양한 레이아웃 옵션을 선택하여 원하는 형태의 차트를 생성할 수 있도록 설계되었습니다. 또한, 노드의 색상, 크기, 레이블 등을 커스터마이즈할 수 있어, 사용자는 차트의 시각적 표현을 더욱 풍부하게 만들 수 있습니다. 이 도구는 복잡한 데이터 구조를 단계적으로 분석하고, 이해하는 데 도움을 줍니다.",
+      "usage_steps": [
+        "1. Tree Chart Generator 웹사이트에 접속합니다.",
+        "2. 좌측 상단의 '데이터 입력' 버튼을 클릭하여 노드와 엣지 정보를 직접 입력하거나, CSV 파일을 업로드합니다.",
+        "3. '레이아웃 설정' 탭에서 직교(orthogonal) 또는 방사형(radial) 레이아웃을 선택합니다.",
+        "4. '노드 설정' 탭에서 노드의 색상, 크기, 레이블 등을 조정합니다.",
+        "5. '차트 미리보기' 버튼을 클릭하여 설정한 차트를 미리 확인합니다.",
+        "6. 만족스러운 결과를 얻으면, '차트 다운로드' 버튼을 클릭하여 차트를 이미지 파일로 저장합니다."
+      ],
+      "usage_examples": [
+        "1. **조직 차트 시각화**: 기업의 조직 구조를 시각적으로 표현하여 직원들이 각 부서와 역할을 쉽게 이해할 수 있도록 합니다. 직교 레이아웃을 사용하여 계층을 명확하게 보여주고, 노드 색상을 부서에 따라 다르게 설정합니다.",
+        "2. **가계도 작성**: 가족의 계보를 시각적으로 표현하여 가족 행사에서 소개하거나, 유산 분배 등의 법률적 작업을 돕습니다. 방사형 레이아웃을 사용하여 가족 관계를 직관적으로 표현하고, 노드 레이블에 생년월일을 추가합니다.",
+        "3. **프로젝트 구조 분석**: 복잡한 프로젝트의 구조를 시각적으로 분석하여 팀원들이 각 단계와 역할을 쉽게 이해할 수 있도록 합니다. 직교 레이아웃을 사용하여 프로젝트 단계를 명확하게 보여주고, 노드 크기를 작업의 중요도에 따라 조정합니다.",
+        "4. **소프트웨어 모듈 구조 시각화**: 소프트웨어 시스템의 모듈 구조를 시각적으로 표현하여 개발자들이 시스템을 이해하고 유지보수를 쉽게 할 수 있도록 합니다. 방사형 레이아웃을 사용하여 모듈 간의 관계를 명확하게 보여주고, 노드 색상을 모듈 유형에 따라 다르게 설정합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de Diagramas de Árbol es una herramienta avanzada diseñada para crear visualizaciones jerárquicas de datos en formatos tanto ortogonales como radiales. Esta herramienta es esencial para desarrolladores y diseñadores de sistemas que necesitan representar estructuras de datos complejas de manera clara y comprensible. La funcionalidad principal del Generador de Diagramas de Árbol radica en su capacidad para organizar y visualizar relaciones jerárquicas, lo que resulta invaluable en campos como la gestión de proyectos, la arquitectura de software y el análisis de datos. Los usuarios pueden importar datos en formato JSON o CSV, y la herramienta los transforma en diagramas interactivos y personalizables. Los diagramas generados pueden ser exportados en diversos formatos, incluyendo PNG y SVG, lo que facilita su integración en documentos, presentaciones y aplicaciones web. La herramienta también ofrece opciones avanzadas para ajustar la apariencia de los nodos, los enlaces y las etiquetas, permitiendo una personalización detallada según las necesidades específicas del proyecto.",
+      "usage_steps": [
+        "Paso 1: Acceda a la página del Generador de Diagramas de Árbol y haga clic en el botón 'Cargar Datos' para importar su archivo JSON o CSV.",
+        "Paso 2: En la sección 'Layout Options', seleccione entre las opciones 'Orthogonal' y 'Radial' para definir el estilo de disposición del diagrama.",
+        "Paso 3: Personalice el diseño de los nodos en la sección 'Node Settings', ajustando el tamaño, el color y el estilo de los bordes.",
+        "Paso 4: Configure el aspecto de los enlaces en la sección 'Link Settings', modificando el grosor, el color y el estilo de línea.",
+        "Paso 5: Agregue etiquetas personalizadas a los nodos en la sección 'Label Settings', ajustando la fuente, el tamaño y el color del texto.",
+        "Paso 6: Una vez que haya configurado todas las opciones, haga clic en el botón 'Generar Diagrama' y luego en 'Exportar' para descargar el diagrama en el formato deseado (PNG, SVG)."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un gerente de proyecto puede utilizar el Generador de Diagramas de Árbol para visualizar la estructura jerárquica de un proyecto, mostrando las diferentes fases, tareas y responsabilidades asignadas a cada miembro del equipo.",
+        "Ejemplo 2: Un arquitecto de software puede emplear esta herramienta para representar la arquitectura de una aplicación, ilustrando la relación entre módulos, componentes y capas de la aplicación.",
+        "Ejemplo 3: Un analista de datos puede usar el Generador de Diagramas de Árbol para crear una visualización de la estructura de una base de datos, destacando las tablas, las relaciones y las claves primarias.",
+        "Ejemplo 4: Un educador puede aprovechar esta herramienta para enseñar conceptos jerárquicos en ciencias naturales, como la clasificación de organismos, presentando de manera clara y visual la taxonomía."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Tree Chart Generator é uma ferramenta avançada para a criação de gráficos hierárquicos, oferecendo layouts ortogonais e radiais. Essa ferramenta é essencial para profissionais que precisam visualizar estruturas complexas de dados, como organogramas, árvores genealógicas e hierarquias de sistemas. A funcionalidade de layouts ortogonais e radiais permite que os usuários escolham a representação que melhor se adapta ao seu conjunto de dados, garantindo clareza e precisão na comunicação. O Tree Chart Generator utiliza algoritmos de layout automatizados que ajustam dinamicamente a disposição dos nós, evitando sobreposições e garantindo uma representação visualmente agradável. Além disso, a ferramenta suporta a importação de dados em formatos como JSON e CSV, facilitando a integração com sistemas de gestão de dados existentes.",
+      "usage_steps": [
+        "Abra o Tree Chart Generator no seu navegador e selecione o botão 'Carregar Arquivo' para importar seus dados no formato JSON ou CSV.",
+        "Na aba 'Configurações de Layout', escolha entre os layouts 'Ortogonal' e 'Radial' de acordo com a estrutura hierárquica que deseja representar.",
+        "Personalize a aparência do gráfico ajustando as opções de cor, tamanho e estilos nas configurações de 'Estilo' e 'Formato'.",
+        "Se necessário, use a funcionalidade de 'Filtragem' para ocultar ou destacar elementos específicos da hierarquia.",
+        "Após configurar o gráfico, clique em 'Visualizar' para ver a representação final e ajustar qualquer detalhe adicional.",
+        "Finalmente, utilize a opção 'Exportar' para salvar o gráfico em formatos como PNG, SVG ou PDF, adequados para apresentações ou documentação."
+      ],
+      "usage_examples": [
+        "Um gerente de projetos pode usar o Tree Chart Generator para criar um organograma detalhado da equipe, destacando as responsabilidades e relações hierárquicas entre os membros.",
+        "Um pesquisador genealógico pode gerar uma árvore genealógica complexa, utilizando o layout radial para visualizar as relações entre gerações de uma família.",
+        "Um desenvolvedor de software pode criar uma representação visual da arquitetura de um sistema, usando o layout ortogonal para mostrar claramente as dependências entre componentes.",
+        "Um analista de negócios pode utilizar a ferramenta para mapear a estrutura organizacional de uma empresa, facilitando a compreensão das linhas de autoridade e fluxos de informação."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Tree Chart Generator est un outil puissant et flexible destiné à la création de diagrammes hiérarchiques sous forme de graphes arborés. Ce générateur permet de visualiser des structures de données complexes en utilisant des layouts orthogonaux et radiaux, facilitant ainsi la compréhension des relations entre différents éléments. Les utilisateurs peuvent importer des données au format JSON ou CSV, et l'outil propose des fonctionnalités avancées pour personnaliser l'apparence des nœuds et des liens, tels que la couleur, la taille et le style. Les layouts orthogonaux assurent une disposition claire et linéaire, tandis que les layouts radiaux offrent une perspective centrée sur un nœud principal, idéale pour les structures familiales ou organisationnelles. Ce générateur est particulièrement utile pour les développeurs, les chercheurs et les professionnels de la data qui ont besoin de visualiser des données hiérarchiques de manière intuitive et esthétique.",
+      "usage_steps": [
+        "1. Accédez à la section 'Importer des données' et choisissez de télécharger un fichier JSON ou CSV contenant vos données hiérarchiques.",
+        "2. Une fois les données importées, utilisez le sélecteur de layout pour choisir entre un layout orthogonal ou radial.",
+        "3. Personnalisez l'apparence des nœuds et des liens en ajustant les options disponibles dans le panneau de configuration, telles que la couleur, la taille et le style.",
+        "4. Si nécessaire, utilisez la fonction de zoom et de déplacement pour explorer les détails de votre diagramme.",
+        "5. Activez l'option 'Afficher les étiquettes' pour ajouter des noms ou des descriptions aux nœuds, améliorant ainsi la lisibilité de votre charte.",
+        "6. Enfin, utilisez le bouton 'Exporter' pour sauvegarder votre diagramme au format PNG, SVG ou PDF, prêt à être intégré dans vos documents ou présentations."
+      ],
+      "usage_examples": [
+        "Un développeur de logiciels souhaite visualiser la structure d'un projet en montrant les dépendances entre différents modules. Il utilise le Tree Chart Generator pour créer un diagramme orthogonal, facilitant ainsi la communication avec son équipe et l'identification des points critiques.",
+        "Un historien étudiant les généalogies royales utilise le layout radial pour créer un arbre généalogique centré sur un roi ou une reine particulier, mettant en évidence les relations familiales complexes.",
+        "Un consultant en entreprise doit présenter la structure organisationnelle d'une multinationale lors d'une réunion. Il importe les données hiérarchiques de la compagnie dans le Tree Chart Generator et personnalise les couleurs pour distinguer clairement les différents départements.",
+        "Un spécialiste en gestion de projets utilise le Tree Chart Generator pour créer un diagramme de décomposition des tâches (WBS) en layout orthogonal, aidant ainsi à planifier et organiser les étapes du projet de manière visuelle et efficace."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Tree Chart Generator ist ein leistungsstarkes Werkzeug zur Visualisierung von hierarchischen Datenstrukturen. Mit orthogonalen und radialen Layouts können Benutzer komplexe Beziehungen und Strukturen in übersichtlichen Baumdiagrammen darstellen. Diese Visualisierungen sind besonders nützlich in Bereichen wie Softwareentwicklung, Unternehmensorganisation, Wissensmanagement und Datenanalyse. Benutzer können beispielsweise Softwarearchitekturen, Organigramme oder Klassifikationssysteme erstellen. Die Fähigkeit, Daten in verschiedenen Layouts darzustellen, ermöglicht es, die Struktur und Beziehungen auf verschiedene Arten zu verstehen, was die Entscheidungsfindung und die Kommunikation von Informationen verbessert. Technisch gesehen nutzt der Tree Chart Generator moderne Webtechnologien wie HTML5, CSS3 und JavaScript, um reaktive und interaktive Diagramme zu generieren. Die Benutzeroberfläche ist intuitiv gestaltet, ermöglicht aber dennoch die Feinabstimmung von Layoutparametern und Einstellungen, um die Darstellung perfekt auf die spezifischen Anforderungen des Benutzers abzustimmen.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des Tree Chart Generators in Ihrem Webbrowser.",
+        "Klicken Sie auf den Button 'Daten hochladen' und wählen Sie eine JSON-Datei mit Ihrer hierarchischen Datenstruktur aus.",
+        "Wählen Sie im Dropdown-Menü 'Layout' zwischen 'Orthogonal' und 'Radial' aus, um das gewünschte Layout zu bestimmen.",
+        "Passen Sie die Layoutparameter an, indem Sie die entsprechenden Slider und Eingabefelder verwenden. Zum Beispiel können Sie die Knotenabstände oder die Kantenfarben anpassen.",
+        "Klicken Sie auf den Button 'Vorschau', um die Änderungen zu überprüfen und sicherzustellen, dass die Visualisierung Ihren Erwartungen entspricht.",
+        "Speichern Sie das generierte Diagramm als Bild oder PDF, indem Sie den entsprechenden Export-Button verwenden."
+      ],
+      "usage_examples": [
+        "Ein Softwareentwickler verwendet den Tree Chart Generator, um die Klassenhierarchie einer großen Anwendung darzustellen und so den Code besser zu verstehen und zu warten.",
+        "Ein Projektmanager erstellt mit dem Tool ein Organigramm der Projektgruppen, um Rollen und Verantwortlichkeiten übersichtlich darzustellen und die Kommunikationsstrukturen zu klären.",
+        "Ein Wissenschaftler nutzt den Tree Chart Generator, um die taxonomische Klassifikation einer Reihe von Spezies in einem biologischen Forschungsprojekt zu visualisieren.",
+        "Ein Marketingexperte erstellt ein Baumdiagramm der Zielgruppensegmente, um die Hierarchie und Beziehungen zwischen verschiedenen Kundengruppen zu illustrieren."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор Древовидных Диаграмм (Tree Chart Generator) – это мощный и гибкий инструмент для создания иерархических структур в виде древовидных диаграмм. Этот инструмент позволяет пользователям визуализировать сложные иерархические данные, используя как ортогональные, так и радиальные макеты. Ортогональные макеты представляют данные в виде вертикальных и горизонтальных линий, что делает структуру более ясной и логичной. Радиальные макеты, напротив, организуют узлы вокруг центральной точки, что удобно для представления отношений, распределенных вокруг основного элемента.\n\nПользователи могут применять этот инструмент для различных задач, таких как визуализация организационных структур, представление основных концепций в проектах, анализ родословных или структурирование данных для исследовательских проектов. Генератор Древовидных Диаграмм поддерживает ввод данных в формате JSON, что делает его совместимым с различными системами управления данными. Созданные диаграммы можно сохранять в различных форматах, включая PNG и SVG, что позволяет легко интегрировать их в отчеты, презентации и веб-сайты.\n\nРабота с инструментом основана на интерактивном интерфейсе, который позволяет пользователям динамически изменять макет диаграммы, добавлять и редактировать узлы, а также настраивать внешний вид элементов. Это делает Генератор Древовидных Диаграмм не только функциональным, но и удобным инструментом для создания профессиональных и наглядных визуализаций.",
+      "usage_steps": [
+        "Шаг 1: Перейдите на страницу Генератора Древовидных Диаграмм и нажмите кнопку «Загрузить данные» для импорта вашего JSON-файла с иерархическими данными.",
+        "Шаг 2: После загрузки данных выберите тип макета диаграммы, используя выпадающее меню «Макет». Доступны опции «Ортогональный» и «Радиальный».",
+        "Шаг 3: Настройте внешний вид диаграммы, используя панель настроек. Здесь можно изменить цвета, размеры узлов, шрифты и другие параметры визуализации.",
+        "Шаг 4: Добавьте или отредактируйте узлы, нажав на кнопку «Редактировать узлы». В открывшемся окне можно вводить или изменять текст, добавлять новых узлов и удалять существующие.",
+        "Шаг 5: После завершения настройки и редактирования нажмите кнопку «Сохранить диаграмму». Выберите формат сохранения (PNG, SVG) и укажите место сохранения файла.",
+        "Шаг 6: Используйте сохраненную диаграмму для включения в отчеты, презентации или веб-сайты. Инструмент также позволяет экспортировать данные в формате JSON для дальнейшего использования или редактирования."
+      ],
+      "usage_examples": [
+        "Пример 1: Компания, занимающаяся разработкой программного обеспечения, использует Генератор Древовидных Диаграмм для создания организационной структуры. Это помогает сотрудникам лучше понимать иерархию и ответственности внутри компании, а также улучшает коммуникацию между отделами.",
+        "Пример 2: Исследователь сферы генеалогии применяет этот инструмент для визуализации родословных деревьев. Радиальный макет позволяет наглядно представить отношение между различными членами семьи и их потомками, что упрощает анализ и интерпретацию данных.",
+        "Пример 3: Дизайнер веб-сайтов использует Генератор Древовидных Диаграмм для создания структуры навигации сайта. Ортогональный макет помогает наглядно представить организацию страниц и разделов, что облегчает процесс проектирования и улучшает пользовательский опыт.",
+        "Пример 4: Студенты в области информационных систем используют этот инструмент для визуализации архитектуры баз данных. Созданные диаграммы помогают им лучше понимать связи между таблицами и полями, что упрощает обучение и выполнение проектных задач."
+      ]
+    },
+    "ar": {
+      "detailed_description": "آلة إنشاء الرسوم البيانية الشجرية هي أداة قوية مصممة لإنشاء رسوم بيانية شجرية مع خيارات تخطيط متعامدة ودوارة. تتيح هذه الآلة للمستخدمين تمثيل البيانات الهرمية بطرق بصرية جذابة ومفهومة. يتم استخدام هذه الأداة في العديد من المجالات، مثل إدارة المشاريع، والتحليل التنظيمي، وتصميم الأنظمة. الرسم البياني الشجري يساعد في توضيح العلاقات بين العناصر المختلفة في هيكل هرمي، مما يجعله أداة قيمة للفهم والتحليل. يمكن للأساطير والعلامات في الرسم البياني تحديد أنواع مختلفة من العقد والروابط، مما يوفر معلومات إضافية للمستخدمين. تستخدم الأداة خوارزميات متقدمة للرسم البياني لضمان أن التخطيطات الناتجة تكون متناسقة ومتناسقة، مما يسهل قراءتها وفهمها.",
+      "usage_steps": [
+        "حدد نوع التخطيط الذي تريد استخدامه، سواء كان متعامداً أو دورياً، من القائمة المنسدلة في أعلى الصفحة.",
+        "أدخل البيانات الهرمية في الحقل المخصص، حيث يمكنك إدراج العقد الرئيسية والفروع باستخدام التنسيق المناسب.",
+        "ضبط خيارات العرض، مثل حجم العقد، لون الخلفية، ونوع الخط، من خلال القائمة الجانبية.",
+        "اضغط على الزر 'إنشاء الرسم البياني' لتحويل البيانات المدخلة إلى رسم بياني شجري.",
+        "استخدم أدوات التحكم في الرسم البياني لتكبير أو تصغير الرسم، أو تنقل بين أجزائه المختلفة.",
+        "احفظ الرسم البياني أو صدره كصورة أو ملف PDF للاستخدام في العروض التقديمية أو التقارير."
+      ],
+      "usage_examples": [
+        "في إدارة المشاريع، يمكن استخدام الرسوم البيانية الشجرية لتمثيل هيكل المشروع، مع العقد الرئيسية تمثل المراحل والفروع تمثل المهام الفرعية.",
+        "في التحليل التنظيمي، يمكن استخدام الرسوم البيانية الشجرية لعرض هيكل الشركة، مع العقد الرئيسية تمثل الأقسام والفروع تمثل الأدوار داخل كل قسم.",
+        "في تصميم الأنظمة، يمكن استخدام الرسوم البيانية الشجرية لتمثيل هياكل البيانات المعقدة، مع العقد الرئيسية تمثل الجداول والفروع تمثل الحقول.",
+        "في التعليم، يمكن استخدام الرسوم البيانية الشجرية لشرح العلاقات بين المفاهيم المختلفة، مما يساعد الطلاب على فهم العلاقات الهرمية بين الأفكار."
+      ]
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "slug": "scientific-calculator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Scientific Calculator is a powerful online tool designed for performing a wide array of scientific calculations, including trigonometric, logarithmic, and exponential functions. This tool is essential for students, engineers, and scientists who require precise and reliable computations in their work or studies. The calculator supports advanced mathematical operations, making it ideal for solving complex equations and conducting detailed analysis. Users can leverage its robust features to handle tasks such as calculating the sine, cosine, and tangent of angles, computing logarithms with various bases, and performing exponential calculations. The interface is designed to be intuitive, allowing users to input values and select operations with ease, while the underlying algorithms ensure accuracy and efficiency. The calculator also includes a history feature, enabling users to review and reuse previous calculations, which is particularly useful for iterative problem-solving and data analysis.",
+      "usage_steps": [
+        "Step 1: Open the Scientific Calculator tool on the website and familiarize yourself with the interface, which includes various function buttons and a display area.",
+        "Step 2: Enter the number or angle you want to perform calculations on using the number pad or by typing directly into the input field.",
+        "Step 3: Select the desired mathematical function from the function buttons. For example, click the 'sin' button to calculate the sine of the entered angle.",
+        "Step 4: If you need to perform more complex operations, such as logarithms or exponentials, use the 'log' or 'exp' buttons respectively, and enter the base if required.",
+        "Step 5: After performing the calculation, the result will be displayed in the output area. You can also view the history of your calculations by clicking the 'History' tab.",
+        "Step 6: To clear the current input or start a new calculation, use the 'C' (clear) button or the 'AC' (all clear) button."
+      ],
+      "usage_examples": [
+        "Example 1: A physics student needs to calculate the sine of a 30-degree angle to solve a problem involving projectile motion. They use the Scientific Calculator to find the sine of 30 degrees, which helps them determine the vertical component of the projectile's velocity.",
+        "Example 2: An engineer is designing a bridge and needs to compute the natural logarithm of the material's tensile strength to ensure it meets safety standards. They input the tensile strength value into the calculator and use the 'ln' button to find the logarithm.",
+        "Example 3: A chemist is conducting an experiment and needs to calculate the exponential growth of a bacterial population over time. They use the 'exp' button to compute the exponential function with the growth rate and time as inputs.",
+        "Example 4: A high school math teacher wants to demonstrate the properties of trigonometric functions to their students. They use the Scientific Calculator to show how the values of sine, cosine, and tangent change for different angles, enhancing the students' understanding of trigonometry."
+      ]
+    },
+    "zh": {
+      "detailed_description": "科学计算器是一款专为需要进行复杂数学计算的用户设计的在线工具。它支持多种科学计算功能，包括三角函数、对数函数和指数函数等。用户可以利用这款工具解决日常学习或科研中的各种数学问题。例如，在物理学中计算运动物体的速度和加速度、在化学中计算反应速率、在工程学中进行结构分析等。科学计算器的工作原理是通过解析用户输入的数学表达式，利用内置的算法库进行精确计算，并将结果展示给用户。该工具采用了先进的数学库，确保计算结果的准确性，同时支持多种输入格式，方便用户根据需要选择最合适的方式进行计算。",
+      "usage_steps": [
+        "打开科学计算器页面，进入主界面。",
+        "在输入框中输入您需要计算的数学表达式，例如 'sin(30)' 或 'log(100, 10)'。",
+        "选择所需的计算模式，包括角度模式或弧度模式，以适应不同的计算需求。",
+        "点击“计算”按钮，科学计算器将解析表达式并执行计算。",
+        "计算完成后，结果将显示在结果区域，同时提供详细的计算过程以便验证。",
+        "如果需要保存计算结果，可以点击“导出”按钮，将结果导出为文本文件或图片格式。"
+      ],
+      "usage_examples": [
+        "在物理学课程中，学生可以使用科学计算器计算力的作用效果，例如计算一个物体在斜面上的加速度，输入 'a = g * sin(θ)'，其中 'g' 为重力加速度，'θ' 为斜面倾角。",
+        "在化学实验中，研究人员可以利用科学计算器计算反应的活化能，通过输入阿伦尼乌斯方程 'k = A * exp(-Ea / (R * T))'，其中 'k' 为反应速率常数，'A' 为指前因子，'Ea' 为活化能，'R' 为气体常数，'T' 为温度。",
+        "在建筑工程中，工程师可以使用科学计算器进行结构分析，例如计算梁的弯矩，输入 'M = w * L^2 / 8'，其中 'M' 为弯矩，'w' 为分布荷载，'L' 为梁长。",
+        "在金融领域，投资者可以利用科学计算器计算复利，输入 'A = P * (1 + r/n)^(n*t)'，其中 'A' 为最终金额，'P' 为本金，'r' 为年利率，'n' 为每年复利次数，'t' 为投资年限。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "当ウェブサイトの『Scientific Calculator』は、高度な数学的な計算を可能にするオンラインツールです。このツールは、三角関数、対数関数、指数関数などの複雑な計算を簡素化し、科学者、エンジニア、学生など、高度な数学的処理が必要な方々にとって非常に有用です。具体的には、sin、cos、tan、log、ln、expなどの関数をサポートしており、また、複素数の計算や角度の単位変換（度数法/ラジアン）も可能です。\n\nユーザーがこのツールを必要とする理由は、多岐にわたります。例えば、物理学の研究では、運動方程式や波動方程式の解を求める際に精度の高い計算が必要です。エンジニアリングの分野では、構造設計や信号処理の際に、特定の数値を迅速に計算し、その結果を元に設計を進めることが重要となります。また、学生の数学教育では、複雑な関数の理解やグラフの描画に活用できます。\n\nこのツールは、ブラウザ上で動作するため、インストールが不要で、どこからでも簡単にアクセスできます。計算結果は、高精度で出力され、必要に応じて小数点以下の桁数を調整することも可能です。また、履歴機能によって、過去の計算結果を参照できるため、再利用や比較が簡単です。",
+      "usage_steps": [
+        "1. ツールを開き、上部の関数セレクトボックスから必要な関数を選択します（例：sin、cos、tanなど）。",
+        "2. 入力フィールドに計算したい値を入力します。複素数の場合は、実部と虚部をそれぞれのフィールドに入力します。",
+        "3. 必要に応じて、角度の単位を度数法（Degree）またはラジアン（Radian）に変更します。",
+        "4. 小数点以下の桁数を調整する場合は、下部の桁数セレクトボックスから選択します。",
+        "5. 「Calculate」ボタンをクリックして計算を実行します。",
+        "6. 計算結果が表示されたら、必要に応じて履歴に保存したり、コピーして他の用途に使用します。"
+      ],
+      "usage_examples": [
+        "1. 物理実験で、振動数から周期を計算する必要がある場合、sin関数を使用して振動の周期を導き出すことができます。",
+        "2. 土木工学のプロジェクトで、橋の設計に必要な角度を計算する際、tan関数を使って角度を求めることが可能です。",
+        "3. 化学反応の速度を解析する際、対数関数（log）を使用して反応速度定数を計算することができます。",
+        "4. 統計学の授業で、正規分布の確率密度関数を計算する際、指数関数（exp）を使って確率密度を求めることが可能です。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "과학 계산기 도구는 사용자가 삼각 함수, 로그 함수, 지수 함수 등을 포함한 고급 수학 연산을 수행할 수 있도록 설계되었습니다. 이 도구는 과학, 공학, 물리학 등 다양한 분야에서 복잡한 계산을 필요로 하는 사용자들에게 유용합니다. 예를 들어, 물리학 실험에서 특정 각도의 사인 값을 구하거나, 화학 반응에서 pH 값을 계산하는 데 사용될 수 있습니다. 과학 계산기의 핵심 기능은 고도화된 수학 함수 지원, 메모리 기능, 그리고 복잡한 수식의 구문 분석 능력입니다. 이 도구는 사용자가 단순한 계산부터 복잡한 수학 문제까지 다양한 연산을 수행할 수 있도록 지원합니다.",
+      "usage_steps": [
+        "1. 과학 계산기 페이지에 접속한 후, 상단 메뉴에서 '계산기' 옵션을 선택합니다.",
+        "2. 계산기 화면에서 필요한 함수 버튼을 클릭합니다. 예를 들어, 사인 함수를 사용하려면 'sin' 버튼을 클릭합니다.",
+        "3. 함수 인수를 입력합니다. 예를 들어, 30°의 사인 값을 구하려면 '30'을 입력합니다.",
+        "4. 입력 후 '계산' 버튼을 클릭하여 결과를 얻습니다.",
+        "5. 결과가 하단의 출력 영역에 표시됩니다. 필요하다면, 결과를 클립보드에 복사하거나 주석을 추가할 수 있습니다.",
+        "6. 추가적인 계산을 수행하려면, '새로운 계산' 버튼을 클릭하여 화면을 초기화하고 새로운 입력을 시작합니다."
+      ],
+      "usage_examples": [
+        "Example 1: 건축 설계사가 기울기 각도를 계산해야 할 때, 과학 계산기의 탄젠트 함수를 사용하여 특정 길이의 기울기 각도를 정확히 구할 수 있습니다.",
+        "Example 2: 화학자는 pH 값을 계산하기 위해 로그 함수를 사용할 수 있습니다. 예를 들어, 0.01 M의 HCl 용액의 pH 값을 구할 때, 과학 계산기를 사용하면 빠르고 정확한 결과를 얻을 수 있습니다.",
+        "Example 3: 물리학자가 실험에서 물체의 이동 거리를 계산해야 할 때, 과학 계산기의 지수 함수를 사용하여 가속도를 고려한 거리를 계산할 수 있습니다.",
+        "Example 4: 캐디가 골프 공의 비행 거리를 예측해야 할 때, 과학 계산기의 삼각 함수를 사용하여 공의 발사 각도와 속도를 기반으로 비행 거리를 계산할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "La Calculadora Científica es una potente herramienta en línea diseñada para realizar cálculos avanzados que involucran funciones trigonométricas, logarítmicas y exponenciales. Esta calculadora es esencial para estudiantes, profesionales y entusiastas de la matemática y la ciencia que necesitan realizar operaciones complejas con precisión y eficiencia. Los usuarios pueden aprovechar esta herramienta para resolver problemas en física, ingeniería, estadística y más. La Calculadora Científica ofrece una interfaz intuitiva y funcionalidades avanzadas, como la capacidad de trabajar con números complejos, matrices y funciones vectoriales. Además, cuenta con una memoria de cálculos que permite guardar y reutilizar resultados previos, lo que facilita el flujo de trabajo en proyectos matemáticos y científicos.",
+      "usage_steps": [
+        "Abre la Calculadora Científica en tu navegador y familiarízate con la interfaz, que incluye botones para funciones trigonométricas, logarítmicas y exponenciales.",
+        "Para realizar una operación trigonométrica, como calcular el seno de un ángulo, selecciona el botón 'sin', ingresa el valor del ángulo en grados o radianes, y presiona 'Enter' o el botón '='.",
+        "Si necesitas calcular un logaritmo, usa el botón 'log' para logaritmos decimales o 'ln' para logaritmos naturales, introduce el valor y presiona 'Enter' o '='.",
+        "Para trabajar con funciones exponenciales, utiliza el botón 'exp' o '^' para potencias. Ingresa la base y el exponente, y confirma la operación.",
+        "La calculadora también permite trabajar con números complejos. Usa el botón 'i' para introducir la unidad imaginaria, y realiza operaciones aritméticas como suma, resta, multiplicación y división.",
+        "Finalmente, para guardar un resultado en la memoria, presiona el botón 'M+' y para recuperarlo, usa 'MR'. Esto es útil para mantener un registro de tus cálculos."
+      ],
+      "usage_examples": [
+        "Un estudiante de física necesita calcular la amplitud de una onda senoidal con una frecuencia de 50 Hz y un tiempo de 0.01 segundos. Utiliza la función 'sin' para encontrar el valor exacto.",
+        "Un ingeniero civil debe determinar el ángulo de inclinación de una pendiente que tiene una longitud de 100 metros y una altura de 10 metros. Aplica las funciones trigonométricas inversas para obtener el ángulo.",
+        "Un economista requiere calcular el crecimiento exponencial de una inversión de $10,000 a una tasa del 5% anual durante 10 años. Utiliza la función 'exp' para encontrar el monto final de la inversión.",
+        "Un químico necesita calcular el pH de una solución que tiene una concentración de 0.001 moles por litro de ácido. Usa la función 'log' para determinar el pH de la solución."
+      ]
+    },
+    "pt": {
+      "detailed_description": "A Calculadora Científica é uma solução robusta e versátil para realização de cálculos matemáticos avançados, incluindo funções trigonométricas, logarítmicas e exponenciais. Este instrumento é essencial para estudantes, engenheiros, cientistas e profissionais da área de matemática e engenharia. Sua interface intuitiva permite que os usuários acessem uma ampla gama de operações matemáticas, desde as mais básicas até as mais complexas, com precisão e eficiência. A calculadora suporta entrada de valores em radianos ou graus, permite a realização de cálculos com números complexos e oferece opções para armazenar e recuperar valores para uso futuro. A ferramenta é particularmente útil em situações onde a precisão e o desempenho são críticos, como no desenvolvimento de algoritmos científicos, na análise de dados de engenharia ou na execução de cálculos em pesquisas científicas.",
+      "usage_steps": [
+        "Abra a Calculadora Científica no navegador e clique no campo de entrada de valores.",
+        "Selecione o modo de entrada (graus ou radianos) usando o botão de opções localizado na parte superior da interface.",
+        "Digite a expressão matemática que deseja calcular, utilizando a tecla de função correspondente (por exemplo, sen, cos, tan, log, exp).",
+        "Clique no botão 'Calcular' ou pressione a tecla Enter para obter o resultado da operação.",
+        "Para armazenar o resultado, clique no botão 'Memorizar' e dê um nome ao valor para futuras referências.",
+        "Acesse valores memorizados anteriormente clicando na aba 'Memória' e selecionando o valor desejado."
+      ],
+      "usage_examples": [
+        "Um engenheiro elétrico precisa calcular a impedância de um circuito AC. Ele usa a Calculadora Científica para computar a função tangente e a função logarítmica para determinar a resistência equivalente do circuito.",
+        "Uma estudante de física está trabalhando em um projeto sobre óptica. Ela utiliza a ferramenta para calcular o ângulo de refração usando a lei de Snell, envolvendo funções seno e cosseno.",
+        "Um cientista de dados precisa normalizar um conjunto de dados usando a transformação logarítmica. A Calculadora Científica permite que ele realize a transformação logarítmica de base 10 de maneira rápida e precisa.",
+        "Um arquiteto está calculando as dimensões de uma estrutura curva. Ele utiliza a Calculadora Científica para calcular a função exponencial e a função arcoseno para determinar as medidas precisas da curvatura."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Calculateur Scientifique est un outil en ligne robuste conçu pour effectuer des calculs complexes impliquant des fonctions trigonométriques, logarithmiques et exponentielles. Contrairement aux calculatrices basiques, cette version avancée est idéale pour les étudiants, les ingénieurs et les professionnels qui nécessitent des calculs précis et rapides dans des domaines tels que la physique, la chimie et les mathématiques avancées. Avec une interface intuitive, il permet aux utilisateurs de saisir des expressions mathématiques sophistiquées et d'obtenir des résultats immédiats. Ce calculateur supporte également les calculs en degrés et en radians, ce qui le rend polyvalent pour diverses applications. La nécessité de cet outil réside dans sa capacité à simplifier des calculs qui, autrement, seraient fastidieux et sujets à des erreurs humaines. Il est particulièrement utile pour les résolutions de problèmes en analyse de données, en ingénierie et en recherche scientifique, où la précision est primordiale.",
+      "usage_steps": [
+        "Ouvrez la page du Calculateur Scientifique et localisez la zone de saisie principale.",
+        "Saisissez votre expression mathématique en utilisant les touches du clavier ou en cliquant sur les boutons de l'interface.",
+        "Pour les fonctions trigonométriques, utilisez les boutons 'sin', 'cos' et 'tan' et spécifiez l'angle en degrés ou en radians en utilisant le sélecteur approprié.",
+        "Pour les fonctions logarithmiques, cliquez sur 'log' ou 'ln' pour le logarithme naturel, puis saisissez la valeur de la base si nécessaire.",
+        "Pour les fonctions exponentielles, utilisez le bouton 'exp' ou saisissez 'e^' suivi de l'exposant.",
+        "Après avoir saisi votre expression, appuyez sur le bouton '=' ou Entrez sur votre clavier pour obtenir le résultat."
+      ],
+      "usage_examples": [
+        "Un étudiant en physique calcule la vitesse initiale d'un projectile lancé à un angle de 30 degrés avec une vitesse finale connue en utilisant les fonctions trigonométriques du calculateur.",
+        "Un ingénieur en électronique utilise la fonction logarithmique pour déterminer la résistance d'un circuit en fonction de la tension et du courant mesurés.",
+        "Un chercheur en chimie applique les fonctions exponentielles pour modéliser la réaction chimique d'un composé à différentes températures.",
+        "Un analyste financier utilise les fonctions trigonométriques pour analyser les modèles cycliques des données boursières et prédire les tendances futures."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Scientific Calculator ist ein leistungsstarkes Online-Tool, das erweiterte mathematische Operationen unterstützt, einschließlich trigonometrischer, logarithmischer und exponentieller Funktionen. Diese Funktionen ermöglichen es Benutzern, komplexe Berechnungen in Wissenschaft, Technik und Ingenieurwesen durchzuführen. Der Calculator verfügt über eine benutzerfreundliche Oberfläche, die den Zugriff auf fortgeschrittene mathematische Funktionen erleichtert, ohne dass eine spezielle Software installiert werden muss. Die Verwendung dieses Tools ist besonders nützlich für Studenten, Forscher und Ingenieure, die häufig mit komplexen mathematischen Modellen arbeiten. Durch die Integration von Funktionen wie Sinus, Cosinus, Tangens, Logarithmen und Exponentialfunktionen kann der Scientific Calculator helfen, präzise Ergebnisse zu erzielen, die in Bereichen wie Physik, Chemie und Mathematik von entscheidender Bedeutung sind. Die Berechnungen können sowohl in Grad- als auch in Bogenmaß durchgeführt werden, was die Flexibilität des Tools erhöht.",
+      "usage_steps": [
+        "Öffnen Sie die Webseite des Scientific Calculators und warten Sie, bis die Benutzeroberfläche vollständig geladen ist.",
+        "Wählen Sie die gewünschte mathematische Funktion aus dem Dropdown-Menü, z.B. 'Sinus', 'Logarithmus' oder 'Exponentialfunktion'.",
+        "Geben Sie die zu berechnende Zahl in das Eingabefeld ein. Achten Sie darauf, dass Sie Dezimalzahlen korrekt formatieren (z.B. 3.14).",
+        "Wählen Sie im Dropdown-Menü die gewünschte Einheit, z.B. 'Bogenmaß' oder 'Grad', falls relevant für die Funktion.",
+        "Klicken Sie auf die Schaltfläche 'Berechnen', um das Ergebnis zu erhalten. Das Ergebnis wird direkt unter dem Eingabefeld angezeigt.",
+        "Falls Sie mehrere Berechnungen durchführen möchten, klicken Sie auf die Schaltfläche 'Zurücksetzen', um die Eingaben zu löschen und neue Berechnungen durchzuführen."
+      ],
+      "usage_examples": [
+        "Ein Physikstudent verwendet den Scientific Calculator, um die Amplitude einer Schwingung zu berechnen, indem er die trigonometrischen Funktionen wie Sinus und Cosinus anwendet.",
+        "Ein Ingenieur verwendet den Calculator, um die Dämpfungskonstante eines mechanischen Systems zu bestimmen, indem er logarithmische Funktionen einsetzt.",
+        "Eine Mathematikerin verwendet das Tool, um die wachstumsabhängigen Prozesse in biologischen Systemen zu modellieren, indem sie Exponentialfunktionen verwendet.",
+        "Ein Chemiker verwendet den Scientific Calculator, um die Halbwertszeit von radioaktiven Isotopen zu berechnen, indem er logarithmische und exponentielle Funktionen kombiniert."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Калькулятор научных вычислений предлагает пользователям широкий спектр математических функций, включая тригонометрические, логарифмические и экспоненциальные операции. Этот инструмент необходим для выполнения сложных расчётов, которые требуются в различных научных и инженерных областях. Он позволяет быстро и точно вычислять значения функций, что особенно полезно при решении задач в физике, химии, электронике и других дисциплинах. Калькулятор научных вычислений поддерживает такие функции, как синус, косинус, тангенс, арксинус, арккосинус, арктангенс, натуральный логарифм, десятичный логарифм, степенные и экспоненциальные функции. Также доступны операции с комплексными числами и гиперболическими функциями. Инструмент работает на основе веб-технологий, обеспечивая высокую точность вычислений и удобный интерфейс для ввода и отображения результатов.",
+      "usage_steps": [
+        "Откройте страницу калькулятора научных вычислений на сайте.",
+        "Выберите нужную функцию из выпадающего списка 'Функция'.",
+        "Введите аргумент функции в поле 'Аргумент'. Для комплексных чисел используйте формат 'a + bi'.",
+        "При необходимости выберите дополнительные параметры, такие как основание логарифма, в соответствующих полях.",
+        "Нажмите кнопку 'Вычислить', чтобы получить результат.",
+        "Результат отобразится в поле 'Результат'. Если требуется, можно скопировать его, нажав на иконку 'Копировать'."
+      ],
+      "usage_examples": [
+        "Инженер-электроник использует калькулятор для вычисления реактивного сопротивления конденсатора при заданной частоте и ёмкости, применяя формулу Xc = 1 / (2 * π * f * C).",
+        "Студент-физик вычисляет значение угла, используя арксинус, чтобы определить угол падения света на поверхность при заданной длине волны и индексе преломления.",
+        "Химик подсчитывает концентрацию раствора, используя логарифмическую шкалу pH, чтобы определить степень кислотности или щелочности смеси.",
+        "Математик вычисляет значение гиперболической функции, такой как синус гиперболический, для решения дифференциальных уравнений в задачах оптимизации."
+      ]
+    },
+    "ar": {
+      "detailed_description": "آلة الحساب العلمية هي أداة متقدمة مصممة للرياضياتيين والمهندسين والعلماء الذين يحتاجون إلى أداء حسابات معقدة تشمل الدوال المثلثية واللوغاريتمية والأسية. تتميز هذه الأداة بواجهة مستخدم بديهية ومجموعة متنوعة من الوظائف التي تتيح للمستخدمين إجراء الحسابات الدقيقة والمعقدة بسهولة وسرعة. يمكن استخدامها في العديد من التطبيقات مثل الهندسة، الفيزياء، والرياضيات التطبيقية. تدعم آلة الحساب العلمية العديد من العمليات مثل حساب الجيب وجيب التمام والظل، بالإضافة إلى الدوال العكسية واللوغاريتمات الطبيعية والأسية. كما توفر إمكانية حفظ النتائج وإعادة استخدامها في حسابات لاحقة، مما يجعلها أداة لا غنى عنها للمحترفين والطلاب على حد سواء.",
+      "usage_steps": [
+        "افتح آلة الحساب العلمية عبر الرابط المخصص لها على الموقع.",
+        "اختر الوظيفة التي ترغب في استخدامها من القائمة المنسدلة في أعلى الشاشة، مثل الجيب (Sin)، جيب التمام (Cos)، أو الظل (Tan).",
+        "أدخل القيمة التي تريد حسابها في الحقل المخصص لها تحت الوظيفة المختارة.",
+        "انقر على زر 'حساب' لتنفيذ العملية. سيظهر النتيجة فوراً في الحقل المخصص أسفل الزر.",
+        "إذا كنت بحاجة إلى حفظ النتيجة، اضغط على زر 'حفظ' situated إلى اليمين من نتيجة الحساب.",
+        "لإعادة استخدام النتيجة في حسابات لاحقة، اضغط على زر 'استعادة' والذي سيضيف القيمة المحفوظة إلى الحقل الحالي."
+      ],
+      "usage_examples": [
+        "حساب الجيب لمثلث قائم الزاوية: يمكن للمهندسين الاستخدام هذه الأداة لحساب الجيب لزاوية معينة في مثلث قائم الزاوية، وهو ما يكون ضرورياً في تصميم الهياكل الهندسية.",
+        "حل معادلات الفيزياء: يُمكن الطلاب من استخدام آلة الحساب العلمية لحل معادلات الفيزياء المعقدة التي تتضمن الدوال المثلثية والأسية، مثل حساب سرعة موجة صوتية في وسط معين.",
+        "تحليل البيانات الإحصائية: يستخدم الباحثون هذه الأداة لإجراء حسابات إحصائية معقدة، مثل حساب القيم z في اختبار الفرضيات الإحصائية.",
+        "هندسة الحاسوب: يمكن للمطورين استخدام آلة الحساب العلمية لإجراء حسابات دقيقة في برامج رسومية ثلاثية الأبعاد، مثل حساب زوايا دوران الأشياء في الفضاء ثلاثي الأبعاد."
+      ]
+    }
+  }
+}

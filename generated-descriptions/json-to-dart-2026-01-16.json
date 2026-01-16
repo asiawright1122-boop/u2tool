@@ -1,0 +1,158 @@
+{
+  "slug": "json-to-dart",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The JSON to Dart tool is a specialized utility designed to streamline the process of converting JSON data into Dart classes, complete with `fromJson` and `toJson` methods. This is particularly useful for developers working with Flutter or any Dart-based application that needs to handle JSON data efficiently. The tool automatically generates the necessary Dart code, including the parsing methods, which significantly reduces the manual coding effort and potential errors that can arise from hand-coding these classes.\n\nOne of the primary use cases for this tool is in backend integration, where JSON data is frequently exchanged between the client and server. By using this tool, developers can quickly create Dart models that can seamlessly deserialize JSON responses into Dart objects and serialize Dart objects back into JSON. This is crucial for maintaining a clean and maintainable codebase, especially in large-scale applications.\n\nUnder the hood, the tool parses the JSON structure, identifies the data types, and generates the corresponding Dart classes with the `fromJson` and `toJson` methods. These methods are essential for converting JSON strings into Dart objects and vice versa. The tool also handles nested JSON structures, arrays, and other complex data types, ensuring that the generated Dart code is robust and ready for use in production environments.",
+      "usage_steps": [
+        "Step 1: Visit the JSON to Dart converter page on our website.",
+        "Step 2: In the 'JSON Input' section, paste your JSON data into the provided text area.",
+        "Step 3: Optionally, configure the class name and other settings in the 'Options' panel to customize the output.",
+        "Step 4: Click the 'Convert to Dart' button to process the JSON data.",
+        "Step 5: Review the generated Dart code in the 'Dart Output' section.",
+        "Step 6: Copy the generated Dart class code and integrate it into your project."
+      ],
+      "usage_examples": [
+        "Example 1: A developer is building a Flutter app that fetches user profile data from a REST API. The API returns a JSON object containing the user's name, email, and profile picture URL. Using the JSON to Dart tool, the developer can quickly generate a Dart class for the user profile, complete with `fromJson` and `toJson` methods, to handle the data efficiently.",
+        "Example 2: A backend service sends a JSON array of product details to a Flutter e-commerce app. Each product object includes fields like `id`, `name`, `price`, and `stock`. The JSON to Dart tool can generate a Dart class for the product model, allowing the app to easily parse and display the product data.",
+        "Example 3: A mobile app developer is working on a chat application that receives JSON messages containing the sender's name, message content, and timestamp. The JSON to Dart tool can be used to create a Dart class for the message model, ensuring that the messages are parsed and displayed correctly.",
+        "Example 4: A developer is building a weather app that fetches JSON data from a weather API, which includes information about the current temperature, humidity, and wind speed. The JSON to Dart tool can generate the necessary Dart classes to handle the weather data, making it easy to update the UI with the latest weather conditions."
+      ]
+    },
+    "zh": {
+      "detailed_description": "JSON to Dart 是一款专为 Flutter 开发者设计的在线工具，它能够将 JSON 数据结构自动转换成 Dart 语言中的类定义，并生成 `fromJson` 和 `toJson` 方法。这不仅简化了手动编写数据模型类的过程，还大大提高了开发效率。在实际开发中，处理 JSON 数据是非常常见的任务，尤其是在与 RESTful API 交互时。通过使用 JSON to Dart，开发者可以快速生成符合需求的数据模型，减少出错的可能性，同时保持代码的整洁和可维护性。该工具的工作原理是通过解析 JSON 输入，识别数据结构中的各个字段及其类型，然后根据这些信息生成相应的 Dart 类。生成的类不仅包括字段定义，还包括从 JSON 对象解析数据的 `fromJson` 方法和将 Dart 类转换为 JSON 对象的 `toJson` 方法。",
+      "usage_steps": [
+        "Step 1: 打开 JSON to Dart 工具页面，找到输入框。",
+        "Step 2: 将需要转换的 JSON 数据粘贴到输入框中。",
+        "Step 3: 点击页面顶部的“生成”按钮，工具将开始解析 JSON 数据。",
+        "Step 4: 生成完成后，工具会在输出框中显示转换后的 Dart 类代码。",
+        "Step 5: 检查生成的代码，确保所有字段和方法都符合预期。",
+        "Step 6: 将生成的 Dart 类代码复制到您的 Flutter 项目中，即可开始使用。"
+      ],
+      "usage_examples": [
+        "Example 1: 当您从后端 API 获取用户信息时，可以使用 JSON to Dart 将 JSON 响应转换为 Dart 类，从而在 Flutter 应用中轻松处理用户数据。",
+        "Example 2: 在开发电商应用时，处理商品详情数据是一个常见需求。使用此工具可以快速生成商品模型类，方便在前端展示和操作商品信息。",
+        "Example 3: 开发天气应用时，从 API 获取的天气数据通常以 JSON 格式返回。通过 JSON to Dart，可以快速生成 weather.dart 文件，用于解析和展示天气数据。",
+        "Example 4: 在构建新闻应用时，处理来自新闻 API 的文章数据。使用 JSON to Dart 生成的文章模型类可以帮助开发者快速解析和展示文章内容，提升用户体验。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "JSON to Dart コンバータは、JSONデータ形式をDart言語のクラスに変換する強力なツールです。このツールは、フロントエンド開発者やモバイルアプリ開発者にとって特に有用で、JSONデータを効率的に Dart のクラスにマッピングし、fromJson および toJson メソッドを自動生成します。これにより、APIレスポンスの処理やデータのシリアライゼーション・デシリアライゼーションが大幅に簡素化され、開発効率が向上します。\n\nJSON to Dart の主な用途は、モバイルアプリ開発におけるデータの管理です。例えば、APIから取得したJSONデータをDartクラスに変換することで、データの構造化とアクセスが容易になります。また、fromJson メソッドにより、JSONデータをDartオブジェクトに変換し、toJson メソッドにより、DartオブジェクトをJSONデータに変換できます。これらのメソッドは、データの一貫性と信頼性を確保するために不可欠です。\n\nこのツールは、JSONスキーマを解析し、適切なDartクラスを生成します。ユーザーは、JSONデータの入力フィールドにデータを貼り付け、ボタンをクリックするだけで、即座にDartクラスが生成されます。生成されたクラスには、必要なメソッドとプロパティが含まれており、すぐに使用できる状態です。",
+      "usage_steps": [
+        "Step 1: ツールのホームページにアクセスし、[JSON Data] フィールドに変換したいJSONデータを入力または貼り付けます。",
+        "Step 2: [Class Name] フィールドに生成したいDartクラスの名前を入力します。",
+        "Step 3: [Options] セクションで、必要なオプションを選択します。例えば、`fromJson` メソッドと `toJson` メソッドの生成をチェックします。",
+        "Step 4: [Generate Dart Class] ボタンをクリックします。これにより、指定したJSONデータからDartクラスが生成されます。",
+        "Step 5: 生成されたDartクラスが表示されます。コードをコピーし、プロジェクトに貼り付けて使用することができます。",
+        "Step 6: 必要に応じて、生成されたクラスをカスタマイズし、アプリケーションの要件に合わせて調整します。"
+      ],
+      "usage_examples": [
+        "Example 1: APIから取得したユーザー情報をDartクラスに変換し、ユーザー情報を表示するモバイルアプリを開発する際に使用します。JSONデータをDartクラスに変換することで、ユーザー情報の管理が容易になります。",
+        "Example 2: サーバーから取得した追跡データをDartクラスに変換し、リアルタイムで物流状況を追跡するアプリケーションを開発する際に使用します。JSONデータをDartクラスに変換することで、データの構造化とアクセスが容易になります。",
+        "Example 3: ゲームアプリケーションで、サーバーから取得したアイテムデータをDartクラスに変換し、アイテム情報を効率的に管理する際に使用します。JSONデータをDartクラスに変換することで、アイテムの表示や操作が簡単になります。",
+        "Example 4: IoTデバイスから取得したセンサーデータをDartクラスに変換し、リアルタイムでセンサーデータを解析するアプリケーションを開発する際に使用します。JSONデータをDartクラスに変換することで、データの加工や表示が容易になります。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "JSON to Dart는 JSON 데이터를 Flutter 앱에서 사용할 수 있는 Dart 클래스로 변환하는 강력한 도구입니다. 이 도구는 JSON 객체를 분석하여 Dart 클래스를 생성하며, fromJson 및 toJson 메서드를 자동으로 포함시킵니다. 이는 개발자가 수동으로 데이터 모델을 작성하는 번거로움을 줄이며, 코드의 오류 가능성을 낮춥니다. 특히, 복잡한 JSON 구조를 다룰 때 이 도구는 시간과 노력을 크게 절약할 수 있습니다. 이 도구는 Flutter 앱 개발자들이 API 응답을 쉽게 처리하고, 데이터 모델을 효율적으로 관리할 수 있도록 돕습니다. 또한, 이 도구는 코드의 일관성과 가독성을 유지하는 데도 큰 도움이 됩니다.",
+      "usage_steps": [
+        "JSON to Dart 웹사이트에 접속합니다.",
+        "좌측 상단의 'JSON 입력' 영역에 변환하고자 하는 JSON 데이터를 붙여넣습니다.",
+        "데이터를 입력한 후, '옵션' 메뉴에서 필요한 설정을 조정합니다 (예: null safety, 사용할 라이브러리 등).",
+        "설정을 완료한 후, '변환' 버튼을 클릭하여 Dart 클래스를 생성합니다.",
+        "생성된 Dart 클래스 코드가 우측 창에 나타나면, 해당 코드를 복사합니다.",
+        "복사한 코드를 Flutter 프로젝트의 적절한 위치에 붙여넣어 사용합니다."
+      ],
+      "usage_examples": [
+        "API에서 받아온 사용자 프로필 데이터를 Flutter 앱에서 사용하기 위해 JSON to Dart를 사용하여 Dart 클래스를 생성합니다. 이 클래스는 사용자 정보를 쉽게 매핑하고, API 응답을 처리하는 데 활용됩니다.",
+        "온라인 상점 앱에서 상품 목록을 표시하기 위해, API 호출로 받은 JSON 데이터를 Dart 클래스로 변환합니다. 이렇게 하면 상품 정보를 쉽게 파싱하고, UI에 표시할 수 있습니다.",
+        "소셜 미디어 앱에서 게시물의 댓글을 관리하기 위해, JSON 데이터를 Dart 클래스로 변환합니다. 이는 댓글을 효율적으로 저장하고, 사용자 인터페이스에서 동적으로 표시하는 데 도움이 됩니다.",
+        "기상 정보 앱에서 날씨 데이터를 API에서 받아와 처리할 때, JSON to Dart를 사용하여 날씨 정보를 Dart 클래스로 변환합니다. 이 클래스는 날씨 데이터를 쉽게 파싱하고, 앱 내에서 활용할 수 있도록 만듭니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "JSON to Dart es una herramienta especializada diseñada para desarrolladores que trabajan con aplicaciones Flutter y Dart. Esta herramienta permite convertir objetos JSON en clases Dart, incluyendo métodos `fromJson` y `toJson`. Esta funcionalidad es crucial para la serialización y deserialización de datos, facilitando la integración de datos JSON en aplicaciones Flutter. Los desarrolladores necesitan esta herramienta para agilizar el proceso de creación de modelos de datos, especialmente en proyectos que involucran API RESTful o almacenamiento local. Al automatizar la generación de clases Dart, JSON to Dart reduce el tiempo de desarrollo y minimiza errores manuales. La herramienta funciona al analizar la estructura JSON proporcionada, identificando tipos de datos y generando el código Dart correspondiente con métodos de conversión. Esto es especialmente útil en escenarios donde se manejan datos complejos y anidados.",
+      "usage_steps": [
+        "Paso 1: Ingrese en la página de JSON to Dart y localice el área de entrada de texto.",
+        "Paso 2: Copie y pegue su JSON en el cuadro de texto superior.",
+        "Paso 3: Haga clic en el botón 'Convertir' para iniciar el proceso de conversión.",
+        "Paso 4: Revise el código Dart generado en el cuadro de texto inferior.",
+        "Paso 5: Si es necesario, realice ajustes manuales en el código generado para adaptarlo a sus necesidades específicas.",
+        "Paso 6: Copie el código Dart final y péguelo en su proyecto Flutter."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador de Flutter está trabajando en una aplicación que consume una API que devuelve JSON con datos de usuarios. Utiliza JSON to Dart para convertir el JSON en una clase Dart, facilitando la gestión de datos de usuario en la aplicación.",
+        "Ejemplo 2: Un equipo de desarrollo está creando una aplicación que sincroniza datos con un servidor. El servidor devuelve JSON con múltiples niveles de anidación. JSON to Dart ayuda a generar clases Dart que manejan esta estructura compleja, mejorando la eficiencia del desarrollo.",
+        "Ejemplo 3: Un desarrollador necesita almacenar datos localmente en un dispositivo móvil. Utiliza JSON to Dart para crear clases Dart que pueden serializarse y deserializarse fácilmente, permitiendo un almacenamiento y recuperación eficientes de los datos.",
+        "Ejemplo 4: Una startup de tecnología está desarrollando una aplicación que integra múltiples servicios de API. JSON to Dart es utilizado para generar rápidamente clases Dart para cada servicio, simplificando la integración y manteniendo el código limpio y organizado."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O JSON to Dart é uma ferramenta poderosa e indispensável para desenvolvedores que trabalham com aplicações Flutter e Dart. Este conversor permite a transformação de dados JSON em classes Dart, incluindo os métodos `fromJson` e `toJson`, facilitando a integração e manipulação de dados JSON em suas aplicações Flutter. A necessidade de converter JSON em Dart classes surge frequentemente quando se trabalha com APIs, onde os dados são normalmente recebidos no formato JSON. Ao usar o JSON to Dart, os desenvolvedores podem economizar tempo e reduzir erros, uma vez que a ferramenta gera automaticamente o código necessário para a desserialização e serialização de dados, tarefas que, se realizadas manualmente, seriam propensas a erros e consumiriam muito tempo. A ferramenta suporta a geração de classes aninhadas, lidando com estruturas JSON complexas, e permite personalizar o nome das classes e propriedades, garantindo que o código gerado atenda às necessidades específicas do projeto. Além disso, o JSON to Dart oferece opções de formatação para melhorar a legibilidade do código gerado, tornando-o mais fácil de entender e manter.",
+      "usage_steps": [
+        "Acesse a ferramenta JSON to Dart no site da plataforma de ferramentas de desenvolvimento.",
+        "Na interface da ferramenta, localize a área de entrada de texto rotulada como 'JSON Input'.",
+        "Cole o JSON que deseja converter na área de entrada de texto.",
+        "Configure as opções de geração de código conforme necessário. Por exemplo, personalize o nome da classe principal ou selecione a formatação do código gerado.",
+        "Clique no botão 'Converter' para iniciar o processo de conversão.",
+        "Após a conversão, o código Dart gerado será exibido na área de saída de texto. Copie este código e cole em seu projeto Flutter."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de uma aplicação móvel Flutter precisa integrar uma API que retorna dados de usuários em formato JSON. Ele usa o JSON to Dart para converter o JSON em uma classe Dart, facilitando a manipulação dos dados de usuário em sua aplicação.",
+        "Uma empresa de software está desenvolvendo uma aplicação Flutter para gerenciar estoque. Os dados do estoque são recebidos de um servidor em formato JSON. O desenvolvedor utiliza o JSON to Dart para converter esses dados em classes Dart, permitindo uma integração suave e eficiente com a base de dados do estoque.",
+        "Um freelancer trabalha em um projeto de aplicação Flutter que consome dados de várias APIs. Ele usa o JSON to Dart para converter os diferentes formatos JSON em classes Dart, simplificando a gestão de múltiplas fontes de dados e melhorando a performance da aplicação.",
+        "Um time de desenvolvimento está construindo uma aplicação Flutter para um cliente que requer a sincronização de dados entre dispositivos móveis e um servidor central. Eles utilizam o JSON to Dart para converter os dados JSON recebidos e enviados, garantindo que a sincronização seja eficiente e que os dados sejam tratados corretamente em ambas as direções."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le convertisseur JSON to Dart est un outil spécialisé conçu pour transformer des objets JSON en classes Dart, tout en incluant automatiquement les méthodes `fromJson` et `toJson`. Cette transformation est essentielle pour les développeurs Flutter et Dart qui travaillent avec des données JSON et souhaitent les intégrer efficacement dans leurs applications. En effectuant cette conversion, l'outil génère des classes Dart robustes et bien structurées, ce qui facilite la gestion des données et améliore la performance des applications. Les développeurs peuvent ainsi se concentrer sur le développement fonctionnel plutôt que sur la gestion manuelle des conversions JSON. L'outil supporte également des structures JSON complexes, incluant des listes, des objets imbriqués et des types de données variés, ce qui en fait une solution polyvalente pour une large gamme de projets.",
+      "usage_steps": [
+        "Accédez à la page de l'outil JSON to Dart sur le site de votre choix et assurez-vous que votre navigateur est à jour pour une meilleure expérience.",
+        "Copiez le contenu JSON que vous souhaitez convertir. Assurez-vous que le JSON est bien formaté et ne contient pas d'erreur syntaxique.",
+        "Collez le JSON dans la zone de texte intitulée 'JSON Input' sur la page de l'outil.",
+        "Cliquez sur le bouton 'Convertir' situé en dessous de la zone de texte. L'outil va alors analyser le JSON et générer les classes Dart correspondantes.",
+        "Une fois la conversion terminée, les classes Dart avec les méthodes `fromJson` et `toJson` seront affichées dans la section 'Dart Output'.",
+        "Copiez le code Dart généré et intégrez-le dans votre projet Flutter ou Dart. Vous pouvez également télécharger le fichier Dart généré en cliquant sur le bouton 'Télécharger'."
+      ],
+      "usage_examples": [
+        "Un développeur Flutter travaille sur une application de gestion de tâches et reçoit des données de tâches au format JSON à partir d'une API. Il utilise JSON to Dart pour convertir ces données en classes Dart, facilitant ainsi l'intégration des données dans l'application.",
+        "Une équipe de développement crée une application de chat en temps réel. Les messages sont stockés en JSON sur un serveur. L'équipe utilise JSON to Dart pour convertir ces messages en classes Dart, ce qui permet une manipulation efficace des données de chat dans l'application.",
+        "Un développeur travaille sur une application de suivi de fitness qui reçoit des données d'activité de divers appareils. Il utilise JSON to Dart pour convertir ces données JSON en classes Dart, ce qui facilite la gestion des données de suivi et l'affichage des informations aux utilisateurs.",
+        "Une startup développe une application de réservation de voyages. Les données de vol et d'hôtel sont reçues en JSON. L'équipe utilise JSON to Dart pour convertir ces données en classes Dart, ce qui permet une intégration fluide des données de réservation dans l'application mobile."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Tool JSON to Dart ist ein leistungsstarkes Instrument, das Entwicklern die Möglichkeit bietet, JSON-Daten in Dart-Klassen zu konvertieren. Diese Konvertierung ist besonders nützlich in der Entwicklung von Flutter-Anwendungen, wo JSON-Daten häufig für die Kommunikation mit APIs und Datenbanken verwendet werden. Das Tool erstellt nicht nur die Dart-Klassendefinitionen, sondern fügt auch die Methoden `fromJson` und `toJson` hinzu, um die Serialisierung und Deserialisierung von JSON-Daten zu vereinfachen.\n\nDie Notwendigkeit für dieses Tool ergibt sich aus der Tatsache, dass manuelle Konvertierung von JSON-Daten in Dart-Klassen zeitaufwendig und fehleranfällig ist. Besonders in komplexen Anwendungen mit vielen Datenstrukturen kann die Automatisierung dieser Prozesse die Produktivität erheblich steigern. Entwickler können beispielsweise schnell und sicher sicherstellen, dass ihre Model-Klassen korrekt aufgebaut sind und die erforderlichen Methoden implementieren, um die Daten korrekt zu verarbeiten.\n\nTechnisch gesehen funktioniert das Tool, indem es die übergebenen JSON-Daten analysiert und die Struktur der Daten in eine Dart-Klasse übersetzt. Es erkennt verschiedene Datentypen wie Strings, Zahlen, Booleans, Listen und Maps und generiert den entsprechenden Dart-Code. Die Methoden `fromJson` und `toJson` werdenlikewise generiert, um die Konvertierung zwischen JSON und Dart-Objekten zu ermöglichen. Dieses Tool ist ideal für Entwickler, die effizient und sicher mit JSON-Daten in Dart arbeiten möchten.",
+      "usage_steps": [
+        "Öffnen Sie die Website und navigieren Sie zur Seite 'JSON to Dart'.",
+        "Im Eingabefeld 'JSON Data' fügen Sie den JSON-Code ein, den Sie konvertieren möchten. Stellen Sie sicher, dass das Format korrekt ist.",
+        "Klicken Sie auf die Schaltfläche 'Generate Dart Class'. Das Tool analysiert die JSON-Daten und generiert die Dart-Klasse.",
+        "Im Abschnitt 'Generated Dart Class' sehen Sie die erstellte Dart-Klasse mit den Methoden `fromJson` und `toJson`.",
+        "Prüfen Sie den generierten Code auf Korrektheit und passen Sie ihn gegebenenfalls an. Sie können beispielsweise die Klassennamen oder Variablennamen anpassen.",
+        "Kopieren Sie den fertigen Dart-Code und fügen Sie ihn in Ihr Flutter-Projekt ein. Compile und testen Sie die Anwendung, um sicherzustellen, dass die Daten korrekt verarbeitet werden."
+      ],
+      "usage_examples": [
+        "Ein Entwickler erstellt eine Flutter-App, die Daten von einer REST-API abruft. Die API gibt JSON-Daten zurück, die in Dart-Objekte konvertiert werden müssen. Das Tool JSON to Dart erleichtert die Erstellung der notwendigen Model-Klassen und sorgt dafür, dass die Daten korrekt serialisiert und deserialisiert werden.",
+        "Ein Team von Entwicklern arbeitet an einer mobilen Anwendung, die mit einer lokalen SQLite-Datenbank interagiert. Die Daten in der Datenbank sind in JSON-Format gespeichert. Das Tool hilft dabei, die JSON-Daten effizient in Dart-Objekte umzuwandeln, um die Daten in der Anwendung zu verwenden.",
+        "Ein unerfahrener Flutter-Entwickler muss eine komplexe Datenstruktur in seiner Anwendung implementieren. Die Struktur der JSON-Daten ist sehr komplex, und die manuelle Konvertierung in Dart-Klassen würde viel Zeit in Anspruch nehmen. Das Tool JSON to Dart erleichtert den Prozess und stellt sicher, dass die Klassen korrekt generiert werden.",
+        "Eine Firma entwickelt eine Anwendung, die verschiedene externe Services verwendet, die JSON-Daten zurückgeben. Das Team muss sicherstellen, dass die Daten in einer konsistenten und zuverlässigen Weise verarbeitet werden. Das Tool JSON to Dart hilft dabei, die Konvertierung zu automatisieren und Fehler zu minimieren."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة JSON to Dart هي أداة قوية مصممة لمساعدة المطورين في تحويل البيانات من تنسيق JSON إلى كلاسات Dart تلقائياً. تقوم هذه الأداة بإنشاء الكود Dart الذي يحتوي على طرق fromJson و toJson، مما يسهل عملية التعامل مع البيانات المعقدة في تطبيقات Flutter و Dart. من خلال استخدام هذه الأداة، يمكن للمطورين تجنب الخطأ في كتابة الكود يدويًا وضمان أن الكلاسات الناتجة متوافقة تمامًا مع البيانات الأصلية. تُعد هذه الأداة ضرورية للمطورين الذين يعملون على مشاريع تتطلب تبادل البيانات بين خوادم الويب وتطبيقات Flutter، حيث تبسط عملية الترميز والفك الترميزي للبيانات.",
+      "usage_steps": [
+        "الخطوة 1: قم بفتح أداة JSON to Dart على الموقع.",
+        "الخطوة 2: في حقل الإدخال الأول، قم ولصق البيانات JSON التي تريد تحويلها.",
+        "الخطوة 3: اختر الإعدادات المطلوبة، مثل إضافة تعليقات للحقول أو تمكين خيارات التحقق من الأخطاء.",
+        "الخطوة 4: انقر على زر 'تحويل' لبدء عملية التحويل.",
+        "الخطوة 5: بمجرد الانتهاء، سيظهر الكود Dart المُحول في الحقل السفلي.",
+        "الخطوة 6: قم بنسخ الكود Dart واستخدمه في مشروعك Flutter أو Dart."
+      ],
+      "usage_examples": [
+        "مثال 1: عند تطوير تطبيق Flutter مرتبط بخادم يرسل بيانات JSON معقدة، يمكن للمطور استخدام أداة JSON to Dart لتحويل هذه البيانات إلى كلاسات Dart بسهولة، مما يسهل عملية التعامل مع البيانات وتحسين أداء التطبيق.",
+        "مثال 2: في مشروع يتعامل مع بيانات المستخدم من قاعدة بيانات، يمكن استخدام هذه الأداة لتحويل البيانات المرسلة من الخادم إلى كلاسات Dart، مما يساعد في تبسيط عملية التحقق من صحة البيانات وإدارتها.",
+        "مثال 3: عند تنفيذ عمليات API معقدة تتطلب تبادل البيانات بين تطبيق Flutter وخادم الويب، يمكن للمطورين استخدام هذه الأداة لإنشاء كلاسات Dart تلقائياً لتسهيل عملية الترميز والفك الترميزي للبيانات.",
+        "مثال 4: في التطبيقات التي تتطلب تحليل البيانات الواردة من مصادر خارجية، مثل خدمات الطقس أو أخبار RSS، يمكن استخدام أداة JSON to Dart لتحويل هذه البيانات إلى كلاسات Dart، مما يسهل عملية معالجة وعرض البيانات في التطبيق."
+      ]
+    }
+  }
+}

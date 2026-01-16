@@ -1,0 +1,175 @@
+{
+  "slug": "regex-patterns",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Regex Patterns Library is a comprehensive repository of pre-defined regular expressions designed to simplify pattern matching tasks in development. This tool is essential for developers who need to validate, extract, or manipulate data based on specific patterns. Common use cases include validating user inputs for emails, URLs, and phone numbers, as well as extracting specific data from larger text blocks. By leveraging the Regex Patterns Library, developers can save time and reduce errors by using tested and optimized regex patterns. The library supports a wide range of patterns, including but not limited to, email validation, URL parsing, phone number formats, and date formats. Each pattern is meticulously crafted to handle various edge cases and international formats, ensuring robust and reliable data handling. The tool works by providing a user-friendly interface where developers can select, preview, and copy the regex patterns directly into their code. This eliminates the need to write and test regex patterns from scratch, streamlining the development process and enhancing code quality.",
+      "usage_steps": [
+        "Step 1: Navigate to the Regex Patterns Library on the development tools website.",
+        "Step 2: Use the search bar at the top of the page to find the specific regex pattern you need, such as 'Email Validation'.",
+        "Step 3: Click on the pattern category (e.g., 'Email') to expand the list of available patterns.",
+        "Step 4: Select the desired regex pattern from the list, and review the example and explanation provided.",
+        "Step 5: Click the 'Copy' button next to the regex pattern to copy it to your clipboard.",
+        "Step 6: Paste the regex pattern into your code editor and integrate it into your application or script."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer is building a user registration form and needs to ensure that the email addresses entered by users are valid. They use the 'Email Validation' pattern from the library to add a regex check in the form validation logic.",
+        "Example 2: A data analyst is working with a dataset containing URLs and needs to extract the domain names from each URL. They use the 'URL Parsing' pattern to create a script that efficiently extracts the required information.",
+        "Example 3: A mobile app developer is creating a contact management feature and needs to validate phone numbers in various international formats. They use the 'Phone Number' patterns to ensure that the input meets the required standards.",
+        "Example 4: A software engineer is developing a date and time management tool and needs to parse dates from user input. They use the 'Date Format' patterns to accurately extract and format dates in different styles."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Regex Patterns Library 是一个强大的开发工具，提供了多种常见的正则表达式模式，包括电子邮件、URL、电话号码等。该工具通过预定义的正则表达式库，帮助开发者快速验证和匹配各种字符串格式，确保数据的准确性和一致性。使用 Regex Patterns Library，开发者可以避免手动编写复杂的正则表达式，从而减少开发时间和错误率。该工具特别适用于需要频繁进行输入验证的场景，如用户注册、表单提交和数据清洗等。通过内置的模式匹配和验证功能，开发者可以轻松地将正则表达式应用到实际项目中，提高开发效率和代码质量。",
+      "usage_steps": [
+        "Step 1: 打开 Regex Patterns Library 工具页面，选择左侧的‘模式库’选项卡。",
+        "Step 2: 在模式库中，选择你需要的正则表达式类型，例如‘电子邮件’、‘URL’、‘电话号码’等。",
+        "Step 3: 在右侧的输入框中，输入你想要验证的字符串或文本内容。",
+        "Step 4: 点击‘验证’按钮，工具将自动使用所选的正则表达式模式对输入内容进行匹配和验证。",
+        "Step 5: 查看验证结果，工具会显示匹配成功或失败的详细信息，包括匹配的子字符串和位置。",
+        "Step 6: 如果需要，可以将匹配的正则表达式复制到你的项目中，直接使用或进一步修改。"
+      ],
+      "usage_examples": [
+        "Example 1: 在用户注册表单中，使用 Regex Patterns Library 验证用户输入的电子邮件地址是否符合标准格式，确保数据的准确性。",
+        "Example 2: 在网站的后台管理系统中，使用工具验证用户提交的URL是否有效，防止恶意链接的注入。",
+        "Example 3: 在数据清洗项目中，使用工具批量验证和提取电话号码，确保数据的一致性和完整性。",
+        "Example 4: 在开发一个表单验证系统时，使用 Regex Patterns Library 验证多种类型的输入，如日期、时间、邮政编码等，提高表单验证的全面性和可靠性。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "「Regex Patterns Library」は、開発者がメールアドレス、URL、電話番号など、一般的な正規表現パターンを効率的に利用できるように設計された開発ツールです。このツールは、正規表現の構築やテストにかかる時間を大幅に削減し、コードの品質を向上させます。正規表現は、文字列の検索や置換、バリデーションなど、様々な用途で使用されますが、その構築は複雑で時間がかかることがあります。このツールは、開発者が一般的なパターンを素早く検索し、利用できるようにすることで、開発プロセスを効率化します。また、カスタムパターンの作成や保存も可能で、チーム間での共有や再利用も簡単です。",
+      "usage_steps": [
+        "1. ツールにアクセスし、メイン画面の「パターン検索」セクションで、利用したいパターンの種類（例：メールアドレス、URL、電話番号）を選択します。",
+        "2. 選択したパターンの詳細が表示されます。ここには、パターンの正規表現が表示され、使用例や説明も確認できます。",
+        "3. 「パターンテスト」ボックスに、テストしたい文字列を入力します。ここでは、パターンが正しく機能するかどうかを確認できます。",
+        "4. テスト結果が表示されます。マッチした部分はハイライトされ、詳細な解析結果も確認できます。",
+        "5. 必要に応じて、パターンをカスタマイズできます。カスタムパターンは「マイパターン」セクションに保存できます。",
+        "6. 保存したパターンは、後から「マイパターン」セクションからいつでも再利用できます。また、他のユーザーとの共有も可能です。"
+      ],
+      "usage_examples": [
+        "Example 1: ウェブフォームのバリデーション - ユーザーが入力したメールアドレスや電話番号が正しい形式であることを確認するために、正規表現パターンを使用します。このツールを使用することで、パターンの検証が迅速に行えます。",
+        "Example 2: ログファイルの解析 - ログファイルから特定のエラーメッセージやIPアドレスを抽出するために、正規表現パターンを利用します。このツールは、複雑なパターンの構築を支援し、解析時間を短縮します。",
+        "Example 3: データクリーニング - 大量のデータから無効なフォーマットのエントリを除去するために、正規表現を使用します。このツールは、パターンのテストと検証を簡単に行えるようにし、データの品質を向上させます。",
+        "Example 4: テキスト置換 - テキストドキュメント内の特定の文字列を一括で置換するために、正規表現パターンを利用します。このツールは、パターンの作成とテストを効率化し、作業時間を大幅に短縮します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Regex Patterns Library는 이메일, URL, 전화번호 등 일반적인 정규 표현식 패턴을 제공하는 도구입니다. 이 도구는 개발자가 일관되고 정확한 데이터 유효성 검사를 수행할 수 있도록 설계되었습니다. 사용자는 이 도구를 통해 다양한 입력 데이터에 대한 복잡한 패턴을 쉽게 적용할 수 있으며, 이를 통해 코드의 품질과 신뢰성을 향상시킬 수 있습니다. 특정 사용 사례로는 사용자 입력 검증, 로그 파일 분석, 웹 스크래핑 등이 있습니다. 이 도구는 정규 표현식 언어의 기본 원리를 이해하는 개발자를 대상으로 하며, 다양한 패턴을 직접 테스트하고 적용할 수 있는 인터페이스를 제공합니다. 이로 인해 개발자는 실제 프로젝트에서 효율적으로 정규 표현식을 사용할 수 있습니다.",
+      "usage_steps": [
+        "웹사이트 상단 메뉴에서 'Regex Patterns Library'를 클릭하여 페이지로 이동합니다.",
+        "좌측 패널에서 필요로 하는 패턴 카테고리를 선택합니다 (예: 이메일, URL, 전화번호 등).",
+        "선택한 카테고리 내에서 구체적인 패턴을 클릭하여 상세 정보를 조회합니다.",
+        "상세 정보 페이지에서 패턴의 정규 표현식을 복사합니다.",
+        "우측 테스트 영역에서 입력 필드에 테스트 데이터를 입력합니다.",
+        "테스트 버튼을 클릭하여 패턴이 올바르게 작동하는지 확인합니다."
+      ],
+      "usage_examples": [
+        "웹 애플리케이션에서 사용자 이메일 주소를 검증하는 경우, 이메일 패턴을 사용하여 올바른 형식의 이메일 여부를 확인할 수 있습니다.",
+        "로그 파일에서 특정 형식의 URL을 추출할 때, URL 패턴을 활용하여 원하는 데이터만 필터링할 수 있습니다.",
+        "웹 스크래핑 프로젝트에서 전화번호를 추출할 때, 전화번호 패턴을 사용하여 다양한 형식의 전화번호를 일관되게 처리할 수 있습니다.",
+        "데이터베이스에서 특정 형식의 아이디를 찾을 때, 사용자 정의 패턴을 생성하여 쿼리에 적용할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "La Biblioteca de Patrones de Expresiones Regulares, conocida como Regex Patterns Library, es una herramienta esencial para desarrolladores y programadores que necesitan validar y manipular texto de manera eficiente. Esta biblioteca proporciona una colección de patrones de expresiones regulares (regex) predefinidos y optimizados para tareas comunes, como la validación de direcciones de correo electrónico, URLs, números de teléfono, y más. Los patrones de regex son expresiones que describen un conjunto de cadenas que siguen una estructura específica, lo que los hace ideales para verificar la conformidad de los datos de entrada con un formato determinado.\n\nLos usuarios necesitan esta herramienta porque simplifica y acelera el proceso de validación y procesamiento de datos. En lugar de crear y probar sus propias expresiones regulares, que pueden ser complejas y propensas a errores, los desarrolladores pueden utilizar los patrones predefinidos de la biblioteca. Esto no solo ahorra tiempo, sino que también asegura una mayor precisión y consistencia en la validación de datos. Además, la biblioteca es especialmente útil en proyectos donde se manejan grandes volúmenes de datos y donde la integridad de la información es crucial.\n\nLa herramienta funciona permitiendo a los usuarios seleccionar y utilizar patrones de regex específicos a través de una interfaz intuitiva. Los patrones se pueden aplicar a campos de entrada de texto, y la herramienta proporciona retroalimentación inmediata sobre la validación. Además, la biblioteca incluye documentación detallada y ejemplos de uso, lo que facilita la integración y personalización de los patrones en proyectos de desarrollo.",
+      "usage_steps": [
+        "Abre la página de la Biblioteca de Patrones de Expresiones Regulares en el sitio web del desarrollador.",
+        "Navega a la sección 'Patrones Disponibles' para ver la lista de expresiones regulares predefinidas.",
+        "Selecciona el patrón que deseas utilizar, por ejemplo, 'Correo Electrónico'.",
+        "En el área de 'Prueba de Patrón', ingresa el texto que deseas validar usando el patrón seleccionado.",
+        "Haz clic en el botón 'Validar' para ejecutar la expresión regular y obtener el resultado.",
+        "Revisa el resultado de la validación, que se mostrará como 'Válido' o 'Inválido', junto con una explicación detallada si es necesario."
+      ],
+      "usage_examples": [
+        "Un desarrollador de una plataforma de comercio electrónico utiliza la biblioteca para validar las direcciones de correo electrónico de los usuarios durante el proceso de registro, asegurando que los formatos sean correctos y evitando errores de entrada.",
+        "Un equipo de desarrollo de una aplicación móvil usa los patrones de regex para validar números de teléfono al crear formularios de contacto, garantizando que los usuarios ingresen números válidos y formateados correctamente.",
+        "Un programador de una empresa de software implementa la biblioteca para validar URLs en un sistema de gestión de contenido, asegurando que los enlaces sean seguros y accesibles para los usuarios finales.",
+        "Un administrador de sistemas utiliza la biblioteca para validar y filtrar entradas de logs, identificando patrones específicos que puedan indicar problemas de seguridad o rendimiento en los sistemas."
+      ]
+    },
+    "pt": {
+      "detailed_description": "A Biblioteca de Padrões Regex é uma ferramenta essencial para desenvolvedores que precisam trabalhar com expressões regulares de forma eficiente. Esta ferramenta fornece uma coleção de padrões regex comumente utilizados, como para validação de emails, URLs, números de telefone, entre outros. A importância desta ferramenta reside na sua capacidade de simplificar tarefas de validação e manipulação de strings, que são frequentes em projetos de desenvolvimento. Ao utilizar a Biblioteca de Padrões Regex, os desenvolvedores podem reduzir o tempo gasto na criação e teste de expressões regulares personalizadas, minimizando erros e garantindo maior consistência nos padrões utilizados. A ferramenta é construída sobre princípios de engenharia de software, como modularidade e reutilização de código, facilitando a integração em diversos ambientes de desenvolvimento. Além disso, ela suporta várias linguagens de programação, incluindo JavaScript, Python, e Java, tornando-a altamente versátil. A interface da ferramenta é projetada para ser intuitiva, permitindo que os usuários acessem rapidamente os padrões necessários e os adaptem conforme suas necessidades.",
+      "usage_steps": [
+        "Acesse a página da Biblioteca de Padrões Regex no menu de desenvolvimento.",
+        "Selecione a categoria de padrão desejada, como 'Email', 'URL', 'Telefone', etc.",
+        "Escolha um padrão específico da lista apresentada para a categoria selecionada.",
+        "Visualize o padrão regex no campo de visualização e examine os detalhes técnicos abaixo.",
+        "Modifique o padrão regex, se necessário, utilizando as opções de edição disponíveis.",
+        "Copie o padrão regex modificado e cole-o no seu projeto de desenvolvimento."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de e-commerce precisa validar endereços de email dos usuários antes de permitir o cadastro. Utiliza a Biblioteca de Padrões Regex para encontrar um padrão robusto de validação de email e integra-o no formulário de registro.",
+        "Um engenheiro de software está construindo uma aplicação que requer a extração de URLs de um texto. Ele usa a ferramenta para encontrar um padrão regex para URLs e o implementa em sua lógica de processamento de texto.",
+        "Um desenvolvedor de backend está criando uma API que aceita números de telefone de diferentes países. Ele recorre à Biblioteca de Padrões Regex para encontrar um padrão que suporte vários formatos de número de telefone e o aplica na validação de entrada.",
+        "Um programador está desenvolvendo um sistema de gerenciamento de conteúdo e precisa garantir que os campos de entrada de IP sejam válidos. Ele utiliza a ferramenta para encontrar um padrão regex para endereços IP e o implementa na validação dos campos."
+      ]
+    },
+    "fr": {
+      "detailed_description": "La bibliothèque de motifs Regex est un outil essentiel pour les développeurs qui nécessitent une validation précise et efficace des données d'entrée. Elle fournit une collection de motifs d'expressions régulières pré-testés et optimisés, permettant de vérifier la conformité des chaînes de caractères pour des formats courants tels que les adresses e-mail, les URL, les numéros de téléphone, et bien d'autres. L'intérêt principal de cet outil réside dans sa capacité à simplifier le processus de validation, en évitant aux développeurs d'écrire et de tester leurs propres expressions régulières, souvent complexes et sujettes à des erreurs. Par exemple, en utilisant un motif Regex pour valider une adresse e-mail, le développeur peut s'assurer que le format est correct, contient un symbole '@' et un domaine valide. La bibliothèque est conçue pour être intégrée facilement dans des projets de développement, qu'il s'agisse de validation front-end ou back-end, en proposant des motifs directement utilisables sans modification. Elle est également adaptée aux environnements où la performance et la sécurité sont cruciales, en minimisant les risques d'injections malveillantes liées à des données d'entrée non validées.",
+      "usage_steps": [
+        "Accédez à la page de la bibliothèque de motifs Regex en utilisant le menu de navigation ou en recherchant 'Regex Patterns' dans la barre de recherche du site.",
+        "Sélectionnez la catégorie de motif dont vous avez besoin, par exemple 'Email', 'URL', 'Phone', ou 'Other'.",
+        "Cliquez sur le bouton 'Copy' à côté du motif Regex que vous souhaitez utiliser pour copier le code correspondant dans votre presse-papiers.",
+        "Intégrez le motif Regex copié dans votre code, en veillant à l'adapter si nécessaire à la syntaxe spécifique de votre langage de programmation.",
+        "Testez la validation en utilisant des exemples de données d'entrée pour vous assurer que le motif fonctionne comme prévu.",
+        "Si nécessaire, ajustez le motif Regex en fonction des spécificités de votre application, en utilisant les guides et les exemples fournis dans la documentation de l'outil."
+      ],
+      "usage_examples": [
+        "Un développeur front-end utilise le motif Regex pour les adresses e-mail afin de valider les entrées d'un formulaire d'inscription, s'assurant que les utilisateurs fournissent des adresses valides avant de soumettre le formulaire.",
+        "Un développeur back-end intègre le motif Regex pour les URL dans une API pour vérifier que les liens de réinitialisation de mot de passe envoyés aux utilisateurs sont conformes et ne contiennent pas de caractères malveillants.",
+        "Un administrateur système utilise le motif Regex pour les numéros de téléphone pour automatiser la vérification des contacts dans une base de données, évitant ainsi les erreurs de saisie et les formats incorrects.",
+        "Un développeur de sécurité utilise le motif Regex pour les adresses IP pour filtrer les connexions entrantes et sortantes, identifiant rapidement les adresses IP suspectes et potentiellement malveillantes."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Regex Patterns Library ist ein umfassendes Repository, das gängige Regex-Muster für verschiedene Anwendungsfälle bereitstellt. Es umfasst Muster für E-Mail-Adressen, URLs, Telefonnummern und vieles mehr. Diese Regex-Muster sind in einer strukturierten Form gespeichert, die es Entwicklern ermöglicht, diese Muster schnell und effizient in ihre Anwendungen zu integrieren. Das Tool ist besonders nützlich, wenn Entwickler Validierungen für Benutzereingaben implementieren müssen, um sicherzustellen, dass die Daten das erwartete Format haben. Es kann beispielsweise verwendet werden, um sicherzustellen, dass eine E-Mail-Adresse syntaktisch korrekt ist, bevor sie in einer Datenbank gespeichert wird. Das Regex Patterns Library arbeitet, indem es eine Sammlung von vordefinierten regulären Ausdrücken bereitstellt, die in eine API integriert werden können. Entwickler können diese Muster direkt in ihren Quellcode einfügen oder über die API abrufen, um sie in Echtzeit zu verwenden. Dadurch wird die Entwicklung von Validierungen beschleunigt und die Zuverlässigkeit der Anwendungen gesteigert.",
+      "usage_steps": [
+        "Öffnen Sie die Regex Patterns Library auf der Entwicklungstools-Website.",
+        "Navigieren Sie zur Kategorie 'Regex Patterns' und wählen Sie das gewünschte Muster aus, beispielsweise 'E-Mail-Adresse'.",
+        "Klicken Sie auf den Button 'Muster kopieren', um den Regex-Ausdruck in Ihre Zwischenablage zu übertragen.",
+        "Fügen Sie den kopierten Regex-Ausdruck in Ihren Entwicklungs-Editor ein, zum Beispiel in eine JavaScript-Funktion zur E-Mail-Validierung.",
+        "Testen Sie die Integration, indem Sie die Funktion mit verschiedenen Eingaben aufrufen, um sicherzustellen, dass sie korrekt funktioniert.",
+        "Optimieren Sie den Regex-Ausdruck bei Bedarf, um spezifische Anforderungen Ihres Projekts zu erfüllen."
+      ],
+      "usage_examples": [
+        "Ein Webentwickler verwendet das Regex Muster für E-Mail-Adressen, um die Benutzerregistrierung auf einer Website zu sichern. Das Muster wird in eine JavaScript-Funktion integriert, die die Benutzer-Eingaben vor der Speicherung in der Datenbank überprüft.",
+        "Ein Softwarearchitekt implementiert das Regex Muster für URLs, um sicherzustellen, dass die von Benutzern eingegebenen Links syntaktisch korrekt sind. Dies hilft, potenzielle Sicherheitsrisiken durch ungültige URLs zu vermeiden.",
+        "Ein Mobile-App-Entwickler nutzt das Regex Muster für Telefonnummern, um die Eingaben in einem Kontaktformular zu validieren. Das Muster wird in eine Swift-Funktion integriert, die die Telefonnummern vor der Weiterverarbeitung überprüft.",
+        "Ein Data Scientist verwendet das Regex Muster für IP-Adressen, um Daten aus Log-Dateien zu extrahieren und zu analysieren. Das Muster wird in ein Python-Skript integriert, das die IP-Adressen identifiziert und in eine strukturierte Form bringt."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Regex Patterns Library — это мощный инструмент для разработчиков, который предоставляет набор предопределенных регулярных выражений (регэкспов) для различных сценариев использования. Эти регулярные выражения помогают валидировать и обрабатывать строки, такие как email-адреса, URL-ссылки, номера телефонов, даты и многое другое. Инструмент особенно полезен при разработке веб-форм, где важно обеспечить корректность вводимых данных. Например, валидация email-адреса с помощью регэкспа позволяет избежать ошибок, связанных с некорректными форматами, что улучшает пользовательский опыт и снижает нагрузку на сервер. Regex Patterns Library позволяет разработчикам быстро находить и использовать необходимые регулярные выражения, не тратя время на их составление с нуля. Это особенно актуально при работе с проектами, где требуется высокая скорость разработки и качество кода. Инструмент предоставляет подробное описание каждого регэкспа, включая примеры использования и возможные варианты настройки. Разработчики могут копировать регэкспы и вставлять их в свой код, а также тестировать их на примерах данных прямо на сайте.",
+      "usage_steps": [
+        "1. Перейдите на страницу Regex Patterns Library на сайте.",
+        "2. В левой панели выберите категорию регулярных выражений, например, 'Email' или 'URL'.",
+        "3. Ознакомьтесь с описанием регулярного выражения, которое отображается справа.",
+        "4. Нажмите кнопку 'Copy' рядом с нужным регэкспом для копирования его в буфер обмена.",
+        "5. Вставьте скопированный регэксп в ваш код или тестовый редактор на сайте.",
+        "6. Используйте раздел 'Test' для проверки работы регэкспа на ваших данных, вводя примеры строк в поле ввода."
+      ],
+      "usage_examples": [
+        "1. Разработчик создает веб-форму для регистрации пользователей и использует регэксп из библиотеки для валидации email-адресов, чтобы гарантировать, что пользователи вводят корректные данные.",
+        "2. Команда разработчиков работает над проектом, где нужно парсить URL-ссылки из текста. Они используют регэксп для извлечения URL и дальнейшей обработки данных.",
+        "3. При разработке системы обработки заказов, нужно проверять формат номеров телефонов. Разработчик использует регэксп из библиотеки для валидации номеров телефонов, чтобы избежать ошибок при отправке заказов.",
+        "4. В проекте по анализу логов системы требуется фильтровать записи, содержащие определенные даты. Разработчик находит регэксп для дат и использует его для фильтрации лог-файлов, что упрощает процесс анализа."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مكتبة نماذج التعبيرات النمطية (Regex Patterns Library) هي أداة تطوير متطورة توفر مجموعة من الأنماط الجاهزة للتطبيق في مهام التحقق من صحة البيانات. تتيح هذه المكتبة للمطورين الوصول السريع إلى نماذج تعبيرية نمطية موثوقة ومختبرة لتحقق من صحة الأrigesimal مثل البريد الإلكتروني، الروابط (URLs)، الأرقام الهاتفية، والأكواد البريدية وغيرها. وبذلك، يمكن للمطورين تجنب الأخطاء الشائعة وتحسين كفاءة التطبيقات الخاصة بهم.\n\nتعد هذه الأداة ضرورية للمطورين لأنها توفر وسيلة موثوقة لضمان صحة البيانات المدخلة من قبل المستخدمين. على سبيل المثال، يمكن استخدام نماذج التعبيرات النمطية للتحقق من صحة عنوين البريد الإلكتروني قبل إرسال رسائل تسويقية، أو لضمان أن الروابط المعطاة هي روابط صالحة ومأمونة. بالإضافة إلى ذلك، يمكن استخدامها لفحص الأرقام الهاتفية للتحقق من أنها في الشكل الصحيح وقابلة للتواصل.\n\nتعمل مكتبة نماذج التعبيرات النمطية من خلال توفير واجهة بسيطة وفعالة يمكن للمطورين من خلالها انتقاء النماذج المناسبة لكل حالة استخدام. تشمل المكتبة نماذج مسبقة التكوين للتحقق من صحة أنواع مختلفة من البيانات، ويمكن إدخال هذه النماذج مباشرة في كود التطبيق باستخدام اللغات البرمجة المختلفة مثل JavaScript، Python، وJava. كما يمكن تعديل هذه النماذج حسب الاحتياجات الخاصة للمشروع، مما يوفر مرونة عالية في الاستخدام.",
+      "usage_steps": [
+        "خطوة 1: افتح مكتبة نماذج التعبيرات النمطية من خلال الموقع الرئيسي للموقع.",
+        "خطوة 2: انتقال إلى قسم 'النماذج المتوفرة' واختر النمط الذي ترغب في استخدامه، مثل 'التحقق من صحة البريد الإلكتروني'.",
+        "خطوة 3: انسخ الكود النصي للنمط المختار من القسم المخصص 'الكود'.",
+        "خطوة 4: قم بلنسبة الكود المنسوخ إلى ملف المشروع الخاص بك، وتأكد من أن اللغة البرمجية متوافقة مع النمط.",
+        "خطوة 5: قم بدمج الكود في وظيفة التحقق من صحة البيانات في تطبيقك، باستخدام الدوال المناسبة لغة البرمجة.",
+        "خطوة 6: جرب النمط بإجراء اختبارات على بيانات مختلفة للتأكد من أن التحقق من الصلاحية يعمل بشكل صحيح."
+      ],
+      "usage_examples": [
+        "مثال 1: فحص عنوان بريد إلكتروني قبل تسجيل المستخدم في تطبيق. يمكن استخدام نمط التعبير النمطي للبريد الإلكتروني للتحقق من أن العنوان في الشكل الصحيح.",
+        "مثال 2: التحقق من صحة رمز بريدي في نموذج طلب شراء عبر الإنترنت. يمكن استخدام نمط التعبير النمطي للفحص من صحة الأكواد البريدية في منطقة معينة.",
+        "مثال 3: فحص رابط موقع ويب قبل تضمينه في محتوى تطبيق. يمكن استخدام نمط التعبير النمطي للروابط لضمان أن الرابط صالح ومأمون.",
+        "مثال 4: التحقق من صحة رقم هاتف قبل إرسال رسالة نصية تأكيد. يمكن استخدام نمط التعبير النمطي للأرقام الهاتفية للتأكد من أن الرقم في الشكل الصحيح وقابل للتواصل."
+      ]
+    }
+  }
+}

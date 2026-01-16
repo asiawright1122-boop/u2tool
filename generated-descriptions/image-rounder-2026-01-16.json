@@ -1,0 +1,158 @@
+{
+  "slug": "image-rounder",
+  "descriptions": {
+    "en": {
+      "detailed_description": "Image Rounder is a powerful tool designed to add rounded corners or create circular images from existing rectangular or square images. This tool leverages advanced image processing algorithms to ensure that the edges are smoothly curved, maintaining the original quality and resolution of the image. Users can specify the radius of the rounded corners or opt for a full circular image, making it an essential tool for designers, developers, and anyone looking to enhance the aesthetic appeal of their visual content. Whether you're creating profile pictures, thumbnails, or icons, Image Rounder provides the precision and flexibility needed to achieve the desired effect. The tool supports a wide range of image formats, including PNG, JPEG, and GIF, and offers real-time previews, allowing you to see the changes before finalizing the image. This makes it an invaluable resource for web and mobile development projects, as well as for personal and professional design tasks.",
+      "usage_steps": [
+        "Step 1: Visit the Image Rounder tool page and click on the 'Upload Image' button to select the image you want to modify from your device.",
+        "Step 2: Once the image is uploaded, locate the 'Rounded Corners' slider and adjust it to set the desired radius for the corners. Moving the slider to the maximum will create a circular image.",
+        "Step 3: Use the 'Background Color' dropdown menu to choose a color for the background of the rounded or circular image. This is particularly useful if you want to maintain a consistent look with your design.",
+        "Step 4: If you need to make further adjustments, such as resizing the image, use the 'Resize' option and input the desired dimensions in pixels.",
+        "Step 5: Preview the changes in the real-time preview window to ensure the image meets your requirements. You can make additional adjustments if necessary.",
+        "Step 6: Once you are satisfied with the results, click the 'Download' button to save the modified image to your device."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer needs to create consistent profile pictures for a social media platform. Using Image Rounder, they can quickly add rounded corners to the profile pictures, ensuring a uniform and professional appearance.",
+        "Example 2: A graphic designer is working on a mobile app that requires circular icons for the home screen. Image Rounder allows them to convert rectangular icons into perfect circles, maintaining the app's visual identity.",
+        "Example 3: An e-commerce business wants to enhance the look of product thumbnails on their website. By using Image Rounder to add subtle rounded corners, they can make the products stand out more attractively.",
+        "Example 4: A blogger is creating a new post and wants to include a circular image of a key figure. Image Rounder helps them transform a standard rectangular image into a circular one, which fits better within the blog's design template."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Image Rounder 是一款专业的图像处理工具，能够为图片添加圆角或转换为圆形图像。通过使用 CSS 圆角属性或基于图像处理技术的圆形裁剪算法，该工具可以精确调整图像的边缘，使其更加符合现代设计的要求。用户可以通过简单的界面操作，选择不同的圆角半径或圆形裁剪模式，从而实现图像的个性化处理。这种功能在网页设计、社交媒体内容制作以及品牌视觉识别系统（VI）中尤为重要，能够增强视觉效果，提升用户的体验感。",
+      "usage_steps": [
+        "Step 1: 访问 Image Rounder 工具页面，点击“上传图片”按钮，选择需要处理的图像文件。",
+        "Step 2: 在“圆角设置”区域，使用滑块或输入框设置圆角半径，支持像素（px）和百分比（%）两种单位。",
+        "Step 3: 选择“圆形裁剪”选项，工具将自动将图像裁剪为圆形，适合创建头像或圆形图标。",
+        "Step 4: 在“背景颜色”部分，选择或输入十六进制颜色代码，为裁剪后的图像背景设置颜色。",
+        "Step 5: 预览图像效果，点击“重置”按钮可恢复到原始状态，进行新的设置。",
+        "Step 6: 确认效果满意后，点击“下载”按钮，保存处理后的图像到本地。"
+      ],
+      "usage_examples": [
+        "Example 1: 一家电商公司在设计新的产品页面时，需要将产品图片的边缘处理成圆角，以提升页面的美观度和用户体验。使用 Image Rounder，可以快速批量处理多张图片。",
+        "Example 2: 一位社交媒体博主在制作个人简介页面时，希望将自己的头像处理成圆形。使用 Image Rounder 可以轻松实现这一需求，使头像更加符合品牌形象。",
+        "Example 3: 一家设计公司的设计师在为客户创建公司标志时，需要将标志图片处理成圆形，以便在不同平台展示。通过 Image Rounder，设计师可以快速完成圆形标志的制作。",
+        "Example 4: 一名程序员在开发移动应用时，需要将应用图标处理成圆角，以符合操作系统的视觉设计规范。使用 Image Rounder，可以轻松调整图标边缘，确保应用图标的一致性和专业性。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Image Rounderは、画像のコーナーを丸くしたり、完全な円形の画像を作成したりするための高度なツールです。このツールは、画像のエッジを滑らかにし、視覚的に魅力的なデザインを実現するために使用されます。技術的には、Image Rounderは画像のコーナー部分に円弧を適用することで、角の尖った形状を丸い形状に変換します。また、ユーザーは半径の大きさを調整することで、丸みの度合いを微調整できます。この機能は、ウェブデザインやグラフィックデザイン、特にアイコンやプロフィール画像の作成に非常に役立ちます。さらに、Image Rounderは画像の透過性を維持するため、背景との統合が簡単にできます。透過性の設定はPNG形式の画像で特に重要で、背景色や他の要素との調和を保つのに役立ちます。ユーザーは、テクスチャやグラデーションが含まれる複雑な画像でも、高品質な結果を得ることができます。",
+      "usage_steps": [
+        "Step 1: Image Rounderのウェブサイトにアクセスし、「画像を選択」ボタンをクリックします。",
+        "Step 2: ファイルエクスプローラーから加工したい画像を選択し、開くボタンをクリックします。",
+        "Step 3: 「コーナーラウンド」セクションで、コーナーの丸みを調整するためのスライダーを操作します。スライダーを右に動かすと、より大きな丸みが適用されます。",
+        "Step 4: 「形状」オプションで、画像を完全に円形に変換するかどうかを選択します。円形にする場合は「円形」を選択します。",
+        "Step 5: 透過性が必要な場合は、「透過」チェックボックスをオンにします。これにより、背景が透過されるPNG画像が生成されます。",
+        "Step 6: 最後に、「画像をダウンロード」ボタンをクリックして、加工した画像を保存します。保存形式はデフォルトでPNGですが、必要に応じてJPEGなどの他の形式を選択することもできます。"
+      ],
+      "usage_examples": [
+        "Example 1: ウェブデザイナーが新しいウェブサイトのプロトタイプを作成する際、プロフィールアイコンや画像を丸みのある形状にすることで、サイトの全体的なデザインを洗練されたものにします。",
+        "Example 2: グラフィックデザイナーがポスターやパンフレットのデザインを行う際、角の尖った画像を丸みのある形状にすることで、視覚的な柔らかさと調和を実現します。",
+        "Example 3: SNSマネージャーがソーシャルメディアで使用するプロフィール画像を準備する際、Image Rounderを使用して円形のプロフィール画像を作成し、プラットフォームのUIに統合します。",
+        "Example 4: UIデザイナーがモバイルアプリのアイコンをデザインする際、Image Rounderを使用してアイコンの角を滑らかにし、ユーザーが視覚的に快適に感じられるようにします。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Image Rounder는 이미지의 모서리를 둥글게 처리하거나 완전히 원형 이미지를 생성하는 강력한 도구입니다. 이 도구는 CSS의 `border-radius` 속성을 이미지에 적용하여 모서리를 부드럽게 만드는 기능을 제공합니다. 또한, 이미지를 완전히 원형으로 변환할 수도 있습니다. 이 기능은 웹 디자인, UI/UX 디자인, 사진 편집 등에서 매우 유용합니다. 예를 들어, 프로필 사진을 둥근 모서리로 만들거나 completely 썸네일을 원형으로 변환하여 사용자 인터페이스를 개선할 수 있습니다. Image Rounder는 사용자가 원하는 크기와 형태의 이미지를 쉽게 생성할 수 있도록 해주며, 특히 반복적인 작업을 자동화할 때 큰 도움이 됩니다.",
+      "usage_steps": [
+        "1. Image Rounder 도구의 페이지로 이동하여 '이미지 업로드' 버튼을 클릭합니다.",
+        "2. 파일 선택 대화상자에서 원하는 이미지를 선택하고 업로드합니다.",
+        "3. '모서리 반경' 슬라이더를 조정하여 원하는 둥근 모서리의 크기를 설정합니다. 0%는 둥근 모서리가 없는 상태, 100%는 완전히 원형의 이미지를 생성합니다.",
+        "4. 필요하다면 '색상 선택' 버튼을 클릭하여 둥근 모서리의 배경 색상을 변경합니다.",
+        "5. '미리보기' 섹션에서 결과를 확인합니다. 만족스럽다면 '다운로드' 버튼을 클릭하여 처리된 이미지를 저장합니다.",
+        "6. 원하는 경우 '처음부터 다시 시작' 버튼을 클릭하여 새로운 이미지를 처리합니다."
+      ],
+      "usage_examples": [
+        "1. 웹사이트의 프로필 이미지를 둥근 모서리로 만들어 사용자 친화적인 인터페이스를 구현합니다.",
+        "2. 소셜 미디어 포스트에서 썸네일 이미지를 원형으로 변환하여 더 눈에 띄는 효과를 만듭니다.",
+        "3. 디지털 포트폴리오에서 프로젝트 이미지를 둥근 모서리로 처리하여 현대적인 감각을 부여합니다.",
+        "4. 온라인 상점에서 제품 이미지를 둥근 모서리로 만들어 제품이 더 매력적으로 보이도록 합니다."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Image Rounder é uma ferramenta de edição de imagens que permite adicionar cantos arredondados a imagens retangulares ou transformá-las em imagens circulares. Técnica e artisticamente, essa funcionalidade é crucial para designers de web, desenvolvedores de aplicativos e profissionais de marketing, pois ajuda a criar layouts mais atraentes e modernos. A arredondamento de cantos e a transformação em formas circulares podem ser realizadas através de algoritmos de processamento de imagem, que aplicam máscaras de transparência para criar a aparência desejada. A ferramenta suporta vários formatos de imagem, como JPEG, PNG e GIF, e proporciona opções de controle de raio de arredondamento, o que permite aos usuários ajustar a intensidade do arredondamento de acordo com suas necessidades. Além disso, o Image Rounder oferece a opção de exportar as imagens em diferentes tamanhos, o que é particularly útil para otimização de imagens em diferentes dispositivos e plataformas.",
+      "usage_steps": [
+        "Acesse a página do Image Rounder e clique no botão 'Carregar Imagem' para selecionar a imagem que deseja modificar.",
+        "Após a imagem ser carregada, utilize o controle deslizante 'Raio de Arredondamento' para ajustar a intensidade dos cantos arredondados. O valor pode variar de 0 a 100, onde 0 significa cantos retos e 100 é um círculo perfeito.",
+        "Se desejar transformar a imagem em um círculo, marque a opção 'Transformar em Círculo' no menu de configurações.",
+        "Personalize a cor de fundo, caso a imagem tenha áreas transparentes, usando a opção 'Cor de Fundo' e selecionando uma cor da paleta.",
+        "Antes de exportar, visualize a imagem no preview para garantir que as alterações estejam de acordo com suas expectativas.",
+        "Clique no botão 'Baixar Imagem' para salvar a imagem modificada em seu dispositivo. A ferramenta permite escolher entre diferentes formatos e tamanhos de exportação."
+      ],
+      "usage_examples": [
+        "Um designer de interface de usuário (UI) precisa criar um layout moderno para um aplicativo móvel, onde as imagens de perfil dos usuários devem ser exibidas em formato circular. O Image Rounder permite transformar facilmente imagens retangulares em círculos, mantendo a qualidade visual.",
+        "Um desenvolvedor web está criando um site para um cliente que deseja que todas as imagens sejam exibidas com cantos arredondados, alinhando-se com a identidade visual da marca. O Image Rounder oferece controle preciso sobre o raio de arredondamento, permitindo que o desenvolvedor atinja o efeito desejado.",
+        "Uma empresa de mídias sociais quer melhorar a aparência de seus posts no Instagram, onde imagens com cantos arredondados estão em alta. O Image Rounder facilita a tarefa de aplicar arredondamentos consistentes a todas as imagens publicadas.",
+        "Um fotógrafo está preparando um portfólio online e deseja que as imagens tenham uma aparência mais suave e agradável. O Image Rounder permite ajustar o raio de arredondamento para criar uma sensação de harmonia e equilíbrio nas imagens exibidas."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil Image Rounder est une solution puissante et flexible pour les développeurs et les designers qui cherchent à améliorer l'esthétique de leurs images en leur ajoutant des coins arrondis ou en les transformant en images circulaires. Techniquement, l'outil utilise des algorithmes de traitement d'images pour modifier la forme des coins des images, en préservant la qualité et la résolution originales. Les utilisateurs peuvent spécifier le rayon de courbure des coins, ce qui permet de créer des effets allant de légers arrondis à des images parfaitement circulaires. Cette fonctionnalité est particulièrement utile pour les interfaces utilisateur modernes, où les éléments graphiques arrondis contribuent à une expérience utilisateur plus douce et plus harmonieuse. De plus, l'outil supporte plusieurs formats d'images courants, tels que JPEG, PNG et GIF, ce qui en fait un choix polyvalent pour une variété de projets. Les développeurs peuvent intégrer l'outil dans leurs workflows pour automatiser le processus de retouche des images, gagnant ainsi du temps et garantissant une cohérence visuelle.",
+      "usage_steps": [
+        "Accédez à la page de l'outil Image Rounder via le menu des outils d'image.",
+        "Téléchargez l'image que vous souhaitez modifier en cliquant sur le bouton 'Choisir une image'.",
+        "Dans le panneau de paramètres, ajustez le 'Rayon de courbure' pour définir le degré d'arrondi des coins. Vous pouvez choisir entre des valeurs prédéfinies ou entrer une valeur personnalisée.",
+        "Si vous souhaitez créer une image circulaire, activez l'option 'Cercle' dans le panneau des options avancées.",
+        "Apercevez le résultat en direct dans la prévisualisation. Adjustez les paramètres si nécessaire pour obtenir l'effet désiré.",
+        "Une fois satisfait, cliquez sur 'Appliquer' pour télécharger l'image modifiée ou utilisez l'option 'Intégrer dans le projet' pour l'ajouter directement à votre environnement de développement."
+      ],
+      "usage_examples": [
+        "Un développeur de sites web souhaite améliorer l'apparence des avatars utilisateurs en les transformant en images circulaires pour une interface plus moderne.",
+        "Un graphiste crée un flyer digital et veut que les images promos aient des coins arrondis pour un look plus doux et moins rigide.",
+        "Un designer d'interface mobile applique des coins arrondis aux icônes de son application pour aligner le design avec les tendances actuelles d'UX.",
+        "Un photographe souhaite préparer des images pour une galerie en ligne, en leur donnant une forme circulaire pour un effet artistique unique."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Image Rounder ist ein leistungsstarkes Online-Werkzeug, das es Nutzern ermöglicht, abgerundete Ecken oder sogar kreisrunde Bilder zu erstellen. Durch die Anwendung von CSS-Eigenschaften und Bildverarbeitungsalgorithmen kann dieses Tool verschiedene Effekte erzeugen, ohne die Qualität der Originale zu beeinträchtigen. Nutzer können die Rundung Ihrer Bilder anpassen, indem sie den Radius der Ecken festlegen oder komplett auf kreisrunde Formate umstellen. Dieses Tool ist besonders nützlich für Webentwickler und Designer, die visuell ansprechende und moderne Webseiten erstellen möchten, da abgerundete oder kreisförmige Bilder die Benutzererfahrung verbessern und das visuelle Design verfeinern. Die Verwendung von abgerundeten Bildern kann auch dazu beitragen, dass Profile oder Avatare auf sozialen Medien oder Benutzerportalen professioneller wirken. Das Tool ermöglicht es, Bilder in verschiedenen Formaten hochzuladen, und unterstützt sowohl PNG als auch JPEG-Dateien. Nach der Verarbeitung können die Bilder direkt heruntergeladen oder in eine andere URL exportiert werden.",
+      "usage_steps": [
+        "Öffnen Sie die Website des Image Rounder und klicken Sie auf den Button 'Bild hochladen'.",
+        "Wählen Sie das Bild aus Ihrer lokalen Festplatte, das Sie bearbeiten möchten.",
+        "Im Abschnitt 'Ecken abrunden' können Sie den Radius der abgerundeten Ecken anpassen, indem Sie den Schieberegler benutzen oder einen Wert in den Eingabefeldern eingeben.",
+        "Für komplett kreisrunde Bilder klicken Sie auf die Option 'Kreisrund machen'.",
+        "Vorschau des bearbeiteten Bildes im Anzeigebereich. Hier können Sie die Änderungen überprüfen, bevor Sie fortfahren.",
+        "Klicken Sie auf 'Bild herunterladen', um das bearbeitete Bild in der gewünschten Auflösung auf Ihre Festplatte zu speichern."
+      ],
+      "usage_examples": [
+        "Ein Grafikdesigner erstellt ein Portfolio und möchte, dass alle Bildvorschauen abgerundete Ecken haben, um ein modernes und einladendes Layout zu schaffen.",
+        "Ein Webentwickler baut eine Benutzerprofilseite für eine soziale Plattform und benötigt kreisrunde Avatar-Bilder, um ein einheitliches Design zu gewährleisten.",
+        "Ein Marketing-Experte bereitet ein Flyer vor und möchte ein markantes Produktbild mit abgerundeten Ecken einfügen, um den Fokus auf das Produkt zu lenken.",
+        "Ein Fotograf optimiert ein Album für eine Online-Galerie und verwendet das Image Rounder, um alle Fotos abgerundete Ecken zu geben, um das Portfolio konsistent zu gestalten."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Image Rounder предназначен для добавления закругленных углов к изображениям или создания круглых изображений. Технически, этот инструмент использует алгоритмы обработки изображений для изменения формы границ изображения, что позволяет пользователям легко трансформировать прямоугольные или квадратные изображения в более современные и эстетически привлекательные варианты. Функция закругления углов особенно полезна для веб-разработчиков, дизайнеров и маркетологов, которые хотят улучшить визуальное восприятие контента на веб-сайтах и в социальных сетях. Например, закругленные углы могут сделать изображения более мягкими и менее агрессивными, что особенно важно для брендинга и UI/UX-дизайна. Круглые изображения, в свою очередь, идеально подходят для создания аватаров, логотипов и других элементов, требующих симметричной формы. Инструмент поддерживает различные форматы изображений, такие как PNG, JPEG, и SVG, и позволяет настраивать радиус закругления углов, что обеспечивает гибкость в работе с различными проектами.",
+      "usage_steps": [
+        "Откройте страницу инструмента Image Rounder на сайте.",
+        "Перетащите изображение в область загрузки или нажмите кнопку «Выберите файл» для загрузки изображения с вашего компьютера.",
+        "Выберите режим обработки: «Закругленные углы» или «Круглое изображение» с помощью соответствующего переключателя.",
+        "Для режима «Закругленные углы» установите желаемый радиус закругления, используя ползунок или вводя значение вручную.",
+        "Для режима «Круглое изображение» выберите центр обрезки изображения, если это необходимо, с помощью инструмента выбора области.",
+        "Нажмите кнопку «Применить» для обработки изображения, после чего вы сможете скачать результат или скопировать ссылку на обработанное изображение."
+      ],
+      "usage_examples": [
+        "Веб-разработчик создает сетку профилей пользователей на сайте, где каждый профиль должен иметь круглую фотографию. Использует Image Rounder для преобразования стандартных прямоугольных аватаров в круглые.",
+        "Дизайнер готовит макет для рекламного постера, где изображение должно иметь мягкие закругленные углы для гармоничного вписывания в общий дизайн. Использует Image Rounder для закругления углов изображения.",
+        "Маркетолог создает контент для социальных сетей, где прямоугольные изображения выглядят слишком формально. Использует Image Rounder для добавления закругленных углов, чтобы сделать посты более привлекательными.",
+        "Графический дизайнер разрабатывает интерфейс мобильного приложения, где логотип должен быть круглым. Использует Image Rounder для преобразования существующего логотипа в круглую форму, сохраняя качество изображения."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة Image Rounder هي أداة قوية ومبتكرة تتيح للمطورين والتصميمين إضافة زوايا مستديرة إلى الصور أو تحويلها إلى صور دائرية. تستخدم هذه الأداة خوارزميات متقدمة في معالجة الصور لضمان جودة عالية ودقة مذهلة. يمكن للمستخدمين تحديد نصف القطر الدقيق للزوايا المستديرة، مما يوفر مرونة كبيرة في تصميمات الويب والتطبيقات. كما تدعم الأداة تنسيقات الصور الشائعة مثل PNG وJPEG، مما يجعلها مناسبة للاستخدام في مشاريع متعددة. تعتبر هذه الأداة ضرورية للمطورين الذين يعملون على تصميم واجهات مستخدم ودودة وسلاسة في العرض، حيث يمكنها تحسين جودة الصور وجعل التصميمات أكثر جاذبية.",
+      "usage_steps": [
+        "افتح أداة Image Rounder من القائمة الرئيسية للمنصة.",
+        "انقر على زر 'تحميل الصورة' واختر الصورة التي تريد معالجتها من جهازك.",
+        "في قسم 'إعدادات الزوايا المستديرة'، قم بضبط قيمة نصف القطر لتقريب الزوايا. يمكنك اختيار قيمة ثابتة أو نسبة مئوية من حجم الصورة.",
+        "إذا كنت ترغب في تحويل الصورة إلى صورة دائرية، قم بتفعيل الخيار 'دورة' في القائمة الجانبية.",
+        "اذهب إلى قسم 'تنزيل الصورة' واختر تنسيق الصورة المرغوب (PNG أو JPEG) وأدخل اسم الملف.",
+        "انقر على زر 'تنزيل' لحفظ الصورة المعالجة على جهازك."
+      ],
+      "usage_examples": [
+        "المطورون يمكنهم استخدام Image Rounder لإضافة زوايا مستديرة إلى صور الملف الشخصي في تطبيقات التواصل الاجتماعي، مما يجعل التصميم أكثر حديثاً وجاذبية.",
+        "مصممو الويب يمكنهم استغلال هذه الأداة لتقريب صور المنتجات في متاجر التجارة الإلكترونية، مما يعزز تجربة المستخدم ويجعل المنتجات تبدو أكثر احترافية.",
+        "المصورون الفوتوغرافيون يمكنهم استخدام Image Rounder لتحويل صورهم الفوتوغرافية إلى صور دائرية لإنشاء معارض فوتوغرافية فريدة من نوعها على مواقع الويب الخاصة بهم.",
+        "الشركات يمكنها استخدم Image Rounder لإضافة لمسة جمالية إلى الصور الموجودة في عروضهم التقديمية ووثائقهم الرسمية، مما يعزز الهوية البصرية للعلامة التجارية."
+      ]
+    }
+  }
+}

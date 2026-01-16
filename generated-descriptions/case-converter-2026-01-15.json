@@ -1,0 +1,175 @@
+{
+  "slug": "case-converter",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Case Converter is a versatile text processing tool designed to transform text strings into various case formats, including uppercase, lowercase, title case, and sentence case. This tool is particularly useful for developers, content creators, and anyone who needs to ensure their text adheres to specific formatting standards. By leveraging the Case Converter, users can quickly and accurately adjust the case of their text without the need for manual editing, which can be time-consuming and error-prone. The tool works by accepting a string of text as input and applying the selected case transformation algorithm to produce the desired output. The underlying algorithms are optimized for performance, ensuring that even large text inputs are processed efficiently. The tool supports a wide range of character encodings, making it suitable for use with text in multiple languages and scripts. Whether you need to standardize the case of user-generated content, format headings for a document, or prepare text for automated systems, the Case Converter provides a powerful and flexible solution.",
+      "usage_steps": [
+        "Step 1: Navigate to the Case Converter tool page on the website.",
+        "Step 2: In the input text area, paste or type the text you wish to convert.",
+        "Step 3: Select the desired case format from the dropdown menu. Options include Uppercase, Lowercase, Title Case, and Sentence Case.",
+        "Step 4: Click the 'Convert' button to apply the selected case transformation to your text.",
+        "Step 5: Review the converted text in the output area below the input field.",
+        "Step 6: If needed, copy the converted text to your clipboard and paste it into your desired application or document."
+      ],
+      "usage_examples": [
+        "Example 1: A content manager is preparing a blog post and needs to ensure all headings are in title case. They use the Case Converter to quickly and accurately format the headings, saving time and reducing the risk of manual errors.",
+        "Example 2: A developer is working on a project that involves processing user input. They need to standardize all text to lowercase to avoid case sensitivity issues in their code. The Case Converter allows them to efficiently convert user inputs to a consistent format.",
+        "Example 3: A marketing professional is creating a social media post and wants the first sentence to be in sentence case. They use the Case Converter to format the text correctly, ensuring it meets the brand's style guidelines.",
+        "Example 4: A translator is working on a document that contains text in multiple languages. They need to ensure that all proper nouns are capitalized correctly. The Case Converter helps them apply the appropriate title case formatting to the text, maintaining the integrity of the translation."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Case Converter 是一个强大的文本处理工具，用于将文本转换为不同的大小写格式，包括全大写、全小写、首字母大写等。该工具在多种文本处理场景中非常有用，例如在编写代码、创建文档或进行数据清理时，用户可以快速调整文本的大小写格式，确保文本的一致性和可读性。Case Converter 采用高效的算法处理文本输入，支持批量转换，用户可以通过简单的操作实现复杂的文本格式调整。此外，该工具还支持剪贴板操作，用户可以直接将转换后的文本复制到剪贴板中，方便在其他应用程序中使用。通过使用 Case Converter，用户可以节省大量手动调整文本格式的时间，提高工作效率。",
+      "usage_steps": [
+        "打开 Case Converter 页面，进入文本转换界面。",
+        "在输入框中粘贴或输入您需要转换的文本。",
+        "从转换模式下拉菜单中选择您需要的文本转换类型，如全大写、全小写或首字母大写。",
+        "点击“转换”按钮，工具将立即处理您的文本，并在输出框中显示转换后的结果。",
+        "检查输出框中的结果，确保没有错误。",
+        "点击“复制”按钮，将转换后的文本复制到剪贴板，然后将其粘贴到所需的位置。"
+      ],
+      "usage_examples": [
+        "在编写编程代码时，用户可能需要将变量名统一转换为小写，以符合代码规范。使用 Case Converter 可以快速完成这一任务。",
+        "编辑文档时，用户可能希望将标题的每个单词首字母大写，以提高文档的专业性和美观度。Case Converter 提供了这一功能，确保标题格式一致。",
+        "进行数据清理时，用户可能需要将从不同来源收集的数据统一为同一大小写格式，以便更好地进行数据分析。Case Converter 可以轻松实现这一需求。",
+        "社交媒体管理者可能需要将用户评论或帖子中的文本转换为统一的格式，以保持平台内容的一致性和规范性。Case Converter 可以帮助快速完成这一任务。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Case Converterは、テキストのケース変換を包括的にサポートする高度なツールです。このツールは、入力されたテキストを大文字、小文字、タイトルケース、スネークケース、キャメルケースなど、さまざまな形式に変換することができます。テキストのケース変換は、コーディング、文書作成、データクリーニングなど、多様な用途で重要です。例えば、プログラムのソースコード内で一貫性のある変数名を使用するために、または文書内のタイトルや見出しを整えるために利用することができます。Case Converterは、高度なアルゴリズムと文字エンコーディング技術を使用して、テキストの正確な変換を実現します。また、マルチバイト文字や特殊文字の処理にも対応しており、さまざまな言語のテキストを扱うことができます。ユーザーは、インターフェースを通じて簡単にケース変換を適用し、結果を即座に確認することができます。",
+      "usage_steps": [
+        "Step 1: ケースコンバーターツールのページにアクセスし、テキスト入力フィールドに変換したいテキストを入力またはペーストします。",
+        "Step 2: 左側のメニューから「ケース変換」を選択します。",
+        "Step 3: 表示されるオプションから、変換したいケース形式（例：大文字、小文字、タイトルケース、スネークケース、キャメルケース）を選択します。",
+        "Step 4: 「変換」ボタンをクリックします。これにより選択したケース形式にテキストが変換されます。",
+        "Step 5: 変換結果が表示されたら、必要に応じてコピーボタンを使用して結果をコピーします。",
+        "Step 6: 変換結果を保存または使用するために、他のアプリケーションや文書に貼り付けてください。"
+      ],
+      "usage_examples": [
+        "Example 1: プログラムのソースコード内で変数名の一貫性を保つために、全ての変数名をキャメルケースに変換します。これによりコードの読みやすさと保守性が向上します。",
+        "Example 2: データベースのエントリを一覧表示する際、タイトルや見出しをタイトルケースに統一することで、一貫性のある表示を実現します。",
+        "Example 3: マーケティング資料を作成する際、製品名や機能名を大文字に変換し、重要な情報を視覚的に強調します。",
+        "Example 4: 多言語対応のウェブサイトを作成する際、異なる言語のテキストを適切なケース形式に変換し、一貫性のあるユーザー体験を提供します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Case Converter는 텍스트 데이터를 다양한 케이스 형식으로 변환하는 강력한 도구입니다. 이 도구는 텍스트를 대문자, 소문자, 제목 대문자, 케밥 케이스, 스네이크 케이스, 캐멀 케이스 등으로 변환할 수 있으며, 이를 통해 사용자는 텍스트의 일관성과 가독성을 유지할 수 있습니다. Case Converter는 프로그래머, 콘텐츠 생성자, 데이터 분석가 등 다양한 전문가들에게 유용합니다. 예를 들어, 프로그래머는 코드에서 변수 이름을 일관된 형식으로 유지하려고 할 때, 콘텐츠 생성자는 제목을 일관된 형식으로 작성하려고 할 때, 데이터 분석가는 데이터 세트에서 텍스트 필드의 일관성을 유지하려고 할 때 이 도구를 사용할 수 있습니다. 이 도구는 사용자가 텍스트를 입력하고 변환 옵션을 선택한 후, 즉시 변환된 결과를 확인할 수 있습니다. 이 과정은 JavaScript를 기반으로 동작하며, 웹 브라우저에서 실시간으로 처리됩니다.",
+      "usage_steps": [
+        "1. 웹 사이트를 방문하여 Case Converter 도구 페이지로 이동합니다.",
+        "2. 'Input Text' 영역에 변환하고자 하는 텍스트를 입력하거나 붙여넣습니다.",
+        "3. 변환 옵션 드롭다운 메뉴에서 원하는 케이스 형식을 선택합니다. 예를 들어, 'Upper Case', 'Lower Case', 'Title Case', 'Kebab Case', 'Snake Case', 'Camel Case' 등이 있습니다.",
+        "4. 선택한 옵션에 따라 텍스트가 즉시 변환되며, 'Converted Text' 영역에 결과가 표시됩니다.",
+        "5. 필요하다면, 변환된 텍스트를 복사하기 위해 'Copy' 버튼을 클릭합니다.",
+        "6. 변환된 텍스트를 사용할 목적에 맞게 저장하거나 다른 애플리케이션에 붙여넣습니다."
+      ],
+      "usage_examples": [
+        "프로그래머가 새 프로젝트에서 변수 이름을 일관된 형식으로 유지하려고 할 때, Case Converter를 사용하여 모든 변수 이름을 카멜 케이스로 변환할 수 있습니다.",
+        "콘텐츠 생성자가 블로그 제목을 일관된 형식으로 작성하려고 할 때, Case Converter를 사용하여 모든 제목을 제목 대문자 형식으로 변환할 수 있습니다.",
+        "데이터 분석가가 데이터 세트에서 텍스트 필드의 일관성을 유지하려고 할 때, Case Converter를 사용하여 모든 텍스트 필드를 소문자로 변환하여 일관성을 유지할 수 있습니다.",
+        "웹 개발자가 HTML 코드에서 클래스 이름을 일관된 형식으로 유지하려고 할 때, Case Converter를 사용하여 모든 클래스 이름을 케밥 케이스로 변환할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Case Converter es una poderosa herramienta de transformación de texto que permite a los usuarios modificar el formato de sus cadenas de texto de manera eficiente y precisa. Esta herramienta es especialmente útil en contextos de desarrollo, edición de contenido, y gestión de datos, donde el formato de texto puede ser crucial. Los usuarios pueden convertir texto a mayúsculas, minúsculas, formato de título, y más, todo en un entorno web sin necesidad de instalar software adicional. La importancia de esta herramienta radica en su capacidad de automatizar tareas repetitivas, mejorar la consistencia en la presentación de texto, y facilitar la integración de datos en diferentes plataformas y sistemas. Técnicamente, el Case Converter utiliza algoritmos de procesamiento de cadenas para analizar y transformar el texto ingresado, aplicando reglas específicas según la opción seleccionada. Además, la herramienta es capaz de manejar grandes volúmenes de texto de manera eficiente, lo que la convierte en una opción ideal para proyectos a gran escala.",
+      "usage_steps": [
+        "Abre el sitio web y navega hasta la sección 'Case Converter'.",
+        "En el campo de texto principal, pega o escribe el texto que deseas transformar.",
+        "Selecciona el tipo de conversión que necesitas desde el menú desplegable, como 'Mayúsculas', 'Minúsculas', 'Título', 'Alternar' o 'Inversa'.",
+        "Haz clic en el botón 'Convertir' para aplicar la transformación seleccionada al texto.",
+        "Revisa el texto transformado en el campo de resultado, que se actualizará automáticamente.",
+        "Si estás satisfecho con el resultado, copia el texto transformado y úsalo en tu proyecto o documento."
+      ],
+      "usage_examples": [
+        "Un desarrollador que necesita estandarizar los nombres de variables en un código fuente, convirtiéndolos a minúsculas para mantener la consistencia.",
+        "Un redactor que debe formatear el título de un artículo para que cada palabra comience con mayúscula, asegurando un estilo uniforme en todas las publicaciones.",
+        "Un administrador de bases de datos que necesita convertir los valores de una columna de texto a mayúsculas para facilitar búsquedas y comparaciones en una consulta SQL.",
+        "Un diseñador web que requiere transformar el contenido de un archivo de texto en formato alternado (alternando mayúsculas y minúsculas) para crear un efecto visual único en un sitio web."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Case Converter é uma ferramenta de manipulação de texto que permite aos usuários converter strings de texto em diferentes casos de formatação, como maiúsculas, minúsculas, título e outras variações. Esta ferramenta é essencial para desenvolvedores, escritores e profissionais de marketing que precisam garantir a consistência e a correção das suas mensagens em diferentes contextos. Por exemplo, ao preparar um documento para publicação, é comum precisar converter títulos para o formato de título, onde cada palavra começa com uma letra maiúscula, ou converter códigos de erro para letras maiúsculas para facilitar a leitura e a identificação. O Case Converter utiliza algoritmos de processamento de texto avançados para realizar essas conversões de forma precisa e rápida, sem a necessidade de escrever scripts personalizados ou usar funcionalidades complexas de editores de texto. Além disso, a ferramenta suporta uma variedade de formatos, incluindo snake_case, camelCase e kebab-case, tornando-a útil em cenários de desenvolvimento de software e formatação de dados.",
+      "usage_steps": [
+        "Acesse a página do Case Converter no site de ferramentas de desenvolvimento.",
+        "Cole o texto que deseja converter na área de texto principal.",
+        "Selecione o tipo de formatação desejado no menu suspenso 'Tipo de Conversão'. As opções incluem 'Maiúsculas', 'Minúsculas', 'Título', 'Snake Case', 'Camel Case' e 'Kebab Case'.",
+        "Clique no botão 'Converter' para aplicar a formatação selecionada ao seu texto.",
+        "O texto convertido será exibido na área de resultado abaixo do botão 'Converter'.",
+        "Copie o texto convertido para o seu clipboard pressionando o botão 'Copiar' ao lado do texto resultante."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor precisa converter uma lista de nomes de variáveis em formato camelCase para integrá-las em um código JavaScript. O Case Converter permite fazer essa conversão rapidamente e sem erros.",
+        "Um redator está preparando um artigo e precisa garantir que todos os títulos estejam no formato de título. Ele utiliza o Case Converter para converter os títulos de forma consistente.",
+        "Uma equipe de marketing está criando hashtags para uma campanha nas redes sociais. Eles usam o Case Converter para converter as palavras-chave em formato kebab-case, que é mais legível em hashtags.",
+        "Um analista de dados precisa normalizar os nomes de colunas em um dataset para facilitar a análise. O Case Converter ajuda a converter os nomes de colunas para snake_case, um formato comum em bancos de dados e ferramentas de análise de dados."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Case Converter est un outil de transformation de texte qui permet aux utilisateurs de convertir rapidement et efficacement leur contenu en différentes formes de casse, telles que majuscules, minuscules, et casse de titre. Cette fonctionnalité est particulièrement utile dans le développement web, la rédaction de documents, et la gestion de données textuelles. L'outil utilise des algorithmes de traitement de texte pour analyser et restructurer le contenu selon les options de casse sélectionnées. Par exemple, la conversion en majuscules peut être nécessaire pour des en-têtes de fichiers ou des titres de pages, tandis que la conversion en minuscules peut être utile pour normaliser des entrées utilisateur ou des données de formulaire. La casse de titre, quant à elle, est souvent utilisée pour formater des articles ou des sections de documents de manière professionnelle. Le Case Converter offre une interface intuitive qui permet de visualiser instantanément les résultats de la transformation, rendant le processus de manipulation de texte plus fluide et précieux pour les développeurs et les rédacteurs.",
+      "usage_steps": [
+        "Ouvrez la page du Case Converter sur le site web.",
+        "Collez ou tapez le texte que vous souhaitez transformer dans la zone de texte principale.",
+        "Sélectionnez le type de transformation souhaité dans le menu déroulant, par exemple 'Majuscules', 'Minuscules', ou 'Casse de titre'.",
+        "Si nécessaire, utilisez l'option 'Ignorer les caractères spéciaux' pour exclure certaines transformations sur des caractères non alphabétiques.",
+        "Appuyez sur le bouton 'Transformer' pour appliquer la conversion au texte.",
+        "Copiez le texte transformé et utilisez-le selon vos besoins, que ce soit pour l'intégration dans un document ou pour la mise à jour d'une base de données."
+      ],
+      "usage_examples": [
+        "Un développeur web utilise le Case Converter pour formater les titres de ses pages en majuscules pour une meilleure lisibilité et une présentation uniforme.",
+        "Un rédacteur technique transforme une liste de mots-clés en minuscules pour assurer la cohérence dans une base de données de mots-clés SEO.",
+        "Un gestionnaire de contenu utilise l'outil pour convertir les titres d'articles en casse de titre, facilitant ainsi la lecture et l'esthétique des publications.",
+        "Un administrateur de système normalise les noms d'utilisateurs en minuscules pour éviter les doublons et les erreurs dans un système d'authentification."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Case Converter ist ein leistungsstarker Textverarbeitungstool, das es Benutzern ermöglicht, Texte in verschiedenen Cases zu konvertieren. Technisch gesehen, analysiert der Converter den eingegebenen Text, identifiziert die einzelnen Wörter und wendet daraufhin die gewünschte Formatierung an. Die Optionen umfassen Uppercase (alle Buchstaben groß), Lowercase (alle Buchstaben klein), Title Case (erster Buchstabe jedes Wortes groß), Sentence Case (erster Buchstabe des Satzes groß) und mehr. Dieser Prozess wird durch regex-basierte Muster und String-Manipulationstechniken realisiert, die in der Softwareentwicklung weit verbreitet sind. Benutzer benötigen diesen Tool, um Text schnell und effizient in den gewünschten Format zu bringen, was besonders in der Programmierung, bei der Erstellung von Dokumenten, im Marketing und in der Webentwicklung sehr nützlich ist. Zum Beispiel können Entwickler Code-Snippets in die gewünschte Groß- und Kleinschreibung konvertieren, um Konsistenz in ihren Projekten zu gewährleisten. Auch für Content-Creator ist der Case Converter unerlässlich, um Titel und Überschriften schnell in die passende Form zu bringen, ohne manuelle Korrekturen vornehmen zu müssen.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des Case Converter in Ihrem Webbrowser.",
+        "Kopieren Sie den Text, den Sie konvertieren möchten, und fügen Sie ihn in das Textfeld auf der Seite ein.",
+        "Wählen Sie unter den Optionen den gewünschten Case-Typ aus, z.B. 'Uppercase', 'Lowercase', 'Title Case' oder 'Sentence Case'.",
+        "Klicken Sie auf die Schaltfläche 'Konvertieren', um die Transformation durchzuführen.",
+        "Der konvertierte Text wird direkt unter dem Textfeld angezeigt. Überprüfen Sie das Ergebnis.",
+        "Kopieren Sie den konvertierten Text und verwenden Sie ihn nach Belieben in Ihren Projekten oder Dokumenten."
+      ],
+      "usage_examples": [
+        "Ein Softwareentwickler muss ein Code-Snippet von einer Bibliothek in sein Projekt integrieren, aber die Bibliothek verwendet eine andere Groß- und Kleinschreibkonvention. Mit dem Case Converter kann er das Snippet schnell in die richtige Form bringen.",
+        "Ein Marketing-Spezialist erstellt eine neue Social-Media-Kampagne und möchte, dass alle Titel in Title Case dargestellt werden. Der Case Converter ermöglicht ihm, die Titel in wenigen Sekunden zu konvertieren, ohne manuell jede Überschrift anpassen zu müssen.",
+        "Ein Content-Schreiber arbeitet an einem Blog-Eintrag und möchte sicherstellen, dass der erste Satz jedes Absatzes korrekt formatiert ist. Der Case Converter hilft ihm, den Text in Sentence Case zu konvertieren und Konsistenz im Text zu gewährleisten.",
+        "Ein Freelancer erstellt eine Liste von Produktnamen für einen Onlineshop. Der Shop verlangt, dass alle Namen in Uppercase formatiert sind. Der Case Converter vereinfacht den Prozess, indem er die Listen schnell in die erforderliche Form bringt."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Конвертер регистра — это мощное веб-приложение, предназначенное для трансформации текста в различные регистры, такие как верхний (UPPERCASE), нижний (lowercase), заглавный (Title Case) и др. Это инструмент, который особенно полезен для разработчиков, контент-менеджеров и других специалистов, работающих с текстовыми данными. Инструмент позволяет быстро и эффективно обрабатывать текст, корректируя его форматирование для соответствия определенным стандартам или требованиям.\n\nПричины, по которым пользователи нуждаются в этом инструменте, многочисленны. Например, при разработке веб-приложений часто требуется привести текст к одному формату для последующей обработки или хранения. В контексте SEO важно, чтобы заголовки и мета-теги были корректно оформлены, чтобы улучшить видимость сайта в результатах поиска. Для контент-менеджеров и копирайтеров инструмент помогает быстро подогнать текст под нужный стиль, не тратя время на ручное редактирование.\n\nТехнически, инструмент реализован с использованием современных веб-технологий, таких как JavaScript и HTML5. Веб-приложение интерпретирует введённый текст и применяет к нему соответствующие алгоритмы преобразования. Например, для преобразования текста в верхний регистр используется метод `toUpperCase()`, а для заглавного регистра — комбинация методов `split()`, `map()`, `charAt()`, `toUpperCase()` и `join()`. Инструмент также обеспечивает быстрый отклик и высокую производительность, что делает его удобным для использования в реальном времени.",
+      "usage_steps": [
+        "Откройте веб-страницу Конвертера регистра на сайте.",
+        "В поле «Введите текст» введите или вставьте текст, который вы хотите преобразовать.",
+        "Выберите нужный регистр из выпадающего списка «Выберите регистр»: верхний, нижний, заглавный или отдельный символ.",
+        "Нажмите кнопку «Преобразовать», чтобы применить выбранный регистр к вашему тексту.",
+        "Преобразованный текст будет отображён в поле «Результат».",
+        "Вы можете скопировать преобразованный текст, нажав на кнопку «Скопировать» рядом с полем «Результат»."
+      ],
+      "usage_examples": [
+        "Программист работает над проектом, требующим хранения данных в формате верхнего регистра. Он использует Конвертер регистра, чтобы быстро привести все строки к нужному формату перед записью в базу данных.",
+        "Контент-менеджер готовит статью для публикации на сайте. Он использует инструмент для преобразования всех заголовков в заглавный регистр, чтобы соответствовать стилю оформления сайта.",
+        "SEO-специалист оптимизирует мета-теги для страницы. Он применяет Конвертер регистра, чтобы привести все ключевые слова к нижнему регистру, что улучшает их индексацию поисковыми роботами.",
+        "Дизайнер создает логотип, где текст должен быть в верхнем регистре. Он использует инструмент для быстрого преобразования текста и затем импортирует его в графический редактор."
+      ]
+    },
+    "ar": {
+      "detailed_description": "تحويل الحالة هو أداة متقدمة تتيح للمستخدمين تحويل النص إلى صيغ مختلفة، مثل الحروف الكبيرة (Uppercase)، الحروف الصغيرة (Lowercase)، صيغة العنوان (Title Case)، والصيغ الأخرى. تعمل هذه الأداة من خلال تحليل النص المدخل واستبدال كل حرف بحرف يتوافق مع الصيغة المحددة. هذا التحويل يتم بواسطة خوارزميات تعتمد على معايير Unicode، مما يضمن دقة التحويل حتى في النصوص التي تحتوي على أحرف خاصة أو رموز.",
+      "usage_steps": [
+        "أدخل النص الذي تريد تحويله في المربع المخصص للنص في واجهة الأداة.",
+        "اختر الصيغة المرغوبة من القائمة المنسدلة، مثل الحروف الكبيرة، الحروف الصغيرة، صيغة العنوان، أو الصيغ الأخرى المتاحة.",
+        "انقر على زر «تحويل» لتنفيذ العملية. ستقوم الأداة بتحليل النص وتغيير حالتها وفقًا للصيغة المختارة.",
+        "راجع النص المتحول في المربع السفلي من الواجهة لضمان دقته وصحته.",
+        "إذا كانت هناك أي تعديلات مطلوبة، يمكنك إعادة تحرير النص الأصلي أو اختيار صيغة مختلفة وإعادة التحويل.",
+        "انقر على زر «نسخ» لنسخ النص المتحول إلى الحافظة، أو احفظه بشكل مباشر إذا كنت تستخدم متصفحًا يدعم هذه الميزة."
+      ],
+      "usage_examples": [
+        "مطور ويب يرغب في تحويل عناوين الصفحات إلى صيغة العنوان لتحسين جودة SEO. يمكنه استخدام أداة تحويل الحالة لتحويل العناوين مثل 'عنوان الصفحة الرئيسية' إلى 'عنوان الصفحة الرئيسية' بسهولة.",
+        "كاتب محتوى يعكف على تحرير مقالة ويحتاج إلى ضمان أن جميع العناوين الفرعية تكون بحروف كبيرة. يمكنه استخدام الأداة لتحويل النص بسرعة وبدقة.",
+        "ساعي بريد يحتاج إلى تحويل عناوين الشوارع في قاعدة البيانات إلى حروف صغيرة لضمان التناسق في البيانات. يمكنه استخدام الأداة لتحويل «شارع القاهرة» إلى «شارع القاهرة».",
+        "مترجم ي Potiontext من الإنجليزية إلى العربية ويحتاج إلى تحويل بعض الكلمات إلى صيغة العنوان لتناسب السياق. يمكنه استخدام الأداة لتحويل «New York» إلى «New York»."
+      ]
+    }
+  }
+}

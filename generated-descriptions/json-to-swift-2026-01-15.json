@@ -1,0 +1,158 @@
+{
+  "slug": "json-to-swift",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The JSON to Swift converter is a powerful tool designed to streamline the development process for iOS and macOS applications. This tool takes JSON objects and converts them into Swift structs, making it easier to manage data models in your Swift code. By automating the conversion process, developers can save a significant amount of time and reduce the risk of errors that often occur when manually writing struct definitions. The tool is particularly useful for projects that rely heavily on API data, where JSON responses need to be parsed and mapped to Swift objects. It supports advanced features such as optional properties, custom data types, and nested structs, ensuring that the generated Swift code is both robust and flexible. The converter also includes options to customize the output, such as specifying the struct name and adding custom import statements, making it a versatile solution for a wide range of development needs.",
+      "usage_steps": [
+        "Step 1: Navigate to the JSON to Swift converter page and locate the 'JSON Input' text area.",
+        "Step 2: Paste your JSON object into the 'JSON Input' text area. Ensure that the JSON is well-formed and includes all the necessary properties.",
+        "Step 3: Use the 'Struct Name' input field to specify the name of the Swift struct you want to generate. This name should be descriptive and follow Swift naming conventions.",
+        "Step 4: Configure the output settings by selecting options such as 'Include Optional Properties' and 'Add Custom Import Statements'. These settings will enhance the generated code to better fit your project requirements.",
+        "Step 5: Click the 'Convert' button to process the JSON and generate the Swift struct. The tool will validate the JSON and provide feedback if there are any issues.",
+        "Step 6: Review the generated Swift struct in the 'Swift Output' text area. Copy the code and integrate it into your Xcode project, ensuring that it aligns with your existing codebase."
+      ],
+      "usage_examples": [
+        "Example 1: A mobile developer is building an app that fetches weather data from an API. The JSON response contains multiple nested objects and arrays. By using the JSON to Swift converter, the developer can quickly generate Swift structs that accurately represent the weather data, simplifying the data parsing process.",
+        "Example 2: A backend developer is working on a project that involves integrating with a third-party service. The service returns complex JSON objects with optional fields. The developer uses the JSON to Swift converter to create Swift structs with optional properties, ensuring that the app can handle incomplete data gracefully.",
+        "Example 3: A team of developers is transitioning an existing project from Objective-C to Swift. They have a large number of JSON files representing various data models. The JSON to Swift converter helps them automate the process of converting these JSON files into Swift structs, accelerating the migration process and reducing manual coding efforts.",
+        "Example 4: A frontend developer is working on a feature that requires storing user preferences in a local JSON file. The preferences include various data types such as strings, integers, and booleans. By using the JSON to Swift converter, the developer can easily create Swift structs to represent the user preferences, making it simpler to manage and access the data within the app."
+      ]
+    },
+    "zh": {
+      "detailed_description": "JSON to Swift 是一款用于将 JSON 对象转换为 Swift 结构体的在线工具。它通过解析 JSON 数据并生成相应的 Swift 代码，帮助开发者快速将 API 响应等数据集成到 iOS 或 macOS 应用中。此工具特别适用于需要频繁处理 JSON 数据的应用开发，例如从 RESTful API 获取数据并将其转换为 Swift 结构体以便在应用中使用。通过 JSON to Swift，开发者可以避免手动编写冗长且容易出错的解析代码，提高开发效率并减少bug。该工具使用先进的解析技术，支持复杂的 JSON 结构，包括嵌套对象、数组和自定义数据类型。生成的 Swift 代码经过优化，确保在项目中能够高效运行。",
+      "usage_steps": [
+        "Step 1: 打开 JSON to Swift 工具页面，定位到输入框区域。",
+        "Step 2: 将需要转换的 JSON 数据粘贴到输入框中。确保 JSON 格式正确，无语法错误。",
+        "Step 3: 点击“转换”按钮，工具将自动解析 JSON 数据。",
+        "Step 4: 在输出框中查看生成的 Swift 代码。代码将显示为 Swift 结构体，包括嵌套对象和数组。",
+        "Step 5: 根据需要，调整生成的代码中的数据类型或变量名。工具提供了编辑功能，允许你在生成的代码基础上进行修改。",
+        "Step 6: 将最终的 Swift 代码复制并粘贴到你的 Xcode 项目中，即可直接使用。"
+      ],
+      "usage_examples": [
+        "Example 1: 开发者从 RESTful API 获取用户信息（包括姓名、年龄和地址），使用 JSON to Swift 工具将其转换为 Swift 结构体，方便在 iOS 应用中展示和处理。",
+        "Example 2: 在开发一个电商应用时，需要处理复杂的 JSON 数据，包括商品列表、评价和促销信息。通过 JSON to Swift 工具，开发者可以快速生成相应的 Swift 结构体，简化数据处理逻辑。",
+        "Example 3: 一个天气应用需要解析从 API 获取的天气数据（如温度、湿度和风速）。使用 JSON to Swift 工具，可以生成对应的 Swift 结构体，使数据解析更加高效和可靠。",
+        "Example 4: 在开发企业级应用时，需要处理多层嵌套的 JSON 数据，如组织结构图。通过 JSON to Swift 工具，可以生成复杂的 Swift 结构体，确保数据的完整性和准确性。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "JSON to Swift は、JSON オブジェクトを Swift の構造体に変換する高度なオンラインツールです。このツールは、JSON データを Swift 言語で利用可能な構造体に自動的に変換することで、iOS 開発者が効率的にデータモデルを生成できるように支援します。特に、API から受け取った JSON データを迅速に Swift コードに変換することが必要な場合に非常に役立ちます。例えば、複雑な JSON 構造を Swift で扱いやすい形式に変換することで、データの解析や操作がスムーズに行えます。また、このツールは、Swift の Codable プロトコルを自動的に適用し、エンコードとデコードのプロセスを簡素化します。このツールの背後には、高度なパーサーとコードジェネレータが搭載されており、JSON の構造を分析し、Swift 構造体に最適な形式で出力します。これにより、開発者は手動でコードを書く時間を節約し、プロジェクトの開発速度を向上させることができます。",
+      "usage_steps": [
+        "Step 1: JSON to Swift のウェブサイトにアクセスします。",
+        "Step 2: ページ上部の「JSON データを入力」エリアに、変換したい JSON データを貼り付けます。",
+        "Step 3: 「オプション設定」エリアで、生成する Swift 構造体の名前やプロパティの型をカスタマイズします。",
+        "Step 4: 必要に応じて、「Codable プロトコルを適用」チェックボックスをオンにして、自動的に Codable 機能を追加します。",
+        "Step 5: 「変換」ボタンをクリックして、JSON データを Swift 構造体に変換します。",
+        "Step 6: 生成された Swift コードをコピーし、プロジェクトに貼り付けて使用します。"
+      ],
+      "usage_examples": [
+        "Example 1: API から取得したユーザー情報の JSON データを Swift 構造体に変換し、アプリ内でユーザー情報を扱いやすくする。",
+        "Example 2: 複雑な JSON ファイルを含む API レスポンスを、Swift 構造体に変換して、iOS アプリでデータの解析と表示を行いたい場合。",
+        "Example 3: 外部システムから受け取った JSON データを Swift 構造体に変換し、ローカルのデータモデルとして使用する。",
+        "Example 4: 既存の JSON データを Swift 構造体に変換し、新しい機能の開発に迅速に対応するためのデータモデルを生成する。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "JSON to Swift는 JSON 객체를 Swift 구조체로 변환하는 강력한 온라인 도구입니다. 개발자들은 종종 웹 API에서 JSON 데이터를 받아 Swift 애플리케이션에서 사용해야 하는 상황이 발생합니다. 이 도구는 이러한 과정을 간소화하여, 복잡한 JSON 객체를 자동으로 Swift 구조체로 변환해줍니다. 이를 통해 개발자는 데이터 모델링에 소비되는 시간을 줄이고, 애플리케이션 개발의 효율성을 높일 수 있습니다. JSON to Swift는 특히 RESTful API를 사용하는 애플리케이션 개발에서 매우 유용합니다. 이 도구는 JSON 스키마 분석, 타입 추론, 옵셔널 처리 등을 포함하여 정확한 Swift 구조체를 생성합니다. 또한, 사용자는 Swift 5 이상 버전에서 사용할 수 있는 최신 기능을 활용할 수 있도록 코드를 최적화합니다.",
+      "usage_steps": [
+        "1. 웹사이트 상단의 메뉴에서 'JSON to Swift' 옵션을 클릭하세요.",
+        "2. 왼쪽 패널의 'JSON 입력' 섹션에 변환하려는 JSON 데이터를 붙여넣으세요.",
+        "3. '옵션' 탭에서 Swift 구조체의 옵션을 설정하세요. 예를 들어, 옵셔널 처리, enum 사용 등을 선택할 수 있습니다.",
+        "4. '변환' 버튼을 클릭하여 JSON 데이터를 Swift 구조체로 변환하세요.",
+        "5. 변환된 Swift 코드가 오른쪽 패널의 'Swift 출력' 섹션에 표시됩니다.",
+        "6. 필요한 경우,Swift 코드를 복사하여 애플리케이션에 붙여넣으세요."
+      ],
+      "usage_examples": [
+        "1. 웹 서비스 API 호출에서 받은 JSON 응답을 Swift 애플리케이션에서 사용하기 위해 구조체로 변환합니다. 예를 들어, 날씨 정보를 제공하는 API에서 받은 데이터를 Swift에서 효율적으로 처리할 수 있는 구조체로 변환할 수 있습니다.",
+        "2. JSON 파일을 Swift 애플리케이션의 로컬 데이터 모델로 변환합니다. 예를 들어, 앱 설정 정보가 JSON 파일로 제공될 때, 이를 Swift 구조체로 변환하여 앱 내에서 사용할 수 있습니다.",
+        "3. JSON 포맷의 서버 응답을 Swift 애플리케이션에서 쉽게 해석할 수 있는 구조체로 변환합니다. 이는 서버와의 통신을 간편화하고, 데이터 처리 로직을 효율적으로 구현할 수 있습니다.",
+        "4. 앱 개발 시, JSON 데이터를 Swift 구조체로 변환하여 데이터 모델을 자동으로 생성합니다. 이는 개발자가 수동으로 데이터 모델을 작성하는 시간을 줄이고, 코드의 일관성을 유지할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El convertidor JSON a Swift es una poderosa herramienta diseñada para facilitar la transformación de objetos JSON en estructuras de datos Swift. Este proceso, que a menudo es tedioso y propenso a errores cuando se realiza manualmente, se simplifica de manera significativa con esta herramienta. La conversión es esencial para desarrolladores que trabajan con APIs y necesitan integrar datos JSON en aplicaciones iOS o macOS. La herramienta no solo genera Swift structs, sino que también asegura que las propiedades y tipos de datos sean coherentes con el esquema JSON proporcionado. Esto es particularmente útil en proyectos donde se necesita una rápida implementación de modelos de datos complejos. Además, la herramienta soporta la generación de código con Codable, lo que facilita la codificación y decodificación de datos JSON en Swift. La precisión y la eficiencia de esta herramienta ahorran tiempo y reducen el riesgo de errores, mejorando la productividad y la calidad del código.",
+      "usage_steps": [
+        "Paso 1: Navega a la página de JSON a Swift y asegúrate de que el editor de texto esté visible.",
+        "Paso 2: Copia y pega tu objeto JSON en el área de texto del editor. Asegúrate de que el JSON sea válido y completo.",
+        "Paso 3: Personaliza las opciones de conversión si es necesario. Puedes elegir entre diferentes estilos de nombres de variables (por ejemplo, camelCase o snake_case) y decidir si deseas que las structs sean codables.",
+        "Paso 4: Haz clic en el botón 'Convertir' ubicado debajo del editor de texto. La herramienta procesará el JSON y generará el código Swift correspondiente.",
+        "Paso 5: Revisa el código Swift generado en el área de salida. Puedes copiar este código y pegarlo directamente en tu proyecto de Swift.",
+        "Paso 6: Si es necesario, guarda el código generado o refina las estructuras según las necesidades específicas de tu proyecto."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador de iOS está integrando una API que devuelve datos de usuarios en formato JSON. Utiliza JSON a Swift para generar automaticamente las structs necesarias, facilitando la gestión de estos datos en la aplicación.",
+        "Ejemplo 2: Un equipo de desarrollo necesita sincronizar datos entre una base de datos backend y una aplicación Swift. La herramienta permite generar structs Swift que coinciden con los modelos de datos del backend, asegurando la consistencia y reduciendo el tiempo de desarrollo.",
+        "Ejemplo 3: Un desarrollador trabaja en una aplicación de comercio electrónico y necesita manejar múltiples tipos de productos con diferentes atributos. JSON a Swift ayuda a generar estructuras Swift que representan estos productos, simplificando la lógica de negocio y la presentación de datos.",
+        "Ejemplo 4: Un proyecto de desarrollo requiere la integración de un servicio de geolocalización que devuelve datos de ubicación en formato JSON. La herramienta facilita la creación de structs Swift que pueden ser utilizadas para manejar y procesar estos datos de manera eficiente."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O conversor JSON to Swift é uma ferramenta especializada que transforma objetos JSON em estruturas de dados Swift, facilitando a integração de dados externos em aplicações iOS. Essa conversão é crucial para desenvolvedores que trabalham com APIs e precisam rapidamente modelar dados recebidos em formatos que sejam compatíveis com a linguagem Swift. A ferramenta analisa a estrutura do JSON, identifica os tipos de dados e gera automaticamente as structs correspondentes, incluindo anotações de codificação e decodificação conforme necessário. Isso elimina a necessidade manual de escrever essas estruturas, reduzindo o risco de erros e acelerando o desenvolvimento. Além disso, o JSON to Swift suporta features avançadas como a geração de enums para valores de string fixos, o que ajuda a manter a consistência dos dados. A ferramenta é especialmente útil em projetos que envolvem a integração de múltiplas APIs, onde a consistência e a precisão dos modelos de dados são essenciais.",
+      "usage_steps": [
+        "Acesse a página do JSON to Swift no site da ferramenta.",
+        "Cole o JSON que você deseja converter no campo de entrada 'JSON Input'.",
+        "Se necessário, ajuste as opções de configuração, como a geração de enums e a codificação JSON.",
+        "Clique no botão 'Converter' para iniciar o processo de conversão.",
+        "Revise o código Swift gerado no campo de saída 'Swift Output'.",
+        "Copie o código Swift gerado e cola-o no seu projeto Swift."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de aplicativos iOS está integrando uma API de clima em seu aplicativo. Ele usa o JSON to Swift para converter os dados JSON da API em structs Swift, permitindo que os dados de clima sejam facilmente manipulados dentro do aplicativo.",
+        "Uma equipe de desenvolvimento está construindo um aplicativo de e-commerce que precisa se conectar a várias APIs de fornecedores. O JSON to Swift é usado para gerar rapidamente as estruturas de dados necessárias para cada API, garantindo consistência e eficiência no desenvolvimento.",
+        "Um freelancer de desenvolvimento de aplicativos precisa criar um aplicativo que exibe notícias em tempo real. Usando o JSON to Swift, ele converte os dados JSON da API de notícias em structs Swift, facilitando a exibição e atualização das notícias no aplicativo.",
+        "Um desenvolvedor de backend está criando uma aplicação iOS para gerenciar pedidos de um restaurante. Ele utiliza o JSON to Swift para converter os dados JSON dos pedidos em structs Swift, facilitando a integração com a interface do usuário e o backend do restaurante."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil JSON to Swift est une solution dédiée à la conversion de structures de données JSON en classes Swift. Cette transformation est particulièrement utile pour les développeurs travaillant sur des applications iOS qui doivent intégrer des données externes, souvent au format JSON, dans leur code Swift. Le processus de conversion est automatisé, ce qui élimine les erreurs de typographie et les incohérences de format souvent rencontrées lors de la création manuelle de structures de données. En utilisant cet outil, les développeurs peuvent générer rapidement des structures Swift qui correspondent exactement à leur modèle de données, facilitant ainsi l'intégration et le traitement des données. La précision et l'efficacité de cet outil sont cruciales pour les projets qui nécessitent une gestion rapide et fiable des données, comme les applications de commerce électronique, les plateformes de médias sociaux, ou les applications de gestion de contenu. La conversion est basée sur les standards Swift, assurant une compatibilité optimale avec les frameworks modernes tels que SwiftUI et Combine.",
+      "usage_steps": [
+        "Accédez à la page de l'outil JSON to Swift sur le site.",
+        "Dans la section 'JSON Input', collez ou tapez votre code JSON. Assurez-vous que le JSON est bien formé, sinon un message d'erreur apparaîtra.",
+        "Cliquez sur le bouton 'Convertir' pour lancer la transformation. L'outil analysera votre JSON et générera automatiquement les structures Swift correspondantes.",
+        "Dans la section 'Swift Output', examinez le code Swift généré. Vous pouvez voir les structures Swift, les types de données, et les propriétés correspondant à vos données JSON.",
+        "Si nécessaire, utilisez les options de configuration pour ajuster la génération, par exemple en spécifiant si vous voulez des variables optionnelles ou non.",
+        "Copiez le code Swift généré et intégrez-le dans votre projet Swift. Vous pouvez à présent utiliser ces structures pour manipuler vos données JSON de manière efficace et sécurisée."
+      ],
+      "usage_examples": [
+        "Un développeur d'une application de commerce électronique souhaite intégrer les données de produits provenant d'une API externe. Il utilise JSON to Swift pour convertir les données JSON en structures Swift, facilitant ainsi l'intégration des informations de produits dans l'interface utilisateur de l'application.",
+        "Une équipe de développement sur un projet de médias sociaux doit gérer les données d'utilisateurs et de publications. Ils utilisent JSON to Swift pour convertir les objets JSON en structures Swift, ce qui permet une gestion plus efficace des données et une meilleure performance de l'application.",
+        "Un développeur travaillant sur une application de gestion de contenu doit synchroniser des articles de blog et des commentaires. Il utilise JSON to Swift pour générer les structures Swift nécessaires, simplifiant ainsi le processus de synchronisation et de mise à jour des contenus.",
+        "Un ingénieur logiciel développe une application de suivi de fitness qui intègre les données de santé provenant de diverses sources. Il utilise JSON to Swift pour convertir les données JSON en structures Swift, permettant une intégration fluide et une gestion efficace des données de santé."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das JSON to Swift Tool ermöglicht Entwicklern, JSON-Objekte in Swift-Strukturen umzuwandeln. Dies ist besonders nützlich, wenn man komplex strukturierte JSON-Daten in einer Swift-Anwendung integrieren oder verarbeiten möchte. Die Umwandlung erfolgt automatisch und ermöglicht es, die JSON-Daten in eine formgerechte Swift-Struktur zu überführen, die direkt in den Code integriert werden kann. Dies spart Zeit und reduziert die Anfälligkeit für Fehler, die beim manuellen Erstellen dieser Strukturen entstehen können. Die Tool nutzt die Codable-Protokolle von Swift, um eine nahtlose Konvertierung zu gewährleisten. Es unterstützt auch die Verarbeitung von verschachtelten JSON-Objekten und Arrays, sodass selbst komplexe Datenstrukturen korrekt dargestellt werden. Dies ist besonders hilfreich bei der Entwicklung von RESTful-APIs, wo JSON-Daten häufig als Antwort formatiert werden.",
+      "usage_steps": [
+        "Öffnen Sie das JSON to Swift Tool auf der Website.",
+        "Navigieren Sie zur Eingabebox, die als 'JSON Eingabe' gekennzeichnet ist.",
+        "Fügen Sie den zu konvertierenden JSON-Code in die Eingabebox ein.",
+        "Klicken Sie auf die Schaltfläche 'Convert' (Konvertieren), um die Umwandlung zu starten.",
+        "Das Tool generiert die corresponding Swift-Struktur und zeigt sie in der Ausgabebox an, die als 'Swift Output' gekennzeichnet ist.",
+        "Kopieren Sie die generierte Swift-Struktur und fügen Sie sie in Ihren Swift-Code ein."
+      ],
+      "usage_examples": [
+        "Ein iOS-Entwickler arbeitet an einer App, die Daten von einer RESTful-API empfängt. Die API antwortet mit JSON-Daten, die in Swift-Strukturen umgewandelt werden müssen, um in der App verwendet zu werden. Das JSON to Swift Tool erleichtert diese Prozess und sorgt für eine korrekte Darstellung der Daten.",
+        "Ein Softwareteam entwickelt eine mobile Anwendung, die Wetterdaten von einem externen Dienst abruft. Die abgerufenen JSON-Daten müssen in Swift-Strukturen umgewandelt werden, um sie in der Anwendung zu verarbeiten. Das Tool hilft dabei, die notwendigen Swift-Strukturen zu generieren und Zeit zu sparen.",
+        "Ein Full-Stack-Entwickler arbeitet an einem Projekt, bei dem Nutzerdaten von einer Datenbank abgerufen und in einer iOS-Anwendung angezeigt werden sollen. Das JSON to Swift Tool wird verwendet, um die JSON-Daten, die von der Datenbank zurückgegeben werden, in Swift-Strukturen umzuwandeln, die in der Anwendung verwendet werden können.",
+        "Ein Entwicklerteam erstellt eine App, die verschiedene API-Endpunkte verwendet, um verschiedene Arten von Daten abzurufen. Die JSON-Daten, die von diesen Endpunkten empfangen werden, müssen in Swift-Strukturen umgewandelt werden, um sie in der App zu verarbeiten. Das JSON to Swift Tool wird regelmäßig verwendet, um die notwendigen Strukturen zu generieren und die Entwicklung zu beschleunigen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент JSON to Swift предназначен для преобразования JSON-объектов в Swift-структуры, что значительно упрощает интеграцию данных из веб-сервисов в приложения на Swift. JSON (JavaScript Object Notation) является популярным форматом для обмена данными, но для эффективной работы с этими данными в Swift, их необходимо преобразовать в более удобный формат, такие как структуры. Этот инструмент автоматизирует этот процесс, позволяя разработчикам быстро и без ошибок генерировать необходимые структуры.\n\nИспользование JSON to Swift особенно полезно в следующих сценариях: при разработке мобильных приложений, которые взаимодействуют с API, для быстрой генерации моделей данных; при миграции данных из JSON-формата в проекты на Swift; и для упрощения процесса создания и обновления моделей данных в существующих приложениях. Инструмент поддерживает различные опции, такие как настройка имени структуры, автоматическое добавление ключевых слов и валидация JSON-данных перед конвертацией. Это делает его незаменимым инструментом в арсенале любого разработчика Swift.",
+      "usage_steps": [
+        "Шаг 1: Откройте страницу инструмента JSON to Swift на сайте.",
+        "Шаг 2: В правой части страницы найдите текстовое поле с надписью «Вставьте JSON-данные» и вставьте туда JSON-объект, который вы хотите преобразовать.",
+        "Шаг 3: Нажмите кнопку «Проверить JSON» для валидации введенных данных. Если данные неверны, инструмент покажет сообщение об ошибке.",
+        "Шаг 4: Если данные корректны, перейдите к настройкам конвертации. Здесь вы можете указать имя структуры, выбрать, нужно ли включать ключевые слова и другие опции.",
+        "Шаг 5: После настройки параметров нажмите кнопку «Конвертировать в Swift».",
+        "Шаг 6: Скопируйте сгенерированный код Swift-структур и вставьте его в ваш проект."
+      ],
+      "usage_examples": [
+        "Пример 1: Разработчик мобильного приложения с API, который получает JSON-данные о пользователе, использует JSON to Swift для быстрой генерации соответствующей Swift-структуры, чтобы сразу начать использовать данные в приложении.",
+        "Пример 2: Команда разработчиков migрирует проект с Objective-C на Swift. Они используют JSON to Swift для преобразования JSON-данных, используемых в старом проекте, в новые Swift-структуры, ускоряя процесс миграции.",
+        "Пример 3: Фронтенд-разработчик, работающий над приложением с REST API, использует JSON to Swift для создания моделей данных, которые будут использоваться для отображения информации на экране, обеспечивая согласованность данных.",
+        "Пример 4: Разработчик бэкенд-сервиса, который предоставляет данные в формате JSON, использует JSON to Swift для создания примеров Swift-структур, которые можно предоставить фронтенд-команде для упрощения интеграции."
+      ]
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "slug": "doughnut-chart-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Doughnut Chart Generator is a powerful web-based tool designed to help users create visually appealing doughnut charts. Unlike traditional pie charts, doughnut charts feature a hollow center, making them ideal for displaying proportional data in a more engaging format. This tool is particularly useful for data analysts, educators, and designers who need to present data in a clear and concise manner. The generator supports a wide range of customization options, including color schemes, labels, and data input methods. Users can easily input their data, adjust chart settings, and export the final chart in PNG or SVG formats for use in reports, presentations, or web content. The tool leverages modern web technologies such as HTML5, CSS3, and JavaScript to ensure smooth performance and cross-platform compatibility. By using the Doughnut Chart Generator, users can enhance the visual impact of their data, making it easier to communicate complex information in a digestible format.",
+      "usage_steps": [
+        "Step 1: Open the Doughnut Chart Generator and click on the 'Add Data' button to input your dataset. You can enter values directly or import a CSV file.",
+        "Step 2: In the 'Chart Settings' section, customize your chart by selecting a color scheme, adjusting the radius, and choosing whether to display labels or percentages.",
+        "Step 3: Use the 'Data Labels' option to specify how you want to display the labels on your chart. You can choose to show the data values, percentages, or both.",
+        "Step 4: If you want to add a title to your chart, enter it in the 'Chart Title' field. This title will appear at the top of the chart.",
+        "Step 5: Preview your chart in the live preview section to ensure it meets your requirements. You can make further adjustments if necessary.",
+        "Step 6: Once you are satisfied with the chart, click on the 'Export' button and choose the desired format (PNG or SVG) to download the chart for use in your projects."
+      ],
+      "usage_examples": [
+        "Example 1: A marketing team wants to present the distribution of their advertising budget across different channels. They use the Doughnut Chart Generator to create a visually appealing chart showing the proportions of spend on social media, TV, and print media.",
+        "Example 2: A teacher is creating a classroom activity to help students understand the concept of fractions. By using the Doughnut Chart Generator, the teacher creates a chart that visually represents different fractions, making it easier for students to grasp the concept.",
+        "Example 3: A financial analyst needs to present the market share of different companies in a particular industry. The analyst uses the Doughnut Chart Generator to create a chart that clearly shows the percentage of the market each company holds.",
+        "Example 4: A web designer is working on a project that requires a dynamic visual representation of user demographics. The designer uses the Doughnut Chart Generator to create a doughnut chart that displays the age distribution of website visitors, enhancing the visual appeal of the project."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Doughnut Chart Generator 是一款在线工具，专为需要快速、准确地创建环形图（又称为甜甜圈图）的用户设计。该工具通过简单的交互界面，允许用户输入数据并自定义图表样式，最终生成专业的环形图。环形图是一种特殊的饼图，其中心部分被挖空，常用于展示不同类别数据的比例关系。通过使用 Doughnut Chart Generator，用户可以轻松地将复杂的数据集转化为直观易懂的视觉图形，适用于报告、演示文稿或数据分析。该工具支持多种数据输入格式，并允许用户调整颜色、标签位置、字体大小等细节，确保最终生成的图表符合具体需求。用户还可以将图表导出为 PNG 或 SVG 格式，便于在各种平台和文档中使用。",
+      "usage_steps": [
+        "Step 1: 打开 Doughnut Chart Generator 网页，点击“开始创建”按钮进入主界面。",
+        "Step 2: 在“数据输入”区域，选择“手动输入”或“上传 CSV”来输入您的数据。手动输入时，每行输入一个数据点，格式为“类别,数值”。",
+        "Step 3: 在“图表设置”区域，选择图表的样式，包括颜色方案、标签位置、字体大小等。工具提供了多种预设样式供选择。",
+        "Step 4: 点击“预览”按钮，查看生成的环形图。预览界面会显示图表的实时效果，您可以进行进一步的调整。",
+        "Step 5: 调整满意后，点击“导出”按钮选择导出格式。支持 PNG 和 SVG 两种格式，选择后点击“下载”按钮保存图表。",
+        "Step 6: 在“历史记录”区域，可以查看和管理您之前创建的图表。点击任意图表，可以重新编辑或再次导出。"
+      ],
+      "usage_examples": [
+        "Example 1: 一家市场研究公司需要展示不同产品线的市场份额。使用 Doughnut Chart Generator，研究人员可以将每个产品线的销售数据输入工具，生成直观的环形图，清晰地展示各产品线的市场份额。",
+        "Example 2: 一名财务分析师需要在季度报告中展示公司的收入来源。通过输入各业务部门的收入数据，分析师可以生成环形图，帮助管理层和股东快速理解收入结构。",
+        "Example 3: 一个社会科学研究团队正在进行一项调查，需要展示不同年龄段的受访者分布情况。通过将年龄分组数据输入工具，研究人员可以生成环形图，直观地展示各年龄段的比例。",
+        "Example 4: 一家网站运营团队需要分析用户访问来源。使用 Doughnut Chart Generator，团队可以将不同渠道的访问数据输入工具，生成环形图，帮助优化营销策略。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "ドーナツチャートジェネレーターは、オンラインでドーナツチャートを作成するためのツールです。このツールは、データを視覚的に表現し、各カテゴリの割合を直感的に理解できるように設計されています。ドーナツチャートの特徴は、中心が空洞になっているため、全体の構成を明確に示すことができます。また、チャートをPNGやSVG形式でエクスポートできるため、Webサイトやプレゼンテーション資料に簡単に組み込むことができます。\n\nこのツールは、データ分析や報告書作成の際、複数のカテゴリの割合を分かりやすく示す必要があるユーザーに特に有用です。例えば、市場調査の結果を視覚化したり、プロジェクトの進捗状況を示したりする際などに活用できます。ドーナツチャートは円グラフの一種ですが、中央の部分が空洞になっているため、全体的な構成がより明確になります。\n\n使い方は簡単です。まず、データを入力します。次に、色やラベル、凡例などのカスタマイズオプションを選択します。最後に、エクスポートボタンをクリックして、チャートを望む形式で保存します。このプロセスは、データの視覚化を効率化し、高度なグラフィカル表現を実現します。",
+      "usage_steps": [
+        "ステップ 1: ツールにアクセスし、上部の「データ入力」タブをクリックします。",
+        "ステップ 2: データ入力フィールドに、各カテゴリとその値を入力します。例えば、「カテゴリ,A,B,C」のように入力します。",
+        "ステップ 3: 左側の「設定」パネルから、チャートのスタイルをカスタマイズします。色、ラベルの表示、凡例の位置などを選択できます。",
+        "ステップ 4: センターの空洞サイズを調整します。スライダーを使用して、中心部分の大きさを微調整できます。",
+        "ステップ 5: プレビュー画面で、チャートの最終的な外観を確認します。必要に応じて、再度設定を調整します。",
+        "ステップ 6: 「エクスポート」ボタンをクリックし、PNGまたはSVG形式でチャートを保存します。保存先を指定してから、ダウンロードを完了します。"
+      ],
+      "usage_examples": [
+        "例 1: 市場調査の結果を視覚化する。製品A、製品B、製品Cの市場占有率をドーナツチャートにすることで、各製品のシェアの違いを一目で理解できます。",
+        "例 2: プロジェクトの予算配分を示す。人件費、材料費、設備費などの予算をチャートにすることで、予算の全体像をチームメンバーに明確に伝えられます。",
+        "例 3: ウェブサイトのトラフィック源を分析する。検索エンジン、ソーシャルメディア、直接アクセスなどのトラフィック源を表示することで、マーケティング施策の効果を評価できます。",
+        "例 4: リサーチペーパーのグラフを作成する。調査結果の各項目の割合をドーナツチャートにすることで、研究の概要を読者に分かりやすく説明できます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Doughnut Chart Generator는 온라인에서 도넛 차트를 생성하고 시각화할 수 있는 강력한 도구입니다. 이 도구는 데이터의 비율을 효과적으로 표현하기 위해 중앙이 빈 원형 차트를 생성하며, 사용자는 PNG 또는 SVG 형식으로 차트를 내보낼 수 있습니다. 도넛 차트는 비즈니스 분석, 시장 조사, 프로젝트 관리 등 다양한 분야에서 데이터의 비율을 직관적으로 이해하고 전달하는 데 유용합니다. 이 도구는 사용자 친화적인 인터페이스를 제공하여 데이터를 쉽게 입력하고, 컬러 스키마, 레이블, 홀의 크기 등을 조정할 수 있습니다. 또한, 차트의 각 부문에 대한 툴팁을 추가하여 상세 정보를 제공할 수 있으며, 데이터 변경 시 실시간으로 차트가 업데이트됩니다. Doughnut Chart Generator는 복잡한 데이터를 시각적으로 간결하게 표현하는 데 필요한 모든 기능을 제공하여 사용자가 효율적으로 작업할 수 있도록 설계되었습니다.",
+      "usage_steps": [
+        "Step 1: 웹사이트에 접속 후 'Doughnut Chart Generator' 페이지로 이동합니다.",
+        "Step 2: 'Data Input' 섹션에서 각 범주의 이름과 값에 대한 데이터를 입력합니다. 예를 들어, 'Category A: 30', 'Category B: 45'와 같이 입력합니다.",
+        "Step 3: 'Customize' 탭에서 차트의 색상, 레이블, 홀의 크기 등을 조정합니다. 색상은 'Color Palette'를 통해 선택하거나 직접 입력할 수 있습니다.",
+        "Step 4: 'Tooltip' 섹션에서 각 부문에 대한 추가 정보를 입력합니다. 이 정보는 차트 위에 마우스를 올렸을 때 표시됩니다.",
+        "Step 5: 'Preview' 버튼을 클릭하여 생성된 차트를 미리 확인합니다. 필요하다면 다시 조정할 수 있습니다.",
+        "Step 6: 'Export' 버튼을 클릭하여 차트를 PNG 또는 SVG 형식으로 다운로드합니다. 다운로드한 파일은 보고서, 프리젠테이션, 웹사이트 등에 사용할 수 있습니다."
+      ],
+      "usage_examples": [
+        "Example 1: 마케팅 팀이 새로운 제품의 시장 점유율을 시각화해야 하는 경우, Doughnut Chart Generator를 사용하여 각 경쟁사의 시장 점유율을 중앙이 빈 차트로 표현할 수 있습니다. 이 차트는 회의나 프리젠테이션에서 시각적으로 효과적으로 데이터를 전달할 수 있습니다.",
+        "Example 2: 프로젝트 관리자가 프로젝트 예산의 배분을 설명해야 하는 경우, 이 도구를 사용하여 각 항목에 대한 예산 비율을 도넛 차트로 표현할 수 있습니다. 이는 예산 관리 팀이 자원을 효율적으로 배분하는 데 도움이 됩니다.",
+        "Example 3: 교육 기관이 학생들의 전공 분포를 시각화해야 하는 경우, Doughnut Chart Generator를 활용하여 각 학과의 학생 비율을 중앙이 빈 차트로 표현할 수 있습니다. 이 차트는 입학 상담이나 학과 선택 시 참고 자료로 사용될 수 있습니다.",
+        "Example 4: 소셜 미디어 분석가가 특정 플랫폼에서의 사용자 활동을 분석해야 하는 경우, 이 도구를 사용하여 각 활동 유형의 비율을 도넛 차트로 표현할 수 있습니다. 이는 마케팅 전략의 효과성을 평가하는 데 유용한 정보를 제공합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de Gráficos Doughnut es una herramienta en línea que permite a los desarrolladores y diseñadores visualizar datos en formato de gráfico de anillo. Este tipo de gráfico es especialmente útil para representar proporciones y distribuciones, con la particularidad de contar con un espacio central vacío que puede utilizarse para añadir información adicional o logotipos. La herramienta ofrece una interfaz intuitiva que facilita la personalización de colores, etiquetas, y tamaños, permitiendo a los usuarios ajustar el diseño a sus necesidades específicas. Además, el Generador de Gráficos Doughnut permite exportar los resultados en formatos PNG y SVG, lo que garantiza una alta calidad y versatilidad para su uso en presentaciones, informes y sitios web. Esta herramienta es ideal para analistas de datos, diseñadores de gráficos y profesionales que necesitan presentar información de manera clara y atractiva.",
+      "usage_steps": [
+        "Paso 1: Accede al Generador de Gráficos Doughnut a través de la URL proporcionada y haz clic en el botón 'Nuevo Gráfico' para iniciar un proyecto.",
+        "Paso 2: En la sección 'Datos', introduce los valores que deseas representar en el gráfico. Puedes hacerlo manualmente o mediante la importación de un archivo CSV.",
+        "Paso 3: Personaliza el diseño del gráfico en la sección 'Estilo'. Aquí, puedes ajustar el radio interno y externo del anillo, seleccionar colores para cada segmento, y añadir etiquetas de texto.",
+        "Paso 4: Si lo deseas, utiliza la sección 'Centro' para añadir un título, una imagen o cualquier otro contenido que desees mostrar en el espacio central del gráfico.",
+        "Paso 5: Una vez que estés satisfecho con la apariencia del gráfico, haz clic en el botón 'Vista Previa' para ver cómo se verá el resultado final.",
+        "Paso 6: Si todo es correcto, utiliza las opciones de exportación para guardar el gráfico en formato PNG o SVG, según tus necesidades."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un analista de mercado puede utilizar el Generador de Gráficos Doughnut para representar la distribución de ventas por producto en un informe de rendimiento trimestral, destacando la proporción de cada producto con colores distintos y añadiendo el logotipo de la empresa en el centro del gráfico.",
+        "Ejemplo 2: Un diseñador web puede crear un gráfico doughnut para mostrar la distribución de visitantes por país en un panel de control de analytics, utilizando colores que coincidan con la paleta del sitio web y añadiendo un título en el centro del gráfico.",
+        "Ejemplo 3: Un profesor de estadística puede utilizar esta herramienta para crear ejemplos visuales de distribuciones de probabilidad, ayudando a los estudiantes a comprender conceptos abstractos de manera más intuitiva.",
+        "Ejemplo 4: Un gerente de proyectos puede generar un gráfico doughnut para visualizar la asignación de presupuesto en diferentes departamentos de una empresa, presentando la información de manera clara y profesional en reuniones con stakeholders."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Générateur de Diagrammes en Camembert Creux (Doughnut Chart Generator) est un outil en ligne dédié à la création de diagrammes en camembert avec un centre creux. Ce type de visualisation permet de représenter les proportions de différentes catégories tout en offrant un espace central qui peut être utilisé pour ajouter des informations supplémentaires ou pour un meilleur esthétisme. Cette fonctionnalité est particulièrement utile pour les développeurs et les designers qui souhaitent créer des tableaux de bord ou des présentations visuellement attrayantes. Les utilisateurs peuvent facilement personnaliser les couleurs, les étiquettes, et les tailles de chaque segment, puis exporter le graphique sous forme de fichier PNG ou SVG pour une intégration sans heurts dans leurs projets. Le Générateur de Diagrammes en Camembert Creux utilise des algorithmes de rendu optimisés pour garantir une qualité d'image supérieure, même à des tailles importantes. De plus, l'outil prend en charge l'importation de données via un format CSV, facilitant ainsi la création de diagrammes à partir de grandes quantités de données.",
+      "usage_steps": [
+        "Ouvrez le Générateur de Diagrammes en Camembert Creux et sélectionnez l'onglet \"Data Entry\" pour commencer à entrer vos données.",
+        "Dans le champ \"Categories\", saisissez les noms des différentes catégories que vous souhaitez représenter, séparées par des virgules.",
+        "Dans le champ \"Values\", entrez les valeurs numériques correspondant à chaque catégorie, également séparées par des virgules.",
+        "Personnalisez l'apparence de votre diagramme en utilisant les options du panneau \"Chart Settings\", y compris la palette de couleurs, la taille des étiquettes, et l'épaisseur des segments.",
+        "Si vous souhaitez ajouter un titre ou une légende, utilisez les champs correspondants dans l'onglet \"Labels & Legends\".",
+        "Une fois votre diagramme configuré, cliquez sur le bouton \"Export\" et choisissez le format de fichier souhaité (PNG ou SVG) pour télécharger votre visualisation."
+      ],
+      "usage_examples": [
+        "Un analyste financier utilise le Générateur de Diagrammes en Camembert Creux pour visualiser la répartition des investissements d'un portefeuille client. Il importe les données de son fichier CSV et personnalise les couleurs pour correspondre à la marque de l'entreprise, puis exporte le diagramme en SVG pour l'inclure dans un rapport mensuel.",
+        "Un responsable de marketing crée un diagramme en camembert creux pour présenter la répartition des dépenses publicitaires sur différentes plateformes (Facebook, Instagram, Google Ads). Il ajoute un titre et une légende claire, puis exporte le graphique en PNG pour l'utiliser dans une présentation PowerPoint.",
+        "Un ingénieur en données utilise l'outil pour montrer la distribution des bugs par module dans une application logicielle. Il personnalise les couleurs en fonction de la criticité des bugs et exporte le diagramme en SVG pour l'intégrer dans un tableau de bord de suivi des projets.",
+        "Un enseignant en statistiques crée un diagramme en camembert creux pour illustrer la répartition des notes d'un examen par classe. Il utilise différentes couleurs pour chaque classe et ajoute une légende détaillée. Le diagramme est ensuite exporté en PNG et utilisé dans une présentation de cours pour faciliter la compréhension des étudiants."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Doughnut Chart Generator ist ein Online-Werkzeug, das es Benutzern ermöglicht, Doughnut-Diagramme zu erstellen, die Proportionen in einer visuell ansprechenden Weise darstellen. Im Gegensatz zu herkömmlichen Kreisdiagrammen verfügen Doughnut-Diagramme über ein leeres Zentrum, das für zusätzliche Informationen oder eine bessere Lesbarkeit genutzt werden kann. Dieses Tool ist besonders nützlich für Datenanalytiker, Designer und Geschäftsleute, die komplexe Datenverhältnisse in einer übersichtlichen Form veranschaulichen müssen. Es nutzt moderne Web-Technologien, um die Darstellung der Daten in Echtzeit zu aktualisieren und ermöglicht es Benutzern, die Farbpalette, die Schriftarten und die Beschriftungen anzupassen. Die Diagramme können als PNG oder SVG-Dateien exportiert werden, wodurch sie leicht in verschiedene Dokumente und Präsentationen integriert werden können. Die Anwendung ist vollständig clientseitig und speichert keine Daten, was die Datenintegrität und den Datenschutz gewährleistet.",
+      "usage_steps": [
+        "Öffnen Sie die Doughnut Chart Generator Seite in Ihrem Webbrowser.",
+        "Klicken Sie auf den Button 'Daten hinzufügen', um Ihre Daten in das Eingabefeld einzutragen. Sie können die Daten manuell eingeben oder als CSV-Datei hochladen.",
+        "Wählen Sie unter 'Einstellungen' die gewünschten Farben, Schriftarten und Beschriftungen aus. Sie können auch die Breite des Ringes und die Größe des leeren Zentrums anpassen.",
+        "Utilisieren Sie die Option 'Labels' und 'Legenden', um die Beschriftungen zu personalisieren und die Lesbarkeit des Diagramms zu verbessern.",
+        "Vorschau des Diagramms ansehen, indem Sie auf 'Vorschau' klicken. Hier können Sie das Aussehen des Diagramms in Echtzeit überprüfen und anpassen, bis es Ihren Anforderungen entspricht.",
+        "Exportieren Sie das Diagramm als PNG oder SVG-Datei, indem Sie auf den entsprechenden Export-Button klicken. Diese Dateien können dann in andere Anwendungen importiert werden."
+      ],
+      "usage_examples": [
+        "Ein Marketing-Manager möchte die Verkaufszahlen verschiedener Produkte in einem Quartal vergleichen. Mit dem Doughnut Chart Generator kann er die Proportionen der Verkäufe visuell darstellen und das Diagramm in seine Präsentation einfügen.",
+        "Ein Finanzberater muss den Kunden die Aufteilung ihrer Investitionen verdeutlichen. Das Tool ermöglicht es ihm, die Anteile verschiedener Anlageklassen in einem klaren und übersichtlichen Format darzustellen.",
+        "Ein Lehrer möchte seinen Schülern die Verteilung der Noten in einer Klausur veranschaulichen. Durch die Nutzung des Doughnut Chart Generators kann er ein Diagramm erstellen, das die Notenverteilung in einer leicht verständlichen Form zeigt.",
+        "Ein Designer arbeitet an einem Infografik-Projekt und benötigt ein Doughnut-Diagramm, das gut mit dem restlichen Design harmoniert. Er kann die Farben, Schriftarten und Beschriftungen anpassen, um das Diagramm perfekt in sein Layout zu integrieren."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор Донатной Диаграммы представляет собой мощный онлайн-инструмент, позволяющий пользователям создавать и настраивать донатные диаграммы с лёгкостью. Донатные диаграммы, или круговые диаграммы с вырезанным центром, являются эффективным способом визуализации пропорций и долей в наборе данных. Они особенно полезны, когда важно выделить части целого, сохраняя при этом эстетическую привлекательность благодаря пустому центру. Этот инструмент позволяет пользователям загружать свои данные, выбирать различные стили и цветовые схемы, а также настраивать размеры сегментов и подписи. В результате можно экспортировать готовую диаграмму в форматах PNG и SVG для использования в отчётах, презентациях или веб-сайтах. Для разработчиков и дизайнеров, которым важно быстро и качественно представлять данные, Генератор Донатной Диаграммы является незаменимым инструментом, обеспечивающим высокую точность и кастомизацию.",
+      "usage_steps": [
+        "Шаг 1: Откройте страницу Генератора Донатной Диаграммы и нажмите кнопку «Загрузить данные» для импорта вашего набора данных в формате CSV или JSON.",
+        "Шаг 2: После загрузки данных, перейдите на вкладку «Строить диаграмму» и выберите параметр «Тип данных», чтобы указать, какие столбцы в вашем наборе данных будут использоваться для создания сегментов диаграммы.",
+        "Шаг 3: Настройте внешний вид диаграммы, используя панель «Настройки». Выберите цветовую схему, размер доната (диаметр отверстия), шрифт и размер подписей.",
+        "Шаг 4: Добавьте легенду к диаграмме, выбрав параметры отображения и расположения легенды в разделе «Легенда».",
+        "Шаг 5: Если необходимо, включите дополнительные опции, такие как отображение процентных значений и настройка порядка сегментов, используя соответствующие настройки в разделе «Дополнительные параметры». ",
+        "Шаг 6: После завершения настройки, нажмите кнопку «Экспортировать» и выберите формат файла (PNG или SVG) для сохранения вашей диаграммы."
+      ],
+      "usage_examples": [
+        "Пример 1: Маркетологи могут использовать Генератор Донатной Диаграммы для визуализации долей рынка различных конкурентов. Это поможет наглядно показать, какие компании занимают наибольшие и наименьшие доли рынка, что важно для стратегического планирования.",
+        "Пример 2: Финансовые аналитики могут создавать донатные диаграммы для представления распределения бюджета на различные проекты или статьи расходов. Такая диаграмма позволит быстро понять, какие категории расходов являются наиболее значимыми.",
+        "Пример 3: Преподаватели и студенты могут использовать этот инструмент для создания визуализаций результатов опросов или исследований. Например, диаграмма может показывать, как распределяются ответы на вопрос о предпочтениях студентов в выборе курсов.",
+        "Пример 4: Дизайнеры и разработчики веб-сайтов могут создавать донатные диаграммы для отображения статистики пользовательского поведения на сайте, такой как распределение времени, проведённого на различных страницах, или доли пользователей, перешедших с определённых источников трафика."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مولد الرسوم البيانية الدائرية هو أداة متقدمة تتيح للمستخدمين إنشاء رسوم بيانية دائرية ذات مركز فارغ بسهولة وفعالية. يقوم هذا الأداة بتحويل البيانات المدخلة إلى تمثيل بصرى دقيق يساعد في فهم النسب والتوزيعات المختلفة. يمكن استخدام هذه الأداة في مجموعة متنوعة من التطبيقات، مثل تحليل البيانات المالية، عرض نتائج الاستطلاعات، وتوضيح التوزيعات السكانية. تتميز أداة مولد الرسوم البيانية الدائرية بواجهة سهلة الاستخدام وخيارات تخصيص متقدمة، مما يسمح للمستخدمين بإضافة تسميات، تغيير الألوان، وضبط حجم القطاعات. يمكن تصدير الرسوم البيانية الناتجة كملفات PNG أو SVG للاستخدام في التقارير والعروض التقديمية. تساعد هذه الأداة في تبسيط عملية تحليل البيانات وتقديمها بطرق واضحة ومفهومة.",
+      "usage_steps": [
+        "أدخل البيانات في الحقول المخصصة لكل قطاع باستخدام الخيار 'أدخل البيانات' في الجانب الأيمن من الواجهة.",
+        "حدد نسبة كل قطاع بالنص المكتوب في الحقول المخصصة أو بالسحب والافلات باستخدام الخيار 'ضبط النسب' في الشريط العلوي.",
+        "اختر الألوان المناسبة لكل قطاع من خلال النقر على الزر 'اختيار الألوان' في الجانب الأيسر من الواجهة.",
+        "أضف تسميات للقطاعات باستخدام الخيار 'إضافة التسميات' في الشريط العلوي، ويمكنك تخصيص نوع الخط وحجمه.",
+        "ضبط حجم الفجوة في المركز من خلال الخيار 'حجم الفجوة' في الشريط العلوي، مما يسمح بتغيير حجم الفراغ في وسط الرسم البياني.",
+        "تصدير الرسم البياني النهائي كملف PNG أو SVG باستخدام الخيار 'تصدير' في الشريط العلوي."
+      ],
+      "usage_examples": [
+        "إظهار توزيع الاستثمارات المالية بين مختلف القطاعات، مثل العقارات، الأسهم، والشركات الناشئة، لمساعدة المستثمرين في اتخاذ قرارات مبنية على البيانات.",
+        "عرض نتائج استطلاع الرأي حول تفضيلات المستهلكين لمنتجات معينة، مما يساعد الشركات في فهم اتجاهات السوق وتطوير استراتيجيات تسويقية فعالة.",
+        "تحليل التوزيع السكاني في مدينة أو منطقة معينة حسب الفئات العمرية أو الجنس، مما يساعد في التخطيط الحضري وتقديم الخدمات المناسبة.",
+        "توضيح توزيع النفقات الشخصية بين مختلف الأقسام، مثل الإيجار، الغذاء، والترفيه، للمساعدة في إدارة الميزانية بشكل أفضل."
+      ]
+    }
+  }
+}

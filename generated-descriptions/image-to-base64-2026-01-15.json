@@ -1,0 +1,175 @@
+{
+  "slug": "image-to-base64",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Image to Base64 tool is designed to convert image files into Base64 encoded strings, a format that can be directly embedded into HTML and CSS files. This conversion is particularly useful for developers who need to minimize HTTP requests by embedding small images directly into their web pages, improving page load times and reducing server load. The tool supports a wide range of image formats, including PNG, JPEG, and GIF, and can handle files of varying sizes. By using Base64 encoding, the tool ensures that images are represented as plain text, making them easily integrable into web development projects. The process involves reading the binary data of the image, converting it into a Base64 string, and then providing this string in a format that can be used in HTML `<img>` tags or CSS `background-image` properties. This tool is especially beneficial for front-end developers and web designers who need a seamless way to manage and integrate images into their projects without the need for additional server resources.",
+      "usage_steps": [
+        "Step 1: Visit the Image to Base64 tool page on the developer website.",
+        "Step 2: Click on the 'Choose File' button to select the image you want to convert from your local device.",
+        "Step 3: Once the file is selected, the tool will automatically start the conversion process. You can monitor the progress in the status bar.",
+        "Step 4: After the conversion is complete, the Base64 encoded string will appear in the output box. You can adjust the format of the output by selecting 'URL' or 'Data URI' from the dropdown menu.",
+        "Step 5: Copy the Base64 string from the output box by clicking the 'Copy to Clipboard' button.",
+        "Step 6: Paste the Base64 string into your HTML or CSS file where you need to embed the image."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer is creating a responsive design for a mobile app and needs to embed small icons directly into the HTML to reduce the number of HTTP requests. Using the Image to Base64 tool, the developer converts the icon images to Base64 and embeds them in the HTML code.",
+        "Example 2: A front-end designer is working on a single-page application (SPA) and wants to ensure that the initial load time is minimized. By converting background images to Base64, the designer can include these images directly in the CSS file, avoiding additional server requests.",
+        "Example 3: A developer is building a web-based email template and needs to ensure that images are displayed correctly across different email clients. Converting images to Base64 using the tool ensures that the images are embedded directly into the email HTML, improving compatibility and reliability.",
+        "Example 4: A content creator is developing a static website using a content management system (CMS) that does not support dynamic image loading. By converting the images to Base64 and embedding them directly in the HTML, the creator can maintain a clean and efficient website structure."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Image to Base64 是一个强大的在线工具，用于将图像文件转换为Base64编码。Base64编码是一种将二进制数据转换为文本字符串的技术，广泛应用于HTML和CSS中。通过将图像转换为Base64编码，用户可以将图像直接嵌入到网页代码中，无需额外的服务器请求，从而提高网站的加载速度和用户体验。这种技术特别适用于小尺寸的图像，如图标和背景图案，可以显著减少HTTP请求的数量，优化网页性能。此外，Base64编码的图像还可以轻松嵌入到电子邮件和富文本编辑器中，提供更加灵活的使用方式。使用Image to Base64，用户只需上传图像文件，工具将自动生成Base64编码字符串，方便快捷地应用于各种Web开发场景。",
+      "usage_steps": [
+        "Step 1: 打开Image to Base64工具页面，点击“选择文件”按钮或直接将图像文件拖放到指定区域。",
+        "Step 2: 选择您需要转换的图像文件，支持多种格式如PNG、JPEG、GIF等。",
+        "Step 3: 等待文件上传和处理完成，工具将自动显示Base64编码字符串。",
+        "Step 4: 如果需要，您可以点击“复制”按钮将Base64编码字符串复制到剪贴板。",
+        "Step 5: 在HTML或CSS代码中，将复制的Base64编码字符串粘贴到适当的位置，例如作为背景图像或内联图像。",
+        "Step 6: 预览并测试您的网页，确保Base64编码的图像正确显示。"
+      ],
+      "usage_examples": [
+        "Example 1: 在设计电子邮件模板时，将公司标志转换为Base64编码，嵌入到HTML中，确保在各种电子邮件客户端中都能正确显示。",
+        "Example 2: 开发一个移动应用的Web界面，将常用的小图标（如导航图标）转换为Base64编码，减少HTTP请求，提升应用加载速度。",
+        "Example 3: 创建一个响应式网站，将背景图案转换为Base64编码，直接嵌入到CSS文件中，避免额外的服务器请求，优化页面加载时间。",
+        "Example 4: 在构建一个富文本编辑器时，允许用户上传图像并自动转换为Base64编码，实现在富文本内容中的即时预览和编辑。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Image to Base64 は、画像ファイルを Base64 エンコードに変換するオンラインツールです。Base64 エンコードは、画像データをテキスト形式に変換することで、HTML または CSS に直接埋め込むことが可能になります。これにより、ウェブページの読み込み速度が向上し、ファイルの管理が容易になります。特に、画像をデータ URI スキームとして使用することで、HTTP リクエストの回数を減らすことができ、ウェブパフォーマンスが向上します。また、Base64 はメールの添付ファイルやデータベースに画像を保存する際にも役立ちます。このツールは、画像の形式（JPEG、PNG、GIF など）を問わず、迅速かつ効率的に Base64 エンコードに変換します。エンコードされたデータは、そのまま HTML や CSS にコピーペーストするだけで使用できます。ユーザーは、ジェネレーターで提供されるオプションを通じて、エンコードのプロセスを細かく制御することも可能です。",
+      "usage_steps": [
+        "Step 1: ウェブサイトにアクセスし、「Image to Base64」ツールを選択します。",
+        "Step 2: 「画像ファイルを選択」ボタンをクリックし、変換したい画像ファイルを選択します。",
+        "Step 3: 画像がアップロードされると、自動的に Base64 エンコードが開始されます。",
+        "Step 4: エンコードが完了すると、結果が表示されます。このテキストをコピーします。",
+        "Step 5: テキストエリア内の「フォーマット選択」ドロップダウンから、HTML や CSS に適したフォーマットを選択します。",
+        "Step 6: 選択したフォーマットでコピーした Base64 テキストを、対象の HTML や CSS ファイルに貼り付けます。"
+      ],
+      "usage_examples": [
+        "Example 1: ウェブサイトのヘッダーに小さなロゴ画像を使用する場合、Base64 にエンコードすることで、HTTP リクエストを減らし、ページの読み込み速度を向上させることができます。",
+        "Example 2: メールテンプレートに画像を埋め込む際、Base64 エンコードを使用することで、メールクライアントが画像を直接読み込むことができ、メールの送受信がスムーズになります。",
+        "Example 3: ウェブアプリケーションでアイコンを複数使用する場合、各アイコンを Base64 にエンコードして CSS スプライトとして使用することで、ファイルの数を減らし、パフォーマンスを向上させることができます。",
+        "Example 4: データベースに画像を保存する際、Base64 エンコードすることで、画像データをテキスト形式で保存し、検索や管理が容易になります。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Image to Base64 도구는 사용자가 이미지 파일을 Base64 인코딩 형식으로 변환할 수 있도록 하는 온라인 플랫폼입니다. Base64 인코딩은 바이너리 데이터를 64개의 ASCII 문자로 표현하는 방법으로, 주로 이메일, 웹 페이지, 및 CSS에서 이미지를 포함시키는 데 활용됩니다. 이 도구는 개발자들이 이미지를 직접 서버에 업로드하지 않고도 웹 페이지나 앱에 즉시 포함시킬 수 있게 해줍니다. 또한, Base64 형식의 이미지는 웹 페이지 로딩 시간을 줄이고, HTTPS 연결에서 안전한 데이터 전송을 보장합니다. Image to Base64는 사용자가 다양한 형식의 이미지 파일을 처리할 수 있으며, 변환된 Base64 문자열을 클립보드에 복사하거나 직접 다운로드할 수 있습니다.",
+      "usage_steps": [
+        "Step 1: Image to Base64 도구 페이지를 열고 '이미지 업로드' 버튼을 클릭합니다.",
+        "Step 2: 파일 탐색기에서 변환하고자 하는 이미지 파일을 선택합니다.",
+        "Step 3: 이미지가 업로드되면, '변환' 버튼을 클릭하여 Base64 인코딩을 시작합니다.",
+        "Step 4: 변환 프로세스가 완료되면, 생성된 Base64 문자열이 화면에 표시됩니다.",
+        "Step 5: '복사' 버튼을 클릭하여 Base64 문자열을 클립보드에 복사합니다.",
+        "Step 6: 필요한 경우, '다운로드' 버튼을 클릭하여 Base64 문자열을 텍스트 파일로 저장할 수 있습니다."
+      ],
+      "usage_examples": [
+        "Example 1: 웹 개발자가 뉴스 포털의 로고 이미지를 스타일시트에 포함시키기 위해 Base64 인코딩을 사용합니다. 이를 통해 이미지 로딩 시간을 줄이고, 웹 페이지의 성능을 향상시킬 수 있습니다.",
+        "Example 2: 이메일 마케팅 전문가가 HTML 이메일에 로고 이미지를 포함시키기 위해 Base64 인코딩을 활용합니다. 이메일이 다양한 클라이언트에서 일관된 방식으로 표시되도록 하기 위함입니다.",
+        "Example 3: 프론트엔드 개발자가 단일 HTML 파일로 프로토타입을 생성할 때, 이미지를 Base64로 인코딩하여 파일 크기를 최소화하고 로딩 시간을 단축합니다.",
+        "Example 4: 보안 전문가가 웹 애플리케이션에서 사용되는 이미지의 무결성을 검증하기 위해 Base64 인코딩을 사용합니다. 이는 HTTPS 연결을 통해 안전하게 데이터를 전송하는 데 중요합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El conversor de imágenes a Base64, conocido como 'Image to Base64', es una herramienta esencial para desarrolladores y diseñadores web que buscan integrar imágenes de manera eficiente en sus proyectos sin necesidad de hacer referencia a archivos externos. Este proceso, conocido como embebido de imágenes, convierte los datos binarios de una imagen en una cadena de texto codificada en Base64, lo que permite incrustar la imagen directamente en el código HTML o CSS. Esto es especialmente útil para optimizar el rendimiento de las páginas web, ya que reduce el número de solicitudes HTTP necesarias para cargar una página. Además, facilita el envío de imágenes a través de APIs y la incorporación de imágenes en correo electrónico HTML. La herramienta 'Image to Base64' soporta diversos formatos de imagen, como JPEG, PNG, GIF y SVG, y ofrece opciones para personalizar el formato de salida, como la inclusión de prefijos MIME y el ajuste de la longitud de línea. La codificación en Base64 es un proceso estándar que se utiliza ampliamente en la web y en sistemas de comunicación, convirtiendo datos binarios en una representación ASCII que es segura para transmitir a través de medios de texto, como el correo electrónico y los sistemas de gestión de contenido.",
+      "usage_steps": [
+        "Paso 1: Visita la página de la herramienta 'Image to Base64' en el sitio web de tu elección.",
+        "Paso 2: Haz clic en el botón 'Seleccionar Imagen' para abrir el explorador de archivos de tu equipo.",
+        "Paso 3: Navega hasta la imagen que deseas convertir y haz clic en 'Abrir'.",
+        "Paso 4: Ajusta las opciones de salida, si es necesario. Puedes elegir incluir o no el prefijo MIME (por ejemplo, `data:image/png;base64,`) y definir la longitud máxima de cada línea de la cadena codificada.",
+        "Paso 5: Haz clic en el botón 'Convertir' para iniciar el proceso de codificación.",
+        "Paso 6: Una vez que se complete la conversión, copia la cadena de texto Base64 generada y pégala en tu código HTML o CSS en el lugar donde desees incrustar la imagen."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un diseñador web está creando un template de correo electrónico HTML y necesita incrustar varias imágenes pequeñas sin referencia a archivos externos. Utiliza 'Image to Base64' para convertir las imágenes en cadenas Base64 y las incrusta directamente en el código del correo.",
+        "Ejemplo 2: Un desarrollador de frontend está optimizando el rendimiento de una página de inicio crítica que incluye muchos íconos y logotipos pequeños. Convierte estas imágenes a Base64 y las embebe en el CSS para reducir el número de solicitudes HTTP y mejorar la velocidad de carga.",
+        "Ejemplo 3: Un creador de contenido está desarrollando una API que debe devolver imágenes como parte de su respuesta. Utiliza 'Image to Base64' para convertir las imágenes a formato Base64 y las incluye directamente en el JSON de respuesta de la API.",
+        "Ejemplo 4: Un diseñador gráfico está trabajando en un proyecto de animación en SVG y necesita embeber varias imágenes de fondo dentro del archivo SVG. Convierte las imágenes a Base64 y las inserta en el código SVG para asegurar que todas las imágenes se carguen correctamente en cualquier entorno."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Image to Base64 é uma ferramenta online que permite a conversão de imagens em codificação Base64. Este processo transforma a imagem em uma string de texto, que pode ser facilmente integrada em códigos HTML e CSS. A codificação Base64 é essencial para embedar imagens diretamente no código-fonte, o que pode melhorar o desempenho da página web ao reduzir o número de solicitações HTTP. Além disso, a string Base64 pode ser armazenada em bases de dados ou usada em ambientes onde o armazenamento de arquivos de imagem é limitado. Desenvolvedores e designers web usam esta ferramenta para otimizar a carga de páginas, reduzir a complexidade do gerenciamento de arquivos e melhorar a consistência visual em diferentes dispositivos e navegadores. A codificação é realizada de forma eficiente, garantindo que a qualidade da imagem seja mantida durante a conversão.",
+      "usage_steps": [
+        "Acesse a página do Image to Base64 no site de ferramentas de desenvolvimento.",
+        "Arraste e solte a imagem que deseja converter na área designada ou clique no botão 'Selecionar Imagem'.",
+        "Escolha o formato de saída desejado (por exemplo, `data:image/png;base64,` para PNG) usando o menu suspenso 'Formato de Saída'.",
+        "Clique no botão 'Converter' para iniciar o processo de codificação.",
+        "A ferramenta exibirá a string Base64 da imagem convertida em um campo de texto.",
+        "Copie a string Base64 e cole-a diretamente no seu código HTML ou CSS, onde a imagem será usada."
+      ],
+      "usage_examples": [
+        "Um designer web está criando um e-mail marketing e precisa embedar imagens diretamente no HTML para garantir que sejam exibidas corretamente em diferentes clientes de e-mail.",
+        "Um desenvolvedor está otimizando o carregamento de uma página web, reduzindo o número de solicitações HTTP. Ele usa o Image to Base64 para converter as imagens menores em strings Base64 e incluí-las diretamente no CSS.",
+        "Um programador de jogos web está desenvolvendo um jogo HTML5 e precisa armazenar as imagens de recursos em uma base de dados. Ele converte as imagens para Base64 e as salva como strings de texto.",
+        "Um criador de conteúdo está desenvolvendo um tema personalizado para um site WordPress e deseja garantir que as imagens de fundo sejam carregadas rapidamente. Ele utiliza o Image to Base64 para incluir as imagens diretamente no CSS do tema."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil Image to Base64 est conçu pour convertir des images en une chaîne de caractères Base64. Cette transformation est essentielle pour intégrer des images directement dans des documents HTML ou CSS, sans nécessiter de fichiers d'images séparés. La Base64 est une méthode d'encodage qui permet de représenter des données binaires sous forme de texte, utilisable dans des environnements où seuls les caractères ASCII sont autorisés. Cette technique est particulièrement utile pour les développeurs qui souhaitent optimiser le chargement de leurs sites web en réduisant le nombre de requêtes HTTP. En convertissant les images en Base64, les dossiers de projet deviennent plus propres et plus faciles à gérer, car les images sont directement incluses dans le code source. De plus, cela peut améliorer la performance en évitant l'ouverture de nouvelles connexions pour chaque image. L'outil Image to Base64 fonctionne en acceptant un fichier image en entrée, le convertissant en une chaîne Base64, puis en fournissant cette chaîne pour une utilisation immédiate dans vos fichiers HTML ou CSS.",
+      "usage_steps": [
+        "Accédez à la page de l'outil Image to Base64 sur le site.",
+        "Cliquez sur le bouton 'Choisir un fichier' pour sélectionner l'image que vous souhaitez convertir.",
+        "Après avoir sélectionné l'image, attendez que le processus de conversion soit terminé. Un message de confirmation vous indiquera que l'encodage a réussi.",
+        "Une fois l'encodage terminé, la chaîne Base64 apparaîtra dans la zone de texte située en bas de la page.",
+        "Copiez la chaîne Base64 générée. Vous pouvez le faire en cliquant sur le bouton 'Copier' situé à côté de la zone de texte.",
+        "Collez la chaîne Base64 dans votre fichier HTML ou CSS au lieu de l'URL de l'image."
+      ],
+      "usage_examples": [
+        "Un développeur front-end souhaite intégrer une petite icône sur une page web sans créer un fichier image supplémentaire. Il utilise l'outil Image to Base64 pour convertir l'icône en Base64 et l'intègre directement dans le CSS.",
+        "Un concepteur web travaille sur un projet qui doit être livré sous forme de fichier ZIP unique. Pour minimiser le nombre de fichiers, il convertit plusieurs images en Base64 et les inclut dans les fichiers HTML et CSS.",
+        "Un développeur back-end crée une application qui génère des rapports PDF. Pour inclure des images dans ces rapports, il convertit les images en Base64 et les insère dans le contenu du PDF.",
+        "Un ingénieur en SEO optimise un site web pour améliorer sa vitesse de chargement. En convertissant les images de faible poids en Base64, il réduit le nombre de requêtes HTTP, ce qui accélère le chargement des pages."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Tool 'Image to Base64' ermöglicht es Entwicklern, Bilddateien in eine Base64-kodierte Zeichenkette zu konvertieren. Diese Kodierung ist besonders nützlich, wenn Bilder direkt in HTML- oder CSS-Dateien eingebettet werden sollen, ohne dass auf externe Bildserver zurückgegriffen werden muss. Die Base64-Kodierung konvertiert Binärdaten in einen ASCII-Text, der ohne Verlust an Qualität im Quellcode integriert werden kann. Dies ist insbesondere für Webanwendungen von Vorteil, die kleine bis mittlere Bilder oder Icons enthalten, da es die Anzahl der HTTP-Anfragen reduziert und die Ladezeiten verbessert. Das Tool unterstützt verschiedene Bilddateiformate wie PNG, JPEG und GIF und ermöglicht es, die resultierende Base64-Zeichenkette direkt in den Quellcode zu kopieren oder als Textdatei herunterzuladen. Die Konvertierung erfolgt serverseitig, wodurch die Datenschutzbedenken minimiert werden, die mit der Verarbeitung sensibler Daten verbunden sein können.",
+      "usage_steps": [
+        "Öffnen Sie die Website des 'Image to Base64' Tools in Ihrem Webbrowser.",
+        "Klicken Sie auf den Button 'Bild auswählen', um die Bilddatei von Ihrem Computer hochzuladen.",
+        "Wählen Sie im Dropdown-Menü 'Dateiformat' das gewünschte Ausgabeformat, z.B. 'Text' oder 'Datei'.",
+        "Optional: Aktivieren Sie das Kontrollkästchen 'URL kodieren', um die Base64-Zeichenkette in eine URL-konforme Zeichenkette zu transformieren.",
+        "Klicken Sie auf den Button 'Konvertieren', um den Konvertierungsprozess zu starten.",
+        "Sobald die Konvertierung abgeschlossen ist, kopieren Sie die Base64-Zeichenkette oder laden Sie sie als Textdatei herunter."
+      ],
+      "usage_examples": [
+        "Ein Webentwickler embeddiert ein kleines Logo in die CSS-Datei einer Website, um die Anzahl der HTTP-Anfragen zu reduzieren und die Ladezeiten zu optimieren.",
+        "Ein Grafikdesigner erstellt eine Reihe von Icons und konvertiert sie in Base64, um sie direkt in eine HTML-E-Mail einbetten zu können, die auf verschiedenen Plattformen einheitlich angezeigt werden soll.",
+        "Ein Softwareentwickler verwendet das Tool, um ein benutzerdefiniertes Icon in eine mobile Anwendung zu integrieren, ohne eine externe Verbindung herstellen zu müssen.",
+        "Ein Frontend-Entwickler konvertiert mehrere kleine Bilder in Base64, um sie in einem CSS-Sprite zu kombinieren und so die Ladezeiten der Website weiter zu verbessern."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Image to Base64 преобразует изображения в строку Base64, которая может быть легко внедрена в HTML и CSS код. Этот процесс позволяет интегрировать изображения непосредственно в веб-страницы, что уменьшает количество HTTP-запросов и ускоряет загрузку сайта. Применение Base64-кодирования особенно полезно для мелких изображений, таких как иконки или логотипы, которые не требуют отдельного файла. Инструмент автоматически выполняет преобразование, сохраняя качество исходного изображения. Пользователи могут загружать изображения различных форматов (JPEG, PNG, GIF) и получать соответствующую строку Base64, которую можно сразу использовать в коде. Таким образом, этот инструмент упрощает процесс разработки и обеспечивает гибкость в управлении ресурсами.",
+      "usage_steps": [
+        "Шаг 1: Откройте страницу инструмента Image to Base64 на сайте.",
+        "Шаг 2: Нажмите кнопку «Выбрать файл» или перетащите изображение в область загрузки.",
+        "Шаг 3: Ожидайте, пока инструмент обработает изображение и сгенерирует строку Base64.",
+        "Шаг 4: Скопируйте сгенерированную строку Base64, используя кнопку «Копировать».",
+        "Шаг 5: Вставьте строку Base64 в ваш HTML или CSS код, например, в атрибут `src` тега `<img>` или в свойство `background-image` CSS.",
+        "Шаг 6: Сохраните изменения и проверьте, корректно ли отображается изображение на вашей веб-странице."
+      ],
+      "usage_examples": [
+        "Пример 1: Веб-разработчик использует Image to Base64 для встраивания логотипа компании в шапку HTML-страницы, минуя необходимость загрузки отдельного файла.",
+        "Пример 2: Дизайнер создает landing page и применяет инструмент для встраивания иконок социальных сетей, что улучшает время загрузки страницы и уменьшает объем передаваемых данных.",
+        "Пример 3: Разработчик мобильного приложения использует Image to Base64 для встраивания миниатюрных изображений в HTML-шаблоны, используемые в приложении, что ускоряет отображение контента.",
+        "Пример 4: Фронтенд-разработчик внедряет Base64-кодированные изображения в CSS спрайты, что позволяет объединить несколько изображений в один файл, уменьшая количество HTTP-запросов и повышая производительность сайта."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة Image to Base64 هي أداة قوية تحول الصور إلى ترميز Base64، وهو نظام ترميز يستخدم لتحويل البيانات الثنائية إلى نص قابل للقراءة. هذا الترميز يتيح دمج الصور مباشرة في ملفات HTML وCSS دون الحاجة إلى تخزينها كملفات منفصلة. هذا يمكن المطورين من تقليل عدد الطلبات HTTP، مما يحسن وقت التحميل للصفحات الويب ويحسن الأداء العام للموقع. بالإضافة إلى ذلك، يمكن استخدام ترميز Base64 للصور في رسائل البريد الإلكتروني HTML والمحتوى المضمن في التطبيقات الويب. الأداة تدعم مجموعة واسعة من تنسيقات الصور مثل PNG، JPEG، وSVG، مما يجعلها مفيدة للمطورين الذين يعملون على مشاريع ويب متنوعة. يمكن للمستخدمين بسهولة تحويل الصور إلى ترميز Base64 من خلال تحميل الصور مباشرة إلى الأداة، مما يجعل العملية بسيطة ومباشرة.",
+      "usage_steps": [
+        "افتح أداة Image to Base64 في متصفحك.",
+        "انقر على زر 'اختيار ملف' واختر الصورة التي تريد تحويلها من جهازك.",
+        "بعد تحميل الصورة، سترى معاينة للصورة في واجهة الأداة.",
+        "اختر الخيار ' INCLUDING DATA URI' إذا كنت ترغب في الحصول على السلسلة بتنسيق Data URI.",
+        "اضغط على زر 'تحويل إلى Base64' لبدء عملية التحويل.",
+        "ستظهر السلسلة النصية المترتبة على الشاشة، ويمكنك نسخها ولصقها مباشرة في الكود الخاص بك."
+      ],
+      "usage_examples": [
+        "يمكن لمطور الويب استخدام هذه الأداة لدمج الصور الصغيرة كأيقونات أو زخرفات مباشرة في CSS، مما يقلل من عدد الطلبات HTTP ويحسن أداء الصفحة.",
+        "في تصميم رسائل البريد الإلكتروني HTML، يمكن استخدام ترميز Base64 للصور لضمان ظهورها بشكل صحيح على جميع العملاء، حتى إذا كانت الصور مرفوعة على خوادم خارجية.",
+        "مطوري تطبيقات الويب يمكنهم استخدام هذه الأداة لدمج الصور بشكل مباشر في الكود، مما يسهل إدارة الموارد ويقلل من الحاجة إلى تخزين الصور كملفات منفصلة.",
+        "في مشاريع التصميم الجرافيكي، يمكن استخدام ترميز Base64 للصور في ملفات SVG لزيادة جودة الصور وتحسين التوافق مع مختلف المتصفحات."
+      ]
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "slug": "image-collage",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Image Collage tool is a sophisticated web application designed to merge multiple image files into a single, cohesive collage. Technically, it leverages advanced image processing algorithms to align and blend images seamlessly, ensuring that the final output maintains high resolution and clarity. Users can select from a variety of layout templates, each optimized for different aesthetic and practical purposes, such as creating social media posts, designing promotional materials, or compiling visual reports. The tool supports a wide range of image formats, including JPEG, PNG, and GIF, and it allows for precise control over image positioning, scaling, and rotation. Additionally, it includes features like background color customization and the ability to add text overlays, making it a versatile solution for both amateur and professional users. The Image Collage tool is particularly useful for content creators, marketers, and designers who need to quickly and efficiently create visually appealing collages for various projects.",
+      "usage_steps": [
+        "Step 1: Visit the Image Collage tool page and click on the 'Upload Images' button to select the images you want to include in your collage.",
+        "Step 2: Once the images are uploaded, choose a layout template from the 'Layout' dropdown menu. Options include 'Grid', 'Mosaic', 'Stack', and 'Freestyle'.",
+        "Step 3: Adjust the size and position of each image by dragging and dropping them within the collage canvas. Use the zoom controls to fine-tune the placement.",
+        "Step 4: Customize the background color or upload a custom background image by selecting the 'Background' tab and choosing your preferred option.",
+        "Step 5: Add text overlays by clicking the 'Text' button and entering your desired text. You can adjust the font, size, color, and position of the text.",
+        "Step 6: Preview your collage and make any final adjustments. When you are satisfied, click the 'Download' button to save your collage in your preferred format."
+      ],
+      "usage_examples": [
+        "Example 1: A social media manager is creating a promotional post for a new product launch. They use the Image Collage tool to combine multiple product images into a single, visually appealing collage that can be shared across various social media platforms.",
+        "Example 2: A photographer wants to showcase a series of landscape photos in a single image for a client presentation. They use the 'Mosaic' layout to create a balanced and aesthetically pleasing collage that highlights the beauty of each photo.",
+        "Example 3: A marketing team is designing a flyer for an upcoming event. They use the Image Collage tool to merge images of the event venue, speakers, and activities into a single flyer, adding text overlays for important details like date, time, and location.",
+        "Example 4: A blogger is writing a travel diary and wants to include a collage of photos from their trip. They use the 'Freestyle' layout to arrange the photos in a creative and personalized way, enhancing the storytelling aspect of their blog post."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Image Collage 是一款功能强大的图像处理工具，专为需要将多张图片合并成一张拼贴图的用户设计。该工具支持多种布局选项，用户可以根据具体需求选择最适合的拼贴方式。技术上，Image Collage 通过解析上传的图片文件，使用先进的图像处理算法，将这些图片按照用户选择的布局模式进行排列和调整，最终生成一张高质量的拼贴图。此外，工具还提供了背景颜色和边框样式等自定义选项，使得生成的拼贴图更加符合用户的审美需求。用户可以使用该工具来整合旅行照片、创建项目展示图、制作营销素材或进行创意设计，极大地提高了图像处理的效率和灵活性。",
+      "usage_steps": [
+        "Step 1: 打开 Image Collage 工具页面，点击“选择图片”按钮，从本地文件中选择你需要合并的图片。",
+        "Step 2: 选择图片后，工具会自动加载图片到工作区。在工作区上方的“布局”选项中，选择你需要的拼贴布局样式，例如 2x2、3x3 或自由布局。",
+        "Step 3: 在“调整”选项中，可以对图片的大小、位置进行微调，确保每张图片在拼贴图中的位置和比例符合你的需求。",
+        "Step 4: 在“背景”选项中，可以选择或自定义拼贴图的背景颜色，增加拼贴图的美观度。",
+        "Step 5: 如果需要，可以在“边框”选项中选择或自定义图片之间的边框样式和颜色，使拼贴图更加个性化。",
+        "Step 6: 完成所有设置后，点击“生成拼贴图”按钮，工具将生成最终的拼贴图，你可以选择下载或直接分享到社交媒体。"
+      ],
+      "usage_examples": [
+        "Example 1: 旅行爱好者可以在一次旅行中拍摄多张照片，使用 Image Collage 将这些照片拼接成一张精美的旅行纪念图，记录旅途的美好瞬间。",
+        "Example 2: 设计师在进行项目提案时，可以使用 Image Collage 将不同设计元素的图片拼接成一张展示图，直观地展示设计方案。",
+        "Example 3: 营销人员在制作广告宣传材料时，可以使用 Image Collage 将多个产品图片拼接成一张引人注目的广告图，提高广告效果。",
+        "Example 4: 学生在制作课程展示或报告时，可以使用 Image Collage 将多个研究结果的图片拼接成一张展示图，使报告内容更加丰富和直观。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Image Collageは、複数の画像を1つのコラージュに組み合わせることができるオンラインツールです。このツールは、画像の配置、サイズ調整、回転、切り抜き、効果の適用など、複数の画像編集機能を提供しています。ユーザーは、直感的なインターフェースを介して、多様なレイアウトオプションから選択し、カスタマイズすることができます。このツールは、デザイナーや写真愛好家、マーケティング専門家など、さまざまなユーザーに向けられており、迅速かつ効率的に複数の画像を統合する必要がある場面で活用されます。具体的には、ポスターやソーシャルメディア投稿、プレゼンテーション資料の作成など、視覚的に魅力的なコンテンツを生成するために利用されています。",
+      "usage_steps": [
+        "Step 1: ホームページの「画像を選ぶ」ボタンをクリックし、組み合わせたい画像をアップロードします。",
+        "Step 2: 画面上部の「レイアウト」タブを選択し、利用可能なレイアウトオプションから希望の配置を選択します。",
+        "Step 3: 各画像に対して、サイズ調整、回転、切り抜きなどの編集を適用します。これらの機能は、画面上部のツールバーからアクセスできます。",
+        "Step 4: 画像にフィルターやエフェクトを適用したい場合は、画面上部の「エフェクト」タブを選択し、利用可能なオプションから選択します。",
+        "Step 5: コラージュの全体的な外観に満足したら、画面上部の「保存」ボタンをクリックし、最終的な画像をダウンロードします。",
+        "Step 6: ダウンロードした画像を必要な形式（JPEG, PNGなど）で保存し、使用したいプラットフォームにアップロードします。"
+      ],
+      "usage_examples": [
+        "Example 1: ソーシャルメディアマーケティング担当者が、製品の複数の画像を1つの魅力的なポストにまとめるために使用します。それぞれの製品画像を異なるレイアウトに配置し、一貫性のある視覚的なストーリーを作成します。",
+        "Example 2: フォトグラファーが、写真展の宣伝用ポスターを作成するために使用します。異なる角度やシーンの写真を組み合わせ、視覚的に印象的なコラージュを作成します。",
+        "Example 3: イベントプランナーが、複数のイベントのハイライト画像を1つの写真にまとめることで、イベントの成功を紹介します。各画像を適切なレイアウトに配置し、全体的なメッセージを強調します。",
+        "Example 4: デザイナーが、新しい製品デザインのプレゼンテーション資料を作成するために使用します。製品のさまざまなビューを1つのスライドにまとめ、クライアントに一覧性のある形で提示します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Image Collage는 여러 이미지를 하나의 콜라주로 결합하는 강력한 도구입니다. 이 도구는 사용자가 다양한 레이아웃 옵션을 선택하여 이미지를 조합할 수 있도록 설계되었습니다. 이미지 콜라주 생성 과정에서는 이미지 리사이징, 위치 지정, 배경 설정, 효과 적용 등 다양한 기술적 요소가 포함됩니다. 이러한 기능들은 사용자가 원하는 디자인을 쉽게 구현할 수 있도록 지원합니다. Image Collage를 사용하면 디지털 아트, 포토그래피 프로젝트, 소셜 미디어 게시물, 프레젠테이션 등의 다양한 용도로 이미지를 효과적으로 활용할 수 있습니다.",
+      "usage_steps": [
+        "Step 1: Image Collage 웹사이트에 접속 후 '이미지 추가' 버튼을 클릭하여 결합할 이미지를 업로드하세요.",
+        "Step 2: 업로드된 이미지 목록에서 각 이미지를 드래그 앤 드롭하여 콜라주 레이아웃에 배치하세요.",
+        "Step 3: '레이아웃' 메뉴에서 원하는 레이아웃 스타일을 선택하세요. 다양한 그리드, 스택, 프리폼 레이아웃이 제공됩니다.",
+        "Step 4: '이미지 조정' 탭에서 각 이미지의 크기, 회전, 위치를 조정하고, 투명도, 색상 효과 등을 적용하세요.",
+        "Step 5: '배경 설정' 옵션에서 콜라주의 배경 색상, 이미지, 또는 그라디언트를 선택하여 사용하세요.",
+        "Step 6: 마지막으로, '다운로드' 버튼을 클릭하여 완성된 콜라주 이미지를 저장하세요."
+      ],
+      "usage_examples": [
+        "Example 1: 여행 사진 정리 - 여러 도시에서 찍은 사진을 하나의 콜라주로 결합하여 여행 경로를 한눈에 요약할 수 있습니다.",
+        "Example 2: 포트폴리오 제작 - 디자이너나 사진가가 다양한 작업물을 한 이미지에 모아 포트폴리오를 제작할 수 있습니다.",
+        "Example 3: 소셜 미디어 게시물 - 여러 사진을 결합하여 더 흥미로운 소셜 미디어 게시물을 만들 수 있습니다. 예를 들어, 이벤트 참가 사진이나 제품 사진 등을 활용할 수 있습니다.",
+        "Example 4: 가족 앨범 - 가족 모임에서 찍은 사진들을 콜라주로 만들어 추억을 간직할 수 있습니다. 이는 디지털 프레임이나 인쇄용 포스터로도 활용할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "Image Collage es una potente herramienta en línea que permite a los usuarios combinar múltiples imágenes en una sola composición, ofreciendo una variedad de opciones de diseño. Técnicamente, la herramienta utiliza algoritmos de procesamiento de imágenes para ajustar y alinear las imágenes seleccionadas, asegurando que la transición entre ellas sea suave y visualmente atractiva. Los usuarios pueden seleccionar entre diferentes plantillas de diseño, ajustar el tamaño y la posición de cada imagen, y aplicar efectos visuales como bordes y sombras. Esta herramienta es ideal para diseñadores gráficos, bloggers, y cualquier persona que necesite crear collages de imágenes para proyectos de redes sociales, presentaciones, o publicaciones en línea. La flexibilidad en la elección de diseños y la capacidad de personalización hacen de Image Collage una solución versátil para la creación de contenidos visuales impactantes.",
+      "usage_steps": [
+        "Paso 1: Navega a la página de Image Collage y haz clic en el botón 'Seleccionar Imágenes' para cargar las imágenes que deseas incluir en tu collage.",
+        "Paso 2: Ajusta el tamaño y la posición de cada imagen utilizando las herramientas de arrastrar y soltar. Puedes cambiar el tamaño de las imágenes manteniendo presionado el botón del mouse y moviéndolas en las esquinas.",
+        "Paso 3: Selecciona una plantilla de diseño desde la lista de opciones proporcionadas. Cada plantilla tiene un diseño único que puedes personalizar según tus necesidades.",
+        "Paso 4: Aplica efectos visuales como bordes, sombras, y filtros a las imágenes seleccionadas. Utiliza los controles deslizantes para ajustar la intensidad de los efectos.",
+        "Paso 5: Si es necesario, agrega texto a tu collage utilizando la herramienta de texto. Puedes elegir la fuente, el tamaño, y el color del texto.",
+        "Paso 6: Una vez que estés satisfecho con tu collage, haz clic en el botón 'Guardar' para descargar la imagen en tu dispositivo o compartirla directamente en redes sociales."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un blogger de viajes que desea crear un collage de sus fotos favoritas de un viaje reciente para compartir en Instagram. Utiliza Image Collage para seleccionar las mejores imágenes, aplicar un filtro uniforme, y agregar una leyenda descriptiva.",
+        "Ejemplo 2: Un diseñador gráfico que necesita preparar una presentación de un proyecto para un cliente. Usa Image Collage para combinar varios bocetos y conceptos en una sola imagen, facilitando la visualización y la explicación del diseño final.",
+        "Ejemplo 3: Un fotógrafo que quiere crear un portafolio digital para su sitio web. Con Image Collage, combina varias fotografías en un collage organizado, cada una con un borde y sombra para destacar la calidad de su trabajo.",
+        "Ejemplo 4: Un organizador de eventos que necesita diseñar una invitación digital para una fiesta de cumpleaños. Utiliza Image Collage para crear un collage de fotos de momentos divertidos con el anfitrión, agregando texto con los detalles de la fiesta."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Image Collage é uma ferramenta avançada de manipulação de imagens que permite aos usuários combinar várias imagens em uma única colagem, oferecendo uma variedade de opções de layout. Técnicamente, a ferramenta utiliza algoritmos de layout para organizar as imagens de maneira eficiente e esteticamente agradável. Os usuários podem escolher entre diferentes layouts predefinidos, ajustar o espaçamento entre as imagens, adicionar bordas e até mesmo aplicar filtros e efeitos visuais. A ferramenta é particularmente útil para designers gráficos, fotógrafos e qualquer pessoa que precise criar colagens para projetos de marketing, relatórios, ou apresentações. A capacidade de personalizar cada aspecto da colagem, desde o tamanho das imagens até a cor de fundo, torna o Image Collage uma solução versátil para uma ampla gama de necessidades criativas.",
+      "usage_steps": [
+        "Acesse a página do Image Collage no site e clique no botão 'Carregar Imagens'.",
+        "Selecione as imagens que deseja usar na colagem a partir do seu computador. Você pode carregar até 20 imagens de uma vez.",
+        "Na seção 'Layout', escolha um dos layouts predefinidos disponíveis ou personalize o seu próprio layout ajustando as opções de espaçamento, bordas e fundo.",
+        "Na aba 'Efeitos', adicione filtros e efeitos visuais às suas imagens para aprimorar a aparência da colagem.",
+        "Pré-visualize a colagem no visor ao vivo para garantir que tudo esteja conforme o desejado. Faça ajustes adicionais, se necessário.",
+        "Quando estiver satisfeito com o resultado, clique no botão 'Baixar Colagem' para salvar a imagem no seu computador em formato PNG ou JPEG."
+      ],
+      "usage_examples": [
+        "Um fotógrafo de casamentos deseja criar uma colagem visualmente atraente para usar em seus portfólios online, combinando as melhores fotos de diferentes casamentos para apresentar sua gama de habilidades.",
+        "Uma empresa de marketing precisa desenvolver um pôster promocional para um evento, combinando imagens de produtos, logotipos e fotografias de cenários relevantes para criar uma composição dinâmica e envolvente.",
+        "Um designer de interiores quer criar um mood board para apresentar a um cliente, combinando imagens de móveis, tecidos e layouts de espaços para visualizar a concepção geral do projeto.",
+        "Um blogueiro de viagem deseja produzir uma capa de postagem que combine fotos de diferentes destinos visitados em uma única imagem, destacando a diversidade e beleza das locações."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil Image Collage est conçu pour combiner plusieurs images en une seule composition, en offrant une multitude de layouts et d'options de personnalisation. Techniquement, il utilise des algorithmes de mise en page pour ajuster les images selon des modèles prédéfinis, tout en permettant aux utilisateurs de modifier manuellement la position, la taille et l'orientation de chaque image. Le processus de création d'une collage implique la sélection des images, leur importation dans l'interface, le choix d'un layout parmi ceux proposés, et l'ajustement des paramètres jusqu'à obtenir le résultat souhaité. Les utilisateurs peuvent également appliquer des filtres, des effets et des bordures pour améliorer l'esthétique du collage. L'outil est particulièrement utile pour les designers, les marketeurs et les amateurs de photographie qui souhaitent créer des visuels attractifs pour des publications sur les réseaux sociaux, des présentations ou des projets artistiques. Il offre une alternative rapide et efficace aux logiciels de retouche d'images plus complexes, tout en conservant un niveau de flexibilité et de contrôle élevé.",
+      "usage_steps": [
+        "Accédez à la page de l'outil Image Collage et cliquez sur le bouton 'Choisir des images' pour sélectionner les photos que vous souhaitez inclure dans votre collage.",
+        "Une fois les images chargées, utilisez le menu déroulant 'Layout' pour choisir le modèle de mise en page qui convient le mieux à votre projet. Vous pouvez sélectionner parmi plusieurs options, telles que 'Grille', 'Puzzle' ou 'Libre'.",
+        "Après avoir choisi un layout, vous pouvez ajuster manuellement la position et la taille de chaque image en les faisant glisser et en les redimensionnant directement sur la zone de travail.",
+        "Appliquez des filtres et des effets en utilisant les icônes situées dans la barre d'outils latérale. Vous pouvez choisir parmi une variété de filtres prédéfinis, ajouter des bordures, ou ajuster la luminosité et le contraste.",
+        "Si vous le souhaitez, ajoutez du texte à votre collage en cliquant sur l'icône 'Texte' et en saisissant votre message dans la zone de travail. Vous pouvez personnaliser la police, la taille et la couleur du texte.",
+        "Une fois que vous êtes satisfait de votre collage, cliquez sur le bouton 'Télécharger' pour enregistrer votre création sur votre ordinateur. Vous pouvez choisir le format de fichier (JPEG, PNG) et la qualité de l'image."
+      ],
+      "usage_examples": [
+        "Un photographe professionnel souhaite créer un portfolio en ligne pour présenter ses meilleures photos. En utilisant l'outil Image Collage, il peut combiner plusieurs clichés en un seul visuel attrayant, facile à partager sur son site web ou ses réseaux sociaux.",
+        "Une agence de marketing doit concevoir une publicité pour une campagne de vacances. L'outil Image Collage permet de créer un collage montrant différentes destinations avec des descriptions de texte, rendant la publicité plus engageante et informative.",
+        "Un étudiant en design graphique a besoin de réaliser une affiche pour un événement culturel. En utilisant l'outil, il peut intégrer des images d'artistes, des photos de lieux emblématiques et des éléments textuels pour créer une affiche visuellement riche et cohérente.",
+        "Un blogueur culinaire veut illustrer un article sur une recette avec plusieurs étapes. L'outil Image Collage aide à créer un collage regroupant les photos des ingrédients, des étapes de préparation et du résultat final, facilitant ainsi la compréhension de la recette par les lecteurs."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Image Collage Tool ermöglicht es Benutzern, mehrere Bilder in ein einzigartiges Kollage zu kombinieren, wobei eine Vielzahl von Layout-Optionen zur Verfügung steht. Technisch gesehen, lädt der Benutzer seine Bilder hoch, wählt ein Layout und kann verschiedene Einstellungen wie Größe, Position und Effekte anpassen. Das Tool nutzt moderne Webtechnologien wie HTML5, CSS3 und JavaScript, um eine benutzerfreundliche Oberfläche und schnelle Bildverarbeitung zu gewährleisten. Die Verarbeitung erfolgt clientseitig, was bedeutet, dass die Bilder nicht auf einen Server hochgeladen werden, sondern direkt im Browser bearbeitet werden. Dies gewährleistet nicht nur eine schnellere Bearbeitung, sondern auch eine höhere Datensicherheit und Privatsphäre.\n\nDie Bedeutung des Image Collage Tools liegt in der Fähigkeit, visuell ansprechende Kollagebilder zu erstellen, die für verschiedene Zwecke verwendet werden können. Designkünstler können damit kreative Visitenkarten, Poster oder Social-Media-Inhalte erstellen. Fotografen können eine Geschichte erzählen, indem sie mehrere Bildmomente in einem einzigen Bild zusammenführen. Für Marketingzwecke kann das Kollage Tool dazu verwendet werden, um Produkte oder Ereignisse in einem attraktiven Format darzustellen.\n\nDas Tool bietet eine intuitive Benutzeroberfläche, bei der Benutzer verschiedene Layouts auswählen und anpassen können. Es unterstützt verschiedene Bildformate und ermöglicht die Hinzufügung von Text, Rahmen und visuellen Effekten, um das Kollage individuell zu gestalten.",
+      "usage_steps": [
+        "Öffnen Sie das Image Collage Tool in Ihrem Browser und klicken Sie auf den Button 'Bilder hochladen', um Ihre Bilder auszuwählen.",
+        "Nach dem Hochladen erscheinen die Bilder in der Vorschau. Wählen Sie ein Layout aus der vorgegebenen Palette, z.B. '2x2 Quadrat' oder 'Frei positionierbar'.",
+        "Passen Sie die Größe und Position der Bilder im Layout an, indem Sie sie ziehen und vergrößern oder verkleinern.",
+        "Fügen Sie zusätzliche Elemente hinzu, wie Text, Rahmen oder visuelle Effekte, indem Sie die entsprechenden Optionen in der Werkzeugleiste auswählen.",
+        "Bewerten Sie das fertige Kollage in der Vorschau und passen Sie es bei Bedarf weiter an.",
+        "Speichern Sie das endgültige Kollagebild, indem Sie auf den Button 'Kollage speichern' klicken und den gewünschten Speicherort auf Ihrem Gerät auswählen."
+      ],
+      "usage_examples": [
+        "Ein Fotograf möchte eine Serie von Reisebildern in einem einzigen Bild präsentieren, um eine visuelle Geschichte zu erzählen. Er nutzt das Image Collage Tool, um die Bilder in einem freien Layout zu kombinieren und ergänzt sie mit Text, der die Orte beschreibt.",
+        "Eine Marketingagentur erstellt ein Poster für ein Musikfestival, auf dem verschiedene Bands und Auftritte dargestellt werden sollen. Mit dem Image Collage Tool kombiniert sie Fotos der Bands in einem kreativen Layout und fügt Elemente wie Logos und Termininformationen hinzu.",
+        "Ein Social-Media-Manager plant einen Instagram-Beitrag, der verschiedene Produkte eines Online-Shops zeigt. Er verwendet das Image Collage Tool, um die Produktbilder in einem attraktiven 2x2-Quadrat-Layout zu kombinieren und ergänzt das Bild mit Markenlogos und Werbetexten.",
+        "Ein Designkünstler arbeitet an einem kreativen Projektablau für eine Galerieausstellung. Mit dem Image Collage Tool erstellt er eine Komposition aus verschiedenen Kunstwerken und experimentiert mit verschiedenen Layouts und visuellen Effekten, um die bestmögliche Darstellung zu finden."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Image Collage представляет собой мощное решение для создания сложных коллажей из нескольких изображений. Технически, этот инструмент позволяет пользователям загружать до 20 изображений и объединять их в единое изображение с использованием различных макетов и настроек. Он поддерживает форматы JPEG, PNG и GIF, обеспечивая гибкость в работе с различными типами изображений. Основные функции включают автоматическое и ручное позиционирование элементов, настройку размеров и прозрачности, а также применение фильтров и эффектов. Это делает его идеальным инструментом для дизайнеров, маркетологов и обычных пользователей, которые стремятся создавать уникальный визуальный контент. Например, маркетологи могут использовать Image Collage для создания привлекательных визуальных объявлений, объединяя несколько продуктов в одном изображении. Дизайнеры же могут использовать его для создания коллажей для портфолио или презентаций, в то время как обычные пользователи могут использовать его для создания памятных коллажей из личных фотографий. Инструмент работает на основе веб-технологий, таких как HTML5, CSS3 и JavaScript, что обеспечивает плавное и быстрое взаимодействие.",
+      "usage_steps": [
+        "1. Перейдите на страницу инструмента Image Collage и нажмите кнопку «Загрузить изображения» для добавления ваших файлов. Вы можете загрузить до 20 изображений.",
+        "2. После загрузки изображений выберите макет для коллажа из предложенных вариантов: «Грид», «Свободное позиционирование», «Кирпичная кладка» или «Кастомный».",
+        "3. Нажмите на каждое изображение, чтобы настроить его размеры, позицию и прозрачность. Используйте инструменты для перемещения и масштабирования изображений на рабочем поле.",
+        "4. Примените фильтры и эффекты к отдельным изображениям или ко всему коллажу, используя меню «Фильтры и эффекты». Выберите из предустановленных вариантов или настройте свои собственные.",
+        "5. После завершения настройки, нажмите кнопку «Сохранить» для экспорта вашего коллажа в формате JPEG, PNG или GIF. Вы можете выбрать нужное разрешение и качество изображения.",
+        "6. Скачайте готовый коллаж на свой устройство или поделитесь им напрямую из инструмента, используя опции для отправки по электронной почте или публикации в социальных сетях."
+      ],
+      "usage_examples": [
+        "Пример 1: Маркетолог создает рекламное объявление, объединяя несколько продуктов в одном изображении. Используя различные макеты и фильтры, он создает привлекательный визуальный контент для социальных сетей.",
+        "Пример 2: Дизайнер портфолио использует Image Collage для создания коллажа из нескольких проектов, чтобы показать разнообразие своей работы. Он применяет кастомные настройки, чтобы каждый проект выглядел ярко и заметно.",
+        "Пример 3: Свадебный фотограф создает памятный коллаж из снимков со свадьбы, объединяя их в единую композицию. Он использует инструменты для настройки прозрачности и добавления текста, чтобы создать уникальный подарок для молодоженов.",
+        "Пример 4: Образовательный блогер создает учебные материалы, объединяя несколько иллюстраций или диаграмм в одном изображении. Он использует свободное позиционирование для точного размещения элементов и добавляет подписи для объяснения."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة Image Collage هي منصة متقدمة مصممة لدمج عدة صور في صورة واحدة مع مجموعة متنوعة من خيارات التخطيط. تستخدم الأداة تقنيات معالجة الصور المتطورة لضمان أن التكوين النهائي يحافظ على جودة الصور الأصلية بينما يوفر مجموعة واسعة من الخيارات لتخصيص التخطيط. تتيح هذه الأداة للمستخدمين اختيار الأطر المختلفة، والتأثيرات البصرية، وأدوات التحرير المخصصة لخلق تجارب بصرية فريدة. تعتبر Image Collage ضرورية لمصممي الجرافيك، والمصورين، والأفراد الذين يرغبون في إنشاء تصاميم مبتكرة لمشاريع شخصية أو احترافية. يمكن استخدامها لإنشاء كولاجات الصور للأحداث الاجتماعية، الترويجات التجارية، أو حتى لتصميم اللافتات الإعلانية.",
+      "usage_steps": [
+        "افتح أداة Image Collage في المتصفح الخاص بك وانقر على زر 'اختيار الصور' لتحميل الصور التي ترغب في دمجها.",
+        "بعد تحميل الصور، اختر التخطيط المفضل لديك من القائمة المنسدلة 'التخطيط'، والتي تشمل خيارات مثل الشبكة، الدوامة، والقلب.",
+        "استخدم أداة التحرير لضبط حجم ووضع كل صورة داخل التخطيط. يمكنك تكبير أو تصغير الصور، وتحريكها يمينًا أو يسارًا.",
+        "أضف الإطارات والتأثيرات البصرية باستخدام الأدوات المتاحة في القسم 'التخصيص'. يمكنك اختيار الإطارات الملونة، أو تطبيق تأثيرات مثل الرسوم المتحركة.",
+        "قم باختيار خلفية للكولاج من قسم 'الخلفيات'. يمكنك استخدام خلفيات صلبة أو صور خلفية محددة.",
+        "عندما تكون راضيًا عن الكولاج، انقر على زر 'حفظ' لتنزيل الصورة النهائية بتنسيق PNG أو JPEG."
+      ],
+      "usage_examples": [
+        "إنشاء كولاج للذكرى السنوية: استخدم Image Collage لإنشاء كولاج يجمع أفضل لحظات العام الماضي، واضف إليه تأثيرات و Frames لجعله يبدو أكثر احترافية.",
+        "تصميم إعلان ترويجي: اجمع صورًا لمجموعة من المنتجات في كولاج واحد، واستخدم أدوات التحرير لإضافة نصوص ترويجية ووجوه تعبيرية.",
+        "إعداد كولاج للحفلات الاجتماعية: أنشئ كولاجًا من صور أصدقائك وعائلتك في حفلة خاصة، واستخدم خيارات التخطيط المتنوعة لإضفاء لمسة خاصة.",
+        "تصميم غلاف للمدونة: استخدم Image Collage لإنشاء غلاف مميز لمقال في مدونتك، دمج صور متعددة في تخطيط متوافق مع موضوع المقال."
+      ]
+    }
+  }
+}

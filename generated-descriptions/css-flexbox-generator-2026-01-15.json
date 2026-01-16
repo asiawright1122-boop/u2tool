@@ -1,0 +1,175 @@
+{
+  "slug": "css-flexbox-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The CSS Flexbox Generator is a powerful, interactive tool designed to streamline the creation of responsive and adaptable layouts using the CSS Flexbox model. This tool provides developers with a visual interface to manipulate and generate complex Flexbox properties, ensuring that the output is both accurate and optimized for modern web standards. Users can experiment with various Flexbox configurations, such as setting the `flex-direction`, `align-items`, and `justify-content` properties, and see the results in real-time. The live preview feature allows developers to fine-tune their layouts without the need for manual coding and testing, significantly reducing development time and improving the overall user experience. This tool is particularly useful for frontend developers who need to create flexible and responsive designs that work seamlessly across different devices and screen sizes. By leveraging the CSS Flexbox Generator, developers can focus more on the creative aspects of their projects and less on the technical intricacies of CSS, making it an indispensable resource in the modern web development toolkit.",
+      "usage_steps": [
+        "Step 1: Open the CSS Flexbox Generator and familiarize yourself with the main interface, which includes the Flexbox container settings and the live preview area.",
+        "Step 2: Select the `flex-direction` property from the dropdown menu (options include `row`, `row-reverse`, `column`, and `column-reverse`). Observe how the direction of the flex items changes in the live preview.",
+        "Step 3: Adjust the `align-items` property to control the alignment of flex items along the cross axis. Choose from `stretch`, `flex-start`, `flex-end`, `center`, and `baseline`.",
+        "Step 4: Set the `justify-content` property to control the distribution of flex items along the main axis. Options include `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, and `space-evenly`.",
+        "Step 5: Fine-tune the layout by adjusting the `flex-wrap` property to control whether the flex items should wrap to the next line. Options are `nowrap`, `wrap`, and `wrap-reverse`.",
+        "Step 6: Once you are satisfied with the layout, click the 'Generate CSS' button to obtain the corresponding CSS code, which you can then copy and paste into your project."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer is creating a responsive navigation bar for a website. Using the CSS Flexbox Generator, they can quickly set the `flex-direction` to `row` and `justify-content` to `space-between` to evenly distribute the navigation links across the screen, ensuring a clean and user-friendly design.",
+        "Example 2: A designer is working on a portfolio page with a grid of project thumbnails. By setting the `flex-wrap` to `wrap` and `justify-content` to `space-evenly`, they can create a visually balanced layout that adjusts dynamically to different screen sizes, enhancing the user experience.",
+        "Example 3: A frontend developer is building a mobile app interface and needs to center a button within a container. Using the `align-items` property set to `center` and `justify-content` set to `center`, they can achieve perfect centering with minimal effort.",
+        "Example 4: A team is developing a dashboard with multiple widgets that need to be aligned in a specific order. By using the `order` property in the Flexbox Generator, they can easily reorder the widgets without changing the HTML structure, making the layout more flexible and maintainable."
+      ]
+    },
+    "zh": {
+      "detailed_description": "CSS Flexbox Generator 是一个强大的在线工具，专为前端开发人员设计，用于快速生成复杂的 CSS Flexbox 布局。通过直观的用户界面，开发人员可以实时预览和调整 Flexbox 布局的各个参数，从而更加高效地构建响应式和灵活的网页布局。该工具不仅支持基本的 Flexbox 属性设置，如 `justify-content`、`align-items` 和 `flex-direction`，还提供了高级选项，如 `flex-wrap`、`align-content` 和 `flex-grow`，帮助用户创建更加复杂的布局效果。CSS Flexbox Generator 通过即时反馈和详细的代码生成，大大减少了手动编码的时间和复杂度，确保了代码的准确性和一致性。无论是初学者还是经验丰富的开发人员，都可以利用此工具快速实现所需的设计效果。",
+      "usage_steps": [
+        "Step 1: 打开 CSS Flexbox Generator 页面，选择或输入容器的宽度和高度。",
+        "Step 2: 在“布局设置”区域，选择 `flex-direction`（主轴方向）和 `flex-wrap`（换行方式），以确定子元素的排列方式。",
+        "Step 3: 调整 `justify-content`（主轴对齐）和 `align-items`（交叉轴对齐）的值，以精确控制子元素在容器中的位置。",
+        "Step 4: 如果需要控制多行布局，可以使用 `align-content` 属性进行调整。",
+        "Step 5: 在“子元素设置”区域，添加或删除子元素，并设置每个子元素的 `flex-grow`、`flex-shrink` 和 `flex-basis` 属性。",
+        "Step 6: 查看右侧的实时预览效果，满意后点击“生成代码”按钮，将生成的 CSS 代码复制到您的项目中。"
+      ],
+      "usage_examples": [
+        "Example 1: 在设计一个响应式的导航栏时，可以使用 CSS Flexbox Generator 来确保导航项在不同屏幕尺寸下均匀分布，同时保持居中对齐。",
+        "Example 2: 构建一个产品展示页面时，可以利用此工具快速调整产品卡片的布局，使其在不同设备上都能保持整齐排列。",
+        "Example 3: 开发一个动态列表时，可以通过设置 `flex-wrap` 和 `align-content` 属性，使列表项在多行布局中均匀分布。",
+        "Example 4: 在创建一个复杂的仪表板时，可以使用 CSS Flexbox Generator 来管理多个模块的布局，确保每个模块在不同屏幕尺寸下都能正确显示。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "CSS Flexbox Generatorは、視覚的なインターフェースを提供し、ユーザーがFlexboxレイアウトを直感的に設計し、即座にCSSコードを生成できるツールです。このツールは、Webデザイナーや開発者が複雑なレイアウトを迅速に構築するための強力な手段を提供します。ユーザーは、要素の配置、サイズ、配置方法をリアルタイムで調整しながら、その即座の結果をライブプレビューで確認できます。具体的には、Flex容器の方向（行や列）、アイテムの配置（中央寄せ、均等配置など）、アイテムのサイズ（固定幅や自動調整など）を細かく設定できます。また、Flexboxの主要なプロパティ（justify-content, align-items, align-content, flex-directionなど）を調整することで、様々なレイアウトを作成することが可能です。このツールは、特にレスポンシブデザインにおいて、異なるデバイスや画面解像度に適応するレイアウトを効率的に作成するのに役立ちます。",
+      "usage_steps": [
+        "1. CSS Flexbox Generatorのページを開き、メインパネルに表示されるFlex容器をクリックします。",
+        "2. 左側のサイドバーメニューから「Flex Direction」を選択し、容器の主軸方向（行または列）を設定します。",
+        "3. 「Justify Content」オプションを使用して、アイテムの主軸方向の配置方法（開始位置、中央、終了位置など）を指定します。",
+        "4. 「Align Items」セクションで、アイテムの交差軸方向の配置（開始位置、中央、終了位置、基線など）を調整します。",
+        "5. 「Flex Wrap」設定を有効にすることで、アイテムが複数行に折り返されるかどうかを決定します。",
+        "6. 最後に、生成されたCSSコードを「CSS Code」タブからコピーし、自分のプロジェクトに貼り付けて使用します。"
+      ],
+      "usage_examples": [
+        "1. モバイルファーストのWebサイトを設計する際、異なる画面サイズに対応するレスポンシブなヘッダーを作成する。CSS Flexbox Generatorを使用して、ヘッダー内の要素を中央寄せにして、幅が狭くなると自動的に折り返されるように設定します。",
+        "2. eコマースサイトの商品リストページで、商品カードを均等に並べ、中央寄せにする。Flexboxの justify-content と align-items を使用して、カードが均等に配置され、中央に配置されるように調整します。",
+        "3. 複数のボタンを含むナビゲーションバーを作成する際、ボタンを左右に均等に配置し、中央にロゴを配置する。Flexboxの space-between と center アライメントを使用して、ボタンとロゴの配置を調整します。",
+        "4. ブログサイトの記事リストページで、タイトル、投稿日、著者名を横並びに表示する。Flexboxの flex-direction を row に設定し、アイテムの配置を調整することで、必要なレイアウトを実現します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "CSS Flexbox Generator는 사용자가 시각적으로 CSS Flexbox 레이아웃을 생성하고 실시간 미리보기로 확인할 수 있는 도구입니다. 이 도구는 복잡한 Flexbox 속성을 이해하고 적용하는 데 어려움을 겪는 개발자를 위해 설계되었습니다. 사용자는 간단한 드래그 앤 드롭 인터페이스를 통해 요소의 정렬, 방향, 간격 등을 조정할 수 있으며, 이 과정에서 생성되는 CSS 코드를 실시간으로 확인할 수 있습니다. 이 도구는 웹 애플리케이션의 레이아웃을 빠르게 프로토타이핑하거나, 기존 프로젝트의 CSS 코드를 최적화하는 데 매우 유용합니다. 또한, 개발자들이 Flexbox의 다양한 속성과 기능을 실험하고 배우는 데도 도움이 됩니다.",
+      "usage_steps": [
+        "1. CSS Flexbox Generator 웹사이트를 방문합니다.",
+        "2. 'Flex Container' 섹션에서 컨테이너의 방향(행 또는 열), 정렬(axis, cross-axis), 정렬 방법(justify-content, align-items) 등을 설정합니다.",
+        "3. 'Flex Items' 섹션에서 개별 요소의 크기, 순서, 정렬 등을 조정합니다. 드래그 앤 드롭으로 요소의 위치를 변경할 수 있습니다.",
+        "4. 'Advanced Settings' 섹션에서 간격(gap), 감당 가능한 크기(flex-basis), 성장(flex-grow), 축소(flex-shrink) 등의 세부 설정을 조정합니다.",
+        "5. 'Live Preview' 섹션에서 설정한 Flexbox 레이아웃을 실시간으로 확인합니다. 레이아웃이 원하는 대로 동작하는지 확인하세요.",
+        "6. 'Copy CSS' 버튼을 클릭하여 생성된 CSS 코드를 클립보드에 복사하고, 프로젝트에 붙여넣습니다."
+      ],
+      "usage_examples": [
+        "예시 1: 반응형 웹사이트를 개발할 때, 여러 디바이스 크기에 맞는 레이아웃을 빠르게 프로토타이핑하고자 할 때 이 도구를 사용할 수 있습니다. Flexbox를 통해 요소의 크기와 위치를 쉽게 조정할 수 있습니다.",
+        "예시 2: 기존 웹 페이지의 레이아웃을 최적화하고자 할 때, 이 도구를 사용하여 CSS 코드를 분석하고 개선할 수 있습니다. 실시간 미리보기 기능을 통해 변경 사항이 어떻게 적용되는지 확인할 수 있습니다.",
+        "예시 3: 웹 개발 초보자들이 Flexbox의 다양한 속성과 기능을 이해하고 실험하고자 할 때, 이 도구는 학습 도구로 활용될 수 있습니다. 간단한 인터페이스를 통해 복잡한 CSS 속성을 직관적으로 이해할 수 있습니다.",
+        "예시 4: 레이아웃이 매우 복잡한 웹 애플리케이션을 개발할 때, 이 도구를 사용하여 요소의 정렬, 간격, 순서 등을 미세 조정할 수 있습니다. 이를 통해 사용자 경험을 크게 개선할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de CSS Flexbox es una herramienta visual que permite a los desarrolladores web crear y manipular diseños flexibles de manera intuitiva. Este generador utiliza las propiedades de CSS Flexbox para facilitar la creación de layouts responsivos y adaptables. Los usuarios pueden ajustar las propiedades de flex-direction, justify-content, align-items y otras, viendo en tiempo real cómo estos cambios afectan la disposición de los elementos en la pantalla. Esta herramienta es esencial para desarrolladores que buscan optimizar el proceso de diseño sin tener que escribir manualmente largos bloques de código CSS. Además, proporciona un entorno de prueba seguro donde se pueden experimentar con diferentes configuraciones antes de implementarlas en proyectos reales. El Generador de CSS Flexbox es especialmente útil para proyectos que requieren una alta flexibilidad en la disposición de elementos, como interfaces de usuario dinámicas y diseño de grid responsive.",
+      "usage_steps": [
+        "Paso 1: Abre el Generador de CSS Flexbox en tu navegador y selecciona el contenedor principal en el panel izquierdo.",
+        "Paso 2: En el panel de propiedades, ajusta la propiedad 'flex-direction' para determinar la dirección del eje principal (row, row-reverse, column, column-reverse).",
+        "Paso 3: Modifica la propiedad 'justify-content' para alinear los elementos a lo largo del eje principal (flex-start, flex-end, center, space-between, space-around, space-evenly).",
+        "Paso 4: Configura la propiedad 'align-items' para alinear los elementos a lo largo del eje cruzado (flex-start, flex-end, center, baseline, stretch).",
+        "Paso 5: Agrega o elimina elementos flexibles dentro del contenedor principal usando los botones '+' y '-' en el panel de elementos.",
+        "Paso 6: Observa los cambios en tiempo real en el panel de vista previa y copia el código CSS generado para usarlo en tu proyecto."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador de una aplicación web de comercio electrónico utiliza el Generador de CSS Flexbox para crear una galería de productos que se ajusta automáticamente a diferentes tamaños de pantalla, asegurando una experiencia de usuario consistente en dispositivos móviles y de escritorio.",
+        "Ejemplo 2: Un diseñador web que trabaja en un sitio de noticias necesita una barra lateral que se alinee perfectamente con el contenido principal. Utiliza el generador para ajustar las propiedades de alineación y distribución de los elementos, logrando un diseño armonioso y responsive.",
+        "Ejemplo 3: Un equipo de desarrollo de una plataforma de aprendizaje en línea utiliza el generador para crear una interfaz de usuario que organiza los cursos y los módulos de manera clara y visualmente atractiva, facilitando la navegación del usuario.",
+        "Ejemplo 4: Un freelancer que diseña plantillas de sitios web para clientes utiliza el Generador de CSS Flexbox para prototipar rápidamente diseños de header y footer, asegurando que estos sean adaptables y responsive en diferentes dispositivos y resoluciones de pantalla."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O CSS Flexbox Generator é uma poderosa ferramenta online que permite a criação de layouts flexíveis utilizando a tecnologia CSS Flexbox. Esta ferramenta oferece uma interface visual intuitiva que permite aos desenvolvedores manipular diretamente os elementos do layout, ajustando propriedades como `justify-content`, `align-items`, e `flex-direction`, entre outras. A partir de uma interface de arrastar e soltar, os usuários podem construir layouts complexos em questão de minutos, com um preview ao vivo que atualiza instantaneamente conforme as alterações são feitas.\n\nO CSS Flexbox Generator é essencial para desenvolvedores e designers que buscam agilidade e precisão na criação de layouts responsivos. Com o aumento da demanda por interfaces web adaptáveis a diferentes tamanhos de tela, a flexibilidade proporcionada pelo Flexbox torna-se crucial. Esta ferramenta elimina a necessidade de escrever manualmente códigos CSS complexos, permitindo que os usuários experimentem diferentes configurações e visualizem os resultados em tempo real.\n\nA ferramenta suporta uma variedade de opções, incluindo a criação de containers flexíveis, a definição de propriedades de flexibilidade para itens individuais, e a aplicação de alinhamentos precisos. Além disso, ela gera o código CSS necessário para implementar o layout criado, tornando-o fácil de integrar em projetos existentes.",
+      "usage_steps": [
+        "Acesse a ferramenta CSS Flexbox Generator e clique no botão 'Criar Novo Layout' para iniciar um projeto.",
+        "Na seção 'Container', selecione a direção do eixo principal utilizando o dropdown 'Flex Direction'. As opções disponíveis incluem 'row', 'row-reverse', 'column' e 'column-reverse'.",
+        "Ajuste as propriedades de alinhamento no container, como 'Justify Content' e 'Align Items', utilizando os controles deslizantes ou os campos de entrada.",
+        "Adicione itens ao layout clicando no botão 'Adicionar Item' e configure suas propriedades individuais, como 'Flex Grow', 'Flex Shrink' e 'Flex Basis', usando os controles específicos para cada item.",
+        "Experimente diferentes layouts e ajustes, observando as mudanças no preview ao vivo que aparece na lateral direita da interface.",
+        "Depois de finalizar o layout, clique no botão 'Gerar Código CSS' para obter o código CSS gerado. Copie o código e cole-o no seu projeto para implementar o layout criado."
+      ],
+      "usage_examples": [
+        "Um designer de interface está criando um site responsivo e precisa garantir que os elementos de uma seção de depoimentos se alinhem perfeitamente em diferentes dispositivos. O CSS Flexbox Generator permite ajustar rapidamente o alinhamento e a distribuição dos elementos, garantindo que o layout seja consistente em telas de diferentes tamanhos.",
+        "Um desenvolvedor front-end está trabalhando em um dashboard que exibe várias métricas em uma única linha. Usando o Flexbox Generator, ele pode facilmente ajustar a largura e a ordem dos elementos, garantindo que o dashboard seja visualmente agradável e funcional.",
+        "Uma equipe de design está criando um layout de galeria de imagens que precisa ser responsivo e adaptável a diferentes números de imagens. O CSS Flexbox Generator permite que eles ajustem dinamicamente o número de colunas e a distribuição dos itens, garantindo que a galeria seja visualmente atraente em diferentes resoluções de tela.",
+        "Um desenvolvedor está criando um formulário com campos de entrada e botões de ação que precisam estar alinhados de forma consistente. O Flexbox Generator permite que ele ajuste a alinhamento vertical e horizontal dos elementos, garantindo que o formulário seja intuitivo e fácil de usar."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le CSS Flexbox Generator est un outil de conception visuelle permettant de créer des mises en page CSS Flexbox avec une prévisualisation en temps réel. Conçu pour faciliter la création de layouts flexibles et réactifs, cet outil offre une interface intuitive qui permet aux développeurs, quels que soient leur niveau d'expertise, de générer du code CSS de qualité. Les utilisateurs peuvent manipuler des propriétés telles que la direction, l'alignement, et la distribution des éléments, tout en visualisant les changements immédiatement. Cette fonctionnalité est particulièrement utile pour les projets nécessitant des mises en page complexes et adaptatives, où la précision est cruciale. Grâce à la génération de code en temps réel, les développeurs peuvent copier et coller le CSS généré directement dans leur projet, économisant ainsi du temps et réduisant les erreurs. Cet outil est essentiel pour les développeurs front-end travaillant sur des applications web modernes, où la flexibilité et la réactivité sont des exigences primordiales.",
+      "usage_steps": [
+        "Ouvrez l'outil CSS Flexbox Generator et familiarisez-vous avec l'interface de conception visuelle.",
+        "Sélectionnez le conteneur flexbox en cliquant sur l'icône du conteneur dans la barre d'outils.",
+        "Définissez la direction de flexion en utilisant le menu déroulant 'flex-direction'. Choisissez entre 'row', 'row-reverse', 'column', et 'column-reverse'.",
+        "Ajustez l'alignement des éléments en sélectionnant les options 'justify-content' et 'align-items'. Utilisez les options comme 'flex-start', 'center', 'space-between', etc.",
+        "Modifiez la taille et la répartition des éléments flexibles en utilisant les propriétés 'flex-grow', 'flex-shrink', et 'flex-basis'.",
+        "Une fois que vous avez configuré votre layout, copiez le code CSS généré en cliquant sur le bouton 'Copy Code' et collez-le dans votre projet."
+      ],
+      "usage_examples": [
+        "Un développeur crée un header réactif pour un site web, en utilisant le CSS Flexbox Generator pour aligner les éléments de navigation et le logo de manière harmonieuse sur différents écrans.",
+        "Une designer web conçoit une galerie d'images avec des tailles variées, utilisant l'outil pour ajuster la distribution des images et les aligner parfaitement, quel que soit le nombre d'images.",
+        "Un développeur front-end travaille sur une application mobile et utilise le CSS Flexbox Generator pour créer une mise en page de formulaire flexible qui s'adapte aux différentes orientations de l'écran.",
+        "Un développeur de commerce électronique utilise l'outil pour créer une grille de produits avec des marges équilibrées, assurant une présentation esthétique sur toutes les tailles d'écran."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der CSS Flexbox Generator ist eine leistungsstarke Webanwendung, die Entwicklern das Erstellen und Anpassen von CSS Flexbox-Layouts erleichtert. Technisch gesehen, erlaubt das Tool die interaktive Konfiguration von Flex-Containern und -Elementen, während es gleichzeitig eine Live-Vorschau der Änderungen anbietet. Benutzer können Eigenschaften wie `justify-content`, `align-items`, `flex-direction`, `flex-wrap`, und `flex` für Container und Elemente einstellen. Diese Eigenschaften ermöglichen es, Elemente in einem flexiblen Layout dynamisch zu positionieren und anzupassen, was besonders hilfreich bei responsiven Webdesigns ist. Das Tool generiert den entsprechenden CSS-Code, der direkt in Projekte integriert werden kann, wodurch die Entwicklung von komplexen Layouts deutlich effizienter wird. Benutzer können zudem die generierte CSS-Datei direkt herunterladen oder den Code kopieren und in ihre Entwicklungsumgebung einfügen.",
+      "usage_steps": [
+        "Öffnen Sie den CSS Flexbox Generator in Ihrem Webbrowser.",
+        "Wählen Sie in der oberen Leiste die Flex-Container-Eigenschaften aus, die Sie anpassen möchten, wie `flex-direction` oder `justify-content`.",
+        "Klicken Sie auf die Schaltfläche 'Element hinzufügen', um Flex-Elemente zu Ihrem Container hinzuzufügen.",
+        "Passen Sie die Eigenschaften der Flex-Elemente an, indem Sie die entsprechenden Werte in den Eingabefeldern eingeben, wie beispielsweise `flex-grow`, `flex-shrink`, und `flex-basis`.",
+        "Verwenden Sie die Live-Vorschau, um die Änderungen in Echtzeit zu sehen und sicherzustellen, dass das Layout Ihren Anforderungen entspricht.",
+        "Sobald Sie zufrieden mit Ihrem Layout sind, klicken Sie auf 'CSS-Code generieren' und kopieren Sie den generierten Code in Ihre CSS-Datei oder laden Sie die Datei direkt herunter."
+      ],
+      "usage_examples": [
+        "Ein Webdesigner, der ein responsives Layout für eine E-Commerce-Website erstellt, nutzt den CSS Flexbox Generator, um die Produktauswahl flexibel an die verschiedenen Bildschirmgrößen anzupassen.",
+        "Ein Frontend-Entwickler verwendet das Tool, um ein Dashboard für eine Unternehmensanwendung zu gestalten, bei dem die Anordnung der Karten-Widgets je nach Benutzerpräferenz angepasst werden muss.",
+        "Ein UX-Designer erstellt mit dem CSS Flexbox Generator eine mobile Ansicht einer Webanwendung, bei der die Navigationsleiste und der Inhalt optimal auf kleine Bildschirme angepasst werden.",
+        "Ein Junior-Entwickler lernt, wie Flexbox funktioniert, indem er verschiedene Eigenschaften im CSS Flexbox Generator ausprobiert und die Auswirkungen auf das Layout beobachtet."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор CSS Flexbox представляет собой мощный инструмент, предназначенный для создания и настройки макетов на основе технологии Flexbox. Этот инструмент позволяет разработчикам визуально управлять распределением пространства, выравниванием и последовательностью элементов внутри контейнера, что значительно упрощает процесс верстки адаптивных веб-страниц. Генератор предоставляет широкий спектр настроек, включая основные свойства Flexbox, такие как justify-content, align-items, flex-direction и другие. В процессе работы инструмент динамически отображает результаты настройки, что позволяет моментально видеть, как изменения влияют на макет. Это особенно полезно для разработчиков, которые только начинают осваивать Flexbox, так как они могут экспериментировать с различными параметрами, не редактируя код напрямую. Кроме того, инструмент идеально подходит для быстрого создания прототипов и тестирования различных вариантов дизайна, что значительно ускоряет процесс разработки.",
+      "usage_steps": [
+        "Шаг 1: Откройте раздел 'Основные настройки' и выберите направление макета (flex-direction) с помощью выпадающего списка (например, 'row', 'column', 'row-reverse', 'column-reverse').",
+        "Шаг 2: Настройте выравнивание элементов по оси (justify-content) с помощью панели инструментов, выбрав один из вариантов: 'flex-start', 'flex-end', 'center', 'space-between', 'space-around'.",
+        "Шаг 3: Укажите выравнивание элементов по перпендикулярной оси (align-items) с помощью соответствующего выпадающего списка (например, 'stretch', 'flex-start', 'flex-end', 'center').",
+        "Шаг 4: Настройте отступы (margins) и заполнение (paddings) для каждого элемента контейнера, используя поля ввода в разделе 'Дополнительные настройки'.",
+        "Шаг 5: Просмотрите результат в реальном времени в разделе 'Превью', где отображается текущий макет с примененными настройками.",
+        "Шаг 6: После завершения настройки, скопируйте сгенерированный CSS-код, нажав кнопку 'Копировать код' в верхней части интерфейса."
+      ],
+      "usage_examples": [
+        "Пример 1: Сайт с адаптивной навигационной панелью. Используйте генератор для создания горизонтальной навигационной панели, где элементы равномерно распределяются по ширине экрана, независимо от его размера.",
+        "Пример 2: Модальное окно с центрированным содержимым. Настройте контейнер, чтобы элементы внутри него были выровнены по центру по горизонтали и вертикали, обеспечивая эстетичное и функциональное расположение элементов.",
+        "Пример 3: Карточки товаров с одинаковой высотой. Используйте align-items: stretch, чтобы все карточки товаров в строке имели одинаковую высоту, что улучшит визуальное восприятие и удобство использования.",
+        "Пример 4: Форма с вертикальным расположением полей. Настройте контейнер, чтобы поля формы располагались друг под другом, при этом выравнивание элементов по горизонтали обеспечивало одинаковую ширину для всех полей ввода."
+      ]
+    },
+    "ar": {
+      "detailed_description": "المولد البصري لتصميم CSS Flexbox هو أداة تفاعلية تمكن المطورين من إنشاء تخطيطات مرنة ومتجاوبة باستخدام نموذج CSS Flexbox. يتيح هذا الأداة للمستخدمين تصميم عناصر واجهة المستخدم بسهولة وفعالية، مع معاينة مباشرة للتأثيرات التصميمية. يعتمد Flexbox على مفهوم المحور الرئيسي والمحور العرضي لتحديد كيفية توزيع المساحة بين العناصر وتوجيهها. يمكن للمطورين تحديد خصائص مثل الاتجاه، التحديد، التوزيع، والتنحية لعناصر الـ container والـ items. هذا الأداة مفيدة بشكل خاص للمطورين الذين يحتاجون إلى إنشاء تصاميم متجاوبة بسرعة وبدون الحاجة إلى كتابة كود CSS يدويًا، مما يوفر وقتًا ويعزز الكفاءة في عملية التطوير.",
+      "usage_steps": [
+        "افتح الأداة واختر علامة التبويب 'Container' لبدء تصميم العناصر الرئيسية.",
+        "حدد الاتجاه الرئيسي للعناصر باستخدام خيار 'flex-direction'. يمكنك اختيار من 'row', 'column', 'row-reverse', و 'column-reverse'.",
+        "ضبط خصائص التوزيع باستخدام 'justify-content'. اختر من 'flex-start', 'flex-end', 'center', 'space-between', و 'space-around'.",
+        "ضبط خصائص التحديد الرأسي باستخدام 'align-items'. حدد من 'flex-start', 'flex-end', 'center', 'baseline', و 'stretch'.",
+        "لإعداد خصائص فردية للعناصر الثانوية، انتقل إلى علامة التبويب 'Items' وقم بتعديل خصائص 'order', 'flex-grow', 'flex-shrink', و 'flex-basis' حسب الحاجة.",
+        "استخدم معاينة الحالة الحية لمشاهدة التأثيرات الفورية لتعديلاتك، وقم بنسخ الكود CSS المولَّد لاستخدامه في مشروعك."
+      ],
+      "usage_examples": [
+        "تصميم شريط تابع للموقع يحتوي على روابط التصفح الرئيسية، حيث يمكن توزيع هذه الروابط بالتساوي على طول الشريط باستخدام 'justify-content: space-between'.",
+        "إنشاء واجهة لعرض المنتجات في متجر إلكتروني، حيث يمكن توجيه العناصر أفقيًا مع ضبط التحديد الرأسي للتأكد من تحييد العناصر بشكل متساوٍ.",
+        "بناء لوحة تحكم تحتوي على عدة أقسام متجاوبة، حيث يمكن استخدام 'flex-direction: column' لترتيب الأقسام بشكل رأسي وضبط المساحة بينها باستخدام 'align-items: stretch'.",
+        "تطوير واجهة مستخدم للتطبيق المحمول تدعم التصميم المتجاوب، حيث يمكن استخدام 'flex-wrap: wrap' لجعل العناصر تنحني على عدة صفوف عند تغيير حجم الشاشة."
+      ]
+    }
+  }
+}

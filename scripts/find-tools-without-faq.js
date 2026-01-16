@@ -13,7 +13,7 @@ const faqFiles = [
 ];
 
 // 添加所有 geo 文件
-for (let i = 1; i <= 57; i++) {
+for (let i = 1; i <= 59; i++) {
   const suffix = i === 1 ? '' : '-' + i;
   faqFiles.push('src/lib/tool-specific-faqs-geo' + suffix + '.ts');
 }

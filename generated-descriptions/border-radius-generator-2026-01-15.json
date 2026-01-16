@@ -1,0 +1,175 @@
+{
+  "slug": "border-radius-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Border Radius Generator is a powerful online tool designed to create CSS border-radius styles with precision and ease. This tool allows web developers and designers to visually adjust the curvature of an element's corners, providing a seamless way to enhance the aesthetic appeal of web interfaces. By leveraging a visual editor, users can manipulate the border-radius properties of an element in real-time, seeing the changes instantly reflected in the preview. This is particularly useful for creating rounded or elliptical shapes, which are common in modern web design. The tool generates the corresponding CSS code, which can be directly integrated into a project, ensuring consistency and responsiveness across different devices and screen sizes. The Border Radius Generator is essential for anyone looking to fine-tune the visual elements of their web applications, making it a valuable tool for both beginners and experienced developers.",
+      "usage_steps": [
+        "Step 1: Open the Border Radius Generator tool and locate the visual editor on the screen.",
+        "Step 2: Use the sliders to adjust the radius of each corner. You can set individual values for the top-left, top-right, bottom-left, and bottom-right corners.",
+        "Step 3: Alternatively, enter specific pixel values in the input fields next to each corner. This provides more precise control over the curvature.",
+        "Step 4: Preview the changes in the visual editor to ensure the desired effect is achieved. The preview updates in real-time as you make adjustments.",
+        "Step 5: Once satisfied, click on the 'Generate CSS' button to produce the corresponding CSS code.",
+        "Step 6: Copy the generated CSS code and paste it into your project's stylesheet or inline within your HTML elements."
+      ],
+      "usage_examples": [
+        "Example 1: A web designer is creating a contact form and wants to give the input fields a modern, rounded look. Using the Border Radius Generator, they can quickly set a uniform radius for all corners, ensuring a consistent and polished appearance.",
+        "Example 2: A front-end developer is working on a responsive website and needs to ensure that buttons maintain a rounded appearance on both desktop and mobile devices. The tool allows them to test and adjust the border-radius values to optimize the design for different screen sizes.",
+        "Example 3: A UI/UX designer is designing a dashboard with a variety of cards and panels. By using the Border Radius Generator, they can create a visually appealing layout with soft, rounded edges that enhance the user experience.",
+        "Example 4: A web developer is building a custom modal dialog and wants the close button to have a circular shape. Using the tool, they can set the border-radius to 50% for all corners, creating a perfect circle, and then copy the CSS to apply to the button element."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Border Radius Generator 是一个功能强大的在线工具，旨在帮助前端开发者和设计师快速生成并预览 CSS 的 border-radius 属性。通过直观的可视化编辑器，用户可以轻松调整边角的圆滑度，从而在网页设计中实现更加美观和专业的视觉效果。该工具不仅支持单个元素的边框圆角设置，还允许用户对四个角进行独立调整，以满足复杂的设计需求。通过使用 Border Radius Generator，用户可以实时预览调整效果，并立即获取相应的 CSS 代码，极大提升了开发效率和设计灵活性。无论是简化前端代码编写，还是快速实现设计原型，Border Radius Generator 都是一个不可或缺的工具。",
+      "usage_steps": [
+        "打开 Border Radius Generator 工具页面，进入可视化编辑器。",
+        "在编辑器中，使用滑块或输入框调整四个角的圆角半径值，支持像素和百分比单位。",
+        "点击‘预览’按钮，在右侧的预览区域查看实时调整效果。",
+        "调整完成后，点击‘生成代码’按钮，工具将自动生成对应的 CSS 代码。",
+        "复制生成的 CSS 代码，粘贴到你的项目文件中，应用到相应的 HTML 元素上。",
+        "在浏览器中刷新页面，查看最终效果，确保边角圆滑度符合设计需求。"
+      ],
+      "usage_examples": [
+        "在设计一个现代化的登录表单时，使用 Border Radius Generator 为输入框和按钮设置柔和的圆角，使界面更加友好和吸引用户。",
+        "开发一个电子商务网站时，为产品卡片的图片添加圆角效果，使产品展示更加美观，提高用户体验。",
+        "在制作响应式网页布局时，利用 Border Radius Generator 生成不同屏幕尺寸下的圆角效果，确保在各种设备上显示一致。",
+        "为一个社交媒体应用的用户头像设置圆形边框，使其在页面中更加突出，增强视觉效果。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Border Radius Generatorは、Web開発者向けの高度なCSSボーダーラディウス生成ツールです。このツールは、視覚的なエディタを活用することで、複雑なボーダーラディウスの設定を簡単に実現します。ユーザーは、直感的なUIを用いて、四角形や円形の要素にカスタマイズされた曲線を適用することが可能です。また、生成されたCSSコードは、直接Webプロジェクトにコピー＆ペーストするだけで使用できます。このツールは、レスポンシブデザインや、UIの視覚的効果の向上、デザインの一貫性の確保など、さまざまなシーンで活用されることが期待されています。具体的には、ボタン、カード、アイコン、画像フレームなどの要素に適用することで、ユーザーエクスペリエンスの向上に貢献します。",
+      "usage_steps": [
+        "Step 1: ツールを開き、「Start Editing」ボタンをクリックして、エディタを起動します。",
+        "Step 2: 「Top Left Radius」、「Top Right Radius」、「Bottom Left Radius」、「Bottom Right Radius」の各スライダーを使用して、各コーナーのラディウス値を調整します。",
+        "Step 3: 「Preview」ボタンをクリックして、設定したラディウスのプレビューを確認します。プレビューに満足したら、「Apply」ボタンをクリックします。",
+        "Step 4: 「CSS Code」セクションで、生成されたCSSコードをコピーします。必要に応じて、「Copy to Clipboard」ボタンを使用して、コードをクリップボードにコピーします。",
+        "Step 5: 生成されたCSSコードをWebプロジェクトのスタイルシートにペーストします。必要に応じて、クラス名やセレクタを調整します。",
+        "Step 6: ブラウザでページをリロードし、適用されたボーダーラディウスの効果を確認します。必要に応じて、さらなる微調整を行います。"
+      ],
+      "usage_examples": [
+        "Example 1: ログインフォームのボタンに滑らかな角を適用することで、ユーザーエクスペリエンスを向上させます。ボーダーラディウスを10pxに設定し、ボタンに優しい印象を与えます。",
+        "Example 2: プロフィールカードの画像フレームに丸みをつけることで、デザインの柔らかさを演出します。上部のラディウスを20px、下部のラディウスを10pxに設定することで、非対称的な効果を実現します。",
+        "Example 3: モーダルウィンドウのコーナーを丸くすることで、視覚的に柔らかい印象を与え、ユーザーに安心感を提供します。全コーナーのラディウスを15pxに設定します。",
+        "Example 4: スマートフォンアプリのアイコンに丸みを加えることで、モバイルUIの洗練度を向上させます。アイコンの各コーナーに50%のラディウスを設定することで、完全な円形に近い効果を実現します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Border Radius Generator는 웹 개발자들이 시각적인 편집기를 사용하여 CSS의 border-radius 속성을 쉽게 생성할 수 있는 도구입니다. 이 도구는 사각형 요소의 각 부분을 부드럽게 만들거나 원 모양으로 변경할 수 있도록 돕습니다. 개발자들은 이 도구를 통해 페이지 요소의 디자인을 보다 직관적으로 조정할 수 있으며, 이를 통해 사용자 경험을 향상시키고, 반응형 디자인을 구현하는 데 유용합니다. Border Radius Generator는 다양한 단위(예: px, %, em)를 지원하며, 각 모서리에 대해 개별적으로 값을 설정할 수 있습니다. 이를 통해 고도의 정밀성을 유지하면서도 빠르게 작업할 수 있습니다. 이 도구는 특히 디자인 시안을 빠르게 테스트하거나, 프로토타이핑 단계에서 사용자 인터페이스 요소의 모양을 손쉽게 조정할 때 매우 유용합니다.",
+      "usage_steps": [
+        "1. Border Radius Generator 페이지에 접속합니다.",
+        "2. 상단의 'Customize' 탭을 클릭하여 각 모서리의 값을 조정할 수 있는 슬라이더를 활성화합니다.",
+        "3. 'Top Left', 'Top Right', 'Bottom Left', 'Bottom Right' 각각의 슬라이더를 움직여 원하는 border-radius 값을 설정합니다.",
+        "4. 'Units' 드롭다운 메뉴에서 px, %, em 등의 단위를 선택합니다.",
+        "5. 'Preview' 섹션에서 변경 사항을 실시간으로 확인합니다.",
+        "6. 만족스러운 결과가 나오면 'Generate CSS' 버튼을 클릭하여 CSS 코드를 복사합니다."
+      ],
+      "usage_examples": [
+        "예제 1: 웹사이트의 버튼 디자인에서 부드러운 모서리를 적용하려는 경우, Border Radius Generator를 사용하여 각 모서리의 값을 10px로 설정하고, 생성된 CSS 코드를 버튼 스타일에 적용할 수 있습니다.",
+        "예제 2: 모바일 앱의 이미지 카드 요소를 제작할 때, 동일한 border-radius 값을 가진 원형 이미지를 만들기 위해 이 도구를 사용할 수 있습니다. 이는 사용자 인터페이스에서 일관된 디자인을 유지하는 데 도움이 됩니다.",
+        "예제 3: 반응형 레이아웃을 구현할 때, 특정 섹션의 모서리를 반응형으로 조정하려면, Border Radius Generator를 사용하여 모서리의 값을 백분율(%)로 설정할 수 있습니다. 이는 화면 크기에 따라 자동으로 조정됩니다.",
+        "예제 4: 프로토타이핑 도구에서 빠르게 디자인을 조정하려는 경우, Border Radius Generator를 사용하여 다양한 모서리 스타일을 시험해 볼 수 있으며, 생성된 CSS 코드를 프로토타이핑 도구에 적용하여 실시간으로 결과를 확인할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de Radio de Bordes (Border Radius Generator) es una herramienta de código abierto diseñada para facilitar la creación de estilos de bordes redondeados en CSS. Técnicamente, este generador permite a los desarrolladores y diseñadores web visualizar y ajustar el radio de los bordes de cualquier elemento HTML, lo que resulta en una interfaz de usuario más atractiva y moderna. El uso de bordes redondeados es común en diseño web, ya que suaviza las esquinas de los elementos, mejorando la estética y la usabilidad del sitio. Este tool es particularmente útil para aquellos que buscan una solución rápida y precisa sin tener que calcular manualmente los valores de CSS. La herramienta ofrece una interfaz de usuario intuitiva con controles deslizantes y campos de entrada para ajustar el radio de cada esquina individualmente, además de proporcionar una vista previa en tiempo real del efecto visual. Los valores generados se pueden copiar directamente en el código CSS del proyecto, asegurando una implementación sin errores.",
+      "usage_steps": [
+        "Abra la página del Generador de Radio de Bordes en su navegador.",
+        "Localice los controles deslizantes ubicados en la parte superior de la interfaz. Estos controles permiten ajustar el radio de los bordes superior izquierdo, superior derecho, inferior izquierdo e inferior derecho.",
+        "Ajuste cada control deslizante a su valor deseado. Los cambios se reflejarán en tiempo real en la vista previa del elemento central.",
+        "Si prefiere, puede ingresar valores numéricos precisos en los campos de texto que aparecen junto a cada control deslizante.",
+        "Una vez que haya ajustado los valores a su gusto, revise la vista previa para asegurarse de que el diseño cumple con sus expectativas.",
+        "Finalmente, haga clic en el botón 'Copiar CSS' para copiar el código CSS generado y péguelo en su archivo de estilos CSS."
+      ],
+      "usage_examples": [
+        "Un diseñador web está trabajando en un prototipo de un nuevo sitio de comercio electrónico. Decide usar el Generador de Radio de Bordes para crear botones con esquinas redondeadas, lo que da al sitio un aspecto más moderno y atractivo.",
+        "Un desarrollador frontend necesita mejorar la apariencia de una tarjeta de producto en una aplicación móvil. Utiliza el generador para ajustar el radio de los bordes de la tarjeta, asegurándose de que se adapte perfectamente al diseño de la interfaz de usuario.",
+        "Una agencia de diseño está creando un panel de administración para un cliente. El equipo utiliza el Generador de Radio de Bordes para dar un toque suave a las esquinas de las cajas de información, mejorando la legibilidad y la estética general del panel.",
+        "Un desarrollador de software independiente está trabajando en una aplicación de mensajería. Decide usar el generador para crear una ventana de chat con bordes redondeados, lo que proporciona una experiencia de usuario más fluida y agradable."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Border Radius Generator é uma ferramenta online que permite aos desenvolvedores e designers criar e visualizar bordas arredondadas em elementos HTML usando a propriedade CSS 'border-radius'. Este recurso é essencial para criar interfaces modernas e atraentes, onde bordas suaves podem melhorar significativamente a experiência do usuário. Com o Border Radius Generator, os usuários podem ajustar a curvatura das bordas de forma precisa, visualizando as mudanças em tempo real. Isso é particularmente útil em projetos que exigem consistência visual, como sites responsivos ou aplicativos web. A ferramenta oferece opções para definir o raio das bordas em pixels ou percentuais, permitindo um controle granular sobre o design. Além disso, a capacidade de exportar o código CSS diretamente facilita a integração com projetos existentes, economizando tempo e esforço.",
+      "usage_steps": [
+        "Abra a página do Border Radius Generator no seu navegador.",
+        "Na interface, localize a seção 'Bordas' e ajuste os sliders para definir o raio das bordas superior esquerda, superior direita, inferior direita e inferior esquerda.",
+        "Se preferir, você pode digitar valores específicos nos campos de entrada numéricos adjacentes aos sliders.",
+        "Na seção 'Visualização', observe como as alterações afetam a aparência do elemento em tempo real, garantindo que o design atenda às suas necessidades.",
+        "Após ajustar as bordas conforme desejado, clique no botão 'Gerar CSS' para obter o código CSS correspondente.",
+        "Copie o código CSS gerado e cole-o em seu arquivo de estilo ou no CSS inline do seu elemento HTML."
+      ],
+      "usage_examples": [
+        "Um designer de interface de usuário (UI) precisa criar um botão com bordas levemente arredondadas para um projeto de e-commerce. Usando o Border Radius Generator, ele ajusta os sliders para um raio de 10px em todas as bordas, visualizando as mudanças antes de aplicar o estilo ao botão.",
+        "Um desenvolvedor web está trabalhando em um site responsivo e deseja que as imagens de perfil tenham bordas suavemente arredondadas em telas menores. Ele utiliza a ferramenta para definir um raio de 50% em todas as bordas, criando um efeito de círculo perfeito, e aplica o CSS gerado às imagens em dispositivos móveis.",
+        "Um desenvolvedor front-end está criando um painel de administração e precisa que as seções de conteúdo tenham bordas mais suaves para um design mais moderno. Ele usa o Border Radius Generator para definir um raio de 15px nas bordas superior e inferior, mantendo as bordas laterais retas, antes de integrar o código CSS ao layout do painel.",
+        "Uma equipe de design está desenvolvendo um aplicativo web de cartões de visita digitais e deseja que os cartões tenham uma aparência mais sofisticada. Eles usam o Border Radius Generator para criar bordas com um raio de 8px nas bordas superior e inferior, e 20px nas bordas laterais, gerando um design visualmente atraente e profissional."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Border Radius Generator est un outil en ligne dédié à la création de propriétés CSS 'border-radius' pour les éléments HTML. Techniquement, cet outil permet de transformer les coins d'un élément rectangulaire en courbes, offrant une grande flexibilité dans la conception d'interfaces utilisateur modernes. En utilisant une interface visuelle intuitive, les développeurs peuvent ajuster les rayons des coins en temps réel, visualiser les changements immédiatement, et obtenir le code CSS correspondant pour l'intégrer directement dans leur projet. Ce niveau de précision est particulièrement utile pour les designers et les développeurs front-end qui souhaitent améliorer l'aspect visuel de leurs sites web ou applications sans avoir à calculer manuellement les valeurs de rayon. Les utilisateurs peuvent également sauvegarder leurs configurations ou partager des liens directs vers leurs créations, facilitant ainsi la collaboration et le partage de styles.",
+      "usage_steps": [
+        "Ouvrez le Border Radius Generator sur le site.",
+        "Utilisez les curseurs de contrôle pour ajuster les rayons des quatre coins de la boîte de prévisualisation. Chaque curseur correspond à un coin spécifique (haut-gauche, haut-droite, bas-gauche, bas-droite).",
+        "Observez les changements en temps réel dans la boîte de prévisualisation pour voir l'effet des ajustements.",
+        "Une fois satisfaits, copiez le code CSS généré qui apparaît dans la section de sortie. Le code est mis à jour automatiquement en fonction de vos modifications.",
+        "Intégrez le code CSS copié dans votre feuille de style CSS ou directement dans le fichier HTML de votre projet.",
+        "Si nécessaire, enregistrez votre configuration en utilisant l'option 'Sauvegarder' ou partagez un lien direct vers votre création pour faciliter la collaboration."
+      ],
+      "usage_examples": [
+        "Un développeur front-end souhaite créer une carte de produit avec des coins arrondis pour un site e-commerce. Il utilise le Border Radius Generator pour ajuster les rayons des coins et obtient le code CSS nécessaire pour appliquer ce style à la carte de produit.",
+        "Un designer web conçoit une interface utilisateur pour une application mobile. Il a besoin de boutons avec des coins très arrondis pour un look moderne. Le Border Radius Generator lui permet de visualiser et de tester différents rayons avant d'adopter le style définitif.",
+        "Un développeur de thèmes WordPress crée un thème personnalisé pour un client. Il utilise l'outil pour générer des styles de cardes et de sections avec des coins arrondis, améliorant ainsi l'expérience visuelle de l'utilisateur.",
+        "Un développeur d'interface utilisateur travaille sur une application de chat en temps réel. Il utilise le Border Radius Generator pour créer des bulles de conversation avec des coins arrondis spécifiques, ajoutant une touche professionnelle et moderne à l'interface de chat."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Border Radius Generator ist ein mächtiges Web-Werkzeug, das es Webentwicklern ermöglicht, visuell CSS-Eigenschaften für Rundungen von Elementen zu erstellen. Dieses Tool bietet eine intuitive Benutzeroberfläche, die die Eingabe und Anpassung von `border-radius`-Werten vereinfacht. Die Rundungen können sowohl für einfache Rechtecke als auch für komplexe Formen angepasst werden, was die Gestaltung von Benutzeroberflächen erheblich verbessert. Benutzer können die Rundungen live anpassen und direkt in der Vorschau sehen, wie sich die Änderungen auf das Element auswirken. Dies ist besonders nützlich bei der Erstellung moderner, responsiver Designs, wo die visuelle Anziehungskraft und Benutzerfreundlichkeit von entscheidender Bedeutung sind. Der Generator erzeugt den passenden CSS-Code, der direkt in das Projekt kopiert und eingefügt werden kann. Dies spart Zeit und reduziert die Anzahl von Fehlern, die bei manuellen Eingaben auftreten können. Darüber hinaus bietet das Tool Optionen zur Anpassung von maispezifischen Ecken, was die Flexibilität bei der Gestaltung von Benutzeroberflächen erheblich erhöht.",
+      "usage_steps": [
+        "Öffnen Sie das Border Radius Generator-Tool auf der Website und warten Sie, bis die Benutzeroberfläche vollständig geladen ist.",
+        "Wählen Sie die Form des Elements aus, für das Sie den `border-radius` anpassen möchten. Sie können zwischen verschiedenen Formen wie Rechteck, Kreis oder Kombinationen davon wählen.",
+        "Benutzen Sie die Schieberegler, um die Rundungen der jeweiligen Ecken zu justieren. Sie können die Werte für obere linke, obere rechte, untere rechte und untere linke Ecke einzeln einstellen.",
+        "Klicken Sie auf die Option 'Live Vorschau', um eine interaktive Vorschau des Elements mit den gewählten `border-radius`-Werten anzuzeigen. Sie können die Größe des Elements in der Vorschau anpassen, um die Rundungen in verschiedenen Kontexten zu testen.",
+        "Sobald Sie zufrieden mit den Rundungen sind, klicken Sie auf die Schaltfläche 'CSS-Code generieren'. Der Tool erstellt den entsprechenden CSS-Code, der die gewählten Einstellungen widerspiegelt.",
+        "Kopieren Sie den generierten CSS-Code und fügen Sie ihn in Ihr Webprojekt ein. Sie können den Code direkt in Ihre Stylesheets oder HTML-Dateien integrieren."
+      ],
+      "usage_examples": [
+        "Ein Webdesigner erstellt eine Landing Page, die ein modernes, minimalistisches Design aufweist. Er verwendet den Border Radius Generator, um die Ecken der Karten-Komponenten abzurunden, um ein sanfteres und einladenderes Äußeres zu erzielen.",
+        "Ein Frontend-Entwickler arbeitet an einer responsiven Webanwendung, die auf verschiedenen Geräten verwendet werden soll. Mit dem Border Radius Generator justiert er die Rundungen der Navigations- und Schaltflächen-Elemente, um eine konsistente Benutzererfahrung auf Mobilgeräten und Desktop-Computern zu gewährleisten.",
+        "Ein UX-Designer möchte das Design eines Popup-Modals optimieren. Er nutzt das Tool, um die Ecken des Modals abzurunden und so einen moderneren Look zu erzielen, der besser in das Gesamtdesign der Anwendung passt.",
+        "Ein Grafikdesigner erstellt eine Website für eine Künstlerin. Er verwendet den Border Radius Generator, um die Ecken der Galeriebilder abzurunden, um eine harmonische und ästhetisch ansprechende Darstellung zu erreichen, die den künstlerischen Stil unterstreicht."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор BorderRadius представляет собой мощный инструмент, предназначенный для создания и настройки CSS свойства border-radius. Этот инструмент позволяет разработчикам визуально создавать и настраивать закругленные углы для элементов HTML, что значительно упрощает процесс дизайна и разработки интерфейсов. Генератор предоставляет широкий спектр настроек, включая возможность задания различных радиусов для каждого угла элемента, что делает его незаменимым инструментом при создании современных и адаптивных веб-дизайнов. Использование этого инструмента позволяет разработчикам быстро и точно настраивать внешний вид элементов, не требуя глубоких знаний CSS. С его помощью можно легко создавать кнопки, карточки, изображения и другие элементы с закругленными углами, что улучшает пользовательский опыт и визуальную привлекательность веб-сайтов.",
+      "usage_steps": [
+        "Откройте страницу инструмента Border Radius Generator и выберите режим отображения: либо в виде одного поля ввода для всех углов, либо отдельные поля для каждого угла (верхний левый, верхний правый, нижний правый, нижний левый).",
+        "Настройте радиусы углов с помощью слайдеров или введите значения вручную в соответствующие поля. Значения можно указывать в пикселях (px), процентах (%) или других единицах измерения, поддерживаемых CSS.",
+        "Используйте кнопки 'Reset' и 'Swap' для сброса настроек или обмена значениями между углами соответственно.",
+        "После настройки радиусов, скопируйте сгенерированный CSS код, отображаемый в нижней части интерфейса. Код будет автоматически обновляться при изменении настроек.",
+        "Вставьте скопированный CSS код в ваш проект. Вы можете использовать его напрямую в CSS файле или в стилях элементов в HTML.",
+        "Проверьте результат на вашем веб-сайте, чтобы убедиться, что элементы отображаются корректно и соответствуют вашему дизайну."
+      ],
+      "usage_examples": [
+        "Создание кнопки с закругленными углами для формы заказа. Используя Генератор BorderRadius, можно быстро настроить радиус углов, чтобы кнопка выглядела современно и привлекательно, улучшая пользовательский опыт.",
+        "Настройка карточек продуктов с закругленными углами для интернет-магазина. Генератор BorderRadius позволяет создать единообразный и привлекательный дизайн карточек, что способствует более приятному восприятию товаров.",
+        "Дизайн изображений с закругленными углами для портфолио. Используя инструмент, можно создать галерею изображений с плавными переходами, что придаст портфолио более современный и профессиональный вид.",
+        "Создание адаптивных элементов интерфейса, таких как модальные окна и всплывающие подсказки. Генератор BorderRadius помогает настроить радиусы углов для различных разрешений экрана, обеспечивая одинаково качественное отображение на устройствах с различными размерами экрана."
+      ]
+    },
+    "ar": {
+      "detailed_description": "INESCRIPTOR: أداة مولّد نصف القطر الحدودي هي أداة مجانية عبر الإنترنت تمكن المطورين والمصممين من إنشاء خصائص CSS `border-radius` باستخدام واجهة بصرية سهلة الاستخدام. تتيح هذه الأداة تخصيص نصف قطر الحدود لعناصر HTML بطرق متعددة، مما يوفر مرونة في تصميم واجهات المستخدم. يمكن للمستخدمين تعيين قيم نصف القطر لكل زاوية من الزوايا الأربعة (أعلى يمين، أعلى يسار، أسفل يمين، أسفل يسار) بشكل منفصل أو بشكل عام. بالإضافة إلى ذلك، توفر الأداة خيارًا لتطبيق تأثيرات ملّونة ومستقيمة على الحدود، مما يسمح بإنشاء تصاميم معقدة ومبتكرة. تهدف هذه الأداة إلى تبسيط عملية تطبيق نصف القطر الحدودي، مما يوفر الوقت ويزيد من كفاءة التصميم والتطوير.",
+      "usage_steps": [
+        "افتح أداة مولّد نصف القطر الحدودي من خلال النقر على زر \"ابدأ الآن\" على الصفحة الرئيسية.",
+        "ستظهر لك واجهة الأداة التي تحتوي على مربعات لإدخال قيم نصف القطر لكل زاوية (أعلى يمين، أعلى يسار، أسفل يمين، أسفل يسار).",
+        "قم بإدخال القيم المرغوبة لكل زاوية أو استخدم الأزرار المتاحة لزيادة أو تقليل قيمة نصف القطر بشكل تدريجي.",
+        "يمكنك أيضًا تطبيق تأثيرات إضافية مثل اللون والتسحيج من خلال القائمة الجانبية.",
+        "بعد إتمام التخصيص، انقر على زر \" GENERATE \" لاستخراج الكود CSS الناتج.",
+        "أخيرًا، قم بنسخ الكود CSS المُولّد ولصقه في ملفات CSS الخاصة بمشروعك."
+      ],
+      "usage_examples": [
+        "تصميم زر دائرى: يمكن للمطورين استخدام هذه الأداة لإنشاء أزرار دائرية مثالية بسهولة عبر تعيين نصف القطر للزوايا الأربعة على القيمة القصوى.",
+        "تحسين واجهة المستخدم: يساعد مصممو واجهات المستخدم في تحسين مظهر العناصر مثل الصور والأيقونات من خلال تطبيق نصف القطر الحدودي للحصول على حافات أكثر نعومة.",
+        "إنشاء كروت معلومات: يمكن استخدام هذه الأداة لإضافة نصف قطع حافات لبطاقات المعلومات في تطبيقات الويب، مما يجعلها تبدو أكثر جاذبية ومهنية.",
+        "تصميم مربعات حوار: يمكن للمطورين إنشاء مربعات حوار ذات حواف ملساء باستخدام نصف القطر الحدودي، مما يزيد من جاذبية وintestinal الواجهة."
+      ]
+    }
+  }
+}

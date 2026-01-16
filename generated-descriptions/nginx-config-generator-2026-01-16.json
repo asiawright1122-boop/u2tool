@@ -1,0 +1,175 @@
+{
+  "slug": "nginx-config-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Nginx Config Generator is a powerful web-based utility designed to streamline the creation of Nginx server configuration files. This tool is particularly invaluable for developers and system administrators who need to deploy and manage web servers efficiently. By automating the configuration process, the Nginx Config Generator reduces the risk of human error and ensures that configurations are consistent and optimized. Users can specify various parameters such as server blocks, SSL settings, and rewrite rules, and the tool will generate a robust and syntactically correct configuration file. This is especially useful in complex environments where multiple virtual hosts and secure connections are required. The tool supports a wide range of Nginx directives, making it suitable for both beginners and advanced users. Whether you are setting up a simple static website or a complex application server, the Nginx Config Generator can significantly simplify the process, saving time and reducing the learning curve.",
+      "usage_steps": [
+        "Step 1: Navigate to the Nginx Config Generator homepage and click on the 'Start Configuration' button to begin.",
+        "Step 2: In the 'Server Block' section, specify the domain name and the root directory of your website.",
+        "Step 3: Configure SSL settings by toggling the 'Enable SSL' switch and providing the path to your SSL certificate and key files.",
+        "Step 4: Add rewrite rules by clicking on the 'Add Rewrite Rule' button and entering the source and destination URLs.",
+        "Step 5: Set up additional directives by selecting options from the 'Advanced Settings' dropdown, such as gzip compression, caching, and security headers.",
+        "Step 6: Once all settings are configured, click the 'Generate Configuration' button to produce the Nginx server block file, which you can then download and deploy on your server."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer setting up a new blog on a subdomain (blog.example.com) can use the Nginx Config Generator to quickly create a server block that includes SSL configuration, rewrite rules for clean URLs, and caching directives to improve performance.",
+        "Example 2: A system administrator managing a multi-tenant application can generate multiple server blocks with different domain names and specific SSL certificates, ensuring each tenant has a secure and isolated environment.",
+        "Example 3: A DevOps engineer deploying a static website can use the tool to create a simple server block with minimal settings, focusing on serving static files and enabling basic security features like HTTP to HTTPS redirection.",
+        "Example 4: An e-commerce platform developer can utilize the Nginx Config Generator to set up advanced settings such as rate limiting to prevent abuse, and HTTP/2 support for faster page loading, enhancing the user experience and security of the site."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Nginx Config Generator 是一款专为开发人员设计的工具，旨在帮助他们快速生成 Nginx 服务器的配置文件。Nginx 是一个高性能的 HTTP 和反向代理服务器，广泛用于处理高流量网站。通过 Nginx Config Generator，用户可以轻松地创建复杂的配置文件，而无需深入了解 Nginx 的所有配置选项。此工具支持多种服务器环境配置，如 SSL 证书设置、反向代理配置、静态文件服务、缓存设置等。使用该工具，开发人员可以快速部署和测试不同的配置，从而提高开发效率。此外，Nginx Config Generator 还提供了实时语法检查功能，确保生成的配置文件无误，避免因配置错误导致的服务中断。",
+      "usage_steps": [
+        "Step 1: 打开 Nginx Config Generator 工具页面，点击“新建配置”按钮。",
+        "Step 2: 在“服务器基本信息”部分，输入服务器域名、监听端口等基本信息。",
+        "Step 3: 选择需要的配置模块，例如 SSL 证书、反向代理、静态文件服务等。",
+        "Step 4: 根据需要配置具体选项，如 SSL 证书路径、反向代理目标地址、静态文件目录等。",
+        "Step 5: 点击“生成配置”按钮，工具将自动生成 Nginx 配置文件内容。",
+        "Step 6: 将生成的配置文件内容复制到您的 Nginx 服务器配置文件中，保存并重启 Nginx 服务。"
+      ],
+      "usage_examples": [
+        "Example 1: 为一个电商网站配置 SSL 证书，确保网站数据传输的安全性。使用 Nginx Config Generator，可以轻松设置 SSL 证书路径和相关配置。",
+        "Example 2: 为一个高流量的博客网站配置反向代理，将请求分发到多个后端服务器，提高网站的负载能力。通过工具选择反向代理模块，输入后端服务器地址即可。",
+        "Example 3: 为一个静态文件服务器配置缓存策略，减少服务器响应时间。使用工具的缓存设置功能，可以指定缓存时间和其他相关参数。",
+        "Example 4: 为一个开发环境配置多个虚拟主机，方便开发人员在不同项目之间切换。通过工具的虚拟主机模块，可以快速生成多域名配置。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Nginx Config Generatorは、Webサーバーの設定ファイルを自動生成するためのオンラインツールです。このツールは、Nginxの設定ファイルを手動で作成する際に発生するエラーを最小限に抑え、設定の最適化を支援します。ユーザーは、Webアプリケーションの特定の要件に応じて、さまざまな設定オプションを選択することで、高度にカスタマイズされたNginx設定ファイルを生成することができます。Nginx Config Generatorは、SSL/TLSの設定、リバースプロキシの設定、キャッシュ設定、セキュリティ強化など、複雑な設定を簡単に処理することができます。これにより、開発者はより効率的に作業を進め、サーバーのパフォーマンスとセキュリティを向上させることができます。",
+      "usage_steps": [
+        "Step 1: ツールのホーム画面にアクセスし、「新しい設定ファイルの作成」ボタンをクリックします。",
+        "Step 2: 「ドメイン設定」セクションで、管理したいドメイン名を入力します。",
+        "Step 3: 「リスニングポート」セクションで、Nginxがリスニングするポート番号を指定します。",
+        "Step 4: 「SSL/TLS設定」セクションで、SSL/TLSの有効化と証明書の詳細を設定します。",
+        "Step 5: 「リバースプロキシ設定」セクションで、バックエンドサーバーのIPアドレスとポート番号を入力します。",
+        "Step 6: 「設定ファイルの生成」ボタンをクリックし、生成されたNginx設定ファイルをダウンロードします。"
+      ],
+      "usage_examples": [
+        "Example 1: あるWeb開発者は、新しいWebアプリケーションのNginx設定ファイルを生成するためにNginx Config Generatorを使用しています。設定ファイルには、HTTPSの有効化、リバースプロキシの設定、およびアクセスログの設定が含まれています。",
+        "Example 2: あるシステム管理者は、既存のWebサイトのパフォーマンスを向上させるために、Nginx Config Generatorでキャッシュ設定を追加しています。これにより、静的ファイルの読み込み速度が向上し、サーバーの負荷が軽減されます。",
+        "Example 3: あるセキュリティエンジニアは、Nginx Config Generatorを使用して、Webサーバーのセキュリティを強化するための設定を生成しています。設定には、HTTPリクエストの制限、XSS保護、CSRF保護などが含まれています。",
+        "Example 4: あるDevOpsエンジニアは、複数のアプリケーションを一台のサーバーでホストするために、Nginx Config Generatorで複数のドメインとポートの設定を生成しています。これにより、各アプリケーションが独立して動作し、互いに干渉することなくサービスを提供できます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Nginx Config Generator는 개발자가 웹 서버 설정을 간편하게 생성할 수 있게 해주는 도구입니다. 이 도구는 Nginx 서버 블록 설정 파일을 자동으로 생성하여, 복잡한 설정 작업을 단순화합니다. 웹 개발자, 시스템 관리자, DevOps 엔지니어 등이 서버 설정을 신속하고 정확하게 할 수 있도록 설계되었습니다. Nginx는 고성능 HTTP 및 리버스 프록시 서버로, 이 도구를 통해 사용자는 다양한 웹 애플리케이션에 대한 설정을 쉽게 적용할 수 있습니다. 예를 들어, 여러 도메인을 호스팅하거나 SSL/TLS 인증서를 설정하는 데 필요한 설정을 생성할 수 있습니다. 이 도구는 사용자 친화적인 인터페이스를 제공하며, 필요한 정보를 입력하면 즉시 설정 파일이 생성됩니다. 이를 통해 사용자는 시간을 절약하고, 설정 오류를 줄일 수 있습니다.",
+      "usage_steps": [
+        "1. Nginx Config Generator의 메인 페이지에 접속하여 '새 설정 생성' 버튼을 클릭합니다.",
+        "2. '서버 이름' 입력란에 호스팅하려는 도메인 또는 IP 주소를 입력합니다.",
+        "3. '리스닝 포트' 드롭다운 메뉴에서 웹 서버가 수신할 포트 번호를 선택합니다.",
+        "4. 'SSL 사용' 체크박스를 선택하여 SSL/TLS 설정을 활성화하고, 필요한 경우 '인증서 파일 경로'와 '개인 키 파일 경로'를 입력합니다.",
+        "5. '추가 설정' 섹션에서 필요에 따라 추가적인 설정 옵션을 선택하거나 입력합니다.",
+        "6. 모든 설정을 완료한 후 '설정 생성' 버튼을 클릭하여 최종 설정 파일을 다운로드합니다."
+      ],
+      "usage_examples": [
+        "Example 1: 웹 개발자가 여러 도메인을 호스팅하는 서버를 설정할 때 Nginx Config Generator를 사용하여 각 도메인에 대한 Nginx 서버 블록 설정을 자동으로 생성합니다.",
+        "Example 2: 시스템 관리자가 SSL/TLS 인증서를 사용하여 보안 웹 사이트를 설정할 때, 이 도구를 통해 인증서 파일과 개인 키 파일을 지정하고 SSL 설정을 자동으로 생성합니다.",
+        "Example 3: DevOps 엔지니어가 CI/CD 파이프라인에서 웹 서버 설정을 자동화할 때, Nginx Config Generator를 사용하여 설정 파일을 생성하고, 이를 배포 스크립트에 통합합니다.",
+        "Example 4: 웹 애플리케이션 개발자가 로드 밸런싱을 구현할 때, 이 도구를 사용하여 리버스 프록시 설정을 생성하여 여러 백엔드 서버로 트래픽을 분산시킵니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Nginx Config Generator es una herramienta diseñada para simplificar el proceso de creación de archivos de configuración del servidor Nginx. Este servidor web es ampliamente utilizado por su alta eficiencia y capacidad para manejar un gran número de conexiones simultáneas. La herramienta permite a los desarrolladores y administradores de sistemas generar configuraciones personalizadas sin necesidad de un conocimiento profundo de los archivos de configuración manual. Es especialmente útil para quienes buscan implementar rápidamente servidores web con configuraciones específicas, como redirecciones, servir contenido estático, configurar servidores virtuales, y aplicar políticas de seguridad. La herramienta funciona al proporcionar una interfaz gráfica en la que se seleccionan y ajustan las opciones de configuración, y luego genera el archivo de configuración correspondiente en formato .conf, listo para ser implementado en un servidor Nginx.",
+      "usage_steps": [
+        "Accede a la página principal del Nginx Config Generator y selecciona el tipo de configuración que deseas generar (por ejemplo, servidor virtual, redirección, etc.).",
+        "Completa los campos necesarios para tu configuración específica, como el nombre del dominio, la ubicación de los archivos estáticos, y las rutas de redirección.",
+        "Si es necesario, ajusta las opciones avanzadas, como la configuración de SSL, los encabezados de seguridad, y las políticas de caché.",
+        "Revisa la configuración generada en el panel de vista previa, asegurándote de que todos los detalles sean correctos y cumplan con tus requisitos.",
+        "Una vez que estés satisfecho con la configuración, haz clic en el botón 'Generar Configuración' para crear el archivo .conf.",
+        "Descarga el archivo .conf generado y colóquelo en el directorio de configuración de tu servidor Nginx, luego reinicia el servicio Nginx para aplicar los cambios."
+      ],
+      "usage_examples": [
+        "Un desarrollador frontend necesita configurar un servidor Nginx para servir una aplicación de una sola página (SPA) y redirigir todas las solicitudes a la página principal. Utiliza el Nginx Config Generator para configurar las rutas de redirección y asegurarse de que el contenido estático se sirva correctamente.",
+        "Un administrador de sistemas de una empresa de comercio electrónico requiere configurar un servidor Nginx para manejar múltiples dominios (servidores virtuales) y aplicar políticas de seguridad, como la configuración de SSL y la protección contra ataques de inyección de SQL. El Nginx Config Generator facilita la creación de este tipo de configuraciones complejas.",
+        "Un ingeniero de DevOps necesita configurar un servidor Nginx como proxy inverso para distribuir el tráfico entre múltiples servidores backend. Utiliza la herramienta para configurar las rutas de proxy y asegurarse de que el balanceo de carga sea eficiente y seguro.",
+        "Un desarrollador de aplicaciones web necesita configurar un servidor Nginx para servir contenido estático (imágenes, CSS, JavaScript) y configurar la caché para mejorar el rendimiento. El Nginx Config Generator permite ajustar las políticas de caché y configurar las rutas de contenido estático de manera sencilla y eficaz."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Nginx Config Generator é uma ferramenta de desenvolvimento inovadora que facilita a geração de arquivos de configuração para servidores Nginx. Ao automatizar este processo, a ferramenta permite que desenvolvedores e administradores de sistemas criem configurações complexas de maneira eficiente e sem erros. Especificamente, o Nginx Config Generator permite que você defina parâmetros como o tipo de servidor, blocos de servidores, caminhos de diretórios, configurações de segurança, e muito mais. Isto é particularmente útil em ambientes de desenvolvimento e produção, onde a precisão e a consistência das configurações são cruciais para o desempenho e a segurança do servidor.\n\nOs usuários precisam desta ferramenta porque a configuração manual do Nginx pode ser tediosa e propensa a erros, especialmente em cenários complexos com múltiplos domínios, SSL/TLS, e balanceamento de carga. Com o Nginx Config Generator, é possível gerar configurações otimizadas e testadas, reduzindo significativamente o tempo de configuração e melhorando a confiabilidade do servidor. A ferramenta suporta uma ampla variedade de diretivas e opções, incluindo a configuração de proxies reversos, a definição de regras de reescrita de URLs, e a implementação de políticas de segurança como HSTS e CSP.\n\nPara usar o Nginx Config Generator, basta acessar a interface web, selecionar as opções desejadas, e clicar no botão para gerar a configuração. A ferramenta processa as entradas e gera um arquivo de configuração `.conf` pronto para ser implementado no servidor Nginx. Além disso, a ferramenta oferece a possibilidade de validar a configuração gerada, garantindo que ela esteja livre de erros antes de ser aplicada no servidor.",
+      "usage_steps": [
+        "Acesse a página do Nginx Config Generator e selecione o tipo de servidor que deseja configurar, por exemplo, `HTTP` ou `HTTPS`.",
+        "Defina os parâmetros básicos, como o endereço IP do servidor, a porta de escuta, e o nome do host (domínio).",
+        "Configure os blocos de servidores, incluindo diretórios raiz, locais, e caminhos de arquivos, usando a seção `Server Blocks`.",
+        "Selecione as opções de segurança, como a ativação do HSTS (HTTP Strict Transport Security) e a definição de políticas de conteúdo (CSP), na seção `Security Settings`.",
+        "Escolha as configurações adicionais, como a configuração de proxies reversos, regras de reescrita de URLs, e balanceamento de carga, na seção `Advanced Settings`.",
+        "Clique no botão `Generate Config` para gerar o arquivo de configuração `.conf`. Antes de baixar, use a opção `Validate Config` para garantir que a configuração esteja correta."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de aplicações web precisa configurar um servidor Nginx para hospedar um site com múltiplos subdomínios. Utilizando o Nginx Config Generator, ele define os blocos de servidores para cada subdomínio, incluindo caminhos de diretórios e regras de reescrita de URLs, garantindo que o tráfego seja direcionado corretamente.",
+        "Um administrador de sistemas precisa implementar um proxy reverso para load balancing entre múltiplos servidores backend. Com o Nginx Config Generator, ele configura as diretivas de proxy e balanceamento de carga, gerando uma configuração otimizada que melhora a performance e a disponibilidade do serviço.",
+        "Uma equipe de segurança deseja fortalecer a configuração de um servidor Nginx para proteger contra ataques comuns. Usando a ferramenta, eles ativam opções de segurança avançadas, como HSTS e CSP, e geram uma configuração segura que é aplicada no servidor.",
+        "Um desenvolvedor de e-commerce precisa configurar um servidor Nginx para suportar SSL/TLS em um site de vendas. Com o Nginx Config Generator, ele define as configurações de SSL, incluindo certificados e chaves, e gera uma configuração que garante comunicações seguras e confiáveis."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le générateur de configuration Nginx est un outil indispensable pour les développeurs et les administrateurs système qui debenent configurer des serveurs web performants. Techniquement, cet outil génère des fichiers de configuration Nginx, un serveur web hautement évolué utilisé pour le routage de requêtes HTTP, la distribution de charge, et la mise en cache de contenu. Les utilisateurs peuvent spécifier divers paramètres tels que les blocs de serveurs, les emplacements de fichiers, les configurations SSL, et les options de compression, pour créer des fichiers de configuration adaptés à leurs besoins spécifiques. La nécessité de cet outil émerge de la complexité inhérente aux configurations Nginx, qui peuvent rapidement devenir ardues pour les débutants et fastidieuses pour les professionnels. Par exemple, configurer des certificats SSL, gérer les redirections, et optimiser les performances des requêtes sont des tâches qui nécessitent une compréhension approfondie de la syntaxe Nginx. Ce générateur simplifie ces processus en offrant une interface utilisateur conviviale qui guide les utilisateurs à travers l'ensemble des étapes de configuration, en validant les entrées en temps réel et en générant un fichier de configuration prêt à être déployé. En somme, le générateur de configuration Nginx est un outil puissant qui améliore la productivité et réduit les erreurs de configuration.",
+      "usage_steps": [
+        "Accédez à l'outil Nginx Config Generator sur le site web de développement.",
+        "Sélectionnez le type de configuration que vous souhaitez générer dans le menu déroulant, par exemple 'Serveur Principal' ou 'Serveur Virtuel'.",
+        "Remplissez les champs de configuration en spécifiant les paramètres tels que le nom de domaine, le répertoire de documents racine, et les ports d'écoute.",
+        "Configurez les options avancées si nécessaire, comme les paramètres SSL, la compression, et les règles de redirection, en cochant les cases correspondantes et en entrant les valeurs appropriées.",
+        "Vérifiez la configuration générée dans la section 'Aperçu' pour vous assurer que tous les paramètres sont corrects et ajustez-les si besoin.",
+        "Téléchargez le fichier de configuration Nginx généré en cliquant sur le bouton 'Télécharger Configuration' et déployez-le sur votre serveur Nginx."
+      ],
+      "usage_examples": [
+        "Un développeur web souhaite configurer un serveur Nginx pour héberger plusieurs sites web avec des domaines différents. Il utilise le générateur de configuration pour créer des blocs de serveurs virtuels distincts, chacun avec ses propres répertoires de documents et configurations SSL.",
+        "Un administrateur système doit mettre en place une redirection permanente de l'URL d'un site web ancien vers un nouveau domaine. Il configure les règles de redirection dans l'outil et génère un fichier de configuration pour appliquer la redirection sur le serveur Nginx.",
+        "Une entreprise souhaite optimiser les performances de son site web en activant la compression GZIP pour les fichiers statiques. L'administrateur système utilise le générateur de configuration pour activer la compression et génère un fichier de configuration pour déployer sur le serveur.",
+        "Un développeur souhaite configurer un serveur Nginx en tant que proxy inversé pour répartir la charge entre plusieurs serveurs backend. Il utilise l'outil pour spécifier les adresses des serveurs backend et génère un fichier de configuration pour configurer le proxy inversé."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Nginx Config Generator ist ein leistungsstarkes Online-Tool, das Entwicklern dabei hilft, Nginx-Konfigurationsdateien zu erstellen, die maßgeschneidert auf ihre spezifischen Anwendungsanforderungen zugeschnitten sind. Technisch gesehen, erzeugt dieses Tool syntaktisch korrekten Nginx-Code, der für verschiedene Server-Konfigurationen und -Umgebungen eingesetzt werden kann. Es ist besonders nützlich für Entwickler, die mit der Syntax und den erweiterten Einstellungen von Nginx nicht vertraut sind oder die schnell und zuverlässig Konfigurationsdateien erstellen müssen, ohne Fehler zu machen. Der Nginx Config Generator ermöglicht es, komplexe Konfigurationen für load balancing, SSL-Sicherheit, Caching und URL-Umschreibungen zu erstellen. Durch dessen Verwendung können Entwickler die Performance und Sicherheit ihrer Webanwendungen erheblich verbessern, ohne tiefgehende Kenntnisse in Nginx-Einstellungen haben zu müssen. Das Tool nutzt intelligente Algorithmen, um die Eingaben des Benutzers zu verarbeiten und eine optimierte Konfigurationsdatei zu generieren, die direkt in die Nginx-Server-Architektur integriert werden kann.",
+      "usage_steps": [
+        "Öffnen Sie die Hauptseite des Nginx Config Generators und wählen Sie die gewünschte Server-Umgebung aus der Dropdown-Liste 'Server Type'.",
+        "Geben Sie den Domain-Namen in das Feld 'Domain Name' ein, für den die Konfiguration erstellt werden soll.",
+        "Konfigurieren Sie die Port-Weiterleitungen unter 'Port Forwarding' und wählen Sie die zu verwendenden Ports für HTTP und HTTPS.",
+        "Wählen Sie unter 'SSL Settings' die Option, ob Sie eine SSL-Verbindung aktivieren möchten, und laden Sie das SSL-Zertifikat und den Schlüssel hoch, wenn erforderlich.",
+        "Legen Sie unter 'Advanced Settings' zusätzliche Optionen wie Caching, URL-Umschreibungen und Error Pages fest.",
+        "Klicken Sie auf 'Generate Config', um die Nginx-Konfigurationsdatei zu erstellen. Die generierte Datei kann dann heruntergeladen und in der Nginx-Server-Konfiguration verwendet werden."
+      ],
+      "usage_examples": [
+        "Ein Entwickler, der eine neue Webanwendung bereitstellt, verwendet den Nginx Config Generator, um eine Konfigurationsdatei zu erstellen, die SSL-Verbindungen unterstützt und den Traffic auf mehrere Backend-Server verteilt, um die Last zu balance.",
+        "Ein Systemadministrator, der eine Website optimiert, nutzt das Tool, um eine Konfiguration zu erstellen, die Caching aktiviert und die Leistung der Website verbessert, indem häufig angefragte Ressourcen zwischengespeichert werden.",
+        "Ein Webentwickler, der eine Landing Page für eine Marketing-Kampagne erstellt, verwendet den Nginx Config Generator, um eine einfache, aber effiziente Konfiguration zu erstellen, die die Seite schnell und sicher zugänglich macht.",
+        "Ein DevOps-Experte, der eine komplexe Anwendung bereitstellt, die mehrere Microservices verwendet, erstellt mit dem Tool eine Konfiguration, die URL-Umschreibungen und erweiterte Routingsregeln umfasst, um den Traffic auf verschiedene Dienste zu leiten."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор конфигураций Nginx представляет собой мощный инструмент, предназначенный для автоматического создания файлов конфигурации Nginx. Этот инструмент позволяет разработчикам и администраторам систем быстро и эффективно настраивать веб-серверы, не тратя время на ручное редактирование файлов. Генератор Nginx Config поддерживает широкий спектр настроек, включая настройку виртуальных хостов, проксирования, кеширования, SSL-сертификатов и многое другое. Использование этого инструмента значительно снижает риск ошибок, связанных с ручным вводом конфигураций, и обеспечивает более безопасную и стабильную работу веб-сервера. В частности, он особенно полезен для проектов, требующих частых изменений конфигурации или масштабирования, таких как микросервисные архитектуры и облачные инфраструктуры.",
+      "usage_steps": [
+        "Шаг 1. Перейдите на страницу Генератора конфигураций Nginx и выберите опцию создания нового конфигурационного файла.",
+        "Шаг 2. В разделе 'Основные настройки' укажите доменное имя, порт и корневую директорию для вашего веб-сервера.",
+        "Шаг 3. Перейдите в раздел 'Проксирование' и настройте параметры проксирования, если необходимо. Выберите сервер, на который будут направляться запросы, и укажите путь к локальному серверу.",
+        "Шаг 4. В разделе 'Кеширование' настройте параметры кеширования статических файлов. Укажите время жизни кэша и типы файлов, которые должны кэшироваться.",
+        "Шаг 5. Перейдите в раздел 'Безопасность' и настройте параметры SSL. Загрузите ваш SSL-сертификат и ключ, а также укажите параметры сертификации, такие как использование HSTS и OCSP stapling.",
+        "Шаг 6. После завершения настройки нажмите кнопку 'Сгенерировать конфигурацию'. Система создаст файл конфигурации Nginx, который можно сохранить и использовать для настройки вашего веб-сервера."
+      ],
+      "usage_examples": [
+        "Пример 1. Администратор системного управления использует Генератор конфигураций Nginx для настройки проксирования запросов между несколькими бэкенд-серверами в микросервисной архитектуре. Это позволяет эффективно распределить нагрузку и улучшить производительность приложения.",
+        "Пример 2. Разработчик веб-приложений использует инструмент для настройки кеширования статических файлов, таких как изображения и CSS. Это значительно ускоряет загрузку страниц и улучшает пользовательский опыт.",
+        "Пример 3. Администратор веб-сайта использует Генератор конфигураций Nginx для настройки SSL-сертификатов на веб-сервере. Это обеспечивает шифрование данных и повышает уровень безопасности сайта.",
+        "Пример 4. Команда разработки использует инструмент для быстрой генерации конфигураций Nginx для новых виртуальных хостов при деплое новых версий приложения. Это упрощает процесс развертывания и минимизирует время простоя."
+      ]
+    },
+    "ar": {
+      "detailed_description": "منصة مولد تكوينات Nginx هي أداة قوية ومخصصة تهدف إلى تبسيط عملية إنشاء ملفات التكوين لخادم Nginx. تتيح هذه الأداة للمطورين والمسؤولين عن الشبكات إنشاء تكوينات معقدة بشكل دقيق وسريع دون الحاجة إلى معرفة مفصلة باللغة المستخدمة في تكوينات Nginx. يمكن استخدام هذه الأداة في مجموعة متنوعة من السيناريوهات، مثل تكوين الخادم لاستضافة مواقع الويب المتعددة، تحسين أداء الشبكة، أو تأمين الخادم من الهجمات الإلكترونية. تعمل الأداة من خلال واجهة مستخدم سهلة الاستخدام تتيح للمستخدمين تحديد المعلمات والخيارات المطلوبة، مثل تكوينات الـ Virtual Hosts، توجيه الطلبات، وإعدادات الأمان. بمجرد إدخال هذه المعلمات، تقوم الأداة بإنشاء ملف تكوين Nginx جاهز للتنزيل والاستخدام. هذا يساعد في تقليل الأخطاء الناتجة عن الكتابة اليدوية ويحسن الكفاءة في إدارة الخوادم.",
+      "usage_steps": [
+        "أدخل اسم الخادم (Server Name) في الحقل المخصص، والذي سيحدد المجال المضيف للخادم.",
+        "حدد البروتوكولات التي سيعمل عليها الخادم، مثل HTTP أو HTTPS، من القائمة المنسدلة.",
+        "أضف الـ Virtual Hosts المطلوبة، مع تحديد المسارات والمواقع المضيفة لكل منها.",
+        "قم بتكوين إعدادات الأمان، مثل تفعيل SSL/TLS وتحديد شهادات الأمان المطلوبة.",
+        "حدد أي قواعد توجيه إضافية، مثل توجيه الطلبات إلى خادم آخر أو إعادة توجيه URLs.",
+        "انقر على زر 'إنشاء التكوين' للحصول على ملف التكوين النهائي، ثم قم بتنزيله واستخدامه على خادم Nginx الخاص بك."
+      ],
+      "usage_examples": [
+        "إدارة مواقع الويب المتعددة: يمكن استخدام الأداة لإنشاء تكوينات مخصصة لكل موقع ويب يُستضاف على نفس الخادم، مما يسهل إدارة الموارد وال PERFORMANCE.",
+        "تحسين أمان الشبكة: عند تكوين الـ SSL/TLS، يمكن للمطورين تأمين اتصالات العملاء مع الخادم، مما يحمي البيانات الحساسة من الاختراق.",
+        "توفير محتوى من مصادر متعددة: يمكن تكوين الخادم لاستقبال الطلبات وإعادة توجيهها إلى مصادر محتوى مختلفة، مثل خوادم الوسائط أو خدمات API.",
+        "تحسين أداء التطبيقات: من خلال تكوين الـ caching و الإعدادات الأخرى، يمكن تحسين استجابة التطبيقات وإدارة الحمولة على الخادم بكفاءة."
+      ]
+    }
+  }
+}

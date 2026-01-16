@@ -1,0 +1,175 @@
+{
+  "slug": "placeholder-image",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Placeholder Image Generator is a versatile web-based utility designed to create placeholder images with customizable dimensions and color schemes. This tool is particularly useful for web developers, designers, and content creators who need to quickly generate images for testing, prototyping, or placeholder purposes without the need for actual content. The generator leverages client-side JavaScript to dynamically create images based on user-defined parameters, ensuring that the images are generated instantly and can be used immediately. Users can specify the width and height of the image, as well as the background and text colors, to match their specific design requirements. The tool also supports the addition of text overlays, which can be used to display the image dimensions or any other custom text. By providing these features, the Placeholder Image Generator helps streamline the development process, reduce the need for placeholder image libraries, and enhance the visual consistency of web projects during the early stages of development.",
+      "usage_steps": [
+        "Step 1: Open the Placeholder Image Generator page in your web browser.",
+        "Step 2: In the 'Width' field, enter the desired width of the placeholder image in pixels.",
+        "Step 3: In the 'Height' field, enter the desired height of the placeholder image in pixels.",
+        "Step 4: Use the 'Background Color' picker to select the background color for the image. You can enter a hex code or choose from the color palette.",
+        "Step 5: Use the 'Text Color' picker to select the color of the text overlay. Again, you can enter a hex code or choose from the color palette.",
+        "Step 6: If desired, enter custom text in the 'Text Overlay' field to display on the image. Click 'Generate Image' to create and download the placeholder image."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer is building a responsive website and needs to test the layout with various image sizes. They use the Placeholder Image Generator to quickly create images with different dimensions to ensure the layout adjusts correctly on different devices.",
+        "Example 2: A graphic designer is creating a mockup for a new product page and needs placeholder images to represent product images. They use the tool to generate images with the exact dimensions and color schemes that match the design concept.",
+        "Example 3: A content manager is preparing a blog post and needs placeholder images to fill in the gaps until the final images are ready. They use the Placeholder Image Generator to create images with custom text overlays that indicate the intended content, such as 'Product Image' or 'Lifestyle Photo'.",
+        "Example 4: A frontend developer is working on a user interface that requires a consistent color scheme. They use the tool to generate placeholder images with specific background and text colors to match the UI design, ensuring visual harmony throughout the development process."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Placeholder Image Generator 是一个在线工具，用于生成具有自定义尺寸和颜色的占位图像。该工具通过简单的参数设置，能够快速生成用于网页设计、前端开发和测试的占位图像。用户可以通过指定图像的宽度、高度、背景色和前景色来创建符合特定需求的占位图像。这种图像在网页开发过程中非常有用，特别是在没有最终图像可用时，可以用来预览布局效果，测试响应式设计，或者作为临时图像占位符。此外，该工具还支持生成带有文本标签的占位图像，用户可以自定义文本内容，以便更灵活地使用这些图像。通过这种方式，开发者可以更高效地进行前端开发和设计，同时确保页面在不同设备和屏幕尺寸上的表现一致性。",
+      "usage_steps": [
+        "Step 1: 打开 Placeholder Image Generator 工具页面，可以看到宽度、高度、背景色、前景色和文本输入框。",
+        "Step 2: 在宽度输入框中输入您需要的图像宽度，例如 300。",
+        "Step 3: 在高度输入框中输入您需要的图像高度，例如 200。",
+        "Step 4: 选择或输入背景色，可以使用颜色选择器或直接输入十六进制颜色代码，例如 #FFFFFF 表示白色。",
+        "Step 5: 选择或输入前景色，同样可以使用颜色选择器或直接输入十六进制颜色代码，例如 #000000 表示黑色。",
+        "Step 6: 如果需要，可以在文本输入框中输入自定义文本，例如 'Sample Image'，然后点击生成按钮，即可看到生成的占位图像。"
+      ],
+      "usage_examples": [
+        "Example 1: 在开发响应式网页布局时，设计师可以使用 Placeholder Image Generator 生成不同尺寸的占位图像，预览不同设备上的布局效果，确保网页在不同屏幕尺寸上的表现一致性。",
+        "Example 2: 前端开发者在进行页面开发时，可以快速生成占位图像来代替尚未完成的图片内容，从而更加专注于页面布局和功能实现。",
+        "Example 3: 在进行网站性能测试时，测试人员可以使用占位图像作为测试用例中的图片资源，模拟真实环境下的图片加载情况，评估网站的加载速度和性能。",
+        "Example 4: 博客作者在撰写文章时，如果暂时没有合适的配图，可以使用 Placeholder Image Generator 生成带有自定义文本的占位图像，作为文章的插图，提高文章的可读性和吸引力。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Placeholder Image Generatorは、ユーザーが任意のサイズと色を指定してプレースホルダーアイムを生成できるオンラインツールです。このツールは、ウェブ開発者やデザイナーがプロトタイプ制作やテスト用のダミー画像を迅速に作成する際に非常に役立ちます。具体的には、画像の幅と高さ、背景色、テキスト色をカスタマイズできます。また、画像に表示されるテキスト内容も指定可能で、必要に応じて「画像サイズ」や「カスタムテキスト」を設定できます。このツールは、HTTPリクエストを処理して、指定されたパラメータに基づいてSVG形式の画像を生成します。生成された画像は、URLから直接アクセス可能で、CSSやHTMLで簡単に使用できます。このような機能により、ウェブデザインの初期段階における効率的なプロトタイピングや、レスポンシブデザインのテストが可能になります。",
+      "usage_steps": [
+        "1. ブラウザでPlaceholder Image Generatorのページを開きます。",
+        "2. 画面上部の「Width」フィールドに画像の幅（ピクセル単位）を入力します。",
+        "3. 次に、「Height」フィールドに画像の高さ（ピクセル単位）を入力します。",
+        "4. 「Background Color」フィールドで画像の背景色を指定します（16進数カラーを使用します）。",
+        "5. 「Text Color」フィールドで画像に表示されるテキストの色を指定します（16進数カラーを使用します）。",
+        "6. 「Text」フィールドに画像に表示させたいテキストを入力し、最後に「Generate」ボタンをクリックします。"
+      ],
+      "usage_examples": [
+        "ウェブデザイナーが新しいウェブサイトのプロトタイプを作成する際、各セクションに適切なサイズのプレースホルダーアイムを使用することで、デザインの全体像を把握しやすくなります。",
+        "開発者がレスポンシブデザインのテストを行う際、異なるデバイスサイズに対応するためのダミー画像を迅速に生成し、レイアウトの調整を行います。",
+        "UI/UXデザイナーがプレゼンテーション資料を作成する際、具体的な画像がない場合でも、適切なサイズと色のプレースホルダーアイムを使用することで、デザインコンセプトを効果的に伝えます。",
+        "マーケティング担当者が新しい広告キャンペーンの提案資料を作成する際、具体的な画像が用意されていない場合でも、カスタマイズされたプレースホルダーアイムを使用して、ビジュアルの概要を提示します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Placeholder Image Generator는 사용자가 원하는 크기와 색상을 가진 플레이스홀더 이미지를 생성하는 도구입니다. 이 도구는 웹 디자인, 프로토타이핑, 테스트 등의 다양한 용도로 활용됩니다. 플레이스홀더 이미지는 실제 이미지가 아직 준비되지 않은 경우, 레이아웃의 완성도를 높이거나, 이미지 로딩이 느릴 때 임시 이미지로 사용됩니다. 이 도구는 URL 파라미터를 통해 이미지의 크기와 색상을 지정할 수 있으며, 이는 프론트엔드 개발자들이 동적으로 이미지를 로드하는 데 유용합니다. 또한, RGB 값, 헥사 코드, 이름으로 색상을 지정할 수 있어 더욱 다양한 옵션을 제공합니다. 이 도구는 서버サイ드에서 이미지를 생성하고 클라이언트에게 전송하는 방식으로 작동하며, 이를 통해 빠른 로딩 시간을 보장합니다.",
+      "usage_steps": [
+        "1. Placeholder Image Generator 웹사이트에 접속합니다.",
+        "2. 'Width' 입력 필드에 이미지의 너비를 픽셀 단위로 입력합니다.",
+        "3. 'Height' 입력 필드에 이미지의 높이를 픽셀 단위로 입력합니다.",
+        "4. 'Background Color' 드롭다운 메뉴에서 배경색을 선택하거나, 헥사 코드로 직접 입력합니다.",
+        "5. 'Text Color' 드롭다운 메뉴에서 텍스트 색상을 선택하거나, 헥사 코드로 직접 입력합니다.",
+        "6. 'Generate' 버튼을 클릭하여 플레이스홀더 이미지를 생성합니다. 생성된 이미지는 페이지 상단에 표시되며, URL을 복사하여 사용할 수 있습니다."
+      ],
+      "usage_examples": [
+        "웹 디자이너가 프로토타입을 만들 때, 실제 이미지가 준비되지 않은 경우 플레이스홀더 이미지를 사용하여 레이아웃을 완성합니다.",
+        "프론트엔드 개발자가 웹 페이지의 이미지 로딩 시간을 테스트할 때, 플레이스홀더 이미지를 사용하여 실제 이미지 대신 로드 시간을 측정합니다.",
+        "UI/UX 디자이너가 사용자 인터페이스를 설계할 때, 일관된 디자인을 유지하기 위해 특정 크기와 색상의 플레이스홀더 이미지를 사용합니다.",
+        "웹 개발자가 레이아웃의 반응성을 테스트할 때, 다양한 크기의 플레이스홀더 이미지를 사용하여 화면 크기에 따른 이미지 표시를 확인합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de Imágenes de Lugar de Reserva es una herramienta especializada diseñada para crear imágenes de relleno con dimensiones y colores personalizados. Esta herramienta es extremadamente útil para desarrolladores, diseñadores y profesionales de la web que necesitan imágenes de prueba de alta calidad para prototipos, simulaciones y pruebas de diseño. La flexibilidad de personalización permite a los usuarios especificar el ancho, la altura, y los colores de fondo y de texto, lo que facilita la integración de las imágenes en cualquier proyecto. Técnicamente, la herramienta utiliza URL parametrizadas para generar imágenes dinámicamente, lo que significa que cada cambio en los parámetros resulta en una nueva imagen única. Además, la opción de agregar texto a las imágenes permite a los usuarios simular contenido real, mejorando la precisión de las pruebas y la visualización de diseños.",
+      "usage_steps": [
+        "Abre la página del Generador de Imágenes de Lugar de Reserva en tu navegador.",
+        "En el campo 'Ancho', introduce el ancho deseado para la imagen en píxeles.",
+        "En el campo 'Altura', introduce la altura deseada para la imagen en píxeles.",
+        "Selecciona el color de fondo utilizando el selector de color o ingresando el código hexadecimal.",
+        "Opcionalmente, agrega texto a la imagen utilizando el campo 'Texto'. Esto puede ser útil para simular títulos o etiquetas.",
+        "Haz clic en el botón 'Generar Imagen' para crear tu imagen personalizada y verla en la vista previa."
+      ],
+      "usage_examples": [
+        "Un diseñador web necesita crear un prototipo de una página de productos y quiere usar imágenes de lugar de reserva que coincidan con el esquema de colores del sitio. Utiliza el Generador de Imágenes de Lugar de Reserva para crear imágenes con las dimensiones exactas y los colores de fondo y texto adecuados.",
+        "Un desarrollador de aplicaciones móviles está probando la disposición de elementos en una pantalla de lista. Necesita imágenes de relleno que se adapten a los tamaños de las tarjetas de producto. El generador de imágenes le permite crear rápidamente imágenes con las dimensiones y colores necesarios.",
+        "Un equipo de marketing está trabajando en un diseño de correo electrónico y necesita imágenes de relleno para ver cómo se renderizarán los elementos visuales en diferentes clientes de correo. Utilizan el generador para crear imágenes con texto personalizado que simula los títulos de los productos.",
+        "Un creador de contenido está desarrollando una plantilla de presentación y necesita imágenes de lugar de reserva para rellenar las diapositivas. El generador de imágenes le permite crear imágenes con las dimensiones y colores específicos de la plantilla, lo que facilita la revisión y la presentación."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Placeholder Image Generator é uma ferramenta robusta projetada para desenvolvedores e designers que necessitam de imagens de espaço reservado personalizadas para seus projetos. Tecnicamente, esta ferramenta permite a geração de imagens de espaço reservado com dimensões, cores de fundo e de texto totalmente customizadas. O processo de geração é baseado em solicitações HTTP, onde os parâmetros de tamanho e cor são passados como query strings na URL. Isso oferece uma flexibilidade notável, permitindo que os usuários obtenham imagens precisamente ajustadas às suas necessidades sem a necessidade de edição manual. Além disso, a ferramenta suporta formatações de imagem comuns, como JPEG e PNG, garantindo a compatibilidade com uma ampla variedade de aplicações. A necessidade de tais imagens de espaço reservado surge em diversos cenários, como prototipagem de interfaces, desenvolvimento de layouts responsivos e testes de design. Ao utilizar o Placeholder Image Generator, os usuários podem economizar tempo e garantir a consistência visual em seus projetos, eliminando a necessidade de buscar ou criar imagens de espaço reservado manualmente.",
+      "usage_steps": [
+        "Acesse a página do Placeholder Image Generator no site.",
+        "Na seção de configuração, defina o tamanho da imagem inserindo as dimensões desejadas (largura e altura) nos campos respectivos.",
+        "Selecione a cor de fundo da imagem usando o seletor de cores ou inserindo o código hexadecimal.",
+        "Escolha a cor do texto da mesma maneira, caso deseje que a imagem contenha algum texto.",
+        "Escolha o formato da imagem (JPEG ou PNG) através do menu suspenso 'Formato'.",
+        "Clique no botão 'Gerar Imagem' para criar a imagem de espaço reservado com as configurações especificadas e baixá-la ou copiar a URL gerada."
+      ],
+      "usage_examples": [
+        "Um designer de UX está criando um protótipo de uma nova aplicação móvel e precisa de imagens de espaço reservado para representar fotos de perfil de usuários. Ele usa o Placeholder Image Generator para criar imagens de 50x50 pixels com fundo cinza e texto branco, que se integram perfeitamente ao design.",
+        "Um desenvolvedor web está testando a responsividade de um site e precisa de imagens de diferentes tamanhos para verificar como elas se comportam em várias resoluções de tela. Ele utiliza o Placeholder Image Generator para gerar imagens de 300x200, 600x400 e 1200x800 pixels, todas com cores de fundo diferentes para facilitar a identificação durante os testes.",
+        "Um criador de conteúdo precisa de imagens de espaço reservado para preencher os espaços em uma apresentação de slides. Ele utiliza a ferramenta para criar imagens de 1920x1080 pixels com fundo preto e texto branco, que representam as categorias de conteúdo das diferentes seções.",
+        "Um time de desenvolvimento está criando uma galeria de imagens dinâmica e precisa de imagens de espaço reservado para exibir durante o carregamento de imagens reais. Eles usam o Placeholder Image Generator para gerar múltiplas imagens de 200x200 pixels com cores suaves, que servem como placeholders temporários até que as imagens reais sejam carregadas."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Générateur d'Images de Remplacement est un outil puissant conçu pour créer des images de remplacement personnalisées pour vos projets web et graphiques. Techniquement, cet outil génère des images basées sur des paramètres spécifiques tels que la taille, les couleurs de fond et de texte, et même le texte affiché sur l'image. Ces images sont générées à la volée, ce qui signifie que chaque requête est traitée en temps réel pour produire une image unique. Les utilisateurs ont besoin de cet outil pour plusieurs raisons. Par exemple, lors de la conception de prototypes ou de maquettes web, des images de remplacement de tailles et de couleurs spécifiques peuvent être essentielles pour visualiser l'aspect final du design. De plus, les développeurs peuvent l'utiliser pour tester l'affichage de contenu dynamique ou pour générer des images d'occupation pendant le chargement de contenu. L'outil fonctionne en acceptant des paramètres via une URL codée, ce qui le rend facilement intégrable dans des scripts et des applications web. Il utilise des techniques de rendu côté serveur pour générer des images au format PNG, optimisées pour une utilisation web.",
+      "usage_steps": [
+        "Accédez à la page du Générateur d'Images de Remplacement sur le site.",
+        "Dans la section 'Taille de l'image', saisissez la largeur et la hauteur souhaitées en pixels.",
+        "Dans la section 'Couleurs', choisissez la couleur de fond et la couleur du texte en utilisant le sélecteur de couleurs ou en entrant les codes hexadécimaux.",
+        "Dans la section 'Texte', entrez le texte que vous souhaitez afficher sur l'image. Vous pouvez laisser ce champ vide si vous ne souhaitez pas de texte.",
+        "Cliquez sur le bouton 'Générer l'image' pour créer votre image de remplacement.",
+        "Une fois l'image générée, vous pouvez la télécharger directement ou copier l'URL pour l'utiliser dans vos projets web."
+      ],
+      "usage_examples": [
+        "Un designer web crée des prototypes pour une nouvelle application mobile. Il utilise le Générateur d'Images de Remplacement pour générer des images de placeholders de différentes tailles et couleurs pour simuler l'affichage de contenu tel que des icônes, des images de profil, et des vignettes.",
+        "Un développeur frontend teste l'affichage de balises d'images sur un site web en développement. Il utilise l'outil pour générer des images de remplacement avec des dimensions spécifiques pour vérifier comment le design réagit à différents types de contenu.",
+        "Une agence de marketing crée des bannières publicitaires pour une campagne. Elle utilise le Générateur d'Images de Remplacement pour produire des bannières de tailles standard avec des couleurs de marque pour des tests A/B.",
+        "Un webmaster gère un site e-commerce et a besoin de générer des images d'occupation pour les produits en cours de mise à jour. Il utilise l'outil pour créer des images de remplacement temporaires avec des textes spécifiques pour indiquer que les produits seront bientôt disponibles."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Placeholder Image Generator ist ein hochflexibles Werkzeug, das es Nutzern ermöglicht, Platzhalterbilder in benutzerdefinierter Größe und mit spezifischen Farben zu erstellen. Diese Bilder dienen in der Regel als temporäre Ersatz für fehlende oder noch nicht fertige Bilddateien in Webdesign, Prototyping und Content Management Systemen (CMS). Die Fähigkeit, die Größe und Farben individuell anzupassen, erhöht die Nützlichkeit des Tools erheblich, da es sich nahtlos in verschiedene Designrichtlinien und Anwendungsfälle einfügen kann. Dies ist besonders wertvoll für Entwickler und Designer, die einen schnellen und visuell konsistenten Eindruck von ihrer Arbeit geben möchten, ohne dass echte Inhalte vorhanden sind. Technisch gesehen erzeugt der Generator die Bilder mittels serverseitigen Skripten, die auf Anfrage die gewünschten Parameter verarbeiten und ein PNG-Bild zurückgeben. Die Anfrage kann sowohl über eine einfache Benutzeroberfläche als auch über eine API erfolgen, was die Integration in automatisierte Workflows erleichtert.",
+      "usage_steps": [
+        "Öffnen Sie die Website des Placeholder Image Generators in Ihrem Browser.",
+        "Wählen Sie die gewünschte Bildgröße aus, indem Sie die Werte für Breite und Höhe in die entsprechenden Eingabefelder eingeben.",
+        "Legen Sie die Hintergrundfarbe des Platzhalterbildes fest, indem Sie den Farbwähler benutzen oder einen hexadezimalen Farbwert eingeben.",
+        "Wählen Sie optional eine Textfarbe, die auf dem Platzhalterbild erscheinen soll, indem Sie den Textfarbwähler verwenden oder einen hexadezimalen Farbwert eingeben.",
+        "Klicken Sie auf den Button 'Bild generieren', um die Anfrage zu senden und das Platzhalterbild zu erstellen.",
+        "Das generierte Bild wird in der Vorschau angezeigt. Sie können es direkt herunterladen oder die URL verwenden, um es in Ihre Anwendung oder Website zu integrieren."
+      ],
+      "usage_examples": [
+        "Ein Webdesigner erstellt ein neues Layout für eine Online-Shop-Website. Bevor die finalen Produktbilder geliefert werden, verwendet er den Placeholder Image Generator, um realistiche Platzhalterbilder in den verschiedenen Produktschaukästen anzuordnen, um den Kunden einen visuellen Überblick über die Struktur der Seite zu geben.",
+        "Ein Frontend-Entwickler arbeitet an einer responsiven Webapplikation und benötigt Platzhalterbilder für verschiedene Bildschirmgrößen, um die responsiven Eigenschaften zu testen. Er nutzt den Generator, um schnell Bilder in unterschiedlichen Formaten und Auflösungen zu erstellen, die die responsiven Layouts unterstützen.",
+        "Ein Marketing-Team plant eine Kampagne und braucht Platzhalterbilder für ihre Social-Media-Beiträge, um die visuelle Darstellung vorzubereiten, bevor die finalen Grafiken bereit sind. Der Generator ermöglicht es ihnen, Bilder mit spezifischen Maßen und Farben zu erstellen, die den visuellen Stil der Kampagne widerspiegeln.",
+        "Ein CMS-Entwickler erstellt einen neuen Inhaltstyp für ein Blog und benötigt Platzhalterbilder, um die Vorschau- und Listenansichten zu testen. Er integriert das API des Placeholder Image Generators in das CMS, um automatisch Platzhalterbilder zu generieren, sobald ein neuer Blogbeitrag erstellt wird, bis das tatsächliche Titelbild hochgeladen wird."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Placeholder Image Generator — это мощный инструмент, который позволяет генерировать заготовки изображений с заданными размерами и цветами. Технически, этот инструмент использует веб-технологии для создания изображений на основе параметров, введенных пользователем. Заготовки изображений генерируются на лету, что делает их идеальными для тестирования и разработки веб-сайтов и приложений. Пользователи могут указать ширину и высоту изображения, а также цвет фона и переднего плана. Эти параметры затем обрабатываются на стороне сервера, и изображение возвращается в формате PNG или JPEG. Placeholder Image Generator особенно полезен для веб-разработчиков, которые нуждаются в быстрых и качественных изображениях для тестирования макетов, создания прототипов или заполнения контентом. Кроме того, это инструмент может использоваться дизайнерами для создания макетов или демонстрации дизайнерских решений без необходимости создания реальных изображений.",
+      "usage_steps": [
+        "Откройте страницу Placeholder Image Generator на сайте.",
+        "В разделе «Размеры изображения» введите значения ширины и высоты в пикселях.",
+        "Выберите цвет фона и цвет переднего плана, используя цветовые палитры или введя значения в формате HEX.",
+        "Если необходимо, выберите формат изображения (PNG или JPEG) из выпадающего списка «Формат изображения».",
+        "Нажмите кнопку «Создать изображение», чтобы сгенерировать заготовку.",
+        "Сохраните или скопируйте сгенерированное изображение, щелкнув по нему правой кнопкой мыши и выбрав соответствующий пункт меню."
+      ],
+      "usage_examples": [
+        "Веб-разработчик использует Placeholder Image Generator для создания заготовок изображений для тестирования адаптивного дизайна сайта. Он генерирует изображения различных размеров, чтобы проверить, как они отображаются на разных устройствах.",
+        "Дизайнер использует этот инструмент для создания макета веб-страницы, где ему нужно заполнить пространство под изображения. Placeholder Image Generator позволяет быстро создать необходимые заготовки, которые позже будут заменены реальными изображениями.",
+        "Копирайтер использует Placeholder Image Generator для создания прототипа промо-страницы, где ему нужно продемонстрировать размещение изображений. Генерируемые изображения помогают визуализировать конечный результат без необходимости создания реального контента.",
+        "Разработчик приложений использует Placeholder Image Generator для тестирования пользовательского интерфейса мобильного приложения. Он создает заготовки изображений для различных экранов, чтобы проверить, как они выглядят в приложении, и убедиться, что все элементы правильно расположены."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مولد الصور النموذجية هو أداة قوية مخصصة لإنشاء صور نموذجية ذات أحجام وألوان مخصصة. يتم استخدام هذه الصور عادة في تطوير الويب وتصميم الواجهات الرسومية لملء المساحات الفارغة بشكل مؤقت، مما يساعد المطورين والمصممين على التركيز على التخطيط العام والتخطيط البصري للمشاريع. يمكن للمستخدمين تحديد البعد الدقيق للصورة واللون الخلفي واللون النصي، بجانب إمكانية إضافة نص توضيحي. يتم توليد الصور بتنسيق PNG أو JPEG، ويمكن تنزيلها أو استخدامها مباشرة عبر الرابط المُولد. هذه الأداة مفيدة بشكل خاص عند العمل على تصميمات مستجيبة تتحلى بالمرونة، حيث يمكن إنشاء صور نموذجية تتكيف مع مختلف أحجام الشاشات.",
+      "usage_steps": [
+        "انتقل إلى صفحة مولد الصور النموذجية عبر الرابط المحدد.",
+        "حدد البعد العرض والارتفاع للصورة النموذجية في حقول الإدخال المخصصة.",
+        "اختر اللون الخلفي للصورة من خلال النقر على زر الاختيار وتحديد الدرجة اللونية المفضلة.",
+        "حدد اللون النصي للنص التوضيحي باستخدام نفس آلية اختيار اللون.",
+        "أدخل النص التوضيحي الذي ترغب في ظهوره على الصورة، مثل حجم الصورة أو أي معلومة أخرى.",
+        "اضغط على زر \"إنشاء\" لتجенير الصورة، ثم قم بتنزيلها أو استخدام الرابط المباشر المُولد."
+      ],
+      "usage_examples": [
+        "المطورون يمكنهم استخدام هذه الأداة لإنشاء صور نموذجية لتوضع في موقع ويب قيد التطوير، مما يساعد في تقييم التخطيط البصري دون الحاجة إلى إعداد صور فعلية.",
+        "المصممون الجرافيكيون يمكنهم استخدم هذه الأداة لإنشاء صور نموذجية لملء الفراغات في تخطيطات العروض التقديمية أو المطبوعات، مما يسهل عملية العرض والمراجعة.",
+        "مديرو المشاريع الرقمية يمكنهم استخدام الصور النموذجية لإعداد العروض التقديمية للعملاء، حيث يمكن إظهار كيفية تكامل العناصر البصرية المختلفة دون الحاجة إلى إنتاج المحتوى النهائي.",
+        "المطورون الذين يعملون على تطبيقات الهواتف المحمولة يمكنهم استخدام هذه الأداة لإنشاء صور نموذجية تتناسب مع أحجام الشاشات المختلفة، مما يساعد في تحسين تصميم واجهة المستخدم."
+      ]
+    }
+  }
+}

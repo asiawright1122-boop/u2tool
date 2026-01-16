@@ -2,13 +2,16 @@
  * 相关工具组件
  * 显示语义相关的工具，用于内部链接优化
  * 支持同分类和跨分类推荐
+ * 支持鼠标悬停预取工具组件
  */
 
 'use client';
 
 import { Link } from '@/i18n/routing';
+import { useRouter } from 'next/navigation';
+import { useCallback } from 'react';
 import { Tool, getToolsByCategory, ToolCategory } from '@/config/tools';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { getSemanticRelatedTools, getMixedRecommendations } from '@/lib/internal-links';
 
 interface RelatedToolsProps {
@@ -40,6 +43,8 @@ export default function RelatedTools({
 }: RelatedToolsProps) {
   const t = useTranslations('tools');
   const tNav = useTranslations('nav');
+  const locale = useLocale();
+  const router = useRouter();
 
   // 获取相关工具（使用语义算法或简单分类过滤）
   const relatedTools = useSemantic
@@ -52,6 +57,11 @@ export default function RelatedTools({
   const finalTools = relatedTools.length >= MIN_RELATED_COUNT
     ? relatedTools
     : getMixedRecommendations(currentSlug, maxCount);
+
+  // 鼠标悬停时预取工具页面
+  const handleMouseEnter = useCallback((slug: string) => {
+    router.prefetch(`/${locale}/tools/${slug}`);
+  }, [router, locale]);
 
   // 如果没有相关工具，不渲染
   if (finalTools.length === 0) {
@@ -76,6 +86,7 @@ export default function RelatedTools({
                 href={`/tools/${tool.slug}`}
                 className="flex flex-col items-center p-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 rounded-lg hover:border-blue-500/30 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all group"
                 title={toolName}
+                onMouseEnter={() => handleMouseEnter(tool.slug)}
               >
                 <span className="text-2xl mb-2 group-hover:scale-110 transition-transform" aria-hidden="true">
                   {tool.icon}

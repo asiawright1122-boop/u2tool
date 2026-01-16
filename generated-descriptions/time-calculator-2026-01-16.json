@@ -1,0 +1,175 @@
+{
+  "slug": "time-calculator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Time Calculator is a sophisticated web-based utility designed to perform precise arithmetic operations on time values, including addition, subtraction, and the calculation of differences. This tool is indispensable for professionals and enthusiasts who need to manage and analyze time data accurately. Whether you are a project manager tracking task durations, a scientist conducting time-sensitive experiments, or a developer testing timing functions, the Time Calculator streamlines the process of handling time units. The tool supports various time formats, such as hours, minutes, and seconds, and can handle complex calculations involving multiple time zones. Under the hood, the Time Calculator uses advanced algorithms to ensure that all operations are performed with high precision, accounting for leap seconds and daylight saving time adjustments. The interface is intuitive, allowing users to input time values through a series of dropdown menus and input fields, and the results are displayed in real-time.",
+      "usage_steps": [
+        "Step 1: Open the Time Calculator tool on our website and locate the main input area.",
+        "Step 2: Choose the operation you want to perform (Add, Subtract, or Calculate Difference) using the dropdown menu.",
+        "Step 3: Enter the first time value in the 'Start Time' field. You can select the hours, minutes, and seconds from the dropdown menus.",
+        "Step 4: If you are performing an addition or subtraction, enter the second time value in the 'End Time' field using the same method.",
+        "Step 5: For calculating differences, enter the second time value in the 'End Time' field, and the tool will automatically compute the duration between the two times.",
+        "Step 6: Click the 'Calculate' button to see the result, which will be displayed in the 'Result' section of the tool."
+      ],
+      "usage_examples": [
+        "Example 1: A project manager needs to calculate the total duration of a task that spans multiple days. By inputting the start and end times, the Time Calculator provides the exact duration, including hours and minutes.",
+        "Example 2: A scientist is conducting an experiment that requires precise timing. By using the Time Calculator to add the duration of each step, they can ensure the experiment adheres to the required schedule.",
+        "Example 3: A developer is testing the performance of a function that runs at specific intervals. By subtracting the start time from the end time, they can determine the actual runtime of the function.",
+        "Example 4: A travel planner needs to calculate the total travel time for a multi-leg journey. By entering the departure and arrival times for each leg, the Time Calculator helps in planning the overall itinerary accurately."
+      ]
+    },
+    "zh": {
+      "detailed_description": "时间计算器是一款专门用于时间计算的在线工具，它能够帮助用户轻松完成时间的加法、减法以及时间差的计算。该工具特别适用于需要频繁处理时间数据的场景，如项目管理、日程安排、科学实验等。时间计算器的核心功能在于其能够精确处理不同时间单位之间的转换，例如秒、分钟、小时、天等。用户可以输入具体的时间值，选择相应的操作，工具将自动计算并显示结果。此外，时间计算器还支持跨时区的时间计算，能够帮助用户处理国际项目中的时间差异问题。通过使用先进的算法，时间计算器确保了计算的准确性和效率，为用户提供了一个强大的时间管理工具。",
+      "usage_steps": [
+        "Step 1: 打开时间计算器页面，你会看到主界面分为输入区和结果显示区。",
+        "Step 2: 在输入区的“时间1”栏中，选择时间单位（秒、分钟、小时、天）并输入具体的时间值。",
+        "Step 3: 在“操作”栏中，选择你希望进行的运算，如加法、减法或计算时间差。",
+        "Step 4: 在输入区的“时间2”栏中，同样选择时间单位并输入具体的时间值。",
+        "Step 5: 点击“计算”按钮，工具将自动执行所选运算并显示结果。",
+        "Step 6: 结果将在结果显示区中以所选的时间单位显示，你还可以点击“重置”按钮以清空输入并重新开始计算。"
+      ],
+      "usage_examples": [
+        "Example 1: 项目经理需要计算两个项目任务的时间间隔。输入第一个任务的结束时间（如3天）和第二个任务的开始时间（如5天），选择计算时间差，工具将显示两者之间的时间间隔。",
+        "Example 2: 科研人员在实验中需要精确控制两个步骤的时间差。输入第一个步骤的持续时间（如2小时30分钟）和第二个步骤的开始时间（如3小时），选择减法，工具将显示两个步骤之间的时间差。",
+        "Example 3: 旅行者需要计算两个不同城市之间的时间差。输入两个城市的当地时间并选择计算时间差，工具将显示两地之间的确切时间差。",
+        "Example 4: 老师需要为学生安排一个为期5天的学习计划。输入第一天的开始时间和计划的总天数（5天），选择加法，工具将显示计划结束的具体时间。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "タイム カルキュレーターは、時間の加算、減算、および差の計算を実現する高度なオンラインツールです。このツールは、時間の計算が必要なあらゆるシナリオで活用できます。例えば、プロジェクト管理、イベントスケジューリング、旅行計画など、様々な用途で利用されています。タイム カルキュレーターは、単純な時間の加減算だけでなく、複雑な時間間隔の計算もサポートします。時間の単位は秒、分、時間、日、週、月、年など、多岐にわたるため、ユーザーは必要な単位を選択し、計算結果を取得できます。また、タイムゾーンの違いを考慮した計算も可能で、グローバルなプロジェクトや国際的なスケジュール調整に役立ちます。技術的には、このツールはJavaScriptのDateオブジェクトを利用し、時間の計算を効率的に行います。計算結果は、ユーザーフレンドリーなインターフェースで表示され、クリップボードへのコピー功能も備えています。",
+      "usage_steps": [
+        "Step 1: タイム カルキュレーターのウェブサイトにアクセスし、メイン画面を開きます。",
+        "Step 2: 「開始時間」フィールドに、計算の起点となる時間を入力します。時間のフォーマットはHH:MM:SSです。",
+        "Step 3: 「操作」ドロップダウンメニューから、「加算」または「減算」を選択します。",
+        "Step 4: 「追加時間」フィールドに、計算したい時間を入力します。単位は秒、分、時間、日、週、月、年から選択できます。",
+        "Step 5: 「計算」ボタンをクリックして、計算結果を表示します。",
+        "Step 6: 結果が表示されたら、必要に応じて「コピー」ボタンをクリックしてクリップボードに結果をコピーします。"
+      ],
+      "usage_examples": [
+        "Example 1: 会議の開始時間が10:00 AMで、会議時間が1時間30分の場合、会議の終了時間を計算します。",
+        "Example 2: 旅行の出発日が2023年10月5日で、旅行期間が1週間の場合、旅行の終了日を計算します。",
+        "Example 3: プロジェクトの締め切りが2023年12月15日で、現在の日付が2023年11月1日の場合、残りの日数を計算します。",
+        "Example 4: 東京とニューヨークの時間差を考慮し、東京の15:00 PMにニューヨークで対応する時間を計算します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Time Calculator는 시간을 추가, 빼기, 차이를 계산하는 데 사용되는 강력한 온라인 도구입니다. 이 도구는 시간 간의 복잡한 계산을 간편하게 처리하여 사용자가 일정 관리, 프로젝트 계획, 시간 추적 등 다양한 시나리오에서 효과적으로 활용할 수 있습니다. Time Calculator는 사용자 친화적인 인터페이스를 통해 시간을 초, 분, 시간, 일, 주, 월, 년 단위로 입력하고, 결과를 다양한 형식으로 출력할 수 있습니다. 이 도구는 JavaScript와 HTML5를 기반으로 구축되어 있어 크로스 플랫폼에서 안정적으로 작동하며, 브라우저 캐시를 활용하여 계산 속도를 최적화합니다. 또한, 이 도구는 시간대 차이를 고려한 계산 기능을 제공하여 국제적인 프로젝트에서 유용하게 활용될 수 있습니다.",
+      "usage_steps": [
+        "Step 1: Time Calculator 페이지로 이동하여 '시간 추가' 또는 '시간 빼기'를 선택합니다.",
+        "Step 2: '시간 1' 필드에 첫 번째 시간 값을 입력합니다. (예: 2시간 30분)",
+        "Step 3: '시간 2' 필드에 두 번째 시간 값을 입력합니다. (예: 1시간 45분)",
+        "Step 4: '시간 단위' 드롭다운 메뉴에서 계산 결과를 표시할 단위를 선택합니다. (예: '분', '시간', '일')",
+        "Step 5: '계산' 버튼을 클릭하여 결과를 확인합니다.",
+        "Step 6: 필요하다면, '시간 차이' 옵션을 선택하여 두 시간 값의 차이를 계산할 수 있습니다."
+      ],
+      "usage_examples": [
+        "Example 1: 프로젝트 관리자인 A씨는 Time Calculator를 사용하여 프로젝트의 총 작업 시간을 계산합니다. 각 작업 시간을 입력하여 총 시간을 계산하고, 이를 바탕으로 팀의 일정을 조정합니다.",
+        "Example 2: B양은 온라인 강의를 듣는 중에 각 강의의 총 시간을 계산하기 위해 Time Calculator를 사용합니다. 여러 강의 시간을 추가하여 총 학습 시간을 확인합니다.",
+        "Example 3: C씨는 국제 비행 스케줄을 계획할 때 Time Calculator를 활용합니다. 출발 시간과 비행 시간을 입력하여 도착 시간을 정확히 계산합니다.",
+        "Example 4: D씨는 시간대 차이를 고려한 회의 일정을 조정할 때 Time Calculator를 사용합니다. 각 팀원의 시간대를 고려하여 적절한 회의 시간을 계산합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Time Calculator es una potente herramienta de cálculo de tiempo diseñada para facilitar la realización de operaciones matemáticas complejas con horarios y fechas. Esta herramienta permite a los usuarios sumar, restar y calcular diferencias entre tiempos, lo cual es particularmente útil en una amplia gama de aplicaciones, desde la gestión de proyectos hasta el análisis de datos temporales. El Time Calculator utiliza un algoritmo optimizado para manejar formatos de tiempo en 12 y 24 horas, así como fechas en formatos internacionales, lo que garantiza una precisión y fiabilidad excepcionales. La interfaz del usuario es intuitiva y está diseñada para ser accesible tanto para principiantes como para profesionales, lo que permite realizar cálculos de tiempo de manera rápida y eficiente. Además, el Time Calculator puede manejar múltiples zonas horarias, lo que lo convierte en una herramienta indispensable para quienes trabajan en entornos globales o necesitan coordinar eventos en diferentes regiones del mundo.",
+      "usage_steps": [
+        "Paso 1: Abre el Time Calculator en el navegador y selecciona el tipo de operación que deseas realizar (Suma, Resta, Diferencia).",
+        "Paso 2: En la sección de 'Hora Inicial', introduce la primera hora utilizando el formato de 12 o 24 horas.",
+        "Paso 3: Si estás realizando una operación de suma o resta, introduce la segunda hora en la sección de 'Hora Adicional'.",
+        "Paso 4: Si estás calculando una diferencia, selecciona 'Hora Final' y introduce la segunda hora.",
+        "Paso 5: Si necesitas manejar zonas horarias, utiliza el menú desplegable 'Zona Horaria' para seleccionar la zona horaria correspondiente.",
+        "Paso 6: Haz clic en el botón 'Calcular' para obtener el resultado de la operación, que se mostrará en la sección de 'Resultado'."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un gerente de proyecto necesita calcular cuántas horas de trabajo quedan en un proyecto. Utiliza el Time Calculator para restar la fecha de inicio de la fecha de finalización planificada y obtiene el tiempo restante en horas.",
+        "Ejemplo 2: Un analista de datos necesita determinar la duración de una serie de eventos registrados en un sistema de logs. Utiliza el Time Calculator para calcular la diferencia entre las fechas y horas de inicio y fin de cada evento.",
+        "Ejemplo 3: Un organizador de conferencias internacionales necesita coordinar horarios de presentaciones en diferentes zonas horarias. Utiliza el Time Calculator para sumar o restar horas y ajustar los horarios según las zonas horarias de los participantes.",
+        "Ejemplo 4: Un desarrollador de software necesita probar un sistema que maneja tiempos y fechas en diferentes formatos. Utiliza el Time Calculator para verificar que las operaciones de suma y resta de tiempos se realizan correctamente en el sistema."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Time Calculator é uma ferramenta avançada projetada para realizar cálculos precisos envolvendo horários. Esta ferramenta permite aos usuários adicionar, subtrair e calcular diferenças entre horários de forma eficiente e precisa. A necessidade de uma ferramenta como esta surge em diversos contextos, como gerenciamento de projetos, programação de eventos, ou mesmo em análises de dados de logs de servidores, onde a precisão no cálculo de horários é crucial.\n\nTecnologicamente, o Time Calculator utiliza algoritmos robustos para manipular strings de horário e convertê-las em unidades de tempo, como segundos ou minutos, facilitando operações matemáticas. O usuário pode inserir horários no formato HH:MM:SS, e a ferramenta oferece opções para adicionar ou subtrair períodos de tempo, além de calcular a diferença entre dois horários. A interface é intuitiva e fornece feedback imediato, tornando o processo de cálculo de horários rápido e confiável.\n\nAlém disso, o Time Calculator suporta múltiplos fusos horários, o que o torna uma ferramenta valiosa para equipes distribuídas globalmente, onde a sincronização de horários é essencial. Com esta ferramenta, os usuários podem otimizar seu tempo e evitar erros comuns relacionados a cálculos de horários.",
+      "usage_steps": [
+        "Acesse a página do Time Calculator no site.",
+        "Na seção 'Entrada de Horário', selecione o formato de horário desejado (HH:MM:SS) usando o dropdown.",
+        "Insira o primeiro horário no campo 'Horário Inicial'.",
+        "Escolha a operação desejada (Adicionar, Subtrair, Calcular Diferença) usando os botões correspondentes.",
+        "Insira o segundo horário ou o período de tempo no campo 'Horário Final' ou 'Período'.",
+        "Clique no botão 'Calcular' para obter o resultado, que será exibido na seção 'Resultado'."
+      ],
+      "usage_examples": [
+        "Uma equipe de desenvolvimento precisa sincronizar horários de reuniões entre membros em diferentes fusos horários. O Time Calculator ajuda a calcular a hora exata da reunião em cada local.",
+        "Um gerente de projeto precisa calcular o tempo total gasto em tarefas de um projeto. Com o Time Calculator, ele pode somar os horários de início e término de cada tarefa para obter o tempo total.",
+        "Um analista de dados precisa calcular a duração de eventos registrados em logs de servidor. O Time Calculator facilita a subtração dos horários de início e término dos eventos.",
+        "Um organizador de eventos precisa planejar um cronograma detalhado para um seminário. O Time Calculator ajuda a calcular a diferença entre horários de sessões para garantir que o cronograma seja cumprido."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Time Calculator est un outil en ligne robuste conçu pour simplifier les opérations de calcul de temps. Il permet aux utilisateurs d'ajouter, de soustraire et de calculer la différence entre des heures précises, des durées et des intervalles de temps. Contrairement aux outils de calcul de temps basiques, le Time Calculator intègre des fonctionnalités avancées telles que la gestion des fuseaux horaires, la conversion entre différentes unités de temps (secondes, minutes, heures, jours, semaines, mois, années) et la prise en compte des dates pour des calculs plus précis. Cette fonctionnalité est particulièrement utile pour les développeurs, les gestionnaires de projets et les professionnels de l'IT qui doivent planifier des tâches, gérer des délais ou analyser des données temporelles. L'outil utilise des algorithmes optimisés pour traiter rapidement et avec précision les calculs de temps complexes, assurant ainsi des résultats fiables. Les utilisateurs peuvent également enregistrer et partager leurs calculs, ce qui facilite la collaboration et la documentation.",
+      "usage_steps": [
+        "Ouvrez la page du Time Calculator sur le site web et localisez la section principale du calculateur.",
+        "Sélectionnez l'opération que vous souhaitez effectuer (addition, soustraction, différence) à l'aide du menu déroulant ‘Opération’.",
+        "Entrez la première heure ou la durée dans le champ ‘Heure/Durée 1’. Vous pouvez utiliser des formats tels que ‘HH:MM:SS’ ou ‘HHh MMm SSs’.",
+        "Entrez la deuxième heure ou la durée dans le champ ‘Heure/Durée 2’. Assurez-vous que les formats sont compatibles avec la première entrée.",
+        "Si nécessaire, sélectionnez le fuseau horaire approprié pour chaque entrée dans les menus déroulants ‘Fuseau horaire 1’ et ‘Fuseau horaire 2’.",
+        "Cliquez sur le bouton ‘Calculer’ pour obtenir le résultat. Le résultat apparaîtra dans la section ‘Résultat’ avec les détails de l'opération effectuée."
+      ],
+      "usage_examples": [
+        "Un gestionnaire de projets doit calculer le temps total nécessaire pour l'exécution de plusieurs tâches. Il entre les durées de chaque tâche et utilise l'outil pour obtenir la somme totale.",
+        "Un développeur souhaite déterminer la durée exacte entre deux horodatages de logs. Il entre les deux horodatages et utilise l'outil pour calculer la différence en minutes et en secondes.",
+        "Un organisateur d'événements doit planifier un événement international. Il entre les heures de début et de fin de l'événement dans différents fuseaux horaires pour vérifier les correspondances.",
+        "Un analyste de données doit convertir une durée totale en différentes unités de temps pour un rapport. Il entre la durée en heures et utilise l'outil pour la convertir en jours, semaines et mois."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Time Calculator ist ein hochpräzises Werkzeug zur Bearbeitung und Berechnung von Zeitangaben. Technisch gesehen, ermöglicht es Benutzern, Zeiten zu addieren, zu subtrahieren und die Unterschiede zwischen verschiedenen Zeitpunkten zu berechnen. Dies wird durch eine intuitive Benutzeroberfläche und robuste Algorithmen realisiert, die mit einer Genauigkeit von Millisekunden arbeiten. Der Time Calculator ist besonders nützlich für Entwickler, die mit Zeitreihendaten arbeiten, für Projektleiter, die Aufgabenplanung optimieren möchten, und für Wissenschaftler, die temporale Daten analysieren. Die spezifische Bedarfsanalyse zeigt, dass Benutzer oft Schwierigkeiten haben, Zeitdifferenzen korrekt zu berechnen, insbesondere wenn um die Weltzeit (UTC) oder Zeitverschiebungen zwischen verschiedenen Orten gerechnet werden muss. Durch die Verwendung des Time Calculator können diese Herausforderungen effizient überwunden werden, denn das Tool berücksichtigt automatisch Zeitverschiebungen und bietet Optionen zur Konvertierung zwischen verschiedenen Zeitformaten wie 12-Stunden- und 24-Stunden-Notation.",
+      "usage_steps": [
+        "Öffnen Sie die Time Calculator Seite auf der Website.",
+        "Wählen Sie den Modus aus, in dem Sie arbeiten möchten: 'Addieren', 'Subtrahieren' oder 'Unterschied berechnen'.",
+        "Geben Sie die erste Zeitangabe in das Eingabefeld 'Startzeit' ein. Sie können das Format 12-Stunden- oder 24-Stunden-Notation wählen.",
+        "Geben Sie die zweite Zeitangabe in das Eingabefeld 'Endzeit' ein, falls Sie den Unterschied berechnen oder subtrahieren möchten.",
+        "Klicken Sie auf den Button 'Berechnen', um das Ergebnis zu erhalten. Das Tool zeigt die berechnete Zeitdifferenz oder das Ergebnis der Addition/Subtraktion an.",
+        "Falls gewünscht, können Sie das Ergebnis in verschiedenen Zeitformaten exportieren, indem Sie die entsprechende Option in der Dropdown-Liste auswählen."
+      ],
+      "usage_examples": [
+        "Ein Projektleiter möchte die Dauer einer Aufgabe berechnen, die von 9:00 Uhr bis 17:30 Uhr dauert. Er verwendet den Time Calculator, um die genaue Dauer in Stunden und Minuten zu ermitteln.",
+        "Ein Entwickler arbeitet an einer Anwendung, die die Länge von Videodateien verarbeitet. Er nutzt den Time Calculator, um sicherzustellen, dass die Berechnungen der Videolänge korrekt sind, insbesondere wenn die Längen in Millisekunden angegeben sind.",
+        "Ein Wissenschaftler führtExperimente durch, die über mehrere Tage verteilt sind. Er verwendet den Time Calculator, um die Gesamtdauer der Experimente zu berechnen, indem er die einzelnen Zeiträume addiert.",
+        "Ein Fluggast möchte wissen, wie lange sein Flug von Frankfurt nach New York dauert, einschließlich der Zeitverschiebung. Er verwendet den Time Calculator, um die Dauer des Fluges basierend auf den lokalen Zeitangaben beider Flughäfen zu berechnen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Калькулятор времени – это мощный инструмент, предназначенный для выполнения арифметических операций с временными интервалами. Он позволяет пользователям добавлять, вычитать и вычислять разницу между различными временными метками с высокой точностью. Этот инструмент особенно полезен в ситуациях, когда требуется точное управление временными интервалами, например, в планировании проектов, расчёте рабочего времени или анализе временных данных в базах данных. Калькулятор времени работает, преобразуя введённые временные метки в стандартные единицы времени (секунды, минуты, часы), выполняя необходимые операции и затем преобразуя результат обратно в удобочитаемый формат. Использование калькулятора времени позволяет избежать ошибок, которые могут возникнуть при ручных расчётах, и значительно ускоряет процесс работы с временными данными.",
+      "usage_steps": [
+        "Откройте страницу калькулятора времени на сайте.",
+        "Выберите операцию, которую вы хотите выполнить: сложение, вычитание или вычисление разницы, используя соответствующую вкладку.",
+        "Введите начальное время в поле «Время 1» в формате ЧЧ:ММ:СС.",
+        "Если вы выбрали операцию сложения или вычитания, введите второе время в поле «Время 2» в том же формате.",
+        "Нажмите кнопку «Вычислить» для выполнения операции.",
+        "Результат будет отображён в поле «Результат» в удобочитаемом формате."
+      ],
+      "usage_examples": [
+        "Проектный менеджер может использовать калькулятор времени для точного расчёта продолжительности задач в проекте, добавляя или вычитая временные интервалы для различных этапов.",
+        "Бухгалтер может использовать этот инструмент для вычисления общего рабочего времени сотрудников, суммируя временные метки начала и окончания рабочих смен.",
+        "Разработчик может использовать калькулятор времени для анализа логов системы, вычисляя разницу между временными метками для отслеживания производительности приложения.",
+        "Организатор мероприятия может использовать инструмент для планирования расписания, вычисляя, сколько времени занимает каждое событие, и оптимизируя временные интервалы между ними."
+      ]
+    },
+    "ar": {
+      "detailed_description": "آلة حاسبة الوقت هي أداة متخصصة تمكن المستخدمين من إجراء عمليات حسابية معقدة على الوقت، مثل الجمع والطرح، وحساب الفروق الزمنية. تتميز هذه الأداة بقدرتها على التعامل مع صيغ الوقت المختلفة، بما في ذلك الساعات والدقائق والثوانى، مما يجعلها مثالية للمهندسين، المطورين، والمديرين الذين يحتاجون إلى إدارة الجداول الزمنية والمواعيد بدقة. باستخدام آلة حاسبة الوقت، يمكن للمستخدمين إدخال الوقت المتعلقة بالمهام المتعددة، وحساب الفترات الزمنية بين الأحداث بسهولة وسرعة. الأداة تستخدم خوارزميات متقدمة لضمان الدقة في الحسابات الزمنية، مما يساعد في تجنب الأخطاء التي قد تحدث عند القيام بهذه الحسابات يدويًا. كما أنها تقدم خيارات لعرض النتائج في تنسيقات مختلفة، مما يزيد من مرونتها واستخدامها في مجموعة واسعة من التطبيقات.",
+      "usage_steps": [
+        "حدد نوع العملية التي تريد إجراءها (جمع، طرح، أو حساب الفروق) باستخدام القائمة المنسدلة.",
+        "أدخل الوقت الأول في الحقول المخصصة للساعات والدقائق والثوانى.",
+        "أدخل الوقت الثاني في الحقول المخصصة له إذا كنت تقوم بعملية حسابية ثنائية.",
+        "اختر التنسيق الذي ترغب في عرض النتيجة به من القائمة المنسدلة (ساعات، دقائق، ثوانى، أو تنسيق مختلط).",
+        "انقر على زر 'حساب' لتنفيذ العملية الحسابية المطلوبة.",
+        "راجع النتيجة في المربع المخصص للنتيجة، حيث ستظهر بالتنسيق الذي اخترته."
+      ],
+      "usage_examples": [
+        "حساب الفارق الزمني بين وقت بدء المشروع ووقت الانتهاء: يمكن للمديرين استخدام هذه الأداة لتحديد الوقت الفعلي المستغرق في إنجاز مشاريع معينة، مما يساعد في تحسين التخطيط المستقبلي.",
+        "جمع أوقات التنفيذ لعدة مهام: المطورون يمكنهم استخدام الأداة لحساب الوقت الكلي المستغرق في تنفيذ سلسلة من المهام البرمجية، مما يساعد في تقييم كفاءة النظام.",
+        "حساب الوقت المتبقي في جدول العمل اليومي: المستخدمون يمكنهم حساب الفارق بين الوقت الحالي والموعد التالي في جدولهم، مما يساعد في إدارة الوقت بشكل أفضل.",
+        "تحديد الوقت الفعلي لقطع المسافات: يمكن للسائقين استخدام الأداة لحساب الفروق الزمنية بين نقاط مختلفة في رحلاتهم، مما يساعد في تقدير وقت الوصول بدقة."
+      ]
+    }
+  }
+}

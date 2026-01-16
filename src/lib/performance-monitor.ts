@@ -220,6 +220,11 @@ export function generateRecommendations(report: PerformanceReport): string[] {
  * @param warning - 性能警告
  */
 export function logPerformanceWarning(warning: PerformanceWarning): void {
+  // 仅在开发环境输出日志
+  if (process.env.NODE_ENV !== 'development') {
+    return;
+  }
+  
   const prefix = warning.severity === 'critical' ? '🔴 CRITICAL' : '🟡 WARNING';
   const description = getMetricDescription(warning.metric);
   
@@ -236,6 +241,11 @@ export function logPerformanceWarning(warning: PerformanceWarning): void {
  * @param report - 性能报告
  */
 export function logReportWarnings(report: PerformanceReport): void {
+  // 仅在开发环境输出日志
+  if (process.env.NODE_ENV !== 'development') {
+    return;
+  }
+  
   if (report.warnings.length === 0) {
     return;
   }

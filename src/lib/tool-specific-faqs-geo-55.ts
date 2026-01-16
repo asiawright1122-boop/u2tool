@@ -1,338 +1,128 @@
 /**
  * GEO 优化工具 FAQ - 第 55 批
- * 验证工具、图像工具和文本工具
+ * 为缺失 FAQ 的工具添加 GEO 优化的问答内容
  */
 
 import type { ToolSpecificFAQ } from './tool-specific-faqs';
 
 export const GEO_TOOL_FAQS_55: ToolSpecificFAQ[] = [
   {
-    slug: 'credit-card-validator',
+    slug: 'json-to-proto',
     faqs: {
       en: [
-        {
-          question: 'How does credit card validation work?',
-          answer: 'Credit card validation uses the Luhn algorithm to check if a card number is mathematically valid. It also identifies the card type (Visa, Mastercard, etc.) from the number pattern.',
-        },
-        {
-          question: 'Does validation mean the card is active?',
-          answer: 'No, validation only checks if the number format is correct. It doesn\'t verify if the card is active, has funds, or belongs to you. Only payment processors can verify actual card status.',
-        },
-        {
-          question: 'What card types can be validated?',
-          answer: 'Validate Visa, Mastercard, American Express, Discover, JCB, Diners Club, and more. The tool identifies the card network from the number prefix (BIN/IIN).',
-        },
+        { question: 'What is Protocol Buffers?', answer: 'Protocol Buffers is a language-neutral serialization format by Google, smaller and faster than JSON.' },
+        { question: 'Why convert JSON to Protobuf?', answer: 'Protobuf offers 3-10x smaller message sizes and faster parsing compared to JSON.' },
+        { question: 'Does this generate valid .proto files?', answer: 'Yes, generates valid proto3 schema files for use with protoc compiler.' },
       ],
       zh: [
-        {
-          question: '信用卡验证如何工作？',
-          answer: '信用卡验证使用 Luhn 算法检查卡号是否在数学上有效。它还从号码模式中识别卡类型（Visa、Mastercard 等）。',
-        },
-        {
-          question: '验证是否意味着卡是有效的？',
-          answer: '不，验证只检查号码格式是否正确。它不验证卡是否有效、是否有余额或是否属于您。只有支付处理商才能验证实际卡状态。',
-        },
-        {
-          question: '可以验证哪些卡类型？',
-          answer: '验证 Visa、Mastercard、American Express、Discover、JCB、Diners Club 等。工具从号码前缀（BIN/IIN）识别卡网络。',
-        },
+        { question: '什么是 Protocol Buffers？', answer: 'Protocol Buffers 是 Google 开发的语言无关序列化格式，比 JSON 更小更快。' },
+        { question: '为什么转换为 Protobuf？', answer: 'Protobuf 提供比 JSON 小 3-10 倍的消息大小和更快的解析速度。' },
+        { question: '生成的 .proto 文件有效吗？', answer: '是的，生成有效的 proto3 模式文件，可与 protoc 编译器一起使用。' },
       ],
     },
   },
   {
-    slug: 'color-blindness-simulator',
+    slug: 'webp-to-png',
     faqs: {
       en: [
-        {
-          question: 'What is a color blindness simulator?',
-          answer: 'A color blindness simulator shows how images or designs appear to people with different types of color vision deficiency. It helps designers create accessible content for all users.',
-        },
-        {
-          question: 'What types of color blindness can be simulated?',
-          answer: 'Simulate protanopia (red-blind), deuteranopia (green-blind), tritanopia (blue-blind), and achromatopsia (total color blindness). Each affects color perception differently.',
-        },
-        {
-          question: 'How do I make my designs color-blind friendly?',
-          answer: 'Use the simulator to check your designs. Ensure sufficient contrast, don\'t rely solely on color to convey information, and use patterns or labels alongside colors.',
-        },
+        { question: 'Why convert WebP to PNG?', answer: 'PNG is more universally supported across all browsers and image editing software.' },
+        { question: 'Will I lose quality?', answer: 'No, PNG is lossless. Converting preserves all image quality.' },
+        { question: 'Is my data secure?', answer: 'Yes, all processing happens in your browser. Images never leave your device.' },
       ],
       zh: [
-        {
-          question: '什么是色盲模拟器？',
-          answer: '色盲模拟器显示图像或设计对不同类型色觉缺陷人群的外观。它帮助设计师为所有用户创建无障碍内容。',
-        },
-        {
-          question: '可以模拟哪些类型的色盲？',
-          answer: '模拟红色盲（protanopia）、绿色盲（deuteranopia）、蓝色盲（tritanopia）和全色盲（achromatopsia）。每种对颜色感知的影响不同。',
-        },
-        {
-          question: '如何使我的设计对色盲友好？',
-          answer: '使用模拟器检查您的设计。确保足够的对比度，不要仅依靠颜色传达信息，在颜色旁边使用图案或标签。',
-        },
+        { question: '为什么转换为 PNG？', answer: 'PNG 在所有浏览器和图像编辑软件中得到更广泛支持。' },
+        { question: '会损失质量吗？', answer: '不会，PNG 是无损格式，转换会保留所有图像质量。' },
+        { question: '数据安全吗？', answer: '是的，所有处理在浏览器中进行，图像永远不会离开您的设备。' },
       ],
     },
   },
   {
-    slug: 'aspect-ratio-resizer',
+    slug: 'png-to-svg',
     faqs: {
       en: [
-        {
-          question: 'What is an aspect ratio resizer?',
-          answer: 'An aspect ratio resizer changes image dimensions while maintaining or adjusting the aspect ratio. It can crop, pad, or stretch images to fit specific dimensions.',
-        },
-        {
-          question: 'How do I resize an image to a specific aspect ratio?',
-          answer: 'Upload your image, select the target aspect ratio (16:9, 4:3, 1:1, etc.), and choose how to handle the resize (crop, fit, or fill). Preview and download the result.',
-        },
-        {
-          question: 'What\'s the difference between crop, fit, and fill?',
-          answer: 'Crop removes parts of the image to fit the ratio. Fit scales the image to fit within the ratio (may add padding). Fill stretches the image to fill the ratio (may distort).',
-        },
+        { question: 'How does conversion work?', answer: 'The tool traces edges and shapes, converting them to vector paths. Best for simple graphics.' },
+        { question: 'Will SVG look like my PNG?', answer: 'For simple graphics with clear edges, yes. Complex photos may not convert well.' },
+        { question: 'Benefits of SVG?', answer: 'Scalable without quality loss, smaller for simple graphics, editable with code.' },
       ],
       zh: [
-        {
-          question: '什么是宽高比调整器？',
-          answer: '宽高比调整器在保持或调整宽高比的同时更改图像尺寸。它可以裁剪、填充或拉伸图像以适应特定尺寸。',
-        },
-        {
-          question: '如何将图像调整为特定宽高比？',
-          answer: '上传图像，选择目标宽高比（16:9、4:3、1:1 等），并选择如何处理调整（裁剪、适应或填充）。预览并下载结果。',
-        },
-        {
-          question: '裁剪、适应和填充有什么区别？',
-          answer: '裁剪删除图像的部分以适应比例。适应缩放图像以适应比例内（可能添加填充）。填充拉伸图像以填满比例（可能变形）。',
-        },
+        { question: '转换如何工作？', answer: '工具追踪边缘和形状，转换为矢量路径。最适合简单图形。' },
+        { question: 'SVG 会像 PNG 一样吗？', answer: '对于边缘清晰的简单图形，是的。复杂照片可能转换效果不佳。' },
+        { question: 'SVG 的优势？', answer: '可无损缩放，简单图形文件更小，可用代码编辑。' },
       ],
     },
   },
   {
-    slug: 'speech-timer',
+    slug: 'json-to-table',
     faqs: {
       en: [
-        {
-          question: 'What is a speech timer?',
-          answer: 'A speech timer helps speakers track their presentation time. It shows elapsed time, remaining time, and can alert you at specific intervals or when time is running out.',
-        },
-        {
-          question: 'How do I set up a speech timer?',
-          answer: 'Enter your total speech time and optional warning intervals (e.g., 5 minutes remaining). Start the timer when you begin speaking. Visual and audio alerts notify you of time milestones.',
-        },
-        {
-          question: 'Can I use this for Toastmasters or debate timing?',
-          answer: 'Yes, the timer supports green/yellow/red light timing used in Toastmasters. Set custom intervals for different speech types and competition formats.',
-        },
+        { question: 'What JSON works best?', answer: 'Arrays of objects work best, each object becomes a row, keys become columns.' },
+        { question: 'Can I export?', answer: 'Yes, export to CSV, Excel, or copy HTML table code directly.' },
+        { question: 'How are nested objects handled?', answer: 'Flattened using dot notation (e.g., "address.city").' },
       ],
       zh: [
-        {
-          question: '什么是演讲计时器？',
-          answer: '演讲计时器帮助演讲者跟踪演示时间。它显示已用时间、剩余时间，并可以在特定间隔或时间即将用完时提醒您。',
-        },
-        {
-          question: '如何设置演讲计时器？',
-          answer: '输入总演讲时间和可选的警告间隔（例如剩余 5 分钟）。开始演讲时启动计时器。视觉和音频提醒会通知您时间里程碑。',
-        },
-        {
-          question: '可以用于 Toastmasters 或辩论计时吗？',
-          answer: '是的，计时器支持 Toastmasters 中使用的绿/黄/红灯计时。为不同的演讲类型和比赛格式设置自定义间隔。',
-        },
+        { question: '什么 JSON 最适合？', answer: '对象数组最适合，每个对象成为一行，键成为列。' },
+        { question: '可以导出吗？', answer: '是的，可导出为 CSV、Excel 或直接复制 HTML 表格代码。' },
+        { question: '嵌套对象如何处理？', answer: '使用点符号展平（如 "address.city"）。' },
       ],
     },
   },
   {
-    slug: 'flip-text',
+    slug: 'yaml-validator',
     faqs: {
       en: [
-        {
-          question: 'What is flip text?',
-          answer: 'Flip text turns your text upside down using special Unicode characters. The result can be read when rotated 180 degrees. Fun for social media, usernames, or creative messages.',
-        },
-        {
-          question: 'How do I flip text upside down?',
-          answer: 'Type or paste your text and it\'s instantly converted to upside-down characters. Copy the result and paste anywhere - it works on most platforms that support Unicode.',
-        },
-        {
-          question: 'Does flipped text work everywhere?',
-          answer: 'Flipped text uses Unicode characters supported by most modern systems. Some characters may not have upside-down equivalents and will remain unchanged.',
-        },
+        { question: 'What errors are detected?', answer: 'Incorrect indentation, invalid characters, duplicate keys, malformed structures with line numbers.' },
+        { question: 'YAML 1.2 support?', answer: 'Yes, fully supports YAML 1.2 including anchors, aliases, and multi-document streams.' },
+        { question: 'Kubernetes YAML?', answer: 'Yes for syntax validation, but not Kubernetes-specific schema requirements.' },
       ],
       zh: [
-        {
-          question: '什么是翻转文本？',
-          answer: '翻转文本使用特殊的 Unicode 字符将文本倒置。结果旋转 180 度后可以阅读。适合社交媒体、用户名或创意消息。',
-        },
-        {
-          question: '如何将文本倒置？',
-          answer: '输入或粘贴文本，它会立即转换为倒置字符。复制结果并粘贴到任何地方 - 它在大多数支持 Unicode 的平台上都有效。',
-        },
-        {
-          question: '翻转文本在所有地方都有效吗？',
-          answer: '翻转文本使用大多数现代系统支持的 Unicode 字符。某些字符可能没有倒置等效项，将保持不变。',
-        },
+        { question: '检测哪些错误？', answer: '不正确的缩进、无效字符、重复键、格式错误的结构，并提供行号。' },
+        { question: '支持 YAML 1.2？', answer: '是的，完全支持 YAML 1.2，包括锚点、别名和多文档流。' },
+        { question: 'Kubernetes YAML？', answer: '支持语法验证，但不验证 Kubernetes 特定模式要求。' },
       ],
     },
   },
   {
-    slug: 'strikethrough-text',
+    slug: 'xml-validator',
     faqs: {
       en: [
-        {
-          question: 'How do I create strikethrough text?',
-          answer: 'Enter your text and it\'s converted to strikethrough using Unicode combining characters. Copy and paste the result anywhere - works on social media, messaging apps, and more.',
-        },
-        {
-          question: 'Why use strikethrough text?',
-          answer: 'Strikethrough is used to show corrections, indicate completed tasks, add humor or sarcasm, or create visual emphasis. It\'s a common formatting style in digital communication.',
-        },
-        {
-          question: 'Does strikethrough work on all platforms?',
-          answer: 'Unicode strikethrough works on most platforms. Some apps have native strikethrough support (like Discord\'s ~~text~~), but our Unicode version works more universally.',
-        },
+        { question: 'What is checked?', answer: 'Well-formedness: tag nesting, matching tags, attribute syntax, character encoding.' },
+        { question: 'XSD validation?', answer: 'This validates syntax only. XSD schema validation requires providing the schema file.' },
+        { question: 'Common errors?', answer: 'Unclosed tags, mismatched names, unescaped characters (&, <, >), missing root element.' },
       ],
       zh: [
-        {
-          question: '如何创建删除线文本？',
-          answer: '输入文本，它会使用 Unicode 组合字符转换为删除线。复制并粘贴结果到任何地方 - 适用于社交媒体、消息应用等。',
-        },
-        {
-          question: '为什么使用删除线文本？',
-          answer: '删除线用于显示更正、指示已完成的任务、添加幽默或讽刺，或创建视觉强调。它是数字通信中常见的格式样式。',
-        },
-        {
-          question: '删除线在所有平台上都有效吗？',
-          answer: 'Unicode 删除线在大多数平台上有效。某些应用有原生删除线支持（如 Discord 的 ~~text~~），但我们的 Unicode 版本更通用。',
-        },
+        { question: '检查什么？', answer: '格式良好性：标签嵌套、匹配标签、属性语法、字符编码。' },
+        { question: 'XSD 验证？', answer: '仅验证语法。XSD 模式验证需要提供模式文件。' },
+        { question: '常见错误？', answer: '未关闭标签、不匹配名称、未转义字符（&、<、>）、缺少根元素。' },
       ],
     },
   },
   {
-    slug: 'small-text-generator',
+    slug: 'css-to-tailwind',
     faqs: {
       en: [
-        {
-          question: 'What is small text?',
-          answer: 'Small text uses Unicode subscript and superscript characters to create text that appears smaller than normal. It\'s used for stylistic effects in social media bios and posts.',
-        },
-        {
-          question: 'How do I generate small text?',
-          answer: 'Type your text and choose from subscript (ₛₘₐₗₗ), superscript (ˢᵐᵃˡˡ), or small caps (sᴍᴀʟʟ) styles. Copy the result and use it anywhere Unicode is supported.',
-        },
-        {
-          question: 'Why doesn\'t small text work for all characters?',
-          answer: 'Unicode only has subscript/superscript versions for certain characters. Letters without equivalents may appear normal-sized or be substituted with similar characters.',
-        },
+        { question: 'How accurate?', answer: 'Handles most common CSS properties. Complex selectors may need manual adjustment.' },
+        { question: 'All CSS supported?', answer: 'Most common properties with Tailwind equivalents. Some advanced features may not map directly.' },
+        { question: 'Tailwind version?', answer: 'Generates classes compatible with Tailwind CSS v3.x.' },
       ],
       zh: [
-        {
-          question: '什么是小号文本？',
-          answer: '小号文本使用 Unicode 下标和上标字符创建看起来比正常更小的文本。它用于社交媒体简介和帖子中的风格效果。',
-        },
-        {
-          question: '如何生成小号文本？',
-          answer: '输入文本并从下标（ₛₘₐₗₗ）、上标（ˢᵐᵃˡˡ）或小型大写字母（sᴍᴀʟʟ）样式中选择。复制结果并在任何支持 Unicode 的地方使用。',
-        },
-        {
-          question: '为什么小号文本不适用于所有字符？',
-          answer: 'Unicode 只有某些字符的下标/上标版本。没有等效项的字母可能显示为正常大小或被替换为类似字符。',
-        },
+        { question: '准确性如何？', answer: '处理大多数常见 CSS 属性。复杂选择器可能需要手动调整。' },
+        { question: '支持所有 CSS？', answer: '支持大多数有 Tailwind 等效项的常用属性。某些高级功能可能无法直接映射。' },
+        { question: 'Tailwind 版本？', answer: '生成与 Tailwind CSS v3.x 兼容的类。' },
       ],
     },
   },
   {
-    slug: 'binary-to-text',
+    slug: 'tailwind-to-css',
     faqs: {
       en: [
-        {
-          question: 'How do I convert binary to text?',
-          answer: 'Enter binary code (sequences of 0s and 1s) and the tool converts it to readable text. Each 8-bit sequence represents one ASCII character.',
-        },
-        {
-          question: 'What binary format is supported?',
-          answer: 'Enter binary with or without spaces between bytes. The tool auto-detects 7-bit or 8-bit encoding. Standard ASCII and extended ASCII characters are supported.',
-        },
-        {
-          question: 'Can I convert text to binary?',
-          answer: 'Yes, the tool works both ways. Enter text to get its binary representation, or enter binary to decode it back to text.',
-        },
+        { question: 'Why convert?', answer: 'Useful for non-Tailwind projects, understanding generated CSS, or debugging styles.' },
+        { question: 'All classes supported?', answer: 'Yes, including responsive variants, state variants, and arbitrary values.' },
+        { question: 'Responsive breakpoints?', answer: 'Yes, sm:, md:, lg: are converted to proper CSS media queries.' },
       ],
       zh: [
-        {
-          question: '如何将二进制转换为文本？',
-          answer: '输入二进制代码（0 和 1 的序列），工具将其转换为可读文本。每个 8 位序列代表一个 ASCII 字符。',
-        },
-        {
-          question: '支持什么二进制格式？',
-          answer: '输入带或不带字节间空格的二进制。工具自动检测 7 位或 8 位编码。支持标准 ASCII 和扩展 ASCII 字符。',
-        },
-        {
-          question: '可以将文本转换为二进制吗？',
-          answer: '是的，工具双向工作。输入文本获取其二进制表示，或输入二进制将其解码回文本。',
-        },
-      ],
-    },
-  },
-  {
-    slug: 'roman-numeral-converter',
-    faqs: {
-      en: [
-        {
-          question: 'How do I convert numbers to Roman numerals?',
-          answer: 'Enter any number from 1 to 3999 and get the Roman numeral equivalent. The tool shows the breakdown of how the numeral is constructed (M=1000, D=500, C=100, etc.).',
-        },
-        {
-          question: 'Can I convert Roman numerals to numbers?',
-          answer: 'Yes, enter a Roman numeral (like XIV or MCMLXXXIV) and get the decimal number. The tool validates the numeral and shows if it\'s correctly formatted.',
-        },
-        {
-          question: 'What is the largest Roman numeral?',
-          answer: 'Standard Roman numerals go up to 3999 (MMMCMXCIX). Larger numbers historically used overlines or other notations, which aren\'t commonly used today.',
-        },
-      ],
-      zh: [
-        {
-          question: '如何将数字转换为罗马数字？',
-          answer: '输入 1 到 3999 之间的任何数字，获取罗马数字等效值。工具显示数字如何构成的分解（M=1000、D=500、C=100 等）。',
-        },
-        {
-          question: '可以将罗马数字转换为数字吗？',
-          answer: '是的，输入罗马数字（如 XIV 或 MCMLXXXIV）获取十进制数字。工具验证数字并显示格式是否正确。',
-        },
-        {
-          question: '最大的罗马数字是什么？',
-          answer: '标准罗马数字最大到 3999（MMMCMXCIX）。更大的数字历史上使用上划线或其他符号，现在不常用。',
-        },
-      ],
-    },
-  },
-  {
-    slug: 'fraction-calculator',
-    faqs: {
-      en: [
-        {
-          question: 'How do I calculate with fractions?',
-          answer: 'Enter fractions in the format a/b (like 3/4) and perform addition, subtraction, multiplication, or division. Results are automatically simplified to lowest terms.',
-        },
-        {
-          question: 'Can I convert between fractions and decimals?',
-          answer: 'Yes, enter a decimal to convert to a fraction, or enter a fraction to see its decimal equivalent. The tool handles repeating decimals too.',
-        },
-        {
-          question: 'How do I simplify a fraction?',
-          answer: 'Enter any fraction and the tool automatically reduces it to lowest terms by finding the greatest common divisor. It shows the simplification steps.',
-        },
-      ],
-      zh: [
-        {
-          question: '如何用分数计算？',
-          answer: '以 a/b 格式输入分数（如 3/4）并执行加法、减法、乘法或除法。结果自动简化为最简形式。',
-        },
-        {
-          question: '可以在分数和小数之间转换吗？',
-          answer: '是的，输入小数转换为分数，或输入分数查看其小数等效值。工具也处理循环小数。',
-        },
-        {
-          question: '如何简化分数？',
-          answer: '输入任何分数，工具通过找到最大公约数自动将其约简为最简形式。它显示简化步骤。',
-        },
+        { question: '为什么转换？', answer: '适用于非 Tailwind 项目、理解生成的 CSS 或调试样式。' },
+        { question: '支持所有类？', answer: '是的，包括响应式变体、状态变体和任意值。' },
+        { question: '响应式断点？', answer: '是的，sm:、md:、lg: 会转换为适当的 CSS 媒体查询。' },
       ],
     },
   },

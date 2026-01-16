@@ -64,6 +64,8 @@ import { GEO_TOOL_FAQS_54 } from './tool-specific-faqs-geo-54';
 import { GEO_TOOL_FAQS_55 } from './tool-specific-faqs-geo-55';
 import { GEO_TOOL_FAQS_56 } from './tool-specific-faqs-geo-56';
 import { GEO_TOOL_FAQS_57 } from './tool-specific-faqs-geo-57';
+import { GEO_TOOL_FAQS_58 } from './tool-specific-faqs-geo-58';
+import { GEO_TOOL_FAQS_59 } from './tool-specific-faqs-geo-59';
 
 // 工具专属 FAQ 配置接口
 export interface ToolSpecificFAQ {
@@ -722,6 +724,8 @@ export const TOOL_SPECIFIC_FAQS: ToolSpecificFAQ[] = [
   ...GEO_TOOL_FAQS_55,
   ...GEO_TOOL_FAQS_56,
   ...GEO_TOOL_FAQS_57,
+  ...GEO_TOOL_FAQS_58,
+  ...GEO_TOOL_FAQS_59,
 ];
 
 /**

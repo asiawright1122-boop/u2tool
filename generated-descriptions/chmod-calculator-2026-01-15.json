@@ -1,0 +1,175 @@
+{
+  "slug": "chmod-calculator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Chmod Calculator is a specialized tool designed to assist developers and system administrators in managing file permissions in Linux/Unix environments. It facilitates the conversion between octal and symbolic notation, which are two common ways to represent file permissions. By using this tool, users can ensure that files and directories have the correct access levels, which is crucial for security and functionality. The calculator supports both forward and reverse conversions, allowing users to input a symbolic notation and receive the corresponding octal value, or vice versa. This is particularly useful when writing scripts or configuring systems where precise control over file permissions is necessary. Under the hood, the tool uses a set of algorithms to interpret and translate the permissions, ensuring accuracy and reliability. The interface is intuitive, with clear input fields and real-time feedback, making it a valuable asset for anyone working with Linux/Unix file systems.",
+      "usage_steps": [
+        "Step 1: Navigate to the Chmod Calculator page on the website.",
+        "Step 2: Select the conversion direction using the dropdown menu: 'Symbolic to Octal' or 'Octal to Symbolic'.",
+        "Step 3: Enter the permission value in the appropriate input field. For 'Symbolic to Octal', use a combination of user, group, and others permissions (e.g., 'u=rwx,g=rx,o=r'). For 'Octal to Symbolic', enter a three-digit octal number (e.g., 754).",
+        "Step 4: Click the 'Calculate' button to process the conversion.",
+        "Step 5: Review the calculated result displayed below the input fields. The tool will show the converted value in the selected notation.",
+        "Step 6: If needed, copy the result to your clipboard by clicking the 'Copy' button next to the result."
+      ],
+      "usage_examples": [
+        "Example 1: A developer is writing a script to set file permissions for a web application. They need to ensure that the application can read and write to a specific directory, while other users can only read. Using the Chmod Calculator, they input 'u=rw,g=r,o=r' and get the octal value '644', which they use in their script.",
+        "Example 2: A system administrator is reviewing the permissions of a critical configuration file. They notice the octal value '700' and want to understand what this means in symbolic notation. Using the tool, they input '700' and get 'u=rwx,g=,o=', confirming that only the owner has full access.",
+        "Example 3: A team is working on a collaborative project where multiple users need to read and execute files in a shared directory, but only the project lead can write to it. They use the Chmod Calculator to find the symbolic notation for the octal value '750', which is 'u=rwx,g=rx,o='.",
+        "Example 4: A security auditor is reviewing a server's file permissions to ensure compliance with security policies. They encounter a file with the symbolic notation 'u=rwx,g=rx,o=' and need to verify the octal value. Using the Chmod Calculator, they confirm that the octal value is '750', which aligns with the required security settings."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Chmod Calculator 是一款专为 Linux/Unix 系统设计的权限计算工具，能够帮助开发者和系统管理员快速转换和理解文件权限。此工具支持将权限表示为八进制和符号表示法。用户可以通过该工具轻松计算和验证文件或目录的权限设置，确保其符合安全要求。具体来说，Chmod Calculator 可以将符号表示法（例如 `rwx`）转换为八进制表示法（例如 `755`），反之亦然。这对于在命令行中使用 `chmod` 命令时非常有用，可以避免手动计算错误。此外，该工具还支持批量转换和详细的权限说明，帮助用户更好地理解和管理文件权限。",
+      "usage_steps": [
+        "Step 1: 打开 Chmod Calculator 页面，选择您需要转换的权限表示法类型（八进制或符号表示法）。",
+        "Step 2: 在输入框中输入您要转换的权限值。例如，输入 `755`（八进制）或 `rwxr-xr-x`（符号表示法）。",
+        "Step 3: 点击“转换”按钮，工具将立即显示转换后的结果。",
+        "Step 4: 查看转换结果，工具会显示八进制和符号表示法的对应关系。",
+        "Step 5: 如果需要批量转换，可以使用“批量转换”功能，输入多行权限值，每行一个。",
+        "Step 6: 使用“权限说明”功能，查看详细权限解释，了解每个权限位的具体含义。"
+      ],
+      "usage_examples": [
+        "Example 1: 系统管理员需要为一个目录设置权限，使其所有者可以读、写和执行，而组用户和其他用户只能读和执行。使用 Chmod Calculator 将符号表示法 `rwxr-xr-x` 转换为八进制 `755`，然后使用 `chmod 755 /path/to/directory` 命令设置权限。",
+        "Example 2: 开发者在部署脚本中需要确保某个文件只有所有者可以读和写，其他用户没有任何权限。使用 Chmod Calculator 将符号表示法 `rw-------` 转换为八进制 `600`，然后在脚本中使用 `chmod 600 /path/to/file` 命令。",
+        "Example 3: 安全审计员在审查文件权限时，发现某些文件的权限设置为 `644`。使用 Chmod Calculator 将八进制 `644` 转换为符号表示法 `rw-r--r--`，以验证这些文件的权限是否符合安全策略。",
+        "Example 4: 新手管理员在学习 Linux 权限管理时，使用 Chmod Calculator 将各种权限组合进行转换和对比，以加深对权限设置的理解。例如，将 `700`、`750` 和 `755` 分别转换为符号表示法，了解不同权限位的效果。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Chmod Calculatorは、Linux/Unixシステムでのファイルやディレクトリの権限設定を管理するための強力なオンラインツールです。このツールを使用することで、ユーザーはオクタルおよびシンボリック表記での権限設定を簡単に計算し、理解することができます。具体的には、オクタル表記（0755など）とシンボリック表記（u=rwx,g=rx,o=rxなど）の相互変換が可能です。\n\nこのツールが必要な理由は、ファイルのアクセス権を誤って設定すると、セキュリティ上の脆弱性やシステムの不具合が発生する可能性があるためです。Chmod Calculatorを使用することで、ユーザーは適切な権限を設定し、システムの安全性と機能性を保つことができます。例えば、ウェブサーバーの設定ファイルやデータベースのファイルに対して適切な権限を設定することで、不正アクセスやデータの破損を防ぐことができます。\n\nChmod Calculatorの内部では、ユーザーが入力した権限情報を解析し、それぞれのユーザーグループ（所有者、グループ、その他）に対して読み取り、書き込み、実行の権限を計算します。その後、計算結果をオクタル表記とシンボリック表記の両方で表示し、ユーザーが理解しやすい形式で提供します。これにより、システム管理者や開発者はファイルの権限を正確に設定し、システムの管理を効率化することができます。",
+      "usage_steps": [
+        "Step 1: Chmod Calculatorのウェブページを開きます。",
+        "Step 2: 「オクタル表記」または「シンボリック表記」のラジオボタンを選択します。",
+        "Step 3: 「オクタル表記」を選択した場合は、0から7までの数字を入力します（例：0755）。",
+        "Step 4: 「シンボリック表記」を選択した場合は、u, g, o, r, w, xの組み合わせを入力します（例：u=rwx,g=rx,o=rx）。",
+        "Step 5: 「計算」ボタンをクリックします。",
+        "Step 6: 計算結果が表示されます。オクタル表記とシンボリック表記の両方が表示されるため、必要に応じてそれぞれの表記を確認してください。"
+      ],
+      "usage_examples": [
+        "Example 1: ウェブサーバーのHTMLファイルに対して、所有者には読み取り・書き込み・実行権限、グループとその他のユーザーには読み取り・実行権限を設定する必要があります。この場合、シンボリック表記でu=rwx,g=rx,o=rxを入力し、オクタル表記0755に変換します。",
+        "Example 2: データベースの設定ファイルに対して、所有者には読み取り・書き込み権限、グループには読み取り権限、その他のユーザーにはアクセスを許可しない設定が必要です。この場合、シンボリック表記でu=rw,g=r,o=を入力し、オクタル表記0640に変換します。",
+        "Example 3: システムのログファイルに対して、所有者には読み取り・書き込み権限、グループには読み取り権限、その他のユーザーにはアクセスを許可しない設定が必要です。この場合、シンボリック表記でu=rw,g=r,o=を入力し、オクタル表記0640に変換します。",
+        "Example 4: 共有ディレクトリに対して、所有者とグループには読み取り・書き込み・実行権限、その他のユーザーには読み取り・実行権限を設定する必要があります。この場合、シンボリック表記でu=rwx,g=rwx,o=rxを入力し、オクタル表記0775に変換します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Chmod Calculator는 Linux 및 Unix 시스템에서 파일 권한을 관리하는 데 사용되는 강력한 도구입니다. 이 도구는 사용자가 파일의 접근 권한을 octal(8진수) 및 symbolic(기호) 표기법으로 쉽게 계산할 수 있도록 설계되었습니다. 파일 권한은 파일의 소유자, 그룹, 다른 사용자들 간의 접근 권한을 정의하며, 이를 올바르게 설정하는 것은 시스템 보안과 효율적인 사용자 접근 관리를 위해 중요합니다. Chmod Calculator는 사용자가 복잡한 권한 설정을 이해하고 관리하는데 도움을 줍니다. 예를 들어, 웹 서버를 운영하면서 특정 디렉토리의 파일에 대한 적절한 권한을 설정해야 할 때, 이 도구는 필요한 octal 값을 빠르게 계산하여 안전하게 파일 권한을 설정할 수 있게 해줍니다. 또한, 이 도구는 사용자가 symbolic 표기법을 입력하여 해당 octal 값으로 변환하거나, 반대로 octal 값을 입력하여 symbolic 표기법으로 해석하는 기능을 제공합니다.",
+      "usage_steps": [
+        "Step 1: Chmod Calculator 웹사이트에 접속합니다.",
+        "Step 2: 'Octal to Symbolic' 또는 'Symbolic to Octal' 옵션을 선택합니다.",
+        "Step 3: 'Octal to Symbolic' 옵션을 선택한 경우, octal 값을 입력하는 필드에 8진수 값을 입력합니다.",
+        "Step 4: 'Symbolic to Octal' 옵션을 선택한 경우, symbolic 표기법을 입력하는 필드에 기호 값을 입력합니다. 예를 들어, 'rwxr-x---'와 같이 입력합니다.",
+        "Step 5: 'Convert' 버튼을 클릭하여 값을 변환합니다.",
+        "Step 6: 변환 결과를 확인하고, 필요에 따라 값을 복사하여 사용합니다."
+      ],
+      "usage_examples": [
+        "Example 1: 웹 서버 관리자로서, 웹 디렉토리의 파일에 대해 적절한 권한을 설정하려고 합니다. Chmod Calculator를 사용하여 'rwxr-x---'를 octal 값으로 변환하여 파일 권한을 설정합니다.",
+        "Example 2: 시스템 관리자가 시스템 로그 파일의 권한을 확인하려고 합니다. octal 값 '640'을 symbolic 표기법으로 변환하여 파일에 대한 접근 권한을 이해합니다.",
+        "Example 3: 개발자가 스크립트 파일을 작성하고 실행하려고 합니다. Chmod Calculator를 사용하여 '755' 값을 symbolic 표기법으로 변환하여 스크립트 파일에 적절한 실행 권한을 부여합니다.",
+        "Example 4: 보안 전문가가 특정 디렉토리의 파일 권한을 검토하려고 합니다. symbolic 표기법 'rwxrwxrwx'를 octal 값으로 변환하여 모든 사용자가 모든 권한을 가짐을 확인하고, 보안 리스크를 평가합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Calculador de Permisos Chmod es una herramienta esencial para desarrolladores y administradores de sistemas que trabajan con entornos Linux y Unix. Esta herramienta permite convertir y calcular permisos de archivos en notación octal y simbólica, facilitando la gestión de acceso a archivos y directorios. Los permisos de archivos en Linux/Unix se representan a través de un sistema de bits que controla quién puede leer, escribir o ejecutar un archivo. Estos permisos se pueden expresar tanto en notación octal (un número de tres dígitos) como en notación simbólica (una serie de letras y signos). El Chmod Calculator simplifica la conversión entre estos dos formatos, lo que es especialmente útil cuando se necesita configurar permisos de manera precisa. Por ejemplo, un desarrollador que necesita asegurarse de que un archivo de configuración sea solo legible por el propietario y no se pueda modificar por otros usuarios, puede utilizar esta herramienta para determinar fácilmente el valor octal correspondiente. Además, la herramienta es invaluable para escenarios de depuración, donde se necesita verificar rápidamente si los permisos de un archivo coinciden con los valores esperados en la notación simbólica. En resumen, el Chmod Calculator es una herramienta indispensable para cualquier profesional que necesite gestionar permisos de archivos de manera eficiente y precisa.",
+      "usage_steps": [
+        "Abre la página del Chmod Calculator en tu navegador.",
+        "Selecciona el modo de entrada deseado: 'Octal' para ingresar permisos en notación octal o 'Simbólica' para ingresar permisos en notación simbólica.",
+        "Ingresa los permisos en el campo correspondiente. Por ejemplo, si seleccionaste 'Octal', ingresa un número de tres dígitos como '755'. Si seleccionaste 'Simbólica', ingresa una serie de letras y signos como 'rwxr-xr-x'.",
+        "Haz clic en el botón 'Calcular' para convertir los permisos a la notación opuesta.",
+        "La herramienta mostrará el resultado convertido en el campo 'Resultado'. Por ejemplo, si ingresaste '755' en notación octal, el resultado en notación simbólica será 'rwxr-xr-x'.",
+        "Si necesitas realizar otra conversión, utiliza el botón 'Limpiar' para borrar los campos y empezar de nuevo."
+      ],
+      "usage_examples": [
+        "Un administrador de sistemas necesita configurar un archivo de configuración de un servicio web para que solo el propietario tenga permiso de escritura, mientras que los demás usuarios solo puedan leerlo. Utiliza el Chmod Calculator para determinar que el valor octal '644' corresponde a 'rw-r--r--' en notación simbólica.",
+        "Un desarrollador de software está creando un script que debe ser ejecutable por todos, pero solo modificable por el propietario. Utiliza el Chmod Calculator para verificar que el valor simbólico 'rwxr-xr-x' se traduce al valor octal '755'.",
+        "Un ingeniero de seguridad está revisando los permisos de un directorio crítico en un servidor. Necesita asegurarse de que solo el propietario tenga permisos de lectura, escritura y ejecución, y que los usuarios del grupo y otros solo tengan permisos de lectura y ejecución. Utiliza el Chmod Calculator para confirmar que '755' en notación octal es correcto.",
+        "Un administrador de red está configurando un archivo de logs que debe ser accesible solo por el propietario y los usuarios del grupo, pero no por otros usuarios. Utiliza el Chmod Calculator para verificar que el valor octal '640' se traduce a 'rw-r-----' en notación simbólica."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Chmod Calculator é uma ferramenta essencial para desenvolvedores e administradores de sistemas que trabalham com permissões de arquivos no ambiente Linux/Unix. Este utilitário permite a conversão bidirecional entre as notações octais e simbólicas de permissões, facilitando a manipulação e compreensão das configurações de acesso a arquivos e diretórios. A necessidade de tal ferramenta surge em cenários onde a precisão nas permissões de arquivos é crítica, como em configurações de segurança, implantações de aplicativos e gerenciamento de servidores. O Chmod Calculator opera calculando as permissões octais (um sistema numérico que representa as permissões de leitura, escrita e execução) e as traduzindo para a notação simbólica (que usa caracteres como r, w, e x). Além disso, a ferramenta suporta a adição e remoção de permissões em notação simbólica, permitindo ajustes finos nas configurações de acesso. Isso é particularmente útil em situações onde a manipulação manual das permissões pode levar a erros ou insegurança.",
+      "usage_steps": [
+        "Acesse a página do Chmod Calculator no site.",
+        "Na seção 'Notação Octal', insira o valor octal das permissões que deseja converter (por exemplo, 755).",
+        "Clique no botão 'Converter para Simbólico' para ver a representação simbólica das permissões.",
+        "Na seção 'Notação Simbólica', insira as permissões no formato simbólico (por exemplo, u=rwx,g=rx,o=rx).",
+        "Clique no botão 'Converter para Octal' para obter o valor octal correspondente.",
+        "Use os botões de 'Adicionar' e 'Remover' permissões para ajustar as configurações conforme necessário."
+      ],
+      "usage_examples": [
+        "Um administrador de sistemas precisa configurar as permissões de um diretório para que o proprietário tenha acesso total, o grupo tenha permissões de leitura e execução, e os outros usuários tenham apenas permissão de execução. Ele usa o Chmod Calculator para converter a configuração 751 em notação simbólica (u=rwx,g=rx,o=x) para aplicar corretamente no servidor.",
+        "Um desenvolvedor está implementando um script que requer a verificação das permissões de um arquivo. Ele usa o Chmod Calculator para converter a notação simbólica 'u=rw,g=r,o=r' em 644, para garantir que o script funcione corretamente em diferentes ambientes.",
+        "Um especialista em segurança precisa auditar as permissões de um conjunto de arquivos em um servidor. Ele usa o Chmod Calculator para traduzir rapidamente os valores octais das permissões para a notação simbólica, facilitando a análise e identificação de possíveis vulnerabilidades.",
+        "Um usuário final precisa ajustar as permissões de um arquivo compartilhado em um sistema Linux. Ele usa o Chmod Calculator para adicionar a permissão de escrita para o grupo e remover a permissão de execução para outros usuários, convertendo a notação simbólica para 664 e aplicando as mudanças."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Chmod Calculator est un outil en ligne spécialisé dans le calcul et la conversion des permissions de fichiers et de répertoires sous Linux et Unix. Il permet de convertir les permissions entre la notation symbolique et la notation octale. Les permissions sont un aspect crucial de la gestion des systèmes d'exploitation, car elles contrôlent les accès en lecture, écriture et exécution des fichiers. Ce outil est particulièrement utile pour les développeurs et les administrateurs système qui doivent souvent ajuster les permissions de manière précise. Par exemple, lors du déploiement d'applications, il est essentiel de s'assurer que les fichiers de configuration ne sont pas accessibles aux utilisateurs non autorisés. Le Chmod Calculator simplifie ce processus en offrant une interface intuitive qui permet de visualiser et de modifier les permissions de manière claire et efficace. Sous le capot, l'outil utilise des algorithmes pour convertir les permissions symboliques (par exemple, `rwx` pour lecture, écriture et exécution) en valeurs octales (par exemple, `7` pour `rwx`). Cette conversion est réalisée en attribuant des valeurs numériques spécifiques à chaque type de permission : 4 pour la lecture, 2 pour l'écriture, et 1 pour l'exécution. Ces valeurs sont ensuite additionnées pour obtenir le chiffre final.",
+      "usage_steps": [
+        "Ouvrez le Chmod Calculator sur votre navigateur web.",
+        "Dans la section 'Permissions symboliques', entrez les permissions sous forme de caractères (par exemple, `rwxr-x---`).",
+        "Cliquez sur le bouton 'Convertir' pour obtenir les permissions en notation octale.",
+        "La section 'Permissions octales' affichera alors le résultat correspondant (par exemple, `750`).",
+        "Si vous souhaitez convertir des permissions en notation octale vers la notation symbolique, entrez la valeur octale dans la section 'Permissions octales'.",
+        "Cliquez à nouveau sur 'Convertir' pour obtenir les permissions en notation symbolique."
+      ],
+      "usage_examples": [
+        "Un développeur déploie une application web et doit s'assurer que les fichiers de configuration ne sont accessibles qu'à l'utilisateur propriétaire. Il utilise le Chmod Calculator pour convertir `600` en `rw-------`, garantissant ainsi que seuls l'utilisateur propriétaire peut lire et écrire ces fichiers.",
+        "Un administrateur système configure un répertoire partagé dans un environnement d'entreprise où les utilisateurs doivent pouvoir lire et écrire des fichiers, mais pas exécuter de scripts. Il utilise le Chmod Calculator pour convertir `775` en `rwxrwxr-x`, assurant ainsi les droits appropriés pour les utilisateurs et les groupes.",
+        "Un développeur front-end travaille sur un projet open source et souhaite que tous les fichiers soient accessibles en lecture et en écriture par tous, mais pas en exécution. Il utilise le Chmod Calculator pour convertir `666` en `rw-rw-rw-`, permettant ainsi une collaboration fluide sans risques de sécurité.",
+        "Un ingénieur en sécurité doit vérifier les permissions d'un fichier sensible et s'assure qu'elles sont `400` (lecture seulement par l'utilisateur propriétaire). Il utilise le Chmod Calculator pour confirmer que les permissions sont bien `r--------`, garantissant ainsi une protection optimale du fichier."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Chmod Calculator ist ein spezialisiertes Online-Tool, das Entwicklern und Systemadministratoren dabei hilft, Linux/Unix-Dateiberechtigungen in oktaler und symbolischer Notation zu berechnen. Diese Funktion ist besonders wichtig, da die korrekte Konfiguration von Dateiberechtigungen entscheidend für die Sicherheit und Funktionalität von Systemen ist. Benutzer können damit sicherstellen, dass Dateien und Verzeichnisse genau die Berechtigungen haben, die benötigt werden, ohne Risiken für die Systemintegrität einzugehen. Dieses Tool erlaubt es, Berechtigungen in beiden Notationen zu verwalten, was bei der Verwaltung komplexer Dateisysteme unerlässlich ist. Die Genauigkeit und Leichtigkeit der Berechnung sparen viel Zeit und vermeiden Fehler, die durch manuelle Berechnungen entstehen können. Die oktale Notation wird in der Regel in Skripten und Befehlen verwendet, während die symbolische Notation für direkte Verwendung in der Shell besser geeignet ist. Der Chmod Calculator unterstützt auch die Umwandlung von einer Notation in die andere, was bei der Überprüfung und Anpassung von Berechtigungen sehr hilfreich ist.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des Chmod Calculators in Ihrem Webbrowser und gehen Sie zur Registerkarte 'Berechtigungen berechnen'.",
+        "Wählen Sie in der Dropdown-Liste 'Notation' die gewünschte Eingabeform aus, entweder 'Oktal' oder 'Symbolisch'.",
+        "Geben Sie die Berechtigungen in das Eingabefeld ein. Bei oktaler Notation sind das 3-stellige Zahlen (z.B. 755), bei symbolischer Notation sind das Zeichenketten (z.B. 'rwxr-xr-x').",
+        "Klicken Sie auf den Button 'Berechnen', um die Berechtigungen umzurechnen oder zu überprüfen.",
+        "Die Berechtigungen werden in der gewählten Notation angezeigt, und es wird eine detaillierte Erläuterung der Berechtigungen in einer Tabelle dargestellt, die die Berechtigungen für Besitzer, Gruppe und Andere aufschlüsselt.",
+        "Falls erforderlich, können Sie die Berechtigungen direkt in der Shell oder in einem Skript verwenden, indem Sie die oktale oder symbolische Notation entsprechend anwenden."
+      ],
+      "usage_examples": [
+        "Ein Systemadministrator möchte sicherstellen, dass eine Konfigurationsdatei nur von dem Benutzer gelesen und geschrieben werden kann, der sie besitzt, während andere Benutzer nur Leserechte haben. Er verwendet den Chmod Calculator, gibt '640' ein und erhält die symbolische Notation 'rw-r-----'.",
+        "Ein Entwickler erstellt ein Webanwendungsverzeichnis und muss sicherstellen, dass die Webserverprozesse die Dateien auslesen und schreiben können, ohne dass andere Benutzer darauf zugreifen können. Er verwendet den Chmod Calculator, gibt '750' ein und erhält die symbolische Notation 'rwxr-x---'.",
+        "Ein Benutzer erstellt ein gemeinsames Projektverzeichnis, das von mehreren Teammitgliedern bearbeitet werden soll, während andere Benutzer keine Schreibrechte haben sollen. Er verwendet den Chmod Calculator, gibt '775' ein und erhält die symbolische Notation 'rwxrwxr-x'.",
+        "Eine IT-Abteilung implementiert strenge Sicherheitsrichtlinien und muss sicherstellen, dass einige Systemdateien nur vom Root-Benutzer gelesen und geschrieben werden können. Sie verwenden den Chmod Calculator, geben '600' ein und erhalten die symbolische Notation 'rw-------'."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Chmod Calculator — это мощный инструмент, предназначенный для разработчиков, системных администраторов и всех, кто работает с файловыми системами Linux/Unix. Этот калькулятор позволяет быстро и точно преобразовывать права доступа к файлам между числовым и символьным форматами. В файловых системах Linux/Unix права доступа к файлам определяются с помощью специальных числовых значений (восьмеричной нотации) или символьных обозначений (например, rwx). Неправильная настройка прав доступа может привести к проблемам безопасности или недоступности файлов, поэтому точное понимание и использование этих прав критически важно.\n\nChmod Calculator помогает избежать ошибок и упрощает процесс управления правами доступа. Он позволяет вводить права доступа в одном формате и получать эквивалентное представление в другом. Например, вы можете ввести числовое значение 755 и получить его символьное представление (rwxr-xr-x). Это особенно полезно при автоматизации скриптов, создании конфигурационных файлов или при необходимости быстро проверить права доступа.\n\nИнструмент работает, забирая введённые данные, преобразуя их по правилам восьмеричной и символьной нотации, и выводя результат. Пользователи могут выбирать нужный формат вывода, что делает Chmod Calculator универсальным решением для управления правами доступа к файлам.",
+      "usage_steps": [
+        "Откройте страницу Chmod Calculator на сайте.",
+        "Выберите формат входных данных: 'Числовой' (Octal) или 'Символьный' (Symbolic).",
+        "Введите значение прав доступа. Например, введите '755' для числового формата или 'rwxr-xr-x' для символьного формата.",
+        "Нажмите кнопку 'Преобразовать'.",
+        "Результат будет отображён в противоположном формате, который вы не выбрали вначале. Например, если вы ввели '755', то результатом будет 'rwxr-xr-x'.",
+        "Если необходимо, скопируйте результат и используйте его в своих скриптах или конфигурационных файлах."
+      ],
+      "usage_examples": [
+        "Разработчик создает веб-приложение и хочет убедиться, что файлы конфигурации имеют правильные права доступа. Он использует Chmod Calculator, чтобы преобразовать числовое значение 644 в символьное представление (rw-r--r--), чтобы проверить, что файлы доступны для чтения всем, но могут быть изменены только владельцем.",
+        "Системный администратор настраивает права доступа к директории с лог-файлами. Он вводит символьное представление 'rwxr-x---' и получает числовое значение 750, чтобы убедиться, что только владельцы и группа имеют доступ к директории, а остальные пользователи — нет.",
+        "Администратор безопасности проверяет скрипт, который должен рекурсивно изменять права доступа к файлам. Используя Chmod Calculator, он преобразует числовое значение 700 в символьное представление (rwx------), чтобы убедиться, что только владелец имеет полный доступ к файлам.",
+        "Программист пишет скрипт для автоматического создания и настройки файлов конфигурации. Он использует Chmod Calculator для преобразования символьного представления 'rwxrwx---' в числовое значение 770, чтобы включить это значение в свой скрипт, обеспечивающий правильные права доступа для группы разработчиков."
+      ]
+    },
+    "ar": {
+      "detailed_description": "آلة حساب الأذونات في نظام لينكس/يونكس هي أداة قوية تساعد المطورين والمديرين على حساب وتحويل الأذونات بين النظام العددي الثماني والنظام الرمزي. تعمل الأداة على تبسيط عملية تحديد الأذونات التي يمكن أن تكون معقدة ومربكة، خصوصاً للمبتدئين. تسمح الأداة للمستخدمين بإدخال الأذونات بأي شكل من الأشكال، سواءً كانت في الشكل الرمزي مثل (rwx) أو في الشكل العددي مثل (755)، وستقوم الأداة بتحويلها فوراً إلى الشكل الآخر. هذا يساعد في فهم أفضل لكيفية عمل الأذونات في نظام الملفات، مما يعزز الأمن ويحسن إدارة الملفات. يستخدمها المطورون في تطبيقات الويب، ومديرو النظام في إدارة الخوادم، ومطورو البرمجيات في ضمان السلامة والأمان في تطبيقاتهم.",
+      "usage_steps": [
+        "افتح أداة آلة حساب الأذونات من القائمة الرئيسية للموقع.",
+        "اختر نوع الأذونات التي تريد تحويلها من القائمة المنسدلة (نظام عددي ثماني أو نظام رمزي).",
+        "أدخل الأذونات في الحقل المناسب، مثل '755' للنظام العددي ثماني أو 'rwxr-xr-x' للنظام الرمزي.",
+        "انقر على زر 'حساب' لتحويل الأذونات.",
+        "ستظهر الأذونات المحولة في الحقل السفلي، سواءً في الشكل العددي ثماني أو الرمزي.",
+        "يمكنك الآن نسخ الأذونات المحولة واستخدامها في أوامر Linux/Unix الخاصة بك."
+      ],
+      "usage_examples": [
+        "المطور يرغب في ضبط أذونات ملف التكوين لتطبيق ويب بحيث يمكنه القراءة والكتابة فقط، بينما يسمح للمستخدمين الآخرين بالقراءة فقط. يمكنه استخدام الأداة لتحويل الأذونات '644' من الشكل العددي ثماني إلى الشكل الرمزي 'rw-r--r--'.",
+        "مدير النظام يرغب في تأمين مجلد يحتوي على ملفات حساسة بحيث يمكن فقط للمالك قراءة وكتابة وتنفيذ الملفات، بينما يمنع الوصول تمامًا للمستخدمين الآخرين. يمكنه استخدام الأداة لتحويل الأذونات '700' إلى الشكل الرمزي 'rwx------'.",
+        "مطور البرمجيات يرغب في تأكيد أن الأذونات التي تم ضبطها باستخدام الأمر 'chmod 755 /path/to/file' تتوافق مع متطلبات تطبيقه. يمكنه استخدام الأداة لتحويل الأذونات '755' إلى الشكل الرمزي 'rwxr-xr-x' للتحقق من ذلك.",
+        "المستخدم الجديد في نظام Linux يرغب في فهم كيف تعمل الأذونات في النظام. يمكنه استخدام الأداة لتجربة مختلف الأذونات في الشكل الرمزي ورؤية النتائج في الشكل العددي ثماني، مما يساعد في فهم الأذونات بشكل أعمق."
+      ]
+    }
+  }
+}

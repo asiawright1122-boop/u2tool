@@ -1,0 +1,158 @@
+{
+  "slug": "sql-to-mongo",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The SQL to MongoDB tool is a powerful conversion utility designed to bridge the gap between relational and NoSQL databases. It translates SQL queries into equivalent MongoDB queries, making it easier for developers to work with MongoDB without needing to learn its query syntax from scratch. This tool is particularly useful for developers transitioning from SQL-based systems to MongoDB, or for those who need to integrate MongoDB into existing SQL workflows. By providing a straightforward conversion process, it helps mitigate the learning curve and ensures that SQL queries can be seamlessly adapted to MongoDB’s document-oriented model. The tool supports a wide range of SQL operations, including SELECT, INSERT, UPDATE, and DELETE, and it handles complex queries involving joins, subqueries, and aggregations. Under the hood, the tool uses a parser to analyze the SQL query structure and then maps it to the corresponding MongoDB operations, ensuring that the translated queries are optimized for performance and accuracy.",
+      "usage_steps": [
+        "Step 1: Open the SQL to MongoDB tool on the website and navigate to the 'Convert' tab.",
+        "Step 2: In the 'SQL Query' input box, paste or type the SQL query you want to convert.",
+        "Step 3: If your query involves specific database tables or collections, select them from the 'Tables' dropdown menu.",
+        "Step 4: Adjust any advanced settings, such as aggregation pipelines or specific MongoDB operators, using the 'Advanced Options' panel.",
+        "Step 5: Click the 'Convert' button to process the query. The tool will display the translated MongoDB query in the 'MongoDB Query' output box.",
+        "Step 6: Review the translated query for accuracy and copy it to your MongoDB environment for execution."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer is tasked with migrating a user management system from a MySQL database to MongoDB. They use the SQL to MongoDB tool to convert complex SELECT queries that join multiple tables, ensuring that the new MongoDB-based application functions correctly without rewriting the queries from scratch.",
+        "Example 2: A data analyst needs to perform a data migration from a legacy SQL database to MongoDB. The analyst uses the tool to convert a series of INSERT and UPDATE statements, streamlining the process of populating the new MongoDB collections with existing data.",
+        "Example 3: A software engineer is building a real-time analytics dashboard that requires data from both SQL and MongoDB sources. By converting SQL aggregation queries to MongoDB, the engineer can unify the data processing logic and leverage MongoDB’s powerful aggregation framework.",
+        "Example 4: A database administrator is optimizing a slow-performing application by switching from SQL to MongoDB. The admin uses the tool to convert a complex SQL query with multiple subqueries and joins, ensuring that the MongoDB query is optimized for performance and scalability."
+      ]
+    },
+    "zh": {
+      "detailed_description": "SQL to MongoDB 是一个在线转换工具，专门用于将结构化查询语言（SQL）语句转换为MongoDB查询语句。该工具利用了SQL和MongoDB在数据操作上的不同语法结构，通过内部的解析器和转换引擎，能够准确地将SQL查询逻辑转换为等效的MongoDB查询。这对于那些正在从关系型数据库（如MySQL、PostgreSQL等）迁移到非关系型数据库（如MongoDB）的开发团队来说，是一个极其有用的工具。\n\n使用SQL to MongoDB的主要原因在于，许多开发人员和数据工程师已经熟悉了SQL的语法和逻辑，但在转向MongoDB时，需要重新学习和适应MongoDB的查询语言。通过这个工具，用户可以快速地将现有的SQL查询转换为MongoDB查询，从而节省了大量的时间和精力。此外，该工具还支持复杂的SQL查询，包括子查询、JOIN操作和聚合函数等，确保转换后的MongoDB查询不仅准确，而且高效。\n\n该工具的工作原理是首先解析输入的SQL查询，提取查询的结构和逻辑，然后基于MongoDB的查询语法和逻辑，生成相应的MongoDB查询。用户可以通过工具提供的界面，选择不同的转换选项，如是否优化查询性能、是否保留原始的SQL格式等，以满足不同的需求。",
+      "usage_steps": [
+        "Step 1: 打开SQL to MongoDB工具页面，点击“输入SQL查询”文本框，输入您想要转换的SQL查询语句。",
+        "Step 2: 点击“选项”按钮，选择是否需要优化查询性能和是否保留原始的SQL格式。",
+        "Step 3: 在“数据库类型”下拉菜单中选择您的源数据库类型，如MySQL、PostgreSQL等。",
+        "Step 4: 点击“转换”按钮，工具将自动解析并转换您的SQL查询。",
+        "Step 5: 查看生成的MongoDB查询结果，工具会高亮显示关键部分，帮助您理解转换后的查询逻辑。",
+        "Step 6: 如果需要，您可以点击“导出”按钮，将生成的MongoDB查询保存为文件，以便在您的项目中使用。"
+      ],
+      "usage_examples": [
+        "Example 1: 一个电商网站的开发团队正在从MySQL迁移到MongoDB，他们需要将大量的SQL查询转换为MongoDB查询。使用SQL to MongoDB工具，团队可以快速完成转换，确保迁移过程中的数据操作逻辑保持一致。",
+        "Example 2: 一位数据分析师需要将一个复杂的SQL查询（包含多个JOIN操作和聚合函数）转换为MongoDB查询，以在MongoDB数据库中进行数据分析。通过使用该工具，他可以轻松地完成转换，而无需重新编写查询。",
+        "Example 3: 一家初创公司的开发人员正在开发一个新的移动应用，该应用的数据存储从SQLite迁移到MongoDB。使用SQL to MongoDB工具，开发人员可以快速将现有的SQLite查询转换为MongoDB查询，加快开发进度。",
+        "Example 4: 一位数据库管理员需要将多个SQL查询（用于数据备份和恢复）转换为MongoDB查询，以在新的MongoDB备份系统中使用。该工具帮助他快速完成转换，并确保查询的准确性和效率。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "SQL to MongoDB は、SQL クエリを MongoDB クエリに変換するための強力なツールです。このツールは、SQL データベースから MongoDB への移行をスムーズに行うために設計されており、開発者が手動で複雑なクエリを変換する手間を大幅に省くことができます。SQL はリレーショナルデータベースで広く使用されるクエリ言語であり、MongoDB は非リレーショナル（NoSQL）データベースで使用されるクエリ言語です。SQL to MongoDB は、これらの異なるデータモデル間でのデータ操作を容易にするために、SQL の文法を理解し、MongoDB のアグリゲーションフレームワークやフィルタリングオペレーションに変換します。このツールは、データベースの移行プロジェクト、新しいアプリケーションの開発、既存のシステムの最適化など、さまざまな場面で活用できます。例えば、開発者が SQL で書かれたレポートクエリを MongoDB で実行するために変換する必要がある場合、このツールは迅速かつ正確にそのタスクを完了できます。また、複雑なJOIN操作やサブクエリをMongoDBのアグリゲーションパイプラインに変換する際も非常に役立ちます。",
+      "usage_steps": [
+        "Step 1: ツールのトップページにアクセスし、「SQL Query」入力ボックスに変換したいSQLクエリを入力します。",
+        "Step 2: 必要に応じて、データベースのスキーマ情報を「Schema」セクションに追加します。これは、SQLクエリのテーブルやカラムの情報をMongoDBのコレクションやフィールドに対応付けるために必要です。",
+        "Step 3: 「Convert」ボタンをクリックして、SQLクエリをMongoDBクエリに変換します。",
+        "Step 4: 変換結果が表示されたら、MongoDBのクエリを確認し、必要に応じて手動で調整します。",
+        "Step 5: 「Copy to Clipboard」ボタンをクリックして、生成されたMongoDBクエリをクリップボードにコピーします。",
+        "Step 6: コピーしたMongoDBクエリを、MongoDBのコンソールやアプリケーションに貼り付けて実行します。"
+      ],
+      "usage_examples": [
+        "Example 1: 既存のSQLベースのレポートシステムをMongoDBに移行する際、SQLクエリをMongoDBクエリに変換することで、データの照会と表示を効率化できます。",
+        "Example 2: 新しいモバイルアプリケーションをMongoDBで開発する際、バックエンドのSQLデータベースからデータを移行する必要がある場合、このツールを使用してクエリを変換し、アプリケーションの動作を保証できます。",
+        "Example 3: 企業のデータ分析チームが、大量のログデータをMongoDBに保存し、SQLクエリで分析していたデータをMongoDBクエリに変換することで、より高速なデータ処理を実現できます。",
+        "Example 4: ウェブサイトの管理者が、ユーザーデータのバックエンドをSQLからMongoDBに切り替える際、ユーザーデータの検索やフィルタリングのSQLクエリをMongoDBクエリに変換することで、システムのパフォーマンスを向上させることができます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "SQL to MongoDB는 SQL 쿼리를 MongoDB 쿼리로 변환하는 강력한 도구입니다. SQL은 관계형 데이터베이스에서 주로 사용되는 쿼리 언어로, 데이터를 검색, 삽입, 수정, 삭제하는 데 사용됩니다. 반면, MongoDB는 NoSQL 데이터베이스로, JSON 형식의 데이터를 저장하고 처리합니다. 이 도구는 이러한 두 언어 간의 차이를 극복하여, SQL을 사용하는 개발자가 MongoDB로 이전하거나 두 시스템을 통합할 때 유용합니다. 사용자는 복잡한 SQL 쿼리를 단순한 MongoDB 쿼리로 변환할 수 있으며, 이를 통해 데이터 마이그레이션, API 개발, 데이터 분석 등 다양한 시나리오에서 효율성을 높일 수 있습니다. 이 도구는 SQL 쿼리의 구문을 분석하고, 적절한 MongoDB 쿼리로 변환합니다. 이 과정에서 데이터 타입, 인덱싱, 아그리게이션 등 다양한 요소를 고려하여 최적의 쿼리를 생성합니다.",
+      "usage_steps": [
+        "1. SQL to MongoDB 웹사이트에 접속합니다.",
+        "2. 상단 메뉴에서 'SQL 쿼리 입력' 탭을 선택합니다.",
+        "3. SQL 쿼리 텍스트 박스에 변환하고자 하는 SQL 쿼리를 입력하거나 붙여넣습니다.",
+        "4. '변환하기' 버튼을 클릭하여 쿼리를 MongoDB 쿼리로 변환합니다.",
+        "5. 변환된 MongoDB 쿼리가 아래 결과 영역에 표시됩니다.",
+        "6. 필요한 경우, 변환된 쿼리를 복사하여 실제 MongoDB 환경에서 사용합니다."
+      ],
+      "usage_examples": [
+        "1. 데이터 마이그레이션: SQL을 사용하는 기존 시스템에서 MongoDB로 데이터를 이전할 때, 이 도구를 사용하여 SQL 쿼리를 MongoDB 쿼리로 변환하여 데이터 모델링과 쿼리 최적화를 쉽게 수행할 수 있습니다.",
+        "2. API 개발: RESTful API를 개발할 때, SQL 쿼리를 MongoDB 쿼리로 변환하여 NoSQL 데이터베이스에서 효율적으로 데이터를 처리할 수 있습니다. 예를 들어, 사용자 프로필 데이터를 조회하는 SQL 쿼리를 MongoDB 쿼리로 변환하여 사용자 인터페이스를 개선할 수 있습니다.",
+        "3. 데이터 분석: 대규모 데이터를 분석할 때, SQL 쿼리를 MongoDB 쿼리로 변환하여 아그리게이션 파이프라인을 활용할 수 있습니다. 예를 들어, 특정 기간 동안의 판매 데이터를 분석하는 SQL 쿼리를 MongoDB 쿼리로 변환하여 실시간 분석을 수행할 수 있습니다.",
+        "4. 테스트 및 디버깅: 개발 과정에서 SQL 쿼리를 MongoDB 쿼리로 변환하여 테스트 케이스를 작성하고 디버깅할 수 있습니다. 예를 들어, SQL 쿼리에서 예상치 않은 결과가 발생할 때, 이를 MongoDB 쿼리로 변환하여 문제를 쉽게 찾아낼 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "La herramienta SQL to MongoDB es un conversor de queries que transforma consultas SQL en consultas equivalentes de MongoDB. Esta herramienta es especialmente útil para desarrolladores y DBAs que están migrando sus bases de datos de SQL a MongoDB o que necesitan integrar sistemas que utilizan ambos paradigmas de bases de datos. La herramienta facilita la transición al proporcionar una representación precisa y optimizada de las consultas SQL en el formato de consultas de MongoDB. Esto es crucial en entornos donde la estructura de los datos y las operaciones pueden variar significativamente entre SQL y NoSQL. La conversión no solo se limita a las consultas SELECT, sino que también abarca operaciones de inserción, actualización y eliminación, lo que hace que la herramienta sea completa y versátil. La herramienta utiliza un motor de análisis sintáctico avanzado para interpretar las consultas SQL y generar consultas de MongoDB que respeten las características y capacidades del modelo de datos de documentos. Además, proporciona sugerencias y optimizaciones para mejorar el rendimiento de las consultas generadas.",
+      "usage_steps": [
+        "Abre la página de la herramienta SQL to MongoDB en nuestro sitio web.",
+        "En la sección 'Input SQL Query', pega o escribe la consulta SQL que deseas convertir.",
+        "Selecciona el tipo de consulta que estás convirtiendo (SELECT, INSERT, UPDATE, DELETE) desde el menú desplegable 'Query Type'.",
+        "Opcionalmente, ajusta las opciones avanzadas, como 'Use Aggregation Framework' para consultas más complejas.",
+        "Haz clic en el botón 'Convertir' para procesar la consulta.",
+        "Revisa la consulta de MongoDB generada en la sección 'Output MongoDB Query' y copia el resultado si es necesario."
+      ],
+      "usage_examples": [
+        "Un desarrollador de una startup está migrando una aplicación de un sistema de gestión de bases de datos SQL a MongoDB. Utiliza la herramienta SQL to MongoDB para convertir consultas de Reporting que utilizan subconsultas y operaciones de agrupación.",
+        "Un equipo de desarrollo de una empresa de comercio electrónico necesita integrar una base de datos SQL existente con una nueva base de datos MongoDB para mejorar el rendimiento de las operaciones de escritura. La herramienta les ayuda a convertir las consultas de inserción y actualización de manera eficiente.",
+        "Un administrador de bases de datos está realizando una auditoría de seguridad y necesita traducir consultas SQL de auditoría a MongoDB para asegurarse de que las políticas de seguridad se aplican correctamente en ambos sistemas.",
+        "Un analista de datos está trabajando en un proyecto de Data Science y necesita convertir consultas SQL complejas que utilizan funciones de agregación y operaciones de unión en consultas de MongoDB para analizar datos en tiempo real."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O SQL to MongoDB é uma ferramenta robusta e inovadora que permite a conversão de consultas SQL em consultas MongoDB. Esta ferramenta é essencial para desenvolvedores e engenheiros de dados que precisam migrar bancos de dados relacionais para modelos não relacionais, como o MongoDB. A necessidade de tal ferramenta surge em cenários onde a escalabilidade e flexibilidade do MongoDB são requisitos cruciais, mas a migração de dados de sistemas legados SQL pode ser complexa e demorada. O SQL to MongoDB facilita essa transição, permitindo que as consultas SQL, escritas em linguagem estruturada e tipicamente usadas em sistemas como MySQL, PostgreSQL, e Oracle, sejam convertidas em consultas MongoDB, que utilizam uma sintaxe baseada em JSON e são otimizadas para bancos de dados NoSQL. A ferramenta opera através de um parser avançado que analisa a estrutura da consulta SQL, identifica as operações de seleção, junção, agregação e modificação, e as traduz em operações equivalentes no MongoDB. Além disso, ela oferece suporte para funções SQL mais complexas, como subconsultas e expressões condicionais, garantindo que a lógica da consulta original seja preservada. Isso torna o SQL to MongoDB uma solução poderosa para facilitar a migração de dados e a integração de sistemas em diferentes paradigmas de banco de dados.",
+      "usage_steps": [
+        "Acesse a página do SQL to MongoDB no site da ferramenta e clique no botão 'Converter Consulta'.",
+        "Na seção 'Consulta SQL', cole ou digite a consulta SQL que deseja converter.",
+        "Se necessário, configure as opções avançadas, como a versão do MongoDB para o qual a consulta será convertida, usando o menu suspenso 'Versão do MongoDB'.",
+        "Clique no botão 'Converter' para iniciar o processo de conversão.",
+        "A ferramenta exibirá a consulta MongoDB convertida na seção 'Consulta MongoDB'. Revise a consulta para garantir que ela atende às suas necessidades.",
+        "Salve a consulta MongoDB convertida, se necessário, clicando no botão 'Baixar' para baixar um arquivo .txt contendo a consulta."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de uma startup de e-commerce precisa migrar um banco de dados de clientes do MySQL para o MongoDB. A ferramenta SQL to MongoDB é usada para converter consultas complexas que envolvem junções entre múltiplas tabelas, garantindo que a lógica de negócio seja mantida no novo sistema.",
+        "Um engenheiro de dados em uma empresa de análise financeira está migrando um sistema de relatórios de um banco de dados relacional para o MongoDB. A ferramenta é utilizada para converter consultas de agregação SQL, que envolvem funções de agregação e agrupamento, para consultas MongoDB equivalentes, facilitando a transição sem perder a precisão dos relatórios.",
+        "Um arquiteto de soluções em uma empresa de tecnologia está desenvolvendo uma aplicação que utiliza tanto MySQL quanto MongoDB. A ferramenta SQL to MongoDB é usada para criar consultas MongoDB a partir de consultas SQL existentes, permitindo a integração de dados entre os dois sistemas de maneira eficiente.",
+        "Um consultor de TI em uma empresa de saúde está ajudando a modernizar o sistema de gerenciamento de registros médicos. A ferramenta é usada para converter consultas SQL que envolvem subconsultas e expressões condicionais, garantindo que a migração para o MongoDB não comprometa a integridade e a segurança dos dados sensíveis."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Tool SQL to MongoDB ermöglicht es Entwicklern und Datenbankadministratoren, SQL-Abfragen in MongoDB-Queries zu übersetzen. Dies ist besonders nützlich, wenn Teams von relationalen Datenbanken wie MySQL, PostgreSQL oder SQL Server zu NoSQL-Datenbanken wie MongoDB migrieren. Die Übersetzung berücksichtigt die unterschiedlichen Syntaxen und Datenstrukturen, sodass komplexe SQL-Abfragen in effiziente und semantisch korrekte MongoDB-Abfragen umgewandelt werden können. Die Notwendigkeit für dieses Tool entsteht oft in Szenarien, in denen bestehende Anwendungen oder Datenbanken modernisiert werden und dabei die Datenstruktur und Abfrageformalismen angepasst werden müssen. Es hilft dabei, die Übergangsphase zu erleichtern und die Notwendigkeit manueller, fehleranfälliger Abfrageumwandlungen zu minimieren. Technisch basiert das Tool auf fortschrittlichen Parser-Technologien, die SQL-Abfragen in abstrakte Syntaxbäume (Abstract Syntax Trees, AST) umwandeln, die dann in MongoDB-Abfragen übersetzt werden. Dies ermöglicht eine präzise und konsistente Umwandlung, auch bei komplexen Anwendungen.",
+      "usage_steps": [
+        "Step 1: Navigieren Sie auf der Website zu der Kategorie 'Konverter' und wählen Sie 'SQL to MongoDB' aus.",
+        "Step 2: Klicken Sie auf die Schaltfläche 'SQL-Abfrage einfügen' und fügen Sie Ihre SQL-Abfrage in das Textfeld ein.",
+        "Step 3: Wählen Sie im Dropdown-Menü 'Datenbanktyp' die Quelldatenbank (z.B. MySQL, PostgreSQL) aus, von der Ihre SQL-Abfrage stammt.",
+        "Step 4: Klicken Sie auf 'Optionen' und aktivieren Sie die Option 'Erweiterte Optimierungen', falls Sie die generierte MongoDB-Abfrage weiter optimieren möchten.",
+        "Step 5: Drücken Sie die Schaltfläche 'Konvertieren', um den Konvertierungsvorgang zu starten.",
+        "Step 6: Nach der erfolgreichen Konvertierung wird die MongoDB-Abfrage im Ergebnisbereich angezeigt. Sie können diese Abfrage kopieren und in Ihrer MongoDB-Application verwenden."
+      ],
+      "usage_examples": [
+        "Example 1: Ein Entwicklerteam migriert eine bestehende Webanwendung von MySQL zu MongoDB. Sie nutzen SQL to MongoDB, um komplexe SQL-Abfragen in MongoDB-Abfragen zu konvertieren, um die Anwendung ohne Verlust von Funktionalität zu aktualisieren.",
+        "Example 2: Ein Datenbankadministrator bereitet eine Präsentation vor, in der er die Vorteile von MongoDB gegenüber relationalen Datenbanken erläutert. Er verwendet SQL to MongoDB, um typische SQL-Abfragen in MongoDB-Queries zu übersetzen und die Äquivalenz der Funktionen zu demonstrieren.",
+        "Example 3: Ein Start-up entwickelt eine neue Anwendung, die ursprünglich auf PostgreSQL basiert. Bei den ersten Tests stellt das Team fest, dass die Leistung unter hohen Lasten nicht den Anforderungen entspricht. Sie entscheiden sich für MongoDB und benutzen SQL to MongoDB, um die bestehenden Abfragen zu konvertieren und die neue Datenbank in kürzester Zeit zu integrieren.",
+        "Example 4: Ein Softwareentwickler arbeitet an einem Projekt, das sowohl relational als auch dokumentenbasierte Datenbanken verwendet. Er verwendet SQL to MongoDB, um Abfragen zwischen den beiden Systemen zu synchronisieren und sicherzustellen, dass die Datenkonsistenz gewahrt bleibt."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент SQL to MongoDB предназначен для преобразования SQL-запросов в соответствующие запросы MongoDB. Это особенно полезно для разработчиков, работающих с реляционными базами данных (RDBMS) и переходящих на NoSQL-системы, такие как MongoDB. Инструмент учитывает различия между SQL и MongoDB, такие как структура данных, поддержка агрегации, сортировка и фильтрация. Например, SQL использует таблицы и строки, в то время как MongoDB использует коллекции и документы. Инструмент автоматически преобразует операторы SELECT, INSERT, UPDATE и DELETE в их эквиваленты в MongoDB, что значительно упрощает процесс миграции данных. Разработчики могут использовать этот инструмент для быстрого тестирования и отладки запросов, а также для обучения и понимания синтаксиса MongoDB. Это особенно важно при работе с большими объемами данных, где эффективность запросов играет ключевую роль.",
+      "usage_steps": [
+        "Откройте страницу инструмента SQL to MongoDB на сайте.",
+        "В верхнем поле введите ваш SQL-запрос. Убедитесь, что запрос корректен и соответствует синтаксису SQL.",
+        "Выберите коллекцию MongoDB, в которую будет преобразован запрос, из выпадающего списка 'Коллекция'.",
+        "Если ваш запрос содержит подзапросы или сложные операции, используйте расширенные настройки, нажав кнопку 'Расширенные настройки'.",
+        "Нажмите кнопку 'Преобразовать' для автоматического преобразования SQL-запроса в MongoDB-запрос.",
+        "Результат преобразования будет отображен в нижнем поле. Вы можете скопировать сгенерированный запрос и использовать его в своей базе данных MongoDB."
+      ],
+      "usage_examples": [
+        "Преобразование SELECT-запроса для получения списка пользователей с определенными условиями: `SELECT * FROM users WHERE age > 25 AND status = 'active';`",
+        "Преобразование INSERT-запроса для добавления нового документа в коллекцию: `INSERT INTO users (name, age, status) VALUES ('Иван', 30, 'active');`",
+        "Преобразование UPDATE-запроса для обновления статуса пользователя: `UPDATE users SET status = 'inactive' WHERE age < 18;`",
+        "Преобразование DELETE-запроса для удаления пользователей, не соответствующих определенным критериям: `DELETE FROM users WHERE status = 'inactive';`"
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة SQL إلى MongoDB هي منصة تقدمية تساعد المطورين على تحويل الاستعلامات SQL المعقدة إلى استعلامات MongoDB بفعالية وسلاسة. تتيح هذه الأداة للمطورين التعامل مع القواعد البيانات الت relaional وnon-relational دون الحاجة إلى فهم عميق لكل من اللغتين. تتضمن الأداة مكونات متقدمة مثل التحليل الدقيق للمستندات، الترجمة الدقيقة للعمليات المعقدة، ودعم ميزات مثل العمليات المتداخلة والعمليات الجماعية. يتم استخدام هذه الأداة بشكل خاص في حالات مثل تغيير النظام من قاعدة بيانات SQL إلى MongoDB، أو في مشاريع تكامل البيانات التي تتطلب تحويل البيانات من صيغة إلى أخرى. تعمل الأداة عن طريق تحليل الاستعلام SQL المدخل، تحويله إلى صيغة MongoDB، ثم تقديم النتيجة في شكل يمكن تنفيذه مباشرة على قاعدة بيانات MongoDB.",
+      "usage_steps": [
+        "افتح الصفحة الرئيسية لأداة SQL إلى MongoDB وقم بتسجيل الدخول أو إنشاء حساب إذا كنت جديدًا.",
+        "في واجهة الأداة، انتقل إلى قسم 'المستندات' واختر 'إنشاء مستند جديد' لبدء عملية التحويل.",
+        "أدخل الاستعلام SQL الذي ترغب في تحويله في الحقل المخصص لذلك. تأكد من كتابة الاستعلام بشكل صحيح لضمان نتائج دقيقة.",
+        "اضغط على زر 'تحويل' الذي يقع في أسفل الصفحة. سيقوم النظام بتحليل الاستعلام وتحويله إلى صيغة MongoDB.",
+        "بعد اكتمال عملية التحويل، ستظهر النتيجة في قسم 'الاستعلام المحول'. قم بمراجعة الاستعلام المحول للتأكد من صحته.",
+        "يمكنك حفظ الاستعلام المحول أو نسخه ولصقه مباشرة في قاعدة بيانات MongoDB لتنفيذه."
+      ],
+      "usage_examples": [
+        "مطور يعمل على مشروع تغيير النظام من قاعدة بيانات SQL إلى MongoDB يمكنه استخدام هذه الأداة لتحويل جميع الاستعلامات SQL إلى صيغة MongoDB بسرعة وبدون أخطاء.",
+        "فريق تطوير يرغب في إجراء تكامل البيانات بين نظام قائم يستخدم SQL ونظام جديد يستخدم MongoDB يمكنه استخدام الأداة لتسهيل عملية التحويل والتأكد من دقة البيانات.",
+        "مطور يرغب في تعلم MongoDB ويفضل بدءًا من الاستعلامات SQL التي يعرفها جيدًا يمكنه استخدام الأداة لفهم كيفية تحويل الاستعلامات بطرق مختلفة.",
+        "شركة تكنولوجيا ترغب في تحديث نظامها القديم إلى تكنولوجيا أكثر حداثة مثل MongoDB يمكنها استخدام الأداة لتسهيل عملية الانتقال دون الحاجة إلى إعادة كتابة جميع الاستعلامات يدويًا."
+      ]
+    }
+  }
+}

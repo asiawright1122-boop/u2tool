@@ -1,0 +1,175 @@
+{
+  "slug": "nested-pie-chart-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Nested Pie Chart Generator is a powerful online tool designed to visualize hierarchical data through nested pie charts, also known as donut charts. This tool allows developers and data analysts to represent complex data structures in a clear and intuitive manner. By using concentric rings, the generator can display multiple levels of data, making it easier to understand the relationships and proportions within the data. For instance, it can be used to show the breakdown of a company's revenue by product category and then further by subcategories within each product. The tool supports various customization options, such as color schemes, labels, and tooltips, which enhance the visual clarity and provide detailed insights. The Nested Pie Chart Generator is particularly useful for data visualization in business intelligence, financial analysis, and market research, where hierarchical data is common and needs to be presented in a digestible format.",
+      "usage_steps": [
+        "Step 1: Open the Nested Pie Chart Generator and click on the 'Upload Data' button to import your dataset in CSV or JSON format.",
+        "Step 2: In the 'Data Structure' section, define the hierarchy of your data by selecting the columns that represent the outer and inner rings of the chart.",
+        "Step 3: Customize the appearance of your chart by selecting colors, fonts, and other visual properties from the 'Chart Settings' panel.",
+        "Step 4: Add labels and tooltips to your chart by configuring the 'Label Settings' and 'Tooltip Settings' options to provide detailed information on hover.",
+        "Step 5: Preview your nested pie chart using the 'Preview' button to ensure that the data is displayed correctly and the visual elements are as desired.",
+        "Step 6: Once satisfied, download the chart in PNG, SVG, or PDF format by clicking on the 'Download' button for use in reports or presentations."
+      ],
+      "usage_examples": [
+        "Example 1: A marketing analyst uses the Nested Pie Chart Generator to visualize the distribution of ad spend across different campaigns and ad formats, helping to identify which combinations are most effective.",
+        "Example 2: A financial analyst employs the tool to break down a company’s revenue by geographical regions and then by product lines within each region, providing a comprehensive view of business performance.",
+        "Example 3: A project manager utilizes the Nested Pie Chart Generator to show the allocation of project resources by department and then by individual team members, aiding in resource planning and optimization.",
+        "Example 4: A healthcare professional uses the tool to represent patient demographics by age group and then by specific health conditions within each group, assisting in the analysis of healthcare trends and needs."
+      ]
+    },
+    "zh": {
+      "detailed_description": "嵌套饼图生成器是一款专为在线创建多层次饼图设计的工具。通过使用此工具，用户能够可视化复杂的数据层次结构，通过内环和外环展示不同级别的数据细分。这种图表特别适用于展示具有多个分类层次的数据，例如市场细分、组织结构或产品类别。嵌套饼图不仅能够直观地呈现数据的总体分布，还能详细展示每个分类下的子分类，从而帮助用户更好地理解数据的细微差异。该工具采用先进的数据可视化技术，支持用户自定义颜色、字体和标签位置，确保图表既美观又实用。此外，嵌套饼图生成器还提供了数据导入功能，支持CSV和JSON格式，方便用户快速加载和处理大量数据。",
+      "usage_steps": [
+        "Step 1: 打开嵌套饼图生成器的首页，点击页面中间的“上传数据”按钮，选择您的CSV或JSON文件。",
+        "Step 2: 数据上传成功后，系统会自动解析文件内容。在“数据预览”区域检查数据是否正确加载。",
+        "Step 3: 转到“图表设置”选项卡，选择内环和外环的数据列。例如，您可以选择“部门”作为内环，选择“子部门”作为外环。",
+        "Step 4: 在“样式设置”选项卡中，自定义图表的颜色方案、字体和标签位置。支持多种预设配色方案，也可以手动输入十六进制颜色代码。",
+        "Step 5: 调整图表大小和布局。通过拖动图表边缘或在“高级设置”中输入具体数值，可以精确控制图表的尺寸。",
+        "Step 6: 完成设置后，点击“生成图表”按钮。系统将自动生成嵌套饼图，您可以下载PNG或SVG格式的图表文件，用于报告或演示。"
+      ],
+      "usage_examples": [
+        "Example 1: 一家大型零售公司希望展示其不同产品类别的销售情况，以及每个类别下的具体子类别。通过使用嵌套饼图生成器，公司可以直观地看到哪些子类别对总销售额贡献最大。",
+        "Example 2: 一个市场研究团队需要分析消费者在不同购物渠道的消费比例，如线上商城、实体店和移动端。嵌套饼图可以帮助团队展示每个渠道下的具体子类别，例如在移动端的购物中，哪些商品种类最受欢迎。",
+        "Example 3: 一个非营利组织需要展示其资金的分配情况，包括不同项目之间的资金分配和每个项目下的具体支出。嵌套饼图可以清晰地展示资金的多层次分配，帮助利益相关者更好地理解资金的使用情况。",
+        "Example 4: 一家教育机构希望展示其课程体系，包括不同学科和每个学科下的具体课程。嵌套饼图可以有效地展示课程的层次结构，帮助学生和家长快速了解课程设置。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "ネストされた円グラフジェネレーターは、オンラインで階層的なデータを視覚化するために設計されたツールです。このツールは、複数のデータセットを内側と外側のリングに分割し、それぞれのリングが異なるレベルの詳細を示すことで、複雑なデータ構造を効果的に表現します。ユーザーは、データの階層構造を明確に示すことで、データの全体像と詳細を同時に把握できます。\n\nこのツールは、市場調査、販売分析、組織構造の表示、またはプロジェクト管理など、さまざまなシナリオで活用できます。例えば、製品ラインの販売データを表示する際、内側のリングで製品カテゴリー、外側のリングで各カテゴリー内の個別の製品の販売実績を表示することが可能です。\n\n技術的には、このジェネレーターは、ユーザーが提供したデータを基に、サブセット間の比率を計算し、それを円形のセクションに変換します。さらに、色のコーディネーションとラベルの配置を自動的に最適化することで、視覚的に分かりやすいグラフを作成します。また、グラフのカスタマイズ機能も充実しており、ユーザーはグラフのデザインを好みに合わせて調整できます。",
+      "usage_steps": [
+        "Step 1: ツールのホームページにアクセスし、「データをインポート」ボタンをクリックします。",
+        "Step 2: CSVファイルやExcelファイルからデータをアップロードするか、手動でデータを入力します。",
+        "Step 3: 「設定」タブで、内側のリングと外側のリングのデータソースを選択します。",
+        "Step 4: カラーパレットやラベルのフォントスタイルをカスタマイズします。",
+        "Step 5: 「プレビュー」ボタンをクリックして、生成されたネストされた円グラフを確認します。",
+        "Step 6: 満足したら、「グラフを保存」ボタンをクリックして、PNG、SVG、またはPDF形式でダウンロードします。"
+      ],
+      "usage_examples": [
+        "Example 1: 市場調査における製品カテゴリーの販売実績を表示。内側のリングでカテゴリー、外側のリングで個別の製品を表示します。",
+        "Example 2: 組織構造の可視化。内側のリングで部門、外側のリングで各部門内の役職や役割を表示します。",
+        "Example 3: プロジェクトのタスク管理。内側のリングでプロジェクトのフェーズ、外側のリングで各フェーズ内の具体的なタスクを表示します。",
+        "Example 4: エネルギー消費の分析。内側のリングでエネルギー源（電力、ガスなど）、外側のリングで各エネルギー源の具体的な使用状況（家庭、産業など）を表示します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Nested Pie Chart Generator는 온라인에서 중첩된 원형 차트를 생성하는 도구입니다. 이 도구는 내부와 외부 반지형 구조를 통해 계층적인 데이터를 시각화할 수 있게 해줍니다. 사용자는 다중 범주와 하위 범주를 쉽게 표현할 수 있게 되어, 복잡한 데이터 구조를 명확하게 전달할 수 있습니다. 특히, 마케팅, 재무, 연구 분야 등에서 데이터를 계층적으로 표현해야 하는 경우에 유용합니다. 이 도구는 HTML5, CSS3, 그리고 JavaScript를 기반으로 개발되어 대부분의 웹 브라우저에서 원활하게 작동합니다. 사용자는 CSV 파일을 업로드하거나 직접 입력하여 데이터를 추가할 수 있으며, 다양한 커스터마이징 옵션을 통해 차트의 스타일을 조정할 수 있습니다. 또한, 생성된 차트는 이미지 또는 HTML 코드 형태로 내보내어 다른 웹 페이지나 보고서에 쉽게 통합할 수 있습니다.",
+      "usage_steps": [
+        "데이터를 준비합니다. CSV 파일로 저장하거나 직접 입력할 수 있는 데이터를 준비하세요.",
+        "Nested Pie Chart Generator 페이지로 이동하여 '데이터 업로드' 버튼을 클릭하여 CSV 파일을 업로드하거나, '데이터 직접 입력' 옵션을 선택하여 데이터를 수동으로 입력하세요.",
+        "데이터를 입력한 후, '차트 설정' 탭으로 이동하여 차트의 내부와 외부 반지를 구성합니다. 각 반지의 범주와 색상을 선택할 수 있습니다.",
+        "'색상 설정' 옵션을 사용하여 각 범주의 색상을 맞춤화하세요. 다양한 색상 팔레트가 제공되므로 원하는 색상을 쉽게 선택할 수 있습니다.",
+        "차트의 레이아웃과 라벨링을 조정합니다. '레이아웃 설정'에서 차트의 크기, 위치, 라벨 크기 등을 조정할 수 있습니다.",
+        "차트가 완성되면 '다운로드' 버튼을 클릭하여 이미지 파일로 저장하거나, 'HTML 코드 복사' 옵션을 사용하여 웹 페이지에 통합할 수 있는 HTML 코드를 복사하세요."
+      ],
+      "usage_examples": [
+        "마케팅 팀은 여러 채널별로 고객 세분화를 진행한 후, 각 세그먼트의 매출 비율을 중첩된 원형 차트로 시각화하여 매니저들에게 보고합니다.",
+        "재무 팀은 회사의 예산 분배를 계층적으로 나타내어, 각 부서별 예산과 그 하위 항목의 비율을 명확하게 표현합니다.",
+        "연구원은 실험 결과를 분석한 후, 다양한 실험 조건별로 결과를 중첩된 원형 차트로 표현하여 보고서에 포함시킵니다.",
+        "교육 기관은 학생들의 성적 분포를 계층적으로 나타내어, 각 과목별 성적과 그 하위 항목의 비율을 시각화하여 학부모들에게 설명합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de Gráficos de Pastel Anidados es una poderosa herramienta en línea que permite a los usuarios crear gráficos de pastel complejos y detallados, capaces de representar datos jerárquicos a través de anillos internos y externos. Esta herramienta es especialmente útil para aquellos que necesitan visualizar relaciones y jerarquías en conjuntos de datos, como estructuras organizacionales, distribuciones de presupuesto, o categorías y subcategorías de productos. El gráfico de pastel anidado permite una representación más profunda y detallada de los datos, facilitando la comprensión de las relaciones entre diferentes niveles de información. Técnicamente, el generador utiliza algoritmos de disposición de gráficos para distribuir los segmentos de manera eficiente, asegurando que los anillos internos y externos se muestren de forma clara y legible. Además, ofrece opciones personalizables, como colores, etiquetas y leyendas, para que los usuarios puedan ajustar el gráfico según sus necesidades específicas.",
+      "usage_steps": [
+        "Paso 1: Visita la página del Generador de Gráficos de Pastel Anidados y haz clic en el botón 'Iniciar Nuevo Gráfico'.",
+        "Paso 2: En la sección 'Datos', introduce tu conjunto de datos en formato CSV o JSON. Asegúrate de incluir una columna para cada nivel de jerarquía que deseas representar.",
+        "Paso 3: Configura las opciones de diseño en la pestaña 'Personalización'. Aquí puedes ajustar los colores, el tamaño de los anillos, y las etiquetas de los segmentos.",
+        "Paso 4: Utiliza la pestaña 'Leyendas' para agregar y personalizar la leyenda del gráfico. Puedes seleccionar diferentes estilos de leyenda y ajustar su posición en el gráfico.",
+        "Paso 5: Haz clic en el botón 'Generar Gráfico' para crear tu gráfico de pastel anidado. El generador procesará tus datos y mostrará el gráfico en la pantalla.",
+        "Paso 6: Una vez que estés satisfecho con el gráfico, haz clic en 'Exportar' para descargarlo en formatos como PNG, SVG, o PDF. También puedes compartir el gráfico directamente desde la herramienta."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un gestor de proyectos puede usar el Generador de Gráficos de Pastel Anidados para visualizar la distribución de tareas y subtareas en un proyecto. Los anillos externos pueden representar diferentes fases del proyecto, mientras que los anillos internos muestran las tareas específicas dentro de cada fase.",
+        "Ejemplo 2: Un analista financiero podría emplear esta herramienta para representar la estructura de gastos de una empresa, con el anillo externo mostrando las categorías principales (como marketing, operaciones, y recursos humanos) y los anillos internos desglosando los gastos dentro de cada categoría.",
+        "Ejemplo 3: Un educador puede utilizar el gráfico de pastel anidado para ilustrar la estructura de un curso, con el anillo externo representando los módulos del curso y los anillos internos detallando las lecciones y asignaciones dentro de cada módulo.",
+        "Ejemplo 4: Un especialista en marketing puede crear un gráfico de pastel anidado para mostrar la segmentación de clientes, con el anillo externo representando los segmentos demográficos principales y los anillos internos desglosando las subcategorías dentro de cada segmento, como edad, género, y ubicación geográfica."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Gerador de Gráficos de Pizza Aninhados é uma ferramenta online poderosa que permite a criação de gráficos de pizza aninhados, também conhecidos como gráficos de pizza múltiplos ou gráficos de pizza em camadas. Esses gráficos são ideais para visualizar dados hierárquicos, onde uma categoria principal pode ser subdividida em várias subcategorias, formando anéis internos e externos. O gerador utiliza técnicas de renderização avançadas para garantir que os gráficos sejam não apenas visualmente atraentes, mas também precisos e fáceis de interpretar.\n\nOs usuários precisam dessa ferramenta quando precisam representar dados complexos de maneira clara e concisa. Por exemplo, em análises financeiras, é comum precisar mostrar a distribuição de gastos em diferentes departamentos e, dentro de cada departamento, a distribuição de gastos em diferentes categorias. Outro uso comum é em pesquisas de mercado, onde é necessário visualizar a preferência dos consumidores por marcas e, dentro de cada marca, por diferentes produtos.\n\nO funcionamento da ferramenta é intuitivo e baseia-se em uma interface de usuário responsiva. Ao carregar seus dados, o usuário pode selecionar as categorias principais e as subcategorias, ajustar as cores e os rótulos, e até mesmo adicionar interatividade, como a exibição de tooltips com informações detalhadas ao passar o mouse sobre os segmentos. O gerador também oferece a opção de exportar os gráficos em formatos de imagem e vetorial, garantindo que os usuários possam utilizá-los em relatórios e apresentações profissionais.",
+      "usage_steps": [
+        "Passo 1: Acesse a página do Gerador de Gráficos de Pizza Aninhados e clique no botão 'Carregar Dados' para importar seu arquivo CSV ou JSON com os dados hierárquicos.",
+        "Passo 2: No painel de configuração, selecione a coluna que representa a categoria principal e a coluna que representa as subcategorias.",
+        "Passo 3: Personalize a aparência do gráfico ajustando as cores, os rótulos e os tamanhos dos anéis. Use a seção 'Estilo' no painel de configuração para fazer essas alterações.",
+        "Passo 4: Ative a opção 'Interatividade' para adicionar tooltips e outras funcionalidades interativas que melhorem a experiência do usuário ao explorar o gráfico.",
+        "Passo 5: Pré-visualize o gráfico no visualizador em tempo real para garantir que ele atenda às suas necessidades. Faça ajustes finos, se necessário, usando as opções de edição.",
+        "Passo 6: Quando estiver satisfeito com o gráfico, clique no botão 'Exportar' para salvar o gráfico em formatos de imagem (PNG, JPEG) ou vetorial (SVG), adequados para uso em relatórios e apresentações."
+      ],
+      "usage_examples": [
+        "Exemplo 1: Uma empresa de telecomunicações pode usar o Gerador de Gráficos de Pizza Aninhados para visualizar a distribuição de seus clientes por faixa etária e, dentro de cada faixa etária, a distribuição de planos de serviços.",
+        "Exemplo 2: Uma organização não governamental (ONG) pode utilizar a ferramenta para representar a alocação de recursos financeiros por projeto e, dentro de cada projeto, a alocação por atividades específicas.",
+        "Exemplo 3: Um departamento de marketing pode criar um gráfico de pizza aninhado para mostrar a preferência dos consumidores por marcas e, dentro de cada marca, por diferentes linhas de produtos durante uma campanha de lançamento.",
+        "Exemplo 4: Um analista de dados em uma empresa de varejo pode usar a ferramenta para analisar as vendas de produtos por categoria e, dentro de cada categoria, as vendas por subcategorias, ajudando a identificar tendências e áreas de oportunidade."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Générateur de Graphiques en Camembert Emboîtés est un outil en ligne puissant et flexible qui permet de créer des diagrammes de type camembert avec des anneaux intérieurs et extérieurs. Cette fonctionnalité est particulièrement utile pour visualiser des données hiérarchiques complexes, où chaque segment peut être divisé en sous-segments. Les utilisateurs peuvent ainsi représenter des structures organisationnelles, des catégories de produits, ou des segments de marché avec une clarté et une précision remarquables. Le générateur utilise des algorithmes avancés pour assurer une répartition optimale des données, garantissant que chaque segment est proportionnel et facilement identifiable. Les options de personnalisation, comme la modification des couleurs, des étiquettes, et des légendes, offrent une flexibilité supplémentaire pour s'adapter aux besoins spécifiques de chaque projet. Ce outil est idéal pour les professionnels de l'analyse de données, les marketeurs, et les designers qui ont besoin de communiquer des informations de manière visuellement engageante et structurée.",
+      "usage_steps": [
+        "Accédez à la page du Générateur de Graphiques en Camembert Emboîtés et cliquez sur le bouton 'Nouveau Graphique'.",
+        "Dans la section 'Données', chargez votre fichier CSV ou saisissez directement les données dans le tableau de données. Assurez-vous que chaque segment a un identifiant unique et une valeur numérique.",
+        "Sélectionnez la colonne qui représente les catégories principales dans la liste déroulante 'Anneau Extérieur'. Ensuite, choisissez la colonne des sous-catégories pour l'anneau intérieur.",
+        "Personnalisez l'apparence de votre graphique en modifiant les couleurs, les étiquettes, et les légendes dans la section 'Personnalisation'. Utilisez les palettes de couleurs prédéfinies ou créez vos propres couleurs.",
+        "Ajoutez des annotations ou des notes supplémentaires en utilisant l'outil de texte dans la section 'Annotations'. Cela peut être utile pour mettre en évidence des points importants ou des tendances clés.",
+        "Une fois que vous êtes satisfait de votre graphique, cliquez sur 'Exporter' pour télécharger l'image en haute résolution ou copiez le code HTML pour l'intégrer sur votre site web."
+      ],
+      "usage_examples": [
+        "Un analyste financier souhaite visualiser la répartition des actifs d'un portefeuille d'investissement. Il utilise le Générateur de Graphiques en Camembert Emboîtés pour montrer les catégories principales (actions, obligations, immobilier) et les sous-catégories (secteurs ou régions) de manière claire et détaillée.",
+        "Un responsable marketing veut analyser la performance des différentes campagnes de publicité. Il crée un graphique en camembert emboîté pour montrer les canaux de marketing principaux (réseaux sociaux, email, search) et les sous-canaux spécifiques (Facebook, Instagram, Google Ads) avec leurs résultats respectifs.",
+        "Un consultant en ressources humaines a besoin de présenter la structure organisationnelle d'une entreprise. Il utilise l'outil pour créer un graphique qui montre les départements principaux et les équipes au sein de chaque département, facilitant la compréhension de la hiérarchie.",
+        "Un enseignant en statistiques veut expliquer la répartition des réponses d'un sondage à ses étudiants. Il utilise le Générateur de Graphiques en Camembert Emboîtés pour montrer les catégories de questions et les réponses détaillées, permettant une analyse approfondie des données."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Nested Pie Chart Generator ist ein leistungsstarkes Web-Tool, das es Benutzern ermöglicht, komplexe hierarchische Daten in ansprechende und leicht verständliche Nested Pie Charts zu transformieren. Während traditionelle Tortendiagramme nur eine Ebene der Daten visualisieren können, erlaubt der Nested Pie Chart Generator die Darstellung von mehreren Schichten, wobei innere und äußere Ringe verschiedene Datenkategorien repräsentieren. Dies ist besonders nützlich in Szenarien, in denen Daten eine klar definierte Hierarchiestruktur haben, wie zum Beispiel in der Darstellung von Budgetzuteilungen, Vertriebsstrategien oder Marktsegmentierungen. Die Fähigkeit, mehrere Ebenen der Daten in einem einzigen Diagramm darzustellen, erleichtert die Analyse und Kommunikation komplexer Informationen. Technisch gesehen verwendet das Tool moderne Web-Technologien wie HTML5, CSS3 und JavaScript, um interaktive und benutzerfreundliche Diagramme zu generieren. Benutzer können ihre Daten importieren, die Struktur der Diagramme anpassen und die finalen Visualisierungen exportieren, ohne spezialisierte Software zu benötigen.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des Nested Pie Chart Generators und klicken Sie auf den Button 'Daten hochladen', um Ihre CSV- oder Excel-Datei zu importieren.",
+        "Wählen Sie in der Dropdown-Liste 'Hauptkategorie' die Spalte aus, die die oberste Ebene Ihrer hierarchischen Daten repräsentiert.",
+        "Fügen Sie in der Tabelle 'Unterkategorien' die Spalten hinzu, die die niedrigeren Ebenen Ihrer Daten darstellen.",
+        "Passt die Farbpalette an, indem Sie auf 'Farben' klicken und die gewünschten Farben für jede Kategorie auswählen.",
+        "Klicken Sie auf 'Diagrammeinstellungen', um die Größe, Position und andere visuelle Aspekte der inneren und äußeren Ringe zu konfigurieren.",
+        "Sobald Sie zufrieden mit Ihrem Diagramm sind, klicken Sie auf 'Exportieren', um es als PNG, SVG oder PDF-Datei herunterzuladen."
+      ],
+      "usage_examples": [
+        "Ein Finanzmanager möchte die Budgetzuteilungen verschiedener Abteilungen eines Unternehmens visualisieren. Indem er die Abteilungen als Hauptkategorie und die einzelnen Projekte innerhalb der Abteilungen als Unterkategorien einstellt, kann er die Zuteilungen auf einen Blick anzeigen.",
+        "Ein Marketingchef möchte die Marktsegmentierung seines Unternehmens veranschaulichen. Die Hauptkategorie könnte die Regionen repräsentieren, während die Unterkategorien die verschiedenen Produkte oder Dienstleistungen innerhalb jeder Region darstellen.",
+        "Ein Lehrer möchte den Aufwand für verschiedene Unterrichtsfächer in einer Schule veranschaulichen. Die Hauptkategorie könnte die Klassenstufen sein, während die Unterkategorien die einzelnen Fächer innerhalb jeder Klasse darstellen.",
+        "Ein Projektleiter möchte die Verteilung von Arbeitsaufgaben innerhalb eines Teams visualisieren. Die Hauptkategorie könnte die Teammitglieder sein, während die Unterkategorien die spezifischen Aufgaben oder Meilensteine innerhalb jedes Projektes darstellen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор вложенных круговых диаграмм предназначен для создания визуализаций, которые отображают иерархические данные с помощью внутренних и внешних колец. Этот инструмент позволяет пользователям легко представить сложные структуры данных в интуитивно понятном формате, что особенно полезно при анализе данных, имеющих несколько уровней подчинения. Например, он может быть использован в бизнес-аналитике для визуализации долей рынка, где внешние кольца могут представлять крупные секторы, а внутренние — подсекторы. В техническом плане, генератор использует современные веб-технологии, такие как HTML5 и JavaScript, для динамического создания и редактирования диаграмм. Пользователи могут загружать свои данные в формате CSV или JSON, а также настраивать визуальные параметры, такие как цвета, подписи и легенды, для создания диаграмм, которые соответствуют их конкретным требованиям. Additionally, the tool supports real-time updates, allowing users to see changes in the chart as they modify the data or settings.",
+      "usage_steps": [
+        "Шаг 1: Перейдите на страницу генератора вложенных круговых диаграмм и нажмите кнопку «Загрузить данные».",
+        "Шаг 2: Выберите файл в формате CSV или JSON, содержащий ваши иерархические данные, и загрузите его.",
+        "Шаг 3: После загрузки данных, используйте панель настроек для изменения цветов, подписей и легенд диаграммы.",
+        "Шаг 4: Настройте параметры внутренних и внешних колец, указав, какие данные должны быть отображены на каждом уровне.",
+        "Шаг 5: Нажмите кнопку «Обновить диаграмму», чтобы применить все изменения и увидеть обновленную визуализацию.",
+        "Шаг 6: Скачайте созданный вами график в формате PNG или PDF, используя соответствующие кнопки на панели инструментов."
+      ],
+      "usage_examples": [
+        "Пример 1: Бизнес-аналитик использует генератор для создания вложенных круговых диаграмм, отображающих доли рынка различных продуктов. Внешнее кольцо показывает общие категории продуктов, а внутреннее — конкретные модели.",
+        "Пример 2: Финансовый аналитик применяет инструмент для визуализации структуры инвестиционного портфеля. Внешнее кольцо представляет различные типы активов (например, акции, облигации), а внутреннее — конкретные инвестиции в каждом типе.",
+        "Пример 3: Преподаватель статистики использует генератор для создания образовательных материалов, в которых показаны взаимосвязи между различными категориями данных. Например, внешнее кольцо может представлять типы преступлений, а внутреннее — конкретные виды преступлений в каждой категории.",
+        "Пример 4: Маркетолог создает вложенные круговые диаграммы для анализа демографических данных целевой аудитории. Внешнее кольцо может показывать возрастные группы, а внутреннее — пол и другие характеристики в каждой группе."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مولد الرسوم البيانية الدائرية المضمنة هو أداة قوية تتيح للمطورين والمحترفين إنشاء رسوم بيانية دائرية متداخلة عبر الإنترنت. تتميز الرسوم البيانية الدائرية المضمنة بقدرتها على عرض البيانات الهرمية بطريقة واضحة ومباشرة، مما يجعلها مثالية لتمثيل البيانات التي تحتوي على مستويات متعددة من التصنيف. يمكن للمستخدمين إضافة بيانات داخلية وخارجية لإنشاء حلقات متداخلة، مما يتيح فهمًا أعمق للعلاقات بين البيانات. تستخدم هذه الأداة تقنيات متطورة لرسم البيانات بشكل دقيق وكفء، مع إمكانية التحكم في الألوان والتصاميم لضمان جودة الرسم البياني النهائي. يمكن استخدام هذه الأداة في مجموعة متنوعة من التطبيقات، سواء في مجال الأعمال أو العلوم أو التعليم، حيث يمكن أن تساعد في تبسيط البيانات المعقدة وجعلها سهلة الفهم.",
+      "usage_steps": [
+        "حدد مصدر البيانات الخاص بك، سواء كان ملف CSV أو JSON، وقم بتحميله باستخدام زر 'تحميل الملف' في الجزء العلوي من الواجهة.",
+        "في القسم 'إعدادات البيانات'، قم بتحديد الأعمدة التي تحتوي على البيانات الداخلية والخارجية التي تريد تمثيلها في الرسم البياني.",
+        "اذهب إلى قسم 'التصميم' واختر نمط الألوان والキングصاميم الذي يناسب احتياجاتك. يمكنك أيضًا تخصيص الحجم وال해주 الحلقات.",
+        "في قسم 'الخواص الإضافية'، قم بتحديد أي خصائص إضافية مثل العناوين والتعليقات التوضيحية التي ترغب في إضافتها إلى الرسم البياني.",
+        "اضغط على زر 'إنشاء الرسم البياني' لبدء عملية الرسم. سيتم عرض الرسم البياني الدائري المضمن على الشاشة فورًا.",
+        "قم بحفظ الرسم البياني الناتج باستخدام زر 'حفظ' في الجزء العلوي,right من الواجهة. يمكنك حفظه كصورة أو كملف في تنسيق متجه."
+      ],
+      "usage_examples": [
+        "في قطاع الأعمال، يمكن للمديرين استخدام مولد الرسوم البيانية الدائرية المضمنة لعرض الهيكل التنظيمي للشركة، حيث يمكن تمثيل الأقسام الرئيسية في الحلقة الخارجية والفرق الفرعية في الحلقة الداخلية.",
+        "في مجال التعليم، يمكن للمعلمين استخدام هذه الأداة لتصور العلاقات بين المواضيع الفرعية في مادة دراسية معينة، مما يساعد الطلاب على فهم الهيكل العام للمادة.",
+        "في البحث العلمي، يمكن للعلماء استخدام الرسوم البيانية الدائرية المضمنة لتمثيل البيانات الهرمية في الدراسات البيئية، مثل توزيع الأنواع النباتية في مناطق مختلفة.",
+        "في التسويق الرقمي، يمكن للمarketers استخدام هذه الأداة لتحليل قنوات الربح المختلفة، حيث يمكن تمثيل مصادر الدخل الرئيسية في الحلقة الخارجية وال Campaigns الفرعية في الحلقة الداخلية."
+      ]
+    }
+  }
+}

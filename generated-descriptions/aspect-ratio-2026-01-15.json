@@ -1,0 +1,175 @@
+{
+  "slug": "aspect-ratio",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Aspect Ratio Calculator is a powerful tool designed to help users accurately determine and maintain the aspect ratio of images, videos, and other visual media. Technically, the tool performs calculations based on the width and height of the media, ensuring that the proportional relationship between these dimensions remains consistent even when resizing. This is crucial for maintaining visual integrity and avoiding distortion. Users can input specific dimensions, and the tool will compute the corresponding values to maintain the desired aspect ratio. The calculator is particularly useful for web developers, graphic designers, and videographers who need to ensure that their visual content looks perfect across different devices and platforms. By using this tool, professionals can quickly and accurately resize images and videos without the risk of stretching or compressing them, which is a common issue when manually adjusting dimensions.",
+      "usage_steps": [
+        "Step 1: Open the Aspect Ratio Calculator tool on the website and locate the input fields for Width and Height.",
+        "Step 2: Enter the current dimensions of your media in the Width and Height fields. Ensure that the units are consistent (e.g., pixels, inches).",
+        "Step 3: Select the desired output format from the dropdown menu, which includes options like 'New Width' or 'New Height'. This will determine which dimension you want to calculate.",
+        "Step 4: Input the new dimension in the corresponding field. For example, if you selected 'New Width', enter the desired width.",
+        "Step 5: Click the 'Calculate' button to compute the new dimension that maintains the original aspect ratio.",
+        "Step 6: Review the calculated dimension in the output field. Use this value to resize your media while preserving its aspect ratio."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer needs to resize an image from 1920x1080 pixels to fit a smaller section of a website that is 800 pixels wide. Using the Aspect Ratio Calculator, they can quickly determine the new height to keep the image from distorting.",
+        "Example 2: A graphic designer is creating a series of social media posts and needs to ensure that all images maintain a consistent 16:9 aspect ratio. The tool helps them calculate the correct dimensions for each image, regardless of the original size.",
+        "Example 3: A videographer is preparing a 4K video (3840x2160) for a platform that requires a 1080p resolution (1920x1080). The Aspect Ratio Calculator ensures that the video is resized correctly without changing its aspect ratio, maintaining the visual quality.",
+        "Example 4: A photographer is printing a series of landscape photos and needs to resize them to fit a standard 8x10 inch frame. The tool helps them calculate the new dimensions while keeping the aspect ratio consistent, ensuring that the photos look perfect in the frames."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Aspect Ratio Calculator 是一款专业的数学工具，专门用于计算和调整图像或视频的长宽比。这款工具不仅能够帮助用户快速计算出任意给定尺寸的长宽比，还能在保持原始比例的情况下，调整图像或视频的尺寸，确保内容不失真。对于网页设计师、视频编辑者和摄影师而言，这款工具是不可或缺的。在网页设计中，保持图像的正确长宽比可以提升用户体验，避免图像变形。在视频编辑中，正确的长宽比是确保内容在不同设备上显示一致的关键。此外，对于需要频繁处理图像和视频的用户，这款工具可以节省大量时间和精力。技术上，Aspect Ratio Calculator 通过输入原始尺寸，自动计算出长宽比，并提供多种输出尺寸选项，确保用户可以根据实际需求进行选择。",
+      "usage_steps": [
+        "Step 1: 打开 Aspect Ratio Calculator 工具页面，首先看到的是输入区域。",
+        "Step 2: 在“原始宽度”和“原始高度”输入框中，输入您希望调整的图像或视频的原始尺寸。",
+        "Step 3: 点击“计算长宽比”按钮，工具将自动计算出当前输入尺寸的长宽比。",
+        "Step 4: 在结果区域，您将看到计算出的长宽比和多个建议的输出尺寸。",
+        "Step 5: 选择一个合适的输出尺寸，工具将自动调整宽度和高度，以保持原始比例。",
+        "Step 6: 最后，您可以将这些尺寸复制并应用于您的设计或编辑项目中。"
+      ],
+      "usage_examples": [
+        "Example 1: 网页设计师在创建响应式网站时，需要确保所有图像在不同设备上都能正确显示。使用 Aspect Ratio Calculator，设计师可以快速计算出适合不同屏幕尺寸的图像尺寸，确保图像在各种设备上都能保持正确的比例。",
+        "Example 2: 视频编辑者在制作视频时，需要将多个不同来源的素材合并到一个项目中。使用 Aspect Ratio Calculator，编辑者可以确保所有视频素材在导出时保持一致的长宽比，避免任何内容变形。",
+        "Example 3: 摄影师在处理照片时，经常需要将照片调整为特定的尺寸以适应不同的打印需求。使用 Aspect Ratio Calculator，摄影师可以快速计算出不同打印尺寸所需的长宽比，确保照片在打印时不会失真。",
+        "Example 4: 社交媒体经理在发布内容时，需要确保所有图片和视频符合不同平台的尺寸要求。使用 Aspect Ratio Calculator，经理可以快速调整图像和视频的尺寸，确保内容在不同平台上能够正确显示。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Aspect Ratio Calculatorは、画像やビデオのアスペクト比を計算し、サイズを比例してリサイズするためのオンラインツールです。アスペクト比は画像の幅と高さの比率を表し、特定のメディアが歪まずに表示されるようにするために重要です。このツールは、映像制作、ウェブデザイン、印刷業界などで使用される場合が多いです。具体的には、映像制作では画面のアスペクト比を維持しながら解像度を変更する必要がある場合や、ウェブデザインではレスポンシブデザインを実現するために画像のサイズを比例して調整する場合などに役立ちます。Aspect Ratio Calculatorは、ユーザーが入力した元の幅と高さからアスペクト比を計算し、新しい幅または高さを指定することで、他の次元を自動的に計算します。これにより、画像やビデオが適切に表示されるようにリサイズできます。",
+      "usage_steps": [
+        "1. Aspect Ratio Calculatorのウェブページを開きます。",
+        "2. 「元の幅」フィールドに画像やビデオの現在の幅を入力します。",
+        "3. 「元の高さ」フィールドに画像やビデオの現在の高さを入力します。",
+        "4. 「新しい幅」または「新しい高さ」のいずれかを指定します。指定した値に基づいて、他の値が自動的に計算されます。",
+        "5. 「計算」ボタンをクリックします。これにより、新しい幅と高さが表示されます。",
+        "6. 結果を確認し、必要な場合は「クリア」ボタンをクリックして新しい計算を開始します。"
+      ],
+      "usage_examples": [
+        "1. ある映像作家は、4:3のアスペクト比のビデオを16:9のアスペクト比に変更する必要がありました。元の解像度が640x480ピクセルだったため、新しい解像度を1920x1080ピクセルに変更する際、Aspect Ratio Calculatorを使用して新しい幅と高さを計算しました。",
+        "2. ウェブデザイナーは、レスポンシブデザインのウェブページで画像を表示する際、画像のアスペクト比を維持しながら幅を800ピクセルに設定しました。Aspect Ratio Calculatorを使用して、対応する高さを計算し、画像が表示領域に収まるようにしました。",
+        "3. 印刷業者が必要なページサイズに画像をリサイズする際、画像の元のサイズが2000x1500ピクセルで、最終的なページサイズがA4（210x297mm）であることを確認しました。Aspect Ratio Calculatorを使用して、画像の新しいサイズを計算し、印刷用に最適なサイズに調整しました。",
+        "4. あるゲーム開発者は、ゲーム内のUI要素を異なる解像度に対応させる必要がありました。ゲームの元の解像度が1280x720ピクセルで、新しいモニターでの解像度が1920x1080ピクセルに変更される予定だったため、Aspect Ratio Calculatorを使用して、新しい解像度に対応するUI要素のサイズを計算しました。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Aspect Ratio Calculator는 이미지나 동영상의 가로세로 비율을 계산하고, 이를 유지하면서 크기를 조정하는 데 사용되는 고급 도구입니다. 이 도구는 사용자가 특정 비율을 유지하면서 이미지 또는 동영상의 크기를 변경해야 하는 다양한 상황에서 유용합니다. 예를 들어, 디자이너가 웹사이트에 맞는 이미지를 조정하거나, 비디오 제작자가 다양한 플랫폼에서 일관된 화면 비율을 유지하려는 경우 이 도구를 활용할 수 있습니다. Aspect Ratio Calculator는 간단하면서도 강력한 알고리즘을 사용하여 입력된 차원을 기반으로 비율을 자동으로 계산합니다. 또한, 사용자가 원하는 대로 비율을 조정할 수 있는 여러 옵션을 제공하여 사용자의 요구에 맞게 결과를 만들어 낼 수 있습니다. 이 도구는 특히 멀티미디어 컨텐츠 제작, 웹 디자인, 그래픽 작업 등에서 필수적인 역할을 합니다.",
+      "usage_steps": [
+        "1. [Aspect Ratio Calculator] 페이지를 열고 [Aspect Ratio] 섹션에서 원하는 비율을 입력하거나 선택합니다.",
+        "2. [Original Dimensions] 섹션에서 원본 이미지 또는 동영상의 가로와 세로 차원을 입력합니다.",
+        "3. [Resize Options] 섹션에서 비율을 유지하면서 크기를 조정할 방향을 선택합니다 (가로 또는 세로).",
+        "4. [New Dimensions] 섹션에서 새 가로 또는 세로 차원을 입력합니다. 이 값에 따라 다른 차원이 자동으로 계산됩니다.",
+        "5. [Calculate] 버튼을 클릭하여 새 차원이 계산된 결과를 확인합니다.",
+        "6. [Download] 버튼을 클릭하여 결과를 다운로드하거나, 필요에 따라 [Copy] 버튼을 사용하여 결과를 복사합니다."
+      ],
+      "usage_examples": [
+        "예시 1: 웹 디자이너가 16:9 비율의 이미지를 1920x1080 픽셀로 조정해야 하는 경우, 이 도구를 사용하여 크기를 변경할 수 있습니다.",
+        "예시 2: 유튜브 크리에이터가 9:16 비율의 스마트폰 동영상을 1080x1920 픽셀로 조정하여 수직 화면에서 잘 보이도록 만들려는 경우, 이 도구를 활용할 수 있습니다.",
+        "예시 3: 그래픽 디자이너가 프린트용 이미지를 4:3 비율로 조정하면서 특정 크기에 맞추려는 경우, 이 도구를 사용하여 가로와 세로 차원을 정확히 계산할 수 있습니다.",
+        "예시 4: 사진작가가 3:2 비율의 사진을 600x400 픽셀로 줄여서 웹사이트에 게시하려는 경우, 이 도구를 사용하여 비율을 유지하면서 크기를 조정할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Calculadora de Proporción de Aspecto es una herramienta esencial para cualquier desarrollador, diseñador gráfico o profesional de la imagen que necesita mantener la consistencia visual en diferentes formatos. Técnicamente, este tool calcula y ajusta las dimensiones de una imagen o pantalla para mantener la proporción original sin distorsionar el contenido. La proporción de aspecto se define como la relación entre el ancho y el alto de un objeto, y es crucial para garantizar que las imágenes, videos y diseños se vean correctamente en diversos dispositivos y pantallas.\n\nLos usuarios necesitan esta herramienta en múltiples escenarios. Por ejemplo, al desarrollar aplicaciones web responsivas, es vital mantener la proporción de aspecto para que los elementos visuales se adapten correctamente a diferentes tamaños de pantalla. En diseño gráfico, ajustar la proporción de aspecto es esencial para crear piezas que se vean bien en formatos tanto digitales como impresos. Además, en la edición de videos, mantener la proporción de aspecto evita que los contenidos se vean estirados o comprimidos.\n\nLa herramienta funciona de manera sencilla pero precisa. Ingresas las dimensiones actuales de tu imagen o pantalla, y la calculadora te proporciona las nuevas dimensiones que mantendrán la proporción original. Puedes seleccionar diferentes métodos de cálculo, como ajustar el ancho o el alto, y la herramienta te mostrará los resultados en tiempo real. Además, incluye opciones para redondear los valores y exportar los resultados en diferentes formatos, lo que facilita su integración en proyectos más amplios.",
+      "usage_steps": [
+        "Abre la página del Calculadora de Proporción de Aspecto en tu navegador.",
+        "En la sección de 'Dimensiones Actuales', ingresa el ancho y el alto de la imagen o pantalla que deseas ajustar.",
+        "Selecciona el método de cálculo que prefieres: 'Ajustar Ancho', 'Ajustar Alto' o 'Mantener Proporción'.",
+        "Si deseas, marca la opción 'Redondear Valores' para obtener dimensiones enteras.",
+        "Observa los resultados en tiempo real en la sección de 'Nuevas Dimensiones'.",
+        "Haz clic en 'Exportar Resultados' para descargar un archivo con las nuevas dimensiones o copiarlas directamente."
+      ],
+      "usage_examples": [
+        "Un diseñador gráfico necesita crear un cartel para una conferencia. El diseño original tiene una proporción de 3:4, pero el espacio disponible en el lugar de la conferencia es de 2:3. Utilizando la Calculadora de Proporción de Aspecto, el diseñador ajusta las dimensiones del cartel para que encaje perfectamente en el espacio disponible sin distorsionar el contenido.",
+        "Un desarrollador de aplicaciones móviles está trabajando en una app que debe verse bien en teléfonos y tablets. La pantalla de bienvenida tiene una imagen de fondo con una proporción de 16:9, pero en tablets, la proporción es 4:3. Con la calculadora, el desarrollador ajusta la imagen para que se adapte a ambos formatos de pantalla sin perder calidad visual.",
+        "Un editor de videos está preparando un clip para subir a YouTube, pero necesita asegurarse de que se vea bien en pantallas de diferentes tamaños. El video original tiene una proporción de 21:9, pero YouTube recomienda 16:9. Utilizando la herramienta, el editor ajusta las dimensiones del video para que se vea correctamente en todas las plataformas.",
+        "Un arquitecto está diseñando una fachada para un edificio y necesita asegurarse de que una ventana específica se vea proporcional en el diseño. La ventana tiene una proporción de 2:1, pero el espacio en la fachada es de 3:2. Con la Calculadora de Proporción de Aspecto, el arquitecto ajusta las dimensiones de la ventana para que se integre perfectamente en el diseño de la fachada."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Aspect Ratio Calculator é uma ferramenta robusta e versátil projetada para calcular e ajustar as proporções de elementos visuais, como imagens e vídeos. Tecnicamente, a ferramenta utiliza algoritmos matemáticos para manter a proporção entre a largura e a altura de um objeto, garantindo que ele não fique distorcido ao ser redimensionado. Isso é especialmente útil em design gráfico, desenvolvimento web e produção de conteúdo multimídia, onde a manutenção da integridade visual é crucial. Os usuários podem inserir as dimensões originais de um elemento e o tamanho desejado em uma das dimensões, e a ferramenta calculará automaticamente a outra dimensão para manter a proporção. Além disso, o Aspect Ratio Calculator suporta cálculos de proporção em diferentes formatos, como 4:3, 16:9, e 21:9, facilitando a adaptação de conteúdo para diversas plataformas e dispositivos.",
+      "usage_steps": [
+        "Acesse a página do Aspect Ratio Calculator no site.",
+        "Na seção 'Dimensões Originais', insira a largura e a altura do elemento que deseja redimensionar.",
+        "Selecione a proporção desejada no menu suspenso ou insira uma proporção personalizada no campo 'Proporção'.",
+        "No campo 'Novas Dimensões', escolha se deseja calcular a nova largura ou a nova altura.",
+        "Insira o valor da dimensão que você deseja ajustar.",
+        "Clique no botão 'Calcular' para obter as novas dimensões mantendo a proporção original."
+      ],
+      "usage_examples": [
+        "Um designer gráfico precisa redimensionar uma imagem de 1920x1080 pixels para caber em um layout de web que tem uma largura máxima de 800 pixels. Usando o Aspect Ratio Calculator, ele pode calcular a altura correspondente para manter a proporção 16:9.",
+        "Um videomaker está preparando um vídeo para ser exibido em uma tela de cinema com proporção 21:9. Ele precisa ajustar o tamanho de uma cena de 1280x720 pixels para adequar-se ao formato de exibição sem distorcer o conteúdo.",
+        "Um desenvolvedor web está criando uma galeria de imagens responsiva e precisa garantir que todas as imagens mantenham suas proporções originais em diferentes tamanhos de tela. O Aspect Ratio Calculator ajuda a calcular as dimensões corretas para cada imagem.",
+        "Um fotógrafo está preparando uma série de fotos para impressão em um álbum de 10x15 cm. Ele usa a ferramenta para garantir que as imagens sejam redimensionadas corretamente, mantendo a proporção 4:3."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil de Calculateur de Rapport d'Aspect est un outil mathématique en ligne conçu pour aider les utilisateurs à calculer et ajuster les dimensions proportionnellement. Ce calculateur est particulièrement utile pour les développeurs, les concepteurs et les professionnels de l'image qui ont besoin de maintenir des proportions spécifiques lors de la manipulation d'images, de vidéos ou d'éléments d'interface utilisateur. Le rapport d'aspect est le ratio entre la largeur et la hauteur d'une image ou d'un écran, généralement exprimé sous la forme de deux nombres séparés par un signe deux-points (par exemple, 16:9). L'outil permet de convertir des dimensions données en un rapport d'aspect spécifique ou de redimensionner une image tout en conservant ses proportions originales, ce qui est crucial pour éviter la déformation des éléments visuels. Il est également capable de calculer les dimensions manquantes si l'une des valeurs est connue, facilitant ainsi la conception et l'optimisation des éléments visuels pour différents supports et résolutions.",
+      "usage_steps": [
+        "Ouvrez l'outil de Calculateur de Rapport d'Aspect sur le site web.",
+        "Dans la section 'Entrée', saisissez la largeur et la hauteur de l'image ou de l'écran que vous souhaitez ajuster.",
+        "Sélectionnez le rapport d'aspect souhaité dans la liste déroulante 'Rapport d'Aspect cible' si vous avez une préférence spécifique (par exemple, 16:9, 4:3, etc.).",
+        "Cliquez sur le bouton 'Calculer' pour obtenir les dimensions ajustées qui maintiennent le rapport d'aspect choisi.",
+        "Si vous avez besoin de calculer une dimension manquante, saisissez la valeur connue et laissez l'autre champ vide avant de cliquer sur 'Calculer'.",
+        "Les résultats seront affichés dans la section 'Résultats', incluant les dimensions ajustées et le rapport d'aspect final."
+      ],
+      "usage_examples": [
+        "Un développeur souhaite redimensionner une image pour l'afficher correctement sur un écran avec un rapport d'aspect 16:9. Il entre les dimensions originales de l'image et sélectionne le rapport d'aspect 16:9, puis utilise l'outil pour obtenir les nouvelles dimensions.",
+        "Un concepteur graphique doit créer une bannière publicitaire avec une largeur fixe de 900 pixels. Il sait que la hauteur doit être proportionnelle au rapport d'aspect 4:3. Il entre la largeur et laisse la hauteur vide, puis utilise l'outil pour calculer la hauteur appropriée.",
+        "Un photographe veut imprimer une série de photos sur des supports de tailles différentes tout en conservant l'aspect original. Il entre les dimensions de l'image originale et utilise l'outil pour calculer les dimensions pour chaque format d'impression spécifique.",
+        "Un développeur de jeux vidéo ajuste les éléments d'interface utilisateur pour différents écrans. Il utilise l'outil pour calculer les dimensions des boutons et des icônes, en s'assurant qu'ils restent proportionnels sur des résolutions d'écran variées."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Aspect Ratio Calculator ist ein leistungsstarkes Werkzeug, das es Benutzern ermöglicht, die Seitenverhältnisse von Bildern, Videos und anderen visuellen Elementen präzise zu berechnen und die Dimensionen proportional zu ändern. Dies ist besonders wichtig, wenn es darum geht, visuelle Inhalte für verschiedene Plattformen und Anwendungen zu optimieren, ohne die Qualität oder das Seitenverhältnis zu kompromittieren. Das Werkzeug nutzt mathematische Algorithmen, um die Proportionalität der Breite und Höhe zu gewährleisten, was insbesondere bei der Anpassung von Bildern für Social Media, Webseiten oder Druckprodukte von entscheidender Bedeutung ist. Benutzer können verschiedene Eingabe- und Ausgabeformate wählen, um die berechneten Dimensionen in die für ihre Anwendung geeignete Form zu bringen. Die intuitive Schnittstelle ermöglicht es, komplexe Berechnungen schnell und effizient durchzuführen, was die Produktivität und die Genauigkeit der Arbeit erheblich steigert.",
+      "usage_steps": [
+        "Öffnen Sie die Website des Aspect Ratio Calculators und navigieren Sie zur Registerkarte 'Aspect Ratio'.",
+        "Geben Sie die ursprüngliche Breite und Höhe des Bildes oder Videos in die entsprechenden Felder ein.",
+        "Wählen Sie das gewünschte Seitenverhältnis aus der Dropdown-Liste 'Target Aspect Ratio', z.B. 16:9 für HDTV oder 4:3 für traditionelle Bildschirme.",
+        "Klicken Sie auf den Button 'Calculate', um die berechneten neuen Dimensionen anzuzeigen.",
+        "Optional: Wenn Sie die Dimensionen manuell anpassen möchten, aktivieren Sie das Kästchen 'Custom Dimensions' und geben Sie die gewünschten Werte ein.",
+        "Kopieren Sie die berechneten Werte und verwenden Sie sie in Ihrer Anwendung, z.B. für die Anpassung von Bildern in einem Grafikprogramm oder für die Konfiguration von Videoaufnahmen."
+      ],
+      "usage_examples": [
+        "Ein Fotograf möchte ein Bild für Instagram optimieren, das ein Seitenverhältnis von 1:1 erfordert. Er verwendet den Aspect Ratio Calculator, um die ursprünglichen Dimensionen 1920x1080 auf die Instagram-konformen 1080x1080 anzupassen, ohne das Bild zu verzerren.",
+        "Ein Webdesigner erstellt eine Website, die auf verschiedenen Geräten responsiv sein soll. Er nutzt den Aspect Ratio Calculator, um sicherzustellen, dass die Bilder auf Smartphones (3:4) und Tablets (4:3) korrekt angezeigt werden, ohne die Proportionalität zu verändern.",
+        "Ein Filmemacher plant eine Videoaufnahme für YouTube, die ein 16:9-Seitenverhältnis benötigt. Er verwendet das Tool, um die Kameraeinstellungen entsprechend zu konfigurieren, um sicherzustellen, dass das Video ohne Schwarzleisten dargestellt wird.",
+        "Ein Grafikdesigner arbeitet an einem Flyer, der in einem 2:3-Format gedruckt werden soll. Er verwendet den Aspect Ratio Calculator, um die Dimensionen des Flyers von 8.5x11 Zoll korrekt auf das Druckformat 5x7.5 Zoll anzupassen, ohne die Inhalte zu kürzen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Калькулятор соотношения сторон — это мощный инструмент, предназначенный для точного вычисления и корректировки пропорций изображений и видео. Этот инструмент особенно полезен для дизайнеров, разработчиков веб-сайтов и видеографов, которым часто приходится работать с различными форматами и разрешениями. Калькулятор соотношения сторон позволяет не только вычислить текущее соотношение сторон изображения или видео, но и пересчитать его до нужных размеров с сохранением пропорций, что обеспечивает высокое качество конечного продукта. Например, если у вас есть изображение с разрешением 1920x1080 пикселей, и вам нужно его адаптировать под экран смартфона с разрешением 720x1280 пикселей, калькулятор поможет вам вычислить новые размеры с сохранением пропорций. Этот инструмент работает на основе алгоритмов пропорционального масштабирования, что позволяет избежать искажений и потерю качества изображения.",
+      "usage_steps": [
+        "Шаг 1: Перейдите на страницу Калькулятора соотношения сторон и выберите раздел «Вычислить соотношение сторон».",
+        "Шаг 2: Введите исходные размеры изображения или видео в поля «Ширина» и «Высота».",
+        "Шаг 3: Нажмите кнопку «Вычислить соотношение», чтобы получить текущее соотношение сторон.",
+        "Шаг 4: Перейдите в раздел «Масштабирование изображения» и введите новые размеры, которые вы хотите получить.",
+        "Шаг 5: Нажмите кнопку «Масштабировать», чтобы пересчитать размеры с сохранением пропорций.",
+        "Шаг 6: Скопируйте результат или сохраните его в нужном формате для дальнейшего использования."
+      ],
+      "usage_examples": [
+        "Пример 1: Дизайнер создает баннер для веб-сайта, который должен иметь соотношение сторон 16:9. Он использует Калькулятор соотношения сторон, чтобы убедиться, что размеры баннера (1920x1080 пикселей) соответствуют требуемому формату.",
+        "Пример 2: Видеограф снимает видеоролик для YouTube, который будет отображаться на экранах с разными соотношениями сторон. Он использует инструмент для пересчета размеров видео с 1920x1080 пикселей до 1280x720 пикселей с сохранением пропорций.",
+        "Пример 3: Разработчик веб-сайта адаптирует макет для мобильных устройств. Для этого он использует калькулятор, чтобы пересчитать размеры элементов дизайна с 1200x800 пикселей до 720x480 пикселей.",
+        "Пример 4: Фотограф обрабатывает фото для печати на большом формате. Он использует инструмент для пересчета размеров с 4000x3000 пикселей до 6000x4500 пикселей, чтобы сохранить пропорции и качество изображения."
+      ]
+    },
+    "ar": {
+      "detailed_description": "آلة حاسبة نسبة الارتفاع إلى العرض هي أداة متخصصة تساعد المستخدمين في حساب نسبة الارتفاع إلى العرض لصور أو مقاطع فيديو ومعالجتها بشكل دقيق. تستخدم هذه الأداة خوارزميات رياضية متقدمة لضمان أن الأبعاد يتم تعديلها بشكل متناسق دون التأثير على جودة الصورة أو الفيديو. يمكن للمستخدمين إدخال الأبعاد الأصلية لصورة أو مقطع فيديو، وتحديد نسبة الارتفاع إلى العضود المطلوبة، وستقوم الأداة بحساب الأبعاد الجديدة تلقائيًا. هذه الأداة مفيدة بشكل خاص للمصممين الجرافيكيين والمطورين الذين يحتاجون إلى ضمان أن الصور والفيديوهات تناسب الأطر المحددة دون تشويه المحتوى الأصلي. يمكن استخدامها أيضًا في تطبيقات الويب والتطبيقات المحمولة لضمان مواءمة الوسائط المتعددة للمعايير البصرية المطلوبة.",
+      "usage_steps": [
+        "افتح الصفحة الرئيسية لآلة حاسبة نسبة الارتفاع إلى العرض.",
+        "أدخل القيمة العرضية الأصلية للصورة أو الفيديو في الحقل المحدد.",
+        "أدخل القيمة الارتفاعية الأصلية للصورة أو الفيديو في الحقل المحدد.",
+        "اختر نسبة الارتفاع إلى العرض المرغوبة من القائمة المنسدلة.",
+        "اضغط على الزر 'حساب الأبعاد الجديدة' للمعالجة.",
+        "ستظهر الأبعاد الجديدة في الحقول المخصصة، ويمكنك استخدام هذه الأبعاد لإعادة تعيين حجم الصورة أو الفيديو."
+      ],
+      "usage_examples": [
+        "المصمم الجرافيكي يرغب في تغيير حجم صورة لتناسب إطار بذاكرة محددة، مثل Instagram، حيث يتطلب الإطار نسبًا معينة لضمان عدم تشويه الصورة.",
+        "المطور يعمل على تطبيق ويب يحتاج إلى عرض مقاطع فيديو بنسية معينة، مثل 16:9، لضمان تناسق العرض على مختلف أجهزة العرض.",
+        "(IRL) مصور فيديو يريد إعادة تعيين حجم مقطع فيديو ليتناسب مع شاشة عرض محددة في معرض فني، حيث يجب أن تكون النسبة الدقيقة لضمان عدم فقدان جودة الفيديو.",
+        "مصمم واجهات المستخدم يرغب في ضمان أن الصور المستخدمة في تطبيق المحمول تتناسب مع مختلف حجم الشاشات، مثل الهواتف الذكية والأجهزة اللوحية، دون فقدان وضوح الصورة."
+      ]
+    }
+  }
+}

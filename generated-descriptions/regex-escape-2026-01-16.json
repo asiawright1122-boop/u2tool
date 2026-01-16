@@ -1,0 +1,141 @@
+{
+  "slug": "regex-escape",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Regex Escape tool is a powerful utility designed to help developers safely manipulate regular expressions by escaping or unescaping special characters. Regular expressions (regex) are a sequence of characters that define a search pattern, commonly used for text manipulation and validation in programming. However, certain characters within regex have special meanings, which can lead to unexpected results if not properly handled. The Regex Escape tool ensures that these special characters are correctly escaped or unescaped, preventing syntax errors and enhancing the reliability of regex-based operations. This tool is particularly useful in scenarios where regex patterns are dynamically generated or when working with user-input data that may contain special characters. By using this tool, developers can easily prepare regex patterns for safe execution, ensuring that their applications function correctly and securely.",
+      "usage_steps": [
+        "Step 1: Navigate to the Regex Escape tool page and locate the input field labeled 'Enter your text here'.",
+        "Step 2: Input the text or regex pattern you want to escape or unescape into the provided field.",
+        "Step 3: Select the operation you need from the dropdown menu labeled 'Operation Type'. Choose 'Escape' to convert special characters into their escaped equivalents, or 'Unescape' to revert escaped characters back to their original form.",
+        "Step 4: If necessary, check the 'Show Explanation' box to see a detailed breakdown of the transformations applied to your text.",
+        "Step 5: Click the 'Process' button to execute the selected operation and generate the result.",
+        "Step 6: Review the processed text in the output field below the button. If you selected 'Show Explanation', you will also see a description of each transformation step."
+      ],
+      "usage_examples": [
+        "Example 1: A developer is building a form validation script that uses regex to ensure email addresses are correctly formatted. By using the Regex Escape tool to escape the '@' and '.' characters, they can prevent syntax errors and ensure the regex pattern works as intended.",
+        "Example 2: A web application receives user input that includes regex patterns. Before using these patterns in the application, the developer uses the Regex Escape tool to unescape any previously escaped characters, ensuring the patterns are correctly interpreted.",
+        "Example 3: A developer is writing a script that generates dynamic regex patterns based on user queries. To avoid issues with special characters in the user input, they use the Regex Escape tool to safely escape these characters before incorporating them into the regex pattern.",
+        "Example 4: A security analyst is reviewing log files for malicious regex patterns. By using the Regex Escape tool to unescape the patterns, they can more easily identify and analyze potential security threats."
+      ]
+    },
+    "ko": {
+      "detailed_description": "Regex Escape는 개발자가 정규 표현식에서 특수 문자를 이스케이프하거나 이스케이프 해제하는 데 사용하는 도구입니다. 이 도구는 정규 표현식에서 특정 문자가 문법적인 역할을 하지 않고 문자 그대로 해석되도록 하기 위해 필요한 이스케이프 시퀀스를 자동으로 삽입하거나 제거합니다. 예를 들어, 마침표('.')는 정규 표현식에서 어떠한 문자라도 나타내는 메타문자입니다. 그러나 문자열에서 단순히 마침표를 표현하고자 할 때는 이스케이프 문자 '\\'를 사용하여 '\\.'로 변환해야 합니다. 이 도구는 이러한 작업을 간편하게 수행할 수 있도록 설계되었습니다. Regex Escape는 웹 애플리케이션, 데이터 처리, 텍스트 검색 등 다양한 개발 작업에서 유용하게 활용될 수 있습니다. 특히 복잡한 정규 표현식을 다룰 때 잘못된 이스케이프 시퀀스로 인한 오류를 방지하고, 코드의 가독성을 높일 수 있습니다.",
+      "usage_steps": [
+        "웹사이트를 방문하여 'Regex Escape' 도구를 찾습니다.",
+        "입력 필드에 이스케이프하거나 이스케이프 해제할 텍스트를 붙여넣습니다.",
+        "필요에 따라 'Escape' 또는 'Unescape' 버튼을 클릭합니다.",
+        "출력 필드에서 이스케이프 또는 이스케이프 해제된 텍스트를 확인합니다.",
+        "원하는 결과를 확인한 후, 텍스트를 클립보드에 복사합니다.",
+        "복사한 텍스트를 개발 환경으로 이동하여 사용합니다."
+      ],
+      "usage_examples": [
+        "웹 애플리케이션에서 사용자 입력을 검증하는 정규 표현식을 작성할 때, 사용자가 입력한 문자열에 포함된 특수 문자를 이스케이프하여 안전하게 처리합니다.",
+        "로그 파일에서 특정 패턴을 검색할 때, 검색어에 포함된 특수 문자를 이스케이프하여 정확한 결과를 얻습니다.",
+        "데이터베이스 쿼리에서 정규 표현식을 사용하여 데이터를 필터링할 때, 쿼리 문자열에 포함된 특수 문자를 이스케이프하여 쿼리 오류를 방지합니다.",
+        "텍스트 편집기에서 대량의 텍스트를 처리할 때, 정규 표현식을 사용하여 특정 패턴을 찾아 대체하는 과정에서 패턴에 포함된 특수 문자를 이스케이프합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El tool Regex Escape es una utilidad esencial para desarrolladores que trabajan con expresiones regulares (regex). Este tool permite a los usuarios escapar o desescapar caracteres especiales en regex, lo cual es crucial para evitar errores de sintaxis y asegurar que las expresiones funcionen según lo esperado. La necesidad de escapar caracteres se presenta con frecuencia en tareas como validar datos, procesar texto, y construir patrones de búsqueda y reemplazo. Por ejemplo, en un contexto de validación de direcciones de correo electrónico, caracteres como el punto (.), el asterisco (*), o el signo de dólar ($) deben ser escapados para que no se interpreten como metacaracteres. Regex Escape facilita este proceso, permitiendo a los desarrolladores introducir una expresión regular y obtener una versión escapada o desescapada de la misma. El tool opera a través de una interfaz intuitiva que acepta la entrada del usuario y aplica las reglas de escapado o desescapado de acuerdo con los estándares de regex.",
+      "usage_steps": [
+        "Paso 1: Abre la página de Regex Escape en tu navegador.",
+        "Paso 2: Localiza el área de entrada de texto en la parte superior de la interfaz.",
+        "Paso 3: Inserta la expresión regular que deseas escapar o desescapar en el campo de texto.",
+        "Paso 4: Selecciona la opción 'Escape' o 'Unescape' dependiendo de tu necesidad, ubicada debajo del área de entrada.",
+        "Paso 5: Haz clic en el botón 'Convertir' para procesar la expresión.",
+        "Paso 6: Revisa el resultado en el área de salida, que se muestra inmediatamente debajo del botón 'Convertir'. Si es necesario, copia el resultado y úsalo en tu proyecto."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador necesita validar direcciones de correo electrónico y quiere asegurarse de que los puntos (.) en los nombres de dominio no se interpreten como metacaracteres. Utiliza Regex Escape para escapar la expresión, obteniendo un patrón seguro para usar en su validación.",
+        "Ejemplo 2: Un ingeniero de software trabaja en un proyecto que requiere la sustitución de múltiples caracteres especiales en un archivo de texto. Para evitar errores en el patrón de búsqueda, usa Regex Escape para escapar los caracteres antes de aplicar la sustitución.",
+        "Ejemplo 3: Un programador de backend necesita construir una expresión regular para filtrar URLs que contengan ciertos parámetros de consulta. Al usar Regex Escape, asegura que los signos de interrogación (?) y los ampersand (&) no causen problemas de sintaxis en la expresión regular.",
+        "Ejemplo 4: Un desarrollador frontend está creando un validador de contraseñas que debe aceptar una variedad de caracteres especiales, incluyendo paréntesis y corchetes. Utiliza Regex Escape para escapar estos caracteres y garantizar que la validación funcione correctamente sin interpretarlos como metacaracteres."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Regex Escape é uma ferramenta essencial para desenvolvedores que trabalham com expressões regulares. Esta ferramenta permite escapar ou desescapar caracteres especiais em expressões regulares, facilitando o trabalho de codificação e minimizando erros de sintaxe. Quando você precisa construir ou modificar expressões regulares, é comum se deparar com caracteres especiais que possuem significados específicos, como pontos, asteriscos, parênteses e barras invertidas. O Regex Escape garante que esses caracteres sejam tratados corretamente, seja para escapá-los (adicionar barras invertidas antes deles) ou desescapá-los (remover as barras invertidas). Isso é particularmente útil em situações onde você precisa manipular strings que contêm esses caracteres, garantindo que a expressão regular funcione como esperado. A ferramenta é construída com um algoritmo robusto que reconhece e manipula esses caracteres de forma precisa, tornando-a uma solução confiável para desenvolvedores de todos os níveis.",
+      "usage_steps": [
+        "Acesse a ferramenta Regex Escape na seção de desenvolvimento do site.",
+        "Na interface, você verá duas opções: 'Escapar' e 'Desescapar'. Selecione a opção desejada.",
+        "Na área de entrada, cole ou digite a expressão regular que você deseja manipular.",
+        "Após inserir a expressão, clique no botão 'Processar' para aplicar a operação selecionada.",
+        "A ferramenta exibirá o resultado na área de saída, mostrando a expressão regular escapada ou desescapada.",
+        "Copie o resultado e use-o no seu código ou continue fazendo ajustes conforme necessário."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor está criando uma função que valida endereços de e-mail usando expressões regulares. Ao usar o Regex Escape para escapar os pontos e arrobas nos exemplos de e-mails, ele garante que a expressão regular funcione corretamente.",
+        "Uma equipe de desenvolvimento está integrando um sistema de validação de CPF em um formulário. Eles usam o Regex Escape para desescapar as barras invertidas antes dos pontos e hífens no padrão de CPF, facilitando a implementação da validação.",
+        "Um programador está escrevendo um script que procura padrões de data em arquivos de texto. Ao escapar os caracteres especiais das datas (como barras e pontos), ele evita erros de sintaxe e garante que o script funcione com precisão.",
+        "Um desenvolvedor frontend está criando um validador de URLs. Usando o Regex Escape para escapar os pontos e barras em URLs, ele garante que a expressão regular capture corretamente as URLs sem causar erros de sintaxe."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil Regex Escape est un outil puissant destiné aux développeurs travaillant avec des expressions régulières (regex). Ce service en ligne permet d'échapper ou de déséchapper les caractères spéciaux utilisés dans les regex, une tâche qui peut devenir complexe lorsqu'on manipule des chaînes de caractères contenant des symboles spécifiques. Par exemple, les caractères tels que le point d'interrogation (?), le point (.), la parenthèse (()), ou la barre oblique inverse (\\) ont des significations spéciales dans les regex et doivent être correctement échappés pour éviter des erreurs d'interprétation. L'outil Regex Escape facilite cette tâche en automatisant le processus. Il est particulièrement utile lors de la création de filtres de recherche complexes, de l'analyse de logs, ou de la validation de formulaires. En utilisant Regex Escape, les développeurs peuvent s'assurer que leurs expressions régulières sont correctement formatées, réduisant ainsi les risques d'erreurs et de bugs. L'outil fonctionne en analysant les chaînes de caractères fournies, en identifiant les caractères spéciaux et en les échappant ou déséchapant selon le choix de l'utilisateur. Il est totalement configurable, permettant aux utilisateurs de choisir exactement quels caractères doivent être manipulés.",
+      "usage_steps": [
+        "Accédez à la page de l'outil Regex Escape sur le site.",
+        "Dans la section 'Entrée', copiez et collez la chaîne de caractères que vous souhaitez échapper ou déséchapper.",
+        "Sélectionnez l'option 'Échapper' ou 'Déséchapper' selon votre besoin dans le menu déroulant situé sous la zone de texte.",
+        "Si nécessaire, cochez les cases spécifiant les caractères spéciaux que vous voulez manipuler manuellement.",
+        "Cliquez sur le bouton 'Appliquer' pour exécuter l'opération.",
+        "Le résultat apparaîtra dans la section 'Sortie', prêt à être copié et utilisé dans votre code."
+      ],
+      "usage_examples": [
+        "Un développeur travaillant sur un moteur de recherche utilise Regex Escape pour échapper les caractères spéciaux d'une chaîne de recherche afin d'éviter des erreurs d'interprétation lors de l'exécution de la regex.",
+        "Un ingénieur en sécurité informatique utilise l'outil pour déséchapper des chaînes de caractères extraites de logs pour analyser des activités suspectes sans altérer la structure des logs.",
+        "Un développeur frontend utilise Regex Escape pour échapper les caractères spéciaux d'une adresse e-mail avant de l'insérer dans une expression régulière de validation de formulaire.",
+        "Un administrateur de base de données utilise l'outil pour échapper des requêtes SQL contenant des caractères spéciaux pour éviter des injections SQL."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Tool Regex Escape ist ein leistungsstarkes Hilfsmittel, das Entwicklern das Escapen oder Unescapen von speziellen Regex-Zeichen erleichtert. Regex (Regular Expressions) sind Muster, die verwendet werden, um Textabgleich und -manipulation durchzuführen. In vielen Fällen enthalten Regex-Muster Sonderzeichen, die spezielle Funktionen haben, wie das Suchen nach Wörtern, Zahlen oder bestimmten Zeichenfolgen. Diese Sonderzeichen können jedoch Probleme verursachen, wenn sie nicht korrekt behandelt werden, insbesondere wenn sie in Texten vorkommen, die als Regex-Pattern interpretiert werden sollen.\n\nEntwickler benötigen Regex Escape, um sicherzustellen, dass ihre Regex-Muster korrekt interpretiert werden, ohne unerwünschte Seiteneffekte. Zum Beispiel kann das Escapen von Sonderzeichen hilfreich sein, wenn man Texte in SQL-Abfragen einfügt, um SQL-Injection-Angriffe zu verhindern. Ebenso können Regex-Muster in den Eingaben von Benutzern sicherer gemacht werden, um potenzielle Sicherheitslücken zu schließen.\n\nDas Tool funktioniert, indem es die Eingabe des Benutzers analysiert und die Sonderzeichen entsprechend entweder escapen oder unescapen. Es bietet Optionen, um verschiedene Regex-Dialekte (wie POSIX, Perl, oder ECMAScript) zu berücksichtigen, was die Anwendung für eine Vielzahl von Programmiersprachen und Entwicklungsumgebungen ermöglicht. Durch die Verwendung dieses Tools können Entwickler ihre Regex-Pattern schnell und sicher verarbeiten, ohne tiefe Kenntnisse der internen Funktionsweise von Regex zu benötigen.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des Regex Escape Tools im Browser.",
+        "Gehe zur Eingabefeld-Option 'Text eingeben' und fügen Sie den Text mit den zu escapenden oder unescapingen Sonderzeichen ein.",
+        "Wählen Sie im Menü 'Regex-Dialekt' den gewünschten Dialekt aus (z.B. POSIX, Perl, ECMAScript).",
+        "Klicken Sie auf die Schaltfläche 'Escapen', um die Sonderzeichen zu escapen, oder auf 'Unescapen', um sie wieder zu normalisieren.",
+        "Prüfen Sie das Ergebnis im Ausgabefeld, um sicherzustellen, dass die Sonderzeichen korrekt verarbeitet wurden.",
+        "Kopieren Sie das verarbeitete Textergebnis, um es in Ihrem Projekt zu verwenden."
+      ],
+      "usage_examples": [
+        "Ein Entwickler erstellt eine Funktion, die Benutzereingaben in einer Webanwendung verarbeitet. Um sicherzustellen, dass keine Benutzereingaben als Regex-Pattern missverstanden werden können, verwendet der Entwickler Regex Escape, um alle Sonderzeichen in den Eingaben zu escapen.",
+        "Ein Datenbankadministrator schreibt eine SQL-Abfrage, die Benutzernamen in einer Datenbank sucht. Um sicherzustellen, dass Sonderzeichen in den Benutzernamen nicht zu Fehlern führen, escapen sie die Benutzernamen, bevor sie sie in die SQL-Abfrage einfügen.",
+        "Ein Software-Testingenieur erstellt Testfälle für eine Anwendung, die Regex-Pattern verwendet. Um sicherzustellen, dass die Testfälle die erwarteten Ergebnisse liefern, escapen sie die Testdaten, um Sonderzeichen korrekt zu behandeln.",
+        "Ein Entwickler implementiert eine Funktion, die Texte in einem Logfile analysiert. Um sicherzustellen, dass Sonderzeichen in den Logeinträgen korrekt interpretiert werden, escapen sie die Logeinträge, bevor sie sie in ihre Regex-Funktion einfügen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Regex Escape представляет собой мощное решение для разработчиков, сталкивающихся с необходимостью экранирования или отмены экранирования специальных символов в регулярных выражениях. Регулярные выражения (regex) — это язык шаблонов, используемый для поиска, сопоставления и обработки текста. Однако некоторые символы, такие как точки, звёздочки и скобки, имеют специальное значение в regex и требуют экранирования, чтобы интерпретатор воспринимал их как обычные символы. Например, чтобы найти точку в тексте, нужно использовать экранированный символ `\\.`. Инструмент Regex Escape автоматически обрабатывает этот процесс, обеспечивая точность и надёжность регулярных выражений.\n\nЭтот инструмент особенно полезен при работе с текстовыми данными, где нужно точно контролировать, какие символы должны быть интерпретированы как специальные, а какие — как обычные. Например, при разработке валидаторов форм, парсеров логов или при написании скриптов для обработки конфигурационных файлов. Regex Escape помогает избежать распространённых ошибок, связанных с неправильным экранированием, что может привести к непредсказуемым результатам и ошибкам в работе приложения.\n\nИспользование инструмента очень простое: пользователь вводит строку с регулярным выражением, а затем выбирает, нужно ли экранировать или отменить экранирование символов. Инструмент автоматически обрабатывает ввод, добавляя или удаляя обратные слеши перед специальными символами. Это значительно упрощает процесс создания и тестирования регулярных выражений, делая его более надёжным и эффективным.",
+      "usage_steps": [
+        "Откройте страницу инструмента Regex Escape на сайте.",
+        "В текстовом поле, обозначенном как 'Ваше выражение', введите регулярное выражение, которое нужно обработать.",
+        "Выберите опцию 'Экранировать' или 'Отменить экранирование' в зависимости от того, что вам нужно сделать с вашим выражением.",
+        "Если вы выбрали 'Экранировать', инструмент автоматически добавит обратные слеши перед специальными символами (например, `.` станет `\\.`).",
+        "Если вы выбрали 'Отменить экранирование', инструмент удалит все обратные слеши перед специальными символами (например, `\\.` станет `.`).",
+        "Нажмите кнопку 'Применить', и результат будет отображён в поле 'Результат'."
+      ],
+      "usage_examples": [
+        "Разработчик создает валидатор для электронных адресов. Чтобы найти точку в адресе, ему нужно использовать экранированный символ `\\.`. Используя Regex Escape, он может быстро экранировать все необходимые символы и протестировать регулярное выражение.",
+        "Администратор систем пишет скрипт для парсинга лог-файлов. В логах могут встречаться специальные символы, такие как звёздочки или точки. Используя Regex Escape, он может экранировать эти символы, чтобы они корректно интерпретировались в регулярном выражении.",
+        "Программист работает над валидацией форм на веб-сайте. В одном из полей пользователи могут вводить текст, содержащий специальные символы. Используя Regex Escape, он может отменить экранирование символов, чтобы они воспринимались как обычные.",
+        "Тестировщик пишет тесты для приложения, которое обрабатывает конфигурационные файлы. В этих файлах могут встречаться специальные символы, такие как скобки или точки. Используя Regex Escape, он может экранировать эти символы, чтобы тесты работали корректно."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة Regex Escape هي أداة تطوير متطورة تساعد المطورين على التعامل مع التعبيرات النمطية (Regular Expressions) بفعالية أكبر. تقوم الأداة بإفلات (Escaping) أو إزالة الإفلات (Unescaping) للرموز الخاصة في التعبيرات النمطية، مما يجعلها مفيدة في العديد من السيناريوهات البرمجية. عند العمل مع التعبيرات النمطية، قد تنطوي الرموز الخاصة مثل النقطة (.), النجمة (*), والقوسين (()), على معانٍ خاصة تجعل من الصعب استخدامها في سياقات معينة دون إفلاتها. الأداة تتيح للمطورين تحويل هذه الرموز إلى نسخ آمنة يمكن استخدامها في التعبيرات النمطية دون أي مشكلات. هذا مهم خاصة عند التعامل مع مدخلات المستخدم أو عند بناء تعبيرات نمطية ديناميكية. من خلال استخدام Regex Escape، يمكن للمطورين تجنب الأخطاء الشائعة المتعلقة بالرموز الخاصة وضمان أن التعبيرات النمطية تعمل كما هو متوقع.",
+      "usage_steps": [
+        "أدخل التعبير النمطي الخاص بك في الحقل المخصص للإدخال.",
+        "اختر الإجراء المطلوب من القائمة المنسدلة: \"إفلات\" (Escape) أو \"إزالة الإفلات\" (Unescape).",
+        "اضغط على الزر \"تطبيق\" (Apply) لتنفيذ الإجراء المختار.",
+        "ستظهر النتيجة المعدلة في الحقل المخصص للإخراج.",
+        "راجع النتيجة لضمان أنها تطابق المتطلبات الخاصة بك.",
+        "انسخ النتيجة واستخدمها في مشروعك البرمجي."
+      ],
+      "usage_examples": [
+        "عند بناء تعبير نمطي لبحث نص يحتوي على نقاط (.)، يمكن استخدام الأداة لتحويل كل نقطة إلى \\. لضمان أن التعبير النمطي يعمل بشكل صحيح.",
+        "إذا كان لديك تعبير نمطي معقد يحتوي على العديد من الرموز الخاصة مثل * و + و ?, يمكنك استخدام الأداة لإفلاتها كلها دفعة واحدة بدلاً من الاضطرار إلى القيام بذلك يدويًا.",
+        "عند قراءة التعبيرات النمطية من ملف أو قاعدة بيانات وتحتاج إلى استخدامها في كودك، يمكن استخدام الأداة لإزالة الإفلات من الرموز الخاصة لضمان أن التعبيرات النمطية تعمل بشكل صحيح.",
+        "في حالات حيث يتم جمع مدخلات المستخدم التي قد تحتوي على رموز خاصة واستخدامها في التعبيرات النمطية، يمكن استخدام الأداة لضمان أن هذه المدخلات آمنة ولن تسبب أخطاء غير متوقعة."
+      ]
+    }
+  }
+}

@@ -19,21 +19,14 @@ function loadTools(): { slug: string; popular: boolean }[] {
   const toolsConfig = fs.readFileSync('src/config/tools.ts', 'utf8');
   const tools: { slug: string; popular: boolean }[] = [];
   
-  // 匹配工具配置块
-  const toolBlocks = toolsConfig.matchAll(/\{\s*slug:\s*['"]([^'"]+)['"][^}]*popular:\s*(true|false)?[^}]*\}/g);
-  
-  for (const match of toolBlocks) {
-    tools.push({
-      slug: match[1],
-      popular: match[2] === 'true'
-    });
-  }
-  
-  // 如果上面的正则没匹配到 popular，尝试另一种方式
-  if (tools.length === 0) {
-    const slugMatches = toolsConfig.matchAll(/slug:\s*['"]([^'"]+)['"]/g);
-    for (const match of slugMatches) {
-      tools.push({ slug: match[1], popular: false });
+  // 匹配所有工具配置行
+  const lines = toolsConfig.split('\n');
+  for (const line of lines) {
+    const slugMatch = line.match(/slug:\s*['"]([^'"]+)['"]/);
+    if (slugMatch) {
+      const slug = slugMatch[1];
+      const isPopular = line.includes('popular: true');
+      tools.push({ slug, popular: isPopular });
     }
   }
   

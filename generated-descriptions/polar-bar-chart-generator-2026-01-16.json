@@ -1,0 +1,158 @@
+{
+  "slug": "polar-bar-chart-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Polar Bar Chart Generator is a specialized online tool designed to transform your data into visually engaging radial bar charts. Unlike traditional bar charts, which are plotted on a Cartesian coordinate system, polar bar charts are plotted on a polar coordinate system, where the data is represented radially. This makes it particularly useful for visualizing cyclical or periodic data, such as seasonal trends, time-of-day patterns, or directional data. The tool supports a wide range of customization options, including adjustable radial scales, color schemes, and label formatting. Users can input their data in various formats, such as CSV or JSON, and the tool will dynamically generate the chart. Once the chart is rendered, users can further refine it by adjusting the radial and angular axes, adding tooltips, and customizing the appearance of the bars. The final chart can be exported in high-quality PNG or SVG formats, making it suitable for presentations, reports, and web applications. This tool is invaluable for data scientists, researchers, and analysts who need to present complex data in an intuitive and visually appealing manner.",
+      "usage_steps": [
+        "Step 1: Navigate to the Polar Bar Chart Generator homepage and click on the 'Upload Data' button to import your dataset in CSV or JSON format.",
+        "Step 2: Once the data is uploaded, the tool will automatically populate the data fields. Use the 'Data Mapping' section to specify which columns correspond to the radial and angular axes.",
+        "Step 3: Customize the appearance of your chart by adjusting the settings in the 'Chart Options' panel. Here, you can set the color scheme, bar width, and label formatting.",
+        "Step 4: If your data requires specific scaling, use the 'Axes Settings' to configure the radial and angular scales. You can set the minimum and maximum values, as well as the step size.",
+        "Step 5: Preview your chart in the live preview area. Use the 'Add Tooltip' feature to provide additional information when hovering over the bars.",
+        "Step 6: Once you are satisfied with the chart, click on the 'Export' button to download the chart in PNG or SVG format. You can also use the 'Share' button to generate a shareable link or embed code for your website."
+      ],
+      "usage_examples": [
+        "Example 1: A meteorologist is analyzing wind direction data over a year. By using the Polar Bar Chart Generator, they can visualize the frequency of wind directions, making it easier to identify prevailing wind patterns and seasonal variations.",
+        "Example 2: A financial analyst is comparing the performance of different stocks over a 24-hour trading day. The Polar Bar Chart Generator can plot the stock prices radially, with time of day as the angular axis, providing a clear visual representation of intraday trading patterns.",
+        "Example 3: A marketing team is tracking the effectiveness of various promotional campaigns across different seasons. By using the Polar Bar Chart Generator, they can plot campaign performance against the months of the year, highlighting seasonal trends and identifying the most effective periods for promotions.",
+        "Example 4: A transportation planner is analyzing traffic flow data around a circular roundabout. The Polar Bar Chart Generator can help visualize the flow of vehicles from different directions, aiding in the optimization of traffic management and infrastructure planning."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Polar Bar Chart Generator 是一款在线工具，专门用于创建极坐标条形图。它通过将数据以辐射状的形式展示，帮助用户更直观地理解数据的分布和关系。这款工具特别适用于需要以环形或扇形展示数据的场景，如市场分析、科学数据可视化、项目进度展示等。用户可以轻松导入数据，选择不同的图表样式和颜色方案，最终生成高质量的 PNG 或 SVG 图表。Polar Bar Chart Generator 利用先进的图形渲染技术，确保图表的清晰度和美观度，同时支持多种数据格式输入，如 CSV 和 JSON，使得数据处理更加灵活高效。",
+      "usage_steps": [
+        "Step 1: 访问 Polar Bar Chart Generator 网站，点击页面顶部的“开始创建”按钮。",
+        "Step 2: 在“数据导入”区域，选择“上传文件”或“手动输入”方式导入您的数据。支持 CSV 和 JSON 格式。",
+        "Step 3: 在“图表设置”菜单中，选择图表的类型、颜色方案和标签样式。例如，选择“环形”图表类型和“彩虹”颜色方案。",
+        "Step 4: 调整“数据选项”中的参数，如条形的宽度、间隔和起始角度，以适应您的数据特点。",
+        "Step 5: 预览图表，确保所有设置都符合您的需求。可以使用“预览”按钮查看实时效果。",
+        "Step 6: 完成设置后，点击“导出”按钮，选择 PNG 或 SVG 格式下载图表。"
+      ],
+      "usage_examples": [
+        "Example 1: 一家市场研究公司在分析不同地区的销售数据时，使用 Polar Bar Chart Generator 创建极坐标条形图，以环形展示各地区的销售额，使得数据对比更加直观。",
+        "Example 2: 一个科研团队在展示实验数据时，利用该工具生成极坐标图表，以扇形展示不同实验组的结果，帮助观众快速理解数据分布。",
+        "Example 3: 一位项目经理在汇报项目进度时，使用 Polar Bar Chart Generator 将各个任务的完成情况以环形图表展示，使团队成员一目了然。",
+        "Example 4: 一个金融分析师在分析股票市场时，利用该工具创建极坐标图表，展示不同股票的涨跌情况，便于投资者进行决策。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Polar Bar Chart Generatorは、データを放射的な形式で可視化するためのオンラインツールです。このツールを使用することで、ユーザーは複雑なデータセットを直感的な円形のグラフとして表現し、分析結果をより効果的に伝えられます。Polar Bar Chartは、時間的なトレンドや周期的なデータの比較、複数のカテゴリー間の比率を示す際に特に有用です。例えば、1年間の月別売上データや、異なる地域での商品の売上比較など、周期的なパターンや比率を視覚化する必要がある場面で威力を発揮します。このツールは、ユーザーがデータを入力し、グラフのスタイルや色をカスタマイズできる機能を提供しており、最終的にPNGやSVG形式でグラフをエクスポートすることが可能です。グラフの生成には、データの解析や描画にJavaScriptとSVGテクノロジーが使用されており、高品質な視覚化が可能となっています。",
+      "usage_steps": [
+        "Step 1: ホームページの「Polar Bar Chart Generator」にアクセスし、「データを入力」ボタンをクリックします。",
+        "Step 2: データ入力フォームに、X軸（角度）とY軸（値）のデータをCSV形式で入力またはペーストします。必要に応じて、ヘッダー行を追加できます。",
+        "Step 3: 「グラフ設定」タブを開き、グラフのタイトル、軸ラベル、色スケームなどのオプションを設定します。",
+        "Step 4: 「グラフのスタイル」セクションで、バーの幅、間隔、透明度などの詳細設定を行います。",
+        "Step 5: 「プレビュー」ボタンをクリックして、設定したパラメータに基づくグラフのプレビューを確認します。",
+        "Step 6: 確認後、「エクスポート」ボタンをクリックし、PNGまたはSVG形式でグラフを保存します。"
+      ],
+      "usage_examples": [
+        "Example 1: 1年間の月別売上データを視覚化し、各月の売上を比較します。このグラフは、季節的な売上傾向を明確に示すのに役立ちます。",
+        "Example 2: 地域ごとの顧客満足度スコアを比較します。異なる地域間での満足度の違いを可視化することで、改善が必要な地域を特定できます。",
+        "Example 3: 1日の時間帯別のトラフィック量を分析します。このグラフは、交通渋滞のピークタイムや利用者の行動パターンを理解するのに役立ちます。",
+        "Example 4: 異なる製品の市場占有率を比較します。各製品の市場での位置づけや、競合製品との比較を簡単に視覚化できます。"
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de Gráficos de Barras Polares es una herramienta en línea diseñada para crear visualizaciones de datos en un formato radial. Esta herramienta utiliza coordenadas polares, donde cada punto se define por una distancia desde un origen y un ángulo. Los gráficos de barras polares son especialmente útiles para representar datos cíclicos o datos que tienen una relación natural con un círculo, como datos meteorológicos, comportamientos circadianos, o distribuciones de tiempo en un ciclo de 24 horas. Los usuarios pueden personalizar múltiples aspectos del gráfico, como el color, el tamaño y el estilo de las barras, así como las etiquetas y leyendas. Una vez creada la visualización, se puede exportar en formatos de imagen como PNG o SVG, lo que permite una fácil integración en informes, sitios web o presentaciones. Esta herramienta es indispensable para analistas de datos, diseñadores de visualizaciones y profesionales que necesitan comunicar información compleja de manera clara y visualmente atractiva.",
+      "usage_steps": [
+        "Step 1: Acceda a la página del Generador de Gráficos de Barras Polares y haga clic en el botón 'Subir Datos' para importar su archivo CSV o JSON que contiene los datos que desea visualizar.",
+        "Step 2: En la sección 'Configuración de Datos', seleccione el campo que representa el valor de las barras y el campo que representa las categorías. También puede especificar si los datos están en formato radial (ángulo) o lineal (distancia).",
+        "Step 3: Personalice el estilo del gráfico en la pestaña 'Personalización'. Aquí puede ajustar el color de las barras, el grosor, y elegir diferentes estilos de relleno. También puede configurar las etiquetas y leyendas para que sean más claras y precisas.",
+        "Step 4: En la sección 'Ejes y Escalas', defina los límites de los ejes radial y angular. Establezca el rango de valores y el número de divisiones para que el gráfico sea más legible y representativo de los datos.",
+        "Step 5: Si lo desea, active la opción 'Mostrar Malla' para agregar líneas de guía que faciliten la interpretación de los datos. También puede ajustar la opacidad y el estilo de estas líneas.",
+        "Step 6: Una vez que esté satisfecho con la apariencia del gráfico, haga clic en 'Exportar' para descargar la visualización en formato PNG o SVG. Estos archivos se pueden utilizar directamente en documentos o sitios web."
+      ],
+      "usage_examples": [
+        "Example 1: Un meteorólogo que necesita mostrar los patrones de viento en diferentes direcciones a lo largo del día puede utilizar el Generador de Gráficos de Barras Polares para crear un gráfico radial que visualice claramente los cambios en la dirección y velocidad del viento.",
+        "Example 2: Un analista de marketing que estudia el comportamiento de compras de los clientes en distintas horas del día puede usar esta herramienta para representar gráficamente el volumen de ventas a lo largo de las 24 horas, destacando los picos y valles en la actividad de compra.",
+        "Example 3: Un investigador en biología que estudia los patrones de actividad de animales durante el ciclo diurno y nocturno puede crear un gráfico de barras polares para mostrar la distribución de la actividad en diferentes horas del día, facilitando la identificación de patrones circadianos.",
+        "Example 4: Un gerente de proyectos que necesita comunicar el progreso de tareas en un proyecto a lo largo del tiempo puede utilizar el Generador de Gráficos de Barras Polares para crear una visualización radial que muestre el porcentaje de completitud de cada tarea en un periodo de tiempo específico."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Gerador de Gráficos de Barras Polares é uma ferramenta inovadora que permite a visualização de dados de forma radial, oferecendo uma representação visual única e atraente. Esta ferramenta é particularmente útil para profissionais de dados, cientistas da computação e designers que desejam apresentar informações de maneira mais envolvente. O gerador utiliza a técnica de gráficos polares, onde os dados são plotados em um sistema de coordenadas polares, permitindo que o espectador entenda as relações entre diferentes categorias de maneira intuitiva. A ferramenta suporta a importação de dados de múltiplas fontes, incluindo planilhas e APIs, e oferece opções avançadas de personalização, como a escolha de cores, estilos de linhas e rótulos. Além disso, os usuários podem exportar os gráficos gerados em formatos PNG ou SVG, facilitando a integração com projetos de design e apresentações. A necessidade de uma ferramenta como esta surge em cenários onde a visualização de dados em um formato tradicional (cartesiano) pode não ser suficiente para transmitir a complexidade das informações. O Gerador de Gráficos de Barras Polares preenche essa lacuna, tornando a análise de dados mais interativa e compreensível.",
+      "usage_steps": [
+        "Abra o Gerador de Gráficos de Barras Polares em seu navegador e clique no botão 'Carregar Dados' para importar seu conjunto de dados. Você pode carregar arquivos CSV, Excel ou usar uma URL de API.",
+        "No painel de configuração, selecione o tipo de dado que deseja visualizar (por exemplo, categorias, valores numéricos) e escolha a coluna correspondente no seu conjunto de dados.",
+        "Personalize o estilo do gráfico ajustando as opções disponíveis, como cores, estilos de linhas, tamanhos e rótulos. Utilize a paleta de cores para destacar categorias importantes e melhorar a legibilidade.",
+        "Adicione anotações e rótulos às barras polares para fornecer contexto adicional. Isso é especialmente útil quando os dados são complexos e requerem explicações detalhadas.",
+        "Após configurar todas as opções, clique no botão 'Gerar Gráfico' para visualizar o gráfico polar em tempo real. A ferramenta fornecerá uma pré-visualização interativa que permite ajustes finos.",
+        "Quando o gráfico estiver pronto, use os botões de exportação para salvar o arquivo em formato PNG ou SVG. Estes formatos são ideais para uso em apresentações, relatórios e projetos de design."
+      ],
+      "usage_examples": [
+        "Uma empresa de marketing deseja analisar o desempenho de suas campanhas em diferentes canais de mídia. Utilizando o Gerador de Gráficos de Barras Polares, o time pode visualizar os resultados de cada canal de forma radial, destacando os que geraram mais engajamento e conversões.",
+        "Um cientista de dados precisa comparar as tendências de temperatura ao longo do ano em diferentes cidades. O gráfico polar permite que ele organize os dados de forma circular, facilitando a comparação entre os meses e cidades.",
+        "Um designer gráfico está criando uma apresentação para um cliente e precisa de uma maneira visualmente atraente de mostrar as preferências do público em relação a diferentes marcas. O Gerador de Gráficos de Barras Polares oferece uma solução elegante, permitindo que as marcas sejam representadas em um círculo, com barras que indicam a popularidade de cada uma.",
+        "Um analista financeiro deseja visualizar a distribuição de investimentos em diferentes setores de uma carteira. O gráfico polar ajuda a mostrar a proporção de investimentos em cada setor de forma clara, facilitando a tomada de decisões estratégicas."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le générateur de diagrammes en barres polaires est un outil en ligne robuste et intuitif destiné aux développeurs et aux analystes de données souhaitant visualiser des données de manière radiale. Contrairement aux diagrammes en barres traditionnels, les diagrammes en barres polaires présentent les données sur un cercle, offrant une perspective unique et souvent plus intuitive pour certaines analyses. Cet outil permet de créer des graphiques de haute qualité, facilement exportables en formats PNG et SVG, adaptés à une variété d'usages, des présentations aux rapports techniques. Les utilisateurs peuvent ajuster de nombreux paramètres, tels que la couleur, la taille, et l'étiquetage des barres, pour personnaliser leur visualisation. La capacité de visualiser des données en un cercle est particulièrement utile pour montrer des cycles, des périodes, ou des relations circulaires dans les données. Par exemple, les données météorologiques, les données de trafic routier, ou les données de vent peuvent être plus facilement interprétées dans un format polaire. Les utilisateurs peuvent également ajuster l'angle des barres et la transparence pour améliorer la lisibilité du graphique.",
+      "usage_steps": [
+        "Ouvrez la page du générateur de diagrammes en barres polaires sur le site web.",
+        "Dans la section 'Données', importez vos données en format CSV ou entrez-les manuellement dans le tableau de données.",
+        "Personnalisez l'apparence de votre graphique en utilisant l'onglet 'Paramètres de style'. Choisissez la couleur des barres, ajustez leur largeur, et modifiez les labels des axes.",
+        "Utilisez l'onglet 'Paramètres de l'axe' pour définir les limites des axes radiaux et circulaires, ainsi que l'échelle des valeurs.",
+        "Prévisualisez votre graphique dans la section 'Aperçu'. Vous pouvez ajuster l'angle des barres et la transparence pour une meilleure lisibilité.",
+        "Une fois satisfait, exportez votre graphique en format PNG ou SVG en cliquant sur le bouton 'Exporter' situé en bas de la page."
+      ],
+      "usage_examples": [
+        "Un météorologue souhaite visualiser les températures moyennes mensuelles sur une année. En utilisant le générateur de diagrammes en barres polaires, il peut représenter chaque mois sur le cercle, avec la hauteur des barres correspondant aux températures, ce qui facilite la comparaison des saisons.",
+        "Un analyste financier veut analyser les fluctuations de l'index boursier sur une journée. Le graphique polaire permet de visualiser clairement les pics et creux de l'activité boursière en fonction des heures de la journée.",
+        "Un urbaniste étudie les flux de trafic routier pour optimiser les feux de signalisation. En représentant le trafic par heure sur un diagramme en barres polaires, il peut identifier les périodes de pointe et ajuster les temps de feu en conséquence.",
+        "Un ingénieur en énergie renouvelable doit analyser les directions et les vitesses du vent sur une année. Le graphique polaire est idéal pour montrer les variations de direction et de vitesse du vent, aidant à optimiser l'emplacement des éoliennes."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Polar Bar Chart Generator ist ein fortschrittliches Online-Tool, das es Entwicklern und Datenwissenschaftlern ermöglicht, polare Balkendiagramme zu erstellen. Dieses Tool visualisiert Daten in radialem Format, was besonders nützlich ist, um periodische oder zyklische Datenmuster darzustellen. Polare Balkendiagramme sind ideal für Datensätze, die in einem Kreis angeordnet werden sollten, beispielsweise für die Darstellung von Wetterdaten, Uhrzeiten oder Richtungen.\n\nDas Tool eignet sich besonders für Benutzer, die komplexe Datenstrukturen intuitiv und visuell darstellen möchten. Es ermöglicht die Erstellung hochauflösender Grafiken im PNG- und SVG-Format, die leicht in Berichte, Präsentationen oder Webseiten integriert werden können. Durch die Verwendung von polaren Koordinaten bietet es eine alternative Perspektive auf die Daten, die traditionelle kartesische Diagramme nicht bieten.\n\nTechnisch gesehen funktioniert der Polar Bar Chart Generator, indem er die eingegebenen Daten in polarer Form konvertiert. Die Benutzer können die Anzahl der Segmente, die Farben, die Beschriftungen und andere Darstellungselemente anpassen. Die Generierung der Charts erfolgt mit Hilfe von modernen Webtechnologien wie JavaScript und SVG, um eine responsive und interaktive Benutzeroberfläche zu gewährleisten.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des Polar Bar Chart Generators in Ihrem Webbrowser.",
+        "Klicken Sie auf den Button 'Daten hochladen' und wählen Sie eine CSV- oder JSON-Datei mit Ihren Daten aus.",
+        "Passen Sie die Einstellungen im Abschnitt 'Diagrammeinstellungen' an, z.B. die Anzahl der Segmente, die Farbschema und die Beschriftungen.",
+        "Verwenden Sie den Slider im Bereich 'Winkel' und 'Radius', um die Darstellung des Diagramms zu feinen.",
+        "Klicken Sie auf 'Vorschau', um ein vorläufiges Diagramm anzuzeigen und die Anpassungen zu überprüfen.",
+        "Wenn Sie zufrieden mit dem Ergebnis sind, klicken Sie auf 'Exportieren', um das Diagramm im gewünschten Format (PNG oder SVG) herunterzuladen."
+      ],
+      "usage_examples": [
+        "Ein Meteorologe verwendet das Tool, um Wetterdaten über einen Monat in einem polaren Balkendiagramm darzustellen, um die Wettermuster in verschiedenen Zeiträumen visuell zu analysieren.",
+        "Ein Finanzanalyst erstellt ein polares Balkendiagramm, um die Umsätze der verschiedenen Geschäftsbereiche eines Unternehmens im Verlauf eines Jahres zu visualisieren, um saisonale Schwankungen aufzudecken.",
+        "Ein Biologe nutzt das Tool, um die Aktivitätsmuster von Tieren über einen Tag zu visualisieren, um Muster in der Tages- und Nachtaktivität zu erkennen.",
+        "Ein Marketingleiter verwendet das polare Balkendiagramm, um die Kundenzufriedenheit in verschiedenen Regionen in radialem Format darzustellen, um regionale Unterschiede auf einen Blick zu erkennen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор полярных столбчатых диаграмм — это онлайн-инструмент, предназначенный для создания визуализаций данных в полярной системе координат. Это инструмент позволяет преобразовать числовые данные в графическое представление, где каждый столбец отображается на радиальной оси. Полярные столбчатые диаграммы особенно полезны для визуализации циклических данных, таких как временные ряды, или данных, имеющих периодическую природу. Например, они могут использоваться для анализа сезонных тенденций в продажах или для representation данных о температуре за год.\n\nПользователи могут загрузить свои данные в формате CSV или ввести их вручную, после чего настроить внешний вид диаграммы с помощью различных параметров, таких как цвета, шрифты и метки. Инструмент поддерживает экспорт диаграмм в форматах PNG и SVG, что позволяет легко интегрировать их в отчеты и презентации. Генератор полярных столбчатых диаграмм особенно ценен для аналитиков, ученых и дизайнеров, которым необходима наглядная и точная визуализация данных.",
+      "usage_steps": [
+        "Шаг 1: Перейдите на страницу инструмента и нажмите кнопку 'Загрузить данные' для загрузки файла CSV с вашими данными или используйте встроенную таблицу для ввода данных вручную.",
+        "Шаг 2: В разделе 'Настройка данных' укажите столбцы, которые будут использоваться для оси радиуса и для значений столбцов. Вы также можете выбрать столбец для меток.",
+        "Шаг 3: В разделе 'Стилизация' настройте внешний вид диаграммы, выбрав цвета, шрифты и стили для осей и меток. Вы можете использовать предустановленные темы или создать свою собственную.",
+        "Шаг 4: В разделе 'Дополнительные настройки' укажите параметры, такие как прозрачность, толщина линий и отображение сетки. Эти настройки помогут сделать диаграмму более информативной и наглядной.",
+        "Шаг 5: После завершения настройки нажмите кнопку 'Предварительный просмотр' для проверки внешнего вида диаграммы. Если что-то не устраивает, вернитесь к настройкам и внесите изменения.",
+        "Шаг 6: Когда диаграмма будет готова, нажмите кнопку 'Экспорт' и выберите формат (PNG или SVG) для сохранения файла на вашем компьютере."
+      ],
+      "usage_examples": [
+        "Пример 1: Аналитик маркетинга использует Генератор полярных столбчатых диаграмм для визуализации сезонных тенденций в продажах продукции. Диаграмма помогает выявить месяцы с самыми высокими и самыми низкими показателями продаж, что позволяет оптимизировать маркетинговые стратегии.",
+        "Пример 2: Исследователь климата создает полярную диаграмму для отображения среднемесячных температур в течение года. Это позволяет наглядно показать изменения температурных режимов и их влияние на окружающую среду.",
+        "Пример 3: Дизайнер интерфейсов использует инструмент для создания интерактивной диаграммы, отображающей данные о пользовательском поведении на сайте. Диаграмма используется в отчетах для клиентов, чтобы продемонстрировать эффективность дизайна.",
+        "Пример 4: Финансовый аналитик применяет Генератор полярных столбчатых диаграмм для визуализации динамики доходов и расходов компании по месяцам. Это помогает выявить сезонные колебания и оптимизировать бюджетное планирование."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مولد الرسوم البيانية الدائرية الشريطية هو أداة متقدمة مصممة لمساعدة المطورين والباحثين في إنشاء رسوم بيانية دائرية شريطية عبر الإنترنت. تتميز هذه الأداة بقدرتها على تمثيل البيانات بشكل دائري، مما يوفر رؤية فريدة للبيانات يمكن أن تكون مفيدة في مجموعة متنوعة من التطبيقات. من خلال استخدام هذه الأداة، يمكن للمستخدمين تحليل البيانات عبر محاور مختلفة وتصدير الرسوم البيانية الناتجة بتنسيقات PNG أو SVG لاستخدامها في التقارير أو العروض التقديمية. تشتهر الرسوم البيانية الدائرية الشريطية بفائدتها في تمثيل البيانات الزمنية والدورات الدورية، مثل بيانات الطقس أو الأنشطة الموسمية. تتيح الأداة للمستخدمين التحكم في العديد من الإعدادات التقنية، مثل حجم الرسم البياني، ألوان الشروحات، ونوع الخطوط، مما يجعلها ملائمة للاستخدامات المتعددة.",
+      "usage_steps": [
+        "أدخل موقع Polar Bar Chart Generator في المتصفح وانتظر حتى يتم تحميل الصفحة.",
+        "انقر على زر 'إضافة بيانات' واختر الملف الذي يحتوي على بياناتك. يمكنك استخدام تنسيقات CSV أو JSON.",
+        "في منطقة الإعدادات، قم بتحديد المحور الرئيسي والمترافق لبياناتك. يمكنك أيضًا ضبط نطاق القيم المعروضة.",
+        "انقر على خيار 'التنسيق' واختر الألوان والخطوط والنماذج التي ترغب في استخدامها في الرسم البياني.",
+        " Customize the chart title and labels by entering the desired text in the 'Title and Labels' section. You can also adjust the font size and style.",
+        "بعد اكتمال التخصيص، انقر على زر 'تصدير' واختر التنسيق المطلوب (PNG أو SVG) لحفظ الرسم البياني على جهازك."
+      ],
+      "usage_examples": [
+        "تحليل بيانات الطقس: يمكن استخدام الرسم البياني الدائري الشريطي لعرض درجات الحرارة اليومية على مدار السنة، مما يساعد في تحديد الأنماط الموسمية.",
+        "عرض الأداء الرياضي: يساعد هذا النوع من الرسوم البيانية في تمثيل أداء اللاعبين في مختلف الألعاب الرياضية، مثل عدد الأهداف أو زمن السباق.",
+        "تحليل البيانات المالية: يمكن استخدام الرسم البياني الدائري الشريطي لعرض الأرباح الفصلية لشركة على مدى عدة سنوات، مما يوفر نظرة شاملة على الأداء المالي.",
+        "دراسة الأنماط الاستهلاكية: يساعد الرسم البياني الدائري الشريطي في تحليل نماذج الشراء للمستهلكين على مدار اليوم أو الأسبوع، مما يساعد الشركات في تحسين استراتيجيات التسويق."
+      ]
+    }
+  }
+}

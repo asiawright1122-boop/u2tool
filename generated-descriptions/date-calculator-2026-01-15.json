@@ -1,0 +1,158 @@
+{
+  "slug": "date-calculator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Date Calculator is a powerful web-based utility designed to perform precise date arithmetic and interval calculations. This tool is particularly useful for developers, project managers, and anyone who needs to manage timelines or compute date differences accurately. It can calculate the exact number of days between two dates or adjust a specific date by adding or subtracting a certain number of days. The Date Calculator uses the Gregorian calendar system and accounts for leap years and varying month lengths, ensuring accurate results. Under the hood, it leverages JavaScript's Date object and custom algorithms to handle date manipulations, providing real-time results that can be integrated into various applications or used for standalone calculations.",
+      "usage_steps": [
+        "Step 1: Open the Date Calculator tool on the website and locate the main input fields labeled 'Start Date' and 'End Date'.",
+        "Step 2: Enter the start date in the 'Start Date' field using the format YYYY-MM-DD, or use the calendar icon to select a date.",
+        "Step 3: If you are calculating the difference between two dates, enter the end date in the 'End Date' field, or select it using the calendar icon.",
+        "Step 4: For date adjustments, switch to the 'Add/Subtract' mode by clicking the 'Add/Subtract Days' button. Enter the number of days you want to add or subtract in the provided field.",
+        "Step 5: Click the 'Calculate' button to process the input. The tool will display the result in the 'Result' section, showing the number of days between the dates or the new date after the adjustment.",
+        "Step 6: Use the 'Copy Result' button to copy the calculated result to your clipboard, or use the 'Reset' button to clear the input fields and start a new calculation."
+      ],
+      "usage_examples": [
+        "Example 1: A project manager needs to determine the duration of a project that starts on June 1, 2023, and ends on September 15, 2023. By entering these dates into the Date Calculator, they can quickly find out that the project duration is 106 days.",
+        "Example 2: A developer is testing a feature that needs to check if a user's account is active 30 days after the last login. By inputting the last login date and adding 30 days, the developer can verify the exact date when the account will become inactive.",
+        "Example 3: A travel agency is planning a 45-day tour and needs to calculate the end date if the tour starts on October 1, 2023. By entering the start date and adding 45 days, they can determine that the tour will end on November 15, 2023.",
+        "Example 4: A financial analyst needs to calculate the maturity date of a 90-day certificate of deposit (CD) that was opened on April 15, 2023. By entering the start date and adding 90 days, the analyst can find that the CD will mature on July 14, 2023."
+      ]
+    },
+    "zh": {
+      "detailed_description": "日期计算器是一款强大的在线工具，专为需要精确处理日期的用户设计。它不仅可以计算两个日期之间的天数差，还能够根据给定的日期进行天数的加减操作。这款工具特别适用于项目管理、日程安排、数据分析等领域，能够帮助用户快速解决日期计算问题。通过输入起始日期和结束日期，用户可以即时获得两个日期之间的天数差异。如果需要计算特定日期后或前的某个日期，只需输入基础日期和需要加减的天数，工具将准确计算出结果。日期计算器采用先进的算法，确保所有计算的准确性，支持多种日期格式，包括但不限于YYYY-MM-DD、YYYY/MM/DD等，满足不同用户的需求。",
+      "usage_steps": [
+        "打开日期计算器页面，进入工具主界面。",
+        "在\"起始日期\"输入框中，输入您希望计算的起始日期，支持多种日期格式（如YYYY-MM-DD、YYYY/MM/DD等）。",
+        "在\"结束日期\"输入框中，输入您希望计算的结束日期，同样支持多种日期格式。",
+        "点击\"计算差值\"按钮，工具将自动计算两个日期之间的天数差，并在结果区域显示。",
+        "如果您需要计算某个日期前后的日期，可以在\"基础日期\"输入框中输入初始日期，然后在\"天数\"输入框中输入需要加减的天数。",
+        "点击\"计算日期\"按钮，工具将显示计算后的具体日期。"
+      ],
+      "usage_examples": [
+        "项目管理：项目经理需要确定项目从启动到完成的具体天数，使用日期计算器可以快速计算出项目的总时间。",
+        "日程安排：个人日程规划者希望知道某个活动从开始到结束的具体天数，以便合理安排时间，使用日期计算器可以轻松解决。",
+        "财务对账：财务人员需要计算某笔交易从发生到结算的具体天数，以便进行财务对账，使用日期计算器可以准确计算天数差。",
+        "数据统计：数据分析师需要根据特定的时间段进行数据分析，使用日期计算器可以快速确定所需的时间范围。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Date Calculatorは、2つの日付間の差を計算したり、特定の日付に日数を加算または減算するためのオンラインツールです。このツールは、日付に関する複雑な計算を簡素化し、開発者だけでなく、プロジェクト管理者、イベントプランナー、財務専門家など、幅広いユーザーに役立ちます。具体的には、プロジェクトのスケジュール管理、イベントの日程調整、財務の日付計算など、様々なシーンで活用できます。このツールは、JavaScriptのDateオブジェクトを用いて、日付の計算を行います。ユーザーは、日付の入力形式を選択し、必要な計算を実行することができます。計算結果は、日数、週数、月数、年の形式で表示され、さらに詳細な解説も提供されます。また、時差の計算や、特定の日付から何日後かの日付を取得する機能も搭載しています。",
+      "usage_steps": [
+        "1. 左側の「日付1」欄に最初の日付を入力します。フォーマットはYYYY-MM-DDで指定してください。",
+        "2. 右側の「日付2」欄に2番目の日付を入力します。こちらもYYYY-MM-DDフォーマットで指定します。",
+        "3. 「計算タイプ」ドロップダウンメニューから、実行したい操作（日付の差の計算、日数の加算、日数の減算）を選択します。",
+        "4. 必要に応じて、「加算/減算する日数」欄に日数を入力します。この値は正の整数または負の整数で指定できます。",
+        "5. 「計算」ボタンをクリックします。計算が完了すると、結果が下部の「結果」欄に表示されます。",
+        "6. 「結果」欄には、計算結果が日数、週数、月数、年の形式で表示され、さらに詳細な解説も提供されます。"
+      ],
+      "usage_examples": [
+        "1. プロジェクトの開始日が2023年10月1日で、終了予定日が2024年3月15日の場合、これらの日付間の差を計算し、プロジェクトの全体期間を確認することができます。",
+        "2. イベントの開催日が2023年12月25日で、準備期間が45日の場合、イベントの準備開始日を計算し、日程調整に役立てることができます。",
+        "3. 貸付の返済日が2024年1月1日で、30日間の猶予がある場合、返済猶予期間終了日を計算し、返済スケジュールを整理することができます。",
+        "4. 社員の雇用開始日が2022年7月1日で、現在の日付が2023年10月1日の場合、雇用期間を計算し、給与や福利厚生の管理に活用することができます。"
+      ]
+    },
+    "es": {
+      "detailed_description": "El Date Calculator es una herramienta versátil diseñada para realizar cálculos precisos de fechas. Técnicamente, esta herramienta ofrece dos funcionalidades principales: calcular la diferencia entre dos fechas y agregar o restar días a una fecha específica. Los usuarios pueden introducir fechas en un formato estándar (como YYYY-MM-DD) y la herramienta realiza los cálculos necesarios, proporcionando resultados en días, meses y años, según sea necesario. Esta herramienta es especialmente útil en diversos campos, como la gestión de proyectos, el seguimiento de plazos legales, la planificación de eventos y la contabilidad. Por ejemplo, un gestor de proyectos puede necesitar calcular cuántos días restan hasta la fecha de entrega de un proyecto, mientras que un abogado puede necesitar determinar el número exacto de días transcurridos desde una cierta fecha legal. La interfaz de Date Calculator es intuitiva y está diseñada para ser accesible para usuarios de todos los niveles, desde principiantes hasta profesionales avanzados.",
+      "usage_steps": [
+        "Acceda a la sección de Date Calculator en el menú principal de la web.",
+        "Seleccione el tipo de cálculo que desea realizar: 'Calcular diferencia entre dos fechas' o 'Agregar/Restar días a una fecha'.",
+        "Si ha seleccionado 'Calcular diferencia entre dos fechas', introduzca la fecha inicial y la fecha final en el formato YYYY-MM-DD.",
+        "Si ha seleccionado 'Agregar/Restar días a una fecha', introduzca la fecha base y el número de días que desea agregar o restar (use números negativos para restar días).",
+        "Haga clic en el botón 'Calcular' para procesar los datos.",
+        "Revise los resultados mostrados en la sección de salida, que incluirán la diferencia en días, meses y años, o la nueva fecha calculada."
+      ],
+      "usage_examples": [
+        "Un gestor de proyectos necesita determinar cuántos días faltan para la entrega de un proyecto programado para el 15 de octubre de 2023. Utiliza la función 'Calcular diferencia entre dos fechas' para encontrar la respuesta.",
+        "Un abogado debe calcular el número exacto de días desde una demanda presentada el 1 de enero de 2023 hasta la fecha actual. Usa la misma función para obtener el resultado preciso.",
+        "Un planificador de eventos quiere saber la fecha exacta que será 60 días después del 1 de septiembre de 2023 para programar un evento. Utiliza la función 'Agregar/Restar días a una fecha' para encontrar la fecha final.",
+        "Un contable necesita restar 30 días de una fecha de corte fiscal del 31 de diciembre de 2023 para determinar el inicio del período fiscal anterior. Usa la función 'Agregar/Restar días a una fecha' con un número negativo para obtener la fecha inicial."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Date Calculator é uma ferramenta poderosa e versátil que permite aos usuários realizar cálculos precisos envolvendo datas. Técnicamente, a ferramenta é capaz de calcular a diferença entre duas datas, fornecendo a quantidade exata de dias, semanas, meses ou anos. Além disso, o Date Calculator pode adicionar ou subtrair um número específico de dias de uma data determinada, facilitando a manipulação de datas em diferentes contextos. Esta funcionalidade é particularmente útil para desenvolvedores, gerentes de projetos e profissionais de finanças que precisam calcular prazos, datas de vencimento ou períodos de tempo com precisão. A implementação utiliza algoritmos robustos para lidar com variações no calendário gregoriano, garantindo resultados confiáveis em todos os cenários. A ferramenta também suporta diferentes formatos de data, permitindo que os usuários escolham o formato mais adequado para suas necessidades.",
+      "usage_steps": [
+        "Abra a ferramenta Date Calculator na seção de conversores do site.",
+        "Selecione o modo de operação desejado: 'Diferença entre duas datas' ou 'Adicionar/Subtrair dias'.",
+        "No modo 'Diferença entre duas datas', insira a primeira data no campo 'Data inicial' e a segunda data no campo 'Data final'.",
+        "No modo 'Adicionar/Subtrair dias', insira a data inicial no campo 'Data' e o número de dias a serem adicionados ou subtraídos no campo 'Dias'.",
+        "Escolha o formato de data desejado usando o seletor 'Formato de data' (por exemplo, 'DD/MM/YYYY' ou 'YYYY-MM-DD').",
+        "Clique no botão 'Calcular' para obter o resultado, que será exibido abaixo dos campos de entrada."
+      ],
+      "usage_examples": [
+        "Um gerente de projeto precisa calcular a duração total de um projeto que começa em 01/09/2023 e termina em 15/12/2023. Usando o Date Calculator, ele pode inserir ambas as datas e obter o número exato de dias do projeto para planejar tarefas e recursos.",
+        "Um contador precisa determinar a data de vencimento de uma fatura que foi emitida em 10/10/2023 e tem um prazo de 30 dias para pagamento. Utilizando o Date Calculator, ele pode adicionar 30 dias à data de emissão para encontrar a data correta de vencimento.",
+        "Um desenvolvedor de software está testando um script que deve executar uma tarefa 100 dias após a implementação. Ele pode usar o Date Calculator para calcular a data exata em que a tarefa deve ser executada, garantindo que o script funcione corretamente.",
+        "Um organizador de eventos precisa planejar um evento que ocorrerá 6 meses após a data de hoje. Usando o Date Calculator, ele pode adicionar 180 dias (6 meses) à data atual para determinar a data do evento, considerando variáveis como meses com 30 ou 31 dias."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Calculateur de Dates est une solution puissante et flexible conçue pour simplifier les opérations de gestion des dates. Techniquement, cet outil permet de calculer la différence entre deux dates en termes de jours, semaines, mois ou années, ainsi que d'ajouter ou de soustraire un nombre déterminé de jours à une date spécifique. Il est particulièrement utile pour les développeurs et les professionnels qui manipulent fréquemment des données temporelles dans leurs applications. Par exemple, il peut être utilisé pour calculer des échéances, des durées de projets, ou pour gérer des dates de réunions et de rendez-vous. L'outil utilise des algorithmes optimisés pour prendre en compte les variations de calendriers, tels que les années bissextiles et les différents formats de dates. L'interface est intuitive et offre des options pour entrer les dates au format ISO (YYYY-MM-DD) ou en utilisant des sélecteurs de dates graphiques. Les résultats sont présentés de manière claire et peuvent être facilement intégrés dans des feuilles de calcul ou des bases de données pour une utilisation ultérieure.",
+      "usage_steps": [
+        "Ouvrez l'outil Calculateur de Dates sur le site.",
+        "Dans la section 'Date de début', sélectionnez ou tapez la date de début en utilisant le format ISO (YYYY-MM-DD) ou le sélecteur de dates graphique.",
+        "Dans la section 'Date de fin', sélectionnez ou tapez la date de fin de la même manière.",
+        "Cliquez sur le bouton 'Calculer la différence' pour obtenir le nombre de jours, semaines, mois ou années entre les deux dates.",
+        "Pour ajouter ou soustraire des jours à une date, passez à la section 'Opérations sur les dates' et entrez le nombre de jours à ajouter ou soustraire.",
+        "Cliquez sur le bouton 'Calculer la nouvelle date' pour afficher le résultat final."
+      ],
+      "usage_examples": [
+        "Un gestionnaire de projet doit calculer la durée d'un projet qui commence le 15 octobre 2023 et se termine le 30 avril 2024. Il utilise le Calculateur de Dates pour obtenir le nombre exact de jours entre ces deux dates.",
+        "Une entreprise de voyage souhaite déterminer la date exacte de l'arrivée d'un voyage qui part le 5 juillet 2023 et dure 120 jours. Elle utilise l'outil pour ajouter 120 jours à la date de départ pour planifier l'arrivée.",
+        "Un comptable doit calculer l'anniversaire d'un contrat signé le 1er janvier 2022. Il utilise le Calculateur de Dates pour ajouter une année au jour de la signature pour déterminer la date exacte.",
+        "Un organisateur de conférences veut vérifier combien de semaines il reste avant l'événement prévu pour le 10 mars 2024. Il entre la date actuelle et la date de l'événement pour obtenir le nombre de semaines restantes."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Date Calculator ist ein leistungsstarkes Online-Tool, das es Benutzern ermöglicht, die Differenz zwischen zwei Daten zu berechnen oder Tage von einem bestimmten Datum hinzuzufügen oder abzuziehen. Dieses Tool berücksichtigt die komplexen Strukturen des gregorianischen Kalenders, einschließlich Schaltjahre und die verschiedenen Längen von Monaten, um genaue Ergebnisse zu liefern. Benutzer finden in diesem Tool eine Vielzahl von Anwendungen, von der Planung von Projekten bis hin zur historischen Recherche. Zum Beispiel kann ein Projektmanager das Tool nutzen, um den Zeitraum zwischen dem Start- und dem Enddatum eines Projekts zu berechnen, oder ein Historiker kann die genaue Anzahl der Tage zwischen zwei historischen Ereignissen ermitteln. Technisch gesehen nutzt der Date Calculator moderne JavaScript-Algorithmen, um die Berechnungen durchzuführen. Die Benutzeroberfläche ist so gestaltet, dass sie sowohl für Anfänger als auch für fortgeschrittene Benutzer nutzbar ist, und bietet Optionen zur Anpassung der Eingabedaten, wie z.B. das Format der Datumsangaben und die Berücksichtigung von Schaltjahren.",
+      "usage_steps": [
+        "Öffnen Sie die Website und navigieren Sie zur Kategorie 'Konverter' und wählen Sie 'Date Calculator' aus.",
+        "Wählen Sie den Modus 'Differenz zwischen zwei Daten berechnen' oder 'Tage hinzufügen/abziehen' über die Modusauswahl.",
+        "Geben Sie das Startdatum in das entsprechende Feld ein, indem Sie das Kalender-Symbol verwenden oder das Datum manuell eingeben.",
+        "Falls Sie den Modus 'Tage hinzufügen/abziehen' gewählt haben, geben Sie die Anzahl der Tage ein, die Sie hinzufügen oder abziehen möchten.",
+        "Klicken Sie auf 'Berechnen', um das Ergebnis zu erhalten.",
+        "Das Ergebnis wird im unteren Bereich der Seite angezeigt, zusammen mit zusätzlichen Informationen wie der Anzahl der Wochen, Monate und Jahre, die der Differenz entsprechen."
+      ],
+      "usage_examples": [
+        "Ein Projektmanager verwendet den Date Calculator, um den Zeitraum zwischen dem heutigen Tag und dem geplanten Projektende zu berechnen, um sicherzustellen, dass alle Meilensteine eingehalten werden.",
+        "Ein Finanzberater nutzt das Tool, um den Tag zu ermitteln, an dem eine langfristige Anlage in fünf Jahren abläuft, um seinen Kunden genau zu beraten.",
+        "Ein Historiker verwendet den Date Calculator, um die genaue Anzahl der Tage zwischen zwei historischen Ereignissen zu bestimmen, um seine Forschungsarbeiten zu präzisieren.",
+        "Ein Organisator von Veranstaltungen berechnet mit Hilfe des Tools den genauen Termin, an dem eine Veranstaltung 100 Tage vor dem geplanten Startdatum stattfinden sollte, um Vorbereitungen zu treffen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Date Calculator предназначен для выполнения точных вычислений, связанных с датами. Этот инструмент позволяет пользователям рассчитывать разницу между двумя датами, а также добавлять или вычитать дни из заданной даты. Функциональность инструмента основана на использовании алгоритмов, учитывающих различные календарные системы, включая учет високосных годов и различий в месяцах. Для пользователей, которым необходимо точно определять временные интервалы, например, для планирования проектов, расчета сроков доставки или анализа исторических данных, этот инструмент является незаменимым. Он помогает избежать ошибок, связанных с ручными расчетами, и предоставляет результаты в максимально удобном формате. Инструмент также поддерживает различные форматы ввода и вывода дат, что делает его универсальным для различных задач. Например, пользователи могут вводить даты в формате ГГГГ-ММ-ДД, ДД.ММ.ГГГГ или использовать временные метки Unix. Результаты вычислений могут быть представлены в днях, часах, минутах или секундах, что позволяет точно настроить под конкретные потребности.",
+      "usage_steps": [
+        "Откройте страницу инструмента Date Calculator на сайте.",
+        "Выберите режим вычисления: 'Разница между датами' или 'Добавить/вычесть дни'.",
+        "Если выбран режим 'Разница между датами', введите начальную и конечную даты в соответствующие поля. Вы можете использовать различные форматы, такие как ГГГГ-ММ-ДД или ДД.ММ.ГГГГ.",
+        "Если выбран режим 'Добавить/вычесть дни', введите базовую дату и количество дней, которое нужно добавить или вычесть. Используйте положительное число для добавления и отрицательное для вычитания.",
+        "Нажмите кнопку 'Вычислить', чтобы получить результат. Результаты будут отображены в нескольких форматах: дни, часы, минуты и секунды.",
+        "Если необходимо, вы можете скопировать результат или сохранить его для дальнейшего использования."
+      ],
+      "usage_examples": [
+        "Проектный менеджер использует инструмент для вычисления точной даты окончания проекта, добавляя количество рабочих дней к дате начала проекта.",
+        "Дизайнер сайта применяет инструмент для определения разницы между датами публикации двух статей, чтобы настроить автоматическое обновление контента.",
+        "Кадровый специалист использует инструмент для расчета срока действия трудового договора, вычитая дату начала работы из даты окончания договора.",
+        "Историк использует инструмент для анализа временных интервалов между значимыми историческими событиями, чтобы создать точную хронологию."
+      ]
+    },
+    "ar": {
+      "detailed_description": "آلة حاسبة التاريخ هي أداة قوية ومرنة مصممة لمساعدة المطورين والمستخدمين في إجراء حسابات دقيقة ومتنوعة على البيانات الزمنية. تتيح هذه الأداة إمكانية حساب الفروق بين تاريخين، أو إضافة أو طرح أيام معينة من تاريخ محدد. تعتبر هذه الأداة ضرورية في العديد من السيناريوهات، مثل التحقق من تواريخ انتهاء الصلاحية، تحديد عدد الأيام بين حدثين، أو حتى التخطيط للمشاريع وتحديد المواعيد النهائية. تعمل آلة حاسبة التاريخ من خلال استخدام خوارزميات متقدمة لتفسير البيانات الزمنية وتوفير النتائج بدقة عالية. يمكن للمستخدمين إدخال التواريخ في تنسيقات مختلفة، وستقوم الأداة بمعالجتها وإنتاج النتائج المطلوبة بسرعة وسهولة.",
+      "usage_steps": [
+        "خطوة 1: افتح الصفحة الرئيسية لآلة حاسبة التاريخ.",
+        "خطوة 2: اختر نوع الحساب الذي تريد إجراءه من القائمة المنسدلة: حساب الفروق بين تاريخين أو إضافة/طرح أيام من تاريخ معين.",
+        "خطوة 3: إذا اخترت حساب الفروق، أدخل التاريخ الأول في الحقل المخصص، ثم أدخل التاريخ الثاني في الحقل الثاني.",
+        "خطوة 4: إذا اخترت إضافة أو طرح أيام، أدخل التاريخ الأصلي في الحقل المخصص، ثم أدخل عدد الأيام الذي تريد إضافته أو طرحه في الحقل الثاني.",
+        "خطوة 5: اضغط على زر 'حساب' لمعالجة البيانات وإظهار النتائج.",
+        "خطوة 6: اعرض النتائج التي تم إنشاؤها وقم بنسخها أو حفظها حسب الحاجة."
+      ],
+      "usage_examples": [
+        "مثال 1: شركة محاسبة تحتاج إلى حساب عدد الأيام بين تاريخ الفاتورة وتاريخ الدفع للتأكد من دقة الفترات الزمنية.",
+        "مثال 2: مدير مشروع يرغب في تحديد موعد الانتهاء من المشروع من خلال إضافة عدد الأيام المتبقية على تاريخ البدء.",
+        "مثال 3: مطور برمجي يرغب في حساب الفرق الزمني بين تاريخ نشر الإصدار الحالي وتاريخ نشر الإصدار القادم للتحقق من جدول العمل.",
+        "مثال 4: شخص يخطط لرحلة ويحتاج إلى حساب عدد الأيام المتبقية على تاريخ السفر للتأكد من استكمال الاستعدادات في الوقت المناسب."
+      ]
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "slug": "json-to-sql",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The JSON to SQL tool is a powerful utility designed to streamline the process of converting JSON arrays into SQL INSERT statements, complete with optional CREATE TABLE support. This tool is essential for developers and database administrators who need to migrate data from JSON formats into relational databases. The tool supports a wide range of JSON structures, including nested objects and arrays, making it highly versatile for various data transformation tasks. By automating the conversion process, it significantly reduces the time and effort required to prepare data for database insertion, ensuring accuracy and consistency. The tool's advanced features, such as schema generation and data type inference, make it an indispensable resource for anyone working with JSON and SQL. Users can easily input their JSON data, specify the target table name, and choose whether to generate the CREATE TABLE statement. The tool then processes the JSON, infers the appropriate SQL data types, and outputs the necessary SQL statements, ready for execution in any SQL-compatible database system.",
+      "usage_steps": [
+        "Step 1: Navigate to the JSON to SQL tool page and locate the 'Input JSON' text area.",
+        "Step 2: Paste your JSON array into the 'Input JSON' text area. Ensure your JSON is well-formed and follows the expected structure.",
+        "Step 3: In the 'Table Name' field, enter the name of the SQL table where you want to insert the data.",
+        "Step 4: Check the 'Generate CREATE TABLE' option if you want the tool to include a CREATE TABLE statement in the output.",
+        "Step 5: If your JSON contains nested objects or arrays, use the 'Flatten JSON' option to ensure the data is properly flattened into a relational format.",
+        "Step 6: Click the 'Convert to SQL' button to generate the SQL INSERT statements. The tool will display the SQL output, which you can then copy and paste into your database management system."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer needs to migrate user data from a NoSQL database (JSON format) to a MySQL database. They use the JSON to SQL tool to convert the JSON data into SQL INSERT statements, including a CREATE TABLE statement to ensure the database schema is correctly set up.",
+        "Example 2: An API developer receives a large JSON file from a third-party service and needs to import the data into a PostgreSQL database. By using the tool, they can quickly convert the JSON into SQL statements, saving time and avoiding manual errors.",
+        "Example 3: A data analyst is working on a project that involves combining data from multiple sources, including a JSON file and a relational database. They use the JSON to SQL tool to convert the JSON data and then join it with existing SQL tables for comprehensive analysis.",
+        "Example 4: A database administrator is tasked with setting up a new database for a client. They have a JSON schema and need to create the corresponding SQL tables and insert initial data. The JSON to SQL tool helps them generate the necessary CREATE TABLE and INSERT statements, ensuring the database is set up correctly and efficiently."
+      ]
+    },
+    "zh": {
+      "detailed_description": "JSON to SQL 是一个强大的在线工具，专为开发人员和数据库管理员设计，用于将 JSON 格式的数组数据转换为 SQL 的 INSERT 语句，并支持生成 CREATE TABLE 语句。该工具不仅简化了数据迁移和导入的过程，还提高了数据处理的效率。用户可以利用此工具在不同的数据库系统之间快速迁移数据，特别是在处理大量数据时，可以显著减少手动编写 SQL 语句的时间和复杂性。\n\nJSON to SQL 工具通过解析 JSON 数据的结构，自动生成相应的 SQL 语句。用户可以选择是否生成 CREATE TABLE 语句，以便在目标数据库中创建与 JSON 数据结构相匹配的表。此外，该工具还支持数据类型映射，确保生成的 SQL 语句与目标数据库兼容。\n\n具体来说，JSON to SQL 工具通过以下步骤工作：首先，用户输入 JSON 数据；然后，工具解析 JSON 数据并识别其中的键值对；接着，工具生成相应的 SQL 语句，包括 CREATE TABLE 和 INSERT 语句；最后，用户可以选择下载或直接复制生成的 SQL 语句，以便在数据库管理系统中执行。通过这些功能，JSON to SQL 工具为开发人员提供了一个高效、灵活的数据处理解决方案。",
+      "usage_steps": [
+        "Step 1: 打开 JSON to SQL 工具页面，点击“上传 JSON 文件”或在文本框中直接粘贴 JSON 数据。",
+        "Step 2: 选择是否生成 CREATE TABLE 语句。如果需要，勾选“生成 CREATE TABLE 语句”选项。",
+        "Step 3: 选择目标数据库类型，例如 MySQL、PostgreSQL 或 SQLite，以确保生成的 SQL 语句与目标数据库兼容。",
+        "Step 4: 点击“转换”按钮，工具将解析 JSON 数据并生成相应的 SQL 语句。",
+        "Step 5: 在结果区域查看生成的 SQL 语句，包括 CREATE TABLE 和 INSERT 语句。",
+        "Step 6: 点击“下载 SQL 文件”或直接复制生成的 SQL 语句，以便在数据库管理系统中执行。"
+      ],
+      "usage_examples": [
+        "Example 1: 数据迁移：假设你正在将一个应用程序从 MongoDB 迁移到 MySQL，需要将现有的 JSON 数据导入 MySQL 数据库。使用 JSON to SQL 工具，你可以快速生成 SQL 语句，简化数据迁移过程。",
+        "Example 2: 数据备份：在开发过程中，你可能需要定期将应用的 JSON 数据备份到 SQL 数据库中。使用 JSON to SQL 工具，可以自动生成备份所需的 SQL 语句，确保数据的安全性和一致性。",
+        "Example 3: 数据导入：假设你从 API 接口获取了一组 JSON 数据，并需要将其导入到公司的 SQL 数据库中。通过 JSON to SQL 工具，你可以轻松地将 JSON 数据转换为 SQL 语句，快速完成数据导入。",
+        "Example 4: 数据同步：在多系统协同工作时，可能需要定期将不同系统的数据同步到一个中央数据库中。使用 JSON to SQL 工具，可以将各个系统的 JSON 数据转换为 SQL 语句，实现数据的自动同步。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "JSON to SQL コンバーターは、JSON 形式のデータを SQL の INSERT 文に変換し、CREATE TABLE 文の生成をサポートします。このツールにより、データベースへのデータ移行や、新しいテーブルの作成が簡素化され、開発者やデータ管理者のワークフローが大幅に効率化されます。例えば、API から取得した JSON データを SQL データベースに直接投入する際や、新しいテーブルを素早く作成する必要がある場合に非常に役立ちます。JSON to SQL コンバーターは、エンコーディングやデータ型の自動検出機能を備えており、生成された SQL 文が正確で信頼性の高いものになるよう設計されています。さらに、カスタムフィールドの設定や、カラム名の変更、テーブル名の指定など、柔軟な設定が可能です。これにより、ユーザーは特定の要件に応じて SQL 文を微調整できます。",
+      "usage_steps": [
+        "1. 「JSON to SQL」ページにアクセスします。",
+        "2. 「JSON Data」領域に、変換したい JSON データをペーストします。JSON 配列やオブジェクトをサポートしています。",
+        "3. 「Table Name」フィールドに、生成するテーブルの名前を入力します。",
+        "4. 「Custom Fields」チェックボックスを選択し、必要に応じてカラム名やデータ型を編集します。",
+        "5. 「Create Table」チェックボックスを選択すると、CREATE TABLE 文が生成されます。",
+        "6. 「Convert」ボタンをクリックして、SQL 文を生成します。生成された SQL 文は「SQL Output」領域に表示されます。"
+      ],
+      "usage_examples": [
+        "Example 1: API から取得した JSON データを SQL データベースに移行する場合、このツールを使用することで、手動でデータの整形やテーブルの作成を行う手間が省けます。",
+        "Example 2: 新しいプロジェクトでデータベーススキーマを迅速に作成する必要がある場合、JSON データを元に CREATE TABLE 文を自動生成することで、初期設定時間を大幅に短縮できます。",
+        "Example 3: データ分析チームが定期的に分析用のテーブルを更新する必要がある場合、JSON 形式的なデータを SQL 形式に変換することで、データの一貫性を保ちつつ効率的に更新作業を行えます。",
+        "Example 4: ウェブアプリケーションの開発中に、テストデータを素早くインポートしたい場合、JSON 形式的なテストデータを SQL INSERT 文に変換することで、テスト環境のセットアップが簡単になります。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "JSON to SQL은 JSON 배열을 SQL INSERT 문으로 변환하는 동시에 CREATE TABLE 문을 지원하는 강력한 도구입니다. 이 도구는 복잡한 JSON 구조를 효율적으로 SQL 데이터베이스에 통합하는 데 도움이 됩니다. 사용자는 JSON 데이터를 입력하면, 도구가 자동으로 적절한 SQL 문을 생성하여 데이터베이스에 삽입할 수 있습니다. 이 기능은 특히 개발자들이 대규모 데이터 마이그레이션, API 응답 처리, 또는 데이터베이스 초기화 등 다양한 시나리오에서 유용합니다. JSON to SQL은 JSON 스키마를 분석하고, 데이터 타입을 자동으로 인식하여 CREATE TABLE 문을 생성합니다. 이를 통해 사용자는 별도의 스키마 작성 작업 없이도 데이터를 쉽게 관리할 수 있습니다.",
+      "usage_steps": [
+        "Step 1: 웹사이트 상단 메뉴에서 'JSON to SQL' 옵션을 선택하여 도구를 엽니다.",
+        "Step 2: 왼쪽 패널의 'JSON Data' 섹션에서 JSON 배열을 붙여넣습니다. 예를 들어, [{\"id\": 1, \"name\": \"John\"}]와 같은 형식의 데이터를 입력합니다.",
+        "Step 3: 'Table Name' 필드에 생성할 테이블의 이름을 입력합니다. 예를 들어, 'users'라는 이름의 테이블을 생성하려면 'users'를 입력합니다.",
+        "Step 4: 'Options' 섹션에서 'Include CREATE TABLE' 옵션을 체크하여 CREATE TABLE 문을 생성하도록 설정합니다.",
+        "Step 5: 'Convert' 버튼을 클릭하여 JSON 데이터를 SQL INSERT 문으로 변환합니다.",
+        "Step 6: 변환된 SQL 문이 오른쪽 패널에 표시됩니다. 이 SQL 문을 복사하여 데이터베이스에 실행합니다."
+      ],
+      "usage_examples": [
+        "Example 1: API 응답 처리: API 호출 후 반환된 JSON 배열을 SQL 데이터베이스에 저장하려는 경우, 이 도구를 사용하여 JSON을 SQL INSERT 문으로 변환하여 데이터베이스에 쉽게 저장할 수 있습니다.",
+        "Example 2: 데이터 마이그레이션: 기존 시스템의 JSON 데이터를 새로운 SQL 데이터베이스로 이동할 때, 이 도구를 사용하여 JSON 데이터를 SQL 형식으로 변환하여 마이그레이션 과정을 간소화할 수 있습니다.",
+        "Example 3: 테스트 데이터 생성: 테스트용 데이터를 JSON 형식으로 작성한 후, 이 도구를 사용하여 SQL INSERT 문을 생성하여 테스트 데이터베이스를 빠르게 채울 수 있습니다.",
+        "Example 4: 데이터베이스 초기화: 애플리케이션 배포 시 초기 데이터베이스 설정이 필요한 경우, JSON 형태의 초기 데이터를 이 도구를 통해 SQL 문으로 변환하여 데이터베이스를 초기화할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El convertidor JSON a SQL es una herramienta robusta y eficiente diseñada para facilitar la transformación de datos estructurados en formato JSON a instrucciones SQL. Esta herramienta no solo genera sentencias SQL `INSERT` para insertar datos en tablas, sino que también incluye la opción de generar sentencias `CREATE TABLE` para crear la estructura de la tabla según los datos proporcionados. Esto es especialmente útil para desarrolladores y profesionales de bases de datos que necesitan migrar datos de fuentes JSON a sistemas de gestión de bases de datos relacionales (RDBMS) sin tener que escribir manualmente las sentencias SQL. La herramienta es capaz de interpretar la estructura jerárquica de los objetos JSON y traducirla a un formato SQL compatible, lo que ahorra tiempo y reduce el riesgo de errores en el proceso de migración. Además, la herramienta ofrece opciones para personalizar la salida, como la elección de delimitadores y la inclusión de claves primarias en las sentencias `CREATE TABLE`.",
+      "usage_steps": [
+        "Paso 1: Visite la página del convertidor JSON a SQL y asegúrese de que la pestaña 'Conversión' esté seleccionada en la parte superior.",
+        "Paso 2: En el área de entrada de JSON, pegue o escriba su array JSON. Asegúrese de que el JSON sea válido y esté correctamente formateado.",
+        "Paso 3: Seleccione la opción 'Generar CREATE TABLE' si desea que la herramienta genere automáticamente una sentencia SQL `CREATE TABLE` basada en la estructura de los datos JSON.",
+        "Paso 4: En la sección de opciones de salida, configure los parámetros según sus necesidades. Puede elegir el delimitador para las columnas y filas, así como decidir si desea incluir claves primarias en la tabla generada.",
+        "Paso 5: Haga clic en el botón 'Convertir a SQL' para procesar los datos. La herramienta analizará el JSON y generará las sentencias SQL correspondientes.",
+        "Paso 6: Revise las sentencias SQL generadas en el área de salida. Si todo está correcto, puede copiar y pegar las sentencias en su RDBMS para ejecutarlas."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador web necesita migrar datos de una API que devuelve resultados en formato JSON a una base de datos MySQL. Utiliza el convertidor JSON a SQL para generar sentencias `INSERT` y `CREATE TABLE` que luego ejecuta en MySQL para importar los datos de manera eficiente.",
+        "Ejemplo 2: Un administrador de bases de datos debe crear una tabla en PostgreSQL basada en un conjunto de datos JSON proporcionado por un cliente. Utiliza la herramienta para generar la sentencia `CREATE TABLE` y las sentencias `INSERT` para asegurarse de que la tabla y los datos se creen correctamente.",
+        "Ejemplo 3: Un equipo de desarrollo está trabajando en la integración de un sistema legacy con una nueva base de datos. Tienen un archivo JSON con datos de prueba y necesitan generar sentencias SQL para poblar la nueva base de datos. El convertidor JSON a SQL facilita este proceso al generar las sentencias SQL necesarias.",
+        "Ejemplo 4: Un analista de datos recibe un informe en formato JSON y necesita importarlo a una base de datos para realizar análisis. Utiliza la herramienta para convertir el JSON en sentencias SQL y luego importa los datos a la base de datos, lo que le permite comenzar su análisis de inmediato."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O JSON to SQL é uma ferramenta poderosa e versátil que converte arrays JSON em instruções SQL INSERT, com suporte para a criação de tabelas. Esta ferramenta é essencial para desenvolvedores e administradores de banco de dados que precisam migrar dados de formatos JSON para estruturas de banco de dados SQL. O processo de conversão é simplificado, permitindo que os usuários insiram arrays JSON complexos e obtenham instruções SQL precisas e formatadas corretamente. A ferramenta suporta uma ampla variedade de tipos de dados JSON, incluindo strings, números, booleanos, arrays aninhados e objetos. Além disso, ela gera automaticamente as instruções CREATE TABLE necessárias para criar a estrutura da tabela no banco de dados, facilitando a integração dos dados convertidos. Esta funcionalidade é particularmente útil em cenários de migração de dados, desenvolvimento de APIs e integração de sistemas.",
+      "usage_steps": [
+        "1. Acesse a ferramenta JSON to SQL no site e clique no botão 'Carregar JSON'.",
+        "2. Cole ou arraste o arquivo JSON contendo o array que deseja converter.",
+        "3. Selecione as opções de configuração, como o nome da tabela e o tipo de banco de dados (MySQL, PostgreSQL, etc.).",
+        "4. Clique no botão 'Gerar SQL' para iniciar o processo de conversão.",
+        "5. Revise as instruções SQL geradas, que incluem as instruções CREATE TABLE e INSERT.",
+        "6. Copie o código SQL gerado e execute-o no seu banco de dados para completar a migração de dados."
+      ],
+      "usage_examples": [
+        "1. Um desenvolvedor de backend precisa migrar dados de um arquivo JSON para um banco de dados MySQL. Ele usa o JSON to SQL para gerar as instruções SQL necessárias, garantindo que os dados sejam inseridos corretamente no banco de dados.",
+        "2. Um administrador de banco de dados está integrando um novo sistema que envia dados em formato JSON. Ele utiliza a ferramenta para converter esses dados em instruções SQL que podem ser executadas diretamente no banco de dados, facilitando a integração de sistemas.",
+        "3. Uma equipe de desenvolvimento está criando uma API que aceita dados em formato JSON e precisa armazená-los em um banco de dados PostgreSQL. O JSON to SQL é usado para gerar as instruções SQL apropriadas, otimizando o processo de desenvolvimento.",
+        "4. Um data scientist precisa transformar dados de uma API externa em tabelas SQL para análise. Ele utiliza a ferramenta para converter os dados JSON em instruções SQL, que são então executadas no banco de dados para criar tabelas estruturadas para análise."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le convertisseur JSON to SQL est un outil puissant destiné aux développeurs et aux administrateurs de bases de données en quête d'une solution efficace pour transformer des données JSON en instructions SQL. Techniquement, l'outil prend en charge la conversion de tableaux JSON en instructions SQL INSERT, tout en offrant la possibilité de générer des instructions CREATE TABLE si nécessaire. Cette fonctionnalité est particulièrement utile pour initialiser rapidement des bases de données avec des données structurées au format JSON. Les utilisateurs peuvent ainsi automatiser la création de tables et l'insertion de données, ce qui est idéal pour les migrations de données, les tests, et la mise en place de systèmes de données de manière agile. L'outil traite les types de données JSON, y compris les chaînes, les nombres, les tableaux, et les objets, en s'assurant que chaque élément est correctement mappé aux types de données SQL correspondants. Les options avancées permettent également de personnaliser les noms de tables et de colonnes, offrant ainsi une flexibilité maximale dans la gestion des données.",
+      "usage_steps": [
+        "Ouvrez l'outil JSON to SQL sur le site et localisez la zone de texte principale intitulée 'Entrée JSON'.",
+        "Copiez et collez votre tableau JSON dans la zone de texte 'Entrée JSON'. Assurez-vous que votre JSON est bien formé.",
+        "Cliquez sur l'onglet 'Options' pour configurer les paramètres avancés. Vous pouvez spécifier le nom de la table SQL, ainsi que les noms des colonnes si nécessaire.",
+        "Cochez la case 'Générer CREATE TABLE' si vous souhaitez que l'outil génère automatiquement l'instruction CREATE TABLE en plus des instructions INSERT.",
+        "Une fois votre configuration terminée, cliquez sur le bouton 'Convertir' en bas de la page. L'outil traitera votre JSON et générera les instructions SQL correspondantes.",
+        "Les résultats seront affichés dans la section 'Résultat SQL'. Vous pouvez copier ces instructions et les exécuter dans votre environnement de base de données préféré."
+      ],
+      "usage_examples": [
+        "Un développeur travaillant sur une application web qui reçoit des données sous forme de JSON et a besoin de les insérer rapidement dans une base de données MySQL peut utiliser cet outil pour automatiser ce processus, évitant ainsi des erreurs manuelles et gagnant du temps.",
+        "Un administrateur de base de données effectuant une migration de données depuis un système legacy à une nouvelle base de données relationnelle peut utiliser l'outil pour convertir les données JSON exportées en instructions SQL, facilitant ainsi la transition.",
+        "Un testeur de logiciel qui a besoin de générer des jeux de données pour des tests automatisés peut utiliser l'outil pour créer des instructions SQL à partir de fichiers JSON de données de test, assurant ainsi la cohérence et la reproductibilité des tests.",
+        "Un analyste de données travaillant avec des API qui renvoient des données JSON peut utiliser l'outil pour convertir ces données en format SQL, facilitant ainsi l'analyse et le traitement ultérieur dans un environnement de base de données relationnelle."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das JSON to SQL Tool ist eine leistungsfähige Online-Lösung, die es Entwicklern und Datenbankadministratoren ermöglicht, JSON-Arrays in SQL-INSERT-Anweisungen umzuwandeln, wobei auch CREATE TABLE-Unterstützung bereitgestellt wird. Die Umwandlung von JSON zu SQL ist besonders nützlich, wenn Daten aus Webanwendungen oder APIs in relationale Datenbanken integriert werden müssen. Die Tool-Funktionalität umfasst die Analyse der JSON-Struktur, die Erstellung der entsprechenden Tabellenstruktur und die Generierung von INSERT-Anweisungen. Dies spart Zeit und minimiert Fehler, die bei manuellen Transformationen auftreten können. Die SQL-Generierung unterstützt verschiedene Datenbanktypen und kann an spezifische Anforderungen angepasst werden. Die Tool-Oberfläche bietet Optionen zur Konfiguration der Tabelle, wie z.B. das Definieren von Primärschlüsseln und Indizes, was die Datenintegrität gewährleistet. Through advanced parsing and mapping techniques, the tool ensures that the JSON data is accurately represented in SQL format, making it a valuable asset for data migration projects, database testing, and development workflows.",
+      "usage_steps": [
+        "Öffnen Sie das JSON to SQL Tool auf der Website und navigieren Sie zur Hauptseite.",
+        "Klicken Sie auf den Button 'JSON-Code einfügen' und fügen Sie Ihren JSON-Array-Code in das Textfeld ein.",
+        "Wählen Sie im Dropdown-Menü 'Datenbanktyp' den gewünschten SQL-Dialekt (z.B. MySQL, PostgreSQL, SQL Server).",
+        "Klicken Sie auf 'Einstellungen bearbeiten' und konfigurieren Sie die Tabellenstruktur, einschließlich Primärschlüssel und Indizes.",
+        "Klicken Sie auf 'Umwandeln' und überprüfen Sie die generierten SQL-INSERT-Anweisungen und CREATE TABLE-Befehle.",
+        "Kopieren Sie den generierten SQL-Code und fügen Sie ihn in Ihre Datenbank-Management-Tool oder -Anwendung ein."
+      ],
+      "usage_examples": [
+        "Ein Webentwickler arbeitet an einer Anwendung, die Daten aus einer REST-API in einer MySQL-Datenbank speichert. Mit dem JSON to SQL Tool kann er schnell JSON-Responses in INSERT-Anweisungen umwandeln und die Datenbankstruktur automatisch erstellen.",
+        "Ein Datenbankadministrator führt eine Datenmigration durch und muss Daten aus einem NoSQL-Dokumentenstore in eine relationale SQL-Datenbank übertragen. Das Tool hilft ihm dabei, die JSON-Daten in die erforderliche SQL-Formatierung zu bringen.",
+        "Ein Softwaretester erstellt Testdaten für die Datenbank eines neuen Projekts. Er verwendet JSON-Objekte, um die Testdaten zu generieren, und wendet das Tool an, um die Daten effizient in die Datenbank zu importieren.",
+        "Ein Datenwissenschaftler arbeitet mit JSON-geformatierten Datensätzen und muss diese in eine SQL-Datenbank integrieren, um fortgeschrittene analytische Abfragen durchzuführen. Das JSON to SQL Tool erleichtert ihm die Vorbereitung der Daten für die Analyse."
+      ]
+    },
+    "ru": {
+      "detailed_description": "JSON to SQL — это мощный инструмент, предназначенный для преобразования массивов JSON в SQL-запросы для создания и заполнения таблиц. Этот инструмент особенно полезен для разработчиков и администраторов баз данных, которые часто сталкиваются с необходимостью преобразовать данные из JSON-формата в структуру, подходящую для реляционных баз данных.\n\nОдним из ключевых преимуществ JSON to SQL является его способность автоматически генерировать не только SQL-запросы INSERT, но и CREATE TABLE, что значительно упрощает процесс подготовки данных для импорта. Это особенно актуально при работе с большими объёмами данных, где ручное создание таблиц и записей может быть затратным и ошибочным.\n\nИнструмент поддерживает широкий спектр типов данных JSON, включая строки, числа, булевые значения и массивы. При преобразовании JSON-массива, инструмент анализирует структуру данных, определяет соответствующие типы данных SQL и создает подходящую структуру таблицы. Затем он автоматически формирует SQL-запросы для вставки данных в созданную таблицу. Это позволяет пользователям быстро и эффективно переносить данные из различных источников в их базы данных.",
+      "usage_steps": [
+        "Откройте страницу инструмента JSON to SQL на сайте.",
+        "В поле «JSON Data» вставьте или введите ваш JSON-массив. Убедитесь, что JSON корректен и содержит все необходимые данные.",
+        "Выберите таблицу, в которую будут вставляться данные, или оставьте поле пустым, если хотите, чтобы инструмент автоматически создал таблицу.",
+        "Выберите опцию «Create Table» в разделе «Options», если вы хотите, чтобы инструмент создал таблицу перед вставкой данных.",
+        "Нажмите кнопку «Convert» для запуска процесса преобразования. Инструмент проанализирует ваш JSON и сгенерирует соответствующие SQL-запросы.",
+        "Скопируйте сгенерированные SQL-запросы и выполните их в вашей базе данных для создания таблицы и вставки данных."
+      ],
+      "usage_examples": [
+        "Миграция данных из веб-сервиса: Предположим, у вас есть JSON-данные, полученные из API веб-сервиса, и вам нужно перенести эти данные в вашу базу данных. JSON to SQL позволяет быстро преобразовать эти данные в SQL-запросы, создавая таблицу и вставляя данные.",
+        "Импорт логов: Вы собрали логи системы в JSON-формате и хотите проанализировать их с помощью SQL-запросов. JSON to SQL помогает преобразовать логи в структуру, подходящую для реляционной базы данных, что облегчает анализ и визуализацию данных.",
+        "Синхронизация данных между системами: При необходимости синхронизации данных между двумя различными системами, где одна система предоставляет данные в формате JSON, а другая принимает данные в формате SQL, JSON to SQL обеспечивает быстрое и точное преобразование данных.",
+        "Тестирование баз данных: При разработке и тестировании баз данных часто требуется заполнить таблицы тестовыми данными. JSON to SQL позволяет быстро создать таблицы и заполнить их данными из JSON-файлов, что упрощает процесс тестирования и отладки."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة JSON إلى SQL هي أداة قوية ومتعددة الاستخدامات تتيح للمطورين تحويل المصفوفات JSON إلى تعبيرات SQL للإدخال (INSERT) مع دعم إنشاء الجداول (CREATE TABLE). تعتبر هذه الأداة ضرورية للمطورين الذين يعملون على مشاريع تتطلب تكامل البيانات بين تنسيقات JSON وقواعد البيانات的关系型数据。通过使用JSON到SQL工具，用户可以轻松地将复杂的JSON数据结构转换为适合存储在关系型数据库中的SQL语句。这对于数据迁移、数据导入以及任何需要将非结构化或半结构化数据转换为结构化格式的场景都非常有用。此外，该工具还支持自动生成CREATE TABLE语句，这有助于简化数据库表结构的创建过程，确保数据模型的一致性和完整性。通过这种转换，开发人员可以更高效地管理和操作数据，提高开发效率和数据处理的速度。",
+      "usage_steps": [
+        "خطوة 1: قم بزيارة الصفحة الرئيسية لأداة JSON إلى SQL على موقع الويب.",
+        "خطوة 2: في الحقل المخصص لـ JSON، أدخل أو حمّل ملف JSON الذي تريد تحويله.",
+        "خطوة 3: اختر الخيار 'إنشاء جدول' إذا كنت تريد توليد تعبيرات CREATE TABLE بالإضافة إلى INSERT.",
+        "خطوة 4: قم بتحديد خيارات التحويل الإضافية مثل تعيين أنواع البيانات وإضافة قيود.",
+        "خطوة 5: انقر على زر 'تحويل' لإنشاء التعبيرات SQL.",
+        "خطوة 6: راجع النتائج النهائية وانسخ التعبيرات SQL الناتجة لاستخدامها في قاعدة البيانات الخاصة بك."
+      ],
+      "usage_examples": [
+        "مثال 1: مشاريع إدارة المحتوى: يمكن للمطورين استخدام هذه الأداة لتحويل بيانات المحتوى من تنسيق JSON إلى SQL لإدخالها في قاعدة بيانات محتوى الموقع.",
+        "مثال 2: تطبيقات التجارة الإلكترونية: عند ترحيل بيانات المنتجات من نظام إدارة المخزون إلى قاعدة بيانات الموقع الإلكتروني، يمكن لهذه الأداة تبسيط العملية بشكل كبير.",
+        "مثال 3: تطبيقات الويب للمؤسسات: في بيئة المؤسسات، يمكن للمطورين استخدام JSON إلى SQL لتحويل بيانات العملاء والمعاملات من أنظمة خارجية إلى قواعد بيانات داخلية.",
+        "مثال 4: تطبيقات анализ البيانات: عند تحليل بيانات غير مرتبة أو نصف مرتبة، يمكن استخدام هذه الأداة لتحويل البيانات إلى تنسيق SQL يمكن معالجته بسهولة بواسطة أدوات تحليل البيانات."
+      ]
+    }
+  }
+}

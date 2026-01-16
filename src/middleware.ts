@@ -208,10 +208,11 @@ export default function middleware(request: NextRequest) {
       const toolSlug = toolMatch[1];
       const redirectTo = TOOL_REDIRECTS[toolSlug];
       if (redirectTo) {
-        const url = request.nextUrl.clone();
-        url.pathname = `/${currentLocale}/tools/${redirectTo}`;
-        // 使用 301 永久重定向
-        return NextResponse.redirect(url, { status: 301 });
+        // 使用绝对 URL 进行 301 永久重定向
+        // @see Requirements 2.1, 2.2
+        const CANONICAL_DOMAIN = 'https://www.u2tool.com';
+        const absoluteUrl = `${CANONICAL_DOMAIN}/${currentLocale}/tools/${redirectTo}`;
+        return NextResponse.redirect(absoluteUrl, { status: 301 });
       }
     }
     
@@ -236,21 +237,27 @@ export default function middleware(request: NextRequest) {
   const detectedLocale = detectLocale(request);
   const savedLocale = request.cookies.get(LOCALE_COOKIE)?.value as Locale | undefined;
   
-  // 构建重定向 URL
-  const url = request.nextUrl.clone();
-  url.pathname = pathname === '/' 
+  // 规范域名（确保使用 www 前缀）
+  // @see Requirements 2.1, 2.2 - 使用绝对 URL 重定向
+  const CANONICAL_DOMAIN = 'https://www.u2tool.com';
+  
+  // 构建绝对 URL（使用规范域名）
+  const targetPath = pathname === '/' 
     ? `/${detectedLocale}` 
     : `/${detectedLocale}${pathname}`;
+  const absoluteUrl = `${CANONICAL_DOMAIN}${targetPath}`;
   
   // 对搜索引擎爬虫使用 rewrite 而非 redirect，避免"网页会自动重定向"问题
   // 这样爬虫可以直接看到页面内容，而不会收到重定向响应
   if (isSearchEngineBot) {
+    const url = request.nextUrl.clone();
+    url.pathname = targetPath;
     return NextResponse.rewrite(url);
   }
   
-  // 对普通用户使用 301 永久重定向（而非默认的 307 临时重定向）
-  // 这告诉浏览器和搜索引擎这是永久性的 URL 变更
-  const response = NextResponse.redirect(url, { status: 301 });
+  // 对普通用户使用 301 永久重定向到绝对 URL
+  // 这告诉浏览器和搜索引擎这是永久性的 URL 变更，并明确指定规范域名
+  const response = NextResponse.redirect(absoluteUrl, { status: 301 });
   
   // 设置语言偏好 cookie
   if (!savedLocale) {

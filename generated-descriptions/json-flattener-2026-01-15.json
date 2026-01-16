@@ -1,0 +1,175 @@
+{
+  "slug": "json-flattener",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The JSON Flattener is a powerful utility designed to simplify the handling of complex, nested JSON objects. It converts deeply nested JSON structures into a flat, key-value format, and vice versa. This tool is particularly useful for developers working with APIs, database queries, and data transformation tasks where nested JSON can complicate data processing and analysis. By flattening JSON, you can more easily manipulate and query data, making it ideal for scenarios such as data migration, data normalization, and API integration. The tool supports custom delimiters and can handle arrays and nested objects without losing data integrity. Under the hood, the JSON Flattener uses a recursive algorithm to traverse the JSON structure, converting it into a flat format where each key is a concatenated path to the original value. Conversely, the unflatten function reconstructs the original nested structure from the flat format, ensuring that the data remains consistent and usable.",
+      "usage_steps": [
+        "Step 1: Navigate to the JSON Flattener tool on the website.",
+        "Step 2: Click the 'Load JSON' button to either paste your JSON data directly into the input field or upload a JSON file.",
+        "Step 3: Choose the 'Flatten' or 'Unflatten' option depending on your needs.",
+        "Step 4: If flattening, select a delimiter (e.g., '.', '_', '-') to use in the flat keys.",
+        "Step 5: Click the 'Process' button to apply the selected operation.",
+        "Step 6: Review the output in the result area, and click 'Download' to save the processed JSON to your device."
+      ],
+      "usage_examples": [
+        "Example 1: A developer working with a REST API receives a deeply nested JSON response. Using the JSON Flattener, they can flatten the JSON to make it easier to parse and manipulate in their application.",
+        "Example 2: A data analyst needs to normalize a dataset for a SQL database. The JSON Flattener helps convert nested JSON into a flat format that can be directly imported into the database tables.",
+        "Example 3: A frontend developer is integrating a third-party API that returns nested JSON. By flattening the JSON, they can more easily map the data to UI components and reduce the complexity of their code.",
+        "Example 4: A backend engineer is implementing a data migration tool that needs to convert data from a NoSQL database to a relational database. The JSON Flattener ensures that the nested JSON data is correctly flattened and then unflattened for consistent data transfer."
+      ]
+    },
+    "zh": {
+      "detailed_description": "JSON Flattener 是一个强大的在线工具，专为处理嵌套的 JSON 对象而设计。该工具可以将复杂的嵌套 JSON 结构展平为一个扁平化的键值对列表，或者将扁平化的键值对列表还原为原始的嵌套 JSON 结构。这对于需要频繁处理 JSON 数据的开发人员来说尤其有用，尤其是在数据交换、API 测试、和配置管理等场景中。通过使用 JSON Flattener，用户可以轻松地解析和重组 JSON 数据，提高数据处理的效率和准确性。该工具采用递归算法，确保即使是深度嵌套的 JSON 对象也能被高效地展平或还原。",
+      "usage_steps": [
+        "Step 1: 访问 JSON Flattener 工具页面，找到输入框。",
+        "Step 2: 在输入框中粘贴或手动输入需要处理的 JSON 数据。",
+        "Step 3: 选择操作模式——展平（Flatten）或还原（Unflatten）。",
+        "Step 4: 如果选择展平模式，工具会将嵌套的 JSON 结构转换为扁平化的键值对列表。",
+        "Step 5: 如果选择还原模式，工具会将扁平化的键值对列表转换回原始的嵌套 JSON 结构。",
+        "Step 6: 处理完成后，工具会显示结果，用户可以复制结果或直接下载 JSON 文件。"
+      ],
+      "usage_examples": [
+        "Example 1: 在 API 测试中，需要将复杂的 JSON 响应数据展平以便于分析和调试。",
+        "Example 2: 在配置管理中，将多个层级的配置文件展平为单层，便于版本控制和差异对比。",
+        "Example 3: 在数据交换过程中，将大数据集中的嵌套 JSON 数据展平，便于数据导入和导出操作。",
+        "Example 4: 在前端开发中，将接口返回的嵌套 JSON 数据展平，简化数据处理逻辑，提高前端性能。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "JSON Flattenerは、ネストされたJSONオブジェクトをフラット化またはその逆を行う強力なツールです。JSONデータは、APIからのレスポンスやデータ交換の際に多層構造を持つことが多く、これによりデータの取り扱いが複雑になることがあります。このツールを使用することで、ユーザーは複雑なネスト構造を単純なフラットな構造に変換し、またはその逆の操作を行うことができます。これにより、データの処理や分析が格段に楽になります。具体的には、`flatten`関数を使用してネストされたプロパティをフラット化し、`unflatten`関数を使用してフラット化されたプロパティを再構築することができます。また、ユーザーは変換の深さやキーの区切り文字をカスタマイズすることも可能です。",
+      "usage_steps": [
+        "ステップ 1: JSON Flattenerのウェブページを開き、画面中央の「JSONを入力」エリアにネストされたJSONデータをペーストします。",
+        "ステップ 2: 「オプション設定」セクションで変換モードを選択します。フラット化を行う場合は「Flatten」を選択し、再構築を行う場合は「Unflatten」を選択します。",
+        "ステップ 3: 変換の深さを設定します。デフォルトは無制限ですが、必要に応じて数値を入力することで制限できます。",
+        "ステップ 4: キーの区切り文字をカスタマイズします。デフォルトはピリオド（.）ですが、任意の文字を使用できます。",
+        "ステップ 5: 「変換」ボタンをクリックします。処理が完了すると、結果が「結果表示」エリアに表示されます。",
+        "ステップ 6: 結果をコピーして利用する、または「元に戻す」ボタンをクリックして元のJSONデータに戻すことができます。"
+      ],
+      "usage_examples": [
+        "Example 1: APIから取得した複雑なJSONデータをフラット化して、データベースに挿入する前に必要なフィールドを簡単に抽出します。",
+        "Example 2: ログファイルに記録されたフラットなJSONデータを再構築し、元のネスト構造を復元して分析ツールで使用します。",
+        "Example 3: コンフィギュレーションファイルのネスト構造をフラット化して、設定の変更を簡単に管理します。",
+        "Example 4: データ移行プロジェクトで、異なるシステム間でデータを移転する際、ソースシステムのネスト構造をフラット化して、ターゲットシステムのフォーマットに合わせます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "JSON Flattener는 복잡한 중첩된 JSON 객체를 단순화하거나, 평탄화된 JSON을 원래 형태로 되돌리는 도구입니다. 이 도구는 개발자가 데이터를 효율적으로 처리하고 분석할 수 있도록 설계되었습니다. 일반적으로 JSON 데이터는 여러 레벨의 중첩을 가질 수 있으며, 이러한 구조는 데이터 처리나 분석 시 복잡성을 증가시키는 경우가 많습니다. JSON Flattener를 사용하면 개발자는 중첩된 JSON 객체를 평탄화하여 각 항목을 단일 레벨로 변환할 수 있으며, 필요에 따라 다시 원래의 중첩 구조로 복원할 수도 있습니다. 이 도구는 데이터 전처리, API 응답 분석, 데이터베이스 저장 및 검색 등 다양한 시나리오에서 유용하게 사용될 수 있습니다. JSON Flattener는 사용자가 지정한 경로와 키를 기반으로 JSON 객체를 재구성하여, 데이터의 가독성을 높이고 처리 효율을 개선합니다.",
+      "usage_steps": [
+        "1. JSON Flattener 페이지에서 'JSON 입력' 섹션에 중첩된 JSON 객체를 붙여넣습니다.",
+        "2. '플랫트너 옵션' 섹션에서 '플랫트너 모드'를 '평탄화' 또는 '복원'으로 선택합니다.",
+        "3. '키 분리자' 옵션을 통해 키 간의 구분 기호를 선택하거나 사용자 정의할 수 있습니다.",
+        "4. '중첩 제한' 옵션을 통해 최대 중첩 레벨을 설정합니다. 이 옵션은 성능 최적화에 도움이 됩니다.",
+        "5. '변환 실행' 버튼을 클릭하여 JSON 객체를 평탄화하거나 복원합니다.",
+        "6. '결과' 섹션에서 변환된 JSON 객체를 확인하고 필요에 따라 복사하거나 다운로드할 수 있습니다."
+      ],
+      "usage_examples": [
+        "Example 1: API 응답 분석 - 개발자가 API 호출로 받은 중첩된 JSON 응답을 평탄화하여 쉽게 분석하고 디버깅할 수 있습니다.",
+        "Example 2: 데이터베이스 저장 - 중첩된 JSON 데이터를 평탄화하여 데이터베이스에 효율적으로 저장할 수 있습니다. 필요에 따라 데이터를 다시 복원하여 사용할 수 있습니다.",
+        "Example 3: 데이터 시각화 - 복잡한 JSON 데이터를 평탄화하여 차트나 그래프로 시각화할 때 데이터의 구조를 단순화할 수 있습니다.",
+        "Example 4: 로그 파일 분석 - 중첩된 로그 데이터를 평탄화하여 로그 분석 도구에서 더 쉽게 처리할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El JSON Flattener es una herramienta avanzada diseñada para manipular objetos JSON anidados, permitiendo a los desarrolladores convertir estructuras de datos complejas en formatos más manejables. Técnicamente, esta herramienta descompone un objeto JSON anidado en una lista plana de pares clave-valor, donde cada clave es una representación concatenada de las claves de los niveles superiores. Esto es especialmente útil en escenarios donde los datos JSON deben ser procesados por sistemas que solo aceptan datos planos, como tablas de bases de datos o formatos de archivo CSV. Además, el JSON Flattener también ofrece la opción de realizar la operación inversa, es decir, transformar un JSON plano de vuelta a su estructura anidada original. Estas funcionalidades son cruciales en el desarrollo de aplicaciones que requieren la normalización de datos para su procesamiento o almacenamiento, o la desnormalización de datos para su presentación en interfaces de usuario o en APIs.",
+      "usage_steps": [
+        "Paso 1: Acceda a la página del JSON Flattener en nuestra plataforma de herramientas de desarrollo.",
+        "Paso 2: En el área de entrada, pegue el JSON anidado que desea aplanar o desaplanar.",
+        "Paso 3: Seleccione la operación que desea realizar: 'Aplanar' para convertir el JSON anidado en un formato plano, o 'Desaplanar' para convertir un JSON plano en un formato anidado.",
+        "Paso 4: Configure las opciones de separador de claves si desea personalizar el formato de las claves resultantes en el JSON aplanado.",
+        "Paso 5: Presione el botón 'Procesar' para ejecutar la transformación del JSON.",
+        "Paso 6: Revise el JSON resultante en el área de salida y copie el resultado para su uso posterior."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador necesita enviar datos JSON anidados a una base de datos que solo acepta datos en formato plano. Utiliza el JSON Flattener para aplanar el JSON antes de la inserción.",
+        "Ejemplo 2: Un analista de datos trabaja con un archivo CSV que contiene datos aplanados y necesita convertirlos en un formato JSON anidado para facilitar el análisis. Utiliza el JSON Flattener para desaplanar los datos.",
+        "Ejemplo 3: Un equipo de backend está desarrollando una API que recibe datos JSON anidados y los almacena en una base de datos. Utilizan el JSON Flattener para aplanar los datos antes de su almacenamiento y desaplanarlos al recuperarlos para su uso en la API.",
+        "Ejemplo 4: Un ingeniero de datos está procesando logs de aplicaciones que contienen estructuras JSON anidadas. Utiliza el JSON Flattener para aplanar los logs antes de su procesamiento en un sistema de análisis de datos en tiempo real."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O JSON Flattener é uma ferramenta de codificação avançada que permite a transformação de objetos JSON aninhados em estruturas planas e vice-versa. Esta funcionalidade é extremamente útil em diversos cenários de desenvolvimento, especialmente quando é necessário manipular dados em formatos simplificados ou reintegrar dados planos em estruturas complexas. A necessidade de tal ferramenta surge frequentemente em APIs modernas, onde a simplicidade dos dados pode facilitar a integração com diferentes sistemas. Além disso, em contextos de análise de dados, a planificação de objetos JSON pode tornar mais fácil a manipulação e a visualização de informações em bancos de dados relacionais ou em ferramentas de business intelligence. O JSON Flattener opera internamente convertendo recursivamente os pares chave-valor de um objeto aninhado em pares chave-valor planos, onde as chaves são concatenadas de forma hierárquica. Para a operação inversa, o processo é desfeito, reconstruindo a estrutura original a partir das chaves planas.",
+      "usage_steps": [
+        "Acesse a página do JSON Flattener no site de ferramentas de desenvolvimento.",
+        "No painel superior, selecione o modo de operação desejado: 'Flatten' para planificar JSON ou 'Unflatten' para desplanificar JSON.",
+        "Cole o JSON que deseja transformar no campo de entrada 'JSON de Entrada'.",
+        "Clique no botão 'Transformar' para iniciar o processo de planificação ou desplanificação.",
+        "Revise o resultado no campo 'JSON Transformado' para verificar se a operação foi bem-sucedida.",
+        "Se necessário, faça o download do JSON transformado ou copie o resultado diretamente do campo de saída."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de APIs precisa preparar dados para serem consumidos por um sistema legado que não suporta estruturas JSON aninhadas. Usando o JSON Flattener, ele planifica o JSON, facilitando a integração.",
+        "Uma equipe de análise de dados precisa importar dados JSON complexos em um banco de dados relacional. O JSON Flattener ajuda a transformar os dados em um formato plano, tornando a importação mais eficiente.",
+        "Um engenheiro de software está desenvolvendo um painel de visualização de dados e precisa simplificar a estrutura dos dados JSON para facilitar a exibição em gráficos e tabelas. O JSON Flattener permite a planificação rápida dos dados.",
+        "Um analista de dados está trabalhando em um projeto de machine learning e precisa converter dados JSON aninhados em um formato mais simples para processamento. A ferramenta JSON Flattener auxilia na preparação dos dados, tornando-os prontos para serem usados em modelos de aprendizado de máquina."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le JSON Flattener est un outil puissant destiné aux développeurs et aux professionnels de la données qui doivent manipuler des objets JSON complexes. Techniquement, cet outil transforme des structures de données JSON imbriquées en une représentation plate, où chaque clé est un chemin complet à travers l'arborescence d'origine. Par exemple, une clé `user.address.street` dans le JSON aplati représenterait la valeur de `street` au sein de l'objet `address` lui-même contenu dans l'objet `user`. Cette transformation est particulièrement utile pour simplifier l'analyse de données, l'intégration de données dans des bases de données relationnelles ou l'exportation de données vers des formats plus simples comme CSV.\n\nLes utilisateurs ont besoin de cet outil pour plusieurs raisons. Premièrement, il facilite la manipulation de grands ensembles de données JSON en les transformant en un format plus lisible et plus facile à traiter. Deuxièmement, il aide à résoudre les problèmes liés à l'importation de données JSON imbriquées dans des systèmes qui ne supportent pas les structures complexes. Enfin, il est essentiel pour les développeurs qui doivent normaliser des données avant de les intégrer dans des applications ou des services web.\n\nLe fonctionnement du JSON Flattener est basé sur la récursivité. L'outil parcourt récursivement chaque niveau de l'objet JSON, en construisant une nouvelle structure où chaque clé est un chemin complet. Les valeurs sont conservées intactes, et les clés sont générées en utilisant des séparateurs standard (par défaut, un point `.`). L'utilisateur peut également choisir de délimiter les clés avec d'autres caractères, ce qui offre une flexibilité supplémentaire pour s'adapter à différents formats et besoins.",
+      "usage_steps": [
+        "Accédez à la page d'accueil de l'outil JSON Flattener sur le site.",
+        "Dans la section \"JSON Input\", collez le JSON imbriqué que vous souhaitez aplatir.",
+        "Sélectionnez l'option \"Flatten JSON\" si vous voulez aplatir le JSON, ou \"Unflatten JSON\" si vous voulez restaurer une structure imbriquée à partir d'un JSON aplati.",
+        "Choisissez le séparateur de clé dans le menu déroulant. Les options courantes sont le point `.` et le tiret `-`.",
+        "Cliquez sur le bouton \"Process\" pour exécuter la transformation.",
+        "Visualisez le résultat dans la section \"JSON Output\". Vous pouvez ensuite copier le JSON transformé et l'utiliser selon vos besoins."
+      ],
+      "usage_examples": [
+        "Un développeur travaille sur une application de gestion de clients et doit importer des données JSON contenant des informations détaillées sur les adresses des clients. En utilisant JSON Flattener, il peut aplatir ces données pour les importer facilement dans une base de données relationnelle, où chaque champ correspond à une colonne spécifique.",
+        "Une entreprise de marketing souhaite analyser des données de campagne contenant des objets JSON imbriqués avec des informations sur les clics, les conversions et les interactions des utilisateurs. En aplatissant ces données, l'équipe de data science peut plus facilement visualiser et analyser les tendances à l'aide de tableaux de bord.",
+        "Un administrateur système doit exporter des logs d'activité d'une application web en format CSV. Les logs contiennent des structures JSON imbriquées, ce qui complique l'exportation directe. JSON Flattener permet d'aplatir ces logs, facilitant ainsi leur conversion en CSV.",
+        "Un ingénieur de données travaille sur un projet d'ingestion de données où les sources fournissent des documents JSON avec des structures complexes. En utilisant JSON Flattener pour normaliser ces données, il peut s'assurer que toutes les données sont uniformément traitées et prêtes pour l'ingestion dans un data warehouse."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das JSON Flattener-Tool ermöglicht es Entwicklern, komplexe, verschachtelte JSON-Objekte in eine flache Struktur zu transformieren und umgekehrt. Technisch gesehen, konvertiert das Tool jedes verschachtelte Feld in einen Schlüssel, der die Pfadstruktur des ursprünglichen JSON-Dokuments widerspiegelt. Dies ist besonders nützlich, wenn JSON-Daten in Tabellenform oder für Datenbanken wie SQL verwendet werden müssen, die verschachtelte Strukturen nicht direkt unterstützen. Umgekehrt kann das Tool auch flache JSON-Objekte in ihre ursprüngliche verschachtelte Form zurückverwandeln, was die Manipulation und Analyse von JSON-Daten erleichtert. Benutzer können das Tool zur Vorbereitung von Daten für die API-Tests, zur Vereinfachung von Daten-Logging-Prozessen oder zur Optimierung von Datenimporten in verschiedene Systeme nutzen. Die Verwendung des JSON Flattener-Tools erfordert keine spezielle Programmierkenntnisse, da die gesamte Prozessierung über eine benutzerfreundliche Web-Oberfläche erfolgt. Die Technologie hinter dem Tool basiert auf modernen Algorithmen zur rekursiven Verarbeitung von JSON-Strukturen, die es ermöglichen, auch sehr komplexe und große JSON-Objekte effizient zu bearbeiten.",
+      "usage_steps": [
+        "Öffnen Sie die JSON Flattener-Seite auf der Website.",
+        "Klicken Sie auf den Button 'JSON einfügen' und fügen Sie das zu verarbeitende JSON-Objekt ein.",
+        "Wählen Sie im Dropdown-Menü 'Aktion' die Option 'Flachstruktur erstellen', um das JSON-Objekt zu flachzulegen, oder 'Verschachtelung wiederherstellen', um eine flache Struktur zu verschachteln.",
+        "Klicken Sie auf den Button 'Verarbeiten', um die Transformation zu starten.",
+        "Das Tool verarbeitet die Daten und zeigt das Ergebnis in der Ausgabebox an.",
+        "Sie können das transformierte JSON-Objekt kopieren, indem Sie auf den Button 'Ergebnis kopieren' klicken."
+      ],
+      "usage_examples": [
+        "Ein Entwickler bereitet Daten für die API-Tests vor und muss eine komplexe JSON-Struktur in eine flache Form umwandeln, um sie in eine Tabelle zu importieren. Das JSON Flattener-Tool ermöglicht es ihm, die Daten schnell und ohne manuelle Anpassungen zu konvertieren.",
+        "Ein Data Scientist arbeitet mit einer großen Menge an JSON-Logs und benötigt eine flache Struktur, um die Daten in eine SQL-Datenbank zu importieren. Das Tool hilft ihm, die Struktur der Logs zu vereinfachen, sodass die Importprozesse effizienter verlaufen.",
+        "Ein Software-Architekt optimiert den Datenimport in ein NoSQL-Datenbanksystem und muss sicherstellen, dass die JSON-Daten die erforderliche verschachtelte Struktur aufweisen. Das JSON Flattener-Tool ermöglicht es ihm, flache JSON-Objekte in die erforderliche Form zurückzuwandeln.",
+        "Ein Frontend-Entwickler erstellt ein Dashboard und muss JSON-Daten in einer Tabelle darstellen. Das Tool hilft ihm, die Daten flach zu legen, sodass sie leichter zu verarbeiten und anzuzeigen sind."
+      ]
+    },
+    "ru": {
+      "detailed_description": "JSON Flattener — это мощный инструмент, предназначенный для преобразования вложенных JSON-объектов в плоскую структуру и обратно. Технически, этот инструмент позволяет пользователям преобразовать сложные, многоуровневые JSON-объекты в простую, одномерную структуру, что облегчает их обработку и анализ. Например, вложенная структура, где данные хранятся в виде объектов внутри объектов, может быть преобразована в плоскую структуру, где каждый ключ содержит путь к соответствующему значению. Это особенно полезно при работе с большими и сложными JSON-файлами, такими как конфигурационные файлы, данные API или структурированные данные из баз данных. Инструмент JSON Flattener поддерживает различные опции, такие как разделение ключей, преобразование значений и сохранение оригинальных ключей, что делает его универсальным и гибким инструментом для разработчиков и аналитиков. Процесс работы с JSON Flattener включает загрузку JSON-данных, выбор режима преобразования (flattening или unflattening), настройку параметров преобразования и получение результата. Использование этого инструмента значительно упрощает работу с JSON-данными, экономя время и уменьшая вероятность ошибок.",
+      "usage_steps": [
+        "Откройте страницу JSON Flattener на сайте инструментов для разработчиков.",
+        "В разделе 'Input JSON' вставьте или загрузите JSON-объект, который вы хотите преобразовать.",
+        "Выберите режим преобразования: 'Flatten' для плоского представления или 'Unflatten' для восстановления вложенной структуры.",
+        "Настройте параметры преобразования, такие как разделитель ключей (например, точка или двоеточие) и опции для обработки значений.",
+        "Нажмите кнопку 'Transform' для выполнения преобразования.",
+        "Просмотрите результат в разделе 'Output JSON' и, при необходимости, скопируйте или скачайте преобразованные данные."
+      ],
+      "usage_examples": [
+        "Аналитик работает с большими JSON-данными, полученными из API, и использует JSON Flattener для преобразования вложенной структуры в плоскую, что облегчает импорт данных в таблицы и базы данных.",
+        "Разработчик конфигурационных файлов использует JSON Flattener для упрощения структуры конфигурационных данных, что делает их более читаемыми и удобными для редактирования.",
+        "Тестировщик API использует JSON Flattener для преобразования сложных JSON-ответов в плоскую структуру, что упрощает проверку и валидацию данных.",
+        "Администратор баз данных использует JSON Flattener для преобразования данных, экспортированных из базы данных, в плоский формат, что облегчает их анализ и обработку в различных инструментах и приложениях."
+      ]
+    },
+    "ar": {
+      "detailed_description": "JSON Flattener هو أداة قوية ومتطورة تهدف إلى تبسيط التعامل مع الكائنات JSON المieżدة. يقوم هذا الأداة بتحويل الهياكل JSON المعقدة والمieżدة إلى صيغة مسطحة وبسيطة، مما يسهل معالجتها وتحليلها. بالإضافة إلى ذلك، يمكن للأداة إعادة تكوين الكائنات JSON المسطحة إلى شكلها الأصلي الميزد، مما يوفر مرونة في استخدام البيانات. هذا الأداة ضرورية للمطورين الذين يعملون على مشاريع تتطلب تحليل البيانات أو نقلها بفعالية، حيث يمكن أن تساعد في تحسين الكفاءة والأداء. يمكن استخدام JSON Flattener في مجموعة متنوعة من السيناريوهات، مثل تبسيط البيانات قبل تخزينها في قواعد البيانات، أو تحويل البيانات لاستخدامها في تطبيقات الويب والجوال. يعمل الأداة من خلال تحليل الهيكل الأصلي للبيانات JSON وتوليد نسخة مسطحة تحتوي على كل المعرفات والمفاتيح الفرعية في شكل محدد ومتناسق. يمكن للمستخدمين أيضاً استخدام الخيارات المتقدمة لضبط مستوى التسطيح والتحكم في كيفية معالجة البيانات.",
+      "usage_steps": [
+        "افتح أداة JSON Flattener على الموقع.",
+        "انقر على زر 'تحميل JSON' واختر الملف JSON الذي تريد تسطيحه أو انسخ ولصق الكود JSON في الحقل المخصص.",
+        "حدد خيار 'تسطيح' لتحويل الكائن JSON الميزد إلى صيغة مسطحة.",
+        "استخدم الخيارات المتقدمة لضبط مستوى التسطيح، مثل تضمين المفاتيح الفرعية أو عدم تضمينها.",
+        "انقر على زر 'معالج' لإنشاء النسخة المسطحة من الكائن JSON.",
+        "قم بتنزيل النسخة المسطحة من الكائن JSON أو انسخ الكود المسطح للاستخدام في مشروعك."
+      ],
+      "usage_examples": [
+        "مطور الويب يستخدم JSON Flattener لتسطيح البيانات قبل تخزينها في قاعدة بيانات NoSQL، مما يسهل الاستعلامات والعمليات.",
+        "فريق تحليل البيانات يحول البيانات JSON المعقدة إلى شكل مسطح لتسهيل تحليل البيانات وإنشاء التقارير.",
+        "مهندس البرمجيات يستخدم JSON Flattener لتبسيط البيانات قبل إرسالها إلى خدمة API، مما يحسن الأداء ويقلل من حجم البيانات الم sent.",
+        "مطور تطبيقات الموبايل يستخدم JSON Flattener لتحويل البيانات JSON الميزدة إلى شكل مسطح لتسهيل عرض البيانات في واجهة المستخدم."
+      ]
+    }
+  }
+}

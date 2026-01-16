@@ -1,0 +1,124 @@
+{
+  "slug": "json-escape",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The JSON Escape/Unescape tool is designed to facilitate the manipulation of JSON strings for developers working with web applications, APIs, and frontend technologies. JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. However, when JSON data is transmitted over the internet or used in contexts where certain characters need to be represented in a specific way, it often requires escaping or unescaping. This tool automates the process, ensuring that JSON strings are correctly formatted and safe for use in various environments.\n\nEscaping JSON involves converting certain characters, such as double quotes (\"), backslashes (\\), and control characters, into their escaped equivalents. This is essential when embedding JSON data into a script tag within an HTML document or when sending JSON data via URL parameters. Conversely, unescaping JSON reverses this process, converting escaped characters back to their original form, which is necessary when the data is received and needs to be parsed into a usable format.\n\nThe tool operates by accepting a JSON string as input and applying the appropriate escaping or unescaping rules based on the user's selection. It leverages JavaScript's built-in JSON methods, such as `JSON.stringify` for escaping and `JSON.parse` for unescaping, to ensure accuracy and reliability. By using this tool, developers can avoid common issues like syntax errors and data corruption, making their applications more robust and secure.",
+      "usage_steps": [
+        "Step 1: Open the JSON Escape/Unescape tool page on the website.",
+        "Step 2: Locate the input text area labeled 'JSON Input' and paste your JSON string into this field.",
+        "Step 3: Choose the operation you want to perform by selecting either 'Escape JSON' or 'Unescape JSON' from the dropdown menu below the input area.",
+        "Step 4: If you are escaping JSON, you can optionally enable the 'Format Output' checkbox to receive a pretty-printed version of the escaped JSON.",
+        "Step 5: Click the 'Process' button to apply the selected operation to your JSON string.",
+        "Step 6: The tool will display the result in the 'Output' text area. You can copy this result to your clipboard by clicking the 'Copy to Clipboard' button."
+      ],
+      "usage_examples": [
+        "Example 1: A frontend developer is embedding JSON data into an HTML script tag. They need to ensure that double quotes and backslashes are properly escaped to prevent syntax errors. The JSON Escape/Unescape tool helps them quickly escape the JSON string.",
+        "Example 2: An API developer is testing a new endpoint that returns JSON data. They receive a response with escaped characters and need to unescape it to verify the structure and content of the JSON object. The tool allows them to unescape the JSON and inspect it easily.",
+        "Example 3: A web application uses JSON data in URL parameters. Before appending the JSON to the URL, the developer uses the tool to escape the string, ensuring that special characters do not interfere with the URL's integrity.",
+        "Example 4: A data analyst is working with a JSON file that contains escaped characters. They need to unescape the JSON to analyze the data accurately. The JSON Escape/Unescape tool simplifies this process, allowing them to unescape the JSON and work with the raw data."
+      ]
+    },
+    "ko": {
+      "detailed_description": "JSON Escape/Unescape 도구는 JSON 문자열을 안전하게 처리할 수 있도록 escape와 unescape 기능을 제공합니다. 이 도구는 JSON 데이터를 웹 애플리케이션, API 호출, 데이터베이스에서 안전하게 전송하거나 저장할 때 매우 유용합니다. JSON 데이터는 특수 문자를 포함할 수 있으며, 이러한 문자를 그대로 사용하면 구문 오류가 발생할 수 있습니다. 예를 들어, 이스케이프되지 않은 따옴표는 JSON 구문을 깨뜨릴 수 있습니다. 이 도구를 사용하면 이러한 특수 문자를 이스케이프하거나 원래 형태로 복원할 수 있습니다. 이스케이프 과정에서는 특수 문자가 이스케이프 시퀀스(예: \", \\, \\/)로 변환됩니다. 이는 JSON 데이터가 올바르게 인터프리팅되도록 보장합니다. 또한, unescape 기능은 이스케이프 시퀀스를 원래의 특수 문자로 복원합니다. 이 도구는 데이터 정합성을 유지하면서 JSON 데이터를 안전하게 처리하고 전송하는 데 필수적입니다.",
+      "usage_steps": [
+        "1. 웹사이트 상단 메뉴에서 'Encoding' 카테고리를 클릭하고 'JSON Escape/Unescape' 옵션을 선택합니다.",
+        "2. 'Input' 영역에 이스케이프하거나 언이스케이프할 JSON 문자열을 입력합니다.",
+        "3. 'Mode' 드롭다운 메뉴에서 'Escape' 또는 'Unescape' 옵션을 선택합니다.",
+        "4. 'Options' 섹션에서 필요한 옵션을 선택할 수 있습니다. 예를 들어, 'Pretty Print' 옵션을 선택하면 JSON 출력이 보기 좋게 포맷됩니다.",
+        "5. 'Convert' 버튼을 클릭하여 처리를 시작합니다.",
+        "6. 'Output' 영역에서 처리된 JSON 문자열을 확인하고 필요에 따라 복사하거나 다운로드합니다."
+      ],
+      "usage_examples": [
+        "예시 1: 웹 애플리케이션에서 사용자 입력 데이터를 JSON 형식으로 저장할 때, 이스케이프 기능을 사용하여 특수 문자가 포함된 데이터를 안전하게 저장할 수 있습니다.",
+        "예시 2: API를 통해 JSON 데이터를 전송할 때, 이스케이프 기능을 사용하여 데이터가 올바르게 전송되도록 할 수 있습니다. 특히, URL 파라미터로 JSON 데이터를 전송할 때 유용합니다.",
+        "예시 3: 데이터베이스에서 JSON 데이터를 검색한 후, 언이스케이프 기능을 사용하여 데이터를 원래의 형태로 복원하여 사용할 수 있습니다.",
+        "예시 4: JSON 파일을 편집할 때, 이스케이프 기능을 사용하여 파일이 올바르게 형식화되고, 언이스케이프 기능을 사용하여 파일을 읽을 때 원래 데이터를 유지할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El herramienta JSON Escape/Unescape es una utilidad esencial para desarrolladores y profesionales de la tecnología que necesitan manipular cadenas JSON de manera precisa. Esta herramienta permite escapar y desescapar cadenas JSON, lo que es crucial para asegurar que los datos se manejen correctamente en sistemas web y aplicaciones de servidor. Escapar una cadena JSON implica convertir caracteres especiales en secuencias de escape para que puedan ser transmitidos sin problemas a través de canales que podrían interpretarlos erróneamente. Por ejemplo, las comillas dobles (\"), el carácter de barra invertida (\\), y el carácter de nueva línea (\\n) se convierten en sus respectivas secuencias de escape. Desescapar una cadena JSON, por otro lado, implica revertir este proceso, convirtiendo las secuencias de escape de vuelta a sus caracteres originales. Esta función es particularmente útil en escenarios donde los datos JSON se integran en scripts de lenguaje de marca o se almacenan en bases de datos. La herramienta JSON Escape/Unescape es un recurso invaluable para cualquier desarrollador que trabaje con APIs, frameworks web, o cualquier sistema que requiera el manejo seguro de datos JSON.",
+      "usage_steps": [
+        "Paso 1: Navega hasta la página de la herramienta JSON Escape/Unescape en nuestro sitio web.",
+        "Paso 2: En la sección 'Entrada', introduce la cadena JSON que deseas escapar o desescapar. Asegúrate de que la cadena esté bien formada para evitar errores.",
+        "Paso 3: Selecciona la opción 'Escapar JSON' si deseas convertir los caracteres especiales en secuencias de escape, o 'Desescapar JSON' si deseas revertir esas secuencias de escape.",
+        "Paso 4: Si estás utilizando la opción 'Desescapar JSON', puedes habilitar la opción 'Validar JSON' para asegurarte de que la cadena resultante sea un JSON válido antes de su salida.",
+        "Paso 5: Haz clic en el botón 'Procesar' para ejecutar la conversión. El resultado aparecerá en la sección 'Salida' en cuestión de segundos.",
+        "Paso 6: Copia el resultado de la sección 'Salida' y úsalo en tu código, base de datos, o cualquier otro lugar donde sea necesario. Si es necesario, puedes guardar el resultado en un archivo o utilizarlo directamente en tu entorno de desarrollo."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador de una API REST necesita escapar una cadena JSON que contiene comillas dobles antes de enviarla a un cliente. Usa la herramienta para convertir las comillas dobles en secuencias de escape, asegurando que la cadena se transmita sin errores.",
+        "Ejemplo 2: Un ingeniero de front-end está integrando una cadena JSON en un script HTML y necesita asegurarse de que no se produzcan problemas de parsing debido a caracteres especiales. Utiliza la herramienta para escapar la cadena antes de insertarla en el script.",
+        "Ejemplo 3: Un administrador de bases de datos recibe un archivo JSON que necesita ser almacenado en una tabla. Antes de importar los datos, usa la herramienta para desescapar la cadena JSON y asegurarse de que se almacene correctamente en la base de datos.",
+        "Ejemplo 4: Un desarrollador de aplicaciones móviles está depurando un problema donde los datos JSON enviados desde un servidor están llegando con caracteres escapados incorrectamente. Usa la herramienta para desescapar la cadena JSON y verificar si los datos son correctos antes de proceder con la depuración."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O JSON Escape/Unescape é uma ferramenta de codificação e decodificação de strings JSON. Tecnicamente, esta ferramenta realiza a conversão de caracteres especiais em sequências de escape e vice-versa, garantindo que os dados JSON sejam manipulados corretamente em diferentes contextos, como transmissão via HTTP, armazenamento em bancos de dados ou inclusão em códigos HTML. A necessidade de um tool como este surge em várias situações, onde a integridade dos dados JSON é crucial. Por exemplo, ao enviar dados JSON em uma URL, certos caracteres devem ser escapados para evitar problemas de interpretação. Da mesma forma, ao exibir informações JSON em uma página web, é necessário escapar caracteres que possam ser interpretados como marcações HTML. O processo de escape substitui caracteres especiais por sequências de escape, como \\\" para aspas duplas e \\\\ para a barra invertida, garantindo que o JSON seja válido e seguro. O JSON Escape/Unescape opera de forma bidirecional, permitindo tanto o escape quanto o unescape de strings JSON, facilitando a preparação e a validação de dados em diversos fluxos de trabalho.",
+      "usage_steps": [
+        "Acesse a ferramenta JSON Escape/Unescape no site.",
+        "Na interface, você encontrará duas opções principais: 'Escape' e 'Unescape'.",
+        "Cole o JSON que deseja manipular na área de texto fornecida.",
+        "Selecione a opção 'Escape' para codificar o JSON ou 'Unescape' para decodificar o JSON.",
+        "Após selecionar a opção desejada, clique no botão 'Processar' para iniciar a conversão.",
+        "O resultado da conversão será exibido na área de texto abaixo, pronto para ser usado em seu projeto."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor está construindo uma API que aceita dados JSON via requisições HTTP. Antes de enviar o JSON, ele usa a ferramenta para escapar os caracteres especiais, garantindo que a requisição seja processada corretamente pelo servidor.",
+        "Um engenheiro de front-end precisa incorporar dados JSON em um script HTML. Ele usa a ferramenta para escapar os caracteres que podem ser interpretados como marcações HTML, evitando vulnerabilidades de segurança.",
+        "Um administrador de sistemas está automatizando a importação de dados JSON em um banco de dados. Antes de salvar os dados, ele os escapa usando a ferramenta para evitar erros de interpretação ou injeção de SQL.",
+        "Um analista de dados precisa preparar um relatório que inclui dados JSON. Ele usa a ferramenta para unescapar os dados, tornando-os mais legíveis e fáceis de analisar."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le JSON Escape/Unescape est un outil indispensable pour les développeurs travaillant avec des données JSON, spécialement lorsqu'il faut manipuler des chaînes de caractères qui peuvent contenir des caractères spéciaux. Technique­ment, cet outil effectue deux opérations principales : l'échappement (escape) et le déchappement (unescape) des chaînes JSON. L'échappement permet de convertir les caractères spéciaux tels que les guillemets doubles (\"), les retours à la ligne (\\n), et les tabulations (\\t) en leurs équivalents échappés, facilitant ainsi leur envoi et leur stockage sans perturbation. Le déchappement, inversement, restaure ces caractères à leur forme originale, rendant le JSON lisible et utilisable par les applications.\n\nLes utilisateurs ont besoin de cet outil pour plusieurs raisons. Premièrement, lors du développement d'API REST, les données JSON doivent souvent être échappées pour éviter les erreurs de syntaxe ou les vulnérabilités de sécurité. Deuxièmement, dans les applications web, les données JSON peuvent être intégrées directement dans le HTML, nécessitant un échappement pour éviter les conflits avec les balises HTML. Troisièmement, lors du débogage, l'échappement et le déchappement aident à visualiser et à comprendre clairement le contenu des chaînes JSON.\n\nPour utiliser l'outil, l'utilisateur entre la chaîne JSON à échapper ou à déchapper dans la zone de texte dédiée, sélectionne l'opération souhaitée (escape ou unescape), et clique sur un bouton pour obtenir le résultat. L'outil prend en charge les chaînes JSON complexes, y compris les tableaux et les objets imbriqués, garantissant ainsi une utilisation polyvalente et efficace.",
+      "usage_steps": [
+        "Accédez à la page de l'outil JSON Escape/Unescape.",
+        "Copiez et collez votre chaîne JSON dans la zone de texte intitulée 'Entrée JSON'.",
+        "Sélectionnez 'Echapper' dans le menu déroulant si vous souhaitez échapper votre chaîne JSON, ou 'Déchapper' si vous souhaitez la déchapper.",
+        "Cliquez sur le bouton 'Traiter' pour appliquer l'opération sélectionnée.",
+        "Le résultat apparaîtra dans la zone de texte intitulée 'Résultat JSON'.",
+        "Copiez le résultat traité et utilisez-le dans votre application ou code."
+      ],
+      "usage_examples": [
+        "Un développeur d'API REST doit envoyer des données JSON contenant des guillemets doubles et des retours à la ligne. Il utilise l'outil pour échapper ces caractères, évitant ainsi des erreurs de syntaxe lors de la transmission des données.",
+        "Une développeuse frontend intègre une chaîne JSON directement dans le code HTML d'une page web. Elle utilise l'outil pour échapper les caractères spéciaux, évitant les conflits avec les balises HTML et assurant la sécurité du contenu.",
+        "Un ingénieur QA débogue une application qui manipule des données JSON. Il utilise l'outil pour déchapper les chaînes JSON, facilitant ainsi la lecture et la compréhension des données lors des tests.",
+        "Un développeur de backend travaille sur une application de messagerie qui utilise des données JSON. Il utilise l'outil pour échapper les messages contenant des caractères spéciaux avant de les stocker dans une base de données, garantissant ainsi l'intégrité des données."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das JSON Escape/Unescape-Tool ermöglicht Entwicklern, JSON-Strings zu escapen und zu unescapen, um sicherzustellen, dass die Daten korrekt formatiert und verarbeitet werden können. JSON (JavaScript Object Notation) ist ein leichtgewichtiges Datenformat, das häufig in Webanwendungen und API-Schnittstellen verwendet wird. Das Escaping von JSON-Strings ist besonders wichtig, um Sonderzeichen wie Anführungszeichen und Rücktasten korrekt zu kodieren, sodass die JSON-Struktur valide bleibt und die Datenintegrität gewährleistet ist. Dieses Tool ist unerlässlich für Entwickler, die mit JSON-Daten arbeiten, insbesondere bei der Vorbereitung von JSON-Payloads für API-Anfragen oder der Verarbeitung von JSON-Daten im Frontend. Durch das Escaping werden Sonderzeichen in escape-sequenzierte Darstellungen umgewandelt, während das Unescaping diese Sequenzen wieder in die ursprünglichen Sonderzeichen zurückverwandelt. Dies ist besonders nützlich, um Fehler und Sicherheitslücken bei der Datenübertragung und -verarbeitung zu vermeiden.",
+      "usage_steps": [
+        "Öffnen Sie die JSON Escape/Unescape-Seite auf unserer Website.",
+        "Wählen Sie im Dropdown-Menü 'Aktion' die Option 'Escape' oder 'Unescape', je nachdem, was Sie durchführen möchten.",
+        "Fügen Sie den JSON-Code in das Textfeld 'Eingabe' ein.",
+        "Klicken Sie auf den Button 'Verarbeiten', um den JSON-Code zu escapen oder zu unescapen.",
+        "Der verarbeitete JSON-Code wird im Textfeld 'Ausgabe' angezeigt.",
+        "Kopieren Sie den verarbeiteten JSON-Code und verwenden Sie ihn in Ihrer Anwendung oder API."
+      ],
+      "usage_examples": [
+        "Ein Entwickler bereitet eine JSON-Payload für eine API-Anfrage vor, die Sonderzeichen wie Anführungszeichen enthält. Durch das Escaping der JSON-String stellt er sicher, dass die Anfrage korrekt verarbeitet wird.",
+        "Eine Frontend-Entwicklungsteam arbeitet an einer Webanwendung, die JSON-Daten aus einer API empfängt. Bevor die Daten angezeigt werden, werden sie unescaped, um sicherzustellen, dass Sonderzeichen korrekt dargestellt werden.",
+        "Ein Security-Experte überprüft eine JSON-Anfrage auf mögliche Sicherheitslücken, die durch ungesicherte Sonderzeichen verursacht werden könnten. Durch das Escaping der JSON-Daten reduziert er das Risiko von Angriffen wie Cross-Site Scripting (XSS).",
+        "Ein Data Scientist arbeitet mit komplexen JSON-Datenstrukturen, die in einer Datenbank gespeichert werden sollen. Durch das Escaping der JSON-Strings stellt er sicher, dass die Daten ohne Fehler in die Datenbank importiert werden können."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент JSON Escape/Unescape разработан для выполнения операций экранирования и деэкранирования JSON строк. Экранирование JSON строк — это процесс преобразования специальных символов в их экранированные эквиваленты, что позволяет безопасно передавать JSON данные через различные каналы связи, такие как HTTP запросы или файлы. Деэкранирование, напротив, возвращает строку к её исходному виду, преобразуя экранированные символы обратно в обычные. Этот инструмент особенно полезен для разработчиков, работающих с API, которые требуют правильного форматирования JSON данных, а также для тех, кто нуждается в проверке и отладке JSON строк. Внутренне инструмент использует стандартные методы JavaScript для преобразования строк, такие как `JSON.stringify` для экранирования и `JSON.parse` для деэкранирования, обеспечивая точность и надёжность операций.",
+      "usage_steps": [
+        "Откройте инструмент JSON Escape/Unescape на сайте.",
+        "В верхнем поле введите или вставьте JSON строку, которую вы хотите экранировать или деэкранировать.",
+        "Выберите режим операции: 'Escape' для экранирования или 'Unescape' для деэкранирования, используя переключатель справа от поля ввода.",
+        "При необходимости нажмите кнопку 'Очистить' для сброса введённых данных.",
+        "Нажмите кнопку 'Преобразовать', чтобы выполнить выбранную операцию.",
+        "Результат преобразования будет отображен в нижнем поле. Скопируйте его для дальнейшего использования или сохранения."
+      ],
+      "usage_examples": [
+        "Разработчик API использует инструмент для экранирования JSON данных перед отправкой их в HTTP запросе, чтобы избежать проблем с символами, которые могут быть интерпретированы неправильно.",
+        "Тестировщик использует инструмент для деэкранирования JSON ответов от сервера, чтобы проверить, что все данные были правильно переданы и интерпретированы.",
+        "Администратор базы данных использует инструмент для экранирования JSON строк перед записью их в базу данных, чтобы предотвратить SQL-инъекции и другие уязвимости.",
+        "Программист использует инструмент для деэкранирования JSON строк, полученных из лог-файлов, чтобы проанализировать и отладить проблемы с данными."
+      ]
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "slug": "text-diff-patch",
+  "descriptions": {
+    "en": {
+      "detailed_description": "Text Diff & Patch is a powerful tool designed to facilitate the creation and application of text patches. This tool is essential for developers and content managers who need to compare and merge different versions of text files with precision. By leveraging sophisticated algorithms, Text Diff & Patch can identify the differences between two text documents and generate a patch file that captures these changes. This patch file can then be applied to the original document to update it to the latest version, ensuring consistency and accuracy in text content. The tool supports various text formats and is particularly useful in version control systems, where it can help in resolving merge conflicts and maintaining the integrity of code bases. It also includes features for customizable diff outputs, making it a versatile solution for both simple and complex text processing tasks.",
+      "usage_steps": [
+        "Step 1: Navigate to the Text Diff & Patch tool page and click on the 'Upload Original Text' button to select the first text file you want to compare.",
+        "Step 2: Click on the 'Upload Modified Text' button to upload the second text file that contains the changes you want to apply.",
+        "Step 3: Once both files are uploaded, click the 'Generate Diff' button to create a patch file that highlights the differences between the two texts.",
+        "Step 4: Review the generated diff output, which will show you the specific changes, including additions, deletions, and modifications.",
+        "Step 5: If the diff output is correct, click the 'Download Patch' button to save the patch file to your device.",
+        "Step 6: To apply the patch to the original text, use the 'Apply Patch' feature by uploading the original text file and the patch file, then click 'Apply' to update the original content."
+      ],
+      "usage_examples": [
+        "Example 1: A software developer is working on a collaborative project and needs to merge changes made by different team members. Using Text Diff & Patch, they can compare the latest version of the code with the changes and generate a patch to ensure all updates are integrated seamlessly.",
+        "Example 2: A content editor is tasked with updating a lengthy article with new information provided by a writer. By uploading the original and revised versions of the article, they can use the tool to identify and apply only the necessary changes, maintaining the integrity of the original content.",
+        "Example 3: A technical writer is documenting a software application and needs to ensure that the latest API changes are reflected in the documentation. Using Text Diff & Patch, they can compare the old and new versions of the API documentation and generate a patch to update the existing documentation.",
+        "Example 4: A version control system administrator needs to resolve a merge conflict between two branches of a codebase. By using the tool to generate a patch, they can apply the necessary changes to the conflicting files and resolve the issue efficiently."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Text Diff & Patch 是一款专业的文本差异对比和补丁应用工具，它通过算法对比两个文本版本的差异，并生成补丁文件，用户可以使用该补丁文件对原始文本进行更新，而无需重新输入整个文本。这款工具在软件开发、文档管理和文本编辑等多个领域均具有重要应用价值。例如，开发者可以使用它来管理代码变更，确保团队成员之间的代码同步；文档管理者可以利用它来追踪和合并文档的修订版本，提高工作效率。该工具基于高级的文本对比算法，能够识别文本中的插入、删除和修改操作，并以高效的方式生成和应用补丁。用户只需上传或粘贴需要对比的文本，选择对比选项，即可快速生成补丁文件，再通过简单的操作应用到目标文本上，整个过程既快速又准确。",
+      "usage_steps": [
+        "Step 1: 打开 Text Diff & Patch 工具页面，点击“上传文件”按钮或直接在文本框中粘贴需要对比的原始文本。",
+        "Step 2: 在“对比文本”区域，上传或粘贴需要与原始文本进行对比的第二份文本。",
+        "Step 3: 选择对比选项，例如是否忽略空白字符、是否显示行号等，以满足特定的需求。",
+        "Step 4: 点击“生成补丁”按钮，工具将自动对比两份文本并生成补丁文件。",
+        "Step 5: 查看生成的补丁文件，确认差异内容无误后，点击“应用补丁”按钮。",
+        "Step 6: 选择需要应用补丁的目标文件或文本，点击“确认”按钮，补丁将被应用，更新后的文本将显示在结果区域。"
+      ],
+      "usage_examples": [
+        "Example 1: 软件开发者在进行代码版本管理时，使用 Text Diff & Patch 对比不同版本的源代码文件，快速识别并记录代码变更，确保代码库的整洁和团队之间的同步。",
+        "Example 2: 技术文档编写者在编写和修订技术文档时，利用 Text Diff & Patch 对比不同版本的文档，追踪修订内容，确保文档的准确性和一致性。",
+        "Example 3: 法律事务所的律师在处理合同文本时，使用 Text Diff & Patch 对比合同的多个修订版本，快速识别和合并修改内容，提高合同审核的效率。",
+        "Example 4: 学术研究人员在撰写和修订学术论文时，利用 Text Diff & Patch 对比论文的不同版本，确保论文的逻辑和内容的一致性，便于同行评审和修改。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Text Diff & Patchツールは、テキストの差分を生成し、それらの差分を適用するための強力なオンラインソリューションです。このツールは、異なるバージョンのテキスト間で変更点を特定し、それらの変更を安全かつ効率的に適用します。具体的には、ユーザーは2つのテキストファイルをアップロードし、差分を生成できます。生成されたパッチファイルは、他のユーザーが同じ変更を適用する際の基準となります。このツールは、ソフトウェア開発、文書管理、コンテンツ同期など、さまざまなシナリオで活用できます。例えば、複数の開発者が同じコードベースを管理する場合、Text Diff & Patchは変更履歴を追跡し、Conflictの解消に役立ちます。また、Webコンテンツの更新や、ドキュメントのバージョン管理にも効果的です。内部的には、このツールは長文の比較アルゴリズムを使用して、最小の編集距離を見つけることで、最も効率的なパッチを生成します。生成されたパッチは、差分の追加、削除、変更を明確に示し、適用時に元のテキストに対する変更を正確に反映します。",
+      "usage_steps": [
+        "Step 1: ツールにアクセスしたら、「ファイルを選択」ボタンをクリックし、元のテキストファイルを選択します。",
+        "Step 2: 「比較ファイルを選択」ボタンをクリックし、変更後のテキストファイルを選択します。",
+        "Step 3: 「差分を生成」ボタンをクリックして、2つのファイル間の差分を計算します。",
+        "Step 4: 生成された差分が表示されます。差分の詳細を確認し、必要に応じて編集します。",
+        "Step 5: 「パッチファイルを生成」ボタンをクリックして、差分をパッチファイルとして保存します。",
+        "Step 6: 生成されたパッチファイルをダウンロードし、他のユーザーに提供するか、直接適用します。"
+      ],
+      "usage_examples": [
+        "Example 1: ソフトウェア開発チームが複数のブランチでコードを開発している場合、Text Diff & Patchを使用して、各ブランチ間の変更点を特定し、マージの際にConflictを解消できます。",
+        "Example 2: ビジネス文書の最新版を全従業員に配布する際、Text Diff & Patchを使用して、前バージョンとの差分を明確に示し、更新内容を理解しやすくできます。",
+        "Example 3: ウェブサイトのコンテンツを定期的に更新するウェブマスターは、Text Diff & Patchを使って、旧バージョンと新バージョンの差分を確認し、変更部分だけを反映させることができます。",
+        "Example 4: 技術ドキュメンテーションチームが複数の言語で文書を管理している場合、Text Diff & Patchを使用して、各言語版間の差分を確認し、内容の一貫性を維持できます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Text Diff & Patch는 텍스트 파일 간의 차이를 찾아내고, 해당 차이를 적용하여 새로운 텍스트 파일을 생성하는 도구입니다. 이 도구는 두 버전의 텍스트 파일을 비교하여 변경된 부분을 식별하고, 이를 패치 파일로 저장할 수 있습니다. 이후 이 패치 파일을 사용하여 원본 텍스트 파일을 업데이트할 수 있습니다. 이러한 기능은 소스 코드 관리, 문서 버전 관리, 콘텐츠 싱크 등 다양한 분야에서 extremely 유용합니다. 예를 들어, 개발자들은 소스 코드의 수정 사항을 추적하고, 문서 작성자는 다양한 버전의 문서를 효율적으로 관리할 수 있습니다. 이 도구는 Git과 같은 버전 관리 시스템에서 일반적으로 사용되는 diff 및 patch 알고리즘을 기반으로 작동합니다. 사용자는 텍스트 파일을 업로드하거나 직접 입력한 후, 차이를 찾아내고 패치를 생성할 수 있습니다. 또한, 생성된 패치를 적용하여 최신 버전의 텍스트 파일을 얻을 수 있습니다.",
+      "usage_steps": [
+        "1. Text Diff & Patch 페이지로 이동하여 '원본 텍스트'와 '수정된 텍스트' 입력 영역을 확인하세요.",
+        "2. '원본 텍스트' 입력 영역에 원본 텍스트를 붙여넣거나 업로드하세요.",
+        "3. '수정된 텍스트' 입력 영역에 수정된 버전의 텍스트를 붙여넣거나 업로드하세요.",
+        "4. '차이 확인' 버튼을 클릭하여 두 텍스트 간의 차이를 비교하세요.",
+        "5. 차이가 표시되면, '패치 생성' 버튼을 클릭하여 패치 파일을 생성하세요.",
+        "6. 생성된 패치 파일을 다운로드하거나, 원본 텍스트에 적용하려면 '패치 적용' 버튼을 클릭하세요."
+      ],
+      "usage_examples": [
+        "1. 소스 코드 관리: 프로그래머가 소스 코드의 수정 사항을 추적하고, 팀원들과 공유하기 위해 패치 파일을 생성합니다.",
+        "2. 문서 버전 관리: 문서 작성자가 여러 버전의 문서를 비교하여 수정 사항을 확인하고, 최신 버전을 생성합니다.",
+        "3. 웹 개발: 웹 개발자가 웹 페이지의 HTML, CSS, JavaScript 파일의 변경 사항을 추적하고, 배포 전에 테스트를 수행합니다.",
+        "4. 콘텐츠 싱크: 콘텐츠 관리자가 여러 플랫폼에서 동일한 콘텐츠를 유지하기 위해 변경 사항을 효율적으로 적용합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "Text Diff & Patch es una herramienta de procesamiento de texto que permite a los desarrolladores y profesionales de la tecnología crear y aplicar parches de texto. Técnica y profundamente, esta herramienta compara dos versiones de un documento de texto, identifica las diferencias entre ellas y genera un archivo de parche que documenta estos cambios. Este archivo de parche puede ser luego aplicado a la versión original del documento para actualizarlo a la versión más reciente, asegurando que solo los cambios necesarios sean incorporados, lo que optimiza la eficiencia y reduce el riesgo de errores en la sincronización de archivos.\n\nLos usuarios necesitan esta herramienta en una variedad de escenarios. Por ejemplo, en el desarrollo de software, donde los equipos de trabajo distribuidos a menudo necesitan mantener versiones sincronizadas de códigos fuente, Text Diff & Patch facilita la colaboración y el control de versiones. En la gestión de configuraciones de sistemas, esta herramienta permite a los administradores de sistemas aplicar cambios mínimos y precisos a archivos de configuración, minimizando el riesgo de interrupciones en el servicio. Además, en la edición de documentos, permite a los editores y escritores revisar y aceptar cambios de manera eficiente, manteniendo la integridad del contenido original.\n\nLa herramienta funciona mediante un algoritmo de diferencias que compara secuencialmente los caracteres de dos textos y genera una lista de inserciones, eliminaciones y modificaciones. Este proceso se basa en la teoría de la programación dinámica para encontrar la secuencia más corta de operaciones que transforma una versión en otra. El archivo de parche resultante puede ser aplicado a la versión original del texto utilizando el mismo algoritmo, pero en sentido inverso, para aplicar los cambios y generar la versión actualizada.",
+      "usage_steps": [
+        "Abra la página de Text Diff & Patch en su navegador web.",
+        "En la sección 'Texto Original', pegue el contenido del archivo de texto que desea modificar o actualizar.",
+        "En la sección 'Texto Modificado', pegue el contenido del archivo de texto que contiene los cambios que desea aplicar.",
+        "Haga clic en el botón 'Generar Parche' para que la herramienta compare los dos textos y genere un archivo de parche con las diferencias.",
+        "Una vez generado el parche, puede descargar el archivo de parche en formato .diff o .patch utilizando el botón 'Descargar Parche'.",
+        "Para aplicar el parche a la versión original del texto, haga clic en el botón 'Aplicar Parche' y seleccione el archivo de parche descargado."
+      ],
+      "usage_examples": [
+        "Un equipo de desarrollo de software utiliza Text Diff & Patch para mantener sincronizadas las versiones de un archivo de código fuente entre varios colaboradores. Cada miembro del equipo puede generar un parche con sus cambios y aplicarlo a la versión actual del código, asegurando que todas las modificaciones sean incorporadas correctamente.",
+        "Un administrador de sistemas necesita actualizar la configuración de un servidor sin interrumpir el servicio. Utiliza Text Diff & Patch para generar un parche con los cambios mínimos necesarios y aplicarlo a los archivos de configuración existentes, minimizando el riesgo de errores.",
+        "Un editor de contenido necesita revisar y aceptar cambios en un documento largo. Utiliza Text Diff & Patch para comparar la versión original del documento con la versión revisada, generando un parche que documenta los cambios. Luego, aplica el parche para incorporar solo los cambios aprobados.",
+        "Un desarrollador de documentación técnica utiliza Text Diff & Patch para mantener actualizados los manuales de usuario. Cada vez que se realizan cambios en el producto, genera un parche con las modificaciones y lo aplica a la versión anterior del manual, asegurando que la documentación esté siempre al día."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Text Diff & Patch é uma ferramenta de processamento de texto que permite aos usuários criar e aplicar patches de texto. Tecnicamente, a ferramenta compara duas versões de um documento de texto e identifica as diferenças entre elas, gerando um arquivo de patch que representa essas alterações. Este arquivo de patch pode então ser aplicado a uma versão do documento para reproduzir as alterações presentes na outra versão, facilitando o controle de versões e a colaboração em projetos de desenvolvimento de software, redação de documentos e revisão de conteúdo.\n\nOs usuários precisam desta ferramenta para diversas finalidades, como controlar mudanças em arquivos de código-fonte, colaborar em documentos de texto sem sobrescrever as alterações de outros membros da equipe, e manter a consistência em projetos que envolvem múltiplas versões de arquivos. A aplicação de patches também é essencial em cenários de manutenção de sistemas, onde as alterações precisam ser aplicadas de forma precisa e eficiente.\n\nO funcionamento da ferramenta é baseado em algoritmos de comparação de sequências, como o algoritmo Myers, que é eficiente em identificar as mínimas alterações necessárias para transformar uma versão em outra. O processo de aplicação do patch envolve a leitura do arquivo de patch e a execução das instruções contidas nele, como adicionar, remover ou modificar linhas específicas no documento original.",
+      "usage_steps": [
+        "Acesse a página do Text Diff & Patch através do menu de categorias de ferramentas de texto.",
+        "Na interface da ferramenta, localize a seção 'Comparar Textos' e carregue o arquivo de texto original no campo 'Versão Original'.",
+        "Em seguida, carregue a versão modificada do texto no campo 'Versão Modificada'.",
+        "Clique no botão 'Gerar Patch' para que a ferramenta processe as diferenças entre as duas versões e crie o arquivo de patch.",
+        "Após a geração do patch, você pode visualizar as alterações no painel 'Diferenças' e baixar o arquivo de patch.",
+        "Para aplicar o patch a um documento, carregue o arquivo de patch no campo 'Aplicar Patch' e o documento original no campo 'Documento de Destino', e clique em 'Aplicar' para ver as alterações refletidas no documento."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de software usa o Text Diff & Patch para gerar um patch entre duas versões de um arquivo de código-fonte, facilitando a revisão de código por colegas de equipe antes de fazer um commit no repositório Git.",
+        "Um escritor colabora com vários editores em um documento de texto. Cada editor faz alterações e gera um patch usando a ferramenta, permitindo que o escritor aplique todas as sugestões de forma organizada e sem conflitos.",
+        "Um administrador de sistemas precisa aplicar uma atualização crítica a um arquivo de configuração em múltiplos servidores. O Text Diff & Patch é usado para criar um patch com as alterações, que é então aplicado de forma consistente em todos os servidores.",
+        "Um professor de literatura compara duas versões de um ensaio de um aluno, gerando um patch que destaca as alterações feitas pelo aluno. Este patch é então usado para fornecer feedback detalhado sobre as melhorias realizadas."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Text Diff & Patch est un outil spécialisé dans la création et l'application de différances (diff) et de correctifs (patch) textuels. Techniquement, ce procédé consiste à identifier les différences entre deux versions d'un fichier texte et à générer un fichier diff qui décrit les modifications. Ce fichier peut ensuite être appliqué à une version originale pour la mettre à jour en une version modifiée sans avoir à recopier l'ensemble du texte. Les utilisateurs ont besoin de cet outil pour plusieurs raisons, notamment pour synchroniser des documents, gérer des versions de code source, ou même pour automatiser des tâches de maintenance logicielle. L'outil utilise l'algorithme Myers pour détecter efficacement les insertions, suppressions et modifications, ce qui garantit des résultats précis et rapides. La fonction de patch applique ces modifications de manière incrémentielle, ce qui est particulièrement utile dans des environnements où l'espace de stockage est limité ou où la transmission de données doit être optimisée.",
+      "usage_steps": [
+        "Ouvrez l'outil Text Diff & Patch et sélectionnez l'option 'Nouveau Diff'.",
+        "Chargez le fichier original en cliquant sur le bouton 'Charger Fichier Original' et sélectionnez votre fichier.",
+        "Chargez le fichier modifié en cliquant sur le bouton 'Charger Fichier Modifié' et sélectionnez votre fichier.",
+        "Cliquez sur le bouton 'Générer Diff' pour créer un fichier de différence entre les deux fichiers.",
+        "Si vous souhaitez appliquer ce diff à un autre fichier, sélectionnez l'option 'Appliquer Patch'.",
+        "Chargez le fichier cible et le fichier diff, puis cliquez sur 'Appliquer' pour mettre à jour le fichier cible."
+      ],
+      "usage_examples": [
+        "Un développeur souhaite comparer deux versions d'un script Python pour identifier les modifications apportées par un collègue. Il utilise Text Diff & Patch pour générer un diff, puis l'applique pour mettre à jour son fichier local.",
+        "Une équipe de rédaction technique utilise cet outil pour maintenir une documentation à jour. Chaque fois qu'une nouvelle version est publiée, ils génèrent un diff et l'appliquent à la version précédente pour éviter de réécrire l'ensemble du document.",
+        "Un administrateur système doit synchroniser des fichiers de configuration entre plusieurs serveurs. Il génère un diff des fichiers de configuration locaux et les applique sur les serveurs distants pour s'assurer que tous sont à jour.",
+        "Un traducteur travaille sur la localisation d'une application et doit vérifier les modifications apportées au texte source. Il génère un diff des fichiers source et cible pour identifier rapidement les nouvelles chaînes de texte à traduire."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Tool 'Text Diff & Patch' ist eine leistungsstarke Textverarbeitungsumgebung, die es Entwicklern erlaubt, Differenzen zwischen Textversionen zu identifizieren und Patches darauf zu basieren zu erstellen. Technisch gesehen, vergleicht das Tool zwei Textdateien und extrahiert die Unterschiede, die als Patches exportiert werden können. Diese Patches ermöglichen es, Änderungen präzise und effizient anzuwenden, ohne den gesamten Text neu zu schreiben. Die Notwendigkeit solcher Tools ist besonders in Softwareentwicklung und Versionskontrolle offensichtlich, wo es wichtig ist, Änderungen zwischen verschiedenen Codeversionen zu verfolgen und zu integrieren. Spezifische Anwendungsfälle umfassen die Überprüfung von Bugfixes, die Integrierung von Änderungen in gemeinsamen Repositorien und die Optimierung von Textdateien in großen Projekten. Die Arbeitsweise basiert auf fortgeschrittenen Algorithmus, die die Ähnlichkeiten und Unterschiede zwischen Textblöcken erkennen. Diese Algorithmen erzeugen differenzielle Dateien, die dann zur Anwendung auf andere Textdateien verwendet werden können. Das Tool unterstützt auch die Anwendung von Patches, wodurch Änderungen nahtlos in den bestehenden Code integriert werden können.",
+      "usage_steps": [
+        "Schritt 1: Laden Sie die erste Textdatei in das Tool hoch, indem Sie auf den Button 'Datei 1 hochladen' klicken und die gewünschte Datei auswählen.",
+        "Schritt 2: Laden Sie die zweite Textdatei in das Tool hoch, indem Sie auf den Button 'Datei 2 hochladen' klicken und die gewünschte Datei auswählen.",
+        "Schritt 3: Wählen Sie im Dropdown-Menü 'Differenzalgorithmus' den gewünschten Algorithmus für die Differenzanalyse, z.B. 'Myers' oder 'Hunt-McIlroy'.",
+        "Schritt 4: Klicken Sie auf 'Differenz erstellen', um die Unterschiede zwischen den beiden Textdateien zu analysieren und ein Patch-File zu generieren.",
+        "Schritt 5: Überprüfen Sie die generierten Differenzen im Textbereich unten. Hier können Sie die Änderungen detailliert durchgehen und bei Bedarf manuell anpassen.",
+        "Schritt 6: Klicken Sie auf 'Patch anwenden', um die Änderungen auf die ursprüngliche Datei zu übertragen. Das Tool wird eine neue Datei erstellen, die die Änderungen enthält."
+      ],
+      "usage_examples": [
+        "Beispiel 1: Ein Softwareentwickler verwendet 'Text Diff & Patch', um die Änderungen in einem Code-Branch zu überprüfen, bevor er die Änderungen in den Hauptcode integriert. Dies hilft, unerwünschte Änderungen oder Fehler zu identifizieren, bevor sie in die Produktionsumgebung gelangen.",
+        "Beispiel 2: Ein Team von Informatikstudenten arbeitet an einem Shared Coding Project. Sie nutzen das Tool, um die unterschiedlichen Versionen ihrer gemeinsamen Arbeit zu vergleichen und die nötigen Patches zu erstellen, um den Code zu synchronisieren.",
+        "Beispiel 3: Ein Systemadministrator verwendet 'Text Diff & Patch', um die Änderungen in Konfigurationsdateien nach einem Systemupdate zu analysieren. Dies hilft, sicherzustellen, dass alle notwendigen Einstellungen korrekt angewendet wurden.",
+        "Beispiel 4: Ein Content Manager in einer Marketing-Agentur verwendet das Tool, um die Änderungen in Textdokumenten zu verfolgen, die von verschiedenen Autoren bearbeitet wurden. Dies erleichtert die Überprüfung und Integration der vorgeschlagenen Änderungen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Text Diff & Patch представляет собой мощное решение для создания и применения текстовых патчей. Основная функция этого инструмента заключается в сравнении двух версий текста и генерации файла патча, который можно использовать для автоматического обновления одной версии текста до другой. Это особенно полезно в разработке программного обеспечения, где часто требуется синхронизация текстовых файлов, таких как исходные коды, конфигурационные файлы или документация. Инструмент использует алгоритмы сравнения строк для идентификации различий между двумя текстами, а затем создает патч, который можно применить к исходному тексту, чтобы он соответствовал целевому. Патчи могут быть особенно полезны для минимизации объема данных, передаваемых при обновлениях, что важно для проектов с ограниченным доступом к сети или для оптимизации процесса контроля версий.",
+      "usage_steps": [
+        "1. Откройте страницу инструмента Text Diff & Patch и загрузите исходный текст, используя кнопку 'Загрузить исходный файл'.",
+        "2. Затем загрузите целевой текст, нажав на кнопку 'Загрузить целевой файл'. Убедитесь, что оба файла имеют одинаковую кодировку.",
+        "3. После загрузки файлов нажмите на кнопку 'Создать патч', чтобы инструмент сгенерировал файл патча, содержащий изменения между двумя текстами.",
+        "4. Просмотрите сгенерированный патч, используя предварительный просмотр, чтобы убедиться, что все изменения корректны.",
+        "5. Если патч удовлетворяет вашим требованиям, нажмите 'Скачать патч', чтобы сохранить его на вашем устройстве.",
+        "6. Для применения патча к исходному файлу, вернитесь на страницу инструмента, загрузите исходный файл и патч, затем нажмите 'Применить патч' для автоматического обновления исходного текста."
+      ],
+      "usage_examples": [
+        "1. Разработчик программного обеспечения использует Text Diff & Patch для создания патча, который обновляет исходный код программы, не изменяя остальной код. Это позволяет эффективно вносить изменения в проект без необходимости отправки всего исходного кода снова.",
+        "2. Администратор системы применяет этот инструмент для синхронизации конфигурационных файлов между несколькими серверами. Патч позволяет внести необходимые изменения в конфигурацию, не затрагивая остальную часть файла.",
+        "3. Автор технической документации использует Text Diff & Patch для обновления документации проекта. Патч позволяет добавить новые разделы или исправить ошибки в существующей документации, экономя время и усилия.",
+        "4. Менеджер проекта применяет этот инструмент для сравнения версий отчетов о проделанной работе. Патч помогает выявить изменения и добавления, внесенные в отчет, что облегчает процесс контроля и аудита проекта."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة Text Diff & Patch هي أداة متقدمة للتعامل مع النصوص وتحديثها بكفاءة. تتيح هذه الأداة للمطورين إنشاء فروقات (Diffs) بين إصدارين من النص وتطبيق التغييرات (Patches) على النص الأصلي بسهولة ودقة. الفروقات هي ملفات تحتوي على التغييرات التي تم إجراؤها بين نسختين مختلفتين من النص، وهي تستخدم بشكل شائع في تطبيقات التحكم في الإصدارات مثل Git. يمكن استخدام هذه الأداة في مجموعة متنوعة من السياقات، مثل تحديث المستندات بشكل آمن دون الحاجة لإعادة كتابة كاملة، أو مراجعة التغييرات التي أجريت على الكود البرمجي. تتميز الأداة بقدرتها على تقديم نتائج دقيقة وفعالة، مما يجعلها خيارًا مثاليًا للمطورين والكتاب والمراجعين.",
+      "usage_steps": [
+        "افتح أداة Text Diff & Patch من خلال الانتقال إلى القسم المخصص للتعامل مع النصوص على الموقع.",
+        "أدخل النص الأصلي في حقل 'النص الأصلي' المخصص على الجانب الأيمن من الواجهة.",
+        "أدخل النص المعدل في حقل 'النص المعدل' المخصص على الجانب الأيسر من الواجهة.",
+        "اضغط على زر 'إنشاء الفرق' لحساب الفروقات بين النصوص.",
+        "ستظهر الفروقات في منطقة النتائج، يمكنك مراجعتها ومعرفة التغييرات التي تم إجراؤها.",
+        "لتطبيق الفروقات على النص الأصلي، اضغط على زر 'تطبيق الفرق'، وسيتم تحديث النص الأصلي تلقائيًا."
+      ],
+      "usage_examples": [
+        "مراجعة الكود البرمجي: يمكن للمطورين استخدام الأداة لمراجعة التغييرات التي أجريت على الكود البرمجي دون الحاجة لمقارنة الملفات يدويًا، مما يوفر الوقت ويضمن الدقة.",
+        "تحديث المستندات القانونية: يمكن للمحامين والمستشارين القانونيين استخدام الأداة لتحديث المستندات القانونية بسرعة، مع الحفاظ على سجل التغييرات المفصلة.",
+        "تحرير المقالات الصحفية: يمكن للصحفيين استخدام الأداة لمراجعة التغييرات التي أجريت على المقالات الصحفية قبل النشر، مما يضمن دقة المعلومات المقدمة.",
+        "تحسين المستندات الأكاديمية: يمكن للباحثين الأكاديميين استخدام الأداة لتحديث المستندات الأكاديمية وإضافة التغييرات بسهولة، مع الإبقاء على سجل كامل للتغييرات التي تم إجراؤها."
+      ]
+    }
+  }
+}

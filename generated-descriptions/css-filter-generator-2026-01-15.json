@@ -1,0 +1,175 @@
+{
+  "slug": "css-filter-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The CSS Filter Generator is a powerful and intuitive tool designed to help web developers and designers create and experiment with complex CSS filter effects without the need for deep coding knowledge. This tool leverages the CSS `filter` property, which is used to apply graphical effects like blurring, changing color intensity, and more to an element. The visual editor within the tool provides a real-time preview of the effects, allowing users to tweak and adjust parameters until they achieve the desired look.\n\nWeb developers often need to enhance the visual appeal of their projects without compromising performance. The CSS Filter Generator simplifies this process by offering a wide range of filters, including `blur()`, `brightness()`, `contrast()`, `grayscale()`, `hue-rotate()`, `opacity()`, `saturate()`, and `sepia()`. Each filter can be applied individually or in combination, and the tool ensures that the resulting CSS code is optimized for cross-browser compatibility.\n\nThe tool is particularly useful for creating dynamic visual effects, such as hover states, animations, and responsive designs. By using the CSS Filter Generator, developers can focus more on the creative aspects of their projects and less on the technical implementation, ultimately saving time and improving the user experience.",
+      "usage_steps": [
+        "Open the CSS Filter Generator and locate the 'Filter Effects' panel on the left side of the interface.",
+        "Select a filter effect from the dropdown menu, such as 'Blur', 'Brightness', or 'Hue Rotate'.",
+        "Adjust the slider or input field to set the desired intensity for the selected filter effect.",
+        "Click the 'Add Filter' button to apply the effect to the preview image or element.",
+        "Repeat steps 2-4 to combine multiple filter effects and achieve a more complex visual result.",
+        "Once satisfied, click the 'Generate CSS' button to obtain the CSS code, which can be copied and pasted directly into your project."
+      ],
+      "usage_examples": [
+        "A web designer wants to create a subtle blur effect on a background image to make text more readable. Using the CSS Filter Generator, they can quickly apply a `blur(5px)` effect and see the result in real-time, ensuring the text stands out clearly.",
+        "A front-end developer is working on a portfolio website and needs to create a hover effect that changes the color intensity of images. By using the 'Brightness' filter, they can set a `brightness(150%)` effect that activates on mouse hover, enhancing the visual impact of the images.",
+        "A UX designer is tasked with creating a high-contrast mode for a web application. The 'Grayscale' and 'Contrast' filters in the CSS Filter Generator can be combined to produce a visually accessible design that meets accessibility standards.",
+        "A web developer is building a responsive e-commerce site and wants to add a sepia tone to product images on the mobile view. By using the 'Sepia' filter and applying it conditionally with media queries, they can achieve a consistent and aesthetically pleasing look across different devices."
+      ]
+    },
+    "zh": {
+      "detailed_description": "CSS Filter Generator 是一款强大的在线工具，旨在帮助前端开发人员和设计师快速生成复杂的 CSS 滤镜效果。通过直观的视觉编辑器，用户可以轻松调整颜色、亮度、对比度、饱和度等多种滤镜参数，即时预览效果，并生成对应的 CSS 代码。这款工具不仅简化了滤镜效果的创建过程，还提供了高度的自定义选项，使得开发人员可以轻松实现独特的视觉效果。\n\n用户需要这款工具的原因有很多。首先，手动编写复杂的 CSS 滤镜代码不仅耗时，还容易出错。通过 CSS Filter Generator，用户可以即时看到滤镜效果，避免了反复测试和调试的麻烦。其次，这款工具支持多种滤镜效果的组合，使得开发人员可以轻松实现复杂的视觉效果，例如模拟照片滤镜、添加模糊效果、调整图像颜色等。最后，生成的代码可以直接复制粘贴到项目中，极大地提高了开发效率。\n\n该工具的工作原理是通过一个图形界面，用户可以选择和调整各种滤镜参数。每个参数的调整都会实时反映在预览窗口中，用户可以即时看到效果。当效果满意时，用户可以点击“生成代码”按钮，工具会自动生成对应的 CSS 代码，包括滤镜属性和值。此外，工具还支持保存和加载配置，方便用户重复使用或分享特定的滤镜设置。",
+      "usage_steps": [
+        "打开 CSS Filter Generator 工具页面，你会看到一个预览窗口和多个滤镜参数选项。",
+        "选择你想要调整的滤镜效果，例如“亮度”、“对比度”、“饱和度”等。",
+        "使用滑块或输入框调整每个滤镜参数的具体值，预览窗口将实时更新效果。",
+        "如果需要组合多种滤镜效果，可以依次选择并调整多个参数。",
+        "调整完毕后，点击“生成代码”按钮，工具会生成对应的 CSS 代码。",
+        "复制生成的 CSS 代码，粘贴到你的项目中，即可应用滤镜效果。"
+      ],
+      "usage_examples": [
+        "网站设计师在设计网站时，可以通过 CSS Filter Generator 快速添加模糊效果，使背景图像更加柔和，突出主要内容。",
+        "前端开发人员在开发图像处理功能时，可以使用 CSS Filter Generator 生成复杂的滤镜代码，模拟不同的照片效果，例如黑白、复古等。",
+        "博客作者希望在文章中插入一张带有特定色调的图片，可以使用 CSS Filter Generator 调整颜色和亮度，达到理想的效果。",
+        "UI 设计师在设计用户界面时，可以利用 CSS Filter Generator 为按钮、图标等元素添加微妙的阴影和高光效果，提升整体视觉体验。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "CSS Filter Generatorは、ウェブデザイナーや開発者がCSSフィルターエフェクトをビジュアルエディタを用いて生成できる強力なツールです。このツールでは、ユーザーが画像やビデオ要素に多種多様なエフェクトを適用し、その結果をリアルタイムで確認することができます。CSSフィルターは、色の変更、ピクセル化、ぼかし効果、グレースケール変換など、画面上の要素の外観を変更するために使用されます。このツールが提供するビジュアルエディタは、複雑なCSSコードの手動入力を必要とせずに、直感的なインターフェースを通じてエフェクトを適用および調整することができます。これにより、デザイナーや開発者はより短時間でプロフェッショナルなデザインを実現することが可能になります。CSS Filter Generatorは、特にプロジェクトの初期段階でのデザインの迅速な検討や、既存のウェブサイトのビジュアル効果の改善に最適なツールです。",
+      "usage_steps": [
+        "1. ツールを開き、中央に表示されるビジュアルエディタ領域にドラッグアンドドロップで画像やビデオをアップロードします。",
+        "2. 左側のサイドバーからエフェクトカテゴリを選択します（例：Color Adjustments, Blurs, Distortionsなど）。",
+        "3. 選択したエフェクトのスライダーを調整し、希望の効果を適用します。リアルタイムプレビューで変更を確認します。",
+        "4. 必要に応じて、複数のエフェクトを組み合わせて適用し、最適な結果を得るまで調整します。",
+        "5. エフェクトが完成したら、上部メニューの「Copy CSS」ボタンをクリックして生成されたCSSコードをコピーします。",
+        "6. コピーしたCSSコードをウェブサイトのCSSファイルに貼り付け、エフェクトを実装します。"
+      ],
+      "usage_examples": [
+        "1. オンラインショッピングサイトで商品画像の統一感を出すため、全商品画像にグレースケール効果を適用します。",
+        "2. 企業サイトのヘッダー部分で背景画像にぼかし効果を加え、テキストがより読みやすく表示されるようにします。",
+        "3. ブログ記事のサムネイル画像に色調補正を施し、記事のトーンに合わせた色合いに調整します。",
+        "4. インタラクティブなウェブアプリケーションで、ユーザーが選択した要素にピクセル化効果を動的に適用し、視覚的なフィードバックを提供します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "CSS Filter Generator는 사용자들이 시각적인 편집기를 통해 CSS 필터 효과를 생성하고 수정할 수 있는 고급 도구입니다. 이 도구는 윈도우, 드롭인, 그림자, 색상 조정 등 다양한 CSS 필터 효과를 시뮬레이션하고 즉시 미리 볼 수 있게 합니다. 사용자들은 HTML 요소에 적용할 CSS 코드를 실시간으로 생성하고 복사할 수 있어, 웹 프로젝트에 즉시 적용할 수 있습니다. CSS Filter Generator는 디자이너와 개발자들이 웹디자인을 더욱 역동적이고 시각적으로 뛰어난 결과로 완성할 수 있게 합니다. 특히, 웹사이트의 특정 요소에 다양한 효과를 적용하고자 하는 경우, 이 도구는 필수적입니다. CSS 필터는 이미지, 비디오, 텍스트 등 다양한 요소에 적용될 수 있으며, 이를 통해 웹 페이지의 시각적 복잡성과 표현력을 대폭 향상시킬 수 있습니다.",
+      "usage_steps": [
+        "1. CSS Filter Generator 웹사이트에 접속하여 'Start Designing' 버튼을 클릭합니다.",
+        "2. 좌측 패널에서 'Filter Effects' 탭을 선택합니다. 이곳에서 다양한 필터 효과(예: blur, brightness, contrast, grayscale, hue-rotate, opacity, saturation, sepia)를 선택할 수 있습니다.",
+        "3. 각 필터 효과 옆의 슬라이더를 조작하여 효과의 강도를 조절합니다. 예를 들어, 'brightness' 슬라이더를 움직여 이미지의 밝기를 조절합니다.",
+        "4. 'Preview' 섹션에서 조정한 효과를 즉시 확인합니다. 필요에 따라 여러 필터 효과를 조합하여 더욱 복잡한 결과를 만들 수 있습니다.",
+        "5. 오른쪽 상단의 'Generate CSS' 버튼을 클릭하여 생성된 CSS 코드를 확인합니다. 이 코드는 HTML 요소에 직접 적용할 수 있는 형식으로 제공됩니다.",
+        "6. 생성된 CSS 코드를 클립보드에 복사한 후, 웹 프로젝트의 스타일 시트에 붙여넣습니다. 이를 통해 웹사이트에 즉시 효과를 적용할 수 있습니다."
+      ],
+      "usage_examples": [
+        "예시 1: 웹사이트의 로그인 버튼을 클릭할 때 그림자 효과와 색상 변화를 추가하여 사용자 경험을 개선합니다. CSS Filter Generator를 사용하여 버튼의 hover 상태에 그림자와 색상 조정 효과를 적용할 수 있습니다.",
+        "예시 2: 포트폴리오 웹사이트의 이미지 갤러리에 흑백 효과를 적용하고, 마우스 오버 시 컬러 이미지로 전환되게 합니다. CSS Filter Generator를 통해 grayscale 필터를 적용하고, hover 상태에서 grayscale을 0%로 조정하여 효과를 생성할 수 있습니다.",
+        "예시 3: 온라인 상점의 제품 이미지에 흐림 효과를 적용하여 판매 중인 제품과 판매 완료된 제품을 구분합니다. CSS Filter Generator를 사용하여 blur 필터를 조정하여 판매 완료된 제품 이미지에 흐림 효과를 추가할 수 있습니다.",
+        "예시 4: 웹사이트의 배너 이미지에 허니콤 효과를 적용하여 독특한 시각적 경험을 제공합니다. CSS Filter Generator를 통해 hue-rotate 필터를 조정하여 이미지 색상을 순환시키며, sepia 필터를 사용하여 고유한 톤을 추가할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El CSS Filter Generator es una poderosa herramienta de desarrollo web que permite a los diseñadores y desarrolladores crear y aplicar efectos de filtro CSS a elementos HTML de manera visual e interactiva. Técnicamente, este generador utiliza las especificaciones de CSS3 para aplicar filtros como blur, brightness, contrast, grayscale, hue-rotate, invert, opacity, saturate, y sepia a imágenes, videos, y otros elementos visuales. La herramienta es especialmente útil para aquellos que buscan mejorar la estética de su sitio web sin tener que escribir manualmente código CSS complejo. A través de una interfaz de usuario intuitiva, los usuarios pueden seleccionar y ajustar varios efectos de filtro, visualizar los cambios en tiempo real, y obtener el código CSS necesario para implementar los efectos en su proyecto. El uso de esta herramienta no solo ahorra tiempo y reduce el riesgo de errores, sino que también facilita la experimentación con diferentes estilos y efectos, lo que es esencial para el desarrollo de diseños web modernos y atractivos.",
+      "usage_steps": [
+        "Abre el CSS Filter Generator en tu navegador y selecciona el elemento HTML al que deseas aplicar un efecto de filtro en la sección 'Select Element'.",
+        "En la sección 'Filter Effects', elige el tipo de filtro que deseas aplicar. Puedes seleccionar entre blur, brightness, contrast, grayscale, hue-rotate, invert, opacity, saturate, y sepia.",
+        "Ajusta los parámetros del filtro utilizando los controles deslizantes. Por ejemplo, si seleccionas 'brightness', puedes mover el deslizador para aumentar o disminuir el brillo del elemento.",
+        "Visualiza los cambios en tiempo real en la sección 'Preview' para asegurarte de que el efecto sea el deseado. Puedes ajustar los controles hasta obtener el resultado perfecto.",
+        "Una vez que estés satisfecho con el efecto, haz clic en 'Generate CSS' para generar el código CSS correspondiente. El código se mostrará en la sección 'Generated Code'.",
+        "Copia el código CSS generado y pégalo en tu archivo CSS o en la sección de estilos de tu documento HTML para aplicar el efecto de filtro a tu elemento."
+      ],
+      "usage_examples": [
+        "Un diseñador web está trabajando en una galería de imágenes y desea aplicar un efecto de desenfoque (blur) a las imágenes que no están en el foco principal. Utiliza el CSS Filter Generator para crear un efecto de desenfoque suave y aplicarlo a las imágenes secundarias, mejorando así la focalización visual en la imagen principal.",
+        "Un desarrollador de aplicaciones web necesita crear una interfaz de usuario que cambie su apariencia en modo oscuro. Utiliza el CSS Filter Generator para aplicar un efecto de inversión de colores (invert) a los elementos de la interfaz, asegurando que los colores sean coherentes con el tema oscuro.",
+        "Un diseñador gráfico está trabajando en un video interactivo y necesita aplicar un efecto de desaturación a ciertas secciones del video para resaltar elementos específicos. Utiliza el CSS Filter Generator para crear un efecto de desaturación y aplicarlo de manera precisa a las secciones del video.",
+        "Un desarrollador de e-commerce está diseñando una página de productos y desea que las imágenes de los productos tengan un efecto de brillo cuando el usuario pasa el mouse sobre ellas. Utiliza el CSS Filter Generator para crear un efecto de brillo dinámico y aplicarlo a las imágenes de productos, mejorando la interactividad y la experiencia del usuario."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O CSS Filter Generator é uma ferramenta avançada que permite aos desenvolvedores web criar e aplicar filtros CSS em elementos de suas páginas, utilizando um editor visual intuitivo. Essa ferramenta é essencial para quem busca aprimorar a aparência visual de imagens, vídeos, e outros elementos gráficos, sem a necessidade de editá-los manualmente em programas de edição de imagem. Ao utilizar filtros CSS, os desenvolvedores podem aplicar efeitos como blur, contraste, saturação, e inversão de cores, entre outros, diretamente no CSS da página. Isso não apenas simplifica o processo de design, mas também garante que os efeitos sejam consistentes e responsivos em diferentes dispositivos e navegadores. O CSS Filter Generator oferece uma interface amigável que permite ajustar cada parâmetro de filtro em tempo real, visualizando imediatamente os resultados no elemento selecionado. Além disso, a ferramenta gera o código CSS correspondente, que pode ser facilmente copiado e colado no projeto do desenvolvedor, otimizando o fluxo de trabalho e reduzindo o tempo de desenvolvimento.",
+      "usage_steps": [
+        "Acesse a página do CSS Filter Generator e selecione o elemento que deseja aplicar o filtro, utilizando a opção 'Select Element' no painel lateral.",
+        "Na seção 'Filters', escolha o tipo de filtro que deseja aplicar, como 'Blur', 'Grayscale', 'Contrast', 'Brightness', 'Saturate', 'Hue Rotate', 'Invert', 'Opacity', 'Sepia', e 'Drop Shadow'.",
+        "Ajuste os valores dos filtros usando os controles deslizantes na interface. Cada mudança será refletida imediatamente no elemento visualizado na tela.",
+        "Experimente combinar diferentes filtros para criar efeitos mais complexos e personalizados. Você pode adicionar múltiplos filtros clicando no botão '+ Add Filter'.",
+        "Quando estiver satisfeito com os efeitos, clique em 'Generate CSS' para obter o código CSS correspondente aos filtros aplicados.",
+        "Copie o código CSS gerado e cole-o no seu arquivo CSS ou diretamente no elemento HTML do seu projeto."
+      ],
+      "usage_examples": [
+        "Um designer de web precisa criar um efeito de desfoque (blur) em uma imagem de fundo para destacar um texto em primeiro plano. O CSS Filter Generator permite ajustar o nível de desfoque e visualizar o resultado em tempo real, garantindo que o texto fique legível e atraente.",
+        "Um desenvolvedor de e-commerce deseja aplicar um efeito de sépia em imagens de produtos antigos para criar uma atmosfera vintage. Usando o CSS Filter Generator, ele pode ajustar a intensidade do efeito sépia e aplicá-lo de forma consistente a todas as imagens do catálogo.",
+        "Um criador de conteúdo para redes sociais precisa inverter as cores de uma imagem para criar um visual de negativo. Com o CSS Filter Generator, ele pode aplicar o filtro de inversão de cores e ajustá-lo até obter o resultado desejado.",
+        "Um desenvolvedor de aplicativos web precisa criar um efeito de sombra (drop shadow) em um botão para dar a impressão de profundidade. Utilizando o CSS Filter Generator, ele pode configurar a posição, tamanho e opacidade da sombra, melhorando a usabilidade e a aparência do botão."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le CSS Filter Generator est un outil puissant conçu pour faciliter la création d'effets de filtrage CSS complexes. Techniquement, cet outil permet aux développeurs et aux designers de générer des filtres CSS en temps réel, en utilisant une interface visuelle intuitive. Les filtres CSS sont des effets graphiques qui peuvent être appliqués à des éléments HTML, tels que des images, des vidéos, des textes, ou même des conteneurs entiers. Les effets les plus courants incluent la sépia, le flou, la transparence, et la luminosité, mais le CSS Filter Generator va bien au-delà en offrant des combinaisons personnalisées et des ajustements précis. Cet outil est essentiel pour les professionnels qui souhaitent améliorer l'aspect visuel de leurs sites web sans avoir à maîtriser les subtilités du CSS. Il permet de sauver du temps en évitant les essais et erreurs manuels, et offre une prévisualisation en temps réel des modifications, ce qui facilite l'itération et l'optimisation. De plus, les développeurs peuvent exporter le code CSS généré directement pour l'intégrer dans leurs projets, assurant ainsi une intégration fluide et sans erreurs.",
+      "usage_steps": [
+        "Ouvrez le CSS Filter Generator dans votre navigateur web.",
+        "Sélectionnez l'élément HTML auquel vous souhaitez appliquer un filtre en utilisant la zone de prévisualisation ou en entrant le sélecteur CSS correspondant.",
+        "Utilisez les sliders pour ajuster les paramètres des différents filtres, tels que la sépia, le flou, la luminosité, et la transparence.",
+        "Prévisualisez les effets en temps réel sur l'élément sélectionné pour voir instantanément les changements apportés.",
+        "Une fois satisfaits des effets, cliquez sur le bouton 'Exporter' pour obtenir le code CSS généré.",
+        "Copiez le code CSS et intégrez-le dans votre fichier CSS ou directement dans votre HTML pour appliquer les effets sur votre site web."
+      ],
+      "usage_examples": [
+        "Un designer web souhaite créer un effet de flou sur une galerie d'images pour mettre en avant une image principale. Il utilise le CSS Filter Generator pour ajuster le niveau de flou et l'opacité, puis exporte le code CSS pour l'intégrer dans son site.",
+        "Un développeur front-end veut ajouter un effet de sépia sur une section de témoignages pour donner une ambiance vintage. Il configure les filtres de sépia et de contraste dans le CSS Filter Generator, puis copie le code CSS pour l'utiliser dans son projet.",
+        "Une agence de marketing numérique crée une bannière publicitaire avec un fond flou pour mettre en avant un texte. Elle utilise le CSS Filter Generator pour ajuster le flou et la luminosité, puis intègre le code CSS dans la bannière pour une présentation professionnelle.",
+        "Un développeur de jeux en ligne veut ajouter un effet de transparence sur des éléments d'interface utilisateur pour créer une expérience visuelle plus immersive. Il utilise le CSS Filter Generator pour ajuster la transparence et l'opacité, puis exporte le code CSS pour l'intégrer dans son jeu."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der CSS Filter Generator ist ein leistungsstarkes Online-Tool, das Entwickler und Designer ermöglicht, komplexe CSS-Filter-Effekte mit einer visuellen Oberfläche zu erstellen. Dieses Tool nutzt die CSS-Filter-Funktionen, um eingehende Bilder oder HTML-Elemente in Echtzeit zu manipulieren. Benutzer können verschiedene Effekte wie Blur, Brightness, Contrast, Grayscale, Hue-Rotation, Invert, Opacity, Saturate und Sepia anwenden und anpassen. Die visuelle Steuerung ermöglicht es, die Effekte zu sehen, während sie verfeinert werden, was den Prozess der CSS-Entwicklung erheblich vereinfacht. Dieses Tool ist besonders nützlich für Webentwickler, die visuell ansprechende Effekte auf Websites erstellen möchten, ohne tief in den CSS-Code eintauchen zu müssen. Es unterstützt auch die Erstellung von responsiven Designs, da die generierten CSS-Regeln leicht an verschiedene Bildschirmgrößen angepasst werden können.",
+      "usage_steps": [
+        "Öffnen Sie den CSS Filter Generator in Ihrem Browser und laden Sie das Bild hoch, auf das Sie den Filter anwenden möchten, indem Sie auf den Button 'Bild hochladen' klicken.",
+        "Wählen Sie im Menü auf der linken Seite den gewünschten Filter aus, z.B. 'Blur', 'Brightness' oder 'Contrast'.",
+        "Benutzen Sie die Schieberegler, um den Effekt zu intensivieren oder abzuschwächen. Sie sehen die Änderungen in Echtzeit im Vorschaubereich.",
+        "Klicken Sie auf 'Weitere Optionen', um zusätzliche Einstellungen wie die Anwendung mehrerer Filter zu aktivieren oder das Hintergrundbild zu ändern.",
+        "Nachdem Sie die gewünschten Effekte eingestellt haben, klicken Sie auf 'CSS-Code generieren', um den entsprechenden CSS-Code für Ihre Website oder Ihr Projekt zu erhalten.",
+        "Kopieren Sie den generierten CSS-Code und fügen Sie ihn in Ihr Projekt ein. Sie können den Code nach Bedarf anpassen, um ihn zu optimieren oder zu erweitern."
+      ],
+      "usage_examples": [
+        "Ein Webdesigner erstellt eine interaktive Website, bei der Bilder beim Mouseover-Effekt ein Graustufen-Filter angewendet wird. Der CSS Filter Generator ermöglicht es, den Filter visuell zu erstellen und den benutzerfreundlichen Code zu integrieren.",
+        "Ein Frontend-Entwickler arbeitet an einer E-Commerce-Website und möchte Produkte in der Kategorie 'Schwarz-Weiß-Fotografie' visuell hervorheben. Mithilfe des CSS Filter Generators kann er einen Graustufen-Filter erstellen, der spezifisch auf diese Produkte angewendet wird.",
+        "Ein Grafikdesigner erstellt eine kreative Landing Page, auf der ein Hintergrundbild eine sanfte Blur-Effekt haben soll, um den Hauptsatz hervorzuheben. Der CSS Filter Generator ermöglicht es, den Blur-Effekt zu feinabzustimmen, bis er perfekt passt.",
+        "Ein UX-Designer entwickelt eine responsives Webdesign und benötigt verschiedene Filter-Effekte, die auf unterschiedlichen Geräten und Bildschirmgrößen gut funktionieren. Der CSS Filter Generator hilft ihm, die CSS-Regeln zu erstellen, die auf allen Geräten konsistent wirken."
+      ]
+    },
+    "ru": {
+      "detailed_description": "CSS Filter Generator — это мощный визуальный инструмент, который позволяет разработчикам и дизайнерам создавать сложные эффекты CSS фильтров без глубоких знаний CSS. Этот инструмент использует встроенные алгоритмы для применения различных фильтров, таких как blur (размытие), brightness (яркость), contrast (контрастность), grayscale (оттенки серого), hue-rotate (поворот оттенка), invert (инвертирование), opacity (прозрачность), saturate (насыщенность) и sepia (сепия). После настройки фильтров, инструмент генерирует соответствующий CSS код, который можно сразу же внедрить в проект. Это особенно полезно для тех, кто хочет быстро экспериментировать с визуальными эффектами на веб-сайте, не тратя время на ручное написание кода. Кроме того, CSS Filter Generator помогает оптимизировать производительность, автоматически сжимая и оптимизируя CSS код, что улучшает загрузку страниц и снижает нагрузку на браузер.",
+      "usage_steps": [
+        "Откройте инструмент CSS Filter Generator на сайте.",
+        "Перейдите в раздел ‘Effects’ и выберите фильтр, который хотите применить, например, ‘Blur’ или ‘Brightness’.",
+        "Используйте слайдеры для настройки параметров фильтра. Например, установите значение ‘Blur’ на 5px.",
+        "Если требуется, добавьте дополнительные фильтры, выбирая их из списка и настраивая параметры.",
+        "После настройки всех фильтров нажмите кнопку ‘Generate CSS’.",
+        "Скопируйте сгенерированный CSS код и вставьте его в свой проект."
+      ],
+      "usage_examples": [
+        "Разработчик хочет добавить эффект размытия к фону изображения на веб-сайте, чтобы текст на переднем плане был более читаемым. Используя CSS Filter Generator, он быстро настраивает фильтр ‘Blur’ и получает готовый CSS код.",
+        "Дизайнер создает модальное окно и хочет сделать фон полупрозрачным. С помощью инструмента, он выбирает фильтр ‘Opacity’ и устанавливает значение на 50%, затем копирует сгенерированный код и внедряет его в проект.",
+        "Команда разработчиков работает над интерфейсом, который требует динамической смены цветов. CSS Filter Generator помогает настроить фильтр ‘Hue-Rotate’ и ‘Invert’ для создания плавных переходов между цветами.",
+        "Веб-дизайнер хочет создать черно-белую версию изображения для создания контрастного эффекта. Он использует фильтр ‘Grayscale’ в CSS Filter Generator и получает код, который можно сразу внедрить в CSS файла проекта."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مولد أثر المرشحات CSS هو أداة تفاعلية تتيح للمطورين إنشاء وتطبيق تأثيرات مرشحات CSS المعقدة على العناصر المرئية في صفحات الويب. يستخدم هذا الأداة المطورون لإنشاء تأثيرات بصرية مبتكرة مثل التعتيم، والتشويش، والتدوير، وغيرها، دون الحاجة إلى معرفة متعمقة بتفاصيل CSS. يمكن استخدام هذه التأثيرات لإضافة عمق وتفاعلية إلى التصميمات، مما يعزز تجربة المستخدم. يعمل الأداة من خلال واجهة بصرية سهلة الاستخدام تتيح للمستخدمين تحديد العناصر المراد تطبيق المرشحات عليها وضبط المعلمات المختلفة للمرشحات بشكل ديناميكي. بعد تكوين التأثيرات، يمكن للمستخدمين الحصول على الشفرة CSS المولدة واستخدامها مباشرة في مشاريعهم.",
+      "usage_steps": [
+        "افتح أداة مولد أثر المرشحات CSS على موقع الويب.",
+        "اختر العنصر المرئي الذي تريد تطبيق المرشح عليه من قائمة العناصر المتاحة، مثل الصور أو العناصر النصية.",
+        "استخدم شريط الأدوات العلوي لضبط معلمات المرشح، مثل التعتيم (opacity)، التشويش (blur)، والتدوير (hue-rotate).",
+        "انقر على الزر 'تطبيق التأثير' لمعاينة التأثيرات المطبقة على العنصر في واجهة المعاينة.",
+        "اضبط الإعدادات بشكل دقيق باستخدام شريط التحكم الجانبي لتحسين التأثيرات حسب احتياجاتك.",
+        "بعد الانتهاء من ضبط التأثيرات، انسخ الشفرة CSS المولدة من مربع النص الموجود أسفل الواجهة واستخدمها في مشروعك."
+      ],
+      "usage_examples": [
+        "إضافة تأثير التعتيم على صورة خلفية لموقع ويب لجعل النص فوقها أكثر وضوحًا وقابلية للقراءة.",
+        "تطبيق تأثير التشويش (blur) على خلفية نافذة منبثقة (popup) لتركيز الاهتمام على المحتوى الرئيسي.",
+        "إنشاء تأثير تدوير الألوان (hue-rotate) لصورة لجعلها تبدو أكثر حيوية خلال حركة التمرير (scroll) أو عند النقر على الزر.",
+        "استخدام تأثير التشبع (saturate) لزيادة أو تقليل شدة الألوان في صورة لخلق تأثيرات بصرية مميزة في عرض المنتجات على متجر إلكتروني."
+      ]
+    }
+  }
+}

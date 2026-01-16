@@ -1,0 +1,158 @@
+{
+  "slug": "bubble-chart-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Bubble Chart Generator is a sophisticated online application designed to visualize complex data relationships through 3D bubble charts. Unlike traditional 2D charts, this tool extends the visualization to a third dimension, allowing users to represent not only X and Y coordinates but also the size of the bubbles, which can correlate with a third variable such as volume, frequency, or another metric. This makes it ideal for researchers, data analysts, and business professionals who need to explore multi-dimensional data sets. The tool supports a wide range of data inputs, including CSV files and manual data entry, and offers advanced customization options for colors, labels, and axis scales. By leveraging WebGL for rendering, the Bubble Chart Generator ensures smooth performance even with large data sets, making it a powerful tool for data exploration and presentation.",
+      "usage_steps": [
+        "Step 1: Navigate to the Bubble Chart Generator homepage and click on the 'Upload Data' button to import your data set. You can choose to upload a CSV file or manually input data using the provided table.",
+        "Step 2: Once your data is uploaded, select the columns that correspond to the X-axis, Y-axis, and the size of the bubbles. Use the dropdown menus to assign the appropriate variables.",
+        "Step 3: Customize the appearance of your chart by adjusting the color scheme, label formats, and axis scales. You can access these options under the 'Chart Settings' tab.",
+        "Step 4: Enable the 3D visualization by toggling the '3D View' switch. This will transform your chart into a three-dimensional representation, providing a more immersive data exploration experience.",
+        "Step 5: Interact with the chart by rotating it with your mouse or touchpad to view the data from different angles. Use the zoom controls to focus on specific areas of interest.",
+        "Step 6: Once you are satisfied with your chart, click on the 'Export' button to download the visualization as an image or a vector file. You can also share the chart directly from the tool using the 'Share' option."
+      ],
+      "usage_examples": [
+        "Example 1: A market research analyst uses the Bubble Chart Generator to visualize the relationship between consumer age (X-axis), income (Y-axis), and the frequency of product purchases (bubble size) to identify target demographics for a new product launch.",
+        "Example 2: A financial analyst employs the tool to compare the performance of different stocks by plotting the stock price (X-axis), market capitalization (Y-axis), and the volume of trades (bubble size) to spot trends and outliers in the market.",
+        "Example 3: A public health researcher utilizes the Bubble Chart Generator to map the incidence of a disease (X-axis), the population density (Y-axis), and the number of healthcare facilities (bubble size) to optimize resource allocation in a region.",
+        "Example 4: An environmental scientist uses the tool to visualize the correlation between carbon emissions (X-axis), economic growth (Y-axis), and the area of forest cover (bubble size) to assess the impact of industrial activities on the environment."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Bubble Chart Generator 是一款在线工具，用于创建展示 X 轴、Y 轴和大小关系的三维气泡图。通过该工具，用户可以直观地展示数据点之间的复杂关系，尤其适用于多维度数据的可视化。例如，市场营销人员可以使用气泡图来分析不同广告渠道的投入与回报关系，科研人员可以利用气泡图来展现实验数据的多维特征。该工具的核心功能包括自定义气泡的颜色、透明度、大小，以及动态调整图表的视角，用户可以通过简单的拖拽操作调整图表的布局，实现数据的多角度展示。此外，Bubble Chart Generator 支持数据的导入和导出，用户可以将 CSV 或 Excel 文件直接上传到工具中，生成气泡图后，还可以将图表导出为 PNG、SVG 等多种格式，方便在报告或演示文稿中使用。",
+      "usage_steps": [
+        "Step 1: 访问 Bubble Chart Generator 工具页面，点击“上传数据”按钮，选择您的 CSV 或 Excel 文件。",
+        "Step 2: 数据上传后，系统会自动识别并显示数据列。选择 X 轴、Y 轴和气泡大小对应的列。",
+        "Step 3: 在“自定义设置”区域，调整气泡的颜色、透明度和大小范围，以满足您的需求。",
+        "Step 4: 使用“视角调整”功能，通过拖拽调整图表的视角，找到最佳的展示角度。",
+        "Step 5: 点击“预览”按钮，查看生成的气泡图，确保所有设置符合预期。",
+        "Step 6: 满意后，点击“导出”按钮，选择导出格式（如 PNG、SVG），保存生成的气泡图。"
+      ],
+      "usage_examples": [
+        "Example 1: 市场营销人员可以使用 Bubble Chart Generator 分析不同广告渠道的投入与回报关系，其中 X 轴为广告投入金额，Y 轴为广告产生的销售额，气泡大小表示广告的点击率。",
+        "Example 2: 医疗研究人员可以利用该工具展示患者数据，X 轴为患者的年龄，Y 轴为疾病持续时间，气泡大小表示患者的健康状况评分。",
+        "Example 3: 金融分析师可以使用气泡图来分析不同股票的收益率和波动性，X 轴为股票的市盈率，Y 轴为股票的年化收益率，气泡大小表示股票的市场资本。",
+        "Example 4: 教育机构可以利用 Bubble Chart Generator 展示学生的学习成果，X 轴为学生的考试成绩，Y 轴为学生的出勤率，气泡大小表示学生的参与度。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Bubble Chart Generatorは、3次元のバブルチャートを生成するための強力なツールです。このツールでは、X軸、Y軸、およびバブルのサイズをデータポイントとして使用します。これらのデータポイントは、3つの主要な変数間の関係を視覚化するために利用されます。バブルチャートは、データの密度や関連性を一目で理解するのに非常に効果的であり、複雑なデータセットを扱う際に特に有用です。例えば、市場分析では、各製品の売上（X軸）、利益率（Y軸）、および販売量（バブルのサイズ）を比較することができます。また、科学研究では、実験結果の相関関係を視覚的に把握するのに活用されます。このツールは、データのアップロードからチャートのカスタマイズまで、直感的なインターフェースを提供しており、高度なオプションも利用可能です。ユーザーは、色、ラベル、グリッド線などを細かく調整することができ、またエクスポート機能を使用してチャートをPNGやSVG形式で保存することができます。",
+      "usage_steps": [
+        "Step 1: ブラウザでBubble Chart Generatorにアクセスし、ホームページを開きます。",
+        "Step 2: 「データをアップロード」ボタンをクリックし、CSVまたはExcel形式のデータファイルを選択してアップロードします。",
+        "Step 3: データのプレビューが表示されたら、X軸、Y軸、およびバブルのサイズに使用する列を指定します。",
+        "Step 4: 「チャート設定」タブで、色、ラベル、グリッド線などの表示オプションを選択します。",
+        "Step 5: プレビュー画面で生成された3Dバブルチャートを確認し、必要に応じて微調整します。",
+        "Step 6: 満足したチャートが生成されたら、「エクスポート」ボタンをクリックして、PNGやSVG形式で保存します。"
+      ],
+      "usage_examples": [
+        "Example 1: 市場調査者である田中さんが、複数の製品の売上（X軸）、利益率（Y軸）、および販売量（バブルのサイズ）を比較するために、Bubble Chart Generatorを使用して3Dバブルチャートを作成しました。これにより、どの製品が最も利益を生んでいるか、また販売量との相関関係を一目で理解することが可能になりました。",
+        "Example 2: 環境科学者の佐藤さんが、複数の都市の二酸化炭素排出量（X軸）、人口密度（Y軸）、および緑地面積（バブルのサイズ）の関係を調査するために、Bubble Chart Generatorを使用して3Dバブルチャートを作成しました。これにより、都市の規模や人口密度が二酸化炭素排出量にどのように影響しているかを視覚的に把握することができました。",
+        "Example 3: デジタルマーケティングの担当者である鈴木さんが、複数の広告キャンペーンのクリック率（X軸）、コンバージョン率（Y軸）、および広告費（バブルのサイズ）を比較するために、Bubble Chart Generatorを使用して3Dバブルチャートを作成しました。これにより、どのキャンペーンが最も効果的か、また広告費との相関関係を明確にすることが可能になりました。",
+        "Example 4: 医療研究者の伊藤さんが、複数の患者の治療期間（X軸）、回復速度（Y軸）、および治療コスト（バブルのサイズ）の関係を調査するために、Bubble Chart Generatorを使用して3Dバブルチャートを作成しました。これにより、治療の効果とコスト効率のバランスを評価するのに役立ちました。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Bubble Chart Generator는 3D 버블 차트를 생성하여 X, Y축과 크기 사이의 관계를 시각화하는 도구입니다. 이 도구는 사용자가 복잡한 데이터 세트를 직관적으로 이해할 수 있도록 설계되었습니다. 특히, 세 가지 변수 간의 상호 작용을 나타내는 데 유용합니다. 예를 들어, 시장 분석에서는 제품의 가격(X축), 판매량(Y축), 그리고 시장 점유율(크기) 간의 관계를 시각화하는데 활용될 수 있습니다. 사용자는 데이터를 업로드하면, 도구는 자동으로 3D 버블 차트를 생성하며, 사용자는 색상, 레이블, 축 범위 등을 사용자 정의할 수 있습니다. 이 도구는 대용량 데이터 세트의 패턴을 쉽게 파악하고, 데이터 사이의 상관 관계를 효과적으로 분석하는 데 도움을 줍니다.",
+      "usage_steps": [
+        "Step 1: '데이터 업로드' 버튼을 클릭하여 CSV 또는 Excel 파일을 업로드합니다.",
+        "Step 2: 업로드한 데이터에서 X축, Y축, 크기 변수를 선택합니다.",
+        "Step 3: '차트 스타일' 섹션에서 버블의 색상, 투명도, 모양 등을 조정합니다.",
+        "Step 4: '축 설정' 섹션에서 X축과 Y축의 범위와 레이블을 설정합니다.",
+        "Step 5: '레이블' 섹션에서 개별 버블에 대한 레이블을 추가하거나 숨깁니다.",
+        "Step 6: '차트 생성' 버튼을 클릭하여 3D 버블 차트를 완성합니다."
+      ],
+      "usage_examples": [
+        "Example 1: 시장 분석가가 제품의 가격, 판매량, 시장 점유율 간의 관계를 시각화하여 경쟁사와의 비교를 수행합니다.",
+        "Example 2: 의료 연구자가 환자의 나이, 체중, 혈압 간의 상관 관계를 분석하여 질병 위험을 예측합니다.",
+        "Example 3: 마케팅 팀이 광고 비용, 클릭률, 전환율을 시각화하여 마케팅 전략의 효과를 평가합니다.",
+        "Example 4: 환경 과학자가 온도, 습도, 오염 물질 농도 간의 관계를 분석하여 환경 변화를 모니터링합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de Gráficos de Burbujas es una poderosa herramienta diseñada para visualizar datos tridimensionales en un formato gráfico intuitivo. Esta herramienta permite a los usuarios crear gráficos de burbujas en 3D, donde cada burbuja representa un punto de datos y su posición en los ejes X e Y, junto con su tamaño, indica tres dimensiones de información. La utilidad de esta herramienta radica en su capacidad para mostrar de manera clara y visual las relaciones y patrones entre tres variables, lo que es especialmente útil en campos como el análisis de datos, la investigación científica y la toma de decisiones empresariales. La generación de gráficos de burbujas en 3D se basa en algoritmos de representación gráfica avanzados, que garantizan una visualización precisa y de alta calidad. Los usuarios pueden personalizar diversos aspectos del gráfico, como los colores, las etiquetas y los ejes, para adaptar la visualización a sus necesidades específicas.",
+      "usage_steps": [
+        "Accede a la interfaz del Generador de Gráficos de Burbujas y haz clic en el botón 'Subir Datos' para importar tu conjunto de datos en formato CSV o Excel.",
+        "Una vez que los datos se han cargado, selecciona las columnas que representarán los ejes X, Y y el tamaño de las burbujas. Utiliza el desplegable 'Seleccionar Columnas' para asignar cada variable.",
+        "Personaliza la apariencia del gráfico ajustando los parámetros en la sección 'Opciones de Visualización'. Puedes cambiar el color de las burbujas, agregar etiquetas y definir el rango de tamaños.",
+        "Si es necesario, ajusta las escalas de los ejes X e Y utilizando los controles deslizantes 'Escalar Ejes'. Esto te permite enfocar mejor los datos de interés.",
+        "Haz clic en el botón 'Generar Gráfico' para crear la visualización en 3D. El gráfico se renderizará en la parte derecha de la pantalla, permitiéndote interactuar con él para explorar diferentes vistas.",
+        "Finalmente, utiliza las opciones de exportación para guardar el gráfico en formato PNG, PDF o SVG, o compártelo directamente a través de un enlace generado automáticamente."
+      ],
+      "usage_examples": [
+        "Un investigador de mercados podría usar el Generador de Gráficos de Burbujas para analizar la relación entre el tamaño de la población, el ingreso promedio y el consumo de productos en diferentes ciudades. Cada burbuja representaría una ciudad, con el tamaño de la burbuja indicando la población, la posición en el eje X mostrando el ingreso promedio y la posición en el eje Y representando el consumo.",
+        "Un ingeniero de procesos podría emplear esta herramienta para visualizar la eficiencia de diferentes máquinas en una fábrica. Las burbujas podrían representar máquinas, con el tamaño indicando la capacidad de producción, la posición en el eje X mostrando el tiempo de inactividad y la posición en el eje Y representando el consumo de energía.",
+        "Un analista financiero podría utilizar el gráfico de burbujas para evaluar el desempeño de varias empresas en un sector. Las burbujas representarían empresas, con el tamaño indicando el capital de mercado, la posición en el eje X mostrando la rentabilidad y la posición en el eje Y representando el crecimiento de los ingresos.",
+        "Un científico de datos podría usar el Generador de Gráficos de Burbujas para explorar la relación entre la temperatura, la humedad y la presión atmosférica en diferentes ubicaciones geográficas. Cada burbuja representaría una ubicación, con el tamaño indicando la altitud, la posición en el eje X mostrando la temperatura y la posición en el eje Y representando la humedad."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Gerador de Gráficos de Bolhas 3D é uma ferramenta avançada para criar visualizações de dados complexas que representam a relação entre três variáveis: eixo X, eixo Y e o tamanho das bolhas. Esta ferramenta é ideal para analistas de dados, cientistas de dados e profissionais de negócios que precisam comunicar efetivamente relações e tendências em conjuntos de dados multidimensionais. O gráfico de bolhas 3D permite que os usuários visualizem não apenas a posição (X e Y), mas também a magnitude de um terceiro atributo, como volume ou frequência, através do tamanho das bolhas. Isso é particularmente útil em cenários onde a densidade de informações é alta e a compreensão visual rápida é essencial. A ferramenta utiliza algoritmos de otimização para garantir que as bolhas não se sobreponham excessivamente, mantendo a legibilidade e a precisão da visualização. Além disso, ela suporta exportação de gráficos em vários formatos, incluindo PNG e SVG, facilitando a integração em relatórios e apresentações.",
+      "usage_steps": [
+        "Acesse a página do Gerador de Gráficos de Bolhas 3D e clique no botão 'Upload de Arquivo' para carregar seu conjunto de dados em formato CSV ou Excel.",
+        "Na aba 'Configurações de Dados', selecione as colunas que representam os eixos X e Y, bem como a coluna que determinará o tamanho das bolhas.",
+        "Ajuste as opções de cores na aba 'Paleta de Cores' para personalizar a aparência das bolhas, escolhendo entre paletas predefinidas ou criando suas próprias cores.",
+        "Na aba 'Estilo do Gráfico', configure a transparência das bolhas, o tamanho mínimo e máximo, e a escala de tamanho para garantir que o gráfico seja visualmente atraente e informativo.",
+        "Utilize a aba 'Anotações' para adicionar rótulos, títulos e legendas que ajudarão a interpretar o gráfico de forma mais clara e contextual.",
+        "Clique no botão 'Gerar Gráfico' para visualizar a sua criação. Após a visualização, use as opções de 'Exportar' para salvar o gráfico em formatos PNG ou SVG."
+      ],
+      "usage_examples": [
+        "Uma empresa de marketing pode usar o Gerador de Gráficos de Bolhas 3D para analisar a eficácia de diferentes campanhas, onde o eixo X representa o orçamento, o eixo Y representa o número de cliques e o tamanho das bolhas indica a taxa de conversão.",
+        "Um pesquisador em saúde pública pode utilizar esta ferramenta para visualizar a prevalência de doenças em diferentes regiões, com o eixo X representando a população, o eixo Y representando a incidência de casos e o tamanho das bolhas indicando a mortalidade.",
+        "Um analista financeiro pode criar um gráfico de bolhas 3D para representar o desempenho de ações, onde o eixo X é o preço, o eixo Y é o volume negociado e o tamanho das bolhas mostra o retorno sobre o investimento.",
+        "Uma organização ambiental pode usar o Gerador de Gráficos de Bolhas 3D para mapear a poluição do ar em várias cidades, com o eixo X representando a população, o eixo Y representando o nível de poluição e o tamanho das bolhas indicando o número de dias com qualidade do ar ruim."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Bubble Chart Generator ist ein leistungsstarkes Online-Tool, das es Benutzern ermöglicht, 3D-Blasendiagramme zu erstellen, um komplexe Beziehungen zwischen drei Variablen visuell darzustellen. Diese Variablen sind die X-Achse, die Y-Achse und die Größe der Blasen. Das Tool ist besonders nützlich in der Datenanalyse, da es ermöglicht, Trends, Muster und Korrelationen in großen Datenmengen auf einen Blick zu erkennen. Es ist ideal für Wissenschaftler, Datenanalysten und Business-Profis, die umfangreiche Daten visualisieren müssen. Durch die Verwendung von 3D-Blasendiagrammen können Benutzer nicht nur lineare Beziehungen, sondern auch komplexe, nicht-lineare Zusammenhänge aufzeigen. Das Tool nutzt fortgeschrittene Algorithmus-Engine, um die Daten effizient zu verarbeiten und eine hohe Genauigkeit der Darstellung zu gewährleisten. Die Benutzeroberfläche ist intuitiv gestaltet und ermöglicht die Anpassung von Farben, Achsenbeschriftungen und anderen visuellen Elementen, um die Diagramme nach den spezifischen Anforderungen zu personalisieren.",
+      "usage_steps": [
+        "Öffnen Sie die Bubble Chart Generator-Seite und wählen Sie die Option 'Neues Diagramm erstellen'.",
+        "Laden Sie Ihre Daten hoch, indem Sie eine CSV-Datei mit den Spalten für X-Achse, Y-Achse und Größe der Blasen auswählen.",
+        "Konfigurieren Sie die Achsenbeschriftungen in den Einstellungen unter 'Achsen'. Geben Sie hier die Beschriftungen für die X- und Y-Achse an.",
+        "Wählen Sie die Farbschema-Optionen unter 'Design'. Sie können vordefinierte Farbschemata auswählen oder benutzerdefinierte Farben für die Blasen setzen.",
+        "Stellen Sie die 3D-Einstellungen ein, um die Tiefe und den Winkel des Diagramms zu verändern. Dies ermöglicht eine bessere Sichtbarkeit der Datenpunkte.",
+        "Speichern Sie das Diagramm in verschiedenen Formaten wie PNG, SVG oder PDF, indem Sie auf die 'Export'-Schaltfläche klicken."
+      ],
+      "usage_examples": [
+        "Ein Marktforscher verwendet das Blasendiagramm, um die Beziehung zwischen dem Marktanteil verschiedener Konkurrenten (Y-Achse), den Umsätzen (X-Achse) und der Anzahl der Kundenbewertungen (Größe der Blasen) darzustellen. Dies hilft, um Trends und Muster in der Marktstruktur aufzudecken.",
+        "Ein Biologe erstellt ein 3D-Blasendiagramm, um die Korrelation zwischen der Genexpression (X-Achse), der Proteinausbeute (Y-Achse) und der Zellgröße (Größe der Blasen) in einer Zellkultur zu visualisieren. Dies unterstützt die Analyse genetischer und proteomischer Daten.",
+        "Ein Finanzanalyst nutzt das Tool, um die Beziehung zwischen dem Börsenkurs von Unternehmen (Y-Achse), dem Unternehmenswert (X-Achse) und der Dividendenrendite (Größe der Blasen) darzustellen, um Investitionsentscheidungen zu treffen.",
+        "Ein Umweltforscher erstellt ein 3D-Blasendiagramm, um die Beziehung zwischen der Kohlendioxidemission (X-Achse), dem Energieverbrauch (Y-Achse) und der Bevölkerungsdichte (Größe der Blasen) in verschiedenen Städten zu visualisieren, um Umweltstrategien zu entwickeln."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор Баббл-чартов — это мощный веб-инструмент, предназначенный для создания трёхмерных диаграмм, которые отображают взаимосвязи между тремя переменными: X, Y и размер. Этот инструмент идеально подходит для аналитиков, ученых и маркетологов, которые стремятся визуализировать сложные данные в понятной и информативной форме. Генератор Баббл-чартов позволяет пользователям наглядно представить данные, где каждая точка (баббл) отражает значение трёх параметров одновременно, что делает его незаменимым для выявления корреляций и трендов. Например, в маркетинге можно использовать этот инструмент для анализа эффективности рекламных кампаний, где X может представлять бюджет, Y — количество кликов, а размер — конверсии. В научных исследованиях он помогает визуализировать данные, например, где X — время, Y — температура, а размер — уровень давления. Генератор использует современные технологии визуализации данных, такие как HTML5 и JavaScript, для создания интерактивных и высококачественных диаграмм, которые можно легко экспортировать и использовать в отчётах и презентациях.",
+      "usage_steps": [
+        "Откройте страницу Генератора Баббл-чартов и нажмите на кнопку «Загрузить данные» для импорта вашего CSV или Excel файла.",
+        "Выберите столбцы из вашего файла, которые будут использованы для осей X, Y и размера бабблов, используя выпадающие меню.",
+        "Настройте внешний вид диаграммы, выбрав цветовую палитру, тип маркера и другие визуальные параметры на вкладке «Настройки визуализации». ",
+        "Добавьте подписи и легенды к диаграмме, чтобы сделать её более информативной, используя инструменты на вкладке «Подписи и легенды».",
+        "Используйте функцию «Интерактивные элементы» для добавления всплывающих подсказок и других интерактивных возможностей, которые помогут пользователям лучше понимать данные.",
+        "Нажмите кнопку «Сохранить и скачать» для экспорта готовой диаграммы в формате PNG, SVG или PDF."
+      ],
+      "usage_examples": [
+        "Анализ продаж: Компания использует Генератор Баббл-чартов для анализа продажных данных, где X — регион, Y — количество продаж, а размер — общая сумма продаж. Это помогает выявить наиболее прибыльные регионы и оптимизировать маркетинговые стратегии.",
+        "Медицинские исследования: Исследователи в области медицины используют этот инструмент для визуализации данных о пациентах, где X — возраст, Y — уровень холестерина, а размер — индекс массы тела. Это способствует более глубокому пониманию факторов, влияющих на здоровье.",
+        "Экономический анализ: Экономисты применяют Генератор Баббл-чартов для анализа экономических данных, где X — ВВП, Y — уровень безработицы, а размер — население. Это помогает выявить корреляции и тенденции в экономических показателях.",
+        "Маркетинговые кампании: Маркетологи используют этот инструмент для анализа рекламных кампаний, где X — бюджет, Y — количество кликов, а размер — конверсии. Это позволяет оценить эффективность различных каналов рекламы и оптимизировать бюджет."
+      ]
+    },
+    "ar": {
+      "detailed_description": "يقدم مولد الرسوم البيانية الدائرية (Bubble Chart Generator) أداة قوية ومتقدمة لإنشاء الرسوم البيانية الدائرية ثلاثية الأبعاد، والتي تساعد في توضيح العلاقات بين متغيرات مختلفة مثل القيمة X، والقيمة Y، وحجم الدائرة. هذه الأداة مصممة خصيصًا لتوفير واجهة سهلة الاستخدام مع القدرة على التعامل مع بيانات معقدة. يمكن للمستخدمين تحميل البيانات الخاصة بهم أو إدخالها يدويًا، ثم تخصيص الرسم البياني من خلال ضبط الألوان، الأحجام، والأنماط. الرسوم البيانية الدائرية ثلاثية الأبعاد مفيدة بشكل خاص في تحليل البيانات ذات الأبعاد المتعددة، مثل تحليل البيانات المالية، دراسة علاقات السوق، أو تقييم أداء المنتجات. بإمكان مولد الرسوم البيانية الدائرية تحويل البيانات المعقدة إلى صور بصرية سهلة الفهم، مما يساعد في اتخاذ قرارات مستنيرة.",
+      "usage_steps": [
+        "خطوة 1: افتح أداة مولد الرسوم البيانية الدائرية وتوجه إلى قسم \"إدخال البيانات\".",
+        "خطوة 2: قم بتحميل ملف بيانات CSV أو أدخل البيانات يدويًا في الجدول المقدم.",
+        "خطوة 3: انتقل إلى قسم \"إعدادات الرسم البياني\" واختر المحاور X و Y وحجم الدائرة.",
+        "خطوة 4: قم بضبط اللون والأحجام والأناة لتحسين مظهر الرسم البياني.",
+        "خطوة 5: ضع علامات على خيارات \"إظهار التسميات\" و\"إظهار القييم\" لزيادة وضوح الرسم البياني.",
+        "خطوة 6: اضغط على زر \"إنشاء الرسم البياني\" لمشاهدة النتائج وحفظ الرسم البياني بلغة برمجة SVG أو كصورة PNG."
+      ],
+      "usage_examples": [
+        "مثال 1: استخدام الأداة في تحليل أداء الشركات في سوق الأسهم، حيث يمكن تعريف X كسعر السهم، Y كربحية السهم، وحجم الدائرة كحجم الشركة.",
+        "مثال 2: دراسة العلاقات بين البلدان في مجال التجارة، حيث يمكن تعريف X كحجم الصادرات، Y كحجم الواردات، وحجم الدائرة كعدد السكان.",
+        "مثال 3: تحليل البيانات الصحية لمتابعة معدلات الإصابة بأمراض القلب، حيث يمكن تعريف X كالفئة العمرية، Y كنسبة الإصابة، وحجم الدائرة كعدد الحالات.",
+        "مثال 4: تقييم أداء المنتجات في سوق التجزئة، حيث يمكن تعريف X كسعر المنتج، Y كمعدل المبيعات، وحجم الدائرة كعدد التقييمات الإيجابية."
+      ]
+    }
+  }
+}

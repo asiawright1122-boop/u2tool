@@ -1,0 +1,158 @@
+{
+  "slug": "url-parser",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The URL Parser is a robust and versatile tool designed to dissect and analyze the intricate components of a URL. It meticulously breaks down each segment, including the protocol, host, path, and query parameters, providing developers with a granular view of how URLs are structured. This tool is indispensable for web developers, SEO specialists, and security analysts who need to understand the underlying architecture of web addresses. By parsing URLs, users can troubleshoot issues, optimize website performance, and ensure secure data transmission. The URL Parser uses advanced algorithms to accurately identify and extract each component, making it a powerful utility in the web development toolkit. It supports various URL formats and encodings, ensuring compatibility with a wide range of web applications.",
+      "usage_steps": [
+        "Step 1: Navigate to the URL Parser tool page on the website.",
+        "Step 2: Locate the input field labeled 'URL to Parse' and enter the full URL you wish to analyze.",
+        "Step 3: Click the 'Parse URL' button to initiate the parsing process.",
+        "Step 4: Review the results displayed in the 'Parsed Components' section. Each component, such as protocol, host, path, and query parameters, will be listed with its corresponding value.",
+        "Step 5: For complex URLs with multiple query parameters, use the 'Expand Query Parameters' button to break down each parameter into key-value pairs.",
+        "Step 6: If needed, copy the parsed components using the 'Copy to Clipboard' button for further analysis or documentation."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer is debugging a routing issue on a client's website. By using the URL Parser, they can quickly identify the path and query parameters, ensuring that the application is correctly handling URL segments.",
+        "Example 2: An SEO specialist is optimizing a site's URL structure for better search engine ranking. The URL Parser helps them verify that the URLs are clean, well-structured, and contain the necessary keywords.",
+        "Example 3: A security analyst needs to validate the integrity of URLs in a web application. The tool assists in identifying any suspicious or malicious parameters, helping to prevent security vulnerabilities.",
+        "Example 4: A content management system (CMS) developer is integrating a new feature that requires dynamic URL generation. The URL Parser allows them to test and validate the structure of the generated URLs, ensuring they meet the required specifications."
+      ]
+    },
+    "zh": {
+      "detailed_description": "URL Parser 是一个用于解析和分析 URL 组件的在线工具，包括协议（如 HTTP、HTTPS）、主机（如 example.com）、路径（如 /path/to/page）和查询参数（如 ?key1=value1&key2=value2）。该工具能够帮助开发者快速理解 URL 的各个部分，确保在开发过程中正确处理和构建 URL。在实际应用中，URL Parser 可以用于调试 Web 应用、分析第三方 API 接口的请求链接、验证 URL 的安全性和有效性等。工具通过解析输入的 URL，将其分解为结构化的数据，使开发者能够快速定位和解决问题。该工具采用先进的解析算法，支持多种 URL 格式，确保解析结果的准确性和可靠性。",
+      "usage_steps": [
+        "Step 1: 访问工具页面，找到“URL 输入框”，这是用于输入需要解析的 URL 的地方。",
+        "Step 2: 在“URL 输入框”中粘贴或输入您需要解析的完整 URL，例如：https://example.com/path/to/page?key1=value1&key2=value2。",
+        "Step 3: 点击“解析 URL”按钮，工具将开始解析输入的 URL。",
+        "Step 4: 解析完成后，页面下方将显示解析结果，包括协议、主机、路径和查询参数等组件。",
+        "Step 5: 每个组件下方都有详细的解析信息，例如查询参数会显示每个键值对的具体内容。",
+        "Step 6: 如果需要解析新的 URL，可以直接在“URL 输入框”中替换内容，然后再次点击“解析 URL”按钮。"
+      ],
+      "usage_examples": [
+        "Example 1: 开发者在调试 Web 应用时，需要检查某个链接的各个部分是否正确。通过使用 URL Parser，可以快速验证链接的协议、主机、路径和查询参数是否符合预期。",
+        "Example 2: 在与第三方 API 交互时，开发者需要确保请求 URL 的正确性。使用 URL Parser 可以帮助开发者分析和验证 API 请求链接的各个组件，避免因 URL 错误导致的请求失败。",
+        "Example 3: 安全团队在进行安全审计时，需要检查 URL 是否包含敏感信息或潜在的安全风险。通过 URL Parser，可以详细解析 URL 的查询参数，帮助团队快速发现潜在的安全问题。",
+        "Example 4: 产品经理在设计网站时，需要确保 URL 的结构符合 SEO 优化的要求。使用 URL Parser 可以帮助产品经理分析 URL 的路径和参数，确保 URL 的可读性和搜索引擎友好性。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "URL Parserは、ウェブ開発者やシステム管理者がURLの構成要素を解析および分析するための高度なツールです。このツールは、URLのプロトコル（HTTP、HTTPSなど）、ホスト（ドメイン名）、パス、クエリパラメータなどの各部分を詳細に分解し、それぞれの情報を提供します。これにより、開発者はURLの構造を理解し、ウェブアプリケーションやAPIの機能を最適化することが可能になります。また、セキュリティチェックやリンクの有効性確認など、多様な用途で活用できます。URL Parserは、RESTful APIの開発やウェブスクレイピング、URLエンコーディングの解析など、高度な開発タスクの支援にも役立ちます。このツールは、URLを解析し、構成要素を簡単に理解できる形式で表示することで、開発者の作業効率を大幅に向上させます。",
+      "usage_steps": [
+        "Step 1: URL Parserのページを開き、中央にある「URLを解析」テキストボックスに解析したいURLを入力します。",
+        "Step 2: 入力したURLが正しいことを確認した後、「解析」ボタンをクリックします。",
+        "Step 3: 解析が完了すると、結果が「解析結果」セクションに表示されます。ここでは、プロトコル、ホスト、パス、クエリパラメータなどの各構成要素が詳細に表示されます。",
+        "Step 4: 特定の構成要素に注目したい場合は、結果の横にある「詳細」リンクをクリックします。これにより、該当する部分の追加情報が表示されます。",
+        "Step 5: クエリパラメータが複数ある場合は、「クエリパラメータ」セクションを展開し、各パラメータのキーと値を確認します。",
+        "Step 6: 解析結果を保存したい場合は、ページ右上にある「結果をエクスポート」ボタンをクリックし、結果をJSONまたはCSV形式でダウンロードします。"
+      ],
+      "usage_examples": [
+        "Example 1: ウェブアプリケーションのリンクが正しく動作しているか確認するために、URL Parserを使用して各リンクの構成要素を解析します。これにより、リンクが予想通りのリソースにアクセスすることを確認できます。",
+        "Example 2: データ連携の際、APIエンドポイントのURLに含まれるクエリパラメータが正しいか確認するために、URL Parserを使用します。これにより、APIのリクエストが期待通りに処理されることを確認できます。",
+        "Example 3: セキュリティチェックの一環として、ウェブサイトのURLに含まれる情報を解析します。これにより、潜在的な脆弱性や不適切な情報の公開を特定できます。",
+        "Example 4: ウェブスクレイピングの準備として、対象ウェブサイトのURL構造を理解するために、URL Parserを使用します。これにより、スクレイピングスクリプトの効率的な開発が可能になります。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "URL Parser는 URL의 구성 요소를 분석하고 해석하는 도구입니다. 이 도구는 프로토콜, 호스트, 경로, 쿼리 파라미터 등의 URL 구성 요소를 구분하여 각 요소의 값을 추출하고 분석합니다. 사용자들은 이 도구를 통해 웹 애플리케이션의 URL 구조를 이해하고, API 호출의 파라미터를 검증하거나, 웹 크롤링 및 스크래핑 작업에서 URL을 제대로 파싱하는 데 활용할 수 있습니다. URL Parser는 정규표현식을 사용하여 URL을 분석하며, 각 구성 요소에 대한 정확한 정보를 제공합니다. 이는 웹 개발자들이 URL 관련 문제를 해결하거나, URL 구조를 최적화하는 데 매우 유용합니다.",
+      "usage_steps": [
+        "Step 1: 웹사이트 상단의 메뉴에서 'Network' 카테고리를 클릭하고 'URL Parser'를 선택합니다.",
+        "Step 2: 'URL 입력' 필드에 분석하고자 하는 URL을 입력합니다.",
+        "Step 3: '분석 시작' 버튼을 클릭하여 URL 분석을 실행합니다.",
+        "Step 4: 분석 결과가 나타나면, '프로토콜', '호스트', '경로', '쿼리 파라미터' 등 각 구성 요소의 세부 정보를 확인합니다.",
+        "Step 5: '쿼리 파라미터' 섹션에서 각 파라미터의 키와 값을 별도로 확인할 수 있습니다.",
+        "Step 6: 필요한 경우, '결과 복사' 버튼을 클릭하여 분석 결과를 클립보드에 복사합니다."
+      ],
+      "usage_examples": [
+        "Example 1: 웹 개발자가 API 호출에서 전달되는 쿼리 파라미터를 검증할 때 URL Parser를 사용하여 각 파라미터의 키와 값을 확인합니다.",
+        "Example 2: SEO 전문가가 웹사이트의 URL 구조를 분석하고 최적화할 때, URL Parser를 사용하여 프로토콜, 호스트, 경로 등의 구성 요소를 체크합니다.",
+        "Example 3: 웹 크롤러 개발자가 스크래핑 작업에서 URL을 정확히 파싱하는 데 필요한 정보를 얻기 위해 URL Parser를 활용합니다.",
+        "Example 4: 보안 전문가가 웹 애플리케이션의 취약점을 분석할 때, URL Parser를 사용하여 URL의 쿼리 파라미터를 검사하고 잠재적인 보안 문제를 확인합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Analizador de URL es una herramienta esencial para desarrolladores y profesionales de la red que necesitan descomponer y examinar las partes constitutivas de una URL. Técnica y profundamente, esta herramienta permite la separación de la URL en sus componentes fundamentales: protocolo, host, ruta y parámetros de consulta. Cada uno de estos elementos se desglosa para proporcionar una visión detallada de cómo se estructura y funciona la URL. El protocolo, por ejemplo, identifica el método de transferencia de datos, como HTTP o HTTPS. El host detalla el servidor donde reside el recurso, mientras que la ruta especifica la ubicación exacta dentro de ese servidor. Los parámetros de consulta, por su parte, contienen pares clave-valor que pueden ser utilizados para filtrar o personalizar la respuesta del servidor. Esta herramienta es invaluable para depurar problemas de enlace, optimizar la estructura de los enlaces en aplicaciones web y asegurar que los datos de consulta sean correctamente interpretados por los sistemas backend. Además, facilita la creación de enlaces dinámicos y la integración de APIs que dependen de parámetros específicos en las URLs.",
+      "usage_steps": [
+        "Paso 1: Navega a la página del Analizador de URL en el sitio web de herramientas de desarrollo.",
+        "Paso 2: Localiza el campo de entrada 'URL a analizar' en la interfaz de la herramienta.",
+        "Paso 3: Copia y pega la URL completa que deseas analizar en el campo de entrada.",
+        "Paso 4: Haz clic en el botón 'Analizar URL' para iniciar el proceso de descomposición.",
+        "Paso 5: Observa la sección 'Resultados de análisis' donde se mostrarán los componentes desglosados de la URL, incluyendo el protocolo, host, ruta y parámetros de consulta.",
+        "Paso 6: Utiliza los resultados para verificar la estructura de la URL, depurar problemas o integrar los datos de consulta en tu aplicación."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador web necesita asegurarse de que los enlaces de un sitio e-commerce estén correctamente estructurados para rastrear variables de campaña en Google Analytics. Utiliza el Analizador de URL para verificar que los parámetros de consulta estén correctamente formateados y sean compatibles con el sistema de seguimiento.",
+        "Ejemplo 2: Un administrador de sistemas está depurando un problema de enlace roto en una aplicación web. Al usar el Analizador de URL, descubre que el host en la URL está incorrectamente configurado, lo que provoca que la solicitud no llegue al servidor correcto.",
+        "Ejemplo 3: Un ingeniero de software está desarrollando una API que acepta parámetros de consulta para filtrar resultados. Utiliza el Analizador de URL para validar que los parámetros de consulta sean correctamente interpretados y que los datos de salida sean consistentes con las expectativas.",
+        "Ejemplo 4: Un especialista en SEO necesita optimizar las URLs de un sitio web para mejorar su visibilidad en los motores de búsqueda. El Analizador de URL ayuda a identificar y corregir problemas en la estructura de las URLs, como rutas redundantes o parámetros innecesarios, que pueden afectar negativamente el rendimiento SEO."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le parseur d'URL est un outil indispensable pour les développeurs et les ingénieurs réseau cherchant à décomposer et analyser les composants d'une URL. Techniquement, cet outil extrait et affiche les éléments clés d'une URL, tels que le protocole (HTTP, HTTPS), le nom d'hôte (www.example.com), le chemin (/path/to/resource) et les paramètres de requête (key1=value1&key2=value2). Cette décomposition est réalisée en utilisant des expressions régulières et des méthodes de manipulation de chaînes de caractères, garantissant une précision maximale dans l'analyse des URL.\n\nL'utilité de ce parseur d'URL est multiple. Pour les développeurs, il facilite le débogage des problèmes de routage et d'accès à des ressources web. Il peut également être utilisé pour valider les formats d'URL avant de les utiliser dans des applications ou des scripts. Pour les ingénieurs réseau, cet outil est précieux pour la configuration et le test de services web, notamment lors de la mise en place de redirections ou de l'analyse de requêtes HTTP.\n\nLe fonctionnement de l'outil est simple et efficace : une fois l'URL saisie, le parseur utilise des algorithmes spécifiques pour identifier et extraire chaque composant. Les résultats sont alors affichés de manière structurée, permettant une compréhension claire et rapide de chaque partie de l'URL. Cette approche permet aux utilisateurs de prendre des décisions éclairées basées sur des données précises et fiables.",
+      "usage_steps": [
+        "Ouvrez la page du parseur d'URL sur le site web.",
+        "Dans le champ de saisie intitulé 'URL à analyser', collez l'URL que vous souhaitez décomposer.",
+        "Cliquez sur le bouton 'Analyser' situé en dessous du champ de saisie.",
+        "L'outil affichera les composants de l'URL dans une section dédiée, incluant le protocole, le nom d'hôte, le chemin et les paramètres de requête.",
+        "Si des erreurs sont détectées dans la structure de l'URL, elles seront signalées dans une section 'Erreurs' avec des explications détaillées.",
+        "Vous pouvez copier les composants de l'URL individuellement en utilisant les boutons 'Copier' situés à droite de chaque composant."
+      ],
+      "usage_examples": [
+        "Un développeur souhaite déboguer une URL qui ne renvoie pas les résultats attendus. En utilisant le parseur d'URL, il découvre que le paramètre de requête 'key1' est mal formaté, ce qui explique le problème.",
+        "Un ingénieur réseau configure une redirection sur un serveur web. Il utilise le parseur d'URL pour vérifier que les URL cibles sont correctement formées avant de les implémenter.",
+        "Une équipe de sécurité web analyse les logs d'accès pour détecter des URL malveillantes. Le parseur d'URL aide à identifier les paramètres de requête suspectes en les décomposant et en les analysant en détail.",
+        "Un concepteur de sites web souhaite tester l'URL d'une nouvelle fonctionnalité. Le parseur d'URL permet de s'assurer que tous les composants de l'URL sont corrects et que la ressource est accessible."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der URL Parser ist ein leistungsstarkes Werkzeug zur Analyse und Zerlegung von URLs. Technisch gesehen zerlegt der Parser eine URL in ihre grundlegenden Bestandteile, wie den Protokolltyp (z.B. HTTP, HTTPS), den Hostnamen (z.B. www.example.com), den Pfad (z.B. /index.html) sowie die Abfrageparameter (z.B. key1=value1&key2=value2). Diese Zerlegung ist entscheidend für Entwickler, die sicherstellen müssen, dass ihre Anwendungen korrekt mit URLs interagieren. Die Notwendigkeit eines solchen Tools wird besonders in komplexen Webanwendungen deutlich, wo URLs zum Routing, zur Datenübertragung und zur Authentifizierung verwendet werden. Mit dem URL Parser können Entwickler schnell und effizient identifizieren, ob eine URL korrekt aufgebaut ist, ob bestimmte Parameter fehlen oder ob es Fehler in der URL-Syntax gibt. Dies ist nicht nur wichtig für die Fehlersuche, sondern auch für die Optimierung der Leistung und Sicherheit von Webanwendungen. Der Parser verwendet regular expression (RegEx) und URI Parsing-Algorithmen, um die URL in ihre Komponenten zu zerlegen und diese in einem strukturierten Format darzustellen, das leicht zu verstehen und weiterzuverarbeiten ist.",
+      "usage_steps": [
+        "Öffnen Sie die Website und navigieren Sie zur Kategorie 'Netzwerk'.",
+        "Wählen Sie den 'URL Parser' aus der Liste der verfügbaren Tools aus.",
+        "Fügen Sie die zu analysierende URL in das Eingabefeld 'URL eingeben' ein.",
+        "Klicken Sie auf den Button 'Analyse starten' um den Parsing-Prozess zu initiieren.",
+        "Die Ergebnisse werden in einer strukturierten Tabelle angezeigt, die die einzelnen URL-Komponenten wie Protokoll, Host, Pfad und Abfrageparameter aufschlüsselt.",
+        "Falls erforderlich, können Sie die Ergebnisse exportieren, indem Sie auf den 'Exportieren' Button klicken und das Format (z.B. JSON, CSV) auswählen."
+      ],
+      "usage_examples": [
+        "Ein Entwickler arbeitet an einer Single-Page-Anwendung (SPA) und muss sicherstellen, dass die URL-Routing-Funktionen korrekt funktionieren. Mit dem URL Parser kann er schnell die Struktur der URLs überprüfen und eventuelle Fehler identifizieren.",
+        "Ein SEO-Experte möchte die URL-Struktur einer Website optimieren, um die Suchmaschinen-Ranking-Positionen zu verbessern. Der URL Parser hilft ihm, die URL-Parameter und die Semantik der URLs zu analysieren und anzupassen.",
+        "Ein Sicherheitsexperte überprüft die Sicherheit einer Webanwendung und sucht nach potenziellen Sicherheitslücken in den URLs. Der URL Parser ermöglicht es ihm, die URL-Struktur und die Parameter genauer zu inspizieren, um Schwachstellen zu identifizieren.",
+        "Ein Webmaster möchte eine umfassende Analyse der URL-Struktur einer Website durchführen, um die Navigation und die Benutzerfreundlichkeit zu verbessern. Der URL Parser bietet ihm eine detaillierte Zerlegung der URLs, die ihm bei der Optimierung hilft."
+      ]
+    },
+    "ru": {
+      "detailed_description": "URL Parser — это мощный инструмент, предназначенный для анализа и разбора URL-адресов. Он позволяет пользователям легко и точно извлекать и интерпретировать различные компоненты URL, такие как протокол, хост, путь и параметры запроса. Этот инструмент особенно полезен веб-разработчикам,分析师们和网络安全专家，他们需要深入了解URL的结构和内容。\n\nПри использовании URL Parser, пользователи могут быстро проверять и анализировать URL-адреса, что может быть особенно полезно в следующих сценариях: отладка веб-приложений, анализ SEO, проверка безопасности URL и управление API. Например, при разработке веб-приложений, важно понимать, как параметры запроса влияют на функциональность приложения. URL Parser позволяет разработчикам легко идентифицировать и тестировать эти параметры.\n\nИнструмент работает путем анализа введенного URL-адреса и разбивки его на основные компоненты. Например, URL-адрес `https://example.com/path?param1=value1&param2=value2` будет разобран на следующие части: протокол (https), хост (example.com), путь (/path) и параметры запроса (param1=value1, param2=value2). URL Parser также поддерживает кодирование и декодирование URL-адресов, что делает его еще более универсальным для различных задач, связанных с обработкой URL-адресов.",
+      "usage_steps": [
+        "Откройте страницу URL Parser на сайте.",
+        "В поле ввода URL-адреса введите полный URL, который вы хотите анализировать. Например: `https://example.com/path?param1=value1&param2=value2`.",
+        "Нажмите кнопку «Анализировать».",
+        "Инструмент автоматически разберет URL-адрес и отобразит его компоненты: протокол, хост, путь и параметры запроса.",
+        "Если необходимо, вы можете использовать дополнительные опции, такие как «Кодировать URL» или «Декодировать URL», чтобы преобразовать URL-адрес.",
+        "Просмотрите результаты и используйте их для своих нужд, например, для отладки приложения или анализа SEO."
+      ],
+      "usage_examples": [
+        "Отладка веб-приложений: Разработчик может использовать URL Parser для проверки, правильно ли передаются и обрабатываются параметры запроса в веб-приложении. Например, при тестировании формы на сайте, можно проверить, как параметры формы передаются в URL-адресе.",
+        "Анализ SEO: Специалист по SEO может использовать URL Parser для проверки структуры URL-адресов на сайте, чтобы убедиться, что они оптимизированы для поисковых систем. Например, можно проверить, правильно ли используются ключевые слова в пути URL-адреса.",
+        "Проверка безопасности URL: Кибербезопасность требует внимательного анализа URL-адресов, особенно в случае подозрительных ссылок. URL Parser помогает идентифицировать потенциально вредоносные параметры или хосты в URL-адресах.",
+        "Управление API: Разработчики API могут использовать URL Parser для проверки и тестирования запросов к API. Например, можно использовать инструмент для проверки, как параметры запроса влияют на ответ API."
+      ]
+    },
+    "ar": {
+      "detailed_description": "يعد أداة تحليل العناوين URL (Uniform Resource Locator) أداة فعالة تساعد المطورين والمهتمين بتحليل وتحليل مكونات العناوين الإلكترونية بدقة. تتيح هذه الأداة تفكيك العناوين URL إلى مكوناتها الأساسية مثل البروتوكول (مثل HTTPS) والمضيف (مثل www.example.com) والمسار (مثل /path/to/resource) والمتغيرات الاستفسارية (مثل query?param1=value1&param2=value2). هذا التفكيك يساعد في فهم كيفية بناء العناوين URL وكيفية استهداف موارد معينة على الإنترنت.\n\nتُستخدم هذه الأداة في مجموعة متنوعة من التطبيقات، منها التأكد من صحة العناوين URL قبل استخدامها في التطبيقات، وتحليل العناوين للتأكد من أنها تشير إلى الموارد الصحيحة، وفهم بنية العناوين للمواقع المعقدة. كما يمكن استخدامها في تطبيقات الأمان للكشف عن العناوين المشبوهة.\n\nتقوم الأداة بتحليل العناوين URL باستخدام خوارزميات متقدمة تعرف كيف تفصل بين المكونات المختلفة وتقدمها في شكل مفهوم ومرتب. يمكن للمستخدمين تجربة العناوين المختلفة والحصول على تقرير مفصل عن كل مكون.",
+      "usage_steps": [
+        "افتح أداة تحليل العناوين URL من خلال الانتقال إلى القسم 'أدوات الشبكة' (network) على الموقع.",
+        "في الصفحة الرئيسية للأداة، ابحث عن مربع النص المسمى '输入URL' (أدخل URL).",
+        "أدخل العناوين URL التي تريد تحليلها في المربع المحدد.",
+        "انقر على الزر 'تحليل' (Parse) لبدء عملية التحليل.",
+        "ستظهر نتائج التحليل في جزء منفصل من الصفحة، مفصلةً كل مكون من مكونات العناوين URL، مثل البروتوكول، المضيف، المسار، والمتغيرات الاستفسارية.",
+        "راجع النتائج بعناية للتأكد من صحة التحليل واستخدمها حسب احتياجاتك."
+      ],
+      "usage_examples": [
+        "بالنسبة للمطورين الذين يعملون على تطبيقات الويب، يمكن استخدام هذه الأداة لفحص العناوين URL المُرسلة من العملاء وضمان أنها صحيحة وآمنة قبل معالجتها.",
+        "في مجال الأمن السيبراني، يمكن للمحللين استخدام هذه الأداة للكشف عن العناوين المشبوهة أو التي تحتوي على متغيرات استفسارية غريبة قد تدل على هجمات خبيثة.",
+        "للمarketينج الرقمي، يمكن استخدام هذه الأداة لتحليل العناوين URL لحملات الإعلانات للتأكد من أنها تشير إلى الصفحات المستهدفة بشكل صحيح.",
+        "للمالكين والمديرين التقنيين للمواقع الإلكترونية، يمكن استخدام هذه الأداة لفهم بنية العناوين URL لمواقعهم وتحسينها لزيادة أداء البحث وتجربة المستخدم."
+      ]
+    }
+  }
+}

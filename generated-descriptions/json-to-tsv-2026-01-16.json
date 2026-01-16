@@ -1,0 +1,158 @@
+{
+  "slug": "json-to-tsv",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The JSON to TSV Converter is a powerful utility designed to transform JSON arrays into TSV (Tab-Separated Values) format. JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. TSV, on the other hand, is a simple file format used for storing tabular data, where each record is separated by a tab character. This tool is particularly useful for developers and data analysts who need to convert JSON data into a format that can be easily imported into spreadsheet applications like Microsoft Excel or Google Sheets.\n\nThe primary use cases for this tool include data migration, data preprocessing for machine learning, and data visualization. For instance, when migrating data from a NoSQL database to a relational database, or when preparing data for analysis, converting JSON to TSV can streamline the process. The tool supports complex JSON structures, including nested arrays and objects, ensuring that the output TSV file accurately represents the original data.\n\nUnder the hood, the converter parses the JSON input, navigates through the nested structures, and maps the data into a tabular format. Each JSON object is converted into a row in the TSV file, with keys becoming column headers and values populating the rows. The tool also handles edge cases, such as empty values and special characters, ensuring that the output is clean and ready for further processing.",
+      "usage_steps": [
+        "Step 1: Visit the JSON to TSV Converter page on the website.",
+        "Step 2: Click on the 'Paste JSON' button to open the input area.",
+        "Step 3: Copy and paste your JSON array into the input area. Ensure that the JSON is well-formed and follows the correct syntax.",
+        "Step 4: If your JSON contains nested arrays or objects, you can enable the 'Flatten JSON' option to simplify the output.",
+        "Step 5: Click the 'Convert to TSV' button to process the JSON data and generate the TSV output.",
+        "Step 6: Once the conversion is complete, the TSV data will appear in the output area. You can then copy the TSV data or download it as a file by clicking the 'Download TSV' button."
+      ],
+      "usage_examples": [
+        "Example 1: A data analyst needs to import customer data from a JSON file into a spreadsheet for analysis. By using the JSON to TSV Converter, they can quickly transform the JSON data into a TSV file that can be easily opened in Excel or Google Sheets.",
+        "Example 2: A developer is migrating data from a MongoDB database to a MySQL database. They use the JSON to TSV Converter to convert the JSON documents into a TSV file, which can then be imported into the MySQL database using a bulk import tool.",
+        "Example 3: A machine learning engineer is preparing a dataset for training a model. The raw data is in JSON format, and they need it in a tabular format for preprocessing. The JSON to TSV Converter helps them convert the data efficiently, ensuring that the structure is preserved.",
+        "Example 4: A web developer is creating a report from a REST API response, which returns data in JSON format. They use the JSON to TSV Converter to transform the JSON response into a TSV file, which can be easily formatted and presented in a report."
+      ]
+    },
+    "zh": {
+      "detailed_description": "JSON到TSV转换器是一款高效的数据处理工具，旨在将JSON格式的数据数组转换为TSV（Tab-Separated Values）格式。TSV格式是一种常见的文本文件格式，与CSV类似，但使用制表符作为分隔符，这使得TSV在处理包含逗号的数据时更为灵活。该工具通过解析JSON数组，提取其中的数据，并将其组织成TSV格式，每一行代表一个数据记录，每一列则是一个字段。用户可以利用该工具在数据清理、数据导入导出、数据分析等场景中实现数据格式的快速转换，提高数据处理的效率。例如，当需要将API返回的JSON数据导入Excel或其他数据处理软件时，JSON到TSV转换器可以将数据无缝转换为TSV格式，方便进一步处理。此外，该工具还支持自定义字段映射，允许用户根据需要调整输出的TSV格式。",
+      "usage_steps": [
+        "Step 1: 打开JSON到TSV转换器页面，点击“上传文件”按钮或直接将JSON文件拖放到指定区域。",
+        "Step 2: 选择需要转换的JSON文件，支持单个文件或多个文件批量转换。",
+        "Step 3: 上传完成后，工具将自动解析JSON数据。在“预览”区域，可以查看解析后的数据结构。",
+        "Step 4: 根据需要，可以在“字段映射”部分调整字段的顺序和名称，以适应目标TSV文件的格式要求。",
+        "Step 5: 确认所有设置后，点击“转换”按钮，工具将开始将JSON数据转换为TSV格式。",
+        "Step 6: 转换完成后，点击“下载TSV文件”按钮，保存转换后的TSV文件到本地。"
+      ],
+      "usage_examples": [
+        "Example 1: 在进行市场调研时，调研数据通常以JSON格式存储。使用JSON到TSV转换器，可以将这些数据快速转换为TSV格式，方便导入Excel进行数据分析。",
+        "Example 2: 企业内部的ERP系统可能通过API返回JSON格式的数据。在将这些数据导入数据库或报表工具时，可以使用该工具将JSON数据转换为TSV格式，确保数据的一致性。",
+        "Example 3: 开发者在进行Web爬虫项目时，爬取的数据以JSON格式存储。通过JSON到TSV转换器，可以将这些数据转换为TSV格式，便于后续的数据清洗和处理。",
+        "Example 4: 数据科学家在处理大量JSON格式的传感器数据时，可以使用该工具将数据转换为TSV格式，以便使用专业的数据处理软件进行分析和建模。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "JSON to TSV Converterは、JSON形式のデータをTSV（Tab-Separated Values）形式に変換するための強力なツールです。JSONはウェブ開発やAPI通信で頻繁に使用されるデータ形式であり、複雑なデータ構造を含むことがありますが、TSVは表形式データのシンプルな形式であり、エクセルやデータ分析ツールで容易に扱われます。このツールは、JSONデータを読み込み、各要素をTSV形式に整形して出力します。これにより、データの可視化や分析、さらには機械学習などの目的での利用が可能となります。\n\nこのツールが必要な理由は、JSONデータをTSV形式に変換することで、データの扱いが容易になり、データ分析やレポート作成の効率が向上することです。例えば、APIから取得したJSONデータをTSVに変換することで、エクセルやGoogle Sheetsでのデータ加工が可能になります。また、データのクリーニングや前処理の過程で、TSV形式がより適している場面も多くあります。\n\n使用方法は非常にシンプルで、JSONデータを入力フィールドに貼り付けるだけで、即時にTSV形式に変換されます。変換後、TSVデータをダウンロードしたり、コピーしたりすることができます。また、ヘッダーの行を自動生成する機能や、カスタムセパレータの設定など、高度なオプションも提供されています。",
+      "usage_steps": [
+        "ステップ 1: ブラウザでJSON to TSV Converterを開き、トップページの「JSONデータを入力」フィールドに、変換したいJSONデータを貼り付けます。",
+        "ステップ 2: 「ヘッダー行を生成」チェックボックスをオンにすることで、TSVの最初の行にJSONデータのキーをヘッダーとして追加します。",
+        "ステップ 3: 「タブ区切り」セパレータを使用する場合はデフォルトのままにして、必要に応じて「カスタムセパレータ」フィールドに別の文字を入力します。",
+        "ステップ 4: 「変換」ボタンをクリックして、JSONデータのTSV変換を開始します。",
+        "ステップ 5: 変換が完了すると、TSVデータが表示されます。このデータをコピーしたり、ダウンロードボタンをクリックしてファイルとして保存できます。",
+        "ステップ 6: 変換結果が期待通りでない場合は、入力データやオプションの設定を見直し、必要に応じて再試行します。"
+      ],
+      "usage_examples": [
+        "Example 1: APIから取得したJSONデータをTSVに変換し、エクセルで分析する。例えば、ユーザーアクティビティデータをエクセルでグラフ化するための準備として使用できます。",
+        "Example 2: データ加工の過程で、JSON形式のログデータをTSV形式に変換して、HadoopやSparkなどのビッグデータ処理ツールで処理する。これにより、データの読み込みと加工が効率化されます。",
+        "Example 3: ウェブフォームのリクエストデータをJSON形式で受け取り、それをTSVに変換してCSV形式のデータベースにインポートする。これにより、データの一元管理が可能になります。",
+        "Example 4: 機械学習プロジェクトで、JSON形式のラベルデータをTSVに変換して、学習用データセットを準備する。TSV形式は、多くの機械学習フレームワークでサポートされており、データの前処理が容易になります。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "JSON to TSV Converter는 JSON 형식의 배열 데이터를 TSV (Tab-Separated Values) 형식으로 변환하는 툴입니다. JSON은 웹 서비스, API 응답, 데이터 저장 등 다양한 분야에서 널리 사용되며, TSV는 스프레드시트 애플리케이션에서 주로 사용되는 데이터 형식입니다. 이 변환 과정은 데이터 분석, 데이터 클린징, 데이터 전처리 등에서 매우 유용합니다. 예를 들어, 웹 서비스에서 JSON 형식의 데이터를 가져와 스프레드시트로 변환하여 분석하거나, 데이터를 다른 시스템으로 이전할 때 사용할 수 있습니다. JSON to TSV Converter는 사용자가 JSON 데이터를 입력하고, 이를 TSV 형식으로 변환하여 다운로드할 수 있도록 지원합니다. 변환 과정은 JSON 파싱, 필드 추출, TSV 형식으로의 재구성 등 여러 단계로 이루어져 있으며, 이 모든 과정은 서버 측에서 안전하게 처리됩니다.",
+      "usage_steps": [
+        "1. 웹 사이트에 접속하여 'JSON to TSV Converter' 페이지로 이동합니다.",
+        "2. 'JSON 입력' 영역에 변환하려는 JSON 데이터를 직접 입력하거나, 파일 업로드 버튼을 클릭하여 JSON 파일을 업로드합니다.",
+        "3. '옵션 설정' 섹션에서 필요한 옵션을 선택합니다. 예를 들어, 헤더 행 포함 여부, NULL 값을 처리하는 방법 등을 설정할 수 있습니다.",
+        "4. '변환 실행' 버튼을 클릭하여 JSON 데이터를 TSV 형식으로 변환합니다.",
+        "5. 변환 결과가 'TSV 출력' 영역에 표시됩니다. 결과를 확인한 후, 필요하다면 편집할 수 있습니다.",
+        "6. 'TSV 다운로드' 버튼을 클릭하여 변환된 TSV 파일을 다운로드합니다."
+      ],
+      "usage_examples": [
+        "예시 1: 웹 서비스에서 받은 JSON 데이터를 스프레드시트로 변환하여 데이터 분석을 수행할 때 사용합니다. 예를 들어, 고객 정보, 주문 내역 등의 데이터를 분석하려는 경우 이 툴을 활용하여 데이터를 쉽게 변환할 수 있습니다.",
+        "예시 2: 데이터 전처리 과정에서 JSON 형식의 원시 데이터를 TSV 형식으로 변환하여 머신 러닝 모델에 사용할 때 활용합니다. 이는 데이터를 표 형식으로 변환하여 모델 학습에 필요한 형식으로 준비하는 데 도움이 됩니다.",
+        "예시 3: 데이터베이스에서 추출한 JSON 데이터를 TSV 형식으로 변환하여 다른 시스템으로 이전할 때 사용합니다. 예를 들어, 데이터베이스 마이그레이션이나 데이터 통합 작업에서 이 툴을 사용할 수 있습니다.",
+        "예시 4: API 응답으로 받은 JSON 데이터를 TSV 형식으로 변환하여 스프레드시트 애플리케이션에서 쉽게 분석할 수 있도록 합니다. 이는 특히 대량의 데이터를 처리할 때 유용합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Convertidor JSON a TSV es una herramienta poderosa y versátil diseñada para transformar arrays de objetos JSON en archivos de valores separados por tabulaciones (TSV). Esta utilidad es esencial para desarrolladores, analistas de datos y profesionales que necesitan manipular y transformar datos estructurados de forma eficiente. Al convertir JSON a TSV, el formato resultante es más compatible con aplicaciones de hojas de cálculo y bases de datos, facilitando la integración y el análisis de datos.\n\nLos arrays JSON son estructuras de datos comúnmente utilizadas para transmitir información entre aplicaciones web y servicios de API. Sin embargo, su formato no siempre es lo más adecuado para herramientas que requieren datos tabulares. El Convertidor JSON a TSV resuelve este desafío, permitiendo la transición suave y automática de JSON a un formato TSV, manteniendo la integridad de los datos.\n\nEl proceso de conversión es simple y eficiente. Los usuarios pueden pegar su JSON en el campo de entrada, y el tool lo procesa, generando un archivo TSV que puede descargarse directamente. La herramienta es capaz de manejar arrays complejos y anidados, asegurando que incluso los datos más detallados se conviertan de manera precisa y sin pérdida de información. Además, ofrece opciones de personalización, como la posibilidad de ajustar delimitadores y manejar diferentes codificaciones, lo que lo hace suitable para una amplia gama de aplicaciones.",
+      "usage_steps": [
+        "Paso 1: Abre la página del Convertidor JSON a TSV en tu navegador.",
+        "Paso 2: Localiza el campo de entrada 'JSON Input' y pega tu array JSON en este espacio.",
+        "Paso 3: Si tu JSON tiene caracteres especiales o codificaciones no estándar, utiliza el menú desplegable 'Codificación' para seleccionar la codificación correcta.",
+        "Paso 4: Haz clic en el botón 'Convertir' para iniciar el proceso de conversión.",
+        "Paso 5: Una vez que la conversión esté completa, el archivo TSV se generará y se mostrará en el área de resultados.",
+        "Paso 6: Haz clic en el botón 'Descargar TSV' para guardar el archivo TSV en tu dispositivo."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador de backend necesita convertir un array JSON de registros de usuarios en un formato TSV para importarlo a una base de datos SQL. Utiliza el Convertidor JSON a TSV para generar un archivo TSV listo para importar.",
+        "Ejemplo 2: Un analista de datos recibe un archivo JSON con datos de ventas y necesita analizarlos en una hoja de cálculo de Excel. Convierte el JSON a TSV para facilitar la manipulación y análisis de los datos en Excel.",
+        "Ejemplo 3: Un equipo de desarrollo de software está integrando un servicio de API que devuelve datos en formato JSON. Para probar la integración, convierten el JSON de respuesta a TSV para verificar los datos de forma más visual y estructurada.",
+        "Ejemplo 4: Un científico de datos está realizando un análisis en un lote de datos JSON y necesita prepararlos para un script de Python que espera un archivo TSV. Utiliza el Convertidor JSON a TSV para preparar los datos de entrada del script."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O JSON to TSV Converter é uma ferramenta poderosa e versátil que permite a transformação de arrays JSON em formatos TSV (Valores Separados por Tabulação). Este processo é fundamental para quem precisa manipular dados estruturados em diferentes formatos, facilitando a integração e a análise em diversas plataformas de dados. A ferramenta é particularmente útil para desenvolvedores, cientistas de dados e analistas que frequentemente lidam com dados em formatos JSON e precisam convertê-los para TSV para importar em planilhas, bancos de dados ou ferramentas de análise de dados. A conversão é realizada através de um algoritmo que interpreta a estrutura hierárquica do JSON e a transforma em um formato TSV, onde cada linha representa um objeto e cada coluna um campo. Isso é especialmente benéfico em cenários onde a visualização e o processamento de dados em uma planilha são necessários, pois o TSV mantém a estrutura tabular de forma mais clara e organizada.",
+      "usage_steps": [
+        "Passo 1: Acesse a página do JSON to TSV Converter e localize a área de entrada de dados.",
+        "Passo 2: Cole o seu array JSON na área de entrada. Certifique-se de que o JSON está bem formatado e não contém erros sintáticos.",
+        "Passo 3: Se necessário, configure as opções avançadas de conversão, como a codificação de caracteres e o tratamento de valores nulos.",
+        "Passo 4: Clique no botão 'Converter' para iniciar o processo de transformação do JSON para TSV.",
+        "Passo 5: Aguarde o processamento, que pode variar dependendo do tamanho e complexidade do seu JSON.",
+        "Passo 6: Após a conversão, o resultado TSV será exibido na área de saída. Você pode copiar o TSV resultante ou baixá-lo como um arquivo .tsv para uso posterior."
+      ],
+      "usage_examples": [
+        "Exemplo 1: Um desenvolvedor precisa importar dados de um endpoint API que retorna um array JSON para uma planilha do Excel. Ele usa o JSON to TSV Converter para transformar os dados e, em seguida, importa o TSV gerado diretamente para a planilha.",
+        "Exemplo 2: Um cientista de dados coleta informações de múltiplas fontes em formato JSON e precisa consolidá-las em um único arquivo TSV para análise em uma ferramenta de business intelligence. O JSON to TSV Converter facilita essa tarefa, permitindo a conversão rápida e precisa.",
+        "Exemplo 3: Um analista de marketing recebe dados de campanhas publicitárias em formato JSON e precisa convertê-los para TSV para importar em um sistema de gerenciamento de campanhas. Usando a ferramenta, ele consegue preparar os dados para análise e relatórios.",
+        "Exemplo 4: Uma equipe de desenvolvimento de software precisa migrar dados de um sistema legado que utiliza JSON para um novo sistema que aceita apenas TSV. O JSON to TSV Converter é utilizado para garantir que os dados sejam transformados corretamente, mantendo a integridade e a consistência."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le convertisseur JSON to TSV est un outil en ligne conçu pour transformer des tableaux JSON en fichiers TSV (Tab-Separated Values). Cette opération est particulièrement utile pour les développeurs et les analystes de données qui travaillent avec des ensembles de données complexes et qui ont besoin de formater ces données pour une utilisation dans des outils de traitement de données tabulaires, tels que des feuilles de calcul ou des bases de données relationnelles. Le convertisseur prend en charge les tableaux JSON avec des structures imbriquées et convertit chaque élément du tableau en une ligne de valeurs séparées par des tabulations. Ce processus permet une meilleure lisibilité et une manipulation plus facile des données, notamment pour l'importation dans des outils de visualisation de données ou l'analyse statistique. La précision de la conversion est assurée par un algorithme qui gère les types de données complexes, les valeurs manquantes et les caractères spéciaux, garantissant ainsi l'intégrité des données lors de la transformation.",
+      "usage_steps": [
+        "Ouvrez la page du convertisseur JSON to TSV sur le site web.",
+        "Cliquez sur le bouton 'Charger un fichier JSON' pour sélectionner le fichier JSON que vous souhaitez convertir. Vous pouvez également coller directement le contenu JSON dans la zone de texte fournie.",
+        "Si votre JSON contient des structures imbriquées, activez l'option 'Flattening des données' pour dénester les objets et les tableaux.",
+        "Choisissez le format de sortie en sélectionnant 'TSV' dans le menu déroulant 'Format de sortie'.",
+        "Cliquez sur le bouton 'Convertir' pour lancer le processus de conversion.",
+        "Une fois la conversion terminée, téléchargez le fichier TSV généré en cliquant sur le lien 'Télécharger le fichier TSV'."
+      ],
+      "usage_examples": [
+        "Un développeur travaillant sur une application qui génère des rapports en JSON souhaite importer ces rapports dans Excel pour une analyse détaillée. Le convertisseur JSON to TSV permet de transformer rapidement ces rapports en un format lisible par Excel.",
+        "Un analyste de données doit importer des données de logs JSON dans une base de données SQL. Le convertisseur JSON to TSV transforme les données en un format TSV, facilitant ainsi leur importation dans la base de données.",
+        "Un chercheur en sciences de données utilise des API qui retournent des résultats en JSON pour des analyses statistiques. Le convertisseur JSON to TSV aide à préparer les données pour l'importation dans des outils de visualisation de données comme Tableau.",
+        "Un administrateur système a besoin de convertir des fichiers de configuration JSON en un format TSV pour une comparaison rapide des paramètres entre plusieurs instances. Le convertisseur JSON to TSV simplifie ce processus en générant des fichiers TSV facilement comparables."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der JSON to TSV Converter ist ein Spezialwerkzeug, das JSON-Arrays in Tabellenformate (Tab-Separated Values, TSV) umwandelt. JSON (JavaScript Object Notation) ist ein leichtgewichtiges Datenformat, das häufig in Webanwendungen und APIs zum Austausch von Daten verwendet wird. TSV hingegen ist ein einfaches Textformat, das in Tabellenkalkulationsprogrammen wie Microsoft Excel oder Google Sheets gut verarbeitet werden kann. Dieses Tool ist besonders nützlich für Entwickler, Datenwissenschaftler und Analysten, die JSON-Daten in eine tabellarische Form bringen müssen, um sie für weitere Analysen oder Berichte zu nutzen. Die Umwandlung erfolgt durch die Interpretation der JSON-Struktur, das Zusammenführen von Schlüsseln in Tabellenüberschriften und das Zuweisen der Werte in die entsprechenden Tabellenzellen. Dabei wird sichergestellt, dass komplexe JSON-Strukturen, wie verschachtelte Arrays und Objekte, korrekt in eine flache TSV-Struktur überführt werden. Die Genauigkeit und Effizienz dieses Tools machen es zu einer unverzichtbaren Ressource für alle, die mit JSON-Daten arbeiten und diese in TSV-Format umwandeln müssen.",
+      "usage_steps": [
+        "Öffnen Sie die JSON to TSV Converter Seite auf unserer Website.",
+        "Klicken Sie auf den Button 'JSON-Code einfügen' und fügen Sie Ihren JSON-Array-Code in das Textfeld ein.",
+        "Überprüfen Sie die JSON-Daten auf Korrektheit und ggf. formatieren Sie sie mit dem 'Formatieren' Button.",
+        "Wählen Sie im Abschnitt 'Umwandlungsoptionen' die gewünschten Einstellungen, z.B. ob leere Werte ignoriert oder mit einem Platzhalter versehen werden sollen.",
+        "Klicken Sie auf 'In TSV konvertieren', um die Umwandlung zu starten.",
+        "Sobald die Umwandlung abgeschlossen ist, können Sie die TSV-Daten im Textfeld unten sehen und diese kopieren oder als Datei herunterladen."
+      ],
+      "usage_examples": [
+        "Ein Entwickler erhält eine JSON-Datei mit Customer-Reviews von einem API-Endpunkt und muss diese Daten in Excel importieren, um sie für eine detaillierte Analyse vorzubereiten. Mit dem JSON to TSV Converter kann er die JSON-Daten einfach in ein TSV-Format umwandeln, das von Excel direkt gelesen werden kann.",
+        "Ein Datenwissenschaftler sammelt JSON-Daten von verschiedenen Sensoren in einem IoT-Projekt. Um die Daten in einem Data-Warehouse zu speichern und zu analysieren, verwendet er den JSON to TSV Converter, um die Daten in ein tabellarisches Format zu bringen, das kompatibel mit SQL-Datenbanken ist.",
+        "Ein Marketing-Analyst erhält JSON-Exporte von einem Content-Management-System und muss diese Daten in eine CSV-Datei umwandeln, um sie in ein BI-Tool zu importieren. Der JSON to TSV Converter bietet hier eine schnelle Lösung, um die Daten in das benötigte Format zu bringen.",
+        "Ein Software-Testingenieur arbeitet an der Automatisierung von Tests und benötigt JSON-Daten in TSV-Format, um sie in ein Test-Management-Tool zu integrieren. Mit dem JSON to TSV Converter kann er die JSON-Daten schnell und präzise in TSV umwandeln, um die Testprozesse zu optimieren."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Конвертер JSON в TSV — это мощный инструмент, предназначенный для преобразования массивов данных в формате JSON в табличные данные, разделённые табуляцией (TSV). Веб-разработчики и аналитики часто сталкиваются с необходимостью преобразования данных из одного формата в другой, и этот инструмент значительно упрощает этот процесс. Например, данные, полученные от API, могут быть представлены в формате JSON, но для загрузки в такие инструменты, как Excel или Google Sheets, требуется TSV-формат. Конвертер автоматически обрабатывает вложенные структуры JSON, создавая соответствующие столбцы и строки. Это особенно полезно при работе с большими объёмами данных, где ручное преобразование было бы неэффективным и подвержено ошибкам. Инструмент обеспечивает точное и быстрое преобразование, поддерживая различные кодировки и форматы дат.",
+      "usage_steps": [
+        "Откройте страницу инструмента JSON to TSV Converter на нашем сайте.",
+        "В верхней части страницы найдите текстовое поле с надписью 'Введите JSON-данные'.",
+        "Вставьте или введите JSON-данные, которые вы хотите преобразовать, в это текстовое поле.",
+        "Выберите опцию 'Расширенные настройки', если вам нужно настроить разделитель столбцов или формат дат.",
+        "Нажмите кнопку 'Преобразовать' для начала процесса конвертации.",
+        "После завершения преобразования, результат будет отображён в текстовом поле ниже, откуда его можно скопировать или скачать в виде файла TSV."
+      ],
+      "usage_examples": [
+        "Аналитик собирает данные о продажах из различных источников и получает их в формате JSON. Для анализа данных в Excel он использует этот конвертер для преобразования JSON в TSV, обеспечивая удобное представление данных в табличном виде.",
+        "Разработчик веб-приложения получает данные от API в формате JSON и хочет загрузить их в базу данных, поддерживающую TSV-формат. Используя конвертер, разработчик быстро преобразует данные для дальнейшего использования.",
+        "Маркетолог собирает данные о поведении пользователей на сайте и анализирует их с помощью инструментов, поддерживающих TSV. Конвертер помогает преобразовать JSON-данные в подходящий формат для дальнейшего анализа.",
+        "Дизайнер интерфейсов работает над проектом, требующим визуализации данных. Он получает данные в формате JSON и использует конвертер для преобразования данных в TSV, чтобы загрузить их в инструмент визуализации, поддерживающий этот формат."
+      ]
+    }
+  }
+}

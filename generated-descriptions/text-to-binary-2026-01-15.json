@@ -1,0 +1,158 @@
+{
+  "slug": "text-to-binary",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Text to Binary tool is a powerful utility designed to facilitate the conversion of text into binary and vice versa. This tool is particularly useful for developers and IT professionals who need to work with data in different formats, especially when dealing with low-level data manipulation or debugging binary protocols. By using this tool, users can quickly and accurately convert text strings into their binary representation and vice versa, which is essential for tasks such as encoding and decoding data, creating test data, and inspecting binary files.\n\nUnder the hood, the Text to Binary tool leverages bitwise operations and character encoding standards to perform these conversions. When converting text to binary, the tool first encodes the text using a specified character set (e.g., ASCII, UTF-8) and then converts each character into its corresponding 8-bit binary representation. Conversely, when converting binary to text, the tool interprets the binary data as a sequence of 8-bit values and decodes them back into the original text using the same character set. This process is crucial for ensuring data integrity and consistency across different systems and platforms.\n\nThe tool is particularly useful in scenarios where binary data needs to be transmitted or stored in a human-readable format, such as in log files, configuration settings, or network protocols. It can also be used for educational purposes, helping users understand the relationship between text and binary data and how they are represented in computer systems.",
+      "usage_steps": [
+        "Step 1: Open the Text to Binary tool on the website and locate the main input area labeled 'Input Text or Binary'.",
+        "Step 2: Enter the text or binary data you want to convert into the input area. Ensure that the data is correctly formatted for the conversion type you are performing.",
+        "Step 3: Select the conversion direction using the dropdown menu labeled 'Conversion Type'. Choose 'Text to Binary' or 'Binary to Text' based on your needs.",
+        "Step 4: If converting text to binary, you can specify the character encoding by selecting 'ASCII' or 'UTF-8' from the 'Character Encoding' dropdown menu. This step is optional but recommended for accurate conversions.",
+        "Step 5: Click the 'Convert' button to initiate the conversion process. The tool will process the input data and display the result in the 'Output' area.",
+        "Step 6: Review the output in the 'Output' area. You can copy the result to your clipboard using the 'Copy' button or save it to a file for further use."
+      ],
+      "usage_examples": [
+        "Example 1: A developer is working on a network protocol that requires sending text data in binary format. They use the Text to Binary tool to convert a string of text into its binary representation, which is then sent over the network and decoded by the receiving system.",
+        "Example 2: A software tester needs to create a test case that involves writing specific binary data to a file. They use the tool to convert a sequence of hexadecimal values into binary, ensuring that the data is correctly formatted for the test scenario.",
+        "Example 3: An IT administrator is troubleshooting a configuration file that contains binary data in a human-readable format. They use the tool to convert the binary data back into text to understand the configuration settings and identify any issues.",
+        "Example 4: A computer science student is learning about character encoding and needs to understand how text is represented in binary. They use the Text to Binary tool to convert various text strings into binary and back, gaining insight into the encoding process and the relationship between text and binary data."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Text to Binary 是一款强大的编码工具，用于在文本和二进制数据之间进行转换。该工具的核心功能在于将ASCII字符序列转换为对应的二进制字符串，反之亦然。用户可以通过这个工具轻松处理各种编码转换需求，无论是简单的文本编码还是复杂的二进制数据解析。在技术层面，该工具使用了标准的ASCII编码表，确保每个字符都能准确地映射到其对应的8位二进制数值。此外，该工具还支持实时预览功能，用户可以即时查看转换结果，确保数据的准确性和完整性。对于开发者和IT专业人士来说，Text to Binary 是一个不可或缺的工具，它在数据传输、文件处理、网络安全等多个领域都有着广泛的应用。",
+      "usage_steps": [
+        "打开 Text to Binary 工具页面，你会看到两个主要区域：文本输入框和二进制输入框。",
+        "在文本输入框中输入你想要转换的文本内容，或者在二进制输入框中输入你想要转换的二进制数据。",
+        "点击页面上方的“转换方向”按钮，选择你希望进行的转换类型：文本转二进制或二进制转文本。",
+        "点击“转换”按钮，工具会立即进行转换并在输出框中显示结果。",
+        "如果你需要复制结果，可以点击输出框右侧的“复制”按钮，将结果复制到剪贴板。",
+        "如果需要进一步处理结果，可以直接在输出框中进行编辑，然后继续使用其他功能或工具。"
+      ],
+      "usage_examples": [
+        "在开发过程中，需要将一段明文密码转换为二进制格式以进行加密处理。使用 Text to Binary 工具，可以快速将密码转换为二进制字符串，然后进一步使用加密算法处理。",
+        "在进行网络调试时，数据包中包含二进制数据，需要将其转换为可读的文本格式以进行分析。通过 Text to Binary 工具，可以轻松将二进制数据转换为文本，帮助开发者快速定位问题。",
+        "在编写代码时，需要生成特定的二进制文件，而这些文件的内容是由文本内容决定的。使用 Text to Binary 工具，可以将文本内容转换为二进制格式，然后写入文件中。",
+        "在教学或培训中，需要向学生展示字符和二进制之间的关系。通过 Text to Binary 工具，可以直观地展示每个字符对应的二进制数值，帮助学生更好地理解编码原理。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Text to Binaryツールは、テキストデータを2進数（バイナリ）データに、またはその逆に変換することができます。テクスチャデータの各文字は、ASCIIまたはUnicodeの形式で8ビットのバイナリコードに変換されます。このツールは、データのエンコードやデコード、プログラミング、セキュリティテスト、データ分析などの領域で広く利用されています。例えば、バイナリデータを人間が読めるテキスト形式に変換することで、データの内容を確認したり、エラーチェックを行うことができます。また、テキストをバイナリに変換することで、データの圧縮や暗号化の前処理として使用することも可能です。このツールは、ウェブベースのインターフェースを使用することで、高度にカスタマイズされた変換プロセスを簡単に行うことができます。ユーザーは、変換モードの選択、エンコーディング方式の指定、入力データの形式チェックなど、詳細な設定を行うことが可能です。",
+      "usage_steps": [
+        "1. ツールページにアクセスし、『テキストを入力』または『バイナリを入力』のテキストボックスを選択してください。",
+        "2. テキストまたはバイナリデータを直接入力するか、ファイルからデータを読み込むことができます。データを入力する場合は、テキストボックスにペーストします。",
+        "3. 変換モードを選択します。『テキストからバイナリ』または『バイナリからテキスト』のラジオボタンから適切なモードを選択します。",
+        "4. エンコーディング方式を選択します。ASCIIまたはUnicodeから選択できます。この選択は、変換の正確性に影響します。",
+        "5. 『変換』ボタンをクリックします。ツールは選択されたモードとエンコーディング方式に基づいて、入力データを変換します。",
+        "6. 変換結果が表示されます。結果をコピーするか、必要に応じてダウンロードできます。"
+      ],
+      "usage_examples": [
+        "1. プログラマがバイナリファイルの内容を確認する場合：バイナリファイルの内容をテキストに変換することで、ファイルの内容を人間が読める形式で確認できます。これにより、ファイルの構造やデータの形式を理解できます。",
+        "2. セキュリティ専門家がデータを解析する場合：データをバイナリ形式で受け取り、テキストに変換することで、データの内容を詳細に解析できます。これにより、潜在的なセキュリティリスクを特定し、対策を講じることができます。",
+        "3. データ分析者がデータを圧縮する前処理として：テキストデータをバイナリに変換することで、データの圧縮効率を向上させることができます。これにより、データの転送や保存にかかるコストを削減できます。",
+        "4. 学生が情報理論を学ぶ場合：テキストとバイナリの変換過程を理解することで、情報理論やデータエンコーディングの概念を実践的に学ぶことができます。これにより、理論的な知識を実際の操作に結びつけることができます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Text to Binary는 텍스트와 이진 코드 간의 변환을 수행하는 강력한 온라인 도구입니다. 이 도구는 ASCII나 Unicode와 같은 문자 인코딩 방식을 사용하여 텍스트를 이진 코드로 변환하거나 그 반대로 변환할 수 있습니다. 사용자들은 이 도구를 통해 다양한 데이터 처리 작업에서 필요로 하는 정확한 변환 결과를 얻을 수 있습니다.\n\n데브옵스, 프로그래밍, 데이터 분석 등 다양한 분야에서 이 도구가 유용하게 사용됩니다. 예를 들어, 데브옵스 엔지니어는 이진 데이터를 처리하거나 디버깅할 때 이 도구를 사용할 수 있으며, 프로그래머는 문자열을 이진 코드로 변환하여 암호화나 데이터 압축에 활용할 수 있습니다. 또한, 연구원이나 데이터 과학자는 대량의 텍스트 데이터를 이진 형식으로 변환하여 효율적인 분석을 수행할 수 있습니다.\n\n기본적으로, Text to Binary는 사용자 인터페이스를 통해 텍스트를 입력받고, 이를 이진 코드로 변환하거나 이진 코드를 텍스트로 변환할 수 있습니다. 변환 프로세스는 내부적으로 ASCII나 Unicode 표를 참조하여 각 문자를 8비트 이진 코드로 변환하거나 그 반대로 변환합니다. 이 과정은 효율적인 알고리즘을 사용하여 빠르고 정확한 변환을 보장합니다.",
+      "usage_steps": [
+        "1.<Text to Binary> 웹사이트에 접속합니다.",
+        "2. 상단 메뉴에서 'Text to Binary' 옵션을 선택합니다.",
+        "3. 'Input Type' 드롭다운 메뉴에서 변환 방향을 선택합니다. 'Text to Binary' 또는 'Binary to Text' 중에서 선택합니다.",
+        "4. 'Input' 텍스트 상자에 변환하고자 하는 텍스트나 이진 코드를 입력합니다.",
+        "5. 'Convert' 버튼을 클릭하여 변환을 수행합니다.",
+        "6. 'Output' 텍스트 상자에서 변환 결과를 확인합니다. 필요한 경우, 결과를 복사하여 사용할 수 있습니다."
+      ],
+      "usage_examples": [
+        "Example 1: 데브옵스 엔지니어는 이진 데이터를 처리해야 할 때 이 도구를 사용하여 텍스트를 이진 코드로 변환하여 디버깅을 쉽게 할 수 있습니다.",
+        "Example 2: 프로그래머는 암호화 알고리즘을 개발할 때 문자열을 이진 코드로 변환하여 원시 데이터를 처리할 수 있습니다.",
+        "Example 3: 데이터 과학자는 대량의 텍스트 데이터를 이진 형식으로 변환하여 효율적인 데이터 분석을 수행할 수 있습니다.",
+        "Example 4: 학생은 컴퓨터 과학 수업에서 이진 코드와 텍스트 간의 관계를 이해하기 위해 이 도구를 사용하여 실험할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "La herramienta Text to Binary es un conversor bidireccional que transforma texto en binario y viceversa. Este proceso se basa en la representación de los caracteres en el formato ASCII (American Standard Code for Information Interchange), donde cada carácter se codifica con un número binario de 8 bits. La utilidad de esta herramienta radica en su capacidad para facilitar la comprensión y el manejo de datos en un formato más básico y universal, lo cual es crucial en diversos campos como la criptografía, la programación y el análisis de datos. Los desarrolladores pueden usar esta herramienta para depurar códigos, verificar la integridad de datos binarios, o incluso para crear mensajes ocultos en formato binario. Además, es especialmente útil para aquellos que trabajan con protocolos de comunicación que requieren la transmisión de datos en formato binario. La herramienta es accesible a través de una interfaz web sencilla, donde los usuarios pueden introducir el texto o el código binario, seleccionar la dirección de la conversión y obtener el resultado en tiempo real.",
+      "usage_steps": [
+        "Abre la página web de la herramienta Text to Binary y asegúrate de que estás en la sección de conversión.",
+        "En el campo de entrada, escribe o pega el texto que deseas convertir a binario, o el código binario que deseas convertir a texto.",
+        "Selecciona la dirección de la conversión utilizando el botón de radio. Opción 1: 'Texto a Binario' o Opción 2: 'Binario a Texto'.",
+        "Si estás convirtiendo texto a binario, puedes elegir si deseas que los resultados se muestren con espacios entre cada byte o sin espacios, utilizando la casilla de verificación correspondiente.",
+        "Haz clic en el botón 'Convertir' para iniciar el proceso. La herramienta procesará la entrada y mostrará el resultado en el campo de salida.",
+        "Revisa el resultado y, si es necesario, copia el texto o el código binario convertido para usarlo en tu proyecto."
+      ],
+      "usage_examples": [
+        "Un desarrollador de software necesita depurar un mensaje de error que se muestra en formato binario. Utiliza la herramienta Text to Binary para convertir el código binario en texto legible y así identificar el mensaje de error.",
+        "Un estudiante de criptografía está aprendiendo sobre la codificación ASCII y necesita convertir frases en texto en su representación binaria. Utiliza la herramienta para practicar y comprender cómo se codifican los caracteres en binario.",
+        "Un ingeniero de redes está configurando un protocolo de comunicación que requiere la transmisión de datos en formato binario. Utiliza la herramienta para convertir los datos de entrada en binario antes de enviarlos a través de la red.",
+        "Un diseñador de juegos está creando un mecanismo de seguridad que utiliza códigos binarios para desbloquear niveles. Utiliza la herramienta para generar códigos binarios a partir de claves de texto y asegurarse de que los datos se transmiten correctamente."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Text to Binary é uma ferramenta de codificação que permite a conversão bidirecional entre texto legível e seu equivalente binário. Essa função é extremamente útil em diversos cenários, desde a compreensão de como dados são representados em nível de máquina até a implementação de protocolos de comunicação que exigem a manipulação de dados em formato binário. O texto, ao ser convertido para binário, é decomposto em sequências de 0s e 1s, que correspondem a cada caractere do texto original, de acordo com a tabela ASCII. Inversamente, uma sequência de bits pode ser convertida de volta para o seu equivalente textual. A ferramenta utiliza algoritmos de codificação eficientes para garantir que a conversão seja precisa e rápida, sem perda de dados. Além disso, a interface do usuário é projetada para ser intuitiva, permitindo que desenvolvedores e entusiastas de tecnologia realizem essas operações com facilidade e precisão.",
+      "usage_steps": [
+        "Abra a página do Text to Binary no seu navegador.",
+        "Na seção 'Entrada', insira o texto que deseja converter para binário ou a sequência binária que deseja converter para texto.",
+        "Selecione a direção da conversão usando o botão de opção 'Texto para Binário' ou 'Binário para Texto'.",
+        "Clique no botão 'Converter' para iniciar o processo de conversão.",
+        "A ferramenta exibirá o resultado da conversão na seção 'Resultado'.",
+        "Copie o resultado convertido, se necessário, usando o botão 'Copiar' para uso em outros aplicativos ou documentação."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de software precisa testar um protocolo de comunicação que envia mensagens em formato binário. Ele usa o Text to Binary para converter a mensagem de texto 'HELLO' em seu equivalente binário para enviar via socket.",
+        "Um estudante de computação está aprendendo sobre representação de dados em memória. Ele usa a ferramenta para converter a frase 'Olá, mundo!' em binário e analisa as sequências de bits correspondentes a cada caractere.",
+        "Um engenheiro de redes está depurando um problema de transmissão de dados. Ele recebe uma sequência binária de um dispositivo e usa o Text to Binary para convertê-la de volta para texto, facilitando a identificação do conteúdo da mensagem.",
+        "Um especialista em segurança da informação precisa decodificar uma mensagem interceptada que está em formato binário. Ele utiliza a ferramenta para transformar a sequência binária em texto legível, ajudando na análise da mensagem."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil Texte en Binaire est un outil de conversion bidirectionnel qui permet de transformer du texte en code binaire et vice versa. Technique de base pour la transmission de données, le code binaire est un système de numération qui utilise uniquement deux chiffres (0 et 1) pour représenter toute information. Ce processus de conversion est fondamental dans divers domaines informatiques, notamment pour la cryptographie, la compression de données, et la communication réseau.\n\nLes utilisateurs ont besoin de cet outil pour plusieurs raisons. Par exemple, les développeurs peuvent l'utiliser pour vérifier la précision de la transmission de données entre différents systèmes. Les chercheurs en sécurité informatique peuvent également l'employer pour analyser des fichiers suspects ou des protocoles de communication. En outre, les étudiants en informatique trouveront cet outil utile pour comprendre les principes de base de la représentation des données.\n\nTechniquement, l'outil fonctionne en convertissant chaque caractère de l'entrée textuelle en son équivalent binaire. Chaque caractère est traité en fonction de son code ASCII (American Standard Code for Information Interchange). Par exemple, le caractère 'A' a un code ASCII de 65, qui est ensuite converti en binaire 01000001. Pour la conversion inverse, chaque groupe de bits est converti en son équivalent décimal, puis en son caractère ASCII correspondant.",
+      "usage_steps": [
+        "Ouvrez l'outil Texte en Binaire sur le site.",
+        "Dans la section \"Entrée\", saisissez le texte ou le code binaire que vous souhaitez convertir.",
+        "Sélectionnez la direction de conversion dans le menu déroulant. Choisissez \"Texte vers Binaire\" ou \"Binaire vers Texte\" selon vos besoins.",
+        "Si vous choisissez \"Texte vers Binaire\", chaque caractère sera converti en son équivalent binaire en utilisant le code ASCII.",
+        "Si vous choisissez \"Binaire vers Texte\", chaque groupe de 8 bits sera converti en son équivalent ASCII pour former le texte.",
+        "Cliquez sur le bouton \"Convertir\" pour obtenir le résultat de la conversion dans la section \"Résultat\"."
+      ],
+      "usage_examples": [
+        "Un développeur souhaite vérifier la précision de la transmission de données entre deux systèmes. Il utilise l'outil pour convertir un message texte en code binaire avant l'envoi, puis convertit le code binaire reçu en texte pour s'assurer qu'il correspond au message original.",
+        "Un chercheur en sécurité informatique analyse un fichier suspect. Il utilise l'outil pour convertir le contenu binaire du fichier en texte afin de rechercher des chaînes de caractères potentiellement malveillants ou des instructions de protocoles de communication.",
+        "Un enseignant en informatique prépare une démonstration sur la représentation des données. Il utilise l'outil pour montrer aux étudiants comment les caractères sont représentés en binaire et comment ces représentations binaires sont converties en texte.",
+        "Un développeur de logiciels de compression de données utilise l'outil pour tester l'efficacité de différents algorithmes de compression. Il convertit des textes en code binaire, applique des méthodes de compression, puis convertit le code binaire compressé de retour en texte pour évaluer la perte de données."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Text zu Binär-Werkzeug ist eine leistungsstarke Online-Plattform, die Entwickler und Technologie-Begeisterte ermöglicht, Text in Binärformat und umgekehrt zu konvertieren. Technisch gesehen, arbeitet das Tool, indem es den eingegebenen Text in seine Binärdarstellung umwandelt. Dies erfolgt durch die Zuordnung jedes Zeichens zu seiner ASCII-Nummer und die anschließende Umwandlung dieser Nummer in ein 8-Bit-Binärformat. Umgekehrt kann das Tool auch Binärdaten in lesbaren Text umwandeln, indem es die Binärzeichen in ihre ASCII-Äquivalente zurückverwandelt. Dies ist besonders nützlich für Entwickler, die mit Binärdaten arbeiten, beispielsweise bei der Analyse von Netzwerkpaketen, der Debugging von Software oder der Manipulation von Dateien auf niedriger Ebene. Das Tool ist nicht nur praktisch für die Datenverarbeitung, sondern auch für Bildungszwecke, da es den Nutzern ein tiefes Verständnis der binären Systeme vermittelt, die die Grundlage der digitalen Kommunikation bilden.",
+      "usage_steps": [
+        "Öffnen Sie die Website und navigieren Sie zu dem Text zu Binär-Werkzeug unter der Kategorie 'Encoding'.",
+        "Wählen Sie im oberen Bereich die Option 'Text zu Binär' oder 'Binär zu Text', je nachdem, in welche Richtung Sie die Konvertierung durchführen möchten.",
+        "Geben Sie im Textfeld 'Eingabe' den Text oder die Binärdaten ein, die Sie konvertieren möchten.",
+        "Klicken Sie auf die Schaltfläche 'Konvertieren', um den Prozess zu starten. Das Tool wird die Eingabe sofort verarbeiten.",
+        "Die konvertierten Daten werden im Textfeld 'Ausgabe' angezeigt. Sie können diesen Text kopieren oder direkt im Feld bearbeiten.",
+        "Falls Sie die Konvertierung erneut durchführen möchten, können Sie das Textfeld leeren und neue Daten eingeben, oder Sie können die Schaltfläche 'Zurücksetzen' verwenden, um alle Felder zu leeren."
+      ],
+      "usage_examples": [
+        "Ein Netzwerktechniker muss Netzwerkpakete analysieren, die in Binärformat vorliegen. Das Tool hilft ihm, die Binärdaten in lesbaren Text umzuwandeln, um die Pakete zu verstehen und Fehler zu identifizieren.",
+        "Ein Softwareentwickler arbeitet an einer Anwendung, die Textdaten in Binärformat speichert. Er verwendet das Tool, um sicherzustellen, dass die Daten korrekt konvertiert und gespeichert werden, indem er Testdaten konvertiert und überprüft.",
+        "Ein Bildungscoach möchte seinen Schülern das Konzept des Binärcodes erklären. Er verwendet das Tool, um Text in Binär umzuwandeln, damit die Schüler das Ergebnis sehen und verstehen können, wie Computer Daten verarbeiten.",
+        "Ein Sicherheitsexperte untersucht verdächtige Dateien, die möglicherweise verschlüsselt sind. Das Tool hilft ihm, die Dateien auf niedriger Ebene zu analysieren, indem er den Inhalt in Binär umwandelt und nach bestimmten Mustern sucht."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Text to Binary предназначен для преобразования текстовых данных в двоичный формат и обратно. Для пользователей, работающих с цифровыми данными, это инструмент становится необходимым помощником. Двоичный формат, представляющий данные в виде последовательности нулей и единиц, широко используется в компьютерных системах и сетевых протоколах. Инструмент Text to Binary позволяет легко и быстро преобразовывать текстовые сообщения в двоичные последовательности и наоборот, что может быть полезно для программистов, тестировщиков, системных администраторов и других специалистов, работающих с данными на низком уровне. Например, при разработке протоколов передачи данных, тестировании систем, которые принимают или отправляют двоичные данные, или при анализе файлов с двоичными данными. Использование инструмента включает в себя ввод текста или двоичного кода, выбор направления преобразования, и получение результата. Технически, инструмент использует алгоритмы кодирования и декодирования, которые представляют каждый символ текста в виде его двоичной последовательности, основываясь на таблице ASCII или других кодировках символов.",
+      "usage_steps": [
+        "Шаг 1: Откройте инструмент Text to Binary на сайте.",
+        "Шаг 2: В поле «Входные данные» введите текст, который вы хотите преобразовать в двоичный код, или двоичный код, который вы хотите преобразовать в текст.",
+        "Шаг 3: Выберите направление преобразования, используя переключатель «Текст в двоичный» или «Двоичный в текст».",
+        "Шаг 4: Если вы работаете с двоичными данными, убедитесь, что они правильно форматированы (например, без пробелов или других символов).",
+        "Шаг 5: Нажмите кнопку «Преобразовать» для выполнения операции.",
+        "Шаг 6: Результат преобразования будет отображен в поле «Результат». Вы можете скопировать его, используя кнопку «Скопировать результат»."
+      ],
+      "usage_examples": [
+        "Пример 1: Программист разрабатывает систему для передачи данных по сети. Для тестирования он использует инструмент Text to Binary, чтобы преобразовать текстовые сообщения в двоичный формат и проверить, как система обрабатывает эти данные.",
+        "Пример 2: Системный администратор анализирует лог-файлы, содержащие двоичные данные. Используя инструмент, он преобразует эти данные в текст, чтобы понять, какие команды или сообщения были отправлены.",
+        "Пример 3: Разработчик веб-приложений создает функцию, которая принимает двоичные данные и отображает их в виде текста. Для проверки работы функции он использует инструмент Text to Binary, чтобы сгенерировать тестовые данные в нужном формате.",
+        "Пример 4: Киберспециалист проводит анализ зашифрованных сообщений. Он использует инструмент для преобразования декодированных двоичных данных в текст, чтобы проверить, есть ли в них какие-либо подозрительные или вредоносные строки."
+      ]
+    }
+  }
+}

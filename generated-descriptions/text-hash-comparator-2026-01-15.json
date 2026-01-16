@@ -1,0 +1,175 @@
+{
+  "slug": "text-hash-comparator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Text Hash Comparator is a specialized tool designed to compare the hash values of two text inputs, ensuring their integrity and authenticity. This tool is particularly useful in security contexts where verifying the consistency of data is critical. By leveraging cryptographic hash functions, the Text Hash Comparator can quickly and accurately determine if two pieces of text are identical, even if the text itself is not visible or accessible. This is invaluable in scenarios such as verifying the integrity of transmitted documents, ensuring the authenticity of software updates, and validating digital signatures. The tool supports a variety of hash algorithms, including MD5, SHA-1, SHA-256, and SHA-512, allowing users to choose the most appropriate method for their specific needs. The process involves converting the input text into a fixed-length hash value, which is then compared against the hash value of the second input. If the hash values match, it indicates that the texts are identical. This tool is essential for developers, security professionals, and anyone who needs to verify the integrity of text-based data.",
+      "usage_steps": [
+        "Step 1: Open the Text Hash Comparator tool on the website and navigate to the main interface.",
+        "Step 2: In the 'Input 1' section, enter or paste the first text you want to compare.",
+        "Step 3: In the 'Input 2' section, enter or paste the second text you want to compare.",
+        "Step 4: Select the hash algorithm from the dropdown menu (e.g., MD5, SHA-1, SHA-256, SHA-512) that you want to use for the comparison.",
+        "Step 5: Click the 'Compare Hashes' button to generate and compare the hash values of the two inputs.",
+        "Step 6: Review the results displayed on the screen. If the hash values match, the texts are identical. If they do not match, the texts differ."
+      ],
+      "usage_examples": [
+        "Example 1: A software developer uses the Text Hash Comparator to verify that the source code of a new update matches the original version before deployment, ensuring no unauthorized changes were made during the development process.",
+        "Example 2: A security analyst uses the tool to compare the hash values of two digital signatures to ensure that the signatures are valid and have not been tampered with, maintaining the integrity of signed documents.",
+        "Example 3: A system administrator uses the Text Hash Comparator to verify the integrity of configuration files after a system update, ensuring that the files have not been altered by malicious actors.",
+        "Example 4: A data analyst uses the tool to compare the content of two large text files containing sensitive information, ensuring that the data in both files is consistent and has not been modified during transmission or storage."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Text Hash Comparator 是一个用于通过哈希值比较文本的工具。哈希函数将输入数据转换为固定长度的字符串，这一过程不可逆，且即使是微小的变化也会导致哈希值的显著不同。该工具支持多种哈希算法（如 MD5、SHA-1、SHA-256 等），用户可以自行选择。通过比较两个文本的哈希值，可以验证数据的完整性，确保在传输或存储过程中未被篡改。在网络安全、软件开发、数据验证等领域，Text Hash Comparator 是一个不可或缺的工具。\n\n使用 Text Hash Comparator 可以防止数据泄露和篡改，尤其在处理敏感信息时，通过比较哈希值可以快速确认数据是否一致。例如，当从网络下载文件时，可以使用该工具验证下载文件的哈希值与官方提供的哈希值是否一致，确保文件未被篡改。此外，开发人员在进行代码比对或数据校验时，也可以利用此工具确保数据的一致性和安全性。\n\n在技术实现上，Text Hash Comparator 通过调用内置的哈希算法库，对输入的文本进行哈希计算。用户可以选择不同的哈希算法，输入需要比较的文本，工具会自动计算哈希值并显示结果。通过对比两个哈希值，用户可以直观地判断文本是否一致。",
+      "usage_steps": [
+        "Step 1: 打开 Text Hash Comparator 工具页面，选择您希望使用的哈希算法（如 MD5、SHA-1、SHA-256 等）。",
+        "Step 2: 在“文本1”输入框中，输入或粘贴您需要比较的第一个文本。",
+        "Step 3: 在“文本2”输入框中，输入或粘贴您需要比较的第二个文本。",
+        "Step 4: 点击“计算哈希值”按钮，工具将自动计算两个文本的哈希值。",
+        "Step 5: 查看哈希值结果，如果两个文本的哈希值相同，说明文本一致；如果不同，说明文本有差异。",
+        "Step 6: 根据比较结果，决定是否需要进一步调查或处理数据。"
+      ],
+      "usage_examples": [
+        "Example 1: 当从官方网站下载软件或文件时，可以使用 Text Hash Comparator 工具验证下载文件的哈希值与官方提供的哈希值是否一致，确保文件未被篡改。",
+        "Example 2: 在软件开发过程中，开发人员可以使用该工具比较代码文件的哈希值，确保代码在不同环境下的版本一致性。",
+        "Example 3: 网络安全专家在进行数据安全审计时，可以使用 Text Hash Comparator 比较敏感数据的哈希值，确保数据在传输过程中未被篡改。",
+        "Example 4: 企业内部的数据管理团队在进行数据备份和恢复操作时，可以使用该工具验证备份文件与原始文件的哈希值是否一致，确保备份文件的完整性和可靠性。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Text Hash Comparatorは、テキストデータのハッシュ値を計算し、比較するためのツールです。ハッシュ値は、テキストデータを一意の固定長の文字列に変換することで、データの整合性や同一性を確認するのに役立ちます。このツールは、安全性の高いデータハンドリングや、改ざん検出、データの同一性確認など、さまざまなシナリオで活用できます。\n\n具体的には、ユーザーは2つのテキスト入力フィールドにデータを入力し、それぞれのハッシュ値を計算します。その後、生成されたハッシュ値を比較することで、2つのテキストが同一であるかどうかを瞬時に確認できます。ハッシュアルゴリズムにはSHA-256やMD5が使用され、各アルゴリズムの選択はユーザーインターフェースから行うことが可能です。\n\nText Hash Comparatorは、セキュアなデータエクスチェンジやブロックチェーン技術、デジタル署名など、現代の情報セキュリティにおいて重要な役割を果たします。データの改ざんを検出したり、ファイルの整合性を確認したりする際に、ハッシュ値の比較は非常に効果的です。",
+      "usage_steps": [
+        "Step 1: ツールのホーム画面にアクセスし、‘テキスト1’と‘テキスト2’の入力フィールドを確認してください。",
+        "Step 2: ‘テキスト1’の入力フィールドに比較したいテキストデータを入力します。",
+        "Step 3: ‘テキスト2’の入力フィールドに比較したい別のテキストデータを入力します。",
+        "Step 4: ‘ハッシュアルゴリズム’のドロップダウンメニューから、SHA-256、MD5、SHA-1などの哈希アルゴリズムを選択します。",
+        "Step 5: ‘ハッシュ値を計算’ボタンをクリックして、入力したテキストのハッシュ値を生成します。",
+        "Step 6: 生成されたハッシュ値を比較し、結果が表示されるエリアで2つのテキストが同一かどうかを確認します。"
+      ],
+      "usage_examples": [
+        "Example 1: ファイルの転送中にデータの改ざんを検出するために、送信側と受信側でファイルのハッシュ値を比較します。",
+        "Example 2: デジタル署名の検証プロセスで、署名されたドキュメントのハッシュ値と受信したハッシュ値を照合して、署名の有効性を確認します。",
+        "Example 3: ユーザーがパスワードを変更した際、新しいパスワードのハッシュ値を旧パスワードのハッシュ値と比較して、同じパスワードの再使用を防止します。",
+        "Example 4: ブロックチェーン技術で、各ブロックのハッシュ値を計算し、前のブロックのハッシュ値と比較して、チェーンの一貫性を確認します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Text Hash Comparator는 텍스트의 해시 값을 비교하여 두 텍스트가 동일한지 여부를 확인하는 도구입니다. 이 도구는 보안 분야에서 중요한 역할을 하며, 해시 함수를 사용하여 텍스트를 고유한 고정 길이의 문자열로 변환합니다. 해시 값은 원본 텍스트의 미세한 변화에도 크게 영향을 받기 때문에, 이 도구는 텍스트의 무결성을 검증하는 데 매우 유용합니다. 예를 들어, 파일 전송 시 원본 파일과 수신된 파일이 동일한지 확인하거나, 데이터베이스에서 저장된 텍스트와 사용자 입력 텍스트가 일치하는지 확인하는 데 사용될 수 있습니다. 이 도구는 SHA-256, MD5, SHA-1 등 다양한 해시 알고리즘을 지원하며, 사용자는 해시 알고리즘을 선택하고 두 개의 텍스트 입력 필드에 데이터를 입력한 후 결과를 확인할 수 있습니다. Text Hash Comparator는 보안 애플리케이션 개발, 데이터 검증, 디지털 서명 등의 다양한 용도로 활용될 수 있습니다.",
+      "usage_steps": [
+        "Step 1: Text Hash Comparator 페이지에 접속합니다.",
+        "Step 2: 'Hash Algorithm' 드롭다운 메뉴에서 원하는 해시 알고리즘을 선택합니다 (SHA-256, MD5, SHA-1 등).",
+        "Step 3: 'Input Text 1' 필드에 첫 번째 텍스트를 입력합니다.",
+        "Step 4: 'Input Text 2' 필드에 두 번째 텍스트를 입력합니다.",
+        "Step 5: 'Compare' 버튼을 클릭하여 해시 값을 생성하고 비교합니다.",
+        "Step 6: 결과 표시 영역에서 두 텍스트의 해시 값이 동일한지 여부를 확인합니다."
+      ],
+      "usage_examples": [
+        "Example 1: 파일 전송 시 원본 파일과 수신된 파일의 해시 값을 비교하여 데이터 무결성을 검증합니다.",
+        "Example 2: 사용자 입력 폼에서 사용자가 입력한 비밀번호와 데이터베이스에 저장된 비밀번호 해시 값을 비교하여 로그인 인증을 수행합니다.",
+        "Example 3: 서버와 클라이언트간의 데이터 교환에서 해시 값을 사용하여 데이터의 일관성을 유지하고 조작을 방지합니다.",
+        "Example 4: 블록체인 애플리케이션에서 트랜잭션 데이터의 해시 값을 생성하여 블록체인의 무결성을 보장합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Text Hash Comparator es una herramienta de seguridad diseñada para comparar textos a través de sus valores hash. Este proceso es crucial en diversos escenarios, como la verificación de integridad de datos, la autenticación y la detección de cambios en documentos. Mediante el uso de algoritmos de hash como SHA-256, SHA-512, o MD5, la herramienta genera un valor hash único para cada texto ingresado. Este valor hash actúa como un resumen digital, que, aunque es irreversiblemente derivado del texto original, permite una comparación rápida y eficiente para determinar si dos textos son idénticos. La utilidad de esta herramienta radica en su capacidad para proporcionar una forma robusta y confiable de verificar la consistencia de los datos, lo cual es esencial en entornos donde la seguridad y la precisión son primordiales. Al comparar los valores hash, los usuarios pueden asegurarse de que los datos no hayan sido alterados durante su transmisión o almacenamiento, lo que es particularmente útil en aplicaciones de criptografía, auditorías forenses y control de versiones de software.",
+      "usage_steps": [
+        "Paso 1: Abre la página del Text Hash Comparator en el navegador.",
+        "Paso 2: En la sección 'Texto 1', ingresa el primer texto que deseas comparar.",
+        "Paso 3: En la sección 'Texto 2', ingresa el segundo texto que deseas comparar.",
+        "Paso 4: Selecciona el algoritmo de hash que deseas utilizar desde el menú desplegable (SHA-256, SHA-512, MD5).",
+        "Paso 5: Haz clic en el botón 'Comparar' para procesar los textos y generar los valores hash correspondientes.",
+        "Paso 6: Revisa los resultados mostrados en la sección 'Resultado', donde se indicará si los valores hash son iguales o diferentes."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador de software utiliza el Text Hash Comparator para verificar que el código fuente de una aplicación no haya sido alterado durante el proceso de despliegue. Compara el hash del código original con el hash del código desplegado para asegurarse de su integridad.",
+        "Ejemplo 2: Un administrador de sistemas usa la herramienta para detectar cambios en archivos de configuración críticos. Compara el hash de un archivo de configuración actual con el hash de una versión previa conocida para identificar cualquier modificación no autorizada.",
+        "Ejemplo 3: Un investigador forense emplea el Text Hash Comparator para validar la autenticidad de documentos electrónicos presentados en un caso legal. Compara los hashes de los documentos originales con los hashes de las copias para asegurarse de que no se han realizado alteraciones.",
+        "Ejemplo 4: Un equipo de seguridad de red utiliza la herramienta para monitorizar la integridad de archivos de logs. Compara los hashes de los archivos de logs nuevos con los hashes de los archivos de logs previos para detectar cualquier actividad sospechosa."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Text Hash Comparator é uma ferramenta de segurança avançada que permite aos usuários comparar textos com base em seus valores hash. A comparação de hashes é um método eficaz para verificar a integridade de dados, garantindo que duas strings de texto sejam exatamente iguais, mesmo que pareçam idênticas visualmente. Esta ferramenta é particularmente útil em cenários onde a consistência e a autenticidade dos dados são cruciais, como no armazenamento e transmissão de informações sensíveis.\n\nPor que os usuários precisam desta ferramenta? Em ambientes de desenvolvimento e segurança, a integridade dos dados é fundamental. Por exemplo, ao baixar um arquivo de uma fonte externa, é essencial confirmar que o arquivo não foi alterado durante a transferência. O Text Hash Comparator permite que os usuários gerem e comparem hashes de texto rapidamente, garantindo que os dados originais e os dados recebidos sejam idênticos.\n\nComo funciona? O processo envolve a aplicação de um algoritmo de hash, como SHA-256, na string de texto. O algoritmo gera uma representação única (hash) do texto, que é uma sequência de caracteres fixa e inalterável. Quando dois textos são comparados, seus hashes são gerados e comparados. Se os hashes forem idênticos, isso indica que os textos são exatamente iguais. Caso contrário, há uma diferença nas strings, mesmo que seja mínima.",
+      "usage_steps": [
+        "Acesse a página do Text Hash Comparator no site.",
+        "Na seção 'Texto 1', insira a primeira string de texto que deseja comparar.",
+        "Na seção 'Texto 2', insira a segunda string de texto que deseja comparar.",
+        "Selecione o algoritmo de hash desejado no menu suspenso 'Algoritmo de Hash' (por exemplo, SHA-256).",
+        "Clique no botão 'Comparar Hashes' para gerar e comparar os hashes dos textos inseridos.",
+        "Os resultados da comparação serão exibidos abaixo, indicando se os hashes são idênticos ou diferentes."
+      ],
+      "usage_examples": [
+        "Verificação de Integridade de Arquivos: Um desenvolvedor pode usar o Text Hash Comparator para verificar se um arquivo baixado de um servidor remoto é idêntico ao arquivo original, comparando os hashes de ambos.",
+        "Autenticação de Mensagens: Em sistemas de comunicação segura, um usuário pode comparar os hashes de mensagens enviadas e recebidas para garantir que a mensagem não foi alterada durante a transmissão.",
+        "Validação de Senhas: Em aplicações web, os hashes de senhas são armazenados no banco de dados. O Text Hash Comparator pode ser usado para comparar o hash de uma senha inserida pelo usuário com o hash armazenado, garantindo a autenticação segura.",
+        "Auditoria de Dados: Profissionais de segurança podem usar esta ferramenta para auditar dados em diferentes fontes, garantindo que os dados sejam consistentes e não tenham sido manipulados."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Text Hash Comparator est un outil de sécurité avancé conçu pour comparer le contenu de différents textes en utilisant leurs valeurs de hachage. Ce processus de hachage transforme les données textuelles en séquences uniques de caractères, appelées hachages, qui servent d'empreintes digitales pour le texte. L'outil utilise des algorithmes de hachage robustes tels que SHA-256 et MD5 pour générer ces empreintes digitales. Les utilisateurs peuvent ainsi vérifier l'intégrité des données, s'assurer que deux textes sont identiques, ou détecter toute altération. Cette fonctionnalité est particulièrement utile dans les environnements où la sécurité des données est cruciale, tels que le développement de logiciels, la gestion de configurations, et la vérification de la conformité. Le Text Hash Comparator offre une interface conviviale qui permet de générer et comparer rapidement les hachages, facilitant ainsi la détection de modifications non autorisées et la garantie de l'intégrité des informations.",
+      "usage_steps": [
+        "Ouvrez la page du Text Hash Comparator sur le site web.",
+        "Cliquez sur l'onglet 'Texte 1' et collez le premier texte que vous souhaitez comparer dans la zone de texte.",
+        "Sélectionnez l'algorithme de hachage souhaité (SHA-256, MD5, etc.) à partir du menu déroulant situé en bas de la zone de texte.",
+        "Répétez les étapes 2 et 3 pour le deuxième texte en utilisant l'onglet 'Texte 2'.",
+        "Une fois que vous avez saisi les deux textes et choisi les algorithmes de hachage, cliquez sur le bouton 'Comparer'.",
+        "L'outil affichera les hachages générés pour chaque texte ainsi que le résultat de la comparaison, indiquant si les textes sont identiques ou non."
+      ],
+      "usage_examples": [
+        "Un développeur souhaite vérifier que deux fichiers de configuration sont identiques avant de les déployer sur des serveurs différents. Il utilise le Text Hash Comparator pour générer et comparer les hachages des fichiers, s'assurant ainsi qu'aucune modification non autorisée n'a été apportée.",
+        "Un administrateur de systèmes doit s'assurer que les journaux de sécurité n'ont pas été modifiés. Il compare régulièrement les hachages des journaux avec des versions connues et sûres pour détecter toute altération.",
+        "Un auditeur de sécurité utilise l'outil pour vérifier la conformité des documents sensibles. Il génère des hachages pour chaque version des documents et les compare pour s'assurer qu'aucune information n'a été modifiée ou supprimée.",
+        "Un chercheur en cryptographie compare les hachages de différents algorithmes pour analyser leur robustesse et leur résistance aux attaques. Il utilise le Text Hash Comparator pour générer et comparer les hachages de textes de test, aidant à l'évaluation de la sécurité des algorithmes."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Text Hash Comparator ist ein fortschrittliches Online-Werkzeug, das Entwicklern und Sicherheitsexperten ermöglicht, Texte anhand ihrer Hash-Werte zu vergleichen. Dieses Tool nutzt kryptografische Hash-Funktionen, um den Eingabetext in eine feste Länge umzuwandeln, die eindeutig für den jeweiligen Text ist. Die Hash-Werte dienen als digitale Fingerabdrücke, die dazu verwendet werden können, um die Integrität und Authentizität von Daten zu überprüfen. Benutzer können mehrere Texte eingeben und deren Hash-Werte vergleichen, um sicherzustellen, dass keine Manipulationen oder Fehler aufgetreten sind. Dies ist besonders nützlich in Szenarien, in denen die Sicherheit und Verifizierung von Daten von entscheidender Bedeutung sind, wie z.B. in der Softwareentwicklung, der Datenübertragung und der forensischen Analyse. Der Text Hash Comparator unterstützt verschiedene Hash-Algorithmen wie MD5, SHA-1, SHA-256 und SHA-512, um die Anforderungen unterschiedlichster Anwendungen zu erfüllen.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des Text Hash Comparators auf unserer Website.",
+        "Wählen Sie im Dropdown-Menü den gewünschten Hash-Algorithmus (z.B. MD5, SHA-1, SHA-256, SHA-512) aus.",
+        "Fügen Sie den ersten Text in das erste Eingabefeld ein, das als 'Text 1' bezeichnet wird.",
+        "Fügen Sie den zweiten Text in das zweite Eingabefeld ein, das als 'Text 2' bezeichnet wird.",
+        "Klicken Sie auf den Button 'Hash vergleichen', um die Hash-Werte beider Texte zu generieren und zu vergleichen.",
+        "Die Ergebnisse werden in einem abschließenden Abschnitt angezeigt, der angibt, ob die Hash-Werte übereinstimmen oder nicht."
+      ],
+      "usage_examples": [
+        "Ein Softwareentwickler möchte sicherstellen, dass die aktualisierte Konfigurationsdatei, die er übertragen hat, mit der ursprünglichen Datei identisch ist, um Manipulationen auszuschließen.",
+        "Ein Forensiker verwendet den Text Hash Comparator, um den Inhalt von Dateien, die während einer Bundesrechtsuntersuchung beschlagnahmt wurden, mit bekannten Referenzdateien zu vergleichen.",
+        "Ein IT-Sicherheitsexperte überprüft, ob eine wichtige Nachricht unverändert über ein unsicheres Netzwerk übertragen wurde, indem er die Hash-Werte vor und nach der Übertragung vergleicht.",
+        "Ein Entwickler team arbeitet an einer Anwendung, die sensible Daten verarbeitet. Sie verwenden den Text Hash Comparator, um sicherzustellen, dass die Daten konsistent bleiben, wenn sie durch verschiedene Systeme fließen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Text Hash Comparator позволяет сравнивать текстовые строки по их хеш-значениям, используя различные алгоритмы хеширования, такие как SHA-256, SHA-512, MD5 и другие. Этот инструмент особенно полезен в сфере безопасности, где хеширование текста используется для проверки целостности данных, аутентификации и предотвращения подделки информации. Хеш-значения являются односторонними функциями, которые преобразуют входные данные в фиксированную строку символов, при этом невозможно восстановить исходные данные из хеш-значения. Text Hash Comparator позволяет пользователям вводить текстовые строки и выбирать алгоритм хеширования, после чего инструмент вычисляет хеш-значения и сравнивает их, указывая на идентичность или различия. Это особенно полезно при проверке целостности данных, например, при передаче файлов или проверке паролей, а также при разработке приложений, где безопасность данных является приоритетом.",
+      "usage_steps": [
+        "Шаг 1: Откройте страницу инструмента Text Hash Comparator на сайте.",
+        "Шаг 2: В первом поле введите первую текстовую строку, которую вы хотите сравнить.",
+        "Шаг 3: В выпадающем меню выберите алгоритм хеширования (SHA-256, SHA-512, MD5 и т.д.).",
+        "Шаг 4: В втором поле введите вторую текстовую строку для сравнения.",
+        "Шаг 5: Выберите тот же алгоритм хеширования для второй строки, чтобы обеспечить корректное сравнение.",
+        "Шаг 6: Нажмите кнопку «Сравнить» и ознакомьтесь с результатом, который покажет, совпадают ли хеш-значения или нет."
+      ],
+      "usage_examples": [
+        "Пример 1: Проверка целостности файла после его передачи по сети. Используя Text Hash Comparator, вы можете сравнить хеш-значение исходного файла с хеш-значением полученного файла, чтобы убедиться, что данные не были повреждены или изменены во время передачи.",
+        "Пример 2: Валидация пароля в системе аутентификации. Вместо хранения паролей в открытом виде, можно хранить их хеш-значения. При вводе пароля пользователем, его хеш-значение сравнивается с сохранённым хеш-значением для проверки аутентификации.",
+        "Пример 3: Проверка подлинности документов. При передаче важных документов, можно вычислить их хеш-значения и сравнить с известными значениями, чтобы убедиться в их подлинности и целостности.",
+        "Пример 4: Обнаружение дубликатов в базе данных. Используя хеширование, можно вычислить хеш-значения записей и сравнивать их, чтобы обнаруживать и устранять дубликаты."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مُقارِنُ نُصوصِ الهَشِّ (Text Hash Comparator) هو أداةٌ أمنية تتيح للمستخدمين مقارنة نصوصٍ متعددةٍ من خلال قيم هاشها. يتم استخدام الهاشات (hashes) لتحويل النصوص إلى قيم ثابتة الطول، مما يجعلها مفيدةً في التحقق من سلامة البيانات وضمان عدم تلاعب بها. هذا الأداة مهمة بشكل خاص في المواقف التي تتطلب التحقق من سلامة الملفات أو الرسائل النصية، حيث يمكن للمستخدمين التأكد من أن النص لم يتغير منذ إنشاؤه أو نشره. كما يمكن استخدامه في تطبيقات مرتبطة بال güvenli veri saklama (التخزين الآمن للبيانات) وتقنيات التشفير. يعمل المُقارِنُ من خلال تطبيق خوارزميات هاش مختلفة مثل MD5، SHA-1، SHA-256 على النصوص المدخلة، ثم يقارن النتائج لتقديم تقرير يوضح التطابق أو الاختلاف.",
+      "usage_steps": [
+        "افتح الصفحة الرئيسية لمُقارِنِ نُصوصِ الهَشِّ على الموقع.",
+        "أدخل النص الأول في حقل الإدخال المسمى 'نص 1'.",
+        "اختر الخوارزمية الهاشية التي ترغب في استخدامها من القائمة المنسدلة 'خوارزمية الهاش'.",
+        "أدخل النص الثاني في حقل الإدخال المسمى 'نص 2'.",
+        "اضغط على الزر 'مقارنة' لمعالجة النصوص وإنشاء قيم الهاش.",
+        "راجع النتائج المُظهرة في القسم السفلي من الصفحة، والتي توضح قيم الهاش المحسوبة والنتيجة النهائية للمقارنة."
+      ],
+      "usage_examples": [
+        "إذا كنت مطورًا وترغب في التحقق من أن الملفات التي قمت بتحميلها من مصدر خارجي لم تتعرض للتلاعب، يمكنك استخدام مُقارِنِ نُصوصِ الهَشِّ لمقارنة قيم الهاش المقدمة مع قيم الهاش التي تم حسابها من الملفات المحمولة.",
+        "في حالة تبادل رسائل سرية عبر الإنترنت، يمكنك استخدام الأداة لتأكيد أن المحتوى الأصلي للرسالة لم يتغير أثناء النقل، مما يوفر طبقة إضافية من الأمان.",
+        "إذا كنت تعمل في مجال الأمن السيبراني وتحتاج إلى التحقق من سلامة البيانات المستعادة من نظام تم اختراقه، يمكنك استخدام مُقارِنِ نُصوصِ الهَشِّ لضمان أن البيانات لم تتعرض للتحوير أو الفساد.",
+        "للمطورين الذين يعتمدون على المكتبات أو الرموز المفتوحة المصدر، يمكن استخدام هذه الأداة للتحقق من أن النصوص أو الملفات التي يتم تحميلها من مصادر موثوقة لم يتم تعديلها."
+      ]
+    }
+  }
+}

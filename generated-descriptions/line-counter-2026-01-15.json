@@ -1,0 +1,158 @@
+{
+  "slug": "line-counter",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Line Counter is a powerful tool designed to help developers and text processors efficiently manage and analyze large volumes of text data. It provides a robust set of features that go beyond simple line counting. Users can remove duplicate lines, filter out empty lines, and sort the remaining lines, making it an essential utility for a variety of text processing tasks. For developers, this tool can be invaluable when working with log files, data sets, or any text-based content where accuracy and clarity are crucial. By leveraging the Line Counter, users can quickly identify and clean up redundant or irrelevant data, ensuring that their text files are optimized for further processing or analysis. The tool operates by parsing the input text, applying the selected filters, and then presenting the processed output, which can be further refined or exported as needed. The underlying algorithms are optimized for performance, making it suitable for handling even large text files without significant delays.",
+      "usage_steps": [
+        "Step 1: Navigate to the Line Counter tool page on the website and locate the text input field labeled 'Enter your text here'.",
+        "Step 2: Paste or type the text you want to process into the input field. Ensure that the text is formatted correctly, with each line of data on a new line.",
+        "Step 3: Below the input field, you will find a series of checkboxes. Select 'Remove Duplicates' to filter out any repeated lines in your text.",
+        "Step 4: Check the 'Remove Empty Lines' box if you want to eliminate any blank lines from your text, which can often occur in log files or raw data sets.",
+        "Step 5: If you need the lines to be in a specific order, select the 'Sort Lines' checkbox. This will alphabetically sort the lines, making it easier to review or compare the data.",
+        "Step 6: Once you have configured the options, click the 'Count Lines' button. The tool will process your text and display the total number of lines, along with the filtered and sorted output in the results section below."
+      ],
+      "usage_examples": [
+        "Example 1: A developer is working on a project that involves analyzing log files from a server. The log files contain multiple entries for the same error, making it difficult to identify unique issues. By using the Line Counter with the 'Remove Duplicates' and 'Sort Lines' options, the developer can quickly filter out redundant entries and focus on the distinct errors.",
+        "Example 2: A data analyst is preparing a report based on a large dataset of customer feedback. The dataset includes many blank lines and duplicate responses, which need to be cleaned up before analysis. The Line Counter can help by removing these unnecessary lines, ensuring that the analyst works with a clean, concise dataset.",
+        "Example 3: A content manager is compiling a list of frequently asked questions (FAQs) from multiple sources. The sources contain overlapping questions and some entries are blank. Using the Line Counter with the 'Remove Duplicates' and 'Remove Empty Lines' options, the manager can create a consolidated and well-organized list of FAQs.",
+        "Example 4: A software engineer is writing a script that processes a file containing a list of IP addresses. The script needs to ensure that each IP address is unique and sorted for easy reference. By using the Line Counter's 'Remove Duplicates' and 'Sort Lines' features, the engineer can preprocess the IP address list and ensure that the script runs efficiently."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Line Counter 是一款专为文本处理设计的工具，能够帮助用户精确统计文本中的行数，并提供去除重复行、空行以及对行进行排序等功能。对于开发者、数据分析师和文案编辑等需要频繁处理大量文本数据的用户来说，Line Counter 提供了高效、准确的数据处理能力。用户可以通过该工具轻松地清理和整理文本数据，确保数据的准确性和一致性。例如，在处理日志文件时，Line Counter 可以帮助用户快速统计文件中的错误日志行数，并去除重复项，确保每一个错误日志都被准确记录。此外，该工具还支持对文本行进行排序，方便用户按需查看数据。Line Counter 通过其强大的文本处理算法和用户友好的界面，为用户提供了一种简便的文本分析解决方案。",
+      "usage_steps": [
+        "Step 1: 打开 Line Counter 工具页面，点击“输入文本”框，将待处理的文本粘贴或直接输入到该框中。",
+        "Step 2: 在“选项”栏中，选择是否需要“去除重复行”。如果选择此选项，工具将自动检测并移除文本中的重复行。",
+        "Step 3: 选择是否需要“去除空行”。勾选此选项后，工具将自动删除文本中的所有空行。",
+        "Step 4: 选择是否需要“对行进行排序”。如果选择此选项，工具将根据行内容的字母顺序对文本行进行排序。",
+        "Step 5: 完成所有选项设置后，点击“计算”按钮，Line Counter 将根据所选选项处理文本，并在底部显示结果。",
+        "Step 6: 查看和复制处理后的文本和行数统计结果，保存或进一步使用。"
+      ],
+      "usage_examples": [
+        "Example 1: 数据分析师在处理用户反馈时，使用 Line Counter 去除重复的反馈内容，确保每条反馈都被单独处理。",
+        "Example 2: 开发者在分析服务器日志时，使用 Line Counter 统计特定错误的出现次数，并去除重复的日志行，以便更清晰地查看问题。",
+        "Example 3: 文案编辑在整理多篇文档时，使用 Line Counter 去除重复段落和空行，确保文档内容的整洁和一致性。",
+        "Example 4: 学生在整理参考文献时，使用 Line Counter 去除重复的文献条目，并按字母顺序排序，以便快速查找和引用。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Line Counterは、テキスト内の行数を正確にカウントするための高度なツールです。単純な行数のカウントに留まらず、重複行の削除、空行の無視、行の並べ替えといったオプションも提供しています。これは、大量のテキストデータを処理する際に特に有用です。例えば、ログファイルの分析、コードスニペットの整理、またはテキストデータの前処理など、様々なシチュエーションで活用できます。このツールは、テキストファイルを読み込み、各行を解析し、指定されたオプションに従って処理を行います。内部的には、テキストをメモリに読み込み、各行をトークンとして処理し、必要に応じてフィルタリングと並び替えを行います。結果は即座に表示され、ダウンロードすることも可能です。Line Counterは、効率的なテキスト処理をサポートするための頼りになるツールです。",
+      "usage_steps": [
+        "Step 1: ページ上部の「テキストを入力」エリアに、カウントしたいテキストを貼り付けます。",
+        "Step 2: 「重複行を削除」チェックボックスを選択することで、重複する行を自動的に除去します。",
+        "Step 3: 「空行を無視」チェックボックスを選択することで、空行をカウントから除外します。",
+        "Step 4: 「行を並べ替え」ドロップダウンメニューから、行の並べ替え方法を選択します（アルファベット順、逆アルファベット順など）。",
+        "Step 5: 「カウント」ボタンをクリックして、設定に従ってテキストの処理を開始します。",
+        "Step 6: 結果が表示されたら、「ダウンロード」ボタンをクリックして結果をファイルとして保存します。"
+      ],
+      "usage_examples": [
+        "Example 1: プログラマーが複数のコードスニペットを統合する際に、重複する行を削除し、空行を無視して、最終的なコードの行数を正確に把握する。",
+        "Example 2: システム管理者がログファイルを分析し、特定のエラーメッセージの頻度をカウントするために、重複行を削除せずに空行を無視して行数を数える。",
+        "Example 3: 研究者が大量の調査データを整理する際に、空行を無視し、アルファベット順に並べ替えて行数をカウントし、データの整合性を確認する。",
+        "Example 4: コンテンツ作成者が複数のテキストファイルを統合する際、重複行を削除し、逆アルファベット順に並べ替えて、最終的なコンテンツの行数を確認する。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Line Counter는 텍스트를 분석하여 각 줄을 카운트하는 도구입니다. 이 도구는 텍스트 파일에서 중복 줄을 제거하고, 빈 줄을 삭제하며, 줄을 정렬하는 등의 기능을 제공하여 텍스트 데이터를 더 효과적으로 처리할 수 있도록 설계되었습니다. Line Counter는 소스 코드, 로그 파일, 또는 대규모 텍스트 문서와 같은 다양한 유형의 텍스트 내용을 분석하는 데 유용합니다. 사용자는 특정 옵션을 선택하여 원하는 방식으로 텍스트를 가공할 수 있습니다. 예를 들어, 중복 줄 제거 옵션을 사용하면 동일한 줄이 여러 번 나타나는 경우를 방지할 수 있으며, 빈 줄 제거 옵션을 사용하면 불필요한 빈 줄을 제거하여 텍스트를 깔끔하게 정리할 수 있습니다. 또한, 줄 정렬 옵션을 사용하면 텍스트를 알파벳순 또는 역순으로 정렬하여 더 효율적으로 분석할 수 있습니다.",
+      "usage_steps": [
+        "1. Line Counter 페이지로 이동하여 텍스트 입력 영역을 확인합니다.",
+        "2. 텍스트 입력 영역에 분석하려는 텍스트를 붙여넣습니다. 또는 파일을 직접 업로드할 수도 있습니다.",
+        "3. '중복 줄 제거' 체크박스를 선택하여 중복된 줄을 제거합니다.",
+        "4. '빈 줄 제거' 체크박스를 선택하여 빈 줄을 제거합니다.",
+        "5. '줄 정렬' 드롭다운 메뉴에서 정렬 방식(알파벳순, 역순)을 선택합니다.",
+        "6. '카운트 실행' 버튼을 클릭하여 텍스트 분석을 시작합니다. 결과는 아래에 표시됩니다."
+      ],
+      "usage_examples": [
+        "1. 소스 코드 파일에서 중복된 함수 선언을 제거하여 코드를 정리합니다.",
+        "2. 로그 파일에서 빈 줄을 제거하고, 알파벳순으로 정렬하여 특정 이벤트를 빠르게 찾습니다.",
+        "3. 문장 리스트에서 중복된 문장을 제거하고, 문장을 역순으로 정렬하여 역대별 내용을 확인합니다.",
+        "4. 대규모 설문조사 결과에서 빈 응답을 제거하고, 응답 결과를 알파벳순으로 정렬하여 분석 데이터를 준비합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Contador de Líneas es una herramienta de procesamiento de texto diseñada para realizar tareas de conteo y limpieza de datos de manera eficiente. Técnicamente, esta herramienta permite a los usuarios contar el número total de líneas en un texto, con opciones adicionales para eliminar líneas duplicadas, omitir líneas vacías y ordenar el contenido. Estas funcionalidades son particularmente útiles para desarrolladores, analistas de datos y profesionales que necesitan manipular y analizar grandes volúmenes de texto de manera precisa y rápida. Por ejemplo, un desarrollador puede usar esta herramienta para verificar la consistencia de los datos en un archivo de registro, mientras que un escritor puede utilizarla para asegurarse de que un documento no contenga líneas duplicadas o espacios en blanco innecesarios. El funcionamiento de la herramienta es sencillo: el usuario inserta el texto a procesar, selecciona las opciones deseadas y obtiene un resultado inmediato con el conteo de líneas y las modificaciones aplicadas. Internamente, la herramienta utiliza algoritmos de comparación de cadenas y estructuras de datos como conjuntos (sets) para eliminar duplicados y mantener el orden.",
+      "usage_steps": [
+        "Abra la página del Contador de Líneas y copie el texto que desea procesar en el campo de entrada.",
+        "Marque la opción 'Eliminar duplicados' si desea eliminar líneas que aparecen más de una vez en el texto.",
+        "Active la opción 'Omitir líneas vacías' para excluir líneas que no contengan ningún carácter.",
+        "Seleccione 'Ordenar líneas' si desea que el texto resultante esté ordenado alfabéticamente.",
+        "Haga clic en el botón 'Procesar' para aplicar las opciones seleccionadas y obtener el resultado.",
+        "Revise el texto procesado y el conteo de líneas en la sección de resultado."
+      ],
+      "usage_examples": [
+        "Un desarrollador necesita verificar un archivo de registro para identificar errores repetitivos. Utiliza el Contador de Líneas para eliminar duplicados y contar las líneas únicas, facilitando la identificación de problemas específicos.",
+        "Un escritor debe preparar un documento para su publicación. Usa la herramienta para eliminar líneas en blanco y asegurarse de que no haya duplicados, mejorando la coherencia y la legibilidad del texto.",
+        "Un analista de datos trabaja con un archivo CSV y necesita contar el número de registros. Utiliza el Contador de Líneas para obtener un conteo preciso y verificar la integridad de los datos.",
+        "Un administrador de sistemas necesita ordenar un archivo de configuración para facilitar la revisión. Utiliza la opción 'Ordenar líneas' para organizar el contenido de manera alfabética, lo que simplifica la tarea de revisión y mantenimiento."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Contador de Linhas é uma ferramenta de processamento de texto projetada para contar o número de linhas em um bloco de texto, oferecendo opções avançadas para melhorar a eficiência e a precisão dos resultados. Esta ferramenta é particularmente útil em cenários onde a manipulação e análise de dados textuais são frequentes, como na preparação de dados para análise de texto, na limpeza de arquivos de log ou na preparação de listas de itens em projetos de desenvolvimento de software. O Contador de Linhas permite aos usuários remover linhas duplicadas, excluir linhas vazias e ordenar as linhas em ordem alfabética, o que facilita a identificação de padrões e a redução de redundâncias. Tecnicamente, a ferramenta processa o texto de entrada, aplicando algoritmos de comparação e ordenação para produzir um resultado refinado e organizado. A interface é intuitiva, mas poderosa, permitindo que os usuários realizem tarefas complexas com apenas alguns cliques.",
+      "usage_steps": [
+        "Abra a página do Contador de Linhas no navegador.",
+        "Cole ou digite o texto que deseja analisar na caixa de texto principal.",
+        "Selecione a opção 'Remover Linhas Duplicadas' na seção de configurações para garantir que cada linha seja única.",
+        "Marque a caixa 'Remover Linhas Vazias' para excluir linhas em branco do resultado final.",
+        "Se necessário, escolha a opção 'Ordenar Linhas' para organizar o texto em ordem alfabética.",
+        "Clique no botão 'Contar Linhas' para processar o texto e ver o resultado no painel inferior."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de software precisa preparar um arquivo de log para análise. Ele usa o Contador de Linhas para remover linhas duplicadas e vazias, garantindo que o arquivo seja mais gerenciável e fácil de analisar.",
+        "Uma equipe de marketing está compilando uma lista de clientes potenciais. Eles utilizam o Contador de Linhas para remover entradas duplicadas e organizar a lista em ordem alfabética, facilitando a revisão e o envio de campanhas de marketing.",
+        "Um escritor technical precisa preparar um documento técnico para publicação. Ele usa o Contador de Linhas para garantir que não haja linhas em branco desnecessárias e que todas as seções estejam em ordem lógica.",
+        "Um analista de dados precisa processar um grande conjunto de dados de texto. Ele utiliza o Contador de Linhas para limpar o conjunto de dados, removendo redundâncias e organizando as informações antes de realizar análises mais aprofundadas."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Compteur de Lignes est un outil de traitement de texte conçu pour analyser et manipuler des fichiers textuels de manière précise et efficace. Il permet non seulement de compter le nombre de lignes dans un document, mais offre également des options avancées pour améliorer la qualité des données traitées. Parmi ces options, on trouve la suppression des doublons, l'élimination des lignes vides et le tri des lignes. Ces fonctionnalités sont particulièrement utiles pour les développeurs, les analystes de données et les professionnels du traitement de texte qui ont besoin de nettoyer leurs données avant de les utiliser dans des applications ou des analyses plus complexes.\n\nLa nécessité de cet outil est évidente dans de nombreux scénarios. Par exemple, lors de l'importation de données à partir de fichiers CSV, il est souvent nécessaire de s'assurer que chaque ligne est unique et que les espaces vides sont éliminés pour éviter des erreurs dans les analyses ultérieures. De même, lors de la consolidation de plusieurs fichiers de logs, la suppression des doublons peut réduire significativement la taille des données et améliorer la performance des traitements.\n\nTechniquement, le Compteur de Lignes fonctionne en analysant le texte caractères par caractères. Il identifie les sauts de ligne (caractères ASCII 10 et 13) pour compter les lignes. Lorsque l'option de suppression des doublons est activée, l'outil utilise des structures de données comme des ensembles (sets) pour stocker uniquement les lignes uniques. L'option de suppression des lignes vides est implémentée en vérifiant si une ligne ne contient que des espaces ou est vide. Enfin, le tri des lignes peut être effectué en utilisant des algorithmes de tri efficaces, tels que le tri rapide (quicksort) ou le tri fusion (merge sort).",
+      "usage_steps": [
+        "Ouvrez la page du Compteur de Lignes sur le site de l'outil.",
+        "Collez ou tapez le texte que vous souhaitez analyser dans la zone de texte principale.",
+        "Activez l'option 'Supprimer les doublons' si vous voulez éliminer les lignes répétées.",
+        "Sélectionnez l'option 'Supprimer les lignes vides' pour ignorer les lignes contenant uniquement des espaces ou rien.",
+        "Choisissez l'option 'Trier les lignes' si vous souhaitez que les lignes soient triées dans l'ordre alphabétique.",
+        "Appuyez sur le bouton 'Compter les lignes' pour exécuter l'analyse et afficher les résultats."
+      ],
+      "usage_examples": [
+        "Un développeur utilise le Compteur de Lignes pour nettoyer un fichier CSV avant de l'importer dans une base de données. Il active les options de suppression des doublons et des lignes vides pour s'assurer que chaque ligne est unique et ne contient pas d'espaces inutiles.",
+        "Un analyste de données traite un fichier de logs contenant des millions de lignes. En utilisant l'outil, il supprime les doublons et trie les lignes pour faciliter la recherche de patterns spécifiques.",
+        "Un modérateur de forum utilise le Compteur de Lignes pour vérifier le nombre de messages postés par les utilisateurs. Il active l'option de tri pour organiser les messages par ordre alphabétique et détecter rapidement les spams.",
+        "Un rédacteur technique prépare un document technique et utilise le Compteur de Lignes pour s'assurer qu'il n'y a pas de sections répétées ou de lignes vides dans son texte, améliorant ainsi la clarté et la lisibilité du document."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Line Counter ist ein leistungsstarkes Textverarbeitungstool, das es Benutzern ermöglicht, die Anzahl der Zeilen in einem Text zu zählen. Dieses Tool ist besonders nützlich für Entwickler und Datenanalytiker, die Textdateien in verschiedenen Formaten verarbeiten müssen. Neben dem einfachen Zeilenzählmechanismus bietet der Line Counter erweiterte Funktionen, wie das Entfernen von Duplikaten, das Filtern leerer Zeilen und das Sortieren der Ergebnisse. Diese Funktionen garantieren, dass die Textdaten sauber und strukturiert sind, was die Nachbearbeitung und Analyse erheblich erleichtert. Technisch gesehen verwendet der Line Counter reguläre Ausdrücke und String-Manipulationsalgorithmen, um die Eingabetexte zu analysieren und zu verarbeiten. Die Option zum Entfernen von Duplikaten nutzt hashtabellenbasierte Methoden, um die Effizienz zu maximieren, während das Filtern leerer Zeilen durch String-Trimming-Funktionen realisiert wird. Die Sortierung erfolgt durch den Einsatz von Sortieralgorithmen, die die Textzeilen alphabetisch oder numerisch ordnen können.",
+      "usage_steps": [
+        "Öffnen Sie die Website und navigieren Sie zum Line Counter-Tool.",
+        "Klicken Sie auf den Bereich 'Text einfügen' und fügen Sie Ihren Text ein oder laden Sie eine Textdatei hoch, indem Sie auf 'Datei hochladen' klicken.",
+        "Aktivieren Sie das Kontrollkästchen 'Duplikate entfernen', wenn Sie identische Zeilen aus dem Ergebnis ausschließen möchten.",
+        "Wählen Sie die Option 'Leere Zeilen entfernen', um Leerzeilen aus dem Text zu filtern.",
+        "Klicken Sie auf 'Sortieren', um die Zeilen alphabetisch oder numerisch zu ordnen. Wählen Sie die Sortierreihenfolge (aufsteigend oder absteigend) aus.",
+        "Drücken Sie den 'Zählen' Button, um die Zeilen zu zählen und die verarbeiteten Textzeilen anzuzeigen. Das Ergebnis wird unten auf der Seite angezeigt."
+      ],
+      "usage_examples": [
+        "Ein Entwickler muss eine große Log-Datei analysieren, um bestimmte Muster zu finden. Er verwendet den Line Counter, um die Log-Datei auf Doppelgänger zu überprüfen und leerzeilige Einträge zu entfernen, bevor er die Daten weiterverarbeitet.",
+        "Ein Datenjournalist arbeitet an einem Bericht über öffentliche Dokumente. Mit dem Line Counter kann er die Anzahl der einzigartigen Zeilen in einem Text extrahieren, um redundante Informationen zu eliminieren und den Überblick über die Daten zu behalten.",
+        "Ein Software-Tester überprüft die Ausgabe einer Anwendung, die Textdateien generiert. Der Line Counter hilft ihm, die Zeilen zu zählen und zu sortieren, um sicherzustellen, dass die Ausgabe korrekt und konsistent ist.",
+        "Ein Linguist studiert sprachliche Muster in Texten. Mit dem Line Counter kann er Textdokumente bereinigen, um nur relevante und einzigartige Zeilen für seine Analyse zu verwenden."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Line Counter — это инструмент для обработки текста, который предназначен для подсчета строк в тексте с возможностью удаления дубликатов, пустых строк и сортировки. Этот инструмент особенно полезен для программистов, аналитиков данных и других специалистов, которые работают с большими объемами текстовой информации. Например, если вы работаете с лог-файлами, кодом или списками данных, Line Counter поможет вам быстро и эффективно анализировать и очищать ваш текст. Инструмент поддерживает несколько опций: удаление дубликатов строк, удаление пустых строк и сортировка строк в алфавитном порядке. Работает это следующим образом: после загрузки текста, вы можете выбрать нужные вам опции, и инструмент автоматически обработает текст, выполнив указанные действия. Это значительно упрощает процесс подготовки данных для дальнейшего анализа или использования в различных проектах.",
+      "usage_steps": [
+        "Шаг 1: Перейдите на страницу Line Counter и найдите текстовое поле для ввода текста.",
+        "Шаг 2: Вставьте текст, который вы хотите обработать, в текстовое поле.",
+        "Шаг 3: Найдите и отметьте чекбокс 'Удалить дубликаты строк', если вам нужно устранить повторяющиеся строки.",
+        "Шаг 4: Отметьте чекбокс 'Удалить пустые строки', если вы хотите исключить пустые строки из итогового результата.",
+        "Шаг 5: Выберите опцию 'Сортировать строки' в выпадающем меню, если вам необходимо отсортировать строки в алфавитном порядке.",
+        "Шаг 6: Нажмите кнопку 'Обработать' для запуска процесса. Результат появится в нижней части страницы."
+      ],
+      "usage_examples": [
+        "Пример 1: Программист работает с лог-файлами и хочет подсчитать количество уникальных ошибок. Используя Line Counter, он загружает лог-файл, удаляет дубликаты и получает точное количество уникальных ошибок.",
+        "Пример 2: Аналитик данных собирает отзывы пользователей из разных источников и формирует единый список. Он использует Line Counter для удаления пустых строк и сортировки отзывов по алфавиту, чтобы облегчить их анализ.",
+        "Пример 3: Маркетолог создает список электронных адресов для рассылки и хочет убедиться, что в нем нет дубликатов. Line Counter помогает ему очистить список и подсчитать количество уникальных адресов.",
+        "Пример 4: Дизайнер работает над проектом по созданию инструкции и собирает все необходимые разделы в один документ. Line Counter помогает ему удалить пустые строки, сортировать разделы и подсчитать количество строк в каждом разделе для оценки объема документа."
+      ]
+    }
+  }
+}

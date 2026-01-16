@@ -1,0 +1,158 @@
+{
+  "slug": "binary-to-decimal",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Binary to Decimal tool is a powerful utility designed to facilitate seamless conversion between binary, decimal, and hexadecimal number systems. This tool is particularly valuable for developers, engineers, and students who frequently work with low-level programming, digital electronics, and data representation. By converting numbers between these systems, users can easily interpret and manipulate data in various formats, which is essential for tasks such as debugging code, analyzing memory dumps, and optimizing performance. The tool leverages algorithms that handle the positional value of each digit in the input number, ensuring accurate and efficient conversions. For example, when converting a binary number to decimal, the tool calculates the sum of the products of each binary digit and its corresponding power of two. Similarly, for hexadecimal to binary conversions, the tool maps each hexadecimal digit to its four-bit binary equivalent. The user-friendly interface and robust backend processing make this tool a go-to resource for anyone needing precise and quick number conversions.",
+      "usage_steps": [
+        "Step 1: Open the Binary to Decimal tool on the website.",
+        "Step 2: Select the input number system from the dropdown menu. Options include Binary, Decimal, and Hexadecimal.",
+        "Step 3: Enter the number you wish to convert in the input field provided.",
+        "Step 4: Choose the desired output number system from the second dropdown menu. This can be different from the input system to perform the conversion.",
+        "Step 5: Click the 'Convert' button to process the conversion.",
+        "Step 6: The converted number will be displayed in the output field. You can then copy the result or perform additional conversions as needed."
+      ],
+      "usage_examples": [
+        "Example 1: A software developer needs to convert a binary IP address (11000000.10101000.00000001.00000001) to its decimal equivalent to verify network configurations.",
+        "Example 2: An electronics engineer is working on a microcontroller project and needs to convert hexadecimal register values (0x1A3F) to binary to understand the state of specific bits.",
+        "Example 3: A computer science student is learning about data representation and needs to convert a decimal number (255) to its binary form to understand byte-level operations.",
+        "Example 4: A cybersecurity analyst is analyzing a memory dump and needs to convert a hexadecimal address (0x40000000) to decimal to identify specific memory regions and potential vulnerabilities."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Binary to Decimal 是一个在线数学转换工具，旨在帮助用户在二进制、十进制和十六进制之间进行高效转换。该工具不仅支持基本的进制转换，还提供了一些高级功能，如批量转换和实时预览。对于开发者、工程师和学生来说，这个工具能够在处理低级编程、数字电路设计和数据编码等任务时，提供极大的便利。该工具的核心技术基于算法解析和字符串处理，能够快速准确地完成进制之间的转换。用户只需输入或粘贴需要转换的数值，选择输入和输出的进制类型，工具即可在瞬间完成转换，输出结果。此外，该工具还支持将结果导出为文本文件，方便用户进一步处理和分析。",
+      "usage_steps": [
+        "Step 1: 打开 Binary to Decimal 工具页面，你将看到输入框和转换选项。",
+        "Step 2: 在输入框中输入或粘贴需要转换的数值，支持单个数值或多个数值的批量输入。",
+        "Step 3: 从下拉菜单中选择输入数值的进制类型（二进制、十进制或十六进制）。",
+        "Step 4: 从另一个下拉菜单中选择希望输出的进制类型。",
+        "Step 5: 点击“转换”按钮，工具将立即显示转换结果。",
+        "Step 6: 如需保存结果，可以点击“导出”按钮，将结果保存为文本文件。"
+      ],
+      "usage_examples": [
+        "Example 1: 一个嵌入式系统开发者需要将嵌入式设备的二进制配置数据转换为十进制，以便在代码中使用。使用此工具可以快速完成转换，确保配置数据的准确性。",
+        "Example 2: 一位网络工程师在分析网络流量时，需要将抓包工具捕获的十六进制数据转换为十进制，以便更容易理解流量内容。此工具提供了快速高效的转换方法。",
+        "Example 3: 一名计算机科学学生在学习数字逻辑课程时，需要将各种进制的数值进行转换，以验证课堂上学习的算法。此工具可以帮助学生快速验证计算结果，提高学习效率。",
+        "Example 4: 一位数据分析师在处理大量日志数据时，需要将日志中的二进制编码转换为十进制，以便进行进一步的数据分析。使用此工具可以批量处理日志数据，节省大量时间。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Binary to Decimalツールは、バイナリ数、デシマル数、および16進数の相互変換を可能にする強力なオンラインプラットフォームです。このツールは、ユーザーが任意の2進数を10進数に、10進数を2進数に、さらには16進数への変換を簡単に実行できます。バイナリデータの解釈や、組み込みシステムのデバッグ、ネットワークプロトコルの解析など、さまざまな技術的な場面で活用されます。\n\nこのツールの重要な特徴の一つは、変換プロセスの詳細な説明を提供することです。ユーザーは入力した数値がどのように変換されるかを理解できるため、教育目的や深い理解を得るのに最適です。また、変換結果は即座に表示され、リアルタイムで変更を反映します。\n\n技術的には、このツールはWebAssemblyやJavaScriptを使って高速な変換アルゴリズムを実装しています。これにより、ユーザーは複雑な手動計算を行うことなく、正確で迅速な結果を得ることができます。さらに、セキュアなHTTPS接続を採用しており、ユーザーのデータが保護されています。",
+      "usage_steps": [
+        "Step 1: ブラウザでBinary to Decimalツールのページを開きます。",
+        "Step 2: 「Input Type」ドロップダウンメニューから、変換したい数値の形式（バイナリ、デシマル、16進数）を選択します。",
+        "Step 3: 「Input Value」フィールドに変換したい数値を入力します。",
+        "Step 4: 「Convert」ボタンをクリックします。",
+        "Step 5: 変換結果は「Output Value」フィールドに表示されます。変換結果の形式は自動的に選択されます（デシマル、バイナリ、16進数）。",
+        "Step 6: 必要に応じて、結果をコピーしたり、他の形式に再度変換したりすることができます。"
+      ],
+      "usage_examples": [
+        "Example 1: ネットワークエンジニアがIPアドレスのバイナリ形式をデシマル形式に変換する際。例えば、バイナリ数「11000000101010000000000000000001」を入力し、デシマル形式（192.168.0.1）に変換します。",
+        "Example 2: プログラマが組み込みシステムのレジスタ値を解析する際。バイナリ数「11110000」を入力し、16進数（F0）に変換します。",
+        "Example 3: 学生がコンピューターサイエンスの授業で2進数の理解を深める際。例えば、デシマル数「255」を入力し、バイナリ形式（11111111）に変換します。",
+        "Example 4: セキュリティ専門家が暗号化データを解析する際。16進数「FADE」を入力し、バイナリ形式（1111101011011110）に変換します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Binary to Decimal 도구는 이진수, 십진수, 그리고 16진수 간의 변환을 지원합니다. 이 도구는 사용자가 다양한 진법 간에 쉽게 변환할 수 있도록 설계되었습니다. 특히, 컴퓨터 과학, 네트워킹, 프로그래밍, 그리고 디지털 시스템 설계 등 다양한 분야에서 이진수와 십진수의 변환은 필수적인 과정입니다. 이 도구는 사용자가 이진수를 입력하면 즉시 십진수로 변환해 주며, 그 역도 가능합니다. 또한, 16진수 변환 기능도 제공하여, 네트워크 프로토콜 분석, 메모리 주소 해석 등에 유용합니다. 이진수와 십진수 간의 변환은 비트 연산, 데이터 표현, 암호화 알고리즘 등에서 중요한 역할을 합니다. 이 도구는 실시간으로 변환 결과를 표시하며, 사용자가 즉시 확인할 수 있도록 설계되었습니다.",
+      "usage_steps": [
+        "1. 웹사이트 상단의 'Binary to Decimal' 메뉴를 클릭하여 도구 페이지로 이동하세요.",
+        "2. 'Input' 필드에서 변환하고자 하는 이진수, 십진수, 또는 16진수를 입력하세요.",
+        "3. 'From' 드롭다운 메뉴에서 입력된 수의 현재 진법을 선택하세요 (예: 'Binary', 'Decimal', 'Hexadecimal').",
+        "4. 'To' 드롭다운 메뉴에서 변환하려는 진법을 선택하세요 (예: 'Decimal', 'Binary', 'Hexadecimal').",
+        "5. 'Convert' 버튼을 클릭하여 변환 과정을 시작하세요.",
+        "6. 변환 결과는 아래 'Result' 필드에 실시간으로 표시됩니다. 필요하다면, 결과를 복사하여 사용할 수 있습니다."
+      ],
+      "usage_examples": [
+        "1. 컴퓨터 과학자: 프로그래밍에서 이진수를 사용하여 비트 연산을 수행한 후, 결과를 십진수로 변환하여 쉽게 이해할 수 있습니다.",
+        "2. 네트워크 엔지니어: IP 주소나 포트 번호를 16진수로 표현한 후, 이를 십진수로 변환하여 네트워크 설정을 검증합니다.",
+        "3. 해킹 대회 참가자: CTF 챌린지에서 암호화된 메시지를 이진수로 제공받았을 때, 이를 십진수로 변환하여 힌트를 찾습니다.",
+        "4. 전자공학자: 디지털 시스템 설계 시 이진수로 표현된 데이터를 십진수로 변환하여 시스템의 동작을 검증합니다."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O conversor Binary to Decimal é uma ferramenta poderosa e versátil projetada para facilitar a conversão entre sistemas de numeração binário, decimal e hexadecimal. Este utilitário é essencial para desenvolvedores, engenheiros de software e profissionais de TI que lidam frequentemente com representações de dados em diferentes formatos numéricos. A necessidade de converter entre esses sistemas surge em várias situações, como otimização de algoritmos, manipulação de dados de baixo nível, e integração de sistemas. O Binary to Decimal não apenas realiza a conversão de forma rápida e precisa, mas também oferece uma interface intuitiva que permite aos usuários entender o processo por trás das operações. Técnicamente, a ferramenta utiliza algoritmos de conversão baseados em potências de base, onde cada dígito binário, decimal ou hexadecimal é multiplicado por 2 (binário) ou 16 (hexadecimal) elevado à sua posição, somando-se os resultados para obter a representação final. Isso garante que a conversão seja realizada de forma eficiente, mesmo para números grandes.",
+      "usage_steps": [
+        "Acesse a página do conversor Binary to Decimal em nosso site.",
+        "Na interface, selecione o sistema de numeração de origem (binário, decimal ou hexadecimal) usando o menu suspenso 'De'.",
+        "Em seguida, selecione o sistema de numeração de destino (binário, decimal ou hexadecimal) usando o menu suspenso 'Para'.",
+        "Digite o número que deseja converter no campo de entrada, certificando-se de que ele esteja no formato correto de acordo com o sistema de numeração escolhido.",
+        "Clique no botão 'Converter' para realizar a operação. O resultado aparecerá no campo de saída abaixo.",
+        "Se necessário, use as opções de formatação disponíveis para ajustar a saída, como adicionar zeros à esquerda ou remover espaços."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de software precisa converter um endereço IP de formato decimal (192.168.1.1) para binário para implementar uma função de máscara de sub-rede. Usando o Binary to Decimal, ele pode facilmente obter a representação binária (11000000.10101000.00000001.00000001) e realizar o cálculo necessário.",
+        "Um engenheiro de sistemas está trabalhando em um projeto de integração de dispositivos de hardware que usam diferentes formatos numéricos. Ele precisa converter um valor hexadecimal (0x1A3F) para decimal para verificar a compatibilidade de um componente. O conversor Binary to Decimal fornece a representação decimal (6719), facilitando a validação.",
+        "Um estudante de ciência da computação está aprendendo sobre representação de números em sistemas de base diferente. Ele usa o Binary to Decimal para converter o número binário 11010110 em decimal (214) e hexadecimal (D6), reforçando seu entendimento dos conceitos.",
+        "Um administrador de redes precisa configurar um firewall que utiliza endereços IP em formato hexadecimal. Ele precisa converter o endereço decimal 203.0.113.1 para hexadecimal. Usando a ferramenta, ele obtém a representação hexadecimal (C.B.71.1), simplificando a configuração."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil Binary to Decimal est conçu pour faciliter la conversion entre les systèmes de numération binaire, décimal et hexadécimal. Ce convertisseur est indispensable pour les développeurs, les ingénieurs en informatique et les étudiants, car il simplifie les tâches impliquant des manipulations numériques complexes. Par exemple, lors de la programmation de systèmes embarqués ou de l'analyse de paquets réseau, la conversion entre ces systèmes de numération est fréquente. L'outil utilise des algorithmes de conversion efficaces pour transformer les nombres d'un système à l'autre en quelques secondes. Il prend en charge les nombres binaires jusqu'à 64 bits, les nombres décimaux jusqu'à 18 chiffres et les nombres hexadécimaux jusqu'à 16 caractères. L'interface est intuitive, permettant une saisie rapide et une visualisation claire des résultats. Les utilisateurs peuvent également copier les résultats directement pour les utiliser dans leurs projets. Ce convertisseur est un outil essentiel pour toute personne travaillant avec des systèmes numériques, offrant une précision et une rapidité inégalées.",
+      "usage_steps": [
+        "Ouvrez l'outil Binary to Decimal sur le site web.",
+        "Sélectionnez le système de numération de départ (binaire, décimal ou hexadécimal) à l'aide du menu déroulant.",
+        "Saisissez le nombre que vous souhaitez convertir dans le champ de texte correspondant.",
+        "Choisissez le système de numération de destination (binaire, décimal ou hexadécimal) via le menu déroulant.",
+        "Cliquez sur le bouton 'Convertir' pour effectuer la transformation.",
+        "Les résultats de la conversion apparaîtront en dessous, prêts à être copiés et utilisés."
+      ],
+      "usage_examples": [
+        "Un développeur travaillant sur un projet de microcontrôleur a besoin de convertir un adresse mémoire hexadécimale en valeur binaire pour programmer un registre spécifique.",
+        "Un ingénieur réseau veut vérifier l'adresse IP d'un périphérique en convertissant son adresse IP décimale en format binaire pour une meilleure compréhension au niveau du bit.",
+        "Un étudiant en informatique utilise l'outil pour convertir des nombres binaires en décimaux pour valider ses calculs manuels lors d'un examen de systèmes d'exploitation.",
+        "Un ingénieur en sécurité informatique convertit des valeurs hexadécimales en décimales pour analyser le contenu d'un fichier de configuration crypté."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Werkzeug 'Binary to Decimal' ist ein leistungsstarkes Online-Tool zur Konvertierung von Binärzahlen in Dezimalzahlen und umgekehrt. Es bietet zudem die Möglichkeit, zwischen diesen beiden Darstellungsformen und der Hexadezimaldarstellung zu wechseln. Diese Funktion ist besonders nützlich für Softwareentwickler, Netzwerkadministratoren und IT-Profis, diehäufig mit verschiedenen Zahlensystemen arbeiten müssen. Die Konvertierung von Zahlensystemen ist ein wesentlicher Bestandteil der Informationsverarbeitung, da Computer intern Daten in binärer Form speichern, während Menschen sich mit dezimalen und hexadezimalen Zahlen besser auskennen.\n\nWarum Sie dieses Tool benötigen? In der täglichen Arbeit mit Programmierung, Netzwerkprotokollen und Hardwarekonfigurationen ist die schnelle und fehlerfreie Umwandlung von Zahlen unerlässlich. Zum Beispiel, wenn Sie eine IP-Adresse in ihre binäre Form umwandeln müssen, um Netzwerkmaschinen und Subnetze zu konfigurieren. Oder wenn Sie einen hexadezimalen Hash-Wert in eine dezimale Zahl umwandeln, um sicherzustellen, dass keine Daten verloren gegangen sind. Die manuelle Umwandlung kann fehleranfällig und zeitaufwendig sein, weshalb dieses Tool eine schnelle und zuverlässige Lösung bietet.\n\nTechnische Details: Das Tool arbeitet mit Algorithmen, die die mathematischen Grundlagen der Zahlensysteme nutzen. Die Binärdarstellung basiert auf der Basis 2, die Dezimaldarstellung auf der Basis 10 und die Hexadezimaldarstellung auf der Basis 16. Die Konvertierung erfolgt durch die Anwendung von mathematischen Operationen wie Multiplikation und Division, um die Zahlen von einem System ins andere zu transformieren. Die Benutzeroberfläche des Tools ist so gestaltet, dass sie sowohl fortgeschrittene Benutzer als auch Anfänger unterstützt, indem sie eine intuitive und benutzerfreundliche Umgebung bietet.",
+      "usage_steps": [
+        "Öffnen Sie die Website und navigieren Sie zur Seite 'Binary to Decimal'.",
+        "Wählen Sie im Drop-Down-Menü 'Input Type' die Quell-Zahlensystemauswahl, z.B. 'Binär', 'Dezimal' oder 'Hexadezimal'.",
+        "Geben Sie die zu konvertierende Zahl in das Eingabefeld 'Enter Number' ein.",
+        "Wählen Sie im Drop-Down-Menü 'Output Type' das gewünschte Ziel-Zahlensystem, z.B. 'Dezimal' oder 'Hexadezimal'.",
+        "Klicken Sie auf den Button 'Convert' um die Konvertierung zu starten.",
+        "Die konvertierte Zahl wird im Abschnitt 'Result' angezeigt. Sie können optional den Button 'Copy Result' klicken, um das Ergebnis in die Zwischenablage zu kopieren."
+      ],
+      "usage_examples": [
+        "Ein Netzwerkadministrator möchte die IP-Adresse 192.168.1.1 in ihre binäre Form umwandeln, um die Netzwerksegmentierung besser zu verstehen. Er konvertiert jede Oktette einzeln von Dezimal zu Binär.",
+        "Ein Softwareentwickler arbeitet an einem Embedded-System, das Daten in binärer Form speichert. Er benötigt eine schnellere Methode, um die binären Werte in dezimale Zahlen zu konvertieren, um sie in menschenlesbarer Form zu verwenden.",
+        "Ein IT-Sicherheitspecialist muss einen hexadezimalen Hash-Wert in eine dezimale Zahl umwandeln, um sicherzustellen, dass die Datenintegrität gewahrt bleibt. Er verwendet das Tool, um die Umwandlung in Sekundenschnelle durchzuführen und die Ergebnisse zu überprüfen.",
+        "Ein Schüler im Informatikunterricht lernt über Zahlensysteme und muss eine Reihe von Übungen durchführen, bei denen er Zahlen zwischen den verschiedenen Systemen konvertieren muss. Das Tool hilft ihm, seine Kenntnisse zu vertiefen und die Konzepte praktisch anzuwenden."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Конвертер Binary to Decimal предназначен для быстрого и точного перевода чисел между двоичной, десятичной и шестнадцатеричной системами счисления. Этот инструмент особенно полезен для разработчиков, инженеров и студентов, которым необходимо регулярно выполнять такие преобразования. К примеру, при работе с цифровой электроникой, программировании низкого уровня или криптографии, понимание и использование разных систем счисления является критически важным.\n\nИнструмент работает следующим образом: пользователь вводит число в нужной системе счисления (двоичной, десятичной или шестнадцатеричной). Затем, с помощью встроенных алгоритмов, конвертер выполняет все необходимые вычисления и выводит результаты в остальных двух системах. Алгоритмы используют методы прямого и обратного перевода, такие как умножение на основание системы и деление с остатком.\n\nПомимо основных функций, инструмент предоставляет дополнительные опции, такие как возможность сохранения истории преобразований и копирование результатов в буфер обмена. Это делает его удобным для ежедневного использования и интеграции в рабочий процесс.",
+      "usage_steps": [
+        "Откройте страницу инструмента Binary to Decimal на сайте.",
+        "Введите число в поле ввода, выбрав нужную систему счисления (двоичная, десятичная или шестнадцатеричная) с помощью выпадающего меню.",
+        "Нажмите кнопку «Конвертировать». Инструмент автоматически выполнит перевод и отобразит результаты в остальных двух системах счисления.",
+        "Проверьте результаты в соответствующих полях вывода. Если необходимо, вы можете скопировать любой из результатов в буфер обмена с помощью кнопки «Копировать».",
+        "Если вы хотите сохранить историю преобразований, нажмите кнопку «Сохранить историю». Это сохранит текущее преобразование в локальном хранилище браузера.",
+        "Для нового преобразования очистите поля ввода и вывода, нажав кнопку «Очистить»."
+      ],
+      "usage_examples": [
+        "Программист, работающий с микроконтроллерами, часто сталкивается с необходимостью переводить числа из десятичной системы в двоичную для настройки регистров. Это инструмент позволяет быстро выполнить перевод, облегчая процесс разработки и отладки программного кода.",
+        "Инженер по цифровым системам может использовать этот конвертер для проверки правильности работы цифровых схем, переводя входные и выходные значения между различными системами счисления.",
+        "Студенты информационных технологий могут использовать это инструмент для освоения основ перевода чисел между системами счисления, что является важной частью курса по цифровой логике и архитектуре компьютеров.",
+        "Криптограф, работающий с шифрованием данных, может использовать этот конвертер для перевода ключей и данных между десятичной и шестнадцатеричной системами, что часто требуется при работе с алгоритмами шифрования."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة التحويل من الثنائي إلى العشري هي أداة متطورة تتيح للمطورين والمهندسين والمتخصصين في تقنية المعلومات التحويل بين الأنظمة العددية المختلفة، مثل النظام الثنائي (Binary) والنظام العشري (Decimal) والنظام السداسي عشر (Hexadecimal). هذه الأداة تعمل على تبسيط العمليات الحسابية المركبة التي تتعلق بتمثيل الأرقام في أنظمة عد مختلفة، مما يوفر الوقت والجهد في مهام البرمجة والتصميم الإلكتروني.\n\nيحتاج المستخدمون إلى هذه الأداة في العديد من السياقات العملية، مثل تطوير البرامج التي تتطلب معالجة البيانات الثنائية، مثل بروتوكولات الشبكات وتشفير البيانات. كما أنها مفيدة في تصميم الدوائر الإلكترونية الرقمية، حيث يتم استخدام الأرقام الثنائية بشكل متكرر. بالإضافة إلى ذلك، يمكن استخدامها في التدريس والتعلم، حيث تساعد الطلاب على فهم كيفية التحويل بين الأنظمة العددية المختلفة.\n\newayed العمل، تقوم الأداة بتحليل المدخلات الثنائية وتقوم بتحويلها إلى النظام العشري باستخدام خوارزميات تحويل دقيقة. يتم ذلك من خلال تحليل كل رقم في السلسلة الثنائية وتجميع قيمه بناءً على موقعه في السلسلة. يمكن للمستخدمين أيضًا تحويل الأرقام العشريَّة إلى ثنائية أو سداسية عشرية، مما يجعل الأداة متنوعة ومفيدة في مجموعة واسعة من التطبيقات.",
+      "usage_steps": [
+        "افتح أداة التحويل من الثنائي إلى العشري على الموقع.",
+        "اختر نوع التحويل المرغوب من القائمة المنسدلة (من الثنائي إلى العشري، من العشري إلى الثنائي، من الثنائي إلى السداسي عشر، أو من السداسي عشر إلى الثنائي).",
+        "أدخل الرقم الذي تريد تحويله في الحقل المخصص.",
+        "انقر على زر 'تحويل' لتنفيذ العملية.",
+        "ستظهر النتيجة المحوَّلة في الحقل المخصص أسفل الزر.",
+        "يمكنك نسخ النتيجة أو استخدامها مباشرة في مشروعك."
+      ],
+      "usage_examples": [
+        "مطور برمجيات يحتاج إلى تحويل العنوان IP الثنائي إلى شكله العشري لتسهيل عملية تكويد بروتوكول الشبكة.",
+        "مهندس إلكتروني يقوم بتصميم دائرة منطقية ويحتاج إلى تحويل الأرقام الثنائية إلى عشريَّة للتحقق من صحة عمليات الحساب المنطقية.",
+        "طالب في كلية الحاسبات يحتاج إلى فهم كيفية التحويل بين الأنظمة العددية المختلفة لاستكمال مشروعه الأكاديمي.",
+        "محلل بيانات يعمل على تشفير البيانات باستخدام خوارزميات تستخدم الأرقام الثنائية، ويحتاج إلى تحويل النتائج إلى شكل عشري لتسهيل التحليل."
+      ]
+    }
+  }
+}

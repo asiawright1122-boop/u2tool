@@ -1,0 +1,175 @@
+{
+  "slug": "calorie-calculator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Calorie Calculator is a sophisticated web application designed to provide users with a personalized assessment of their daily caloric requirements. By integrating advanced algorithms and nutritional science, the tool calculates the number of calories needed to maintain or adjust weight based on individual factors such as age, height, weight, and physical activity level. This tool is essential for individuals looking to optimize their diet for health and fitness goals, whether that involves weight loss, muscle gain, or general wellness. The calculator employs the Harris-Benedict equation and the Mifflin-St Jeor equation, which are widely recognized for their accuracy in estimating Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE). These equations take into account the user’s specific inputs to provide a tailored caloric intake recommendation, ensuring that the advice is both precise and actionable. The tool is particularly useful for dietitians, nutritionists, and fitness enthusiasts who need a reliable method to plan and track their nutritional intake.",
+      "usage_steps": [
+        "Step 1: Navigate to the Calorie Calculator page and locate the input fields for Age, Weight, Height, and Gender.",
+        "Step 2: Enter your age in years, weight in kilograms, and height in centimeters. Select your gender from the dropdown menu.",
+        "Step 3: Choose your activity level from the options provided: Sedentary (little to no exercise), Lightly Active (light exercise/sports 1-3 days/week), Moderately Active (moderate exercise/sports 3-5 days/week), Very Active (hard exercise/sports 6-7 days a week), and Super Active (very hard exercise/sports, physical job or training twice a day).",
+        "Step 4: Click the 'Calculate' button to process your inputs and generate your daily caloric needs.",
+        "Step 5: Review the calculated results, which include your Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE).",
+        "Step 6: Use the provided information to adjust your diet and exercise routine to meet your specific health and fitness goals."
+      ],
+      "usage_examples": [
+        "Example 1: A 35-year-old woman who is 170 cm tall and weighs 70 kg, and exercises moderately 3-5 times a week, wants to maintain her current weight. She uses the Calorie Calculator to determine her daily caloric intake, which helps her plan her meals and snacks accordingly.",
+        "Example 2: A 28-year-old man who is 185 cm tall and weighs 90 kg, and works a desk job with minimal physical activity, is looking to lose weight. He uses the Calorie Calculator to find out his TDEE and creates a caloric deficit in his diet to achieve his weight loss goals.",
+        "Example 3: A 45-year-old woman who is 160 cm tall and weighs 65 kg, and is preparing for a marathon, needs to ensure she is consuming enough calories to fuel her training. She uses the Calorie Calculator to get a precise estimate of her daily caloric needs and adjusts her diet to support her intense training schedule.",
+        "Example 4: A 22-year-old college student who is 175 cm tall and weighs 80 kg, and is highly active with daily workouts, wants to build muscle mass. He uses the Calorie Calculator to determine his caloric surplus requirements and tailors his diet to include the necessary nutrients for muscle growth."
+      ]
+    },
+    "zh": {
+      "detailed_description": "卡路里计算器是一款专门为关注健康和生活方式的用户设计的在线工具。通过输入用户的年龄、体重、身高以及活动水平，该工具能够精准计算出用户每日所需的卡路里摄入量。这款工具不仅适用于希望减肥或增肌的用户，也适合希望维持健康生活方式的普通人群。卡路里计算器采用先进的代谢率计算公式，结合基础代谢率（BMR）和体力活动水平（PAL）的乘积，得出用户的总能量消耗（TDEE）。通过这些数据，用户可以更科学地调整饮食计划，确保营养均衡。",
+      "usage_steps": [
+        "Step 1: 打开卡路里计算器页面，首先选择您的性别。",
+        "Step 2: 在“年龄”输入框中输入您的具体年龄（例如：25）。",
+        "Step 3: 在“体重”输入框中输入您的体重（例如：70公斤），并选择相应的单位（公斤或磅）。",
+        "Step 4: 在“身高”输入框中输入您的身高（例如：175厘米），并选择相应的单位（厘米或英尺和英寸）。",
+        "Step 5: 从“活动水平”下拉菜单中选择您的日常活动强度，例如：久坐（办公室工作）、轻度活动（偶尔散步）、中度活动（日常锻炼）、高度活动（高强度运动）或极高度活动（运动员）。",
+        "Step 6: 点击“计算”按钮，系统将根据您的输入数据，使用BMR和PAL公式计算出您的每日所需卡路里摄入量，并显示在结果区域。"
+      ],
+      "usage_examples": [
+        "Example 1: 小张是一名28岁的办公室职员，他希望在不改变现有生活方式的情况下轻微减肥。通过输入他的年龄、体重、身高和活动水平，卡路里计算器显示他的每日所需卡路里摄入量为2200千卡，帮助他制定合理的饮食计划。",
+        "Example 2: 李女士是一名35岁的健身爱好者，她希望增加肌肉量。通过输入她的身体数据和活动水平，卡路里计算器显示她每日需要摄入2800千卡，这有助于她确保摄入足够的能量来支持她的训练。",
+        "Example 3: 老王是一名50岁的退休人员，他希望维持现有的健康状态。通过输入他的身体数据和活动水平，卡路里计算器显示他每日需要摄入的卡路里为1800千卡，帮助他保持健康的生活方式。",
+        "Example 4: 小王是一名18岁的大学生，他最近开始关注自己的饮食习惯。通过输入他的身体数据和活动水平，卡路里计算器显示他每日需要摄入2500千卡，这帮助他更好地规划自己的饮食，确保营养均衡。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "カロリー計算ツールは、ユーザの年齢、体重、身長、および運動量に基づいて毎日の摂取カロリーを計算します。このツールは、メタボリズム率やエネルギーコンシューマーの特性を考慮した複雑なアルゴリズムを用いて、個々の身体状態に適したカロリー摂取量を算出します。特にダイエットや健康管理に取り組んでいる方にとって、適切なカロリー摂取量を知ることは非常に重要です。このツールは、ユーザが目標体重を達成したり、健康な食生活を維持するために、毎日の食事計画を立てることを助けます。また、運動量の設定によって、活動的なライフスタイルに合わせた摂取カロリーを調整することも可能です。このツールは、ウェブ上で簡単にアクセスでき、情報を入力するだけで、カスタマイズされたカロリー摂取量が表示されます。",
+      "usage_steps": [
+        "1. カロリー計算ツールのページを開き、「年齢」フィールドに実年齢を入力します。",
+        "2. 「身長」フィールドに身長（cm）を、「体重」フィールドに体重（kg）を入力します。",
+        "3. 「性別」を選択します。男性または女性のラジオボタンを選択してください。",
+        "4. 「活動レベル」を設定します。 Sedentary（座りがちな生活）、Lightly Active（軽度の運動）、Moderately Active（中程度の運動）、Very Active（激しい運動）から選択します。",
+        "5. 「計算」ボタンをクリックします。",
+        "6. 結果が表示されます。毎日の推奨カロリー摂取量が表示され、必要に応じて目標体重や運動量を調整することができます。"
+      ],
+      "usage_examples": [
+        "例1: 30歳の男性で、身長175cm、体重75kg、運動量は中程度（Moderately Active）の場合、毎日の推奨カロリー摂取量を計算して、健康的な体重維持のために適切な食事計画を立てます。",
+        "例2: 25歳の女性で、身長160cm、体重55kg、運動量は軽度（Lightly Active）の場合、ダイエット中で体重を5kg落としたいと考えているため、毎日のカロリー摂取量を計算し、適切な食事と運動のバランスを確認します。",
+        "例3: 45歳の男性で、身長180cm、体重90kg、運動量は座りがち（Sedentary）の場合、健康診断で肥満が指摘されたため、健康的な体重に近づけるためのカロリー摂取量を計算します。",
+        "例4: 50歳の女性で、身長165cm、体重60kg、運動量は激しい（Very Active）の場合、マラソン大会に向けてトレーニング中で、必要なエネルギー量を確保するために毎日の推奨カロリー摂取量を計算します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "칼로리 계산기는 사용자의 나이, 체중, 키, 활동 수준을 기반으로 일일 칼로리 필요량을 정확히 계산하여 제공합니다. 이 도구는 RESTful API를 사용하여 클라이언트 측에서 데이터를 받아서 서버 측에서 계산을 수행합니다. 계산 알고리즘은 Harris-Benedict 방정식을 기초로 하며, 이는 기초 대사량(BMR)을 먼저 추정한 후, 사용자의 활동 수준에 따라 조정하는 방식입니다. BMR은 체중, 키, 나이를 변수로 사용하여 일일 칼로리 소비량을 예측합니다. 이후, 활동 수준에 따라 BMR을 곱하는 계수를 적용하여 최종 일일 칼로리 필요량을 산출합니다. 이 도구는 건강 관리, 다이어트, 운동 계획 등 다양한 분야에서 중요한 역할을 합니다. 사용자는 자신에게 맞는 칼로리 섭취를 파악하여 건강한 생활 습관을 유지할 수 있습니다.",
+      "usage_steps": [
+        "Step 1: 웹사이트 상단의 'Calorie Calculator' 탭을 클릭하여 도구 페이지로 이동합니다.",
+        "Step 2: '나이' 필드에 현재 나이를 입력합니다.",
+        "Step 3: '체중' 필드에 현재 체중(kg)을 입력합니다.",
+        "Step 4: '키' 필드에 현재 키(cm)를 입력합니다.",
+        "Step 5: '활동 수준' 드롭다운 메뉴에서 자신의 일상 활동 수준을 선택합니다. (예: 저 활동, 중간 활동, 고 활동)",
+        "Step 6: '계산하기' 버튼을 클릭하여 결과를 확인합니다. 결과는 화면 하단에 표시됩니다."
+      ],
+      "usage_examples": [
+        "Example 1: 30세의 여성 직장인이 체중 감량을 목표로 할 때, 자신의 일일 칼로리 섭취량을 파악하여 적절한 식단을 계획합니다.",
+        "Example 2: 45세의 남성 운동 선수가 체력을 유지하기 위해, 자신의 활동 수준에 맞는 일일 칼로리 필요량을 확인하여 영양 보충제를 섭취합니다.",
+        "Example 3: 25세의 대학생이 건강한 생활 습관을 유지하기 위해, 자신의 일일 칼로리 소비량을 파악하여 적절한 운동 계획을 세웁니다.",
+        "Example 4: 50세의 주부가 만성질환을 관리하기 위해, 의사의 조언에 따라 자신의 일일 칼로리 섭취량을 관리합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Calculador de Calorías es una herramienta innovadora y precisa diseñada para ayudar a los usuarios a determinar sus necesidades de calorías diarias basándose en factores cruciales como la edad, el peso, la altura y el nivel de actividad física. Esta herramienta utiliza el modelo de ecuación de Harris-Benedict, un método reconocido en la comunidad científica para estimar el metabolismo basal (MB), que es la cantidad de calorías que el cuerpo quema en reposo. Además, el Calculador de Calorías incorpora un factor de actividad física que ajusta el MB según el nivel de ejercicio y estilo de vida del usuario, proporcionando un cálculo más personalizado y preciso.\n\nLos usuarios pueden beneficiarse enormemente de esta herramienta, especialmente aquellos que buscan perder peso, ganar masa muscular, o simplemente mantener un estilo de vida saludable. Al conocer con precisión sus necesidades calóricas, pueden ajustar su ingesta de alimentos de manera más efectiva, lo que puede conducir a mejores resultados en su estrategia de nutrición y bienestar. Además, esta herramienta es invaluable para personas con condiciones metabólicas o aquellos que siguen planes de entrenamiento específicos, ya que les permite ajustar sus dietas de manera dinámica según sus objetivos y necesidades cambiantes.",
+      "usage_steps": [
+        "Abra la página del Calculador de Calorías en el sitio web y haga clic en el botón 'Calcular'.",
+        "Seleccione su género (Masculino o Femenino) utilizando los botones de radio en la sección correspondiente.",
+        "Introduzca su edad en el campo 'Edad' y asegúrese de que esté en años completos.",
+        "Ingrese su peso en kilogramos en el campo 'Peso' y su altura en centímetros en el campo 'Altura'.",
+        "Elija su nivel de actividad física desde las opciones proporcionadas: 'Sedentario', 'Ligero', 'Moderado', 'Activo' o 'Muy Activo'.",
+        "Haga clic en el botón 'Calcular' para obtener su necesidad diaria de calorías, que se mostrará en la parte inferior de la página junto con recomendaciones personalizadas."
+      ],
+      "usage_examples": [
+        "Una persona de 30 años que trabaja en una oficina y realiza ejercicio moderado 3 veces a semana puede usar el Calculador de Calorías para determinar cuántas calorías necesita consumir diariamente para mantener su peso actual.",
+        "Un atleta de 25 años que entrena intensamente 5 días a la semana puede usar la herramienta para ajustar su ingesta calórica y asegurarse de que está proporcionando suficiente energía a su cuerpo para sus entrenamientos.",
+        "Una mujer de 45 años que ha decidido empezar un plan de pérdida de peso puede usar el Calculador de Calorías para establecer un objetivo calórico diario y seguir su progreso a lo largo del tiempo.",
+        "Un nutricionista puede utilizar el Calculador de Calorías para generar un perfil nutricional personalizado para sus clientes, ajustando sus dietas según sus necesidades específicas y objetivos de salud."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Calculadora de Calorias é uma ferramenta avançada de cálculo de necessidades calóricas diárias, projetada para fornecer uma estimativa precisa com base em parâmetros específicos do usuário, como idade, peso, altura e nível de atividade física. A ferramenta utiliza o método de Harris-Benedict, uma fórmula científica que calcula o Metabolismo Basal (MB), que é a quantidade de calorias necessárias para manter as funções vitais do corpo em repouso. Após determinar o MB, a ferramenta ajusta a estimativa com base no fator de atividade, que considera o nível de exercícios físicos realizados pelo usuário. Isso permite que a Calculadora de Calorias ofereça uma recomendação personalizada, ideal para indivíduos que desejam monitorar e gerenciar seu consumo calórico para objetivos de saúde e bem-estar, como perda de peso, ganho de massa muscular ou simplesmente manter um estilo de vida saudável. A ferramenta é particularmente útil para nutricionistas, atletas e indivíduos que buscam uma abordagem mais científica e personalizada para a nutrição.",
+      "usage_steps": [
+        "Acesse a página do Calculadora de Calorias no site.",
+        "Selecione o seu gênero (Masculino ou Feminino) usando o botão de opção.",
+        "Insira a sua idade em anos, peso em quilogramas e altura em centímetros nos campos correspondentes.",
+        "Escolha o seu nível de atividade física em uma escala que varia de 'Sedentário' a 'Muito Ativo' usando o menu suspenso.",
+        "Clique no botão 'Calcular' para processar os dados e obter a sua estimativa de necessidades calóricas diárias.",
+        "Revise a estimativa exibida e, se necessário, ajuste os parâmetros para uma nova estimativa."
+      ],
+      "usage_examples": [
+        "Um atleta de 25 anos, que treina diariamente, pode usar a Calculadora de Calorias para determinar a quantidade de calorias necessárias para manter seu desempenho e ganhar massa muscular.",
+        "Uma pessoa de 40 anos, que trabalha em um escritório e faz atividades leves, pode usar a ferramenta para entender quanto precisa consumir para evitar o ganho de peso.",
+        "Um nutricionista pode recomendar a Calculadora de Calorias para seus pacientes, ajudando-os a monitorar seu consumo calórico de forma mais precisa e personalizada.",
+        "Uma mulher de 30 anos, que está grávida, pode utilizar a ferramenta para ajustar suas necessidades calóricas durante as diferentes fases da gravidez, garantindo uma nutrição adequada."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Calculateur de Calorie est un outil en ligne robuste qui permet aux utilisateurs d'estimer leurs besoins caloriques journaliers en fonction de plusieurs critères précis. Techniquement, l'outil utilise des algorithmes basés sur les équations de Mifflin-St Jeor, de Harris-Benedict et de Katch-McArdle pour calculer le métabolisme basal (MB) et l'apport calorique total (ACT) en tenant compte de l'âge, du poids, de la taille et du niveau d'activité physique. Le métabolisme basal représente le nombre de calories nécessaires pour maintenir les fonctions vitales en repos, tandis que l'apport calorique total inclut les dépenses énergétiques dues à l'activité physique. Cet outil est particulièrement utile pour les personnes souhaitant perdre, maintenir ou même gagner du poids de manière saine. Les utilisateurs peuvent ajuster leurs apports en fonction des résultats obtenus pour atteindre leurs objectifs de santé et de condition physique. De plus, le Calculateur de Calorie fournit des recommandations basées sur les directives de l'OMS et de l'American College of Sports Medicine, offrant ainsi une base solide pour la prise de décisions éclairées en matière de nutrition.",
+      "usage_steps": [
+        "Accédez à l'outil 'Calculateur de Calorie' via le menu de navigation ou en utilisant le lien direct.",
+        "Sélectionnez l'onglet 'Paramètres Personnels' et entrez vos informations : âge, sexe, poids, taille et niveau d'activité physique (sédentaire, légèrement actif, modérément actif, très actif, extrêmement actif).",
+        "Cliquez sur le bouton 'Calculer' pour que l'outil génère vos besoins caloriques journaliers basés sur les équations de Mifflin-St Jeor, Harris-Benedict et Katch-McArdle.",
+        "Consultez les résultats détaillés qui incluent votre métabolisme basal (MB), votre apport calorique total (ACT) et des recommandations spécifiques pour atteindre vos objectifs de poids.",
+        "Si vous le souhaitez, utilisez l'onglet 'Objectifs de Poids' pour spécifier si vous voulez perdre, maintenir ou gagner du poids, et ajustez les paramètres en conséquence.",
+        "Enregistrez vos résultats ou partagez-les via les options de partage intégrées pour suivre votre progression et consulter les données ultérieurement."
+      ],
+      "usage_examples": [
+        "Un étudiant en nutrition utilise le Calculateur de Calorie pour planifier un régime équilibré pour un client souhaitant perdre 5 kg en 8 semaines. En ajustant les apports caloriques recommandés, il peut créer un plan alimentaire adapté.",
+        "Un athlète de haut niveau souhaite optimiser sa performance en ajustant son apport calorique en fonction de son entraînement intensif. L'outil permet de calculer ses besoins énergétiques spécifiques en tenant compte de sa masse musculaire et de son niveau d'activité.",
+        "Une personne sédentaire qui commence un programme de fitness utilise le Calculateur de Calorie pour établir une base de référence de son apport calorique actuel et pour déterminer les ajustements nécessaires pour atteindre sa forme physique idéale.",
+        "Un diététicien utilise le Calculateur de Calorie pour évaluer les besoins caloriques de ses patients en réadaptation après une intervention chirurgicale. Les résultats aident à concevoir un plan alimentaire qui favorise la récupération tout en évitant la prise de poids excessive."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Calorie Calculator ist ein leistungsstarkes Online-Tool, das es Benutzern ermöglicht, ihre täglichen Kalorienbedarfe basierend auf spezifischen physiologischen und Lebensstilfaktoren zu berechnen. Technisch gesehen, verwendet das Tool eine Reihe von Algorithmen, die auf wissenschaftlich anerkannten Methoden wie der Harris-Benedict-Gleichung und der Mifflin-St Jeor-Gleichung basieren. Diese Methoden berücksichtigen individuelle Faktoren wie Alter, Gewicht, Größe und Aktivitätsniveau, um eine präzise Schätzung des Basalmetabolischen Satzes (BMR) zu erstellen. Der BMR ist die Anzahl von Kalorien, die ein Körper in Ruhe verbraucht, um grundlegende körperliche Funktionen aufrechtzuerhalten. Auf dieser Basis wird der tägliche Energiebedarf, einschließlich physikalischer Aktivität, berechnet. Benutzer können das Tool verwenden, um ihre Ernährungs- und Fitnessziele besser zu planen, ob es darum geht, Gewicht zu verlieren, zuzulegen oder einfach ein gesundes Gewicht zu erhalten. Die genaue und benutzerfreundliche Berechnung unterstützt auch Ernährungsberater und Fitnesscoaches bei der Erstellung personalisierter Ernährungs- und Trainingspläne.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des Calorie Calculators und locate das Eingabefeld für 'Alter'.",
+        "Geben Sie Ihr genaues Alter in Jahren ein.",
+        "Wählen Sie Ihr Geschlecht aus den Optionen 'Männlich' oder 'Weiblich' aus.",
+        "Tragen Sie Ihr Gewicht in Kilogramm und Ihre Größe in Zentimetern in die entsprechenden Felder ein.",
+        "Bewerten Sie Ihr tägliches Aktivitätsniveau auf einer Skala von 'Sedentär' bis 'Sehr aktiv'.",
+        "Klicken Sie auf den Button 'Berechnen', um Ihre geschätzten täglichen Kalorienbedarfe zu erhalten."
+      ],
+      "usage_examples": [
+        "Ein Fitnessbegeisterte Person, die regelmäßig joggt und trainiert, möchte ihren täglichen Kalorienbedarf berechnen, um sicherzustellen, dass sie genug Energie für ihre Workouts hat und gleichzeitig ihr Gewicht stabil hält.",
+        "Ein Ernährungsberater verwendet das Tool, um den individuellen Kalorienbedarf seiner Klienten zu bestimmen, um personalisierte Ernährungspläne zu erstellen, die spezifischen Gesundheitszielen gerecht werden.",
+        "Eine Person, die Gewicht verlieren möchte, nutzt den Calorie Calculator, um ihren aktuellen Kalorienbedarf herauszufinden und einen reduzierten Kalorienbedarf zu planen, um langfristig Gewicht abzubauen.",
+        "Ein Student, der an einem Bürojob arbeitet, verwendet das Tool, um zu verstehen, wie viele Kalorien er täglich verbraucht, um sicherzustellen, dass er eine ausgewogene Ernährung beibehält, obwohl er wenig physisch aktiv ist."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Калькулятор калорий — это мощный инструмент, предназначенный для подсчета суточной потребности в калориях на основе таких параметров, как возраст, вес, рост и уровень физической активности. Этот инструмент использует усовершенствованные алгоритмы для оценки базового обмена веществ (БОВ) и уровня физической активности (ФА), чтобы предоставить пользователю точное значение калорий, необходимых для поддержания текущего состояния здоровья или достижения определенных целей, таких как похудение или набор мышечной массы. Калькулятор калорий особенно полезен для людей, стремящихся сбалансировать свое питание и физическую активность, а также для тех, кто следит за своим здоровьем и весом. Он учитывает различные факторы, такие как пол, возраст, рост, вес и уровень физической активности, чтобы вычислить индивидуальную суточную потребность в калориях. Технически, калькулятор использует формулу Харриса-Бенедикта для расчета базового обмена веществ (БОВ) и затем умножает его на коэффициент физической активности (ФА), чтобы получить общую суточную потребность в калориях.",
+      "usage_steps": [
+        "Шаг 1: Перейдите на страницу калькулятора калорий по адресу /calorie-calculator.",
+        "Шаг 2: Выберите свой пол, используя переключатель между «Мужской» и «Женский».",
+        "Шаг 3: Введите свой возраст в поле «Возраст».",
+        "Шаг 4: Укажите свой рост в сантиметрах в поле «Рост».",
+        "Шаг 5: Введите свой текущий вес в килограммах в поле «Вес».",
+        "Шаг 6: Выберите уровень физической активности из выпадающего списка, который включает варианты от «Минимальный» до «Очень высокий»."
+      ],
+      "usage_examples": [
+        "Пример 1: Мария, 30-летняя женщина, ростом 170 см и весом 65 кг, ведет умеренно активный образ жизни. Она использует калькулятор калорий, чтобы определить, сколько калорий ей нужно потреблять в день для поддержания текущего веса. Результат показывает, что ей необходимо около 2200 калорий в день.",
+        "Пример 2: Алексей, 45-летний мужчина, ростом 180 см и весом 90 кг, решил начать программу похудения. Он использует калькулятор калорий, чтобы узнать, сколько калорий ему нужно употреблять в день для похудения. Калькулятор показывает, что ему следует сократить суточное потребление калорий до 1800.",
+        "Пример 3: Анна, 25-летняя спортсменка, участвующая в тренировках по бодибилдингу, хочет набрать мышечную массу. Она использует калькулятор калорий, чтобы определить, сколько калорий ей нужно потреблять в день для достижения этой цели. Результат показывает, что ей требуется около 3000 калорий в день.",
+        "Пример 4: Денис, 50-летний мужчина, ростом 165 см и весом 75 кг, ведет сидячий образ жизни. Он хочет поддерживать здоровый вес и использует калькулятор калорий, чтобы узнать, сколько калорий ему нужно потреблять в день. Калькулятор показывает, что ему необходимо около 2000 калорий в день."
+      ]
+    },
+    "ar": {
+      "detailed_description": "آلة حاسبة السعرات الحرارية هي أداة متقدمة تعمل على حساب متطلبات السعرات الحرارية اليومية للمستخدم بناءً على مجموعة من العوامل الفردية. تستخدم الأداة نموذجًا رياضيًا معقدًا يعتمد على معادلات مثل معادلة هاريس بنديكت و معادلة ميفين ستير-جانر، وهي معادلات تعتمد على العمر والوزن والطول ومستوى النشاط البدني للمستخدم. يتم استخدام هذه المعادلات لتقدير الأيض الساكن (BMR) أو معدل الأيض الأساسي، وهو عدد السعرات الحرارية التي يحرقها الجسم في حالة الراحة. بعد ذلك، يتم ضرب هذا الرقم في معامل النشاط البدني للحصول على عدد السعرات الحرارية الإجمالي المطلوب يوميًا. تساعد هذه الأداة الأفراد في تحديد احتياجاتهم الغذائية بدقة، مما يُسهل تحقيق أهدافهم الصحية، سواء كانت زيادة الوزن أو فقدانه أو الحفاظ على الوزن الحالي. يمكن أيضًا استخدام هذه الأداة من قبل المحترفين الصحيين والرياضيين لوضع خطط غذائية مخصصة تتناسب مع احتياجات الأفراد المتعددة.",
+      "usage_steps": [
+        "خطوة 1: افتح آلة حاسبة السعرات الحرارية على الموقع.",
+        "خطوة 2: أدخل عمرك في الحقل المخصص للأعمار، مع مراعاة دقة البيانات.",
+        "خطوة 3: أدخل وزنك بالكيلوجرامات في الحقل المخصص للوزن، وتأكد من استخدام وحدات القياس المناسبة.",
+        "خطوة 4: ادخل طولك بالسنتيمترات في الحقل المخصص للطول، مع الحفاظ على الدقة.",
+        "خطوة 5: حدد مستوى نشاطك البدني من القائمة المنسدلة، والتي تشمل خيارات مثل 'قليل النشاط'، 'متوسط النشاط'، 'نشيط'، و'مرتفع النشاط'.",
+        "خطوة 6: اضغط على زر 'احسب' لعرض النتائج التي تحدد احتياجاتك اليومية من السعرات الحرارية."
+      ],
+      "usage_examples": [
+        "مثال 1: شخص يبلغ من العمر 30 عامًا، يزن 75 كغم، وطوله 180 سم، ويعمل في مكتب ويقوم بممارسة رياضة المشي لمدة 30 دقيقة يوميًا. يمكنه استخدام الأداة لتحديد احتياجاته اليومية من السعرات الحرارية للحفاظ على وزنه الحالي.",
+        "مثال 2: رياضية تبلغ من العمر 25 عامًا، تزن 60 كغم، وطولها 170 سم، تتدرّب بنشاط لمدة 5 ساعات أسبوعيًا. يمكنها استخدام الأداة لتحديد عدد السعرات الحرارية التي تحتاجها يوميًا للحفاظ على مستويات طاقتها أثناء تدريباتها.",
+        "مثال 3: شخص يبلغ من العمر 45 عامًا، يزن 90 كغم، وطوله 175 سم، لديه وظيفة مكتبية ولا يمارس نشاطًا بدنيًا منظمًا. يمكنه استخدام الأداة لتحديد عدد السعرات الحرارية التي يجب أن يتناولها يوميًا لفقدان الوزن بشكل صحي.",
+        "مثال 4: طالب جامعي يبلغ من العمر 22 عامًا، يزن 80 كغم، وطوله 185 سم، يمارس الرياضة بشكل معتدل لمدة 45 دقيقة يوميًا. يمكنه استخدام الأداة لتحديد احتياجاته اليومية من السعرات الحرارية للتأكد من أن برنامجه الغذائي يوفر الطاقة الكافية لنشاطه اليومي."
+      ]
+    }
+  }
+}

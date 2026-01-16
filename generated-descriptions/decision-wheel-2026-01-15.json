@@ -1,0 +1,175 @@
+{
+  "slug": "decision-wheel",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Decision Wheel is a dynamic, web-based application designed to facilitate random decision-making through a visually engaging interface. Technically, it leverages a combination of JavaScript for interactivity, CSS for styling, and HTML for structure. The tool employs a pseudo-random number generator to ensure that each spin of the wheel produces a fair and unbiased outcome. Users can input a list of options, each of which is represented as a segment on the wheel. The application uses a canvas element to render the wheel and animate the spinning effect, providing a smooth and interactive experience. The Decision Wheel is particularly useful in scenarios where making a choice can be challenging, such as deciding on a group activity, selecting a winner for a contest, or choosing a topic for a project. By automating the decision process, it helps reduce indecision and adds an element of fun and excitement.",
+      "usage_steps": [
+        "Step 1: Open the Decision Wheel tool on your web browser.",
+        "Step 2: Click the 'Edit Options' button to input your choices. Each choice will be a separate segment on the wheel.",
+        "Step 3: Enter your options in the text boxes provided, one per line. You can add or remove options using the '+' and '-' buttons.",
+        "Step 4: Once you have entered all your options, click the 'Save' button to apply the changes and return to the main screen.",
+        "Step 5: Click the 'Spin' button to start the wheel. The wheel will spin and eventually come to a stop on one of the segments.",
+        "Step 6: The selected option will be highlighted, and a notification will appear at the top of the screen. You can choose to spin again or reset the wheel using the 'Reset' button."
+      ],
+      "usage_examples": [
+        "Example 1: A group of friends is deciding where to go for dinner. Each person suggests a restaurant, and they use the Decision Wheel to randomly select one of the options, ensuring everyone has an equal say in the final decision.",
+        "Example 2: A teacher wants to randomly select a student to answer a question in class. She lists all the students' names and uses the Decision Wheel to pick a student, making the selection process fair and transparent.",
+        "Example 3: An event organizer needs to choose a winner for a raffle. By entering the names of all participants into the Decision Wheel, the organizer can randomly select a winner, adding an element of excitement to the event.",
+        "Example 4: A content creator is trying to decide on the topic for their next blog post. They list several potential topics and use the Decision Wheel to randomly select one, providing a fun and unbiased way to make the decision."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Decision Wheel 是一款基于随机算法的在线决策工具，旨在通过生成随机结果来帮助用户在多个选项中做出决策。技术上，该工具采用前端 JavaScript 实现，利用 Math.random() 函数生成伪随机数，从而在用户提供的选项中随机选择一个。用户可以通过简单的界面操作来添加、删除选项，并启动轮盘的旋转动画，最终停止在某个特定选项上。这种随机决策机制不仅增加了趣味性，还减少了决策疲劳，尤其适用于需要快速做出选择的情境，如团队会议中的议题选择、家庭聚会中的游戏分配等。此外，Decision Wheel 还支持自定义轮盘的样式，包括颜色和字体，以适应不同的使用场景。",
+      "usage_steps": [
+        "Step 1: 打开 Decision Wheel 工具页面，点击“添加选项”按钮，输入您的第一个决策选项。",
+        "Step 2: 继续点击“添加选项”按钮，依次输入所有需要考虑的决策选项。",
+        "Step 3: 如果需要删除某个选项，点击该选项右侧的“删除”按钮。",
+        "Step 4: 确认所有选项输入无误后，点击页面上方的“开始旋转”按钮。",
+        "Step 5: 观察轮盘的旋转动画，等待其自然停止，最终指向的选项即为随机决策结果。",
+        "Step 6: 如需重新决策，点击“重置”按钮，清除当前选项，重新开始。"
+      ],
+      "usage_examples": [
+        "Example 1: 在团队会议中，需要快速决定下一个讨论的议题。使用 Decision Wheel 可以将所有议题输入，通过随机选择来决定讨论顺序，确保每个议题都有平等的机会。",
+        "Example 2: 家庭聚餐时，大家对菜品选择意见不一。可以将不同菜品作为选项输入 Decision Wheel，通过随机选择来决定最终的菜单，增加聚餐的趣味性。",
+        "Example 3: 学生小组项目中，成员们对项目主题意见分歧较大。使用 Decision Wheel 可以将所有提议的项目主题输入，通过随机选择来决定最终的项目主题，减少决策过程中的矛盾。",
+        "Example 4: 在个人生活中，面对日常选择（如穿什么衣服、看什么电影）时，可以使用 Decision Wheel 来快速做出决策，增加生活的随机性和乐趣。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Decision Wheelは、ユーザーが提供したオプションからランダムに選択を行うツールです。このツールは、JavaScriptとHTMLを使用して作成されており、クライアントサイドで動作します。ユーザーが入力したオプションは、配列として内部的に管理され、ランダム関数を使用して選択が行われます。選択結果は、視覚的に魅力的な回転盤の形式で表示されます。このツールは、.netbeansやVisual Studio Codeなどの開発環境で簡単に開発およびデバッグが可能です。また、レスポンシブデザインが採用されているため、デスクトップやモバイルデバイスからでも問題なく利用できます。",
+      "usage_steps": [
+        "ステップ 1: Decision Wheelのウェブページを開きます。",
+        "ステップ 2: 「追加」ボタンをクリックし、選択肢を入力します。必要な数だけこの操作を繰り返します。",
+        "ステップ 3: 全てのオプションを追加したら、右上にある「保存」ボタンをクリックします。",
+        "ステップ 4: 「スピン」ボタンをクリックして、回転盤を回します。回転が始まり、ランダムに選択が行われます。",
+        "ステップ 5: 回転が停止すると、選ばれたオプションがハイライト表示されます。",
+        "ステップ 6: 「リセット」ボタンをクリックして、選択をリセットし、新しい選択を行うことができます。"
+      ],
+      "usage_examples": [
+        "例 1: レストランで食事をする際、友人グループがどこで食事をするか決められない場合、Decision Wheelを使ってオプションを入力し、ランダムに選択することで、全員が納得できる決定を下すことができます。",
+        "例 2: 旅行先を決定する際、複数の目的地を候補として挙げ、Decision Wheelを使って最終的にどこに旅行するかを決定することができます。",
+        "例 3: プロジェクトチームが次のプロジェクトのテーマを選択する際、複数のアイデアをリストアップし、Decision Wheelを使って公平に選択することができます。",
+        "例 4: 教師が生徒に質問をする際、生徒の名前をリストに追加し、Decision Wheelを使ってランダムに選択することで、全員が参加する機会を均等に提供できます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Decision Wheel은 사용자가 제공한 여러 옵션 중에서 무작위로 결정을 내릴 수 있는 디지털 도구입니다. 이 도구는 웹 기반으로 구현되어 있으며, 사용자는 직접 웹 브라우저에서 액세스할 수 있습니다. Decision Wheel은 캔버스 요소를 사용하여 시각적으로 매력적인 회전 휠을 생성하며, 각 섹션은 사용자가 입력한 텍스트로 채워집니다. 사용자는 휠을 회전시키고 멈출 때까지 기다린 후, 선택된 섹션의 텍스트를 결과로 받습니다. 이 도구는 사용자가 편향에 영향을 받지 않고 공정한 결정을 내릴 수 있도록 설계되었습니다. 특히, 일상적인 결정을 내리는 데 어려움을 겪는 사용자나, 팀에서 다양한 의견을 고려해야 하는 상황에서 유용합니다.",
+      "usage_steps": [
+        "1. Decision Wheel 웹 페이지를 방문합니다.",
+        "2. '옵션 추가' 버튼을 클릭하여 결정할 수 있는 옵션들을 하나씩 입력합니다. 각 옵션은 개별 섹션으로 표시됩니다.",
+        "3. 모든 옵션을 입력한 후, '휠 설정' 버튼을 클릭하여 휠의 색상, 폰트 크기 등을 조정할 수 있습니다.",
+        "4. '회전' 버튼을 클릭하여 휠을 시작합니다. 휠이 자동으로 회전하기 시작합니다.",
+        "5. 휠이 멈추면, 선택된 섹션의 텍스트가 하단의 결과 창에 표시됩니다.",
+        "6. 결과를 확인한 후, 필요하다면 '새로 시작' 버튼을 클릭하여 옵션을 초기화하고 다시 시작할 수 있습니다."
+      ],
+      "usage_examples": [
+        "예시 1: 친구들과 식사를 할 때, 어떤 음식을 먹을지 결정할 수 없습니다. 각 친구가 좋아하는 음식을 옵션으로 추가하고, Decision Wheel을 사용하여 결정합니다.",
+        "예시 2: 프로젝트 팀이 다양한 아이디어를 평가할 때, 공정하게 하나를 선택해야 합니다. 각 아이디어를 옵션으로 추가하고, Decision Wheel을 사용하여 팀원들이 모두 동의할 수 있는 아이디어를 선택합니다.",
+        "예시 3: 여행 계획을 세울 때, 여러 목적지 중에서 선택해야 합니다. 각 목적지를 옵션으로 추가하고, Decision Wheel을 사용하여 무작위로 여행지를 선택합니다.",
+        "예시 4: 학교 프로젝트 그룹에서 각 멤버가 맡을 역할을 결정해야 합니다. 각 역할을 옵션으로 추가하고, Decision Wheel을 사용하여 각 멤버가 공정하게 역할을 받을 수 있도록 합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Decision Wheel es una herramienta digital interactiva diseñada para tomar decisiones aleatorias basadas en una lista de opciones proporcionadas por el usuario. Técnica y conceptualmente, esta herramienta utiliza algoritmos de generación de números pseudoaleatorios para seleccionar un resultado de manera equitativa. Esta funcionalidad está encapsulada en una interfaz gráfica de usuario (GUI) que simula un giroscopio o rueda, que se visualiza y anima en tiempo real utilizando tecnologías web modernas como HTML5, CSS3 y JavaScript.\n\nLos usuarios necesitan esta herramienta en diversas situaciones donde la toma de decisiones puede ser complicada o simplemente divertida. Por ejemplo, en reuniones grupales para decidir qué actividad realizar, en salas de clase para elegir a un estudiante al azar para una tarea, o en reuniones de negocios para seleccionar ideas para proyectos piloto. La herramienta no solo facilita la toma de decisiones, sino que también añade un elemento de diversión y sorpresa, lo que puede ser beneficioso en entornos tanto sociales como profesionales.\n\nPara utilizar el Decision Wheel, el usuario debe ingresar una lista de opciones en el campo de texto proporcionado. El sistema procesa esta lista y la almacena en un array de JavaScript. Cuando el usuario activa el giro de la rueda, el algoritmo selecciona un índice aleatorio de este array, que se corresponde con una de las opciones ingresadas. La animación de la rueda girando y deteniéndose en el resultado seleccionado es gestionada por CSS3 y JavaScript, proporcionando una experiencia visual atractiva y fluida.",
+      "usage_steps": [
+        "Abre la página del Decision Wheel en tu navegador web.",
+        "En la sección 'Opciones', ingresa cada opción en una línea separada.",
+        "Completa el ingreso de opciones y presiona el botón 'Añadir Opciones'.",
+        "Verifica que todas las opciones se hayan agregado correctamente en la lista de la derecha.",
+        "Haz clic en el botón 'Girar la Rueda' para iniciar el proceso de selección.",
+        "Observa cómo la rueda gira y se detiene, mostrando el resultado seleccionado al final."
+      ],
+      "usage_examples": [
+        "En una reunión de amigos para decidir el juego a jugar durante una noche de juegos de mesa.",
+        "En una sala de aula para elegir a un estudiante al azar para presentar un proyecto.",
+        "En una empresa durante una reunión de equipo para seleccionar quién dará la próxima presentación a los clientes.",
+        "En una fiesta de cumpleaños para determinar quién cortará el pastel."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Decision Wheel é uma ferramenta interativa e divertida que utiliza um gerador de números aleatórios (RNG) para selecionar uma das opções inseridas pelo usuário. Técnicamente, a ferramenta opera em um ambiente de navegador, não necessitando de downloads ou instalações. Quando o usuário insere as opções e inicia a roda, o algoritmo RNG é ativado, garantindo que cada resultado seja imprevisível e equitativo. A interface é construída usando HTML5, CSS3 e JavaScript, proporcionando uma experiência responsiva e fluida em qualquer dispositivo. Além disso, a ferramenta inclui recursos de personalização, permitindo que os usuários ajustem a aparência da roda, como cores e estilos, para atender a diferentes cenários de uso. O Decision Wheel é particularmente útil em situações onde a tomada de decisões pode ser estressante ou indecisa, como em grupos de amigos escolhendo um restaurante, em reuniões de equipe para decidir tarefas, ou até mesmo em atividades educacionais para introduzir conceitos de probabilidade.",
+      "usage_steps": [
+        "Abra a página do Decision Wheel no seu navegador e aguarde a carga completa da interface.",
+        "Na seção 'Adicione suas opções', digite cada uma das opções que você deseja incluir na roda, separadas por vírgulas ou pressionando Enter.",
+        "Personalize a aparência da roda clicando no ícone de configurações e ajustando as cores, estilos e outras opções disponíveis.",
+        "Quando estiver pronto, clique no botão 'Girar a roda' para iniciar o processo de seleção aleatória.",
+        "Observe a roda girar e pare automaticamente, exibindo a opção selecionada no topo.",
+        "Clique no botão 'Reiniciar' se desejar realizar uma nova rodada ou adicionar mais opções."
+      ],
+      "usage_examples": [
+        "Um grupo de amigos indecisos sobre onde jantar no fim de semana pode usar o Decision Wheel para inserir nomes de restaurantes e deixar a roda decidir o destino.",
+        "Um professor pode utilizar a ferramenta para selecionar aleatoriamente alunos para responder perguntas em sala de aula, garantindo uma participação mais equitativa.",
+        "Em uma reunião de equipe, o gerente pode usar o Decision Wheel para atribuir tarefas pendentes a diferentes membros do time, evitando conflitos e indecisões.",
+        "Um organizador de eventos pode usar a ferramenta para sortear premiações entre participantes, adicionando um elemento de surpresa e emoção à atividade."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Decision Wheel est une application web interactive qui utilise des algorithmes de génération de nombres aléatoires pour simuler le tour de roue physique. Cette roue est configurée avec des options définies par l'utilisateur, qui peuvent varier de simples choix binaires à des listes complexes de décisions. La roue est générée à l'aide de SVG (Scalable Vector Graphics), assurant une qualité visuelle adaptée à tous les écrans et appareils. L'algorithme derrière la roue garantit une distributionuniforme des résultats, rendant chaque tour aussi imprévisible et équitable que possible. Les utilisateurs peuvent bénéficier de cette outil pour des scénarios variés, tels que la prise de décisions groupales, l'organisation de jeux de hasard, ou même la résolution de dilemmes personnels. Son interface intuitive et son fonctionnement simple en font un outil accessible à tous, tout en offrant des fonctionnalités avancées pour les utilisateurs plus techniques.",
+      "usage_steps": [
+        "Accédez à la page du Decision Wheel via le lien 'decision-wheel' dans la catégorie 'fun'.",
+        "Cliquez sur le bouton 'Ajouter une option' pour saisir chaque choix que vous souhaitez inclure dans la roue.",
+        "Une fois toutes les options ajoutées, personnalisez l'apparence de la roue en utilisant les options de couleur et de style disponibles dans le menu 'Personnalisation'.",
+        "Cliquez sur le bouton 'Lancer la roue' pour initier le processus de spin. La roue tournera de manière animée avant de s'arrêter sur une option.",
+        "Observez l'option sélectionnée par la roue, affichée en surbrillance. Vous pouvez cliquer sur 'Rejouer' pour effectuer un nouveau spin si nécessaire.",
+        "Si vous souhaitez enregistrer la configuration actuelle de la roue, utilisez le bouton 'Enregistrer' pour créer un lien vers votre configuration personnalisée, que vous pourrez partager ou réutiliser plus tard."
+      ],
+      "usage_examples": [
+        "Dans un groupe d'amis, utiliser le Decision Wheel pour décider du restaurant où manger lors d'une sortie en ville. Chaque membre du groupe ajoute son restaurant préféré, et la roue choisit le gagnant.",
+        "Un enseignant peut utiliser le Decision Wheel pour sélectionner aléatoirement des étudiants pour répondre à des questions en classe, garantissant une participation équitable de tous les élèves.",
+        "Dans un contexte de développement de produit, une équipe peut utiliser le Decision Wheel pour sélectionner des idées de fonctionnalités parmi une liste de propositions, afin de démarrer rapidement des prototypes ou des tests.",
+        "Un auteur en quête d'inspiration peut utiliser le Decision Wheel pour choisir entre différents thèmes ou personnages pour son prochain roman, ajoutant un élément de surprise et de spontanéité à son processus créatif."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Decision Wheel ist eine interaktive Webanwendung, die auf zufälligen Entscheidungsprozessen basiert. Technisch gesehen nutzt es einen algorithmisch generierten Zufallsgenerator, um aus einer vordefinierten Liste von Optionen eine zufällige Auswahl zu treffen. Dieses Werkzeug ist besonders nützlich in Situationen, in denen Benutzer zwischen mehreren Optionen entscheiden müssen, ohne einen klaren Favoriten zu haben. Es kann in verschiedenen Kontexten eingesetzt werden, wie zum Beispiel in Gruppenentscheidungen, bei der Auswahl von Aufgaben in Teammeetings oder sogar bei persönlichen Entscheidungen, die von einem einfachen Menüauswahl bis hin zur Wahl eines Aktivitätsplans reichen. Das Decision Wheel implementiert eine benutzerfreundliche Schnittstelle, die es Benutzern ermöglicht, ihre Optionen in Eingabefeldern zu definieren, die Anzahl der Drehungen zu steuern und das Ergebnis visuell durch eine rotierende Grafik zu verfolgen. Die Anwendung speichert Benutzeroptionen lokal im Browser, sodass sie bei zukünftigen Besuchen erneut verwendet werden können. Dies sorgt für eine nahtlose und effiziente Benutzererfahrung.",
+      "usage_steps": [
+        "Öffnen Sie das Decision Wheel auf der Website und klicken Sie auf das Feld 'Optionen hinzufügen', um Ihre Entscheidungsmöglichkeiten einzugeben.",
+        "Trennen Sie jede Option durch ein Komma oder drücken Sie die Eingabetaste, um sie in eine neue Zeile zu verschieben.",
+        "Klicken Sie auf 'Optionen speichern', um Ihre Eingaben zu übernehmen und die Räderkonfiguration zu aktualisieren.",
+        "Wählen Sie die Anzahl der Drehungen, die das Rad durchführen soll, indem Sie den Slider oder das Eingabefeld verwenden.",
+        "Klicken Sie auf den 'Start' Button, um das Rad zu drehen und auf der Grundlage des Zufallsgenerators eine Entscheidung zu treffen.",
+        "Das Rad wird langsamer und stoppt bei der ausgewählten Option. Das Ergebnis wird dann am unteren Rand der Anwendung angezeigt."
+      ],
+      "usage_examples": [
+        "Gruppenentwicklung: Ein Projektteam muss zwischen verschiedenen Prototypen für ein neues Produkt entscheiden. Sie verwenden das Decision Wheel, um eine faire und unvoreingenommene Wahl zu treffen, die niemandem vorteilhaft ist.",
+        "Teammeeting: In einem wöchentlichen Teammeeting wird zufällig ein Teammitglied ausgewählt, um eine Präsentation zu halten. Das Decision Wheel hilft dabei, sicherzustellen, dass die Auswahl zufällig und gerecht ist.",
+        "Persönliche Entscheidungen: Ein Benutzer kann das Decision Wheel nutzen, um zufällig zwischen verschiedenen Restaurantauswahlen zu entscheiden, wenn er sich nicht entscheiden kann, wo er zu Abend essen will.",
+        "Unterhaltung: Einige Freunde verwenden das Decision Wheel, um zufällig eine Aktivität für ihren gemeinsamen Ausflug auszuwählen, um den Entscheidungsprozess zu beschleunigen und die Gruppe zu unterhalten."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Decision Wheel представляет собой интерактивное веб-приложение, которое позволяет пользователям принимать случайные решения из предложенных вариантов. Этот веб-инструмент реализован с использованием современных веб-технологий, таких как HTML5, CSS3 и JavaScript, что обеспечивает плавную анимацию и высокую производительность. Decision Wheel может быть полезен в различных сценариях, от развлекательных игр до принятия решений в повседневной жизни или на рабочем месте. Например, вы можете использовать его для выбора места для ланча, определения очередности выполнения задач или для проведения интерактивных игр на корпоративных мероприятиях. Приложение позволяет пользователям добавлять свои варианты, настраивать внешний вид колеса и сохранять предпочтения. В основе работы инструмента лежит алгоритм случайного выбора, который использует генератор случайных чисел (RNG) для обеспечения справедливости и непредсказуемости результатов.",
+      "usage_steps": [
+        "Шаг 1: Откройте страницу Decision Wheel на сайте и нажмите кнопку «Добавить вариант».",
+        "Шаг 2: Введите название первого варианта в появившемся поле и нажмите «Добавить».",
+        "Шаг 3: Повторите шаг 2 для добавления всех необходимых вариантов.",
+        "Шаг 4: После добавления всех вариантов, нажмите кнопку «Запустить колесо».",
+        "Шаг 5: Колесо начнет вращаться. Вы можете контролировать скорость вращения с помощью ползунка в настройках.",
+        "Шаг 6: Когда колесо остановится, результат будет отображен в центре колеса. Вы можете сохранить результат или начать новый раунд."
+      ],
+      "usage_examples": [
+        "Пример 1: Группа друзей не может решить, куда пойти на ужин. Они добавляют названия нескольких ресторанов в Decision Wheel и запускают колесо, чтобы выбрать один из них.",
+        "Пример 2: На корпоративном тренинге тренер использует Decision Wheel для случайного выбора участников, которые будут выполнять задания. Это обеспечивает равные возможности для всех участников.",
+        "Пример 3: Семья собирается на выходные и не может выбрать, какой вид активности выбрать. Они добавляют несколько вариантов, таких как поход, пикник или посещение музея, и запускают колесо для принятия решения.",
+        "Пример 4: Менеджер проекта использует Decision Wheel для случайного распределения задач между членами команды. Это помогает избежать конфликтов и обеспечивает справедливое распределение рабочих обязанностей."
+      ]
+    },
+    "ar": {
+      "detailed_description": "Decision Wheel هو أداة تفاعلية عبر الإنترنت مصممة لمساعدة المستخدمين في إجراء القرارات العشوائية من قائمة الخيارات المحددة. تستخدم هذه الأداة تقنيات الويب الحديثة مثل HTML5 و JavaScript لتقديم تجربة سلسة ومرنة. عندما يتم إدخال الخيارات وتشغيل العجلة، تقوم الأداة بتنفيذ خوارزمية عشوائية لتحديد الخيار الفائز. هذه العملية تعتمد على مولد الأرقام العشوائية (RNG) لضمان العدالة والشفافية في القرارات. يمكن استخدام Decision Wheel في مجموعة متنوعة من السياقات، بدءًا من اختيار الأنشطة اليومية وصولاً إلى اتخاذ قرارات العمل العشوائية. سواء كنت تحتاج إلى اختيار مكان لتناول العشاء أو تحديد الفائز في مسابقة، فإن Decision Wheel يمكن أن يوفر حلًا سهل الاستخدام وفعال.",
+      "usage_steps": [
+        "افتح الصفحة الرئيسية لـ Decision Wheel وسترى عجلة القرارات في وسط الشاشة.",
+        "انقر على زر 'إضافة خيار' لإدخال الخيارات المتاحة. يمكنك إدخال ما يصل إلى 20 خيارًا.",
+        "بعد إدخال جميع الخيارات، يمكنك اختيار الوضع 'عشوائي' أو 'مخصص' من القائمة المنسدلة. الوضع 'مخصص' يتيح لك ضبط احتمالات الخيارات المختلفة.",
+        "اضغط على زر 'تشغيل العجلة' لبدء الدوران. ستبدأ العجلة بالدوران بشكل عشوائي.",
+        "عندما تتوقف العجلة، سيظهر الخيار الفائز في وسط العجلة مع رسالة تأكيد.",
+        "يمكنك إعادة التشغيل ببساطة بالنقر على زر 'إعادة تشغيل' أو إضافة أو حذف الخيارات حسب الحاجة."
+      ],
+      "usage_examples": [
+        "في اجتماع فريق العمل، يمكن استخدام Decision Wheel لاختيار الشخص المسؤول عن مهمات معينة، مما يضمن العدالة في التوزيع.",
+        "خلال حفلة عائلية، يمكن استخدام العجلة لاختيار الألعاب أو الأنشطة الترفيهية القادمة، مما يزيد من حماس المشاركين.",
+        "في مطعم، يمكن للزبائن استخدام Decision Wheel لاختيار الطبق الرئيسي من القائمة، مما يضيف متعة وإثارة لتجربة تناول الطعام.",
+        "في الفصول الدراسية، يمكن للمعلمين استخدام هذه الأداة لاختيار الطلاب للإجابة على الأسئلة أو المشاركة في الأنشطة، مما يشجع على المشاركة الفعالة."
+      ]
+    }
+  }
+}

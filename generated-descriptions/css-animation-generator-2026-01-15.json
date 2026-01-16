@@ -1,0 +1,175 @@
+{
+  "slug": "css-animation-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The CSS Animation Generator is a powerful web-based application designed to streamline the creation of CSS animations through a visual interface. This tool leverages sophisticated algorithms to translate user-defined visual parameters into clean, optimized CSS code. It is particularly useful for developers and designers who want to enhance their web projects with dynamic animations but may lack the time or expertise to write complex CSS animations from scratch. The generator supports a wide range of animation properties, including keyframe animations, transitions, and easing functions, making it a versatile tool for both beginners and experienced professionals. By using the CSS Animation Generator, users can create smooth, responsive animations that improve the user experience and visual appeal of their websites. The tool's intuitive interface allows users to manipulate elements such as duration, delay, iteration count, and timing functions, and instantly preview the results. This makes it an invaluable resource for prototyping, testing, and finalizing animations before integrating them into a live project.",
+      "usage_steps": [
+        "Step 1: Open the CSS Animation Generator and select the 'New Animation' button to start a fresh project.",
+        "Step 2: Choose the type of animation you want to create from the dropdown menu, such as 'Keyframe Animation' or 'Transition'.",
+        "Step 3: Use the visual editor to set the properties of your animation, including duration, delay, and iteration count. Adjust the values using the sliders or input fields.",
+        "Step 4: Define the keyframes for your animation by clicking on the 'Add Keyframe' button and setting the specific properties at different points in the animation timeline.",
+        "Step 5: Preview your animation in the live preview pane to see how it will look on your website. Use the 'Play' button to run the animation and the 'Pause' button to stop it.",
+        "Step 6: Once you are satisfied with the animation, click the 'Generate CSS' button to get the optimized CSS code. Copy the code and paste it into your project's CSS file."
+      ],
+      "usage_examples": [
+        "Example 1: A web designer wants to add a subtle hover effect to buttons on a landing page. Using the CSS Animation Generator, they can create a smooth transition that changes the button color and adds a slight scale effect when the user hovers over it.",
+        "Example 2: A front-end developer is building a portfolio website and needs a way to animate a series of portfolio items as they scroll into view. The CSS Animation Generator helps them create a custom keyframe animation that fades in and scales up each item, enhancing the visual impact.",
+        "Example 3: A UX designer is working on a mobile app and needs to animate a loading spinner. They use the tool to create a spinning animation with a smooth easing function, ensuring that the spinner looks fluid and professional.",
+        "Example 4: A web developer is tasked with animating a complex navigation menu that slides in from the side and reveals sub-menus on hover. The CSS Animation Generator allows them to define multiple keyframes and transitions, making it easier to achieve the desired effect without writing extensive CSS code."
+      ]
+    },
+    "zh": {
+      "detailed_description": "CSS Animation Generator 是一款强大的在线工具，专为前端开发者设计，用于轻松创建复杂的CSS动画。通过直观的视觉编辑器，用户无需深入了解CSS动画的底层细节，即可生成高质量的动画效果。该工具支持多种动画属性，如变换（transform）、过渡（transition）、关键帧（keyframes）等，可以满足不同场景下的需求。用户可以通过调整时间轴、添加关键帧、设置动画持续时间和延迟等操作，实现动态效果的精确控制。此外，工具还提供了实时预览功能，用户可以在编辑过程中即时查看动画效果，确保最终结果符合预期。",
+      "usage_steps": [
+        "打开 CSS Animation Generator 工具页面，点击页面顶部的 '新建动画' 按钮，开始创建新的动画。",
+        "在左侧的 '属性选择器' 中，选择你希望应用动画的CSS属性，例如 'transform' 或 'opacity'。",
+        "在时间轴上点击，添加新的关键帧。每个关键帧代表动画的一个状态点，可以通过拖动关键帧来调整其位置。",
+        "在每个关键帧上设置具体的属性值，如旋转角度、透明度等。点击关键帧右侧的下拉菜单，选择具体属性值。",
+        "设置动画的持续时间和延迟时间。在 '动画设置' 面板中，输入你希望的动画持续时间和延迟时间（以秒为单位）。",
+        "完成设置后，点击 '生成代码' 按钮，工具将生成对应的CSS代码，你可以将这段代码复制粘贴到你的项目中使用。"
+      ],
+      "usage_examples": [
+        "网页设计师在创建一个登录页面时，希望在用户点击按钮后显示一个动画效果，如按钮背景颜色渐变和图标旋转。使用 CSS Animation Generator 可以轻松实现这一效果，提升用户体验。",
+        "前端开发者在开发一个电子商务网站时，需要为商品展示区域添加动态效果，如鼠标悬停时图片放大、标题文字淡入淡出等。通过 CSS Animation Generator，开发者可以快速生成所需的动画代码。",
+        "UI设计师在设计一个移动应用的启动页时，希望添加一个动态的加载动画，如圆形加载条的旋转动画。CSS Animation Generator 提供了丰富的动画选项，可以帮助设计师轻松实现这一效果。",
+        "游戏开发者在开发一个基于Web的游戏时，需要为角色的移动、攻击等动作添加动画效果。通过 CSS Animation Generator，开发者可以创建复杂的动画序列，使游戏角色的动作用起来更加流畅自然。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "CSS Animation Generatorは、ビジュアルエディタを使用してCSSアニメーションを作成できる強力なオンラインツールです。このツールは、ウェブ開発者が高度なアニメーションエフェクトを簡単に実装するために設計されています。CSSアニメーションは、ウェブサイトのユーザーエクスペリエンスを大幅に向上させる重要な要素であり、このツールはその作成プロセスを簡素化します。ユーザーは、時系列でキーフレームを設定し、トランジションやイージングを調整することで、複雑なアニメーションを短時間で作成できます。さらに、生成されたCSSコードは、ウェブサイトに直接貼り付けられる形式で提供されるため、実装が簡単です。CSS Animation Generatorは、ウェブデザインのプロフェッショナルだけでなく、初心者にも有益なツールです。",
+      "usage_steps": [
+        "ステップ 1: CSS Animation Generatorのウェブサイトにアクセスし、[新しいプロジェクト]ボタンをクリックして開始します。",
+        "ステップ 2: [アニメーション設定]タブで、アニメーションの基本設定（持続時間、遅延、繰り返し回数）を指定します。",
+        "ステップ 3: 左側のパネルから、アニメーションに使用する要素を選択します。テキスト、形状、画像など、さまざまなオプションがあります。",
+        "ステップ 4: [キーフレームエディタ]で、アニメーションの各ポイントでのエレメントの位置、サイズ、色などのプロパティを設定します。",
+        "ステップ 5: [トランジション]タブで、各キーフレーム間の移行方法（線形、イージングイン、イージングアウトなど）を選択します。",
+        "ステップ 6: アニメーションが完成したら、[生成]ボタンをクリックしてCSSコードを取得し、ウェブサイトに適用します。"
+      ],
+      "usage_examples": [
+        "Example 1: ロゴのインタラクティブなロードアニメーションを作成する。ウェブサイトのロード時に、ロゴが徐々に現れ、色が変化するアニメーションを実装します。",
+        "Example 2: リアルタイムグラフのデータポイントアニメーション。グラフのデータポイントが新しい値にスムーズに移動するアニメーションを作成します。これにより、データの変動が視覚的に明確に表現されます。",
+        "Example 3: モーダルウィンドウのオープン/クローズアニメーション。ユーザーがボタンをクリックしたときに、モーダルウィンドウがスライドイン/スライドアウトするアニメーションを実装します。",
+        "Example 4: ナビゲーションメニューのホバー効果。メニュー項目にマウスをホバーしたときに、項目がスライドしたり、色が変わり、アイコンが回転するアニメーションを追加します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "CSS Animation Generator는 비전문가도 쉽게 CSS 애니메이션을 생성할 수 있도록 설계된 시각적 편집기입니다. 이 도구는 사용자가 직관적인 인터페이스를 통해 애니메이션의 키프레임, 지속시간, 타이밍 함수 등을 설정할 수 있게 합니다. CSS 애니메이션은 웹사이트의 사용자 경험을 향상시키고, 웹 애플리케이션의 동적 요소를 추가하는 데 필수적입니다. 이 도구는 디자이너와 개발자가 복잡한 CSS 코드를 직접 작성하지 않고도 빠르게 원하는 애니메이션을 생성할 수 있게 합니다. 특히, 이 도구는 애니메이션의 각 단계를 시각적으로 표시하고, 코드를 실시간으로 업데이트하여 즉시 결과를 확인할 수 있는 기능을 제공합니다. 이를 통해 사용자는 애니메이션의 세부 사항을 정밀하게 조정할 수 있습니다.",
+      "usage_steps": [
+        "스텝 1: CSS Animation Generator 웹사이트에 접속하여 '새 애니메이션 생성' 버튼을 클릭합니다.",
+        "스텝 2: '선택 요소' 메뉴에서 애니메이션을 적용할 HTML 요소를 선택합니다.",
+        "스텝 3: '키프레임 설정' 메뉴에서 애니메이션의 시작과 끝 상태를 정의합니다. 예를 들어, '0%'와 '100%' 키프레임을 설정할 수 있습니다.",
+        "스텝 4: '타이밍 함수' 메뉴에서 애니메이션의 속도 변화를 조절합니다. 'linear', 'ease-in', 'ease-out' 등의 옵션을 선택할 수 있습니다.",
+        "스텝 5: '지속 시간' 입력 필드에서 애니메이션이 진행되는 시간을 설정합니다. 예를 들어, 2초 또는 500ms 등을 입력할 수 있습니다.",
+        "스텝 6: '코드 생성' 버튼을 클릭하여 생성된 CSS 코드를 복사하거나, '다운로드' 버튼을 클릭하여 파일로 저장합니다."
+      ],
+      "usage_examples": [
+        "예시 1: 사용자가 버튼을 클릭할 때 애니메이션이 발생하도록 설정합니다. 버튼 클릭 시 버튼의 배경색이 변하고, 글자 크기가 증가하도록 애니메이션을 생성합니다.",
+        "예시 2: 웹사이트의 로딩 스피너를 생성합니다. 로딩 스피너는 원형으로 회전하며, 지속 시간은 1초로 설정하여 부드럽게 움직이도록 합니다.",
+        "예시 3: 애니메이션을 사용하여 네비게이션 메뉴가 슬라이드 인 효과로 나타나도록 합니다. 메뉴가 화면 왼쪽에서 오른쪽으로 슬라이드하여 나타나는 애니메이션을 생성합니다.",
+        "예시 4: 이미지 슬라이드 쇼의 이미지 전환 효과를 애니메이션으로 구현합니다. 이미지가 순차적으로 페이드 인 효과로 변경되도록 애니메이션을 설정합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El CSS Animation Generator es una herramienta de vanguardia diseñada para facilitar la creación de animaciones CSS de alta calidad sin necesidad de un amplio conocimiento de codificación. Esta herramienta ofrece una interfaz visual intuitiva que permite a los desarrolladores y diseñadores web generar animaciones complejas con solo unos pocos clics. La importancia de las animaciones CSS en el diseño web moderno no puede ser subestimada, ya que mejoran la experiencia del usuario, hacen que los sitios web sean más atractivos y pueden incluso mejorar la conversión y el engagement. El CSS Animation Generator es ideal para desarrolladores frontend, diseñadores web y cualquier persona que busque añadir un toque de interactividad a sus proyectos web. La herramienta funciona mediante una serie de controles visuales que permiten ajustar propiedades como duración, retraso, iteraciones, función de temporización y más. Además, ofrece un área de vista previa en tiempo real para ver cómo se verá la animación en un entorno web real. Al finalizar, el usuario puede exportar el código CSS generado directamente, listo para ser integrado en su proyecto.",
+      "usage_steps": [
+        "Abra el CSS Animation Generator en su navegador y seleccione el tipo de animación que desea crear, como 'Fade In', 'Slide In', 'Rotate', entre otros, desde el menú desplegable 'Tipo de Animación'.",
+        "Configure los parámetros de la animación utilizando los controles deslizantes y campos de entrada en el panel lateral. Esto incluye ajustar la duración, el retraso, el número de iteraciones y la función de temporización (timing function).",
+        "Personalice las propiedades específicas de la animación, como la dirección y el ángulo de rotación, si es relevante para el tipo de animación seleccionado.",
+        "Utilice el área de vista previa en tiempo real para ver cómo se verá la animación una vez implementada en un sitio web. Puede interactuar con la vista previa para asegurarse de que la animación cumple con sus expectativas.",
+        "Si es necesario, ajuste los valores hasta que la animación sea perfecta. La herramienta guarda automáticamente los cambios, por lo que puede experimentar con diferentes configuraciones sin perder el progreso.",
+        "Una vez que esté satisfecho con la animación, haga clic en el botón 'Exportar Código' en la parte inferior de la página. El código CSS generado se mostrará en una ventana emergente, listo para ser copiado y pegado en su proyecto web."
+      ],
+      "usage_examples": [
+        "Un diseñador web está creando un sitio de comercio electrónico y desea que los productos se deslicen suavemente hacia la vista del usuario cuando la página se cargue. Utiliza el CSS Animation Generator para crear una animación 'Slide In' que se activa al cargar la página, mejorando la experiencia de navegación y atrayendo la atención del usuario a los productos destacados.",
+        "Un desarrollador frontend está trabajando en una aplicación de gestión de tareas y necesita una animación que haga que los elementos de la lista parpadeen cuando se marquen como completados. Con el CSS Animation Generator, crea una animación 'Fade' que se activa al hacer clic en el botón de finalización, proporcionando un feedback visual claro y mejorando la usabilidad de la aplicación.",
+        "Una agencia de diseño web está desarrollando un sitio de portfolio para un cliente y necesita una animación de carga personalizada para la página de inicio. Utiliza el CSS Animation Generator para crear una animación de 'Carga Circular' que se muestra mientras los recursos de la página se cargan en segundo plano, mejorando la percepción de velocidad y profesionalismo del sitio.",
+        "Un desarrollador de juegos web está creando una interfaz de usuario para un juego de estrategia y necesita que los botones tengan una animación de pulso para indicar que están listos para ser clicados. El CSS Animation Generator le permite crear una animación 'Pulse' que se activa cuando el ratón se posiciona sobre el botón, añadiendo un toque interactivo y atractivo a la interfaz del juego."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O CSS Animation Generator é uma ferramenta inovadora que permite aos desenvolvedores criar animações CSS complexas de forma visual, sem a necessidade de escrever código manualmente. Esta ferramenta utiliza uma interface gráfica intuitiva para gerar animações animadas, permitindo que os usuários manipulem propriedades como opacidade, rotação, escala, translação e muito mais. O CSS Animation Generator é essencial para designers e desenvolvedores que desejam adicionar elementos visuais dinâmicos aos seus projetos, otimizando o tempo de desenvolvimento e reduzindo a curva de aprendizado associada ao CSS avançado. Com suporte para keyframes, transições suaves e efeitos de animação avançados, esta ferramenta oferece uma maneira eficiente de criar animações que melhoram a experiência do usuário em sites e aplicativos.",
+      "usage_steps": [
+        "Abra o CSS Animation Generator no seu navegador e selecione o elemento que deseja animar, como um botão ou uma imagem.",
+        "Na seção 'Propriedades', ajuste as propriedades iniciais do elemento, como posição, tamanho e cor. Utilize os controles deslizantes ou insira valores específicos.",
+        "Clique em 'Adicionar Keyframe' para definir pontos-chave da animação. Para cada keyframe, ajuste as propriedades do elemento para criar a animação desejada.",
+        "Na guia 'Transições', configure a duração e o timing function da animação. Experimente diferentes opções, como 'linear', 'ease-in' e 'ease-out', para obter diferentes efeitos.",
+        "Pré-visualize a animação no painel de visualização ao lado da interface de edição. Ajuste os parâmetros conforme necessário para aperfeiçoar o resultado.",
+        "Quando estiver satisfeito com a animação, clique em 'Gerar Código' para obter o CSS resultante. Copie o código e cole-o em seu projeto para aplicar a animação."
+      ],
+      "usage_examples": [
+        "Um designer de UX pode usar o CSS Animation Generator para criar uma animação de carregamento personalizada para um site, melhorando a experiência do usuário durante tempos de espera.",
+        "Um desenvolvedor front-end pode utilizar a ferramenta para animar a transição de um menu de navegação, tornando a interface mais interativa e agradável aos olhos.",
+        "Um criador de conteúdo para redes sociais pode usar o gerador para criar animações para banners e anúncios, tornando-os mais chamativos e envolventes.",
+        "Um desenvolvedor de aplicativos pode aplicar animações sutis a elementos de interface do usuário, como botões e ícones, para fornecer feedback visual aos usuários."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le CSS Animation Generator est une puissante application en ligne conçue pour simplifier la création de CSS animations. Au-delà d'un simple éditeur de code, cet outil offre une interface graphique intuitive qui permet aux développeurs de visualiser et d'ajuster les animations en temps réel. Les utilisateurs peuvent sélectionner parmi une variété de types d'animations, tels que les transitions, les transformations, et les animations clés, et modifier les propriétés CSS telles que la durée, le timing, et les fonctions d'atténuation. Cette approche visuelle rend la création d'animations CSS plus accessible, même pour ceux qui n'ont pas une expertise approfondie en CSS. Les développeurs peuvent utiliser cet outil pour améliorer l'expérience utilisateur en ajoutant des effets visuels dynamiques à leurs applications web, tels que des boutons animés, des loaders, et des transitions de pages. De plus, la possibilité d'exporter le code CSS généré directement permet une intégration facile dans n'importe quel projet front-end, sans nécessiter de connaissances avancées en animation CSS.",
+      "usage_steps": [
+        "Ouvrez le CSS Animation Generator et choisissez le type d'animation que vous souhaitez créer (par exemple, transition, transformation, animation clés).",
+        "Utilisez le panneau de propriétés pour ajuster les paramètres de l'animation, tels que la durée, le timing, et la fonction d'atténuation.",
+        "Dans l'éditeur visuel, prévisualisez l'animation en temps réel pour vérifier son comportement et effectuer des ajustements si nécessaire.",
+        "Ajoutez des propriétés spécifiques à votre élément, comme la rotation, la taille, l'opacité, en utilisant les options disponibles dans le panneau de contrôle.",
+        "Une fois que vous êtes satisfait de votre animation, cliquez sur le bouton 'Exporter' pour générer le code CSS correspondant.",
+        "Copiez le code CSS généré et intégrez-le dans votre projet front-end."
+      ],
+      "usage_examples": [
+        "Un développeur d'un site e-commerce souhaite créer un effet de zoom sur les images des produits lors du survol de la souris. Il utilise le CSS Animation Generator pour ajuster la propriété de transformation et la durée de l'animation, puis exporte le code pour l'intégrer dans le site.",
+        "Un designer web conçoit une page de connexion avec un loader animé. Il utilise l'outil pour créer une animation de rotation continue, exporte le code CSS, et l'ajoute à la classe CSS du loader.",
+        "Un développeur de jeux web crée une animation de chute pour des pièces d'or dans un jeu. Il utilise le CSS Animation Generator pour définir une animation clés avec des points d'arrivée et de départ, puis ajoute des effets de chute réalistes en ajustant les propriétés de mouvement.",
+        "Un créateur de portfolios en ligne souhaite ajouter une transition fluide entre les différentes sections de son site. Il utilise l'outil pour créer une animation de défilement doux, ajuste les propriétés de transition, et exporte le code pour l'intégrer dans son site."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der CSS Animation Generator ist ein leistungsstarkes Online-Tool, das Entwicklern und Designerinnen ermöglicht, komplexe CSS-Animationen durch eine visuelle Benutzeroberfläche zu erstellen. Technisch gesehen, kombiniert das Tool die Prinzipien von CSS-Animationen mit einer benutzerfreundlichen Oberfläche, die die Manuellarbeit bei der Erstellung von Keyframes, Transitionen und Animationseigenschaften erheblich reduziert. Benutzer können Animationen visuell gestalten, ohne tief in den Code eintauchen zu müssen, was die Entwicklung von interaktiven Webseiten und Anwendungen beschleunigt. Die Notwendigkeit dieses Tools wird durch die steigende Nachfrage nach dynamischen und ansprechenden Benutzeroberflächen getrieben, die oft manuell zeitaufwendig und fehleranfällig sind. Mit dem CSS Animation Generator können Entwicklerinnen und Entwickler schnell und effizient hochwertige Animationssequenzen erstellen, die auf verschiedenen Geräten und Browsern konsistent laufen. Dies ist besonders nützlich bei Responsive Design und der Optimierung von Benutzererfahrungen auf mobilen Geräten.",
+      "usage_steps": [
+        "Öffnen Sie den CSS Animation Generator in Ihrem Webbrowser und wählen Sie den 'Neue Animation' Button, um ein neues Projekt zu starten.",
+        "Wählen Sie im Menü auf der linken Seite die Art der Animation, die Sie erstellen möchten, wie z.B. 'Bewegung', 'Größe' oder 'Farbe'.",
+        "Verwenden Sie die Timeline am unteren Rand, um Keyframes für Ihre Animation hinzuzufügen oder zu bearbeiten. Klicken Sie auf die gewünschte Position auf der Timeline, um einen neuen Keyframe zu erstellen.",
+        "Passen Sie die Eigenschaften der Animation im Panel auf der rechten Seite an. Hier können Sie Dinge wie Dauer, Timing-Funktion, Verzögerung und Wiederholung konfigurieren.",
+        "Testen Sie Ihre Animation, indem Sie auf den 'Vorschau'-Button klicken. Dies ermöglicht Ihnen, die Animation in Echtzeit zu sehen und notwendige Anpassungen vorzunehmen.",
+        "Wenn Sie zufrieden mit Ihrer Animation sind, klicken Sie auf 'Code exportieren', um den generierten CSS-Code herunterzuladen oder direkt in Ihr Projekt zu kopieren."
+      ],
+      "usage_examples": [
+        "Ein Webdesigner möchte eine interaktive Landing Page erstellen, die auf Mausbewegungen reagiert. Mit dem CSS Animation Generator kann er eine Animation erstellen, die Elemente auf der Seite vergrößert und verkleinert, wenn der Mauszeiger darüber fährt.",
+        "Eine Frontend-Entwicklerin arbeitet an einer E-Commerce-Website und braucht eine Animation, die Produkte hervorhebt, wenn sie in den Warenkorb gelegt werden. Sie verwendet den CSS Animation Generator, um eine Animation zu erstellen, die das Produktblatt fallen lässt und in den Warenkorb plumpst.",
+        "Ein UX-Designer plant eine Progressive Web App (PWA) und benötigt eine Animation, die den Benutzer durch die App führt. Mit dem Generator erstellt er eine Schritt-für-Schritt-Tour, die Elemente hervorhebt und Anweisungen anzeigt.",
+        "Ein Grafikdesigner möchte eine Animation für eine Firmenpräsentation erstellen, die ein Logo vergrößert, rotiert und verblasst. Der CSS Animation Generator ermöglicht es ihm, diese komplexe Animation schnell und ohne tiefgehende CSS-Kenntnisse zu erstellen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "CSS Animation Generator — это мощный инструмент, который позволяет визуально создавать анимации CSS без необходимости глубокого погружения в синтаксис CSS. Этот инструмент особенно полезен для веб-разработчиков, которые хотят добавить динамичные элементы на свои веб-сайты, но не всегда имеют время или желание писать сложные стили вручную. С помощью CSS Animation Generator можно создавать анимации, такие как перемещение, масштабирование, вращение и изменение прозрачности элементов, а затем экспортировать готовый CSS-код для внедрения в проект. Визуальный редактор предоставляет интерфейс с интуитивно понятными элементами управления, такими как таймлайн, ключевые кадры и свойства анимации. Это позволяет пользователям легко настраивать параметры анимации, такие как продолжительность, задержка и функция постепенного изменения. Инструмент также поддерживает создание сложных анимационных цепочек и сочетание нескольких эффектов для создания уникальных визуальных решений.",
+      "usage_steps": [
+        "Откройте страницу CSS Animation Generator и выберите элемент, который вы хотите анимировать, используя выпадающее меню 'Элемент'.",
+        "Настройте начальные свойства элемента, такие как позиция, размер и цвет, во вкладке 'Свойства'.",
+        "Перейдите на вкладку 'Ключевые кадры' и добавьте ключевые кадры, указав время и параметры анимации для каждого кадра.",
+        "Используйте таймлайн для регулировки продолжительности и последовательности анимации. Добавьте эффекты, такие как постепенное изменение и повторение, во вкладке 'Дополнительные настройки'.",
+        "Предварительный просмотр анимации в реальном времени с помощью кнопки 'Предпросмотр' в правом верхнем углу.",
+        "Когда анимация будет готова, скопируйте сгенерированный CSS-код из окна 'Выходной код' и вставьте его в свой проект."
+      ],
+      "usage_examples": [
+        "Создание анимированной кнопки, которая масштабируется и меняет цвет при наведении курсора. Это поможет повысить визуальную привлекательность и пользовательский опыт на веб-сайте.",
+        "Разработка анимированного логотипа для заглавной страницы, который постепенно появляется и вращается, создавая эффект приветствия посетителей сайта.",
+        "Добавление эффекта прокрутки на элементы страницы, чтобы они появлялись постепенно при прокрутке, обеспечивая более динамичный и интерактивный опыт для пользователя.",
+        "Создание сложной анимации для загрузочного экрана, который включает несколько последовательных этапов, таких как появление текста, изменение фона и постепенное появление логотипа."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مولد التحريك CSS هو أداة متقدمة تتيح للمطورين إنشاء تأثيرات تحريك معقدة باستخدام لغة التصعيد المرنة CSS. تسمح الأداة للمستخدمين بتصميم التحريك بمساعدة واجهة بصرية سهلة الاستخدام، مما يوفر حلًا فعالًا لمن يرغب في إضافة حركة وجاذبية بصريّة إلى مواقع الويب الخاصة بهم. يمكن استخدام هذه الأداة لتصميم تحركات تدريجية، دوّامية، وزخم، بالإضافة إلى تأثيرات أخرى معقدة، مما يجعلها مثالية لتطوير واجهات مستخدم تفاعلية وجذابة. تعمل الأداة عبر واجهة بصرية تتيح للمستخدمين تحديد خصائص التحريك مثل الدوران، الت可想而ة، والتحريك في الاتجاهات المختلفة، ثم توليد الرمز CSS المقابل تلقائيًا. هذا يجعلها مفيدة بشكل خاص للمطورين الذين ليس لديهم خبرة واسعة في CSS، حيث توفر الأداة واجهة سهلة الاستخدام لإنشاء تأثيرات معقدة دون الحاجة إلى فهم عميق للمكتبات أو الأطر البرمجية.",
+      "usage_steps": [
+        "افتح أداة مولد التحريك CSS وأنشئ مشروعًا جديدًا من خلال النقر على زر 'إنشاء مشروع' في الصفحة الرئيسية.",
+        "اختر نوع التحريك الذي تريد إنشاءه من القائمة المنسدلة 'نوع التحريك'. على سبيل المثال، يمكنك اختيار 'تحريك تدريجي' أو 'دوران'.",
+        "استخدم الأدوات البصرية لضبط الخصائص مثل السرعة، الزاوية، والاتجاه. يمكنك تغيير هذه الخصائص من خلال شريط التمرير أو إدخال القيم يدويًا.",
+        "أضف أي تأثيرات إضافية مثل الرجوع أو التكرار من خلال النقر على علامة التبويب 'تأثيرات إضافية'.",
+        "بعد الانتهاء من ضبط التحريك، انقر على زر 'توليد الكود' لseeing كود CSS المقابل.",
+        "نسخ كود CSS المُنتج ولصقه في ملف CSS الخاص بموقع الويب الخاص بك لتطبيق التأثير."
+      ],
+      "usage_examples": [
+        "تصميم شعار تفاعلي: يمكن للمطورين استخدام مولد التحريك CSS لإنشاء شعار يتحرك عند تمرير المؤشر عليه، مما يزيد من تفاعلية الواجهة.",
+        "إضافة حركة لأسهم التنقل: يمكن استخدام الأداة لإضافة تحريك تدريجي لأسهم التنقل في المعرض الصوري، مما يوفر تجربة مستخدم أكثر سلاسة.",
+        "تحريك العناصر عند التحميل: يمكن للمطورين إنشاء تأثيرات تحريك لعناصر مثل العناوين أو الأزرار عند تحميل الصفحة، مما يجذب انتباه الزوار.",
+        "خلق واجهة مستخدم ديناميكية: يمكن استخدام الأداة لإنشاء تحركات معقدة لعناصر القائمة المنسدلة أو الأزرار، مما يجعل الواجهة أكثر تفاعلية وجاذبية."
+      ]
+    }
+  }
+}

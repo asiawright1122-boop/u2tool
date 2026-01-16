@@ -1,0 +1,175 @@
+{
+  "slug": "half-doughnut-chart-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Half Doughnut Chart Generator is a specialized data visualization tool that enables users to create semicircular pie charts, also known as half doughnut charts. Unlike traditional pie charts, which display a full circle, this tool focuses on a semicircular format, which can be particularly effective for visualizing data sets where the emphasis is on the distribution of parts within a limited space. This tool is invaluable for developers and data analysts who need to present data in a compact yet visually appealing manner. It is especially useful for dashboards, reports, and presentations where space is a premium. The generator supports a wide range of customization options, including color schemes, labels, and data labels, allowing users to tailor the chart to their specific needs. Under the hood, the tool uses advanced SVG (Scalable Vector Graphics) and JavaScript to render the charts, ensuring that they are responsive and high-quality across different devices and screen resolutions.",
+      "usage_steps": [
+        "Step 1: Open the Half Doughnut Chart Generator and click on the 'Add Data' button to input your dataset. You can enter values and corresponding labels in the provided fields.",
+        "Step 2: Customize the chart appearance by selecting the 'Chart Style' tab. Here, you can choose from various color palettes, adjust the chart radius, and set the start angle to control the orientation of the semicircle.",
+        "Step 3: Toggle the 'Data Labels' option to display or hide the labels on the chart. You can also customize the font size and color of the labels for better readability.",
+        "Step 4: Use the 'Background' settings to add a background color or gradient to your chart. This can help the chart stand out or blend seamlessly with your website or presentation.",
+        "Step 5: Preview your chart by clicking the 'Preview' button. This will display the half doughnut chart in a separate window, allowing you to make any final adjustments.",
+        "Step 6: Once you are satisfied with the design, click 'Download' to save the chart as an SVG or PNG file. You can also embed the chart directly into your website or application using the provided HTML code."
+      ],
+      "usage_examples": [
+        "Example 1: A marketing analyst uses the Half Doughnut Chart Generator to visualize customer satisfaction levels in a compact dashboard. By displaying the data in a semicircle, they can save space while clearly showing the distribution of positive and negative feedback.",
+        "Example 2: A financial planner creates a half doughnut chart to represent the allocation of a client's investment portfolio. The semicircular format allows for a clear and concise visualization of different asset classes, making it easier for clients to understand their investment distribution.",
+        "Example 3: A project manager utilizes the tool to show the progress of various tasks in a project. The half doughnut chart helps to highlight the percentage of completed tasks versus those still pending, providing a quick overview of the project status.",
+        "Example 4: An educational platform developer uses the Half Doughnut Chart Generator to display the distribution of student test scores. The semicircular chart is integrated into the platform's dashboard, allowing teachers to quickly assess the performance of their students in a visually engaging way."
+      ]
+    },
+    "zh": {
+      "detailed_description": "半圆饼图生成器是一款在线工具，专门用于创建半圆形的饼图。与传统的圆形饼图不同，半圆饼图仅展示半个圆，这种图表形式在空间有限的场景中尤为适用，如仪表盘、报告和网页设计。用户可以通过半圆饼图生成器直观地展示数据分布，突出关键信息。半圆饼图生成器的技术基础包括HTML5、CSS3和JavaScript，通过这些技术，工具能够实时渲染图表，并提供丰富的自定义选项。用户可以调整颜色、数据标签、背景等，以满足特定的视觉需求。此外，工具支持导出图表为PNG或SVG格式，方便用户在各种平台和设备上使用。",
+      "usage_steps": [
+        "Step 1: 打开半圆饼图生成器，点击页面顶部的“新建图表”按钮，开始创建新的半圆饼图。",
+        "Step 2: 在左侧的数据输入区域，点击“添加数据”按钮，输入每个段的数据值和标签。例如，输入“收入：1000”和“支出：500”。",
+        "Step 3: 在右侧的图表预览区域，调整图表的外观。点击“颜色设置”选项卡，选择或自定义每个段的颜色。",
+        "Step 4: 点击“样式设置”选项卡，选择背景颜色、边框样式和数据标签的显示方式。",
+        "Step 5: 如果需要，点击“高级设置”选项卡，调整图表的半径、起始角度和结束角度，以获得更精确的图表效果。",
+        "Step 6: 最后，点击页面底部的“导出图表”按钮，选择导出格式（PNG或SVG），将图表保存到本地或直接分享。"
+      ],
+      "usage_examples": [
+        "Example 1: 一家初创公司希望在其季度报告中展示收入和支出的比例，使用半圆饼图生成器可以将数据以简洁明了的方式呈现在报告中。",
+        "Example 2: 一名数据分析师需要为公司的仪表盘添加一个显示部门绩效的图表，半圆饼图生成器帮助他快速创建了一个半圆饼图，突出了关键绩效指标。",
+        "Example 3: 一名网页设计师正在为一个金融网站设计一个数据展示页面，使用半圆饼图生成器创建了多个半圆饼图，以展示不同产品的收益率。",
+        "Example 4: 一名市场调研人员需要在PPT中展示用户满意度调查结果，半圆饼图生成器使他能够轻松地将调查数据转换为直观的图表，增强演示效果。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Half Doughnut Chart Generatorは、データを半円形のドーナツチャートに可視化するためのオンラインツールです。このツールは、データの一部または全体を半円形で表現することで、視覚的に理解しやすくします。特に、限られたスペースでデータを効果的に表示したい場合や、データの比較や分布を明確に提示したい場合に有用です。ユーザーは、データをCSV形式や手動入力で提供し、チャートの色、ラベル、アニメーションなどのオプションをカスタマイズできます。生成されたチャートは、SVGまたはPNG形式でエクスポート可能で、Webサイトやプレゼンテーション資料に簡単に埋め込むことができます。",
+      "usage_steps": [
+        "Step 1: 「データ入力」タブを選択し、CSVファイルをアップロードするか、手動でデータを入力します。データは2列形式（ラベルと値）で入力してください。",
+        "Step 2: 「チャート設定」タブで、チャートの半径、色のスキーム、ラベルの表示形式などをカスタマイズします。色は十六進数で指定することもできます。",
+        "Step 3: 「アニメーション」オプションを有効にすると、チャートが生成される際にスムーズなアニメーションが追加されます。动画の速度や遅延時間を調整できます。",
+        "Step 4: 「表示範囲」オプションで、チャートの表示角度を設定します。デフォルトは180度（半円）ですが、必要に応じて調整できます。",
+        "Step 5: 「プレビュー」ボタンをクリックして、設定を反映したチャートのプレビューを確認します。必要に応じて、設定をさらに調整できます。",
+        "Step 6: 「エクスポート」ボタンをクリックし、SVGまたはPNG形式でチャートを保存します。保存したファイルは、Webサイトやプレゼンテーション資料に使用できます。"
+      ],
+      "usage_examples": [
+        "Example 1: ウェブサイトのダッシュボードで、サイトの訪問者数を半円形のドーナツチャートで表示し、ユーザーに視覚的に情報を提供します。例えば、午前と午後の訪問者数を比較する場合などに使用できます。",
+        "Example 2: プレゼンテーション資料で、製品の売上分布を半円形で表示します。例えば、4つの製品の売上比率を明確に示すことで、主要な収益源を強調できます。",
+        "Example 3: 教育用コンテンツで、生徒の成績分布を半円形で視覚化します。例えば、各科目の成績分布を一目で理解できるように、半円形チャートを使用することで、成績の傾向を把握しやすくなります。",
+        "Example 4: マーケティングレポートで、キャンペーンの反応率を半円形で表示します。例えば、 diferentes キャンペーンのクリック率を比較することで、最も効果的なキャンペーンを特定できます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Half Doughnut Chart Generator는 사용자가 온라인으로 반 원형 도넛 차트를 생성할 수 있는 도구입니다. 이 도구는 데이터를 시각화하여 더 효과적으로 정보를 전달할 수 있도록 설계되었습니다. 반 원형 도넛 차트는 전체 원형 도넛 차트와 달리 데이터를 반원 형태로 표시하여 공간을 절약하면서도 중요한 정보를 강조할 수 있습니다. 이 도구는 데이터 분석가, 디자이너, 프레젠테이션 제작자 등 다양한 사용자에게 유용합니다. 특히, 프로젝트의 진행 상황, 시장 점유율, 설문조사 결과 등을 시각화하는 데 효과적입니다. 사용자는 이 도구를 통해 데이터를 입력하고, 색상, 라벨, 레전드 등의 옵션을 조정하여 원하는 형태의 차트를 생성할 수 있습니다. 또한, 차트는 HTML5 Canvas 기술을 활용하여 브라우저에서 직접 렌더링되므로, 높은 품질의 시각적 표현이 가능합니다.",
+      "usage_steps": [
+        "Step 1: 웹사이트를 방문하여 'Half Doughnut Chart Generator' 페이지로 이동합니다.",
+        "Step 2: '데이터 입력' 섹션에서 각 항목의 값을 입력합니다. 예를 들어, '값'과 '레이블'을 각각 입력합니다.",
+        "Step 3: '차트 설정' 탭에서 차트의 색상, 라벨, 레전드 등을 조정합니다. 다양한 색상 팔레트와 폰트 스타일을 선택할 수 있습니다.",
+        "Step 4: '차트 스타일' 섹션에서 차트의 시작 각도와 끝 각도를 설정하여 반 원형의 모양을 조정합니다.",
+        "Step 5: '미리보기' 버튼을 클릭하여 생성된 차트를 확인합니다. 필요에 따라 설정을 수정할 수 있습니다.",
+        "Step 6: 최종적으로 만족스러운 차트가 생성되면 '다운로드' 버튼을 클릭하여 차트를 이미지 파일로 저장합니다."
+      ],
+      "usage_examples": [
+        "Example 1: 프로젝트 매니저가 프로젝트의 진행 상황을 시각화하여 클라이언트에게 보고할 때, 각 단계의 완료 비율을 반 원형 도넛 차트로 표현하여 명확하게 전달할 수 있습니다.",
+        "Example 2: 마케팅 팀이 시장 점유율을 분석할 때, 각 경쟁자의 점유율을 반 원형 도넛 차트로 표시하여 시각적으로 유형을 파악할 수 있습니다.",
+        "Example 3: 설문조사 결과를 분석할 때, 응답자의 의견 비율을 반 원형 도넛 차트로 시각화하여 결과를 쉽게 이해할 수 있도록 할 수 있습니다.",
+        "Example 4: 재무 분석가가 예산 분배를 시각화할 때, 각 부서의 예산 비율을 반 원형 도넛 차트로 표현하여 전체적인 예산 구조를 한눈에 파악할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de Gráficos de Dona Semircular es una herramienta en línea diseñada para crear visualizaciones de datos en formato de gráfico de dona semicircular. Este tipo de gráfico es especialmente útil para representar proporciones y distribuciones de datos en un espacio reducido, ideal para sitios web, presentaciones y dashboards. La semicircularidad del gráfico permite una presentación más compacta y atractiva, facilitando la interpretación rápida de la información. Los desarrolladores y diseñadores pueden utilizar esta herramienta para generar gráficos personalizados sin necesidad de conocer a fondo lenguajes de programación como JavaScript o bibliotecas de gráficos. Además, la herramienta ofrece opciones de personalización avanzadas, como la selección de colores, etiquetas y leyendas, lo que permite adaptar el gráfico a las necesidades específicas del proyecto. La generación de gráficos de dona semicircular es especialmente útil en situaciones donde el espacio visual es limitado, como en pantallas pequeñas o en secciones de un dashboard que requieren una presentación eficiente de datos.",
+      "usage_steps": [
+        "Abre el Generador de Gráficos de Dona Semircular en tu navegador web.",
+        "En la sección 'Datos', introduce los valores numéricos que deseas representar en el gráfico, separados por comas o saltos de línea.",
+        "En la pestaña 'Etiquetas', asigna un nombre a cada valor que hayas ingresado para que aparezcan como leyendas en el gráfico.",
+        "En la sección 'Estilo', elige los colores que deseas utilizar para cada segmento del gráfico. También puedes ajustar el grosor del borde y el fondo del gráfico.",
+        "Si lo deseas, en la pestaña 'Opciones Avanzadas', puedes habilitar o deshabilitar la visualización de porcentajes y ajustar la posición de las leyendas.",
+        "Una vez que hayas configurado todos los parámetros, haz clic en 'Generar Gráfico' para crear tu gráfico de dona semicircular. El gráfico se mostrará en la sección de vista previa, y podrás descargarlo en formato PNG o SVG para usarlo en tus proyectos."
+      ],
+      "usage_examples": [
+        "Un desarrollador de una aplicación móvil de finanzas utiliza el Generador de Gráficos de Dona Semircular para mostrar la distribución de gastos mensuales de los usuarios en diferentes categorías como alimentación, transporte y entretenimiento. El gráfico compacto y claro se integra perfectamente en la interfaz de usuario de la app.",
+        "Un diseñador de sitios web crea un gráfico de dona semicircular para visualizar los resultados de una encuesta de satisfacción del cliente. El gráfico se coloca en la página de resultados de la encuesta, permitiendo a los visitantes del sitio comprender rápidamente las respuestas más comunes.",
+        "Un analista de datos utiliza el Generador de Gráficos de Dona Semircular para presentar los resultados de una investigación de mercado en una presentación. El gráfico muestra la distribución de preferencias de los consumidores entre varias marcas, facilitando la interpretación de los datos durante la reunión.",
+        "Un gestor de proyectos emplea el gráfico de dona semicircular para representar el progreso de las tareas en un dashboard de proyecto. El gráfico muestra la proporción de tareas completadas frente a las pendientes, proporcionando una vista rápida del estado del proyecto a los stakeholders."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Gerador de Gráficos de Meia Rosquinha é uma ferramenta especializada para a criação de representações visuais de dados no formato de um gráfico de rosquinha cortado ao meio, proporcionando uma visualização compacta e eficiente. Este tipo de gráfico é particularmente útil quando se deseja destacar uma metade específica de um conjunto de dados, permitindo uma análise mais focada. A ferramenta é ideal para profissionais de dados, designers de UX e qualquer pessoa que precise de uma maneira clara e visualmente atraente de apresentar informações. Utilizando algoritmos de renderização avançados, o gerador permite que os usuários personalizem aspectos como a cor, o tamanho e a orientação do gráfico. A capacidade de exportar gráficos em formatos como PNG e SVG torna esta ferramenta essencial para relatórios, apresentações e sites.",
+      "usage_steps": [
+        "Acesse o site do Gerador de Gráficos de Meia Rosquinha e clique no botão 'Iniciar' para abrir a interface de criação.",
+        "Na seção 'Dados', insira os valores das categorias que deseja representar no gráfico. Você pode digitar manualmente ou importar dados de um arquivo CSV.",
+        "Personalize a aparência do gráfico na seção 'Estilo'. Escolha cores para cada categoria, ajuste a espessura da borda e defina o raio do gráfico.",
+        "Na seção 'Configurações Avançadas', você pode ajustar a orientação do gráfico (superior, inferior, esquerda ou direita) e definir se deseja exibir rótulos e porcentagens.",
+        "Após configurar todos os parâmetros, clique no botão 'Visualizar' para ver o gráfico gerado em tempo real.",
+        "Se estiver satisfeito com o resultado, use o botão 'Exportar' para salvar o gráfico em formatos PNG, SVG ou copiá-lo para a área de transferência."
+      ],
+      "usage_examples": [
+        "Um analista de marketing deseja apresentar as métricas de engajamento do último trimestre em uma apresentação. O gráfico de meia rosquinha é usado para destacar as porcentagens de cliques e visualizações, focando na metade superior do slide.",
+        "Uma empresa de saúde precisa informar os pacientes sobre a distribuição de tempo gasto em diferentes atividades durante um programa de reabilitação. O gráfico de meia rosquinha é utilizado para mostrar a divisão do tempo, facilitando a compreensão visual.",
+        "Um professor de finanças quer explicar a distribuição de investimentos em um portfólio de ações. O gráfico de meia rosquinha ajuda a ilustrar a porcentagem de ações em diferentes setores, concentrando-se na metade que representa os setores de maior crescimento.",
+        "Um designer de UX está desenvolvendo um painel de controle para um aplicativo de monitoramento de energia. O gráfico de meia rosquinha é incorporado na interface para mostrar a distribuição de consumo de energia em diferentes partes da casa, destacando onde há maior uso."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Générateur de Graphique Demi-Rond (Half Doughnut Chart Generator) est un outil en ligne permettant de créer des graphiques en forme de demi-cercle, aussi connus sous le nom de graphiques demi-rond. Ce type de représentation est particulièrement utile pour visualiser des données sous forme de segments, tout en offrant une présentation plus compacte et esthétique qu'un graphique pie traditionnel. Le graphique demi-rond est idéal pour mettre en évidence les proportions de différents éléments dans un ensemble de données, tout en conservant une lisibilité optimale.\n\nLes utilisateurs ont souvent besoin de ce type de graphique pour des présentations, des rapports, ou des dashboards où l'espace est limité. Par exemple, dans le domaine du marketing, il peut être utilisé pour afficher la répartition des parts de marché de manière concise. En finance, il peut servir à représenter la composition d'un portefeuille d'investissement. En sciences sociales, il permet de visualiser les préférences d'une population dans une enquête.\n\nTechniquement, l'outil fonctionne en prenant en entrée un ensemble de données sous forme de valeurs numériques et de catégories associées. Il calcule ensuite les angles et les tailles des segments en fonction des proportions de chaque valeur. L'utilisateur peut personnaliser divers aspects du graphique, tels que les couleurs, les étiquettes, et les légendes, pour s'adapter à ses besoins spécifiques. L'outil génère ensuite un code HTML et CSS, ainsi qu'un fichier image, qui peuvent être facilement intégrés dans des documents web ou imprimés.",
+      "usage_steps": [
+        "Accédez à la page du Générateur de Graphique Demi-Rond via le lien 'half-doughnut-chart-generator'.",
+        "Dans la section 'Données', entrez les valeurs numériques et les étiquettes correspondantes pour chaque segment. Vous pouvez ajouter ou supprimer des lignes en utilisant les boutons '+' et '-'.",
+        "Personnalisez l'apparence du graphique en utilisant les options de la section 'Style'. Vous pouvez choisir les couleurs des segments, ajuster la taille de la police des étiquettes, et activer ou désactiver la légende.",
+        "Si nécessaire, configurez les paramètres avancés dans la section 'Options'. Vous pouvez définir la direction des segments (horaire ou antihoraire), ajuster la hauteur et la largeur du graphique, et choisir le format de sortie (image ou code HTML/JavaScript).",
+        "Prévisualisez le graphique en cliquant sur le bouton 'Prévisualiser'. Cela vous permet de vérifier l'apparence finale et de faire des ajustements si nécessaire.",
+        "Une fois satisfait, téléchargez le graphique en image ou copiez le code HTML/JavaScript pour l'intégrer dans votre projet. Vous pouvez également partager le lien de prévisualisation directement."
+      ],
+      "usage_examples": [
+        "Dans un rapport de marketing, utiliser un graphique demi-rond pour montrer la répartition des ventes par canal (en ligne, magasins physiques, réseaux sociaux) en une seule vue compacte.",
+        "Pour un dashboard financier, créer un graphique demi-rond représentant la composition d'un portefeuille d'investissement, avec des segments pour chaque type d'actif (actions, obligations, immobilier).",
+        "Dans une présentation de projet, afficher la répartition des ressources allouées (temps, budget, personnel) en utilisant un graphique demi-rond pour une meilleure clarté visuelle.",
+        "Pour une enquête de satisfaction client, représenter la répartition des réponses sur une échelle de notation (très satisfait, satisfait, neutre, insatisfait, très insatisfait) avec un graphique demi-rond pour faciliter la compréhension."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Half Doughnut Chart Generator ist ein Online-Tool, das es Benutzern ermöglicht, halbkreisförmige Doughnut-Charts zu erstellen. Im Gegensatz zu traditionellen Kreisdiagrammen oder vollständigen Doughnut-Charts bietet dieses Tool eine einzigartige Darstellung der Daten in Form eines halben Kreises. Dies ist besonders nützlich, wenn der verfügbare Platz begrenzt ist oder wenn die Daten in einer visuell ansprechenden und kompakten Form präsentiert werden sollen. Die Halbkreisform ermöglicht es, bis zu 180 Grad der Daten zu visualisieren, wobei jeder Segment die relative Größe eines bestimmten Wertes im Vergleich zu anderen Werten im Datensatz darstellt. Dieses Tool ist ideal für Dashboards, Berichte und Präsentationen, in denen Clarity und Prägnanz von großer Bedeutung sind. Technisch basiert der Generator auf modernen Webtechnologien wie HTML5 Canvas und JavaScript, um interaktive und benutzerdefinierte Halbkreisdoughnuts zu erstellen. Benutzer können Farben, Beschriftungen und andere visuelle Elemente anpassen, um die Charts perfekt in ihre Anwendungen zu integrieren.",
+      "usage_steps": [
+        "Öffnen Sie das Tool auf der Website und klicken Sie auf den Button 'Neues Projekt erstellen'.",
+        "Geben Sie die Anzahl der Segmente an, die Ihr Chart enthalten soll, und klicken Sie auf 'Weiter'.",
+        "Fügen Sie für jedes Segment einen Wert und eine Bezeichnung hinzu. Sie können auch eine Farbe für jedes Segment auswählen oder die automatische Farbzuweisung verwenden.",
+        "Passen Sie die Größe des Charts an, indem Sie die Breite und Höhe im Einstellungsbereich anpassen.",
+        "Klicken Sie auf 'Vorschau', um eine Live-Vorschau des Charts zu erhalten und sicherzustellen, dass alles korrekt angezeigt wird.",
+        "Speichern Sie das Chart entweder als Bild (PNG) oder als Vektorgrafik (SVG) zur Verwendung in Ihren Projekten."
+      ],
+      "usage_examples": [
+        "Ein Marketing-Manager möchte die Marktanteile verschiedener Produkte in einer Präsentation visualisieren. Da der Platz begrenzt ist, nutzt er das Half Doughnut Chart Generator, um die Daten in einer kompakten und übersichtlichen Form darzustellen.",
+        "Ein Finanzberater erstellt ein Dashboard für seinen Klienten, das die Verteilung des Investmentportfolios zeigt. Das Half Doughnut Chart Generator ermöglicht es ihm, die Daten in einem halbkreisförmigen Layout anzuordnen, das gut in das Dashboard passt.",
+        "Ein Datenwissenschaftler analysiert die Ergebnisse einer Umfrage, in der Teilnehmer verschiedene Optionen bewerten mussten. Um die Ergebnisse klar zu präsentieren, erstellt er mit dem Half Doughnut Chart Generator ein Chart, das die Verteilung der Stimmen zeigt.",
+        "Ein Webdesigner entwickelt eine Landing Page, auf der die Vorteile eines neuen Produkts dargestellt werden sollen. Er nutzt das Half Doughnut Chart Generator, um die Vorteile in Form von Segmente zu visualisieren, die direkt auf der Seite integriert werden können."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор полукруглой диаграммы-пончика представляет собой онлайн-инструмент, предназначенный для создания визуализаций данных в форме полукруглой диаграммы. Этот инструмент позволяет пользователям преобразовать свои данные в эстетически привлекательные и информативные диаграммы, которые идеально подходят для представления долевых данных в ограниченном пространстве. Использование такого типа диаграммы особенно полезно в ситуациях, когда необходимо сэкономить место на веб-странице или презентации, сохраняя при этом ясность и читаемость данных.\n\nПользователи могут загружать свои данные в формате CSV или вводить их вручную через интерфейс инструмента. После ввода данных, инструмент автоматически генерирует полукруглую диаграмму-пончик, которую можно настроить с помощью различных параметров, таких как цветовые схемы, метки и легенды. Дополнительно, инструмент поддерживает экспорт диаграммы в различных форматах, включая PNG, SVG и PDF, что делает его универсальным решением для различных сценариев использования.\n\nТехнически, генератор полукруглой диаграммы-пончика использует библиотеку D3.js для отрисовки диаграммы, что обеспечивает высокое качество графики и гибкость настройки. Это делает инструмент не только удобным в использовании, но и мощным инструментом для анализа данных.",
+      "usage_steps": [
+        "Откройте страницу Генератора полукруглой диаграммы-пончика на сайте.",
+        "Выберите метод ввода данных: загрузите файл CSV или введите данные вручную в таблицу, используя раздел 'Data Entry'.",
+        "Настройте параметры диаграммы, такие как цвета, метки и легенды, через панель 'Chart Settings'.",
+        "Предварительно просмотрите диаграмму, используя кнопку 'Preview' в верхнем меню, чтобы убедиться, что все настроено правильно.",
+        "Если нужно, добавьте дополнительные элементы, такие как заголовки или аннотации, через раздел 'Additional Elements'.",
+        "Выполните экспорт диаграммы в нужном формате (PNG, SVG или PDF) с помощью кнопки 'Export' в верхнем меню."
+      ],
+      "usage_examples": [
+        "Отчет о продажах за квартал: компания может использовать полукруглую диаграмму-пончик для визуализации доли продаж различных продуктов, представленных в ограниченном пространстве отчета.",
+        "Анализ пользовательского поведения на веб-сайте: маркетологи могут использовать этот инструмент для создания диаграммы, показывающей, как различные группы пользователей взаимодействуют с разными разделами сайта.",
+        "Презентация финансовых данных: финансовый аналитик может использовать полукруглую диаграмму-пончик для представления доли расходов на различные статьи бюджета в презентации для руководства.",
+        "Исследование рынка: исследователи могут использовать этот инструмент для создания диаграммы, показывающей долю различных сегментов рынка, что поможет в аналитических отчетах и презентациях."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مولد الرسم البياني نصف الدونات هو أداة احترافية عبر الإنترنت تمكن المستخدمين من إنشاء رسوم بيانية نصف دائرية لتقديم البيانات بصرياً بشكل فريد ومبتكر. يتميز هذا الأداة بقدراته الفنية المتقدمة التي تسمح بعرض البيانات في شكل نصف دائرة بدلاً من الدائرة الكاملة، مما يجعله خياراً مثالياً للعروض التقديمية والتحليلات البصرية. يمكن للمستخدمين تعديل الألوان، الأحجام، والعنوان للرسم البياني بشكل دقيق ليناسب احتياجاتهم الخاصة. كما يمكن تصدير الرسوم البيانية إلى تنسيقات متعددة مثل PNG و SVG. هذا الأداة مفيدة بشكل خاص في سيناريوهات مثل تحليل البيانات المالية، تقارير الأعمال، والعرض البصري للمعلومات الإحصائية. من خلال استخدام مولد الرسم البياني نصف الدونات، يمكن للمستخدمين توضيح العلاقات بين الأقسام المختلفة من البيانات بطرق جديدة وملفتة للنظر.",
+      "usage_steps": [
+        "انقر على زر 'ابدأ' لإنشاء رسم بياني جديد.",
+        "أدخل البيانات في الجدول الذي يظهر على الجانب الأيسر من الشاشة. كل صف يمثل قسماً من الرسم البياني.",
+        "اختر الألوان المناسبة لكل قسم من خلال النقر على الحقول المخصصة للألوان في الجدول.",
+        "قم بتعديل الحجم العام للرسم البياني باستخدام شريط التمرير الموجود في القسم العلوي.",
+        "أضف عنواناً للرسم البياني في الحقل المخصص في القسم العلوي.",
+        "عند الانتهاء من التخصيص، اضغط على زر 'تصدير' لحفظ الرسم البياني بتنسيق PNG أو SVG."
+      ],
+      "usage_examples": [
+        "في شركة تكنولوجية، يمكن استخدام الرسم البياني نصف الدونات لعرض نسب مبيعات منتجات مختلفة خلال فصل محدد، مما يساعد في تحليل الأداء وتحديد المنتجات التي تحقق أعلى الأرباح.",
+        "في مجال التعليم، يمكن للمعلمين استخدام هذا الأداة لإظهار توزيع الدرجات في اختبار معين، مما يسهل على الطلاب فهم أدائهم مقارنة بأقرانهم.",
+        "في مجال الصحة، يمكن استخدام الرسم البياني نصف الدونات لتقديم إحصاءات حول حالات المرض المختلفة في مستشفى ما، مما يساعد في توجيه الموارد بشكل أفضل.",
+        "في تحليل البيانات الاجتماعية، يمكن استخدام هذا الأداة لعرض توزيع الأعمار أو الجنسيات بين مجموعة من المستخدمين، مما يساعد في فهم الديموغرافيا المستهدفة بشكل أفضل."
+      ]
+    }
+  }
+}

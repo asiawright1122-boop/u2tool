@@ -4,6 +4,13 @@
  * Web Vitals 报告组件
  * 在客户端收集 Core Web Vitals 指标
  * 开发模式输出到控制台，生产模式发送到分析端点
+ * 
+ * 增强功能：
+ * - 性能预算阈值检查
+ * - 超出阈值时输出警告
+ * - 指标评级显示
+ * 
+ * @see Requirements 8.1, 8.2, 8.3
  */
 
 import { useEffect } from 'react';
@@ -16,6 +23,12 @@ import {
   MetricName,
   getMetricRating,
 } from '@/lib/web-vitals';
+import {
+  WEB_VITALS_THRESHOLDS,
+  isMetricGood,
+  isMetricPoor,
+  formatMs,
+} from '@/config/performance-budget';
 
 interface WebVitalsReporterProps {
   /** 分析端点 URL（可选） */
@@ -44,7 +57,7 @@ export default function WebVitalsReporter({
 
     // 动态导入 web-vitals 库
     import('web-vitals').then(({ onCLS, onFCP, onINP, onLCP, onTTFB }) => {
-      // 创建报告函数
+      // 创建报告函数（增强版：包含阈值检查）
       const handleMetric = (metric: {
         name: string;
         value: number;
@@ -52,14 +65,38 @@ export default function WebVitalsReporter({
         id: string;
         navigationType: string;
       }) => {
+        const metricName = metric.name as MetricName;
         const webVitalsMetric: WebVitalsMetric = {
-          name: metric.name as MetricName,
+          name: metricName,
           value: metric.value,
-          rating: getMetricRating(metric.name as MetricName, metric.value),
+          rating: getMetricRating(metricName, metric.value),
           delta: metric.delta,
           id: metric.id,
           navigationType: metric.navigationType,
         };
+        
+        // 性能预算阈值检查
+        if (debug && metricName in WEB_VITALS_THRESHOLDS) {
+          const thresholdKey = metricName as keyof typeof WEB_VITALS_THRESHOLDS;
+          const threshold = WEB_VITALS_THRESHOLDS[thresholdKey];
+          
+          if (isMetricPoor(thresholdKey, metric.value)) {
+            console.warn(
+              `[Web Vitals] ⚠️ ${metricName} is POOR: ${metricName === 'CLS' ? metric.value.toFixed(3) : formatMs(metric.value)} ` +
+              `(threshold: ${metricName === 'CLS' ? threshold.needsImprovement : formatMs(threshold.needsImprovement)})`
+            );
+          } else if (!isMetricGood(thresholdKey, metric.value)) {
+            console.warn(
+              `[Web Vitals] ⚡ ${metricName} needs improvement: ${metricName === 'CLS' ? metric.value.toFixed(3) : formatMs(metric.value)} ` +
+              `(target: ${metricName === 'CLS' ? threshold.good : formatMs(threshold.good)})`
+            );
+          } else if (debug) {
+            console.log(
+              `[Web Vitals] ✅ ${metricName} is good: ${metricName === 'CLS' ? metric.value.toFixed(3) : formatMs(metric.value)}`
+            );
+          }
+        }
+        
         reportMetric(webVitalsMetric);
       };
 

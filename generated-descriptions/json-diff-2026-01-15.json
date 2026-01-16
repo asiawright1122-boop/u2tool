@@ -1,0 +1,175 @@
+{
+  "slug": "json-diff",
+  "descriptions": {
+    "en": {
+      "detailed_description": "JSON Diff is a sophisticated tool designed to meticulously compare two JSON objects and highlight their differences. This tool is particularly valuable for developers who need to track changes in configuration files, API responses, or data payloads across different environments or iterations. By providing a detailed comparison, JSON Diff helps ensure that updates and modifications are accurately applied and documented. The tool employs advanced parsing algorithms to break down each JSON structure, allowing for a side-by-side comparison of keys, values, and nested objects. It can identify additions, deletions, and modifications, presenting the results in a clear and readable format. This level of detail is crucial for maintaining the integrity of JSON data, which is often used in web applications, API integrations, and data exchange protocols.",
+      "usage_steps": [
+        "Step 1: Open the JSON Diff tool on the website and locate the two input fields labeled 'JSON A' and 'JSON B'.",
+        "Step 2: Copy and paste the first JSON object into the 'JSON A' field. Ensure that the JSON is valid and properly formatted.",
+        "Step 3: Similarly, copy and paste the second JSON object into the 'JSON B' field. This JSON will be compared against the first one.",
+        "Step 4: Click the 'Compare' button located below the input fields. The tool will process the JSON objects and generate a comparison report.",
+        "Step 5: Review the comparison results, which will be displayed in a structured format. Added, removed, and modified elements will be highlighted in different colors for easy identification.",
+        "Step 6: Use the 'Export' button to download the comparison report in a JSON or HTML format for further analysis or documentation."
+      ],
+      "usage_examples": [
+        "Example 1: A backend developer needs to compare the JSON response from a staging API with the production API to ensure that the new version of the API is behaving as expected. Using JSON Diff, they can quickly identify any discrepancies and make necessary adjustments.",
+        "Example 2: A frontend developer is working on a feature that involves complex configuration settings stored in JSON files. Before merging changes into the main branch, they use JSON Diff to verify that all required modifications have been made without altering other settings.",
+        "Example 3: A DevOps engineer is updating a configuration file for a server cluster. To ensure that the new configuration is applied correctly, they use JSON Diff to compare the current configuration with the proposed changes, identifying any potential issues or missing elements.",
+        "Example 4: A data analyst is working with JSON data from multiple sources and needs to merge datasets. They use JSON Diff to compare the datasets and ensure that the merge process does not introduce any inconsistencies or errors."
+      ]
+    },
+    "zh": {
+      "detailed_description": "JSON Diff 是一款专业的开发工具，专门用于比较两个 JSON 对象之间的差异。通过深度解析和对比 JSON 数据结构，该工具能够帮助开发者快速定位和理解不同版本数据之间的变化。这对于维护和调试复杂的 API 响应、前后端数据同步以及配置文件的版本管理尤为有用。JSON Diff 支持多种格式化选项，包括忽略顺序、忽略空值等，确保比较结果的准确性。此外，该工具还提供了详细的差异报告，包括新增、删除和修改的键值对，帮助开发者迅速找到问题所在。",
+      "usage_steps": [
+        "Step 1: 打开 JSON Diff 工具页面，您会看到两个输入框，分别用于输入原始 JSON 数据和目标 JSON 数据。",
+        "Step 2: 在左侧的输入框中粘贴或手动输入原始 JSON 数据。",
+        "Step 3: 在右侧的输入框中粘贴或手动输入目标 JSON 数据。",
+        "Step 4: 选择上方的对比选项，例如“忽略顺序”或“忽略空值”，以确保比较结果符合您的需求。",
+        "Step 5: 点击“开始对比”按钮，工具将自动解析并对比两个 JSON 对象。",
+        "Step 6: 查看下方的差异报告，报告中会详细列出两个 JSON 对象的新增、删除和修改部分，帮助您快速定位差异。"
+      ],
+      "usage_examples": [
+        "Example 1: 假设您是一名前端开发者，需要确保后端 API 返回的最新 JSON 数据与之前版本的一致。使用 JSON Diff 工具可以帮助您快速发现数据结构的变化，确保前后端数据同步。",
+        "Example 2: 您是一名配置管理工程师，需要定期更新应用程序的配置文件。通过 JSON Diff，您可以轻松对比不同版本的配置文件，确保所有必要的更改都已正确应用。",
+        "Example 3: 假设您正在开发一个版本控制系统，需要记录每次提交的 JSON 数据变更。使用 JSON Diff 可以生成详细的变更日志，帮助团队成员了解每次提交的具体变化。",
+        "Example 4: 您是一名质量保证工程师，需要验证不同测试环境下的 API 响应是否一致。通过 JSON Diff，您可以快速对比不同环境下的响应数据，确保测试的一致性和准确性。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "JSON Diffは、2つのJSONオブジェクトを比較し、それらの間の差異を特定するための高度な開発ツールです。このツールはJSON形式のデータを解析し、追加、削除、変更されたプロパティを詳細に表示します。JSON Diffは、APIの開発やテスト、データ同期の確認、構成ファイルの比較など、さまざまなシナリオで活用できます。開発者がコードの整合性を確認したり、バージョン間の変更を追跡したりする際に、JSON Diffは無価値な時間を節約し、効率を向上させます。テクノロジー的には、JSON Diffは高速なアルゴリズムを使用してJSONオブジェクトを再帰的に解析し、差異を正確に特定します。このプロセスでは、プロパティの存在、値の違い、データ型の変更などを洗い出し、ユーザーにわかりやすい形式で結果を提供します。",
+      "usage_steps": [
+        "Step 1: JSON Diffツールのページにアクセスし、左側のテキストエリアに比較したい最初のJSONオブジェクトを貼り付けます。",
+        "Step 2: 右側のテキストエリアに、比較したい2つ目のJSONオブジェクトを貼り付けます。",
+        "Step 3: 「比較開始」ボタンをクリックします。このボタンは、2つのJSONオブジェクトを解析し、差異を特定するプロセスを開始します。",
+        "Step 4: 差異が見つかった場合、結果エリアに赤色で追加されたプロパティ、青色で削除されたプロパティ、緑色で変更されたプロパティが表示されます。",
+        "Step 5: 「詳細表示」ボタンをクリックして、特定の差異の詳細情報を確認します。この機能は、差異の理由や詳細なパスを提供します。",
+        "Step 6: 必要に応じて、結果をコピーして他の開発者と共有したり、ドキュメントに保存したりできます。"
+      ],
+      "usage_examples": [
+        "Example 1: APIのバージョン間で差異を確認する。新しいAPIバージョンが既存の機能と互換性があるかどうかを迅速に確認できます。",
+        "Example 2: 構成ファイルの変更を追跡する。プロダクション環境とステージング環境の構成ファイルを比較し、無効な変更や設定の違いを特定します。",
+        "Example 3: データ同期の確認。データベース間のデータ同期が正しく行われているかどうかを確認するために、2つのJSONデータセットを比較します。",
+        "Example 4: テストデータの整合性チェック。自動化テストスイートで使用されるテストデータが予期せずに変更されていないかを確認します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "JSON Diff는 두 개의 JSON 객체를 비교하여 차이점을 찾아내는 강력한 도구입니다. 이 도구는 JSON 객체 간의 구조적 차이, 값의 변경,以及新增或删除的键等细微差异进行精确对比。通过使用JSON Diff，开发人员可以快速识别API响应变化、配置文件更新、数据迁移过程中的差异，从而确保数据的一致性和完整性。该工具的核心在于其高效的比较算法，能够处理大型和复杂的JSON结构，且支持多种输出格式，如简明的差异报告或详细的逐行对比。此外，JSON Diff还具有实时预览功能，用户可以立即查看比较结果，这在快速迭代开发环境中尤其有用。",
+      "usage_steps": [
+        "Step 1: JSON Diff 웹사이트에 접속하여 도구를 여십시오.",
+        "Step 2: 왼쪽 텍스트 영역에 첫 번째 JSON 객체를 붙여넣습니다. 이 JSON은 비교 대상의 기준점이 됩니다.",
+        "Step 3: 오른쪽 텍스트 영역에 두 번째 JSON 객체를 붙여넣습니다. 이 JSON은 기준 JSON과 비교됩니다.",
+        "Step 4: 'Compare' 버튼을 클릭하여 두 JSON 객체의 차이점을 분석합니다.",
+        "Step 5: 결과 창에서 차이점의 세부 정보를 확인합니다. 차이점은 색상으로 구분되어 표시됩니다 (예: 추가된 항목은 초록색, 삭제된 항목은 빨간색, 변경된 항목은 노란색).",
+        "Step 6: 필요에 따라 'Export' 옵션을 사용하여 차이점 보고서를 다운로드하거나 다른 형식으로 출력합니다."
+      ],
+      "usage_examples": [
+        "Example 1: API 개발자들이 API 업데이트 시 기존 응답과 새로운 응답 간의 차이점을 빠르게 확인하여 호환성을 검사합니다.",
+        "Example 2: 서버 관리자가 설정 파일의 변경을 추적하여 시스템 구성을 일관되게 유지합니다.",
+        "Example 3: 데이터 엔지니어가 데이터 마이그레이션 과정에서 소스 데이터와 대상 데이터 간의 차이점을 검사하여 데이터 무결성을 확인합니다.",
+        "Example 4: 프론트엔드 개발자가 상태 관리 라이브러리의 상태 변화를 추적하여 애플리케이션의 동작을 디버그합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "JSON Diff es una herramienta de desarrollo diseñada para comparar dos objetos JSON y resaltar las diferencias entre ellos. Esta herramienta es esencial para desarrolladores que necesitan asegurarse de que las modificaciones en sus archivos JSON no introduzcan errores o inconsistencias. Al utilizar JSON Diff, los usuarios pueden visualizar de manera clara y precisa qué datos han cambiado, qué elementos se han añadido y qué elementos se han eliminado. La importancia de esta herramienta radica en su capacidad para facilitar la depuración y la sincronización de datos, lo cual es crucial en entornos de desarrollo colaborativo y en la gestión de configuraciones y APIs. La herramienta opera procesando los dos JSON proporcionados, normalizando su estructura y luego realizando una comparación recursiva de cada clave y valor. Los resultados se presentan en una interfaz que resalta las diferencias con colores y símbolos, facilitando la identificación de cambios específicos.",
+      "usage_steps": [
+        "Abra la página de JSON Diff en su navegador web.",
+        "En la sección 'JSON Original', pegue o escriba el primer JSON que desea comparar.",
+        "En la sección 'JSON Modificado', pegue o escriba el segundo JSON que desea comparar.",
+        "Haga clic en el botón 'Comparar JSON' para iniciar el proceso de comparación.",
+        "Revise los resultados en la sección 'Diferencias', donde se resaltarán los cambios con colores: verde para adiciones, rojo para eliminaciones y azul para modificaciones.",
+        "Utilice las opciones de filtrado y exportación para guardar o compartir los resultados de la comparación."
+      ],
+      "usage_examples": [
+        "Un desarrollador de backend necesita comparar la configuración JSON de un servicio antes y después de una actualización para asegurarse de que no se han introducido cambios no deseados.",
+        "Un ingeniero de QA utiliza JSON Diff para validar que los datos JSON enviados y recibidos en una API REST sean consistentes y no contengan discrepancias que puedan indicar problemas de integración.",
+        "Un equipo de desarrollo colaborativo necesita sincronizar dos versiones de un archivo de configuración JSON que han sido modificadas por diferentes miembros del equipo, asegurando que no se pierdan cambios importantes.",
+        "Un administrador de sistemas utiliza JSON Diff para comparar los archivos de configuración JSON de dos entornos diferentes (desarrollo y producción) para identificar configuraciones desactualizadas o incorrectas."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O JSON Diff é uma ferramenta de desenvolvimento essencial para profissionais que trabalham com dados estruturados em formato JSON. Técnica e profundamente, esta ferramenta permite a comparação de dois objetos JSON, identificando as diferenças entre eles de maneira detalhada e precisa. O JSON Diff é especialmente útil em cenários onde a integridade dos dados é crucial, como em testes de API, desenvolvimento de aplicações web, e integração de sistemas. A ferramenta utiliza algoritmos avançados de comparação de estruturas de dados, capazes de detectar alterações em chaves, valores, e até mesmo na ordem dos elementos, fornecendo um relatório detalhado das modificações. Além disso, o JSON Diff suporta formatação de código, tornando a visualização das diferenças mais clara e compreensível, facilitando o processo de depuração e validação de dados. Desenvolvedores, testadores e engenheiros de qualidade podem aproveitar este recurso para garantir que as alterações nos dados JSON sejam realizadas conforme planejado, minimizando erros e otimizando o fluxo de trabalho.",
+      "usage_steps": [
+        "Acesse a página do JSON Diff no site de ferramentas de desenvolvimento.",
+        "No painel esquerdo, encontre a seção 'JSON 1' e cole o conteúdo do primeiro objeto JSON que deseja comparar.",
+        "No painel direito, encontre a seção 'JSON 2' e cole o conteúdo do segundo objeto JSON que deseja comparar.",
+        "Clique no botão 'Comparar JSON' para iniciar a análise das diferenças entre os dois objetos.",
+        "Revise o relatório de diferenças exibido abaixo dos painéis. As modificações são destacadas com cores diferentes para facilitar a identificação.",
+        "Utilize os botões de exportação para salvar o relatório de diferenças em um arquivo JSON ou CSV, caso necessário."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de backend está implementando uma nova versão de uma API. Antes de lançar a atualização, ele usa o JSON Diff para comparar a saída da API antiga com a saída da nova versão, garantindo que as modificações sejam conforme o esperado e que não haja regressões inesperadas.",
+        "Uma equipe de testes precisa verificar a consistência dos dados retornados por diferentes endpoints de uma aplicação. Eles usam o JSON Diff para comparar os resultados de duas chamadas API diferentes, garantindo que os dados sejam consistentes e que os endpoints estejam funcionando corretamente.",
+        "Um engenheiro de integração de sistemas está migrando dados de um sistema legado para um novo. Ele usa o JSON Diff para comparar os dados exportados do sistema antigo com os dados importados no sistema novo, garantindo que a migração tenha sido realizada sem perdas ou alterações indesejadas.",
+        "Um desenvolvedor frontend está debugando um problema de renderização de componentes em uma aplicação React. Ele usa o JSON Diff para comparar os estados do componente antes e depois de uma ação do usuário, identificando as alterações que podem estar causando o problema."
+      ]
+    },
+    "fr": {
+      "detailed_description": "JSON Diff est un outil puissant conçu pour comparer deux objets JSON et identifier leurs différences avec une précision et une efficacité remarquables. Cette solution est particulièrement utile pour les développeurs qui travaillent sur des configurations, des fichiers de données, ou des structures de données complexes. JSON Diff permet de détecter rapidement les changements, les ajouts, les suppressions, et les modifications de propriétés, facilitant ainsi la gestion des versions et la résolution de conflits. L'outil utilise des algorithmes avancés pour analyser les deux JSON et générer un rapport détaillé des différences, incluant les chemins spécifiques des éléments modifiés. Cela permet aux utilisateurs de visualiser clairement les modifications, ce qui est particulièrement utile dans les environnements de développement collaboratif où plusieurs personnes travaillent sur le même code. JSON Diff est également capable de gérer des fichiers JSON de grande taille, ce qui en fait une solution robuste pour les projets d'envergure.",
+      "usage_steps": [
+        "Accédez à la page d'accueil de JSON Diff sur le site web.",
+        "Cliquez sur le bouton 'Charger JSON 1' pour sélectionner le premier fichier JSON à comparer.",
+        "Cliquez sur le bouton 'Charger JSON 2' pour sélectionner le second fichier JSON à comparer.",
+        "Une fois les deux fichiers chargés, cliquez sur le bouton 'Comparer' pour lancer l'analyse.",
+        "L'outil affichera les différences détectées sous forme de liste, avec les chemins spécifiques des éléments modifiés.",
+        "Vous pouvez exporter les résultats de la comparaison en format JSON ou CSV en cliquant sur les boutons correspondants."
+      ],
+      "usage_examples": [
+        "Un développeur souhaite comparer deux versions d'un fichier de configuration pour identifier les modifications apportées par un collègue. JSON Diff lui permet de voir exactement quelles propriétés ont été modifiées, ajoutées ou supprimées.",
+        "Une équipe de développeurs travaille sur une application mobile et doit s'assurer que les données de test sont cohérentes avec les données de production. JSON Diff aide à vérifier que les structures de données sont identiques, facilitant ainsi le déploiement en production.",
+        "Un architecte logiciel doit fusionner plusieurs fichiers JSON contenant des paramètres de déploiement. JSON Diff lui permet de détecter les conflits et de résoudre les incohérences avant de procéder à la fusion.",
+        "Un ingénieur en qualité veut valider que les données générées par un service sont conformes aux attentes. JSON Diff est utilisé pour comparer les résultats attendus avec les résultats réels, assurant ainsi la qualité des données."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das JSON Diff-Tool ermöglicht Entwicklern den Vergleich von zwei JSON-Objekten, um Unterschiede aufzudecken. Dies ist besonders nützlich bei der Überprüfung von API-Änderungen, der Validierung von Datenstrukturen oder der Identifizierung von Fehlern in Konfigurationsdateien. Technisch gesehen analysiert das Tool die Schlüssel und Werte beider JSON-Objekte und identifiziert hinzugefügte, entfernte oder veränderte Elemente. Es verwendet rekursive Algorithmen, um tiefe Strukturen zu durchsuchen, und bietet eine visuelle Darstellung der Unterschiede, die es leicht macht, komplexe Änderungen zu verstehen. Die Ergebnisse können in verschiedenen Formaten exportiert werden, wie JSON, HTML oder Text, um sie in verschiedene Workflows zu integrieren.",
+      "usage_steps": [
+        "Laden Sie die erste JSON-Datei über den Button 'Datei hochladen' auf der linken Seite hoch.",
+        "Fügen Sie die erste JSON-Struktur alternativ direkt in das Textfeld auf der linken Seite ein.",
+        "Laden Sie die zweite JSON-Datei über den Button 'Datei hochladen' auf der rechten Seite hoch.",
+        "Fügen Sie die zweite JSON-Struktur alternativ direkt in das Textfeld auf der rechten Seite ein.",
+        "Klicken Sie auf den Button 'Vergleichen', um die Analyse zu starten.",
+        "Die Ergebnisse werden in der Mitte des Bildschirms angezeigt, wobei hinzugefügte, entfernte und veränderte Elemente farblich markiert sind."
+      ],
+      "usage_examples": [
+        "Ein Entwickler vergleicht die Ausgabe von zwei verschiedenen API-Versionen, um sicherzustellen, dass keine unerwarteten Änderungen eingeführt wurden.",
+        "Ein Systemadministrator überprüft zwei Konfigurationsdateien, um sicherzustellen, dass sie identisch sind, bevor eine neue Version in der Produktion bereitgestellt wird.",
+        "Ein Testingenieur verwendet das Tool, um die Ausgabe eines automatisierten Tests mit den erwarteten Ergebnissen zu vergleichen und so die Testabdeckung zu verbessern.",
+        "Ein Datenwissenschaftler vergleicht die Struktur von JSON-Datensätzen aus zwei verschiedenen Quellen, um sicherzustellen, dass sie konsistent sind, bevor sie in einer Analyse verwendet werden."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент JSON Diff предназначен для подробного сравнения двух объектов JSON и выявления различий между ними. Это особенно полезно для разработчиков, которые работают с конфигурационными файлами, API ответами или любыми другими структурами данных в формате JSON. Инструмент анализирует каждое поле и значение в двух объектах, выявляя добавленные, удаленные или измененные элементы. JSON Diff использует алгоритмы для вычисления минимального набора изменений, необходимых для превращения одного объекта в другой, что позволяет быстро и точно определить, какие именно изменения были внесены. Это особенно ценно при отладке приложений, миграции данных или проверке консистентности конфигураций. Инструмент поддерживает визуализацию различий, что делает его удобным для понимания и анализа изменений на уровне ключей и значений.",
+      "usage_steps": [
+        "Шаг 1: Откройте страницу JSON Diff на сайте и перейдите к разделу 'Сравнение JSON'.",
+        "Шаг 2: В первом текстовом поле вставьте исходный JSON-объект, который вы хотите сравнить.",
+        "Шаг 3: Во втором текстовом поле вставьте целевой JSON-объект, с которым вы хотите сравнить исходный.",
+        "Шаг 4: Нажмите кнопку 'Сравнить' для запуска анализа. Инструмент автоматически выполнит сравнение и выделит различия.",
+        "Шаг 5: В результирующем блоке вы увидите цветное представление изменений: добавленные поля покажутся зеленым, удаленные — красным, а измененные — оранжевым.",
+        "Шаг 6: Используйте кнопки для экспорта результатов сравнения в формате JSON, HTML или текста, чтобы сохранить или поделиться ими."
+      ],
+      "usage_examples": [
+        "Пример 1: Разработчик API использует JSON Diff для сравнения ответов до и после внесения изменений в код, чтобы убедиться, что новые изменения не повлияли на структуру и значения данных.",
+        "Пример 2: Администратор системы использует инструмент для проверки консистентности конфигурационных файлов между разными окружениями (разработка, тестирование, продакшн).",
+        "Пример 3: Тестировщик применяет JSON Diff для анализа различий между ожидаемыми и фактическими данными в автоматизированных тестах, чтобы быстро определить причину сбоев.",
+        "Пример 4: Фронтенд-разработчик использует инструмент для сравнения структур данных, возвращаемых разными эндпоинтами API, чтобы убедиться, что они совместимы и соответствуют спецификациям."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة JSON Diff هي أداة قوية ومبتكرة مصممة لمساعدتك في مقارنة كائنات JSON المركبة واكتشاف الاختلافات بينها. تقدم هذه الأداة حلولًا فعالة للمطورين الذين يعملون على مشاريع تعتمد على بيانات JSON، حيث يمكنها تحديد التغيرات الدقيقة في الهياكل والقيم بناءً على معايير محددة. تستخدم أداة JSON Diff خوارزميات متقدمة لتحليل ومقارنة البيانات، مما يجعلها أداة ضرورية في عمليات التطوير والاختبار. يمكن للمطورين استخدامها للتحقق من التحديثات في البيانات، التأكد من سلامة التكامل بين النظم، أو حتى مراجعة التغييرات في ملفات التكوين. من خلال هذه الأداة، يمكنك الحصول على تقارير واضحة ومفصلة حول الاختلافات، مما يساهم في تحسين جودة الكود وزيادة كفاءة العمل.",
+      "usage_steps": [
+        "الخطوة 1: قم بزيارة الصفحة الرئيسية لأداة JSON Diff عبر رابطها على الموقع.",
+        "الخطوة 2: في القسم العلوي من الصفحة، ابحث عن حقل الإدخال الأول المسمى 'JSON 1' وقم بلصق كود JSON الأول الذي تريد مقارنته.",
+        "الخطوة 3: انتقل إلى حقل الإدخال الثاني المسمى 'JSON 2' وقم بلصق كود JSON الثاني الذي تريد مقارنته مع الأول.",
+        "الخطوة 4: بعد إدخال البيانات، اضغط على الزر 'مقارنة' الذي يظهر بجانب الحقول.",
+        "الخطوة 5: سيقوم النظام بتحليل الكود وعرض الاختلافات في نافذة نتائج مفصلة تظهر أسفل الحقول.",
+        "الخطوة 6: قم بفحص النتائج بشكل دقيق، حيث سيتم توضيح كل اختلاف باللون الأحمر للحذف، واللون الأخضر للإضافة، واللون الأزرق للتعديل."
+      ],
+      "usage_examples": [
+        "مثال 1: عند تحديث بيانات المستخدم في قاعدة البيانات، يمكن استخدام JSON Diff لمقارنة النسخة القديمة للبيانات بالنسخة الجديدة للكشف عن التغييرات المحددة التي تم إجراؤها.",
+        "مثال 2: أثناء التطوير، قد تحتاج إلى التأكد من أن التحديثات في ملفات التكوين لم تؤثر على الإعدادات القائمة. يمكن استخدام JSON Diff لمقارنة ملفات التكوين القديمة والجديدة وتحديد أي اختلافات.",
+        "مثال 3: في فرق التطوير التي تعمل على مشاريع مشتركة، يمكن استخدام JSON Diff لمقارنة الإصدارات المختلفة من ملفات JSON للتأكد من أن جميع الأعضاء يعملون على الأحدث والأكثر دقة.",
+        "مثال 4: عند دمج بيانات من عدة مصادر، يمكن استخدام JSON Diff لضمان أن البيانات النهائية تتطابق مع المتوقع وأن لا توجد تعارضات أو تغييرات غير مقصودة."
+      ]
+    }
+  }
+}

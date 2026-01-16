@@ -1,0 +1,175 @@
+{
+  "slug": "number-formatter",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Number Formatter tool is a sophisticated utility designed to adapt and format numerical values according to various international standards and styles. This tool is essential for developers, financial analysts, and content creators who need to present numbers in a culturally sensitive and professionally polished manner. It supports formatting for decimal, currency, and percent styles, ensuring that numbers are displayed accurately and comprehensively according to the locale of the target audience. The tool leverages the Internationalization API, which is part of the ECMAScript Internationalization API (ECMA-402), to handle the nuances of different regional formats. For instance, it can convert a number like 1234.56 to '1,234.56' for the United States, '1.234,56' for Germany, and '1,234.56 USD' for a currency format in the United States. The tool is particularly useful in applications where data is shared across multiple regions, ensuring that the presentation of numbers is both accurate and user-friendly.",
+      "usage_steps": [
+        "Step 1: Open the Number Formatter tool on the website and locate the input field labeled 'Number'.",
+        "Step 2: Enter the numerical value you wish to format into the 'Number' input field.",
+        "Step 3: Select the desired locale from the 'Locale' dropdown menu. This menu includes options for different countries and regions, ensuring accurate formatting based on local standards.",
+        "Step 4: Choose the formatting style from the 'Style' dropdown menu. Options include 'Decimal', 'Currency', and 'Percent'.",
+        "Step 5: If you selected 'Currency', choose the specific currency from the 'Currency' dropdown menu. This step is optional and only appears when the 'Currency' style is selected.",
+        "Step 6: Click the 'Format' button to apply the selected settings and view the formatted number in the 'Result' section of the tool."
+      ],
+      "usage_examples": [
+        "Example 1: A financial analyst in the United States needs to prepare a report for a German client. They use the Number Formatter to convert the number 1234.56 to the German format '1.234,56' for a more professional and culturally appropriate presentation.",
+        "Example 2: An e-commerce platform developer is creating a website that supports multiple currencies. They use the Number Formatter to ensure that prices are displayed correctly in different regions, such as '1,234.56 USD' for the United States and '1.234,56 €' for Germany.",
+        "Example 3: A content creator is writing a blog post about global economic trends and needs to include percentage data for various countries. They use the Number Formatter to convert the percentage 0.05 to '5%' in a consistent and clear format.",
+        "Example 4: A data analyst is preparing a dashboard that displays sales figures for an international company. They use the Number Formatter to ensure that decimal values like 1234.56 are displayed as '1,234.56' in the United States and '1.234,56' in France, enhancing the readability and accuracy of the data."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Number Formatter 是一个强大的数字格式化工具，旨在帮助开发者和数据分析师将数字转换为符合不同地区和语言习惯的格式。该工具支持多种数字格式，包括小数、货币和百分比，确保数据展示符合用户的具体需求。使用 Number Formatter，用户可以轻松地将原始数字数据转换为适合在网页、应用程序或报告中显示的格式。例如，将一个数字格式化为特定地区的货币格式，或以百分比形式展示数据。该工具在技术上通过调用国际化的数字格式化函数，根据用户的设置（如地区、货币符号、小数点等）进行实时转换，确保格式的准确性。Number Formatter 特别适用于需要处理跨国数据的项目，如电子商务、金融分析和国际化的应用程序开发。",
+      "usage_steps": [
+        "Step 1: 打开 Number Formatter 工具页面，您将看到一个输入框和多个选项。",
+        "Step 2: 在输入框中输入您需要格式化的数字，如 12345.678。",
+        "Step 3: 选择所需的地区（Locale），例如 'zh-CN' 代表中国大陆地区。",
+        "Step 4: 选择数字的格式类型，如 'Decimal'（小数）、'Currency'（货币）或 'Percent'（百分比）。",
+        "Step 5: 如果选择 'Currency'，则需要进一步选择货币符号，如 'CNY'（人民币）。",
+        "Step 6: 点击 'Format' 按钮，工具将根据您的设置实时显示格式化后的结果。"
+      ],
+      "usage_examples": [
+        "Example 1: 电子商务网站需要将产品价格以当地货币格式展示给用户。例如，将 12345.67 格式化为 '12,345.67 CNY'，适用于中国大陆用户。",
+        "Example 2: 金融分析师需要将股市数据以百分比形式展示。例如，将 0.0456 格式化为 '4.56%'，便于用户快速理解数据的变化。",
+        "Example 3: 国际化应用程序开发中，需要将用户输入的数字转换为符合不同地区习惯的格式。例如，将 123456.78 格式化为 '123,456.78'（适用于美国用户）或 '123.456,78'（适用于德国用户）。",
+        "Example 4: 市场报告中需要展示跨国公司的营收数据。例如，将 12345678.90 格式化为 '12,345,678.90 USD'，以美元形式展示给全球读者。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Number Formatterは、数値を様々なロケールでフォーマットするためのオンラインツールです。このツールでは、数値を小数、通貨、パーセントのスタイルに変換することができます。それぞれのスタイルは、国や地域固有の表記規則に基づいています。たとえば、通貨フォーマットでは、特定の国や地域の通貨記号や桁区切り記号を使用します。この機能は、国際的なアプリケーション開発や、異なる地域のユーザー向けにデータを表示する必要がある場合に非常に役立ちます。また、数値の可読性を向上させ、誤解を防ぐためにも有用です。Number Formatterは、JavaScriptのNumberFormat APIを活用しており、高度なカスタマイズが可能なため、ユーザーは自分のニーズに合わせてフォーマットを調整できます。",
+      "usage_steps": [
+        "Step 1: ツールのホームページにアクセスし、「Number Formatter」を選択します。",
+        "Step 2: 「Number」フィールドに、フォーマットしたい数値を入力します。",
+        "Step 3: 「Locale」ドロップダウンメニューから、使用したいロケールを選択します。例: en-US, ja-JP, de-DE など。",
+        "Step 4: 「Style」セクションで、小数、通貨、パーセントのいずれかを選択します。",
+        "Step 5: 通貨を選択した場合は、追加で「Currency」ドロップダウンメニューから、使用したい通貨を選択します。",
+        "Step 6: 「Format」ボタンをクリックすると、選択した設定に基づいて数値がフォーマットされ、結果が表示されます。"
+      ],
+      "usage_examples": [
+        "Example 1: 国際的なEコマースサイトで、商品の価格をユーザーの地域に合わせて表示する際。日本語版では「2,500円」、アメリカ英語版では「$25.00」のように表示できます。",
+        "Example 2: 世界中の投資家向けの金融アプリケーションで、株価や為替レートを表示する際。各国のユーザーが理解しやすい形式で数値を表示できます。",
+        "Example 3: 国際的なマーケットリサーチレポートを作成する際、統計データを地域ごとに適切な形式で表示するため。例えば、ドイツでは「2.500,00」、フランスでは「2 500,00」のように表示できます。",
+        "Example 4: グローバルなオンラインゲームで、スコアやアイテムの価格をプレイヤーのリージョンに合わせて表示する際。各プレイヤーが自分の国の形式で数値を見ることができるため、理解しやすくなります。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Number Formatter는 다양한 로케일 설정에서 숫자, 통화, 백분율 스타일로 숫자를 포맷팅할 수 있는 강력한 도구입니다. 이 도구는 JavaScript의 `Intl.NumberFormat` API를 기반으로 개발되어, 여러 지역의 숫자 표현 방식을 정확하게 반영할 수 있습니다. 사용자는 숫자를 입력하고, 원하는 로케일과 스타일을 선택하면, 도구는 즉시 해당 설정에 맞춘 포맷으로 숫자를 변환합니다. 이 도구는 국제화 프로젝트나 다국어 웹사이트 개발 시 숫자 표시의 일관성을 유지하는 데 매우 유용합니다. 또한, 통화와 백분율 값의 정확한 포맷팅을 필요로 하는 경제, 금융, 통계 분야에서도 그 가치를 발휘합니다. Number Formatter는 사용자 친화적인 인터페이스를 제공하여, 복잡한 설정 없이도 원하는 결과를 얻을 수 있습니다. 이를 통해 개발자들이 프로젝트에서 숫자 포맷팅 작업을 간소화할 수 있습니다.",
+      "usage_steps": [
+        "1. Number Formatter 페이지를 열고, 'Input Number' 필드에 포맷팅하려는 숫자를 입력하세요.",
+        "2. 'Locale' 드롭다운 메뉴에서 원하는 로케일(예: 'en-US', 'ko-KR', 'ja-JP')을 선택하세요.",
+        "3. 'Style' 드롭다운 메뉴에서 'Decimal', 'Currency', 'Percent' 중 하나를 선택하세요.",
+        "4. 'Currency' 스타일을 선택한 경우, 'Currency Code' 드롭다운 메뉴에서 통화 코드(예: 'USD', 'EUR', 'KRW')를 선택하세요.",
+        "5. 'Minimum Fraction Digits'와 'Maximum Fraction Digits' 슬라이더를 사용하여 소수점 이하 자릿수의 범위를 설정하세요.",
+        "6. 'Format' 버튼을 클릭하여 포맷팅 결과를 확인하세요."
+      ],
+      "usage_examples": [
+        "1. 국제 전자상거래 웹사이트에서 사용자의 위치에 따라 통화를 포맷팅해야 할 때, Number Formatter를 사용하여 'en-US' 로케일에 'USD' 통화로 숫자를 포맷팅할 수 있습니다.",
+        "2. 다국어 지원 웹 애플리케이션에서 한국 사용자에게 백분율 값을 표시할 때, 'ko-KR' 로케일과 'Percent' 스타일을 사용하여 숫자를 포맷팅할 수 있습니다.",
+        "3. 금융 분석 리포트에서 다양한 통화 값을 표시해야 할 때, 'ja-JP' 로케일과 'Currency' 스타일을 사용하여 일본 엔(JPY)으로 숫자를 포맷팅할 수 있습니다.",
+        "4. 데이터 시각화 도구에서 그래프의 Y축 레이블에 숫자를 표시할 때, 'en-GB' 로케일과 'Decimal' 스타일을 사용하여 영국식 표기법으로 숫자를 포맷팅할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Number Formatter es una herramienta de formateo numérico que permite convertir y mostrar números en diversos formatos y locales. Esta herramienta es esencial para desarrolladores y profesionales que trabajan con datos numéricos internacionales, ya que facilita la adaptación de números a diferentes culturas y regiones. La herramienta soporta tres estilos principales: decimal, moneda y porcentaje. Cada estilo puede ser ajustado para cumplir con las convenciones locales, como el separador decimal y el símbolo de moneda. Por ejemplo, un número puede ser formateado para mostrar en el formato estadounidense como 1,234.56, mientras que en el formato europeo sería 1.234,56. Además, el formateo de monedas asegura que los símbolos y formatos de moneda sean correctos para cada región, lo que es crucial para aplicaciones financieras y comerciales. El Number Formatter utiliza la API de formateo numérico de JavaScript, lo que garantiza una alta precisión y compatibilidad con un amplio rango de locales. Esta herramienta es invaluable para quienes necesitan presentar datos numéricos de manera clara y culturalmente apropiada en aplicaciones web y móviles.",
+      "usage_steps": [
+        "Paso 1: Abre la herramienta Number Formatter en la sección de 'Convertidores' de la página de herramientas.",
+        "Paso 2: En el campo 'Número', ingresa el número que deseas formatear.",
+        "Paso 3: Selecciona el 'Estilo' deseado desde el menú desplegable: Decimal, Moneda o Porcentaje.",
+        "Paso 4: Para el estilo de Moneda, elige el 'Código de Moneda' (por ejemplo, USD, EUR) desde el menú desplegable.",
+        "Paso 5: Selecciona el 'Locale' (por ejemplo, en-US, es-ES) para definir el formato cultural del número.",
+        "Paso 6: Haz clic en el botón 'Formatear' para ver el número convertido en el formato seleccionado."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador de una aplicación de comercio electrónico necesita formatear precios en diferentes monedas y regiones. Utiliza el Number Formatter para asegurarse de que los precios se mostraran correctamente en formatos como 1,234.56 USD (Estados Unidos) y 1.234,56 € (España).",
+        "Ejemplo 2: Un analista financiero trabaja con datos de porcentajes en un informe internacional. Con el Number Formatter, puede convertir un valor de 0.05 a 5% y ajustarlo para diferentes locales, como 5 % (Francia) y 5% (Reino Unido).",
+        "Ejemplo 3: Un diseñador de sitios web necesita presentar estadísticas en un formato decimal adecuado para una audiencia asiática. Utiliza la herramienta para formatear un número como 123456789 a 123,456,789 (India) y 123,456,789 (China).",
+        "Ejemplo 4: Un equipo de desarrollo de software crea una aplicación que necesita mostrar cantidades en diferentes idiomas y regiones. Utilizan el Number Formatter para formatear un número como 1000 a 1,000 (Estados Unidos) y 1.000 (Alemania), asegurando una experiencia de usuario consistente y culturalmente relevante."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Number Formatter é uma ferramenta avançada de formatação de números que permite aos desenvolvedores e profissionais de TI formatar números em diferentes locais, estilos decimais, monetários e percentuais. Esta ferramenta utiliza internacionalização (i18n) para garantir que os números sejam apresentados de maneira adequada a diferentes regiões e culturas, facilitando a comunicação e o entendimento em contextos globais. A necessidade deste tipo de ferramenta surge em cenários onde a precisão e a legibilidade dos números são essenciais, como em aplicativos financeiros, relatórios internacionais e dashboards de dados. O Number Formatter suporta uma variedade de formatos, incluindo notação científica, separadores de milhar e casas decimais variáveis, além de símbolos de moeda locais. Técnicamente, a ferramenta utiliza bibliotecas de formatação de dados internacionais, como o ICU (International Components for Unicode), para garantir que os números sejam formatados de acordo com as normas e convenções de cada localidade.",
+      "usage_steps": [
+        "Acesse a ferramenta Number Formatter no menu principal do site, localizada na categoria 'Conversores'.",
+        "Selecione o tipo de formatação desejada usando o menu suspenso 'Estilo de Formatação'. As opções disponíveis são 'Decimal', 'Moeda', 'Percentual' e 'Científico'.",
+        "Escolha o local (locale) no qual o número será formatado. Utilize o campo 'Local' para selecionar uma região específica, como 'pt-BR' para o Brasil ou 'en-US' para os Estados Unidos.",
+        "Insira o número que deseja formatar no campo 'Número de Entrada'. Certifique-se de que o número esteja no formato correto e sem símbolos adicionais.",
+        "Se necessário, ajuste as opções avançadas, como o número de casas decimais, usando os controles na seção 'Configurações Avançadas'.",
+        "Clique no botão 'Formatar' para ver o resultado formatado no campo 'Número Formatado'. O resultado será exibido de acordo com as configurações selecionadas."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de software está criando um aplicativo financeiro para usuários no Brasil. Ele precisa garantir que os valores monetários sejam exibidos corretamente com os símbolos de moeda e separadores de milhar adequados. Usando o Number Formatter, ele seleciona o estilo 'Moeda' e o local 'pt-BR', formatando o número '12345.67' como 'R$ 12.345,67'.",
+        "Uma empresa de comércio eletrônico com operações internacionais precisa gerar relatórios financeiros que sejam compreensíveis para seus stakeholders em diferentes países. O gerente de projetos usa o Number Formatter para formatar os valores em diferentes locais, como 'en-US' para os Estados Unidos e 'ja-JP' para o Japão, garantindo que os números sejam apresentados corretamente em cada região.",
+        "Um analista de dados está preparando uma apresentação para uma conferência internacional. Ele precisa formatar os valores percentuais de forma consistente, independentemente do local. Usando o Number Formatter com o estilo 'Percentual', ele formata o número '0.15' como '15%' para garantir clareza e precisão na apresentação.",
+        "Um cientista de dados está trabalhando em um projeto de pesquisa que envolve a análise de dados científicos. Ele precisa formatar números em notação científica para facilitar a leitura e a compreensão. Usando o Number Formatter com o estilo 'Científico', ele formata o número '123456789' como '1.23456789E8', adequando a apresentação para o público acadêmico."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Number Formatter est un outil en ligne permettant de formater les nombres selon diverses conventions de localisation, notamment en format décimal, monétaire et pourcentage. Contrairement aux outils basiques de formatage, Number Formatter offre une flexibilité et une précision inégalées, adaptées aux besoins spécifiques des développeurs et des professionnels de l'analyse de données. Il gère les nuances de différents systèmes numériques, y compris les séparateurs de milliers, les symboles de devise, et les formats de pourcentage, en respectant les standards internationaux. Cet outil est indispensable pour les applications nécessitant une présentation des données adaptée à différents publics, tels que les plateformes e-commerce, les rapports financiers, et les interfaces utilisateur multilingues. Il fonctionne en convertissant les entrées numériques en chaînes de caractères formattées, en utilisant des fonctions de localisation basées sur les bibliothèques JavaScript modernes. Les utilisateurs peuvent sélectionner la locale, le style de formatage, et ajuster des options spécifiques comme le nombre de décimales ou le symbole de devise.",
+      "usage_steps": [
+        "Sélectionnez la locale appropriée dans le menu déroulant pour spécifier le format régional.",
+        "Choisissez le style de formatage (Décimal, Monétaire, Pourcentage) à l'aide des boutons radio.",
+        "Dans le cas d'un format monétaire, sélectionnez le symbole de devise souhaité parmi les options proposées.",
+        "Entrez le nombre que vous souhaitez formater dans le champ de texte fourni.",
+        "Ajustez le nombre de décimales si nécessaire en utilisant le sélecteur numérique.",
+        "Cliquez sur le bouton 'Format' pour voir le résultat formatté affiché en bas de la page."
+      ],
+      "usage_examples": [
+        "Un développeur d'e-commerce formate les prix en euros pour un site web français, en ajustant les décimales à deux chiffres pour une meilleure lisibilité.",
+        "Un analyste financier prépare un rapport pour des investisseurs américains, en formatant les chiffres en dollars avec des séparateurs de milliers pour une clarté maximale.",
+        "Une entreprise multinationale aligne les pourcentages de croissance sur différents marchés, en utilisant des styles de formatage adaptés à chaque région pour une cohérence visuelle.",
+        "Un service client souhaite envoyer des factures à des clients en Inde, en formattant les montants en roupies indiennes avec le symbole de devise approprié pour faciliter la compréhension."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Number Formatter-Tool ist eine leistungsstarke Online-Anwendung, die Entwicklern und Datenanalysten hilft, Zahlen in verschiedenen Lokalisierungen und Stile zu formatieren. Mit Unterstützung für Dezimal-, Währungs- und Prozentsysteme bietet dieses Tool eine flexible Lösung, um Zahlen für internationale Benutzer oder für spezifische Anwendungsfälle anzupassen. Die Notwendigkeit solch eines Tools liegt darin, dass Zahlen in verschiedenen Regionen unterschiedlich dargestellt werden, was zu Fehlinterpretationen führen kann. Zum Beispiel verwenden einige Länder Kommas als Dezimaltrennzeichen, während andere Punktzeichen bevorzugen. Das Number Formatter-Tool ermöglicht es Benutzern, diese Unterschiede mühelos zu berücksichtigen und dadurch die Genauigkeit und Klarheit ihrer Daten zu gewährleisten. Technisch basiert das Tool auf modernen Webtechnologien und nutzt JavaScripts `Intl.NumberFormat`-API, um die Formatierung durchzuführen. Diese API bietet umfassende Unterstützung für verschiedene Sprachen, Gebietsschemas und Zahlenformate, was es dem Tool ermöglicht, komplexe Anforderungen zu erfüllen. Die Benutzeroberfläche ist intuitiv gestaltet und ermöglicht es Benutzern, schnell und einfach ihre Zahlen zu formatieren, ohne tiefgehende Kenntnisse in JavaScript oder Webentwicklung zu haben.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des Number Formatter-Tools in Ihrem Webbrowser.",
+        "Geben Sie die zu formatierende Zahl in das Eingabefeld ein.",
+        "Wählen Sie in der Dropdown-Liste das gewünschte Lokalisierungsschema (z.B. 'de-DE' für Deutschland).",
+        "Wählen Sie den gewünschten Stil aus den Optionen 'Dezimal', 'Währung' oder 'Prozent'.",
+        "Konfigurieren Sie bei Bedarf zusätzliche Einstellungen wie die Anzahl der Dezimalstellen.",
+        "Klicken Sie auf den 'Formatieren' Button, um das Ergebnis anzuzeigen und es kopieren zu können."
+      ],
+      "usage_examples": [
+        "Ein Finanzexperte aus Deutschland muss eine Tabelle mit US-Dollar-Werten für einen Bericht vorbereiten. Er verwendet das Number Formatter-Tool, um die Werte in das deutsche Format zu konvertieren, einschließlich des Kommas als Dezimaltrennzeichen und des Punktzeichen als Tausendertrennzeichen.",
+        "Ein Entwickler baut eine internationale Webanwendung, die Benutzer aus verschiedenen Ländern unterstützen soll. Er nutzt das Number Formatter-Tool, um sicherzustellen, dass Zahlen auf jeder Sprachversion der Website korrekt dargestellt werden, egal ob in Japan, Frankreich oder Brasilien.",
+        "Eine Marketing-Agentur erstellt ein Präsentationsmaterial für eine globale Kampagne und muss Zahlen in mehreren Sprachen korrekt formatieren. Das Tool hilft ihnen, die Zahlen in den jeweiligen Lokalisierungen korrekt anzuzeigen, um Konsistenz und Professionalität zu gewährleisten.",
+        "Ein Wissenschaftler führt Forschungen durch, die Daten aus verschiedenen Regionen umfassen. Um seine Ergebnisse für eine breite internationale Leserschaft verständlich zu gestalten, nutzt er das Number Formatter-Tool, um die numerischen Daten in unterschiedlichen Lokalisierungen klar und präzise darzustellen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Number Formatter — это мощный инструмент для форматирования чисел в различных локализациях, включая десятичные, валютные и процентные стили. Этот инструмент позволяет разработчикам и специалистам по данным легко адаптировать числовые значения для различных региональных стандартов и требований. Он учитывает особенности форматирования, такие как разделители тысяч, десятичные знаки и сокращения валют, что особенно важно для международных проектов. Например, в США принято использовать запятую как разделитель тысяч, а точку — как десятичный знак, в то время как в Европе это может быть наоборот. Number Formatter автоматически применяет правильные форматы в зависимости от выбранной локали. Это обеспечивает точность и согласованность данных, улучшая пользовательский опыт и повышая доверие к приложениям и отчетам.",
+      "usage_steps": [
+        "Откройте страницу инструмента Number Formatter на сайте.",
+        "В поле ввода 'Число' введите число, которое вы хотите отформатировать.",
+        "Выберите локаль из выпадающего списка 'Локаль'. Например, выберите 'en-US' для форматирования в американском стиле.",
+        "Выберите стиль форматирования из выпадающего списка 'Стиль'. Доступные варианты: 'Decimal', 'Currency', 'Percent'.",
+        "Если вы выбрали 'Currency', укажите конкретную валюту в поле 'Валюта'. Например, 'USD' для долларов США.",
+        "Нажмите кнопку 'Форматировать', и отформатированное число появится в поле 'Результат'."
+      ],
+      "usage_examples": [
+        "Веб-разработчик хочет отформатировать число 123456.789 для отображения на сайте компании, который используется в Германии. Он выбирает локаль 'de-DE' и стиль 'Decimal'. Результат: 123.456,789.",
+        "Финансовый аналитик составляет отчет о доходах компании и хочет представить сумму 1000000.50 в долларах США. Он выбирает локаль 'en-US', стиль 'Currency' и валюту 'USD'. Результат: $1,000,000.50.",
+        "Маркетолог создает рекламное объявление и хочет отобразить скидку в 25% в французском стиле. Он выбирает локаль 'fr-FR' и стиль 'Percent'. Результат: 25 %",
+        "Исследователь данных анализирует статистику и хочет представить число 0.00123 в научном формате для отчета, предназначенного для международной аудитории. Он выбирает локаль 'en-US' и стиль 'Decimal'. Результат: 0.00123."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة Number Formatter هي أداة قوية ومتقدمة تسمح للمطورين والمستخدمين بتنسيق الأرقام وفقًا لمعايير مختلفة ومعايير دولية. يمكن لهذه الأداة تنسيق الأرقام في أشكال مختلفة مثل الأرقام العشرية، العملات، والنسب المئوية، مع مراعاة المعايير المحلية المتنوعة. تستخدم الأداة خوارزميات متطورة لتوفير تنسيق دقيق وموثوق، مما يجعلها ضرورية للمشاريع التي تتطلب عرضًا دقيقًا للأرقام في سياقات متعددة. على سبيل المثال، يمكن استخدامها في تطبيقات الويب التي تستهدف أسواقًا عالمية مختلفة، حيث تكون الأرقام منسقة وفقًا للمعايير المحلية لكل دولة. يمكن أيضًا استخدامها في التطبيقات المالية لتنسيق العملات بشكل صحيح، مما يضمن دقة المعاملات والعرض.",
+      "usage_steps": [
+        "افتح أداة Number Formatter على الموقع الخاص بك.",
+        "أدخل الرقم الذي تريد تنسيقه في الحقل المخصص.",
+        "اختر نوع التنسيق من القائمة المنسدلة (عشرة، عملة، نسبة مئوية).",
+        "حدد المعايير المحلية المناسبة من القائمة المنسدلة (مثل en-US، ar-SA، de-DE).",
+        "اضبط خيارات التنسيق الإضافية مثل عدد الأرقام العشرية أو رموز العملات.",
+        "اضغط على زر 'تنسيق' لعرض النتيجة المنسقة."
+      ],
+      "usage_examples": [
+        "في تطبيق تجارة إلكترونية عالمي، يمكن استخدام Number Formatter لتنسيق أسعار المنتجات بالعملات المحلية لكل بلد، مما يوفر تجربة أفضل للمستخدمين.",
+        "في تطبيق إحصائي، يمكن استخدام الأداة لتنسيق النسب المئوية بشكل دقيق، مما يساعد في عرض البيانات بشكل واضح ومهني.",
+        "في تطبيق مالي، يمكن استخدام Number Formatter لتنسيق المعاملات المالية بالعملات المحلية، مما يضمن دقة الحسابات والعرض.",
+        "في تطبيق تحليلي، يمكن استخدام الأداة لتنسيق الأرقام العشرية في التقارير، مما يساعد في تبسيط فهم البيانات المعقدة."
+      ]
+    }
+  }
+}

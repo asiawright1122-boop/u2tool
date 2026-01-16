@@ -1,0 +1,175 @@
+{
+  "slug": "html-to-jsx",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The HTML to JSX converter is a powerful tool designed to streamline the process of transitioning HTML code into React JSX format. This tool is essential for developers who are integrating legacy HTML into modern React applications. By automatically converting HTML elements and attributes, it ensures that the output is fully compliant with React's JSX syntax, including the use of PascalCase for custom components, self-closing tags for void elements, and the correct handling of attributes. This conversion process is particularly useful for projects that are being refactored or for teams that are adopting React as part of their technology stack. The tool also supports advanced features such as preserving event handlers, inline styles, and conditional rendering, making it a comprehensive solution for developers looking to modernize their frontend codebase. By using this tool, developers can save time and reduce the risk of errors that might occur during manual conversion, allowing them to focus on more strategic aspects of their projects.",
+      "usage_steps": [
+        "Step 1: Navigate to the HTML to JSX converter page and locate the input textarea labeled 'HTML Code'.",
+        "Step 2: Paste or type your HTML code into the 'HTML Code' textarea. Ensure that your HTML is well-formed to avoid conversion issues.",
+        "Step 3: If your HTML includes event handlers or inline styles, use the 'Preserve Event Handlers' and 'Preserve Inline Styles' checkboxes to maintain these features in the JSX output.",
+        "Step 4: Click the 'Convert to JSX' button to initiate the conversion process. The tool will analyze your HTML and transform it into React JSX format.",
+        "Step 5: Review the converted JSX code in the 'JSX Output' textarea. Check for any necessary adjustments or optimizations specific to your application.",
+        "Step 6: Copy the JSX code from the 'JSX Output' textarea and paste it into your React component or application. Test the component to ensure that it functions as expected."
+      ],
+      "usage_examples": [
+        "Example 1: A frontend developer is refactoring a legacy website into a React application. They use the HTML to JSX converter to quickly transform static HTML templates into React components, ensuring a smooth transition without manual rewrites.",
+        "Example 2: A team of developers is working on a large-scale project that involves integrating multiple HTML snippets into a React-based dashboard. They use the tool to convert these snippets, preserving event handlers and inline styles, to maintain the functionality and appearance of the original content.",
+        "Example 3: A web designer is creating a prototype in HTML and CSS but needs to hand off the design to a React developer. By using the HTML to JSX converter, the designer can provide a JSX version of the prototype, facilitating a seamless handover and reducing the time needed for the developer to start working on the project.",
+        "Example 4: A content manager needs to update a static HTML page with interactive elements in a React application. They use the tool to convert the existing HTML content, ensuring that the new elements are properly formatted and ready to be integrated into the React component."
+      ]
+    },
+    "zh": {
+      "detailed_description": "HTML to JSX 是一个在线转换工具，专门用于将传统的 HTML 代码转换为 React 应用中使用的 JSX 格式。React 是一个用于构建用户界面的 JavaScript 库，其 JSX 语法是一种在 JavaScript 中编写 HTML 标记的扩展语法。通过使用 HTML to JSX，开发者可以快速将现有的 HTML 代码片段转换为符合 React 规范的 JSX 代码，从而简化前端开发流程。该工具支持多种 HTML 元素和属性的转换，包括内联样式、事件处理和条件渲染等高级功能。用户可以通过简单的界面操作，将 HTML 代码粘贴到工具中，一键完成转换，输出的 JSX 代码可以直接在 React 项目中使用。此外，HTML to JSX 还支持自定义配置，允许用户根据项目需求调整转换规则，提高开发效率。",
+      "usage_steps": [
+        "Step 1: 打开 HTML to JSX 工具页面，进入主界面。",
+        "Step 2: 在“输入 HTML 代码”区域，粘贴您需要转换的 HTML 代码。",
+        "Step 3: 根据需要，选择“转换配置”选项卡，设置转换规则，例如是否保留内联样式或是否转换事件处理。",
+        "Step 4: 点击“开始转换”按钮，工具将自动将 HTML 代码转换为 JSX 代码。",
+        "Step 5: 在“输出 JSX 代码”区域，查看转换后的 JSX 代码，确保其符合您的需求。",
+        "Step 6: 将输出的 JSX 代码复制到您的 React 项目中，进行进一步的开发和调试。"
+      ],
+      "usage_examples": [
+        "Example 1: 一个前端开发者需要将一个静态的 HTML 网页转换为 React 组件，以便在新的项目中复用。使用 HTML to JSX 工具可以快速完成这一任务，确保代码的格式和功能保持一致。",
+        "Example 2: 一个团队在维护一个大型的 React 应用，需要将现有的 HTML 模板逐步迁移到 JSX 格式。HTML to JSX 工具可以帮助团队成员高效地完成迁移工作，减少手动转换的错误。",
+        "Example 3: 一个初学者在学习 React 时，需要将一些基础的 HTML 代码示例转换为 JSX 代码，以便更好地理解和实践 React 的 JSX 语法。HTML to JSX 工具提供了一个直观的界面，帮助初学者快速上手。",
+        "Example 4: 一个设计师在完成一个网页的设计后，需要将其 HTML 代码交给开发团队进行实现。开发团队可以使用 HTML to JSX 工具将设计师提供的 HTML 代码快速转换为 JSX 格式，加快开发进度。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "HTML to JSX 変換ツールは、従来の HTML コードを React JSX 形式に変換するための高度なオンラインツールです。React は JavaScript ライブラリの一種で、ユーザインターフェースの構築に特化しています。このツールは、HTML コードを React JSX に素早く変換することで、開発者が React アプリケーションの構築を効率化することができます。具体的には、HTML 要素を React コンポーネントとして扱えるように変換し、JSX 構文に必要となる属性や構造を自動的に適用します。例えば、`class` 属性は自動的に `className` に変換され、インラインスタイルはオブジェクト形式に変換されます。また、タグの閉じ忘れや属性の書式不備などの一般的な HTML エラーも検出して修正します。このツールは、既存の HTML プロジェクトを React に移行する際に特に有用であり、開発者の負担を大幅に軽減します。",
+      "usage_steps": [
+        "Step 1: ツールのホームページにアクセスし、左上の「HTML コードを入力」ボタンをクリックします。",
+        "Step 2: テキストエリアに変換したい HTML コードを貼り付けます。既存の HTML ファイルからコードをコピーすることも可能です。",
+        "Step 3: 任意で、右上の「設定」ボタンをクリックし、出力オプションを選択します。例えば、`className` への変換や、インラインスタイルのオブジェクト形式への変換を有効にできます。",
+        "Step 4: 「変換」ボタンをクリックします。システムは自動的に HTML コードを React JSX 形式に変換します。",
+        "Step 5: 変換結果が表示されます。右下の「コピー」ボタンをクリックして、変換された JSX コードをクリップボードにコピーします。",
+        "Step 6: 変換された JSX コードを React アプリケーションに貼り付けて使用します。必要に応じて、React コンポーネントの構造を調整できます。"
+      ],
+      "usage_examples": [
+        "Example 1: 既存の HTML プロジェクトを React に移行する際、各ページの HTML コードを一括で JSX 形式に変換し、React コンポーネントとして再利用します。",
+        "Example 2: デザイナーが HTML ファイルで提供したレイアウトを、開発者がすぐに React アプリケーションに統合するために使用します。これにより、デザインと開発の間の移行プロセスがスムーズになります。",
+        "Example 3: 大規模なウェブサイトで、複数のページの HTML コードを一括で JSX 形式に変換し、React で統一されたユーザーインターフェースを構築します。これにより、メンテナンス性と一貫性が向上します。",
+        "Example 4: 新規の React プロジェクトを開始する際に、既存の HTML テンプレートをベースにして、迅速にプロトタイプを作成します。これにより、開発初期段階での効率が向上します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "HTML to JSX는 HTML 코드를 React JSX 형식으로 변환하는 강력한 온라인 도구입니다. 이 도구는 웹 개발자들에게 특히 유용한데, HTML 코드를 React 애플리케이션에서 사용할 수 있는 JSX 형식으로 변환하여 개발 시간을 단축시킵니다. HTML 코드는 일반적으로 웹 페이지의 구조와 내용을 정의하는데 사용되지만, React에서는 JSX라는 확장된 문법을 사용하여 컴포넌트를 작성합니다. 이 도구는 HTML 코드를 분석하고, 적절한 JSX 문법으로 변환하여 React 컴포넌트에 쉽게 통합할 수 있도록 합니다. 특히, 클래스 속성을 className으로 자동 변환하고, 이벤트 핸들러를 추가하는 등 React에서 필요한 다양한 조정을 자동으로 수행합니다. 이를 통해 개발자들은 기존의 HTML 코드를 재사용하여 새로운 React 프로젝트를 빠르게 시작할 수 있습니다.",
+      "usage_steps": [
+        "1. HTML to JSX 도구 페이지에 접속합니다.",
+        "2. 왼쪽 패널의 'HTML 코드 입력' 영역에 변환하고자 하는 HTML 코드를 붙여넣습니다.",
+        "3. '옵션' 섹션에서 필요한 변환 옵션을 선택합니다. 예를 들어, '공백 제거', '자바스크립트 이스케이프 문자 사용' 등을 설정할 수 있습니다.",
+        "4. '변환' 버튼을 클릭하여 HTML 코드를 JSX로 변환합니다.",
+        "5. 오른쪽 패널의 'JSX 코드 출력' 영역에서 변환된 JSX 코드를 확인합니다.",
+        "6. 변환된 JSX 코드를 복사하여 React 애플리케이션에 붙여넣습니다."
+      ],
+      "usage_examples": [
+        "1. 기존 웹사이트의 HTML 코드를 React 애플리케이션으로 이관할 때, HTML to JSX 도구를 사용하여 빠르게 변환하여 React 컴포넌트에 통합할 수 있습니다.",
+        "2. 디자인 팀이 제공한 HTML 템플릿을 React 프로젝트에 사용하려는 경우, 이 도구를 통해 HTML 템플릿을 JSX로 변환하여 React 컴포넌트로 사용할 수 있습니다.",
+        "3. 개발자가 여러 페이지의 HTML 코드를 일괄적으로 React 애플리케이션으로 변환할 필요가 있을 때, 이 도구를 사용하여 효율적으로 작업할 수 있습니다.",
+        "4. 개발자 커뮤니티나 포럼에서 공유된 HTML 코드를 React 프로젝트에 사용하려는 경우, HTML to JSX 도구를 통해 쉽게 변환하여 사용할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El convertidor HTML to JSX es una herramienta esencial para desarrolladores que trabajan con React. Este tool toma código HTML y lo transforma en JSX, un tipo de sintaxis que permite escribir HTML dentro de JavaScript. Esta conversión es crucial para aquellos que necesitan integrar plantillas HTML existentes en componentes de React sin tener que reescribir todo el código manualmente. El convertidor HTML to JSX no solo simplifica el proceso, sino que también garantiza que el código resultante esté optimizado para el uso en aplicaciones React. Esto es particularmente útil cuando se trabaja con diseños complejos o cuando se necesita migrar un sitio web existente a React. La herramienta analiza el HTML, reconoce elementos y atributos, y los traduce a JSX de manera precisa, manteniendo la estructura y el comportamiento original del código. Además, ofrece opciones para personalizar el formato de salida, lo que facilita la integración en proyectos de React.",
+      "usage_steps": [
+        "Paso 1: Abre la página de HTML to JSX en tu navegador web.",
+        "Paso 2: En la sección de entrada, pega tu código HTML en el área de texto proporcionada.",
+        "Paso 3: Si deseas, configura las opciones adicionales, como el formato de salida y el manejo de atributos de clase.",
+        "Paso 4: Haz clic en el botón 'Convertir' para iniciar el proceso de conversión.",
+        "Paso 5: Una vez completada la conversión, el código JSX aparecerá en la sección de salida.",
+        "Paso 6: Copia el código JSX generado y pégalo en tu proyecto de React."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador tiene una plantilla HTML para un formulario de contacto y necesita integrarla en una aplicación React. Utiliza HTML to JSX para convertir el HTML a JSX, lo que facilita la integración en un componente de React.",
+        "Ejemplo 2: Una empresa quiere actualizar su sitio web existente a React para mejorar el rendimiento. El equipo de desarrollo utiliza HTML to JSX para convertir las páginas HTML actuales a componentes de React, optimizando el proceso de migración.",
+        "Ejemplo 3: Un diseñador de interfaces crea una página HTML con estilos CSS y JavaScript. Para integrar esta página en un proyecto de React, utiliza HTML to JSX para convertir el HTML a JSX, asegurando que el diseño y el comportamiento se mantengan intactos en React.",
+        "Ejemplo 4: Un desarrollador trabaja en un proyecto que requiere la creación de múltiples componentes de React con estructuras HTML similares. Utiliza HTML to JSX para convertir una plantilla HTML base a JSX, lo que ahorra tiempo y reduce la posibilidad de errores en la codificación manual."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O HTML to JSX é uma ferramenta especializada que permite a conversão de código HTML para o formato JSX, utilizado em aplicações React. Este processo é essencial para desenvolvedores que desejam aproveitar o HTML existente e integrá-lo em componentes React de maneira eficiente. A ferramenta utiliza um algoritmo avançado que identifica e transforma elementos HTML em elementos JSX, mantendo a estrutura e os atributos originais. Além disso, a ferramenta é capaz de lidar com atributos específicos do React, como `className` em vez de `class`, e `onClick` em vez de `onclick`, garantindo que o código convertido seja compatível com o ecossistema React. Usuários podem beneficiar dessa ferramenta em cenários como migração de aplicações legadas, criação de componentes reutilizáveis, ou mesmo na prototipagem rápida de interfaces. A conversão é realizada em tempo real, fornecendo feedback imediato, o que facilita a depuração e a iteração. Com o HTML to JSX, desenvolvedores podem economizar tempo e reduzir erros comuns na transição do HTML para JSX, tornando o processo de desenvolvimento mais ágil e eficiente.",
+      "usage_steps": [
+        "Acesse a página do HTML to JSX no site de ferramentas de desenvolvimento.",
+        "Na seção 'Código HTML', cole ou digite o código HTML que você deseja converter.",
+        "Clique no botão 'Converter para JSX' para iniciar o processo de conversão.",
+        "Observe o resultado na seção 'Código JSX' e verifique se a estrutura e os atributos foram convertidos corretamente.",
+        "Se necessário, faça ajustes manuais no código JSX gerado, especialmente para atributos e eventos específicos do React.",
+        "Copie o código JSX convertido e cole-o em seu projeto React para uso imediato."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor está migrando uma aplicação legada de uma tecnologia baseada em HTML para React. Ele usa o HTML to JSX para converter rapidamente os templates HTML em componentes JSX, acelerando o processo de migração.",
+        "Uma equipe de design precisa prototipar uma nova interface de usuário rapidamente. Eles criam a estrutura HTML básica e usam o HTML to JSX para converter o design em componentes React, permitindo a integração imediata em um protótipo funcional.",
+        "Um freelancer recebe um projeto que envolve a integração de um formulário HTML em uma aplicação React. Ele utiliza o HTML to JSX para converter o formulário, garantindo que os atributos de eventos e validação sejam corretamente mapeados para o JSX.",
+        "Um desenvolvedor de front-end está criando uma biblioteca de componentes reutilizáveis. Ele usa o HTML to JSX para converter os snippets HTML em componentes JSX, facilitando a criação e o compartilhamento de componentes padronizados."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil HTML to JSX est conçu pour simplifier la transition entre le HTML traditionnel et le format JSX utilisé dans les applications React. Ce convertisseur analyse le code HTML fourni et le transforme en JSX, en respectant les conventions de React, telles que la nécessité de fermer toutes les balises, l'utilisation de props pour les attributs, et l'encapsulation dans un élément parent unique. L'outil est particulièrement utile pour les développeurs qui migrent des projets existants vers React ou ceux qui cherchent à intégrer des composants HTML existants dans des applications React sans avoir à réécrire tout le code. Il facilite également la compréhension des différences syntaxiques entre HTML et JSX, ce qui est essentiel pour les développeurs débutants en React. Grâce à ce convertisseur, les développeurs peuvent gagner du temps et réduire les erreurs potentielles lors de la transformation de leur code.",
+      "usage_steps": [
+        "Ouvrez la page de l'outil HTML to JSX sur le site.",
+        "Dans la zone de texte intitulée 'Code HTML', collez le code HTML que vous souhaitez convertir.",
+        "Cliquez sur le bouton 'Convertir' pour lancer la transformation du code HTML en JSX.",
+        "L'outil affiche le code JSX converti dans la zone de texte intitulée 'Code JSX'.",
+        "Revérifier le code JSX généré pour vous assurer qu'il correspond à vos attentes et corrigez si nécessaire.",
+        "Copiez le code JSX final et intégrez-le dans votre projet React."
+      ],
+      "usage_examples": [
+        "Un développeur travaille sur la migration d'une application legacy vers React et utilise HTML to JSX pour convertir rapidement les composants HTML en JSX, facilitant ainsi l'intégration dans le nouveau codebase.",
+        "Une équipe de développement souhaite réutiliser des snippets HTML trouvés en ligne dans une application React. L'outil HTML to JSX permet de convertir ces snippets en JSX, les rendant compatibles avec React.",
+        "Un développeur front-end crée un prototype rapide en HTML et CSS et décide d'utiliser React pour le développement final. HTML to JSX aide à transformer le prototype HTML en JSX, accélérant le processus de développement.",
+        "Un formateur en développement web utilise HTML to JSX pour démontrer les différences entre HTML et JSX lors de cours sur React, fournissant des exemples concrets aux étudiants."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Tool HTML zu JSX ist eine leistungsstarke Umwandlungskomponente, die HTML-Code in React JSX-Format umwandelt. Dieses Tool ist für Entwickler und Frontend-Entwickler von entscheidender Bedeutung, da es den Prozess der Konvertierung von traditionellen HTML-Elementen in React-kompatibles JSX erheblich vereinfacht. Die Notwendigkeit für dieses Tool ergibt sich daraus, dass React und andere JavaScript-basierte Frameworks JSX-Elemente verwenden, um komponentenbasierte Benutzeroberflächen zu erstellen. HTML-Code, der in einem Legacy-System oder einer statischen Website verwendet wird, muss oft in JSX konvertiert werden, um in modernen React-Anwendungen verwendet werden zu können. Dieses Tool übernimmt die komplexen syntaktischen Unterschiede, wie z.B. die Verwendung von Klassennamen (class vs. className) und das Hinzufügen von React-Spezifika, wie z.B. die Verwendung von geschweiften Klammern für Inline-Expressen. Durch die Automatisierung dieses Prozesses spart das Tool wertvolle Entwicklerzeit und minimiert Fehler, die manuell bei der Umwandlung entstehen könnten.",
+      "usage_steps": [
+        "Öffnen Sie die Website und navigieren Sie zur Seite 'HTML to JSX'.",
+        "Klicken Sie auf den Button 'HTML-Code einfügen' und fügen Sie Ihren HTML-Code in das Textfeld ein.",
+        "Wählen Sie im Dropdown-Menü 'Konvertierungsoptionen' die gewünschten Einstellungen, wie z.B. die Verwendung von Single- oder Double-Quotes.",
+        "Klicken Sie auf den Button 'Konvertieren', um den HTML-Code in JSX umzuwandeln.",
+        "Sobald die Konvertierung abgeschlossen ist, wird der umgewandelte JSX-Code im unteren Textfeld angezeigt.",
+        "Klicken Sie auf den Button 'Code kopieren', um den JSX-Code in Ihre Zwischenablage zu übertragen und in Ihr Projekt einzufügen."
+      ],
+      "usage_examples": [
+        "Ein Entwickler hat eine statische HTML-Vorlage für eine Landing Page und möchte diese in eine reaktive React-Komponente umwandeln, um sie in eine bestehende Single-Page-Anwendung (SPA) zu integrieren.",
+        "Eine Webdesign-Agentur erstellt eine komplexe HTML-Tabelle und muss sie in eine React-Komponente konvertieren, um sie in einem Customer-Portal zu verwenden.",
+        "Ein Freelancer entwickelt ein E-Commerce-Plugin und benötigt eine schnelle Umwandlung von HTML-Formularen in JSX, um sie in React-kompatiblen Themen zu integrieren.",
+        "Ein Team von Frontend-Entwicklern möchte bestehende HTML-Widgets von einem Legacy-System in ein neues React-Projekt übertragen, um die Wiederverwendbarkeit des Codes zu maximieren."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент HTML to JSX предназначен для преобразования кода HTML в формат JSX, который используется в фреймворке React. Этот инструмент особенно полезен для разработчиков, которые migрируют с проектов, написанных на чистом HTML, на React. Преобразование HTML в JSX позволяет автоматически добавлять необходимые структуры и синтаксис, такие как теги `<div>` и `<span>`, а также пропсы и состояния, что значительно упрощает процесс перехода. Кроме того, инструмент поддерживает обработку атрибутов и классов, что делает его универсальным решением для различных сценариев разработки. Использование этого инструмента сокращает время на ручное переписывание кода, минимизирует ошибки и улучшает производительность разработки.",
+      "usage_steps": [
+        "Откройте страницу инструмента HTML to JSX на сайте.",
+        "В разделе «Входной код» вставьте HTML-код, который вы хотите преобразовать в JSX.",
+        "Выберите опцию «Обрабатывать атрибуты» в выпадающем меню, если вы хотите, чтобы инструмент автоматически поддерживал атрибуты и классы.",
+        "Нажмите кнопку «Преобразовать» для запуска процесса преобразования.",
+        "После завершения преобразования, результат отобразится в разделе «Выходной код».",
+        "Скопируйте преобразованный JSX-код и вставьте его в ваш проект React."
+      ],
+      "usage_examples": [
+        "Разработчик migрирует старый проект с чистого HTML на React и использует инструмент для быстрого преобразования существующего HTML-кода в JSX, сохраняя структуру и функциональность.",
+        "Дизайнер создает прототип веб-страницы с использованием HTML и CSS, а затем использует инструмент, чтобы преобразовать его в JSX для интеграции с React-приложением.",
+        "Команда разработки работает над обновлением существующего проекта, где необходимо добавить новые компоненты React. Они используют инструмент для преобразования базовых HTML-элементов в JSX, чтобы ускорить процесс разработки.",
+        "Фрилансер получает заказ на создание интерактивного блока на сайте, который должен быть написан на React. Он использует инструмент для преобразования статического HTML-кода в JSX, чтобы быстро начать работу над интерактивными элементами."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة HTML إلى JSX هي أداة متطورة تتيح للمطورين تحويل الشفرة HTML إلى تنسيق JSX المستخدم في تطبيقات React. هذه العملية تصبح ضرورية عندما يقوم المطورون بدمج عناصر HTML الموجودة في مشاريعهم القديمة مع تقنيات React الحديثة. من خلال هذه الأداة، يمكن للمطورين تجنب اليدوية المُتعبة والخطأ في إعادة كتابة الرموز، مما يوفر الوقت ويحسن الدقة. تستخدم الأداة خوارزميات معقدة لفهم هيكل HTML والتعرف على العناصر والسمات، ثم تقوم بإعادة صياغتها في تنسيق JSX المُتوافق مع معايير React. هذا يشمل التعامل مع الأحداث، الدوال، والتعبيرات التي قد تكون موجودة في الشفرة الأصلية. بالإضافة إلى ذلك، تدعم الأداة مجموعة واسعة من العناصر وخصائص HTML، مما يجعلها مفيدة في مجموعة متنوعة من السيناريوهات التطويرية.",
+      "usage_steps": [
+        "افتح أداة HTML إلى JSX من القائمة الرئيسية للمنصة.",
+        "انقر على زر \"إدراج شفرة HTML\" لفتح نافذة الإدخال.",
+        "أدخل أو لصق الشفرة HTML التي تريد تحويلها في المربع المخصص.",
+        "اختر الإعدادات المطلوبة من القائمة المنسدلة، مثل التعامل مع الأحداث أو الدوال.",
+        "انقر على زر \"تحويل إلى JSX\" لبدء العملية التحويلية.",
+        "بعد الإنتهاء، سيتم عرض الشفرة JSX المُحولة في المربع السفلي، قم بنسخها واستخدمها في مشروع React الخاص بك."
+      ],
+      "usage_examples": [
+        "تحويل مكون HTML بسيط لصفحة تسجيل الدخول إلى تنسيق JSX لاستخدامه في تطبيق React.",
+        "دمج شفرة HTML معقدة لصفحة منتج في موقع تجارة إلكترونية مع تطبيق React جديد.",
+        "تحديث مكونات HTML القديمة في موقع ويب-existing لتتوافق مع أحدث معايير React وتحسين الأداء.",
+        "تحويل شفرة HTML لصفحة تعليقات تفاعلية إلى JSX لدمجها بسلاسة مع تطبيق React متطور."
+      ]
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "slug": "ip-address-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The IP Address Generator is a robust tool designed to facilitate the creation of random IP addresses, supporting both IPv4 and IPv6 standards, as well as private and public IP addresses. This tool is particularly valuable for developers, network administrators, and security professionals who need to simulate various network environments, test applications, or conduct penetration testing. The generator leverages algorithms that ensure the generated IP addresses are compliant with the Internet Protocol standards, making them suitable for a wide range of technical applications. By providing options to specify the type of IP address, users can tailor the output to fit their specific needs, whether it's for testing a new network setup, simulating client requests, or generating data for security audits. The tool's backend processes the user's input parameters, such as the IP version and address type, and then uses a deterministic or random algorithm to produce the desired IP addresses. This ensures that the generated addresses are both valid and relevant to the user's requirements.",
+      "usage_steps": [
+        "Step 1: Open the IP Address Generator tool on the website and navigate to the main interface.",
+        "Step 2: Select the IP version you need (IPv4 or IPv6) using the dropdown menu labeled 'IP Version'.",
+        "Step 3: Choose the type of IP address (Public or Private) from the 'Address Type' dropdown menu.",
+        "Step 4: Specify the number of IP addresses you want to generate by entering a value in the 'Quantity' field.",
+        "Step 5: If you need to generate addresses within a specific range, enter the start and end IP addresses in the 'Range' fields.",
+        "Step 6: Click the 'Generate' button to produce the IP addresses, which will be displayed in the results area below the controls."
+      ],
+      "usage_examples": [
+        "Example 1: A network administrator is testing a new firewall configuration and needs to simulate traffic from various external IP addresses. They use the IP Address Generator to create a list of 50 random public IPv4 addresses to include in their test scenarios.",
+        "Example 2: A developer is working on a web application that needs to handle both IPv4 and IPv6 connections. They use the tool to generate a set of 20 random IPv6 addresses to test the application's ability to correctly process and respond to requests from these addresses.",
+        "Example 3: A security analyst is conducting a penetration test on a network and requires a list of private IP addresses to simulate internal client traffic. They use the IP Address Generator to create 100 private IPv4 addresses for their test scripts.",
+        "Example 4: A cloud service provider is setting up a new virtual private cloud (VPC) and needs to allocate a specific range of private IP addresses to different subnets. They use the tool to generate a list of 1000 private IPv4 addresses within the specified range to ensure proper allocation and management."
+      ]
+    },
+    "zh": {
+      "detailed_description": "IP Address Generator 是一款专业的在线工具，能够生成随机的IPv4和IPv6地址，支持生成公网和私网IP地址。该工具通过复杂的随机算法，确保生成的IP地址在指定范围内具有高度的随机性和分布均匀性。对于网络工程师、开发人员和安全专家来说，这款工具在测试网络配置、模拟网络流量、进行安全评估等方面具有重要作用。例如，在测试网络设备的性能和稳定性时，可以使用生成的IP地址来模拟大量的网络请求，验证设备的处理能力和响应时间。此外，生成的私网IP地址可以用于内部网络环境的配置和测试，而公网IP地址则可以用于模拟外部网络访问，帮助开发人员和安全专家更好地理解网络行为和潜在的安全威胁。",
+      "usage_steps": [
+        "Step 1: 打开 IP Address Generator 工具页面，选择生成的IP地址类型（IPv4或IPv6）。",
+        "Step 2: 在“生成数量”字段中输入您需要生成的IP地址数量（例如10个）。",
+        "Step 3: 选择IP地址的类型，包括公网IP地址和私网IP地址。",
+        "Step 4: 如果需要，可以自定义IP地址的范围，例如输入起始IP地址和结束IP地址。",
+        "Step 5: 点击“生成”按钮，工具将根据您的设置生成相应的IP地址列表。",
+        "Step 6: 生成的IP地址将显示在页面下方的文本框中，您可以选择复制或下载生成的IP地址列表。"
+      ],
+      "usage_examples": [
+        "Example 1: 网络工程师在测试新部署的路由器和交换机时，可以使用IP Address Generator生成大量随机的公网IP地址，模拟实际的网络流量，测试设备的性能和稳定性。",
+        "Example 2: 开发人员在进行网络应用的单元测试时，可以使用IP Address Generator生成私网IP地址，模拟不同的客户端访问，验证应用程序的网络处理逻辑。",
+        "Example 3: 安全专家在进行渗透测试时，可以使用IP Address Generator生成随机的公网IP地址，模拟恶意攻击源，测试网络的安全性和防御能力。",
+        "Example 4: 系统管理员在配置内部网络的虚拟机时，可以使用IP Address Generator生成私网IP地址，确保每个虚拟机拥有唯一的IP地址，避免IP冲突。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "IP Address Generatorは、IPv4およびIPv6の公開IPアドレスとプライベートIPアドレスをランダムに生成するオンラインツールです。このツールは、ネットワークエンジニア、開発者、セキュリティ専門家など、IPアドレスの生成が必要なさまざまなユーザーに役立ちます。具体的には、テスト環境の設定、ネットワークシミュレーション、セキュリティテスト、またはプライベートネットワークの設計など、多様な用途に活用されます。ユーザーは、必要なIPアドレスの種類（IPv4/IPv6、公開/プライベート）を選択し、生成したいアドレスの数を入力することで、即座にランダムなIPアドレスを取得できます。生成されたIPアドレスは、直感的なインターフェースから直接コピーして利用することが可能です。このツールは、高度なカスタマイゼーションオプションを提供し、特定のサブネットやIP範囲を指定することもできます。また、生成されたIPアドレスの有効性を確認する機能も搭載されています。",
+      "usage_steps": [
+        "Step 1: IP Address Generatorのページにアクセスし、画面中央の「IPアドレスの種類」セレクトボックスからIPv4、IPv6、またはプライベートIPアドレスの生成を選択します。",
+        "Step 2: 「IPアドレスの数」入力欄に、生成したいIPアドレスの数を入力します。例えば、10個のIPアドレスを生成したい場合は「10」を入力します。",
+        "Step 3: 必要に応じて、「サブネットマスク」または「IP範囲」を指定します。サブネットマスクは、IPv4アドレスに限って指定できます。",
+        "Step 4: 「プライベートIPアドレス」を選択した場合、追加でプライベート範囲（10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16）から生成するかどうかを選択します。",
+        "Step 5: 「生成」ボタンをクリックします。選択したオプションに基づいて、指定された数のIPアドレスが即座に生成されます。",
+        "Step 6: 生成されたIPアドレスは、結果表示エリアにリストされます。必要なIPアドレスをクリックすると、自動的にコピーされます。"
+      ],
+      "usage_examples": [
+        "Example 1: ネットワークエンジニアは、新しいネットワーク設計のテスト用にプライベートIPアドレスを生成します。10.0.0.0/8サブネット内で20個のIPアドレスを生成し、これらのアドレスを使用して仮想マシンを設定します。",
+        "Example 2: セキュリティ専門家は、ファイアウォールのルールテストのために、公開IPv4アドレスを生成します。50個のIPv4アドレスを生成し、それぞれのアドレスが正しくブロックされているかを確認します。",
+        "Example 3: ソフトウェア開発者は、アプリケーションのネットワーク通信テストのために、IPv6アドレスを生成します。100個のIPv6アドレスを生成し、これらのアドレスをテスト環境に設定して、アプリケーションの動作を検証します。",
+        "Example 4: ネットワーク管理者は、新しいプライベートネットワークの設計を検討するために、192.168.0.0/16サブネット内で30個のプライベートIPv4アドレスを生成します。これらのアドレスを使用して、ネットワークのトポロジーを設計します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "IP Address Generator는 사용자가 필요에 따라 IPv4 및 IPv6 주소를 무작위로 생성할 수 있는 도구입니다. 이 도구는 공용 IP, 사설 IP 등 다양한 유형의 IP 주소를 생성할 수 있어 네트워크 테스팅, 시뮬레이션, 보안 테스트 등 다양한 용도로 활용됩니다. 특히, 특정 네트워크 환경을 시뮬레이션하거나 보안 테스트를 수행할 때 유용합니다. 예를 들어, 공용 IP 주소를 생성하여 외부 네트워크 트래픽을 모의하거나, 사설 IP 주소를 생성하여 내부 네트워크의 안전성을 테스트할 수 있습니다. 이 도구는 사용자가 원하는 IP 주소의 유형과 수를 선택할 수 있으며, 생성된 IP 주소는 즉시 복사하여 사용할 수 있습니다. IP Address Generator는 효율적인 네트워크 관리를 위해 설계된 고급 기능을 제공합니다.",
+      "usage_steps": [
+        "1. IP Address Generator 웹사이트에 접속합니다.",
+        "2. 'IP Type' 드롭다운 메뉴에서 IPv4 또는 IPv6를 선택합니다.",
+        "3. 'Address Type' 드롭다운 메뉴에서 'Public', 'Private', 또는 'Both'를 선택합니다.",
+        "4. 'Number of IP Addresses' 입력 필드에 생성하려는 IP 주소의 수를 입력합니다.",
+        "5. 'Generate' 버튼을 클릭하여 IP 주소를 생성합니다.",
+        "6. 생성된 IP 주소 목록을 확인하고 필요에 따라 복사하거나 다운로드합니다."
+      ],
+      "usage_examples": [
+        "예시 1: 네트워크 엔지니어는 새로운 라우터를 테스트할 때 공용 IPv4 주소를 생성하여 외부 트래픽을 시뮬레이션합니다.",
+        "예시 2: 보안 전문가는 사설 IPv6 주소를 생성하여 내부 네트워크의 취약점을 찾기 위해 펜테스팅을 수행합니다.",
+        "예시 3: 소프트웨어 개발자는 여러 IP 주소를 생성하여 애플리케이션의 네트워크 요청 핸들링을 테스트합니다.",
+        "예시 4: IT 관리자는 새로운 네트워크 설계를 위한 시뮬레이션에 사용할 IP 주소를 빠르게 생성합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de Direcciones IP es una herramienta diseñada para crear direcciones IP de manera aleatoria, tanto para IPv4 como para IPv6. Esta herramienta es esencial para desarrolladores, administradores de redes y profesionales de ciberseguridad que necesitan generar direcciones IP para pruebas, simulaciones o análisis de red. La capacidad de generar direcciones IP privadas y públicas proporciona una flexibilidad significativa, permitiendo a los usuarios simular diversos escenarios de red. El generador utiliza algoritmos criptográficamente seguros para asegurar que las direcciones IP generadas sean únicas y válidas. Además, el tool ofrece opciones para especificar el tipo de IP (IPv4 o IPv6), y si debe ser pública o privada, lo que facilita la configuración de entornos de prueba realistas y seguros.",
+      "usage_steps": [
+        "Paso 1: Accede a la página del Generador de Direcciones IP en nuestra plataforma de herramientas en línea.",
+        "Paso 2: Selecciona el tipo de dirección IP que deseas generar (IPv4 o IPv6) usando el menú desplegable correspondiente.",
+        "Paso 3: Elige si la dirección IP debe ser pública o privada utilizando el radio button 'Tipo de Dirección'.",
+        "Paso 4: Si lo deseas, especifica el número de direcciones IP que necesitas generar en el campo 'Cantidad'.",
+        "Paso 5: Haz clic en el botón 'Generar' para iniciar el proceso de generación de direcciones IP.",
+        "Paso 6: Una vez generadas, las direcciones IP aparecerán en la sección 'Direcciones Generadas'. Puedes copiarlas individualmente o en bloque para su uso inmediato."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador de aplicaciones web está probando una nueva funcionalidad que filtra el tráfico basado en direcciones IP. Utiliza el Generador de Direcciones IP para crear una lista de direcciones IPv4 públicas y privadas, y las configura en su entorno de pruebas para validar el correcto funcionamiento de la funcionalidad.",
+        "Ejemplo 2: Un administrador de red necesita simular un ataque de denegación de servicio (DDoS) para probar la resiliencia de su infraestructura. Genera cientos de direcciones IP públicas usando la herramienta y las utiliza para simular tráfico malicioso en su red.",
+        "Ejemplo 3: Un profesional de ciberseguridad está realizando un análisis forense en una red comprometida. Utiliza el Generador de Direcciones IP para crear direcciones IP privadas y simular dispositivos internos, ayudando a identificar patrones anómalos en el tráfico de red.",
+        "Ejemplo 4: Un equipo de desarrollo de IoT necesita probar la conectividad de sus dispositivos en una red simulada. Genera direcciones IPv6 para cada dispositivo en el entorno de prueba, asegurando que cada uno tenga una dirección única y válida, lo que facilita la simulación de un escenario de red real."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Gerador de Endereços IP é uma ferramenta especializada para a geração de endereços IP aleatórios, tanto IPv4 quanto IPv6, incluindo endereços privados e públicos. Esta ferramenta é essencial para desenvolvedores, administradores de rede e profissionais de TI que precisam testar sistemas, configurar redes virtuais, ou realizar auditorias de segurança. O Gerador de Endereços IP utiliza algoritmos avançados para garantir a aleatoriedade e a validade dos endereços gerados, o que é crucial para simulações precisas e testes de rede. Além disso, a ferramenta permite a seleção de diferentes tipos de endereços IP, como endereços privados (RFC 1918) e públicos, facilitando a criação de cenários de teste realistas. A capacidade de gerar tanto IPv4 quanto IPv6 é particularmente útil em ambientes que estão em transição entre os dois protocolos de internet, permitindo uma abordagem abrangente nos testes de compatibilidade e segurança.",
+      "usage_steps": [
+        "Acesse a ferramenta IP Address Generator no site.",
+        "Selecione o tipo de endereço IP desejado (IPv4 ou IPv6) usando o seletor de opções.",
+        "Escolha o tipo de endereço (público ou privado) através do botão de rádio.",
+        "Defina a quantidade de endereços IP que deseja gerar no campo 'Quantidade'.",
+        "Clique no botão 'Gerar' para iniciar o processo de geração.",
+        "Os endereços IP gerados serão exibidos na área de resultados, prontos para serem copiados e utilizados."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de software está criando um aplicativo que precisa se conectar a vários servidores em uma rede simulada. Utilizando o Gerador de Endereços IP, ele pode rapidamente gerar uma lista de endereços IPv4 privados para configurar os servidores de teste, garantindo que o aplicativo funcione corretamente em diferentes ambientes.",
+        "Um administrador de rede precisa configurar uma VLAN para um novo projeto. Ele usa o Gerador de Endereços IP para criar uma série de endereços IPv4 públicos válidos, que serão atribuídos aos dispositivos na VLAN, facilitando a configuração e a gestão da rede.",
+        "Um especialista em segurança está realizando uma auditoria em um sistema de rede. Ele utiliza o Gerador de Endereços IP para simular o tráfego de diferentes fontes externas, gerando endereços IPv6 públicos para testar a resiliência e a segurança do firewall e outros dispositivos de segurança.",
+        "Um engenheiro de rede está implementando uma infraestrutura de nuvem híbrida. Ele precisa de endereços IP para configurar as máquinas virtuais em diferentes regiões. O Gerador de Endereços IP ajuda a criar uma lista de endereços IPv4 e IPv6, tanto privados quanto públicos, otimizando a configuração da infraestrutura e garantindo a conectividade entre as regiões."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil IP Address Generator est conçu pour générer des adresses IP de manière aléatoire, offrant des options pour les adresses IPv4 et IPv6, ainsi que pour les adresses privées et publiques. Ce générateur utilise des algorithmes spécifiques pour s'assurer que les adresses générées respectent les standards de l'Internet Assigned Numbers Authority (IANA). Les utilisateurs peuvent choisir le type d'adresse IP qu'ils souhaitent générer, en fonction de leurs besoins spécifiques. Cette fonctionnalité est particulièrement utile pour les développeurs et les administrateurs réseau qui ont besoin de tester des configurations réseau, des applications de sécurité, ou des services de surveillance. Les adresses IP générées peuvent être utilisées pour simuler des scénarios de réseau, tester des pare-feu, ou même pour créer des scripts de test automatisés. L'outil est basé sur une interface web intuitive qui permet une génération rapide et précise des adresses IP.",
+      "usage_steps": [
+        "Ouvrez la page de l'outil IP Address Generator sur le site.",
+        "Sélectionnez le type d'adresse IP que vous souhaitez générer : IPv4 ou IPv6, en cochant la case correspondante.",
+        "Choisissez si vous voulez générer une adresse publique ou privée en utilisant les options fournies.",
+        "Définissez le nombre d'adresses IP à générer en entrant un nombre dans le champ prévu à cet effet.",
+        "Cliquez sur le bouton 'Generate' pour lancer la génération des adresses IP.",
+        "Copiez les adresses IP générées et utilisez-les selon vos besoins, que ce soit pour des tests, des simulations, ou d'autres usages spécifiques."
+      ],
+      "usage_examples": [
+        "Un développeur de sécurité souhaite tester les capacités de détection de son pare-feu en utilisant des adresses IP générées de manière aléatoire pour simuler des attaques provenant de différentes sources.",
+        "Un administrateur réseau a besoin de générer un ensemble d'adresses IP privées pour configurer un nouveau réseau local privé (LAN). Il utilise l'outil pour obtenir un bloc d'adresses IP privées valides.",
+        "Un ingénieur en sécurité informatique doit créer des scénarios de test pour une application qui gère les accès réseau. Il utilise l'outil pour générer des adresses IPv6 pour tester la gestion des adresses longues et complexes.",
+        "Un spécialiste en sécurité réseau veut vérifier la robustesse d'un service de géolocalisation basé sur les adresses IP. Il génère des adresses IP publiques de différentes régions pour tester la précision du service."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der IP-Adresse-Generator ist ein leistungsstarkes Online-Tool, das es Benutzern ermöglicht, sowohl IPv4- als auch IPv6-Adressen in verschiedenen Kategorien (öffentlich, privat) zu erzeugen. DiesesTool nutzt fortgeschrittene Algorithmen, um zufällige, aber gültige IP-Adressen zu generieren, die in verschiedenen technischen und sicherheitsbezogenen Anwendungen eingesetzt werden können. Die Fähigkeit, sowohl öffentliche als auch private Adressen zu erzeugen, macht es zu einem wertvollen Werkzeug für Netzwerkadministratoren, Entwickler und Sicherheitsexperten. Benutzer können die generierten Adressen zum Testen von Netzwerkanwendungen, zur Simulation von Netzwerkumgebungen oder zur Erstellung von Testdaten verwenden. Die Technik hinter dem Generator basiert auf der Verwendung von Pseudozufallszahlengeneratoren, die die IP-Adressen in Übereinstimmung mit den Standards der Internet Assigned Numbers Authority (IANA) erstellen. Dies stellt sicher, dass die generierten Adressen sowohl für IPv4 als auch IPv6 korrekt und nutzbar sind.",
+      "usage_steps": [
+        "Öffnen Sie die Webseite des IP-Adresse-Generators und navigieren Sie zur Sektion 'IP-Adresse generieren'.",
+        "Wählen Sie den gewünschten IP-Adresse-Typ aus, indem Sie auf 'IPv4' oder 'IPv6' klicken.",
+        "Bestimmen Sie die Art der IP-Adresse, indem Sie zwischen 'Öffentlich' und 'Privat' wählen.",
+        "Definieren Sie die Anzahl der zu generierenden IP-Adressen in dem entsprechenden Eingabefeld.",
+        "Klicken Sie auf die Schaltfläche 'Generieren', um den Prozess zu starten.",
+        "Die generierten IP-Adressen werden in der Ausgabebox angezeigt, von wo Sie sie kopieren oder direkt verwenden können."
+      ],
+      "usage_examples": [
+        "Ein Netzwerkadministrator möchte Testdaten für ein neues Netzwerksegment erstellen. Er verwendet den IP-Adresse-Generator, um eine Liste von privat genutzten IPv4-Adressen zu generieren, die dann in der Testumgebung implementiert werden.",
+        "Ein Softwareentwickler testet eine Anwendung, die mit IPv6-Adressen arbeitet. Mit Hilfe des IP-Adresse-Generators erzeugt er eine Serie von öffentlichen IPv6-Adressen, um die Kompatibilität und Funktionalität der Anwendung unter realen Bedingungen zu prüfen.",
+        "Ein Sicherheitsexperte führt Penetrationstests durch, um Schwachstellen in Netzwerksystemen zu identifizieren. Er nutzt den Generator, um eine Vielzahl von IP-Adressen zu erzeugen, die für den Test verwandt werden, um mögliche Angriffspfade zu simulieren.",
+        "Ein IT-Trainee lernt die Konzepte von Netzwerksegmentierung und Subnetting. Er verwendet den IP-Adresse-Generator, umIPv4-Adressen zu erzeugen, die er dann in einem Trainingslabor für die Praxis anwendet, um seine Fähigkeiten zu verfeinern."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор IP-адресов — это веб-инструмент, предназначенный для создания случайных IP-адресов, как IPv4, так и IPv6, включая приватные и публичные диапазоны. Этот инструмент обеспечивает гибкость и надежность для различных сценариев использования, от тестирования сетевых приложений до моделирования трафика. Пользователи могут выбирать тип генерируемых IP-адресов, задавать количество генерируемых адресов и фильтровать результаты по определенным критериям. Генератор IP-адресов использует алгоритмы для создания адресов, которые соответствуют стандартам IETF, таким как RFC 1918 для приватных IP-адресов и RFC 4193 для приватных IPv6-адресов. Таким образом, этот инструмент является незаменимым для разработчиков, тестировщиков и сетевых администраторов, которые требуют точного и согласованного генерирования IP-адресов для своих задач.",
+      "usage_steps": [
+        "Шаг 1: Перейдите на страницу Генератора IP-адресов и выберите тип IP-адреса, который вы хотите сгенерировать (IPv4, IPv6, приватный или публичный) с помощью выпадающего меню.",
+        "Шаг 2: Укажите количество IP-адресов, которые вы хотите сгенерировать, в поле «Количество адресов».",
+        "Шаг 3: Если вы хотите исключить определенные диапазоны IP-адресов, введите их в поле «Исключить диапазоны».",
+        "Шаг 4: Нажмите кнопку «Сгенерировать» для создания списка IP-адресов в соответствии с заданными параметрами.",
+        "Шаг 5: После генерации, результаты будут отображены в таблице ниже. Вы можете скопировать нужные адреса, нажав на кнопку «Копировать» рядом с каждым адресом или выбрать все и скопировать сразу.",
+        "Шаг 6: Если вам нужно сохранить результаты, вы можете нажать кнопку «Сохранить в файл» для экспорта списка IP-адресов в формате CSV или текстового файла."
+      ],
+      "usage_examples": [
+        "Пример 1: Разработчик веб-приложения использует Генератор IP-адресов для создания списка публичных IP-адресов для тестирования функций безопасности, таких как блокировка IP-адресов после нескольких неудачных попыток входа.",
+        "Пример 2: Сетевой администратор применяет Генератор IP-адресов для создания приватных IP-адресов для внутренней сети компании. Это помогает избежать конфликтов IP-адресов и обеспечивает правильную маршрутизацию трафика.",
+        "Пример 3: Тестировщик использует Генератор IP-адресов для создания большого количества IPv6-адресов для тестирования масштабируемости и производительности сетевого оборудования. Это позволяет оценить, как система справляется с большим числом подключений.",
+        "Пример 4: Исследователь безопасности использует Генератор IP-адресов для моделирования атак DDoS, создавая списки публичных IP-адресов для симуляции атакующих систем. Это помогает проверить эффективность защитных механизмов."
+      ]
+    },
+    "ar": {
+      "detailed_description": "آلة توليد عناوين IP هي أداة متطورة تتيح للمستخدمين إنشاء عناوين IP عشوائية من نوع IPv4 وIPv6، سواء كانت عناوين خاصة أو عامة. يستخدم هذا الأداة المطورون ومهندسو الشبكات لاختبار تطبيقاتهم وشبكاتهم في بيئات محاكاة متنوعة. يمكن لهذه الأداة مساعدة في تأمين الشبكات من خلال توليد عناوين IP مزيفة للاختبارات الأمنية، وتحسين جودة التests الاختبارات الوظيفية للتطبيقات التي تعتمد على عناوين IP. تعمل الأداة بإرسال طلبات إلى خادم توليد عناوين IP، الذي يولد بدوره عناوين IP عشوائية وفقًا للمعايير المحددة مثل نطاقات الفئات A, B, وC للعناوين من نوع IPv4، أو نطاقات محددة للعناوين من نوع IPv6. يمكن للمستخدمين ضبط المعلمات الخاصة بالعناوين المطلوبة لتحقيق النتائج المثلى لاختباراتهم.",
+      "usage_steps": [
+        "افتح الصفحة الرئيسية لأداة توليد عناوين IP.",
+        "حدد نوع العنوان الذي ترغب في توليداه من القائمة المنسدلة (IPv4، IPv6، خاص، عام).",
+        "أدخل عدد العناوين التي ترغب في توليدها في حقل العدد.",
+        "اختار نطاق العنوان المطلوب إذا كنت تستخدم IPv4 (فئة A, B, C).",
+        "اضغط على زر 'توليد' لبدء عملية التوليد.",
+        "سيتم عرض العناوين المولدة في القائمة السفلية، والتي يمكن نسخها واستخدامها حسب الحاجة."
+      ],
+      "usage_examples": [
+        "اختبار تطبيق الويب: يمكن للمطورين استخدام العناوين المولدة لمحاكاة طلبات المستخدمين من مواقع جغرافية مختلفة لاختبار أداء الخدمة وسرعة الاستجابة.",
+        "فحص أمان الشبكة: يمكن لمهندسي الشبكات استخدام العناوين المزيفة لإجراء اختبارات الاختراق والتأكد من أن الشبكة محمية ضد الهجمات المحتملة.",
+        "تطوير بروتوكولات الشبكة: يمكن استخدام العناوين المولدة لاختبار بروتوكولات الشبكة الجديدة وللتأكد من أنها تعمل بشكل صحيح في بيئات متنوعة.",
+        "إعدادات الشبكة المحلية: يمكن للمدربين استخدام العناوين الخاصة المولدة لتعليم الطلاب كيفية تكوين شبكات محلية وإدارة عناوين IP بفعالية."
+      ]
+    }
+  }
+}

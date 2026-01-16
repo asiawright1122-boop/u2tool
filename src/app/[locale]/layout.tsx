@@ -13,6 +13,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GlobalSidebar from '@/components/layout/GlobalSidebar';
 import WebVitalsReporter from '@/components/WebVitalsReporter';
+import { criticalCSS } from '@/lib/critical-css';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';
 
@@ -256,6 +257,9 @@ export default async function LocaleLayout({
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        
+        {/* === 关键 CSS 内联 - 减少渲染阻塞 === */}
+        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
         
         {/* === 语言和地区优化 === */}
         <meta httpEquiv="Content-Language" content={locale} />

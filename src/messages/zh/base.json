@@ -2,7 +2,7 @@
   "site": {
     "name": "u2tool",
     "tagline": "1000+ 免费在线工具 - 无需登录",
-    "description": "1000+ 款免费在线工具，适用于开发者、设计师、运营人员和学生。JSON格式化、图片转换、PDF处理、SEO检测、代码生成器等。快速安全，无需注册，即开即用。"
+    "description": "u2tool 提供 1000+ 款免费在线工具，专为开发者、设计师、运营人员和学生打造。包括 JSON 格式化与验证、图片压缩转换与编辑、PDF 合并拆分处理、SEO 检测优化、代码生成器、颜色转换与调色板、文本处理与统计、二维码生成、时间戳转换等实用工具。所有工具快速安全，无需注册登录，打开即用，数据本地处理不上传服务器，保护您的隐私安全。"
   },
   "categories": {
     "text": "文本工具",
@@ -31,7 +31,7 @@
     },
     "generators": {
       "seo_title": "在线生成器工具 - UUID、随机文本、Cron表达式生成",
-      "seo_description": "免费在线生成器工具，可生成UUID、Lorem Ipsum文本、Cron表达式、HTML表格等。即时生成，无需注册。"
+      "seo_description": "免费在线生成器工具集合，支持生成 UUID/GUID 唯一标识符、Lorem Ipsum 随机占位文本、Cron 定时表达式、HTML 表格代码、强密码、二维码、条形码、假数据等。即时生成结果，无需注册登录，所有数据在浏览器本地处理，安全可靠，适合开发者和设计师使用。"
     },
     "converters": {
       "seo_title": "免费在线转换工具 - 颜色、日期、单位、YAML/JSON转换",
@@ -15215,8 +15215,8 @@
     "screen-resolution-tester": {
       "name": "屏幕分辨率测试器",
       "description": "测试和显示屏幕分辨率和视口信息。",
-      "seo_title": "免费在线屏幕分辨率测试器",
-      "seo_description": "免费在线测试您的屏幕分辨率和视口大小。查看设备像素比和常见设备预设。",
+      "seo_title": "免费在线屏幕分辨率测试器 - 检测显示器分辨率和视口大小",
+      "seo_description": "免费在线屏幕分辨率测试工具，一键检测您的当前屏幕分辨率、浏览器视口大小、设备像素比 DPR 和色彩深度。支持测试 iPhone、iPad、Android 等常见设备分辨率，适用于响应式网页设计和前端开发调试。Web 开发者和 UI 设计师必备工具，所有数据本地处理，安全可靠。",
       "currentResolution": "当前屏幕分辨率",
       "currentScreen": "当前屏幕信息",
       "screenResolution": "屏幕分辨率",

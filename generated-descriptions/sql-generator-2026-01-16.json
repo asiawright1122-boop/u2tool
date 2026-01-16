@@ -1,0 +1,175 @@
+{
+  "slug": "sql-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The SQL Generator is a powerful web-based utility designed to streamline the creation of SQL queries for developers. This tool automates the process of generating complex SQL statements, which can significantly reduce the time and effort required to write and test queries. By leveraging a user-friendly interface, the SQL Generator allows users to specify the desired database operations through intuitive form inputs, which are then translated into optimized SQL code. Whether you need to perform basic data manipulation tasks like SELECT, INSERT, UPDATE, and DELETE, or more advanced operations such as JOINs and subqueries, the SQL Generator provides a comprehensive solution. The tool supports a wide range of SQL dialects, making it versatile for use with different database management systems. The generated queries are syntactically correct and optimized for performance, ensuring that developers can focus on higher-level tasks without worrying about the nuances of SQL syntax. This is particularly beneficial for developers who are new to SQL or those who need to quickly generate complex queries for ad-hoc data analysis or database maintenance tasks.",
+      "usage_steps": [
+        "Step 1: Open the SQL Generator tool and select the 'New Query' button to start a new query generation process.",
+        "Step 2: Choose the database type from the dropdown menu (e.g., MySQL, PostgreSQL, SQL Server) to ensure the generated SQL is compatible with your database.",
+        "Step 3: Navigate to the 'Query Type' section and select the type of SQL operation you want to perform, such as SELECT, INSERT, UPDATE, or DELETE.",
+        "Step 4: Fill in the required fields in the form, such as table names, column names, and conditions. For more complex queries, use the advanced options to specify JOIN conditions, subqueries, and other SQL features.",
+        "Step 5: Preview the generated SQL query in the 'Query Output' section. The tool will display the SQL code, which you can review and modify if necessary.",
+        "Step 6: Once you are satisfied with the query, click the 'Copy Query' button to copy the SQL code to your clipboard, and then paste it into your database management tool or application."
+      ],
+      "usage_examples": [
+        "Example 1: A data analyst needs to extract a list of customers who made purchases over $100 in the last month. Using the SQL Generator, they can quickly create a SELECT query with the appropriate WHERE clause to filter the results.",
+        "Example 2: A web developer is working on an application that requires inserting new user records into a database. They use the SQL Generator to generate an INSERT statement with the required fields, ensuring that the data is correctly formatted and validated.",
+        "Example 3: A database administrator needs to update the status of multiple orders from 'Pending' to 'Shipped'. By using the SQL Generator, they can create an UPDATE statement with the necessary conditions to affect the correct records.",
+        "Example 4: A software engineer is tasked with creating a complex report that involves joining multiple tables and calculating aggregated data. The SQL Generator helps them construct a multi-table JOIN query with GROUP BY and HAVING clauses, simplifying the process of generating the required SQL."
+      ]
+    },
+    "zh": {
+      "detailed_description": "SQL Generator 是一款专为开发者设计的高级工具，能够自动生成复杂的 SQL 查询语句。用户只需通过简单的图形界面或 API 接口输入所需的数据库操作参数，工具即可快速生成标准的 SQL 代码。适用于多种数据库系统，包括 MySQL、PostgreSQL 和 Oracle 等。无论是数据库新手还是经验丰富的开发人员，SQL Generator 都能显著提高编写 SQL 语句的效率和准确性。具体来说，用户可以通过选择不同的操作类型（如 SELECT、INSERT、UPDATE、DELETE 等），设置表名、字段、条件等参数，工具会根据输入自动生成完整的 SQL 语句。此外，SQL Generator 还支持高级功能，如子查询、联表操作和聚合函数等，满足复杂业务场景的需求。",
+      "usage_steps": [
+        "Step 1: 登录 SQL Generator 网站，选择顶部导航栏中的“创建查询”选项。",
+        "Step 2: 在“操作类型”下拉菜单中选择所需的 SQL 操作，如 SELECT、INSERT、UPDATE 或 DELETE。",
+        "Step 3: 在“表名”输入框中输入要操作的数据库表名。",
+        "Step 4: 根据需要，添加字段、条件、排序等参数。使用“添加字段”按钮选择表中的字段，使用“添加条件”按钮设置查询条件。",
+        "Step 5: 如果需要执行更复杂的操作，如子查询或联表，点击“高级选项”按钮，选择相应的功能并设置参数。",
+        "Step 6: 完成所有设置后，点击“生成 SQL”按钮，工具将自动生成完整的 SQL 语句，显示在页面下方的代码区域。"
+      ],
+      "usage_examples": [
+        "Example 1: 一个电商网站的开发人员需要从订单表中查询最近一周内的所有订单，并按订单金额从高到低排序。使用 SQL Generator，开发人员可以快速生成所需的 SELECT 语句，而无需手动编写复杂的 SQL 代码。",
+        "Example 2: 一家医院的 IT 人员需要将患者信息表中的数据批量插入到一个新的数据库表中。通过 SQL Generator，IT 人员可以轻松生成 INSERT 语句，确保数据迁移的准确性和效率。",
+        "Example 3: 一个数据分析团队需要从多个表中提取数据进行联合分析。使用 SQL Generator，团队成员可以生成复杂的联表查询语句，包括多个 JOIN 操作和聚合函数，从而简化数据处理流程。",
+        "Example 4: 一个在线教育平台的管理员需要定期清理不再活跃的用户数据。使用 SQL Generator，管理员可以生成 DELETE 语句，删除符合特定条件的用户记录，确保数据库的整洁和高效。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "SQL Generatorは、データベース操作のためのSQLクエリを自動生成する高度な開発者ツールです。このツールは、テーブルの作成、データの挿入、更新、削除、および複雑な検索クエリの生成を支援します。SQL Generatorは、ユーザーがSQLの文法を完全に理解していなくても、効率的にデータベース操作を行うことを可能にします。特に、データベースのスキーマが複雑な場合や、頻繁にSQLクエリを生成する必要がある開発者にとって非常に有用です。このツールは、データベースのテーブル構造を分析し、ユーザーが指定したパラメータに基づいて適切なSQLクエリを生成します。SQL Generatorは、SQLの基本的な知識を持つ開発者から、高度なSQL操作を必要とするデータベース管理者まで、幅広いユーザーに向け Designed for both beginners and advanced users, this tool streamlines the process of database management and optimization. The tool supports various SQL dialects, including MySQL, PostgreSQL, and SQL Server, making it a versatile solution for different database environments. By leveraging this tool, developers can save time, reduce errors, and focus on more complex aspects of their projects.",
+      "usage_steps": [
+        "1. SQL Generatorのホーム画面を開き、「テーブル選択」ボタンをクリックします。",
+        "2. 使用するデータベースのテーブル一覧から、操作対象のテーブルを選択します。",
+        "3. 「クエリタイプ」ドロップダウンメニューから、生成したいSQLクエリのタイプ（INSERT, UPDATE, DELETE, SELECT）を選択します。",
+        "4. 必要に応じて、「フィールド」セクションで具体的なフィールド名を選択し、値を入力します。",
+        "5. 「オプション」タブを使用して、WHERE条件、ORDER BY、LIMITなどの追加パラメータを設定します。",
+        "6. 「SQL生成」ボタンをクリックし、生成されたSQLクエリを確認し、必要に応じてコピーします。"
+      ],
+      "usage_examples": [
+        "1. 新しいユーザーをデータベースに追加するためのINSERTクエリを生成します。ユーザー名、メールアドレス、パスワードなどのフィールドを指定することで、適切なINSERT文を生成できます。",
+        "2. 特定のユーザーのメールアドレスを更新するためのUPDATEクエリを生成します。WHERE条件にユーザーIDを指定し、新しいメールアドレスを入力することで、正確なUPDATE文を生成できます。",
+        "3. 特定の日にログインしたユーザーを検索するためのSELECTクエリを生成します。ログイン日時の範囲をWHERE条件に設定し、ログイン日時を降順に並べ替えるORDER BY文を追加することで、適切なSELECT文を生成できます。",
+        "4. 10件以上の注文をしたユーザーを削除するためのDELETEクエリを生成します。注文数をWHERE条件に設定し、10件以上の注文があるユーザーを削除します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "SQL Generator는 개발자가 다양한 SQL 쿼리를 생성할 수 있도록 설계된 강력한 온라인 도구입니다. 이 도구는 SELECT, INSERT, UPDATE, DELETE와 같은 일반적인 데이터 조작 및 검색 작업을 위해 맞춤형 SQL 쿼리를 생성할 수 있습니다. SQL Generator는 사용자에게 직관적인 인터페이스를 제공하며, 데이터베이스 스키마, 테이블 구조, 열 정보 등을 쉽게 입력할 수 있습니다. 또한, 고급 기능을 제공하여 JOIN, WHERE 조건, GROUP BY, ORDER BY 등과 같은 복잡한 쿼리를 쉽게 생성할 수 있습니다. 이 도구는 데이터베이스 관리자, 개발자, 데이터 분석가 등이 빠르고 정확한 SQL 쿼리를 생성할 수 있도록 돕습니다. SQL Generator는 MySQL, PostgreSQL, SQL Server, Oracle 등 다양한 데이터베이스 시스템을 지원합니다.",
+      "usage_steps": [
+        "1. 메인 페이지에서 '데이터베이스 선택' 드롭다운 메뉴를 통해 사용하고자 하는 데이터베이스 시스템을 선택하세요 (예: MySQL, PostgreSQL).",
+        "2. '테이블 선택' 섹션에서 원하는 테이블을 선택하거나, 새 테이블을 추가하고 테이블 이름, 열 이름, 데이터 유형 등을 입력하세요.",
+        "3. '쿼리 유형' 섹션에서 생성하고자 하는 쿼리 유형 (SELECT, INSERT, UPDATE, DELETE)을 선택하세요.",
+        "4. '쿼리 옵션' 섹션에서 필요한 조건을 설정하세요 (예: WHERE 조건, JOIN, GROUP BY, ORDER BY).",
+        "5. '쿼리 생성' 버튼을 클릭하여 SQL 쿼리를 생성하세요.",
+        "6. 생성된 쿼리를 검토한 후, 필요에 따라 수정하거나 클립보드에 복사하여 사용하세요."
+      ],
+      "usage_examples": [
+        "1. 데이터베이스 관리자가 여러 테이블에서 데이터를 결합하여 보고서를 생성할 때, JOIN 쿼리를 쉽게 생성하여 데이터를 통합할 수 있습니다.",
+        "2. 웹 개발자가 사용자 프로필 데이터를 업데이트할 때, UPDATE 쿼리를 생성하여 특정 사용자의 정보를 안전하게 수정할 수 있습니다.",
+        "3. 데이터 분석가가 특정 기간 동안의 판매 데이터를 분석할 때, WHERE 조건을 사용하여 날짜 범위에 맞는 데이터를 필터링한 SELECT 쿼리를 생성할 수 있습니다.",
+        "4. 데이터베이스 관리자가 데이터베이스를 백업하거나 이관할 때, INSERT 쿼리를 생성하여 대규모 데이터를 효율적으로 이동할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador SQL es una herramienta de desarrollo diseñada para facilitar la creación de consultas SQL de manera eficiente y precisa. Esta herramienta permite a los desarrolladores y administradores de bases de datos generar código SQL para operaciones comunes, como selecciones, inserciones, actualizaciones y eliminaciones, de manera intuitiva y sin necesidad de escribir manualmente cada línea de código. El Generador SQL es especialmente útil en escenarios donde se necesita realizar múltiples operaciones en tablas de bases de datos, ya que reduce el riesgo de errores gramaticales y sintácticos que pueden surgir al escribir consultas a mano. Además, ofrece opciones para personalizar las consultas según las necesidades específicas del usuario, como la inclusión de condiciones, cláusulas JOIN, y la especificación de campos y tablas. La herramienta es altamente configurable y proporciona una vista previa de la consulta generada, lo que permite a los usuarios validar y ajustar el código antes de ejecutarlo en su base de datos.",
+      "usage_steps": [
+        "Abra la página del Generador SQL en nuestro sitio web.",
+        "Seleccione el tipo de operación SQL que desea realizar desde el menú desplegable 'Tipo de Consulta' (por ejemplo, SELECT, INSERT, UPDATE, DELETE).",
+        "Especifique la base de datos y la tabla a las que desea aplicar la consulta en el campo 'Base de Datos y Tabla'.",
+        "Configure los parámetros de la consulta, como campos a seleccionar, valores a insertar, condiciones y cláusulas JOIN, utilizando los campos de entrada proporcionados.",
+        "Revise la consulta generada en el área de vista previa situada en la parte inferior de la página.",
+        "Una vez que esté satisfecho con la consulta, copie el código SQL generado y utilícelo en su entorno de base de datos."
+      ],
+      "usage_examples": [
+        "Un desarrollador web necesita crear una consulta SQL para seleccionar todos los registros de una tabla de usuarios que tengan un estado de 'activo'. Utiliza el Generador SQL para seleccionar la tabla 'usuarios' y configurar la condición 'estado = 'activo''.",
+        "Un administrador de bases de datos debe insertar nuevos registros en una tabla de productos. Utiliza el Generador SQL para especificar los campos y valores de los nuevos productos, generando una consulta INSERT perfectamente formateada.",
+        "Un analista de datos necesita actualizar el stock de varios productos en un inventario. Utiliza el Generador SQL para seleccionar la tabla 'inventario' y configurar una cláusula UPDATE con condiciones específicas, como el ID del producto.",
+        "Un ingeniero de software debe eliminar registros obsoletos de una tabla de registros de actividad. Utiliza el Generador SQL para configurar una consulta DELETE con una condición que elimine registros con una fecha de actividad anterior a un cierto período."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O SQL Generator é uma ferramenta avançada de desenvolvimento que auxilia programadores e administradores de bancos de dados na construção de consultas SQL complexas. Este instrumento automatiza a geração de queries para operações comuns, como seleção, inserção, atualização e deleção de registros, além de oferecer opções avançadas para consultas aninhadas e junções. O SQL Generator é essencial para desenvolvedores que precisam criar scripts SQL rapidamente e com precisão, reduzindo o risco de erros de sintaxe e otimizando o tempo de desenvolvimento. Alguns dos casos de uso específicos incluem a geração de scripts para migrações de banco de dados, a criação de consultas para relatórios complexos e a automatização de tarefas de manutenção de dados. A ferramenta trabalha com diversos bancos de dados, incluindo MySQL, PostgreSQL, Oracle e SQL Server, oferecendo uma interface intuitiva que permite aos usuários selecionar tabelas, colunas, condições e operações, gerando automaticamente o SQL necessário.",
+      "usage_steps": [
+        "Acesse a página do SQL Generator e selecione o banco de dados que você está utilizando (MySQL, PostgreSQL, Oracle, SQL Server) na lista suspensa 'Banco de Dados'.",
+        "Escolha o tipo de operação que deseja realizar (SELECT, INSERT, UPDATE, DELETE) no menu 'Operação'.",
+        "Selecione a tabela específica na qual deseja aplicar a operação, usando a lista suspensa 'Tabela'.",
+        "Defina as colunas que serão utilizadas na operação, marcando as opções desejadas na seção 'Colunas'. Para operações de seleção, você pode adicionar condições na seção 'Filtros', utilizando operadores lógicos e de comparação.",
+        "Para operações mais complexas, como junções e consultas aninhadas, utilize a seção 'Avançado' para configurar subconsultas e relações entre tabelas.",
+        "Após configurar todos os parâmetros, clique no botão 'Gerar SQL' para ver a consulta SQL gerada. Você também pode copiar a consulta para o clipboard ou salvar diretamente em um arquivo."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor precisa criar um relatório que lista todos os produtos com estoque baixo. Usando o SQL Generator, ele seleciona a tabela 'Produtos', escolhe as colunas 'ID', 'Nome' e 'Estoque', e adiciona um filtro para 'Estoque < 10'. O resultado é uma consulta SQL precisa que pode ser executada imediatamente.",
+        "Um administrador de banco de dados está realizando uma migração de dados de um banco MySQL para PostgreSQL. Ele usa o SQL Generator para gerar scripts de INSERT para cada tabela, garantindo que os dados sejam transferidos corretamente e de forma eficiente.",
+        "Um analista de dados precisa atualizar os preços de todos os produtos de uma determinada categoria. Com o SQL Generator, ele seleciona a tabela 'Produtos', escolhe a operação UPDATE, adiciona a condição 'Categoria = 'Eletrônicos'' e especifica o novo valor para a coluna 'Preço'. A ferramenta gera a consulta SQL, que ele pode executar no banco de dados.",
+        "Um desenvolvedor de backend está criando uma API que retorna informações sobre pedidos e seus itens associados. Usando o SQL Generator, ele configura uma junção entre as tabelas 'Pedidos' e 'Itens', selecionando as colunas relevantes e adicionando condições para filtrar os resultados. A consulta SQL gerada é usada na API para fornecer dados precisos e otimizados."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le SQL Generator est un outil en ligne dédié à la génération de requêtes SQL pour les opérations courantes. Il fournit une interface conviviale qui permet aux développeurs de créer des requêtes complexes sans avoir à maîtriser toutes les subtilités de la syntaxe SQL. Cet outil est particulièrement utile pour les développeurs débutants ou intermédiaires qui souhaitent rapidement générer des requêtes SQL fiables et optimisées. Il supporte une variété de bases de données, telles que MySQL, PostgreSQL, et SQL Server, offrant ainsi une flexibilité maximale. Le SQL Generator permet d'effectuer des opérations comme la sélection, l'insertion, la mise à jour, et la suppression de données, ainsi que des jointures complexes et des sous-requêtes. Les utilisateurs peuvent spécifier les tables, les colonnes, les conditions, et les clauses de tri, et l'outil génère instantanément la requête SQL appropriée. Ce processus non seulement accélère le développement, mais il réduit également le risque d'erreurs syntaxiques et de failles de sécurité, comme les injections SQL.",
+      "usage_steps": [
+        "Ouvrez la page du SQL Generator et sélectionnez le type de requête SQL que vous souhaitez générer (par exemple, SELECT, INSERT, UPDATE, DELETE).",
+        "Dans la section 'Tables', choisissez les tables sur lesquelles vous souhaitez opérer. Vous pouvez sélectionner une ou plusieurs tables en fonction de votre besoin.",
+        "Dans la section 'Colonnes', spécifiez les colonnes que vous souhaitez inclure dans votre requête. Vous pouvez choisir toutes les colonnes ou en sélectionner spécifiquement certaines.",
+        "Dans la section 'Conditions', ajoutez les critères de filtrage nécessaires. Vous pouvez utiliser des opérateurs logiques (ET, OU) et des comparaisons (égal, supérieur, inférieur).",
+        "Si vous effectuez une requête de type SELECT, vous pouvez ajouter des clauses de tri (ORDER BY) pour organiser les résultats selon vos critères.",
+        "Une fois toutes les options configurées, cliquez sur 'Générer la requête' pour obtenir le code SQL final. Vous pouvez ensuite copier et coller cette requête dans votre environnement de développement."
+      ],
+      "usage_examples": [
+        "Un développeur travaillant sur une application de commerce électronique souhaite afficher une liste de produits triés par prix. Il utilise le SQL Generator pour créer rapidement une requête SELECT qui trie les produits par prix croissant, en incluant uniquement les colonnes pertinentes comme le nom, le prix, et la catégorie.",
+        "Un administrateur de base de données doit insérer de nouvelles données de clients dans une table. Il utilise le SQL Generator pour générer une requête INSERT en spécifiant les valeurs pour chaque colonne, ce qui lui évite de taper manuellement la requête et réduit le risque d'erreurs.",
+        "Un analyste de données a besoin de mettre à jour les informations d'un ensemble de clients en fonction de certaines conditions. Il utilise le SQL Generator pour créer une requête UPDATE qui modifie les adresses e-mail des clients dont les noms commencent par une certaine lettre.",
+        "Un développeur web doit supprimer des entrées obsolètes d'une table de logs. Il utilise le SQL Generator pour générer une requête DELETE qui supprime les enregistrements plus anciens qu'une date spécifique, en utilisant une condition de date."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der SQL Generator ist ein leistungsstarkes Tool, das Entwicklern dabei hilft, SQL-Abfragen für gebräuchliche Operationen zu erstellen. Dieses Tool vereinfacht den Prozess des Schreibens komplexer SQL-Queries und minimiert die Wahrscheinlichkeit von Fehlern. Benutzer können mit wenigen Klicks SELECT, INSERT, UPDATE und DELETE-Operationen generieren, die an ihre spezifischen Anforderungen angepasst sind. Das Tool ist besonders nützlich für Entwickler, die in Projekten mit relationalen Datenbanken arbeiten und schnell und zuverlässig SQL-Code benötigen. Es unterstützt verschiedene Datenbankmanagementsysteme (DBMS) wie MySQL, PostgreSQL und SQL Server, was eine hohe Flexibilität und Kompatibilität gewährleistet. Die generierten Abfragen sind syntaktisch korrekt und können direkt in die Entwicklungsumgebung eingefügt werden. Durch die Verwendung des SQL Generators können Entwickler ihre Produktivität steigern, da sie weniger Zeit mit der fehleranfälligen Handarbeit von SQL-Abfragen verbringen und sich stattdessen auf die Optimierung und Debugging ihrer Anwendungen konzentrieren können.",
+      "usage_steps": [
+        "Öffnen Sie das SQL Generator-Tool auf der Website und wählen Sie das gewünschte Datenbanksystem (z.B. MySQL, PostgreSQL) aus dem Dropdown-Menü aus.",
+        "Wählen Sie die Art der SQL-Operation, die Sie durchführen möchten (SELECT, INSERT, UPDATE, DELETE), indem Sie auf die entsprechende Registerkarte klicken.",
+        "Geben Sie in der Tabelle, die erscheint, die erforderlichen Felder ein, wie Tabellenname, Spaltennamen, Werte und Bedingungen. Verwenden Sie die Auto-Vervollständigungs-Funktion, um schnell zu den richtigen Tabellen- und Spaltennamen zu kommen.",
+        "Konfigurieren Sie erweiterte Einstellungen, wie JOIN-Bedingungen, ORDER BY-Klauseln oder GROUP BY-Aggregationen, indem Sie die entsprechenden Optionen in der erweiterten Einstellungsleiste auswählen.",
+        "Überprüfen Sie die generierte SQL-Abfrage im Vorschaubereich. Sie können die Abfrage hier anpassen, indem Sie manuelle Änderungen vornehmen oder zusätzliche Klauseln hinzufügen.",
+        "Kopieren Sie die endgültige SQL-Abfrage in die Zwischenablage und fügen Sie sie in Ihre Entwicklungsumgebung oder das Datenbankmanagement-Tool ein, um die Abfrage auszuführen."
+      ],
+      "usage_examples": [
+        "Ein Entwickler, der eine Dashboard-Anwendung erstellt, muss regelmäßig Daten aus mehreren Tabellen abrufen. Mit dem SQL Generator kann er schnell komplexe SELECT-Abfragen mit JOIN-Bedingungen generieren, um die benötigten Daten zu extrahieren und in einem übersichtlichen Format anzuzeigen.",
+        "Ein Datenbankadministrator muss periodisch neue Benutzer in eine Benutzertabelle einfügen. Mit dem SQL Generator kann er INSERT-Abfragen generieren, die sicherstellen, dass alle erforderlichen Felder korrekt gefüllt sind und die Datenintegrität gewahrt bleibt.",
+        "Ein Softwareentwickler arbeitet an einer E-Commerce-Plattform und muss die Bestellinformationen aktualisieren, wenn eine Bestellung bearbeitet wird. Mit dem SQL Generator kann er UPDATE-Abfragen generieren, die spezifische Bestellungen basierend auf eindeutigen Identifikatoren ändern, ohne dabei Fehler zu machen.",
+        "Ein Datenwissenschaftler muss Daten für analytische Berichte aggregieren. Mit dem SQL Generator kann er komplizierte GROUP BY-Abfragen erstellen, die Daten basierend auf verschiedenen Kriterien (z.B. Datum, Kategorie) zusammenfassen, um detaillierte Berichte zu erstellen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "SQL Generator — это мощный инструмент, предназначенный для автоматизации создания SQL-запросов для выполнения стандартных операций с базами данных. Данный инструмент позволяет разработчикам и администраторам баз данных быстро и точно формировать запросы, что значительно ускоряет процесс разработки и снижает риск ошибок. SQL Generator поддерживает широкий спектр операций, включая выборку (SELECT), вставку (INSERT), обновление (UPDATE) и удаление (DELETE) данных. Использование этого инструмента особенно полезно при работе с большими и сложными базами данных, где рукописные запросы могут быть трудоемкими и подвержены ошибкам. Инструмент генерирует запросы, которые соответствуют стандартам SQL, что гарантирует их совместимость с различными системами управления базами данных (СУБД). Пользователи могут настроить параметры запроса, такие как условия фильтрации, сортировки и группировки, а также задать специфические атрибуты, такие как уникальные ключи и внешние ключи.",
+      "usage_steps": [
+        "Откройте страницу SQL Generator на сайте и выберите тип операции, который вы хотите выполнить (SELECT, INSERT, UPDATE, DELETE).",
+        "Выберите нужную таблицу из списка доступных таблиц в вашей базе данных. Если таблица не отображается, убедитесь, что подключение к базе данных настроено правильно.",
+        "Настройте параметры запроса. Для операции SELECT укажите столбцы, которые вы хотите извлечь, и добавьте условия фильтрации, если это необходимо. Для операции INSERT укажите значения для вставки. Для операции UPDATE укажите столбцы и новые значения, а также условия для обновления. Для операции DELETE укажите условия для удаления строк.",
+        "Если требуется, добавьте дополнительные опции, такие как сортировку (ORDER BY) и группировку (GROUP BY).",
+        "После настройки всех параметров нажмите кнопку 'Генерировать SQL'. Инструмент автоматически создаст SQL-запрос, который будет отображен в текстовом поле.",
+        "Скопируйте сгенерированный SQL-запрос и вставьте его в ваше приложение или среду разработки для выполнения."
+      ],
+      "usage_examples": [
+        "Пример 1: Разработчик работает над проектом, требующим частого обновления данных в таблице 'orders'. Используя SQL Generator, он быстро формирует запросы для обновления статуса заказов, что значительно ускоряет процесс разработки и снижает вероятность ошибок.",
+        "Пример 2: Администратор баз данных нуждается в создании сложного запроса для выборки данных из нескольких таблиц с использованием соединений (JOIN). SQL Generator позволяет ему легко настроить все параметры запроса, включая условия соединения, фильтрации и сортировки.",
+        "Пример 3: Младший разработчик новичок в SQL и часто сталкивается с трудностями при написании запросов для вставки данных. SQL Generator помогает ему быстро сформировать правильные INSERT-запросы, что облегчает его работу и улучшает производительность.",
+        "Пример 4: Команда разработчиков готовится к миграции данных между базами данных. Они используют SQL Generator для создания запросов DELETE для удаления устаревших данных и запросов INSERT для вставки новых данных, что обеспечивает гладкий и точный процесс миграции."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة مولد SQL هي أداة متقدمة مصممة لمساعدة المطورين في إنشاء استعلامات SQL المعقدة بسهولة وفعالية. تتيح هذه الأداة للمستخدمين إنشاء استعلامات SQL لعمليات شائعة مثل الإدخال (INSERT)، التحديث (UPDATE)، الحذف (DELETE)، والتحديد (SELECT). يتميز مولد SQL بواجهة مستخدم سهلة الاستخدام تتيح للمطورين تحديد الجداول والحقول والشروط بسهولة، مما يوفر وقتًا وجهدًا في كتابة الكود يدويًا. بالإضافة إلى ذلك، يوفر المولد تحققًا من صحة الاستعلامات لضمان جودة الكود المنتج وتجنب الأخطاء الشائعة. هذه الأداة مفيدة بشكل خاص للمطورين الجدد أو أولئك الذين يتعاملون مع قواعد بيانات معقدة، حيث يمكنها تبسيط العملية وتحسين الإنتاجية.",
+      "usage_steps": [
+        "حدد نوع الاستعلام SQL الذي تريد إنشاءه من القائمة المنسدلة، مثل INSERT، UPDATE، DELETE، أو SELECT.",
+        "أدخل اسم الجدول المراد التعامل معه في حقل اسم الجدول.",
+        "في قسم الحقول، أضف الحقول المطلوبة واختر النوع المناسب لكل حقل.",
+        "إذا كنت تستخدم استعلام SELECT، قم بتحديد الشروط المراد تطبيقها باستخدام قسم الشروط.",
+        "انقر على زر 'إنشاء استعلام' لتجهيز الاستعلام SQL الخاص بك.",
+        "استعرض الاستعلام الناتج في النافذة السفلية، ويمكنك نسخه ولصقه في بيئة التطوير الخاصة بك."
+      ],
+      "usage_examples": [
+        "مثال 1: مطور يرغب في إدخال بيانات جديدة في جدول العملاء. يمكنه استخدام أداة مولد SQL لإنشاء استعلام INSERT بسرعة دون الحاجة إلى كتابة الكود يدويًا.",
+        "مثال 2: فريق التطوير يرغب في تحديث المعلومات الخاصة بالعملاء الذين لم يقموا بشراء أي منتجات في الأشهر الستة الماضية. يمكن استخدام أداة مولد SQL لإنشاء استعلام UPDATE مع شروط محددة.",
+        "مثال 3: شركة ترغب في حذف السجلات القديمة من جدول الطلبات. يمكن استخدام أداة مولد SQL لإنشاء استعلام DELETE مع شروط لتحديد السجلات القديمة.",
+        "مثال 4: محلل بيانات يرغب في جمع بيانات مفصلة حول المبيعات في فترة زمنية معينة. يمكن استخدام أداة مولد SQL لإنشاء استعلام SELECT مع شروط متعددة للحصول على النتائج المطلوبة."
+      ]
+    }
+  }
+}

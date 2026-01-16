@@ -1,0 +1,158 @@
+{
+  "slug": "sql-formatter",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The SQL Formatter is a powerful tool designed to enhance the readability and maintainability of SQL queries. It automatically reformats and indents your SQL code, ensuring that it adheres to consistent and professional standards. This is particularly useful in environments where multiple developers work on the same codebase, as it helps maintain a uniform style, reduces errors, and makes the code easier to understand and debug. The tool supports a wide range of SQL dialects, including MySQL, PostgreSQL, Oracle, and SQL Server, making it versatile for various database systems. Under the hood, the SQL Formatter uses advanced parsing algorithms to analyze the structure of your SQL queries, then applies a set of customizable formatting rules. These rules can be adjusted to match your team's coding standards, such as indentation size, line wrapping, and keyword capitalization. By using the SQL Formatter, developers can focus more on writing efficient and effective queries, rather than worrying about the formatting, thereby improving productivity and code quality.",
+      "usage_steps": [
+        "Step 1: Open the SQL Formatter tool on the website and locate the large text area labeled 'SQL Query'.",
+        "Step 2: Copy and paste your SQL query into the text area. The tool supports queries of any length and complexity.",
+        "Step 3: Click the 'Settings' button to open the formatting options. Here, you can customize settings such as indentation size, line wrapping, and keyword capitalization.",
+        "Step 4: After configuring the settings, click the 'Format' button to process your SQL query. The tool will automatically reformat the query based on the specified rules.",
+        "Step 5: Review the formatted SQL query in the text area. You can make further adjustments to the settings and reformat the query as needed.",
+        "Step 6: Once satisfied, copy the formatted SQL query and paste it into your development environment or database management tool."
+      ],
+      "usage_examples": [
+        "Example 1: A database administrator is working on a complex SQL query that involves multiple joins and subqueries. By using the SQL Formatter, they can quickly organize the query, making it easier to identify and debug any issues.",
+        "Example 2: A team of developers is collaborating on a project and needs to ensure that all SQL queries adhere to a consistent style guide. The SQL Formatter helps them standardize the code, improving readability and maintainability.",
+        "Example 3: A junior developer is learning to write SQL queries and often struggles with formatting. The SQL Formatter provides a quick and easy way to format their queries, helping them understand best practices and improve their skills.",
+        "Example 4: A data analyst is preparing a report and needs to write a SQL query to extract specific data from a database. By using the SQL Formatter, they can ensure that the query is well-structured and easy to review by their peers or supervisors."
+      ]
+    },
+    "zh": {
+      "detailed_description": "SQL Formatter 是一款专为开发人员设计的在线工具，旨在帮助用户格式化和美化 SQL 查询，提升代码的可读性和维护性。该工具支持多种 SQL 方言，包括 MySQL、Oracle、SQL Server 等，能够自动调整语句的缩进、换行和空格，确保代码结构清晰。对于经常处理复杂 SQL 查询的开发人员和数据库管理员而言，SQL Formatter 是一个不可或缺的工具。通过使用 SQL Formatter，用户可以轻松地将混乱的 SQL 代码转换为结构化的格式，便于团队协作和代码审查。此外，该工具还提供了多种配置选项，用户可以根据自己的编码习惯自定义输出格式，如选择是否在关键字后添加空格、是否在子查询中添加缩进等。这些功能使得 SQL Formatter 成为一个强大的代码格式化工具。",
+      "usage_steps": [
+        "Step 1: 打开 SQL Formatter 工具页面。",
+        "Step 2: 在“原始 SQL”文本框中粘贴或输入需要格式化的 SQL 查询。",
+        "Step 3: 选择 SQL 方言，如 MySQL、Oracle 等，以确保格式化符合特定数据库的语法要求。",
+        "Step 4: 根据需要调整格式化选项，如缩进大小、是否添加空格等。",
+        "Step 5: 点击“格式化”按钮，工具将自动处理并显示格式化后的 SQL 查询。",
+        "Step 6: 检查格式化后的 SQL 代码，确保其符合预期，然后复制并使用。"
+      ],
+      "usage_examples": [
+        "Example 1: 一个数据库管理员需要将多个复杂的 SQL 查询格式化，以便在团队中进行代码审查。通过使用 SQL Formatter，管理员可以快速将代码转换为统一的格式，提高审查效率。",
+        "Example 2: 一个开发人员在编写一个复杂的报表查询时，发现 SQL 代码变得难以阅读。通过使用 SQL Formatter，开发人员可以将代码格式化为更易读的形式，从而更容易调试和维护。",
+        "Example 3: 一个数据分析师在处理大量数据时，需要从多个表中提取信息，生成一个复杂的查询。使用 SQL Formatter，分析师可以确保查询的每个部分都清晰可见，从而减少错误。",
+        "Example 4: 一个新手开发人员在学习 SQL 时，经常遇到代码格式不一致的问题。通过使用 SQL Formatter，新手可以快速将代码格式化为标准形式，有助于更好地理解 SQL 语法和结构。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "SQL Formatterは、SQLクエリのフォーマットと美観を改善するための強力なツールです。このツールは、開発者が複雑なSQLクエリを読みやすく、理解しやすくするための機能を提供します。SQLクエリのフォーマットは、コードの可読性を向上させ、バグの発見と修正を容易にします。また、チーム間でのコードの共有やレビューにも役立ちます。SQL Formatterは、単一の行に含まれる長いクエリを、複数の行に分割して整形します。さらに、インデントや改行を自動的に追加し、キーワードの自動大文字化など、SQLの書式を統一します。これらの機能により、SQLクエリの品質と信頼性が向上します。SQL Formatterは、データベース管理者、ソフトウェア開発者、データエンジニアにとって、日々の開発作業を効率化するための重要なツールです。",
+      "usage_steps": [
+        "ステップ 1: ブラウザでSQL Formatterのウェブサイトを開きます。",
+        "ステップ 2: 「SQL入力」エリアに整形したいSQLクエリをコピー＆ペーストします。",
+        "ステップ 3: 上部の「オプション」メニューから、必要に応じて整形オプションを選択します。例えば、「インデントサイズ」や「キーワードの自動大文字化」などです。",
+        "ステップ 4: 「フォーマット」ボタンをクリックします。これにより、入力したSQLクエリが指定されたオプションに従って整形されます。",
+        "ステップ 5: 「SQL出力」エリアに整形されたSQLクエリが表示されます。必要に応じて、この出力をコピーして利用します。",
+        "ステップ 6: 「クリア」ボタンをクリックして、入力フィールドをクリアし、新しいクエリの整形を開始します。"
+      ],
+      "usage_examples": [
+        "例1: データベース管理者が複雑なJOINクエリを整形して、チームメンバーにレビューさせる場合。整形されたクエリは、各JOINの条件が明確に表示され、理解しやすくなります。",
+        "例2: ソフトウェア開発者が大量のINSERT文を整形して、コードの可読性を向上させる場合。整形されたINSERT文は、データの挿入順序やフィールド名が一目で分かります。",
+        "例3: データエンジニアが複数のテーブルからデータを抽出する長いSELECT文を整形して、SQLのパフォーマンスを最適化する場合。整形されたSELECT文は、各部分が明確に区別され、最適化のためのポイントが見つけやすくなります。",
+        "例4: 新規開発者が、既存のプロジェクトで使用されている複雑なUPDATE文を理解するために、SQL Formatterを使用する場合。整形されたUPDATE文は、更新されるフィールドと条件が明確に表示され、コードの理解が容易になります。"
+      ]
+    },
+    "es": {
+      "detailed_description": "El SQL Formatter es una herramienta de desarrollo diseñada para mejorar la legibilidad de consultas SQL. Técnicamente, esta herramienta analiza y reorganiza el código SQL para que cumpla con ciertas normas de formato, lo que facilita su lectura y comprensión. Esta optimización es crucial en entornos de desarrollo donde múltiples programadores trabajan en el mismo código, ya que un código bien estructurado reduce el tiempo necesario para comprender y mantener las consultas SQL. Además, el SQL Formatter ayuda a identificar errores de sintaxis y mejora la coherencia del código, lo que es especialmente útil en proyectos grandes y complejos. El funcionamiento de la herramienta se basa en la detección de tokens y la aplicación de reglas de formateo predefinidas, que pueden ajustarse según las preferencias del usuario. Esto incluye la alineación de cláusulas, el manejo de sangrías y la separación de elementos en consultas complejas. La herramienta es ideal para desarrolladores que trabajan con bases de datos SQL y necesitan garantizar que su código sea limpio y fácil de mantener.",
+      "usage_steps": [
+        "Abre la página del SQL Formatter en tu navegador web.",
+        "En la sección 'SQL Input', pega o escribe tu consulta SQL sin formato.",
+        "Personaliza las opciones de formateo según tus preferencias. Puedes ajustar la indentación, la alineación de cláusulas y la separación de comas.",
+        "Haz clic en el botón 'Format SQL' para aplicar las reglas de formateo a tu consulta.",
+        "Revisa la consulta formateada en la sección 'Formatted SQL'. Aquí podrás ver los cambios realizados y asegurarte de que la consulta es legible.",
+        "Si necesitas, copia la consulta formateada y pégala en tu editor de código o en tu entorno de desarrollo."
+      ],
+      "usage_examples": [
+        "Un desarrollador de una empresa de ecommerce necesita formatear una consulta SQL compleja que junta múltiples tablas para generar reportes de ventas. Utiliza el SQL Formatter para asegurarse de que la consulta sea fácil de leer y mantener por otros miembros del equipo.",
+        "Un analista de datos trabaja con grandes volúmenes de datos y a menudo necesita revisar consultas SQL escritas por diferentes desarrolladores. Usa el SQL Formatter para estandarizar el formato de las consultas, facilitando la revisión y la depuración de errores.",
+        "Un equipo de desarrollo de una startup está trabajando en una aplicación móvil que requiere consultas SQL optimizadas. El SQL Formatter ayuda a los desarrolladores a mantener un código limpio y consistente, lo que mejora la eficiencia del equipo y reduce el tiempo de desarrollo.",
+        "Un programador que trabaja en un proyecto de análisis de datos utiliza el SQL Formatter para formatear consultas generadas automáticamente por un script. Esto permite que el programador revise y ajuste manualmente las consultas antes de ejecutarlas en la base de datos."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O SQL Formatter é uma ferramenta online desenvolvida para profissionais de tecnologia que trabalham com consultas SQL. Esta ferramenta permite a formatação e a otimização de consultas SQL, tornando-as mais legíveis e fáceis de manter. A formatação automática inclui a organização de cláusulas, a adição de quebras de linha e a alinhamento de elementos, o que facilita a identificação de erros e a colaboração em projetos de desenvolvimento. Usuários como desenvolvedores, DBAs e analistas de dados podem beneficiar significativamente do SQL Formatter, especialmente em cenários onde a legibilidade do código é crucial. A ferramenta suporta diversos dialetos SQL, incluindo MySQL, PostgreSQL, Oracle, SQL Server e SQLite, garantindo que as consultas sejam formatadas de acordo com as especificidades de cada banco de dados. O SQL Formatter opera de forma segura no navegador, sem necessidade de envio de dados para servidores, o que mantém a privacidade e a segurança das consultas.",
+      "usage_steps": [
+        "Passo 1: Acesse a página do SQL Formatter através do menu principal ou diretamente pelo link fornecido.",
+        "Passo 2: Cole a consulta SQL que deseja formatar na área de texto principal, localizada no centro da interface.",
+        "Passo 3: Escolha o dialeto SQL correspondente ao seu banco de dados na lista suspensa 'Dialeto SQL', localizada acima da área de texto.",
+        "Passo 4: Configure as opções de formatação, como a largura da linha, a tabulação e o alinhamento, usando os controles na seção 'Opções de Formatação'.",
+        "Passo 5: Clique no botão 'Formatar' para aplicar as configurações selecionadas e ver o resultado.",
+        "Passo 6: Revise a consulta formatada na área de texto e, se necessário, faça ajustes adicionais antes de copiar e salvar."
+      ],
+      "usage_examples": [
+        "Exemplo 1: Um desenvolvedor em um projeto de migração de banco de dados precisa garantir que as consultas SQL sejam consistentes entre diferentes sistemas. Usando o SQL Formatter, ele pode formatar as consultas de acordo com o dialeto específico do novo banco de dados, facilitando a integração e a manutenção do código.",
+        "Exemplo 2: Um DBA responsável por revisar consultas SQL complexas utiliza o SQL Formatter para melhorar a legibilidade dos códigos enviados por desenvolvedores. Isso ajuda a identificar gargalos de desempenho e otimizar as consultas antes da implantação em produção.",
+        "Exemplo 3: Uma equipe de desenvolvimento em um projeto colaborativo usa o SQL Formatter para padronizar o estilo de código em consultas SQL. Isso melhora a colaboração e a manutenção do código, pois todos os membros da equipe seguem as mesmas regras de formatação.",
+        "Exemplo 4: Um analista de dados que precisa criar relatórios detalhados a partir de grandes volumes de dados utiliza o SQL Formatter para organizar e simplificar consultas complexas. Isso facilita a compreensão dos cálculos e a verificação de erros, garantindo a precisão dos relatórios."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le SQL Formatter est un outil en ligne conçu pour formater et embelir les requêtes SQL, facilitant ainsi leur lecture et leur maintenance. Ce service est particulièrement utile pour les développeurs travaillant avec des bases de données relationnelles, qui doivent souvent gérer des requêtes SQL complexes. Le formatage automatique des requêtes permet de respecter des conventions de style cohérentes, facilitant la collaboration entre membres d'une équipe et améliorant la clarté du code. Les développeurs peuvent également profiter de cette fonctionnalité pour identifier plus facilement les erreurs syntaxiques ou les inefficacités dans leurs requêtes. Le SQL Formatter utilise des algorithmes d'analyse lexicale et syntaxique pour reconnaître et reformater les requêtes, en tenant compte des spécificités des différents dialectes SQL, tels que MySQL, PostgreSQL, et SQL Server. L'outil prend en charge un large éventail de structures SQL, y compris les sous-requêtes, les jointures, les fonctions d'agrégation, et les transactions, ce qui en fait une ressource inestimable pour optimiser le code SQL.",
+      "usage_steps": [
+        "Ouvrez le site web de SQL Formatter et accédez à la page d'accueil de l'outil.",
+        "Dans la zone de texte intitulée 'SQL Input', copiez et collez votre requête SQL non formatée.",
+        "Sélectionnez le dialecte SQL approprié dans le menu déroulant 'Dialecte SQL', par exemple MySQL ou PostgreSQL.",
+        "Cliquez sur le bouton 'Format SQL' pour appliquer le formatage à votre requête.",
+        "Examinez le résultat dans la zone de texte 'SQL Output' pour vérifier la clarté et la cohérence du formatage.",
+        "Si nécessaire, utilisez les options avancées, telles que l'ajustement de l'indentation ou le choix du style de formatage, pour personnaliser davantage le résultat."
+      ],
+      "usage_examples": [
+        "Un développeur de backend prépare une requête SQL complexe pour une application de gestion de données. Il utilise SQL Formatter pour assurer que la requête est bien structurée et facilement lisible par les autres membres de son équipe.",
+        "Une data scientist travaille sur des analyses de données volumineuses et utilise SQL Formatter pour formater une requête de jointure multiple, facilitant ainsi la vérification de l'exactitude des données extractées.",
+        "Un développeur junior apprend à écrire des requêtes SQL efficaces et utilise SQL Formatter pour comprendre les meilleures pratiques de formatage, améliorant ainsi ses compétences en SQL.",
+        "Un administrateur de base de données effectue des audits de code sur des requêtes SQL existantes. SQL Formatter lui permet de formater rapidement ces requêtes pour une revue plus facile et une identification des potentielles améliorations."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der SQL Formatter ist ein leistungsstarkes Tool, das SQL-Abfragen formatiert und optisch aufwertet. Technisch gesehen nimmt das Tool eine SQL-Abfrage entgegen und wendet darauf Regeln für einheitliche Formatierung an. Dies umfasst die Einhaltung von Leerzeichen, Tabulatoren, Zeilenumbrüchen und die korrekte Anordnung von Klauseln und Operatoren. Das Ergebnis ist eine SQL-Abfrage, die leichter lesbar und verständlich ist, was die Zusammenarbeit von Entwicklern und das Wartungsmanagement erheblich vereinfacht.\n\nBenutzer benötigen dieses Tool, um SQL-Abfragen, die aufgrund der Komplexität oder der Ausführung umfangreicher Datenbankoperationen unübersichtlich geworden sind, zu strukturieren. Spezifische Anwendungsfälle beinhalten die Optimierung von SQL-Abfragen, die in SQL-Scripts oder Datenbanken integriert sind, die Vorbereitung von Code für Code-Reviews oder die Erstellung von Dokumentationen. Durch die Verwendung des SQL Formatters können Entwickler schnell und einfach sicherstellen, dass ihr SQL-Code einheitlich und professionell aussieht, was die Lesbarkeit und die Wartbarkeit des Codes erheblich verbessert.\n\nDas Tool arbeitet, indem es die SQL-Abfrage in einer Syntaxbaumstruktur (Abstract Syntax Tree, AST) aufbaut und dann durch die Anwendung von Formatierungsregeln die Struktur in eine gelesene Form transformiert. Dabei berücksichtigt es syntaktische Elemente wie FROM, WHERE, JOIN und SELECT, um sicherzustellen, dass die Abfrage nicht nur optisch ansprechend, sondern auch semantisch korrekt bleibt.",
+      "usage_steps": [
+        "Öffnen Sie die SQL Formatter Seite auf der Website.",
+        "Kopieren Sie Ihre SQL-Abfrage und fügen Sie sie in das Eingabefeld ein.",
+        "Wählen Sie optional die gewünschte Formatierungsstilrichtlinie aus den vordefinierten Optionen.",
+        "Klicken Sie auf den Button 'Formatieren', um die SQL-Abfrage zu verarbeiten.",
+        "Überprüfen Sie das formatierte Ergebnis im Ausgabefeld.",
+        "Kopieren Sie das formatierte SQL und verwenden Sie es in Ihren Projekten."
+      ],
+      "usage_examples": [
+        "Ein Entwickler arbeitet an einer komplexen SQL-Abfrage, die verschiedene JOINs und Unterabfragen enthält. Er verwendet den SQL Formatter, um die Abfrage strukturiert und übersichtlich zu gestalten, bevor er den Code für ein Code-Review einreicht.",
+        "Ein Datenbankadministrator bereitet eine Dokumentation für SQL-Abfragen vor, die in verschiedenen Systemen verwendet werden. Mit Hilfe des SQL Formatters stellt er sicher, dass alle Abfragen einheitlich formatiert sind und leicht zu verstehen sind.",
+        "Ein Team von Entwicklern arbeitet an einem Projektkern, das umfangreiche SQL-Abfragen verwendet. Sie nutzen den SQL Formatter, um den Code vor dem Commit zu formatieren, um die Code-Qualität zu gewährleisten und die Zusammenarbeit zu vereinfachen.",
+        "Ein Entwickler hat eine SQL-Abfrage von einem externen Service erhalten, die unstrukturiert und schwer lesbar ist. Er nutzt den SQL Formatter, um die Abfrage zu optimieren und sie in sein eigenes Projekt zu integrieren."
+      ]
+    },
+    "ru": {
+      "detailed_description": "SQL Formatter — это мощный онлайн-инструмент, предназначенный для форматирования и улучшения читаемости SQL-запросов. Этот инструмент автоматически разбивает сложные запросы на несколько строк, применяет правильные отступы и выравнивает ключевые слова, что значительно упрощает их восприятие и анализ. SQL Formatter особенно полезен в условиях командной разработки, где поддержание единообразного стиля кодирования является критическим фактором. Например, при работе с большими и сложными базами данных, правильно отформатированный код помогает быстро выявлять ошибки и улучшает общее понимание структуры запросов. Инструмент поддерживает различные диалектические версии SQL, включая MySQL, PostgreSQL, SQL Server и Oracle, что делает его универсальным решением для большинства задач, связанных с базами данных. Пользователи могут загружать свои запросы, настраивать параметры форматирования, такие как размер отступов и стиль скобок, и получать готовые, оптимизированные версии кода.",
+      "usage_steps": [
+        "Step 1: Откройте страницу SQL Formatter на сайте и найдите текстовое поле для ввода SQL-запроса.",
+        "Step 2: Вставьте свой SQL-код в текстовое поле. Поддерживаются запросы на различных диалектах SQL, таких как MySQL, PostgreSQL и SQL Server.",
+        "Step 3: Нажмите кнопку 'Настройки форматирования', чтобы открыть дополнительные параметры.",
+        "Step 4: В разделе настроек выберите размер отступов (например, 2, 4 или 8 пробелов), стиль скобок (например, '1TBS', 'Allman' или 'K&R') и другие параметры, которые влияют на форматирование.",
+        "Step 5: После настройки параметров нажмите кнопку 'Форматировать', чтобы применить изменения и получить отформатированный SQL-запрос.",
+        "Step 6: Скопируйте отформатированный код из текстового поля и вставьте его в ваш проект или используйте для дальнейшего анализа."
+      ],
+      "usage_examples": [
+        "Example 1: Разработчик в команде по работе с базами данных получил сложный и плохо отформатированный SQL-запрос от коллеги. Используя SQL Formatter, он быстро приводит запрос в читабельный вид, что позволяет быстрее понять его структуру и возможные ошибки.",
+        "Example 2: Администратор баз данных готовится к обзору кода с коллегами. Он использует SQL Formatter для автоматического форматирования всех SQL-запросов, чтобы убедиться, что они соответствуют внутренним стандартам кодирования компании.",
+        "Example 3: Джуниор-разработчик учится писать SQL-запросы и часто получает обратную связь о стиле кодирования. Используя SQL Formatter, он может быстро проверять и улучшать форматирование своих запросов, чтобы они выглядели профессионально.",
+        "Example 4: Веб-разработчик работает над проектом, который требует выполнения сложных SQL-запросов к базе данных. Используя SQL Formatter, он может быстро форматировать и оптимизировать запросы, что улучшает производительность и упрощает отладку."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة تنسيق SQL هي أداة تقدم خدمات فنية متطورة لتنسيق وتحسين توضيح استعلامات SQL. تعمل هذه الأداة على تحسين قابلية القراءة والصيانة للشفرات SQL من خلال تطبيق قواعد تنسيق موحدة. يمكن للمطورين استخدامها لتحويل الشفرات المعقدة وغير المنظمة إلى شكل أكثر وضوحًا، مما يسهل فهمها وتحليلها. يعتمد هذا التنسيق على تطبيق إعدادات محددة مثل تبويب السطور، وإضافة المسافات بين الكلمات المفتاحية، وتنسيق الأقواس، وهو ما يساعد في تحسين جودة الكود وإنتاجيته. هذه الأداة مفيدة بشكل خاص للمشاريع الكبيرة التي تتطلب تعاون فرق متعددة، حيث يمكن أن يساهم التنسيق الموحد في تقليل الأخطاء وتسهيل عمليات المراجعة والاختبار.",
+      "usage_steps": [
+        "افتح أداة تنسيق SQL على الموقع.",
+        "انقر على الزر 'إدخال الكود' واختر نص الاستعلام SQL الذي تريد تنسيقه.",
+        "حدد خيارات التنسيق المفضلة لديك من القائمة الجانبية، مثل تبويب السطور، وإضافة المسافات، وتنسيق الأقواس.",
+        "انقر على الزر 'تطبيق التنسيق' لتطبيق الإعدادات المحددة على الشفرة.",
+        "راجع النتيجة في نافذة العرض التوضيحي للتأكد من أن التنسيق يلبي احتياجاتك.",
+        "انقر على الزر 'نسخ الكود' لنسخ الشفرة المنسقة ولصقها في بيئة التطوير الخاصة بك."
+      ],
+      "usage_examples": [
+        "في مشروع تطوير نظام إدارة علاقات العملاء (CRM)، يمكن للمطورين استخدام أداة تنسيق SQL لضمان أن جميع الاستعلامات SQL موحدة ومفهومة، مما يسهل التعاون بين أعضاء الفريق ويجنب الأخطاء.",
+        "خلال عمليات الصيانة الدورية لنظام إدارة قواعد البيانات (DBMS)، يمكن للمديرين الفنيين استخدام الأداة لتنسيق الاستعلامات المعقدة وتعديلها بسهولة، مما يوفر الوقت والجهد.",
+        "في البيئات التعليمية، يمكن للمدربين استخدام أداة تنسيق SQL لتقديم أمثلة واضحة ومفهومة للطلاب، مما يساعد في تعليم مبادئ SQL بشكل أفضل.",
+        "للمطورين المستقلين الذين يعملون على مشاريع صغيرة ومتوسطة، يمكن لهذه الأداة أن تساعد في تنسيق الشفرات بسرعة قبل إرسالها للعملاء، مما يعزز الاحترافية والجودة."
+      ]
+    }
+  }
+}

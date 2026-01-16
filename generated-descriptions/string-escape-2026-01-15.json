@@ -1,0 +1,124 @@
+{
+  "slug": "string-escape",
+  "descriptions": {
+    "zh": {
+      "detailed_description": "String Escape/Unescape 工具用于在 JSON、HTML、URL 和 JavaScript 格式中转义或取消转义字符串。转义是将特定字符转换为它们的转义序列，以确保数据在不同上下文中正确解析。例如，在 JSON 中，双引号会被转义为 `\"`，在 URL 中，空格会被转义为 `%20`。取消转义则是将转义序列还原为原始字符。用户需要这个工具的原因有很多，尤其是在开发过程中处理跨平台数据传输时，确保数据的正确性和安全性至关重要。例如，当你需要将用户输入的内容嵌入到 HTML 中时，转义字符串可以防止 XSS 攻击；在生成 URL 时，转义可以确保特殊字符不会破坏 URL 的结构。",
+      "usage_steps": [
+        "打开 String Escape/Unescape 工具页面。",
+        "在工具上方的下拉菜单中选择需要的格式（JSON、HTML、URL、JavaScript）。",
+        "将需要转义或取消转义的字符串粘贴到输入框中。",
+        "点击“转义”或“取消转义”按钮，根据需要选择操作。",
+        "工具会在下方的输出框中显示处理后的字符串。",
+        "复制输出框中的结果，将其用于你的项目或进一步处理。"
+      ],
+      "usage_examples": [
+        "在开发一个 Web 应用时，用户输入的数据需要嵌入到 HTML 中。使用 String Escape/Unescape 工具将输入的字符串转义，防止潜在的 XSS 攻击。",
+        "当你需要生成一个包含特殊字符的 URL 时，使用该工具将这些特殊字符进行 URL 编码，确保 URL 的完整性和可用性。",
+        "在编写 JSON 数据时，某些特殊的字符需要被转义。使用 String Escape/Unescape 工具可以确保生成的 JSON 字符串符合规范，避免解析错误。",
+        "在处理 JavaScript 代码时，有时需要将字符串中的特殊字符进行转义。例如，将双引号转义为 `\"`，以防止语法错误。使用该工具可以轻松完成这一操作。"
+      ]
+    },
+    "es": {
+      "detailed_description": "El herramienta de Escape/Unescape de Cadenas es una utilidad vital para desarrolladores que trabajan con datos en formatos como JSON, HTML, URL y JavaScript. Esta herramienta permite la conversión bidireccional de cadenas, es decir, puede escapar (codificar) y desescapar (decodificar) texto según las reglas específicas de cada formato. El proceso de escapar implica sustituir caracteres especiales por secuencias de escape que son reconocidas por el lenguaje o formato de destino. Por ejemplo, en HTML, el carácter `<` se convierte en `&lt;`. A la inversa, desescapar implica revertir estas sustituciones para recuperar el texto original. Esta funcionalidad es crucial en escenarios donde los datos deben ser procesados de manera segura y compatible, evitando problemas como inyecciones de código o malinterpretación de caracteres. Desarrolladores utilizan esta herramienta para preparar datos antes de enviarlos a servidores, insertarlos en bases de datos, o integrarlos en código HTML y JavaScript, asegurando que los caracteres especiales no causen errores o vulnerabilidades de seguridad.",
+      "usage_steps": [
+        "Accede a la página del tool String Escape/Unescape desde la sección de Encoding en el sitio web.",
+        "En el panel de entrada, selecciona el formato de origen y el formato de destino en los menús desplegables correspondientes.",
+        "Pega o escribe la cadena que deseas convertir en el campo de texto proporcionado.",
+        "Presiona el botón 'Convertir' para procesar la cadena según las opciones seleccionadas.",
+        "El resultado aparecerá en el panel de salida, permitiéndote copiar el texto convertido directamente.",
+        "Si necesitas realizar múltiples conversiones, puedes cambiar las opciones de formato y repetir el proceso."
+      ],
+      "usage_examples": [
+        "Un desarrollador web necesita insertar contenido dinámico en una página HTML sin riesgo de inyección de scripts. Utiliza la herramienta para escapar los datos antes de insertarlos, asegurando que caracteres como `<` y `>` no sean malinterpretados.",
+        "Un programador de aplicaciones móviles está enviando datos a un servidor a través de una URL. Utiliza la herramienta para escapar los parámetros de la URL, evitando que caracteres especiales como `&` y `=` causen problemas en la solicitud.",
+        "Un ingeniero de back-end está almacenando datos de usuario en una base de datos. Para prevenir inyecciones SQL, utiliza la herramienta para escapar los datos antes de la inserción, asegurando que los caracteres especiales no alteren las consultas SQL.",
+        "Un desarrollador de JavaScript necesita incluir cadenas con caracteres especiales en su código. Utiliza la herramienta para escapar las cadenas, evitando errores de sintaxis y asegurando que el código funcione correctamente."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O String Escape/Unescape é uma ferramenta poderosa para desenvolvedores que precisam manipular strings em diferentes formatos de codificação, como JSON, HTML, URL e JavaScript. Essa ferramenta permite que você escape ou unescape strings, garantindo que caracteres especiais sejam tratados corretamente nos contextos em que serão utilizados. Por exemplo, ao codificar uma string para ser usada em um atributo HTML, caracteres como <, >, & e as aspas devem ser escapados para evitar problemas de renderização ou segurança. De maneira similar, ao lidar com dados JSON, caracteres de escape como \\, \", e \n precisam ser corretamente formatados para evitar erros de sintaxe.\n\nDesenvolvedores e profissionais de TI frequentemente se deparam com a necessidade de manipular strings em diferentes formatos, seja para garantir a compatibilidade com APIs, evitar problemas de injeção de código ou simplesmente para garantir que os dados sejam exibidos corretamente. Esta ferramenta simplifica esses processos, eliminando a necessidade de escrever código personalizado para manipular strings em diferentes contextos.\n\nTecnologicamente, a ferramenta utiliza algoritmos de codificação padrão para cada formato. Por exemplo, para HTML, ela usa a codificação de entidades HTML, onde caracteres especiais são convertidos em suas representações numéricas ou nominais. Para JSON, a ferramenta utiliza a codificação de escape de caracteres específicos, garantindo que a string resultante seja válida e segura para uso em documentos JSON.",
+      "usage_steps": [
+        "Acesse a seção de ferramentas de codificação no site e selecione 'String Escape/Unescape'.",
+        "Em 'Formato de Entrada', escolha o tipo de codificação da string que você deseja manipular (JSON, HTML, URL, JavaScript).",
+        "Cole ou digite a string que você deseja escapar ou unescapar no campo 'Entrada'.",
+        "Selecione a ação desejada: 'Escape' para codificar a string ou 'Unescape' para decodificá-la.",
+        "Clique no botão 'Processar' para aplicar a transformação à sua string.",
+        "Copie a string resultante do campo 'Saída' para uso em seu projeto."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor precisa enviar dados de formulário para um servidor via AJAX. Antes de enviar, ele usa a ferramenta para escapar os valores de entrada do formulário em formato URL, garantindo que caracteres especiais não causem erros de sintaxe na URL.",
+        "Um programador está criando uma aplicação web que exibe comentários de usuários em um elemento HTML. Para evitar injeções de scripts, ele utiliza a ferramenta para escapar os comentários em formato HTML antes de inseri-los no DOM.",
+        "Um engenheiro de software está trabalhando com uma API que exige que os parâmetros sejam passados em formato JSON. Ele usa a ferramenta para escapar os valores dos parâmetros, garantindo que a string JSON enviada à API seja válida.",
+        "Um analista de dados precisa exportar informações para um arquivo CSV que será importado em um sistema de análise. Ele utiliza a ferramenta para escapar caracteres especiais, como vírgulas e aspas, garantindo que o arquivo CSV seja lido corretamente pelo sistema de destino."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil String Escape/Unescape est conçu pour manipuler des chaînes de caractères en les échappant ou les déséchappant dans divers formats, tels que JSON, HTML, URL et JavaScript. Ce processus est essentiel pour garantir que les données transmises ou stockées soient correctement interprétées par les systèmes récepteurs, évitant ainsi les erreurs d'interprétation ou les failles de sécurité. Par exemple, lors de la transmission de données dans un formulaire HTML, certains caractères comme les guillemets ou les caractères spéciaux doivent être échappés pour éviter qu'ils ne perturbent la structure du document. De même, pour le JSON, les caractères de contrôle et de délimitation doivent être échappés pour assurer la validité du format. L'outil utilise des algorithmes standardisés pour effectuer ces transformations, garantissant ainsi la cohérence et la fiabilité des opérations. Les utilisateurs peuvent facilement basculer entre les différents modes d'échappement, ce qui en fait un outil polyvalent pour les développeurs travaillant sur des projets nécessitant une manipulation précise des chaînes de caractères.",
+      "usage_steps": [
+        "Ouvrez l'outil String Escape/Unescape sur le site.",
+        "Dans la section 'Entrée', collez ou tapez la chaîne de caractères que vous souhaitez manipuler.",
+        "Sélectionnez le format cible dans le menu déroulant 'Format'. Les options disponibles sont JSON, HTML, URL et JavaScript.",
+        "Choisissez l'action à effectuer en cliquant sur 'Échapper' ou 'Déséchapper' selon vos besoins.",
+        "La chaîne transformée apparaît dans la section 'Résultat'.",
+        "Vous pouvez copier le résultat en cliquant sur le bouton 'Copier' pour l'utiliser dans votre projet."
+      ],
+      "usage_examples": [
+        "Un développeur front-end souhaite inclure un texte contenant des guillemets dans un attribut HTML. Il utilise l'outil pour échapper les guillemets, garantissant ainsi que le document HTML reste valide et que le texte est affiché correctement.",
+        "Un ingénieur en back-end prépare une requête HTTP pour une API qui nécessite des paramètres URL encodés. Il utilise l'outil pour encoder les paramètres, évitant ainsi les erreurs de parsing côté serveur.",
+        "Un développeur de logiciels travaille sur une application qui génère du JSON à partir de données utilisateur. Pour éviter que les caractères spéciaux ne perturbent la structure JSON, il utilise l'outil pour échapper les chaînes avant de les intégrer dans l'objet JSON.",
+        "Un développeur web crée un script JavaScript qui manipule du contenu HTML généré dynamiquement. Pour éviter les problèmes de sécurité tels que les injections de scripts, il utilise l'outil pour échapper les chaînes de caractères avant de les insérer dans le DOM."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das String Escape/Unescape-Tool ist eine leistungsstarke Online-Lösung, die es Benutzern ermöglicht, Zeichenketten in verschiedenen Formaten wie JSON, HTML, URL und JavaScript zu escapen oder unzuescapen. Technisch gesehen, wandelt das Tool spezielle Zeichen in escape-Sequenzen um, die in bestimmten Kontexten sicher verwendet werden können. Zum Beispiel wird das Zeichen `&` in HTML zu `&amp;`, um sicherzustellen, dass es nicht als Anfang eines HTML-Tags interpretiert wird. Dies ist besonders wichtig, um Cross-Site Scripting (XSS) und andere Sicherheitslücken zu vermeiden. Benutzer können dieses Tool nutzen, um ihre Daten vor der Verarbeitung in Webanwendungen oder Datenbanken sicherzustellen, oder um bereits gesicherte Daten wieder in ihren ursprünglichen Zustand zurückzuverwandeln. Die Funktionalität basiert auf standardisierten Escaping- und Unescaping-Methoden, die von den jeweiligen Formaten (z.B. JSON.parse und JSON.stringify für JSON) definiert sind.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des String Escape/Unescape-Tools in Ihrem Webbrowser.",
+        "Wählen Sie im Dropdown-Menü den gewünschten Format-Typ aus (z.B. JSON, HTML, URL, JavaScript).",
+        "Fügen Sie die Zeichenkette in das Eingabefeld ein, die Sie escapen oder unzuescapen möchten.",
+        "Klicken Sie auf die Schaltfläche 'Escape' oder 'Unescape', je nachdem, was Sie tun möchten.",
+        "Das Tool verarbeitet die Eingabe und zeigt das Ergebnis im Ausgabefeld an.",
+        "Kopieren Sie das Ergebnis, um es in Ihre Anwendung zu integrieren oder für weitere Verarbeitung zu verwenden."
+      ],
+      "usage_examples": [
+        "Ein Webentwickler muss eine Benutzer-eingabe sicher in eine JSON-Datei einbetten, ohne dass die Eingabe Fehler oder Sicherheitslücken verursacht. Mit dem String Escape/Unescape-Tool kann er die Eingabe vor dem Speichern escapen.",
+        "Ein Content-Manager möchte sicherstellen, dass spezielle Zeichen in einem HTML-Dokument korrekt dargestellt werden. Er verwendet das Tool, um die Zeichenkette vor der Veröffentlichung auf der Website zu escapen.",
+        "Ein Software-Entwickler braucht eine URL, die spezielle Zeichen enthält, die korrekt kodiert sein müssen, um von Webservern korrekt interpretiert zu werden. Das Tool hilft ihm, die URL zu escapen, bevor er sie in seine Anwendung integriert.",
+        "Ein Frontend-Entwickler muss eine JavaScript-Funktion erstellen, die eine Benutzer-eingabe verarbeitet, ohne dass diese Eingabe als Code ausgeführt wird. Mit dem Tool kann er die Eingabe escapen, um XSS-Angriffe zu vermeiden."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент String Escape/Unescape позволяет разработчикам выполнять эскейпинг и анэскейпинг строк для различных форматов, таких как JSON, HTML, URL и JavaScript. Эскейпинг строк — это процесс преобразования специальных символов в их эквивалентные коды, чтобы избежать конфликтов при передаче или хранении данных. Например, в HTML символ «<» преобразуется в «&lt;», чтобы избежать интерпретации как тег. Анэскейпинг, наоборот, восстанавливает оригинальные символы из их кодированных форм. Этот инструмент особенно полезен при работе с данными, которые передаются между различными системами или используются в контексте веб-разработки, где безопасность и корректность данных имеют первостепенное значение. Инструмент поддерживает автоматическое определение формата входных данных и предоставляет результаты в удобочитаемом виде, что упрощает интеграцию с существующими проектами.",
+      "usage_steps": [
+        "Откройте страницу инструмента String Escape/Unescape на сайте.",
+        "Вставьте исходную строку в поле «Введите строку».",
+        "Выберите нужный формат эскейпинга или анэскейпинга из выпадающего списка «Выберите формат» (JSON, HTML, URL, JavaScript).",
+        "Нажмите кнопку «Эскейп» или «Анэскейп», в зависимости от выбранной операции.",
+        "Результат преобразования будет отображен в поле «Результат».",
+        "Скопируйте результат и используйте его в вашем проекте или для дальнейшей обработки."
+      ],
+      "usage_examples": [
+        "Пример 1: Разработчик веб-приложения хочет безопасно вставить текст в HTML. Он вставляет строку «Привет, мир! <script>alert('Хак!');</script>» и выбирает формат HTML. Инструмент преобразует строку в «Привет, мир! &lt;script&gt;alert('Хак!');&lt;/script&gt;», что предотвращает выполнение вредоносного скрипта.",
+        "Пример 2: Программист работает с URL, содержащим специальные символы. Например, URL может выглядеть как «https://example.com/search?q=test&filter=price<100». Используя инструмент, он выбирает формат URL и получает «https://example.com/search?q=test&filter=price%3C100», что позволяет безопасно передать этот URL в запрос.",
+        "Пример 3: Фронтенд-разработчик готовит данные для отправки в API на сервере. Он имеет строку JSON с специальными символами, например, «{\"name\": \"John\", \"description\": \"Developer & Tester\"}». Используя инструмент, он выбирает формат JSON и получает «{\\\"name\\\": \\\"John\\\", \\\"description\\\": \\\"Developer \\\\u0026 Tester\\\"}», что обеспечивает корректноеinterpretation данных на сервере.",
+        "Пример 4: Бэкенд-разработчик получает от клиента JSON-ответ, который содержит эскейпированные символы, например, «{\\\"name\\\": \\\"Alice\\\", \\\"bio\\\": \\\"Developer \\\\u0026 Hacker\\\"}». Используя инструмент, он выбирает формат JSON и нажимает кнопку «Анэскейп». Результат будет «{\"name\": \"Alice\", \"bio\": \"Developer & Hacker\"}», что позволяет корректно интерпретировать данные в приложении."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة String Escape/Unescape هي أداة قوية ومفيدة لتحويل الأحرف الخاصة في السلاسل النصية إلى متغيرات مهربة أو مفككة للمهربة في تنسيقات محددة مثل JSON، HTML، URL، وJavaScript. هذا الإجراء ضروري عندما تحتاج إلى تبادل البيانات بين أنظمة مختلفة أو عرض محتوى ويب بأمان. على سبيل المثال، قد تحتاج إلى تشفير سلسلة نصية تحتوي على أحرف خاصة قبل إرسالها كجزء من طلب URL أو قبل تخزينها في قاعدة بيانات JSON. الأداة تقوم بتحليل السلاسل النصية وتحويل الأحرف الخاصة إلى مثيلاتها المهربة أو مفككة المهربة حسب التنسيق المحدد. هذا يضمن أن البيانات لن تؤدي إلى أخطاء أو ثغرات أمنية مثل هجمات التحكم في النص بين المواقع (XSS).",
+      "usage_steps": [
+        "اذهب إلى الصفحة الرئيسية للأداة String Escape/Unescape.",
+        "حدد التنسيق الذي تريد التحويل منه وإليه من القائمة المنسدلة (JSON، HTML، URL، JavaScript).",
+        "أدخل النص الذي تريد معالجته في المربع المخصص للدخل.",
+        "اضغط على الزر 'Convert' لبدء عملية التحويل.",
+        "ستظهر النتيجة المهربة أو مفككة المهربة في المربع المخصص للناتج.",
+        "يمكنك نسخ الناتج بسهولة باستخدام الزر 'Copy' الموجود بجانب المربع."
+      ],
+      "usage_examples": [
+        "مطور ويب يحتاج إلى ضمان أن النص الذي يعرضه المستخدمون في تعليقات المدونة لن يؤدي إلى هجمات XSS. يستخدم الأداة لتحويل الأحرف الخاصة في التعليقات إلى كيانات HTML قبل تخزينها.",
+        "مهندس برمجيات يعمل على تطبيق يستخدم API للحصول على بيانات من خادم يرغب في تضمين معلمة البحث في URL. يستخدم الأداة لتحويل الأحرف الخاصة في معلمة البحث إلى تنسيق URL المهرب.",
+        "مطور يكتب كود JavaScript ويحتاج إلى تضمين سلسلة نصية تحتوي على أحرف واي (backslashes) وأقتباسات. يستخدم الأداة لتحويل السلسلة إلى تنسيق JavaScript المهرب.",
+        "مساعد إداري يرغب في تخزين بيانات المستخدمين في قاعدة بيانات JSON ويحتاج إلى التأكد من أن الأحرف الخاصة في البيانات لن تؤدي إلى أخطاء في بنية JSON. يستخدم الأداة لتحويل البيانات إلى تنسيق JSON المهرب."
+      ]
+    }
+  }
+}

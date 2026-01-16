@@ -1,0 +1,124 @@
+{
+  "slug": "http-status-codes",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The HTTP Status Codes tool is a comprehensive reference guide designed to help developers understand and troubleshoot HTTP status codes. HTTP status codes are three-digit numbers returned by a server in response to a client's request, indicating the outcome of the request. These codes are crucial for diagnosing issues in web applications, APIs, and network communications. The tool provides detailed explanations for each status code, including its meaning, typical scenarios where it is encountered, and suggestions for resolving issues. For instance, a 404 error indicates that the requested resource was not found, while a 500 error signifies an internal server error. By using this tool, developers can quickly identify the root cause of HTTP errors, enhance their debugging capabilities, and improve the overall user experience of their applications.",
+      "usage_steps": [
+        "Step 1: Visit the HTTP Status Codes tool page on the website.",
+        "Step 2: Use the search bar at the top of the page to enter the specific HTTP status code you are interested in, or browse the list of codes.",
+        "Step 3: Click on the status code to expand its details, which include a brief description, common causes, and potential solutions.",
+        "Step 4: If you need more information, use the 'See More' button to access additional resources and related articles.",
+        "Step 5: For certain status codes, the tool provides code snippets or API examples that demonstrate how to handle the error in different programming languages.",
+        "Step 6: Bookmark the page or use the 'Add to Favorites' button to save the tool for quick reference in the future."
+      ],
+      "usage_examples": [
+        "Example 1: A backend developer is troubleshooting an API endpoint that returns a 500 Internal Server Error. By using the HTTP Status Codes tool, they can quickly understand common causes and find a code snippet that helps them log more detailed error messages for better debugging.",
+        "Example 2: A frontend developer is working on a web application that occasionally encounters a 403 Forbidden error when trying to access certain resources. The tool provides insights into why the server is denying access and suggests checking the client's authentication credentials and permissions.",
+        "Example 3: A DevOps engineer is monitoring a server that frequently returns a 503 Service Unavailable error during peak traffic times. The tool helps them identify that the server is overloaded and suggests scaling the infrastructure or optimizing resource allocation.",
+        "Example 4: A security analyst is reviewing logs and notices a 401 Unauthorized error. The HTTP Status Codes tool provides a detailed explanation of this status code and suggests reviewing the authentication mechanisms and access control policies to ensure they are correctly configured."
+      ]
+    },
+    "zh": {
+      "detailed_description": "HTTP状态码工具是一个详细的参考指南，旨在帮助开发人员理解并正确使用HTTP状态码。在Web开发和API设计中，HTTP状态码用于指示客户端请求的处理结果，从200（成功）到500（服务器错误）不等。每种状态码都有其特定的用途和含义，正确使用它们可以极大地提高应用程序的可靠性和用户体验。此工具不仅列出了所有的HTTP状态码，还提供了每个状态码的详细描述、适用场景和常见用法，帮助开发人员快速查找和理解所需的状态码。通过使用HTTP状态码工具，开发人员可以确保在处理网络请求时，能够准确地传达服务器的状态，从而减少错误和误解。",
+      "usage_steps": [
+        "打开HTTP状态码工具页面，您将看到一个搜索栏和一个分类列表。",
+        "在搜索栏中输入您感兴趣的HTTP状态码或关键词，工具将显示相关的状态码信息。",
+        "点击您需要的状态码，进入详细页面。",
+        "在详细页面中，您可以查看该状态码的含义、适用场景、响应示例和相关链接。",
+        "如果需要，可以通过页面底部的“相关状态码”链接查看其他相关状态码。",
+        "使用侧边栏的分类列表，可以根据状态码范围（例如2xx成功、4xx客户端错误）快速导航。"
+      ],
+      "usage_examples": [
+        "在开发API时，使用401状态码来指示用户未授权，帮助客户端理解需要进行身份验证。",
+        "处理支付请求时，使用202状态码来表示请求已接受但尚未处理，确保客户端不会重复发送请求。",
+        "在网站维护期间，使用503状态码来告知客户端服务器暂时不可用，可以改善用户体验并减少不必要的请求。",
+        "在创建Web表单时，使用400状态码来指示客户端发送的请求无效，帮助用户纠正输入错误。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "HTTP Status Codesツールは、開発者がHTTPステータスコードに関する詳細な情報を迅速に参照できるように設計されたオンラインリファレンスガイドです。HTTPステータスコードは、HTTPリクエストに対するサーバーの応答を示す数値で、クライアントとサーバー間の通信状態を明確にします。このツールでは、100番台から500番台までのすべてのHTTPステータスコードが網羅されており、それぞれのコードの意味、用途、および一般的な使用例が詳細に説明されています。開発者は、APIのデバッグやエラーハンドリングの最適化、またウェブアプリケーションの正常な動作を確認する際に、このツールを活用することができます。HTTPステータスコードの深い理解は、ネットワークの問題診断やシステムの信頼性向上に不可欠です。",
+      "usage_steps": [
+        "HTTP Status Codesのページを開きます。",
+        "左側のメニューから、ステータスコードの範囲（100番台、200番台、300番台、400番台、500番台）を選択します。",
+        "選択した範囲の具体的なステータスコードをクリックします。",
+        "ステータスコードの詳細情報（意味、用途、使用例）が表示されます。この情報を確認します。",
+        "必要に応じて、ページ下部の「関連リソース」セクションを参照し、追加の情報や資料を確認します。",
+        "右上の「お気に入りに追加」ボタンをクリックして、頻繁に使用するステータスコードをブックマークに追加します。"
+      ],
+      "usage_examples": [
+        "API開発者の場合、404 Not Foundエラーが発生したときに、このツールを使用してエラーの原因を調査し、不適切なリクエストURLを修正することができます。",
+        "ウェブ開発者は、301 Moved Permanentlyステータスコードを使用して、URLの永続的なリダイレクトを設定し、SEOの影響を最小限に抑えることができます。",
+        "システム管理者は、500 Internal Server Errorが頻繁に発生する場合、このツールを利用してサーバーの問題を特定し、適切なトラブルシューティングを行うことができます。",
+        "フロントエンド開発者は、200 OKステータスコードが返されない場合、このツールを参照して、リクエストが正しく送信されているかどうかを確認することができます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "HTTP Status Codes는 모든 HTTP 상태 코드에 대한 종합적인 참조 가이드를 제공하는 도구입니다. 이 도구는 웹 개발자들이 HTTP 요청 및 응답 과정에서 발생할 수 있는 다양한 상태 코드를 이해하고 활용할 수 있도록 설계되었습니다. HTTP 상태 코드는 클라이언트 요청에 대한 서버의 응답을 나타내는 3자리 숫자로, 성공, 오류, 리다이렉션 등 다양한 응답 상태를 표현합니다. 이 도구는 개발자들이 API 개발, 버그 해결, 서버 설정 등에서 상태 코드를 정확히 이해하고 사용할 수 있도록 도와줍니다. 각 상태 코드는 자세한 설명, 유사 코드, 관련 HTTP 메서드 등의 정보를 포함하여, 개발자가 필요에 따라 빠르게 참조할 수 있습니다.",
+      "usage_steps": [
+        "HTTP Status Codes 페이지를 방문합니다. 메인 화면에서 상태 코드 검색 창을 찾습니다.",
+        "검색 창에 원하는 HTTP 상태 코드를 입력하거나, 상태 코드 범주(1xx, 2xx, 3xx, 4xx, 5xx)를 선택합니다.",
+        "선택한 상태 코드 또는 범주에 해당하는 결과 목록이 표시됩니다. 각 코드 옆의 '상세 정보' 버튼을 클릭합니다.",
+        "상세 정보 페이지에서 상태 코드의 의미, 사용 예, 관련 HTTP 메서드 등을 확인합니다.",
+        "필요한 정보를 노트에 기록하거나, 브라우저의 북마크에 저장하여 후에 다시 참조할 수 있습니다.",
+        "검색 결과를 공유하거나, 직접 편집 가능한 노트 형태로 저장하여 팀과 공유할 수 있습니다."
+      ],
+      "usage_examples": [
+        "API 개발자 A는 새로운 API를 개발하면서 클라이언트가 서버로부터 받은 401 Unauthorized 응답의 의미를 이해하기 위해 HTTP Status Codes 도구를 사용합니다. 이를 통해 인증이 필요한 API 엔드포인트를 올바르게 구현할 수 있었습니다.",
+        "웹 애플리케이션 테스터 B는 사용자 로그인 기능을 테스트하면서 500 Internal Server Error를 만났습니다. HTTP Status Codes 도구를 통해 이 오류가 서버 측 문제임을 확인하고, 개발팀에 문제를 보고할 수 있었습니다.",
+        "서버 관리자 C는 웹 서버의 로그를 분석하면서 301 Moved Permanently 상태 코드가 자주 발생하는 것을 발견했습니다. HTTP Status Codes 도구를 통해 리다이렉션 설정이 올바르게 이루어졌는지 확인하고, 필요시 서버 설정을 조정할 수 있었습니다.",
+        "프론트엔드 개발자 D는 AJAX 요청에서 404 Not Found 응답을 받았습니다. HTTP Status Codes 도구를 통해 이 응답이 리소스를 찾을 수 없다는 것을 이해하고, 요청 URL을 확인하여 문제를 해결할 수 있었습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "La herramienta HTTP Status Codes es un recurso crucial para desarrolladores que necesitan comprender y gestionar las respuestas de sus solicitudes HTTP. Esta herramienta proporciona un completo y detallado catálogo de todos los códigos de estado HTTP, junto con sus descripciones y significados. Cada código de estado viene acompañado de un ejemplo de uso y una explicación técnica de las situaciones en las que puede surgir. El objetivo principal de esta herramienta es facilitar la depuración y el diagnóstico de problemas en aplicaciones web, permitiendo a los desarrolladores identificar rápidamente las causas de errores y respuestas inesperadas. Además, la herramienta es particularmente útil para aquellos que están trabajando en APIs o en la integración de servicios web, ya que proporciona una referencia clara y accesible para entender la semántica detrás de cada respuesta HTTP.",
+      "usage_steps": [
+        "Acceda a la página principal de HTTP Status Codes en el sitio web de herramientas de desarrollo.",
+        "Utilice el buscador en la parte superior de la página para buscar el código de estado específico que desea consultar.",
+        "Haga clic en el código de estado que le interesa para ver la página detallada del código.",
+        "En la página del código de estado, revise la descripción técnica, los posibles escenarios de uso y los ejemplos de solicitudes y respuestas HTTP.",
+        "Si es necesario, explore los enlaces relacionados a otras páginas de códigos de estado para obtener una comprensión más amplia de las respuestas HTTP.",
+        "Utilice la información obtenida para mejorar la lógica de su aplicación, depurar problemas y optimizar la comunicación entre los servicios."
+      ],
+      "usage_examples": [
+        "Un desarrollador de backend está integrando una nueva API de pago en su aplicación. Al recibir una respuesta con el código 400 Bad Request, utiliza la herramienta HTTP Status Codes para entender que los datos enviados en la solicitud están mal formados y necesita revisar los parámetros de la solicitud.",
+        "Una ingeniera de frontend está desarrollando una función para manejar errores en una aplicación de e-commerce. Al recibir el código 503 Service Unavailable, consulta la herramienta para confirmar que el servicio está temporalmente fuera de línea y decide implementar un mensaje de error personalizado para informar al usuario.",
+        "Un desarrollador de seguridad está auditando una API para identificar posibles vulnerabilidades. Al detectar el código 401 Unauthorized, utiliza la herramienta para confirmar que la autenticación es requerida y verifica que el mecanismo de autenticación esté correctamente configurado en la API.",
+        "Un equipo de soporte técnico recibe informes de usuarios que no pueden acceder a ciertas funcionalidades de un sitio web. Al analizar los registros del servidor, encuentran múltiples instancias del código 500 Internal Server Error. Usando la herramienta HTTP Status Codes, identifican que hay un error en el servidor y se comunican con el equipo de desarrollo para resolver el problema."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O HTTP Status Codes é um recurso indispensável para desenvolvedores que buscam entender e diagnosticar as respostas HTTP de suas aplicações web. Este guia abrangente fornece uma lista completa de códigos de status HTTP, incluindo suas definições, significados e exemplos de uso. Cada código de status é explicado em detalhes, desde os comuns códigos 200 (OK) e 404 (Not Found) até os menos conhecidos, como 418 (I'm a Teapot) e 503 (Service Unavailable). O HTTP Status Codes é essencial para desenvolvedores que precisam garantir que suas APIs e endpoints estejam funcionando corretamente, identificando rapidamente problemas de comunicação entre cliente e servidor. Além disso, o guia inclui exemplos de cabeçalhos HTTP e corpos de resposta, facilitando a implementação e depuração de requisições HTTP em diversos cenários de desenvolvimento.",
+      "usage_steps": [
+        "Acesse a página do HTTP Status Codes no website.",
+        "Na barra de navegação superior, clique no menu 'Códigos de Status' para expandir a lista de categorias.",
+        "Selecione uma categoria específica, como '2xx Sucesso', '4xx Erros do Cliente' ou '5xx Erros do Servidor'.",
+        "Na lista de códigos de status, clique em um código específico para ver detalhes completos, incluindo definição, descrição e exemplos de uso.",
+        "Explore os exemplos de cabeçalhos HTTP e corpos de resposta fornecidos para cada código de status.",
+        "Use as informações para implementar e depurar seus endpoints HTTP, garantindo que suas respostas estejam em conformidade com os padrões estabelecidos."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor front-end precisa implementar um tratamento de erros para requisições AJAX em um aplicativo web. Usando o HTTP Status Codes, ele consulta o código 404 (Not Found) para entender como lidar com situações em que um recurso não é encontrado no servidor.",
+        "Um engenheiro de backend está desenvolvendo uma API RESTful e precisa garantir que as respostas HTTP estejam corretas. Ele consulta o código 201 (Created) para aprender como retornar o local do novo recurso criado com sucesso.",
+        "Uma equipe de desenvolvimento está investigando um problema onde o servidor está retornando códigos 500 (Internal Server Error) aleatoriamente. Usando o HTTP Status Codes, eles identificam possíveis causas e soluções para esse tipo de erro, facilitando a depuração do problema.",
+        "Um arquiteto de software está otimizando o desempenho de uma aplicação e precisa entender como os códigos 301 (Moved Permanently) e 302 (Found) afetam a cacheabilidade das respostas. O HTTP Status Codes fornece as informações necessárias para configurar corretamente os cabeçalhos de cache."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil 'HTTP Status Codes' est une référence exhaustive et interactive dédiée aux développeurs pour comprendre et maîtriser les codes de statut HTTP. Chaque code est décrit en détail, incluant ses implications sur la communication client-serveur, les situations d'utilisation courantes, et les actions à entreprendre en cas de réception d'un code spécifique. Ce guide est indispensable pour les développeurs travaillant sur des applications web, des API RESTful, ou des systèmes distribués, car il facilite la débogage et l'optimisation des interactions réseau. L'outil permet de filtrer les codes par catégorie (1xx, 2xx, 3xx, 4xx, 5xx) et de rechercher des codes spécifiques par leur numéro ou leur description. Grâce à son interface intuitive et sa base de données mise à jour, 'HTTP Status Codes' est un allié précieux pour assurer la robustesse et la fiabilité des applications web.",
+      "usage_steps": [
+        "Ouvrez la page de l'outil 'HTTP Status Codes' sur le site.",
+        "Utilisez la barre de recherche en haut de la page pour entrer le numéro ou la description d'un code de statut HTTP spécifique.",
+        "Cliquez sur le bouton 'Rechercher' pour afficher les détails du code sélectionné.",
+        "Si vous souhaitez parcourir tous les codes par catégorie, utilisez le menu déroulant 'Catégorie' et sélectionnez la catégorie souhaitée (1xx, 2xx, 3xx, 4xx, 5xx).",
+        "Cliquez sur le code de statut dans la liste pour afficher une description détaillée, y compris les scénarios d'utilisation et les actions recommandées.",
+        "Pour revenir à la liste principale, cliquez sur le bouton 'Retour à la liste' en haut de la page."
+      ],
+      "usage_examples": [
+        "Un développeur travaillant sur une application web reçoit un code 500 (Erreur interne du serveur) lors de l'appel d'une API. Il utilise l'outil pour comprendre les causes possibles et les solutions à mettre en œuvre.",
+        "Un ingénieur en charge de l'intégration d'une nouvelle API dans un système existant souhaite vérifier les codes de statut retournés pour s'assurer de la conformité de l'API. Il utilise l'outil pour vérifier les codes 200 (OK) et 404 (Introuvable) spécifiques à son cas.",
+        "Un testeur QA trouve un bug où une requête POST retourne un code 400 (Requête incorrecte). Il consulte l'outil pour comprendre les raisons communes de ce code et propose des corrections au développeur.",
+        "Un étudiant en développement web utilise l'outil pour apprendre les différentes catégories de codes de statut HTTP et leurs significations. Il explore les codes 3xx pour comprendre le redirigement et comment les gérer dans son application."
+      ]
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "slug": "json-path-tester",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The JSONPath Tester is a powerful tool designed to help developers test and evaluate JSONPath expressions against their JSON data. JSONPath is a query language for JSON, similar to XPath for XML, enabling developers to extract specific data points from complex JSON structures. This tool is essential for anyone working with APIs, web services, or any application that uses JSON as a data format. By leveraging the JSONPath Tester, developers can quickly validate their JSONPath queries, ensuring that they are correctly extracting the desired data. This can significantly reduce debugging time and improve the reliability of data processing logic. The tool works by allowing users to input their JSON data and JSONPath expressions. It then parses the JSON data and applies the JSONPath query, displaying the result. This process is handled through a robust JavaScript engine that supports a wide range of JSONPath functions and operators, making it a versatile tool for both simple and complex data extraction tasks.",
+      "usage_steps": [
+        "Step 1: Open the JSONPath Tester tool on the website and locate the 'JSON Data' input box.",
+        "Step 2: Paste or type your JSON data into the 'JSON Data' input box. Ensure that the JSON is well-formed to avoid parsing errors.",
+        "Step 3: Navigate to the 'JSONPath Expression' input box and enter your JSONPath query. For example, use $..author to extract all 'author' fields from the JSON data.",
+        "Step 4: Click the 'Test' button to execute the JSONPath expression. The tool will process the query and display the results.",
+        "Step 5: Review the results in the 'Result' section. The tool will show the extracted data or an error message if the query is invalid.",
+        "Step 6: Use the 'Save' button to save your JSON data and JSONPath expression for future reference or share the URL with colleagues for collaboration."
+      ],
+      "usage_examples": [
+        "Example 1: A backend developer is working on an API that returns a nested JSON structure containing user information. They use the JSONPath Tester to ensure that the JSONPath expression $..user.name correctly extracts all user names from the response.",
+        "Example 2: A front-end developer is building a dynamic form that populates fields based on JSON data received from an API. They use the JSONPath Tester to test the expression $..address.street to verify that it correctly extracts street addresses from the JSON.",
+        "Example 3: A data analyst is processing a large JSON dataset and needs to extract specific values for analysis. They use the JSONPath Tester to test the expression $..sales[?(@.amount > 1000)].amount to filter and extract sales amounts greater than 1000.",
+        "Example 4: A QA engineer is writing automated tests for a web application that relies on JSON data. They use the JSONPath Tester to validate that the expression $..product[?(@.category == 'electronics')].id correctly identifies product IDs in the 'electronics' category."
+      ]
+    },
+    "zh": {
+      "detailed_description": "JSONPath Tester 是一款专为开发者设计的在线工具，用于测试和评估 JSONPath 表达式。JSONPath 是一种类似于 XPath 的查询语言，用于从 JSON 文档中提取数据。通过 JSONPath Tester，开发者可以轻松地验证 JSONPath 表达式的正确性和效率，确保数据提取的准确性。这款工具对前端开发、API 测试和后端数据处理等场景尤为重要。用户可以在开发过程中快速验证 JSON 数据的查询逻辑，避免因数据提取错误而导致的Bug。JSONPath Tester 支持多种 JSONPath 语法，包括过滤、投影和递归等高级功能。用户只需输入 JSON 数据和 JSONPath 表达式，即可实时查看查询结果。此外，工具还提供了详细的错误提示和调试信息，帮助用户快速定位和解决问题。",
+      "usage_steps": [
+        "Step 1: 打开 JSONPath Tester 页面，您会看到一个包含两个主要输入框的界面：一个用于输入 JSON 数据，另一个用于输入 JSONPath 表达式。",
+        "Step 2: 在“JSON 数据”输入框中，粘贴或手动输入您要测试的 JSON 数据。确保 JSON 数据格式正确，否则工具将无法解析。",
+        "Step 3: 在“JSONPath 表达式”输入框中，输入您要测试的 JSONPath 表达式。您可以使用标准的 JSONPath 语法，如 `$..author` 用于递归查找所有的 `author` 字段。",
+        "Step 4: 点击“运行”按钮，工具将根据输入的 JSONPath 表达式解析并显示查询结果。如果表达式有误，工具会显示错误信息，并指出问题所在。",
+        "Step 5: 查看查询结果，结果将以 JSON 格式显示在结果区域。您可以复制这些结果用于进一步的处理或验证。",
+        "Step 6: 如果需要，可以使用“重置”按钮清空输入框，重新开始新的测试。"
+      ],
+      "usage_examples": [
+        "Example 1: 前端开发中，您需要从 API 返回的 JSON 数据中提取特定字段。例如，从一个包含多个商品信息的 JSON 数组中，提取所有商品的名称和价格。",
+        "Example 2: 在 API 测试过程中，您需要验证 API 返回的数据是否符合预期。例如，使用 JSONPath 表达式 `$..price` 来验证所有商品的价格是否都在合理范围内。",
+        "Example 3: 在数据处理脚本中，您需要从复杂的 JSON 结构中提取嵌套的数据。例如，使用 JSONPath 表达式 `$.store.book[*].author` 从多个书籍信息中提取所有作者的名字。",
+        "Example 4: 在后端服务中，您需要根据用户请求动态生成 JSON 数据。例如，使用 JSONPath 表达式 `$..category` 从 JSON 数据中提取所有类别的名称，用于生成响应。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "JSONPath Testerは、JSONデータに対するJSONPath式のテストと評価を可能にする強力な開発者ツールです。JSONPathは、XPathと同様に、JSONデータ内の特定の要素や属性にアクセスするために使用されるクエリ言語です。このツールは、開発者がJSONデータの構造を理解し、必要なデータを効率的に抽出するためのテストを行えるように設計されています。JSONPath Testerは、ローカルのJSONデータをアップロードしたり、直接入力したりすることで使用できます。また、複数のJSONPath式を一度にテストできるため、複雑なデータ構造の解析が可能です。このツールは、APIテスト、データ検証、JSONデータのデバッグなど、様々な場面で活用できます。特に、APIレスポンスの検証や、JSONデータの特定部分の抽出が必要な場合に有効です。",
+      "usage_steps": [
+        "1. JSONPath Testerのページにアクセスし、「JSONデータを入力」または「JSONデータをアップロード」のボタンを使用して、テストしたいJSONデータを準備します。",
+        "2. JSONデータが表示されたら、右側の「JSONPath式の入力」欄に、テストしたいJSONPath式を入力します。",
+        "3. 「評価」ボタンをクリックして、JSONPath式が正しいかどうかを確認します。評価結果が下部の「結果表示」欄に表示されます。",
+        "4. 複数のJSONPath式をテストする場合は、各式をカンマで区切り、入力欄に追加します。",
+        "5. 必要に応じて、評価結果をコピーするか、新しいJSONデータやJSONPath式を入力して再度テストを行います。",
+        "6. テストが完了したら、結果を保存したり、他の開発者と共有したりできます。"
+      ],
+      "usage_examples": [
+        "1. API開発者がAPIのレスポンスを検証するために、特定のフィールドが期待通りに返されているか確認するために使用します。たとえば、ユーザーIDが正しく返されているか、エラーメッセージが適切に含まれているかを確認します。",
+        "2. データエンジニアがJSONフォーマットのログファイルから特定のエラー情報を抽出するために使用します。複数のエラータイプを含むログデータから、特定のエラータイプのインスタンスを効率的に抽出します。",
+        "3. フロントエンド開発者がAPIから受け取ったJSONデータから必要な情報を取得するために使用します。たとえば、プロフィールページの表示に必要なユーザー情報（名前、メールアドレス、プロフィール画像URLなど）を抽出します。",
+        "4. セキュリティエンジニアがJSONデータの検証とデバッグを行うために使用します。とくに、JSONデータに含まれるセンシティブな情報（パスワード、クレジットカード番号など）が適切にマスキングされているか確認します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "JSONPath Tester는 JSONPath 표현식을 테스트하고 평가하는 도구입니다. JSONPath는 XML의 XPath와 유사하게 JSON 문서에서 특정 데이터를 추출하는 데 사용되는 쿼리 언어입니다. 이 도구는 개발자가 복잡한 JSON 구조에서 필요한 데이터를 쉽게 찾을 수 있도록 돕습니다. JSONPath Tester는 JSONPath 표현식의 유효성을 검사하고, 해당 표현식이 반환하는 결과를 즉시 확인할 수 있는 기능을 제공합니다. 이 도구는 API 테스트, 데이터 추출, 로그 분석 등 다양한 개발 작업에서 매우 유용합니다. 특히, REST API에서 반환되는 JSON 데이터를 효율적으로 처리해야 하는 경우에 이 도구는 필수적입니다. JSONPath Tester는 사용자가 JSONPath 표현식의 문법을 이해하고,_complex_한 JSON 구조에서도 필요한 데이터를 정확히 추출할 수 있도록 설계되었습니다.",
+      "usage_steps": [
+        "Step 1: 웹사이트 상단 메뉴에서 'JSONPath Tester'를 선택하여 도구 페이지로 이동합니다.",
+        "Step 2: 'JSON Data' 입력 필드에 테스트하고자 하는 JSON 데이터를 붙여넣습니다.",
+        "Step 3: 'JSONPath Expression' 입력 필드에 테스트하려는 JSONPath 표현식을 입력합니다. 예를 들어, '$.store.book[0].title'과 같은 표현식을 사용할 수 있습니다.",
+        "Step 4: 'Evaluate' 버튼을 클릭하여 JSONPath 표현식을 실행합니다.",
+        "Step 5: 결과 표시 영역에서 JSONPath 표현식의 결과를 확인합니다. 결과는 JSON 형식으로 표시됩니다.",
+        "Step 6: 필요에 따라 'Clear' 버튼을 클릭하여 입력 필드와 결과를 초기화할 수 있습니다."
+      ],
+      "usage_examples": [
+        "Example 1: API에서 반환되는 JSON 데이터에서 특정 사용자의 정보를 추출해야 하는 경우. 예를 들어, '$.users[?(@.id == 12345)]' 표현식을 사용하여 ID가 12345인 사용자의 정보를 찾을 수 있습니다.",
+        "Example 2: 로그 파일에서 특정 이벤트 정보를 추출하여 분석하는 경우. 예를 들어, '$.logs[?(@.event == 'error')]' 표현식을 사용하여 로그 파일에서 'error' 이벤트를 모두 추출할 수 있습니다.",
+        "Example 3: 다양한 소스에서 수집된 JSON 데이터를 일괄적으로 처리해야 하는 경우. 예를 들어, '$.data[*].value' 표현식을 사용하여 여러 데이터 포인트의 값을 추출하여 처리할 수 있습니다.",
+        "Example 4: 복잡한 JSON 구조에서 특정 필드의 값을 업데이트하거나 삭제해야 하는 경우. 예를 들어, '$.config.settings[?(@.name == 'theme')].value' 표현식을 사용하여 'theme' 설정의 값을 변경할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El JSONPath Tester es una herramienta esencial para desarrolladores que necesitan probar y evaluar expresiones JSONPath contra sus datos JSON. JSONPath es una sintaxis que permite navegar y seleccionar partes específicas de un documento JSON de manera eficiente, similar a cómo XPath funciona con XML. Esta herramienta facilita la depuración y validación de consultas JSONPath, lo que es crucial en el desarrollo de aplicaciones que manipulan datos en formato JSON. Los desarrolladores pueden usar JSONPath Tester para asegurarse de que sus consultas extraen los datos correctos y en el formato esperado, lo que reduce el tiempo de desarrollo y minimiza errores. Además, es especialmente útil en entornos de desarrollo ágiles y en pruebas automatizadas, donde la rapidez y precisión son fundamentales. La interfaz de JSONPath Tester es intuitiva y proporciona un entorno en el que los usuarios pueden ingresar su JSON y las expresiones JSONPath, ver los resultados en tiempo real y ajustar sus consultas según sea necesario. La herramienta también soporta características avanzadas como la evaluación de expresiones complejas y la validación de la estructura del JSON.",
+      "usage_steps": [
+        "Paso 1: Abre la página del JSONPath Tester en tu navegador web.",
+        "Paso 2: En el campo 'JSON Data', pega o escribe el JSON que deseas evaluar. Asegúrate de que el JSON esté bien formado.",
+        "Paso 3: En el campo 'JSONPath Expression', ingresa la expresión JSONPath que deseas probar. Por ejemplo, '$.store.book[0].title'.",
+        "Paso 4: Haz clic en el botón 'Test JSONPath' para ejecutar la evaluación. Los resultados se mostrarán en la sección 'Resultados'.",
+        "Paso 5: Revisa los resultados para ver si la expresión JSONPath devuelve los datos esperados. Si no, ajusta la expresión y repite el paso 4.",
+        "Paso 6: Utiliza el botón 'Clear' para limpiar los campos y comenzar una nueva prueba."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador de backend está integrando una API que devuelve una lista de productos en formato JSON. Necesita asegurarse de que la expresión JSONPath '$.products[*].name' devuelve correctamente los nombres de todos los productos.",
+        "Ejemplo 2: Un desarrollador frontend trabaja en una aplicación que muestra detalles de usuarios. Debe validar que la expresión JSONPath '$.user.profile.picture' funciona correctamente para extraer la URL de la imagen de perfil del usuario.",
+        "Ejemplo 3: Un ingeniero de pruebas está desarrollando un script de automatización que verifica la estructura de una respuesta JSON. La expresión JSONPath '$.data[?(@.status == \"active\")]' se utiliza para asegurar que solo se seleccionan los elementos con el estado 'active'.",
+        "Ejemplo 4: Un desarrollador de data science está analizando un dataset JSON complejo. Necesita extraer específicamente los valores de la clave 'value' dentro de un array anidado. La expresión JSONPath '$.root.array[*].value' se prueba para confirmar que se recuperan todos los valores necesarios."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le JSONPath Tester est un outil essentiel pour les développeurs qui travaillent avec des données JSON. Ce outil permet de tester et d'évaluer des expressions JSONPath sur vos données JSON, ce qui est particulièrement utile pour extraire des données spécifiques d'une structure JSON complexe. JSONPath est une expression de requête permettant de naviguer et de sélectionner des éléments dans une structure JSON, similaire à XPath pour XML. Le JSONPath Tester offre une interface conviviale et performante pour expérimenter et valider vos expressions JSONPath, ce qui facilite le développement et le débogage de vos applications. Les utilisateurs peuvent tester des expressions simples comme des expressions complexes impliquant des filtres, des opérateurs et des fonctions. Cet outil est idéal pour les développeurs front-end et back-end qui travaillent avec des API RESTful, des bases de données NoSQL, et d'autres systèmes générant des données JSON. Il permet de vérifier rapidement si les données sont correctement extraites et formatées, ce qui est crucial pour assurer la fiabilité et la performance des applications.",
+      "usage_steps": [
+        "Ouvrez l'outil JSONPath Tester sur le site web de développement.",
+        "Dans la section 'JSON Data', copiez et collez votre structure JSON dans la zone de texte.",
+        "Dans la section 'JSONPath Expression', saisissez l'expression JSONPath que vous souhaitez tester.",
+        "Cliquez sur le bouton 'Evaluate' pour exécuter l'expression JSONPath sur vos données JSON.",
+        "L'outil affichera les résultats de l'évaluation dans la section 'Results', montrant les éléments de JSON qui correspondent à votre expression.",
+        "Si nécessaire, utilisez la section 'History' pour consulter les expressions JSONPath précédentes et leurs résultats."
+      ],
+      "usage_examples": [
+        "Un développeur front-end souhaite vérifier si une API RESTful renvoie les données attendues dans un format JSON. Il utilise le JSONPath Tester pour extraire spécifiquement les champs de l'API et s'assurer qu'ils sont corrects.",
+        "Un ingénieur en données travaille avec une base de données NoSQL et doit extraire certains champs de documents JSON pour une analyse. Le JSONPath Tester lui permet de tester rapidement les expressions JSONPath avant de les intégrer dans son code de production.",
+        "Un développeur de back-end doit déboguer une fonction qui traite des données JSON. En utilisant le JSONPath Tester, il peut isoler et tester les parties spécifiques de la structure JSON pour identifier les erreurs.",
+        "Un testeur de logiciels utilise le JSONPath Tester pour valider que les données JSON générées par une application répondent aux spécifications. Il teste diverses expressions JSONPath pour s'assurer que toutes les données nécessaires sont présentes et correctement formatées."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der JSONPath Tester ist ein poderantes Werkzeug zur Auswertung und Überprüfung von JSONPath-Expresssionen auf JSON-Daten. JSONPath ist eine Notation, die es ermöglicht, spezifische Elemente in JSON-Dokumenten zu selektieren, ähnlich wie XPath für XML verwendet wird. Mit diesem Tool können Entwickler komplexere JSON-Strukturen leichter navigieren und spezifische Daten abrufen. Die Notwendigkeit für diesen JSONPath Tester liegt darin, dass JSON häufig in Web- und Mobilapplikationen als Datenformat verwendet wird, und die effiziente Abfrage und Manipulation dieser Daten entscheidend ist. Dieses Tool eignet sich hervorragend für die Entwicklung und Testphase, da es Entwicklern ermöglicht, ihre JSONPath-Expressions in Echtzeit zu testen und zu optimieren. Technisch gesehen, ermöglicht der JSONPath Tester es Benutzern, JSON-Daten einzugeben, eine JSONPath-Expression zu definieren und unmittelbar die Ergebnisse zu sehen. Es unterstützt auch fortgeschrittene JSONPath-Features wie Filterausdrücke, rekursive Abfragen und Array-Operationen, was die Flexibilität und Mächtigkeit des Tools weiter erhöht.",
+      "usage_steps": [
+        "Step 1: Öffnen Sie die JSONPath Tester-Oberfläche auf der Website.",
+        "Step 2: Kopieren Sie Ihr JSON-Dokument in das Textfeld mit der Bezeichnung 'JSON Eingabe'.",
+        "Step 3: Geben Sie Ihre JSONPath-Expression in das darauf folgende Textfeld mit der Bezeichnung 'JSONPath Eingabe' ein.",
+        "Step 4: Klicken Sie auf den Button 'Testen', um die Expression gegen das JSON-Dokument auszuführen.",
+        "Step 5: Überprüfen Sie die Ergebnisse in der Ausgabebox, die die selektierten JSON-Elemente anzeigt.",
+        "Step 6: Verwenden Sie die Optionen im Menü 'Erweiterte Einstellungen' für fortgeschrittene Funktionen wie Fehlermeldungen, Zeitmessungen und JSON-Formatierung."
+      ],
+      "usage_examples": [
+        "Example 1: Ein Entwickler arbeitet an einer Anwendung, die Wetterdaten von einem API-Endpunkt abruft. Mit dem JSONPath Tester kann er schnell JSONPath-Expressions testen, um spezifische Wetterbedingungen oder -vorhersagen zu extrahieren, ohne den gesamten JSON-String zu durchsuchen.",
+        "Example 2: Ein Back-End-Entwickler verwendet den JSONPath Tester, um die Struktur von JSON-Antworten von einer REST-API zu überprüfen. Dies hilft ihm dabei, sicherzustellen, dass die API die erwarteten Daten liefert und gleichzeitig die JSONPath-Expressions zu optimieren, die in der Anwendung verwendet werden.",
+        "Example 3: Ein Datenwissenschaftler nutzt den JSONPath Tester, um JSON-Dateien zu durchforsten, die aus verschiedenen IoT-Geräten stammen. Indem er spezifische JSONPath-Expressions erstellt, kann er Daten wie Temperatur, Humidität und andere Sensordaten effizient extrahieren.",
+        "Example 4: Ein Front-End-Entwickler verwendet den JSONPath Tester, um JSON-Daten von einer Serverantwort zu filtern, bevor sie in der Benutzeroberfläche angezeigt werden. Dies ermöglicht es ihm, bestimmte Teile des JSON-Dokuments zu selektieren und zu verarbeiten, um die Anwendung zu optimieren."
+      ]
+    },
+    "ru": {
+      "detailed_description": "JSONPath Tester — это мощный инструмент, который позволяет разработчикам тестировать и оценивать JSONPath выражения на своих данных. JSONPath — это синтаксис, используемый для извлечения данных из JSON-структур, аналогично тому, как XPath используется для XML. JSONPath Tester поможет вам быстро находить и проверять нужные данные, обеспечивая точность и эффективность в работе с JSON. Этот инструмент особенно полезен при разработке веб-приложений, RESTful API и других проектах, где данные часто представлены в формате JSON. С его помощью вы можете убедиться, что ваши JSONPath выражения работают корректно, прежде чем их внедрять в реальную среду. JSONPath Tester поддерживает различные синтаксические конструкции, такие как фильтры, индексы и вложенные объекты, что делает его универсальным и гибким решением для различных задач.",
+      "usage_steps": [
+        "Откройте страницу JSONPath Tester на сайте.",
+        "В поле 'JSON Data' вставьте или введите ваш JSON-код. Убедитесь, что данные корректны и соответствуют формату JSON.",
+        "Перейдите к полю 'JSONPath Expression' и введите ваше выражение. Например, '$.store.book[0].title' для извлечения заголовка первой книги из объекта 'store'.",
+        "Нажмите кнопку 'Eval' (Оценить) для выполнения запроса. Результат будет отображен в секции 'Result'.",
+        "Используйте кнопку 'Format' (Форматировать) для автоматического форматирования JSON-данных, если они выглядят нечитаемыми.",
+        "Если возникают ошибки, проверьте синтаксис вашего JSONPath выражения и данные в поле 'JSON Data'."
+      ],
+      "usage_examples": [
+        "Разработчики API могут использовать JSONPath Tester для проверки корректности запросов к API и убедиться, что возвращаются нужные данные. Например, проверить, что запрос '$.user.id' возвращает правильный идентификатор пользователя.",
+        "Тестировщики могут использовать этот инструмент для проверки JSON-ответов от сервера и убедиться, что все поля заполнены правильно. Например, проверить, что '$.response.status' равно 'success'.",
+        "Веб-разработчики могут использовать JSONPath Tester для извлечения данных из JSON-ответов AJAX-запросов и интеграции их в HTML. Например, извлечь '$.products[0].name' для отображения названия первого продукта.",
+        "Девелоперы, работающие с большими JSON-файлами, могут использовать этот инструмент для навигации по структуре данных. Например, использовать выражение '$..address' для поиска всех полей 'address' в любом месте JSON-объекта."
+      ]
+    },
+    "ar": {
+      "detailed_description": "مُختبر JSONPath هو أداة تطوير قوية تتيح للمطورين اختبار وتقييم تعبيرات JSONPath ضد البيانات JSON الخاصة بهم. JSONPath هو لغة استعلام تُستخدم لاستخراج البيانات من الهياكل JSON، وهي تُشبه XPath لـ XML. تُساعد هذه الأداة المطورين على التحقق من صحة التعبيرات التي يكتبونها وضمان أنها تعود بالنتائج المتوقعة. هذا مهم خاصة عند العمل مع بيانات معقدة ومُتداخلة. يمكن للمطورين استخدام JSONPath Tester لتحسين كفاءة التطوير من خلال تقليل الأخطاء أثناء تحليل البيانات JSON.",
+      "usage_steps": [
+        "أدخل بيانات JSON الخاصة بك في الحقل المخصص بعنوان \"JSON Data\". تأكد من أن البيانات مُشكلة بشكل صحيح.",
+        "اكتب التعبير JSONPath الذي تريد اختباره في الحقل المحدد بـ \"JSONPath Expression\".",
+        "انقر على زر \"Test\" لتنفيذ التعبير وعرض النتائج.",
+        "ستظهر النتائج في قسم \"Results\" تحت شكل بيانات JSON منقحة وقابلة للتوسيع.",
+        "إذا كنت ترغب في توضيح التعبير، يمكنك استخدام خيار \"Explain\" لرؤية تفسير مفصل لكيفية تطبيق التعبير.",
+        "يمكنك حفظ التعبيرات والنتائج للاستخدام في المستقبل عبر خيار \"Save Query\"."
+      ],
+      "usage_examples": [
+        "Scenario 1: مطور يُطور واجهة برمجة تطبيقات (API) يتلقى بيانات مستخدم في شكل JSON ويحتاج إلى استخراج قائمة الأسماء من القيم المضمنة.",
+        "Scenario 2: محلل بيانات يعمل مع ملفات JSON كبيرة ومعقدة ويحتاج إلى تصفية البيانات استنادًا إلى معايير محددة، مثل استخراج جميع السجلات التي تحتوي على تاريخ معين.",
+        "Scenario 3: مطور يعمل على تطبيق تجاري يتعامل مع بيانات العملاء ويحتاج إلى تحديث حقول محددة في سجلات العملاء بناءً على شروط معينة.",
+        "Scenario 4: مطور أمان يقوم بفحص بيانات JSON للتحقق من عدم وجود بيانات حساسة مكشوفة، مثل أرقام بطاقات الائتمان أو معلومات الشخصية الحساسة."
+      ]
+    }
+  }
+}

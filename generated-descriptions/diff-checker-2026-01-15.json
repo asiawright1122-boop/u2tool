@@ -1,0 +1,158 @@
+{
+  "slug": "diff-checker",
+  "descriptions": {
+    "en": {
+      "detailed_description": "Diff Checker is a sophisticated text comparison tool designed to identify and highlight discrepancies between two versions of text. By leveraging advanced algorithms, this tool performs a line-by-line and character-by-character analysis to pinpoint additions, deletions, and modifications. It is particularly useful for developers, writers, and content managers who need to maintain version control or track changes in documents. For instance, developers can use it to compare different iterations of code to identify bug fixes or feature implementations. Writers can use it to review edits and ensure consistency across multiple drafts. The tool works by accepting two text inputs, which are then parsed and compared using a diff algorithm. The results are displayed with visual indicators that highlight the changes, making it easy to review and understand the differences.",
+      "usage_steps": [
+        "Step 1: Navigate to the Diff Checker tool on the website and locate the main interface.",
+        "Step 2: In the left text area, labeled 'Original Text,' paste or type the first version of your text.",
+        "Step 3: In the right text area, labeled 'Revised Text,' paste or type the second version of your text.",
+        "Step 4: Click the 'Compare' button located below the text areas to initiate the comparison process.",
+        "Step 5: Once the comparison is complete, review the highlighted differences. Green highlights indicate added text, red highlights indicate deleted text, and yellow highlights show modified text.",
+        "Step 6: Use the 'Download Report' button to save a detailed report of the differences in a formatted document for future reference."
+      ],
+      "usage_examples": [
+        "Example 1: A software developer needs to compare two versions of a codebase to identify recent changes and bug fixes. By using Diff Checker, they can quickly pinpoint the specific lines of code that have been modified, added, or removed.",
+        "Example 2: A technical writer is reviewing multiple drafts of a user manual. They can use Diff Checker to highlight the changes made in each draft, ensuring that all necessary updates have been included and that the content remains consistent.",
+        "Example 3: A content manager is tasked with merging contributions from multiple authors into a single document. Diff Checker helps them identify overlapping sections and conflicting edits, allowing for a smoother merging process.",
+        "Example 4: A researcher is comparing two versions of a scientific paper to ensure that all reviewer comments have been addressed. By using Diff Checker, they can efficiently track the changes and verify that the final version meets the required standards."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Diff Checker 是一款强大的文本比较工具，它通过算法分析两个文本之间的差异，并以直观的方式高亮显示这些差异。该工具主要利用文本差异算法，如长公共子序列（LCS）算法，来识别和标记出两个文本之间的插入、删除和修改部分。Diff Checker 不仅支持纯文本格式，还支持代码文本，对于开发者和内容创作者来说，是不可或缺的工具。使用 Diff Checker，用户可以轻松检查代码版本的变化，对比文档的修订，确保内容的准确性和一致性。此外，它还支持多种文本格式和编码，确保了广泛的适用性。",
+      "usage_steps": [
+        "Step 1: 打开 Diff Checker 工具页面，您会看到两个输入框，分别标有“文本1”和“文本2”。",
+        "Step 2: 将您需要比较的第一个文本粘贴到“文本1”输入框中。",
+        "Step 3: 将您需要比较的第二个文本粘贴到“文本2”输入框中。",
+        "Step 4: 选择您希望的比较模式，例如“逐行比较”或“逐词比较”，位于输入框下方的选项区域。",
+        "Step 5: 点击“比较”按钮，工具将开始处理并分析两个文本的差异。",
+        "Step 6: 比较完成后，结果将显示在页面下方，高亮显示差异部分，并提供修改和插入的标记。"
+      ],
+      "usage_examples": [
+        "Example 1: 作为一名软件开发者，您在修复 Bug 时需要比较两个版本的代码文件，以确定具体修改了哪些部分。使用 Diff Checker，您可以快速找到这些差异，从而更高效地进行调试。",
+        "Example 2: 作为内容编辑，您需要审核一篇经过多次修订的文章。使用 Diff Checker，您可以直观地看到每次修订的具体内容，确保文章的准确性和一致性。",
+        "Example 3: 作为一名教师，您需要批阅学生的论文，检查是否有抄袭行为。使用 Diff Checker，您可以将学生的论文与参考文献进行对比，快速发现相似或重复的内容。",
+        "Example 4: 作为一名项目经理，您需要审查团队成员提交的项目文档，确保所有文档版本的一致性。使用 Diff Checker，您可以轻松比较不同版本的文档，确保每个版本之间的差异得到妥善处理。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Diff Checker は、2つのテキストの違いを比較し、詳細にハイライト表示するツールです。このツールは、テキストの微細な変更を検出する必要がある開発者やテキストエディターにとって非常に役立ちます。具体的には、ソースコードのバージョン管理、ドキュメントの修正履歴確認、翻訳の品質チェックなど、多様な用途に活用できます。Diff Checker は、レーベンシュタイン距離やロングストリングマッチングなどのアルゴリズムを用いて、テキスト間の違いを効率的に検出します。また、比較結果は色付きのハイライトで表示され、追加、削除、変更の各部分を明確に区別できます。ユーザーは、比較の精度を調整するためのオプションや、結果をダウンロードする機能も利用できます。",
+      "usage_steps": [
+        "Step 1: 左側のテキストエリアに比較したい元のテキストを入力またはペーストします。",
+        "Step 2: 右側のテキストエリアに比較したい新しいテキストを入力またはペーストします。",
+        "Step 3: 「比較開始」ボタンをクリックして、2つのテキストの比較を開始します。",
+        "Step 4: 比較結果が表示されたら、追加された部分は緑色、削除された部分は赤色、変更された部分は青色でハイライト表示されます。",
+        "Step 5: 必要に応じて、上部の「比較設定」ボタンから、比較の精度や表示オプションを調整します。",
+        "Step 6: 比較結果をダウンロードする場合は、上部の「結果のダウンロード」ボタンをクリックします。"
+      ],
+      "usage_examples": [
+        "Example 1: プログラマが新しい機能を追加したソースコードの変更点を確認するために、元のコードと新しいコードを比較します。",
+        "Example 2: テクニカルライターがドキュメントの最新版と旧版を比較し、変更履歴を確認します。",
+        "Example 3: 翻訳者が元のテキストと翻訳後のテキストを比較し、品質チェックを行います。",
+        "Example 4: 法務担当者が契約書の異なるバージョンを比較し、重要な変更点を特定します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Diff Checker는 두 개의 텍스트를 비교하여 그 차이점을 시각적으로 강조해주는 도구입니다. 이 도구는 텍스트의 각 줄을 분석하여 삽입, 삭제, 수정된 부분을 구분하여 표시합니다. 사용자는 코드 변경사항을 검토하거나, 문서의 이전 버전과 최신 버전을 비교하는 등 다양한 용도로 활용할 수 있습니다. Diff Checker는 알고리즘을 통해 텍스트를 효율적으로 분석하고, 사용자 친화적인 인터페이스를 제공하여 차이점을 쉽게 파악할 수 있도록 설계되었습니다. 특히, 개발자, 편집자, 작성자 등에게 매우 유용하며, 코드 리뷰, 문서 검토, 버전 관리 등의 작업을 지원합니다.",
+      "usage_steps": [
+        "Step 1: 웹사이트의 Diff Checker 페이지에 접속합니다.",
+        "Step 2: '첫 번째 텍스트' 영역에서 비교할 첫 번째 텍스트를 붙여넣습니다.",
+        "Step 3: '두 번째 텍스트' 영역에서 비교할 두 번째 텍스트를 붙여넣습니다.",
+        "Step 4: '비교하기' 버튼을 클릭하여 두 텍스트를 분석합니다.",
+        "Step 5: 분석 결과를 확인하며, 삽입된 부분은 녹색, 삭제된 부분은 빨간색, 수정된 부분은 파란색으로 표시됩니다.",
+        "Step 6: 필요에 따라 '다운로드' 버튼을 클릭하여 결과를 파일로 저장할 수 있습니다."
+      ],
+      "usage_examples": [
+        "Example 1: 소프트웨어 개발 프로젝트에서, 개발자는 코드 변경사항을 검토할 때 Diff Checker를 사용하여 이전 버전과 최신 버전 사이의 차이점을 쉽게 파악할 수 있습니다.",
+        "Example 2: 학술 논문 작성자들은 논문의 이전 버전과 최신 버전을 비교하여 수정된 부분을 확인하여 피드백을 반영했는지를 확인할 수 있습니다.",
+        "Example 3: 웹사이트 관리자들은 웹 페이지의 HTML 코드를 변경한 후, 이전 버전과 최신 버전을 비교하여 변경 사항을 확인할 수 있습니다.",
+        "Example 4: 법률 문서 작성자들은 문서의 이전 버전과 최신 버전을 비교하여 법률 조항의 변경 상태를 확인하고, 필요한 수정 사항을 파악할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Diff Checker es una herramienta de procesamiento de texto diseñada para comparar dos versiones de un documento y resaltar las diferencias entre ellas. Utiliza algoritmos avanzados de comparación de cadenas, como el Algoritmo de Levenshtein, para identificar adiciones, eliminaciones y cambios en el texto. Esta funcionalidad es particularmente útil para desarrolladores y escritores que necesitan verificar modificaciones en códigos fuente, documentos legales, o artículos. Además, el Diff Checker soporta múltiples formatos de texto, incluyendo plain text, HTML y Markdown, lo que lo hace versátil para una variedad de necesidades. La herramienta también ofrece una interfaz de usuario intuitiva que permite a los usuarios navegar fácilmente entre los cambios, y proporciona opciones para exportar los resultados en diferentes formatos, facilitando la revisión y el control de versiones.",
+      "usage_steps": [
+        "Abra la página de Diff Checker en su navegador web.",
+        "En la sección 'Texto 1', pegue o escriba el contenido de la primera versión del texto que desea comparar.",
+        "En la sección 'Texto 2', pegue o escriba el contenido de la segunda versión del texto que desea comparar.",
+        "Seleccione el formato de texto en el que están escritos los documentos utilizando el menú desplegable 'Formato de Texto'. Las opciones incluyen 'Texto Plano', 'HTML' y 'Markdown'.",
+        "Haga clic en el botón 'Comparar' para que la herramienta procese y resalte las diferencias entre los dos textos.",
+        "Revise los resultados en la sección 'Diferencias', donde las adiciones se muestran en verde, las eliminaciones en rojo, y los cambios en naranja. También puede exportar los resultados en formato HTML o PDF utilizando las opciones proporcionadas."
+      ],
+      "usage_examples": [
+        "Un desarrollador necesita comparar dos versiones de un archivo de código fuente para identificar qué cambios se realizaron entre la versión 1.0 y la 2.0. Utiliza Diff Checker para resaltar las diferencias y asegurarse de que todas las modificaciones sean coherentes y correctas.",
+        "Un redactor de contenido web debe revisar un artículo antes de su publicación final. Utiliza Diff Checker para comparar el borrador inicial con la versión final, asegurándose de que todas las correcciones y actualizaciones hayan sido realizadas.",
+        "Un abogado necesita verificar las modificaciones en un contrato legal antes de firmarlo. Utiliza Diff Checker para comparar la versión original del contrato con la versión revisada, resaltando cualquier cambio en cláusulas y términos.",
+        "Un profesor de literatura desea comparar dos versiones de un ensayo de un estudiante para evaluar la calidad de las revisiones realizadas. Utiliza Diff Checker para identificar y resaltar las adiciones, eliminaciones y cambios realizados en el ensayo, facilitando la evaluación y el feedback."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Diff Checker é uma ferramenta de comparação de texto avançada que permite aos usuários identificar e visualizar as diferenças entre dois conjuntos de texto. Utilizando algoritmos de detecção de diferenças, o Diff Checker destaca as linhas e palavras que foram adicionadas, removidas ou modificadas, proporcionando uma visão clara e detalhada das alterações. Esta ferramenta é essencial para desenvolvedores, editores de conteúdo, e qualquer pessoa que precise comparar versões de documentos, códigos fonte, ou textos em geral. Alguns dos casos de uso específicos incluem a revisão de contratos legais, a comparação de versões de códigos de software, e a verificação de alterações em documentos de colaboração. O Diff Checker opera de maneira eficiente, mesmo com grandes volumes de texto, garantindo que as diferenças sejam identificadas e exibidas de forma precisa e intuitiva.",
+      "usage_steps": [
+        "Abra a página do Diff Checker no seu navegador.",
+        "No painel esquerdo, cole o texto original na área de entrada 'Texto 1'.",
+        "No painel direito, cole o texto modificado ou a versão mais recente na área de entrada 'Texto 2'.",
+        "Clique no botão 'Comparar' localizado abaixo das áreas de entrada.",
+        "O Diff Checker processará os textos e exibirá as diferenças destacadas em cores diferentes: adições em verde, remoções em vermelho, e modificações em laranja.",
+        "Explore a visualização resultante e utilize as ferramentas de navegação para examinar as alterações em detalhes, como o botão 'Ir para Próxima Diferença' ou 'Ir para Diferença Anterior'."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de software precisa comparar duas versões de um código-fonte para identificar as alterações feitas por um colega. O Diff Checker ajuda a localizar rapidamente as modificações, facilitando a revisão e a integração do código.",
+        "Um editor de um jornal online utiliza o Diff Checker para comparar a versão final de um artigo com a versão inicial, garantindo que todas as correções e melhorias tenham sido aplicadas corretamente.",
+        "Um advogado precisa revisar as alterações feitas em um contrato legal. O Diff Checker destaca as modificações, facilitando a análise e a aprovação do documento.",
+        "Um professor de literatura compara duas versões de um ensaio de um aluno para verificar a consistência e a originalidade do trabalho. O Diff Checker ajuda a identificar possíveis plágios ou erros de edição."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Diff Checker est un outil de comparaison de texte avancé qui permet aux utilisateurs de détecter et de visualiser les différences entre deux versions d'un document ou d'un code source. Techniquement, l'outil utilise des algorithmes de diff, tels que le Longest Common Subsequence (LCS), pour identifier les insertions, suppressions et modifications entre deux ensembles de données textuelles. Cette approche permet non seulement de souligner les changements spécifiques, mais aussi de présenter ces modifications de manière structurée et compréhensible. Les utilisateurs ont besoin de cet outil pour diverses raisons : vérifier les modifications apportées à des documents contractuels, assurer la cohérence des traductions, ou encore debuguer des erreurs dans le code. Par exemple, un développeur peut utiliser le Diff Checker pour identifier rapidement les lignes de code modifiées entre deux versions d'un fichier, facilitant ainsi le processus de revue de code et de débogage.",
+      "usage_steps": [
+        "Ouvrez la page du Diff Checker sur le site web.",
+        "Dans la section 'Texte A', copiez et collez le contenu de la première version que vous souhaitez comparer.",
+        "Dans la section 'Texte B', copiez et collez le contenu de la seconde version à comparer.",
+        "Cliquez sur le bouton 'Comparer' pour lancer l'analyse.",
+        "Examinez les résultats affichés, où les différences sont colorées et marquées pour une meilleure lisibilité.",
+        "Utilisez les options de filtre pour affiner la vue, comme ne montrer que les ajouts, suppressions ou modifications."
+      ],
+      "usage_examples": [
+        "Un avocat compare deux versions d'un contrat pour identifier les clauses modifiées avant de le soumettre à un client.",
+        "Un traducteur utilise le Diff Checker pour vérifier la cohérence entre une traduction initiale et une version révisée par un relecteur.",
+        "Un développeur compare deux commits d'un dépôt Git pour déterminer quelles lignes de code ont été modifiées lors d'une récente mise à jour.",
+        "Un éditeur de contenu utilise l'outil pour s'assurer que toutes les modifications demandées par un auteur ont été correctement intégrées dans un article."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Diff Checker ist ein leistungsstarkes Werkzeug zur Textvergleichsanalyse. Er ermöglicht es Benutzern, zwei verschiedene Texte zu vergleichen und die Unterschiede auf eine präzise und visuell ansprechende Weise hervorzuheben. Dieses Tool basiert auf fortgeschrittenen Algorithmus, die die Änderungen, Hinzufügungen und Entfernungen in den Texten identifizieren und visuell darstellen. Die Anwendung dieser Techniken ist besonders nützlich in verschiedenen Szenarien, wie beispielsweise beim Vergleich von Codeversionen, der Überprüfung von Dokumenten auf Plagiate oder der Prüfung von Kontraktänderungen. Die Benutzer können nicht nur die Unterschiede sehen, sondern auch spezifische Änderungen im Text auf Zeilen- oder Wortebene analysieren. Durch die Möglichkeit, die Anzeige zu personalisieren, können Benutzer die Darstellung der Unterschiede nach ihren Bedürfnissen anpassen, was die Analyse noch effizienter macht.",
+      "usage_steps": [
+        "Öffnen Sie die Diff Checker Seite und fügen Sie den ersten Text in das linke Eingabefeld ein.",
+        "Klicken Sie auf das Plus-Symbol neben dem Eingabefeld, um den zweiten Text in das rechte Eingabefeld einzufügen.",
+        "Wählen Sie die gewünschten Optionen in der Menüleiste, z.B. die Farbcodierung für Hinzufügungen, Änderungen und Entfernungen.",
+        "Klicken Sie auf den Button 'Vergleichen', um den Vergleich zu starten und die Unterschiede zu sehen.",
+        "Verwenden Sie die Schaltfläche 'Seitenumbruch' oder den Schieberegler, um den Text in der Ansicht zu navigieren.",
+        "Benutzen Sie die 'Export'-Funktion, um die Ergebnisse als HTML- oder Textdatei zu speichern."
+      ],
+      "usage_examples": [
+        "Ein Softwareentwickler vergleicht zwei verschiedene Versionen eines Programmcodes, um Änderungen und Fehler zu identifizieren.",
+        "Ein Rechtsanwalt prüft zwei Kontraktdokumente auf Unterschiede, um sicherzustellen, dass alle Klauseln korrekt übertragen wurden.",
+        "Ein Schriftsteller überprüft verschiedene Bearbeitungen seines Manuskripts, um die benötigten Änderungen zu identifizieren und zu dokumentieren.",
+        "Ein Journalist vergleicht zwei Pressespiegelungen, um die Änderungen in der Berichterstattung über eine bestimmte Geschichte zu analysieren."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Diff Checker — это мощный онлайн-инструмент для сравнения двух текстовых файлов или строк, который позволяет детально анализировать и выделять различия между ними. С его помощью пользователи могут быстро определить, какие изменения были внесены в текст, что добавлено, удалено или изменено. Использование Diff Checker особенно полезно в таких областях, как разработка программного обеспечения, документирование, редактирование текстов и юридическая деятельность, где точность и внимание к деталям играют ключевую роль.\n\nТехнически, Diff Checker использует алгоритмы сопоставления строк, такие как алгоритм Левенштейна или алгоритм Майера-Миллера, для выявления различий. Эти алгоритмы эффективно обрабатывают большие объемы данных и предоставляют подробные результаты, включающие выделение добавленных, удаленных и измененных строк. Инструмент также поддерживает синтаксическое выделение для популярных языков программирования, что делает его особенно полезным для разработчиков.\n\nDiff Checker может работать с различными форматами текста, включая простой текст, HTML, XML и другие. Результаты сравнения можно экспортировать в формате HTML или текста для дальнейшего анализа или документирования.",
+      "usage_steps": [
+        "Откройте веб-страницу Diff Checker в вашем браузере.",
+        "В верхней части интерфейса найдите два поля для ввода текста: \"Текст 1\" и \"Текст 2\".",
+        "В поле \"Текст 1\" вставьте исходный текст, который вы хотите сравнить.",
+        "В поле \"Текст 2\" вставьте текст, с которым вы хотите сравнить исходный текст.",
+        "Нажмите кнопку \"Сравнить\" (или \"Compare\"), чтобы запустить процесс сравнения.",
+        "После завершения сравнения, результаты будут отображены на экране с выделенными различиями, где добавленные строки помечены зеленым, удаленные — красным, а измененные — оранжевым."
+      ],
+      "usage_examples": [
+        "Разработчик использует Diff Checker для сравнения двух версий кода, чтобы выявить, какие изменения были внесены в процессе рефакторинга или исправления багов.",
+        "Редактор текста применяет Diff Checker для анализа двух вариантов статьи, чтобы понять, какие правки были сделаны корректором.",
+        "Юрист использует инструмент для сравнения двух версий контракта, чтобы убедиться, что все необходимые правки были внесены и нет несанкционированных изменений.",
+        "Аналитик текстовых данных использует Diff Checker для сравнения двух версий отчета, чтобы выделить ключевые изменения и добавления, сделанные в процессе анализа."
+      ]
+    }
+  }
+}

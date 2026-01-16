@@ -1,0 +1,175 @@
+{
+  "slug": "text-to-slug",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Text to Slug tool is a specialized utility designed to transform human-readable text into a URL-friendly format, known as a slug. Technically, a slug is a part of a URL that identifies a specific page in a user-friendly way. The tool performs several operations to ensure the output is suitable for use in web addresses, including converting all characters to lowercase, replacing spaces and special characters with hyphens, and removing any characters that are not alphanumeric or hyphens. This process is crucial for maintaining SEO best practices and ensuring that URLs are both readable and accessible.\n\nUsers benefit from this tool in various scenarios. For instance, content creators and bloggers can use it to generate slugs for blog post titles, ensuring that their URLs are clean and optimized for search engines. Web developers can utilize the tool to automate the creation of slug fields in content management systems (CMS) and databases, streamlining the process of generating and storing unique identifiers. Additionally, it is invaluable for anyone who needs to create and manage web-friendly content, such as marketing professionals and digital publishers.\n\nThe tool operates by taking the input text, applying a series of regex patterns and string manipulation functions, and outputting the transformed slug. It ensures that the final result adheres to the standards of URL encoding, making it safe to use in web addresses without causing errors or breaking links.",
+      "usage_steps": [
+        "Step 1: Navigate to the Text to Slug tool page on the developer website.",
+        "Step 2: Locate the input field labeled 'Enter Text' and type or paste the text you want to convert into a slug.",
+        "Step 3: Optionally, use the 'Custom Slug Prefix' field to add a prefix to your slug, which can be useful for organizing content or maintaining a consistent URL structure.",
+        "Step 4: Click the 'Generate Slug' button to initiate the conversion process.",
+        "Step 5: Review the generated slug displayed in the 'Result' field. This is the URL-friendly version of your input text.",
+        "Step 6: Copy the slug to your clipboard using the 'Copy Slug' button, and use it in your web application, CMS, or any other context where a clean URL is required."
+      ],
+      "usage_examples": [
+        "Example 1: A blogger is writing a new post titled '10 Tips for a Healthy Lifestyle'. They use the Text to Slug tool to convert this title into a slug, resulting in '10-tips-for-a-healthy-lifestyle', which they then use as the URL for the blog post.",
+        "Example 2: A web developer is building a content management system and needs to automatically generate slugs for each article. They integrate the Text to Slug tool into their workflow to ensure that every article has a unique and SEO-friendly URL.",
+        "Example 3: A marketing manager is creating a series of landing pages for different products. They use the tool to generate slugs for each page title, ensuring that the URLs are clean, readable, and consistent across the website.",
+        "Example 4: A digital publisher is archiving old articles and needs to create slugs for the titles of these articles. They use the Text to Slug tool to quickly and accurately generate slugs, which are then used to update the URLs in the archive."
+      ]
+    },
+    "zh": {
+      "detailed_description": "“Text to Slug” 工具能够将任何文本转换为URL友好的格式，确保生成的字符串可以在互联网上安全地使用。技术上，该工具会移除所有非字母数字字符，将空格替换为连字符（-），并将所有字符转换为小写。这种处理方式有助于避免URL中的特殊字符导致的问题，如编码不一致和解析错误。用户在创建网站内容、SEO优化、生成友好的URL路径等方面经常需要用到这个工具。例如，博客作者可以使用此工具将文章标题转换为URL路径，确保用户可以直接从标题访问文章，同时提高搜索引擎的可见性。此外，开发人员在构建RESTful API时，也可以利用这个工具生成唯一的资源标识符，确保API的路径清晰且易于管理。",
+      "usage_steps": [
+        "Step 1: 打开“Text to Slug”工具页面。",
+        "Step 2: 在“输入文本”框中输入你希望转换的文本内容。",
+        "Step 3: 选择“转换选项”中的“移除非字母数字字符”复选框（默认已选中）。",
+        "Step 4: 选择“转换选项”中的“将空格替换为连字符”复选框（默认已选中）。",
+        "Step 5: 点击“生成Slug”按钮，工具将自动进行转换并显示结果。",
+        "Step 6: 在“生成的Slug”框中查看转换后的结果，点击“复制”按钮将结果复制到剪贴板。"
+      ],
+      "usage_examples": [
+        "Example 1: 博客作者使用该工具将文章标题“如何提高你的写作技巧”转换为URL路径“ru-he-ti-gao-ni-de-xie-zuo-ji-qiao”，方便用户直接从标题访问文章。",
+        "Example 2: 开发人员在构建API时，使用该工具将资源名称“用户信息”转换为“yong-hu-xin-xi”，确保API路径清晰且易于管理。",
+        "Example 3: 网站管理员在创建产品页面的URL时，使用该工具将产品名称“智能手表2023”转换为“zhi-neng-shou-biao-2023”，提高搜索引擎的友好度。",
+        "Example 4: 内容编辑在发布新闻文章时，使用该工具将文章标题“最新科技趋势”转换为“zui-xin-ke-ji-qian-shi”，确保URL路径简洁且易于分享。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Text to Slugツールは、任意のテキストをURLに適した形式（スラグ）に変換します。スラグは、URLの一部として使用される文字列で、通常はアスキー文字、ハイフン、アンダースコアから構成されます。このツールは、ウェブ開発者やコンテンツクリエイターがウェブページや記事のURLを一貫性と読みやすさを保ちながら生成するための重要なリソースです。具体的なユースケースとしては、ブログ記事のタイトルをURLに変換したり、製品ページの名前をURLに変換したりする場面が挙げられます。このツールは、入力されたテキストを正規化し、特殊文字を削除または置換し、スペースをハイフンに置換して、URLに適した形式にします。また、大文字を小文字に変換する機能も備えています。",
+      "usage_steps": [
+        "Step 1: ツールページの上部にある「テキスト入力欄」に、変換したいテキストを入力またはペーストします。",
+        "Step 2: 「オプション設定」セクションで、必要に応じて「大文字を小文字に変換する」チェックボックスをオンにします。",
+        "Step 3: 「特殊文字の置換」オプションで、特殊文字を置換するか削除するかを選択します。",
+        "Step 4: 「スペースの置換」オプションで、スペースをハイフンに置換するかアンダースコアに置換するかを選択します。",
+        "Step 5: 「変換」ボタンをクリックします。これにより、入力されたテキストがURLに適したスラグに変換されます。",
+        "Step 6: 変換結果が「結果表示欄」に表示されます。この結果をコピーして利用できます。"
+      ],
+      "usage_examples": [
+        "Example 1: ブログ記事のタイトル「2023年の最新ウェブ開発トレンド」を「2023-nen-no-saishin-web-kaihatsu-toren-do」に変換し、URLとして使用します。",
+        "Example 2: 製品ページの製品名「超軽量カーボン自転車フレーム」を「cho-keiryou-carbon-jitensha-frame」に変換し、製品ページのURLに使用します。",
+        "Example 3: イベントページのタイトル「夏の音楽祭」を「natsu-no-onngaku-sai」に変換し、イベントページのURLに使用します。",
+        "Example 4: ニュース記事のタイトル「新型コロナウイルスのワクチン接種率が上昇」を「shin-gata-corona-uirusu-no-wakuchin-sechu-ritu-ga-jojou」に変換し、記事のURLに使用します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Text to Slug 도구는 사용자가 제공한 텍스트를 URL에 적합한 형식으로 변환하는 기능을 제공합니다. 이 도구는 공백, 특수 문자, 대소문자를 처리하여 체계적인 슬러그를 생성합니다. 슬러그는 웹 페이지의 URL 경로에서 주로 사용되며, 검색 엔진 최적화(SEO)와 사용자 친화적인 URL 생성에 중요한 역할을 합니다. Text to Slug는 사용자가 웹 개발, 콘텐츠 관리, 블로깅 등 다양한 분야에서 URL을 생성하거나 수정할 때 필요한 슬러그를 쉽게 만들 수 있게 해줍니다. 내부적으로, 이 도구는 Unicode 정규화, ASCII 변환, 문자 치환 등의 과정을 거쳐 안정적인 슬러그를 생성합니다.",
+      "usage_steps": [
+        "1. Text to Slug 도구 페이지로 이동합니다.",
+        "2. 'Input Text' 영역에 변환하고자 하는 텍스트를 입력합니다.",
+        "3. 'Convert' 버튼을 클릭하여 텍스트를 슬러그 형식으로 변환합니다.",
+        "4. 변환 결과가 'Output Slug' 영역에 표시됩니다.",
+        "5. 필요하다면, 'Custom Slug' 옵션을 사용하여 특정 문자를 추가하거나 제거할 수 있습니다.",
+        "6. 변환된 슬러그를 복사하여 사용합니다."
+      ],
+      "usage_examples": [
+        "1. 블로거가 새로운 블로그 포스트의 제목을 '2023년 가을 패션 트렌드'로 설정할 때, URL에 적합한 슬러그 '2023-gaull-peson-trend'를 생성하여 사용합니다.",
+        "2. 웹 개발자가 포트폴리오 사이트의 각 프로젝트 페이지에 고유한 URL을 생성할 때, 프로젝트 이름 '모바일 앱 디자인'을 'mobile-app-design'으로 변환합니다.",
+        "3. 콘텐츠 관리자가 뉴스 기사의 제목을 '서울 지하철 9호선 연장 개통'으로 설정할 때, URL에 적합한 슬러그 'seoul-subway-9-line-extension'을 생성하여 기사 페이지의 URL을 만듭니다.",
+        "4. 이커머스 플랫폼 관리자가 새로운 상품 페이지를 생성할 때, 상품 이름 '프리미엄 오트밀 500g'을 'premium-oatmeal-500g'으로 변환하여 상품 페이지의 URL을 생성합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El conversor Text to Slug es una herramienta esencial para desarrolladores y gestores de contenido que necesitan transformar textos en formatos URL-amigables. Técnicamente, la herramienta realiza una serie de operaciones sobre el texto de entrada para asegurar que el resultado sea válido para uso en URLs. Estas operaciones incluyen la eliminación de caracteres no alfanuméricos, la conversión de espacios en guiones y la sustitución de caracteres acentuados por sus equivalentes sin acento. El objetivo principal es facilitar la creación de slugs, o identificadores únicos, que se utilizan en rutas de URL, títulos de artículos, nombres de archivos y más. Los usuarios necesitan esta herramienta para garantizar que sus URLs sean limpias, legibles y SEO-friendly, lo que mejora la experiencia del usuario y la indexación en motores de búsqueda. Además, el conversor Text to Slug es especialmente útil en entornos de desarrollo web donde la consistencia y la estructura correcta de las URLs son cruciales para el funcionamiento y la mantenibilidad de los sitios web.",
+      "usage_steps": [
+        "Acceda a la página de la herramienta Text to Slug en el sitio web de herramientas de texto.",
+        "En la sección 'Texto de entrada', escriba o pegue el texto que desea convertir en un slug.",
+        "Seleccione las opciones de conversión según sea necesario. Por ejemplo, puede elegir si desea convertir el texto a minúsculas o mantener las mayúsculas.",
+        "Haga clic en el botón 'Convertir' para procesar el texto y generar el slug.",
+        "El slug resultante se mostrará en la sección 'Resultado'. Revise el slug para asegurarse de que cumple con sus requisitos.",
+        "Copie el slug generado y utilícelo en la URL, el título de un artículo, o cualquier otro lugar donde sea necesario."
+      ],
+      "usage_examples": [
+        "Un redactor de contenido de un blog necesita crear una URL amigable para un nuevo artículo titulado 'Cómo crear una página web con HTML y CSS'. Utiliza el conversor Text to Slug para generar el slug 'como-crear-una-pagina-web-con-html-y-css' y lo usa en la URL del artículo.",
+        "Un desarrollador web está creando una aplicación que requiere slugs únicos para cada entrada de usuario. Utiliza la herramienta para convertir títulos de entradas en slugs válidos para las rutas de la aplicación, asegurando que no contengan caracteres especiales que puedan causar errores.",
+        "Un gestor de proyectos en una agencia digital necesita nombrar archivos de proyecto de manera consistente. Utiliza el conversor Text to Slug para transformar títulos de proyectos en nombres de archivos limpios y estructurados, facilitando la organización y búsqueda de archivos.",
+        "Un SEO specialist está optimizando las URLs de un sitio web para mejorar su posición en los resultados de búsqueda. Utiliza la herramienta para convertir títulos de páginas largos y complejos en slugs cortos y relevantes, lo que mejora la legibilidad y la indexación de las URLs."
+      ]
+    },
+    "pt": {
+      "detailed_description": "A ferramenta Text to Slug é um recurso poderoso para desenvolvedores e profissionais de marketing que precisam converter textos em formatos compatíveis com URLs. Técnica e profundamente, esta ferramenta realiza a transformação de strings de texto em slugs, que são representações simplificadas e URL-friendly do conteúdo original. O processo envolve a remoção de caracteres especiais, a substituição de espaços por hifens ou sublinhados, e a conversão de todas as letras para minúsculas. Isso é crucial para garantir que os slugs gerados sejam aceitáveis em diferentes contextos de URLs, sem causar problemas de codificação ou interpretação incorreta. Usuários precisam desta ferramenta para diversas aplicações, como a criação de URLs amigáveis para páginas de blog, a geração de identificadores únicos para bancos de dados, e a otimização de conteúdo para mecanismos de busca. A ferramenta Text to Slug opera de forma eficiente, utilizando algoritmos de codificação e processamento de strings para garantir que o resultado final seja limpo, consistente e compatível com padrões web.",
+      "usage_steps": [
+        "Acesse a seção 'Text to Slug' no menu de ferramentas de texto do site.",
+        "Na interface da ferramenta, localize a área de entrada de texto, onde você pode digitar ou colar o texto que deseja converter.",
+        "Verifique as opções de configuração disponíveis, como a substituição de espaços por hífens ou sublinhados, e escolha a opção que melhor se adequa às suas necessidades.",
+        "Clique no botão 'Converter' para iniciar o processo de transformação do texto em slug.",
+        "Após a conversão, o resultado será exibido na área de saída. Copie o slug gerado para uso em URLs ou bancos de dados.",
+        "Se necessário, faça ajustes manuais no slug gerado e use a funcionalidade 'Validar Slug' para garantir que ele atenda a todos os requisitos técnicos."
+      ],
+      "usage_examples": [
+        "Um blogueiro precisa criar URLs amigáveis para suas postagens. Ele usa a ferramenta Text to Slug para converter o título da postagem '10 Dicas de SEO para Iniciantes' em '10-dicas-de-seo-para-iniciantes', garantindo que a URL seja limpa e otimizada para mecanismos de busca.",
+        "Um desenvolvedor de aplicativos está construindo uma base de dados para um projeto de e-commerce. Ele utiliza a ferramenta para gerar identificadores únicos para produtos, convertendo nomes de produtos como 'Smartphone Galaxy S21 Ultra 5G' em 'smartphone-galaxy-s21-ultra-5g', facilitando a organização e busca de itens no banco de dados.",
+        "Uma agência de marketing está criando campanhas de email marketing. Eles usam a ferramenta para gerar links de acompanhamento amigáveis, convertendo descrições de campanhas como 'Promoção de Verão 2023' em 'promocao-de-verao-2023', melhorando a experiência do usuário e a taxa de cliques.",
+        "Um administrador de sistemas precisa criar URLs para páginas de erro personalizadas em um site. Ele utiliza a ferramenta para converter mensagens de erro como 'Página não encontrada' em 'pagina-nao-encontrada', garantindo que as URLs sejam consistentes e fáceis de entender para os usuários."
+      ]
+    },
+    "fr": {
+      "detailed_description": "L'outil Text to Slug est conçu pour transformer un texte en un format de slug, une chaîne de caractères simplifiée et optimisée pour les URLs. Techniquement, ce processus implique la conversion de caractères spéciaux, d'espaces, et d'accents en une forme plus lisible et compatible avec les standards web. Par exemple, le texte 'Comment créer un blog efficace ?' est transformé en 'comment-creer-un-blog-efficace'. Cette transformation est essentielle pour de nombreux scénarios, notamment la création de permaliens pour des articles de blog, la génération de noms de fichiers pour des ressources web, et l'optimisation des URLs pour le référencement (SEO). L'outil Text to Slug utilise des algorithmes de normalisation de chaînes de caractères, tels que la suppression des accents, la conversion des espaces en tirets, et la suppression des caractères non autorisés. Il garantit également que le slug généré est unique et optimisé pour une meilleure indexation par les moteurs de recherche.",
+      "usage_steps": [
+        "Ouvrez l'outil Text to Slug sur le site web du développeur.",
+        "Dans la zone de texte intitulée 'Entrée', saisissez ou collez le texte que vous souhaitez convertir en slug.",
+        "Cochez les options de personnalisation si nécessaire, comme 'Ignorer les majuscules' ou 'Remplacer les espaces par des underscores'.",
+        "Cliquez sur le bouton 'Convertir' pour lancer le processus de transformation.",
+        "Le slug généré apparaîtra dans la zone de texte intitulée 'Résultat'.",
+        "Copiez le slug généré et utilisez-le selon vos besoins, par exemple pour un permalink ou un nom de fichier."
+      ],
+      "usage_examples": [
+        "Un rédacteur de contenu web utilise l'outil Text to Slug pour créer des permaliens SEO-friendly pour ses articles de blog. Par exemple, le titre '10 Astuces pour Améliorer Votre Productivité' devient '10-astuces-pour-ameliorer-votre-productivite'.",
+        "Un développeur de CMS (Système de Gestion de Contenu) utilise l'outil pour automatiser la génération de slugs pour les titres des articles, simplifiant ainsi la gestion des URLs dans son application.",
+        "Un webmarketer crée des noms de fichiers pour des images et des vidéos en utilisant l'outil Text to Slug, ce qui améliore la structuration des ressources sur son site web et facilite le référencement.",
+        "Un gestionnaire de projet utilise l'outil pour générer des identifiants uniques pour les tâches et les documents, en transformant les titres de ces éléments en slugs, ce qui facilite la recherche et la référence dans les systèmes de suivi de projets."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Text to Slug-Werkzeug ist eine spezialisierte Anwendung, die Textzeichenfolgen in URL-freundliche Slugs umwandelt. Ein Slug ist eine kurze Zeichenfolge, die nur Buchstaben, Zahlen und Bindestriche enthält, und die häufig in URLs verwendet wird, um eine Ressource eindeutig zu identifizieren. Dieses Tool ist unerlässlich für Webentwickler, Content Manager und SEO-Experten, die URL-Strukturen optimieren möchten. Die Umwandlung von Text in Slugs hilft, URLs lesbar und SEO-freundlich zu gestalten, reduziert die Wahrscheinlichkeit von Fehlern durch Sonderzeichen und unterstützt die Einhaltung von URL-Konventionen. Technisch gesehen, normalisiert das Tool den Eingabetext, indem es Umlaute und Akzente entfernt, Sonderzeichen durch Bindestriche ersetzt und mehrfache Leerzeichen entfernt. Es unterstützt auch die Auswahl von Verschlagwortungsstrategien, wie z.B. Klein- oder Großschreibung, und ermöglicht die Anpassung der Länge des Slugs.",
+      "usage_steps": [
+        "Öffnen Sie das Text to Slug-Werkzeug auf der Webseite und navigieren Sie zu der Eingabefeld-Section, die als 'Text Eingabe' gekennzeichnet ist.",
+        "Geben Sie den Text ein, den Sie in einen Slug umwandeln möchten, oder fügen Sie ihn in das Eingabefeld ein.",
+        "Wählen Sie in der Abschnitt 'Verschlagwortungs-Optionen' die gewünschten Einstellungen aus, wie z.B. die Klein- oder Großschreibung des Slugs und die maximal zulässige Länge.",
+        "Klicken Sie auf den Button 'Slug generieren', um den Vorgang zu starten. Das Tool wird den Text sofort in einen Slug umwandeln.",
+        "Überprüfen Sie den generierten Slug im Feld 'Ergebnis' und passen Sie bei Bedarf die Einstellungen an, um den idealen Slug zu erzeugen.",
+        "Wenn Sie zufrieden mit dem Slug sind, können Sie ihn kopieren und in Ihre URL oder Datenbank einfügen."
+      ],
+      "usage_examples": [
+        "Ein Webentwickler erstellt eine neue Blog-Plattform und muss sicherstellen, dass die URLs der Blog-Artikel lesbar und SEO-optimal sind. Der Text to Slug-Konverter hilft, Titel wie 'Grundlagen der Webentwicklung' in 'grundlagen-der-webentwicklung' umzuwandeln.",
+        "Ein Content Manager für ein E-Commerce-Unternehmen verwendet das Werkzeug, um Produktseiten mit Titeln wie 'Schwarzer Samt Mantel für Damen' in 'schwarzer-samt-mantel-fuer-damen' zu transformieren, wodurch die URLs für Suchmaschinen besser lesbar und für Benutzer attraktiver werden.",
+        "Ein SEO-Spezialist arbeitet an der Optimierung der URLs eines News-Portals. Artikel-Titel wie 'Weltmeisterschaft 2026: Deutschland ausgeschieden' werden in 'weltmeisterschaft-2026-deutschland-ausgeschieden' umgewandelt, um die Suchmaschinen-Ranking-Chancen zu verbessern.",
+        "Ein Webdesigner erstellt ein Portfolio und möchte, dass die URLs der Projektseiten sauber und professionell aussehen. Die Titel wie 'Redesign des Unternehmenswebsites' werden in 'redesign-unternehmenswebsites' umgewandelt, um eine klare und benutzerfreundliche Navigation zu gewährleisten."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Text to Slug преобразует введённый текст в URL-дружественный формат, известный как «slug». Slug представляет собой строку, состоящую из букв, цифр и дефисов, которая используется для создания читабельных и SEO-оптимизированных URL-адресов. Инструмент автоматически удаляет все специальные символы, пробелы заменяет дефисами, а текст преобразует в нижний регистр. Это особенно полезно для веб-разработчиков и контент-менеджеров, которым нужно быстро создавать красивые и уникальные URL-адреса для статей, страниц и других ресурсов. В процессе работы инструмент использует регулярные выражения и другие текстовые функции для очистки и преобразования текста, обеспечивая высокую точность и надёжность результатов.",
+      "usage_steps": [
+        "Откройте страницу инструмента «Text to Slug» на сайте.",
+        "В текстовом поле «Введите текст» введите строку, которую вы хотите преобразовать в slug.",
+        "Нажмите на кнопку «Преобразовать» для запуска процесса преобразования.",
+        "Инструмент автоматически удалит все специальные символы и пробелы, заменит их дефисами и переведёт текст в нижний регистр.",
+        "Результат преобразования появится в текстовом поле «Slug».",
+        "Скопируйте сгенерированный slug и используйте его для создания URL-адресов или других целей."
+      ],
+      "usage_examples": [
+        "Создание URL-адреса для статьи блога. Например, если заголовок статьи — «Как создать собственный веб-сайт», инструмент преобразует его в «kak-sozdat-svoj-veb-sajt».",
+        "Формирование читабельных ссылок для продуктов в интернет-магазине. Например, если название продукта — «Смартфон Samsung Galaxy S21 Ultra 5G», инструмент преобразует его в «smartfon-samsung-galaxy-s21-ultra-5g».",
+        "Генерация уникальных идентификаторов для категорий или тегов на веб-сайте. Например, категория «Электроника и бытовая техника» преобразуется в «elektronika-i-bytovaya-tehnika».",
+        "Создание URL-адресов для событий или мероприятий. Например, если название мероприятия — «Конференция по цифровому маркетингу 2023», инструмент преобразует его в «konferentsiya-po-tsifrovomu-marketingu-2023»."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة Text to Slug هي أداة قوية تعني بتحويل النصوص إلى صيغة ملائمة لروابط الويب (Slugs). تستخدم هذه الأداة في العديد من التطبيقات، وخاصة في تطوير المواقع الإلكترونية والتطبيقات، حيث يتم تحويل العناوين والنصوص الطويلة إلى روابط قابلة للقراءة والحفظ. تهدف هذه الأداة إلى تحسين قابلية البحث SEO وسهولة مشاركة الروابط. على سبيل المثال، يمكن تحويل النص 'كيفية صنع الكيك' إلى slug 'kayfa-sanaa-al-kayk'. هذا التحويل يضمن أن الروابط تكون خالية من المسافات والرموز الخاصة، مما يجعلها متوافقة مع معايير الويب. تستخدم الأداة خوارزميات متطورة لمعالجة النصوص وإزالة العلامات غير الضرورية، مما يوفر نتائج موثوقة يمكن استخدامها مباشرة في روابط URL.",
+      "usage_steps": [
+        "أدخل النص الذي تريد تحويله إلى slug في حقل الإدخال الرئيسي.",
+        "اختر اللغة التي ترغب في استخدامها من القائمة المنسدلة 'اختيار اللغة'.",
+        "حدد إذا كنت تريد إزالة الأحرف الخاصة أم لا عن طريق تحديد خيار 'إزالة الأحرف الخاصة'.",
+        "اضغط على زر 'تحويل' لبدء عملية التحويل.",
+        "ستظهر النتيجة النهائية في حقل 'النتيجة' أسفل الزر.",
+        "يمكنك نسخ النتيجة النهائية بواسطة الضغط على زر 'نسخ' الموجود بجانب حقل النتيجة."
+      ],
+      "usage_examples": [
+        "تطوير المواقع الإلكترونية: عند إنشاء صفحات جديدة لموقع ويب، يمكن استخدام أداة Text to Slug لتحويل العناوين إلى روابط ملائمة تحسّن من قابلية البحث SEO.",
+        "إنشاء محتوى للمدونات: عند كتابة عناوين لمقالات المدونة، يمكن استخدام الأداة لتحويل هذه العناوين إلى روابط يمكن مشاركتها عبر وسائل التواصل الاجتماعي.",
+        "إدارة قواعد البيانات: عند تخزين عناوين المقالات أو المنتجات في قاعدة بيانات، يمكن استخدام الأداة لتحويل هذه العناوين إلى قيم فريدة وقابلة للقراءة.",
+        "إنشاء روابط مخصصة: عند إنشاء روابط مخصصة لحملات التسويق، يمكن استخدام الأداة لضمان أن هذه الروابط تكون قابلة للقراءة وخالية من الأخطاء."
+      ]
+    }
+  }
+}

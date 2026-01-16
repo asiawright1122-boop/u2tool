@@ -1,0 +1,158 @@
+{
+  "slug": "cron-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Cron Expression Generator is a powerful tool designed to simplify the creation and parsing of cron expressions, which are used to schedule tasks in Unix-based systems and many other environments. This tool provides a visual interface that demystifies the complex syntax of cron expressions, making it easier for developers to create accurate and reliable schedules without the need for extensive knowledge of cron syntax. Users can input their desired scheduling parameters, such as the minute, hour, day of the month, month, day of the week, and year, and the tool will generate the corresponding cron expression. Conversely, it can also parse existing cron expressions to break them down into their constituent parts, which is particularly useful for debugging and understanding legacy systems. The tool supports a wide range of cron formats, including standard cron, Quartz cron, and extended cron with seconds. By leveraging this tool, developers can ensure that their scheduled tasks run at the correct intervals, reducing the risk of errors and improving the efficiency of their workflows.",
+      "usage_steps": [
+        "Open the Cron Expression Generator on the website and navigate to the main interface.",
+        "Select the 'Generate Cron Expression' tab to start creating a new cron expression.",
+        "Use the dropdown menus to specify the desired schedule for each time unit: minute, hour, day of month, month, day of week, and year.",
+        "Click the 'Generate' button to produce the cron expression based on your selected parameters.",
+        "Review the generated cron expression in the output field. If needed, adjust the parameters and regenerate the expression.",
+        "For existing cron expressions, switch to the 'Parse Cron Expression' tab, enter the expression, and click 'Parse' to see its breakdown."
+      ],
+      "usage_examples": [
+        "A system administrator needs to schedule a daily backup at 2 AM. Using the Cron Expression Generator, they select 0 for minutes, 2 for hours, and '*' for all other fields, generating the expression '0 2 * * *' to ensure the backup runs every day at 2 AM.",
+        "A developer is working on a cron job that needs to run every 15 minutes. They set the minute field to '0,15,30,45' and leave the other fields as '*', generating the expression '0,15,30,45 * * * *' to execute the task at the specified intervals.",
+        "A DevOps engineer is tasked with setting up a cron job that runs on the first Monday of every month at 9 AM. They configure the day of week field to '1' (Monday) and the day of month field to '1-7', with the hour set to '9', generating the expression '0 9 1-7 * 1#1' to meet the requirement.",
+        "A software tester needs to validate a cron job that runs on the last day of every month at midnight. They set the day of month field to 'L' (last day) and the hour and minute fields to '0', generating the expression '0 0 L * *' to ensure the job runs at the correct time."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Cron Expression Generator 是一个强大的在线工具，旨在帮助开发人员和系统管理员生成和解析 Cron 表达式。Cron 表达式是一种用于配置定时任务的标准格式，广泛应用于 Linux 和 Unix 系统中。通过这个工具，用户可以无需深入了解 Cron 表达式的复杂语法，就能快速生成正确的 Cron 表达式。此外，该工具还支持解析现有的 Cron 表达式，方便用户检查和调试。Cron Expression Generator 的界面设计直观，操作简便，确保用户能够高效地完成任务。它特别适用于需要定期执行任务的场景，如数据备份、日志清理、定时通知等。通过使用 Cron Expression Generator，用户可以节省时间和精力，提高开发效率。",
+      "usage_steps": [
+        "Step 1: 打开 Cron Expression Generator 工具网页。",
+        "Step 2: 在主界面中，选择要生成的 Cron 表达式的类型，例如 '分钟'、'小时'、'日期'、'月份' 和 '星期'。",
+        "Step 3: 根据具体需求，设置每个字段的值。例如，选择 '每 5 分钟'、'每小时'、'每天' 等。",
+        "Step 4: 点击 '生成 Cron 表达式' 按钮，工具将自动生成相应的 Cron 表达式。",
+        "Step 5: 在生成的 Cron 表达式下方，可以查看详细的解析信息，确保表达式符合预期。",
+        "Step 6: 将生成的 Cron 表达式复制并粘贴到所需的配置文件或脚本中。"
+      ],
+      "usage_examples": [
+        "Example 1: 一个系统管理员需要每天凌晨 2 点执行一次数据备份任务。使用 Cron Expression Generator，可以轻松生成 Cron 表达式 '0 2 * * *'，确保任务按计划执行。",
+        "Example 2: 一个开发人员需要每 15 分钟检查一次网站的可用性。通过设置 '分钟' 字段为 '*/15'，生成的 Cron 表达式为 '*/15 * * * *'，可以实现这一需求。",
+        "Example 3: 一家电商公司需要每月最后一天清理日志文件。使用 Cron Expression Generator，设置 '日期' 字段为 '31'，生成的 Cron 表达式为 '0 0 31 * *'，确保任务在每月最后一天执行。",
+        "Example 4: 一家金融公司需要每周五下午 5 点发送周报邮件。通过设置 '星期' 字段为 '5'，并设置 '小时' 和 '分钟'，生成的 Cron 表达式为 '0 17 * * 5'，确保邮件按时发送。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Cron Expression Generatorは、cronジョブのスケジューリングを視覚的に生成および解析するための強力なオンラインツールです。このツールは、cron式を理解し、正確に構築するためのユーザーインターフェースを提供します。ユーザーは、各フィールド（分、時、日、月、週）を直感的に選択し、生成されたcron式を確認できます。また、既存のcron式を入力して、その意味を詳細に解析することも可能です。このツールの主要な特徴は、cron式のエラーを検出し、適切なフィードバックを提供することで、ユーザーが正しいスケジュールを作成できるようにすることです。Cron Expression Generatorは、システム管理者、開発者、DevOpsエンジニアなど、頻繁にcronジョブを使用する専門家にとって、時間を節約し、エラーを防ぐ有効なツールです。具体的には、バックグラウンドタスクのスケジューリング、定期的なデータのバックアップ、システムのメンテナンスジョブの実行など、多岐にわたる用途で活用できます。",
+      "usage_steps": [
+        "1. ウェブサイトのCron Expression Generatorページにアクセスします。",
+        "2. 左側のパネルで、各フィールド（分、時、日、月、週）に対して具体的な値を選択します。例えば、「毎日0時0分」をスケジュールする場合は、「分」に0、「時」に0、「日」に*、「月」に*、「週」に*を選択します。",
+        "3. 右側のパネルで、選択した値から自動生成されたcron式を確認します。",
+        "4. 必要に応じて、生成されたcron式を編集します。編集後、上部の「Validate」ボタンをクリックして、cron式の有効性を確認します。",
+        "5. 生成されたcron式が正しいことを確認したら、下部の「Copy」ボタンをクリックして、cron式をクリップボードにコピーします。",
+        "6. コピーしたcron式を、サーバーやスクリプトに貼り付けて使用します。"
+      ],
+      "usage_examples": [
+        "Example 1: バックアップスクリプトを毎日午前2時に実行したい場合、Cron Expression Generatorを使って「0 2 * * *」というcron式を生成し、サーバーのcrontabに追加します。",
+        "Example 2: 週に一度、土曜日の深夜1時からシステムのメンテナンスジョブを実行する必要がある場合、「0 1 * * 6」を生成して、crontabに設定します。",
+        "Example 3: 毎時間、指定のAPIを呼び出してデータを収集するタスクを設定したい場合、「0 * * * *」を生成して、サーバーにデプロイします。",
+        "Example 4: 毎月1日と15日の午前10時にレポートを生成するジョブをスケジュールする場合は、「0 10 1,15 * *」を生成し、crontabに設定します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Cron Expression Generator는 사용자가 cron 표현식을 시각적으로 생성하고 파싱할 수 있는 강력한 도구입니다. Cron 표현식은 주로 시스템 작업 스케줄링에 사용되며, 특정 시간에 특정 작업을 실행하도록 시스템을 제어하는 데 필수적입니다. 이 도구는 복잡한 cron 표현식을 쉽게 이해하고 생성할 수 있도록 도와주어, 개발자와 시스템 관리자들이 작업 스케줄링을 보다 효율적으로 관리할 수 있게�니다. 사용자는 그래픽 인터페이스를 통해 다양한 시간 단위(분, 시간, 일, 월, 주)를 조합하여 원하는 스케줄을 생성할 수 있습니다. 또한, 생성된 cron 표현식의 유효성을 검사하고, 그 결과를 실시간으로 확인할 수 있어 오류를 미리 방지할 수 있습니다. 이 도구는 특히 다양한 환경에서 일정 작업을 자동화해야 하는 경우나, cron 표현식의 복잡성을 줄이고 가독성을 높이는 데 유용합니다.",
+      "usage_steps": [
+        "1. Cron Expression Generator 웹사이트에 접속합니다.",
+        "2. 'Generate New Cron' 버튼을 클릭하여 새로운 cron 표현식 생성을 시작합니다.",
+        "3. '-minute', 'hour', 'day of month', 'month', 'day of week' 등의 드롭다운 메뉴에서 원하는 시간 단위를 선택합니다.",
+        "4. 각 시간 단위에 대한 특정 값을 입력하거나, 'Every', 'Specific', 'Range', 'Increment' 등의 옵션을 선택하여 cron 표현식을 구성합니다.",
+        "5. 'Validate Cron' 버튼을 클릭하여 생성한 cron 표현식의 유효성을 검사합니다. 오류가 있는 경우, 오류 메시지가 표시됩니다.",
+        "6. cron 표현식이 유효하면, 'Copy Cron' 버튼을 클릭하여 표현식을 클립보드에 복사하고, 필요한 곳에 붙여넣습니다."
+      ],
+      "usage_examples": [
+        "1. 백업 시스템 관리: 서버의 주간 백업 작업을 자동화하기 위해, 매주 일요일 오전 2시에 백업 스크립트를 실행하도록 cron 표현식을 생성합니다.",
+        "2. 로그 파일 회전: 매일 자정에 로그 파일을 회전시키기 위해, 일일 로그 파일 회전 작업을 cron 표현식으로 설정합니다.",
+        "3. 이메일 알림: 매시간 특정 조건을 체크하고, 조건이 충족되면 이메일 알림을 보내는 작업을 cron 표현식으로 스케줄링합니다.",
+        "4. 웹 크롤링: 월요일부터 금요일까지 매일 오전 9시에 웹 사이트의 새로운 콘텐츠를 크롤링하고, 결과를 데이터베이스에 저장하도록 cron 표현식을 구성합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Cron Expression Generator es una herramienta diseñada para simplificar la creación y la interpretación de expresiones cron, un formato de programación de tareas en sistemas Unix. Esta herramienta permite a los desarrolladores y administradores de sistemas generar expresiones cron de manera visual y comprender el significado de las existentes. La necesidad de esta herramienta surge de la complejidad inherente de las expresiones cron, que pueden ser difíciles de escribir y entender sin un conocimiento profundo. Especialmente útil en entornos de automatización de tareas, donde la precisión es crucial, el Cron Expression Generator facilita la programación de tareas recurrentes, como respaldos de bases de datos, actualizaciones del sistema y envío de notificaciones. Técnicamente, la herramienta proporciona un interfaz gráfica de usuario (GUI) que desglosa cada parte de la expresión cron (minuto, hora, día del mes, mes, día de la semana) y permite seleccionar valores de manera intuitiva. Además, ofrece funciones de validación y explicación, asegurando que las expresiones generadas sean correctas y cumplirán con las expectativas del usuario.",
+      "usage_steps": [
+        "Abra la página del Cron Expression Generator en su navegador web.",
+        "Seleccione la pestaña 'Generar' para crear una nueva expresión cron.",
+        "Utilice los desplegables y casillas de verificación para definir cada componente de la expresión (minuto, hora, día del mes, mes, día de la semana).",
+        "Revise la expresión cron generada que aparece en el campo de texto en tiempo real.",
+        "Puede hacer clic en el botón 'Validar' para asegurarse de que la expresión sea correcta y cumpla con sus requisitos.",
+        "Si todo es correcto, copie la expresión cron y úsela en su script de automatización."
+      ],
+      "usage_examples": [
+        "Un administrador de sistemas necesita programar una tarea que realice un respaldo de la base de datos todos los días a las 2:00 AM. Utilizando el Cron Expression Generator, puede seleccionar '0' en el desplegable de 'Minuto', '2' en 'Hora', '1-31' en 'Día del mes', '*' en 'Mes' y '*' en 'Día de la semana' para generar la expresión `0 2 * * *`.",
+        "Un desarrollador quiere enviar un correo electrónico semanal con un informe de rendimiento del sistema cada miércoles a las 10:00 AM. Con el Cron Expression Generator, selecciona '0' en 'Minuto', '10' en 'Hora', '*' en 'Día del mes', '*' en 'Mes' y '3' en 'Día de la semana' para generar `0 10 * * 3`.",
+        "Una empresa de comercio electrónico necesita actualizar su inventario cada 15 minutos. Utilizando la herramienta, el usuario selecciona '*/15' en 'Minuto', '*' en 'Hora', '*' en 'Día del mes', '*' en 'Mes' y '*' en 'Día de la semana' para generar `*/15 * * * *`.",
+        "Un equipo de seguridad desea ejecutar un script de auditoría de seguridad todos los primeros días de los meses impares a las 12:00 PM. Con el Cron Expression Generator, selecciona '0' en 'Minuto', '12' en 'Hora', '1' en 'Día del mes', '1,3,5,7,9,11' en 'Mes' y '*' en 'Día de la semana' para generar `0 12 1 1,3,5,7,9,11 *`."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Cron Expression Generator é uma ferramenta robusta e visualmente intuitiva que permite aos desenvolvedores criar e analisar expressões cron com facilidade e precisão. Cron é um agendador de tarefas utilizado em sistemas Unix e Unix-like, permitindo a execução automática de comandos ou scripts em intervalos específicos. A expressão cron é uma sintaxe especial que define esses intervalos, e a ferramenta facilita a criação dessas expressões através de uma interface gráfica de usuário (GUI).\n\nDesenvolvedores e administradores de sistemas frequentemente precisam agendar tarefas, como backups, atualizações de segurança ou relatórios periódicos. O Cron Expression Generator ajuda a evitar erros comuns na sintaxe do cron, proporcionando uma maneira visual de definir os intervalos de execução. Isso é especialmente útil em ambientes complexos onde a precisão é crucial.\n\nA ferramenta oferece uma interface amigável que permite selecionar os dias da semana, horas, minutos, meses e outras granularidades de tempo. Além disso, ela permite testar as expressões geradas para garantir que elas sejam executadas conforme o esperado. A capacidade de visualizar e validar as expressões cron é um recurso valioso que pode economizar tempo e reduzir a incidência de erros em scripts de automação.",
+      "usage_steps": [
+        "Acesse o Cron Expression Generator no site e clique no botão 'Criar Nova Expressão'.",
+        "Na seção 'Selecione o Intervalo de Tempo', use os sliders e dropdowns para definir os minutos, horas, dias do mês, meses e dias da semana.",
+        "Para intervalos mais complexos, como 'cada 15 minutos' ou 'nos últimos 5 dias do mês', utilize as opções avançadas disponíveis logo abaixo das seleções básicas.",
+        "Após configurar os intervalos desejados, clique em 'Gerar Expressão Cron' para obter a expressão cron correspondente.",
+        "Caso queira testar a expressão gerada, use a seção 'Validar Expressão' e insira a expressão no campo fornecido. Clique em 'Validar' para verificar se a expressão está correta e ver exemplos de datas e horários que ela representará.",
+        "Se a expressão estiver correta, você pode copiá-la e usá-la em seus scripts de automação ou agendamentos de tarefas."
+      ],
+      "usage_examples": [
+        "Um administrador de sistemas precisa agendar um backup diário do banco de dados às 02:00h. Usando o Cron Expression Generator, ele define o horário e gera a expressão cron `0 2 * * *`, que é adicionada ao crontab do servidor para garantir que o backup seja executado todos os dias à meia-noite.",
+        "Um desenvolvedor de aplicações web está configurando uma tarefa para enviar relatórios mensais de vendas no último dia de cada mês às 18:00h. Ele utiliza a ferramenta para criar a expressão cron `0 18 31 * *` e a ajusta para `0 18 L * *` (considerando que 'L' é o último dia do mês).",
+        "Uma equipe de DevOps precisa monitorar o uso de disco de vários servidores a cada 15 minutos. Através do Cron Expression Generator, eles geram a expressão cron `*/15 * * * *` e a integram em um script de monitoramento que será executado periodicamente.",
+        "Um analista de dados deseja atualizar automaticamente uma tabela de métricas de performance a cada 3 horas, começando às 06:00h. Ele usa a ferramenta para criar a expressão cron `0 6-18/3 * * *`, que define a execução da tarefa a cada 3 horas, iniciando às 06:00h e terminando às 18:00h."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Cron Expression Generator est un outil puissant conçu pour simplifier la génération et l'interprétation des expressions cron. Les expressions cron sont utilisées dans les tâches de planification pour définir des horaires précis, généralement dans des systèmes Unix. Ce générateur offre une interface visuelle qui transforme le processus complexe de création de ces expressions en une tâche intuitive et accessible. Les utilisateurs peuvent sélectionner des options pour définir des périodes de répétition, des jours spécifiques, des heures, et plus encore, sans avoir à mémoriser la syntaxe complexe des expressions cron. Cet outil est essentiel pour les développeurs, les administrateurs systèmes, et toute personne impliquée dans la gestion de tâches planifiées. Il permet de tester et de valider les expressions cron, ainsi que de visualiser les prochains déclenchements de tâches, ce qui est crucial pour assurer la fiabilité des systèmes planifiés.",
+      "usage_steps": [
+        "Accédez à l'outil Cron Expression Generator via le menu Outils de Génération ou en utilisant l'URL directe.",
+        "Sélectionnez l'onglet 'Générer' pour commencer à créer une nouvelle expression cron.",
+        "Utilisez les menus déroulants pour définir les valeurs pour les champs 'Minute', 'Heure', 'Jour du mois', 'Mois', et 'Jour de la semaine'.",
+        "Après avoir configuré les valeurs, cliquez sur le bouton 'Générer Expression Cron' pour obtenir l'expression cron correspondante.",
+        "Copiez l'expression cron générée et utilisez-la dans votre système de planification.",
+        "Pour vérifier la validité de l'expression, utilisez l'onglet 'Tester' et saisissez l'expression cron dans le champ fourni. L'outil affichera les prochains déclenchements de la tâche."
+      ],
+      "usage_examples": [
+        "Un développeur web souhaite planifier une tâche quotidienne pour nettoyer les fichiers temporaires de son serveur à 2 heures du matin. Il utilise le Cron Expression Generator pour créer l'expression `0 2 * * *`.",
+        "Un administrateur système doit exécuter une tâche mensuelle le premier jour de chaque mois à midi. Il configure l'outil pour générer l'expression `0 12 1 * *`.",
+        "Une équipe de développement a besoin de tester une fonctionnalité de sauvegarde qui doit s'exécuter tous les 15 minutes. Ils utilisent l'outil pour obtenir l'expression `*/15 * * * *`.",
+        "Un responsable de la maintenance informatique doit planifier une tâche hebdomadaire pour vérifier les journaux d'erreurs le vendredi à 17 heures. Il génère l'expression `0 17 * * 5` pour cette tâche."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Cron Expression Generator ist ein leistungsstarkes Werkzeug, das Entwicklern die Möglichkeit bietet, Cron-Ausdrücke visuell zu erstellen und zu interpretieren. Cron-Ausdrücke sind Zeitplanformate, die in UNIX-basierten Systemen verwendet werden, um Tasks zu planen, die zu bestimmten Zeiten ausgeführt werden sollen. Mit diesem Generator können Benutzer komplizierte Zeitpläne ohne tiefgehendes Wissen über die Syntax von Cron-Ausdrücken erstellen. Dies ist besonders nützlich für Entwickler, die Skripte oder Programme planen müssen, die regelmäßig Aufgaben ausführen, wie z.B. Datenbank-Backups, Log-Datei-Rotations oder periodische API-Anfragen. Das Tool vereinfacht den Prozess, indem es eine benutzerfreundliche Schnittstelle bereitstellt, in der Benutzer einfach die gewünschten Zeitintervalle und Wochentage auswählen können. Die generierten Cron-Ausdrücke können dann direkt in die Konfigurationsdateien oder Skripte integriert werden, um die geplanten Tasks zu definieren. Zudem bietet der Generator die Möglichkeit, existierende Cron-Ausdrücke zu parsen und zu überprüfen, was die Fehlersuche und die Optimierung von Zeitplänen enorm erleichtert.",
+      "usage_steps": [
+        "Öffnen Sie die Seite 'Cron Expression Generator' im Menü 'Generatoren'.",
+        "Wählen Sie in der Dropdown-Liste 'Minuten' einen oder mehrere Minutenwerte aus, zu denen der Task ausgeführt werden soll.",
+        "Fahren Sie fort, indem Sie in den entsprechenden Dropdown-Listen 'Stunden', 'Tage des Monats', 'Monate' und 'Tage der Woche' die gewünschten Werte auswählen.",
+        "Sobald Sie alle notwendigen Werte ausgewählt haben, klicken Sie auf den Button 'Cron-Ausdruck generieren'.",
+        "Der generierte Cron-Ausdruck wird im Textfeld unten angezeigt. Kopieren Sie diesen Ausdruck und fügen Sie ihn in Ihre Konfigurationsdatei oder Ihr Skript ein.",
+        "Falls Sie einen existierenden Cron-Ausdruck überprüfen oder analysieren möchten, fügen Sie ihn in das Textfeld 'Cron-Ausdruck einfügen' ein und klicken Sie auf 'Parse'. Die Ergebnisse werden in der Tabelle unten dargestellt."
+      ],
+      "usage_examples": [
+        "Ein Entwickler möchte ein Skript erstellen, das jeden Morgen um 6 Uhr die tägliche Datensicherung startet. Mit dem Cron Expression Generator wählt er die Minute 0, die Stunde 6, den Tag des Monats *, den Monat * und den Tag der Woche * aus. Der generierte Ausdruck '0 6 * * *' wird dann in das Crontab-File eingefügt.",
+        "Ein Systemadministrator muss sicherstellen, dass ein Log-File-Rotation-Skript jede Stunde am Beginn der Stunde ausgeführt wird. Er verwendet den Generator, um den Ausdruck '0 * * * *' zu erstellen, der das gewünschte Verhalten definiert.",
+        "Eine DevOps-Team führt wöchentliche Sicherheitschecks durch. Sie planen den Check für jeden Montag um 22 Uhr. Mit dem Generator wird der Ausdruck '0 22 * * 1' generiert, um diesen Zeitplan zu definieren.",
+        "Ein Entwickler möchte überprüfen, ob ein bestehender Cron-Ausdruck korrekt ist, der jeden Tag um 12 Uhr und 18 Uhr eine bestimmte API aufruft. Er fügt den Ausdruck '0 12,18 * * *' in den Generator ein und klickt auf 'Parse'. Das Tool bestätigt, dass der Ausdruck korrekt ist und zeigt die geplanten Ausführungszeiten an."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор и парсер cron-выражений представляет собой мощный инструмент для создания и анализа cron-выражений в визуальном интерфейсе. Cron-выражения используются для настройки периодических задач в системах управления задачами, таких как cron в Unix-подобных системах. Этот инструмент позволяет разработчикам и администраторам систем создавать сложные расписания выполнения задач, не будучи экспертами в синтаксе cron-выражений. Инструмент поддерживает все стандартные компоненты cron-выражений, такие как минуты, часы, дни месяца, месяцы и дни недели. Также он предоставляет визуальное представление каждого компонента, что облегчает понимание и корректировку расписаний. Генератор и парсер cron-выражений полезен для тестирования расписаний, обнаружения ошибок и оптимизации производительности задач. Он также может использоваться для обучения новичкам, помогая им быстро освоить основы cron-выражений.",
+      "usage_steps": [
+        "Откройте страницу Генератор и парсер cron-выражений на сайте.",
+        "Выберите нужные компоненты расписания в соответствующих полях: минуты, часы, дни месяца, месяцы и дни недели.",
+        "Используйте всплывающие подсказки для каждого поля, чтобы лучше понять возможные значения и их комбинации.",
+        "Нажмите кнопку \"Сгенерировать cron-выражение\", чтобы получить готовое выражение, отражающее выбранные вами параметры.",
+        "Просмотрите сгенерированное cron-выражение в поле вывода и, при необходимости, внесите изменения в исходные параметры.",
+        "Нажмите кнопку \"Проверить расписание\", чтобы увидеть, как будет выполняться задача по заданному расписанию."
+      ],
+      "usage_examples": [
+        "Автоматизация резервного копирования: Администратор системы настраивает ежедневное резервное копирование базы данных в 2:00 ночи, используя cron-выражение \"0 2 * * *\".",
+        "Мониторинг производительности: Разработчик настраивает еженедельное выполнение скрипта для анализа логов производительности в 12:00 по понедельникам, используя cron-выражение \"0 12 * * 1\".",
+        "Отправка ежемесячных отчетов: Аналитик настраивает отправку ежемесячных отчетов по электронной почте в первый день каждого месяца в 9:00, используя cron-выражение \"0 9 1 * *\".",
+        "Обновление данных: Программист настраивает автоматическое обновление данных из внешнего источника каждые 15 минут, используя cron-выражение \"*/15 * * * *\"."
+      ]
+    }
+  }
+}

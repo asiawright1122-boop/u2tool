@@ -1,0 +1,175 @@
+{
+  "slug": "mime-type-lookup",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The MIME Type Lookup tool is designed to assist developers in identifying and managing MIME types, which are essential for specifying the format of files and data transmitted over the internet. By inputting a file extension or a description, users can quickly retrieve the corresponding MIME type. This is particularly useful for web developers and sysadmins who need to ensure that web servers and clients correctly interpret file types. For instance, when configuring a web server, knowing the correct MIME type is crucial for serving files efficiently. The tool works by leveraging a comprehensive database of MIME types and their associated extensions. Upon entering a query, the tool performs a lookup and returns the relevant MIME type, along with additional metadata such as the media type and subtype. This tool is invaluable for streamlining development workflows, troubleshooting content delivery issues, and ensuring compatibility across different platforms and devices.",
+      "usage_steps": [
+        "Step 1: Navigate to the MIME Type Lookup tool on the website and locate the search bar at the top of the page.",
+        "Step 2: Enter the file extension or a descriptive term for the MIME type you are looking for in the search bar.",
+        "Step 3: Click the 'Search' button to initiate the lookup process.",
+        "Step 4: Review the results displayed in the output area, which will include the MIME type, media type, and subtype.",
+        "Step 5: If you need more information, click on the 'Details' link next to the MIME type to see additional metadata and usage examples.",
+        "Step 6: Copy the MIME type or relevant information to use in your configuration files, HTTP headers, or other development tasks."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer is setting up a new web server and needs to ensure that all .js files are served with the correct MIME type. They use the MIME Type Lookup tool to confirm that the MIME type for .js files is 'application/javascript'.",
+        "Example 2: A sysadmin is troubleshooting an issue where a specific file type is not being recognized by a client browser. They use the tool to verify the MIME type and discover that the server is incorrectly configured, leading to the issue being resolved.",
+        "Example 3: A content manager is uploading a new file format to a CMS and needs to ensure that the file is displayed correctly on all devices. They use the tool to find the appropriate MIME type and update the server settings accordingly.",
+        "Example 4: A software engineer is developing a custom file handler for a new application and needs to know the MIME type for a proprietary file extension. They use the tool to find the MIME type and integrate it into their application's file handling logic."
+      ]
+    },
+    "zh": {
+      "detailed_description": "MIME Type Lookup 是一个专为开发者设计的在线工具，用于通过文件扩展名或描述查询MIME类型。MIME（Multipurpose Internet Mail Extensions）类型是一种标准，用于定义文件的性质和格式，以及它们应该如何被传输和处理。在Web开发中，服务器和客户端之间通过HTTP协议传输文件时，正确设置MIME类型对于确保文件被正确解析至关重要。例如，服务器需要知道是否应该将文件作为HTML、图像或JavaScript发送给浏览器。\n\n开发者需要这个工具的原因有很多。首先，在构建Web应用时，确保服务器正确返回文件的MIME类型可以避免文件被错误解析，从而提高用户体验。其次，在处理用户上传的文件时，通过查询MIME类型可以验证文件类型的安全性，防止恶意文件的上传。最后，对于从事文件格式研究和开发的工程师，MIME Type Lookup 可以帮助他们快速查找和验证各种文件格式的MIME类型。\n\n使用该工具非常简单。用户只需输入文件扩展名或描述，MIME Type Lookup 将从其内部数据库中检索相应的MIME类型。该工具支持广泛的文件格式，包括但不限于文本文件、图像、音频、视频和各种文档格式。此外，工具还提供了详细的MIME类型说明，帮助用户更深入地了解每种类型的特性和用途。",
+      "usage_steps": [
+        "步骤1：访问MIME Type Lookup 工具页面。",
+        "步骤2：在搜索框中输入文件扩展名或描述。例如，输入 '.pdf' 或 'PDF'。",
+        "步骤3：点击 '查找' 按钮。",
+        "步骤4：查看结果显示区域，了解对应的MIME类型及其详细说明。",
+        "步骤5：如果需要，可以点击 '复制MIME类型' 按钮，将MIME类型复制到剪贴板。",
+        "步骤6：关闭工具页面或继续查询其他文件类型。"
+      ],
+      "usage_examples": [
+        "示例1：在开发一个文件上传功能时，开发者需要确保只允许上传特定类型的文件，例如PDF文档。使用MIME Type Lookup 工具可以快速查找PDF文件的MIME类型（application/pdf），并设置文件上传限制。",
+        "示例2：前端工程师在集成第三方API时，需要确保API返回的数据格式正确。通过MIME Type Lookup 工具，可以验证API返回的MIME类型是否符合预期，例如JSON数据应为 'application/json'。",
+        "示例3：安全团队在审核上传功能时，需要确保系统不会接受潜在的恶意文件。MIME Type Lookup 工具可以帮助他们检查上传文件的MIME类型，以防止上传执行脚本或可执行文件。",
+        "示例4：内容管理系统（CMS）管理员在配置媒体库时，需要为不同的媒体类型设置正确的MIME类型。MIME Type Lookup 工具可以提供详细的MIME类型信息，帮助管理员正确配置系统，确保媒体文件在不同设备上都能正确显示和播放。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "MIME Type Lookup は、ファイルの拡張子または説明を基にして MIME タイプを探し出すことができるオンラインツールです。MIME (Multipurpose Internet Mail Extensions) タイプは、インターネット上のデータ形式を識別する標準的な方法であり、ファイルの種類やデータの形式を示します。このツールは、開発者やシステム管理者がファイルの種類を正確に特定する際に非常に役立ちます。特定のファイル形式やデータ型に対応しているかどうかを確認したり、HTTP レスポンスヘッダーを設定する際に必要な MIME タイプを調べたりすることができます。また、ファイルのアップロードやダウンロードに関するセキュリティチェックを行う際にも、正しい MIME タイプの使用は不可欠です。このツールは、内部でデータベースを用いて MIME タイプと拡張子や説明の関連付けを行っており、検索結果はリアルタイムで表示されます。",
+      "usage_steps": [
+        "Step 1: MIME Type Lookup のウェブサイトにアクセスします。",
+        "Step 2: ページ上部の検索バーに、調べたいファイルの拡張子または説明を入力します。",
+        "Step 3: 「検索」ボタンをクリックします。",
+        "Step 4: 検索結果が表示されたら、対応する MIME タイプを確認します。",
+        "Step 5: 必要に応じて、関連する他の MIME タイプや拡張子の情報を参照します。",
+        "Step 6: 検索結果の詳細をコピーして、プロジェクトや設定に使用します。"
+      ],
+      "usage_examples": [
+        "Example 1: API 開発者として、JSON ファイルのアップロード機能を実装する際、正しい MIME タイプ「application/json」を確認する必要があります。MIME Type Lookup を使用して、JSON の MIME タイプを迅速に確認し、API のレスポンスヘッダーを正しく設定できます。",
+        "Example 2: システム管理者として、ユーザーがアップロード可能なファイルの種類を制限する必要がある場合、MIME Type Lookup を使用して、特定のファイル形式の MIME タイプを確認し、ファイルの種類を正確に制御できます。",
+        "Example 3: ウェブデザイナーとして、新しい画像形式である .webp ファイルをウェブサイトで使用する際、ブラウザが .webp ファイルを正しく扱うための MIME タイプ「image/webp」を確認する必要があります。MIME Type Lookup を使用して、.webp の MIME タイプを迅速に見つけることができます。",
+        "Example 4: セキュリティエンジニアとして、ファイルのアップロード機能の脆弱性をテストする際、MIME Type Lookup を使用して、特定のファイル形式の MIME タイプを確認し、不正なファイルがアップロードされないよう、セキュリティチェックを実施できます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "MIME Type Lookup는 파일 확장자 또는 설명을 통해 MIME 유형을 검색할 수 있는 개발 도구입니다. 이 도구는 웹 개발자와 서버 관리자에게 중요한 역할을 합니다. MIME 유형은 파일의 종류를 나타내며, 이 정보는 웹 브라우저와 서버가 파일을 올바르게 처리하고 표시하는 데 필요합니다. 예를 들어, 이미지 파일을 웹 페이지에 로드하려면 MIME 유형이 'image/jpeg' 또는 'image/png'여야 합니다. MIME Type Lookup을 사용하면 사용자는 파일 확장자 또는 설명을 입력하여 해당 MIME 유형을 빠르게 찾을 수 있습니다. 이 도구는 내부적으로 확장자 및 MIME 유형 간의 매핑 테이블을 사용하여 검색을 수행합니다. 사용자는 검색 결과를 통해 파일 유형을 확인하고, 서버 설정이나 개발 프로젝트에서 필요한 MIME 유형을 쉽게 적용할 수 있습니다.",
+      "usage_steps": [
+        "Step 1: MIME Type Lookup 페이지에 접속합니다.",
+        "Step 2: 검색 창에서 '확장자 검색' 또는 '설명 검색' 탭을 선택합니다.",
+        "Step 3: '확장자 검색' 탭을 선택한 경우, 파일 확장자(예: .jpg, .pdf)를 입력합니다.",
+        "Step 4: '설명 검색' 탭을 선택한 경우, 파일 유형의 설명(예: 'JPEG 이미지', 'PDF 문서')을 입력합니다.",
+        "Step 5: '검색' 버튼을 클릭하여 결과를 확인합니다.",
+        "Step 6: 검색 결과에서 필요한 MIME 유형을 확인하고, 이를 서버 설정 또는 프로젝트에 적용합니다."
+      ],
+      "usage_examples": [
+        "Example 1: 웹 개발자가 새 웹 사이트에서 다양한 이미지 형식을 사용하려고 할 때, 각 이미지 파일의 MIME 유형을 확인하여 웹 브라우저가 올바르게 표시할 수 있도록 합니다.",
+        "Example 2: 서버 관리자가 서버의 MIME 유형 설정을 업데이트하려고 할 때, 파일 확장자에 대응하는 MIME 유형을 찾아서 서버 설정 파일에 추가합니다.",
+        "Example 3: 프론트엔드 개발자가 사용자가 업로드할 수 있는 파일 유형을 제한하려고 할 때, 파일 확장자와 대응하는 MIME 유형을 확인하여 프론트엔드에서 올바른 파일만 업로드할 수 있도록 합니다.",
+        "Example 4: 콘텐츠 관리자가 다양한 파일 형식의 콘텐츠를 웹 사이트에 업로드하려고 할 때, 각 파일의 MIME 유형을 확인하여 웹 브라우저가 콘텐츠를 올바르게 표시할 수 있도록 합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El buscador de tipos MIME, conocido como MIME Type Lookup, es una herramienta esencial para desarrolladores que necesitan identificar y gestionar tipos MIME en sus proyectos. Este instrumento permite la búsqueda de tipos MIME a través de la extensión de archivo o la descripción del contenido, facilitando la integración y el manejo de diferentes formatos de archivos en aplicaciones web y sistemas de gestión de contenido. Los tipos MIME son cruciales para la comunicación entre servidores y clientes, ya que especifican el tipo de contenido que se está transfiriendo, lo que asegura que el contenido se interprete correctamente. Esta herramienta es particularmente útil en escenarios donde se necesita verificar o depurar problemas relacionados con el tipo de contenido de archivos, como en la configuración de servidores web o la integración de APIs que manejan diferentes tipos de medios. Además, proporciona una base de datos actualizada de tipos MIME, lo que garantiza que los desarrolladores tengan acceso a la información más reciente y precisa.",
+      "usage_steps": [
+        "Acceda a la página principal del MIME Type Lookup y observe el campo de búsqueda central.",
+        "Seleccione la opción 'Buscar por extensión' si conoce la extensión del archivo, o 'Buscar por descripción' si tiene una descripción del contenido.",
+        "Introduzca la extensión del archivo (por ejemplo, .jpg) o la descripción del contenido (por ejemplo, imagen/jpeg) en el campo de búsqueda.",
+        "Haga clic en el botón 'Buscar' para iniciar la consulta.",
+        "Revise los resultados que se muestran, incluyendo la extensión, el tipo MIME, y una breve descripción del tipo de contenido.",
+        "Si es necesario, utilice el enlace 'Más detalles' para acceder a información adicional, como la especificación oficial y ejemplos de uso."
+      ],
+      "usage_examples": [
+        "Un desarrollador web necesita configurar un servidor para servir archivos PDF correctamente. Utiliza el MIME Type Lookup para confirmar que el tipo MIME correcto es 'application/pdf' y asegura que el servidor lo maneje de manera adecuada.",
+        "Un programador de software está desarrollando una aplicación que permite a los usuarios subir imágenes. Necesita verificar que los tipos MIME de las imágenes subidas sean compatibles con la aplicación. Utiliza la herramienta para buscar las extensiones .jpg, .png y .gif y confirma los tipos MIME correspondientes.",
+        "Un ingeniero de sistemas está depurando un problema de visualización de videos en una plataforma de streaming. Utiliza el MIME Type Lookup para buscar el tipo MIME de los archivos .mp4 y asegura que el servidor esté configurado para servir estos archivos con el tipo MIME 'video/mp4'.",
+        "Un desarrollador de APIs está creando una API que maneja múltiples tipos de archivos, incluyendo documentos de texto, imágenes y archivos de audio. Utiliza el MIME Type Lookup para obtener una lista completa de tipos MIME compatibles y asegura que la API responda con los tipos MIME correctos para cada tipo de archivo."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O MIME Type Lookup é uma ferramenta essencial para desenvolvedores que trabalham com transferência de arquivos e dados na web. Esta ferramenta permite que os usuários pesquisem tipos MIME (Multipurpose Internet Mail Extensions) por extensão de arquivo ou por descrição. Os tipos MIME são padrões utilizados para identificar o formato de arquivos em transmissões de dados, o que é crucial para garantir que os arquivos sejam interpretados corretamente por navegadores e servidores.\n\nDesenvolvedores precisam dessa ferramenta para garantir que arquivos de diferentes formatos sejam manipulados corretamente em seus aplicativos. Por exemplo, ao desenvolver uma aplicação web que aceita uploads de usuários, é vital saber o tipo MIME correto para garantir que arquivos não suportados sejam rejeitados e que os suportados sejam processados de maneira adequada. Além disso, em cenários de desenvolvimento backend, a manipulação de arquivos de mídia como imagens, vídeos e documentos requer uma compreensão precisa dos tipos MIME para garantir a compatibilidade e a eficiência do sistema.\n\nO MIME Type Lookup funciona de forma simples e eficiente. Basta inserir a extensão do arquivo ou uma descrição parcial e a ferramenta retornará o tipo MIME correspondente, juntamente com informações adicionais, como a categoria do tipo MIME e possíveis variações. Essa funcionalidade é especialmente útil em diagnósticos de problemas relacionados a arquivos mal interpretados ou em cenários de automação, onde a identificação precisa do tipo MIME é necessária para a configuração correta de headers HTTP.",
+      "usage_steps": [
+        "Abra a página do MIME Type Lookup no site de ferramentas de desenvolvimento.",
+        "Na barra de pesquisa, digite a extensão do arquivo (por exemplo, .jpg) ou uma descrição parcial (por exemplo, 'image/jpeg').",
+        "Clique no botão 'Pesquisar' para iniciar a busca.",
+        "A ferramenta exibirá uma lista de resultados com os tipos MIME correspondentes.",
+        "Selecione o tipo MIME desejado para obter mais detalhes, como a categoria e variações.",
+        "Copie o tipo MIME e utilize-o em seu código ou configuração de servidor conforme necessário."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de front-end está criando um formulário de upload de imagens. Ele usa o MIME Type Lookup para confirmar que os tipos MIME 'image/jpeg', 'image/png' e 'image/gif' são aceitos antes de implementar a validação no formulário.",
+        "Um engenheiro de backend está configurando um servidor para servir arquivos de áudio. Ele usa a ferramenta para verificar que o tipo MIME 'audio/mpeg' é o correto para arquivos MP3 e o usa na configuração do servidor para garantir que os arquivos sejam interpretados corretamente pelos navegadores.",
+        "Um desenvolvedor de APIs está diagnosticando um problema onde arquivos PDF estão sendo mal interpretados pelo cliente. Ele utiliza o MIME Type Lookup para confirmar que o tipo MIME 'application/pdf' está sendo usado corretamente nos headers HTTP.",
+        "Um administrador de sistemas está configurando um proxy para otimizar o carregamento de conteúdo. Ele usa a ferramenta para garantir que os tipos MIME corretos sejam usados para os arquivos de vídeo, como 'video/mp4', para otimizar o cache e a entrega de conteúdo."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le MIME Type Lookup est un outil de développement essentiel qui permet aux développeurs de rechercher les types MIME (Multipurpose Internet Mail Extensions) en fonction de l'extension de fichier ou de sa description. Les types MIME sont cruciaux pour la communication entre les clients et les serveurs web, car ils spécifient le format de données transmises. Par exemple, l'extension .jpg est associée au type MIME image/jpeg. Ce type MIME indique au navigateur comment interpréter les données reçues. L'utilisation de ce type MIME correct est essentielle pour assurer le bon fonctionnement des applications web, la gestion des fichiers téléchargés et l'optimisation des performances des sites. Le MIME Type Lookup simplifie la recherche et la validation des types MIME, aidant les développeurs à éviter les erreurs courantes liées aux mauvaises associations de types MIME et à assurer une compatibilité optimale entre différents navigateurs et systèmes. L'outil fonctionne en interrogeant une base de données exhaustive de types MIME, ce qui permet une recherche rapide et précise. Les résultats sont affichés avec des détails techniques, comme la catégorie du type MIME (texte, image, vidéo, etc.) et des exemples d'utilisation dans les en-têtes HTTP.",
+      "usage_steps": [
+        "Accédez à la page de l'outil MIME Type Lookup sur le site.",
+        "Dans la barre de recherche, saisissez l'extension de fichier ou la description pour laquelle vous souhaitez trouver le type MIME.",
+        "Sélectionnez l'option de recherche par extension ou par description en utilisant les boutons radio situés sous la barre de recherche.",
+        "Cliquez sur le bouton 'Rechercher' pour lancer la recherche dans la base de données.",
+        "Les résultats affichés incluront le type MIME correspondant, sa catégorie (texte, image, vidéo, etc.), ainsi que des exemples d'utilisation dans les en-têtes HTTP.",
+        "Si nécessaire, cliquez sur le lien 'En savoir plus' pour accéder à une documentation détaillée sur le type MIME en question."
+      ],
+      "usage_examples": [
+        "Un développeur web souhaite ajouter une fonctionnalité de téléchargement de fichiers PDF sur son site. Il utilise le MIME Type Lookup pour vérifier que le type MIME correct (application/pdf) est utilisé dans les en-têtes HTTP, assurant ainsi une compatibilité parfaite avec tous les navigateurs.",
+        "Un administrateur système doit configurer un serveur web pour gérer les fichiers audio. Il utilise l'outil pour trouver les types MIME correspondants aux extensions .mp3, .wav et .ogg, afin de les inclure dans les configurations du serveur et d'optimiser la diffusion des fichiers audio.",
+        "Un développeur de sécurité cherche à renforcer les contrôles de type MIME sur un formulaire de téléchargement de fichiers. Il utilise le MIME Type Lookup pour obtenir une liste complète des types MIME couramment utilisés et les compare avec les types MIME envoyés par les clients, permettant ainsi de détecter et de bloquer les tentatives de téléchargement de fichiers malveillants.",
+        "Un développeur front-end travaille sur une application qui affiche des images en temps réel. Il utilise l'outil pour confirmer que les types MIME des images (comme image/jpeg et image/png) sont correctement définis dans les requêtes HTTP, garantissant une affichage optimal et une meilleure performance de chargement."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das MIME Type Lookup Tool ermöglicht Entwicklern, MIME-Typen basierend auf Dateierweiterungen oder Beschreibungen zu suchen. MIME-Typen (Multipurpose Internet Mail Extensions) sind Standardisierungen, die die Art und Struktur von Dateien im Internet identifizieren. Dieses Tool ist unerlässlich, um sicherzustellen, dass Dateien korrekt interpretiert und verarbeitet werden, insbesondere in Webentwicklungsprojekten. Benutzer können die MIME-Typen für verschiedene Dateiformate schnell und einfach identifizieren, was die Fehlersuche und die Optimierung von Anwendungen erleichtert. Das Tool arbeitet mit einer umfassenden Datenbank von MIME-Typen, die regelmäßig aktualisiert wird, um die neuesten Standards und Formate zu berücksichtigen. Technisch gesehen, wird die Suchanfrage des Benutzers in eine SQL-Abfrage umgewandelt, die die interne Datenbank durchsucht und die passenden MIME-Typen zurückgibt. Diese Funktion ist besonders nützlich für Entwickler, die mit Content-Type-Headern in HTTP-Anfragen arbeiten oder die Konfiguration von Webservern verbessern möchten.",
+      "usage_steps": [
+        "Öffnen Sie die Hauptseite des MIME Type Lookup Tools.",
+        "Wählen Sie in der Dropdown-Liste 'Suchkriterium' die Option 'Dateierweiterung' oder 'Beschreibung' aus.",
+        "Geben Sie in das Eingabefeld die gewünschte Dateierweiterung (z.B. 'png') oder die Beschreibung (z.B. 'Portable Network Graphics') ein.",
+        "Klicken Sie auf den Button 'Suchen', um die Abfrage zu starten.",
+        "Die Ergebnisse werden in einer Tabelle angezeigt, die die MIME-Typen, die dazugehörigen Beschreibungen und ggf. zusätzliche Informationen enthält.",
+        "Zum Kopieren eines MIME-Typs auf die Zwischenablage klicken Sie auf das Symbol neben dem entsprechenden Eintrag."
+      ],
+      "usage_examples": [
+        "Ein Webentwickler muss für eine neue Bildergalerie auf seiner Website den korrekten MIME-Typ für PNG-Dateien bestimmen. Er verwendet das MIME Type Lookup Tool, um die MIME-Type 'image/png' zu identifizieren, den er dann in den Content-Type-Header seiner HTTP-Anfrage einfügt.",
+        "Ein Systemadministrator überprüft die Konfiguration eines Webserver, der Probleme beim Rendern von CSS-Dateien hat. Mit Hilfe des Tools findet er heraus, dass der MIME-Typ 'text/css' korrekt sein sollte, um die Probleme zu beheben.",
+        "Ein Softwareentwickler arbeitet an einer Anwendung, die verschiedene Dateiformate verarbeitet. Er verwendet das MIME Type Lookup Tool, um sicherzustellen, dass die Anwendung die MIME-Typen 'application/pdf' und 'application/json' korrekt erkennt und verarbeitet.",
+        "Ein Content Manager muss sicherstellen, dass alle Dateien auf einer internen Intranet-Seite korrekt dargestellt werden. Er nutzt das Tool, um die MIME-Typen für Dateiformate wie 'application/vnd.ms-excel' (für Excel-Dateien) und 'application/msword' (für Word-Dokumente) zu überprüfen und die entsprechenden Einstellungen im Content Management System vorzunehmen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент MIME Type Lookup представляет собой мощный онлайн-сервис, предназначенный для разработчиков и специалистов, работающих с цифровыми файлами. Этот инструмент позволяет выполнять поиск MIME-типов по расширениям файлов или их описаниям. MIME-типы (Multipurpose Internet Mail Extensions) — это стандарт, используемый для обозначения типов файлов в интернете, особенно при передаче через HTTP-протокол. Инструмент MIME Type Lookup помогает пользователям быстро определить, к какому типу относится файл, и какие заголовки HTTP следует использовать для его правильной передачи. Это особенно полезно при разработке веб-приложений, настройке веб-серверов или при необходимости проверки совместимости файлов с определенными браузерами или серверами. Инструмент поддерживает широкий спектр расширений и описаний, включая текстовые, бинарные, изображения, видео и другие типы файлов. Внутри инструмента реализована база данных MIME-типов, которая постоянно обновляется, чтобы оставаться актуальной. Использование MIME Type Lookup значительно упрощает процесс идентификации и управления файлами, обеспечивая более эффективную и надежную работу с цифровыми ресурсами.",
+      "usage_steps": [
+        "Откройте страницу инструмента MIME Type Lookup на сайте.",
+        "В верхней части страницы найдите поле ввода с надписью «Введите расширение или описание файла».",
+        "Введите расширение файла (например, .pdf) или его описание (например, PDF Document) в поле ввода.",
+        "Нажмите кнопку «Поиск» или нажмите клавишу Enter на клавиатуре.",
+        "Инструмент выполнит поиск и отобразит результаты, включая MIME-тип, описание и дополнительные сведения о файле.",
+        "Если результатов несколько, выберите нужный из списка."
+      ],
+      "usage_examples": [
+        "Разработчик веб-приложения использует MIME Type Lookup для определения правильного MIME-типа для файла .mp4, чтобы настроить правильные заголовки HTTP для передачи видео через веб-сервер.",
+        "Системный администратор проверяет MIME-тип файла .svg, чтобы убедиться, что он правильно отображается в различных веб-браузерах.",
+        "Дизайнер ищет MIME-тип для файла .zip, содержащего несколько изображений, перед загрузкой его на веб-сайт для скачивания пользователями.",
+        "Программист использует инструмент для проверки MIME-типа файла .json, чтобы настроить правильную обработку данных в API-интерфейсе."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة استعلام عن نوع MIME هي أداة تطوير مفيدة تتيح للمطورين البحث عن أنواع MIME بواسطة الامتداد أو الوصف. تُعرَف أنواع MIME (Multipurpose Internet Mail Extensions) بأنها طريقة قياسية لتحديد أنواع الملفات في الاتصالات عبر الإنترنت. تستخدم هذه الأداة لتحديد نوع المحتوى المرتبط بمل certain file extension أو الوصف المقدم. تساعد هذه الأداة المطورين على ضمان أن ملفات الويب والتطبيقات يتم التعامل معها بشكل صحيح من قبل المتصفحات والخوادم. على سبيل المثال، يمكن استخدامها لتحديد نوع الملف الافتراضي لملف صورة معين (مثل JPEG) أو ملف فيديو (مثل MP4). يمكن للمطورين استخدام هذه الأداة لتجنب أخطاء التحميل وتوفير تجربة مستخدم أفضل.",
+      "usage_steps": [
+        "فتح أداة استعلام عن نوع MIME على موقع الويب.",
+        "في حقل البحث، أدخل امتداد الملف أو الوصف المرتبط بالملف الذي تريد معرفة نوع MIME الخاص به.",
+        "اضغط على زر 'بحث' لبدء العملية.",
+        "ستظهر نتيجة البحث بجانب حقل البحث، وتتضمن نوع MIME المرتبط بالامتداد أو الوصف الذي أدخلته.",
+        "إذا كانت هناك عدة نتائج، يمكنك تصفحها جميعًا للاختيار من بينها.",
+        "نسخ نوع MIME وتطبيقه في 코드ك أو تخصيص الإعدادات الخاصة بخادم الويب."
+      ],
+      "usage_examples": [
+        "مطور مواقع ويب يريد التأكد من أن جميع صور PNG يتم تحميلها بشكل صحيح في تطبيقه. يستخدم أداة استعلام عن نوع MIME للتحقق من أن نوع MIME صحيح وهو 'image/png'.",
+        "مدير محتوى يرغب في تحميل ملف فيديو MP4 إلى موقع الويب الخاص به. يستخدم الأداة لتأكيد أن نوع MIME هو 'video/mp4' قبل تحميل الملف.",
+        "مطور تطبيقات متنقلة يواجه مشكلة في تحميل ملفات الصوت MP3. يستخدم أداة استعلام عن نوع MIME للتحقق من أن نوع MIME هو 'audio/mpeg' ويعمل على تصحيح الإعدادات.",
+        "مهندس أمن يراجع أمان ملفات التحميل على خادم الويب. يستخدم الأداة للتحقق من أن أنواع MIME لملفات التنفيذ (.exe) هي 'application/octet-stream' للتأكد من أن الملفات التنفيذية يتم التعامل معها بشكل آمن."
+      ]
+    }
+  }
+}

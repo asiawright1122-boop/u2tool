@@ -276,13 +276,16 @@ export default async function ToolPage({
 
         {/* Tool Header */}
         <div className="text-center mb-8">
-          <span 
-            className="text-5xl mb-4 block"
-            aria-label={toolName}
-            role="img"
-          >
-            {tool.icon}
-          </span>
+          {/* 工具图标容器 - 固定尺寸防止 CLS */}
+          <div className="tool-icon-container mx-auto mb-4">
+            <span 
+              className="text-5xl"
+              aria-label={toolName}
+              role="img"
+            >
+              {tool.icon}
+            </span>
+          </div>
           <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">{toolName}</h1>
           <p className="text-gray-600 dark:text-gray-300 tool-description">{toolDescription}</p>
         </div>

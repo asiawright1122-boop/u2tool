@@ -1,0 +1,175 @@
+{
+  "slug": "text-reverser",
+  "descriptions": {
+    "en": {
+      "detailed_description": "Text Reverser is a powerful tool designed to manipulate text by reversing the order of characters, words, or lines. This tool is particularly useful for developers and content creators who need to transform text for various purposes, such as encoding, decoding, or simply formatting text in a unique way. By leveraging Text Reverser, users can achieve precise control over the structure of their text, making it an indispensable tool in their toolkit. The tool supports multiple levels of text reversal, including character-level, word-level, and line-level, which can be applied to any input text. Under the hood, Text Reverser uses advanced string manipulation algorithms to ensure that the output is accurate and efficient. The tool is designed to handle large text inputs without compromising performance, making it suitable for both small-scale and enterprise-level applications.",
+      "usage_steps": [
+        "Step 1: Navigate to the Text Reverser tool page on the website.",
+        "Step 2: Locate the input box labeled 'Enter your text here' and paste or type the text you wish to reverse.",
+        "Step 3: Choose the reversal type from the dropdown menu. Options include 'Character', 'Word', and 'Line'.",
+        "Step 4: Click the 'Reverse Text' button to apply the selected reversal method to your input.",
+        "Step 5: Review the reversed text in the output box below the button.",
+        "Step 6: Copy the reversed text by clicking the 'Copy to Clipboard' button or download it as a file using the 'Download' option."
+      ],
+      "usage_examples": [
+        "Example 1: A developer is creating a simple encoding algorithm for a project. They need to reverse the characters in a string to obfuscate the text. Using Text Reverser, they can quickly achieve this by selecting the 'Character' reversal type.",
+        "Example 2: A content creator is writing a poem that requires the lines to be read in reverse order for artistic effect. They use Text Reverser to reverse the lines of the poem, ensuring that the final output meets their creative vision.",
+        "Example 3: A data analyst is working with a dataset where the order of words in each line needs to be reversed for a specific analysis. Text Reverser's 'Word' reversal option helps them process the dataset efficiently without writing custom scripts.",
+        "Example 4: A web developer is testing the responsiveness of a website by inputting reversed text into form fields. Using Text Reverser, they can quickly generate reversed text to simulate unusual input scenarios and ensure the website handles them correctly."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Text Reverser 是一款专为文本处理设计的在线工具，能够帮助用户以字符、单词或行的级别反转文本。该工具通过先进的文本处理算法，解析输入的文本内容，然后根据用户选择的模式（字符级、单词级或行级）进行反转操作。字符级反转会将每个字符的位置从后往前重新排列；单词级反转则是将每个单词的位置从后往前重新排列，但保持每个单词内部的字符顺序；行级反转则是将每行的内容从后往前重新排列，但保持每行内部的字符和单词顺序。这种功能在多种场景下都非常有用，例如在编码测试、文本验证、编码挑战以及创意写作中，可以用来检查文本的结构、验证编码逻辑、解决谜题或进行文字游戏。",
+      "usage_steps": [
+        "Step 1: 访问网站并导航到 Text Reverser 工具页面。",
+        "Step 2: 在文本输入框中粘贴或输入您需要处理的文本。",
+        "Step 3: 选择反转模式（字符级、单词级或行级）。",
+        "Step 4: 点击“反转”按钮，开始处理您的文本。",
+        "Step 5: 查看处理后的文本结果，确认是否符合您的需求。",
+        "Step 6: 如果需要，可以使用“复制”按钮将处理后的文本复制到剪贴板中，以便进一步使用。"
+      ],
+      "usage_examples": [
+        "Example 1: 在编码测试中，开发者可以使用 Text Reverser 来检查字符串反转函数的正确性。例如，输入字符串“Hello World”，选择字符级反转，输出结果应为“dlroW olleH”。",
+        "Example 2: 在创意写作中，作家可以使用该工具来生成具有特定效果的文字。例如，输入诗句“明月松间照，清泉石上流”，选择行级反转，输出结果为“清泉石上流，明月松间照”。",
+        "Example 3: 在文本验证中，质量保证工程师可以使用 Text Reverser 来验证文本的对称性和结构。例如，输入“上海自来水来自海上”，选择字符级反转，输出结果应为“海上来自水来电海”。",
+        "Example 4: 在编码挑战中，参赛者可以使用该工具来解决需要反转字符串的编程问题。例如，输入一段复杂的代码，选择单词级反转，可以快速生成反转后的代码，用于验证算法的正确性。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Text Reverserは、テキスト内の文字、単語、または行の順序を反転させる高度なテキスト処理ツールです。このツールは、単純な文字列の操作から、より複雑なテキスト解析まで、幅広い用途で活用できます。具体的には、文字レベルでの反転は、暗号化やデータマスキングに役立ち、単語レベルでの反転は、言語学的な研究や文章の分析に利用できます。また、行レベルでの反転は、ファイルの再構成やデータの整理に有用です。Text Reverserは、入力されたテキストを内部バッファに格納し、選択された反転モードに従って処理します。反転処理は、効率的なアルゴリズムを使用して高速に行われ、結果は即座に表示されます。ユーザーは、テキストの編集や保存も可能です。",
+      "usage_steps": [
+        "1. Text Reverserのページにアクセスし、テキスト入力欄に反転したいテキストを貼り付けます。",
+        "2. 「変換モード」ドロップダウンメニューから、「文字単位」「単語単位」「行単位」のいずれかを選択します。",
+        "3. 必要に応じて、「大文字小文字の保持」「スペースの保持」などのオプションをチェックします。",
+        "4. 「反転」ボタンをクリックして処理を開始します。",
+        "5. 処理が完了すると、反転されたテキストが結果欄に表示されます。",
+        "6. 結果をコピーするか、保存ボタンを使用してファイルとして保存します。"
+      ],
+      "usage_examples": [
+        "Example 1: プログラミングの練習で、文字列を逆順に表示するコードを書く際、Text Reverserを使用して正確な結果を確認できます。",
+        "Example 2: マーケティング部門で、広告文の原文と翻訳版を比較する際、単語単位での反転機能を利用して、文構造の違いを分析できます。",
+        "Example 3: セキュリティチームが、ログファイルの行順を逆転させて、最近のアクセス履歴を最初に表示させるために、行単位での反転機能を利用することができます。",
+        "Example 4: 言語学者が、言語の構造や特徴を研究する際、単語単位での反転機能を利用して、言語の順序特性を理解することができます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Text Reverser는 텍스트의 문자, 단어, 또는 줄 순서를 역순으로 변환하는 도구입니다. 이 도구는 다양한 텍스트 처리 작업에서 유용하게 사용될 수 있으며, 특정 형식이나 패턴을 유지하면서 텍스트의 구조를 뒤집는 데 적합합니다. 사용자는 텍스트를 입력하고, 원하는 역순 변환 옵션(문자 단위, 단어 단위, 줄 단위)을 선택한 후 결과를 즉시 확인할 수 있습니다. 이 도구는 데이터 마스킹, 암호화 테스트, 또는 간단한 텍스트 변환 작업 등에서 활용될 수 있습니다. 특히, 문자 단위 역순 변환은 데이터를 마스킹하거나 암호화하는 데 유용하며, 단어 단위 역순 변환은 문장 구조를 유지하면서 단어 순서만 바꾸는 데 적합합니다. 줄 단위 역순 변환은 텍스트 파일의 줄 순서를 역순으로 바꾸어, 로그 파일 분석이나 데이터 정렬 작업에서 유용할 수 있습니다.",
+      "usage_steps": [
+        "텍스트를 입력할 영역으로 이동하여 원하는 텍스트를 붙여넣습니다.",
+        "변환 옵션 메뉴를 클릭하여 '문자 단위', '단어 단위', '줄 단위' 중에서 하나를 선택합니다.",
+        "선택한 옵션이 텍스트에 적용되도록 '변환' 버튼을 클릭합니다.",
+        "결과 창에서 역순 변환된 텍스트를 확인합니다.",
+        "필요한 경우, 결과 텍스트를 복사하여 사용할 수 있습니다.",
+        "원하는 변환 옵션을 다시 선택하거나, 새로운 텍스트를 입력하여 반복 사용할 수 있습니다."
+      ],
+      "usage_examples": [
+        "데이터 마스킹: 개인정보를 포함하는 데이터를 역순으로 변환하여 마스킹하는 경우, 예를 들어 '123-456-7890'를 '0987-654-321'로 변환할 수 있습니다.",
+        "암호화 테스트: 간단한 암호화 테스트를 위해 텍스트를 역순으로 변환하여, 원본 텍스트와의 일치성을 확인할 수 있습니다.",
+        "문장 구조 유지: 문장의 단어 순서를 바꾸되, 문장 구조를 그대로 유지하려는 경우, '단어 단위' 옵션을 사용하여 'Hello world'를 'world Hello'로 변환할 수 있습니다.",
+        "로그 파일 분석: 로그 파일의 마지막 줄부터 첫 줄까지 역순으로 분석하기 위해, '줄 단위' 옵션을 사용하여 줄 순서를 역순으로 바꿀 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Text Reverser es una potente herramienta de procesamiento de texto que permite a los usuarios invertir el orden de caracteres, palabras o líneas en un texto. Esta funcionalidad es especialmente útil en una variedad de escenarios, desde la corrección de errores de escritura hasta la manipulación de datos para análisis. La herramienta opera sobre la base de algoritmos de manipulación de cadenas, utilizando técnicas de reversión de secuencias que pueden ser aplicadas de manera selectiva a diferentes niveles del texto. Por ejemplo, al invertir el orden de las palabras en una frase, se pueden generar frases con un significado inverso, lo cual puede ser útil en pruebas de seguridad o en la creación de contenido de prueba. Además, la capacidad de invertir líneas en un documento puede ser esencial para la preparación de datos en formatos específicos, como en la creación de archivos de configuración o en la manipulación de registros de datos. La herramienta es altamente configurable, permitiendo a los usuarios elegir el nivel de reversión que necesitan para sus tareas específicas, y ofrece una interfaz intuitiva que facilita su uso, incluso para usuarios menos técnicos.",
+      "usage_steps": [
+        "Paso 1: Abre la página de Text Reverser y localiza el área de entrada de texto en la parte central de la interfaz.",
+        "Paso 2: Copia y pega el texto que deseas revertir en el cuadro de entrada de texto.",
+        "Paso 3: Selecciona la opción de reversión que necesitas utilizando el menú desplegable 'Tipo de Reversión'. Las opciones incluyen 'Caracteres', 'Palabras' y 'Líneas'.",
+        "Paso 4: Si lo deseas, puedes habilitar la opción 'Mantener Puntuación' para asegurar que la puntuación se conserve en su lugar original después de la reversión.",
+        "Paso 5: Haz clic en el botón 'Revertir Texto' para procesar el texto con la configuración seleccionada.",
+        "Paso 6: Revisa el texto revertido en el área de resultado y copia el resultado final si lo necesitas para otro uso."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un programador necesita generar una versión invertida de una cadena de caracteres para probar la robustez de un algoritmo. Utiliza Text Reverser para invertir la cadena y verifica que el algoritmo pueda manejar la entrada invertida correctamente.",
+        "Ejemplo 2: Un redactor necesita crear una versión inversa de un párrafo para un artículo de prueba. Utiliza Text Reverser para invertir el orden de las palabras, generando un texto que mantiene la estructura pero altera el significado, ideal para pruebas de contenido.",
+        "Ejemplo 3: Un analista de datos trabaja con un archivo de configuración donde cada línea debe ser leída en orden inverso. Utiliza Text Reverser para invertir el orden de las líneas y asegurarse de que el archivo esté en el formato correcto antes de su implementación.",
+        "Ejemplo 4: Un diseñador gráfico necesita crear un efecto visual de texto invertido para un proyecto de arte digital. Utiliza Text Reverser para invertir el orden de los caracteres y luego importa el texto en su software de diseño para aplicar los efectos visuales deseados."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Text Reverser é uma ferramenta de processamento de texto que permite aos usuários inverter a ordem dos caracteres, palavras ou linhas em um texto. Esta funcionalidade é implementada através de algoritmos de manipulação de strings, que leem o texto de entrada e reorganizam os elementos de acordo com a opção escolhida. A inversão de caracteres é particularmente útil para criptografia básica, onde a ordem inversa dos caracteres pode ser utilizada como uma forma simples de ocultar informações. A inversão de palavras é benéfica para analistas de texto que precisam verificar a ordem de palavras em frases ou parágrafos, enquanto a inversão de linhas é útil para gerenciadores de conteúdo que precisam organizar listas de itens de forma reversa. O Text Reverser suporta múltiplos formatos de texto, incluindo Unicode, o que permite a manipulação de caracteres de diferentes idiomas e símbolos complexos.",
+      "usage_steps": [
+        "Acesse a ferramenta Text Reverser na seção de ferramentas de texto do site.",
+        "Clique no campo de texto 'Texto de Entrada' e cole ou digite o texto que deseja inverter.",
+        "Selecione a opção de inversão desejada: 'Reverter Caracteres', 'Reverter Palavras' ou 'Reverter Linhas'.",
+        "Clique no botão 'Inverter Texto' para processar o texto de acordo com a opção escolhida.",
+        "Visualize o texto invertido no campo 'Texto Invertido' exibido abaixo.",
+        "Copie o texto invertido para o clipboard clicando no ícone de 'Copiar' ao lado do campo 'Texto Invertido'."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor precisa criar um algoritmo de criptografia simples para um projeto. Utiliza o Text Reverser para inverter a ordem dos caracteres de uma string de texto, criando uma versão cifrada que pode ser decifrada facilmente pela inversão novamente.",
+        "Um analista de SEO está revisando o conteúdo de um artigo e precisa verificar se as palavras-chave estão distribuídas de forma equilibrada ao longo do texto. Usa o Text Reverser para inverter a ordem das palavras, facilitando a análise da distribuição das palavras-chave.",
+        "Um administrador de sistemas precisa organizar uma lista de usuários em ordem alfabética reversa para fins de relatório. Utiliza o Text Reverser para inverter a ordem das linhas da lista, gerando uma nova lista em ordem decrescente.",
+        "Um escritor criativo está trabalhando em um poema e deseja experimentar diferentes estruturas de frases. Usa o Text Reverser para inverter a ordem das palavras em cada linha do poema, criando uma versão alternativa que provoca novas interpretações."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Text Reverser est un outil de traitement de texte spécialisé dans l'inversion de l'ordre des caractères, des mots ou des lignes dans un texte. Conçu pour les développeurs, les écrivains, et les professionnels de la langue, cet outil offre une flexibilité remarquable dans la manipulation de chaînes de caractères. L'inversion des caractères peut être utilisée pour des tests de robustesse des systèmes de codage, tandis que l'inversion des mots peut aider dans des tâches de rédaction créative ou pour créer des anagrammes. L'inversion des lignes est particulièrement utile dans le traitement de données structurées, telles que des listes ou des fichiers CSV. Le Text Reverser fonctionne en analysant le texte d'entrée, en le décomposant en unités spécifiées (caractères, mots, lignes), puis en reconstruisant le texte dans l'ordre inversé. L'algorithme est optimisé pour gérer des volumes importants de texte, assurant une performance optimale même avec des entrées de grande taille.",
+      "usage_steps": [
+        "Ouvrez la page de l'outil Text Reverser sur le site.",
+        "Dans la section \"Entrée\", collez ou tapez le texte que vous souhaitez inverser.",
+        "Sélectionnez l'option d'inversion dans le menu déroulant \"Mode d'inversion\" : Inverser les caractères, Inverser les mots, ou Inverser les lignes.",
+        "Si nécessaire, cochez la case \"Ignorer les espaces\" pour exclure les espaces lors de l'inversion des mots.",
+        "Cliquez sur le bouton \"Inverser\" pour traiter le texte selon les paramètres sélectionnés.",
+        "Le texte inversé apparaîtra dans la section \"Résultat\". Vous pouvez ensuite le copier ou l'enregistrer pour une utilisation ultérieure."
+      ],
+      "usage_examples": [
+        "Un développeur souhaite tester la robustesse d'une fonction de cryptage en inversant les caractères d'une chaîne de texte pour voir si le système peut gérer des entrées inversées.",
+        "Un auteur de contenu crée une histoire en utilisant des anagrammes. Il inverse les mots pour générer des phrases inhabituelles et stimuler sa créativité.",
+        "Un analyste de données a une liste de noms et veut les organiser dans l'ordre inverse. Il utilise l'outil pour inverser les lignes, facilitant ainsi la relecture et l'analyse.",
+        "Un-graphiste prépare un document pour une exposition d'art moderne. Il inverse les lignes d'un poème pour créer un effet visuel unique et captivant."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Text Reverser ist ein fortschrittliches Online-Tool, das es Benutzern ermöglicht, die Reihenfolge von Zeichen, Wörtern oder Zeilen in Texten umzukehren. Dieses Tool ist besonders nützlich für Entwickler, die Textmanipulationen für verschiedene Anwendungen durchführen müssen. Es kann in Szenarien wie der Erstellung von Palindromen, der Umkehrung von Schreibrichtungen in bestimmten Sprachen oder der Vorbereitung von Texten für spezielle kryptografische Algorithmen eingesetzt werden. Technisch gesehen arbeitet der Text Reverser, indem er den Eingabetext in diskrete Elemente (Zeichen, Wörter, Zeilen) aufteilt und diese in umgekehrter Reihenfolge wieder zusammensetzt. Die Verarbeitung erfolgt serverseitig, wodurch die Leistung für große Textmengen gewährleistet wird. Die Benutzeroberfläche ist intuitiv gestaltet und erlaubt die Auswahl zwischen verschiedenen Modi, um die spezifischen Bedürfnisse der Benutzer abzudecken.",
+      "usage_steps": [
+        "Öffnen Sie die Seite des Text Reverser-Tools auf der Website.",
+        "Wählen Sie im oberen Menü die Option 'Zeichen', 'Wörter' oder 'Zeilen' je nachdem, was Sie umkehren möchten.",
+        "Fügen Sie den Text in das Eingabefeld ein, das sich in der Mitte der Seite befindet.",
+        "Klicken Sie auf den Button 'Umkehren', der direkt unter dem Eingabefeld liegt.",
+        "Der umgekehrte Text wird im Ausgabefeld unter dem Button angezeigt.",
+        "Kopieren Sie den umgekehrten Text mit dem 'Kopieren'-Button, um ihn in Ihre Anwendung zu integrieren."
+      ],
+      "usage_examples": [
+        "Ein Entwickler erstellt ein Palindrom-Prüftool und benötigt Testfälle, die sowohl palindromische als auch nicht-palindromische Texte umfassen. Der Text Reverser hilft dabei, schnell umgekehrte Textversionen zu generieren.",
+        "Ein Linguist studiert Sprachen mit alternativen Schreibrichtungen, wie zum Beispiel von rechts nach links. Der Tool ermöglicht es, Texte in der gewünschten Schreibrichtung umzukehren, um sie optisch korrekt darzustellen.",
+        "Ein Datenwissenschaftler arbeitet an einem Verschlüsselungsprojekt, das die Umkehrung von Textzeilen erfordert. Der Text Reverser kann hier Textzeilen in umgekehrter Reihenfolge liefern, um die Verschlüsselung zu vereinfachen.",
+        "Ein Schriftsteller experimentiert mit textbasierten Kunstwerken und verwendet den Text Reverser, um Textabschnitte umzukehren, um neue, künstlerische Effekte zu erzielen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Инструмент Text Reverser представляет собой мощное решение для манипуляции текстовыми данными, позволяющее пользователям изменять порядок символов, слов или строк в тексте. Технически, этот инструмент функционирует на основе алгоритмов, которые обрабатывают введённый текст и производят его реверс в зависимости от выбранного режима. Пользователи могут выбрать между тремя основными режимами: реверс символов (в пределах каждого слова), реверс слов (в пределах каждой строки) и реверс строк (в пределах всего текста). Использование Text Reverser особенно полезно в различных сценариях, таких как подготовка данных для тестирования программного обеспечения, создание шифрованных сообщений, генерация анаграмм или преобразование текстовых данных для анализа. Например, реверс символов может быть полезен для создания обратных ключей в криптографии, а реверс строк — для análisis текстовых данных в обратном порядке. Этот инструмент предоставляет возможность быстро и эффективно манипулировать текстом, что может значительно упростить работу разработчиков, лингвистов и других специалистов, работающих с текстовыми данными.",
+      "usage_steps": [
+        "Откройте страницу инструмента Text Reverser на сайте.",
+        "В верхней части страницы найдите текстовое поле для ввода исходного текста.",
+        "Выберите режим реверса из выпадающего списка: 'Реверс символов', 'Реверс слов' или 'Реверс строк'.",
+        "Введите или вставьте текст, который вы хотите преобразовать, в текстовое поле.",
+        "Нажмите кнопку 'Преобразовать', чтобы применить выбранный режим реверса к введённому тексту.",
+        "Отформатированный текст появится в нижней части страницы, где его можно скопировать или сохранить."
+      ],
+      "usage_examples": [
+        "При разработке криптографических алгоритмов, пользователи могут использовать реверс символов для создания обратных ключей, что упрощает процесс тестирования и отладки.",
+        "Дизайнеры и разработчики веб-сайтов могут использовать реверс строк для создания уникальных текстовых эффектов, таких как перевёрнутый текст в дизайне макетов.",
+        "Лингвисты и исследователи текстов могут использовать реверс слов для анализа структуры предложений и выявления паттернов в текстах, например, для изучения синтаксиса древних языков.",
+        "Специалисты по анализу данных могут использовать реверс строк для анализа текстовых логов в обратном порядке, что помогает выявить последовательность событий, ведущих к ошибкам или сбоям."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة Text Reverser هي أداة متقدمة لمعالجة النصوص، تتيح للمستخدمين قلب ترتيب الحروف، الكلمات، أو الأسطر في نص معين. هذه العملية تتم بسرعة وكفاءة، مما يجعل الأداة مفيدة في مجموعة متنوعة من التطبيقات. على سبيل المثال، يمكن استخدام الأداة في تشفير الرسائل البسيطة، تطبيقات الفنون الرقمية، أو حتى في عمليات التدقيق اللغوي حيث قد تكون هناك ضرورة لقراءة النص بطريقة مختلفة. تقنياً، تعمل الأداة بتحليل النص المدخَل وتغيير ترتيب عناصره وفقًا للإعدادات المحددة، سواء كان ذلك على مستوى الحروف، الكلمات، أو الأسطر. هذا الإجراء يتم بشكل آمن ومن دون الحاجة لتثبيت أي برنامج إضافي، مما يجعله متاحًا لأي شخص لديه اتصال بالإنترنت.",
+      "usage_steps": [
+        "افتح الصفحة الرئيسية لأداة Text Reverser على الموقع.",
+        "انقر على زر 'إدخال النص' واكتب أو ألصق النص الذي تريد قلبه في الحقل المخصص.",
+        "حدد نوع التحليل الذي تريد تنفيذه: حسب الحروف، الكلمات، أو الأسطر، باستخدام القائمة المنسدلة 'نوع التحليل'.",
+        "إذا كنت ترغب في حفظ الإعدادات، انقر على خيار 'حفظ الإعدادات' لتطبيقها في المرة القادمة.",
+        "انقر على زر 'قلب النص' لبدء عملية التحليل والقلب.",
+        "عند الانتهاء، سيتم عرض النص المقلوب في الحقل السفلي. يمكنك نسخه أو حفظه كما ترغب."
+      ],
+      "usage_examples": [
+        "المطورون يمكنهم استخدام أداة Text Reverser في تشفير الرسائل البسيطة، حيث يساعد قلب ترتيب الحروف في إضافة طبقة بسيطة من الأمان.",
+        "في مجال الفنون الرقمية، يمكن للمصممين استخدام الأداة لخلق نصوص مقلوبة كجزء من تصاميمهم الفنية أو لوجوهات المستخدم.",
+        "المدرسين يمكنهم استخدام الأداة في تدريبات القراءة والكتابة، حيث قد يساعد قلب ترتيب الكلمات أو الأسطر في تحسين مهارات الطلاب في قراءة النصوص بطريقة مختلفة.",
+        "المحررون يمكنهم استخدام الأداة في عمليات التدقيق اللغوي، حيث قد يساعد قلب ترتيب الأسطر في الكشف عن أخطاء نحوية أو تكرارات غير مرغوب فيها."
+      ]
+    }
+  }
+}

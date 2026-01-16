@@ -1,0 +1,158 @@
+{
+  "slug": "pdf-to-base64",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The PDF to Base64 converter is a powerful utility designed to transform PDF files into their Base64 encoded equivalents. This tool leverages advanced encoding algorithms to ensure that the original PDF content is accurately represented in a format that is versatile and widely compatible with various web and software applications. Base64 encoding is particularly useful for embedding binary data, such as PDF files, into text-based formats like JSON, XML, or HTML, which is essential for scenarios where binary data needs to be transmitted over channels that only support text, such as email or web forms. Users of this tool can benefit from its ability to seamlessly integrate PDF content into web applications, databases, or configuration files, making it an indispensable tool for developers, content creators, and IT professionals. The converter performs its task by reading the binary data of the PDF file, converting it into a Base64 string, and then providing the user with the encoded output, which can be directly used in their projects without the need for additional processing.",
+      "usage_steps": [
+        "Step 1: Navigate to the PDF to Base64 tool page and locate the file input area.",
+        "Step 2: Click on the 'Choose File' button to open the file explorer and select the PDF file you want to convert.",
+        "Step 3: Once the file is selected, the tool will automatically begin the conversion process. You can monitor the progress in the status bar.",
+        "Step 4: After the conversion is complete, the Base64 encoded string will be displayed in the output area. The output area will also provide a 'Copy to Clipboard' button.",
+        "Step 5: Click on the 'Copy to Clipboard' button to copy the Base64 string to your clipboard for easy pasting into your project.",
+        "Step 6: If you need to convert another file, click the 'Clear Output' button to reset the tool and start over."
+      ],
+      "usage_examples": [
+        "Example 1: A web developer is building an application that requires embedding PDF documents directly into HTML pages. By using the PDF to Base64 converter, the developer can generate the Base64 string and embed it using the `data:` URI scheme in the `<object>` or `<embed>` tags.",
+        "Example 2: A content creator is designing a digital newsletter and wants to include a downloadable PDF brochure. By converting the PDF to Base64, the creator can embed the brochure directly into the newsletter, ensuring that it is accessible to all subscribers without the need for an external link.",
+        "Example 3: An IT professional is configuring a system that requires storing PDF documents in a database. The PDF to Base64 converter allows the professional to convert the PDFs into Base64 strings, which can be easily stored in a text field of the database and later decoded for retrieval.",
+        "Example 4: A software engineer is developing a mobile app that needs to handle PDF files. By converting the PDFs to Base64, the engineer can store the encoded strings in the app’s local storage and decode them on-the-fly for viewing, ensuring efficient use of storage and seamless user experience."
+      ]
+    },
+    "zh": {
+      "detailed_description": "PDF to Base64 工具可以将 PDF 文件转换为 Base64 编码。Base64 是一种基于 64 个可打印字符来表示二进制数据的编码方式，常用于在文本协议中传输二进制数据。用户可以使用此工具在需要将 PDF 文件嵌入到网页、电子邮件或数据库中时，避免文件损坏或编码不一致的问题。例如，在开发 Web 应用程序时，将 PDF 文件转换为 Base64 编码后，可以直接将其嵌入到 HTML 中，以减少对外部资源的依赖，提高页面加载速度。此外，Base64 编码后的数据还可以用于生成二维码、嵌入到 JSON 数据中，或者作为 API 请求的一部分。PDF to Base64 工具采用高效的算法处理文件，确保转换过程中的数据完整性和安全性，适合各种大小的 PDF 文件。",
+      "usage_steps": [
+        "Step 1: 打开 PDF to Base64 工具的页面，点击“选择文件”按钮，从本地文件系统中选择需要转换的 PDF 文件。",
+        "Step 2: 选择文件后，系统会自动检测文件的大小和格式，确保文件符合转换要求。",
+        "Step 3: 点击“开始转换”按钮，工具将开始处理文件，将 PDF 内容转换为 Base64 编码。",
+        "Step 4: 转换完成后，工具会显示 Base64 编码的文本内容。用户可以查看和复制此编码。",
+        "Step 5: 如果需要，可以点击“下载”按钮，将 Base64 编码的文本内容保存为文件，方便后续使用。",
+        "Step 6: 使用转换后的 Base64 编码，将其嵌入到网页、电子邮件或数据库中，或用于其他需要的场景。"
+      ],
+      "usage_examples": [
+        "Example 1: 开发者在构建网页时，需要将 PDF 文件直接嵌入到 HTML 中。通过使用 PDF to Base64 工具，可以将 PDF 文件转换为 Base64 编码，然后将其嵌入到 HTML 的 `<object>` 或 `<embed>` 标签中。",
+        "Example 2: 企业需要将 PDF 文件发送给客户，但担心文件在传输过程中被篡改或损坏。通过将 PDF 文件转换为 Base64 编码，可以将编码后的数据嵌入到电子邮件正文中，确保文件的完整性和安全性。",
+        "Example 3: 在开发移动应用时，开发者需要将 PDF 文件作为资源嵌入到应用中。通过将 PDF 文件转换为 Base64 编码，可以将编码后的数据直接嵌入到应用的资源文件中，减少对网络资源的依赖。",
+        "Example 4: 数据分析师需要将 PDF 报告嵌入到数据库中，以便后续查询和分析。通过将 PDF 文件转换为 Base64 编码，可以将编码后的数据存储在数据库的文本字段中，方便后续处理和查询。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "PDF to Base64は、PDFファイルをBase64エンコーディングに変換する専門的なツールです。Base64は、バイナリデータをテキスト形式に変換するエンコーディングスキーマで、主にデータの送受信やストレージの際の互換性向上に使用されます。このツールは、開発者がPDFファイルを安全に、そして効率的にWebやAPIで使用できるように設計されています。具体的には、PDFのバイナリデータをBase64文字列に変換し、テキスト形式で扱えるようにします。これにより、ファイルの直接的な取り扱いや送信が可能になるため、開発者はさまざまな用途で活用できます。例えば、PDFをBase64に変換することで、メールの添付ファイルやデータベースのフィールドに直接埋め込むことができます。また、Webアプリケーションでは、Base64エンコードされたPDFをHTMLの`data:` URIスキーマで表示することが可能です。このツールは、ファイルの読み込み、エンコーディング、結果の取得までの一連のプロセスを簡潔に提供します。",
+      "usage_steps": [
+        "Step 1: 「PDFをアップロード」ボタンをクリックし、変換したいPDFファイルを選択します。",
+        "Step 2: ファイル選択後、システムが自動的にPDFの読み込みを開始します。",
+        "Step 3: 「エンコード開始」ボタンをクリックして、Base64エンコーディングを開始します。",
+        "Step 4: エンコーディングが完了したら、生成されたBase64文字列が表示されます。",
+        "Step 5: 生成されたBase64文字列をコピーするには、「コピー」ボタンをクリックします。",
+        "Step 6: 必要に応じて、Base64文字列をテキストエリアに直接貼り付けて使用します。"
+      ],
+      "usage_examples": [
+        "Example 1: デジタル署名の付与 - PDF文書にデジタル署名を付与する際に、Base64エンコードされたPDFを使用することで、署名プロセスを効率化できます。",
+        "Example 2: メール添付 - 大きなPDFファイルをメールの添付ファイルとして送信する場合、Base64エンコードすることで、ファイルの直接的な取り扱いが可能になります。",
+        "Example 3: データベースへの保存 - PDFファイルをデータベースに保存する際、Base64エンコードされたテキスト形式で保存することで、効率的なデータ管理が可能になります。",
+        "Example 4: Webアプリケーションでの表示 - Webページ上でPDFファイルを表示する場合、Base64エンコードされたPDFを使用することで、`<embed>`タグや`<object>`タグで直接表示できます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "PDF to Base64 도구는 PDF 파일을 Base64 인코딩 형식으로 변환합니다. Base64 인코딩은 바이너리 데이터를 텍스트 형식으로 변환하여 ASCII 문자로 표현하는 방법입니다. 이 과정을 통해 PDF 파일이 웹 페이지, 이메일, 데이터베이스 등에서 안전하게 전송될 수 있습니다. PDF 파일을 Base64로 변환하는 이유는 다양합니다. 예를 들어, 웹 애플리케이션에서 PDF 파일을 동적으로 생성하고 전송할 때, Base64 문자열은 쉽게 다룰 수 있습니다. 또한, 이 인코딩 방식은 데이터의 무결성을 보장하며, 별도의 파일 다운로드 없이도 웹 페이지에 PDF를 임베드할 수 있습니다. 이 도구는 PDF 파일을 업로드하거나 드래그 앤 드롭하여 사용할 수 있으며, 변환 후에는 다운로드 링크를 제공합니다. 변환 과정은 클라이언트 사이드에서 이루어지므로, 프라이버시와 보안이 중요한 경우에도 안심하고 사용할 수 있습니다.",
+      "usage_steps": [
+        "1. PDF to Base64 도구 페이지로 이동합니다.",
+        "2. 'PDF 파일 선택' 버튼을 클릭하여 변환하고자 하는 PDF 파일을 업로드하거나, 파일을 드래그 앤 드롭 영역으로 끌어옵니다.",
+        "3. 파일 업로드 후, 'Base64로 변환' 버튼을 클릭합니다.",
+        "4. 변환 프로세스가 완료되면, 변환된 Base64 문자열이 표시됩니다.",
+        "5. '복사' 버튼을 클릭하여 Base64 문자열을 클립보드에 복사합니다.",
+        "6. '다운로드' 버튼을 클릭하여 변환된 Base64 파일을 다운로드합니다."
+      ],
+      "usage_examples": [
+        "1. 웹 개발자: 웹 애플리케이션에서 동적으로 PDF 파일을 생성하고, 이를 바로 웹 페이지에 표시하거나 이메일로 전송할 때 Base64로 변환하여 사용합니다.",
+        "2. 데이터 분석가: 대규모 데이터베이스에 PDF 파일을 저장할 때, Base64 인코딩을 사용하여 바이너리 데이터를 텍스트로 변환하여 저장하고 관리합니다.",
+        "3. 시큐리티 전문가: PDF 파일의 무결성을 검증할 때, Base64로 변환하여 해시 값과 비교하여 데이터가 변조되지 않았음을 확인합니다.",
+        "4. 디자이너: 디자인 프로젝트에서 PDF 파일을 웹 페이지에 임베드할 때, Base64 문자열을 사용하여 별도의 파일 다운로드 없이도 PDF를 표시합니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "PDF to Base64 es una herramienta especializada diseñada para convertir archivos PDF en una cadena de texto en formato Base64. Esta conversión es particularmente útil en escenarios donde los archivos PDF necesitan ser integrados en sistemas que solo aceptan texto, como bases de datos, archivos de configuración, o incluso en el cuerpo de correos electrónicos. El formato Base64 es un método de codificación binaria a texto que representa datos binarios mediante 64 caracteres ASCII, lo que permite la transmisión de datos binarios a través de medios de texto sin problemas. Esta herramienta es esencial para desarrolladores y profesionales de TI que requieren una forma eficiente y segura de integrar archivos PDF en sus aplicaciones web o sistemas de gestión de contenidos. La conversión se realiza de manera instantánea y el resultado se presenta en un formato que puede ser copiado y pegado directamente en el código o en cualquier otro lugar donde sea necesario.",
+      "usage_steps": [
+        "Paso 1: Visita la página de PDF to Base64 en el sitio web de herramientas de desarrollo.",
+        "Paso 2: Haz clic en el botón 'Seleccionar Archivo' para abrir el explorador de archivos de tu sistema.",
+        "Paso 3: Navega hasta la ubicación del archivo PDF que deseas convertir y selecciona el archivo.",
+        "Paso 4: Una vez que el archivo PDF ha sido cargado, haz clic en el botón 'Convertir a Base64'.",
+        "Paso 5: La herramienta procesará el archivo y generará la cadena Base64. Puedes ver el resultado en el área de texto proporcionada.",
+        "Paso 6: Seleccióna y copia la cadena Base64 generada para usarla en tu proyecto o aplicación."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador web necesita incrustar un contrato PDF en un correo electrónico HTML. Utiliza PDF to Base64 para convertir el archivo PDF en una cadena Base64 y luego la incrusta en el código HTML del correo electrónico.",
+        "Ejemplo 2: Un administrador de bases de datos requiere almacenar manuales de usuario en formato PDF dentro de una base de datos que solo acepta texto. Convierte los archivos PDF a Base64 y los almacena en campos de texto en la base de datos.",
+        "Ejemplo 3: Un equipo de seguridad necesita enviar informes PDF sensibles a través de un canal de texto seguro. Utiliza PDF to Base64 para codificar los informes y enviarlos como texto, asegurando que el contenido sea transmitido de manera segura.",
+        "Ejemplo 4: Un diseñador de aplicaciones móviles desea incrustar catálogos de productos PDF en una aplicación híbrida. Convierte los archivos PDF a Base64 y los incrusta directamente en el código de la aplicación, evitando la necesidad de descargas separadas."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O PDF to Base64 é uma ferramenta versátil e indispensável para desenvolvedores e profissionais de tecnologia que precisam converter arquivos PDF em codificação Base64. Base64 é um método de codificação binária para dados de texto, amplamente utilizado para transmitir dados binários através de meios de transmissão que lidam apenas com texto, como e-mail ou armazenamento em bancos de dados. A conversão de PDF para Base64 permite que arquivos PDF sejam incorporados diretamente em arquivos HTML, CSS ou JavaScript, facilitando a integração de documentos em aplicações web e mobile. Além disso, a codificação em Base64 é essencial para situações onde a integridade dos dados binários precisa ser mantida durante a transmissão ou armazenamento. Esta ferramenta suporta a conversão de arquivos PDF de qualquer tamanho, garantindo que o processo seja eficiente e seguro, sem perda de qualidade ou conteúdo. A codificação é realizada utilizando algoritmos robustos que garantem a precisão da conversão, tornando a ferramenta ideal para uso em ambientes de produção e desenvolvimento.",
+      "usage_steps": [
+        "Acesse a página do PDF to Base64 no site da ferramenta e aguarde o carregamento completo.",
+        "Clique no botão 'Selecionar PDF' para abrir o explorador de arquivos do seu sistema operacional.",
+        "Navegue até o local do arquivo PDF que deseja converter e selecione-o. O arquivo será carregado automaticamente.",
+        "Depois que o arquivo PDF for carregado, clique no botão 'Converter para Base64'. O processo de conversão será iniciado imediatamente.",
+        "Espere a conclusão da conversão. O progresso será exibido na barra de status abaixo do botão de conversão.",
+        "Após a conversão, o código Base64 do arquivo PDF será exibido na área de texto. Você pode copiá-lo usando o botão 'Copiar' ou baixá-lo como um arquivo de texto usando o botão 'Baixar'."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor web precisa incorporar um contrato PDF em um formulário HTML para que os usuários possam visualizá-lo diretamente no site. Usando o PDF to Base64, o desenvolvedor converte o PDF em Base64 e o insere no código HTML usando a tag `data:application/pdf;base64,`.",
+        "Um administrador de sistemas quer armazenar relatórios PDF em um banco de dados SQL. A codificação em Base64 permite que os arquivos binários sejam armazenados em colunas de texto, facilitando a recuperação e exibição dos relatórios em uma aplicação web.",
+        "Um programador de aplicativos móveis precisa integrar manuals de instrução PDF em um aplicativo iOS. A codificação em Base64 permite que os arquivos PDF sejam incorporados diretamente no código do aplicativo, sem a necessidade de referências externas.",
+        "Um designer de e-mail precisa incluir um catálogo PDF em uma newsletter. A codificação em Base64 permite que o PDF seja incorporado diretamente no corpo do e-mail, garantindo que os destinatários possam visualizá-lo sem precisar baixar um anexo separado."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le convertisseur PDF to Base64 est un outil en ligne spécialisé dans la transformation de fichiers PDF en format Base64. Cette conversion est essentielle pour intégrer des documents PDF directement dans des environnements de développement, des bases de données, ou des applications web, sans avoir à les stocker séparément. L'encodage en Base64 convertit les données binaires du PDF en une chaîne de caractères ASCII, ce qui facilite leur transmission et leur stockage dans des systèmes qui ne supportent pas les données binaires directement.\n\nLes utilisateurs ont besoin de cet outil pour plusieurs raisons. Par exemple, les développeurs web peuvent utiliser cette conversion pour inclure des PDF directement dans le code HTML, ce qui améliore l'expérience utilisateur en évitant les redirections vers des pages externes. Les concepteurs d'applications mobiles peuvent également benefited de cette fonctionnalité pour intégrer des documents PDF dans leurs applications sans dépendre de liens externes. De plus, les professionnels de la sécurité peuvent utiliser cet outil pour vérifier l'intégrité des fichiers PDF en les encodant et en les comparant avec des versions connues et fiables.\n\nTechniquement, l'outil fonctionne en lisant le fichier PDF uploadé, en le convertissant en une séquence de 6 bits (00 à 111111) représentés par des caractères ASCII spécifiques, et en générant une chaîne de caractères Base64. Cette chaîne peut ensuite être copiée et utilisée dans divers contextes de développement et de stockage de données.",
+      "usage_steps": [
+        "Accédez à la page de l'outil PDF to Base64 sur le site.",
+        "Cliquez sur le bouton 'Choisir un fichier' pour sélectionner le PDF que vous souhaitez convertir.",
+        "Après avoir sélectionné le fichier, cliquez sur 'Convertir en Base64' pour démarrer la conversion.",
+        "L'outil affichera la chaîne de caractères Base64 une fois la conversion terminée.",
+        "Copiez la chaîne Base64 générée en cliquant sur le bouton 'Copier'.",
+        "Utilisez cette chaîne Base64 dans votre application ou votre projet de développement."
+      ],
+      "usage_examples": [
+        "Un développeur web souhaite intégrer un document PDF dans une page HTML sans avoir à héberger le fichier séparément. Il utilise l'outil PDF to Base64 pour convertir le PDF en une chaîne Base64, qu'il inclut ensuite directement dans le code HTML.",
+        "Un designer d'application mobile doit inclure un guide utilisateur PDF dans une application. Au lieu de stocker le PDF sur un serveur externe, il le convertit en Base64 et l'intègre directement dans le code de l'application.",
+        "Un professionnel de la sécurité doit vérifier l'intégrité d'un document PDF reçu. Il convertit le PDF en Base64 et compare la chaîne générée avec une version connue et fiable pour s'assurer qu'il n'a pas été altéré.",
+        "Un administrateur de base de données doit stocker des documents PDF dans une base de données relationnelle qui ne supporte pas les fichiers binaires. Il utilise l'outil pour convertir les PDF en Base64, facilitant ainsi leur stockage et leur récupération."
+      ]
+    },
+    "de": {
+      "detailed_description": "Das Tool PDF to Base64 ermöglicht es Nutzern, PDF-Dateien in den Base64-String zu konvertieren. Base64 ist eine binäre-zu-text-Darstellungsmethode, die häufig in Webentwicklung, E-Mail-Kommunikation und Datenübertragung verwendet wird. Die Konvertierung von PDF-Dateien in Base64 ist besonders nützlich, wenn PDFs in Textformaten eingebettet oder über Netzwerke übertragen werden müssen, ohne dass die Dateiintegrität verloren geht.\n\nNutzer benötigen dieses Tool in verschiedenen Szenarien, wie zum Beispiel:\n- **Webentwicklung**: PDF-Dateien können direkt in HTML oder JavaScript eingebettet werden, um interaktive Dokumente zu erstellen.\n- **Sicherheitsüberprüfungen**: Base64 kodierte PDFs können leicht in Hash-Funktionen eingegeben werden, um die Integrität der Datei zu verifizieren.\n- **API-Integrationen**: PDFs können als Base64-Strings in API-Requests geschickt werden, um komplexe Dokumente über sichere Kanäle zu übertragen.\n- **Dokumentenverwaltung**: In Datenbanken oder CMS-Systemen können Base64-Strings verwendet werden, um PDF-Dateien in einem zentralisierten Format zu speichern.\n\nDer Konvertierungsprozess ist effizient und sicher. Nach dem Upload der PDF-Datei wird sie in ein Base64-String konvertiert, der dann für weitere Verarbeitung oder Speicherung bereitgestellt wird. Das Tool verwendet moderne Verschlüsselungstechniken, um die Daten während der Übertragung und Speicherung zu schützen.",
+      "usage_steps": [
+        "Step 1: Navigieren Sie zur Seite 'PDF to Base64' auf der Website.",
+        "Step 2: Klicken Sie auf den Button 'Datei auswählen', um die PDF-Datei von Ihrem lokalen Gerät hochzuladen.",
+        "Step 3: Wählen Sie die PDF-Datei aus, die Sie konvertieren möchten, und bestätigen Sie die Auswahl.",
+        "Step 4: Warten Sie, bis der Konvertierungsprozess abgeschlossen ist. Ein Fortschrittsbalken zeigt den Status an.",
+        "Step 5: Sobald die Konvertierung erfolgreich war, wird der Base64-String angezeigt. Sie können diesen String kopieren oder als Textdatei herunterladen.",
+        "Step 6: Verwenden Sie den Base64-String für Ihre gewünschten Anwendungen, wie zum Beispiel die Einbettung in HTML-Code oder die Speicherung in einer Datenbank."
+      ],
+      "usage_examples": [
+        "Example 1: Ein Webentwickler möchte eine PDF-Brochure direkt in eine Website integrieren, ohne dass Benutzer die PDF herunterladen müssen. Durch die Konvertierung der Brochure in Base64 kann der Entwickler den String in den HTML-Code einbetten, sodass die Brochure innerhalb der Website angezeigt wird.",
+        "Example 2: Ein IT-Spezialist muss sicherstellen, dass eine PDF-Datei unverändert von einem Server an einen Client übertragen wird. Er konvertiert die PDF in Base64 und überträgt den String über eine sichere Verbindung. Anschließend wird der Base64-String dekodiert und die Integrität der Datei überprüft.",
+        "Example 3: Ein Softwareentwickler arbeitet an einem Projekt, bei dem PDF-Dokumente über eine REST-API an den Server gesendet werden müssen. Er verwendet das PDF to Base64 Tool, um die PDFs in Base64-Strings zu konvertieren, die dann in den API-Request integriert werden.",
+        "Example 4: Ein Document Management System (DMS) verwendet Base64-Strings, um PDF-Dateien in seiner zentralen Datenbank zu speichern. Ein Administrator konvertiert alle PDF-Dateien in Base64-Strings, um sie in das System zu importieren und eine zentrale Verwaltung der Dokumente zu gewährleisten."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة PDF to Base64 هي أداة متقدمة تقوم بتحويل ملفات PDF إلىALKود Base64، وهو نوع من الترميز الذي يتم استخدامه لنقل البيانات الثنائية عبر وسائط النقل التي تتعامل فقط مع البيانات النصية. هذا الترميز يحول البيانات الثنائية إلى سلسلة نصية تتألف من 64 حرفًا محددًا. يتم استخدام هذه الأداة في العديد من السيناريوهات التقنية، مثل إدماج ملفات PDF في قاعدة بيانات أو نقلها عبر بروتوكولات الويب مثل HTTP. تتيح الأداة للمطورين والمهنيين تحويل ملفات PDF بسهولة وبدقة، مما يوفر حلًا فعالًا لمشاكل التوافق والنقل. تعمل الأداة من خلال تحميل ملف PDF عبر واجهة المستخدم، ثم معالجة الملف باستخدام خوارزمية Base64، وأخيرًا تقديم سلسلة Base64 الناتجة للمستخدم.",
+      "usage_steps": [
+        "افتح أداة PDF to Base64 على موقع الويب.",
+        "اضغط على زر 'اختيار ملف' لاختيار ملف PDF من جهازك.",
+        "بعد اختيار الملف، انتظر حتى تتم معالجة الملف تلقائيًا.",
+        "ستظهر نافذة بها سلسلة Base64 الناتجة عن ملف PDF.",
+        "يمكنك نسخ سلسلة Base64 بالكامل باستخدام زر 'نسخ' المتوفر بجانب النافذة.",
+        "لحفظ سلسلة Base64 كملف نصي، اضغط على زر 'حفظ كملف' واختر المكان المناسب على جهازك."
+      ],
+      "usage_examples": [
+        "تحتاج شركة تعمل في مجال الخدمات الرقمية إلى إدماج ملفات PDF في قاعدة بيانات تستخدم فقط البيانات النصية. يمكن للمطورين استخدام أداة PDF to Base64 لتحويل ملفات PDF إلى سلاسل Base64 ثم تحميلها إلى قاعدة البيانات.",
+        "يرغب مطور ويب في تضمين شهادة PDF في صفحة ويب دون الحاجة إلى رفع الملف كمرفق. يمكنه استخدام الأداة لتحويل الشهادة إلى سلسلة Base64 ومن ثم إدماجها مباشرة في رمز HTML.",
+        "يحتاج فريق تطوير تطبيق متنقل إلى تحميل ملفات PDF عبر الإنترنت بشكل آمن. يمكن استخدام أداة PDF to Base64 لتحويل ملفات PDF إلى سلاسل Base64 ثم تحميلها عبر بروتوكول HTTPS.",
+        "يرغب مصمم ويب في إنشاء مستند PDF يمكن تحميله عبر وصلة في صفحة ويب. يمكنه استخدام الأداة لتحويل ملف PDF إلى سلسلة Base64 ومن ثم استخدامها في رمز JavaScript لتحميل الملف عند النقر على الوصلة."
+      ]
+    }
+  }
+}

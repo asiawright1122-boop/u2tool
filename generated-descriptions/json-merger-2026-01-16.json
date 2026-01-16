@@ -1,0 +1,158 @@
+{
+  "slug": "json-merger",
+  "descriptions": {
+    "en": {
+      "detailed_description": "JSON Merger is a powerful online utility designed to combine multiple JSON objects into a single, cohesive structure. This tool offers a range of merging strategies, from shallow to deep merging, allowing users to control how nested properties are handled. It is particularly useful in scenarios where data from various sources needs to be aggregated or where configuration files need to be consolidated. JSON Merger supports the preservation of key-value pairs, the resolution of conflicts, and the handling of arrays and nested objects. By using this tool, developers can streamline their workflows, reduce manual data manipulation, and ensure data integrity. JSON Merger is built with robust error handling, providing clear feedback on any issues that arise during the merging process, such as syntax errors or data type mismatches.",
+      "usage_steps": [
+        "Step 1: Navigate to the JSON Merger tool and locate the input areas for your JSON objects. You can add multiple JSON objects by clicking the 'Add JSON' button.",
+        "Step 2: Paste or type your JSON objects into the respective input fields. Ensure that each JSON object is valid and well-formatted.",
+        "Step 3: Choose a merging strategy from the dropdown menu. Options include 'Shallow Merge', 'Deep Merge', and 'Custom Merge'. Each strategy has a different impact on how nested properties are handled.",
+        "Step 4: If you selected 'Custom Merge', configure the custom settings by specifying how to handle conflicts, such as prioritizing values from the first or last JSON object.",
+        "Step 5: Click the 'Merge JSON' button to process the objects. The tool will validate the JSON and apply the selected merging strategy.",
+        "Step 6: Review the merged JSON output in the designated area. If there are any errors, the tool will display them, allowing you to make necessary adjustments."
+      ],
+      "usage_examples": [
+        "Example 1: A frontend developer is working on a project that requires combining configuration settings from multiple environments (development, staging, production). Using JSON Merger, they can merge these settings with a deep merge strategy to ensure all nested properties are correctly aggregated.",
+        "Example 2: A backend engineer needs to aggregate user data from different API responses. Each API response contains a JSON object with user information. By using the 'Shallow Merge' strategy, they can combine all user data into a single object, ensuring no duplicate keys overwrite important information.",
+        "Example 3: A data analyst is processing JSON files from various data sources for a report. Some of these files have overlapping keys with different values. By using the 'Custom Merge' strategy, they can specify that the values from the last JSON object should take precedence, ensuring the most recent data is used.",
+        "Example 4: A DevOps team is managing a microservices architecture and needs to consolidate configuration files for deployment. Each service has its own JSON configuration, and using JSON Merger with a deep merge strategy, they can create a single, unified configuration file for easier deployment and management."
+      ]
+    },
+    "zh": {
+      "detailed_description": "JSON Merger 是一款强大的在线工具，专为需要合并多个 JSON 对象的开发者设计。它支持多种合并策略，确保数据的一致性和完整性。无论是处理 API 响应、配置文件，还是数据同步，JSON Merger 都能帮助用户高效地完成任务。通过选择不同的合并策略，用户可以控制如何处理重复的键值对，是否保留空值，以及如何处理嵌套对象。这款工具不仅支持标准的 JSON 格式，还可以处理带有注释的 JSON 数据。JSON Merger 的核心功能在于其智能算法，能够检测和解决常见的数据冲突，确保合并后的 JSON 对象符合预期。",
+      "usage_steps": [
+        "Step 1: 访问 JSON Merger 页面，点击“添加 JSON”按钮，上传或粘贴您的第一个 JSON 对象。",
+        "Step 2: 重复第一步，添加所有需要合并的 JSON 对象。",
+        "Step 3: 在“合并策略”选项中，选择适合您需求的策略。可选策略包括：覆盖、合并、保留空值等。",
+        "Step 4: 如果需要，可以在“高级设置”中调整更详细的选项，如处理嵌套对象的方式。",
+        "Step 5: 点击“开始合并”按钮，工具将根据所选策略自动合并所有 JSON 对象。",
+        "Step 6: 合并完成后，工具将显示合并后的 JSON 对象，您可以选择下载或直接复制结果。"
+      ],
+      "usage_examples": [
+        "Example 1: 在开发一个 API 服务时，不同模块返回的 JSON 数据需要合并到一个统一的响应中。使用 JSON Merger 可以轻松实现这一需求，确保最终的响应格式一致。",
+        "Example 2: 在配置管理中，多个环境（如开发、测试、生产）的配置文件需要合并。JSON Merger 支持保留特定环境的配置，同时合并通用配置，简化了配置管理流程。",
+        "Example 3: 在数据同步场景中，从多个数据源获取的 JSON 数据需要合并到一个中心数据库。通过选择合适的合并策略，JSON Merger 可以处理重复数据，确保数据的一致性。",
+        "Example 4: 在前端开发中，多个 JSON 文件中的数据需要合并以生成复杂的用户界面。使用 JSON Merger 可以避免手动合并时可能出现的错误，提高开发效率。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "JSON Mergerは、異なる戦略を使用して複数のJSONオブジェクトをマージするための強力なツールです。このツールは、JSONオブジェクトのキーと値の複雑な関係を理解し、重複するキーを処理するための柔軟なオプションを提供します。具体的には、上書き、結合、または新しいキーの作成などの異なるマージ戦略を選択可能で、ユーザーが目的に応じて最適な結果を得ることができます。\n\nユーザーがこのツールを必要とする主な理由は、APIからのデータ統合、データの正規化、または複数のデータソースからの情報の統合など、様々なユースケースが存在するからです。例えば、複数のAPIから取得したデータを統合して一元化したレポートを作成する場合、または異なるシステムから取得したデータを一貫性のある形式で扱いたい場合など、JSON Mergerは非常に有用です。\n\nこのツールの動作は、ユーザーが複数のJSONオブジェクトを入力フィールドに貼り付け、マージ戦略を選択した後、即座にマージ処理が実行されます。内部的には、各戦略に基づいてキーの衝突や重複が適切に処理され、最終的なマージ結果が生成されます。",
+      "usage_steps": [
+        "Step 1: ページ上部の「JSON入力1」フィールドに最初のJSONオブジェクトを貼り付けます。",
+        "Step 2: 「JSON入力2」フィールドに次のJSONオブジェクトを貼り付けます。必要に応じて、追加のJSONオブジェクトを「追加のJSON入力」リンクをクリックして追加します。",
+        "Step 3: 「マージ戦略」ドロップダウンメニューから、マージ方法を選択します。選択可能な戦略は「上書き」、「結合」、「新しいキーの作成」などがあります。",
+        "Step 4: 「キー衝突の処理」セクションで、キーが衝突した場合の具体的な動作を設定します。例えば、特定のキーを優先する、または新しいキーを自動で生成するなど、詳細な設定が可能です。",
+        "Step 5: 「マージ実行」ボタンをクリックして、選択した戦略に基づいてJSONオブジェクトをマージします。",
+        "Step 6: ページ下部の「マージ結果」エリアで、最終的なマージされたJSONオブジェクトを確認し、必要に応じてダウンロードまたはコピーします。"
+      ],
+      "usage_examples": [
+        "Example 1: 複数のAPIから取得したユーザー情報のJSONデータを統合し、一元化したユーザー管理システムに取り込む場合。異なるAPIから取得したデータを一貫性のある形式に統合できます。",
+        "Example 2: IoTデバイスから取得したセンサデータを複数のソースから統合して、リアルタイムのダッシュボードを作成する場合。異なるデバイスからのデータを一元化することで、一貫性のある分析が可能になります。",
+        "Example 3: オンラインストアの商品情報を複数のサプライヤーから取得し、統一した形式で管理する場合。異なるサプライヤーからのデータを統合することで、一元的な商品管理が容易になります。",
+        "Example 4: 電子商取引プラットフォームで、異なる言語の商品情報を統合して、多言語対応のサイトを作成する場合。異なる言語のデータを一貫性のある形式に統合することで、多言語対応がスムーズになります。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "JSON Merger는 여러 JSON 객체를 다양한 전략을 사용하여 통합하는 강력한 도구입니다. 이 도구는 사용자가 여러 JSON 데이터를 하나의 객체로 결합할 수 있도록 설계되었습니다. JSON Merger는 병합 과정에서 중복 키를 처리하는 다양한 방법을 제공합니다. 예를 들어, 'overwrite' 전략은 동일한 키가 있는 경우 새로운 값으로 기존 값을 덮어쓰는 반면, 'merge arrays' 전략은 배열을 합치는 등의 기능을 제공합니다. 이 도구는 API 테스트, 데이터 통합, 설정 파일 관리 등 다양한 시나리오에서 유용합니다. 특히, 복잡한 JSON 구조를 다루는 개발자들에게 이 도구는 필수적인 도구가 될 수 있습니다. JSON Merger는 사용자 친화적인 인터페이스와 강력한 기능을 통해 효율적인 JSON 데이터 처리를 가능하게 합니다.",
+      "usage_steps": [
+        "Step 1: 'JSON Merger' 페이지로 이동하여 도구를 시작합니다.",
+        "Step 2: 왼쪽 패널에서 'JSON Input 1'과 'JSON Input 2'에 병합할 JSON 데이터를 각각 입력합니다.",
+        "Step 3: 중간의 'Merge Strategy' 드롭다운 메뉴에서 병합 전략을 선택합니다. 예를 들어, 'Overwrite', 'Merge Arrays', 'Concatenate' 등을 선택할 수 있습니다.",
+        "Step 4: 'Advanced Options' 섹션을 열어 필요에 따라 추가적인 옵션을 조정합니다. 예를 들어, 'Ignore Null Values' 체크박스를 선택하여 null 값을 무시할 수 있습니다.",
+        "Step 5: 'Merge JSON' 버튼을 클릭하여 JSON 데이터를 병합합니다.",
+        "Step 6: 우측 패널에서 병합된 결과를 확인합니다. 필요하다면, 'Copy to Clipboard' 버튼을 클릭하여 결과를 복사할 수 있습니다."
+      ],
+      "usage_examples": [
+        "Example 1: API 응답 데이터 통합 - 여러 API 호출의 결과를 하나의 JSON 객체로 통합하여 더 효율적으로 데이터를 처리할 수 있습니다.",
+        "Example 2: 설정 파일 병합 - 여러 설정 파일을 하나의 파일로 병합하여 애플리케이션 설정을 일관되게 관리할 수 있습니다.",
+        "Example 3: 데이터 정제 - 다양한 출처에서 수집된 데이터를 통합하여 분석에 사용할 수 있는 단일 데이터셋을 생성할 수 있습니다.",
+        "Example 4: JSON 구조 확장 - 기존 JSON 구조에 새로운 속성을 추가하거나 기존 속성을 수정하여 복잡한 JSON 구조를 관리할 수 있습니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El JSON Merger es una herramienta de codificación avanzada que permite la fusión de múltiples objetos JSON utilizando diferentes estrategias. Esta funcionalidad es esencial en escenarios donde se necesita combinar datos de varias fuentes en un solo objeto JSON coherente. La herramienta es especialmente útil en el desarrollo de aplicaciones que manejan grandes volúmenes de datos estructurados, ya que facilita la integración y sincronización de información de distintas bases de datos o APIs. El JSON Merger ofrece opciones para manejar conflictos de claves, mantener la jerarquía de los datos y personalizar el proceso de fusión. Los usuarios pueden elegir entre estrategias como la fusión recursiva, la sustitución de claves duplicadas o la creación de listas para claves que aparecen en múltiples objetos. Además, la herramienta proporciona un control detallado sobre el resultado final, permitiendo a los desarrolladores ajustar la salida según las necesidades específicas de su proyecto.",
+      "usage_steps": [
+        "Paso 1: Abre la página del JSON Merger y localiza el área de entrada de JSON en la parte superior de la interfaz.",
+        "Paso 2: Pega los objetos JSON que deseas fusionar en los campos de entrada proporcionados. Puedes agregar más campos de entrada si necesitas combinar más de dos objetos.",
+        "Paso 3: Selecciona la estrategia de fusión deseada en el menú desplegable. Las opciones incluyen 'Fusión Recursiva', 'Sustitución de Claves Duplicadas' y 'Creación de Listas para Claves Duplicadas'.",
+        "Paso 4: Si es necesario, ajusta las opciones adicionales, como la eliminación de claves nulas o la formateación del JSON resultante.",
+        "Paso 5: Haz clic en el botón 'Fusionar JSON' para procesar los objetos. La herramienta mostrará el resultado en el área de salida.",
+        "Paso 6: Revisa el JSON resultante y, si es necesario, copia el código para usarlo en tu proyecto."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un desarrollador de una aplicación de gestión de inventario necesita combinar datos de múltiples proveedores. Cada proveedor proporciona un objeto JSON con información de productos. Usando el JSON Merger con la estrategia de 'Fusión Recursiva', el desarrollador puede combinar todos los datos en un solo objeto JSON que se sincroniza con la base de datos de la aplicación.",
+        "Ejemplo 2: Un equipo de desarrollo está trabajando en una API que recopila datos de varias fuentes. Durante el desarrollo, surgen conflictos de claves cuando se combinan los JSONs de las diferentes fuentes. Utilizando la estrategia de 'Sustitución de Claves Duplicadas', el equipo puede resolver estos conflictos de manera eficiente y asegurar que los datos se integren sin problemas.",
+        "Ejemplo 3: Un analista de datos necesita combinar registros de eventos de diferentes plataformas de seguimiento. Cada plataforma proporciona un JSON con eventos específicos. Con la estrategia de 'Creación de Listas para Claves Duplicadas', el analista puede fusionar todos los eventos en una lista única, lo que facilita el análisis posterior.",
+        "Ejemplo 4: Un desarrollador de front-end está trabajando en una aplicación que carga datos de múltiples endpoints API. Cada endpoint devuelve un JSON con diferentes estructuras. Utilizando el JSON Merger, el desarrollador puede fusionar estos JSONs en un solo objeto, lo que simplifica el manejo de los datos en el front-end y mejora la experiencia del usuario."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O JSON Merger é uma ferramenta robusta e versátil projetada para mesclar múltiplos objetos JSON utilizando diferentes estratégias de fusão. Essa funcionalidade é crucial para desenvolvedores e engenheiros de dados que frequentemente precisam combinar dados de diferentes fontes em uma única estrutura. A ferramenta suporta estratégias de fusão como sobrescrever, mesclar profundamente e preservar valores existentes, permitindo aos usuários personalizar o processo de acordo com suas necessidades específicas. A capacidade de manipular JSON de forma eficiente é essencial em muitos cenários, como a integração de dados de APIs, a normalização de conjuntos de dados heterogêneos e a geração de configurações complexas. O JSON Merger utiliza técnicas avançadas de serialização e desserialização para garantir que os objetos JSON sejam mesclados de forma coesa e sem perda de dados, proporcionando resultados precisos e confiáveis.",
+      "usage_steps": [
+        "Acesse a ferramenta JSON Merger no site da plataforma.",
+        "No campo 'JSON 1', cole o primeiro objeto JSON que deseja mesclar.",
+        "No campo 'JSON 2', cole o segundo objeto JSON que será combinado com o primeiro.",
+        "Selecione a estratégia de fusão desejada no menu suspenso 'Estratégia de Fusão'. As opções incluem 'Sobrescrever', 'Mesclar Profundamente' e 'Preservar Valores Existentes'.",
+        "Clique no botão 'Mesclar JSON' para iniciar o processo de fusão.",
+        "Após a fusão, o resultado será exibido no campo 'JSON Resultante'. Copie o JSON mesclado para uso em seus projetos."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de API precisa combinar os dados retornados por duas APIs diferentes em uma única resposta para um cliente. Usando a estratégia 'Mesclar Profundamente', o JSON Merger permite que os dados sejam integrados de forma coesa, evitando conflitos de chaves.",
+        "Um engenheiro de dados está normalizando conjuntos de dados de diferentes fontes para uma análise. Ao utilizar a estratégia 'Preservar Valores Existentes', o JSON Merger garante que os dados originais não sejam sobrescritos por valores nulos ou indefinidos, mantendo a integridade dos dados.",
+        "Um administrador de sistemas precisa gerar uma configuração complexa para um serviço, combinando múltiplos arquivos de configuração. A estratégia 'Sobrescrever' é escolhida para garantir que as configurações mais recentes prevaleçam em caso de conflitos.",
+        "Um desenvolvedor frontend está construindo uma aplicação que utiliza dados de várias fontes. O JSON Merger é usado para mesclar os dados de diferentes APIs em um único objeto JSON, facilitando a integração e a manipulação dos dados na aplicação."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le JSON Merger est un outil spécialisé dans la fusion de plusieurs objets JSON en un seul, en utilisant différentes stratégies de fusion. Cette fonctionnalité est particulièrement utile pour les développeurs qui travaillent sur des applications nécessitant la gestion de données structurées provenant de sources multiples. Par exemple, lors de l'intégration de données provenant de différentes API, la fusion précise de ces données peut être cruciale pour assurer la cohérence et l'intégrité des informations. L'outil offre plusieurs modes de fusion, tels que la fusion en profondeur, la fusion récursive, et la fusion par remplacement, permettant aux utilisateurs de choisir la méthode la plus appropriée selon leurs besoins spécifiques. Techniquement, le processus de fusion implique la lecture des objets JSON, l'application de la stratégie sélectionnée, et la génération d'un seul objet JSON final. L'outil garantit également la validité du JSON final, en vérifiant la syntaxe et en gérant les conflits de clés de manière transparente.",
+      "usage_steps": [
+        "Ouvrez la page de l'outil JSON Merger sur le site.",
+        "Dans la section 'JSON Inputs', cliquez sur 'Ajouter un JSON' pour insérer les objets JSON que vous souhaitez fusionner.",
+        "Pour chaque objet JSON, utilisez l'éditeur de texte pour coller le contenu JSON ou chargez un fichier JSON en cliquant sur 'Charger un fichier'.",
+        "Dans la section 'Stratégie de Fusion', sélectionnez la méthode de fusion appropriée (par exemple, 'Fusion en profondeur', 'Fusion récursive', 'Fusion par remplacement').",
+        "Si nécessaire, configurez les options avancées en cochant les cases pour gérer les conflits de clés ou pour formater le JSON final.",
+        "Cliquez sur 'Fusionner les JSON' et le résultat sera affiché dans la section 'JSON Fusionné'. Vous pouvez ensuite copier le JSON fusionné ou le télécharger en tant que fichier."
+      ],
+      "usage_examples": [
+        "Un développeur d'API souhaite fusionner les réponses de plusieurs endpoints pour créer un seul objet JSON complet pour une application client. L'utilisation de la fusion en profondeur permet de combiner les données sans dupliquer les clés communes.",
+        "Un ingénieur en données doit intégrer des configurations provenant de différents fichiers JSON pour générer une configuration unique. La fusion récursive est utilisée pour fusionner les configurations de manière hiérarchique, en préservant les valeurs les plus spécifiques.",
+        "Une équipe de développement frontend utilise l'outil pour combiner des fichiers de traduction JSON en plusieurs langues. La fusion par remplacement est choisie pour éviter les doublons et pour s'assurer que les clés de traduction les plus récentes sont utilisées.",
+        "Un administrateur système doit fusionner des logs JSON provenant de différentes applications pour une analyse centralisée. La fusion en profondeur permet de combiner les logs tout en préservant la structure et les métadonnées de chaque source."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der JSON Merger ist ein leistungsstarkes Werkzeug, das es ermöglicht, mehrere JSON-Objekte auf verschiedene Weisen zu fusionieren. Dieses Tool ist besonders nützlich, wenn Entwickler oder Data Scientists JSON-Strukturen kombinieren müssen, die aus unterschiedlichen Quellen stammen. Die Fusion kann auf verschiedene Weisen erfolgen, beispielsweise durch das Überschreiben von Schlüsseln, das Zusammenführen von Arrays oder das Beibehalten von Werten, die in bestimmten Objekten fehlen. Dies ist besonders wichtig, wenn man Daten aus mehreren APIs oder Datenbanken integrieren muss, um eine konsistente JSON-Struktur zu erhalten. Das Tool unterstützt auch fortgeschrittene Mergetypen, wie z.B. das Tiefen-Merging von verschachtelten Objekten, was die Datenintegrität und Konsistenz erhöht. Durch die Verwendung des JSON Mergers können Entwickler ihre Workflows effizienter gestalten und Zeit sparen, die sie ansonsten mit manuellen, fehleranfälligen Prozessen verbringen würden.",
+      "usage_steps": [
+        "Öffnen Sie die JSON Merger Seite auf der Website und klicken Sie auf den Button 'JSON-Objekte hochladen'.",
+        "Wählen Sie die JSON-Dateien aus, die Sie zusammenführen möchten, oder fügen Sie die JSON-Strings direkt in die bereitgestellten Eingabefelder ein.",
+        "Wählen Sie den Merge-Modus aus, den Sie verwenden möchten. Mögliche Optionen sind 'Überschreiben', 'Zusammenführen' und 'Tiefen-Merging'.",
+        "In den erweiterten Einstellungen können Sie zusätzliche Optionen konfigurieren, wie z.B. das Verhalten bei kollidierenden Schlüsseln oder das Formatierung des resultierenden JSON-Objekts.",
+        "Klicken Sie auf den Button 'Merge ausführen'. Das Tool verarbeitet die JSON-Objekte und zeigt das resultierende, zusammengeführte JSON-Objekt an.",
+        "Sie können das resultierende JSON-Objekt direkt in der Vorschau sehen oder es als JSON-Datei herunterladen, indem Sie auf den Button 'Als JSON herunterladen' klicken."
+      ],
+      "usage_examples": [
+        "Ein Entwickler arbeitet an einer Anwendung, die Daten von mehreren APIs abruft. Jede API liefert Daten in unterschiedlichen JSON-Strukturen. Mit dem JSON Merger kann der Entwickler diese Daten automatisch zu einer konsistenten JSON-Struktur zusammenführen, die in der Anwendung verwendet werden kann.",
+        "Ein Data Scientist kombiniert Daten aus verschiedenen Experimenten, die in JSON-Format vorliegen. Durch das Tiefen-Merging von JSON-Objekten kann der Data Scientist sicherstellen, dass die Datenstruktur konsistent bleibt und alle relevanten Informationen bereitgestellt werden.",
+        "Ein Backend-Entwickler macht eine REST-API, die Daten aus mehreren Datenbanken aggregiert. Indem er den JSON Merger verwendet, kann er die Daten aus verschiedenen Quellen in ein einziges, zusammengeführtes JSON-Objekt transformieren, das dann an die Client-Anwendung zurückgegeben wird.",
+        "Ein Software-Architekt integriert eine Microservice-Architektur, bei der verschiedene Dienste in JSON-Format Daten ausgeben. Mit dem JSON Merger kann er diese JSON-Antworten zu einem einzelnen, konsistenten JSON-Objekt zusammenführen, das für die nächste Verarbeitungschritte oder die Endnutzer bereitgestellt wird."
+      ]
+    },
+    "ru": {
+      "detailed_description": "JSON Merger — это мощный инструмент, предназначенный для объединения нескольких JSON-объектов с использованием различных стратегий. Он позволяет разработчикам и специалистам по данным эффективно сливать JSON-данные, обеспечивая при этом точность и гибкость. JSON Merger поддерживает несколько методов объединения, таких как слияние с перезаписью дублирующихся ключей, слияние с сохранением всех значений и слияние с добавлением новых ключей. Это особенно полезно в сценариях, где требуется объединение конфигурационных файлов, объединение данных из различных источников или создание сложных структур данных для дальнейшей обработки. Инструмент работает, принимая на вход несколько JSON-строк, анализируя их структуру, и затем применяя выбранную стратегию слияния. Результатом является единый JSON-объект, который можно использовать для дальнейших операций. JSON Merger обеспечивает поддержку всех стандартных типов данных JSON, включая объекты, массивы, строки, числа и булевые значения, что делает его универсальным решением для широкого спектра задач.",
+      "usage_steps": [
+        "Шаг 1: Откройте страницу JSON Merger на веб-сайте инструментов разработчика.",
+        "Шаг 2: В разделе 'JSON Input' введите или загрузите JSON-объекты, которые вы хотите объединить. Вы можете ввести до пяти JSON-объектов.",
+        "Шаг 3: Выберите стратегию слияния из выпадающего списка 'Merge Strategy'. Доступные опции: 'Overwrite Duplicates' (перезапись дублирующихся ключей), 'Preserve All Values' (сохранение всех значений) и 'Append New Keys' (добавление новых ключей).",
+        "Шаг 4: Нажмите кнопку 'Merge JSON' для начала процесса слияния. Инструмент автоматически проанализирует структуру ваших JSON-объектов и применит выбранную стратегию.",
+        "Шаг 5: После завершения слияния, результат будет отображен в разделе 'Merged JSON'.",
+        "Шаг 6: Скопируйте объединенный JSON-объект и используйте его по назначению, например, для дальнейшей обработки или интеграции в ваш проект."
+      ],
+      "usage_examples": [
+        "Пример 1: Объединение конфигурационных файлов. Представьте, что у вас есть несколько JSON-файлов с настройками для разных сред (разработка, тестирование, продакшн). Используя JSON Merger, вы можете объединить эти файлы, при этом перезаписывая дублирующиеся ключи для получения единого конфигурационного файла.",
+        "Пример 2: Объединение данных из API. Вы используете несколько API для получения данных, и каждый API возвращает JSON-ответ. Используя JSON Merger с опцией 'Preserve All Values', вы можете объединить все ответы в один JSON-объект, сохраняя все значения, даже если они дублируются.",
+        "Пример 3: Создание сложных структур данных. При разработке веб-приложения вам может потребоваться создать сложную структуру данных, kombинируя данные из разных источников. JSON Merger с опцией 'Append New Keys' позволит вам добавлять новые ключи в существующие JSON-объекты, создавая единую структуру.",
+        "Пример 4: Интеграция данных из разных баз данных. Если у вас есть данные из нескольких баз данных, которые нужно объединить в один JSON-объект для последующей обработки, JSON Merger с опцией 'Overwrite Duplicates' поможет вам объединить данные, при этом перезаписывая дублирующиеся ключи."
+      ]
+    }
+  }
+}

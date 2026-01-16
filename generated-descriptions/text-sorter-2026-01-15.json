@@ -1,0 +1,175 @@
+{
+  "slug": "text-sorter",
+  "descriptions": {
+    "en": {
+      "detailed_description": "Text Sorter is a robust online utility designed to streamline the process of organizing text data. This tool allows users to sort lines of text based on various criteria, including alphabetical order, numerical order, and length. The versatility of Text Sorter makes it an indispensable resource for a wide range of applications, from data preparation and cleaning to generating well-structured content. For instance, developers can use it to sort log files, ensuring that error messages are easy to locate. Content creators can organize lists of items or titles in a logical sequence, enhancing readability. The tool supports multiple sorting options, such as case sensitivity, reverse order, and unique line filtering, which can be crucial for data integrity and consistency. Under the hood, Text Sorter employs efficient sorting algorithms to handle large datasets quickly and accurately, making it a powerful addition to any text processing toolkit.",
+      "usage_steps": [
+        "Step 1: Open the Text Sorter tool and locate the main text input area.",
+        "Step 2: Copy and paste your text into the input area. Each line of text should be separated by a newline character.",
+        "Step 3: Choose the sorting method from the dropdown menu. Options include Alphabetical, Numerical, and Length.",
+        "Step 4: Configure additional sorting options as needed. For example, select 'Case Sensitive' to maintain the original case of the text during sorting, or check 'Reverse Order' to sort in descending order.",
+        "Step 5: Click the 'Sort' button to process your text. The tool will apply the selected sorting criteria and display the sorted text in the output area.",
+        "Step 6: Review the sorted text in the output area. If necessary, you can copy the sorted text and paste it into your desired application or document."
+      ],
+      "usage_examples": [
+        "Example 1: A developer needs to sort a list of error codes in a log file to identify and prioritize issues. By using Text Sorter with the Numerical sorting method, they can quickly organize the codes and focus on critical errors first.",
+        "Example 2: A content creator is preparing a list of product features for a marketing campaign. Using Text Sorter with the Alphabetical sorting method, they can ensure that the features are presented in a logical and consistent order, enhancing the readability of the content.",
+        "Example 3: A data analyst is working with a dataset containing a list of cities and their populations. To better understand the distribution, they use Text Sorter with the Numerical sorting method to sort the cities by population size, from smallest to largest.",
+        "Example 4: A writer is compiling a bibliography for a research paper. By using Text Sorter with the Alphabetical sorting method and the 'Case Sensitive' option, they can organize the references in a precise and professional format, adhering to academic standards."
+      ]
+    },
+    "zh": {
+      "detailed_description": "Text Sorter 是一款强大的文本处理工具，专为需要对大量文本行进行排序的用户设计。它支持按字母顺序、数值顺序或行长度进行排序，并提供了多种排序选项，如升序、降序、忽略大小写等。通过这些功能，用户可以轻松地整理和分析文本数据，提高工作效率。例如，开发人员可以使用 Text Sorter 对代码片段进行排序，以确保代码的一致性和可读性；数据分析师可以对数据列表进行排序，以便更好地理解数据分布和趋势。此外，Text Sorter 还支持自定义分隔符，使得处理复杂文本格式变得更加灵活。通过输入原始文本，选择排序方式和选项，用户可以立即获得排序后的文本结果。",
+      "usage_steps": [
+        "Step 1: 打开 Text Sorter 工具页面，点击“输入文本”区域，将需要排序的文本粘贴到输入框中。",
+        "Step 2: 在“排序方式”下拉菜单中选择排序类型，如“字母顺序”、“数值顺序”或“行长度”。",
+        "Step 3: 选择“排序方向”，可以是“升序”或“降序”。",
+        "Step 4: 如果需要，勾选“忽略大小写”选项，以便在排序时忽略文本的大小写差异。",
+        "Step 5: 如果文本使用了特定的分隔符，可以在“自定义分隔符”输入框中指定分隔符。",
+        "Step 6: 点击“排序”按钮，Text Sorter 将根据选择的选项对文本进行排序，并在结果区域显示排序后的文本。"
+      ],
+      "usage_examples": [
+        "Example 1: 一位开发人员需要整理一个包含多个函数定义的代码文件，使用 Text Sorter 按字母顺序对函数名进行排序，以确保代码的一致性和可读性。",
+        "Example 2: 一名数据分析师需要对一个包含客户姓名和年龄的列表进行排序，使用 Text Sorter 按年龄数值进行升序排序，以便更好地分析客户年龄分布。",
+        "Example 3: 一家公司的项目经理需要整理一份包含多个任务的待办事项列表，使用 Text Sorter 按任务名称的字母顺序进行排序，以便更清晰地查看任务列表。",
+        "Example 4: 一位作家正在编写一篇小说，需要对小说中出现的所有角色名称进行排序，使用 Text Sorter 按行长度进行降序排序，以便更直观地查看主要角色。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "Text Sorterは、テキストデータをアルファベット順、数値順、または文字数順に並べ替えるための高度なツールです。このツールは、単純なアルファベット順の並べ替えだけでなく、カスタマイズ可能なオプションを提供しており、逆順並べ替えや重複行の除去、大文字・小文字の区別などを自由に設定できます。具体的には、ユーザーは入力されたテキストデータをCSV形式またはスペース区切りで提供し、ソートの基準と方向を選択することで、効率的にデータを整理できます。このツールは、リストの整理、データの分析、テキストファイルのクリーニングなど、さまざまな場面で活用できます。例えば、製品リストの整理、データの重複確認、または一覧表のアルファベット順表示など、具体的なニーズに応じて利用できます。Text Sorterは、高度な並べ替え機能を備えているため、テキスト処理の効率を大幅に向上させることができます。",
+      "usage_steps": [
+        "Step 1: ツールにアクセスし、「テキスト入力」エリアに並べ替えたいテキストデータを貼り付けます。",
+        "Step 2: 「ソートオプション」セクションで、並べ替えの基準（アルファベット順、数値順、文字数順）を選択します。",
+        "Step 3: 必要に応じて、「逆順」チェックボックスをオンにします。これにより、並べ替えの順序が逆になるため、降順での並べ替えが可能です。",
+        "Step 4: 「重複行の除去」チェックボックスをオンにすることで、重複する行を自動的に削除できます。",
+        "Step 5: 「大文字・小文字の区別」チェックボックスをオンにすると、大文字と小文字が区別されます。これをオフにすると、大文字と小文字は同等とみなされます。",
+        "Step 6: 全ての設定が完了したら、「並べ替え実行」ボタンをクリックします。処理が完了したら、結果が「ソート結果」エリアに表示されます。"
+      ],
+      "usage_examples": [
+        "Example 1: 製品リストのアルファベット順ソート - 複数の製品名をアルファベット順に並べ替え、一覧性を高めます。これにより、製品の検索や管理がより容易になります。",
+        "Example 2: データ分析のための数値順ソート - 調査結果の数値データを数値順に並べ替え、グラフ作成や統計分析の準備を進めます。これにより、データの傾向やパターンを把握するのに役立ちます。",
+        "Example 3: テキストファイルのクリーニング - 重複行を除去し、アルファベット順に並べ替えることで、テキストファイルの内容を整理します。これにより、ファイルの読みやすさや管理性が向上します。",
+        "Example 4: グループリストの文字数順ソート - メール配信リストの名前を文字数順に並べ替え、最適な表示順を作成します。これにより、読者にとって見やすく、読みやすいリストを作成できます。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Text Sorter는 텍스트 줄을 알파벳순, 숫자순 또는 길이순으로 정렬할 수 있는 고급 텍스트 처리 도구입니다. 이 도구는 다양한 옵션을 제공하여 사용자가 데이터를 효과적으로 정렬하고 분석할 수 있게 합니다. 사용자는 커스텀 정렬 기준을 설정하거나, 역순 정렬, 대소문자 구분 등을 선택할 수 있습니다. 이 기능은 데이터 정제, 목록 관리, 코드 최적화 등 다양한 분야에서 유용하게 활용될 수 있습니다. 특히, 프로그래머는 소스 코드의 함수 목록을 정렬하여 가독성을 높일 수 있고, 데이터 분석가는 대량의 텍스트 데이터를 효과적으로 관리할 수 있습니다. Text Sorter는 복잡한 정렬 작업을 간단하고 직관적으로 처리할 수 있도록 설계되어 있습니다.",
+      "usage_steps": [
+        "1. Text Sorter 페이지로 이동하여 상단의 '텍스트 입력' 창에 정렬할 텍스트를 붙여넣습니다.",
+        "2. 왼쪽 사이드바에서 '정렬 기준' 메뉴를 열어 '알파벳순', '숫자순', '길이순' 중 하나를 선택합니다.",
+        "3. '옵션' 메뉴에서 '대소문자 구분', '역순 정렬', '중복 제거' 등의 추가 옵션을 선택합니다.",
+        "4. '사용자 정의 정렬' 옵션을 활성화하고, 필요한 경우 커스텀 정렬 기준을 입력합니다.",
+        "5. '정렬' 버튼을 클릭하여 선택한 옵션에 따라 텍스트를 정렬합니다.",
+        "6. 정렬된 결과를 '정렬된 텍스트' 창에서 확인하고, 필요하다면 결과를 복사하여 사용합니다."
+      ],
+      "usage_examples": [
+        "1. 프로그래머가 소스 코드의 함수 목록을 알파벳순으로 정렬하여 코드의 가독성을 높이는 경우",
+        "2. 데이터 분석가가 대량의 텍스트 데이터를 길이순으로 정렬하여 분석에 필요한 데이터를 빠르게 찾는 경우",
+        "3. 웹 개발자가 HTML 태그를 숫자순으로 정렬하여 문서 구조를 체계적으로 관리하는 경우",
+        "4. 기업의 문서 관리자가 회사 내의 정책 문서 목록을 역순으로 정렬하여 가장 최근에 업데이트된 문서를 먼저 표시하는 경우"
+      ]
+    },
+    "es": {
+      "detailed_description": "Text Sorter es una herramienta de procesamiento de texto que permite a los usuarios organizar líneas de texto de acuerdo a diferentes criterios, como orden alfabético, numérico o por longitud. Esta herramienta es invaluable para programadores, analistas de datos y cualquier profesional que maneje grandes volúmenes de texto. Al utilizar Text Sorter, los usuarios pueden mejorar la legibilidad de sus datos, facilitar la búsqueda de información específica y preparar sus datos para análisis posteriores. La herramienta cuenta con múltiples opciones de configuración, como la posibilidad de ignorar mayúsculas y minúsculas, eliminar duplicados y personalizar el delimitador de líneas. Internamente, Text Sorter utiliza algoritmos de ordenación avanzados, como quicksort y mergesort, para garantizar un rendimiento óptimo incluso con conjuntos de datos extensos. Además, la interfaz de usuario es intuitiva y ofrece un feedback inmediato, permitiendo a los usuarios ver los resultados de sus ajustes en tiempo real.",
+      "usage_steps": [
+        "Paso 1: Abre la página de Text Sorter y localiza el área de entrada de texto en la parte superior.",
+        "Paso 2: Pega o escribe el texto que deseas ordenar en el campo de entrada.",
+        "Paso 3: Selecciona el método de ordenación deseado desde el menú desplegable: Alfabético, Numérico o por Longitud.",
+        "Paso 4: Si es necesario, activa las opciones adicionales como 'Ignorar mayúsculas y minúsculas' o 'Eliminar duplicados' usando los botones de opción.",
+        "Paso 5: Configura el delimitador de líneas si tu texto no usa saltos de línea estándar, utilizando el campo de delimitador personalizado.",
+        "Paso 6: Haz clic en el botón 'Ordenar' para procesar tu texto y visualizar el resultado en el área de salida."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Un programador necesita ordenar una lista de nombres de variables en su código para facilitar la revisión. Utiliza Text Sorter para ordenar la lista alfabéticamente y eliminar duplicados.",
+        "Ejemplo 2: Un analista de datos tiene una lista de números que representan ventas mensuales y necesita organizarlos de menor a mayor para crear un gráfico. Usa Text Sorter con la opción de ordenación numérica.",
+        "Ejemplo 3: Un escritor está revisando un documento y quiere ver las palabras más largas primero para mejorar la claridad del texto. Utiliza Text Sorter para ordenar las palabras por longitud.",
+        "Ejemplo 4: Un administrador de sistemas necesita procesar un archivo de logs que contiene múltiples entradas con el mismo mensaje. Utiliza Text Sorter para ordenar las entradas y eliminar duplicados, simplificando así el análisis de los logs."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Text Sorter é uma poderosa ferramenta de processamento de texto que permite aos usuários organizar linhas de texto de acordo com vários critérios, incluindo ordem alfabética, numérica e por tamanho. Esta ferramenta é essencial para quem precisa manipular e organizar grandes volumes de dados de texto de forma eficiente. Por exemplo, desenvolvedores que trabalham com listas de nomes, números ou palavras, podem usar o Text Sorter para garantir que seus dados estejam em uma ordem lógica e fácil de analisar. Além disso, a ferramenta oferece opções avançadas, como a capacidade de ignorar caixa (maiúsculas e minúsculas) e de excluir linhas duplicadas, o que aumenta sua versatilidade e utilidade. O algoritmo de ordenação utilizado é altamente otimizado, garantindo que mesmo listas extensas sejam processadas rapidamente e com precisão. A interface do usuário é intuitiva, permitindo que os usuários selecionem os critérios de ordenação desejados e visualizem os resultados em tempo real.",
+      "usage_steps": [
+        "Acesse a página do Text Sorter no site.",
+        "Na seção 'Texto de Entrada', cole ou digite o texto que deseja organizar.",
+        "Selecione o critério de ordenação na lista suspensa 'Tipo de Ordenação', como 'Alfabética', 'Numérica' ou 'Por Tamanho'.",
+        "Marque a opção 'Ignorar Caixa' se desejar que a ordenação não diferencie entre letras maiúsculas e minúsculas.",
+        "Marque a opção 'Excluir Duplicatas' se quiser remover linhas repetidas do resultado.",
+        "Clique em 'Ordenar' para processar o texto e visualizar o resultado na seção 'Texto Ordenado'."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor precisa organizar uma lista de usuários por nome em ordem alfabética para gerar um relatório de clientes. Ele utiliza o Text Sorter para garantir que a lista esteja perfeitamente ordenada antes de exportá-la.",
+        "Um administrador de sistemas precisa verificar a consistência de um arquivo de configuração que contém uma lista de IPs. Ele usa o Text Sorter para ordenar os IPs numericamente e identificar qualquer duplicação ou inconsistência.",
+        "Um professor de idiomas quer criar um dicionário personalizado para sua turma. Ele usa o Text Sorter para organizar as palavras por tamanho, facilitando a criação de listas de vocabulário por nível de dificuldade.",
+        "Um analista de dados precisa processar uma lista de transações financeiras e organizar os valores em ordem crescente. Ele utiliza o Text Sorter para ordenar os números e facilitar a análise dos dados."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Text Sorter est un outil puissant de traitement de texte en ligne qui permet de trier des lignes de texte de manière alphabétique, numérique ou par longueur, avec une multitude d'options personnalisables. Ce module est conçu pour répondre aux besoins spécifiques des développeurs, des éditeurs de contenu et de toute personne manipulant des données textuelles. Il offre la possibilité de trier les lignes en ordre croissant ou décroissant, d'ignorer les majuscules et minuscules, d'éliminer les doublons, et même de trier en fonction de caractères spécifiques. Les utilisateurs de Text Sorter peuvent manipuler des listes de noms, des ensembles de données numériques, des lignes de code, ou tout autre type de contenu textuel de manière efficiente. Les algorithmes de tri utilisés sont optimisés pour une performance maximale, même avec des ensembles de données volumineux, ce qui en fait un outil indispensable pour la préparation et l'analyse de données.",
+      "usage_steps": [
+        "Ouvrez la page de Text Sorter sur le site web et localisez la zone de texte principale où vous pouvez coller ou saisir le contenu à trier.",
+        "Sélectionnez le type de tri souhaité (alphabétique, numérique, par longueur) à partir du menu déroulant correspondant.",
+        "Choisissez l'ordre de tri (croissant ou décroissant) en cochant la case appropriée.",
+        "Activez ou désactivez l'option 'Ignorer les majuscules/minuscules' en fonction de vos besoins.",
+        "Si nécessaire, cochez la case 'Supprimer les doublons' pour éliminer les lignes en double dans votre texte.",
+        "Cliquez sur le bouton 'Trier' pour appliquer les options sélectionnées et voir le résultat dans la zone de texte de sortie."
+      ],
+      "usage_examples": [
+        "Un développeur souhaite trier une liste de noms d'utilisateurs en ordre alphabétique pour une application web. Il utilise Text Sorter pour organiser les noms de manière cohérente et améliorer l'expérience utilisateur.",
+        "Un analyste de données a un fichier CSV contenant des valeurs numériques et doit les trier par ordre croissant pour une analyse statistique. Text Sorter permet d'effectuer ce tri rapidement et sans erreurs.",
+        "Un éditeur de contenu a une liste de titres d'articles et veut s'assurer qu'il n'y a pas de doublons. Grâce à l'option 'Supprimer les doublons', il peut nettoyer sa liste de manière efficace.",
+        "Un enseignant prépare une liste d'étudiants pour une cérémonie de remise de diplômes et souhaite trier les noms par longueur pour une mise en page harmonieuse. Text Sorter offre la flexibilité nécessaire pour trier les noms selon cette critère spécifique."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Text-Sortierer ist ein leistungsstarkes Werkzeug zur Anordnung von Textzeilen in verschiedenen Modi. Technisch gesehen nimmt das Tool eine Mehrzahl von Textzeilen entgegen und sortiert sie entweder alphabetisch, numerisch oder nach der Zeilenlänge. Dabei bietet es erweiterte Optionen, wie das Invertieren der Sortierreihenfolge oder das Ignorieren von Groß- und Kleinschreibung. Diese Vielseitigkeit macht das Tool zu einem unverzichtbaren Werkzeug für Entwickler, die strukturierte Textdaten benötigen. Typische Anwendungen umfassen die Sortierung von Schlüsseln in JSON-Dateien, die Anordnung von Listen in Konfigurationsdateien oder die Konsistenzprüfung von Datenbeständen. Durch die direkte Webanwendung können Nutzer ihre Textdaten ohne Installation zusätzlicher Software verarbeiten, was die Effizienz und den Fluss ihrer Arbeit erheblich verbessert. Die benutzerdefinierten Sortierungsoptionen ermöglichen es, komplexe Anforderungen an die Textverarbeitung zu erfüllen, was das Tool zu einem wertvollen Werkzeug für eine Vielzahl von Anwendungsfällen macht.",
+      "usage_steps": [
+        "Öffnen Sie die Text-Sortierer-Seite auf unserer Website.",
+        "Kopieren Sie den Text, den Sie sortieren möchten, und fügen Sie ihn in das Eingabefeld ein.",
+        "Wählen Sie im Dropdown-Menü den gewünschten Sortiermodus: Alphabetisch, Numerisch oder nach Länge.",
+        "Aktivieren Sie das Kontrollkästchen 'Groß- und Kleinschreibung ignorieren', wenn Sie eine case-insensitive Sortierung durchführen möchten.",
+        "Falls gewünscht, aktivieren Sie das Kontrollkästchen 'Reihenfolge invertieren', um die Sortierreihenfolge zu kippen.",
+        "Klicken Sie auf den Button 'Sortieren', und das Tool gibt Ihnen den sortierten Text im Ausgabefeld an."
+      ],
+      "usage_examples": [
+        "Ein Entwickler möchte die Schlüssel einer JSON-Datei alphabetisch sortieren, um die Lesbarkeit und Konsistenz der Datei zu verbessern. Er fügt die Schlüssel in das Eingabefeld ein, wählt 'Alphabetisch' und ignoriert Groß- und Kleinschreibung, dann klickt er auf 'Sortieren'.",
+        "Ein Datenwissenschaftler muss eine Liste von numerischen Werten in aufsteigender Reihenfolge anordnen. Er kopiert die Zahlen in das Eingabefeld, wählt 'Numerisch' und klickt auf 'Sortieren'.",
+        "Ein Content-Manager möchte eine Liste von Produktnamen nach der Zeilenlänge sortieren, um die Anordnung auf einer Website zu optimieren. Er fügt die Namen in das Eingabefeld ein, wählt 'Nach Länge' und klickt auf 'Sortieren'.",
+        "Ein IT-Administrator muss eine Konfigurationsdatei überprüfen, in der die Einträge in einer bestimmten Reihenfolge stehen müssen. Er fügt die Einträge in das Eingabefeld ein, wählt 'Alphabetisch' und aktiviert 'Reihenfolge invertieren', um eine absteigende Sortierung durchzuführen, dann klickt er auf 'Sortieren'."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Text Sorter — мощный инструмент для обработки текстовых данных, который позволяет пользователям сортировать строки текста по различным критериям. Технически, этот инструмент поддерживает сортировку строк текста алфавитно, численно и по длине строк. Кроме того, он предлагает дополнительные опции, такие как игнорирование регистра, сортировка в обратном порядке и удаление дубликатов. Эти функции делают Text Sorter незаменимым инструментом для разработчиков, аналитиков и других специалистов, работающих с текстовыми данными. Например, разработчики могут использовать этот инструмент для сортировки списков переменных или функций, аналитики — для проверки данных на наличие дубликатов, а авторы — для организации контента. Сортировка текста помогает улучшить читабельность и организацию данных, что особенно важно при работе с большими объемами информации. Инструмент работает на основе алгоритмов сортировки, таких как сортировка слиянием (merge sort) или быстрая сортировка (quick sort), обеспечивая эффективную и быструю обработку текстовых данных.",
+      "usage_steps": [
+        "Откройте страницу инструмента Text Sorter на сайте.",
+        "В поле ввода введите или вставьте текст, который нужно сортировать.",
+        "Выберите метод сортировки: 'Алфавитный порядок', 'Численный порядок' или 'По длине'.",
+        "Если необходимо, установите дополнительные опции, такие как 'Игнорировать регистр', 'Сортировать в обратном порядке' и 'Удалить дубликаты'.",
+        "Нажмите кнопку 'Сортировать', чтобы применить выбранные настройки и получить отсортированный текст.",
+        "Скопируйте отсортированный текст из поля вывода и используйте его по назначению."
+      ],
+      "usage_examples": [
+        "Преподаватель может использовать Text Sorter для сортировки списка студентов по алфавиту, чтобы облегчить организацию классного журнала.",
+        "Разработчик может сортировать список функций или переменных в коде по алфавиту, чтобы улучшить его структуру и читаемость.",
+        "Аналитик может использовать инструмент для сортировки данных по численному значению, чтобы быстро найти максимальные и минимальные значения в наборе данных.",
+        "Автор может сортировать строки текста по длине, чтобы организовать стихотворение или текстовую композицию в определенном порядке, улучшая его структуру и визуальное восприятие."
+      ]
+    },
+    "ar": {
+      "detailed_description": "آلة الفرز النصي هي أداة متقدمة تتيح للمستخدمين فرز السطور النصية بالترتيب الأبجدي، العددي، أو حسب الطول، مع مجموعة متنوعة من الخيارات المخصصة. تأتي هذه الأداة مفيدة بشكل خاص للمطورين والكتاب والمحللين الذين يحتاجون إلى تنظيم البيانات النصية بطرق محددة لتحسين الفهم والتحليل. على سبيل المثال، يمكن استخدامها لفرز قوائم الكلمات المفتاحية حسب الترتيب الأبجدي لتسهيل البحث، أو لفرز الأرقام حسب القيمة العددية لتحليل البيانات المالية. تتميز الأداة بواجهة مستخدم بسيطة وقوية تدعم تحميل النصوص من ملفات أو إدخالها يدويًا، مع خيارات فرز مفصلة مثل تجاهل الحروف الصغيرة والعليا، فرز السطور الفارغة، والتحكم في ترتيب الفرز (تصاعدي أو تنازلي). بالإضافة إلى ذلك، يمكن للمستخدمين حفظ النتائج في ملفات نصية أو نسخها مباشرة إلى الحافظة للاستخدام في تطبيقات أخرى.",
+      "usage_steps": [
+        "افتح أداة الفرز النصي من قسم معالجة النص على الموقع.",
+        "انقر على زر 'تحميل الملف' لاختيار ملف النص الذي تريد فرزه أو حدد خيار 'إدخال النص يدويًا' للكتابة مباشرة في المربع المخصص.",
+        "حدد نوع الفرز المرغوب من القائمة المنسدلة: 'أبجدي'، 'عددي'، أو 'بتقديم الطول'.",
+        "قم بضبط الخيارات المتقدمة حسب احتياجاتك، مثل 'تجاهل الحروف الصغيرة والعليا'، 'فرز السطور الفارغة'، و'الترتيب (تصاعدي أو تنازلي)'.",
+        "انقر على زر 'فرز' لتنفيذ العملية ومشاهدة النتائج في المربع المجاور.",
+        "حفظ النتائج بتنسيق النص العادي أو نسخها إلى الحافظة لاستخدامها في تطبيقات أخرى."
+      ],
+      "usage_examples": [
+        "فرز قائمة الكلمات المفتاحية لمحرك البحث: يمكن للمarketers استخدام هذه الأداة لفرز قائمة طويلة من الكلمات المفتاحية حسب الترتيب الأبجدي لتسهيل المراجعة والتحليل.",
+        "تنظيم قائمة الأسماء للمراسلات: يمكن للمديرين استخدام الأداة لفرز قائمة الأسماء حسب الترتيب الأبجدي لتسهيل إرسال رسائل البريد الإلكتروني أو الرسائل.",
+        "تحليل البيانات المالية: يمكن للمحللين الماليين فرز الأرقام حسب القيمة العددية لتحديد الاتجاهات المالية بشكل أكثر فعالية.",
+        "تحضير قائمة مراجع الكتب: يمكن للمؤلفين أو الباحثين فرز قائمة مراجع الكتب حسب الأحرف الأولى من الأسماء أو العناوين لتحسين التنسيق والمظهر النهائي."
+      ]
+    }
+  }
+}

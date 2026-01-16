@@ -1,0 +1,175 @@
+{
+  "slug": "terms-generator",
+  "descriptions": {
+    "en": {
+      "detailed_description": "The Terms of Service Generator is a robust, web-based application designed to assist developers, content creators, and website owners in crafting comprehensive and legally sound terms of service (ToS) documents. This tool leverages a sophisticated algorithm that integrates various legal frameworks and compliance standards to ensure that the generated ToS is tailored to the specific needs of the user's website. By inputting relevant details about the website's functionalities, user interactions, and data handling practices, the tool generates a document that covers essential aspects such as user conduct, intellectual property rights, liability disclaimers, and dispute resolution mechanisms. This ensures that website operators are protected from potential legal issues and that users are clearly informed of the rules and conditions under which they can interact with the site. The tool's backend is built using a combination of natural language processing (NLP) and machine learning (ML) models, which analyze the input data to produce a document that is both legally robust and user-friendly.",
+      "usage_steps": [
+        "Step 1: Navigate to the Terms of Service Generator tool on the website and click on 'Start Generating' to begin the process.",
+        "Step 2: In the 'Website Information' section, provide a detailed description of your website, including its name, purpose, and the types of user interactions it supports.",
+        "Step 3: Move to the 'Data Handling' section and specify how your website collects, uses, and protects user data, including any third-party services you may integrate.",
+        "Step 4: Proceed to the 'User Conduct' section and outline the rules and guidelines for user behavior on your site, including prohibited activities and consequences for violations.",
+        "Step 5: Review the 'Legal Compliance' section to ensure that your ToS aligns with relevant laws and regulations, such as GDPR, CCPA, and other regional data protection acts.",
+        "Step 6: Once all sections are completed, click 'Generate ToS' to produce the final document. Review the generated ToS for accuracy and completeness, and then download it for use on your website."
+      ],
+      "usage_examples": [
+        "Example 1: A freelance web developer is creating a portfolio website to showcase their projects and services. They use the Terms of Service Generator to create a ToS that includes clauses on intellectual property rights, user conduct, and liability disclaimers to protect their work and ensure a clear understanding with potential clients.",
+        "Example 2: An e-commerce platform needs a robust ToS to cover a wide range of user interactions, including product purchases, shipping policies, and return procedures. The Terms of Service Generator helps them draft a comprehensive document that complies with consumer protection laws and industry standards.",
+        "Example 3: A social media startup wants to establish a clear set of community guidelines to foster a positive and safe environment. They use the tool to generate a ToS that includes detailed sections on user conduct, content moderation, and data privacy, ensuring that their platform is both user-friendly and legally compliant.",
+        "Example 4: A tech blog requires a ToS to inform readers about the site's terms of use, copyright policies, and comment guidelines. The Terms of Service Generator provides a customizable template that can be easily tailored to the blog's specific needs, helping to prevent misuse and ensure a positive user experience."
+      ]
+    },
+    "zh": {
+      "detailed_description": "条款生成器（Terms of Service Generator）是一款专为网站开发者设计的工具，旨在帮助他们快速生成符合法律要求的条款和条件。该工具通过集成先进的自然语言处理和法律知识库，能够根据用户提供的网站信息和业务需求，自动生成定制化的条款文档。生成的条款涵盖了网站使用条件、用户权利与义务、隐私政策等内容，确保网站在法律上合规，减少潜在的法律风险。对于初创企业、小型网站和个人博客来说，使用条款生成器可以大幅节省时间成本，避免因条款不合规而引发的法律纠纷。",
+      "usage_steps": [
+        "打开条款生成器页面，点击“开始生成”按钮。",
+        "在“网站基本信息”部分，填写您的网站名称、网址和业务类型。",
+        "在“用户条款”部分，选择适用的用户条款模块，如注册条款、使用条款、禁止行为等。",
+        "在“隐私政策”部分，选择隐私政策模块，如数据收集、数据使用、数据保护等。",
+        "在“高级选项”部分，添加自定义条款或删除不需要的条款模块。",
+        "点击“生成条款”按钮，系统将生成完整的条款文档，您可以下载并查看。"
+      ],
+      "usage_examples": [
+        "张三是一位独立开发者，正在创建一个个人博客。他需要一个简单的条款文档来保护自己的版权和用户数据。使用条款生成器，他可以轻松生成包含基本条款和隐私政策的文档。",
+        "李四是一家初创企业的创始人，正在开发一个在线教育平台。他需要一个详细的条款文档，涵盖用户注册、课程购买、版权保护等内容。使用条款生成器，他可以根据平台需求选择合适的条款模块，生成全面的条款。",
+        "王五是一名律师，他希望为客户提供一个标准的网站条款模板，以供客户参考和使用。使用条款生成器，他可以生成多个不同类型的条款文档，供客户选择和修改。",
+        "赵六是一位互联网创业者，正在运营一个电子商务网站。他需要一个条款文档来规范用户的购买行为和退换货政策。使用条款生成器，他可以生成包含购买条款、退换货政策等内容的条款文档，确保网站运营的合规性和用户权益。"
+      ]
+    },
+    "ja": {
+      "detailed_description": "「Terms of Service Generator」は、ウェブサイトの利用規約を自動生成する無料オンラインツールです。このツールは、ウェブサイト運営者の法的リスクを軽減し、ユーザーとの間で明確な契約関係を構築するために設計されています。具体的には、利用規約にはユーザーの行為規範、プライバシーポリシー、著作権に関する規定、免責事項などが含まれます。ユーザーは自分のウェブサイトの具体的な状況に応じて、必要な項目を選択し、カスタマイズすることができます。生成された利用規約は、HTML、PDF、またはテキスト形式でダウンロード可能で、ウェブサイトに簡単に統合できます。このツールは、ウェブ開発者やサイト管理者が法的文書の作成に時間を費やすことなく、迅速に適切な利用規約を導入できるように支援します。",
+      "usage_steps": [
+        "1. 「Terms of Service Generator」のウェブページにアクセスし、「新規プロジェクト」ボタンをクリックします。",
+        "2. 「基本情報」セクションで、ウェブサイトの名前、運営者の名前、連絡先情報を入力します。",
+        "3. 「利用規約項目」タブで、必要に応じて各項目を選択します。例えば、「利用規約の範囲」、「ユーザーの行為規範」、「プライバシーポリシー」などから選択します。",
+        "4. 「カスタマイズ」セクションで、選択した各項目の詳細設定を行います。例えば、特定のユーザーの行動を禁止する条項や、特定の免責事項を追加できます。",
+        "5. 「プレビュー」ボタンをクリックし、生成された利用規約の内容を確認します。必要に応じて、編集を行います。",
+        "6. 最終的な内容に満足したら、「ダウンロード」ボタンをクリックし、利用規約をHTML、PDF、またはテキスト形式で保存します。"
+      ],
+      "usage_examples": [
+        "Example 1: オンラインストアの運営者は、商品の返品ポリシーや支払い方法、ユーザーの利用規約を明確に定めるために、このツールを使用して利用規約を生成します。",
+        "Example 2: ブログ運営者は、コメントの管理や著作権に関する規定を設けるために、このツールを使用し、独自の利用規約を作成します。",
+        "Example 3: SaaSプロバイダーは、サービスの利用条件や免責事項を詳細に定めるために、このツールを使用して利用規約をカスタマイズします。",
+        "Example 4: フリーランスのウェブデベロッパーは、クライアントとの契約に利用規約を含めるために、このツールを使用して迅速に適切な文書を作成します。"
+      ]
+    },
+    "ko": {
+      "detailed_description": "Terms of Service Generator는 웹사이트를 운영하는 개발자와 사업자들이 전문적인 이용약관을 생성하는 데 필요한 도구입니다. 이 도구는 다양한 법적 요구 사항을 충족시키는 내용을 자동으로 생성하여, 사용자가 법적인 문제를 피하고 사용자와의 신뢰를 구축할 수 있도록 설계되었습니다. 특히, 데이터 보호, 지적 재산권, 사용자의 권리와 의무, 서비스의 제한사항 등과 같은 중요한 항목들을 포함하여, 웹사이트의 성격과 규모에 맞는 이용약관을 제공합니다. 사용자는 간단한 질문에 답하는 과정을 통해, 필요한 내용을 선택하고, 최종 결과물은 PDF 또는 HTML 형태로 다운로드할 수 있습니다. 이 도구는 법적 조언을 대체하지 않지만, 전문적인 이용약관을 쉽게 생성할 수 있는 첫 단계로 사용할 수 있습니다.",
+      "usage_steps": [
+        "Step 1: 'Terms of Service Generator' 페이지에 접속합니다. 상단 메뉴의 'Generators' 카테고리에서 'Terms of Service Generator'를 클릭합니다.",
+        "Step 2: 'Website Information' 섹션에서 웹사이트의 이름, URL, 연락처 정보를 입력합니다. 이 정보는 이용약관의 기본 부분에 사용됩니다.",
+        "Step 3: 'Legal Requirements' 섹션에서 웹사이트가 준수해야 하는 법적 요구 사항을 선택합니다. 예를 들어, GDPR, CCPA 등의 개인정보 보호 규정을 체크박스로 선택할 수 있습니다.",
+        "Step 4: 'Content Sections' 섹션에서 이용약관에 포함할 항목을 선택합니다. 각 항목에는 간단한 설명이 제공되므로, 필요한 항목을 체크합니다.",
+        "Step 5: 'Custom Clauses' 섹션에서 추가로 포함하고자 하는 특수한 조항을 입력합니다. 이 섹션은 웹사이트의 독특한 특징을 반영하는 데 유용합니다.",
+        "Step 6: 'Generate Document' 버튼을 클릭하여 최종 결과물을 생성합니다. 생성된 이용약관은 PDF 또는 HTML 형태로 다운로드할 수 있습니다."
+      ],
+      "usage_examples": [
+        "Example 1: 온라인 쇼핑몰을 운영하는 사업자는 GDPR 준수를 위한 개인정보 처리 방침을 포함하여 이용약관을 생성할 수 있습니다. 이는 유럽 연합 국가에서의 사용자를 대상으로 하는 경우 특히 중요합니다.",
+        "Example 2: 무료 블로그 플랫폼을 운영하는 개발자는 사용자의 지적 재산권 보호와 서비스의 책임 제한을 명시하는 이용약관을 생성할 수 있습니다. 이는 사용자들이 안심하고 플랫폼을 이용할 수 있도록 합니다.",
+        "Example 3: 프리랜서 디자이너는 클라이언트와의 계약을 위해 이용약관을 생성할 수 있습니다. 이는 프로젝트의 범위, 지불 조건, 지적 재산권 이전 등을 명확히 할 수 있습니다.",
+        "Example 4: 개발자 커뮤니티 포럼을 운영하는 기관은 사용자의 행동 규정과 서비스 이용 제한을 포함하는 이용약관을 생성할 수 있습니다. 이는 커뮤니티의 건전한 운영을 유지하는 데 도움이 됩니다."
+      ]
+    },
+    "es": {
+      "detailed_description": "El Generador de Términos de Servicio es una herramienta poderosa diseñada para ayudar a los desarrolladores y propietarios de sitios web a crear documentos legales robustos y personalizados para sus plataformas. Técnicamente, esta herramienta utiliza un conjunto de plantillas predefinidas y algoritmos avanzados para generar Términos de Servicio que cumplen con las normativas legales vigentes y se adaptan a las necesidades específicas de cada sitio web. Los usuarios pueden personalizar aspectos como la política de privacidad, la responsabilidad, los derechos de uso y el comportamiento de los usuarios, entre otros. La importancia de contar con un documento de Términos de Servicio no puede subestimarse, ya que proporciona una capa de protección legal para los propietarios de sitios web, clarifica las expectativas de los usuarios y ayuda a prevenir conflictos legales. La herramienta es especialmente útil para startups, pequeñas empresas y desarrolladores independientes que necesitan un documento legal de alta calidad sin incurrir en costos elevados de abogados especializados. El proceso de generación es sencillo y eficiente, lo que permite a los usuarios obtener un documento listo para usar en cuestión de minutos.",
+      "usage_steps": [
+        "Paso 1: Accede al Generador de Términos de Servicio desde la categoría de generadores en nuestro sitio web.",
+        "Paso 2: Selecciona el tipo de sitio web para el que estás generando los Términos de Servicio (por ejemplo, comercio electrónico, blog, plataforma de contenido, etc.).",
+        "Paso 3: Rellena el formulario detallado con información relevante sobre tu sitio web, incluyendo detalles de contacto, políticas de privacidad, términos de uso y responsabilidades.",
+        "Paso 4: Personaliza las secciones del documento según tus necesidades específicas, utilizando las opciones de edición avanzada proporcionadas en la interfaz de usuario.",
+        "Paso 5: Revisa el documento generado para asegurarte de que toda la información es precisa y completa. Puedes hacer ajustes adicionales si es necesario.",
+        "Paso 6: Descarga el documento final en formato PDF o DOCX y publícalo en tu sitio web para que los usuarios puedan acceder a él fácilmente."
+      ],
+      "usage_examples": [
+        "Ejemplo 1: Una startup de comercio electrónico necesita crear Términos de Servicio que incluyan políticas de devolución, pagos seguros y responsabilidades del vendedor. Utiliza el Generador de Términos de Servicio para configurar estas secciones y asegurarse de que están en conformidad con las leyes de protección al consumidor.",
+        "Ejemplo 2: Un blog personal que publica contenido regularmente sobre tecnología y gadgets necesita un documento que defina los derechos de autor, el uso de imágenes y la responsabilidad del contenido generado por los usuarios en comentarios. El generador facilita la creación de un documento personalizado que aborda estos aspectos.",
+        "Ejemplo 3: Una plataforma de contenido interactivo para educación en línea requiere Términos de Servicio que establezcan las reglas de comportamiento de los estudiantes, la privacidad de los datos y las condiciones de acceso al contenido. El generador permite configurar estas políticas de manera eficiente y precisa.",
+        "Ejemplo 4: Un desarrollador independiente que ofrece servicios de hosting necesita un documento legal que cubra la responsabilidad en caso de caídas del servidor, la política de uso de recursos y las condiciones de contratación. El Generador de Términos de Servicio ayuda a crear un documento que proteja tanto al proveedor como a los clientes."
+      ]
+    },
+    "pt": {
+      "detailed_description": "O Terms of Service Generator é uma ferramenta de geração automatizada de termos de serviço, essenciais para qualquer site ou aplicação que coleta dados dos usuários ou oferece serviços online. Técnica e juridicamente, os termos de serviço (ToS) estabelecem as regras e condições que os usuários devem aceitar para usar o serviço. A ferramenta utiliza algoritmos de geração de texto baseados em Inteligência Artificial (IA) para criar documentos personalizados, considerando as necessidades específicas do site, como a coleta de dados, proteção de privacidade, responsabilidade e limitações de uso. Além disso, o Terms of Service Generator permite a incorporação de cláusulas legais relevantes, garantindo que o documento esteja em conformidade com as leis de proteção de dados vigentes, como o GDPR (Regulamento Geral de Proteção de Dados) e a LGPD (Lei Geral de Proteção de Dados) no Brasil. Usuários podem personalizar seções e ajustar o tom do documento, tornando-o adequado para diferentes públicos e contextos legais.",
+      "usage_steps": [
+        "Acesse a seção 'Terms of Service Generator' no menu principal do site.",
+        "Preencha o formulário inicial com informações básicas sobre seu site, incluindo nome, domínio e tipo de serviço oferecido.",
+        "Escolha as seções específicas que deseja incluir no seu Termo de Serviço, como 'Coleta de Dados', 'Responsabilidade' e 'Limitações de Uso'.",
+        "Revise as cláusulas legais sugeridas e faça ajustes personalizados, adicionando ou removendo conteúdo conforme necessário.",
+        "Pré-visualize o documento gerado para garantir que ele atenda às suas necessidades e faça qualquer ajuste final.",
+        "Baixe o Termo de Serviço gerado em formato PDF ou DOCX e publique-o em seu site ou aplicação."
+      ],
+      "usage_examples": [
+        "Um desenvolvedor de um aplicativo de saúde que coleta dados pessoais precisa de um Termo de Serviço robusto para garantir a conformidade com a LGPD e outras leis de proteção de dados.",
+        "Um criador de conteúdo que oferece um site de streaming de vídeos deseja criar um Termo de Serviço que aborde as questões de direitos autorais e uso de conteúdo de terceiros.",
+        "Um pequeno empresário que vende produtos online precisa de um Termo de Serviço que estabeleça claramente as políticas de devolução, reembolso e responsabilidade pelas transações.",
+        "Um administrador de um fórum online quer gerar um Termo de Serviço que inclua regras de conduta para os usuários, moderadores e administradores do fórum."
+      ]
+    },
+    "fr": {
+      "detailed_description": "Le Terms of Service Generator est un outil en ligne conçu pour aider les propriétaires de sites web à créer des conditions d'utilisation personnalisées et juridiquement solides. Techniquement, l'outil utilise des algorithmes basés sur des modèles juridiques standardisés pour générer un document qui couvre les aspects essentiels de la protection juridique, y compris la responsabilité, l'utilisation des contenus, les droits d'auteur, la vie privée et les conditions de service. L'outil est particulièrement utile pour les startups, les développeurs indépendants et les petites entreprises qui n'ont pas les ressources pour engagement d'avocats spécialisés. Les utilisateurs peuvent spécifier des paramètres tels que le type de site web, les services offerts, la juridiction applicable et d'autres détails pertinents. L'outil génère alors un document complet, prêt à être intégré sur le site web. Il est également doté d'une interface utilisateur intuitive qui permet d'ajouter des clauses supplémentaires ou de modifier les clauses existantes, assurant ainsi une flexibilité maximale.",
+      "usage_steps": [
+        "Accédez à la page du Terms of Service Generator en utilisant le lien de navigation.",
+        "Choisissez le type de site web dans la liste déroulante 'Type de Site'. Par exemple, 'E-commerce', 'Blog', 'Application Mobile', etc.",
+        "Spécifiez la juridiction applicable dans le champ 'Juridiction'. C'est le pays ou la région où votre site web est principalement exploité.",
+        "Répondez aux questions supplémentaires proposées par l'outil, telles que l'utilisation des cookies, la politique de confidentialité, et les méthodes de paiement acceptées.",
+        "Revoyez le document généré dans l'aperçu final. Vous pouvez ajouter des clauses supplémentaires ou modifier les clauses existantes en utilisant les options de personnalisation.",
+        "Téléchargez le document final au format PDF ou copiez le code HTML pour l'intégrer directement sur votre site web."
+      ],
+      "usage_examples": [
+        "Une startup de e-commerce souhaite mettre en place des conditions d'utilisation pour protéger ses transactions et ses utilisateurs. L'outil permet de générer rapidement un document conforme aux réglementations locales.",
+        "Un développeur indépendant lançant un blog personnel utilise le Terms of Service Generator pour établir des règles claires sur l'utilisation des contenus et la responsabilité en cas de commentaires inappropriés.",
+        "Une entreprise de services en ligne qui propose des abonnements mensuels utilise l'outil pour créer des conditions d'abonnement détaillées, incluant les politiques de remboursement et les modalités de résiliation.",
+        "Un créateur de contenu sur une plateforme de streaming vidéo utilise le Terms of Service Generator pour définir les règles d'utilisation de ses vidéos, notamment en ce qui concerne le partage et la reproduction."
+      ]
+    },
+    "de": {
+      "detailed_description": "Der Terms of Service Generator ist ein leistungsstarkes Online-Tool, das es Entwicklern und Website-Betreibern ermöglicht, rechtssichere Nutzungsbedingungen für ihre Webseiten zu erstellen. Dieses Tool basiert auf einem fortschrittlichen Algorithmus, der die spezifischen Anforderungen und Best Practices des Internetrechts einbezieht. Der Generator verwendet ein umfangreiches Wissenskorpus, das regelmäßig aktualisiert wird, um die neuesten gesetzlichen Vorschriften und Datenschutzrichtlinien zu berücksichtigen. Durch die Integration von Machine Learning-Techniken analysiert der Generator die Eingabeparameter des Benutzers und erstellt eine maßgeschneiderte Nutzungsbedingung, die sowohl für den Anbieter als auch für den Nutzer verständlich und eindeutig ist. Diese Nutzungsbedingungen sind essentiell, um rechtliche Risiken zu minimieren, Nutzerrechte klar zu definieren und die Nutzungsbedingungen transparent zu gestalten. Der Generator bietet auch die Möglichkeit, zusätzliche Klauseln hinzuzufügen, die spezifisch auf die Bedürfnisse des jeweiligen Projekts abgestimmt sind, wie z.B. Datenschutzbestimmungen, Haftungsausschlüsse oder Bestimmungen zur Urheberrechtsinfringement.",
+      "usage_steps": [
+        "Öffnen Sie die Seite 'Terms of Service Generator' auf unserer Website und klicken Sie auf den Button 'Neue Nutzungsbedingung erstellen'.",
+        "Geben Sie die grundlegenden Informationen über Ihre Website ein, wie z.B. den vollständigen Namen des Anbieters, die URL der Website und die Kontaktinformationen.",
+        "Wählen Sie die relevanten Kategorien aus, die auf Ihre Website zutreffen, wie z.B. 'Datenschutz', 'Haftungsausschluss' oder 'Nutzungsbedingungen'.",
+        "Fügen Sie in den erweiterten Einstellungen spezifische Klauseln hinzu, die für Ihr Projekt relevant sind, wie z.B. Bestimmungen zur Bezahlung, Vertragskündigungen oder Lizenzbedingungen.",
+        "Vorschau und Überprüfen Sie die generierten Nutzungsbedingungen. Nutzen Sie die integrierte Vorschau-Funktion, um sicherzustellen, dass alle Informationen korrekt und vollständig sind.",
+        "Speichern Sie die Nutzungsbedingungen in einem PDF- oder HTML-Format und veröffentlichen Sie sie auf Ihrer Website. Klicken Sie auf 'Nutzungsbedingung herunterladen', um das Dokument zu speichern."
+      ],
+      "usage_examples": [
+        "Ein E-Commerce-Unternehmen, das eine neue Online-Shopping-Plattform startet, verwendet den Terms of Service Generator, um umfassende Nutzungsbedingungen zu erstellen, die die Bezahlung, die Versandbedingungen und die Rückgaberechte klären.",
+        "Ein Blogverleger verwendet das Tool, um Nutzungsbedingungen zu generieren, die die Verantwortlichkeiten der Blogger und die Nutzerrechte im Hinblick auf den Inhalt und die Kommentarfunktion definieren.",
+        "Ein Entwickler, der eine Open-Source-Software-Bibliothek hostet, erstellt mit dem Generator Nutzungsbedingungen, die die Lizenzbestimmungen, die Nutzung der Software und die Haftung für eventuelle Fehlfunktionen regeln.",
+        "Eine Online-Community-Plattform nutzt den Terms of Service Generator, um Nutzungsbedingungen zu erstellen, die den Umgang mit Benutzererzeugtem Inhalt, die Moderationsrichtlinien und die Nutzerverhalten festlegen."
+      ]
+    },
+    "ru": {
+      "detailed_description": "Генератор условий использования (Terms of Service Generator) — это мощный инструмент, созданный для автоматизации процесса разработки юридических документов для веб-сайтов. Он позволяет пользователям быстро и легко создавать профессиональные условия использования, которые соответствуют современным правовым стандартам и требованиям. Этот инструмент особенно полезен для веб-разработчиков, стартапов и бизнес-проектов, которым необходимо обеспечить юридическую защищенность своих онлайн-ресурсов. Генератор использует продвинутые алгоритмы машинного обучения и базы данных правовых шаблонов, чтобы создавать уникальные и персонализированные документы. Пользователи могут настроить различные аспекты условий использования, такие как правила использования контента, ответственность сторон, конфиденциальность данных и условия разрешения споров. В результате генерируется документ, который можно легко интегрировать на веб-сайт или использовать в других юридических целях.",
+      "usage_steps": [
+        "Откройте страницу Генератора условий использования и нажмите кнопку «Начать создание».",
+        "Заполните форму, указав основную информацию о вашем проекте: название сайта, тип деятельности, страну регистрации и другие ключевые данные.",
+        "Выберите нужные разделы для включения в условия использования, такие как «Использование контента», «Ответственность за действия пользователей», «Конфиденциальность данных» и т.д.",
+        "Настройте параметры каждого раздела, добавляя или удаляя конкретные пункты, в зависимости от ваших потребностей и юридических требований.",
+        "Предварительно просмотрите сгенерированный документ, используя встроенную функцию предварительного просмотра, и внесите необходимые правки, если требуется.",
+        "Скачайте готовый документ в формате PDF или текстовый файл и разместите его на вашем веб-сайте, чтобы пользователи могли ознакомиться с условиями использования."
+      ],
+      "usage_examples": [
+        "Стартап по организации онлайн-курсов: Создание условий использования, которые четко определяют права и обязанности преподавателей и студентов, а также правила разрешения споров в случае конфликтных ситуаций.",
+        "Блогер, ведущий блог о путешествиях: Генерация условий использования, включающих разделы о правах на интеллектуальную собственность, ответственности за пользовательский контент и конфиденциальности данных посетителей.",
+        "Небольшая компания, предоставляющая услуги по разработке приложений: Разработка условий использования, которые описывают процесс заказа и оплаты услуг, гарантийные обязательства и условия использования готовых продуктов.",
+        "Интернет-магазин, торгующий электроникой: Создание условий использования, включающих информацию о возвратах и обменах, безопасности платежей, а также ответственности за качество товара."
+      ]
+    },
+    "ar": {
+      "detailed_description": "أداة مولد شروط الخدمة هي أداة قائمة على الإنترنت مصممة لتوليد وثائق شروط الخدمة القانونية بشكل دقيق وفعال. هذه الأداة تساعد المستخدمين على إنشاء وثائق قانونية مخصصة تغطي جميع الجوانب القانونية المهمة لمشروعات الويب الخاصة بهم. يمكن استخدامها من قبل أصحاب المواقع الصغيرة والمتوسطة، أو المطورين الذين يحتاجون إلى وثيقة قانونية موثوقة لحماية حقوقهم ومصالحهم. الأداة تعتمد على مجموعة من القوالب القانونية التي يمكن تعديلها حسب الاحتياجات الفردية لكل موقع إلكتروني. تستخدم الأداة خوارزميات متقدمة للتحقق من صحة المعلومات المدخلة وضمان الامتثال للقوانين المحلية والدولية.",
+      "usage_steps": [
+        "افتح أداة مولد شروط الخدمة على الموقع الخاص بك.",
+        "في الصفحة الرئيسية، اختر خيار 'إنشاء وثيقة جديدة' من القائمة الرئيسية.",
+        "أدخل معلومات أساسية عن موقعك الإلكتروني، مثل اسم الموقع وعنوانه الإلكتروني ونوع الخدمات المقدمة.",
+        "اختر القالب القانوني المناسب من القائمة المنسدلة 'نوع الوثيقة'. تتوفر قوالب مختلفة لخدمات الويب المختلفة.",
+        "راجع وعدل النص القانوني حسب احتياجاتك الخاصة. يمكنك إضافة أو حذف بنود معينة باستخدام أدوات التحرير المتوفرة.",
+        "بعد الانتهاء من التحرير، اضغط على زر 'تنزيل الوثيقة' لحفظ ملف PDF على جهازك وإمكانية مشاركته أو نشره على موقعك الإلكتروني."
+      ],
+      "usage_examples": [
+        "مالك موقع إلكتروني للتجارة الإلكترونية يريد إنشاء وثيقة شروط الخدمة لضمان حقوق المستخدمين والبائعين وتحديد المسؤوليات القانونية.",
+        "مطور تطبيقات يرغب في إضافة وثيقة شروط الخدمة إلى تطبيقه الجديد لحماية حقوق الملكية الفكرية والبيانات الشخصية للمستخدمين.",
+        "إدارة موقع إلكتروني تعليمي تبحث عن وسيلة سريعة لإنشاء وثيقة قانونية تغطي سياسات الاستخدام والأمان للطلاب والمعلمين.",
+        "شركة تكنولوجيا الناشئة تحتاج إلى وثيقة شروط الخدمة قبل إطلاق منصتها الجديدة لضمان الامتثال للقوانين المحلية والدولية."
+      ]
+    }
+  }
+}

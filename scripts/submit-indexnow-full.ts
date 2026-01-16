@@ -4,9 +4,14 @@
  * IndexNow URL 批量提交脚本（完整版）
  * 动态读取所有工具，支持实时通知 Bing、Yandex 等搜索引擎页面更新
  * 
+ * 新增功能:
+ * - 内容更新后自动触发 IndexNow 通知
+ * - 记录内容质量指标
+ * 
  * 使用方法:
  *   npx tsx scripts/submit-indexnow-full.ts --dry-run    # 测试模式
  *   npx tsx scripts/submit-indexnow-full.ts              # 实际提交
+ *   npx tsx scripts/submit-indexnow-full.ts --log-metrics # 记录质量指标
  */
 
 import * as fs from 'fs';
@@ -23,6 +28,16 @@ const LOCALES = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || '';
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 const BATCH_SIZE = 100;
+const METRICS_DIR = 'reports/metrics';
+
+interface ContentMetrics {
+  timestamp: string;
+  totalUrls: number;
+  successCount: number;
+  failCount: number;
+  toolCount: number;
+  localeCount: number;
+}
 
 // 从 tools.ts 动态读取所有工具 slug
 function loadAllToolSlugs(): string[] {
@@ -136,6 +151,7 @@ function sleep(ms: number): Promise<void> {
 // 主函数
 async function main(): Promise<void> {
   const dryRun = process.argv.includes('--dry-run');
+  const logMetrics = process.argv.includes('--log-metrics');
   
   console.log('');
   console.log('╔════════════════════════════════════════════════════════════╗');
@@ -149,6 +165,7 @@ async function main(): Promise<void> {
   }
   
   const urls = generateAllUrls();
+  const toolSlugs = loadAllToolSlugs();
   console.log(`🔗 生成 URL: ${urls.length} 个`);
   console.log(`📦 模式: ${dryRun ? '测试模式' : '实际提交'}`);
   console.log('');
@@ -178,6 +195,38 @@ async function main(): Promise<void> {
   console.log(`   总 URL: ${urls.length}`);
   console.log(`   ✅ 成功: ${successCount} (${(successCount / urls.length * 100).toFixed(1)}%)`);
   console.log(`   ❌ 失败: ${failCount} (${(failCount / urls.length * 100).toFixed(1)}%)`);
+  
+  // 记录内容质量指标
+  if (logMetrics) {
+    const metrics: ContentMetrics = {
+      timestamp: new Date().toISOString(),
+      totalUrls: urls.length,
+      successCount,
+      failCount,
+      toolCount: toolSlugs.length,
+      localeCount: LOCALES.length,
+    };
+    
+    // 确保目录存在
+    if (!fs.existsSync(METRICS_DIR)) {
+      fs.mkdirSync(METRICS_DIR, { recursive: true });
+    }
+    
+    // 追加到指标文件
+    const metricsFile = path.join(METRICS_DIR, 'indexnow-submissions.json');
+    let existingMetrics: ContentMetrics[] = [];
+    if (fs.existsSync(metricsFile)) {
+      try {
+        existingMetrics = JSON.parse(fs.readFileSync(metricsFile, 'utf-8'));
+      } catch {
+        existingMetrics = [];
+      }
+    }
+    existingMetrics.push(metrics);
+    fs.writeFileSync(metricsFile, JSON.stringify(existingMetrics, null, 2));
+    console.log(`   📈 指标已记录到: ${metricsFile}`);
+  }
+  
   console.log('');
   console.log('✨ 完成!');
 }
