@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphes en Coordonnées Parallèles est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphes en Coordonnées Parallèles pour traiter facilement diverses données sans installer de logiciel ou de plugin. Cet outil possède une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Graphes en Coordonnées Parallèles peut vous aider à améliorer l'efficacité de votre travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne sont pas téléversés sur aucun serveur. Utilisez immédiatement le Générateur de Graphes en Coordonnées Parallèles pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le générateur de diagrammes parallèles permet de visualiser des données multidimensionnelles en projetant chaque variable sur un axe vertical parallèle. Ce outil est conçu pour révéler des corrélations, des tendances et des points aberrants dans des jeux de données complexes, notamment ceux issus d'analyses statistiques, de simulations ou de bases de données relationnelles. Il utilise un algorithme de normalisation des valeurs d'axes pour garantir une comparaison équitable entre des dimensions hétérogènes (ex. : données temporelles, quantitatives et catégorielles). L'interface intègre des fonctionnalités avancées comme le brossage interactif (« interactive brushing ») pour isoler des sous-ensembles de données et le réordonnancement dynamique des axes via un glisser-déposer, facilitant l'exploration exploratoire. Les graphiques générés exploitent les standards SVG et Canvas pour une résolution adaptée aux publications scientifiques ou aux tableaux de bord métier. Contrairement aux outils classiques, il supporte les données manquantes en appliquant un algorithme d'imputation conditionnelle ou en affichant des segments disjoints.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphes en Coordonnées Parallèles",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Importez vos données au format CSV/TSV via le sélecteur de fichier en haut de l'écran.",
+    "Sélectionnez les colonnes à visualiser en cochant les cases correspondantes dans le panneau de configuration à gauche.",
+    "Ajustez les échelles des axes individuellement (linéaire, logarithmique ou catégorielle) via le menu contextuel d'axe (clic droit sur un axe).",
+    "Activez le mode de brossage (bouton « Sélectionner ») et tracez un rectangle sur un axe pour filtrer les données associées.",
+    "Personnalisez les couleurs des lignes via l'éditeur de style en bas, en assignant des palettes discrètes ou dégradées selon les dimensions.",
+    "Exportez le graphique final en SVG ou PNG HD via l'icône « Télécharger » située dans la barre d'outils supérieure."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphes en Coordonnées Parallèles pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un chercheur compare les performances de 5 algorithmes d'apprentissage automatique selon 8 métriques (précision, temps d'entraînement, etc.) pour identifier les meilleurs compromis.",
+    "Un ingénieur analyse les données de capteurs d'une turbine à gaz (température, pression, vibration) pour détecter des combinaisons de valeurs anormales.",
+    "Un analyste financier évalue les KPI (ROE, levier, liquidité) de 20 entreprises pour segmenter les portefeuilles à risque élevé.",
+    "Un écologiste étudie les corrélations entre les paramètres environnementaux (pH, nitrates, biodiversité) dans 15 zones de surveillance."
   ]
 }

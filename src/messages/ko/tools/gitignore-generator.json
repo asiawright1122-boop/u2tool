@@ -1,14 +1,17 @@
 {
-  "detailed_description": ".gitignore 생성기는 다양한 작업을 빠르게 완료하는 데 도움을 주는 실용적인 온라인 도구입니다. .gitignore 생성기를 사용하면 소프트웨어나 플러그인을 설치하지 않고 다양한 데이터를 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있어 사용하기 쉽고 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너, 일반 사용자 등 누구에게나 도움이 되는 .gitignore 생성기가 있습니다. 모든 처리는 브라우저에서 로컬로 이루어지므로 데이터 보안을 보장하며 서버에 업로드되지 않습니다. 즉시 .gitignore 생성기를 사용하여 빠르고 안전하며 무료 온라인 도구 서비스를 경험해보세요.",
+  "detailed_description": ".gitignore Generator는 다양한 프로젝트 유형과 프로그래밍 언어에 맞춘 .gitignore 파일을 자동으로 생성하는 도구입니다. 이 도구는 GitHub의 공식 gitignore 템플릿과 커뮤니티 기여 패턴을 기반으로 하여 운영체제별 임시 파일, IDE 특정 파일, 빌드 아티팩트, 로그 디렉터리 등을 정교하게 필터링합니다. 사용자는 단순히 템플릿을 선택하는 것을 넘어, 고급 glob 패턴(Globbing Patterns)을 직접 추가하거나 기존 규칙에 우선순위를 부여할 수 있습니다. 예를 들어, 특정 디렉터리 내에서만 적용되는 네스티드 패턴이나 '!' 기호를 통한 부정 규칙(Negation Rules)을 조합하여 복잡한 배포 환경을 관리할 수 있습니다. 이는 특히 다중 언어 프로젝트에서 Node.js의 node_modules, Python의 __pycache__, C++의 컴파일 오브젝트 파일 등 혼합된 임시 파일을 효과적으로 제외해야 할 때 필수적입니다. 또한 Git의 규칙 충돌 해결 방식(Last Match Wins)을 반영하여 사용자가 생성한 패턴이 시스템 기본 규칙보다 우선 적용되도록 설계되어 있습니다.",
   "usage_steps": [
-    ".gitignore 생성기 도구 페이지를 열기",
-    "처리하려는 내용을 입력 상자에 입력하거나 붙여넣기",
-    "필요에 따라 도구 옵션과 설정을 조정",
-    "처리 버튼을 클릭하여 결과를 확인",
-    "처리된 결과를 복사하거나 다운로드"
+    "프로젝트 유형 드롭다운에서 Web/Mobile/Game 등 범주 선택",
+    "사용하는 언어와 프레임워크 체크박스 선택 (예: JavaScript, Java, Unity)",
+    "운영체제 탭에서 Windows/macOS/Linux 특정 파일 제외 옵션 활성화",
+    "커스텀 패턴 입력란에 추가 규칙 입력 (예: /logs/*.txt, *.swp)",
+    "생성된 .gitignore 내용을 문법 강조(Syntax Highlighting)와 함께 확인",
+    "다운로드 버튼 클릭 또는 클립보드 복사 기능으로 파일 저장"
   ],
   "usage_examples": [
-    ".gitignore 생성기를 사용하여 데이터를 처리하기",
-    "대기 없이 처리 결과를 빠르게 얻기"
+    "Python Django 프로젝트에서 가상환경(virtualenv) 디렉터리와 로컬 설정 파일(settings_dev.py)을 제외할 때",
+    "Unity 게임 개발 중 Asset Store 패키지 경로(Library/PackageCache)와 빌드 로그 파일(exclude_this.log)을 추적 제외",
+    "macOS에서 Xcode를, Windows에서 Visual Studio를 사용하는 협업 팀에서 각 OS별 임시 파일(.DS_Store, *.suo) 자동 제외",
+    "TypeScript 기반 Node.js 서버에서 컴파일된 dist/ 디렉터리와 환경 변수 파일(.env.local)을 Git 추적에서 제외"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Listen-Zufallsgenerator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Listen-Zufallsgenerator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Listen-Zufallsgenerator kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Listen-Zufallsgenerator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der List Randomizer ist ein spezialisierter Algorithmus zur deterministischen Permutation von Zeilenlisten durch eine Kombination aus Fisher-Yates-Shuffle und kryptografisch sicherer Zufallszahlengenerierung. Technisch gesehen analysiert das Tool eingegebene Textdaten zeilenweise, identifiziert Trennzeichen (z.B. Zeilenumbrüche, Tabulatoren) und erstellt ein Indexarray, das durch einen Mersenne-Twister-Generator neu angeordnet wird. Die Einzigartigkeit dieses Tools liegt in der optionalen Seed-Funktion, die reproduzierbare Zufallsfolgen ermöglicht, sowie der Unicode-8-Kompatibilität für multilinguale Listenverarbeitung. Entwickler benötigen dieses Tool beispielsweise zur Erstellung von Testdatenstichproben, zur Anonymisierung von Datensätzen durch Reihenfolgenvertauschung oder für Game-Design-Anwendungen wie zufällige Quest-Generierung. Besonders praktisch ist die Batch-Verarbeitungsfunktion, die mehrere Listen gleichzeitig mit identischem Zufallsparameter shuffelt, was in maschinellem Lernen für Datenaugmentation genutzt wird.",
   "usage_steps": [
-    "Öffnen Sie die Listen-Zufallsgenerator-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "1. Öffnen Sie das Tool im Browser und lokalisieren Sie das Eingabefeld 'Listenelemente'.",
+    "2. Fügen Sie Ihre Liste ein, wobei jedes Element in einer separaten Zeile stehen muss.",
+    "3. Wählen Sie im Dropdown-Menü 'Trennzeichen' zwischen Zeilenumbruch, Komma oder benutzerdefiniertem Separator.",
+    "4. Aktivieren Sie den Schalter 'Reproduzierbares Shuffle', um einen Seed-Wert für deterministische Ergebnisse festzulegen.",
+    "5. Klicken Sie auf 'Shuffle-Algorithmus starten', um die Liste durchzumischen.",
+    "6. Kopieren Sie die zufällig geordnete Liste aus dem Ausgabefeld oder exportieren Sie sie als CSV-Datei."
   ],
   "usage_examples": [
-    "Verwenden Sie Listen-Zufallsgenerator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein Lehrer erstellt mit dem Tool zufällige Gruppeneinteilungen für Klassenprojekte, indem er Schülerlisten durch Komma getrennt eingibt und per Seed-Wert die Zuordnung dokumentiert.",
+    "Ein Data-Scientist nutzt die Batch-Funktion, um mehrere korrelierte Datensätze (z.B. Bildpfade und Klassifikationen) synchron zu shuffeln, um Trainings- und Testsets zu generieren.",
+    "Ein Spieleentwickler implementiert den Randomizer in einen Quest-Generator, der durch wiederholtes Shuffle-Aufrufen dynamische Auftragssequenzen für Spieler erstellt.",
+    "Ein Forscher anonymisiert Patientendaten, indem er Namen und IDs in separaten Durchläufen mit unterschiedlichen Seed-Werten shuffelt und so die Zuordnung verschleiert."
   ]
 }

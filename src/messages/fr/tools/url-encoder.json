@@ -1,14 +1,17 @@
 {
-  "detailed_description": "L'Encodeur/Décodeur URL est un outil pratique en ligne qui vous aide à réaliser rapidement diverses tâches. Avec l'Encodeur/Décodeur URL, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil possède une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement l'outil. Que vous soyez développeur, designer ou utilisateur général, l'Encodeur/Décodeur URL peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, garantissant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez immédiatement l'Encodeur/Décodeur URL pour expérimenter des services d'outil en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'encodeur/décodeur d'URL permet de transformer des caractères non conformes aux standards RFC 3986 en séquences hexadécimales codées en pourcentage (ex. \" \" devient %20). Cet outil est essentiel pour les développeurs manipulant des requêtes HTTP, car il garantit la sécurité et l'intégrité des données transmises via des paramètres d'URL. Les cas d'utilisation incluent l'encodage de chaînes de requête API, la correction de caractères spéciaux dans des logs serveur, ou la préparation de liens HTML sécurisés. Techniquement, l'outil analyse caractère par caractère, identifie les caractères réservés (% / ? & = + etc.), et applique l'algorithme UTF-8 suivi d'un encodage en %XX. Le processus de décodage inverse cette logique en interprétant les séquences hexadécimales et en restituant les caractères originaux, tout en gérant les erreurs de formatage (ex. séquences incomplètes ou non valides).",
   "usage_steps": [
-    "Ouvrez la page de l'Encodeur/Décodeur URL",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Saisissez l'URL ou la chaîne de requête dans la zone de texte \"URL à traiter\".",
+    "Sélectionnez l'opération souhaitée via les onglets \"Encoder\" ou \"Décoder\".",
+    "Activez l'option \"Convertir les espaces en '+'\" si nécessaire pour les anciens systèmes backend.",
+    "Choisissez l'encodage de sortie (UTF-8 par défaut ou ASCII pour les systèmes hérités) dans le menu déroulant.",
+    "Cliquez sur \"Prévisualiser\" pour vérifier les modifications avant traitement final.",
+    "Utilisez le bouton \"Copier dans le presse-papiers\" pour intégrer immédiatement le résultat dans votre code."
   ],
   "usage_examples": [
-    "Utilisez l'Encodeur/Décodeur URL pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Encoder une requête d'API contenant un email: \"GET /user?email=test@example.com\" devient \"GET /user?email=test%40example.com\"",
+    "Décoder une URL reçue via des logs serveur: \"https://exemple.com/recherche?q=maison+r%C3%A9novation\" → \"https://exemple.com/recherche?q=maison+rénovation\"",
+    "Préparer un lien HTML sécurisé avec paramètres: Convertir \"#section?param=1&autre=2\" en \"#section%3Fparam%3D1%26autre%3D2\"",
+    "Nettoyer une URL collée depuis un PDF: Décoder les séquences \"%C3%A9t%C3%A9\" en \"été\" pour une utilisation dans un formulaire."
   ]
 }

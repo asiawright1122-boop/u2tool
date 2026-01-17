@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Testador de JSONPath é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Testador de JSONPath, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plug-in. Essa ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece a usar rapidamente e de forma eficiente. Seja desenvolvedor, designer ou usuário geral, o Testador de JSONPath pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam enviados a qualquer servidor. Use o Testador de JSONPath imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O JSONPath Tester é uma ferramenta técnica especializada para desenvolvedores que trabalham com manipulação de dados no formato JSON. Este instrumento permite validar e executar expressões JSONPath contra estruturas de dados JSON complexas, oferecendo feedback imediato sobre resultados e possíveis erros de sintaxe. Internamente, o tool realiza o parsing do JSON fornecido, construindo uma árvore de objetos em memória, e aplica algoritmos de travessia para avaliar expressões que utilizam operadores como $ (root), . (dot notation), [] (array index), * (wildcard) e filtros com predicados (ex: ?(@.chave>5)). Desenvolvedores precisam desta ferramenta para testar consultas em APIs REST que retornam JSON, validar transformações de dados com bibliotecas como Jayway JsonPath ou Newtonsoft.Json, e depurar expressões complexas em pipelines de integração contínua. O funcionamento baseia-se em motores de avaliação que implementam o padrão Visitor para percorrer a estrutura do JSON, combinando técnicas de tokenização e análise léxica para interpretar expressões conforme a especificação ECMA-404. Recursos avançados incluem autocomplete de caminhos, realce de sintaxe e diagnóstico de erros em tempo real.",
   "usage_steps": [
-    "Abra a página do Testador de JSONPath",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole seu JSON válido no painel de entrada à esquerda utilizando o botão 'Colar JSON'",
+    "Digite a expressão JSONPath desejada na barra de edição superior, aproveitando o autocompletar de chaves",
+    "Clique em 'Executar Avaliação' para processar a expressão contra o documento JSON",
+    "Analise os resultados no painel direito, que exibe valores correspondentes em formato estruturado",
+    "Utilize o modo 'Visualização em Árvore' para explorar interativamente a estrutura do JSON",
+    "Acesse o histórico de expressões testadas através do ícone de relógio na barra lateral"
   ],
   "usage_examples": [
-    "Use o Testador de JSONPath para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Extrair todos os emails de usuários ativos de uma resposta de API complexa usando $.usuarios[?(@.status==\"ativo\")].email",
+    "Validar se uma estrutura JSON de log contém campos específicos com $.logs[*].timestamp && $.logs[*].nivel",
+    "Depurar uma expressão que retorna resultado vazio, verificando passo a passo a travessia da árvore JSON",
+    "Transformar dados aninhados em formato flat para integração com sistemas legados usando múltiplas projeções JSONPath"
   ]
 }

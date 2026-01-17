@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON转Python是一个实用的在线工具，帮助您快速完成各种任务。使用JSON转Python，您可以轻松处理各种数据，无需安装任何软件或插件。该工具界面简单，易于使用，让您快速上手并高效使用。无论是开发人员、设计师还是普通用户，JSON转Python都能帮助您提高工作效率。所有处理都在您的浏览器中本地完成，确保数据安全，不会上传到任何服务器。立即使用JSON转Python体验快速、安全且免费的在线工具服务。",
+  "detailed_description": "JSON转Python工具通过静态类型解析与代码生成技术，将结构化JSON数据精确映射到Python类型系统。该工具深度支持Python 3.7+的dataclass（PEP 557）、Pydantic（v1/v2）模型以及TypedDict（PEP 655）三种形态的转换，可自动识别嵌套结构、枚举类型及联合类型（Union）。开发者在构建API客户端时可直接将响应JSON转换为带类型验证的Pydantic模型，在处理配置文件时可生成可序列化的dataclass实例。工具内部采用多阶段处理：首先通过AST解析构建JSON结构的元模型，接着执行类型推断引擎处理复杂嵌套结构，最终通过Jinja2模板引擎生成符合PEP8规范的代码。支持保留原始JSON键名的__original_name__注解，允许自定义字段命名策略，确保与现有代码库的兼容性。",
   "usage_steps": [
-    "打开JSON转Python工具页面",
-    "在输入框中输入或粘贴要处理的内容",
-    "根据需要调整工具选项和设置",
-    "点击处理按钮查看结果",
-    "复制或下载处理结果"
+    "在输入面板粘贴或拖拽JSON数据，支持.json文件导入",
+    "选择目标类型：Dataclass/Pydantic Model/TypedDict",
+    "勾选'生成嵌套类型'处理多层结构，启用'类型推断'自动识别int/float/datetime",
+    "点击'生成代码'触发异步转换，底层使用rust-wasm加速解析",
+    "在输出区域查看带语法高亮的Python代码，支持一键复制到剪贴板",
+    "通过'验证输出'按钮启动类型检查器验证生成代码的结构完整性"
   ],
   "usage_examples": [
-    "使用JSON转Python处理数据",
-    "无需等待即可快速获取处理结果"
+    "将OpenAPI规范生成的JSON Schema批量转换为Pydantic数据验证模型",
+    "将前端发送的复杂JSON表单数据转换为可序列化的dataclass用于持久化存储",
+    "将AWS Lambda日志JSON流转换为TypedDict集合，用于类型安全的分析处理",
+    "在机器学习管道中将实验配置JSON转换为带默认值的dataclass进行参数管理"
   ]
 }

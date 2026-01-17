@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Números Aleatórios é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Números Aleatórios, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use eficientemente. Seja desenvolvedor, designer ou usuário geral, o Gerador de Números Aleatórios pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviados para nenhum servidor. Use o Gerador de Números Aleatórios imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Gerador de Números Aleatórios é uma ferramenta técnica projetada para produzir valores numéricos não previsíveis dentro de parâmetros definidos, utilizando algoritmos de geração pseudoaleatória (PRNG) ou métodos baseados em entropia criptográfica. O usuário pode especificar intervalos personalizados (mínimo/máximo), optar por geração única ou em lote (até 10.000 números simultâneos) e garantir exclusividade nos resultados via verificação de duplicatas. A ferramenta é essencial para desenvolvedores que precisam de dados para testes estatísticos, simulações de Monte Carlo, geração de seeds para criptografia, ou criação de identificadores temporários. Internamente, o sistema utiliza uma função de distribuição uniforme discreta, com opção de semente (seed) customizável para reprodutibilidade. Os resultados são exportáveis em formatos estruturados como JSON ou CSV, ideal para integração em pipelines de análise ou ambientes de desenvolvimento.",
   "usage_steps": [
-    "Abra a página do Gerador de Números Aleatórios",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a interface web e defina os valores mínimo e máximo nos campos numéricos 'De' e 'Até'.",
+    "Marque a opção 'Únicos' se necessitar de valores não repetidos ou 'Bulk' para geração em massa.",
+    "Insira a quantidade desejada de números no campo 'Quantidade' (máximo 10.000).",
+    "Escolha o formato de saída no seletor: 'JSON', 'CSV' ou 'Lista Simples'.",
+    "Clique no botão 'Gerar' para executar o algoritmo de aleatorização baseado em semente criptográfica.",
+    "Copie o resultado gerado na seção 'Saída' ou faça download do arquivo via botão 'Exportar'."
   ],
   "usage_examples": [
-    "Use o Gerador de Números Aleatórios para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Criar um conjunto de 500 IDs únicos para simular registros de usuários em um banco de dados de teste.",
+    "Gerar 20 códigos promocionais aleatórios de 6 dígitos para campanhas de marketing.",
+    "Simular lançamentos de dados de 1000 jogadas para análise de probabilidade em um projeto acadêmico.",
+    "Produzir senhas temporárias de 8 números para autenticação em sistemas de acesso restrito."
   ]
 }

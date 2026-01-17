@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El WHOIS Lookup es una herramienta práctica en línea que te ayuda a completar diversas tareas de manera rápida. Utilizando WHOIS Lookup, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, el WHOIS Lookup puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, lo que garantiza la seguridad de tus datos y no se subirán a ningún servidor. Utiliza el WHOIS Lookup inmediatamente para experimentar servicios de herramientas online rápidas, seguras y gratuitas.",
+  "detailed_description": "El WHOIS Lookup es una herramienta técnica que consulta servidores WHOIS para obtener metadatos sobre dominios y bloques IP según el protocolo estándar WHOIS/IRIS. Al introducir un dominio o dirección IP, la herramienta identifica el servidor autoritativo para el TLD o RIR correspondiente (como ARIN o RIPE) y ejecuta una consulta TCP en el puerto 43. Los datos devueltos incluyen registros de propiedad, fechas de registro, servidores de nombres delegados, estados del dominio y cadenas de certificación DNSSEC. Esta información es esencial para investigar amenazas de seguridad, verificar disponibilidad de dominios, diagnosticar problemas de delegación DNS o confirmar cumplimiento de políticas de registro. La herramienta decodifica respuestas en diferentes formatos (incluyendo UTF-8 y IDN) y normaliza datos heterogéneos de más de 2,000 servidores WHOIS globales, mostrando resultados en un formato estructurado con soporte para campos extendidos como RDAP. Además, detecta automáticamente registros WHOIS privados o proxy, indicando cuando la información del titular está oculta. Al integrar validación de certificados SSL/TLS durante la conexión a servidores WHOIS, garantiza la integridad de los datos obtenidos.",
   "usage_steps": [
-    "Abre la página de la herramienta de WHOIS Lookup",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Accede a la interfaz de la herramienta WHOIS Lookup en la sección 'Red' del sitio web.",
+    "2. Escribe el dominio, subdominio o bloque IP en el campo de entrada con formato UTF-8.",
+    "3. Activa la opción 'Respuesta raw' si necesitas ver el output sin formato del servidor WHOIS.",
+    "4. Selecciona manualmente el servidor WHOIS en el dropdown si se requiere consulta específica (ej: whois.verisign-grs.com).",
+    "5. Haz clic en el botón 'Consultar' que inicia la conexión TCP al puerto 43 del servidor autoritativo.",
+    "6. Revisa el panel de resultados que muestra fechas de creación, DNSSEC, servidores de nombres y datos de contacto validados."
   ],
   "usage_examples": [
-    "Utiliza WHOIS Lookup para procesar tus datos",
-    "Obtén resultados de procesamiento rápidos sin esperar"
+    "1. Un analista de ciberseguridad investiga un dominio malicioso para obtener información del registrador y geolocalización del hosting.",
+    "2. Un desarrollador verifica si un dominio con .io está disponible comprobando si no retorna registros en la consulta.",
+    "3. Un administrador de sistemas valida la cadena de delegación DNS comparando servidores autoritativos WHOIS con registros A/CNAME.",
+    "4. Un auditor de cumplimiento revisa fechas de creación de dominios y datos WHOIS privados para evaluar riesgos de marca digital."
   ]
 }

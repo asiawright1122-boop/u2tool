@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Ajuste de Imagen es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Ajuste de Imagen, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Ajuste de Imagen puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Ajuste de Imagen inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El ajustador de imágenes es una herramienta técnica que permite modificar parámetros de procesamiento de imágenes mediante algoritmos de manipulación de píxeles en espacio de color HSL y RGB. Utiliza operaciones matemáticas como escalado lineal para ajustar brillo, transformaciones gamma para el contraste y matrices de coeficientes para la saturación. Soporta formatos JPEG, PNG y WebP, procesando archivos en cliente mediante WebAssembly para preservar la privacidad y reducir latencia. Los usuarios pueden corregir errores de exposición, normalizar imágenes para catálogos digitales o preparar assets para impresión mediante sliders con precisión de 0.1 unidades. La herramienta incluye un motor de previsualización en tiempo real que renderiza los cambios sin pérdidas, aplicando filtros de interpolación bicúbica durante el redimensionamiento. Ideal para desarrolladores que necesitan optimizar imágenes para web sin comprometer calidad, o fotógrafos que requieren calibrar el balance de color antes de exportar a CMYK.",
   "usage_steps": [
-    "Abre la página de la herramienta Ajuste de Imagen",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Arrastra tu imagen al área designada o selecciona un archivo mediante el botón 'Cargar Imagen'.",
+    "Ajusta el brillo usando el control deslizante 'Luminosidad' con valores entre -100 y +100.",
+    "Modifica el contraste con el campo numérico 'Gamma' introduciendo valores de 0.1 a 2.5.",
+    "Selecciona el nivel de saturación desde el menú desplegable 'Colores' con opciones del 0% al 200%.",
+    "Activa el filtro 'Escala de Grises' o 'Sepia' en la sección 'Efectos Avanzados' si es necesario.",
+    "Descarga el resultado con el botón 'Exportar' eligiendo formato (JPEG/PNG/WebP) y calidad de compresión."
   ],
   "usage_examples": [
-    "Usa Ajuste de Imagen para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un fotógrafo ajusta el balance de color de una boda con iluminación deficiente, corrigiendo sombras azuladas usando compensación de temperatura de color.",
+    "Un diseñador web optimiza capturas de pantalla para una documentación técnica, aplicando contraste automático para resaltar elementos de interfaz.",
+    "Un restaurador digitaliza pinturas antiguas y utiliza la herramienta para recuperar tonos originales mediante ajustes de curvas de tono individualizadas.",
+    "Un arquitecto prepara renders 3D para impresión en folletos, reduciendo la saturación en un 30% para evitar distorsiones en tintas CMYK."
   ]
 }

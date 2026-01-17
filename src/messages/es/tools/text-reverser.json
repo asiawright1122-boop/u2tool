@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Reversor de Texto es una herramienta online práctica que te ayuda a completar diversas tareas de manera rápida. Utilizando el Reversor de Texto, puedes procesar fácilmente diversos datos sin necesidad de instalar ningún software o plugins. Esta herramienta cuenta con una interfaz sencilla y es fácil de usar, lo que te permite comenzar a trabajar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Reversor de Texto puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no se suban a ningún servidor. Utiliza el Reversor de Texto inmediatamente para experimentar servicios de herramientas online rápidas, seguras y gratuitas.",
+  "detailed_description": "El Text Reverser permite transformar texto invirtiendo el orden de caracteres, palabras o líneas mediante algoritmos de procesamiento de cadenas basados en Unicode. Su funcionalidad se basa en técnicas de manipulación de buffers y expresiones regulares para identificar delimitadores de línea (CRLF, LF) y espacios. Los usuarios pueden aprovechar esta herramienta para depurar palíndromos, analizar registros de logs desde el final hacia el inicio, invertir parámetros en URLs para auditorías SEO, o crear versiones espejo de código para pruebas de internacionalización. El proceso utiliza estructuras de datos tipo stack para invertir secuencias de bytes cuando se selecciona 'carácteres', mientras que en 'palabras' y 'líneas' se emplea tokenización con regex para preservar puntuación y espaciado original. Admite texto plano con codificaciones UTF-8, UTF-16 y ASCII extendido, manteniendo intactos los caracteres especiales y emojis.",
   "usage_steps": [
-    "Abre la página del Reversor de Texto",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al panel de control del Text Reverser en la sección 'Procesamiento Avanzado' del sitio web",
+    "Pega o arrastra tu contenido en el área de edición con soporte para resaltado de sintaxis",
+    "Selecciona el modo de inversión en el menú desplegable: 'Caracteres', 'Palabras' o 'Líneas'",
+    "Activa la opción 'Preservar espaciado' si necesitas mantener tabulaciones o múltiples espacios",
+    "Haz clic en el botón 'Invertir texto' para ejecutar el algoritmo de transformación",
+    "Copia el resultado desde el campo de salida con formato predefinido o descarga el archivo TXT"
   ],
   "usage_examples": [
-    "Utiliza el Reversor de Texto para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un desarrollador invierte el contenido de un archivo de log para analizar los errores más recientes comenzando por el final",
+    "Un diseñador gráfico crea texto espejo para una plantilla de tarjeta de presentación en idioma árabe",
+    "Un SEO especialista invierte parámetros de URL para verificar indexación en motores de búsqueda",
+    "Un profesor de criptografía genera una versión cifrada básica de un mensaje usando inversión de palabras y base64"
   ]
 }

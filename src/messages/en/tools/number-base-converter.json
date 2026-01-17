@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Number Base Converter is a practical online tool that helps you quickly complete various tasks. Using Number Base Converter, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Number Base Converter can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Number Base Converter immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Number Base Converter performs bidirectional radix conversion between binary (base-2), octal (base-8), decimal (base-10), and hexadecimal (base-16) systems using algorithmic parsing and positional numeral calculations. This tool is essential for developers working with low-level systems, network protocols, or embedded hardware where numeric representations must align with specific architectural requirements. Technically, the converter employs Horner's method to efficiently transform values between bases: input strings are first validated against source base constraints (e.g., ensuring octal digits don't exceed '7'), then parsed into intermediate 64-bit signed integers using base-specific polynomial expansions. Negative values are handled via two's complement representation when applicable. Target base conversion occurs through iterative division-remainder methods with hexadecimal outputs automatically capitalized for code compatibility. The tool's precision engine prevents overflow errors by limiting input ranges to ±9.2e18 (safe integer limits in JavaScript), making it suitable for both educational demonstrations and production debugging workflows.",
   "usage_steps": [
-    "Open the Number Base Converter tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Input your numeric value in the 'Source Number' field, supporting digits 0-9 and letters A-F/a-f for hexadecimal entries.",
+    "2. Select the source base from the dropdown menu labeled 'Convert From' (options: BIN, OCT, DEC, HEX).",
+    "3. Choose the target base using the 'Convert To' dropdown (same base options available).",
+    "4. Enable 'Preserve Leading Zeros' checkbox if maintaining insignificant zeros in binary/octal outputs is required for bit alignment.",
+    "5. Click the 'Convert' button to execute the transformation using optimized conversion algorithms.",
+    "6. Copy the result from the output panel using the 'Copy to Clipboard' icon or export as JSON for programmatic use."
   ],
   "usage_examples": [
-    "Use Number Base Converter to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: A firmware engineer converts hexadecimal sensor calibration values (e.g., 0x1A3F) to decimal for configuration register initialization in C++ code.",
+    "Example 2: A cybersecurity analyst translates IPv4 addresses from decimal (3232235521) to dotted binary format for subnet mask validation in network security rules.",
+    "Example 3: A game developer converts RGB color codes between decimal (128,64,32) and hexadecimal (804020) representations when implementing shader materials.",
+    "Example 4: A computer science student verifies Booth's algorithm results by cross-converting negative binary numbers (e.g., 11110101) to decimal equivalent values."
   ]
 }

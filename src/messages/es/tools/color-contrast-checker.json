@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Nuestro verificador de contraste de colores gratuito ayuda a diseñadores y desarrolladores a asegurarse de que sus sitios web cumplan con los estándares de accesibilidad de WCAG. El contraste de colores es crucial para los usuarios con discapacidades visuales, incluyendo la ceguera colorífica y la visión reducida. Esta herramienta calcula el ratio de contraste entre los colores de texto (frente) y de fondo según los lineamientos de WCAG 2.1. WCAG Nivel AA requiere un ratio de contraste mínimo de 4.5:1 para texto normal y 3:1 para texto grande (18pt o 14pt en negrita). Nivel AAA requiere 7:1 para texto normal y 4.5:1 para texto grande. Simplemente ingrese sus códigos hexadecimales de color o utilice el selector de colores para probar combinaciones. La herramienta muestra instantáneamente los resultados de aprobación o rechazo para ambos niveles AA y AAA. Esencial para crear sitios web, aplicaciones móviles y contenido digital accesibles que todos puedan leer.",
+  "detailed_description": "El Color Contrast Checker es una herramienta técnica que evalúa la relación de contraste entre dos colores según los estándares WCAG 2.1, esencial para garantizar accesibilidad web. Utiliza cálculos basados en la luminancia relativa (L) de los canales RGB normalizados, aplicando la fórmula (L1 + 0.05) / (L2 + 0.05) para determinar ratios como 4.5:1 (nivel AA) o 7:1 (nivel AAA). Los desarrolladores necesitan esta herramienta para validar interfaces destinadas a usuarios con daltonismo o baja visión, cumplir normativas legales de accesibilidad (como EN 301 549) y evitar sanciones en proyectos gubernamentales. Internamente, convierte colores HEX/RGB a espacio de color sRGB, calcula luminancia con coeficientes específicos (0.2126 para rojo, 0.7152 para verde, 0.0722 para azul) y compara resultados contra umbrales WCAG. Su diferencia radica en mostrar no solo el ratio sino también la percepción visual mediante simulaciones de deficiencias cromáticas.",
   "usage_steps": [
-    "Ingrese su color de texto (frente) usando un código hexadecimal o el selector de colores",
-    "Ingrese su color de fondo usando un código hexadecimal o el selector de colores",
-    "Visualice el ratio de contraste calculado instantáneamente",
-    "Verifique el estado de aprobación o rechazo para los niveles AA y AAA de WCAG",
-    "Use combinaciones predeterminadas o intercambie colores para probar alternativas"
+    "Introduce los colores de primer plano y fondo usando campos HEX, RGB o el selector visual con precisión de 6 dígitos.",
+    "Activa la herramienta de pipeta para capturar colores directamente desde cualquier elemento del DOM en modo inspección.",
+    "Observa el cálculo automático del ratio de contraste en tiempo real con notación decimal y formato WCAG (ej: 15.8:1).",
+    "Verifica los indicadores visuales: ✅ para cumplimiento AAA, ⚠️ para solo AA y ❌ para incumplimiento de estándares.",
+    "Explora la sección 'Detalles técnicos' que muestra valores L1, L2 y la fórmula aplicada en cada cálculo.",
+    "Exporta resultados en formato JSON con metadatos de fecha, colores evaluados y niveles de accesibilidad alcanzados."
   ],
   "usage_examples": [
-    "Pruebe si sus colores de marca (#1a73e8 sobre blanco) cumplen con los estándares AA de WCAG para el texto del cuerpo",
-    "Verifique el contraste del texto de los botones antes del lanzamiento para cumplir con los requisitos de accesibilidad",
-    "Compruebe si su esquema de colores en modo oscuro proporciona suficiente contraste para la lectura"
+    "Validar legibilidad de texto blanco (#FFFFFF) sobre un botón azul (#007AFF) en una aplicación médica.",
+    "Verificar contraste de etiquetas de formulario en modo oscuro (dark mode) con fondo #121212 y texto #E0E0E0.",
+    "Analizar accesibilidad de gráficos de datos que usan paleta #FF6B6B (rojo) y #4ECDC4 (verde turquesa) para usuarios daltónicos.",
+    "Comprobar cumplimiento WCAG en diseño de correo electrónico con colores corporativos #0A2E5D y #C09F47 antes de campañas masivas."
   ]
 }

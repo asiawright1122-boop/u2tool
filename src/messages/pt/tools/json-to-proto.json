@@ -1,15 +1,17 @@
 {
-  "detailed_description": "O conversor JSON para Protocol Buffers transforma dados JSON em definições de esquema Protocol Buffers. Perfeito para desenvolvedores que trabalham com gRPC, microservices e serialização de dados de alta performance.",
+  "detailed_description": "O JSON to Protocol Buffers infere automaticamente um arquivo .proto a partir de um documento JSON, definindo mensagens, tipos escalares, repetições, maps e padrões de unions. A ferramenta percorre chaves e valores para decidir se um campo é singular, repeated ou oneof, deduzindo int32/uint32/sint32/int64/uint64/sint64, float/double, bool, string (incluindo bytes quando detectar base64), google.protobuf.Timestamp e google.protobuf.Duration, além de map<string, T> para objetos com chaves textuais. Oferece controle sobre proto2 vs proto3, geração de well-known types, estratégia de nomenclatura (snake_case/camelCase), convenções de field names vs numbers e tolerância a ambiguidades. Pode sugerir reserved numbers, comentários Javadoc e gerar tipos auxiliares (ex.: Address, Money) quando padrões recorrentes surgirem. É útil para contratos gRPC, migração de REST, SDKs multi-plataforma e pipelines de dados, permitindo começar rápido com Protobuf e depois refinar manualmente. O processo usa heurísticas determinísticas, valida coerência de tipos e emite avisos para escolhas potencialmente ambíguas.",
   "usage_steps": [
-    "Cole seus dados JSON na área de entrada",
-    "Configure as opções de nome de mensagem e pacote",
-    "Clique em Convertir para gerar o schema proto",
-    "Revise a definição gerada .proto",
-    "Copie ou baixe o arquivo proto"
+    "Cole o JSON no painel Entrada JSON. Se houver múltiplos exemplos, selecione a aba ‘Exemplos’ para carregar documentos de referência.",
+    "Clique em Inferir esquema. A ferramenta varre chaves e valores, define mensagens e escolhe tipos (int32/uint32, int64/uint64, float/double, bool, string, bytes, repeated, map, oneof, Timestamp, Duration).",
+    "No painel Opções, escolha a versão do Protobuf (proto2/proto3), marque se deseja Well-Known Types (Timestamp/Duration), defina a estratégia de nomenclatura e a convenção de field numbers (sequencial vs hash).",
+    "Revise a Suggested oneof para detecção de padrões union-like e ajuste os rótulos dos fields (Reserved numbers e renomeação de mensagens, se necessário).",
+    "Use o painel Saída .proto para Copiar para área de transferência ou Baixar .proto. Visualize comentários Javadoc e avisos de ambiguidade.",
+    "Valide o arquivo com protoc e, se necessário, gere stubs gRPC ou mensagens para outras linguagens diretamente do .proto."
   ],
   "usage_examples": [
-    "Gerar schemas proto a partir de respostas de API",
-    "Criar definições de serviços gRPC",
-    "Converter APIs REST para gRPC"
+    "Equipe migra um microserviço de REST para gRPC. Com o .proto gerado, define serviços CustomerService/GetCustomer e OrderService/CreateOrder, mantém compatibilidade de payloads e inicia a geração de stubs em Go/Node, ajustando numbers para evitar breaking changes.",
+    "Pipelines de ingestão de IoT com JSON heterogêneo. O conversor cria map<string, SensorReading> e repeated DeviceEvent com Timestamps, permitindo serialização compacta e tipagem forte para análises em tempo real.",
+    "Desenvolvimento de SDKs móveis (Android/iOS). A partir do .proto, gera classes Swift/Kotlin com suporte a oneof para ações do usuário e repeated para listas, garantindo consistência de tipos em apps nativos.",
+    "Documentação e versionamento de APIs internas. O arquivo .proto serve como contrato canônico, facilita geração de OpenAPI/JSON Schema e validação de payloads em testes automatizados."
   ]
 }

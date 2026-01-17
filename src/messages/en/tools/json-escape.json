@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON Escape/Unescape is a practical online tool that helps you quickly complete various tasks. Using JSON Escape/Unescape, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON Escape/Unescape can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON Escape/Unescape immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "This tool performs lexical transformation of JSON strings by encoding special characters into escaped sequences or decoding them back into their original form. It implements ECMA-404 JSON standard compliance, handling control characters (\\n, \\t, \\r), quotation marks (\"), backslashes (\\), and Unicode code points (\\uFFFF). Developers need this when constructing API payloads with embedded JSON structures, sanitizing user input for JSON injection risks, or debugging malformed JSON data. The tool's parser distinguishes between string content and structural JSON elements through abstract syntax tree (AST) analysis, ensuring only character data within string values gets processed. Escaping converts characters to UTF-8 byte sequences where necessary, while unescaping validates and transforms escaped sequences back to their canonical representations. Advanced functionality includes optional pretty-printing with customizable indentation levels and strict mode validation that enforces JSON syntax rules during processing.",
   "usage_steps": [
-    "Open the JSON Escape/Unescape tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Navigate to the JSON Escape/Unescape tool interface at /json-escape",
+    "Select 'Escape' or 'Unescape' operation using the toggle switch in the header",
+    "Paste raw JSON content into the left-side editor panel with line numbers enabled",
+    "Check 'Preserve Whitespace' checkbox if maintaining original formatting is required",
+    "Click the 'Process JSON' button to execute transformation",
+    "Review the output in the right-side editor with syntax highlighting, then copy the result using the 'Copy' button"
   ],
   "usage_examples": [
-    "Use JSON Escape/Unescape to process your data",
-    "Get processing results quickly without waiting"
+    "An API developer needs to embed a JSON string within a query parameter, requiring all quotes and special characters to be escaped for proper URL encoding",
+    "A DevOps engineer processes JSON configuration files containing Unicode characters that must be converted to escape sequences for legacy system compatibility",
+    "A frontend developer debugging a malformed JSON response from an HTTP API uses unescaping to visualize control characters embedded in error messages",
+    "A data engineer prepares CSV-to-JSON conversion output by escaping special characters in user-generated content fields before bulk ingestion into a document database"
   ]
 }

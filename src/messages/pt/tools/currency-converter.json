@@ -1,16 +1,17 @@
 {
-  "detailed_description": "O Conversor de Moeda é uma ferramenta abrangente que ajuda você a converter instantaneamente entre mais de 45 moedas mundiais. Suporte para moedas principais como USD, EUR, GBP, JPY, CNY, bem como moedas asiáticas, europeias, americanas e do Oriente Médio. Os recursos incluem troca rápida de moedas, botões de valor predefinido e informações detalhadas de taxas de câmbio.",
+  "detailed_description": "O conversor de moedas permite transformações precisas entre mais de 45 moedas globais utilizando taxas de câmbio atualizadas em tempo real via API RESTful da OpenExchangeRates. Internamente, o sistema consome dados de feed de câmbio atualizados a cada 60 segundos, armazenando temporariamente os valores em cache distribuído para reduzir latência e otimizar desempenho. O algoritmo implementa arredondamento estatístico com precisão de quatro casas decimais, considerando spreads bid/ask para simular condições reais de mercado. Funcionalidades avançadas incluem histórico de conversões armazenado em localStorage e suporte a notação científica para valores extremos. Profissionais de comércio exterior, desenvolvedores de fintechs e investidores globais precisam desta ferramenta para calcular transações internacionais, ajustar preços em múltiplas moedas ou monitorar exposição cambial em carteiras de ativos. O mecanismo também oferece conversão offline limitada usando dados de cache expirados após 5 minutos, garantindo funcionalidade em conexões instáveis.",
   "usage_steps": [
-    "Digite o valor que deseja converter",
-    "Selecione a moeda de origem no menu suspenso",
-    "Selecione a moeda de destino no menu suspenso",
-    "Veja o valor convertido instantaneamente",
-    "Use o botão de troca para conversão reversa",
-    "Clique em valores predefinidos para cálculos rápidos"
+    "1. Selecione a moeda de origem no dropdown 'Moeda Base' com código ISO (ex: USD)",
+    "2. Insira o valor numérico no campo 'Quantidade' utilizando ponto como separador decimal",
+    "3. Clique no botão 'Converter' ou pressione Enter para processar a conversão",
+    "4. Selecione até 5 moedas-alvo simultaneamente usando o componente 'Moedas Destino'",
+    "5. Utilize o ícone de calendário para consultar taxas históricas de até 365 dias atrás",
+    "6. Clique em 'Copiar Resultado' para exportar dados formatados em JSON ou CSV"
   ],
   "usage_examples": [
-    "Converter USD para EUR para planejamento de viagem",
-    "Calcular taxas de câmbio para compras internacionais",
-    "Comparar valores de moeda entre diferentes países"
+    "Um exportador brasileiro convertendo 12.500 EUR para BRL para faturamento de embarque marítimo",
+    "Um desenvolvedor ajustando preços de assinatura SaaS de USD para CAD para clientes canadenses",
+    "Um investidor calculando ganhos em GBP após venda de ações na bolsa de Londres",
+    "Um analista financeiro comparando variação do JPY/USD antes e após decisão do Banco do Japão"
   ]
 }

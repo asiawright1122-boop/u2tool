@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Painel de Assinatura é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Painel de Assinatura, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Painel de Assinatura pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Painel de Assinatura imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Signature Pad é uma ferramenta de assinatura digital que permite aos usuários criar assinaturas personalizadas com facilidade e precisão. Tecnicamente, esta ferramenta utiliza tecnologias de canvas HTML5 para capturar e renderizar movimentos de mouse ou toque, proporcionando uma experiência fluida e realista. Os usuários podem ajustar a cor e a espessura da caneta, bem como a opacidade, para criar assinaturas que se alinhem perfeitamente com suas necessidades. Além disso, o Signature Pad oferece opções de exportação em vários formatos, incluindo PNG, SVG e JSON, permitindo que as assinaturas sejam integradas facilmente a documentos e sistemas digitais. Esta ferramenta é essencial para profissionais que precisam assinar documentos eletronicamente, como advogados, médicos, e gestores de contratos, garantindo conformidade legal e eficiência operacional.",
   "usage_steps": [
-    "Abra a página da ferramenta Painel de Assinatura",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Abra o Signature Pad no seu navegador e selecione a opção 'Criar Nova Assinatura'.",
+    "Escolha a cor da caneta no menu de cores disponível na barra lateral esquerda.",
+    "Ajuste a espessura da caneta usando o seletor de espessura, também localizado na barra lateral esquerda.",
+    "Realize a sua assinatura no espaço de canvas central, utilizando o mouse ou o toque do dedo.",
+    "Após finalizar a assinatura, utilize o botão 'Limpar' para fazer ajustes, caso necessário.",
+    "Salve a assinatura no formato desejado (PNG, SVG ou JSON) clicando no botão 'Exportar' na barra superior."
   ],
   "usage_examples": [
-    "Use Painel de Assinatura para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um advogado precisa assinar eletronicamente um contrato antes de enviá-lo a um cliente. Utiliza o Signature Pad para criar uma assinatura personalizada, exportando-a em formato PNG para anexar ao documento PDF.",
+    "Uma médica precisa assinar digitalmente prescrições médicas para envio a farmácias. Ela usa o Signature Pad para criar uma assinatura com a cor preta e a espessura adequada, exportando-a em formato SVG para integrar ao sistema de gestão de prescrições do consultório.",
+    "Um gestor de contratos precisa assinar um acordo com um fornecedor. Ele utiliza o Signature Pad para criar uma assinatura com a cor azul, exportando-a em formato JSON para integrar ao sistema de contratos da empresa.",
+    "Um desenvolvedor web precisa criar uma assinatura para um projeto de design. Utiliza o Signature Pad para criar uma assinatura com a cor vermelha e a espessura fina, exportando-a em formato PNG para incluir no design do site."
   ]
 }

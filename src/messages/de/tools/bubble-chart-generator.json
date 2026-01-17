@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Blasen-Diagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Blasen-Diagramm-Generator können Sie verschiedene Daten ohne Installation von Software oder Plugins einfach verarbeiten. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder ein allgemeiner Benutzer sind, der Blasen-Diagramm-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und verhindert, dass Ihre Daten auf irgendeinen Server hochgeladen werden. Nutzen Sie den Blasen-Diagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Tools zu erleben.",
+  "detailed_description": "Der Bubble Chart Generator ist ein leistungsstarkes Online-Tool, das es Benutzern ermöglicht, 3D-Blasendiagramme zu erstellen, um komplexe Beziehungen zwischen drei Variablen visuell darzustellen. Diese Variablen sind die X-Achse, die Y-Achse und die Größe der Blasen. Das Tool ist besonders nützlich in der Datenanalyse, da es ermöglicht, Trends, Muster und Korrelationen in großen Datenmengen auf einen Blick zu erkennen. Es ist ideal für Wissenschaftler, Datenanalysten und Business-Profis, die umfangreiche Daten visualisieren müssen. Durch die Verwendung von 3D-Blasendiagrammen können Benutzer nicht nur lineare Beziehungen, sondern auch komplexe, nicht-lineare Zusammenhänge aufzeigen. Das Tool nutzt fortgeschrittene Algorithmus-Engine, um die Daten effizient zu verarbeiten und eine hohe Genauigkeit der Darstellung zu gewährleisten. Die Benutzeroberfläche ist intuitiv gestaltet und ermöglicht die Anpassung von Farben, Achsenbeschriftungen und anderen visuellen Elementen, um die Diagramme nach den spezifischen Anforderungen zu personalisieren.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Blasen-Diagramm-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Öffnen Sie die Bubble Chart Generator-Seite und wählen Sie die Option 'Neues Diagramm erstellen'.",
+    "Laden Sie Ihre Daten hoch, indem Sie eine CSV-Datei mit den Spalten für X-Achse, Y-Achse und Größe der Blasen auswählen.",
+    "Konfigurieren Sie die Achsenbeschriftungen in den Einstellungen unter 'Achsen'. Geben Sie hier die Beschriftungen für die X- und Y-Achse an.",
+    "Wählen Sie die Farbschema-Optionen unter 'Design'. Sie können vordefinierte Farbschemata auswählen oder benutzerdefinierte Farben für die Blasen setzen.",
+    "Stellen Sie die 3D-Einstellungen ein, um die Tiefe und den Winkel des Diagramms zu verändern. Dies ermöglicht eine bessere Sichtbarkeit der Datenpunkte.",
+    "Speichern Sie das Diagramm in verschiedenen Formaten wie PNG, SVG oder PDF, indem Sie auf die 'Export'-Schaltfläche klicken."
   ],
   "usage_examples": [
-    "Verwenden Sie den Blasen-Diagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell Bearbeitungsergebnisse ohne zu warten"
+    "Ein Marktforscher verwendet das Blasendiagramm, um die Beziehung zwischen dem Marktanteil verschiedener Konkurrenten (Y-Achse), den Umsätzen (X-Achse) und der Anzahl der Kundenbewertungen (Größe der Blasen) darzustellen. Dies hilft, um Trends und Muster in der Marktstruktur aufzudecken.",
+    "Ein Biologe erstellt ein 3D-Blasendiagramm, um die Korrelation zwischen der Genexpression (X-Achse), der Proteinausbeute (Y-Achse) und der Zellgröße (Größe der Blasen) in einer Zellkultur zu visualisieren. Dies unterstützt die Analyse genetischer und proteomischer Daten.",
+    "Ein Finanzanalyst nutzt das Tool, um die Beziehung zwischen dem Börsenkurs von Unternehmen (Y-Achse), dem Unternehmenswert (X-Achse) und der Dividendenrendite (Größe der Blasen) darzustellen, um Investitionsentscheidungen zu treffen.",
+    "Ein Umweltforscher erstellt ein 3D-Blasendiagramm, um die Beziehung zwischen der Kohlendioxidemission (X-Achse), dem Energieverbrauch (Y-Achse) und der Bevölkerungsdichte (Größe der Blasen) in verschiedenen Städten zu visualisieren, um Umweltstrategien zu entwickeln."
   ]
 }

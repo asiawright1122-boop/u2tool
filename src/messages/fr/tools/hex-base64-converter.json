@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Convertisseur Hex Base64 est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Convertisseur Hex Base64 pour traiter diverses données sans installer de logiciels ou de plugins. Cet outil dispose d'une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Convertisseur Hex Base64 peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et empêchant leur téléversement sur tout serveur. Utilisez immédiatement le Convertisseur Hex Base64 pour découvrir un service en ligne rapide, sécurisé et gratuit.",
+  "detailed_description": "Le convertisseur Hex Base64 permet de transformer des données binaires en deux formats couramment utilisés dans le développement informatique : l'hexadécimal (Base16) et le Base64. L'hexadécimal représente les octets en paires de chiffres hexa (0-9, A-F), souvent utilisé pour les adresses mémoire ou les codes couleurs CSS, tandis que le Base64 encode les données binaires en caractères ASCII, utile pour transmettre des fichiers via des protocoles textuels comme JSON ou XML. Ce outil est indispensable pour des tâches comme le débogage de protocoles réseau, la manipulation de clés cryptographiques ou l'intégration d'assets encodés dans des applications web. Techniquement, la conversion implique un réencodage des séquences binaires : le Base64 groupe les octets en tranches de 24 bits pour les diviser en 4 segments de 6 bits, chacun étant mappé à un caractère de l'alphabet Base64. L'outil gère automatiquement le padding final (= ou ==) et la gestion des caractères non valides en mode décodage. Pour les conversions inverses, il effectue une vérification stricte des encodages UTF-8 ou ISO-8859-1 selon les besoins.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Convertisseur Hex Base64",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez l'outil Hex Base64 Converter sur le site et sélectionnez l'onglet 'Conversion Hex → Base64' ou 'Base64 → Hex' selon votre besoin",
+    "Collez votre données dans la zone d'entrée, en veillant à retirer les en-têtes comme '0x' pour l'hexadécimal ou les préfixes MIME pour le Base64",
+    "Activez/désactivez l'option 'Ignorer les espaces' pour traiter les flux hexa contenant des séparateurs courants",
+    "Choisissez l'encodage source (ASCII, UTF-8, ou binaire brut) dans le menu déroulant si nécessaire",
+    "Cliquez sur le bouton 'Convertir' pour obtenir le résultat instantanément dans la zone de sortie",
+    "Utilisez le bouton 'Copier' ou téléchargez le résultat au format .txt pour l'intégrer à vos projets"
   ],
   "usage_examples": [
-    "Utilisez le Convertisseur Hex Base64 pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Encoder une image PNG miniature en Base64 pour l'intégrer directement dans un fichier HTML sans requête HTTP externe",
+    "Convertir un certificat SSL au format PEM (Base64) en hexadécimal pour analyser ses champs dans un outil de débogage réseau",
+    "Transformer un hash SHA-256 (en hexa) en Base64 pour réduire sa taille lors du stockage dans une base de données NoSQL",
+    "Décoder un payload MQTT reçu en hexadécimal vers le Base64 pour extraire des données binaires compactes issues d'un capteur IoT"
   ]
 }

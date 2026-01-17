@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Randomizador de Listas é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Randomizador de Listas, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Randomizador de Listas pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Randomizador de Listas imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O List Randomizer é uma ferramenta técnica projetada para embaralhar e randomizar elementos em listas textuais com precisão algorítmica. Utiliza o algoritmo Fisher-Yates (também conhecido como Knuth Shuffle), que garante uma distribuição uniforme de permutações, ideal para aplicações que exigem aleatoriedade estatística. Profissionais de dados, desenvolvedores e pesquisadores podem utilizá-la para eliminar padrões sequenciais em conjuntos de dados, criar amostras aleatórias para análise ou simular cenários não determinísticos. O processo ocorre em duas etapas: primeiro, o texto inserido é tokenizado com base em delimitadores configuráveis (como vírgulas ou quebras de linha); depois, o algoritmo embaralha os tokens em memória antes de retornar a saída. Sua implementação em JavaScript puro permite execução cliente-side, assegurando privacidade e baixa latência. Diferentemente de ferramentas genéricas, suporta personalização avançada de delimitadores e preserva formatação específica de itens.",
   "usage_steps": [
-    "Abra a página da ferramenta Randomizador de Listas",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole sua lista na área de texto, separando itens por vírgulas, quebras de linha ou outro delimitador.",
+    "Selecione o tipo de delimitador usado na entrada no menu suspenso 'Delimitador de Entrada'.",
+    "Ative a opção 'Manter Delimitador' se desejar que o caractere separador seja incluído na saída.",
+    "Clique em 'Randomizar Lista' para aplicar o algoritmo Fisher-Yates ao conjunto de dados.",
+    "Revise a lista embaralhada na seção de resultados, que mostra contagem de elementos processados.",
+    "Use o botão 'Copiar para Área de Transferência' ou exporte como .txt para integrar o resultado em fluxos de trabalho."
   ],
   "usage_examples": [
-    "Use Randomizador de Listas para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um professor cria versões aleatórias de questões para provas digitais, evitando cola em avaliações online.",
+    "Um analista de marketing sorteia vencedores de um concurso a partir de uma lista de participantes.",
+    "Um desenvolvedor testa a robustez de um algoritmo de ordenação com entradas aleatorizadas de diferentes tamanhos.",
+    "Um pesquisador anonimiza dados sensíveis ao embaralhar identificadores em um conjunto de dados científico."
   ]
 }

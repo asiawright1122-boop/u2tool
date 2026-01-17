@@ -1,14 +1,17 @@
 {
-  "detailed_description": "String Escape/Unescape ist eine praktische Online-Tools, die Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit String Escape/Unescape können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Sei Sie Entwickler, Designer oder allgemeiner Benutzer, String Escape/Unescape kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitung erfolgt lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie String Escape/Unescape sofort, um schnell, sicher und kostenlosen Online-Tools-Dienstleistungen zu genießen.",
+  "detailed_description": "Der String Escape/Unescape konvertiert Zeichenketten zwischen lesbaren und maschinenlesbaren Repräsentationen für JSON, HTML, URL und JavaScript. Das Tool analysiert den Input, erkennt Codepoints, Escape-Sequenzen und reservierte Zeichen, und erzeugt korrekt escapete bzw. de-escapete Ausgaben. Für JSON werden Steuerzeichen (\\n, \\r, \\t), Backslashes und Anführungszeichen gemäß RFC 8259 ersetzt; optional können nicht-ASCII-Zeichen als \\uXXXX ausgegeben werden. Im HTML-Modus werden <, >, &, \" und ' in benannte oder numerische Entitäten umgewandelt, je nach Kontext. URL-Kodierung setzt reservierte Zeichen wie ?, &, =, + und Leerzeichen auf Prozent-Encoding mit UTF‑8-Bytefolgen. JavaScript-Escaping berücksichtigt die Unterschiede zwischen String-Literalen und Escape-Sequenzen in regulären Ausdrücken. Durch die strikte Anwendung der relevanten Standards (RFC 8259, WHATWG HTML Living Standard, RFC 3986, ECMAScript) werden Cross-Site-Scripting, Injection und Fehler durch falsche Kodierung vermieden. Anwendungsfälle sind API-Integration, sichere Template-Ausgaben, Build-Skripte, Log-Export und Entwickler-Debugging.",
   "usage_steps": [
-    "Öffnen Sie die Seite des String Escape/Unescape-Tools",
-    "Geben Sie oder fügen Sie den zu verarbeitenden Inhalt in das Eingabefeld ein",
-    "Anpassen Sie die Tool-Einstellungen und Optionen, wie gewünscht",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Öffnen Sie den String Escape/Unescape (Slug: string-escape) und fügen Sie Ihre Zeichenkette in das Feld „Input“ ein.",
+    "Wählen Sie im Dropdown „Format“ die Zielsprache (JSON, HTML, URL oder JavaScript).",
+    "Setzen Sie die Aktion auf „Escape“ oder „Unescape“; aktivieren Sie bei Bedarf Optionen wie „Nicht-ASCII als \\uXXXX escapen“ oder „Nur Attribute escapen (HTML)“.",
+    "Klicken Sie auf „Konvertieren“; das Feld „Output“ zeigt die umgewandelte Zeichenkette an.",
+    "Nutzen Sie die Schaltfläche „Kopieren“, um das Ergebnis in die Zwischenablage zu übernehmen.",
+    "Aktivieren Sie „Auto-Konvertierung“ für sofortige Aktualisierung bei jeder Änderung und prüfen Sie das Vorschau-Feld auf Korrektheit."
   ],
   "usage_examples": [
-    "Verwenden Sie String Escape/Unescape, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "JSON-Konfiguration: Input: Größe: 50×50 cm, Preis: 12,50 € | Output: \"Größe: 50×50 cm, Preis: 12,50 €\"",
+    "HTML-Attribut: Input: alt=\"Bild: 50\" diagonal\" | Output: alt=\"Bild: 50\\\" diagonal\\\"\"",
+    "URL-Parameter: Input: q=Größe & Farbe | Output: q=Gr%C3%B6%C3%9Fe%20%26%20Farbe",
+    "JavaScript-Regex: Input: \\d+[%]? | Output: \\\\d+[%]?"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Explicador de Expressões Cron é uma ferramenta online prática que ajuda você a completar diversas tarefas rapidamente. Usando o Explicador de Expressões Cron, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a eficientemente. Seja desenvolvedor, designer ou usuário geral, o Explicador de Expressões Cron pode ajudá-lo a melhorar a eficiência de trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviados a qualquer servidor. Use o Explicador de Expressões Cron imediatamente para experimentar serviços de ferramenta online de alta velocidade, segurança e gratuitos.",
+  "detailed_description": "O Cron Expression Explainer é uma ferramenta técnica que transforma expressões cron em descrições legíveis por humanos, revelando o calendário de execução por trás de padrões complexos. Ele suporta a sintaxe completa do cron, incluindo campos como minutos, horas, dias do mês, meses e dias da semana, além de operadores especiais como asterisco (*), barra (/) e listas (,). A ferramenta utiliza algoritmos de parsing baseados na biblioteca croniter para calcular as próximas datas e horas de execução com precisão, considerando regras de calendário e fusos horários. Desenvolvedores precisam desse recurso para validar jobs agendados em ambientes de produção, depurar configurações de crontab ou integrar lógica de agendamento em aplicações sem risco de erro. Ao interpretar expressões como '0 0 1 * MON' (executar às segundas-feiras às 00:00 no primeiro dia do mês), a ferramenta mostra passos detalhados do parser e gera um cronograma executável com timestamps UTC ou personalizados.",
   "usage_steps": [
-    "Abra a página do Explicador de Expressões Cron",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole a expressão cron na área de texto destacada com rótulo 'Expressão Cron'.",
+    "Selecione o fuso horário desejado no dropdown 'Configurações' para cálculos precisos.",
+    "Clique em 'Processar Expressão' para gerar a interpretação textual segmentada por campo.",
+    "Expanda a seção 'Próximas Execuções' para visualizar os próximos 10 horários calculados.",
+    "Use o botão 'Copiar Saída' para exportar o resultado em formato JSON ou texto estruturado.",
+    "Ative o modo 'Debug' para ver logs internos do parser e validar expressões personalizadas."
   ],
   "usage_examples": [
-    "Use o Explicador de Expressões Cron para processar seus dados",
-    "Obtenha rapidamente os resultados do processamento sem esperar"
+    "Validar um job de backup noturno configurado com '0 2 * * *' para garantir execução diária às 2h UTC.",
+    "Converter '30 8-17/2 * * 1-5' em linguagem natural para documentar um script que roda às 30 minutos em intervalos de 2 horas nos dias úteis.",
+    "Diagnosticar por que um job definido como '0 0/12 * * SUN' não executou corretamente nos domingos ao meio-dia.",
+    "Sincronizar tarefas agendadas entre servidores em diferentes regiões usando conversão de fusos horários em tempo real."
   ]
 }

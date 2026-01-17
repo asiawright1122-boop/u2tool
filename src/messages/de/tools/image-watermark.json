@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Bildwasserzeichen ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Bildwasserzeichen können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Bildwasserzeichen kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Bildwasserzeichen sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Das Image Watermark Tool ermöglicht es Benutzern, textbasierte Wasserzeichen präzise und technisch flexibel in Bilddateien einzubetten. Technisch gesehen nutzt das Tool serverseitige Bildverarbeitungsbibliotheken, die Rasterisierung und Alphablending kombinieren, um Textwasserzeichen mit anpassbarer Transparenz auf verschiedenen Bildformaten (JPEG, PNG, WebP) zu rendern. Die Texte werden in einem separaten Bildschicht-Overlay-Prozess mit Kantenglättung (Anti-Aliasing) über das Hauptbild gelegt, wobei der Farbraum (RGB/RGBA) automatisch angepasst wird, um Farbkonflikte zu vermeiden. Benutzer können Schriftgrößen, Farbtiefen (HEX/RGB/CMYK-Konversion) und Positionierungsparameter (X/Y-Koordinaten, Prozentangaben zur Bildgröße) definieren. Besonders bei Urheberrechtsvermerken oder Markenlogos ist die präzise Kontrolle über den Transparenzkanal entscheidend, um die Lesbarkeit bei gleichzeitiger optischer Diskretion zu gewährleisten. Das Tool unterstützt zudem Batch-Verarbeitung für Massenoperationen und bietet eine Vorschau-Funktion mit Echtzeit-Rendering, die Änderungen pixelgenau anzeigt.",
   "usage_steps": [
-    "Öffnen Sie die Bildwasserzeichen-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "1. Laden Sie Ihr Bild über den Drag-and-Drop-Bereich oder den Datei-Explorer hoch.",
+    "2. Wählen Sie im Dropdown-Menü die gewünschte Schriftart (z.B. Arial, Roboto, Custom Font Upload) und passen Sie die Schriftgröße per Pixel-Schieberegler an.",
+    "3. Geben Sie den Wasserzeichentext in das Eingabefeld ein und aktivieren Sie optional den 'Dynamic Text Wrap'-Modus für mehrzeilige Anordnungen.",
+    "4. Regulieren Sie die Deckkraft des Wasserzeichens mit dem Transparenz-Schieberegler (0-100%) und wählen Sie den Positioniermodus (manuell per Koordinateneingabe oder automatisch in einer der 9 Gitterpositionen).",
+    "5. Aktivieren Sie den 'Batch-Modus' für die gleichzeitige Bearbeitung mehrerer Bilder und legen Sie das Ausgabeformat (JPEG/PNG/WebP) mit spezifischer Komprimierung fest.",
+    "6. Klicken Sie auf 'Apply Watermark', um das Ergebnis herunterzuladen oder direkt in die Zwischenablage kopieren."
   ],
   "usage_examples": [
-    "Verwenden Sie Bildwasserzeichen, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein Fotograf fügt dynamische Copyright-Texte mit automatischer Datumsaktualisierung zu Produktfotos hinzu, um Rechtsansprüche zu sichern.",
+    "Ein Marketing-Team integriert halbtransparente Markenlogos in Social-Media-Bilder, wobei die Schriftfarbe auf den dominierenden Bildbereich abgestimmt wird.",
+    "Ein Entwickler automatisiert die Wasserzeichen-Erstellung für 1000 Screenshots durch Batch-Processing und relative Positionierung.",
+    "Ein Designer erstellt wassergezeichnete Portfolio-Vorschauen mit benutzerdefinierten Schriftarten, die in Echtzeit in verschiedenen Bildformaten getestet werden."
   ]
 }

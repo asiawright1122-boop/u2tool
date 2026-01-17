@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text Case Counter ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Text Case Counter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann Text Case Counter Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungstätigkeiten werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie Text Case Counter sofort, um schnell, sicher und kostenlosen Online-Tools zu nutzen.",
+  "detailed_description": "Der Text Case Counter ist ein präzises Analysewerkzeug zur Kategorisierung von Zeichen in Unicode-kompatiblen Textsträngen. Technisch gesehen nutzt der Tool reguläre Ausdrücke (Regex) zur Identifizierung und Zählung von Großbuchstaben (A-Z), Kleinbuchstaben (a-z), Ziffern (0-9) sowie Sonderzeichen aus dem ASCII- und erweiterten Unicode-Zeichensatz. Die Implementierung erfolgt durch iteratives Durchlaufen jedes Zeichens im Eingabetext, wobei für jede Zeichenklasse spezifische Bitmasken-Operationen durchgeführt werden, um die Kategorisierung zu validieren. Besonders bei multilingualen Texten mit Sonderzeichen (z.B. Umlauten oder kyrillischen Schriftzeichen) gewährleistet die Unicode-8-konforme Implementierung präzise Ergebnisse. Entwickler nutzen das Tool für die Qualitätssicherung von Benutzereingaben, bei der Sicherheitsanalyse von Passwortkomplexität oder zur Optimierung von NLP-Trainingsdaten, wo die Verteilung von Schreibweisen entscheidend ist. Die detaillierte Aufschlüsselung inklusive Prozentanteilen ermöglicht statistische Analysen, die mit Standard-Texteditoren nicht darstellbar sind.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Text Case Counters",
-    "Geben Sie den zu bearbeitenden Inhalt in das Eingabefeld ein oder kopieren Sie ihn ein",
-    "Passen Sie die Tooloptionen und Einstellungen nach Bedarf an",
-    "Klicken Sie auf den Bearbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die bearbeiteten Ergebnisse"
+    "Fügen Sie Ihren Text in das mehrzeilige Eingabefeld unter 'Textanalyse starten' ein.",
+    "Aktivieren Sie optional den Schalter 'Leerzeichen ignorieren', um Whitespace-Zeichen von der Zählung auszunehmen.",
+    "Wählen Sie im Dropdown-Menü 'Analysemodus' zwischen 'Standard' (A-Z, a-z) oder 'Erweitert' (inkl. Unicode-Sonderzeichen).",
+    "Klicken Sie auf den Button 'Analyse durchführen', um die Ergebnisse in der interaktiven Tabelle anzuzeigen.",
+    "Nutzen Sie die Schaltfläche 'CSV exportieren', um die Daten für externe Analysen herunterzuladen.",
+    "Setzen Sie die Analyse mit dem 'Neu starten'-Button zurück, um einen weiteren Text zu prüfen."
   ],
   "usage_examples": [
-    "Verwenden Sie Text Case Counter, um Ihren Daten zu bearbeiten",
-    "Erhalten Sie schnell die Bearbeitungsresultate ohne zu warten"
+    "Ein Backend-Entwickler analysiert 10.000 Registrierungspasswörter, um zu prüfen, ob mindestens 30% Großbuchstaben enthalten sind.",
+    "Ein Redakteur überprüft, ob in einer CSV-Datei mit 500 Headlines die Großschreibung einheitlich nach Duden-Regeln erfolgt.",
+    "Ein Data Scientist bewertet die Qualität von OCR-Scans, indem er den Anteil nicht-ASCII-Zeichen in historischen Dokumenten misst.",
+    "Ein QA-Tester analysiert Logdateien, um festzustellen, ob Fehlercodes konsistent in Klein- oder Großschreibung notiert wurden."
   ]
 }

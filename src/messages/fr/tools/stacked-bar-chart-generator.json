@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique en Barres Empilées est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphique en Barres Empilées pour traiter facilement diverses données sans installer de logiciels ou de modules complémentaires. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique en Barres Empilées peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et évitant tout téléchargement sur un serveur. Utilisez immédiatement le Générateur de Graphique en Barres Empilées pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le générateur de graphiques à barres empilées permet de visualiser la composition des totaux par catégories en découpant chaque barre en segments proportionnels. Ce outil utilise des algorithmes de segmentation proportionnelle pour représenter des données multidimensionnelles, idéal pour analyser des ratios sectoriels, des parts de marché ou des distributions budgétaires. Les utilisateurs peuvent importer des datasets structurés (CSV, JSON) avec des colonnes numériques représentant les sous-catégories à empiler. Le moteur de rendu SVG génère automatiquement des axes dimensionnés avec des échelles logarithmiques ou linéaires, des légendes interactives et des tooltips dynamiques. La logique d'empilement respecte les standards D3.js, permettant des visualisations précises avec des options d'ajustement manuel des couleurs via des palettes hexadécimales. Les développeurs peuvent intégrer les configurations exportées en JSON ou utiliser le code SVG généré pour des intégrations front-end.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique en Barres Empilées",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Sélectionnez le format d'import (CSV/JSON) via le sélecteur 'Source Data' dans l'onglet 'Input'.",
+    "2. Chargez votre fichier avec des colonnes numériques pour chaque segment à empiler (ex: 'Ventes_EU', 'Ventes_USA').",
+    "3. Mappez les colonnes aux segments via le panneau de configuration 'Layer Mapping' en glissant-déposant les champs.",
+    "4. Ajustez les échelles des axes Y/X dans 'Axis Settings' avec options logarithmiques ou personnalisées.",
+    "5. Personnalisez les couleurs des segments via l'éditeur de palette hexadécimale 'Color Editor'.",
+    "6. Exportez le graphique en SVG ou récupérez le code d'intégration dans l'onglet 'Output' pour un usage web."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique en Barres Empilées pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Une équipe marketing analyse les parts de ventes par région pour différents produits sur un semestre.",
+    "Un chercheur en sciences sociales visualise la répartition des réponses catégorielles dans une enquête comparative.",
+    "Un service financier compare les dépenses par département avec sous-catégories (RH, matériel, R&D).",
+    "Un site e-commerce montre la distribution des ventes par catégorie de produit et sous-marques."
   ]
 }

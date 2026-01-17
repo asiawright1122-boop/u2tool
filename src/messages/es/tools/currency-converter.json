@@ -1,16 +1,17 @@
 {
-  "detailed_description": "El Convertidor de Moneda es una herramienta completa que te ayuda a convertir instantáneamente entre más de 45 monedas mundiales. Soporte para monedas principales como USD, EUR, GBP, JPY, CNY, así como monedas asiáticas, europeas, americanas y del Medio Oriente. Las características incluyen intercambio rápido de monedas, botones de cantidad preestablecida e información detallada de tasas de cambio.",
+  "detailed_description": "Nuestra herramienta de conversión monetaria opera mediante la integración de APIs financieros en tiempo real, como XE.com y OANDA, para obtener tasas de cambio actualizadas cada 60 segundos. Soporta 45+ divisas, incluyendo monedas fiduciarias (USD, EUR, JPY) y criptomonedas (BTC, ETH), con precisión de hasta 6 decimales. El motor backend, desarrollado en Node.js, utiliza algoritmos de redondeo bancario (IEEE 8553) para garantizar precisión en transacciones internacionales. La interfaz frontend, construida con React.js, permite a los usuarios seleccionar múltiples divisas objetivo simultáneamente y visualizar diferencias en spreads de compra/venta. Incorporamos un sistema de caché distribuido con Redis para reducir latencia, ideal para profesionales financieros que requieren cálculos masivos de conversión en hojas de presupuesto o liquidaciones aduaneras.",
   "usage_steps": [
-    "Ingresa la cantidad que deseas convertir",
-    "Selecciona la moneda de origen del menú desplegable",
-    "Selecciona la moneda de destino del menú desplegable",
-    "Ve la cantidad convertida instantáneamente",
-    "Usa el botón de intercambio para conversión inversa",
-    "Haz clic en cantidades preestablecidas para cálculos rápidos"
+    "1. Selecciona tu moneda base desde el menú desplegable 'Divisa Origen' (ej: USD, BRL, AUD).",
+    "2. Ingresa el monto en el campo numérico con soporte para notación científica (ej: 1.25e6).",
+    "3. Marca hasta 5 divisas destino en la sección 'Convertir a' usando los checkboxes (ej: EUR, CNY, SAR).",
+    "4. Haz clic en el botón 'Actualizar Tasas en Tiempo Real' para sincronizar con los servidores API.",
+    "5. Revisa la tabla de resultados que muestra montos convertidos junto con el spread de conversión y comisiones estimadas.",
+    "6. Usa el botón 'Copiar al Portapapeles' para exportar los datos en formato CSV o genera un enlace compartible con parámetros predefinidos."
   ],
   "usage_examples": [
-    "Convertir USD a EUR para planificación de viajes",
-    "Calcular tasas de cambio para compras internacionales",
-    "Comparar valores de moneda entre diferentes países"
+    "Un exportador peruano calcula el valor CIF en EUR de un envío de 15,000 kg de espárragos a Alemania, considerando tasas de cambio y costos aduaneros.",
+    "Un viajero japones planifica su presupuesto para un viaje a México, convirtiendo 500,000 JPY a MXN con actualización automática de tasas diarias.",
+    "Un freelancer argentino factura servicios en USD a un cliente canadiense, generando un comprobante con conversiones a CAD y ARS según normativa AFIP.",
+    "Un inversor chileno monitorea el valor de su portafolio en Bitcoin (BTC) a CLP y USD, utilizando la función de actualización automática cada 5 minutos."
   ]
 }

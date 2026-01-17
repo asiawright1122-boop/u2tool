@@ -1,15 +1,17 @@
 {
-  "detailed_description": "HTML to PDF Converter transforms HTML content into downloadable PDF documents. Supports CSS styling, custom page sizes, and maintains layout fidelity.",
+  "detailed_description": "Our HTML to PDF Converter is a browser-based tool that leverages headless rendering engines like WebKit and Chromium to transform HTML documents into print-ready PDFs. It parses the DOM structure, executes embedded JavaScript, and applies CSS styles—including media queries—to generate pixel-perfect layouts. This tool supports modern web standards such as Flexbox, Grid, and SVG, ensuring accurate conversion of dynamic content. Developers use it to automate invoice generation, create downloadable reports, or archive web pages with interactive elements. The converter handles client-side rendering by waiting for JavaScript promises or DOM mutations to resolve before capturing the final layout. Advanced features include custom page sizes (A4, Letter), margin controls (in mm or inches), and PDF optimization options for compression. Unlike generic converters, it allows fine-grained control over print styles via @media print overrides and supports embedded base64-encoded assets for offline usability.",
   "usage_steps": [
-    "Enter or paste HTML content",
-    "Add CSS styles if needed",
-    "Configure page settings",
-    "Click Generate PDF",
-    "Download the PDF file"
+    "1. Paste raw HTML into the editor or upload an .html file using the 'Load File' button.",
+    "2. Adjust page settings in the 'Layout' panel: select size (A4, Letter), orientation (portrait/landscape), and margins (customizable in mm).",
+    "3. Toggle 'JavaScript Execution' to enable dynamic content rendering; use 'Wait for Selector' to delay conversion until specific DOM elements load.",
+    "4. Click 'Live Preview' to see a browser-rendered preview; inspect the console for JavaScript errors or resource loading issues.",
+    "5. Open 'Advanced Settings' to modify PDF compression levels, embed custom fonts via @font-face, or inject print-specific CSS.",
+    "6. Click 'Convert to PDF' and download the file, or use the 'Copy Blob URL' option for programmatic access to the output."
   ],
   "usage_examples": [
-    "Generate reports from web content",
-    "Create printable documents",
-    "Export styled HTML pages"
+    "1. A SaaS startup generates branded invoices by converting HTML templates with Handlebars.js variables and Chart.js visualizations.",
+    "2. A documentation team archives interactive API reference pages, preserving expandable code blocks and syntax highlighting in PDF format.",
+    "3. A freelance developer creates a downloadable resume with a responsive design that adapts to PDF page dimensions using @media queries.",
+    "4. An e-commerce platform exports order confirmation pages with embedded SVG logos and dynamically calculated tax tables as shareable PDFs."
   ]
 }

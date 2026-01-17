@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Politique de Cookies est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant le Générateur de Politique de Cookies, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Politique de Cookies peut vous aider à améliorer l'efficacité de votre travail. Tout traitement se fait localement dans votre navigateur, garantissant la sécurité de vos données et évitant leur upload sur tout serveur. Utilisez immédiatement le Générateur de Politique de Cookies pour expérimenter des services d'outils en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "Le Générateur de Politique de Cookies permet de créer automatiquement un document juridique précis basé sur l'analyse technique des cookies déployés sur un site web. Cet outil détecte les types de cookies utilisés (strictement nécessaires, de performance, de publicité, etc.), leurs durées de vie, leurs finalités et leur conformité avec les réglementations comme le RGPD ou la directive ePrivacy. Il génère un texte personnalisé intégrant des clauses spécifiques selon les juridictions sélectionnées, avec des mentions obligatoires pour les cookies tiers (ex: Google Analytics, pixels publicitaires). Le processus s'appuie sur un scan automatisé du site via son URL, croisant les données techniques avec une base de connaissances juridique mise à jour. Le résultat est un document structuré en HTML ou Markdown, intégrant des balises sémantiques pour une implémentation facile dans un CMS ou un framework frontend.",
   "usage_steps": [
-    "Ouvrez la page du Générateur de Politique de Cookies",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres d'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Saisir l'URL du site web à analyser dans le champ dédié",
+    "Sélectionner les juridictions applicables via un menu déroulant (UE, Suisse, Californie, etc.)",
+    "Classifier manuellement les cookies détectés par catégories (obligatoires, statistiques, marketing)",
+    "Activer/désactiver les options de personnalisation (marque blanche, mentions spécifiques pour les cookies de géolocalisation)",
+    "Revoir le texte généré avec un aperçu en temps réel de la structure HTML",
+    "Exporter le document au format HTML ou copier le code intégrable directement dans le pied de page du site"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Politique de Cookies pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un e-commerçant français doit mettre en conformité son site avec le RGPD avant le Black Friday, en documentant précisément ses cookies de suivi de panier",
+    "Un blogueur utilisant des publicités Google AdSense génère une politique expliquant clairement les cookies tiers et leur opt-out",
+    "Un développeur d'application web progressive (PWA) configure une politique détaillant les cookies de session et les stockages locaux IndexedDB",
+    "Une entreprise multinationale crée des versions localisées de sa politique de cookies pour ses sites en .de, .es et .it avec les mentions légales adaptées"
   ]
 }

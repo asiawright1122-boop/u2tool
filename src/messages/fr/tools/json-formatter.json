@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Formatteur JSON est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Formatteur JSON, vous pouvez traiter divers types de données sans installer de logiciels ou de plugins. Cet outil possède une interface simple et est facile à utiliser, ce qui vous permet de démarrer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Formatteur JSON peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléversées sur un serveur. Utilisez immédiatement le Formatteur JSON pour découvrir un service en ligne rapide, sécurisé et gratuit.",
+  "detailed_description": "Le JSON Formatter est un outil puissant conçu pour formater, beautifier et valider des données JSON. Techniquement, l'outil prend en entrée une chaîne de caractères JSON et l'analyse pour identifier sa structure. Il reformate ensuite le JSON pour une meilleure lisibilité, avec une mise en forme et une coloration syntaxique. L'outil est doté d'une fonction de validation qui détecte et affiche les erreurs communes, comme les guillemets manquants ou les virgules superflues. En cas d'erreur, un message détaillé est généré pour aider l'utilisateur à corriger le problème. De plus, le JSON Formatter offre des options pour minifier le JSON, supprimer les espaces inutiles, et copier le résultat formatté directement dans le presse-papiers. Cette polyvalence en fait un outil essentiel pour les développeurs, les intégrateurs et les data scientists travaillant fréquemment avec des structures de données JSON. L'outil est compatible avec tous les navigateurs modernes et ne nécessite aucune installation, ce qui en fait un choix idéal pour des utilisations rapides et ponctuelles. Les meilleures pratiques incluent l'utilisation de l'outil pour vérifier la validité des fichiers JSON avant leur utilisation dans des applications ou des API, et pour formater les données JSON pour une meilleure lisibilité lors du débogage.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Formatteur JSON",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les réglages de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Dans le champ d'entrée, collez le code JSON que vous souhaitez formater ou minifier.",
+    "Cliquez sur le bouton 'Format JSON' pour appliquer la mise en forme et la coloration syntaxique à votre code.",
+    "Si des erreurs sont détectées, le message d'erreur s'affichera en dessous du champ d'entrée. Corrigez les erreurs et réessayez.",
+    "Pour minifier le JSON, cliquez sur le bouton 'Minifier JSON' pour supprimer les espaces inutiles et obtenir une version compacte.",
+    "Une fois que le JSON est formatté ou minifié, cliquez sur le bouton 'Copier' pour copier le résultat dans le presse-papiers.",
+    "Utilisez le bouton 'Effacer tout' pour réinitialiser les champs d'entrée et de sortie, et préparer l'outil pour une nouvelle utilisation."
   ],
   "usage_examples": [
-    "Utilisez le Formatteur JSON pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur front-end utilise le JSON Formatter pour vérifier la validité des données JSON reçues d'une API avant de les intégrer dans une application web. Cela aide à éviter les erreurs de parsing et assure une intégration fluide.",
+    "Un data scientist charge un grand fichier JSON contenant des données de recherche. En utilisant l'outil, il formate le JSON pour une meilleure lisibilité, facilitant ainsi l'analyse et le débogage des données.",
+    "Un intégrateur web reçoit un fichier JSON mal formatté d'un client. Il utilise le JSON Formatter pour le reformater et le rendre plus présentable avant de le partager avec l'équipe de développement.",
+    "Un développeur back-end a besoin de minifier un fichier JSON pour l'optimiser avant de le stocker en base de données. Il utilise l'outil pour supprimer les espaces inutiles et réduire la taille du fichier, améliorant ainsi les performances de l'application."
   ]
 }

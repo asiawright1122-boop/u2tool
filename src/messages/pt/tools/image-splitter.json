@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Divisor de Imagens é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com o Divisor de Imagens, você pode processar vários dados facilmente sem a necessidade de instalar qualquer software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Divisor de Imagens pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são feitos localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam enviados para qualquer servidor. Use o Divisor de Imagens imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Image Splitter é uma ferramenta de processamento de imagens raster que permite dividir uma imagem em uma grade parametrizável de linhas e colunas. O algoritmo calcula automaticamente as dimensões de cada célula com base nas proporções da imagem original, garantindo preservação da taxa de aspecto quando necessário. Técnicas de amostragem bilinear são aplicadas para evitar distorções nos fragmentos gerados. A ferramenta suporta formatos PNG e JPEG, com opção de manter transparência em PNGs. Ideal para desenvolvedores que precisam criar assets para layouts responsivos, designers preparando imagens para impressão em mosaicos ou criando sprites para jogos. Funciona através de uma engine em JavaScript que processa a imagem no navegador, sem enviar dados para servidores, garantindo privacidade. Após upload, o usuário define o número de divisões, ajusta margens opcionais entre peças e seleciona o formato de saída. Cada fragmento é exportado como arquivo individual ou em pacote ZIP.",
   "usage_steps": [
-    "Abra a página da ferramenta Divisor de Imagens",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Clique em 'Selecionar Imagem' para carregar o arquivo raster (PNG/JPEG) até 20MB.",
+    "2. Defina o número de linhas e colunas nos campos numéricos abaixo da pré-visualização.",
+    "3. Ajuste a 'Margem de Corte' em pixels para adicionar espaçamento entre fragmentos.",
+    "4. Escolha o formato de saída no dropdown 'Formato Final' (PNG ou JPEG com qualidade ajustável).",
+    "5. Ative o checkbox 'Manter Transparência' para preservar fundos transparentes em PNGs.",
+    "6. Clique em 'Gerar Fragmentos' e depois em 'Baixar Todos' para obter os arquivos em ZIP."
   ],
   "usage_examples": [
-    "Use o Divisor de Imagens para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Desenvolvedor criando um layout CSS Grid responsivo com imagens fragmentadas em 3 colunas para otimizar carregamento.",
+    "Designer produzindo sprites de animação para um jogo 2D, dividindo uma imagem em 8 colunas e 4 linhas.",
+    "Fotógrafo preparando um banner para impressão em 4 partes A4, adicionando margens de 10mm para facilitar montagem.",
+    "Criador de conteúdo dividindo um infográfico em 9 quadrantes para postagens sequenciais no Instagram Stories."
   ]
 }

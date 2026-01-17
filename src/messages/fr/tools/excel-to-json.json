@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Excel vers JSON est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant Excel vers JSON, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, Excel vers JSON peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, garantissant la sécurité de vos données et ne sera pas téléchargé sur un serveur. Utilisez Excel vers JSON immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil Excel to JSON est un puissant convertisseur en ligne qui permet de transformer des fichiers Excel en format JSON, en offrant une grande flexibilité dans le processus. Techniquement, cet outil analyse la structure de votre feuille Excel, permettant la sélection de l'onglet spécifique à convertir et offrant une prévisualisation en temps réel des données avant la conversion finale. Cela est particulièrement utile pour les développeurs et les data scientists qui doivent souvent manipuler des données provenant de sources hétérogènes. Par exemple, vous pouvez convertir des données de ventes, des listes de contacts ou des enregistrements de transactions en JSON pour les intégrer facilement dans des applications web, des bases de données NoSQL ou des scripts d'analyse de données. La conversion en JSON facilite l'échange et le traitement de données entre différentes applications et plateformes, en garantissant une compatibilité optimale avec les technologies modernes du web. L'outil prend en charge les formats .xls et .xlsx, et offre des options pour personnaliser la structure du JSON généré, comme l'inclusion des en-têtes de colonnes, la gestion des types de données et la suppression des lignes vides.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Excel vers JSON",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Téléchargez votre fichier Excel en utilisant le bouton 'Choisir un fichier' ou en faisant glisser et déposer le fichier dans la zone désignée.",
+    "Sélectionnez l'onglet de la feuille Excel que vous souhaitez convertir en utilisant le menu déroulant 'Sélectionnez une feuille'.",
+    "Activez ou désactivez les options de personnalisation en fonction de vos besoins, telles que 'Inclure les en-têtes de colonnes' et 'Supprimer les lignes vides'.",
+    "Prévisualisez les données converties en JSON en cliquant sur le bouton 'Prévisualiser'. Vérifiez que les données sont correctement formatées.",
+    "Si tout est conforme, cliquez sur 'Convertir' pour finaliser le processus de conversion.",
+    "Téléchargez le fichier JSON généré en utilisant le bouton 'Télécharger JSON'."
   ],
   "usage_examples": [
-    "Utilisez Excel vers JSON pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur front-end souhaite intégrer des données de ventes provenant d'un fichier Excel dans une application web. Il utilise Excel to JSON pour convertir les données en JSON, puis les charge directement dans son application pour afficher les informations sous forme de graphiques interactifs.",
+    "Un data scientist reçoit une liste de contacts au format Excel et doit la nettoyer et la préparer pour une analyse approfondie. En utilisant Excel to JSON, il convertit la liste en JSON, ce qui lui permet de manipuler facilement les données avec des outils de traitement de données comme Python ou R.",
+    "Un responsable de marketing a besoin de convertir des enregistrements de transactions clients en un format lisible par une base de données NoSQL. Excel to JSON lui permet de convertir les données en JSON, optimisant ainsi l'intégration et la gestion des données dans la base de données.",
+    "Un administrateur système doit migrer des données de configuration d'un serveur old-school au format Excel vers un nouveau système qui utilise JSON. En utilisant Excel to JSON, il peut facilement convertir les données et les importer dans le nouveau système, assurant ainsi une transition en douceur."
   ]
 }

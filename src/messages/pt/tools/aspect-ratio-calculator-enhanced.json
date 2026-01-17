@@ -1,15 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Proporção de Aspecto ajuda você a calcular e converter proporções de imagens e vídeos. Bloqueie a proporção para manter as proporções ao redimensionar, ou use presets comuns como 16:9, 4:3 e 1:1. Perfeita para designers, editores de vídeo e criadores de conteúdo.",
+  "detailed_description": "O Calculador de Relação de Aspecto aprimorado é uma ferramenta técnica projetada para calcular, converter e otimizar relações de aspecto de imagens e vídeos com precisão matemática. A relação de aspecto define a proporção entre a largura e a altura de um conteúdo visual, geralmente expressa como X:Y (ex.: 16:9). O usuário insere valores de largura e altura em pixels ou porcentagens, e o algoritmo processa esses dados usando o máximo divisor comum (MDC) para simplificar a proporção ou escalar dimensões mantendo a integridade proporcional. A ferramenta também suporta conversões entre formatos como decimal (ex.: 1.77:1), frações reduzidas (4:3 → 3:2) e resoluções comuns (1920x1080). É essencial para profissionais que lidam com plataformas com requisitos específicos, como streaming de vídeo, publicações em redes sociais ou design responsivo, onde distorções podem comprometer a qualidade visual. O cálculo inclui opções para arredondamento automático de valores não inteiros e previsão de dimensões escaladas ao inserir uma nova largura ou altura desejada.",
   "usage_steps": [
-    "Insira valores de largura e altura",
-    "Visualize a proporção de aspecto calculada",
-    "Bloqueie a proporção para manter as proporções ao redimensionar",
-    "Use presets comuns para formatos padrão",
-    "Pré-visualize visualmente a proporção de aspecto"
+    "Insira a largura e altura em pixels no campo de entrada numérica ou selecione uma proporção pré-definida (ex.: 4:3, 16:9) no menu suspenso.",
+    "Clique em 'Calcular' para obter a relação de aspecto simplificada e verificar se a proporção corresponde a padrões conhecidos.",
+    "Utilize o botão 'Converter para' para transformar a proporção em dimensões compatíveis com plataformas específicas, como Instagram Stories (9:16) ou YouTube (21:9).",
+    "Ajuste os valores manualmente nos campos de 'Largura Desejada' ou 'Altura Desejada' para escalar a imagem mantendo a proporção original.",
+    "Ative a opção 'Arredondar Valores' para evitar números decimais nas dimensões calculadas, útil em ambientes de desenvolvimento web.",
+    "Copie o resultado final no formato de texto (ex.: 1280x720) ou compartilhe o link com os parâmetros ajustados para colaboração em equipe."
   ],
   "usage_examples": [
-    "Redimensione imagens mantendo a proporção de aspecto",
-    "Calcule dimensões de vídeos para diferentes plataformas",
-    "Converta entre proporções de aspecto comuns"
+    "Um designer precisa redimensionar uma imagem de 2400x1600 pixels para Instagram, convertendo a proporção 3:2 para 4:5 sem cortes indesejados.",
+    "Um editor de vídeo transforma uma gravação em 1080x1920 (9:16) em um formato 2:39:1 para compatibilidade com plataformas cinematográficas.",
+    "Um desenvolvedor web ajusta a proporção de um banner responsivo de 16:9 para 3:4 em breakpoints móveis, mantendo a área visual crítica.",
+    "Um fotógrafo converte fotos de 5000x3333 pixels (3:2) para a proporção 1:1 do Facebook, obtendo dimensões escaladas com algoritmo de preenchimento."
   ]
 }

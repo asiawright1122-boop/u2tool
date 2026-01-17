@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON in Go-Struktur ist eine praktische Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON in Go-Struktur können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell damit anfangen und es effizient nutzen können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann JSON in Go-Struktur Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie JSON in Go-Struktur sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der JSON-to-Go-Struct-Converter ist ein spezialisierter Code-Generator, der JSON-Daten in typisierte Go-Structs übersetzt. Technisch gesehen analysiert das Tool JSON-Objekte, identifiziert Typen (Strings, Zahlen, Arrays, geschachtelte Objekte) und erzeugt entsprechende Go-Strukturen mit korrekten Feldtypen, Struct-Tags und hierarchischen Einbettungen. Der Parser berücksichtigt JSON-Schema-Komplexität, konvertiert Schlüssel in Go-konforme Feldnamen (z.B. camelCase zu PascalCase) und generiert Typaliase für Wiederholungen. Entwickler benötigen dieses Tool, um zeitaufwändige manuelle Codierung zu vermeiden, Typsicherheit in API-Backends (z.B. REST-Response-Handling) zu gewährleisten und komplexe Datenmodelle aus Microservices oder IoT-Sensoren zu validieren. Das Tool nutzt eine Kombination aus JSON-Decodierung, Typinferenz-Algorithmen und Go-Template-Rendering, um präzise Struct-Definitionen mit `json:\"...\"`-Tags zu erzeugen. Besonders bei verschachtelten Arrays ([]struct{}) oder gemischten Datentypen (interface{}) bietet es präzisere Ergebnisse als manuelle Ansätze.",
   "usage_steps": [
-    "Öffnen Sie die Seite des JSON in Go-Struktur-Tools",
-    "Fügen Sie den zu verarbeitenden Inhalt in das Eingabefeld ein oder kopieren Sie ihn ein",
-    "Passen Sie die Tool-Einstellungen und Optionen gegebenenfalls an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Navigieren Sie zur Tool-Oberfläche unter /json-to-go",
+    "Fügen Sie Ihr JSON in den linken Bearbeitungsbereich ein (unterstützt JSON5-Formatierung)",
+    "Aktivieren Sie den Schalter 'Export Public Fields Only' für API-Modelle",
+    "Wählen Sie im Dropdown 'Field Naming' die Konvention (SnakeCase/PascalCase)",
+    "Klicken Sie auf 'Generate Go Struct' um den Code zu erzeugen",
+    "Kopieren Sie die generierte Go-Struktur mit dem 'Copy' Button rechts"
   ],
   "usage_examples": [
-    "Verwenden Sie JSON in Go-Struktur, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Konvertieren von GitHub API Responses in typisierte Go-Structs für CI/CD-Tools",
+    "Erzeugen von Structs für Logfile-Analyse-Systeme mit verschachtelten Fehlerdaten",
+    "Automatisierung von Config-Structs aus Terraform JSON-Ausgaben",
+    "Mapping von IoT-Device-Payloads mit dynamischen Array-Strukturen für Telemetrie-Backends"
   ]
 }

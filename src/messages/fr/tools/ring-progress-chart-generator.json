@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique de Progrès de Cercle est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphique de Progrès de Cercle pour traiter diverses données sans installer de logiciels ou de plugins. Cet outil possède une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique de Progrès de Cercle peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez immédiatement le Générateur de Graphique de Progrès de Cercle pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de diagrammes à anneaux progressifs est un outil technique permettant de créer des visualisations circulaires dynamiques pour représenter des pourcentages ou des états de progression. Contrairement aux graphiques standards, cet outil utilise le rendu vectoriel SVG (Scalable Vector Graphics) pour générer des anneaux paramétrables avec des segments de cercle (arcs) modifiables. Les utilisateurs peuvent ajuster la largeur de l'anneau, les dégradés de couleur, les effets d'animation (comme les fonctions d'interpolation CSS ou JavaScript) et même la résolution du tracé (via les propriétés 'stroke-dasharray' et 'stroke-linecap'). Ce type de visualisation est particulièrement utile pour intégrer des indicateurs de statut dans des tableaux de bord web, des applications de suivi de santé (ex: pourcentage de calories quotidiennes), ou des interfaces IoT affichant des données en temps réel. Le moteur interne calcule automatiquement les angles de départ et d'arrivée de l'arc en fonction du pourcentage saisi, tout en permettant l'overlay de texte personnalisé (comme des labels ou des valeurs absolues). La compatibilité avec les frameworks frontaux comme React ou Vue.js est assurée via l'export des composants codés.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique de Progrès de Cercle",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les paramètres de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Ajustez le curseur 'Pourcentage' pour définir la valeur numérique (0-100) à visualiser.",
+    "2. Utilisez les sélecteurs de couleur 'Remplissage' et 'Arrière-plan' pour personnaliser les tons de l'anneau.",
+    "3. Modifiez l'épaisseur de l'anneau via le champ 'Largeur du trait' (valeurs en pixels, 2 à 20px).",
+    "4. Activez l'option 'Animation' pour ajouter un effet de transition fluide (durée ajustable en millisecondes).",
+    "5. Cochez 'Afficher la valeur' pour superposer le pourcentage numérique au centre de l'anneau.",
+    "6. Cliquez sur 'Exporter' pour télécharger le code SVG ou PNG, ou copiez le snippet HTML/CSS généré."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique de Progrès de Cercle pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur web intègre un anneau de progression animé pour illustrer le statut de chargement d'un formulaire long (ex: 67% de complété).",
+    "Un designer UI crée un tableau de bord médical avec des anneaux colorés représentant les métriques de fréquence cardiaque en temps réel.",
+    "Une application de gestion de projets utilise des anneaux statiques pour afficher le pourcentage de tâches réalisées par équipe.",
+    "Un ingénieur IoT développe une interface de suivi énergétique avec des anneaux à dégradé radial reflétant le niveau de charge de batteries."
   ]
 }

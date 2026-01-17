@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Instagram-Schriftgenerator konvertiert Ihren Text in ausgefallene Unicode-Schriften.",
+  "detailed_description": "Der Instagram Font Generator ist ein spezialisierter Textprozessor, der mithilfe von Unicode-Transformationsalgorithmen herkömmliche Zeichenketten in ästhetisch ansprechende Schriftvarianten konvertiert. Technisch basiert das Tool auf der selektiven Zuordnung von Eingabezeichen zu spezifischen Unicode-Blöcken wie Mathematical Alphanumeric Symbols, Emoticons oder Supplemental Symbols and Pictographs. Dies ermöglicht die Erzeugung von kreativen Darstellungen wie kursiven, fetten, invertierten oder symbolbasierten Glyphen, die Instagrams Text-Renderning-Engine korrekt interpretiert. Entwickler und Designer nutzen dieses Tool, um Instagram-Bios, Post-Beschriftungen oder Highlight-Namen visuell aufzuwerten, ohne gegen die Plattformrichtlinien zu verstoßen. Im Hintergrund erfolgt die Verarbeitung clientseitig mittels JavaScript-RegEx-Transformationen und WebAssembly-Modulen, die eine Echtzeit-Vorschau der modifizierten Zeichen ermöglichen. Besonders hervorzuheben ist die präzise Implementierung von Glyph-Substitution-Regeln, die sicherstellen, dass Sonderzeichen korrekt verarbeitet werden.",
   "usage_steps": [
-    "Ihren Text eingeben",
-    "Schriftstile durchsuchen",
-    "Zum Kopieren klicken",
-    "In Instagram einfügen",
-    "Verschiedene Stile mischen"
+    "Geben Sie Ihren Roh-Text in das Eingabefeld mit der Beschriftung 'Originaltext' ein.",
+    "Wählen Sie im Dropdown-Menü 'Schriftstil' eine Kategorie wie 'Mathematisch' oder 'Emoji-basiert' aus.",
+    "Passen Sie die Darstellung mit dem Schieberegler 'Zeichenabstand' auf pixelgenaue Werte an.",
+    "Klicken Sie auf die Farbpalette 'Textfarbe' und wählen Sie ein Gradient für mehrfarbige Effekte.",
+    "Verwenden Sie die Vorschauvorschaltfläche 'Instagram-Beispiel' zur Simulation in einem Story-Template.",
+    "Kopieren Sie den generierten Code über den Button 'Zwischenablage speichern' für die Instagram-Nutzung."
   ],
   "usage_examples": [
-    "Instagram-Bio stylen",
-    "Ausgefallene Bildunterschriften erstellen",
-    "In Kommentaren hervorstechen"
+    "Ein Influencer erstellt ein mehrfarbiges Profilkürzel '𝒥𝒜𝒮𝒪ℕ' für sein Instagram-Bio, um Aufmerksamkeit zu generieren.",
+    "Ein Webdesigner implementiert dynamische Schriftumwandlungen für Instagram-Post-Kommentare in einer Marketing-Automatisierung.",
+    "Ein Unternehmen generiert ein auffälliges '🔥Sonderangebot🔥' mit Emojis kombiniert für eine Gewinnspiel-Beschriftung.",
+    "Ein Developer-Team testet die Kompatibilität spezieller Unicode-Zeichen auf verschiedenen Geräten für eine Influencer-Kampagne."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Anel Multiplo é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos de Anel Multiplo, você pode processar vários dados facilmente sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Anel Multiplo pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use o Gerador de Gráficos de Anel Multiplo imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Multi Ring Chart Generator é uma ferramenta técnica especializada na criação de gráficos de progresso compostos por anéis concêntricos escaláveis via SVG (Scalable Vector Graphics). Ele permite a comparação visual precisa de múltiplas métricas normalizadas em diferentes escalas, utilizando algoritmos de mapeamento radial para convergir dados heterogêneos em uma única visualização. Cada anel representa uma dimensão de dados independente, com suporte a escalas lineares, logarítmicas ou personalizadas, ideal para análises comparativas complexas em dashboards técnicos, relatórios científicos ou monitoramento de KPIs corporativos. A ferramenta aplica transformações matriciais para calcular ângulos e raios proporcionais, garantindo precisão geométrica mesmo com datasets grandes. Sua engine renderiza gradientes radiais dinâmicos e permite ajustes finos em propriedades de stroke, opacidade e sobreposição de camadas, essencial para profissionais que necessitam de representações visuais estatísticas altamente configuráveis.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Anel Multiplo",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a aba 'Data Input' e insira seu dataset em formato JSON com estrutura {label: string, value: number, scale: 'linear'|'log'} para cada métrica",
+    "Arraste o controle deslizante 'Number of Rings' para definir a quantidade de anéis visíveis simultaneamente",
+    "Use o seletor 'Projection Mode' para escolher entre projeção polar ou radial dependendo do tipo de comparação desejada",
+    "Ajuste individualmente cada anel nas seções 'Ring Styling' alterando propriedades como stroke-width, fill-pattern e gradient-angle",
+    "Ative a opção 'Interactive Legend' para gerar tooltips dinâmicos com valores absolutos e porcentagens em tempo real",
+    "Exporte o gráfico final em SVG ou PNG através do botão 'Download Visualization', com opção de embed direto via iframe"
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Anel Multiplo para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Monitoramento de desempenho de servidores: representar CPU, memória, I/O e latência em anéis sobrepostos com escalas logarítmicas",
+    "Dashboard de sustentabilidade: comparar consumo de energia, eficiência hídrica e emissões de CO2 em diferentes unidades fabris",
+    "Análise de portfólio financeiro: visualizar alocação de ativos, risco calculado e retorno sobre investimento em camadas concêntricas",
+    "Avaliação de desempenho acadêmico: cruzar notas de diferentes disciplinas com frequência e engajamento em plataformas digitais"
   ]
 }

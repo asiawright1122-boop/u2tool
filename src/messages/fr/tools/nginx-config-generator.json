@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Configuration Nginx est un outil pratique en ligne qui vous aide à accomplir rapidement diverses tâches. En utilisant le Générateur de Configuration Nginx, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil possède une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Configuration Nginx peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez immédiatement le Générateur de Configuration Nginx pour expérimenter des services de outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de configuration Nginx est un outil technique spécialisé permettant de créer des fichiers de configuration pour le serveur web Nginx. Ce tooling s'adresse aux développeurs et administrateurs système cherchant à automatiser la génération de blocs de configuration optimisés, évitant les erreurs syntaxiques courantes et les mauvaises pratiques de sécurité. Il prend en charge la définition de directives complexes comme proxy_pass, upstream, location, ou encore des paramètres SSL (TLS termination). L'outil intègre une logique de validation des dépendances entre options, garantissant la cohérence des configurations générées. Son moteur analyse les besoins spécifiques (type d'hébergement, règles de réécriture, gestion des erreurs) pour produire des fichiers prêts à l'emploi, conformes aux standards de performance actuels.",
   "usage_steps": [
-    "Ouvrez la page du Générateur de Configuration Nginx",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez le type de configuration (serveur statique, reverse proxy, load balancing)",
+    "Renseignez le nom de domaine et le port d'écoute dans le champ 'server_name'",
+    "Activez/désactivez le support HTTP/2 via le toggle 'Protocole'",
+    "Configurez les chemins racine et alias via l'explorateur de fichiers intégré",
+    "Paramétrez les règles de réécriture d'URL avec l'éditeur de regex avancé",
+    "Générez le fichier complet avec le bouton 'Exporter NGINX conf'"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Configuration Nginx pour traiter vos données",
-    "Obtenez rapidement des résultats de traitement sans attendre"
+    "Configurer un reverse proxy pour une application Node.js avec compression Gzip et cache de contenu statique",
+    "Créer une configuration optimisée pour servir une application React SPA avec routage client-side",
+    "Mettre en place un load balancing avec health checks pour un cluster de microservices",
+    "Générer des règles de sécurité renforcées (rate limiting, IP whitelisting) pour un API REST"
   ]
 }

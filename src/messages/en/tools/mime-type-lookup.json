@@ -1,14 +1,17 @@
 {
-  "detailed_description": "MIME Type Lookup is a practical online tool that helps you quickly complete various tasks. Using MIME Type Lookup, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, MIME Type Lookup can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use MIME Type Lookup immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The MIME Type Lookup tool enables developers to programmatically identify or validate Media Types (MIME types) based on file extensions or descriptive keywords. This tool queries an internally maintained database mapping over 1,200 file extensions to their corresponding IANA-registered MIME type identifiers, including non-standard types commonly used in enterprise environments. Technically, it parses queries through a trie-based search structure optimized for partial matches, returning results in order of specification priority (e.g., text/html before application/xhtml+xml). Developers need this tool to resolve critical issues like incorrect Content-Type header configurations in web servers, validate file upload handlers in web applications, or debug cross-platform data exchange problems where mismatched MIME types cause content rejection. The tool's unique value lies in its support for both forward (extension→type) and reverse (type→extension) lookups, including legacy MIME types like application/x-shockwave-flash that remain in active use despite deprecation. By cross-referencing input against the official IANA registry and supplementary industry-specific mappings, it ensures accuracy beyond basic lookup tables.",
   "usage_steps": [
-    "Open the MIME Type Lookup tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Navigate to the tool interface and locate the dual-mode search panel with 'By Extension' and 'By Description' radio buttons.",
+    "Select 'By Extension' to identify MIME types for specific file formats or 'By Description' to search using technical specifications.",
+    "Enter a file extension (e.g., '.avif') or descriptive keyword (e.g., 'Portable Document Format') into the query field.",
+    "Activate the 'Case-Sensitive' checkbox if searching for exact MIME subtype matches (e.g., distinguishing image/webp from image/apng).",
+    "Click 'Search' to execute the query, which will display results in a structured table showing MIME type, associated extensions, and IANA status.",
+    "Use the 'Copy' button adjacent to the desired MIME type entry to copy the full media type string to clipboard for immediate implementation."
   ],
   "usage_examples": [
-    "Use MIME Type Lookup to process your data",
-    "Get processing results quickly without waiting"
+    "A frontend developer debugging a video upload feature discovers uploaded .webm files are being rejected due to incorrect MIME type detection, using the tool to verify the correct type 'video/webm' for server configuration.",
+    "An API engineer building a file validation system needs to confirm that '.xlsx' documents map to 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' for proper Content-Type header validation.",
+    "A DevOps specialist configuring an Nginx server needs to ensure '.woff2' font files serve with the 'font/woff2' MIME type instead of generic application/octet-stream defaults.",
+    "A data engineer processing email attachments identifies '.eml' files require 'message/rfc822' MIME type handling to maintain header integrity during ETL operations."
   ]
 }

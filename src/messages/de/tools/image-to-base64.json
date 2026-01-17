@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Bild zu Base64 ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Bild zu Base64 können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell damit anfangen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann Bild zu Base64 Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie Bild zu Base64 sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Image-to-Base64-Konverter wandelt Bilddateien in eine Base64-kodierte Zeichenkette um, die direkt in HTML-, CSS- oder JavaScript-Code eingebettet werden kann. Technisch gesehen erfolgt die Umwandlung durch die Kodierung binärer Bilddaten in ein ASCII-basiertes Format mittels des Base64-Algorithmus, wobei der MIME-Typ automatisch erkannt und in den Daten-URI-Schema-Header integriert wird. Dieses Verfahren ist unverzichtbar für Entwickler, die Ressourcenoptimierung betreiben, da es das Einbetten von Grafiken ohne externe Dateianfragen ermöglicht. Anwendung findet dies beispielsweise bei der Integration von Favicons, SVG-Icons in Progressive Web Apps oder Inline-Bildern in HTML-Mails, wo Netzwerklatenzen minimiert werden müssen. Die Konvertierung erfolgt clientseitig im Browser, wobei die Bilddaten zunächst in einen ArrayBuffer gelesen, anschließend mit der atob()-Funktion kodiert und schließlich mit dem entsprechenden MIME-Header versehen werden. Unterstützt werden gängige Formate wie PNG, JPEG, SVG und WebP, wobei die Ausgabe optional als CSS-Klasse oder HTML-img-Tag generiert werden kann.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Bild zu Base64-Tools",
-    "Fügen Sie den zu verarbeitenden Inhalt in das Eingabefeld ein oder kopieren Sie ihn ein",
-    "Passen Sie die Tool-Einstellungen und -Optionen, wenn nötig, an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Wählen Sie die zu konvertierende Bilddatei über den 'Datei auswählen'-Button im Interface.",
+    "Legen Sie im Dropdown-Menü den gewünschten MIME-Typ fest (z.B. image/png oder image/svg+xml).",
+    "Klicken Sie auf 'Starte Kodierung', um den Base64-String zu generieren.",
+    "Kopieren Sie den resultierenden Daten-URI aus dem Textfeld mit dem 'In Zwischenablage kopieren'-Button.",
+    "Nutzen Sie die Vorschauvorschaltfläche, um das kodierte Bild direkt im Browser anzuzeigen.",
+    "Laden Sie das Ergebnis optional als .txt-Datei herunter, indem Sie auf 'Ergebnis speichern' klicken."
   ],
   "usage_examples": [
-    "Verwenden Sie Bild zu Base64, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie die Verarbeitungsresultate schnell, ohne zu warten"
+    "Einbinden eines komprimierten SVG-Logos direkt in eine index.html-Datei für eine Single-Page-Webanwendung.",
+    "Optimierung der Ladezeit einer PWA durch Inline-Integration von Splash-Screen-Grafiken im App-Shell-Code.",
+    "Erstellung eines CSS-Spritesheets als Base64-Daten-URI für responsive Design-Elemente ohne HTTP-Requests.",
+    "Versand von HTML-Mails mit eingebetteten PNG-Infografiken, um das Laden externer Ressourcen zu vermeiden."
   ]
 }

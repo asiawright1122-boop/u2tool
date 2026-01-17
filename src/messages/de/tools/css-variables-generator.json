@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der CSS-Variablen-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CSS-Variablen-Generator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, der CSS-Variablen-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Bearbeitungen erfolgen lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den CSS-Variablen-Generator sofort, um schnelle, sichere und kostenlose Online-Dienstleistungen zu erleben.",
+  "detailed_description": "Der CSS-Variablen Generator ist ein spezialisierter Online-Editor zur Erstellung und Verwaltung von CSS Custom Properties (auch bekannt als CSS-Variablen). Technisch ermöglicht das Tool die Definition von Variablen im :root-Selektor gemäß dem CSS Custom Properties for Cascading Variables Module Level 1 Standard. Anwender können präzise Variablennamen (z.B. --brand-color) mit zugehörigen Werten (Farben, Größen, Schriftarten) erstellen und diese sofort in einem Live-Stylesheet-Preview verwenden. Das Tool vereinfacht komplexe Szenarien wie theming-basierte Designsysteme durch Unterstützung von Variablenscopes (global vs. komponentenspezifisch) und Fallback-Werten gemäß Spezifikation. Besonders nützlich ist der visuelle Editor für die Implementierung dynamischer Designs ohne CSS-Präprozessoren, da er Syntaxvalidierung in Echtzeit und Exportoptionen für verschiedene Build-Systeme (z.B. SCSS, CSS-in-JS) bietet. Die automatische Generierung von Variablendeklarationen reduziert manuelle Fehlerquellen und beschleunigt die Entwicklung von skalierbaren CSS-Architekturen.",
   "usage_steps": [
-    "Öffnen Sie die Seite des CSS-Variablen-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Werkzeugeinstellungen und -einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Wählen Sie im 'Theme Preset'-Dropdown ein Designsystem-Framework (z.B. Tailwind, Bootstrap) für automatische Variablen-Naming-Conventions.",
+    "Klicken Sie auf 'Add Variable' und geben Sie einen spezifischen Variablennamen ein (z.B. --spacing-xl) im BEM-ähnlichen Format.",
+    "Legen Sie den Variablenwert über den integrierten Color Picker oder Number Input fest, inklusive Unterstützung für calc()-Ausdrücke.",
+    "Aktivieren Sie die 'Scoped Variables' Option, um komponentenspezifische Variablen innerhalb von CSS-Selektoren zu definieren.",
+    "Nutzen Sie den 'CSS Output'-Tab, um das generierte CSS mit automatischem Fallback für ältere Browser zu inspizieren.",
+    "Exportieren Sie das Ergebnis im gewünschten Format (plain CSS, SCSS-Map, JSON) über den 'Download' Button."
   ],
   "usage_examples": [
-    "Verwenden Sie den CSS-Variablen-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell Bearbeitungsergebnisse ohne zu warten"
+    "Implementierung eines dark/light Mode Themenwechsels durch definierte Variablen-Sets für Farben und Schattenwerte.",
+    "Migration eines Legacy-CSS-Projekts zu einem Designsystem durch Batch-Konvertierung von hex-Farbwerten zu benannten Variablen.",
+    "Erstellung responsiver Typografie-Skalen mit calc()-basierten Variablen für font-size und line-height.",
+    "Prototyping von Designsystem-Komponenten mit lokalen Variablen für Button-Varianten (Primary/Secondary) innerhalb von Shadow DOMs."
   ]
 }

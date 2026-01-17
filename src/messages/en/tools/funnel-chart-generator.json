@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Funnel Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Funnel Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Funnel Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Funnel Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Funnel Chart Generator is a specialized tool designed to help users visualize conversion processes through a dynamic and interactive funnel chart. Technically, this tool converts your input data into a graph that illustrates stages of a process, such as a sales pipeline, customer journey, or marketing funnel. Each stage is represented as a segment of the funnel, with the width of the segment reflecting the volume of data at that stage. This visualization is particularly useful for identifying bottlenecks and areas for improvement in conversion rates. Users can input their data in various formats, such as CSV or JSON, and customize the appearance of the funnel, including colors, labels, and tooltips. The tool supports exporting the generated funnel chart in high-quality PNG or SVG formats, making it easy to integrate into reports, presentations, or web pages. Whether you are a marketer analyzing customer engagement, a business analyst assessing sales performance, or a product manager optimizing user flow, the Funnel Chart Generator provides a powerful and flexible solution to visualize and understand conversion processes.",
   "usage_steps": [
-    "Open the Funnel Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Upload your data: Click on the 'Upload Data' button and select a CSV or JSON file containing your conversion data. Ensure your data includes columns for stages and corresponding values.",
+    "Configure the funnel: Use the 'Configure Funnel' panel to set the number of stages, labels, and data points. You can adjust the stage order and input specific values for each stage.",
+    "Customize appearance: In the 'Appearance' settings, choose colors for each stage, add labels, and enable tooltips to provide additional information when hovering over segments.",
+    "Adjust dimensions: Set the width and height of the funnel chart using the 'Dimensions' options to ensure it fits your desired format, whether it’s for a report or a web page.",
+    "Preview the chart: Click on the 'Preview' button to see a live preview of your funnel chart. This allows you to make any final adjustments before exporting.",
+    "Export the chart: Once satisfied, use the 'Export' option to download your funnel chart as a PNG or SVG file. These formats are ideal for high-quality prints and web integration."
   ],
   "usage_examples": [
-    "Use Funnel Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "A marketing team wants to visualize the customer journey from awareness to purchase. They upload their campaign data and configure the funnel to show stages like 'Awareness,' 'Interest,' 'Consideration,' and 'Purchase.' This helps them identify where most customers drop off and focus their efforts on improving those stages.",
+    "A sales manager needs to analyze the performance of their sales pipeline. By inputting data on leads, qualified leads, proposals, and closed deals, they can create a funnel chart that highlights which stages are most effective and which need optimization.",
+    "A product manager is evaluating user engagement in a multi-step onboarding process. They use the Funnel Chart Generator to visualize the number of users who complete each step, from account creation to first purchase. This insight helps them streamline the onboarding flow and enhance user retention.",
+    "An e-commerce analyst wants to understand the conversion rate from website visits to completed transactions. By uploading data on website traffic, cart additions, and final purchases, they can generate a funnel chart that pinpoints where users are most likely to abandon the process and take targeted actions to reduce cart abandonment."
   ]
 }

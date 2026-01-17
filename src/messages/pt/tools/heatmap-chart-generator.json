@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Calor é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Utilizando o Gerador de Gráficos de Calor, você pode processar vários dados sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Calor pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são feitos localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Gerador de Gráficos de Calor imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Heatmap Chart Generator é uma ferramenta técnica especializada para criar visualizações de mapa de calor interativas, utilizando dados bidimensionais para representar a densidade ou intensidade de valores através de gradientes de cor. Profissionais de áreas como análise de dados, biologia computacional e UX design utilizam esta ferramenta para identificar padrões espaciais em conjuntos complexos. O funcionamento baseia-se na associação de valores numéricos a uma paleta de cores interpolada, onde cada célula da matriz representa coordenadas X/Y com intensidade Z. A ferramenta processa dados em formato CSV ou JSON, permitindo personalização avançada de escala de cores (linear, logarítmica, quantil), suavização de dados (kernel density estimation) e configuração de eixos categóricos. A renderização utiliza HTML5 Canvas para alta performance gráfica, com opção de exportação em PNG vetorial ou SVG editável. Diferente de outras soluções, oferece controle granular sobre a função de agregação de dados (média, mediana, desvio padrão) e suporte para coordenadas geoespaciais em formato WKT.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Calor",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Faça upload do arquivo CSV/JSON com dados estruturados em colunas X, Y e Z.",
+    "2. Selecione o tipo de escala de cor (divergente, sequencial, categórica) no painel de estilos.",
+    "3. Ajuste a resolução da grade usando o controle deslizante 'Pixel Density' para equilibrar detalhe e desempenho.",
+    "4. Ative a opção 'Interpolação Bilinear' para suavizar transições entre valores discretos.",
+    "5. Personalize rótulos de eixos e legendas usando a aba de anotações com suporte a LaTeX.",
+    "6. Clique em 'Exportar SVG' para baixar o gráfico editável ou 'PNG HD' para imagem rasterizada."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Calor para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Analistas de web analytics mapeando padrões de cliques em páginas com coordenadas X/Y e contagem de interações.",
+    "Pesquisadores em genômica visualizando expressão gênica em matrizes de tecidos com escala logarítmica.",
+    "Urbanistas analisando densidade de tráfego em mapas de grade com dados de GPS de veículos.",
+    "Economistas comparando PIB regional usando mapa de calor georreferenciado com projeção cartográfica."
   ]
 }

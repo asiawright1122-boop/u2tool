@@ -1,15 +1,17 @@
 {
-  "detailed_description": "El Convertidor Markdown a Diapositivas transforma documentos Markdown en diapositivas de presentación. Use sintaxis Markdown simple para crear presentaciones profesionales.",
+  "detailed_description": "Markdown to Slides es una herramienta técnica que transforma documentos Markdown en presentaciones estructuradas mediante un motor de análisis sintáctico basado en AST (Abstract Syntax Tree). Al procesar el código Markdown, el conversor identifica cabeceras, listas y bloques de código para generar una estructura de diapositivas jerárquica, compatible con frameworks como Reveal.js o PowerPoint. Utiliza un motor de renderizado HTML5 Canvas para previsualizar transiciones y efectos en tiempo real, integrando resaltado de sintaxis con Prism.js para fragmentos de código. Es ideal para desarrolladores que necesitan convertir apuntes técnicas en presentaciones ejecutables sin perder formato, equipos de documentación que requieren generar demos interactivas desde archivos .md, o educadores que incorporan ejemplos de código en sus clases. La herramienta soporta extensiones personalizadas como tablas dinámicas y gráficos Mermaid, optimizando el flujo de trabajo ágil mediante integración con repositorios Git para actualizaciones automáticas.",
   "usage_steps": [
-    "Escriba diapositivas en formato Markdown",
-    "Separe diapositivas con ---",
-    "Agregue notas del orador con Notes:",
-    "Previsualice su presentación",
-    "Presente o exporte a HTML"
+    "Abre el panel de edición y pega tu Markdown estructurado con cabeceras H1/H2 para definir secciones",
+    "Selecciona un tema visual en el selector de CSS frameworks (Reveal.js, Beige, Solarized)",
+    "Activa el modo 'Presenter Console' para añadir notas invisibles en las diapositivas",
+    "Configura transiciones 3D en el menú 'Slide Effects' (cubo, página, zoom)",
+    "Exporta a HTML5 o PDF interactivo desde el botón 'Build Presentation'",
+    "Descarga el paquete ZIP con assets embebidos o publica directamente en GitHub Pages"
   ],
   "usage_examples": [
-    "Crear presentaciones rápidas",
-    "Charlas técnicas desde documentos",
-    "Presentaciones educativas"
+    "Un desarrollador convierte sus notas de investigación en Markdown sobre machine learning a una presentación con gráficos Mermaid interactivos",
+    "Un equipo DevOps transforma documentación técnica en presentaciones ejecutivas con bloques de código YAML resaltados",
+    "Un profesor universitario genera diapositivas con ejemplos de algoritmos en Python desde un repositorio Markdown compartido",
+    "Una startup crea un pitch deck con demostraciones en vivo de su API, integrando curl snippets ejecutables en las slides"
   ]
 }

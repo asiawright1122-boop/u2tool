@@ -1,15 +1,17 @@
 {
-  "detailed_description": "CSP生成器帮助您创建内容安全策略头部，保护您的网站免受XSS和注入攻击。提供所有CSP指令的可视化编辑器。",
+  "detailed_description": "CSP Generator是一款面向Web开发者的安全策略构建工具，通过可视化界面生成符合W3C标准的Content-Security-Policy HTTP头。该工具采用AST抽象语法树解析技术，将开发者配置的策略规则转化为精确的CSP指令。用户可通过细粒度控制指令（如script-src、style-src等）的源表达式，实现对DOM操作、外部资源加载、Web Worker创建等关键安全环节的精准管控。工具内置的策略优化引擎可自动检测指令冲突，例如当设置strict-dynamic时自动补充nonce值依赖。对于需要符合GDPR或等保三级要求的金融类网站，该工具可快速生成审计合规的CSP配置，避免因XSS注入导致的数据泄露风险。高级用户可使用策略继承功能，在基础模板上叠加自定义规则，提升大型应用的配置效率。",
   "usage_steps": [
-    "选择要包含的CSP指令",
-    "配置允许的来源",
-    "根据需要添加nonce或hash",
-    "生成CSP头部",
-    "复制并添加到您的服务器"
+    "Step 1：访问CSP Generator页面并选择策略模板（如默认阻止、允许内联脚本等）。",
+    "Step 2：在指令配置面板中设置各资源类型的源规则（如script-src添加'this-site.com'）。",
+    "Step 3：启用'nonce自动生成'功能为内联脚本创建唯一标识符，或手动输入现有nonce值。",
+    "Step 4：在预览面板查看实时生成的CSP头内容，注意检查'Content-Security-Policy-Report-Only'模式的差异。",
+    "Step 5：调整违规报告配置，指定report-uri路径并设置发送间隔阈值（如每小时批量上报）。",
+    "Step 6：点击'导出配置'下载JSON格式策略文件，或复制HTTP头配置代码到服务器配置段。"
   ],
   "usage_examples": [
-    "保护Web应用程序",
-    "防止XSS攻击",
-    "配置脚本来源"
+    "电商网站在支付页面启用strict-dynamic策略，防止第三方脚本窃取支付信息",
+    "SaaS平台为不同租户生成差异化CSP策略，限制白标域名的资源加载权限",
+    "政府网站通过nonce机制允许特定统计代码执行，同时阻止其他内联脚本",
+    "Web应用集成CSP违规上报接口，通过生成的report-to策略收集XSS攻击尝试日志"
   ]
 }

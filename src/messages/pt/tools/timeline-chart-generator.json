@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Gerador de Linhas do Tempo é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Gerador de Linhas do Tempo, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Gerador de Linhas do Tempo pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Gerador de Linhas do Tempo imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Timeline Chart Generator é uma ferramenta técnica especializada para criar gráficos de linhas do tempo com precisão visual e flexibilidade de dados. Internamente, utiliza renderização SVG (Scalable Vector Graphics) combinada com uma engine de escalabilidade dinâmica para ajustar automaticamente os eixos temporais com base nos intervalos definidos (linear, logarítmico ou personalizado). O usuário insere dados estruturados em formato JSON ou CSV, especificando timestamps, descrições de eventos e categorias de metadados, e a ferramenta processa essas informações para gerar representações visuais com marcações de eventos codificadas por cor, tooltips interativos e eixos cronológicos ajustáveis. Projetado para uso em análise de projetos ágeis, documentação histórica, planejamento de campanhas de marketing e visualização de fluxos de processos, o gerador permite exportação em múltiplos formatos (PNG, SVG, PDF) e integração com bibliotecas de dashboards via código embed. Sua engine baseia-se em algoritmos de clustering espacial para evitar sobreposição de eventos em escalas densas, garantindo legibilidade mesmo com grandes volumes de dados.",
   "usage_steps": [
-    "Abra a página da ferramenta Gerador de Linhas do Tempo",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a interface web e selecione um template pré-configurado ou inicie com um canvas vazio através do botão 'Novo Projeto'.",
+    "Importe seus dados clicando no ícone de upload e escolha entre formatos CSV ou JSON com estrutura pré-definida (ex: {evento: 'nome', data: 'YYYY-MM-DD', categoria: 'tipo'}).",
+    "Ajuste o eixo temporal no painel lateral direito, definindo intervalos (dias, meses, anos) e tipo de escala (linear ou logarítmica) via dropdown.",
+    "Personalize os marcadores de evento usando o seletor de paletas de cores e adicione anotações textuais através do campo 'Descrição' em cada ponto.",
+    "Ative a opção 'Ajuste Automático' para evitar sobreposição de eventos em períodos críticos ou use o modo 'Manual' para posicionar elementos arrastando-os no canvas.",
+    "Exporte o gráfico finalizado em PNG, SVG ou PDF através do botão 'Baixar' ou copie o código embed HTML para integrar em relatórios web."
   ],
   "usage_examples": [
-    "Use Gerador de Linhas do Tempo para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um gerente de projetos ágeis mapeia sprints de desenvolvimento de software, vinculando cada evento a uma cor que representa status (verde para concluído, vermelho para atrasado).",
+    "Um historiador cria uma linha do tempo interativa de eventos da Segunda Guerra Mundial, com tooltips mostrando fotos e descrições detalhadas de cada batalha.",
+    "Um analista de marketing visualiza a jornada do cliente em uma campanha multicanal, sincronizando datas de anúncios, conversões e interações em redes sociais.",
+    "Um pesquisador acadêmico documenta as fases de um estudo científico, incluindo marcos de coleta de dados, revisões por pares e publicações em conferências."
   ]
 }

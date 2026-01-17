@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Linendiagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Linendiagramm-Generator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, der Linendiagramm-Generator kann Ihnen dabei helfen, die Arbeitsleistung zu verbessern. Alle Bearbeitungen erfolgen lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und verhindert, dass Ihre Daten auf irgendeinen Server hochgeladen werden. Nutzen Sie den Linendiagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Toolservices zu erleben.",
+  "detailed_description": "Der Line Chart Generator ist ein webbasiertes Tool zur Erstellung dynamischer Liniendiagramme für die Visualisierung zeitabhängiger Datenmuster. Technisch umsetzt das Tool die Darstellung mehrerer Datensätze über ein interaktives Koordinatensystem, wobei die X-Achse typischerweise zeitliche Intervalle (z. B. Sekunden, Tage, Jahre) und die Y-Achse quantitative Werte abbildet. Die Rendering-Engine nutzt SVG (Scalable Vector Graphics) für verlustfreie Skalierung und PNG für Rasterexporte. Anwender können mehrere Linien (Data Series) mit individuellen Farben, Strichstärken und Marker-Stilen definieren, um Korrelationen oder Divergenzen zwischen Datengruppen zu analysieren. Die Integration von JSON- oder CSV-Daten ermöglicht die Verarbeitung strukturierter Eingaben, während Optionen wie logarithmische Skalierung, automatische Achsenanpassung und Tooltips für Datenpunkte präzise Analysen unterstützen. Der Generator ist besonders für Anwendungsfälle relevant, die trendbasierte Mustererkennung erfordern – etwa Finanzanalysen, Klimaforschung oder Performance-Monitoring. Technisch realisiert wird die Funktionalität durch eine Kombination aus clientseitigem JavaScript für Interaktivität und serverseitiger Bildgenerierung via Canvas-API oder SVG-Export-Tools.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Linendiagramm-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "Importieren Sie Ihre Daten im JSON- oder CSV-Format über das Upload-Feld im Bereich 'Datenquellen'.",
+    "Wählen Sie im Abschnitt 'Achsenkonfiguration' die Spalten für X- und Y-Achse sowie das Datumsformat für zeitliche Skalierung.",
+    "Fügen Sie bis zu 10 Datensätze hinzu, wobei Sie für jeden die Linienfarbe, Strichstärke (1–5 px) und Markerform (Kreis, Quadrat, Dreieck) anpassen können.",
+    "Aktivieren Sie im Reiter 'Erweiterte Einstellungen' die Option 'Legendensortierung' oder passen Sie den Y-Achsen-Bereich manuell für logarithmische Darstellung an.",
+    "Nutzen Sie die 'Live-Vorschau'-Funktion, um Tooltips über Datenpunkten zu testen und Achsenbeschriftungen zu optimieren.",
+    "Exportieren Sie das finale Diagramm per Klick auf 'SVG-Download' für Vektorgrafiken oder 'PNG-Export' für hochaufgelöste Rasterbilder (300 DPI)."
   ],
   "usage_examples": [
-    "Verwenden Sie den Linendiagramm-Generator, um Ihre Daten zu bearbeiten",
-    "Erhalten Sie schnell Bearbeitungsergebnisse ohne zu warten"
+    "Visualisierung von monatlichen Umsatzverläufen mehrerer Produktlinien in einem Unternehmen, um Saisonaleffekte zu identifizieren.",
+    "Vgl. von Temperaturmessdaten unterschiedlicher Wetterstationen über einen Zeitraum von 12 Monaten mit automatischer Trendlinienberechnung.",
+    "Analyse des täglichen Website-Traffics über ein Jahr, unterteilt nach Ländern, mit Highlighting von Peaks während Marketingkampagnen.",
+    "Darstellung von Herzfrequenzverläufen während klinischer Tests mit Überlagerung von Medikamenteneinnahmezeitpunkten als vertikale Markierungen."
   ]
 }

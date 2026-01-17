@@ -1,14 +1,17 @@
 {
-  "detailed_description": "PDF zu Bild ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit PDF zu Bild können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, PDF zu Bild kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie PDF zu Bild sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der PDF zu Bild Konverter ermöglicht die präzise Rasterisierung von Vektorinhalten aus PDF-Dokumenten in hochwertige Rasterformate wie PNG oder JPEG. Technisch basiert der Prozess auf einer serverseitigen PDF-Engine, die jede Seite als XObject extrahiert, die Farbprofile in RGB/CMYK umwandelt und mit anpassbaren DPI-Werten (bis zu 600 DPI) renderiert. Der Toolset nutzt hardwarebeschleunigte Grafikbibliotheken zur Optimierung von Kompression und Farbtreue. Nutzer benötigen dieses Tool für spezifische Workflows wie die Vorbereitung von Dokumenten für OCR-Verarbeitung, die Einbettung von Diagrammen in Präsentationen oder das Archivieren von Signaturen in pixelgenauen Formaten. Die Batch-Verarbeitungsfunktion erlaubt das gleichzeitige Konvertieren mehrerer Seiten mit konsistenten Metadaten. Technisch relevant sind die Unterstützung von PDF 1.7 Spezifikationen, die Aufteilung von Multipage-Dokumenten und die Anpassung von Gamma-Werten für optimale Darstellung auf verschiedenen Bildschirmen.",
   "usage_steps": [
-    "Öffnen Sie die PDF zu Bild-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Ziehen Sie das PDF-Dokument in den markierten Upload-Bereich oder verwenden Sie den 'Datei auswählen' Button.",
+    "Wählen Sie im Format-Panel zwischen PNG-24 für verlustfreie Kompression oder JPEG-8 für fotorealistische Darstellung.",
+    "Geben Sie im DPI-Einstellungsfeld den gewünschten Auflösungswert zwischen 72 und 600 ein.",
+    "Definieren Sie im Seitenbereich entweder 'Alle Seiten' oder geben Sie einen benutzerdefinierten Seitenbereich (z.B. 3-7,9) an.",
+    "Aktivieren Sie im Farbmodus-Schalter 'Graustufen' für Dokumente mit Textinhalten oder belassen Sie es auf 'Originalfarben'.",
+    "Klicken Sie auf 'Konvertieren' und laden Sie das Ergebnis als ZIP-Archiv mit strukturierter Ordnerhierarchie herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie PDF zu Bild, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein Architekt wandelt mehrseitige Baupläne in 300-DPI-PNGs um, um diese als Hintergrundbilder in CAD-Software zu importieren.",
+    "Ein Marketing-Team konvertiert eine PDF-Infografik in JPEG-Format mit optimierter Kompression für E-Mail-Newsletter.",
+    "Ein Rechtsanwalt extrahiert einzelne Seiten aus einem Vertrag als Graustufenbilder für digitale Gerichtsdokumente.",
+    "Ein Entwickler nutzt das Tool, um Testdaten im PDF-Format in maschinenlesbare Bilder für ein OCR-Training-Set zu transformieren."
   ]
 }

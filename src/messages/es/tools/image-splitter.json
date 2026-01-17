@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Divisor de Imágenes es una herramienta en línea práctica que le ayuda a completar rápidamente diversas tareas. Utilizando Divisor de Imágenes, puede procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndole comenzar rápidamente y utilizarla de manera eficiente. Ya sea que sea un desarrollador, diseñador o usuario general, Divisor de Imágenes puede ayudarlo a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en su navegador, asegurando la seguridad de sus datos y evitando que se suban a cualquier servidor. Utilice Divisor de Imágenes ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Image Splitter es una herramienta técnica especializada en la segmentación de imágenes rasterizadas mediante un algoritmo de división matricial. Permite particionar una imagen original en un conjunto de sub-imágenes organizadas en filas y columnas personalizables, preservando las propiedades de resolución y profundidad de color originales. La herramienta opera mediante un motor de procesamiento basado en coordenadas cartesianas que calcula las dimensiones de cada fragmento según el número de divisiones especificadas, manteniendo la proporción del aspecto mediante interpolación bilineal cuando es necesario. Su utilidad radica en casos prácticos como la creación de mosaicos para interfaces responsivas, preparación de spritesheets en desarrollo de videojuegos, generación de plantillas para impresión 3D, o análisis forense de imágenes mediante segmentación contextual. El proceso se basa en la manipulación de mapas de bits mediante operaciones de crop geométrico, sin alterar los valores RGB de los píxeles, asegurando integridad visual en cada fragmento generado.",
   "usage_steps": [
-    "Abra la página de la herramienta Divisor de Imágenes",
-    "Introduzca o pegue el contenido que desea procesar en la caja de entrada",
-    "Ajuste las opciones y configuraciones de la herramienta según sea necesario",
-    "Haga clic en el botón de procesamiento para ver los resultados",
-    "Copie o descargue los resultados procesados"
+    "Arrastra tu imagen al área de carga o selecciona un archivo desde tu dispositivo (formatos admitidos: JPEG, PNG, BMP, WEBP).",
+    "Especifica el número de filas y columnas usando los controles numéricos con rango entre 1 y 20 divisiones por eje.",
+    "Ajusta las opciones avanzadas: activa 'Mantener proporción' para evitar deformaciones o 'Incluir borde' para añadir márgenes de corte.",
+    "Previsualiza la cuadrícula de partición superpuesta a la imagen original con indicadores de coordenadas X/Y en cada celda.",
+    "Haz clic en 'Generar fragmentos' para iniciar el procesamiento basado en canvas HTML5 con soporte de alta resolución (hasta 8K).",
+    "Descarga los archivos divididos en formato ZIP o selecciona individualmente cada fragmento para exportación personalizada."
   ],
   "usage_examples": [
-    "Utilice Divisor de Imágenes para procesar sus datos",
-    "Obtenga resultados de procesamiento rápidamente sin esperar"
+    "Un diseñador web crea 12 fragmentos de 3 columnas × 4 filas para implementar una galería responsiva con efecto parallax en CSS Grid.",
+    "Un desarrollador de juegos divide una textura de 2048x2048 px en 16 sprites de 512x512 px para animaciones frame-by-frame en Unity.",
+    "Un artista digital genera 9 cuadrantes para compartir una ilustración en Instagram Stories manteniendo secuencialidad visual mediante numeración de capas.",
+    "Un ingeniero de QA segmenta capturas de pantalla de 4K para documentar bugs específicos en distintas secciones de una interfaz de usuario."
   ]
 }

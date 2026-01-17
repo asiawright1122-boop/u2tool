@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Caja es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Caja, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Caja puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesamientos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y que no se suban a ningún servidor. Usa el Generador de Gráficos de Caja inmediatamente para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Boxplot Chart Generator es una herramienta técnica para crear diagramas de caja y bigotes (boxplots) interactivos, diseñada para visualizar distribuciones estadísticas complejas mediante representaciones gráficas que muestran medianas, cuartiles, rangos intercuartílicos (IQR) y valores atípicos (outliers). Esta herramienta es esencial para analistas, investigadores y estudiantes que necesitan sintetizar grandes volúmenes de datos numéricos en gráficos comparativos, especialmente en estudios de variabilidad, detección de anomalías o análisis exploratorio de datos (EDA). Permite importar datos en formatos CSV, TSV o JSON, e incluye opciones avanzadas como diagramas notched (con muescas para intervalos de confianza de la mediana), bigotes ajustados (según criterios como 1.5×IQR) y agrupación por categorías. El motor de renderizado basado en D3.js garantiza precisión matemática en los cálculos estadísticos, mientras que las exportaciones en PNG y SVG permiten integración en informes académicos, presentaciones empresariales o publicaciones científicas con resolución adecuada para impresión y web.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Caja",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al generador y selecciona el formato de entrada (CSV, TSV o JSON) en el menú 'Importar Datos'.",
+    "Pega tus datos o carga un archivo, asegurando que las columnas representen variables numéricas y las filas observaciones.",
+    "Configura parámetros en la sección 'Ajustes de Boxplot': activa 'Diagrama Notched' para mostrar intervalos de confianza o ajusta el factor de los bigotes en 'Rango de Extremos'.",
+    "Personaliza ejes y leyendas usando el panel 'Estilo Visual', incluyendo colores hexadecimales por categoría y etiquetas de eje personalizadas.",
+    "Previsualiza el gráfico en tiempo real y ajusta la escala manualmente si hay valores extremos que distorsionan la visualización.",
+    "Descarga el resultado en PNG de alta resolución o SVG para edición vectorial, seleccionando 'Exportar Gráfico' en el menú."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Caja para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un biólogo compara niveles de expresión génica entre tres tratamientos experimentales usando boxplots agrupados por condición.",
+    "Un analista financiero evalúa la volatilidad de precios de cinco acciones en un mes, identificando outliers en el percentil 99.",
+    "Un ingeniero de calidad analiza desviaciones en medidas de piezas manufacturadas, contrastando lotes de producción con boxplots horizontales.",
+    "Un climatólogo visualiza precipitaciones mensuales en distintas regiones, utilizando diagramas notched para comparar medianas con significancia estadística."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Base64-Encoder/Decoder ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Base64-Encoder/Decoder können Sie verschiedene Daten ohne die Installation von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Nutzer sind, der Base64-Encoder/Decoder kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und Ihre Daten nicht auf irgendwelchen Servern hochgeladen werden.",
+  "detailed_description": "Der Base64 Encoder/Decoder wandelt binäre Daten in ASCII-Zeichenketten um, basierend auf dem MIME-Standard (RFC 2045). Technisch gesehen teilt der Algorithmus Eingabedaten in 6-Bit-Blöcke, die mithilfe einer 64-Zeichen umfassenden Tabelle (A-Z, a-z, 0-9, '+', '/') in druckbare Zeichen übersetzt werden. Nicht durch 3 teilbare Byte-Folgen werden durch Padding-Zeichen ('=') ergänzt, um gültige Ausgabe zu gewährleisten. Dieses Werkzeug ist unverzichtbar für Entwickler, die Daten in Protokollen wie HTTP oder JSON übertragen müssen, die nur Textzeichen akzeptieren, z.B. bei der Einbettung von Bilddaten in CSS oder der Übertragung von Binärdateien über REST-APIs. Der Decoder rekonstruiert durch umgekehrte Zuordnung und Padding-Entfernung die ursprünglichen Binärdaten. Besonders nützlich ist dies bei der Analyse von JWT-Token-Payloads oder der manuellen Prüfung von Base64-kodierten Anhängen in E-Mails. Die clientseitige Verarbeitung garantiert Datenschutz, da keine Daten den Browser verlassen.",
   "usage_steps": [
-    "Den Base64-Encoder/Decoder-Tool-Startseite öffnen",
-    "Den zu verarbeitenden Text oder den Base64-Code in das Eingabefeld eingeben oder einfügen",
-    "Die Tool-Optionen und Einstellungen nach Bedarf anpassen",
-    "Den Verarbeitungsknopf klicken, um die Ergebnisse anzuzeigen",
-    "Die verarbeiteten Ergebnisse kopieren oder herunterladen"
+    "Geben Sie Klartext oder Binärdaten in das Eingabefeld ein oder laden Sie eine Datei per Drag-and-Drop hoch.",
+    "Wählen Sie die Aktion 'In Base64 kodieren' oder 'Base64 dekodieren' über die entsprechenden Schaltflächen.",
+    "Aktivieren Sie bei Binärdateien die Option 'Bytes statt Text verarbeiten', um korrekte Kodierung sicherzustellen.",
+    "Passen Sie bei Bedarf die Zeilenumbruch-Einstellungen (Standard: 76 Zeichen) an, um z.B. für SMTP-kompatible Ausgabe zu sorgen.",
+    "Kopieren Sie das Ergebnis per Klick auf das Zwischenablage-Symbol oder exportieren Sie es als Datei via 'Speichern unter'.",
+    "Prüfen Sie die hexadezimale Vorschau für dekodierte Binärdaten, um die Integrität der Ausgabe zu validieren."
   ],
   "usage_examples": [
-    "Den Base64-Encoder/Decoder verwenden, um Ihre Daten zu verarbeiten",
-    "Schnell auf die Ergebnisse zugreifen, ohne lange zu warten"
+    "Einbetten einer SVG-Grafik als Data-URL in eine CSS-Datei, um HTTP-Requests zu reduzieren.",
+    "Dekodieren des Payloads eines JWT-Tokens zur manuellen Überprüfung von Claims bei der API-Authentifizierung.",
+    "Konvertierung einer PDF-Datei in Base64 für die Übertragung per XML-RPC, das nur Textknoten unterstützt.",
+    "Analyse von Base64-kodierten Fehlerprotokollen in Serverlogs, um verschlüsselte Metadaten zu extrahieren."
   ]
 }

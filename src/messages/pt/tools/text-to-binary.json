@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Texto para Binário é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com Texto para Binário, você pode processar diversos dados sem precisar instalar nenhum software ou plug-in. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, Texto para Binário pode ajudar a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam enviados para qualquer servidor. Use Texto para Binário imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O conversor de texto para binário é uma ferramenta técnica que transforma sequências de caracteres legíveis em representações binárias (e vice-versa) usando padrões de codificação como ASCII, UTF-8 ou EBCDIC. Internamente, o algoritmo mapeia cada caractere do texto de entrada para seu valor decimal correspondente na tabela ASCII ou UTF-8 e, em seguida, converte esse valor para uma sequência de 8 bits (byte), respeitando a ordem de endianess definida. Para conversão inversa, o processo decodifica grupos de 8 bits em caracteres válidos, tratando possíveis inconsistências como bytes nulos ou sequências inválidas. Profissionais de redes, desenvolvedores de sistemas embarcados e estudantes de ciência da computação utilizam essa ferramenta para depurar protocolos de comunicação, analisar dumps de memória ou entender a representação de dados em nível de hardware. A precisão é garantida através de validação de checksums e suporte a codificação com ou sem separadores entre bytes, permitindo integração direta com ambientes de desenvolvimento como depuradores e montadores.",
   "usage_steps": [
-    "Abra a página do Texto para Binário",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole o texto na área de entrada rotulada 'Texto de entrada'.",
+    "Selecione o padrão de codificação desejado (ASCII, UTF-8 ou EBCDIC) no menu suspenso.",
+    "Escolha o formato de saída: 'Binário puro' ou 'Binário com espaços entre bytes'.",
+    "Clique no botão 'Converter para Binário' para gerar a representação em bits.",
+    "Para decodificação, cole a sequência binária na área apropriada e selecione 'Converter para Texto'.",
+    "Use o interruptor 'Validar formato' para verificar erros de padronização antes da conversão final."
   ],
   "usage_examples": [
-    "Use Texto para Binário para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor de firmware converte strings de configuração para binário antes de gravá-las em memória flash de um microcontrolador.",
+    "Um analista de segurança investiga payloads maliciosos decodificando sequências binárias encontradas em logs de rede.",
+    "Um professor demonstra o conceito de 'endianness' convertendo palavras e comparando a ordem dos bytes gerados.",
+    "Um engenheiro de telecomunicações valida a integridade de mensagens codificadas em 7-bit GSM alfabeto antes de testes em dispositivos IoT."
   ]
 }

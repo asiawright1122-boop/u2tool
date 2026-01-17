@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Línea es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Línea, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Línea puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Línea inmediatamente para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos de Líneas permite crear visualizaciones técnicas de series temporales con múltiples conjuntos de datos mediante un motor basado en D3.js y SVG nativo. Esta herramienta está diseñada para procesar datos estructurados en formatos como CSV, JSON o arrays de JavaScript, aplicando escalado automático de ejes con soporte para escalas logarítmicas y lineales. Utiliza algoritmos de interpolación cúbica para suavizar las líneas y permite personalizar anotaciones matemáticas mediante funciones lambda en tiempo real. Los desarrolladores pueden aprovechar la integración con WebAssembly para manejar conjuntos de datos de gran tamaño sin degradar el rendimiento del navegador. La exportación en formatos vectoriales (SVG) y rasterizados (PNG) incluye opciones de resolución ajustables hasta 4K, manteniendo la precisión de los metadatos de los datos representados.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Línea",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al generador a través de la URL /line-chart-generator y carga tus datos mediante el botón 'Importar Datos' en formato CSV/JSON.",
+    "Mapea las columnas en el Panel de Configuración usando el selector de dimensiones X/Y y asigna series múltiples mediante el campo 'Agrupación por Categoría'.",
+    "Habilita la interpolación cúbica en el menú desplegable 'Método de Suavizado' para visualizar tendencias no lineales en datos discretos.",
+    "Personaliza las escalas ajustando los parámetros mín/máx en los campos numéricos del apartado 'Ejes' y activa la escala logarítmica para rangos amplios.",
+    "Exporta el gráfico en SVG mediante el botón 'Guardar Vectorial' o genera una imagen rasterizada PNG con resolución 1080p usando el control deslizante 'Calidad'.",
+    "Incorpora anotaciones matemáticas escribiendo expresiones en notación LaTeX dentro del editor de texto 'Fórmulas' para destacar patrones estadísticos."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Línea para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un analista financiero compara el rendimiento de cinco ETFs distintos durante 12 meses, aplicando escalas logarítmicas para visualizar crecimientos porcentuales equivalentes.",
+    "Un ingeniero de software monitorea las latencias de una API a través de 72 horas de prueba, usando interpolación cúbica para identificar picos ocultos entre puntos de datos discretos.",
+    "Un investigador científico grafica tres variables climáticas (temperatura, humedad, presión) simultáneamente con colores codificados por categoría y ejes secundarios sincronizados.",
+    "Un docente de estadística crea diagramas didácticos con anotaciones en LaTeX de ecuaciones de regresión directamente sobre las líneas de tendencia generadas."
   ]
 }

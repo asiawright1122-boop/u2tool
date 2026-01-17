@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique en Ananas est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphique en Ananas pour traiter facilement diverses données sans installer de logiciels ou de plugins. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique en Ananas peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant tout téléchargement sur un serveur. Utilisez immédiatement le Générateur de Graphique en Ananas pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Générateur de Camemberts creux est un outil de visualisation de données permettant de créer des diagrammes circulaires avec un espace central personnalisable. Conçu pour les développeurs et analystes, il utilise des technologies de rendu vectoriel (SVG) et basées sur canvas pour produire des graphiques interactifs et accessibles. Ce outil s'adresse aux besoins spécifiques de représentation de proportions dans des contextes professionnels ou académiques, comme l'analyse budgétaire, la segmentation marketing ou la répartition de ressources. Son fonctionnement repose sur une interface de configuration avancée permettant d'ajuster le ratio du cercle intérieur (de 0 à 90%), de définir des palettes de couleurs personnalisées via des sélecteurs HEX/RGB, et d'importer des jeux de données structurés au format JSON ou CSV. Les graphiques générés sont dynamiques : le redimensionnement automatique (responsive) garantit une intégration fluide dans les interfaces web, tandis que l'exportation haute résolution (jusqu'à 4K PNG ou SVG éditable) permet une utilisation dans des rapports ou présentations. Le moteur de rendu intègre également des fonctionnalités d'accessibilité conformes aux standards WAI-ARIA, avec génération automatique de légendes descriptives et support du mode contraste élevé.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique en Ananas",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Saisissez vos données dans le champ d'édition JSON en format {\"labels\":[], \"values\":[]} ou importez un fichier CSV via le bouton 'Charger Fichier'",
+    "2. Ajustez le ratio du cercle intérieur avec le curseur 'Rayon Interne' (plage : 10% à 80% du diamètre total)",
+    "3. Personnalisez les couleurs en cliquant sur les pastilles de sélection HEX ou en collant un tableau de codes couleurs personnalisé",
+    "4. Activez/désactivez les étiquettes de données via le toggle 'Afficher Valeurs' et configurez leur position (interne/extérieure)",
+    "5. Utilisez l'aperçu interactif pour tester la réactivité sur différents formats (mobile/tablette/desktop) via le sélecteur de résolution",
+    "6. Exportez le graphique final au format PNG (avec réglage DPI) ou SVG (avec ou sans code intégré) en cliquant sur les icônes de téléchargement"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique en Ananas pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Visualiser la répartition des parts de marché entre concurrents dans un rapport d'analyse sectorielle",
+    "Représenter la distribution des dépenses budgétaires par département dans un document d'orientation stratégique",
+    "Créer un infographique interactif montrant les résultats d'un sondage politique avec segmentation par tranche d'âge",
+    "Intégrer un dashboard financier en temps réel avec camemberts dynamiques actualisés via API REST"
   ]
 }

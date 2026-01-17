@@ -1,15 +1,17 @@
 {
-  "detailed_description": "El Convertidor de HTML a PDF transforma contenido HTML en documentos PDF descargables. Soporta estilos CSS, tamaños de página personalizados y mantiene la fidelidad del diseño.",
+  "detailed_description": "Nuestra herramienta de conversión de HTML a PDF utiliza un motor de renderizado basado en Chromium para procesar documentos HTML5 y CSS3, generando archivos PDF con precisión tipográfica y soporte para características modernas como fuentes incrustadas, estilos responsivos y ejecución de JavaScript. Al analizar el DOM (Document Object Model) del contenido ingresado, el sistema aplica un motor de diseño que interpreta media queries, flexbox y grid layouts, manteniendo la fidelidad visual incluso en elementos complejos. La conversión ocurre en un entorno headless que simula un navegador real, permitiendo la generación de documentos PDF/UA (Accessible PDF) con etiquetas estructuradas para cumplir con estándares de accesibilidad. Esta solución es crucial para desarrolladores que necesitan exportar informes dinámicos, recibos electrónicos o documentación técnica manteniendo el diseño original, o para empresas que requieren crear archivos PDF desde plantillas HTML con integración de datos en tiempo real mediante APIs. El proceso incluye la rasterización de elementos SVG, la conversión de unidades CSS a puntos PDF y la optimización de imágenes con compresión JPEG 2000.",
   "usage_steps": [
-    "Introduce o pega contenido HTML",
-    "Añade estilos CSS si es necesario",
-    "Configura la configuración de la página",
-    "Haz clic en Generar PDF",
-    "Descarga el archivo PDF"
+    "Accede al editor de código y pega tu HTML o carga un archivo .html mediante el botón 'Importar archivo'",
+    "Selecciona el tamaño de página en el menú desplegable (A4, Carta, Legal) y elige orientación vertical u horizontal",
+    "Configura márgenes personalizados usando el selector en milímetros con precisión de 0.1mm",
+    "Activa la opción 'Ejecutar JavaScript' si tu documento incluye scripts que modifican el DOM",
+    "Haz clic en 'Vista preliminar' para verificar el renderizado y ajustar encabezados/pies de página",
+    "Descarga el PDF generado con un tamaño optimizado mediante algoritmos de compresión zlib"
   ],
   "usage_examples": [
-    "Genera informes a partir de contenido web",
-    "Crea documentos impresibles",
-    "Exporta páginas HTML con estilo"
+    "Una fintech genera recibos de transacciones con gráficos SVG incrustados y firma digital desde plantillas HTML",
+    "Un portal académico convierte automáticamente certificados con logotipos vectoriales y texto justificado en PDF",
+    "Un desarrollador documenta una API REST creando un PDF con ejemplos de código resaltados y tablas responsivas",
+    "Una editorial transforma newsletters HTML con imágenes retina en ediciones PDF para suscriptores"
   ]
 }

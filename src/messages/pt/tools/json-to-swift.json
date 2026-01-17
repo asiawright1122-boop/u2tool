@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON para Swift é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando JSON para Swift, você pode processar facilmente diversos dados sem instalar nenhum software ou plugins. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, JSON para Swift pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados a nenhum servidor. Use JSON para Swift imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O JSON to Swift é uma ferramenta especializada para desenvolvedores iOS que precisam transformar respostas JSON de APIs REST em modelos Swift tipados. Tecnicamente, o conversor analisa a estrutura JSON, infere tipos nativos (como String, Int, Date) e gera structs Swift com conformidade automática ao protocolo Codable. Ele também identifica objetos aninhados e arrays, criando hierarquias de structs organizadas com nomes em camelCase, alinhadas à convenção Swift. Isso elimina erros manuais ao mapear chaves JSON com propriedades Swift, especialmente em casos complexos como datas em formato ISO 8601 ou números representados como strings. A ferramenta é essencial para equipes que trabalham com Alamofire ou URLSession, permitindo integrar endpoints de backend sem escrever código boilerplate. Seu mecanismo avançado suporta personalização de nomes de structs, tratamento de chaves com snake_case e até inclusão opcional de documentação XMLDoc nas propriedades geradas.",
   "usage_steps": [
-    "Abra a página do conversor JSON para Swift",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole o JSON bruto na área de edição central, garantindo que seja válido (ex.: resposta de um endpoint API).",
+    "Insira o nome da struct raiz no campo 'Nome da Struct', usando PascalCase (ex.: UsuarioPerfil).",
+    "Ative a opção 'Incluir Codable' para gerar automaticamente init(from:) e encode(to:).",
+    "Selecione o nível de indentação (2, 4 espaços ou tab) para formatar o código Swift conforme seu estilo.",
+    "Clique em 'Converter' para processar o JSON e visualizar a saída na aba 'Swift Struct'.",
+    "Use o botão 'Copiar Código' para colar diretamente no Xcode, pronto para uso em seu projeto."
   ],
   "usage_examples": [
-    "Use JSON para Swift para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Gerar structs para uma API de clima que retorna dados aninhados como { cidade: { nome: 'SP', id: 1 }, previsao: [ { dia: '2023-09-01', temp: '25°C' } ] }.",
+    "Converter uma resposta de autenticação OAuth { access_token: 'abc', expires_in: '3600', user: { id: 123, nome_completo: 'João Silva' } } para uso com Keychain.",
+    "Criar modelos Swift a partir de um arquivo JSON de catálogo de produtos com arrays multidimensionais e preços em formato monetário.",
+    "Mapear um webhook de pagamento { status: 'aprovado', dados_bancarios: { agencia: '0001', conta: '123456-7' } } com campos sensíveis que exigem Codable personalizado."
   ]
 }

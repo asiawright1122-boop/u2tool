@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Arredondador de Imagens é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Utilizando o Arredondador de Imagens, você pode processar dados variados sem a necessidade de instalar qualquer software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Arredondador de Imagens pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Arredondador de Imagens imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Image Rounder é uma ferramenta técnica especializada em modificar geometrias de imagens rasterizadas, aplicando cantos arredondados ou convertendo-as em formato circular. Isso é feito por meio de manipulação de máscaras alfa e redimensionamento vetorial, utilizando bibliotecas como ImageMagick ou Canvas para processar pixels individuais. Essencial para designers e desenvolvedores que precisam de imagens otimizadas para interfaces modernas, como avatares em redes sociais, botões arredondados em aplicativos ou banners responsivos. A ferramenta permite ajustar o raio de arredondamento em porcentagem ou pixels, garantindo compatibilidade com formatos PNG, JPEG e WEBP. O processo preserva a qualidade original da imagem, aplicando anti-aliasing para evitar serrilhados. Funciona diretamente no navegador, sem necessidade de plugins, e suporta transformações não destrutivas para visualização em tempo real.",
   "usage_steps": [
-    "Abra a página da ferramenta Arredondador de Imagens",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão processar para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o site e clique em 'Enviar Imagem' para carregar seu arquivo rasterizado (PNG, JPEG ou WEBP).",
+    "Use o controle deslizante 'Raio de Arredondamento' para definir o percentual (0% a 50%) ou insira um valor específico em pixels.",
+    "Ative a opção 'Circular' se desejar transformar a imagem em um círculo perfeito, ignorando as proporções originais.",
+    "Escolha o formato de saída no menu suspenso 'Converter Para', mantendo o formato original ou alterando para otimizar qualidade.",
+    "Visualize a prévia em tempo real e ajuste parâmetros adicionais, como bordas ou sombras, se disponíveis.",
+    "Clique em 'Baixar Resultado' para salvar a imagem processada com as modificações aplicadas."
   ],
   "usage_examples": [
-    "Use o Arredondador de Imagens para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem precisar esperar"
+    "Criar avatares circulares para um site de perfis profissionais, definindo raio de 50% para imagens quadradas.",
+    "Preparar botões arredondados com raio de 20% para uma interface de aplicativo móvel, garantindo consistência visual.",
+    "Editar fotos de produtos para e-commerce com cantos suaves, aplicando raio de 10% para destacar em catálogos online.",
+    "Converter banners de notícias em formato circular para stories no Instagram, otimizando o encaixe na rede social."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Base85 Encoder/Decoder is a practical online tool that helps you quickly complete various tasks. Using Base85 Encoder/Decoder, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Base85 Encoder/Decoder can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Base85 Encoder/Decoder immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Base85 Encoder/Decoder converts binary data to ASCII text using the Base85 (Ascii85) encoding scheme, which represents 32-bit binary values as five printable ASCII characters from a set of 85 symbols. This tool supports both Adobe's original Ascii85 implementation and the Z85 variant defined in RFC 1924, achieving 25% smaller output compared to Base64 by leveraging a base-85 number system. Developers need this tool when working with PDF document streams, Git version control metadata, or network protocols requiring ASCII-armored binary transmission. The encoder processes input through a four-step algorithm: binary stream segmentation, 32-bit group conversion to base-85, dictionary mapping using the ASCII range 33-117, and final output formatting with optional '~>' delimiters. Decoding reverses this process using polynomial expansion while handling edge cases like incomplete 4-byte input blocks. Technical advantages include improved data density (1.25x size increase vs Base64's 1.33x) and compatibility with ASCII-based systems that reject null bytes or control characters.",
   "usage_steps": [
-    "Open the Base85 Encoder/Decoder tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the Base85 tool interface and locate the 'Input Mode' dropdown to select either 'Encode Binary' or 'Decode Ascii85'",
+    "Paste raw binary data or ASCII85-encoded text into the designated 'Data Input' textarea",
+    "Toggle the 'Format Output' switch to enable/disable line breaks every 64 characters for enhanced readability",
+    "Click the 'Process Data' button to initiate the conversion algorithm",
+    "Review the output panel showing results in both standard Ascii85 and Z85 formats with byte count statistics",
+    "Use the 'Copy to Clipboard' icon to save the converted data or download it as a .txt file"
   ],
   "usage_examples": [
-    "Use Base85 Encoder/Decoder to process your data",
-    "Get processing results quickly without waiting"
+    "Encoding a 256-color PNG image for embedding in a PDF document's XObject stream while maintaining ASCII compatibility",
+    "Decoding Base85-encoded Git object IDs from a .pack file to analyze repository internal structure",
+    "Converting binary cryptographic signatures into compact ASCII representations for JSON Web Token (JWT) headers",
+    "Debugging ZeroMQ network protocol messages that use Z85 encoding for efficient binary transport over text-based channels"
   ]
 }

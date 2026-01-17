@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Convertisseur de Casse est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Convertisseur de Casse, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Convertisseur de Casse peut vous aider à améliorer l'efficacité de votre travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas téléversés sur aucun serveur. Utilisez immédiatement le Convertisseur de Casse pour découvrir un service en ligne rapide, sécurisé et gratuit.",
+  "detailed_description": "Le convertisseur de cas permet d'appliquer diverses transformations de casse à des séquences de caractères Unicode, en respectant les normes de codage modernes. Techniquement, il utilise des algorithmes de normalisation des chaînes (NFKC/NFKD) pour traiter les caractères accentués, combinant des fonctions natives comme toUpperCase() et toLowerCase() avec des expressions régulières avancées pour les conversions en casse de titre (Title Case) ou en casse de phrase (Sentence case). Ce outil est indispensable pour les développeurs gérant l'internationalisation, où les caractères spécifiques aux langues (ç, ß, ā) doivent être traités correctement. Il sert notamment à nettoyer des données CSV avant importation dans des bases SQL, à formater des variables JSON pour des API REST, ou à préparer des textes pour des moteurs de recherche nécessitant une normalisation des minuscules. Le processus utilise une architecture sans serveur côté client, garantissant la confidentialité des données traitées localement. La gestion des graphèmes complexes (comme les ligatures) et des scripts non latins (Cyrillique, Grec) est assurée grâce à la bibliothèque ICU intégrée au moteur V8 de JavaScript.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Convertisseur de Casse",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'interface via la page dédiée et collez votre texte dans la zone d'édition HTML5 avec prise en charge du drag-and-drop",
+    "Sélectionnez l'option de conversion souhaitée dans le menu déroulant: MAJUSCULE, minuscule, Casse De Titre, ou Casse De Phrase",
+    "Activez l'option 'Préserver les espaces multiples' si vous travaillez sur des formats à espacement critique",
+    "Cliquez sur 'Convertir' pour exécuter le traitement basé sur des Web Workers afin de ne pas bloquer l'interface",
+    "Utilisez le bouton 'Copier' pour récupérer le résultat au format clipboard API ou téléchargez-le en fichier .txt UTF-8",
+    "Consultez l'histogramme de caractères en bas de page pour analyser la distribution des casse avant/après conversion"
   ],
   "usage_examples": [
-    "Utilisez le Convertisseur de Casse pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un data scientist convertit des en-têtes de colonnes CSV en casse cohérente avant nettoyage avec Pandas",
+    "Un développeur front-end reformate les clés de traduction JSON en snake_case pour un projet Angular",
+    "Un administrateur système normalise les logs d'erreurs en minuscules pour faciliter la recherche par regex",
+    "Un rédacteur technique convertit un document technique en majuscules pour un affichage sur écran à contraste limité"
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "La calculadora ayuda a los corredores a calcular ritmo, tiempo o distancia.",
+  "detailed_description": "El Calculador de Ritmo es una herramienta técnica diseñada para atletas y entusiastas del fitness que requieren precisión en la planificación y análisis de sus entrenamientos. Permite calcular tres variables interrelacionadas: ritmo (minutos por kilómetro o milla), distancia recorrida y tiempo total, utilizando fórmulas matemáticas basadas en la relación lineal entre estas magnitudes (ritmo = tiempo / distancia). La herramienta destaca por su capacidad para manejar conversiones entre unidades métricas e imperiales, procesar valores decimales con redondeo ajustable, y ofrecer cálculos bidireccionales en tiempo real mediante algoritmos optimizados en JavaScript. Su interfaz incluye validación de campos para evitar errores de entrada, como tiempos negativos o distancias cero. Es especialmente útil para corredores que diseñan estrategias de carrera, entrenadores que crean planes de intervalos, o triatletas que sincronizan transiciones. Al integrar un sistema de actualización instantánea sin recarga de página, permite ajustar variables en vuelo, ideal para análisis comparativo de escenarios de entrenamiento.",
   "usage_steps": [
-    "Selecciona qué calcular",
-    "Ingresa valores conocidos",
-    "Elige distancia",
-    "Ver resultado",
-    "Ver parciales"
+    "Selecciona las unidades métricas (km) o imperiales (mi) usando el interruptor de unidades.",
+    "Introduce dos de los tres valores requeridos: tiempo (en formato hh:mm:ss), distancia (con decimales) o ritmo objetivo (min/km o min/mi).",
+    "Elige la variable a calcular mediante el botón de selección: 'Calcular ritmo', 'Calcular distancia' o 'Calcular tiempo'.",
+    "Revisa los resultados en el panel de salida, que muestra valores con precisión de centésimas en formato decimal.",
+    "Utiliza el botón 'Intercambiar unidades' para convertir automáticamente entre km/millas sin perder datos ingresados.",
+    "Exporta los resultados en CSV o comparte el cálculo mediante el enlace único generado en la barra de acciones."
   ],
   "usage_examples": [
-    "Calcular ritmo de maratón",
-    "Estimar tiempo de 5K",
-    "Planificar ritmo de entrenamiento"
+    "Un maratonista calcula el ritmo necesario para completar 42.195 km en 3:30 horas, obteniendo 4:58 min/km.",
+    "Un entrenador determina la distancia recorrida durante una sesión de intervalos de 8x400m a un ritmo de 3:20 min/km.",
+    "Un triatleta calcula el tiempo estimado de transición entre segmentos al ajustar ritmos de carrera en unidades imperales.",
+    "Un corredor recreativo compara escenarios de carrera de 10 km ajustando tiempos objetivo entre 45 y 50 minutos para evaluar carga física."
   ]
 }

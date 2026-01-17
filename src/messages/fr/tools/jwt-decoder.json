@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Décodeur JWT est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Décodeur JWT, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Décodeur JWT peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements se font localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas envoyés sur aucun serveur. Utilisez immédiatement le Décodeur JWT pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le JWT Decoder est un outil puissant conçu pour déchiffrer et inspecter les jetons JWT (JSON Web Tokens). Ce jeton est un standard ouvert largement utilisé pour l'authentification et l'autorisation entre applications. Structuré en trois parties (header, payload, et signature), le JWT contient des informations critiques sur l'utilisateur et les autorisations. L'utilisation de ce décodeur permet aux développeurs de vérifier la validité et l'intégrité des jetons, ainsi que d'inspecter leur contenu pour des fins de débogage ou de sécurité. Il est particulièrement utile dans les scénarios où l'authentification est essentielle, comme dans les applications web modernes et les API REST. En décodant le JWT, les développeurs peuvent facilement identifier les erreurs de format, les problèmes de signature, et s'assurer que les données sont correctement transmises et interprétées.",
   "usage_steps": [
-    "Ouvrez la page du Décodeur JWT",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez la page du JWT Decoder sur le site de l'outil.",
+    "Collez le JWT que vous souhaitez déchiffrer dans le champ de texte 'Token JWT'.",
+    "Cliquez sur le bouton 'Décoder' pour initier le processus de décodage.",
+    "La section 'Header' s'affichera avec les informations de l'en-tête du jeton, telles que l'algorithme de signature et le type de jeton.",
+    "La section 'Payload' affichera les revendications (claims) contenues dans le jeton, y compris les données d'identification et d'autorisation.",
+    "La section 'Signature' montrera la signature du jeton, vous permettant de vérifier son intégrité et son authenticité."
   ],
   "usage_examples": [
-    "Utilisez le Décodeur JWT pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un développeur souhaite tester l'authentification d'une API REST. Il utilise le JWT Decoder pour vérifier que le jeton reçu par l'API contient les revendications correctes et que la signature est valide.",
+    "Un administrateur de systèmes doit déboguer un problème de connexion d'un utilisateur. En utilisant le JWT Decoder, il peut inspecter le jeton pour s'assurer que l'ID de l'utilisateur et les autorisations sont correctement inclus et signés.",
+    "Une équipe de sécurité veut auditer l'authentification dans une application web. Le JWT Decoder leur permet de vérifier que les jetons sont générés et transmis en toute sécurité, et que les données sensibles ne sont pas exposées.",
+    "Un développeur front-end travaille sur l'implémentation d'une fonctionnalité d'authentification. Il utilise le JWT Decoder pour vérifier que les jetons générés par le backend sont bien structurés et contiennent les informations nécessaires pour l'authentification utilisateur."
   ]
 }

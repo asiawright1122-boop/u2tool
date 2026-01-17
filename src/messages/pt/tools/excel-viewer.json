@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Visualizador do Excel é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com o Visualizador do Excel, você pode processar dados de forma fácil sem a necessidade de instalar qualquer software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Visualizador do Excel pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Visualizador do Excel imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Excel Viewer é uma ferramenta web especializada em processar e renderizar arquivos XLSX no navegador, permitindo manipulação avançada sem dependência de software instalado. Ele utiliza bibliotecas de análise (parsing) de planilhas para interpretar estruturas de células, fórmulas e estilos diretamente no cliente, com suporte a funcionalidades como ordenação dinâmica de colunas, filtragem baseada em expressões regulares e navegação entre múltiplas abas (sheets) via interface de guias. Sua engine roda em Web Workers para evitar travamentos em arquivos grandes, enquanto mantém a integridade de dados complexos, como células mescladas ou formatação condicional. Profissionais de controle financeiro, analistas de dados e equipes de desenvolvimento usam essa ferramenta para auditar planilhas compartilhadas, extrair subsets de dados sem instalar softwares ou validar integração de APIs que geram XLSX. O processamento ocorre localmente, garantindo privacidade, e a interface reativa permite interações em tempo real, como redimensionar colunas com arrastar e soltar ou aplicar filtros customizados por operadores lógicos.",
   "usage_steps": [
-    "Abra a página do ferramenta Visualizador do Excel",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta pelo slug '/excel-viewer' e clique em 'Carregar Arquivo' para selecionar seu XLSX.",
+    "Arraste o arquivo para a área de upload ou clique em 'Procurar' para localizar no dispositivo.",
+    "Navegue entre as abas usando a barra de guias na parte inferior para visualizar diferentes sheets.",
+    "Clique no ícone de seta na barra de ferramentas para ordenar uma coluna em ordem crescente ou decrescente.",
+    "Utilize o botão 'Filtrar' para definir critérios de seleção por valor, texto ou expressão regular.",
+    "Exporte dados filtrados como CSV ou use a opção 'Imprimir' para gerar um PDF da planilha atual."
   ],
   "usage_examples": [
-    "Use o Visualizador do Excel para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem a necessidade de esperar"
+    "Um auditor fiscal identifica inconsistências em um relatório financeiro ao aplicar filtros de células com valores negativos.",
+    "Um analista de vendas exporta apenas dados de clientes com status 'Inadimplente' para análise em outra ferramenta.",
+    "Um professor visualiza uma planilha de notas com fórmulas de média calculada, garantindo que as funções estejam corretas.",
+    "Um desenvolvedor extrai dados de uma aba específica de um XLSX gerado por API para validação de integração."
   ]
 }

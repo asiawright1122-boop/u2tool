@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Conversor de Chinês é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Conversor de Chinês, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja um desenvolvedor, designer ou usuário geral, o Conversor de Chinês pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados a qualquer servidor. Use o Conversor de Chinês imediatamente para experimentar serviços de ferramenta online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Chinese Converter é uma ferramenta técnica especializada em transformações bidirecionais entre caracteres chineses simplificados e tradicionais, fundamentada em padrões de codificação Unicode (GB18030/UTF-8) e tabelas de mapeamento ISO/IEC 10646. Sua funcionalidade abrange a detecção automática de grafias regionais (como variantes de Hong Kong, Macau e Taiwan) e a preservação de consistência em conversões reversas (round-trip). Desenvolvido com algoritmos baseados na biblioteca OpenCC e aprimorado com regras contextuais personalizadas, o toolchain processa texto em formatos RAW, HTML e XML, mantendo integridade em entidades especiais e codificação de caracteres. Profissionais de localização de software, pesquisadores de linguística computacional e desenvolvedores de sistemas multilíngues necessitam desta ferramenta para resolver desafios como normalização de dados em bases de conhecimento, adaptação de conteúdo para diferentes mercados (e.g., Mainland China vs. comunidades da diáspora) e depuração de inconsistências em APIs que lidam com CJK (Chinese-Japanese-Korean). A precisão é garantida através de validação contra dicionários acadêmicos e testes de regressão com corpus bilíngües.",
   "usage_steps": [
-    "Abra a página do Conversor de Chinês",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a interface web e selecione a direção da conversão usando os botões de rádio 'Simplificado → Tradicional' ou 'Tradicional → Simplificado'.",
+    "Cole o texto na área de edição com suporte a formatação HTML/XML, preservando tags estruturais.",
+    "Ative a opção 'Manter variantes regionais' caso precise de grafias específicas (ex: Hong Kong Supplementary Character Set).",
+    "Escolha o modo de saída: 'Texto puro' ou 'Codificação UTF-8 hexadecimal' para análise de bytes.",
+    "Clique em 'Processar' para executar a transformação com engine baseada em ICU (International Components for Unicode).",
+    "Revise os resultados na seção de saída, que exibe estatísticas de caracteres convertidos e possíveis ambiguidades detectadas."
   ],
   "usage_examples": [
-    "Use o Conversor de Chinês para processar seus dados",
-    "Obtenha rapidamente os resultados de processamento sem esperar"
+    "Um historiador digitalizando documentos da Dinastia Qing precisa converter textos OCRizados em tradicional para análise computacional em softwares de NLP modernos que só aceitam simplificado.",
+    "Uma empresa de jogos adaptando um RPG para lançamento no Taiwan utiliza a ferramenta para transformar diálogos do jogo, garantindo uso correto de variantes como 後 (tradicional) vs. 后 (simplificado).",
+    "Um engenheiro de dados corrigindo inconsistências em um data warehouse, onde registros de usuários chineses estão armazenados em codificações mistas (Big5 e GBK), utiliza o conversor para normalizar para UTF-8.",
+    "Um tradutor juramentado verificando equivalências em contratos bilíngues, usando a função de comparação lado a lado para assegurar que termos técnicos mantêm significado preciso após conversão."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Candlestick Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Candlestick Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Candlestick Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Candlestick Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Candlestick Chart Generator is a specialized data visualization tool that transforms OHLC (Open-High-Low-Close) financial data into interactive candlestick charts using HTML5 Canvas and SVG rendering. Designed for algorithmic traders, quantitative analysts, and finance students, this tool supports technical analysis by rendering precise bullish and bearish patterns through customizable parameters. Users input time-series data in CSV/JSON formats containing timestamp, open, high, low, and close columns, then apply transformations like logarithmic scaling or volume-weighted average price overlays. The engine processes data points to generate candle bodies and wicks with pixel-accurate proportions, supporting intraday intervals down to 1-minute granularity. Advanced features include bidirectional scrolling for multi-year datasets, automatic pattern recognition highlighting Doji and Engulfing formations, and stylesheet-driven color schemes for differentiating uptrends/downtrends. Generated charts maintain vector fidelity for publication-quality exports in SVG format or rasterized PNG at 4K resolution, with optional embedding of metadata annotations directly into the image canvas.",
   "usage_steps": [
-    "Open the Candlestick Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Upload structured financial data via CSV/JSON containing columns: timestamp (ISO 8601), open, high, low, close, and optional volume values",
+    "2. Map input fields to chart parameters using the schema binding interface, specifying date parsing format (e.g., YYYY-MM-DD HH:mm)",
+    "3. Select time aggregation interval (1min/5min/1hr/daily) and set price scale type (linear/logarithmic) in the axis configuration panel",
+    "4. Customize candlestick appearance through the style editor: adjust wick thickness (1-5px), set bull/bear color codes (HEX/RGB), and enable volume bars",
+    "5. Activate technical overlays by toggling SMA (Simple Moving Average) controls and configuring period lengths (e.g., 9/20/50-day averages)",
+    "6. Export the rendered chart using the download controls, selecting either SVG format for scalable graphics or PNG at 300DPI resolution"
   ],
   "usage_examples": [
-    "Use Candlestick Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "A day trader analyzing NASDAQ-100 intraday volatility patterns across multiple trading sessions by generating 5-minute interval charts with volume-weighted price overlays",
+    "A quantitative analyst backtesting a mean-reversion strategy by comparing historical candlestick formations against algorithmic buy/sell signals rendered as annotation markers",
+    "A financial educator creating textbook-quality chart examples that demonstrate specific reversal patterns like Hammer or Dark Cloud Cover with precise mathematical annotations",
+    "A portfolio manager evaluating sector rotation dynamics by generating synchronized weekly charts for technology, energy, and consumer staples ETFs with comparative scaling"
   ]
 }

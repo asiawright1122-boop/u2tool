@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Einheitenumrechner ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Einheitenumrechner können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell damit anfangen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Benutzer sind, der Einheitenumrechner kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Einheitenumrechner sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu genießen.",
+  "detailed_description": "Der Einheitenumrechner ist ein präzises Instrument zur Transformation von physikalischen Größen zwischen kompatiblen Einheitensystemen. Technisch gesehen implementiert das Tool spezifische Umrechnungsfaktoren basierend auf international anerkannten Standards wie SI-Einheiten, imperialen Maßeinheiten und thermodynamischen Temperaturskalen. Es unterstützt komplexe Konversionen zwischen 18 Kategorien, darunter Längenmessung mit Mikrometern bis Meilen, Gewichtsumrechnung von Atommasseenheiten bis Tonnen sowie Temperaturkonversionen zwischen Kelvin, Celsius und Fahrenheit. Der Algorithmus verwendet vordefinierte Formelmatrizen, um Eingabewerte in Echtzeit zu skalieren. Die Software nutzt eine clientseitige JavaScript-Logik mit eingebetteten Lookup-Tabellen für dimensionsbasierte Umrechnungsfaktoren, vermeidet Serveranfragen und gewährleistet somit sofortige Ergebnisse. Entwickler profitieren von der Genauigkeit bei Projekten mit internationalen Kooperationspartnern, Wissenschaftler bei der Standardisierung von Forschungsdaten und Ingenieure bei der Anpassung technischer Spezifikationen an lokale Vorschriften.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Einheitenumrechners",
-    "Geben Sie den zu bearbeitenden Inhalt in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Einstellungen und Optionen nach Bedarf an",
-    "Klicken Sie auf den Bearbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die bearbeiteten Ergebnisse"
+    "Wählen Sie die Kategorie 'Länge' aus dem Hauptmenü mit der Kategorienauswahlbox.",
+    "Aktivieren Sie das Quelleinheit-Dropdown und wählen Sie 'Meter' als Eingabeeinheit.",
+    "Öffnen Sie das Ziieleinheit-Panel und selektieren Sie 'Fuß (foot)' für die Konversion.",
+    "Geben Sie den numerischen Wert '1.75' in das Eingabefeld mit der Beschriftung 'Eingabewert'.",
+    "Klicken Sie auf den 'Konvertieren'-Button mit dem Atom-Symbol in der Symbolleiste.",
+    "Lesen Sie das Ergebnis '5.741 Fuß' aus der farbkodierten Ausgabetabelle mit millimetergenauer Darstellung."
   ],
   "usage_examples": [
-    "Verwenden Sie den Einheitenumrechner, um Ihre Daten zu bearbeiten",
-    "Erhalten Sie die Bearbeitungsresultate schnell, ohne zu warten"
+    "Ein Maschinenbauingenieur konvertiert 150 Mikrometer Oberflächenrauheit in Zoll, um US-amerikanische Fertigungsvorgaben zu erfüllen.",
+    "Ein Konditor transformiert 180°C Ofentemperatur in Fahrenheit für ein Rezeptbuch mit internationalem Vertrieb.",
+    "Ein Physikstudent berechnet 75 kg Körpergewicht in englische Pfund für ein biomechanisches Forschungsprojekt.",
+    "Ein Logistikmanager wandelt 1200 Quadratmeter Lagerfläche in Quadratfuß um, um internationale Mietverträge zu vergleichen."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Editor hexadecimal es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Editor hexadecimal, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Editor hexadecimal puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Editor hexadecimal inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Hex Editor es una herramienta técnica que permite la conversión bidireccional entre cadenas de texto ASCII/UTF-8 y su representación hexadecimal, mientras ofrece una visualización detallada de datos binarios a nivel de byte. Esta utilidad es esencial para desarrolladores que necesitan analizar o manipular estructuras de datos binarias, como en el caso de ingeniería inversa de archivos, depuración de protocolos de red o edición de cabeceras de archivos. La herramienta opera mediante la codificación/decodificación de cada byte del texto de entrada según el estándar UTF-8, mostrando simultáneamente el valor hexadecimal, decimal y su representación ASCII. Soporta la detección automática de secuencias nulas, bytes de control y caracteres extendidos, mostrando un grid hexadecimal con numeración de direcciones (offsets) en notación hexadecimal de 32 bits. Los usuarios pueden editar directamente los valores hexadecimales en la cuadrícula, lo que permite modificar bytes específicos sin alterar el resto del flujo de datos, útil para ajustar firmas de archivos o parchear ejecutables pequeños.",
   "usage_steps": [
-    "Abre la página de la herramienta Editor hexadecimal",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona la dirección de conversión usando el selector 'Texto a Hex' o 'Hex a Texto' en la barra de herramientas superior.",
+    "Ingresa el contenido en el campo de texto izquierdo o pega una secuencia hexadecimal válida (sin espacios ni prefijos '0x').",
+    "Navega por la representación hexadecimal en el grid interactivo, donde cada celda muestra el byte en formato XX con resaltado de valores nulos (00).",
+    "Activa la opción 'Mostrar ASCII' para ver caracteres imprimibles junto a los valores hexadecimales en la vista de bytes.",
+    "Edita bytes individuales en el grid haciendo clic sobre ellos y escribiendo nuevos valores hexadecimales (00-FF).",
+    "Descarga el resultado binario modificado como archivo .bin usando el botón 'Exportar Bytes' o copia el texto convertido al portapapeles."
   ],
   "usage_examples": [
-    "Usa Editor hexadecimal para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador corrige manualmente el byte de firma de un archivo PDF dañado cambiando los primeros bytes de '504B0304' a '25504446'.",
+    "Un analista de seguridad convierte una secuencia de shellcode hexadecimal (\\x31\\xc0\\x50\\x68...) a bytes ejecutables para pruebas en entorno controlado.",
+    "Un programador de firmware examina la diferencia hexadecimal entre dos versiones de un archivo .hex para identificar cambios en secciones de memoria crítica.",
+    "Un estudiante compara la representación hexadecimal de caracteres UTF-8 multibyte (ej: 'ñ' = C3 B1) versus ASCII simple para entender codificaciones de texto."
   ]
 }

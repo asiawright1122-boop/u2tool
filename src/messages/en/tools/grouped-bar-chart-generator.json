@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Grouped Bar Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Grouped Bar Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Grouped Bar Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Grouped Bar Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Grouped Bar Chart Generator enables developers to create multi-series categorical visualizations by rendering scalable vector graphics (SVG) that display parallel data comparisons. This tool specializes in D3.js-based data binding, allowing users to map JSON or CSV inputs to X (categorical), Y (numerical), and Z (grouping) dimensions. Unlike standard charting libraries, it implements nested scales for secondary axis alignment and supports custom color schemes via HEX/RGB inputs. The engine performs automatic domain scaling with optional manual overrides, handles collision detection for clustered bars, and generates interactive legends with click-to-toggle functionality. Developers benefit from its ability to produce publication-quality visualizations for dashboards, research papers, or business intelligence reports where side-by-side metric comparisons across multiple variables are required.",
   "usage_steps": [
-    "Open the Grouped Bar Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Paste tabular data with headers in CSV or JSON format into the input panel",
+    "Select categorical axis (X) and numerical axis (Y) from detected fields",
+    "Assign grouping dimension (Z) to create clustered bar sets",
+    "Customize bar width, spacing ratios, and color gradients using HEX/RGB pickers",
+    "Enable data labels, error bars, or gridlines through the display settings panel",
+    "Export generated SVG code or download PNG/PDF renderings with specified resolution"
   ],
   "usage_examples": [
-    "Use Grouped Bar Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Comparing quarterly revenue across three product lines with regional breakdowns",
+    "Visualizing A/B test results showing conversion rates across device types and demographics",
+    "Displaying scientific experiment data with mean values and error margins for multiple trials",
+    "Tracking monthly energy consumption patterns across different building sectors in a sustainability report"
   ]
 }

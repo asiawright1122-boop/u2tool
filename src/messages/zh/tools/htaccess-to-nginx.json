@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Apache .htaccess 转 Nginx 配置转换器是一款实用的在线工具，帮助您快速完成各种任务。使用 Apache .htaccess 转 Nginx 配置转换器，您可以轻松处理各种数据，无需安装任何软件或插件。该工具界面简洁，易于使用，让您快速上手并高效使用。无论是开发者、设计师还是普通用户，Apache .htaccess 转 Nginx 配置转换器都能帮助您提高工作效率。所有处理均在您的浏览器中本地完成，确保您的数据安全，不会上传到任何服务器。立即使用 Apache .htaccess 转 Nginx 配置转换器，体验快速、安全、免费的在线工具服务。",
+  "detailed_description": "htaccess to Nginx Converter 是一个强大的开发工具，旨在帮助开发者将 Apache 的 .htaccess 规则无缝转换为 Nginx 配置文件。随着 Web 技术的发展，越来越多的服务器开始采用 Nginx 作为其 Web 服务器，而许多项目仍基于 Apache 构建。这个工具通过自动化转换过程，极大地简化了迁移和兼容性问题的处理。用户可以通过此工具快速、准确地将复杂的 .htaccess 规则转换为 Nginx 配置，确保网站或应用在不同环境下的稳定运行。\n\n具体来说，htaccess to Nginx Converter 支持多种 .htaccess 规则，包括 URL 重写、访问控制、缓存设置等。转换过程中，工具会解析 .htaccess 文件中的每一行指令，根据 Nginx 的语法和配置逻辑进行相应的转换。此外，该工具还提供了详细的转换日志，帮助用户理解每一步的转换逻辑，从而更容易地进行调试和优化。",
   "usage_steps": [
-    "打开 Apache .htaccess 转 Nginx 配置转换器工具页面",
-    "在输入框中输入或粘贴您要处理的内容",
-    "根据需要调整工具选项和设置",
-    "点击处理按钮查看结果",
-    "复制或下载处理后的结果"
+    "打开 htaccess to Nginx Converter 工具页面。",
+    "在 '输入 .htaccess 规则' 区域，粘贴您现有的 .htaccess 文件内容。",
+    "点击 '转换' 按钮，工具将开始解析并转换 .htaccess 规则。",
+    "转换完成后，工具将在 'Nginx 配置结果' 区域显示生成的 Nginx 配置代码。",
+    "检查生成的 Nginx 配置代码，确保所有规则已正确转换。",
+    "将生成的 Nginx 配置代码复制到您的 Nginx 服务器配置文件中，保存并重启 Nginx 服务。"
   ],
   "usage_examples": [
-    "使用 Apache .htaccess 转 Nginx 配置转换器处理您的数据",
-    "快速获取处理结果，无需等待"
+    "Example 1: 某公司需要将现有的 Apache 服务器迁移到 Nginx，但项目的 .htaccess 文件包含复杂的 URL 重写规则。使用 htaccess to Nginx Converter 可以快速生成对应的 Nginx 配置，确保网站在迁移后仍能正常运行。",
+    "Example 2: 一位开发者正在开发一个需要在多个环境中部署的应用，其中一个环境使用 Nginx，另一个环境使用 Apache。通过使用此工具，开发者可以轻松地将 .htaccess 规则转换为 Nginx 配置，确保应用在不同环境中的行为一致。",
+    "Example 3: 一个网站管理员需要优化网站的缓存设置，但现有的 .htaccess 文件中包含大量的缓存控制规则。使用 htaccess to Nginx Converter 可以快速将这些规则转换为 Nginx 配置，从而简化配置过程。",
+    "Example 4: 一个团队正在进行一个从 PHP 到 Node.js 的项目重构，新的后端将运行在 Nginx 上。团队可以使用 htaccess to Nginx Converter 将现有的 .htaccess 重写规则转换为 Nginx 配置，确保迁移过程中的 URL 结构保持不变。"
   ]
 }

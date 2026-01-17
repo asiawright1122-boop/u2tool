@@ -1,11 +1,17 @@
 {
-  "detailed_description": "Extrae texto de documentos Word.",
+  "detailed_description": "Word to Text es una herramienta especializada que facilita la conversión de documentos de Word (formato .docx) a texto plano. Esta herramienta es esencial para usuarios que necesitan extraer el contenido de documentos de Word sin conservar el formateo, lo que es útil en una variedad de escenarios, como la preparación de datos para análisis de texto, la creación de scripts, o la integración con sistemas que solo admiten texto plano. Técnicamente, Word to Text utiliza una combinación de procesamiento de lenguaje natural (NLP) y manipulación de archivos para leer y descomponer el contenido del documento .docx, eliminando metadatos y formateo, y generando un archivo .txt puro y limpio. El proceso asegura que el contenido original se preserve intacto, sin pérdidas de datos importantes, y se proporciona de manera eficiente y segura, ideal para automatización y tareas de procesamiento en lote.",
   "usage_steps": [
-    "Subir archivo Word",
-    "Esperar extracción",
-    "Descargar TXT"
+    "Paso 1: Visita la página de Word to Text en el sitio web y haz clic en el botón 'Seleccionar Archivo' para abrir el explorador de archivos.",
+    "Paso 2: Navega hasta el documento .docx que deseas convertir y selecciona el archivo. Haz clic en 'Abrir' para cargar el documento en la herramienta.",
+    "Paso 3: Espera unos momentos mientras la herramienta procesa el archivo. Puedes ver el progreso en la barra de estado que aparece en la parte inferior de la pantalla.",
+    "Paso 4: Una vez que el procesamiento esté completo, haz clic en el botón 'Convertir a Texto' para iniciar la conversión del documento a formato .txt.",
+    "Paso 5: Revisa el texto plano generado en el área de vista previa. Si todo es correcto, haz clic en el botón 'Descargar' para guardar el archivo .txt en tu dispositivo.",
+    "Paso 6: Si necesitas realizar más conversiones, puedes hacer clic en 'Nuevo Archivo' para iniciar el proceso nuevamente o 'Historial' para acceder a los archivos previamente convertidos."
   ],
   "usage_examples": [
-    "Convertir documentos Word a texto"
+    "Ejemplo 1: Un desarrollador de software necesita convertir varios documentos de especificaciones técnicas de Word a texto plano para integrarlos en un sistema de gestión de proyectos que solo acepta formato .txt. Utiliza Word to Text para automatizar este proceso, ahorrando tiempo y asegurando la consistencia de los datos.",
+    "Ejemplo 2: Un investigador en ciencias sociales utiliza Word to Text para extraer el contenido de encuestas respondidas en formato .docx para su posterior análisis estadístico. La herramienta facilita la preparación de datos, permitiendo al investigador centrarse en el análisis en lugar de en la manipulación de archivos.",
+    "Ejemplo 3: Un escritor de contenido necesita convertir sus borradores en Word a texto plano para facilitar la revisión y edición en un editor de texto simple. Word to Text ayuda a eliminar distracciones como el formateo y permite una revisión más eficiente del contenido.",
+    "Ejemplo 4: Una empresa de marketing utiliza Word to Text para convertir informes de campaña de Word a texto plano antes de importarlos a una plataforma de análisis de datos. Esto asegura que los informes se integren sin problemas y que los datos estén listos para ser analizados inmediatamente."
   ]
 }

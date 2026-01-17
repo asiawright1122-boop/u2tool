@@ -1,14 +1,17 @@
 {
-  "detailed_description": ".gitignore Generator is a practical online tool that helps you quickly complete various tasks. Using .gitignore Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, .gitignore Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use .gitignore Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The .gitignore Generator is a precision tool for creating version-control-compliant exclusion rules that prevent unwanted files from entering Git repositories. This utility automates the generation of .gitignore files by combining template-based patterns with user-defined parameters, addressing common pain points in repository management. Developers need this tool to systematically exclude transient files like OS-generated artifacts (e.g., .DS_Store, Thumbs.db), build outputs (e.g., /dist, /tmp), and dependency directories (e.g., node_modules, vendor). The generator leverages Git's pattern matching syntax, supporting wildcards (*), negation (!), and directory-specific rules (/) to create hierarchical exclusion logic. Users select project-specific configurations through a structured interface that maps to canonical .gitignore templates maintained by the Git community. Advanced features include framework-specific boilerplate integration (e.g., React, Django) and cross-platform compatibility checks that account for OS-specific path conventions. The output is a validated .gitignore file that adheres to Git's rule prioritization hierarchy, ensuring that higher-level repository settings don't override critical exclusion patterns.",
   "usage_steps": [
-    "Open the .gitignore Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Select your project type from a structured taxonomy (e.g., 'Web App', 'Machine Learning', 'Game Engine')",
+    "2. Check language-specific boxes (JavaScript, Python, Rust) to include corresponding exclusion patterns",
+    "3. Choose framework-specific configurations (React, Django, Unity) for specialized ignore rules",
+    "4. Enable OS-specific exclusions (macOS, Windows, Linux) to filter platform-dependent artifacts",
+    "5. Customize advanced options like version control nesting level and artifact directory depth",
+    "6. Click 'Generate' to compile and download your tailored .gitignore file with syntax validation"
   ],
   "usage_examples": [
-    "Use .gitignore Generator to process your data",
-    "Get processing results quickly without waiting"
+    "1. Full-stack JavaScript developer combines Node.js server and React client templates to exclude both /node_modules and /build directories",
+    "2. Data scientist generates a Python-specific .gitignore that excludes virtual environments (.venv) and Jupyter notebook checkpoints",
+    "3. Game developer using Unity adds engine-specific patterns to ignore Editor.log files and AssetStoreTools directory",
+    "4. DevOps engineer creates a multi-environment .gitignore that excludes both Docker build artifacts and Terraform state files"
   ]
 }

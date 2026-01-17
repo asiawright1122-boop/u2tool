@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Case Converter is a practical online tool that helps you quickly complete various tasks. Using Case Converter, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Case Converter can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Case Converter immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Case Converter tool provides Unicode-compliant text transformation capabilities for precise case manipulation across diverse character sets. Leveraging ECMAScript Internationalization API and custom normalization algorithms, this tool supports seven case transformations: uppercase (code points U+0041-U+005A), lowercase (U+0061-U+007A), title case (UAX #44-LM2 algorithm), sentence case, camelCase, PascalCase, and snake_case. Unlike basic converters, it maintains diacritic integrity during transformations and preserves whitespace structures through AST-based token parsing. Developers benefit from its ability to handle edge cases like Greek sigma normalization (ς/σ), Turkish dotless i conversions, and CJK ideographic case preservation. The tool's regex engine automatically detects and maintains code identifiers (e.g., HTML entities, programming variables) during case shifts, ensuring code integrity. It's particularly useful for API endpoint standardization, I18N compliance, and preparing training data for NLP models where case consistency affects tokenization accuracy.",
   "usage_steps": [
-    "Open the Case Converter tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Navigate to the case-converter interface and locate the dual-pane workspace with syntax-highlighted input field",
+    "Paste UTF-8 encoded text containing mixed-case content and special characters (e.g., 'UserNäme_123')",
+    "Select transformation mode from the dropdown: 'Upper', 'Lower', 'Title', 'Sentence', 'camelCase', 'PascalCase', or 'snake_case'",
+    "Enable 'Smart Conversion' checkbox to activate context-aware casing for programming identifiers",
+    "Use the 'Preview' pane to verify transformations maintain intended meaning (e.g., 'HTTPRequest' → 'http_request')",
+    "Export results via 'Copy' button or download as .txt file with BOM encoding option for Windows compatibility"
   ],
   "usage_examples": [
-    "Use Case Converter to process your data",
-    "Get processing results quickly without waiting"
+    "Convert legacy database column names from COBOL_CASE to camelCase for modern GraphQL API integration",
+    "Normalize multilingual product titles to title case following ISO/IEC 14651 sorting rules for e-commerce SEO",
+    "Transform Python variable names between snake_case and PascalCase during framework migration (e.g., Django to FastAPI)",
+    "Prepare CSV headers for Salesforce import by converting to API-expected uppercase with underscore separators"
   ]
 }

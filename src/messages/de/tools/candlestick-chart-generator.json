@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Kerzenstockchart-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Kerzenstockchart-Generator können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, der Kerzenstockchart-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Bearbeitungen erfolgen lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und verhindert, dass Ihre Daten auf irgendeinen Server hochgeladen werden. Nutzen Sie den Kerzenstockchart-Generator sofort, um schnelle, sichere und kostenlose Online-Toolservices zu erleben.",
+  "detailed_description": "Der Candlestick-Chart-Generator ist ein webbasiertes Analysetool für die visuelle Darstellung von Finanzmarktdaten im Open-High-Low-Close (OHLC)-Format. Das Tool verarbeitet zeitstempelbasierte Kursdaten durch eine Kombination aus JavaScript-Frameworks wie D3.js und SVG-Rendering, um dynamische Kerzencharts zu erzeugen. Anwender können Rohdaten im CSV-, JSON- oder Tabellenformat hochladen oder manuell eingeben, wobei die Software automatisch die typischen Kerzenkörper und Schatten basierend auf den vier Hauptpreisen (Eröffnung, Hoch, Tief, Schluss) generiert. Besondere Merkmale sind die Anpassung von Zeitintervallen (z.B. 1min, 5min, täglich), die Einstellung von Farbschemata für Bullish/Bearish-Muster sowie die Integration von Volumenbalken. Die Exportfunktion nutzt Canvas-Rendering für verlustfreie PNG-Ausgabe und XML-basierte SVG-Vektordateien, die für Präsentationen oder quantitative Analysen geeignet sind. Dieses Tool ist besonders für aktive Trader, Finanzanalysten und Kursleiter interessant, da es präzise visuelle Mustererkennung ermöglicht – von Doji-Formationen bis zu Engulfing-Patterns – ohne Installation lokaler Software. Die clientseitige Verarbeitung gewährleistet Datenschutz, da Daten nicht auf Servern gespeichert werden.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Kerzenstockchart-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Werkzeugeinstellungen und -einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "1. Öffnen Sie die Webseite und wählen Sie den Tab 'Datenimport' im oberen Navigationsmenü.",
+    "2. Geben Sie Rohdaten manuell in die Tabelle ein oder laden Sie eine CSV-Datei mit den Spalten 'Zeitstempel, Open, High, Low, Close' über den 'Import-Button' hoch.",
+    "3. Wählen Sie im Bereich 'Chart-Konfiguration' den gewünschten Zeitrahmen (1min, 15min, 1h, 1d) über das Dropdown-Menü aus.",
+    "4. Passen Sie visuelle Parameter an: Aktivieren Sie 'Volumen anzeigen', ändern Sie Farben für Bullish/Bearish-Kerzen über die HEX-Code-Eingabefelder.",
+    "5. Aktivieren Sie mit dem Schieberegler 'Interaktive Tooltipps' für Echtzeit-Datenanzeige beim Mouseover über den Kerzen.",
+    "6. Klicken Sie auf 'Exportieren' und wählen Sie zwischen PNG-Download mit 400dpi oder SVG-Download für Vektorgrafiken."
   ],
   "usage_examples": [
-    "Verwenden Sie den Kerzenstockchart-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell bearbeitete Ergebnisse ohne zu warten"
+    "Ein Daytrader analysiert 15-Minuten-Kerzencharts für den DAX-Index, um Short-Strategien bei Doji-Mustern zu testen.",
+    "Ein Finanzanalyst vergleicht wöchentliche Candlestick-Muster von Tesla und BYD-Aktien zur Identifikation von Korrelationen im Elektroauto-Sektor.",
+    "Ein Hochschuldozent generiert annotierte SVG-Charts für eine Vorlesung über technische Indikatoren in Börsenzyklen.",
+    "Ein Quant-Entwickler verwendet exportierte Chart-Daten im JSON-Format für Backtesting-Algorithmen zur Erkennung von Morning-Star-Patterns."
   ]
 }

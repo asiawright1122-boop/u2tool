@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to GraphQL은 다양한 작업을 빠르게 완료하는 실용적인 온라인 도구입니다. JSON to GraphQL을 사용하면 소프트웨어나 플러그인을 설치하지 않고 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있어 사용하기 쉽고 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너, 일반 사용자 등 누구에게나 도움이 됩니다. 모든 처리는 브라우저에서 로컬로 이루어지므로 데이터 보안을 보장하며 서버에 업로드되지 않습니다. JSON to GraphQL을 즉시 사용하여 빠르고 안전하며 무료 온라인 도구 서비스를 경험해보세요.",
+  "detailed_description": "이 도구는 JSON 데이터 구조를 기반으로 GraphQL 스키마 타입을 자동 생성하는 전문적인 변환기입니다. JSON 객체의 계층적 구조를 분석하여 Scalar Type(String, Int, Float, Boolean)을 추론하고, 복합 객체 타입(Object Type)과 배열 타입을 재귀적으로 생성합니다. 특히 REST API 응답 데이터를 GraphQL API로 마이그레이션하거나, 프로토타입 개발 시 스키마 설계를 자동화하는 데 유용합니다. 내부적으로는 JSON의 키-값 구조를 탐색하며, null 허용 필드는 자동으로 nullable 처리하고, 중첩된 객체는 별도의 타입 정의로 분리합니다. 고급 기능으로는 Union Type 처리를 위해 타입 식별자를 감지하고, Input Type 생성 옵션을 통해 mutation용 스키마도 자동 생성 가능합니다. 결과물은 GraphQL SDL(Schema Definition Language) 형식 또는 인트로스펙션 JSON 형식으로 출력되어 다양한 도구와 호환됩니다.",
   "usage_steps": [
-    "JSON to GraphQL 도구 페이지 열기",
-    "처리하고자 하는 내용을 입력 상자에 입력하거나 붙여넣기",
-    "필요에 따라 도구 옵션과 설정 조정",
-    "결과를 확인하기 위해 처리 버튼 클릭",
-    "처리 결과 복사 또는 다운로드"
+    "웹사이트 접속 후 'Raw JSON 입력' 텍스트 영역에 변환할 JSON 데이터를 붙여넣기 합니다.",
+    "'타입 감지 옵션'에서 'Union Type 처리' 또는 'Input Type 생성'을 체크합니다.",
+    "정렬 방식을 '들여쓰기 2칸' 또는 '한 줄 단축'으로 선택합니다.",
+    "'변환 실행' 버튼을 클릭하여 처리 시작.",
+    "결과 패널에서 생성된 GraphQL 스키마 코드를 확인합니다.",
+    "'클립보드 복사' 아이콘을 클릭하거나 '다운로드' 버튼으로 결과를 저장합니다."
   ],
   "usage_examples": [
-    "JSON to GraphQL을 사용하여 데이터 처리",
-    "대기하지 않고 처리 결과 빠르게 얻기"
+    "REST API의 샘플 응답 데이터를 GraphQL 스키마로 변환하여 Apollo Server에 바로 적용.",
+    "모바일 앱용 사용자 프로필 JSON 샘플을 기반으로 React Query용 타입 정의 자동 생성.",
+    "CMS에서 내보낸 다국어 콘텐츠 JSON을 분석하여 Gatsby.js의 GraphQL 스키마 확장.",
+    "MongoDB 문서 샘플을 기반으로 GraphQL API용 TypeDefs와 Resolver 매핑 자동 생성."
   ]
 }

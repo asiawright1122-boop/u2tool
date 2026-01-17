@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Calorie Calculator helps you determine your daily calorie needs using the Mifflin-St Jeor equation.",
+  "detailed_description": "The Calorie Calculator is a precision tool that estimates daily caloric requirements using the Mifflin-St Jeor Equation to determine Basal Metabolic Rate (BMR), then applies activity-specific multipliers to account for energy expenditure. Users input biometric data (age, weight, height) and select from seven activity factors ranging from sedentary (1.2x BMR) to extreme exercise (2.4x BMR). Advanced features include body composition goals adjustment, allowing users to specify weight loss, maintenance, or gain objectives with 500-calorie increment options. The tool also incorporates Hamwi formula calculations for ideal body weight estimation, providing dual reference points for personalized nutrition planning. This tool addresses specific use cases like athletic performance optimization, postpartum weight management, and metabolic disorder dietary planning, offering both macro and micronutrient baseline suggestions based on calculated TDEE (Total Daily Energy Expenditure).",
   "usage_steps": [
-    "Enter your age",
-    "Input weight and height",
-    "Select gender",
-    "Choose activity level",
-    "View BMR and TDEE"
+    "1. Select biological sex from the gender dropdown menu (Male/Female/Non-binary)",
+    "2. Enter chronological age in years using the numerical input field",
+    "3. Input current weight in kilograms or pounds using the unit toggle switch",
+    "4. Specify height through either metric (cm) or imperial (ft/in) measurement selectors",
+    "5. Choose activity level from the validated dropdown: 1.2 (sedentary) to 2.4 (extreme)",
+    "6. Adjust goal settings using the +/- calorie buttons for precise 500-calorie increments"
   ],
   "usage_examples": [
-    "Calculate calories for weight loss",
-    "Determine maintenance calories",
-    "Plan calorie surplus"
+    "Example 1: A 28-year-old female triathlete (5'7\", 135lbs) calculates her 2,850 TDEE to plan competition season macros",
+    "Example 2: Post-bariatric surgery patient tracks maintenance calories after losing 40lbs using adjusted BMR formulas",
+    "Example 3: Vegan bodybuilder modifies his 3,200-calorie bulk plan using the tool's protein distribution calculator",
+    "Example 4: Diabetes patient establishes baseline carb cycling targets through consecutive day calculations with varying activity factors"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Emoji Picker is a practical online tool that helps you quickly complete various tasks. Using Emoji Picker, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Emoji Picker can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Emoji Picker immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Emoji Picker tool provides a structured interface for efficiently selecting and deploying Unicode-compliant emojis through a combination of categorical filtering, keyword search, and programmatic clipboard integration. Technically, it leverages the Unicode Consortium's emoji database to categorize characters into 18 distinct groups (e.g., 'Smileys & Emotion', 'Symbols'), utilizing DOM manipulation to dynamically render grid-based previews. When users click an emoji, the tool employs the Clipboard API with async/await promises to write the character to the system clipboard, bypassing traditional copy-paste limitations. This is particularly valuable for developers implementing emoji-rich interfaces, content creators needing precise visual elements for social media, and technical writers enhancing documentation with standardized symbols. The tool's search functionality uses real-time fuzzy matching via Levenshtein distance algorithms to handle partial queries (e.g., 'thmb' returns 👍), while maintaining WCAG 2.1 accessibility standards through ARIA labels and keyboard navigation.",
   "usage_steps": [
-    "Open the Emoji Picker tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Access the tool's interface and locate the primary emoji grid with 18 categorized tabs",
+    "Click a category tab (e.g., 'People & Body') or use the search bar for specific terms like 'robot'",
+    "Hover over an emoji to reveal its official Unicode name and hex code (e.g., U+1F916)",
+    "Click the desired emoji to trigger Clipboard API integration and copy the character",
+    "Verify successful copy via the status toast notification ('Copied: 🤖')",
+    "Use the 'History' panel to access recently copied emojis across sessions"
   ],
   "usage_examples": [
-    "Use Emoji Picker to process your data",
-    "Get processing results quickly without waiting"
+    "A React developer implementing emoji-based reaction buttons needs quick access to Unicode characters without manual hex code lookup",
+    "A social media manager creating Instagram stories requires precise emoji combinations for visual hierarchy and engagement metrics",
+    "A UX designer prototyping in Figma wants to maintain consistent emoji styling across mockups using standardized Unicode versions",
+    "A technical writer documenting API error codes uses emojis to create visually distinct status indicators in markdown files"
   ]
 }

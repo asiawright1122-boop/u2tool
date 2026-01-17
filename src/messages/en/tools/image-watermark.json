@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Image Watermark is a practical online tool that helps you quickly complete various tasks. Using Image Watermark, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Image Watermark can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Image Watermark immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Image Watermark tool enables developers to programmatically overlay text-based watermarks onto raster image files using advanced graphics processing techniques. Technically, it leverages the HTML5 Canvas API combined with server-side ImageMagick processing to apply semi-transparent text layers with customizable font metrics, positioning, and compositing modes. The tool supports lossless watermark embedding in JPEG, PNG, WebP, and BMP formats, preserving original image metadata while applying anti-aliased text rendering for professional results. Developers need this tool to protect digital assets through copyright notices, brand identifiers, or security seals - crucial for preventing unauthorized image redistribution. The backend processes images by first analyzing pixel density to determine optimal watermark contrast, then applies affine transformations for angled text placement, and finally adjusts alpha channels to maintain visibility without obscuring image content. Advanced features include automatic text wrapping for long watermarks, shadow effects for enhanced legibility, and DPI-aware scaling to ensure print-readiness. This tool differentiates itself through granular controls over font kerning, baseline alignment, and CMYK color space management for print-specific workflows.",
   "usage_steps": [
-    "Open the Image Watermark tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Click 'Upload Image' to select your source file (max 25MB, supports JPEG/PNG/WebP/BMP)",
+    "2. Enter watermark text in the dedicated input field, with character limit indicator",
+    "3. Use the position matrix to set placement (9-grid layout with 'Top-Left', 'Center', 'Bottom-Right' options)",
+    "4. Adjust font properties via sliders: size (8-150pt), opacity (10-90%), rotation (-45° to +45°)",
+    "5. Toggle advanced settings: enable drop shadow, select font family (serif/sans-serif/monospace)",
+    "6. Preview watermark overlay in real-time using the split-screen comparison viewer"
   ],
   "usage_examples": [
-    "Use Image Watermark to process your data",
-    "Get processing results quickly without waiting"
+    "A professional photographer embedding their copyright notice in EXIF-consistent positioning across portfolio images",
+    "E-commerce platform adding product SKUs as watermarks for inventory tracking on product renders",
+    "Government agency applying 'CONFIDENTIAL' banners with 45° diagonal orientation on sensitive document scans",
+    "Digital artist creating limited-edition NFT previews with transparent signature watermarks on canvas corners"
   ]
 }

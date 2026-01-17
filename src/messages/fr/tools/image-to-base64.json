@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Image to Base64 est un outil en ligne pratique qui vous aide à réaliser rapidement diverses tâches. Avec Image to Base64, vous pouvez facilement traiter diverses données sans avoir à installer de logiciels ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, Image to Base64 peut vous aider à améliorer votre efficacité de travail. Tous les traitements se font localement dans votre navigateur, garantissant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez Image to Base64 immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le convertisseur Image en Base64 permet d'intégrer des fichiers graphiques (PNG, JPEG, SVG) directement dans des documents HTML, CSS ou JavaScript via un encodage alphanumérique. Ce processus utilise l'algorithme Base64, qui transforme les données binaires de l'image en une chaîne de caractères ASCII compatible avec les standards web. Ce type de conversion est essentiel pour réduire le nombre de requêtes HTTP lors du chargement de pages web, notamment pour les petites images comme les icônes ou les logos. Le outil conserve les métadonnées de l'image originale, incluant son type MIME et sa taille, tout en générant un URI de données conforme au format 'data:[<mediatype>][;base64],<data>'. Techniquement, l'outil lit le fichier via l'API FileReader du navigateur, applique l'encodage binaire via l'algorithme RFC 4648, puis affiche le résultat dans un champ éditable. Cela évite les latences liées aux requêtes réseau pour les ressources statiques de petite taille, optimisant ainsi les performances web selon les recommandations du W3C.",
   "usage_steps": [
-    "Ouvrez la page du convertisseur Image to Base64",
-    "Insérez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionner le fichier image via le bouton 'Parcourir' (formats acceptés : PNG, JPEG, GIF, SVG)",
+    "Activer l'option 'Préserver les métadonnées EXIF' si nécessaire",
+    "Choisir la qualité de compression (80% par défaut pour JPEG)",
+    "Cliquez sur 'Convertir' pour déclencher le traitement via l'API WebAssembly",
+    "Copier le résultat encodé depuis la zone de texte préformatée",
+    "Coller le code généré dans votre CSS ('background-image: url(data:image/png;base64,...)') ou HTML"
   ],
   "usage_examples": [
-    "Utilisez Image to Base64 pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Incorporer un favicon dans un courriel HTML pour éviter les problèmes de blocage des images externes",
+    "Optimiser le chargement d'une interface single-page application (SPA) en intégrant des icônes SVG encodées",
+    "Créer un fichier HTML autonome contenant toutes les images nécessaires pour une documentation offline",
+    "Intégrer des sprites d'authentification dans un CSS critique pour améliorer le score Lighthouse"
   ]
 }

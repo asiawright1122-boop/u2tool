@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphes de Sankey est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphes de Sankey pour traiter facilement diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Graphes de Sankey peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant leur téléversement sur n'importe quel serveur. Utilisez immédiatement le Générateur de Graphes de Sankey pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de diagrammes de Sankey permet de modéliser visuellement des flux de données, d'énergie ou de ressources entre des entités interconnectées. Cette solution s'appuie sur des bibliothèques de visualisation vectorielle (SVG) et des algorithmes de disposition hiérarchique pour représenter des flux proportionnels via des bandes de largeur variable. Les utilisateurs peuvent importer des données structurées (CSV/JSON) contenant des triplets source/cible/valeur, avec possibilité de définir des nœuds hiérarchiques et des chemins cycliques. L'outil intègre un moteur de rendu D3.js optimisé pour les grands ensembles de données, permettant des interactions en temps réel (zoom, filtrage par flux minimum). Les diagrammes générés peuvent être exportés en PNG haute résolution ou SVG éditable, avec intégration de palettes de couleurs personnalisables via des gradients linéaires ou radiaux. Ce générateur s'adresse spécifiquement aux analystes énergétiques, data scientists et responsables logistiques souhaitant visualiser des transferts de masse, des parcours utilisateurs ou des allocations budgétaires complexes.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphes de Sankey",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accéder à l'éditeur via l'interface web et charger un fichier CSV avec colonnes 'source', 'target', 'value' (ou utiliser le mode manuel)",
+    "Configurer les paramètres de disposition via le panneau latéral (alignement des nœuds: droit, courbe, ou hiérarchique)",
+    "Personnaliser les couleurs des flux via le sélecteur de palettes ou l'option de mapping par valeur",
+    "Activer/désactiver les étiquettes dynamiques pour les nœuds et les liens en cochant les cases correspondantes",
+    "Ajuster la transparence des bandes de flux avec le curseur de l'opacité (0.1 à 1.0)",
+    "Exporter le diagramme final en SVG vectoriel ou PNG 4K via le bouton 'Télécharger' avec option d'intégration de légende"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphes de Sankey pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Modélisation du flux d'énergie entre unités de production et consommateurs industriels pour un audit carbone",
+    "Visualisation des parcours clients sur un site e-commerce (paniers abandonnés, conversions)",
+    "Analyse des flux financiers entre départements d'une entreprise avec hiérarchie budgétaire",
+    "Cartographie des routes logistiques internationales avec affichage des volumes transportés par voie"
   ]
 }

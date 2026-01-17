@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur .gitignore est un outil pratique en ligne qui vous aide à terminer rapidement diverses tâches. Avec le Générateur .gitignore, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur .gitignore peut vous aider à améliorer votre efficacité de travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et empêchant leur upload vers un serveur. Utilisez immédiatement le Générateur .gitignore pour expérimenter des services de outil en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur .gitignore permet de créer des fichiers de configuration pour Git, définissant les règles d'exclusion de fichiers et répertoires dans un dépôt. Ceux-ci évitent l'ajout accidentel de fichiers temporaires, de dépendances, de fichiers de build ou de données sensibles (comme les clés API ou les fichiers de configuration locaux). Les utilisateurs ont besoin de ce outil pour automatiser la création de règles complexes basées sur des langages (Node.js, Python, etc.), des frameworks (React, Django), ou des environnements (Docker, Kubernetes). Le générateur utilise une base de données de modèles préconfigurés, combinés via des algorithmes de correspondance de motifs glob, et vérifie la syntaxe via des analyseurs lexicaux pour éviter les erreurs. Il intègre également des optimisations pour éviter les conflits entre modèles, garantissant une structure de dépôt propre et performante.",
   "usage_steps": [
-    "Ouvrez la page du Générateur .gitignore",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Sélectionnez votre type de projet (ex. : 'Frontend', 'Backend', 'Machine Learning') dans le menu déroulant 'Catégorie'.",
+    "2. Activez les cases à cocher correspondant aux langages ou outils utilisés (ex. : 'JavaScript', 'Python', 'Docker').",
+    "3. Ajoutez des règles personnalisées dans le champ 'Règles supplémentaires', en utilisant la syntaxe glob (ex. : '/logs/*.log').",
+    "4. Utilisez le bouton 'Prévisualiser' pour afficher le fichier .gitignore généré avec la mise en évidence des lignes actives.",
+    "5. Cliquez sur 'Valider la syntaxe' pour vérifier les erreurs via un parseur Git natif intégré.",
+    "6. Téléchargez le fichier final avec le bouton 'Exporter' ou copiez son contenu dans votre dépôt via le clipboard."
   ],
   "usage_examples": [
-    "Utilisez le Générateur .gitignore pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur full-stack crée un projet combinant React, Django et PostgreSQL, et génère un .gitignore couvrant les fichiers node_modules, __pycache__, et les fichiers de migration.",
+    "Un data scientist exclut des dossiers '/data/raw' et '/models/checkpoints' volumineux lors du partage d'un dépôt sur GitHub, en ajoutant des règles spécifiques.",
+    "Une équipe standardise les exclusions de fichiers IDE (ex. : '.idea/', '.vscode/') à travers plusieurs projets en générant un modèle commun.",
+    "Un contributeur open-source adapte les règles pour exclure temporairement les dépendances locales pendant le développement d'un package Python."
   ]
 }

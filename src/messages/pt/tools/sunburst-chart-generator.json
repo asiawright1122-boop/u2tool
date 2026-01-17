@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Radial é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos de Radial, você pode processar vários dados facilmente sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Radial pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Gerador de Gráficos de Radial imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Sunburst Chart Generator é uma ferramenta técnica especializada para transformar dados hierárquicos em visualizações radiais interativas. Ele utiliza algoritmos de layout circular para mapear níveis de hierarquia em segmentos aninhados, onde cada camada representa uma profundidade no conjunto de dados. A ferramenta aceita entradas em formatos como JSON, CSV ou texto delimitado, processando as relações pai-filho para calcular proporções angulares e raios dos segmentos. Desenvolvedores podem personalizar atributos como paletas de cores dinâmicas, rótulos interativos e atributos de renderização SVG. O export final em PNG ou SVG preserva detalhes vetoriais, ideal para relatórios técnicos ou dashboards. Diferente de ferramentas genéricas, oferece ajustes avançados como gradientes radiais e manipulação de dados em tempo real via DOM. Profissionais de BI, arquitetos de dados e educadores usam a ferramenta para analisar estruturas complexas, como sistemas de arquivos, organogramas ou taxonomias biológicas, convertendo dados abstratos em insights visuais estruturados.",
   "usage_steps": [
-    "Abra a página da ferramenta Gerador de Gráficos de Radial",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse a página do gerador e selecione o formato de entrada (JSON, CSV ou texto) no seletor superior.",
+    "2. Cole seus dados hierárquicos na área de edição ou faça upload de um arquivo usando o botão 'Importar Dados'.",
+    "3. Configure o mapeamento de níveis com o painel 'Estrutura', definindo separadores ou campos-chave para hierarquias.",
+    "4. Personalize a aparência no painel 'Estilo': escolha paletas pré-definidas, ajuste gradientes ou aplique regras CSS customizadas.",
+    "5. Use a pré-visualização ao vivo para ajustar rótulos, ângulos iniciais e margens com o controle deslizante de precisão.",
+    "6. Exporte o resultado em PNG ou SVG clicando no botão 'Baixar' após validar a renderização."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Radial para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Analistas de sistemas visualizando o uso de disco por pastas e subpastas em um servidor Linux.",
+    "Especialistas em varejo mapeando a distribuição de vendas por categorias, subcategorias e produtos individuais.",
+    "Professores de biologia demonstrando classificações taxonômicas de espécies em aulas interativas.",
+    "Engenheiros de dados validando a integridade de hierarquias em ontologias RDF antes de integração em data lakes."
   ]
 }

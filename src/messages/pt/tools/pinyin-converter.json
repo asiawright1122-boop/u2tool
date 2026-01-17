@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Conversor Pinyin é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Conversor Pinyin, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Conversor Pinyin pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Conversor Pinyin imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Pinyin Converter é uma ferramenta técnica especializada em transformar caracteres chineses (Simplificados ou Tradicionais) em sua representação fonética Pinyin, com opção de inclusão de tons via numeração (ex: 1-4) ou acentos diacríticos (ex: ā, á, ǎ, à). Internamente, o conversor utiliza processamento Unicode para identificar caracteres válidos e aplicar regras de normalização NFKC, garantindo compatibilidade com padrões internacionais. A ferramenta emprega um dicionário fonético bilíngue (chinês-português) para mapear sons específicos, considerando variações contextuais como neutrões (轻声) e regras de sandhi tonal. É essencial para desenvolvedores que implementam internacionalização (i18n) em aplicações, linguistas que analisam padrões tonais, ou educadores criando material didático com anotações fonológicas precisas. Sua engine também suporta detecção automática de ambiguidades homofônicas, oferecendo múltiplas sugestões quando necessário.",
   "usage_steps": [
-    "Abra a página da ferramenta Conversor Pinyin",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta na seção 'Processamento de Texto' do menu principal",
+    "Cole o texto chinês no campo 'Texto de Entrada' usando o botão 'Colar do Clipboard'",
+    "Marque a checkbox 'Incluir Tons' para ativar notação com numerais ou selecione 'Acentos Tônicos' no menu suspenso",
+    "Escolha o formato de saída no seletor: 'Pinyin Separado' ou 'Sem Espaços Entre Caracteres'",
+    "Clique em 'Converter' para iniciar o processamento via engine JavaScript otimizada",
+    "Copie o resultado no campo 'Saída Formatada' ou exporte como CSV para análise posterior"
   ],
   "usage_examples": [
-    "Use Conversor Pinyin para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Professor de língua chinesa gerando cartões de estudo com anotações fonéticas para alunos brasileiros",
+    "Desenvolvedor de app de aprendizado de idiomas integrando Pinyin sem tons como subtítulo em exercícios de leitura",
+    "Pesquisador de fonética comparando padrões tonais entre dialetos chineses usando análise estatística de tons exportados",
+    "Tradutor técnico convertendo manuais de equipamentos chineses para português com indicação fonética de termos especializados"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Criador de GIFs é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com o Criador de GIFs, você pode processar diferentes dados sem a necessidade de instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Criador de GIFs pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo uploadado para nenhum servidor. Use o Criador de GIFs imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O GIF Maker é uma ferramenta de conversão de imagens que permite aos usuários criar animações GIF a partir de múltiplos arquivos de imagem. Utilizando técnicas de codificação e compressão de imagem, o GIF Maker combina sequências de imagens estáticas para produzir um arquivo animado que pode ser facilmente compartilhado em várias plataformas digitais. Esta ferramenta é essencial para designers, criadores de conteúdo e profissionais de marketing que desejam adicionar elementos dinâmicos aos seus projetos. O GIF Maker suporta uma ampla variedade de formatos de imagem, incluindo PNG, JPEG e BMP, e oferece opções avançadas para ajustar a duração de cada quadro, a resolução do GIF final e a repetição da animação. Além disso, o GIF Maker inclui um editor de imagens integrado, permitindo aos usuários fazer ajustes finos nas imagens antes de gerar a animação final. A capacidade de exportar GIFs otimizados para a web torna esta ferramenta uma escolha ideal para quem busca criar conteúdo visual atraente e de alta qualidade.",
   "usage_steps": [
-    "Abra a página da ferramenta Criador de GIFs",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "PASSO 1: Acesse a página do GIF Maker e clique no botão 'Escolher Imagens' para carregar os arquivos de imagem que deseja usar na animação.",
+    "PASSO 2: Selecione as imagens no seu dispositivo. Você pode carregar várias imagens de uma vez, e elas aparecerão na ordem em que foram selecionadas.",
+    "PASSO 3: Utilize a opção 'Ordenar Imagens' para reorganizar a sequência das imagens, se necessário. Clique e arraste as imagens para ajustar sua ordem.",
+    "PASSO 4: Configure as opções de animação, incluindo a duração de cada quadro (em milissegundos) e a repetição da animação (número de vezes que o GIF deve repetir).",
+    "PASSO 5: Ajuste a resolução do GIF final usando a barra de rolagem 'Resolução'. Escolha uma resolução adequada para o seu projeto, considerando o equilíbrio entre qualidade e tamanho do arquivo.",
+    "PASSO 6: Clique no botão 'Gerar GIF' para criar a animação. O GIF será gerado e disponibilizado para download. Clique em 'Download' para salvar o arquivo no seu dispositivo."
   ],
   "usage_examples": [
-    "Use o Criador de GIFs para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "EXEMPLO 1: Um designer de mídia social está criando um post para promover um novo produto. Ele usa o GIF Maker para combinar várias imagens de um modelo usando o produto, criando uma animação que destaca suas diferentes funcionalidades.",
+    "EXEMPLO 2: Um professor de ciências deseja criar uma demonstração visual para explicar um conceito complexo, como o processo de fotossíntese. Ele utiliza o GIF Maker para gerar uma animação que mostra a transformação das etapas em sequência, facilitando a compreensão dos alunos.",
+    "EXEMPLO 3: Um desenvolvedor de jogos está criando uma animação simples para um personagem que se move. Ele exporta as sprites do personagem e usa o GIF Maker para criar uma animação suave que representa o movimento do personagem.",
+    "EXEMPLO 4: Um influenciador digital quer criar um teaser para um novo vídeo no YouTube. Ele seleciona screenshots de diferentes partes do vídeo e usa o GIF Maker para criar uma animação que desperta a curiosidade dos seguidores, incentivando-os a assistir ao vídeo completo."
   ]
 }

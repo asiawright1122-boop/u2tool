@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Carte thermique de calendrier est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Carte thermique de calendrier pour traiter facilement diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Carte thermique de calendrier peut vous aider à améliorer l'efficacité de votre travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur n'importe quel serveur. Utilisez immédiatement le Générateur de Carte thermique de calendrier pour découvrir les services rapides, sécurisés et gratuits de cet outil en ligne.",
+  "detailed_description": "Le générateur de cartes thermiques calendaires est un outil web basé sur des technologies HTML5, SVG et JavaScript (utilisant des bibliothèques comme D3.js) permettant de visualiser des données temporelles quotidiennes sous forme de grilles calendaires codées par couleur. Ce dispositif convertit des valeurs numériques en gradients chromatiques via des algorithmes de quantiles ou logarithmiques, adaptés aux séries temporelles étendues. Il prend en charge l'import de données structurées (CSV/TSV/JSON) avec des colonnes de dates au format ISO 8601 et des mesures quantitatives. Le moteur de rendu mappe automatiquement chaque cellule du calendrier à une intensité colorimétrique via un espace de couleur HSL, avec possibilité de personnalisation des palettes (divergentes, séquentielles ou discrètes). Contrairement aux outils classiques, il intègre un système d'ajustement dynamique des dimensions (responsive design) et permet l'export vectoriel SVG avec inclusion de métadonnées SVG:title pour l'accessibilité. Ce générateur s'adresse aux analystes de données, scientifiques ou développeurs souhaitant illustrer des tendances saisonnières dans des domaines variés : suivi d'engagement utilisateur, analyse de trafic web, études épidémiologiques ou monitoring environnemental.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Carte thermique de calendrier",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez une période personnalisée via le sélecteur de dates (ex. du 2023-01-01 au 2023-12-31)",
+    "Importez un fichier CSV avec des colonnes 'date' (format YYYY-MM-DD) et 'valeur' (nombres décimaux)",
+    "Choisissez un gradient chromatique dans le panneau de personnalisation (ex. 'Blues', 'Viridis' ou palette personnalisée)",
+    "Ajustez les paramètres de rendu : taille des cellules (20-80px), espacement inter-cellules (2-10px)",
+    "Activez la légende interactive et personnalisez l'échelle de quantification (linéaire, logarithmique ou discrète)",
+    "Exportez la visualisation au format SVG vectoriel ou PNG 4K avec bouton de téléchargement"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Carte thermique de calendrier pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Visualisation des connexions quotidiennes des utilisateurs sur une plateforme SaaS pour identifier des schémas saisonniers",
+    "Analyse comparative des ventes journalières de produits entre les périodes de soldes et les périodes normales",
+    "Suivi de l'activité physique quotidienne d'un athlète sur 365 jours avec détection de périodes de non-entraînement",
+    "Cartographie des précipitations quotidiennes dans une région sur une décennie pour étudier les changements climatiques"
   ]
 }

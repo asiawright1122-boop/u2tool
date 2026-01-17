@@ -1,15 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Data de Parto estima a data de parto com base na sua última menstruação.",
+  "detailed_description": "O Calculador de Data de Parto é uma ferramenta técnica baseada no cálculo da Data Provável do Parto (DPP), fundamentada na regra de Naegele ajustada para ciclos menstruais irregulares. O algoritmo principal utiliza a data da última menstruação (DUM), duração do ciclo menstrual e, opcionalmente, medições de ultrassonografia do primeiro trimestre para calcular a DPP com precisão de ±5 dias. Para ciclos não padrão de 28 dias, aplica-se a fórmula: DPP = DUM + 280 dias + (duração do ciclo - 28 dias). A ferramenta também integra marcos clínicos como a data limite para triagem de sífilis (36 semanas), exame de glicose (24-28 semanas) e ultrassonografia morfológica (18-22 semanas). Desenvolvido com algoritmos de validação de entrada e ajuste automático de fuso horário, garante precisão para usuários globais. É essencial para planejamento pré-natal, agendamento de exames críticos e acompanhamento de desenvolvimento fetal, servindo tanto para profissionais de saúde quanto para gestantes autogerenciarem cronogramas.",
   "usage_steps": [
-    "Insira a última menstruação",
-    "Ou insira a data de concepção",
-    "Ajuste a duração do ciclo",
-    "Visualize a data de parto",
-    "Monitore os marcos"
+    "1. Insira a data da última menstruação (DUM) usando o seletor de calendário interativo.",
+    "2. Selecione a duração habitual do ciclo menstrual (26-32 dias) via dropdown ou insira manualmente.",
+    "3. Adicione opcionalmente a data de confirmação da gravidez por ultrassonografia para ajuste de precisão.",
+    "4. Clique no botão 'Calcular DPP' para gerar a data provável do parto e cronograma de marcos.",
+    "5. Revise a linha do tempo interativa com marcos médicos pré-carregados (ex: teste de glicose, doppler fetal).",
+    "6. Exporte o plano personalizado em PDF ou compartilhe o link diretamente com seu obstetra."
   ],
   "usage_examples": [
-    "Calcule a data de parto a partir da última menstruação",
-    "Monitore a gravidez semana a semana",
-    "Planeje a chegada do bebê"
+    "Exemplo 1: Uma gestante com ciclo de 30 dias insere DUM 15/01/2024 e obtém DPP ajustada para 22/10/2024, considerando atraso ovulatório.",
+    "Exemplo 2: Após ultrassonografia morfológica em 20 semanas, um médico insere medidas de LCR para refinar a DPP em 8 dias.",
+    "Exemplo 3: Um casal planeja licença parental usando a DPP calculada para agendar afastamento profissional entre 37-40 semanas.",
+    "Exemplo 4: Enfermeira de pré-natal utiliza a ferramenta para sincronizar datas de exames de sífilis e glicose com consultas regulares."
   ]
 }

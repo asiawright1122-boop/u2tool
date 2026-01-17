@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Lebenslauf-Builder ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Lebenslauf-Builder können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Lebenslauf-Builder kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Lebenslauf-Builder sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der Resume Builder ist eine fortschrittliche Online-Plattform, die es Benutzern ermöglicht, professionelle Lebensläufe mit Hilfe verschiedener Vorlagen zu erstellen und in PDF-Format zu exportieren. Technisch gesehen, nutzt das Tool moderne Web-Technologien, darunter HTML5, CSS3 und JavaScript, um eine reibungslose Benutzererfahrung zu gewährleisten. Die Plattform ist serverseitig mit Node.js entwickelt und verwendet eine RESTful API, um Daten zwischen dem Frontend und dem Backend zu verwalten. Benutzer können verschiedene Vorlagen auswählen, die auf gängigen Designprinzipien basieren und spezifisch auf verschiedene Branchen und Positionen zugeschnitten sind. Jede Vorlage kann individuell angepasst werden, um den individuellen Anforderungen des Benutzers gerecht zu werden. Die PDF-Export-Funktionalität nutzt Bibliotheken wie pdfMake, um eine hohe Qualität des Exportierten Dokuments zu garantieren. Der Resume Builder ist besonders nützlich für Jobbewerber, die ihre Lebensläufe für verschiedene Positionen anpassen müssen oder für Karrierewechsel optimieren möchten.",
   "usage_steps": [
-    "Öffnen Sie die Lebenslauf-Builder-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Öffnen Sie die Hauptseite des Resume Builder und wählen Sie die gewünschte Vorlage aus der Vorschau-Galerie aus.",
+    "Klicken Sie auf die Schaltfläche 'Vorlage bearbeiten', um in den Bearbeitungsmodus zu wechseln.",
+    "Füllen Sie die vorgegebenen Felder mit Ihren persönlichen Informationen aus, einschließlich Name, Kontaktinformationen, Bild, Arbeitserfahrung und Bildungsweg.",
+    "Nutzen Sie die Formatierungsoptionen in der oberen Werkzeugleiste, um Textstil, Schriftart und Layout zu personalisieren.",
+    "Schauen Sie sich den Vorschau-Bereich an, um sicherzustellen, dass alle Informationen korrekt dargestellt werden.",
+    "Klicken Sie auf 'PDF exportieren', um das fertige Dokument herunterzuladen und für die Bewerbung bereitzustellen."
   ],
   "usage_examples": [
-    "Verwenden Sie Lebenslauf-Builder, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein frischgebackener Ingenieur möchte für mehrere IT-Stellenbewerbungen verschiedene Versionen seines Lebenslaufs erstellen. Er nutzt den Resume Builder, um die gleiche Grundstruktur beizubehalten und nur die relevanten Projekte und Fähigkeiten anzupassen.",
+    "Eine Marketing-Professionelle plant einen Karrierewechsel in die Digitalen Medien. Sie wählt eine moderne Vorlage aus, die ihre digitale Expertise hervorhebt, und fügt spezifische Projektbeispiele ein, die ihre Fähigkeiten belegen.",
+    "Ein akademischer Forscher bereitet sich auf eine Bewerbung bei einer Forschungseinrichtung vor. Er verwendet den Resume Builder, um seine wissenschaftlichen Veröffentlichungen und Konferenzteilnahmen detailliert aufzulisten und in einem professionellen Layout darzustellen.",
+    "Ein Junior-Entwickler sucht nach seiner ersten Arbeit. Er wählt eine einfache und klar strukturierte Vorlage aus, um seine Basiskenntnisse und Praktikumszeiten hervorzuheben, und exportiert das Dokument als PDF für den direkten Versand an potenzielle Arbeitgeber."
   ]
 }

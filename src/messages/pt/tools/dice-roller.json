@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Rolo de Dados simula a rolagem de vários tipos de dados, incluindo D4, D6, D8, D10, D12 e D20.",
+  "detailed_description": "O Dice Roller é uma ferramenta online que simula o lançamento de dados virtuais, oferecendo uma variedade de tipos de dados e opções de quantidade. Esta ferramenta é perfeitamente adequada para entusiastas de jogos de tabuleiro, RPGs e desenvolvedores que precisam de uma fonte confiável de números aleatórios. O Dice Roller utiliza algoritmos de geração de números pseudoaleatórios (PRNG) para garantir que cada lançamento de dado seja imprevisível e justo. Usuários podem escolher entre diferentes tipos de dados, como D4, D6, D8, D10, D12, D20 e D100, e especificar a quantidade de dados a serem lançados. A ferramenta também oferece opções para personalizar as regras de lançamento, como a capacidade de ignorar resultados específicos ou somar bônus. Isso torna o Dice Roller uma ferramenta versátil para uma ampla gama de aplicações, desde jogos casuais até simulações mais complexas.",
   "usage_steps": [
-    "Selecione o tipo de dado",
-    "Escolha o número de dados",
-    "Adicione um modificador, se necessário",
-    "Clique no botão role",
-    "Visualize os resultados e o histórico"
+    "Abra a página do Dice Roller no seu navegador.",
+    "Selecione o tipo de dado que deseja lançar using the dropdown menu (por exemplo, D6, D20).",
+    "Especifique a quantidade de dados a serem lançados no campo 'Quantidade'.",
+    "Caso necessário, personalize as regras de lançamento, como ignorar resultados específicos ou adicionar bônus, usando as opções avançadas.",
+    "Clique no botão 'Rolar Dados' para iniciar o lançamento.",
+    "Os resultados serão exibidos na tela, mostrando cada dado individualmente e o resultado total, se aplicável."
   ],
   "usage_examples": [
-    "Role para RPGs de mesa",
-    "Rolar dados de jogos de tabuleiro",
-    "Geração de números aleatórios"
+    "Um mestre de RPG pode usar o Dice Roller para simular combates e desafios em uma sessão de Dungeons & Dragons, garantindo que os resultados sejam justos e imprevisíveis.",
+    "Desenvolvedores de jogos podem utilizar o Dice Roller durante o teste de funcionalidades que dependem de números aleatórios, como eventos aleatórios ou drop rates de itens.",
+    "Em uma partida de backgammon, o Dice Roller pode ser usado para determinar os movimentos dos jogadores, especialmente quando não há dados físicos disponíveis.",
+    "Estudantes de estatística podem usar o Dice Roller para realizar experimentos de probabilidade, analisando a distribuição de resultados ao lançar múltiplos dados."
   ]
 }

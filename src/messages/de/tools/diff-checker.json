@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Diff Checker ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Diff Checker können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, kann Diff Checker Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie sofort Diff Checker, um schnell, sicher und kostenlos Online-Tools zu nutzen.",
+  "detailed_description": "Der Diff Checker ist ein leistungsstarkes Werkzeug zur Textvergleichsanalyse. Er ermöglicht es Benutzern, zwei verschiedene Texte zu vergleichen und die Unterschiede auf eine präzise und visuell ansprechende Weise hervorzuheben. Dieses Tool basiert auf fortgeschrittenen Algorithmus, die die Änderungen, Hinzufügungen und Entfernungen in den Texten identifizieren und visuell darstellen. Die Anwendung dieser Techniken ist besonders nützlich in verschiedenen Szenarien, wie beispielsweise beim Vergleich von Codeversionen, der Überprüfung von Dokumenten auf Plagiate oder der Prüfung von Kontraktänderungen. Die Benutzer können nicht nur die Unterschiede sehen, sondern auch spezifische Änderungen im Text auf Zeilen- oder Wortebene analysieren. Durch die Möglichkeit, die Anzeige zu personalisieren, können Benutzer die Darstellung der Unterschiede nach ihren Bedürfnissen anpassen, was die Analyse noch effizienter macht.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Diff Checker-Tools",
-    "Geben Sie den zu bearbeitenden Inhalt in das Eingabefeld ein oder kopieren Sie ihn ein",
-    "Anpassen Sie die Tool-Optionen und Einstellungen, wenn nötig",
-    "Klicken Sie auf den Bearbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die bearbeiteten Ergebnisse"
+    "Öffnen Sie die Diff Checker Seite und fügen Sie den ersten Text in das linke Eingabefeld ein.",
+    "Klicken Sie auf das Plus-Symbol neben dem Eingabefeld, um den zweiten Text in das rechte Eingabefeld einzufügen.",
+    "Wählen Sie die gewünschten Optionen in der Menüleiste, z.B. die Farbcodierung für Hinzufügungen, Änderungen und Entfernungen.",
+    "Klicken Sie auf den Button 'Vergleichen', um den Vergleich zu starten und die Unterschiede zu sehen.",
+    "Verwenden Sie die Schaltfläche 'Seitenumbruch' oder den Schieberegler, um den Text in der Ansicht zu navigieren.",
+    "Benutzen Sie die 'Export'-Funktion, um die Ergebnisse als HTML- oder Textdatei zu speichern."
   ],
   "usage_examples": [
-    "Verwenden Sie Diff Checker, um Ihren Daten zu bearbeiten",
-    "Erhalten Sie die Bearbeitungs-Ergebnisse schnell, ohne zu warten"
+    "Ein Softwareentwickler vergleicht zwei verschiedene Versionen eines Programmcodes, um Änderungen und Fehler zu identifizieren.",
+    "Ein Rechtsanwalt prüft zwei Kontraktdokumente auf Unterschiede, um sicherzustellen, dass alle Klauseln korrekt übertragen wurden.",
+    "Ein Schriftsteller überprüft verschiedene Bearbeitungen seines Manuskripts, um die benötigten Änderungen zu identifizieren und zu dokumentieren.",
+    "Ein Journalist vergleicht zwei Pressespiegelungen, um die Änderungen in der Berichterstattung über eine bestimmte Geschichte zu analysieren."
   ]
 }

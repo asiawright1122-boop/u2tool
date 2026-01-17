@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Calculatrice scientifique est un outil en ligne pratique qui vous aide à réaliser rapidement diverses tâches. Avec la Calculatrice scientifique, vous pouvez facilement traiter diverses données sans avoir à installer de logiciels ou des plugins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous mettre rapidement à l'œuvre et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, la Calculatrice scientifique peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez immédiatement la Calculatrice scientifique pour expérimenter des services d'outils en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "La Calculatrice Scientifique est un outil logiciel conçu pour exécuter des opérations mathématiques avancées, incluant les fonctions trigonométriques (sin, cos, tan), logarithmiques (log, ln), exponentielles (e^x, a^x), ainsi que les calculs avec des nombres complexes et les conversions entre systèmes numériques (binaire, octal, décimal). Elle intègre un moteur de calcul en précision flottante IEEE 754, permettant de gérer des expressions algébriques complexes avec priorité des opérateurs et parenthèses imbriquées. Ce dispositif est indispensable pour les étudiants en sciences, les ingénieurs ou les chercheurs confrontés à des modélisations mathématiques exigeant des calculs précis : résolution d'équations différentielles, analyse statistique multivariée, ou simulation de circuits électriques. Son interface utilise un algorithme de parsing d'expressions mathématiques en temps réel, validant la syntaxe via des règles de grammaire formelle et affichant les erreurs de parenthésage ou de domaines de définition (ex. logarithme négatif).",
   "usage_steps": [
-    "Ouvrez la page de la Calculatrice scientifique",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez le mode d'angle (degrés, radians ou grades) via le bouton 'Angle' en haut du clavier.",
+    "Saisissez une expression mathématique en utilisant les touches spécialisées : 'sinh' pour sinus hyperbolique, 'log₂' pour logarithme base 2, ou 'i' pour unité imaginaire.",
+    "Utilisez la fonction 'Ans' pour récupérer le dernier résultat dans de nouveaux calculs.",
+    "Appuyez sur 'Shift' puis 'STO' pour stocker un résultat intermédiaire dans l'une des 10 mémoires disponibles (A-J).",
+    "Activez le mode 'Equation' pour résoudre des systèmes linéaires ou des équations quadratiques en entrant les coefficients.",
+    "Consultez l'historique des calculs via le menu déroulant à gauche de l'écran pour revoir les 50 dernières opérations."
   ],
   "usage_examples": [
-    "Utilisez la Calculatrice scientifique pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Calculer l'impédance complexe Z = √(R² + (Lω - 1/Cω)²) pour un circuit RLC avec R=100Ω, L=0.1H, C=10μF à 50Hz.",
+    "Déterminer la croissance exponentielle d'une population avec la formule N(t) = N₀e^(rt) où N₀=1000, r=0.05, t=20 ans.",
+    "Résoudre l'équation différentielle y'' + 4y' + 13y = 0 en utilisant les racines complexes du polynôme caractéristique.",
+    "Convertir un angle de 3π/4 radians en degrés et calculer son sinus hyperbolique pour une application en géométrie non euclidienne."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der cURL Converter ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem cURL Converter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Benutzer sind, kann der cURL Converter Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitung wird lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den cURL Converter sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der cURL Converter ist ein spezialisierter Code-Transkodierer, der cURL-Befehlszeilenanweisungen in semantisch korrekten Quellcode für diverse Programmiersprachen wie Python, JavaScript (Fetch/Axios), PHP und PowerShell übersetzt. Das Tool analysiert die strukturellen Komponenten eines cURL-Befehls – inklusive HTTP-Methoden (GET, POST, PATCH), Header-Parameter, URL-Encoding, Multipart-Formulardaten und Authentifizierungsmechanismen (Basic Auth, Bearer Tokens) – und generiert entsprechende Implementierungen in Ziel-Syntax. Entwickler benötigen dieses Instrument, um beispielsweise manuell getestete API-Anfragen aus Debugging-Sitzungen oder Postman-Exports direkt in produktionsfähigen Code zu übertragen, ohne zeitaufwendige manuelle Übersetzung. Die interne Parser-Logik verarbeitet komplexe Szenarien wie verkettete Header (-H), Daten-Payloads (--data) und URL-Parametrisierung, wandelt sie in sprachspezifische HTTP-Client-Bibliotheken (z.B. requests in Python oder fetch in JS) um und berücksichtigt dabei asynchrone Abläufe oder Error-Handling-Strukturen. Dies minimiert Implementierungsfehler und beschleunigt die Integration von REST-APIs in Software-Projekte.",
   "usage_steps": [
-    "Öffnen Sie die Seite des cURL Converters",
-    "Fügen Sie den zu verarbeitenden Inhalt in das Eingabefeld ein",
-    "Passen Sie die Tool-Einstellungen und Optionen nach Bedarf an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "1. Öffnen Sie die cURL Converter-Webanwendung über den Browser.",
+    "2. Fügen Sie Ihren vollständigen cURL-Befehl in das markierte Textfeld 'cURL Eingabe' ein.",
+    "3. Wählen Sie die Zielprogrammiersprache über das Dropdown-Menü 'Ausgabeformat' (z.B. Python 3, JavaScript Fetch, PHP cURL, PowerShell).",
+    "4. Aktivieren Sie bei Bedarf erweiterte Optionen wie 'Async/Await einbinden' oder 'Axios statt Fetch verwenden' über die Schaltflächen.",
+    "5. Klicken Sie auf 'Code generieren', um die konvertierte Implementierung anzuzeigen.",
+    "6. Kopieren Sie den generierten Code mit der Zwischenablage-Schaltfläche oder laden Sie ihn als .js/.py-Datei herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie den cURL Converter, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie die Verarbeitungsresultate schnell, ohne zu warten"
+    "Ein Backend-Entwickler konvertiert einen cURL-POST-Befehl mit OAuth2-Header in eine Python-requests-Funktion, um eine Drittanbieter-API in eine Django-App zu integrieren.",
+    "Ein Frontend-Teammitglied übersetzt einen komplexen cURL-Befehl mit Multipart-Form-Daten in eine JavaScript-Axios-Implementierung für eine Vue.js-Datei-Upload-Komponente.",
+    "Ein DevOps-Ingenieur wandelt einen cURL-GET-Befehl mit Basic Auth in ein PowerShell-Skript um, um API-Abfragen in automatisierte Server-Checks zu integrieren.",
+    "Ein API-Tester konvertiert einen Postman-Exportierten cURL-Befehl mit dynamischen Query-Parametern in PHP cURL, um Lasttests im Production-System durchzuführen."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Venn Diagram Generator is a practical online tool that helps you quickly complete various tasks. Using Venn Diagram Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Venn Diagram Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Venn Diagram Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Venn Diagram Generator is a specialized tool for visualizing set-theoretic relationships through dynamically calculated Euler diagrams. This tool accepts input in JSON, CSV, or manual entry formats, allowing users to define sets with unique elements and their cardinalities. It employs combinatorial logic to calculate intersections, unions, and symmetric differences, rendering proportional circles with precise area calculations based on set sizes. The SVG-based rendering engine uses force-directed algorithms to optimize circle placement, ensuring overlapping regions correspond to actual Venn identities. Users can customize color gradients with hex codes, adjust stroke weights for clarity, and enable dynamic labeling that auto-scales with diagram complexity. The tool's unique value lies in its ability to handle up to 5-set configurations while maintaining mathematical accuracy, a challenge often mishandled by simpler diagram tools. Data scientists use it to visualize dataset overlaps, while educators employ it to demonstrate Boolean algebra principles. The backend processes input through a constraint satisfaction system that maintains topological validity while preserving user-defined aesthetic parameters.",
   "usage_steps": [
-    "Open the Venn Diagram Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Access the tool's control panel to select input format (JSON, CSV, or manual entry)",
+    "Enter set identifiers and element counts in the designated matrix grid",
+    "Adjust circle proportionality using the 'Area Scaling' slider for weighted visualizations",
+    "Customize overlap logic via the 'Set Relations' dropdown (exclusive/inclusive modes)",
+    "Apply color schemes using the HEX code picker or pre-defined accessibility palettes",
+    "Export results in SVG format with embedded metadata or PNG for publication-ready graphics"
   ],
   "usage_examples": [
-    "Use Venn Diagram Generator to process your data",
-    "Get processing results quickly without waiting"
+    "A machine learning engineer comparing feature overlaps between three classification models using CSV input",
+    "A biologist visualizing gene set intersections from RNA-seq experiments with weighted circles representing expression levels",
+    "An IT architect mapping infrastructure overlaps between cloud providers using manually entered JSON data",
+    "A statistics professor creating textbook diagrams with LaTeX-embedded labels and precise set notation"
   ]
 }

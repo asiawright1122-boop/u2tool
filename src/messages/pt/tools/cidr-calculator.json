@@ -1,14 +1,17 @@
 {
-  "detailed_description": "A Calculadora CIDR é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando a Calculadora CIDR, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugins. A ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, a Calculadora CIDR pode ajudar a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviado para nenhum servidor. Use a Calculadora CIDR imediatamente para experimentar serviços de ferramenta online rápidos, seguros e gratuitos.",
+  "detailed_description": "O CIDR Calculator é uma ferramenta técnica especializada para profissionais de redes que precisam analisar e manipular notações CIDR (Classless Inter-Domain Routing) com precisão. Ele converte automaticamente blocos CIDR em informações críticas como endereço de rede, máscara de sub-rede em formato decimal ou hexadecimal, intervalo de hosts utilizáveis, endereço de broadcast e até mesmo a máscara curinga (wildcard mask) para regras de firewall. Ao inserir uma notação como 192.168.1.0/24, o algoritmo desmonta o prefixo de rede, calcula o número exato de hosts disponíveis (levando em conta subtração de endereços reservados) e identifica sobreposições potenciais em redes IPv4 ou IPv6. Esta funcionalidade é essencial para engenheiros de redes que projetam arquiteturas escaláveis, técnicos que auditam endereçamento em nuvem ou profissionais de segurança que configuram listas de acesso (ACLs). A ferramenta também inclui cálculos avançados como identificação de supernets, detecção de intervalos inválidos e validação de máscaras não contíguas, características raramente encontradas em ferramentas genéricas. Sua interface exibe resultados em múltiplas abas organizadas por categorias técnicas (Rede, Hosts, Máscara), permitindo análise detalhada sem sobrecarga visual.",
   "usage_steps": [
-    "Abra a página da Calculadora CIDR",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Insira a notação CIDR desejada no campo 'Endereço CIDR' (ex: 10.0.0.0/28).",
+    "Selecione a versão IP (IPv4 ou IPv6) usando o botão de alternância ao lado do campo de entrada.",
+    "Clique em 'Calcular' para processar os dados e abrir a seção 'Resumo de Rede' com informações-chave.",
+    "Navegue entre as abas 'Detalhes', 'Hosts' e 'Máscara' para visualizar cálculos completos, incluindo endereço de broadcast e máscara curinga.",
+    "Use o botão 'Exportar CSV' para salvar os resultados estruturados ou 'Copiar' para replicar valores específicos no clipboard.",
+    "Para análise avançada, ative a opção 'Verificar Sobreposição' e insira outro CIDR na caixa de comparação."
   ],
   "usage_examples": [
-    "Use a Calculadora CIDR para processar seus dados",
-    "Obtenha os resultados do processamento rapidamente sem esperar"
+    "Planejamento de sub-redes para um data center: calcular múltiplos blocos CIDR para segmentar servidores de banco de dados, aplicação e front-end sem desperdício de IPs.",
+    "Configuração de ACLs em roteadores: converter máscara CIDR para formato wildcard mask para regras de firewall precisas.",
+    "Auditoria em infraestrutura na nuvem: verificar sobreposições entre CIDRs atribuídos a VPCs diferentes em ambientes AWS ou GCP.",
+    "Diagnóstico de redes IoT: identificar se um bloco /24 comporta 250 dispositivos IoT, considerando IPs reservados para gateways e broadcast."
   ]
 }

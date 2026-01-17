@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Prévisualisation Markdown est un outil pratique en ligne qui vous aide à terminer rapidement diverses tâches. Avec la Prévisualisation Markdown, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil possède une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, la Prévisualisation Markdown peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, garantissant la sécurité de vos données et empêchant leur upload sur n'importe quel serveur. Utilisez la Prévisualisation Markdown immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil Markdown Preview permet une analyse syntaxique en temps réel des documents Markdown selon les spécifications CommonMark, en intégrant des extensions GitHub Flavored Markdown (GFM). Techniquement, il utilise un parseur JavaScript côté client basé sur la bibliothèque marked.js pour convertir les balises Markdown en HTML/CSS dynamique, affiché dans un iframe isolé. Cette approche élimine les latences liées aux serveurs distants et garantit une prévisualisation instantanée lors de chaque modification. Les développeurs bénéficieront de la coloration syntaxique CodeMirror intégrée, qui active l'indentation automatique et la détection d'erreurs de syntaxe. L'exportation finale génère un fichier HTML5 autonome avec intégration des styles CSS, utile pour les documentations techniques, les rapports de bug structurés ou les articles de blog optimisés SEO. La fonctionnalité de rendu différé (debounce) à 300ms améliore les performances sur les documents volumineux. Ce tool est indispensable pour les équipes collaboratives rédigeant des README.md, les enseignants créant des supports pédagogiques ou les rédacteurs techniques produisant des guides API.",
   "usage_steps": [
-    "Ouvrez la page de la Prévisualisation Markdown",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Cliquez sur le bouton 'Nouveau Document' pour initialiser un espace d'édition vide avec thème clair/sombre sélectionnable",
+    "Tapez votre syntaxe Markdown dans le panneau gauche (supports les tables GFM, mentions @, et liens wiki)",
+    "Activez/désactivez la prévisualisation dynamique via l'icône d'œil en haut à droite",
+    "Utilisez le sélecteur 'Extensions' pour activer le rendu LaTeX ou les diagrammes Mermaid.js",
+    "Cliquez sur 'Exporter HTML' pour générer un fichier téléchargeable avec intégration des styles actuels",
+    "Testez la compatibilité mobile en redimensionnant la fenêtre de prévisualisation grâce au curseur responsive"
   ],
   "usage_examples": [
-    "Utilisez la Prévisualisation Markdown pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un développeur prépare un changelog détaillé avec versioning sémantique et icônes Emoji, vérifiant le rendu des listes imbriquées",
+    "Un formateur compose un cours avec blocs de code Python exécutables et graphiques Mermaid intégrés pour les diagrammes UML",
+    "Une équipe produit un guide de contribution pour GitHub en utilisant les annotations de différences de code Markdown",
+    "Un freelance génère un devis client en HTML à partir de Markdown, en personnalisant le CSS d'en-tête avec sa marque"
   ]
 }

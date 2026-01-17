@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculadora de Dias Úteis é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Calculadora de Dias Úteis, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Calculadora de Dias Úteis pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Calculadora de Dias Úteis imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Calculador de Dias Úteis é uma ferramenta técnica projetada para computar com precisão o número de dias úteis entre duas datas, excluindo automaticamente finais de semana (sábados e domingos) e feriados configuráveis. O cálculo é realizado com base no calendário Gregoriano, considerando fusos horários definidos pelo usuário (UTC±0 por padrão) e validando as datas no formato ISO 8601. Internamente, o algoritmo percorre o intervalo de datas especificado, aplica uma máscara binária para identificar dias úteis (1 para úteis, 0 para não úteis) e compara contra uma base de dados de feriados nacionais ou personalizados. Este recurso é essencial para setores como TI (cálculo de SLAs), recursos humanos (folha de pagamento) e logística (planejamento de entregas), onde precisão na contagem de dias é crítica. A exclusão de feriados é feita via comparação de hashes SHA-256 entre as datas informadas e uma lista atualizável de feriados armazenada em JSON, garantindo consistência mesmo em ambientes distribuídos.",
   "usage_steps": [
-    "Abra a página da ferramenta Calculadora de Dias Úteis",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse o painel de datas e selecione a data inicial no seletor de calendário (formato DD/MM/AAAA).",
+    "2. Escolha a data final no segundo campo de calendário, garantindo que seja posterior à data inicial.",
+    "3. Marque a caixa 'Considerar feriados' e insira manualmente os feriados no formato de texto (ex: '2024-01-01') ou selecione um país predefinido na lista suspensa para carregar automaticamente os feriados nacionais.",
+    "4. Ajuste o fuso horário nas configurações avançadas caso suas datas sejam específicas para uma região (ex: UTC-3 para Brasília).",
+    "5. Clique no botão 'Calcular Dias Úteis' para processar o intervalo com base nas regras configuradas.",
+    "6. Analise o resultado exibido no campo 'Total de Dias Úteis' e utilize o botão 'Exportar Detalhes' para obter uma planilha CSV com a lista completa de dias incluídos/excluídos."
   ],
   "usage_examples": [
-    "Use Calculadora de Dias Úteis para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "1. Uma equipe de TI precisa calcular o prazo de resposta de um ticket de alta prioridade com SLA de 5 dias úteis, excluindo feriados municipais de São Paulo.",
+    "2. Departamento de RH calculando o período efetivo de férias de um funcionário entre 10/07/2024 e 24/07/2024, descontando o feriado de 15/07 (Revolução Constitucionalista).",
+    "3. Logística de uma empresa de e-commerce validando prazo de entrega internacional de 8 dias úteis entre cidades de diferentes fusos horários.",
+    "4. Departamento financeiro contabilizando dias úteis para emissão de relatórios mensais obrigatórios, considerando feriados bancários específicos do Brasil."
   ]
 }

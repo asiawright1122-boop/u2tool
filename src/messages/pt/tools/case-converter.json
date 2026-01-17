@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Convertidor de Caso é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Utilizando o Convertidor de Caso, você pode processar vários dados facilmente sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e fácil de usar, permitindo que você comece rapidamente e utilize-a de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Convertidor de Caso pode ajudá-lo a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use o Convertidor de Caso imediatamente para experimentar serviços rápidos, seguros e gratuitos online.",
+  "detailed_description": "O Case Converter é uma ferramenta especializada para transformação precisa de casos de texto, implementando algoritmos de processamento de strings baseados em Unicode 15.0. Ele suporta conversão entre quatro formatos principais: maiúsculas (UPPER_CASE), minúsculas (lower_case), título (Title Case) e PascalCase, além de lidar com variações como snake_case e kebab-case. A ferramenta é essencial para desenvolvedores que precisam normalizar dados estruturados (como JSON ou CSV), padronizar identificadores em código-fonte ou preparar texto para sistemas com requisitos específicos de formatação. Seu funcionamento técnico envolve a análise léxica do texto de entrada, identificação de delimitadores (espaços, hífens, sublinhados) e aplicação de regras de transformação conforme as especificações ECMAScript para manipulação de strings. Diferentemente de ferramentas genéricas, ela preserva caracteres Unicode complexos (como acentos em português ou símbolos matemáticos) durante a conversão, evitando corrupção de dados. Para uso técnico, é útil na preparação de payloads para APIs REST que exigem headers em formato específico, ou na padronização de datasets para machine learning.",
   "usage_steps": [
-    "Abra a página do Convertidor de Caso",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a interface web e localize o campo de texto rotulado 'Texto de Entrada'",
+    "Cole ou digite o conteúdo a ser transformado (até 10.000 caracteres por vez)",
+    "No painel de opções, selecione o formato desejado: 'Maiúsculas', 'Minúsculas', 'Título' ou 'Inverter Caso'",
+    "Ative a opção 'Preservar Delimitadores' se quiser manter sublinhados/hífens inalterados",
+    "Clique no botão 'Converter' para executar a transformação no cliente (JavaScript puro)",
+    "Copie o resultado no campo de saída ou faça download do arquivo .txt gerado"
   ],
   "usage_examples": [
-    "Use o Convertidor de Caso para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Converter nomes de colunas em CSV de 'Nome_Completo' para 'nome_completo' em projetos de ETL",
+    "Normalizar respostas de API para minúsculas antes de comparar status HTTP em testes automatizados",
+    "Transformar palavras-chave em kebab-case para otimização de SEO em URLs amigáveis",
+    "Padronizar logs do sistema para formato Title Case antes de ingestão em ferramentas SIEM"
   ]
 }

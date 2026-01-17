@@ -1,14 +1,17 @@
 {
-  "detailed_description": "PDF para Base64 é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando PDF para Base64, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, PDF para Base64 pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use PDF para Base64 imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O conversor PDF para Base64 transforma arquivos PDF em uma sequência de texto ASCII utilizando codificação Base64, que representa dados binários em formato alfanumérico. Essa ferramenta é essencial para cenários onde sistemas exigem transmissão ou armazenamento de arquivos em formato textual, como em APIs RESTful, WebSockets ou documentos JSON/XML. Quando um PDF é codificado, seu conteúdo binário é particionado em grupos de 6 bits e mapeado para caracteres válidos (A-Z, a-z, 0-9, +, /), com padding (=) para alinhar o tamanho. Isso garante compatibilidade com protocolos que não suportam bytes brutos, como HTTP ou SMTP. O processo é executado localmente no navegador, usando a API FileReader do JavaScript, sem enviar dados para servidores externos. Profissionais usam essa ferramenta para integrar PDFs em data URIs para aplicações web, transmitir documentos via SOAP ou GraphQL, ou armazenar anexos em bancos de dados NoSQL que requerem strings. A precisão é mantida através do algoritmo MIME standard (RFC 4648) e verificação de integridade pós-codificação.",
   "usage_steps": [
-    "Abra a página da ferramenta PDF para Base64",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta 'PDF para Base64' no site e clique em 'Selecionar Arquivo' para carregar o documento PDF.",
+    "Escolha a opção 'Incluir Cabeçalho MIME' se precisar do prefixo 'data:application/pdf;base64,' para uso em data URIs.",
+    "Marque 'Remover Quebras de Linha' para gerar uma string contínua, útil em requisições JSON.",
+    "Clique em 'Converter' para iniciar o processamento via FileReader API no seu navegador.",
+    "Aguarde a barra de progresso completar e visualize o resultado na caixa de texto com formatação syntax-highlighted.",
+    "Copie o código gerado com o botão 'Copiar para Área de Transferência' ou faça download do .txt com o conteúdo."
   ],
   "usage_examples": [
-    "Use PDF para Base64 para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor integrando um PDF de contrato em uma página HTML5 usando <iframe src='data:application/pdf;base64,JVBERi0xLjQn...'>.",
+    "Enviando um relatório PDF através de uma API que aceita apenas payloads JSON com campos de texto codificados em Base64.",
+    "Anexar um certificado digital a um email SMTP sem usar MIME multiparts, colando o Base64 diretamente no corpo da mensagem.",
+    "Armazenando recibos digitais em um banco de dados Firebase Realtime Database que requer dados como strings UTF-8."
   ]
 }

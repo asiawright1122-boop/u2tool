@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Das Favicon-Generator ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Favicon-Generator können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Dieses Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, das Favicon-Generator kann Ihnen helfen, Ihre Arbeitswirksamkeit zu verbessern. Alle Verarbeitung erfolgt lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendein Server hochgeladen werden. Nutzen Sie das Favicon-Generator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Favicon Generator ist ein technisches Werkzeug zur automatisierten Erstellung von Favicons in verschiedenen Größen und Formaten aus einer Quellgrafik. Intern verwendet das Tool leistungsstarke Bildverarbeitungsalgorithmen, um hochwertige Skalierungen zu gewährleisten, wobei Retina-Displays und responsives Webdesign berücksichtigt werden. Es unterstützt Eingabedateien im PNG-, JPEG- und SVG-Format und generiert standardkonforme Ausgabedateien wie .ico, .png und .webp. Besonders bei der Umwandlung von Vektorgrafiken (SVG) kommt ein präziser Rasterisierungsprozess zum Einsatz, der Kantensharpening und Anti-Aliasing optimiert. Das Tool erstellt zusätzlich ein vollständiges HTML-Code-Snippet mit <link>-Tags für die Einbettung aller generierten Favicons, einschließlich Apple Touch Icons und Android Chrome-Mask-Icons. Entwickler benötigen dieses Tool, um manuelle Favicon-Erstellungsprozesse zu eliminieren, Browserkompatibilität sicherzustellen und komplexe Webprojekte effizient zu verwalten. Die Implementierung nutzt serverseitige Bildverarbeitungsbibliotheken wie ImageMagick oder Canvas API für präzise Pixelkontrolle.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Favicon-Generators",
-    "Fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Anpassen Sie die Tool-Einstellungen und Optionen, wie gewünscht",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Laden Sie Ihre Quellgrafik im PNG-, JPEG- oder SVG-Format über den Dateiuploader hoch.",
+    "Wählen Sie im Format-Selektor die gewünschten Ausgabeformate (z.B. .ico, .png, .webp).",
+    "Aktivieren Sie die benötigten Größen über die Checkbox-Liste (16x16, 32x32, 48x48, 64x64, 128x128, 192x192, 512x512).",
+    "Passen Sie im Einstellungsbereich die Kompression (0-100%) und Transparenzeinstellungen an.",
+    "Klicken Sie auf 'Favicons generieren' um den Verarbeitungsprozess zu starten.",
+    "Laden Sie das ZIP-Archiv mit allen Favicons und dem vorbereiteten HTML-Code-Snippet herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie das Favicon-Generator, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie die Verarbeitungsresultate schnell, ohne zu warten"
+    "Ein Webentwickler erstellt ein komplett responsives Corporate-Website-Design und benötigt standardkonforme Favicons für alle gängigen Browser und Geräte.",
+    "Ein UX-Designer aktualisiert das Branding eines E-Commerce-Shops und muss konsistente Favicons für mehrere Subdomains generieren.",
+    "Ein Mobile-App-Entwickler benötigt optimierte Apple Touch Icons und Android Adaptive Icons aus einem SVG-Logo.",
+    "Ein WordPress-Thememaker integriert das Tool in seinen Build-Prozess, um Kunden-Themes automatisch mit maßgeschneiderten Favicons auszustatten."
   ]
 }

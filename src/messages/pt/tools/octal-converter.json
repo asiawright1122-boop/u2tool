@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Conversor Octal é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Conversor Octal, você pode processar dados variados sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Conversor Octal pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Conversor Octal imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Octal Converter é uma ferramenta técnica especializada para realizar conversões bidirecionais entre o sistema de numeração octal (base-8) e outras bases como decimal, hexadecimal e binária. Funciona com algoritmos de expansão polinomial para conversões de octal para outras bases e divisão sucessiva com resto para transformações inversas. A ferramenta suporta números inteiros, frações e representações em complemento de dois, garantindo precisão em contextos como cálculo de permissões de arquivos Unix (ex: 0755) ou programação de dispositivos embarcados. Seu núcleo processa entradas validadas via expressões regulares, detectando automaticamente formatos como octais com prefixo '0o' ou decimais com ponto flutuante. Inclui ajuste de precisão para casas decimais e exibe resultados com notação científica quando necessário, útil para análise de dados em sistemas de baixo nível ou estudos acadêmicos de sistemas numéricos.",
   "usage_steps": [
-    "Abra a página do Conversor Octal",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a seção 'Converter de' e selecione a base original (Octal, Decimal, Hexadecimal ou Binário) via dropdown.",
+    "Insira o valor na caixa de texto com prefixo adequado (ex: '0o17' para octal ou '0xFF' para hexadecimal).",
+    "Escolha a base de destino no menu 'Converter para' (opções: Base-2, Base-8, Base-10, Base-16).",
+    "Ative a opção 'Precisão personalizada' e defina casas decimais se necessário (ex: 5 casas para frações octais).",
+    "Clique no botão 'Converter' para processar o valor com algoritmo otimizado em JavaScript.",
+    "Analise o resultado exibido em quadros coloridos, incluindo representação binária e hexadecimal complementar."
   ],
   "usage_examples": [
-    "Use o Conversor Octal para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Converter a permissão Unix '0755' para decimal (511) para configurar acesso em servidores Linux.",
+    "Transformar endereços IPv4 em formato octal (ex: 172.16.0.1 → 0254.020.000.001) em redes legadas.",
+    "Converter valores de cor hexadecimal (#FF5733) para octal (037725563) em drivers de displays antigos.",
+    "Processar dados de sensores que utilizam formato octal para transmissão serial em sistemas embarcados."
   ]
 }

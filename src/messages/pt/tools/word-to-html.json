@@ -1,11 +1,17 @@
 {
-  "detailed_description": "Converte Word para HTML.",
+  "detailed_description": "O conversor Word to HTML é uma ferramenta técnica especializada que transforma documentos do formato Open XML (.docx) em código HTML semântico, preservando elementos de formatação complexos como estilos de parágrafo, listas multiníveis, tabelas com estilização nativa e objetos gráficos incorporados. O processo ocorre por meio da análise estrutural do arquivo DOCX (um contêiner ZIP contendo partes XML), onde o parser identifica elementos do WordprocessingML e os converte em tags HTML apropriadas, mantendo a hierarquia de títulos, classes CSS inline e atributos de alinhamento. Essa ferramenta é essencial para desenvolvedores que precisam integrar conteúdo editorial de Word diretamente em interfaces web, profissionais de suporte técnico que documentam procedimentos em HTML ou equipes de marketing que transformam relatórios em páginas responsivas. A engine de conversão utiliza algoritmos de mapeamento contextual para preservar nuances como sangrias, marcadores personalizados e estilos de citação, enquanto oferece opções para exportar CSS embutido ou referenciado, além de codificar imagens em base64 para facilitar o deploy.",
   "usage_steps": [
-    "Carregar arquivo Word",
-    "Aguardar conversão",
-    "Baixar HTML"
+    "1. Clique no botão 'Carregar Documento' e selecione o arquivo .docx do seu dispositivo.",
+    "2. Ative a opção 'Preservar Estilos' para manter classes CSS originais ou 'Converter para Inline' para estilização embutida.",
+    "3. Configure o tratamento de imagens: selecione 'Base64' para incorporação direta ou 'URL Relativa' para referência externa.",
+    "4. Ajuste o mapeamento de fontes usando o seletor 'Família de Fontes' para substituir tipos não web-compatíveis.",
+    "5. Clique em 'Converter' e aguarde a análise estrutural do documento em segundo plano.",
+    "6. Baixe o pacote ZIP contendo o HTML gerado, pasta de recursos e folha de estilo associada."
   ],
   "usage_examples": [
-    "Converter Word para web"
+    "1. Um desenvolvedor integra documentação técnica do Word a uma interface React, usando o HTML convertido como base para componentes reutilizáveis.",
+    "2. Uma equipe de suporte transforma manuais de usuário em páginas FAQ responsivas, mantendo tabelas de comandos e diagramas vetoriais.",
+    "3. Um designer converte um boletim institucional do Word em template de email marketing, aproveitando estilos de marca e imagens otimizadas.",
+    "4. Um técnico documenta procedimentos em Word e exporta para HTML estático, integrando-o a um sistema de gestão de conhecimento via Jekyll."
   ]
 }

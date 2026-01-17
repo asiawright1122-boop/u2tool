@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Bordure d'image est un outil en ligne pratique qui vous aide à réaliser rapidement diverses tâches. En utilisant Bordure d'image, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil possède une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, Bordure d'image peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et empêchant leur téléversement sur n'importe quel serveur. Utilisez immédiatement Bordure d'image pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil Image Border est conçu pour ajouter des bordures et des espaces de remplissage (padding) aux images, en permettant une personnalisation des couleurs. Techniquement, l'outil manipule les pixels périphériques de l'image pour y ajouter une couche de pixels de couleur définie par l'utilisateur. Cette fonctionnalité est particulièrement utile pour les concepteurs web et les graphistes qui souhaitent harmoniser l'apparence visuelle de plusieurs images sur un site web ou une application. Par exemple, en ajoutant une bordure blanche uniforme à des images de tailles variables, on peut créer un effet de galerie plus cohérent. L'outil utilise des algorithmes de traitement d'image pour appliquer ces modifications de manière non destructive, ce qui signifie que l'image d'origine reste intacte et que les modifications peuvent être réversibles. En outre, l'outil prend en charge divers formats d'images, tels que JPEG, PNG, et GIF, offrant ainsi une flexibilité d'utilisation dans différents contextes numériques.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Bordure d'image",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les réglages de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Charger votre image en cliquant sur le bouton 'Sélectionnez une image' ou en faisant glisser et en déposant l'image dans la zone désignée.",
+    "Choisir la largeur de la bordure en entrant une valeur en pixels dans le champ 'Largeur de la bordure'.",
+    "Sélectionner la couleur de la bordure en utilisant la palette de couleurs ou en entrant un code hexadécimal dans le champ 'Couleur de la bordure'.",
+    "Définir l'espacement interne (padding) en entrant une valeur en pixels dans le champ 'Espacement interne'.",
+    "Prévisualiser les modifications en cliquant sur le bouton 'Prévisualiser' pour voir l'effet de la bordure et du padding sur l'image.",
+    "Télécharger l'image modifiée en cliquant sur le bouton 'Télécharger' pour enregistrer l'image avec les nouvelles bordures et espaces de remplissage."
   ],
   "usage_examples": [
-    "Utilisez Bordure d'image pour traiter vos données",
-    "Obtenez rapidement des résultats de traitement sans attendre"
+    "Un concepteur web utilise Image Border pour ajouter une bordure noire fine de 5 pixels à toutes les images d'une galerie de produits, afin de créer un look uniforme et professionnel.",
+    "Un photographe ajoute un padding de 10 pixels à l'intérieur de chaque image pour créer un espace entre les images lorsqu'elles sont affichées côte à côte sur un site web.",
+    "Un graphiste applique une bordure blanche de 15 pixels à une série de logos pour les faire ressortir sur un fond coloré lors d'une présentation de marque.",
+    "Un développeur utilise Image Border pour ajouter une bordure transparente à une icône PNG, facilitant ainsi son intégration dans une interface utilisateur sans fond uniforme."
   ]
 }

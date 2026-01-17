@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Cron-Ausdruck-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Cron-Ausdruck-Generator können Sie verschiedene Daten verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Dieses Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der Cron-Ausdruck-Generator kann Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitungen werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Cron-Ausdruck-Generator sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der Cron Expression Generator ist ein spezialisierter Visualisierungstool zur Erstellung und Analyse von Cron-Ausdrücken, die in Unix-basierten Systemen für die zeitbasierte Automatisierung verwendet werden. Das Tool ermöglicht es Entwicklern, komplexe Zeitpläne durch eine intuitive Oberfläche zu definieren, ohne manuell die fünfstellige Cron-Syntax (Minute, Stunde, Tag des Monats, Monat, Wochentag) mit Spezialzeichen wie Asterisk (*), Slash (/) oder Komma (,) formulieren zu müssen. Durch die Integration von Validierungsmechanismen werden ungültige Kombinationen wie \"30 Sekunden alle 5 Minuten\" in Echtzeit erkannt und markiert. Die Technologie nutzt clientseitige JavaScript-Bibliotheken zur dynamischen Generierung von Cron-Strings und zur Zerlegung bestehender Ausdrücke in lesbare Komponenten. Entwickler profitieren besonders bei der Konfiguration von Hintergrunddiensten wie Backups, Batch-Verarbeitung oder API-Polling, da das Tool visuelle Feedback zur Ausführungsintervallen gibt und Fehler durch inkonsistente Datumslogik minimiert.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Cron-Ausdruck-Generators",
-    "Geben Sie den zu verarbeitenden Inhalt in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Anpassen Sie die Tool-Optionen und Einstellungen, wie gewünscht",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Wählen Sie im Abschnitt 'Minute' einen Wert oder ein Intervall (z.B. 0/15 für alle 15 Minuten) aus der Dropdownliste.",
+    "Aktivieren Sie im Bereich 'Stunde' das Kontrollkästchen 'Spezifische Stunde' und geben Sie 2 ein für tägliche Ausführung um 02:00 Uhr.",
+    "Konfigurieren Sie im Feld 'Tag des Monats' die Option 'Jeder X. Tag' mit einem Wert von 1 für monatliche Tasks am Monatsanfang.",
+    "Nutzen Sie die Schaltfläche 'Vorschau', um den generierten Cron-Ausdruck in Echtzeit im Format '0 2 1 * *' anzuzeigen.",
+    "Fügen Sie einen bestehenden Cron-String in das Eingabefeld 'Parse Expression' ein, um ihn in verständliche Komponenten aufzubrechen.",
+    "Exportieren Sie den finalen Ausdruck über den 'Copy to Clipboard'-Button oder laden Sie eine Konfigurationsdatei im JSON-Format herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie den Cron-Ausdruck-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Einrichtung eines täglichen Datenbank-Backups um 03:30 Uhr morgens mit dem Ausdruck '30 3 * * *'.",
+    "Scheduling eines wöchentlichen Berichts, der jeden Montag um 09:00 Uhr mittels '0 9 * * 1' ausgelöst wird.",
+    "Konfiguration eines Stundentask mit 15-minütiger Intervall während Arbeitszeiten (Mo-Fr 8-18 Uhr): '0/15 8-18 * * 1-5'.",
+    "Erstellung eines komplexen Cron-Jobs für das monatliche Archivieren von Logdateien am letzten Tag des Monats um Mitternacht."
   ]
 }

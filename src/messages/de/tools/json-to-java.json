@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON zu Java ist eine praktische Online-Tools, die dir dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON zu Java kannst du verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass du schnell loslegst und effizient arbeiten kannst. Ob du Entwickler, Designer oder ein allgemeines Nutzer bist, JSON zu Java kann dir helfen, deine Arbeitseffizienz zu verbessern. Alle Verarbeitungstätigkeiten werden lokal in deinem Browser durchgeführt, was deine Datensicherheit gewährleistet und sie nicht auf irgendein Server hochgeladen wird. Nutze JSON zu Java sofort, um schnelle, sichere und kostenlose Online-Toolservices zu erleben.",
+  "detailed_description": "Der JSON zu Java Konverter generiert typsichere POJO-Klassen (Plain Old Java Objects) aus beliebigen JSON-Datenstrukturen, einschließlich geschachtelter Arrays und Objekte. Das Tool verwendet eine kontextsensitive Schema-Inferenz, um präzise Java-Datentypen (z.B. LocalDateTime statt Date, BigDecimal statt Double) abzuleiten. Entwickler profitieren von automatisch generiertem Code, der Lombok-Annotationen wie @Data, @Builder und @NoArgsConstructor verwendet, um Boilerplate-Code zu eliminieren. Die Ausgabe ist kompatibel mit Jackson und Gson, ideal für REST-API-Entwicklung, Konfigurationsdatei-Verarbeitung oder Microservices-Architekturen. Besonders nützlich bei dynamischen JSON-Schemata, da Änderungen durch Re-Generierung schnell abgebildet werden können. Die Implementierung nutzt einen AST-basierten Parser mit Typ-Inferenz-Algorithmus, der auch optionale Felder (via @JsonInclude) und benutzerdefinierte Paketstruktur berücksichtigt.",
   "usage_steps": [
-    "Öffne die Seite des JSON zu Java Tools",
-    "Gib oder füge den Inhalt ein, den du verarbeiten möchtest, in das Eingabefeld",
-    "Anpassen der Tool-Optionen und Einstellungen, wenn nötig",
-    "Klicke auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopiere oder herunterlade die verarbeiteten Ergebnisse"
+    "1. Fügen Sie Ihr JSON in den markierten Textbereich ein (unterstützt auch URLs via @JsonFormat).",
+    "2. Wählen Sie Lombok-Optionen: Aktivieren Sie @Data, @AllArgsConstructor oder @Builder im Checkboxen-Menü.",
+    "3. Definieren Sie das Java-Paket im Eingabefeld (z.B. com.example.dto).",
+    "4. Passen Sie Feldnamen an: Klicken Sie auf 'CamelCase konvertieren' oder belassen Sie Original-Snake_Case.",
+    "5. Wählen Sie die Ziel-Java-Version (8-17) für Typ-Kompatibilität aus dem Dropdown-Menü.",
+    "6. Klicken Sie auf 'Generieren' – der Code wird im unteren Bereich angezeigt und kann per Ctrl+C kopiert werden."
   ],
   "usage_examples": [
-    "Nutze JSON zu Java, um deine Daten zu verarbeiten",
-    "Erhalte die Verarbeitungsresultate schnell ohne zu warten"
+    "REST-API-Entwicklung: Konvertieren Sie eine Swagger-Beispielantwort in POJOs für Retrofit oder Spring WebClient.",
+    "Datenmigration: Transformieren Sie Legacy-JSON-Logdateien in Java-Entitäten für eine Datenbankmigration.",
+    "Dynamische Konfiguration: Erzeugen Sie typsichere Config-Klassen aus JSON-Umgebungsvariablen für Kubernetes-Pods.",
+    "Third-Party-Integration: Erstellen Sie Adapterklassen für eine unregelmäßige JSON-API mit verschachtelten Arrays und optionalen Feldern."
   ]
 }

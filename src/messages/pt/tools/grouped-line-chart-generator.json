@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Gerador de Gráfico de Linhas Agrupadas é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Gerador de Gráfico de Linhas Agrupadas, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Gerador de Gráfico de Linhas Agrupadas pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Gerador de Gráfico de Linhas Agrupadas imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Grouped Line Chart Generator é uma ferramenta especializada para visualização de dados multissérie em formato de linhas, permitindo comparar tendências simultâneas entre múltiplos conjuntos de dados. Tecnicalmente, o gerador utiliza bibliotecas de visualização baseadas em SVG/Canvas para renderizar gráficos com eixos cartesianos, onde cada série é representada por uma linha com identificadores de cor e formato exclusivos. Ideal para análise de séries temporais, comparação de métricas entre categorias (ex: vendas por região, desempenho acadêmico por turma) ou monitoramento de variáveis em estudos científicos. O usuário carrega dados em formato CSV/JSON com campos estruturados, mapeia colunas para eixos X/Y, define agrupamentos por série e personaliza escalas logarítmicas, intervalos de tempo e interações como tooltips. A saída é um gráfico interativo com legendas dinâmicas, permitindo zoom e exportação em formatos vetoriais (SVG) ou raster (PNG). A ferramenta destaca-se pelo suporte a datasets com diferentes granularidades temporais e pela capacidade de sincronizar múltiplas escalas Y para comparação precisa.",
   "usage_steps": [
-    "Abra a página da ferramenta Gerador de Gráfico de Linhas Agrupadas",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o gerador e clique em 'Carregar Dados' para importar seu arquivo CSV/JSON contendo séries temporais ou numéricas.",
+    "No painel 'Mapear Campos', selecione a coluna para o eixo X (ex: datas) e as colunas Y que representarão cada série (ex: vendas, custos).",
+    "Configure as escalas dos eixos: ative escala logarítmica se necessário ou defina intervalos personalizados para melhorar a legibilidade.",
+    "Personalize a aparência nas guias 'Estilo': ajuste cores, tipos de linha (sólida, pontilhada), marcadores e opacidade das séries.",
+    "Use o modo 'Visualizar' para interagir com o gráfico, testar tooltips e verificar se as tendências estão claramente comparáveis.",
+    "Exporte o gráfico final como SVG para edição vetorial ou PNG para relatórios, ou copie o código HTML para incorporar em dashboards."
   ],
   "usage_examples": [
-    "Use Gerador de Gráfico de Linhas Agrupadas para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um analista financeiro comparando a evolução de preços de ações de diferentes setores (ex: tecnologia vs energia) em um único gráfico com linhas distintas.",
+    "Uma escola analisando o desempenho médio de alunos em múltiplas disciplinas ao longo de semestres, com cada série representando uma turma.",
+    "Uma equipe de marketing visualizando o tráfego de diferentes canais (orgânico, pago, redes sociais) em um período, usando escalas sincronizadas para identificar picos.",
+    "Um estudo climático mostrando variações anuais de temperatura e precipitação, com duas escalas Y (°C e mm) para correlacionar padrões meteorológicos."
   ]
 }

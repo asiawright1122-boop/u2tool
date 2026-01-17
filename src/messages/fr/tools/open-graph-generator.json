@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graph Open est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Générateur de Graph Open, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plug-ins. Cette outil a une interface simple et est facile à utiliser, ce qui vous permet de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Graph Open peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, garantissant la sécurité de vos données et évitant leur upload sur n'importe quel serveur. Utilisez immédiatement le Générateur de Graph Open pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Générateur Open Graph permet de créer précisément des balises meta conformes au protocole Open Graph, utilisé par les plateformes sociales (Facebook, LinkedIn, etc.) et messageries pour afficher des aperçus enrichis lors du partage de liens. Ce générateur produit automatiquement des balises comme <meta property='og:title'>, <meta property='og:image'> ou <meta property='og:url'> en respectant les spécifications W3C et les bonnes pratiques SEO. L'outil intègre des vérifications techniques : validation des dimensions d'image (recommandations 1200x630px pour Facebook, 2:1 pour Twitter), vérification du caractère canonique de l'URL et conformité du type MIME. Les développeurs peuvent exporter le résultat en HTML5, XHTML ou intégration React. Ce outil est indispensable pour éviter les erreurs de scraping des crawlers sociaux, optimiser l'engagement visuel sur les fils d'actualité ou diagnostiquer des problèmes d'indexation de métadonnées.",
   "usage_steps": [
-    "Ouvrez la page du Générateur de Graph Open",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres d'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Saisir l'URL cible dans le champ dédié et cocher l'option 'Vérifier l'existence des balises actuelles' pour audit préalable",
+    "Renseigner les champs 'og:title' et 'og:description' avec les textes optimisés pour les algorithmes de partage social",
+    "Uploader une image ou spécifier son URL en HTTPS, puis sélectionner le format prédéfini (16:9, 4:3, carré) via le sélecteur dimensionnel",
+    "Activer le mode 'Tags optionnels' pour ajouter des propriétés comme 'og:video', 'og:site_name' ou 'article:published_time'",
+    "Utiliser l'aperçu en temps réel pour visualiser l'engagement sur différentes plateformes (Facebook, LinkedIn, Slack)",
+    "Exporter le code généré en format HTML ou copier le JSON-LD prêt à l'insertion dans le <head> du site"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graph Open pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un éditeur de contenu veut que ses articles affichent automatiquement un thumbnail personnalisé sur Twitter, en respectant le ratio 2:1 exigé par l'API Twitter Cards",
+    "Un e-commerce corrige un bug d'affichage où les produits partagés sur Facebook montrent des images de mauvaise résolution à cause de dimensions non normalisées",
+    "Un développeur diagnostique une incompatibilité entre les balises 'og:url' et les slugs d'un blog JAMstack déployé sur Netlify",
+    "Un community manager prépare une campagne LinkedIn avec des liens sponsorisés affichant des badges 'Nouveau' en utilisant la propriété 'og:tag'"
   ]
 }

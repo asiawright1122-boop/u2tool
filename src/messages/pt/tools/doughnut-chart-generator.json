@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Rosca é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Usando o Gerador de Gráficos de Rosca, você pode processar vários dados facilmente sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de maneira eficiente. Seja um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Rosca pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo uploaded para nenhum servidor. Use o Gerador de Gráficos de Rosca imediatamente para experimentar serviços rápidos, seguros e gratuitos de ferramentas online.",
+  "detailed_description": "O Doughnut Chart Generator é uma ferramenta técnica especializada para criar gráficos de rosca interativos, usando tecnologia baseada em SVG (Scalable Vector Graphics) e HTML5 Canvas. Ele permite representar proporções numéricas através de segmentos coloridos com um espaço central ajustável, ideal para visualizações que exigem ênfase no contraste entre partes e o todo. Desenvolvido com bibliotecas como D3.js e aplicando algoritmos de parsing de dados em tempo real, o usuário pode inserir informações em formatos como CSV, JSON ou até mesmo colar diretamente em um editor de texto estruturado. A ferramenta oferece personalização avançada, incluindo ajuste do raio interno (para controlar o tamanho do 'buraco' central), aplicação de escalas de cores personalizadas (com suporte a paletas HEX, RGB ou predefinidas), e configuração de rótulos dinâmicos com porcentagens ou valores absolutos. A exportação é feita em alta resolução, preservando vetores no SVG ou convertendo para PNG com fundo transparente ou sólido. É essencial para profissionais que precisam de gráficos semânticos e acessíveis, como em relatórios de compliance, dashboards financeiros ou análises de distribuição de recursos, onde a clareza visual e a precisão técnica são críticas.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Rosca",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a aba 'Dados' e selecione o formato de entrada (CSV, JSON ou texto) para inserir os valores e rótulos das categorias.",
+    "Ajuste o 'Raio Interno' usando o slider para definir a proporção do espaço central (ex: 30% para um buraco médio).",
+    "Escolha um esquema de cores na paleta interativa, ou insira códigos HEX personalizados para cada segmento.",
+    "Ative a opção 'Rótulos Dinâmicos' para exibir porcentagens ou valores brutos diretamente nos setores.",
+    "Habilite a legenda e posicione-a em uma das quatro direções (topo, inferior, esquerda ou direita) para melhorar a legibilidade.",
+    "Use o botão 'Exportar' para baixar o gráfico em SVG ou PNG, com resolução ajustável até 4K."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Rosca para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um analista financeiro comparando a alocação de investimentos em diferentes ativos, destacando a proporção de renda fixa vs. variável.",
+    "Uma equipe de marketing analisando a distribuição de leads gerados por cada canal (redes sociais, e-mail, tráfego orgânico) em uma campanha.",
+    "Um gerente de projetos exibindo o progresso de tarefas concluídas, pendentes e em andamento em um painel de status.",
+    "Um pesquisador de UX apresentando resultados de uma enquete sobre preferências de usuários entre múltiplas interfaces de um produto."
   ]
 }

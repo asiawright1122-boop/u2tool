@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Ordenador de Texto es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Con el Ordenador de Texto, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz sencilla y es fácil de usar, lo que te permite empezar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, el Ordenador de Texto puede ayudarte a mejorar tu eficiencia laboral. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza el Ordenador de Texto inmediatamente para experimentar un servicio de herramienta en línea rápida, segura y gratuita.",
+  "detailed_description": "El ordenador de texto permite clasificar líneas de texto según criterios alfanuméricos, longitud o valores numéricos mediante algoritmos de clasificación optimizados. Técnicamente, el sistema procesa texto plano, interpreta delimitadores personalizables (saltos de línea, comas, tabulaciones) y aplica funciones de transformación como normalización de espacios o eliminación de caracteres invisibles. Utiliza comparadores basados en valores Unicode para ordenamiento lexicográfico y funciones de parseo numérico para ordenar secuencias matemáticas. Su utilidad es crítica en escenarios de preparación de datos para machine learning, depuración de logs estructurados o generación de listados ordenados para informes. El motor interno soporta codificaciones UTF-8/16 y permite configurar sensibilidad a mayúsculas/minúsculas, lo que lo hace indispensable para desarrolladores que requieren precisión en procesamiento de texto.",
   "usage_steps": [
-    "Abre la página del Ordenador de Texto",
-    "Introduce o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega tu contenido en el área de entrada o arrastra un archivo de texto plano",
+    "Configura el delimitador de línea usando el selector (LF, CRLF, tabulación, espacio o personalizado)",
+    "Elige el modo de ordenamiento: ascendente/descendente con los botones de flecha",
+    "Activa 'Tratamiento numérico' para interpretar valores en notación científica o decimales",
+    "Marca 'Ignorar casos' para ordenar sin distinción de mayúsculas/minúsculas",
+    "Clica 'Procesar' y descarga el resultado en formato .txt o copia directamente al portapapeles"
   ],
   "usage_examples": [
-    "Utiliza el Ordenador de Texto para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Ordenar alfabéticamente 2000 líneas de imports en Python antes de un commit",
+    "Clasificar logs del sistema por timestamp ISO 8601 usando orden numérico descendente",
+    "Normalizar listados de correos electrónicos eliminando espacios extras antes de importar a CRM",
+    "Organizar catálogos de productos por SKU numérico con soporte para ceros iniciales"
   ]
 }

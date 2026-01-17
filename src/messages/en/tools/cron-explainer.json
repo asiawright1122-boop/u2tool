@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Cron Expression Explainer is a practical online tool that helps you quickly complete various tasks. Using Cron Expression Explainer, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Cron Expression Explainer can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Cron Expression Explainer immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Cron Expression Explainer deciphers cron syntax into plain-language schedules and calculates future execution times using precise temporal logic. This tool parses standard cron expressions (including extended formats with seconds field) by analyzing each positional field—seconds, minutes, hours, day-of-month, month, day-of-week, and year (optional). It employs a finite-state machine algorithm to validate cron patterns against IETF RFC 867 cron standards while supporting popular extensions like Vixie cron syntax. Developers benefit from its ability to resolve ambiguous cron constructs (e.g., 'L', 'W', '#') into explicit calendar dates, and it uniquely handles timezone conversions using IANA Time Zone Database integration. The tool's core engine performs bitwise operations on cron field descriptors to generate timestamp sequences, applying croniter-based iteration logic to determine the next five scheduled execution times in both UTC and local time contexts.",
   "usage_steps": [
-    "Open the Cron Expression Explainer tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Enter a cron expression in the syntax-aware text editor, which highlights invalid fields in real-time",
+    "Toggle the 'Seconds field' switch to enable/disable parsing of 6/7-field cron formats",
+    "Select your target timezone from the dropdown menu to adjust schedule calculations",
+    "Click the 'Parse Expression' button to generate the natural language explanation",
+    "Review the 'Next Execution Times' grid showing ISO 8601 timestamps with daylight saving adjustments",
+    "Use the 'Shareable Link' feature to export your cron analysis for team collaboration"
   ],
   "usage_examples": [
-    "Use Cron Expression Explainer to process your data",
-    "Get processing results quickly without waiting"
+    "Debugging a misconfigured cron job that runs daily at midnight: '0 0 * * *' vs '0 0 0/2 * *' causing unintended every-2-day execution",
+    "Validating a complex deployment schedule: '30 4-6/2 * 12 1-5' to confirm it triggers at 4:30, 6:30 AM on workdays in December",
+    "Explaining legacy cron syntax '0 22 * * 0-6' to a new team member unfamiliar with Sunday (0/7) day-of-week conventions",
+    "Calculating AWS Lambda cron execution windows with 'rate(5 minutes)' conversions to standard cron format for compliance audits"
   ]
 }

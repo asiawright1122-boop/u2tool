@@ -1,14 +1,17 @@
 {
-  "detailed_description": "L'Expliqueur d'expressions Cron est un outil pratique en ligne qui vous aide à accomplir diverses tâches rapidement. En utilisant l'Expliqueur d'expressions Cron, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Ce outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, l'Expliqueur d'expressions Cron peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et empêchant leur upload vers n'importe quel serveur. Utilisez immédiatement l'Expliqueur d'expressions Cron pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil Cron Expression Explainer démonte les expressions cron pour les transformer en descriptions lisibles par un humain, tout en calculant les prochaines dates d'exécution. Il est conçu pour aider les développeurs à décoder des syntaxes complexes comme '0 23 * * 5' ou '15 14 1-7 * 2', souvent sources d'erreurs dans les systèmes de planification automatisée. Ce décodeur est essentiel pour les équipes de DevOps qui doivent auditer des tâches CRON, configurer des pipelines CI/CD, ou diagnostiquer des problèmes de planification. Techniquement, l'outil utilise un parser basé sur des règles de validation POSIX pour analyser chaque champ (minutes, heures, jours, mois, jour de la semaine). En arrière-plan, un algorithme de génération de dates utilise la bibliothèque croniter pour itérer à partir d'une date de référence, en tenant compte des fuseaux horaires sélectionnés. La traduction en langage naturel combine des templates de phrases paramétrées avec des logiques conditionnelles pour traiter les cas spéciaux comme les intervalles ('*/15'), les listes ('1,3,5') ou les noms de mois ('@annually').",
   "usage_steps": [
-    "Ouvrez la page de l'Expliqueur d'expressions Cron",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Saisissez l'expression cron dans le champ texte à gauche de l'interface",
+    "Sélectionnez le fuseau horaire dans le menu déroulant (ex: Europe/Paris)",
+    "Choisissez une date de départ via le sélecteur de calendrier",
+    "Cliquez sur 'Générer l'explication' pour déclencher l'analyse",
+    "Lisez la description détaillée dans la section 'Traduction en langage clair'",
+    "Consultez le tableau des prochaines exécutions avec horodatage UTC et local"
   ],
   "usage_examples": [
-    "Utilisez l'Expliqueur d'expressions Cron pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur corrige un bug de planification en vérifiant que '0 0/2 * 1/3 MON' correspond bien à 'Tous les lundis, toutes les 2 heures, du 1er janvier au 31 mars'",
+    "Un administrateur système valide qu'une sauvegarde quotidienne programmée avec '55 23 * * *' s'exécute bien à 23h55 chaque jour",
+    "Un équipe Agile documente des tâches récurrentes en générant des descriptions pour des expressions comme '@hourly' ou '0 9-17/2 * * 1-5'",
+    "Un ingénieur DevOps convertit un ancien cron '0 0 * * 0' en 'Minuit chaque dimanche' avant de migrer vers un service de planification cloud"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique en Boîte est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Générateur de Graphique en Boîte, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et d'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique en Boîte peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléversées sur n'importe quel serveur. Utilisez immédiatement le Générateur de Graphique en Boîte pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de graphiques en boîte (boxplot) permet de visualiser les distributions statistiques de jeux de données multidimensionnels. Cet outil calcule automatiquement les quartiles, la médiane, les moustaches (whiskers) et identifie les valeurs aberrantes selon la méthode de Tukey (1,5×IQR). Il est indispensable pour comparer des échantillons issus d'expériences scientifiques, analyser des données financières ou évaluer la qualité de processus industriels. Les utilisateurs peuvent importer des données en format CSV ou coller directement des valeurs numériques, avec possibilité de personnaliser les axes logarithmiques, les couleurs de boîtes par groupe, et d'ajouter des annotations en LaTeX pour les étiquettes. Le moteur utilise D3.js pour le rendu SVG interactif et permet l'export en PNG 4K ou SVG éditable avec intégration des polices personnalisées via @font-face.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique en Boîte",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Collez vos données numériques dans la zone de saisie délimitée par des tabulations ou chargez un fichier CSV avec en-têtes",
+    "Sélectionnez le type de boxplot (simple, groupé par catégories ou horizontal) dans le menu déroulant 'Type de visualisation'",
+    "Ajustez les paramètres avancés : échelle logarithmique, seuil de détection des outliers, orientation des étiquettes",
+    "Personnalisez l'apparence avec l'éditeur de thèmes CSS intégré pour modifier les couleurs des boîtes et les polices",
+    "Utilisez le volet de prévisualisation en temps réel pour ajuster la taille du canvas et les marges",
+    "Téléchargez le graphique généré au format SVG ou PNG avec résolution configurable (jusqu'à 300 DPI)"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique en Boîte pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Analyser la distribution des notes d'étudiants across 5 sections d'un cours, en identifiant les groupes avec écarts interquartiles anormaux",
+    "Comparer les temps de réponse de serveurs web sur 7 jours, en détectant les pics d'activité via les valeurs aberrantes",
+    "Visualiser les données de température mensuelles pour 3 régions agricoles, avec échelle logarithmique pour les variations exponentielles",
+    "Présenter les résultats d'une enquête sur l'échelle Likert 1-5 avec boîtes groupées par questions et annotations statistiques"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Imagen a Base64 es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Imagen a Base64, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya sea que seas un desarrollador, diseñador o usuario general, Imagen a Base64 puede ayudarte a mejorar la eficiencia de trabajo. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Usa Imagen a Base64 inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "La herramienta Image to Base64 realiza una conversión de archivos de imagen binarios a cadenas de texto codificadas en Base64, utilizando el esquema de datos URI (Uniform Resource Identifier). Técnicamente, el proceso implica leer el archivo de imagen, identificar su tipo MIME (como image/png o image/jpeg), dividir los datos binarios en segmentos de 6 bits y mapearlos a caracteres ASCII según el alfabeto Base64. Esto permite incrustar imágenes directamente en código HTML, CSS o JavaScript mediante la sintaxis data:[<mediatype>][;base64],<data>, eliminando la necesidad de solicitudes HTTP externas. Los desarrolladores la utilizan para optimizar el rendimiento en aplicaciones de página única (SPA), evitar problemas de CORS al usar recursos locales, o generar imágenes dinámicas en entornos sin servidor. A diferencia de otras herramientas, esta implementa un motor de procesamiento en el cliente que garantiza la privacidad de los datos, ya que ningún archivo se transfiere a servidores externos durante la conversión.",
   "usage_steps": [
-    "Abre la página del convertidor de Imagen a Base64",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Haz clic en 'Seleccionar imagen' o arrastra tu archivo al área designada.",
+    "2. Confirma el tipo MIME automático (ej: image/png) o cámbialo manualmente según tu necesidad.",
+    "3. Activa la opción 'Agregar prefijo Data URI' si requieres la cadena completa para HTML/CSS.",
+    "4. Presiona 'Codificar a Base64' para iniciar el proceso de conversión en el navegador.",
+    "5. Revisa el resultado en el campo de salida, incluyendo estadísticas de tamaño y longitud.",
+    "6. Copia el código generado o descárgalo como archivo .txt para integrarlo en tu proyecto."
   ],
   "usage_examples": [
-    "Usa Imagen a Base64 para procesar tus datos",
-    "Obtén rápidamente los resultados de procesamiento sin esperar"
+    "Incrustar un logo SVG como fondo en una hoja de estilo CSS sin enlazar archivos externos.",
+    "Generar un avatar de usuario en Base64 para enviarlo en una carga útil JSON a una API.",
+    "Crear un favicon en línea para un sitio estático sin configurar rutas de servidor.",
+    "Codificar una imagen crítica para un email HTML compatible con clientes de correo offline."
   ]
 }

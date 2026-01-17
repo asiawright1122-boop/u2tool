@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Texto a voz es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Texto a voz, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Texto a voz puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Texto a voz inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "Nuestra herramienta de conversión de texto a voz utiliza algoritmos avanzados de síntesis de voz basados en modelos paramétricos y concatenativos. Al procesar el texto, el sistema realiza un análisis lingüístico profundo que incluye tokenización, desambiguación semántica y generación de prosodia, ajustando parámetros como frecuencia fundamental (pitch), duración de fonemas y entonación. La tecnología emplea técnicas de vocoding en el dominio del tiempo-frecuencia para sintetizar voces humanas realistas con 128 niveles de personalización en tono, velocidad (ajustable entre 0.5x y 3x) y énfasis fonético. Esta herramienta es esencial para desarrolladores que necesitan integrar TTS en aplicaciones de asistencia para discapacitados visuales, educadores que crean materiales auditivos para estudiantes de idiomas, y creadores de contenido que automatizan producción de podcasts. El motor soporta 37 idiomas y dialectos regionales, permitiendo la selección de voces masculinas, femeninas y neutras con diferentes acentos geográficos. Técnicamente, la arquitectura combina redes neuronales convolucionales para extracción de características textuales y redes recurrentes para modelado prosódico, asegurando una naturalidad auditiva superior a 4.2 MOS (Mean Opinion Score).",
   "usage_steps": [
-    "Abre la página de la herramienta Texto a voz",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al editor de texto y pega hasta 10,000 caracteres en el área designada",
+    "Selecciona una voz predefinida (ej: 'Clara - Español Peninsular' o 'Hiroshi - Japonés Kansai')",
+    "Ajusta el pitch usando el slider de 50Hz a 350Hz según necesites tonos graves o agudos",
+    "Configura la velocidad de narración en palabras por minuto (100-400 WPM) usando el control deslizante",
+    "Activa 'Modo Énfasis' para resaltar ciertos términos con cambios prosódicos automáticos",
+    "Haz clic en 'Generar Audio' y descarga el archivo WAV de 16-bit o el streaming directo vía API"
   ],
   "usage_examples": [
-    "Usa Texto a voz para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un profesor de ESL crea archivos de pronunciación nativa con acento mexicano para estudiantes, ajustando la velocidad al nivel B1",
+    "Un desarrollador de apps móviles prueba la accesibilidad de su interfaz generando respuestas de voz con diferentes géneros vocales",
+    "Un investigador de fonética compara formantes vocales sintetizados versus grabaciones reales en un estudio acústico",
+    "Una editorial automática convierte libros técnicos en audiolibros con marcadores de capítulo mediante pausas configurables"
   ]
 }

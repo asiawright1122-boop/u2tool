@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur d'URI de données est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur d'URI de données pour traiter diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur d'URI de données peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez immédiatement le Générateur d'URI de données pour découvrir des services de outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur d'URI de données convertit des fichiers binaires ou textuels en un format URI codé en Base64, intégrant des métadonnées comme le type MIME. Ce processus permet l'intégration directe de ressources (images, polices, scripts) dans des documents HTML, CSS ou JavaScript sans fichiers externes. Techniquement, l'URI généré suit le schéma 'data:[<type MIME>][;charset=<encodage>][;base64],<données>', où les données binaires sont transformées en chaîne ASCII via l'encodage Base64. Cet outil est crucial pour optimiser les performances web en réduisant les requêtes HTTP, notamment pour les petites ressources comme les icônes SVG ou les polices personnalisées. Il est également utile pour contourner les restrictions de CORS lors de l'intégration de ressources externes. Le fonctionnement repose sur la lecture du fichier en mode binaire, sa conversion en Base64, et l'assemblage final avec les en-têtes de métadonnées. À noter que ce format augmente la taille des données de 33 %, ce qui le rend inadapté aux grands fichiers.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur d'URI de données",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Cliquez sur la zone de dépôt pour charger un fichier (image, police, script) ou sélectionnez un fichier via l'explorateur.",
+    "2. Choisissez la méthode d'encodage : Base64 pour les binaires ou encodage raw pour les textes ASCII.",
+    "3. Spécifiez manuellement le type MIME (ex: image/png, application/json) si nécessaire.",
+    "4. Activez l'option 'Inclure charset' pour les textes UTF-8 et définissez l'encodage (ex: charset=utf-8).",
+    "5. Cliquez sur 'Générer URI' pour obtenir le résultat dans le champ de sortie.",
+    "6. Utilisez le bouton 'Copier' pour intégrer l'URI dans votre code HTML/CSS."
   ],
   "usage_examples": [
-    "Utilisez le Générateur d'URI de données pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Incorporer une petite image PNG en tant qu'arrière-plan CSS sans requête externe.",
+    "Intégrer un fichier JSON de configuration directement dans un script JavaScript.",
+    "Encoder une police WOFF2 pour une utilisation dans @font-face sans hébergement externe.",
+    "Convertir un SVG d'icône en URI pour l'utiliser dans un attribut src d'une balise img."
   ]
 }

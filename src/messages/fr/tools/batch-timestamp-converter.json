@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Convertisseur de Horodatage par Lot est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Grâce au Convertisseur de Horodatage par Lot, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Convertisseur de Horodatage par Lot peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez immédiatement le Convertisseur de Horodatage par Lot pour découvrir des services en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Batch Timestamp Converter est un outil de conversion en ligne conçu pour simplifier le processus de transformation de multiples horodatages. Il est capable de détecter automatiquement les formats d'horodatage d'entrée, qu'il s'agisse de formats Unix, ISO 8601, ou d'autres formats couramment utilisés. L'outil convertit ces horodatages en un format de sortie sélectionné par l'utilisateur, tels que des dates lues par l'homme, des temps Unix, ou des formats de chaîne de caractères personnalisés. Cette fonctionnalité est particulièrement utile pour les développeurs, les administrateurs système, et les analystes de données qui doivent manipuler des horodatages dans des jeux de données volumineux. La capacité de l'outil à traiter plusieurs horodatages en une seule opération permet une gestion plus efficace du temps et une réduction des erreurs potentielles. De plus, l'outil propose des options d'exportation des résultats, facilitant ainsi l'intégration de ces données dans d'autres systèmes ou applications.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Convertisseur de Horodatage par Lot",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte d'entrée",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez la page du Batch Timestamp Converter et placez-vous dans l'onglet 'Convertir'.",
+    "Dans le champ 'Horodatages à convertir', copiez et collez ou saisissez directement les horodatages que vous souhaitez convertir, chacun sur une nouvelle ligne.",
+    "Sélectionnez le format d'horodatage d'entrée dans le menu déroulant 'Format d'entrée'. Si vous n'êtes pas sûr du format, choisissez 'Détection automatique'.",
+    "Choisissez le format de sortie souhaité dans le menu déroulant 'Format de sortie'. Les options incluent 'Date lisible', 'Temps Unix', et 'Format personnalisé'.",
+    "Cliquez sur le bouton 'Convertir' pour lancer la conversion des horodatages.",
+    "Une fois la conversion terminée, vous pouvez copier les résultats directement depuis la zone de texte ou utiliser l'option 'Exporter' pour télécharger les résultats au format CSV."
   ],
   "usage_examples": [
-    "Utilisez le Convertisseur de Horodatage par Lot pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur travaillant sur une application de traçage de logs doit convertir des horodatages Unix en dates lues par l'homme pour faciliter la lecture et l'analyse des logs.",
+    "Un administrateur système charge une liste de dates de création de fichiers (au format ISO 8601) et les convertit en horodatages Unix pour les intégrer dans un script de surveillance de la sécurité.",
+    "Une équipe de data scientists collecte des données de capteurs enregistrées avec des horodatages au format 'YYYY-MM-DD HH:MM:SS' et souhaite les convertir en timestamps Unix pour une analyse temporelle plus précise.",
+    "Un analyste de données marketing utilise l'outil pour convertir des dates de transactions en un format de chaîne de caractères personnalisé pour les inclure dans un rapport de performance."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Aspect Ratio Calculator is a practical online tool that helps you quickly complete various tasks. Using Aspect Ratio Calculator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Aspect Ratio Calculator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Aspect Ratio Calculator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Aspect Ratio Calculator is a powerful tool designed to help users accurately determine and maintain the aspect ratio of images, videos, and other visual media. Technically, the tool performs calculations based on the width and height of the media, ensuring that the proportional relationship between these dimensions remains consistent even when resizing. This is crucial for maintaining visual integrity and avoiding distortion. Users can input specific dimensions, and the tool will compute the corresponding values to maintain the desired aspect ratio. The calculator is particularly useful for web developers, graphic designers, and videographers who need to ensure that their visual content looks perfect across different devices and platforms. By using this tool, professionals can quickly and accurately resize images and videos without the risk of stretching or compressing them, which is a common issue when manually adjusting dimensions.",
   "usage_steps": [
-    "Open the Aspect Ratio Calculator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Step 1: Open the Aspect Ratio Calculator tool on the website and locate the input fields for Width and Height.",
+    "Step 2: Enter the current dimensions of your media in the Width and Height fields. Ensure that the units are consistent (e.g., pixels, inches).",
+    "Step 3: Select the desired output format from the dropdown menu, which includes options like 'New Width' or 'New Height'. This will determine which dimension you want to calculate.",
+    "Step 4: Input the new dimension in the corresponding field. For example, if you selected 'New Width', enter the desired width.",
+    "Step 5: Click the 'Calculate' button to compute the new dimension that maintains the original aspect ratio.",
+    "Step 6: Review the calculated dimension in the output field. Use this value to resize your media while preserving its aspect ratio."
   ],
   "usage_examples": [
-    "Use Aspect Ratio Calculator to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: A web developer needs to resize an image from 1920x1080 pixels to fit a smaller section of a website that is 800 pixels wide. Using the Aspect Ratio Calculator, they can quickly determine the new height to keep the image from distorting.",
+    "Example 2: A graphic designer is creating a series of social media posts and needs to ensure that all images maintain a consistent 16:9 aspect ratio. The tool helps them calculate the correct dimensions for each image, regardless of the original size.",
+    "Example 3: A videographer is preparing a 4K video (3840x2160) for a platform that requires a 1080p resolution (1920x1080). The Aspect Ratio Calculator ensures that the video is resized correctly without changing its aspect ratio, maintaining the visual quality.",
+    "Example 4: A photographer is printing a series of landscape photos and needs to resize them to fit a standard 8x10 inch frame. The tool helps them calculate the new dimensions while keeping the aspect ratio consistent, ensuring that the photos look perfect in the frames."
   ]
 }

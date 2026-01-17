@@ -1,14 +1,17 @@
 {
-  "detailed_description": "L'Effet Verre Brouillé est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Grâce à l'Effet Verre Brouillé, vous pouvez traiter diverses données sans installer de logiciels ou de plugins. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, l'Effet Verre Brouillé peut vous aider à améliorer l'efficacité de votre travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant leur téléversement sur n'importe quel serveur. Utilisez immédiatement l'Effet Verre Brouillé pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "L'outil Frosted Glass Effect permet d'appliquer un flou de type 'verre dépoli' à des images numériques, en combinant des techniques de convolution gaussienne et de superposition semi-transparente. Contrairement aux effets de flou standard, ce processus simule la diffusion de la lumière à travers une surface rugueuse en ajoutant un masque de transparence (alpha blending) après application d'un noyau de flou adaptatif. Cet outil est particulièrement utile pour les développeurs et designers créant des interfaces utilisateur modernes (comme des fenêtres modales avec fond flou, menus vitrés ou widgets superposés) ou souhaitant ajouter un effet visuel subtil à des compositions graphiques. Techniquement, l'algorithme utilise une convolution gaussienne paramétrable avec un sigma ajustable, combinée à un contrôle de luminosité locale pour préserver les détails structurels de l'image originale. Une fonction de bruitage aléatoire peut également être activée pour imiter la texture du verre sablé, ce qui évite l'aspect artificiel des surfaces uniformément floues.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Effet Verre Brouillé",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les réglages de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Glissez-déposez votre image dans la zone de téléchargement ou sélectionnez-la via le bouton 'Parcourir les fichiers'",
+    "Ajustez l'intensité du flou à l'aide du curseur 'Rayon de flou' (valeurs de 1 à 50 pixels)",
+    "Modifiez le facteur de transparence avec le champ numérique 'Opacité' (valeurs entre 20% et 80%)",
+    "Activez la case à cocher 'Ajouter du bruit' pour appliquer un motif de granularité aléatoire",
+    "Prévisualisez l'effet en temps réel dans la fenêtre d'aperçu à droite de l'interface",
+    "Téléchargez le résultat au format PNG optimisé en cliquant sur le bouton 'Exporter l'image'"
   ],
   "usage_examples": [
-    "Utilisez l'Effet Verre Brouillé pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Créer un fond d'écran dynamique pour une application mobile avec effet vitré sur les icônes",
+    "Générer des vignettes de galerie photo où les images floues se transforment en pleine définition au survol",
+    "Concevoir un interface de dashboard avec panneaux superposés semi-transparents pour une hiérarchie visuelle claire",
+    "Réaliser un effet de transition entre deux calques d'image dans une animation CSS sans altérer la profondeur des couleurs"
   ]
 }

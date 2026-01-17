@@ -1,15 +1,17 @@
 {
-  "detailed_description": "El Calculador de Costo de Combustible estima cuánto gastará en gasolina para cualquier viaje.",
+  "detailed_description": "El Calculador de Costos de Combustible permite determinar con precisión los gastos asociados a trayectos específicos mediante un algoritmo que integra tres variables clave: distancia recorrida (en kilómetros o millas), eficiencia del vehículo (km/litro o millas/galón) y precio actual del combustible (en moneda local o extranjera). La herramienta emplea fórmulas de conversión dimensional para normalizar unidades heterogéneas, aplicando factores de conversión dinámicos según el tipo de moneda seleccionada (incluyendo soportes para USD, EUR, GBP y otras). Al procesar estos parámetros, genera un cálculo detallado que considera impuestos aplicables y variaciones estacionales en precios de hidrocarburos. Esta solución es esencial para conductores que requieren planificar viajes interurbanos, empresas de logística que optimizan rutas de transporte, o usuarios que comparan la eficiencia energética entre vehículos híbridos y tradicionales. Su motor matemático implementa una ecuación paramétrica: Costo = (Distancia / Eficiencia) × Precio × Factor de Conversión, con validación de rangos para prevenir valores no realistas.",
   "usage_steps": [
-    "Ingrese la distancia del viaje",
-    "Introduzca la eficiencia de combustible",
-    "Establezca el precio actual del combustible",
-    "Elija viaje de ida o ida y vuelta",
-    "Vea el costo total de combustible"
+    "Seleccione la unidad de distancia (kilómetros o millas) en el selector desplegable 'Unidad de Medida'",
+    "Ingrese el rendimiento del vehículo en el campo 'km/l' usando valores decimales para mayor precisión",
+    "Especifique el precio actual del combustible en la moneda correspondiente mediante el teclado numérico",
+    "Active la casilla 'Incluir impuestos' si desea calcular cargos adicionales específicos de su región",
+    "Presione el botón 'Calcular Ruta' para procesar datos con el algoritmo de conversión dimensional",
+    "Revise el desglose en la sección 'Resultados Detallados', que muestra consumo en litros, costo total y equivalencia en CO2 emitido"
   ],
   "usage_examples": [
-    "Calcular costos de viaje en carretera",
-    "Comparar gastos de combustible",
-    "Presupuestar para el desplazamiento"
+    "Un viajero planea un recorrido de 420 km desde Madrid a Valencia con un coche diésel que consume 5.8 km/l, calculando costos en euros con impuestos incluidos",
+    "Una empresa de transporte compara gastos mensuales al reemplazar su flota de camiones 12 km/l por modelos híbridos de 18 km/l",
+    "Un estudiante de ingeniería evalúa el impacto económico de realizar un trayecto diario de 35 km en moto (28 km/l) versus automóvil (14 km/l)",
+    "Un turista estadounidense calcula el costo en USD de un viaje por carretera de 1,500 millas por México, considerando el tipo de cambio actual y precios variables de gasolina"
   ]
 }

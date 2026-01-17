@@ -1,14 +1,17 @@
 {
-  "detailed_description": "PDF-Seitenrotator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit PDF-Seitenrotator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, PDF-Seitenrotator kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie PDF-Seitenrotator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der PDF Rotator ist ein spezialisierter Online-Editor, der präzise Drehoperationen auf PDF-Dokumenten durchführt, ohne Kompromisse bei der Dateiintegrität einzugehen. Technisch gesehen analysiert das Tool die interne PDF-Struktur, identifiziert Page-Dictionary-Objekte und modifiziert die Rotationseigenschaften (Rotationswinkel im PDF-Referenzstandard) auf Seitenebene. Unterstützt werden Einzelseiten- und Batch-Bearbeitungen mit granularen Einstellungen für 90°, 180° oder 270°-Drehungen im Uhrzeigersinn oder Gegenuhrzeigersinn. Besonders nützlich ist dies für gescannte Dokumente mit falscher Ausrichtung, druckvorbereitete Dateien mit inkonsistenten Seitenformaten oder wissenschaftliche Arbeiten, bei denen Diagramme im Querformat korrekt eingebunden werden müssen. Der Rotator verwendet eine serverseitige PDF-Engine, die Metadatenintegrität und Dokumentenkohärenz bewahrt, während er gleichzeitig PDF/A-Konformität für archivierbare Dokumente sicherstellt. Die Batch-Verarbeitung erfolgt über eine asynchrone Warteschlangenarchitektur, die mehrere Dateien parallel bearbeitet, ohne die Clientsysteme zu belasten. Besonders vorteilhaft ist die Fähigkeit, geradzahlige und ungeradzahlige Seiten unterschiedlich zu behandeln, was bei Broschürendesigns oder doppelseitigem Druck entscheidend ist.",
   "usage_steps": [
-    "Öffnen Sie die PDF-Seitenrotator-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "PDF-Datei per Drag-and-Drop oder Schaltfläche „Datei auswählen“ hochladen",
+    "Im Bereich „Rotationsrichtung“ die gewünschte Drehung (90°, 180°, 270°) auswählen",
+    "Im Feld „Seitenbereich“ konkrete Seitenzahlen eingeben (z.B. „1,3-5,7“)",
+    "Checkbox „Geradzahlige Seiten invertieren“ aktivieren, um automatisch gegenläufige Drehungen für gerade Seiten anzuwenden",
+    "Auf „Änderungen anwenden“ klicken, um die Rotation zu implementieren",
+    "Den verlinkten Download-Button nutzen, sobald der Fortschrittsbalken die Verarbeitung abgeschlossen hat"
   ],
   "usage_examples": [
-    "Verwenden Sie PDF-Seitenrotator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein Architekt dreht Seiten mit vertikalen Bauplänen, um sie für horizontale Projektoren darzustellen",
+    "Ein Jurist korrigiert gescannte Gerichtsunterlagen, bei denen einige Seiten auf dem Kopf stehen",
+    "Ein Grafikdesigner passt die Ausrichtung von Produktfotos in einem Katalog an, um konsistente Querformate zu erzeugen",
+    "Ein Student justiert Dissertationenseiten, die durch mehrfache Scans aus verschiedenen Scannern unterschiedliche Orientierungen aufweisen"
   ]
 }

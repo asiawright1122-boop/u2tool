@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Le Roulette de Dés simule le lancer de divers types de dés, y compris les dés D4, D6, D8, D10, D12 et D20.",
+  "detailed_description": "Le Dice Roller est une application en ligne qui permet de simuler le lancement de dés virtuels. Conçu pour les développeurs, les joueurs de jeux de rôle, et les amateurs de jeux de hasard, cet outil offre une gamme de dés allant de D4 (dés à 4 faces) à D20 (dés à 20 faces), ainsi que des options pour lancer plusieurs dés simultanément. Techniquement, le Dice Roller utilise des algorithmes de génération de nombres aléatoires (RNG) pour simuler les lancers de dés, garantissant une distribution équitable des résultats. Cette fonctionnalité est particulièrement utile pour les tests de jeux, la création de scénarios, ou simplement pour ajouter un élément de surprise à vos projets. L'application est entièrement basée sur le web, sans besoin d'installation, et fonctionne sur tous les navigateurs modernes. Les résultats des lancers sont affichés en temps réel, avec des animations visuelles pour une expérience immersive.",
   "usage_steps": [
-    "Sélectionnez le type de dés",
-    "Choisissez le nombre de dés",
-    "Ajoutez un modificateur si nécessaire",
-    "Cliquez sur le bouton de lancement",
-    "Visualisez les résultats et l'historique"
+    "Accédez au site du Dice Roller et attendez que la page se charge complètement.",
+    "Sélectionnez le type de dé que vous souhaitez lancer depuis la liste déroulante (D4, D6, D8, D10, D12, D20).",
+    "Choisissez le nombre de dés à lancer en utilisant le sélecteur numérique situé à côté du type de dé.",
+    "Cliquez sur le bouton « Lancer les dés » pour exécuter la simulation.",
+    "Observez les résultats affichés en temps réel, avec des animations de lancers de dés.",
+    "Vous pouvez répéter les étapes 2 à 5 pour effectuer de nouveaux lancers ou modifier les paramètres."
   ],
   "usage_examples": [
-    "Lancer des dés pour les RPG de table",
-    "Lancers de dés pour les jeux de plateau",
-    "Génération de nombres aléatoires"
+    "Un joueur de jeux de rôle utilise le Dice Roller pour simuler les jets de dés lors de ses parties en ligne, évitant ainsi les dés physiques et les erreurs de comptage.",
+    "Un développeur de jeux vidéo teste les mécaniques de probabilité de son jeu en utilisant le Dice Roller pour générer des scénarios aléatoires et vérifier la distribution des résultats.",
+    "Un enseignant en statistiques utilise le Dice Roller pour illustrer les concepts de probabilité et de distribution uniforme, en lançant des séries de dés et en analysant les résultats avec ses étudiants.",
+    "Un organisateur d'événements de jeux de plateau utilise le Dice Roller pour arbitrer des parties lors de tournois, assurant ainsi une impartialité et une rapidité dans la résolution des dés."
   ]
 }

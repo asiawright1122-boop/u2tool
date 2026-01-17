@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique en Barres Empilées en Pourcentage est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Générateur de Graphique en Barres Empilées en Pourcentage, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique en Barres Empilées en Pourcentage peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas téléversés sur aucun serveur. Utilisez immédiatement le Générateur de Graphique en Barres Empilées en Pourcentage pour découvrir des services de outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de graphiques à barres empilées en pourcentage permet de visualiser la composition proportionnelle des données catégorielles en normalisant chaque groupe à 100%. Techniquement, l'outil utilise des bibliothèques de rendu SVG pour créer des barres segmentées dont chaque section correspond à un ratio relatif. Les données d'entrée, structurées en format CSV ou JSON, sont interprétées pour calculer les proportions via une fonction de normalisation (chaque valeur est divisée par la somme totale du groupe). L'axe X représente les catégories, tandis que l'axe Y affiche les pourcentages. Les utilisateurs peuvent personnaliser les échelles de couleur via des palettes HEX ou RGB, ajuster les étiquettes dynamiques, et intégrer des infobulles (tooltips) pour une analyse interactive. Ce type de graphique est essentiel pour comparer des distributions de marché, analyser des résultats d'enquêtes ou illustrer des répartitions budgétaires, où l'accent est mis sur les relations entre parties plutôt que sur des valeurs absolues.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique en Barres Empilées en Pourcentage",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les paramètres de l'outil selon les besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'outil et cliquez sur 'Importer des données' pour charger un fichier CSV/TSV ou coller manuellement vos données dans l'éditeur.",
+    "Sélectionnez la colonne représentant les catégories (axe X) et les valeurs numériques à empiler via le menu déroulant 'Configuration des axes'.",
+    "Activez l'option 'Normalisation 100%' pour convertir les valeurs en pourcentages et choisissez la direction de l'empilement (vertical ou horizontal).",
+    "Personnalisez les couleurs des segments en utilisant le sélecteur de palette ou insérez des codes HEX personnalisés dans la section 'Style des données'.",
+    "Ajoutez des annotations dynamiques en cochant 'Afficher les étiquettes' et ajustez le format d'affichage (ex: 2 chiffres après la virgule).",
+    "Prévisualisez le graphique, téléchargez-le au format SVG ou PNG, ou générez un code intégrable HTML/JavaScript pour un site web."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique en Barres Empilées en Pourcentage pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un analyste marketing compare les parts de marché de trois marques dans cinq régions en représentant chaque région comme une barre divisée par marque.",
+    "Un chercheur en sociologie visualise la répartition des réponses à un sondage (très satisfait, satisfait, insatisfait) par tranche d'âge.",
+    "Un directeur financier illustre la répartition des dépenses (RH, R&D, marketing) sur quatre trimestres avec des pourcentages cumulés.",
+    "Un administrateur réseau analyse la distribution du trafic web (mobile, bureau, tablette) sur 12 mois via un graphique à barres horizontales."
   ]
 }

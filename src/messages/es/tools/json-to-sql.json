@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON a SQL es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando JSON a SQL, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, JSON a SQL puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa JSON a SQL inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El convertidor JSON a SQL transforma estructuras de datos JSON en sentencias SQL compatibles para la creación de tablas y la inserción de registros. Esta herramienta analiza automáticamente el esquema de los objetos JSON, identificando tipos de datos (como cadenas, números, booleanos y fechas), claves anidadas y relaciones entre arrays para generar un modelo relacional optimizado. Los desarrolladores necesitan esta herramienta cuando migran datos desde fuentes NoSQL o APIs REST hacia bases de datos relacionales como MySQL, PostgreSQL o SQLite. Su algoritmo de inferencia de esquema detecta patrones de datos para proponer tipos SQL adecuados, permitiendo ajustes manuales en columnas con formatos complejos. Además, soporta la normalización de datos mediante la creación de tablas relacionadas cuando se detectan arrays de objetos anidados, evitando la redundancia y asegurando la integridad referencial desde el primer momento.",
   "usage_steps": [
-    "Abre la página de la herramienta JSON a SQL",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega tu JSON en el editor de código con resaltado de sintaxis.",
+    "Selecciona el motor de base de datos objetivo (MySQL, PostgreSQL, SQLite) en el menú desplegable.",
+    "Activa la opción 'Crear esquema relacional' si deseas tablas normalizadas para arrays anidados.",
+    "Personaliza los tipos de datos haciendo clic en las sugerencias automáticas en cada campo.",
+    "Presiona 'Generar SQL' para obtener el script con CREATE TABLE y múltiples INSERT statements.",
+    "Copia el resultado o descarga el archivo .sql con formato optimizado para importación masiva."
   ],
   "usage_examples": [
-    "Usa JSON a SQL para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Migrar datos de configuración desde un archivo JSON de una aplicación Node.js a una base de datos PostgreSQL para un microservicio.",
+    "Convertir respuestas de una API de terceros en datos de prueba (test data) para entornos de desarrollo local.",
+    "Importar logs estructurados en JSON a una base de datos MySQL para análisis de rendimiento con herramientas BI.",
+    "Crear un esquema relacional automático a partir de un dataset JSON de productos para un sistema de e-commerce en SQLite."
   ]
 }

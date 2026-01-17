@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Vidéo vers Base64 est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant Vidéo vers Base64, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, Vidéo vers Base64 peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, garantissant la sécurité de vos données et ne sera pas téléchargé sur un serveur. Utilisez Vidéo vers Base64 immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil Video to Base64 permet de transformer des fichiers vidéo (MP4, AVI, MOV) en une chaîne de caractères ASCII encodée en Base64. Ce processus consiste à convertir les données binaires du fichier vidéo en blocs de 6 bits, puis à les mapper sur un jeu de 64 caractères alphanumériques et symboliques. Cette méthode est particulièrement utile pour intégrer des vidéos directement dans des documents HTML, CSS, JSON ou des requêtes d'API sans dépendance externe. Les développeurs l'utilisent notamment pour générer des URI de données (data URLs) optimisées, envoyer des vidéos via des protocoles textuels comme WebSocket, ou stocker des miniatures en Base64 dans une base de données relationnelle. L'outil traite les fichiers côté client via l'API FileReader de JavaScript, garantissant une conversion instantanée sans envoi au serveur. Le résultat inclut automatiquement l'en-tête MIME (ex: data:video/mp4;base64,) pour une utilisation immédiate. À noter que la taille du Base64 généré augmente de ~33% par rapport au fichier original, ce qui en fait une solution adaptée aux petits fichiers ou cas d'usage spécifiques.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Vidéo vers Base64",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Cliquez sur 'Parcourir' ou glissez-déposez votre fichier vidéo (MP4/AVI/MOV) dans la zone dédiée.",
+    "Sélectionnez le type MIME souhaité dans le menu déroulant (ex: video/webm, video/ogg) selon votre usage.",
+    "Activez/désactivez l'option 'Inclure en-tête MIME' si vous avez besoin d'une data URL complète.",
+    "Cliquez sur 'Convertir' pour déclencher le traitement en Web Worker sans blocage de l'interface.",
+    "Copiez le résultat avec le bouton 'Copier dans le presse-papiers' ou téléchargez-le en tant que .txt.",
+    "Utilisez la zone de prévisualisation pour tester l'intégration HTML avec la vidéo encodée via <video src=\"data:...\">."
   ],
   "usage_examples": [
-    "Utilisez Vidéo vers Base64 pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Intégrer une animation vidéo de 2 secondes directement dans un email HTML sans pièces jointes externes.",
+    "Envoyer une vidéo de diagnostic via une API REST qui n'accepte que des payloads textuels en Base64.",
+    "Créer une vignette miniature encodée en Base64 pour un carrousel web avec chargement asynchrone.",
+    "Stocker des séquences vidéo courtes dans une base de données SQLite comme texte pour une application offline."
   ]
 }

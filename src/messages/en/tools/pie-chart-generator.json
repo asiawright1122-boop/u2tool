@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Pie Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Pie Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Pie Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Pie Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Pie Chart Generator is a specialized tool for transforming numerical datasets into visual pie charts through programmatic data interpolation and vector-based rendering. This tool leverages browser-native Canvas API and SVG DOM manipulation to create resolution-independent visualizations that maintain clarity at any scale. By accepting structured data inputs in CSV or JSON formats, it calculates proportional segments using geometric algorithms that translate percentage values into precise radian measurements for arc rendering. Developers and data analysts benefit from its ability to automate chart generation for dashboards, while marketers use it to illustrate market share distributions. The backend employs a two-pass rendering process: first normalizing input values to compute slice angles via the formula θ = (value/total) * 2π, then applying anti-aliased stroke paths for polished display. Users can customize color gradients with HEX/RGB pickers, adjust radial offsets through a polar coordinate interface, and enable interactive tooltips that display exact value percentages on hover. Exported assets retain vector properties in SVG format or convert to high-DPI PNG raster images with adjustable pixel density up to 600ppi, ideal for print or web presentations.",
   "usage_steps": [
-    "Open the Pie Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the tool's data input panel and paste structured numerical data using the CSV template format (label,value pairs)",
+    "Activate the 'Dynamic Colors' toggle to auto-generate chromatic scales or manually assign hex codes through the palette grid",
+    "Adjust the 'Slice Offset' slider to create exploded segments, specifying degrees of separation from the chart center",
+    "Configure legend orientation using the compass-direction dropdown (N, S, E, W) with adjustable font size controls",
+    "Enable the '3D Projection' switch to render depth-enhanced segments with customizable light source angles",
+    "Select export resolution (SVG or PNG) and download the generated visualization with embedded metadata preservation"
   ],
   "usage_examples": [
-    "Use Pie Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "A financial analyst creates quarterly revenue breakdowns with 3D pie charts, applying corporate branding colors through HEX codes for investor presentations",
+    "An educational researcher visualizes student major distributions using exploded segments to highlight specific departments",
+    "A UX designer prototypes interactive dashboard components by exporting SVG charts with tooltip event listeners pre-attached",
+    "A government agency generates public report infographics with multi-layered legends positioned dynamically around the chart circumference"
   ]
 }

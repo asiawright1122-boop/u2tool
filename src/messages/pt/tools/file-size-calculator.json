@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Calculador de Tamanho de Arquivo é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Utilizando o Calculador de Tamanho de Arquivo, você pode processar dados variados sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Calculador de Tamanho de Arquivo pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviado para nenhum servidor. Use o Calculador de Tamanho de Arquivo imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O File Size Calculator é uma ferramenta técnica projetada para realizar conversões precisas entre unidades de medida de armazenamento digital, incluindo múltiplos decimais (KB, MB, GB, TB) e binários (KiB, MiB, GiB, TiB). O diferencial está na sua capacidade de lidar com fatores de conversão exatos (1024³ para unidades binárias vs. 1000³ para decimais), essencial para profissionais que lidam com sistemas de arquivos, protocolos de rede ou desenvolvimento de software. A ferramenta é indispensável para calcular requisitos de armazenamento em ambientes virtualizados, validar capacidades de dispositivos IoT, ou converter metadados de vídeo em 4K (geralmente expressos em GiB) para unidades comerciais (GB). O algoritmo processa a entrada numérica e aplica fórmulas de normalização, como GiB × 1024² = MiB ou TB ÷ 1000³ = PB, garantindo precisão em ambientes heterogêneos. A interface permite configurar a base de cálculo (binária/decimal) e visualizar a equivalência em múltiplas unidades simultaneamente, evitando erros em projetos de infraestrutura crítica.",
   "usage_steps": [
-    "Abra a página do Calculador de Tamanho de Arquivo",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Insira o valor numérico no campo 'Tamanho Original'",
+    "Selecione a unidade de origem (ex: MiB, GB, TiB) no primeiro dropdown",
+    "Escolha a unidade de destino (ex: KiB, PB, GiB) no segundo dropdown",
+    "Ative a opção 'Usar base binária' se necessário para compatibilidade com sistemas Linux",
+    "Clique no botão 'Converter' para executar o cálculo em tempo real",
+    "Verifique o resultado na seção 'Equivalências' que exibe todas as unidades compatíveis"
   ],
   "usage_examples": [
-    "Use o Calculador de Tamanho de Arquivo para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Converter 1.5TiB de armazenamento em NVMe para GB para comparar com SSDs comerciais",
+    "Calcular o tamanho real de um arquivo de 700MiB em MB para upload em plataforma de backup em nuvem",
+    "Converter 4.375KiB de memória EEPROM em bytes para programação de microcontrolador",
+    "Transformar 2.5PB de dados de telemetria em TiB para configuração de cluster Hadoop"
   ]
 }

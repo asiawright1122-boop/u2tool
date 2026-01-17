@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Cascata é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Utilizando o Gerador de Gráficos de Cascata, você pode processar vários dados sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Cascata pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são feitos localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Utilize o Gerador de Gráficos de Cascata imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Waterfall Chart Generator é uma ferramenta técnica especializada para criar gráficos de cachoeira (waterfall charts) dinâmicos e interativos, utilizados principalmente para visualizar transições de valores acumulativos em sequências lógicas. Essencial em análises financeiras, de estoque ou de desempenho operacional, o tool permite identificar impactos individuais de componentes positivos e negativos em um valor inicial. Sua engine renderiza gráficos via biblioteca D3.js, suportando entrada de dados em formato JSON estruturado com campos como 'label', 'value' e 'type' (início, aumento, redução, total). A interface inclui validação em tempo real de integridade dos dados, ajuste automático de escalas e exportação em múltiplos formatos vetoriais. Diferentes de ferramentas genéricas, oferece opções avançadas como gradientes de cores condicionais, anotações em tooltips e exportação em SVG para edição em softwares de design. Ideal para profissionais que precisam demonstrar fluxos de caixa, variações de inventário ou métricas de performance em relatórios técnicos e apresentações executivas.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Cascata",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse a ferramenta através do painel de gráficos interativos no site.",
+    "2. Cole ou digite seus dados em formato JSON no editor integrado, seguindo o esquema: [{\"label\":\"Venda Janeiro\",\"value\":15000,\"type\":\"increase\"}, {\"label\":\"Custos\",\"value\":-8000,\"type\":\"decrease\"}, ...].",
+    "3. Configure o esquema de cores usando o seletor de paletas categóricas (ex: azul para ganhos, vermelho para perdas) na aba 'Estilo'.",
+    "4. Ajuste rótulos dos eixos X/Y e título principal no painel de customização de legendas.",
+    "5. Visualize o gráfico renderizado em tempo real, interagindo com elementos como hover tooltips que exibem valores acumulados.",
+    "6. Exporte o gráfico finalizado em PNG, SVG ou PDF através do botão 'Download' no cabeçalho."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Cascata para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem espera"
+    "1. Analistas financeiros mapeando fluxo de caixa mensal com destaque para receitas, despesas e saldo final.",
+    "2. Gerentes de operações comparando níveis de estoque antes e após campanhas promocionais, identificando variações por SKU.",
+    "3. Consultores de TI demonstrando impacto acumulado de melhorias de performance em etapas de um pipeline de deploy.",
+    "4. Economistas visualizando fatores que contribuíram para variação do PIB trimestral de um setor industrial."
   ]
 }

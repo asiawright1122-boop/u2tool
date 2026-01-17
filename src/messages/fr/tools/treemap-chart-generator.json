@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Carte en Treemap est un outil en ligne pratique qui vous aide à accomplir diverses tâches rapidement. Utilisez le Générateur de Carte en Treemap pour traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Carte en Treemap peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et ne sont pas téléversées sur aucun serveur. Utilisez immédiatement le Générateur de Carte en Treemap pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le générateur de cartes arborescentes (Treemap Chart Generator) est un outil en ligne robuste conçu pour visualiser des données hiérarchiques de manière efficace et esthétique. Cette application permet aux utilisateurs de créer des cartes arborescentes, un type de visualisation de données qui utilise des rectangles imbriqués pour représenter des structures de données complexes. Chaque rectangle correspond à une catégorie, et sa taille et sa couleur peuvent être modifiées pour refléter différentes valeurs, telles que la taille d'un segment ou son importance. Les utilisateurs peuvent facilement personnaliser l'apparence de ces rectangles, ajuster les couleurs, les étiquettes, et même exporter le diagramme finale au format PNG ou SVG, ce qui le rend idéal pour les présentations, les rapports, et les analyses de données. Ce générateur est particulièrement utile pour les professionnels de la data, les analystes financiers, et les chercheurs qui doivent présenter des données volumineuses et multidimensionnelles de manière claire et compréhensible. La capacité de visualiser des relations hiérarchiques et de comparer des proportions de manière intuitive en fait un outil indispensable pour l'analyse de données approfondie et la prise de décision stratégique.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Carte en Treemap",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez le générateur de cartes arborescentes sur le site et cliquez sur le bouton 'Importer des données' pour ajouter votre fichier CSV ou JSON contenant les données hiérarchiques.",
+    "Après l'importation des données, utilisez la section 'Paramètres de la carte arborescente' pour définir les colonnes qui représentent les niveaux hiérarchiques et les valeurs à visualiser.",
+    "Personnalisez l'apparence de la carte arborescente en ajustant les options de couleur, de taille, et de forme des rectangles dans la section 'Style'.",
+    "Ajoutez des étiquettes et des légendes pour améliorer la lisibilité de votre visualisation en utilisant les options disponibles dans la section 'Étiquettes et légendes'.",
+    "Prévisualisez votre carte arborescente dans la section 'Prévisualisation' pour vérifier que tout est conforme à vos attentes avant de procéder à l'exportation.",
+    "Une fois que vous êtes satisfait de votre visualisation, cliquez sur 'Exporter' et choisissez le format de fichier (PNG ou SVG) pour télécharger votre carte arborescente."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Carte en Treemap pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un analyste financier souhaite présenter la répartition des actifs d'un portefeuille par secteur. Il importe les données du portefeuille dans le générateur de cartes arborescentes, configure les niveaux hiérarchiques pour refléter les différents secteurs, et ajuste les couleurs pour représenter la performance financière de chaque secteur.",
+    "Un data scientist travaille sur l'analyse de l'utilisation des ressources par département dans une grande entreprise. Il utilise le générateur pour visualiser la consommation de ressources sous forme de rectangles imbriqués, permettant une comparaison facile des différents départements et des sous-départements.",
+    "Une équipe de marketing cherche à comprendre la répartition des clients par segment et sous-segment. Ils importent les données client dans le générateur et créent une carte arborescente avec des rectangles de différentes tailles et couleurs pour montrer le nombre de clients dans chaque segment et la performance des ventes.",
+    "Un chercheur en environnement étudie la répartition des espèces dans différentes régions. Il utilise le générateur de cartes arborescentes pour créer une visualisation montrant la diversité biologique, avec des rectangles de tailles et de couleurs variées pour représenter l'abondance et la rareté des espèces."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Beautifieur JavaScript est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Beautifieur JavaScript, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Ce outil possède une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Beautifieur JavaScript peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload vers n'importe quel serveur. Utilisez immédiatement le Beautifieur JavaScript pour expérimenter des services de outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le JavaScript Beautifier est un outil de traitement de code source qui permet de réorganiser, formater et optimiser le code JavaScript selon des standards de qualité professionnels. Techniquement, il utilise un parseur syntaxique comme Esprima ou Acorn pour générer un arbre syntaxique abstrait (AST) à partir du code d'entrée. Cet AST est ensuite analysé pour appliquer des règles de reformatage (ajout d'indentations, alignement des accolades, gestion des espaces) ou des transformations de minification (suppression des commentaires, des espaces inutiles, renommage des variables). Les développeurs ont besoin de cet outil pour améliorer la lisibilité de scripts non documentés, déboguer des bibliothèques compactées, ou préparer du code pour la production. Le mode beautify utilise des algorithmes de détection automatique de style pour conserver la cohérence des conventions existantes (guillemets simples vs doubles, points-virgules optionnels), tandis que le mode minify applique des techniques de compression comme la conversion des variables en identifiants courts (obfuscation légère) sans altérer la logique fonctionnelle. L'outil gère nativement les fonctionnalités ES6+ (flèches, templates, déstructuration) et permet de configurer finement la sortie via des paramètres comme la profondeur d'indentation ou la préservation des annotations JSDoc.",
   "usage_steps": [
-    "Ouvrez la page du Beautifieur JavaScript",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Collez votre code JavaScript dans la zone d'entrée multi-lignes.",
+    "Cochez la case 'Beautify' pour un formatage lisible ou 'Minify' pour une compression agressive.",
+    "Ajustez les paramètres avancés : taille d'indentation (2/4/8 espaces), style de guillemets (simple/double), suppression/conservation des points-virgules.",
+    "Activez l'option 'Préserver les commentaires' si vous souhaitez conserver les annotations JSDoc ou TODO.",
+    "Cliquez sur 'Traiter le code' pour générer la sortie dans la case inférieure.",
+    "Copiez le résultat ou téléchargez-le au format .js avec le bouton 'Exporter'."
   ],
   "usage_examples": [
-    "Utilisez le Beautifieur JavaScript pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur frontend optimise un bundle JavaScript en minifiant son code avant déploiement en production.",
+    "Un équipe de développement normalise le style de codage de fichiers hétérogènes pour une revue de code cohérente.",
+    "Un étudiant décompresse un script obfusqué pour étudier sa logique algorithmique.",
+    "Un mainteneur de bibliothèque prépare une version de démonstration avec un code formaté lisiblement pour la documentation."
   ]
 }

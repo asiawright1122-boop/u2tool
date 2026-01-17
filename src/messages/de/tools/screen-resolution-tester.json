@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Bildschirmauflösung-Tester ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Bildschirmauflösung-Tester können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und es effizient nutzen können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Bildschirmauflösung-Tester kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser, wodurch die Sicherheit Ihrer Daten gewährleistet ist und nicht auf einen Server hochgeladen wird.",
+  "detailed_description": "Der Screen Resolution Tester ist ein präzises Analysewerkzeug zur Ermittlung von physischen und logischen Bildschirmeinstellungen durch JavaScript-APIs wie window.screen, window.devicePixelRatio und CSSOM View Module. Es berechnet dynamisch die verfügbare Viewport-Größe unter Berücksichtigung von Browser-UI-Elementen und gibt die genaue CSS-Pixel-Dichte (devicePixelRatio) mit Nachkommastellen aus. Entwickler benötigen diese Daten zur Optimierung responsiver Designs, Validierung media queries und Diagnose von Layoutproblemen auf High-DPI-Geräten. Das Tool nutzt matchMedia() zur Echtzeitprüfung aktiver Media Queries und zeigt die Auswirkungen von Zoomfaktoren auf die Darstellungsgröße. Besonders hilfreich bei der Fehlersuche bei viewport-spezifischen CSS-Brechpunkten oder inkonsistenten Scrollverhalten auf verschiedenen Geräteklassen.",
   "usage_steps": [
-    "Bildschirmauflösung-Tester-Tool-Seite öffnen",
-    "Inhalt zum Verarbeiten in das Eingabefeld eingeben oder einfügen",
-    "Tool-Optionen und Einstellungen nach Bedarf anpassen",
-    "Auf die Verarbeitungsschaltfläche klicken, um Ergebnisse anzuzeigen",
-    "Verarbeitete Ergebnisse kopieren oder herunterladen"
+    "Besuchen Sie die Tool-Seite über den Slug 'screen-resolution-tester' im Development-Bereich.",
+    "Analysieren Sie die Startansicht: Notieren Sie die angezeigte physische Auflösung (screen.width/height) und die verfügbare Viewport-Größe (window.innerWidth/Height).",
+    "Ändern Sie die Browserfenstergröße manuell und beobachten Sie die dynamischen Updates der CSS-Pixel-Werte und devicePixelRatio-Anpassungen.",
+    "Nutzen Sie den 'Simulationsmodus' um gängige Geräteprofile (Smartphone, Tablet, Desktop) mit präzisen DPR-Werten nachzuahmen.",
+    "Überprüfen Sie den Media-Query-Debugger-Bereich, der aktive CSS-Brechpunkte in Echtzeit anzeigt, während Sie die Fenstergröße ändern.",
+    "Exportieren Sie die Testergebnisse über den 'Snapshot'-Button als JSON für Dokumentationszwecke oder Cross-Browser-Vergleiche."
   ],
   "usage_examples": [
-    "Bildschirmauflösung-Tester verwenden, um Ihre Daten zu verarbeiten",
-    "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten"
+    "Ein Frontend-Entwickler testet, warum ein 2x-retina-Bild auf einem Samsung Galaxy S22 nicht korrekt skaliert, indem er den devicePixelRatio-Wert von 3.0 identifiziert und die Bildressourcen anpasst.",
+    "Ein QA-Tester vergleicht die gemeldete Viewport-Größe beim Drehen eines iPads von Portrait (768x1024) zu Landscape (1024x748) um 20px Unterschied durch Toolbar-Berechnungen zu erkennen.",
+    "Ein UX-Designer validiert, ob die media queries für eine mobile First-Website korrekt zwischen 767px und 768px umschalten, während er das Browserfenster schrittweise vergrößert.",
+    "Ein Entwickler debuggt unerwartete Scrollbalken auf einem 1.5x-zoomenden Laptop-Display, indem er die CSS-Pixel-Größe von 1440px bei 1.5 DPR auf einem 2160physischen Pixel-Display analysiert."
   ]
 }

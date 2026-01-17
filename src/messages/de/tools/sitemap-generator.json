@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Sitemap Generator ist ein praktisches Online-Tool, das dir dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Sitemap Generator kannst du verschiedene Daten bearbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass du schnell loslegst und effizient arbeiten kannst. Ob du Entwickler, Designer oder allgemeiner Nutzer bist, der Sitemap Generator kann dir helfen, deine Arbeitseffizienz zu verbessern. Alle Datenverarbeitung wird lokal in deinem Browser durchgeführt und stellt sicher, dass deine Daten sicher sind und nicht auf irgendeinem Server hochgeladen werden. Nutze den Sitemap Generator sofort, um schnelle, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der Sitemap Generator ist eine leistungsstarke Online-Tool, das es Ihnen ermöglicht, XML-Sitemaps für Ihre Website zu erstellen. XML-Sitemaps sind strukturierte XML-Dateien, die eine Liste aller relevanten URLs auf Ihrer Website enthalten. Diese Sitemaps helfen Suchmaschinen, die Struktur und Inhalt Ihrer Website besser zu verstehen, was die Indexierung und die Suchmaschinenoptimierung (SEO) verbessern kann. Besonders für komplexe oder große Websites ist eine XML-Sitemap unerlässlich, da sie sicherstellt, dass alle Seiten korrekt und vollständig indexiert werden. Der Sitemap Generator erstellt diese Dateien automatisch, indem er die URL-Struktur Ihrer Website analysiert und alle relevanten URLs extrahiert. Technisch gesehen nutzt das Tool Web-Crawling-Techniken, um die Website zu durchstöbern, und nutzt XML-Syntax, um die Sitemap im richtigen Format zu generieren. Die erstellte Sitemap kann dann leicht in den Root-Ordner Ihrer Website hochgeladen werden, sodass Suchmaschinenroboter sie leicht finden können.",
   "usage_steps": [
-    "Öffne die Seite des Sitemap Generators",
-    "Fülle den Eingabefeld mit dem Inhalt ein, den du verarbeiten möchtest",
-    "Ändere die Tool-Einstellungen und Optionen, wenn nötig",
-    "Klicke auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopiere oder herunterlade die verarbeiteten Ergebnisse"
+    "Öffnen Sie die Sitemap Generator-Seite auf unserer Website und klicken Sie auf den Button 'URL hinzufügen'.",
+    "Geben Sie die Haupt-URL Ihrer Website in das Eingabefeld ein und klicken Sie auf 'Weiter'.",
+    "Wählen Sie im nächsten Schritt die Optionen für die Crawling-Tiefe, indem Sie die Anzahl der Ebenen auswählen, die das Tool durchsuchen soll.",
+    "Klicken Sie auf 'Erstellen', um den Prozess zu starten. Das Tool wird nun Ihre Website durchsuchen und alle relevanten URLs extrahieren.",
+    "Nachdem die Sitemap generiert wurde, wird sie auf der Seite angezeigt. Überprüfen Sie die URLs auf Fehlern oder fehlende Seiten.",
+    "Speichern Sie die XML-Sitemap als Datei herunter und laden Sie sie in den Root-Ordner Ihrer Website hoch, sodass Suchmaschinenroboter sie leicht finden können."
   ],
   "usage_examples": [
-    "Verwende den Sitemap Generator, um deine Daten zu verarbeiten",
-    "Erhalte die Verarbeitungsresultate schnell, ohne zu warten"
+    "Ein Webentwickler, der eine neue E-Commerce-Plattform erstellt, nutzt den Sitemap Generator, um eine XML-Sitemap zu erstellen, die alle Produktseiten, Kategorien und andere wichtige Seiten enthält. Dies hilft, die Suchmaschinenoptimierung (SEO) der Website zu verbessern und sicherzustellen, dass alle Produkte gut sichtbar sind.",
+    "Ein Blogger, der regelmäßig neue Artikel veröffentlicht, verwendet den Sitemap Generator, um sicherzustellen, dass alle Artikel korrekt in der Sitemap aufgeführt sind. Dies erhöht die Wahrscheinlichkeit, dass neue Inhalte schnell von Suchmaschinen erkannt und indexiert werden.",
+    "Ein Webmaster, der eine komplexe Unternehmenswebsite verwalten muss, nutzt den Sitemap Generator, um eine detaillierte Sitemap zu erstellen, die alle Unterseiten, Blog-Beiträge und andere Ressourcen berücksichtigt. Dies erleichtert die Verwaltung und Optimierung der Website.",
+    "Ein SEO-Experte, der die Suchmaschinenoptimierung einer Multi-Shop-Plattform durchführt, verwendet den Sitemap Generator, um separate Sitemaps für jeden Shop zu erstellen, um die Indexierung und die Benutzerfreundlichkeit zu verbessern."
   ]
 }

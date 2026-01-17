@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Stacked Area Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Stacked Area Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Stacked Area Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Stacked Area Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Stacked Area Chart Generator enables developers and data analysts to visualize multi-series temporal data through layered area representations. This tool employs a stacking algorithm to display cumulative contributions of categorical variables along a Y-axis against a time-based X-axis, with each data series rendered as a filled region. Users can choose between absolute value stacking or normalized percentage-based visualization to highlight proportionality. Built with D3.js and SVG rendering, it supports dynamic axis scaling, custom color palettes, and interactive tooltips displaying precise data points. The generator's unique capability lies in its ability to handle irregular time intervals and missing data points through cubic interpolation, making it ideal for financial forecasting, resource allocation analysis, and trend comparison scenarios where data continuity matters. Technical features include support for JSON/CSV data imports, axis label customization, and export options in both vector and raster formats.",
   "usage_steps": [
-    "Open the Stacked Area Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Import structured data via CSV/JSON file or manual entry in the grid editor",
+    "2. Map columns to 'X-axis (Time)', 'Y-axis (Value)', and 'Series (Category)' fields",
+    "3. Select stacking mode using the toggle switch between 'Absolute' and 'Percentage' views",
+    "4. Configure color encoding through the integrated CIELAB color picker for accessibility compliance",
+    "5. Adjust axis ranges manually or enable auto-scaling for dynamic datasets",
+    "6. Export the chart as SVG for infinite resolution or PNG with customizable DPI settings"
   ],
   "usage_examples": [
-    "Use Stacked Area Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "A financial analyst comparing quarterly revenue contributions from different product lines across five years",
+    "A mobile app developer visualizing daily active user distribution across Android, iOS, and Web platforms",
+    "An energy researcher analyzing hourly electricity generation mix from solar, wind, and fossil sources",
+    "A retail manager tracking inventory levels of various clothing categories across multiple store locations"
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Kalorienrechner hilft Ihnen, Ihren täglichen Kalorienbedarf anhand der Mifflin-St Jeor Gleichung zu bestimmen.",
+  "detailed_description": "Der Calorie Calculator berechnet den individuellen täglichen Kalorienbedarf unter Berücksichtigung von physiologischen Parametern und Lebensstilfaktoren. Das Tool verwendet standardisierte Formeln wie die Mifflin-St Jeor-Gleichung zur Bestimmung der Basalmetabolischen Rate (BMR) und integriert anschließend multiplikative Faktoren für Aktivitätsniveau gemäß der MET-Wert-Methode (Metabolic Equivalent of Task). Technisch erfolgt die Berechnung durch eine serverseitige PHP-Logik, die die Benutzereingaben (Alter, Gewicht, Körpergröße, Geschlecht) mit klinisch validierten Koeffizienten verarbeitet. Die Aktivitätsstufen (von sitzend bis sehr aktiv) werden über einen vorkonfigurierten Multiplikatorensatz (z.B. 1.2 für sedentäre Tätigkeiten) in den Total Daily Energy Expenditure (TDEE)-Wert eingerechnet. Zusätzlich ermöglicht die Einbindung von Zielvorgaben (Abnahme, Erhalt, Zunahme) eine dynamische Anpassung der Kalorienbilanz mit 500-kcal-Intervallen. Einzigartig ist die optionale Ausgabe einer makronährstoffbasierten Verteilung (Proteine/Fette/Kohlenhydrate) basierend auf der Acceptable Macronutrient Distribution Range (AMDR) der National Academy of Medicine. Dieses Tool ist besonders relevant für Personen mit präzisen Ernährungszielen wie Leistungssportler, Diabetiker oder Nutzer von Intervallfasting-Protokollen, da es präzisere Werte liefert als pauschale Berechnungsmodelle.",
   "usage_steps": [
-    "Geben Sie Ihr Alter ein",
-    "Gewicht und Größe eingeben",
-    "Geschlecht auswählen",
-    "Aktivitätslevel wählen",
-    "BMR und TDEE anzeigen"
+    "Wählen Sie Ihr Geschlecht aus den Radiobuttons 'Männlich' oder 'Weiblich'",
+    "Geben Sie Ihr Alter in ganzzahligen Jahren in das Feld 'Alter' ein",
+    "Tragen Sie Ihr Körpergewicht in Kilogramm mit einer Nachkommastelle ein",
+    "Legen Sie Ihre Körpergröße in Zentimetern über den Number-Input fest",
+    "Wählen Sie Ihr wöchentliches Aktivitätsniveau aus dem Dropdown: 'Sitzend', 'Leicht aktiv', 'Moderat aktiv', 'Sehr aktiv' oder 'Extrem aktiv'",
+    "Aktivieren Sie das gewünschte Zielkästchen ('Abnehmen', 'Erhalten' oder 'Zunehmen') und klicken Sie auf 'Berechnen'"
   ],
   "usage_examples": [
-    "Kalorien für Gewichtsverlust berechnen",
-    "Erhaltungs-Kalorien bestimmen",
-    "Kalorienüberschuss planen"
+    "Ein Marathonläufer berechnet seinen TDEE-Wert unter Berücksichtigung von Trainings- und Ruhetagen zur Optimierung der Glykogenspeicherung",
+    "Eine Diabetikerin ermittelt ihren individuellen Insulin-Kalorien-Faktor durch Kombination des Tool-Ergebnisses mit ärztlichen Empfehlungen",
+    "Ein Bodybuilder nutzt die Makronährstoffverteilungsoption zur Planung einer hypo-kalorischen Diät mit 2.2g Proteinen pro Körpergewichtskilogramm",
+    "Eine stillende Mutter passt ihren Nährstoffbedarf durch Addition des Energiebedarfs für die Muttermilchproduktion an"
   ]
 }

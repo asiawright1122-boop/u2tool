@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Textreiniger ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Textreiniger können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Textreiniger kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Textreiniger sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der Text Cleaner ist ein leistungsstarkes Tool zur Textverarbeitung, das es Benutzern ermöglicht, Texte präzise zu bereinigen und zu formatieren. Technisch gesehen, extrahiert und manipuliert das Tool Textzeichen, entfernt unnötige Leerzeichen, Zeilenumbrüche und andere Formattierungen, um einen sauberen und konsistenten Text zu erzeugen. Dies ist besonders nützlich in Szenarien, in denen Textdaten aus verschiedenen Quellen zusammengeführt und standardisiert werden müssen, um inkonsistente Formate oder Fehlern zu beseitigen. Benutzer können das Tool in verschiedenen Bereichen einsetzen, wie zum Beispiel bei der Vorbereitung von Daten für maschinelles Lernen, der Bereinigung von Texten für Webseiten oder der Optimierung von Textdateien für automatisierte Prozesse. Der Text Cleaner bietet eine benutzerfreundliche Oberfläche, die es ermöglicht, komplexe Textmanipulationen mit wenigen Klicks durchzuführen. Die Technologie hinter dem Tool basiert auf regulären Ausdrücken (RegEx) und String-Manipulationsalgorithmen, die es ermöglichen, spezifische Textmuster zu erkennen und zu bearbeiten. Dies sorgt für eine hohe Flexibilität und Anpassungsfähigkeit, sodass der Text Cleaner sowohl für einfache als auch für komplexe Textbearbeitungsaufgaben geeignet ist.",
   "usage_steps": [
-    "Öffnen Sie die Textreiniger-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Öffnen Sie die Text Cleaner-Seite und klicken Sie auf das Textfeld mit der Beschriftung 'Eingabetext'.",
+    "Fügen Sie den Text ein, den Sie bereinigen möchten, indem Sie ihn kopieren und in das Textfeld einfügen oder direkt eingeben.",
+    "Wählen Sie im Abschnitt 'Bereinigungsaktionen' die gewünschten Optionen aus, wie zum Beispiel 'Leerzeichen entfernen', 'Zeilenumbrüche entfernen' oder 'Doppelte Leerzeichen entfernen'.",
+    "Klicken Sie auf den Button 'Text bereinigen', um die ausgewählten Aktionen anzuwenden.",
+    "Der bereinigte Text wird im Textfeld 'Ergebnistext' angezeigt. Überprüfen Sie, ob der Text Ihren Anforderungen entspricht.",
+    "Falls notwendig, können Sie weitere Bereinigungsaktionen durchführen oder den bereinigten Text kopieren und verwenden."
   ],
   "usage_examples": [
-    "Verwenden Sie Textreiniger, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein Webentwickler bereitet Textdaten vor, die von verschiedenen Quellen stammen und inkonsistente Formate aufweisen. Mit dem Text Cleaner kann er alle unnötigen Leerzeichen und Zeilenumbrüche entfernen, um die Daten für die Integration in eine Datenbank oder eine API vorzubereiten.",
+    "Ein Datenwissenschaftler arbeitet an einem maschinellen Lernprojekt und benötigt saubere und konsistente Textdaten. Der Text Cleaner hilft ihm, Textdateien von Fehlern zu befreien und sie in das erforderliche Format zu bringen, bevor sie in das Modell eingespeist werden.",
+    "Ein Content-Autor schreibt einen Artikel und möchte sicherstellen, dass der Text vor der Veröffentlichung auf der Website korrekt formatiert ist. Mit dem Text Cleaner kann er doppelte Leerzeichen und unnötige Zeilenumbrüche entfernen, um den Text flüssiger und professioneller erscheinen zu lassen.",
+    "Ein Programmierer erstellt ein Skript, das Textdateien für automatisierte Prozesse verarbeitet. Der Text Cleaner ermöglicht es ihm, die Textdateien vor der Verarbeitung zu bereinigen, um Fehler und Inkonsistenzen zu vermeiden, die das Skript beeinträchtigen könnten."
   ]
 }

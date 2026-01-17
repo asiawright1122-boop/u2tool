@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur d'Adresse MAC est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Générateur d'Adresse MAC, vous pouvez facilement traiter diverses données sans installer de logiciel ou de module complémentaire. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur d'Adresse MAC peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur n'importe quel serveur. Utilisez immédiatement le Générateur d'Adresse MAC pour découvrir des services en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur d'adresses MAC est un outil spécialisé permettant de créer des adresses MAC aléatoires ou personnalisées conformes à la norme IEEE 802. Ce générateur produit des adresses structurées en trois octets d'Identifiant Organisationnel Unique (OUI) suivi de trois octets spécifiques au fournisseur, avec possibilité de contrôler le bit UAA (Universally Administered Address) ou LAA (Locally Administered Address), ainsi que les bits de diffusion multiple ou unidiffusion. Ce dispositif est essentiel pour les tests de configuration réseau, la simulation d'appareils dans des environnements de développement ou la vérification de politiques de contrôle d'accès réseau (NAC). Son fonctionnement repose sur des algorithmes de génération pseudo-aléatoire combinés à des opérations de masquage binaire pour garantir la conformité des adresses générées, avec la possibilité de forcer des OUI de fournisseurs réels ou d'utiliser des schémas personnalisés. Contrairement aux générateurs basiques, cet outil intègre des options techniques fines pour manipuler les champs de l'en-tête Ethernet au niveau bit, ce qui en fait un outil de diagnostic réseau avancé.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur d'Adresse MAC",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les réglages de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez le type d'OUI via le menu déroulant : 'Aléatoire', 'Spécifique à un fournisseur', ou 'Personnalisé'",
+    "Activez/désactivez le bit de diffusion multiple via le commutateur 'Multicast/Unicast'",
+    "Choisissez le mode d'administration d'adresse avec l'option 'UAA' (administré par le fabricant) ou 'LAA' (administré localement)",
+    "Cliquez sur le bouton 'Générer' pour créer une adresse MAC conforme aux paramètres sélectionnés",
+    "Copiez le résultat au format '00:00:00:00:00:00' depuis la zone de sortie préformatée",
+    "Utilisez le bouton 'Réinitialiser' pour revenir aux paramètres par défaut ou modifier des paramètres spécifiques"
   ],
   "usage_examples": [
-    "Utilisez le Générateur d'Adresse MAC pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur de logiciels réseau testant la gestion simultanée de plusieurs interfaces virtuelles nécessitant des adresses MAC uniques",
+    "Un administrateur système simulant des appareils IoT avec des OUI spécifiques à des fabricants réels pour valider des règles de filtrage",
+    "Un consultant en sécurité effectuant un audit de pare-feu réseau en générant des adresses MAC avec bits multicast pour tester les règles de contrôle",
+    "Un utilisateur domestique contournant temporairement un filtre MAC sur un réseau Wi-Fi public tout en préservant la validité des trames Ethernet"
   ]
 }

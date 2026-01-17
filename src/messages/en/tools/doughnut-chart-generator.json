@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Doughnut Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Doughnut Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Doughnut Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Doughnut Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Doughnut Chart Generator is a specialized data visualization tool that creates proportional representations of categorical data using concentric circular segments with a customizable hollow center. Built with HTML5 Canvas and SVG rendering capabilities, this tool enables users to transform tabular numerical data into interactive visual formats by calculating segment angles via trigonometric functions and rendering paths using the SVG path element's arc commands. The hollow center percentage adjusts dynamically to optimize data density perception, addressing the 'pie chart angle estimation problem' identified in visualization research. Developers and analysts can leverage this tool for applications requiring precise proportional representation, such as financial portfolio breakdowns, resource allocation visualization, and A/B test distribution analysis. The tool's dual export functionality supports raster PNG outputs for presentation use and vector SVG for scalable web integration, while its client-side processing ensures data privacy through browser-only computation.",
   "usage_steps": [
-    "Open the Doughnut Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Open the Data Input Grid and enter numerical values in the 'Amount' column with corresponding labels in the adjacent field",
+    "2. Adjust the Inner Radius Slider to define the hollow center's proportional size (20-60% of chart diameter)",
+    "3. Select color schemes from predefined palettes or input custom HEX codes for each segment",
+    "4. Enable the 'Percentage Labels' toggle to display calculated segment proportions or 'Value Labels' for absolute numbers",
+    "5. Configure Chart Dimensions using precise pixel inputs for width and height in the Layout Settings panel",
+    "6. Click 'Export as PNG' for lossless raster images or 'Export as SVG' to download editable vector paths with embedded metadata"
   ],
   "usage_examples": [
-    "Use Doughnut Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "A financial analyst visualizing departmental budget allocations with 35% hollow center for executive presentations",
+    "A healthcare researcher comparing patient demographic distributions across clinical trial phases using color-coded segments",
+    "An IT manager monitoring server resource usage metrics with real-time SVG updates embedded in a dashboard",
+    "An educator demonstrating statistical probability distributions to students with interactive label toggling during lectures"
   ]
 }

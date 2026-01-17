@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculadora Hexadecimal es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Usando Calculadora Hexadecimal, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya seas desarrollador, diseñador o usuario general, Calculadora Hexadecimal puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y no se subirá a ningún servidor.",
+  "detailed_description": "El Hex Calculator es una herramienta técnica diseñada para ejecutar operaciones aritméticas y lógicas en formato hexadecimal, esencial para programadores que trabajan con sistemas de bajo nivel, criptografía o protocolos de red. Esta herramienta permite realizar sumas, restas, multiplicaciones y divisiones hexadecimales, además de operaciones bitwise como AND, OR, XOR, NOT, desplazamientos lógicos y aritméticos. Internamente, el sistema convierte los valores hexadecimales ingresados a binario para procesar los cálculos utilizando aritmética de complemento a dos, manejando correctamente desbordamientos (overflows) y acarreos (carry). Los resultados se presentan en hexadecimal, decimal y binario simultáneamente, facilitando la depuración de datos. Su necesidad surge en contextos donde la precisión es crítica, como en el cálculo de direcciones de memoria, manipulación de máscaras de bits o implementación de algoritmos criptográficos, evitando errores de conversión manual. A diferencia de calculadoras básicas, soporta operandos de múltiples bytes (hasta 64 bits) y muestra el estado de las banderas del procesador (ZF, CF, OF) tras cada operación, características clave para análisis técnico profundo.",
   "usage_steps": [
-    "Abrir la página de la herramienta Calculadora Hexadecimal",
-    "Ingresar o pegar el contenido a procesar en el cuadro de entrada",
-    "Ajustar las opciones y configuraciones de la herramienta según sea necesario",
-    "Hacer clic en el botón de procesar para ver los resultados",
-    "Copiar o descargar los resultados procesados"
+    "Selecciona la operación deseada en el menú desplegable 'Modo': 'Aritmético' o 'Bitwise'.",
+    "Elige la operación específica en el campo 'Función': ej. 'Suma' o 'XOR'.",
+    "Ingresa el primer valor hexadecimal en el campo 'Operand 1' usando notación 0x o sin prefijo.",
+    "Para operaciones binarias, introduce el segundo valor en 'Operand 2' siguiendo el mismo formato.",
+    "Activa la casilla 'Mostrar detalles' para visualizar la representación binaria y estado de banderas.",
+    "Haz clic en 'Calcular' para obtener resultados en hexadecimal, decimal y binario en tiempo real."
   ],
   "usage_examples": [
-    "Usar Calculadora Hexadecimal para procesar tus datos",
-    "Obtener resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador web ajusta valores de color RGBA sumando transparencia a un código hex: 0x80FF0000 + 0x33000000 = 0xB3FF0000.",
+    "Un ingeniero de firmware calcula offsets de memoria: 0x1A3F8000 OR 0x0000FFFF = 0x1A3FFFFF para mapear registros periféricos.",
+    "Un especialista en redes aplica máscaras de subred con AND lógico: 0xAC1F347B AND 0xFFFF0000 = 0xAC1F0000.",
+    "Un programador de juegos modifica un estado de bits: 0x0F XOR 0x31 = 0x3E para activar flags específicos en un controlador."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Half Doughnut Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Half Doughnut Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Half Doughnut Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Half Doughnut Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Half Doughnut Chart Generator is a specialized data visualization tool that transforms numerical datasets into semicircular charts using SVG rendering technology. Unlike traditional pie charts, this tool leverages polar coordinate systems to map values to 180-degree arcs, enabling asymmetric data distribution visualization. Developers and designers use this tool to emphasize specific data segments in constrained UI spaces, such as dashboard widgets or mobile interfaces where vertical real estate is limited. The generator employs angular data mapping to calculate proportional slice angles, supporting features like inner/outer radius customization, color gradient application, and label positioning algorithms. Technical implementation involves parsing JSON-formatted input data, normalizing values against total sums, and generating corresponding <path> elements with precise d3.js-compatible SVG attributes. The tool's unique value lies in its ability to create visually striking, asymmetrical representations while maintaining accessibility through ARIA-compliant labeling and contrast ratio optimization.",
   "usage_steps": [
-    "Open the Half Doughnut Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the Data Input Panel and format your dataset as a JSON array of key-value pairs (e.g., [{\"category\": \"A\", \"value\": 30}, {\"category\": \"B\", \"value\": 70}])",
+    "Select the primary segment using the 'Dominant Slice' toggle to highlight specific data points with expanded arc spacing",
+    "Adjust the chart radius and thickness sliders to control the doughnut's visual weight within your interface",
+    "Configure color schemes through the HEX code input fields or activate the gradient generator for multi-hued slices",
+    "Enable the 'Mirror Axis' option to invert the chart's orientation for right-to-left language layouts",
+    "Export the final visualization as SVG code or PNG raster image using the resolution selector (up to 4K)"
   ],
   "usage_examples": [
-    "Use Half Doughnut Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Creating a KPI dashboard widget that focuses on a single performance metric while showing contextual comparisons in a semicircle",
+    "Visualizing survey responses with two primary options (e.g., Yes/No) where the chart's open end emphasizes the data's incompleteness",
+    "Designing a budget allocation tracker that emphasizes expense categories against remaining funds in financial applications",
+    "Implementing a progress indicator that shows completion percentage while maintaining a modern, minimal aesthetic in SaaS platforms"
   ]
 }

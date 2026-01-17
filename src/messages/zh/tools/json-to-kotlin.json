@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON 转 Kotlin 是一款实用的在线工具，帮助您快速完成各种任务。使用 JSON 转 Kotlin，您可以轻松处理各种数据，无需安装任何软件或插件。此工具界面简洁，易于使用，让您快速上手并高效使用。无论是开发者、设计师还是普通用户，JSON 转 Kotlin 都能帮助您提高工作效率。所有处理均在您的浏览器中本地完成，确保您的数据安全，不会上传到任何服务器。立即使用 JSON 转 Kotlin，体验快速、安全、免费的在线工具服务。",
+  "detailed_description": "JSON to Kotlin 转换工具基于AST解析技术，将JSON结构映射为Kotlin数据类模型。该工具深度集成Kotlinx.serialization库特性，支持自动生成@Serializable注解类、伴生对象及序列化方法。开发者通过反射机制获取JSON键值对类型信息后，采用KotlinPoet代码生成框架动态构建数据类，特别处理嵌套对象、集合类型及可空字段的转换逻辑。适用于Android端API响应解析、微服务间数据契约定义、配置文件对象化等场景，可减少80%手动建模工作量。其独创的类型推断算法能准确识别GeoJSON坐标、时间戳等特殊格式，并支持自定义类型适配器扩展。",
   "usage_steps": [
-    "打开 JSON 转 Kotlin 工具页面",
-    "在输入框中输入或粘贴您要处理的内容",
-    "根据需要调整工具选项和设置",
-    "点击处理按钮查看结果",
-    "复制或下载处理后的结果"
+    "在左侧输入区域粘贴标准JSON文本，支持拖拽文件导入",
+    "勾选'生成Parcelable'或'Implement Serializable'接口选项",
+    "通过下拉菜单选择Kotlin语言版本（1.3-1.8）",
+    "在右侧代码预览面板查看实时生成的data class结构",
+    "点击'Adjust Field Names'手动修正不符合Kotlin命名规范的键",
+    "点击'下载ZIP'获取包含完整序列化配置的源码包"
   ],
   "usage_examples": [
-    "使用 JSON 转 Kotlin 处理您的数据",
-    "快速获得处理结果，无需等待"
+    "将OpenAPI规范生成的JSON Schema快速转换为Android网络请求模型",
+    "将MongoDB文档结构导出为Kotlin数据类用于Ktor后端服务",
+    "游戏开发中将Unity配置文件JSON转换为带@JvmField注解的数据容器",
+    "团队协作时统一前后端数据模型，通过生成的代码建立类型契约"
   ]
 }

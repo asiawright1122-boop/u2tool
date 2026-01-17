@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Le Testeur CORS vérifie la configuration Cross-Origin Resource Sharing pour n'importe quelle URL. Visualisez les en-têtes CORS, testez les requêtes preflight et déboguez les problèmes cross-origin.",
+  "detailed_description": "Le CORS Tester est un outil technique conçu pour analyser et valider les configurations de Cross-Origin Resource Sharing (CORS) d'un serveur. Il permet d'envoyer des requêtes HTTP simulées avec des en-têtes personnalisés pour reproduire des scénarios de cross-origin, puis d'examiner les réponses serveur pour identifier les politiques de sécurité appliquées. Cet outil est essentiel pour les développeurs confrontés à des erreurs de type 'blocked by CORS policy' lors de l'intégration d'APIs ou de services tiers. Il aide à vérifier la présence et la validité des en-têtes comme 'Access-Control-Allow-Origin', 'Access-Control-Allow-Methods', et 'Access-Control-Allow-Credentials'. Son fonctionnement repose sur l'envoi de requêtes OPTIONS préalables (preflight) pour les méthodes HTTP non sécurisées, suivies de requêtes GET/POST simulées, en mesurant les réponses et en détectant les violations des politiques CORS. Il inclut également un analyseur de chaîne de certificats SSL pour les tests en HTTPS.",
   "usage_steps": [
-    "Entrez l'URL à tester",
-    "Sélectionnez la méthode de requête",
-    "Ajoutez une origine personnalisée si nécessaire",
-    "Envoyez la requête de test CORS",
-    "Examinez les en-têtes CORS dans la réponse"
+    "Saisir l'URL cible dans le champ 'Endpoint' avec validation du format URI.",
+    "Sélectionner la méthode HTTP (GET, POST, PUT, DELETE, etc.) via le menu déroulant.",
+    "Configurer les en-têtes personnalisés (Origin, Content-Type, Authorization) dans l'éditeur JSON intégré.",
+    "Activer/désactiver l'option 'Include Credentials' pour tester les requêtes avec cookies de session.",
+    "Cliquer sur 'Envoyer Requête' pour déclencher la séquence de tests (preflight + requête principale).",
+    "Analyser les résultats dans l'onglet 'Réponse Serveur' avec code HTTP, en-têtes retournés et logs de blocage CORS."
   ],
   "usage_examples": [
-    "Déboguer les erreurs CORS",
-    "Vérifier la configuration CORS de l'API",
-    "Tester les requêtes preflight"
+    "Un développeur frontend teste l'accès à une API backend en local (http://localhost:3000) depuis un site en production (https://app.example.com) pour diagnostiquer des erreurs de partage de ressources.",
+    "Un administrateur système vérifie la configuration d'un serveur Nginx pour s'assurer que seuls les domaines autorisés (ex: *.entreprise.com) peuvent accéder aux services REST internes.",
+    "Un auditeur de sécurité valide qu'un endpoint ne permet pas l'accès depuis des origines non sécurisées (ex: file:// ou http://) malgré une configuration Access-Control-Allow-Origin: *.",
+    "Un ingénieur DevOps débogue une application mobile utilisant CapacitorJS en testant les requêtes depuis l'origine 'capacitor://local' vers une API cloud."
   ]
 }

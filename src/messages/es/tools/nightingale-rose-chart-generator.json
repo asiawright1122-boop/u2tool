@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Generador de Gráfico Rosa de Nightingale es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Generador de Gráfico Rosa de Nightingale, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Generador de Gráfico Rosa de Nightingale puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Generador de Gráfico Rosa de Nightingale inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Generador de Gráficos de Rosa de Nightingale es una herramienta en línea que permite crear gráficos polares de área, conocidos también como gráficos de rosa de Nightingale. Este tipo de gráfico es especialmente útil para visualizar datos categóricos con valores numéricos que varían en radio, brindando una representación visual única y atractiva. Los usuarios necesitan esta herramienta para comunicar de manera efectiva diferencias y patrones en datos complejos, como estadísticas de ventas por temporada, comparaciones de rendimiento en deportes, o análisis de datos meteorológicos. La herramienta permite ajustar parámetros como el color, la escala de radio, y los etiquetas de los ejes, lo que facilita la personalización del gráfico para adaptarse a necesidades específicas. Además, el generador utiliza algoritmos de cálculo de áreas polares para asegurar que los datos se representen de manera precisa y proporcional, lo que es crucial para la interpretación correcta de los datos.",
   "usage_steps": [
-    "Abre la página de la herramienta Generador de Gráfico Rosa de Nightingale",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Paso 1: Accede al Generador de Gráficos de Rosa de Nightingale desde la sección de 'Charts' en el menú principal de la página.",
+    "Paso 2: En la sección 'Datos de Entrada', carga tu conjunto de datos en formato CSV o ingresa manualmente los valores en la tabla proporcionada.",
+    "Paso 3: Personaliza el gráfico en la pestaña 'Opciones de Estilo'. Selecciona colores, ajusta la escala de radio, y configura las etiquetas de los ejes según tus preferencias.",
+    "Paso 4: En la pestaña 'Configuración del Gráfico', define el número de categorías y verifica que los datos se distribuyan correctamente en el gráfico polar.",
+    "Paso 5: Utiliza la función de 'Vista Previa' para visualizar el gráfico antes de finalizar. Ajusta cualquier detalle necesario para mejorar la claridad y la presentación.",
+    "Paso 6: Una vez que estés satisfecho con el gráfico, haz clic en 'Exportar' para descargar el gráfico en formato PNG, SVG, o PDF, y utiliza el enlace de 'Compartir' para distribuirlo."
   ],
   "usage_examples": [
-    "Usa Generador de Gráfico Rosa de Nightingale para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Ejemplo 1: Un analista de ventas utiliza el Generador de Gráficos de Rosa de Nightingale para visualizar las ventas trimestrales de diferentes productos, destacando las fluctuaciones estacionales y comparando el rendimiento de cada producto.",
+    "Ejemplo 2: Un científico de datos meteorológico emplea esta herramienta para representar los niveles de precipitación mensuales en una región específica, facilitando la identificación de patrones climáticos y tendencias a lo largo del año.",
+    "Ejemplo 3: Un entrenador de fútbol utiliza el gráfico de rosa de Nightingale para comparar el rendimiento de sus jugadores en diferentes aspectos del juego, como velocidad, resistencia y habilidad técnica, lo que ayuda en la toma de decisiones de formación y estrategia.",
+    "Ejemplo 4: Un economista utiliza el generador para visualizar la distribución de ingresos en diferentes sectores de la economía, proporcionando una representación clara y visual de las disparidades económicas."
   ]
 }

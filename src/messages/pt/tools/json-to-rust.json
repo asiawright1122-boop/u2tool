@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON para Rust é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando JSON para Rust, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja um desenvolvedor, designer ou usuário geral, JSON para Rust pode ajudar a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam enviados para qualquer servidor. Use JSON para Rust imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O conversor JSON para Rust é uma ferramenta técnica que automatiza a transformação de objetos JSON em estruturas Rust fortemente tipadas. Quando um desenvolvedor trabalha com APIs RESTful, arquivos de configuração ou sistemas de banco de dados, frequentemente precisa mapear dados JSON para structs Rust, um processo manual que pode levar a erros e perda de tempo. A ferramenta resolve isso ao analisar o esquema JSON fornecido, inferir tipos de dados Rust (como i32, String, Vec<T>, Option<T>), e gerar structs com atributos de serialização/deserialização via Serde, a biblioteca padrão de serialização em Rust. Internamente, o algoritmo identifica campos aninhados, cria structs complementares e aplica conversões de nomenclatura (ex: snake_case para CamelCase). Além disso, suporta tipos complexos como arrays de objetos e campos opcionais, garantindo compatibilidade com serde_json. Isso é especialmente útil para back-end Rust que consome APIs externas ou persiste dados em formatos semiestruturados, permitindo integração segura e eficiente.",
   "usage_steps": [
-    "Abra a página do conversor JSON para Rust",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole seu JSON na área de texto central, garantindo uma sintaxe válida com indentação correta.",
+    "Defina o nome da struct raiz no campo 'Nome do Struct' (ex: Usuario, Configuracao).",
+    "Ative a opção 'Incluir Serde' para adicionar #[derive(Serialize, Deserialize)] automaticamente.",
+    "Clique em 'Gerar Código Rust' para iniciar o processamento do JSON e criação das structs.",
+    "Revise o código gerado, que incluirá campos com tipos inferidos e, se necessário, structs auxiliares aninhadas.",
+    "Copie o código para sua IDE Rust ou exporte como arquivo .rs usando o botão 'Baixar' no painel de resultados."
   ],
   "usage_examples": [
-    "Use JSON para Rust para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Criar structs para integrar com a API do Stripe, convertendo respostas JSON de pagamentos em tipos Rust utilizáveis para validação de dados.",
+    "Transformar um arquivo config.json com chaves de ambiente em uma struct Settings, facilitando acesso tipado durante a inicialização de uma aplicação.",
+    "Mapear documentos de um banco NoSQL como MongoDB para structs Rust, preparando o projeto para uso com o driver Rust oficial.",
+    "Gerar modelos de dados a partir de logs no formato JSON, permitindo análise estatística com ferramentas Rust como Polars ou DataFusion."
   ]
 }

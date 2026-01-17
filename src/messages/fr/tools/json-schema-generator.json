@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Schéma JSON est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Générateur de Schéma JSON, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Schéma JSON peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez immédiatement le Générateur de Schéma JSON pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de schéma JSON permet de créer automatiquement des schémas JSON conformes aux spécifications Draft-07 et Draft-2020-12 à partir d'exemples de données JSON. Ce processus repose sur une analyse syntaxique avancée qui identifie les types de données (chaînes, nombres, booléens, objets imbriqués), les contraintes de structure (propriétés obligatoires, tableaux typés) et les formats (URI, date-time). Les développeurs l'utilisent pour valider la cohérence des payloads d'API, normaliser des données hétérogènes, ou documenter des interfaces. L'outil exploite un algorithme d'inférence de type basé sur la sémantique JSON Schema, en générant des définitions avec des mots-clés comme $schema, $id, oneOf ou format. Il supporte les références internes via $ref et permet de personnaliser les niveaux de stricteza (ex: acceptation de champs null). La sortie est un schéma optimisé pour des outils de validation comme Ajv ou json-schema-validator.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Schéma JSON",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Collez vos données JSON dans la zone de texte 'Données d'entrée' (exemple : { \"nom\": \"Alice\", \"âge\": 30 })",
+    "2. Sélectionnez la version de spécification souhaitée (Draft-07 ou Draft-2020-12) dans le menu déroulant 'Version du schéma'",
+    "3. Activez/désactivez l'option 'Stricteza maximale' pour imposer des types précis ou autoriser les conversions implicites",
+    "4. Cochez 'Inclure les formats' pour ajouter des validations comme email ou uri dans le schéma généré",
+    "5. Cliquez sur 'Générer le schéma' pour obtenir le résultat dans la zone 'Schéma JSON output'",
+    "6. Copiez le schéma ou téléchargez-le au format .json en utilisant le bouton 'Exporter'"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Schéma JSON pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "1. Créer un schéma de validation pour les réponses d'une API REST qui retourne des profils utilisateurs avec des champs optionnels comme 'adresse.postale'",
+    "2. Documenter automatiquement la structure attendue d'un fichier de configuration JSON utilisé par une application Node.js",
+    "3. Générer des schémas pour valider des payloads Kafka dans un pipeline de données Apache Spark",
+    "4. Convertir des exemples de données CSV transformés en JSON vers des schémas utilisables avec Apache Avro"
   ]
 }

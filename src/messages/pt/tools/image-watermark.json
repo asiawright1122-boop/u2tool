@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Watermark de Imagem é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando a Watermark de Imagem, você pode facilmente processar diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece a usá-la rapidamente e de maneira eficiente. Seja desenvolvedor, designer ou usuário geral, a Watermark de Imagem pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviados a qualquer servidor. Use a Watermark de Imagem imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Image Watermark é uma ferramenta técnica especializada em sobreposição de camadas de texto sobre imagens rasterizadas, permitindo ajustes precisos de transparência, tipografia e posicionamento. Seu funcionamento baseia-se em algoritmos de composição de imagens que utilizam técnicas de blending de pixels, onde o texto é renderizado como uma camada separada com controle de alfa (RGBA) para ajustar a opacidade entre 0% e 100%. Suporta formatos como JPEG, PNG e WebP, preservando a profundidade de cor original (24-bit/48-bit) durante o processamento. A ferramenta emprega técnicas de anti-aliasing para suavização de bordas do texto e permite escolha de fontes web-safe ou customizadas, com opções de ajuste de kerning e leading. Funciona via interface web responsiva que utiliza a API Canvas do HTML5 para pré-visualização em tempo real, enquanto o backend processa a imagem final com bibliotecas como PIL/Pillow (Python) ou ImageMagick. É essencial para profissionais que necessitam proteger propriedade intelectual, marcar provas de conceito para clientes, criar mockups com identificação visual, ou aplicar metadados visuais em workflows de gestão de ativos digitais.",
   "usage_steps": [
-    "Acesse a página da ferramenta de Watermark de Imagem",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta e clique em 'Selecionar Imagem' para carregar seu arquivo rasterizado (JPEG/PNG/WebP).",
+    "Utilize a grade de posicionamento para definir o local exato do watermark (opções: canto superior esquerdo, centro, rodapé, etc.).",
+    "Ajuste o controle deslizante de opacidade para definir a transparência do texto entre 0% (invisível) e 100% (sólido).",
+    "Escolha a fonte tipográfica, tamanho em pixels, cor (paleta RGB ou HEX) e estilo (negrito, itálico, sombra).",
+    "Digite o texto desejado, ativando opções avançadas como rotação de 45° ou repetição automática como padrão de fundo.",
+    "Clique em 'Processar' para gerar a imagem composta e baixe o resultado com resolução original ou ajustada."
   ],
   "usage_examples": [
-    "Use a Watermark de Imagem para processar seus dados",
-    "Obtenha rapidamente os resultados do processamento sem esperar"
+    "Fotógrafos profissionais adicionando marcas d'água com direitos autorais em imagens de stock antes do upload em marketplaces.",
+    "Designers gráficos inserindo logotipos vetoriais convertidos em texto como marca d'água para validar versões de prova de layouts.",
+    "Empresas de e-commerce aplicando rótulos 'EM TESTE' semi-transparentes em produtos não liberados para evitar divulgação prematura.",
+    "Desenvolvedores de temas WordPress criando pré-visualizações com marca d'água dinâmica para proteger screenshots de demonstração."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Die Regex Muster-Bibliothek ist eine praktische Online-Tool, die Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit der Regex Muster-Bibliothek können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann die Regex Muster-Bibliothek Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitung wird lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie die Regex Muster-Bibliothek sofort, um schnell, sicher und kostenlos online-Serviceleistungen zu erleben.",
+  "detailed_description": "Die Regex Patterns Library ist ein interaktives Entwicklungs-Tool, das standardisierte reguläre Ausdrücke für häufige Validierungs- und Transformationsaufgaben bereitstellt. Technisch gesehen bietet sie präzise definierte Muster für E-Mail-Adressen (RFC 5322-konform), URLs (mit und ohne Protokoll), internationale Telefonnummern (ITU-E.164-Format), IP-Adressen (IPv4/IPv6), Datumsformate (ISO 8601) und mehr. Entwickler benötigen dieses Tool, um komplexe Textverarbeitungsaufgaben zu lösen, ohne jedes Mal komplexe Regex-Logik von Grund auf neu entwickeln zu müssen. Es verhindert häufige Fehler wie unvollständige Zeichensatzeinschlüsse oder ineffiziente Backtracking-Verfahren. Die Bibliothek funktioniert durch eine semantische Zuordnung von Anwendungsfällen zu optimierten Regex-Patterns, inklusive Erklärungen zu Lookahead-Assertions, Capture Groups und Lazy Quantifiern. Jedes Pattern ist mit Testfällen hinterlegt, die Grenzfälle wie TLD-Längenbeschränkungen bei Domains oder optionale Ländercodes bei Telefonnummern abdecken.",
   "usage_steps": [
-    "Öffnen Sie die Seite der Regex Muster-Bibliothek",
-    "Geben Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Anpassen Sie die Tooloptionen und Einstellungen, wenn erforderlich",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Wählen Sie eine Kategorie aus dem erweiterten Dropdown-Menü (z.B. 'Kommunikation' für E-Mails oder 'Telekommunikation' für Telefonnummern)",
+    "Aktivieren Sie den Schalter 'Erweiterte Optionen' zur Anpassung von Modifiers wie case-insensitive oder multiline-Modus",
+    "Geben Sie Testdaten in das mehrzeilige Eingabefeld ein, um Echtzeit-Match-Feedback zu erhalten",
+    "Klicken Sie auf das 'Analyse'-Icon, um die Capture Groups und Match-Positionen visuell dargestellt zu bekommen",
+    "Nutzen Sie den 'Code-Generator', um das Pattern in verschiedenen Sprachen (JavaScript, Python, PHP) mit Escape-Sequenzen zu exportieren",
+    "Importieren Sie eigene Regex-Muster über den 'Custom Pattern'-Tab zur Validierung gegen die eingebaute Testdatenbank"
   ],
   "usage_examples": [
-    "Verwenden Sie die Regex Muster-Bibliothek, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Validierung von Benutzereingaben in einem Webformular mit mehrsprachiger Unterstützung für internationale E-Mail-Adressen",
+    "Normalisierung von Telefonnummern in einer CRM-Datenbank durch Entfernung nichtnumerischer Zeichen und Formatierung nach E.164",
+    "Extraktion spezifischer URL-Parameter aus Webserver-Logs zur Analyse von Traffic-Quellen mit komplexen Query-String-Patterns",
+    "Sanitization von Benutzernamen in einem Chat-System durch Ausschluss steuerungszeichensensitiver Unicode-Blöcke"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Détection de Codage est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant la Détection de Codage, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plug-ins. Cette outil possède une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, la Détection de Codage peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, garantissant la sécurité de vos données et évitant leur upload sur n'importe quel serveur. Utilisez la Détection de Codage immédiatement pour expérimenter des services d'outils en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "Le détecteur d'encodage analyse des fichiers ou des chaînes de caractères pour identifier précisément leur schéma d'encodage, y compris UTF-8, UTF-16, ISO-8859-1, Windows-1252, et des formats plus spécifiques comme EBCDIC ou Shift-JIS. Cet outil est essentiel pour résoudre des problèmes de corruption de données lors de l'interopérabilité entre systèmes hétérogènes, notamment lors de l'importation de fichiers CSV/JSON ou de l'analyse de logs serveur. Il utilise des algorithmes de reconnaissance de motifs binaires, la détection de BOM (Byte Order Mark), et des modèles statistiques d'analyse fréquentielle des octets. Contrairement aux méthodes basiques, il combine des bibliothèques spécialisées comme ICU et une logique heuristique pour gérer les cas ambigus, comme les fichiers tronqués ou les encodages non standards. La précision est renforcée par un calcul de probabilité (ex: 98,7 % de certitude pour UTF-8 avec BOM). Indispensable pour les développeurs manipulant des données multilingues ou migrant des systèmes legacy.",
   "usage_steps": [
-    "Ouvrez la page de la Détection de Codage",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'outil via l'onglet 'Encodage' puis 'Détecteur d'encodage'.",
+    "Glissez-déposez un fichier dans la zone de téléchargement ou collez du texte dans l'éditeur.",
+    "Activez l'option 'Analyse approfondie' pour scanner les encodages exotiques (ex: KOI8-R).",
+    "Cliquez sur 'Lancer la détection' pour initier l'analyse hexadécimale du contenu.",
+    "Consultez le rapport détaillé affichant l'encodage principal, les encodages alternatifs possibles et le score de confiance.",
+    "Utilisez le bouton 'Exporter les métadonnées' pour obtenir un JSON avec les résultats techniques."
   ],
   "usage_examples": [
-    "Utilisez la Détection de Codage pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un développeur identifie que les caractères Scandinaves (Å, Ä, Ö) dans un CSV proviennent d'un encodage Windows-1252 mal interprété par Python en UTF-8.",
+    "Un administrateur système diagnostique un fichier de logs Apache en ISO-8859-1 qui génère des erreurs d'analyse dans un pipeline ELK configuré en UTF-8.",
+    "Une entreprise décode correctement un export de base de données DB2 en EBCDIC lors d'une migration vers un SGBD open source.",
+    "Un data scientist corrige les caractères cassés dans un jeu de données JSON contenant des textes en Japonais (Shift-JIS vs UTF-8)."
   ]
 }

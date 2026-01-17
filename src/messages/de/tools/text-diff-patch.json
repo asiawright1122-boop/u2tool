@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text Diff & Patch ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Text Diff & Patch können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Benutzer sind, kann Text Diff & Patch Ihnen helfen, Ihre Arbeitswirkungsrate zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie Text Diff & Patch sofort, um schnell, sichere und kostenlose Online-Tool-Dienstleistungen zu genießen.",
+  "detailed_description": "Der Text Diff & Patch-Tool generiert auf Basis des Myers-Diff-Algorithmus präzise Differenzierungen zwischen zwei Textversionen im Unified Diff-Format. Technisch gesehen analysiert er Zeilen-basierte Abweichungen, identifiziert 'Hunks' (zusammenhängende Änderungsbereiche) und codiert diese inklusive Kontextinformationen. Entwickler nutzen diesen Patchgenerator für automatisierte Code-Updates in CI/CD-Pipelines, die Synchronisation von Konfigurationsdateien in DevOps-Umgebungen oder das Nachvollziehen von Änderungen in Open-Source-Projekten. Der Patch-Apply-Modus verarbeitet standardkonforme Diff-Ausgaben mithilfe des Unix 'patch'-Kommandos im Backend, wobei konfigurierbare Context-Optionen (3 Zeilen Standardkontext) Konflikte bei Überlappungen reduzieren. Besonders effizient zeigt sich das Tool bei der Analyse von JSON/YAML-Strukturen durch semantische Formatierungserhaltung oder beim Merging von Übersetzungsdateien mit PO-Diff-Unterstützung. Die Implementierung nutzt WebAssembly-basierte Diff-Engines für native Performance im Browser, kombiniert mit serverseitigem Delta-Encoding für große Textvolumina.",
   "usage_steps": [
-    "Öffnen Sie die Text Diff & Patch-Tool-Seite",
-    "Geben Sie oder fügen Sie den zu verarbeitenden Text in das Eingabefeld ein",
-    "Passen Sie die Tool-Einstellungen wie gewünscht an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Wechseln Sie zwischen den Tabs 'Diff-Generator' und 'Patch-Applier' je nach Anwendungsfall.",
+    "Fügen Sie im Diff-Modus den Originaltext in den linken Editor und die modifizierte Version in den rechten Bereich ein.",
+    "Konfigurieren Sie die Kontextzeilen (Standard: 3) und aktivieren Sie 'Whitespace-ignorieren' bei Formatierungsunterschieden.",
+    "Klicken Sie auf 'Generate Unified Diff', um den Patch-Code im rechten Ausgabefeld zu erzeugen.",
+    "Im Patch-Applier-Tab laden Sie den Originaltext und fügen den Diff-Code in das spezielle Patch-Eingabefeld ein.",
+    "Starten Sie die Anwendung mit 'Apply Patch' und laden Sie das Ergebnis über den 'Save Result'-Button herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie Text Diff & Patch, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell verarbeitete Ergebnisse ohne zu warten"
+    "Ein Entwickler erstellt einen Patch für eine Python-Script-Korrigierung und teilt diesen sicherheitskritischen Fix mit Teamkollegen.",
+    "Systemadministratoren vergleichen Konfigurationsdateien vor und nach Software-Updates, um automatisierte Rollback-Prozeduren zu generieren.",
+    "Ein Übersetzer nutzt das Tool, um Differenzen zwischen PO-Dateien verschiedener Lokalisierungsstände visuell darzustellen.",
+    "Bei der Dokumentationserstellung generiert ein Tech Writer Delta-Pakete für Changelog-Einträge zwischen Markdown-Versionen."
   ]
 }

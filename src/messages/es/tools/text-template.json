@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text Template es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Con Text Template, puedes procesar varios datos fácilmente sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Text Template puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa Text Template ahora para experimentar servicios rápidos, seguros y gratuitos de herramientas en línea.",
+  "detailed_description": "Text Template es una herramienta de procesamiento de texto avanzado que permite a los desarrolladores y usuarios reemplazar variables en plantillas de texto con valores específicos. Esta funcionalidad es esencial para automatizar la generación de contenido dinámico, como correos electrónicos personalizados, informes automatizados, y documentos configurables. La herramienta utiliza un sistema de marcadores de posición y expresiones regulares para identificar y reemplazar las variables, lo que asegura una precisión y flexibilidad excepcionales. Los usuarios pueden cargar plantillas de texto predefinidas o crear nuevas, y luego proporcionar un conjunto de valores que se insertarán en las ubicaciones correspondientes. Esto no solo ahorra tiempo, sino que también reduce el riesgo de errores humanos en la manipulación manual del texto. La herramienta es especialmente útil en entornos de desarrollo, marketing, y administración de contenidos, donde la consistencia y la personalización son fundamentales.",
   "usage_steps": [
-    "Abre la página de la herramienta Text Template",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Paso 1: Accede a la sección 'Plantillas' y selecciona 'Crear Nueva Plantilla'.",
+    "Paso 2: En el editor de texto, escribe tu plantilla utilizando marcadores de posición en el formato {{variable}}.",
+    "Paso 3: Haz clic en 'Guardar Plantilla' y asigne un nombre a tu plantilla para futuras referencias.",
+    "Paso 4: Ve a la sección 'Valores' y crea un conjunto de valores correspondientes a las variables en tu plantilla.",
+    "Paso 5: Haz clic en 'Procesar' para que la herramienta reemplace los marcadores de posición con los valores proporcionados.",
+    "Paso 6: Revisa el texto resultante en la sección 'Salida' y descarga o copia el contenido según sea necesario."
   ],
   "usage_examples": [
-    "Usa Text Template para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Ejemplo 1: Un equipo de marketing necesita enviar correos electrónicos personalizados a sus clientes. Utiliza Text Template para crear una plantilla de correo con marcadores de posición para el nombre del cliente, la oferta del día y el enlace de seguimiento. Luego, proporciona una lista de clientes y sus respectivos datos, y la herramienta genera automáticamente cada correo personalizado.",
+    "Ejemplo 2: Un desarrollador debe generar informes semanales de rendimiento para múltiples proyectos. Crea una plantilla con marcadores de posición para los nombres de los proyectos, las métricas clave y los comentarios del gerente. Introduce los datos relevantes y la herramienta produce informes listos para ser distribuidos.",
+    "Ejemplo 3: Una agencia de publicidad necesita crear anuncios personalizados para diferentes segmentos de mercado. Utiliza Text Template para diseñar una plantilla de anuncio con marcadores de posición para el público objetivo, el mensaje principal y la llamada a la acción. Proporciona los datos específicos para cada segmento y la herramienta genera anuncios personalizados.",
+    "Ejemplo 4: Un administrador de contenidos debe actualizar regularmente las páginas de un sitio web con nueva información. Crea plantillas de HTML con marcadores de posición para los títulos, subtítulos y parrafos. Introduce los nuevos contenidos y la herramienta genera el código HTML actualizado, listo para ser publicado en el sitio."
   ]
 }

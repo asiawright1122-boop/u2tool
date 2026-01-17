@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Convertidor Hex Base64 es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Con el Convertidor Hex Base64, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Convertidor Hex Base64 puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Convertidor Hex Base64 ahora para experimentar servicios en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Hex Base64 Converter permite transformar datos codificados en formato hexadecimal a Base64 y viceversa, manteniendo la integridad binaria durante el proceso. Técnicamente, el conversor interpreta cadenas hexadecimales (base-16) como secuencias de bytes, aplicando luego una codificación Base64 (RFC 4648) que representa esos bytes mediante 64 caracteres ASCII imprimibles. Esta herramienta es crucial para desarrolladores que manipulan tokens criptográficos, claves API en formato AWS, o imágenes incrustadas en JSON mediante Data URLs. Su funcionamiento interno incluye validación estricta de caracteres hexadecimales (0-9, A-F) y decodificación previa de padding Base64 (=) para garantizar resultados precisos. Para conversiones inversas, el algoritmo realiza un mapeo de 6 bits a 8 bits, ajustando automáticamente la longitud de los datos de entrada. Diferente de otros conversores, este implementa detección automática de errores en bloques inválidos y soporta entrada de datos en múltiples líneas sin alterar el resultado final.",
   "usage_steps": [
-    "Abre la página del Convertidor Hex Base64",
-    "Introduce o pega el contenido que deseas procesar en la casilla de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona la dirección de conversión usando los botones de radio 'Hex a Base64' o 'Base64 a Hex'",
+    "Pega o escribe los datos en el campo de texto principal, respetando el formato requerido por la opción seleccionada",
+    "Haz clic en el botón 'Convertir' para iniciar el proceso de transformación binaria",
+    "Revisa el resultado en el área de salida, que muestra automáticamente el padding Base64 o la cadena hex normalizada",
+    "Usa el botón 'Intercambiar' para invertir la dirección de conversión manteniendo los datos actuales",
+    "Limpia los campos con el botón 'Reiniciar' para comenzar una nueva operación"
   ],
   "usage_examples": [
-    "Usa el Convertidor Hex Base64 para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Codificar una clave privada SSH en formato PEM a Base64 para incluirla en un archivo de configuración Terraform",
+    "Convertir un hash SHA-256 (64 caracteres hex) a Base64 para comparar huellas digitales en herramientas de análisis de malware",
+    "Transformar una imagen PNG en Base64 para incrustarla directamente en un documento SVG optimizado",
+    "Decodificar un token OAuth2 en formato JWT que contiene un payload hexadecimal representando credenciales temporales"
   ]
 }

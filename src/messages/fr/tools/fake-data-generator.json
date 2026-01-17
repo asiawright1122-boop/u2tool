@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Données Fakes est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Générateur de Données Fakes, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Données Fakes peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléversées sur un serveur. Utilisez immédiatement le Générateur de Données Fakes pour découvrir des services en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de fausses données est un outil essentiel pour les développeurs et les testeurs, conçu pour créer des ensembles de données fictifs mais réalistes. Techniquement, l'outil utilise des algorithmes de génération de données basés sur des modèles statistiques et des distributions de données pour produire des résultats authentiques. Il peut générer des noms, des adresses e-mail, des adresses postales, des numéros de téléphone, des dates, et même des données plus complexes comme des adresses IP ou des coordonnées géographiques. Les développeurs ont besoin de cet outil pour tester leurs applications sans utiliser des données réelles, ce qui est crucial pour garantir la confidentialité et la sécurité. Les cas d'utilisation spécifiques incluent le test de performances, l'audit de sécurité, le développement de fonctionnalités, et la création de jeux de données pour des simulations. L'outil fonctionne en permettant à l'utilisateur de sélectionner le type de données à générer, de configurer les paramètres spécifiques (comme le format de l'adresse e-mail), et de générer un nombre défini de résultats. Il supporte également l'exportation des données générées au format CSV pour une intégration facile dans des bases de données ou des outils de traitement de données.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Données Fakes",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les réglages de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à la section 'Type de données' et sélectionnez le type de données que vous souhaitez générer (par exemple, 'Noms', 'Adresses e-mail', 'Numéros de téléphone').",
+    "Dans le panneau de configuration à droite, ajustez les paramètres spécifiques pour le type de données choisi. Par exemple, pour les adresses e-mail, vous pouvez spécifier le domaine (comme 'example.com').",
+    "Définissez le nombre de données à générer en utilisant le champ 'Quantité'.",
+    "Cliquez sur 'Générer' pour créer les données. L'outil affichera les résultats dans une table en bas de l'interface.",
+    "Si nécessaire, utilisez les options de tri et de filtrage pour organiser les données générées selon vos besoins.",
+    "Pour exporter les données, cliquez sur l'icône 'Exporter' et sélectionnez le format de fichier souhaité (par exemple, CSV)."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Données Fakes pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur web utilise le générateur de fausses données pour tester la capacité d'une application à gérer un grand volume de requêtes d'inscription, en générant des milliers d'adresses e-mail et de noms fictifs.",
+    "Une équipe de sécurité informatique crée des jeux de données contenant des adresses IP et des dates pour simuler des attaques de piratage et tester les mécanismes de détection et de réponse de leur système.",
+    "Un analyste de données utilise l'outil pour générer des ensembles de données comportant des coordonnées géographiques pour tester l'efficacité des algorithmes de géolocalisation dans un environnement de développement.",
+    "Un ingénieur de produits crée des profils d'utilisateurs fictifs pour évaluer l'expérience utilisateur de nouvelles fonctionnalités, en incluant des détails tels que les adresses, les dates de naissance et les numéros de téléphone."
   ]
 }

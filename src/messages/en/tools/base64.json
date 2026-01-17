@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Base64 Encoder/Decoder is a practical online tool that helps you quickly complete various tasks. Using Base64 Encoder/Decoder, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Base64 Encoder/Decoder can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Base64 Encoder/Decoder immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "This tool implements Base64 encoding/decoding using the RFC 4648 standard algorithm, converting binary data to ASCII strings through 6-bit chunking. Technically, encoding maps 8-bit byte triplets to 6-bit index values using a 64-character dictionary (A-Z, a-z, 0-9, '+', '/'), with padding ('=') added for data lengths not divisible by 3. Decoding reverses this process by converting Base64 characters back to their 6-bit values and regrouping into 8-bit bytes. Developers need this for scenarios like embedding binary assets in JSON/XML, handling HTTP Basic Authentication headers, parsing JWT tokens, or transmitting binary files through text-based protocols. The tool supports UTF-8 encoded text and raw binary input, preserving null bytes and special characters during conversion. All operations execute client-side in WebAssembly for security, with zero data transmitted to servers.",
   "usage_steps": [
-    "Open the Base64 Encoder/Decoder tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Click the 'Encode' or 'Decode' toggle to select operation mode",
+    "2. Paste raw text or binary data into the 'Source Data' textarea",
+    "3. Check the 'Process as Binary' checkbox for non-textual content",
+    "4. Click the 'Convert' button to execute the transformation",
+    "5. Copy the result from the 'Output Result' field using the clipboard icon",
+    "6. (Optional) Download results as .txt file via the 'Save Output' button"
   ],
   "usage_examples": [
-    "Use Base64 Encoder/Decoder to process your data",
-    "Get processing results quickly without waiting"
+    "Embedding a SVG logo inline in HTML by converting the XML code to Base64 for data URLs",
+    "Extracting payload contents from a JWT token by decoding its Base64Url-encoded middle segment",
+    "Preparing HTTP Basic Auth headers by encoding 'username:password' credentials",
+    "Debugging email attachments by converting Base64-decoded MIME parts back to readable text"
   ]
 }

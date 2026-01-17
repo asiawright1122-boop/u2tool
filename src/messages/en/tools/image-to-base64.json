@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Image to Base64 is a practical online tool that helps you quickly complete various tasks. Using Image to Base64, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Image to Base64 can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Image to Base64 immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "This tool converts image files into Base64-encoded strings using MIME-type-aware binary-to-text encoding. By processing image headers and pixel data through a buffer allocation algorithm, it generates RFC 4648-compliant data URIs suitable for direct embedding in HTML, CSS, or JavaScript. Developers require this functionality to optimize page load performance by eliminating HTTP requests for small graphics, inline critical UI assets in single-page applications, or create self-contained email templates. The converter handles JPEG, PNG, and WebP formats by reading their binary structure, detecting color profiles, and applying Base64 alphabet encoding with proper padding. Output strings include the appropriate data URI scheme prefix (e.g., 'data:image/png;base64,') for immediate implementation in web contexts.",
   "usage_steps": [
-    "Open the Image to Base64 tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Click 'Choose File' to select an image from your device (supports PNG, JPEG, WebP up to 10MB)",
+    "2. Toggle 'Preserve Transparency' for PNG files requiring alpha channel retention",
+    "3. Select target encoding format from dropdown (original format preserved by default)",
+    "4. Adjust quality slider (60-100%) for JPEG compression optimization",
+    "5. Click 'Convert' to process the image through the Base64 encoder",
+    "6. Copy the output URI from the text area or download the encoded string as .txt"
   ],
   "usage_examples": [
-    "Use Image to Base64 to process your data",
-    "Get processing results quickly without waiting"
+    "Embedding a company logo in a transactional email template to ensure display across clients",
+    "Inlining social media icons in a progressive web app's service worker script",
+    "Creating data URI CSS sprites for responsive navigation bars",
+    "Generating embeddable favicons directly in HTML headers for SEO optimization"
   ]
 }

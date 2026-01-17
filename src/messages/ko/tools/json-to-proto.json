@@ -1,15 +1,17 @@
 {
-  "detailed_description": "JSON to Protocol Buffers 변환기는 JSON 데이터를 Protocol Buffers 스키마 정의로 변환합니다. gRPC, 마이크로서비스, 고성능 데이터 시리얼화를 처리하는 개발자에게 적합합니다.",
+  "detailed_description": "이 도구는 JSON 샘플을 역으로 파싱해 Protocol Buffers의 .proto 정의를 자동 생성한다. 최상위 오브젝트를 메시지로, 키를 필드로, 값의 타입을 scalar, message, repeated, oneof, map<string, T> 등으로 추론한다. 중첩 구조는 재귀적으로 메시지를 분해하며, 배열 길이와 요소 타입을 분석해 repeated<T> 또는 message[] 형태를 결정한다. JSON number는 double/int64를 우선 추론하고, boolean은 bool로 매핑한다. 문자열은 UTF-8 문자열로 처리하며, RFC 3339 형식의 문자열은 google.protobuf.Timestamp로, ISO-8601 날짜 문자열은 google.type.Date로 매핑하는 옵션이 제공된다. 키가 식별자 규칙을 벗어나면 snake_case로 정규화하고, 중복 키는 oneof로 묶거나 접미어를 붙여 구문 오류를 회피한다. anypb로 표시된 키는 google.protobuf.Any로 선언되며, proto3의 syntax와 optional 키워드, field number 자동 배정, package/name 지정, 옵션(go_package, optimize_for 등) 삽입을 지원한다. 결과물은 syntax/proto3, package, message, enum, service 스켈레톤까지 포함한 완전한 .proto를 출력하며, JSON 샘플에 없는 필드도 기본값 규칙에 따라 자동 보강한다. 이는 gRPC 서버·클라이언트 스텁 생성, Kafka/Protobuf 스키마 레지스트리 업로드, FHIR 리소스/Avro 스키마 대체, IoT 디바이스 펌웨어 메시지 표준화, NestJS/Prisma DTO 자동화 등 실전 워크플로우에서 일관된 스키마 관리를 가능하게 한다.",
   "usage_steps": [
-    "입력 영역에 JSON 데이터를 붙여넣으세요",
-    "메시지 이름과 패키지 옵션을 설정하세요",
-    "변환을 클릭하여 proto 스키마를 생성하세요",
-    "생성된 .proto 정의를 검토하세요",
-    "proto 파일을 복사하거나 다운로드하세요"
+    "좌측 ‘JSON 입력’ 영역에 변환할 JSON 텍스트를 붙여넣거나 파일을 드래그해 로드합니다.",
+    "우측 ‘옵션’ 패널에서 패키지명, 최상위 메시지명, fieldRules(automatic/optional), oneof 임계값을 설정합니다.",
+    "‘타입 매핑’에서 numberKind(double/int64), stringAs(Timestamp|Date|String), anypb 자동 감지 여부를 활성화합니다.",
+    "‘이름 규칙’으로 snake_case/pascalCase 선택, 중복 키 처리(접미/oneof), enum 자동 생성(키 집합 기반)을 지정합니다.",
+    "‘고급’에서 syntax=proto3, optimize_for, go_package 옵션을 추가하고, field number 자동 배정 범위를 설정합니다.",
+    "‘생성’ 버튼을 눌러 .proto를 출력하고, 필요 시 ‘검증’으로 proto3 문법 체크를 수행한 뒤 파일로 다운로드합니다."
   ],
   "usage_examples": [
-    "API 응답에서 proto 스키마를 생성하세요",
-    "gRPC 서비스 정의를 만드세요",
-    "REST API를 gRPC로 변환하세요"
+    "Kafka 이벤트 스키마를 레지스트리에 등록하기 위해 샘플 메시지를 .proto로 변환: 패키지를 com.example.events, 메시지를 Event로 설정하고 stringAs=Timestamp, numberKind=int64, repeated와 map<string,string>를 유지해 클러스터 전반에 일관된 키·타입을 확보합니다.",
+    "FHIR 리소스 스키마를 경량화: Patient 리소스의 JSON을 .proto로 변환해 google.protobuf.Any로 확장 필드를 매핑하고, oneof로 선택 필드를 묶어 메시지 크기를 줄이며 gRPC 서비스의 응답/요청에 직접 활용합니다.",
+    "IoT 디바이스 펌웨어 업그레이드: 펌웨어가 내보내는 원격 계측 JSON을 .proto로 변환해 메시지 크기와 파싱 비용을 낮추고, optional 필드로 버전 호환성을 확보하며, field number를 고정해 기존 코드와의 손상 없이 롤링 업데이트를 수행합니다.",
+    "NestJS + Prisma DTO 자동화: REST 엔드포인트가 수신하는 JSON을 .proto로 변환하고 protoc 플러그인(protoc-gen-validate 등)으로 서버/클라이언트 스텁과 검증 로직을 생성해 프런트엔드와 백엔드 간 타입 불일치를 근본적으로 제거합니다."
   ]
 }

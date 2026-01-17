@@ -1,14 +1,17 @@
 {
-  "detailed_description": "HTML vers JSX est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant HTML vers JSX, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, HTML vers JSX peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, garantissant la sécurité de vos données et ne sera pas téléchargé sur un serveur. Utilisez HTML vers JSX immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Notre outil HTML vers JSX est un convertisseur avancé conçu pour transformer du code HTML valide en syntaxe JSX utilisée dans React. Techniquement, il analyse la structure HTML via un parseur syntaxique, identifie les balises auto-fermantes, les attributs non standard (comme 'class' ou 'for') et les convertit en propriétés React conformes (ex: 'className', 'htmlFor'). Il gère également la conversion des styles CSS en objets JavaScript et la normalisation des noms d'événements (onClick au lieu de onclick). Ce convertisseur est indispensable pour les développeurs React souhaitant intégrer du HTML statique existant dans des composants dynamiques, migrer des projets legacy ou optimiser la réutilisation de composants. Il prend en charge les fragments JSX, les expressions conditionnelles et préserve les commentaires HTML si nécessaire. Contrairement aux outils basiques, il conserve la hiérarchie des composants et applique les règles de validation React (comme l'unicité des clés dans les listes).",
   "usage_steps": [
-    "Ouvrez la page de l'outil HTML vers JSX",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Collez votre code HTML dans la zone de saisie multi-lignes en haut de l'interface",
+    "2. Activez/désactivez l'option 'Préserver les commentaires' selon vos besoins",
+    "3. Sélectionnez le mode de conversion : 'Classique' ou 'Strict (avec propTypes)'",
+    "4. Cliquez sur le bouton 'Convertir' pour déclencher l'analyse syntaxique",
+    "5. Consultez les avertissements dans le panneau latéral concernant les balises non converties",
+    "6. Copiez le JSX généré ou téléchargez-le au format .js via le bouton 'Exporter'"
   ],
   "usage_examples": [
-    "Utilisez HTML vers JSX pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Conversion d'un template HTML statique en composant React réutilisable pour un site e-commerce",
+    "Transformation d'un snippet de formulaire Bootstrap en JSX avec gestion correcte des classes dynamiques",
+    "Intégration d'un email HTML dans une application React en remplaçant les styles inline par des objets CSS-in-JS",
+    "Migration automatique de documentation HTML en composants Storybook avec adaptation des attributs ARIA"
   ]
 }

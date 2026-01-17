@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Multi-Ring-Diagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Multi-Ring-Diagramm-Generator können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, der Multi-Ring-Diagramm-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Bearbeitungen erfolgen lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Multi-Ring-Diagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Tools zu erleben.",
+  "detailed_description": "Der Multi-Ring-Charts-Generator ist ein Spezialwerkzeug zur Erstellung komplexer konzentrischer Diagramme, das metrische Daten in mehreren Schichten darstellt. Technisch basiert das Tool auf SVG-Rendering (Scalable Vector Graphics) und ermöglicht die Einbindung von JSON-, CSV- oder manuell eingegebenen Daten, die über einen Parser in ein responsives Grafikmodell transformiert werden. Die Kerntechnologie nutzt D3.js zur dynamischen Generierung von überlagernden Kreisdiagrammen, wobei jede Ringebene individuelle Skalierungsoptionen (linear, logarithmisch, prozentual) und Farbverläufe (Gradienten oder diskrete Farbcodierung) unterstützt. Benutzer können Ringabstände, Dicken, Beschriftungen und Tooltips präzise über ein JSON-basiertes Konfigurationspanel anpassen. Besonders geeignet ist das Tool für Business Intelligence-Analysen, die mehrdimensionale KPIs (z. B. Umsatz, Marktanteil, Kundenzufriedenheit) in einer visuellen Hierarchie darstellen, oder für wissenschaftliche Arbeiten, die experimentelle Daten über verschiedene Zeitintervalle vergleichen. Die Echtzeitvorschau optimiert die Iteration von Designanpassungen, während die Exportfunktion in Raster- (PNG) und Vektorformate (SVG, PDF) die Integration in Präsentationen oder Dashboards erleichtert.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Multi-Ring-Diagramm-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Optionen und Einstellungen des Tools wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "1. Wählen Sie im Bereich 'Datenimport' die Quelle (CSV-Datei, JSON-String oder manuelle Eingabe) und laden Sie die Daten hoch.",
+    "2. Legen Sie im 'Ring-Konfigurator' die Anzahl der Schichten und deren Reihenfolge (von innen nach außen) über Drag-and-Drop fest.",
+    "3. Passen Sie im 'Design-Panel' die Skalierungstypen (linear, prozentual, benutzerdefiniert) und Farbschemata pro Ring an.",
+    "4. Aktivieren Sie im 'Interaktivitäts-Modul' Tooltips und definieren Sie dynamische Beschriftungen mithilfe von Mustervariablen (z. B. {{value}}%).",
+    "5. Verfeinern Sie im 'Layout-Editor' die Abstände zwischen Ringen, die Linienstärke und die Position der Legendenbox.",
+    "6. Exportieren Sie das fertige Diagramm über den 'Download'-Button im gewünschten Format (PNG, SVG oder PDF)."
   ],
   "usage_examples": [
-    "Verwenden Sie den Multi-Ring-Diagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell bearbeitete Ergebnisse ohne zu warten"
+    "Ein Marketingteam visualisiert die Conversion-Raten verschiedener Kampagnenkanäle in separaten Ringen, um den ROI zu vergleichen.",
+    "Ein Gesundheitscoach erstellt ein dreilagiges Diagramm, um monatliche Fortschritte in Herzfrequenz, Kalorienverbrauch und Schlafqualität zu verfolgen.",
+    "Ein Projektmanager zeigt den Fertigstellungsstatus von Aufgaben (Design, Entwicklung, Test) in überlappenden Ringen mit prozentualer Skalierung.",
+    "Ein Klimaforscher analysiert Temperatur-, CO2- und Niederschlagsdaten über mehrere Jahrzehnte durch logarithmisch skalierte Ringebenen."
   ]
 }

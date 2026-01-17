@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Variáveis CSS é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Variáveis CSS, você pode processar vários dados sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Variáveis CSS pode ajudar a melhorar a eficiência do seu trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviado para nenhum servidor. Use o Gerador de Variáveis CSS agora para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O CSS Variables Generator é uma ferramenta técnica especializada para criar e gerenciar propriedades personalizadas (CSS Variables) com precisão visual e interativa. Ele permite definir escalas de cores, tipografia e espaçamentos através de um editor com paletas de cores HSL/HEX, sliders de ajuste fino e pré-visualização em tempo real do CSS gerado. Diferente de ferramentas genéricas, este editor incorpora funcionalidades como sincronização automática de variáveis em cascata, geração de tokens de design system e exportação em múltiplos formatos (SCSS, LESS, JSON). É essencial para desenvolvedores que trabalham com temas dinâmicos, design tokens padronizados ou estilos responsivos, eliminando a necessidade de escrever manualmente repetições de código. A ferramenta processa as entradas do usuário em memória através de um motor de renderização baseado em JavaScript, atualizando o output CSS sem recarregar a página (hot-reloading). Além disso, inclui validação em tempo real de contrastes de acessibilidade e sugestões de escalas tipográficas alinhadas a princípios de design responsivo.",
   "usage_steps": [
-    "Abra a página do Gerador de Variáveis CSS",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse a página inicial e selecione a aba 'Cores' para abrir o editor de paletas",
+    "2. Utilize o seletor de cores HSL para definir um tom base e ajuste saturação/brilho com os sliders",
+    "3. Clique em '+ Nova Variável' e insira um nome semântico (ex: --primary-color)",
+    "4. Navegue até a aba 'Tipografia' e defina escalas com o controle de ratio (ex: 1.25 para modularidade)",
+    "5. Na seção 'Preview', ative a visualização em tempo real arrastando o código HTML de demonstração",
+    "6. Clique no botão 'Exportar' para copiar o CSS gerado ou baixar como arquivo .css"
   ],
   "usage_examples": [
-    "Use o Gerador de Variáveis CSS para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Criar um sistema de design escalável para uma aplicação com múltiplos temas (claro/escuro) usando variáveis organizadas por camadas",
+    "Gerar uma escala tipográfica harmoniosa com tamanhos calculados automaticamente para headings e parágrafos",
+    "Converter manualmente um estilo existente para usar CSS Variables, comparando visualmente os resultados em tempo real",
+    "Construir um componente reutilizável com variáveis parametrizadas, permitindo ajustes dinâmicos sem modificar o CSS original"
   ]
 }

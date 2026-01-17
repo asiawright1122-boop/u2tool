@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Bra Size Calculator determines your bra size from band and bust measurements.",
+  "detailed_description": "The Bra Size Calculator is a precision tool that converts anatomical chest measurements into standardized bra sizes using international sizing formulas. It employs two key inputs: band measurement (underbust circumference in inches or centimeters) and bust measurement (fullest point circumference). The algorithm subtracts band measurement from bust measurement to determine cup volume, then maps this against band size increments to output standardized sizes like 34B or 75C. Users require this tool for critical applications such as online lingerie purchases, medical garment fittings, and costume design where dimensional accuracy matters. The tool accounts for variations in sizing systems (US, EU, UK) and provides fractional band size adjustments for precision. Technical implementation uses adaptive calculation matrices to handle regional size chart discrepancies, ensuring proper fit metrics for diverse body geometries.",
   "usage_steps": [
-    "Measure under bust for band",
-    "Measure at fullest point",
-    "Enter measurements",
-    "View calculated size",
-    "Check sister sizes"
+    "Access the measurement interface and select preferred units (imperial or metric)",
+    "Enter underbust measurement in the 'Band Size' input field using precise tape measure positioning",
+    "Input bust circumference at the bust apex in the designated 'Bust Measurement' field",
+    "Choose desired sizing standard (US/EU/UK) from the dropdown menu for regional accuracy",
+    "Click 'Calculate' to execute the band-bust differential algorithm",
+    "Review size recommendation with cup letter conversion and band size tolerance indicators"
   ],
   "usage_examples": [
-    "Find correct bra size",
-    "Convert international sizes",
-    "Determine sister sizes"
+    "A fashion designer verifying European size conversions for a US-based lingerie production run",
+    "A post-surgical patient determining compression garment sizing using medical tape measurements",
+    "A cosplayer creating armor components that require precise chest dimension mapping",
+    "A vintage clothing restorer adapting 1950s patterns to modern sizing specifications using original measurements"
   ]
 }

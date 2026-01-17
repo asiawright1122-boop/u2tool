@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Convertisseur de fuseaux horaires est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Convertisseur de fuseaux horaires, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Convertisseur de fuseaux horaires peut vous aider à améliorer votre efficacité au travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload vers n'importe quel serveur. Utilisez immédiatement le Convertisseur de fuseaux horaires pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le convertisseur de fuseaux horaires permet de transformer des horodatages entre plus de 400 zones géographiques en tenant compte des règles complexes de changement d'heure (DST) et des décalages UTC. Techniquement, il s'appuie sur la base de données IANA Time Zone (tzdb) synchronisée avec les normes ISO 8601, garantissant une précision au milliseconde près. Ce outil est indispensable pour les développeurs gérant des logs distribués, les coordinateurs de services cloud ou les équipes travaillant à distance à travers le monde. Son moteur utilise l'API JavaScript Intl.DateTimeFormat avec détection automatique des règles historiques de DST, évitant les erreurs courantes liées aux modifications récentes des réglementations horaires. Contrairement aux solutions basiques, il affiche simultanément les conversions vers les 24 zones horaires principales tout en conservant la chronologie des événements via un affichage chronologique inversé.",
   "usage_steps": [
-    "Ouvrez la page du Convertisseur de fuseaux horaires",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez le fuseau horaire source via un menu déroulant hiérarchique organisé par continents et villes principales",
+    "Saisissez la date/heure dans le format ISO 8601 étendu (AAAA-MM-JJTHH:mm:ssZ)",
+    "Activez/désactivez l'option « Heure d'été incluse » selon la spécificité du calcul requis",
+    "Choisissez jusqu'à 5 fuseaux horaires cibles à comparer en mode parallèle",
+    "Utilisez le bouton « Copier en format RFC 5545 » pour intégrer le résultat dans un fichier iCal",
+    "Exportez le résultat au format CSV avec paramétrage des colonnes affichées"
   ],
   "usage_examples": [
-    "Utilisez le Convertisseur de fuseaux horaires pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un développeur calcule l'horodatage d'un log système en UTC+2 pour le convertir en temps local Hawaïen (UTC-10) lors d'une investigation de bug",
+    "Un community manager planifie un post sur les réseaux sociaux à l'heure d'été européenne et vérifie l'affichage simultané en Japonais standard",
+    "Un administrateur système convertit les logs AWS (UTC) en heure locale pour un audit avec une équipe en Inde (UTC+5:30)",
+    "Un astronome synchronise des observations entre télescopes en Chili (UTC-3) et en Russie (UTC+8) en tenant compte des microsecondes"
   ]
 }

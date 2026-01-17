@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to Rust is a practical online tool that helps you quickly complete various tasks. Using JSON to Rust, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON to Rust can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON to Rust immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The JSON to Rust converter transforms JSON data structures into idiomatic Rust structs with Serde serialization support. This tool parses JSON input through a recursive descent parser to construct an abstract syntax tree (AST), analyzing field types including primitive values, arrays, and nested objects. It employs type inference algorithms to determine appropriate Rust types - distinguishing between i32/u64 for numbers, handling special cases like UUID strings, and preserving nullability. The generated code incorporates Serde's derive macros with #[derive(Serialize, Deserialize)] and implements the Deserialize trait for seamless integration with Rust's ecosystem. Users benefit from automated schema generation when building REST API clients, processing configuration files, or modeling database responses. The converter handles edge cases like special characters in keys through Serde's #[serde(rename)] attributes and maintains type consistency across complex hierarchies. It supports Rust editions 2018 and 2021, generating struct definitions with appropriate visibility modifiers and implementing From traits for enum variants derived from JSON arrays. The output includes module-ready code with proper use statements and documentation comments derived from JSON structure metadata.",
   "usage_steps": [
-    "Open the JSON to Rust tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Paste JSON payload into the input text area or load from file using the 'Import JSON' button",
+    "Click 'Validate JSON' to check syntax and confirm structural integrity",
+    "Enter root struct name in the 'Struct Name' field (default: 'Root')",
+    "Adjust visibility settings via dropdown (options: pub, pub(crate), private)",
+    "Configure Serde attributes in the options panel (rename policy, tag/content fields, skip serialization)",
+    "Click 'Generate Structs' to produce Rust code with nested type definitions and copy results via the clipboard icon"
   ],
   "usage_examples": [
-    "Use JSON to Rust to process your data",
-    "Get processing results quickly without waiting"
+    "Converting REST API response JSON into typed structs for a Rust web application consuming external services",
+    "Transforming MongoDB document dumps into schema definitions for Rust-based data processing pipelines",
+    "Generating configuration struct templates from sample JSON configs for CLI applications",
+    "Creating test fixtures by converting sample JSON payloads into compile-time verified Rust types"
   ]
 }

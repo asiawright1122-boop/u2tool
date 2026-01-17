@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Testador de Resolução é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Usando Testador de Resolução, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use de forma eficiente. Seja você desenvolvedor, designer ou usuário geral, Testador de Resolução pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor.",
+  "detailed_description": "O Screen Resolution Tester é uma ferramenta técnica que coleta e exibe métricas de resolução de tela, dimensões de viewport e propriedades de dispositivo usando APIs do navegador, como `window.devicePixelRatio`, `screen.width/height`, `window.innerWidth/innerHeight` e `screen.orientation`. Ele permite que desenvolvedores identifiquem precisamente como elementos responsivos se comportam sob diferentes densidades de pixels, breakpoints de CSS e orientações (portrait/landscape). Essa ferramenta é essencial para depurar problemas de layout em dispositivos com high-DPI (como Retina Displays), validar media queries, e garantir consistência em aplicações web que dependem de cálculos baseados em viewport (como carrosséis full-screen ou modais adaptativos). Internamente, o tool utiliza listeners para eventos `resize` e `orientationchange` para atualizar em tempo real as métricas exibidas, além de calcular a escala lógica versus física da tela, crucial para renderização de gráficos SVG e canvas.",
   "usage_steps": [
-    "Abrir a página da ferramenta Testador de Resolução",
-    "Inserir ou colar o conteúdo a ser processado na caixa de entrada",
-    "Ajustar as opções e configurações da ferramenta conforme necessário",
-    "Clicar no botão de processar para ver os resultados",
-    "Copiar ou baixar os resultados processados"
+    "Acesse a ferramenta e observe o painel central, que mostra automaticamente as métricas atuais: resolução física (screen.width x screen.height), viewport lógico (window.innerWidth x window.innerHeight) e densidade de pixels (devicePixelRatio).",
+    "Rotacione o dispositivo ou redimensione a janela para ver atualizações em tempo real das dimensões e orientação.",
+    "Clique no botão 'Simular Dispositivos' para selecionar resoluções pré-definidas (ex: iPhone 14 Pro, Samsung Galaxy S23) e testar comportamento responsivo sem alterar o hardware.",
+    "Utilize o campo 'Forçar Escala' para aplicar manualmente um valor de devicePixelRatio e verificar como imagens ou elementos vetoriais são renderizados em diferentes densidades.",
+    "Acesse a aba 'Media Queries' para visualizar quais breakpoints CSS (em px e em rem) estão ativos com base nas dimensões atuais do viewport.",
+    "Exporte os dados coletados em formato JSON usando o botão 'Salvar Relatório' para documentar testes de compatibilidade ou compartilhar problemas com equipes."
   ],
   "usage_examples": [
-    "Usar Testador de Resolução para processar seus dados",
-    "Obter resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor testa como uma grid CSS com colunas de 25vw se comporta em telas com devicePixelRatio=2 versus devicePixelRatio=1, identificando artefatos de arredondamento em dimensões não inteiras.",
+    "Um designer verifica se um header sticky permanece fixo após rolagem em um dispositivo com viewport de 375x812px, simulando um iPhone 13 mini diretamente no desktop.",
+    "Um QA engenheiro usa o relatório JSON exportado para comparar métricas entre Chrome e Safari em um iPad Pro, identificando discrepâncias em valores de screen.height devido à barra de notificações.",
+    "Um desenvolvedor de jogos WebGL ajusta a escala de renderização de um canvas com base no valor de devicePixelRatio coletado, garantindo performance consistente em dispositivos com e sem tela Retina."
   ]
 }

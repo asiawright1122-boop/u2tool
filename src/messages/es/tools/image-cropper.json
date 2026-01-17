@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Cortador de Imágenes es una herramienta práctica en línea que te ayuda a completar rápidamente diversas tareas. Con el Cortador de Imágenes, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Cortador de Imágenes puede ayudarte a mejorar la eficiencia de trabajo. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y no subirán a ningún servidor. Utiliza el Cortador de Imágenes inmediatamente para experimentar servicios de herramienta en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Image Cropper permite recortar imágenes con precisión milimétrica mediante un motor basado en HTML5 Canvas que opera en el cliente, garantizando privacidad y velocidad. Soporta dos modos: proporción libre para selección arbitraria de área y proporciones fijas predefinidas (1:1, 4:3, 16:9) o personalizadas mediante entrada decimal. Al cargar una imagen, el algoritmo analiza su matriz de píxeles y aplica una transformación afín al seleccionar el área de interés, preservando metadatos EXIF mediante bibliotecas de procesamiento como ExifTool. La interfaz incluye una cuadrícula vectorial que se adapta dinámicamente a la resolución de la imagen, permitiendo ajustes de submuestreo y supermuestreo para mantener calidad en redimensionamiento. Esencial para desarrolladores que necesitan optimizar imágenes para breakpoints responsivos, diseñadores que preparan assets para frameworks CSS como Bootstrap, y fotógrafos que requieren ajustar composiciones a estándares de plataformas como Instagram o LinkedIn.",
   "usage_steps": [
-    "Abre la página del Cortador de Imágenes",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Haz clic en el botón 'Cargar Imagen' y selecciona un archivo en formato JPEG/PNG con resolución máxima de 8000x8000 píxeles",
+    "Elige el modo de recorte: 'Proporción Libre' o selecciona una proporción fija desde el menú desplegable 'Proporciones Predefinidas'",
+    "Arrastra el marco de selección sobre la imagen para definir el área de recorte, usando las guías vectoriales para alinear elementos críticos",
+    "Ajusta las coordenadas numéricas en los campos X, Y, Ancho y Alto con precisión de punto decimal para ajustes milimétricos",
+    "Presiona 'Aplicar Recorte' para ejecutar el algoritmo de transformación afín en el buffer de memoria del navegador",
+    "Descarga el resultado en formato WebP (calidad 85) o PNG-24, con opción de copiar el enlace Data URI al portapapeles"
   ],
   "usage_examples": [
-    "Utiliza el Cortador de Imágenes para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un fotógrafo ajusta imágenes de 5000x3333 píxeles a proporción 4:5 para publicar en Instagram Stories manteniendo el sujeto centrado mediante las guías de tercios",
+    "Un desarrollador de front-end recorta capturas de pantalla a 1440x900 píxeles (proporción 16:10) para generar thumbnails compatibles con pantallas Retina",
+    "Un diseñador gráfico convierte imágenes de alta resolución en miniaturas de 256x256 píxeles (1:1) para un sistema de iconos escalables usando el modo de submuestreo",
+    "Un community manager procesa 20 imágenes de producto a proporción 3:4 para anuncios de Facebook Marketplace, utilizando el modo de lote para mantener consistencia visual"
   ]
 }

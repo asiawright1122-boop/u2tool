@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Shoe Size Converter helps you find the right shoe size across different sizing systems.",
+  "detailed_description": "The Shoe Size Converter is a precision-engineered tool that translates footwear measurements across four major sizing standards: US, UK, EU, and Asian. Utilizing a database of standardized conversion matrices, it accounts for the non-linear scaling differences between imperial and metric-based systems, including gender-specific foot morphology variations. The tool's algorithm integrates the ISO 9407:2023 Mondopoint system as a universal intermediary, ensuring accuracy within ±0.5 shoe size increments. Users benefit from its ability to handle complex conversions often required for cross-border e-commerce transactions, international footwear manufacturing specifications, and multi-regional retail inventory management. Technical implementation involves parsing user input through regex validation, applying weighted scaling factors derived from biomechanical foot length studies, and dynamically rendering results with adaptive decimal rounding. This approach resolves common industry pain points caused by inconsistent sizing labels across brands and regions.",
   "usage_steps": [
-    "Select gender category",
-    "Choose input size system",
-    "Enter your size",
-    "View all conversions",
-    "Check foot length"
+    "1. Select your source size system from the segmented control (US, UK, EU, or ASIA)",
+    "2. Choose the target conversion system using the corresponding dropdown menu",
+    "3. Enter your exact shoe size in the numeric input field (accepts decimal values up to .5 increments)",
+    "4. Toggle the 'Gender Adjust' switch if converting between gender-specific sizing systems",
+    "5. Click the 'Process Conversion' button to activate the matrix calculation engine",
+    "6. Review the converted sizes displayed in the responsive result grid with system-specific annotations"
   ],
   "usage_examples": [
-    "Convert US to EU size",
-    "Find UK equivalent",
-    "Shop international brands"
+    "A US-based online retailer converting product listings to EU sizes for German customers",
+    "A footwear manufacturer verifying Asian production specifications against UK retail requirements",
+    "A marathon runner purchasing Japanese racing shoes using their known US size",
+    "A fashion designer calculating EU size equivalents for a UK boutique's private label order"
   ]
 }

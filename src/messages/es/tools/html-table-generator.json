@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Tablas HTML es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Con el Generador de Tablas HTML, puedes procesar fácilmente diversos datos sin necesidad de instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Generador de Tablas HTML puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza el Generador de Tablas HTML inmediatamente para experimentar servicios de herramienta en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El HTML Table Generator permite crear tablas HTML semánticas mediante una interfaz visual intuitiva, ideal para desarrolladores que necesitan integrar estructuras tabulares en sus proyectos web. Esta herramienta genera código con soporte para atributos como scope, rowspan, colspan y clases personalizadas, facilitando la creación de tablas accesibles según WCAG. Los usuarios pueden definir tipos de datos (texto, números, fechas) por columna para aplicar formatos adecuados, como alineación derecha para valores numéricos. Incorpora opciones avanzadas como generación de elementos THEAD, TBODY y TFOOT, junto con estilos CSS inline o clases referenciadas. Es especialmente útil para prototipar interfaces, crear informes de datos estructurados o construir interfaces CRUD, ya que optimiza el proceso de codificación manual y reduce errores de sintaxis. Al permitir exportar el resultado como fragmento HTML o React JSX, se adapta tanto a proyectos estáticos como a entornos de componentes modernos.",
   "usage_steps": [
-    "Abre la página del Generador de Tablas HTML",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del tool según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Selecciona el número de filas y columnas iniciales usando los controles numéricos en el panel de configuración",
+    "2. Activa la opción 'Header automático' para generar fila THEAD con etiquetas <th> y atributo scope='col'",
+    "3. Personaliza cada celda con datos de ejemplo mediante el editor en tiempo real para visualizar renderizado",
+    "4. Usa el selector de propiedades para aplicar colspan/rowspan a celdas específicas mediante menús contextuales",
+    "5. Configura estilos con el generador de CSS integrado, seleccionando bordes, espaciado y paletas de colores",
+    "6. Exporta el código generado en formato HTML5 válido o JSX, con opción de copiar al portapapeles"
   ],
   "usage_examples": [
-    "Utiliza el Generador de Tablas HTML para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Diseñar una tabla comparativa para un sitio de análisis de productos, con columnas diferenciadas por categorías y resaltado de valores destacados",
+    "Crear un horario académico con celdas combinadas para clases que abarcan múltiples horas, usando rowspan para agrupaciones temporales",
+    "Generar una plantilla de exportación CSV-HTML para un sistema de gestión, manteniendo consistencia en encabezados y formato de números",
+    "Desarrollar un componente de precios con tablas anidadas y columnas destacadas, exportando a JSX para integrar en una aplicación React"
   ]
 }

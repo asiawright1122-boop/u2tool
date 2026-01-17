@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Video nach Base64 ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Video nach Base64 können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Video nach Base64 kann Ihnen helfen, die Arbeitsproduktivität zu steigern. Alle Bearbeitungen erfolgen lokal im Browser, was Ihre Datensicherheit gewährleistet und sicherstellt, dass keine Dateien auf Server hochgeladen werden. Nutzen Sie Video nach Base64 sofort, um schnelle, sichere und kostenlose Online-Toolservices zu erleben.",
+  "detailed_description": "Der Video-to-Base64-Converter transformiert binäre Videodaten in eine Base64-kodierte ASCII-Zeichenkette, die als Textrepräsentation der Originaldatei dient. Dieser Prozess nutzt das Base64-Encoding-Verfahren, das Binärdaten in 6-Bit-Blöcke unterteilt und durch einen 64-zeichenigen Zeichensatz (A-Z, a-z, 0-9, +, /) abbildet. Die resultierende Ausgabe enthält typischerweise einen MIME-Typ-Präfix (z.B. data:video/mp4;base64,), der für die Einbettung in Webanwendungen oder APIs erforderlich ist. Anwender benötigen dieses Tool für Szenarien wie die direkte Einbindung von Videos in HTML-Dokumente über Data-URIs, die Übertragung von Videodaten in textbasierten Protokollen (z.B. JSON-APIs) oder das Versenden von Videos als E-Mail-Anhänge. Technisch erfolgt die Konvertierung clientseitig im Browser: Nach dem Upload wird die Datei als ArrayBuffer gelesen, durch Web Workers verarbeitet und in Base64-kodierte Chunks umgewandelt, um Memory-Limits zu umgehen. Spezielle Optimierungen wie Chunked Encoding und MIME-Typ-Detection gewährleisten Kompatibilität mit gängigen Videoformaten (MP4, WebM, AVI).",
   "usage_steps": [
-    "Öffnen Sie die Seite des Tools Video nach Base64",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "Wählen Sie die Videodatei über den Dateiauswahldialog im Interface aus.",
+    "Legen Sie den entsprechenden MIME-Typ manuell im Dropdown-Menü fest (z.B. video/mp4 oder video/webm).",
+    "Aktivieren Sie die 'Chunked Encoding'-Option für Dateien über 100 MB.",
+    "Klicken Sie auf 'Start Conversion' und überwachen Sie den Fortschritt anhand des Ladebalkens.",
+    "Kopieren Sie die generierte Base64-Zeichenkette aus dem Textfeld oder exportieren Sie sie als .txt-Datei.",
+    "Validieren Sie die Ausgabe mit einem Base64-Decodier-Tool oder testen Sie sie direkt in Ihrer Anwendung."
   ],
   "usage_examples": [
-    "Verwenden Sie Video nach Base64, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell Bearbeitungsergebnisse ohne zu warten"
+    "Ein Webentwickler generiert eine statische HTML5-Seite mit eingebettetem Intro-Video über ein Data-URI, um externe Abhängigkeiten zu vermeiden.",
+    "Eine API, die Videouploads über JSON-Payloads verarbeitet, erfordert Base64-Encoded-Strings für Cross-Platform-Kompatibilität.",
+    "Ein Unternehmen versendet Schulungsvideos als Base64-kodierte Anhänge in automatisierten E-Mails, um Sicherheitsfilter zu umgehen.",
+    "Ein PDF-Generator integriert Videos als Annotationen durch Base64-Datenströme gemäß PDF-Referenzspezifikation 1.7."
   ]
 }

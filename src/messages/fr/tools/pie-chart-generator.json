@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique en Camembert est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphique en Camembert pour traiter facilement diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique en Camembert peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et ne sont pas téléchargées sur aucun serveur. Utilisez immédiatement le Générateur de Graphique en Camembert pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de diagrammes circulaires permet de transformer des données numériques en visualisations proportionnelles interactives via le moteur de rendu SVG/Canvas HTML5. Cet outil calcule automatiquement les angles des segments (en degrés) en fonction des ratios des valeurs saisies, en appliquant la formule mathématique (valeur/total) × 360° pour chaque série de données. Il supporte l'import de fichiers CSV, l'entrée manuelle via tableau dynamique ou la définition par paramètres GET dans l'URL. Les développeurs apprécieront les options d'export en format vectoriel SVG éditable ou PNG haute résolution (jusqu'à 4K), avec possibilité d'intégrer des attributs ARIA pour l'accessibilité. Les designers utiliseront les outils de personnalisation avancée : gradients personnalisés, transparence des segments, légendes interactives avec filtrage dynamique, et animations de transition via CSS keyframes. Contrairement aux outils basiques, il permet le réglage fin des paramètres de projection 3D (inclinaison de l'axe Y, profondeur apparente) et l'ajout de métadonnées EXIF dans les exports PNG. La logique métier est exécutée en JavaScript pur côté client, assurant une latence minimale et une conformité RGPD par absence de traitement serveur.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique en Camembert",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Chargez vos données via le bouton 'Importer CSV' ou ajoutez manuellement des catégories dans le tableau de saisie dynamique.",
+    "2. Ajustez les valeurs numériques et noms des catégories dans les champs de formulaire synchronisés avec le moteur de rendu.",
+    "3. Personnalisez les couleurs en sélectionnant les palettes chromatiques prédéfinies ou en saisissant des codes hexadécimaux personnalisés.",
+    "4. Activez/désactivez les effets 3D via le curseur 'Profondeur' et ajustez l'angle d'inclinaison avec le sélecteur de perspective.",
+    "5. Utilisez le panneau de prévisualisation en temps réel pour ajuster les marges, l'alignement des légendes et la taille du conteneur SVG.",
+    "6. Exportez en PNG haute résolution avec les options de compression ou en SVG modifiable, avec possibilité d'intégrer des attributs de titre/accessibilité."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique en Camembert pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un chef de projet marketing visualise la répartition des parts de marché entre concurrents en exportant le diagramme dans un PDF interactif.",
+    "Un enseignant crée un graphique animé pour expliquer la composition des budgets publics, en activant les transitions CSS pour des présentations dynamiques.",
+    "Un datajournaliste intègre un diagramme SVG éditable dans un article responsive, en personnalisant les couleurs selon le thème éditorial.",
+    "Un développeur d'applications SaaS génère des modèles de rapports PDF automatisés en intégrant l'API de l'outil pour convertir des données JSON en images PNG."
   ]
 }

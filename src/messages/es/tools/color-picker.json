@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Color Picker es una herramienta práctica en línea que te ayuda a completar diversas tareas de manera rápida. Con el Color Picker, puedes procesar diversos datos sin necesidad de instalar ningún software o plugins. Esta herramienta cuenta con una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Color Picker puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza el Color Picker inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El selector de colores es una herramienta técnica que permite mapear valores cromáticos entre diferentes espacios de color mediante algoritmos de conversión matemática. Al interactuar con la rueda de color HSV (matiz, saturación, valor), el motor interno calcula en tiempo real las representaciones equivalentes en HEX, RGB y HSL, incluyendo el canal alfa para transparencias. Esta herramienta resuelve problemas específicos como la normalización de paletas en proyectos front-end, la verificación de contrastes según WCAG 2.1, o la generación de degradados CSS precisos. Utiliza coordenadas cartesianas para el selector de saturación/brillo y un control deslizante cromático para el matiz, con un motor de cálculo que aplica fórmulas de transformación como RGB a HSL: H = 0° si max=min, S = 0 si L=0 o 1, y L = (max + min)/2. Los desarrolladores pueden integrar valores directamente en frameworks como TailwindCSS o SASS mediante copiado de snippets con formato específico, optimizando el workflow de diseño atómico y la coherencia visual en sistemas de diseño escalables.",
   "usage_steps": [
-    "Abre la página del Color Picker",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Arrastra el puntero dentro del área de selección HSV para definir matiz y saturación.",
+    "2. Ajusta el control deslizante vertical del matiz (0° a 360°) para precisión cromática.",
+    "3. Modifica los campos numéricos de R, G y B manualmente para ajustes finos en modo RGB.",
+    "4. Activa la opción 'Mostrar alpha' para configurar valores de transparencia de 0.0 a 1.0.",
+    "5. Haz clic en los botones de formato para copiar el valor en HEX, RGB(), HSL() o RGBA().",
+    "6. Usa el historial de colores recientes para recuperar paletas previas con un solo clic."
   ],
   "usage_examples": [
-    "Utiliza el Color Picker para procesar tus datos",
-    "Obtén resultados de procesamiento rápidos sin esperar"
+    "Generar variables CSS dinámicas para un sistema de diseño con valores HEX consistentes en múltiples componentes.",
+    "Crear paletas de degradados SVG precisos ajustando matiz y saturación visualmente mientras se obtienen valores HSL interpolados.",
+    "Verificar el ratio de contraste entre colores seleccionados para cumplir con estándares de accesibilidad WCAG AA/AAA.",
+    "Depurar inconsistencias de renderizado de colores en diferentes dispositivos comparando valores RGB absolutos."
   ]
 }

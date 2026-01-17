@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Le Valideur YAML vérifie vos fichiers YAML pour les erreurs de syntaxe et les problèmes structurels. Obtenez des messages d'erreur détaillés avec des numéros de ligne pour un débogage rapide.",
+  "detailed_description": "Le validateur YAML est un outil technique permettant d'analyser la conformité des fichiers YAML selon les spécifications du langage (YAML 1.2). Il détecte les erreurs de syntaxe (indentation incorrecte, parenthèses non fermées), les structures invalides (collections mal formées, clés dupliquées) et les références circulaires dans les ancres/alias. Ce validateur utilise un analyseur syntaxique basé sur la bibliothèque PyYAML, modifiée pour fournir des messages d'erreur détaillés avec numéros de ligne et colonnes précises. Les développeurs l'utiliseront notamment lors de la création de fichiers de configuration pour des systèmes comme Kubernetes, Ansible ou CI/CD, où une erreur YAML peut causer des déploiements ratés. L'outil vérifie également la cohérence des types de données (chaînes, nombres, booléens) et signale les incompatibilités avec les schémas JSON Schema optionnellement fournis. Son moteur d'analyse statique identifie les anti-patterns comme l'utilisation excessive de tags personnalisés ou les structures récursives non conformes aux bonnes pratiques.",
   "usage_steps": [
-    "Coller votre contenu YAML",
-    "Cliquez sur Valider pour vérifier la syntaxe",
-    "Examinez les messages d'erreur",
-    "Corrigez les problèmes en fonction des retours",
-    "Vérifiez le YAML corrigé"
+    "Accédez à l'interface via le menu 'Développement → Validateur YAML' sur le site",
+    "Collez votre code YAML dans la zone d'édition ou utilisez le bouton 'Charger un exemple' pour tester un template prédéfini",
+    "Activez/désactivez le mode strict via le toggle 'Validation stricte' pour appliquer les règles de spécification complète",
+    "Sélectionnez éventuellement un schéma JSON Schema via le bouton 'Importer schéma' pour valider la structure métier",
+    "Cliquez sur 'Valider' pour lancer l'analyse syntaxique et sémantique",
+    "Consultez les résultats dans le panneau inférieur avec signalement des erreurs, avertissements et suggestions de correction"
   ],
   "usage_examples": [
-    "Valider les configurations de Kubernetes",
-    "Vérifier les fichiers Docker Compose",
-    "Déboguer les pipelines CI/CD"
+    "Vérifier un fichier .github/workflows/main.yml avant de push sur GitHub pour éviter les erreurs de workflow",
+    "Valider un fichier docker-compose.yml avec des networks et volumes complexes avant déploiement",
+    "Contrôler la structure d'un playbook Ansible avec des blocs conditionnels imbriqués",
+    "S'assurer de la conformité d'un fichier de configuration Kubernetes avec les exigences de l'API server"
   ]
 }

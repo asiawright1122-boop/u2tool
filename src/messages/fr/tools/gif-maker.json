@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Créateur de GIF est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Créateur de GIF, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Créateur de GIF peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléversées sur un serveur. Utilisez immédiatement le Créateur de GIF pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le GIF Maker est un outil en ligne dédié à la création d'animations GIF à partir de plusieurs images. Techniquement, l'outil utilise des algorithmes de compression spécifiques au format GIF pour combiner des images statiques en une séquence animée. Les utilisateurs peuvent ajuster des paramètres tels que la vitesse d'animation, la taille du fichier final, et le nombre de frames par seconde (FPS). Cet outil est particulièrement utile pour les développeurs, les designers web, et les créateurs de contenu qui ont besoin de créer des mini-tutoriels, des présentations visuelles, ou des éléments d'interface utilisateur animés. Il permet de convertir des séquences d'images en un format facilement partageable et compatible avec la plupart des navigateurs web. Grâce à son interface intuitive, il est possible de personnaliser l'animation, d'ajouter des filtres, et de prévisualiser le résultat avant de finaliser le fichier GIF.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Créateur de GIF",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à la page de l'outil GIF Maker et cliquez sur le bouton 'Charger des images'.",
+    "Sélectionnez plusieurs images à partir de votre appareil ou glissez-les directement dans la zone de chargement.",
+    "Une fois les images chargées, utilisez la barre de défilement pour ajuster la vitesse d'animation (FPS).",
+    "Cliquez sur l'icône 'Filtres' pour appliquer des effets visuels tels que du sépia, noir et blanc, ou du flou.",
+    "Prévisualisez l'animation en cliquant sur le bouton 'Aperçu'.",
+    "Une fois satisfait du résultat, cliquez sur 'Créer GIF' pour générer et télécharger le fichier final."
   ],
   "usage_examples": [
-    "Utilisez le Créateur de GIF pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur souhaite créer une courte démonstration animée d'une nouvelle fonctionnalité d'application pour la présenter lors d'une réunion de sprint.",
+    "Un graphiste a besoin de transformer une série de captures d'écran en une animation GIF pour illustrer un guide utilisateur.",
+    "Un créateur de contenu sur les réseaux sociaux veut animer une série de photos prises lors d'un événement pour captiver son public.",
+    "Un enseignant en ligne veut convertir une série de diapositives en une animation GIF pour créer un mini-tutoriel interactif."
   ]
 }

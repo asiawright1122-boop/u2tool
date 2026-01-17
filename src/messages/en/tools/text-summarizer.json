@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Text Summarizer extracts the most important sentences from your text.",
+  "detailed_description": "The Text Summarizer employs advanced natural language processing (NLP) algorithms to condense lengthy documents while preserving semantic integrity. By analyzing grammatical structures and contextual relationships, it identifies salient sentences through techniques like latent semantic analysis (LSA) and term frequency-inverse document frequency (TF-IDF) weighting. The tool's core engine uses a hybrid approach combining extractive summarization (selecting key sentences verbatim) with abstractive synthesis (generating paraphrased summaries) to maintain factual accuracy while reducing text volume by up to 80%. Developers will appreciate its implementation of BERT-based sentence embeddings for semantic clustering, while professionals benefit from its ability to handle technical documents, legal contracts, and research papers. Unlike basic summarizers, this tool preserves citation formats and specialized terminology through domain-specific language models. Users gain actionable insights from complex materials through optimized information density, making it invaluable for academic research, business intelligence, and content curation workflows.",
   "usage_steps": [
-    "Paste long text",
-    "Select summary length",
-    "Click summarize",
-    "Review key points",
-    "Copy summary"
+    "Access the 'Upload Document' button to process files in PDF, DOCX, or TXT formats (max 10MB)",
+    "Adjust the 'Summary Length' slider to specify output length (25-500 words)",
+    "Select 'Extractive' mode for verbatim sentence extraction or 'Abstractive' for rephrased summaries",
+    "Activate 'Preserve Citations' toggle to maintain reference numbering in academic texts",
+    "Click 'Analyze Text' to initiate processing using selected configuration",
+    "Use 'Compare Versions' feature to evaluate summary variations side-by-side before exporting"
   ],
   "usage_examples": [
-    "Summarize articles",
-    "Condense research papers",
-    "Quick document overview"
+    "Condensing 50-page technical whitepapers into executive summaries for stakeholders",
+    "Creating concise literature reviews by extracting key findings from multiple research articles",
+    "Generating social media teasers from lengthy blog posts while maintaining SEO keywords",
+    "Preparing brief legal briefs by isolating critical clauses from complex contract language"
   ]
 }

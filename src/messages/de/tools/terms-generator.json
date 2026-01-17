@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Terms of Service Generator ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Terms of Service Generator können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der Terms of Service Generator Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Terms of Service Generator sofort, um schnell, sicher und kostenlosen Online-Tools zu nutzen.",
+  "detailed_description": "Der Terms of Service Generator erstellt rechtssichere Nutzungsbedingungen durch eine strukturierte Kombination von Mustervorlagen und individuellen Anpassungen. Technisch basiert das Tool auf einem regelbasierten System, das je nach ausgewähltem Rechtsraum (z.B. EU-DSGVO, US-California Consumer Privacy Act) unterschiedliche Klauselbibliotheken aktiviert. Die Logik nutzt decision trees, um abhängig von Unternehmensart (B2B, B2C), Branche (E-Commerce, SaaS) und geografischer Zielgruppe spezifische Passagen zu generieren. Dabei werden Variablen wie Haftungsausschlüsse, Widerrufsbelehrungen oder Schlichtungsstellen über ein JSON-basiertes Template-System dynamisch eingefügt. Der Generator validiert Eingaben mit Regex-Checks für Unternehmensdaten und implementiert automatisch erforderliche Paragraphen aus dem Telemediengesetz oder der AGB-Reform. Besonders ist die Integration von Musterklauseln des Deutschen Anwaltvereins (DAV) für SaaS-Plattformen, die durch KI-gestützte Formulierungsoptimierung sprachlich präzise Umsetzungen liefern.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Terms of Service Generators",
-    "Geben Sie den zu verarbeitenden Inhalt in das Eingabefeld ein oder kopieren Sie ihn ein",
-    "Passen Sie die Tool-Einstellungen und Optionen nach Bedarf an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "1. Wählen Sie im Dropdown-Menü den Rechtsraum (z.B. 'EU-DSGVO-konform', 'USA-orientiert')",
+    "2. Aktivieren Sie über Schaltflächen die gewünschten Klauselgruppen (z.B. 'Haftungsausschluss bei Force Majeure', 'Nutzungsrechte an geistigem Eigentum')",
+    "3. Füllen Sie die Pflichtfelder des Unternehmensprofils aus (Handelsregister-Nummer, USt-ID, Anschrift)",
+    "4. Passen Sie im WYSIWYG-Editor die Sprache der Vertragsbedingungen an (Formal/Informal, Fachbegriffe/Leicht verständlich)",
+    "5. Nutzen Sie den Compliance-Checker, der automatisch fehlende gesetzliche Pflichtangaben identifiziert",
+    "6. Exportieren Sie das Dokument im gewünschten Format (ODT, PDF/A oder als HTML-Embed-Code für Webseiten)"
   ],
   "usage_examples": [
-    "Verwenden Sie den Terms of Service Generator, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie die Verarbeitungsresultate schnell, ohne zu warten"
+    "Ein Berliner SaaS-Startup erstellt innerhalb von 5 Minuten eine datenschutzkonforme AGB für seine Cloud-Software mit automatischer Einbindung der EU-Standardvertragsklauseln",
+    "Ein freiberuflicher Entwickler generiert individuelle API-Nutzungsbedingungen mit Rate-Limiting-Richtlinien und automatischer Versionierung für seine Open-Source-Bibliothek",
+    "Ein Online-Shop-Betreiber integriert ein maßgeschneidertes Widerrufsformular mit dynamisch berechnetem Rückgaberecht nach § 312 BGB",
+    "Ein international tätiger App-Entwickler erstellt parallele TOS-Versionen für iOS und Android mit regional angepassten Jugendschutzfiltern nach deutschem RStV und US-COPPA"
   ]
 }

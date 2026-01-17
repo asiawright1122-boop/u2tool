@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Barras Polares es una herramienta en línea práctica que te ayuda a completar rápidamente varias tareas. Utilizando el Generador de Gráficos de Barras Polares, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Barras Polares puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesamientos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Barras Polares ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos Polares Radiales es una herramienta especializada que transforma datos categóricos o cíclicos en representaciones visuales radiales utilizando coordenadas polares. Al contrario de los gráficos de barras tradicionales, esta herramienta mapea valores en ejes radiales concéntricos, permitiendo visualizar patrones circulares, distribuciones angulares o magnitudes relacionadas con direcciones. Es ideal para análisis de mercado con segmentos sectoriales, estudios de viento (rosas de los vientos), análisis de rendimiento por horas del día o evaluación de métricas con periodicidad natural. La herramienta implementa bibliotecas de renderizado vectorial SVG y canvas HTML5 para alta resolución, con soporte para escalado sin pérdida y exportación en formatos PNG/SVG. Internamente, convierte datos tabulares en coordenadas polares (r, θ) mediante transformaciones matemáticas, aplicando funciones de normalización para ajustar escalas radiales. Los usuarios pueden personalizar parámetros como el número de ejes radiales, paletas de colores por segmento, transparencia de barras y etiquetas angulares con rotación automática para legibilidad.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Barras Polares",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Ingresa al panel de configuración y define el número de segmentos radiales usando el selector 'Segmentos Circulares' (mínimo 3, máximo 24).",
+    "Ajusta los ángulos iniciales de rotación en el campo 'Dirección Base' para alinear el primer segmento con coordenadas específicas (ej: 0° para orientación norte en análisis geográficos).",
+    "Introduce datos en el editor JSON con campos 'etiqueta', 'valor' y 'color' para personalizar cada sector radial.",
+    "Activa la opción 'Escala Logarítmica' si los datos abarcan órdenes de magnitud distintos, mejorando la percepción visual de diferencias exponenciales.",
+    "Configura las capas de anotación seleccionando 'Mostrar Líneas de Guía' para resaltar umbrales radiales específicos.",
+    "Descarga el resultado usando el botón 'Exportar SVG' para edición vectorial o 'PNG 4K' para imágenes de alta definición listas para informes."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Barras Polares para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un analista de telecomunicaciones visualiza el tráfico de llamadas por hora del día en un ciclo circular para identificar patrones de uso horario.",
+    "Un ingeniero ambiental crea una rosa de los vientos interactiva mostrando frecuencia e intensidad de vientos desde diferentes direcciones.",
+    "Un diseñador UX presenta el tiempo promedio de respuesta de usuarios a un chatbot distribuido en segmentos de 15 minutos alrededor de un reloj analógico.",
+    "Un investigador biomédico compara la efectividad de tres tratamientos en distintos órganos del cuerpo, representando cada órgano como un sector radial con color codificado."
   ]
 }

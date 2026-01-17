@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Le Calculateur de Béton estime le volume de béton nécessaire pour votre projet.",
+  "detailed_description": "Le Calculateur de Béton est un outil technique conçu pour déterminer avec précision le volume de béton requis pour des structures spécifiques telles que dalles, fondations et poteaux. En intégrant des formules géométriques avancées (calcul de volumes prismatiques, cylindriques et parallélépipédiques), il permet de minimiser les erreurs liées aux estimations manuelles. Cet outil s'adresse aux ingénieurs, architectes et bricoleurs confrontés à des défis de planification, comme l'optimisation des ressources ou la prévention de défauts structurels dus à un approvisionnement insuffisant. L'utilisateur saisit les dimensions (longueur, largeur, épaisseur, diamètre) en unités métriques ou impériales, sélectionne le type de structure, et active un coefficient de sécurité ajustable (5-10%) pour compenser les pertes liées au coulage. Le calculateur intègre également des paramètres comme le ratio de renforcement (armatures) pour les dalles et les fondations, garantissant des résultats conformes aux normes de construction. L'algorithme utilise des opérations en virgule flottante pour des résultats précis à deux décimales, affichés en mètres cubes ou pieds cubes selon le système choisi.",
   "usage_steps": [
-    "Sélectionner le type de projet",
-    "Entrer les dimensions",
-    "Choisir le système d'unités",
-    "Voir le volume nécessaire",
-    "Voir les sacs requis"
+    "Sélectionnez le type de structure (dalle, fondation, poteau) via le menu déroulant.",
+    "Entrez les dimensions dans les champs dédiés : longueur, largeur, profondeur pour les dalles ; diamètre et hauteur pour les poteaux ; largeur, profondeur et nombre de tranchées pour les fondations.",
+    "Choisissez l'unité de mesure (mètres ou pieds) à l'aide des boutons radio.",
+    "Activez la case « Ajouter 7% de sécurité » pour compenser les pertes pendant le coulage.",
+    "Cliquez sur le bouton « Calculer » pour exécuter l'algorithme basé sur les formules V = l×w×h (dalle) et V = πr²h (poteau).",
+    "Consultez la section « Résultats » pour obtenir le volume total en m³ et les recommandations de dosage de ciment."
   ],
   "usage_examples": [
-    "Calculer le béton pour terrasse",
-    "Estimer le volume de fondation",
-    "Planifier un projet d'allée"
+    "Calculer le béton nécessaire pour une dalle de garage de 8m × 6m × 0,15m, incluant un ratio d'armatures de 1,5 kg/m².",
+    "Déterminer le volume de béton pour les fondations d'un bâtiment commercial avec 12 tranchées de 2m de long, 0,5m de large et 1m de profondeur.",
+    "Estimer la quantité de béton pour couler 6 poteaux circulaires de 0,3m de diamètre et 2,5m de hauteur pour un pergola.",
+    "Planifier la réparation d'une portion de trottoir de 4m × 1m × 0,1m en tenant compte d'un coefficient de sécurité de 5% pour les irrégularités du terrain."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text to NATO ist ein praktisches Online-Tool, das Ihnen hilft, schnell verschiedene Aufgaben zu erledigen. Mit Text to NATO können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient nutzen können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, Text to NATO kann Ihnen dabei helfen, die Arbeitsleistung zu verbessern. Alle Verarbeitung wird lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und Ihre Daten werden nicht auf irgendeinen Server hochgeladen. Nutzen Sie Text to NATO sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Text-zu-NATO-Konverter ist ein Spezialwerkzeug zur Transformation beliebiger Textzeichen in das Standard-NATO-Phonetsystem (International Radiotelephony Spelling Alphabet). Technisch erfolgt die Konversion durch eine mehrstufige Verarbeitung: Zunächst wird der Eingabetext in Einzelzeichen zerlegt, wobei Unicode-Zeichensätze vollständig unterstützt werden. Jedes Zeichen durchläuft dann eine Mapping-Prozedur über eine vordefinierte Lookup-Tabelle, die nicht nur die 26 lateinischen Buchstaben, sondern auch Ziffern (0-9) und ausgewählte Sonderzeichen (wie #, @, -) abdeckt. Bei Nichtübereinstimmungen wird ein Standardersatzzeichen verwendet. Besondere Aufmerksamkeit gilt der Case-Behandlung - Groß- und Kleinschreibung wird beibehalten, während nicht darstellbare Zeichen protokolliert werden. Dieses Tool ist unverzichtbar für kritische Kommunikationsszenarien wie militärische Funkverbindungen, Luftfahrtkoordination oder Notfalldienste, wo phonetische Klarheit Leben retten kann. Entwickler nutzen es zur Validierung von Transkripten, Pädagogen zur Erstellung Lernmaterialien für Funkausbildungen. Die Implementierung erfolgt serverlos mit WebAssembly für Echtzeitverarbeitung direkt im Browser.",
   "usage_steps": [
-    "Öffnen Sie die Text to NATO-Toolseite",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Verarbeitungsschaltfläche, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Öffnen Sie das Text-zu-NATO-Werkzeug und lokalisieren Sie das Eingabefeld 'Quelltext'.",
+    "Geben Sie den zu konvertierenden Text ein oder fügen Sie ihn über STRG+V ein.",
+    "Aktivieren Sie den Schalter 'Groß-/Kleinschreibung beibehalten', wenn die Originalformatierung erhalten bleiben soll.",
+    "Wählen Sie im Dropdown 'Zeichenumfang' zwischen 'Alphanumerisch' oder 'Erweitert mit Sonderzeichen'.",
+    "Klicken Sie auf 'Konvertieren' um die phonetische Transformation zu starten.",
+    "Kopieren Sie das Ergebnis über den 'Zwischenablage'-Button oder exportieren Sie es als .txt-Datei."
   ],
   "usage_examples": [
-    "Verwenden Sie Text to NATO, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne zu warten"
+    "Ein Kampfpilot übermittelt eine Zielkoordinaten-Ziffernfolge (z.B. 34°N 118°W) mit präziser Zahlendiktion für Navigation.",
+    "Ein Systemadministrator dokumentiert ein komplexes Passwort (z.B. T3#m@Gq9) für Support-Teams im Krisenfall.",
+    "Ein Fluglotsenausbilder erstellt Übungsmaterial mit gemischten Flugzeug-Kennzeichen (wie D-ABCD oder N12345).",
+    "Ein Amateurfunker bestätigt während einer DX-QSO-Verbindung seinen Locator (z.B. JN58me) ohne Verwechslungsgefahr."
   ]
 }

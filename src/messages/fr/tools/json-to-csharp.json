@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to C# est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant JSON to C#, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, JSON to C# peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant tout envoi vers un serveur. Utilisez JSON to C# immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil JSON vers C# permet de transformer des données structurées au format JSON en classes C# fortement typées. Ce convertisseur analyse la structure du JSON pour générer des Plain Old CLR Objects (POCO) avec des propriétés typées, des constructeurs par défaut, et des attributs de sérialisation comme [DataContract] ou [JsonProperty]. Il supporte les types imbriqués, les collections génériques (List<T>, Dictionary<TKey, TValue>), et les valeurs nullables. Contrairement aux approches manuelles, il évite les erreurs de mappage et gagne du temps lors de l'intégration d'API REST ou de la manipulation de fichiers de configuration. Les développeurs peuvent ainsi obtenir un code C# compilable sans effort, avec des noms de classes et propriétés conformes aux conventions C# (PascalCase) à partir de clés JSON quelconques. Le processus utilise un algorithme d'inférence de schéma basé sur les types des valeurs JSON, avec gestion des cas ambigus via des options de configuration.",
   "usage_steps": [
-    "Ouvrez la page du convertisseur JSON en C#",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone d'entrée",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Collez votre JSON dans la zone d'édition multiligne avec surlignage syntaxique",
+    "Activez/désactivez l'option 'Générer avec attributs DataContract' selon vos besoins",
+    "Sélectionnez le niveau d'imbrication maximum à traiter (1 à 5 niveaux)",
+    "Cochez 'Inclure constructeurs' pour générer des initialiseurs de propriétés",
+    "Cliquez sur 'Convertir' pour obtenir le code C# dans le panneau de résultats",
+    "Téléchargez le fichier .cs généré ou copiez le code dans votre IDE"
   ],
   "usage_examples": [
-    "Utilisez JSON to C# pour traiter vos données",
-    "Obtenez rapidement des résultats de traitement sans attendre"
+    "Transformer une réponse API OpenWeatherMap en classes météorologiques typées",
+    "Convertir un fichier JSON de paramètres de configuration en classes settings C#",
+    "Générer des modèles de données à partir d'exemples de payloads Stripe ou PayPal",
+    "Créer des classes DTO pour un projet ASP.NET Core à partir de spécifications JSON"
   ]
 }

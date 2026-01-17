@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Detector de Codificación es una herramienta online práctica que te ayuda a completar diversas tareas de manera rápida. Utilizando el Detector de Codificación, puedes procesar diversos datos sin instalar ningún software o plugins. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Detector de Codificación puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a algún servidor. Utiliza el Detector de Codificación inmediatamente para experimentar servicios de herramientas online rápidas, seguras y gratuitas.",
+  "detailed_description": "El Detector de Codificaciones analiza secuencias de bytes para identificar automáticamente la codificación de caracteres utilizada en un archivo o texto, incluso cuando carece de firma BOM (Byte Order Mark). Esta herramienta especializada aplica algoritmos de detección heurística basados en el análisis de frecuencia de patrones de bytes, combinado con firmas reconocidas en estándares como UTF-8, UTF-16LE/BE, ISO-8859-1 a 16, Windows-1252 y codificaciones específicas de sistemas legacy. Su motor interno implementa variantes mejoradas del algoritmo de detección de conjuntos de caracteres de Mozilla, optimizado para manejar archivos binarios complejos y textos multilingües. Es esencial para desarrolladores que necesitan diagnosticar errores de visualización en datos migrados, procesar archivos CSV/XML provenientes de sistemas heterogéneos, o depurar problemas de renderizado en aplicaciones web multilenguaje. El análisis combina la verificación de secuencias de escape comunes, la detección de rangos de código inválidos y el cálculo de probabilidades estadísticas para determinar la codificación más probable con un margen de error inferior al 0.5% en casos típicos.",
   "usage_steps": [
-    "Abre la página del Detector de Codificación",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Accede al detector mediante la sección 'Herramientas > Codificación' del menú principal",
+    "2. Arrastra el archivo binario o haz clic en 'Seleccionar archivo' para cargar contenido desde tu dispositivo",
+    "3. Activa la opción 'Análisis profundo' si sospechas de codificaciones no estándar o mixtas",
+    "4. Haz clic en 'Iniciar detección' para ejecutar el motor de análisis multinúcleo",
+    "5. Revisa el panel de resultados que muestra la codificación detectada con su porcentaje de confianza",
+    "6. Utiliza el botón 'Convertir ahora' para exportar el archivo a UTF-8 con preservación de metadatos"
   ],
   "usage_examples": [
-    "Utiliza el Detector de Codificación para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador web identifica que un archivo de configuración JSON proveniente de un sistema mainframe utiliza EBCDIC y lo convierte a UTF-8 sin pérdida de caracteres",
+    "Un ingeniero de datos determina que un CSV europeo contiene campos codificados en ISO-8859-1 y otros en Windows-1252, permitiendo una limpieza adecuada antes del procesamiento",
+    "Un investigador de seguridad detecta que un log de servidor contiene entradas UTF-16LE entrelazadas con registros ASCII, facilitando el análisis forense",
+    "Un lingüista confirma que un corpus de textos antiguos digitalizados utiliza la codificación ISCII-Devanagari para preservar caracteres sánscritos"
   ]
 }

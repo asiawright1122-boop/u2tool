@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Divisor de PDF é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Divisor de PDF, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Divisor de PDF pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Divisor de PDF imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O PDF Splitter é uma ferramenta online de alta precisão projetada para dividir arquivos PDF em documentos menores e mais gerenciáveis. Utilizando algoritmos de processamento de documentos, o PDF Splitter permite aos usuários dividir seus PDFs de acordo com diferentes critérios, como seleção de páginas específicas, intervalos de páginas ou extração de cada página individualmente. Esta funcionalidade é especialmente útil para profissionais que lidam com documentos complexos e precisam de controle granular sobre o conteúdo. Por exemplo, advogados podem precisar separar seções de contratos, enquanto estudantes podem querer dividir capítulos de livros didáticos para estudos mais focados. O PDF Splitter opera no lado do cliente, garantindo que os dados não sejam enviados a servidores, mantendo assim a privacidade e segurança dos documentos. Além disso, a ferramenta suporta uma variedade de formatos de entrada e saída, permitindo uma integração fluida com fluxos de trabalho existentes.",
   "usage_steps": [
-    "Abra a página da ferramenta Divisor de PDF",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o site do PDF Splitter e clique no botão 'Escolher Arquivo' para selecionar o PDF que deseja dividir.",
+    "Uma vez que o arquivo foi carregado, selecione o método de divisão. Você pode optar por 'Seleção de Páginas', 'Intervalo de Páginas' ou 'Extrair Cada Página'.",
+    "Se você escolher 'Seleção de Páginas', digite os números das páginas que deseja extrair, separados por vírgulas (por exemplo, 1, 3, 5).",
+    "Se preferir 'Intervalo de Páginas', insira o intervalo de páginas que deseja dividir (por exemplo, 1-10).",
+    "Para 'Extrair Cada Página', o PDF será automaticamente dividido em arquivos individuais para cada página.",
+    "Após configurar as opções de divisão, clique em 'Dividir PDF' e aguarde o processo ser concluído. Os arquivos resultantes serão disponibilizados para download."
   ],
   "usage_examples": [
-    "Use Divisor de PDF para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um professor de universidade deseja dividir um manual de 500 páginas em capítulos para distribuir aos alunos. Usando o PDF Splitter, ele seleciona os intervalos de páginas correspondentes a cada capítulo e os salva em arquivos separados, facilitando a distribuição e o acesso aos materiais.",
+    "Um arquiteto precisa enviar diferentes seções de um projeto de construção para vários subcontratados. Ele usa o PDF Splitter para dividir o documento original em arquivos menores, cada um contendo as informações relevantes para cada equipe de trabalho.",
+    "Um editor de uma revista científica recebe um artigo de 200 páginas e precisa separar os artigos individuais para revisão. O PDF Splitter permite que ele extraia cada artigo em um arquivo separado, simplificando o processo de revisão e edição.",
+    "Um assistente administrativo precisa organizar um relatório anual em várias seções para apresentação em uma reunião. Usando o PDF Splitter, ele divide o relatório em partes específicas, como introdução, resultados e conclusões, para uma apresentação mais clara e organizada."
   ]
 }

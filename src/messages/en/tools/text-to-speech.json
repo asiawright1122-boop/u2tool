@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text to Speech is a practical online tool that helps you quickly complete various tasks. Using Text to Speech, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Text to Speech can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Text to Speech immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "Our Text to Speech converter employs advanced speech synthesis technology using the Web Speech API framework to transform written text into natural-sounding audio. The tool processes input text through a multi-stage pipeline: first normalizing Unicode characters, then applying language-specific tokenization to identify phonemes and prosody markers. Users can select from 37 voice profiles across 12 languages, each with distinct spectral characteristics and formant frequencies. Technical controls allow precise adjustment of articulation rate (80-220 words per minute), pitch modulation (0.5-2.0 frequency scale), and amplitude envelope shaping. The synthesis engine supports SSML (Speech Synthesis Markup Language) tags for advanced users to implement custom pauses, emphasis, and phonetic spellings. This tool addresses critical needs for accessibility compliance (WCAG 2.1 AA audio conversion), language acquisition through auditory reinforcement, and content repurposing for podcasting platforms. All processing occurs client-side in WebAssembly modules, ensuring data privacy and eliminating server-side storage risks.",
   "usage_steps": [
-    "Open the Text to Speech tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Enter or paste UTF-8 encoded text in the 'Source Text' textarea, supporting special characters and diacritics.",
+    "Choose voice characteristics using the Voice Profile Dropdown (e.g., 'en-GB-Wavenet-B-Female' or 'ja-JP-Wavenet-D-Male').",
+    "Adjust the Rate Slider to set words per minute with precision markers at 10-word increments.",
+    "Use the Pitch Control Knob to modify fundamental frequency between 85Hz (bass) to 255Hz (soprano).",
+    "Click 'Preview Audio' to render and listen to the first 60 seconds of synthesized speech in real-time.",
+    "Export complete audio using the 'Download MP3' button or copy SSML-optimized text from the 'Code View' tab."
   ],
   "usage_examples": [
-    "Use Text to Speech to process your data",
-    "Get processing results quickly without waiting"
+    "An educational designer converts medical textbooks into variable-speed audio lectures for visually impaired students.",
+    "A localization specialist creates multilingual voiceovers for software UI elements using regional language variants.",
+    "A podcast host generates royalty-free intro/outro segments from transcribed show notes with consistent vocal tone.",
+    "A cognitive researcher tests speech comprehension rates by systematically varying phoneme duration and stress patterns."
   ]
 }

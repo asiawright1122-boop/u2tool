@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Timestamp Converter is a practical online tool that helps you quickly complete various tasks. Using Timestamp Converter, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Timestamp Converter can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Timestamp Converter immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Timestamp Converter enables bidirectional conversion between Unix timestamps and human-readable date-time formats. Technically, it processes 32-bit/64-bit Unix timestamps (seconds/milliseconds since 1970-01-01 UTC) and converts them to ISO 8601, RFC 2822, or custom-formatted datetime strings accounting for timezone offsets. Developers need this tool to debug log files with epoch timestamps, validate API responses using time-based tokens, analyze time-series databases, or synchronize distributed systems across time zones. Internally, it leverages JavaScript's Date object with enhanced timezone handling via the Intl.DateTimeFormat API, supporting both naive datetime interpretations and explicit UTC/local time conversions. The tool also handles leap seconds and daylight saving time transitions by defaulting to the user's browser locale or allowing manual timezone specification via IANA identifiers.",
   "usage_steps": [
-    "Open the Timestamp Converter tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Navigate to the timestamp-converter page and locate the 'Timestamp Input' field",
+    "Enter a valid Unix timestamp in seconds (10-digit) or milliseconds (13-digit) format",
+    "Select preferred output format from the 'Format Selection Dropdown' (ISO 8601, RFC 2822, or custom pattern)",
+    "Adjust timezone using the 'Timezone Offset Picker' or search for specific location via IANA Time Zone Database",
+    "Click 'Convert' button to execute bidirectional transformation using WebAssembly-based conversion engine",
+    "Review results in both original and converted formats displayed in synchronized read-only fields"
   ],
   "usage_examples": [
-    "Use Timestamp Converter to process your data",
-    "Get processing results quickly without waiting"
+    "Debugging a server log entry showing '1717182000' by converting it to PT (UTC-7) time for local incident analysis",
+    "Validating OAuth 2.0 token expiration claims by converting JWT 'exp' timestamp to readable date format",
+    "Normalizing IoT device timestamps from different regions into UTC for centralized log analysis",
+    "Verifying Kubernetes pod scheduling times by converting event timestamps from nanoseconds to human-readable format"
   ]
 }

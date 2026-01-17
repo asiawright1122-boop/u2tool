@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Image Compressor is a practical online tool that helps you quickly complete various tasks. Using Image Compressor, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Image Compressor can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Image Compressor immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Image Compressor tool employs advanced lossy and lossless compression algorithms to reduce image file sizes while preserving visual fidelity. Technically, it leverages discrete cosine transform (DCT) for JPEG optimization, adaptive quantization for PNG compression, and WebP encoding to achieve up to 80% size reduction. Users benefit from faster website loading times, reduced bandwidth usage, and optimized storage efficiency—critical for web developers, photographers, and businesses managing large image repositories. The tool processes images through a multi-stage pipeline: first removing metadata (EXIF, IPTC), then applying format-specific compression (e.g., MozJPEG for JPEGs, OXIPNG for PNGs), and finally enabling quality scaling via a perceptual quality slider. It supports batch processing and maintains alpha transparency in PNGs. Unlike generic tools, it offers granular control over chroma subsampling and allows conversion to next-gen formats like AVIF for modern browser compatibility.",
   "usage_steps": [
-    "Open the Image Compressor tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Drag-and-drop images or click 'Select Files' to upload up to 20 images simultaneously.",
+    "2. Adjust the quality slider (0-100) to balance compression intensity and visual quality.",
+    "3. Enable 'Advanced Mode' to customize chroma subsampling (4:4:4, 4:2:2, 4:2:0) or strip metadata.",
+    "4. Choose output format (JPEG/PNG/WebP/AVIF) or select 'Auto' for format conversion recommendations.",
+    "5. Click 'Compress Images' to initiate parallel processing using WebAssembly-based codecs.",
+    "6. Download the compressed ZIP archive or copy optimized image URLs for direct deployment."
   ],
   "usage_examples": [
-    "Use Image Compressor to process your data",
-    "Get processing results quickly without waiting"
+    "A web developer reduces a 10MB product photo to 2.5MB without visible artifacts for faster page loads.",
+    "A travel blogger compresses 50 high-res landscape photos to meet email attachment size limits.",
+    "An e-commerce store owner converts PNG banners to AVIF format, cutting CDN costs by 60%.",
+    "A graphic designer batch-processes screenshots for a client presentation, maintaining sharp text at 70% compression."
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "La Calculadora de Talla de Anillo te ayuda a encontrar tu talla usando medidas de circunferencia o diámetro.",
+  "detailed_description": "El Calculador de Tamaño de Anillo es una herramienta de conversión sofisticada que permite a los usuarios determinar su tamaño de anillo utilizando diversos métodos de medición. Esta herramienta es esencial para quienes buscan comprar anillos en línea, ya que elimina la incertidumbre asociada con las diferentes escalas de tamaños y los métodos de medición. El calculador soporta la medición del diámetro del dedo, la circunferencia y la medición de un anillo existente. Utiliza algoritmos precisos para convertir los datos ingresados en el tamaño de anillo correspondiente, compatible con estándares internacionales como los de Estados Unidos, Reino Unido, Europa y Japón. La herramienta también ofrece una interfaz intuitiva y opciones de personalización, permitiendo a los usuarios seleccionar el sistema de medición que prefieran y obtener un resultado confiable en cuestión de segundos.",
   "usage_steps": [
-    "Elige método de medición",
-    "Ingresa medida en mm",
-    "O selecciona talla existente",
-    "Ve conversiones de talla",
-    "Consulta tabla de tallas"
+    "Abre la página del Calculador de Tamaño de Anillo y selecciona el método de medición que deseas utilizar: Diámetro, Circunferencia o Anillo Existente.",
+    "Ingresa el valor de la medición en el campo correspondiente. Asegúrate de usar unidades de medida precisas, como milímetros o pulgadas.",
+    "Si eliges la opción de Anillo Existente, adjunta una imagen del anillo o ingresa el ancho y la profundidad del aro para una medición más precisa.",
+    "Selecciona el sistema de medición que prefieras (Estados Unidos, Reino Unido, Europa, Japón) utilizando el menú desplegable disponible.",
+    "Haz clic en el botón 'Calcular' para procesar los datos y obtener el tamaño de anillo correspondiente.",
+    "Revisa el resultado y, si es necesario, puedes ajustar los valores y volver a calcular para asegurarte de la precisión."
   ],
   "usage_examples": [
-    "Encontrar talla de anillo de compromiso",
-    "Convertir tallas internacionales",
-    "Medir para compra online"
+    "Un cliente que vive en España y desea comprar un anillo de bodas en línea desde un sitio web estadounidense utiliza el Calculador de Tamaño de Anillo para convertir su tamaño europeo a la escala de Estados Unidos.",
+    "Un joyero que necesita ajustar el tamaño de un anillo antiguo utiliza la herramienta para medir el diámetro del dedo del cliente y determinar el ajuste correcto antes de realizar la modificación.",
+    "Una pareja en Japón que planea intercambiar anillos de compromiso utiliza el calculador para asegurarse de que ambos anillos sean del mismo tamaño, independientemente del sistema de medición que utilicen.",
+    "Un diseñador de joyería que crea anillos personalizados utiliza la opción de medición de anillo existente para asegurarse de que su diseño se ajuste perfectamente a un anillo previamente adquirido por el cliente."
   ]
 }

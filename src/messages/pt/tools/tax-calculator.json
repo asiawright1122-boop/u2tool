@@ -1,16 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Impostos é uma ferramenta abrangente de estimativa de imposto de renda que ajuda você a calcular o imposto de renda federal com base nas faixas de imposto de 2024. Insira sua renda bruta e situação de fisco para obter o imposto estimado, taxa efetiva e salário líquido. Veja o detalhamento por faixa de imposto e compare deduções padrão e itemizadas.",
+  "detailed_description": "O Calculador de Imposto aplica algoritmos baseados na estrutura progressiva do imposto de renda federal dos EUA, utilizando as alíquotas marginais atualizadas para o ano fiscal em questão. Tecnicalmente, o tool realiza cálculos de escalonamento tributário, onde cada faixa de renda é aplicada cumulativamente para determinar o imposto devido. O usuário informa sua renda bruta, status de declaração (solteiro, casado, etc.) e deduções elegíveis, e o sistema computa a renda tributável antes de aplicar as alíquotas de 10%, 12%, 22%, 24%, 32%, 35% e 37% nas respectivas faixas. A ferramenta também calcula a taxa efetiva (imposto total dividido pela renda bruta) e detalha o contribuição de cada alíquota no resultado final. Desenvolvido com base no modelo de tributação progressiva, é essencial para profissionais que desejam planejar antecipadamente seus recolhimentos, entender o impacto de deduções fiscais ou comparar cenários tributários entre diferentes fontes de renda. A precisão matemática e a transparência na aplicação das regras do IRS garantem que usuários possam validar cada etapa do cálculo.",
   "usage_steps": [
-    "Insira sua renda bruta anual",
-    "Selecione sua situação de fisco",
-    "Escolha deduções padrão ou itemizadas",
-    "Veja sua responsabilidade tributária estimada",
-    "Verifique sua taxa efetiva",
-    "Veja o detalhamento das faixas de imposto"
+    "Insira o valor da renda bruta anual no campo 'Renda Anual' em dólares americanos.",
+    "Selecione seu status de declaração no dropdown: 'Solteiro', 'Casado Arquivando Separadamente', 'Casado Arquivando Conjuntamente', 'Chefe de Família' ou 'Viúvo'.",
+    "Preencha as deduções padrão ou itemizadas no campo correspondente, se aplicável.",
+    "Clique no botão 'Calcular Imposto' para processar os dados.",
+    "Analise o breakdown por alíquotas, incluindo valores calculados para cada faixa tributária.",
+    "Verifique a taxa efetiva de imposto (ETR) e o total de imposto devido exibidos no painel de resultados."
   ],
   "usage_examples": [
-    "Estime impostos para um salário de $75,000",
-    "Compare o impacto fiscal de diferentes situações de fisco",
-    "Planeje deduções para reduzir a responsabilidade tributária"
+    "Um freelancer que recebe US$ 85.000 anuais quer entender como sua renda se distribui entre as faixas tributárias e calcular suas obrigações federais antes de fazer pagamentos trimestrais estimados.",
+    "Um casal casado que arquiva conjuntamente com renda combinada de US$ 250.000 busca visualizar o impacto de contribuições para aposentadoria nas deduções e alíquotas aplicadas.",
+    "Um estudante que trabalha meio período e ganha US$ 18.000 anuais verifica se precisa declarar imposto e qual seria sua taxa efetiva considerando créditos educacionais.",
+    "Um investidor que recebe US$ 1,2 milhão em rendimentos de capital deseja analisar como a tributação diferenciada sobre investimentos afeta seu cálculo final comparado à renda ordinária."
   ]
 }

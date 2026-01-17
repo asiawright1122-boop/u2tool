@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Sombra Box é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Sombra Box, você pode processar dados variados facilmente sem precisar instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja um desenvolvedor, designer ou usuário geral, o Gerador de Sombra Box pode ajudá-lo a melhorar a eficiência de trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam enviados para qualquer servidor. Use o Gerador de Sombra Box imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Box Shadow Generator é uma ferramenta técnica especializada em criar e ajustar sombras CSS3 de forma visual e precisa. Ele permite configurar propriedades como offset horizontal/vertical (X/Y), raio de desfoque (blur radius), raio de expansão (spread radius), cor RGBA (incluindo transparência) e sombras internas (inset), gerando automaticamente o código CSS compatível com padrões modernos. Desenvolvedores precisam deste recurso para evitar a codificação manual repetitiva, visualizar em tempo real o impacto de sombras em elementos como cards, botões flutuantes ou modais, e garantir consistência visual em diferentes resoluções. A ferramenta simula a renderização do navegador, ajustando automaticamente valores inválidos e organizando múltiplas sombras em sintaxe separada por vírgulas. Seu motor também inclui pré-visualização em um container adaptativo, permitindo testar responsividade e ajustar propriedades com base no contexto real de uso.",
   "usage_steps": [
-    "Abra a página do Gerador de Sombra Box",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o gerador e selecione 'Nova Sombra' no menu inicial para iniciar uma configuração limpa.",
+    "Ajuste o offset horizontal (X) usando o slider para posicionar a sombra à esquerda ou direita do elemento.",
+    "Configure o raio de desfoque (Blur Radius) para controlar a nitidez da borda da sombra, usando valores de 0 a 100px.",
+    "Escolha a cor da sombra com o seletor RGBA, ajustando opacidade para criar efeitos semi-transparentes.",
+    "Ative a opção 'Inset' para aplicar a sombra internamente, útil para efeitos de depressão em botões.",
+    "Adicione múltiplas sombras clicando em 'Nova Camada' e ajuste cada camada independentemente, visualizando a composição em tempo real."
   ],
   "usage_examples": [
-    "Use o Gerador de Sombra Box para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Criar uma sombra sutil em um card de produto com offset X: 2px, Y: 2px, blur: 4px e cor rgba(0,0,0,0.1) para dar profundidade sem distrair.",
+    "Produzir um botão flutuante com sombra dupla (duas camadas): uma interna (inset) para pressionamento e uma externa para elevação.",
+    "Simular um efeito de 'neumorfismo' em uma caixa de diálogo, combinando sombras internas e externas com cores claras e escuras.",
+    "Gerar sombras responsivas para banners em mobile, ajustando blur radius e spread para manter a estética em telas menores."
   ]
 }

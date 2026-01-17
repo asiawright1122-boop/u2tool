@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Kalender-Heatmap-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Kalender-Heatmap-Generator können Sie verschiedene Daten leicht verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient nutzen können. Ob Sie ein Entwickler, Designer oder ein allgemeiner Benutzer sind, der Kalender-Heatmap-Generator kann Ihnen dabei helfen, die Arbeitsleistung zu verbessern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinen Server hochgeladen werden. Nutzen Sie den Kalender-Heatmap-Generator sofort, um die schnellen, sicheren und kostenlosen Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Calendar Heatmap Generator ist ein webbasiertes Analysetool zur Erstellung von farbkodierten Kalendermatrices für zeitbasierte Datenvisualisierungen. Technisch ermöglicht das Tool das Hochladen von strukturierten Datensätzen (CSV/JSON), wobei Datumsfelder automatisch in chronologische Achsen konvertiert und numerische Werte über eine konfigurierbare Farbskala (z.B. divergierende Gradienten) abgebildet werden. Die Rendering-Engine nutzt SVG für skalierbare Vektorgraphiken und Canvas-basierte Rasterung für PNG-Exporte, wobei responsive Design-Prinzipien sicherstellen, dass die Heatmaps auf verschiedenen Bildschirmgrößen korrekt angezeigt werden. Besonders geeignet für die Analyse von Tagesaggregationen wie Nutzeraktivitäten, Verkaufsstatistiken oder Ressourcennutzungsmustern, unterstützt das Tool die Normalisierung von Wertebereichen (Min-Max-Scaling) und das Einbetten von Tooltips für interaktive Datenexploration. Entwickler profitieren von der Implementierung von Web Workers für rechenintensive Datenverarbeitung ohne UI-Blockierung, während das Exportmodul Metadaten wie Zeitstempel und Farbkonfigurationen beibehält.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Kalender-Heatmap-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie bearbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Werkzeugeinstellungen und -einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "Importieren Sie Ihre Daten im CSV- oder JSON-Format über den 'Daten hochladen'-Button im Dashboard.",
+    "Wählen Sie im Mapping-Editor das Datumsfeld ('YYYY-MM-DD'-Format) und das numerische Metrikfeld aus.",
+    "Konfigurieren Sie die Farbskala über den Color-Picker, einschließlich der Festlegung von Nullwerten (weiße Hintergrundkästchen).",
+    "Passen Sie die Kalenderkonfiguration an: Wählen Sie zwischen Monats- oder Wochenansicht und aktivieren Sie Gitterlinien über den Toggle-Schalter.",
+    "Nutzen Sie den Live-Vorschau-Modus, um Mouseover-Effekte und Datenbeschriftungen in Echtzeit zu testen.",
+    "Exportieren Sie die finale Visualisierung per Klick auf 'SVG/PNG herunterladen' im gewünschten Format mit 72dpi-Auflösung."
   ],
   "usage_examples": [
-    "Verwenden Sie den Kalender-Heatmap-Generator, um Ihre Daten zu bearbeiten",
-    "Erhalten Sie schnell bearbeitete Ergebnisse, ohne zu warten"
+    "Ein E-Commerce-Team analysiert tägliche Conversion-Raten über einen Heatmap-Zeitraum von 12 Monaten, um Saisonalitäten zu erkennen.",
+    "Ein DevOps-Engineer visualisiert die tägliche API-Nutzung in einer Heatmap, um Ressourcenengpässe zu identifizieren.",
+    "Ein Forschungsinstitut nutzt das Tool zur Darstellung von Wetterdaten (z.B. Niederschlagsmengen pro Tag) in monatlichen Kalenderblöcken.",
+    "Ein Mobile-App-Entwickler erstellt eine Heatmap der täglichen Benutzeranmeldungen, um Nutzungscluster zu erkennen und Marketingkampagnen zu optimieren."
   ]
 }

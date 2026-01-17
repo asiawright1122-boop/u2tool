@@ -1,14 +1,17 @@
 {
-  "detailed_description": "PDF-Teiler ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit PDF-Teiler können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, PDF-Teiler kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie PDF-Teiler sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der PDF Splitter ist ein leistungsstarkes Online-Tool, das es Benutzern ermöglicht, PDF-Dokumente auf verschiedene Weisen zu teilen. Technisch gesehen, fungiert der PDF Splitter als eine webbasierte Anwendung, die auf dem Client-Seitenscripting basiert, um PDF-Dateien zu verarbeiten. Benutzer können ihre PDF-Dateien hochladen und verschiedene Methoden zur Seiteinteilung auswählen, wie z.B. die Auswahl von spezifischen Seiten, das Festlegen von Seitenumfangen oder das Extrahieren jeder einzelnen Seite. Dieses Tool ist insbesondere für Profis nützlich, die es benötigen, um große Dokumente in verwaldbare Teile zu zerlegen, ohne dabei die Qualität der Dateien zu beeinträchtigen. Ob es darum geht, spezifische Kapitel aus einem Buch zu extrahieren, Seiten aus einem Bericht zu entfernen oder individuelle Dokumente aus einer Sammlung zu erstellen, der PDF Splitter bietet die notwendige Flexibilität und Präzision. Die Verarbeitung erfolgt auf dem Client, was die Datensicherheit erhöht, da die Dateien nicht auf einem Server gespeichert werden.",
   "usage_steps": [
-    "Öffnen Sie die PDF-Teiler-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Schritt 1: Navigieren Sie zur PDF Splitter-Website und klicken Sie auf die Schaltfläche 'PDF hochladen'.",
+    "Schritt 2: Wählen Sie die PDF-Datei aus, die Sie teilen möchten, entweder durch Klicken auf 'Datei auswählen' oder durch Ziehen und Ablegen der Datei.",
+    "Schritt 3: Nach dem Hochladen erscheint ein Dialogfenster, in dem Sie die Teilmethode auswählen können. Wählen Sie 'Seiten auswählen' für einzelne Seiten, 'Seitenbereich' für einen bestimmten Bereich oder 'Jede Seite' um jede Seite einzeln zu extrahieren.",
+    "Schritt 4: Geben Sie die entsprechenden Seiten oder Seitenbereiche ein. Für 'Seiten auswählen' können Sie z.B. '1, 3, 5' eingeben. Für 'Seitenbereich' geben Sie den Anfangs- und Endseitennummer an, z.B. '1-10'.",
+    "Schritt 5: Klicken Sie auf 'PDF teilen', um den Prozess zu starten. Der PDF Splitter verarbeitet die Datei und erstellt die neuen PDF-Dateien basierend auf Ihren Einstellungen.",
+    "Schritt 6: Nach der Verarbeitung erscheint ein Download-Link für jede erstellte PDF-Datei. Klicken Sie auf die Links, um die Dateien herunterzuladen."
   ],
   "usage_examples": [
-    "Verwenden Sie PDF-Teiler, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Beispiel 1: Ein Lehrer möchte verschiedene Kapitel aus einem Lehrbuch für seine Schüler als separate PDF-Dateien bereitstellen. Mit dem PDF Splitter kann er die entsprechenden Seitenbereiche auswählen und diese schnell in individuelle Dateien umwandeln.",
+    "Beispiel 2: Ein Rechtsanwalt muss spezifische Dokumente aus einem langen Vertragsdokument extrahieren, um sie an verschiedene Mandanten zu senden. Der PDF Splitter ermöglicht es ihm, nur die erforderlichen Seiten auszuwählen und als separate PDFs herunterzuladen.",
+    "Beispiel 3: Ein Grafikdesigner arbeitet an einem umfangreichen Portfolio und muss jedes Portfoliostück als eigenständige PDF-Datei exportieren. Der PDF Splitter hilft ihm, jede Seite des Dokuments automatisch in eine separate Datei zu splitten.",
+    "Beispiel 4: Ein Archivar hat ein großes PDF-Dokument mit historischen Aufzeichnungen und muss es in kleinere, thematisch geordnete Dokumente aufteilen. Mit dem PDF Splitter kann er die Dokumente schnell nach Themen bereinigen und organisieren."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Cortador de Imagens é uma ferramenta online prática que ajuda a completar várias tarefas rapidamente. Usando o Cortador de Imagens, você pode facilmente processar diversos dados sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, o Cortador de Imagens pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam subidos para qualquer servidor. Use o Cortador de Imagens imediatamente para experimentar serviços de ferramenta online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Image Cropper é uma ferramenta especializada para recorte pixel-perfeito de imagens, ideal para desenvolvedores e designers que necessitam de precisão em ajustes de proporção e composição visual. Tecnologicamente, o tool permite definir áreas de recorte manuais ou pré-definidas (como 1:1, 4:3, 16:9 e proporção áurea), mantendo a integridade do metadata e resolução original através de algoritmos de interpolação bicúbica. A funcionalidade de 'smart crop' identifica automaticamente regiões de interesse usando análise de histograma de cores e detecção de bordas, preservando elementos centrais mesmo em cortes agressivos. Sua interface suporta manipulação de camadas vetoriais em formatos como PNG e SVG, além de manter perfis de cor ICC durante o processo. Essencial para preparação de assets para responsive design, criação de thumbnails otimizados, ou ajuste de imagens para redes sociais com requisitos específicos de dimensão. O processamento ocorre localmente no navegador via WebAssembly, garantindo velocidade e privacidade dos dados.",
   "usage_steps": [
-    "Abra a página do Cortador de Imagens",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Faça upload da imagem via seletor de arquivos ou arraste diretamente para a área de trabalho.",
+    "Escolha entre proporções fixas (1:1, 4:3, 16:9) ou insira valores personalizados no campo 'W:H' no painel de configurações.",
+    "Utilize a ferramenta de seleção para ajustar manualmente os limites da área de recorte, observando as coordenadas X/Y exibidas em tempo real.",
+    "Ative a opção 'Manter Qualidade' para preservar DPI e profundidade de cor durante o recorte.",
+    "Visualize o preview em alta resolução no painel lateral, alternando entre modos 'antes/depois' para comparar resultados.",
+    "Exporte o resultado em PNG, JPEG ou WebP, definindo manualmente o nível de compressão se necessário."
   ],
   "usage_examples": [
-    "Use o Cortador de Imagens para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor ajusta imagens de produtos para e-commerce, garantindo proporções exatas para carrosséis em frameworks como Bootstrap.",
+    "Um designer prepara artes para Instagram Stories, convertendo fotos 3:4 em formatos verticais 9:16 sem perder elementos essenciais.",
+    "Um fotógrafo remove bordas indesejadas de retratos usando a função 'Content-Aware Crop', mantendo o foco no rosto do sujeito.",
+    "Um front-end engineer otimiza imagens para breakpoints específicos, exportando múltiplos tamanhos simultaneamente com nomes padronizados."
   ]
 }

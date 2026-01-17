@@ -1,11 +1,17 @@
 {
-  "detailed_description": "Extrait le texte des documents Word.",
+  "detailed_description": "Le convertisseur Word to Text est une solution en ligne dédiée à la transformation de documents Word (.docx) en format texte brut (plain text). Cette application est particulièrement utile pour les développeurs, les écrivains, et les professionnels de l’IT qui ont besoin de manipuler des contenus textes de manière simplifiée, sans les éléments de mise en forme ou les images. Le processus de conversion s’appuie sur une technologie de parsing avancée qui extrait uniquement le texte brut du document Word, en conservant l'ordre et la structure du contenu original. Cette approche est essentielle pour des tâches telles que l’indexation de texte, la création de fichiers de configuration, ou la préparation de données pour des traitements de texte automatisés. Grâce à son interface utilisateur intuitive, le convertisseur Word to Text permet une utilisation rapide et efficace, sans nécessité d’installer des logiciels supplémentaires. Les utilisateurs peuvent facilement télécharger le fichier texte résultant pour une utilisation ultérieure.",
   "usage_steps": [
-    "Télécharger fichier Word",
-    "Attendre extraction",
-    "Télécharger TXT"
+    "Accédez à la page du convertisseur Word to Text via le menu de navigation ou en tapant l’URL directement dans votre navigateur.",
+    "Cliquez sur le bouton ‘Sélectionner un fichier’ pour ouvrir la boîte de dialogue de choix de fichier.",
+    "Parcourez votre ordinateur pour sélectionner le document Word (.docx) que vous souhaitez convertir, puis cliquez sur ‘Ouvrir’.",
+    "Une fois le fichier sélectionné, cliquez sur le bouton ‘Démarrer la conversion’ pour lancer le processus.",
+    "Attendez que la barre de progression atteigne 100%, ce qui signifie que la conversion est terminée.",
+    "Cliquez sur le lien de téléchargement qui apparaît pour sauvegarder le fichier texte brut sur votre appareil."
   ],
   "usage_examples": [
-    "Convertir documents Word en texte"
+    "Un rédacteur technique souhaite extraire le contenu textuel de plusieurs guides d’utilisation Word pour les intégrer dans un système de gestion de contenu (CMS) en format texte brut.",
+    "Un développeur doit créer un fichier de configuration simple à partir d’un document Word détaillant les paramètres d’une application, sans les éléments de mise en forme.",
+    "Un chercheur en sciences humaines a besoin de convertir des transcriptions d’entretiens en format texte pour les utiliser dans un outil d’analyse de texte.",
+    "Un graphiste prépare un script pour un projet d’animation et doit convertir un storyboard Word en texte brut pour l’intégrer dans un logiciel de création de scénarios."
   ]
 }

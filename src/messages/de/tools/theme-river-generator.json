@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Thema-Fluss-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Thema-Fluss-Generator können Sie verschiedene Daten ohne Installation von Software oder Plugins einfach verarbeiten. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, der Thema-Fluss-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Verarbeitungsvorgänge erfolgen lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Thema-Fluss-Generator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Theme River Generator ist ein Spezialwerkzeug zur Erzeugung von Streamgraph-Diagrammen, die komplexe zeitliche Mustern in multidimensionalen Datensätzen visualisieren. Technisch basiert das Tool auf D3.js-basierten Rendering-Algorithmen, die Zeitreihendaten in dynamisch fließende, gestapelte Flächen umwandeln. Die Darstellung erfolgt durch Bézier-Kurven, die den Datenfluss kontinuierlich über Perioden abbilden, wobei die Breite der 'Ströme' proportionale zu den zugrundeliegenden Werten skaliert. Benutzer benötigen dieses Tool für die Analyse von Trends, saisonalen Mustern oder Wettbewerbsdynamiken in heterogenen Datensätzen, beispielsweise für Marketingkampagnen, Verbrauchsstatistiken oder wissenschaftliche Publikationsanalysen. Die Implementierung verwendet einen Layered-Graphics-Ansatz mit interpolierten Gradienten zur Darstellung kategorischer Variablen über einer gemeinsamen Zeitachse. Besonders hervorzuheben ist der modulare Stacking-Algorithmus, der sowohl absolute als auch relative Skalierungen ermöglicht, wodurch Vergleiche zwischen dominanten und marginalen Datenthemen vereinfacht werden.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Thema-Fluss-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Verarbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Laden Sie Ihre Daten im CSV/TSV-Format mit mindestens drei Spalten (Zeitstempel, Kategorie, numerischer Wert) über den 'Datenimport'-Button hoch.",
+    "Weisen Sie im Mapping-Panel die Spalten korrekt den Dimensionen 'Zeitachse', 'Themen' und 'Flussstärke' zu.",
+    "Wählen Sie im Farbschema-Editor ein divergierendes oder sequentielles Farbprofil aus oder definieren Sie benutzerdefinierte Hex-Codes für kategorische Zuordnung.",
+    "Passen Sie die Kurvensmoothing-Parameter (Kurve-Tension-Wert zwischen 0.1 und 0.9) an, um die Flussdynamik visuell zu optimieren.",
+    "Aktivieren Sie den 'Zeitlupen'-Modus, um interaktive Zoomfunktionen für spezifische Zeitintervalle zu aktivieren.",
+    "Exportieren Sie das finale Diagramm als SVG oder PNG oder nutzen Sie den 'Embed-Code'-Generator für Webintegrationen."
   ],
   "usage_examples": [
-    "Verwenden Sie den Thema-Fluss-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell Verarbeitungsergebnisse ohne zu warten"
+    "Analyse der Entwicklung von Social-Media-Hashtags während politischer Kampagnenperioden mit täglicher Granularität über 12 Wochen.",
+    "Vergleich des monatlichen Umsatzanteils verschiedener Produktkategorien im E-Commerce während der Weihnachtssaison 2020-2023.",
+    "Visualisierung des stündlichen Verbrauchsprofile von Strom, Gas und Erneuerbaren Energien in einem Smart Grid über einen Wintermonat.",
+    "Darstellung der Publikationsverteilung zu KI-Forschungsthemen (NLP, Computer Vision, Reinforcement Learning) an Universitäten von 2015-2023."
   ]
 }

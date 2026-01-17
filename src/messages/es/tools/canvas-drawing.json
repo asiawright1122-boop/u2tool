@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Dibujo en Canvas es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Con Dibujo en Canvas, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, Dibujo en Canvas puede ayudarte a mejorar la eficiencia de trabajo. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza Dibujo en Canvas inmediatamente para experimentar servicios de herramienta en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "La herramienta Canvas Drawing es una aplicación web basada en el elemento HTML5 <canvas> que permite manipulación de gráficos rasterizados mediante algoritmos de renderizado en tiempo real. Técnicamente, implementa un motor de dibujo 2D que captura eventos de entrada (mousedown/touchstart) para trazar caminos (Path2D) con propiedades de stroke configurable, aplicando técnicas de anti-aliasing mediante el contexto de renderizado '2d'. La funcionalidad de borrado se logra mediante composición de píxeles con el modo de mezcla 'destination-out'. Este tool es esencial para desarrolladores que requieren pruebas rápidas de conceptos gráficos, prototipado de interfaces o manipulación directa de matrices de píxeles sin dependencias externas. Al operar directamente en el DOM con eventos síncronos, ofrece menor latencia que frameworks basados en SVG, ideal para aplicaciones críticas de rendimiento.",
   "usage_steps": [
-    "Abre la página de la herramienta de Dibujo en Canvas",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Selecciona el tamaño de pincel usando el control deslizante 'Grosor' (valores de 1 a 50 píxeles)",
+    "2. Activa el selector de color RGB para definir el tono, saturación y luminosidad del trazo",
+    "3. Mantiene presionado el botón izquierdo del mouse mientras arrastras para dibujar trazos vectoriales convertidos a raster",
+    "4. Haz clic en el botón 'Borrador' para activar el modo de eliminación que modifica la opacidad de los píxeles",
+    "5. Ajusta el tamaño del borrador con el campo numérico 'Tamaño Borrador' (en píxeles cuadrados)",
+    "6. Exporta tu creación como archivo PNG con el botón 'Descargar' que serializa el buffer del canvas mediante toDataURL()"
   ],
   "usage_examples": [
-    "Utiliza Dibujo en Canvas para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Desarrollo de wireframes interactivos donde se requieren anotaciones manuscritas sobre mockups",
+    "Corrección precisa de imágenes PNG para eliminar artefactos mediante selección de áreas específicas",
+    "Creación de máscaras de recorte para efectos visuales en aplicaciones web usando datos alfa",
+    "Entrenamiento de modelos de reconocimiento de patrones con datasets de dibujos vectoriales normalizados"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON zu Python ist eine praktische Online-Tool, das dir hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON zu Python kannst du verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass du schnell loslegen und effizient arbeiten kannst. Ob du Entwickler, Designer oder allgemeiner Nutzer bist, JSON zu Python kann dir helfen, deine Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden lokal in deinem Browser durchgeführt, was deine Datensicherheit gewährleistet und sicherstellt, dass deine Daten nicht auf irgendeinem Server hochgeladen werden. Nutze JSON zu Python sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der JSON-to-Python-Converter ist ein Spezialwerkzeug zur automatischen Generierung von Python-Typdeklarationen aus strukturierten JSON-Daten. Das Tool analysiert JSON-Objekte und generiert präzise Python-Code für Dataclasses, Pydantic-Modelle oder TypedDict-Strukturen, einschließlich korrekter Typinferenz und geschachtelter Strukturen. Entwickler benötigen dieses Tool, um beispielsweise API-Responses in typisierte Python-Objekte zu überführen, Schema-Validierung in FastAPI-Endpoints zu implementieren oder Konfigurationsdateien in statisch typisierte Datenmodelle zu konvertieren. Technisch arbeitet der Converter mit einer Kombination aus JSON-Schema-Introspection und Python-Abstract-Syntax-Tree-Manipulation, um präzise Typannotationen zu erzeugen, inklusive komplexer Typen wie Union, Optional oder Literal. Besonders nützlich ist die Behandlung von verschachtelten Objekten und Arrays, die in entsprechende Python-Container-Typen übersetzt werden.",
   "usage_steps": [
-    "Öffne die Seite des JSON zu Python-Tools",
-    "Gib oder füge den zu verarbeitenden Inhalt in das Eingabefeld ein",
-    "Ändere die Tool-Einstellungen und Optionen, wenn nötig",
-    "Klicke auf den Verarbeitungsbutton, um die Ergebnisse zu sehen",
-    "Kopiere oder herunterlade die verarbeiteten Ergebnisse"
+    "Öffnen Sie die Tool-Oberfläche und fügen Sie Ihr JSON-Dokument in das linke Eingabefeld ein.",
+    "Wählen Sie im Dropdown-Menü 'Output Format' zwischen Dataclass, Pydantic-Modell oder TypedDict aus.",
+    "Aktivieren Sie optional den 'CamelCase to snake_case'-Konverter für Feldnamen-Anpassung.",
+    "Passen Sie die Typinferenz-Einstellungen an, z.B. Behandlung von Datumsstrings als datetime-Objekte.",
+    "Klicken Sie auf den 'Generate Code'-Button, um die Python-Implementierung zu erzeugen.",
+    "Kopieren Sie den generierten Code aus dem Ausgabefeld oder laden Sie ihn als .py-Datei herunter."
   ],
   "usage_examples": [
-    "Verwende JSON zu Python, um deine Daten zu verarbeiten",
-    "Erhalte die Verarbeitungsresultate schnell ohne zu warten"
+    "Konvertierung einer API-Response-Sample in ein Pydantic-Modell für automatische Validierung in einer FastAPI-Anwendung.",
+    "Erstellung von Dataclasses aus JSON-Testdaten für Unit-Tests in einer Django-Anwendung.",
+    "Transformierung einer package.json-Konfiguration in ein typisiertes Python-Objekt für ein CI/CD-Skript.",
+    "Generierung von TypedDicts aus Elasticsearch-Abfrageresultaten für statische Typüberprüfung in Data-Processing-Pipelines."
   ]
 }

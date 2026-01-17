@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Sankey-Diagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Sankey-Diagramm-Generator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient nutzen können. Ob Sie ein Entwickler, Designer oder ein allgemeiner Benutzer sind, der Sankey-Diagramm-Generator kann Ihnen dabei helfen, die Arbeitsleistung zu verbessern. Alle Bearbeitungen erfolgen lokal im Browser, was Ihre Datensicherheit gewährleistet und verhindert, dass Ihre Daten auf irgendeinen Server hochgeladen werden. Nutzen Sie den Sankey-Diagramm-Generator sofort, um die schnellen, sicheren und kostenlosen Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Sankey-Chart-Generator ist ein spezialisierter Online-Editor für Flussdiagramme, der komplexe Energie-, Material- oder Datenströme in interaktiven Sankey-Diagrammen visualisiert. Das Tool verwendet die D3.js-Bibliothek zur clientseitigen Rendering-Optimierung und unterstützt die Eingabe von Flussdaten im CSV-, JSON- oder TSV-Format. Nutzer können Quell- und Zielknoten mit Gewichten verknüpfen, um beispielsweise Energieverluste in technischen Systemen oder Finanzströme in Unternehmen zu modellieren. Besondere Funktionen umfassen die Anpassung von Knotenbreiten, Farbverläufen zur Flussdifferenzierung und die automatische Skalierung von Diagrammkomponenten. Die Exportfunktion erzeugt Vektorgrafiken im SVG-Format für präzise Druckausgaben oder kompakte PNG-Bilder mit bis zu 4K-Auflösung. Entwickler profitieren von der Integration von benutzerdefinierten CSS-Klassen für die Einbettung in Webanwendungen. Im Vergleich zu anderen Tools bietet es eine präzise Kontrolle über die Knotenpositionierung via Drag-and-Drop und die Option, dynamische Datenupdates über API-Endpoints zu verarbeiten.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Sankey-Diagramm-Generators",
-    "Geben Sie den Inhalt ein oder fügen Sie ihn in das Eingabefeld ein, den Sie verarbeiten möchten",
-    "Passen Sie die Optionen und Einstellungen des Tools wie erforderlich an",
-    "Klicken Sie auf die Schaltfläche 'Verarbeiten', um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Wählen Sie im Format-Selector CSV, JSON oder TSV für Ihre Eingabedaten aus.",
+    "Importieren Sie Flussdaten über den Datei-Uploader oder fügen Sie Rohdaten in den Texteditor ein.",
+    "Verknüpfen Sie Spalten in der Mapping-Oberfläche mit Quellknoten, Zielknoten und Flusswerten.",
+    "Passen Sie die Knotenbreite mit dem Slider an und definieren Sie Farbpaletten für unterschiedliche Flusskategorien.",
+    "Aktivieren Sie die 'Auto-Layout'-Option für eine optimierte Darstellung oder positionieren Sie Knoten manuell per Drag-and-Drop.",
+    "Exportieren Sie das Diagramm als SVG mit Editierfunktionen oder als hochauflösendes PNG mit anpassbaren DPI-Einstellungen."
   ],
   "usage_examples": [
-    "Verwenden Sie den Sankey-Diagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell verarbeitete Ergebnisse ohne zu warten"
+    "Ein Energieversorger visualisiert den Stromfluss von Erzeugern zu Verbrauchern mit Einbindung von Transformatorverlusten in einem industriellen Park.",
+    "Ein Finanzanalyst erstellt ein Diagramm zur Darstellung von Investitionsrückflüssen in einem Venture-Capital-Portfolio mit mehrfachen Beteiligungsebenen.",
+    "Ein Logistikunternehmen modelliert den Warenfluss zwischen Hubs mit einer Farbcodierung für verschiedene Transportmitteltypen (LKW, Bahn, Schiff).",
+    "Ein Data-Scientist analysiert Website-User-Journeys von der Akquise über Conversion-Pfade bis zu Abwanderungsraten mit dynamischen Datenimportschnittstellen."
   ]
 }

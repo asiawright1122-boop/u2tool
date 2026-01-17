@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Sol es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Sol, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Sol puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Sol ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos Sunburst es una herramienta técnica diseñada para transformar datos jerárquicos en representaciones visuales radiales mediante algoritmos de partición en espiral. Permite a los usuarios mapear estructuras multinivel —como sistemas de archivos, taxonomías biológicas o desgloses financieros— en un espacio circular, donde cada anillo representa una capa de la jerarquía y el área de cada segmento refleja proporciones cuantitativas. Esta herramienta es esencial para analistas de datos que necesitan comunicar relaciones parte-todo complejas de manera intuitiva, especialmente en entornos como business intelligence (para análisis de ventas por región/producto), ciencia de datos (visualización de clusters jerárquicos) o informes académicos (estructuras taxonómicas). Su motor utiliza bibliotecas como D3.js para renderizar SVG escalables, aplicando métodos de partición tipo squarified o slice-and-dice, con opciones de personalización avanzada: paletas cromáticas divergentes, ajuste de ángulos radiales y mapeo de atributos agradientes de color. Los datos se importan en formatos estructurados (JSON, CSV con delimitadores de nivel) y se exportan en PNG de alta resolución o SVG editable, ideal para integrar en dashboards interactivos o presentaciones técnicas.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Sol",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Carga tu dataset en formato CSV o JSON usando el botón 'Importar Datos' en la barra superior.",
+    "Configura las columnas jerárquicas arrastrando los campos al panel 'Estructura de Anillos' en el orden de profundidad deseado.",
+    "Ajusta el algoritmo de partición en el selector 'Tipo de Distribución' (opciones: Squarified, Slice-and-Dice, Espiral).",
+    "Personaliza la codificación de color en la sección 'Paleta Visual', eligiendo entre esquemas categóricos o gradientes lineales.",
+    "Habilita la interactividad con el mouse activando 'Zoom Dinámico' y 'Etiquetas Flotantes' en las opciones de visualización.",
+    "Exporta el gráfico final en PNG (resolución 4K) o SVG utilizando el botón 'Descargar' y ajusta las dimensiones en el diálogo de salida."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Sol para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un analista de marketing visualiza el tráfico web segmentado por fuente (orgánico, pago, redes sociales) con subcategorías de canal.",
+    "Un biólogo representa la clasificación taxonómica de especies, desde reino hasta especie, codificando la biodiversidad por color.",
+    "Un CFO analiza el desglose de gastos corporativos por departamento, división y subcuenta, usando colores para resaltar超标 areas.",
+    "Un desarrollador documenta la estructura de directorios de un proyecto de software, mostrando el tamaño relativo de cada carpeta en el disco."
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Le Résolveur d'anagramme vous aide à trouver tous les mots anglais valides qui peuvent être formés en rearrangeant les lettres que vous fournissez. Idéal pour les jeux de mots, les puzzles et la construction du vocabulaire.",
+  "detailed_description": "Le Solveur d'Anagrammes est un outil logiciel conçu pour analyser un ensemble de caractères alphabétiques et générer toutes les combinaisons lexicalement valides possibles. Techniquement, il utilise un algorithme de permutation optimisé couplé à une recherche dans une base de données linguistique normalisée (comme le dictionnaire Académique ou des corpus spécialisés). Le processus commence par le tri des lettres entrées selon l'ordre Unicode, puis applique des techniques de backtracking pour explorer systématiquement les combinaisons viables. Les résultats sont ensuite filtrés par un arbre lexicographique (trie) pour garantir leur existence dans la langue cible. Cet outil s'adresse aux développeurs de jeux de mots, aux cryptographes amateurs ou aux linguistes cherchant à identifier des structures cachées dans des textes. Il est particulièrement utile pour résoudre des énigmes de type Scrabble™, optimiser les choix de mots dans des contraintes de caractères, ou analyser les redondances dans des systèmes de mots de passe basés sur des phrases mémorisables.",
   "usage_steps": [
-    "Entrez vos lettres mélangées",
-    "Voyez toutes les combinaisons de mots possibles",
-    "Cliquez pour copier des mots individuels",
-    "Utilisez les résultats pour les jeux de mots",
-    "Essayez différentes combinaisons de lettres"
+    "Saisissez les lettres désordonnées dans le champ texte principal (ex: 'aelrst')",
+    "Cochez/décochez les options avancées : inclure les pluriels, respecter la casse, exclure les mots courts",
+    "Sélectionnez la langue cible (français, anglais, espagnol) via le menu déroulant",
+    "Cliquez sur 'Lancer l'analyse permutative' pour déclencher le traitement",
+    "Faites glisser le curseur 'Longueur minimale' pour filtrer les résultats par nombre de caractères",
+    "Utilisez le bouton 'Exporter CSV' pour sauvegarder les résultats avec leurs scores de validité"
   ],
   "usage_examples": [
-    "Résolvez des puzzles de Scrabble",
-    "Trouvez des réponses aux mots croisés",
-    "Découvrez de nouveaux mots"
+    "Un joueur de Scrabble™ optimise son tirage en trouvant 'starter' parmi les 7 lettres disponibles",
+    "Un auteur vérifie si son pseudonyme 'Marcel Tene' contient des anagrammes suggestifs comme 'Clement René'",
+    "Un enseignant génère des exercices de vocabulaire à partir de lettres thématiques ('saison hivernale')",
+    "Un analyste de sécurité évalue la robustesse d'un mot de passe basé sur 'mot de passe123' en identifiant les anagrammes exploitables"
   ]
 }

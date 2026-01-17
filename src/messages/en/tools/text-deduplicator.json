@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text Deduplicator is a practical online tool that helps you quickly complete various tasks. Using Text Deduplicator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Text Deduplicator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Text Deduplicator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Text Deduplicator is a specialized tool designed to streamline text processing by removing duplicate lines, ensuring that only unique content remains. This is particularly useful in scenarios where data integrity and efficiency are paramount. For instance, when dealing with large datasets, log files, or lists of emails, duplicates can skew analysis, consume unnecessary storage, and affect the performance of subsequent operations. The Text Deduplicator employs advanced algorithms to identify and eliminate redundant lines, significantly enhancing the quality and reliability of the text data. Under the hood, the tool uses a hash-based approach to quickly compare and filter out duplicates, ensuring that the process is both fast and accurate. Additionally, it supports various input and output formats, making it versatile for different use cases. Whether you're a developer preparing data for a machine learning model or a content creator cleaning up a list of subscribers, the Text Deduplicator is an indispensable tool in your text processing toolkit.",
   "usage_steps": [
-    "Open the Text Deduplicator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Step 1: Navigate to the Text Deduplicator page and locate the 'Input Text' box.",
+    "Step 2: Copy and paste your text into the 'Input Text' box. Ensure that each line of text is on a new line.",
+    "Step 3: Adjust the 'Case Sensitivity' option to determine whether the deduplication process should consider case differences (e.g., 'Text' vs. 'text').",
+    "Step 4: Choose the 'Preserve Order' option if you want the output to maintain the original order of the unique lines.",
+    "Step 5: Click the 'Deduplicate' button to process the text and remove duplicates.",
+    "Step 6: Review the 'Output Text' box to see the deduplicated content. Copy or download the result for further use."
   ],
   "usage_examples": [
-    "Use Text Deduplicator to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: A data analyst is preparing a list of user emails for a marketing campaign. By using the Text Deduplicator, they ensure that each email address appears only once, preventing multiple messages from being sent to the same user and improving the effectiveness of the campaign.",
+    "Example 2: A content creator is compiling a list of potential guest contributors for a blog. They use the Text Deduplicator to clean up the list, ensuring that each contributor's name is unique and avoiding confusion or redundancy in their outreach efforts.",
+    "Example 3: A developer is working on a script that processes log files from multiple servers. The Text Deduplicator helps in eliminating duplicate log entries, making the log files more manageable and easier to analyze for troubleshooting and performance monitoring.",
+    "Example 4: A researcher is compiling a bibliography for a scientific paper. They use the Text Deduplicator to ensure that each reference is unique, maintaining the integrity of their work and preventing accidental citation of the same source multiple times."
   ]
 }

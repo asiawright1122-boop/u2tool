@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Expressões Cron é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Expressões Cron, você pode processar vários dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a eficientemente. Seja desenvolvedor, designer ou usuário geral, o Gerador de Expressões Cron pode ajudá-lo a melhorar a eficiência do trabalho. Todas as operações são realizadas localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados para qualquer servidor. Use o Gerador de Expressões Cron imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Gerador de Expressões Cron é uma ferramenta especializada para criar e analisar expressões cron de maneira visual e intuitiva. Técnicamente, o cron utiliza uma sintaxe de cinco campos (minutos, horas, dia do mês, mês e dia da semana) com caracteres especiais como asteriscos (*), barras (/) e vírgulas (,) para definir agendas de execução em sistemas Unix/Linux. Esta ferramenta traduz interações de interface em expressões válidas, permitindo ajustar intervalos, múltiplos valores ou padrões complexos sem memorizar regras manuais. Desenvolvedores precisam deste recurso para evitar erros comuns em configurações de tarefas agendadas (como backups noturnos, jobs de ETL ou notificações periódicas), especialmente quando lidam com combinações específicas de dias úteis, feriados ou horários não lineares. O funcionamento baseia-se em dois modos: o gerador utiliza seletores de interface (dropdowns para minutos, horas, etc.) para montar a expressão, enquanto o analisador converte expressões existentes em uma representação legível, destacando cada componente cronológico. Além disso, oferece validação em tempo real para garantir que a sintaxe gerada seja compatível com implementações padrão como Vixie Cron ou Quartz.",
   "usage_steps": [
-    "Abra a página do Gerador de Expressões Cron",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a aba 'Gerar Expressão' e selecione a frequência básica (diária, semanal, mensal) via dropdown principal.",
+    "Ajuste valores individuais nos campos específicos: selecione minutos [0-59] em 'Minutos' ou insira um intervalo (ex: 0/15).",
+    "Escolha dias da semana ou mês usando checkboxes múltiplos em 'Dias' ou 'Meses', combinando com regras como 'último dia útil'.",
+    "Ative a opção 'Visualizar Detalhes' para ver a tradução da expressão em linguagem natural (ex: '0 0 1 * *' = 'Meia-noite no primeiro dia de cada mês').",
+    "Clique em 'Copiar para Área de Transferência' para exportar a expressão gerada no formato padrão (ex: '30 8 * * 1-5').",
+    "Na aba 'Analisar Expressão', cole uma expressão existente (ex: '0 0/2 1,15 * *') e use o mapa de cores para identificar padrões como intervalos (0/2) ou listas (1,15)."
   ],
   "usage_examples": [
-    "Use o Gerador de Expressões Cron para processar seus dados",
-    "Obtenha rapidamente os resultados do processamento sem espera"
+    "Configurar um backup de banco de dados que execute diariamente às 23:30 usando '30 23 * * *'.",
+    "Agendar um relatório semanal toda segunda-feira às 09:00 com '0 9 * * 1'.",
+    "Criar um job que rode a cada 15 minutos durante dias úteis via '0/15 9-17 * * 1-5'.",
+    "Converter uma expressão complexa como '0 0 1 1-3/2 *' para entender que executa meia-noite no primeiro dia de janeiro, março e maio."
   ]
 }

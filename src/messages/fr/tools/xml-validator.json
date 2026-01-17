@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Le Valideur XML vérifie vos documents XML pour les erreurs de syntaxe et la bien-forméité. Fournit des messages d'erreur détaillés avec les numéros de ligne et de colonne.",
+  "detailed_description": "Le validateur XML effectue une analyse syntaxique rigoureuse des documents XML en appliquant les règles des spécifications XML 1.0 et 1.1. Il identifie les erreurs de structure telles que les balises non fermées, les attributs mal formés, les espaces de noms non déclarés, les sections CDATA mal délimitées ou les entités non résolues. Contrairement aux validateurs basiques, cet outil inclut un moteur de détection des erreurs de validation DTD (Document Type Definition) et signale précisément les lignes et colonnes concernées avec des codes d'erreur standardisés (ex: XML_ERR_NAME_REQUIRED). Les développeurs ont besoin de cet outil pour garantir l'intégrité des données lors de l'échange entre systèmes hétérogènes, éviter les pannes critiques dans les applications consommant du XML (comme les services web SOAP), et corriger les erreurs de configuration dans des fichiers tels que les descriptors J2EE ou les fichiers de mapping ORM. Le processus utilise un analyseur SAX (Simple API for XML) pour détecter les erreurs de bien-forméness sans nécessiter de schéma externe, et un analyseur DOM en mode validation lorsqu'un DTD ou XSD est fourni. Les résultats incluent des détails techniques comme les codes d'erreur libxml2 ou les messages du validateur Apache Xerces, permettant une résolution précise des problèmes.",
   "usage_steps": [
-    "Coller votre contenu XML",
-    "Cliquez sur Valider pour vérifier",
-    "Révisez les résultats de la validation",
-    "Corrigez toute erreur signalée",
-    "Re-validez jusqu'à ce que tout soit propre"
+    "Chargez votre fichier XML en utilisant le bouton 'Parcourir' ou collez directement le code dans l'éditeur monospace.",
+    "Activez l'option 'Validation stricte' pour appliquer les règles XML 1.1 ou sélectionnez un DTD personnalisé via le menu déroulant.",
+    "Cliquez sur le bouton 'Valider' pour lancer l'analyse syntaxique et sémantique.",
+    "Examinez la liste des erreurs dans le panneau inférieur, triée par niveau de criticité (erreur fatale, avertissement, info).",
+    "Utilisez les liens cliquables 'Ligne:Colonne' pour accéder directement aux segments problématiques dans l'éditeur.",
+    "Téléchargez le XML corrigé au format .xml ou exportez le rapport d'erreurs en .txt avec les codes de spécification officiels."
   ],
   "usage_examples": [
-    "Valider les réponses API",
-    "Vérifier les fichiers de configuration",
-    "Déboguer des messages SOAP"
+    "Un développeur Java corrige un fichier web.xml mal formé causant le déploiement échoué d'une application WAR sur Tomcat.",
+    "Un intégrateur de données vérifie un flux XML généré par un ETL avant son ingestion dans une base MarkLogic.",
+    "Un administrateur système valide les fichiers de configuration XML des routeurs réseau avant application en production.",
+    "Un rédacteur technique debugge un fichier DocBook XML contenant des entités personnalisées non déclarées dans le DTD."
   ]
 }

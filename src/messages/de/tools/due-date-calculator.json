@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Geburtsterminrechner schätzt Ihren Geburtstermin auf Basis Ihres letzten Monats.",
+  "detailed_description": "Der Due Date Calculator ist ein webbasiertes Tool zur präzisen Berechnung des Geburtstermins und zur Verfolgung von Schwangerschaftsmomenten unter Berücksichtigung medizinischer Leitlinien. Technisch gesehen implementiert das Tool die Naegele-Regel (Addition von 280 Tagen zum ersten Tag der letzten Menstruationsperiode) und ermöglicht gleichzeitig die Anpassung an individuelle Zykluslängen oder Ultraschallmessungen. Die Software berücksichtigt Zeitstempel mit Zeitzonenumrechnung, um globale Genauigkeit zu gewährleisten. Benutzer benötigen dieses Tool, um personalisierte Schwangerschaftspläne zu erstellen, Terminabsprachen mit Ärzten zu optimieren oder pränatale Checklisten zu synchronisieren. Einzigartig ist die Kombination aus medizinisch validierten Algorithmen mit einer API zur Einbettung von Wachstumsdiagrammen des Fötus, die sich dynamisch an den errechneten Trimestern orientieren. Das Tool generiert zudem iCal-Kalenderdateien für automatische Terminsynchronisation in E-Mail-Clients.",
   "usage_steps": [
-    "Geben Sie den letzten Monat ein",
-    "Oder geben Sie das Konzeptionsdatum ein",
-    "Passen Sie die Zykluslänge an",
-    "Sehen Sie den Geburtstermin an",
-    "Verfolgen Sie Meilensteine"
+    "Geben Sie das Datum der letzten Menstruationsperiode (LMP) in das Datumsfeld im Format TT.MM.JJJJ ein.",
+    "Passen Sie die Zykluslänge im Schieberegler an (Standardwert: 28 Tage, individuell zwischen 21 und 35 Tagen).",
+    "Optionale Eingabe des ersten Ultraschalls-Datums und des gemessenen Scheitel-Steiß-Längenwerts (CRL) in mm.",
+    "Wählen Sie Ihre Zeitzone aus einer interaktiven Weltkarte mit 40 Regionen für lokale Datumsanzeige.",
+    "Klicken Sie auf 'Berechnen', um das errechnete Entbindungstermin mit ±5-Tage-Toleranzband anzuzeigen.",
+    "Nutzen Sie die Registerkarten 'Trimester', 'Milestone-Tracker' und 'Download-Plan' für detaillierte Ansicht."
   ],
   "usage_examples": [
-    "Geburtstermin aus dem letzten Monat berechnen",
-    "Schwangerschaft Woche für Woche verfolgen",
-    "Vorbereitung auf die Geburt planen"
+    "Eine werdende Mutter mit unregelmäßigen Zyklussen (32 Tage) berechnet ihren Termin präziser, indem sie die Zykluslänge anpasst.",
+    "Ein Gynäkologe erstellt für 15 Patientinnen massenhaft individuelle Schwangerschaftspläne mit Exportfunktion in die Praxissoftware.",
+    "Eine expatriierte Nutzerin synchronisiert ihren Entbindungstermin mit deutscher Zeitzone in ihren US-amerikanischen Google-Kalender.",
+    "Ein Kinderwunsch-Blog integriert den Rechner per Embed-Code und bietet Leserinnen personalisierte Checklists bis zur Geburt."
   ]
 }

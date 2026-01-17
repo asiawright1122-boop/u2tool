@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Pizza Aninhados é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos de Pizza Aninhados, você pode processar vários dados facilmente sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Pizza Aninhados pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são feitos localmente no seu navegador, garantindo a segurança dos seus dados e não sendo uploaded para qualquer servidor. Use o Gerador de Gráficos de Pizza Aninhados imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Gerador de Gráficos de Pizza Aninhados permite visualizar dados hierárquicos complexos por meio de camadas concêntricas, onde cada anel representa um nível de detalhe distinto. Ideal para representar estruturas como alocação orçamentária multinível, distribuição de recursos setoriais ou análise de participação de mercado em diferentes escalas geográficas. O usuário insere dados em formatos estruturados (JSON ou CSV) e define as relações pai-filho entre categorias, com suporte para múltiplas séries de dados. O mecanismo renderiza os anéis internos como categorias principais e os externos como subcategorias, com proporções calculadas automaticamente com base nos valores numéricos fornecidos. Tecnicalmente, utiliza bibliotecas de visualização como D3.js para criar SVG responsivos, permitindo personalização avançada de paletas de cores, transparências e espaçamentos entre camadas. A interatividade inclui tooltips dinâmicos que exibem percentuais absolutos e relativos ao passar o mouse, além de opção de exportação em PNG ou SVG vetorial para relatórios profissionais.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Pizza Aninhados",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole seus dados estruturados no formato JSON ou CSV na área de upload, organizando categorias com identificadores de nível (ex: 'parent_id' e 'child_id').",
+    "Acesse o painel 'Configuração de Hierarquia' para mapear quais colunas representam os anéis internos e externos.",
+    "Personalize as paletas de cores usando o seletor de gradientes para diferenciar claramente camadas adjacentes.",
+    "Ajuste a espessura dos anéis e a margem entre camadas no seletor de dimensões gráficas.",
+    "Visualize a prévia em tempo real e interaja com os elementos para validar proporções e legendas.",
+    "Exporte o gráfico final em PNG de alta resolução ou SVG editável via botão 'Baixar Visualização'."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Pizza Aninhados para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Uma empresa multinacional analisando alocação de investimentos por região (anel interno) e departamentos associados (anel externo).",
+    "ONGs mapeando distribuição de recursos financeiros por causa social principal e projetos específicos vinculados.",
+    "Hospitais visualizando uso de equipamentos médicos por setor (ex: emergência vs. rotina) e subcategorias como UTI ou clínica geral.",
+    "Professores demonstrando divisão do currículo escolar por disciplinas principais e tópicos específicos em cada uma."
   ]
 }

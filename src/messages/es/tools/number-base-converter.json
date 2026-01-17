@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Convertidor de bases numéricas es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Convertidor de bases numéricas, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Convertidor de bases numéricas puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Convertidor de bases numéricas inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El convertidor de bases numéricas permite transformar valores entre sistemas de numeración posicionales como binario (base 2), octal (base 8), decimal (base 10) y hexadecimal (base 16). Esta herramienta es esencial para desarrolladores que trabajan en sistemas embebidos, análisis de protocolos de red o ingeniería inversa, donde las conversiones entre bases son fundamentales para interpretar datos a bajo nivel o depurar estructuras binarias. El proceso técnico implica algoritmos de expansión de notación posicional para conversiones desde bases no decimales, y métodos de división sucesiva con residuos para transformaciones desde decimal. La herramienta también maneja partes fraccionarias mediante multiplicación iterativa por la base destino, asegurando precisión en valores con decimales. Cada conversión incluye validación de dígitos válidos según la base (por ejemplo, rechazo de 'G' en hexadecimal) y manejo de overflow para números fuera del rango soportado. Su motor interno utiliza aritmética de precisión arbitraria para evitar errores de redondeo en conversiones complejas.",
   "usage_steps": [
-    "Abre la página de la herramienta Convertidor de bases numéricas",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona la base de origen en el menú desplegable 'Base de Entrada' (binario/octal/decimal/hexadecimal).",
+    "Introduce el número en el campo de texto, respetando las reglas de la base seleccionada (ej: '0x' para hexadecimal).",
+    "Elige la base de destino en el segundo desplegable 'Base de Salida'.",
+    "Haz clic en el botón 'Convertir' para ejecutar el proceso de transformación matemática.",
+    "Revisa los resultados en los campos de salida, que muestran la representación en todas las bases soportadas.",
+    "En caso de errores, el sistema resaltará en rojo la posición del dígito inválido para corrección inmediata."
   ],
   "usage_examples": [
-    "Usa Convertidor de bases numéricas para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un ingeniero de redes convierte una dirección MAC en formato hexadecimal (00:1A:2B:3C:4D:5E) a decimal para almacenarla en una base de datos relacional.",
+    "Un desarrollador de sistemas embebidos traduce un valor de sensor octal (0377) a binario para configurar los pines de un microcontrolador PIC.",
+    "Un experto en forense digital transforma una marca de tiempo hexadecimal (0x5A5BFC3D) a formato decimal legible para analizar registros de actividad en un sistema Linux.",
+    "Un diseñador de interfaces convierte un código de color hexadecimal (#FF5733) a sus componentes RGB decimales (255, 87, 51) para implementar paletas en frameworks CSS."
   ]
 }

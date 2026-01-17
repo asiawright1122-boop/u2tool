@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Biblioteca de Patrones Regex es una herramienta online práctica que te ayuda a completar diversas tareas de manera rápida. Utilizando la Biblioteca de Patrones Regex, puedes procesar diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya sea que seas un desarrollador, diseñador o usuario general, la Biblioteca de Patrones Regex puede ayudarte a mejorar la eficiencia de tu trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza la Biblioteca de Patrones Regex inmediatamente para experimentar servicios de herramientas online rápidas, seguras y gratuitas.",
+  "detailed_description": "La biblioteca de patrones Regex es un repositorio especializado que ofrece expresiones regulares prevalidadas para tareas específicas como validación de correos electrónicos, detección de URLs, formateo de números telefónicos internacionales y extracción de datos estructurados. Esta herramienta está diseñada para resolver problemas comunes en el procesamiento de texto, donde la precisión en la sintaxis de las expresiones regulares es crítica. Los desarrolladores ahorran tiempo al evitar crear patrones desde cero, reduciendo errores comunes como falsos positivos en validaciones o fallos en la compatibilidad con caracteres Unicode. La biblioteca incluye variantes para diferentes motores de regex (PCRE, Python, JavaScript) y soporta modificadores avanzados como anchoring (^/), grupos de captura y lookaheads. Cada patrón incluye documentación sobre su cobertura de casos extremos, como dominios de correo con TLD internacionales o formatos telefónicos según normas E.164. La interfaz permite filtrar por categoría, probar expresiones en tiempo real con muestras de datos y exportar código integrable en lenguajes populares.",
   "usage_steps": [
-    "Abre la página de la herramienta de Biblioteca de Patrones Regex",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Navegar por categorías predefinidas (Correos, URLs, Teléfonos) usando el menú lateral.",
+    "2. Utilizar el campo de búsqueda para encontrar patrones por palabra clave o funcionalidad específica.",
+    "3. Seleccionar un patrón para ver su sintaxis detallada, incluyendo modificadores y ejemplos de coincidencia.",
+    "4. Copiar el patrón directamente al portapapeles o exportar código de ejemplo en Python/JavaScript.",
+    "5. Ajustar los modificadores (ej: 'i' para insensible a mayúsculas, 'g' para búsqueda global) según el motor de regex utilizado.",
+    "6. Validar la expresión en tiempo real ingresando datos de prueba en el campo de ejecución."
   ],
   "usage_examples": [
-    "Utiliza la Biblioteca de Patrones Regex para procesar tus datos",
-    "Obtén resultados de procesamiento rápidos sin esperar"
+    "1. Validar formularios web para garantizar que las direcciones de correo cumplan con el estándar RFC 5322, incluyendo dominios con caracteres Unicode.",
+    "2. Extraer automáticamente números de teléfono de registros de logs, normalizándolos al formato E.164 (+1 para EE.UU., +44 para Reino Unido, etc.).",
+    "3. Filtrar URLs maliciosas en un firewall de aplicación, verificando coincidencias con dominios de alto riesgo usando patrones de subdominios dinámicos.",
+    "4. Procesar archivos CSV para identificar celdas que contengan fechas en formatos no estándar (ej: DD/MM/AAAA vs MM/DD/AAAA) mediante detección de patrones contextuales."
   ]
 }

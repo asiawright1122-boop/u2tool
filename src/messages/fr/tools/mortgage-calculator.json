@@ -1,16 +1,17 @@
 {
-  "detailed_description": "La Calculatrice d'emprunt immobilier est un outil de prêt immobilier complet qui vous aide à calculer les versements mensuels, le total des intérêts et à visualiser des tableaux d'amortissement détaillés. Entrez le prix de l'habitation, l'apport personnel, le taux d'intérêt et la durée du prêt pour obtenir des résultats instantanés. Prise en charge des versements supplémentaires pour voir comment vous pouvez rembourser votre emprunt plus rapidement.",
+  "detailed_description": "Le calculateur de prêt immobilier est un outil technique qui décompose les composantes financières d'un emprunt hypothécaire en appliquant la formule mathématique standard de calcul des mensualités : M = P[r(1+r)^n]/[(1+r)^n-1]. Il intègre des paramètres comme le montant du capital (P), le taux d'intérêt annuel (r), la durée du prêt en mois (n) et les éventuels frais annexes (taxes foncières, assurance). Conçu pour répondre aux besoins précis des emprunteurs, il permet de modéliser des scénarios de financement complexes, d'optimiser la structure d'un prêt ou d'analyser l'impact du taux d'intérêt composé sur le coût total. L'algorithme génère un échéancier d'amortissement détaillé avec la répartition mensuelle entre capital remboursé, intérêts, et solde restant dû, en prenant en compte les modalités d'amortissement linéaire ou dégressif. Cette transparence technique aide les utilisateurs à planifier des stratégies de remboursement anticipé ou à comparer des offres bancaires avec des conditions variables.",
   "usage_steps": [
-    "Entrez le prix de l'habitation",
-    "Entrez le montant de votre avoir",
-    "Réglez le taux d'intérêt annuel",
-    "Sélectionnez la durée du prêt (10-30 ans)",
-    "Ajoutez éventuellement des versements mensuels supplémentaires",
-    "Consultez le versement mensuel et le tableau d'amortissement"
+    "Saisissez le montant du prêt dans le champ « Montant du capital » (ex: 350 000€)",
+    "Sélectionnez la durée du prêt via le sélecteur déroulant (15, 20, 25 ou 30 ans)",
+    "Entrez le taux d'intérêt annuel en pourcentage (ex: 4.25%) dans le formulaire dédié",
+    "Cochez les options complémentaires (taxes foncières, assurance habitation, frais de dossier)",
+    "Cliquez sur le bouton « Calculer » pour générer l'échéancier interactif",
+    "Consultez l'onglet « Analyse » pour visualiser la répartition capital/intérêts et les coûts cumulés"
   ],
   "usage_examples": [
-    "Calculez les versements mensuels pour une maison de 300 000 $",
-    "Comparez les options de prêt immobilier de 15 ans et de 30 ans",
-    "Voyez comment les versements supplémentaires réduisent le total des intérêts"
+    "Un jeune couple calcule ses mensualités potentielles pour un logement neuf à Lyon en intégrant les frais de notaire.",
+    "Un investisseur compare le coût total entre un prêt à taux fixe sur 20 ans et un prêt à taux variable sur 25 ans.",
+    "Un retraité évalue la faisabilité d'une acquisition en calculant le ratio entre ses revenus et les charges mensuelles.",
+    "Un propriétaire étudie les implications financières d'un rachat de crédit immobilier avec un taux plus bas."
   ]
 }

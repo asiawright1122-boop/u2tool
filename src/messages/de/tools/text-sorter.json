@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Text Sorter ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Text Sorter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Nutzer, der Text Sorter kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Text Sorter sofort, um schnell, sicher und kostenlosen Online-Tooldienstleistungen zu genießen.",
+  "detailed_description": "Der Text-Sortierer ermöglicht das präzise Strukturieren von Zeilentexten durch alphabetische, numerische oder längenbasierte Sortierungen. Technisch betrachtet analysiert das Tool Eingabedaten durch Zeilenaufteilung mittels Regex-basierter Trennung (z. B. \\n oder \\r\\n) und wendet anschließend spezifizierte Sortierkriterien an. Entwickler profitieren von der Unicode-Unterstützung (inkl. Sonderzeichen) und der Möglichkeit, Case-Sensitivität zu deaktivieren, um beispielsweise Logfiles oder unstrukturierte Rohdaten zu normalisieren. Die Sortierung erfolgt clientseitig im Browser mithilfe optimierter JavaScript-Algorithmen (z. B. Timsort-ähnliche Implementierung), wodurch große Datenvolumina effizient verarbeitet werden. Ein praktischer Anwendungsfall ist das Konsolidieren von API-Antworten in verschiedenen Formaten (JSON, XML) vor der Weiterverarbeitung. Besonders bei der Vorbereitung von Trainingsdaten für NLP-Modelle ist die Option, leere Zeilen automatisch zu filtern, von Vorteil. Die Funktionalität, Sortierergebnisse als herunterladbares .txt-Dokument zu exportieren, ergänzt die Anwendungstiefe für professionelle Workflow-Integrationen.",
   "usage_steps": [
-    "Öffnen Sie die Text Sorter-Tool-Seite",
-    "Geben Sie den zu bearbeitenden Inhalt in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und Einstellungen nach Bedarf an",
-    "Klicken Sie auf den Bearbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die bearbeiteten Ergebnisse"
+    "Fügen Sie Ihren Rohtext in den oberen Textbereich ein, wobei Zeilenumbrüche automatisch als Trennzeichen erkannt werden.",
+    "Wählen Sie im Dropdown-Menü 'Sortiermodus' zwischen lexikographischer, numerischer oder Zeichenlängen-Sortierung.",
+    "Aktivieren Sie den Schalter 'Groß-/Kleinschreibung ignorieren' für case-insensitive Vergleiche bei alphanumerischen Daten.",
+    "Stellen Sie die Sortier-Richtung über die Radiobuttons 'A→Z' oder 'Z→A' ein, wobei bei numerischer Sortierung aufsteigend/absteigend dynamisch angepasst wird.",
+    "Klicken Sie auf 'Sortieren', um die Transformation auszuführen – die Ausführungszeit wird für Debugging-Zwecke angezeigt.",
+    "Kopieren Sie das Ergebnis per Klick auf den Zwischenablage-Button oder laden Sie es als .txt herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie den Text Sorter, um Ihre Daten zu bearbeiten",
-    "Erhalten Sie schnell die Bearbeitungsresultate ohne zu warten"
+    "Ein DevOps-Engineer sortiert Server-Logdateien chronologisch, indem er Zeitstempel im Format 'YYYY-MM-DD HH:MM' numerisch aufsteigend ordnet.",
+    "Ein Datenwissenschaftler entfernt Duplikate aus einer 10.000-Zeilen-CSV, indem er zuerst alphabetisch und anschließend doppelte Zeilen manuell löscht.",
+    "Ein Frontend-Entwickler organisiert CSS-Klassen alphabetisch, um Wiederholungen zu vermeiden und die Lesbarkeit in Teamprojekten zu verbessern.",
+    "Ein Forscher normalisiert experimentelle Messdaten, indem er Dezimalwerte nach Kommastellen (3 Zeichen nach '.') gruppiert und dann numerisch sortiert."
   ]
 }

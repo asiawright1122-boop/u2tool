@@ -1,15 +1,17 @@
 {
-  "detailed_description": "El Convertidor de Talla de Zapatos te ayuda a encontrar el tamaño correcto de zapatos en diferentes sistemas de tallaje.",
+  "detailed_description": "El convertidor de tallas de calzado es una herramienta técnica especializada que realiza transformaciones precisas entre sistemas de medición de tallas de EE. UU., Reino Unido, Unión Europea y Asia. Utiliza algoritmos basados en estándares internacionales como ISO 9407:1991 (Mondopoint) y fórmulas matemáticas de interpolación lineal para ajustar valores fraccionarios y enteros. La herramienta mapea cada talla de entrada a una base de datos normalizada que considera diferencias anatómicas regionales, variaciones en unidades de medida (como el barleycorn británico) y desviaciones específicas por tipo de calzado (zapatillas, botas, zapatos formales). Su necesidad surge en contextos de comercio electrónico transfronterizo, manufactura globalizada y logística de inventario, donde errores en tallas generan devoluciones costosas. La interfaz procesa solicitudes mediante un motor backend que correlaciona sistemas mediante tablas de conversión dinámicas, actualizadas con datos de la International Footwear Association (IFA).",
   "usage_steps": [
-    "Selecciona la categoría de género",
-    "Elige el sistema de talla de entrada",
-    "Introduce tu talla",
-    "Ver todas las conversiones",
-    "Revisa la longitud del pie"
+    "1. Selecciona el sistema de talla original en el menú desplegable 'Sistema Origen' (EE. UU., Reino Unido, UE o Asia).",
+    "2. Ingresa el valor numérico de la talla en el campo de entrada, incluyendo decimales para medios tamaños (ej. 9.5).",
+    "3. Marca los checkboxes correspondientes a los sistemas de destino requeridos (puedes seleccionar múltiples opciones simultáneamente).",
+    "4. Haz clic en el botón 'Convertir' para activar el cálculo basado en algoritmos de interpolación ajustados por género y tipo de calzado.",
+    "5. Revisa los resultados en la tabla de salida, que muestra equivalencias normalizadas con tolerancias de ±0.2 unidades.",
+    "6. Utiliza el botón 'Exportar CSV' para descargar datos estructurados compatibles con sistemas ERP o plataformas de e-commerce."
   ],
   "usage_examples": [
-    "Convierte de EE. UU. a Europa",
-    "Encuentra el equivalente del Reino Unido",
-    "Compra marcas internacionales"
+    "Un comprador en México adquiere zapatillas deportivas en una tienda online de EE. UU. y convierte la talla 10.5 US a sistema métrico europeo para verificar compatibilidad.",
+    "Una fábrica de calzado en Vietnam ajusta especificaciones técnicas de un lote para exportación a Reino Unido, convirtiendo tallas asiáticas a formato basado en barleycorns.",
+    "Un turista francés consulta equivalencias de talla japonesa (CM) a sistema británico antes de comprar calzado tradicional en Kioto.",
+    "Un marketplace digital automatiza la conversión de 500 referencias de UE a UK&US para sincronizar inventario multiregional tras el Brexit."
   ]
 }

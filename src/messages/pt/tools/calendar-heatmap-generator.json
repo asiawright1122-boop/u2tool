@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Heatmap de Calendário é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Heatmap de Calendário, você pode processar vários dados facilmente sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de maneira eficiente. Seja um desenvolvedor, designer ou usuário geral, o Gerador de Heatmap de Calendário pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Gerador de Heatmap de Calendário imediatamente para experimentar serviços rápidos, seguros e gratuitos de ferramentas online.",
+  "detailed_description": "O Calendar Heatmap Generator permite criar visualizações de dados temporais em formato de calendário usando técnicas de mapeamento de calor baseadas em escalas de cor. Tecnicalmente, o sistema processa dados cronológicos fornecidos pelo usuário em formatos CSV ou Excel, convertendo timestamps em dias organizados em uma matriz mensal. A ferramenta aplica algoritmos de normalização de dados para mapear valores numéricos em paletas de cores personalizáveis (como escalas sequenciais, divergentes ou categóricas), permitindo ajustes granulares de brilho, saturação e contrastes para acessibilidade. A interface utiliza WebGL para renderizar previews interativos com zoom e tooltips, enquanto mantém compatibilidade com exportações estáticas em PNG (com resolução ajustável até 4K) e SVG (com elementos vetoriais editáveis). Desenvolvedores precisam desta ferramenta para identificar padrões sazonais em métricas como commits de código, vendas diárias ou atividade de usuários, graças ao suporte nativo a fusos horários e agregação automática de dados em intervalos semanais ou mensais.",
   "usage_steps": [
-    "Abra a página do Gerador de Heatmap de Calendário",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Importe seu dataset no formato CSV/Excel usando o botão 'Carregar Dados' no painel lateral esquerdo.",
+    "Mapeie as colunas no seletor de campos: escolha uma coluna com datas no formato ISO 8601 e outra com valores numéricos.",
+    "Ajuste a escala de cor no seletor HSL, definindo pontos de interrupção para valores mínimos, médios e máximos.",
+    "Ative a opção 'Ajustar Fuso Horário' para converter timestamps automaticamente para o horário local do seu público-alvo.",
+    "Personalize dimensões da grade usando os controles deslizantes: ajuste largura das células entre 10-50px e margens entre 5-20%.",
+    "Exporte o resultado clicando em 'Baixar PNG' ou 'Exportar SVG', com opções para incluir legenda ou remover rótulos de datas."
   ],
   "usage_examples": [
-    "Use o Gerador de Heatmap de Calendário para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor visualiza commits diários no GitHub, identificando períodos de alta produtividade com uma escala de verde intenso.",
+    "Um analista de varejo mapeia vendas diárias de um produto, destacando quedas de desempenho em vermelho para estratégias de recuperação.",
+    "Um pesquisador climático plota temperaturas médias mensais, usando uma escala divergente azul-vermelha para mostrar anomalias térmicas.",
+    "Um product manager analisa o engajamento de usuários em um app, com células vazias indicando dias sem atividade de DAU (Daily Active Users)."
   ]
 }

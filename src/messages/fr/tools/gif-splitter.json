@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Diviseur de GIF est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant Diviseur de GIF, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, Diviseur de GIF peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, garantissant la sécurité de vos données et ne sera pas téléchargé sur un serveur. Utilisez Diviseur de GIF immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le GIF Splitter est un outil en ligne dédié à l'extraction des frames individuelles d'un GIF animé. Cette application utilise des algorithmes de décodage spécifiques aux fichiers GIF pour isoler chaque image séquentielle, permettant ainsi aux utilisateurs de sauvegarder ou de manipuler chaque frame séparément. Cette fonctionnalité est particulièrement utile pour les développeurs et les designers qui ont besoin de décomposer des animations complexes en éléments visuels distincts. Par exemple, il peut être utilisé pour créer des spritesheets pour les jeux vidéo, pour analyser le mouvement dans des animations, ou pour optimiser le poids des images dans des projets web. Le GIF Splitter gère efficacement les GIFs de grande taille et offre des options de réglage précises, telles que la sélection de frames spécifiques ou la conversion des images extraites en différents formats (PNG, JPEG, etc.). L'outil est entièrement web-based, ce qui signifie qu'aucune installation n'est nécessaire et que les fichiers sont traités directement dans le navigateur de l'utilisateur.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Diviseur de GIF",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Téléchargez le GIF animé que vous souhaitez décomposer en cliquant sur le bouton 'Choisir un fichier' ou en faisant glisser le fichier directement dans la zone désignée.",
+    "Une fois le GIF chargé, vous verrez une prévisualisation de l'animation. Utilisez les contrôles de lecture pour naviguer à travers les frames.",
+    "Sélectionnez les frames que vous souhaitez extraire en cochant les cases correspondantes. Vous pouvez également choisir d'extraire toutes les frames en un clic.",
+    "Réglez les options de sortie, comme le format des images (PNG, JPEG, etc.) et la qualité si nécessaire, en utilisant le menu déroulant 'Options de sortie'.",
+    "Cliquez sur le bouton 'Extraire les frames' pour lancer le processus. L'outil traitera chaque frame sélectionnée et les préparera pour le téléchargement.",
+    "Enfin, téléchargez les images extraites en cliquant sur le bouton 'Télécharger' ou en faisant glisser les images vers votre ordinateur."
   ],
   "usage_examples": [
-    "Utilisez Diviseur de GIF pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur de jeux vidéo utilise le GIF Splitter pour décomposer une animation de personnage en plusieurs frames, afin de créer une spritesheet pour un jeu 2D.",
+    "Un concepteur de sites web extrait les frames d'un GIF de présentation pour les utiliser comme images individuelles dans une galerie photo, optimisant ainsi le chargement de la page.",
+    "Un animateur de films d'animation analyse le mouvement d'un personnage en décomposant une séquence GIF frame par frame, afin d'améliorer la précision de l'animation.",
+    "Un graphiste convertit un GIF promotionnel en une série d'images statiques pour les utiliser dans une campagne de réseaux sociaux, où les images statiques peuvent être plus adaptées."
   ]
 }

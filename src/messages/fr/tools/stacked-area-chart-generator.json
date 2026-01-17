@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique en Aire Empilée est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Générateur de Graphique en Aire Empilée, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique en Aire Empilée peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et évitant qu'elles ne soient téléchargées sur n'importe quel serveur. Utilisez immédiatement le Générateur de Graphique en Aire Empilée pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de graphiques en aires empilées permet de visualiser la composition dynamique de données multidimensionnelles à travers des séries temporelles ou catégorielles. Contrairement aux outils classiques, ce générateur intègre un moteur de rendu SVG vectoriel avec prise en charge des transitions animées entre points de données, garantissant une lisibilité optimale même avec des jeux de données complexes. Les utilisateurs peuvent superposer jusqu'à 20 séries de données, chaque couche représentant une proportion d'un total global, ce qui est particulièrement utile pour analyser l'évolution des contributions relatives (ex. : parts de marché, budget allocation). Le moteur calcule automatiquement les échelles des axes Y cumulatives, tout en permettant des personnalisations manuelles via des expressions mathématiques. Des fonctionnalités avancées incluent l'export interactif (avec survol des données) au format HTML ou l'intégration directe de code JavaScript pour les développeurs. Ce outil s'adresse spécifiquement aux analystes de données, responsables financiers ou chercheurs souhaitant illustrer des tendances combinées sans passer par des logiciels lourds.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique en Aire Empilée",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Cliquez sur le bouton 'Importer CSV/TSV' pour charger vos données structurées avec en-têtes de colonnes.",
+    "Sélectionnez les colonnes à inclure dans la pile via la liste déroulante 'Séries à empiler' tout en maintenant la touche Ctrl appuyée.",
+    "Réglez l'axe X en choisissant 'Date/Heure' ou 'Catégorie personnalisée' dans le panneau 'Configuration des axes'.",
+    "Activez l'option 'Cumul relatif' pour transformer les valeurs en pourcentages ou conservez 'Cumul absolu' pour des totaux bruts.",
+    "Personnalisez les couleurs via l'éditeur HEX ou chargez un fichier JSON de palette préétablie.",
+    "Utilisez le curseur 'Vitesse d'animation' pour ajuster la fluidité des transitions entre points de données."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique en Aire Empilée pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un marketeur analysant la croissance mensuelle des ventes par canal (e-commerce, magasins physiques, partenaires) sur deux années fiscales.",
+    "Un écologiste comparant les émissions de CO2 par secteur industriel (transport, énergie, agriculture) sur une décennie.",
+    "Un gestionnaire de projet visualisant la répartition du temps de développement entre équipes (front-end, back-end, QA) dans un sprint agile.",
+    "Un économiste modélisant l'évolution des réserves de change d'un pays divisées par devise (USD, EUR, CNY) sur un cycle électoral."
   ]
 }

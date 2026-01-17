@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Word Counter is a practical online tool that helps you quickly complete various tasks. Using Word Counter, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Word Counter can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Word Counter immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Word Counter tool performs granular text analysis by leveraging Unicode-aware parsing algorithms to accurately segment input text into lexical units. Utilizing regular expression patterns matching \\b\\w+\\b for word boundaries, sentence detection via punctuation-terminated phrase recognition, and paragraph identification through newline character sequences (\\r\\n\\r\\n), it quantifies text metrics with byte-level precision. This enables developers and content creators to validate content against specific constraints such as SEO meta tags requiring 155-160 character descriptions, academic paper word limits, or content management system formatting rules. The tool's backend processes text streams using finite-state automata to count alphabetic, numeric, and special characters separately, while its frontend employs a Web Workers implementation to prevent UI blocking during large document analysis. Unique features include configurable whitespace sensitivity, multilingual hyphenation handling, and statistical breakdowns showing average word length and paragraph density – crucial for accessibility compliance audits and natural language processing pipeline preprocessing.",
   "usage_steps": [
-    "Open the Word Counter tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Paste raw text into the primary textarea input field or drag/drop a .txt/.docx file onto the designated upload zone",
+    "2. Toggle the 'Advanced Statistics' checkbox to enable detailed metrics including average word length and paragraph distribution",
+    "3. Select specific analysis modes using the segmented control: 'Basic Counts' for simple word/character totals, 'Linguistic Analysis' for sentence complexity metrics, or 'Format Validation' for style guide compliance checks",
+    "4. Click the 'Process Text' button to initiate analysis, which highlights tokenized segments in the source text using colored overlays",
+    "5. Review results displayed in the dedicated metrics panel, including total word count, character count excluding whitespace, sentence boundaries identified via Punkt algorithm, and paragraph clusters detected through blank line segmentation",
+    "6. Use the 'Export Data' dropdown to download results as JSON or CSV, or click 'Copy All Metrics' to clipboard for integration with documentation workflows"
   ],
   "usage_examples": [
-    "Use Word Counter to process your data",
-    "Get processing results quickly without waiting"
+    "A technical writer verifies API documentation meets exact word counts for developer portal summaries while maintaining 75-100 words per paragraph for readability",
+    "A digital marketer optimizes product descriptions to Google Shopping's 150-character limit by comparing character counts with and without whitespace",
+    "A computational linguist uses sentence count statistics to train a machine learning model for academic paper abstract detection",
+    "A legal professional validates contract section length requirements by analyzing paragraph distribution patterns in proposed agreements"
   ]
 }

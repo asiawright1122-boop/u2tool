@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Convertidor Binario a Decimal es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Convertidor Binario a Decimal, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Convertidor Binario a Decimal puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y que no se subirán a ningún servidor. Usa el Convertidor Binario a Decimal ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "Este conversor realiza transformaciones precisas entre sistemas numéricos binario, decimal y hexadecimal, utilizando algoritmos de análisis posicional y aritmética computacional. Para conversiones binario-decimal, aplica el teorema fundamental de la numeración ponderada, multiplicando cada bit por 2ⁿ según su posición. En conversiones decimales, implementa divisiones sucesivas por 16 o 2 según la base destino, mientras que para hexadecimal se emplea agrupamiento de nibbles (4 bits) con representación alfanumérica. Es esencial para desarrolladores que depuran operaciones de bajo nivel, administradores de red que calculan máscaras CIDR, o estudiantes de electrónica digital que necesitan validar cálculos de lógica combinacional. El motor interno valida automáticamente la sintaxis de entrada (como dígitos no binarios o hexadecimales inválidos) y soporta números negativos mediante representación en complemento a dos. Su diferencial técnico radica en el procesamiento en tiempo real sin recarga de página, manteniendo consistencia en conversiones múltiples mediante un motor en JavaScript optimizado para operaciones bitwise.",
   "usage_steps": [
-    "Abre la página del Convertidor Binario a Decimal",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Seleccione el modo de conversión deseado usando las pestañas 'Binario → Decimal', 'Decimal → Hex' u otras opciones disponibles",
+    "Introduzca el valor numérico en el campo de entrada correspondiente, asegurándose de usar el formato correcto (ej. '0b' para binario, '0x' para hex)",
+    "Active la casilla 'Mostrar pasos' si requiere visualizar el desglose matemático de la conversión",
+    "Haga clic en el botón 'Convertir' para ejecutar la transformación",
+    "Revise el resultado en el panel de salida, que muestra valores equivalentes en las tres bases simultáneamente",
+    "Use el botón 'Copiar' para transferir el resultado al portapapeles en formato compatible con entornos de desarrollo"
   ],
   "usage_examples": [
-    "Usa el Convertidor Binario a Decimal para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador de firmware convierte '11010101' a hexadecimal para programar registros de memoria en un microcontrolador",
+    "Un estudiante de arquitectura de computadoras transforma '-45' (decimal) a binario para verificar implementación de números negativos",
+    "Un ingeniero de redes traduce '255.192.0.0' a notación CIDR mediante conversión previa a binario",
+    "Un analista de seguridad transforma hashes hexadecimales a decimal para auditorías criptográficas"
   ]
 }

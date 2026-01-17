@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Medidor es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Medidor, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Medidor puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesamientos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Medidor ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos de Giro es una herramienta en línea que permite a los desarrolladores y diseñadores visualizar datos en forma de gráficos de giro, también conocidos como gráficos de medidor. Esta herramienta es ideal para mostrar indicadores de rendimiento (KPIs) y métricas en tiempo real, proporcionando una representación visual clara y atractiva. Los usuarios pueden personalizar varios aspectos del gráfico, como el rango, los valores, los colores y las etiquetas, para adaptarlo a sus necesidades específicas. Además, el generador permite exportar los gráficos en formatos PNG y SVG, lo que facilita su integración en informes, dashboards y aplicaciones web. La utilidad de esta herramienta radica en su capacidad para transformar datos abstractos en visualizaciones comprensibles, lo que es crucial para la toma de decisiones y el análisis de datos en entornos empresariales y de desarrollo.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Medidor",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Abre el Generador de Gráficos de Giro en tu navegador y asegúrate de que estás en la página de configuración del gráfico.",
+    "En la sección 'Rango del Gráfico', define el valor mínimo y máximo que el gráfico debe mostrar. Por ejemplo, si quieres un gráfico de 0 a 100, ajusta estos valores.",
+    "Desplázate hasta la sección 'Valores de Medición' y establece el valor actual que se mostrará en el gráfico. Este valor debe estar dentro del rango definido previamente.",
+    "Personaliza el aspecto del gráfico en la sección 'Estilo del Gráfico'. Aquí puedes seleccionar colores para la aguja, el fondo y las marcas del gráfico. También puedes elegir el tipo de aguja y la apariencia de las marcas.",
+    "Añade etiquetas y texto descriptivo en la sección 'Etiquetas'. Esto es útil para proporcionar contexto adicional, como el título del gráfico o las unidades de medida.",
+    "Una vez que estés satisfecho con la configuración, haz clic en el botón 'Generar Gráfico' y descarga el gráfico en formato PNG o SVG desde la opción de exportación."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Medidor para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un equipo de desarrollo de software puede usar el Generador de Gráficos de Giro para visualizar el progreso de una sprint en un dashboard interno. El gráfico muestra el porcentaje de tareas completadas con respecto al objetivo total, facilitando la gestión del proyecto.",
+    "Un analista de marketing puede crear un gráfico de giro para representar el rendimiento de una campaña publicitaria. El gráfico muestra el porcentaje de conversiones alcanzado en comparación con el objetivo de la campaña, lo que ayuda a evaluar su éxito.",
+    "Un ingeniero de calidad en una fábrica puede utilizar esta herramienta para monitorear el rendimiento de un proceso de producción. El gráfico de giro muestra el nivel actual de calidad en tiempo real, permitiendo una rápida identificación de problemas.",
+    "Un gerente de finanzas puede emplear el Generador de Gráficos de Giro para presentar el progreso de un presupuesto anual. El gráfico muestra el porcentaje del presupuesto gastado con respecto al total asignado, lo que es útil para informes y reuniones con stakeholders."
   ]
 }

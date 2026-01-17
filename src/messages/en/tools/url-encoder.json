@@ -1,14 +1,17 @@
 {
-  "detailed_description": "URL Encoder/Decoder is a practical online tool that helps you quickly complete various tasks. Using URL Encoder/Decoder, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, URL Encoder/Decoder can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use URL Encoder/Decoder immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The URL Encoder/Decoder tool implements RFC 3986-compliant percent-encoding to convert URLs and query strings into valid URI components. This tool leverages JavaScript's encodeURI, encodeURIComponent, and decodeURIComponent functions to handle UTF-8 character transformation, properly escaping reserved characters (; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #) while preserving URI structural integrity. Developers need this for preparing URLs containing special characters like spaces (converted to %20), creating API request endpoints with dynamic parameters, or decoding server-returned percent-encoded responses. The encoder applies hierarchical processing: full URLs maintain scheme/host structure while query parameters undergo component-level encoding. Decoding reverses this process, converting percent sequences back to original byte representations. Unique features include selective encoding scope (full URL vs query string) and automatic character-set detection for internationalized domain names.",
   "usage_steps": [
-    "Open the URL Encoder/Decoder tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Select 'Encode' or 'Decode' from the toggle switch above the input panel",
+    "Paste the URL or query string into the syntax-highlighted textarea",
+    "Choose processing scope via dropdown: 'Full URL' or 'Query String Only'",
+    "Click 'Process' to execute UTF-8 compliant percent-encoding/decoding",
+    "Copy results using the clipboard icon adjacent to the output field",
+    "Validate encoded URLs with the built-in URI structure parser"
   ],
   "usage_examples": [
-    "Use URL Encoder/Decoder to process your data",
-    "Get processing results quickly without waiting"
+    "Encoding a search query parameter: Convert 'q=blue dress' to 'q=blue%20dress' for a shopping API request",
+    "Decoding server logs: Transform '%D1%82%D0%B5%D1%81%D1%82' back to 'тест' Cyrillic text in access logs",
+    "API key handling: Safely encode a base64 'Authorization' header parameter containing '+' characters",
+    "Bookmarklet creation: Convert JavaScript code in 'javascript:(function(){...})' to URI-safe format"
   ]
 }

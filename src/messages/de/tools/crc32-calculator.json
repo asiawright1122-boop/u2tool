@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der CRC32-Rechner ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CRC32-Rechner können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, der CRC32-Rechner kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Verarbeitungen erfolgen lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und keine Daten werden auf irgendeinen Server hochgeladen. Nutzen Sie den CRC32-Rechner sofort, um die schnellen, sicheren und kostenlosen Online-Toolservices zu erleben.",
+  "detailed_description": "Der CRC32 Calculator implementiert den IEEE 802.3 Standard zur Erzeugung von 32-Bit Prüfsummen durch polynomiale Division im Galois-Feld GF(2). Diese mathematische Methode detektiert zyklische Redundanzfehler in binären Datenströmen, indem sie Nachrichtenpolynome durch das Generatorpolynom 0x04C11DB7 teilt. Entwickler benötigen diese Funktionalität für Datenintegritätsprüfungen in Netzwerkprotokollen (z.B. Ethernet Frames), Dateiübertragungen oder Firmware-Updates. Die Tool-Logik konvertiert Eingabetexte in ihre hexadezimale Darstellung, berechnet den CRC32-Wert durch bitweise XOR-Operationen und Bitshifting, und stellt das Ergebnis als 8-stellige Hex-Zahl dar. Bei Dateiberechnungen erfolgt die Verarbeitung blockweise mit kryptografischem Padding für Daten, die nicht durch 4 Byte teilbar sind. Die Implementierung nutzt einen Lookup-Table-Ansatz mit vorberechneten CRC32-Werten für alle 8-Bit-Kombinationen zur Optimierung der Rechenleistung.",
   "usage_steps": [
-    "Öffnen Sie die Seite des CRC32-Rechners",
-    "Geben Sie oder fügen Sie den zu verarbeitenden Inhalt in das Eingabefeld ein",
-    "Passen Sie die Werkzeugeinstellungen und -optionen nach Bedarf an",
-    "Klicken Sie auf die Verarbeitungs Taste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Wählen Sie im Interface zwischen 'Text eingeben' und 'Datei hochladen' basierend auf Ihrer Eingabequelle.",
+    "Aktivieren Sie bei Texteingabe die Schaltfläche 'Erweiterte Einstellungen' und legen Sie die Zeichenkodierung (UTF-8/ASCII) fest.",
+    "Klicken Sie auf 'CRC32 berechnen' um den Algorithmus auf Ihre Daten anzuwenden.",
+    "Analysieren Sie das Ergebnis im Hexadezimal-Feld, das in Big-Endian Reihenfolge angezeigt wird.",
+    "Kopieren Sie den Prüfsummenwert über die integrierte Clipboard-Funktion in Ihre Zwischenablage.",
+    "Nutzen Sie die 'Vergleichsansicht' um mehrere CRC32-Hashes direkt miteinander zu evaluieren."
   ],
   "usage_examples": [
-    "Verwenden Sie den CRC32-Rechner, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie die Verarbeitungsresultate schnell ohne zu warten"
+    "Validierung von Bootloader-Dateien in Embedded-Systemen vor Mikrocontroller-Programmierung",
+    "Überprüfung der Integrität von JSON-API-Antworten in RESTful Webdiensten",
+    "Erkennung von Datenkorruption bei UDP-Paketübertragungen in Echtzeitanwendungen",
+    "Vergleich von Versionsunterschieden in Konfigurationsdateien durch Hash-Differenzanalyse"
   ]
 }

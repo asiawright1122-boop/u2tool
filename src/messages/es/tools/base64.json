@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Codificador/Decodificador Base64 es una herramienta online práctica que te ayuda a completar diversas tareas de manera rápida. Utilizando el Codificador/Decodificador Base64, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y usarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, el Codificador/Decodificador Base64 puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza el Codificador/Decodificador Base64 inmediatamente para experimentar servicios de herramientas online rápidas, seguras y gratuitas.",
+  "detailed_description": "El codificador/decodificador Base64 permite transformar datos binarios en una secuencia ASCII mediante el esquema de codificación Base64, que utiliza un alfabeto de 64 caracteres (A-Z, a-z, 0-9, +, /) con padding opcional (=). Esta herramienta es esencial para casos donde se requiere transmitir datos binarios a través de protocolos o formatos que solo admiten texto plano, como JSON, HTML o URLs. Por ejemplo, al incrustar imágenes en CSS como data URIs o preparar payloads para APIs REST que requieren datos en formato Base64. Técnicamente, el proceso divide los datos binarios en segmentos de 6 bits, mapeándolos al alfabeto Base64, mientras que la decodificación invierte este proceso validando padding y verificando caracteres inválidos. La herramienta soporta entrada en UTF-8 y detección automática de datos codificados, evitando errores comunes como la corrupción por caracteres no imprimibles.",
   "usage_steps": [
-    "Abre la página del Codificador/Decodificador Base64",
-    "Escribe o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Abre la herramienta Base64 en el sitio web y localiza el área de entrada con el título 'Datos de entrada'.",
+    "2. Pega el texto o arrastra un archivo binario (como una imagen) al área designada para procesar su contenido.",
+    "3. Selecciona la operación deseada: haz clic en 'Codificar a Base64' o 'Decodificar desde Base64' según tus necesidades.",
+    "4. Si decodificas, activa la opción 'Ignorar caracteres no Base64' para limpiar datos dañados antes del procesamiento.",
+    "5. Revisa el resultado en el panel de salida, que muestra el tamaño original y el resultado procesado en tiempo real.",
+    "6. Usa el botón 'Copiar al portapapeles' o exporta el resultado como archivo .txt para integrarlo en tu proyecto."
   ],
   "usage_examples": [
-    "Utiliza el Codificador/Decodificador Base64 para procesar tus datos",
-    "Obtén los resultados de procesamiento rápidamente sin esperar"
+    "Codificar una imagen PNG de 2KB en Base64 para incrustarla directamente en un archivo CSS como data URI: 'data:image/png;base64,iVBORw0KG...'.",
+    "Decodificar el payload de un token JWT (JSON Web Token) para inspeccionar sus claims sin firmar, p. ej. 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'.",
+    "Preparar un archivo PDF binario para enviarlo como adjunto en una API de correo electrónico que requiere datos en formato Base64.",
+    "Verificar la integridad de un string codificado que contiene caracteres UTF-8 multibyte, como 'Hola mundo ✓', asegurando su correcta decodificación."
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "El Generador CSP le ayuda a crear encabezados de Política de Seguridad de Contenido para proteger su sitio web de ataques XSS e inyección. Editor visual para todas las directivas CSP.",
+  "detailed_description": "El generador CSP es una herramienta técnica diseñada para crear políticas de seguridad de contenido (Content Security Policy, CSP) que protegen aplicaciones web contra ataques de inyección de scripts, cross-site scripting (XSS) y otras vulnerabilidades de ejecución no autorizada. Esta herramienta permite definir directivas granulares como 'script-src', 'connect-src' y 'object-src', especificando fuentes confiables mediante dominios, hashes criptográficos (SHA-256/384/512) o atributos 'nonce'. Los desarrolladores necesitan este recurso para implementar políticas de seguridad efectivas en entornos modernos como aplicaciones de una sola página (SPA), plataformas con integraciones de terceros o APIs RESTful, donde el control de recursos externos es crítico. Funciona mediante un motor que valida sintaxis CSP 3.0, generando encabezados HTTP optimizados y ofreciendo opciones para modo 'report-only' o bloqueo estricto. Incluye análisis automático de posibles conflictos entre directivas y permite exportar configuraciones en formatos compatibles con servidores Nginx, Apache o frameworks como React/Next.js.",
   "usage_steps": [
-    "Seleccione las directivas CSP a incluir",
-    "Configure las fuentes permitidas",
-    "Agregue nonces o hashes si es necesario",
-    "Genere el encabezado CSP",
-    "Copie y agregue a su servidor"
+    "Selecciona las directivas requeridas usando los checkboxes (ej: 'script-src', 'style-src')",
+    "Agrega dominios permitidos en los campos de texto correspondientes",
+    "Activa la opción 'nonce automático' para generación de tokens únicos",
+    "Configura reglas adicionales con los selectores de nivel de protección (L1, L2, L3)",
+    "Habilita el modo 'report-uri' e introduce la URL de recolección de violaciones",
+    "Clica 'Generar CSP' y copia el encabezado resultante en tu configuración de servidor"
   ],
   "usage_examples": [
-    "Proteger aplicaciones web",
-    "Prevenir ataques XSS",
-    "Configurar fuentes de scripts"
+    "Un e-commerce implementa CSP para bloquear scripts maliciosos en su checkout, permitiendo solo recursos de dominios verificados como 'cdn.stripe.com' y hashes de scripts internos",
+    "Un equipo de desarrollo automatiza la creación de políticas CSP para múltiples microservicios, usando el modo 'nonce' en entornos de CI/CD",
+    "Un portal gubernamental requiere conformidad con estándares de seguridad NIST, generando directivas estrictas que deshabilitan 'eval()' y scripts inline",
+    "Una aplicación móvil híbrida protege su backend contra ataques de exfiltración de datos, limitando conexiones a la API principal mediante 'connect-src'"
   ]
 }

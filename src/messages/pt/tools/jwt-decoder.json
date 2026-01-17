@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Decodificador de JWT é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Decodificador de JWT, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugins. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, o Decodificador de JWT pode ajudá-lo a melhorar a eficiência de trabalho. Todas as operações são realizadas localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados para qualquer servidor. Use o Decodificador de JWT imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O JWT Decoder é uma ferramenta essencial para desenvolvedores que trabalham com tokens JWT (JSON Web Tokens) em seus projetos. Esta ferramenta permite a decodificação e inspeção detalhada dos componentes de um JWT, incluindo o header, o payload e a assinatura. JWTs são amplamente utilizados para autenticação e autorização em APIs, fornecendo uma maneira segura e eficiente de transmitir informações entre partes confiáveis.\n\nDesenvolvedores precisam desta ferramenta para várias razões. Por exemplo, durante o desenvolvimento e teste de sistemas, é crucial verificar se os tokens estão sendo gerados corretamente e se as informações contidas neles são precisas. Além disso, em cenários de solução de problemas, o JWT Decoder pode ajudar a identificar problemas de formatação ou assinatura, garantindo que o fluxo de autenticação funcione como esperado.\n\nTecnologicamente, o JWT é composto por três partes separadas por pontos (.). O header contém metadados sobre o token, como o tipo de algoritmo de criptografia usado. O payload carrega as informações reais, como o identificador do usuário e o tempo de expiração. A assinatura, por sua vez, é gerada a partir do header, do payload e de uma chave secreta, garantindo a integridade e autenticidade do token. O JWT Decoder permite que você decodifique essas partes separadamente, exibindo-as em um formato legível e permitindo a verificação de cada componente individualmente.",
   "usage_steps": [
-    "Abra a página do Decodificador de JWT",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole o token JWT que deseja decodificar no campo de entrada 'Token JWT'.",
+    "Clique no botão 'Decodificar' para iniciar o processo de decodificação.",
+    "A ferramenta exibirá o header do token em formato JSON no painel 'Header'.",
+    "O payload do token também será exibido em formato JSON no painel 'Payload'.",
+    "A assinatura do token será mostrada no painel 'Assinatura', junto com informações sobre o algoritmo de criptografia usado.",
+    "Você pode expandir cada seção para ver detalhes adicionais e fazer verificações mais precisas."
   ],
   "usage_examples": [
-    "Use o Decodificador de JWT para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor de back-end está testando a autenticação de uma API que usa JWTs. Ao usar o JWT Decoder, ele pode verificar se o token está sendo gerado corretamente e se todas as informações necessárias estão presentes no payload.",
+    "Um especialista em segurança quer garantir que os tokens JWTs estão sendo assinados corretamente. Utilizando a ferramenta, ele pode inspecionar a assinatura e confirmar que o algoritmo de criptografia especificado está sendo usado.",
+    "Um desenvolvedor front-end está integrando uma aplicação web que consome uma API protegida por JWTs. O JWT Decoder ajuda a decodificar os tokens recebidos e verificar se as informações do usuário estão corretas antes de exibi-las na interface do usuário.",
+    "Um administrador de sistemas precisa solucionar um problema em que os usuários estão recebendo tokens JWTs inválidos. Com o JWT Decoder, ele pode decodificar os tokens problemáticos e identificar rapidamente a origem do erro, como uma chave secreta incorreta ou um payload malformado."
   ]
 }

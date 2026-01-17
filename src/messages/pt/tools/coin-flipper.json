@@ -1,15 +1,17 @@
 {
-  "detailed_description": "O Moeda Virtual simula um lançamento de moeda realista com animação e estatísticas.",
+  "detailed_description": "O Coin Flipper é uma ferramenta desenvolvida com tecnologia web moderna que simula o lançamento de uma moeda física, combinando precisão algorítmica e realismo visual. Internamente, utiliza um gerador de números pseudoaleatórios (PRNG) baseado no algoritmo Mersenne Twister, garantindo distribuição uniforme entre os resultados 'cara' e 'coroa'. A animação 3D é renderizada via WebGL, com cálculos de física simplificada para replicar movimentos realistas de rotação e gravidade. O estado final da moeda é determinado após 500ms de simulação, sincronizado com um som de colisão gerado via Web Audio API. O histórico de resultados é armazenado em localStorage, permitindo análise estatística de séries temporais. Ideal para decisões imparciais em ambientes de desenvolvimento, ensino de probabilidade ou validação de algoritmos de randomização. Diferente de ferramentas genéricas, oferece controle granular sobre sementes de aleatoriedade e exportação de dados em formato CSV para auditoria.",
   "usage_steps": [
-    "Clique no botão girar",
-    "Veja a animação da moeda",
-    "Veja cara ou coroa",
-    "Ver estatísticas de giradas",
-    "Redefina as estatísticas se necessário"
+    "Acesse a interface web e selecione o tipo de moeda (digital ou personalizada via upload de imagem)",
+    "Ajuste parâmetros físicos: gravidade (0.1-2.0 m/s²) e coeficiente de atrito (0.0-1.0) usando os controles deslizantes",
+    "Clique no botão 'Girar' para iniciar a simulação, observando a animação em tempo real no viewport 3D",
+    "Visualize o resultado binário e a distribuição estatística acumulada no painel lateral",
+    "Exporte os dados da sessão em CSV ou compartilhe o link com hash de semente para reprodução exata",
+    "Use a aba 'Estatísticas' para analisar tendências com gráficos de frequência relativa e teste de chi-quadrado"
   ],
   "usage_examples": [
-    "Tomar decisões rápidas",
-    "Resolver disputas de maneira justa",
-    "Escolha binária aleatória"
+    "Decidir entre duas arquiteturas técnicas durante desenvolvimento ágil sem vieses humanos",
+    "Demonstrar o teorema do limite central em aulas de estatística com amostras geradas em tempo real",
+    "Validar a integração de APIs de terceiros que dependem de geração de valores randômicos criptográficos",
+    "Realizar testes A/B de interfaces com randomização controlada para eliminação de variáveis externas"
   ]
 }

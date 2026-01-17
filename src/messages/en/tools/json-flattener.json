@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON Flattener is a practical online tool that helps you quickly complete various tasks. Using JSON Flattener, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON Flattener can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON Flattener immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The JSON Flattener tool performs structural transformation on hierarchical JSON data by recursively traversing nested objects and arrays, converting them into a single-level key-value map using dot-notation paths. For example, a nested structure like `{\"user\": {\"name\": \"Alice\", \"roles\": [\"admin\", \"dev\"]}}` becomes `{\"user.name\": \"Alice\", \"user.roles.0\": \"admin\", \"user.roles.1\": \"dev\"}`. This process eliminates multi-level nesting through key path concatenation, preserving original data types (strings, numbers, booleans) while normalizing arrays with zero-based index notation. Developers require this tool to interface with systems that demand flat schemas, such as Firestore's document databases, flat-file storage formats, or legacy APIs requiring query string-like parameters. The reverse operation (unflattening) reconstructs nested structures by parsing dot-notation keys and rebuilding object hierarchies. Technically, the tool employs recursive descent parsing for flattening and a trie-based reconstruction algorithm for unflattening, maintaining type integrity through JSON schema validation at each transformation stage.",
   "usage_steps": [
-    "Open the JSON Flattener tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Paste valid JSON into the syntax-highlighted input editor",
+    "Select operation mode using the 'Flatten' or 'Unflatten' toggle button",
+    "Adjust delimiter character in the advanced settings panel (default: '.')",
+    "Enable array index preservation via checkbox for array element handling",
+    "Click 'Process JSON' to execute transformation",
+    "Copy the output from the split-pane result window or download as .json file"
   ],
   "usage_examples": [
-    "Use JSON Flattener to process your data",
-    "Get processing results quickly without waiting"
+    "Preparing user profile data with nested address fields for AWS DynamoDB storage that requires flat attribute maps",
+    "Converting complex API responses into query parameters for URL encoding in microservices communication",
+    "Normalizing telemetry data from IoT devices with hierarchical sensor readings for CSV export",
+    "Reconstructing deeply nested configuration files from flat environment variables during Docker container initialization"
   ]
 }

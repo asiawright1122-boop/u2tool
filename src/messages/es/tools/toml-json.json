@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Convertidor de TOML/JSON es una herramienta práctica en línea que te ayuda a completar diversas tareas de manera rápida. Con el Convertidor de TOML/JSON, puedes procesar fácilmente diversos datos sin necesidad de instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y usarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Convertidor de TOML/JSON puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando su subida a ningún servidor. Úsalo inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "Este convertidor bidireccional entre TOML y JSON permite transformar datos estructurados siguiendo las especificaciones exactas de ambos formatos. Al convertir TOML (v1.0.0) a JSON (RFC 8259), el analizador sintáctico descompone las claves jerárquicas en objetos anidados, respetando tipos de datos como datetime, arrays heterogéneos y tablas incrustadas. La conversión inversa mapea estructuras JSON a la sintaxis indentada característica de TOML, optimizando especialmente para configuraciones de sistemas y metadatos. Los desarrolladores necesitan esta herramienta al migrar entre entornos que requieren configuraciones en diferentes formatos (por ejemplo, pasar de configuraciones de Rust en TOML a microservicios Node.js en JSON), normalizar datos de APIs externas, o depurar esquemas complejos visualizando su estructura en ambos formatos. El motor utiliza un analizador en tiempo real basado en WebAssembly que opera completamente en el cliente, garantizando privacidad y preservando tipos de datos como números de coma flotante y cadenas multilínea sin alterarlos.",
   "usage_steps": [
-    "Abre la página del Convertidor de TOML/JSON",
-    "Escribe o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona la dirección de conversión usando las pestañas 'TOML → JSON' o 'JSON → TOML' en la interfaz",
+    "Pega tu código en el panel de edición superior con soporte para resaltado de sintaxis y autodetección de errores",
+    "Haz clic en 'Validar y Transformar' para verificar la integridad del formato y preparar los datos",
+    "Revisa el resultado en el panel inferior, donde los tipos de datos se muestran con etiquetas de color (por ejemplo, [BOOLEAN], [DATETIME])",
+    "Ajusta las opciones avanzadas como 'Compactar salida' o 'Indentar con espacios' según tus necesidades",
+    "Descarga el resultado en formato .json o .toml usando los botones específicos para cada formato"
   ],
   "usage_examples": [
-    "Usa el Convertidor de TOML/JSON para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un ingeniero DevOps convierte un archivo de configuración de Ansible (YAML) a TOML pasando previamente por JSON para verificar la estructura de las variables",
+    "Un desarrollador de aplicaciones móviles traduce las configuraciones de Firebase (JSON) a TOML para integrarlas con un sistema de CI/CD basado en GitHub Actions",
+    "Un científico de datos transforma logs almacenados en TOML a JSON para su posterior ingestión en herramientas de visualización como Kibana",
+    "Un arquitecto de software compara la representación en ambos formatos de un esquema OpenAPI para validar la consistencia de tipos complejos"
   ]
 }

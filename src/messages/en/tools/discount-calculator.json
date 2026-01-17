@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Discount Calculator helps you calculate sale prices and savings instantly. Enter the original price and discount percentage to see the final price and how much you save. Support for multiple stacked discounts makes it perfect for complex sales and promotions.",
+  "detailed_description": "The Discount Calculator performs precision-based price reduction calculations using fundamental arithmetic operations and percentage-based financial mathematics. This tool executes two primary computational workflows: (1) calculating discount amounts via the formula Discount = Original Price × (Discount Rate ÷ 100), and (2) determining final prices through Final Price = Original Price - Discount. Built with JavaScript, it leverages event-driven programming to process input changes in real-time, updating DOM elements with calculated values rounded to user-defined decimal places. Technical features include input validation with regex patterns, currency format localization, and percentage constraint enforcement (0-100%). Professionals use this tool for accurate pricing analysis in e-commerce platforms, retail inventory systems, and financial forecasting models where margin calculations require error-free discount applications. The calculator's modular architecture allows developers to integrate its core logic into larger applications via API callbacks or direct code injection.",
   "usage_steps": [
-    "Enter the original price",
-    "Input the discount percentage",
-    "Optionally add additional discounts",
-    "View the final discounted price",
-    "See total savings and discount percentage"
+    "Select calculation mode using the 'Calculate' dropdown (Discount Amount or Final Price)",
+    "Enter original price in the numeric input field with decimal precision support",
+    "Input discount percentage (0-100) using either manual keyboard entry or slider control",
+    "Choose rounding precision (0, 2, or 4 decimal places) from the precision selector menu",
+    "Select preferred currency symbol from 150+ international currency options",
+    "Click 'Calculate' button or press Enter key to execute calculation and view results"
   ],
   "usage_examples": [
-    "Calculate sale prices during shopping",
-    "Apply multiple discount codes to see final price",
-    "Compare savings across different promotions"
+    "A retail store manager adjusting seasonal sale prices across 200 SKUs with bulk discount calculations",
+    "A consumer electronics buyer comparing 15% Black Friday deals across three different retailers' offers",
+    "An accounting student solving a compound discount problem involving successive 20% and 10% reductions",
+    "A small business owner implementing tiered discount structures for volume purchases (e.g., 5% for 10+ units, 12% for 25+ units)"
   ]
 }

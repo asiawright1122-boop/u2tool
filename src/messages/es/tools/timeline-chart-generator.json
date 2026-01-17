@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Generador de gráficos de línea de tiempo es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Generador de gráficos de línea de tiempo, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Generador de gráficos de línea de tiempo puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Generador de gráficos de línea de tiempo inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Generador de Diagramas de Línea Temporal permite crear representaciones visuales escalables de secuencias de eventos mediante tecnología SVG (Scalable Vector Graphics). Esta herramienta procesa datos estructurados en formatos como CSV, JSON o ISO 8601, convirtiéndolos en diagramas interactivos con soporte para múltiples ejes cronológicos. Al utilizar algoritmos de escalado automático, adapta intervalos de tiempo irregulares a una cuadrícula uniforme, ideal para proyectos con dependencias complejas o análisis históricos. Los usuarios pueden definir nodos con metadatos descriptivos (fechas de inicio/fin, duración, categorías) y conectarlos mediante líneas de flujo que representan relaciones de precedencia. Incorpora opciones avanzadas como codificación por colores basada en paletas HSL, ajuste de resolución temporal (días, meses, años) y exportación en formatos vectoriales (SVG/PDF) o mapas de bits (PNG). Es especialmente útil para equipos ágiles que requieren visualizar sprints de desarrollo, historiadores que mapean eventos simultáneos, o científicos que correlacionan datos temporales con variables externas.",
   "usage_steps": [
-    "Abre la página de la herramienta Generador de gráficos de línea de tiempo",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Seleccionar el tipo de diagrama en el panel 'Configuración Inicial': línea temporal lineal, radial o de múltiples ejes.",
+    "Importar datos mediante el editor de texto en formato CSV con campos delimitados (ID, Fecha ISO 8601, Descripción, Categoría).",
+    "Ajustar parámetros de escalado temporal usando el control deslizante 'Resolución' para agrupar eventos por horas, días o meses.",
+    "Personalizar la apariencia con el selector de colores HSL en 'Estilos de Nodo' y asignar iconos SVG según categorías predefinidas.",
+    "Habilitar la opción 'Líneas de Flujo' para conectar eventos secuenciales y visualizar dependencias críticas en proyectos.",
+    "Exportar el diagrama final mediante el botón 'Generar SVG' o integrarlo directamente en aplicaciones web con el fragmento de código HTML proporcionado."
   ],
   "usage_examples": [
-    "Usa Generador de gráficos de línea de tiempo para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un equipo de desarrollo ágil documentando hitos de lanzamiento de software con fechas de revisión semestrales y dependencias entre versiones.",
+    "Un historiador comparando cronológicamente eventos políticos y económicos en múltiples regiones durante el siglo XX.",
+    "Un investigador médico correlacionando fases de ensayos clínicos con variables de respuesta de pacientes en un estudio longitudinal.",
+    "Un analista de datos visualizando patrones estacionales en ventas de productos mediante líneas temporales superpuestas con intervalos de confianza."
   ]
 }

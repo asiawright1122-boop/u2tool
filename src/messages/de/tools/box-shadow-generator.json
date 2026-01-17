@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Box-Shadow-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Box-Shadow-Generator können Sie verschiedene Daten verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Benutzer sind, kann der Box-Shadow-Generator Ihnen helfen, Ihre Arbeitswirkungsweise zu verbessern. Alle Verarbeitungsvorgänge werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendein Server hochgeladen werden. Nutzen Sie den Box-Shadow-Generator sofort, um schnell, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Box Shadow Generator ist ein spezialisierter CSS-Code-Generator, der Entwicklern ermöglicht, mehrschichtige Box-Shadow-Effekte visuell zu erstellen und in validen CSS-Code zu übersetzen. Das Tool nutzt HTML5 Canvas zur Echtzeit-Rendering von Schattenparametern wie Horizontal Offset, Vertical Offset, Blur-Radius, Spread-Radius und Farbmodulation (inklusive RGBA-Unterstützung). Benutzer können durch Drag-and-Drop-Interaktionen die Schattenintensität und -ausrichtung präzise steuern, während ein Split-Screen-Vergleich zwischen Original und Schattenversion erfolgt. Die integrierte CSS-Parser-Engine validiert Eingaben in Echtzeit, vermeidet ungültige Werte und generiert optimierten Code mit Vendor-Prefixes für maximale Browserkompatibilität. Besonders nützlich für komplexe Designsysteme, bei denen konsistente Schatteneffekte für Cards, Buttons oder Modals erforderlich sind, oder für dynamische Dark-Mode-Implementierungen, die Schattenfarben anpassen. Der Export erfolgt als CSS-Klasse oder Inline-Stil, mit Option zur Anpassung von Box-Sizing-Parametern.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Box-Shadow-Generators",
-    "Geben Sie den Inhalt ein, den Sie verarbeiten möchten",
-    "Adjizieren Sie die Tool-Optionen und Einstellungen, wie gewünscht",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Wählen Sie im Dropdown-Menü die Ziel-HTML-Struktur (div, button, card-container etc.) aus, um Kontext für die Schattenanwendung zu definieren.",
+    "Passen Sie den Horizontal Offset mit dem Schieberegler an, um Schattenpositionen links/rechts relativ zum Element zu steuern (Werte von -50px bis +50px).",
+    "Verwenden Sie den Vertical Offset-Controller für die vertikale Ausrichtung (positiv für Unterseite, negativ für Oberseite des Elements).",
+    "Justieren Sie den Blur-Radius über den Slider, um Kantenweichheit (ab 0px für scharfe Schatten bis 100px für diffusierte Effekte) zu definieren.",
+    "Konfigurieren Sie den Spread-Radius, um die Größe des Schattens proportional zum Element zu skalieren (positiv für Vergrößerung, negativ für Verkleinerung).",
+    "Wählen Sie mit dem erweiterten RGBA-Farbwähler eine Schattenfarbe, inklusive Transparenz-Steuerung für subtile Overlay-Effekte."
   ],
   "usage_examples": [
-    "Verwenden Sie den Box-Shadow-Generator, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Erstellung von Material-Design-ähnlichen Cards mit mehrschichtigen Schatten für ein E-Commerce-Produktportfolio.",
+    "Implementierung von Hover-Zuständen für Navigationsbuttons mit dynamisch animierbaren Box-Shadows.",
+    "Design von modalen Dialogfenstern mit semi-transparenten Schatten zur visuellen Abgrenzung vom Hintergrund.",
+    "Entwicklung responsiver Thumbnail-Galerien, bei denen Schattenintensität bei Touch-Interaktionen skaliert."
   ]
 }

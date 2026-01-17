@@ -1,14 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Razão de Aspecto é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando a Calculadora de Razão de Aspecto, você pode processar facilmente várias informações sem precisar instalar nenhum software ou plugins. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use eficientemente. Seja um desenvolvedor, designer ou usuário geral, a Calculadora de Razão de Aspecto pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use a Calculadora de Razão de Aspecto imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Aspect Ratio Calculator é uma ferramenta robusta e versátil projetada para calcular e ajustar as proporções de elementos visuais, como imagens e vídeos. Tecnicamente, a ferramenta utiliza algoritmos matemáticos para manter a proporção entre a largura e a altura de um objeto, garantindo que ele não fique distorcido ao ser redimensionado. Isso é especialmente útil em design gráfico, desenvolvimento web e produção de conteúdo multimídia, onde a manutenção da integridade visual é crucial. Os usuários podem inserir as dimensões originais de um elemento e o tamanho desejado em uma das dimensões, e a ferramenta calculará automaticamente a outra dimensão para manter a proporção. Além disso, o Aspect Ratio Calculator suporta cálculos de proporção em diferentes formatos, como 4:3, 16:9, e 21:9, facilitando a adaptação de conteúdo para diversas plataformas e dispositivos.",
   "usage_steps": [
-    "Abra a página da Calculadora de Razão de Aspecto",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a página do Aspect Ratio Calculator no site.",
+    "Na seção 'Dimensões Originais', insira a largura e a altura do elemento que deseja redimensionar.",
+    "Selecione a proporção desejada no menu suspenso ou insira uma proporção personalizada no campo 'Proporção'.",
+    "No campo 'Novas Dimensões', escolha se deseja calcular a nova largura ou a nova altura.",
+    "Insira o valor da dimensão que você deseja ajustar.",
+    "Clique no botão 'Calcular' para obter as novas dimensões mantendo a proporção original."
   ],
   "usage_examples": [
-    "Use a Calculadora de Razão de Aspecto para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um designer gráfico precisa redimensionar uma imagem de 1920x1080 pixels para caber em um layout de web que tem uma largura máxima de 800 pixels. Usando o Aspect Ratio Calculator, ele pode calcular a altura correspondente para manter a proporção 16:9.",
+    "Um videomaker está preparando um vídeo para ser exibido em uma tela de cinema com proporção 21:9. Ele precisa ajustar o tamanho de uma cena de 1280x720 pixels para adequar-se ao formato de exibição sem distorcer o conteúdo.",
+    "Um desenvolvedor web está criando uma galeria de imagens responsiva e precisa garantir que todas as imagens mantenham suas proporções originais em diferentes tamanhos de tela. O Aspect Ratio Calculator ajuda a calcular as dimensões corretas para cada imagem.",
+    "Um fotógrafo está preparando uma série de fotos para impressão em um álbum de 10x15 cm. Ele usa a ferramenta para garantir que as imagens sejam redimensionadas corretamente, mantendo a proporção 4:3."
   ]
 }

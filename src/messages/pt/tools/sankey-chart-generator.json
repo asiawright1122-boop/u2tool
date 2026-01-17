@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos Sankey é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos Sankey, você pode processar vários dados facilmente sem a necessidade de instalar qualquer software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos Sankey pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo uploaded para qualquer servidor. Use o Gerador de Gráficos Sankey imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Sankey Chart Generator é uma ferramenta técnica especializada para criar diagramas de Sankey, visualizações ideais para representar fluxos de dados, energia ou materiais entre componentes de um sistema. O usuário insere dados estruturados em formatos como CSV, JSON ou via editor integrado, definindo nós (nodes) e conexões (links) com valores ponderados. Internamente, o algoritmo aplica um layout direcionado por forças (force-directed) para posicionar os nós de forma a minimizar cruzamentos entre links, enquanto ajusta a espessura das conexões proporcionalmente aos valores numéricos. A ferramenta suporta personalização avançada, incluindo esquemas de cores interpoladas, transparência ajustável nas conexões e posicionamento manual de elementos. Para exportação, gera arquivos SVG editáveis ou PNG com resolução configurável (até 4K), mantendo a qualidade vetorial das curvas Bézier cúbicas usadas para desenhar os fluxos. É essencial para analistas de sistemas energéticos, gestores de cadeia de suprimentos ou cientistas de dados que precisam identificar gargalos em processos, como fluxos de caixa corporativos ou distribuição de recursos em redes complexas.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos Sankey",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o site e selecione o formato de entrada de dados (CSV, JSON ou editor integrado).",
+    "Defina nós com coordenadas X/Y e links com valores numéricos nos campos específicos.",
+    "Ajuste a escala de cores através do seletor HSL para diferenciar fluxos por categoria.",
+    "Modifique os parâmetros do layout (iterações, distância entre nós) no painel de configurações avançadas.",
+    "Utilize a pré-visualização em tempo real para ajustar a opacidade dos links com base em seus valores.",
+    "Exporte o gráfico em SVG ou PNG com resolução ajustável (72-300 DPI) via botão de download."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos Sankey para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Análise de fluxo energético em uma usina termelétrica, mostrando perdas por calor e eficiência em cada etapa.",
+    "Mapeamento de despesas orçamentárias de uma empresa, ilustrando alocação de recursos entre departamentos.",
+    "Visualização de rotas logísticas em uma rede de distribuição, destacando volumes de transporte entre hubs.",
+    "Rastreamento de jornadas de usuários em um site, exibindo transições entre páginas com percentuais de conversão."
   ]
 }

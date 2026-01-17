@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Compteur de lignes est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Compteur de lignes, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plug-ins. Ce outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Compteur de lignes peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et empêchant leur upload sur n'importe quel serveur. Utilisez immédiatement le Compteur de lignes pour expérimenter des services d'outil en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Compteur de Lignes est un outil de traitement de texte conçu pour analyser et manipuler des fichiers textuels de manière précise et efficace. Il permet non seulement de compter le nombre de lignes dans un document, mais offre également des options avancées pour améliorer la qualité des données traitées. Parmi ces options, on trouve la suppression des doublons, l'élimination des lignes vides et le tri des lignes. Ces fonctionnalités sont particulièrement utiles pour les développeurs, les analystes de données et les professionnels du traitement de texte qui ont besoin de nettoyer leurs données avant de les utiliser dans des applications ou des analyses plus complexes.\n\nLa nécessité de cet outil est évidente dans de nombreux scénarios. Par exemple, lors de l'importation de données à partir de fichiers CSV, il est souvent nécessaire de s'assurer que chaque ligne est unique et que les espaces vides sont éliminés pour éviter des erreurs dans les analyses ultérieures. De même, lors de la consolidation de plusieurs fichiers de logs, la suppression des doublons peut réduire significativement la taille des données et améliorer la performance des traitements.\n\nTechniquement, le Compteur de Lignes fonctionne en analysant le texte caractères par caractères. Il identifie les sauts de ligne (caractères ASCII 10 et 13) pour compter les lignes. Lorsque l'option de suppression des doublons est activée, l'outil utilise des structures de données comme des ensembles (sets) pour stocker uniquement les lignes uniques. L'option de suppression des lignes vides est implémentée en vérifiant si une ligne ne contient que des espaces ou est vide. Enfin, le tri des lignes peut être effectué en utilisant des algorithmes de tri efficaces, tels que le tri rapide (quicksort) ou le tri fusion (merge sort).",
   "usage_steps": [
-    "Ouvrez la page du Compteur de lignes",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez la page du Compteur de Lignes sur le site de l'outil.",
+    "Collez ou tapez le texte que vous souhaitez analyser dans la zone de texte principale.",
+    "Activez l'option 'Supprimer les doublons' si vous voulez éliminer les lignes répétées.",
+    "Sélectionnez l'option 'Supprimer les lignes vides' pour ignorer les lignes contenant uniquement des espaces ou rien.",
+    "Choisissez l'option 'Trier les lignes' si vous souhaitez que les lignes soient triées dans l'ordre alphabétique.",
+    "Appuyez sur le bouton 'Compter les lignes' pour exécuter l'analyse et afficher les résultats."
   ],
   "usage_examples": [
-    "Utilisez le Compteur de lignes pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur utilise le Compteur de Lignes pour nettoyer un fichier CSV avant de l'importer dans une base de données. Il active les options de suppression des doublons et des lignes vides pour s'assurer que chaque ligne est unique et ne contient pas d'espaces inutiles.",
+    "Un analyste de données traite un fichier de logs contenant des millions de lignes. En utilisant l'outil, il supprime les doublons et trie les lignes pour faciliter la recherche de patterns spécifiques.",
+    "Un modérateur de forum utilise le Compteur de Lignes pour vérifier le nombre de messages postés par les utilisateurs. Il active l'option de tri pour organiser les messages par ordre alphabétique et détecter rapidement les spams.",
+    "Un rédacteur technique prépare un document technique et utilise le Compteur de Lignes pour s'assurer qu'il n'y a pas de sections répétées ou de lignes vides dans son texte, améliorant ainsi la clarté et la lisibilité du document."
   ]
 }

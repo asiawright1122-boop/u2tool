@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Rayon de Bords est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. Avec le Générateur de Rayon de Bords, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plug-ins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Rayon de Bords peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload sur n'importe quel serveur. Utilisez immédiatement le Générateur de Rayon de Bords pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de rayon de bordure est un outil technique conçu pour simplifier la création et la visualisation des propriétés CSS `border-radius`. Il permet de générer des valeurs précises pour arrondir les coins d'éléments HTML, en prenant en charge à la fois des unités fixes (px) et relatives (%). L'outil calcule dynamiquement les valeurs shorthand CSS (de 1 à 4 paramètres) et affiche un aperçu en temps réel d'un élément HTML stylé, intégrant des fonctionnalités comme la symétrie horizontale/verticale et la gestion indépendante de chaque coin. Les développeurs l'utiliseront pour créer des interfaces modernes avec des formes personnalisées (boutons circulaires, cartes asymétriques, cadres d'images responsifs) sans écrire manuellement les règles CSS. Il intègre également un panneau de code qui affiche la syntaxe validée pour garantir la compatibilité avec les navigateurs (inclus `-webkit-` et `-moz-` si nécessaire).",
   "usage_steps": [
-    "Ouvrez la page du Générateur de Rayon de Bords",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'interface avec les quatre curseurs de réglage (haut-gauche, haut-droite, bas-droite, bas-gauche).",
+    "Ajustez individuellement chaque valeur en cliquant sur les icônes '+'/'-' ou en saisissant directement les chiffres.",
+    "Utilisez le bouton 'Symétrie' pour activer le mode miroir horizontal/vertical et réduire les saisies répétitives.",
+    "Sélectionnez l'unité de mesure (px ou %) via les menus déroulants associés à chaque coin.",
+    "Consultez l'aperçu interactif en bas de page qui met à jour un div de démonstration avec les styles appliqués.",
+    "Copiez le code CSS généré dans le panneau de droite, qui inclut les préfixes navigateur optionnels."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Rayon de Bords pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Créer un bouton circulaire parfait en définissant un rayon de 50% pour toutes les valeurs.",
+    "Concevoir une carte de profil avec un coin supérieur gauche arrondi (15px) et les autres carrés.",
+    "Générer un masque d'image elliptique en utilisant des valeurs en pourcentage pour un design responsive.",
+    "Implémenter des coins asymétriques sur une section de héros avec des valeurs personnalisées (ex: 30px 10px 50px 5px)."
   ]
 }

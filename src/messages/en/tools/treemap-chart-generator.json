@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Treemap Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Treemap Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Treemap Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Treemap Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Treemap Chart Generator is a powerful web-based tool designed to help users visualize hierarchical data in a compact and space-efficient manner. By dividing a rectangle into smaller rectangles, each representing a node in the hierarchy, this tool allows for the intuitive representation of data at various levels of detail. The size and color of each rectangle can be configured to reflect different attributes, such as the value of the node or its category, making it ideal for complex datasets. Users can leverage this tool to gain insights into financial portfolios, organizational structures, file systems, and more. The generator supports both PNG and SVG export formats, ensuring that the visualizations are suitable for both digital and print media. Under the hood, the tool utilizes advanced algorithms to optimize the layout and ensure that the treemap is both aesthetically pleasing and informative. The customizable color schemes and tooltips further enhance the user's ability to interpret the data effectively.",
   "usage_steps": [
-    "Open the Treemap Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Step 1: Navigate to the Treemap Chart Generator page and click on the 'Upload Data' button to import your dataset. The tool supports CSV and JSON file formats.",
+    "Step 2: Once the data is uploaded, use the 'Data Mapping' section to specify which columns correspond to the hierarchy levels, sizes, and colors of the treemap nodes.",
+    "Step 3: Customize the appearance of your treemap by adjusting the settings in the 'Chart Settings' panel. Options include color schemes, label visibility, and tooltip content.",
+    "Step 4: Preview the treemap to ensure it meets your requirements. Use the 'Zoom' and 'Pan' tools to explore different parts of the hierarchy.",
+    "Step 5: If needed, refine the treemap by making additional adjustments in the 'Advanced Settings' section, such as adjusting the layout algorithm or setting minimum and maximum size limits for nodes.",
+    "Step 6: Once satisfied, export your treemap by clicking the 'Export' button. Choose between PNG for a raster image or SVG for a vector graphic, and download the file for further use."
   ],
   "usage_examples": [
-    "Use Treemap Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: A financial analyst uses the Treemap Chart Generator to visualize the asset allocation of a client's investment portfolio. By mapping the hierarchy to different asset classes and the size to the value of each investment, the analyst can quickly identify the most significant holdings and areas for diversification.",
+    "Example 2: A project manager employs the tool to represent the organizational structure of a large company. Each department and sub-department is mapped as a node, with the size reflecting the number of employees. This visualization helps in understanding the distribution of resources across the company.",
+    "Example 3: A data scientist uses the Treemap Chart Generator to analyze the file system of a server. The hierarchy is set to directories and subdirectories, with the size of each rectangle representing the disk usage. This helps in identifying large files or directories that may need to be optimized.",
+    "Example 4: A marketing team utilizes the tool to visualize the performance of different product categories. The hierarchy is based on product lines, and the size of each node is determined by the revenue generated. This visualization aids in strategic decision-making and resource allocation."
   ]
 }

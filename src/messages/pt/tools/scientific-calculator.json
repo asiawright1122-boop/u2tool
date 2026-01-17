@@ -1,14 +1,17 @@
 {
-  "detailed_description": "A Calculadora Científica é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com a Calculadora Científica, você pode facilmente processar diferentes dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece a usá-la rapidamente e de maneira eficiente. Seja um desenvolvedor, designer ou usuário geral, a Calculadora Científica pode ajudá-lo a melhorar sua eficiência de trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para qualquer servidor. Use a Calculadora Científica imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Calculadora Científica é uma ferramenta técnica projetada para executar operações matemáticas complexas com precisão, incluindo funções trigonométricas (seno, cosseno, tangente e suas inversas), logarítmicas (base e, 10 e personalizadas), exponenciais (e^x, 10^x) e hiperbólicas. Desenvolvida com motor de cálculo em JavaScript que utiliza aritmética de ponto flutuante de dupla precisão, garante resultados com até 15 dígitos significativos. Essencial para engenheiros, físicos e estudantes de ciências exatas que precisam resolver equações diferenciais, analisar dados experimentais ou converter unidades angulares (graus/radianos) em cálculos de dinâmica rotacional. A interface permite ajustar o modo de entrada (graus ou radianos), selecionar notação científica e acessar um histórico de operações para revisão de cálculos anteriores, tudo sem recarregar a página graças ao processamento cliente-side em tempo real.",
   "usage_steps": [
-    "Abra a página da Calculadora Científica",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse o seletor de funções no painel esquerdo e escolha 'Trigonométrica', 'Logarítmica' ou 'Exponencial' conforme sua necessidade.",
+    "2. Insira o valor numérico no campo de input principal usando o teclado virtual ou digitando diretamente (suporta notação com ponto decimal).",
+    "3. Ative o modo 'Rad' ou 'Deg' para definir se o cálculo trigonométrico usará radianos ou graus.",
+    "4. Arraste o controle deslizante 'Precisão' para selecionar entre 5 a 15 dígitos significativos no resultado.",
+    "5. Clique em 'Histórico' para visualizar e reutilizar expressões calculadas anteriormente.",
+    "6. Utilize o botão 'Copiar Fórmula' para exportar a expressão matemática em formato LaTeX diretamente para relatórios científicos."
   ],
   "usage_examples": [
-    "Use a Calculadora Científica para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um engenheiro civil calculando a tensão em um cabo de sustentação usando seno inverso com ângulo em radianos.",
+    "Um químico determinando o pH de uma solução através de logaritmo na base 10 de concentração iônica.",
+    "Um estudante de física resolvendo equações de decaimento radioativo com função exponencial negativa.",
+    "Um programador convertendo coordenadas cartesianas para polares usando tangente inversa ajustada por quadrante."
   ]
 }

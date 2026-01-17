@@ -1,14 +1,17 @@
 {
-  "detailed_description": "A Biblioteca de Padronagens Regex é uma ferramenta online prática que ajuda você a concluir diversas tarefas rapidamente. Usando a Biblioteca de Padronagens Regex, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. A ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize de maneira eficiente. Seja um desenvolvedor, designer ou usuário geral, a Biblioteca de Padronagens Regex pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados a qualquer servidor. Use a Biblioteca de Padronagens Regex imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "A biblioteca de padrões Regex é um repositório centralizado de expressões regulares pré-testadas, projetado para resolver problemas específicos de validação, filtragem e extração de dados. Esta ferramenta aborda a complexidade de criar expressões regulares manualmente, reduzindo erros comuns como capturas não intencionais ou falhas em casos de borda. Seu uso é fundamental para desenvolvedores que precisam validar entradas de usuários (como emails compatíveis com RFC 5322), extrair URLs de conteúdo não estruturado ou normalizar números de telefone em diferentes formatos internacionais. A interface permite selecionar padrões prontos para linguagens como JavaScript, Python e PHP, considerando diferenças em motores de regex (PCRE, RE2) e suporte a Unicode. Os usuários podem ajustar flags (g, m, i) e delimitadores, além de testar padrões em um sandbox com amostras de entrada em tempo real, garantindo compatibilidade com suas regras de negócio.",
   "usage_steps": [
-    "Abra a página da ferramenta Biblioteca de Padronagens Regex",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse a ferramenta e utilize a barra de busca ou navegue pelas categorias (Email, URL, Telefone, etc.).",
+    "2. Clique em um padrão para visualizar sua estrutura detalhada e explicações sobre cada componente da regex.",
+    "3. Ajuste flags específicas (global, multiline, case-insensitive) usando os checkboxes no painel de configurações.",
+    "4. Colete texto de exemplo no campo 'Entrada' para testar a correspondência em tempo real no sandbox.",
+    "5. Utilize o botão 'Copiar Regex' para integrar o padrão diretamente no seu código fonte.",
+    "6. Valide resultados com o analisador de erros que destaca grupos de captura e possíveis conflitos de sintaxe."
   ],
   "usage_examples": [
-    "Use a Biblioteca de Padronagens Regex para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor front-end validando formulários com campos de email que exigem verificação de domínios com caracteres Unicode.",
+    "Um engenheiro de dados extrair URLs de arquivos de log para identificar endpoints com alta taxa de erro 404.",
+    "Um analista de segurança normalizando números de telefone em múltiplos formatos (E.164, NINJA, etc.) para auditoria de registros.",
+    "Um cientista de dados usando regex para limpar e estruturar dados não padronizados coletados de APIs de terceiros."
   ]
 }

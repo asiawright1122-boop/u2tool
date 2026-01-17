@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de .htaccess es una herramienta práctica en línea que te ayuda a completar varias tareas de manera rápida. Con el Generador de .htaccess, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla eficientemente. Ya sea que seas un desarrollador, diseñador o usuario general, el Generador de .htaccess puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza el Generador de .htaccess inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El generador de .htaccess es una utilidad técnica diseñada para simplificar la creación de archivos de configuración para servidores Apache. Este archivo, ubicado en el directorio raíz de un sitio web, permite controlar funciones críticas como reescritura de URLs (mod_rewrite), redirecciones HTTP, autenticación básica, compresión GZIP, configuración de encabezados CORS y gestión de caché del navegador. Los desarrolladores necesitan este recurso para implementar configuraciones avanzadas sin riesgo de errores sintácticos, especialmente al manejar entornos con múltiples dominios, configuraciones de seguridad PCI-DSS o optimizaciones SEO que requieren redirecciones 301 permanentes. El generador funciona mediante un motor que mapea opciones seleccionadas en una interfaz web a directivas de Apache validadas, generando automáticamente las secciones necesarias (<IfModule>, <Directory>, etc.) con soporte para expresiones regulares en patrones de URL. Además, incluye verificación en tiempo real de conflictos entre reglas, evitando errores 500 internos por configuraciones incorrectas.",
   "usage_steps": [
-    "Abre la página del Generador de .htaccess",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Elige una plantilla base según el escenario (ej: 'Seguridad mínima', 'Optimización SEO' o 'API REST') en el selector de configuración inicial.",
+    "Configura redirecciones HTTP especificando códigos de estado (301, 302, 403) y patrones de URL con soporte para variables dinámicas (%{REQUEST_URI}).",
+    "Activa la protección por contraseña marcando 'Habilitar autenticación' e ingresa el nombre del área protegida y la ruta al archivo .htpasswd.",
+    "Establece reglas de reescritura de URL mediante el formulario de mod_rewrite, definiendo condiciones (RewriteCond) y reglas (RewriteRule) con validación de sintaxis.",
+    "Personaliza encabezados HTTP adicionales en la sección 'Headers avanzados', como HSTS (HTTP Strict Transport Security) o políticas de seguridad de contenido (CSP).",
+    "Descarga el archivo .htaccess generado y desplázalo al directorio objetivo en tu servidor Apache, verificando permisos de lectura (chmod 644)."
   ],
   "usage_examples": [
-    "Utiliza el Generador de .htaccess para procesar tus datos",
-    "Obtén rápidamente los resultados de procesamiento sin esperar"
+    "Un desarrollador implementa redirecciones canónicas para dominios www y no-www mediante reglas de reescritura condicional que verifican el encabezado Host.",
+    "Un administrador de sistemas bloquea accesos maliciosos configurando IP-based restrictions con listas negras dinámicas en tiempo real.",
+    "Un equipo de SEO crea URLs amigables para un CMS heredado, transformando solicitudes como '/articulo.php?id=123' en '/blog/titulo-articulo/'.",
+    "Un arquitecto de aplicaciones web configura encabezados CORS para permitir solicitudes desde un dominio específico, definiendo políticas de Access-Control-Allow-Origin."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Buscador de Nome de Cor é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Buscador de Nome de Cor, você pode facilmente processar vários dados sem instalar qualquer software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Buscador de Nome de Cor pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Buscador de Nome de Cor imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Color Name Finder é uma ferramenta técnica especializada que converte valores de cores (HEX, RGB, HSL ou CMYK) em nomes de cores semanticamente reconhecíveis, utilizando um algoritmo de aproximação baseado em distâncias euclidianas no espaço de cores Lab. Internamente, o sistema compara o valor inserido com uma base de dados de 1.500+ cores pré-definidas (incluindo padrões como X11, Pantone e NCS), calculando a proximidade cromática através de transformações entre espaços de cores. Essa abordagem é crucial para designers, desenvolvedores e profissionais de acessibilidade que precisam de rótulos humanos para valores numéricos, especialmente em projetos de UI/UX, documentação técnica ou conformidade com WCAG. A precisão do resultado depende da capacidade do algoritmo de mapear diferenças perceptíveis de cor, retornando não apenas o nome mais próximo, mas também a distância delta-E para quantificar a similaridade visual. A ferramenta também normaliza entradas com transparência (RGBA) antes do cálculo, garantindo consistência em contextos de design multiplataforma.",
   "usage_steps": [
-    "Abra a página da ferramenta Buscador de Nome de Cor",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a aba 'Entrada' e selecione o formato de cor desejado (HEX, RGB, HSL ou CMYK).",
+    "Insira o valor da cor no campo específico, usando formatos como #FF5733, rgb(255,87,51) ou hsl(14, 100%, 60%).",
+    "Ajuste o seletor de cor interativo para validar visualmente o tom escolhido.",
+    "Clique no botão 'Buscar Nome' para executar o cálculo de proximidade no espaço Lab.",
+    "Analise a lista de resultados ordenada por proximidade, incluindo o valor delta-E de cada correspondência.",
+    "Copie o nome da cor selecionado usando o botão 'Copiar' para inseri-lo diretamente em documentos ou código."
   ],
   "usage_examples": [
-    "Use o Buscador de Nome de Cor para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um designer de UI precisa identificar o nome oficial de uma cor HEX (#E32567) para documentar a paleta de cores da marca em um sistema de design.",
+    "Um desenvolvedor de acessibilidade converte um valor RGB (102, 179, 255) para verificar se o contraste com o texto preto atende aos critérios WCAG.",
+    "Um ilustrador digital busca o nome da cor CMYK (0, 30, 60, 0) para garantir consistência de impressão entre softwares de edição vetorial e ferramentas de layout.",
+    "Um criador de jogos nomeia uma cor RGBA (46, 196, 182, 0.8) usada na interface do usuário, facilitando a comunicação com a equipe de design em documentações técnicas."
   ]
 }

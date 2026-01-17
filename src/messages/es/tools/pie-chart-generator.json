@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Pastel es una herramienta en línea práctica que te ayuda a completar rápidamente varias tareas. Utilizando el Generador de Gráficos de Pastel, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Pastel puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Pastel ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos Circulares permite crear visualizaciones precisas de proporciones de datos mediante la generación de gráficos circulares en formatos PNG y SVG. Técnicamente, el sistema procesa datos numéricos mediante algoritmos de cálculo angular para distribuir sectores en base a valores proporcionales, aplicando técnicas de renderizado vectorial para exportaciones escalables. Incluye opciones avanzadas como la personalización de paletas de colores (HEX/RGB), ajuste de ángulos iniciales, profundidad 3D mediante sombreado de segmentos, y exportación con resolución configurable. Los usuarios necesitan esta herramienta para analizar distribuciones de presupuestos, resultados de encuestas, segmentación de mercado o composición demográfica, evitando procesos manuales en software complejo. Su motor basado en JavaScript ejecuta cálculos en el cliente, garantizando privacidad de datos y respuesta en tiempo real mediante un canvas interactivo que actualiza automáticamente los sectores al modificar valores o etiquetas.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Pastel",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al panel de entrada de datos y escribe valores numéricos en columnas separadas por comas o pega directamente desde CSV/JSON.",
+    "Selecciona un esquema de colores predefinido o personaliza los códigos HEX para cada segmento en el editor de paleta.",
+    "Ajusta el radio del gráfico mediante un control deslizante de 100 a 500 píxeles y activa la opción de efecto 3D para profundidad visual.",
+    "Configura las etiquetas mostradas: porcentaje, valor absoluto o combinación, ajustando el tamaño de fuente desde el menú de estilo.",
+    "Interactúa con la previsualización en tiempo real arrastrando segmentos para destacarlos o usando el botón de rotación automática.",
+    "Exporta el resultado final como PNG con transparencia o SVG editables, aplicando compresión GZIP para reducir tamaño de archivos."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Pastel para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un analista financiero visualiza el desglose de gastos mensuales para un informe corporativo, usando colores codificados por departamentos.",
+    "Un equipo de marketing representa resultados de una encuesta de satisfacción con clientes, destacando segmentos críticos mediante explosión de sectores.",
+    "Un consultor de inversiones crea gráficos comparativos de portafolios con efecto 3D para presentaciones ejecutivas en PDF.",
+    "Un investigador académico genera gráficos SVG editables para incluir en un artículo científico, manteniendo precisión de escalas."
   ]
 }

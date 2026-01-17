@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Markdown para HTML é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Markdown para HTML, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, o Markdown para HTML pode ajudar a melhorar a eficiência do seu trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam enviados a qualquer servidor. Use o Markdown para HTML imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O conversor Markdown para HTML é uma ferramenta técnica projetada para transformar texto escrito em sintaxe de markdown em código HTML estruturado. Internamente, o processamento utiliza parsers baseados em especificações como CommonMark ou GitHub Flavored Markdown (GFM), garantindo compatibilidade com elementos avançados como tabelas, tarefas pendentes e blocos de código com destaque sintático. Quando um usuário insere texto markdown, o algoritmo realiza tokenização, análise de AST (Abstract Syntax Tree) e renderização final em HTML5 válido, respeitando regras de aninhamento de tags e escape de caracteres especiais. Esta ferramenta é essencial para desenvolvedores que precisam gerar documentação técnica automatizada, criar páginas estáticas dinamicamente, ou integrar editores de texto markdown com sistemas que exigem HTML nativo. Diferente de conversores genéricos, nossa implementação permite opções de personalização avançadas, como preservação de quebras de linha manuais, adição de classes CSS customizadas em elementos gerados, e suporte a extensões markdown não padrão. O resultado é um HTML limpo e semântico, pronto para uso em frameworks frontend, sistemas de gerenciamento de conteúdo (CMS) ou integrações com APIs que consomem markup estruturado.",
   "usage_steps": [
-    "Abra a página do conversor Markdown para HTML",
-    "Entre ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole seu texto markdown na área de edição com destaque de sintaxe em tempo real.",
+    "Ative a opção 'Preservar Quebras de Linha' se quiser manter <br> explícitos em parágrafos.",
+    "Selecione o tema de destaque sintático desejado para blocos de código (ex: GitHub Dark, Solarized Light).",
+    "Marque a caixa 'Converter Links Automáticos' para transformar URLs em elementos <a> clicáveis.",
+    "Clique no botão 'Converter para HTML' localizado abaixo da área de entrada.",
+    "Copie o HTML gerado na seção de saída ou faça o download como arquivo .html com estilos embutidos."
   ],
   "usage_examples": [
-    "Use o Markdown para HTML para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor convertendo um README.md do GitHub em HTML para integrar documentação de API em um portal interno.",
+    "Um profissional de marketing criando um template de email responsivo, transformando markdown em HTML inlineado compatível com clientes de email.",
+    "Um arquiteto de software gerando páginas estáticas de documentação a partir de arquivos markdown, com classes CSS personalizadas para o design do sistema.",
+    "Um criador de conteúdo preparando um artigo técnico com diagramas Mermaid.js, convertendo markdown para HTML com suporte a scripts embedados."
   ]
 }

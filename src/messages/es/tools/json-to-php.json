@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON a PHP es una herramienta práctica en línea que te ayuda a completar diversas tareas de manera rápida. Usando JSON a PHP, puedes procesar fácilmente diversos datos sin instalar ningún software o plugins. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y usarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, JSON a PHP puede ayudarte a mejorar tu eficiencia laboral. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Usa JSON a PHP inmediatamente para experimentar un servicio de herramienta en línea rápida, segura y gratuita.",
+  "detailed_description": "El conversor JSON a PHP es una herramienta técnica diseñada para transformar datos estructurados en formato JSON (JavaScript Object Notation) en sintaxis de array PHP compatible. Esta utilidad implementa internamente la función json_decode() de PHP con la opción asociativa activada, permitiendo mapear objetos JSON a arrays asociativos de PHP, preservando anidamientos, tipos de datos (numéricos, booleanos, cadenas) y estructuras complejas. Es especialmente útil en escenarios donde se requiere integrar APIs RESTful que devuelven respuestas JSON con aplicaciones backend PHP, migrar configuraciones entre sistemas o depurar datos en entornos de desarrollo. El proceso incluye un analizador léxico que valida la sintaxis JSON de entrada, seguido de un generador de código PHP que construye arrays con formato indentado para facilitar la lectura humana, incluyendo comentarios opcionales para documentar campos críticos.",
   "usage_steps": [
-    "Abre la página del convertidor JSON a PHP",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del convertidor según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Accede a la interfaz del conversor JSON a PHP a través de la sección 'Convertidores' en el sitio web.",
+    "2. Pega o escribe el contenido JSON válido en el textarea etiquetado 'Entrada JSON', asegurando sintaxis correcta (comillas dobles, sin comentarios).",
+    "3. Activa la opción 'Convertir a array asociativo' si necesitas mantener claves de objetos como strings en PHP, o desmárcala para obtener objetos stdClass.",
+    "4. Selecciona 'Mostrar comentarios' para incluir anotaciones explicativas en el código PHP generado sobre tipos de datos y estructuras.",
+    "5. Haz clic en el botón 'Convertir' para ejecutar el procesamiento y recibir el resultado en el panel 'Salida PHP'.",
+    "6. Copia el código generado al portapapeles con el botón 'Copiar' o descárgalo como archivo .php usando la opción 'Exportar' para integrarlo directamente en tu proyecto."
   ],
   "usage_examples": [
-    "Usa JSON a PHP para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "1. Un desarrollador migrando datos de una API de comercio electrónico (que entrega productos en JSON) a un sistema de inventario PHP legacy que requiere arrays multidimensionales para procesamiento.",
+    "2. Transformar un archivo de configuración de parámetros en JSON (proveniente de una aplicación Node.js) a formato PHP para integrarlo en un CMS como WordPress sin modificar el core.",
+    "3. Un QA tester generando fixtures de prueba para PHPUnit, convirtiendo respuestas HTTP mockeadas en JSON a arrays PHP para aserciones unitarias.",
+    "4. Un arquitecto de sistemas documentando una API externa, usando el conversor para crear arrays PHP de ejemplo que expliquen a otros desarrolladores cómo se estructuran los datos en el backend."
   ]
 }

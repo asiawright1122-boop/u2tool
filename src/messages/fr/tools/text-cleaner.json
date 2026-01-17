@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Nettoyeur de texte est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant Nettoyeur de texte, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, Nettoyeur de texte peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, garantissant la sécurité de vos données et ne sera pas téléchargé sur un serveur. Utilisez Nettoyeur de texte immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Text Cleaner est un outil de traitement de texte avancé qui normalise les encodages (UTF-8, UTF-16), élimine les caractères invisibles indésirables (ZWS, BOM), et optimise les structures de données textuelles via des expressions régulières. Conçu pour les développeurs et les data scientists, il permet de préparer des corpus pour NLP, nettoyer des logs système ou structurer des données brutes. L'outil utilise un moteur de pattern matching basé sur PCRE (Perl Compatible Regular Expressions) pour identifier et supprimer les espaces multiples, tabulations, sauts de ligne (\r\n, \n), et caractères de contrôle ASCII. Il inclut également une fonction de détection de doublons linguistiques (mots répétés) et un convertisseur de casse contextuel (uppercase, lowercase, titlecase). La normalisation Unicode intégrée (formes NFC/NFD) corrige les problèmes d'accentuation hétérogène, essentiel pour les bases de données multilingues. L'interface utilise un éditeur WYSIWYG basé sur CodeMirror avec coloration syntaxique, permettant de visualiser les caractères non imprimables avant traitement.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Nettoyeur de texte",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Collez votre texte brut dans l'éditeur CodeMirror avec affichage des caractères invisibles (bouton 'Show Whitespace')",
+    "Activez/désactivez les options de nettoyage spécifiques via les cases à cocher : 'Supprimer espaces multiples', 'Éliminer lignes vides', 'Normaliser retours chariot'",
+    "Utilisez le champ 'Recherche personnalisée' pour entrer des regex PCRE pour suppression ciblée (ex: \\d{3}-\\d{2}-\\d{3})",
+    "Cliquez sur 'Prévisualiser' pour voir les modifications avant application, avec compteur de caractères économisés",
+    "Sélectionnez l'encodage cible (UTF-8 sans BOM, UTF-16LE) dans le menu déroulant 'Format de sortie'",
+    "Téléchargez le texte nettoyé via le bouton 'Exporter' ou copiez-le via le clipboard API"
   ],
   "usage_examples": [
-    "Utilisez Nettoyeur de texte pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Nettoyage de logs Apache pour éliminer les timestamps et IP avant analyse de sécurité : suppression de patterns regex comme \\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}",
+    "Préparation de données d'entraînement NLP en supprimant les balises HTML/XML et normalisant les espaces dans un corpus de 500 000 documents",
+    "Correction de fichiers CSV mal formatés contenant des guillemets imbriqués et des séparateurs multiples (\t, ;, ,)",
+    "Optimisation de code source en supprimant les commentaires, espaces en fin de ligne et en convertissant les indentations en tabulations standardisées"
   ]
 }

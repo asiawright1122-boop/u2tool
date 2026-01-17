@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Référence des Ports est un outil pratique en ligne qui vous aide à accomplir rapidement diverses tâches. Avec la Référence des Ports, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plug-ins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, la Référence des Ports peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload vers n'importe quel serveur. Utilisez immédiatement la Référence des Ports pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Port Reference est un outil technique basé sur une base de données structurée associant des numéros de ports aux services réseau standardisés par l'IANA. Il couvre les ports bien connus (0-1023) et les ports enregistrés (1024-49151), avec distinctions précises entre protocoles TCP, UDP et SCTP. Les utilisateurs peuvent identifier les services associés à des ports spécifiques, comme le HTTP (port 80), HTTPS (443), SSH (22) ou encore DNS (53/UDP). Cet outil est essentiel pour diagnostiquer des problèmes de connectivité, auditer les vulnérabilités de sécurité (ports exposés), ou configurer des pare-feu. La recherche s'effectue via un moteur d'interrogation permettant des filtres combinés sur le numéro de port, le protocole, le statut d'attribution (official/obsolete), et les mots-clés du service. Les résultats incluent des informations détaillées sur les versions de protocoles, les risques de sécurité associés (comme les attaques par injection sur les ports Web), et les alternatives sécurisées recommandées (ex: remplacer Telnet 23 par SSH 22).",
   "usage_steps": [
-    "Ouvrez la page de l'outil Référence des Ports",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez un protocole réseau dans le menu déroulant (TCP, UDP, SCTP ou 'les deux')",
+    "Saisissez un numéro de port spécifique dans le champ 'Recherche par port' pour obtenir les détails immédiatement",
+    "Utilisez le filtre 'Catégorie de service' pour affiner par fonction (ex: 'Infrastructure réseau', 'Messagerie', 'Base de données')",
+    "Activez le tri dynamique par ordre numérique croissant ou décroissant via le bouton 'Trier par port'",
+    "Cliquez sur 'Exporter les résultats' pour générer un rapport JSON contenant les ports filtrés",
+    "Consultez l'onglet 'Notes de sécurité' pour accéder aux recommandations de durcissement associées à chaque port"
   ],
   "usage_examples": [
-    "Utilisez la Référence des Ports pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un administrateur système identifie un service inattendu sur le port 3389/TCP et vérifie qu'il s'agit bien d'une instance RDP sécurisée via NLA",
+    "Un pentesteur découvre un serveur LDAP non chiffré sur le port 389/TCP et recommande l'activation de StartTLS",
+    "Un développeur d'applications cloud-native vérifie les conflits potentiels en attribuant le port 8080/TCP à un conteneur Docker",
+    "Un architecte réseau configure des règles de pare-feu stateful en autorisant uniquement les ports 53/UDP et 123/UDP pour les services DNS et NTP"
   ]
 }

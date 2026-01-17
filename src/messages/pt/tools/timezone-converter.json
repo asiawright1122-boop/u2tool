@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Conversor de Fuso Horário é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Conversor de Fuso Horário, você pode facilmente processar diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja um desenvolvedor, designer ou usuário geral, o Conversor de Fuso Horário pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados a qualquer servidor. Use o Conversor de Fuso Horário imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Conversor de Fuso Horário é uma ferramenta técnica que realiza conversões precisas entre diferentes fusos horários utilizando o Banco de Dados de Fusos Horários da IANA (Internet Assigned Numbers Authority), garantindo compatibilidade com as regras de horário de verão (DST) e deslocamentos UTC (Tempo Universal Coordenado). Ele é essencial para desenvolvedores, profissionais de suporte global e equipes de operações internacionais que precisam de precisão em timestamps para logs, agendamento de tarefas distribuídas ou coordenação de eventos em múltiplas regiões. O funcionamento baseia-se na API Intl.DateTimeFormat do JavaScript, que processa a data e hora inseridas em formato ISO 8601, aplica o deslocamento UTC do fuso de origem e converte para os fusos selecionados, exibindo resultados em formatos ajustáveis (12h/24h) com detalhes como abreviações de DST (ex: BRST) e diferenças em horas:minutos. Diferentemente de ferramentas genéricas, permite conversão em lote para até 6 fusos simultâneos e inclui um mapa interativo que mostra a localização geográfica dos fusos selecionados.",
   "usage_steps": [
-    "Abra a página do Conversor de Fuso Horário",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta no navegador e selecione o fuso horário de origem pelo campo 'Fuso de Origem' com autocomplete (ex: America/Sao_Paulo).",
+    "Insira a data e hora no formato ISO 8601 (YYYY-MM-DD HH:MM) ou utilize o seletor de data integrado com máscara de validação.",
+    "Marque até 6 fusos horários de destino nas checkboxes organizadas por região (América do Norte, Europa, Ásia, etc.).",
+    "Clique no botão 'Converter' para processar os dados via engine JavaScript baseada na API Intl.",
+    "Visualize os resultados em uma tabela com colunas: fuso horário, data/hora convertida (com formato ajustável), status de DST e diferença em relação ao UTC.",
+    "Use o botão 'Copiar para Área de Transferência' para exportar os resultados em formato CSV ou JSON diretamente para o clipboard."
   ],
   "usage_examples": [
-    "Use o Conversor de Fuso Horário para processar seus dados",
-    "Obtenha rapidamente os resultados do processamento sem esperar"
+    "Um desenvolvedor em São Paulo precisa agendar uma reunião com colegas em Nova York (UTC-4) e Londres (UTC+1) e converte 14h BRT para verificar horários simultâneos.",
+    "Uma equipe de suporte técnico global converte logs de erro coletados em UTC para fusos locais dos clientes (ex: Asia/Tokyo) para análise contextualizada.",
+    "Um arquiteto de sistemas ajusta timestamps de backups automatizados entre servidores na AWS (UTC) e escritórios regionais no Brasil (UTC-3) para garantir consistência.",
+    "Um viajante calcula a data/hora de chegada em Sydney (UTC+11) com base no horário de partida em Lisboa (UTC+0), considerando diferença de 11 horas sem DST."
   ]
 }

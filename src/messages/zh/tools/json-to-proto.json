@@ -1,15 +1,17 @@
 {
-  "detailed_description": "JSON转Protocol Buffers转换器将JSON数据转换为Protocol Buffers模式定义。适用于使用gRPC、微服务和高性能数据序列化的开发者。",
+  "detailed_description": "“JSON to Protocol Buffers”是一款从 JSON 数据推断 .proto 定义的专用转换器。它基于 JSON 的键结构、值类型与嵌套层级，生成对应的 message、字段类型与 field number，并自动完成 oneof 组划分、repeated/optional/required 标注、枚举提取、类型提升（如 int64 兼容日期字符串）、any/well-known 类型映射与 reserved 区块建议。支持语法版本 proto2/proto3、包名与字段命名策略（lowerCamelCase、snake_case 或原样）、映射键类型（string/int32）以及时间戳/地理点/UUID 等常见模式的类型归一化。内置 JSON Schema 验证、类型冲突检测与 field number 预留建议，以减少 schema 演进冲突；提供对枚举值覆盖度的检查，确保编译时不出现“未定义枚举值”。输出结果可直接用于 protoc 编译，生成 Java/Go/JS/TS 等多语言 SDK，适用于 gRPC 定义、跨语言 SDK 生成、数据湖/消息队列的 Schema Registry 与长期演进。",
   "usage_steps": [
-    "将您的JSON数据粘贴到输入区域",
-    "配置消息名称和包选项",
-    "点击转换以生成proto模式",
-    "查看生成的.proto定义",
-    "复制或下载proto文件"
+    "在“输入 JSON”文本框粘贴或上传文件，勾选“保留原始键大小写”，以便生成稳定的字段名。",
+    "在“字段编号策略”区域选择“基于出现顺序递增”，设置起始编号与步长；如需避免冲突，开启“自动预留 reserved 区间”。",
+    "在“类型推断”选项中启用“时间戳/地理点/UUID 归一化”，并将“日期字符串”提升为 google.protobuf.Timestamp；选择“数组去重”或“重复数组转 map（键类型 string/int32）”。",
+    "在“高级设置”面板指定 proto 语法版本、包名（如 com.example）、字段命名策略（lowerCamelCase/snake_case），并选择是否生成 oneof 组与枚举提取。",
+    "点击“生成 .proto”，在“预览区”检查类型冲突、field number 冲突与 reserved 建议；如有需要，在“手动编辑”面板微调枚举值或字段编号。",
+    "选择“下载 .proto”或“复制到剪贴板”，随后用 protoc + 相应语言插件编译生成 SDK，并在 gRPC/SDK 项目中导入使用。"
   ],
   "usage_examples": [
-    "从API响应生成proto模式",
-    "创建gRPC服务定义",
-    "将REST API转换为gRPC"
+    "为微服务从 REST 迁移到 gRPC，将订单 JSON（用户、商品、地址、金额）转换为 .proto 并设定 reserved 区间，防止未来字段新增导致编号冲突；编译出 Java 与 Go 的 gRPC 客户端代码。",
+    "在移动端埋点系统中，为多事件 JSON（page_view、click、purchase）生成统一 schema，使用 oneof 区分事件类型，并将 timestamp 归一为 google.protobuf.Timestamp，确保跨 iOS/Android 的字段 ID 稳定。",
+    "在数据湖中处理大量 JSON 日志，通过“重复数组转 map（键类型 string）”将明细记录转为 map 结构以便于查询；导出 .proto 供 Flink 作业消费，兼顾高效压缩与 Schema Registry 管理。",
+    "在跨语言 SDK 中将复杂嵌套 JSON（嵌套对象、枚举、数组）生成 .proto 并编译为 TypeScript SDK，供 Web 前端调用 gRPC 网关；通过“枚举提取与未定义值检查”避免前端构建失败。"
   ]
 }

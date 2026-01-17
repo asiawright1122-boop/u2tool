@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Scatter Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Scatter Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Scatter Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Scatter Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Scatter Chart Generator is a specialized data visualization tool that transforms numerical datasets into interactive Cartesian coordinate plots. By mapping two-dimensional variables onto X and Y axes, this tool enables users to identify correlation patterns, clusters, and outliers in quantitative research. Built with D3.js and WebGL rendering, it supports real-time data manipulation through HTML5 canvas elements while maintaining SVG scalability for publications. Users can import CSV/TSV formatted data or input values manually via a JSON schema interface. The engine automatically calculates Pearson correlation coefficients and allows overlaying regression lines with adjustable polynomial degrees. Technical features include logarithmic axis scaling, categorical color encoding via HEX palettes, and Voronoi diagram mouse tracking for dense data regions. Exports maintain vector quality at 600dpi resolution for SVG or PNG formats with transparent backgrounds. This tool fills the gap between statistical analysis and visual storytelling by providing precise control over marker shapes (circle, square, triangle), size encoding based on tertiary variables, and axis inversion options for inverted coordinate systems.",
   "usage_steps": [
-    "Open the Scatter Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Navigate to the Scatter Chart Generator webpage and click 'New Project' to initialize the workspace.",
+    "2. Paste tabular data in CSV format into the 'Data Input' textarea or use the '+ Add Point' button for manual entry of X/Y/Z values.",
+    "3. Configure axis settings using the 'Axis Controls' panel to set logarithmic scales, reverse directions, or lock aspect ratios.",
+    "4. Enable 'Regression Analysis' to overlay calculated trend lines and adjust polynomial degrees with the slider from 1 to 5.",
+    "5. Customize visual elements in 'Style Settings': select marker types, define color gradients using HEX codes, and adjust point opacity with the alpha channel slider.",
+    "6. Click 'Render Chart' to generate the visualization, then use 'Export Options' to download as SVG for vector editing or PNG with 600dpi resolution."
   ],
   "usage_examples": [
-    "Use Scatter Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: A medical researcher analyzing patient BMI vs. blood pressure readings to identify hypertension risk clusters.",
+    "Example 2: An economist comparing GDP growth rates against unemployment percentages across different countries.",
+    "Example 3: A machine learning engineer visualizing feature correlation matrices during model development.",
+    "Example 4: An environmental scientist plotting rainfall amounts against crop yield data to determine optimal irrigation thresholds."
   ]
 }

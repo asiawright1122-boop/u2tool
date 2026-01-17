@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Farben-Rechner schätzt, wie viel Farbe Sie für Ihren Raum benötigen.",
+  "detailed_description": "Der Paint Calculator ist ein spezialisierter Online-Algorithmus zur präzisen Ermittlung des benötigten Lackvolumens für Innen- und Außenwände unter Berücksichtigung von Architekturelementen. Technisch berechnet das Tool die Gesamtfläche der Wände durch die Multiplikation von Höhe und Breite pro Wandsegment, zieht daraufhin automatisch standardisierte Flächen von Türen (typischerweise 2,10 m²) und Fenstern (durchschnittlich 1,20 m²) ab und wendet optional einen Korrekturfaktor für raue Oberflächen oder mehrschichtigen Anstrich an. Entwickelt wurde dieses Instrument für Bauherren, Innenarchitekten und Malerbetriebe, die Materialkosten optimieren und Verschwendung vermeiden möchten. Die Berechnung erfolgt auf Basis des ISO-Normwerts für durchschnittliche Lackaufnahme (0,1 Liter pro Quadratmeter bei glatten Flächen) und berücksichtigt zusätzlich Nutzerangaben zu Deckkraft und Applikationsverfahren. Eine besondere Funktion ist die automatische Umrechnung zwischen metrischen und imperialen Einheiten sowie die Exportfunktion der Ergebnisse im CSV-Format für Baukalkulationssoftware.",
   "usage_steps": [
-    "Raummaße eingeben",
-    "Türanzahl hinzufügen",
-    "Fensteranzahl hinzufügen",
-    "Anzahl der Anstriche festlegen",
-    "Benötigte Farbe anzeigen"
+    "Geben Sie die Anzahl der Wände im Raum über das Zahlenfeld ein.",
+    "Wählen Sie für jede Wand die Abmessungen in Metern per Schieberegler (Höhe: 2,40 m bis 3,50 m / Breite: 3 m bis 8 m).",
+    "Aktivieren Sie die Checkboxen für vorhandene Türen und Fenster, um deren Standardflächen automatisch abzuziehen.",
+    "Passen Sie den Korrekturfaktor für Oberflächenstruktur (glatt/rau) im Dropdown-Menü an.",
+    "Legen Sie die gewünschte Anzahl an Lackierungen (1-3 Schichten) über den Optionsknopf fest.",
+    "Klicken Sie auf 'Berechnung starten', um das Ergebnis inklusive 10% Sicherheitsaufschlag anzuzeigen."
   ],
   "usage_examples": [
-    "Schlafzimmerfarbe berechnen",
-    "Wohnzimmerabdeckung schätzen",
-    "Hausanstrich planen"
+    "Ein Einfamilienhausbauer berechnet den Bedarf für einen Rohbau mit 12 Innenwänden, 3 Fenstern und 2 Türen unter Berücksichtigung von Gipskarton-Oberflächen.",
+    "Ein Malermeister kalkuliert für einen Kunden mit historischen Holzfenstern individuelle Flächenabzüge und mehrschichtigen Lasureinsatz.",
+    "Ein Architekt plant die Fassadenbemalung eines Bürogebäudes mit 15 Fensterfronten und benötigt Mengen für unterschiedliche Farbtöne.",
+    "Ein Do-it-yourself-Nutzer berechnet den Acryllackbedarf für eine Dachschräge mit Schrägen und einer Türöffnung."
   ]
 }

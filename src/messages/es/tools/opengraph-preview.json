@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Previsualización de Open Graph es una herramienta en línea práctica que te ayuda a completar varias tareas de manera rápida. Con la Previsualización de Open Graph, puedes procesar fácilmente diversos datos sin instalar ninguna software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, la Previsualización de Open Graph puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza la Previsualización de Open Graph inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "Open Graph Preview es una herramienta esencial para desarrolladores y diseñadores web que desean asegurarse de que sus páginas se muestren correctamente cuando se comparten en plataformas de redes sociales. Técnicamente, esta herramienta analiza los metadatos Open Graph (OG) de una URL y genera una vista previa de cómo se verá esa página en las tarjetas de compartir de diferentes plataformas, como Facebook, Twitter, LinkedIn, entre otras. Los metadatos OG incluyen información sobre el título, la descripción, la imagen, y las URLs de la página. Al utilizar Open Graph Preview, los usuarios pueden identificar y corregir problemas con los metadatos antes de que la página sea compartida, lo que mejora la experiencia del usuario y la visibilidad del contenido. Esta herramienta es particularmente útil durante el desarrollo y testing de nuevas páginas o cuando se realizan cambios en el diseño y estructura del sitio web. Además, permite a los desarrolladores verificar que las metadatos sean coherentes y optimizados para diferentes plataformas de redes sociales, lo que es crucial para el marketing digital y la distribución de contenido.",
   "usage_steps": [
-    "Abre la página de la herramienta de Previsualización de Open Graph",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Paso 1: Navega hasta la sección 'Open Graph Preview' en el menú principal de la herramienta.",
+    "Paso 2: En la página de Open Graph Preview, encontrarás un campo de entrada de URL. Ingresa la URL de la página que deseas previsualizar.",
+    "Paso 3: Haz clic en el botón 'Generar Previsualización' para que la herramienta procese los metadatos OG de la URL proporcionada.",
+    "Paso 4: La herramienta generará una vista previa de cómo se verá la página en las tarjetas de compartir de diferentes plataformas, como Facebook, Twitter y LinkedIn.",
+    "Paso 5: Revisa cuidadosamente la información mostrada en la previsualización, incluyendo el título, la descripción, la imagen y los enlaces. Asegúrate de que todos los elementos sean correctos y relevantes.",
+    "Paso 6: Si encuentras algún problema con los metadatos, vuelve a tu página web y realiza las correcciones necesarias. Luego, vuelve a usar Open Graph Preview para verificar que los cambios se reflejen correctamente."
   ],
   "usage_examples": [
-    "Utiliza la Previsualización de Open Graph para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Ejemplo 1: Un desarrollador responsable de un blog de noticias necesita asegurarse de que cada nueva publicación se muestre correctamente cuando se comparte en redes sociales. Utiliza Open Graph Preview para verificar que el título, la imagen y la descripción sean atractivos y precisos antes de publicar el artículo.",
+    "Ejemplo 2: Un equipo de marketing digital está lanzando una campaña de promoción para un nuevo producto. Quieren asegurarse de que todas las páginas de aterrizaje se muestren de manera consistente en diferentes plataformas. Open Graph Preview les permite revisar y optimizar los metadatos OG para maximizar la engagement.",
+    "Ejemplo 3: Un diseñador web está trabajando en la rediseño de un sitio e-commerce. Durante el proceso, utiliza Open Graph Preview para verificar que las tarjetas de compartir de los productos sigan siendo atractivas y funcionales, incluso después de los cambios en el diseño y la estructura del sitio.",
+    "Ejemplo 4: Un administrador de contenidos de una organización sin fines de lucro necesita compartir regularmente actualizaciones y campañas de recaudación de fondos en redes sociales. Open Graph Preview le ayuda a asegurarse de que las imágenes y descripciones sean apropiadas y generen el impacto deseado."
   ]
 }

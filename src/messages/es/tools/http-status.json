@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Códigos de Estado HTTP es una herramienta práctica en línea que te ayuda a completar diversas tareas de manera rápida. Con Códigos de Estado HTTP, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, Códigos de Estado HTTP puede ayudarte a mejorar tu eficiencia laboral. Todos los procesamientos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza Códigos de Estado HTTP inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El herramienta HTTP Status Codes ofrece una base de datos técnica interactiva que permite realizar consultas detalladas sobre los códigos de estado HTTP definidos en los estándares RFC 7231 y sus extensiones. Permite no solo identificar categorías (1xx Informativos, 2xx Éxitos, 3xx Redirecciones, 4xx Errores del Cliente, 5xx Errores del Servidor), sino también explorar las implicaciones semánticas de cada código, sus cabeceras asociadas, cuerpos de respuesta típicos y escenarios de uso recomendados. Esta herramienta es esencial para desarrolladores que necesitan diagnosticar problemas de comunicación cliente-servidor, optimizar APIs RESTful o depurar errores de red en entornos de producción. Su motor interno utiliza un índice invertido que relaciona códigos numéricos con descripciones técnicas y ejemplos de implementación, permitiendo búsquedas por rango, categoría o palabras clave en cabeceras HTTP. A diferencia de simples listas estáticas, esta herramienta incluye comparaciones entre códigos similares (como 301 vs 302) y contexto histórico sobre la evolución de ciertos estados (como el retiro del código 410 Gone en ciertos protocolos modernos).",
   "usage_steps": [
-    "Abre la página de la herramienta de Códigos de Estado HTTP",
-    "Ingresa o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Introduce el código numérico en el campo de búsqueda con autocompletado",
+    "Filtra por rango de códigos usando los selectores de categoría (1xx, 2xx, etc.)",
+    "Explora la sección de 'Ejemplos de Uso' que muestra implementaciones reales en frameworks populares",
+    "Consulta la pestaña 'Cabeceras Relacionadas' para ver qué headers suelen acompañar al código",
+    "Utiliza el comparador de códigos seleccionando dos entradas para ver diferencias técnicas",
+    "Accede al historial de cambios del código en diferentes versiones de los estándares HTTP"
   ],
   "usage_examples": [
-    "Utiliza Códigos de Estado HTTP para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un desarrollador frontend identifica un código 429 Too Many Requests para implementar throttling en su cliente API",
+    "Un administrador de sistemas consulta el código 503 Service Unavailable para configurar health checks en Kubernetes",
+    "Un SEO auditor verifica diferencias técnicas entre 301 Moved Permanently y 308 Permanent Redirect para migraciones de dominio",
+    "Un estudiante compara los códigos 404 Not Found y 410 Gone para entender estrategias de gestión de URLs obsoletas"
   ]
 }

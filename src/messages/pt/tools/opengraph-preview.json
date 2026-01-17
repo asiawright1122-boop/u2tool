@@ -1,14 +1,17 @@
 {
-  "detailed_description": "A Previsualização Open Graph é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando a Previsualização Open Graph, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a eficientemente. Seja desenvolvedor, designer ou usuário geral, a Previsualização Open Graph pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados a qualquer servidor. Use a Previsualização Open Graph imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Open Graph Preview é uma ferramenta indispensável para desenvolvedores e criadores de conteúdo que desejam validar a aparência de suas páginas quando compartilhadas em redes sociais. Esta ferramenta permite a visualização precisa do conteúdo de metadados Open Graph, que são utilizados pelas plataformas de mídia social para determinar como um link será exibido quando compartilhado. O Open Graph Preview analisa a URL fornecida, extrai os metadados relevantes, como título, descrição, imagem e tipo de conteúdo, e apresenta uma prévia exata de como esses elementos serão apresentados em plataformas como Facebook, Twitter e LinkedIn. Isso é crucial para garantir que as previews sejam atraentes e precisas, melhorando a taxa de cliques e a experiência do usuário. Ao utilizar esta ferramenta, os desenvolvedores podem testar e ajustar os metadados de suas páginas antes de publicá-las, evitando problemas de exibição e garantindo uma presença online consistente e profissional.",
   "usage_steps": [
-    "Abra a página da Previsualização Open Graph",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a página do Open Graph Preview no site de ferramentas de desenvolvimento.",
+    "No campo de entrada, insira a URL da página que você deseja previews.",
+    "Clique no botão 'Gerar Preview' para iniciar a análise da URL.",
+    "A ferramenta processará a URL e exibirá uma prévia das informações Open Graph.",
+    "Se necessário, utilize as opções de edição para ajustar os metadados diretamente na ferramenta.",
+    "Após fazer os ajustes, clique em 'Atualizar Preview' para ver as alterações refletidas na visualização."
   ],
   "usage_examples": [
-    "Use a Previsualização Open Graph para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem aguardar"
+    "Um desenvolvedor de um site de notícias está criando uma nova página de artigo. Antes de publicá-la, ele usa o Open Graph Preview para garantir que a imagem, título e descrição sejam atraentes e adequados para compartilhamento nas redes sociais.",
+    "Um gerente de marketing de uma startup de tecnologia está preparando uma campanha de marketing digital. Ele utiliza o Open Graph Preview para validar a aparência das previews de links em posts do Facebook e Twitter, garantindo que a mensagem e a imagem sejam consistentes com a identidade da marca.",
+    "Um criador de conteúdo independente está escrevendo um blog post sobre suas férias. Ele quer compartilhar o post no Instagram e Facebook, mas precisa garantir que a imagem e a descrição sejam otimizadas para essas plataformas. O Open Graph Preview ajuda a visualizar e ajustar os metadados antes do compartilhamento.",
+    "Um web designer está desenvolvendo um novo layout para um site de e-commerce. Ele usa o Open Graph Preview para testar como as previews dos produtos serão exibidas quando compartilhadas nas redes sociais, garantindo que as imagens e descrições dos produtos sejam atraentes e chamem a atenção dos usuários."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos Paralelos es una herramienta en línea práctica que te ayuda a completar diversas tareas rápidamente. Utilizando el Generador de Gráficos Paralelos, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos Paralelos puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos Paralelos ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos Paralelos permite visualizar de forma eficiente datos multidimensionales mediante coordenadas paralelas, una técnica que representa cada dimensión en ejes verticales paralelos conectados por líneas que reflejan los valores de cada registro. Esta herramienta es esencial para identificar patrones, correlaciones o anomalías en conjuntos de datos complejos, como en análisis de rendimiento de productos, estudios estadísticos o comparativas de KPIs. Al cargar datos en formatos CSV/TSV, el sistema normaliza automáticamente las escalas de cada eje, permitiendo ajustes manuales mediante controles deslizantes para enfocar rangos específicos. Incorpora funcionalidades avanzadas como 'brushing' interactivo para filtrar subconjuntos de datos en tiempo real y codificación por colores basada en gradientes o categorías. La renderización se realiza mediante bibliotecas de gráficos vectoriales (SVG) para asegurar calidad en exportaciones, mientras que el soporte para arrastrar y reordenar ejes facilita explorar relaciones no lineales. Los resultados se pueden exportar como PNG para presentaciones o SVG para edición posterior en software de diseño.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos Paralelos",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Importa tus datos en formato CSV/TSV mediante el botón 'Cargar Datos' en la interfaz principal.",
+    "Arrastra y suelta las columnas de tu dataset sobre los ejes paralelos para asignar variables a cada dimensión.",
+    "Ajusta las escalas de cada eje usando los controles deslizantes 'Min/Max' para enfocar rangos críticos.",
+    "Activa la función 'Brushing' y selecciona un área en un eje para filtrar dinámicamente las líneas visibles.",
+    "Personaliza el estilo aplicando gradientes de color según una métrica o categorías definidas en el panel de diseño.",
+    "Descarga el gráfico final como PNG o SVG utilizando los botones 'Exportar' en la barra superior."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos Paralelos para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Comparar el rendimiento de diferentes modelos de automóviles basándose en variables como consumo de combustible, potencia y emisiones de CO2.",
+    "Analizar el comportamiento de indicadores financieros (liquidez, margen de beneficio, deuda) entre empresas de distintos sectores.",
+    "Visualizar datos ambientales multidimensionales (temperatura, humedad, índice UV, contaminación) en múltiples estaciones de monitoreo.",
+    "Evaluar el desempeño académico de universidades a través de criterios como tasa de graduación, empleabilidad de egresados, financiamiento y número de publicaciones."
   ]
 }

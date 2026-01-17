@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Calor es una herramienta en línea práctica que te ayuda a completar rápidamente varias tareas. Utilizando el Generador de Gráficos de Calor, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Calor puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Calor inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Heatmap Chart Generator es una herramienta técnica que permite transformar matrices de datos multidimensionales en representaciones visuales mediante gradientes de color. Utiliza algoritmos de mapeo de valores numéricos a espectros cromáticos (RGB/HSL) para mostrar densidades, correlaciones o patrones espaciales. Ideal para análisis de clústeres en datasets de e-commerce (ej: comportamiento de compra), estudios epidemiológicos (distribución geográfica de casos) o análisis de rendimiento web (mapas de calor de clics). La herramienta procesa datos en formato CSV/TSV/JSON, permite configurar ejes X/Y/Z con soporte para escalamiento logarítmico y ofrece opciones de clustering jerárquico con dendrogramas integrados. Algoritmos como K-means y DBSCAN están disponibles para segmentación automática de datos, mientras que el motor de renderizado basado en WebGL optimiza la representación de matrices grandes en tiempo real sin necesidad de procesamiento en servidor.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Calor",
-    "Introduce o pega el contenido que deseas procesar en la casilla de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega tus datos en formato CSV/TSV/JSON en el área de texto, asegurando columnas X, Y y valor (Z).",
+    "Selecciona el tipo de interpolación (bilineal, nearest-neighbor) usando el selector en la sección 'Renderizado'.",
+    "Ajusta la paleta de colores mediante el control HSL y aplica funciones de mapeo como sqrt() o log() para normalización.",
+    "Habilita 'Clustering' y elige el método (K-means, DBSCAN) para agrupar datos similares automáticamente.",
+    "Personaliza la leyenda con rangos personalizados arrastrando los deslizadores de percentiles 5% y 95%.",
+    "Exporta el resultado como SVG vectorial para edición en Illustrator o PNG con resolución ajustable hasta 4K."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Calor para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Analizar la densidad de clics en una página web para optimizar el diseño UX, usando coordenadas X/Y de eventos y frecuencia de clics como valor Z.",
+    "Visualizar la distribución geográfica de ventas en una ciudad, con coordenadas GPS como ejes y unidades vendidas como intensidad.",
+    "Mapear la expresión génica en estudios biológicos, representando genes en el eje Y, condiciones experimentales en X y niveles de expresión como calor.",
+    "Detectar patrones de tráfico en una red informática, mostrando puertos como eje X, horas del día en Y y cantidad de paquetes como intensidad de color."
   ]
 }

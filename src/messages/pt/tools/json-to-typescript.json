@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON para TypeScript é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando JSON para TypeScript, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, JSON para TypeScript pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use JSON para TypeScript imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O conversor JSON para TypeScript é uma ferramenta especializada que automatiza a geração de interfaces TypeScript a partir de estruturas JSON, garantindo tipagem estática precisa e reduzindo erros em projetos complexos. Tecnicalmente, o processo envolve análise léxica e sintática do JSON de entrada, mapeamento de tipos primitivos (string, number, boolean) e estruturas compostas (arrays, objetos aninhados), além da inferência de tipos condicionais e uniões (ex: `string | null`). A ferramenta também identifica propriedades opcionais através de padrões de presença/ausência em objetos, e cria tipos auxiliares como `Partial<T>` ou `Required<T>` conforme necessário. Seu diferencial está na capacidade de lidar com hierarquias profundas e referências circulares, mantendo consistência através de Type Aliases recursivos. Essencial para desenvolvedores que consomem APIs REST, pois transforma respostas dinâmicas em contratos de tipo seguros, eliminando conversões manuais suscetíveis a bugs. Além disso, suporta customização avançada, como prefixos para tipos gerados e ajuste de nomenclatura via estratégia de transformação (ex: PascalCase para interfaces, camelCase para propriedades).",
   "usage_steps": [
-    "Abra a página do conversor JSON para TypeScript",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse a página do conversor e cole o JSON no editor de código destacado em azul.",
+    "2. Ative a opção 'Inferir Uniões' para campos com múltiplos tipos possíveis (ex: número ou string).",
+    "3. Configure o nome da interface raiz no campo 'Tipo Principal' (ex: 'UsuarioResponse').",
+    "4. Selecione a profundidade máxima de análise para objetos aninhados no controle deslizante 'Nível de Aninhamento'.",
+    "5. Clique no botão 'Converter para TS' para gerar o código TypeScript com tipos explícitos.",
+    "6. Copie o resultado do painel inferior ou exporte como arquivo .ts usando o ícone de disquete."
   ],
   "usage_examples": [
-    "Use JSON para TypeScript para processar seus dados",
-    "Obtenha rapidamente os resultados do processamento sem esperar"
+    "1. Converter a resposta de uma API de clima (com dados como temperatura, condições climáticas e coordenadas) em uma interface para tipagem de serviços Angular.",
+    "2. Mapear dinamicamente documentos Firestore com campos opcionais, gerando tipos para validação em tempo de compilação em aplicações Firebase.",
+    "3. Transformar um arquivo de configuração JSON com parâmetros de ambiente em um módulo de tipos para Node.js, garantindo acesso seguro a variáveis.",
+    "4. Gerar interfaces para integração de dados de sensores IoT, onde payloads JSON variam entre dispositivos e requerem tipos discriminados."
   ]
 }

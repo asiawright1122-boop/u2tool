@@ -1,14 +1,17 @@
 {
-  "detailed_description": "PDF en Base64 est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant PDF en Base64, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, PDF en Base64 peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, garantissant la sécurité de vos données et ne sera pas téléchargé sur un serveur. Utilisez PDF en Base64 immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Notre outil PDF en Base64 permet de transformer des documents PDF en une séquence alphanumérique standardisée selon l'encodage Base64. Ce processus consiste à convertir les données binaires du PDF en une chaîne de caractères ASCII, facilitant son intégration dans des formats textuels comme JSON, XML ou les en-têtes HTTP. Cette technique est cruciale pour les développeurs souhaitant intégrer des fichiers binaires dans des applications web (ex: génération de PDF intégrés dans des Single Page Applications), l'envoi de pièces jointes dans des requêtes API REST sans multipart/form-data, ou encore le stockage sécurisé de documents dans des bases de données NoSQL qui n'acceptent que du texte. L'outil utilise une implémentation en JavaScript côté client basée sur l'algorithme RFC 4648, garantissant une conversion précise sans perte de données. La prévisualisation instantanée du hash généré permet de vérifier l'intégrité de la conversion avant utilisation.",
   "usage_steps": [
-    "Ouvrez la page de l'outil PDF en Base64",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Cliquez sur 'Sélectionner un fichier' pour importer votre PDF (taille maximale 15 Mo)",
+    "Glissez-déposez le document dans la zone de prévisualisation ou sélectionnez-le via l'explorateur",
+    "Activez l'option 'Compression sans perte' pour réduire la taille du Base64 généré",
+    "Appuyez sur 'Convertir' pour lancer le processus d'encodage binaire vers Base64",
+    "Copiez le résultat dans le presse-papiers via le bouton 'Copier' ou téléchargez-le au format .txt",
+    "Collez la chaîne dans votre application cible (ex: éditeur de code, outil d'API) en ajoutant l'en-tête MIME 'data:application/pdf;base64,' si nécessaire"
   ],
   "usage_examples": [
-    "Utilisez PDF en Base64 pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur d'application mobile génère un PDF de facture électronique et l'intègre directement dans le corps d'une requête POST API sans utiliser de formulaire multipart",
+    "Un administrateur système encode un certificat PDF pour le stocker dans un fichier de configuration JSON sécurisé",
+    "Un designer web intègre un manuel utilisateur PDF dans une page HTML5 via une URI de données pour éviter les requêtes HTTP supplémentaires",
+    "Un ingénieur en machine learning attache un rapport PDF à un email transactionnel en utilisant l'encodage Base64 pour respecter les spécifications SMTP"
   ]
 }

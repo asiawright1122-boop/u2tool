@@ -3955,20 +3955,35 @@
       "name": "Paketname",
       "version": "Version",
       "description": "Beschreibung",
-      "main": "Eingangspunkt",
+      "main": "Einstiegsdatei",
       "author": "Autor",
       "license": "Lizenz",
       "type": "Modultyp",
-      "keywords": "Schlüsselwörter",
-      "keywordsPlaceholder": "Komma-getrennte Schlüsselwörter",
+      "keywords": "Stichwörter",
+      "keywordsPlaceholder": "Durch Kommas getrennte Stichwörter",
       "private": "Privates Paket",
       "scripts": "Skripte",
       "scriptName": "Skriptname",
       "scriptCommand": "Befehl",
-      "commonScripts": "Standard-Skripte",
+      "commonScripts": "Häufige Skripte",
       "generate": "Generieren",
       "copy": "Kopieren",
-      "download": "Herunterladen"
+      "download": "Herunterladen",
+      "detailed_description": "Das Paketname-Tool ist ein spezialisierter JSON-Konfigurationsanalysator als kostenloses Online-Tool für Node.js-Entwickler. Es analysiert, validiert und optimiert package.json-Dateien durch Abhängigkeitsbaum-Parsing, Prüfung der semantischen Versionskontrolle und Identifizierung von Sicherheitslücken in direkten und transitiven Abhängigkeiten. Entwickler benötigen dieses Tool, um Probleme wie Versionsinkonsistenzen, redundante Pakete und inkompatible Modul-PeerDependencies zu lösen, die Laufzeitfehler verursachen. Es verwendet statische Codeanalyse zur Abbildung von Abhängigkeitsbeziehungen, greift auf npm-Registry-APIs zu, um veraltete Pakete zu erkennen, und wendet ESLint-ähnliche Regeln an, um Best Practices in Skriptdefinitionen durchzusetzen. Der Konfliktlöser vergleicht Paketmanifeste mit installierten node_modules, um Diskrepanzen festzustellen, während das Versionsvorschlagssystem präzise Updates basierend auf semantischen Versionsbeschränkungen empfiehlt. Technische Ausgaben umfassen eine Abhängigkeits-Heatmap zur Visualisierung der Paketkritikalität und einen Remediationsbericht mit umsetzbaren Upgrade-Pfaden.",
+      "usage_steps": [
+        "1. Öffnen Sie die Registerkarte 'Abhängigkeits-Mapper' des Tools und laden Sie Ihre package.json-Datei mithilfe des Datei-Explorers hoch",
+        "2. Aktivieren Sie den Bereich 'Semantik-Linter', um Versionsinkonsistenzen und PeerDependency-Konflikte zu identifizieren",
+        "3. Überprüfen Sie den Sicherheitsaudit-Bericht mit hervorgehobenen veralteten Paketen und CVSS-Scores",
+        "4. Nutzen Sie den Version-Updater-Schieberegler, um präzise Updates für ausgewählte Abhängigkeiten anzuwenden",
+        "5. Öffnen Sie den 'Skript-Optimizer', um die Effizienz von npm-Skripten zu analysieren und redundante Befehle zu erkennen",
+        "6. Exportieren Sie die optimierte package.json-Datei über den Download-Button oder kopieren Sie die Konfliktlösungsbefehle aus dem CLI-Bereich"
+      ],
+      "usage_examples": [
+        "Beispiel 1: Lösen von Abhängigkeitskonflikten nach dem Zusammenführen von Feature-Branches mit unterschiedlichen Paketversionen",
+        "Beispiel 2: Vorbereiten eines Legacy-Projekts für die Migration auf Node.js 18 durch Aktualisierung inkompatibler Abhängigkeiten",
+        "Beispiel 3: Generieren minimaler Abhängigkeitsbäume zur Optimierung von Docker-Containern",
+        "Beispiel 4: Prüfen von Drittanbieter-Paketen auf bekannte Sicherheitslücken vor der Produktivbereitstellung"
+      ]
     },
     "clipPath": {
       "preview": "Vorschau",

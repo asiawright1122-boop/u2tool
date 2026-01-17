@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos Sankey es una herramienta en línea práctica que te ayuda a completar diversas tareas rápidamente. Utilizando el Generador de Gráficos Sankey, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos Sankey puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos Sankey ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Diagramas Sankey es una herramienta técnica para crear diagramas de flujo interactivos que representan el movimiento de datos, materiales o recursos entre nodos conectados por enlaces ponderados. Utiliza algoritmos de distribución jerárquica para calcular la posición óptima de los nodos y la curvatura proporcional de los enlaces, aplicando técnicas de gradientes de color para visualizar magnitudes de flujo. Esta herramienta es esencial para ingenieros de datos que necesitan analizar sistemas de distribución energética, arquitectos de software que mapean flujos de microservicios, o analistas financieros que trazan cadenas de suministro. Soporta importación de datos estructurados en formatos CSV/JSON, permitiendo la personalización avanzada de propiedades como la opacidad de los enlaces, alineación de nodos (vertical/horizontal), y escalado logarítmico de anchos de banda. Su motor basado en D3.js renderiza gráficos vectoriales escalables (SVG) con soporte para anotaciones dinámicas y exportación a PNG con resolución ajustable. La interfaz incluye un modo de depuración para validar integridad de conexiones y un panel de análisis estadístico de flujos entrantes/salientes.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos Sankey",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al generador mediante el slug /sankey-chart-generator y selecciona 'Nueva Visualización' en el panel de control.",
+    "Elige entre las plantillas predefinidas de orientación (vertical u horizontal) según tu tipo de datos en el menú desplegable 'Layout'.",
+    "Importa tu archivo CSV/JSON con columnas definidas como 'source', 'target', 'value' usando el botón 'Cargar Datos' con validador automático de esquema.",
+    "Arrastra y ajusta nodos en el editor visual para optimizar la disposición jerárquica, utilizando la cuadrícula de alineación automática.",
+    "Configura gradientes de color en la pestaña 'Estilo' seleccionando paletas categóricas o escalas continuas basadas en valores numéricos.",
+    "Exporta el diagrama interactivo como SVG editables o PNG de alta resolución (hasta 4K) con el botón 'Descargar' y comparte enlaces a visualizaciones en tiempo real."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos Sankey para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Una empresa energética analiza el flujo de electricidad entre plantas generadoras, subestaciones y consumidores residenciales.",
+    "Un arquitecto de software mapea la comunicación entre microservicios en una aplicación cloud, identificando cuellos de botella.",
+    "Un analista financiero traza el movimiento de capitales entre cuentas corporativas y proveedores durante auditorías.",
+    "Un equipo de marketing visualiza el recorrido de usuarios entre páginas web y conversiones en una plataforma de comercio electrónico."
   ]
 }

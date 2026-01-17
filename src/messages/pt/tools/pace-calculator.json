@@ -1,15 +1,17 @@
 {
-  "detailed_description": "A calculadora ajuda corredores a calcular ritmo, tempo ou distância.",
+  "detailed_description": "O Calculador de Ritmo é uma ferramenta técnica projetada para atletas e entusiastas de corrida que precisam de cálculos precisos entre ritmo, distância e tempo. Utilizando fórmulas matemáticas como ritmo = tempo / distância (em unidades decimais), o tool permite calcular variáveis críticas para treinos e competições. Sua necessidade surge em contextos como planejamento de provas, análise de desempenho em treinos intervalados ou ajuste de estratégias para maratonas. O funcionamento baseia-se na coleta de duas variáveis informadas pelo usuário (como tempo total e distância) e na aplicação de conversões em tempo real com JavaScript, garantindo resultados instantâneos. Inclui validação de entrada para valores numéricos e suporte a unidades métricas e imperiais, além de exibir resultados em formatos como minutos por quilômetro ou segundos por milha. Sua precisão é essencial para atletas que buscam otimizar splits de corrida ou avaliar progresso técnico.",
   "usage_steps": [
-    "Selecione o que calcular",
-    "Digite valores conhecidos",
-    "Escolha distância",
-    "Ver resultado",
-    "Ver parciais"
+    "Selecione a unidade de distância (quilômetros ou milhas) no menu suspenso.",
+    "Insira o valor total da distância percorrida em um campo de texto.",
+    "Digite o tempo total da corrida no formato HH:MM:SS ou em minutos decimais.",
+    "Clique no botão 'Calcular Ritmo' para processar os dados.",
+    "Analise o resultado exibido em ritmo médio (min/km ou seg/milha) na seção de saída.",
+    "Utilize o botão 'Converter Unidades' para alternar entre formatos métricos e imperiais automaticamente."
   ],
   "usage_examples": [
-    "Calcular ritmo de maratona",
-    "Estimar tempo de 5K",
-    "Planejar ritmo de treino"
+    "Um corredor treinando para maratona insere 42,195 km e 3h30m para calcular seu ritmo médio de 4:58 min/km.",
+    "Durante um treino intervalado, um atleta insere 5 km e 25 minutos para obter um ritmo de 5:00 min/km e ajustar intensidade.",
+    "Um iniciante planeja um 5K e usa o tempo estimado de 28 minutos para descobrir que precisa manter 5:36 min/km.",
+    "Um técnico esportivo converte 6:45 min/milha para min/km, obtendo 4:14 min/km, para padronizar dados internacionais."
   ]
 }

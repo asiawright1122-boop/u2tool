@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Palette de Couleurs est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Générateur de Palette de Couleurs, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cet outil possède une interface simple et est facile à utiliser, ce qui vous permet de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Palette de Couleurs peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload sur n'importe quel serveur. Utilisez immédiatement le Générateur de Palette de Couleurs pour expérimenter des services de outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de palettes de couleurs est un outil basé sur les principes de la théorie des couleurs et de la modélisation HSL (Teinte, Saturation, Luminosité). Il permet de générer des harmonies chromatiques précises en exploitant des algorithmes de conversion entre les espaces colorimétriques RGB et HSL. L'utilisateur commence par entrer une couleur de référence via un sélecteur interactif ou en saisissant un code hexadécimal. L'outil calcule ensuite des variantes chromatiques en appliquant des décalages angulaires sur la roue des couleurs : 180° pour les couleurs complémentaires, ±30° pour les analogues, ou des triplets équilibrés pour les harmonies triadiques. Chaque nuance générée est analysée pour respecter les critères de contraste WCAG 2.1, garantissant une accessibilité optimale. Ce processus utilise des matrices de transformation pour ajuster la luminosité et la saturation selon des ratios mathématiques prédéfinis. Les développeurs apprécieront la sortie en formats multiples (HEX, RGB, HSL) directement intégrables dans les feuilles de style CSS ou les frameworks de conception. L'outil répond spécifiquement aux besoins de création de chartes graphiques cohérentes, de tests A/B d'interfaces utilisateur, et de conformité ADA pour les applications web critiques.",
   "usage_steps": [
-    "Ouvrez la page du Générateur de Palette de Couleurs",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Sélectionnez une couleur de base à l'aide du sélecteur interactif ou collez un code HEX dans le champ dédié.",
+    "2. Choisissez le type d'harmonie souhaité (complémentaire, analogue, triadique) depuis le menu déroulant 'Schéma chromatique'.",
+    "3. Ajustez les paramètres avancés : glissez le curseur 'Saturation ±' pour modifier l'intensité des teintes générées.",
+    "4. Activez l'option 'Contraste élevé' pour appliquer des corrections automatiques conformes aux normes WCAG.",
+    "5. Explorez les variantes proposées dans la zone de prévisualisation et cliquez sur les codes couleur pour les copier en mémoire.",
+    "6. Exportez la palette complète au format CSS, JSON ou PNG via le bouton 'Télécharger' pour une intégration immédiate."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Palette de Couleurs pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "1. Un designer web crée une palette triadique dynamique pour un site d'e-commerce, garantissant une hiérarchie visuelle claire entre les boutons d'achat et les éléments décoratifs.",
+    "2. Un développeur d'applications mobiles génère des dégradés HSL progressifs pour des indicateurs de statut, en maintenant un contraste de 4.5:1 entre chaque niveau.",
+    "3. Un illustrateur numérique utilise les harmonies analogues pour concevoir des icônes modulables, en conservant une cohérence chromatique à travers 12 variations de luminosité.",
+    "4. Un équipe UX teste des combinaisons complémentaires pour des alertes critiques, en comparant les taux de conversion des utilisateurs entre des palettes chaudes et froides."
   ]
 }

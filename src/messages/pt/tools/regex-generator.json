@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Expressões Regulares é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Expressões Regulares, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use eficientemente. Seja desenvolvedor, designer ou usuário geral, o Gerador de Expressões Regulares pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados a qualquer servidor. Use o Gerador de Expressões Regulares imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Regex Generator é uma ferramenta técnica projetada para desenvolvedores que precisam criar e validar expressões regulares (regex) de forma precisa e eficiente. A partir de padrões predefinidos como e-mails, URLs, datas e números, o usuário combina metacaracteres, quantificadores e grupos de captura para montar regex personalizadas. A interface oferece um construtor visual que traduz ações em sintaxe regex em tempo real, permitindo testes com textos de exemplo para verificar correspondências, substituições ou extrações. Sua funcionalidade é essencial para tarefas como validação de formulários, processamento de logs, extração de dados de arquivos não estruturados e sanitização de inputs em aplicações. A ferramenta também destaca erros comuns, como padrões ambíguos ou backreferences mal configuradas, e sugere otimizações para melhorar o desempenho em ambientes de alta carga. A engine de processamento roda localmente no navegador, garantindo privacidade e compatibilidade com padrões como PCRE e ECMAScript.",
   "usage_steps": [
-    "Abra a página do Gerador de Expressões Regulares",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Selecione categorias de padrões pré-configurados (ex: 'E-mails', 'Datas', 'Códigos Postais') na barra lateral esquerda.",
+    "Combine expressões usando operadores lógicos (|, &) e ajuste quantificadores (*, +, {n,m}) via menu contextual.",
+    "Insira regras personalizadas na aba 'Avançado', como lookaheads positivos ou negativos e grupos nomeados.",
+    "Cole o texto de teste no campo 'Amostra' e observe em tempo real as ocorrências destacadas e grupos capturados.",
+    "Utilize o depurador para identificar falhas na correspondência e ajuste a regex diretamente no editor de código.",
+    "Exporte a expressão final em formato pronto para uso em linguagens como Python (re.compile), JavaScript (/pattern/) ou Java (Pattern)."
   ],
   "usage_examples": [
-    "Use o Gerador de Expressões Regulares para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem aguardar"
+    "Validar e-mails corporativos de domínios específicos usando padrões como ^[a-zA-Z0-9._%+-]+@empresa\\.(com|org)$.",
+    "Extrair hashtags de posts em redes sociais com regex como #([a-zA-Z0-9_]+) e agrupar resultados em JSON.",
+    "Parsear logs do Apache para identificar IPs maliciosos com expressões que combinam falhas de autenticação consecutivas.",
+    "Converter números em formato brasileiro (ex: 1.000,00) para padrões monetários internacionais usando substituição com grupos capturados."
   ]
 }

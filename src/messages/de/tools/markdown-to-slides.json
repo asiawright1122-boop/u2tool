@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Markdown zu Folien Konverter transformiert Markdown-Dokumente in Präsentationsfolien. Verwenden Sie einfache Markdown-Syntax, um professionelle Slideshows zu erstellen.",
+  "detailed_description": "Der Markdown-to-Slides-Konverter wandelt strukturierten Markdown-Code in professionelle Präsentationsfolien durch die Analyse spezifischer Trennzeichen wie '---' für Folienwechsel oder '# Thema' für Titel. Technisch gesehen verwendet das Tool einen Markdown-Parser, der in HTML oder JSON umgewandelt wird, und verarbeitet dies mithilfe von Musteroptimierungen (z. B. Handlebars) in ein Slidedeck, das mit Reveal.js, Remark.js oder einer benutzerdefinierten CSS-Vorlage kompatibel ist. Entwickler profitieren davon, wenn sie schnell Dokumentation in Vorträge übersetzen, z. B. für GitHub-READMEs in Projektpräsentationen oder API-Dokumentationen in Schulungsmaterialien. Der Konverter unterstützt GFM (GitHub Flavored Markdown), Diagramme via Mermaid.js und responsives Design für mobile Anzeigen. Besonders ist die Möglichkeit, benutzerdefinierte Metadaten im YAML-Frontmatter zu nutzen, um Folienreihenfolge oder Animationen zu steuern, sowie die direkte Integration mit Code-Highlighting durch Prism.js.",
   "usage_steps": [
-    "Schreiben Sie Folien im Markdown-Format",
-    "Trennen Sie Folien mit ---",
-    "Fügen Sie Sprechernotizen mit Notes: hinzu",
-    "Vorschau Ihrer Präsentation",
-    "Präsentieren oder als HTML exportieren"
+    "1. Markdown-Inhalt in das Eingabefeld im Hauptfenster einfügen oder per Drag-and-Drop laden.",
+    "2. Im Bereich 'Folienstruktur' Optionen wie 'Automatische Folienteilung' oder manuelle Trennzeichen definieren.",
+    "3. Über das Dropdown 'Designvorlagen' eine CSS-Präsetation auswählen (z. B. 'Solarized Dark' oder 'Corporate Blue').",
+    "4. Im Reiter 'Erweitert' Einstellungen wie 'PDF-Export mit Puppeteer' aktivieren oder Mermaid.js-Diagramme einbetten.",
+    "5. Mit der Vorschau-Schaltfläche das Slidedeck in Echtzeit betrachten und Anpassungen vornehmen.",
+    "6. Das Ergebnis als ZIP-Archiv mit HTML-Dateien, PDF oder PPTX-Datei herunterladen."
   ],
   "usage_examples": [
-    "Schnelle Präsentationen erstellen",
-    "Technische Vorträge aus Dokumenten",
-    "Bildungspräsentationen"
+    "Ein Entwickler generiert aus einem GitHub-Repository-README.md ein Slidedeck für ein Tech-Meeting mit Code-Beispielen und Diagrammen.",
+    "Ein Lehrer konvertiert seine Vorlesungsnotizen im Markdown-Format in animierte Präsentationen mit mathematischen Formeln via LaTeX-Support.",
+    "Ein UX-Team nutzt YAML-Metadaten, um ein Design-Prototyping-Slidedeck mit vordefinierten Farbschemata und Schriftarten zu erstellen.",
+    "Ein Konferenzredner exportiert ein Markdown-Dokument mit Gantt-Diagrammen in eine druckfähige PDF für Teilnehmer."
   ]
 }

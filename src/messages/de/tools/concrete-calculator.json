@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Betonrechner schätzt den benötigten Betonvolumen für Ihr Projekt.",
+  "detailed_description": "Der Concrete Calculator ist ein präzises Berechnungstool für Bauvorhaben, das das erforderliche Betonvolumen für diverse Strukturelemente wie Bodenplatten, Fundamente und Stützen unter Berücksichtigung geometrischer und statischer Parameter ermittelt. Der Tool nutzt Formeln zur Volumenberechnung (z. B. Volumen = Grundfläche × Höhe) sowie Korrekturfaktoren für Bewehrungsstahlanteile und Ausgleichsneigungen. Anwender benötigen ihn, um Materialverschwendung zu vermeiden, die Tragfähigkeit von Konstruktionen sicherzustellen und Kostenkalkulationen präzise zu erstellen. Besonders bei Projekten mit unregelmäßigen Formen oder variablen Dickenprofilen (z. B. trapezförmige Fundamente) liefert das Tool zuverlässige Ergebnisse durch segmentierte Berechnungen. Die Eingabe erfolgt über formularbasierte Felder mit Einheitenumrechnung (z. B. Meter in Zentimeter), wobei der Algorithmus automatisch kritische Werte wie Mindestdicke gemäß DIN-Normen überprüft. Die Ausgabe umfasst nicht nur das Netto-Betonvolumen, sondern auch einen Pauschalwert für Verschnitt. Dies unterscheidet den Calculator von Standardwerkzeugen, da er sowohl private als auch gewerbliche Bauvorhaben mit spezifischen Normen abdeckt.",
   "usage_steps": [
-    "Wählen Sie die Projektart",
-    "Geben Sie die Abmessungen ein",
-    "Wählen Sie das Einheitensystem",
-    "Ansehen des benötigten Volumens",
-    "Erfahren Sie die erforderlichen Säcke"
+    "Wählen Sie den Elementtyp (Bodenplatte, Streifenfundament, Rundsäule) aus dem interaktiven Dropdown-Menü.",
+    "Geben Sie die geometrischen Abmessungen in den Feldern 'Länge', 'Breite', 'Höhe' oder 'Durchmesser' ein, inklusive Neigungswinkel für abgeflachte Strukturen.",
+    "Aktivieren Sie die Checkbox 'Bewehrung berücksichtigen' und geben Sie den Prozentsatz des Stahlbewehrungsanteils ein (Standardwert: 1,5%).",
+    "Wählen Sie die Ausgabeeinheit (m³, Liter oder Tonnen) über den Einheitenumrechner-Schalter.",
+    "Klicken Sie auf 'Berechnung starten', um das System die Volumenformel mit den eingegebenen Parametern zu verarbeiten.",
+    "Überprüfen Sie das Ergebnis im Konsolenausgabefeld, das zusätzlich den Verschnittfaktor (Standard: 5%) einbezieht."
   ],
   "usage_examples": [
-    "Beton für Terrasse berechnen",
-    "Fundamentvolumen schätzen",
-    "Bereichsprojekt planen"
+    "Berechnung einer 12 cm dicken Terrassenplatte (6m × 4m) mit 2% Gefälle zur Drainage – Tool berücksichtigt variierende Dicke über die Fläche.",
+    "Ermittlung des Betonbedarfs für 8 trapezförmige Fundamente (Basis 1,2m × 0,8m, Höhe 0,5m) bei einem Zaunprojekt mit unterschiedlichen Erdverhältnissen.",
+    "Dimensionierung einer tragenden Innenstütze (Durchmesser 40cm, Höhe 3m) inklusive 2,1% Bewehrungsanteil gemäß statischem Nachweis.",
+    "Planung eines Garagenbodens mit 15cm Stärke und 0,5% Neigung zum Ölseparator – Tool berechnet zusätzliche Volumenzugabe für die Gefällematrix."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Markdown Preview is a practical online tool that helps you quickly complete various tasks. Using Markdown Preview, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Markdown Preview can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Markdown Preview immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Markdown Preview tool is a web-based utility that enables real-time Markdown-to-HTML conversion with advanced syntax processing. Built on the CommonMark specification, it parses Markdown input through a lexical analyzer that tokenizes elements like headers, lists, and code blocks, then renders them into a live DOM preview. Users benefit from immediate visual feedback as they type, thanks to event-driven re-parsing via MutationObservers that update the preview pane without page reloads. The tool supports GitHub Flavored Markdown (GFM) extensions, including tables, task lists, and fenced code blocks with language-specific syntax highlighting via Prism.js integration. Developers can export the final output as a standalone HTML file with embedded CSS, ideal for documentation workflows, blog drafts, or UI prototyping. The underlying parser is configured to sanitize HTML output, preventing XSS vulnerabilities while maintaining compatibility with modern web standards. This tool is particularly valuable for teams collaborating on technical documentation, where precise formatting and cross-platform consistency are critical.",
   "usage_steps": [
-    "Open the Markdown Preview tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the tool in a modern browser and locate the dual-pane interface: the left pane is a code editor with line numbers and syntax highlighting, while the right pane displays the live HTML preview.",
+    "Type or paste Markdown content into the editor, utilizing the toolbar buttons for common syntax elements like bold, italics, or hyperlinks.",
+    "Observe the live preview updating dynamically as you type, with syntax elements such as headers, lists, and code blocks rendered in their corresponding HTML tags.",
+    "Click the 'Settings' panel to enable/disable GFM extensions (e.g., task lists, tables) or switch between light/dark preview themes.",
+    "Once satisfied, click 'Export to HTML' to generate a downloadable HTML file containing your content with embedded CSS styles.",
+    "Use the 'Version Comparison' feature to load a previous HTML export and visually diff it against the current live preview using inline DOM differencing."
   ],
   "usage_examples": [
-    "Use Markdown Preview to process your data",
-    "Get processing results quickly without waiting"
+    "A technical writer crafting API documentation uses the live preview to ensure code block syntax highlighting matches their style guide before exporting to HTML for deployment.",
+    "An open-source contributor edits a project's README.md file, leveraging the GFM table and task list features to visualize complex data structures directly in the preview pane.",
+    "A content marketer drafts a blog post with embedded tweets (via HTML <blockquote> tags in Markdown) and uses the export function to hand off a polished HTML version to their CMS team.",
+    "A university student writes a research paper in Markdown, using the version comparison tool to track changes between drafts and maintain formatting consistency across sections."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos Paralelos é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos Paralelos, você pode processar vários dados facilmente sem instalar qualquer software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos Paralelos pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Gerador de Gráficos Paralelos imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Gerador de Gráficos Paralelos é uma ferramenta técnica especializada em visualização de dados multidimensionais através de eixos coordenados paralelos. Essencial para análise exploratória de datasets complexos, permite identificar padrões, correlações e outliers em variáveis heterogêneas. Utiliza algoritmos de escalonamento automático para normalizar dados categóricos e numéricos, aplicando técnicas de spline cúbico para suavizar linhas de conexão entre dimensões. Ideal para cientistas de dados que lidam com datasets de alta cardinalidade, engenheiros de machine learning validando features ou analistas de business intelligence comparando KPIs cruzados. A ferramenta processa dados em formato JSON/CSV, mapeando cada coluna para eixos verticais paralelos interativos, onde usuários podem aplicar filtros dinâmicos por brushing e exportar visualizações em SVG vetorial para publicações acadêmicas ou PNG de alta resolução para relatórios executivos.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos Paralelos",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Clique em 'Importar Dados' e arraste seu arquivo CSV/JSON contendo múltiplas colunas numéricas/categóricas",
+    "2. Selecione o delimitador correto (vírgula, ponto e vírgula ou tabulação) no painel de pré-visualização",
+    "3. Configure os eixos Y: mantenha pressionado para reordenar dimensões ou clique com botão direito para inverter escala",
+    "4. Acesse 'Opções de Renderização' para ativar modo 'Cores por Dimensão' ou 'Agrupamento por Categoria'",
+    "5. Use o controle deslizante 'Transparência' para ajustar opacidade das linhas e evitar sobrecarga visual",
+    "6. Clique em 'Exportar' e escolha entre SVG (para edição em Adobe Illustrator) ou PNG a 300dpi"
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos Paralelos para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Comparar especificações técnicas de 10 modelos de smartphones em 8 dimensões (preço, bateria, RAM, etc) para análise de trade-offs",
+    "Visualizar dados de sensores IoT em tempo real com 5 variáveis ambientais (temperatura, umidade, CO2, luminosidade, pressão)",
+    "Analisar desempenho acadêmico de alunos cruzando 7 métricas (notas, presença, atividades, etc) em diferentes disciplinas",
+    "Validar clusters de clientes em segmentação de marketing com 6 indicadores financeiros e demográficos"
   ]
 }

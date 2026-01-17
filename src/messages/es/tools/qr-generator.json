@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Códigos QR es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Al usar el Generador de Códigos QR, puedes procesar varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Códigos QR puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Códigos QR ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El generador de códigos QR convierte datos alfanuméricos o URLs en matrices de módulos (QR symbols) siguiendo la norma ISO/IEC 18004. Utiliza algoritmos de corrección de errores Reed-Solomon para garantizar legibilidad ante daños físicos, con niveles configurables (L, M, Q, H). Codifica información en binario mediante esquemas de modulación en cuadrícula 2D, aplicando máscaras óptimas para optimizar escaneabilidad. Los usuarios necesitan esta herramienta para implementar soluciones de marketing digital, gestión de inventarios o autenticación multifactor, ya que permite almacenar hasta 2.953 bytes en versiones 40. La salida PNG asegura compresión sin pérdida (8-bit) con soporte de transparencia, ideal para integración web o impresión profesional.",
   "usage_steps": [
-    "Abre la página del Generador de Códigos QR",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega tu texto plano o URL en el campo 'Datos de entrada' con soporte UTF-8.",
+    "Ajusta dimensiones en píxeles usando el control deslizante (mínimo 100x100).",
+    "Selecciona colores personalizados para módulos y fondo mediante paletas HEX.",
+    "Elige nivel de corrección de errores: L (7%), M (15%), Q (25%) o H (30%).",
+    "Haz clic en 'Generar QR' para procesar los datos con biblioteca ZXing optimizada.",
+    "Descarga el resultado en formato PNG con botón de resolución 300dpi."
   ],
   "usage_examples": [
-    "Usa el Generador de Códigos QR para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un restaurante implementa QR en menús físicos para acceso instantáneo a carta digital con precios actualizados.",
+    "Una institución educativa genera códigos para exámenes en línea, vinculando directamente a plataformas LMS.",
+    "Un museo crea rutas interactivas mediante QR que activan contenido AR en aplicaciones móviles.",
+    "Un desarrollador integra QR en etiquetas RFID para trazabilidad de componentes en cadena de suministro."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Convertidor de unidades CSS es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Convertidor de unidades CSS, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Convertidor de unidades CSS puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Convertidor de unidades CSS inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El convertidor de unidades CSS permite transformar valores entre diferentes unidades de estilo en cascada (CSS) como px, rem, em, pt, vw y vh, manteniendo la precisión matemática en cada conversión. Esta herramienta es esencial para desarrolladores que enfrentan desafíos de diseño responsivo, accesibilidad y consistencia visual entre navegadores. Por ejemplo, al adaptar un diseño basado en píxeles a unidades relativas (como rem) para cumplir con las mejores prácticas de accesibilidad, el usuario puede calcular automáticamente los valores equivalentes considerando el tamaño de fuente raíz (root font-size). El funcionamiento se basa en fórmulas CSS estándar: para px a rem, divide el valor entre 16 (por defecto) o el tamaño personalizado definido; en em, el cálculo depende del contexto del elemento padre; vw y vh se convierten usando porcentajes del viewport. La interfaz incluye un motor de cálculo en tiempo real y soporte para ajustar la precisión decimal (hasta 5 posiciones), asegurando resultados adaptables a proyectos avanzados.",
   "usage_steps": [
-    "Abre la página de la herramienta Convertidor de unidades CSS",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona la unidad de entrada en el menú desplegable (ej: 'px')",
+    "Introduce el valor numérico en el campo de texto principal",
+    "Elige la unidad de destino (ej: 'rem') usando el segundo desplegable",
+    "Haz clic en el botón 'Intercambiar' para invertir las unidades rápidamente",
+    "Ajusta la precisión decimal con el control deslizante (de 1 a 5 posiciones)",
+    "Usa el historial de conversiones guardado localmente para reutilizar cálculos previos"
   ],
   "usage_examples": [
-    "Usa Convertidor de unidades CSS para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Convertir 24px a rem para un encabezado, asumiendo un root font-size de 16px (resultado: 1.5rem)",
+    "Transformar 2em en porcentaje para el padding de un botón (equivalente al 200%)",
+    "Calcular la altura de una sección hero usando vh: convertir 100vh a px para compatibilidad con frameworks de animación",
+    "Ajustar 12pt a px para estilos de impresión, considerando la relación 1pt=1.333px en pantallas"
   ]
 }

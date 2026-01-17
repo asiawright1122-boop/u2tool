@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Nível Líquido é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos de Nível Líquido, você pode processar diferentes dados facilmente sem a necessidade de instalar qualquer software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Nível Líquido pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Gerador de Gráficos de Nível Líquido imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Liquid Fill Chart Generator é uma ferramenta técnica especializada na criação de gráficos de preenchimento líquido dinâmicos, utilizando renderização SVG e animações baseadas em JavaScript. Este recurso emprega algoritmos de ondas senoidais parametrizáveis para simular efeitos de superfície líquida, onde o nível de preenchimento representa percentuais de dados. A ferramenta permite personalização avançada de atributos como amplitude de onda, frequência, cor de gradiente, velocidade de animação (em quadros por segundo) e máscara de recorte SVG. Diferentemente de soluções genéricas, oferece controle preciso sobre a função de onda amortecida e suporte para múltiplas camadas de efeito (como bordas estilizadas e sombras dinâmicas). É essencial para desenvolvedores que necessitam integrar visualizações de dados interativas em dashboards corporativos, aplicações SaaS ou relatórios de BI, onde a representação visual de métricas críticas (KPIs) exige engajamento estético sem comprometer a precisão dos dados. O código gerado é compatível com padrões web modernos e pode ser incorporado diretamente em HTML ou exportado como SVG estático.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Nível Líquido",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Ajuste o controle deslizante 'Porcentagem de Preenchimento' para definir o valor numérico (0-100%) que será visualizado.",
+    "Selecione o esquema de cor no seletor 'Gradiente de Líquido', escolhendo entre opções predefinidas ou inserindo códigos HEX personalizados.",
+    "Configure os parâmetros de animação nos campos 'Amplitude da Onda' e 'Frequência' para controlar a intensidade e velocidade do movimento.",
+    "Ative/desative a opção 'Múltiplas Camadas' para adicionar efeitos visuais como bordas translúcidas ou camadas de sobreposição.",
+    "Ajuste a taxa de quadros por segundo (FPS) no campo 'Velocidade de Animação' para otimizar o desempenho conforme o dispositivo-alvo.",
+    "Clique em 'Gerar Código' para obter o snippet SVG pronto para integração ou use o botão 'Exportar SVG' para salvar o arquivo vetorial."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Nível Líquido para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem espera"
+    "Monitoramento de KPIs em um dashboard de vendas, onde o preenchimento líquido indica o progresso mensal em relação à meta comercial.",
+    "Visualização de porcentagem de conclusão em uma plataforma de e-learning, mostrando o avanço do aluno em um curso específico.",
+    "Indicador de saúde financeira em um relatório corporativo, representando o percentual de liquidez corrente da empresa.",
+    "Elemento de interface em um painel IoT que exibe o nível de preenchimento virtual de um tanque de armazenamento em tempo real."
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Sub-rede fornece informações completas de sub-rede incluindo endereço de rede e faixa de hosts.",
+  "detailed_description": "O Calculador de Sub-redes aprimorado é uma ferramenta técnica projetada para profissionais de redes que desejam determinar com precisão os parâmetros de sub-redes IPv4 com base em um endereço IP e máscara de sub-rede fornecidos. Ele realiza cálculos detalhados utilizando operações bitwise para identificar o endereço de rede, endereço de broadcast, intervalo utilizável de hosts e a notação CIDR otimizada. Essa ferramenta é essencial para engenheiros de redes que precisam planejar alocação eficiente de IPs, diagnosticar sobreposições de sub-redes ou configurar dispositivos com segmentação VLSM. Ao processar a entrada através de algoritmos de conversão binária-decimal, o calculador exibe informações como o número total de hosts disponíveis, endereços reservados e a representação binária dos octetos. Diferente de outras soluções genéricas, esta ferramenta inclui análise de classes de rede (A/B/C) e suporte a notação CIDR, permitindo cálculos avançados para ambientes de data centers, redes corporativas e configurações de VPC em cloud.",
   "usage_steps": [
-    "Inserir endereço IP",
-    "Definir notação CIDR",
-    "Clicar em calcular",
-    "Ver detalhes da sub-rede",
-    "Verificar faixa de hosts"
+    "Insira o endereço IP no campo 'Endereço IP' utilizando formato decimal pontilhado (ex: 192.168.1.154)",
+    "Selecione a máscara de sub-rede desejada no menu suspenso (ex: 255.255.255.0) ou insira o valor CIDR (ex: /24)",
+    "Clique no botão 'Calcular Sub-rede' para processar os dados",
+    "Analise o bloco de resultados que exibe: Endereço de Rede (em decimal e hexadecimal), Endereço de Broadcast e Intervalo de Hosts (primeiro e último IPs utilizáveis)",
+    "Utilize a seção 'Detalhes Binários' para visualizar a representação binária de cada octeto e a operação lógica AND realizada",
+    "Para múltiplos cálculos, ajuste os parâmetros e repita o processo sem necessidade de recarregar a página"
   ],
   "usage_examples": [
-    "Planejar sub-redes de rede",
-    "Calcular faixas de IP",
-    "Projetar arquitetura de rede"
+    "Um engenheiro de redes precisa dividir a rede 10.0.0.0/8 em 4 sub-redes iguais para departamentos distintos, determinando os novos prefixos CIDR e intervalos de hosts",
+    "Um estudante de redes calcula o endereço de broadcast para a sub-rede 172.16.22.0/27 como parte de um exercício prático de certificação",
+    "Um administrador identifica conflitos de IP ao verificar que dois dispositivos estão configurados em sub-redes diferentes (ex: 192.168.5.30/28 e 192.168.5.45/28)",
+    "Um arquiteto de cloud ajusta a máscara de sub-rede para otimizar a alocação de IPs em uma VPC AWS, garantindo que o intervalo comportará 500 hosts necessários"
   ]
 }

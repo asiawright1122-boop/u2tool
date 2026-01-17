@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Expresiones Cron es una herramienta práctica en línea que te ayuda a realizar diversas tareas de manera rápida. Con el Generador de Expresiones Cron, puedes procesar diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, el Generador de Expresiones Cron puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no se suban a ningún servidor. Utiliza el Generador de Expresiones Cron inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Generador de Expresiones Cron permite crear y analizar cronogramas de tareas programadas en formato cron mediante una interfaz visual interactiva. Una expresión cron es una cadena de texto con cinco o seis campos (minutos, horas, día del mes, mes, día de la semana y opcionalmente segundos) que define un calendario de ejecución para el demonio cron del sistema POSIX. Esta herramienta está diseñada para desarrolladores y administradores de sistemas que necesitan programar tareas automatizadas (como respaldos, limpiezas de logs o generación de informes) sin errores de sintaxis. Permite seleccionar valores específicos, intervalos o patrones avanzados (como '@daily' o 'L' para último día del mes) mediante selectores gráficos, mostrando en tiempo real la expresión cron resultante y validando automáticamente su compatibilidad con diferentes dialectos (Vixie Cron, Quartz Scheduler, etc.). Además, incluye una función de análisis inverso que convierte expresiones existentes en un desglose visual intuitivo, facilitando la comprensión de cronogramas complejos.",
   "usage_steps": [
-    "Abre la página del Generador de Expresiones Cron",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del tool según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona la zona horaria específica en el menú desplegable para ajustar la ejecución al huso horario objetivo.",
+    "Elige la frecuencia base (diaria, semanal, mensual, etc.) en el selector de patrones predefinidos.",
+    "Configura valores personalizados en cada campo cron usando controles numéricos o símbolos especiales (L, W, #).",
+    "Activa la vista de análisis para pegar una expresión cron existente y descomponerla en componentes visuales.",
+    "Verifica errores con la validación en tiempo real que muestra mensajes específicos de compatibilidad.",
+    "Exporta la expresión generada en formato de texto plano, JSON o como línea de comando para integrarla en scripts o configuraciones."
   ],
   "usage_examples": [
-    "Utiliza el Generador de Expresiones Cron para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Programar un respaldo diario a las 2:00 AM: '0 2 * * *' + zona horaria UTC.",
+    "Generar informes semanales los lunes a las 9:00 AM: '0 9 * * 1' con análisis de días laborables.",
+    "Ejecutar limpieza de logs el último día de cada mes a medianoche: '0 0 L * *'.",
+    "Configurar una tarea recurrente cada 15 minutos de 8:00 AM a 5:00 PM en días hábiles: '0/15 8-17 * * 1-5'."
   ]
 }

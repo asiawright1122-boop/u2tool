@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON zu YAML ist eine praktische Online-Tool, das dir dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON zu YAML kannst du verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass du schnell loslegst und effizient arbeitest. Unabhängig davon, ob du Entwickler, Designer oder allgemeiner Nutzer bist, kann JSON zu YAML dir helfen, deine Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden in deinem Browser lokal durchgeführt, was deine Datensicherheit gewährleistet und sicherstellt, dass deine Daten nicht auf irgendeinem Server hochgeladen werden. Nutze JSON zu YAML sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der JSON-zu-YAML-Konverter ist ein Spezialtool zur präzisen Transformation strukturierter JSON-Daten in das YAML-Format unter Berücksichtigung spezifischer Syntaxvorgaben. Das Tool analysiert JSON-Eingaben durch einen validierten Parser, der komplexe Objekte, Arrays und verschachtelte Hierarchien in YAML-konforme Dokumente umformt, einschließlich der korrekten Darstellung von Datentypen wie Zeichenketten, Zahlen und Boolean-Werten. Dabei wird die YAML-Spezifikation 1.2 vollständig umgesetzt, inklusive korrekter Einrückungstiefe, Strikturentfaltung und der Umwandlung von Schlüssel-Wert-Paaren in YAML-Mappings. Entwickler benötigen dieses Tool insbesondere bei Konfigurationsmanagement-Systemen wie Ansible oder Kubernetes, wo YAML aufgrund seiner Lesbarkeit bevorzugt wird. Der Konverter unterstützt außerdem die Behandlung spezieller Zeichen und Escape-Sequenzen, wodurch Datenintegrität bei der Migration zwischen JSON- und YAML-basierten APIs gewahrt bleibt. Die Konvertierung erfolgt clientseitig im Browser, wodurch sensible Daten nicht über das Netzwerk übertragen werden.",
   "usage_steps": [
-    "Öffne die JSON zu YAML-Tool-Startseite",
-    "Gib den Inhalt ein, den du verarbeiten möchtest, in das Eingabefeld",
-    "Ändere die Tool-Einstellungen und Optionen, wenn nötig",
-    "Klicke auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopiere oder lade die verarbeiteten Ergebnisse herunter"
+    "Navigieren Sie zur Tool-Seite 'json-to-yaml' und öffnen Sie das JSON-Eingabefeld.",
+    "Fügen Sie gültigen JSON-Code in den Texteditor ein, z.B. {'name': 'Max', 'hobbies': ['reading', 'coding']}.",
+    "Passen Sie im Abschnitt 'Umwandlungsparameter' die Einrückungstiefe (Standard: 2) oder aktivieren Sie die 'Sortierung nach Schlüsseln'-Option.",
+    "Klicken Sie auf den 'Konvertieren'-Button, um den YAML-Transformationsprozess zu starten.",
+    "Überprüfen Sie das Ergebnis im YAML-Ausgabefeld auf korrekte Syntax, z.B. 'name: Max\\nhobbies:\\n  - reading\\n  - coding'.",
+    "Kopieren Sie den generierten YAML-Code oder laden Sie ihn über die 'Download'-Funktion als .yaml-Datei herunter."
   ],
   "usage_examples": [
-    "Nutze JSON zu YAML, um deinen Daten zu verarbeiten",
-    "Erhalte die Verarbeitungsresultate schnell, ohne zu warten"
+    "Ein DevOps-Engineer wandelt JSON-basierte Terraform-Ausgaben in YAML-Formate um, um sie mit CI/CD-Pipelines zu kompatibilisieren.",
+    "Ein API-Dokumentationsspezialist konvertiert OpenAPI-Spezifikationen von JSON nach YAML, um sie in Swagger UI anzuzeigen.",
+    "Ein Data-Scientist transformiert verschachtelte JSON-Logs in YAML, um sie mit Python-Skripten auszuwerten.",
+    "Ein Frontend-Entwickler migriert i18n-Übersetzungsdateien von JSON nach YAML, um sie in einem Jekyll-basierten Static-Site-Generator zu nutzen."
   ]
 }

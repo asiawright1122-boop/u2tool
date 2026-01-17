@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Business Days Calculator is a practical online tool that helps you quickly complete various tasks. Using Business Days Calculator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Business Days Calculator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Business Days Calculator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Business Days Calculator is a precision-timing utility designed to compute the number of working days between two dates while accounting for customizable regional holidays and weekend configurations. Unlike basic date calculators, this tool employs a dual-algorithm approach: first, it generates a date range using ISO 8601 calendar standards, then applies exclusion filters for weekends (configurable as Saturday/Sunday or custom weekday pairs) and user-defined holidays. The calculation engine leverages modular arithmetic to eliminate non-working days, providing exact day counts crucial for SLA tracking, payroll cycles, and project timelines. Technical implementations include timezone-aware date parsing, leap year handling, and optimized array filtering for holiday databases. Users benefit from granular control over holiday definitions through a built-in editor supporting ICS calendar imports, making it indispensable for multinational teams managing cross-border deadlines.",
   "usage_steps": [
-    "Open the Business Days Calculator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Open the calendar picker to select your start date (e.g., '2023-09-01').",
+    "2. Choose an end date in the secondary calendar interface (e.g., '2023-09-30').",
+    "3. Add custom holidays via the 'Holiday List Editor' using format 'YYYY-MM-DD,Description'.",
+    "4. Select your region from the ISO country code dropdown (e.g., US, DE, JP) for preloaded public holidays.",
+    "5. Toggle weekend configuration between default (Sat/Sun) or custom weekday pairs.",
+    "6. Click 'Calculate' to execute the date range analysis and view results in the output console."
   ],
   "usage_examples": [
-    "Use Business Days Calculator to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: A project manager calculates development days for a software release, excluding 3 team holidays and standard weekends.",
+    "Example 2: An attorney determines filing deadlines for legal documents requiring 15 business days notice, accounting for state-specific court holidays.",
+    "Example 3: An HR analyst calculates payroll periods for remote workers in multiple countries with varying public holidays.",
+    "Example 4: A vendor compliance officer verifies SLA response times against a client's regional holiday schedule."
   ]
 }

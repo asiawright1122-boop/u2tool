@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Analizador de Frequência de Caracteres é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando o Analizador de Frequência de Caracteres, você pode facilmente processar vários dados sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Analizador de Frequência de Caracteres pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Analizador de Frequência de Caracteres imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Character Frequency Analyzer é uma ferramenta especializada para processamento de texto que realiza análise estatística de distribuição de caracteres em documentos digitais. Tecnicalemente, o algoritmo constrói uma tabela de frequência baseada em estruturas de dados tipo hash map, onde cada caractere Unicode presente no texto é mapeado com sua contagem absoluta e relativa percentual. A ferramenta suporta análise diferenciada entre maiúsculas/minúsculas, ignora espaços e caracteres especiais conforme configuração do usuário, e aplica normalização UTF-8 para garantir precisão em textos multilíngues. Desenvolvedores utilizam esta ferramenta para identificar padrões criptográficos em sistemas de codificação, enquanto cientistas de dados a empregam para análise exploratória de conjuntos de texto (NLP preprocessing). A funcionalidade de exportação em formato JSON e CSV permite integração direta com pipelines de machine learning. A análise de frequência também auxilia na detecção de anomalias em logs de sistema, verificação de integridade em arquivos de texto, e estudos linguísticos sobre distribuição de fonemas em idiomas específicos.",
   "usage_steps": [
-    "Abra a página da ferramenta Analizador de Frequência de Caracteres",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole seu texto na área de edição com suporte a 100.000 caracteres",
+    "Ative/desative a opção 'Diferenciar maiúsculas/minúsculas' no seletor de configuração",
+    "Marque 'Ignorar espaços e símbolos' para excluir caracteres não alfanuméricos",
+    "Clique no botão 'Processar Frequência' para iniciar o cálculo em tempo real",
+    "Visualize o resultado ordenado por frequência absoluta ou percentual interativo",
+    "Utilize os botões 'Exportar JSON' ou 'Copiar Tabela' para integrar os dados em seus projetos"
   ],
   "usage_examples": [
-    "Use o Analizador de Frequência de Caracteres para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor de jogos analisa frequência de caracteres em diálogos para balancear sistemas de criptografia em aventuras textuais",
+    "Um linguista compara distribuições de vogais em textos do século XVI e contemporâneos para estudos de evolução linguística",
+    "Um cientista de dados pré-processa textos para criar vetores de features em modelos de detecção de idioma automático",
+    "Um profissional de SEO verifica padrões de repetição de termos em conteúdos web para otimização de palavras-chave"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Nginx Konfigurationsgenerator ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Nginx Konfigurationsgenerator können Sie verschiedene Daten verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der Nginx Konfigurationsgenerator kann Ihnen helfen, Ihre Arbeitswirkungsweise zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Nginx Konfigurationsgenerator sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der Nginx Config Generator ist ein spezialisierter Code-Generator zur automatischen Erstellung von Nginx-Konfigurationsdateien. Das Tool abstrahiert komplexe Nginx-Direktiven wie `server`, `location`, `upstream` oder `proxy_pass` durch eine formularbasierte Oberfläche, die technische Anforderungen in syntaktisch korrekte Konfigurationen übersetzt. Entwickler benötigen dieses Werkzeug, um wiederkehrende Setup-Aufgaben zu beschleunigen, menschliche Fehlerquellen (z.B. Syntaxfehler in Konfigurationsdateien) zu minimieren und bewährte Sicherheitspraktiken wie HTTP/2-Unterstützung oder Caching-Header-Optimierungen zu standardisieren. Die zugrunde liegende Logik verarbeitet Benutzereingaben (z.B. Domain-Namen, Port-Zuweisungen, SSL-Zertifikatspfade) und generiert dynamisch zusammengesetzte Konfigurationen, die beispielsweise Reverse-Proxy-Szenarien für Microservices, Lastverteilung mit Round-Robin-Algorithmen oder Content-Delivery-Netzwerke (CDN) abbilden. Besonders bei skalierbaren Infrastrukturen mit dynamischen Backend-Diensten reduziert das Tool die manuelle Konfigurationsarbeit erheblich.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Nginx Konfigurationsgenerators",
-    "Geben Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Einstellungen und Optionen, wenn nötig, an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "1. Wählen Sie im Drop-down-Menü den Konfigurationstyp: 'Standard-Webserver', 'Reverse Proxy' oder 'Load Balancer'.",
+    "2. Geben Sie die Domäne und den zugehörigen Dokumentenstamm (z.B. '/var/www/html') in die entsprechenden Felder ein.",
+    "3. Aktivieren Sie per Checkbox erweiterte Module wie 'HTTP/2 mit ALPN' oder 'SSL-Terminierung mit Let's Encrypt'.",
+    "4. Konfigurieren Sie im Abschnitt 'Upstream-Server' die Backend-Adressen (z.B. '10.0.0.10:8080') für Load-Balancing-Szenarien.",
+    "5. Passen Sie im Tab 'Caching' die `proxy_cache`-Einstellungen an, um statische Ressourcen im Speicher zu puffern.",
+    "6. Klicken Sie auf 'Konfiguration generieren', um die vollständige Nginx-Konfigurationsdatei herunterzuladen oder direkt in den Server zu übertragen."
   ],
   "usage_examples": [
-    "Verwenden Sie den Nginx Konfigurationsgenerator, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "1. Einrichtung eines statischen Webservers mit automatischer Generierung von 301-Redirects von HTTP auf HTTPS.",
+    "2. Konfiguration eines Reverse Proxies für eine Node.js-Anwendung auf Port 3000 mit aktiviertem WebSocket-Proxying.",
+    "3. Implementierung einer Lastverteilung zwischen drei Docker-Containern mit Health-Check-Funktionalität via `health_check`-Modul.",
+    "4. Optimierung einer Media-Delivery-Infrastruktur durch Caching von Video-Dateien mit `proxy_cache_valid` für 24 Stunden."
   ]
 }

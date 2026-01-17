@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Bildteiler ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Bildteiler können Sie einfach verschiedene Daten verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, Bildteiler kann Ihnen helfen, die Arbeitsproduktivität zu verbessern. Alle Verarbeitungsvorgänge erfolgen lokal in Ihrem Browser, was Ihre Daten sicherheitshalber schützt und verhindert, dass diese auf irgendeinen Server hochgeladen werden. Nutzen Sie Bildteiler sofort, um schnelle, sichere und kostenlose Online-Toolservices zu erleben.",
+  "detailed_description": "Der Image Splitter ist ein Spezialwerkzeug zur präzisen Segmentierung von Rastergrafiken in rechteckige Teilbilder durch definierte Gitterparameter. Technisch gesehen analysiert der Splitter die Pixelmatrix der hochgeladenen Bilddatei (unterstützt werden PNG, JPEG und WebP) und generiert anhand benutzerdefinierter Zeilen- und Spaltenanzahlen ein Kachelsystem. Jedes Teilbild wird dabei verlustfrei extrahiert, wobei die Originalfarbtiefe und Metadaten beibehalten werden. Besondere Features umfassen die Anpassung von Überlappungsbereichen (Overlap) für Nahtstellenoptimierung sowie die automatische Berechnung der optimalen Kachelgröße in Pixeln. Entwickler benötigen diesen Tool für Aufgaben wie die Generierung von CSS-Sprites, Vorbereitung von Texture-Atlases für WebGL-Anwendungen oder das Zerschneiden von Druckdateien in plottbare Segmente. Im Gegensatz zu herkömmlichen Bildbearbeitungsprogrammen erfolgt der Prozess vollautomatisch im Browser, ohne Server-Upload, durch clientseitige Canvas-Rendering-Technologie. Die Ergebnisse liegen sofort als ZIP-Archiv mit numerisch benannten Dateien vor, was den Workflow im Vergleich zu manuellem Slicing in Photoshop oder GIMP erheblich beschleunigt.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Bildteilers",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Verarbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "1. Klicken Sie auf 'Bild hochladen' und wählen Sie Ihre Datei im PNG-, JPEG- oder WebP-Format aus.",
+    "2. Geben Sie im Eingabefeld 'Zeilen' die gewünschte Anzahl horizontaler Bildsegmente ein, z.B. '3' für drei Reihen.",
+    "3. Stellen Sie im Schieberegler 'Spalten' die vertikale Aufteilung ein, z.B. '4' für vier Segmente pro Zeile.",
+    "4. Aktivieren Sie das Kontrollkästchen 'Überlappung' und geben Sie einen Wert in Pixeln ein, um Nahtstellen für Kachelungen zu erstellen.",
+    "5. Überprüfen Sie das Ergebnis im Echtzeitvorschau-Fenster, das die Kachelgrenzen mit Koordinatenangaben anzeigt.",
+    "6. Klicken Sie auf 'Split starten' und laden Sie das ZIP-Archiv mit allen Einzeltiles im Format 'tile_rowX_colY.png' herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie Bildteiler, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell Verarbeitungsergebnisse ohne zu warten"
+    "Ein Webdesigner zerlegt ein 2000x1000px Hero-Banner in 2x2-Segmente mit 10px Überlappung, um ein responsives CSS-Masonry-Layout zu erstellen.",
+    "Ein Game-Entwickler teilt eine 1024x1024px Texture-Atlas-Datei in 8x8-Quadrate auf, um Einzeltexturen für Unity3D-Assets zu extrahieren.",
+    "Ein Fotograf spaltet ein 12000x6000px Panoramabild in 4x3-Teile, um die Einzelbilder in einer Galerie-App mit nahtlosem Übergang anzuordnen.",
+    "Ein Print-Designer zerschneidet eine A0-Posterdatei (3300x4668px) in 3x3-Segmente mit 15mm Zuschnittmarken für die Plotterausgabe."
   ]
 }

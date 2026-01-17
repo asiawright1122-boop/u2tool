@@ -1,14 +1,17 @@
 {
-  "detailed_description": "CSS Variables Generator is a practical online tool that helps you quickly complete various tasks. Using CSS Variables Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, CSS Variables Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use CSS Variables Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The CSS Variables Generator is a specialized tool for creating and managing CSS custom properties (variables) through an interactive visual interface. Technically, it enables developers to define dynamic values that can be reused across stylesheets using the `--variable-name` syntax and `var()` function. This tool addresses common pain points in manual variable management, such as maintaining consistency in large-scale projects, implementing theme switching, and ensuring valid value types during cascading operations. The generator provides real-time parsing of variable relationships, supports nested `var()` references with fallback values, and validates CSS syntax to prevent runtime errors. Developers can visually map variable hierarchies, convert static CSS values into modular variables, and preview live CSSOM updates as they adjust values. Key features include color space conversion (HSL/RGB/HEX), unit-aware numerical inputs, and export options for CSS, SCSS, or JSON formats. It's particularly useful for creating design system tokens, responsive design variables, and accessible color systems where programmatic control of CSS values is critical.",
   "usage_steps": [
-    "Open the CSS Variables Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Launch the tool and use the '+' button to create a new variable group for organizational scoping.",
+    "Click 'Add Variable' to generate a custom property, specifying its name (e.g., '--primary-hue') in the dedicated input field.",
+    "Select a value type (color, number, length, or custom string) from the dropdown menu to enforce format validation.",
+    "Adjust values using the color picker or numerical slider while observing real-time updates in the CSS preview panel.",
+    "Enable 'Chained References' to create dependent variables that use `var(--base-variable, fallback)` syntax automatically.",
+    "Export the final CSS output with minified variables or copy individual variable declarations to your clipboard."
   ],
   "usage_examples": [
-    "Use CSS Variables Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Creating a design system theme with 10+ color variables that update automatically across 100+ component stylesheets when adjusted.",
+    "Implementing responsive typography by defining `--font-scale` variables tied to `clamp()` functions for fluid heading sizes.",
+    "Building an accessible dark mode toggle that inverts 15 color variables while maintaining WCAG contrast ratios through HSL adjustments.",
+    "Generating spacing tokens (e.g., `--spacing-xs: 0.5rem`) that create a consistent 8pt grid system across a multi-page application."
   ]
 }

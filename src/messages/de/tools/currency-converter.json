@@ -1,16 +1,17 @@
 {
-  "detailed_description": "Der Währungsrechner ist ein umfassendes Tool, das Ihnen ermöglicht, zwischen über 45 Weltwährungen sofort zu konvertieren. Unterstützung für Hauptwährungen wie USD, EUR, GBP, JPY, CNY sowie asiatische, europäische, amerikanische und mittlerorientalische Währungen. Funktionen umfassen schnellen Tausch zwischen Währungen, voreingestellte Betragsbuttons und detaillierte Wechselkursinformationen.",
+  "detailed_description": "Der Currency Converter ist ein leistungsstarkes Werkzeug zur präzisen Umrechnung von über 45 globalen Währungen unter Verwendung aktuellster Wechselkurse aus vertrauenswürdigen Quellen wie Open Exchange Rates oder der Europäischen Zentralbank. Technisch gesehen realisiert der Converter asynchrone API-Anfragen über HTTPS, um in Echtzeit JSON-Daten mit aktualisierten Kursen abzurufen. Die Berechnung erfolgt durch eine serverseitige Middleware, die Multiplikationen mit Gleitkommazahlen durchführt und dabei Rundungsregeln nach IEEE 754 berücksichtigt. Ein integrierter Caching-Mechanismus reduziert API-Abfragen durch lokale Speicherung häufig genutzter Währungspaare für 60 Sekunden, während gleichzeitig die Einhaltung von CORS-Richtlinien gewährleistet ist. Entwickler profitieren von der Unterstützung von ISO 4217-Währungscodes und der Fähigkeit, Batch-Konversionen über ein programmiertes Interface durchzuführen. Das Tool ist besonders wertvoll für internationale E-Commerce-Transaktionen, Finanzreporting mit mehreren Währungen oder die Planung von Reisebudgets, da es auch historische Kurse bis zu einem definierten Datum zurückliefern kann.",
   "usage_steps": [
-    "Geben Sie den gewünschten Betrag ein",
-    "Wählen Sie die Quellwährung aus dem Dropdown-Menü",
-    "Wählen Sie die Zielwährung aus dem Dropdown-Menü",
-    "Sehen Sie den umgerechneten Betrag sofort",
-    "Verwenden Sie den Tauschbutton, um die Konvertierung umzukehren",
-    "Klicken Sie auf voreingestellte Beträge für schnelle Berechnungen"
+    "Wählen Sie im Dropdown-Menü 'Ausgangswährung' die gewünschte Quellwährung (z.B. EUR) aus einer alphabetisch sortierten Liste.",
+    "Geben Sie den zu konvertierenden Betrag in das Eingabefeld ein, inklusive bis zu 8 Nachkommastellen für Kryptowährungen.",
+    "Aktivieren Sie im Abschnitt 'Zielwährungen' mehrere Optionen über Checkboxen (z.B. USD, JPY, BTC) für parallele Umrechnungen.",
+    "Klicken Sie auf 'Swap', um Quell- und Zielwährung mit einem Klick zu tauschen, ohne die Eingabedaten erneut eingeben zu müssen.",
+    "Kopieren Sie das strukturierte JSON-Ergebnis direkt aus dem Ausgabefeld oder nutzen Sie den 'Download CSV'-Button für tabellarische Exporte.",
+    "Setzen Sie die Konversion zurück, indem Sie auf 'Clear All' klicken, um alle Eingaben und Ergebnisse zu löschen."
   ],
   "usage_examples": [
-    "USD in EUR umrechnen für Reiseplanung",
-    "Wechselkurse für internationale Einkäufe berechnen",
-    "Kurswerte verschiedener Länder vergleichen"
+    "Ein Importeur berechnet die Kosten von Rohstofflieferungen aus Australien (AUD) in die lokalen Buchungswährungen (CHF, SEK) unter Berücksichtigung aktueller Handelsaufschläge.",
+    "Ein Forscher konvertiert monatliche Forschungsbudgets von EUR in mehrere afrikanische Währungen (ZAR, KES) für Feldstudien im nächsten Quartal.",
+    "Ein Blockchain-Entwickler testet die Umrechnung von Ethereum (ETH) zu Fiat-Währungen für eine DeFi-Anwendung mit automatisierten Wechselkurs-Updates.",
+    "Ein Investor vergleicht die Performance eines Portfolios in verschiedenen Märkten durch tägliche Konversion von USD-Aktienkursen zu lokalen Indizes (Nikkei, FTSE)."
   ]
 }

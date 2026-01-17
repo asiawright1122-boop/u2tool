@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de package.json es una herramienta práctica en línea que te ayuda a completar rápidamente diversas tareas. Con el Generador de package.json, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, permitiéndote comenzar de inmediato y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, el Generador de package.json puede ayudarte a mejorar tu eficiencia laboral. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no se suban a ningún servidor. Utiliza el Generador de package.json de inmediato para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Generador de package.json es una herramienta técnica diseñada para crear archivos de configuración de proyectos Node.js con opciones personalizadas. Este herramienta permite definir campos como name, version, main, type (CommonJS/ES Modules), dependencies, devDependencies, scripts, y propiedades avanzadas como engines, peerDependencies o export. Su utilidad radica en evitar errores manuales al estructurar proyectos, estandarizar configuraciones en equipos de desarrollo y generar boilerplate para diferentes casos de uso (API REST, CLI tools, bibliotecas). Internamente, la herramienta valida la sintaxis de campos obligatorios, soporta múltiples gestores de paquetes (npm, yarn, pnpm) y ofrece sugerencias inteligentes para scripts comunes (start, test, build). Incluye opciones avanzadas como la generación de campos type 'module' para ESM, configuración de husky hooks, o integración con frameworks como React o TypeScript.",
   "usage_steps": [
-    "Abre la página del Generador de package.json",
-    "Escribe o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del tool según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona el tipo de módulo (CommonJS o ES Modules) en el selector desplegable",
+    "Completa los campos obligatorios: nombre del proyecto, versión inicial y punto de entrada",
+    "Agrega dependencias mediante un buscador integrado que sugiere paquetes populares y sus versiones",
+    "Personaliza scripts NPM con un editor de comandos predefinidos (lint, test, build) o escribe comandos personalizados",
+    "Activa opciones avanzadas para configurar engines, private registry o campos de metadatos",
+    "Copia el resultado generado o descarga el archivo package.json directamente"
   ],
   "usage_examples": [
-    "Utiliza el Generador de package.json para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un desarrollador crea una API REST con Express y necesita configurar scripts de reinicio automático con nodemon",
+    "Un equipo implementa una biblioteca de componentes React que requiere exportaciones condicionales y type: 'module'",
+    "Un arquitecto de software estandariza configuraciones de proyectos en una organización con múltiples repositorios",
+    "Un desarrollador full-stack genera un package.json para un microservicio con dependencias específicas de AWS Lambda"
   ]
 }

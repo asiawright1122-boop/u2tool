@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON zu Excel ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON zu Excel können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, JSON zu Excel kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie JSON zu Excel sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der JSON-to-Excel-Konverter führt eine präzise Transformation von strukturierten JSON-Daten in ein tabellarisches Excel-Format durch. Technisch betrachtet analysiert das Tool JSON-Objekte rekursiv, identifiziert hierarchische Ebenen und flattet verschachtelte Arrays automatisch in eine zweidimensionale Tabellenstruktur. Dabei erfolgt eine dynamische Typinferenz für numerische, string- und datumsspezifische Felder, um die korrekte Formatierung in Excel-Zellen zu gewährleisten. Die Lösung nutzt ein schema-basiertes Mapping, das auch komplexe JSON-Strukturen wie verschachtelte Objekte oder gemischte Datentypen in spaltenbasierte Excel-Tabellen überführt. Dieses Tool ist insbesondere für Entwickler:innen nützlich, die API-Daten in Berichte exportieren müssen, Datenanalyst:innen, die NoSQL-Daten für BI-Tools aufbereiten, oder Projektmanager:innen, die JSON-Protokolle in auswertbare Tabellen konvertieren. Die Implementierung erfolgt clientseitig im Browser, wodurch sensible Daten nicht auf Servern zwischengespeichert werden. Durch die automatische Erkennung von Wiederholungsstrukturen in JSON-Arrays werden relationale Tabellenmodelle generiert, die sich nahtlos in Excel-Add-ins oder Power BI integrieren lassen.",
   "usage_steps": [
-    "Öffnen Sie die JSON zu Excel-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Laden Sie eine JSON-Datei per Drag-and-Drop in den Upload-Bereich oder fügen Sie den Datenpfad über die 'Datei auswählen'-Schaltfläche ein.",
+    "Überprüfen Sie die automatisch generierte Vorschau der transformierten Tabelle im interaktiven Grid-Editor.",
+    "Passen Sie bei Bedarf die Schema-Detektion an, indem Sie im 'Feldkonfigurationspanel' manuell Datentypen (z. B. Datumsformat, Zahlenformat) zuordnen.",
+    "Wählen Sie im Format-Auswahlmenü zwischen XLSX-Standard oder CSV-Export mit anpassbarer Trennzeichenkonfiguration.",
+    "Aktivieren Sie die 'Header-Personalisierung'-Option, um benutzerdefinierte Spaltenüberschriften aus JSON-Schlüsselpfaden abzuleiten.",
+    "Klicken Sie auf 'Download Excel-Datei', um das Ergebnis direkt im Office Open XML-Format (.xlsx) zu speichern."
   ],
   "usage_examples": [
-    "Verwenden Sie JSON zu Excel, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein Entwickler konvertiert API-Antworten von einer REST-Schnittstelle in Excel-Tabellen, um monatliche Nutzungsmetriken für Stakeholder zu visualisieren.",
+    "Eine Datenbankadministratorin migriert MongoDB-Dokumente mit verschachtelten Unterobjekten in ein relationales Excel-Modell für eine Compliance-Audit.",
+    "Ein E-Commerce-Manager transformiert Klickstream-Daten aus JSON-Protokollen, um Conversion-Raten in Excel-Pivot-Tabellen zu analysieren.",
+    "Ein Wissenschaftler exportiert experimentelle Messdaten aus einem JSON-basierten Labormangement-System in ein standardisiertes Excel-Template für die Publikation."
   ]
 }

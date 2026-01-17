@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Limpador de Texto é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Limpador de Texto, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Limpador de Texto pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Limpador de Texto imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Text Cleaner é uma ferramenta técnica especializada em processamento textual avançado, desenvolvida para realizar transformações precisas em conteúdo não estruturado. Ele elimina espaços redundantes, quebras de linha desnecessárias, tabs e caracteres invisíveis (como ZWSP - Zero Width Space) através de algoritmos de regex otimizados. Além disso, oferece normalização Unicode (formas NFC/NFD) e conversão de codificação de caracteres (UTF-8, ISO-8859-1, ASCII). Ideal para desenvolvedores que precisam pré-processar dados antes de análises NLP, profissionais de SEO que lidam com extração de conteúdo web contendo formatação inconsistente, ou engenheiros de dados que tratam logs com caracteres especiais. A ferramenta também identifica e remove BOM (Byte Order Mark) em arquivos CSV e aplica filtros personalizáveis para preservar ou eliminar padrões específicos, como URLs ou números de protocolo.",
   "usage_steps": [
-    "Abra a página da ferramenta Limpador de Texto",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse o painel de edição e cole o texto no campo 'Conteúdo de Entrada'.",
+    "2. Ative as opções desejadas no painel de filtros: 'Remover Espaços Múltiplos', 'Normalizar Quebras de Linha' ou 'Eliminar Tabs'.",
+    "3. Utilize o seletor de codificação para converter o texto entre UTF-8, UTF-16 e ASCII.",
+    "4. Marque 'Preservar Estrutura' caso precise manter listas ou parágrafos organizados após a limpeza.",
+    "5. Visualize as alterações no painel 'Prévia Formatada' em tempo real.",
+    "6. Exporte o resultado através do botão 'Baixar TXT' ou copie o conteúdo processado com 'Ctrl+C'."
   ],
   "usage_examples": [
-    "Use Limpador de Texto para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Limpeza de texto extraído de PDFs escaneados, removendo artefatos de OCR e espaçamento irregular.",
+    "Preparação de dados para treinamento de modelos de linguagem, eliminando caracteres não imprimíveis.",
+    "Correção de arquivos de configuração YAML/JSON com inconsistências de indentação e quebras de linha.",
+    "Processamento de listas de e-mails coletados de formulários web, padronizando formatação para sistemas CRM."
   ]
 }

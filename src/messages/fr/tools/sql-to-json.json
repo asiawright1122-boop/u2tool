@@ -1,14 +1,17 @@
 {
-  "detailed_description": "SQL vers JSON est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec SQL vers JSON, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, SQL vers JSON peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléversées sur un serveur. Utilisez SQL vers JSON immédiatement pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le convertisseur SQL vers JSON permet de transformer des requêtes SQL INSERT en structures JSON conformes, en préservant les relations de données et les typages spécifiques. Cet outil cible principalement les développeurs confrontés à des migrations de bases relationnelles vers des systèmes NoSQL, la création d'API RESTful ou l'alimentation d'applications front-end nécessitant des données structurées. Techniquement, l'outil effectue une analyse lexicale des requêtes SQL pour extraire les noms de colonnes, les valeurs insérées et les métadonnées associées (comme les types de données DATE, TIMESTAMP ou BLOB), puis les convertit en paires clé/valeur JSON en appliquant des règles de mappage précises (par exemple, DATE devient une chaîne ISO 8601). Il gère notamment les cas complexes comme les requêtes multiples, les identifiants entre guillemets, ou les valeurs NULL. L'algorithme utilise un parseur AST (Abstract Syntax Tree) pour garantir une interprétation exacte des requêtes, même avec des syntaxes propres à MySQL, PostgreSQL ou SQLite. Ce processus élimine les erreurs manuelles lors de la réécriture de données et optimise le temps de développement lors de la création de jeux de test ou de la transformation de logs de base de données en payloads API.",
   "usage_steps": [
-    "Ouvrez la page de l'outil SQL vers JSON",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Collez vos requêtes SQL INSERT dans la zone de saisie multiligne étiquetée 'Requêtes SQL'.",
+    "Activez/désactivez les options de transformation via les commutateurs : 'Conserver les guillemets', 'Format date ISO 8601', 'Clés en minuscules'.",
+    "Cliquez sur 'Analyser SQL' pour déclencher le parsing lexical et la génération de l'arbre syntaxique abstrait.",
+    "Revoyez l'aperçu JSON généré, affichant les objets structurés avec types de données préservés (number, boolean, null).",
+    "Personnalisez les paramètres avancés comme l'indentation (2/4 espaces) ou le format de timestamp via le menu déroulant 'Options de sortie'.",
+    "Copiez le résultat finalisé via le bouton 'Copier dans le presse-papiers' ou téléchargez-le au format .json."
   ],
   "usage_examples": [
-    "Utilisez SQL vers JSON pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Transformer des données de test depuis une sauvegarde SQL vers un format utilisable dans un projet React nécessitant des fichiers JSON statiques.",
+    "Migrer une table PostgreSQL contenant des géodonnées (types POINT) vers une collection MongoDB en maintenant le format GeoJSON.",
+    "Convertir des logs d'audit (dates, utilisateurs, actions) depuis des requêtes INSERT en payloads exploitables par un système ELK (Elasticsearch, Logstash, Kibana).",
+    "Générer un jeu de données d'exemple pour une API REST Express.js à partir de requêtes SQL existantes sans écrire de code de transformation manuel."
   ]
 }

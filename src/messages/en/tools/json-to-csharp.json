@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to C# is a practical online tool that helps you quickly complete various tasks. Using JSON to C#, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON to C# can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON to C# immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The JSON to C# Converter transforms JSON data structures into idiomatic C# classes with precise type definitions. This tool leverages advanced JSON schema inference algorithms to analyze input payloads, mapping primitive types, arrays, and nested objects to corresponding C# constructs like POCOs (Plain Old CLR Objects) with automatically generated properties, constructors, and JSON serialization attributes. Developers benefit from automated type safety enforcement, eliminating manual translation errors when consuming REST APIs, configuration files, or third-party data feeds. The converter intelligently handles edge cases such as circular references, optional fields (via nullable types), and heterogeneous collections by generating appropriate C# syntax using modern features like record types, init-only setters, and pattern-based type discrimination. Internally, the tool employs a two-pass parsing strategy: first constructing an abstract syntax tree (AST) representation of the JSON, then applying Roslyn-based code generation to emit compile-ready C# code with XML documentation comments derived from JSON keys.",
   "usage_steps": [
-    "Open the JSON to C# tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Paste raw JSON data or upload a .json file into the multi-line input editor",
+    "Toggle 'CamelCase to PascalCase' conversion for property name normalization",
+    "Enable 'Generate XML Docs' to include JSON key descriptions in comments",
+    "Click the 'Analyze Schema' button to visualize inferred type hierarchies",
+    "Adjust type mappings in the interactive type grid (e.g., force string→DateTime)",
+    "Click 'Generate Code' to produce C# classes in the output pane with syntax highlighting"
   ],
   "usage_examples": [
-    "Use JSON to C# to process your data",
-    "Get processing results quickly without waiting"
+    "Creating strongly-typed models for deserializing Azure Resource Manager API responses containing nested resource graphs",
+    "Generating configuration classes from appsettings.json files with array collections of connection strings",
+    "Building telemetry processing pipelines by converting complex IoT sensor data JSON schemas to C# domain models",
+    "Rapid prototyping of third-party API clients by transforming Swagger JSON responses into serializable DTOs"
   ]
 }

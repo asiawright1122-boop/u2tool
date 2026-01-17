@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O JSON Diff é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o JSON Diff, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize de forma eficiente. Seja desenvolvedor, designer ou usuário geral, o JSON Diff pode ajudar a melhorar a eficiência do trabalho. Todos os processos são feitos localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados a qualquer servidor. Use o JSON Diff imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O JSON Diff é uma ferramenta técnica projetada para identificar discrepâncias estruturais e de conteúdo entre dois objetos JSON válidos. O funcionamento baseia-se em um algoritmo de comparação recursiva que percorre cada nível do JSON, verificando chaves, valores, tipos de dados (string, number, boolean, null) e estruturas aninhadas (arrays e objetos). Quando diferenças são encontradas, o resultado destaca modificações como chaves ausentes, valores alterados, desvios em tipos de dados ou inconsistências na profundidade dos nós. Desenvolvedores precisam dessa ferramenta para validar integridade de APIs RESTful, depurar respostas de serviços web, auditar configurações entre ambientes (dev/test/prod) ou resolver conflitos em versionamento de dados estruturados. A análise é realizada em memória, garantindo velocidade, e o output é renderizado em formato hierárquico com codificação por cores (vermelho para exclusões, verde para adições, amarelo para alterações).",
   "usage_steps": [
-    "Abra a página da ferramenta JSON Diff",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole o primeiro JSON no campo 'Input A' com formatação indentada ou compactada.",
+    "Cole o segundo JSON no campo 'Input B', assegurando validade sintática (sem comentários).",
+    "Clique no botão 'Compare Structures' para iniciar a análise algorítmica.",
+    "Expanda os nós da árvore de resultados para visualizar diferenças em arrays ou objetos aninhados.",
+    "Use o filtro 'Show Only Changes' para ocultar pares idênticos e focar nas modificações críticas.",
+    "Exporte o relatório em formato JSON ou texto usando o botão 'Download Diff' para documentação."
   ],
   "usage_examples": [
-    "Use o JSON Diff para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem aguardar"
+    "Comparar resposta de uma API antes e após atualização de endpoint para identificar mudanças não documentadas em campos retornados.",
+    "Verificar divergências entre arquivos de configuração JSON utilizados em ambientes de desenvolvimento e produção.",
+    "Auditar dados migrados de um banco NoSQL para um novo esquema, detectando documentos com tipos de campos incorretos.",
+    "Resolver conflitos em arquivos JSON versionados no Git, isolando modificações específicas feitas por diferentes colaboradores."
   ]
 }

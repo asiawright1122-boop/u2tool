@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Conversor de Epoch é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com o Conversor de Epoch, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja um desenvolvedor, designer ou usuário geral, o Conversor de Epoch pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam enviados a qualquer servidor. Use o Conversor de Epoch imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Epoch Converter é uma ferramenta técnica especializada para transformação bidirecional entre timestamps Unix (Epoch) e representações legíveis de data/hora. Funciona convertendo valores numéricos em segundos ou milissegundos desde 1º de janeiro de 1970 (UTC) para formatos como ISO 8601 (YYYY-MM-DDTHH:MM:SSZ), considerando fuso horário local ou UTC. Essa ferramenta é essencial para desenvolvedores que lidam com sistemas distribuídos, logs de servidor, APIs REST que utilizam timestamps, ou análise de dados históricos em diferentes zonas temporais. O conversor processa automaticamente ajustes de daylight saving time e permite especificar precisão de milissegundos, atendendo a casos de uso em sistemas de baixa latência. Internamente, utiliza bibliotecas de manipulação de datas com suporte a calendários gregorianos estendidos e conversão entre sistemas de tempo POSIX e UTC.",
   "usage_steps": [
-    "Abra a página do Conversor de Epoch",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Selecione o tipo de conversão desejado: 'Epoch para Data/Hora' ou 'Data/Hora para Epoch' usando o seletor de modo.",
+    "Insira o valor numérico do timestamp no campo apropriado, especificando se está em segundos ou milissegundos.",
+    "Para conversão inversa, digite a data/hora em formato ISO 8601 ou selecione-a no calendário interativo.",
+    "Escolha o fuso horário de saída: opções incluem UTC, hora local do navegador ou fusos personalizados via campo de pesquisa.",
+    "Clique no botão 'Converter' para gerar o resultado com precisão de microssegundos quando aplicável.",
+    "Copie o resultado formatado com notação científica para timestamps extremamente altos ou baixos usando o botão de clipboard integrado."
   ],
   "usage_examples": [
-    "Use o Conversor de Epoch para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor de backend analisa logs de servidores em diferentes regiões, convertendo timestamps de 1625145678 para verificar eventos ocorridos em 2021-07-01 12:21:18 UTC.",
+    "Um cientista de dados processa um dataset CSV contendo datas em milissegundos (ex: 1641052800000) e precisa convertê-las para formato legível para relatórios em Excel.",
+    "Um administrador de sistemas ajusta a configuração de um cron job que utiliza marcação de tempo Unix, validando se 1735689600 corresponde corretamente a 2025-01-01 00:00:00.",
+    "Um desenvolvedor mobile converte timestamps gerados em Android (milissegundos) para o formato utilizado por um backend Node.js (segundos) para garantir consistência entre plataformas."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Wortzähler ist ein praktisches Online-Tool, das dir dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Wortzähler kannst du verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass du schnell loslegen und effizient arbeiten kannst. Unabhängig davon, ob du Entwickler, Designer oder allgemeiner Nutzer bist, kann der Wortzähler dir helfen, deine Arbeitswirkungsweise zu verbessern. Alle Verarbeitung wird lokal in deinem Browser durchgeführt, was deine Datensicherheit gewährleistet und deinen Daten keine Server aufgeladen werden. Nutze den Wortzähler sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Word Counter analysiert Texte durch Tokenisierung und reguläre Ausdrücke, um präzise Wort-, Zeichen-, Satz- und Absatzstatistiken zu generieren. Technisch basiert das Tool auf clientseitiger JavaScript-Verarbeitung, die komplexe Regex-Muster (z. B. \\b\\w+\\b für Wortgrenzen) und Unicode-Unterstützung (UTF-8) verwendet, um Sonderzeichen korrekt zu erfassen. Benutzer benötigen dieses Tool für SEO-Optimierung (Keyword-Dichte-Analyse), akademisches Schreiben (Einhalten von Seitenbegrenzungen) oder Softwareentwicklung (Validierung von Texteingaben). Besonders nützlich ist die Fähigkeit, Leerzeichenmuster zu ignorieren und Satzgrenzen durch Punkt-Regex mit Lookahead zu erkennen. Die Ergebnisse werden in Echtzeit im DOM gerendert, mit optionalem Download der Statistiken als JSON. Im Gegensatz zu anderen Tools verarbeitet es hyphenierte Wörter als Einheit und zählt Silben durch Vokalcluster-Analyse.",
   "usage_steps": [
-    "Öffne die Seite des Wortzählers",
-    "Füge den zu bearbeitenden Text in das Eingabefeld ein oder füge ihn ein",
-    "Ändere die Tool-Einstellungen und Optionen, wenn nötig",
-    "Klicke auf den Bearbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "kopiere oder herunterlade die bearbeiteten Ergebnisse"
+    "Besuchen Sie die Website und öffnen Sie den Tab 'Wortanalyse'.",
+    "Fügen Sie Ihren Text in das Eingabefeld mit der Bezeichnung 'Text hier einfügen' ein.",
+    "Aktivieren Sie optional 'Erweiterte Analyse' für Silben- und Lesbarkeitsberechnung.",
+    "Klicken Sie auf 'Statistik generieren', um die Ergebnisse in der Tabelle anzuzeigen.",
+    "Nutzen Sie den Schieberegler 'Ignoriere Zeilenumbrüche', um Absätze zu aggregieren.",
+    "Exportieren Sie die Daten mit 'JSON herunterladen' oder drucken Sie das Ergebnis direkt."
   ],
   "usage_examples": [
-    "Nutze den Wortzähler, um deinen Daten zu bearbeiten",
-    "Erhalte die Bearbeitungsresultate schnell, ohne zu warten"
+    "Ein Blogger überprüft, ob sein Artikel 1200 Wörter für Google-Rankings erreicht.",
+    "Ein Student analysiert seine Abschlussarbeit auf Paragraphengrenzen für die Uni-Formate.",
+    "Ein Übersetzer berechnet die Abrechnungsbasis durch exakte Wortzahlen im Dokument.",
+    "Ein Entwickler validiert Eingabeformulare durch Vergleich der Zeichenzahl mit API-Limits."
   ]
 }

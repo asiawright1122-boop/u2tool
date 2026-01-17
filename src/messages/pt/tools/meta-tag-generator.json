@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Meta Tags é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Meta Tags, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, o Gerador de Meta Tags pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviados a qualquer servidor. Use o Gerador de Meta Tags imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Meta Tag Generator é uma ferramenta técnica especializada para criar e otimizar metadados HTML essenciais para SEO, compartilhamento em redes sociais e indexação eficiente de conteúdo web. Este gerador produz automaticamente tags META NAME/PROPERTY (charset, viewport, author), metadados Open Graph (og:title, og:image, og:type) e especificações de Twitter Cards (card, site, creator), garantindo consistência entre os padrões de search engines e plataformas sociais. A ferramenta é indispensável para desenvolvedores que precisam implementar metadados estruturados sem erros de sintaxe, como atributos duplicados ou conflitos de namespace. Internamente, o sistema processa entradas do usuário através de validação em tempo real com base nas especificações W3C e RFC 6749, aplicando lógica condicional para preencher campos obrigatórios com base no tipo de conteúdo selecionado (artigo, produto, imagem, vídeo). Suporte a atributos responsivos, como content='width=device-width', e geração automática de canonical links evitam problemas de conteúdo duplicado. O código final é exportado em formato HTML pronto para inserção no <head> do documento, com opção de visualização side-by-side do markup gerado e validação cruzada com os protocolos de indexação do Google Search Console.",
   "usage_steps": [
-    "Abra a página do Gerador de Meta Tags",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o painel e insira a URL alvo no campo 'Endereço do Documento'",
+    "Preencha os campos de título e descrição SEO com base nas diretrizes de keyword density recomendadas",
+    "Na seção 'Open Graph', selecione o tipo de objeto (website, article, product) e insira URLs de imagens em formato .jpg/.png com dimensões recomendadas",
+    "Ative a aba 'Twitter Cards' e selecione o tipo de card (summary, large image, app) junto com handles de autor e publisher",
+    "Revise o código gerado na área de visualização, verificando a ordem dos metadados conforme priorização do Googlebot",
+    "Clique em 'Exportar Código' para copiar o snippet completo ou 'Validar com Lint' para testar conformidade com o Open Graph Protocol"
   ],
   "usage_examples": [
-    "Use o Gerador de Meta Tags para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um blogueiro otimiza uma página de receita adicionando metadados Open Graph com marcação de tempo de preparo e foto destacada para melhor exibição no Facebook",
+    "Um e-commerce implementa Twitter Cards do tipo 'Product' em páginas de produto com preços atualizados e disponibilidade em estoque",
+    "Um desenvolvedor de site estático utiliza o gerador para criar metadados responsivos com viewport adequado e canonical links para evitar duplicidade no Google",
+    "Um publisher de notícias gera metadados com schema.org integrado através da opção avançada de JSON-LD para rich snippets no Google News"
   ]
 }

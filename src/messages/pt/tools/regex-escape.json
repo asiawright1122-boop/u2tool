@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Regex Escape é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Regex Escape, você pode facilmente processar vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, Regex Escape pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são feitos localmente no seu navegador, garantindo a segurança dos seus dados e não serão carregados em nenhum servidor. Use Regex Escape imediatamente para experimentar serviços rápidos, seguros e gratuitos de ferramentas online.",
+  "detailed_description": "O Regex Escape é uma ferramenta essencial para desenvolvedores que trabalham com expressões regulares. Esta ferramenta permite escapar ou desescapar caracteres especiais em expressões regulares, facilitando o trabalho de codificação e minimizando erros de sintaxe. Quando você precisa construir ou modificar expressões regulares, é comum se deparar com caracteres especiais que possuem significados específicos, como pontos, asteriscos, parênteses e barras invertidas. O Regex Escape garante que esses caracteres sejam tratados corretamente, seja para escapá-los (adicionar barras invertidas antes deles) ou desescapá-los (remover as barras invertidas). Isso é particularmente útil em situações onde você precisa manipular strings que contêm esses caracteres, garantindo que a expressão regular funcione como esperado. A ferramenta é construída com um algoritmo robusto que reconhece e manipula esses caracteres de forma precisa, tornando-a uma solução confiável para desenvolvedores de todos os níveis.",
   "usage_steps": [
-    "Abra a página da ferramenta Regex Escape",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta Regex Escape na seção de desenvolvimento do site.",
+    "Na interface, você verá duas opções: 'Escapar' e 'Desescapar'. Selecione a opção desejada.",
+    "Na área de entrada, cole ou digite a expressão regular que você deseja manipular.",
+    "Após inserir a expressão, clique no botão 'Processar' para aplicar a operação selecionada.",
+    "A ferramenta exibirá o resultado na área de saída, mostrando a expressão regular escapada ou desescapada.",
+    "Copie o resultado e use-o no seu código ou continue fazendo ajustes conforme necessário."
   ],
   "usage_examples": [
-    "Use Regex Escape para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor está criando uma função que valida endereços de e-mail usando expressões regulares. Ao usar o Regex Escape para escapar os pontos e arrobas nos exemplos de e-mails, ele garante que a expressão regular funcione corretamente.",
+    "Uma equipe de desenvolvimento está integrando um sistema de validação de CPF em um formulário. Eles usam o Regex Escape para desescapar as barras invertidas antes dos pontos e hífens no padrão de CPF, facilitando a implementação da validação.",
+    "Um programador está escrevendo um script que procura padrões de data em arquivos de texto. Ao escapar os caracteres especiais das datas (como barras e pontos), ele evita erros de sintaxe e garante que o script funcione com precisão.",
+    "Um desenvolvedor frontend está criando um validador de URLs. Usando o Regex Escape para escapar os pontos e barras em URLs, ele garante que a expressão regular capture corretamente as URLs sem causar erros de sintaxe."
   ]
 }

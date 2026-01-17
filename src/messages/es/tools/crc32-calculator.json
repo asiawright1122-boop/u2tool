@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Calculador CRC32 es una herramienta online práctica que te ayuda a completar rápidamente diversas tareas. Al usar el Calculador CRC32, puedes procesar fácilmente varios datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Calculador CRC32 puede ayudarte a mejorar la eficiencia en tu trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Calculador CRC32 ahora para experimentar servicios rápidos, seguros y gratuitos de herramientas online.",
+  "detailed_description": "El CRC32 Calculator es una herramienta técnica especializada para generar y verificar valores de CRC (Cyclic Redundancy Check) de 32 bits basados en el estándar IEEE 802.3. Utiliza algoritmos de división polinómica con el polinomio 0x04C11DB7, aplicando operaciones XOR y desplazamiento bit a bit para calcular huellas digitales de datos binarios. Este proceso convierte cualquier cadena de texto o archivo en un valor hexadecimal de 8 dígitos que garantiza la detección de errores en transmisiones de red o almacenamiento. Los desarrolladores necesitan esta herramienta para validar integridad de datos en protocolos como Ethernet, ZIP/GZIP y sistemas de archivos, donde incluso un bit alterado debe ser detectado. La implementación del cálculo en tiempo real procesa datos en bloques de 4KB con precomputación de tablas de 256 entradas para optimizar el rendimiento. El soporte para variantes como CRC-32C (Castagnoli) y CRC-32 POSIX permite adaptarse a entornos heterogéneos, mientras que la detección automática de codificación UTF-8/ASCII asegura precisión en textos multilingües.",
   "usage_steps": [
-    "Abre la página del Calculador CRC32",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Navega a la sección 'Modo de entrada' y selecciona la pestaña 'Texto' o 'Archivo' según tu fuente de datos.",
+    "Si eliges texto, introduce el contenido en el campo UTF-8 habilitado con soporte para caracteres Unicode.",
+    "Si eliges archivo, haz clic en 'Seleccionar archivo' y carga un documento binario o de texto (máximo 100MB).",
+    "Elige la variante de CRC32 requerida: IEEE 802.3, Castagnoli (0x1EDC6F41) o POSIX (0x00000000) desde el menú desplegable.",
+    "Presiona el botón 'Calcular CRC32' para iniciar el proceso de 32 rondas de cálculo polinómico.",
+    "Copia el valor hexadecimal resultante usando el botón 'Copiar' o exporta el informe detallado en formato JSON."
   ],
   "usage_examples": [
-    "Usa el Calculador CRC32 para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador verifica la integridad de datos transferidos entre un sistema embebido y una API REST comparando valores CRC32 antes y después de la transmisión.",
+    "Un ingeniero de redes valida paquetes Ethernet descartados al comprobar coincidencias en el FCS (Frame Check Sequence) usando CRC32 calculado en headers.",
+    "Un arquitecto de software compara hashes CRC32 de archivos ZIP generados en diferentes servidores para asegurar consistencia en despliegues automatizados.",
+    "Un fabricante de hardware prueba la fiabilidad de una FPGA en transmisiones SPI verificando coincidencias de CRC32 en datos enviados y recibidos bajo condiciones de ruido."
   ]
 }

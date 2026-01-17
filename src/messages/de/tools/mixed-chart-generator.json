@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Mischdiagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Mischdiagramm-Generator können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient nutzen können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, der Mischdiagramm-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu verbessern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was die Datensicherheit gewährleistet und verhindert, dass Ihre Daten auf irgendeinen Server hochgeladen werden. Nutzen Sie den Mischdiagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Mixed Chart Generator ermöglicht die Erstellung von dual-achsigen Diagrammen, die sowohl Balken- als auch Liniendarstellungen kombinieren. Diese Technik wird in der Datenvisualisierung als 'dual-axis visualization' bezeichnet und ist besonders nützlich, wenn zwei Datensätze mit unterschiedlichen Skalierungen oder Einheiten in einem Koordinatensystem dargestellt werden sollen. Das Tool implementiert dies durch die Zuordnung einer primären Y-Achse (links) für die Balkenserie und einer sekundären Y-Achse (rechts) für die Linienserie, während die X-Achse kategorische oder zeitbasierte Daten abbildet. Technisch basiert die Erstellung auf SVG-Rendering und asynchroner Datenbindung, wobei JSON-Objekte als Eingabeformat akzeptiert werden. Die Skalierung erfolgt automatisch durch lineare Transformation, kann aber manuell angepasst werden, um Kontraste zu optimieren. Nutzer profitieren besonders in Szenarien wie der Gegenüberstellung von Temperaturverläufen (Linie) und Niederschlagsmengen (Balken) in der Meteorologie oder der Analyse von Umsätzen (Balken) versus Kundenfeedback-Scores (Linie) in der Wirtschaft. Die interaktive Vorschau nutzt DOM-Manipulation zur Echtzeitaktualisierung, und Exporte als SVG oder PNG ermöglichen präzise Weiterverwendung in Berichten oder Präsentationen.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Mischdiagramm-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Optionen und Einstellungen des Tools wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "1. Öffnen Sie den Mixed Chart Generator im Browser und wählen Sie die Registerkarte 'Daten eingeben'.",
+    "2. Fügen Sie Ihre Daten im JSON-Format ein, z.B. {\"xAxis\": [\"Jan\", \"Feb\"], \"barSeries\": [120, 150], \"lineSeries\": [25, 30]}.",
+    "3. Weisen Sie über das Dropdown-Menü 'Seriendesign' die 'barSeries' der Balkendarstellung und die 'lineSeries' der Liniendarstellung zu.",
+    "4. Passen Sie die Skalierung an, indem Sie im Abschnitt 'Achsenoptionen' die minimale und maximale Skala für beide Y-Achsen definieren.",
+    "5. Klicken Sie auf 'Diagramm aktualisieren', um die Vorschau mit angepasster Skalierung und Legende anzuzeigen.",
+    "6. Exportieren Sie das finale Diagramm über 'SVG herunterladen' oder 'PNG speichern' für die Integration in Dokumente."
   ],
   "usage_examples": [
-    "Verwenden Sie den Mischdiagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell bearbeitete Ergebnisse ohne zu warten"
+    "Meteorologische Datenanalyse: Tägliche Durchschnittstemperaturen (Linie) im Vergleich zu Regenmengen (Balken) über einen Monat.",
+    "E-Commerce-KPIs: Monatliche Umsätze (Balken) in EUR versus Kundenretention-Rate (Linie) in Prozent.",
+    "Finanzanalysen: Aktienkurse (Linie) im Verhältnis zu gehandelten Volumina (Balken) an der Börse.",
+    "Gesundheitsstatistik: Anzahl stationärer Patienten (Balken) versus tägliche Impfraten (Linie) während einer Pandemie."
   ]
 }

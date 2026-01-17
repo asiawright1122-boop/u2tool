@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Diferença de Texto & Aplicação de Patches é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando Diferença de Texto & Aplicação de Patches, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece a usá-la rapidamente e de maneira eficiente. Seja desenvolvedor, designer ou usuário geral, Diferença de Texto & Aplicação de Patches pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados para qualquer servidor. Use Diferença de Texto & Aplicação de Patches imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Text Diff & Patch é uma ferramenta técnica especializada em comparação e reconciliação de conteúdos textuais através de algoritmos avançados de diferença e aplicação de patches. Essencialmente, o software implementa o algoritmo de Myers' difference para identificar deltas entre duas versões de texto, gerando saídas no formato diff unificado padrão POSIX, incluindo metadados como números de linha, hunk offsets e opcodes de modificação (adicionar/remover/alterar). Os usuários necessitam desta ferramenta para casos específicos como reconciliação de alterações em arquivos de configuração distribuídos, auditoria de históricos de documentos técnicos, mesclagem colaborativa de código-fonte sem sistemas de controle de versão, ou até análise forense de modificações em logs de sistema. Seu mecanismo suporta matching difuso para aplicação robusta de patches mesmo com discrepâncias parciais no texto base, utilizando técnicas de programação dinâmica para maximizar a precisão da correspondência contextual.",
   "usage_steps": [
-    "Abra a página da ferramenta Diferença de Texto & Aplicação de Patches",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole o conteúdo original no campo 'Texto Base' e o modificado no painel 'Texto Atualizado'",
+    "Selecione o formato de saída desejado: 'Diff Unificado' ou 'Formato Git' usando o seletor de formato",
+    "Ative a opção 'Incluir Contexto' para adicionar linhas de contexto adicional nas diferenças",
+    "Clique em 'Gerar Patch' para criar o arquivo delta com marcação de inserções, exclusões e modificações",
+    "Para aplicação inversa, marque a opção 'Reverso' e cole o patch gerado no campo apropriado",
+    "Valide o resultado final no painel 'Saída Processada', que mostra o texto reconciliado com marcações de conflito"
   ],
   "usage_examples": [
-    "Use Diferença de Texto & Aplicação de Patches para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Desenvolvedor aplicando alterações incrementais em um script Python sem perder as customizações locais do ambiente de produção",
+    "Redator técnico sincronizando documentação versionada entre branches de um projeto de software sem ferramentas de SCM",
+    "Administrador de sistemas comparando configurações críticas entre servidores para identificar drifts de segurança",
+    "Contribuidor open-source criando patches binários aplicáveis a múltiplas versões de um repositório sem dependências de controle de versão"
   ]
 }

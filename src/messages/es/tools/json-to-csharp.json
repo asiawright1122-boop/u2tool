@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON a C# es una herramienta práctica en línea que te ayuda a completar diversas tareas de manera rápida. Usando JSON a C#, puedes procesar fácilmente diversos datos sin instalar ningún software o plugins. Esta herramienta tiene una interfaz sencilla y es fácil de usar, lo que te permite empezar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, JSON a C# puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza JSON a C# inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "La herramienta JSON a C# permite transformar estructuras de datos JSON en clases C# fortemente tipadas mediante un análisis sintáctico automático. Técnicamente, el conversor examina recursivamente la jerarquía JSON para inferir tipos anidados, generando propiedades con tipos de datos apropiados (como string, int, DateTime, y colecciones complejas). Al detectar valores nulos o múltiples formatos en campos idénticos, aplica tipos anulables (Nullable<T>) y comentarios XML para documentar posibles variaciones. Esto es especialmente útil para desarrolladores que consumen APIs RESTful en entornos .NET, ya que elimina la necesidad de crear manualmente POCO (Plain Old CLR Objects) que coincidan con la estructura de respuesta JSON. El proceso utiliza técnicas de reflexión inversa para mapear claves a identificadores C#, respetando convenciones de nomenclatura y permitiendo personalización de espacios de nombres. La salida incluye métodos parciales para serialización/deserialización, facilitando integración con bibliotecas como Newtonsoft.Json o System.Text.Json.",
   "usage_steps": [
-    "Abre la página del convertidor JSON a C#",
-    "Introduce o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega tu JSON en el área de texto principal con soporte para arrastrar y soltar.",
+    "Activa la opción 'Detectar tipos anidados' para generar clases internas automáticamente.",
+    "Especifica un nombre de clase raíz en el campo 'Nombre de clase' (por defecto: 'RootObject').",
+    "Selecciona el nivel de acceso deseado (público, interno) usando el menú desplegable 'Modificadores'.",
+    "Marca la casilla 'Incluir comentarios XML' para documentar propiedades con descripciones de JSON.",
+    "Haz clic en el botón 'Generar C#' para obtener el código en el panel de salida con formato limpio."
   ],
   "usage_examples": [
-    "Utiliza JSON a C# para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Crear modelos para consumir la API de OpenWeatherMap en una aplicación ASP.NET Core que requiere propiedades como 'Main.Temp' y 'Wind.Speed'.",
+    "Convertir respuestas de prueba de una API GraphQL en clases para implementar en un proyecto de Unity con serialización JSON.",
+    "Generar configuraciones tipadas a partir de archivos JSON en proyectos de microservicios donde se usan patrones de diseño como Repository.",
+    "Transformar esquemas de datos de Firebase en estructuras C# para una aplicación de escritorio que sincroniza datos offline usando Entity Framework."
   ]
 }

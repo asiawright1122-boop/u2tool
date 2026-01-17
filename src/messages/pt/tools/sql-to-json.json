@@ -1,14 +1,17 @@
 {
-  "detailed_description": "SQL para JSON é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Utilizando SQL para JSON, você pode processar facilmente vários dados sem a necessidade de instalar qualquer software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, SQL para JSON pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo uploaded para qualquer servidor. Utilize SQL para JSON imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O conversor SQL para JSON é uma ferramenta especializada que transforma declarações INSERT do SQL padrão em estruturas de dados no formato JSON, preservando a integridade dos tipos e relacionamentos. Técnicamente, o processo envolve a análise léxica e sintática das instruções SQL para identificar esquemas de tabelas, extrair pares de colunas/valores e mapear tipos de dados SQL (como INTEGER, VARCHAR, DATE) para equivalentes JSON (number, string, string formatada). A ferramenta suporta múltiplas INSERTs com diferentes estruturas, agrupando resultados em arrays JSON organizados por tabela ou consulta. Isso é especialmente útil para desenvolvedores que precisam migrar dados de bancos relacionais para ambientes baseados em documentos, como MongoDB, ou preparar payloads para APIs RESTful. O mecanismo interno normaliza datas no formato ISO 8601, escapa caracteres especiais e ajusta identação conforme configurações do usuário, eliminando a necessidade de codificação manual repetitiva.",
   "usage_steps": [
-    "Abra a página da ferramenta SQL para JSON",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole suas declarações INSERT no campo 'Área de Entrada SQL' no formato RAW ou upload de arquivo .sql",
+    "Ative a opção 'Formatar JSON' para adicionar indentação ou mantenha 'Compacto' para minimizar tamanho",
+    "Selecione a versão de compatibilidade SQL (MySQL, PostgreSQL, etc.) para mapeamento preciso de tipos",
+    "Clique no botão 'Converter para JSON' para processar as instruções",
+    "Revise o resultado no painel de saída, que exibe arrays JSON organizados por tabela",
+    "Use os botões 'Copiar Tudo' ou 'Baixar JSON' para exportar o resultado estruturado"
   ],
   "usage_examples": [
-    "Use SQL para JSON para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem a necessidade de espera"
+    "Migrar dados de usuários de um banco MySQL para um cluster MongoDB sem reescrever manualmente os registros",
+    "Gerar payloads de teste para uma API REST que consome JSON com base em dados existentes em SQL dumps",
+    "Converter histórico de transações financeiras em formato JSON para visualização em bibliotecas D3.js",
+    "Criar arquivos de configuração JSON dinamicamente a partir de tabelas de parâmetros armazenados em SQL"
   ]
 }

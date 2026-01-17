@@ -1,15 +1,17 @@
 {
-  "detailed_description": "El Calculador de Días del Cuenta Regresivo muestra exactamente cuántos días faltan hasta o han pasado desde cualquier fecha.",
+  "detailed_description": "El Calculador de Días de Cuenta Regresiva es una herramienta técnica que permite determinar con precisión la diferencia en días entre una fecha de referencia y la fecha actual o una fecha futura. Internamente, el sistema utiliza algoritmos de procesamiento de fechas basados en el estándar ISO 8601, manejando conversiones entre zonas horarias (UTC/GMT) y ajustando automáticamente fechas inválidas mediante técnicas de validación de calendario gregoriano. La herramienta es indispensable para desarrolladores que necesitan calcular plazos en aplicaciones de gestión de proyectos, estudiantes que planifican exámenes o equipos que monitorean ciclos de producción. Su motor matemático considera años bisiestos, horas no triviales (con opciones de ajuste de horario de verano) y realiza cálculos en milisegundos para garantizar una precisión del 100%. Al integrar un parser de fechas robusto, acepta entradas en formatos como YYYY-MM-DD, DD/MM/YYYY o incluso descripciones textuales relativas ('próximo lunes'), convirtiéndolas en objetos Date de JavaScript para su procesamiento posterior.",
   "usage_steps": [
-    "Ingresa la fecha objetivo",
-    "Nombra tu evento",
-    "Mira el cuenta regresivo de días",
-    "Ver semanas y meses",
-    "Sigue días laborables por separado"
+    "Selecciona la fecha objetivo usando el selector de calendario o introduce manualmente en formato DD/MM/YYYY.",
+    "Elige entre las opciones 'Contar días hasta esta fecha' o 'Contar días desde esta fecha' mediante botones de radio.",
+    "Activa la casilla 'Ajustar horario de verano' si requieres cálculos precisos con cambios de zona horaria.",
+    "Haz clic en 'Calcular Diferencia' para ejecutar el algoritmo de comparación de marcas de tiempo.",
+    "Consulta el resultado detallado en el panel de salida, que muestra días totales, semanas y horas restantes.",
+    "Usa el botón 'Copiar al Portapapeles' para exportar el resultado en formato JSON o CSV compatible con scripts."
   ],
   "usage_examples": [
-    "Contar días para vacaciones",
-    "Seguir fechas límite de proyectos",
-    "Días desde un evento especial"
+    "Un desarrollador web calcula 42 días restantes hasta la fecha límite de entrega de un proyecto (2023-12-15).",
+    "Un estudiante determina que faltan 18 días hábiles para su examen final programado el 2023-11-30.",
+    "Una agencia de viajes implementa el tool para mostrar '87 días para reservar con descuento' antes de un viaje a Cancún.",
+    "Un ingeniero de datos usa el calculador para verificar que un servidor lleva 135 días activo desde su última actualización (2023-07-01)."
   ]
 }

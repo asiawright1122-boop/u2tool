@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der robots.txt Generator ist ein praktisches Online-Tool, das dir dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem robots.txt Generator kannst du verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass du schnell loslegen und effizient arbeiten kannst. Ob du Entwickler, Designer oder allgemeiner Nutzer bist, der robots.txt Generator kann dir helfen, deine Arbeitseffizienz zu verbessern. Alle Verarbeitung wird lokal im Browser durchgeführt, was deine Datensicherheit gewährleistet und sicherstellt, dass deine Daten nicht auf irgendeinem Server hochgeladen werden. Nutze den robots.txt Generator sofort, um schnell, sichere und kostenlose Online-Tool-Dienstleistungen zu genießen.",
+  "detailed_description": "Der robots.txt Generator erstellt spezifische Robots Exclusion Protocol (REP)-Dateien, die Suchmaschinen-Crawlern präzise Anweisungen zur Indexierung einer Website geben. Die Datei steuert, welche URLs durch Bots wie Googlebot oder Bingbot durchsucht oder ignoriert werden sollen. Benutzer benötigen dieses Tool, um kritische Bereiche (z.B. Admin-Oberflächen, Testumgebungen) vor unerwünschtem Crawling zu schützen, Ressourcenengpässe zu vermeiden oder SEO-Strategien zu optimieren. Das Tool funktioniert durch eine interaktive Formularlogik: Nutzer definieren User-Agent-Spezifikationen, setzen Disallow-/Allow-Regeln für Pfade, integrieren Sitemap-Links und konfigurieren Crawldelays. Dabei werden Wildcard-Operatoren (*, $) für dynamische URL-Muster unterstützt, und die Ausgabevalidierung prüft Syntaxkonformität gemäß REP-Standard. Die generierte Datei wird als UTF-8-kodiertes Textdokument bereitgestellt, das direkt in das Hauptverzeichnis der Domain hochgeladen werden kann.",
   "usage_steps": [
-    "Öffne die robots.txt Generator-Tool-Seite",
-    "Füge oder füge den zu verarbeitenden Inhalt in das Eingabefeld ein",
-    "Anpassen der Tool-Optionen und Einstellungen, wie gewünscht",
-    "Klicke auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen der verarbeiteten Ergebnisse"
+    "Wählen Sie im Dropdown-Menü die Ziel-User-Agents aus (z.B. 'Googlebot', 'Bingbot' oder universelles '*').",
+    "Geben Sie im Textfeld 'Disallow' die zu blockierenden Verzeichnisse/Pfade ein (z.B. '/wp-admin/').",
+    "Nutzen Sie das 'Allow'-Feld für Ausnahmen innerhalb blockierter Bereiche (z.B. '/images/logo.jpg').",
+    "Setzen Sie einen Crawldelay-Wert (in Sekunden) zur Steuerung der Crawl-Frequenz (z.B. '10').",
+    "Fügen Sie optional einen Sitemap-Link über das Eingabefeld 'Sitemap:' hinzu (z.B. 'https://example.com/sitemap.xml').",
+    "Klicken Sie auf 'Vorschau generieren', prüfen Sie die Syntax und laden Sie die Datei im gewünschten Format herunter."
   ],
   "usage_examples": [
-    "Verwende den robots.txt Generator, um deinen Daten zu verarbeiten",
-    "Erhalte schnell die Verarbeitungsresultate ohne zu warten"
+    "Ein E-Commerce-Shop blockiert den '/checkout/'-Bereich, um sensible Zahlungsdaten vor Crawling zu schützen.",
+    "Ein Entwickler verhindert das Indexieren einer staging.example.com-Testumgebung durch Suchmaschinen.",
+    "Ein Blogger schränkt das Crawling von Kommentarbereichen ein, um Serverressourcen zu schonen.",
+    "Eine Nachrichtenwebsite definiert mit Wildcards ('/news/*.pdf$') das Ausschließen von PDF-Archiven und setzt einen Crawldelay von 5 Sekunden."
   ]
 }

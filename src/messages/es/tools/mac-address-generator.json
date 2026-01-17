@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Generador de direcciones MAC es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Generador de direcciones MAC, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Generador de direcciones MAC puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Generador de direcciones MAC inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Generador de Direcciones MAC es una herramienta especializada que crea identificadores únicos de 48 bits siguiendo los estándares IEEE 802. Los usuarios pueden generar direcciones MAC aleatorias con opciones avanzadas como la selección de OUI (Organizationally Unique Identifier) específico, definición de bit de unicast/multicast y personalización del formato de salida (con guiones, dos puntos o sin separadores). Esta herramienta es esencial para desarrolladores de redes que necesitan simular dispositivos en entornos de prueba, administradores que configuran máquinas virtuales en VMware/Hyper-V, y estudiantes que estudian la estructura de las tramas Ethernet. El algoritmo combina OUIs registrados oficialmente con secuencias pseudoaleatorias generadas mediante un RNG criptográficamente seguro, aplicando la regla de complemento de 48 bits para garantizar la validez de cada dirección. Permite excluir direcciones multicast cuando se requieren identificadores únicos permanentes, y ofrece la posibilidad de exportar listas en formato CSV para integración con scripts de automatización de redes.",
   "usage_steps": [
-    "Abre la página de la herramienta Generador de direcciones MAC",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona el tipo de OUI en el menú desplegable: 'Oficial' (con prefijos IEEE válidos) o 'Aleatorio' (generación completamente pseudoaleatoria)",
+    "Activa/desactiva el bit de multidifusión usando el interruptor 'Unicast/Multicast' según el caso de uso",
+    "Introduce un prefijo hexadecimal personalizado de 3 bytes en el campo 'OUI personalizado' si se requiere compatibilidad con hardware específico",
+    "Elige el formato de salida entre '00:00:00:00:00:00', '00-00-00-00-00-00' o sin separadores mediante el selector de formato",
+    "Ajusta el número de direcciones a generar (1-1000) en el campo numérico 'Cantidad'",
+    "Haz clic en 'Generar' y descarga el resultado en CSV o cópialo directamente desde el área de texto resaltado"
   ],
   "usage_examples": [
-    "Usa Generador de direcciones MAC para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un administrador de red genera 50 direcciones MAC con OUI de Cisco para probar la integración de dispositivos en un entorno SDN",
+    "Un desarrollador de sistemas embebidos crea direcciones únicas para simular 200 dispositivos IoT en una plataforma de prueba de protocolos MQTT",
+    "Un instructor de redes genera direcciones MAC con bit de multidifusión activo para demostrar el funcionamiento de transmisiones en capa 2",
+    "Un auditor de seguridad configura una lista de direcciones MAC falsas para validar reglas de filtrado en un firewall basado en pfSense"
   ]
 }

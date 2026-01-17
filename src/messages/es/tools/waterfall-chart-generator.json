@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Cascada es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Al usar el Generador de Gráficos de Cascada, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Cascada puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Cascada ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El generador de gráficos de cascada permite crear visualizaciones dinámicas para analizar cambios secuenciales en valores numéricos, ideal para auditorías financieras, análisis de inventario o seguimiento de métricas operativas. Esta herramienta procesa datos en formato tabular con columnas de categorías y valores absolutos/relativos, aplicando algoritmos de acumulación para generar segmentos verticales conectados por líneas de transición. Utiliza bibliotecas de renderizado SVG para mantener precisión en escalados, con opciones de personalización en colores por segmento, etiquetas de valor absoluto/porcentual y configuración de eje Y de escala fija o dinámica. Los usuarios pueden exportar los gráficos en formatos vectoriales (SVG) o rasterizados (PNG) con resolución ajustable. Incorpora validación en tiempo real para detectar inconsistencias en la secuencia de valores acumulativos, garantizando representaciones matemáticamente precisas.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Cascada",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona orientación: vertical u horizontal según espacio disponible",
+    "Introduce datos en tabla con columnas 'Categoría' y 'Valor' (positivos/negativos)",
+    "Activa/desactiva opción de 'Valores Acumulativos' según necesites mostrar totales parciales",
+    "Personaliza paleta de colores por segmento usando selector RGB integrado",
+    "Ajusta márgenes y fuente de etiquetas con editor de propiedades dimensionales",
+    "Previsualiza interactivamente con opción de exportar en SVG/PNG de alta resolución"
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Cascada para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Analizar variaciones mensuales en flujo de caja operativa de una empresa",
+    "Visualizar impacto de descuentos, impuestos y gastos en margen de beneficio bruto",
+    "Seguir evolución de stock en almacén con entradas y salidas semanales",
+    "Comparar presupuesto inicial vs ejecutado mensualmente en proyecto gubernamental"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Fusionneur Excel est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant Fusionneur Excel, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, Fusionneur Excel peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, garantissant la sécurité de vos données et ne sera pas téléchargé sur un serveur. Utilisez Fusionneur Excel immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil Excel Merger permet de combiner des classeurs Excel multiples en un seul fichier structuré, avec deux modes de fusion techniques : verticale (ajout de lignes) ou horizontale (ajout de colonnes). Ce processus est essentiel pour les professionnels traitant des données hétérogènes issues de systèmes disparates, comme la consolidation de rapports financiers inter-entreprises, l'intégration de bases clients fragmentées ou l'analyse comparative de données scientifiques. L'outil analyse chaque fichier chargé via une bibliothèque de traitement binaire (POI-Excel), identifie les structures matricielles des feuilles sélectionnées, puis exécute la fusion en alignant les colonnes par correspondance de noms ou position. La fusion verticale implémente un algorithme de validation de schéma pour garantir l'homogénéité des types de données, tandis que la fusion horizontale utilise un système de jointure basé sur les index de lignes. Les formules, styles et métadonnées sont conservés grâce à une reconstitution précise de l'arborescence XML interne d'Excel. La sortie est un classeur unique optimisé pour l'analyse Power BI ou les exports SQL, avec option de nettoyage automatique des doublons.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Fusionneur Excel",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Cliquez sur 'Ajouter des fichiers' pour charger 2 à 50 classeurs Excel (.xlsx/.xls) depuis votre appareil ou un service cloud.",
+    "Sélectionnez les feuilles à fusionner via l'interface à onglets, avec possibilité de filtrer par nom ou plage de cellules.",
+    "Choisissez le mode de fusion dans le menu déroulant : 'Empiler verticalement' (ajout de lignes) ou 'Joindre horizontalement' (ajout de colonnes).",
+    "Activez 'Aligner colonnes par en-tête' pour la fusion verticale ou 'Compléter colonnes manquantes' pour la fusion horizontale.",
+    "Cochez 'Supprimer doublons' pour éliminer les lignes identiques ou 'Conserver formats' pour maintenir styles conditionnels.",
+    "Cliquez sur 'Générer fichier fusionné' et téléchargez le résultat compressé au format .xlsx optimisé."
   ],
   "usage_examples": [
-    "Utilisez Fusionneur Excel pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un comptable consolide 12 rapports mensuels de trésorerie (un par filiale) en un seul classeur annuel, avec fusion verticale et agrégation automatique des totaux.",
+    "Un chef de projet assemble les données de tests qualité provenant de 3 laboratoires, en fusionnant horizontalement les colonnes communes (température, pression) tout en maintenant les mesures spécifiques de chaque site.",
+    "Un marketeur combine des bases clients CRM (nom, email, date d'achat) de différentes régions, en utilisant la fusion verticale avec nettoyage des doublons par clé de contact.",
+    "Un data scientist fusionne des résultats expérimentaux stockés dans des fichiers Excel structurés différemment, en alignant les colonnes via un dictionnaire de mappage personnalisé dans l'interface."
   ]
 }

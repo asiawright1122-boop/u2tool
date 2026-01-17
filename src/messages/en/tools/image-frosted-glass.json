@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Frosted Glass Effect is a practical online tool that helps you quickly complete various tasks. Using Frosted Glass Effect, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Frosted Glass Effect can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Frosted Glass Effect immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Frosted Glass Effect tool applies a multi-layered Gaussian blur algorithm to simulate translucent frosted glass overlays on images. Technically, it uses a combination of kernel convolution for blur intensity control, alpha channel manipulation for opacity gradients, and luminance-preserving color blending to maintain depth perception. This tool addresses modern UI/UX design needs for creating depth layers, background dimming effects, and privacy-compliant image obfuscation. Unlike standard blur filters, it preserves edge contrast while scattering light rays through randomized noise patterns, mimicking real frosted glass' light diffusion properties. The tool processes images via HTML5 Canvas API with WebGL acceleration, enabling real-time adjustments without server-side processing. Designers can fine-tune blur radius (0-50px), diffusion intensity (1-100%), and apply optional color tints through HSV adjustments, making it ideal for creating depth layers in web interfaces, privacy-compliant image previews, and stylistic photo overlays.",
   "usage_steps": [
-    "Open the Frosted Glass Effect tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Upload your source image using the drag-and-drop canvas area or file browser button",
+    "Adjust the 'Diffusion Radius' slider to control blur intensity (0-50px kernel size)",
+    "Modify 'Opacity Gradient' to set the frosted glass transparency level (0-100%)",
+    "Enable 'Color Tint' and pick a hue to add colored glass effects via HSV overlay",
+    "Toggle 'Edge Preservation' to maintain sharpness on high-contrast image boundaries",
+    "Export the result using the 'Download' button, selecting PNG format for transparency retention"
   ],
   "usage_examples": [
-    "Use Frosted Glass Effect to process your data",
-    "Get processing results quickly without waiting"
+    "Web developer creating modal dialogs with blurred background overlays while maintaining foreground text readability",
+    "Social media designer crafting frosted glass frames for Instagram stories with semi-transparent text backgrounds",
+    "Mobile app UI/UX specialist implementing depth effects for card-based navigation menus with glassmorphism style",
+    "Photographer applying localized frosted effects to highlight specific areas in portrait compositions while obscuring backgrounds"
   ]
 }

@@ -3732,7 +3732,22 @@
       "commonScripts": "공통 스크립트",
       "generate": "생성",
       "copy": "복사",
-      "download": "다운로드"
+      "download": "다운로드",
+      "detailed_description": "Package Name은 Node.js 프로젝트의 package.json 파일을 자동으로 생성, 검증 및 최적화하는 전문 도구입니다. 이 도구는 프로젝트 초기화 단계에서 개발자가 수동으로 JSON 구조를 작성하거나 의존성 버전을 관리하는 번거로움을 해소합니다. AST(추상 구문 트리) 파싱 기술을 활용해 사용자가 입력한 메타데이터를 기반으로 유효한 JSON 스키마를 적용하고, Semantic Versioning 규칙에 따라 최신 안정 버전의 패키지를 제안합니다. 특히, 다중 프로젝트 환경에서 팀 내 일관된 의존성 관리를 위해 필요한 도구로, 보안 취약점이 있는 패키지 버전을 자동으로 감지하고 업데이트 권장사항을 제공합니다. 내부적으로는 npm registry API를 활용해 실시간으로 패키지 정보를 조회하며, 생성된 package.json 파일에 대해 Linting 기능을 적용해 스타일 가이드 위반 여부를 체크합니다.",
+      "usage_steps": [
+        "1. 프로젝트 이름 및 루트 디렉터리 경로를 'Project Metadata' 입력란에 작성합니다.",
+        "2. 'Dependencies' 탭에서 원하는 라이브러리 이름과 범위 버전(semver 형식)을 지정해 추가합니다.",
+        "3. 'Validation Rules' 섹션에서 'Security Audit' 옵션을 활성화하여 취약점 검사를 설정합니다.",
+        "4. 'Generate' 버튼 클릭 시 생성된 package.json을 미리보기 패널에서 확인합니다.",
+        "5. 'Export' 메뉴에서 'ES Module' 또는 'CommonJS' 형식을 선택해 파일을 다운로드합니다.",
+        "6. 'History' 탭에서 이전 버전과의 diff를 확인하고 필요한 경우 롤백합니다."
+      ],
+      "usage_examples": [
+        "1. 새로운 TypeScript 프로젝트 초기화 시 Babel, ESLint 관련 패키지 자동 추가 및 peerDependencies 설정.",
+        "2. 레거시 프로젝트의 package.json을 업데이트하면서 deprecated된 패키지 대체 권장사항 확인.",
+        "3. CI/CD 파이프라인에 통합해 pull request 시 package.json 변경 사항의 정합성 검증 자동화.",
+        "4. 팀 내 공통 스타일 가이드를 package.json linting 규칙으로 저장해 코드베이스 일관성 유지."
+      ]
     },
     "clipPath": {
       "preview": "미리보기",

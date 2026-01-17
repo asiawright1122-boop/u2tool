@@ -1,14 +1,17 @@
 {
-  "detailed_description": "SVG zu Bild ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit SVG zu Bild können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, SVG zu Bild kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie SVG zu Bild sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der SVG-zu-Bild-Konverter führt eine präzise Rasterisierung von Skalierbaren Vektorgrafiken (SVG) in Pixelformate wie PNG, JPEG oder WebP durch. Technisch basiert der Prozess auf der Analyse des XML-Datenstroms der SVG-Datei, der Interpretation geometrischer Primitive (Pfade, Kurven, Formen) sowie der Anwendung von Transformationen und Farbprofilen. Der Tool-Algorithmus nutzt eine Headless-Browser-Engine zur exakten Darstellung komplexer SVG-Elemente wie Filtereffekte, Gradienten und Masken. Dabei werden Alpha-Kanäle für Transparenz beibehalten und DPI-Einstellungen für Druckanwendungen skaliert. Entwickler benötigen dieses Tool, um responsive Web-Anwendungen mit optimierten Grafiken zu versorgen, Design-Ressourcen für Cross-Plattform-Exporte zu generieren oder animierte SVGs für Legacy-Systeme ohne SVG-Unterstützung zu konvertieren. Die Konvertierung erfolgt serverseitig mittels Cairo-Rendering-Bibliothek, wodurch konsistente Ergebnisse unabhängig vom Endgerät gewährleistet werden.",
   "usage_steps": [
-    "Öffnen Sie die SVG zu Bild-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Laden Sie die SVG-Datei über den Datei-Explorer oder per Drag-and-Drop in den Arbeitsbereich.",
+    "Wählen Sie im Format-Auswahlfeld das Zielformat (PNG, JPEG oder WebP) aus.",
+    "Passen Sie die Ausgabeparameter an: Stellen Sie die DPI-Werte (300/600/1200) für Druckqualität oder Weboptimierung ein.",
+    "Aktivieren Sie den 'Transparenter Hintergrund'-Schalter für PNG-Ausgaben mit Alpha-Kanal.",
+    "Klicken Sie auf 'Konvertieren' und warten Sie auf die serverseitige Rasterisierung durch die Cairo-Engine.",
+    "Laden Sie das fertige Bild im Download-Bereich herunter oder kopieren Sie den Base64-Code für direkte Einbettung."
   ],
   "usage_examples": [
-    "Verwenden Sie SVG zu Bild, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein Webentwickler konvertiert SVG-Icons in optimiertes WebP für eine E-Commerce-Seite, um die Ladezeit zu reduzieren.",
+    "Ein Grafikdesigner erstellt 1200-DPI-PNGs aus SVG-Logos für einen Hochglanzprospekt mit Transparenz-Effekten.",
+    "Ein Game-Dev wandelt komplexe SVG-Animationspfade in JPEG-Spritesheets für eine mobile Unity-Anwendung um.",
+    "Ein Data Scientist exportiert interaktive D3.js-SVG-Diagramme als hochaufgelöste Bilder für eine wissenschaftliche Präsentation."
   ]
 }

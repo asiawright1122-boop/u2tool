@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O JSON Path Finder é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o JSON Path Finder, você pode processar dados variados facilmente sem precisar instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use eficientemente. Seja desenvolvedor, designer ou usuário geral, o JSON Path Finder pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use o JSON Path Finder imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O JSON Path Finder é uma ferramenta especializada para navegar e extrair caminhos de acesso em estruturas de dados JSON complexas. Tecnicalemente, ele analisa a hierarquia do JSON, identificando chaves, valores e índices de arrays, e gera representações no formato dot notation (ex: $.user.address.city) ou bracket notation (ex: data['orders'][0]['id']). Desenvolvedores precisam deste recurso ao trabalhar com APIs REST que retornam JSONs extensos, ao mapear dados para integrações ETL ou ao depurar estruturas aninhadas em aplicações Node.js. A ferramenta implementa algoritmos de travessia em profundidade (DFS) para indexar todos os caminhos possíveis, permitindo busca por chave, valor ou tipo de dado. Suporta validação JSON Schema conforme RFC 8259 e destaca sintaxe com cores diferenciadas para objetos, arrays e tipos primitivos.",
   "usage_steps": [
-    "Abra a página do JSON Path Finder",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o JSON Path Finder e ative o modo 'Strict Validation' no seletor de configurações.",
+    "Cole seu JSON na área de texto principal com suporte a autocompletar automático.",
+    "Clique em 'Parse Structure' para carregar a árvore hierárquica no painel lateral.",
+    "Utilize a barra de pesquisa para inserir termos (ex: 'error.code') ou tipos (ex: 'number').",
+    "Selecione o caminho desejado na lista de resultados, que mostra notação completa e tipo de dado.",
+    "Clique no ícone de clipboard ao lado do caminho para copiar no formato desejado (dot ou bracket)."
   ],
   "usage_examples": [
-    "Use o JSON Path Finder para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Localizar o caminho exato de um código de erro HTTP em uma resposta API complexa com múltiplos níveis de encapsulamento.",
+    "Extrair todos os caminhos que contém dados de pagamento em um JSON de transações para mapeamento em banco de dados.",
+    "Validar se um JSON gerado por um microserviço segue o schema esperado antes de integração com Kafka Streams.",
+    "Identificar caminhos de arrays aninhados em um dataset GeoJSON para processamento com bibliotecas de geolocalização."
   ]
 }

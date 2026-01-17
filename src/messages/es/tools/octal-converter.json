@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Convertidor Octal es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Con el Convertidor Octal, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Convertidor Octal puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Convertidor Octal ahora para experimentar servicios rápidos, seguros y gratuitos de herramientas en línea.",
+  "detailed_description": "El convertidor octal permite transformar números entre el sistema octal (base 8) y otras bases numéricas como binario (base 2), decimal (base 10) y hexadecimal (base 16). Utiliza algoritmos basados en la expansión posicional para procesar conversiones precisas de valores enteros y fraccionarios. Para conversiones octal a decimal, aplica el método de suma ponderada de potencias (Σd×8ⁿ), mientras que en conversiones inversas implementa divisiones sucesivas por 8 con registro de residuos. Soporta entradas con notación científica octal (ej: 3.2E+4₈) y gestiona truncamiento de decimales con precisión ajustable. Esta herramienta es esencial para desarrolladores que trabajan con permisos de sistema Unix (donde los derechos de acceso se representan en octal), ingenieros de sistemas embebidos que depuran datos en formatos octales heredados, y estudiantes de informática que practican aritmética de bases no decimales. Su motor interno implementa bibliotecas de precisión arbitraria para evitar errores de redondeo en conversiones críticas.",
   "usage_steps": [
-    "Abre la página del Convertidor Octal",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona la dirección de conversión en el selector de modo: 'Octal a Decimal', 'Decimal a Octal', 'Octal a Binario', etc.",
+    "Ingresa el valor numérico en el campo de entrada respetando la notación válida (ej: 17.32₈ para octales fraccionarios)",
+    "Activa la opción 'Procesar fracciones' si tu entrada contiene punto octal",
+    "Ajusta la precisión decimal deseada con el control deslizante (1-32 dígitos de precisión)",
+    "Haz clic en 'Convertir' para ejecutar la transformación",
+    "Revisa los resultados detallados en el panel de salida que muestra equivalencias en 4 bases simultáneamente"
   ],
   "usage_examples": [
-    "Usa el Convertidor Octal para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un administrador de sistemas convierte los permisos de archivo octales 755₈ a decimal (493) para configurar permisos en un servidor Linux.",
+    "Un ingeniero de firmware traduce una dirección de memoria octal 377₈ a hexadecimal (FF) para depurar un sistema embebido de 8 bits.",
+    "Un estudiante resuelve un ejercicio de aritmética octal convirtiendo 12.3₈ a binario (001010.011) para practicar equivalencias directas.",
+    "Un desarrollador de juegos retro transforma coordenadas en formato octal heredado (ej: 43.6₈) a decimal para modernizar un motor gráfico de los años 70."
   ]
 }

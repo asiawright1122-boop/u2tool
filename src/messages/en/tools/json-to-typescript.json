@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to TypeScript is a practical online tool that helps you quickly complete various tasks. Using JSON to TypeScript, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON to TypeScript can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON to TypeScript immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The JSON to TypeScript converter automates type inference by analyzing JSON data structures and generating corresponding TypeScript interfaces with precise type annotations. This tool parses JSON input to identify scalar values, nested objects, arrays, and mixed-type fields, converting them into type-safe TypeScript definitions. It employs recursive type detection to handle deeply nested structures and implements union types when multiple data types appear in arrays or properties. Developers use this tool to eliminate manual type definition errors, accelerate integration of RESTful APIs, and ensure compile-time type safety in large-scale applications. The converter preserves JSON field names while supporting optional property markers (‘?’) and enforces strict null checks by default. Technically, it leverages AST (Abstract Syntax Tree) transformations to map JSON schema elements to TypeScript’s type system, including mapped types and index signatures for dynamic keys. The output includes interface declarations with proper casing, inheritance chains for repeated structures, and JSDoc comments for enhanced IDE integration.",
   "usage_steps": [
-    "Open the JSON to TypeScript tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the tool in your browser and locate the primary code editor panel.",
+    "Paste your valid JSON data into the left-side input area, ensuring proper syntax with commas and brackets.",
+    "Toggle advanced settings: enable ‘Optional Properties’ to mark fields with undefined values or ‘Strict Null Checks’ for nullable type detection.",
+    "Click the ‘Generate TypeScript’ button to initiate AST analysis and type inference.",
+    "Review the output in the right-side panel, which displays hierarchical interfaces with nested type declarations and union types where applicable.",
+    "Copy the generated TypeScript code using the clipboard icon or keyboard shortcut (Ctrl+C) for immediate use in your project."
   ],
   "usage_examples": [
-    "Use JSON to TypeScript to process your data",
-    "Get processing results quickly without waiting"
+    "A developer consuming a REST API with complex response structures uses the tool to create type definitions for axios response data, enabling compile-time validation.",
+    "Converting MongoDB document samples into TypeScript interfaces for type-safe aggregation pipeline operations in a Node.js backend.",
+    "Generating interface skeletons from Swagger JSON specifications to enforce contract-first API development in a microservices architecture.",
+    "Creating type definitions for Firebase Realtime Database snapshots to improve query typing and prevent runtime errors in a React Native application."
   ]
 }

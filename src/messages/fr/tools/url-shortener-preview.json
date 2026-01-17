@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Prévisualisation de raccourcissement de URL est un outil pratique en ligne qui vous aide à accomplir rapidement diverses tâches. Avec la Prévisualisation de raccourcissement de URL, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, la Prévisualisation de raccourcissement de URL peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne les envoyant pas sur aucun serveur. Utilisez immédiatement la Prévisualisation de raccourcissement de URL pour expérimenter des services en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil URL Shortener Preview est conçu pour permettre aux utilisateurs de prévisualiser et d'analyser les URL raccourcies. Techniquement, cette application examine les liens raccourcis pour récupérer l'URL d'origine, ainsi que des informations supplémentaires sur le contenu et la structure de la page cible. Le processus de déraccourcissement de l'URL est effectué en envoyant une requête HTTP GET à l'URL raccourcie et en interceptant la redirection HTTP pour obtenir l'URL finale. En outre, l'outil analyse le contenu HTTP de la page finale pour fournir des détails sur le type de contenu (HTML, PDF, etc.), les métadonnées (title, description, etc.) et d'éventuels risques de sécurité. Cet outil est essentiel pour les développeurs, les marketeurs et les utilisateurs en général qui souhaitent vérifier la destination et la sécurité des liens raccourcis avant de les partager ou de les suivre. Il permet également de détecter les liens malveillants et de garantir que le contenu est conforme aux attentes.",
   "usage_steps": [
-    "Ouvrez la page de la Prévisualisation de raccourcissement de URL",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de texte",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez l'outil URL Shortener Preview sur le site web.",
+    "Collez l'URL raccourcie que vous souhaitez analyser dans le champ de texte intitulé \"URL à prévisualiser\".",
+    "Cliquez sur le bouton \"Analyser l'URL\" pour lancer le processus d'analyse.",
+    "Patientez quelques instants pendant que l'outil déraccourcit l'URL et récupère les informations de la page cible.",
+    "Consultez la section \"Résultats de l'analyse\" pour voir l'URL originale, le type de contenu, les métadonnées et les alertes de sécurité.",
+    "Si nécessaire, utilisez les options de partage ou de téléchargement pour conserver ou partager les résultats de l'analyse."
   ],
   "usage_examples": [
-    "Utilisez la Prévisualisation de raccourcissement de URL pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur souhaite vérifier si un lien raccourci partagé dans un chat d'équipe mène bien à la page de documentation technique attendue. Il utilise l'outil pour confirmer l'URL cible et vérifier les métadonnées.",
+    "Un responsable marketing analyse les liens raccourcis utilisés dans une campagne Twitter pour s'assurer que les redirections sont correctes et que le contenu final est optimisé pour le référencement.",
+    "Un utilisateur prudent reçoit un e-mail avec un lien raccourci suspect. Il utilise l'outil pour vérifier si le lien mène à une page web sécurisée et fiable, évitant ainsi tout risque de phishing.",
+    "Un administrateur de réseau utilise l'outil pour auditer les liens raccourcis utilisés dans les communications internes, s'assurant qu'ils ne contiennent pas de contenu malveillant et qu'ils respectent les politiques de sécurité de l'organisation."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Polar-Balkendiagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Polar-Balkendiagramm-Generator können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, der Polar-Balkendiagramm-Generator kann Ihnen dabei helfen, die Arbeitseffizienz zu verbessern. Alle Bearbeitungen erfolgen lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und verhindert, dass Ihre Daten auf irgendeinen Server hochgeladen werden. Nutzen Sie den Polar-Balkendiagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Tools zu erleben.",
+  "detailed_description": "Der Polar Bar Chart Generator ist ein spezialisierter Web-Editor zur Erstellung radialer Balkendiagramme, der numerische Daten in polaren Koordinaten abbildet. Das Tool konvertiert eingegebene Datensätze in Winkel- und Radiuswerte, wobei jede Kategorie als segmentierter Balken entlang eines Kreisrings dargestellt wird. Technisch basiert die Visualisierung auf der Transformation kartesischer Koordinaten in Polarkoordinaten (r, θ), wobei die Balkenhöhe proportional zum Radius und die Kategorieposition durch den Winkel definiert wird. Benutzer können präzise Kontrolle über die Radialachse (linear/logarithmisch), Segmentierungswinkel und Styling-Parameter wie Farbverläufe, Strichbreiten und Transparenzstufen ausüben. Das Tool ist besonders für Anwendungsfälle relevant, die zyklische Datenmuster analysieren – von Klimaforschung über Marktforschung bis hin zu akademischen Visualisierungen biologischer Rhythmen. Die Exportfunktion generiert pixelgenaue PNG-Bilder und skalierbare SVG-Vektoren mit eingebetteten XML-Metadaten für die Integration in wissenschaftliche Publikationen oder Dashboard-Interfaces.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Polar-Balkendiagramm-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Importieren Sie Ihre Daten über das JSON-Editor-Feld oder manuelles Eingabegitter mit XLSX-ähnlicher Zellennavigation.",
+    "Wählen Sie den Polarkoordinatenmodus: Linear für gleichmäßige Abstände oder Logarithmisch für dynamische Wertebereiche.",
+    "Passen Sie die Segmentierung an, indem Sie die Anzahl der radialen Kategorienachsen und den Startwinkel (0°–360°) definieren.",
+    "Konfigurieren Sie das visuelle Erscheinungsbild über das CSS-ähnliche Styling-Panel mit Präzisionssteuerelementen für Farbverläufe, Strichenden und Fülltransparenz.",
+    "Nutzen Sie die Live-Vorschau, um interaktive Tooltips zu testen, die bei Mouseover-Ereignissen die原始Datenwerte anzeigen.",
+    "Exportieren Sie das finale Diagramm als PNG mit 4K-Auflösung oder als SVG mit einbettbaren <path>-Elementen für Web-Anwendungen."
   ],
   "usage_examples": [
-    "Verwenden Sie den Polar-Balkendiagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell bearbeitete Ergebnisse ohne zu warten"
+    "Visualisierung monatlicher Temperaturschwankungen über mehrere Jahre in einem kombinierten Polar-Balkendiagramm für Klimaberichte.",
+    "Vergleich von Marktanteilen konkurrierender Unternehmen durch farbkodierte Radialbalken für Präsentationen.",
+    "Darstellung zirkadianer Rhythmen in Neurobiologie-Studien durch phasensensitive Datencluster.",
+    "Analyse saisonaler Verkaufsmuster in Einzelhandelsdaten mit dynamischen Logarithmus-Skalierungen für Peak-Ereignisse."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der SSL-Zertifikat Prüfer ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem SSL-Zertifikat Prüfer können Sie verschiedene Daten verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der SSL-Zertifikat Prüfer Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitung wird lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den SSL-Zertifikat Prüfer sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der SSL Certificate Checker analysiert die gesamte Zertifikatskette einer Domain, validiert deren Integrität gemäß X.509-Standard und prüft die Kompatibilität mit modernen TLS-Protokollen. Technisch gesehen initiiert das Tool eine HTTPS-Verbindung zum Zielserver, extrahiert das Serverzertifikat sowie dazugehörige Zwischenzertifikate und überprüft deren Signaturkette bis zur Root-CA. Dabei werden kritische Parameter wie Gültigkeitsdauer, Public-Key-Infrastruktur (PKI), Subject Alternative Name (SAN)-Feldbelegung und Revokationsstatus via OCSP-Abfrage oder CRL-Download evaluiert. Ein besonderes Augenmerk liegt auf der Identifizierung von Zertifikatskonfigurationsfehlern wie fehlender Key Usage-Erweiterung, unsicherer TLS-Version oder falsch gesetzter Certificate Transparency. Entwickler und Systemadministratoren nutzen das Tool, um Probleme wie 'ERR_CERT_COMMON_NAME_INVALID' zu diagnostizieren, CSR-Daten gegen die Live-Konfiguration zu verifzieren oder SAN-Mismatches bei Multi-Domain-Zertifikaten aufzudecken. Die Analyse umfasst auch die Prüfung der Zertifikatsreihenfolge im Chain-of-Trust sowie potenzieller Schwachstellen durch veraltete Signature-Algorithmen.",
   "usage_steps": [
-    "Öffnen Sie die Seite des SSL-Zertifikat Prüfers",
-    "Geben Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Anpassen Sie die Tool-Optionen und Einstellungen, wenn nötig",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "1. Navigieren Sie zur SSL-Checker-Toolseite im Netzwerk-Tools-Bereich.",
+    "2. Geben Sie die zu prüfende Domain inklusive Protokoll (https://) in das 'Ziel-URL'-Eingabefeld ein.",
+    "3. Wählen Sie optional den zu testenden TCP-Port (Standard: 443) im Portauswahlfeld.",
+    "4. Aktivieren Sie den 'Erweiterte Details anzeigen'-Schalter für tiefere Protokollanalyse.",
+    "5. Klicken Sie auf den 'Zertifikat prüfen'-Button, um die Analyse zu starten.",
+    "6. Untersuchen Sie im Ergebnisbereich die farbkodierte Validierungsübersicht und detaillierte Chain-Visualisierung."
   ],
   "usage_examples": [
-    "Verwenden Sie den SSL-Zertifikat Prüfer, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell verarbeitete Ergebnisse ohne zu warten"
+    "Ein Webentwickler identifiziert mit dem Tool einen abgelaufenen Intermediate CA-Hash in einer Kettenkonfiguration nach einem Server-Update.",
+    "Ein Security-Audit-Team nutzt die SAN-Überprüfung, um festzustellen, dass ein Wildcard-Zertifikat subdomain.test.example.com nicht abdeckt.",
+    "Ein Systemadministrator diagnostiziert mittels OCSP-Statusprüfung, dass ein frisch ausgestelltes Zertifikat von der CA noch nicht veröffentlicht wurde.",
+    "Ein DevOps-Engineer validiert die korrekte Einrichtung von TLSA-Einträgen für DANE-Konformität in einer MTA-Konfiguration."
   ]
 }

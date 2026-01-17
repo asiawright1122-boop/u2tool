@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Number System Converter instantly converts numbers between binary, octal, decimal, and hexadecimal.",
+  "detailed_description": "The Number System Converter is a specialized utility for transforming numerical values between different positional numeral systems, including binary (base-2), octal (base-8), decimal (base-10), and hexadecimal (base-16). Developers and engineers frequently encounter scenarios where cross-base calculations are essential, such as interpreting memory addresses in hexadecimal, debugging binary protocols, or configuring network subnet masks. Manual conversion introduces errors and disrupts workflow efficiency, especially with large datasets or negative numbers requiring two’s complement representation. This tool automates the process using rigorous mathematical algorithms: decimal-to-binary employs iterative division with remainder tracking, while hexadecimal parsing leverages ASCII character mapping to nibble (4-bit) sequences. Input validation ensures radix compliance, rejecting invalid symbols (e.g., 'G' in hexadecimal), and conversion precision extends to fractional components using polynomial expansion for decimal fractions. The backend processes numbers via base-10 intermediaries for cross-radix consistency, preserving data integrity during complex transformations.",
   "usage_steps": [
-    "Select input base",
-    "Enter your number",
-    "View all conversions",
-    "Check bit representation",
-    "Copy results"
+    "Select the source base from the 'From Base' dropdown (options: Binary, Octal, Decimal, Hexadecimal).",
+    "Choose the target base from the 'To Base' dropdown (e.g., Decimal).",
+    "Input the number in the source field, adhering to the selected base (e.g., '1101' for binary, 'FF' for hexadecimal).",
+    "Click the 'Convert' button to trigger the algorithmic transformation.",
+    "Review the converted value displayed in the target field, including any error messages for invalid input.",
+    "Use the 'Copy' button to save the result or 'Reset' for a new conversion."
   ],
   "usage_examples": [
-    "Convert hex to binary",
-    "Decimal to hexadecimal",
-    "Binary calculations"
+    "A network engineer converts the IPv4 subnet mask 255.255.255.0 from decimal to binary (11111111.11111111.11111111.00000000) to validate CIDR notation.",
+    "A game developer translates hexadecimal color codes (#4A90E2) into decimal RGB values (74, 144, 226) for sprite rendering.",
+    "A computer science student verifies their manual conversion of the decimal number 1337 to octal (2471) for an exam.",
+    "An embedded systems programmer decodes an octal permission value (0755) to hexadecimal (0x1ED) to configure Linux file access rights."
   ]
 }

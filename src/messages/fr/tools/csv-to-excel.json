@@ -1,11 +1,17 @@
 {
-  "detailed_description": "Convertit CSV en Excel.",
+  "detailed_description": "L'outil CSV vers Excel permet de transformer des fichiers texte structurés au format CSV (Comma-Separated Values) en classeurs Excel (.xlsx) avec un contrôle précis des formats de données. Ce convertisseur analyse les délimiteurs (virgules, points-virgules ou tabulations), gère l'encodage UTF-8/ISO-8859-1, et préserve les types de données numériques, dates et chaînes de caractères pendant la conversion. Il utilise une bibliothèque de traitement de feuilles de calcul pour reconstruire la structure binaire Open XML, en créant des feuilles distinctes pour chaque fichier CSV importé ou en fusionnant plusieurs CSV en un seul classeur. Les utilisateurs en bénéficient pour automatiser la migration de données vers Excel, préparer des rapports financiers avec mise en forme conditionnelle, ou intégrer des bases de données externes dans des modèles Excel existants. Le processus inclut une détection automatique des en-têtes, un alignement des colonnes et la possibilité d'appliquer des formats personnalisés (monétaires, pourcentages, etc.) pendant la conversion.",
   "usage_steps": [
-    "Télécharger fichier CSV",
-    "Aperçu données",
-    "Télécharger Excel"
+    "1. Glissez-déposez votre fichier CSV dans la zone de téléchargement ou cliquez sur 'Parcourir' pour sélectionner un fichier",
+    "2. Sélectionnez l'encodage source dans le menu déroulant (UTF-8, ISO-8859-1, etc.)",
+    "3. Choisissez le délimiteur utilisé dans votre CSV (virgule, point-virgule, tabulation ou personnalisé)",
+    "4. Activez l'option 'Première ligne comme en-tête' si votre CSV contient des titres de colonnes",
+    "5. Cliquez sur 'Convertir' pour générer le classeur Excel avec mise en forme automatique des cellules",
+    "6. Téléchargez le fichier .xlsx résultat ou envoyez-le directement à votre compte cloud via l'intégration OneDrive/Google Drive"
   ],
   "usage_examples": [
-    "Ouvrir CSV dans Excel"
+    "1. Un analyste financier convertit des exports de transactions bancaires CSV en classeurs Excel pour créer des tableaux croisés dynamiques",
+    "2. Une entreprise agricole fusionne des données météorologiques CSV avec des données de rendement dans un seul classeur Excel pour analyse prédictive",
+    "3. Un chercheur universitaire transforme des données d'enquête CSV en format Excel pour appliquer des formules statistiques avancées",
+    "4. Un service client importe des logs CSV de support technique dans Excel pour générer des rapports SLA avec graphiques temporels"
   ]
 }

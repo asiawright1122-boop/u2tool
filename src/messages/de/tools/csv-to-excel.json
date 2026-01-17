@@ -1,11 +1,17 @@
 {
-  "detailed_description": "Konvertiert CSV in Excel.",
+  "detailed_description": "Der CSV zu Excel-Konverter ist ein spezialisierter Dienst zur präzisen Transformation von durch Kommas getrennten Werten (CSV) in das Microsoft Excel Open XML-Format (.xlsx). Technisch gesehen parst das Tool die Eingabedatei durch lexikalische Analyse, identifiziert Trennzeichen (z.B. Komma, Semikolon) und kodiert UTF-8-Zeichenfolgen in Excel-kompatible Zeichensätze. Dabei wird die Datenstruktur in ein zweidimensionales Gitter umgewandelt, das als Worksheet-Objekt serialisiert wird. Die Konvertierung erfolgt serverseitig unter Verwendung von Node.js-Modulen wie 'xlsx' und 'fast-csv', die komplexe Operationen wie Zellenadressierung, Formatvorlagen und Metadaten-Einbettung ermöglichen. Benutzer benötigen dieses Tool, um beispielsweise Datenanalyse-Workflows zu optimieren, inkompatible Tabellenformate für Reporting-Tools zu standardisieren oder CSV-Daten mit Umlauten/Unicode-Zeichen verlustfrei in Excel-Dokumente zu überführen. Besonders bei der Verarbeitung großer Datensätze mit mehr als 1 Million Zeilen wird durch Streaming-Techniken (chunked parsing) eine hohe Performance gewährleistet. Die Validierung der Datei erfolgt bereits beim Upload durch MIME-Typ-Prüfung, um Sicherheitsrisiken zu minimieren. Alle Daten werden nach Abschluss der Konvertierung vollständig aus dem Serverspeicher gelöscht.",
   "usage_steps": [
-    "CSV-Datei hochladen",
-    "Daten Vorschau",
-    "Excel herunterladen"
+    "1. Öffnen Sie die Tool-Seite unter https://toolname/csv-to-excel.",
+    "2. Klicken Sie auf den blauen 'Datei auswählen' Button oder ziehen Sie die CSV-Datei per Drag-and-Drop in den gestrichelten Bereich.",
+    "3. Wählen Sie im Dropdown-Menü 'Trennzeichen' den korrekten Separator (Komma, Tabulator, Semikolon) aus.",
+    "4. Aktivieren Sie bei Bedarf die Checkbox 'UTF-8 zu Windows-1252 konvertieren' für Excel-Kompatibilität bei Sonderzeichen.",
+    "5. Überprüfen Sie die Live-Vorschau der ersten 20 Zeilen unterhalb der Einstellungen.",
+    "6. Klicken Sie auf 'Jetzt konvertieren', um das XLSX-Dokument mit einem Klick herunterzuladen."
   ],
   "usage_examples": [
-    "CSV in Excel öffnen"
+    "Ein Finanzanalyst wandelt monatliche Kursdaten im CSV-Format (1,2 Millionen Zeilen) in ein Excel-Arbeitsblatt um, um dynamische Dashboards mit PivotCharts zu erstellen.",
+    "Ein Forschungsteam konvertiert Biodiversitätsdaten mit wissenschaftlichen Namen (enthält griechische Zeichen) aus einer UTF-8-codierten CSV, um diese in Excel für statistische Analysen weiterzuverarbeiten.",
+    "Ein E-Commerce-Manager transformiert Bestandslisten aus einem ERP-System (CSV-Ausgabe mit Semikolons) in Excel-Dateien, die automatisch per Makro mit Lagerortinformationen verknüpft werden.",
+    "Ein Hochschuldozent konvertiert anonymisierte Prüfungsergebnisse aus einem LMS-Export (CSV mit Tabulator-Trennung) in Excel, um Notenstaffelungen per Formeln zu berechnen und per E-Mail an Studierende zu senden."
   ]
 }

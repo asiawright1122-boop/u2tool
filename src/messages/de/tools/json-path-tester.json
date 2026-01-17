@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der JSONPath Tester ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem JSONPath Tester können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell damit anfangen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der JSONPath Tester kann Ihnen helfen, Ihre Arbeitswirkungsrate zu verbessern. Alle Verarbeitungsvorgänge werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den JSONPath Tester sofort, um schnelle, sichere und kostenlose Online-Toolservices zu erleben.",
+  "detailed_description": "Der JSONPath Tester ist ein spezialisierter Code-Analyzer für JSON-Datenstrukturen, der es Entwicklern ermöglicht, komplexe JSONPath-Abfragen in Echtzeit zu testen und zu optimieren. Technisch gesehen transformiert das Tool JSON-Daten in einen navigierbaren Baum (DOM-ähnliche Struktur) und wendet rekursive Algorithmen zur Pfadresolution an, einschließlich Wildcard-Verarbeitung, Array-Slicing und prädikatbasierter Selektion. Entwickler benötigen dieses Tool, um semantische Fehler in JSONPath-Ausdrücken aufzudecken, die bei der Verarbeitung verschachtelter Datenstrukturen in APIs oder Konfigurationsdateien auftreten können. Die Kernfunktionalität umfasst eine lexikalische Analyse der Eingabe, die Generierung eines Token-Streams für den JSONPath-Interpreter und die Visualisierung von Match-Resultaten mit Knotenreferenzen. Besonders hilfreich ist die Echtzeit-Validierung von Selektoren für RESTful-Service-Tests oder bei der Entwicklung von Data-Mapping-Prozessen für ETL-Workflows.",
   "usage_steps": [
-    "Öffnen Sie die Seite des JSONPath Testers",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten",
-    "Passen Sie die Tool-Optionen und Einstellungen nach Bedarf an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Laden Sie Ihre JSON-Daten in den linken Editorbereich, der Syntaxhervorhebung und Fehlersuche in Echtzeit bietet.",
+    "Geben Sie Ihren JSONPath-Ausdruck in das Eingabefeld unterhalb der Registerkarte 'Query' ein, mit Unterstützung für Namespaces und benutzerdefinierte Funktionen.",
+    "Klicken Sie auf 'Ausführen', um den Parser zu starten, der die Datenstruktur traversiert und Treffer in der Baumansicht markiert.",
+    "Überprüfen Sie die Ergebnisse im rechten Panel, das die vollständigen Pfadreferenzen und die entsprechenden JSON-Werte anzeigt.",
+    "Nutzen Sie den Debugger-Modus, um Schritt für Schritt durch die Auswertung zu navigieren und Zwischenresultate zu analysieren.",
+    "Exportieren Sie validierte Pfade als Testfälle für CI/CD-Pipelines oder speichern Sie Lesezeichen für häufig genutzte Konfigurationen."
   ],
   "usage_examples": [
-    "Verwenden Sie den JSONPath Tester, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell verarbeitete Ergebnisse, ohne zu warten"
+    "Validierung von JSONPath-Selektoren für die automatisierte Extraktion von Wetterdaten aus einer API-Antwort mit mehrfacher Verschachtelung.",
+    "Debugging komplexer Abfragen zur Identifizierung von Fehlern in XPath-ähnlichen Pfaden bei der Migration von XML zu JSON-Datenmodellen.",
+    "Testen von Filterbedingungen für E-Commerce-Produktkataloge, um dynamische Preisregeln auf geschachtelten Attributen anzuwenden.",
+    "Analyse von Log-Dateien im JSON-Format durch wiederholtes Testen von Array-Slicings, um zeitbasierte Fehlermuster zu isolieren."
   ]
 }

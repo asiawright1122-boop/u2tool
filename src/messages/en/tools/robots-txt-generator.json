@@ -1,14 +1,17 @@
 {
-  "detailed_description": "robots.txt Generator is a practical online tool that helps you quickly complete various tasks. Using robots.txt Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, robots.txt Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use robots.txt Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "This tool programmatically constructs robots.txt files that dictate how search engine crawlers interact with web content. Technically, it generates standardized directives adhering to the Robots Exclusion Protocol (REP), supporting User-agent identification, path-based Disallow/Allow rules, crawl delay parameters, and Sitemap references. Developers require this utility to precisely control spider access for SEO optimization, prevent overloading servers with excessive requests, or blocking sensitive directories from public search indexes. The generator parses user input through form fields mapping directly to REP syntax elements, automatically resolving conflicting rules using crawler-specific precedence logic. Advanced features include wildcard pattern matching for dynamic URL structures, HTTP status code validation for referenced assets, and automatic canonicalization of absolute/relative paths. Unlike basic editors, this tool enforces proper directive sequencing and escapes special characters in path definitions to prevent syntax errors that could cause unintended access permissions.",
   "usage_steps": [
-    "Open the robots.txt Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Select default template based on common use cases (e.g., 'Full Access', 'Development Block', 'E-commerce Restrictions')",
+    "Add custom rules by specifying User-agent strings, path patterns, and crawl permissions using the multi-field rule builder",
+    "Configure crawl delay values in milliseconds for specific bots to prevent server overload",
+    "Use the 'Wildcard Assistant' to create pattern-matching rules for dynamic URLs containing query parameters",
+    "Validate rule conflicts using the built-in analyzer that highlights overlapping directives",
+    "Download the final robots.txt after reviewing the syntax-highlighted preview with line-numbered annotations"
   ],
   "usage_examples": [
-    "Use robots.txt Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Blocking search engines from indexing a staging environment at /staging/ while allowing production content",
+    "Preventing duplicate content penalties by disallowing crawler access to printer-friendly page versions ending with ?print=1",
+    "Rate-limiting Googlebot to 5,000 requests/day on a budget hosting plan using the crawl delay and request limit calculator",
+    "Creating bot-specific rules to allow image crawlers access to /media/ while restricting general web archiving bots"
   ]
 }

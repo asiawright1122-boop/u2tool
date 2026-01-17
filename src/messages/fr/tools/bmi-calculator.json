@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculateur d'IMC est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant Calculateur d'IMC, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de démarrer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, Calculateur d'IMC peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, assurant la sécurité de vos données et ne sera pas téléchargé sur un serveur.",
+  "detailed_description": "L'outil BMI Calculator permet de déterminer précisément l'indice de masse corporelle (IMC) en appliquant la formule mathématique standardisée : IMC = poids (kg) / (taille × taille) (m²). Contrairement aux outils basiques, notre solution intègre un système de validation des entrées (vérification de la cohérence numérique, gestion des valeurs extrêmes) et une classification adaptée aux recommandations de l'OMS. Ce calculateur s'adresse aux professionnels de santé pour des évaluations rapides, aux particuliers souhaitant surveiller leur santé, ainsi qu'aux chercheurs en épidémiologie pour analyser des tendances démographiques. Techniquement, l'application utilise une logique de calcul en temps réel avec mise à jour dynamique de l'affichage, couplée à un système de codage couleur (degré de gravité en rouge/orange/vert) pour faciliter l'interprétation. Les données sont traitées localement sans enregistrement, garantissant confidentialité et conformité RGPD. Des options avancées permettent d'ajuster les unités (kg/lbs, m/cm/pouces) et d'exporter les résultats au format CSV pour analyse ultérieure.",
   "usage_steps": [
-    "Ouvrir la page de l'outil Calculateur d'IMC",
-    "Entrer ou coller le contenu à traiter dans la zone de saisie",
-    "Ajuster les options et paramètres de l'outil selon les besoins",
-    "Cliquer sur le bouton de traitement pour voir les résultats",
-    "Copier ou télécharger les résultats traités"
+    "Sélectionnez l'unité de poids souhaitée (kilogrammes ou livres) via le menu déroulant",
+    "Saisissez votre poids dans le champ prévu, en veillant à utiliser une virgule pour les décimales",
+    "Choisissez le format de mesure de taille (mètres, centimètres ou pouces) depuis le sélecteur",
+    "Entrez votre taille dans le champ correspondant, avec précision au centimètre ou demi-pouce près",
+    "Cliquez sur le bouton 'Calculer l'IMC' pour déclencher le calcul instantané",
+    "Consultez le résultat affiché avec code couleur et interprétation contextuelle dans la zone de résumé"
   ],
   "usage_examples": [
-    "Utiliser Calculateur d'IMC pour traiter vos données",
-    "Obtenir des résultats de traitement rapidement sans attendre"
+    "Un médecin calcule l'IMC de 28 patients en 5 minutes grâce au mode de saisie séquentielle optimisée",
+    "Un coach sportif compare les évolutions d'IMC de ses clients sur 3 mois via les exports CSV",
+    "Un étudiant en nutrition analyse la corrélation IMC/taille dans une cohorte de 500 personnes",
+    "Un patient diabétique suit son IMC mensuel avec un marqueur de tendance sur 12 mois"
   ]
 }

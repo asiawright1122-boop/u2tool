@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON para GraphQL é uma ferramenta online prática que ajuda você a completar diversas tarefas rapidamente. Usando JSON para GraphQL, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. A ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, JSON para GraphQL pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é realizado localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviado para nenhum servidor. Use JSON para GraphQL imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O JSON to GraphQL é uma ferramenta técnica que transforma objetos JSON em esquemas de tipos GraphQL compatíveis com a especificação GraphQL SDL (Schema Definition Language). Seu funcionamento baseia-se na análise recursiva de estruturas JSON para inferir tipos escalares (String, Int, Boolean), objetos aninhados e listas, criando automaticamente definições de tipos com campos tipados. A ferramenta é essencial para desenvolvedores que desejam migrar dados estruturados de APIs REST, payloads de eventos ou documentos NoSQL para uma camada GraphQL, evitando a codificação manual de esquemas. Quando um usuário envia um JSON válido, o parser identifica padrões de dados, como valores nulos, tipos heterogêneos e hierarquias complexas, convertendo-os em declarações do tipo `type` ou `input` com anotações de nullable e listas. Além disso, suporta a definição de tipos raiz personalizados e a detecção automática de chaves primárias para geração de IDs. Este processo elimina erros manuais e acelera o desenvolvimento de backends GraphQL, especialmente em projetos de integração de dados ou prototipagem rápida.",
   "usage_steps": [
-    "Abra a página do conversor JSON para GraphQL",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole ou faça upload do seu JSON no campo 'Input JSON'.",
+    "Insira o nome do tipo raiz no campo 'Root Type Name' (ex: 'UserResponse').",
+    "Selecione as opções de inferência: modo estrito (tipos não anuláveis) ou flexível (campos com ?).",
+    "Revise o esquema pré-visualizado na seção 'GraphQL Schema Preview'.",
+    "Clique em 'Generate Schema' para criar o esquema finalizado.",
+    "Copie o código gerado ou faça download em formato .graphql."
   ],
   "usage_examples": [
-    "Use JSON para GraphQL para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Converter a resposta de uma API REST de usuários em um tipo GraphQL para integração com Apollo Server.",
+    "Gerar esquema a partir de dados mockados de um protótipo Figma, acelerando o desenvolvimento frontend.",
+    "Mapear documentos MongoDB com estruturas hierárquicas para tipos GraphQL em uma aplicação de analytics.",
+    "Criar tipos de entrada (input types) para mutações GraphQL com base em payloads de formulários validados."
   ]
 }

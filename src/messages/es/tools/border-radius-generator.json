@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Radio de Borde es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Utilizando el Generador de Radio de Borde, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Generador de Radio de Borde puede ayudarte a mejorar la eficiencia de tu trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no se suban a ningún servidor. Utiliza el Generador de Radio de Borde inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Border Radius Generator es una herramienta especializada para crear y ajustar precisamente valores CSS de 'border-radius' mediante un editor visual interactivo. Este generador permite a desarrolladores y diseñadores definir radios circulares, elípticos o asimétricos para cada esquina de un elemento HTML, con soporte para unidades absolutas (px) y relativas (%). La herramienta combina un motor de renderizado basado en SVG que refleja en tiempo real los cambios en el radio horizontal y vertical de cada esquina (top-left, top-right, bottom-right, bottom-left), incluyendo la capacidad de establecer valores diferenciados para crear formas como óvalos divididos o esquinas escalonadas. Su funcionalidad es crítica para proyectos donde se requiere prototipado rápido de interfaces con bordes personalizados, como componentes UI/UX en frameworks modernos (React, Vue) o sistemas de diseño basados en CSS-in-JS. La herramienta también incluye un analizador de compatibilidad que muestra cómo se renderizarán los valores generados en diferentes navegadores, incluyendo la notación abreviada y extendida para múltiples radios.",
   "usage_steps": [
-    "Abre la página del Generador de Radio de Borde",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del tool según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Accede al generador y selecciona el modo de edición individual de esquinas o edición vinculada.",
+    "2. Ajusta los controles deslizantes para 'Horizontal Radius' y 'Vertical Radius' de cada esquina en el panel de propiedades.",
+    "3. Activa la opción 'Porcentaje' para definir radios relativos al tamaño del elemento contenedor.",
+    "4. Utiliza la vista previa SVG para validar visualmente la curvatura generada y detectar posibles traslapes.",
+    "5. Copia el código CSS generado en el área de salida, que incluye versiones estándar y con prefijos (-webkit-, -moz-).",
+    "6. Aplica los estilos a tu elemento HTML y ajusta las dimensiones del contenedor para ver el efecto final renderizado."
   ],
   "usage_examples": [
-    "Utiliza el Generador de Radio de Borde para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Crear un botón con esquinas redondeadas asimétricas para una interfaz de aplicación móvil, usando valores de radio diferentes para las esquinas superior e inferior.",
+    "Generar un avatar circular con borde elíptico para una plataforma de redes sociales, asegurando compatibilidad con navegadores antiguos.",
+    "Diseñar una tarjeta de producto con radio diferenciado (50% en esquina superior derecha y 10px en otras) para efectos visuales dinámicos.",
+    "Implementar una animación CSS hover donde el radio de un contenedor cambia progresivamente, utilizando los valores interpolados del generador."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "CSV to JSON is a practical online tool that helps you quickly complete various tasks. Using CSV to JSON, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, CSV to JSON can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use CSV to JSON immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The CSV to JSON Converter transforms tabular data into hierarchical JSON structures through a precise schema mapping process. This tool parses comma-separated values (CSV) files by analyzing header rows to construct key-value pairs, supporting custom delimiters including tabs, semicolons, or pipe characters. Developers can specify nesting patterns via dot-notation headers (e.g., 'address.city') to create multi-level JSON objects. The converter employs streaming processing for large datasets, avoiding memory overload through chunked parsing. Unique features include RFC 4180 compliance validation, automated type coercion for numeric and boolean fields, and the ability to generate JSON arrays or root objects. This tool addresses critical workflows in data migration to NoSQL databases, API payload generation, and configuration file creation, particularly when transforming spreadsheet data for machine-readable consumption in web applications or analytics pipelines.",
   "usage_steps": [
-    "Open the CSV to JSON tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Paste CSV data into the input editor or upload a .csv file using the file picker",
+    "Select delimiter type from dropdown (comma, tab, semicolon, pipe, or custom) to match source formatting",
+    "Activate 'Header Row' toggle to map first line to JSON keys, or specify custom key names in the schema editor",
+    "Configure nesting depth using dot-notation path identifiers in header columns for hierarchical output",
+    "Adjust output formatting options: indentation level (2-8 spaces), array/object root type, and quote style",
+    "Click 'Convert' to process data and download the resulting JSON file with syntax-highlighted preview"
   ],
   "usage_examples": [
-    "Use CSV to JSON to process your data",
-    "Get processing results quickly without waiting"
+    "A full-stack developer converts a 200MB sales report CSV into nested JSON for direct ingestion into MongoDB collections with region.country.product hierarchies",
+    "API engineer transforms OAuth2 client credentials spreadsheet into security-validated JSON configuration files for Express.js authentication middleware",
+    "Data scientist prepares time-series sensor data from CSV to JSON Lines format for AWS Lambda stream processing",
+    "Enterprise architect maps LDAP directory exports to JSON objects with relational links for Neo4j graph database import"
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "La Calculadora de Fecha de Parto estima la fecha de parto del embarazo basándose en la última menstruación.",
+  "detailed_description": "El Calculador de Fecha de Parto es una herramienta técnica que implementa algoritmos basados en la regla de Naegele y ajustes médicos para determinar con precisión la fecha probable de parto (FPP) y monitorear hitos claves durante el embarazo. Este calculador integra múltiples parámetros clínicos, incluyendo la fecha de última menstruación (FUM), longitud del ciclo menstrual, datos ecográficos y métodos de concepción (como FIV). Al procesar estos inputs mediante lógica de ajuste de intervalos de gestación, el sistema genera no solo la FPP, sino también una cronología detallada de etapas críticas: viabilidad fetal, desarrollo embrionario y umbilical, además de alertas para pruebas diagnósticas según la semana de gestación. Su valor radica en su capacidad para manejar escenarios complejos como ciclos irregulares, embarazos múltiples o concepciones asistidas, ofreciendo cálculos alternativos basados en mediciones ecográficas de vértice-nalgas (CRL) o fechas de transferencia embrionaria.",
   "usage_steps": [
-    "Ingrese la última menstruación",
-    "O ingrese la fecha de concepción",
-    "Ajuste la longitud del ciclo",
-    "Vea la fecha de parto",
-    "Siga los hitos"
+    "1. Introduce la fecha de última menstruación (FUM) usando el selector de calendario desplegable.",
+    "2. Ajusta la duración del ciclo menstrual mediante el campo numérico (por defecto: 28 días, rango: 21-35 días).",
+    "3. Ingresa la fecha y medida de la ecografía de primer trimestre (CRL en mm) si está disponible para recalculo.",
+    "4. Selecciona el método de concepción (natural, FIV, ICSI) desde el menú desplegable de opciones avanzadas.",
+    "5. Haz clic en 'Calcular FPP' para generar el resultado con intervalo de confianza de ±3 días.",
+    "6. Descarga el informe PDF con cronograma de hitos (screening de 12 semanas, morfológica, test de O'Sullivan)."
   ],
   "usage_examples": [
-    "Calcule la fecha de parto desde la última menstruación",
-    "Siga el embarazo semana a semana",
-    "Planifique la llegada del bebé"
+    "1. Una usuaria con ciclo irregular de 32 días introduce su FUM y datos de ecografía de 7 semanas (CRL: 12.5mm) para obtener una FPP ajustada.",
+    "2. Paciente que realizó FIV con transferencia de blastocisto el 15/03/2024 selecciona esta opción para calcular la FPP sumando 266 días a esa fecha.",
+    "3. Médico obstetra utiliza la herramienta para validar la edad gestacional mediante datos ecográficos antes del screening de aneuploidías.",
+    "4. Futura madre primeriza consulta el cronograma de hitos para programar estudios de sangre materna (BIOPAPP-A) y controles de crecimiento fetal."
   ]
 }

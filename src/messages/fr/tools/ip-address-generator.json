@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur d'Adresses IP est un outil en ligne pratique qui vous aide à réaliser rapidement diverses tâches. En utilisant le Générateur d'Adresses IP, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Ce outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur d'Adresses IP peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez le Générateur d'Adresses IP immédiatement pour expérimenter des services de outil en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Générateur d'Adresses IP est un outil technique conçu pour produire aléatoirement des adresses IPv4 et IPv6 conformes aux standards IETF. Il permet de générer à la fois des adresses publiques routables et des plages d'adresses privées (RFC 1918 pour IPv4, RFC 4193 pour IPv6), avec la possibilité de spécifier des préfixes CIDR pour contrôler les sous-réseaux. Ce générateur utilise un algorithme de chiffrement basé sur une source d'entropie système (comme /dev/urandom sous Unix) pour assurer l'unicité statistique des valeurs produites. Contrairement aux approches basées sur des listes préétablies, cet outil calcule dynamiquement les adresses en respectant les contraintes de format (par exemple, octets valides pour IPv4, notation hexadécimale pour IPv6) et les règles de classification (adresses link-local, multicast, etc.). Cela en fait un outil indispensable pour tester des applications réseau, simuler des topologies complexes ou valider des règles de pare-feu. Il est particulièrement utile pour les administrateurs système et développeurs souhaitant automatiser des tests de charge, vérifier la compatibilité IPv4/IPv6 ou créer des environnements de laboratoire virtuels avec des configurations réseaux variées.",
   "usage_steps": [
-    "Ouvrez la page du Générateur d'Adresses IP",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez la version du protocole (IPv4 ou IPv6) via le bouton radio en haut de l'interface.",
+    "Choisissez le type d'adresse (publique, privée ou aléatoire) dans le menu déroulant 'Catégorie'.",
+    "Spécifiez un préfixe CIDR (ex: /24 pour IPv4 ou /64 pour IPv6) dans le champ dédié pour limiter la plage de génération.",
+    "Activez/désactivez les options 'Format compressé' (IPv6 sans zéros redondants) et 'Afficher les métadonnées' selon vos besoins.",
+    "Définissez le nombre d'adresses à générer (1 à 1000) à l'aide du curseur 'Quantité'.",
+    "Cliquez sur le bouton 'Générer' pour obtenir les résultats instantanément dans la zone de texte, avec copie vers le presse-papiers disponible."
   ],
   "usage_examples": [
-    "Utilisez le Générateur d'Adresses IP pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur teste un pare-feu applicatif en générant 100 adresses IPv6 aléatoires pour valider le filtrage des paquets.",
+    "Un administrateur réseau simule une attaque DDoS en créant une liste d'adresses publiques IPv4 routables pour entraîner un IDS.",
+    "Un formateur configure un laboratoire virtuel avec 10 machines utilisant des adresses privées IPv4 dans le sous-réseau 172.16.0.0/16.",
+    "Un ingénieur en sécurité vérifie la robustesse d'un algorithme de géolocalisation IP en comparant des adresses publiques générées avec des bases de données existantes."
   ]
 }

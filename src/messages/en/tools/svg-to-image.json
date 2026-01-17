@@ -1,14 +1,17 @@
 {
-  "detailed_description": "SVG to Image is a practical online tool that helps you quickly complete various tasks. Using SVG to Image, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, SVG to Image can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use SVG to Image immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The SVG to Image tool enables developers and designers to programmatically convert scalable vector graphics (SVGs) into pixel-accurate PNG, JPEG, or WebP raster formats. This conversion process involves parsing SVG XML data through a rendering engine, which interprets vector paths, gradients, strokes, and embedded CSS styles to generate a bitmap representation. The tool utilizes headless rendering via libraries like Cairo or librsvg to maintain fidelity, ensuring complex elements such as Bezier curves, opacity masks, and text paths are accurately rasterized. Users require this tool for scenarios like optimizing assets for platforms that lack SVG support (e.g., legacy email clients), generating fixed-dimension thumbnails for content management systems, or creating resolution-independent assets for print workflows. Technical workflows include programmatically adjusting pixel density (DPI), applying alpha channel compression, or batch-processing SVGs with consistent color profiles. The tool also supports specifying viewport dimensions, enabling precise control over aspect ratio preservation and output resolution scaling.",
   "usage_steps": [
-    "Open the SVG to Image tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Upload an SVG file using the drag-and-drop interface or file explorer integration.",
+    "Select output format (PNG, JPEG, or WebP) from the format dropdown menu.",
+    "Adjust rendering settings: specify width/height in pixels or percentage scale, set DPI (72–600), and choose background color (including transparent).",
+    "Toggle advanced options like text-as-shape conversion or embedded font rasterization for cross-platform consistency.",
+    "Preview the rendered output in the interactive canvas panel to validate alignment and quality.",
+    "Initiate conversion by clicking 'Render & Download,' with output files automatically saved to your device in the selected format."
   ],
   "usage_examples": [
-    "Use SVG to Image to process your data",
-    "Get processing results quickly without waiting"
+    "A web developer converts SVG icons to WebP format to reduce page load times in a progressive web app (PWA) targeting Chrome users.",
+    "A graphic designer exports a layered SVG logo to 300 DPI PNGs with transparent backgrounds for inclusion in a print-ready PDF layout.",
+    "A DevOps engineer automates batch conversion of SVG diagrams to JPEG thumbnails for a documentation portal hosted on AWS S3.",
+    "A game designer scales SVG assets to 2x/3x resolutions using the DPI slider to ensure crisp rendering on retina displays for a Unity WebGL project."
   ]
 }

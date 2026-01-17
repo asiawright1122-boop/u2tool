@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Minificateur JSON est un outil en ligne pratique qui vous aide à effectuer rapidement diverses tâches. En utilisant le Minificateur JSON, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Minificateur JSON peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements se font localement dans votre navigateur, garantissant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez immédiatement le Minificateur JSON pour expérimenter des services de tool en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le minifieur JSON est un outil technique qui permet de réduire la taille des fichiers JSON en supprimant les espaces blancs, les sauts de ligne, les commentaires et autres caractères non essentiels. Contrairement à une simple suppression de whitespaces, cet outil utilise un analyseur syntaxique basé sur un AST (arbre syntaxique abstrait) pour identifier et conserver la structure valide du JSON tout en optimisant les paires clé-valeur. Par exemple, les chaînes de caractères avec des guillemets inutiles sont converties en clés compactes, et les tableaux ou objets imbriqués sont traités récursivement. Ce processus est crucial pour les développeurs cherchant à améliorer les performances web en réduisant la bande passante lors des appels API ou en optimisant le chargement des configurations JSON dans des applications front-end. L'outil intègre également un algorithme de détection des doublons pour les clés et une gestion avancée des caractères d'échappement, ce qui le distingue des minifieurs basiques. Enfin, le résultat est généré en mémoire sans écriture disque, assurant rapidité et sécurité.",
   "usage_steps": [
-    "Ouvrez la page du Minificateur JSON",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'outil via le menu 'Encodage' sur le site.",
+    "Collez votre JSON dans la zone de texte ou téléchargez un fichier via le bouton 'Importer'.",
+    "Activez/désactivez les options avancées : 'Supprimer les commentaires', 'Conserver les guillemets simples', ou 'Mode compact absolu'.",
+    "Cliquez sur 'Minifier' pour lancer le traitement basé sur l'AST.",
+    "Examinez la sortie dans l'éditeur de droite, avec mise en évidence syntaxique désactivée par défaut.",
+    "Téléchargez le résultat au format .json ou copiez-le via le presse-papiers sécurisé."
   ],
   "usage_examples": [
-    "Utilisez le Minificateur JSON pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Optimiser un fichier de configuration JSON de 500 Ko à 150 Ko pour un déploiement sur un CDN.",
+    "Réduire la taille des payloads API dans une application mobile utilisant des requêtes fréquentes.",
+    "Nettoyer un JSON généré par un outil de scraping contenant des espaces inconsistants.",
+    "Préparer un exemple de données JSON à intégrer dans un tutoriel technique, limitant les sauts de ligne."
   ]
 }

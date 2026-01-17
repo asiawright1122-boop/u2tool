@@ -1,14 +1,17 @@
 {
-  "detailed_description": "PDF a Texto es una herramienta online gratuita que extrae contenido de texto de documentos PDF. Sube tu archivo PDF y obtén texto limpio y legible instantáneamente. Soporta PDFs multi-pagina con marcadores de página claros. Todo el procesamiento se realiza en tu navegador - tus archivos nunca se suben a ningún servidor.",
+  "detailed_description": "La herramienta PDF a Texto permite la extracción precisa de contenido textual de archivos PDF mediante técnicas avanzadas de análisis sintáctico de documentos. Utiliza bibliotecas especializadas como PDFBox o Poppler para descomprimir estructuras binarias del formato PDF, identificar streams de texto y convertirlos en secuencias de caracteres UTF-8. El proceso incluye la detección automática de codificación de caracteres, el manejo de fuentes incrustadas y la preservación del formato lógico del contenido. Soporta documentos multipágina manteniendo marcadores de posición y estructura jerárquica mediante el análisis de nodos del árbol de contenido del PDF. Esta herramienta es esencial para migrar datos no estructurados a bases de datos, realizar procesamiento NLP en documentos técnicos o extraer metadatos para sistemas de gestión documental. Incorpora motor OCR Tesseract para documentos escaneados y permite configurar parámetros como el idioma de procesamiento, densidad de muestreo de imágenes y tratamiento de tablas complejas. El resultado se entrega en formato plano con separadores de página explícitos, facilitando su integración con pipelines de procesamiento automatizadas.",
   "usage_steps": [
-    "Abre la página de la herramienta PDF a Texto",
-    "Arrastra y suelta un archivo PDF o haz clic para seleccionarlo",
-    "Espera a que finalice la extracción de texto",
-    "Copia el texto extraído o descárgalo como archivo TXT"
+    "1. Haga clic en el botón 'Subir archivo PDF' y seleccione su documento desde el explorador de archivos",
+    "2. Active la opción 'Procesar OCR' en la sección 'Configuración avanzada' si el PDF contiene imágenes escaneadas",
+    "3. Marque las casillas de página específicas en la miniatura generada o seleccione el rango de páginas a procesar",
+    "4. Configure parámetros técnicos en el menú desplegable: seleccione idioma principal y activación de detección automática de tablas",
+    "5. Presione 'Iniciar extracción' para ejecutar el motor de análisis sintáctico y visualice el progreso en la barra de estado",
+    "6. Descargue el archivo de texto resultante con marcadores de página y estructura preservada mediante el botón 'Guardar salida'"
   ],
   "usage_examples": [
-    "Extrae texto de documentos escaneados",
-    "Convierte informes PDF en texto editable",
-    "Copia contenido de libros electrónicos PDF"
+    "Un investigador académico extrae datos de artículos científicos para crear un corpus lingüístico estructurado",
+    "Un abogado convierte contratos físicos escaneados en texto editable para realizar búsquedas de cláusulas específicas",
+    "Un desarrollador automatiza la migración de documentación técnica PDF a un sistema CMS con procesamiento posterior",
+    "Un analista financiero transforma informes de balances anuales en formato tabular para importarlos a herramientas de BI"
   ]
 }

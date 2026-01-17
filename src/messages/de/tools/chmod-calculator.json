@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Chmod-Rechner ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Chmod-Rechner können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell damit beginnen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der Chmod-Rechner Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitung erfolgt lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Chmod-Rechner sofort, um schnell, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Chmod Calculator ist ein spezialisiertes Online-Tool, das Entwicklern und Systemadministratoren dabei hilft, Linux/Unix-Dateiberechtigungen in oktaler und symbolischer Notation zu berechnen. Diese Funktion ist besonders wichtig, da die korrekte Konfiguration von Dateiberechtigungen entscheidend für die Sicherheit und Funktionalität von Systemen ist. Benutzer können damit sicherstellen, dass Dateien und Verzeichnisse genau die Berechtigungen haben, die benötigt werden, ohne Risiken für die Systemintegrität einzugehen. Dieses Tool erlaubt es, Berechtigungen in beiden Notationen zu verwalten, was bei der Verwaltung komplexer Dateisysteme unerlässlich ist. Die Genauigkeit und Leichtigkeit der Berechnung sparen viel Zeit und vermeiden Fehler, die durch manuelle Berechnungen entstehen können. Die oktale Notation wird in der Regel in Skripten und Befehlen verwendet, während die symbolische Notation für direkte Verwendung in der Shell besser geeignet ist. Der Chmod Calculator unterstützt auch die Umwandlung von einer Notation in die andere, was bei der Überprüfung und Anpassung von Berechtigungen sehr hilfreich ist.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Chmod-Rechners",
-    "Geben Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Ändern Sie die Tool-Einstellungen und -Optionen, wenn erforderlich",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Öffnen Sie die Seite des Chmod Calculators in Ihrem Webbrowser und gehen Sie zur Registerkarte 'Berechtigungen berechnen'.",
+    "Wählen Sie in der Dropdown-Liste 'Notation' die gewünschte Eingabeform aus, entweder 'Oktal' oder 'Symbolisch'.",
+    "Geben Sie die Berechtigungen in das Eingabefeld ein. Bei oktaler Notation sind das 3-stellige Zahlen (z.B. 755), bei symbolischer Notation sind das Zeichenketten (z.B. 'rwxr-xr-x').",
+    "Klicken Sie auf den Button 'Berechnen', um die Berechtigungen umzurechnen oder zu überprüfen.",
+    "Die Berechtigungen werden in der gewählten Notation angezeigt, und es wird eine detaillierte Erläuterung der Berechtigungen in einer Tabelle dargestellt, die die Berechtigungen für Besitzer, Gruppe und Andere aufschlüsselt.",
+    "Falls erforderlich, können Sie die Berechtigungen direkt in der Shell oder in einem Skript verwenden, indem Sie die oktale oder symbolische Notation entsprechend anwenden."
   ],
   "usage_examples": [
-    "Verwenden Sie den Chmod-Rechner, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie die Verarbeitungsresultate schnell, ohne zu warten"
+    "Ein Systemadministrator möchte sicherstellen, dass eine Konfigurationsdatei nur von dem Benutzer gelesen und geschrieben werden kann, der sie besitzt, während andere Benutzer nur Leserechte haben. Er verwendet den Chmod Calculator, gibt '640' ein und erhält die symbolische Notation 'rw-r-----'.",
+    "Ein Entwickler erstellt ein Webanwendungsverzeichnis und muss sicherstellen, dass die Webserverprozesse die Dateien auslesen und schreiben können, ohne dass andere Benutzer darauf zugreifen können. Er verwendet den Chmod Calculator, gibt '750' ein und erhält die symbolische Notation 'rwxr-x---'.",
+    "Ein Benutzer erstellt ein gemeinsames Projektverzeichnis, das von mehreren Teammitgliedern bearbeitet werden soll, während andere Benutzer keine Schreibrechte haben sollen. Er verwendet den Chmod Calculator, gibt '775' ein und erhält die symbolische Notation 'rwxrwxr-x'.",
+    "Eine IT-Abteilung implementiert strenge Sicherheitsrichtlinien und muss sicherstellen, dass einige Systemdateien nur vom Root-Benutzer gelesen und geschrieben werden können. Sie verwenden den Chmod Calculator, geben '600' ein und erhalten die symbolische Notation 'rw-------'."
   ]
 }

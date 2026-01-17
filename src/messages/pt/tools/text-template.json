@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Modelo de Texto é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Modelo de Texto, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Modelo de Texto pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Modelo de Texto imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Text Template é uma poderosa ferramenta de manipulação de textos que permite aos desenvolvedores e profissionais de TI substituir variáveis em modelos de texto por valores específicos. Essa substituição é realizada de forma dinâmica, usando expressões regulares e lógica de programação, o que torna a ferramenta extremamente versátil. A necessidade de uma ferramenta como o Text Template surge em vários cenários, como a geração de documentos personalizados, a criação de códigos-fonte a partir de modelos, e a automatização de mensagens em sistemas de comunicação. Por exemplo, um desenvolvedor pode usar o Text Template para gerar automaticamente scripts SQL a partir de um modelo, substituindo variáveis como nomes de tabelas e campos por valores dinâmicos. A ferramenta opera através de um mecanismo de parsing que identifica as variáveis no texto e as substitui pelas entradas fornecidas pelo usuário, garantindo que o texto resultante esteja formatado corretamente.",
   "usage_steps": [
-    "Abra a página da ferramenta Modelo de Texto",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta Text Template no site e clique no botão 'Novo Modelo'.",
+    "No editor de texto, insira o modelo base que deseja modificar, incluindo as variáveis entre chaves, por exemplo, {nome}.",
+    "Na seção 'Valores de Variáveis', adicione os nomes das variáveis e os respectivos valores que serão substituídos no texto.",
+    "Clique no botão 'Aplicar Substituições' para que a ferramenta processe o modelo e substitua as variáveis pelos valores fornecidos.",
+    "Revise o resultado no campo 'Texto Processado' para garantir que as substituições foram realizadas corretamente.",
+    "Salve o texto processado ou copie-o para uso em outros sistemas ou aplicações."
   ],
   "usage_examples": [
-    "Use Modelo de Texto para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor de software pode criar um modelo de script SQL para inserir dados em uma tabela, utilizando variáveis para nomes de colunas e valores. A ferramenta substituirá essas variáveis com dados específicos, gerando um script personalizado para cada inserção.",
+    "Uma equipe de marketing pode usar o Text Template para criar mensagens personalizadas em massa para uma campanha de e-mail. Variáveis como nome do destinatário e promoções específicas podem ser substituídas para criar e-mails únicos para cada cliente.",
+    "Um administrador de sistemas pode automatizar a criação de arquivos de configuração para vários servidores, usando um modelo com variáveis para detalhes específicos de cada servidor, como endereços IP e nomes de host.",
+    "Um escritor técnico pode gerar documentação personalizada para diferentes produtos, utilizando um modelo com variáveis para nomes de produtos, especificações técnicas e instruções de uso."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Regex Escape is a practical online tool that helps you quickly complete various tasks. Using Regex Escape, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Regex Escape can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Regex Escape immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Regex Escape tool specializes in handling metacharacters that have special meanings in regular expressions, such as . ^ $ * + ? { } [ ] \\ | ( ). When constructing regex patterns dynamically or processing user input containing these characters, escaping becomes critical to prevent unintended behavior. This tool parses input strings and systematically adds backslash escapes before these special characters for literal matching. Conversely, it can unescape existing patterns by removing redundant backslashes when reversing the process. Developers often encounter scenarios where raw text needs conversion into a regex-safe format, such as generating dynamic patterns from user inputs or sanitizing search terms. The tool's engine uses character-class detection algorithms to identify and handle special characters with precision, ensuring regex patterns compile correctly without manual intervention. Its bidirectional capability supports workflows requiring pattern conversion between literal strings and executable regex syntax.",
   "usage_steps": [
-    "Open the Regex Escape tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the 'Input Text' textarea and paste the string requiring escaping/unescaping",
+    "Select 'Escape Special Characters' or 'Unescape Existing Pattern' using the mode toggle",
+    "Click the 'Process' button to execute the transformation",
+    "Review the modified string in the 'Output' section with syntax highlighting",
+    "Copy the result to clipboard via the 'Copy' button for immediate implementation",
+    "Use 'Clear All' to reset fields for subsequent operations"
   ],
   "usage_examples": [
-    "Use Regex Escape to process your data",
-    "Get processing results quickly without waiting"
+    "Escaping a URL pattern: Converting 'https://example.com/page?query=test' to 'https:\\/\\/example\\.com\\/page\\?query\\=test' for use in a regex router",
+    "Unescaping a stored regex: Processing '\\d{3}-\\d{2}-\\d{4}' back to 'd{3}-d{2}-d{4}' for display in a form validation rule viewer",
+    "Sanitizing user search input: Transforming 'C++ development' to 'C\\+\\+ development' to safely integrate into application search functionality",
+    "Converting file paths to regex: Escaping 'C:\\Users\\Name\\*.log' into 'C:\\\\Users\\\\Name\\\\.*\\.log' for log parsing applications"
   ]
 }

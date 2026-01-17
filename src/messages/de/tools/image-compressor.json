@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Bildkompressor ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Bildkompressor können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder einfach Benutzer sind, kann der Bildkompressor Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Webbrowser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Bildkompressor sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu profitieren.",
+  "detailed_description": "Der Image Compressor optimiert Bilddateien durch fortschrittliche Algorithmen zur Datenkompression, wobei sowohl verlustbehaftete als auch verlustfreie Methoden eingesetzt werden. Technisch basiert das Tool auf der diskreten Cosinus-Transformation (DCT) für JPEG-Dateien und nutzt DEFLATE-Kompression für PNG-Formate. Besonders bei hochaufgelösten Fotografien reduziert der Compressor die Dateigröße durch Farbraumreduktion (z.B. Konvertierung von RGB zu YCbCr) und adaptive Quantisierung, während kritische Bilddaten wie Kanten und Kontraste durch spektrale Analyse priorisiert werden. Entwickler profitieren von dieser Lösung, um Webseiten-Ladezeiten zu verbessern, Speicherplatz in Cloud-Storage zu optimieren oder Bilder für mobile Anwendungen mit begrenztem Datenvolumen vorzubereiten. Das Tool unterscheidet sich durch die Integration von WebAssembly-basierten Kompressionsbibliotheken, die serverseitige Verarbeitung ohne Qualitätsverluste ermöglichen. Zusätzlich wird Metadaten (EXIF, IPTC) automatisch bereinigt, um Datenschutzanforderungen zu erfüllen. Die Kompression erfolgt in Echtzeit durch parallele Verarbeitung mehrerer Dateien via Service Workers, wodurch das Tool besonders für Batch-Processing in E-Commerce oder Content-Management-Systemen geeignet ist.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Bildkompressors",
-    "Geben Sie den Inhalt ein oder fügen Sie ihn ein, den Sie verarbeiten möchten",
-    "Passen Sie die Tooloptionen und Einstellungen nach Bedarf an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Fügen Sie die verarbeiteten Ergebnisse kopieren oder herunterladen"
+    "Ziehen Sie Ihre Bilddateien in den Ladebereich oder klicken Sie auf 'Datei auswählen' für mehrfache Uploads.",
+    "Wählen Sie im Format-Wahldropdown zwischen JPEG, PNG oder WebP als Zielformat für die Kompression.",
+    "Passen Sie den Qualitätsregler an: 10-30 für stark komprimierte Vorschauen, 70-85 für balancierte Qualität.",
+    "Aktivieren Sie die Checkbox 'Farbraumoptimierung', um RGB zu YCbCr-Konvertierung zu erzwingen.",
+    "Entfernen Sie überflüssige Metadaten durch Klick auf 'EXIF-Daten löschen'.",
+    "Laden Sie die komprimierten Bilder als ZIP-Archiv herunter oder kopieren Sie den Direktlink für Cloud-Integration."
   ],
   "usage_examples": [
-    "Verwenden Sie den Bildkompressor, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Ein Webentwickler reduziert eine 5MB-JPEG-Datei auf 1.2MB für eine Landingpage mit Lighthouse-Score-Optimierung.",
+    "Ein Fotograf komprimiert 200 Rohdateien auf 30% ihrer Originalgröße, um sie per E-Mail an einen Kunden zu senden.",
+    "Ein E-Commerce-Manager erstellt automatisch optimierte Thumbnail-Versionen seiner Produktbilder für mobile Nutzer.",
+    "Ein Blogger konvertiert PNG-Bildschirmfotos in WebP, um die Ladezeit seines WordPress-Blogs um 40% zu verbessern."
   ]
 }

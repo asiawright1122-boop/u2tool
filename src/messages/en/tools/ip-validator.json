@@ -1,14 +1,17 @@
 {
-  "detailed_description": "IP Address Validator is a practical online tool that helps you quickly complete various tasks. Using IP Address Validator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, IP Address Validator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use IP Address Validator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The IP Address Validator performs precise syntactic and semantic analysis of IPv4 and IPv6 addresses using RFC-compliant parsing algorithms. This tool not only verifies standard format requirements but also checks for network-specific validity including proper CIDR notation, hexadecimal group validation for IPv6, and reserved address space identification. The validator employs dual-stack methodology to handle both address families simultaneously, detecting anomalies like embedded IPv4 addresses in IPv6 format (e.g., ::ffff:192.168.1.1) and identifying potential fragmentation issues in jumbograms. Technical professionals benefit from its ability to detect subtle errors in subnet masks, validate interface identifiers, and confirm conformance with modern routing requirements. Developers building zero-trust networks or implementing strict access controls can verify complex patterns such as IPv6 scoped addresses (fe80::/10) and multicast address scopes. The validator also provides geolocation metadata and AS number lookups through integrated WHOIS queries, making it indispensable for network troubleshooting, security audits, and protocol implementation verification.",
   "usage_steps": [
-    "Open the IP Address Validator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Enter the IP address in the syntax-highlighted input field with real-time format suggestions",
+    "Select validation mode using the 'Strict RFC 8200' checkbox for IPv6 or 'Legacy IPv4 Only' radio button",
+    "Toggle 'Show Binary Conversion' to visualize address structure in 32-bit/128-bit formats",
+    "Click 'Analyze Address' to trigger multi-phase validation pipeline",
+    "Review results in the collapsible panel displaying: address family, subnet membership, IANA allocation status, and protocol-specific anomalies",
+    "Use 'Copy Technical Report' button to export validation findings in JSON format for documentation"
   ],
   "usage_examples": [
-    "Use IP Address Validator to process your data",
-    "Get processing results quickly without waiting"
+    "Network engineer validating BGP configuration by checking if 2001:db8::/32 prefix adheres to RFC3849 documentation standards",
+    "Web developer verifying user input contains no malformed IPv6 addresses with invalid characters in URI validation",
+    "Security analyst confirming whether 198.51.100.254 falls within TEST-NET-2 range for penetration testing scenarios",
+    "Cloud architect debugging IPv6 deployment issues by validating proper interface identifier format in link-local addresses"
   ]
 }

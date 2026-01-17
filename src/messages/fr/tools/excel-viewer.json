@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Visionneuse Excel est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant Visionneuse Excel, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, Visionneuse Excel peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, garantissant la sécurité de vos données et ne sera pas téléchargé sur un serveur. Utilisez Visionneuse Excel immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le visualiseur Excel est un outil web permettant d'ouvrir, d'analyser et de manipuler des fichiers Excel (XLSX, XLS, CSV) sans logiciel local. Conçu avec des bibliothèques JavaScript comme SheetJS et une architecture basée sur le DOM, il convertit les structures binaires (BIFF) ou XML des fichiers Excel en une grille interactive. Les utilisateurs peuvent trier les colonnes via des algorithmes de comparaison personnalisés, appliquer des filtres avancés (y compris des critères multiples) et naviguer entre les feuilles de calcul avec un sélecteur dynamique. Le traitement s'effectue entièrement côté client, garantissant confidentialité des données et compatibilité avec les fichiers volumineux grâce à une pagination virtuelle. Cet outil est indispensable pour les professionnels souhaitant auditer des rapports financiers, analyser des jeux de données de vente ou collaborer sur des tableaux sans dépendre de logiciels propriétaires. Il intègre également une API de rendu permettant de personnaliser l'affichage des cellules (formatage conditionnel, masquage de données).",
   "usage_steps": [
-    "Ouvrez la page de l'outil Visionneuse Excel",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Cliquez sur le bouton 'Importer' pour charger votre fichier Excel (formats XLSX, XLS, CSV).",
+    "Utilisez le menu déroulant 'Feuilles' pour basculer entre les onglets du classeur.",
+    "Cliquez sur l'en-tête d'une colonne pour activer le tri ascendant/descendant.",
+    "Accédez à 'Filtres avancés' pour configurer des règles multiples via des expressions régulières.",
+    "Sélectionnez des cellules et utilisez l'option 'Exporter vers CSV' pour extraire des sous-ensembles de données.",
+    "Activez 'Mode lecture seule' pour verrouiller les cellules et éviter les modifications accidentelles."
   ],
   "usage_examples": [
-    "Utilisez Visionneuse Excel pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un comptable vérifie des transactions bancaires en filtrant les montants supérieurs à 10 000 € et en triant par date d'opération.",
+    "Un chef de projet analyse un tableau Gantt en appliquant un filtre par équipe et en comparant les jalons via le tri chronologique.",
+    "Un enseignant évalue les résultats scolaires en masquant les colonnes sensibles et en exportant les statistiques moyennes.",
+    "Un data scientist prépare un dataset en supprimant les doublons via des filtres conditionnels avant l'import dans Python."
   ]
 }

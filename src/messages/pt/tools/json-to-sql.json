@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to SQL é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando JSON to SQL, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use eficientemente. Seja desenvolvedor, designer ou usuário geral, JSON to SQL pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados a qualquer servidor. Use JSON to SQL imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O conversor JSON para SQL automatiza a transformação de arrays JSON em instruções SQL INSERT, com suporte opcional para geração de esquema CREATE TABLE. Ferramenta essencial para desenvolvedores que precisam migrar dados estruturados de APIs, arquivos de log ou sistemas NoSQL para bancos de dados relacionais. O parser inteligente identifica automaticamente tipos de dados (VARCHAR, INTEGER, DATE), detecta campos aninhados para normalização e sugere chaves primárias com base em padrões de identificadores únicos. Utiliza algoritmos de inferência de esquema para criar relações entre tabelas através de chaves estrangeiras quando necessário. A ferramenta também permite ajustar delimitadores, definir collation e escolher entre diferentes dialetos SQL (MySQL, PostgreSQL, SQLite, SQL Server). Diferente de conversores básicos, preserva a integridade referencial em dados hierárquicos complexos, gerando instruções SQL otimizadas para bulk inserts ou transações atômicas. Ideal para migrações de dados, preparação de ambientes de teste ou integração de microserviços com bancos de dados tradicionais.",
   "usage_steps": [
-    "Abra a página do JSON to SQL",
-    "Cole ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Clique em 'Importar JSON' para carregar seu arquivo ou cole o conteúdo no editor de texto.",
+    "2. Use o botão 'Analisar Estrutura' para identificar automaticamente tipos de dados e relações hierárquicas.",
+    "3. Ajuste as configurações em 'Opções de Saída' para definir nome da tabela, prefixo de chaves estrangeiras e tamanho máximo de VARCHAR.",
+    "4. Selecione o dialeto SQL desejado (MySQL, PostgreSQL, etc.) no menu suspenso 'Formato de Saída'.",
+    "5. Clique em 'Gerar SQL' para criar as instruções INSERT e CREATE TABLE no campo de pré-visualização.",
+    "6. Use 'Exportar Script' para baixar o arquivo .sql ou copie o conteúdo diretamente do campo de saída."
   ],
   "usage_examples": [
-    "Use JSON to SQL para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Migrar dados de usuários exportados de uma API REST para uma tabela MySQL, mantendo relações com tabelas de endereços e pedidos.",
+    "Converter logs de aplicativos mobile em formato JSON para análise em data warehouse SQL com particionamento por data.",
+    "Gerar scripts de seed para inicializar banco de dados de testes em projetos Django a partir de datasets JSON pré-existentes.",
+    "Importar catálogos de produtos e categorias aninhadas de e-commerce em formato JSON para um esquema relacional PostgreSQL com chaves estrangeiras."
   ]
 }

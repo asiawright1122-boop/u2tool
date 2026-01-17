@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Unicode-Konverter ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Unicode-Konverter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der Unicode-Konverter Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Unicode-Konverter sofort, um schnell, sicher und kostenlosen Online-Tooldienst zu nutzen.",
+  "detailed_description": "Der Unicode Converter ist ein präzises Werkzeug zur bidirektionalen Konvertierung von Text zwischen verschiedenen Unicode-Encodings. Technisch ermöglicht er die Transformation von Klartext zu UTF-8-, UTF-16- oder UTF-32-Codepunkten in dezimaler, hexadezimaler oder binärer Darstellung sowie die Rückkonvertierung. Entwickler benötigen dieses Tool, um spezifische Probleme zu lösen, wie z.B. die Handhabung von Sonderzeichen in APIs, die Fehleranalyse bei falscher Zeichenkodierung in Protokolldateien oder die Vorbereitung von Daten für XML/JSON-Formate. Der Converter arbeitet clientseitig in JavaScript, nutzt den String.prototype.charCodeAt()-Mechanismus für die Analyse und generiert präzise Codepunkte durch bitweise Operationen. Besonders bei der Verarbeitung von Emoji-Zeichen oder nicht-lateinischen Schriftsystemen (z.B. Kyrillisch, Kanji) zeigt sich seine Stärke durch korrekte Surrogatpaar-Verarbeitung im UTF-16-Modus. Die Unterstützung von BOM-Markern (Byte Order Mark) bei Big-/Little-Endian-Konversionen macht ihn auch für Low-Level-Datenprotokolle unverzichtbar.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Unicode-Konverters",
-    "Geben Sie den zu bearbeitenden Inhalt in das Eingabefeld ein oder kopieren Sie ihn ein",
-    "Anpassen Sie die Tooloptionen und Einstellungen, wenn nötig",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Geben Sie den zu konvertierenden Text in das linke Eingabefeld ein oder fügen Sie ihn ein.",
+    "Wählen Sie im Abschnitt 'Eingabekodierung' zwischen 'UTF-8', 'UTF-16' oder 'UTF-32' aus.",
+    "Aktivieren Sie optional die Checkbox 'Hexadezimalformat anzeigen', um Ergebnisse in 0xNNNN-Notation zu erhalten.",
+    "Wählen Sie im Dropdown 'Zielkodierung' die gewünschte Ausgabedatenform (z.B. dezimale Codepunkte, binäre Sequenzen).",
+    "Klicken Sie auf 'Konvertieren', um das Ergebnis in der rechten Anzeigebox zu generieren.",
+    "Nutzen Sie den 'Zwischenablage'-Button, um die konvertierten Daten für die Integration in Code-Editor zu kopieren."
   ],
   "usage_examples": [
-    "Verwenden Sie den Unicode-Konverter, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Konvertierung von Umlauten (äöü) in UTF-8-Hexadezimalwerte für die Verwendung in URL-Parametern.",
+    "Analyse von beschädigten JSON-Daten durch Identifizierung falsch kodierter Codepunkte im UTF-16-Format.",
+    "Erzeugung korrekter XML-Entities mit dezimalen Unicode-Referenzen für Sonderzeichen wie © oder ∑.",
+    "Vorbereitung von Zeichenketten für Legacy-Systeme durch Transformation in 4-Byte-UTF-32 Big Endian Sequenzen."
   ]
 }

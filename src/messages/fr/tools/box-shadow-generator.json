@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Ombre Box est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. Avec le Générateur de Ombre Box, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Ombre Box peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et empêchant leur upload sur n'importe quel serveur. Utilisez immédiatement le Générateur de Ombre Box pour expérimenter des services d'outils en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "Le Box Shadow Generator est un outil de développement CSS permettant de créer et d'ajuster des ombres portées pour les éléments HTML. Techniquement, il génère des valeurs conformes à la propriété CSS `box-shadow`, prenant en charge les paramètres suivants : décalage horizontal (horizontal offset), décalage vertical (vertical offset), rayon de flou (blur radius), rayon d'étendue (spread radius), couleur (avec support RGBA), et le type d'ombre (interne ou externe). Les développeurs ont besoin de cet outil pour visualiser en temps réel l'impact des ombres sur la hiérarchie visuelle d'une page, notamment pour des composants comme les cartes, les boutons ou les modales. Contrairement au codage manuel, il évite les essais-erreurs fastidieux grâce à un éditeur visuel interactif. L'outil intègre un moteur de rendu CSS en temps réel, simulant l'application de l'ombre sur un conteneur prévisualisé, et exporte le code CSS copiable avec des valeurs optimisées. Il supporte également les ombres multiples via un système de calques superposables, avec une gestion précise des opacités et des dégradés.",
   "usage_steps": [
-    "Ouvrez la page du Générateur de Ombre Box",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez un style prédéfini (ex. 'Carte 3D', 'Bouton surélevé') ou démarrez à partir d'une ombre basique.",
+    "Ajustez le décalage horizontal via un curseur pour positionner l'ombre à gauche ou à droite de l'élément.",
+    "Modifiez le décalage vertical pour contrôler la direction vers le haut ou le bas de l'ombre.",
+    "Réglez le rayon de flou pour définir la netteté ou la diffusion de l'ombre via un champ numérique.",
+    "Utilisez le sélecteur de couleur pour choisir un code RGBA ou HEX, avec un aperçu en direct de l'effet.",
+    "Activez l'option 'Ombre interne' (inset) ou ajoutez plusieurs ombres en cliquant sur le bouton '+ Couche' pour créer des effets complexes."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Ombre Box pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Créer une ombre subtile pour un composant de type 'card' dans une interface Material Design.",
+    "Générer un effet de surbrillance dynamique sur un bouton au survol (hover) avec un dégradé d'ombres.",
+    "Simuler un effet 'neumorphisme' en superposant deux ombres avec des paramètres opposés et une transparence ajustée.",
+    "Concevoir une bordure d'ombre interne pour encadrer une galerie d'images avec un léger effet de profondeur."
   ]
 }

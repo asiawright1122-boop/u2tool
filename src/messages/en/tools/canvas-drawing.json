@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Canvas Drawing is a practical online tool that helps you quickly complete various tasks. Using Canvas Drawing, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Canvas Drawing can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Canvas Drawing immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Canvas Drawing tool leverages HTML5 Canvas API for real-time raster graphics manipulation, offering developers a programmatic interface to create and edit pixel-based artwork. This tool utilizes 2D rendering context for path drawing with configurable stroke properties, enabling precise control over line caps, join styles, and composite operations. Developers can access raw pixel data arrays for advanced image processing tasks like thresholding or edge detection. The eraser tool implements alpha compositing with destination-out operations, allowing non-destructive removal of drawing elements. Built-in layer management supports multiple canvas elements stacked with z-index control, ideal for complex illustrations requiring separation of background/foreground elements. This tool addresses needs for lightweight prototyping of UI elements, creation of technical diagrams, or teaching HTML5 Canvas API concepts through immediate visual feedback. The tool's state is maintained through JavaScript object representations of drawing paths, enabling serialization for version control or collaboration workflows. All operations occur client-side with WebAssembly acceleration for performance-critical functions like real-time brush smoothing algorithms.",
   "usage_steps": [
-    "Open the Canvas Drawing tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the tool and select 'Canvas Setup' to define resolution (e.g., 1024x768) and background color using HEX input",
+    "Choose brush tool and configure stroke width (1-50px), opacity (0-100%), and blending mode (normal/multiply/screen)",
+    "Enable 'Path Smoothing' in settings to apply Catmull-Rom spline interpolation to brush strokes",
+    "Use eraser tool with adjustable feathering (0-20px) to remove pixels through canvas compositing operations",
+    "Access 'Layer Manager' to create new transparent layers, adjust stacking order, or merge visible layers",
+    "Export artwork using 'Save As' options including PNG-24 with alpha, SVG path data, or base64-encoded string"
   ],
   "usage_examples": [
-    "Use Canvas Drawing to process your data",
-    "Get processing results quickly without waiting"
+    "A web developer rapidly prototyping custom form controls with pixel-perfect precision before CSS implementation",
+    "Creating technical documentation diagrams with programmatically generated annotations and callouts",
+    "Teaching HTML5 Canvas API by visually demonstrating transformation matrices and path operations",
+    "Designing game sprites with layered animation frames for HTML5 game development workflows"
   ]
 }

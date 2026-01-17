@@ -1,15 +1,17 @@
 {
-  "detailed_description": "La Calculadora de Concreto estima el volumen de concreto necesario para tu proyecto.",
+  "detailed_description": "El Calculador de Hormigón es una herramienta técnica diseñada para determinar con precisión el volumen de hormigón necesario en proyectos de construcción estructural. Este instrumento permite calcular volúmenes para tres elementos clave: losas rectangulares, columnas cilíndricas y cimientos trapezoidales, aplicando fórmulas geométricas específicas (volumen = área × altura para losas, πr²×h para columnas circulares y (base mayor + base menor)/2 × altura × longitud para cimientos). La herramienta incorpora conversión automática entre unidades métricas (metros, centímetros) y unidades anglosajonas (pies, pulgadas), permitiendo ajustes de densidad del hormigón (2400 kg/m³ por defecto) para calcular cargas estructurales. Es esencial para ingenieros civiles y contratistas que requieren optimizar recursos, evitar desperdicios y garantizar la integridad estructural mediante cálculos tridimensionales que consideran factores como el factor de seguridad y la resistencia a compresión del material. Su motor matemático incluye validaciones para dimensiones no válidas y ofrece reportes de error en tiempo real.",
   "usage_steps": [
-    "Seleccionar tipo de proyecto",
-    "Ingresar dimensiones",
-    "Elegir sistema de unidades",
-    "Ver volumen necesario",
-    "Ver bolsas requeridas"
+    "1. Selecciona el tipo de elemento en el menú desplegable: 'Losas', 'Columnas' o 'Cimientos'.",
+    "2. Ingresa las dimensiones en los campos numéricos: longitud, ancho, altura (o radio para columnas circulares).",
+    "3. Elige la unidad de medida en los selectores individuales (m, cm, ft o in) según el sistema requerido.",
+    "4. Ajusta el valor de densidad del hormigón en el campo habilitado si se requiere una especificación técnica diferente.",
+    "5. Haz clic en el botón 'Calcular Volumen' para ejecutar el algoritmo basado en fórmulas geométricas específicas.",
+    "6. Revisa los resultados en el panel de salida: volumen en m³, peso equivalente y recomendaciones de seguridad estructural."
   ],
   "usage_examples": [
-    "Calcular concreto para patio",
-    "Estimar volumen de cimientos",
-    "Planificar proyecto de entrada"
+    "1. Un arquitecto calcula el hormigón necesario para una losa de 8m x 5m x 0.15m para un patio residencial, obteniendo 6m³ y verificando su capacidad portante.",
+    "2. Un ingeniero estructural determina el volumen de hormigón para una columna cilíndrica de 0.4m de radio y 3m de altura en un proyecto de pergola.",
+    "3. Un contratista calcula las dimensiones de un cimiento trapezoidal para una caseta metálica de 4m x 3m, considerando un factor de seguridad del 1.5.",
+    "4. Un diseñador de paisajismo utiliza la herramienta para determinar el volumen de hormigón en una base de muro de contención curvo de 12m de longitud."
   ]
 }

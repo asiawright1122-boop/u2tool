@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique en Aire est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphique en Aire pour traiter facilement diverses données sans installer de logiciels ou de modules complémentaires. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un concepteur ou un utilisateur général, le Générateur de Graphique en Aire peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur n'importe quel serveur. Utilisez immédiatement le Générateur de Graphique en Aire pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le générateur de graphiques en aires permet de visualiser des données cumulatives en créant des représentations graphiques où l'aire sous la courbe est remplie. Techniquement, l'outil utilise des algorithmes de traçage basés sur les bibliothèques D3.js ou Chart.js pour générer des graphiques interactifs en temps réel. Il supporte des formats d'entrée tels que CSV, JSON ou saisie manuelle dans une grille de données dynamique. Les utilisateurs peuvent choisir entre des modes d'interpolation linéaire, cubique ou catmull-rom pour lisser les courbes, et configurer des axes X/Y avec échelles logarithmiques ou linéaires. La fonction de stacking permet d'empiler plusieurs séries de données pour comparer des volumes cumulatifs. Ce outil est particulièrement utile pour analyser des tendances temporelles (ex: ventes trimestrielles), des séries chronologiques écologiques (ex: niveau d'eau de rivière) ou des données financières agrégées. Le rendu final s'exporte en PNG haute résolution ou SVG vectoriel pour une intégration professionnelle dans des rapports ou dashboards.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique en Aire",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'interface via le lien 'area-chart-generator' et chargez vos données via le bouton 'Importer CSV/JSON'.",
+    "Utilisez la grille de données éditable pour ajuster les valeurs ou ajouter des séries via le bouton '+ Ajouter série'.",
+    "Sélectionnez le type d'interpolation dans le menu déroulant 'Courbe' : linéaire, spline ou Catmull-Rom.",
+    "Activez le mode 'Stacked' pour empiler les aires ou 'Percentage' pour visualiser des proportions relatives.",
+    "Personnalisez les axes en cochant 'Échelle logarithmique' si nécessaire et ajustez les étiquettes via les champs de texte.",
+    "Exportez le graphique via le bouton 'Télécharger' en choisissant le format PNG ou SVG dans le menu contextuel."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique en Aire pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un analyste financier trace l'évolution des revenus cumulés trimestriels de plusieurs départements sur un graphique empilé.",
+    "Un chercheur en écologie représente les précipitations mensuelles cumulées sur 5 ans avec une courbe lissée.",
+    "Un développeur web visualise la croissance d'utilisateurs uniques mensuels sur 24 mois en mode pourcentage.",
+    "Un professeur illustre l'absentéisme scolaire cumulé par trimestre pour plusieurs classes dans un format SVG éditable."
   ]
 }

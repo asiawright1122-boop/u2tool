@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Gerador de Rio Tema é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Gerador de Rio Tema, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Gerador de Rio Tema pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Gerador de Rio Tema imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Theme River Generator é uma ferramenta técnica especializada na criação de gráficos de rio temático (streamgraphs) para visualizar padrões de dados em séries temporais. Ele transforma conjuntos de dados multidimensionais em representações visuais dinâmicas, onde fluxos de informações são exibidos como faixas proporcionais ao valor, dispostas ao longo de um eixo temporal. Essa abordagem é ideal para identificar tendências, picos e correlações em grandes volumes de dados sequenciais, como análises de sentimentos em redes sociais, flutuações de mercado ou padrões de tráfego web. O núcleo do funcionamento baseia-se em algoritmos de interpolação cúbica para suavização das curvas e ajuste de baseline, garantindo que as áreas empilhadas (stacked areas) mantenham coerência visual mesmo com variações abruptas. A ferramenta suporta entrada de dados em formato JSON ou CSV, permitindo definição de variáveis para eixo X (tempo), Y (magnitude) e categorias de cores. Utiliza o framework D3.js para renderização SVG, com opções avançadas de personalização, como ajuste de opacidade, escala de cores divergentes e exportação em múltiplos formatos (PNG, PDF). A precisão técnica e a flexibilidade de configuração tornam o tool essencial para cientistas de dados, analistas e jornalistas de dados que precisam de visualizações impactantes com fundamento estatístico robusto.",
   "usage_steps": [
-    "Abra a página da ferramenta Gerador de Rio Tema",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Carregue seu arquivo de dados no formato JSON ou CSV na seção 'Importar Dados' do painel esquerdo.",
+    "Selecione a coluna correspondente ao eixo X (datas/horários) e Y (valores numéricos) no menu de mapeamento de variáveis.",
+    "Escolha uma paleta de cores divergente ou sequencial no seletor 'Escala de Cor' para categorizar os fluxos.",
+    "Ajuste o intervalo de tempo exibido usando o seletor de período mínimo/máximo no painel de configurações temporais.",
+    "Ative a opção 'Suavização de Curvas' para aplicar interpolação cúbica nos dados de magnitude.",
+    "Exporte o gráfico finalizado como SVG ou PNG de alta resolução via botão 'Baixar Visualização'."
   ],
   "usage_examples": [
-    "Use Gerador de Rio Tema para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Monitoramento de hashtags em redes sociais: Visualizar o crescimento e declínio de tópicos virais durante uma campanha eleitoral, correlacionando picos com eventos específicos.",
+    "Análise de volatilidade financeira: Comparar o volume de transações de múltiplas ações em períodos de crise econômica, destacando correlações setoriais.",
+    "Consumo de energia residencial: Identificar padrões sazonais no uso de eletricidade de diferentes regiões, ajustando a escala de cor para níveis de demanda.",
+    "Surto epidemiológico: Mapear a propagação de doenças em diferentes estados ao longo de meses, combinando dados de casos e taxas de hospitalização em um único gráfico."
   ]
 }

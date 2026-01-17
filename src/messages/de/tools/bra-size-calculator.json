@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der BH-Größen-Rechner bestimmt Ihre BH-Größe aus Unterbrustweite und Brustumfang.",
+  "detailed_description": "Der Bra Size Calculator ist ein präzises Berechnungstool, das auf mathematischen Formeln basiert, um individuelle BH-Größen anhand von Brust- und Unterbrustmessungen zu ermitteln. Technisch gesehen verwendet der Algorithmus zwei Schlüsselwerte: Das Unterbrustmaß (gemessen in Zentimetern oder Zoll) dient als Grundlage für die Bandgröße, während die Differenz zwischen Oberbrust- und Unterbrustmaß die Cup-Größe definiert. Für die Bandgröße wird das Unterbrustmaß um einen Offset (typischerweise +10-15 cm) korrigiert, um den Dehnungsfaktor des BH-Bandes zu kompensieren. Die Cup-Größe ergibt sich aus der Differenz, die in standardisierte Buchstaben (A-J) umgerechnet wird. Dieses Tool ist unverzichtbar für Nutzer:innen, die aufgrund von Größenunterschieden zwischen Marken, körperlichen Veränderungen (z.B. nach Schwangerschaften) oder bei Online-Bestellungen präzise Passformdaten benötigen. Anders als herkömmliche Methoden berücksichtigt der Rechner zusätzlich die Materialdehnung und Sitzanpassungen, um eine optimale Schätzung zu liefern.",
   "usage_steps": [
-    "Unter der Brust für Unterbrustweite messen",
-    "An der vollsten Stelle messen",
-    "Messungen eingeben",
-    "Berechnete Größe anzeigen",
-    "Schwestergrößen prüfen"
+    "1. Geben Sie das gemessene Unterbrustmaß in das Feld 'Unterbrust (cm)' ein.",
+    "2. Tragen Sie das Oberbrustmaß in das Feld 'Oberbrust (cm)' ein.",
+    "3. Wählen Sie im Dropdown-Menü die gewünschte Maßeinheit (cm oder Zoll) für die Ausgabe.",
+    "4. Klicken Sie auf 'Berechnen', um den Algorithmus zu starten.",
+    "5. Prüfen Sie die angezeigte Bandgröße, die durch Unterbrustmaß + 12 cm berechnet wird.",
+    "6. Notieren Sie die Cup-Größe, die aus der Differenz (Oberbrust - Bandgröße) generiert wird."
   ],
   "usage_examples": [
-    "Richtige BH-Größe finden",
-    "Internationale Größen umrechnen",
-    "Schwestergrößen bestimmen"
+    "Eine Kundin mit 82 cm Unterbrust und 94 cm Oberbrust benötigt eine Größe 85B, da die Differenz 3 cm ergibt.",
+    "Nach einer Schwangerschaft ändert sich das Unterbrustmaß von 78 cm auf 84 cm – der Rechner passt die Bandgröße von 80 auf 85 an.",
+    "Ein Online-Shopper vergleicht zwei BH-Modelle mit unterschiedlichen Schnitten und nutzt die Offset-Korrektur, um den Sitz zu simulieren.",
+    "Eine Schneiderin berechnet für ein Vintage-BH-Restaurierungsprojekt die Cup-Größe J basierend auf einer Differenz von 10 cm."
   ]
 }

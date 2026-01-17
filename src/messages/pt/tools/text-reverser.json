@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Reversor de Texto é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Reversor de Texto, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, o Reversor de Texto pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para qualquer servidor. Use o Reversor de Texto imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Text Reverser é uma ferramenta de processamento textual que aplica transformações de ordem inversa em três níveis distintos: caracteres, palavras ou linhas. Tecnicalmente, o mecanismo analisa o fluxo de entrada utilizando técnicas de tokenização baseada em delimitadores Unicode, permitindo a manipulação precisa mesmo em textos multilíngues. Quando a inversão ocorre por caracteres, o algoritmo processa cada code point UTF-8 individualmente, preservando grafemas complexos. Para inversão de palavras, o sistema identifica fronteiras lexêmicas considerando espaços e pontuação, enquanto a reversão de linhas opera sobre sequências terminadas por caracteres de quebra de linha (CRLF ou LF). Profissionais de segurança utilizam esta ferramenta para obfuscation de dados sensíveis temporários, desenvolvedores realizam testes de palíndromos em larga escala, e analistas de logs revertendo ordens cronológicas para visualização retrospectiva. A arquitetura cliente-servidor garante processamento eficiente com zero overhead, mantendo o estado da aplicação via Web Workers para não bloquear a thread principal do navegador.",
   "usage_steps": [
-    "Abra a página do Reversor de Texto",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole o texto na área designada ou arraste um arquivo de texto para a interface",
+    "Selecione o modo de inversão: 'Caracteres', 'Palavras' ou 'Linhas' usando os botões de opção",
+    "Ative a opção 'Manter Delimitadores' se desejar preservar espaços múltiplos ou pontuação fixa",
+    "Clique em 'Processar Texto' para executar a transformação algorítmica",
+    "Analise o resultado na seção de saída com numeração de linhas e destaque de caracteres especiais",
+    "Use o botão 'Copiar Resultado' com suporte a clipboard API ou exporte como arquivo .txt"
   ],
   "usage_examples": [
-    "Use o Reversor de Texto para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor testando a renderização de strings invertidas em sistemas de CMS que utilizam RTL (Right-to-Left)",
+    "Um analista de segurança revertendo logs de auditoria para detectar padrões ocultos em ataques sequenciais",
+    "Um designer criando padrões de arte ASCII espelhada para projetos gráficos experimentais",
+    "Um QA engenheiro validando a correta reversão de mensagens de erro armazenadas em formato CSV"
   ]
 }

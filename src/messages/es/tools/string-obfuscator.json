@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Obfuscador de Cadenas es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Con el Obfuscador de Cadenas, puedes procesar fácilmente varios datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Obfuscador de Cadenas puede ayudarte a mejorar la eficiencia en tu trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Obfuscador de Cadenas ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Obfuscador de Cadenas aplica técnicas avanzadas de codificación para transformar texto plano en representaciones ilegibles mediante algoritmos como Base64, codificación hexadecimal, rotación de caracteres (Caesar cipher) y técnicas de inserción de ruido. Esta herramienta es esencial para desarrolladores que necesitan proteger temporalmente credenciales en scripts, evitar detección de cadenas sensibles por analizadores estáticos, o incrementar la entropía de datos en entornos de prueba. Funciona mediante un motor que permite aplicar múltiples capas de transformación secuencial, donde cada método modifica la salida del anterior para crear una obfuscación compuesta. Al no depender de bibliotecas externas, garantiza procesamiento local en el navegador con cifrado en tiempo real, manteniendo los datos en memoria durante menos de 500ms para prevenir fugas.",
   "usage_steps": [
-    "Abre la página de la herramienta Obfuscador de Cadenas",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona los métodos de codificación deseados en el panel de opciones (ej: Base64 + Hex + Rot13)",
+    "Ingresa la cadena en el campo de texto principal, con indicadores visuales de longitud y complejidad",
+    "Activa la opción 'Inyectar sal aleatoria' para añadir bytes criptográficos a la entrada original",
+    "Configura parámetros avanzados como desplazamiento de Caesar cipher o formato de salida hexadecimal",
+    "Haz clic en 'Obfuscar' para iniciar el proceso de transformación secuencial",
+    "Copia el resultado en el portapapeles o descarga el archivo .txt con la cadena procesada y su huella SHA-256"
   ],
   "usage_examples": [
-    "Usa el Obfuscador de Cadenas para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Proteger temporalmente tokens de API en scripts de automatización antes de su implementación",
+    "Generar payloads ofuscados para pruebas de seguridad en entornos de desarrollo",
+    "Ocultar contraseñas en archivos de configuración de aplicaciones locales",
+    "Transformar datos sensibles antes de almacenarlos en registros de depuración (logs)"
   ]
 }

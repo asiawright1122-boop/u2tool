@@ -1,14 +1,17 @@
 {
-  "detailed_description": "HTML para Markdown é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando HTML para Markdown, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, HTML para Markdown pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviados para nenhum servidor. Use HTML para Markdown imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O conversor HTML para Markdown é uma ferramenta especializada que transforma documentos HTML em sintaxe Markdown, preservando a estrutura semântica e os elementos estilísticos. Tecnicamente, o processo envolve a análise sintática (parsing) do HTML através de um analisador DOM (Document Object Model), que identifica tags como <h1>, <ul>, <table> e as converte em equivalentes Markdown, como # Cabeçalhos, listas com traços (-) ou pipes (|). A ferramenta também lida com atributos inline, como estilos CSS ou classes, aplicando regras de mapeamento para garantir compatibilidade com parsers Markdown comuns, como CommonMark ou GitHub Flavored Markdown. Desenvolvedores precisam deste recurso ao migrar conteúdo de sistemas baseados em HTML (ex.: CMS) para plataformas que utilizam Markdown, como documentações em repositórios Git, blogs estáticos (Jekyll, Hugo) ou ferramentas de anotação (Obsidian). O diferencial deste conversor está na capacidade de tratar elementos complexos, como tabelas aninhadas ou listas ordenadas, mantendo a indentação correta e convertendo atributos HTML em anotações compatíveis, como a transformação de <a href='link'> em links no formato [texto](link).",
   "usage_steps": [
-    "Abra a página do conversor HTML para Markdown",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a página do conversor HTML para Markdown e localize a área de texto 'Insira seu HTML' no painel esquerdo.",
+    "Cole o código HTML desejado, incluindo tags estruturais (ex.: <div>, <section>) e elementos inline (ex.: <span class='destaque'>).",
+    "Ative a opção 'Preservar atributos' no menu suspenso para converter classes e IDs em anotações Markdown válidas.",
+    "Clique no botão 'Converter para Markdown' para iniciar o processamento com o analisador DOM integrado.",
+    "Revise o resultado na área de saída, onde listas serão formatadas com traços (-) e cabeçalhos com símbolos (#).",
+    "Use o botão 'Baixar .md' para salvar o arquivo convertido ou copie o conteúdo diretamente para seu editor Markdown."
   ],
   "usage_examples": [
-    "Use HTML para Markdown para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor migrando posts de um blog WordPress (HTML) para um site estático Jekyll precisa converter o conteúdo mantendo formatação de imagens e listas.",
+    "Um técnico documentando uma API extrai exemplos de resposta HTML de uma especificação antiga e os transforma em blocos de código Markdown para um manual atualizado.",
+    "Um designer que utiliza Figma para prototipar interfaces exporta elementos HTML de um componente e os adapta para um README.md no GitHub.",
+    "Um professor reutiliza material de aulas em HTML, convertendo-o para Markdown para integrar a uma plataforma de ensino que suporta apenas texto formatado com sintaxe simples."
   ]
 }

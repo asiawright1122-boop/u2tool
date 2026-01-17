@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculadora de IMC é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Usando Calculadora de IMC, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use de forma eficiente. Seja você desenvolvedor, designer ou usuário geral, Calculadora de IMC pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor.",
+  "detailed_description": "O Calculador de IMC (Índice de Massa Corporal) é uma ferramenta técnica que aplica a fórmula matemática IMC = peso (kg) / altura² (m) para determinar a categoria de saúde de um indivíduo. Desenvolvido com precisão em JavaScript, o algoritmo processa entradas numéricas de peso e altura, normaliza os dados conforme a unidade selecionada (quilogramas/gramas ou libras/onças) e calcula o valor com até duas casas decimais. O resultado é classificado em uma das seis categorias da OMS: desnutrição, abaixo do peso, peso normal, sobrepeso, obesidade e obesidade grave. Profissionais da saúde utilizam essa ferramenta para triagem rápida de riscos metabólicos, enquanto desenvolvedores podem integrar a API para validação automática de dados em sistemas de monitoramento nutricional. A precisão do cálculo é garantida por validações de entrada que evitam valores negativos ou fora do intervalo humano plausível.",
   "usage_steps": [
-    "Abrir a página da ferramenta Calculadora de IMC",
-    "Inserir ou colar o conteúdo a ser processado na caixa de entrada",
-    "Ajustar as opções e configurações da ferramenta conforme necessário",
-    "Clicar no botão de processar para ver os resultados",
-    "Copiar ou baixar os resultados processados"
+    "Selecione a unidade de medida desejada (métrico ou imperial) no seletor localizado acima dos campos de entrada",
+    "Insira seu peso no campo 'Peso' utilizando números decimais (ex: 70.5 kg ou 155.3 lb)",
+    "Preencha sua altura no formato apropriado: metros com vírgula decimal (ex: 1,75m) ou pés/polegadas separados por apóstrofe (ex: 5'10\")",
+    "Clique no botão 'Calcular IMC' para processar os dados",
+    "Analise o valor numérico gerado e sua classificação visual destacada em cores (verde para normal, vermelho para alerta)",
+    "Utilize o botão 'Exportar Resultado' para obter um JSON com dados estruturados compatível com sistemas de prontuário eletrônico"
   ],
   "usage_examples": [
-    "Usar Calculadora de IMC para processar seus dados",
-    "Obter resultados de processamento rapidamente sem esperar"
+    "Um nutricionista calcula o IMC de 15 pacientes em 10 minutos usando o modo de lote via API para comparar tendências de massa corporal",
+    "Um desenvolvedor integra a ferramenta a um aplicativo de acompanhamento fitness, validando automaticamente dados de usuários com alertas para valores >30",
+    "Um pesquisador utiliza o export JSON para alimentar um estudo estatístico sobre obesidade infantil, cruzando dados com histórico familiar",
+    "Um usuário comum verifica seu IMC mensalmente antes de ajustar seu plano de treino, monitorando a evolução da categoria 'Sobrepeso' para 'Peso Normal'"
   ]
 }

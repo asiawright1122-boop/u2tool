@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Paraphrase Tool rewrites your text in different styles while preserving the original meaning.",
+  "detailed_description": "The Paraphrase Tool leverages advanced natural language processing (NLP) algorithms to semantically restructure text while preserving core intent and factual integrity. By employing transformer-based models (e.g., BERT, T5) for contextual understanding, the tool analyzes syntactic patterns, identifies semantic relationships between entities, and generates alternative phrasings through a multi-step process: first tokenizing input text, then applying part-of-speech tagging and dependency parsing to deconstruct sentence architecture. Users benefit from specialized modes like 'Academic Rewriting' for plagiarism avoidance in research papers, 'Audience Adaptation' to modify technical complexity for specific demographics, and 'SEO Optimization' that strategically incorporates keyword variations without compromising readability. The tool's unique 'Context Lock' feature ensures critical terminology remains unchanged during paraphrasing, crucial for maintaining domain-specific accuracy in fields like legal documentation or medical literature. Technical implementation includes beam search algorithms for optimal synonym selection and discourse coherence modeling to maintain logical flow across rewritten paragraphs.",
   "usage_steps": [
-    "Enter original text",
-    "Select writing style",
-    "Click paraphrase",
-    "Review result",
-    "Copy rewritten text"
+    "Open the tool and paste unstructured text into the primary editing pane (labeled 'Input Text')",
+    "Select a rewriting mode from the dropdown menu: Options include 'Creative Restructuring', 'Formal Synonym Replacement', or 'Technical Simplification'",
+    "Adjust the 'Complexity Slider' to specify output sophistication level (0-100 scale affecting lexical density and sentence length)",
+    "Enable 'Keyword Preservation' toggle to lock specific terms that must remain unchanged",
+    "Click 'Generate Paraphrase' to initiate the multi-pass rewriting algorithm",
+    "Review side-by-side comparison of original and rewritten text in the split-view interface before exporting"
   ],
   "usage_examples": [
-    "Rewrite for different audience",
-    "Avoid plagiarism",
-    "Simplify complex text"
+    "A graduate student rewording methodology sections in a thesis to ensure originality while maintaining scientific precision",
+    "A technical writer converting API documentation from developer-centric language to executive-friendly summaries",
+    "A content strategist adapting blog posts for different regional dialects (e.g., US vs. UK English) without losing SEO value",
+    "A patent attorney restructuring legal claims to avoid prior art overlaps while preserving technical specifications"
   ]
 }

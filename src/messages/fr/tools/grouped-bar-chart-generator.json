@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique en Colonnes Groupées est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Générateur de Graphique en Colonnes Groupées, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Graphique en Colonnes Groupées peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et évitant tout téléversement sur un serveur. Utilisez immédiatement le Générateur de Graphique en Colonnes Groupées pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le Générateur de Diagrammes en Barres Groupées permet de visualiser des comparaisons multidimensionnelles en représentant plusieurs séries de données sur des axes communs. Techniquement, il utilise des bibliothèques de rendu vectoriel (comme D3.js ou Chart.js) pour créer des diagrammes où chaque groupe de barres partage la même étiquette d'axe X, avec des couleurs distinctes pour chaque série. Ce type de visualisation est essentiel pour analyser des données catégorielles parallèles, comme les performances commerciales par région ou les résultats académiques par cohorte. Le moteur interne convertit les données tabulaires en coordonnées SVG/Canvas, en gérant automatiquement l'espacement inter-barres, les échelles logarithmiques optionnelles, et les légendes interactives. Les utilisateurs peuvent exporter les graphiques en PNG, SVG ou intégrer le code HTML directement dans des rapports web. Contrairement aux outils génériques, cette solution inclut un moteur de prévisualisation en temps réel avec ajustement dynamique des axes Y multiples pour les séries hétérogènes.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique en Colonnes Groupées",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Saisir les données dans l'éditeur CSV intégré avec en-têtes obligatoires (ex: 'Catégorie,Série1,Série2')",
+    "Configurer les axes via le panneau 'Axes' : définir l'échelle logarithmique pour l'axe Y et les étiquettes de l'axe X",
+    "Sélectionner le mode de groupement dans le menu déroulant 'Disposition' : choisir entre 'Barres groupées' ou 'Barres empilées'",
+    "Personnaliser les couleurs via la palette HEX/RGB pour chaque série de données dans l'onglet 'Style'",
+    "Activer l'option 'Légende interactive' pour permettre le filtrage dynamique des séries au survol",
+    "Exporter le graphique via le bouton 'Télécharger' en format SVG ou intégrer le code <iframe> pour un site web"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique en Colonnes Groupées pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Comparer les ventes trimestrielles de trois produits concurrents dans six régions géographiques",
+    "Visualiser l'évolution des résultats d'examens par genre et tranche d'âge sur cinq années universitaires",
+    "Analyser le trafic web mensuel provenant de différentes sources (réseaux sociaux, référencement, e-mailing)",
+    "Représenter les budgets prévus vs. réels par département pour trois exercices comptables successifs"
   ]
 }

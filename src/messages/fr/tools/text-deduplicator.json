@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Déplicateur de texte est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Déplicateur de texte, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Déplicateur de texte peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et empêchant leur upload vers n'importe quel serveur. Utilisez immédiatement le Déplicateur de texte pour expérimenter des services d'outil en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Text Deduplicator est un outil de traitement de texte conçu pour éliminer les lignes dupliquées dans un corpus de texte, ne conservant que les éléments uniques. Il s'appuie sur des algorithmes de hachage pour identifier et supprimer les redondances, améliorant ainsi la qualité et la pertinence du texte. Cet outil est particulièrement utile dans des domaines tels que le traitement des données de recherche, la gestion de bases de données, et la préparation de documents pour l'analyse de données textuelles. Les utilisateurs peuvent profiter de cette fonctionnalité pour nettoyer et optimiser leurs ensembles de données, assurant ainsi une meilleure précision des résultats. Le processus de déduplication est rapide et efficace, grâce à la mise en œuvre de techniques avancées de comparaison de chaînes de caractères et de gestion de la mémoire.",
   "usage_steps": [
-    "Ouvrez la page du Déplicateur de texte",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à la page d'accueil du Text Deduplicator en utilisant le lien 'text-deduplicator'.",
+    "Dans la section 'Entrée de texte', copiez et collez le texte que vous souhaitez déduplicer dans la zone de texte fournie.",
+    "Sélectionnez l'option 'Ignorer la casse' si vous souhaitez que le processus de déduplication ne soit pas sensible à la casse (par exemple, 'Texte' et 'texte' seront considérés comme identiques).",
+    "Choisissez l'option 'Conserver l'ordre original' si vous souhaitez que les lignes uniques soient affichées dans l'ordre dans lequel elles apparaissent dans le texte d'origine.",
+    "Cliquez sur le bouton 'Dédupliquer' pour lancer le processus de déduplication.",
+    "Une fois le processus terminé, le texte déduplicé sera affiché dans la section 'Résultat'. Vous pouvez ensuite copier ce texte pour l'utiliser ailleurs."
   ],
   "usage_examples": [
-    "Utilisez le Déplicateur de texte pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un chercheur en sciences sociales collecte des réponses ouvertes à une enquête et souhaite éliminer les réponses dupliquées pour une analyse plus précise des données.",
+    "Un développeur de logiciels travaille sur une base de données contenant des enregistrements de clients et doit nettoyer les entrées dupliquées pour éviter les erreurs dans les analyses de données.",
+    "Un rédacteur technique prépare un document technique et souhaite s'assurer que toutes les sections sont uniques, sans redondance, pour améliorer la clarté et la qualité du document.",
+    "Un gestionnaire de contenu web utilise le Text Deduplicator pour nettoyer les balises méta de description de son site, en s'assurant que chaque page a une description unique, optimisant ainsi le SEO."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique de Remplissage Liquide est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphique de Remplissage Liquide pour traiter facilement diverses données sans installer de logiciels ou de plugins. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique de Remplissage Liquide peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant tout téléversement sur un serveur. Utilisez immédiatement le Générateur de Graphique de Remplissage Liquide pour découvrir des services en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de diagrammes en remplissage liquide permet de créer des visualisations interactives sous forme de cercles ou de jauges animées, représentant des pourcentages via des ondulations dynamiques. Ce type de diagramme, basé sur des technologies SVG et JavaScript, est idéal pour illustrer des indicateurs clés (KPI) avec un impact visuel fort. Contrairement aux graphiques statiques, ce générateur utilise des fonctions d'animation avancées comme requestAnimationFrame et des courbes de Bézier pour simuler des vagues fluides, avec possibilité d'ajuster l'amplitude, la fréquence et l'effet d'ondulation. Il s'adresse aux développeurs souhaitant intégrer des interfaces modernes dans des tableaux de bord (dashboards) ou des présentations de données, tout en optimisant la performance grâce à un code SVG léger et réactif. Le rendu est entièrement personnalisable via des paramètres techniques comme la couleur de remplissage, la transparence, ou les fonctions d'interpolation (easing).",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique de Remplissage Liquide",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Entrez la valeur numérique (en %) à visualiser dans le champ 'Pourcentage cible'.",
+    "Sélectionnez la palette de couleurs principale et secondaire via les sélecteurs HEX/RGB.",
+    "Ajustez l'amplitude d'onde (0 à 100) et la fréquence (0.1 à 5 Hz) avec les curseurs dynamiques.",
+    "Activez/désactivez l'effet de rotation permanente en cochant 'Animation circulaire'.",
+    "Prévisualisez en temps réel le diagramme dans la zone d'affichage interactive.",
+    "Générez le code SVG+JS intégrable en cliquant sur 'Exporter' et copiez-le dans votre projet."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique de Remplissage Liquide pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un tableau de bord SaaS affichant la croissance mensuelle des utilisateurs actifs avec un remplissage animé.",
+    "Un site de financement participatif illustrant visuellement l'avancement d'une campagne via une jauge dynamique.",
+    "Un portfolio de designer montrant ses compétences techniques sous forme de cercles liquides interactifs.",
+    "Une application éducative simulant un chronomètre visuel avec un décompte en pourcentage animé."
   ]
 }

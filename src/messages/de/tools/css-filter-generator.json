@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Das CSS-Filter-Generator ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CSS-Filter-Generator können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann das CSS-Filter-Generator Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitungsvorgänge werden lokal in Ihrem Browser durchgeführt, was Ihre Daten-Sicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendein Server hochgeladen werden. Nutzen Sie sofort das CSS-Filter-Generator, um schnelle, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der CSS Filter Generator ist ein spezialisiertes Werkzeug zur visuellen Erstellung und Optimierung von CSS-Filtereffekten für Webanwendungen. Technisch ermöglicht es die Kombination von SVG-Filtern und CSS-Filterfunktionen wie `blur()`, `brightness()`, `hue-rotate()` oder `drop-shadow()`, die über eine intuitive Oberfläche parametrisiert werden. Nutzer können präzise Steuerung über die Filterreihenfolge, Intensitätswerte und Fallback-Optionen für ältere Browser erhalten. Das Tool rendert Echtzeitvorschauen mittels `<canvas>`-Elementen und generiert kompatiblen CSS-Code mit `-webkit-`-Prefixes für maximale Browserabdeckung. Entwickler profitieren besonders bei responsiven Designs, da die Filterhardwarebeschleunigung durch `will-change`-Eigenschaften optimiert wird. Besonders nützlich ist es für dynamische Bildanpassungen in SPAs, Erstellung von Hover-States mit `transition`-Kompatibilität oder Prototyping von Designsystem-Vorgaben ohne manuelles Codieren.",
   "usage_steps": [
-    "Öffnen Sie die Seite des CSS-Filter-Generators",
-    "Fügen Sie den Inhalt ein oder fügen Sie ihn ein, den Sie verarbeiten möchten",
-    "Passen Sie die Tool-Einstellungen und Optionen nach Bedarf an",
-    "Klicken Sie auf den Verarbeitungs-Button, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "1. Wählen Sie ein Referenzbild über den 'Bild hochladen'-Button oder verwenden Sie die vordefinierten Testbilder.",
+    "2. Aktivieren Sie gewünschte Filterfunktionen über die Schaltflächenleiste (z.B. 'Blur', 'Contrast', 'Color Shift').",
+    "3. Passen Sie die Filterintensität per Schieberegler an und beobachten Sie die sofortige Änderung im Echtzeitvorschau-Panel.",
+    "4. Kombinieren Sie mehrere Filter durch Klick auf '+ Filter hinzufügen' und ordnen Sie die Anwendungsreihenfolge per Drag-and-Drop.",
+    "5. Nutzen Sie die 'Code-Preview'-Registerkarte, um den generierten CSS-Code mit oder ohne Vendor-Prefixes zu inspizieren.",
+    "6. Exportieren Sie den Filtercode über den 'Kopieren'-Button oder laden Sie eine `.css`-Datei mit vollständiger Regeldefinition herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie das CSS-Filter-Generator, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie die Verarbeitungsresultate schnell, ohne zu warten"
+    "Ein Social-Media-Tool benötigt dynamische Bildfilter für Benutzeruploads, die sich per JavaScript-Slider in Echtzeit anpassen lassen.",
+    "Ein E-Commerce-Shop implementiert einen 'Ausverkauft'-Overlay-Effekt mit `grayscale()` und `opacity()` für Produktbilder.",
+    "Ein Fotografie-Portfolio nutzt `drop-shadow()` und `brightness()` für animierte Hover-Effekte auf Galeriebildern mit CSS-Transitions.",
+    "Ein News-Aggregator wendet pro Themenbereich unterschiedliche `sepia()`- und `hue-rotate()`-Kombinationen für visuelle Differenzierung an."
   ]
 }

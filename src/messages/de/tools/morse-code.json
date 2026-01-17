@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Morse-Code-Konverter ist eine praktische Online-Tools, die Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Morse-Code-Konverter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Dieses Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Seien Sie ein Entwickler, Designer oder allgemeiner Benutzer, der Morse-Code-Konverter kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungstätigkeiten werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Morse-Code-Konverter sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der Morse-Code-Konverter ermöglicht die bidirektionale Umwandlung von Text in internationalen Morsecode (gemäß ITU-R-Empfehlung M.1677) und umgekehrt. Technisch basiert die Umsetzung auf einer präzisen Zuordnungstabelle, die alphanumerische Zeichen, Leerzeichen und Sonderzeichen wie Komma oder Fragezeichen zu entsprechenden Morse-Symbolfolgen (Punkte, Striche, Zwischenräume) konvertiert. Der Tool-Algorithmus verarbeitet Eingaben durch reguläre Ausdrücke, normalisiert Eingangsdaten und berücksichtigt zeitkritische Parameter wie Zeichendauer (WPM-Geschwindigkeit) sowie Trennabstände zwischen Buchstaben und Wörtern. Benutzer profitieren von der präzisen Kodierung für Anwendungen wie Amateurfunkkommunikation, historische Code-Emulation oder Notfallübungen. Die Dekodierungsfunktion analysiert eingehende Morsezeichenfolgen, identifiziert Trennzeichen und stellt Zeichentrennung präzise dar. Besonders hilfreich ist die Fehlerkorrektur bei unvollständigen Zeichenfolgen, die durch statistische Mustererkennung unklare Eingaben auflöst. Die Implementierung verwendet Unicode-Zeichensätze für maximale Kompatibilität und ermöglicht optionale Ausgabeformate wie Audio-Signalgenerierung (Tonein-/Ausgabe konfigurierbar).",
   "usage_steps": [
-    "Öffnen Sie die Seite des Morse-Code-Konverters",
-    "Geben Sie den zu bearbeitenden Text in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Anpassen Sie die Tooloptionen und Einstellungen nach Bedarf",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Öffnen Sie das Tool über die Navigationsleiste im Abschnitt 'Encoding'.",
+    "Wählen Sie per Radiobutton die Konvertierungsrichtung 'Text zu Morse' oder 'Morse zu Text'.",
+    "Geben Sie den zu konvertierenden Inhalt in das Eingabefeld ein – Groß-/Kleinschreibung wird automatisch normalisiert.",
+    "Passen Sie die Konfigurationsoptionen an: Wählen Sie die Morsegeschwindigkeit (10-60 WPM) oder aktivieren Sie die Tonwiedergabe für Audioausgabe.",
+    "Klicken Sie auf den 'Konvertieren'-Button, um das Ergebnis zu generieren.",
+    "Kopieren Sie das Ergebnis aus dem Ausgabefeld oder laden Sie es als .txt-Datei herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie den Morse-Code-Konverter, um Ihren Daten zu bearbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Ein Amateurfunker erstellt einen Morsecode-Stream für eine QSO-Kommunikation, wobei Sonderzeichen wie 'DE' und 'K' korrekt kodiert werden.",
+    "Ein Lehrer generiert Übungsblätter mit Morsecode-Rätseln, indem er Satzanfänge in Morse umwandelt.",
+    "Ein Survival-Enthusiast erstellt eine präzise kodierte SOS-Nachricht mit einstellbaren Frequenzparametern für eine Funkübung.",
+    "Ein Künstler wandelt ein Gedicht in Morsecode um und integriert die Symbolfolgen als visuelles Element in eine digitale Installation."
   ]
 }

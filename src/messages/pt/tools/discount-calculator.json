@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculadora de Descontos é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Usando Calculadora de Descontos, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use de forma eficiente. Seja você desenvolvedor, designer ou usuário geral, Calculadora de Descontos pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor.",
+  "detailed_description": "O Discount Calculator é uma ferramenta técnica especializada em cálculos de redução percentual de preços, aplicando fórmulas matemáticas precisas para determinar valores descontados e economias financeiras. O usuário insere dois parâmetros principais: o preço original (valor numérico com casas decimais) e o percentual de desconto (intervalo de 0,01% a 100%). Internamente, o sistema realiza operações de multiplicação e subtração utilizando aritmética de ponto flutuante para calcular o preço pós-desconto através da fórmula: preço final = preço original × (1 - percentual/100). Além disso, calcula a economia absoluta como a diferença entre os valores original e ajustado. Essencial para consumidores que desejam validar promoções, varejistas que configuram campanhas de preços e estudantes resolvendo problemas de porcentagem, a ferramenta inclui validação de entrada para evitar valores negativos ou não numéricos, garantindo precisão nos resultados. Possui interface com campos de input em tempo real e exibição imediata de múltiplos outputs, ideal para análise comparativa de ofertas ou planejamento financeiro pessoal.",
   "usage_steps": [
-    "Abrir a página da ferramenta Calculadora de Descontos",
-    "Inserir ou colar o conteúdo a ser processado na caixa de entrada",
-    "Ajustar as opções e configurações da ferramenta conforme necessário",
-    "Clicar no botão de processar para ver os resultados",
-    "Copiar ou baixar os resultados processados"
+    "Acesse a página do Discount Calculator em math-tools.com/discount-calculator",
+    "Preencha o campo 'Preço Original' com um valor numérico (ex: 199,99)",
+    "Digite o percentual de desconto no campo 'Percentual (%)' (ex: 25,5)",
+    "Selecione a opção 'Calcular' para processar os dados",
+    "Visualize o resultado no painel de saída, que exibe 'Preço Final' e 'Economia' em reais",
+    "Utilize o botão 'Limpar' para resetar os campos e realizar novos cálculos"
   ],
   "usage_examples": [
-    "Usar Calculadora de Descontos para processar seus dados",
-    "Obter resultados de processamento rapidamente sem esperar"
+    "Calcular o preço final de uma televisão de R$2.499,00 com desconto de 12% durante a Black Friday",
+    "Determinar a economia em uma compra por atacado com desconto progressivo de 18% em 50 unidades de um produto",
+    "Validar a real porcentagem economizada em uma oferta '2 por 1' comparando com preços unitários",
+    "Simular diferentes cenários de desconto para precificação de produtos em uma loja online"
   ]
 }

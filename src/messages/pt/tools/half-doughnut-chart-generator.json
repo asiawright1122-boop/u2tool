@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráfico de Meia Rosca é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Utilizando o Gerador de Gráfico de Meia Rosca, você pode processar vários dados facilmente sem a necessidade de instalar qualquer software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráfico de Meia Rosca pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Gerador de Gráfico de Meia Rosca imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Gerador de Gráficos de Meia Rosca permite criar visualizações semicirculares personalizadas utilizando tecnologia baseada em SVG (Scalable Vector Graphics). Diferente de gráficos circulares tradicionais, esta ferramenta renderiza setores em formato de meia roscas (180°) com possibilidade de ajustar ângulos de início e término para criar representações assimétricas. O usuário pode inserir dados numéricos brutos ou percentuais, definir paletas de cores personalizadas com suporte a gradientes radiais, e configurar parâmetros técnicos como espessura do anel, posição de rótulos (interna ou externa) e sobreposição de elementos de legenda. A ferramenta é especialmente útil para dashboards que exigem visualizações compactas de KPIs, representação de metas parciais ou análises comparativas em interfaces com limitação de espaço vertical. O processamento ocorre totalmente no cliente via JavaScript, garantindo renderização em tempo real sem necessidade de conexão com servidores. Os gráficos gerados são responsivos e exportáveis em formatos vetoriais (SVG) e raster (PNG) para integração em relatórios digitais ou impressos.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráfico de Meia Rosca",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Insira valores numéricos nos campos de input, separados por vírgula, ou selecione o modo percentual para cálculo automático",
+    "2. Ajuste o ângulo inicial usando o seletor deslizante (range de 0° a 180°) para posicionar o ponto de partida do gráfico",
+    "3. Configure a espessura do anel através do input numérico em porcentagem, definindo a relação entre raio interno e externo",
+    "4. Escolha o posicionamento dos rótulos (interno, externo ou oculto) e ative/desative a exibição de valores absolutos/percentuais",
+    "5. Personalize as cores selecionando gradientes predefinidos ou inserindo códigos hexadecimais personalizados para cada segmento",
+    "6. Utilize o botão 'Visualizar em Tempo Real' para preview interativo e exporte o resultado final em SVG ou PNG de alta resolução"
   ],
   "usage_examples": [
-    "Use o Gerador de Gráfico de Meia Rosca para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Monitorar o progresso de metas trimestrais com visualização de 50% (ex: vendas acumuladas em relação à meta total)",
+    "Exibir resultados de avaliações de satisfação em interfaces de CRM com gráficos compactos alinhados a métricas-chave",
+    "Representar distribuição de tempo em relatórios de produtividade semanal (ex: horas dedicadas a diferentes projetos)",
+    "Criar dashboards médicos para mostrar percentual de recuperação de pacientes em tratamentos de longa duração"
   ]
 }

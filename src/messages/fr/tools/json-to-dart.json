@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON vers Dart est un outil en ligne pratique qui vous aide à réaliser diverses tâches rapidement. En utilisant JSON vers Dart, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de démarrer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, JSON vers Dart peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne sont pas téléversés sur aucun serveur. Utilisez immédiatement JSON vers Dart pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le convertisseur JSON to Dart est un outil spécialisé conçu pour transformer des objets JSON en classes Dart, tout en incluant automatiquement les méthodes `fromJson` et `toJson`. Cette transformation est essentielle pour les développeurs Flutter et Dart qui travaillent avec des données JSON et souhaitent les intégrer efficacement dans leurs applications. En effectuant cette conversion, l'outil génère des classes Dart robustes et bien structurées, ce qui facilite la gestion des données et améliore la performance des applications. Les développeurs peuvent ainsi se concentrer sur le développement fonctionnel plutôt que sur la gestion manuelle des conversions JSON. L'outil supporte également des structures JSON complexes, incluant des listes, des objets imbriqués et des types de données variés, ce qui en fait une solution polyvalente pour une large gamme de projets.",
   "usage_steps": [
-    "Ouvrez la page de l'outil JSON vers Dart",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à la page de l'outil JSON to Dart sur le site de votre choix et assurez-vous que votre navigateur est à jour pour une meilleure expérience.",
+    "Copiez le contenu JSON que vous souhaitez convertir. Assurez-vous que le JSON est bien formaté et ne contient pas d'erreur syntaxique.",
+    "Collez le JSON dans la zone de texte intitulée 'JSON Input' sur la page de l'outil.",
+    "Cliquez sur le bouton 'Convertir' situé en dessous de la zone de texte. L'outil va alors analyser le JSON et générer les classes Dart correspondantes.",
+    "Une fois la conversion terminée, les classes Dart avec les méthodes `fromJson` et `toJson` seront affichées dans la section 'Dart Output'.",
+    "Copiez le code Dart généré et intégrez-le dans votre projet Flutter ou Dart. Vous pouvez également télécharger le fichier Dart généré en cliquant sur le bouton 'Télécharger'."
   ],
   "usage_examples": [
-    "Utilisez JSON vers Dart pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur Flutter travaille sur une application de gestion de tâches et reçoit des données de tâches au format JSON à partir d'une API. Il utilise JSON to Dart pour convertir ces données en classes Dart, facilitant ainsi l'intégration des données dans l'application.",
+    "Une équipe de développement crée une application de chat en temps réel. Les messages sont stockés en JSON sur un serveur. L'équipe utilise JSON to Dart pour convertir ces messages en classes Dart, ce qui permet une manipulation efficace des données de chat dans l'application.",
+    "Un développeur travaille sur une application de suivi de fitness qui reçoit des données d'activité de divers appareils. Il utilise JSON to Dart pour convertir ces données JSON en classes Dart, ce qui facilite la gestion des données de suivi et l'affichage des informations aux utilisateurs.",
+    "Une startup développe une application de réservation de voyages. Les données de vol et d'hôtel sont reçues en JSON. L'équipe utilise JSON to Dart pour convertir ces données en classes Dart, ce qui permet une intégration fluide des données de réservation dans l'application mobile."
   ]
 }

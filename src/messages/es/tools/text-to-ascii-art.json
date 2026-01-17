@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Texto a Arte ASCII es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Texto a Arte ASCII, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, Texto a Arte ASCII puede ayudarte a mejorar la eficiencia laboral. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Usa Texto a Arte ASCII inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "La herramienta Text to ASCII Art es una solución sofisticada que permite a los usuarios convertir texto plano en impresionantes representaciones artísticas en ASCII. Esta herramienta utiliza algoritmos avanzados de mapeo de caracteres y técnicas de renderización para transformar cada carácter del texto en un conjunto de símbolos ASCII que, cuando se visualizan juntos, forman una imagen detallada y estilizada. Los usuarios pueden personalizar la salida mediante la selección de diferentes fuentes ASCII y ajustar la densidad de los caracteres para lograr el nivel de detalle deseado. Esta herramienta es especialmente útil para diseñadores gráficos, desarrolladores web y entusiastas del arte digital que buscan añadir un toque único y retro a sus proyectos. Además, facilita la creación de contenido visual para documentación, presentaciones y decoraciones de sitios web, proporcionando una alternativa creativa y personalizable al texto plano.",
   "usage_steps": [
-    "Abre la página del convertidor de Texto a Arte ASCII",
-    "Introduce o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del convertidor según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Step 1: Accede a la página de la herramienta Text to ASCII Art y localiza el campo de entrada de texto en la parte superior de la interfaz.",
+    "Step 2: Ingresa el texto que deseas convertir en ASCII Art en el campo de entrada.",
+    "Step 3: Selecciona la fuente ASCII deseada desde el menú desplegable 'Fuente'. Hay varias opciones disponibles, como 'Standard', 'Slant', '3-D', y 'Shadow'.",
+    "Step 4: Ajusta la densidad de los caracteres usando el control deslizante 'Densidad'. Un valor más alto aumentará la complejidad y el detalle de la representación ASCII.",
+    "Step 5: Haz clic en el botón 'Convertir' para iniciar el proceso de conversión. La herramienta procesará el texto y generará la representación ASCII Art en la sección de salida.",
+    "Step 6: Una vez generada la ASCII Art, puedes copiar el código resultante y utilizarlo en tu proyecto. También tienes la opción de guardar la representación como un archivo de texto o imagen."
   ],
   "usage_examples": [
-    "Usa Texto a Arte ASCII para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Example 1: Un desarrollador web quiere agregar un encabezado visualmente atractivo a una página de documentación. Utiliza Text to ASCII Art para convertir el título del proyecto en una representación ASCII Art y lo inserta en el código HTML usando la etiqueta `<pre>`.",
+    "Example 2: Un diseñador gráfico necesita crear una ilustración textil para una camiseta. Convierte el nombre de la marca en ASCII Art y lo imprime en el diseño de la camiseta para darle un toque retro y único.",
+    "Example 3: Un entusiasta del arte digital quiere generar un poster para una conferencia de tecnología. Utiliza la herramienta para convertir el nombre del evento en ASCII Art y lo incorpora en el diseño del poster, creando un efecto visual que combina modernidad y nostalgia.",
+    "Example 4: Un blogger necesita una firma personalizada para sus publicaciones. Convierte su nombre en ASCII Art y lo añade al final de cada post para darle un toque personal y distintivo."
   ]
 }

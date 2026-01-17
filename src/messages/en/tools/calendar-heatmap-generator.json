@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calendar Heatmap Generator is a practical online tool that helps you quickly complete various tasks. Using Calendar Heatmap Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Calendar Heatmap Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Calendar Heatmap Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Calendar Heatmap Generator is a specialized data visualization tool that transforms time-series datasets into color-coded calendar grids using HTML5 Canvas and SVG rendering. By mapping numerical values to chromatic gradients via D3.js scale interpolators, it enables granular analysis of daily patterns across months or years. Developers and analysts can input structured data in CSV/JSON formats containing ISO 8601 date stamps and corresponding metric values, which the tool processes through a date-fns.js parser to construct two-dimensional temporal matrices. Each calendar cell's fill color intensity is calculated using either linear or logarithmic color scales, with optional custom domain ranges for precise data normalization. The resulting visualizations support responsive SVG output with embedded metadata tooltips and raster PNG exports at 4K resolution. This tool addresses specific needs for tracking metrics like API usage trends, health tracking adherence, or financial transaction frequencies, offering precise control over date range filtering, color palette inversion, and weekday/weekend contrast adjustments.",
   "usage_steps": [
-    "Open the Calendar Heatmap Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Upload structured data via the file input field, ensuring columns contain 'date' (YYYY-MM-DD) and 'value' (numerical) fields",
+    "Select date range using the dual-month picker to define visualization boundaries",
+    "Configure color scale using the gradient builder with options for sequential, diverging, or custom hex color arrays",
+    "Adjust intensity normalization with the domain range slider to compress or expand color value mappings",
+    "Toggle weekday/weekend cell borders using the accessibility checkbox for temporal pattern emphasis",
+    "Export rendered visualization using the resolution selector (SVG or PNG with DPI control)"
   ],
   "usage_examples": [
-    "Use Calendar Heatmap Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Analyzing daily GitHub commit frequency over six months to identify coding productivity patterns",
+    "Visualizing website traffic metrics from Google Analytics exports to detect seasonal user engagement trends",
+    "Tracking fitness app workout completion rates with color gradients showing exercise consistency",
+    "Mapping retail sales transactions to calendar days for identifying peak purchasing periods by week and month"
   ]
 }

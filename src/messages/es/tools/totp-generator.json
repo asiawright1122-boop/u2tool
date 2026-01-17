@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Generador TOTP es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Generador TOTP, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Generador TOTP puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Generador TOTP inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Generador TOTP (Time-Based One-Time Password) implementa el estándar RFC 6238 para crear contraseñas de un solo uso sincronizadas temporalmente. Este mecanismo utiliza una clave secreta compartida y una marca de tiempo para generar tokens mediante funciones hash criptográficas HMAC-SHA1. El algoritmo divide el tiempo en intervalos de 30 segundos, produciendo un código de 6-8 dígitos que cambia en cada período. Los usuarios necesitan esta herramienta para configurar autenticación de dos factores (2FA) en servicios como GitHub, Google Workspace o plataformas blockchain. Los desarrolladores lo usan para depurar integraciones OAuth2 o probar la resistencia de sistemas de autenticación. Funciona localmente en el navegador mediante Web Crypto API, garantizando que las claves nunca salgan del dispositivo. Al escanear el código QR generado, aplicaciones como Google Authenticator sincronizan su reloj interno con el servidor de autenticación, permitiendo la validación asincrónica de tokens.",
   "usage_steps": [
-    "Abre la página de la herramienta Generador TOTP",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Ingresa una clave secreta en formato Base32 (ej: 'JBSWY3DPEHPK3PXP') en el campo designado",
+    "Selecciona el intervalo de tiempo (30s o 60s) según la configuración del servicio destino",
+    "Elige la longitud del código (6, 7 u 8 dígitos) compatible con la aplicación verificadora",
+    "Cliquea 'Generar TOTP' para obtener el token actual y su representación hexadecimal",
+    "Escanea el código QR dinámico con Google Authenticator para vincular la cuenta",
+    "Verifica la sincronización horaria usando el botón 'Probar tiempo NTP' en caso de fallos"
   ],
   "usage_examples": [
-    "Usa Generador TOTP para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Configurar 2FA en una cuenta de correo corporativo sin acceso a internet durante viajes",
+    "Depurar un sistema de autenticación OAuth2 en un entorno de desarrollo local aislado",
+    "Generar códigos de recuperación para cuentas de criptomonedas en dispositivos offline",
+    "Comparar resultados entre algoritmos SHA-1, SHA-256 y SHA-512 en entornos de pruebas de seguridad"
   ]
 }

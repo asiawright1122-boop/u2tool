@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Compresseur de GIF est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant Compresseur de GIF, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, Compresseur de GIF peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, garantissant la sécurité de vos données et ne sera pas téléchargé sur un serveur. Utilisez Compresseur de GIF immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le GIF Compressor est un outil spécialisé qui réduit la taille des fichiers GIF animés tout en préservant leur séquence visuelle. Il utilise des techniques d'optimisation avancées comme la réduction de la palette de couleurs (jusqu'à 256 couleurs indexées), la suppression des données EXIF non nécessaires, et l'application d'algorithmes de compression LZW avec ajustement du facteur de compression. Le processus exploite également la méthode de « frame differencing » pour éliminer les redondances entre les images successives, stockant uniquement les parties modifiées. Cet outil répond à des besoins critiques tels que l'optimisation de GIF pour le web (réduction du temps de chargement), l'envoi de fichiers volumineux par e-mail, ou l'adaptation aux limites de taille imposées par les réseaux sociaux. Techniquement, il intègre une analyse préalable des frames pour détecter les zones statiques, permettant une compression ciblée. Les utilisateurs peuvent ajuster manuellement le niveau de qualité ou opter pour un mode automatique qui équilibre qualité et poids final. Compatible avec les GIF animés de toutes dimensions, il garantit une perte minimale de qualité grâce à un filtrage adaptatif des couleurs peu fréquentes.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Compresseur de GIF",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Téléversez votre GIF en cliquant sur « Glisser-déposer » ou en sélectionnant un fichier via « Parcourir ».",
+    "Ajustez les paramètres dans l'onglet « Compression » : choisissez entre les modes « Standard » ou « Ultra », et activez/désactivez la suppression des données EXIF via la case correspondante.",
+    "Utilisez le curseur « Palette Size » pour réduire manuellement le nombre de couleurs (ex: 128 pour une compression accrue).",
+    "Prévisualisez l'effet des réglages grâce à l'affichage côte à côte du GIF original et compressé.",
+    "Cliquez sur « Compresser » pour lancer le traitement, qui affiche en temps réel la réduction de taille en Ko/Mo.",
+    "Téléchargez le résultat via le bouton « Télécharger » ou copiez le lien partageable généré automatiquement."
   ],
   "usage_examples": [
-    "Utilisez Compresseur de GIF pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur web compresse un GIF de 5 Mo à 800 Ko pour intégrer une animation sur une landing page sans ralentir le chargement.",
+    "Un marketeur réduit la taille d'un GIF promotionnel pour respecter la limite de 2 Mo imposée par une plateforme d'emailing.",
+    "Un créateur de contenu optimise un GIF de 15 secondes en mode « Ultra » pour le publier sur Twitter, où les fichiers ne peuvent dépasser 15 Mo.",
+    "Un blogueur anime un tutoriel avec des GIF sans surcharger le site, en ajustant la palette de couleurs pour un équilibre qualité/poids optimal."
   ]
 }

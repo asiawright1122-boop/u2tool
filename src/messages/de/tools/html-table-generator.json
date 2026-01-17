@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der HTML-Tabelle-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem HTML-Tabelle-Generator können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der HTML-Tabelle-Generator Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den HTML-Tabelle-Generator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der HTML Table Generator ist ein spezialisierter Code-Generator, der es Entwicklern ermöglicht, semantisch korrekte HTML-Tabellen durch visuelle Interaktion zu erstellen. Technisch basiert das Tool auf einem clientseitigen JavaScript-Framework, das DOM-Elemente dynamisch rendert und gleichzeitig eine Echtzeitvorschau des generierten HTML-Codes bereitstellt. Benutzer können die Tabellenstruktur durch Drag-and-Drop von Zeilen und Spalten definieren, Zellen zusammenführen (mit rowspan/colspan), Kopfzeilen (thead) und Körperbereiche (tbody) unterscheiden sowie benutzerdefinierte CSS-Klassen oder Inline-Stile auf Zellen anwenden. Das Tool unterstützt auch die Einbindung von Zugänglichkeitsattributen (ARIA-Rollen) und optimiert die Ausgabe für responsives Design durch Media-Queries in den generierten Style-Blöcken. Entwickler profitieren besonders bei Projekten mit komplexen Datenvisualisierungen, da manuelles Schreiben von verschachtelten table/tr/th-Elementen mit Fehlerrisiken verbunden ist. Für Anwendungen in CMS-Umgebungen (z.B. WordPress) oder Low-Code-Plattformen liefert der Generator sofort einsetzbaren Code, der sich nahtlos in React-, Vue.js- oder Bootstrap-Projekte integrieren lässt. Die Backend-unabhängige Architektur garantiert, dass keine Daten gespeichert werden – der gesamte Prozess erfolgt im Browser.",
   "usage_steps": [
-    "Öffnen Sie die Seite des HTML-Tabelle-Generators",
-    "Geben Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Anpassen Sie die Tooloptionen und Einstellungen, wenn nötig",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Wählen Sie im Bereich 'Tabellenstruktur' die gewünschte Anzahl an Zeilen und Spalten über die numerischen Eingabefelder aus.",
+    "Aktivieren Sie mit dem Schieberegler 'Kopfzeile erstellen' und definieren Sie festgelegte Spaltenüberschriften durch Klick auf die Zellen im thead-Bereich.",
+    "Verwenden Sie die Schaltfläche 'Zelle zusammenführen', um mehrere Zellen horizontal oder vertikal zu kombinieren und entsprechende rowspan/colspan-Werte automatisch berechnen zu lassen.",
+    "Weisen Sie durch Auswahl im Dropdown 'Stilvorlage' entweder ein Bootstrap-Klassen-Paket oder benutzerdefinierte CSS zu, das im separaten Textfeld definiert wird.",
+    "Kopieren Sie den generierten Code aus dem rechten Bereich 'HTML-Vorschau', das mit Syntaxhervorhebung und Zeilennummern versehen ist.",
+    "Nutzen Sie die 'Responsiv-Option', um Breakpoints für mobile Ansichten festzulegen und die Tabelle automatisch in ein stapelbares Format umzuwandeln."
   ],
   "usage_examples": [
-    "Verwenden Sie den HTML-Tabelle-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Erstellung einer interaktiven Preisvergleichstabelle für ein E-Commerce-Portal mit dynamischen Filterfunktionen durch vordefinierte CSS-Klassen.",
+    "Generierung von akademischen Forschungsdaten mit verschachtelten Zellen für eine Publikation im Bereich Statistik, einschließlich vollständiger ARIA-Beschriftungen.",
+    "Implementierung eines Dashboard-UIs in einer React-Webanwendung durch Integration von vorformatiertem HTML-Code mit eingebetteten JavaScript-Event-Listenern.",
+    "Konfiguration einer responsiven Newsletter-Tabelle für E-Mail-Marketing-Kampagnen, die sich an verschiedene Client-Engines wie Outlook oder Gmail anpasst."
   ]
 }

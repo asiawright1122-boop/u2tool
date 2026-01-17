@@ -1,15 +1,17 @@
 {
-  "detailed_description": "El Validador de XML verifica tus documentos XML por errores de sintaxis y bien formado. Proporciona mensajes de error detallados con números de línea y columna.",
+  "detailed_description": "El validador XML analiza documentos para verificar su conformidad con las especificaciones XML 1.0 y 1.1, asegurando que el documento esté bien formado (well-formed) y, opcionalmente, válido según un DTD o esquema XSD. Esta herramienta detecta errores como etiquetas mal cerradas, anidamiento incorrecto de nodos, declaraciones XML inválidas, referencias a entidades no definidas, o problemas en secciones CDATA. Es esencial para desarrolladores que trabajan con sistemas que dependen de XML para intercambio de datos (por ejemplo, servicios web SOAP, archivos de configuración de servidores, o feeds RSS/Atom). La validación previene fallos en aplicaciones que consumen XML, como errores de parseo en API REST que usan XML como formato de mensaje. Internamente, el validador utiliza un analizador SAX (Simple API for XML) para procesar el documento de forma secuencial, verificando la sintaxis sin necesidad de cargar el documento completo en memoria. Los resultados incluyen número de línea, posición del error y código de error estandarizado (como 'InvalidCharInCData' o 'UnmatchedEndTag'). Además, soporta validación con espacios de nombres (namespaces) y esquemas externos, mostrando advertencias por omisión de atributos requeridos en DTDs complejos.",
   "usage_steps": [
-    "Pega tu contenido XML",
-    "Haz clic en Validar para verificar",
-    "Revisa los resultados de la validación",
-    "Arregla cualquier error reportado",
-    "Revalida hasta que esté limpio"
+    "Accede al validador XML y localiza el campo de texto 'Código XML' con soporte de resaltado de sintaxis.",
+    "Pega tu documento XML o carga un archivo mediante el botón 'Seleccionar archivo' (formatos .xml y .xhtml).",
+    "Activa/desactiva la opción 'Validar con esquema' si deseas comprobar conformidad contra un DTD/XSD (requiere URL o carga del esquema).",
+    "Selecciona el modo de validación en el menú desplegable: 'Solo verificación de estructura' o 'Completo con esquema'.",
+    "Haz clic en 'Validar XML' para iniciar el análisis, que procesa el documento en tiempo real.",
+    "Revisa el panel de resultados que muestra errores críticos (en rojo), advertencias (en amarillo) y el árbol DOM generado si el documento es válido."
   ],
   "usage_examples": [
-    "Validar respuestas de API",
-    "Revisar archivos de configuración",
-    "Depurar mensajes SOAP"
+    "Un desarrollador corrige un archivo de configuración de Apache Tomcat con una etiqueta <servlet> mal cerrada que causaba fallos en el servidor.",
+    "Un integrador de sistemas valida un archivo XML de transacciones bancarias contra un esquema XSD antes de enviarlo a un sistema de contabilidad externo.",
+    "Un equipo de QA detecta un feed RSS con una etiqueta <pubDate> en formato incorrecto que impediría la indexación en plataformas de podcast.",
+    "Un ingeniero de datos depura un archivo XML de exportación desde MySQL que contiene caracteres ilegales en un nodo <description>."
   ]
 }

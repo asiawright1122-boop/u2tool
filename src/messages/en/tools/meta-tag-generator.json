@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Meta Tag Generator is a practical online tool that helps you quickly complete various tasks. Using Meta Tag Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Meta Tag Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Meta Tag Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Meta Tag Generator is a precision tool for creating comprehensive metadata essential for modern web development. This tool generates three critical categories of tags: SEO metadata (title, description, robots directives), Open Graph tags (og:title, og:image, og:type) for social media rendering, and Twitter Card tags (twitter:card, twitter:site) with support for advanced properties like video metadata and app links. Users require this tool to optimize their websites for search engine crawlers and social media platforms, ensuring accurate content representation across digital ecosystems. Technically, the generator implements HTML5-compliant syntax with automatic character encoding (UTF-8), viewport configuration, and schema.org integration. It validates input against W3C standards, prevents tag duplication through DOM parsing, and provides real-time preview of generated markup. The backend leverages a content negotiation algorithm to prioritize meta tag hierarchy while maintaining cross-platform compatibility. Developers benefit from built-in best practices like description length optimization (150-160 characters) and Open Graph version detection.",
   "usage_steps": [
-    "Open the Meta Tag Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Enter your page title in the 'Primary SEO Title' field (max 60 characters with fallback ellipsis handling)",
+    "Input canonical URL in the 'Preferred Domain' section for duplicate content prevention",
+    "Select content type from the 'Open Graph Type' dropdown (e.g., article, product, website) with dynamic property fields",
+    "Configure Twitter Card settings using the dedicated builder with username validation and image dimension guidance",
+    "Adjust advanced parameters in the 'Extended Metadata' panel including language codes, robots directives, and schema markup",
+    "Click 'Generate & Validate' to produce error-checked markup with inline suggestions for improvement"
   ],
   "usage_examples": [
-    "Use Meta Tag Generator to process your data",
-    "Get processing results quickly without waiting"
+    "E-commerce developer generating product-specific Open Graph tags with price and availability structured data for Facebook Shop integration",
+    "Content marketer creating Twitter Card summaries with lead magnet PDF attachments for LinkedIn article promotion",
+    "Frontend engineer implementing responsive viewport tags with device-width directives for mobile-first indexing compliance",
+    "SEO specialist auditing existing meta tags across multiple pages using the batch processing feature with CSV import/export"
   ]
 }

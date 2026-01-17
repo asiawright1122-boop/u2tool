@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Convertisseur d'entités HTML est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Convertisseur d'entités HTML, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous mettre en route rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Convertisseur d'entités HTML peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload sur n'importe quel serveur. Utilisez immédiatement le Convertisseur d'entités HTML pour expérimenter des services de outil en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L’HTML Entity Converter transforme un texte brut en entités HTML (nommé ou numériques) et réciproquement, en respectant la grammaire des entités de HTML5 et la compatibilité XML. L’outil identifie les caractères réservés (&, <, >, \", ') et tout point de code Unicode non‑ASCII, puis applique l’encodage approprié selon le mode choisi: entités nommées quand elles existent (p. ex. nbsp, copy, amp), ou numérique décimale (&#160;) et hexadécimale (&xA0;). En décodage, il comprend les formes numériques décimales et hexadécimales (entrées &#x...; ou &#...;) ainsi que les variantes à points de code étendus (&x1F600;). L’outil accepte des entrées multilignes, traite les échappements en entrée (\\n, \\t) et conserve la casse des formats &xNN; ou &#xNNN;. Il propose un mode \"Attribut\" pour forcer l’apostrophe en &#39; dans les attributs, et un mode \"Sécurisé\" qui n’encode pas les caractères non‑réservés afin d’éviter l’inflation inutile. En pratique, cela résout les collisions de parseurs, la corruption des caractères dans les moteurs de template, et l’affichage correct des diacritiques et symboles dans les e‑mails HTML, les flux RSS, les widgets tiers, et les pages générées par des CMS. La conversion s’effectue en temps réel, avec vérification de cohérence (par exemple, refus de séquences invalides) et options de copie ou de téléchargement.",
   "usage_steps": [
-    "Ouvrez la page du Convertisseur d'entités HTML",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez la page du convertisseur HTML Entity (/html-entity).",
+    "Collez le texte source dans la zone d’édition « Entrée ».",
+    "Sélectionnez le mode: « Encoder » ou « Décoder » via les onglets en haut de l’interface.",
+    "Choisissez le format de sortie: « Entités nommées », « Numérique (décimal) » ou « Numérique (hexadécimal) ». Activez si besoin l’option « Mode Attribut » (apostrophe → &#39;).",
+    "La conversion s’exécute automatiquement; le résultat apparaît dans la zone « Sortie ».",
+    "Cliquez sur « Copier » pour coller le résultat dans votre presse‑papiers, ou sur « Télécharger » pour l’exporter au format .txt."
   ],
   "usage_examples": [
-    "Utilisez le Convertisseur d'entités HTML pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Insérer un texte avec guillemets et esperluette dans un attribut HTML: « prix=\"25 € & plus\" ». Encoder en mode « Attribut » pour obtenir &quot;25 &#8364; &amp; plus&quot;, puis coller dans l’attribut.",
+    "Écrire un script JSON‑LD embarqué dans du HTML sans casser l’analyse: l’URL « https://exemple.fr/?a=1&b=2 » doit être encodée « https://exemple.fr/?a=1&amp;b=2 » pour éviter la troncature par le parseur HTML.",
+    "Générer un e‑mail HTML à partir d’un CSV avec des guillemets et retours à la ligne: encoder le corps en entités nommées pour garantir l’affichage correct du texte dans les clients e‑mail.",
+    "Préparer des extraits de code pour un blog technique: copier du JavaScript contenant <, > et & dans l’attribut onclick=\"...\" en encodant en numérique (hexa) pour éviter les erreurs de parsing et l’exécution involontaire."
   ]
 }

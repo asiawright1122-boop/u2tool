@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der CIDR-Rechner ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CIDR-Rechner können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der CIDR-Rechner Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und Ihre Daten nicht auf irgendeinem Server hochgeladen werden.",
+  "detailed_description": "Der CIDR-Rechner ist ein präzises Werkzeug zur Analyse und Berechnung von IPv4- und IPv6-Subnetzen basierend auf der CIDR-Notation (Classless Inter-Domain Routing). Technisch ermöglicht es die Ermittlung des Netzwerkidentifikators, der Broadcast-Adresse, der verfügbaren Hosts sowie der Subnetzmaske durch Bitmaskenoperationen auf der IP-Adresse kombiniert mit dem Präfixlängenparameter. Das Tool unterstützt sowohl klassische Klassenlose-Subnetzberechnungen als auch erweiterte Szenarien wie Supernets und VLSM (Variable Length Subnet Mask). Netzwerkadministratoren benötigen dieses Werkzeug für präzise Netzwerkplanung, Troubleshooting in komplexen Topologien oder die Optimierung von Ressourcen in Cloud-Umgebungen. Die Berechnung erfolgt durch eine Kombination aus Bitverschiebungen und logischen AND-Operationen, um Netzwerkgrenzen zu bestimmen, während gleichzeitig die Anzahl der möglichen Hosts unter Berücksichtigung von reservierten Adressen (z.B. Netzwerk- und Broadcast-Adresse) korrekt berechnet wird. Besonders bei der Migration zu IPv6 oder der Aufteilung großer Adressblöcke in Teilnetze erweist sich der Rechner als unverzichtbares Hilfsmittel.",
   "usage_steps": [
-    "Öffnen Sie die Seite des CIDR-Rechners",
-    "Fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Einstellungen und Optionen nach Bedarf an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Geben Sie die gewünschte CIDR-Notation (z.B. 192.168.0.0/24) in das Eingabefeld 'CIDR-Adresse' ein.",
+    "Wählen Sie im Dropdown-Menü zwischen IPv4- oder IPv6-Modus, um protokollspezifische Berechnungen zu aktivieren.",
+    "Aktivieren Sie optional den Schalter 'Erweiterte Ausgabe', um zusätzliche Informationen wie Netzwerktyp (öffentlicht/privat) anzuzeigen.",
+    "Klicken Sie auf den 'Berechnen'-Button, um die Subnetzanalyse zu starten.",
+    "Prüfen Sie die Ergebnisse im Tabellenformat: Netzwerk-ID, Broadcast-Adresse, Hostbereich und verfügbare Hosts.",
+    "Nutzen Sie den 'Export'-Button, um die Ergebnisse als JSON oder CSV herunterzuladen."
   ],
   "usage_examples": [
-    "Verwenden Sie den CIDR-Rechner, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell verarbeitete Ergebnisse ohne zu warten"
+    "Ein Netzwerkadministrator plant die Subnetzstruktur eines Unternehmensnetzes und berechnet mithilfe des Tools die optimale CIDR für verschiedene Abteilungen mit unterschiedlichen Host-Anforderungen.",
+    "Ein Cloud-Ingenieur unterteilt einen /24-Adressblock in Subnetze unterschiedlicher Größe für eine AWS-VPC-Infrastruktur, wobei VLSM zur Ressourcenoptimierung genutzt wird.",
+    "Ein Systembetreuer analysiert eine IPv6-Präfixzuweisung eines ISPs und ermittelt die maximale Anzahl möglicher Subnetze für zukünftige Expansion.",
+    "Ein Entwickler validiert die Konfiguration eines Docker-Netzwerks, indem er die berechneten Hostgrenzen mit den tatsächlich vergebenen Adressen vergleicht."
   ]
 }

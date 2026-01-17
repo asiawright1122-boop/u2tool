@@ -1,16 +1,17 @@
 {
-  "detailed_description": "Le Calculateur d'impôts est un outil d'estimation d'impôt sur le revenu complet qui vous aide à calculer l'impôt sur le revenu fédéral en fonction des tranches d'impôt 2024. Saisissez votre revenu brut et votre statut de déclaration pour obtenir l'impôt estimé, le taux effectif et le salaire net. Consultez le breakdown détaillé par tranche d'impôt et comparez les déductions standard et détaillées.",
+  "detailed_description": "Ce calculateur de taxes fédérales américaines permet d'évaluer avec précision l'impôt sur le revenu en appliquant les tranches d'imposition progressif et en générant un taux d'imposition effectif personnalisé. Conçu pour les contribuables américains, il utilise des algorithmes basés sur les derniers seuils de l'IRS (Internal Revenue Service) et intègre les règles de calcul par statut matrimonial (célibataire, marié, etc.). L'outil décompose techniquement la contribution de chaque tranche marginale à la charge fiscale totale, en tenant compte des ajustements de revenu brut (comme les contributions à un compte de retraite 401(k)), des déductions standard ou détaillées, et des crédits d'impôt applicables. Il est particulièrement utile pour modéliser des scénarios fiscaux complexes (ex. : impact d'une plus-value immobilière) ou optimiser des stratégies de planification fiscale annuelle. Le taux d'imposition effectif est calculé en divisant l'impôt total par le revenu imposable, offrant une vision claire de la charge fiscale réelle. Contrairement aux outils basiques, ce calculateur inclut un système de pondération dynamique des crédits non remboursables et une gestion des seuils de phase-out selon le revenu ajusté brut (AGI).",
   "usage_steps": [
-    "Saisissez votre revenu annuel brut",
-    "Sélectionnez votre statut de déclaration",
-    "Choisissez les déductions standard ou détaillées",
-    "Consultez votre responsabilité fiscale estimée",
-    "Vérifiez votre taux effectif d'impôt",
-    "Voyez le breakdown des tranches d'impôt"
+    "Saisissez votre revenu brut annuel dans le champ dédié en dollars américains.",
+    "Sélectionnez votre statut matrimonial (célibataire, marié, etc.) dans le menu déroulant correspondant.",
+    "Indiquez vos déductions potentielles (santé, intérêts hypothécaires, dons) via le formulaire de déductions ajustables.",
+    "Activez les crédits d'impôt applicables (ex. : crédit énergie, éducation) à l'aide des interrupteurs binaires.",
+    "Cliquez sur 'Calculer' pour exécuter l'algorithme basé sur les données IRS 2024.",
+    "Analysez la répartition visuelle par tranche marginale et le taux effectif dans la section résultats détaillés."
   ],
   "usage_examples": [
-    "Estimez les impôts pour un salaire de 75 000 $",
-    "Comparez l'impact fiscal de différents statuts de déclaration",
-    "Planifiez les déductions pour réduire la responsabilité fiscale"
+    "Un freelance veut estimer ses impôts trimestriels après un gain en capital de $15,000.",
+    "Un couple marié compare les impôts selon leur statut (déclaré ensemble ou séparément).",
+    "Un investisseur modélise l'impact d'une donation caritative de $5,000 sur son AGI.",
+    "Un indépendant calcule l'effet d'une contribution maximale à son compte Roth IRA."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Bússola é uma ferramenta online prática que ajuda você a concluir rapidamente várias tarefas. Usando o Gerador de Gráficos de Bússola, você pode processar vários dados facilmente sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Bússola pode ajudar a melhorar a eficiência do trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use o Gerador de Gráficos de Bússola imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Gerador de Gráficos em Relógio é uma ferramenta online que permite a criação de gráficos em formato de relógio, ideal para visualizar progressos e métricas de forma clara e impactante. Este gráfico, também conhecido como gráfico de gauge, é amplamente utilizado em dashboards e relatórios para representar dados que variam dentro de um intervalo específico, como níveis de desempenho, percentual de conclusão de tarefas ou indicadores de performance chave (KPIs). A ferramenta oferece opções avançadas de personalização, permitindo ajustar cores, limites, e rótulos, além de exportar os gráficos em formatos PNG e SVG, facilitando a integração com outros sistemas de análise e apresentação. Desenvolvido com tecnologias web modernas, o Gerador de Gráficos em Relógio é acessível via navegador, não requer instalação e é totalmente responsivo, adaptando-se a diferentes tamanhos de tela. Usuários de diferentes setores, como analytics, gestão de projetos e desenvolvimento de software, podem se beneficiar desta ferramenta para criar visualizações precisas e atraentes.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Bússola",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o site do Gerador de Gráficos em Relógio e clique no botão 'Criar Gráfico' para iniciar uma nova sessão.",
+    "No painel de configuração, defina o valor mínimo e máximo do seu gráfico, além do valor atual que deseja representar.",
+    "Selecione a paleta de cores desejada ou personalize as cores individuais para os diferentes segmentos do gráfico.",
+    "Adicione rótulos e títulos personalizados para cada segmento, facilitando a interpretação dos dados.",
+    "Ajuste as opções de estilo, como a espessura do ponteiro e as marcas de graduação, para aperfeiçoar a aparência do gráfico.",
+    "Após finalizar as configurações, clique em 'Exportar' para salvar o gráfico em formato PNG ou SVG, pronto para uso em seus projetos."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Bússola para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um gestor de projetos pode usar o Gerador de Gráficos em Relógio para criar uma visualização do progresso atual de um projeto em um dashboard, mostrando claramente a porcentagem concluída em relação ao objetivo total.",
+    "Um engenheiro de qualidade pode gerar um gráfico para representar o nível de conformidade de um produto em relação a padrões estabelecidos, destacando áreas que precisam de atenção.",
+    "Um analista de marketing pode usar a ferramenta para criar um gráfico que mostre o desempenho de uma campanha em termos de ROI, comparando o valor atual com as metas estabelecidas.",
+    "Um desenvolvedor de software pode utilizar o gráfico para monitorar a cobertura de testes em um projeto, destacando o percentual de código que está sendo testado automaticamente."
   ]
 }

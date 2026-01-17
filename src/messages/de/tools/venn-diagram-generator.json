@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Venn-Diagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Venn-Diagramm-Generator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Venn-Diagramm-Generator kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Venn-Diagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der Venn-Diagramm-Generator ermöglicht die präzise Erstellung von Mengendiagrammen zur Visualisierung logischer Beziehungen zwischen Datensätzen. Basierend auf der Mengenlehre (Union, Durchschnitt, Differenz) generiert das Tool SVG-basierte Diagramme mit bis zu fünf überlappenden Kreisen, deren Proportionalität durch Benutzerparameter gesteuert wird. Die Algorithmen nutzen die VennMaster-Library zur Berechnung symmetrischer Layouts und gewährleisten eine visuelle Differenzierung durch Farbmaskierung und Transparenzstufen. Nutzer profitieren besonders in Szenarien wie der Analyse komplexer Datenschnitte in der Bioinformatik, der Modellierung von Wahrscheinlichkeitsräumen in der Stochastik oder der Identifizierung von Synergien in Unternehmensfusionen. Die Echtzeitvorschau aktualisiert sich bei jeder Parameteränderung, wobei Overlap-Ratios über Schieberegler feinjustierbar sind. Exportformate umfassen skalierbare Vektorgrafiken (SVG) und Rasterbilder (PNG) mit bis zu 4K-Auflösung. Besonders für Forschende und Data Scientists bietet die Implementierung von Euler-Diagrammen zusätzlich zur Standard-Venn-Darstellung Flexibilität bei nicht-überlappenden Mengen.",
   "usage_steps": [
-    "Öffnen Sie die Venn-Diagramm-Generator-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Wählen Sie im Dropdown 'Mengenzahl' zwischen 2 und 5 Datensätzen aus.",
+    "Geben Sie im Tab 'Parameter' für jede Menge die absolute Elementanzahl ein.",
+    "Konfigurieren Sie Überlappungsverhältnisse per Schieberegler im 'Relations-Editor'.",
+    "Wählen Sie im Farbpicker benutzerdefinierte HEX-Codes für semantische Differenzierung.",
+    "Aktivieren Sie die 'Proportionalität'-Option für flächengenaue Kreisgrößen.",
+    "Exportieren Sie das Diagramm über den 'Download'-Button in SVG oder PNG (300-4000 dpi)."
   ],
   "usage_examples": [
-    "Verwenden Sie Venn-Diagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Genomforscher identifizieren gemeinsame Gene in drei Pflanzenarten durch symmetrische 3-Kreis-Diagramme.",
+    "Versicherungsanalysten modellieren Risikogemeinsamkeiten zwischen Haftpflicht-, KFZ- und Lebensversicherungen.",
+    "Produktmanager visualisieren Feature-Überschneidungen zwischen vier Wettbewerbsprodukten in einem Quartalsbericht.",
+    "Mathematiklehrer erstellen Arbeitsblätter mit nicht-proportionalen Euler-Diagrammen zur Mengenlehre-Veranschaulichung."
   ]
 }

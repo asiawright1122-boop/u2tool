@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Codes d'état HTTP est un outil pratique en ligne qui vous aide à accomplir rapidement diverses tâches. Avec Codes d'état HTTP, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil possède une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, Codes d'état HTTP peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload sur n'importe quel serveur. Utilisez immédiatement Codes d'état HTTP pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil HTTP Status Codes propose une base de données exhaustive des codes de réponse HTTP standardisés, permettant aux développeurs de comprendre et d'interpréter les statuts renvoyés par les serveurs lors des requêtes web. Techniquement, il couvre les classes de statuts (1xx, 2xx, 3xx, 4xx, 5xx), leurs significations protocolaires selon les RFC 7231 et 7540, ainsi que les en-têtes associés. Cet outil s'adresse aux développeurs d'API RESTful, aux administrateurs système ou aux étudiants en informatique confrontés au débogage d'appels réseau, à l'analyse de logs serveur ou à l'optimisation de la gestion des erreurs. Il permet de rechercher un code par numéro, par catégorie ou par mot-clé, et propose des explications contextuelles incluant les causes probables et les solutions techniques. Des filtres avancés permettent d'isoler les statuts liés aux authentifications (401, 403), aux redirections (301, 302) ou aux erreurs serveur critiques (502, 504). L'interface inclut également des références aux méthodes HTTP associées (GET, POST) et aux en-têtes de contrôle de cache pertinents.",
   "usage_steps": [
-    "Ouvrez la page d'outil Codes d'état HTTP",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Saisir un code HTTP (ex. 404) dans la barre de recherche pour obtenir son explication détaillée.",
+    "Sélectionner une catégorie (ex. 4xx - Erreurs clients) via le menu déroulant pour explorer les statuts liés.",
+    "Utiliser le filtre 'RFC standard' pour afficher uniquement les codes conformes à la spécification RFC 7231.",
+    "Cliquer sur 'Exemples pratiques' pour visualiser des scénarios d'utilisation avec en-têtes associés.",
+    "Copier le snippet de code cURL fourni pour reproduire ou tester le comportement du statut.",
+    "Ajouter des codes fréquents à ses favoris pour un accès rapide via l'icône d'étoile."
   ],
   "usage_examples": [
-    "Utilisez Codes d'état HTTP pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur identifie une erreur 502 Bad Gateway dans les logs de son application et utilise l'outil pour comprendre les causes réseau possibles.",
+    "Un étudiant en développement web apprend les différences entre les statuts 301 Moved Permanently et 307 Temporary Redirect via les explications interactives.",
+    "Un testeur QA vérifie les réponses d'une API REST en comparant les statuts attendus (ex. 201 Created) avec ceux documentés dans l'outil.",
+    "Un administrateur système analyse une réponse 429 Too Many Requests pour configurer des politiques de limitation de débit sur un serveur NGINX."
   ]
 }

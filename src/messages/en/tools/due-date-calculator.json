@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Due Date Calculator estimates your pregnancy due date based on your last menstrual period.",
+  "detailed_description": "The Due Date Calculator precisely determines pregnancy due dates using medical algorithms and patient-specific inputs. By implementing Naegele's rule as a baseline—adding 280 days (40 weeks) to the first day of the last menstrual period (LMP)—it also incorporates adjustments for cycle irregularities and clinical data. Users input LMP, average cycle length, and optional ultrasound measurements to refine calculations. The tool employs a weighted formula that prioritizes ultrasound dating when available, aligning with clinical guidelines for improved accuracy. It generates a chronological timeline of milestones including embryonic development stages, prenatal screening windows, and trimester boundaries. All dates are converted to ISO 8601 format internally for timezone-agnostic storage, then localized for user display. For IVF pregnancies, the tool accepts embryo transfer dates to recalculate milestones based on embryonic age rather than LMP. This hybrid approach ensures medical validity while accommodating diverse clinical scenarios.",
   "usage_steps": [
-    "Enter last menstrual period",
-    "Or enter conception date",
-    "Adjust cycle length",
-    "View due date",
-    "Track milestones"
+    "Enter the Last Menstrual Period (LMP) using the calendar date-picker with MM/DD/YYYY format validation.",
+    "Adjust the 'Cycle Length' dropdown to specify regular (28-day) or irregular cycles requiring modified calculations.",
+    "Input optional ultrasound measurement dates in the 'Crown-Rump Length (CRL)' field to trigger automatic date recalculation.",
+    "Select 'IVF Pregnancy' checkbox to enable embryo transfer date entry for embryonic age-based tracking.",
+    "Click 'Calculate' to generate a color-coded timeline displaying key milestones like viability threshold (24 weeks) and term dates.",
+    "Export the printable milestone schedule or copy the JSON-formatted data for EHR system integration."
   ],
   "usage_examples": [
-    "Calculate due date from LMP",
-    "Track pregnancy week by week",
-    "Plan for baby arrival"
+    "A patient with a 32-day cycle inputs LMP 03/01/2024 and cycle length 32 days to receive adjusted dates accounting for prolonged follicular phase.",
+    "An obstetrician enters ultrasound measurements showing CRL of 78mm on 04/15/2024 to override LMP-based calculations and establish new due date.",
+    "A fertility clinic uses the IVF-specific workflow to track a frozen embryo transfer (FET) on 05/10/2024, generating milestones based on Day 5 blastocyst age.",
+    "A midwife creates a shareable milestone schedule for a high-risk patient, highlighting critical windows for gestational diabetes screening (24-28 weeks) and anatomy scans."
   ]
 }

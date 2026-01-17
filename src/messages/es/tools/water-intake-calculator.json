@@ -1,15 +1,17 @@
 {
-  "detailed_description": "La Calculadora de Ingesta de Agua te ayuda a determinar cuánta agua debes beber diariamente.",
+  "detailed_description": "El Calculador de Ingesta de Agua es una herramienta algorítmica que determina las necesidades hídricas diarias personalizadas mediante un modelo matemático basado en tres variables críticas: masa corporal (en kilogramos o libras), nivel de actividad física (expresado en MET-horas/semana) y condiciones ambientales (temperatura y humedad). Utiliza una fórmula híbrida que combina el método de la OMS (30-35 ml/kg) con ajustes por termorregulación, incorporando factores de corrección para deportistas, climas extremos y condiciones patológicas. La herramienta aplica una lógica condicional que incrementa el cálculo base en un 12-25% para temperaturas superiores a 28°C o altitudes mayores a 1,500 metros. Es esencial para personas con requerimientos hídricos atípicos, como atletas de resistencia, pacientes en tratamiento diurético o trabajadores expuestos a ambientes térmicos extremos. El algoritmo compensa automáticamente la pérdida insensible de agua (200-400 ml/día adicional en ambientes secos) y calcula el volumen óptimo de ingestión horaria para evitar tanto la hipohidratación como la hiponatremia.",
   "usage_steps": [
-    "Introduce tu peso corporal",
-    "Selecciona el nivel de actividad",
-    "Elige el clima",
-    "Visualiza la ingesta recomendada",
-    "Sigue los consejos"
+    "1. Seleccione la unidad de medida (kg o lb) usando el interruptor deslizante en la sección 'Configuración Básica'.",
+    "2. Ingrese su peso corporal exacto en el campo numérico habilitado, con precisión de 0.1 kg/lb.",
+    "3. Elija su nivel de actividad física diaria en la lista desplegable: Sedentario (1.2), Moderado (1.55) o Intenso (1.9).",
+    "4. Ajuste el deslizador de temperatura ambiental (15°C a 45°C) y active la opción 'Alta Humedad' si aplica.",
+    "5. Marque la casilla 'Condiciones Médicas' si padece insuficiencia cardíaca, renal o utiliza diuréticos.",
+    "6. Presione el botón 'Calcular Ingesta' para obtener el resultado en mililitros y onzas fluidas, junto con recomendaciones cronológicas."
   ],
   "usage_examples": [
-    "Calcula las necesidades de agua para atletas",
-    "Determina la hidratación para el clima cálido",
-    "Planifica la ingesta diaria"
+    "Un triatleta masculino de 75 kg que entrena 5 horas diarias en un clima tropical a 32°C necesita 3.8 litros/día, incluyendo electrolitos.",
+    "Una mujer sedentaria de 58 kg en un ambiente de oficina climatizado a 22°C requiere 2.2 litros/día distribuidos en 8 tomas horarias.",
+    "Un paciente de 68 kg con hipertensión en tratamiento diurético debe consumir 2.7 litros/día, con alertas de hidratación cada 90 minutos.",
+    "Un trabajador de la construcción de 85 kg en altitud elevada (2,500 msnm) a 26°C necesita 4.1 litros/día ajustados por hipoxia y sudoración intensa."
   ]
 }

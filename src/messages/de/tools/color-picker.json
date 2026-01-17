@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Farbwaehler ist eine praktische Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu beenden. Mit dem Farbwaehler können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Nutzer sind, der Farbwaehler kann Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitungen werden lokal im Webbrowser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Farbwaehler sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Color Picker ist ein präzises Werkzeug zur Ermittlung und Konvertierung von Farbmodellen, das auf modernen Web-APIs wie HTML5 Canvas und Web Storage basiert. Technisch ermöglicht es die bidirektionale Umwandlung zwischen HEX, RGB und HSL-Werten inklusive optionaler Alpha-Kanäle, wobei die Berechnungen mit 32-Bit-Gleitkommagenauigkeit erfolgen. Die Benutzeroberfläche kombiniert ein HSV-Farbrad mit orthogonalen Slidern für Helligkeit und Transparenz, wobei Änderungen über Event Delegation in Echtzeit synchronisiert werden. Entwickler benötigen dieses Tool, um präzise Farbmanipulationen für CSS-Animationen, WCAG-Kontrastprüfung oder CMS-Template-Designs durchzuführen, da es spezifische Features wie Gamma-Korrektur bei Farbmischungen und Export in Präprozessor-Variablen bietet. Die Implementierung nutzt requestAnimationFrame für flüssige UI-Updates und Web Workers für komplexe Farbraumkonversionen, vermeidet DOM-Blocking und speichert temporäre Farbpaletten im IndexedDB.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Farbwaehlers",
-    "Geben Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Anpassen Sie die Werkstueckoptionen und Einstellungen, wie gewünscht",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "1. Wählen Sie einen Basisfarbton durch Klick auf das HSV-Farbrad (Hue-Saturation-Bereich) aus.",
+    "2. Passen Sie die Helligkeit mit dem vertikalen Luminanz-Slider im rechten Kontextpanel an.",
+    "3. Aktivieren Sie den Alpha-Modus und ziehen Sie den Transparenz-Range-Input auf 0-100%.",
+    "4. Wechseln Sie zwischen den Registerkarten 'HEX', 'RGB' und 'HSL' für formatierte Code-Exports.",
+    "5. Nutzen Sie den Kontrastprüfer durch Eingabe eines Hintergrund-HEX-Werts im Vergleichsfeld.",
+    "6. Speichern Sie benutzerdefinierte Farbschemata über den 'Palette sichern'-Button für spätere Projekte."
   ],
   "usage_examples": [
-    "Verwenden Sie den Farbwaehler, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "1. Erstellung von WCAG-2.1-konformen Textfarben durch automatische Berechnung des Kontrastverhältnisses zu gegebenen Hintergrundfarben.",
+    "2. Debugging von CSS-Gradienten durch visuelle Analyse von Zwischenstopps im HSL-Farbraum zur Vermeidung von Banding-Effekten.",
+    "3. Konversion von CMYK-Farbvorgaben aus Print-Designs in sRGB-Werte unter Berücksichtigung von ICC-Profilen für Web-Anzeigen.",
+    "4. Erzeugung von dynamischen Theme-Variationen durch algorithmische Generierung von Tints/Shades über HSL-Modifikations-Skripte."
   ]
 }

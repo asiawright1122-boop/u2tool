@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Verificador de Certificados SSL es una herramienta online práctica que te ayuda a completar rápidamente diversas tareas. Usando el Verificador de Certificados SSL, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y usarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Verificador de Certificados SSL puede ayudarte a mejorar tu eficiencia laboral. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no se suban a ningún servidor. Utiliza el Verificador de Certificados SSL inmediatamente para experimentar servicios de herramientas online rápidas, seguras y gratuitas.",
+  "detailed_description": "El verificador de certificados SSL es una herramienta técnica que permite analizar de forma precisa la cadena de certificación, validez temporal y configuración de certificados SSL/TLS asociados a un dominio. Al establecer una conexión TCP con el servidor objetivo y negociar el protocolo TLS, extrae el certificado X.509, verifica su firma digital contra las autoridades raíz confiables, y valida parámetros críticos como la fecha de vencimiento, el campo SAN (Subject Alternative Name), la huella digital SHA-256 y la presencia de extensiones EKU (Extended Key Usage). Además, implementa mecanismos OCSP (Online Certificate Status Protocol) y CRL (Certificate Revocation List) para comprobar el estado de revocación. Esta herramienta es indispensable para administradores de sistemas que necesitan diagnosticar errores de handshake TLS, desarrolladores que validan implementaciones HTTPS en entornos de staging, o auditores de seguridad que verifican cumplimiento de políticas de cifrado. Su capacidad para mostrar detalles del certificado intermedio y raíz, junto con la evaluación de la cadena de confianza completa, permite resolver problemas complejos como certificados expirados, dominios no incluidos en SANs, o configuraciones incorrectas de algoritmos de firma.",
   "usage_steps": [
-    "Abre la página del Verificador de Certificados SSL",
-    "Introduce o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Introduce el nombre de dominio en el campo de texto 'Dominio', incluyendo el esquema (https://) si es necesario.",
+    "Selecciona la versión de protocolo TLS específica (TLS 1.2, TLS 1.3) en el menú desplegable 'Protocolo' para simular clientes legacy o modernos.",
+    "Activa la opción 'Incluir SNI' si el servidor utiliza alojamiento virtual basado en SNI (Server Name Indication) para presentar certificados múltiples.",
+    "Haz clic en el botón 'Verificar Certificado' para iniciar el escaneo de la cadena de confianza.",
+    "Revisa la sección 'Detalles Técnicos' que muestra el emisor, el período de validez, y la huella digital SHA-256 del certificado raíz e intermedio.",
+    "Consulta la pestaña 'Revocación' para confirmar el estado del certificado mediante OCSP o CRL, incluyendo las URLs de verificación utilizadas."
   ],
   "usage_examples": [
-    "Utiliza el Verificador de Certificados SSL para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un desarrollador detecta un error ERR_CERT_COMMON_NAME_INVALID en un sitio web de staging y utiliza la herramienta para confirmar que el certificado no incluye el subdominio de prueba en sus SANs.",
+    "Un administrador de sistemas programa un cron job que utiliza la API de esta herramienta para monitorear la fecha de vencimiento de certificados de producción y generar alertas 30 días antes.",
+    "Un auditor de seguridad identifica una vulnerabilidad de 'Chain Lenght' al descubrir que el servidor presenta una cadena de certificación incompleta con solo el certificado hoja.",
+    "Un equipo de DevOps verifica que un certificado emitido por Let's Encrypt incluye correctamente las extensiones ACME en el campo CT (Certificate Transparency) para cumplir con requisitos de auditoría."
   ]
 }

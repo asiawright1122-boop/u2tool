@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Audio to Base64 is a practical online tool that helps you quickly complete various tasks. Using Audio to Base64, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Audio to Base64 can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Audio to Base64 immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Audio to Base64 tool performs binary-to-text encoding of audio files using Base64 MIME Transfer Encoding. This process converts raw audio data (WAV, MP3, OGG, etc.) into a 64-character ASCII string representation, enabling binary audio content to be safely transmitted over systems designed for text handling. Developers require this tool for scenarios like embedding audio directly in HTML5 <audio> tags via data URLs, storing compressed audio in JSON/XML payloads, or bypassing binary restrictions in API endpoints. The tool leverages JavaScript's FileReader API to read client-side files asynchronously, processes the audio buffer through Base64 encoding algorithms that map 3-byte binary chunks to 4-character ASCII blocks using the RFC 4648 standard, and outputs the complete data URI with appropriate MIME type. Advanced users benefit from manual MIME type override options and visibility into padding character handling during conversion.",
   "usage_steps": [
-    "Open the Audio to Base64 tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Drag and drop your audio file into the upload area or click 'Choose File' to select from your device",
+    "Verify the detected audio format (WAV/MP3/OGG) displayed below the upload box",
+    "Toggle 'Include Data URI Prefix' to prepend the Base64 string with 'data:audio/[format];base64,'",
+    "Click the 'Convert to Base64' button to initiate client-side processing",
+    "Copy the generated Base64 string from the output textarea or click 'Download Result' to save as .txt",
+    "For debugging, enable 'Show Encoding Process' to view byte chunks and corresponding Base64 character mappings"
   ],
   "usage_examples": [
-    "Use Audio to Base64 to process your data",
-    "Get processing results quickly without waiting"
+    "Inlining a 30-second WAV notification sound directly into an HTML email template to avoid external file requests",
+    "Preparing audio CAPTCHA samples for API submission that requires Base64-encoded JSON payloads",
+    "Embedding MP3 background music into a single-file HTML5 game for distribution on platforms with no asset hosting",
+    "Debugging audio encoding issues by comparing hex dumps of original and Base64-decoded files for data integrity verification"
   ]
 }

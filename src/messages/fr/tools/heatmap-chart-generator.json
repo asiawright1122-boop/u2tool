@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Cartes Thermiques est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Cartes Thermiques pour traiter divers types de données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et d'utiliser l'outil efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Cartes Thermiques peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant tout téléchargement sur un serveur. Utilisez immédiatement le Générateur de Cartes Thermiques pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de cartes thermiques permet de représenter visuellement la densité des données à travers un gradient de couleurs. Techniquement, cet outil convertit les valeurs numériques en codes chromatiques via des algorithmes d'interpolation couleur, en utilisant des échelles logarithmiques ou linéaires pour les données hétérogènes. Il supporte les formats d'entrée CSV, JSON ou données tabulaires, avec possibilité de personnaliser les axes X/Y pour des matrices multidimensionnelles. La fonction de clustering hiérarchique intégrée permet d'organiser les données en groupes visuels, utile pour l'analyse de distribution bivariée. Les exports PNG/SVG conservent les métadonnées vectorielles pour une intégration professionnelle. Ce générateur s'adresse aux analystes de données explorant des patterns de fréquentation web, aux météorologues étudiant des variations climatiques, ou aux chercheurs en bioinformatique visualisant des expressions génétiques. La gestion de l'opacité par couche et les options de lissage (ex: interpolation bilinéaire) offrent un contrôle précis sur la cartographie des zones de haute densité.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Cartes Thermiques",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Chargez vos données via le bouton 'Importer' au format CSV/TSV/JSON avec en-têtes colonnes",
+    "Sélectionnez les colonnes pour les axes X et Y dans le panneau de configuration des axes",
+    "Choisissez un schéma de couleur (ex: Viridis, Magma, ou palette personnalisée HEX) dans l'éditeur de gradient",
+    "Ajustez l'échelle d'intensité avec curseur logarithmique ou linéaire selon la dispersion des valeurs",
+    "Activez le clustering hiérarchique via le menu 'Analyse avancée' pour regrouper les données similaires",
+    "Exportez en SVG pour édition vectorielle ou PNG 4K avec légende incluse via le bouton 'Télécharger'"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Cartes Thermiques pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Visualiser les zones de clics les plus actives sur une page web pour optimiser l'UX",
+    "Cartographier les variations de température par zone géographique à partir de données météo horaires",
+    "Analyser les schémas d'achat dans un magasin en croisant horaires et catégories de produits",
+    "Représenter la concentration d'expression de gènes dans des études de biologie moléculaire"
   ]
 }

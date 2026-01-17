@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculateur Hexadécimal est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant Calculateur Hexadécimal, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de démarrer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, Calculateur Hexadécimal peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, assurant la sécurité de vos données et ne sera pas téléchargé sur un serveur.",
+  "detailed_description": "Le Hex Calculator permet d'effectuer des calculs arithmétiques et logiques en base hexadécimale (base 16). Il supporte des opérations comme l'addition, la soustraction, les décalages logiques (SHL/SHR), les rotations (ROL/ROR), ainsi que les opérations booléennes bit à bit (AND, OR, XOR, NOT). Ce type d'outil est indispensable pour les développeurs travaillant sur des systèmes embarqués, les protocoles réseau, la rétro-ingénierie ou la programmation bas niveau. La calculatrice convertit les entrées hexadécimales en valeurs binaires ou décimales pour traitement, effectue les calculs en tenant compte du dépassement (overflow) avec gestion en complément à deux, puis retourne le résultat en hexadécimal formaté. Elle permet également le masquage par bits (bitmasking) et la manipulation précise de registres mémoire via des opérations combinées.",
   "usage_steps": [
-    "Ouvrir la page de l'outil Calculateur Hexadécimal",
-    "Entrer ou coller le contenu à traiter dans la zone de saisie",
-    "Ajuster les options et paramètres de l'outil selon les besoins",
-    "Cliquer sur le bouton de traitement pour voir les résultats",
-    "Copier ou télécharger les résultats traités"
+    "Sélectionnez le format des opérandes (16 bits, 32 bits ou 64 bits) via les menus déroulants en-tête.",
+    "Saisissez les valeurs hexadécimales dans les champs d'entrée principaux, en préfixant les couleurs web par '#' (ex: #FF5733).",
+    "Choisissez l'opération à effectuer (ex: XOR, SHL, ADD) depuis le panneau central d'opérateurs.",
+    "Utilisez le bouton 'Échanger' pour inverser les opérandes ou activez la case 'Parenthèses' pour prioriser les calculs imbriqués.",
+    "Cliquez sur 'Calculer' pour obtenir le résultat en hexadécimal, affiché dans la zone de sortie avec son équivalent binaire.",
+    "Activez l'option 'Exporter JSON' pour générer un script contenant les étapes de calcul et les valeurs intermédiaires."
   ],
   "usage_examples": [
-    "Utiliser Calculateur Hexadécimal pour traiter vos données",
-    "Obtenir des résultats de traitement rapidement sans attendre"
+    "Un développeur calculant un offset mémoire en additionnant une adresse de base (0x8000) et un décalage (0x1A4) pour un microcontrôleur.",
+    "Un designer convertissant un code couleur RGBA (ex: #AARRGGBB) en valeurs décimales individuelles pour un moteur graphique.",
+    "Un ingénieur réseau vérifiant la validité d'un checksum CRC16 en combinant des octets via des XOR successifs.",
+    "Un programmeur d'assembleur extrayant des flags d'un registre 32 bits en appliquant un AND avec un masque personnalisé (ex: 0x0000FF00)."
   ]
 }

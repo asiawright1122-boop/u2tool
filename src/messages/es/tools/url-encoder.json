@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Codificador/Decodificador de URLs es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Con el Codificador/Decodificador de URLs, puedes procesar fácilmente diversos tipos de datos sin necesidad de instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Codificador/Decodificador de URLs puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no se suban a ningún servidor. Utiliza el Codificador/Decodificador de URLs para experimentar servicios de herramienta en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El codificador/decodificador de URL es una herramienta técnica diseñada para transformar caracteres especiales en una secuencia compatible con el estándar RFC 3986 de codificación URI. Permite convertir caracteres no seguros como espacios, signos de puntuación o símbolos (ej: ' ', '#', '?') en su representación hexadecimal precedida por '%', como '%20' para espacios. Esta implementación utiliza funciones nativas de JavaScript como encodeURIComponent() y decodeURIComponent(), que garantizan el tratamiento correcto de caracteres reservados (ej: '!', '$', '&') y la gestión precisa de codificaciones UTF-8. Los desarrolladores necesitan esta herramienta para resolver problemas críticos en aplicaciones web: asegurar la integridad de parámetros en consultas GET, preparar cabeceras HTTP seguras, o depurar URLs recibidas en redirecciones OAuth. Al decodificar URLs, permite analizar estructuras de datos serializadas en strings de consulta, como los parámetros dinámicos de APIs RESTful. Su funcionalidad es esencial para evitar errores 400 por caracteres inválidos, garantizar la seguridad en transmisiones de tokens JWT, y mantener la compatibilidad cross-browser en aplicaciones que manejan URLs dinámicas con caracteres internacionales.",
   "usage_steps": [
-    "Abre la página del Codificador/Decodificador de URLs",
-    "Escribe o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Accede al panel del codificador desde la categoría 'red' del sitio.",
+    "2. Pega la URL o cadena de consulta en el campo de texto con etiqueta 'Entrada Raw'.",
+    "3. Activa el interruptor 'Codificar' o 'Decodificar' según tu necesidad específica.",
+    "4. Marca la opción 'Espacios como +' si requieres el formato application/x-www-form-urlencoded.",
+    "5. Haz clic en el botón 'Procesar URI' para ejecutar la transformación.",
+    "6. Copia el resultado del campo 'Salida Codificada/Decodificada' con el botón 'Copiar al portapapeles'."
   ],
   "usage_examples": [
-    "Utiliza el Codificador/Decodificador de URLs para procesar tus datos",
-    "Obtén los resultados de procesamiento rápidamente sin esperar"
+    "Codificar un parámetro de API que contiene un correo electrónico: 'user@example.com' → 'user%40example.com' para mantener la validez de la URL.",
+    "Decodificar una URL de retorno OAuth2 que incluye un token JWT con caracteres Base64Url como '+', '/', y '='.",
+    "Preparar un query string para una búsqueda con filtros complejos: 'color=rojo&size>L' → 'color%3Drojo%26size%3EL'.",
+    "Analizar una URL malformada recibida en logs del servidor, identificando caracteres no codificados que causan errores 404."
   ]
 }

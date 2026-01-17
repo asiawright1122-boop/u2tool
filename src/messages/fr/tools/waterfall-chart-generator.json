@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de diagramme en cascade est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Grâce au Générateur de diagramme en cascade, vous pouvez traiter facilement diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de diagramme en cascade peut vous aider à améliorer l'efficacité de votre travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez immédiatement le Générateur de diagramme en cascade pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Générateur de Graphiques en Cascade est un outil technique conçu pour créer des visualisations de type 'waterfall' permettant d'analyser les variations cumulatives de valeurs numériques. Il fonctionne en calculant automatiquement les écarts entre des catégories séquentielles, représentées par des barres verticales connectées par des lignes de transition. Cette solution intègre un moteur de rendu SVG basé sur D3.js pour garantir une haute précision graphique, avec prise en charge de l'import CSV/TXT et de la saisie manuelle de données via une interface structurée en JSON. Les utilisateurs peuvent personnaliser les échelles d'axes, appliquer des codes couleur par type de variation (positive/négative), et configurer des annotations dynamiques. Ce tool s'adresse particulièrement aux analystes financiers pour le suivi des flux de trésorerie, aux gestionnaires de projet pour le suivi budgétaire, ou aux data scientists pour illustrer les impacts cumulatifs de séries temporelles. Il inclut un système de prévisualisation en temps réel avec option de téléchargement au format PNG ou SVG, ainsi qu'un générateur de code embeddable pour intégration web.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de diagramme en cascade",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez un modèle prédéfini (Finance, Logistique, Projet) dans le menu déroulant 'Type d'analyse'",
+    "Importez vos données via le bouton 'Importer CSV' ou remplissez manuellement la grille de saisie avec colonnes X/Y",
+    "Activez/désactivez les lignes de connexion entre barres en cliquant sur l'option 'Transition continue' dans les paramètres avancés",
+    "Personnalisez les couleurs par catégories via le sélecteur chromatique intégré dans l'onglet 'Style des barres'",
+    "Ajustez l'espacement inter-barres avec le curseur 'Padding' (valeurs de 0 à 50px) pour optimiser la lisibilité",
+    "Générez le graphique final et téléchargez-le en format vectoriel SVG ou exportez le code HTML d'intégration"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de diagramme en cascade pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Analyser les variations trimestrielles des recettes et dépenses d'une entreprise avec visualisation des impacts cumulés sur la trésorerie",
+    "Suivre les variations d'inventaire mensuelles dans un entrepôt, distinguant les entrées/sorties de marchandises par catégorie",
+    "Illustrer l'évolution des réservations pour un événement, montrant les annulations et nouveaux inscrits semaine après semaine",
+    "Visualiser l'impact des différentes phases de dépense sur le budget initial d'un projet informatique sur 6 mois"
   ]
 }

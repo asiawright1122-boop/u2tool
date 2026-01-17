@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Variables CSS es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Con el Generador de Variables CSS, puedes procesar varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Variables CSS puede ayudarte a mejorar la eficiencia en tu trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Variables CSS ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Variables CSS permite crear y gestionar propiedades personalizadas (CSS Custom Properties) mediante un editor visual intuitivo. Esta herramienta está diseñada para desarrolladores que necesitan implementar sistemas de diseño dinámicos, gestionar temas multibrand o mantener consistencia en proyectos escalables. Permite definir variables para colores, tipografías, espaciados y más, con soporte para formatos HSL, RGB y HEX. Al generar código CSS nativo, elimina la dependencia de preprocesadores como SASS o LESS. Los usuarios pueden exportar las variables en múltiples formatos (JSON, SCSS, CSS puro) y aplicarlas directamente en sus proyectos. Incorpora validación en tiempo real para evitar valores inválidos y ofrece una vista de cascada visual que muestra cómo se heredan las variables en diferentes selectores. Es especialmente útil para implementar sistemas de diseño basados en principios como Atomic Design o cuando se requiere soporte para múltiples temas con variables condicionales.",
   "usage_steps": [
-    "Abre la página del Generador de Variables CSS",
-    "Escribe o pega el contenido que deseas procesar en la casilla de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al editor visual y selecciona 'Nuevo Proyecto' para iniciar una hoja de variables.",
+    "Utiliza el campo 'Nombre de Variable' para definir identificadores siguiendo la convención '--nombre-variable'.",
+    "Selecciona un valor usando el selector de color HSL/RGB o ingresa directamente valores numéricos.",
+    "Activa 'Modo Cascada' para visualizar cómo las variables se heredan entre selectores padres e hijos.",
+    "Haz clic en 'Exportar CSS' para obtener el código listo para copiar/pegar o descargar como archivo .css.",
+    "Usa la pestaña 'Validación' para verificar compatibilidad con navegadores legacy o detectar valores no estándar."
   ],
   "usage_examples": [
-    "Usa el Generador de Variables CSS para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Desarrollar un sistema de diseño para una aplicación SaaS con múltiples marcas, cada una con su paleta de colores definida por variables.",
+    "Crear una escala tipográfica responsiva donde las variables de fuente cambian según breakpoints definidos en el editor.",
+    "Implementar un sistema de espaciado coherente usando variables para márgenes y padding en un diseño de rejilla CSS Grid.",
+    "Configurar un tema oscuro y claro alternativo mediante variables condicionales que se activan con prefers-color-scheme."
   ]
 }

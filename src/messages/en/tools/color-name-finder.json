@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Color Name Finder is a practical online tool that helps you quickly complete various tasks. Using Color Name Finder, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Color Name Finder can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Color Name Finder immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Color Name Finder tool leverages advanced color space analysis to identify the closest standardized color name for any provided HEX, RGB, or HSL value. This tool addresses the challenge of translating numeric color representations into human-readable labels by utilizing a curated database of over 1,500 named colors, including CSS4 color keywords and X11 color sets. Technically, it employs the CIEDE2000 algorithm to calculate perceptual differences between input colors and reference colors in the LAB color space, ensuring results align with human vision sensitivity. Developers and designers need this tool for tasks like accessibility validation, brand color compliance, and legacy system integration where exact color names are required instead of numeric codes. The backend converts input values to XYZ color space, then computes delta-E differences to determine closest matches, returning both the color name and a confidence score indicating match accuracy.",
   "usage_steps": [
-    "Open the Color Name Finder tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Navigate to the color-name-finder page and locate the interactive color input panel.",
+    "Enter a color value using any supported format: HEX (#FF5733), RGB (rgb(255,87,51)), or HSL (hsl(14, 100%, 60%)).",
+    "Adjust the color dynamically using the HSL sliders to see real-time updates in the closest matching name.",
+    "Review the results section displaying the top three named color matches with their respective delta-E scores.",
+    "Click the 'Show Details' toggle to view the color's position in LAB space relative to the matched reference color.",
+    "Use the 'Copy to Clipboard' button to export the selected color name and numerical values for project documentation."
   ],
   "usage_examples": [
-    "Use Color Name Finder to process your data",
-    "Get processing results quickly without waiting"
+    "A UX designer verifying contrast ratios for WCAG compliance needs to document color pairs by their official names.",
+    "A front-end developer debugging CSS variables discovers an orphaned HEX code and identifies its corresponding semantic color name.",
+    "A print production specialist converting digital brand colors to Pantone equivalents uses the tool to cross-reference CMYK conversions.",
+    "A data visualization engineer ensuring color consistency across SVG and Canvas elements standardizes numeric values to named CSS colors."
   ]
 }

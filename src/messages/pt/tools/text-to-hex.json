@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Texto para Hexadecimal é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Utilizando o Texto para Hexadecimal, você pode facilmente processar vários dados sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Texto para Hexadecimal pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use o Texto para Hexadecimal agora para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O conversor Texto para Hexadecimal realiza a transformação bidirecional entre sequências de caracteres e representações hexadecimais, fundamentando-se nos padrões de codificação ASCII e UTF-8. Técnicamente, cada caractere é convertido em seu valor decimal correspondente na tabela Unicode, que é posteriormente transformado em base 16 (hexadecimal), com opções para ajustar o formato do output, como delimitadores (espaço, vírgula ou sem separação) e definição da ordem dos bytes (endianness). Profissionais precisam desta ferramenta para depurar protocolos de rede que exigem payloads hexadecimais, desenvolver firmware embarcado com constantes de memória em hex, verificar checksums em sistemas de segurança ou analisar dumps de dados binários. O processo é otimizado para lidar com múltiplos encodings simultaneamente, permitindo conversão reversa (hex para texto) com detecção automática de padding inválido. A interface oferece controle granular sobre o mapeamento de caracteres especiais e suporte a conjuntos de bytes em notação 0x ou \\x.",
   "usage_steps": [
-    "Abra a página da ferramenta Texto para Hexadecimal",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Selecione o padrão de codificação desejado (ASCII ou UTF-8) no menu suspenso 'Codificação'.",
+    "2. Escolha o tipo de delimitador para o output hexadecimal (espaço, vírgula ou nenhum).",
+    "3. Ative a opção 'Inverter bytes (LE)' se necessário para ajustar a ordem dos bytes em valores de 16/32 bits.",
+    "4. Cole ou digite o texto no campo de entrada com suporte a caracteres Unicode visíveis.",
+    "5. Clique em 'Converter para Hex' e copie o resultado formatado no painel de saída.",
+    "6. Utilize a aba 'Hex para Texto' para converter representações hexadecimais de volta, colando valores como 48656C6C6F ou 0x48 0x65 0x6C 0x6C 0x6F."
   ],
   "usage_examples": [
-    "Use o Texto para Hexadecimal para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "1. Um desenvolvedor de protocolos MQTT precisa codificar manualmente tópicos de assinatura em hexadecimal para testar payloads binários em dispositivos IoT.",
+    "2. Um engenheiro reverso analisa hex dumps de memória de um microcontrolador ARM, convertendo sequências como C001CAFÉ para identificar padrões de assinatura em firmware.",
+    "3. Um profissional de segurança gera representações hexadecimais de hashes criptográficos (ex: SHA-256) para validar integridade de dados em ambientes sem suporte a bibliotecas criptográficas.",
+    "4. Um especialista em sistemas legados precisa converter arquivos de configuração EBCDIC para hexadecimal para migração de mainframes antigos para plataformas modernas."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de robots.txt es una herramienta práctica en línea que te ayuda a completar varias tareas de manera rápida. Usando el Generador de robots.txt, puedes procesar fácilmente diversos datos sin instalar ningún software o plugins. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite empezar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, el Generador de robots.txt puede ayudarte a mejorar tu eficiencia laboral. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza el Generador de robots.txt inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Generador de robots.txt permite crear archivos de configuración que regulan el comportamiento de los rastreadores de motores de búsqueda en servidores web. Esta herramienta implementa directivas como User-agent, Disallow, Allow y Crawl-delay siguiendo el estándar Robots Exclusion Protocol. Los desarrolladores necesitan controlar el acceso a directorios sensibles (ej: /admin), evitar duplicados de contenido o optimizar la exploración de contenido dinámico. El sistema procesa entradas mediante un motor de validación que verifica la sintaxis y prioriza las reglas según las especificaciones de Googlebot, Bingbot y otros crawlers. Incorpora autocompletado para agentes conocidos y validación en tiempo real de rutas UNIX, garantizando compatibilidad con servidores Apache, Nginx y entornos cloud. Los usuarios avanzados pueden configurar patrones complejos con wildcards (*, $) y excepciones jerárquicas.",
   "usage_steps": [
-    "Abre la página del Generador de robots.txt",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del tool según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona los User-agents objetivo mediante checkboxes predefinidos (Googlebot, Bingbot, etc.) o personaliza con campos de texto",
+    "Especifica rutas a bloquear usando campos de entrada con sugerencias de directorios comunes (/wp-admin, /temp)",
+    "Activa el modo avanzado para configurar Crawl-delay con valores milisegundos o establecer patrones con expresiones regulares",
+    "Utiliza el validador de sintaxis en tiempo real que resalta errores en directivas y prioridades conflictivas",
+    "Previsualiza el archivo generado con resaltado de código y explicación de cada regla aplicada",
+    "Descarga el archivo robots.txt o copia el código generado al portapapeles para implementarlo en el directorio raíz del servidor"
   ],
   "usage_examples": [
-    "Utiliza el Generador de robots.txt para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un CMS multinivel necesita bloquear accesos a archivos de configuración (/config.php) mientras permite crawleo parcial de contenido público",
+    "Una tienda e-commerce desea prevenir la indexación de páginas de categoría con parámetros de filtro dinámico que generan contenido duplicado",
+    "Un desarrollador de WordPress quiere restringir temporalmente el acceso a un staging environment en subdominio antes del lanzamiento",
+    "Un sitio con alto tráfico configura Crawl-delay diferenciado para Googlebot y Baiduspider para evitar sobrecarga en servidores legacy"
   ]
 }

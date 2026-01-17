@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Character Frequency Analyzer is a practical online tool that helps you quickly complete various tasks. Using Character Frequency Analyzer, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Character Frequency Analyzer can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Character Frequency Analyzer immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Character Frequency Analyzer performs granular statistical analysis of textual input by calculating the occurrence distribution of Unicode characters, glyphs, and byte values. This tool leverages UTF-8 encoding validation, case-insensitive comparison flags, and customizable whitespace handling to generate multi-dimensional frequency metrics. Developers and researchers use this tool for cryptanalysis of classical ciphers, linguistic pattern recognition, data quality assessment, and algorithm optimization. It processes input through a three-stage pipeline: first normalizing text using Unicode Normalization Form C, then constructing a hash table mapping character code points to counters, and finally applying entropy calculation algorithms to determine distribution patterns. The output includes raw counts, percentage weights, and visual heatmaps that highlight statistical outliers in the character distribution.",
   "usage_steps": [
-    "Open the Character Frequency Analyzer tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Paste UTF-8 encoded text into the resizable input textarea or drag-and-drop a .txt/.csv file",
+    "Toggle 'Case-Sensitive Mode' to differentiate uppercase/lowercase characters",
+    "Select 'Whitespace Handling' options: include/exclude spaces, tabs, newlines, or Unicode whitespace",
+    "Click 'Analyze' to initiate the multi-threaded processing engine",
+    "Review interactive histogram showing frequency distribution and entropy metrics",
+    "Export results via JSON download or copy-paste the tab-separated values table"
   ],
   "usage_examples": [
-    "Use Character Frequency Analyzer to process your data",
-    "Get processing results quickly without waiting"
+    "Cryptographers analyzing Vigenère cipher outputs to detect key length patterns through periodic frequency spikes",
+    "Linguists comparing vowel consonant ratios across different language corpora for phonetic research",
+    "Data engineers validating JSON log files by checking for anomalous ASCII control character frequencies",
+    "Game developers optimizing text rendering performance by identifying most-used glyphs in UI strings"
   ]
 }

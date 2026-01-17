@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Hex-Rechner führt Arithmetik und Bit-Operationen an Hexadezimalzahlen durch. Unentbehrlich für Programmierer, die mit Speicheradressen, Farbcodes und Low-Level-Programmierung arbeiten. Ergebnisse werden in Hexadezimal, Dezimal und Binärformat angezeigt, um einfache Konvertierungen zu ermöglichen.",
+  "detailed_description": "Der Hex-Rechner ist ein spezialisierter mathematischer Online-Editor für hexadezimale Arithmetik und Bitmanipulation auf Register-Ebene. Technisch gesehen führt er präzise Operationen wie Addition, Subtraktion, Multiplikation und Division im Hexadezimalsystem durch, während er gleichzeitig bitweise Logikoperationen (AND, OR, XOR, NOT) sowie Bitshifts (left/right arithmetic/logical) unterstützt. Das Tool arbeitet mit 8/16/32/64-Bit-Datenbreiten und berücksichtigt dabei Endianess-Konventionen. Entwickler benötigen diesen Rechner für präzise Speicheradressberechnungen in Embedded-Systemen, Reverse-Engineering von Binärdateien oder Implementierung kryptografischer Hash-Funktionen. Intern wandelt der Parser hexadezimale Zeichenketten mit Regex-Mustern (mit oder ohne 0x-Präfix) in vorzeichenlose Integers um, führt die ausgewählte Operation durch und konvertiert das Ergebnis zurück unter Berücksichtigung des Zweierkomplementformats für negative Werte. Besondere Merkmale sind die Darstellung von Overflow-Flags und die automatische Maskierung bei Bitrotationen.",
   "usage_steps": [
-    "Geben Sie den ersten Hexadezimal operand ein",
-    "Geben Sie den zweiten Hexadezimal operand (falls erforderlich) ein",
-    "Wählen Sie die auszuführende Operation",
-    "Sehen Sie die Ergebnisse in Hexadezimal, Dezimal und Binär"
+    "Eingabe der ersten Hexadezimalzahl in das Feld 'Operand 1' (z.B. 0x1A3F oder 1A3Fh)",
+    "Auswahl der gewünschten Operation (z.B. 'Bitweises XOR') im zentralen Operator-Auswahlfeld",
+    "Eintrag der zweiten Zahl in 'Operand 2' oder Festlegung einer Bitmaskenlänge (z.B. 0xFFFF0000 bei 32-Bit)",
+    "Aktivierung der Option 'Signed' für vorzeichenbehaftete Berechnungen im Zweierkomplementformat",
+    "Klicken auf 'Berechnen' und Überprüfung des Ergebnisses im Hex-Format sowie optionaler Binäransicht",
+    "Verwendung der Schaltfläche 'Zurücksetzen' für neue Berechnungen mit geänderten Bitbreiten (8/16/32/64 Bit)"
   ],
   "usage_examples": [
-    "Speicheradressen berechnen",
-    "Hexadezimale Farbmathematik durchführen",
-    "Low-Level-Code debuggen"
+    "Berechnung eines Memory Offsets durch Addition zweier 16-Bit-Adressen (z.B. 0x1234 + 0xABCD = 0xBF01)",
+    "Extraktion spezifischer Farbkanäle aus einem Hex-Code durch Bitmasking (z.B. (0xFF5733 & 0xFF0000) >> 16 für Rotanteil)",
+    "Implementierung eines CRC-16-Checksummenalgorithmus mit wiederholtem XOR und Bitrotation",
+    "Analyse eines Buffer Overflow-Exploits durch Subtraktion zweier Return-Adressen (z.B. 0x7FFF_EBDA - 0x7FFF_EA00)"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Clasificador JSON es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Clasificador JSON, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Clasificador JSON puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Clasificador JSON inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El JSON Sorter es una herramienta especializada que reordena recursivamente las claves de objetos JSON en orden lexicográfico, manteniendo la integridad de estructuras anidadas. Esta funcionalidad es crítica para desarrolladores que necesitan estandarizar formatos en entornos de integración API, donde discrepancias en el orden de claves pueden generar fallos en comparaciones automatizadas o en procesos de validación de esquemas. El algoritmo implementa un recorrido post-orden para garantizar que todos los nodos hijos sean ordenados antes que sus padres, preservando tipos de datos nativos (strings, números, booleanos) durante el proceso. Utiliza un comparador personalizable que permite ignorar mayúsculas/minúsculas y manejar caracteres Unicode según normas UTS #10. La herramienta opera completamente en el cliente mediante Web Workers, evitando transmisión de datos sensibles a servidores externos, lo cual es fundamental para cumplir con protocolos de seguridad en entornos empresariales.",
   "usage_steps": [
-    "Abre la página de la herramienta Clasificador JSON",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega tu JSON en el editor de código con resaltado sintáctico en tiempo real.",
+    "Activa la opción 'Ordenar recursivamente' para procesar objetos anidados profundos.",
+    "Selecciona el modo de ordenamiento: ascendente, descendente o personalizado mediante expresión lambda.",
+    "Marca 'Preservar duplicados' para mantener claves repetidas en arrays asociativos.",
+    "Haz clic en 'Ordenar JSON' para ejecutar el algoritmo optimizado con complejidad O(n log n).",
+    "Usa el comparador visual lado a lado para verificar cambios estructurales antes de descargar el resultado."
   ],
   "usage_examples": [
-    "Usa Clasificador JSON para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador de microservicios ordena respuestas JSON de APIs para comparar versiones de esquemas OpenAPI.",
+    "Un ingeniero de datos normaliza metadatos de imágenes antes de indexarlos en un almacén NoSQL.",
+    "Un auditor de seguridad estandariza registros de logs JSON para facilitar análisis forense automatizado.",
+    "Un arquitecto de sistemas reconcilia configuraciones desplegadas en múltiples regiones de cloud computing."
   ]
 }

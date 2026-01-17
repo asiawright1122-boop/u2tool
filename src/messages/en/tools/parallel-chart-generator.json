@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Parallel Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Parallel Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Parallel Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Parallel Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Parallel Chart Generator is a specialized data visualization tool that creates parallel coordinate charts for analyzing multivariate datasets. This tool employs orthogonal axes spaced horizontally to represent individual dimensions, with each data row connected by polylines to reveal correlations and clusters. Built on D3.js and SVG rendering, it supports dynamic axis reordering through drag-and-drop interactions to optimize pattern recognition. Users can apply linear or logarithmic scaling per axis, implement spline interpolation for smoother visual transitions, and utilize built-in data normalization to handle heterogeneous measurement units. The tool's unique value lies in its ability to handle both categorical and numerical data through hybrid axis encoding, making it particularly valuable for identifying outliers in multivariate analysis scenarios such as financial portfolio comparisons, scientific data exploration, and performance metric evaluations. Technical features include CSV/TSV data parsing with automatic type detection, responsive axis labeling with collision detection, and configurable brush selection for dimension filtering.",
   "usage_steps": [
-    "Open the Parallel Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Upload structured data via CSV file or paste delimiter-separated values directly into the Data Input Panel",
+    "Map columns to parallel axes using the Dimension Assignment Matrix with drag-and-drop reordering capability",
+    "Adjust individual axis scales through the Range Configuration Menu, selecting linear/log scale or custom min/max values",
+    "Customize visual encoding in the Style Editor by choosing color gradients, line opacities, and polyline thickness",
+    "Activate Brush Mode to select specific data ranges and isolate patterns across multiple dimensions simultaneously",
+    "Export visualizations using the Resolution Control Panel to generate PNG screenshots at 72-300dpi or editable SVG code"
   ],
   "usage_examples": [
-    "Use Parallel Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Comparing investment portfolios across risk metrics, ROI percentages, and asset allocations for financial analysts",
+    "Visualizing patient health data with vital signs, lab results, and treatment timelines in medical research studies",
+    "Analyzing university rankings across academic performance indicators, student satisfaction scores, and research outputs",
+    "Evaluating athlete performance statistics including speed metrics, strength measurements, and competition results"
   ]
 }

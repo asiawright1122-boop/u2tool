@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur SQL est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Grâce au Générateur SQL, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil possède une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur SQL peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléversées sur un serveur. Utilisez immédiatement le Générateur SQL pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur SQL est un outil de développement permettant de produire automatiquement des requêtes SQL optimisées pour des opérations courantes. Contrairement aux générateurs basiques, il intègre un analyseur syntaxique capable de détecter les relations entre tables, les contraintes d'intégrité référentielle et les index existants. Techniquement, il utilise un moteur de règles basé sur des patrons de requêtes paramétrables (templates) combinés à une analyse contextuelle des types de données (VARCHAR, INTEGER, TIMESTAMP, etc.). Les développeurs l'utilisent pour éviter les erreurs de syntaxe dans des requêtes complexes comme les CTE (Common Table Expressions), les jointures multiples avec clauses HAVING, ou les opérations de pivoting. L'outil supporte spécifiquement les dialectes SQL de PostgreSQL, MySQL et SQLite, en adaptant les mots-clés réservés. Son algorithme de suggestion d'index utilise des statistiques de cardinalité pour proposer des optimisations. Pour les opérations transactionnelles, il génère des blocs BEGIN/COMMIT avec gestion des niveaux d'isolation. Ce générateur s'adresse particulièrement aux équipes travaillant sur des bases de données relationnelles hybrides ou des migrations entre SGBD.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur SQL",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Sélectionnez le dialecte SQL cible (PostgreSQL/MySQL/SQLite) dans le menu déroulant en haut à gauche",
+    "2. Coller le schéma relationnel dans la zone de saisie, en utilisant le format : 'table(col1 TYPE, col2 TYPE, PRIMARY KEY(col1), FOREIGN KEY(col2) REFERENCES table2(col3))'",
+    "3. Cochez les cases correspondant aux opérations souhaitées : SELECT avec filtres dynamiques, INSERT par lots, UPDATE conditionnel, DELETE avec jointures",
+    "4. Configurez les options avancées (indexation automatique, isolation level, mode transactionnel) dans l'onglet 'Optimisation'",
+    "5. Cliquez sur 'Générer' pour obtenir le code SQL avec annotations expliquant les optimisations appliquées",
+    "6. Copiez le résultat dans votre IDE ou exportez-le au format .sql avec les commentaires de documentation"
   ],
   "usage_examples": [
-    "Utilisez le Générateur SQL pour traiter vos données",
-    "Obtenez rapidement des résultats de traitement sans attendre"
+    "1. Un développeur e-commerce génère une requête optimisée pour calculer le panier moyen par utilisateur, incluant des sous-requêtes corrélées et un regroupement par tranches horaires",
+    "2. Une équipe BI crée automatiquement un rapport de ventes mensuel avec des jointures entre 4 tables, incluant des fonctions window (RANK(), SUM() cumulative)",
+    "3. Un administrateur système migre une base MySQL vers PostgreSQL en obtenant des conversions automatiques des fonctions spécifiques (DATE_FORMAT → TO_CHAR)",
+    "4. Un data engineer construit un script d'insertion de 100 000 lignes avec des blocs de transactions de 1000 enregistrements et gestion des erreurs"
   ]
 }

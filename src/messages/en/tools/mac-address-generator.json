@@ -1,14 +1,17 @@
 {
-  "detailed_description": "MAC Address Generator is a practical online tool that helps you quickly complete various tasks. Using MAC Address Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, MAC Address Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use MAC Address Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "This tool generates IEEE 802.3 compliant MAC addresses adhering to EUI-48 standards, combining valid OUI prefixes with randomized NIC-specific bytes. Users can create unicast/multicast addresses in multiple formats (hyphenated, colon-separated, or dot-notated) while maintaining hexadecimal validity checks. The generator supports both universally administered addresses using IEEE-registered OUIs and locally administered variants with the U/L bit manipulation. Unique features include bulk generation of up to 100 addresses with customizable randomization scopes and vendor-specific prefix selection from a comprehensive database of 8,000+ hardware manufacturers. Network engineers use it for testing network stacks, simulating device clusters, or bypassing MAC filtering during QA testing, while developers leverage it for generating synthetic network device data in virtualized environments.",
   "usage_steps": [
-    "Open the MAC Address Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Select preferred OUI type from dropdown menu (universal, local, or specific vendor prefix)",
+    "2. Choose address format (XX-XX-XX-XX-XX-XX, XX:XX:XX:XX:XX:XX, or XXXX.XXXX.XXXX)",
+    "3. Set address type to unicast (LSB=0) or multicast (LSB=1) using the U/M bit toggle",
+    "4. Enable 'Randomize All' to bypass standard OUIs for synthetic network testing",
+    "5. Adjust batch size (1-100 addresses) using the quantity slider",
+    "6. Click 'Generate' to create and validate addresses with checksum verification"
   ],
   "usage_examples": [
-    "Use MAC Address Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Simulating 50 IoT devices with unique MACs for smart home network stress testing",
+    "Creating spoofed hardware addresses for ethical hacking training environments",
+    "Generating test data for network management software development databases",
+    "Testing wireless access point MAC filtering rules with edge-case addresses"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Ocultador de JavaScript é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Utilizando o Ocultador de JavaScript, você pode processar vários dados sem instalar qualquer software ou plugin. A ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Ocultador de JavaScript pode ajudar a melhorar a eficiência do trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo uploadado para qualquer servidor. Use o Ocultador de JavaScript imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O JavaScript Obfuscator é uma ferramenta especializada em transformar código-fonte JavaScript em uma versão funcionalmente equivalente, porém deliberadamente complexa de ser analisada por humanos ou ferramentas automatizadas. Utilizando técnicas avançadas como renomeação de variáveis para identificadores de alta entropia, inserção de código morto (dead code), ofuscação de fluxo de controle e criptografia de strings sensíveis, o tool garante que o código resultante mantenha sua execução correta enquanto dificulta significativamente a engenharia reversa. Desenvolvedores precisam deste recurso para proteger propriedade intelectual em aplicações SPA (Single Page Applications), ocultar chaves de API ou lógica de negócios crítica, e aumentar a segurança em bibliotecas front-end open-source. Internamente, o processo ocorre em três fases: análise léxica e AST (Abstract Syntax Tree) parsing, aplicação de transformações baseadas em configurações do usuário, e geração final do código ofuscado com manutenção de escopo e referências. Ao contrário de soluções genéricas, este obfuscador implementa técnicas de polimorfismo de código e injeção de anti-debuggers, tornando cada execução do código única e resistente a ferramentas de minificação ou desofuscação automática.",
   "usage_steps": [
-    "Abra a página da ferramenta Ocultador de JavaScript",
-    "Entre ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a interface web e cole seu código JavaScript no editor monaco com syntax highlighting",
+    "Ajuste o slider 'Nível de Ofuscação' entre Low (renomeação básica), Medium (inclusão de dead code) e High (criptografia de strings + controle de fluxo)",
+    "Marque as opções específicas: 'Renomear Variáveis Globais', 'Criptografar Literais String' e 'Inserir Dead Code Aleatório'",
+    "Clique no botão 'Processar AST' para iniciar a análise e transformação do código",
+    "Revise o preview do código ofuscado com side-by-side comparison e estatísticas de proteção aplicada",
+    "Baixe o resultado como arquivo .js ou copie o código processado para o clipboard usando o botão 'Exportar Seguro'"
   ],
   "usage_examples": [
-    "Use o Ocultador de JavaScript para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Proteger algoritmos de machine learning implementados no front-end de uma aplicação SaaS financeira",
+    "Ocultar credenciais de acesso a APIs de pagamento em uma biblioteca de checkout para e-commerce",
+    "Dificultar a detecção de bots de scraping em aplicações de coleta de dados automatizada",
+    "Proteger código-fonte de jogos HTML5 contra modificações não autorizadas em plataformas de distribuição indie"
   ]
 }

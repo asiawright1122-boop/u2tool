@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Filtres CSS est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. Avec le Générateur de Filtres CSS, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plug-ins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Filtres CSS peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, garantissant la sécurité de vos données et empêchant leur upload sur n'importe quel serveur. Utilisez immédiatement le Générateur de Filtres CSS pour expérimenter des services de outil en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de filtres CSS est un outil technique permettant de concevoir et d'appliquer des effets visuels avancés à des éléments HTML ou SVG via l'éditeur visuel intégré. Il traduit les interactions utilisateur en propriétés CSS comme filter: url() ou filter: contrast(), blur(), brightness(), et autres fonctions standards. Ceux-ci exploitent les capacités du moteur de rendu du navigateur (comme les shaders WebGL) pour optimiser les performances, en évitant les calculs lourds sur le CPU. Indispensable pour les développeurs souhaitant expérimenter des effets de style sans recourir à des logiciels de design ou des images prétraitées, il permet notamment d'ajuster dynamiquement l'opacité, les teintes, ou les ombres portées. Son fonctionnement repose sur une interface interactive où les curseurs modifient en temps réel les valeurs numériques (en px, %, ou unités relatives) des filtres, tandis qu'un panneau de prévisualisation affiche l'impact visuel. Le code généré est compatible avec les dernières spécifications W3C et peut être exporté en CSS natif ou intégré via des bibliothèques JavaScript comme GSAP pour des animations complexes.",
   "usage_steps": [
-    "Ouvrez la page du Générateur de Filtres CSS",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Chargez l'éditeur en sélectionnant un élément HTML ou SVG cible via le sélecteur de balises.",
+    "Choisissez un type de filtre prédéfini (ex: 'Grayscale', 'Drop Shadow') ou créez une combinaison personnalisée en activant/désactivant les modules.",
+    "Ajustez les paramètres avec les curseurs (ex: 'Radius' pour le flou, 'Angle' pour l'ombrage) ou saisissez des valeurs manuellement dans les champs de saisie.",
+    "Utilisez l'onglet 'Code Preview' pour copier le CSS généré, incluant les propriétés -webkit- et standard pour une compatibilité cross-navigateur.",
+    "Testez l'effet en temps réel via le mode responsive qui simule différents facteurs d'échelle (1x, 2x) et résolutions d'écran.",
+    "Enregistrez vos paramètres sous forme de preset ou exportez le projet au format JSON pour le réutiliser ultérieurement."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Filtres CSS pour traiter vos données",
-    "Obtenez rapidement des résultats de traitement sans attendre"
+    "Un designer web optimise le contraste d'une galerie d'images pour un site de photographe, en ajustant les courbes de luminosité sans altérer les fichiers originaux.",
+    "Un développeur front-end crée un effet de dégradé dynamique sur un arrière-plan SVG en combinant les filtres feTurbulence et feComponentTransfer.",
+    "Un architecte d'interface améliore l'accessibilité d'un dashboard en appliquant un filtre d'inversion des couleurs pour les utilisateurs malvoyants.",
+    "Un intégrateur réduit le poids d'une landing page en remplaçant des effets Photoshop (comme le flou gaussien) par des filtres CSS natifs, économisant ainsi des requêtes HTTP."
   ]
 }

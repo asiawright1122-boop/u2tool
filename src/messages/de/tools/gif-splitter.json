@@ -1,14 +1,17 @@
 {
-  "detailed_description": "GIF-Teiler ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit GIF-Teiler können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, GIF-Teiler kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie GIF-Teiler sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der GIF Splitter ist eine spezialisierte Online-Tool, das es Benutzern ermöglicht, einzelne Frames aus animierten GIFs zu extrahieren. Dieses Tool ist besonders nützlich für Grafiker, Webdesigner, und Entwickler, die detaillierte Kontrolle über die Komponenten animierter GIFs benötigen. Die Extraktion einzelner Frames ermöglicht es, jedes Frame separat zu bearbeiten, optimieren oder in andere Formate zu konvertieren. Dies ist insbesondere hilfreich bei der Erstellung von Animationen, der Optimierung von GIF-Dateien für das Web, oder der Vorbereitung von Frames für weitere Bearbeitungen in Grafikprogrammen. Technisch gesehen, verwendet der GIF Splitter eine Kombination aus Bildverarbeitungsalgorithmen und Frame-Extraktionstechniken, um die Frames präzise zu trennen und als individuelle Bilder zu speichern. Die Benutzeroberfläche ist intuitiv gestaltet und erlaubt eine feine Anpassung der Extraktionsparameter, wie zum Beispiel die Auswahl bestimmter Frames oder das Anpassen der Ausgabeformatierung.",
   "usage_steps": [
-    "Öffnen Sie die GIF-Teiler-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Laden Sie die animierte GIF-Datei über den 'Datei auswählen'-Button in das Tool hoch.",
+    "Wählen Sie im Abschnitt 'Extraktionsmodus' die Option 'Alle Frames' oder 'Ausgewählte Frames', je nachdem, ob Sie alle Frames oder nur bestimmte Frames extrahieren möchten.",
+    "Falls Sie nur bestimmte Frames auswählen möchten, aktivieren Sie die 'Manuelle Auswahl'-Option und geben Sie die Frame-Nummern in das Textfeld ein, getrennt durch Kommas.",
+    "Passen Sie im Abschnitt 'Ausgabeformatierung' die Einstellungen für die Ausgabe an, wie z. B. die Bildqualität und das Ausgabeformat (z. B. PNG oder JPG).",
+    "Klicken Sie auf den 'Frames extrahieren'-Button, um den Extraktionsprozess zu starten. Der Fortschritt wird in der Statusanzeige unten auf der Seite angezeigt.",
+    "Sobald die Extraktion abgeschlossen ist, können Sie die extrahierten Frames über den 'Download'-Button als ZIP-Datei herunterladen."
   ],
   "usage_examples": [
-    "Verwenden Sie GIF-Teiler, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein Grafikdesigner benötigt einzelne Frames einer animierten GIF, um sie in ein Video-Projekt zu integrieren. Der GIF Splitter ermöglicht es ihm, die Frames zu extrahieren und in ein passendes Videoformat zu konvertieren.",
+    "Ein Webentwickler arbeitet an einem responsiven Webdesign und muss sicherstellen, dass die GIF-Animationen auf mobilen Geräten schnell geladen werden. Durch die Extraktion und Optimierung einzelner Frames kann er die Dateigröße reduzieren und die Ladezeiten verbessern.",
+    "Ein Animationskünstler möchte eine animierte GIF in ein Comic umwandeln. Er verwendet den GIF Splitter, um die Frames zu extrahieren und jede Szene separat zu bearbeiten, um sie in seine Comic-Struktur zu integrieren.",
+    "Ein Social Media Manager erstellt einen Tutorial-Post, der Schritt-für-Schritt-Anleitungen zeigt. Er verwendet den GIF Splitter, um die Frames einer animierten Anleitung zu extrahieren, um sie in den Post einzubetten und die Anleitung klarer zu machen."
   ]
 }

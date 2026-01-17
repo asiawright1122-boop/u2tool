@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Convertidor de Código Morse es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Con el Convertidor de Código Morse, puedes procesar fácilmente diversos datos sin instalar ningún software o plugins. Esta herramienta cuenta con una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla eficientemente. Ya sea que seas un desarrollador, diseñador o usuario general, el Convertidor de Código Morse puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza el Convertidor de Código Morse inmediatamente para experimentar un servicio de herramienta en línea rápida, segura y gratuita.",
+  "detailed_description": "El conversor de código Morse es una herramienta de codificación bidireccional que transforma secuencias de texto plano en señales Morse y viceversa. Técnicamente, el proceso implica mapear caracteres ASCII estándar (A-Z, 0-9 y símbolos básicos) a su representación equivalente en secuencias de puntos y guiones, siguiendo el estándar internacional ITU-R M.1677. Para la decodificación, el algoritmo analiza patrones de separación entre símbolos y palabras, aplicando tolerancias de temporización para manejar inconsistencias en espaciado. La herramienta incorpora detección automática de errores en secuencias Morse inválidas y soporta ajustes de velocidad de transmisión (WPM - Words Per Minute) para simular condiciones reales de comunicación. Los desarrolladores lo utilizan para integrar señales Morse en sistemas IoT, emuladores de radioaficionados y aplicaciones educativas de telecomunicaciones. Funciona mediante un motor de procesamiento en JavaScript que opera localmente en el navegador, garantizando privacidad y eliminando dependencias de servidores externos.",
   "usage_steps": [
-    "Abre la página del Convertidor de Código Morse",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona la dirección de conversión mediante el interruptor 'Texto → Morse' o 'Morse → Texto'",
+    "Introduce el contenido en el área de texto multilínea con soporte para 5000+ caracteres",
+    "Ajusta parámetros avanzados como velocidad de transmisión (10-60 WPM) y formato de salida (texto plano o JSON)",
+    "Activa/desactiva la opción 'Mostrar temporización' para ver duración exacta de cada señal en milisegundos",
+    "Usa el botón 'Validar código' para identificar secuencias Morse no estándar o ambiguas",
+    "Descarga el resultado en formato .txt o copia al portapapeles manteniendo la estructura original"
   ],
   "usage_examples": [
-    "Utiliza el Convertidor de Código Morse para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un radioaficionado convierte coordenadas GPS a Morse para transmitirlas en HF con modulación CW",
+    "Un profesor genera ejercicios de decodificación con temporización precisa para estudiantes de telecomunicaciones",
+    "Un desarrollador integra señales Morse en un sistema de alarma auditivo para ambientes con alta contaminación visual",
+    "Un historiador digital restaura mensajes de guerra traduciendo Morse histórico a texto con notación de errores detectados"
   ]
 }

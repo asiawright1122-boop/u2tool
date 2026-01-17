@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Kraftstoffkosten-Rechner schätzt den Betrag ab, den Sie für Benzin für jede Reise ausgeben werden.",
+  "detailed_description": "Der Fuel Cost Calculator ist ein webbasiertes Tool zur präzisen Ermittlung von Kraftstoffkosten für individuelle Fahrten. Technisch berechnet das Tool die Kosten basierend auf drei Eingabeparametern: Gesamtstrecke (in km oder Meilen), spezifischem Kraftstoffverbrauch des Fahrzeugs (in Litern pro 100 km oder Meilen pro Gallone) und aktuellem Kraftstoffpreis (in Euro oder USD pro Liter/Gallone). Die zugrunde liegende Formel lautet: (Strecke / 100) * Verbrauch * Preis pro Liter. Bei Meilenangaben erfolgt automatisch die Umrechnung in das metrische System (1 Meile = 1,60934 km). Der Algorithmus berücksichtigt zudem optionale Mehrwertsteueranteile bei Kraftstoffpreisen, falls aktiviert. Nutzer profitieren von der Möglichkeit, verschiedene Fahrzeuge (z.B. Benziner, Diesel, Hybrid) zu vergleichen oder Reisekosten für Fernfahrten zu kalkulieren. Technisch ist das Tool mit Echtzeitvalidierung der Eingabewerte und dynamischen Einheitenumrechnern ausgestattet, wodurch Fehleingaben sofort erkannt werden. Die Berechnungsergebnisse werden inklusive Zwischenwerten (z.B. benötigte Literzahl) angezeigt, was eine transparente Kostenanalyse ermöglicht.",
   "usage_steps": [
-    "Geben Sie die Reiseentfernung ein",
-    "Geben Sie die Kraftstoffeffizienz ein",
-    "Setzen Sie den aktuellen Benzinpreis",
-    "Wählen Sie eine Einzelfahrt oder Rundreise",
-    "Betrachten Sie die Gesamtkraftstoffkosten"
+    "Wählen Sie im Dropdown-Menü die gewünschte Streckeneinheit (km oder Meilen).",
+    "Geben Sie die Gesamtstrecke in das Eingabefeld 'Strecke' ein.",
+    "Wählen Sie den Kraftstofftyp (Benzin/Diesel) aus, um landesspezifische Steuersätze zu berücksichtigen.",
+    "Geben Sie den aktuellen Kraftstoffpreis pro Liter/Gallone ein oder verwenden Sie den voreingestellten Referenzwert.",
+    "Aktivieren Sie den Schalter 'Detaillierte Berechnung', um Zwischenwerte wie Verbrauch in Litern anzuzeigen.",
+    "Klicken Sie auf 'Berechnen', um die Gesamtkosten samt prozentueller Aufteilung der Faktoren zu erhalten."
   ],
   "usage_examples": [
-    "Kosten für eine Autofahrt berechnen",
-    "Kraftstoffkosten vergleichen",
-    "Budget für die tägliche Fahrt erstellen"
+    "Ein Pendler berechnet die monatlichen Kosten seiner 22 km langen Arbeitsstrecke mit einem Diesel-Fahrzeug (5,8 L/100km) bei 1,55 Euro/Liter.",
+    "Vergleich der Kraftstoffkosten für eine 800 km Reise mit einem Benziner (7,2 L/100km) versus einem Hybridfahrzeug (4,5 L/100km) bei gleichem Kraftstoffpreis.",
+    "Ein Lieferdienst nutzt das Tool zur Kalkulation der täglichen Route (150 km) mit variablem Kraftstoffpreis je nach Tankstation (1,48 bis 1,62 Euro/Liter).",
+    "Berechnung der Sommertour durch mehrere EU-Länder mit unterschiedlichen Währungen (Euro, USD) und durchschnittlichem Verbrauch von 6,3 L/100km."
   ]
 }

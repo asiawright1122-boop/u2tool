@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Convertidor de Epoch es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Utilizando el Convertidor de Epoch, puedes procesar fácilmente diversos datos sin instalar ningún software o plugins. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla eficientemente. Ya sea que seas un desarrollador, diseñador o usuario general, el Convertidor de Epoch puede ayudarte a mejorar la eficiencia de tu trabajo. Todos los procesamientos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza el Convertidor de Epoch inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El convertidor de época/unix es una herramienta que transforma marcas de tiempo numéricas en objetos datetime legibles y viceversa. Técnicamente, opera en el estándar POSIX que define la época UNIX como segundos transcurridos desde 1970-01-01T00:00:00Z UTC, excluyendo segundos intercalares. Esta herramienta resuelve la complejidad de ajustar conversiones entre zonas horarias (incluyendo horarios de verano), maneja marcas de tiempo en segundos o milisegundos, y soporta formatos de salida como ISO 8601, RFC 2822 y representaciones personalizadas. Es esencial para desarrolladores que depuran registros (logs) con timestamps en UTC+0, analizan datos de APIs REST que utilizan formatos epoch, o sincronizan sistemas distribuidos con desfasaje horario. Su motor interno utiliza la biblioteca moment-timezone para procesar conversiones precisas considerando calendarios gregorianos, husos horarios geográficos y la aritmética de fechas compleja, incluyendo años bisiestos y cambios de zona horaria históricos.",
   "usage_steps": [
-    "Abre la página del Convertidor de Epoch",
-    "Escribe o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al convertidor a través de la categoría 'Convertidores' en el menú principal",
+    "Selecciona la dirección de conversión usando el toggle: 'Epoch → Fecha/Hora' o 'Fecha/Hora → Epoch'",
+    "Introduce el valor numérico en el campo correspondiente, especificando si es en segundos (10 dígitos) o milisegundos (13 dígitos)",
+    "Elige la zona horaria de referencia mediante el selector desplegable (ej: America/New_York, Asia/Tokyo)",
+    "Personaliza el formato de salida usando el campo de formato strftime o selecciona una plantilla predefinida",
+    "Haz clic en 'Convertir' para obtener el resultado con precisión microsegundo y sus respectivas representaciones en UTC/local"
   ],
   "usage_examples": [
-    "Utiliza el Convertidor de Epoch para procesar tus datos",
-    "Obtén rápidamente los resultados de procesamiento sin esperar"
+    "Un desarrollador convierte el timestamp 1704067200000 para verificar que corresponde al 1 de enero de 2024 a las 00:00:00 en UTC+2 (Europa/Madrid)",
+    "Un analista de ciberseguridad transforma logs AWS CloudTrail con timestamps epoch a hora local para investigar un incidente ocurrido a las 2023-12-25T14:30:45-05:00",
+    "Un ingeniero DevOps genera una marca de tiempo de expiración para un token JWT sumando 86400 segundos (24h) a la fecha actual y convirtiéndola en formato epoch milisegundo",
+    "Un desarrollador móvil Android convierte fechas de eventos a milisegundos epoch para indexarlas en una base de datos Room con soporte de zonas horarias"
   ]
 }

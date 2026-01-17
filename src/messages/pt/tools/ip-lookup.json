@@ -1,14 +1,17 @@
 {
-  "detailed_description": "A Busca de Endereço IP é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com a Busca de Endereço IP, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. A ferramenta possui uma interface simples e fácil de usar, permitindo que você comece a usá-la rapidamente e de maneira eficiente. Seja desenvolvedor, designer ou usuário geral, a Busca de Endereço IP pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados a qualquer servidor. Use a Busca de Endereço IP imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O IP Lookup é uma ferramenta técnica que extrai dados detalhados de endereços IP por meio de consultas a bases de dados WHOIS, registros regionais da internet (RIRs) e APIs de geolocalização. Ele identifica informações como coordenadas geográficas, provedor de internet (ISP), número de sistema autônomo (ASN), cidade, país e até a precisão do registro. Desenvolvedores e profissionais de rede utilizam essa ferramenta para diagnosticar problemas de conectividade, mapear origens de tráfego malicioso ou validar conformidade com leis de dados regionais, como a LGPD. O funcionamento baseia-se na interpretação de blocos CIDR, verificação de alocações de IP pela IANA e cruzamento de dados de geolocation através de bibliotecas como a MaxMind. Além disso, exibe metadados como horário local, fuso horário e código postal, úteis para aplicações de análise de audiência ou personalização de conteúdo.",
   "usage_steps": [
-    "Abra a página da ferramenta de Busca de Endereço IP",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta e insira um endereço IP válido (IPv4 ou IPv6) no campo de texto destacado.",
+    "Selecione a versão do protocolo (IPv4/IPv6) manualmente, caso a detecção automática não corresponda ao seu objetivo.",
+    "Escolha os campos de resposta desejados usando os checkboxes: geolocalização, ASN, ISP, dados WHOIS ou horário local.",
+    "Clique no botão 'Buscar Informações' para executar a consulta em tempo real.",
+    "Analise o resultado estruturado em formato JSON ou tabela, incluindo coordenadas de latitude/longitude e código ISO do país.",
+    "Use a opção 'Exportar Dados' para salvar o resultado em CSV ou compartilhar via link direto."
   ],
   "usage_examples": [
-    "Use a Busca de Endereço IP para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um analista de segurança investiga a origem de ataques DDoS mapeando o ASN e ISP de IPs maliciosos.",
+    "Um desenvolvedor ajusta a entrega de conteúdo dinâmico com base na localização geográfica de usuários, obtida via API integrada.",
+    "Um administrador de redes identifica discrepâncias em rotas BGP ao comparar o ASN registrado com o anunciado em tabelas de roteamento.",
+    "Uma empresa verifica se usuários de um serviço estão dentro da União Europeia para aplicar regras de GDPR automaticamente."
   ]
 }

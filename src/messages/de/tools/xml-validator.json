@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der XML-Prüfer überprüft Ihre XML-Dokumente auf Syntaxfehler und Gültigkeit. Bietet detaillierte Fehlermeldungen mit Zeilen- und Spaltennummern.",
+  "detailed_description": "Der XML Validator überprüft XML-Dokumente auf syntaktische Korrektheit und Well-Formedness gemäß XML 1.0/1.1-Spezifikationen. Er analysiert Start-/End-Tags, Attributformate, korrekte Zeichenkodierung, CDATA-Sektionen und Namespaces. Der Validator unterstützt auch DTD- und XSD-Schema-Validierungen zur Prüfung der strukturellen Integrität. Entwickler benötigen dieses Tool, um Fehler in Konfigurationsdateien (z.B. Spring Framework), API-Daten (SOAP, REST XML), RSS-Feeds oder EDI-Dokumenten frühzeitig zu erkennen, bevor sie zu Anwendungsabstürzen oder Dateninkonsistenzen führen. Technisch arbeitet der Validator mit einem SAX-Parser für effiziente Speicherauslastung und DOM-Integration für komplexe Schema-Validierungen. Bei Fehlern werden präzise Fehlercodes (z.B. 1.3.6.4.2.807) sowie Zeilen-/Spaltenpositionen angezeigt, inklusive detaillierter Meldungen zu unzulässigen Zeichen, fehlenden Attributen oder falsch verschachtelten Elementen.",
   "usage_steps": [
-    "Fügen Sie Ihren XML-Inhalt ein",
-    "Klicken Sie auf 'Prüfen', um zu überprüfen",
-    "Bewerten Sie die Überprüfungsergebnisse",
-    "Beheben Sie alle gemeldeten Fehler",
-    "Überprüfen Sie erneut, bis alles sauber ist"
+    "1. Navigieren Sie zur URL /xml-validator, um die Oberfläche mit dem XML-Eingabetextbereich und Validierungsoptionen zu öffnen.",
+    "2. Fügen Sie Ihr XML-Dokument in den Textbereich ein oder laden Sie eine Datei per Drag-and-Drop hoch.",
+    "3. Aktivieren Sie im Abschnitt 'Validierungsmodi' die Checkboxen für DTD, XSD oder Namespaces, falls erforderlich.",
+    "4. Klicken Sie auf 'XML Überprüfen', um den Parser zu starten.",
+    "5. Analysieren Sie das Ergebnisfenster mit Fehlerbäumen, Zeilennummern und XML-Schema-Konformitätsberichten.",
+    "6. Nutzen Sie den 'Fehlerbehebungs-Assistenten', der korrigierte XML-Blöcke vorschlägt und inkonforme Nodes markiert."
   ],
   "usage_examples": [
-    "Überprüfen Sie API-Antworten",
-    "Überprüfen Sie Konfigurationsdateien",
-    "Debuggen Sie SOAP-Nachrichten"
+    "Validierung eines Spring Boot application.xml vor Serverstart, um Konfigurationsfehler zu vermeiden.",
+    "Prüfung eines EDI-X12-Dokuments auf UCCNET-Kompatibilität vor dem Versand zu Handelspartnern.",
+    "Debugging eines fehlerhaften RSS-Feeds durch Identifizierung falsch geschlossener CDATA-Tags.",
+    "Überprüfung eines XSD-gestützten Health Level 7 (HL7)-Nachrichtenformats im medizinischen Datenaustausch."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON到Rust是一个实用的在线工具，帮助你快速完成各种任务。使用JSON到Rust，你可以轻松处理各种数据，无需安装任何软件或插件。该工具界面简单，易于使用，让你能够快速上手并高效使用。无论是开发人员、设计师还是普通用户，JSON到Rust都能帮助你提高工作效率。所有处理都在你的浏览器中本地完成，确保数据安全，不会上传到任何服务器。立即使用JSON到Rust，体验快速、安全且免费的在线工具服务。",
+  "detailed_description": "JSON to Rust 是一个将 JSON 数据结构自动转换为 Rust 语言结构体（struct）的代码生成工具。其核心功能基于抽象语法树（AST）解析和类型推导算法，通过分析 JSON 的层级结构、字段类型（如字符串、数字、数组、嵌套对象等），生成带有 serde_derive 注解的 Rust 代码，支持序列化/反序列化操作。开发者在构建 RESTful API 客户端或处理配置文件时，可避免手动编写易出错的结构体定义。工具采用递归下降解析法处理嵌套结构，自动将 JSON 键名转换为 snake_case 命名规范，并支持自定义类型映射（如将时间戳字符串映射为 chrono::DateTime）。与同类工具相比，其独特之处在于可生成带 impl 方法的结构体模板，并自动处理可选字段（Option<T>）和枚举类型（enum）的模式匹配逻辑。",
   "usage_steps": [
-    "打开JSON到Rust工具页面",
-    "在输入框中输入或粘贴要处理的内容",
-    "根据需要调整工具选项和设置",
-    "点击处理按钮查看结果",
-    "复制或下载处理结果"
+    "1. 在输入区域粘贴有效 JSON 文本（支持多行缩进格式）",
+    "2. 在 'Struct Name' 输入框指定根结构体标识符（如 UserResponse）",
+    "3. 勾选 'Generate Impl Methods' 添加常用方法模板",
+    "4. 通过下拉菜单选择 serde 兼容模式（default/with_features）",
+    "5. 在 'Namespace' 输入框填写模块路径（如 models::user）",
+    "6. 点击 'Generate Code' 按钮获取结果并复制到 Cargo 项目"
   ],
   "usage_examples": [
-    "使用JSON到Rust处理你的数据",
-    "无需等待即可快速获得处理结果"
+    "Example 1: 将 GitHub API 返回的用户信息 JSON 转换为包含 Vec<Repo> 嵌套结构的 User struct",
+    "Example 2: 为 IoT 设备上传的传感器数据（含温度/湿度/时间戳字段）生成带 FromStr 实现的配置结构体",
+    "Example 3: 将包含联合类型（union）的 GraphQL 查询响应转换为带 enum 包裹的 Rust 类型定义",
+    "Example 4: 为包含多级嵌套的 AWS Lambda 事件对象生成带 #[serde(rename)] 注解的处理结构"
   ]
 }

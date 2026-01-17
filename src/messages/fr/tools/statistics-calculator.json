@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Calculatrice de Statistiques est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. Avec la Calculatrice de Statistiques, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil possède une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, la Calculatrice de Statistiques peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload sur n'importe quel serveur. Utilisez immédiatement la Calculatrice de Statistiques pour expérimenter des services de outil en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "Le Statistics Calculator est un outil technique conçu pour exécuter des analyses statistiques avancées sur des ensembles de données numériques. Il calcule des mesures de tendance centrale (moyenne arithmétique, médiane, mode), des indicateurs de dispersion (écart-types, variance, intervalle interquartile) et des coefficients de forme (asymétrie, kurtosis). Intégrant des algorithmes numériques optimisés tels que la méthode de Welford pour éviter les erreurs d'arrondi lors du calcul de la variance, il garantit une précision de calcul même sur de grands jeux de données. Les utilisateurs peuvent importer des fichiers CSV ou saisir manuellement des séries temporelles, des échantillons aléatoires ou des données catégorielles. L'outil effectue également des tests d'hypothèse basiques comme le test t de Student ou le test de Shapiro-Wilk pour vérifier la normalité des données. Indispensable pour les étudiants en statistiques, les data analysts ou les chercheurs en sciences sociales, il permet de synthétiser rapidement des distributions complexes, d'identifier des valeurs aberrantes via des boxplots générés automatiquement, ou d'estimer des intervalles de confiance avec un niveau de significativité paramétrable (90%, 95%, 99%).",
   "usage_steps": [
-    "Ouvrez la page de la Calculatrice de Statistiques",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Téléchargez un fichier CSV contenant vos données ou utilisez le champ de saisie manuelle pour entrer une série de valeurs numériques séparées par des virgules.",
+    "Sélectionnez les mesures à calculer via les cases à cocher : moyenne, écart-type, médiane, etc. (jusqu'à 12 indicateurs disponibles).",
+    "Activez l'option 'Analyse détaillée' pour obtenir les coefficients de skewness et kurtosis, ainsi que le test de normalité Shapiro-Wilk.",
+    "Cliquez sur 'Calculer' pour exécuter l'analyse. Les résultats s'affichent sous forme de tableau avec des valeurs arrondies à 10^-4 près.",
+    "Utilisez l'onglet 'Visualisation' pour générer des graphiques interactifs (histogramme, diagramme en boîte, courbe de distribution normale).",
+    "Exportez les résultats au format JSON, CSV ou PNG via les boutons de téléchargement situés en bas de page."
   ],
   "usage_examples": [
-    "Utilisez la Calculatrice de Statistiques pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un professeur d'économie analyse les notes de 200 étudiants pour identifier la médiane et les quartiles, afin de déterminer la répartition des performances sans être influencé par les valeurs extrêmes.",
+    "Un marketeur évalue l'écart-type des ventes mensuelles de trois produits concurrents pour mesurer la stabilité de leur performance commerciale sur un semestre.",
+    "Un ingénieur qualité calcule l'intervalle de confiance à 99% des dimensions de pièces manufacturées à partir d'un échantillon de 50 unités, afin de valider la conformité aux tolérances techniques.",
+    "Un data scientist prépare un jeu de données pour un modèle de machine learning en identifiant les valeurs aberrantes via l'analyse des z-scores générés automatiquement par l'outil."
   ]
 }

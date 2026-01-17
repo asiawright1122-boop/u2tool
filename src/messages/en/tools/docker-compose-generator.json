@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Docker Compose Generator is a practical online tool that helps you quickly complete various tasks. Using Docker Compose Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Docker Compose Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Docker Compose Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Docker Compose Generator is a specialized utility for automating the creation of complex docker-compose.yml files through a structured configuration interface. This tool parses user-defined parameters for services like MySQL, Redis, Nginx, and application containers, then generates YAML manifests compliant with Docker Compose Specification Version 3.8. It addresses common challenges in manual Docker configuration, including inconsistent port mapping, incorrect volume binding syntax, and network dependency misconfigurations. By providing predefined service templates with adjustable parameters (e.g., root password hashes, volume mount paths, environment variable injection), the tool ensures consistent container orchestration across development, staging, and production environments. The generator's backend validates configurations against Docker's schema requirements, preventing invalid YAML structures that could cause deployment failures. Developers can customize service-level properties such as build contexts, restart policies, and resource constraints through a guided UI, eliminating the need for manual syntax memorization. This is particularly valuable for teams managing microservices architectures where inter-service communication and persistent storage require precise network and volume declarations.",
   "usage_steps": [
-    "Open the Docker Compose Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Select required base services (MySQL 8.0, Redis 7.0, Nginx 1.25, etc.) using the multi-select service panel",
+    "2. Configure service-specific parameters through expandable forms: set MySQL root password, Redis maxmemory, or Nginx custom ports (e.g., 8080:80)",
+    "3. Define volume mounts by specifying host paths and container bind points in the persistent storage section",
+    "4. Configure network settings using the drag-and-drop dependency graph to establish service communication rules",
+    "5. Review automatically generated YAML in the live preview pane, with syntax highlighting and error indicators",
+    "6. Click 'Export Compose File' to download the validated docker-compose.yml or copy the content to clipboard"
   ],
   "usage_examples": [
-    "Use Docker Compose Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: Creating a LAMP stack with PHP 8.2-FPM, MySQL 8.0, and Adminer UI by selecting services, mapping port 8080:80, and setting database credentials",
+    "Example 2: Configuring a Redis-backed Python application with a redis-py client, exposing port 6379 and persistent storage at /data/redis",
+    "Example 3: Generating a CI/CD environment with PostgreSQL 15 and Jenkins containers, including volume mounts for Jenkins home directory",
+    "Example 4: Building a WordPress multisite configuration with Nginx reverse proxy, Let's Encrypt certificate support, and Redis object caching"
   ]
 }

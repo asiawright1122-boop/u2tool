@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Rechnungsgenerator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Rechnungsgenerator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Rechnungsgenerator kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Rechnungsgenerator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der Invoice Generator ist ein browserbasiertes Werkzeug zur Erstellung und Verwaltung professioneller Rechnungen mit vollständiger clientseitiger Verarbeitung. Technisch realisiert durch eine Kombination aus HTML5, CSS3 und JavaScript (mit React-Framework), ermöglicht das Tool die dynamische Generierung von Rechnungsdokumenten durch Mustache-Template-Engines. Die Datenbindung erfolgt über ein reaktives State-Management, das Änderungen in Echtzeit im Vorschaubereich widerspiegelt. Für die PDF-Exportfunktionalität wird eine Kombination aus jsPDF und PDFKit verwendet, die eine präzise Layout-Kontrolle über CSS-Media-Queries ermöglicht. Nutzer profitieren von der serverlosen Architektur, die sensible Geschäftsinformationen vollständig im Browser verarbeitet. Besonders relevant für Selbständige in der EU, die automatisierte Umsatzsteuerberechnungen (mit dynamischen Steuersätzen) und mehrsprachige Dokumentenerstellung benötigen. Die Integration von SVG-basierten Logouploads und responsive Designvorlagen unterscheidet dieses Tool von traditionellen Lösungen.",
   "usage_steps": [
-    "Öffnen Sie die Rechnungsgenerator-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "1. Wählen Sie im Template-Gallery-Bereich ein Basislayout aus (z.B. Corporate, Minimalistisch oder E-Commerce-Optimiert)",
+    "2. Passen Sie die Branding-Elemente im rechten Seitenpanel an: Laden Sie Ihr Firmenlogo im SVG-/PNG-Format hoch und definieren Sie Primärfarben über einen HEX-Code-Eingabefeld",
+    "3. Füllen Sie die Rechnungsmatrix aus: Geben Sie Positionen über das dynamische Tabellenmodul ein, inklusive Mengen-, Einzelpreis- und Steuerberechnungsfeldern",
+    "4. Aktivieren Sie im Abschnitt 'Zahlungsbedingungen' den Toggle für automatische Fälligkeitsberechnung (z.B. 14 Tage netto) und konfigurieren Sie Rabattstufen über das Prozent-Input-Feld",
+    "5. Verwenden Sie den PDF-Export-Controller, um zwischen PDF/A (Archivierung) und PDF/UA (Barrierefreiheit) zu wechseln und legen Sie die Seitenorientierung (Hoch-/Querformat) fest",
+    "6. Synchronisieren Sie erstellte Rechnungen direkt über den integrierten Google Drive-/Dropbox-Connector oder nutzen Sie den verschlüsselten Export-Link-Generator für Kundenfreigaben"
   ],
   "usage_examples": [
-    "Verwenden Sie Rechnungsgenerator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein Berliner Webentwickler erstellt mehrsprachige Rechnungen für Kunden in Frankreich und Spanien mit automatischer Währungsumrechnung und lokalen Steuerangaben",
+    "Ein E-Commerce-Unternehmen generiert Serienrechnungen für Großkunden mit kundenspezifischen Rabattstaffeln über ein CSV-Import-Modul",
+    "Ein Beratungsunternehmen konfiguriert wiederkehrende Serviceverträge mit automatischer Monatsrechnungserstellung und Verfallsdatum-Tracking",
+    "Ein Start-up-Gründer exportiert Rechnungen im barrierefreien PDF/UA-Format für die Integration in ein SAP-ERP-System des Kunden"
   ]
 }

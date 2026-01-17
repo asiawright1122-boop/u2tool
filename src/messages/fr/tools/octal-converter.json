@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Convertisseur Octal est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Convertisseur Octal pour traiter facilement diverses données sans avoir à installer de logiciels ou de plugins. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Convertisseur Octal peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur tout serveur. Utilisez le Convertisseur Octal immédiatement pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Le convertisseur octal est un outil technique permettant d'effectuer des conversions bidirectionnelles entre le système octal (base 8) et d'autres bases numériques courantes telles que la base 2 (binaire), la base 10 (décimale) et la base 16 (hexadécimale). Ce convertisseur utilise des algorithmes mathématiques précis : pour les conversions en base décimale, il applique la méthode de développement par positions pondérées (ex. 345₈ = 3×8² + 4×8¹ + 5×8⁰), tandis que les conversions depuis la base décimale vers l'octal utilisent la technique des divisions successives par 8. L'outil inclut également un mécanisme de validation d'entrée pour identifier les chiffres invalides (comme les chiffres >7 en mode octal) et propose un traitement en temps réel grâce à des scripts JavaScript optimisés. Ce type d'outil est indispensable pour les développeurs travaillant sur des systèmes hérités utilisant l'octal (comme certains protocoles de communication série), les administrateurs système manipulant les permissions Unix (chmod 755), ou les étudiants en informatique confrontés à des exercices de conversion. La précision algorithmique élimine les erreurs de calcul manuel, notamment lors de la conversion entre bases non décimales.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Convertisseur Octal",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la boîte d'entrée",
-    "Ajustez les options et les paramètres de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez le mode de conversion dans le menu déroulant : 'Octal vers Décimal', 'Décimal vers Octal', 'Octal vers Binaire', etc.",
+    "Saisissez votre nombre dans le champ d'entrée, en veillant à respecter les chiffres valides pour la base sélectionnée (0-7 pour l'octal).",
+    "Activez l'option 'Validation stricte' si vous souhaitez recevoir des alertes pour les caractères non conformes.",
+    "Cliquez sur le bouton 'Convertir' pour déclencher le calcul instantané dans le moteur JavaScript intégré.",
+    "Consultez le résultat affiché dans la zone de sortie, qui inclut également la représentation en complément à deux si applicable.",
+    "Utilisez le bouton 'Exporter' pour copier le résultat au format JSON ou CSV dans votre presse-papiers."
   ],
   "usage_examples": [
-    "Utilisez le Convertisseur Octal pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un administrateur système convertit les permissions de fichiers Unix (ex. 754₈) en valeurs décimales pour configurer les droits d'accès.",
+    "Un programmeur débugge un protocole de communication utilisant des codes ASCII en octal (ex. 101₈ = 'A' en ASCII) dans un environnement embarqué.",
+    "Un étudiant en informatique vérifie ses calculs manuels en convertissant un nombre binaire complexe (ex. 111011101₂) directement en octal.",
+    "Un ingénieur réseau analyse un en-tête IP où les adresses sont encodées en octal et doit les convertir en décimal pour une documentation technique."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der JSON-Flattener ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem JSON-Flattener können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Gleichgültig, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der JSON-Flattener kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den JSON-Flattener sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der JSON Flattener ist ein Spezialtool zur bidirektionalen Transformation verschachtelter JSON-Objekte in eindimensionale Schlüssel-Wert-Paare und umgekehrt. Technisch gesehen analysiert der Parser rekursiv die JSON-Struktur, identifiziert geschachtelte Objekte und Arrays und generiert flache Pfade mithilfe von Trennzeichenstrategien (wie Punktnotation oder Unterstrichen). Bei der Rücktransformation verwendet das Tool eine inverse Mapping-Logik, die Hierarchien anhand der Schlüsselpfade rekonstruiert. Diese Funktionalität ist entscheidend für Szenarien wie die Vorbereitung von Daten für NoSQL-Datenbanken, die keine tiefen Strukturen unterstützen, oder die Normalisierung von API-Antworten für maschinelles Lernen. Das Tool behält dabei Datentypen bei und ermöglicht optionale Behandlung von Arrays durch numerische Indizes oder explizite Gruppierung. Die Implementierung nutzt einen Stapelbasierten Algorithmus zur Vermeidung von Endlosschleifen bei zyklischen Referenzen, was die Verarbeitung komplexer Schemata in Echtzeit ermöglicht.",
   "usage_steps": [
-    "Öffnen Sie die Seite des JSON-Flattener-Tools",
-    "Fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Einstellungen und Optionen, wenn nötig, an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Fügen Sie Ihren JSON-Code in die linke Textarea ein oder laden Sie eine JSON-Datei hoch.",
+    "Wählen Sie im Optionsfeld 'Flattening' für Vereinfachung oder 'Unflattening' für Rekonstruktion aus.",
+    "Konfigurieren Sie das Trennzeichen (Standard: Punkt '.') im Eingabefeld 'Delimiter-Strategie'.",
+    "Aktivieren Sie die Checkbox 'Array-Indizes beibehalten', um numerische Positionen in Schlüsselpfade einzubetten.",
+    "Klicken Sie auf 'Transformieren', um den Prozess zu starten und das Ergebnis in der rechten Textarea anzuzeigen.",
+    "Kopieren Sie den transformierten JSON-Code mit dem 'Kopieren'-Button oder laden Sie ihn als .json-Datei herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie den JSON-Flattener, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Ein Entwickler transformiert ein verschachteltes GeoJSON-Objekt in flache Schlüssel für eine Elasticsearch-Indexierung.",
+    "Ein Data Engineer vereinfacht komplexe API-Antworten zur direkten Verwendung in Apache Spark DataFrames.",
+    "Ein Systemadministrator konvertiert eine mehrdimensionale Konfigurationsdatei in eine Umgebungsvariablen-kompatible Form.",
+    "Ein Frontend-Entwickler rekonstruiert flache Formulardaten zu einer hierarchischen JSON-Struktur für eine Backend-API."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Texto para Alfa-NATO é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando Texto para Alfa-NATO, você pode facilmente processar vários dados sem instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilizem de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, Texto para Alfa-NATO pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo uploaded para nenhum servidor. Use Texto para Alfa-NATO imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Texto para NATO é uma ferramenta técnica especializada que converte caracteres alfanuméricos e símbolos em seu equivalente no Alfabeto Fonético da OTAN (NATO Phonetic Alphabet), baseado no padrão Internacional Radiotelephony Spelling Alphabet (IRSA). Internamente, o algoritmo realiza mapeamento ASCII de cada caractere, aplicando normalização de caso para garantir consistência em transmissões verbais. O processamento inclui tratamento especial para dígitos (substituídos por 'Nadz' seguido do número em português) e símbolos não alfabéticos, que são representados por convenções específicas da comunidade de telecomunicações. Profissionais de áreas críticas como aviação civil, defesa nacional e emergências médicas utilizam esta ferramenta para eliminar ambiguidades em comunicações de voz, especialmente em ambientes com alta interferência. A implementação emprega uma tabela hash otimizada para buscas em tempo constante O(1), com suporte a codificação UTF-8 para caracteres acentuados comuns em textos em português brasileiro.",
   "usage_steps": [
-    "Abra a página da ferramenta Texto para Alfa-NATO",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a página principal e localize a área de texto rotulada 'Texto Original'.",
+    "Cole ou digite o conteúdo a ser convertido, mantendo as opções 'Converter para Maiúsculas' desativada se quiser preservar o formato original.",
+    "Ative o checkbox 'Mostrar Código Numérico' para incluir representações de dígitos no formato especializado da OTAN.",
+    "Clique no botão 'Gerar NATO' para iniciar o processamento algorítmico em tempo real.",
+    "Analise o resultado na seção 'Saída Fonética', onde cada caractere será exibido em formato destacado.",
+    "Use o botão 'Copiar Tudo' para transferir o resultado para a área de transferência em formato compatível com sistemas de rádio digital."
   ],
   "usage_examples": [
-    "Use Texto para Alfa-NATO para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Operadores aéreos convertendo números de voo (ex: LATAM1234) para comunicação com controle de tráfego em condições de baixa visibilidade.",
+    "Equipes de resgate marítimo transmitindo coordenadas GPS (ex: 23°45'32\"S) com precisão em rádios de HF com alta taxa de erro.",
+    "Profissionais da área médica criando protocolos de verificação de medicamentos (ex: 'Ciprofloxacino 500mg') para comunicação entre centros cirúrgicos.",
+    "Radioamadores brasileiros padronizando chamadas de identificação (ex: PY1ABC) durante competições internacionais de comunicação via satélite."
   ]
 }

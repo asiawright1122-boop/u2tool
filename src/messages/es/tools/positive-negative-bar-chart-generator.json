@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Barras Positivo/Negativo es una herramienta en línea práctica que te ayuda a completar diversas tareas rápidamente. Utilizando el Generador de Gráficos de Barras Positivo/Negativo, puedes procesar varios datos fácilmente sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Barras Positivo/Negativo puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Utiliza el Generador de Gráficos de Barras Positivo/Negativo inmediatamente para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "Este generador de gráficos de barras positivo-negativo permite crear visualizaciones especializadas para datasets con valores en ambos sentidos del eje cartesiano. Técnicamente, el tool implementa bibliotecas D3.js para renderizar gráficos SVG dinámicos donde cada barra representa una desviación relativa al punto cero del eje Y. Los usuarios necesitan esta herramienta para casos específicos como: comparar resultados financieros contra presupuestos (valores positivos para cumplimiento, negativos para desviaciones), visualizar variaciones climáticas mensuales, analizar fluctuaciones de precios en mercados bursátiles, o mostrar balances de cuentas con saldos deudores y acreedores. Funciona mediante un motor de mapeo de datos bidimensional donde las categorías se asignan al eje X y los valores numéricos al eje Y, con opciones avanzadas para configurar el punto base (baseline) en 0, ajustar escalas logarítmicas, aplicar colores divergentes por polaridad y exportar metadatos en formato JSON. El renderizado se optimiza con técnicas de anti-aliasing para bordes suaves y soporta tooltips interactivos que muestran valores exactos al hacer hover.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Barras Positivo/Negativo",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Ingresa al panel de edición de datos y completa la tabla de categorías en la columna izquierda (eje X) y sus valores numéricos en la columna derecha.",
+    "2. Usa el selector de paletas para asignar colores personalizados a barras positivas y negativas desde los controles de selección de color hexadecimales.",
+    "3. Configura el eje Y activando la opción 'Mostrar línea base en 0' para resaltar el punto de inflexión entre valores positivos y negativos.",
+    "4. Ajusta parámetros de visualización en el panel de configuración: activa 'Escala logarítmica' para datasets con grandes rangos o 'Barras apiladas' para series múltiples.",
+    "5. Previsualiza el gráfico en tiempo real en el canvas de renderizado y haz clic derecho en cualquier barra para exportar datos individuales en formato CSV.",
+    "6. Descarga el gráfico final en SVG o PNG desde el botón 'Exportar' y obtén el código embeddable para integración web directa."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Barras Positivo/Negativo para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "1. Un analista financiero compara los ingresos reales vs. proyectados de 5 divisiones empresariales, mostrando barras verdes para cumplimiento y rojas para déficit.",
+    "2. Un climatólogo representa las desviaciones mensuales de temperatura respecto al promedio histórico, con barras positivas para meses más cálidos y negativas para más fríos.",
+    "3. Un retail manager evalúa el inventario cruzando ventas vs. devoluciones por producto, usando barras azules para unidades vendidas y naranjas para devueltas.",
+    "4. Un economista visualiza el balance de pagos internacionales de un país, con barras ascendentes para exportaciones e invertidas para importaciones."
   ]
 }

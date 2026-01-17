@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculadora de IMC es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Usando Calculadora de IMC, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya seas desarrollador, diseñador o usuario general, Calculadora de IMC puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y no se subirá a ningún servidor.",
+  "detailed_description": "El Calculador de Índice de Masa Corporal (BMI) implementa algoritmos basados en la fórmula matemática establecida por la Organización Mundial de la Salud (OMS): BMI = peso (kg) / [altura (m)]². Este tool valida automáticamente los datos ingresados, convierte unidades métricas e imperiales (libras/pulgadas), y aplica criterios clínicos para clasificar el estado nutricional según rangos predefinidos (bajo peso, peso normal, sobrepeso, obesidad). Su utilidad radica en la evaluación cuantitativa del riesgo metabólico, permitiendo a usuarios realizar autoevaluaciones de salud, profesionales médicos documentar indicadores antropométricos, y educadores implementar programas de prevención. El sistema opera mediante un motor de cálculo que procesa entradas numéricas con precisión de decimales, garantizando resultados reproducibles siguiendo protocolos internacionales de medición estandarizada.",
   "usage_steps": [
-    "Abrir la página de la herramienta Calculadora de IMC",
-    "Ingresar o pegar el contenido a procesar en el cuadro de entrada",
-    "Ajustar las opciones y configuraciones de la herramienta según sea necesario",
-    "Hacer clic en el botón de procesar para ver los resultados",
-    "Copiar o descargar los resultados procesados"
+    "Seleccionar sistema de unidades (métrico o imperial) mediante el selector de formato",
+    "Ingresar peso corporal en el campo numérico correspondiente, con soporte para decimales",
+    "Registrar altura en centímetros o pulgadas según sistema seleccionado",
+    "Activar el botón 'Calcular BMI' para ejecutar el algoritmo",
+    "Analizar el valor resultante en formato X.XX, acompañado de código de color",
+    "Consultar la clasificación nutricional desplegada según estándares de la OMS"
   ],
   "usage_examples": [
-    "Usar Calculadora de IMC para procesar tus datos",
-    "Obtener resultados de procesamiento rápidamente sin esperar"
+    "Un paciente con hipertensión monitorea su BMI mensualmente para evaluar eficacia de dieta",
+    "Un nutricionista utiliza el calculador para establecer diagnóstico nutricional en consultas",
+    "Un investigador convierte datos históricos de cohorte utilizando la función de conversión de unidades",
+    "Un profesor de educación física desarrolla taller práctico sobre salud cardiovascular para estudiantes"
   ]
 }

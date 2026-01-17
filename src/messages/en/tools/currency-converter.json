@@ -1,16 +1,17 @@
 {
-  "detailed_description": "Currency Converter is a comprehensive tool that helps you convert between 45+ world currencies instantly. Support for major currencies like USD, EUR, GBP, JPY, CNY, as well as Asian, European, American, and Middle Eastern currencies. Features include quick swap between currencies, preset amount buttons, and detailed exchange rate information.",
+  "detailed_description": "The Currency Converter tool leverages RESTful API integrations with real-time data sources like Open Exchange Rates and XE.com to deliver accurate cross-currency conversions. Technically, it processes user input through a three-step workflow: first, it validates ISO 4217 currency codes and numerical amounts using regex pattern matching; second, it queries aggregated liquidity provider APIs to fetch bid/ask spreads and mid-rates with floating-point precision up to 1e-8; third, it applies rate calculations using arbitrary-precision arithmetic to prevent rounding errors. This tool addresses critical needs for financial professionals, international freelancers, and global travelers requiring precise conversions for invoicing, budget forecasting, and real-time portfolio valuation. The backend employs Redis caching with 60-second TTL for frequently accessed currency pairs, while HTTPS encryption ensures secure transmission of financial data. Advanced features include historical rate lookups via time-series databases and CORS headers for web application integration.",
   "usage_steps": [
-    "Enter the amount you want to convert",
-    "Select the source currency from the dropdown",
-    "Select the target currency from the dropdown",
-    "View the converted amount instantly",
-    "Use the swap button to reverse the conversion",
-    "Click preset amounts for quick calculations"
+    "Select your base currency from the searchable dropdown menu (e.g., USD, EUR, JPY) using ISO 4217 three-letter codes.",
+    "Enter the numeric amount in the precision input field, supporting values up to 1e15 with decimal point accuracy.",
+    "Choose up to 5 target currencies using the multi-select checklist with automatic exchange rate color-coding for volatility indicators.",
+    "Adjust the date selector to retrieve historical rates from our TimeSeries API (available back to 2000 BCE for major currencies).",
+    "Click 'Swap Base' to reverse conversion direction or 'Compare All' to generate differential rate tables against multiple benchmarks.",
+    "Export results via the JSON download button or integrate live data using the provided CORS-enabled API endpoint with Bearer token authentication."
   ],
   "usage_examples": [
-    "Convert USD to EUR for travel planning",
-    "Calculate exchange rates for international purchases",
-    "Compare currency values across different countries"
+    "A software developer in Brazil uses the tool to convert USD invoice payments to BRL while accounting for daily central bank exchange rate fluctuations.",
+    "An import/export business analyst tracks real-time EUR/GBP crosses during Brexit-related market volatility using the live websocket feed feature.",
+    "A cryptocurrency trader calculates precise stablecoin equivalents (e.g., USDT, USDC) for BTC holdings using the 8-decimal precision converter.",
+    "An academic researcher compares 10-year inflation-adjusted exchange rates between emerging market currencies using the historical data visualization module."
   ]
 }

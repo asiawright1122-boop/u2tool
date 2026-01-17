@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Emoji-Wähler ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Emoji-Wähler können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Emoji-Wähler kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Emoji-Wähler sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der Emoji Picker ist ein webbasiertes Werkzeug zur effizienten Verwaltung und Einbettung von Emojis in Textinhalte. Technisch gesehen implementiert das Tool eine clientseitige JavaScript-Anwendung, die auf dem Unicode-Zeichensatz basiert und über 3.000 standardkonforme Emojis aus 18 Kategorien bereitstellt. Die Anwendung verwendet ein dynamisches DOM-Rendering zur Optimierung der Ladezeiten und integriert die Clipboard-API für das sofortige Kopieren von Emojis bei Klickereignissen. Ein durchsuchbarer Index ermöglicht die Eingabe von Schlüsselwörtern wie 'Berge' oder 'Technologie', die dann über reguläre Ausdrücke mit den Unicode-Deskriptoren abgeglichen werden. Besonders vorteilhaft ist die Offline-Funktionalität durch Service Worker, die das Tool auch ohne aktive Internetverbindung nutzbar macht. Entwickler profitieren von der automatischen Kodierung im UTF-8-Format, während Designer durch visuelle Vorschauen mögliche Darstellungsunterschiede zwischen Betriebssystemen erkennen können.",
   "usage_steps": [
-    "Öffnen Sie die Emoji-Wähler-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "1. Wählen Sie im 'Kategoriefilter'-Dropdown eine Gruppe wie 'Natur & Wetter' oder 'Technologie' aus.",
+    "2. Verwenden Sie das 'Suche'-Feld für Echtzeitfilterung durch Eingabe von Begriffen wie 'Stern' oder 'Raumschiff'.",
+    "3. Klicken Sie auf ein gewünschtes Emoji, um es automatisch in die Zwischenablage zu kopieren (alternativ: Drücken der Enter-Taste bei Fokus).",
+    "4. Nutzen Sie die 'Zuletzt verwendete'-Liste im unteren Bereich für schnellen Zugriff auf vorherige Auswahl.",
+    "5. Aktivieren Sie den 'Vorschau'-Modus, um das ausgewählte Emoji in verschiedenen Schriftarten und Größen zu analysieren.",
+    "6. Exportieren Sie mehrere Emojis gleichzeitig über den 'Batch-Export'-Button im SVG- oder PNG-Format."
   ],
   "usage_examples": [
-    "Verwenden Sie Emoji-Wähler, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "1. Ein Social-Media-Manager erstellt schnell farbkodierte Instagram-Beiträge mit Wetteremoticons für verschiedene Zeitzonen.",
+    "2. Ein Entwickler integriert präzise Emoji-Visualisierungen in eine Webanwendung ohne manuelle Unicode-Suche.",
+    "3. Ein Lehrer gestaltet interaktive Quizfragen mit Emojis als visuelle Antwortoptionen für Schüler.",
+    "4. Ein Support-Mitarbeiter verbessert Kundenkommunikation durch konsistente Emoticon-Einbettung in Ticket-Systeme."
   ]
 }

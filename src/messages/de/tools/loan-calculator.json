@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Kreditrechner ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Kreditrechner können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und es effizient nutzen können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Kreditrechner kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser, wodurch die Sicherheit Ihrer Daten gewährleistet ist und nicht auf einen Server hochgeladen wird.",
+  "detailed_description": "Der Loan Calculator ist ein präzises Analysewerkzeug zur Berechnung von Kreditzahlungen, Zinsbelastungen und Amortisationsplänen auf Basis mathematischer Finanzmodelle. Technisch gesehen implementiert der Rechner die Annuitätenformel (P * (r*(1+r)^n)/((1+r)^n-1)) für festverzinsliche Darlehen, berücksichtigt variable Zinsperioden (täglich, monatlich, jährlich) und ermöglicht die Analyse unterschiedlicher Tilgungsmodelle (linear, degressiv, annuitätisch). Nutzer können zwischen Nominal- und Effektivzinssätzen wechseln, um versteckte Kosten zu identifizieren. Die Berechnungsergebnisse werden als detaillierter Amortisationsplan ausgegeben, der Periode-für-Periode-Zins- und Tilgungsanteile, Restschuld und kumulierte Zinszahlungen anzeigt. Das Tool ist essentiell für Finanzplaner, die Immobilienkredite vergleichen, Privatkunden, die Konsumkredite optimieren, oder Unternehmen, die Investitionsfinanzierungen modellieren möchten. Die Backend-Logik verwendet IEEE-754-Gleitkommaberechnungen für maximale numerische Stabilität und verarbeitet Eingaben in Echtzeit durch WebAssembly-basierte Algorithmen.",
   "usage_steps": [
-    "Kreditrechner-Tool-Seite öffnen",
-    "Inhalt zum Verarbeiten in das Eingabefeld eingeben oder einfügen",
-    "Tool-Optionen und Einstellungen nach Bedarf anpassen",
-    "Auf die Verarbeitungsschaltfläche klicken, um Ergebnisse anzuzeigen",
-    "Verarbeitete Ergebnisse kopieren oder herunterladen"
+    "Geben Sie den Kreditbetrag (in EUR) in das Feld 'Darlehenssumme' ein.",
+    "Legen Sie den jährlichen Zinssatz (Nominalzins) in Prozent sowie die Verzinsungsfrequenz (täglich/monatlich/jährlich) fest.",
+    "Wählen Sie die Laufzeit in Jahren oder Monaten über den Schieberegler.",
+    "Aktivieren Sie die Checkbox 'Effektivzins berechnen' für transparente Gesamtkostenanalyse.",
+    "Wählen Sie die Tilgungsart (linear/annuitätisch) und Zahlungshäufigkeit (monatlich/vierteljährlich).",
+    "Klicken Sie auf 'Amortisationsplan generieren', um die tabellarische Übersicht zu erstellen."
   ],
   "usage_examples": [
-    "Kreditrechner verwenden, um Ihre Daten zu verarbeiten",
-    "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten"
+    "Ein Privatnutzer vergleicht zwei Autokredite: 24.000€ zu 5,2% über 48 Monate vs. 22.500€ zu 6,8% über 36 Monate mit unterschiedlichen Bearbeitungsgebühren.",
+    "Eine Familie analysiert die Zinsbindungsoptionen für eine 300.000€-Immobilienfinanzierung mit 2% Sollzins und 15-jähriger Laufzeit.",
+    "Ein Startup-Gründer modelliert einen 150.000€-Förderkredit mit zinsfreier Anlaufphase und nachschüssigen Tilgungen über 7 Jahre.",
+    "Ein Student berechnet die monatlichen Raten eines 12.000€-Bildungskredits mit 4,5% Effektivzins und 24-monatiger Laufzeit inklusive 3% Disagio."
   ]
 }

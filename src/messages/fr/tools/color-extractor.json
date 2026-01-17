@@ -1,14 +1,17 @@
 {
-  "detailed_description": "L'Extracteur de Couleurs est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez l'Extracteur de Couleurs pour traiter facilement diverses données sans installer de logiciel ou de plugin. Cet outil possède une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, l'Extracteur de Couleurs peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant tout téléchargement sur un serveur. Utilisez l'Extracteur de Couleurs immédiatement pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil Color Extractor est une application en ligne conçue pour extraire les couleurs dominantes et les palettes de couleurs à partir d'images. En utilisant des algorithmes de traitement d'images avancés, il analyse l'image pour identifier les couleurs les plus fréquentes et les plus importantes. Le résultat est une palette de couleurs qui peut être utilisée pour diverses applications, telles que le design web, la création graphique, et l'analyse de la couleur dans le domaine de la mode. Les utilisateurs peuvent non seulement obtenir une liste des couleurs, mais aussi des valeurs hexadécimales, des codes RGB, et la possibilité de télécharger la palette au format CSV ou PNG. Ce tool est particulièrement utile pour les designers qui cherchent à s'inspirer de couleurs existantes, ou pour les développeurs qui ont besoin de couleurs précises pour leurs projets. Il fonctionne en envoyant l'image à un serveur, où l'algorithme de segmentation de couleurs est appliqué, puis en renvoyant les résultats au navigateur de l'utilisateur.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Extracteur de Couleurs",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Téléchargez l'image que vous souhaitez analyser en cliquant sur le bouton 'Charger une image' ou en faisant glisser et déposer l'image dans la zone désignée.",
+    "Une fois l'image chargée, l'outil affiche un aperçu de l'image à gauche et une zone de résultats à droite.",
+    "Cliquez sur 'Analyser les couleurs' pour lancer le processus d'extraction des couleurs dominantes.",
+    "L'outil affiche la palette de couleurs dominant, avec chaque couleur représentée par un carré et les valeurs hexadécimales, RGB, et HSL sous chaque carré.",
+    "Vous pouvez sélectionner une couleur spécifique en cliquant sur le carré correspondant pour afficher des informations supplémentaires, telles que la luminosité et la saturation.",
+    "Pour télécharger la palette de couleurs, cliquez sur le bouton 'Télécharger la palette' et choisissez le format de fichier souhaité (CSV ou PNG)."
   ],
   "usage_examples": [
-    "Utilisez l'Extracteur de Couleurs pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un designer web utilise Color Extractor pour extraire la palette de couleurs d'une image de référence afin d'aligner la conception de son site avec l'esthétique souhaitée.",
+    "Un graphiste travaille sur un projet de logo et veut s'assurer que les couleurs choisies sont cohérentes avec celles d'une image de marque spécifique.",
+    "Un photographe utilise l'outil pour identifier les couleurs dominantes dans une série de photos pour créer un thème visuel cohérent dans une exposition.",
+    "Une marque de mode utilise Color Extractor pour analyser les couleurs des vêtements les plus populaires sur les réseaux sociaux, afin d'influencer sa prochaine collection."
   ]
 }

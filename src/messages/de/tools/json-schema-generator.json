@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der JSON Schema Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem JSON Schema Generator können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, der JSON Schema Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu verbessern. Alle Bearbeitungen erfolgen lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und verhindert, dass Ihre Daten auf irgendeinen Server hochgeladen werden. Nutzen Sie den JSON Schema Generator sofort, um schnelle, sichere und kostenlose Online-Tools zu erleben.",
+  "detailed_description": "Der JSON Schema Generator analysiert strukturierte JSON-Beispieldaten und erstellt daraus automatisch ein vollständig valides JSON-Schema gemäß den Spezifikationen Draft-07 und Draft-2020-12. Das Tool verwendet Algorithmen zur Mustererkennung, um Datentypen (string, number, boolean), verschachtelte Objekte, Arrays und optionale Felder zu identifizieren. Dabei werden auch fortgeschrittene Konzepte wie format-Schlüsselwörter (z.B. 'date-time', 'uri'), Enumerationswerte und Referenzstrukturen (mit $ref) abgeleitet. Entwickler benötigen dieses Werkzeug, um beispielsweise API-Schnittstellen zu dokumentieren, Datenvalidierungslogik zu automatisieren oder inkonsistente Datenformate in Mikroservices zu harmonisieren. Die automatische Schemagenerierung reduziert manuellen Aufwand und minimiert Fehlerquellen durch präzise Typinferenz. Technisch erfolgt die Verarbeitung durch eine mehrstufige Analyse: Zuerst wird das JSON-Dokument geparst, anschließend werden Typstatistiken für jedes Feld aggregiert, gefolgt von der Anwendung von Schema-Regeln basierend auf der gewählten Draft-Version.",
   "usage_steps": [
-    "Öffnen Sie die Seite des JSON Schema Generator-Tools",
-    "Geben Sie den Inhalt ein oder fügen Sie ihn in das Eingabefeld ein, den Sie verarbeiten möchten",
-    "Passen Sie die Tool-Optionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Schaltfläche 'Verarbeiten', um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Einfügen von mindestens einem gültigen JSON-Objekt in den Eingabebereich 'JSON-Beispieldaten'",
+    "Auswahl der Ziel-Schema-Version (Draft-07 oder Draft-2020-12) über das Options-Dropdown",
+    "Aktivieren der 'Format-Erkennung' für automatische format-Spezifikationen wie 'email' oder 'ipv4'",
+    "Konfigurieren der 'Nullable-Felderkennung' zur Markierung optionaler Eigenschaften",
+    "Klicken auf 'Schema generieren' zur sofortigen Erstellung des JSON-Schemas",
+    "Kopieren oder Herunterladen des Ergebnisses im validierten Schema-Format"
   ],
   "usage_examples": [
-    "Verwenden Sie den JSON Schema Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell Bearbeitungsergebnisse ohne zu warten"
+    "Ein Backend-Entwickler generiert ein Schema für eine neue REST-API, um Anforderungen an Client-Daten zu dokumentieren.",
+    "Ein Data Engineer validiert mit dem Schema die Konsistenz von JSON-Daten vor der Migration in ein Data Warehouse.",
+    "Ein Frontend-Team erstellt Typdefinitionen für TypeScript aus Backend-API-Beispieldaten.",
+    "Ein QA-Tester definiert automatisierte Tests durch Schema-Vergleich zwischen verschiedenen API-Versionen."
   ]
 }

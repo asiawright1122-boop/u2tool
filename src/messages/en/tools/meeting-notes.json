@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Meeting Notes is a practical online tool that helps you quickly complete various tasks. Using Meeting Notes, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Meeting Notes can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Meeting Notes immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "Meeting Notes is a sophisticated web application designed to streamline the creation and management of structured meeting notes. It integrates a suite of features that allow users to input and organize key meeting details, including attendee lists, detailed agendas, and actionable follow-up items. Technically, the tool employs a client-server architecture, where the front-end interface is built using modern web technologies such as React.js, and the back-end leverages Node.js and MongoDB for data storage and retrieval. The application's core functionality is centered around a robust form builder that dynamically adjusts based on user input, ensuring that all meeting notes are comprehensive and consistent. Users can benefit from this tool in various scenarios, such as project management meetings, client consultations, and internal team syncs, where clear and organized documentation is crucial for effective communication and follow-up. By centralizing meeting information, Meeting Notes enhances productivity and ensures that all participants are aligned and accountable.",
   "usage_steps": [
-    "Open the Meeting Notes tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Step 1: Navigate to the Meeting Notes homepage and click on the 'Create New Meeting' button to start a new note.",
+    "Step 2: In the 'Attendees' section, enter the names and email addresses of all participants. You can also add a role or title for each attendee.",
+    "Step 3: Move to the 'Agenda' section and use the rich text editor to outline the topics to be discussed. You can format text, add bullet points, and insert links as needed.",
+    "Step 4: After the meeting, switch to the 'Action Items' tab and input any tasks that need to be completed. Assign each action item to a specific attendee and set a due date.",
+    "Step 5: Review the entire note to ensure all details are accurate and complete. Use the 'Preview' button to see how the final document will look.",
+    "Step 6: Once satisfied, click the 'Save' button to store the meeting notes in your account. You can also use the 'Export' option to download the notes in PDF or DOCX format for sharing."
   ],
   "usage_examples": [
-    "Use Meeting Notes to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: During a project kickoff meeting, the project manager uses Meeting Notes to document the initial meeting with the client. They list all attendees, outline the project scope, and assign action items for the next steps.",
+    "Example 2: A marketing team holds a weekly strategy meeting to discuss upcoming campaigns. The team lead uses Meeting Notes to record the discussion points, assign tasks to team members, and track progress over subsequent meetings.",
+    "Example 3: A software development team conducts a sprint planning session. The Scrum Master uses Meeting Notes to capture the sprint goals, user stories, and any technical dependencies. Action items are assigned to developers for implementation.",
+    "Example 4: A sales manager meets with a new client to gather requirements for a custom solution. They use Meeting Notes to document the client's needs, action items for the sales team, and follow-up dates for additional meetings."
   ]
 }

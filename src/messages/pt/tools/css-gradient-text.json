@@ -1,14 +1,17 @@
 {
-  "detailed_description": "CSS Gradient Text é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com o CSS Gradient Text, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, o CSS Gradient Text pode ajudar a melhorar a eficiência do seu trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam enviados a qualquer servidor. Use o CSS Gradient Text imediatamente para experimentar serviços de ferramentas online gratuitas, rápidas e seguras.",
+  "detailed_description": "O CSS Gradient Text é uma ferramenta avançada que permite aos desenvolvedores criar efeitos de texto com gradientes de cores utilizando puramente CSS. Essa ferramenta automatiza o processo de geração de código CSS necessário para aplicar gradientes de cores ao texto, proporcionando resultados visuais atraentes e modernos. A necessidade de tais efeitos é evidente em projetos de design de interface, onde a personalização e a estética desempenham um papel crucial. Por exemplo, sites de moda e portfolios de designers podem se beneficiar enormemente do uso de textos com gradientes para destacar títulos, cabeçalhos e chamadas de ação. O processo de utilização da ferramenta envolve a seleção de cores, a definição da direção do gradiente e a aplicação de estilos adicionais, como sombras e bordas. O código gerado é compatível com os principais navegadores, tornando-o uma solução versátil e confiável. Além disso, a ferramenta fornece a opção de baixar o código gerado, facilitando a integração em projetos existentes.",
   "usage_steps": [
-    "Abra a página do CSS Gradient Text",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Selecione a aba 'Gradient Type' e escolha entre 'Linear', 'Radial' ou 'Conic' para definir o tipo de gradiente desejado.",
+    "Na seção 'Colors', adicione até quatro cores para o gradiente, ajustando as posições percentuais conforme necessário.",
+    "Ajuste a direção do gradiente utilizando o controle deslizante 'Angle' para gradientes lineares ou 'Position' para gradientes radiais e cônico.",
+    "Na aba 'Text', insira o texto que deseja aplicar o gradiente e escolha a família de fontes e o tamanho.",
+    "Se necessário, adicione efeitos visuais extras, como sombras (Shadow) e bordas (Border), na aba 'Effects'.",
+    "Depois de configurar todos os parâmetros, clique em 'Generate CSS' para obter o código CSS gerado, que pode ser copiado e colado em seu projeto."
   ],
   "usage_examples": [
-    "Use o CSS Gradient Text para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem aguardar"
+    "Um designer de moda pode utilizar o CSS Gradient Text para criar títulos em cores vibrantes e gradientes suaves, destacando as coleções mais recentes em seu site.",
+    "Um desenvolvedor de aplicativos pode aplicar gradientes de cores em botões de chamada de ação, melhorando a experiência do usuário e a estética geral do aplicativo.",
+    "Um site de notícias pode usar gradientes em seus cabeçalhos para criar uma aparência moderna e profissional, atraindo mais leitores.",
+    "Um portfolio de um designer gráfico pode se beneficiar de textos com gradientes para destacar projetos e habilidades, proporcionando uma apresentação visual mais impactante."
   ]
 }

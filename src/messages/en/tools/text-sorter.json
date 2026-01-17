@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text Sorter is a practical online tool that helps you quickly complete various tasks. Using Text Sorter, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Text Sorter can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Text Sorter immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Text Sorter tool provides granular control over text line organization through three primary sorting algorithms: lexicographical (alphabetical), numerical, and length-based. Technically, it processes input using JavaScript-based sorting functions that leverage Unicode code point comparisons for alphabetical sorting, natural sort parsing for numeric values, and character count metrics for length sorting. Users can specify ascending/descending order, case sensitivity (distinguishing ASCII uppercase/lowercase), and numerical handling (treating digits as integers or floats). This tool addresses critical use cases like standardizing log file entries, organizing dictionary wordlists, preparing CSV headers for schema validation, and normalizing API response samples. It employs a stable sorting mechanism that maintains relative order for equal elements, crucial for multi-key sorting scenarios. Input text undergoes regex-based line splitting (\r\n|\n|\r) and whitespace trimming before processing, ensuring compatibility with various OS-generated files. Results display in a syntax-highlighted output panel with optional line numbering for traceability.",
   "usage_steps": [
-    "Open the Text Sorter tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Paste raw text into the input textarea or upload a .txt/.csv file using the file selector button",
+    "Select sorting mode using the radio buttons: 'Alphabetical', 'Numerical', or 'Length'",
+    "Choose sort direction via the dropdown: 'Ascending' or 'Descending'",
+    "Activate 'Case-sensitive' checkbox to prioritize uppercase letters in alphabetical sorts",
+    "Enable 'Natural Sort' option to correctly order numeric values within strings (e.g., 'item2' before 'item10')",
+    "Click 'Sort Lines' to execute and view results in the output panel with line numbers displayed"
   ],
   "usage_examples": [
-    "Use Text Sorter to process your data",
-    "Get processing results quickly without waiting"
+    "Standardizing server log entries by timestamp: Sorting mixed-format logs (e.g., 'ERROR 10:00am', 'INFO 9:00am') chronologically using numerical extraction",
+    "Optimizing dictionary compilation: Alphabetizing vocabulary lists while preserving case-specific entries like 'Apple' vs 'apple'",
+    "Preparing CSV headers: Arranging column names by character length to identify potential schema inconsistencies",
+    "Analyzing command output: Sorting Linux 'ps' process listings by memory usage percentage after extracting relevant columns"
   ]
 }

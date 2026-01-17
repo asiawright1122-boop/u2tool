@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Código QR é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Utilizando o Gerador de Código QR, você pode processar vários dados sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Código QR pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviados para nenhum servidor. Use o Gerador de Código QR imediatamente para experimentar serviços rápidos, seguros e gratuitos online.",
+  "detailed_description": "O Gerador de QR Code converte dados textuais ou URLs em códigos bidimensionais no formato PNG, utilizando algoritmos de codificação Reed-Solomon para garantir tolerância a erros. Internamente, o texto ou link é transformado em uma sequência binária, segmentada em módulos (pixels) que formam uma matriz com padrões geométricos específicos. O usuário pode ajustar parâmetros como nível de correção de erro (L, M, Q ou H), dimensão da imagem (até 1000x1000 pixels) e paleta de cores personalizada, incluindo transparência. Profissionais de marketing usam essa ferramenta para campanhas offline-to-online, enquanto desenvolvedores a integram em sistemas para autenticação de dispositivos IoT. A renderização em tempo real permite visualizar a estrutura do código antes do download, assegurando compatibilidade com leitores padrão como ZXing ou Google Lens.",
   "usage_steps": [
-    "Abra a página do Gerador de Código QR",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta através da seção 'Ferramentas de Imagem' no site.",
+    "Preencha o campo 'Conteúdo do QR Code' com o texto ou URL desejado.",
+    "Ajuste configurações avançadas no painel lateral: selecione o nível de correção de erro (ex: 'M' para 15% de redundância) e defina dimensões em pixels.",
+    "Personalize a aparência usando a paleta de cores para módulos e fundo, incluindo opções de transparência.",
+    "Visualize a prévia interativa e escaneie o código gerado com o leitor integrado para validar funcionalidade.",
+    "Clique em 'Baixar como PNG' para salvar o arquivo otimizado com metadados limpos."
   ],
   "usage_examples": [
-    "Use o Gerador de Código QR para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um organizador de eventos imprime QR Codes em ingressos físicos, vinculando a uma lista de presença digital.",
+    "Um engenheiro de automação residencial gera códigos para configurar dispositivos smart home via aplicativo.",
+    "Um professor inclui QR Codes em apostilas para acesso direto a vídeos explicativos hospedados em um repositório institucional.",
+    "Um logístico implementa QR Codes em etiquetas de inventário, integrando com um sistema de gestão para rastreamento em tempo real."
   ]
 }

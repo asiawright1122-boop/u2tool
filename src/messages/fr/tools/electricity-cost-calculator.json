@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Le calculateur estime combien coûtent vos appareils.",
+  "detailed_description": "Le Calculateur de Coût Électrique permet de quantifier précisément les dépenses énergétiques de vos appareils électriques en se basant sur trois paramètres techniques : la puissance nominale (en watts), le temps d'utilisation quotidien (en heures), et le tarif électrique local (en euros/kWh). Conçu pour les professionnels et les particuliers exigeants, cet outil intègre des fonctionnalités avancées comme la prise en compte des variations tarifaires horaires (heures pleines/heures creuses) et la conversion automatique des unités. Il est particulièrement utile pour diagnostiquer les appareils énergivores, optimiser un budget électrique, ou comparer l'efficacité énergétique de différents modèles. Son algorithme calcule d'abord la consommation quotidienne en kWh (puissance × durée ÷ 1000), puis applique les coefficients tarifaires variables selon les plages horaires sélectionnées, avant d'extrapoler les résultats à l'échelle mensuelle ou annuelle. La base de données interne référence des appareils standardisés (ex : réfrigérateur classe A++, climatiseur mobile 12 000 BTU) pour simplifier l'input utilisateur.",
   "usage_steps": [
-    "Entrez la puissance",
-    "Définissez les heures",
-    "Entrez le tarif",
-    "Voir la répartition",
-    "Comparer les coûts"
+    "Sélectionnez un appareil dans la base de données prédéfinie ou choisissez 'Personnaliser' pour entrer manuellement la puissance en watts.",
+    "Spécifiez la durée quotidienne d'utilisation en heures et minutes (ex : 8h30).",
+    "Sélectionnez votre fournisseur d'électricité et la zone géographique pour importer les tarifs kWh exacts.",
+    "Activez l'option 'Heures creuses' si applicable, et définissez les plages horaires de consommation.",
+    "Cliquez sur 'Calculer' pour obtenir la consommation quotidienne, mensuelle et annuelle en kWh et en euros.",
+    "Utilisez le bouton 'Exporter' pour générer un rapport PDF comparatif avec d'autres scénarios."
   ],
   "usage_examples": [
-    "Calculer les coûts de climatisation",
-    "Estimer l'utilisation de l'ordinateur",
-    "Comparer l'efficacité"
+    "Comparer la consommation annuelle d'un ancien réfrigérateur (300W, 24h/24) avec un modèle récent (150W, 24h/24) pour évaluer le retour sur investissement d'un remplacement.",
+    "Calculer le coût supplémentaire d'une climatisation mobile (1 500W) utilisée 6h/jour pendant l'été, en tenant compte des heures pleines tarifaires.",
+    "Évaluer l'impact d'un ordinateur de bureau (500W) laissé en veille 20h/jour sur la facture mensuelle.",
+    "Déterminer l'économie potentielle d'une machine à laver programmée en heures creuses (2 000W, 2h30 à 0,12€/kWh vs 0,20€/kWh)."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculadora de Salario es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Calculadora de Salario, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Calculadora de Salario puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Calculadora de Salario inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El calculador de salarios es una herramienta técnica diseñada para realizar conversiones precisas entre distintas unidades de remuneración (hora, día, semana, mes y año). Su funcionamiento se basa en algoritmos de prorrateo que consideran variables como jornadas laborales completas o parciales, días laborables efectivos y deducciones predefinidas (opcional). Internamente, aplica fórmulas matemáticas normalizadas para convertir montos brutos o netos entre unidades temporales, incluyendo ajustes por horas extras o bonificaciones variables si se especifican. Es esencial para profesionales freelance que necesitan cuantificar ingresos anuales a partir de tarifas horarias, reclutadores que construyen paquetes salariales con desgloses semanales, o empleados a tiempo parcial que comparan ofertas basadas en días trabajados. La herramienta permite personalizar parámetros como semanas laborales por mes (4.33, 4.2, etc.) y porcentajes de retención fiscal, logrando resultados con precisión contable.",
   "usage_steps": [
-    "Abre la página de la herramienta Calculadora de Salario",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona la unidad temporal base (horas, días, semanas, meses o año) desde el menú desplegable principal",
+    "Introduce el monto salarial en el campo numérico correspondiente",
+    "Activa la opción 'Incluir deducciones' si deseas aplicar porcentajes de seguridad social o impuestos",
+    "Configura parámetros avanzados como horas semanales estándar (ej: 40h) o días laborables mensuales personalizados",
+    "Presiona el botón 'Calcular equivalencias' para ejecutar el conversor",
+    "Revisa las conversiones resultantes en las secciones desplegables por unidad temporal"
   ],
   "usage_examples": [
-    "Usa Calculadora de Salario para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador freelance en Argentina convierte $25 USD/hora a ingresos anuales considerando 1,600 horas anuales facturables",
+    "Un reclutador en México transforma un salario mensual bruto de $20,000 MXN a equivalente semanal para comparar con el SMI local",
+    "Un analista de recursos humanos en Colombia ajusta un salario anual de $45,000,000 COP a diario considerando 23.83 días laborables mensuales",
+    "Un ingeniero español calcula su equivalencia horaria neta desde un salario mensual de €2,500 aplicando el 19% de retención IRPF"
   ]
 }

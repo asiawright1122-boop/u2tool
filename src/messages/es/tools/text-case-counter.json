@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Contador de Mayúsculas y Minúsculas es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Utilizando el Contador de Mayúsculas y Minúsculas, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Contador de Mayúsculas y Minúsculas puede ayudarte a mejorar la eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza el Contador de Mayúsculas y Minúsculas inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Contador de Tipos de Caracteres es una herramienta especializada en análisis léxico y procesamiento de cadenas de texto basado en estándares Unicode. Técnicamente, el software descompone cada carácter de entrada en categorías definidas por el estándar Unicode, identificando específicamente mayúsculas (Lu), minúsculas (Ll), dígitos (Nd), símbolos (S), puntuación (P), espacios (Zs) y otros caracteres especiales. Esta herramienta es fundamental para desarrolladores que requieren verificar la complejidad de contraseñas, analizar patrones de escritura en procesamiento de lenguaje natural (NLP), o validar la integridad de datos en ETLs. Al recibir texto en UTF-8, el motor interno itera sobre puntos de código Unicode (code points) en lugar de bytes o caracteres ASCII simples, garantizando precisión incluso con alfabetos complejos como cirílico, chino o emojis. Los resultados incluyen contadores absolutos, porcentajes relativos por categoría, y una evaluación de la distribución de casos para detectar patrones no convencionales.",
   "usage_steps": [
-    "Abre la página del Contador de Mayúsculas y Minúsculas",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al interfaz web y localiza el área de texto enriquecido etiquetada 'Entrada de Análisis'.",
+    "Introduce texto manualmente, pega contenido desde el portapapeles, o carga un archivo .txt/.csv usando el botón 'Importar Archivo'.",
+    "Activa/desactiva las opciones de procesamiento avanzado: normalización Unicode (NFKC/NFKD), ignorar espacios, o filtrar caracteres invisibles.",
+    "Haz clic en 'Iniciar Análisis de Casos' para ejecutar el motor de clasificación basado en propiedades Unicode Character Database.",
+    "Revisa los paneles de resultados: el primer panel muestra contadores por categoría (Mayúsculas: X, Minúsculas: Y), el segundo ofrece un gráfico de distribución porcentual.",
+    "Exporta los datos estructurados en formato JSON o CSV usando los botones de exportación, incluyendo metadatos como longitud total y ratio de mayúsculas/minúsculas."
   ],
   "usage_examples": [
-    "Utiliza el Contador de Mayúsculas y Minúsculas para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador de seguridad informática analiza 10,000 contraseñas para verificar cumplimiento de políticas que exigen combinación de mayúsculas/minúsculas y dígitos.",
+    "Un lingüista computacional estudia la proporción de mayúsculas en títulos de artículos científicos para entrenar modelos de generación automática de resúmenes.",
+    "Un ingeniero de datos valida la consistencia de registros en un dataset de clientes, detectando anomalías como nombres completamente en mayúsculas o sin capitalización adecuada.",
+    "Un diseñador de interfaces evalúa la distribución de casos en mensajes de soporte para optimizar algoritmos de detección automática de gritos (shouting detection) en chatbots."
   ]
 }

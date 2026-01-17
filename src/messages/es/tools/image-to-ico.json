@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Imagen a ICO es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Imagen a ICO, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Imagen a ICO puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Imagen a ICO inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El conversor de imágenes a formato ICO es una solución técnica especializada para generar archivos de icono compatibles con múltiples resoluciones. El formato ICO, utilizado principalmente en sistemas Windows y favicons de sitios web, permite almacenar varias imágenes en diferentes tamaños y profundidades de color (como 16x16, 32x32, 48x48, 256x256 píxeles) dentro de un único contenedor. Esta herramienta aplica algoritmos de remuestreo como interpolación bicúbica o Lanczos para escalar las imágenes manteniendo la claridad, especialmente en versiones reducidas. Además, conserva canales alfa (transparencia) cuando la imagen original los incluye, lo cual es crítico para diseños modernos. Los usuarios lo necesitan para crear iconos de aplicaciones que se adapten a múltiples dispositivos y densidades de pantalla, garantizando consistencia visual en entornos Windows, Electron apps o sitios web. El proceso interno incluye la descomposición de la imagen original en cuadros individuales escalados, optimización de compresión para cada tamaño y empaquetado en el contenedor ICO según la especificación BITMAPINFOHEADER.",
   "usage_steps": [
-    "Abre la página de la herramienta Imagen a ICO",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Carga tu imagen en formato PNG, JPEG o BMP desde el botón 'Seleccionar archivo'.",
+    "2. Elige las resoluciones deseadas en la sección 'Tamaños de salida' (ej: 16x16, 32x32, 256x256).",
+    "3. Ajusta el método de escalado en el menú desplegable 'Interpolación' (opciones: bicúbica, Lanczos, nearest neighbor).",
+    "4. Activa la opción 'Mantener transparencia' si la imagen contiene canal alfa.",
+    "5. Previsualiza los iconos generados en la sección 'Resultados por tamaño'.",
+    "6. Descarga el archivo ICO consolidado con un clic en el botón 'Generar y descargar'."
   ],
   "usage_examples": [
-    "Usa Imagen a ICO para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "1. Crear un favicon para un sitio web que incluya soporte para dispositivos retina y pantallas 4K.",
+    "2. Generar iconos para una aplicación Windows que requiera compatibilidad con versiones desde XP hasta Windows 11.",
+    "3. Convertir una imagen vectorial exportada como PNG a ICO preservando transparencia para un launcher de software.",
+    "4. Adaptar un diseño de logo a los requisitos técnicos de icono de una aplicación Electron multiplataforma."
   ]
 }

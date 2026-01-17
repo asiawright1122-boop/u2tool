@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Facturas es una herramienta online práctica que te ayuda a completar rápidamente diversas tareas. Con el Generador de Facturas, puedes procesar datos de manera sencilla sin instalar ningún software o complemento. Esta herramienta posee una interfaz simple y de fácil uso, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Facturas puede ayudarte a mejorar la eficiencia en tu trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando su carga en cualquier servidor. Usa el Generador de Facturas ahora para experimentar servicios de herramientas online rápidos, seguros y gratuitos.",
+  "detailed_description": "El Generador de Facturas es una herramienta web basada en tecnologías HTML5, CSS3 y JavaScript que permite crear documentos profesionales mediante un motor de renderizado basado en plantillas JSON. Utiliza un sistema de edición WYSIWYG con soporte para elementos dinámicos como cálculos automáticos de impuestos (IVA, IRPF), campos condicionales y generación multimoneda. La exportación a PDF se realiza mediante bibliotecas de código abierto como jsPDF, integrando fuentes embebidas para garantizar la consistencia tipográfica. Los datos se procesan localmente en el navegador mediante almacenamiento en localStorage, asegurando privacidad y cumplimiento con regulaciones de protección de datos. Su arquitectura modular permite personalizar estilos CSS, integrar logos vectoriales (SVG) y definir campos de metadatos XMP para facturación electrónica. Es especialmente útil para freelancers que necesitan automatizar cálculos complejos, pequeñas empresas que requieren integración con sistemas de contabilidad, y profesionales que deben generar documentos con marca blanca para múltiples clientes.",
   "usage_steps": [
-    "Abre la página del Generador de Facturas",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de proceso para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona una plantilla predefinida desde la galería de diseños responsive o carga una plantilla personalizada en formato JSON",
+    "Configura parámetros fiscales en el panel de edición: establece porcentajes de impuestos, moneda base y reglas de redondeo",
+    "Agrega artículos mediante la tabla interactiva con soporte para cálculo de subtotal por cantidad y precio unitario",
+    "Personaliza campos condicionales: define reglas para mostrar/ocultar secciones según criterios como ubicación geográfica o tipo de cliente",
+    "Previsualiza el documento en el visor PDF integrado, que simula la impresión con márgenes reales y rotación de páginas",
+    "Exporta el documento con opciones avanzadas: compresión de imágenes, encriptación AES-256 o generación de enlaces de descarga temporal"
   ],
   "usage_examples": [
-    "Usa el Generador de Facturas para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador freelance genera facturas en USD y EUR con conversión automática de divisas y cálculo de retenciones internacionales",
+    "Una empresa de catering crea plantillas con campos variables para servicios adicionales (propinas, alquiler de menaje) que se calculan en tiempo real",
+    "Un consultor técnico incluye diagramas SVG personalizados en las facturas para proyectos de infraestructura",
+    "Una academia en línea automatiza facturas recurrentes con fechas de vencimiento dinámicas basadas en el ciclo de facturación mensual"
   ]
 }

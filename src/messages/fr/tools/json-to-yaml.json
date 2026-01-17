@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le JSON to YAML est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec JSON to YAML, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plug-ins. Cette outil a une interface simple et est facile à utiliser, ce qui vous permet de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, JSON to YAML peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont réalisés localement dans votre navigateur, assurant ainsi la sécurité de vos données et empêchant leur upload vers n'importe quel serveur. Utilisez immédiatement JSON to YAML pour expérimenter des services de outils en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "L'outil JSON vers YAML permet de transformer des données structurées au format JSON (JavaScript Object Notation) en YAML (YAML Ain't Markup Language), un format lisible par les humains utilisé pour les fichiers de configuration et les échanges de données. Ce convertisseur effectue une analyse syntaxique (parsing) du JSON d'entrée, identifie les types de données (chaînes, nombres, tableaux, objets) et les mappe vers la syntaxe YAML équivalente, en respectant les règles d'indentation et les caractéristiques spécifiques de YAML comme les ancres (anchors) et les références. Contrairement aux outils basiques, il gère les cas complexes tels que les tableaux imbriqués, les caractères Unicode, et les nombres en notation scientifique. La conversion prévoit également une validation de la structure YAML générée pour éviter les erreurs de syntaxe dues à l'indentation sensible. Ce type d'outil est essentiel pour les développeurs souhaitant migrer des configurations de systèmes utilisant JSON vers des environnements comme Kubernetes ou Ansible qui privilégient YAML, ou pour simplifier la lecture humaine de données hiérarchiques grâce à la structure claire de YAML.",
   "usage_steps": [
-    "Ouvrez la page du convertisseur JSON vers YAML",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Collez votre JSON dans la zone de texte principale, ou téléchargez un fichier via le bouton 'Importer JSON'.",
+    "Ajustez l'indentation souhaitée (2, 4 ou 8 espaces) via le sélecteur 'Profondeur d'indentation'.",
+    "Activez l'option 'Préserver les guillemets' si vos clés YAML doivent inclure des caractères spéciaux.",
+    "Choisissez le style d'affichage des tableaux : 'Blocs' pour une présentation verticale ou 'En ligne' pour les courts tableaux.",
+    "Cliquez sur le bouton 'Convertir' pour déclencher l'analyse et la génération du YAML.",
+    "Consultez le résultat dans la zone de sortie et téléchargez-le au format .yaml via le bouton 'Exporter' ou copiez-le via 'Copier dans le presse-papiers'."
   ],
   "usage_examples": [
-    "Utilisez JSON to YAML pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Transformer une réponse API JSON en fichier de configuration YAML pour un déploiement Kubernetes.",
+    "Migrer un fichier de logs au format JSON vers YAML pour une meilleure intégration avec un outil de monitoring utilisant des configurations YAML.",
+    "Convertir un fichier de traductions JSON en YAML pour un projet Ruby on Rails, qui privilégie ce format pour les fichiers i18n.",
+    "Générer un playbook Ansible à partir d'un modèle JSON structuré, en profitant de l'indentation YAML pour représenter les hiérarchies de serveurs."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to SQL is a practical online tool that helps you quickly complete various tasks. Using JSON to SQL, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON to SQL can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON to SQL immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "Transform structured JSON arrays into fully relational SQL schemas with automatic data type mapping and normalization. This tool parses JSON structures to infer column definitions, generating DDL statements for table creation alongside corresponding INSERT operations. The conversion process maintains referential integrity by normalizing nested objects into separate tables with foreign key relationships. Users gain precise control over schema generation through customizable type mapping (e.g., string→VARCHAR(255), number→DECIMAL), null constraint enforcement, and index creation options. The engine handles edge cases like array-of-objects recursion, special character escaping, and timestamp format conversion. Developers migrating NoSQL data to relational databases, ETL pipeline builders, and API maintainers will find value in its ability to produce transactionally consistent SQL batches with configurable batch size and transaction control. The tool preserves data fidelity through strict JSON schema validation prior to conversion, ensuring type consistency across generated SQL statements.",
   "usage_steps": [
-    "Open the JSON to SQL tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Upload JSON file containing homogeneous array structures via the 'Input Data' section",
+    "Click 'Preview Schema' to view automatically inferred column definitions and data types",
+    "Adjust type mappings in the 'Data Type Configuration' grid using dropdown selectors",
+    "Enable 'Create Table' toggle and specify primary key column in the 'Table Options' panel",
+    "Configure output settings: batch size, transaction wrapping, and identifier quoting",
+    "Click 'Generate SQL' to produce conversion results displayed in the syntax-highlighted output pane"
   ],
   "usage_examples": [
-    "Use JSON to SQL to process your data",
-    "Get processing results quickly without waiting"
+    "Migrating MongoDB collections to PostgreSQL by converting document arrays into relational tables with proper normalization",
+    "Generating test data for QA environments from API response samples with complex nested structures",
+    "Creating database seed files for mobile app backends using sample JSON payloads from device sensors",
+    "Transforming IoT telemetry data streams into time-series SQL tables with automatic timestamp conversion"
   ]
 }

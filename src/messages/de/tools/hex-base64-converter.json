@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Hex Base64 Konverter ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Hex Base64 Konverter können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, Hex Base64 Konverter kann Ihnen dabei helfen, die Arbeitsproduktivität zu verbessern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was die Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinen Server hochgeladen werden. Nutzen Sie den Hex Base64 Konverter sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Hex Base64 Converter ist ein präzises Werkzeug für die bidirektionale Umwandlung von Daten zwischen Hexadezimalnotation (Base16) und Base64-Encoding. Technisch gesehen interpretiert das Tool Hex-Zeichenfolgen als 8-Bit-Byte-Blöcke und führt eine 4/3-Bit-Umrechnung für Base64 durch, einschließlich der korrekten Anwendung von RFC 4648-konformem Padding mit '='-Zeichen. Entwickler benötigen dieses Tool, um beispielsweise binäre Daten wie kryptografische Hashes (z.B. SHA-256) in kompakte Textdarstellungen für API-Anfragen zu konvertieren oder umgekehrt Base64-kodierte Binärdaten aus Protokollen wie JWT-Token oder MIME-Inhalten in hexadezimale Werte für Debugging zu transformieren. Das Tool verarbeitet Eingaben durch Zeichenweises Parsing, validiert Hex-Zeichen (0-9, A-F, a-f) und entfernt automatisch nicht-konforme Zeichen. Bei Base64-Eingaben wird der Padding-Status analysiert, bevor die Decodierung in 6-Bit-Segmente erfolgt. Besonders bei der Arbeit mit Blockchain-Transaktionsdaten, Netzwerkprotokollen oder Low-Level-Systemintegrationen ist dieser Converter unverzichtbar, um Daten zwischen verschiedenen Encoding-Paradigmen zu synchronisieren.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Hex Base64 Konverter-Tools",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie bearbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Werkzeugoptionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "Navigieren Sie zur Tool-Seite 'hex-base64-converter' und lokalisieren Sie das Eingabeformular mit den Tabs 'Hex → Base64' und 'Base64 → Hex'.",
+    "Wählen Sie den gewünschten Konvertierungsmodus durch Klicken auf den entsprechenden Tab.",
+    "Geben Sie die Quelldaten ein: Für Hex-Eingaben verwenden Sie ausschließlich alphanumerische Zeichen ohne Leerzeichen; für Base64 sind Padding-Zeichen ('=') optional.",
+    "Klicken Sie auf die Schaltfläche 'Konvertieren' unter dem Eingabefeld, um den Transformationsprozess zu starten.",
+    "Nutzen Sie die 'Swap'-Funktion, um Eingabe- und Ausgabewerte automatisch zu tauschen und die Gegenrichtung zu berechnen.",
+    "Kopieren Sie das Ergebnis aus dem farblich markierten Ausgabefeld über den 'In Zwischenablage kopieren'-Button für weitere Nutzung."
   ],
   "usage_examples": [
-    "Verwenden Sie den Hex Base64 Konverter, um Ihre Daten zu bearbeiten",
-    "Erhalten Sie schnell Bearbeitungsergebnisse ohne zu warten"
+    "Konvertierung eines Ethereum-Transaktionshashs (z.B. '0x3f8d...') in Base64 für eine kompakte API-Payload.",
+    "Dekodierung eines Base64-kodierten TLS-Zertifikats-Fingerabdrucks zur Analyse im Hex-Editor.",
+    "Transformation von Binärdaten einer Bilddatei in Base64 für die Einbettung in eine SVG-XML-Datei.",
+    "Validierung von SHA-1-Hashes, die in unterschiedlichen Encoding-Formaten von verschiedenen Systemen ausgegeben werden."
   ]
 }

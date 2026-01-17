@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON-Diff ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON-Diff können Sie verschiedene Daten einfach verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann JSON-Diff Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie JSON-Diff sofort, um schnell, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der JSON Diff-Analyzer ist ein präzises Werkzeug zur strukturellen und semantischen Differenzierung von JSON-Daten. Technisch basiert der Vergleich auf einem zweistufigen Prozess: Zunächst werden beide JSON-Objekte durch einen Tokenizer in ein strukturiertes AST (Abstract Syntax Tree) überführt. Anschließend erfolgt eine rekursive Durchmusterung der Baumstrukturen, wobei atomare Werte (Strings, Zahlen), komplexe Typen (Arrays, verschachtelte Objekte) sowie Schlüsselreihenfolgen verglichen werden. Das Ergebnis wird in einem Diff-Report präsentiert, der feingranular zwischen fehlenden Schlüsseln, abweichenden Datentypen und strukturellen Diskrepanzen (z.B. Array-Reihenfolge, Schachtelungstiefe) unterscheidet. Entwickler benötigen dieses Tool, um beispielsweise inkonsistente API-Antworten zu validieren, Konfigurationsdateien in DevOps-Pipelines zu überwachen oder Dateninkonsistenzen zwischen Microservices zu identifizieren. Die Besonderheit liegt in der Unterstützung von JSON-Schema-Validierung während des Vergleichs, wodurch semantische Abweichungen im Kontext definierter Datenmodelle erkannt werden.",
   "usage_steps": [
-    "Öffnen Sie die Seite des JSON-Diff-Tools",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Einstellungen und Optionen, falls erforderlich, an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "1. Öffnen der JSON Diff-Benutzeroberfläche und Eingabe der ersten JSON-Instanz in das Feld 'JSON 1'.",
+    "2. Eintragen der zweiten JSON-Daten in das separate 'JSON 2'-Eingabefeld.",
+    "3. Aktivieren des Schalters 'Erweiterte Analyse' für detaillierte AST-Navigation im Ergebnis.",
+    "4. Klicken auf 'Vergleich starten' zur Initiierung des Differenzierungsprozesses.",
+    "5. Wechseln zum Tab 'Strukturvergleich' für visuelle Darstellung der AST-Abweichungen.",
+    "6. Exportieren des Ergebnisses als JSON-Diff-Report über den 'Exportieren'-Button für CI/CD-Integrationen."
   ],
   "usage_examples": [
-    "Verwenden Sie JSON-Diff, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Vergleich von API-Antworten vor und nach einem Backend-Release zur Identifizierung unerwarteter Feldänderungen.",
+    "Überprüfung von JSON-basierten Konfigurationsdateien (z.B. package.json) zwischen Git-Commits in CI-Pipelines.",
+    "Validierung der Datenintegrität bei der Migration von NoSQL-Datenbankdokumenten (z.B. MongoDB) zwischen Umgebungen.",
+    "Analyse von Logging-Ausgaben verteilter Systeme zur Fehlersuche bei inkonsistenten JSON-Logformaten."
   ]
 }

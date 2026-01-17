@@ -1,14 +1,17 @@
 {
-  "detailed_description": "QR Code Generator is a practical online tool that helps you quickly complete various tasks. Using QR Code Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, QR Code Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use QR Code Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "This QR Code Generator creates ISO/IEC 18004-compliant QR codes by converting input data into a 2D matrix barcode using Reed-Solomon error correction algorithms. The tool supports multiple encoding modes including numeric, alphanumeric, byte/binary, and Kanji character sets. Users can generate high-contrast codes with error correction levels L (7%), M (15%), Q (25%), or H (30%) to withstand physical damage. The generator implements the JIS X 0510 standard for module arrangement, applying optimal masking patterns to minimize optical scanning errors. Technical professionals benefit from the ability to specify exact module sizes (1-50 pixels) and inversion options for dark/light color swaps. Unlike basic generators, this tool provides hex color customization for both foreground and background with alpha transparency support, ensuring compatibility with CMYK offset printing requirements. The resulting PNG-24 output preserves full color fidelity and transparency layers for seamless integration into digital workflows.",
   "usage_steps": [
-    "Open the QR Code Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Choose 'Text' or 'URL' input mode using the toggle switch",
+    "2. Enter data in the UTF-8 encoded text area, supporting up to 2953 bytes",
+    "3. Select error correction level from the dropdown (L/M/Q/H)",
+    "4. Adjust module size slider (1-50 pixels) and enable inversion checkbox",
+    "5. Click 'Preview' to validate alignment patterns and quiet zone margins",
+    "6. Download the generated QR code as PNG-24 with embedded metadata"
   ],
   "usage_examples": [
-    "Use QR Code Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Marketing teams creating scannable campaign assets with embedded UTM tracking parameters",
+    "Manufacturers embedding product specifications in maintenance documentation QR codes",
+    "Event organizers generating ticket QR codes with inverted colors for night-time scanning",
+    "Developers testing error correction capabilities by deliberately damaging generated codes"
   ]
 }

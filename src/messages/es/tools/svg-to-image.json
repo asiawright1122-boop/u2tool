@@ -1,14 +1,17 @@
 {
-  "detailed_description": "SVG a imagen es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando SVG a imagen, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, SVG a imagen puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa SVG a imagen inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El convertidor SVG a imagen es una herramienta técnica que transforma gráficos vectoriales escalables (SVG) en formatos de imagen rasterizada como PNG, JPEG o WebP. Al procesar archivos SVG, que son código XML basado en vectores, el toolchain utiliza un motor de renderizado basado en software (como librsvg o Cairo) para interpretar las primitivas vectoriales, aplicar estilos CSS y generar una representación de mapa de bits a resolución fija. Esto es esencial para escenarios donde se requiere compatibilidad con sistemas que no soportan SVG, como ciertos navegadores antiguos o plataformas de impresión. La conversión permite controlar parámetros como la densidad de píxeles (DPI), antialiasing y espacio de color (RGB/CMYK), optimizando el resultado para web, impresión o integración en aplicaciones nativas. Además, soporta la conversión en lotes mediante API REST, ideal para pipelines de construcción automatizados en entornos DevOps.",
   "usage_steps": [
-    "Abre la página de la herramienta SVG a imagen",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Arrastra tu archivo SVG al área designada o selecciona mediante el explorador de archivos",
+    "Elige el formato de salida en el menú desplegable: PNG, JPEG o WebP con calidad ajustable",
+    "Configura la resolución de salida usando el control deslizante (desde 72 hasta 600 DPI)",
+    "Activa/desactiva la opción de fondo transparente según el formato de salida compatible",
+    "Aplica filtros avanzados (blur, sharpen, grayscale) mediante el panel de ajustes",
+    "Descarga el archivo convertido o copia el enlace compartible para distribución"
   ],
   "usage_examples": [
-    "Usa SVG a imagen para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador web convierte iconos SVG a PNG-24 para compatibilidad con aplicaciones móviles híbridas que usan WebView",
+    "Un diseñador gráfico genera versiones rasterizadas de logotipos SVG a 300 DPI para impresión en folletos",
+    "Un equipo DevOps automatiza la generación de miniaturas JPEG desde SVGs mediante una API REST para un CMS",
+    "Un ingeniero de machine learning exporta visualizaciones vectoriales a WebP para optimizar datasets de entrenamiento de redes neuronales"
   ]
 }

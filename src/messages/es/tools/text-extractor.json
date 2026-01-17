@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Extractador de Texto es una herramienta práctica en línea que te ayuda a completar diversas tareas de manera rápida. Utilizando el Extractador de Texto, puedes procesar fácilmente diversos datos sin instalar ningún software o plugins. Esta herramienta cuenta con una interfaz sencilla y es fácil de usar, lo que te permite comenzar rápidamente y usarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Extractador de Texto puede ayudarte a mejorar tu eficiencia laboral. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote que no se suban a ningún servidor. Usa el Extractador de Texto inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Extractor de Texto es una herramienta especializada en identificar y aislar patrones estructurados dentro de contenido no estructurado, utilizando técnicas avanzadas de procesamiento de lenguaje natural y expresiones regulares (regex). Esta solución implementa un motor de análisis léxico basado en autómatas finitos deterministas para detectar direcciones de correo electrónico (RFC 5322), protocolos URL (HTTP/HTTPS/FTP), números telefónicos según E.164, direcciones IPv4/IPv6 y otros formatos predefinidos. Al procesar el texto mediante tokenización y segmentación semántica, el sistema aplica reglas de validación contextual para minimizar falsos positivos, como diferenciar un número de serie accidental de una dirección IP válida. Los usuarios necesitan esta herramienta para automatizar tareas de minería de datos en registros de servidores, limpieza de bases de contactos, auditorías de seguridad o análisis de metadatos en documentos extensos. Su capacidad para manejar codificaciones Unicode (UTF-8/UTF-16) y soportar configuraciones de sensibilidad a mayúsculas/minúsculas lo convierte en una solución precisa para entornos multilingües y casos de uso técnicos exigentes.",
   "usage_steps": [
-    "Abre la página del Extractador de Texto",
-    "Ingresa o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega el texto en el área de edición con soporte para arrastrar y soltar archivos .txt/.log/.csv.",
+    "Selecciona los tipos de datos a extraer desde checkboxes categorizados: Correos, URLs, IPs, etc.",
+    "Activa la opción 'Personalizar Patrón' para modificar expresiones regulares predefinidas o añadir reglas específicas.",
+    "Haz clic en 'Iniciar Análisis Léxico' para procesar el contenido y visualizar resultados en tabla interactiva.",
+    "Filtra coincidencias usando el campo de búsqueda contextual por tipo de dato o índice de posición.",
+    "Exporta datos estructurados en formato JSON o CSV con metadatos de tiempo de procesamiento y estadísticas de coincidencia."
   ],
   "usage_examples": [
-    "Utiliza el Extractador de Texto para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un administrador de sistemas analiza logs de servidores para identificar direcciones IP repetidas en intentos de inicio de sesión fallidos.",
+    "Un analista de marketing extrae correos electrónicos de comentarios en redes sociales para construir una lista de clientes potenciales.",
+    "Un investigador de ciberseguridad procesa documentos PDF en busca de credenciales expuestas accidentalmente en textos no estructurados.",
+    "Un desarrollador limpia datos de contacto migrando registros antiguos, normalizando números de teléfono según formato internacional E.164."
   ]
 }

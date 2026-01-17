@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Comparador de hash de texto é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Comparador de hash de texto, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Comparador de hash de texto pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Comparador de hash de texto imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Text Hash Comparator é uma ferramenta de segurança que permite comparar a integridade de dois textos por meio de funções criptográficas de hash. Técnicamente, o usuário insere dois conjuntos de texto ou seleciona arquivos, escolhe algoritmos como SHA-256, SHA-3 ou BLAKE2, e a ferramenta gera resumos criptográficos únicos para cada entrada. Essa abordagem é essencial para verificar se dados sensíveis foram alterados durante transferências, garantir consistência em configurações de sistemas distribuídos, ou validar a autenticidade de documentos digitais. O funcionamento ocorre totalmente no cliente, utilizando WebAssembly para processar os cálculos de hash sem enviar dados para servidores externos. A comparação é realizada por meio de operações bitwise que verificam a igualdade exata dos hashes gerados, com suporte a algoritmos de diferentes comprimentos de saída (ex.: 256, 512 bits). Diferentemente de ferramentas genéricas, esta oferece visualização hexadecimal e binária dos hashes, além de suporte a múltiplos encodings (UTF-8, UTF-16).",
   "usage_steps": [
-    "Abra a página da ferramenta Comparador de hash de texto",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse a interface com duas áreas de texto e seletores de algoritmos criptográficos.",
+    "2. Cole o primeiro texto na área esquerda ou faça upload de um arquivo TXT.",
+    "3. Escolha o algoritmo de hash (ex.: SHA-256, BLAKE2s) no dropdown correspondente.",
+    "4. Clique em 'Gerar Hash' para obter o resumo criptográfico em formato hexadecimal.",
+    "5. Repita o processo para o segundo texto na área direita com o mesmo algoritmo.",
+    "6. Pressione o botão 'Comparar' para executar uma verificação bitwise XOR dos hashes."
   ],
   "usage_examples": [
-    "Use Comparador de hash de texto para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "1. Um administrador de sistemas compara hashes de arquivos de configuração entre servidores para garantir consistência após atualizações.",
+    "2. Um desenvolvedor valida a integridade de um código-fonte baixado, comparando seu hash com o publicado no repositório oficial.",
+    "3. Um auditor verifica se um contrato digital foi alterado após ser assinado eletronicamente, usando hashes SHA-3 antes e depois.",
+    "4. Um analista de segurança testa a resistência a colisões entre dois documentos aparentemente idênticos, utilizando algoritmos de diferentes famílias."
   ]
 }

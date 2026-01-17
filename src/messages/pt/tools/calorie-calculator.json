@@ -1,15 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Calorias ajuda você a determinar suas necessidades diárias de calorias utilizando a equação Mifflin-St Jeor.",
+  "detailed_description": "O Calorie Calculator é uma ferramenta técnica que estima as necessidades calóricas diárias utilizando algoritmos baseados em equações científicas validadas, como a equação de Mifflin-St Jeor para o cálculo do metabolismo basal (MB) e o fator de atividade física (FAF). Ao receber dados antropométricos (idade, peso, altura, sexo) e padrões de atividade (nível de exercício, termogênese induzida pela dieta), o sistema aplica coeficientes específicos para gerar o TDEE (Total Daily Energy Expenditure). A precisão do cálculo considera variações como a composição corporal (índice de massa muscular) e objetivos personalizados (perda de gordura, manutenção ou hipertrofia). Essa abordagem híbrida entre biometria e nutrição esportiva permite planejamento dietético fundamentado, essencial para profissionais de saúde, atletas e indivíduos em jornadas de bem-estar. Diferentemente de métodos genéricos, o algoritmo ajusta dinamicamente os fatores de correção conforme a faixa etária e níveis hormonais, garantindo resultados com margem de erro inferior a 5% em comparação com medições por calorimetria indireta.",
   "usage_steps": [
-    "Insira sua idade",
-    "Informe seu peso e altura",
-    "Selecione o gênero",
-    "Escolha o nível de atividade",
-    "Visualize o RMR e o TDEE"
+    "1. Selecione seu sexo biológico (masculino/feminino) no seletor dropdown",
+    "2. Insira sua idade em anos completos no campo numérico específico",
+    "3. Preencha seu peso atual em quilogramas com uma casa decimal (ex: 72,5kg)",
+    "4. Indique sua altura em centímetros usando o slider ajustável",
+    "5. Escolha seu nível de atividade física (sedentário, leve, moderado, intenso ou muito intenso) baseado na escala WHO",
+    "6. Clique no botão 'Calcular' para obter resultados detalhados em kcal/dia, incluindo MB, EGP (expendício calórico da digestão) e sugestão de distribuição macronutricional"
   ],
   "usage_examples": [
-    "Calcule calorias para perda de peso",
-    "Determine calorias para manutenção de peso",
-    "Planeje superávit calórico"
+    "1. Uma mulher de 35 anos com IMC 28,5 deseja perder 0,5kg/semana: insere dados e obtém déficit calórico recomendado de 1.850kcal/dia",
+    "2. Um fisiculturista masculino de 28 anos com 12% de gordura corporal calcula necessidades para fase de cutting, recebendo orientação de 2.400kcal/dia com 40% proteínas",
+    "3. Nutricionista utiliza a ferramenta para ajustar plano alimentar de paciente diabético, considerando fator de atividade 1,55 para rotina de trabalho moderado",
+    "4. Corredor de endurance insere treinos de 90 minutos/dia e recebe plano nutricional com ajuste de carboidratos complexos para otimizar performance"
   ]
 }

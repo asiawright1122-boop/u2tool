@@ -1,15 +1,17 @@
 {
-  "detailed_description": "La calculadora estima cuánto cuestan tus electrodomésticos.",
+  "detailed_description": "El Calculador de Costos Eléctricos permite a los usuarios estimar el gasto energético de dispositivos domésticos e industriales mediante el análisis de parámetros técnicos como la potencia nominal (en vatios), horas de operación diaria, tarifas eléctricas variables según horario (pico/valle), y el factor de potencia. Este herramienta es esencial para optimizar el consumo energético, identificar dispositivos ineficientes, o planificar presupuestos domésticos. Internamente, el algoritmo convierte la potencia en kilovatios-hora (kWh), aplica la tarifa seleccionada, e incorpora ajustes por eficiencia energética (por ejemplo, un equipo con factor de potencia 0.95 consumirá 5% más de energía que su valor nominal). La precisión se logra mediante cálculos en tiempo real que consideran variables como la duración de ciclos de operación intermitentes o modos de espera ('standby').",
   "usage_steps": [
-    "Ingresa la potencia",
-    "Establece horas de uso",
-    "Ingresa tarifa eléctrica",
-    "Ver desglose de costos",
-    "Comparar costos"
+    "1. Selecciona un dispositivo de la lista predefinida o ingresa manualmente su potencia en vatios (W) usando el campo 'Potencia (W)'.",
+    "2. Ajusta el deslizador 'Horas Diarias de Uso' para definir el tiempo promedio de operación.",
+    "3. Elige el tipo de tarifa eléctrica en el menú desplegable: 'Tarifa General', 'Horario Pico-Valle' o 'Tarifa Industrial'.",
+    "4. Activa la opción 'Calcular por Meses' o 'Calcular por Días' según el periodo deseado.",
+    "5. Presiona el botón 'Calcular Consumo' para ejecutar el algoritmo de conversión a kWh y aplicación de tarifas.",
+    "6. Revisa los resultados detallados en la sección 'Resumen de Costos', que incluye gráficos de distribución horaria y recomendaciones de ahorro."
   ],
   "usage_examples": [
-    "Calcular costos del aire acondicionado",
-    "Estimar uso de computadora",
-    "Comparar eficiencia"
+    "Calcular el costo mensual de mantener un refrigerador de 150 W funcionando 24/7 con tarifa residencial de $0.12/kWh.",
+    "Comparar el consumo anual entre dos aires acondicionados: uno de 1.500 W con inverter (factor de potencia 0.92) vs. uno tradicional de 2.000 W (factor 0.85).",
+    "Determinar el ahorro energético al reemplazar 10 bombillas incandescentes (60 W c/u) por LED (9 W c/u) con uso promedio de 5 horas diarias.",
+    "Analizar el impacto en la factura eléctrica de un home office con computadora de 300 W, router (20 W) y lámpara LED (12 W) operando 8 horas diarias en horario pico."
   ]
 }

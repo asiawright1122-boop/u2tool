@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Liquid Fill Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Liquid Fill Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Liquid Fill Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Liquid Fill Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Liquid Fill Chart Generator creates animated, SVG-based visualizations that represent percentage values through dynamic wave displacement effects. This tool leverages HTML5 Canvas and JavaScript to render fluid morphing shapes using sine wave algorithms, with configurable parameters for wave amplitude, frequency, and phase shift. Developers can customize color gradients with CSS-compatible hex codes, set animation durations via requestAnimationFrame loops, and adjust container dimensions with responsive scaling options. The generator employs path simplification algorithms to optimize performance while maintaining visual fidelity. Users need this tool for interactive dashboards requiring tactile feedback representations (e.g., health metrics, battery status), gamified progress indicators, or engaging data storytelling elements where traditional static charts lack visual impact. The underlying engine uses Bezier curve interpolation to create smooth transitions between states, with optional easing functions like cubic-in-out or elastic bounce. Technical implementation involves creating a clipping mask from the percentage value that intersects with the animated wave path, producing the liquid fill effect. Export options include standalone SVG files with embedded CSS animations or JavaScript-ready DOM elements with event listeners for real-time value updates.",
   "usage_steps": [
-    "Open the Liquid Fill Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Input numerical percentage value (0-100) in the 'Fill Level' field with precision up to two decimal places.",
+    "Adjust wave characteristics using the 'Amplitude' slider (0.1-2.0) and 'Frequency' selector (1-10 cycles per container width).",
+    "Choose dual-tone gradient colors by selecting primary and secondary hex codes from the spectrum pickers.",
+    "Enable 'Bounce Animation' checkbox to activate elastic easing on initial render and value changes.",
+    "Set container dimensions in pixels or percentages using the responsive layout controls for width and height.",
+    "Click 'Generate Code' to produce HTML/CSS/JS snippets with copy-to-clipboard functionality for immediate implementation."
   ],
   "usage_examples": [
-    "Use Liquid Fill Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Creating a pulsating battery charge indicator for a mobile app dashboard that animates from 20% to 100% with haptic feedback.",
+    "Visualizing real-time server CPU usage on an operations monitoring page with color transitions at threshold levels.",
+    "Building a charity donation tracker where wave amplitude increases with contributions, reaching full animation at 100% funding.",
+    "Designing interactive fitness app milestones that use wave frequency changes to represent workout intensity levels over time."
   ]
 }

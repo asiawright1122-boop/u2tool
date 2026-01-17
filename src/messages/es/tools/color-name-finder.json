@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Buscador de Nombre de Color es una herramienta en línea práctica que te ayuda a completar rápidamente varias tareas. Con el Buscador de Nombre de Color, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Buscador de Nombre de Color puede ayudarte a mejorar la eficiencia en tu trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Buscador de Nombre de Color ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Color Name Finder es una herramienta técnica diseñada para convertir valores de color numéricos (HEX, RGB, HSL) en sus equivalentes nominales más cercanos según estándares de color reconocidos como X11, CSS4 y Pantone. Utiliza algoritmos de procesamiento de color basados en el espacio CIELAB para calcular diferencias perceptuales mediante la fórmula ΔE* (delta-E), garantizando precisión en la proximidad visual. Internamente, el sistema aplica una búsqueda de vecinos más cercanos (k-nearest neighbors) sobre una base de datos de más de 2,500 colores predefinidos, considerando factores como matiz, saturación y luminancia. La herramienta incluye una etapa de gamut mapping para ajustar colores fuera del rango sRGB, evitando distorsiones en la representación final. Es esencial para desarrolladores que necesitan documentar paletas accesibles, diseñadores que validan coincidencias exactas de brand guidelines, y científicos de datos que requieren etiquetas semánticas en visualizaciones. Su motor combina transformaciones de espacio de color y optimización de distancia euclidiana para ofrecer resultados en tiempo real con milisegundos de latencia.",
   "usage_steps": [
-    "Abre la página de la herramienta Buscador de Nombre de Color",
-    "Introduce o pega el contenido que deseas procesar en la casilla de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Introduce un valor de color en el campo de entrada usando formatos HEX (#FF5733), RGB (rgb(255,87,51)) o HSL (hsl(18, 100%, 60%)).",
+    "2. Activa el selector 'Precisión extendida' para activar comparación contra 1,400 colores adicionales de la biblioteca NBS-ISCC.",
+    "3. Usa el control deslizante 'Tolerancia visual' para ajustar el umbral ΔE* entre 1.0 (precisión quirúrgica) y 10.0 (búsqueda ampliada).",
+    "4. Haz clic en 'Mostrar coincidencias cercanas' para ver una lista ordenada por proximidad, con porcentajes de similitud y coordenadas CIELAB.",
+    "5. Selecciona una opción de la lista para copiar automáticamente su nombre, código hexadecimal y valores RGB/HSL a tu portapapeles.",
+    "6. Activa la opción 'Notación Munsell' para obtener equivalencias en el sistema de clasificación de color usado en pericias forenses y museografía."
   ],
   "usage_examples": [
-    "Usa el Buscador de Nombre de Color para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador de interfaces adapta una aplicación médica para cumplir WCAG 2.1, verificando que los colores de alertas críticas tengan nombres reconocibles por lectores de pantalla.",
+    "Un diseñador gráfico identifica que el código HEX #2E8B57 corresponde al nombre 'SeaGreen' para garantizar consistencia en materiales impresos y digitales de una campaña.",
+    "Un científico de datos etiqueta visualizaciones climáticas con nombres de colores en lugar de códigos, facilitando interpretación en presentaciones sin proyectores calibrados.",
+    "Un restaurador de arte digital cruza el valor RGB(102, 51, 0) obteniendo 'SaddleBrown' como resultado, documentando digitalmente una pintura colonial con nomenclatura histórica precisa."
   ]
 }

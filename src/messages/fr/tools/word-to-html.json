@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Le convertisseur Word à HTML transforme des documents Microsoft Word (.docx) en code HTML propre. Préserve le formatage de base comme les titres, gras, italique et les listes. Idéal pour la publication sur le web.",
+  "detailed_description": "L'outil Word to HTML est un convertisseur avancé permettant de transformer des documents Microsoft Word (.docx) en code HTML tout en préservant les éléments de mise en forme complexes tels que les styles personnalisés, les tableaux imbriqués, les listes numérotées, les puces hiérarchiques, les images avec légendes, et les notes de bas de page. Contrairement aux méthodes manuelles, ce convertisseur utilise une analyse syntaxique XML du conteneur OpenXML pour extraire les parties document.xml, styles.xml et media/, puis applique des règles de mapping XSLT pour transformer les balises WordProcessingML en éléments HTML5 sémantiques. Les polices de caractères sont converties en déclarations @font-face CSS, tandis que les tableaux de données sont optimisés avec des balises <thead>, <tbody> et attributs scope. Cette solution s'adresse particulièrement aux développeurs web souhaitant intégrer du contenu rédactionnel préformaté sans altérer sa structure, aux éditeurs de CMS nécessitant une importation automatisée de documentation, ou aux équipes de data science préparant des rapports interactifs. Le processus inclut une détection automatique des hyperliens, la conversion des en-têtes en sections <h1> à <h6>, et la génération d'un fichier zip contenant le HTML, les ressources média et une feuille de style CSS externe.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Word à HTML",
-    "Glissez-déposez un fichier DOCX ou cliquez pour sélectionner",
-    "Attendez la fin de la conversion",
-    "Apercevez le HTML ou visualisez le code source",
-    "Copiez le code HTML ou téléchargez-le sous forme de fichier HTML"
+    "Cliquez sur le bouton 'Télécharger un fichier' et sélectionnez votre document .docx (jusqu'à 25 Mo)",
+    "Activez l'option 'Convertir les styles en CSS' pour générer une feuille de style externe",
+    "Cochez 'Optimiser pour le web' pour compresser les images en JPEG 85% qualité",
+    "Sélectionnez le niveau de profondeur de conversion des listes hiérarchiques (1 à 9 niveaux)",
+    "Appuyez sur 'Démarrer la conversion' pour lancer le parseur XML asynchrone",
+    "Téléchargez l'archive ZIP contenant le HTML5 validé, le dossier /media et le fichier style.css"
   ],
   "usage_examples": [
-    "Convertir des documents Word pour la publication sur le web",
-    "Extrayez du contenu formaté sous forme d'HTML",
-    "Créer des pages web à partir de fichiers Word"
+    "Un développeur convertit un cahier des charges Word en page HTML statique pour un prototype Figma",
+    "Une entreprise migrée vers Confluence utilise l'outil pour importer 200 fiches produits avec tableaux comparatifs",
+    "Un enseignant transforme un polycopié de cours en documentation web accessible aux élèves malvoyants",
+    "Un service marketing convertit un rapport d'analyse SEO en newsletter HTML responsive compatible Outlook"
   ]
 }

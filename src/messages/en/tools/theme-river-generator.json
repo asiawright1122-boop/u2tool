@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Theme River Generator is a practical online tool that helps you quickly complete various tasks. Using Theme River Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Theme River Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Theme River Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Theme River Generator transforms time-series datasets into dynamic flow visualizations that illustrate the ebb and flow of categorical data across temporal dimensions. This tool processes structured input containing timestamps, categorical classifications, and quantitative values to generate layered, proportional area charts where each category's intensity is represented by vertical width and color gradient. The algorithm employs time-series aggregation to bin data into configurable intervals (daily, monthly, etc.), normalizes values against the maximum data point for proportional scaling, and applies cubic spline interpolation to smooth transitions between data points. Underlying SVG rendering leverages D3.js force-directed layout to create continuous, flowing bands that visually communicate dominance shifts between categories over time. Designed for researchers, data journalists, and business analysts, this tool excels at revealing hidden patterns in complex datasets such as tracking social media sentiment shifts during political campaigns, monitoring financial market sector dominance, analyzing environmental variable interactions, or mapping historical event frequency correlations. The generator supports advanced customization through adjustable time binning resolution, Gaussian smoothing parameters, and diverging color scales that enhance perceptual differentiation of overlapping data streams.",
   "usage_steps": [
-    "Open the Theme River Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Upload CSV/TSV data with timestamp, category, and numeric value columns using the drag-and-drop file zone",
+    "2. Map data fields to chart axes using the schema mapping dropdowns (timestamp, category, magnitude)",
+    "3. Configure time interval binning with the granularity selector (15-minute increments to annual bins)",
+    "4. Adjust Gaussian blur intensity via slider to control data smoothing across adjacent intervals",
+    "5. Customize category color ramps using the CIELAB color picker with perceptual uniformity optimization",
+    "6. Export interactive SVG visualization with embedded time-axis scrubber for web integration"
   ],
   "usage_examples": [
-    "Use Theme River Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Visualizing hourly Twitter hashtag volume trends during product launches to identify viral marketing peaks",
+    "Comparing quarterly revenue contributions from different business segments over five fiscal years",
+    "Mapping daily sensor readings of PM2.5, NO2, and SO2 pollutants during urban air quality studies",
+    "Analyzing monthly frequency of historical military engagements across geographic regions from 1800-2000"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Wasserfalldiagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Wasserfalldiagramm-Generator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, der Wasserfalldiagramm-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Bearbeitungen erfolgen lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Wasserfalldiagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Tools zu erleben.",
+  "detailed_description": "Der Waterfall-Chart-Generator erstellt dynamische Wasserfalldiagramme zur Visualisierung kumulativer Effekte sequenzieller Datenreihen. Technisch umsetzt das Tool D3.js-Bibliotheken zur clientseitigen Erzeugung von SVG-Grafiken, die mit interaktiven Features wie Tooltips und Zoomfunktion ausgestattet sind. Benutzer können Startwerte, absolute/relative Delta-Werte und Endsummen definieren, wobei der Algorithmus automatisch 'floating bar charts' mit Verbindungslinien zwischen den Datenpunkten generiert. Der Generator ist besonders für Finanzanalysen relevant, wo Veränderungen in Bilanzen, Cashflows oder Budgetabweichungen transparent dargestellt werden müssen. Technische Schlüsselmerkmale umfassen die Verarbeitung von JSON/CSV-Importen, die Anwendung von Farbverläufen für positive/negative Deltas und die Anpassung von Achsenbeschriftungen mit exponentieller Skalierung. Die clientseitige Verarbeitung garantiert Datenprivatsphäre, während der SVG-Export eine präzise Einbettung in professionelle Dokumente ermöglicht.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Wasserfalldiagramm-Generators",
-    "Geben Sie oder fügen Sie den zu verarbeitenden Inhalt in das Eingabefeld ein",
-    "Passen Sie die Werkzeugeinstellungen und -einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Importieren Sie Ihre Daten im JSON-Format mit definierten Schlüsseln für 'Kategorie', 'Startwert' und 'Delta'-Array",
+    "Konfigurieren Sie die Basislinie über den Schieberegler 'Baseline Adjustment' für absolute/relative Darstellungen",
+    "Weisen Sie HEX-Farbcodes für steigende (z.B. #4CAF50) und fallende (z.B. #F44336) Balken zu",
+    "Passen Sie die X-Achsen-Tick-Dichte anhand der 'Label Density' Auswahl (1:5 bis 1:20)",
+    "Nutzen Sie den 'Dynamic Preview' Bereich zur Echtzeit-Validierung von Überlappungen in Mehrfachdatenreihen",
+    "Exportieren Sie das finale Diagramm als SVG mit einbettbaren Metadaten oder als 300dpi PNG für Präsentationen"
   ],
   "usage_examples": [
-    "Verwenden Sie den Wasserfalldiagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell verarbeitete Ergebnisse ohne zu warten"
+    "Ein Finanzcontroller visualisiert monatliche Cashflow-Veränderungen durch Eingabe von Kontostand-Deltas mit tagesgenauen Zeitstempeln",
+    "Ein Einzelhandelsanalyst verfolgt Bestandsveränderungen von Lagerartikeln über Wochenwerte mit automatischer Berechnung von Zwischenminima",
+    "Ein Projektmanager zeigt Budgetabweichungen von Teilprojekten mit kumulativer Endsummen-Darstellung nach Q1-Q4 Quartalen",
+    "Ein Energieversorger analysiert stündliche Netzauslastungsschwankungen mit automatischer Berechnung von Lastspitzen über 24h-Zeiträumen"
   ]
 }

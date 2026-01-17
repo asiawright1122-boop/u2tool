@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to Go Struct es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando JSON to Go Struct, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, JSON to Go Struct puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa JSON to Go Struct inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El conversor JSON a estructuras Go es una herramienta especializada que transforma datos JSON en definiciones de structs Go completamente funcionales. Técnicamente, el sistema analiza el esquema del JSON mediante un parser semántico que identifica tipos de datos (string, number, boolean, arrays, objetos anidados), aplicando inferencia contextual para determinar tipos específicos como float64 o int según el contexto numérico. Soporta estructuras jerárquicas profundas, generando structs anidados con etiquetas `json` correctas para facilitar el marshaling/unmarshaling. La herramienta es esencial para desarrolladores que necesitan integrar APIs REST (consumiendo respuestas JSON), mapear configuraciones dinámicas, o crear modelos de datos para bases de datos NoSQL. Su motor interno replica el comportamiento de `encoding/json` de Go, garantizando compatibilidad en la deserialización. Además, permite personalizar nombres de structs y paquetes, optimizando el código generado para proyectos reales. La precisión en la detección de patrones recurrentes en arrays y el manejo de valores nulos mejora la productividad frente a la creación manual de estructuras.",
   "usage_steps": [
-    "Abre la página de la herramienta JSON to Go Struct",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al conversor mediante el enlace 'Convertir' en la sección 'JSON a Go' del sitio.",
+    "Pega tu JSON en el editor de código con resaltado syntaxico en el área etiquetada 'Datos JSON'.",
+    "Configura opciones avanzadas usando los controles: escribe el nombre del struct en 'Nombre Struct' y selecciona el paquete en 'Selector de Paquete'.",
+    "Haz clic en el botón 'Generar Código Go' para activar el análisis sintáctico del JSON.",
+    "Revisa el resultado en el panel de salida, que muestra structs con métodos de implementación `UnmarshalJSON` cuando aplica.",
+    "Copia el código generado con el botón 'Copiar al Portapapeles' e impórtalo directamente en tu proyecto Go."
   ],
   "usage_examples": [
-    "Usa JSON to Go Struct para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Mapear la respuesta de una API pública de clima (con campos como `temperature.float64`, `forecast.[7]string`) a structs tipados para un dashboard.",
+    "Transformar un archivo config.json con parámetros de entorno (timeouts, umbrales numéricos) en structs verificables en tiempo de compilación.",
+    "Generar modelos de datos para documentos MongoDB almacenados como JSON, incluyendo arrays anidados de subdocumentos.",
+    "Crear interfaces para consumir un servicio de pagos externo, asegurando etiquetas `json` precisas para campos críticos como `transaction_id.string`."
   ]
 }

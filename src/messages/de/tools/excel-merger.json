@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Excel-Zusammenführung ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Excel-Zusammenführung können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Excel-Zusammenführung kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Excel-Zusammenführung sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der Excel Merger ist ein spezialisierter Online-Converter, der mehrere XLSX- oder CSV-Dateien technisch präzise zu einer einzigen Arbeitsmappe kombiniert. Vertikales Merging appendiert Tabellenzeilen (UNION ALL-Logik), während horizontales Merging Spalten basierend auf Schlüsselspalten verknüpft (JOIN-Operation). Das Tool analysiert dabei komplexe Zellformate, behält Diagramme und berechnete Felder bei und minimiert Formatverluste durch automatische Kompatibilitätsanpassung. Entwickler benötigen diese Lösung zur Datenkonsolidierung aus heterogenen Quellen, etwa für Finanzreports mit variabler Spaltenstruktur oder IoT-Sensordaten mit unterschiedlichen Zeitstempeln. Technisch erfolgt die Verarbeitung serverseitig mit Apache POI (Java) für XLSX-Manipulation, unterstützt UTF-8-Codierung und erlaubt Spaltenmapping via Drag-and-Drop. Besonders bei verschachtelten Indizes oder inkonsistenten Header-Zeilenzahlen gewährleistet der Algorithmus eine fehlerfreie Datenintegration.",
   "usage_steps": [
-    "Öffnen Sie die Excel-Zusammenführung-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "1. Laden Sie bis zu 10 Excel/CSV-Dateien per Drag-and-Drop in den Upload-Bereich",
+    "2. Wählen Sie im Optionspanel 'Vertikal' (untereinander) oder 'Horizontal' (seitlich) als Merge-Strategie",
+    "3. Aktivieren Sie die Checkbox 'Header-Zeilen überspringen' für inkonsistente Tabellenköpfe",
+    "4. Nutzen Sie den Spalten-Mapper, um Join-Spalten manuell zu verknüpfen (z.B. 'Auftragsnummer' ↔ 'OrderID')",
+    "5. Aktivieren Sie 'Formelkonvertierung' zur Sicherstellung von relativen Referenzen in berechneten Zellen",
+    "6. Klicken Sie auf 'Merge & Download' und wählen Sie das Ausgabeformat XLSX oder CSV mit benutzerdefinierter Trennzeichen"
   ],
   "usage_examples": [
-    "Verwenden Sie Excel-Zusammenführung, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Konsolidierung monatlicher Umsatzstatistiken aus verschiedenen Filialen mit unterschiedlichen Kassen-Systemen",
+    "Zusammenführen von Maschinendaten aus Produktionsanlagen mit variierender Sensor-Konfiguration",
+    "Erstellung einer zentralen Fehlerdatenbank durch Vertikal-Merging von CSV-Logs aus verschiedenen Testphasen",
+    "Kombination von Excel-Vorlagen für internationale Berichte mit lokal angepassten Währungsformaten"
   ]
 }

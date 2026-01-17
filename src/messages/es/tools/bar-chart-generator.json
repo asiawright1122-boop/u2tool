@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Barras es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Barras, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Barras puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Barras inmediatamente para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Bar Chart Generator es una herramienta basada en web que permite crear gráficos de barras interactivos y visualmente atractivos mediante procesamiento de datos en el lado del cliente. Utiliza bibliotecas como D3.js y SVG.js para renderizar gráficos escalables en formatos vectoriales (SVG) y mapas de bits (PNG). La herramienta acepta datos en formatos estructurados (JSON, CSV) o ingresados manualmente, permitiendo personalización avanzada mediante controles de interfaz para ajustar escalas de color (HEX/RGB), orientación de barras (vertical u horizontal), configuración de ejes (X/Y) y anotaciones de datos. Los usuarios pueden aplicar gradientes, sombras o patrones a las barras individuales, y configurar interacciones como tooltips con información contextual. Este generador es esencial para desarrolladores que necesitan integrar visualizaciones en dashboards, analistas que requieren presentar datos comparativos en informes ejecutivos, o educadores que desean ilustrar conceptos estadísticos con gráficos dinámicos. Su funcionalidad sin necesidad de conexión a servidores garantiza privacidad en el procesamiento de datos sensibles.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Barras",
-    "Introduce o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Selecciona la orientación del gráfico en el selector 'Vertical' o 'Horizontal' en el Panel de Configuración.",
+    "2. Carga tus datos mediante el botón 'Importar CSV/JSON' o ingresa valores manualmente en la tabla de datos editable.",
+    "3. Ajusta los ejes X e Y seleccionando columnas específicas en los menús desplegables 'Eje Categórico' y 'Eje Valor'.",
+    "4. Personaliza la paleta de colores usando el selector 'Relleno de Barras' con opciones HEX, RGB o predefinidas.",
+    "5. Activa funciones avanzadas como 'Mostrar Valores' para etiquetas internas o 'Agregar Leyenda' en el apartado de Anotaciones.",
+    "6. Descarga el gráfico final haciendo clic en 'Exportar SVG/PNG' con resoluciones ajustables hasta 4K."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Barras para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un académico compara el rendimiento de estudiantes en tres exámenes usando barras agrupadas por trimestre.",
+    "Un marketero visualiza ventas mensuales por región con barras apiladas y degradados de color por porcentaje de crecimiento.",
+    "Un desarrollador genera un gráfico de contribuciones diarias en GitHub con barras horizontales y tooltips personalizados.",
+    "Un analista financiero crea un reporte de gastos categorizados con gráficos SVG que mantienen calidad al redimensionar."
   ]
 }

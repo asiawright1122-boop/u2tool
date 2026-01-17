@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Texto a Hexadecimal es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando Texto a Hexadecimal, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Texto a Hexadecimal puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y que no se suban a ningún servidor. Usa Texto a Hexadecimal inmediatamente para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El conversor de texto a hexadecimal permite transformar secuencias de caracteres en representaciones numéricas basadas en el sistema hexadecimal (base 16) mediante codificaciones como ASCII, UTF-8 o UTF-16. Cada carácter se convierte en su valor Unicode correspondiente, luego se traduce a bytes usando la codificación seleccionada, y finalmente se expresa en formato hexadecimal (0-9, A-F). Este proceso es esencial en desarrollo de software para analizar tramas de red, depurar estructuras de memoria o trabajar con protocolos que requieren datos binarios en formato legible. La herramienta soporta entrada de texto plano, archivos .txt y pega desde portapapeles, manteniendo integridad en caracteres acentuados y símbolos especiales mediante detección automática de codificación. Incluye opción para invertir el proceso, convirtiendo valores hexadecimales (con o sin prefijos como 0x) a texto, útil en análisis forense digital o lectura de dumps de memoria.",
   "usage_steps": [
-    "Abre la página de la herramienta Texto a Hexadecimal",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Accede a la sección 'Codificación' y selecciona 'Texto a Hex' en la interfaz principal.",
+    "2. En la pestaña 'Entrada', elige entre escribir texto directamente, cargar un archivo o pegar desde el portapapeles.",
+    "3. Configura parámetros en el panel lateral: selecciona codificación (ASCII, UTF-8, UTF-16) y formato de salida (hex mayúsculas/minúsculas, con espacios entre bytes).",
+    "4. Haz clic en 'Convertir' para iniciar el proceso de codificación hexadecimal.",
+    "5. Revisa el resultado en el área de salida, donde se muestra el valor hex en notación estándar o como array de bytes según opción elegida.",
+    "6. Para conversiones inversas, usa la pestaña 'Hex a Texto' e introduce valores separados por espacios o líneas, con soporte para prefijos 0x y notación #RRGGBB."
   ],
   "usage_examples": [
-    "Usa Texto a Hexadecimal para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "1. Un desarrollador de firmware analiza tramas CAN bus, convirtiendo comandos ASCII a hexadecimal para validar checksums CRC16.",
+    "2. Un QA engineer genera strings de prueba con caracteres Unicode específicos, verificando su representación hex en logs de depuración.",
+    "3. Un experto en ciberseguridad traduce cabeceras HTTP codificadas en hexadecimal desde Wireshark para identificar payloads maliciosos.",
+    "4. Un diseñador de sistemas embebidos convierte valores de color RGB a notación hexadecimal para programar displays OLED mediante comandos SPI."
   ]
 }

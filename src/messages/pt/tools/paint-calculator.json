@@ -1,15 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Tinta estima quanta tinta você precisa para seu cômodo.",
+  "detailed_description": "O Paint Calculator é uma ferramenta de cálculo matemático avançado projetada para otimizar a aquisição de tintas em projetos de revestimento de paredes. O algoritmo realiza o cálculo da área de superfície líquida subtraindo as dimensões de aberturas (portas e janelas) da metragem quadrada total. Utiliza fórmulas como: Área Total = (Perímetro × Altura) - Σ(Areas de Aberturas), aplicando em seguida o fator de cobertura específico da tinta (geralmente 5-10 m² por litro) e multiplicando pelo número de demãos necessárias. Profissionais de construção civil e decoradores precisam dessa ferramenta para evitar desperdícios, calcular custos com precisão e planejar compras de materiais com base em dados quantitativos reais. O sistema converte automaticamente unidades métricas, considera padrões de consumo conforme tipo de superfície (porosa, texturizada) e permite ajustes para resinas acrílicas ou látex com diferentes rendimentos. Sua funcionalidade diferenciada inclui a capacidade de calcular múltiplas zonas de parede com dimensões variadas simultaneamente.",
   "usage_steps": [
-    "Inserir dimensões do cômodo",
-    "Adicionar quantidade de portas",
-    "Adicionar quantidade de janelas",
-    "Definir número de demãos",
-    "Ver tinta necessária"
+    "Insira as dimensões do cômodo nos campos 'Comprimento (m)' e 'Altura (m)'",
+    "Preencha o número de portas e janelas no painel 'Aberturas'",
+    "Selecione o tipo de tinta na lista suspensa para carregar seu fator de cobertura padrão",
+    "Ajuste manualmente o rendimento por litro se utilizar produtos com especificações técnicas diferentes",
+    "Defina a quantidade de camadas necessárias no seletor numérico",
+    "Clique no botão 'Calcular' para obter o volume total em litros e metros quadrados líquidos"
   ],
   "usage_examples": [
-    "Calcular tinta para quarto",
-    "Estimar cobertura de sala",
-    "Planejar pintura de toda a casa"
+    "Calculando tinta para pintar um quarto de 4x5 metros com duas janelas de 1,2x1,5m e uma porta de 0,9x2,1m",
+    "Determinando a quantidade de tinta industrial para revestir um galpão com 200m² de paredes e 8 portas de emergência",
+    "Planejando a renovação de fachada externa com textura rústica considerando 3 camadas e rendimento reduzido de 4m² por litro",
+    "Comparando custos entre tinta acrílica premium (8m²/L) e látex comum (6m²/L) para reforma de escritório com 12 janelas"
   ]
 }

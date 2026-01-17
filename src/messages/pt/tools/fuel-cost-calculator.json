@@ -1,15 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Custo de Combustível estima quanto você vai gastar com gasolina em qualquer viagem.",
+  "detailed_description": "O Calculador de Custo de Combustível é uma ferramenta técnica projetada para estimar precisamente despesas de viagem com base em três variáveis críticas: distância percorrida, eficiência energética do veículo (em km/l ou mpg) e preço atual do combustível. A ferramenta integra um algoritmo de cálculo que multiplica a distância pela taxa de consumo e aplica variações cambiais em tempo real através de uma API de preços de combustível, permitindo atualizações automáticas de valores conforme regiões e tipos de combustível (gasolina, diesel, etanol). Este recurso é essencial para motoristas que precisam orçar viagens longas, comparar eficiência entre veículos híbridos e convencionais, ou planejar rotas corporativas com controle de despesas. O cálculo interno utiliza a fórmula: Custo Total = (Distância / Eficiência) × Preço por Litro, com suporte para conversão de unidades e arredondamento financeiro. Além disso, inclui análise de emissões de CO₂ com base no consumo médio, atendendo a necessidades ambientais.",
   "usage_steps": [
-    "Insira a distância da viagem",
-    "Insira a eficiência de combustível",
-    "Defina o preço atual do combustível",
-    "Escolha viagem de ida ou ida e volta",
-    "Veja o custo total de combustível"
+    "1. Insira a distância total da viagem no campo numérico 'Distância' (aceita valores decimais).",
+    "2. Selecione a unidade de distância no dropdown (quilômetros ou milhas) compatível com a eficiência do seu veículo.",
+    "3. Preencha a eficiência do carro em 'km por litro' ou 'milhas por galão' na seção 'Consumo do Veículo'.",
+    "4. Digite o preço atual do combustível ou ative o botão 'Atualizar Preço' para sincronização automática via API.",
+    "5. Escolha a moeda de saída (BRL, USD ou EUR) no seletor de formato monetário.",
+    "6. Clique em 'Calcular' para visualizar o custo total, custo por quilômetro e emissões estimadas de CO₂."
   ],
   "usage_examples": [
-    "Calcule os custos de uma viagem de carro",
-    "Compare despesas de combustível",
-    "Orçamento para deslocamento"
+    "Planejar uma viagem de São Paulo a Curitiba (400 km) com um carro que consome 12 km/l, sabendo que o litro da gasolina está a R$5,20.",
+    "Comparar custos entre um carro híbrido (20 km/l) e um modelo tradicional (10 km/l) para trajetos diários de 30 km.",
+    "Calcular despesas mensais de um entregador que roda 1.500 km/mês com veículo flex e variação entre etanol (R$3,00/l) e gasolina.",
+    "Estimar emissões de CO₂ para uma viagem de 1.000 km com caminhonete 4x4 que consome 8 km/l de diesel S10."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Conversor de Entidades HTML é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Conversor de Entidades HTML, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, o Conversor de Entidades HTML pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente em seu navegador, garantindo a segurança dos seus dados e não serão enviados a qualquer servidor. Use o Conversor de Entidades HTML imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O conversor de entidades HTML transforma caracteres em representações seguras para documentos HTML e vice‑versa. Ele opera em três camadas: entidades nomeadas (por exemplo, &amp;, &lt;), entidades numéricas decimais (&#1234;) e hexadecimais (&#x4D2;). Por padrão, o motor de conversão trata os sinais reservados &, <, >, \" e ' como caracteres que devem ser escapados, evitando interpretações indevidas pelo parser. Em modo texto, apenas &, < e > são escapados; em atributos, todos os cinco são escapados, com a possibilidade de optar por aspas simples. O algoritmo percorre os code points da entrada (UTF‑8) e gera entidades com base nas opções selecionadas, preservando símbolos e emojis via referências numéricas quando necessário. A ferramenta distingue codificação de entidades de outras transformações como percent‑encoding de URLs, Base64 ou escaping para JSON/JavaScript, oferecendo um pipeline independente e determinístico. Suporta tanto a normalização de saída (substituindo entidades nomeadas por numéricas) quanto a reversão (decodificação) de entidades nomeadas e numéricas, com detecção automática de base em &#x. Em casos de caracteres de controle, como U+0000, gera &#x0; para manter compatibilidade com o DOM. O resultado é exibido com highlight de diff para mudanças, contagem de caracteres e opção de cópia rápida.",
   "usage_steps": [
-    "Abra a página do Conversor de Entidades HTML",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Escolha o Modo: Encode (texto → entidades) ou Decode (entidades → texto).",
+    "Cole ou digite o conteúdo na área de entrada. O painel de saída exibe a conversão em tempo real.",
+    "Selecione o tipo de entidade: Nomeadas, Decimais, Hexadecimais ou Numéricas (preferir hexa).",
+    "Defina o Contexto: Texto, Atributo ou Universal (escapa &, <, >, \" e ').",
+    "Ajuste as opções: incluir símbolos comuns como &copy; e &#8482;, manter ASCII seguro, preservar quebras de linha.",
+    "Clique em Copiar para enviar o resultado para a área de transferência ou em Limpar para esvaziar os campos."
   ],
   "usage_examples": [
-    "Use o Conversor de Entidades HTML para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Inserir conteúdo dinâmico em um CMS que filtra tags HTML: converter textos com <, > e & para entidades numéricas para evitar XSS e garantir exibição correta.",
+    "Gerar HTML estático com emojis e símbolos matemáticos em uma página educativa: usar entidades hexadecimais para garantir renderização consistente em navegadores antigos.",
+    "Exportar trecho de documentação para um blog que exige entidades nomeadas: converter &, < e > em &amp;, &lt;, &gt; e manter símbolos comuns como &nbsp;.",
+    "Normalizar base de dados de snippets: decodificar todas as entidades para texto plano e re‑codificar em hexadecimais, padronizando o formato."
   ]
 }

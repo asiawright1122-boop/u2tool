@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Diagramas de Árbol es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Diagramas de Árbol, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Diagramas de Árbol puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Diagramas de Árbol ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Tree Chart Generator es una herramienta especializada en la visualización de estructuras de datos jerárquicas mediante algoritmos de diseño ortogonal y radial. Técnicamente, procesa datos en formato JSON para generar diagramas de nodos y conexiones utilizando el algoritmo de Reingold-Tilford para diseños ortogonales (bifurcaciones en ángulos rectos) y coordenadas polares para layouts radiales (nodos dispuestos en círculos concéntricos). La herramienta implementa técnicas de renderizado SVG para garantizar alta resolución y soporte de interacción en tiempo real, como el colapso/expand de nodos mediante clics. Los usuarios necesitan esta herramienta para mapear estructuras complejas como organizaciones empresariales, genealogías familiares, sistemas de archivos o breakdowns de proyectos (WBS), donde la claridad espacial y la diferenciación de niveles jerárquicos son críticos. Su motor interno optimiza automáticamente la distribución de nodos evitando solapamientos, con opciones avanzadas para ajustar márgenes, radios de anidamiento y estilos de conexión. La salida generada incluye código SVG editable y opciones de exportación en múltiples formatos (PNG, PDF), ideal para integración en informes técnicos o interfaces de usuario.",
   "usage_steps": [
-    "Abre la página del Generador de Diagramas de Árbol",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Preparar datos en formato JSON con campos específicos: 'name' para etiquetas y 'children' para nodos descendientes.",
+    "Cargar el archivo JSON mediante el botón 'Importar Datos' en la interfaz.",
+    "Seleccionar el tipo de layout en el panel de configuración: 'Ortogonal' (vertical/horizontal) o 'Radial' (circular).",
+    "Ajustar parámetros técnicos en el editor: 'spacing' para distancia entre nodos, 'radius' para layouts radiales y 'depth' para niveles visibles.",
+    "Personalizar estilos en la pestaña 'Apariencia': colores de nodos, tipografía de etiquetas y grosor de conexiones.",
+    "Interactuar con el gráfico generado: hacer clic en nodos para colapsar/expandir ramas y descargar el resultado en SVG, PNG o PDF."
   ],
   "usage_examples": [
-    "Usa el Generador de Diagramas de Árbol para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Mapeo de la estructura organizativa de una empresa con departamentos, equipos y reportes jerárquicos.",
+    "Visualización de árboles genealógicos familiares con múltiples generaciones y relaciones de parentesco.",
+    "Representación de la arquitectura de un proyecto de software con módulos, submódulos y componentes interdependientes.",
+    "Diagramación de la estructura de directorios en un servidor web, mostrando carpetas raíz, subdirectorios y archivos críticos."
   ]
 }

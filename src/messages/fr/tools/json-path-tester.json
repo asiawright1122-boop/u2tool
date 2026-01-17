@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Testeur JSONPath est un outil pratique en ligne qui vous aide à accomplir rapidement diverses tâches. En utilisant le Testeur JSONPath, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plug-ins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d’utiliser efficacement l’outil. Que vous soyez développeur, concepteur ou utilisateur général, le Testeur JSONPath peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et garantissant qu’elles ne seront pas uploadées sur aucun serveur. Utilisez immédiatement le Testeur JSONPath pour expérimenter des services d’outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le JSONPath Tester permet d'analyser, valider et exécuter des expressions JSONPath (conformément à la spécification IETF) sur des données JSON structurées. Techniquement, l'outil intègre un parseur qui transforme l'expression JSONPath en AST (Abstract Syntax Tree) avant d'appliquer l'évaluation récursive sur l'arbre de données JSON fourni. Cette approche permet de supporter les opérateurs avancés comme les filtres logiques ([?(@.price > 100)]), les sélections imbriquées ($..book[0].title), ou les expressions régulières avec la syntaxe ECMA 262. Les développeurs l'utilisent notamment pour déboguer des APIs REST en validant les chemins d'extraction de données, vérifier la structure d'objets JSON complexes, ou optimiser des requêtes NoSQL utilisant le format JSONPath. L'interface affiche en temps réel les résultats d'évaluation avec coloration syntaxique des correspondances, et signale les erreurs de syntaxe via un analyseur lexical prédictif. Contrairement aux outils basiques, il inclut un navigateur d'objets JSON interactif pour explorer visuellement les chemins possibles.",
   "usage_steps": [
-    "Ouvrez la page du Testeur JSONPath",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l’outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Collez votre document JSON dans la zone d'entrée à gauche, ou utilisez le bouton 'Importer depuis URL' pour charger des données externes",
+    "Saisissez votre expression JSONPath dans le champ dédié avec autocomplétion contextuelle des opérateurs valides",
+    "Cliquez sur 'Exécuter' pour déclencher l'analyse syntaxique et l'évaluation sur le document JSON chargé",
+    "Examinez les résultats dans le panneau de droite : chemins résolus, valeurs extraites et arbre de correspondance hiérarchique",
+    "Utilisez le mode 'Débogage' pour visualiser étape par étape le parcours de l'évaluateur JSONPath dans l'arbre JSON",
+    "Exportez les résultats au format CSV ou JSON via le bouton 'Télécharger' pour intégration dans des scripts d'automatisation"
   ],
   "usage_examples": [
-    "Utilisez le Testeur JSONPath pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Valider qu'une API de commerce électronique retourne bien tous les produits en promotion avec l'expression $.products[?(@.discount > 0)]",
+    "Extraire la liste des emails des utilisateurs administrateurs d'un fichier JSON de configuration : $.users[?(@.role == 'admin')].email",
+    "Vérifier la structure d'un webhook GitHub en testant $..commits[?(@.author.name == 'john_doe')].modified_files[*]",
+    "Déboguer une requête NoSQL Cassandra qui utilise JSONPath comme critère de sélection de colonnes"
   ]
 }

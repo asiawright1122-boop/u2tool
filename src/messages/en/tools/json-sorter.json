@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON Sorter is a practical online tool that helps you quickly complete various tasks. Using JSON Sorter, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON Sorter can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON Sorter immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The JSON Sorter is a specialized encoding utility that systematically organizes JSON objects by recursively sorting their key-value pairs based on lexicographical ordering. This tool addresses the inherent lack of standardized key ordering in JSON specifications, which can lead to inconsistencies across API responses, configuration files, and data exports. By implementing a depth-first traversal algorithm, the tool ensures that all nested objects and arrays maintain structural integrity while keys at every level are reordered alphabetically. Unlike superficial formatting tools, this implementation preserves original data types (strings, numbers, booleans, null values) and handles complex structures like multi-dimensional arrays and circular references. Developers will appreciate its deterministic output, which becomes crucial when comparing JSON files for version control diffs, generating consistent hash signatures for data integrity checks, or preparing payloads for APIs requiring alphabetical key sequences. The tool's engine performs in-memory parsing using a non-destructive approach, maintaining original whitespace and comment structures (when enabled), making it suitable for both development and production environments where reliability and precision are paramount.",
   "usage_steps": [
-    "Open the JSON Sorter tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Paste your unsorted JSON into the primary text area labeled 'Input JSON'",
+    "Select sorting direction using the radio buttons: 'Ascending (A→Z)' or 'Descending (Z→A)'",
+    "Toggle 'Preserve Comments' switch if your JSON contains documentation comments",
+    "Adjust 'Indentation Level' slider to set output formatting between 0-8 spaces",
+    "Click 'Sort & Validate' button to process the JSON and check for syntax errors",
+    "Copy sorted JSON from the output panel or download as .json file using the 'Save' icon"
   ],
   "usage_examples": [
-    "Use JSON Sorter to process your data",
-    "Get processing results quickly without waiting"
+    "Normalizing API responses from multiple microservices to maintain consistent key order for client applications",
+    "Preparing JSON files for git version control to prevent meaningless diff conflicts caused by arbitrary key ordering",
+    "Creating verifiable data signatures by generating predictably ordered JSON before cryptographic hashing",
+    "Organizing configuration files for infrastructure-as-code projects where alphabetical key grouping improves readability"
   ]
 }

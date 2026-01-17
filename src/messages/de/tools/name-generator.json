@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Namegenerator erstellt zufällige Namen, die nach Geschlecht und kultureller Herkunft gefiltert werden.",
+  "detailed_description": "Der Name Generator ist ein algorithmisches Werkzeug zur probabilistischen Erzeugung von Namen durch Kombination linguistischer Muster und kultureller Datenbanken. Technisch basiert das System auf einem hybriden Ansatz aus Markov-Ketten für phonetische Wahrscheinlichkeitsanalysen und neuronalen Netzwerken, die semantische Kontextualisierungen ermöglichen. Die zugrunde liegende Datenbank enthält über 500.000 Einträge aus diversifizierten Namensräumen (mythologisch, historisch, technologisch, etc.) mit anpassbaren Metadaten wie Lautstärkeprofil, Silbenstruktur und kultureller Herkunft. Entwickler benötigen dieses Tool, um schnell valide Namensvorschläge für RPG-Charaktere mit spezifischen Klangfarben, genetisch einzigartige Babyname-Kombinationen oder prägnante Branding-Begriffe für Tech-Startups zu generieren. Die Implementierung erfolgt durch einen mehrschichtigen Generierungsprozess: Zunächst analysiert der Algorithmus Benutzerparameter (z.B. gewünschte Länge, Phonemsequenzen), extrahiert dann relevante Wortstämme aus der strukturierten Datenbank und kombiniert diese mittels kontextsensitiver Grammatiken zu neuen semantischen Einheiten. Ein postgenerativer Filter bewertet die Ergebnisse nach Einzigartigkeit, Aussprechbarkeit und kultureller Relevanz.",
   "usage_steps": [
-    "Wählen Sie Ihre Geschlechtspräferenz",
-    "Wählen Sie die kulturelle Herkunft",
-    "Stellen Sie die Anzahl der Namen ein",
-    "Klicken Sie auf 'Generieren'",
-    "Kopieren Sie die Namen, die Ihnen gefallen"
+    "Wählen Sie im Kategorien-Selector zwischen 'Fantasy', 'Realistisch', 'Technologie' oder 'Benutzerdefiniert' für den gewünschten Namensstil",
+    "Passen Sie im Parameterbereich 'Phonetik' die Lautstärke (leise/mittel/laut) und Vokal-Dominanz (hoch/mittel/neutral) an",
+    "Legen Sie im Abschnitt 'Struktur' die maximale Silbenanzahl (1-5) und Präfix/Suffix-Wahrscheinlichkeit (0-100%) fest",
+    "Aktivieren Sie im Filter-Panel die Option 'Kulturelle Relevanz' und wählen Sie geografische Regionen oder historische Epochen",
+    "Klicken Sie auf 'Generieren'-Button, um den Algorithmus zu starten, und warten Sie auf die Anzeige der top 20 Vorschläge",
+    "Exportieren Sie ausgewählte Namen im gewünschten Format (CSV, JSON, TXT) oder kopieren Sie Einzelergebnisse über den Inline-'Kopieren'-Button"
   ],
   "usage_examples": [
-    "Ideen für Babynamen generieren",
-    "Charakternamen erstellen",
-    "Einzigartige Benutzername finden"
+    "Ein Game-Designer erstellt elfische Charaktere und aktiviert 'Fantasy'-Modus mit hohem Vokalanteil sowie magischen Suffixen wie '-ion' oder '-ael'",
+    "Ein Start-up-Gründer kombiniert 'Technologie'-Kategorie mit der Vokal-Dominanz-Einstellung 'hoch', um merkfähige Softwaremarkennamen zu generieren",
+    "Ein Linguist untersucht slawische Namensmuster und filtert Ergebnisse nach osteuropäischen Kulturdaten mit spezifischen Konsonantencluster-Einstellungen",
+    "Ein Elternpaar verwendet den 'Realistisch'-Modus mit dem Lautstärke-Filter 'leise' und beschränkt die Silbenanzahl auf 2, um sanfte Babyname-Vorschläge zu erhalten"
   ]
 }

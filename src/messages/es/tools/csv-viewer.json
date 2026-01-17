@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Visualizador de CSV es una herramienta práctica en línea que te ayuda a completar rápidamente diversas tareas. Con el Visualizador de CSV, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite empezar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Visualizador de CSV puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, lo que garantiza la seguridad de tus datos y no se subirán a ningún servidor. Utiliza el Visualizador de CSV inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El CSV Viewer es una herramienta técnica que permite interpretar y visualizar datos en formato CSV (Comma-Separated Values) mediante un motor de análisis léxico basado en estándares RFC 4180. Este conversor especializado procesa archivos delimitados identificando automáticamente caracteres separadores (comas, puntos y comas, tabulaciones), codificaciones de caracteres (UTF-8, UTF-16, ISO-8859-1) y estructuras de encabezado. Su motor interno valida la integridad de los datos mediante comprobaciones de concordancia de campos por fila, detectando inconsistencias como líneas truncadas o caracteres no imprimibles. Al operar en el cliente mediante JavaScript Web Workers, garantiza el procesamiento seguro de datasets sensibles sin transferir datos a servidores externos. Es especialmente útil para desarrolladores que necesitan depurar archivos CSV generados por sistemas heredados, validar datos antes de procesos ETL o transformar datasets en entornos de integración continua. La interfaz renderiza resultados en una tabla HTML5 dinámica con soporte para ordenamiento y filtrado, permitiendo inspeccionar estructuras complejas con celdas combinadas y valores escapados.",
   "usage_steps": [
-    "Abre la página del Visualizador de CSV",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Arrastra tu archivo CSV al área designada o pega el contenido directamente en el editor de texto enriquecido.",
+    "2. Selecciona manualmente el delimitador utilizado (coma, punto y coma, tabulador) o deja que el algoritmo de detección automática lo identifique.",
+    "3. Activa la opción 'Primera fila como encabezado' si tu dataset contiene metadatos en la línea inicial.",
+    "4. Configura la codificación de caracteres según el origen del archivo (UTF-8, UTF-16LE, ISO-8859-15).",
+    "5. Haz clic en 'Procesar CSV' para generar la tabla interactiva con resaltado de errores de formato.",
+    "6. Exporta el resultado limpio en formato XLSX, JSON o HTML usando los botones de conversión ubicados bajo la tabla generada."
   ],
   "usage_examples": [
-    "Utiliza el Visualizador de CSV para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un desarrollador corrobora la consistencia de un CSV generado por un sistema ERP antes de importarlo a una base de datos PostgreSQL mediante COPY.",
+    "Un analista de datos normaliza archivos de log delimitados por tabulaciones provenientes de servidores Linux, convirtiéndolos a formato JSON para procesamiento posterior.",
+    "Un científico de datos identifica y corrige inconsistencias en un dataset de entrenamiento de machine learning donde ciertas filas contienen campos faltantes.",
+    "Un ingeniero DevOps valida el formato de un archivo CSV exportado desde un contenedor Docker antes de integrarlo en un pipeline de CI/CD automatizado."
   ]
 }

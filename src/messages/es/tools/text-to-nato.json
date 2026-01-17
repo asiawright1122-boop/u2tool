@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Texto a Alfa NATO es una herramienta online práctica que te ayuda a completar rápidamente diversas tareas. Utilizando Texto a Alfa NATO, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Texto a Alfa NATO puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y que no se subirá a ningún servidor. Usa Texto a Alfa NATO ahora para experimentar servicios rápidos, seguros y gratuitos.",
+  "detailed_description": "La herramienta 'Text to NATO' realiza una conversión sistemática de caracteres alfanuméricos en su equivalente según el alfabeto fonético de la OTAN (NATO Phonetic Alphabet), estándarizado por la Organización de Aviación Civil Internacional (ICAO). Técnicamente, el proceso implica mapear cada carácter de entrada (letras mayúsculas, minúsculas y dígitos) a su código fonético asociado mediante una tabla de correspondencias basada en Unicode, preservando la capitalización original y normalizando caracteres acentuados (por ejemplo, 'ñ' se convierte en 'November' al ser transliterada a 'n'). Esta herramienta es esencial en entornos donde la claridad auditiva es crítica, como comunicaciones aéreas, operaciones militares o radioafición, donde la ambigüedad en la pronunciación de letras (como 'B' y 'D') puede generar errores. El algoritmo procesa el texto en dos fases: primero identifica y clasifica cada carácter (alfabético, numérico o espacio), y luego aplica reglas de sustitución que incluyen prefijos numéricos (como 'Zero' para '0') y separadores lógicos para mantener la estructura del mensaje original. Su implementación en JavaScript permite operar sin conexión, garantizando privacidad y compatibilidad con estándares web modernos.",
   "usage_steps": [
-    "Abre la página de la herramienta Texto a Alfa NATO",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede a la herramienta a través de la categoría 'Texto' en el sitio web.",
+    "Escribe o pega el texto en el área de entrada con soporte para Unicode (incluye acentos y caracteres especiales).",
+    "Activa la opción 'Mantener mayúsculas/minúsculas' si deseas preservar la capitalización en la salida.",
+    "Selecciona el modo de tratamiento de números: 'Incluir códigos numéricos' o 'Omitir dígitos'.",
+    "Haz clic en 'Convertir a NATO' para iniciar el procesamiento basado en la tabla ICAO.",
+    "Copia el resultado formateado usando el botón 'Copiar al portapapeles', que incluye separadores entre palabras."
   ],
   "usage_examples": [
-    "Usa Texto a Alfa NATO para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un controlador de tráfico aéreo confirma un código de vuelo 'BAW123' como 'Bravo Alpha Whiskey One Two Three' para evitar errores en una comunicación con interferencias.",
+    "Un ingeniero de telecomunicaciones transmite una contraseña 'SecreT42!' como 'Sierra Echo Charlie Romeo Tango Four Two' en un canal con ruido ambiental.",
+    "Un equipo de rescate recibe las coordenadas GPS 'N40°44.9' como 'November Four Zero Dash Four Four Decimal Nine' durante una operación nocturna.",
+    "Un radioaficionado comunica su indicativo 'LU1ABC' como 'Lima Uniform One Alpha Bravo Charlie' en una conexión de baja calidad en la banda HF."
   ]
 }

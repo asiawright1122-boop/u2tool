@@ -1,14 +1,17 @@
 {
-  "detailed_description": "L'Obfusqueur de Chaine est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Grâce à l'Obfusqueur de Chaine, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, l'Obfusqueur de Chaine peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et ne sont pas téléversés sur aucun serveur. Utilisez immédiatement l'Obfusqueur de Chaine pour découvrir des services en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'obfusqueur de chaînes de caractères permet de transformer des données textuelles sensibles en formats illisibles pour les humains ou les systèmes non autorisés. Contrairement aux simples encodeurs Base64, cet outil combine plusieurs techniques d'encodage avancées (Base64, hexadécimal, décalage ASCII personnalisé) et permet des chaînes de transformation multiples. Les développeurs l'utilisent pour sécuriser temporairement des clés API, masquer des identifiants dans du code source, ou protéger des payloads de requêtes HTTP. Le processus fonctionne par itérations successives : chaque caractère est d'abord converti en valeur Unicode, modifiée via un offset configurable, puis encodée dans un format sélectionnable. L'interface affiche en temps réel la complexité cryptographique (entropie estimée) des résultats. Pour les applications de sécurité critique, l'obfuscation en plusieurs étapes avec méthodes mixtes augmente exponentiellement la résistance au cassage par force brute. Ce n'est pas un système de chiffrement asymétrique mais une protection complémentaire pour les données en transit ou les variables d'environnement.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Obfusqueur de Chaine",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la case d'entrée",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Sélectionnez une méthode d'encodage primaire dans le menu déroulant (Base64, Hex, ASCII shift)",
+    "2. Activez l'option 'Double encodage' si vous souhaitez appliquer une seconde transformation",
+    "3. Saisissez votre texte dans la zone d'entrée multiligne avec détection automatique de langage",
+    "4. Ajustez le curseur 'Offset personnalisé' pour modifier le décalage ASCII (valeurs -127 à +127)",
+    "5. Cliquez sur 'Obfusquer' pour générer le résultat avec l'entropie calculée affichée en pourcentage",
+    "6. Utilisez le bouton 'Copier au format RAW' pour intégrer le résultat dans du code sans caractères spéciaux"
   ],
   "usage_examples": [
-    "Utilisez l'Obfusqueur de Chaine pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "1. Un développeur masque sa clé API Stripe (sk_live_...) avant de la commiter dans un dépôt GitHub public",
+    "2. Un administrateur système obfusque des identifiants de base de données dans un fichier de configuration partagé",
+    "3. Un pentester transforme des payloads XSS pour contourner les WAF basiques lors de tests de pénétration",
+    "4. Un data scientist anonymise des données personnelles dans un dataset JSON avant de le transmettre à des tiers"
   ]
 }

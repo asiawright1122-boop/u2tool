@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Nombres Aléatoires est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant le Générateur de Nombres Aléatoires, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plug-ins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez un développeur, un concepteur ou un utilisateur général, le Générateur de Nombres Aléatoires peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements se font localement dans votre navigateur, assurant la sécurité de vos données et empêchant leur upload vers n'importe quel serveur. Utilisez immédiatement le Générateur de Nombres Aléatoires pour expérimenter des services de outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de nombres aléatoires est un outil technique conçu pour produire des séquences de valeurs numériques dans des plages définies par l'utilisateur, avec des options avancées pour la génération massive et l'unicité. Basé sur un algorithme hybride combinant des sources d'entropie système et un générateur de nombres pseudo-aléatoires (PRNG) de type Mersenne Twister, il garantit à la fois rapidité et qualité statistique. Les développeurs peuvent spécifier des paramètres précis comme la borne inférieure/supérieure, le nombre d'échantillons souhaités, et activer une vérification d'unicité pour éviter les doublons. La fonctionnalité de graine (seed) permet de reproduire des séquences déterministes, utile pour les tests reproductibles ou les simulations Monte Carlo. Ce outil répond aux besoins critiques de création de jeux de données synthétiques pour tests de charge, d'échantillonnage statistique, de génération de jetons de sécurité, ou de prototypage d'expériences aléatoires en recherche. Sa capacité à exporter en formats structurés (CSV, JSON, XML) le rend compatible avec les workflows d'analyse automatique.",
   "usage_steps": [
-    "Ouvrez la page du Générateur de Nombres Aléatoires",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ajustez les curseurs pour définir la borne minimale et maximale (ex: 1 à 1000)",
+    "Entrez le nombre de valeurs désirées dans le champ 'Quantité'",
+    "Cochez l'option 'Valeurs uniques' pour activer le filtrage des doublons",
+    "Optionnel : Saisissez une valeur de graine personnalisée dans le champ 'Seed'",
+    "Cliquez sur 'Générer' pour exécuter l'algorithme PRNG avec les paramètres sélectionnés",
+    "Sélectionnez le format d'export (CSV, JSON, XML) et téléchargez les résultats"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Nombres Aléatoires pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un développeur génère 1000 identifiants uniques pour tester un système de gestion de tickets avant le déploiement",
+    "Un chercheur en sciences sociales crée un échantillon aléatoire de 200 numéros de téléphone pour une étude démographique",
+    "Un organisateur de concours utilise le mode graine verrouillée pour produire une liste de gagnants 100% reproductible",
+    "Un ingénieur sécurité génère des valeurs aléatoires de 256 bits pour initialiser des clés de chiffrement temporelles"
   ]
 }

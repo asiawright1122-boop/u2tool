@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Boxplot é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos de Boxplot, você pode processar vários dados sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Boxplot pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviados para nenhum servidor. Use o Gerador de Gráficos de Boxplot imediatamente para experimentar serviços rápidos, seguros e gratuitos de ferramentas online.",
+  "detailed_description": "O Boxplot Chart Generator é uma ferramenta técnica especializada para criar diagramas de caixa (boxplots) interativos, visualizando distribuições estatísticas de dados. Ele permite analisar quartis, mediana, valores extremos e intervalos de confiança, ideal para profissionais que lidam com análise de variabilidade em conjuntos de dados multidimensionais. Usuários precisam deste recurso para identificar outliers em processos industriais, comparar distribuições em pesquisas acadêmicas ou monitorar métricas em ciência de dados. O funcionamento baseia-se na ingestão de dados numéricos em formato CSV ou colunas tabulares, onde o algoritmo calcula automaticamente os percentis 25 (Q1), 50 (mediana) e 75 (Q3), além de determinar os limites de outliers usando o intervalo interquartil (IIQ). A renderização usa bibliotecas SVG para alta qualidade gráfica, com opções de personalização de escalas logarítmicas, cores por categoria e sobreposição de pontos de dados brutos. A exportação suporta PNG vetorial e SVG editável, mantendo metadados estatísticos embutidos para auditoria posterior.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Boxplot",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a página do Boxplot Chart Generator e cole seus dados em formato tabular na área de edição 'Colar Dados CSV/TSV'.",
+    "Selecione a coluna de destino usando o dropdown 'Eixo Y' e agrupe dados por categorias via 'Agrupamento por Coluna'.",
+    "Ative a opção 'Mostrar Outliers' para destacar valores fora do intervalo [Q1 - 1.5*IIQ, Q3 + 1.5*IIQ].",
+    "Ajuste a escala do eixo Y entre linear/logarítmica usando o toggle 'Escala do Eixo'.",
+    "Personalize cores dos boxes pelo painel 'Paleta de Cores' e adicione rótulos de média/mediana via checkbox correspondente.",
+    "Exporte o gráfico final em PNG ou SVG clicando no botão 'Baixar Visualização' e selecione a resolução desejada."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Boxplot para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um professor analisa notas de alunos de múltiplas turmas para identificar disparidades educacionais através de diferenças nos quartis.",
+    "Um engenheiro de qualidade monitora variações no diâmetro de peças produzidas, detectando lotes com outliers além de 3σ.",
+    "Um cientista de dados compara distribuições de renda entre regiões, aplicando escala logarítmica para visualizar assimetrias.",
+    "Um pesquisador ambiental avalia a concentração de poluentes em diferentes estações do ano, usando boxplots empilhados para análise sazonal."
   ]
 }

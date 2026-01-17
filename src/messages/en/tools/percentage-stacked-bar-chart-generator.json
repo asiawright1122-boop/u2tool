@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Percentage Stacked Bar Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Percentage Stacked Bar Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Percentage Stacked Bar Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Percentage Stacked Bar Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Percentage Stacked Bar Chart Generator is a specialized data visualization tool that transforms categorical datasets into normalized, proportional bar charts where each bar represents 100% of its category. This tool enables developers and analysts to visualize part-to-whole relationships across multiple groups using Cartesian coordinates with segmented bars scaled to 100% height. Users need this tool to analyze compositional differences in datasets like demographic distributions, sales channel contributions, or survey response breakdowns. The generator employs data normalization algorithms to convert raw values into relative percentages, then renders SVG elements with precise path calculations for each segment. Technical features include dynamic axis scaling, color encoding for categorical differentiation, and responsive container adjustments for accessibility. The backend processes JSON or CSV inputs, mapping dimensions to X/Y axes while maintaining aspect ratio consistency. Unique capabilities include automated legend generation based on color palettes and exportable SVG/PNG with embedded metadata tags for traceability.",
   "usage_steps": [
-    "Open the Percentage Stacked Bar Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Select 'Upload CSV' or 'Manual Input' to load structured data with at least two numeric series",
+    "2. Map columns to 'Category Axis' (X-axis) and 'Value Series' using the field selector dropdown",
+    "3. Enable 'Percentage Mode' toggle to activate 100% normalization of values",
+    "4. Customize segment colors via the HEX code picker or predefined palettes",
+    "5. Adjust 'Axis Labels' and 'Legend Position' in the layout settings panel",
+    "6. Click 'Generate Chart' and use the 'Download SVG' or 'Copy Embed Code' buttons for implementation"
   ],
   "usage_examples": [
-    "Use Percentage Stacked Bar Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Marketing analysts comparing channel contribution percentages across quarterly campaigns",
+    "Academic researchers visualizing demographic composition differences between study groups",
+    "SaaS companies tracking feature adoption rates across customer segments",
+    "Environmental scientists displaying pollutant composition ratios in water samples"
   ]
 }

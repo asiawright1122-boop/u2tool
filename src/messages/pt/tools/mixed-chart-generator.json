@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos Misto é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos Misto, você pode processar vários dados facilmente sem instalar nenhum software ou plug-in. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos Misto pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para qualquer servidor. Use o Gerador de Gráficos Misto imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Mixed Chart Generator é uma ferramenta especializada para criar gráficos combinados de barras e linhas com escalas independentes, ideal para visualizar dados heterogêneos em um único eixo coordenado. Tecnologicamente, o tool processa dois conjuntos de dados distintos, atribuindo cada um a um eixo Y diferente (primário e secundário), permitindo comparações entre variáveis com unidades ou magnitudes discrepantes, como vendas em reais e temperatura em graus Celsius. A ferramenta implementa algoritmos de normalização para alinhar os dados na mesma escala temporal do eixo X, garantindo precisão visual. Internamente, utiliza bibliotecas como Chart.js ou D3.js para renderizar gráficos responsivos e ajustáveis, com opções de personalização avançada como transparência de barras, estilos de linhas e legendas interativas. Usuários precisam desta ferramenta para análises comparativas complexas em relatórios financeiros, estudos ambientais ou monitoramento de KPIs, onde escalas desreguladas distorceriam a percepção dos dados. O formato de entrada aceita CSV estruturado ou dados colados manualmente em formato tabular, com separação explícita entre séries de barras e linhas via marcadores específicos.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos Misto",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole os dados no campo de texto no formato 'X,Y1,Y2' ou utilize o modelo CSV pré-formatado, separando os conjuntos com delimitadores como '###' para indicar transição entre série de barras e linhas.",
+    "Selecione o tipo de gráfico para cada série no painel de configuração: escolha 'barra' para Y1 e 'linha' para Y2, ou vice-versa, via dropdowns independentes.",
+    "Ajuste os eixos Y utilizando as opções 'Eixo Primário' e 'Eixo Secundário' para atribuir escalas distintas, definindo manualmente os valores mínimos/máximos se necessário.",
+    "Personalize a aparência com os seletores de cor HEX para preenchimento das barras e código de linha tracejada (dashed) ou sólida, além de configurar a espessura dos traços em pixels.",
+    "Ative a prévia interativa para validar o alinhamento dos dados no gráfico, ajustando sobreposições ou sobreposições via controles de transparência (alpha) de 0.1 a 1.0.",
+    "Exporte o gráfico finalizado em PNG ou SVG clicando no botão 'Baixar', ou copie o código HTML gerado para incorporação em dashboards dinâmicos."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos Misto para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Comparar receita mensal (em R$) como barras com a temperatura média regional (em °C) como linha, usando eixos Y separados para evitar distorção visual.",
+    "Visualizar tráfego semanal de um site (barras) junto com taxa de conversão (linha), onde o eixo primário mede visitas e o secundário percentual de conversão.",
+    "Analistas financeiros sobrepondo gráficos de preços de ações (linha) com volume de negociação (barras) para identificar padrões de mercado em períodos específicos.",
+    "Educadores exibindo médias de notas (barras) e porcentagem de frequência (linha) de alunos, facilitando a correlação entre desempenho acadêmico e assiduidade."
   ]
 }

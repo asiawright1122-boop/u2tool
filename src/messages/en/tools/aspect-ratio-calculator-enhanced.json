@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Aspect Ratio Calculator helps you calculate and convert aspect ratios for images and videos. Lock the ratio to maintain proportions while resizing, or use common presets like 16:9, 4:3, and 1:1. Perfect for designers, video editors, and content creators.",
+  "detailed_description": "This calculator performs precise aspect ratio analysis by computing the proportional relationship between two dimensions using the Euclidean algorithm to reduce width:height fractions to their simplest form. It supports both pixel-based calculations and decimal ratio conversions, enabling users to maintain dimensional integrity across different display formats. The tool's unique value lies in its ability to handle complex scaling operations for responsive web design, video production pipelines, and cross-platform content adaptation. Developers can use it to resolve dimension conflicts when implementing CSS aspect-ratio properties, while filmmakers benefit from its ability to calculate safe action areas during format conversions. The algorithm automatically detects and preserves original proportions when scaling resolutions, with advanced features for calculating pixel aspect ratios (PAR) in video encoding workflows. Technical outputs include simplified ratios, dimensional cross-multiplication results, and resolution compatibility assessments for specific display standards like 4K UHD (3840×2160) or mobile formats (1080×1920).",
   "usage_steps": [
-    "Enter width and height values",
-    "View the calculated aspect ratio",
-    "Lock ratio to maintain proportions while resizing",
-    "Use common presets for standard formats",
-    "Preview the aspect ratio visually"
+    "Enter original width and height values in pixels or decimal format into the designated input fields",
+    "Select calculation mode: 'Simplify Ratio' for fraction reduction or 'Scale Dimensions' for proportional resizing",
+    "Adjust unit settings between pixels, centimeters, or inches using the dropdown menu for physical dimension calculations",
+    "Activate 'Lock Ratio' button to maintain proportionality when modifying one dimension value",
+    "Review technical output displaying simplified ratio, dimensional equivalence, and recommended resolution scaling options",
+    "Export calculation results in JSON format or copy individual values to clipboard using context-specific buttons"
   ],
   "usage_examples": [
-    "Resize images while maintaining aspect ratio",
-    "Calculate video dimensions for different platforms",
-    "Convert between common aspect ratios"
+    "Converting 4:3 standard definition video to 16:9 HD format while preserving safe action area dimensions",
+    "Calculating minimum image dimensions for responsive web banners requiring strict 3:4 aspect ratio compliance",
+    "Determining optimal resolution for YouTube video thumbnails that meet platform-specific 16:9 pixel requirements",
+    "Validating mobile UI element proportions for 18:9 screen devices during Android app development"
   ]
 }

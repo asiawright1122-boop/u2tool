@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El XML Formatter es una herramienta en línea práctica que te ayuda a completar varias tareas de manera rápida. Utilizando XML Formatter, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz sencilla y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, XML Formatter puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza XML Formatter inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Formateador XML es una herramienta especializada para manipular documentos XML mediante técnicas de análisis sintáctico y transformación estructural. Permite formatear código XML aplicando sangrías y separación lógica de nodos, así como minificar mediante la eliminación de espacios redundantes y comentarios. La validación se realiza mediante un parser SAX que verifica la correcta estructura de etiquetas, atributos y cierre de nodos, incluyendo soporte para espacios de nombres (namespaces) y secciones CDATA. Los desarrolladores necesitan esta herramienta para depurar errores en archivos de configuración XML, optimizar payloads en servicios web SOAP, o preparar datos intercambiables en sistemas legacy. Su motor de procesamiento basado en DOM permite manipular documentos complejos manteniendo la integridad de referencias externas (DTD/XSD) y procesando instrucciones de procesamiento. Al presionar 'Formatear', el algoritmo aplica reglas de pretty-printing conservando comentarios críticos; al minificar, genera una cadena compacta ideal para transmisiones HTTP. La validación muestra errores con posición exacta en el documento, facilitando correcciones precisas.",
   "usage_steps": [
-    "Abre la página del XML Formatter",
-    "Ingresa o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Pegue el código XML en el campo de texto identificado como 'Documento XML'.",
+    "2. Active la opción 'Formatear' para estructurar visualmente o 'Minificar' para optimizar tamaño.",
+    "3. Haga clic en 'Validar Sintaxis' para ejecutar el análisis de conformidad XML.",
+    "4. Revise los errores reportados en el panel inferior con indicación de línea/columna.",
+    "5. Ajuste las opciones avanzadas de sangría (número de espacios) o eliminación de comentarios.",
+    "6. Descargue el resultado con 'Guardar XML' o copie al portapapeles usando 'Copiar'"
   ],
   "usage_examples": [
-    "Utiliza XML Formatter para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "1. Un desarrollador corrige un archivo de configuración de servidor reindentando XML tras un merge de Git.",
+    "2. Un QA minifica una respuesta XML de API para verificar compatibilidad con cliente Android.",
+    "3. Un integrador valida un feed RSS generado mediante XSLT antes de publicarlo en un CMS.",
+    "4. Un ingeniero de datos depura un XML de 5GB eliminando bloques de logs innecesarios en CDATA."
   ]
 }

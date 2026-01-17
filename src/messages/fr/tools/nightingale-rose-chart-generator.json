@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique Rose de Nightingale est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphique Rose de Nightingale pour traiter facilement diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique Rose de Nightingale peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez immédiatement le Générateur de Graphique Rose de Nightingale pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Générateur de Graphiques en Rose de Nightingale est un outil en ligne spécialisé dans la création de graphiques en rose, également connus sous le nom de graphiques en zone polaire. Cette application permet aux utilisateurs de visualiser des données de manière unique en utilisant des secteurs de cercles qui se chevauchent, avec des rayons variant en fonction de la valeur des données. Les utilisateurs peuvent ainsi mettre en évidence des comparaisons entre différentes catégories ou suivre des tendances temporelles dans des données cycliques.\n\nCe générateur est particulièrement utile pour les professionnels de la santé qui souhaitent visualiser des données de santé sur plusieurs périodes, les analystes financiers qui analysent des données de revenus saisonniers, et les chercheurs qui étudient des phénomènes cycliques. En permettant une représentation visuelle claire et intuitive des données, cet outil facilite la prise de décision et la communication de résultats complexes.\n\nTechniquement, l'outil utilise des algorithmes de rendu graphique avancés pour créer des diagrammes en rose. Les utilisateurs peuvent ajuster les paramètres tels que la couleur des segments, la transparence, les étiquettes, et l'échelle des axes. L'interface est interactive, permettant un aperçu en temps réel des modifications apportées aux données, ce qui facilite l'exploration et la mise en forme des graphiques.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique Rose de Nightingale",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez l'outil Générateur de Graphiques en Rose de Nightingale sur le site web.",
+    "Cliquez sur le bouton 'Importer des données' et sélectionnez votre fichier CSV ou copiez-coller vos données directement dans la zone de texte fournie.",
+    "Dans l'onglet 'Paramètres', configurez les options de votre graphique, comme la couleur des segments, la transparence, les étiquettes et l'échelle des axes.",
+    "Utilisez la section 'Personnalisation' pour ajuster la taille du graphique, l'espacement entre les segments et l'orientation des étiquettes.",
+    "Prévisualisez votre graphique en cliquant sur le bouton 'Aperçu'. Effectuez des ajustements si nécessaire.",
+    "Une fois satisfait, téléchargez votre graphique en format PNG, SVG ou PDF en utilisant le bouton 'Télécharger'."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique Rose de Nightingale pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un chercheur en épidémiologie utilise le Générateur de Graphiques en Rose de Nightingale pour visualiser la répartition des cas de grippe par mois sur plusieurs années, mettant en évidence les tendances saisonnières.",
+    "Un analyste financier crée un graphique en rose pour montrer la répartition des revenus trimestriels d'une entreprise, facilitant la comparaison des performances sur différentes périodes.",
+    "Un enseignant en statistiques utilise cet outil pour illustrer les concepts de distribution cyclique en utilisant des données météorologiques, tels que les précipitations mensuelles.",
+    "Un gestionnaire de projet utilise le graphique en rose pour suivre les progrès d'un projet en visualisant les tâches complétées par phase, mettant en évidence les écarts par rapport au calendrier planifié."
   ]
 }

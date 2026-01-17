@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Area Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Area Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Area Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Area Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Area Chart Generator enables developers to create layered area charts that visualize cumulative quantitative data across time or categories. This tool specializes in rendering stacked area charts using SVG path elements and Canvas 2D contexts, allowing precise control over data density gradients and axis interpolation. Developers can map multi-series datasets to dual Y-axes, apply logarithmic scaling for exponential data ranges, and configure Bezier curve tension for smoothed visual transitions. The tool's unique value lies in its ability to handle sparse time-series datasets through smart interpolation algorithms that maintain data integrity while producing visually cohesive areas. Built on a D3.js core with WebAssembly acceleration, it supports programmatic data binding through JSON/CSV imports and provides granular control over stacking modes (normal, 100%, streamgraph) and axis tick formatting via ICU localization. Technical users benefit from the generator's support for responsive aspect ratio constraints and its implementation of ARIA accessibility standards for screen reader navigation of chart regions.",
   "usage_steps": [
-    "Open the Area Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Input tabular data in the dynamic spreadsheet interface, specifying X/Y coordinates with optional null values for discontinuous series",
+    "Configure dual-axis parameters through the Axes Configuration Panel, setting logarithmic scales or time-unit intervals for temporal data",
+    "Apply stacking modes using the Series Behavior Dropdown to toggle between absolute, relative, and expanding visual representations",
+    "Customize gradient fills through the Color Gradient Editor, selecting hex stops for multi-stop linear gradients across data series",
+    "Adjust curve interpolation settings in the Shape Configuration Tab to modify Bezier curve tension or enable stepwise transitions",
+    "Export the rendered chart using the High-Fidelity Exporter, choosing between SVG with embedded metadata or PNG at custom DPI settings"
   ],
   "usage_examples": [
-    "Use Area Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Marketing analysts visualizing monthly campaign ROI with dual-axis comparisons between ad spend (left Y-axis) and conversion rates (right Y-axis)",
+    "Climate researchers displaying temperature anomalies over 50 years with streamgraph stacking to highlight deviation patterns",
+    "Startup CFOs comparing quarterly revenue streams across multiple products using 100% stacked areas to demonstrate market share shifts",
+    "Social media engineers tracking API rate limits versus actual usage through stepwise area charts with discontinuous data gaps"
   ]
 }

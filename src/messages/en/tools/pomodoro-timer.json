@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Pomodoro Timer is a practical online tool that helps you quickly complete various tasks. Using Pomodoro Timer, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Pomodoro Timer can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Pomodoro Timer immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Pomodoro Timer is a specialized productivity tool that implements the Pomodoro Technique, a time management method developed by Francesco Cirillo in the late 1980s. This technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. The tool is designed to help users maintain focus and manage their time effectively, reducing the risk of burnout and increasing overall productivity. The Pomodoro Timer features a user-friendly interface that allows for customization of work and break intervals, as well as the ability to track the number of completed Pomodoros. Technically, the timer operates on a client-side JavaScript framework, ensuring low latency and smooth performance. It also supports local storage to save user preferences, making it easy to resume sessions. The timer can be paused, reset, and customized to fit various work environments and personal preferences, making it a versatile tool for a wide range of users.",
   "usage_steps": [
-    "Open the Pomodoro Timer tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Step 1: Open the Pomodoro Timer tool on the website and click on the 'Customize' button to set your preferred work and break intervals.",
+    "Step 2: In the 'Work Interval' field, enter the number of minutes you want to dedicate to focused work (e.g., 25 minutes).",
+    "Step 3: In the 'Short Break' field, specify the duration of your short breaks (e.g., 5 minutes). You can also set a 'Long Break' interval, which is typically taken after four Pomodoros (e.g., 15-30 minutes).",
+    "Step 4: Once your intervals are set, click the 'Start' button to begin the first Pomodoro. The timer will count down from your specified work interval.",
+    "Step 5: When the work interval ends, a short break will automatically begin. During this time, you can take a quick break to rest your mind and body.",
+    "Step 6: After the short break, the timer will resume the next work interval. Continue this cycle until you complete a set of four Pomodoros, at which point a long break will be initiated."
   ],
   "usage_examples": [
-    "Use Pomodoro Timer to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: A software developer uses the Pomodoro Timer to manage their coding sessions. They set the work interval to 25 minutes and the short break to 5 minutes, allowing them to maintain focus while preventing mental fatigue.",
+    "Example 2: A freelance writer uses the tool to structure their writing time. By setting the work interval to 45 minutes and the short break to 10 minutes, they can work in longer, more productive blocks while still taking regular breaks to recharge.",
+    "Example 3: A college student uses the Pomodoro Timer to study for exams. They set the work interval to 30 minutes and the short break to 5 minutes, helping them stay on track and avoid distractions during study sessions.",
+    "Example 4: A graphic designer uses the tool to manage client projects. By setting the work interval to 50 minutes and the short break to 10 minutes, they can maintain high levels of creativity and productivity, while also taking breaks to rest their eyes and refresh their mind."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSONPath Tester is a practical online tool that helps you quickly complete various tasks. Using JSONPath Tester, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSONPath Tester can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSONPath Tester immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The JSONPath Tester is a specialized tool for developers to validate and debug JSONPath expressions against structured JSON data. Technically, it parses JSON input and evaluates JSONPath queries using ECMA 404-compliant syntax, supporting features like array slicing, wildcard matching, and filter expressions. This tool addresses the critical need for precise data extraction in API development, where engineers must verify that their JSONPath queries correctly target nodes in complex hierarchical data structures. Unlike basic validators, this tool provides real-time visualization of matched nodes, displaying their absolute paths and values in a collapsible tree view. The engine employs a two-pass parsing strategy: first normalizing JSON syntax, then executing the JSONPath evaluation context against the document object model. Developers benefit from error diagnostics that pinpoint syntax issues in queries, including incorrect bracket notation or invalid operator usage. This tool is essential for scenarios requiring validation of nested data queries, such as testing GraphQL response handlers or debugging microservices data transformations.",
   "usage_steps": [
-    "Open the JSONPath Tester tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Paste valid JSON in the left-side editor or load from a URI using the 'Import JSON' button",
+    "Enter JSONPath expression in the dedicated query input field using dot notation (e.g., $.store.books[*].title)",
+    "Click 'Highlight Matches' to visualize selected nodes in the JSON tree with color-coded indicators",
+    "Use the 'Query Validation' panel to review syntax errors or warnings in real time",
+    "Toggle 'Raw Output' mode to view extracted values in plain text format suitable for scripting",
+    "Export results as JSON array or CSV using the 'Download Output' dropdown menu"
   ],
   "usage_examples": [
-    "Use JSONPath Tester to process your data",
-    "Get processing results quickly without waiting"
+    "Validating that a $.employees[?(@.department='engineering')] query correctly filters staff records in an HR API response",
+    "Extracting $.transactions[].amount values from a payment gateway's JSON response for batch processing scripts",
+    "Debugging a failing $.inventory.levels[(@.stock<10)] filter to identify low-stock products in an e-commerce system",
+    "Comparing $.user.preferences.theme values across different user segments for A/B testing configuration"
   ]
 }

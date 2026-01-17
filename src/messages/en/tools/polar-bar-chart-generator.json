@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Polar Bar Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Polar Bar Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Polar Bar Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Polar Bar Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Polar Bar Chart Generator is a web-based data visualization tool that transforms numerical datasets into radial bar charts using polar coordinate systems. Unlike Cartesian charts, this tool maps categorical variables to angular positions (theta-axis) and quantitative values to radial distances (r-axis), enabling visualization of cyclical patterns, directional distributions, or periodic data. Users need this tool to analyze phenomena like seasonal trends, compass-direction frequencies, or clock-angle relationships where radial symmetry reveals insights that linear charts obscure. Built with D3.js and SVG.js rendering engines, the tool converts user input into polar-coordinate DOM elements, applying mathematical transformations (r = k*value, θ = 2π*i/n) to position bars around a central origin. Advanced features include adjustable radial scales, categorical angle binning, and multi-series color encoding with WebGL-accelerated gradients. Exported charts maintain vector precision in SVG format or raster clarity at 300DPI PNG resolution, suitable for academic publications or dashboard integrations.",
   "usage_steps": [
-    "Open the Polar Bar Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Access the Data Input Panel and enter values in the theta-column (categories) and r-column (magnitude) format, or paste a TSV/CSV with header rows",
+    "Adjust the Configuration Sidebar to set radial scale type (linear/logarithmic), specify theta-axis intervals (degrees/radians), and enable/disabled grid overlays",
+    "Customize visual properties using the Theme Builder: select diverging color schemes, modify bar widths (min 5° to max 90°), and toggle value labels at bar tips",
+    "Use the Polar Transformation Controls to apply smoothing splines or stepwise transitions between radial segments",
+    "Preview the chart in the Canvas Viewer, where hover interactions display precise theta/r coordinates and data point values",
+    "Download results via the Export Toolbar, choosing between responsive SVG with embedded CSS or PNG files with transparent backgrounds"
   ],
   "usage_examples": [
-    "Use Polar Bar Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Meteorologists visualizing wind direction frequency distributions across 16 compass points with varying intensity levels",
+    "Retail analysts mapping weekly sales cycles to identify peak performance hours in 24-period radial timelines",
+    "Biologists displaying cell morphology angles measured in degrees from microscopy imaging datasets",
+    "Sports analysts comparing player shooting accuracy across 8 court zones in basketball using concentric radial heat maps"
   ]
 }

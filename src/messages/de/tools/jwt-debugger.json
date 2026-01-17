@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der JWT-Debugger dekodiert und verifiziert JSON Web Tokens. Zeigen Sie Header, Payload an und verifizieren Sie Signaturen mit geheimen Schlüsseln oder öffentlichen Schlüsseln für RS256-Algorithmen.",
+  "detailed_description": "Der JWT Debugger ist ein spezialisierter Online-Analyzer für JSON Web Tokens (RFC 7519), der Entwicklern ermöglicht, Token-Strukturen zu dekodieren, deren Integrität zu prüfen und Sicherheitslücken aufzudecken. Das Tool zerlegt Tokens in ihre drei Kernelemente: Header, Payload und Signature, und führt automatisierte Validierungsschritte durch, darunter Base64Url-Decodierung, HMAC-SHA256- oder RSA-Signaturverifikation sowie die Überprüfung kritischer Claims wie 'exp' (Expiration Time) und 'nbf' (Not Before). Entwickler benötigen dieses Instrument, um Authentifizierungsprobleme in OAuth2/OpenID Connect-Flows zu diagnostizieren, sicherzustellen, dass Tokens mit den erwarteten Verschlüsselungsparametern signiert wurden, und zu vermeiden, dass abgelaufene oder manipulierte Tokens in Sicherheitssystemen akzeptiert werden. Technisch arbeitet das Tool mit Echtzeit-Fehlermeldungen, die kryptografische Mismatches, ungültige JWK-Formate oder fehlende Claims präzise identifizieren, und bietet gleichzeitig eine strukturierte Ansicht der dekodierten Nutzdaten im Klartext.",
   "usage_steps": [
-    "JWT-Token einfügen",
-    "Dekodierten Header und Payload anzeigen",
-    "Geheimen oder öffentlichen Schlüssel eingeben",
-    "Signatur verifizieren",
-    "Ablauf und Claims prüfen"
+    "Fügen Sie den JWT in das Textfeld 'Token-Eingabe' ein, das automatisch die drei Segmente (Header, Payload, Signature) erkennt.",
+    "Wählen Sie im Dropdown-Menü 'Signaturalgorithmus' den erwarteten Verschlüsselungstyp (z.B. HS256, RS256) aus, um Signaturen korrekt zu validieren.",
+    "Aktivieren Sie das Kontrollkästchen 'Öffentlichen Schlüssel verwenden' und laden Sie ein PEM-Zertifikat hoch, wenn asymmetrische Verschlüsselung (z.B. RS256) genutzt wird.",
+    "Klicken Sie auf 'Signatur überprüfen', um kryptografische Konsistenz zwischen Header/Payload und der angegebenen Signatur zu testen.",
+    "Überprüfen Sie im Abschnitt 'Claim-Analyse' die Zeitstempel ('exp', 'nbf') und prüfen Sie, ob kundenspezifische Claims (z.B. 'roles') erwartete Werte enthalten.",
+    "Nutzen Sie den 'Fehler-Code-Explorer', um detaillierte Hinweise zu Validierungsfehlern wie 'Ungültiger HMAC-Wert' oder 'Token abgelaufen' zu erhalten."
   ],
   "usage_examples": [
-    "Authentifizierungsprobleme debuggen",
-    "Token-Signaturen verifizieren",
-    "Token-Claims inspizieren"
+    "Ein Backend-Entwickler analysiert einen von einem OAuth-Provider zurückgegebenen JWT, um sicherzustellen, dass die Signatur mit dem konfigurierten JWK-Set übereinstimmt.",
+    "Ein QA-Tester identifiziert durch das Tool, dass ein Token trotz gültiger Signatur abgelehnt wird, weil der 'aud' (Audience)-Claim nicht mit dem Zielserver übereinstimmt.",
+    "Ein DevOps-Ingenieur überprüft, ob ein selbstsignierter JWT für ein Microservice-System korrekte 'iss' (Issuer)-Metadaten enthält, um Token-Spoofing zu verhindern.",
+    "Ein Sicherheitsanalyst nutzt das Tool, um zu erkennen, dass ein Token eine zu lange Gültigkeitsdauer ('exp') aufweist, was das Risiko bei Schlüsselverlust erhöht."
   ]
 }

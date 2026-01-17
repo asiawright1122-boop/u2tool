@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Diviseur d'images est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Diviseur d'images, vous pouvez traiter facilement diverses données sans installer de logiciels ou de plugins. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Diviseur d'images peut vous aider à améliorer l'efficacité de votre travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur n'importe quel serveur. Utilisez immédiatement le Diviseur d'images pour découvrir des services en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le séparateur d'images permet de découper une image en plusieurs segments à l'aide d'une grille paramétrable. Techniquement, l'outil analyse les dimensions de l'image source (en pixels) et applique un algorithme de segmentation basé sur les valeurs de lignes et colonnes définies par l'utilisateur. Chaque segment est généré en préservant la résolution originale grâce à une interpolation bicubique lors du redimensionnement. Le format de sortie (PNG, JPEG ou WEBP) est configurable, avec un contrôle précis des marges et du chevauchement entre les pièces. Ce tool est essentiel pour créer des galeries interactives, préparer des assets pour le développement web ou imprimer des affiches en mosaïque. Contrairement aux outils basiques, il permet de gérer des ratios non uniformes et d'exporter les segments en un seul clic, avec un prévisualisation en temps réel de la grille appliquée.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Diviseur d'images",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Téléchargez l'image via le bouton 'Importer une image' (formats PNG, JPEG, WEBP jusqu'à 20 Mo).",
+    "Ajustez le nombre de lignes avec le curseur 'Nombre de lignes' (de 1 à 20).",
+    "Définissez les colonnes en utilisant le champ numérique 'Colonnes souhaitées' (1 à 20).",
+    "Réglez les marges internes en pixels via les champs 'Espacement horizontal' et 'Espacement vertical'.",
+    "Sélectionnez le format de sortie dans le menu déroulant 'Format d'export' (PNG par défaut).",
+    "Cliquez sur 'Générer les segments' puis téléchargez le dossier ZIP contenant tous les fichiers découpés."
   ],
   "usage_examples": [
-    "Utilisez le Diviseur d'images pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un designer web crée une galerie d'art responsive en découpant une image 4K en 3x3 pour un effet de zoom par segment.",
+    "Un marketeur assemble une story Instagram divisée en 6 parties égales pour un affichage linéaire sur 24h.",
+    "Un imprimeur prépare une affiche A0 en 4 sections A4 avec 5px de marge pour l'assemblage physique.",
+    "Un développeur de jeux vidéo extrait manuellement les frames d'un spritesheet en 8x8 pour une animation 2D."
   ]
 }

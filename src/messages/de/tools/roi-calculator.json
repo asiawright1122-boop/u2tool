@@ -1,16 +1,17 @@
 {
-  "detailed_description": "Der ROI-Rechner ist ein umfassendes Investitionsanalyse-Tool, das Ihnen hilft, die Kapitalrendite sofort zu berechnen. Geben Sie Ihre Anfangsinvestition, den Endwert und den Zeitraum ein, um den ROI-Prozentsatz, annualisierte Renditen und Gewinn-/Verlustanalyse zu erhalten. Perfekt zur Bewertung der Investitionsleistung und zum Vergleich verschiedener Investitionsmöglichkeiten.",
+  "detailed_description": "Der ROI Calculator ermöglicht eine präzise Bewertung von Investitionsrenditen durch kombinierte Analyse von Standard-ROI, annualisierter Rendite (CAGR) und detaillierter Gewinnstruktur. Technisch berechnet das Tool die Gesamtrendite mittels der Formel (Endwert - Anfangsinvestition) / Anfangsinvestition * 100, während die annualisierte Rendite durch den Compound Annual Growth Rate-Algorithmus [(1 + Gesamtrendite)^(1/Laufzeit in Jahren) -1] * 100 ermittelt wird. Besonders ist die Zerlegung des Gewinns in absoluten Betrag, prozentuale Anteilsverhältnisse und Zeitkomponenten. Für unregelmäßige Laufzeiten verwendet der Rechner tagesgenaue Berechnungen statt pauschaler Jahresannäherung. Entwickler profitieren von der Integration von Finanzmathematik-Modulen, die dynamisch Wechselkurseinflüsse kompensieren und komplexe Cashflow-Szenarien verarbeiten. Der Tool ist essentiell für Kapitalanleger bei Bewertung von Private-Equity-Deals, für Unternehmen zur Optimierung von M&A-Strategien oder bei der Analyse von Venture-Capital-Portfolios mit mehrjährigen Haltedauern.",
   "usage_steps": [
-    "Geben Sie Ihren Anfangsinvestitionsbetrag ein",
-    "Geben Sie den Endwert Ihrer Investition ein",
-    "Geben Sie den Zeitraum in Jahren oder Monaten an",
-    "Sehen Sie den berechneten ROI-Prozentsatz",
-    "Überprüfen Sie den annualisierten ROI zum Vergleich",
-    "Sehen Sie Ihren Gesamtgewinn oder -verlust"
+    "Wählen Sie im Dropdown-Menü die Währung Ihrer Investition (EUR, USD oder GBP).",
+    "Geben Sie das genaue Investitionsdatum im Datumsfeld ein oder verwenden Sie den Kalenderpicker.",
+    "Tragen Sie den ursprünglichen Investitionsbetrag in das Feld 'Anfangskapital' ein.",
+    "Füllen Sie entweder den aktuellen Endwert oder das Exit-Datum für automatische Laufzeitberechnung.",
+    "Aktivieren Sie die Checkbox 'Detaillierte Gewinnanalyse' für die Aufschlüsselung nach Zinseszins-Effekten.",
+    "Klicken Sie auf 'Berechnen' und interpretieren Sie das Ergebnispanel mit Grafik-Overlay der Renditeverläufe."
   ],
   "usage_examples": [
-    "Aktieninvestitionsrenditen über 3 Jahre berechnen",
-    "ROI verschiedener Investitionsoptionen vergleichen",
-    "Immobilieninvestitionsleistung analysieren"
+    "Ein Angel-Investor berechnet die Rendite seines 500.000€ Investments in ein Tech-Startup, das nach 3 Jahren und 8 Monaten für 2,3Mio€ verkauft wird, inklusive Berücksichtigung von Follow-up-Finanzierungen.",
+    "Ein Immobilienfonds vergleicht die annualisierte Rendite zweier Objekte: Eines mit 12% p.a. über 5 Jahre, ein anderes mit 15% p.a. über 3 Jahre mit zusätzlichen Sanierungskosten.",
+    "Ein Hedgefonds-Manager analysiert die tatsächliche Performance seines Portfolios mit nicht-linearen Cashflows durch Quartalsweise Kapitalzu- und -abflüsse.",
+    "Ein FinTech-Unternehmen berechnet die ROI-Kennzahl seiner Marketingkampagne, wobei die Customer Acquisition Costs gegen den durchschnittlichen Lebenszeitwert der gewonnenen Kunden gestellt werden."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Dispersión es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Dispersión, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Dispersión puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Dispersión inmediatamente para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos de Dispersión es una herramienta técnica para visualizar relaciones entre variables numéricas en un plano cartesiano, ideal para identificar correlaciones positivas, negativas o patrones de agrupamiento. Permite a científicos de datos, analistas y académicos cargar conjuntos de datos estructurados (CSV, TSV o JSON) y mapear columnas a ejes X/Y con opciones de personalización avanzada, como escalado logarítmico, ajuste de intervalos de valores y codificación por colores de series de datos. El motor interno procesa los datos en el navegador mediante bibliotecas de renderizado vectorial, garantizando privacidad y compatibilidad con SVG para gráficos escalables sin pérdida de calidad. Los usuarios pueden exportar resultados en PNG para informes o SVG para integración web responsiva. Características técnicas clave incluyen soporte para hasta 10,000 puntos de datos, ajuste automático de ejes, y exportación de configuraciones en formato JSON para reutilización.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Dispersión",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Accede al generador y haz clic en 'Importar Datos' para cargar tu archivo CSV/TSV/JSON.",
+    "2. Mapea columnas a los ejes X e Y usando los menús desplegables 'Eje Horizontal' y 'Eje Vertical'.",
+    "3. Personaliza las escalas con los deslizadores 'Rango Mínimo/Máximo' para ajustar la vista del plano cartesiano.",
+    "4. Configura marcadores en 'Estilo de Serie': selecciona colores, formas (círculos, triángulos) y tamaños basados en variables adicionales.",
+    "5. Añade anotaciones con el botón 'Agregar Etiqueta' para resaltar valores atípicos o clusters específicos.",
+    "6. Exporta el gráfico final con 'Descargar SVG/PNG' o copia el código SVG para integrarlo en aplicaciones web."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Dispersión para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un analista financiero estudia la correlación entre el gasto en publicidad y el ROI de campañas trimestrales, usando escalas logarítmicas para datos heterogéneos.",
+    "Un investigador ambiental analiza la relación entre la temperatura media mensual y el índice de contaminación en ciudades, codificando por colores los niveles de humedad.",
+    "Un equipo médico evalúa la dispersión de valores de IMC vs. presión arterial sistólica en pacientes, identificando patrones de riesgo cardiovascular.",
+    "Un docente crea gráficos interactivos para enseñar estadística, exportando configuraciones JSON para replicar ejercicios con diferentes muestras de estudiantes."
   ]
 }

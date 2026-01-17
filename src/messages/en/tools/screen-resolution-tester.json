@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Screen Resolution Tester displays your current screen resolution, viewport size, device pixel ratio, and color depth. Test different resolutions by opening new windows at specific sizes. Essential for web developers testing responsive designs.",
+  "detailed_description": "The Screen Resolution Tester is a precise diagnostic utility that exposes granular display metrics including physical resolution, viewport dimensions, device pixel ratio (DPR), screen orientation, color depth, and supported media queries. Developers use this tool to debug responsive layouts by correlating CSS breakpoints with actual rendering boundaries, identify pixel density discrepancies affecting image scaling, and validate cross-device compatibility. The tool leverages JavaScript's Window.devicePixelRatio, Screen.orientation, and CSSOM APIs to calculate sub-pixel accurate measurements, while using matchMedia to parse active media query states. Technical data includes viewport scaling factors, CSS pixel conversion ratios, and real-time orientation change detection. Unlike basic resolution detectors, this tool differentiates between device pixels and CSS pixels, displays available screen area excluding browser UI chrome, and provides actionable insights into how modern browsers interpret resolution-dependent styles.",
   "usage_steps": [
-    "View your current screen information",
-    "Check viewport size and device pixel ratio",
-    "Click common device presets to test those resolutions",
-    "Enter custom dimensions to test specific sizes"
+    "1. Open the tool in your target browser and device combination",
+    "2. Check the 'Physical Resolution' panel to view native display dimensions in device pixels",
+    "3. Analyze 'Viewport Metrics' showing CSS pixel dimensions and scaling ratio relative to document root",
+    "4. Use the 'Pixel Density Inspector' to verify devicePixelRatio values and calculate effective PPI",
+    "5. Tilt device or resize window to observe orientation changes in the 'Orientation Monitor'",
+    "6. Enter custom breakpoints in the 'Media Query Tester' to validate active CSS media query states"
   ],
   "usage_examples": [
-    "Test responsive web designs",
-    "Check display specifications",
-    "Verify viewport sizes for different devices"
+    "Debugging why a 768px media query activates at 749 CSS pixels on a high-DPR tablet by comparing devicePixelRatio calculations",
+    "Identifying layout shifts caused by browser chrome hiding on mobile devices through viewport dimension comparisons",
+    "Validating that 2x/3x image src-sets activate correctly based on reported device pixel density",
+    "Testing responsive navigation collapse points across portrait/landscape orientations on hybrid devices"
   ]
 }

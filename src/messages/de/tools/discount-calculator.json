@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Rabattrechner ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Rabattrechner können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und es effizient nutzen können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Rabattrechner kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser, wodurch die Sicherheit Ihrer Daten gewährleistet ist und nicht auf einen Server hochgeladen wird.",
+  "detailed_description": "Der Rabattrechner ist ein präzises mathematisches Tool, das komplexe Preisberechnungen unter Berücksichtigung von Rabatten, Steuern und Währungsumrechnungen durchführt. Technisch gesehen implementiert der Rechner eine mehrstufige Algorithmik, die Prozent- und Festbetragsrabatte verarbeitet, inklusive Mehrfachrabattstaffelungen (z.B. 10 % Rabatt auf den Grundpreis plus zusätzliche 5 % bei Mengenkäufen). Die Logik basiert auf der Formel: Endpreis = (Bruttopreis × (1 - Rabattsatz)) + anwendbare Steuern. Benutzer benötigen dieses Tool für präzise Kalkulationen in E-Commerce-Szenarien, bei Finanzplanungen oder zur Optimierung von Einzelhandelsmargen. Besonders bei gemischten Rabattmodellen (z.B. saisonale Aktionen plus Kundenloyalitätsboni) verhindert das Tool Rechenfehler durch verkettete Prozentberechnungen. Die Eingabefelder validieren automatisch numerische Werte, während der Backend-Algorithmus zwischen ein- und mehrstufigen Rabattanwendungen unterscheidet. Ergebnisse werden inklusive Zwischenwerten wie Zwischensummen und Steuerkomponenten ausgegeben, um Transparenz zu gewährleisten.",
   "usage_steps": [
-    "Rabattrechner-Tool-Seite öffnen",
-    "Inhalt zum Verarbeiten in das Eingabefeld eingeben oder einfügen",
-    "Tool-Optionen und Einstellungen nach Bedarf anpassen",
-    "Auf die Verarbeitungsschaltfläche klicken, um Ergebnisse anzuzeigen",
-    "Verarbeitete Ergebnisse kopieren oder herunterladen"
+    "Geben Sie den Ursprünglichen Preis (z.B. 199,99 €) in das Eingabefeld 'Bruttopreis' ein.",
+    "Wählen Sie den Rabatttyp über den Dropdown 'Typ': Prozent (%) oder Festbetrag (€).",
+    "Aktivieren Sie bei mehreren Rabatten die Option 'Mehrstufige Rabatte hinzufügen' und geben Sie zusätzliche Werte ein.",
+    "Setzen Sie den Haken bei 'Mehrwertsteuer einberechnen', falls der angezeigte Preis inkl. Steuern sein soll.",
+    "Wählen Sie über das Währungssymbol (€, $, £) die gewünschte Ausgabewährung aus.",
+    "Klicken Sie auf 'Berechnen', um den rabattierten Endpreis sowie die Einsparungssumme anzuzeigen."
   ],
   "usage_examples": [
-    "Rabattrechner verwenden, um Ihre Daten zu verarbeiten",
-    "Verarbeitungsergebnisse schnell ohne Wartezeit erhalten"
+    "Ein Online-Händler berechnet den Verkaufspreis eines Produkts mit 15 % Saisonrabatt und 8 % Mehrwertsteuer.",
+    "Ein Kunde vergleicht zwei Angebote: 20 % Rabatt auf 499 € vs. 100 € Fixrabatt auf 550 € inkl. Versandkosten.",
+    "Ein Lehrer erstellt eine Unterrichtsaufgabe zur Verkettung von Rabatten: 10 % Clubmitgliedschaftsrabatt叠加 auf 5 % Tagesangebot.",
+    "Ein Eventmanager kalkuliert die Gesamtkosten für 50 Catering-Gutscheine mit staffelweisem Mengenrabatt (ab 25 Stück 12 %)."
   ]
 }

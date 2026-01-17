@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Política de Cookies es una herramienta práctica en línea que te ayuda a completar rápidamente varias tareas. Usando el Generador de Política de Cookies, puedes procesar diversos datos sin instalar ninguna software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y usarla eficientemente. Ya sea que seas un desarrollador, diseñador o usuario general, el Generador de Política de Cookies puede ayudarte a mejorar la eficiencia de tu trabajo. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no se suban a ningún servidor. Utiliza el Generador de Política de Cookies inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El generador de políticas de cookies es una herramienta técnica que automatiza la creación de documentos de cumplimiento normativo para sitios web, enfocándose específicamente en el manejo de cookies y tecnologías de seguimiento. Utiliza un motor de plantillas basado en JSON para estructurar políticas según las respuestas del usuario sobre tipos de cookies (estrictamente necesarias, de rendimiento, de publicidad, etc.), mecanismos de consentimiento explícito (checkboxes, banners dinámicos) y políticas de terceros. La herramienta aplica lógica condicional para incluir cláusulas obligatorias bajo regulaciones como el GDPR (UE) o CCPA (California), calculando automáticamente niveles de riesgo de datos y requisitos de retención. Integra un analizador léxico que valida la coherencia terminológica con estándares legales internacionales, garantizando que los términos técnicos como 'identificadores persistentes', 'seguimiento cruzado de dominios' o 'procesamiento de datos biométricos' estén correctamente contextualizados.",
   "usage_steps": [
-    "Abre la página del Generador de Política de Cookies",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del generador según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Selecciona el tipo de sitio web (e-commerce, blog, aplicación web) en el menú desplegable 'Categoría del Sitio'",
+    "2. Marca los checkboxes correspondientes a las categorías de cookies utilizadas (analíticas, publicitarias, de personalización, etc.)",
+    "3. Completa el campo 'Dominios de Terceros' con los proveedores de cookies externas (Google Analytics, Meta Pixel, etc.)",
+    "4. Configura las opciones de consentimiento mediante el selector 'Nivel de Autorización' (opt-in explícito, consentimiento implícito, etc.)",
+    "5. Elige el marco regulatorio aplicable (GDPR+LGPD, CCPA, solo ePrivacy) usando el control deslizante 'Jurisdicción'",
+    "6. Descarga el documento generado en formato HTML o PDF, con enlaces anclados a cláusulas específicas para fácil implementación"
   ],
   "usage_examples": [
-    "Utiliza el Generador de Política de Cookies para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un startup de fintech necesita implementar una política de cookies que cumpla con requisitos estrictos de protección de datos financieros en la UE",
+    "Un blog de viajes que utiliza redes publicitarias de terceros debe documentar el uso de cookies de seguimiento cruzado para usuarios europeos",
+    "Una aplicación educativa requiere una política específica para cookies que recopilan datos de menores de edad, cumpliendo con normativas de protección infantil",
+    "Un desarrollador de plugins WordPress genera políticas de cookies dinámicas para múltiples clientes, adaptadas automáticamente a cada dominio y configuración técnica"
   ]
 }

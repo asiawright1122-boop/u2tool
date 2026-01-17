@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Convertisseur Binaire à Dcimal est un outil en ligne pratique qui vous aide à réaliser rapidement diverses tâches. Utilisez le Convertisseur Binaire à Dcimal pour traiter divers types de données sans avoir à installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Convertisseur Binaire à Dcimal peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et ne sont pas téléchargées sur aucun serveur. Utilisez le Convertisseur Binaire à Dcimal immédiatement pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Cet outil réalise des conversions précises entre les systèmes de numération binaire, décimal et hexadécimal. Il permet notamment de transformer une séquence binaire (base 2) en valeur décimale (base 10) en appliquant l'algorithme de décomposition par puissances pondérées (2^n), ou en hexadécimal (base 16) via un regroupement par quartets. La conversion inverse utilise la méthode des divisions successives pour le décimal vers binaire, et l'expansion directe des nibbles pour l'hexadécimal. Ce convertisseur intègre un analyseur syntaxique qui valide automatiquement les caractères binaires (0/1) et hexadécimaux (0-9, A-F), avec gestion des erreurs d'entrée. Indispensable pour les développeurs manipulant des masques de sous-réseau CIDR, les programmeurs de microcontrôleurs effectuant des opérations logiques bit à bit, ou les étudiants en informatique réalisant des conversions manuelles pour comprendre les arithmétiques de bas niveau. Le traitement en mémoire utilise des entiers arbitrairement longs pour éviter les dépassements, contrairement aux calculatrices standards limitées à 64 bits.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Convertisseur Binaire à Dcimal",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la case d'entrée",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Sélectionnez le mode de conversion désiré via le menu déroulant (Bin→Déc, Déc→Hex, etc.)",
+    "2. Saisissez votre valeur binaire dans le champ d'entrée, sans espaces ni préfixes (ex: 11010110)",
+    "3. Activez l'option 'Préfixe 0x' si vous travaillez avec des hexadécimaux standards",
+    "4. Cliquez sur le bouton 'Convertir' pour déclencher le traitement algorithmique",
+    "5. Consultez les résultats synchronisés en temps réel dans les trois bases au-dessus de l'interface",
+    "6. Utilisez le bouton 'Échanger' pour inverser automatiquement la direction de conversion"
   ],
   "usage_examples": [
-    "Utilisez le Convertisseur Binaire à Dcimal pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un administrateur réseau convertit un masque de sous-réseau binaire (11111111.11111111.11111111.0) en notation décimale pointée (255.255.255.0)",
+    "Un développeur C++ valide la représentation hexadécimale d'une couleur RVB #4A2F8C en comparant avec ses composantes binaires",
+    "Un étudiant en architecture des ordinateurs démontre l'équivalence entre 0b1000000000000000 (16 bits) et son équivalent décimal 32768",
+    "Un ingénieur en embarqué interprète un dump hexadécimal de registres mémoire en valeurs décimales pour le débogage bas-niveau"
   ]
 }

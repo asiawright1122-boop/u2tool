@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Ring Progress Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Ring Progress Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Ring Progress Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Ring Progress Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Ring Progress Chart Generator is a specialized tool for creating dynamic, data-driven circular progress indicators using SVG path animations and responsive web technologies. This tool enables developers to visualize percentage-based completion metrics through customizable ring charts that support gradient color transitions, variable stroke widths, and animated value rendering. Built with D3.js and HTML5 Canvas integration options, it generates resolution-independent vector graphics that adapt to different screen sizes while maintaining precise aspect ratios. Developers can control arc interpolation, implement easing functions for smooth transitions, and configure accessible ARIA attributes for screen readers. The tool's unique capability to layer multiple concentric rings with independent data sets allows complex visual storytelling, such as displaying simultaneous project milestones or multi-metric dashboards. Technical advantages include WebAssembly-powered performance optimization for large datasets and compatibility with modern frontend frameworks like React and Vue.js through exportable component templates.",
   "usage_steps": [
-    "Open the Ring Progress Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Configure Chart Dimensions: Input pixel values for outer diameter and inner radius to define ring thickness and overall size",
+    "2. Define Color Schemes: Use HEX/RGB pickers to set primary progress color, background track color, and hover-state accent gradients",
+    "3. Adjust Stroke Properties: Select stroke-linecap style (butt, round, square) and input numerical values for dash-array patterns",
+    "4. Input Data Metrics: Enter percentage values (0-100) with decimal precision and associate optional value labels for multi-ring configurations",
+    "5. Enable Animations: Choose tweening duration (ms) and easing functions (linear, ease-in, ease-out) for dynamic value transitions",
+    "6. Export Code: Copy generated SVG markup with embedded CSS or download as optimized PNG with transparent background option"
   ],
   "usage_examples": [
-    "Use Ring Progress Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "1. Project management dashboard displaying sprint completion percentage with red-to-green gradient indicating approaching deadlines",
+    "2. E-commerce checkout page showing multi-stage form completion progress with haptic feedback on segment transitions",
+    "3. System health monitor visualizing server resource utilization across CPU, memory, and storage in concentric animated rings",
+    "4. Gamification interface tracking daily fitness goals with segmented rings that reveal achievement badges at specific percentage thresholds"
   ]
 }

@@ -1,16 +1,17 @@
 {
-  "detailed_description": "Mortgage Calculator is a comprehensive home loan tool that helps you calculate monthly payments, total interest, and view detailed amortization schedules. Enter home price, down payment, interest rate, and loan term to get instant results. Support for extra payments to see how you can pay off your mortgage faster.",
+  "detailed_description": "The Mortgage Calculator employs the standard mortgage payment formula, M = P[r(1+r)^n]/[(1+r)^n-1], to compute monthly payments based on principal, annual percentage rate (APR), and loan term. It integrates additional variables like property taxes, insurance, and HOA fees to produce accurate total monthly payments. Users benefit from precise amortization schedules that break down each payment into principal and interest components, revealing how equity builds over time. The tool's backend converts APR to monthly interest rates by dividing by 12 and compounds payments accordingly, while the amortization engine iterates through each payment period to track remaining balances. Unique features include dynamic recalculation of overpayment scenarios and escrow analysis for tax/insurance adjustments. This tool is essential for financial planning, loan term comparison, and understanding long-term interest costs.",
   "usage_steps": [
-    "Enter the home price",
-    "Enter your down payment amount",
-    "Set the annual interest rate",
-    "Select the loan term (10-30 years)",
-    "Optionally add extra monthly payments",
-    "View monthly payment and amortization schedule"
+    "Enter loan principal in USD using the currency field (e.g., $250,000).",
+    "Input annual percentage rate (APR) via the percentage slider (3.25% to 6.50% range).",
+    "Select loan term from dropdown options (15, 20, or 30 years).",
+    "Adjust optional escrow fields: property taxes ($/year), insurance premiums, and HOA fees.",
+    "Click 'Calculate' to generate payment breakdown and amortization table.",
+    "Use 'Export Schedule' to download CSV or 'Overpayment' tab to simulate extra payments."
   ],
   "usage_examples": [
-    "Calculate monthly payments for a $300,000 home",
-    "Compare 15-year vs 30-year mortgage options",
-    "See how extra payments reduce total interest"
+    "A first-time homebuyer compares 15-year vs. 30-year loans: $300k principal, 5.25% APR shows $2,387/month (30Y) vs. $2,072/month (15Y) with $162k vs. $73k total interest.",
+    "A refinancing homeowner inputs current mortgage balance ($180k), new APR (4.5%), and remaining 25 years to assess monthly savings against existing $1,450 payments.",
+    "Real estate investor calculates cash flow for a $450k rental property with 4.75% APR, 30-year loan, $3k/year taxes, and $1k insurance to determine breakeven rent at $2,600/month.",
+    "Homeowner explores overpayment impact: Adding $200/month to a $220k, 4% APR, 30-year loan reduces total interest by $34k and shortens the term by 6 years."
   ]
 }

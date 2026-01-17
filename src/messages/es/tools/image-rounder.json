@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Redondeador de Imágenes es una herramienta en línea práctica que te ayuda a completar rápidamente varias tareas. Con el Redondeador de Imágenes, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Redondeador de Imágenes puede ayudarte a mejorar la eficiencia en tu trabajo. Todos los procesamientos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Redondeador de Imágenes ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Image Rounder permite transformar imágenes mediante la aplicación de esquinas redondeadas o formas circulares mediante técnicas de procesamiento de imágenes. Utiliza algoritmos de máscara de recorte para modificar los píxeles de los bordes, aplicando radios de curvatura definidos mediante valores en píxeles o porcentajes. Soporta formatos raster (PNG, JPEG) y vectoriales (SVG), manteniendo la transparencia en archivos PNG-24. Internamente, el motor procesa las coordenadas cartesianas de cada píxel para generar un clip-path CSS-compatible o un trazado vectorial. Los usuarios necesitan esta herramienta para crear avatares circulares para sistemas de autenticación, botones con diseño moderno en interfaces web, miniaturas optimizadas para redes sociales o elementos gráficos para apps móviles. Su motor permite ajustar el radio independientemente por cada esquina (top-left, top-right, bottom-right, bottom-left) y ofrece previsualización en tiempo real con soporte para escalado no destructivo. Al finalizar, genera archivos optimizados listos para producción con compresión ajustable.",
   "usage_steps": [
-    "Abre la página de la herramienta Redondeador de Imágenes",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Haz clic en 'Seleccionar Archivo' para cargar tu imagen desde el explorador de archivos",
+    "Elige entre modo 'Circular' o 'Rectángulo Redondeado' usando los botones de forma en el panel de edición",
+    "Ajusta el radio de redondeo con el slider numérico (rango: 0-500px) o ingresa valores específicos para cada esquina",
+    "Arrastra la imagen en el área de previsualización para alinear el centro del círculo o la posición de las esquinas",
+    "Activa 'Mantener Proporción' para evitar distorsiones durante el recorte",
+    "Descarga el resultado en formato PNG, JPEG o SVG usando el botón 'Exportar' con opciones de compresión"
   ],
   "usage_examples": [
-    "Usa el Redondeador de Imágenes para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Crear avatares circulares para una plataforma de e-learning manteniendo consistencia visual en perfiles de usuarios",
+    "Diseñar botones con esquinas redondeadas en una aplicación web médica para cumplir con estándares de accesibilidad",
+    "Transformar fotos de productos para un catálogo digital con miniaturas de 1:1 ratio y bordes suaves",
+    "Preparar imágenes para una interfaz de app móvil siguiendo las directrices de diseño Material Design con formas geométricas"
   ]
 }

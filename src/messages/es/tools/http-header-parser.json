@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Parser de Encabezados HTTP es una herramienta práctica en línea que te ayuda a completar diversas tareas de manera rápida. Con el Parser de Encabezados HTTP, puedes procesar fácilmente diversos datos sin necesidad de instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Parser de Encabezados HTTP puede ayudarte a mejorar la eficiencia de tu trabajo. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza el Parser de Encabezados HTTP inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Analizador de Encabezados HTTP descompone y organiza encabezados HTTP en un formato legible, proporcionando explicaciones técnicas basadas en estándares como RFC 7230 y HTTP/1.1. Este herramienta permite a desarrolladores inspeccionar la estructura de encabezados de solicitudes o respuestas HTTP, identificando campos como 'Host', 'User-Agent', 'Content-Length', y sus implicaciones en la comunicación cliente-servidor. Es fundamental para diagnosticar problemas de conexión, validar cumplimiento de protocolos, o auditar seguridad en APIs. Al procesar entradas en bruto, el analizador aplica técnicas de tokenización para separar nombres de valores, detecta inconsistencias en el formato (como espacios no válidos o codificaciones incorrectas), y muestra un árbol jerárquico con metadatos de cada encabezado. Los usuarios obtienen no solo la estructura parseada, sino también alertas sobre posibles vulnerabilidades (ej: encabezados 'X-Powered-By' expuestos) y recomendaciones de optimización (ej: compresión 'Accept-Encoding').",
   "usage_steps": [
-    "Abre la página del Parser de Encabezados HTTP",
-    "Ingresa o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Accede al analizador a través de la sección 'Red' en el sitio web.",
+    "2. Pega tus encabezados HTTP en bruto en el área de texto multilínea etiquetada 'Entrada Raw'.",
+    "3. Selecciona el modo de análisis: 'Solicitud' o 'Respuesta' usando el selector de tipo HTTP.",
+    "4. Haz clic en 'Parsear Encabezados' para activar el motor de análisis sintáctico.",
+    "5. Revisa el panel de salida dividido en tres pestañas: 'Estructura', 'Errores' y 'Recomendaciones'.",
+    "6. Exporta resultados en formato JSON o CSV usando los botones de descarga junto a cada sección."
   ],
   "usage_examples": [
-    "Utiliza el Parser de Encabezados HTTP para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "1. Un desarrollador de APIs identifica encabezados faltantes en una respuesta preflight CORS, corrigiendo 'Access-Control-Allow-Headers'.",
+    "2. Un estudiante analiza diferencias entre encabezados HTTP/1.0 y HTTP/1.1 al comparar salidas de dos solicitudes idénticas.",
+    "3. Un auditor de seguridad detecta un encabezado 'Server' con versión específica, exponiendo información crítica para ataques dirigidos.",
+    "4. Un ingeniero de DevOps valida que todos los recursos estáticos incluyan 'Cache-Control' con directivas adecuadas para CDNs."
   ]
 }

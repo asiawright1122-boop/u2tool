@@ -1,16 +1,17 @@
 {
-  "detailed_description": "Le Convertisseur de Devises est un outil complet qui vous aide à convertir instantanément entre plus de 45 devises mondiales. Prise en charge des principales devises comme USD, EUR, GBP, JPY, CNY, ainsi que des devises asiatiques, européennes, américaines et du Moyen-Orient. Les fonctionnalités incluent l'échange rapide de devises, les boutons de montant prédéfini et les informations détaillées sur les taux de change.",
+  "detailed_description": "Notre convertisseur monétaire utilise l'API de la Banque centrale européenne (ECB) pour récupérer des taux de change en temps réel actualisés toutes les 24 heures. Il prend en charge 45 devises majeures, y compris des crypto-monnaies comme le Bitcoin et l'Ethereum. L'outil s'appuie sur un moteur de calcul dynamique qui intègre des mécanismes de mise en cache HTTP pour réduire la latence, tout en respectant les normes ISO 4217 pour les codes de devises. La structure backend utilise Node.js avec le framework Express, tandis que l'interface frontend est construite avec React.js pour une expérience utilisateur interactive. Ce convertisseur est essentiel pour les professionnels du commerce international gérant des paiements multi-devises, les voyageurs planifiant des budgets en devise locale, ou les investisseurs surveillant des portefeuilles diversifiés. La technologie CORS permet l'intégration sécurisée des données financières, et toutes les transactions sont chiffrées via HTTPS.",
   "usage_steps": [
-    "Entrez le montant que vous souhaitez convertir",
-    "Sélectionnez la devise source dans le menu déroulant",
-    "Sélectionnez la devise cible dans le menu déroulant",
-    "Visualisez le montant converti instantanément",
-    "Utilisez le bouton d'échange pour la conversion inverse",
-    "Cliquez sur les montants prédéfinis pour des calculs rapides"
+    "Sélectionnez la devise source dans le menu déroulant supérieur (ex: EUR, USD, JPY)",
+    "Choisissez jusqu'à 5 devises cibles dans la section 'Comparaison' à droite",
+    "Saisissez le montant dans le champ d'entrée central avec précision jusqu'à 6 chiffres significatifs",
+    "Activez le mode 'Calcul inversé' pour obtenir des taux de change indirects",
+    "Utilisez le sélecteur de date pour accéder aux taux historiques (jusqu'à 365 jours)",
+    "Cliquez sur le bouton 'Exporter JSON' pour télécharger les résultats formatés pour l'intégration API"
   ],
   "usage_examples": [
-    "Convertir USD en EUR pour la planification de voyage",
-    "Calculer les taux de change pour les achats internationaux",
-    "Comparer les valeurs des devises entre différents pays"
+    "Une entreprise française calculant le coût exact en USD pour importer des composants électroniques depuis la Chine",
+    "Un voyageur convertissant 1500€ en PLN pour budgétiser un séjour à Varsovie avec taux de change actuel",
+    "Un investisseur comparant la performance en XOF d'un portefeuille crypto contenant BTC et ETH",
+    "Un pigiste international convertissant 850£ d'honoraires en CAD pour déclarer ses revenus canadiens"
   ]
 }

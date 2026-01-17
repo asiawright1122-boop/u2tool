@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Escape de Cadenas/Desescape de Cadenas es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Con Escape de Cadenas/Desescape de Cadenas, puedes procesar fácilmente diversos datos sin instalar ningún software o plugins. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y usarla de manera eficiente. Ya sea que seas un desarrollador, diseñador o usuario general, Escape de Cadenas/Desescape de Cadenas puede ayudarte a mejorar la eficiencia de trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no se suban a ningún servidor. Utiliza Escape de Cadenas/Desescape de Cadenas inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "String Escape/Unescape es un codificador/descodificador de texto que transforma literales entre sus representaciones seguras para JSON, HTML, URL y JavaScript. Técnicamente, el módulo aplica secuencias de escape y reglas de codificación propias de cada formato: en JSON convierte comillas dobles y barras invertidas en \\u0022 y \\u005C, mantiene escapes válidos (\\n, \\t, \\r, \\b, \\f) y puede forzar escapes \\uXXXX para cualquier punto de código Unicode; en HTML sustituye < > & \" ' por &lt; &gt; &amp; &quot; &#39; y, opcionalmente, entidades numéricas &#xNN; para caracteres fuera del rango ASCII; en URL realiza percent-encoding (RFC 3986), codificando espacios como %20 y reservando caracteres como : / ? # [ ] @ ! $ & ' ( ) * + , ; = ; y en JavaScript genera escapes de cadena compatibles con ECMAScript, incluyendo escapes hexadecimales y escapes de control (\\xNN y, si se requiere, \\uNNNN). La herramienta también normaliza a NFC y gestiona correctamente caracteres de línea (CRLF/LF) y saltos de línea en JSON. WHY: necesitas este proceso para evitar errores de parseo en APIs, prevenir XSS en plantillas, construir consultas HTTP con parámetros complejos y limpiar cadenas antes de inyectarlas en plantillas JS. HOW: la UI permite elegir modo (Escapar/Desescapar), formato (JSON/HTML/URL/JavaScript) y opciones específicas por formato (forzar escapes Unicode, preservar saltos de línea, tratar caracteres no imprimibles, normalización Unicode). El resultado se muestra con resaltado de escapes y se puede copiar al portapapeles o descargar como archivo.",
   "usage_steps": [
-    "Abre la página de la herramienta de Escape de Cadenas/Desescape de Cadenas",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Escribe o pega la cadena en el área de texto de entrada (Input).",
+    "Selecciona el modo: Escapar o Desescapar mediante el conmutador de la barra superior.",
+    "Elige el formato objetivo en el menú desplegable: JSON, HTML, URL o JavaScript.",
+    "Ajusta las opciones avanzadas: por ejemplo, en JSON marca 'Forzar escapes Unicode' y 'Preservar saltos de línea'; en HTML activa 'Normalizar a entidades numéricas'; en URL activa 'Respetar caracteres reservados' y en JavaScript activa 'Escapar caracteres no imprimibles'.",
+    "Haz clic en Convertir (o presiona Ctrl/⌘+Enter) y observa el resultado en el área de salida (Output) con resaltado de secuencias.",
+    "Copia el resultado con el botón Copiar, compártelo mediante el enlace permanente o descárgalo como archivo."
   ],
   "usage_examples": [
-    "Utiliza Escape de Cadenas/Desescape de Cadenas para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Generar un payload JSON válido para enviarlo por POST: escapas la cadena 'Precio: 10€ \"oferta\"' a formato JSON para que el backend la procese sin errores de escape.",
+    "Sanitizar contenido generado por usuarios antes de insertarlo en una página: escapas el texto a HTML para evitar XSS al mostrar comentarios con <script> o atributos.",
+    "Construir una URL con parámetros que contienen espacios y caracteres reservados: escapas 'nombre completo' y 'email@dominio.com' a percent-encoding y los concatenas en la query string.",
+    "Inyectar cadenas en plantillas JavaScript: escapas 'Línea 1\\nLínea 2' a formato JavaScript para que la variable contenga exactamente dos líneas sin romper la sintaxis."
   ]
 }

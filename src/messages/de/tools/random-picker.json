@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Zufallswähler wählt zufällige Artikel aus Ihrer Liste mit unterhaltsamen Animationseffekten.",
+  "detailed_description": "Der Random Picker ist ein innovatives Web-Tool, das es Benutzern ermöglicht, Elemente aus einer Liste zufällig auszuwählen, begleitet von attractiven Animationseffekten. Technisch gesehen, verwendet das Tool einen zufälligen Zahlen-Generator, um sicherzustellen, dass jede Auswahl fair und unvoreingenommen ist. Die Animationseffekte werden durch CSS- und JavaScript-Techniken realisiert, die eine reibungslose und unterhaltsame Benutzererfahrung bieten. Die zufällige Auswahl kann in verschiedenen Kontexten nützlich sein, wie zum Beispiel bei der Auswahl von Gewinnern in Lotterien, der Verteilung von Gruppen in Bildungsprojekten oder sogar bei der Entscheidungsfindung in gesellschaftlichen Situationen. Die Benutzer können ihre eigenen Listen erstellen, die Anzahl der Auswahlrunden festlegen und die Animationseffekte anpassen, um den Prozess an ihre spezifischen Anforderungen anzupassen. Dieses Tool ist besonders hilfreich, wenn es darum geht, faire und transparente Entscheidungen zu treffen, ohne dabei die unterhaltsame Komponente zu vernachlässigen.",
   "usage_steps": [
-    "Artikel einzeln auf einer neuen Zeile eingeben",
-    "Anzahl der Gewinner festlegen",
-    "Auf die Schaltfläche 'Zufällig auswählen' klicken",
-    "Die Animation beobachten",
-    "Zufällige Gewinner sehen"
+    "Öffnen Sie die Startseite des Random Picker Tools.",
+    "Klicken Sie auf den Button 'Liste hinzufügen', um Ihre eigene Liste von Elementen einzugeben, die zufällig ausgewählt werden sollen.",
+    "Wählen Sie die Anzahl der Auswahlrunden, die Sie durchführen möchten, unter 'Anzahl der Auswahlrunden'.",
+    "Passen Sie die Animationseffekte an, indem Sie auf 'Einstellungen' klicken und zwischen verschiedenen Optionen wie 'Rotierend', 'Blinkend' oder 'Gleitend' wählen.",
+    "Klicken Sie auf den 'Start' Button, um die zufällige Auswahl und die Animation zu starten.",
+    "Die Ergebnisse werden am Ende angezeigt, und Sie können sie kopieren oder speichern, indem Sie auf 'Ergebnisse exportieren' klicken."
   ],
   "usage_examples": [
-    "Verlosungsgewinner auswählen",
-    "Zufällige Teamauswahl",
-    "Wettbewerbsgewinner wählen"
+    "Ein Lehrer verwendet den Random Picker, um zufällig Schüler für Präsentationen auszuwählen, um sicherzustellen, dass jeder die gleiche Chance hat, teilzunehmen.",
+    "Ein Marketing-Team nutzt das Tool, um zufällig Gewinnern eines Social-Media-Wettbewerbs zuzuordnen, um die Transparenz und Fairness zu gewährleisten.",
+    "Eine Gruppe von Freunden verwendet den Random Picker, um zufällig zu entscheiden, wer als Nächstes die Runde bezahlt, bei einem Abend in der Bar.",
+    "Ein Projektmanager verwendet das Tool, um zufällig Teammitglieder für verschiedene Aufgaben in einem Projekt zu verteilen, um die Arbeitsbelastung gleichmäßig zu verteilen."
   ]
 }

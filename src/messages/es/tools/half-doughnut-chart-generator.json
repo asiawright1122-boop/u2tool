@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Media Doughnut es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Media Doughnut, puedes procesar fácilmente varios datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Media Doughnut puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y que no se suban a ningún servidor. Usa el Generador de Gráficos de Media Doughnut inmediatamente para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El generador de gráficos de dona semicircular permite crear representaciones visuales de datos en formato de medio círculo mediante renderizado SVG/Canvas. Técnicamente, transforma conjuntos de datos en coordenadas polares para generar segmentos con ángulos proporcionales a los valores ingresados, limitados a 180 grados. Esta herramienta especializada destaca por su capacidad de personalización en escalas de color divergentes, espesor de arco variable (entre 10px y 100px) y posicionamiento de etiquetas inteligente (interno/externo automático). Utiliza algoritmos de interpolación cúbica para suavizar transiciones entre segmentos, y soporta integración de datos mediante vinculación reactiva en tiempo real. Es especialmente útil para desarrolladores que necesitan visualizar métricas en interfaces de usuario compactas, como tableros de control de aplicaciones móviles o widgets de estado. Su motor de renderizado multipasada garantiza alta fidelidad visual en dispositivos retina, mientras permite exportación en formatos vectoriales (SVG) y rasterizados (PNG). La implementación incluye soporte para anotaciones personalizadas mediante capas superpuestas y manejo de eventos táctiles en dispositivos sensibles.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Media Doughnut",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona el formato de entrada de datos (JSON/CSV) mediante el interruptor en la barra lateral derecha",
+    "Ingresa tus valores numéricos en la tabla editable, asignando etiquetas y códigos hexadecimales personalizados",
+    "Configura parámetros avanzados en el panel de opciones: ajusta el ángulo inicial (0-180°), define el radio interno/externo y activa la leyenda interactiva",
+    "Previsualiza el gráfico en tiempo real y ajusta la posición de etiquetas arrastrando los marcadores en la vista de edición",
+    "Habilita la opción de degradado radial en el menú de estilo para aplicar gradientes entre colores de segmentos adyacentes",
+    "Exporta el resultado usando el botón de descarga, seleccionando resolución (1x/2x) y formato de salida (SVG/PNG)"
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Media Doughnut para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Visualización de porcentaje de cumplimiento de metas trimestrales en un dashboard ejecutivo",
+    "Representación de distribución de respuestas en encuestas de satisfacción con clientes",
+    "Mostrar progreso de carga en una aplicación móvil con indicador circular animado",
+    "Comparativa de participación de mercado entre dos competidores en un informe financiero"
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "La Calculadora de Calorías te ayuda a determinar tus necesidades calóricas diarias utilizando la ecuación Mifflin-St Jeor.",
+  "detailed_description": "El Calorie Calculator es una herramienta técnica que estima las necesidades calóricas diarias mediante algoritmos basados en ecuaciones validadas como la de Mifflin-St Jeor y Harris-Benedict. Esta calculadora determina la Tasa Metabólica Basal (TMB) utilizando parámetros antropométricos (peso, altura) y factores demográficos (edad, género), aplicando posteriormente multiplicadores de actividad física (rango de 1.2 a 2.4 según nivel de ejercicio). Su utilidad radica en permitir a usuarios personalizar planes nutricionales con precisión, ya sea para déficit calórico controlado, mantenimiento de masa muscular o hiperplasia. Integra el efecto térmico de los alimentos (aproximadamente 10% del total) y considera variaciones en composición corporal mediante ajustes manuales. La interfaz procesa los datos en tiempo real, generando un balance energético ajustado a objetivos específicos.",
   "usage_steps": [
-    "Introduce tu edad",
-    "Ingresar peso y altura",
-    "Seleccionar género",
-    "Elegir nivel de actividad",
-    "Ver BMR y TDEE"
+    "1. Selecciona tu género biológico en el menú desplegable (masculino/femenino)",
+    "2. Ingresa tu edad exacta en el campo numérico (rango válido: 18-80 años)",
+    "3. Introduce tu peso actual en kilogramos o libras usando el selector de unidades",
+    "4. Elige tu nivel de actividad física entre seis opciones predefinidas (sedentario, ligero, moderado, activo, muy activo, atleta)",
+    "5. Ajusta manualmente el porcentaje de grasa corporal si deseas cálculos más precisos",
+    "6. Haz clic en el botón 'Calcular' para obtener resultados detallados en kcal/día con desglose por componentes"
   ],
   "usage_examples": [
-    "Calcular calorías para pérdida de peso",
-    "Determinar calorías de mantenimiento",
-    "Planificar superávit calórico"
+    "Un corredor de ultra trail que necesita calcular su ingesta para un periodo de carga de 160km semanales",
+    "Una mujer menopáusica que desea ajustar su dieta para prevenir aumento de peso relacionado con cambios hormonales",
+    "Un culturista en fase de definición que requiere un déficit calórico del 15% manteniendo nitrógeno positivo",
+    "Un desarrollador de software con síndrome metabólico que diseña un plan nutricional para reducir 0.5kg/mes bajo supervisión médica"
   ]
 }

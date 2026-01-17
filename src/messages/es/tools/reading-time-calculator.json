@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Calculadora de Tiempo de Lectura es una herramienta online práctica que te ayuda a completar diversas tareas rápidamente. Con la Calculadora de Tiempo de Lectura, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote empezar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, la Calculadora de Tiempo de Lectura puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote que no serán subidos a ningún servidor. Utiliza la Calculadora de Tiempo de Lectura inmediatamente para experimentar servicios de herramientas online rápidas, seguras y gratuitas.",
+  "detailed_description": "El Calculador de Tiempo de Lectura es una herramienta basada en algoritmos de procesamiento de lenguaje natural que estima la duración de lectura de textos mediante análisis léxico y estadísticas de velocidad media de lectura (palabras por minuto). Utiliza técnicas de tokenización para segmentar el texto en unidades procesables, aplicando después modelos probabilísticos que consideran variables como la complejidad léxica y la estructura sintáctica. La herramienta permite ajustar parámetros como el perfil del lector (novato/experto) y el modo de lectura (superficial/analítico), lo que modula la ponderación de elementos como signos de puntuación, términos técnicos y patrones de concordancia. Su motor interno implementa algoritmos de estimación adaptativa que combinan el recuento básico de palabras con análisis semántico contextual, ofreciendo cálculos diferenciados para distintos dominios temáticos. Es especialmente útil para autores que necesitan validar la extensión efectiva de sus contenidos, educadores que diseñan materiales didácticos, y desarrolladores que implementan sistemas de gestión de contenido con restricciones temporales.",
   "usage_steps": [
-    "Abre la página de la Calculadora de Tiempo de Lectura",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega tu texto en el área de edición con soporte para formato Markdown",
+    "Selecciona el idioma del texto en el menú desplegable (detecta automáticamente si se deja en automático)",
+    "Ajusta el parámetro de velocidad base (180-300 PPM) según el perfil del lector objetivo",
+    "Activa la opción 'Análisis contextual' para considerar la densidad terminológica",
+    "Haz clic en el botón 'Calcular' para ejecutar el algoritmo de estimación adaptativa",
+    "Revisa el desglose detallado por secciones y el tiempo total estimado en el panel de resultados"
   ],
   "usage_examples": [
-    "Utiliza la Calculadora de Tiempo de Lectura para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un redactor técnico calcula el tiempo de lectura para un manual de usuario, activando el modo 'Densidad terminológica' para ajustar el cálculo a contenido técnico",
+    "Un profesor universitario determina la carga lectiva semanal asignando 3 artículos académicos, comparando los tiempos con y sin análisis contextual",
+    "Un desarrollador de CMS integra la API para mostrar automáticamente el tiempo de lectura en artículos de un portal educativo",
+    "Un traductor profesional estima la duración de lectura de un documento técnico antes y después de la traducción para validar la concisión del contenido"
   ]
 }

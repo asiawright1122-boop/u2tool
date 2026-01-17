@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Parallel Chart Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Parallel Chart Generator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient nutzen können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, Parallel Chart Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu verbessern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was die Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinen Server hochgeladen werden. Nutzen Sie Parallel Chart Generator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Parallel Chart Generator ist ein webbasiertes Analysewerkzeug zur Erstellung von Parallelkoordinaten-Diagrammen, das speziell für die visuelle Exploration multi-dimensionaler Datensätze konzipiert wurde. Technisch gesehen projiziert das Tool jede Dimension eines Datensatzes auf separate vertikale Achsen, die horizontal angeordnet sind, und verbindet die Werte einzelner Datensätze durch polygonale Linien. Dies ermöglicht die Identifizierung von Mustern, Clusterbildungen oder Ausreißern in hochdimensionalen Datenräumen. Der Generator unterstützt die Normalisierung von Datenwerten, die Anpassung von Farbschemata für Kategorien und interaktive Funktionen wie Brushing zum Filtern spezifischer Wertebereiche. Entwickler und Data Scientists benötigen dieses Tool, um komplexe Beziehungen zwischen Variablen zu analysieren, z.B. bei der Optimierung von Machine-Learning-Modellen, der Vergleichbarkeit von Produktmerkmalen oder der Erkennung von Korrelationen in Finanzdaten. Die Implementierung erfolgt mittels D3.js für die dynamische SVG-Renderung, während die Datenverarbeitung in Echtzeit über clientseitige JavaScript-Algorithmen erfolgt. Exportoptionen umfassen skalierbare Vektorgrafiken (SVG) für Druckqualität und PNG für Webpräsentationen.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Parallel Chart Generator-Tools",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie bearbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Optionen und Einstellungen des Tools wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungs Taste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "1. Öffnen Sie den Parallel Chart Generator über den Kategorie-Link 'Diagramme' auf der Startseite.",
+    "2. Laden Sie Ihren Datensatz im CSV-Format hoch oder fügen Sie Daten manuell in den Tabellen-Editor ein, wobei jede Spalte eine Dimension repräsentiert.",
+    "3. Konfigurieren Sie die Achsenparameter über das 'Achsen-Layout'-Panel: Wählen Sie relevante Dimensionen aus, legen Sie die Reihenfolge fest und aktivieren Sie die Normalisierung für heterogene Skalen.",
+    "4. Passen Sie die visuelle Darstellung an: Wählen Sie ein Farbschema aus dem Dropdown-Menü, aktivieren Sie den 'Interaktiver Liniendickenmodus' für dichte Datensätze und definieren Sie Brushing-Bereiche durch Ziehen zwischen Achsen.",
+    "5. Nutzen Sie den 'Vorschau-Modus' zum Testen von Zoom-Funktionen und Kategoriefiltern, die über das Kontextmenü rechts neben dem Diagramm aktiviert werden.",
+    "6. Exportieren Sie das finale Diagramm über die Schaltflächen 'SVG-Export' oder 'PNG-Download' unterhalb des Vorschau-Bereichs."
   ],
   "usage_examples": [
-    "Verwenden Sie Parallel Chart Generator, um Ihre Daten zu bearbeiten",
-    "Erhalten Sie schnell bearbeitete Ergebnisse ohne zu warten"
+    "1. Ein Automobilhersteller vergleicht Prototypen anhand von 8 Dimensionen (Kraftstoffverbrauch, Leistung, Kosten, CO2-Emissionen etc.) um Optimierungspotenziale zu identifizieren.",
+    "2. Ein Data Scientist analysiert die Leistungsmetriken (Genauigkeit, Rechenzeit, F1-Score) von 5 verschiedenen Machine-Learning-Modellen über mehrere Datensätze.",
+    "3. Ein Finanzanalyst visualisiert die Entwicklung von Unternehmenskennzahlen (Umsatz, Gewinn, Schuldenquote, Börsenkurs) über 5 Geschäftsjahre zur Erkennung von Trends.",
+    "4. Ein Umweltforscher untersucht Korrelationen zwischen 6 Luftschadstoffen (NO2, PM10, CO, O3, SO2, PM2.5) an 20 Messstationen während einer Smogperiode."
   ]
 }

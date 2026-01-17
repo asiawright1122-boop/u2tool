@@ -1,15 +1,17 @@
 {
-  "detailed_description": "O gerador de nomes falsos cria nomes aleatórios realistas de vários países e culturas. Gere nomes para testes ou escrita criativa.",
+  "detailed_description": "O Gerador de Nomes Fakes cria nomes realistas de múltiplos países com suporte a codificação Unicode, transliteração e padrões de escrita locais. Ele combina listas curadas por locale (primeiros nomes, sobrenomes, partículas, sufixos e títulos), aplica regras ortográficas, normaliza acentuação (NFC/NFD), e aceita semente determinística via algoritmo xorshift32 para reprodutibilidade. O motor suporta perfis de gênero (masculino, feminino, neutro) e pode gerar nomes em ordem natural ou ocidentalizada, controlando a inclusão de partículas como “de”, “van” e “dos”. A ferramenta opera com parâmetros de saída em formato texto, CSV e JSON, com opções de separador, codificação UTF‑8 e escape de aspas. Há um checkbox para transliteração (ex.: кириллица → latin), e um seletor de país/língua com fallback inteligente para fallback linguístico (por exemplo, zh‑Hans vs zh‑Hant). Além disso, há filtros de ambiguidade para evitar caracteres parecidamente confusos (I/l/1, O/0) quando solicitado. No backend, nomes são sorteados via RNG criptograficamente seguro (Web Crypto getRandomValues), com distribuição ponderada por frequência para manter naturalidade. É útil para testes de software (formulários, validação de campos), criação de fixtures de API, pseudonimização de datasets, prototipagem de UI internacional e QA de pipelines de ETL que manipulam strings Unicode.",
   "usage_steps": [
-    "Selecione um país/cultura",
-    "Escolha a preferência de gênero",
-    "Defina o número de nomes",
-    "Clique em Gerar",
-    "Copie os nomes que precisar"
+    "Abra a página do Gerador de Nomes Fakes e selecione o País/Idioma no dropdown (ex.: Brasil, Portugal, EUA, França, Alemanha, Espanha, China, Rússia).",
+    "Escolha o Gênero: Masculino, Feminino ou Neutro (aleatório), e marque “Incluir títulos” se quiser prefixos como Sr., Sra., Dr., Ms. ou equivalente.",
+    "Defina a Quantidade de nomes, o Separador (vírgula, ponto‑e‑vírgula, quebra de linha) e a Ordenação (natural ou ocidentalizada) nos campos ao lado.",
+    "Se necessário, habilite Transliteração para Latinização (por exemplo, caracteres cirílicos ou chineses simplificados → pinyin), e ative o modo “Evitar caracteres ambíguos” (I/l/1, O/0).",
+    "Clique em “Gerar” para visualizar a lista; use “Copiar” para enviar ao clipboard ou “Baixar” para exportar em CSV/JSON com codificação UTF‑8.",
+    "Para reprodutibilidade, insira uma Semente (seed) numérica; ao reutilizar a mesma seed, a sequência de nomes será idêntica."
   ],
   "usage_examples": [
-    "Criar dados de usuário de teste",
-    "Nomear personagens fictícios",
-    "Proteção de privacidade"
+    "Uma equipe de QA precisa preencher 1.000 registros de onboarding em ambiente de testes; gera nomes em português brasileiro com títulos (Sr./Sra.) e exporta em CSV para carga via ETL.",
+    "Um cientista de dados realiza pseudonimização de um conjunto com nomes em cirílico e vietnamita; gera nomes equivalentes com transliteração habilitada e baixa ambiguidade, salvando em JSON para análise segura.",
+    "Um designer UX prepara estudos de usabilidade para um CRM multilíngue; cria 150 nomes distribuídos por gênero e país (França, Alemanha, Portugal), com partículas locais (de, van, dos) e baixa ambiguidade, em formato texto com separador ponto‑e‑vírgula.",
+    "Uma startup integra um endpoint público que retorna perfis fictícios; usa o gerador com semente fixa (seed=12345) para garantir fixtures determinísticas em diferentes branches de desenvolvimento."
   ]
 }

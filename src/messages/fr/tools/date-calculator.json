@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Calculatrice de Dates est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec la Calculatrice de Dates, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, la Calculatrice de Dates peut vous aider à améliorer votre efficacité de travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez immédiatement la Calculatrice de Dates pour expérimenter des services de outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Date Calculator est un outil technique conçu pour effectuer des opérations précises sur les dates en tenant compte des spécificités du calendrier grégorien et des fuseaux horaires. Il permet de calculer la différence entre deux dates en jours, mois ou années, ou d'ajouter/soustraire un nombre spécifique de jours à une date de référence. L'outil intègre des bibliothèques de traitement de dates (comme moment.js ou date-fns) pour gérer les années bissextiles, les mois de longueur variable et les décalages horaires. Idéal pour les développeurs, chefs de projet ou historiens, il résout des cas concrets comme le calcul de délais légaux, la planification de sprints ou l'analyse chronologique de données. L'algorithme convertit les dates en timestamps universels (UTC) pour éviter les erreurs liées aux changements d'heure (DST) et garantit une précision millénaire. Les résultats incluent des détails comme le nombre exact de jours ouvrés, weekends ou fériés (configurables via un paramètre). L'interface affiche les résultats en format JSON et tableau, avec possibilité d'exporter les données en CSV.",
   "usage_steps": [
-    "Ouvrez la page de la Calculatrice de Dates",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez l'opération souhaitée via les boutons radio : 'Calculer la différence' ou 'Ajouter/soustraire des jours'.",
+    "Utilisez les sélecteurs de date (format ISO 8601) pour entrer les valeurs de départ et d'arrivée.",
+    "Activez l'option 'Exclure weekends' ou 'Considérer fériés' selon votre besoin.",
+    "Cliquez sur 'Calculer' pour exécuter l'opération avec gestion des fuseaux horaires (UTC/local).",
+    "Consultez les résultats dans la section dédiée, affichant durées en jours/mois/années et horodatage Unix.",
+    "Exportez les données via le bouton 'Télécharger CSV' pour intégration dans des tableurs ou systèmes de gestion."
   ],
   "usage_examples": [
-    "Utilisez la Calculatrice de Dates pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un chef de projet détermine la durée exacte d'un contrat entre le 2024-03-15 et le 2025-01-30, en excluant les weekends.",
+    "Un développeur calcule la date d'échéance d'une fonctionnalité en ajoutant 15 jours ouvrés à une date de démarrage.",
+    "Un historien analyse la durée d'un événement historique en tenant compte des changements de calendrier julien/gregorien.",
+    "Un comptable détermine les échéances de paiement en soustrayant 5 jours ouvrés à la fin du mois fiscal."
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Le Calculateur de Peinture estime la quantité de peinture nécessaire pour votre pièce.",
+  "detailed_description": "Le Calculateur de Peinture est un outil mathématique conçu pour déterminer avec précision la quantité de peinture nécessaire pour recouvrir des surfaces murales en tenant compte des ouvertures telles que portes et fenêtres. Ce calculateur utilise des algorithmes de soustraction des surfaces non peintes à partir des dimensions totales des pièces. L'utilisateur entre les paramètres géométriques (longueur, hauteur des murs) et les dimensions spécifiques des portes et fenêtres, puis le système applique la formule : Surface nette = (Périmètre × Hauteur) - Σ(Surface des ouvertures). La fonctionnalité intègre un coefficient de rendement du peinture (en m²/litre) ajustable, permettant de calculer le volume exact en litres ou en gallons. Cet outil répond aux besoins des particuliers et professionnels en évitant le gaspillage, en optimisant les coûts et en garantissant des estimations précises pour des projets de rénovation ou construction. Sa précision technique est particulièrement utile pour les espaces complexes avec multiples ouvertures ou des dimensions irrégulières.",
   "usage_steps": [
-    "Entrer les dimensions de la pièce",
-    "Ajouter le nombre de portes",
-    "Ajouter le nombre de fenêtres",
-    "Définir le nombre de couches",
-    "Voir la peinture nécessaire"
+    "1. Saisir la longueur totale des murs en mètres dans le champ 'Périmètre de la pièce'",
+    "2. Entrer la hauteur sous plafond dans le champ dédié",
+    "3. Indiquer le nombre de portes et leurs dimensions moyennes (ex: 0.9m × 2.1m)",
+    "4. Renseigner le nombre de fenêtres avec leurs dimensions (ex: 1.2m × 1.5m)",
+    "5. Sélectionner le type de peinture pour appliquer le bon rendement (200-300-400 m²/litre)",
+    "6. Cliquer sur 'Calculer' pour obtenir le volume de peinture requis en litres"
   ],
   "usage_examples": [
-    "Calculer la peinture pour chambre",
-    "Estimer la couverture du salon",
-    "Planifier la peinture de la maison"
+    "Calculer la peinture nécessaire pour une salle de séjour de 15m² avec 2 fenêtres de 1.5m×1m et 1 porte standard",
+    "Estimer les besoins en peinture pour un local commercial de 100m² avec 5 fenêtres coulissantes et 2 portes d'accès",
+    "Déterminer la quantité de peinture pour un sous-sol de 25m² sans ouverture avec des murs de 2.5m de hauteur",
+    "Planifier la rénovation d'une chambre de 12m² avec une baie vitrée de 2m×1.8m et une porte de garage intégrée"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Visualizador EXIF é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Visualizador EXIF, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Visualizador EXIF pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Visualizador EXIF imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O EXIF Viewer permite analisar e manipular metadados EXIF em arquivos de imagem JPEG e PNG, revelando informações como modelo da câmera, configurações de exposição, coordenadas geográficas e timestamps. Técnicamente, o ferramenta decodifica os segmentos de marcação APP1 e APP2 no cabeçalho do arquivo, extraindo campos como MakerNote, GPSInfo e Interop. Ao identificar dados sensíveis, o usuário pode remover seletivamente tags específicas ou limpar todo o bloco EXIF, mantendo a integridade do arquivo original através de algoritmos de reescrita binária sem perda. Essa funcionalidade é crucial para proteger privacidade ao compartilhar fotos publicamente, otimizar tamanho de arquivos para web e verificar autenticidade de imagens em investigações jornalísticas. O processo emprega técnicas de parsing hexadecimal e manipulação direta de bytes, garantindo compatibilidade com padrões de metadados IPTC e XMP.",
   "usage_steps": [
-    "Abra a página da ferramenta Visualizador EXIF",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Arraste o arquivo de imagem para a área de upload ou clique em 'Selecionar Arquivo' para navegar no dispositivo",
+    "2. Após o carregamento, expanda a seção 'Detalhes Técnicos' para visualizar o conteúdo RAW do cabeçalho de imagem",
+    "3. Utilize o filtro 'Tags Sensíveis' para identificar automaticamente dados de localização e identificação do dispositivo",
+    "4. Marque as caixas correspondentes aos grupos de metadados que deseja remover (ex: GPS, Equipamento, Histórico)",
+    "5. Clique em 'Processar e Limpar' para aplicar as alterações, mantendo a qualidade visual do arquivo original",
+    "6. Baixe a versão modificada através do link gerado, que inclui um relatório de auditoria das tags removidas"
   ],
   "usage_examples": [
-    "Use Visualizador EXIF para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "1. Um jornalista remove coordenadas GPS de uma foto antes de publicar um artigo sensível, evitando revelar localizações de fontes",
+    "2. Um fotógrafo elimina dados de modelo de câmera e lentes para proteger seu equipamento profissional de cópia por concorrentes",
+    "3. Um desenvolvedor web limpa metadados de imagens em lote para reduzir 30% do tamanho total da página carregada",
+    "4. Um pesquisador verifica inconsistências em timestamps e fusos horários de imagens usadas como evidência em um estudo acadêmico"
   ]
 }

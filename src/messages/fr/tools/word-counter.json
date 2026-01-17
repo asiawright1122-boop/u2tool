@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Compteur de mots est un outil pratique en ligne qui vous aide à accomplir rapidement diverses tâches. Avec le Compteur de mots, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d’utiliser efficacement l’outil. Que vous soyez développeur, designer ou utilisateur général, le Compteur de mots peut vous aider à améliorer l’efficacité de votre travail. Toutes les traitements sont effectués localement dans votre navigateur, garantissant la sécurité de vos données et ne seront pas téléchargés sur aucun serveur. Utilisez immédiatement le Compteur de mots pour expérimenter des services d’outil en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le compteur de mots est un outil de traitement de texte basé sur des algorithmes de tokenisation et d'analyse lexicale. Techniquement, il utilise des expressions régulières (regex) pour segmenter le contenu en unités lexicales distinctes (mots, nombres, symboles), tout en gérant les exceptions linguistiques comme les tirets, les apostrophes ou les caractères Unicode spécifiques aux langues non anglophones. En parallèle, il calcule les métriques de caractères (y compris espaces ou non), de phrases (détectées via des marqueurs de ponctuation comme '.', '!' ou '?'), et de paragraphes (basés sur les sauts de ligne). Cet outil s'adresse aux rédacteurs scientifiques soumis à des contraintes de format (ex: thèses de 50 000 mots), aux développeurs vérifiant des limites de champs texte (ex: API acceptant 255 caractères), ou aux linguistes analysant la densité lexicale. Sa précision repose sur une logique de traitement en temps réel, évitant les erreurs de comptage pour des cas complexes comme les mots composés (ex: 'ville-port') ou les abréviations (ex: 'Mme').",
   "usage_steps": [
-    "Ouvrez la page du Compteur de mots",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l’outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'outil via un navigateur compatible (Chrome, Firefox, Safari) sans nécessiter d'inscription.",
+    "Collez votre texte dans la zone d'entrée multiligne, ou utilisez le raccourci Ctrl+V pour importer depuis le presse-papiers.",
+    "Cliquez sur le bouton « Analyser » pour déclencher le traitement basé sur des algorithmes de segmentation linguistique.",
+    "Consultez le panneau de résultats affichant les compteurs détaillés : mots (avec/without doublons), caractères (ASCII/Unicode), phrases (ponctuation normalisée), paragraphes (délimités par \\n\\n).",
+    "Utilisez l'option « Exporter vers JSON/CSV » pour intégrer les données dans un workflow automatisé ou un système de gestion.",
+    "Activez le mode sombre via l'icône 🌙 pour un confort de lecture lors d'analyses longues sur des corpus volumineux."
   ],
   "usage_examples": [
-    "Utilisez le Compteur de mots pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un doctorant vérifie que son manuscrit respecte les 45 000 mots imposés par l'université, en excluant les références bibliographiques du comptage.",
+    "Un développeur teste si une description produit de 200 caractères respecte la limite d'un champ texte en base de données (VARCHAR(200)).",
+    "Un traducteur compare les rapports mots/caractères entre versions source et cible pour détecter des divergences de densité linguistique.",
+    "Un enseignant utilise le compteur de paragraphes pour évaluer la structure argumentative d'une dissertation de 5 paragraphes standard."
   ]
 }

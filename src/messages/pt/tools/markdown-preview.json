@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Markdown Preview é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com o Markdown Preview, você pode processar facilmente vários tipos de dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja um desenvolvedor, designer ou usuário geral, o Markdown Preview pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para qualquer servidor. Use o Markdown Preview imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Markdown Preview é uma ferramenta de processamento de texto baseada em JavaScript que converte sintaxe Markdown (CommonMark-compatível) em HTML renderizado em tempo real. Técnicamente, utiliza um parser AST (Abstract Syntax Tree) para analisar o input do usuário, aplicar regras de transformação e gerar elementos DOM atualizados dinamicamente. A ferramenta suporta extensões como GFM (GitHub Flavored Markdown), incluindo tabelas e tarefas, e integra bibliotecas como Marko ou Remark para processamento eficiente. Desenvolvedores precisam deste tool para validar visualizações de documentação técnica, criar interfaces de conteúdo WYSIWYG para blogs estáticos, ou testar snippets de interface antes da implementação final. Funciona totalmente no cliente via Web Workers, garantindo baixa latência mesmo com grandes volumes de texto. Inclui recursos avançados como highlight de código via Prism.js, preview sincronizado com rolagem, e exportação direta para arquivo HTML com metadados incorporados.",
   "usage_steps": [
-    "Abra a página do Markdown Preview",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse a interface com dois painéis: editor de texto à esquerda e preview à direita",
+    "2. Digite ou cole conteúdo Markdown no campo de edição, utilizando atalhos como Ctrl+Alt+P para pré-processar",
+    "3. Observe o renderizado automático no painel direito, com destaque para cabeçalhos, listas e código",
+    "4. Utilize o botão 'Exportar HTML' para gerar um arquivo com estrutura completa, incluindo tags <article> semanticamente corretas",
+    "5. Ajuste o tema visual do preview através do seletor de esquema (Padrão, GitHub Dark, Solarized Light)",
+    "6. Ative o modo de tela cheia pressionando F11 ou usando o ícone de expandir no cabeçalho"
   ],
   "usage_examples": [
-    "Use o Markdown Preview para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Desenvolvedor documentando API em Markdown, verificando renderização de tabelas e exemplos de código antes de fazer commit",
+    "Técnico criando guia de instalação para software, testando como listas numeradas e avisos aparecerão no site final",
+    "Escritor técnico validando a formatação de um whitepaper complexo com múltiplos níveis de cabeçalhos e imagens embutidas",
+    "Estudante preparando relatório acadêmico com equações em LaTeX, usando blocos de código $$ para visualizar fórmulas matemáticas"
   ]
 }

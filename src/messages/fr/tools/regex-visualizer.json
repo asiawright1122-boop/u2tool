@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Visualiseur de Regex est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Visualiseur de Regex pour traiter diverses données sans installer de logiciel ou de plugin. Cet outil possède une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Visualiseur de Regex peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez le Visualiseur de Regex immédiatement pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le Regex Visualizer est un outil de développement spécialisé qui convertit des expressions régulières (regex) en diagrammes de syntaxe visuels, également appelés 'railroad diagrams'. Ce processus repose sur l'analyse syntaxique de l'expression régulière, la décomposition en automates finis déterministes (DFA) et la génération graphique de chemins d'exécution possibles. L'outil est conçu pour résoudre un problème récurrent chez les développeurs : comprendre et déboguer des regex complexes, notamment lors de la validation de formats de données (ex. JSON, XML), l'extraction d'entités nommées ou l'optimisation de performances d'analyse textuelle. Il intègre un moteur de rendu SVG interactif qui met en évidence les correspondances entre les groupes capturants et les chaînes testées, avec un système de coloration syntaxique dynamique. La fonctionnalité de simulation d'évaluation permet de visualiser l'avancement de l'algorithme de matching caractère par caractère, utile pour diagnostiquer des problèmes de backtracking ou de priorité d'opérateurs. Contrairement aux outils classiques, il propose une visualisation hiérarchique des alternances, quantifieurs et assertions, avec un affichage modulaire des sous-expressions.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Visualiseur de Regex",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les réglages de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Saisissez l'expression régulière dans le champ texte 'Pattern' avec les indicateurs (flags) disponibles (i, g, m, s, u, y) via des cases à cocher",
+    "Utilisez le panneau 'Test String' pour entrer ou coller le texte à analyser, avec possibilité de basculer entre plusieurs onglets de contextes différents",
+    "Cliquez sur le bouton 'Générer le Diagramme' pour transformer la regex en représentation visuelle SVG interactive",
+    "Explorez les chemins d'exécution avec le curseur temporel qui anime le parcours des nœuds du diagramme syntaxique",
+    "Utilisez la fonction 'Highlight Groups' pour identifier visuellement les groupes capturants dans la chaîne testée",
+    "Exportez le diagramme généré au format PNG ou SVG via le menu contextuel pour documentation technique ou présentation pédagogique"
   ],
   "usage_examples": [
-    "Utilisez le Visualiseur de Regex pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur web vérifie une regex de validation de WebAssembly imports en observant les chemins conditionnels dans le diagramme",
+    "Un data scientist optimise une expression pour l'extraction de timestamps ISO 8601 avec fuseaux horaires complexes via l'animation de backtracking",
+    "Un enseignant démontre en temps réel l'impact des opérateurs de lookbehind/lookahead sur l'automate fini généré",
+    "Un ingénieur sécurité analyse visuellement les vulnérabilités de regex denial-of-service (ReDoS) en comparant les diagrammes de variantes d'expressions"
   ]
 }

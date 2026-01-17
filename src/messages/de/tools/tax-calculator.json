@@ -1,16 +1,17 @@
 {
-  "detailed_description": "Der Steuerrechner ist ein umfassendes Tool zur Einkommensteuerschätzung, das Ihnen hilft, die Bundessteuer basierend auf den Steuersätzen 2024 zu berechnen. Geben Sie Ihr Bruttoeinkommen und Ihren Einzahlungsstatus ein, um die geschätzte Steuer, den effektiven Steuersatz und den Nettolohn zu erhalten. Sehen Sie sich die detaillierte Aufschlüsselung nach Steuersätzen an und vergleichen Sie Standardabzug und auflösende Abzüge.",
+  "detailed_description": "Der Tax Calculator ist ein präzises Instrument zur Berechnung der US-amerikanischen Bundes-Einkommenssteuer unter Berücksichtigung aktueller Steuerklassen (tax brackets) und marginaler Steuersätze (marginal tax rates). Technisch basiert die Berechnung auf den IRS-Veröffentlichungen des aktuellen Steuerjahres, wobei progressive Besteuerung auf verschiedenen Einkommensniveaus angewendet wird. Das Tool nutzt eine modulare Algorithmenarchitektur, die Einkommenswerte (Gross Income) mit Abzügen (Deductions) verrechnet, um das steuerpflichtige Einkommen (Taxable Income) zu ermitteln. Anschließend erfolgt die Zuordnung zu den entsprechenden Steuerklassen mit detaillierter Breakdown-Funktionalität, die zeigt, wie viel Steuer pro Klasse anfällt. Die Berechnung des effektiven Steuersatzes (Effective Tax Rate) erfolgt durch Division der Gesamtsteuerschuld (Total Tax Liability) durch das Bruttoeinkommen. Dieses Tool ist unverzichtbar für Selbständige, die Quartalsvorschüsse kalkulieren, Angestellte, die steuerliche Optimierungen planen, oder Finanzberater, die Szenarioanalysen durchführen. Die Implementierung berücksichtigt dynamische Steueranpassungen wie Standardabzüge oder Child Tax Credits, wodurch praxisnahe Ergebnisse entstehen.",
   "usage_steps": [
-    "Geben Sie Ihr jährliches Bruttoeinkommen ein",
-    "Wählen Sie Ihren Einzahlungsstatus",
-    "Wählen Sie zwischen Standardabzug und auflösenden Abzügen",
-    "Sehen Sie Ihre geschätzte Steuerpflichtigkeit",
-    "Überprüfen Sie Ihren effektiven Steuersatz",
-    "Sehen Sie die Steuersatzstaffelung"
+    "Wählen Sie das relevante Steuerjahr (z.B. 2024) im Dropdown-Menü 'Steuerperiode'.",
+    "Geben Sie Ihr Bruttoeinkommen in USD im Feld 'Gross Income' ein (z.B. 75.000).",
+    "Wählen Sie Ihren Filing Status ('Single', 'Married Filing Jointly', etc.) aus dem Auswahlfeld.",
+    "Passen Sie optional Abzüge im Textfeld 'Deductions' an (Standardabzug wird automatisch vorausgewählt).",
+    "Klicken Sie auf 'Berechnung starten', um die Ergebnisse zu generieren.",
+    "Analysieren Sie die farbkodierte Breakdown-Tabelle und den berechneten Effective Tax Rate in Prozent."
   ],
   "usage_examples": [
-    "Berechnen Sie Steuern für ein Gehalt von 75.000 USD",
-    "Vergleichen Sie den Steuerimpact verschiedener Einzahlungsstatus",
-    "Planen Sie Abzüge, um die Steuerpflichtigkeit zu reduzieren"
+    "Ein Freelancer berechnet seine Quartalsvorschüsse, indem er sein monatliches Einkommen x 3 eingibt und die Steuerschuld pro Klasse analysiert.",
+    "Ein verheirateter Nutzer vergleicht durch Wechsel des Filing Status zwischen 'Joint' und 'Separate' die Auswirkungen auf die effektive Steuerbelastung.",
+    "Ein Arbeitnehmer prüft, wie ein Gehaltserhöhung von 5% die Zuordnung zur nächsthöheren Steuerklasse beeinflusst (marginal rate impact).",
+    "Ein Finanzberater demonstriert Kunden anhand von Einkommensbeispielen die Progressionswirkung des Steuersystems durch die Breakdown-Darstellung."
   ]
 }

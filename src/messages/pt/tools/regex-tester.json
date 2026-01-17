@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Testador de Regex é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Testador de Regex, você pode processar facilmente diferentes tipos de dados sem precisar instalar nenhum software ou plugins. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use eficientemente. Seja um desenvolvedor, designer ou usuário geral, o Testador de Regex pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use o Testador de Regex imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Regex Tester é uma ferramenta de desenvolvimento projetada para validar, depurar e otimizar expressões regulares (regex) com feedback imediato. Tecnicamente, ele utiliza um mecanismo de compilação即时 de padrões regulares compatível com padrões modernos, como os do JavaScript, permitindo testes em tempo real sem recarga da página. A ferramenta destaca correspondências exatas, grupos de captura e backreferences no texto analisado, além de identificar erros de sintaxe no padrão inserido. Desenvolvedores precisam deste recurso para validar entradas de usuários, extrair dados estruturados de textos não formatados (como logs ou páginas HTML) e garantir a precisão de validações em formulários. O funcionamento se dá por meio de análise léxica em dois estágios: primeiro, o padrão regex é compilado e verificado quanto a inconsistências; depois, é aplicado ao texto de teste, exibindo resultados dinamicamente no DOM. Recursos como seleção de modificadores (g, m, i), realce de grupos e exibição de posições de correspondência tornam a ferramenta indispensável para depuração eficiente.",
   "usage_steps": [
-    "Abra a página do Testador de Regex",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Insira a expressão regular no campo 'Padrão Regex', incluindo delimitadores como /pattern/.",
+    "2. Ative modificadores necessários (global, multiline, case-insensitive) usando as caixas de seleção adjacentes.",
+    "3. Cole ou digite o texto de teste no campo 'Cadeia de Teste' abaixo do editor de padrões.",
+    "4. Clique no botão 'Testar' para executar a correspondência e visualizar resultados em tempo real.",
+    "5. Analise o painel de saída para identificar correspondências exatas, grupos capturados e posições (índices).",
+    "6. Revise erros de sintaxe destacados em vermelho e ajuste o padrão até obter os resultados desejados."
   ],
   "usage_examples": [
-    "Use o Testador de Regex para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Validação de e-mails: Verifique se um padrão como ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-z]{2}$ captura corretamente endereços válidos e rejeita formatos inválidos.",
+    "Extração de telefones: Utilize $\\d{2}$ \\d{5}-\\d{4} para identificar números de celular em um texto não estruturado.",
+    "Busca de códigos hexadecimais: Teste #([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}) em um documento CSS para destacar cores válidas.",
+    "Validação de senhas: Confirme que (?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8} exige letras maiúsculas, minúsculas e números em senhas de cadastro."
   ]
 }

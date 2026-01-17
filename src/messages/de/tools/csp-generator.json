@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der CSP-Generator hilft Ihnen, Content Security Policy Header zu erstellen, um Ihre Website vor XSS- und Injection-Angriffen zu schützen. Visueller Editor für alle CSP-Direktiven.",
+  "detailed_description": "Der CSP Generator ist ein spezialisierter Online-Editor zur Erstellung präziser Content Security Policy (CSP) HTTP-Header, die Cross-Site-Scripting (XSS)-Angriffe und unerlaubten Ressourcen-Ladevorgängen durch granulare Whitelisting-Regeln entgegenwirken. Das Tool implementiert moderne Sicherheitsdirektiven wie script-src, connect-src und img-src gemäß W3C CSP Level 3 Standard, ermöglicht dynamische Policy-Assembly durch visuelle Konfigurationsoberfläche. Entwickler können Domänen, Inline-Skript-Nonces und Hash-basierte Trusted Types definieren, während der Generator automatisch kompatible Header-Strukturen inklusive Fallback-Syntax für ältere Browser generiert. Die eingebaute Validierung prüft auf syntaktische Fehler und inkonsistente Direktiven-Kombinationen. Besonders wertvoll ist das Tool für Single-Page-Applications (SPAs) mit komplexen Third-Party-Integrationen oder Unternehmen, die strikte Content Security Policies für GDPR-konforme Webanwendungen benötigen.",
   "usage_steps": [
-    "CSP-Direktiven zum Einschließen auswählen",
-    "Erlaubte Quellen konfigurieren",
-    "Bei Bedarf Nonces oder Hashes hinzufügen",
-    "CSP-Header generieren",
-    "Kopieren und zum Server hinzufügen"
+    "1. Öffnen Sie den CSP Generator im Webbrowser und wählen Sie im Abschnitt 'Directive Types' die relevanten Sicherheitsrichtlinien aus (z.B. script-src, style-src)",
+    "2. Fügen Sie im Eingabefeld 'Allowed Sources' unter 'script-src' Domänen wie 'self', 'unsafe-inline' oder spezifische Hosts wie 'apis.google.com' hinzu",
+    "3. Aktivieren Sie im 'Nonce/Hash' Bereich die Checkbox für 'Generate Random Nonce' oder geben Sie manuell berechnete SHA256-Hashwerte ein",
+    "4. Konfigurieren Sie im 'Report-URI' Feld den Endpoint für CSP-Verletzungsberichte gemäß Ihrem SIEM-System",
+    "5. Überprüfen Sie die automatisch generierte Policy im 'Preview' Bereich auf Syntaxkonformität und übermäßige Freigaben",
+    "6. Klicken Sie auf 'Download CSP Header', um die vollständige HTTP-Header-Konfiguration im .htaccess- oder Nginx-Format herunterzuladen"
   ],
   "usage_examples": [
-    "Webanwendungen schützen",
-    "XSS-Angriffe verhindern",
-    "Skriptquellen konfigurieren"
+    "Ein Webentwickler erstellt eine CSP für eine PWA mit React.js und muss dynamische Skriptausführungen durch 'unsafe-eval' temporär erlauben, während externe Skripte über Hash-Whitelisting gesichert werden.",
+    "Ein E-Commerce-Shop-Administrator definiert strikte connect-src-Richtlinien für Zahlungs-Gateways, um Man-in-the-Middle-Angriffe auf Transaktionsdaten zu verhindern.",
+    "Ein Medienportal generiert eine CSP mit erweiterten media-src-Direktiven für Content-Delivery-Networks (CDNs), während Inline-Videos durch Nonces authentifiziert werden.",
+    "Ein Finanzdienstleister implementiert eine strikte CSP mit report-uri-Direktiven für Echtzeit-Monitoring von Sicherheitsverletzungen gemäß PCI-DSS-Vorgaben."
   ]
 }

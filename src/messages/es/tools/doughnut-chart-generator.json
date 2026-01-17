@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Dona es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Utilizando el Generador de Gráficos de Dona, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Dona puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Dona ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Doughnut Chart Generator es una herramienta técnica especializada para crear gráficos de anillo interactivos mediante un motor de renderizado basado en SVG y Canvas. Permite representar visualmente proporciones de datos categóricos mediante segmentos proporcionalmente dimensionados, con la particularidad de un área central vacía que mejora la percepción del peso relativo de cada categoría. Este enfoque es especialmente útil para análisis de mercado, reporting financiero y presentaciones ejecutivas donde se requiere destacar ratios o porcentajes. La herramienta soporta datasets multidimensionales, permitiendo personalizar gradientes radiales para cada segmento, ajustar anchos de trazo (stroke) en píxeles, y configurar radios internos y externos para controlar la proporción del hueco central. Al generar gráficos vectoriales, mantiene la calidad a cualquier resolución, ideal para integración en dashboards web o documentos PDF profesionales.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Dona",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al generador a través de /doughnut-chart-generator en el navegador",
+    "Introduce tus datos en el formato 'Categoría:Valor' separado por líneas (ej: 'Ventas:45')",
+    "Selecciona un esquema de color predefinido o crea combinaciones personalizadas con el selector HEX",
+    "Ajusta parámetros técnicos: radio interno (20-80% del radio total), grosor del borde (1-10px), y rotación inicial en grados",
+    "Activa/desactiva etiquetas de porcentaje y valores absolutos con el control de anotaciones",
+    "Exporta el resultado como SVG optimizado o imagen PNG de 4K con un clic en el botón correspondiente"
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Dona para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Visualizar la distribución del presupuesto anual de una empresa por departamentos, destacando segmentos con colores corporativos personalizados",
+    "Mostrar el porcentaje de participación en mercado de distintas marcas de smartphones en un informe de análisis competitivo",
+    "Representar los resultados de una encuesta de satisfacción de clientes con segmentos coloreados por niveles de satisfacción (verde/amarillo/rojo)",
+    "Analizar la composición porcentual de lenguajes de programación utilizados en proyectos open source, con etiquetas dinámicas que muestran estadísticas clave"
   ]
 }

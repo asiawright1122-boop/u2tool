@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Baumdiagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Baumdiagramm-Generator können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, der Baumdiagramm-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu verbessern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Daten sicherheitshalber schützt und diese nicht auf irgendeinen Server hochgeladen werden. Nutzen Sie den Baumdiagramm-Generator sofort, um die schnellen, sicheren und kostenlosen Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Tree Chart Generator ist ein Spezialwerkzeug zur visuellen Darstellung hierarchischer Strukturen durch orthogonale oder radiale Layout-Algorithmen. Technisch basiert das Tool auf einer Kombination aus D3.js und benutzerdefinierten SVG-Renderings, die komplexe Baumstrukturen in Echtzeit berechnen. Die orthogonalen Layouts verwenden Modellierungstechniken wie den Reingold-Tilford-Algorithmus für symmetrische Knotenplatzierung, während radiale Visualisierungen polare Koordinatensysteme nutzen, um Hierarchien konzentrisch darzustellen. Anwender profitieren durch präzise Kontrolle über Knotenattribute (Farbe, Größe, Beschriftung) und Kantengestaltung (Linienstil, Krümmung). Die Eingabedaten werden entweder im JSON-Format mit definierter Parent-Child-Hierarchie oder als tabellarische CSV-Datei verarbeitet. Das Tool ermöglicht dynamisches Zoomen, interaktive Umordnung durch Drag-and-Drop und Export in Vektorgrafikformate wie SVG oder PNG. Entwickler nutzen die eingebaute API-Dokumentation zur Integration in bestehende Anwendungen, während Forscher die präzise mathematische Berechnung für wissenschaftliche Visualisierungen schätzen.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Baumdiagramm-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Öffnen Sie das Tool im Browser und wählen Sie den Registerkartenbereich 'Datenimport' aus.",
+    "Laden Sie eine JSON-Datei mit einer hierarchischen Struktur hoch oder fügen Sie CSV-Daten mit expliziten Parent-ID-Zuordnungen ein.",
+    "Wählen Sie im 'Layout-Modus' zwischen orthogonal (kartesisch) und radial (kreisbasiert) aus.",
+    "Passen Sie im 'Knoten-Editor' die visuellen Parameter wie Füllfarbe, Schriftgröße und Kantenwinkel an.",
+    "Verwenden Sie die 'Interaktive Vorschau'-Funktion, um Knoten manuell zu positionieren oder Hierarchieebenen zu reduzieren.",
+    "Exportieren Sie das finale Diagramm über den 'SVG-Export'-Button oder generieren Sie einen Einbettungscode für Webanwendungen."
   ],
   "usage_examples": [
-    "Verwenden Sie den Baumdiagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell Verarbeitungsergebnisse ohne zu warten"
+    "Visualisierung der Unternehmensstruktur eines Konzerns mit Abteilungshierarchien und Managementebenen.",
+    "Erstellung eines wissenschaftlichen Taxonomiebaums für biologische Artenklassifizierung mit radialer Distanzanzeige.",
+    "Darstellung von Softwaremodul-Abhängigkeiten in einem CI/CD-Pipeline-System mit orthogonalen Verbindungslinien.",
+    "Modellierung eines historischen Familienstammbaums mit mehreren Generationen und Verzweigungspunkten."
   ]
 }

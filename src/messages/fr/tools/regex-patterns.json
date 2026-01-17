@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Bibliothèque de Modèles Regex est un outil pratique en ligne qui vous aide à accomplir rapidement diverses tâches. Avec la Bibliothèque de Modèles Regex, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil présente une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez un développeur, un concepteur ou un utilisateur général, la Bibliothèque de Modèles Regex peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, garantissant la sécurité de vos données et évitant leur upload sur n'importe quel serveur. Utilisez immédiatement la Bibliothèque de Modèles Regex pour expérimenter des services de outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "La bibliothèque de motifs Regex propose un ensemble de motifs d'expressions régulières prévalidés et optimisés pour des cas d'utilisation courants en développement. Conçue comme une référence technique, elle permet aux développeurs de gagner du temps en évitant les erreurs fréquentes liées à la création manuelle de regex. Chaque motif est structuré avec des classes de caractères, quantifieurs et groupes de capture spécifiques, accompagnés de tests unitaires intégrés pour garantir leur fiabilité. Par exemple, le motif d'email intègre les spécifications RFC 5322, tandis que celui des URLs gère les sous-domaines, chemins et paramètres avec des assertions lookahead. Cette solution s'adresse aux développeurs qui doivent implémenter des validations de formulaires, du nettoyage de données ou de l'extraction d'informations dans des fichiers logs. Son interface permet d'analyser la structure des motifs via un parseur syntaxique en temps réel, affichant les correspondances caractères par caractères grâce à un moteur d'évaluation basé sur des automates finis déterministes.",
   "usage_steps": [
-    "Ouvrez la page de la Bibliothèque de Modèles Regex",
-    "Entrez ou collez le contenu que vous voulez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'outil via la section 'Développement' du site, puis sélectionnez un motif dans les catégories proposées (email, URL, téléphone, etc.)",
+    "Utilisez le sélecteur de variantes pour choisir entre les versions standards ou étendues d'un motif (ex: URL HTTP/HTTPS ou incluant les protocoles de messagerie)",
+    "Activez/désactivez les cases à cocher des indicateurs regex (i pour insensible à la casse, g pour recherche globale, etc.) selon vos besoins",
+    "Saisissez un texte d'exemple dans le champ de test pour visualiser les captures en temps réel avec mise en évidence des groupes parenthésés",
+    "Cliquez sur le bouton 'Copier' pour obtenir le code prêt à l'emploi dans votre langage cible (JavaScript, Python, Java, etc.)",
+    "Consultez l'explication détaillée sous chaque motif pour comprendre les constructeurs utilisés (ex: [A-Za-z0-9._%+-]+ pour les parties locales d'email)"
   ],
   "usage_examples": [
-    "Utilisez la Bibliothèque de Modèles Regex pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Valider un formulaire d'inscription en temps réel en vérifiant qu'une adresse email respecte les normes RFC tout en excluant les domaines temporaires",
+    "Extraire toutes les URLs d'un document PDF scanné en utilisant le motif URL avec capture des paramètres de requête pour un analyseur de liens",
+    "Normaliser un fichier CSV contenant des numéros de téléphone internationaux avec conversion au format E.164 (+1 pour les États-Unis, +33 pour la France, etc.)",
+    "Nettoyer les données d'un champ de saisie utilisateur dans une API REST en supprimant les caractères dangereux tout en conservant les emoticones Unicode autorisés"
   ]
 }

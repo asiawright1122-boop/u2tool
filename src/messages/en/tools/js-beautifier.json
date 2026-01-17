@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JavaScript Beautifier is a practical online tool that helps you quickly complete various tasks. Using JavaScript Beautifier, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JavaScript Beautifier can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JavaScript Beautifier immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The JavaScript Beautifier is a syntactic parser that transforms raw JavaScript code into human-readable or optimized machine-readable formats. Using Abstract Syntax Tree (AST) analysis, it tokenizes input code to reconstruct structured indentation, reinsert optional semicolons, and normalize spacing around operators. Users can toggle between beautification (expanding one-liners into multi-line statements with configurable indentation levels) or minification (removing whitespace and comments while preserving functionality). This tool uniquely supports modern ES6+ syntax including arrow functions, template literals, and JSX expressions, while offering granular controls for comment preservation and variable name obfuscation during minification. Developers require this tool to reverse-engineer compressed production code for debugging, standardize team codebases, reduce file sizes for browser delivery, or analyze legacy scripts with inconsistent formatting.",
   "usage_steps": [
-    "Open the JavaScript Beautifier tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the editor and paste your JavaScript code into the left-hand input panel",
+    "Select 'Beautify' or 'Minify' mode using the toggle switch above the editor",
+    "Adjust indentation settings (2/4 spaces, tabs) via the dropdown menu",
+    "Enable 'Preserve Line Breaks' checkbox to maintain original paragraph spacing",
+    "Click the 'Process Code' button to apply transformations in real-time",
+    "Copy the output from the right-hand results panel or download as .js file"
   ],
   "usage_examples": [
-    "Use JavaScript Beautifier to process your data",
-    "Get processing results quickly without waiting"
+    "Debugging a production error by expanding minified code to locate syntax issues",
+    "Standardizing code formatting across a team's GitHub pull requests",
+    "Reducing JavaScript payload size for mobile app assets",
+    "Converting legacy jQuery scripts to modern ES6 module syntax visually"
   ]
 }

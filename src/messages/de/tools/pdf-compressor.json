@@ -1,14 +1,17 @@
 {
-  "detailed_description": "PDF-Kompressor ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit PDF-Kompressor können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, PDF-Kompressor kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie PDF-Kompressor sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der PDF Compressor optimiert digitale Dokumente durch mehrstufige Kompressionstechniken, die sowohl verlustfreie als auch verlustbehaftete Algorithmen kombinieren. Das Tool analysiert intern die PDF-Objektstruktur, identifiziert redundante XObjecte, überflüssige Metadaten und ineffizient gespeicherte Ressourcen wie Schriftarten. Bei Bilddaten wird eine adaptive Downsampling-Strategie angewandt: Farbbilder werden in optimierten JPEG-XS-Kompressionen gespeichert, während Graustufeninhalte mit FlateDecode komprimiert werden. Besonders nützlich ist der Tool für Unternehmen, die große Mengen gescannter Dokumente mit OCR-Layern archivieren – hier werden redundante Bildschichten automatisch zusammengeführt. Der Compressor entfernt auch versteckte Daten wie EXIF-Informationen und nutzt Subsampling-Techniken für Fonts. Technisch interessant ist die Implementierung des PDF/A-1b-Konverters, der gleichzeitig die Dateikompatibilität sichert. Entwickler profitieren von der präzisen Kontrolle über die Linearization-Option, die das Streaming von Dokumenten im Web optimiert.",
   "usage_steps": [
-    "Öffnen Sie die PDF-Kompressor-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Ziehen Sie die PDF per Drag-and-Drop in den 'Datei-Import'-Bereich oder klicken Sie auf 'Durchsuchen' zur manuellen Auswahl.",
+    "Aktivieren Sie den Schieberegler 'Komprimierungsmodus' für Dokumente mit Bildern (JPEG-XS) oder rein textbasierten Inhalten (FlateDecode).",
+    "Passen Sie im erweiterten Menü die DPI-Einstellung für Bilder auf 150 dpi für Archivierung oder 72 dpi für Webdarstellung an.",
+    "Aktivieren Sie die Checkbox 'OCR-Layer beibehalten', wenn Suchfunktionalität in gescannten Dokumenten erhalten bleiben soll.",
+    "Wählen Sie im Dropdown 'Output-Format' zwischen Standard-PDF und PDF/A-1b für langfristige Archivierung.",
+    "Klicken Sie auf 'Starte Kompression' und laden Sie das optimierte Dokument über den 'Download'-Button herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie PDF-Kompressor, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Ein Ingenieurbüro reduziert CAD-Zeichnungen mit eingebetteten hochauflösenden Rastergrafiken von 25MB auf 3,8MB für Kundenmails.",
+    "Ein Forschungsinstitut komprimiert 500 gescannte Dissertationen mit OCR für eine digitale Bibliothek, spart 82% Speicherplatz.",
+    "Ein Webentwickler optimiert ein interaktives PDF-Formular für mobile Nutzer, indem er Schriftobjekte linearisiert und JavaScript-Referenzen minimiert.",
+    "Ein Steuerberater konvertiert Jahresabschlüsse mit dem PDF/A-Modus für die elektronische Archivierung bei der Bundesbank."
   ]
 }

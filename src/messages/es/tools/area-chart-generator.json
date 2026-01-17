@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Área es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Área, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Área puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesamientos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y que no se suban a ningún servidor. Usa el Generador de Gráficos de Área inmediatamente para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El generador de gráficos de área permite crear representaciones visuales de datos acumulativos mediante gráficos de área bidimensionales. Técnicamente, este herramienta procesa series de datos numéricos para mostrar la evolución de múltiples variables a lo largo de un eje temporal o categórico, utilizando interpolación de curvas para conectar puntos de datos y rellenar áreas bajo las líneas con gradientes o colores sólidos. Su funcionalidad es especialmente útil para analizar tendencias acumulativas en finanzas (como flujos de caja proyectados), ciencia de datos (visualización de series temporales multivariables) o análisis web (tráfico acumulado por fuente). El motor interno utiliza bibliotecas de renderizado vectorial (SVG) para exportaciones escalables y canvas 2D para previsualizaciones en tiempo real, manteniendo precisión matemática en escalas logarítmicas o lineales. Los usuarios pueden ajustar parámetros como transparencia alfa, stacking mode (normal o porcentual) y ejes cruzados, características críticas para comparar magnitudes relativas en datasets complejos.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Área",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Importa tus datos en formato CSV con columnas etiquetadas (ej: Fecha, Ventas, Costos)",
+    "2. Selecciona variables X e Y mediante los selectores de columna en el panel de configuración",
+    "3. Activa el modo 'Stacked' para acumular series o '100%' para proporciones relativas",
+    "4. Ajusta la curvatura de las líneas usando el control deslizante de interpolación (linear/monotone/cardinal)",
+    "5. Personaliza paletas de color con selección HEX o RGBA para cada serie de datos",
+    "6. Exporta el gráfico como SVG editables o PNG de alta resolución con botón de descarga"
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Área para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Analizar el crecimiento acumulado de usuarios en una plataforma SaaS durante 12 meses, comparando segmentos de pago y gratuitos",
+    "Visualizar el consumo energético mensual de tres plantas industriales con escala de colores progresivos",
+    "Crear gráficos de precipitaciones acumuladas por trimestre para comparar datos históricos de 5 estaciones meteorológicas",
+    "Mostrar el uso de CPU y memoria en un servidor durante 24 horas, con áreas superpuestas que reflejan carga simultánea"
   ]
 }

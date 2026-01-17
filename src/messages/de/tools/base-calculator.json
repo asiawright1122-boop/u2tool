@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Basisrechner ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Basisrechner können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Basisrechner kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Basisrechner sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der Base Calculator ist ein präzises Instrument zur Durchführung arithmetischer Operationen in beliebigen Stellenwertsystemen (Basen 2 bis 36). Technisch gesehen verwendet das Tool einen mehrstufigen Algorithmus: Zunächst werden Eingaben auf syntaktische Korrektheit geprüft, einschließlich der Validierung von Ziffern im Kontext der gewählten Basis. Anschließend erfolgt die Konvertierung beider Operanden in das Dezimalsystem unter Berücksichtigung von Vorzeichen und Nachkommastellen. Die eigentliche Berechnung (Addition, Subtraktion, Multiplikation oder Division) wird mit IEEE-754-Gleitkommazahlen durchgeführt, gefolgt von einer Rücktransformation des Ergebnisses in das Zielstellsystem. Besonders nützlich ist dies für Entwickler, die mit Low-Level-Protokollen (z.B. IPv6-Adressberechnung in Hexadezimal), kryptografischen Hash-Funktionen (Base58-Überprüfung) oder Hardware-Design (Logikgattersimulation in Basis 2) arbeiten. Das Tool unterstützt auch komplexe Szenarien wie die Behandlung periodischer Brüche bei Basiswechseln und das Handling von Nicht-Standardbasen (z.B. Basis 12 für alte Währungssysteme).",
   "usage_steps": [
-    "Öffnen Sie die Basisrechner-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Wählen Sie im Dropdown-Menü 'Basis Eingabe' die Quellzahlenbasis (2 bis 36) für beide Operanden.",
+    "Geben Sie den ersten Operanden in das Feld 'Operand 1' ein, inklusive Punkt-Notation für Nachkommastellen.",
+    "Selektieren Sie die gewünschte Operation (+, −, ×, ÷) im Rechenoperator-Auswahlmenü.",
+    "Füllen Sie das 'Operand 2'-Feld mit dem zweiten Wert unter Einhaltung der Basisregeln.",
+    "Aktivieren Sie optional den 'Negative Zahlen'-Schalter für Zweierkomplement-Darstellung.",
+    "Klicken Sie auf 'Berechnung starten', um das Ergebnis in der im Feld 'Basis Ausgabe' gewählten Zielbasis anzuzeigen."
   ],
   "usage_examples": [
-    "Verwenden Sie Basisrechner, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Berechnung von IPv6-Präfixlängen: Addition zweier hexadezimaler Netzmasken (Basis 16) für Subnetting-Optimierung.",
+    "Verifikation von Bitcoin-Wallet-Adressen durch Base58Check-Summenvalidierung mit Modulo-Operationen.",
+    "Simulation logischer Schaltungen: Multiplikation binärer Bitmasken (Basis 2) zur Modellierung von Registeroperationen.",
+    "Historische Finanzanalyse: Division von Beträgen im britischen Pfund-System (Basis 20) für Vorkriegs-Währungsumrechnung."
   ]
 }

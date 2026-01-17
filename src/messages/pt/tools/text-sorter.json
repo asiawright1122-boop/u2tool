@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Text Sorter é uma ferramenta online prática que ajuda você a concluir diversas tarefas rapidamente. Com o Text Sorter, você pode facilmente processar diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário em geral, o Text Sorter pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use o Text Sorter imediatamente para experimentar serviços de ferramenta online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Text Sorter é uma ferramenta técnica especializada para processamento de texto, permitindo ordenação precisa de linhas com base em critérios alfabéticos, numéricos ou de comprimento. O algoritmo implementa comparação Unicode para ordenação alfabética, parsing numérico para dados quantitativos e cálculo de caracteres UTF-8 para ordenação por tamanho. Seu motor interno suporta normalização de acentos (NFKC/NFKD), diferenciação de maiúsculas/minúsculas e preservação de indentação. Ideal para desenvolvedores que precisam organizar listas de imports em código, analistas preparando dados para visualização ou profissionais que lidam com logs desestruturados. Funciona totalmente no cliente via WebAssembly, garantindo processamento rápido sem exposição de dados sensíveis. A interface oferece controle granular sobre delimitadores de linha, remoção de duplicatas e inversão de ordem, com suporte a textos multilíngues e codificações Unicode.",
   "usage_steps": [
-    "Abra a página do Text Sorter",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole o texto não ordenado na área de input com suporte a múltiplas linhas",
+    "Selecione o modo de ordenação no seletor: 'Alfabética', 'Numérica' ou 'Por Comprimento'",
+    "Escolha a direção do sort (ascendente/descendente) usando o toggle correspondente",
+    "Ative a opção 'Ignorar Maiúsculas' para normalização de casing durante a ordenação alfabética",
+    "Marque 'Remover Duplicatas' para eliminação de linhas idênticas antes do processamento",
+    "Clique em 'Processar' para executar o algoritmo e visualizar o resultado no painel de saída formatado"
   ],
   "usage_examples": [
-    "Use o Text Sorter para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor ordenando alfabeticamente uma lista de imports em Python para padronização de código",
+    "Um analista de dados organizando linhas de um CSV por valor numérico decrescente antes de importar no Excel",
+    "Um estudante classificando referências bibliográficas por comprimento para facilitar revisão de literatura",
+    "Um sysadmin processando logs de servidor para agrupar mensagens por padrões alfabéticos e identificar erros recorrentes"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON a Java es una herramienta práctica en línea que te ayuda a completar rápidamente diversas tareas. Usando JSON a Java, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, JSON a Java puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Usa JSON a Java inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "La herramienta JSON to Java transforma estructuras de datos JSON en clases POJO (Plain Old Java Objects) optimizadas con soporte para Lombok, reduciendo la verbosidad del código mediante anotaciones como @Data y @NoArgsConstructor. Al analizar el esquema JSON proporcionado, el conversor identifica automáticamente los tipos de datos (incluyendo colecciones y objetos anidados) y genera código Java compatible con estándares de serialización/deserialización (por ejemplo, Jackson o Gson). Esta herramienta es esencial para desarrolladores que implementan APIs RESTful, procesan respuestas de servicios web o integran microservicios, evitando la creación manual de clases boilerplate. El motor interno utiliza técnicas de type inference para mapear valores JSON a primitivos, wrappers o tipos genéricos en Java, garantizando consistencia en campos opcionales (nullables) y estructuras complejas. Además, permite personalizar modificadores de acceso (public/private) y nombres de clases raíz, adaptándose a diferentes estilos de codificación.",
   "usage_steps": [
-    "Abre la página del convertidor JSON a Java",
-    "Introduce o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Pegar el JSON válido en el editor de código de la interfaz web.",
+    "2. Activar el interruptor 'Usar Lombok' para incluir anotaciones como @Data y @AllArgsConstructor.",
+    "3. Especificar el nombre de la clase raíz en el campo 'Clase Principal' (por defecto: 'RootObject').",
+    "4. Seleccionar el nivel de visibilidad deseado (public/private/protected) desde el menú desplegable.",
+    "5. Marcar la opción 'Campos Nullable' para generar clases con soporte para valores null en campos opcionales.",
+    "6. Hacer clic en 'Generar Código' para obtener el ZIP con las clases Java estructuradas en paquetes según el esquema original."
   ],
   "usage_examples": [
-    "Usa JSON a Java para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "1. Un desarrollador backend recibe una respuesta JSON de una API de clima y necesita crear rápidamente POJOs para deserializar los datos usando Jackson en un microservicio Spring Boot.",
+    "2. Un equipo de Android implementa una aplicación que consume un endpoint de noticias; utilizan la herramienta para generar modelos con Lombok, reduciendo el código de entidades en un 60%.",
+    "3. Un arquitecto de software integra un sistema heredado con un nuevo sistema basado en eventos Kafka, convirtiendo esquemas JSON de mensajes en clases Java serializables.",
+    "4. Un QA engineer automatiza pruebas de integración generando clases de prueba a partir de payloads JSON de ejemplo, asegurando compatibilidad con las respuestas esperadas en las pruebas."
   ]
 }

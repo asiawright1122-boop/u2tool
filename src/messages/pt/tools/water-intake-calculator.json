@@ -1,15 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Ingestão de Água ajuda você a determinar quanto água deve beber diariamente.",
+  "detailed_description": "O Calculador de Ingestão de Água é uma ferramenta técnica que estima a quantidade diária ideal de água com base em parâmetros fisiológicos e ambientais. O cálculo utiliza a equação de Mifflin-St Jeor para determinar o metabolismo basal (BMR) e aplica fatores de atividade física (PAL - Physical Activity Level) para ajustar o gasto energético total (TDEE), que por sua vez influencia as necessidades hídricas. Cada litro de água é convertido a partir da relação de 1mL/kcal consumida, considerando também variáveis como umidade, altitude e condições específicas como gravidez ou exercícios de alta intensidade. Este recurso é essencial para evitar desidratação subclínica, que pode reduzir a função cognitiva em até 15% segundo estudos da European Hydration Institute. A ferramenta diferencia-se por permitir ajustes granulares, como a inclusão de exposição solar prolongada ou regimes de treino HIIT, garantindo precisão para usuários de diferentes perfis.",
   "usage_steps": [
-    "Insira o peso corporal",
-    "Selecione o nível de atividade",
-    "Escolha o clima",
-    "Visualize a ingestão recomendada",
-    "Siga as dicas"
+    "Selecione o sexo biológico no menu dropdown (Masculino/Feminino/Outro)",
+    "Insira seu peso atual em kg no campo numérico com precisão de uma casa decimal",
+    "Escolha seu nível de atividade física usando o seletor de ícones: sedentário, leve, moderado, intenso ou atleta profissional",
+    "Ajuste o slider de temperatura ambiente (15°C a 40°C) e umidade relativa (20% a 90%) conforme suas condições diárias",
+    "Ative o checkbox 'Atividade física prolongada' se planeja exercícios acima de 60 minutos",
+    "Clique no botão 'Calcular' para gerar o relatório com ingestão recomendada em mL/hora e alertas de reposição eletrolítica"
   ],
   "usage_examples": [
-    "Calcule as necessidades de água para atletas",
-    "Determine a hidratação para climas quentes",
-    "Planeje a ingestão diária"
+    "Um corredor de trail running ajustando hidratação pré-prova em ambiente de 32°C e 75% de umidade",
+    "Uma gestante no terceiro trimestre calculando necessidades hídricas adicionais para suporte à amniocentese",
+    "Um programador remoto em home office determinando intervalos ideais para consumo de água em clima temperado",
+    "Um fisiculturista avaliando retenção hídrica durante ciclo de cutting com dieta cetogênica"
   ]
 }

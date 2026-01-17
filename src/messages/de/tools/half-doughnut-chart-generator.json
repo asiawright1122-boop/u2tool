@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Halbmond-Diagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Halbmond-Diagramm-Generator können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient nutzen können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, der Halbmond-Diagramm-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Bearbeitungen erfolgen lokal in Ihrem Browser, was Ihre Datensicherheit gewährleistet und verhindert, dass Ihre Daten auf irgendeinen Server hochgeladen werden. Nutzen Sie den Halbmond-Diagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Tools zu erleben.",
+  "detailed_description": "Der Half Doughnut Chart Generator ist ein spezialisierter Visualisierungstool zur Erstellung von halbkreisförmigen Tortendiagrammen mit dynamischen SVG-Elementen. Das Werkzeug konvertiert numerische Datensätze in proportionale Segmente innerhalb eines 180°-Kreissegments, wobei Benutzer die Kontrolle über technische Parameter wie Füllfarben, Strichstärken, Legendenpositionierung und interaktive Tooltips behalten. Die Implementierung erfolgt durch die Berechnung von Bogenwinkeln basierend auf Datenwerten, unter Verwendung von SVG-path-Elementen für präzise Formdarstellung. Die Halbkreisarchitektur eignet sich besonders für Dashboards mit begrenztem Platzangebot oder asymmetrische Layouts, da sie im Gegensatz zu vollständigen Doughnut-Charts einen fokussierten Datenbereich hervorhebt. Technisch ermöglicht der Generator die Anpassung des Innen- und Außendurchmessers, die Implementierung von Datenbeschriftungen via DOM-Manipulation und die Exportfunktionalität in Vektor- und Rasterformaten. Entwickler profitieren von der Integration von ARIA-Labels für Barrierefreiheit und der Möglichkeit, den Chart über JavaScript-APIs dynamisch zu aktualisieren, ohne das gesamte Diagramm neu laden zu müssen.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Halbmond-Diagramm-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie bearbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Werkzeugoptionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "1. Geben Sie numerische Werte in die Tabellenfelder ein und weisen Sie jedem Segment eine eindeutige Beschriftung zu.",
+    "2. Wählen Sie ein Farbschema aus dem verfügbaren CSS-Farbpaletten-Modul oder definieren Sie benutzerdefinierte HEX-Codes.",
+    "3. Passen Sie die Segmentabstände durch Eingabe von Pixelwerten für den 'Padding' und 'Margin' Parameter an.",
+    "4. Aktivieren Sie den 'Legend Docking' Schalter, um die Legende an der linken, rechten oder unteren Seite des Diagramms zu positionieren.",
+    "5. Verfeinern Sie die interaktiven Tooltips durch Aktivierung von 'Value Display Mode' für absolute oder prozentuale Anzeige.",
+    "6. Exportieren Sie das generierte Diagramm durch Klick auf den 'Download SVG/PNG' Button oder integrieren Sie den Embed-Code direkt in Ihre Webseite."
   ],
   "usage_examples": [
-    "Verwenden Sie den Halbmond-Diagramm-Generator, um Ihre Daten zu bearbeiten",
-    "Erhalten Sie schnell Bearbeitungsergebnisse ohne zu warten"
+    "Ein Projektmanager visualisiert den Fertigstellungsstand von Meilensteinen in einer Dashboard-Spalte mit begrenztem Platz.",
+    "Ein Finanzanalyst zeigt Quartalsgewinne im Vergleich zum Vorjahreszeitraum in einem asymmetrischen Report-Layout an.",
+    "Ein UX-Designer demonstriert Nutzerbefragungsergebnisse (z.B. 0-100%-Skala) in einem responsiven Web-Prototypen.",
+    "Ein Bildungsanbieter präsentiert Abschlussraten verschiedener Kurse in einer kompakten Infografik für mobile Endgeräte."
   ]
 }

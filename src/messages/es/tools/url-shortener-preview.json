@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Vista Previa de Enlace Corto es una herramienta online práctica que te ayuda a completar diversas tareas de manera rápida. Usando la Vista Previa de Enlace Corto, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y usarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, la Vista Previa de Enlace Corto puede ayudarte a mejorar tu eficiencia laboral. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no se suban a ningún servidor. Utiliza la Vista Previa de Enlace Corto inmediatamente para experimentar servicios de herramientas online rápidas, seguras y gratuitas.",
+  "detailed_description": "URL Shortener Preview es una herramienta avanzada diseñada para desvelar el contenido oculto detrás de URLs acortadas. Esta herramienta utiliza técnicas de análisis de red para descomprimir y desensamblar URLs acortadas, proporcionando una vista previa del contenido al que apuntan y un informe detallado sobre su estructura y seguridad. Los usuarios pueden beneficiarse de esta herramienta en diversos escenarios, como la verificación de enlaces compartidos en redes sociales, la seguridad de campañas de marketing, y la prevención de phishing. La herramienta opera a nivel de protocolo HTTP/HTTPS, desacodificando las URL acortadas y realizando solicitudes de red para obtener el contenido original. Además, integra tecnologías de análisis de datos y machine learning para detectar patrones sospechosos y potenciales riesgos de seguridad.",
   "usage_steps": [
-    "Abre la página de la Vista Previa de Enlace Corto",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Paso 1: Accede a la página principal de URL Shortener Preview a través del navegador web de tu elección.",
+    "Paso 2: En el campo de entrada, pega la URL acortada que deseas analizar.",
+    "Paso 3: Haz clic en el botón 'Analizar URL' para iniciar el proceso de descompresión y análisis.",
+    "Paso 4: Espera unos momentos mientras la herramienta realiza las solicitudes de red y procesa el contenido.",
+    "Paso 5: Revisa el informe detallado que se muestra en la pantalla, incluyendo la URL original, el contenido del sitio web, y los posibles riesgos de seguridad.",
+    "Paso 6: Si detectas algún riesgo, considera tomar medidas adicionales, como informar a la fuente del enlace o bloquear la URL en tus sistemas de seguridad."
   ],
   "usage_examples": [
-    "Usa la Vista Previa de Enlace Corto para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Ejemplo 1: Un community manager de redes sociales recibe un enlace acortado en un mensaje directo. Utiliza URL Shortener Preview para verificar que el enlace no conduzca a un sitio web malicioso antes de compartirlo con la audiencia.",
+    "Ejemplo 2: Un analista de marketing desea evaluar la efectividad de una campaña de publicidad que utiliza URLs acortadas. Con esta herramienta, puede previsualizar el contenido final y asegurarse de que el enlace redirige correctamente a la página de destino.",
+    "Ejemplo 3: Un administrador de sistemas sospecha que un enlace acortado en un correo electrónico puede ser parte de una campaña de phishing. Utiliza URL Shortener Preview para analizar el enlace y detectar cualquier indicio de actividad sospechosa.",
+    "Ejemplo 4: Un desarrollador web está implementando una función de seguimiento de enlaces acortados en su aplicación. Antes de lanzar la función, usa esta herramienta para probar y validar que las URLs acortadas funcionen correctamente y no contengan contenido dañino."
   ]
 }

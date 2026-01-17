@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de diagramme en cercle imbriqué est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de diagramme en cercle imbriqué pour traiter facilement diverses données sans installer de logiciels ou de plugins. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de diagramme en cercle imbriqué peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et ne sont pas téléchargées sur aucun serveur. Utilisez immédiatement le Générateur de diagramme en cercle imbriqué pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de diagrammes circulaires imbriqués permet de visualiser des données hiérarchiques complexes sous forme de cercles concentriques. Chaque niveau de la hiérarchie est représenté par un anneau intérieur/intermédiaire/extérieur, avec des segments proportionnels aux valeurs numériques. Ce outil est particulièrement utile pour comparer des proportions au sein de groupes et sous-groupes, par exemple pour analyser la part de marché par région et sous-catégorie. Techniquement, il utilise des algorithmes de partitionnement de données pour mapper les dimensions hiérarchiques sur des angles de secteurs, en appliquant des échelles de couleurs divergentes pour différencier les branches. La bibliothèque D3.js permet de rendre les diagrammes interactifs avec des infobulles dynamiques et un zoom fluide. Les utilisateurs peuvent importer des données structurées en JSON/CSV, définir la profondeur de la hiérarchie (jusqu'à 5 niveaux), et ajuster les paramètres de rendu comme les marges entre anneaux ou l'opacité des couleurs.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de diagramme en cercle imbriqué",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Importez vos données hiérarchiques au format JSON ou CSV via le bouton 'Charger fichier' (ex: {categorie: 'Électronique', sous_categories: [{nom: 'Smartphones', valeur: 45}, {nom: 'Laptops', valeur: 30}]})",
+    "2. Définissez la profondeur de la hiérarchie dans le menu déroulant 'Niveaux imbriqués' (2 à 5 niveaux disponibles)",
+    "3. Sélectionnez une palette de couleurs prédéfinie ou personnalisez les codes hexadécimaux pour chaque branche dans l'éditeur de style",
+    "4. Ajustez la largeur relative de chaque anneau avec les curseurs 'Épaisseur niveau 1', 'Épaisseur niveau 2', etc.",
+    "5. Activez/désactivez les étiquettes de pourcentage et les légendes en cochant les options dans la section 'Annotations'",
+    "6. Téléchargez le résultat au format SVG ou PNG en cliquant sur 'Exporter' après avoir ajusté la résolution dans les paramètres d'exportation"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de diagramme en cercle imbriqué pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Visualiser la répartition du budget d'une entreprise par département (anneau extérieur) et sous-catégories de dépenses (anneau intérieur)",
+    "Comparer les ventes de jeux vidéo par genre (action, RPG) et sous-genres (FPS, stratégie) sur deux années consécutives",
+    "Analyser la structure démographique d'une population par tranches d'âge et répartition hommes/femmes",
+    "Représenter la taxonomie de produits avec catégories principales et sous-catégories hiérarchiques imbriquées"
   ]
 }

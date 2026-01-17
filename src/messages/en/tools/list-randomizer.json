@@ -1,14 +1,17 @@
 {
-  "detailed_description": "List Randomizer is a practical online tool that helps you quickly complete various tasks. Using List Randomizer, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, List Randomizer can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use List Randomizer immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The List Randomizer employs a cryptographically secure Fisher-Yates shuffle algorithm to generate uniformly random permutations of list elements. This tool accepts input in multiple formats including plain text, CSV, and JSON arrays, and processes data using UTF-8 encoding to maintain character integrity. Internally, it leverages JavaScript's Web Crypto API for entropy generation, ensuring statistically unbiased output distributions. Users can control randomization parameters through a UI that exposes seed value customization and delimiter specification options. The tool's streaming architecture handles large datasets efficiently by processing input line-by-line rather than loading entire files into memory. This makes it particularly valuable for applications requiring reproducible randomness in data science workflows, A/B testing scenarios, and security-sensitive operations where predictable patterns must be eliminated. Unlike basic shufflers, this implementation preserves Unicode normalization forms and provides output in both downloadable file formats and copyable text blocks.",
   "usage_steps": [
-    "Open the List Randomizer tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Paste raw data into the input text area or upload a .txt/.csv file",
+    "Select input delimiter type (comma, tab, newline, or custom regex)",
+    "Choose shuffle algorithm variant (standard Fisher-Yates or Durstenfeld-Knuth)",
+    "Adjust entropy source settings (browser crypto API or custom seed value)",
+    "Preview randomized output in the interactive grid display",
+    "Export results via 'Download as CSV' button or clipboard copy function"
   ],
   "usage_examples": [
-    "Use List Randomizer to process your data",
-    "Get processing results quickly without waiting"
+    "A teacher creating randomized student group assignments for lab rotations",
+    "A data engineer generating synthetic test datasets with controlled variance",
+    "A marketing team selecting contest winners from email subscriber lists",
+    "A UX researcher randomizing survey question order to eliminate sequence bias"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Validador de Endereço IP é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Utilizando o Validador de Endereço IP, você pode processar dados de maneira fácil sem a necessidade de instalar qualquer software ou plugin. A ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Validador de Endereço IP pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Validador de Endereço IP imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O IP Address Validator é uma ferramenta técnica especializada que realiza a verificação rigorosa de endereços IPv4 e IPv6, com base nos padrões definidos pelas especificações RFC 791 (IPv4) e RFC 8200 (IPv6). O funcionamento interno do tool utiliza expressões regulares otimizadas e algoritmos de parsing para validar a sintaxe, o comprimento e a estrutura dos endereços, incluindo verificações para formatos como CIDR, endereços link-local (fe80::/10) e ranges reservados (como 127.0.0.0/8 para loopback). Além da validação básica, a ferramenta identifica automaticamente a classe do IP, verifica se pertence a redes privadas (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) e detecta anomalias como endereços de broadcast ou multicast incorretamente formatados. Desenvolvedores e administradores de redes precisam desta ferramenta para depurar problemas em configurações de servidores, validar payloads de APIs REST que lidam com geolocalização IP, ou garantir a integridade de dados em sistemas de autenticação baseados em IP. A análise detalhada inclui a decomposição hexadecimal/binária de IPv6 e a verificação de máscaras de sub-rede, oferecendo relatórios com informações sobre versão, tipo de endereço e conformidade com padrões de segurança de rede.",
   "usage_steps": [
-    "Abra a página do Validador de Endereço IP",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Acesse a ferramenta através da URL https://seusite.com/ip-validator",
+    "2. Insira o endereço IP no campo de texto centralizado, com suporte a formatos como '192.168.1.1/24' ou '2001:0db8::1'",
+    "3. Selecione manualmente a versão IP (IPv4/IPv6) no seletor dropdown ou deixe a detecção automática ativa",
+    "4. Clique no botão 'Validar' para acionar o motor de análise, que processará o IP em até 200ms",
+    "5. Revise o relatório de saída com campos como 'Classe de Endereço', 'Formato Válido' e 'Intervalo Reservado'",
+    "6. Use o botão 'Exportar JSON' para obter os dados estruturados da validação ou 'Histórico' para revisar consultas anteriores"
   ],
   "usage_examples": [
-    "Use o Validador de Endereço IP para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem precisar esperar"
+    "1. Um desenvolvedor backend precisa validar se um webhook de geolocalização está enviando endereços IPv6 no formato correto antes de persisti-los no banco de dados",
+    "2. Um administrador de redes corporativas verifica se logs de firewall contêm IPs privados que foram erroneamente expostos em registros públicos",
+    "3. Um profissional de segurança testa se uma lista de IPs bloqueados contém entradas inválidas que poderiam causar falhas em regras de iptables",
+    "4. Um estudante de redes compreende a diferença entre endereços IPv6 stateless (SLAAC) e EUI-64 ao validar exemplos práticos fornecidos pela ferramenta"
   ]
 }

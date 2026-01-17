@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der QR-Code-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem QR-Code-Generator können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient nutzen können. Ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, der QR-Code-Generator kann Ihnen helfen, die Arbeitsproduktivität zu verbessern. Alle Bearbeitungen erfolgen lokal im Browser, was Ihre Datenicherheit gewährleistet und verhindert, dass Ihre Daten auf irgendeinen Server hochgeladen werden. Nutzen Sie den QR-Code-Generator sofort, um schnelle, sichere und kostenlose Online-Dienstleistungen zu erleben.",
+  "detailed_description": "Der QR-Code-Generator ermöglicht die Erstellung von QR-Codes durch die Kodierung von Klartext, URLs oder Binärdaten in ein zweidimensionales Modulationsmuster (Matrix-Barcode). Intern verwendet das Tool Reed-Solomon-Fehlerkorrektur-Algorithmen zur Gewährleistung der Datenintegrität, unterstützt verschiedene QR-Versionen (1-40) mit unterschiedlichen Speicherkapazitäten und erlaubt die Anpassung von Ebenen wie L (7%), M (15%), Q (25%) und H (30%) für robuste Ausfallsicherheit. Die Generierung erfolgt durch die Transformation der Eingabedaten in eine Folge von Moduln (Pixeln) in einem Raster, wobei die Option zur Änderung der Ausgabematrixgröße (z. B. 200x200 bis 1000x1000 Pixel) und Farbtiefe (monochrom bis RGB) besteht. Die Exportfunktionalität nutzt die PNG-Bilddateispezifikation mit zlib-Kompression, um verlustfreie Qualität zu gewährleisten. Nutzer profitieren von der direkten Integration in Web-Anwendungen, Offline-Datenverteilung ohne Serverkosten oder der Erstellung von Track-and-Trace-Systemen für physische Objekte. Technisch ermöglicht das Tool die Manipulation des Eingabestroms über Base64-Encoding und die Anpassung des Quiet-Zone-Parameters zur Optimierung der Lesbarkeit durch mobile Scanner.",
   "usage_steps": [
-    "Öffnen Sie die Seite des QR-Code-Generators",
-    "Geben Sie den Inhalt ein oder fügen Sie ihn in das Eingabefeld ein",
-    "Passen Sie die Werkzeugeinstellungen und -einstellungen nach Bedarf an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "1. Öffnen Sie das Tool über die Navigationsleiste unter „Bilder > QR-Code-Generator\".",
+    "2. Geben Sie im Textfeld „Daten eingeben“ den zu kodierenden Inhalt ein (max. 2953 Zeichen für QR-Version 40).",
+    "3. Passen Sie im Konfigurationspanel die Parameter an: Wählen Sie die QR-Version, die Fehlerkorrektur-Ebene und die Ausgabegröße.",
+    "4. Aktivieren Sie optional die „Farbmodulation“ zur Anpassung der Modulfarbe oder „Hintergrund entfernen“ für transparente PNGs.",
+    "5. Klicken Sie auf „Vorschau generieren“, um das QR-Muster in Echtzeit zu überprüfen.",
+    "6. Laden Sie das finale Bild über den „PNG-Export“-Button herunter oder kopieren Sie den Base64-Output für Embedding."
   ],
   "usage_examples": [
-    "Verwenden Sie den QR-Code-Generator, um Ihre Daten zu bearbeiten",
-    "Erhalten Sie die Bearbeitungsergebnisse schnell, ohne zu warten"
+    "Ein Einzelhändler generiert QR-Codes für Produktverpackungen, die auf Webseiten mit Nachhaltigkeitszertifikaten verlinken.",
+    "Ein Entwickler erstellt einen QR-Code für einen API-Endpoint mit dynamischen URL-Parametern zur Authentifizierung.",
+    "Ein Museumsverwalter kodiert Audioguide-Inhalte in QR-Codes, die an Ausstellungsstücken angebracht werden.",
+    "Ein Netzwerkadministrator generiert QR-Codes für WPA2-Passwort-Sharing mit benutzerdefinierten Fehlerkorrektur-Ebenen für robuste Lesbarkeit."
   ]
 }

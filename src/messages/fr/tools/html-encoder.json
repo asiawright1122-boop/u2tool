@@ -1,14 +1,17 @@
 {
-  "detailed_description": "L'Encodeur/Decodeur HTML est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Grâce à l'Encodeur/Decodeur HTML, vous pouvez facilement traiter diverses données sans avoir à installer de logiciels ou de plugins. Cet outil possède une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, l'Encodeur/Decodeur HTML peut vous aider à améliorer votre efficacité de travail. Tous les traitements se font localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez immédiatement l'Encodeur/Decodeur HTML pour expérimenter des services d'outils en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "L'outil d'encodeur/décodeur HTML est un outil essentiel pour les développeurs travaillant sur des projets web. Techniquement, cet outil convertit les caractères spéciaux en entités HTML et vice versa. Les entités HTML sont des séquences de caractères utilisées pour représenter des caractères spéciaux dans le code HTML. Par exemple, le caractère « < » est converti en « &lt; » pour éviter toute confusion avec les balises HTML. L'utilisation de cet outil est cruciale dans de nombreux scénarios, notamment lors de la création de formulaires web, de l'insertion de données utilisateur dans une page HTML, ou lors de la manipulation de contenus provenant de sources externes. Cela permet de garantir que le contenu s'affiche correctement et évite les problèmes de sécurité tels que les injections XSS (Cross-Site Scripting). L'outil fonctionne en analysant le texte d'entrée, en identifiant les caractères spéciaux et en les convertissant en entités HTML correspondantes lors de l'encodage, ou en les convertissant de nouveau en caractères lusibles lors du décodage. Il supporte également les entités numériques et nommées, offrant ainsi une grande flexibilité dans la gestion des caractères spéciaux.",
   "usage_steps": [
-    "Ouvrez la page de l'Encodeur/Decodeur HTML",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez la page de l'outil HTML Encoder/Decoder sur le site.",
+    "Dans la zone de texte étiquetée « Texte d'entrée », copiez et collez le contenu que vous souhaitez encoder ou décoder.",
+    "Sélectionnez l'option « Encoder » si vous souhaitez convertir les caractères spéciaux en entités HTML, ou « Décoder » si vous souhaitez les convertir en caractères lusibles.",
+    "Choisissez l'option « Entités nommées » pour utiliser les entités sous forme de noms (par exemple, &lt;) ou « Entités numériques » pour utiliser les entités sous forme de codes numériques (par exemple, &#60;).",
+    "Cliquez sur le bouton « Convertir » pour effectuer l'encodage ou le décodage.",
+    "Le résultat sera affiché dans la zone de texte étiquetée « Texte de sortie ». Vous pouvez ensuite copier ce texte pour l'utiliser dans votre projet."
   ],
   "usage_examples": [
-    "Utilisez l'Encodeur/Decodeur HTML pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un développeur web insère des commentaires utilisateur dans une base de données. Avant de stocker les commentaires, il utilise l'outil pour encoder les caractères spéciaux, évitant ainsi toute injection de code malveillant.",
+    "Un administrateur de site web reçoit un fichier HTML généré par un tiers. Il utilise l'outil pour décoder les entités HTML, vérifiant ainsi que le contenu est propre et lisible avant de l'intégrer sur le site.",
+    "Un concepteur de formulaires web utilise l'outil pour encoder les valeurs de champ de formulaire avant de les soumettre au serveur, garantissant ainsi que les données sont correctement formatées et sécurisées.",
+    "Un développeur travaille sur une application qui affiche des contenus provenant de diverses sources. Il utilise l'outil pour décoder les entités HTML, assurant ainsi que tous les caractères spéciaux sont affichés correctement dans l'interface utilisateur."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Escolher Cor é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Escolher Cor, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugins. A ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja um desenvolvedor, designer ou usuário geral, o Escolher Cor pode ajudar a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use o Escolher Cor imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Color Picker é uma ferramenta técnica especializada para conversão e manipulação de valores de cores em diferentes modelos de representação. Internamente, utiliza algoritmos de conversão entre os sistemas RGB (Red, Green, Blue), HEX (hexadecimal) e HSL (Hue, Saturation, Lightness), permitindo transformações precisas com base em cálculos matemáticos de canais de cor. Quando o usuário seleciona uma cor via interface de roda cromática ou ajusta sliders de componentes, a ferramenta aplica fórmulas de normalização, como a conversão de valores RGB (0-255) para notação hexadecimal (#RRGGBB) ou o cálculo de matizes em graus (0-360°) no modelo HSL. Este processo inclui correção de gamma para precisão visual e suporte a transparência (RGBA/HEX8). Desenvolvedores precisam desta ferramenta para garantir consistência de paletas em projetos front-end, validar contrastes conforme padrões WCAG para acessibilidade, e depurar conversões entre modelos de cor durante a implementação de interfaces. A interface renderiza em tempo real as variações de cor usando Canvas API do HTML5, com suporte para cópia imediata de valores em múltiplos formatos (CSS variables, SCSS, JSON) e histórico de seleções recentes.",
   "usage_steps": [
-    "Abra a página do Escolher Cor",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Utilize a roda cromática interativa para selecionar uma cor base através do mouse ou toque em dispositivos touchscreen.",
+    "2. Ajuste os sliders de luminosidade e saturação para refinar a tonalidade exibida no preview central.",
+    "3. Insira manualmente valores numéricos nos campos RGB ou HSL para conversão automática em tempo real.",
+    "4. Clique no botão 'Converter' para visualizar o código hexadecimal correspondente e copiá-lo para a área de transferência.",
+    "5. Utilize o seletor de formato de saída para alternar entre representações (ex: #RGB, rgba(), hsl()).",
+    "6. Acesse a seção 'Histórico' para recuperar cores previamente selecionadas durante a sessão atual."
   ],
   "usage_examples": [
-    "Use o Escolher Cor para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um designer convertendo manualmente cores de um mockup em Figma para implementação em CSS, garantindo precisão na transição do design para código.",
+    "Um desenvolvedor ajustando o contraste de elementos UI para atender critérios WCAG 2.1, utilizando os valores L* da conversão HSL para análise de luminância.",
+    "Um front-end engineer copiando múltiplos valores RGBA com transparência para implementar gradientes complexos em um componente React.",
+    "Um mobile developer convertendo cores de um design para formatos compatíveis com Flutter (ex: Color.fromRGBO), evitando erros manuais de transformação."
   ]
 }

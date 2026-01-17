@@ -1,15 +1,17 @@
 {
-  "detailed_description": "A Ferramenta de Paráfrase reescreve seu texto em diferentes estilos preservando o significado original.",
+  "detailed_description": "O Paraphrase Tool é uma solução avançada baseada em técnicas de processamento de linguagem natural (NLP) que reescreve textos aplicando transformações semânticas e sintáticas enquanto preserva o significado original. Seu algoritmo utiliza modelos de transformer pré-treinados em múltiplos idiomas, combinados com estratégias de diversificação léxica e reestruturação gramatical dinâmica. A ferramenta emprega análise de dependência sintática para identificar relações entre palavras e vetores de contexto semântico para substituir termos por sinônimos apropriados ao campo semântico do texto. Além disso, implementa ajuste adaptativo de complexidade linguística, permitindo reescrever conteúdos para diferentes níveis de leitura. Este recurso é essencial para profissionais que necessitam de variação textual em contextos acadêmicos (evitando autoplágio), marketing digital (otimização de conteúdo para SEO) e desenvolvimento de documentação técnica (criação de explicações alternativas para conceitos complexos). Sua arquitetura híbrida combina aprendizado profundo com regras linguísticas específicas do português brasileiro, garantindo precisão em construções como regência verbal, concordância e uso de conectivos.",
   "usage_steps": [
-    "Inserir texto original",
-    "Selecionar estilo de escrita",
-    "Clicar em parafrasear",
-    "Revisar resultado",
-    "Copiar texto reescrito"
+    "Cole o texto no campo 'Texto Original' com até 5000 caracteres",
+    "Selecione o nível de transformação no seletor deslizante: 'Leve', 'Moderado' ou 'Agresivo'",
+    "Ative/desative a opção 'Manter termos técnicos' para preservar jargões específicos",
+    "Escolha o estilo desejado no dropdown: 'Acadêmico', 'Coloquial', 'Técnico' ou 'Criativo'",
+    "Ajuste o parâmetro 'Densidade Léxica' para controlar a proporção de sinônimos utilizados",
+    "Clique em 'Gerar Paráfrase' e revise as sugestões no painel de resultados com comparação side-by-side"
   ],
   "usage_examples": [
-    "Reescrever para público diferente",
-    "Evitar plágio",
-    "Simplificar texto complexo"
+    "Um estudante reescreve partes de seu TCC para evitar repetição de estruturas em diferentes capítulos",
+    "Um profissional de marketing adapta descrições de produtos para criar variações de landing pages otimizadas para diferentes palavras-chave",
+    "Um desenvolvedor documenta a mesma API em estilos técnico-formal e informal para diferentes públicos-alvo",
+    "Um tradutor ajusta textos traduzidos automaticamente para naturalizar expressões idiomáticas em português do Brasil"
   ]
 }

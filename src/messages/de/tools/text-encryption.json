@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Textverschlüsselung ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Textverschlüsselung können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Nutzer sind, kann Textverschlüsselung Ihnen helfen, Ihre Arbeitswirksamkeit zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und Ihre Daten nicht auf irgendeinem Server hochgeladen werden.",
+  "detailed_description": "Das Textverschlüsselungs-Tool implementiert AES-256-CBC (Advanced Encryption Standard in Cipher Block Chaining Mode) mit einer Passwort-basierten Schlüsselableitung (PBKDF2 mit HMAC-SHA256) zur sicheren Datenverschlüsselung. Bei der Verschlüsselung wird der Klartext zunächst mit einem zufällig generierten Initialisierungsvektor (IV) kombiniert, um deterministische Muster zu vermeiden. Der Benutzerdefinierte Passwortstring wird durch 10.000 Iterationen von PBKDF2 in einen 256-Bit-Schlüssel umgewandelt, der dann zur AES-Verschlüsselung verwendet wird. Die Ausgabe erfolgt im Base64-Format für die sichere Übertragung in textbasierten Systemen. Entwickler benötigen dieses Werkzeug, um temporäre Secrets wie API-Schlüssel, Zugangsdaten oder sensitives Konfigurationsmaterial zu verschlüsseln, ohne externe Abhängigkeiten. Das Tool ist besonders nützlich bei der sicheren Zwischenablage-Übertragung, der Speicherung von Umgebungsvariablen in CI/CD-Pipelines oder der Erstellung von verschlüsselten Log-Einträgen. Die clientseitige Verarbeitung garantiert Datenschutz, da keine Daten jemals den Browser verlassen. Technisch ist das Tool mit Web Crypto API implementiert und unterstützt explizit den CBC-Modus mit PKCS#7-Padding für maximale Interoperabilität.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Textverschlüsselungs-Tools",
-    "Geben Sie den zu verarbeitenden Text in das Eingabefeld ein oder kopieren Sie ihn ein",
-    "Anpassen Sie die Tool-Einstellungen und Optionen, wenn erforderlich",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Wählen Sie im Dropdown-Menü zwischen 'Verschlüsseln' und 'Entschlüsseln'.",
+    "Geben Sie den zu verarbeitenden Text in das linke Eingabefeld mit der Bezeichnung 'Quelltext' ein.",
+    "Legen Sie ein sicheres Passwort im Eingabefeld 'Verschlüsselungsschlüssel' fest (mindestens 12 Zeichen empfohlen).",
+    "Bestätigen Sie das Passwort durch erneute Eingabe im Feld 'Schlüssel bestätigen'.",
+    "Wählen Sie im erweiterten Optionsbereich die AES-256-CBC-Verschlüsselung aus (voreingestellt).",
+    "Klicken Sie auf den 'Prozessieren'-Button, um den verschlüsselten Base64-Output im rechten Feld zu generieren."
   ],
   "usage_examples": [
-    "Verwenden Sie Textverschlüsselung, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie die Verarbeitungsresultate schnell, ohne zu warten"
+    "Ein Entwickler verschlüsselt API-Zugangsdaten, bevor er diese in einer öffentlichen Dokumentation als Beispiel einfügt.",
+    "Ein DevOps-Engineer verschlüsselt temporäre AWS-Credentials für die Weitergabe an ein Teammitglied via E-Mail.",
+    "Ein Sicherheitsanalyst erstellt verschlüsselte Testdatensätze, um sensible Benutzerinformationen in Entwicklungsdatenbanken zu anonymisieren.",
+    "Ein Freelancer verschlüsselt Konfigurationsdateien mit Datenbankzugangsdaten, bevor er diese in einem Git-Repository committet."
   ]
 }

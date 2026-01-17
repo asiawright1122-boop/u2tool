@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Progresso de Anel é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Utilizando o Gerador de Gráficos de Progresso de Anel, você pode processar vários dados sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Progresso de Anel pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo uploaded para nenhum servidor. Utilize o Gerador de Gráficos de Progresso de Anel imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Ring Progress Chart Generator é uma ferramenta técnica especializada para criar gráficos circulares dinâmicos que representam percentuais de progresso. Baseado em SVG (Scalable Vector Graphics) ou Canvas HTML5, o gerador permite renderizar elementos visuais com precisão matemática, adaptáveis a diferentes resoluções. Ele é ideal para desenvolvedores que precisam integrar medidores de desempenho em dashboards, sistemas de monitoramento ou interfaces de usuário. Funciona por meio de um mecanismo que calcula ângulos em radianos para segmentar o anel, aplicando estilos CSS ou atributos SVG diretamente ao elemento DOM. O usuário pode customizar propriedades como gradiente de cores, espessura do traço, animações de transição (via easing functions) e valores dinâmicos vinculados a APIs ou variáveis JavaScript. Diferencia-se por suportar múltiplas camadas de anéis concêntricos, permitindo visualizações complexas de dados compostos, além de exportação em formatos vetoriais (SVG) ou rasterizados (PNG) para compatibilidade em qualquer plataforma.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Progresso de Anel",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta e selecione um template de anel pré-definido ou inicie com uma configuração vazia usando o botão 'Novo Gráfico'.",
+    "Defina o valor numérico do progresso no campo 'Porcentagem' e ajuste a espessura do anel com o controle deslizante 'Thickness'.",
+    "Personalize as cores usando o seletor 'Gradient Stops', adicionando múltiplos pontos de transição para efeitos visuais avançados.",
+    "Habilite animações em tempo real marcando a opção 'Enable Transition' e ajuste a duração em milissegundos no campo 'Animation Speed'.",
+    "Visualize a prévia do gráfico em tempo real no painel direito e utilize o botão 'Responsive Mode' para testar ajustes em diferentes tamanhos de tela.",
+    "Exporte o resultado clicando em 'Download' para obter o arquivo SVG/PNG ou copie o código HTML/CSS gerado para integrar diretamente no projeto."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Progresso de Anel para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor integrando um medidor de carregamento de arquivos em uma interface web, mostrando o progresso em tempo real com animações suaves.",
+    "Um analista de dados criando um dashboard corporativo para visualizar KPIs trimestrais, com anéis concêntricos representando metas por departamento.",
+    "Um designer de jogos exibindo o progresso de conquistas do usuário, com gradientes dinâmicos que mudam de cor conforme o nível de conclusão.",
+    "Um educador montando um painel educacional para acompanhar o progresso dos alunos em cursos online, com exportação de gráficos para relatórios PDF."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "L'Analyseur de fichiers .env est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Grâce à l'Analyseur de fichiers .env, vous pouvez traiter diverses données sans installer de logiciels ou de plugins. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, l'Analyseur de fichiers .env peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant tout téléversement sur un serveur. Utilisez l'Analyseur de fichiers .env immédiatement pour découvrir un outil en ligne rapide, sécurisé et gratuit.",
+  "detailed_description": "Le parseur de fichiers .env est un outil technique conçu pour analyser, valider et transformer les fichiers de configuration d'environnement. Il utilise des algorithmes de lexing et de parsing pour identifier les paires clé-valeur conformes à la spécification dotenv, détecter les erreurs syntaxiques (comme les caractères interdits ou les espaces non échappés) et valider les variables contre des schémas prédéfinis (types, regex, valeurs obligatoires). Ce toolchain permet de convertir ces données en formats structurés comme JSON ou YAML grâce à des moteurs de sérialisation optimisés. Les développeurs l'utilisent pour automatiser la migration de configurations entre environnements de développement, tester la conformité des variables d'environnement avant déploiement, ou synchroniser des secrets entre services cloud. Son moteur interne gère les références croisées entre variables (substitution shell-like) et prévient les conflits lors des conversions. La validation stricte via des règles de type JSON Schema garantit l'intégrité des données critiques en CI/CD.",
   "usage_steps": [
-    "Ouvrez la page de l'Analyseur de fichiers .env",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Téléversez votre fichier .env dans la zone de dépôt avec glisser-déposer ou sélection manuelle.",
+    "Sélectionnez le format cible (JSON/YAML) via le sélecteur formaté en onglets.",
+    "Activez l'option 'Validation stricte' et chargez un fichier JSON Schema pour vérifier les variables.",
+    "Cliquez sur 'Analyser & Convertir' pour exécuter le traitement avec affichage des erreurs détectées.",
+    "Consultez la sortie structurée dans l'éditeur de code intégré avec coloration syntaxique adaptée.",
+    "Téléchargez le résultat converti ou copiez-le dans votre clipboard avec le bouton 'Copier tout'."
   ],
   "usage_examples": [
-    "Utilisez l'Analyseur de fichiers .env pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur Node.js convertit un .env en JSON pour l'intégrer à un fichier de configuration webpack.",
+    "Un administrateur système valide un .env contenant des variables de base de données contre un schéma imposant des formats UUID et des ports TCP valides.",
+    "Une équipe de DevOps transforme un fichier YAML Kubernetes en .env pour simplifier la configuration locale en développement.",
+    "Un pipeline CI utilise l'API en ligne de commande du tool pour vérifier automatiquement la syntaxe des variables d'environnement avant déploiement sur AWS Elastic Beanstalk."
   ]
 }

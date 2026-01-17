@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculadora de Descuentos es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Usando Calculadora de Descuentos, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya seas desarrollador, diseñador o usuario general, Calculadora de Descuentos puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y no se subirá a ningún servidor.",
+  "detailed_description": "El Calculador de Descuentos es una herramienta técnica que implementa algoritmos de cálculo porcentual y aritmética financiera para determinar precios ajustados y ahorros asociados a descuentos comerciales. Utiliza la fórmula matemática Pd = P₀ × (1 - d/100) para descuentos porcentuales y Pd = P₀ - D para reducciones en valores absolutos, donde P₀ es el precio original, d el porcentaje de descuento y D el monto fijo de descuento. La interfaz, desarrollada en JavaScript con validación en tiempo real, permite gestionar descuentos simples, múltiples o progresivos, incluyendo funcionalidades de redondeo bancario y conversión de divisas. Es esencial para profesionales de e-commerce que requieren ajustar precios dinámicos, analistas financieros que evalúan márgenes de contribución, y consumidores que optimizan presupuestos familiares. Su motor de cálculo soporta entrada de datos mediante teclado o controles deslizantes, con visualización instantánea de variables intermedias como el factor de descuento y el valor del ahorro acumulado.",
   "usage_steps": [
-    "Abrir la página de la herramienta Calculadora de Descuentos",
-    "Ingresar o pegar el contenido a procesar en el cuadro de entrada",
-    "Ajustar las opciones y configuraciones de la herramienta según sea necesario",
-    "Hacer clic en el botón de procesar para ver los resultados",
-    "Copiar o descargar los resultados procesados"
+    "Ingresa el precio original en el campo numérico 'Precio Base' con precisión de dos decimales.",
+    "Selecciona el tipo de descuento mediante el selector de opciones: porcentual, fijo o por volumen.",
+    "Introduce el valor del descuento en el campo correspondiente, validando automáticamente rangos permitidos (0-100% para descuentos porcentuales).",
+    "Activa la casilla 'Incluir Impuestos' si deseas aplicar el cálculo sobre el importe bruto.",
+    "Elige la divisa de salida en el menú desplegable para conversión automática usando tipos de cambio actualizados.",
+    "Haz clic en el botón 'Calcular Descuento' para generar el resultado con notación científica opcional."
   ],
   "usage_examples": [
-    "Usar Calculadora de Descuentos para procesar tus datos",
-    "Obtener resultados de procesamiento rápidamente sin esperar"
+    "Un vendedor online configura descuentos por volumen en su catálogo: 5% para 10 unidades, 12% para 25 unidades de un producto de 149.99€.",
+    "Un estudiante compara ofertas de laptops: 20% de descuento en una tienda versus 15% + cupón de 50€ en otra, calculando el ahorro neto real.",
+    "Un mayorista aplica descuentos progresivos en facturas: 8% por el primer millar de unidades y 12% por el excedente en compras superiores a 2,500 unidades.",
+    "Un analista financiero evalúa el impacto de una campaña promocional con descuentos estacionales del 30% en el margen de beneficio del producto X."
   ]
 }

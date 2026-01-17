@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Data URI Generator is a practical online tool that helps you quickly complete various tasks. Using Data URI Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Data URI Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Data URI Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Data URI Generator converts files into Data URIs, a format that encodes binary data as text strings using Base64 or percent-encoding. This tool allows developers to embed small files directly into HTML, CSS, or JavaScript without external HTTP requests. By transforming images, fonts, or other assets into URIs prefixed with 'data:[<mediatype>][;base64],<data>', it enables optimized inline resource delivery. Developers need this tool to reduce latency in web applications—critical for performance-sensitive scenarios like mobile sites or single-page apps. It's particularly useful for embedding icons, small images in CSS sprites, or SVG graphics directly into stylesheets. Technically, the tool uses browser-native FileReader APIs to process files, auto-detects MIME types via file headers, and applies RFC 2397-compliant encoding. Users can choose between Base64 or plain-text encoding modes depending on file type, with options to specify custom MIME types or character sets for advanced use cases.",
   "usage_steps": [
-    "Open the Data URI Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Click 'Upload File' to select the asset you want to convert (max 5MB for optimal performance)",
+    "2. Toggle between 'Base64 Encode' (for binary files like images) or 'Raw Text' mode (for UTF-8 assets like JSON)",
+    "3. Adjust MIME type in the dropdown menu (auto-detected by default using file signature analysis)",
+    "4. Check 'Include Charset' if using text-based assets requiring specific encoding (e.g., UTF-16 XML)",
+    "5. Click 'Generate URI' to process the file through client-side encoding algorithms",
+    "6. Copy the complete Data URI string from the output box for immediate use in HTML/CSS"
   ],
   "usage_examples": [
-    "Use Data URI Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Embedding a 2KB SVG logo directly into an email template's header to ensure consistent rendering across clients",
+    "Inlining critical CSS fonts to eliminate flash of unstyled text (FOUT) during page load",
+    "Creating self-contained HTML5 boilerplates with embedded favicons and manifest files",
+    "Optimizing mobile web apps by converting small UI icons into Base64 strings within CSS sprites"
   ]
 }

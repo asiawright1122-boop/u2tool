@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Linha é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos de Linha, você pode processar vários dados facilmente sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Linha pode ajudar a melhorar a eficiência do trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Gerador de Gráficos de Linha imediatamente para experimentar serviços rápidos, seguros e gratuitos de ferramentas online.",
+  "detailed_description": "O Line Chart Generator é uma ferramenta técnica para criação de gráficos de linhas interativos e multi-série, ideal para visualização de tendências ao longo do tempo. Sua engine baseia-se em bibliotecas de renderização SVG e Canvas, permitindo precisão matemática na plotagem de pontos e linhas conectadas com interpolação linear ou suavizada. Profissionais de análise de dados, cientistas e desenvolvedores podem utilizar a ferramenta para comparar múltiplas séries temporais, como séries históricas de preços, métricas de performance web ou dados climáticos. A interface oferece controles granulares para configuração de escalas logarítmicas/lineares nos eixos X e Y, personalização de marcadores (círculos, quadrados, diamantes), ajuste de opacidade para sobreposição de camadas e inclusão de anotações textuais posicionadas via coordenadas absolutas. O exportador integrado gera SVGs com elementos <path> otimizados para edição vetorial ou PNGs em até 4K de resolução, mantendo proporções responsivas. Recursos avançados incluem detecção automática de outliers com realce condicional e suporte a legendas acessíveis via ARIA labels.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Linha",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o painel de configuração e defina o número de séries (até 10) usando o controle deslizante 'Quantidade de Dados'.",
+    "Insira valores numéricos na tabela bidimensional, especificando coordenadas X/Y ou datas para o eixo horizontal.",
+    "Personalize a escala do eixo Y selecionando 'Logarítmica' ou 'Linear' no menu de opções avançadas.",
+    "Ative marcadores customizáveis clicando nos ícones de forma (△, ●, ◆) para diferenciar séries visualmente.",
+    "Adicione anotações clicando no botão 'Nova Nota' e posicionando o texto sobre o ponto desejado no gráfico.",
+    "Exporte o resultado em SVG ou PNG de alta resolução usando os botões 'Baixar' ou copie o código embed HTML gerado."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Linha para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um analista financeiro comparando a volatilidade de ações de diferentes setores ao longo de 12 meses.",
+    "Um pesquisador de mudanças climáticas visualizando dados de temperatura e precipitação em escalas sobrepostas.",
+    "Um gestor de marketing analisando conversões diárias de campanhas A/B com marcadores diferenciados por cor.",
+    "Um professor de estatística demonstrando a convergência de séries matemáticas com anotações explicativas em pontos críticos."
   ]
 }

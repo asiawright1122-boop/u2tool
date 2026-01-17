@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der CSS Flexbox Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem CSS Flexbox Generator können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist leicht zu bedienen, sodass Sie schnell damit anfangen und effizient arbeiten können. Seien Sie ein Entwickler, ein Designer oder ein allgemeiner Benutzer, der CSS Flexbox Generator kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendein Server hochgeladen werden. Nutzen Sie den CSS Flexbox Generator sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der CSS Flexbox Generator ist ein interaktives Werkzeug, das die visuelle Erstellung von CSS Flexbox-Layouts mit sofortiger Codegenerierung und Echtzeit-Vorschau ermöglicht. Technisch gesehen erzeugt der Generator dynamisch CSS-Klassen basierend auf Benutzereinstellungen wie Flex-Direction, Justify-Content, Align-Items und Gap-Property. Diese Parameter steuern die Haupt- und Querachse des Flexbox-Containers, wobei das Tool automatisch die erforderlichen Vendor-Prefixes für Browser-Kompatibilität einfügt. Entwickler profitieren besonders bei komplexen Layouts, bei denen manuelle Berechnung von Flex-Werten fehleranfällig ist – etwa bei responsiven Navigationsleisten, zentrierten Elementblöcken oder dynamischen Grids mit variabler Spaltenbreite. Die Echtzeit-Vorschau rendert HTML-Strukturen direkt im Browser, während der integrierte Code-Editor die generierten CSS-Regeln synchronisiert anzeigt. Einzigartig ist die Kombination aus interaktivem Grid-Raster zur Abstandsvisualisierung und der Möglichkeit, Breakpoints für Media Queries direkt im Interface zu definieren, was präzise Kontrolle über responsives Verhalten ermöglicht.",
   "usage_steps": [
-    "Öffnen Sie die Seite des CSS Flexbox Generators",
-    "Fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Einstellungen und Optionen nach Bedarf an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Wählen Sie im Dropdown-Menü 'Flex-Direction' zwischen row, column, row-reverse oder column-reverse für die Hauptachse.",
+    "Passen Sie mit dem Schieberegler den Wert für 'Gap' in Pixel an, um den Abstand zwischen Flex-Items festzulegen.",
+    "Aktivieren Sie die Checkbox 'Flex-Wrap', um Zeilenumbrüche bei begrenztem Container-Raum zu ermöglichen.",
+    "Nutzen Sie die 'Align-Items'-Auswahl, um die Ausrichtung entlang der Querachse (stretch, center, flex-start, flex-end) festzulegen.",
+    "Klicken Sie auf 'Add Media Query', um Breakpoints für spezifische Gerätebreiten zu definieren und responsives Verhalten zu konfigurieren.",
+    "Kopieren Sie den generierten CSS-Code aus dem Editor oder exportieren Sie das vollständige HTML/CSS-Paket als Datei."
   ],
   "usage_examples": [
-    "Verwenden Sie den CSS Flexbox Generator, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Zentrieren eines Hero-Bereichs mit Text und Button durch Setzen von justify-content: center und align-items: center.",
+    "Erstellen einer responsiven Navigationsleiste mit flex-wrap: wrap und automatischer Anpassung der Gap-Werte bei kleineren Bildschirmen.",
+    "Baue ein Galerie-Layout mit gleichmäßig verteilten Bildkarten durch gap: 20px und justify-content: space-between.",
+    "Optimierung von Formularfeld-Anordnung durch column-direction und align-items: flex-start für konsistente Abstände."
   ]
 }

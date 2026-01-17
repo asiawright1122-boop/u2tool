@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Zufallszahlengenerator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Zufallszahlengenerator können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell damit anfangen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeiner Nutzer sind, kann der Zufallszahlengenerator Ihnen helfen, Ihre Arbeitswirkungsrate zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Webbrowser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Zufallszahlengenerator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Random Number Generator ist ein präzises Instrument zur algorithmischen Erzeugung gleichmäßig verteilter Zufallszahlen innerhalb benutzerdefinierter Grenzen. Technisch basiert das Tool auf kryptografisch sicheren Pseudo-Zufallszahlengeneratoren (CSPRNG), die in JavaScript implementiert sind und die Web Crypto API nutzen, um deterministische Ergebnisse mit hoher Entropie zu gewährleisten. Nutzer können den Wertebereich (min/max) definieren, die Anzahl der zu generierenden Werte festlegen und optional Duplikate ausschließen, wodurch der Generator eine Permutationsmatrix erstellt. Die Bulk-Generierung erfolgt durch iterative Aufrufe des Mersenne-Twister-Algorithmus, der für seine Ausgewogenheit zwischen Geschwindigkeit und statistischer Qualität bekannt ist. Entwickler benötigen dieses Tool für Szenarien wie z.B. die Erstellung von Testdaten mit spezifischen Verteilungseigenschaften, Simulationen von Wahrscheinlichkeitsverteilungen oder die Erzeugung eindeutiger Identifikatoren ohne Kollisionen. Im Vergleich zu Standard-Zufallsgeneratoren bietet dieser Generator zusätzliche Kontrolle über die statistischen Eigenschaften der Ausgabe durch anpassbare Seed-Werte und eine deterministische Wiederholbarkeit der Ergebnisse.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Zufallszahlengenerators",
-    "Geben Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Anpassen Sie die Tooloptionen und Einstellungen, wenn erforderlich",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Rufen Sie die Tool-Seite unter /generators/random-generator auf.",
+    "Geben Sie im Eingabefeld 'Minimum' den Startwert des gewünschten Zahlenbereichs ein (z.B. 100).",
+    "Legen Sie im Feld 'Maximum' den Obergrenzenwert fest (z.B. 999).",
+    "Aktivieren Sie die Checkbox 'Einzigartige Werte', um Duplikate zu vermeiden, falls erforderlich.",
+    "Geben Sie im Zahlenfeld 'Anzahl' die gewünschte Menge an Zufallszahlen ein (maximal 10.000).",
+    "Klicken Sie auf 'Generieren', um das Ergebnis im Textbereich anzuzeigen oder als CSV-Datei herunterzuladen."
   ],
   "usage_examples": [
-    "Verwenden Sie den Zufallszahlengenerator, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie die Verarbeitungsresultate schnell ohne zu warten"
+    "Ein Data Scientist generiert 1000 eindeutige Test-IDs für eine klinische Studie mit strengen Randomisierungsanforderungen.",
+    "Ein Spieleentwickler erstellt zehntausend unterschiedliche Lootbox-Codes mit 8-stelligen Zahlen für ein MMORPG.",
+    "Ein Kryptografie-Student vergleicht die Verteilungsmuster von CSPRNG- versus Mersenne-Twister-Ausgaben bei 1 Million Iterationen.",
+    "Ein Lehrer erzeugt 30 individuelle Klausurcodes für Studierende, die über ein LMS-System verteilt werden."
   ]
 }

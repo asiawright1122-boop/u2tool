@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Tableau HTML est un outil en ligne pratique qui vous aide à réaliser rapidement diverses tâches. Avec le Générateur de Tableau HTML, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Tableau HTML peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez immédiatement le Générateur de Tableau HTML pour expérimenter des services d'outils en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "L'HTML Table Generator est un outil de développement web interactif permettant de construire des tableaux HTML sémantiques via une interface visuelle intuitive. Techniquement, il génère dynamiquement des structures HTML comprenant les éléments <table>, <thead>, <tbody>, <tr>, <th> et <td>, avec des options avancées pour intégrer des attributs ARIA, des classes CSS personnalisées et des styles inline. Il gère également la création de colonnes calculées, le tri dynamique côté client et l'intégration de pagination. Ce tool est indispensable pour les développeurs souhaitant éviter les erreurs de balisage manuel, les designers web prototypant des tableaux de données complexes ou les non-développeurs créant des grilles d'information structurées. Il fonctionne par manipulation du DOM en temps réel, avec un moteur de rendu basé sur des templates Handlebars.js pour les prévisualisations. Les utilisateurs peuvent définir des types de données par colonne (texte, numérique, date), configurer des attributs d'accessibilité et exporter le code final optimisé pour le responsive design (media queries intégrés).",
   "usage_steps": [
-    "Ouvrez la page du Générateur de Tableau HTML",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez le nombre de lignes et colonnes via les curseurs 'Rows' et 'Columns' dans l'onglet 'Structure'",
+    "Configurez les en-têtes dans la section 'Header' en choisissant entre 'Aucun', 'Ligne simple' ou 'Bloc complet' avec alignement horizontal/vertical",
+    "Remplissez les cellules en cliquant directement sur les cases, en utilisant les raccourcis clavier Ctrl+Shift+C (copier) et Ctrl+Shift+V (coller)",
+    "Appliquez des styles avancés via le sélecteur de classes CSS ou l'éditeur de styles inline dans le panneau 'Design'",
+    "Activez les fonctionnalités dynamiques (tri, pagination) dans l'onglet 'Comportement' en cochant les options correspondantes",
+    "Générez le code final avec le bouton 'Export HTML' et copiez-le dans votre projet avec le clipboard intégré"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Tableau HTML pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un analyste de données crée un tableau comparatif de performances trimestrielles avec colonnes calculées de moyennes et pourcentages",
+    "Un designer web prototypant une interface de tableau de bord avec des cellules fusionnées (rowspan/colspan) et styles thématiques",
+    "Un développeur générant un template HTML pour afficher des résultats de requêtes SQL avec pagination intégrée",
+    "Un rédacteur technique documentant un API en créant un tableau des paramètres de requête avec types de données et contraintes"
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "La Calculadora de Amor es una herramienta divertida que calcula el porcentaje de compatibilidad entre dos nombres.",
+  "detailed_description": "El Love Calculator es una herramienta lúdica que analiza la compatibilidad romántica entre dos nombres mediante un algoritmo híbrido basado en técnicas de procesamiento de cadenas y operaciones matemáticas. El sistema primero normaliza las entradas aplicando Unicode Transformation Format (UTF-8) para garantizar compatibilidad con caracteres especiales y acentos. Luego, ejecuta un algoritmo FLAMES (Friends, Lovers, Affectionate, Marriage, Enemies, Siblings) optimizado: elimina caracteres comunes entre los nombres, calcula la longitud restante y aplica una operación módulo para determinar el resultado en una escala cíclica de 6 estados. Adicionalmente, genera un porcentaje de compatibilidad pseudoaleatorio mediante una función de hashing criptográfico SHA-256 aplicada a las cadenas concatenadas, truncado y normalizado entre 0-100%. Los usuarios obtienen no solo el resultado textual, sino también un código hexadecimal que representa un ícono de corazón dinámico. Esta herramienta es ideal para desarrolladores que desean explorar implementaciones prácticas de algoritmos de coincidencia de cadenas, estudiantes de informática interesados en lógica de juegos, o entusiastas que buscan un enfoque técnico para interacciones sociales.",
   "usage_steps": [
-    "Ingresa tu nombre",
-    "Ingresa el nombre de tu pareja",
-    "Haz clic en calcular",
-    "Ver la puntuación de compatibilidad",
-    "Comparte los resultados"
+    "Accede al panel de control en https://toolwebsite.com/love-calculator",
+    "Ingresa el primer nombre en el campo de texto 'Nombre 1' considerando mayúsculas y acentos",
+    "Escribe el segundo nombre en el campo 'Nombre 2' con notación Unicode estándar",
+    "Selecciona la opción 'Modo Experto' para visualizar el cálculo intermedio de caracteres únicos",
+    "Haz clic en el botón 'Calcular FLAMES' para ejecutar el algoritmo de coincidencia",
+    "Revisa el resultado detallado que incluye estado emocional (F-L-A-M-E-S), porcentaje SHA-256 y código HEX del ícono"
   ],
   "usage_examples": [
-    "Prueba la compatibilidad con tu crush",
-    "Juego de fiesta divertido",
-    "Entretenimiento con amigos"
+    "Un desarrollador frontend prueba la herramienta con 'JavaScript' y 'React' para validar su funcionamiento en proyectos web",
+    "Un estudiante de psicología utiliza 'Sigmund Freud' y 'Carl Jung' para explorar dinámicas históricas de compatibilidad académica",
+    "Una pareja en línea verifica la compatibilidad de sus nombres usando 'María Fernanda' y 'Alejandro' antes de una cita virtual",
+    "Un escritor de ficción analiza la química entre personajes ficticios 'Darth Vader' y 'Padmé Amidala' para desarrollar tramas dramáticas"
   ]
 }

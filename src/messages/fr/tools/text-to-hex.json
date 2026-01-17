@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Texte en Hexadécimal est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant Texte en Hexadécimal, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, Texte en Hexadécimal peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas téléversées sur aucun serveur. Utilisez Texte en Hexadécimal immédiatement pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Le convertisseur Texte vers Hexadécimal permet de transformer des séquences de caractères en représentations hexadécimales octet-par-octet, ou inversement, en utilisant des encodages comme ASCII, UTF-8 ou UTF-16. Cette opération repose sur la conversion de chaque caractère en sa valeur Unicode, puis en notation hexadécimale à deux chiffres (ex: 'A' → 0x41). Les développeurs l'utilisent pour analyser des flux binaires, déboguer des protocoles réseau (ex: inspecter des en-têtes HTTP en hex), ou manipuler des formats de fichiers à structure binaire précise (comme les fichiers ELF ou PNG). L'outil prend en charge les espaces entre octets, la sélection de l'endianness (big-endian/little-endian), et le traitement de caractères non imprimables via des séquences d'échappement. La conversion inverse (hex → texte) inclut une vérification d'intégrité CRC16 pour détecter les erreurs de saisie dans les chaînes hexadécimales longues.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Texte en Hexadécimal",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la boîte d'entrée",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Coller le texte brut dans la zone de saisie principale ou insérer une chaîne hexadécimale existante.",
+    "2. Choisir l'encodage source (ASCII, UTF-8, UTF-16LE/BE) dans le menu déroulant correspondant.",
+    "3. Activer/désactiver l'option 'Ajouter 0x' pour préfixer chaque octet dans la sortie (ex: 0x41 au lieu de 41).",
+    "4. Cliquer sur 'Convertir vers HEX' ou 'Convertir vers TEXTE' selon la direction souhaitée.",
+    "5. Utiliser le bouton 'Inverser l'endianness' pour les conversions de formats binaires sensibles à l'ordre des octets.",
+    "6. Copier le résultat dans le presse-papiers ou télécharger le fichier .hex généré pour les projets embarqués."
   ],
   "usage_examples": [
-    "Utilisez Texte en Hexadécimal pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Encoder un mot de passe en UTF-16LE pour tester la vulnérabilité de hachages NTLM.",
+    "Décoder un dump mémoire hexadécimal contenant des chaînes Unicode partiellement corrompues.",
+    "Générer des payloads shellcode avec des caractères spéciaux encodés pour l'exploitation de buffer overflow.",
+    "Convertir des données de capteurs IoT transmises en ASCII hex vers un format binaire utilisable pour traitement statistique."
   ]
 }

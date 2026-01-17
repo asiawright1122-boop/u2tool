@@ -1,14 +1,17 @@
 {
-  "detailed_description": "CSS Clip Path Generator is a practical online tool that helps you quickly complete various tasks. Using CSS Clip Path Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, CSS Clip Path Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use CSS Clip Path Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The CSS Clip Path Generator is a specialized tool that enables developers to create complex CSS shapes using a WYSIWYG editor by manipulating vector path data. It converts interactive Bézier curve adjustments into optimized `clip-path` CSS syntax supporting polygons, ellipses, and custom SVG paths. Developers need this tool to bypass manual coordinate calculations and browser rendering inconsistencies when implementing non-rectangular layouts, image masks, or animated transitions. The editor uses a coordinate system grid with snapping functionality to ensure precision, while its path simplification algorithm reduces anchor points for maintainable code. Real-time visual feedback shows how shapes render across different viewport sizes, and the tool generates both standard CSS and SVG fallbacks for cross-browser compatibility.",
   "usage_steps": [
-    "Open the CSS Clip Path Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Select a base shape (polygon, circle, or custom path) from the shape library panel",
+    "2. Drag control handles to adjust Bézier curve segments or click to add/remove anchor points",
+    "3. Use the coordinate inspector to input exact X/Y values for precision alignment",
+    "4. Switch between absolute/relative units in the settings panel to control sizing behavior",
+    "5. Apply path simplification to reduce complexity while maintaining shape integrity",
+    "6. Export generated CSS with browser-specific prefixes and SVG path data simultaneously"
   ],
   "usage_examples": [
-    "Use CSS Clip Path Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Create a diagonal hero section with a clipped polygon shape that reveals a background gradient",
+    "Generate a circular profile image mask with a customizable border-radius equivalent in CSS",
+    "Design an animated SVG path transition between two complex shapes for a data visualization",
+    "Build a responsive magazine-style text wrap around a custom SVG shape for editorial layouts"
   ]
 }

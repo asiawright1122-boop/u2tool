@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text Similarity Compare is a practical online tool that helps you quickly complete various tasks. Using Text Similarity Compare, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Text Similarity Compare can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Text Similarity Compare immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Text Similarity Compare tool employs advanced algorithms to quantify textual resemblance through multiple analytical approaches. At its core, it implements Levenshtein distance calculations for character-level edit operations, cosine similarity measurements using TF-IDF vectorization, and Jaccard index comparisons of tokenized n-grams. This multi-model approach allows precise differentiation between syntactic and semantic similarities. Developers and analysts benefit from normalized similarity scores (0-1 scale) combined with detailed operation matrices showing insertions, deletions, and substitutions required to transform one text into another. The tool's unique hybrid analysis engine automatically adjusts for length discrepancies through Smith-Waterman alignment techniques, making it particularly effective for comparing documents of different sizes. Technical applications include plagiarism detection in code repositories, version comparison of configuration files, and NLP model output validation against ground truth datasets. Results are presented with interactive heatmaps highlighting divergent text segments, enabling granular analysis of discrepancies.",
   "usage_steps": [
-    "Open the Text Similarity Compare tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Access the tool via the 'Text Analysis' dashboard and locate the dual-pane interface labeled 'Primary Text' and 'Comparison Text'",
+    "Paste or type your base document in the left pane and the variant text in the right pane, using the '.txt' format dropdown for structured input",
+    "Select 'Levenshtein', 'Cosine', or 'Jaccard' from the similarity metric selector based on analysis requirements",
+    "Enable 'Advanced Tokenization' to activate stemming and stopword removal for semantic-focused comparisons",
+    "Click 'Calculate Similarity' to initiate the hybrid algorithm analysis process",
+    "Examine the synchronized scroll view showing aligned text segments with color-coded difference markers and the accompanying similarity matrix"
   ],
   "usage_examples": [
-    "Use Text Similarity Compare to process your data",
-    "Get processing results quickly without waiting"
+    "A software engineer comparing API documentation versions to identify undocumented changes between SDK releases",
+    "An academic researcher analyzing paraphrased student submissions for potential plagiarism beyond simple string matching",
+    "A quality assurance specialist validating chatbot responses against expected output corpora using cosine similarity thresholds",
+    "A data scientist evaluating the consistency of OCR-converted historical documents against modern transcriptions through edit distance metrics"
   ]
 }

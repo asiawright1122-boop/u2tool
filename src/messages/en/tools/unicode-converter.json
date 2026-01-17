@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Unicode Converter is a practical online tool that helps you quickly complete various tasks. Using Unicode Converter, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Unicode Converter can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Unicode Converter immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Unicode Converter is a specialized utility that facilitates bidirectional transformation between character sequences and multiple Unicode encoding standards, including UTF-8, UTF-16LE/BE, UCS-2, and custom representations like decimal/hexadecimal/octal code points. Developers require this tool when debugging internationalization (i18n) issues, repairing corrupted data streams, or preparing content for systems requiring specific byte-order markers (BOM). The converter employs deterministic parsing algorithms to detect input formats automatically, while allowing manual override for edge cases. It supports advanced operations such as surrogate pair handling for emoji characters, normalization form conversion (NFC/NFD), and precise control over endianness during UTF-16 transformations. Internally, it uses lookup tables compliant with Unicode Version 15.0 standards to ensure accuracy when mapping characters beyond the Basic Multilingual Plane (BMP). The tool also provides JSON-escaped and JavaScript-escaped output modes for seamless integration with programming environments that require strict Unicode literal formatting.",
   "usage_steps": [
-    "Open the Unicode Converter tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Select input format from dropdown: UTF-8, UTF-16LE, UTF-16BE, UCS-2, Decimal, Hex, or Octal.",
+    "2. Paste raw data into the input text area; the tool auto-detects delimiters for code point sequences.",
+    "3. Choose output format using the conversion target dropdown menu.",
+    "4. Toggle advanced options like 'Add BOM' for UTF-8 encoding or 'Swap Surrogates' for legacy system compatibility.",
+    "5. Click the 'Convert' button to execute the transformation pipeline.",
+    "6. Copy the result from the output pane or download as a .txt file using the export icon."
   ],
   "usage_examples": [
-    "Use Unicode Converter to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: Convert Windows-1252 encoded log files to UTF-8 by first detecting invalid code points, then remapping them to proper Unicode characters.",
+    "Example 2: Prepare emoji-rich text for JSON APIs by transforming UTF-16LE input into \\uXXXX-escaped sequences compatible with JSON standards.",
+    "Example 3: Decode URL-encoded query parameters containing mixed Cyrillic and Latin characters back to human-readable text for debugging.",
+    "Example 4: Fix endianness issues in UTF-16 data exported from mainframe systems by specifying byte order and converting to network byte order (UTF-16BE)."
   ]
 }

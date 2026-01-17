@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Lorem Picsum est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Grâce à Lorem Picsum, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, Lorem Picsum peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant tout téléversement sur un serveur. Utilisez immédiatement Lorem Picsum pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Lorem Picsum est un outil de génération d'images de substitution basé sur l'API REST de Picsum Photos. Techniquement, il envoie des requêtes HTTP GET à l'endpoint https://picsum.photos/v2/list pour récupérer des métadonnées au format JSON, puis redirige vers des URLs d'images statiques hébergées sur un CDN. Les utilisateurs peuvent spécifier des paramètres comme la largeur, la hauteur, ou un identifiant d'image spécifique pour obtenir des images aléatoires en JPEG ou PNG. Ce service est essentiel pour les développeurs web en phase de prototypage, permettant de tester des mises en page sans violer les droits d'auteur. Il simule également le comportement de chargement d'images réelles grâce à son système de cache dynamique qui varie selon les dimensions demandées. Contrairement aux générateurs statiques, chaque requête produit un contenu visuel unique grâce à l'algorithme de sélection aléatoire du backend.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Lorem Picsum",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'interface sur https://picsum.photos et utilisez les champs de saisie pour entrer la largeur (width) et la hauteur (height) souhaitées.",
+    "Sélectionnez une catégorie spécifique (nature, architecture, etc.) via le menu déroulant 'Category' ou laissez le champ vide pour un thème aléatoire.",
+    "Cliquez sur le bouton 'Generate Image' pour déclencher la requête API vers le endpoint /v2/list avec vos paramètres.",
+    "Visualisez l'image générée dans un conteneur HTML <img> avec attributs srcset pour tests responsive.",
+    "Utilisez l'option 'Download' pour enregistrer l'image en local ou copiez le lien direct pour l'intégrer à votre code.",
+    "Pour un usage automatisé, modifiez manuellement l'URL dans le format https://picsum.photos/[width]/[height] dans vos scripts front-end."
   ],
   "usage_examples": [
-    "Utilisez Lorem Picsum pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur frontend teste le responsive design d'une grille CSS en générant des images 300x200, 800x600 et 1920x1080.",
+    "Un designer UI/UX crée un wireframe interactif avec des placeholders aléatoires pour éviter la dépendance à des visuels définitifs.",
+    "Un intégrateur web simule un album photo dynamique en combinant plusieurs requêtes API avec des paramètres de page et de limite.",
+    "Un enseignant génère des exemples d'images pour illustrer un cours sur le lazy loading, en variant les poids de fichiers via les dimensions."
   ]
 }

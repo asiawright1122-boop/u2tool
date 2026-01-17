@@ -1,14 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Datas é uma ferramenta online prática que ajuda você a concluir tarefas de forma rápida. Usando a Calculadora de Datas, você pode processar facilmente diversas informações sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja um desenvolvedor, designer ou usuário geral, a Calculadora de Datas pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente em seu navegador, garantindo a segurança dos seus dados e não sendo enviados para qualquer servidor. Use a Calculadora de Datas imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Date Calculator é uma ferramenta técnica especializada em manipulação de datas com precisão milissegundo, projetada para profissionais de TI e áreas afins. Ele calcula diferenças entre duas datas em formatos ISO 8601 (YYYY-MM-DDTHH:mm:ssZ), considerando fuso horário (UTC/local), ajustes de daylight saving e anos bissextos. Também permite adicionar ou subtrair quantidades específicas de dias, semanas ou meses a uma data base, mantendo integridade em operações com calendários gregorianos modificados. A engine interna utiliza aritmética de timestamp com correções automáticas para inconsistências de calendário, como meses com diferentes números de dias. Desenvolvedores utilizam esta ferramenta para validar lógicas de cronogramas de deploy, calcular SLAs com tolerância a feriados, ajustar timestamps em registros de logs e converter intervalos temporais para formatos de serialização como ISO 8601 duration. O cálculo de diferença entre datas retorna resultados segmentados em anos, meses, semanas, dias, horas, minutos e segundos, enquanto as operações aritméticas atualizam a data original com precisão de milissegundo, mantendo consistência em validações de formato através de parser baseado em RFC 2822.",
   "usage_steps": [
-    "Abra a página da Calculadora de Datas",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o painel de operações e selecione 'Calcular diferença entre datas' ou 'Adicionar/Subtrair dias'.",
+    "Preencha o primeiro campo com a data inicial usando o seletor de calendário ou digitando no formato YYYY-MM-DD HH:mm:ss.",
+    "Para cálculo de diferença, insira a data final no segundo campo e selecione a precisão desejada (anos/meses/dias/horas).",
+    "Para operações aritméticas, especifique quantidade de dias/semanas/meses e direção (positiva/negativa) no campo numérico.",
+    "Ative a opção 'Considerar fuso horário local' para cálculos em hora local ou desative para UTC padrão.",
+    "Clique em 'Processar' para obter resultados detalhados com timestamp UNIX e notação ISO 8601 no painel de saída."
   ],
   "usage_examples": [
-    "Use a Calculadora de Datas para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor precisa calcular o prazo exato de um contrato entre 15/03/2024 e 30/06/2024, obtendo resultado em meses e dias para validação legal.",
+    "Um analista financeiro calcula juros compostos diários ao determinar intervalo exato entre datas de vencimento de títulos.",
+    "Um engenheiro de dados ajusta timestamps de registros históricos ao converter fuso horário UTC para horário local de São Paulo.",
+    "Um gerente de projetos precisa adicionar 45 dias úteis à data de início de um projeto, excluindo automaticamente finais de semana e feriados."
   ]
 }

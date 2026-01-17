@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de graphique en barres positif/négatif est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de graphique en barres positif/négatif pour traiter facilement diverses données sans installer de logiciels ou de modules complémentaires. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de graphique en barres positif/négatif peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et ne sont pas téléchargées sur aucun serveur. Utilisez immédiatement le Générateur de graphique en barres positif/négatif pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de graphiques en barres positives/négatives est un outil spécialisé pour visualiser des données divergentes à l'aide de coordonnées cartésiennes inversées. Techniquement, il utilise des bibliothèques de rendu SVG avec un algorithme de normalisation des données permettant de représenter simultanément des valeurs positives et négatives sur un même axe Y bimodal. Cet outil répond à un besoin critique dans l'analyse comparative de données contradictoires, comme les écarts budgétaires, les variations climatiques ou les résultats expérimentaux opposés. Le moteur interne traite les entrées JSON structurées avec des champs de catégories, valeurs primaires et secondaires, et applique un système de codage couleur bichrome (rouge/bleu) avec des dégradés proportionnels à l'ampleur des valeurs. La configuration inclut des options de personnalisation avancée : échelle logarithmique, seuils de troncature, et annotations dynamiques. Le système génère automatiquement des axes à double direction avec un point zéro centralisé, optimisant la comparaison visuelle. Contrairement aux outils standards, il prend en charge les jeux de données multidimensionnels via des sous-groupes empilés, et exporte en formats vectoriels (SVG/PDF) avec inclusion de métadonnées pour traçabilité scientifique.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de graphique en barres positif/négatif",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'interface via le panneau de configuration 'Charts' et sélectionnez 'Positive Negative Bar Chart'",
+    "Importez vos données au format JSON avec une structure définie : {categories: [...], values: [...], subgroups?: [...]}",
+    "Mappez les champs dans l'éditeur de schéma : sélectionnez les colonnes pour catégories, valeurs principales et éventuels sous-groupes",
+    "Configurez l'apparence via l'onglet 'Style' : choisissez les palettes de couleurs divergentes (ex: cool-warm), l'opacité des barres et le style des axes",
+    "Ajustez les paramètres techniques dans l'onglet 'Advanced' : activez l'échelle logarithmique, définissez les seuils de saturation et positionnez l'origine Z",
+    "Prévisualisez en temps réel et exportez le graphique final en SVG ou PNG avec les balises ARIA pour accessibilité WCAG"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de graphique en barres positif/négatif pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Analyse de variance budgétaire : Comparer les dépenses réelles vs prévues avec des barres rouges (dépassement) et bleues (économie)",
+    "Étude climatique : Représenter les anomalies de température mensuelles par rapport à la moyenne historique",
+    "Suivi logistique : Visualiser les écarts d'inventaire (positifs pour les stocks excédentaires, négatifs pour les pénuries)",
+    "Recherche médicale : Illustrer l'efficacité comparative de traitements avec des valeurs positives pour résultats thérapeutiques et négatives pour effets secondaires"
   ]
 }

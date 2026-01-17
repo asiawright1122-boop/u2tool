@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Convertidor de Marcas de Tiempo es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Al usar el Convertidor de Marcas de Tiempo, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Convertidor de Marcas de Tiempo puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Convertidor de Marcas de Tiempo ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Timestamp Converter permite transformar fechas entre el formato Unix Epoch (segundos transcurridos desde 00:00:00 UTC del 1 de enero de 1970) y representaciones legibles para humanos. Esta herramienta es esencial para desarrolladores que trabajan con sistemas backend, APIs REST que devuelven timestamps en JSON, o bases de datos como MySQL que almacenan fechas en formatos binarios. Soporta conversiones bidireccionales, manejo de zonas horarias (incluyendo ajustes de horario de verano), e interpretación automática de formatos comunes como ISO 8601, RFC 2822 y cadenas personalizadas. Internamente, utiliza el objeto Date de JavaScript para realizar cálculos precisos, validando rangos válidos (-62167219200 a 8640000000000000 ms) y aplicando desplazamientos de zona horaria mediante la función toLocaleString(). Los desarrolladores pueden usarla para depurar registros de logs del sistema, sincronizar eventos en sistemas distribuidos o validar datos temporales en aplicaciones IoT.",
   "usage_steps": [
-    "Abre la página del Convertidor de Marcas de Tiempo",
-    "Introduce o pega el contenido que deseas procesar en la casilla de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona la dirección de conversión usando el interruptor 'Epoch a Fecha' o 'Fecha a Epoch'",
+    "Introduce el valor en el campo de texto principal: número entero para timestamps o cadena de fecha válida (ej: '2023-12-25T08:30:00Z')",
+    "Elige el formato de salida deseado en el menú desplegable: 'ISO 8601', 'RFC 2822', 'Fecha local del navegador' o 'Personalizado'",
+    "Activa/desactiva la opción 'Mostrar milisegundos' según precisión requerida",
+    "Haz clic en el botón 'Convertir' para ejecutar el cálculo",
+    "Copia el resultado convertido desde el área de salida resaltada, incluyendo el desplazamiento horario calculado"
   ],
   "usage_examples": [
-    "Usa el Convertidor de Marcas de Tiempo para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un ingeniero DevOps convierte timestamps de logs de Kubernetes (1625648937) a formato legible para analizar errores del sistema en UTC+2",
+    "Un desarrollador frontend transforma fechas ISO 8601 obtenidas de una API GraphQL a timestamps para actualizar un componente de gráfico de tiempo real",
+    "Un analista de datos convierte un conjunto de fechas en formato '15/08/2023 14:23:00' (GMT-5) a Unix Epoch para cargarlo en una base de datos temporal de Amazon Redshift",
+    "Un especialista en ciberseguridad traduce timestamps de un archivo de registro de auditoría del sistema (con milisegundos) a hora local para correlacionar eventos de intrusiones"
   ]
 }

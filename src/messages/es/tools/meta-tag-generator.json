@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Generador de metaetiquetas es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Generador de metaetiquetas, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Generador de metaetiquetas puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Generador de metaetiquetas inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El generador de metaetiquetas produce automáticamente código HTML semántico para optimizar la visibilidad de páginas web en motores de búsqueda y plataformas de compartir en redes sociales. Esta herramienta implementa estándares HTML5, generando etiquetas meta como description, keywords, Open Graph y Twitter Cards con atributos precisos. Los desarrolladores necesitan este recurso para asegurar que sus sitios cumplan con los requisitos técnicos de SEO on-page, mejoren el rendimiento en buscadores y controlen cómo se muestra su contenido en comparticiones sociales. La herramienta analiza parámetros como longitud de texto, compatibilidad con protocolos sociales y validación de caracteres especiales. Al integrar recomendaciones de Google Search Console y directrices de Twitter, el sistema ofrece opciones avanzadas como generación automática de imágenes en formato adecuado para Open Graph, ajuste de viewport y configuración de charset UTF-8. Su motor procesa las entradas del usuario y genera código listo para implementar, incluyendo validación de etiquetas redundantes o conflictivas.",
   "usage_steps": [
-    "Abre la página de la herramienta Generador de metaetiquetas",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona las familias de metaetiquetas requeridas (SEO, Open Graph, Twitter Cards) mediante checkboxes específicos",
+    "Introduce la URL canónica del recurso en el campo 'Content Source'",
+    "Especifica el título SEO con contador de caracteres (máximo 60 caracteres recomendados)",
+    "Adjunta una imagen en formato .jpg o .png para Open Graph con resolución 1200x630px sugerida",
+    "Ajusta parámetros técnicos como charset (UTF-8 predeterminado) y configuración de viewport",
+    "Copia el código generado en el panel 'Preview' e impléntalo en la sección <head> de tu HTML"
   ],
   "usage_examples": [
-    "Usa Generador de metaetiquetas para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador implementa metaetiquetas Open Graph para un artículo de blog, asegurando que se muestre como tarjeta en Facebook con imagen destacada",
+    "Un comercio electrónico genera Twitter Cards para productos nuevos, permitiendo previews en tweets con precios y disponibilidad",
+    "Un freelance corrige errores de meta description en un sitio cliente, optimizando fragmentos para mejorar CTR en resultados de búsqueda",
+    "Un equipo de marketing configura metaetiquetas de autoría para campañas de email marketing, garantizando visualización correcta en clientes de correo"
   ]
 }

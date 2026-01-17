@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Visor EXIF es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Visor EXIF, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Visor EXIF puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Visor EXIF inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El EXIF Viewer permite analizar y manipular los metadatos incrustados en archivos de imagen JPEG y HEIC. Técnicamente, descompone los segmentos APP1 y APP2 del formato JPEG, revelando información como el modelo de cámara, coordenadas GPS, marca de tiempo, orientación y ajustes técnicos (velocidad de obturación, ISO, apertura). Los usuarios necesitan esta herramienta para garantizar privacidad al compartir imágenes públicamente, verificar autenticidad forense o reducir tamaños de archivo eliminando datos redundantes. Internamente, el programa utiliza algoritmos de parsing binario para decodificar estructuras de directorios EXIF y ofrece opciones de edición a nivel de bytes, permitiendo la eliminación selectiva de etiquetas específicas (como MakerNote) o bloques completos de metadatos sin alterar la calidad del píxel. La herramienta también genera reportes de conformidad con estándares IPTC y XMP, mostrando diferencias entre versiones originales y modificadas en tiempo real.",
   "usage_steps": [
-    "Abre la página de la herramienta Visor EXIF",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Arrastra el archivo de imagen a la zona designada o selecciona 'Cargar desde dispositivo' para importar el archivo.",
+    "Navega por las pestañas 'Datos EXIF', 'GPS' y 'Comentarios' para revisar metadatos estructurados y anotaciones ocultas.",
+    "Activa/desactiva checkboxes individuales para seleccionar etiquetas específicas (ej: 'Eliminar coordenadas GPS') o usa 'Limpiar todo' para borrar completamente los metadatos.",
+    "Haz clic en 'Previsualizar cambios' para ver cómo afecta la eliminación en la estructura binaria del archivo.",
+    "Confirma la edición con 'Procesar imagen' y espera la generación del archivo depurado en formato ZIP comprimido.",
+    "Descarga el resultado y verifica la integridad con la opción integrada 'Comparar metadatos antes/después'."
   ],
   "usage_examples": [
-    "Usa Visor EXIF para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un periodista elimina datos de localización de imágenes tomadas en zonas sensibles antes de publicarlas online.",
+    "Un fotógrafo profesional retira información de equipos y ajustes técnicos para proteger su metodología comercial.",
+    "Un desarrollador web reduce el tamaño de imágenes optimizando el peso innecesario de metadatos EXIF.",
+    "Un investigador forense analiza timestamps y secuencias de archivos para validar cronologías en documentos de prueba."
   ]
 }

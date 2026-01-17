@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Barras Apiladas es una herramienta en línea práctica que te ayuda a completar diversas tareas rápidamente. Al usar el Generador de Gráficos de Barras Apiladas, puedes procesar varios datos fácilmente sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Barras Apiladas puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Barras Apiladas ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos de Barras Apiladas permite crear visualizaciones cartesianas donde múltiples series de datos se superponen dentro de barras individuales, mostrando la contribución relativa de cada componente al total. Técnicamente, el sistema procesa datos estructurados (CSV, JSON) mediante un motor basado en D3.js, mapeando variables categóricas en el eje X y valores numéricos en el eje Y. Utiliza un algoritmo de apilamiento que calcula proporciones acumuladas para cada segmento, con soporte para escalamiento logarítmico o lineal. Los usuarios necesitan esta herramienta para análisis comparativos multivariables, como evaluar desgloses presupuestarios, comparar cuotas de mercado por región o analizar distribuciones demográficas. La salida es un SVG vectorial con soporte para interacción (tooltips dinámicos) y accesibilidad (etiquetas ARIA).",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Barras Apiladas",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del instrumento según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Haz clic en 'Importar datos' y selecciona tu archivo CSV/JSON con columnas categóricas y numéricas.",
+    "2. Asigna manualmente las columnas usando el mapeador de campos: define 'Categoría' y múltiples 'Valores apilados'.",
+    "3. Elige el eje de apilamiento (vertical u horizontal) en la sección 'Configuración de ejes'.",
+    "4. Personaliza la paleta de colores mediante el selector hexadecimal para diferenciar segmentos.",
+    "5. Activa 'Porcentaje relativo' para normalizar valores o 'Valores absolutos' en la configuración avanzada.",
+    "6. Descarga el gráfico como SVG/PNG o copia el código HTML integrable desde el panel de exportación."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Barras Apiladas para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un analista financiero compara el desglose de gastos operativos mensuales por departamento (salarios, suministros, tecnología) a lo largo de cuatro trimestres.",
+    "Un investigador de mercado visualiza la participación de ventas por producto en 5 regiones geográficas, mostrando contribuciones relativas por color.",
+    "Un ingeniero de datos muestra la distribución de consumo energético (kWh) por sector (residencial, industrial, comercial) en 12 meses.",
+    "Un académico presenta la composición porcentual de estudiantes por nivel educativo (primario, secundario, universitario) en distintas provincias."
   ]
 }

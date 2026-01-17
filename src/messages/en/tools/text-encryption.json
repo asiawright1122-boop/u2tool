@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text Encryption is a practical online tool that helps you quickly complete various tasks. Using Text Encryption, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Text Encryption can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Text Encryption immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Text Encryption tool implements AES (Advanced Encryption Standard) symmetric encryption with CBC (Cipher Block Chaining) and GCM (Galois/Counter Mode) protocols to secure textual data. Users input plaintext or ciphertext alongside a password, which is processed through PBKDF2 key derivation (with 600,000+ SHA-256 iterations) to generate a 256-bit encryption key. The tool automatically salts password hashes and generates unique initialization vectors (IVs) for each encryption operation to prevent pattern analysis. Data is encrypted using AES-256 by default, though users may select 128-bit or 192-bit key sizes. Encrypted outputs are encoded in Base64 format with prepended IV/salt metadata for seamless decryption. This tool addresses critical security needs: protecting sensitive communications from MITM attacks, securing API keys in development environments, and ensuring confidentiality for personally identifiable information (PII) during storage/transmission. The GCM mode option provides built-in HMAC authentication for data integrity verification, making it suitable for security-critical applications like financial transaction masking or healthcare data anonymization.",
   "usage_steps": [
-    "Open the Text Encryption tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Open the encryption panel and choose AES mode (CBC or GCM) from the dropdown menu",
+    "2. Paste your sensitive text into the 'Plaintext Input' textarea with line wrap disabled for code compatibility",
+    "3. Enter a cryptographically strong password in the dedicated field, ensuring minimum 12 characters with mixed case",
+    "4. Select key size (128, 192, or 256 bits) using the bit-strength slider beneath the password field",
+    "5. Click 'Encrypt Text' to generate Base64-encoded ciphertext with embedded IV/salt header",
+    "6. For decryption, switch to the 'Decryption' tab, paste the encrypted string, re-enter the password, and click 'Decrypt Cipher' to restore original content"
   ],
   "usage_examples": [
-    "Use Text Encryption to process your data",
-    "Get processing results quickly without waiting"
+    "Securely encrypt database connection strings before sharing them in version control systems",
+    "Protect cryptocurrency wallet recovery phrases during email transmission to cold storage devices",
+    "Anonymize user credentials in log files by encrypting them with rotating session keys",
+    "Create self-expiring API keys by encrypting timestamped tokens with hardware security module (HSM) derived keys"
   ]
 }

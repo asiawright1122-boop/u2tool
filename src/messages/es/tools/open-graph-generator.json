@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Open Graph es una herramienta en línea práctica que te ayuda a completar varias tareas de manera rápida. Con el Generador de Open Graph, puedes procesar fácilmente diferentes datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz sencilla y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, el Generador de Open Graph puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza el Generador de Open Graph inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Open Graph Generator es una herramienta técnica que permite crear etiquetas meta Open Graph (OGP) personalizadas para optimizar la previsualización de URLs en plataformas sociales como Facebook, LinkedIn o Twitter. Al definir parámetros como og:title, og:description, og:image y og:type, el usuario controla cómo se muestra su contenido al compartirse, evitando errores como imágenes incorrectas o textos desconectados. Esta herramienta es esencial para desarrolladores, community managers y creadores de contenido que buscan maximizar el engagement mediante visualizaciones atractivas y consistentes. Su funcionamiento se basa en recopilar datos del sitio web (o permitiendo su edición manual) y generar un bloque de código HTML compatible con estándares OGP 2.0, incluyendo opciones avanzadas como múltiples imágenes, locales multilingües (og:locale:alternate) y propiedades específicas de tipos de contenido (artículo, video, producto). Al integrar estas etiquetas en el <head> de una página, se asegura una representación precisa en redes sociales sin depender de scrapers automáticos.",
   "usage_steps": [
-    "Abre la página del Generador de Open Graph",
-    "Ingresa o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del tool según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al generador y completa el campo 'URL de destino' con el enlace a optimizar.",
+    "Edita manualmente el 'Título Open Graph' y la 'Descripción' para personalizar el mensaje de la previsualización.",
+    "Carga una imagen optimizada o introduce su URL en 'Imagen Principal', especificando dimensiones mínimas recomendadas (1200x630 píxeles).",
+    "Selecciona el 'Tipo de Contenido' (website, article, video.movie, etc.) y define metadatos secundarios como autor (article:author) o duración (video:duration).",
+    "Configura opciones avanzadas: idioma principal (og:locale) e idiomas alternativos (og:locale:alternate) para compatibilidad multilingüe.",
+    "Haz clic en 'Generar Código' para obtener el bloque HTML completo listo para copiar y pegar en el <head> del sitio web."
   ],
   "usage_examples": [
-    "Utiliza el Generador de Open Graph para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un bloguero configura etiquetas OGP para un artículo técnico, asegurando que la imagen destacada y el resumen se muestren correctamente al compartirlo en LinkedIn.",
+    "Un e-commerce añade etiquetas Open Graph a una página de producto nuevo, incluyendo múltiples imágenes y el tipo 'product' para mejorar su visualización en Facebook Ads.",
+    "Un desarrollador corrige errores de previsualización en una landing page al generar etiquetas og:image con dimensiones específicas que cumplen las recomendaciones de Twitter Cards.",
+    "Un medio de comunicación internacional define locales alternativos (es-ES, fr-FR) en sus artículos para que las redes sociales muestren automáticamente la versión traducida adecuada."
   ]
 }

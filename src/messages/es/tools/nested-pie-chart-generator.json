@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Pastel Anidados es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Pastel Anidados, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Pastel Anidados puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Pastel Anidados inmediatamente para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos de Pastel Anidados es una herramienta técnica para visualizar datos jerárquicos mediante anillos concéntricos, donde cada nivel representa una dimensión de datos diferente. Permite mapear relaciones complejas en estructuras de datos como árboles o JSON, generando una representación visual mediante algoritmos de partición angular proporcional. Los usuarios necesitan esta herramienta para analizar distribuciones multivariadas, como presupuestos por departamento/categoría en empresas, distribución de especies en estudios ecológicos, o segmentación de mercado con subcategorías demográficas. El motor utiliza bibliotecas D3.js para renderizado SVG dinámico, admitiendo personalización de colores por dominio, etiquetas radiales, y profundidad de anidamiento mediante un panel de configuración JSON. Los datos se procesan con validación de consistencia en cada nivel jerárquico, garantizando que las sumas de porcentajes se mantengan coherentes entre capas internas y externas, con soporte para unidades absolutas o relativas.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Pastel Anidados",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Importar datos en formato JSON o CSV con estructura explícita de padres-hijos mediante el botón 'Cargar Datos Jerárquicos'",
+    "Definir profundidad de anidamiento en el selector 'Niveles de Anillos' (máximo 5 niveles compatibles)",
+    "Ajustar proporciones angulares en el modo 'Distribución Proporcional' o 'Segmentos Uniformes' desde el menú de configuración avanzada",
+    "Personalizar paleta de colores por nivel usando el selector HSV integrado en la pestaña 'Estilos de Anillos'",
+    "Habilitar etiquetas interactivas con valores absolutos o porcentuales mediante el checkbox 'Mostrar Leyenda Dinámica'",
+    "Exportar gráfico SVG o PNG con resolución ajustable desde el botón 'Descargar Visualización Final'"
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Pastel Anidados para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Visualizar distribución de gastos operativos por región (anillo interno) y subcategorías como tecnología/RRHH (anillo externo) en una empresa multinacional",
+    "Representar proporción de biomasa marina por zona oceánica (nivel 1) y tipos de especies (nivel 2) en un estudio ecológico",
+    "Mostrar inscripciones a cursos universitarios segmentadas por facultad (nivel padre) y programas específicos (nivel hijo) en un dashboard educativo",
+    "Analizar participación de mercado de empresas tecnológicas (anillo central) con desglose de productos/servicios (anillo periférico) en un informe de estrategia"
   ]
 }

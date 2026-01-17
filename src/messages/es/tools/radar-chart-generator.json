@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Radar es una herramienta en línea práctica que te ayuda a completar varias tareas rápidamente. Utilizando el Generador de Gráficos de Radar, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Radar puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Radar ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos de Radar es una herramienta en línea diseñada para crear gráficos de radar, también conocidos como gráficos de estrella o gráficos de araña, que permiten visualizar y comparar múltiples dimensiones de datos de manera eficiente. Esta herramienta es ideal para analistas de datos, desarrolladores y profesionales que necesitan presentar datos complejos en un formato visual intuitivo. Los gráficos de radar son especialmente útiles cuando se necesita comparar características o métricas de diferentes categorías en un solo gráfico. El Generador de Gráficos de Radar permite personalizar múltiples aspectos de la visualización, como el color de las áreas, los ejes, las etiquetas y las líneas de datos. Además, ofrece la posibilidad de exportar los gráficos generados en formatos PNG y SVG, lo que facilita su incorporación en informes, presentaciones y sitios web. La herramienta se basa en algoritmos de renderizado avanzados para asegurar que los gráficos sean precisos y de alta calidad, incluso cuando se manejan grandes conjuntos de datos.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Radar",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Paso 1: Accede a la herramienta Generador de Gráficos de Radar y haz clic en el botón 'Nuevo Gráfico' para iniciar.",
+    "Paso 2: En la sección 'Datos', introduce los valores de las diferentes dimensiones que deseas comparar. Puedes hacerlo manualmente o subir un archivo CSV con los datos.",
+    "Paso 3: Personaliza el diseño del gráfico en la pestaña 'Estilo'. Aquí puedes ajustar el color de las áreas, las líneas, las etiquetas y los ejes para que coincidan con tus necesidades visuales.",
+    "Paso 4: Si es necesario, utiliza la sección 'Ajustes Avanzados' para modificar parámetros específicos como el rango de los ejes, la escala y la visibilidad de las líneas de cuadrícula.",
+    "Paso 5: Una vez que estés satisfecho con la apariencia del gráfico, haz clic en el botón 'Previsualizar' para ver cómo se verá el gráfico final.",
+    "Paso 6: Finalmente, exporta el gráfico en el formato deseado (PNG o SVG) utilizando el botón 'Exportar'. El archivo se descargará automáticamente a tu dispositivo."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Radar para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Ejemplo 1: Un analista de marketing puede usar el Generador de Gráficos de Radar para comparar las características de diferentes productos en el mercado, como precio, calidad, popularidad y durabilidad, lo que ayuda a identificar fortalezas y debilidades.",
+    "Ejemplo 2: Un desarrollador de software puede utilizar esta herramienta para visualizar y comparar las métricas de rendimiento de diferentes versiones de una aplicación, como velocidad de carga, uso de memoria y eficiencia de CPU.",
+    "Ejemplo 3: Un investigador en ciencias de datos puede emplear el generador de gráficos de radar para representar los resultados de un estudio que compara múltiples variables, como temperatura, humedad y presión atmosférica, en diferentes ubicaciones geográficas.",
+    "Ejemplo 4: Un gerente de proyecto puede usar el gráfico de radar para evaluar las habilidades y competencias de un equipo de trabajo en áreas específicas, como comunicación, liderazgo y gestión de tiempo, lo que facilita la identificación de áreas de mejora y formación."
   ]
 }

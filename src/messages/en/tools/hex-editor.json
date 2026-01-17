@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Hex Editor is a practical online tool that helps you quickly complete various tasks. Using Hex Editor, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Hex Editor can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Hex Editor immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Hex Editor enables precise conversion between ASCII text and hexadecimal representations while providing granular visibility into raw byte data. This tool is essential for developers working with low-level systems, reverse engineering protocols, or debugging binary formats. Technically, it parses input text using ASCII encoding rules to generate corresponding hexadecimal pairs, and vice versa, reconstructs text from hex using byte-to-character mapping. The interface displays data in a hexadecimal grid format, showing both hex values and ASCII interpretations side-by-side. Users can directly modify byte values in the grid, which triggers real-time updates to the text output, making it ideal for testing memory-mapped I/O operations or crafting specific binary payloads. Unlike basic converters, this tool supports non-printable ASCII characters through escape notation and maintains strict hexadecimal validation to prevent invalid byte sequences. It's particularly valuable for analyzing firmware images, constructing custom network packets, or examining file headers where precise byte manipulation is required.",
   "usage_steps": [
-    "Open the Hex Editor tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Open the Hex Editor interface in your browser's developer tools panel",
+    "2. Enter ASCII text in the 'Text Input' field or paste hex values in the 'Hexadecimal Input' box",
+    "3. Click 'Convert to Hex Grid' to visualize the data in a 16-byte columnar format with offset addresses",
+    "4. Double-click any hex value in the grid to modify its byte content directly",
+    "5. Use the 'View ASCII' toggle to see corresponding character representations with non-printable characters shown as \\x00 escapes",
+    "6. Export modified data using 'Download as Hex File' or copy the synchronized text/hex output"
   ],
   "usage_examples": [
-    "Use Hex Editor to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: Analyzing a corrupted PDF header by comparing its hex signature (e.g., D8 FF E0) against standard file specifications",
+    "Example 2: Reverse-engineering a firmware update file to locate and modify embedded configuration strings",
+    "Example 3: Constructing a custom TCP/IP packet with specific byte fields for network testing scenarios",
+    "Example 4: Recovering text from a damaged disk image by manually correcting misaligned hex values in sector data"
   ]
 }

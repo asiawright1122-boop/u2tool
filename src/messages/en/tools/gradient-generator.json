@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Gradient Generator is a practical online tool that helps you quickly complete various tasks. Using Gradient Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Gradient Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Gradient Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Gradient Generator is a specialized tool for creating complex CSS gradient syntax through an interactive visual interface. This tool enables developers to generate linear and radial gradients by manipulating direction angles, color stops, and shape parameters in real time. Technically, it converts positional inputs (degrees for linear gradients or radial shapes like ellipse/circle) and color values (HEX, RGB, or HSL) into standardized CSS gradient notation. Users benefit from immediate visual feedback as they adjust transition points, allowing precise control over gradient stops, midpoints, and directionality. The generator accounts for browser compatibility by outputting gradients in both modern syntax and legacy vendor-prefixed versions when necessary. Developers working on UI components like buttons, background overlays, or card elements can rapidly prototype gradients without manual CSS calculations, eliminating trial-and-error coding. Advanced features include opacity control sliders, color format conversion, and the ability to export gradients as reusable CSS classes.",
   "usage_steps": [
-    "Open the Gradient Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Select gradient type using the 'Linear' or 'Radial' radio buttons",
+    "Adjust direction angle via the degree input field or drag the directional handle in the live preview",
+    "Click '+ Add Stop' to insert color stops at specific percentage positions along the gradient line",
+    "Use the color picker pop-up to select hues for each stop, with real-time updates to the gradient visualization",
+    "Toggle 'CSS Preview' to view generated code with vendor prefixes and class structure",
+    "Copy the complete CSS gradient declaration to clipboard for immediate implementation"
   ],
   "usage_examples": [
-    "Use Gradient Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Creating a diagonal hero section background with a 135-degree linear gradient transitioning from #FFD700 to #FF69B4",
+    "Designing a subtle button hover effect using a 10% opacity radial gradient overlay on a dark background",
+    "Generating a material design-style card shadow using a 50% radial gradient with transparent black color stops",
+    "Implementing a dark mode transition effect with a vertical linear gradient from #1A1A1A to #2C2C2C"
   ]
 }

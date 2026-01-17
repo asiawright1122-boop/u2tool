@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Retourner et Rotation d'Images est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Grâce à Retourner et Rotation d'Images, vous pouvez traiter divers types de données sans installer de logiciels ou de plugins. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de démarrer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, Retourner et Rotation d'Images peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et garantissant qu'elles ne seront pas téléversées sur aucun serveur. Utilisez Retourner et Rotation d'Images immédiatement pour découvrir des services de outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil Image Flip & Rotate permet d'appliquer des transformations géométriques précises à des fichiers image via des opérations de retournement et de rotation. Techniquement, il utilise des matrices de transformation affine pour modifier les coordonnées des pixels, avec interpolation bicubique pour préserver la qualité. Les retournements horizontal/vertical s'effectuent par inversion des coordonnées X/Y, tandis que les rotations arbitraires (de 1° à 360°) s'appuient sur des calculs matriciels en 2D. L'outil prend en charge le traitement par lot et conserve les métadonnées EXIF. Ce logiciel est indispensable pour corriger l'orientation d'images scannées, créer des effets miroirs pour l'impression, adapter des visuels à des formats spécifiques (ex: portrait vers paysage), ou préparer des assets 2D pour des applications 3D. L'algorithme gère automatiquement le rognage et le remplissage des zones vides après rotation non orthogonale, avec option de personnalisation de la couleur de fond.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Retourner et Rotation d'Images",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les réglages de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Cliquez sur 'Importer' pour charger une image (formats supportés: JPEG, PNG, BMP, WEBP).",
+    "2. Activez l'option 'Miroir horizontal' ou 'Miroir vertical' dans la section 'Retournement' pour inverser les axes.",
+    "3. Utilisez le curseur 'Rotation' pour saisir un angle précis (ex: 90°, 180°) ou entrez une valeur manuelle.",
+    "4. Ajustez les paramètres avancés dans 'Options de rendu' (qualité d'interpolation, couleur de fond).",
+    "5. Prévisualisez les changements en temps réel dans la zone de travail avec zoom 1:1.",
+    "6. Téléchargez le résultat en cliquant sur 'Exporter' ou appliquez les mêmes paramètres à plusieurs images via 'Traiter un lot'."
   ],
   "usage_examples": [
-    "Utilisez Retourner et Rotation d'Images pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un photographe retournant verticalement des clichés de reflets dans l'eau pour créer un effet artistique.",
+    "Un designer graphique ajustant l'orientation de 3° d'une maquette de boîte de produit pour l'impression offset.",
+    "Un développeur de jeux vidéo générant des sprites miroirs pour les animations de personnages.",
+    "Un archiviste numérisant des documents anciens et corrigeant automatiquement l'orientation de 150 scans en une fois."
   ]
 }

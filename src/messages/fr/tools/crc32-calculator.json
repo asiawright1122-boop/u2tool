@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Calculateur CRC32 est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Calculateur CRC32, vous pouvez facilement traiter divers types de données sans avoir à installer de logiciels ou de modules complémentaires. Cet outil possède une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Calculateur CRC32 peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant tout téléchargement sur un serveur. Utilisez immédiatement le Calculateur CRC32 pour découvrir des services en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le CRC32 Calculator est un outil technique permettant de générer et de valider des sommes de contrôle basées sur l'algorithme cyclique de redondance (CRC-32) selon la norme IEEE 802.3. Cette méthode, utilisée pour détecter les erreurs dans les transmissions de données, applique un polynôme générateur de degré 32 (0x04C11DB7) pour produire une empreinte numérique de 4 octets. Les développeurs ont besoin de cet outil pour vérifier l'intégrité des fichiers binaires, des paquets réseau ou des flux de données lors de la mise au point d'applications embarquées, de protocoles de communication ou de systèmes de stockage distribué. Le calcul s'effectue en traitant chaque octet de l'entrée via une table de précalcul (méthode de slicing par byte) ou un algorithme bit-à-bit, selon l'implémentation. Le résultat s'affiche en hexadécimal, avec la possibilité de l'ajuster selon les paramètres d'initialisation (0xFFFFFFFF), de post-inversion et d'octet final. L'outil prend en charge les encodages ASCII, UTF-8 et les données binaires brutes, avec une option pour inverser l'ordre des bits d'octet.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Calculateur CRC32",
-    "Entrez ou copiez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les réglages de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez l'onglet 'Texte' ou 'Fichier' selon votre source de données",
+    "Saisissez le texte dans le champ dédié ou collez un hexdump avec l'option 'Hexa' activée",
+    "Choisissez l'encodage source (ASCII/UTF-8/UTF-16LE) pour les conversions de caractères",
+    "Glissez-déposez un fichier binaire ou sélectionnez-le via le bouton 'Parcourir'",
+    "Cliquez sur 'Calculer CRC32' pour exécuter l'algorithme avec les paramètres configurés",
+    "Copiez le résultat en hexadécimal ou téléchargez le rapport JSON contenant le CRC32, le polynôme utilisé et les flags de configuration"
   ],
   "usage_examples": [
-    "Utilisez le Calculateur CRC32 pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Validation d'une image firmware avant sa programmation sur un microcontrôleur, en comparant le CRC32 du fichier source et du binaire gravé",
+    "Vérification de l'intégrité des paquets UDP lors du développement d'une application de streaming vidéo en temps réel",
+    "Détection de corruption dans un journal binaire (logfile) après un crash système, en recalculant le CRC32 des enregistrements",
+    "Génération de clés de licence basées sur l'empreinte CRC32 d'un fichier de configuration client, combinée à une fonction de hachage cryptographique"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Vérificateur de Certificat SSL est un outil en ligne pratique qui vous aide à effectuer rapidement diverses tâches. En utilisant le Vérificateur de Certificat SSL, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plug-ins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Vérificateur de Certificat SSL peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas envoyés sur aucun serveur. Utilisez immédiatement le Vérificateur de Certificat SSL pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le SSL Certificate Checker est un outil technique conçu pour analyser les certificats SSL/TLS d'un domaine spécifique, en validant leur intégrité, leur chaîne de confiance et leurs paramètres de sécurité. Il effectue une connexion HTTPS simulée via le protocole TLS 1.2 ou supérieur, extrait le certificat X.509, puis vérifie sa période de validité, le nom commun (CN), les Subject Alternative Names (SAN), l'autorité émettrice (CA), et la présence de vulnérabilités comme SHA-1 ou les clés RSA inférieures à 2048 bits. Cet outil est essentiel pour diagnostiquer des erreurs de certificat causant des avertissements navigateur, auditer la conformité PCI-DSS, ou surveiller l'expiration de certificats EV (Extended Validation). Il utilise des requêtes OCSP (Online Certificate Status Protocol) et CRL (Certificate Revocation List) pour détecter les certificats révoqués, et affiche des détails cryptographiques comme l'algorithme de signature, les extensions critiques ou les paramètres ECDHE. En mode avancé, il teste également la configuration du serveur (HSTS, protocoles supportés, ordre des cipher suites) pour identifier des failles potentielles.",
   "usage_steps": [
-    "Ouvrez la page du Vérificateur de Certificat SSL",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Saisissez le domaine cible dans la barre de saisie 'Domaine' (ex: exemple.com).",
+    "Cochez l'option 'Vérification OCSP' pour activer le contrôle en temps réel de révocation.",
+    "Sélectionnez le port personnalisé (par défaut 443) si le serveur utilise une configuration non standard.",
+    "Cliquez sur 'Analyser SSL' pour initier la connexion TLS et récupérer les données certificat.",
+    "Explorez l'onglet 'Chaîne de Confiance' pour identifier les certificats intermédiaires manquants.",
+    "Consultez la section 'Recommandations' pour des conseils sur la mise à niveau de la sécurité (ex: désactiver TLS 1.0)."
   ],
   "usage_examples": [
-    "Utilisez le Vérificateur de Certificat SSL pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur identifie un certificat expirant dans 7 jours sur un site e-commerce avant une campagne marketing critique.",
+    "Un administrateur système diagnostique une erreur 'CERTIFICATE_VERIFY_FAILED' sur un serveur en validant la chaîne de certificats intermédiaires.",
+    "Un auditeur de sécurité vérifie qu'un certificat wildcard (*.domaine.fr) n'est pas vulnérable à une attaque d'homographie.",
+    "Un responsable IT compare les cipher suites configurées sur un serveur Apache avec les recommandations NIST pour renforcer TLS 1.3."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der TOML/JSON-Konverter ist eine praktische Online-Tool, das dir verschiedene Aufgaben schnell erledigen hilft. Mit dem TOML/JSON-Konverter kannst du verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass du dich schnell einarbeiten und effizient arbeiten kannst. Ob du Entwickler, Designer oder allgemeiner Nutzer bist, der TOML/JSON-Konverter kann dir helfen, deine Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden in deinem Browser lokal durchgeführt, was deine Datensicherheit gewährleistet und sicherstellt, dass deine Daten nicht auf irgendeinem Server hochgeladen werden. Nutze den TOML/JSON-Konverter sofort, um schnelle, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der TOML/JSON-Konverter ist ein Spezialwerkzeug für die bidirektionale Transformation strukturierter Konfigurationsdaten zwischen TOML (Tom's Obvious, Minimal Language) und JSON (JavaScript Object Notation). Technisch gesehen nutzt der Konverter vollständig implementierte Parser für TOML v1.0.0 und JSON 5-Standard, um komplexe Datentypen wie verschachtelte Arrays, Inline-Tabellen und Datumsangaben im ISO 8601-Format präzise zu verarbeiten. Entwickler benötigen dieses Tool, um Konfigurationsdateien zwischen verschiedenen Ökosystemen zu migrieren - etwa bei der Portierung von JavaScript-Projekten (mit package.json) zu Rust-Anwendungen (mit Cargo.toml) oder bei der Integration von CI/CD-Pipelines, die unterschiedliche Formatvorgaben haben. Der Konvertierungsprozess erfolgt durch mehrstufige AST-Transformationen (Abstract Syntax Tree), wobei strukturelle Hierarchien erhalten bleiben und automatische Typinferenz für Zahlen/Strings durchgeführt wird. Besonders praktisch: Die Echtzeitvalidierung zeigt Formatierungsfehler direkt an, und optionale Pretty-Printing-Funktionen formatieren die Ausgabe mit konfigurierbarer Einrückungstiefe.",
   "usage_steps": [
-    "Öffne die Seite des TOML/JSON-Konverters",
-    "Gib oder füge den Inhalt ein, den du verarbeiten möchtest, in das Eingabefeld",
-    "Ändere die Tooloptionen und Einstellungen, wenn nötig",
-    "Klicke auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopiere oder lade die verarbeiteten Ergebnisse herunter"
+    "1. Wählen Sie die Konversionsrichtung über den 'TOML → JSON' oder 'JSON → TOML' Toggle-Schalter",
+    "2. Fügen Sie Ihren Code in den linken Editor ein, der Syntaxhervorhebung und Zeilennummern für präzises Debugging bietet",
+    "3. Aktivieren Sie bei Bedarf den 'Strict Mode' für explizite Typzuordnungen oder 'Minify Output' für kompakte JSON-Ausgabe",
+    "4. Klicken Sie auf 'Konvertieren', um den Transformationsprozess zu starten, der in Echtzeit im rechten Editor angezeigt wird",
+    "5. Prüfen Sie eventuelle Warnungen im 'Validation Panel' unterhalb des Ausgabefelds, die auf potenzielle Datenverluste hinweisen",
+    "6. Laden Sie das Ergebnis über den 'Speichern als' Button im gewünschten Format herunter oder kopieren Sie es direkt in die Zwischenablage"
   ],
   "usage_examples": [
-    "Verwende den TOML/JSON-Konverter, um deine Daten zu verarbeiten",
-    "Erhalte die Verarbeitungsresultate schnell, ohne zu warten"
+    "Ein Node.js-Entwickler konvertiert eine komplexe package.json-Datei mit verschachtelten Skriptkonfigurationen in TOML, um sie mit einem Rust-basierten Build-System zu integrieren",
+    "Ein DevOps-Engineer transformiert JSON-basierte Terraform-Variablen in TOML, um sie mit einem Service zu verwenden, der nur TOML-Konfigurationen akzeptiert",
+    "Ein Data Scientist standardisiert Rohdaten aus einer JSON-API in TOML, um sie mit Python-Skripten zu verarbeiten, die TOML als natives Konfigurationsformat nutzen",
+    "Ein SRE-Team migriert Legacy-JSON-ConfigMaps in TOML, um sie in Kubernetes-Cluster mit spezifischen Formatvorgaben für ConfigMaps einzuspielen"
   ]
 }

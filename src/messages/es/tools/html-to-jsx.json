@@ -1,14 +1,17 @@
 {
-  "detailed_description": "HTML a JSX es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando HTML a JSX, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, HTML a JSX puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa HTML a JSX inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El conversor HTML a JSX es una herramienta especializada que transforma código HTML estático en sintaxis JSX compatible con React. Técnicamente, el proceso implica analizar el Document Object Model (DOM) del HTML de entrada, identificar elementos, atributos, comentarios y nodos de texto, y luego mapearlos a componentes React equivalentes. El parser integrado convierte automáticamente etiquetas de auto-cierre (como <img> o <br>) en sintaxis JSX válida, transforma atributos HTML (ej.: class → className, for → htmlFor) a convenciones de React, y maneja estructuras complejas como listas, tablas o formularios anidados. Esta herramienta es esencial para desarrolladores que necesitan integrar maquetas estáticas en aplicaciones React, migrar proyectos legacy a componentes modulares, o convertir diseños de herramientas como Figma a código ejecutable. Funciona mediante un motor de transformación basado en árboles sintácticos abstractos (AST) que garantiza precisión en la preservación de la estructura original, incluyendo soporte para elementos void, fragmentos y expresiones dinámicas. Además, permite configurar opciones avanzadas como la preservación de comentarios HTML o la conversión automática de estilos en línea a objetos JavaScript.",
   "usage_steps": [
-    "Abre la página de la herramienta HTML a JSX",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega tu código HTML en el área de entrada de la interfaz web.",
+    "Activa la opción 'Preservar comentarios' si necesitas incluir notas del HTML original en JSX.",
+    "Selecciona el modo de transformación de atributos: 'CamelCase' para propiedades React o 'Original' para mantener nombres HTML.",
+    "Haz clic en el botón 'Convertir a JSX' para iniciar el proceso de transformación.",
+    "Revisa el resultado en el panel de salida, prestando atención a advertencias sobre elementos no compatibles.",
+    "Copia el JSX generado y pégalo en tu componente React, ajustando manualmente expresiones dinámicas si es necesario."
   ],
   "usage_examples": [
-    "Usa HTML a JSX para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador migra un sitio estático de HTML/CSS a una arquitectura React, reutilizando componentes de cabecera y menús.",
+    "Un diseñador convierte un prototipo de alta fidelidad exportado desde Figma (en formato HTML) a JSX para integrarlo en Storybook.",
+    "Un equipo ágil transforma fragmentos de HTML generados por un CMS en componentes reutilables con estado gestionado por React.",
+    "Un ingeniero refactoriza una aplicación heredada, extrayendo secciones de código HTML y encapsulándolas como componentes funcionales con props."
   ]
 }

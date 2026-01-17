@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to PHP est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec JSON to PHP, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, JSON to PHP peut vous aider à améliorer votre efficacité de travail. Tous les traitements se font localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez JSON to PHP immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil JSON vers PHP permet de transformer des données structurées au format JSON (JavaScript Object Notation) en syntaxe PHP valide pour les tableaux associatifs. Techniquement, il analyse la structure récursive du JSON (y compris les objets imbriqués et les listes) et la convertit en code PHP utilisant des crochets [] et des chaînes de caractères entre guillemets. Ce processus implique un décodage JSON via json_decode() en arrière-plan, suivi d'une sérialisation personnalisée en notation PHP. Les développeurs ont besoin de cet outil lorsqu'ils migrent des configurations d'API REST vers des scripts PHP, ou lorsqu'ils intègrent des données externes au format JSON dans des applications legacy en PHP. Il est particulièrement utile pour convertir des fichiers de configuration JSON (comme ceux utilisés en Node.js) vers des fichiers .php, ou pour débuguer des réponses d'API en les transformant en variables PHP exploitables. Contrairement aux simples formatters, cet outil gère les caractères spéciaux, les booléens, les nombres et les structures multidimensionnelles en respectant les conventions de codage PHP.",
   "usage_steps": [
-    "Ouvrez la page du convertisseur JSON vers PHP",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Ouvrez l'éditeur de texte en cliquant sur 'Importer JSON' pour charger votre fichier ou collez directement le contenu JSON dans la zone de saisie.",
+    "2. Activez l'option 'Préserver les types' si vous souhaitez conserver les booléens (true/false) et nombres sans les convertir en chaînes.",
+    "3. Utilisez le sélecteur 'Format de sortie' pour choisir entre la notation PHP classique ($array = array(...)) ou la syntaxe courte ([]).",
+    "4. Cochez 'Générer le code PHP complet' pour inclure la déclaration de variable ($array = ...) dans la sortie.",
+    "5. Cliquez sur 'Convertir' pour déclencher l'analyse syntaxique et l'affichage du résultat dans le panneau de droite.",
+    "6. Copiez le code généré ou téléchargez-le au format .php en utilisant le bouton 'Exporter'"
   ],
   "usage_examples": [
-    "Utilisez JSON to PHP pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Convertir un fichier de configuration d'une application JavaScript (package.json) vers un tableau PHP pour un système de gestion de plugins.",
+    "Transformer les résultats paginés d'une API REST (avec pagination cursorelle) en tableaux PHP pour traitement côté serveur.",
+    "Générer un fichier de fixtures PHP à partir d'un JSON de test, en préservant les types de données pour des tests unitaires précis.",
+    "Importer des données historiques stockées en JSON dans une base de données relationnelle via un script PHP de migration."
   ]
 }

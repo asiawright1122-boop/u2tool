@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Gerador de Gráfico Rosa de Nightingale é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Gerador de Gráfico Rosa de Nightingale, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Gerador de Gráfico Rosa de Nightingale pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Gerador de Gráfico Rosa de Nightingale imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Gerador de Gráficos de Rosa de Nightingale é uma ferramenta online avançada que permite a criação de gráficos de área polar, também conhecidos como gráficos de rosa de Nightingale. Esses gráficos são especialmente úteis para visualizar dados categóricos em um formato circular, onde o raio de cada setor representa a magnitude do valor. A ferramenta é ideal para profissionais de dados, analistas de negócios e designers, que precisam representar dados complexos de forma clara e visualmente atraente.\n\nPor que os usuários precisam dessa ferramenta? Em cenários onde o espaço é limitado, mas a necessidade de mostrar variações significativas em múltiplas categorias é alta, o gráfico de rosa de Nightingale é uma escolha ideal. Por exemplo, em dashboards de saúde, onde diferentes setores podem representar categorias de doenças, e o raio de cada setor indica a taxa de incidência. Em finanças, pode ser usado para mostrar a distribuição de receitas por departamento, destacando visualmente as áreas com maior contribuição.\n\nComo funciona? A ferramenta permite que você importe dados em formatos CSV ou JSON, selecione as colunas desejadas, e ajuste parâmetros como cores, rótulos, e escalas. O motor de renderização usa algoritmos de otimização para garantir que os setores sejam desenhados de maneira precisa e esteticamente agradável, com suporte para exportação em formatos vetoriais e raster, como SVG e PNG.",
   "usage_steps": [
-    "Abra a página da ferramenta Gerador de Gráfico Rosa de Nightingale",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Passo 1: Acesse a página do Gerador de Gráficos de Rosa de Nightingale e clique no botão 'Importar Dados'.",
+    "Passo 2: Escolha o seu arquivo de dados no formato CSV ou JSON e carregue-o. A ferramenta irá processar automaticamente o arquivo.",
+    "Passo 3: Selecione as colunas que deseja usar para os rótulos e os valores. Use a interface de seleção de colunas para mapear os dados corretamente.",
+    "Passo 4: Customize a aparência do gráfico. Ajuste as cores, o tamanho dos rótulos, e as escalas no painel de opções de estilo.",
+    "Passo 5: Visualize o gráfico gerado no preview em tempo real. Faça ajustes adicionais se necessário, utilizando as ferramentas de edição.",
+    "Passo 6: Quando estiver satisfeito com o resultado, clique em 'Exportar' para salvar o gráfico em formato SVG ou PNG, pronto para uso em relatórios ou apresentações."
   ],
   "usage_examples": [
-    "Use Gerador de Gráfico Rosa de Nightingale para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Exemplo 1: Um analista de saúde pública usa o Gerador de Gráficos de Rosa de Nightingale para criar um gráfico que mostra a incidência de diferentes doenças em uma região, facilitando a identificação de áreas prioritárias para intervenção.",
+    "Exemplo 2: Um gerente de marketing utiliza a ferramenta para visualizar a distribuição de vendas por categoria de produto em um relatório trimestral, destacando visualmente as categorias com maior e menor desempenho.",
+    "Exemplo 3: Um designer de dashboards cria um gráfico de rosa de Nightingale para representar a alocação de recursos em diferentes departamentos de uma empresa, facilitando a compreensão da distribuição orçamentária.",
+    "Exemplo 4: Um pesquisador em ciências políticas utiliza a ferramenta para mostrar a distribuição de votos em uma eleição, onde cada setor representa um partido político e o raio indica a porcentagem de votos recebidos."
   ]
 }

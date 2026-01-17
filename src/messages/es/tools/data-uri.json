@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de URI de Datos es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de URI de Datos, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de URI de Datos puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de URI de Datos ahora para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Codificador URI de datos convierte archivos binarios o texto en una cadena URI de datos (data URI) conforme al estándar RFC 2397, permitiendo su inclusión directa en documentos HTML, CSS o JavaScript. Esta herramienta es esencial para desarrolladores que necesitan incrustar recursos como imágenes, fuentes o estilos sin recurrir a solicitudes HTTP externas. Su funcionamiento se basa en leer el contenido del archivo seleccionado mediante la API FileReader de JavaScript, determinar su tipo MIME automáticamente y aplicar codificación Base64 o porcentual (URL encoding) según el formato óptimo. Al generar URIs autónomas como 'data:image/png;base64,iVBORw0KG...', el usuario puede integrar assets en un solo archivo, útil para optimizar rendimiento en aplicaciones progresivas (PWA), evitar problemas de CORS, o crear plantillas HTML autocontenidas. A diferencia de otras herramientas, este generador ofrece opciones avanzadas de personalización del tipo MIME y selección de esquema de codificación, permitiendo ajustes precisos para casos específicos como SVG inline o fuentes web en CSS.",
   "usage_steps": [
-    "Abre la página del Generador de URI de Datos",
-    "Introduce o pega el contenido que deseas procesar en la casilla de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Haz clic en 'Seleccionar archivo' para cargar tu recurso (imagen, fuente, SVG, etc.).",
+    "2. Elige el esquema de codificación: Base64 para binarios o 'Texto plano' para archivos ASCII.",
+    "3. Edita manualmente el tipo MIME si deseas especificar un formato diferente al detectado automáticamente (ej: 'image/webp').",
+    "4. Activa la opción 'Minificar salida' para eliminar espacios y optimizar el tamaño de la URI.",
+    "5. Presiona 'Generar URI' para procesar el archivo con el algoritmo adecuado según tus selecciones.",
+    "6. Copia la URI generada desde el campo de salida y pégala directamente en tu código HTML, CSS o JavaScript."
   ],
   "usage_examples": [
-    "Usa el Generador de URI de Datos para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Incorporar un logo SVG escalable en un email HTML sin adjuntos externos.",
+    "Optimizar un Progressive Web App embebiendo íconos pequeños en el CSS principal.",
+    "Crear una hoja de estilo con fuentes web embebidas para evitar bloqueos por políticas de contenido.",
+    "Inyectar un script de analytics en formato JS minificado directamente en un documento HTML único."
   ]
 }

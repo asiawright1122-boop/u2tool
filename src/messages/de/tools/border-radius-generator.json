@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Kreisradius-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Kreisradius-Generator können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Benutzer sind, kann der Kreisradius-Generator Ihnen helfen, Ihre Arbeitswirkungsrate zu verbessern. Alle Verarbeitung wird lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und Ihren Daten keinen Server aufgeladen wird. Nutzen Sie den Kreisradius-Generator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Border Radius Generator ist ein spezialisierter Editor zur präzisen Erstellung von CSS-Borderradien durch visuelle Interaktion. Das Tool ermöglicht das unabhängige Anpassen der horizontalen und vertikalen Radien für jede der vier Ecken (top-left, top-right, bottom-right, bottom-left) sowie die Eingabe von Werten in Pixel, Prozent, Em oder Rem. Technisch generiert es dynamisch die optimierte CSS-Notation im Shorthand-Format (z.B. border-radius: 15px 30px 45px 5% / 20% 25px 40px 50px), einschließlich Vendor-Prefixes für maximale Browserkompatibilität. Entwickler profitieren durch die Reduktion manueller Berechnungen komplexer Eckenradien, insbesondere bei responsiven Designs, wo relative Einheiten wie Prozentwerte kritisch sind. Die Echtzeitvorschau rendert die CSS-Änderungen sofort in einem integrierten HTML-Container, der das Element im Border-Box-Modell darstellt. Dadurch wird die Überprüfung von Responsivität und visuellem Erscheinungsbild bei verschiedenen Größen vereinfacht. Die automatische Validierung verhindert ungültige Kombinationen und schlägt optimierte Abkürzungen vor, wodurch die Code-Qualität verbessert wird.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Kreisradius-Generators",
-    "Fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Ändern Sie die Tool-Einstellungen wie gewünscht",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Öffnen Sie den Border Radius Generator im Webbrowser und wählen Sie die Registerkarte 'Einstellungen' für erweiterte Optionen.",
+    "Passen Sie die Radien individuell über Schieberegler oder geben Sie Werte in den Eingabefeldern für horizontale/vertikale Radien ein.",
+    "Wechseln Sie zwischen Maßeinheiten (px, %, em, rem) über die Dropdown-Menüs neben jedem Wertefeld.",
+    "Aktivieren Sie die 'Echtzeitvorschau'-Option, um die CSS-Änderungen instantan im integrierten HTML-Container zu sehen.",
+    "Kopieren Sie den generierten CSS-Code über den 'Copy to Clipboard'-Button in Ihre Stylesheet-Datei.",
+    "Speichern Sie komplexe Konfigurationen als Preset für zukünftige Projekte mit einem Klick auf 'Preset speichern'."
   ],
   "usage_examples": [
-    "Verwenden Sie den Kreisradius-Generator, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell verarbeitete Ergebnisse ohne Warten"
+    "Erstellung einer asymmetrischen Chat-Bubble mit stark abgerundeter unterer rechter Ecke und linearem Verlauf zu den anderen Ecken.",
+    "Design eines responsiven Profilbildes mit elliptischen Ecken durch border-radius: 50% in Kombination mit prozentualen Werten.",
+    "Implementierung eines Navigationsbuttons mit dynamischen Radien, die sich bei Hover-Effekten schrittweise vergrößern.",
+    "Prototyping eines Card-Components mit abgestuften Radien (z.B. top: 12px, bottom: 4px) für visuelle Hierarchie in einer UI."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Convertidor JSON a Kotlin es una herramienta en línea práctica que te ayuda a completar rápidamente varias tareas. Utilizando Convertidor JSON a Kotlin, puedes procesar fácilmente varios datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Convertidor JSON a Kotlin puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y que no se suban a ningún servidor. Usa Convertidor JSON a Kotlin ahora para experimentar servicios en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "La herramienta JSON a Kotlin transforma estructuras JSON en clases de datos de Kotlin listas para serialización, manteniendo la tipificación estricta y las relaciones jerárquicas. Técnicamente, analiza el esquema JSON proporcionado, infiere tipos primitivos (String, Int, Boolean) y estructuras anidadas (objetos o arrays), generando código con data classes decoradas por anotaciones de serialización como @Serializable o @JsonClass dependiendo de la biblioteca seleccionada. Es indispensable para desarrolladores que implementan modelos en aplicaciones Android que consumen APIs REST, microservicios backend en Kotlin que procesan payloads JSON, o sistemas que requieren mapeo de datos estructurados. Su motor utiliza técnicas de introspección para identificar campos opcionales (convertidos a tipos nullable) y valida consistencia en claves de objeto, asegurando compatibilidad con estándares como RFC 8259. Al soportar bibliotecas como Kotlinx.serialization y Moshi, permite integración directa con proyectos existentes sin modificaciones manuales.",
   "usage_steps": [
-    "Abre la página del Convertidor JSON a Kotlin",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede a la herramienta a través de tu navegador web y localiza el área de entrada de texto etiquetada como 'JSON de entrada'.",
+    "Pega tu documento JSON válido en el campo, asegurándote de corregir cualquier sintaxis incorrecta previamente.",
+    "Selecciona la biblioteca de serialización deseada en el menú desplegable: 'Kotlinx.serialization', 'Gson' o 'Moshi'.",
+    "Activa la opción 'Campos Nullable' si deseas que todos los atributos se generen como tipos seguros (ej.: String?), o déjalos como no nullable por defecto.",
+    "Haz clic en el botón 'Generar Código Kotlin' para que el sistema procese y muestre las data classes en el área de salida.",
+    "Copia el código generado o descárgalo como archivo .kt usando el botón 'Exportar Código' para integrarlo en tu proyecto."
   ],
   "usage_examples": [
-    "Usa Convertidor JSON a Kotlin para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador Android convierte respuestas de una API OpenWeatherMap (con temperaturas y coordenadas) en data classes serializables para caché local.",
+    "Un ingeniero backend genera modelos de datos a partir de logs JSON estructurados, facilitando el procesamiento en un sistema de análisis de tráfico.",
+    "Un arquitecto de microservicios transforma esquemas OpenAPI (en formato JSON) en clases Kotlin para validar payloads de entrada en endpoints REST.",
+    "Un equipo migrando una aplicación de Node.js a Kotlin Multiplatform usa la herramienta para convertir objetos de configuración JSON en clases de dominio seguras."
   ]
 }

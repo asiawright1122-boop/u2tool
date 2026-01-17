@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON Escape/Unescape est un outil pratique en ligne qui vous aide à accomplir rapidement diverses tâches. Avec JSON Escape/Unescape, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil a une interface simple et est facile à utiliser, permettant de se lancer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, JSON Escape/Unescape peut vous aider à améliorer votre efficacité de travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload sur n’importe quel serveur. Utilisez JSON Escape/Unescape immédiatement pour expérimenter des services d’outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le JSON Escape/Unescape est un outil technique conçu pour gérer les règles de sérialisation et de désérialisation des chaînes JSON conformément à la spécification RFC 8259. Il permet d'échapper les caractères spéciaux (comme les guillemets doubles, antislashs, tabulations ou retours chariots) en séquences Unicode UTF-8 valides, et inversement. Les développeurs ont besoin de cet outil lorsqu'ils manipulent des données JSON contenant des caractères problématiques, comme dans les API REST qui exigent des payloads correctement formatés, ou lors de la correction d'erreurs de parsing dues à des caractères non échappés. L'outil fonctionne en analysant le flux d'entrée caractère par caractère : en mode échappement, il remplace les caractères non imprimables ou réservés (ASCII < 32 ou > 126) par des séquences comme \\u000A pour les sauts de ligne ; en mode dééchappement, il convertit ces séquences en leurs valeurs Unicode équivalentes. Il gère également les cas avancés comme l'échappement conditionnel des slashs (\\/) ou la normalisation des chaînes multilingues avec encodage UTF-8.",
   "usage_steps": [
-    "Ouvrez la page de l’outil JSON Escape/Unescape",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Adaptez les options et paramètres de l’outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Collez votre chaîne JSON brute dans la zone de texte d'entrée.",
+    "2. Sélectionnez l'option 'Échapper' ou 'Dééchapper' selon votre besoin.",
+    "3. Activez/désactivez les cases à cocher pour gérer les options spécifiques : échapper les slashs (/), convertir les caractères Unicode en séquences \\uXXXX, ou normaliser les fins de ligne.",
+    "4. Cliquez sur le bouton 'Process JSON' pour appliquer la transformation.",
+    "5. Examinez le résultat dans la zone de sortie, qui affiche les caractères invisibles (comme • pour les espaces) pour validation.",
+    "6. Copiez le JSON transformé via le bouton 'Copier' ou téléchargez-le au format .json."
   ],
   "usage_examples": [
-    "Utilisez JSON Escape/Unescape pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "1. Un développeur API doit intégrer un texte contenant des guillemets (« citation ») dans un payload JSON : l'outil échappe automatiquement ces caractères pour éviter les erreurs de parsing.",
+    "2. Une application mobile reçoit un JSON mal formaté avec des retours chariots non échappés (\\r\\n) : l'outil normalise ces séquences pour permettre un parsing en toute sécurité.",
+    "3. Un ingénieur données convertit un fichier CSV UTF-8 contenant des symboles japonais en JSON : l'outil encode les caractères Unicode hors plage ASCII en séquences \\uXXXX.",
+    "4. Un administrateur système corrige un fichier de configuration JSON où les chemins Windows (C:\\path) ont été dééchappés accidentellement, rétablissant les antislashs nécessaires."
   ]
 }

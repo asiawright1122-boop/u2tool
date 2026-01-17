@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Convertidor de Formatos de Imágenes es una herramienta práctica en línea que te ayuda a completar rápidamente diversas tareas. Con el Convertidor de Formatos de Imágenes, puedes procesar fácilmente diversos datos sin instalar ningún software o plugins. Esta herramienta cuenta con una interfaz sencilla y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Convertidor de Formatos de Imágenes te puede ayudar a mejorar la eficiencia de trabajo. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y no se suben a ningún servidor. Utiliza el Convertidor de Formatos de Imágenes inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Convertidor de Formatos de Imagen es una herramienta técnica diseñada para transformar archivos gráficos entre los formatos PNG, JPEG y WebP, optimizando su rendimiento y compatibilidad. Permite a los desarrolladores y diseñadores ajustar sus imágenes según las necesidades específicas de cada proyecto, ya sea para reducir tamaño manteniendo calidad (WebP), preservar transparencias (PNG) o garantizar compatibilidad universal (JPEG). Internamente, el conversor utiliza bibliotecas como libpng, jpegtran y libwebp para realizar conversiones sin pérdida de calidad o con compresión ajustable. Soporta metadatos EXIF/IPTC y permite ajustar parámetros como nivel de compresión (0-100 para JPEG), calidad de color (RGB/CMYK) y preservación de canales alfa. El proceso incluye una validación automática de integridad del archivo y optimización de estructura binaria para evitar corrupción. Ideal para integración en flujos de trabajo DevOps o tareas de procesamiento masivo, con capacidad de arrastrar y soltar múltiples archivos simultáneamente.",
   "usage_steps": [
-    "Abre la página del Convertidor de Formatos de Imágenes",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Arrastra los archivos al área de carga con soporte para múltiples selecciones (máximo 50 archivos de hasta 50MB cada uno)",
+    "2. Selecciona el formato de destino en el menú desplegable (PNG, JPEG o WebP) según tus necesidades de compresión y transparencia",
+    "3. Ajusta los parámetros avanzados en el panel de opciones: calidad (80% por defecto para JPEG), conservar metadatos o modo de color (RGB/Grayscale)",
+    "4. Activa la opción 'Optimizar para web' para aplicar compresión adicional sin afectar calidad visual perceptible",
+    "5. Haz clic en 'Procesar' para iniciar la conversión paralela mediante Web Workers (procesamiento en segundo plano sin congelamiento)",
+    "6. Descarga los archivos convertidos individualmente o como archivo ZIP comprimido con los resultados organizados por formato y fecha"
   ],
   "usage_examples": [
-    "Utiliza el Convertidor de Formatos de Imágenes para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un desarrollador frontend convierte imágenes PNG con transparencia a WebP para reducir el tamaño de carga de una PWA en un 40%",
+    "Un fotógrafo digital transforma archivos RAW procesados a JPEG con compresión ajustada al 85% para compartir pruebas con clientes vía correo electrónico",
+    "Un diseñador de UX convierte capturas de pantalla de alta resolución a PNG optimizado para documentación técnica con anotaciones en capas",
+    "Un administrador de sistemas automatiza la conversión por lotes de archivos TIFF heredados a JPEG para integrarlos en un CMS con límite de tamaño de 2MB por imagen"
   ]
 }

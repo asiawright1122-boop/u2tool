@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Stacked Bar Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Stacked Bar Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Stacked Bar Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Stacked Bar Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Stacked Bar Chart Generator transforms multi-dimensional datasets into interactive visualizations that reveal part-to-whole relationships across categorical axes. Built on a D3.js rendering engine, this tool encodes quantitative values through proportional segment heights within composite bars, enabling comparative analysis of subcategory contributions to total values. Developers and data analysts use this tool to decode complex distributions in sales pipelines, resource allocation models, or demographic surveys where layered data comparison is critical. The generator accepts structured input formats like CSV/TSV/JSON, automatically parsing numerical fields into stackable series while preserving axis labeling integrity. Users can specify normalization parameters to convert absolute values into percentage-based representations, with advanced options for axis inversion, logarithmic scaling, and CSS-driven color encoding. Client-side WebAssembly processing ensures real-time rendering of datasets containing up to 10,000 data points with hardware-accelerated canvas updates.",
   "usage_steps": [
-    "Open the Stacked Bar Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Import structured data via drag-and-drop CSV/TSV file upload or paste raw text into the syntax-highlighted editor panel",
+    "Map columns to 'Base Category' (X-axis) and 'Stack Series' (segment components) using the schema mapping interface",
+    "Configure stacking behavior in the Calculation Panel: choose between absolute value stacking or percentage normalization",
+    "Customize visual encoding through the Style Inspector: assign divergent color scales, adjust bar spacing, and enable data labels",
+    "Activate interactive preview mode to test responsiveness across breakpoint thresholds for mobile/tablet/desktop displays",
+    "Export production-ready SVG/PNG renderings with embedded metadata or copy generated D3/Chart.js code snippets for web integration"
   ],
   "usage_examples": [
-    "Use Stacked Bar Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "A marketing analyst visualizing quarterly ad spend allocation across channels (social, email, search) for three regional markets, comparing campaign composition efficiency",
+    "Public health researchers displaying vaccination rate breakdowns by age group across five municipalities using normalized percentage stacks",
+    "Renewable energy engineers comparing daily power generation mix (solar, wind, hydro) against total grid demand over a 30-day period",
+    "University administrators analyzing student enrollment distributions across four academic colleges (STEM, humanities, business, arts) by undergraduate/graduate status"
   ]
 }

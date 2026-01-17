@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Sunburst Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Sunburst Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Sunburst Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Sunburst Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Sunburst Chart Generator is a specialized data visualization tool that transforms hierarchical datasets into radial partition diagrams. By mapping parent-child relationships through concentric rings, this tool enables users to represent multi-level categorical data with proportional segments whose arc lengths correspond to their quantitative value. Built using D3.js and HTML5 Canvas, it supports real-time rendering of complex hierarchies containing thousands of nodes while maintaining SVG scalability for detailed exports. Users can leverage this tool for business intelligence reporting, system resource analysis, and content taxonomy mapping where spatial relationships between nested categories require visual clarification. The generator implements a weighted recursive partitioning algorithm that calculates radial dimensions based on value ratios at each hierarchy level, allowing precise control over angular distribution and depth perception through gradient color encoding. Technical features include drag-and-drop CSV/JSON file import, custom color palette integration, and adjustable radius scaling to emphasize specific data tiers. Interactive previews with hover tooltips displaying node metadata enhance analytical capabilities before final export.",
   "usage_steps": [
-    "Open the Sunburst Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Import structured data via drag-and-drop file uploader (CSV/JSON) containing hierarchical key-value pairs",
+    "Define hierarchy depth using the level configuration panel to assign categorical tiers to concentric rings",
+    "Select color encoding method (categorical, sequential, or diverging) from the palette manager for segment differentiation",
+    "Adjust radius scale multiplier in the layout settings to control visual emphasis on inner/outer hierarchy levels",
+    "Enable interactive features like tooltip display or zoom functionality through the behavior toggle menu",
+    "Export final visualization using resolution-preserving SVG download or PNG screenshot capture buttons"
   ],
   "usage_examples": [
-    "Use Sunburst Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Visualizing enterprise organizational structure with departments as primary rings and employee distribution as secondary segments",
+    "Analyzing website traffic sources through nested layers showing referral channels, subdomains, and individual page performance",
+    "Mapping computer storage usage with top-level directories as outer rings and file-type breakdowns in inner segments",
+    "Demonstrating product category sales distribution across multiple geographic regions with color-coded revenue proportionality"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Markdown Preview ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Markdown Preview können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann Markdown Preview Ihnen helfen, Ihre Arbeitswirksamkeit zu verbessern. Alle Verarbeitung wird lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie sofort Markdown Preview, um schnell, sichere und kostenlose Online-Tools zu erleben.",
+  "detailed_description": "Der Markdown Preview-Editor ermöglicht es Nutzern, Markdown-Texte in Echtzeit zu verfassen und die entsprechende HTML-Ausgabe sofort im Browser zu visualisieren. Technisch basiert das Tool auf clientseitiger JavaScript-Logik, die CommonMark-konforme Markdown-Syntax in HTML5-Strukturen umwandelt. Die Live-Vorschau erfolgt durch dynamische DOM-Manipulation, während der Nutzer eingibt. Zusätzlich werden Features wie Syntax-Highlighting für Codeblöcke mittels Prism.js oder ähnlicher Bibliotheken unterstützt. Entwickler profitieren davon, da sie Fehler in der Markdown-Struktur sofort erkennen können, ohne manuell zwischen Editor und Preview wechseln zu müssen. Für technische Dokumentationen, API-Beschreibungen oder Blog-Posts mit komplexen Formatierungen ist das Tool unverzichtbar. Die Exportfunktion generiert valides HTML5, das sich für Webseiten, E-Mails oder Integrationen in CMS-Systeme verwenden lässt. Die clientseitige Verarbeitung garantiert Datenschutz, da keine Daten an Server übertragen werden.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Markdown-Preview-Tools",
-    "Fügen Sie den Inhalt ein, den Sie bearbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und Einstellungen nach Bedarf an",
-    "Klicken Sie auf den Bearbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die bearbeiteten Ergebnisse"
+    "Navigieren Sie zum Markdown-Eingabefeld auf der linken Seite der Benutzeroberfläche.",
+    "Geben Sie Markdown-Syntax ein, z.B. '# Überschrift' für Titel oder '- Liste' für Aufzählungen.",
+    "Beobachten Sie die Live-Vorschau im rechten HTML-Renderbereich, der DOM-Elemente in Echtzeit aktualisiert.",
+    "Aktivieren Sie das Syntax-Highlighting durch Klicken auf den 'Codeformatierung'-Schalter für programmsprachenspezifische Farbcodierung.",
+    "Passen Sie Exportoptionen an, indem Sie im Menü 'HTML-Export' die gewünschte CSS-Stilvorlage oder HTML5-Struktur auswählen.",
+    "Laden Sie das finalen Ergebnis durch Klicken auf den 'Exportieren'-Button als .html-Datei herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie Markdown Preview, um Ihren Daten zu bearbeiten",
-    "Erhalten Sie schnell die Bearbeitungsresultate ohne zu warten"
+    "Ein Entwickler erstellt eine API-Dokumentation mit Code-Snippets in Python und Markdown-Tabellen, prüft die Formatierung in der Vorschau und exportiert sie für das Firmenwiki.",
+    "Ein Student konzipiert eine Präsentation mit Markdown-Listen und HTML5-Slide-Frameworks wie reveal.js, die direkt im Browser gerendert wird.",
+    "Ein Redakteur schreibt einen Blog-Post mit eingebetteten Bildern und Überblicksdiagrammen via Mermaid.js-Syntax, die im Live-Preview-Bereich angezeigt werden.",
+    "Ein Designer konvertiert Notizen aus einer Sprint-Planung in responsives HTML für eine E-Mail-Zusammenfassung mit eingebettetem CSS."
   ]
 }

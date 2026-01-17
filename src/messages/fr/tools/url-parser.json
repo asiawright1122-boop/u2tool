@@ -1,14 +1,17 @@
 {
-  "detailed_description": "L'Analyseur de URL est un outil pratique en ligne qui vous aide à accomplir rapidement diverses tâches. En utilisant l'Analyseur de URL, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plug-ins. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, l'Analyseur de URL peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas envoyés sur aucun serveur. Utilisez immédiatement l'Analyseur de URL pour expérimenter des services d'outils en ligne gratuits, rapides et sécurisés.",
+  "detailed_description": "Le parseur d'URL permet de décomposer et d'analyser les composants d'un identifiant uniforme de ressource (URI) conformément aux standards RFC 3986 et RFC 6995. Cet outil extrait avec précision les éléments structurels tels que le schéma (HTTP/HTTPS), l'autorité (domaine et port), le chemin d'accès segmenté, les paramètres de requête structurés sous forme de paires clé/valeur, et l'identifiant de fragment. Conçu pour les développeurs et administrateurs systèmes, il intègre un moteur de normalisation qui gère les encodages URL (percent-encoding) et les sous-domaines internationaux (IDN). L'analyse syntaxique profonde permet d'identifier les vulnérabilités dans les chaînes de requête ou les redirections, tout en fournissant un arbre hiérarchique des paramètres imbriqués. L'algorithme utilise des expressions régulières optimisées pour valider la structure de l'URL avant extraction, avec prise en charge des schémas personnalisés (ws://, ftp://, etc.). La fonctionnalité de comparaison entre URL brute et URL normalisée aide à détecter les tentatives de manipulation ou les erreurs de routage dans les applications web.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Analyseur de URL",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Collez l'URL complète dans le champ de saisie textuel étiqueté « Entrée URI ».",
+    "Cliquez sur le bouton « Analyser » pour déclencher le processus de parsing.",
+    "Examinez le panneau de résultats divisé en onglets (Schéma, Hôte, Chemin, Requête, Fragment).",
+    "Utilisez la case à cocher « Décoder les caractères » pour afficher les valeurs en clair.",
+    "Consultez le tableau des paramètres de requête avec leurs index et types de données détectés.",
+    "Téléchargez le JSON structuré via le bouton « Exporter les données » pour intégration API."
   ],
   "usage_examples": [
-    "Utilisez l'Analyseur de URL pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un développeur identifie des paramètres manquants dans une URL de callback OAuth en analysant les requêtes capturées via l'outil.",
+    "Un auditeur sécurité détecte des tokens d'API exposés dans les fragments d'URL utilisés par une application SPA.",
+    "Un référenceur optimise les URL de campagne marketing en vérifiant la structure des paramètres UTM via l'analyse hiérarchique.",
+    "Un administrateur réseau diagnostique des erreurs de routage en comparant les composants d'URL avant et après redirections 301."
   ]
 }

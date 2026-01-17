@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de codes QR est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Grâce au Générateur de codes QR, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de codes QR peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez immédiatement le Générateur de codes QR pour découvrir un service en ligne rapide, sécurisé et gratuit.",
+  "detailed_description": "Ce générateur de codes QR convertit des données textuelles ou des URL en matrices de codes à deux dimensions conformes à la norme ISO/IEC 18004. Le processus utilise un algorithme de Reed-Solomon pour intégrer des niveaux de correction d'erreurs (L, M, Q, H), permettant la récupération de données jusqu'à 30% de perte. La structure matricielle est encodée en binaire puis rendue visuellement via un moteur de génération d'images rasterisées en PNG. Les utilisateurs peuvent ajuster la densité de pixels (1-30) et les palettes de couleurs (monochrome ou RVB). Ce outil s'adresse aux développeurs souhaitant intégrer des codes QR dans des applications de traçabilité logistique, des systèmes de billetterie électronique ou des campagnes marketing avec suivi UTM. Contrairement aux solutions basiques, il permet un contrôle granulaire sur la profondeur des données encodées et la compatibilité avec les lecteurs de codes QR industriels.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de codes QR",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez le type de données dans le menu déroulant (texte ou URL)",
+    "Saisissez le contenu à encoder dans le champ texte avec vérification syntaxique en temps réel",
+    "Réglez le niveau de correction d'erreurs via le sélecteur H (haute) à L (basse)",
+    "Ajustez les dimensions en pixels et activez l'option couleur via le panneau de personnalisation",
+    "Prévisualisez la matrice QR avec surbrillance des motifs de synchronisation",
+    "Cliquez sur 'Télécharger' pour exporter le fichier PNG compressé sans perte"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de codes QR pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Générer des codes QR uniques pour un système de gestion de stocks avec encodage des numéros de série",
+    "Créer des billets électroniques pour un festival avec URL vers application mobile personnalisée",
+    "Intégrer des codes traçables dans un emballage produit avec paramètres UTM pour analyse marketing",
+    "Conception de supports pédagogiques avec QR codes vers ressources éducatives en ligne protégées par authentification"
   ]
 }

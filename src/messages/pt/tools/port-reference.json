@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Port Reference é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando Port Reference, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plugins. A ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a eficientemente. Seja desenvolvedor, designer ou usuário em geral, Port Reference pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados a qualquer servidor. Use Port Reference imediatamente para experimentar serviços de ferramenta online gratuitos e seguros.",
+  "detailed_description": "O Port Reference é um repositório técnico especializado que mapeia portas de rede, protocolos associados e serviços registrados conforme padrões IANA. Ele serve como recurso essencial para profissionais de redes, permitindo identificar rapidamente a funcionalidade de portas específicas, como 22 (SSH), 80 (HTTP) ou 3389 (RDP), além de detalhar protocolos TCP/UDP subjacentes. Profissionais precisam deste tool para diagnosticar falhas de conectividade, auditar regras de firewall, validar escaneamentos Nmap ou investigar vulnerabilidades em ambientes corporativos. O mecanismo interno utiliza uma base de dados estruturada com atributos como número da porta, protocolo, descrição técnica do serviço, status (oficial/reservado) e exemplos de uso. A interface permite filtragem por intervalos de portas, busca por nome de serviço ou protocolo, e exibe resultados em formato de tabela com referências cruzadas para normas RFC relevantes.",
   "usage_steps": [
-    "Abra a página da ferramenta Port Reference",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a aba 'Busca Avançada' e insira um número de porta específico (ex: 53) no campo 'Porta Única'.",
+    "Utilize o filtro 'Protocolo' para selecionar TCP, UDP ou ambos, conforme necessário.",
+    "Explore a seção 'Serviços Comuns' para visualizar listagens pré-categorizadas por função (ex: 'Serviços de Diretório').",
+    "Clique no ícone '?' ao lado de uma porta para abrir detalhes técnicos, incluindo possíveis riscos de segurança.",
+    "Na aba 'Intervalo de Portas', defina valores inicial e final para mapear serviços em segmentos específicos (ex: 1024-65535).",
+    "Exporte resultados em CSV usando o botão 'Salvar Dados' para documentação de auditorias ou compartilhamento com equipes."
   ],
   "usage_examples": [
-    "Use Port Reference para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um administrador de redes investiga tráfego não autorizado na porta 1433 e descobre conexões suspeitas com um servidor SQL Server mal configurado.",
+    "Um pentester valida que a porta 161 (SNMP) está aberta em um dispositivo IoT, indicando potencial vazamento de informações de configuração.",
+    "Um desenvolvedor consulta portas registradas acima de 49152 para evitar conflitos ao implementar uma API REST personalizada.",
+    "Um analista de segurança compara a lista de portas bem conhecidas (0-1023) contra registros de firewall para identificar serviços desnecessariamente expostos."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Rivière Thémique est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Rivière Thémique pour traiter facilement divers types de données sans installer de logiciels ou de plugins. Cet outil possède une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Rivière Thémique peut vous aider à améliorer l'efficacité de votre travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez immédiatement le Générateur de Rivière Thémique pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le générateur de diagrammes en rivière thématique permet de visualiser des flux de données temporels à travers une représentation dynamique en forme de 'rivière'. Ce outil spécialisée utilise des algorithmes de cartographie de flux pour superposer des séries temporelles en 2D, où la largeur de chaque bande est proportionnelle à l'intensité des données à un moment donné. Techniquement, il convertit des données structurées (CSV/JSON) en diagrammes streamgraph via des courbes de Bézier pour un lissage visuel, et applique un système de couleurs discrètes pour distinguer les catégories. Ce type de visualisation est particulièrement utile pour analyser l'évolution de variables multiples sur des périodes longues, comme les tendances de recherche, les flux financiers ou les mouvements socioculturels. Contrairement aux diagrammes à barres empilées, la rivière thématique centre les flux autour d'un axe neutre, créant une esthétique fluide qui met en évidence les pics et les transitions. Le moteur interne optimise le calcul des aires empilées avec des bibliothèques de traitement vectoriel, permettant un rendu performant même avec des jeux de données volumineux.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Rivière Thémique",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Importez votre fichier CSV/JSON contenant des colonnes de dates et des métriques numériques",
+    "2. Sélectionnez la colonne temporelle pour définir l'axe horizontal (jour/mois/année)",
+    "3. Assignez des colonnes numériques aux catégories via la palette de couleurs personnalisable",
+    "4. Ajustez le paramètre de lissage (de 0 à 1) pour contrôler la courbure des transitions",
+    "5. Activez/désactivez les options d'interpolation (linéaire, cubique, step) selon la continuité désirée",
+    "6. Générez le diagramme et téléchargez le résultat en SVG ou PNG avec légende intégrée"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Rivière Thémique pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Suivi des pics de recherche sur Google Trends pour des sujets politiques sur 5 ans",
+    "Visualisation des flux de capitaux entre secteurs économiques durant une crise financière",
+    "Analyse des variations saisonnières des hospitalisations par pathologie dans un système de santé",
+    "Cartographie de l'évolution des genres musicaux sur Spotify avec des données mensuelles sur 10 ans"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Visor de Excel es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Con el Visor de Excel, puedes procesar fácilmente varios datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz sencilla y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Visor de Excel puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesamientos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Visor de Excel ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Excel Viewer es una aplicación web basada en tecnologías HTML5 y JavaScript que permite procesar y visualizar archivos Excel (formatos XLSX, XLSM, XLS) sin dependencia de software de escritorio. Utiliza una biblioteca de análisis binario para interpretar la estructura del archivo y renderiza el contenido en una cuadrícula interactiva con soporte para múltiples hojas. Los usuarios pueden aplicar filtros avanzados mediante operadores lógicos (AND/OR), ordenar columnas mediante clics en encabezados y navegar entre hojas con un selector de pestañas dinámico. Esta herramienta es ideal para profesionales que necesitan revisar datos críticos en dispositivos móviles sin acceso a Microsoft Excel, analizar datasets grandes sin sobrecargar el navegador, o compartir resultados con equipos no técnicos mediante enlaces de acceso. El motor de renderizado optimiza la memoria mediante paginación virtual, permitiendo archivos de hasta 50MB con celdas que contienen fórmulas, gráficos incrustados y estilos condicionales. No requiere instalación ni transfiere datos a servidores externos, garantizando privacidad en entornos corporativos.",
   "usage_steps": [
-    "Abre la página del Visor de Excel",
-    "Introduce o pega el contenido que deseas procesar en la casilla de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Haz clic en el botón 'Cargar Archivo' y selecciona tu documento Excel desde el dispositivo local",
+    "Utiliza el menú desplegable 'Hoja Activa' para cambiar entre diferentes pestañas del libro",
+    "Haz clic en cualquier encabezado de columna mientras mantienes presionada la tecla Shift para ordenar ascendentemente o Ctrl para ordenar descendente",
+    "Activa el modo filtro pulsando el icono de lupa en la barra de herramientas y configura condiciones múltiples en la ventana emergente",
+    "Navega mediante teclado usando las flechas direcccionales para inspeccionar celdas individuales",
+    "Haz clic derecho sobre una fila filtrada para copiar valores específicos al portapapeles o exportar selecciones a CSV"
   ],
   "usage_examples": [
-    "Usa el Visor de Excel para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un analista financiero revisa un informe de transacciones bancarias para identificar movimientos fuera de rango aplicando filtros por rango de fechas y montos superiores a 10,000 USD",
+    "Un gerente de proyectos utiliza el ordenamiento por prioridad y el filtro de estado 'Pendiente' para reasignar tareas en un cronograma compartido",
+    "Un profesor carga una planilla de calificaciones y ordena por promedio para identificar estudiantes que requieren apoyo académico",
+    "Un equipo remoto colabora en tiempo real analizando datos de ventas filtrando por región y usando la función de comparación de hojas para validar consistencia"
   ]
 }

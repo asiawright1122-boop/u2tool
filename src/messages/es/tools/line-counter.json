@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Contador de Líneas es una herramienta online práctica que te ayuda a completar diversas tareas de manera rápida. Con el Contador de Líneas, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Este tool tiene una interfaz sencilla y es fácil de usar, lo que te permite empezar rápidamente y utilizarlo de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Contador de Líneas puede ayudarte a mejorar tu eficiencia laboral. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no se suban a ningún servidor. Utiliza el Contador de Líneas inmediatamente para experimentar un servicio de herramienta online rápida, segura y gratuita.",
+  "detailed_description": "El Contador de Líneas es una herramienta de procesamiento de texto diseñada para realizar tareas de conteo y limpieza de datos de manera eficiente. Técnicamente, esta herramienta permite a los usuarios contar el número total de líneas en un texto, con opciones adicionales para eliminar líneas duplicadas, omitir líneas vacías y ordenar el contenido. Estas funcionalidades son particularmente útiles para desarrolladores, analistas de datos y profesionales que necesitan manipular y analizar grandes volúmenes de texto de manera precisa y rápida. Por ejemplo, un desarrollador puede usar esta herramienta para verificar la consistencia de los datos en un archivo de registro, mientras que un escritor puede utilizarla para asegurarse de que un documento no contenga líneas duplicadas o espacios en blanco innecesarios. El funcionamiento de la herramienta es sencillo: el usuario inserta el texto a procesar, selecciona las opciones deseadas y obtiene un resultado inmediato con el conteo de líneas y las modificaciones aplicadas. Internamente, la herramienta utiliza algoritmos de comparación de cadenas y estructuras de datos como conjuntos (sets) para eliminar duplicados y mantener el orden.",
   "usage_steps": [
-    "Abre la página del Contador de Líneas",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del tool según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Abra la página del Contador de Líneas y copie el texto que desea procesar en el campo de entrada.",
+    "Marque la opción 'Eliminar duplicados' si desea eliminar líneas que aparecen más de una vez en el texto.",
+    "Active la opción 'Omitir líneas vacías' para excluir líneas que no contengan ningún carácter.",
+    "Seleccione 'Ordenar líneas' si desea que el texto resultante esté ordenado alfabéticamente.",
+    "Haga clic en el botón 'Procesar' para aplicar las opciones seleccionadas y obtener el resultado.",
+    "Revise el texto procesado y el conteo de líneas en la sección de resultado."
   ],
   "usage_examples": [
-    "Utiliza el Contador de Líneas para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un desarrollador necesita verificar un archivo de registro para identificar errores repetitivos. Utiliza el Contador de Líneas para eliminar duplicados y contar las líneas únicas, facilitando la identificación de problemas específicos.",
+    "Un escritor debe preparar un documento para su publicación. Usa la herramienta para eliminar líneas en blanco y asegurarse de que no haya duplicados, mejorando la coherencia y la legibilidad del texto.",
+    "Un analista de datos trabaja con un archivo CSV y necesita contar el número de registros. Utiliza el Contador de Líneas para obtener un conteo preciso y verificar la integridad de los datos.",
+    "Un administrador de sistemas necesita ordenar un archivo de configuración para facilitar la revisión. Utiliza la opción 'Ordenar líneas' para organizar el contenido de manera alfabética, lo que simplifica la tarea de revisión y mantenimiento."
   ]
 }

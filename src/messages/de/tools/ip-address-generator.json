@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der IP-Adresse-Generator ist eine praktische Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem IP-Adresse-Generator können Sie verschiedene Daten leicht verarbeiten, ohne dass Sie irgendeine Software oder Plugins installieren müssen. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der IP-Adresse-Generator Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den IP-Adresse-Generator sofort, um schnell, sicher und kostenlosen Online-Tooldienst zu nutzen.",
+  "detailed_description": "Der IP-Adressgenerator erstellt zufällige IP-Adressen aus IPv4- und IPv6-Adressräumen, einschließlich privater und öffentlicher Adressen, unter Einhaltung der IANA-Vorgaben. Technisch basiert der Generator auf kryptografisch sicheren Zufallsalgorithmen, die sicherstellen, dass die Adressen einzigartig und vorgabenkonform sind. Bei IPv4 werden Adressen unter Berücksichtigung klassischer Subnetzmasken (z. B. 192.168.x.x/16) generiert, während IPv6-Adressen mit 128-Bit-Länge und hexadezimaler Notation (z. B. 2001:db8::/32) erstellt werden. Private Adressen stammen aus definierten Bereichen wie 10.0.0.0/8, während öffentliche Adressen aus nicht-reservierten Ranges stammen. Anwender benötigen das Tool beispielsweise für Netzwerksimulationen, Lasttests auf Servern oder die Erstellung von Testdaten für Sicherheitsanalysen. Entwickler nutzen es zur Validierung von Firewall-Regeln, und Datenschutzexperten generieren damit anonymisierte Protokolldaten. Der Generator arbeitet zudem mit CIDR-kompatibler Maskierung und ermöglicht die Erzeugung von Adressen mit zugehörigen MAC-Übersetzungen für virtuelle Netzwerktests.",
   "usage_steps": [
-    "Öffnen Sie die Seite des IP-Adresse-Generators",
-    "Fügen Sie den Inhalt ein oder fügen Sie ihn ein, den Sie verarbeiten möchten",
-    "Anpassen Sie die Tooloptionen und Einstellungen, wenn nötig",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Wählen Sie im Dropdown-Menü die gewünschte IP-Version (IPv4 oder IPv6).",
+    "Aktivieren Sie die Checkbox 'Privat' oder 'Öffentlich', um den Adresstyp festzulegen.",
+    "Geben Sie im Feld 'Anzahl' die Menge der zu generierenden Adressen ein (max. 1000).",
+    "Optionaler Schritt: Legen Sie einen benutzerdefinierten CIDR-Bereich (z. B. 192.168.0.0/24) im Eingabefeld 'Subnetz' fest.",
+    "Klicken Sie auf den Button 'Generieren', um den Algorithmus zu starten.",
+    "Kopieren Sie die Ergebnisse über den 'Zwischenablage'-Button oder exportieren Sie sie als CSV-Datei."
   ],
   "usage_examples": [
-    "Verwenden Sie den IP-Adresse-Generator, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell verarbeitete Ergebnisse ohne zu warten"
+    "Ein Entwickler testet ein Cloud-Loadbalancer-System mit einer Liste von IPv6-Adressen, um die Verteilung auf Backends zu analysieren.",
+    "Ein Netzwerkadministrator simuliert einen DDoS-Angriff mit zufälligen öffentlichen IPs, um Firewall-Regeln zu optimieren.",
+    "Ein Lehrer erstellt Übungsaufgaben für Studenten, bei denen zwischen privaten und öffentlichen Adressen unterschieden werden muss.",
+    "Ein Data-Scientist generiert Dummy-IP-Daten für einen Log-Generator, um Datenschutzrichtlinien einzuhalten."
   ]
 }

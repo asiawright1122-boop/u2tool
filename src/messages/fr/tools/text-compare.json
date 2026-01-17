@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Comparateur de Similarité de Texte est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Comparateur de Similarité de Texte pour traiter diverses données sans installer de logiciel ou de plugin. Cet outil dispose d'une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Comparateur de Similarité de Texte peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez immédiatement le Comparateur de Similarité de Texte pour découvrir un outil en ligne rapide, sécurisé et gratuit.",
+  "detailed_description": "L'outil Text Similarity Compare permet de mesurer quantitativement la similarité entre deux textes via des algorithmes avancés d'analyse linguistique. En utilisant des métriques comme la distance de Levenshtein, l'indice de Jaccard et la similarité cosinus, il calcule les différences structurelles et lexicales avec une précision optimale. Ce tool s'adresse aux développeurs cherchant à détecter des plagiers dans des documents académiques, aux éditeurs vérifiant les révisions de manuscrits, ou aux ingénieurs NLP optimisant des modèles de classification. Techniquement, il tokenise les textes en unités lexicales (mots, n-grammes), les vectorise en représentations TF-IDF ou embeddings, puis applique des algorithmes d'alignement séquentiel pour identifier les substitutions, insertions ou suppressions. La fonctionnalité 'Diff Analyse' visualise les modifications clés, tandis que le mode 'Semantic Match' pondère les synonymes via WordNet. Contrairement aux outils basiques, il intègre une normalisation linguistique (lemmatisation, suppression des stop-words) et prend en charge les textes multilingues avec détection automatique de la langue.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Comparateur de Similarité de Texte",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Collez le texte de référence dans la zone 'Texte A' et le texte à comparer dans la zone 'Texte B'",
+    "2. Activez/désactivez les options de prétraitement : 'Lemmatisation', 'Ignorer majuscules', 'Filtrer signes ponctuation'",
+    "3. Sélectionnez la méthode de comparaison : 'Distance édition', 'Similarité cosinus' ou 'Analyse sémantique'",
+    "4. Réglez le seuil de sensibilité (0.0 à 1.0) pour déterminer le niveau de correspondance requis",
+    "5. Cliquez sur 'Calculer similarité' pour exécuter l'analyse comparative",
+    "6. Consultez le rapport détaillé avec les matrices de confusion, scores de similarité et visualisation des différences clés"
   ],
   "usage_examples": [
-    "Utilisez le Comparateur de Similarité de Texte pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un enseignant compare deux copies d'examen pour identifier les plagiers académiques",
+    "Un développeur analyse les différences entre deux versions d'un document technique dans un dépôt Git",
+    "Un spécialiste NLP valide la qualité de traductions automatiques par rapport à des références humaines",
+    "Un service client détecte des requêtes dupliquées en mesurant la similarité entre des tickets d'assistance"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur d'Images de Remplacement est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant le Générateur d'Images de Remplacement, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plug-ins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur d'Images de Remplacement peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, garantissant la sécurité de vos données et empêchant leur upload vers n'importe quel serveur. Utilisez immédiatement le Générateur d'Images de Remplacement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur d'images de substitution permet de créer dynamiquement des images de type placeholder avec des paramètres personnalisables. Techniquement, il utilise des requêtes HTTP GET avec des paramètres d'URL pour définir les dimensions (largeur/hauteur en pixels), les couleurs (format hexadécimal ou RGB), et les options d'affichage comme la présence de texte ou de bordures. L'image est générée en temps réel via un backend utilisant des bibliothèques de traitement d'image comme GD ou ImageMagick, sans nécessiter de téléchargement préalable. Les développeurs web ont besoin de ce type d'outil pour tester des maquettes responsive, simuler des intégrations CMS, ou valider des designs avant l'intégration de contenus réels. À la différence des solutions statiques, cette approche permet de générer des images adaptatives avec des en-têtes HTTP optimisés pour le caching. Le texte superposé peut être configuré pour afficher les dimensions exactes de l'image, facilitant le débogage visuel des grilles CSS.",
   "usage_steps": [
-    "Ouvrez la page du Générateur d'Images de Remplacement",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Saisir les dimensions en pixels dans les champs 'Largeur' et 'Hauteur' (ex: 300x200)",
+    "Sélectionner une couleur d'arrière-plan via l'outil de palette ou entrer un code hexadécimal (#4A90E2)",
+    "Choisir une couleur de texte contrastante dans le sélecteur dédié",
+    "Activer/désactiver l'affichage des dimensions sur l'image via le bouton 'Afficher texte'",
+    "Sélectionner le format de sortie (PNG ou JPEG) selon les besoins de qualité/compression",
+    "Cliquer sur 'Générer' pour obtenir l'URL directe de l'image ou télécharger le fichier"
   ],
   "usage_examples": [
-    "Utilisez le Générateur d'Images de Remplacement pour traiter vos données",
-    "Obtenez rapidement des résultats de traitement sans attendre"
+    "Un développeur front-end génère une série d'images de 800x600 pixels en dégradé bleu pour tester un carrousel de testimonials responsive",
+    "Un designer UI/UX crée des placeholders avec des dimensions spécifiques (1920x1080) pour simuler des bannières de tableau de bord admin",
+    "Un intégrateur WordPress prépare des images de différentes tailles (1x, 2x) pour valider le système de srcset dans un thème",
+    "Un développeur mobile génère des placeholders en format JPEG compressé pour tester le chargement d'images sur une connexion lente"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique de Jauge est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Générateur de Graphique de Jauge, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique de Jauge peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez le Générateur de Graphique de Jauge dès maintenant pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Générateur de Cadrans est un outil en ligne performant qui permet de créer des cadrans graphiques (gauge charts) pour visualiser des données sous forme de pourcentage ou de valeurs spécifiques. Ce type de charte est particulièrement utile pour représenter des indicateurs de performance (KPIs) ou des niveaux de progression. Le générateur offre une interface intuitive qui permet aux utilisateurs de personnaliser chaque aspect du cadran, comme la couleur, le design, et les valeurs affichées. Une fois le cadran configuré, il peut être exporté au format PNG ou SVG pour une intégration facile dans des rapports, des présentations, ou des tableaux de bord en ligne. Les développeurs et les professionnels de la data trouveront cet outil indispensable pour communiquer efficacement des informations complexes de manière visuellement engageante.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique de Jauge",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez le Générateur de Cadrans sur le site et sélectionnez le modèle de cadran de base qui s'affiche.",
+    "Dans le panneau de configuration à droite, ajustez la valeur du cadran dans le champ 'Valeur actuelle'. Cette valeur doit être comprise entre la valeur minimale et maximale définies.",
+    "Personnalisez l'apparence du cadran en modifiant les couleurs de fond, de la jauge, et des graduations à l'aide des sélecteurs de couleurs disponibles.",
+    "Ajoutez des annotations ou des étiquettes en cliquant sur l'onglet 'Textes' et en saisissant le texte souhaité dans les champs prévus à cet effet.",
+    "Configurez les options d'affichage des graduations et des aiguilles en utilisant les paramètres dans l'onglet 'Graduations' et 'Aiguille'.",
+    "Une fois que le cadran est configuré à votre satisfaction, cliquez sur le bouton 'Exporter' en haut à droite pour télécharger le fichier au format PNG ou SVG."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique de Jauge pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un gestionnaire de projet utilise le Générateur de Cadrans pour visualiser le pourcentage de tâches terminées sur un tableau de bord partagé avec l'équipe. Le cadran est configuré pour afficher 75% de tâches terminées, avec une jauge verte indiquant une progression satisfaisante.",
+    "Un analyste financier crée un cadran pour représenter le ratio d'endettement d'une entreprise. Le cadran est personnalisé pour montrer le ratio actuel par rapport à la limite d'endettement acceptable, avec des couleurs distinctes pour des zones de risque différentes.",
+    "Un développeur utilise le Générateur de Cadrans pour créer une représentation graphique des tests d'application réussis. Le cadran affiche le pourcentage de tests passés, avec une aiguille qui pointe vers 90%, indiquant une forte performance des tests.",
+    "Un directeur marketing emploie le Générateur de Cadrans pour suivre l'évolution de la part de marché de son entreprise. Le cadran est configuré pour montrer 15% de part de marché, avec des graduations et des annotations pour comparer avec les objectifs annuels de l'entreprise."
   ]
 }

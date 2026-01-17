@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique en Barres Polaires est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphique en Barres Polaires pour traiter facilement diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique en Barres Polaires peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et évitant tout téléchargement sur un serveur. Utilisez immédiatement le Générateur de Graphique en Barres Polaires pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de graphes polaires à barres permet de transformer des données quantitatives en visualisations radiales interactives. Contrairement aux diagrammes cartésiens classiques, cet outil exploite les coordonnées polaires pour représenter des séries de données sur des axes circulaires concentriques, idéal pour illustrer des cycles temporels, des distributions angulaires ou des comparaisons multidimensionnelles. Les développeurs et data analysts bénéficieront d'une perspective visuelle unique pour analyser des métriques comme les parts de marché par secteur, les répartitions géographiques ou les performances saisonnières. Le moteur de rendu utilise des bibliothèques de vectorisation SVG/Canvas permettant un affichage fluide et une exportation haute qualité. La configuration repose sur un binding de données dynamique via JSON ou CSV, avec des options de personnalisation précises : échelles radiales logarithmiques, décalage angulaire des secteurs, transparence des barres superposées et gestion avancée des légendes. L'interface intègre également un éditeur de palettes chromatiques en temps réel pour optimiser le contraste visuel.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique en Barres Polaires",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Importez vos données via l'éditeur CSV intégré en respectant le format 'étiquette,valeur,catégorie(optionnel)'",
+    "2. Ajustez l'échelle radiale avec les curseurs min/max et activez l'option logarithmique pour les données hétérogènes",
+    "3. Configurez le nombre de divisions angulaires via le paramètre 'secteurs par tour' (8 par défaut)",
+    "4. Personnalisez l'apparence des barres avec les options de dégradé radial et d'arrondi des extrémités",
+    "5. Activez/désactivez les grilles polaires secondaires via le bouton 'overlay mesh' pour améliorer la lisibilité",
+    "6. Exportez le rendu final en SVG vectoriel ou PNG 4K avec les métadonnées de votre choix"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique en Barres Polaires pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Visualiser l'évolution trimestrielle des ventes par région avec des barres de couleurs distinctes pour chaque année",
+    "Créer un diagramme météorologique représentant la fréquence des vents dominants par direction cardinale",
+    "Comparer les performances physiques d'athlètes sur différents paramètres (vitesse, endurance, force) en un seul graphe",
+    "Modéliser la répartition des temps de réponse d'un serveur web sur un cycle de 24 heures avec un dégradé de température"
   ]
 }

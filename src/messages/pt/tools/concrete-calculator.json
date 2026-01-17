@@ -1,15 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Concreto estima o volume de concreto necessário para seu projeto.",
+  "detailed_description": "O Calculador de Concreto é uma ferramenta técnica projetada para calcular com precisão o volume de concreto necessário em projetos de construção civil, abrangendo lajes, sapatas e pilares. Seu funcionamento baseia-se em fórmulas geométricas específicas para cada elemento estrutural: para lajes retangulares, utiliza o cálculo de paralelepípedos (volume = largura × comprimento × altura); para sapatas isoladas, aplica a fórmula de prismas trapezoidais; e para pilares cilíndricos, emprega o volume de cilindros (V = πr²h). A ferramenta também permite ajustes para perdas de material, aplicando percentuais de folga (ex: 5% a 10%) para compensar desperdícios durante a concretagem. Profissionais precisam deste recurso para evitar superestimativas que elevem custos ou subestimativas que comprometam a resistência estrutural. A interface converte automaticamente dimensões em metros ou centímetros para unidades cúbicas (m³), essenciais para a dosagem de materiais. Sua precisão é crítica em obras onde a tolerância a erros é mínima, como estruturas de concreto armado ou fundações profundas.",
   "usage_steps": [
-    "Selecionar tipo de projeto",
-    "Inserir dimensões",
-    "Escolher sistema de unidades",
-    "Ver volume necessário",
-    "Ver sacos necessários"
+    "Selecione o tipo de estrutura no dropdown: 'Laje', 'Sapata' ou 'Pilar Cilíndrico'.",
+    "Insira as dimensões em metros ou centímetros nos campos específicos (ex: largura, comprimento, altura ou raio).",
+    "Ative a opção 'Calcular Folga' e defina o percentual (5%, 10% ou personalizado) para compensar perdas.",
+    "Clique em 'Processar Cálculo' para obter o volume total em metros cúbicos, incluindo ajustes.",
+    "Utilize o botão 'Exportar Resultado' para gerar um relatório com as dimensões e o volume final.",
+    "Verifique a seção 'Dicas de Dosagem' para proporção de cimento, areia e brita com base no volume calculado."
   ],
   "usage_examples": [
-    "Calcular concreto para pátio",
-    "Estimar volume de fundação",
-    "Planejar projeto de entrada"
+    "Um engenheiro calcula o volume de uma laje de 8m × 5m × 0,15m para uma residência, obtendo 6m³ de concreto. Incluindo 8% de folga, o total é 6,48m³.",
+    "Para sapatas isoladas de um prédio comercial, um técnico insere dimensões de base maior, base menor e altura, obtendo volumes individuais e o somatório para 20 sapatas.",
+    "Um construtor calcula colunas cilíndricas de 0,3m de raio e 4m de altura para um galpão, resultando em 1,13m³ por pilar antes da folga.",
+    "Durante uma reforma, um arquiteto usa o cálculo inverso para determinar a espessura máxima de uma laje com 4m³ de concreto disponível, garantindo a resistência com as dimensões fixas."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Diagramme en Roseau de Soleil est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Générateur de Diagramme en Roseau de Soleil, vous pouvez facilement traiter divers types de données sans installer de logiciels ou de plugins. Cet outil possède une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Générateur de Diagramme en Roseau de Soleil peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant ainsi la sécurité de vos données et évitant qu'elles ne soient téléchargées sur un serveur. Utilisez immédiatement le Générateur de Diagramme en Roseau de Soleil pour découvrir des services rapides, sécurisés et gratuits.",
+  "detailed_description": "Le générateur de graphiques en soleil permet de transformer des données hiérarchiques complexes en visualisations radiales interactives. Contrairement aux arborescences classiques, cette solution exploite un système de coordonnées polaires pour représenter des structures à plusieurs niveaux, avec chaque couche annulaire correspondant à une profondeur hiérarchique. La solution s'appuie sur l'algorithme de partitionnement circulaire qui divise les données en segments proportionnels à leurs valeurs, calculant les angles via des ratios cumulatifs. Les développeurs peuvent importer des données au format JSON imbriqué ou CSV hiérarchique avec des séparateurs de niveau personnalisables, puis appliquer des mappings de couleurs via des gradients HSV ou des palettes catégorielles. L'outil est particulièrement utile pour analyser des structures organisationnelles, des répartitions de ventes par région/catégorie/sous-catégorie, ou des systèmes de fichiers complexes. Il génère des exports SVG vectoriels pour une intégration web fluide ou des PNG haute résolution avec anti-aliasing, tout en intégrant des mécanismes d'optimisation de rendu pour éviter la surcharge visuelle sur les grands datasets.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Diagramme en Roseau de Soleil",
-    "Saisissez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour visualiser les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Chargez votre fichier JSON avec une structure imbriquée ou un CSV avec des niveaux séparés par '>' dans la zone d'import",
+    "Sélectionnez la profondeur maximale à afficher via le curseur 'Niveaux de hiérarchie'",
+    "Activez/désactivez les étiquettes de segment avec le switch 'Affichage des textes'",
+    "Ajustez la palette de couleurs via le sélecteur HSV ou importez un fichier .colormap",
+    "Utilisez la roue de zoom pour ajuster le rayon interne/externe du graphique",
+    "Téléchargez le résultat au format SVG ou PNG 300dpi via le bouton 'Exporter avec résolution'"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Diagramme en Roseau de Soleil pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Visualisation de la structure du capital d'une entreprise avec actionnaires principaux et sous-actions à chaque niveau",
+    "Analyse de la répartition des ventes par continent > pays > ville > magasin dans un tableau de bord commercial",
+    "Représentation d'une taxonomie biologique avec royaume > emprunt > classe > ordre > famille",
+    "Cartographie des permissions d'accès dans un système informatique avec rôles > groupes > utilisateurs > droits"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON para YAML é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando JSON para YAML, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, JSON para YAML pode ajudá-lo a melhorar a eficiência de trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam enviados a qualquer servidor. Use JSON para YAML imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O conversor JSON para YAML realiza a transformação estrutural de dados entre os formatos de serialização JSON (JavaScript Object Notation) e YAML (YAML Ain't Markup Language), preservando hierarquias e tipos de dados nativos. Esta ferramenta é essencial para desenvolvedores que precisam migrar configurações entre sistemas que utilizam diferentes formatos, como ao modernizar infraestrutura de microserviços ou ajustar pipelines de CI/CD. Tecnicalmente, o processo envolve o parseamento do JSON de entrada utilizando um analisador sintático (parser) baseado em DOM, seguido da conversão do modelo de objeto em memória para a notação YAML, respeitando regras de indentação, escalares literais e referências circulares. O algoritmo implementa estratégias para lidar com tipos especiais como BigInt, datas no formato ISO 8601 e arrays aninhados, garantindo consistência semântica. A ferramenta também oferece suporte opcional para geração de YAML com tags personalizadas e compressão de elementos redundantes através de aliases, funcionalidades críticas em ambientes que exigem conformidade com padrões como OpenAPI ou Kubernetes manifests.",
   "usage_steps": [
-    "Abra a página do conversor JSON para YAML",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole seu JSON válido na área de texto central com suporte a realce de sintaxe",
+    "Ative a opção 'Manter tipos numéricos' se precisar preservar números como BigInt sem aspas",
+    "Selecione o nível de indentação desejado (2-8 espaços) para estruturar a saída YAML",
+    "Clique no botão 'Converter' para iniciar o processamento em tempo real",
+    "Revise o YAML gerado na seção de visualização com marcação de erros contextuais",
+    "Use o botão 'Baixar' para exportar o resultado ou 'Copiar' para inserir no clipboard"
   ],
   "usage_examples": [
-    "Use JSON para YAML para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem aguardar"
+    "Converter configurações de API Gateway de JSON para YAML compatível com AWS CloudFormation",
+    "Transformar resposta de uma API REST em JSON para documentação automatizada com Swagger",
+    "Migrar dados de configuração de um microserviço Node.js (JSON) para um cluster Kubernetes (YAML)",
+    "Normalizar logs em JSON gerados por Lambda Functions para ingestão em sistemas que exigem YAML"
   ]
 }

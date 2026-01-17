@@ -1,16 +1,17 @@
 {
-  "detailed_description": "A Calculadora de ROI é uma ferramenta abrangente de análise de investimentos que ajuda você a calcular o retorno sobre investimento instantaneamente. Insira seu investimento inicial, valor final e período de tempo para obter a porcentagem de ROI, retornos anualizados e análise de lucros/perdas. Perfeita para avaliar o desempenho de investimentos e comparar diferentes oportunidades de investimento.",
+  "detailed_description": "O ROI Calculator é uma ferramenta técnica projetada para calcular métricas financeiras de retorno sobre investimento (ROI) com precisão, integrando análises de ROI anualizado e decomposição de lucro. Ele opera utilizando fórmulas matemáticas como ROI simples [(Valor Final - Custo Inicial)/Custo Inicial × 100] e ROI anualizado composto [(1 + ROI total)^(1/n) - 1], onde 'n' representa o número de anos. A ferramenta também calcula o lucro absoluto (diferença entre valor final e inicial) e a margem de lucro percentual em relação ao investimento original. Diferentemente de soluções genéricas, ela permite ajustes para períodos fracionários (ex.: meses ou dias) e oferece gráficos interativos de distribuição de retorno. Investidores individuais podem usá-la para validar estratégias de portfólio, gestores de projetos para medir eficiência de capital alocado, e empreendedores para comparar rentabilidade entre iniciativas. Sua engine suporta cálculos com juros compostos e normalização de períodos, essencial para análises cross-temporais.",
   "usage_steps": [
-    "Insira o valor do seu investimento inicial",
-    "Insira o valor final do seu investimento",
-    "Especifique o período de tempo em anos ou meses",
-    "Veja a porcentagem de ROI calculada",
-    "Verifique o ROI anualizado para comparação",
-    "Veja seu lucro ou perda total"
+    "Insira o valor inicial investido no campo 'Valor Inicial' (ex.: R$50.000,00).",
+    "Preencha o 'Valor Final' obtido após o período de investimento (ex.: R$75.000,00).",
+    "Defina o período em meses ou anos no seletor 'Duração do Investimento'.",
+    "Escolha a frequência de capitalização no menu 'Compounding' (anual, semestral ou mensal).",
+    "Clique no botão 'Calcular ROI' para processar os dados.",
+    "Analise os resultados detalhados nas abas 'ROI Anualizado', 'Lucro Bruto' e 'Gráfico de Retorno'."
   ],
   "usage_examples": [
-    "Calcular retornos de investimento em ações durante 3 anos",
-    "Comparar ROI de diferentes opções de investimento",
-    "Analisar o desempenho de investimentos imobiliários"
+    "Avaliar o retorno de uma carteira de ações que gerou R$15.000,00 em lucros líquidos com investimento inicial de R$50.000,00 em 24 meses.",
+    "Comparar a eficiência entre dois projetos corporativos: Projeto A (ROI de 35% em 18 meses) vs. Projeto B (ROI de 42% em 27 meses).",
+    "Calcular o ROI anualizado de um investimento imobiliário de R$300.000,00 vendido por R$420.000,00 após 5 anos com capitalização semestral.",
+    "Medir a rentabilidade de uma campanha de marketing digital que custou R$8.000,00 e gerou R$22.000,00 em receita em 6 meses."
   ]
 }

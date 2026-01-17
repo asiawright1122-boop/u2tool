@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON Schema Validator 是一款实用的在线工具，帮助您快速完成各种任务。使用 JSON Schema Validator，您可以轻松处理各种数据，无需安装任何软件或插件。该工具界面简单，易于使用，让您能够快速上手并高效使用。无论是开发人员、设计师还是普通用户，JSON Schema Validator 都能帮助您提高工作效率。所有处理都在您的浏览器中本地进行，确保数据安全，不会上传到任何服务器。立即使用 JSON Schema Validator，体验快速、安全且免费的在线工具服务。",
+  "detailed_description": "JSON Schema Validator 是一款强大的在线工具，旨在帮助开发人员验证 JSON 数据是否符合预定义的 JSON Schema。JSON Schema 是一种描述 JSON 数据结构的格式，可以定义数据的结构、类型、范围等约束条件。通过使用 JSON Schema Validator，开发人员可以确保他们的 JSON 数据在与 API 交互时是有效且格式正确的，从而减少因数据格式错误导致的调试时间和生产问题。该工具适用于多个场景，如 API 测试、前端与后端数据交互验证、数据迁移等。JSON Schema Validator 通过解析 JSON 数据和对应的 Schema，检查数据是否满足 Schema 中定义的所有约束条件，包括数据类型、必填项、数组长度、字符串格式等。如果数据不符合 Schema，工具将提供详细的错误报告，指出具体的错误位置和原因。",
   "usage_steps": [
-    "打开JSON Schema Validator 工具页面",
-    "在输入框中输入或粘贴要处理的内容",
-    "根据需要调整工具选项和设置",
-    "点击处理按钮查看结果",
-    "复制或下载处理结果"
+    "Step 1: 打开 JSON Schema Validator 工具页面，选择或拖放要验证的 JSON 文件。",
+    "Step 2: 在工具的右侧输入框中，粘贴或编写 JSON Schema。",
+    "Step 3: 点击页面顶部的“验证”按钮，启动验证过程。",
+    "Step 4: 工具将自动解析 JSON 数据和 Schema，检查数据是否符合所有约束条件。",
+    "Step 5: 查看验证结果，结果将显示在页面下方的输出区域。如果数据无效，错误信息将详细列出每个问题的具体位置和原因。",
+    "Step 6: 根据错误信息调整 JSON 数据或 Schema，重复验证过程，直至数据完全符合 Schema。"
   ],
   "usage_examples": [
-    "使用JSON Schema Validator 处理您的数据",
-    "无需等待即可快速获取处理结果"
+    "Example 1: 在开发 RESTful API 时，使用 JSON Schema Validator 验证客户端提交的数据是否符合预期的格式和结构，确保数据的完整性和一致性。",
+    "Example 2: 在前端与后端数据交互中，前端开发者可以使用此工具验证从后端收到的 JSON 数据是否符合预定义的 Schema，及时发现数据异常。",
+    "Example 3: 在进行数据迁移或数据导入项目中，使用 JSON Schema Validator 检查数据源中的 JSON 数据是否符合目标系统的要求，保证数据迁移过程的顺利进行。",
+    "Example 4: 在编写自动化测试脚本时，测试工程师可以利用 JSON Schema Validator 确认测试数据的正确性，提高测试的可靠性和覆盖率。"
   ]
 }

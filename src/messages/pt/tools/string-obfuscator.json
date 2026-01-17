@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Obfuscador de Strings é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Utilizando o Obfuscador de Strings, você pode processar facilmente vários dados sem a necessidade de instalar qualquer software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Obfuscador de Strings pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo uploaded para nenhum servidor. Use o Obfuscador de Strings imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O String Obfuscator é uma ferramenta técnica projetada para transformar cadeias de texto em formatos ilegíveis através de métodos de codificação como Base64, hexadecimal, ROT13 e manipulação de ASCII. Sua funcionalidade vai além da simples substituição de caracteres: ele aplica algoritmos de codificação reversíveis, aumentando a entropia dos dados para dificultar a interpretação humana e automática. Desenvolvedores utilizam esta ferramenta para proteger temporariamente informações sensíveis em ambientes não seguros, como código-fonte compartilhado, logs de sistema ou configurações de aplicativos. Ao ofuscar strings, é possível mitigar riscos de exposição acidental de credenciais, chaves de API ou dados de usuários durante o desenvolvimento colaborativo. O processo opera em duas camadas: primeiro, o texto é convertido para uma representação intermediária (ex: Base64), depois pode ser aplicada uma segunda transformação como substituição de caracteres ou inversão de bytes. Importante ressaltar que a ofuscação não substitui a criptografia, pois os dados podem ser revertidos sem necessidade de chaves, mas serve como barreira adicional contra análise estática e detecção por padrões em ferramentas de varredura. A ferramenta também inclui opções avançadas para manipulação de maiúsculas/minúsculas e codificação UTF-8 multibyte.",
   "usage_steps": [
-    "Abra a página do Obfuscador de Strings",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a ferramenta no site e localize a área de texto 'Texto de Entrada'.",
+    "Cole ou digite a string que deseja ofuscar no campo designado.",
+    "Selecione o método de codificação primário no dropdown (ex: Base64, Hexadecimal).",
+    "Ative a opção 'Dupla Codificação' e escolha um segundo método para aumentar a complexidade.",
+    "Clique no botão 'Ofuscar' para processar a string com as configurações selecionadas.",
+    "Copie o resultado ofuscado ou utilize o botão 'Download' para exportar o conteúdo processado."
   ],
   "usage_examples": [
-    "Use o Obfuscador de Strings para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor obscurece uma chave de API em um projeto JavaScript para dificultar a extração por engenharia reversa em navegadores.",
+    "Um administrador de sistemas converte senhas em logs de erro para hexadecimal antes de enviar relatórios para análise externa.",
+    "Um pesquisador de segurança aplica ROT13 a payloads em um PoC para evitar detecção por ferramentas de análise de strings.",
+    "Um time de DevOps ofusca temporariamente credenciais em arquivos YAML de configuração antes de versioná-los em repositórios públicos."
   ]
 }

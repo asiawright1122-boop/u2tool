@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Rotacionador de páginas PDF é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Rotacionador de páginas PDF, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Rotacionador de páginas PDF pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Rotacionador de páginas PDF imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O PDF Rotator é uma ferramenta especializada para manipulação precisa de documentos PDF, permitindo a rotação granular de páginas individuais ou em lote em ângulos de 90°, 180° ou 270° no sentido horário. Desenvolvido com base em bibliotecas de processamento PDF como iText e Apache PDFBox, o tool preserva metadados, bookmarks e qualidade vetorial do documento original durante a transformação. Sua funcionalidade é essencial para correção de orientação incorreta em documentos digitalizados, padronização de relatórios técnicos com páginas em diferentes rotações ou preparação de arquivos para assinatura digital. O processo opera na camada de stream de objetos PDF, alterando matrizes de transformação afim sem degradar conteúdo rasterizado. Suporta tanto seleção manual de páginas específicas quanto processamento automático de documentos inteiros, mantendo consistência em anotações, camadas e propriedades de segurança.",
   "usage_steps": [
-    "Abra a página da ferramenta Rotacionador de páginas PDF",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o site e clique em 'Selecionar Arquivo PDF' para carregar seu documento",
+    "Utilize a visualização em miniaturas para selecionar páginas específicas ou marque 'Selecionar Todas' para processamento em lote",
+    "Escolha o ângulo de rotação desejado (90°, 180° ou 270°) no menu suspenso 'Orientação'",
+    "Ative a opção 'Manter Metadados' para preservar informações do documento original",
+    "Clique em 'Aplicar Rotação' para processar as alterações selecionadas",
+    "Baixe o PDF atualizado com as rotações aplicadas através do botão 'Salvar Resultado'"
   ],
   "usage_examples": [
-    "Use Rotacionador de páginas PDF para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um arquiteto precisa corrigir a orientação de páginas digitalizadas de plantas baixas que foram escaneadas em posição invertida",
+    "Um contador deve padronizar relatórios financeiros gerados de sistemas distintos com formatações de rotação inconsistentes",
+    "Um advogado precisa ajustar a orientação de anexos PDF para garantir leitura correta em dispositivos móveis durante audiência",
+    "Um engenheiro deve rotacionar páginas específicas de um manual técnico sem perder as marcações de revisão existentes"
   ]
 }

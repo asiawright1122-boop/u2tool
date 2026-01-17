@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Calculador CRC32 é uma ferramenta online prática que ajuda você a completar várias tarefas rapidamente. Usando o Calculador CRC32, você pode processar vários dados facilmente sem a necessidade de instalar qualquer software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-o de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Calculador CRC32 pode ajudar a melhorar a eficiência no trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo carregados em nenhum servidor. Use o Calculador CRC32 imediatamente para experimentar serviços rápidos, seguros e gratuitos de ferramentas online.",
+  "detailed_description": "O CRC32 Calculator é uma ferramenta de desenvolvimento que implementa o algoritmo de verificação cíclica redundante (CRC) usando o polinômio IEEE 802.3 (0x04C11DB7) para gerar checksums de 32 bits. Essencial para validar a integridade de dados em transmissões de arquivos, correção de erros em redes e sistemas embarcados, a ferramenta processa texto em UTF-8 ou arquivos binários, aplicando divisão polinomial modular para calcular o valor hexadecimal de 8 dígitos. Desenvolvedores necessitam dessa ferramenta para verificar consistência de dados em protocolos como Ethernet, ZIP e PNG, além de diagnosticar corrupção em backups ou validar integração entre APIs. O cálculo ocorre localmente no navegador via Web Workers, garantindo privacidade, sem enviar dados para servidores externos. Suporta entrada direta de texto, upload de arquivos e até mesmo cálculo de strings codificadas em diferentes formatos, como Base64 ou hexadecimal.",
   "usage_steps": [
-    "Abra a página do Calculador CRC32",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a aba 'Texto' ou 'Arquivo' no painel superior para selecionar a fonte de dados.",
+    "Na aba 'Texto', insira a string desejada no campo 'Conteúdo de Entrada' ou escolha codificação avançada (Base64, Hex).",
+    "Na aba 'Arquivo', clique em 'Selecionar Arquivo' e envie o binário para análise.",
+    "Clique no botão 'Calcular CRC32' para iniciar o processamento via algoritmo polinomial otimizado.",
+    "Visualize o resultado em formato hexadecimal (ex: 0x3ED78214) no campo 'Checksum Gerado' e sua representação decimal.",
+    "Copie o valor com o ícone de clipboard ou exporte como .txt usando o botão 'Salvar Resultado'."
   ],
   "usage_examples": [
-    "Use o Calculador CRC32 para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor de sistemas embarcados verifica integridade de firmware atualizado comparando checksums CRC32 antes e após a gravação em dispositivos IoT.",
+    "Um engenheiro de redes valida a consistência de pacotes UDP transmitidos através de um canal propenso a ruídos, usando o CRC32 de cabeçalhos capturados.",
+    "Um administrador de banco de dados confirma que um backup de 50GB não foi corrompido durante cópia para armazenamento NAS, gerando checksums por segmentos de arquivo.",
+    "Um QA testa a robustez de um serviço REST ao enviar payloads JSON com checksums CRC32 pré-calculados, verificando se o endpoint rejeita dados alterados."
   ]
 }

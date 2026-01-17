@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Number Formatter is a practical online tool that helps you quickly complete various tasks. Using Number Formatter, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Number Formatter can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Number Formatter immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Number Formatter tool leverages Unicode CLDR data and JavaScript's Intl.NumberFormat API to transform numeric values into localized representations adhering to specific cultural conventions. This tool handles three primary formatting strategies: decimal (adjusting thousand/decimal separators), currency (applying symbol placement, minor unit precision), and percent (scaling values by 100 and appending locale-specific indicators). Developers require this solution for internationalization tasks where numerical data must comply with regional standards, such as e-commerce platforms displaying prices in JPY ¥ versus EUR €, or financial dashboards converting decimal commas to periods for German-speaking users. The tool parses user input through a locale selector that references IETF language tags (e.g., 'de-DE' for German/Germany), then applies formatting rules that govern minimum/maximum integer digits, significant digits, and rounding modes. Advanced controls let users specify currency codes (ISO 4217), set custom decimal precision (0-20 digits), and enforce notation styles (compact, scientific, or engineering). All transformations occur client-side using Web APIs, ensuring zero server-side processing and immediate feedback for iterative development.",
   "usage_steps": [
-    "Open the Number Formatter tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Select target locale from dropdown containing 500+ IETF language tags (e.g., 'ar-SA' for Arabic/Saudi Arabia)",
+    "Enter raw numerical value in the input field (supports integers, floats, and exponential notation)",
+    "Choose format type: decimal, currency, percent, or accounting (with negative value brackets)",
+    "Adjust advanced settings: toggle grouping separators, set decimal places (0-20), specify currency symbol",
+    "Click 'Apply Formatting' button to execute transformation using Intl.NumberFormat",
+    "Copy formatted output from the results panel or download as JSON for batch processing"
   ],
   "usage_examples": [
-    "Use Number Formatter to process your data",
-    "Get processing results quickly without waiting"
+    "An e-commerce developer formats product prices to display as '1.000,50 €' for German users while maintaining '1,000.50 USD' for American customers",
+    "A financial analyst converts quarterly revenue figures to localized formats for multinational board presentations, including Japanese yen with no decimal places",
+    "A data scientist standardizes survey response percentages across 15 languages for a global market research report",
+    "A localization engineer validates number formatting consistency across mobile app metrics when transitioning from Latin American Spanish to Russian interfaces"
   ]
 }

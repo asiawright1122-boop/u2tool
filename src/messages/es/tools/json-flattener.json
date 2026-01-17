@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Flautador de JSON es una herramienta práctica en línea que te ayuda a completar rápidamente diversas tareas. Usando el Flautador de JSON, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla eficientemente. Ya sea que seas un desarrollador, diseñador o usuario general, el Flautador de JSON puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza el Flautador de JSON inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El JSON Flattener es una herramienta especializada para transformar estructuras JSON complejas en formatos lineales o viceversa, manteniendo la integridad de los datos. Técnicamente, implementa un algoritmo de recorrido recursivo para identificar objetos anidados y arrays, convirtiendo claves jerárquicas en cadenas de texto concatenadas mediante separadores como puntos (.) o corchetes ([]). Esta funcionalidad es crucial para integraciones ETL, donde es necesario mapear datos jerárquicos a tablas relacionales, o en sistemas de logging que requieren normalizar registros heterogéneos. La herramienta soporta operaciones bidireccionales: el 'flattening' simplifica el procesamiento de datos en entornos sin soporte para JSON nativo, mientras que el 'unflattening' reconstruye la estructura original mediante análisis sintáctico de las rutas codificadas. Utiliza técnicas de tokenización para identificar patrones de anidamiento y aplica estrategias de escape para caracteres especiales en claves. Su motor está optimizado para manejar grandes volúmenes de datos mediante streaming, evitando cargas completas en memoria.",
   "usage_steps": [
-    "Abre la página del Flautador de JSON",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega tu JSON en el área de texto principal o carga un archivo mediante el botón 'Importar JSON'.",
+    "Selecciona la operación deseada en el panel de control: 'Aplanar' o 'Desaplanar'.",
+    "Configura el separador de rutas (punto, barra baja o personalizado) usando el selector 'Delimiter'.",
+    "Activa la opción 'Mantener arrays' si necesitas preservar índices numéricos durante el proceso.",
+    "Haz clic en 'Procesar JSON' para ejecutar la transformación en tiempo real.",
+    "Descarga el resultado con el botón 'Exportar' o copia el contenido del campo de salida."
   ],
   "usage_examples": [
-    "Utiliza el Flautador de JSON para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Transformar una respuesta de API RESTful con objetos anidados en un formato CSV para análisis en Excel.",
+    "Preparar datos de configuración complejos para su almacenamiento en variables de entorno planas.",
+    "Normalizar logs del sistema en formato JSON para indexación en motores de búsqueda como Elasticsearch.",
+    "Convertir esquemas OpenAPI a una estructura lineal para generación automática de documentación."
   ]
 }

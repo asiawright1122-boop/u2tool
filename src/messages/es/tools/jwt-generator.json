@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de JWT es una herramienta práctica en línea que te ayuda a completar rápidamente diversas tareas. Con el Generador de JWT, puedes procesar fácilmente diversos datos sin necesidad de instalar ningún software o complementos. Esta herramienta cuenta con una interfaz sencilla y es fácil de usar, lo que te permite comenzar de inmediato y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Generador de JWT puede ayudarte a mejorar tu eficiencia laboral. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza el Generador de JWT de inmediato para experimentar servicios de herramienta en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El generador JWT es una herramienta especializada para crear tokens web JSON (JWT) con configuraciones avanzadas de cabecera, payload y firma. Técnicamente, construye tokens según la especificación RFC 7519 mediante tres componentes críticos: un encabezado que define el algoritmo de cifrado (HS256, RS256, etc.), un payload con claims personalizados (como expiración, permisos o datos de usuario) y una firma digital generada a partir de una clave secreta o par de claves asimétricas. Este instrumento es esencial para desarrolladores que implementan sistemas de autenticación stateless, prueban políticas de expiración de sesiones o simulan flujos OAuth2. Al permitir ajustar parámetros como 'nbf' (not before) o 'aud' (audience), facilita pruebas de seguridad en APIs RESTful. La herramienta aplica codificación Base64Url seguida de firma criptográfica con SHA-256 o RSA, garantizando tokens válidos según estándares industriales. Su utilidad radica en permitir pruebas controladas de flujos de autenticación sin depender de servidores externos.",
   "usage_steps": [
-    "Abre la página del Generador de JWT",
-    "Escribe o pega el contenido que quieras procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del tool según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Completa el formulario de claims en formato JSON con campos como 'sub', 'exp' y 'roles' en el editor de payload.",
+    "Selecciona el algoritmo de firma en el dropdown: opciones avanzadas como HS256, HS384, RS256 o None para depuración.",
+    "Ingresa una clave secreta de 256 bits o pega una clave privada RSA en formato PEM para firmas asimétricas.",
+    "Ajusta las opciones de codificación: activa 'Compact Serialization' para formato de una sola línea o 'JSON Serialization' para tokens JWS explícitos.",
+    "Haz clic en 'Generar Token' para obtener el JWT estructurado en tres partes: header.payload.signature.",
+    "Verifica el resultado en el panel de salida, donde se muestra el token y su representación decodificada en tiempo real."
   ],
   "usage_examples": [
-    "Utiliza el Generador de JWT para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Simular un token de autenticación para probar endpoints de una API protegida sin iniciar sesión real.",
+    "Crear tokens expirados para validar políticas de renovación de sesiones en una aplicación móvil.",
+    "Generar credenciales para demostraciones de seguridad mostrando diferencias entre firma simétrica y asimétrica.",
+    "Probar vulnerabilidades de algoritmos débiles al seleccionar 'None' como método de firma en entornos de capacitación."
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Notre vérificateur de contraste couleurs gratuit aide les concepteurs et développeurs à s'assurer que leurs sites web respectent les normes d'accessibilité WCAG. Le contraste de couleur est crucial pour les utilisateurs ayant des déficiences visuelles, y compris la cécité colorée et la vision faible. Ce outil calcule le rapport de contraste entre les couleurs de texte (arrière-plan) et de fond selon les directives WCAG 2.1. WCAG Level AA exige un rapport de contraste minimal de 4,5:1 pour le texte normal et de 3:1 pour le texte grand (18pt ou 14pt en gras). Level AAA exige 7:1 pour le texte normal et 4,5:1 pour le texte grand. Entrez simplement vos codes hexadécimaux de couleur ou utilisez le pickeur de couleur pour tester des combinaisons. L'outil affiche instantanément les résultats en pass/fail pour les niveaux AA et AAA. Essentiel pour créer des sites web, applications mobiles et du contenu numérique accessible que tout le monde peut lire.",
+  "detailed_description": "Le Color Contrast Checker est un outil technique permettant d'évaluer la conformité des rapports de contraste de couleurs avec les normes WCAG (Web Content Accessibility Guidelines) 2.1. Il calcule scientifiquement le ratio de contraste entre deux couleurs en utilisant la formule de luminance relative (L) définie par la W3C : (L1 + 0,05) / (L2 + 0,05), où L1 et L2 représentent les valeurs de luminance normalisées des couleurs. L'outil convertit d'abord les codes hexadécimaux ou RVB en valeurs linéaires de luminance selon la méthode sRGB, puis applique le standard de perception humaine CIE 94 pour une analyse précise. Ce processus permet de valider si le contraste atteint les seuils requis (4.5:1 pour AA, 7:1 pour AAA en texte normal). Indispensable pour les développeurs web, designers UI/UX et testeurs QA, il garantit l'accessibilité des interfaces pour les personnes malvoyantes, évite les erreurs de design coûteuses en refonte, et facilite la conformité légale RGAA. L'interface affiche en temps réel les résultats avec des indicateurs visuels (✓ rouge/vert) et propose des recommandations techniques pour améliorer le contraste.",
   "usage_steps": [
-    "Entrez votre couleur de texte (arrière-plan) en utilisant un code hexadécimal ou le pickeur de couleur",
-    "Entrez votre couleur de fond en utilisant un code hexadimal ou le pickeur de couleur",
-    "Vérifiez le rapport de contraste calculé instantanément",
-    "Vérifiez le statut en pass/fail pour les niveaux AA et AAA de WCAG",
-    "Utilisez des combinaisons prédéfinies ou échangez les couleurs pour tester des alternatives"
+    "1. Sélectionnez la couleur de premier plan en utilisant le sélecteur de couleurs ou en saisissant manuellement le code HEX/RGB dans le champ 'Couleur 1'.",
+    "2. Répétez l'opération pour la couleur d'arrière-plan dans le champ 'Couleur 2' avec la même précision technique.",
+    "3. Activez l'option 'Mode WCAG 2.1' pour appliquer les calculs standards ou 'CIE 94' pour une analyse perceptive avancée.",
+    "4. Cliquez sur 'Calculer' pour déclencher l'algorithme de conversion sRGB → Y (luminance) selon la formule normalisée.",
+    "5. Consultez la section 'Résultat' pour obtenir le ratio exact, la notation AA/AAA, et l'analyse spectrale de la perception des couleurs.",
+    "6. Utilisez le bouton 'Exporter JSON' pour intégrer les données dans vos tests automatisés ou générer un rapport d'audit RGAA."
   ],
   "usage_examples": [
-    "Testez si vos couleurs de marque (#1a73e8 sur blanc) respectent les normes WCAG AA pour le texte du corps",
-    "Vérifiez le contraste du texte des boutons avant de lancer pour satisfaire aux exigences d'accessibilité",
-    "Vérifiez si votre schéma de couleur en mode sombre fournit un contraste suffisant pour la lisibilité"
+    "Un développeur vérifie le contraste entre un texte #333 et un fond #FFF pour s'assurer qu'il respecte les 4.5:1 requis pour la lisibilité.",
+    "Un designer UI ajuste les couleurs d'un tableau de bord en temps réel en utilisant l'analyse spectrale pour éviter les conflits pour les daltoniens.",
+    "Un QA engineer teste la conformité des boutons CTA dans une application bancaire avec le standard AAA pour une accessibilité maximale.",
+    "Un intégrateur web optimise les icônes monochromes en comparant leur luminance relative avec l'arrière-plan dynamique d'une page responsive."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Kuchenchart-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Kuchenchart-Generator können Sie verschiedene Daten leicht verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient nutzen können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, der Kuchenchart-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu steigern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datenicherheit gewährleistet und sicherstellt, dass keine Daten auf einem Server hochgeladen werden. Nutzen Sie den Kuchenchart-Generator sofort, um schnelle, sichere und kostenlose Online-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Pie Chart Generator ist ein webbasiertes Visualisierungstool, das numerische Daten in proportionale Kreisdiagramme umwandelt. Technisch gesehen verwendet das Tool SVG- und Canvas-Rendering-Techniken, um dynamisch skalierbare Grafiken zu erzeugen, die sich für Präsentationen, Berichte und Datenanalysen eignen. Benutzer benötigen dieses Tool, um komplexe Datensätze in verständliche visuelle Formate zu übersetzen – besonders bei der Darstellung von Marktanteilen, Budgetverteilungen oder Umfrageergebnissen. Nach dem Hochladen von CSV-Dateien oder manueller Eingabe von Werten führt der Generator eine Vorverarbeitung durch, um Proportionen zu normalisieren und Farbcodierungen für Kategorien zuzuweisen. Die interne Logik berechnet Winkelgrade für jeden Datenpunkt und rendert anschließend die Tortenstücke mit anti-aliasing-fähiger Kantenglättung. Benutzer können Farbschemata anpassen, Beschriftungen mit Prozentangaben aktivieren/deaktivieren und die Diagrammgröße für responsives Design optimieren. Exportierte Grafiken liegen als hochaufgelöste PNG-Dateien oder editierbare SVG-Vektordateien vor, die für weitere Bearbeitungen geeignet sind.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Kuchenchart-Generators",
-    "Geben Sie oder kopieren Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Bearbeitungstaste, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die bearbeiteten Ergebnisse herunter"
+    "1. Öffnen Sie den Pie Chart Generator im Browser und wählen Sie die Eingabemethode: CSV-Datei hochladen oder manuelle Dateneingabe über das Tabellenformular.",
+    "2. Importieren Sie Daten über die Schaltfläche 'Daten laden' oder geben Sie Werte direkt in die Felder 'Kategorie' und 'Wert' ein, wobei mindestens drei Datensätze erforderlich sind.",
+    "3. Passen Sie das Erscheinungsbild an: Wählen Sie ein Farbschema aus den vordefinierten Optionen oder definieren Sie benutzerdefinierte HEX-Codes über den Farbauswahldialog.",
+    "4. Aktivieren Sie die Schaltfläche '3D-Effekt' für eine tiefenwirksame Darstellung oder deaktivieren Sie Einzeltortenstücke über den Transparenzregler.",
+    "5. Verwenden Sie das 'Vorschau'-Panel, um die Darstellung in Echtzeit zu prüfen, und passen Sie bei Bedarf die Schriftgrößen für Achsenbeschriftungen und Titel an.",
+    "6. Exportieren Sie das Diagramm über die Schaltfläche 'Download' als PNG mit 300dpi oder als SVG-Datei, wobei zusätzliche Metadaten über die Checkbox 'Berechnungsgrundlage einbetten' hinzugefügt werden können."
   ],
   "usage_examples": [
-    "Verwenden Sie den Kuchenchart-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell bearbeitete Ergebnisse ohne zu warten"
+    "Ein Marketingteam visualisiert Marktanteile konkurrierender Produkte, indem sie CSV-Daten mit Umsatzwerten hochladen und die resultierenden Tortenstücke farblich nach Markenlogos anpassen.",
+    "Ein Finanzanalyst erstellt ein Budgetverteilungsdiagramm für ein Unternehmen, indem er manuell Prozentangaben für Abteilungen eingibt und den 3D-Modus für eine Präsentation aktiviert.",
+    "Eine Lehrkraft analysiert Notenverteilungen einer Klausur, exportiert das Diagramm als SVG und fügt es in ein LaTeX-Dokument für detaillierte Auswertungen ein.",
+    "Ein Projektmanager nutzt das Tool zur Zeiterfassung verschiedener Arbeitspakete, deaktiviert einzelne Slices zur Fokussierung auf Hauptaufgaben und integriert das PNG-Bild in ein Jira-Dashboard."
   ]
 }

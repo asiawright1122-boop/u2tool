@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Filtros CSS es una herramienta práctica en línea que te ayuda a completar diversas tareas de manera rápida. Con el Generador de Filtros CSS, puedes procesar diversos datos sin instalar ningún software o plugins. Esta herramienta cuenta con una interfaz simple y fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Generador de Filtros CSS puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza el Generador de Filtros CSS inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El generador de filtros CSS es una herramienta técnica que permite crear y optimizar cadenas de filtros CSS mediante un editor visual basado en WebGL. Esta herramienta transforma matemáticamente las propiedades de renderizado visual de elementos HTML aplicando funciones como blur(), contrast(), hue-rotate() y drop-shadow(), combinadas en una única propiedad CSS filter. Su necesidad surge en escenarios donde diseñadores y desarrolladores requieren ajustar dinámicamente la apariencia de imágenes, texto o interfaces sin recurrir a software de edición externo. Al operar directamente sobre el espacio de color sRGB y soportar valores decimales con precisión de punto flotante, permite crear efectos como corrección de color en tiempo real, optimización de accesibilidad para usuarios con daltonismo, o transiciones animadas de filtros con sincronización de hardware. La herramienta procesa los ajustes mediante un motor de preview en tiempo real que simula el comportamiento del motor de renderizado de Chrome, mostrando inmediatamente el impacto de parámetros como la desaturación progresiva o la aplicación de múltiples sombras gaussianas.",
   "usage_steps": [
-    "Abre la página del Generador de Filtros CSS",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del tool según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona un preset base (Ej: 'Vintage', 'High Contrast') desde el panel de estilos predefinidos",
+    "Ajusta el control deslizante de 'Blur Radius' para modificar el valor en px del filtro blur()",
+    "Utiliza el selector de color en el panel 'Drop Shadow' para definir el offset y la opacidad de las sombras",
+    "Arrastra el control circular del matiz para aplicar una transformación hue-rotate() en grados",
+    "Activa la opción 'Performance Mode' para optimizar la cadena de filtros reduciendo operaciones redundantes",
+    "Copia el código CSS generado en el editor de texto con la opción 'Minify Output' activa para producción"
   ],
   "usage_examples": [
-    "Utiliza el Generador de Filtros CSS para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Crear un efecto de card levitando con blur(2px) y drop-shadow(0 4px 6px rgba(0,0,0,0.1)) en una interfaz de dashboard",
+    "Implementar un modo 'dark reader' aplicando invert(1) seguido de brightness(0.8) en contenido web dinámico",
+    "Diseñar un overlay de imagen con blend mode multiplicado usando contrast(1.2) y saturate(0.7)",
+    "Optimizar una animación de hover en galería de imágenes reduciendo de 6 a 3 funciones de filtro mediante fusión matemática de operaciones"
   ]
 }

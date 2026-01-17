@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON a XML es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Con JSON a XML, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, JSON a XML puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, lo que garantiza la seguridad de tus datos y no se subirán a ningún servidor. Utiliza JSON a XML de inmediato para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "La herramienta JSON a XML realiza una transformación estructural de datos mediante técnicas de análisis sintáctico (parsing) y serialización. Al recibir una entrada JSON válida, el motor interno emplea algoritmos recursivos para mapear objetos y arrays a elementos XML, generando una jerarquía de nodos con atributos y valores de texto. El proceso incluye la conversión automática de tipos primitivos (números, booleanos, null) a representaciones XML compatibles, además de soportar la codificación de caracteres especiales mediante entidades HTML. Esta utilidad es esencial para escenarios de integración entre sistemas heredados que requieren XML Schema/DTD y API modernas basadas en JSON, especialmente en migraciones de datos o interoperabilidad entre servicios. La herramienta implementa un motor de validación que detecta estructuras circulares y claves duplicadas, generando XML bien formado con soporte opcional para namespaces (xmlns) y secciones CDATA, preservando así la integridad del modelo de datos original.",
   "usage_steps": [
-    "Abre la página del convertidor JSON a XML",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Abre la interfaz web y pega tu JSON en el área de texto titulada 'Entrada JSON'.",
+    "Configura el nombre personalizado del elemento raíz XML usando el campo 'Root Tag Name'.",
+    "Activa la opción 'Pretty Print' para habilitar sangrías en el XML resultante.",
+    "Utiliza el interruptor 'Convert Attributes' para transformar claves con guión bajo (_) en atributos XML.",
+    "Haz clic en el botón 'Procesar' para iniciar la conversión basada en DOMParser.",
+    "Copia el XML generado desde el área de salida o descárgalo como archivo .xml."
   ],
   "usage_examples": [
-    "Utiliza JSON a XML para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Migrar configuraciones de una aplicación de microservicios (JSON) a un sistema legacy que requiere XML para la gestión de políticas de seguridad.",
+    "Transformar respuestas de APIs REST (JSON) en feeds XML compatibles con lectores RSS antiguos en una plataforma de noticias.",
+    "Generar archivos de metadatos XML para un repositorio digital a partir de datos estructurados en JSON desde una base de datos NoSQL.",
+    "Convertir archivos de localización (i18n) de formato JSON a XML para integrarlos en un sistema de gestión de contenido (CMS) que solo acepta XLIFF."
   ]
 }

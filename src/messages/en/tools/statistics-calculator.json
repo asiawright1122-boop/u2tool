@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Statistics Calculator is a practical online tool that helps you quickly complete various tasks. Using Statistics Calculator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Statistics Calculator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Statistics Calculator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Statistics Calculator is a web-based computational tool that performs robust statistical analysis on numerical datasets using client-side JavaScript algorithms. It accepts comma-separated or line-delimited numerical arrays, processes them through optimized mathematical functions to calculate central tendency metrics (arithmetic mean, geometric mean, median, mode), dispersion measures (standard deviation, variance, range, interquartile range), and distribution characteristics. Technically, it employs Welford's algorithm for numerically stable standard deviation calculations and implements quickselect for efficient median determination without full dataset sorting. The tool's value lies in its ability to handle edge cases like missing values (via NaN handling) and non-numeric entries, making it essential for researchers preparing datasets for ANOVA analysis, students solving probability problems, or engineers evaluating process capability indices. Unlike basic calculators, it provides unbiased variance calculations for sample datasets and supports weighted mean computations through optional input multipliers, catering to specialized applications in financial risk assessment and experimental physics.",
   "usage_steps": [
-    "Open the Statistics Calculator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Navigate to the statistics-calculator page and locate the input textarea labeled 'Dataset Entry'",
+    "Paste numerical values separated by commas, line breaks, or tabs (e.g., '12, 15, 17' or '23\\n45\\n67')",
+    "Use the 'Data Delimiter' dropdown to specify separation method (auto-detect available)",
+    "Check 'Handle Missing Values' to skip non-numeric entries or replace NaN placeholders",
+    "Select specific metrics to calculate via individual checkboxes (mean, median, etc.)",
+    "Click the 'Compute Statistics' button to generate results displayed in an expandable table with precision up to 10 decimal places"
   ],
   "usage_examples": [
-    "Use Statistics Calculator to process your data",
-    "Get processing results quickly without waiting"
+    "A biology student analyzing plant growth measurements (e.g., stem lengths) to determine normal distribution parameters before hypothesis testing",
+    "An economist calculating weighted mean inflation rates across different commodity groups with varying significance coefficients",
+    "A software engineer evaluating response time logs to identify outliers using interquartile range and standard deviation metrics",
+    "A manufacturing quality control specialist processing dimensional measurements of machined parts to assess process capability (CPK) requirements"
   ]
 }

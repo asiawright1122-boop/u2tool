@@ -1,14 +1,17 @@
 {
-  "detailed_description": "La Calculadora de Porcentajes es una herramienta online práctica que te ayuda a completar rápidamente diversas tareas. Con la Calculadora de Porcentajes, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla eficientemente. Ya sea que seas un desarrollador, diseñador o usuario general, la Calculadora de Porcentajes puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza la Calculadora de Porcentajes inmediatamente para experimentar servicios de herramientas online rápidas, seguras y gratuitas.",
+  "detailed_description": "El Calculador de Porcentajes es una herramienta técnica especializada que permite realizar operaciones aritméticas complejas relacionadas con porcentajes, cambios porcentuales y ajustes de valores. A diferencia de calculadoras convencionales, esta herramienta integra algoritmos optimizados para calcular proporciones directas, incrementos/disminuciones porcentuales y variaciones absolutas, utilizando fórmulas como (Valor Final - Valor Inicial) / |Valor Inicial| × 100 para cambios relativos. Es especialmente útil en contextos financieros, educativos y científicos donde se requiere precisión en análisis de tendencias, como evaluar rendimientos de inversiones, calcular impuestos o ajustar datos experimentales. Su motor matemático procesa entradas en coma flotante y permite ajustar la precisión decimal de resultados, evitando errores de redondeo críticos en cálculos sensibles. La interfaz integrada incluye selectores de operación, campos de entrada validados y un sistema de notificación de errores que garantiza la integridad de los datos introducidos.",
   "usage_steps": [
-    "Abre la página de la Calculadora de Porcentajes",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona el tipo de cálculo en el menú desplegable: 'Porcentaje Simple', 'Cambio Porcentual' o 'Incremento/Disminución'.",
+    "Introduce el valor numérico base en el campo etiquetado como 'Valor Inicial' usando el teclado numérico o pegando datos externos.",
+    "Para cálculos de cambio, ingresa el segundo valor en 'Valor Final' y activa el interruptor 'Calcular Variación' si requieres resultado absoluto.",
+    "Ajusta el parámetro de decimales deseados mediante el control deslizante 'Precisión' (rango: 0-15 dígitos).",
+    "Haz clic en el botón 'Ejecutar Cálculo' para activar el motor matemático en tiempo real.",
+    "Revisa los resultados en el panel de salida, donde se muestran porcentajes calculados junto con la fórmula aplicada y el historial de operaciones."
   ],
   "usage_examples": [
-    "Utiliza la Calculadora de Porcentajes para procesar tus datos",
-    "Obtén rápidamente los resultados de procesamiento sin esperar"
+    "Un analista financiero calcula el rendimiento anual de una cartera de inversiones comparando el valor inicial ($15,000) con el valor final ($18,500) para obtener un cambio porcentual exacto.",
+    "Un estudiante de estadística ajusta datos normalizados para un proyecto académico, convirtiendo valores absolutos a porcentajes relativos respecto al total de la muestra.",
+    "Un comerciante aplica un descuento del 22.5% a un producto de $89.99, determinando el precio final con redondeo automático a dos decimales para facturación.",
+    "Un ingeniero químico analiza la eficiencia de un proceso al comparar la cantidad de reactivo consumido (12.7g) frente al valor teórico esperado (15.0g), obteniendo la desviación porcentual."
   ]
 }

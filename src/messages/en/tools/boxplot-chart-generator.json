@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Boxplot Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Boxplot Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Boxplot Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Boxplot Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Boxplot Chart Generator is a specialized tool for creating statistical boxplot visualizations that depict the distribution of datasets through quartiles, medians, and outliers. This tool leverages JavaScript-based rendering libraries to generate precise boxplots using Tukey's method for calculating interquartile ranges (IQR), automatically identifying outliers as points beyond 1.5×IQR thresholds. Users benefit from this tool for exploratory data analysis (EDA) in fields like research, finance, and quality control, where comparing multiple datasets' central tendencies and variability is crucial. The generator supports both vertical and horizontal orientations, with customizable parameters for whisker length, color schemes, and axis labels. Data input is handled through a structured CSV-like format where columns represent distinct datasets, enabling side-by-side comparisons. Under the hood, the tool employs D3.js for dynamic SVG rendering, ensuring scalability and resolution independence, while PNG exports utilize HTML5 canvas rasterization for lossless image quality.",
   "usage_steps": [
-    "Open the Boxplot Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Input data in comma-separated format within the designated textarea, with each column representing a separate dataset.",
+    "Select 'Vertical' or 'Horizontal' orientation from the layout dropdown menu to define plot axis alignment.",
+    "Adjust whisker length using the slider control to override default 1.5×IQR calculations for outlier detection.",
+    "Customize visual elements via the style panel: set color gradients for boxes, adjust axis font sizes, and enable gridlines.",
+    "Toggle outlier visibility using the checkbox to include/exclude extreme values in the visualization.",
+    "Export the final chart by clicking 'Download SVG' or 'PNG' buttons, with options to preserve transparency or set background colors."
   ],
   "usage_examples": [
-    "Use Boxplot Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "A university researcher comparing final exam score distributions across three different teaching methods using side-by-side boxplots.",
+    "A financial analyst evaluating monthly stock return variability between technology and energy sectors over a 5-year period.",
+    "A manufacturing engineer analyzing production tolerance measurements from three different assembly lines to identify process inconsistencies.",
+    "A climate scientist visualizing annual temperature range distributions across coastal vs inland regions to study climate change impacts."
   ]
 }

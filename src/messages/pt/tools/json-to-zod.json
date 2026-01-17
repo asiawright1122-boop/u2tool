@@ -1,15 +1,17 @@
 {
-  "detailed_description": "O Conversor JSON para Zod gera esquemas de validação Zod a partir de dados JSON. Crie validação em tempo de execução com segurança de tipos para suas aplicações TypeScript.",
+  "detailed_description": "O conversor JSON para Zod Schema é uma ferramenta técnica projetada para transformar estruturas JSON em esquemas de validação Zod, uma biblioteca de definição de esquemas para TypeScript. Quando um desenvolvedor insere dados JSON, o algoritmo analisa recursivamente cada propriedade, identificando tipos primitivos (string, number, boolean), estruturas aninhadas (objetos, arrays) e padrões específicos (como enumerações ou datas em formato ISO). Com base nessa inferência, gera automaticamente um esquema Zod tipado, pronto para uso em projetos TypeScript. Essa ferramenta é essencial para desenvolvedores que precisam garantir segurança de tipos em tempo de compilação e validação em runtime, especialmente em contextos como APIs RESTful, onde payloads dinâmicos exigem verificação rigorosa. Ao converter JSON para Zod, o usuário evita erros manuais na escrita de esquemas, economiza tempo em projetos com múltiplas interfaces e facilita a documentação de contratos de dados. A engine interna utiliza técnicas de análise estatística para campos com valores heterogêneos, sugerindo tipos union quando necessário, e suporta personalização avançada, como definição de nomes de interfaces e tratamento de campos opcionais.",
   "usage_steps": [
-    "Cole seus dados JSON",
-    "Clique em Converter para gerar o esquema",
-    "Revise o esquema Zod",
-    "Personalize as regras de validação",
-    "Copie e use em seu projeto"
+    "Cole seu JSON no textarea de entrada, garantindo que a formatação esteja válida.",
+    "Ative a opção 'Inferir Enum' no painel de configurações se o JSON contém campos com valores fixos.",
+    "Ajuste o prefixo das interfaces geradas usando o campo 'Namespace' para organizar tipos em projetos grandes.",
+    "Clique no botão 'Gerar Schema' para executar a inferência automática de tipos.",
+    "Revise o código Zod no painel de saída, observando anotações como '.optional()' ou '.array()' aplicadas.",
+    "Copie o esquema completo ou exporte como arquivo .ts via botão 'Baixar' para integração direta no projeto."
   ],
   "usage_examples": [
-    "Gerar esquemas de validação de API",
-    "Criar validação de formulários",
-    "Análise de dados com segurança de tipos"
+    "Converter uma resposta de API externa em um esquema Zod para validar dados antes de persistência em banco.",
+    "Gerar tipos para um serviço GraphQL a partir de exemplos de queries em JSON, garantindo consistência entre camadas.",
+    "Transformar configurações legadas em JSON para esquemas tipados, facilitando migração para arquiteturas TypeScript.",
+    "Criar esquemas de validação para formulários React com React Hook Form, integrando Zod para validações complexas."
   ]
 }

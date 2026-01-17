@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculadora de Salário é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Calculadora de Salário, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Calculadora de Salário pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Calculadora de Salário imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Calculador de Salário é uma ferramenta técnica especializada para conversão precisa entre diferentes bases salariais, incluindo hora, dia, semana, mês e ano. Desenvolvido para profissionais de TI, RH e finanças, o sistema aplica fórmulas matemáticas rigorosas, considerando fatores como carga horária semanal padrão (40 horas), dias úteis mensais (22 dias) e prazos de 12 meses. O cálculo anual, por exemplo, multiplica o valor horário pelo número de horas trabalhadas no ano (ex: 40h/semana × 52 semanas = 2.080 horas). Para conversões inversas, como anual para horário, o sistema divide o valor anual por 2.080 horas. A ferramenta também permite ajustes para contratos parciais (part-time), calculando proporcionalmente com base em dias ou horas definidos pelo usuário. Isso é essencial para análise de custos de folha de pagamento, negociação de contratos freelance ou benchmarking salarial. O motor de cálculo, implementado em JavaScript, processa os dados localmente no navegador, garantindo privacidade e velocidade. Diferentemente de ferramentas genéricas, oferece opções para personalizar a quantidade de dias trabalhados por semana e meses com base em calendários específicos, crucial para compliance com legislação trabalhista brasileira.",
   "usage_steps": [
-    "Abra a página da ferramenta Calculadora de Salário",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a aba 'Entrada' e selecione a unidade salarial original (ex: 'Mensal') no menu dropdown.",
+    "Insira o valor numérico do salário no campo de texto (ex: 5000 para R$ 5.000,00).",
+    "Defina a carga horária semanal no seletor deslizante (ex: 40 horas) para cálculos precisos.",
+    "Navegue até a seção 'Saída' e marque as unidades desejadas (ex: Horária, Anual) usando checkboxes múltiplos.",
+    "Clique no botão 'Calcular' para ativar o processamento síncrono no cliente.",
+    "Analise os resultados exibidos em formato tabular, incluindo valores brutos e líquidos estimados."
   ],
   "usage_examples": [
-    "Use Calculadora de Salário para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor freelance precisa converter sua taxa horária de R$ 80,00 para salário anual, considerando 30 horas semanais.",
+    "Um analista de RH calcula o equivalente mensal de um salário anual de R$ 84.000,00 com 13º proporcional.",
+    "Um empreendedor compara custos entre contratar um estagiário por R$ 15/hora ou R$ 1.200/mês fixo.",
+    "Um profissional recebe duas ofertas: R$ 12.000/mês ou R$ 60/hora com carga de 30h. A ferramenta ajuda a decidir qual é mais vantajosa."
   ]
 }

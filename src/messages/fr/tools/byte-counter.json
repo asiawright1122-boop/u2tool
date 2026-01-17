@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Compteur de octets est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. En utilisant le Compteur de octets, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plug-ins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Compteur de octets peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez immédiatement le Compteur de octets pour expérimenter des services d'outils en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "Le Byte Counter est un outil technique permettant de calculer précisément le nombre d'octets occupés par un texte selon trois schémas d'encodage : UTF-8, UTF-16 et ASCII. Contrairement aux simples compteurs de caractères, cet outil prend en compte les spécificités de chaque encodage : la nature à longueur variable de l'UTF-8 (1 à 4 octets par caractère), le format à 2 ou 4 octets de l'UTF-16 (selon les points de code Unicode), et le format fixe de l'ASCII (1 octet par caractère). Les développeurs ont besoin de cet outil pour valider des contraintes de stockage binaire, respecter les limites de protocoles réseau (comme les payloads MQTT), ou optimiser l'efficacité des transmissions API. Le fonctionnement repose sur l'analyse lexicale du texte d'entrée, suivi d'une conversion virtuelle selon l'encodage sélectionné. Chaque caractère est décomposé en sa représentation binaire réelle, et les octets sont additionnés en tenant compte des spécificités techniques comme le BOM (Byte Order Mark) pour UTF-16 ou l'échappement des caractères spéciaux en ASCII étendu. Cet outil s'adresse particulièrement aux développeurs travaillant sur des systèmes embarqués, des protocoles de communication à faible bande passante, ou des applications multilingues nécessitant une gestion rigoureuse de l'encodage.",
   "usage_steps": [
-    "Ouvrez la page du Compteur de octets",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez l'outil Byte Counter via la barre de recherche ou la catégorie 'Texte'.",
+    "Saisissez ou collez votre texte dans la zone d'édition principale.",
+    "Sélectionnez l'encodage souhaité (UTF-8, UTF-16 ou ASCII) dans le menu déroulant 'Mode d'encodage'.",
+    "Activez/désactivez l'option 'Inclure BOM' si nécessaire pour les tests UTF-16.",
+    "Cliquez sur le bouton 'Calculer' pour obtenir le nombre exact d'octets.",
+    "Utilisez le bouton 'Exporter JSON' pour intégrer les résultats dans vos scripts d'analyse."
   ],
   "usage_examples": [
-    "Utilisez le Compteur de octets pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur IoT vérifie que son payload JSON pour un capteur LoRaWAN ne dépasse pas la limite de 255 octets en UTF-8.",
+    "Un ingénieur base de données optimise la taille d'un champ VARCHAR en préparant un fichier CSV encodé ASCII.",
+    "Un architecte réseau conçoit un protocole binaire avec des champs de longueur fixe en UTF-16.",
+    "Un traducteur technique valide que les caractères japonais dans un manuel PDF n'augmenteront pas la taille binaire outre mesure."
   ]
 }

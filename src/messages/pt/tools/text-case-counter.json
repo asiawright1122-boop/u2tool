@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Contador de Caso de Texto é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Contador de Caso de Texto, você pode processar facilmente diversos dados sem precisar instalar nenhum software ou plug-in. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use eficientemente. Seja desenvolvedor, designer ou usuário geral, o Contador de Caso de Texto pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados a qualquer servidor. Use o Contador de Caso de Texto imediatamente para experimentar serviços de ferramenta online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Text Case Counter é uma ferramenta técnica especializada em análise de caracterização de texto, capaz de identificar e quantificar caracteres maiúsculos, minúsculos, dígitos numéricos, símbolos e espaços em branco. Seu funcionamento baseia-se na varredura sequencial de cada caractere do texto de entrada, aplicando verificações de faixas Unicode (como U+0041-U+005A para maiúsculas e U+0061-U+007A para minúsculas) e padrões de expressões regulares para categorias específicas. Desenvolvedores podem utilizá-lo para validar formatação de senhas (verificando mistura de casos), analisar consistência em datasets de NLP, ou depurar inconsistências em strings de código. A ferramenta também destaca proporções percentuais de cada categoria, permitindo análises estatísticas granulares. Sua engine processa texto em tempo real sem necessidade de conexão, garantindo privacidade e baixa latência, ideal para pipelines de automação ou validação pré-produção.",
   "usage_steps": [
-    "Abra a página do Contador de Caso de Texto",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Cole o texto na área de entrada rotulada 'Insira seu conteúdo aqui'.",
+    "Ative o switch 'Ignorar espaços' se quiser excluir contagem de caracteres em branco.",
+    "Clique no botão 'Processar' para iniciar a análise de 1.000.000+ caracteres por segundo.",
+    "Visualize os resultados detalhados no painel 'Distribuição de Caracteres', incluindo porcentagens e contagens absolutas.",
+    "Use o seletor 'Exportar como' para baixar os dados em CSV, JSON ou TSV com precisão de 4 casas decimais.",
+    "Teste a funcionalidade 'Análise Comparativa' colando múltiplos textos separados por '---' para comparação side-by-side."
   ],
   "usage_examples": [
-    "Use o Contador de Caso de Texto para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um desenvolvedor backend verifica se uma senha contém pelo menos 2 maiúsculas, 3 minúsculas e 1 número para cumprir políticas de segurança.",
+    "Um cientista de dados analisa a proporção de palavras em caps lock em um conjunto de tweets para detecção de emoção intensa.",
+    "Um QA engenheiro testa validação de formulários identificando se campos de código exigem formatação case-sensitive.",
+    "Um linguista computacional mensura a frequência de acrônimos em maiúsculas em documentos técnicos para otimizar tokenização."
   ]
 }

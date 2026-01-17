@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Anagrammlöser hilft Ihnen, alle gültigen englischen Wörter zu finden, die durch Umsortieren der von Ihnen bereitgestellten Buchstaben gebildet werden. Ideal für Wortspiele, Rätsel und Wortschatzbildung.",
+  "detailed_description": "Der Anagramm-Solver ist ein leistungsstarkes Tool zur systematischen Analyse von Buchstabenkombinationen und deren Validierung gegen umfangreiche Wörterbuch-Datenbanken. Technisch gesehen generiert der Solver alle möglichen Permutationen der eingegebenen Zeichenfolgen, filtert diese durch lexikalische Regeln und prüft sie auf Übereinstimmung mit vorgegebenen Einschränkungen wie Mindest- und Maximalwörterlängen, spezifischen Buchstabenbindungen oder Sprachvorgaben. Der Algorithmus nutzt eine Kombination aus Backtracking-Methoden und Hash-Tabellen, um die Effizienz der Suche zu optimieren, besonders bei längeren Zeichenketten. Die Wörter werden nach ihrer Länge, alphabetisch oder nach Relevanz sortiert ausgegeben. Dieses Tool ist unverzichtbar für Benutzer, die komplexe Anagramm-Probleme lösen möchten, sei es für Rätsel, Spiele wie Scrabble oder kreative Textgenerierung. Ein weiterer Vorteil liegt in der Fähigkeit, Teilwörter zu erkennen, sodass auch unvollständige Eingaben sinnvoll verarbeitet werden können. Die Implementierung berücksichtigt zudem Unterschiede in der Zeichencodierung, einschließlich Umlaute und Sonderzeichen, und ermöglicht somit eine präzise Verarbeitung deutscher Sprachmuster.",
   "usage_steps": [
-    "Geben Sie Ihre durcheinandergebrachten Buchstaben ein",
-    "Sehen Sie alle möglichen Wortkombinationen an",
-    "Klicken Sie, um einzelne Wörter zu kopieren",
-    "Verwenden Sie die Ergebnisse für Wortspiele",
-    "Versuchen Sie verschiedene Buchstabenkombinationen"
+    "Geben Sie die zu analysierenden Buchstaben in das Eingabefeld 'Buchstaben eingeben' ein.",
+    "Wählen Sie die gewünschte Sprache aus dem Dropdown-Menü aus, um das Wörterbuch zu filtern.",
+    "Stellen Sie die Schieberegler für 'Mindestlänge' und 'Maximallänge' ein, um die Ergebnisse einzuschränken.",
+    "Aktivieren Sie das Kontrollkästchen 'Nur vollständige Wörter', um ausschließlich vollständige Anagramme anzuzeigen.",
+    "Klicken Sie auf den Button 'Anagramm lösen', um die Berechnung zu starten.",
+    "Durchsuchen Sie die Ergebnisse in der Tabelle, die nach Länge und Alphabet sortiert angezeigt werden."
   ],
   "usage_examples": [
-    "Lösen Sie Scrabble-Rätsel",
-    "Finden Sie Kreuzworträtsel-Antworten",
-    "Entdecken Sie neue Vokabeln"
+    "Ein Benutzer erhält die Buchstaben 'EILSA' und möchte alle möglichen Wörter finden, z.B. 'Seile' oder 'Elias'.",
+    "Ein Scrabble-Spieler analysiert seine sieben Buchstaben, um die höchstmögliche Punktzahl zu erzielen.",
+    "Ein Autor sucht kreative Wörter für ein Gedicht, das nur aus den Buchstaben 'TISCHLAMPE' gebildet werden darf.",
+    "Ein Lernender verbessert sein Vokabular, indem er aus zehn zufälligen Buchstaben möglichst viele gültige Wörter ableitet."
   ]
 }

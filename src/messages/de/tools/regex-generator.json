@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Regex Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Regex Generator können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der Regex Generator kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Regex Generator sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der Regex Generator ist ein spezialisierter Editor zur Erstellung und Validierung regulärer Ausdrücke, der durch präzise Musteranalyse und dynamische Vorschläge die Komplexität von Regex-Entwicklung reduziert. Das Tool analysiert Eingabemuster durch Tokenisierung und generiert optimierte Regex-Formeln mit Unterstützung für fortgeschrittene Konstrukte wie Lookahead-Assertions, Capture Groups und Quantifier-Control. Entwickler profitieren durch die integrierte Testumgebung, die in Echtzeit Match-Visualisierungen und Fehlermeldungen bei syntaktischen Inkonsistenzen liefert. Besonders nützlich ist das Tool bei der Validierung von Benutzereingaben (z.B. E-Mail-Formate), der Extraktion strukturierter Daten aus unstrukturierten Texten oder der Implementierung komplexer Such-und-Ersatz-Operationen. Die Kernel-Engine kombiniert maschinelles Lernen mit bewährten Regex-Optimierungsstrategien, um kontextsensitive Vorschläge zu generieren und gleichzeitig Overhead durch ungültige Muster zu vermeiden.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Regex-Generators",
-    "Geben Sie den zu bearbeitenden Inhalt in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Anpassen Sie die Tool-Optionen und Einstellungen, wie gewünscht",
-    "Klicken Sie auf den Bearbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die bearbeiteten Ergebnisse"
+    "Wählen Sie ein Basismuster aus der Kategorieauswahl (z.B. 'E-Mail', 'URL', 'Datum') als Ausgangspunkt für Ihre Regex.",
+    "Geben Sie Testdaten in das 'Input Sample'-Feld ein, um kontextbasierte Mustererkennung zu aktivieren.",
+    "Aktivieren Sie spezifische Regex-Flags (z.B. 'Multiline', 'Case Insensitive') über die Schaltflächenleiste.",
+    "Nutzen Sie den 'Pattern Optimizer', um automatisch kompakte Regex-Varianten mit Benchmark-Vergleich zu erhalten.",
+    "Verfolgen Sie Match-Positionen in der Echtzeit-Highlighting-Vorschau unterhalb des Editorfensters.",
+    "Exportieren Sie den validierten Regex-Code direkt als JavaScript-String oder PCRE-kompatiblen Ausdruck."
   ],
   "usage_examples": [
-    "Verwenden Sie den Regex Generator, um Ihren Daten zu bearbeiten",
-    "Erhalten Sie die Bearbeitungsresultate schnell ohne zu warten"
+    "Validierung von Benutzereingaben in Formularen durch automatische Erzeugung präziser Regex-Muster für Telefonnummern mit Landesvorwahlen.",
+    "Extraktion strukturierter Logdaten (z.B. IP-Adressen, Timestamps) aus Serverlogs durch intelligente Token-Zuordnung.",
+    "Implementierung von Such-und-Ersatz-Funktionen in Texteditoren mit gruppenbasierter Capturing-Unterstützung.",
+    "Sanitizing von CSV-Importdaten durch Erkennung und Maskierung spezieller Zeichen in definierten Spaltenbereichen."
   ]
 }

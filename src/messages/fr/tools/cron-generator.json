@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur d'expressions Cron est un outil pratique en ligne qui vous aide à réaliser rapidement diverses tâches. En utilisant le Générateur d'expressions Cron, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur final, le Générateur d'expressions Cron peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload vers n'importe quel serveur. Utilisez immédiatement le Générateur d'expressions Cron pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Générateur d'Expressions Cron permet de créer et d'interpréter des expressions cron selon la syntaxe POSIX standard. Cet outil s'adresse aux administrateurs système, développeurs et DevOps cherchant à automatiser des tâches récurrentes sans erreur manuelle. Il convertit visuellement les paramètres temporels (minutes, heures, jours, mois, jours de la semaine) en expressions cron valides, avec prise en charge des intervalles, listes et caractères spéciaux (*, /, ?, L, W). La logique interne valide en temps réel les valeurs saisies, détecte les conflits entre champs et propose des suggestions contextuelles. Les développeurs l'utilisent pour configurer des planificateurs de tâches dans des environnements Unix/Linux, des conteneurs Docker, ou des services cloud comme AWS EventBridge. L'interface interactive permet de basculer entre le mode création (génération à partir de composants graphiques) et le mode analyse (décodage visuel d'expressions existantes), avec export au format texte ou JSON.",
   "usage_steps": [
-    "Ouvrez la page du Générateur d'expressions Cron",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Choisir le mode d'opération : 'Création' ou 'Analyse' via l'onglet correspondant",
+    "2. Dans le mode création, ajuster les curseurs pour définir les valeurs de minute (0-59), heure (0-23), jour du mois (1-31), mois (1-12) et jour de la semaine (0-6)",
+    "3. Utiliser les cases à cocher pour activer/désactiver les caractères spéciaux (* / L W)",
+    "4. Cliquer sur 'Valider l'expression' pour vérifier la conformité de la syntaxe et obtenir des suggestions correctives",
+    "5. Copier l'expression cron générée dans le champ de sortie en bas de page",
+    "6. Dans le mode analyse, coller une expression cron existante dans le champ de texte pour visualiser son décodage chronologique"
   ],
   "usage_examples": [
-    "Utilisez le Générateur d'expressions Cron pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Configurer une sauvegarde quotidienne de base de données à 2h30 : utiliser les curseurs pour minutes=30, heures=2, jours du mois=*, mois=*, jours de la semaine=*. L'outil génère '30 2 * * *'",
+    "Planifier une rotation horaire de logs : définir minutes=0, heures=*, avec intervalle de 1. L'expression devient '0 0/1 * * *'",
+    "Créer un job hebdomadaire d'envoi de rapports : sélectionner minutes=15, heures=9, jours du mois=*, mois=*, jours de la semaine=1 (lundi). Résultat : '15 9 * * 1'",
+    "Interpréter une expression complexe existante : coller '0 0 1 1 *' dans le mode analyse pour comprendre qu'elle représente une exécution annuelle le 1er janvier à minuit"
   ]
 }

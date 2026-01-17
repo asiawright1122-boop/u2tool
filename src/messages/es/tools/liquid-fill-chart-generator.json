@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Relleno de Líquido es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Relleno de Líquido, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Relleno de Líquido puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Relleno de Líquido ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Generador de Gráficos de Relleno Líquido es una herramienta técnica basada en SVG y D3.js que permite crear visualizaciones animadas para representar porcentajes con efectos de onda dinámicos. Utiliza algoritmos de generación de trayectorias SVG combinadas con animaciones de transformación en tiempo real mediante JavaScript. El núcleo del sistema se basa en la modificación de atributos 'path' usando funciones trigonométricas senoidales para simular movimiento de fluidos, con controles precisos sobre amplitud de onda, frecuencia y velocidad de animación. Los desarrolladores necesitan esta herramienta para integrar indicadores visuales avanzados en dashboards de monitoreo de KPIs, interfaces de usuario para aplicaciones IoT o reportes interactivos donde se requiera destacar métricas porcentuales con efectos visuales atractivos. Al generar código SVG optimizado con elementos <animateTransform>, permite personalizar gradientes de color para efectos de profundidad, y exportar tanto el código SVG como versiones estáticas en PNG con resolución ajustable. La herramienta incluye un motor de preview en tiempo real que renderiza los cambios mediante requestAnimationFrame para garantizar un rendimiento óptimo durante la configuración.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Relleno de Líquido",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Ingresa el valor porcentual (0-100) en el campo numérico 'Nivel de Relleno'",
+    "2. Selecciona el color principal del líquido usando el selector de paletas con soporte para HEX, RGB y HSL",
+    "3. Ajusta los parámetros de onda con deslizadores: amplitud (1-20px) y frecuencia (0.01-0.2 ciclos/pixel)",
+    "4. Configura la velocidad de animación mediante el selector de duración (500ms-3000ms por ciclo)",
+    "5. Activa/desactiva el efecto de degradado de profundidad con el interruptor 'Efecto 3D'",
+    "6. Previsualiza el gráfico en el viewport WebGL integrado y exporta con un clic como SVG o PNG"
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Relleno de Líquido para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Monitoreo en tiempo real de la ocupación de servidores en un dashboard DevOps, mostrando uso de CPU con ondas pulsantes que indican alertas críticas",
+    "Indicador visual de porcentaje de batería en una aplicación de IoT para dispositivos móviles, con colores que varían según nivel de carga",
+    "Panel de control médico que muestra porcentajes de saturación de oxígeno con animaciones de fluido que simulan flujo sanguíneo",
+    "Sistema de gamificación empresarial que representa el progreso de metas mensuales con gráficos que cambian de color y amplitud según cercanía al objetivo"
   ]
 }

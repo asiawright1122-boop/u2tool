@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Animaciones CSS es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Utilizando el Generador de Animaciones CSS, puedes procesar fácilmente diversos datos sin necesidad de instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Generador de Animaciones CSS puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza el Generador de Animaciones CSS inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El CSS Animation Generator es una herramienta técnica que permite diseñar animaciones CSS3 mediante un editor visual basado en webGL y JavaScript. Su motor renderiza en tiempo real marcos clave (keyframes), funciones de temporización (easing) y propiedades animables como transform, opacity o box-shadow. Los desarrolladores pueden crear secuencias complejas mediante arrastrar y soltar en una línea de tiempo no destructiva, ajustando curvas de Bézier cúbicas para controlar la aceleración. El generador incluye un selector de selectores anidados que permite aplicar animaciones a múltiples elementos con diferentes retrasos (animation-delay) y modos de relleno (animation-fill-mode). Esta herramienta resuelve el problema de la curva de aprendizaje en CSS animations, especialmente útil para implementar microinteracciones en interfaces SPA o transiciones de alto rendimiento en frameworks modernos como React o Vue. Al exportar el código, optimiza automáticamente las propiedades con prefijos (-webkit-, -moz-) y genera fallbacks para navegadores antiguos.",
   "usage_steps": [
-    "Abre la página del Generador de Animaciones CSS",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Selecciona el tipo de animación (hover, click, scroll-triggered o infinite loop) desde el panel de eventos",
+    "Configura la duración total y la función de temporización global usando el editor de curvas de Bézier",
+    "Agrega marcos clave pulsando el botón '+' y ajusta sus porcentajes en la línea de tiempo",
+    "Elige propiedades CSS a animar desde el menú desplegable (transform, color, filter, etc.)",
+    "Personaliza cada marco con valores numéricos o unidades CSS relativas (em, rem, vw)",
+    "Copia el código CSS generado en el panel lateral e implementa el HTML estructural correspondiente"
   ],
   "usage_examples": [
-    "Utiliza el Generador de Animaciones CSS para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Crear una animación de botón de pago en e-commerce con efecto de rebote al hacer hover (bounce-in effect)",
+    "Diseñar un spinner de carga personalizado con rotación progresiva y degradado de color para una dashboard",
+    "Implementar un menú hamburguesa que se transforme en X con animación smooth en dispositivos móviles",
+    "Generar una secuencia de parallax scrolling para una página de portafolio con elementos que aparecen gradualmente"
   ]
 }

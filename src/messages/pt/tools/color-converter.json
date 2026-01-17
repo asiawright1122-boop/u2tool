@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Conversor de Cor é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Com o Conversor de Cor, você pode processar diferentes dados facilmente sem a necessidade de instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Conversor de Cor pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviado para nenhum servidor. Use o Conversor de Cor imediatamente para experimentar serviços rápidos, seguros e gratuitos online.",
+  "detailed_description": "O Color Converter é uma ferramenta técnica especializada que realiza conversões precisas entre formatos de cores: HEX, RGB e HSL. Cada formato possui aplicações específicas em desenvolvimento web e design digital — HEX é amplamente usado em CSS e HTML, RGB é essencial para programação de interfaces gráficas, e HSL facilita ajustes intuitivos de matiz, saturação e luminosidade. O conversor aplica algoritmos de transformação matemática para decodificar e reinterpretar os valores, considerando aspectos como gamma correction e variações na representação hexadecimal (com ou sem o prefixo '#'). Para usuários, isso elimina erros manuais em cálculos de canais RGB ou conversões de ângulos de matiz em HSL. A ferramenta também valida automaticamente a sintaxe dos inputs, garantindo que valores fora do padrão (como RGB acima de 255 ou HSL com porcentagens inválidas) sejam rejeitados. Internamente, o parser desmonta as strings em componentes numéricos, aplica fórmulas específicas para cada conversão (como o cálculo de HSL a partir da média e diferença dos canais RGB) e normaliza os resultados para os formatos de saída. Isso é crucial para manter a consistência visual em projetos cross-platform ou ao integrar bibliotecas que exigem formatos específicos.",
   "usage_steps": [
-    "Abra a página do Conversor de Cor",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a página do Color Converter e localize o painel de entrada centralizado.",
+    "Use o seletor de formato de origem (HEX, RGB ou HSL) para definir o tipo de cor que deseja converter.",
+    "Digite o valor da cor no campo de texto correspondente, respeitando a sintaxe (ex.: #FF5733 para HEX, rgb(255, 87, 51) para RGB).",
+    "Escolha o formato de destino no segundo dropdown, abaixo da seção de resultados.",
+    "Clique no botão 'Converter' para executar a transformação e visualizar os três formatos atualizados simultaneamente.",
+    "Copie o valor convertido usando o ícone de clipboard ao lado de cada formato de saída."
   ],
   "usage_examples": [
-    "Use o Conversor de Cor para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem a necessidade de espera"
+    "Um desenvolvedor ajustando manualmente a transparência de um componente React Native precisa converter HEX para RGBA, usando o resultado RGB como base.",
+    "Um designer criando um sistema de design tokens em Figma exporta cores em HSL e converte para HEX para garantir consistência em estilos CSS.",
+    "Um QA Engineer validando acessibilidade em uma aplicação web converte cores de HEX para HSL para verificar contraste adequado segundo WCAG.",
+    "Um ilustrador digital exportando uma paleta de cores do Adobe Photoshop em RGB converte os valores para HEX para documentação técnica de um projeto."
   ]
 }

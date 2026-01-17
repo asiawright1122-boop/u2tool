@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Borde de Imagen es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Con Borde de Imagen, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas un desarrollador, diseñador o usuario general, Borde de Imagen puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa Borde de Imagen ahora para experimentar servicios rápidos, seguros y gratuitos de herramientas en línea.",
+  "detailed_description": "La herramienta Image Border es un recurso digital diseñado para mejorar la presentación y el manejo de imágenes en diversos contextos. Técnica y funcionalmente, esta herramienta permite a los usuarios añadir bordes y relleno (padding) a las imágenes con una variedad de colores personalizables. Esta acción no solo mejora la apariencia visual de las imágenes, sino que también facilita su integración en diseños web, presentaciones, y documentos impresos. Los usuarios pueden aprovechar esta herramienta para crear marcos estéticos, delimitar contenido visual o ajustar el tamaño de las imágenes para que se ajusten perfectamente a espacios predeterminados. La funcionalidad de Image Border se basa en la manipulación de los píxeles periféricos de la imagen, permitiendo el ajuste de grosor, color y posición del borde de manera precisa. Esta herramienta es especialmente útil para diseñadores gráficos, desarrolladores web y profesionales de marketing que necesitan presentar imágenes de manera profesional y coherente en sus proyectos.",
   "usage_steps": [
-    "Abre la página de la herramienta Borde de Imagen",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Carga la imagen que deseas modificar haciendo clic en el botón 'Seleccionar Imagen'.",
+    "Una vez que la imagen se ha cargado, selecciona el tipo de borde que deseas aplicar desde el menú desplegable 'Estilo del Borde'. Las opciones incluyen 'Sólido', 'Punteado', y 'Discontinuo'.",
+    "Especifica el grosor del borde en píxeles utilizando el control deslizante 'Grosor del Borde'.",
+    "Elige el color del borde utilizando el selector de color 'Color del Borde'. Puedes seleccionar un color predefinido o introducir un código hexadecimal personalizado.",
+    "Ajusta el padding (relleno) interno de la imagen para crear un espacio entre el borde y el contenido de la imagen utilizando el control deslizante 'Padding'.",
+    "Una vez que hayas configurado todos los parámetros, haz clic en 'Aplicar' para ver los cambios en tiempo real. Si estás satisfecho con el resultado, guarda la imagen modificada en tu dispositivo haciendo clic en 'Descargar Imagen'."
   ],
   "usage_examples": [
-    "Usa Borde de Imagen para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un diseñador gráfico está creando un folleto para una exposición de arte. Añade bordes dorados a las imágenes de las obras de arte para resaltarlas y darles un aspecto más lujoso, manteniendo la coherencia visual en el documento.",
+    "Un desarrollador web está diseñando un sitio web para un cliente que vende joyas. Utiliza Image Border para añadir bordes finos y de color plata a las imágenes de los productos, mejorando así la apariencia y el realce de las joyas en el sitio web.",
+    "Un fotógrafo necesita preparar un conjunto de imágenes para una galería en línea. Añade bordes blancos a todas las imágenes para que se adapten perfectamente a los marcos virtuales del sitio web de la galería, asegurando una presentación uniforme.",
+    "Un creador de contenido en redes sociales está preparando una publicación para Instagram. Utiliza la herramienta para añadir un borde negro de 5 píxeles a todas las imágenes de su proyecto, creando un look consistente y profesional para su feed."
   ]
 }

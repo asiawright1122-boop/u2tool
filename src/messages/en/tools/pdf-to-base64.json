@@ -1,14 +1,17 @@
 {
-  "detailed_description": "PDF to Base64 is a practical online tool that helps you quickly complete various tasks. Using PDF to Base64, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, PDF to Base64 can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use PDF to Base64 immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The PDF to Base64 tool converts binary PDF documents into Base64-encoded ASCII strings, enabling efficient transmission of binary data through systems designed for text handling. Base64 encoding maps 8-bit binary data to 6-bit ASCII characters using a 64-character alphabet (A-Z, a-z, 0-9, '+', '/'), with padding ('=') to align data lengths. Users often require this conversion when embedding PDFs directly into JSON payloads, XML documents, or HTML data URLs, where binary content would otherwise corrupt formatting. For example, attaching a PDF to an SMTP email (which traditionally handles ASCII) or storing a PDF signature in a database field restricted to text requires Base64 encoding. The tool processes files client-side via JavaScript FileReader API, parsing PDF headers (e.g., %PDF-1.7) and binary streams, then applying Base64 encoding without intermediate server transfers. This ensures sensitive documents remain private. Technical considerations include MIME type preservation (application/pdf) and handling PDF cross-reference tables during encoding. Output strings can exceed the original file size by ~33%, a tradeoff for text compatibility.",
   "usage_steps": [
-    "Open the PDF to Base64 tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Click 'Choose File' to select a PDF from your device (max size 50MB).",
+    "Toggle 'Preserve MIME Header' to include 'data:application/pdf;base64,' prefix for data URLs.",
+    "Click 'Convert' to initiate client-side Base64 encoding via Web Worker thread.",
+    "Review encoded output in the text area, which auto-copies to clipboard on completion.",
+    "Use 'Download Result' to save the Base64 string as a .txt file for integration into code.",
+    "Optionally verify integrity by re-decoding with browser DevTools console (atob(BASE64_STRING))."
   ],
   "usage_examples": [
-    "Use PDF to Base64 to process your data",
-    "Get processing results quickly without waiting"
+    "Embedding a 10KB invoice PDF into a JSON API request body for a document management system.",
+    "Creating a data URL for a PDF brochure to inline in a single-file HTML email template.",
+    "Transmitting a digitally signed PDF through a legacy EDI system that only accepts ASCII characters.",
+    "Storing a PDF thumbnail preview inside an SQLite database's TEXT column for an offline app."
   ]
 }

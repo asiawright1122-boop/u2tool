@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Configuração Nginx é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Configuração Nginx, você pode processar facilmente diversos dados sem a necessidade de instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a eficientemente. Seja desenvolvedor, designer ou usuário geral, o Gerador de Configuração Nginx pode te ajudar a melhorar a eficiência do trabalho. Todas as operações são realizadas localmente no seu navegador, garantindo a segurança dos seus dados e evitando que eles sejam enviados para qualquer servidor. Use o Gerador de Configuração Nginx imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Nginx Config Generator é uma ferramenta especializada para automação na criação de arquivos de configuração do servidor Nginx. Ele permite definir blocos de servidores virtuais, regras de reescrita de URL, configurações de SSL/TLS (incluindo caminhos de certificados e protocolos como HTTP/2), além de parâmetros avançados como balanceamento de carga, caching de conteúdo estático e compressão Brotli/GZIP. Desenvolvedores precisam deste recurso para evitar erros manuais em arquivos de configuração complexos, especialmente em ambientes de múltiplos domínios ou microsserviços. A ferramenta processa as entradas do usuário através de um mecanismo de template dinâmico, validando sintaxe em tempo real e aplicando melhores práticas de segurança, como headers de proteção XSS e Content-Security-Policy. O resultado é um arquivo pronto para deploy no diretório /etc/nginx/sites-available, com opção de recarregamento automático do serviço Nginx via SSH.",
   "usage_steps": [
-    "Abra a página do Gerador de Configuração Nginx",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Selecione o tipo de configuração: 'Servidor Básico', 'Proxy Reverso' ou 'Balanceamento de Carga'.",
+    "2. Preencha o campo 'Domínio' e escolha as portas de escuta (ex: 80, 443) no seletor de protocolos.",
+    "3. Configure SSL/TLS marcando 'Habilitar HTTPS' e inserindo caminhos de certificado (ex: /etc/letsencrypt/live/exemplo.com/fullchain.pem).",
+    "4. Defina regras de reescrita de URL no campo específico, usando sintaxe PCRE (Perl Compatible Regular Expressions).",
+    "5. Ative recursos avançados como 'Ativar GZIP' ou 'Cache de Imagens' através de checkboxes organizados em categorias.",
+    "6. Clique em 'Gerar Configuração' para visualizar o código final e baixe o arquivo ou copie o conteúdo para o clipboard."
   ],
   "usage_examples": [
-    "Use o Gerador de Configuração Nginx para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "1. Configurar um proxy reverso para uma aplicação Node.js rodando em localhost:3000 com SSL obtido via Let's Encrypt.",
+    "2. Criar regras de redirecionamento 301 para migração de domínio, incluindo reescrita de URLs antigas para novas estruturas.",
+    "3. Implementar balanceamento de carga entre três instâncias de um backend PHP usando algoritmo round-robin e health checks.",
+    "4. Otimizar entrega de assets estáticos com configurações de cache HTTP e compressão Brotli para um site WordPress."
   ]
 }

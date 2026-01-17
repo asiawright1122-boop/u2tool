@@ -1,15 +1,17 @@
 {
-  "detailed_description": "La Calculadora de Pintura estima cuánta pintura necesitas para tu habitación.",
+  "detailed_description": "El Calculador de Pintura es una herramienta técnica diseñada para optimizar la estimación precisa de volumen de pintura requerido en proyectos de revestimiento de superficies verticales. El algoritmo calcula el área neta de paredes aplicando correcciones por huecos (puertas, ventanas) y considerando factores como la absorbencia del sustrato, número de capas y eficiencia del tipo de pintura. Utiliza fórmulas de conversión métrica cúbica (m² a litros) ajustadas por coeficientes de rendimiento del fabricante (generalmente 0.1-0.15 L/m² por capa). Permite a usuarios evitar errores comunes en proyectos de renovación residencial o construcción comercial, donde subestimar el material genera paradas de obra, y sobrestimar implica costos innecesarios. Incorpora un sistema de ponderación para texturas rugosas que incrementan el consumo un 15-30%, y permite selección entre pinturas al látex, acrílicas o esmaltes con diferentes tasas de cobertura. Al procesar dimensiones en metros o pies y convertir automáticamente a volumen estándar de envases (galones/litros), facilita la planificación logística de compras.",
   "usage_steps": [
-    "Ingresar dimensiones de habitación",
-    "Agregar cantidad de puertas",
-    "Agregar cantidad de ventanas",
-    "Establecer número de capas",
-    "Ver pintura necesaria"
+    "Introduce las dimensiones de la pared en los campos 'Ancho' y 'Altura' usando unidades métricas o imperiales.",
+    "Selecciona el número de puertas y ventanas en los menús desplegables para restar automáticamente sus áreas predeterminadas (0.8m x 2.0m para puertas, 1.2m x 1.5m para ventanas).",
+    "Elige el tipo de pintura en el selector de opciones (látex, acrílico, esmalte) para activar su coeficiente de cobertura específico.",
+    "Especifica el número de capas requeridas (1-3) en el control deslizante 'Aplicaciones'.",
+    "Activa la casilla 'Superficie Rugosa' si la pared tiene textura para aplicar el factor de absorción adicional.",
+    "Haz clic en 'Calcular' para obtener el volumen total en litros y la recomendación de cantidad de envases estándar."
   ],
   "usage_examples": [
-    "Calcular pintura para dormitorio",
-    "Estimar cobertura de sala",
-    "Planificar pintura de toda la casa"
+    "Un salón de 5m x 3m con dos ventanas grandes y una puerta, necesitando dos capas de pintura al látex: el calculador restará 4.8m² de huecos y sugerirá 12.5 litros considerando la absorción del yeso.",
+    "Un dormitorio de 4m x 2.5m con una puerta y sin ventanas, requiriendo acabado con pintura acrílica de alta resistencia: el sistema ajustará el cálculo para superficie lisa y recomendará 3 galones.",
+    "Oficina comercial de 10m x 3m con paredes previamente lijadas y textura media, usando esmalte sintético en dos capas: el algoritmo incrementará el volumen base en un 20% por la rugosidad.",
+    "Baño de 2.5m x 1.8m con superficie cerámica a renovar, usando pintura epóxica especializada: el sistema aplicará el factor de cobertura reducido de este tipo de pintura (0.2 L/m² por capa)."
   ]
 }

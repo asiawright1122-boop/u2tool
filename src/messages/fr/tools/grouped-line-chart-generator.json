@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Générateur de Graphique Linéaire Groupé est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. En utilisant Générateur de Graphique Linéaire Groupé, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, concepteur ou utilisateur général, Générateur de Graphique Linéaire Groupé peut vous aider à améliorer l'efficacité du travail. Tout le traitement est effectué localement dans votre navigateur, garantissant la sécurité de vos données et ne sera pas téléchargé sur un serveur. Utilisez Générateur de Graphique Linéaire Groupé immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Générateur de Graphiques Linéaires Groupés est un outil de visualisation de données interactif permettant de créer des graphiques linéaires multi-séries avec un contrôle précis sur les paramètres d'affichage. Techniquement, il prend en charge l'importation de données structurées au format CSV ou JSON, puis génère des tracés vectoriels via HTML5 Canvas ou SVG, selon les préférences de l'utilisateur. Les développeurs apprécieront la possibilité de personiser les échelles logarithmiques/linéaires, d'appliquer des interpolations splines ou linéaires, et d'ajuster la transparence des courbes pour éviter les chevauchements. Ce outil répond à des besoins spécifiques comme l'analyse comparative de séries temporelles (ex : taux de conversion de campagnes marketing), la validation de modèles prédictifs (comparaison données réelles vs prédiction), ou l'optimisation A/B testing. La gestion des légendes dynamiques, l'exportation HD et l'intégration d'API pour rafraîchir les données en temps réel en font un choix technique avancé pour des applications professionnelles ou académiques.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique Linéaire Groupé",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'interface via la page 'grouped-line-chart-generator' et sélectionnez 'Nouveau projet'.",
+    "Importez un fichier CSV/JSON contenant au minimum 3 colonnes (X, Y, Série) ou utilisez l'exemple fourni.",
+    "Mappez les colonnes dans l'éditeur de données : définissez l'axe X, l'axe Y et le groupe de séries (categorical ou numérique).",
+    "Personnalisez le rendu : choisissez entre interpolations linéaires/splines, ajustez l'échelle des axes (auto, logarithmique, personnalisée).",
+    "Activez/désactivez les options de visualisation : zones d'incertitude, points de données, légende interactive, curseur de zoom.",
+    "Téléchargez le graphique généré au format SVG ou PNG 4K, ou intégrez le code HTML/JS pour l'incorporer dans une application web."
   ],
   "usage_examples": [
-    "Utilisez Générateur de Graphique Linéaire Groupé pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Comparer les performances trimestrielles de trois équipes commerciales sur un graphique avec axes secondaires pour le CA et les leads.",
+    "Visualiser les courbes de charge électrique de plusieurs bâtiments sur une période horaire, avec échelle Y personnalisée en kW.",
+    "Analyser les taux de clics de 4 variantes de bannières publicitaires A/B testées sur 30 jours, avec zones d'ombrage pour les erreurs.",
+    "Représenter les courbes de croissance bactérienne dans 5 conditions expérimentales en laboratoire, avec annotation des phases critiques."
   ]
 }

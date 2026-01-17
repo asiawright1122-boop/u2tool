@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de robots.txt est un outil pratique en ligne qui vous aide à accomplir rapidement diverses tâches. Avec le Générateur de robots.txt, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur final, le Générateur de robots.txt peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez immédiatement le Générateur de robots.txt pour expérimenter des services d'outils en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "Le générateur de robots.txt permet de créer des fichiers de configuration respectant les standards du protocole Robots Exclusion Standard (RES). Techniquement, cet outil génère des règles avec des directives comme User-agent, Disallow, Allow, Host, et Crawl-Delay, tout en gérant les caractères génériques (wildcards) tels que '*' ou '$'. Ce fichier, placé à la racine d'un serveur, contrôle l'accès des crawlers aux ressources web, ce qui est crucial pour optimiser l'exploration par les moteurs de recherche. Les utilisateurs ont besoin de ce tool pour éviter la surcharge des serveurs via des requêtes trop fréquentes, bloquer l'accès à des contenus sensibles (ex. : interfaces admin), ou encore gérer le référencement de sites complexes (multilingue, e-commerce avec pages dynamiques). Le générateur inclut des options avancées comme la spécification de sitemaps XML, la gestion des politiques distinctes pour Googlebot, Bingbot, etc., et une validation en temps réel des conflits logiques entre règles. Il traduit les choix utilisateur en syntaxe RES correcte, en s'assurant que les chemins relatifs ou les paramètres GET soient correctement encodés.",
   "usage_steps": [
-    "Ouvrez la page du Générateur de robots.txt",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Sélectionnez les User-agent cibles via un menu déroulant (ex. : Googlebot, Yandex, ou 'All Robots')",
+    "2. Utilisez les champs d'entrée pour spécifier des chemins à bloquer (ex. : /admin/) ou autoriser (ex. : /images/)",
+    "3. Ajustez le Crawl-Delay en secondes pour limiter la fréquence des requêtes par robot",
+    "4. Activez l'option 'Wildcards' pour utiliser des motifs dynamiques (ex. : /*.php$)",
+    "5. Ajoutez l'URL complète de votre sitemap XML via le champ dédié",
+    "6. Cliquez sur 'Générer' pour obtenir un fichier robots.txt validé par un parser RES intégré"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de robots.txt pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "1. Bloquer l'indexation des pages de panier d'achat dynamiques sur un site e-commerce : Utiliser 'Disallow: /cart?*' pour éviter le contenu dupliqué",
+    "2. Restreindre l'accès aux environnements de test : Créer une règle 'User-agent: *' suivie de 'Disallow: /beta/'",
+    "3. Optimiser le crawl d'un site d'actualité : Fixer un Crawl-Delay de 5 secondes pour Googlebot News",
+    "4. Gérer un site multilingue : Combiner 'Host: fr.example.com' avec des règles spécifiques aux sous-dossiers '/en/' et '/es/'"
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "detailed_description": "La Calculadora de GPA calcula tu promedio de puntos de nota a partir de las notas de las materias y las horas creditadas.",
+  "detailed_description": "Este calculador de GPA implementa un algoritmo de promedio ponderado que procesa calificaciones académicas y horas crédito según sistemas educativos específicos. Técnicamente, convierte cada calificación al valor numérico correspondiente de la escala seleccionada (como A-F, ECTS o sistema numérico) y aplica la fórmula: GPA = Σ(calificación × créditos) / Σ(créditos). Su necesidad radica en la complejidad de calcular manualmente ponderaciones en programas con múltiples escalas, períodos académicos irregulares o créditos variables por asignatura. El usuario puede seleccionar entre configuraciones predefinidas (ej. escala americana, sistema español LOMCE) o personalizar puntos por nota. La herramienta valida automáticamente la coherencia de datos mediante checksums de rango (ej. créditos ≥1, calificaciones fuera de rango 0-4.0 en sistema estándar) y ofrece desglose por componentes (ej. ciencias experimentales vs. humanidades). Diferentes a otros calculadores, permite importar planillas CSV con codificaciones específicas de universidades, ideal para estudiantes transferidos o programas duales.",
   "usage_steps": [
-    "Agregar tus materias",
-    "Ingresar notas para cada una",
-    "Ingresar horas creditadas",
-    "Seleccionar la escala de GPA",
-    "Ver el GPA calculado"
+    "1. Selecciona la escala de calificaciones usada por tu institución (ej. A-F, ECTS, numérica 0-10).",
+    "2. Introduce el número de créditos o horas contacto para cada asignatura en campos individuales.",
+    "3. Elige el valor numérico correspondiente a cada calificación usando el selector desplegable (ej. A=4.0, B+=3.5).",
+    "4. Haz clic en 'Agregar Asignatura' para registrar cada materia y su ponderación.",
+    "5. Revisa el resumen de cálculo con totales de puntos de calificación y créditos acumulados.",
+    "6. Descarga el reporte en PDF con el GPA final y el detalle de contribuciones por materia."
   ],
   "usage_examples": [
-    "Calcular GPA del semestre",
-    "Seguir el GPA acumulado",
-    "Planificar las notas necesarias"
+    "Un estudiante de ingeniería calcula su GPA tras un semestre con 5 materias de 3 a 6 créditos, incluyendo laboratorios con ponderación doble.",
+    "Un alumno transferido ajusta su GPA al sistema español convirtiendo créditos ECTS a horas presenciales para homologación.",
+    "Un postgraduado verifica que sus calificaciones actuales mantienen el GPA ≥3.0 requerido para una beca Erasmus+.",
+    "Un profesor usa la herramienta para generar informes de desempeño grupal, comparando GPA por secciones académicas."
   ]
 }

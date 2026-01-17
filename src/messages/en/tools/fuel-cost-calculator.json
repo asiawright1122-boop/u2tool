@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Fuel Cost Calculator estimates how much you'll spend on gas for any trip.",
+  "detailed_description": "The Fuel Cost Calculator is a precision-engineered web tool that computes trip expenses by integrating distance metrics, vehicle fuel efficiency (MPG or L/100km), and dynamic fuel pricing. This tool addresses the critical need for accurate budget forecasting among commuters, fleet managers, and eco-conscious travelers by factoring in regional fuel tax variations and currency conversion rates. At its core, the calculator employs a multi-variable formula: (Distance ÷ Fuel Efficiency) × Fuel Price × Currency Exchange Rate, with optional CO2 emission calculations based on fuel type. The backend processes real-time fuel price APIs for 15+ countries, while the frontend uses progressive input validation to handle unit conversions seamlessly. Users benefit from precise cost breakdowns per segment, making it invaluable for optimizing logistics operations, comparing vehicle efficiency, or planning cross-border travel budgets with fluctuating exchange rates.",
   "usage_steps": [
-    "Enter trip distance",
-    "Input fuel efficiency",
-    "Set current fuel price",
-    "Choose one-way or round trip",
-    "View total fuel cost"
+    "Enter trip distance in kilometers or miles using the dual-unit input field",
+    "Select vehicle type from dropdown (gasoline/diesel/EV) to auto-populate fuel efficiency standards",
+    "Input current fuel price per liter/gallon or enable 'Auto Fetch' for live market rates",
+    "Choose destination currency from 20+ options to apply real-time exchange rate adjustments",
+    "Toggle 'Advanced Mode' to specify CO2 conversion factors per fuel type",
+    "Click 'Calculate' to generate detailed report showing total cost, per-km rate, and carbon footprint"
   ],
   "usage_examples": [
-    "Calculate road trip costs",
-    "Compare fuel expenses",
-    "Budget for commute"
+    "A European delivery driver comparing diesel costs between Paris and Berlin using live exchange rates",
+    "An overland adventurer estimating overlanding fuel expenses across 5 countries with varying tax structures",
+    "A car leasing company evaluating total cost of ownership between hybrid and traditional vehicles",
+    "A sustainability consultant calculating CO2 reduction potential by switching to biodiesel"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique Radar est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphique Radar, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de démarrer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique Radar peut vous aider à améliorer l'efficacité de votre travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne sont pas téléversés sur aucun serveur. Utilisez immédiatement le Générateur de Graphique Radar pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le Générateur de Graphiques Radars est un outil en ligne dédié à la création de graphiques radars, une représentation graphique qui permet de visualiser et de comparer les performances sur plusieurs dimensions. Ce type de graphique est particulièrement utile pour représenter des données multi-variables, telles que les compétences d'un employé, les caractéristiques d'un produit, ou les performances d'un athlète. Les utilisateurs peuvent facilement saisir leurs données et personnaliser l'apparence du graphique en utilisant des paramètres tels que la couleur, la taille, et les étiquettes des axes. Une fois le graphique généré, il peut être exporté en format PNG ou SVG pour une intégration dans des rapports, des présentations, ou des sites web. Ce outil est basé sur des bibliothèques de visualisation de données avancées, ce qui garantit une qualité visuelle optimale et une grande flexibilité dans la personnalisation des graphiques.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique Radar",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez la page du Générateur de Graphiques Radars et cliquez sur l'onglet 'Nouveau Graphique'.",
+    "Dans la section 'Entrée des Données', saisissez le nombre de dimensions que vous souhaitez représenter. Vous pouvez en ajouter jusqu'à 10.",
+    "Pour chaque dimension, renseignez le nom de la dimension dans la colonne 'Nom' et les valeurs correspondantes dans la colonne 'Valeurs'.",
+    "Dans l'onglet 'Personnalisation', choisissez la couleur de chaque dimension, ajustez la taille des axes, et personnalisez les étiquettes si nécessaire.",
+    "Une fois que vos données sont saisies et votre graphique personnalisé, cliquez sur 'Prévisualiser' pour voir le graphique en temps réel.",
+    "Enfin, utilisez l'option 'Exporter' pour télécharger le graphique au format PNG ou SVG, selon vos besoins."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique Radar pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un recruteur peut utiliser le Générateur de Graphiques Radars pour comparer les compétences d'une dizaine de candidats sur différentes dimensions, telles que la communication, la gestion de projet, et les compétences techniques. Le graphique permet de visualiser rapidement les forces et les faiblesses de chaque candidat.",
+    "Un coach sportif peut créer un graphique radar pour évaluer les performances d'un athlète sur plusieurs critères, comme la vitesse, l'endurance, et la force. Ce graphique peut être utilisé pour suivre les progrès de l'athlète au fil du temps et identifier les domaines où il faut se concentrer.",
+    "Un entrepreneur utilise le Générateur de Graphiques Radars pour comparer les caractéristiques de plusieurs produits concurrents sur des critères tels que la qualité, le prix, et la satisfaction client. Ce graphique aide à identifier les avantages et les points faibles de chaque produit, facilitant ainsi la prise de décision.",
+    "Un professeur d'université peut créer un graphique radar pour évaluer les performances d'un étudiant sur plusieurs compétences, telles que la recherche, l'écriture, et la présentation orale. Ce graphique peut être intégré dans un rapport d'évaluation et utilisé pour discuter des points d'amélioration avec l'étudiant."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to PHP is a practical online tool that helps you quickly complete various tasks. Using JSON to PHP, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON to PHP can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON to PHP immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The JSON to PHP converter transforms structured JSON data into native PHP array syntax while preserving data types, nesting structures, and special characters. This tool employs recursive parsing algorithms to analyze JSON input, mapping objects to associative arrays and arrays to indexed arrays in PHP. It intelligently handles scalar values (strings, numbers, booleans), null values, and deeply nested structures up to 64 levels by default. Developers frequently use this tool to process API responses from web services (e.g., REST endpoints) that return JSON data requiring server-side manipulation in PHP environments. The converter also resolves Unicode escape sequences and ensures proper quote escaping for PHP compatibility. Technical implementations include validating JSON syntax through multi-pass error checking, maintaining key ordering from JSON objects, and generating output with configurable indentation levels (2-8 spaces) for readability. This tool is particularly valuable when integrating modern JavaScript frameworks with legacy PHP systems, or when migrating configuration files between JSON-based and PHP-based applications.",
   "usage_steps": [
-    "Open the JSON to PHP tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the input text area and paste valid JSON data (drag-and-drop supported)",
+    "Toggle 'Associative Arrays' checkbox to control object conversion behavior",
+    "Select quote type (single/double) using the syntax preferences dropdown",
+    "Adjust indentation level slider (2-8 spaces) for formatted output",
+    "Click 'Convert' to execute the transformation process",
+    "Copy the generated PHP array code from the output panel using the clipboard button"
   ],
   "usage_examples": [
-    "Use JSON to PHP to process your data",
-    "Get processing results quickly without waiting"
+    "Converting a Twitter API v2 response containing tweet objects into a PHP array for WordPress plugin processing",
+    "Transforming a Firebase Realtime Database JSON export into PHP array syntax for Laravel application seeding",
+    "Debugging a malformed JSON string by converting to PHP array to identify syntax issues",
+    "Migrating JavaScript application configuration files (JSON) to PHP arrays for server-side feature flag management"
   ]
 }

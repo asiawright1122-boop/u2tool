@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Waterfall Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Waterfall Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Waterfall Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Waterfall Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Waterfall Chart Generator is a specialized tool for creating sequential cumulative visualizations that decompose transitions between numerical values. Technically, it constructs charts using floating bar segments connected by diagonal connectors, where each bar represents a positive or negative delta between sequential data points. This enables precise visual tracking of how aggregated totals evolve across dimensions like time, categories, or stages. The tool's core functionality addresses the need for transparent quantitative storytelling in financial reconciliations, inventory variance analysis, and performance benchmarking. Built on a D3.js rendering engine, it processes user inputs into layered SVG elements, with color-coded bars (green for positive deltas, red for negative) and interactive tooltips displaying exact numerical changes. Users can customize baseline references, axis scales, and categorical labels to align with specific reporting standards, such as GAAP financial statements or Lean Six Sigma process metrics. The client-side JavaScript architecture ensures zero data retention while enabling real-time DOM updates during parameter adjustments.",
   "usage_steps": [
-    "Open the Waterfall Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Populate the data grid with sequential value pairs (start value, delta, category) to define cumulative transitions",
+    "Select vertical or horizontal orientation using the layout toggle in the configuration panel",
+    "Assign custom color palettes via HEX input fields for positive/negative deltas and baseline segments",
+    "Adjust axis bounds manually by dragging range sliders in the scale editor to emphasize specific value ranges",
+    "Enable connector lines between bars through the 'Path Visualization' checkbox to trace cumulative totals",
+    "Export the final chart in SVG or PNG format with resolution settings up to 4K for presentation use"
   ],
   "usage_examples": [
-    "Use Waterfall Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Visualizing monthly cash flow movements for a CFO presenting year-over-year liquidity changes to stakeholders",
+    "Mapping budget reallocations across Q3-Q4 for a project manager demonstrating resource shifts to executive leadership",
+    "Tracking warehouse inventory variance between audit cycles for a supply chain analyst identifying shrinkage patterns",
+    "Illustrating profit margin fluctuations during a product lifecycle analysis for a business intelligence dashboard"
   ]
 }

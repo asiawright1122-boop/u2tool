@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der HTTP Header Parser ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem HTTP Header Parser können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder allgemeine Nutzer sind, kann der HTTP Header Parser Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den HTTP Header Parser sofort, um schnell, sichere und kostenlose Online-Toolservices zu erleben.",
+  "detailed_description": "Der HTTP Header Parser analysiert Rohdaten von HTTP-Anfragen oder -Antworten und extrahiert strukturierte Header-Informationen gemäß RFC 7230. Das Tool zerlegt Zeilenumbrüche in Feldnamen (field-name) und Feldwerte (field-value), identifiziert registrierte IANA-Header sowie benutzerdefinierte Erweiterungen, und liefert kontextabhängige Erklärungen zu jedem Header. Entwickler nutzen es, um Sicherheitskonfigurationen (z.B. Content-Security-Policy, Strict-Transport-Security) zu validieren, Fehlkonfigurationen im Cache-Control-Management aufzudecken oder CORS-Probleme (Cross-Origin Resource Sharing) zu diagnostizieren. Die Implementierung verwendet regex-basierte Tokenisierung, gefolgt von einer semantischen Analyse, die Header in Kategorien wie 'Anforderung/Response', 'Sicherheit', 'Caching' oder 'Verbindung' klassifiziert. Besonders bei komplexen Szenarien wie der Fehlersuche in Proxy-Konfigurationen oder der Analyse von HTTP/2-Header-Blöcken bietet das Tool präzise Dekodierungen inklusive Spezifikationsverweisen.",
   "usage_steps": [
-    "Öffnen Sie die Seite des HTTP Header Parsers",
-    "Geben Sie den zu verarbeitenden Inhalt in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Anpassen Sie die Tool-Einstellungen und Optionen nach Bedarf",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Kopieren Sie Roh-HTTP-Daten (z.B. aus cURL-Ausgaben oder Browser-DevTools) in das Textfeld 'Raw HTTP Input'.",
+    "Aktivieren Sie das Kontrollkästchen 'Erweiterte Analyse' für detaillierte Spezifikationsverweise zu jedem Header.",
+    "Wählen Sie im Dropdown-Menü 'Protokollversion' zwischen HTTP/1.1 und HTTP/2, um versionsabhängige Formatierungen zu berücksichtigen.",
+    "Klicken Sie auf 'Header analysieren', um die strukturierte Ausgabe in der Tabelle zu generieren.",
+    "Nutzen Sie die Farbcodierung, um Sicherheitsrelevante Header (z.B. X-Content-Type-Options) visuell hervorzuheben.",
+    "Exportieren Sie das Ergebnis über den Button 'JSON exportieren' für die Integration in automatisierte Testskripte."
   ],
   "usage_examples": [
-    "Verwenden Sie den HTTP Header Parser, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Analyse von Set-Cookie-Headern zur Überprüfung von SameSite-Attributen während der PCI-DSS-Konformitätsprüfung.",
+    "Validierung von Upgrade-Insecure-Requests-Headern in einer HTTPS-Migrationsstrategie.",
+    "Dekodierung von Transfer-Encoding: chunked bei der Fehlersuche in Server-Sent Events (SSE).",
+    "Identifikation von veralteten Server-Headern (z.B. X-Powered-By) im Rahmen einer Sicherheitsauditaufgabe."
   ]
 }

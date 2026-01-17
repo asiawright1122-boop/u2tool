@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to XML est un outil en ligne pratique qui vous aide à terminer rapidement diverses tâches. Avec JSON to XML, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plug-ins. Cette outil a une interface simple et est facile à utiliser, ce qui vous permet de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, JSON to XML peut vous aider à améliorer votre efficacité de travail. Tous les traitements sont effectués localement dans votre navigateur, ce qui garantit la sécurité de vos données et évite leur upload sur n’importe quel serveur. Utilisez JSON to XML immédiatement pour expérimenter des services de outil en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil JSON vers XML permet de transformer des structures de données JSON en documents XML valides, en respectant les spécificités syntaxiques et sémantiques des deux formats. Techniquement, il effectue une analyse syntaxique (parsing) du JSON d'entrée pour construire un arbre syntaxique abstrait (AST), puis effectue un mappage systématique des paires clé-valeur, tableaux imbriqués et valeurs primitives vers des éléments et attributs XML. Les tableaux JSON se convertissent en séquences d'éléments répétés avec des balises parentes, tandis que les objets imbriqués deviennent des sous-arbres hiérarchiques. L'outil gère automatiquement l'échappement des caractères spéciaux via des sections CDATA, préserve les espaces de noms XML (namespaces) via des préfixes configurables, et permet d'ajouter manuellement des déclarations XML (<?xml version=\"1.0\" encoding=\"UTF-8\"?>) ou des références à des DTD/XSD. Ce processus est essentiel pour l'intégration avec des systèmes hérités nécessitant des fichiers de configuration XML, la génération de flux RSS/Atom à partir de données API JSON, ou la conformité avec des standards métier comme HL7 (santé) ou UBL (facturation électronique). L'algorithme utilise des techniques de normalisation des types de données (conversion des booléens JSON en valeurs XSD) et propose des options de formatage avancé (indentation, alignement des attributs).",
   "usage_steps": [
-    "Ouvrez la page du convertisseur JSON en XML",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l’outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'outil via la section 'Convertisseurs' du site, puis sélectionnez l'option 'JSON vers XML' dans le menu déroulant.",
+    "Collez votre code JSON dans la zone de texte principale ou utilisez le bouton 'Importer un fichier' pour charger un fichier .json.",
+    "Ajustez les paramètres avancés : définissez un nom personnalisé pour l'élément racine XML, activez l'option 'Générer des namespaces' si nécessaire, et sélectionnez l'encodage souhaité (UTF-8, ISO-8859-1).",
+    "Cliquez sur le bouton 'Convertir' pour lancer le processus d'analyse syntaxique et de transformation.",
+    "Examinez le résultat dans l'éditeur XML mis en forme automatiquement, où les erreurs potentielles (comme des clés non valides) sont surlignées en rouge.",
+    "Téléchargez le fichier XML généré via le bouton 'Exporter (.xml)' ou copiez le résultat dans votre projet via le presse-papiers sécurisé."
   ],
   "usage_examples": [
-    "Utilisez JSON to XML pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Un développeur web convertit les réponses d'une API REST (JSON) en flux XML pour alimenter un système CRM hérité incapable de traiter le JSON.",
+    "Une entreprise de e-commerce transforme ses fichiers de catalogues produits JSON en fichiers XML conformes au format Google Merchant Center pour les campagnes Ads.",
+    "Un administrateur système migre les logs d'application stockés au format JSON vers un entrepôt de données XML nécessitant des schémas XSD stricts pour l'indexation.",
+    "Un développeur mobile convertit les fichiers de configuration d'une application Android (XML) en JSON pour simplifier le versioning, puis les reconvertit après modifications."
   ]
 }

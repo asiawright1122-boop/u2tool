@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique à Entonnoir est un outil en ligne pratique qui vous aide à accomplir diverses tâches rapidement. En utilisant le Générateur de Graphique à Entonnoir, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et d'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique à Entonnoir peut vous aider à améliorer l'efficacité de votre travail. Tous les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant tout téléversement sur un serveur. Utilisez immédiatement le Générateur de Graphique à Entonnoir pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le Funnel Chart Generator est un outil en ligne dédié à la création de diagrammes enentonnoir, une représentation graphique particulièrement efficace pour visualiser les processus de conversion dans les stratégies marketing et les parcours utilisateurs. Ce type de graphique permet de montrer les étapes par lesquelles les utilisateurs passent pour atteindre un objectif spécifique, comme effectuer un achat ou remplir un formulaire. Chaque étape est représentée par une section de l'entonnoir, dont la largeur indique le nombre de utilisateurs restants à chaque étape. Les développeurs et les marketeurs utilisent ce type de visualisation pour identifier les points de perte de conversion et optimiser les parcours utilisateurs. Le Funnel Chart Generator permet non seulement de créer ces diagrammes de manière intuitive, mais aussi de les personnaliser en profondeur, en ajustant les couleurs, les étiquettes, et en exportant les résultats au format PNG ou SVG pour une intégration facile dans des rapports ou des présentations.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique à Entonnoir",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Ouvrez le Funnel Chart Generator sur le site web et localisez la section 'Données'.",
+    "Entrez les noms des étapes de votre processus de conversion dans les champs 'Étapes'. Assurez-vous que chaque étape correspond à un point clé du parcours utilisateur.",
+    "Saisissez le nombre de utilisateurs associé à chaque étape dans les champs 'Valeurs'. Ces valeurs détermineront la largeur de chaque section de l'entonnoir.",
+    "Personnalisez l'apparence de votre diagramme en utilisant les options disponibles dans la section 'Personnalisation'. Vous pouvez ajuster les couleurs, les tailles de police, et ajouter des étiquettes supplémentaires pour une meilleure lisibilité.",
+    "Prévisualisez votre funnel chart en cliquant sur le bouton 'Prévisualisation'. Cette étape vous permet de vérifier que les données et la mise en forme correspondent à vos attentes.",
+    "Une fois satisfait, exportez votre funnel chart en cliquant sur le bouton 'Exporter'. Choisissez le format de fichier souhaité (PNG ou SVG) et téléchargez le graphique sur votre ordinateur."
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique à Entonnoir pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Une entreprise de commerce électronique souhaite visualiser le taux de conversion de son parcours d'achat, de la page d'accueil jusqu'à la confirmation de commande. Elle utilise le Funnel Chart Generator pour identifier les étapes où la perte de clients est la plus importante et prendre des mesures pour améliorer ces points.",
+    "Un service marketing d'une entreprise SaaS utilise cet outil pour analyser la performance de ses campagnes de lead generation. En visualisant les étapes de conversion des prospects en clients, ils peuvent ajuster leurs stratégies pour optimiser les taux de conversion.",
+    "Un consultant en UX design crée un funnel chart pour illustrer les points de friction dans l'interface d'une application mobile. Ce diagramme est intégré dans un rapport de recommandations pour améliorer l'expérience utilisateur.",
+    "Un responsable de la gestion de projet utilise le Funnel Chart Generator pour montrer l'avancement des tâches dans un processus de développement. Chaque étape représente une phase du projet, et la largeur de l'entonnoir indique le nombre de tâches terminées par rapport au total."
   ]
 }

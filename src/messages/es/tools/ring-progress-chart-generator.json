@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos de Progreso de Anillo es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Utilizando el Generador de Gráficos de Progreso de Anillo, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos de Progreso de Anillo puede ayudarte a mejorar la eficiencia en el trabajo. Todo el procesamiento se realiza localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos de Progreso de Anillo ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Ring Progress Chart Generator es una herramienta técnica especializada en la creación de gráficos circulares de progreso basados en estándares web modernos. Utiliza gráficos vectoriales escalables (SVG) para renderizar visualizaciones dinámicas mediante cálculos de arcos y paths definidos en el DOM. El usuario define un valor porcentual entre 0 y 100, que se traduce en un arco parcial alrededor de un círculo base, con opciones avanzadas de personalización como gradientes radiales, anchos de trazo variables y animaciones de easing basadas en funciones matemáticas. La herramienta destaca por su capacidad de exportar configuraciones reutilizables en formato JSON, permitiendo integración directa con frameworks frontend. Es esencial para desarrolladores que requieren indicadores visuales de progreso en dashboards de aplicaciones SaaS, sistemas de monitoreo de servidores o interfaces de IoT, donde la precisión en la representación de estados intermedios es crítica. Su motor interno procesa en tiempo real los valores mediante scripts de JavaScript vanilla, optimizados para rendimiento sin dependencias externas.",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos de Progreso de Anillo",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al generador a través de la barra de búsqueda en la categoría 'charts'",
+    "Configura el valor porcentual en el input numérico (0-100) con precisión de decimales",
+    "Ajusta el color primario mediante el selector de paletas con soporte para HEX y RGB",
+    "Modifica el ancho de trazo usando el slider de 2px a 20px con preview en vivo",
+    "Activa animaciones de carga desde el dropdown 'transition type' con opciones como 'elastic' o 'linear'",
+    "Exporta el código SVG o JSON a través del botón 'copy to clipboard' para integración directa"
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos de Progreso de Anillo para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Visualización en tiempo real del progreso de carga de archivos grandes en una aplicación de edición de video web",
+    "Dashboard de control médico mostrando porcentaje de cumplimiento en rutinas de rehabilitación diarias",
+    "Indicador de batería para dispositivos móviles con representación circular en una PWA de productividad",
+    "Sistema de gamificación en e-learning que muestra el avance de cursos completados por usuarios"
   ]
 }

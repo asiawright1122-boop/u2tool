@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Keyword Density Checker analyzes your content to show word frequency and density percentages.",
+  "detailed_description": "The Keyword Density Checker performs lexical analysis on textual content by calculating term frequency (TF) and inverse document frequency (IDF) metrics to determine keyword prominence. This tool tokenizes input text into unigrams, bigrams, and trigrams, then applies natural language processing (NLP) techniques to filter stop words, normalize case sensitivity, and eliminate special characters. Using statistical algorithms, it computes each keyword's frequency distribution and density percentage relative to total word count. Advanced features include part-of-speech tagging to differentiate between homonyms and morphological analysis for root word identification. Developers and SEO specialists use this tool to optimize content for search engine algorithms, identify semantic relevance patterns, and maintain optimal keyword ratios without overstuffing. The tool's backend leverages regular expressions for text parsing and generates JSON-formatted output containing frequency matrices, density scores, and comparative analysis against industry benchmarks.",
   "usage_steps": [
-    "Paste your content",
-    "Set analysis options",
-    "Click analyze",
-    "View keyword stats",
-    "Optimize content"
+    "Paste raw text into the input text area or upload a .txt/.docx file for analysis",
+    "Adjust processing options: enable 'Stem Keywords' for root form analysis or 'Case-Sensitive Mode' for exact matching",
+    "Click 'Process Text' to initiate lexical analysis and generate frequency distributions",
+    "Review the keyword matrix displaying term frequency (TF), inverse document frequency (IDF), and combined TF-IDF scores",
+    "Analyze density visualization graphs showing keyword prominence across text segments",
+    "Export results as CSV or JSON for integration with SEO audit tools or content management systems"
   ],
   "usage_examples": [
-    "Check blog post SEO",
-    "Analyze article keywords",
-    "Optimize product descriptions"
+    "A content marketer evaluates a 2000-word blog post to ensure primary keywords appear between 0.5-3% density without triggering spam filters",
+    "An SEO specialist identifies latent semantic indexing (LSI) keywords in competitor content to enhance topical relevance",
+    "A technical writer verifies consistent terminology usage across API documentation sets using n-gram analysis",
+    "A digital publisher detects keyword stuffing patterns in user-generated content using anomaly detection thresholds"
   ]
 }

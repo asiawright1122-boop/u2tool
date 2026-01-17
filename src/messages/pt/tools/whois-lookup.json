@@ -1,14 +1,17 @@
 {
-  "detailed_description": "A Pesquisa WHOIS é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando a Pesquisa WHOIS, você pode processar facilmente várias informações sem precisar instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use eficientemente. Seja um desenvolvedor, designer ou usuário geral, a Pesquisa WHOIS pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e evitando que sejam enviados a qualquer servidor. Use a Pesquisa WHOIS imediatamente para experimentar serviços de ferramentas online gratuitas, rápidas e seguras.",
+  "detailed_description": "O WHOIS Lookup é uma ferramenta técnica que permite consultar registros de domínios em bases de dados gerenciadas por registradoras e autoridades de TLDs (Top-Level Domains). Ele utiliza o protocolo WHOIS (RFC 3912) para recuperar informações como status do domínio, datas de registro/renovação, servidores de nomes delegados (NS), dados de contato do registrante e servidores de autoridade. Desenvolvedores e administradores de redes utilizam essa ferramenta para verificar a disponibilidade de domínios, diagnosticar inconsistências em propagação DNS, identificar responsáveis por infraestrutura maliciosa ou validar configurações de domínios em ambientes de staging. O funcionamento ocorre através de requisições TCP/IP na porta 43, onde a query é roteada para servidores WHOIS autoritativos com base na extensão do domínio (.com/.org/.br), retornando dados brutos estruturados em formato padronizado ou alternativamente em formato RDAP (Registration Data Access Protocol) para conformidade GDPR. A ferramenta processa e exibe os resultados em tempo real, incluindo campos como 'Creation Date', 'Registrar', 'DNSSEC' e 'Registrant Organization' quando disponíveis.",
   "usage_steps": [
-    "Abra a página da ferramenta de Pesquisa WHOIS",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a interface web e localize a barra de pesquisa rotulada 'Digite um domínio ou IP:'",
+    "Insira o nome de domínio completo (ex: exemplo.com.br) ou um endereço IPv4/IPv6 no campo",
+    "Ative a opção 'Mostrar resultados completos' para exibir entradas WHOIS brutas ou desative para versão resumida",
+    "Clique no botão 'Realizar WHOIS' para iniciar a consulta ao servidor autoritativo",
+    "Analise os dados exibidos na tabela organizada por categorias técnicas (Domínio, Registrante, Servidores DNS)",
+    "Use o botão 'Exportar JSON' para obter os dados em formato estruturado para integração com scripts ou sistemas"
   ],
   "usage_examples": [
-    "Use a Pesquisa WHOIS para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Verificar se um domínio desejado está disponível para registro, analisando o campo 'Domain Status' para identificar se está marcado como 'clientDeleteProhibited'",
+    "Diagnosticar problemas de propagação DNS comparando os servidores NS retornados com as configurações do registrador",
+    "Identificar a origem de atividade maliciosa ao investigar domínios associados a phishing, obtendo detalhes do registrante e provedor de hosting",
+    "Auditar conformidade de registros corporativos validando se os campos de contato técnicos e administrativos estão atualizados"
   ]
 }

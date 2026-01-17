@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Générateur de Graphique Mélange est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Utilisez le Générateur de Graphique Mélange pour traiter facilement diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Générateur de Graphique Mélange peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas téléchargées sur aucun serveur. Utilisez immédiatement le Générateur de Graphique Mélange pour découvrir des services rapides, sécurisés et gratuits en ligne.",
+  "detailed_description": "Le Générateur de Graphiques Mixtes permet de créer des visualisations combinant diagrammes en barres et courbes linéaires avec des échelles d'axes distinctes. Cette fonctionnalité s'adresse aux développeurs et analystes confrontés à la représentation de séries de données hétérogènes (ex: valeurs discrètes vs. tendances continues) ou nécessitant des comparaisons multi-échelles (ex: température en degrés vs. taux d'humidité en pourcentage). Techniquement, l'outil utilise des bibliothèques de rendu SVG dynamique avec gestion de binding de données JSON, permettant l'association de chaque série à un axe Y primaire ou secondaire. L'algorithme de scaling adaptatif ajuste automatiquement les intervalles des axes en fonction des plages de valeurs, tout en conservant la possibilité de personnalisation manuelle via des paramètres de configuration avancée. Les interactions utilisateur déclenchent des recalculs en temps réel grâce à un moteur d'écoute d'événements optimisé pour les grandes masses de données.",
   "usage_steps": [
-    "Ouvrez la page de l'outil Générateur de Graphique Mélange",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la case de saisie",
-    "Ajustez les options et les paramètres de l'outil comme nécessaire",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "1. Sélectionnez les types de graphiques (barres/linéaire) pour chaque série dans le panneau de configuration latéral",
+    "2. Importez vos données via le tableau éditable ou collez un JSON structuré avec clés X/Y1/Y2",
+    "3. Associez chaque série de données à un axe Y (gauche ou droit) via le menu déroulant correspondant",
+    "4. Ajustez les plages d'échelle manuellement en saisissant les valeurs min/max dans les champs dédiés",
+    "5. Personnalisez les styles (couleurs, épaisseurs, légendes) dans l'onglet 'Apparence' en utilisant les sélecteurs de palette et de forme",
+    "6. Téléchargez le graphique généré au format SVG ou copiez le code d'intégration HTML/JS pour l'incorporer à votre application"
   ],
   "usage_examples": [
-    "Utilisez le Générateur de Graphique Mélange pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Visualiser les ventes mensuelles (barres) vs. trafic web (ligne) avec échelles distinctes sur un dashboard marketing",
+    "Comparer les températures quotidiennes (linéaire) et précipitations (barres) dans une application météorologique",
+    "Analyser l'évolution des cours boursiers (linéaire à gauche) et volumes de transactions (barres à droite) sur une plateforme financière",
+    "Représenter les budgets prévisionnels (barres) vs. dépenses réelles (linéaire) avec axes adaptés dans un outil de gestion comptable"
   ]
 }

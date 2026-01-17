@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Convertisseur Chinois est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Convertisseur Chinois, vous pouvez facilement traiter diverses données sans installer d'aucun logiciel ou plugin. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez un développeur, un designer ou un utilisateur général, le Convertisseur Chinois peut vous aider à améliorer l'efficacité de votre travail. Toute la traitement se fait localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas envoyées sur aucun serveur. Utilisez immédiatement le Convertisseur Chinois pour expérimenter des services d'outils en ligne rapides, sûrs et gratuits.",
+  "detailed_description": "Le Chinese Converter est un outil technique de traitement de caractères chinois permettant une conversion précise entre les jeux de caractères Simplifiés (Hànzì pinyin) et Traditionnels (Hànzì fan-t'iz). Contrairement aux méthodes basiques de remplacement unidirectionnel, cet outil utilise des tables de correspondance bidimensionnelles conformes aux normes Unicode 15.0, intégrant des algorithmes avancés de désambiguïsation contextuelle. La conversion s'appuie sur le projet OpenCC étendu, optimisé pour gérer les variantes régionales (comme les différences entre le chinois de Chine continentale et celui de Taïwan). Chaque caractère est analysé via un moteur NLP qui identifie les glyphes ambigus avant d'appliquer des règles de transformation basées sur le contexte syntaxique. Ce processus préserve les nuances lexicales tout en maintenant la cohérence orthographique. Des développeurs web ont besoin de cet outil pour adapter le contenu à différents publics (SEO localisé, compatibilité de bases de données), tandis que les chercheurs l'utilisent pour normaliser des corpus textuels historiques. L'implémentation utilise des arbres de décision binaire pour optimiser la vitesse de traitement, même sur de grands volumes de texte.",
   "usage_steps": [
-    "Ouvrez la page du Convertisseur Chinois",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la boîte de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Sélectionnez le mode d'entrée : zone de texte ou import de fichier (.txt/.srt)",
+    "Activez le bouton 'Traditionnel vers Simplifié' ou 'Simplifié vers Traditionnel' selon votre besoin",
+    "Collez votre contenu dans l'éditeur rich-text avec support de la coloration syntaxique",
+    "Cochez l'option 'Préserver les tons' si vous travaillez avec du pinyin annoté",
+    "Utilisez le sélecteur de variantes régionales pour spécifier 'Chine continentale' ou 'Taïwan'",
+    "Téléchargez le résultat au format .utf8 ou copiez-le directement depuis la console de débogage"
   ],
   "usage_examples": [
-    "Utilisez le Convertisseur Chinois pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un développeur d'applications mobiles convertit les étiquettes d'interface pour un lancement simultané à Shanghai et à Hong Kong",
+    "Un chercheur en sinologie normalise des citations de textes classiques pour une publication académique internationale",
+    "Un traducteur professionnel traite des contrats juridiques nécessitant une précision absolue dans les termes techniques",
+    "Un designer graphique convertit des caractères pour garantir la compatibilité avec des polices OpenType anciennes sur macOS"
   ]
 }

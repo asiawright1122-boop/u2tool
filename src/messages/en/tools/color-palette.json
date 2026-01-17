@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Color Palette Generator is a practical online tool that helps you quickly complete various tasks. Using Color Palette Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Color Palette Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Color Palette Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Color Palette Generator is a web-based algorithmic design tool that computes harmonious color schemes using advanced color theory principles. It employs HSL (Hue, Saturation, Lightness) color space calculations to generate mathematically accurate palettes including complementary (180° hue opposition), analogous (adjacent hues within 30°-60°), and triadic (evenly spaced 120° hues) combinations. The tool leverages the CIE Lab* perceptual color model to ensure optimal contrast ratios and accessibility compliance, automatically adjusting chromatic values through sigmoidal lightness curves to maintain visual consistency across shades. Designers and developers use this tool for creating cohesive UI/UX themes, branding materials, and accessible web content, as it programmatically derives color variations while preserving aesthetic harmony. The core algorithm utilizes vector math to traverse the cylindrical HSV color space, generating tints, shades, and tones with adjustable gamma correction for screen-accurate representation.",
   "usage_steps": [
-    "Open the Color Palette Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the interactive color wheel and select a base hue using the pointer or input HEX/RGB values manually",
+    "Choose a harmony mode from the dropdown: Complementary, Analogous, Triadic, or Monochromatic",
+    "Adjust the saturation spread slider (±30%) and lightness range (10%-90%) to define palette boundaries",
+    "Enable 'Accessibility Check' to validate WCAG 2.1 contrast ratios between color pairs",
+    "Click 'Generate' to create the optimized palette with 5-12 variant swatches per scheme",
+    "Export results as SCSS maps, CSS variables, or download as ACO Photoshop palette file"
   ],
   "usage_examples": [
-    "Use Color Palette Generator to process your data",
-    "Get processing results quickly without waiting"
+    "A web developer creating a dark mode interface needs triadic color sets with 4.5:1 minimum contrast against #1A1A1A background",
+    "Brand designer developing a seasonal product line requires analogous hues within 45° of Pantone 18-4052 Classic Blue",
+    "Game UI artist optimizing health/mana bars needs complementary red/cyan variants with equal perceived brightness",
+    "Data visualization engineer generating 12-category diverging color scales for heatmaps with CVD-friendly differentiation"
   ]
 }

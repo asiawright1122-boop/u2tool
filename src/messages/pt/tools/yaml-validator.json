@@ -1,15 +1,17 @@
 {
-  "detailed_description": "O Validador de YAML verifica seus arquivos YAML por erros de sintaxe e problemas estruturais. Receba mensagens de erro detalhadas com números de linha para depuração rápida.",
+  "detailed_description": "O YAML Validator é uma ferramenta técnica especializada para análise rigorosa de documentos YAML, identificando inconsistências na sintaxe e estrutura conforme as especificações do formato (YAML 1.2). Ele verifica problemas como indentação incorreta, uso inadequado de âncoras e aliases, delimitadores mal formatados, tokens inválidos e desvios de esquema definido. Desenvolvedores precisam deste instrumento para depurar arquivos de configuração críticos em sistemas como Kubernetes, Ansible ou pipelines CI/CD, onde erros silenciosos podem causar falhas em implantações ou execuções automatizadas. Internamente, o validador utiliza um parser baseado em algoritmos LL(1) para processar o documento linha a linha, comparando tokens gerados contra regras gramaticais e, opcionalmente, contra um schema JSON Schema fornecido. O resultado inclui diagnósticos precisos com números de linha, tipo de erro (ex: 'mismatched indentation level') e sugestões técnicas para correção, como ajustar níveis de indentação ou corrigir tipos de dados incompatíveis.",
   "usage_steps": [
-    "Cole seu conteúdo YAML",
-    "Clique em Validar para verificar a sintaxe",
-    "Revise quaisquer mensagens de erro",
-    "Corrija problemas com base no feedback",
-    "Verifique o YAML corrigido"
+    "Acesse a ferramenta 'yaml-validator' pelo menu de desenvolvimento",
+    "Cole seu código YAML na área de texto ou faça upload de um arquivo .yml",
+    "Marque a opção 'Validar com Schema' se quiser comparar contra um esquema JSON Schema colado na área específica",
+    "Clique no botão 'Processar YAML' para iniciar a análise",
+    "Revise os erros listados no painel inferior, incluindo localização exata (linha:coluna) e descrição técnica",
+    "Edite o documento na aba 'Código' usando o destaque de sintaxe para corrigir problemas e clique em 'Revalidar'"
   ],
   "usage_examples": [
-    "Validar configurações do Kubernetes",
-    "Verificar arquivos do Docker Compose",
-    "Depurar pipelines CI/CD"
+    "Um engenheiro de DevOps identifica um erro de 'nested sequence misalignment' em um manifesto Kubernetes, corrigindo a formatação antes de aplicar o deployment",
+    "Um desenvolvedor verifica inconsistência em arquivo de configuração Ansible contendo um alias mal definido ('<<: *base_config'), evitando execução com falha",
+    "Um time de QA valida se um arquivo .gitlab-ci.yml respeita o schema oficial, garantindo compatibilidade com a versão do runner",
+    "Um arquiteto confere se um documento OpenAPI 3.0 usando extensões YAML ($ref, !include) está estruturado corretamente para ferramentas de geração de código"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Convertir JSON en Swift est un outil pratique en ligne qui vous aide à accomplir diverses tâches rapidement. Avec Convertir JSON en Swift, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, Convertir JSON en Swift peut vous aider à améliorer votre efficacité de travail. Tous les traitements se font localement dans votre navigateur, assurant la sécurité de vos données et empêchant leur upload sur n'importe quel serveur. Utilisez Convertir JSON en Swift immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil JSON to Swift permet de transformer des objets JSON en structures Swift fortement typées, optimisées pour l'utilisation avec le protocole Codable. Il analyse récursivement la hiérarchie JSON pour générer des structs imbriquées correspondant aux schémas complexes, en inférant automatiquement les types Swift (Int, String, Date, Array, Dictionary, etc.) à partir des valeurs d'exemple. Ce convertisseur est essentiel pour les développeurs iOS/macOS intégrant des API REST, car il élimine le travail manuel de création de modèles de données et réduit les erreurs de sérialisation. Techniquement, l'outil utilise un analyseur syntaxique JSON qui construit une représentation AST (Abstract Syntax Tree) avant d'appliquer des règles de mapping vers le système de types Swift, en gérant des cas spécifiques comme les clés avec des espaces ou les valeurs optionnelles. Les structs générées incluent des initializers personnalisés et des implémentations conformes au protocole Codable, prêtes à l'emploi dans des projets SwiftUI ou UIKit.",
   "usage_steps": [
-    "Ouvrez la page du convertisseur JSON en Swift",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Collez votre JSON dans l'éditeur de code syntaxiquement coloré à gauche de l'interface",
+    "Activez l'option 'Générer structs imbriquées' pour les objets à plusieurs niveaux",
+    "Ajustez les préférences de nommage via le menu déroulant (PascalCase, snake_case, etc.)",
+    "Cliquez sur le bouton 'Convertir' pour déclencher l'analyse syntaxique et la génération de code",
+    "Revoyez les structs Swift affichés dans le panneau de droite, avec indication des types inférés",
+    "Copiez le code généré via le bouton 'Copier tout' ou téléchargez-le en tant que fichier .swift"
   ],
   "usage_examples": [
-    "Utilisez Convertir JSON en Swift pour traiter vos données",
-    "Obtenez rapidement les résultats du traitement sans attendre"
+    "Intégration d'une API météo retournant des données imbriquées (températures, prévisions horaires, informations de localisation)",
+    "Création automatique de modèles pour des réponses d'authentification JWT avec tokens et métadonnées utilisateur",
+    "Génération de structs pour un catalogue de produits e-commerce avec attributs dynamiques et variantes de prix",
+    "Transformation de données de chat en temps réel avec gestion de messages hiérarchiques et réactions utilisateurs"
   ]
 }

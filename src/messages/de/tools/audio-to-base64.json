@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Audio zu Base64 ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Audio zu Base64 können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Audio zu Base64 kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Audio zu Base64 sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der Audio-to-Base64-Encoder wandelt beliebige Audio-Dateien (WAV, MP3, OGG etc.) in eine Base64-kodierte Zeichenkette um, die das Binärformat in ASCII-Zeichen abbildet. Diese Umwandlung folgt dem RFC 4648-Standard, der 6-Bit-Blöcke des Originaldatenstroms in 88 verschiedene ASCII-Zeichen (A-Z, a-z, 0-9, +, /) projiziert. Entwickler benötigen diese Funktionalität, um Audioinhalte direkt in Webanwendungen einzubetten – beispielsweise als Data-URL im HTML5-Audio-Tag, bei der Übertragung durch textbasierte APIs (z.B. JSON-RPC) oder zum Verschlüsseln von Audiodaten in Konfigurationsdateien. Das Tool verarbeitet die hochgeladene Datei im Browser mittels FileReader-API, liest den Binärinhalt asynchron ein und führt die Base64-Kodierung über window.btoa() aus. Dabei wird der MIME-Type automatisch erkannt oder manuell ausgewählt, um korrekte Data-URI-Schemata (z.B. data:audio/wav;base64,[...] zu generieren. Besonders bei der Implementierung von WebAssembly-basierten Audio-Editoren oder serverlosen Datei-Uploads bietet dieser Encoder entscheidende Vorteile durch die Vermeidung separater Datei-Endpunkte.",
   "usage_steps": [
-    "Öffnen Sie die Audio zu Base64-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "1. Klicken Sie auf 'Datei auswählen', um eine WAV-, MP3- oder OGG-Datei von Ihrem Gerät zu laden.",
+    "2. Wählen Sie im Dropdown-Menü den gewünschten MIME-Type (z.B. audio/mpeg für MP3) aus.",
+    "3. Aktivieren Sie per Checkbox die Option 'Padding-Zeichen entfernen', falls '='-Anhänge im Output nicht benötigt werden.",
+    "4. Klicken Sie auf 'Starte Kodierung', um den asynchronen Konvertierungsprozess zu initiieren.",
+    "5. Überprüfen Sie den generierten Base64-String im Ausgabefeld auf Vollständigkeit.",
+    "6. Nutzen Sie die Zwischenablage-Schaltfläche 'In Zwischenablage kopieren' für die direkte Integration des Codes."
   ],
   "usage_examples": [
-    "Verwenden Sie Audio zu Base64, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Einbindung eines Sprachnachrichten-Players in eine Single-Page-Application ohne externe Serveranbindung durch direkte Einbettung als Base64 Data-URI.",
+    "Vorbereitung von Audiodaten für Amazon Transcribe API, die bei JSON-basierten Requests Base64-kodierte Inhalte im Request Body erfordert.",
+    "Erstellung von testbaren Mock-Daten für Webanwendungen, die Audiodateien als Strings im localStorage speichern müssen.",
+    "Versand von Sprachaufnahmen per E-Mail im HTML-Format, wobei MP3-Daten als eingebettete Objekte im MIME-Body integriert werden."
   ]
 }

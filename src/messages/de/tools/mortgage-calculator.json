@@ -1,16 +1,17 @@
 {
-  "detailed_description": "Der Kreditrechner ist ein umfassendes Werkzeug für Hypotheken, das Ihnen hilft, monatliche Raten, Gesamtkosten und detaillierte Tilgungspläne zu berechnen. Geben Sie Hauspreis, Anzahlung, Zinssatz und Kreditlaufzeit ein, um sofortige Ergebnisse zu erhalten. Unterstützung für zusätzliche Zahlungen, um zu sehen, wie Sie Ihre Hypothek schneller tilgen können.",
+  "detailed_description": "Der Mortgage Calculator ist ein spezialisierter Finanzrechner, der auf der Amortisationsformel basiert und monatliche Hypothekenzahlungen unter Berücksichtigung von Zinssätzen, Tilgungsperioden und zusätzlichen Parametern wie variablen Zinsen oder Sondertilgungen berechnet. Technisch gesehen verwendet das Tool den Effektivzinssatz (EAR) zur präzisen Ermittlung der Zahlungsstruktur und generiert einen detaillierten Tilgungsplan mit Kapitalanteil, Zinsanteil und Restschuld pro Periode. Nutzer profitieren von der Möglichkeit, verschiedene Finanzierungsszenarien zu simulieren, beispielsweise die Auswirkungen unterschiedlicher Zinsbindungsfristen oder die Kalkulation von Gesamtzinsen über die Laufzeit. Die Eingabe erfolgt über formularbasierte Felder mit Validierung für Währungswerte, Zinsstaffeln und Tilgungsmodi. Die Berechnung erfolgt clientseitig in Echtzeit durch JavaScript-Algorithmen, die auf der Formel für geometrisch fortschreitende Zahlungsreihen basieren. Besonders hervorzuheben ist die Unterstützung von nicht-standardisierten Tilgungsmodellen, wie sie bei Baukindergeld oder progressiven Rückzahlungsplänen erforderlich ist.",
   "usage_steps": [
-    "Geben Sie den Hauspreis ein",
-    "Geben Sie den Betrag der Anzahlung ein",
-    "Setzen Sie den jährlichen Zinssatz",
-    "Wählen Sie die Kreditlaufzeit (10-30 Jahre)",
-    "Optional zusätzliche Monatsraten hinzufügen",
-    "Monatliche Raten und Tilgungsplan betrachten"
+    "Geben Sie den Kreditbetrag in das Feld „Darlehenssumme (€)“ ein, z.B. 250000.",
+    "Legen Sie den nominalen Jahreszinssatz im Prozentfeld fest, z.B. 4,5%.",
+    "Wählen Sie die Zinsbindungsdauer aus dem Dropdown-Menü (5, 10 oder 15 Jahre).",
+    "Aktivieren Sie ggf. den Schieberegler für „Sondertilgung“ und geben Sie einen Betrag pro Jahr ein.",
+    "Klicken Sie auf „Berechnung starten“, um die Ergebnisse zu generieren.",
+    "Analysieren Sie den interaktiven Tilgungsplan mit Monatsansicht und Zinsanteilsgraphik."
   ],
   "usage_examples": [
-    "Berechnen Sie die Monatsraten für ein Haus im Wert von 300.000 $",
-    "Vergleichen Sie 15-jährige vs. 30-jährige Hypothekendarlehen",
-    "Sehen Sie, wie zusätzliche Zahlungen die Gesamtkosten senken"
+    "Ein Paar vergleicht zwei Kreditangebote mit unterschiedlichen Zinsbindungen, um die langfristigen Zinskosten zu bewerten.",
+    "Ein Selbständiger simuliert die Auswirkungen von jährlichen Sondertilgungen in Höhe von 2% der Restschuld auf die Laufzeit.",
+    "Ein Investor berechnet den Unterschied zwischen einem Festzinssatz und einem variablen Zinssatz mit Cap-Funktion.",
+    "Ein Bauherr prüft, wie sich ein höherer Anfangstilgungssatz von 3% statt 1% auf die Gesamtzinsbelastung auswirkt."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Validador UUID es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Validador UUID, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Validador UUID puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Validador UUID inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Validador UUID es una herramienta especializada que verifica la integridad estructural y semántica de cadenas UUID (Universally Unique Identifier) según los estándares RFC 4122 y UUID 1.0. Técnicamente, el proceso implica analizar el formato hexadecimal (32 caracteres divididos en 5 segmentos), validar la versión (1-5) y el variant code (normalmente 10xx en binario), y verificar la coherencia del algoritmo subyacente (como el basado en timestamp para UUIDv1 o el hash SHA-1 en UUIDv5). Los desarrolladores necesitan esta herramienta para garantizar la integridad de identificadores únicos utilizados en bases de datos NoSQL, sistemas distribuidos o APIs RESTful, donde un UUID inválido podría causar fallos en la sincronización de datos o errores de autenticación. Internamente, el validador aplica expresiones regulares específicas para cada versión, desglosa los campos de tiempo y espacio de nombres, y ejecuta cálculos de paridad para detectar inconsistencias en el checksum implícito de ciertas versiones.",
   "usage_steps": [
-    "Abre la página de la herramienta Validador UUID",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega la cadena UUID en el campo de texto 'Cadena a Validar'",
+    "Selecciona las versiones permitidas usando los checkboxes (v1, v2, v3, v4, v5)",
+    "Activa la opción 'Verificar Variantes' si requieres comprobación estricta del formato binario",
+    "Haz clic en el botón 'Validar UUID' para iniciar el análisis",
+    "Revisa el panel de resultados que muestra: versión detectada, formato hexadecimal válido, checksum correcto y variant code compatible",
+    "Utiliza el botón 'Detalles Técnicos' para ver el desglose hexadecimal de los campos de timestamp, nodo MAC o espacio de nombres"
   ],
   "usage_examples": [
-    "Usa Validador UUID para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador backend verifica UUIDs generados por una API antes de almacenarlos en una base de datos Cassandra para evitar errores de serialización",
+    "Un QA engineer valida que los tokens de autenticación OIDC contengan UUIDv4 correctamente formateados según la especificación OpenID",
+    "Un arquitecto de sistemas distribuidos confirma que los identificadores de transacción siguen el estándar UUIDv1 con marca de tiempo válida",
+    "Un especialista en ciberseguridad analiza logs para detectar UUIDs maliciosamente manipulados que intenten explotar vulnerabilidades en parsers de UUID"
   ]
 }

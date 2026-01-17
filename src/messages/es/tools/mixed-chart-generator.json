@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Gráficos Mixtos es una herramienta en línea práctica que te ayuda a completar rápidamente varias tareas. Utilizando el Generador de Gráficos Mixtos, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, el Generador de Gráficos Mixtos puede ayudarte a mejorar la eficiencia en tu trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa el Generador de Gráficos Mixtos ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "El Mixed Chart Generator permite crear visualizaciones combinadas de barras y líneas con dos series de datos que operan en escalas distintas. Esta herramienta es ideal para comparar conjuntos de información con magnitudes heterogéneas, como temperaturas máximas (°C) versus precipitaciones mensuales (mm) en análisis climático. Su funcionalidad técnica se basa en un motor de renderizado que soporta ejes Y primarios y secundarios con rangos independientes, utilizando bibliotecas de visualización basadas en SVG/Canvas para garantizar precisión en la representación. Los usuarios pueden definir escalas logarítmicas, aplicar normalización de datos o activar modos de apilamiento para barras, características que no ofrecen herramientas convencionales. Internamente, el generador procesa datos en formato JSON o CSV, convierte las series a objetos de tipo 'Bar' y 'Line' según la configuración del usuario, y sincroniza los ejes X para mantener alineación temporal o categórica. Su utilidad es crítica en campos como la economía (comparar PIB nominal vs. inflación), la medicina (variación de biomarcadores vs. dosis de medicamento) o el marketing digital (tráfico web vs. tasas de conversión).",
   "usage_steps": [
-    "Abre la página del Generador de Gráficos Mixtos",
-    "Introduce o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Ingresa al generador y selecciona el modo de entrada de datos (CSV, JSON o formulario interactivo).",
+    "2. Define las columnas para la serie primaria (barras) y secundaria (líneas) en la tabla de edición, especificando si requieres escalas logarítmicas.",
+    "3. Asigna colores y estilos a cada serie mediante el panel de personalización, incluyendo grosor de líneas y opacidad de barras.",
+    "4. Configura los rangos personalizados para ambos ejes Y usando los controles deslizantes en la sección 'Ejes y Escalas'.",
+    "5. Activa la leyenda interactiva y ajusta las etiquetas de los ejes X e Y en la pestaña 'Annotaciones'.",
+    "6. Exporta el gráfico final en formato SVG, PNG o PDF, o copia el código HTML/JS para integrarlo en una aplicación web."
   ],
   "usage_examples": [
-    "Usa el Generador de Gráficos Mixtos para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Comparar el crecimiento anual de suscriptores (barras) contra los ingresos por membresía (línea) en plataformas SaaS, donde las magnitudes difieren en órdenes de magnitud.",
+    "Visualizar la correlación entre horas de estudio (barras) y calificaciones obtenidas (línea) en análisis educativo, usando escalas lineales.",
+    "Mostrar el consumo eléctrico mensual (barras) versus eficiencia energética (línea) en informes de sostenibilidad, aplicando normalización de datos.",
+    "Representar el volumen de ventas (barras) y el margen de beneficio (línea) en análisis financiero, con ejes Y independientes para evitar distorsiones visuales."
   ]
 }

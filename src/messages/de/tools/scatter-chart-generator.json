@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Streudiagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Streudiagramm-Generator können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder einfacher Benutzer sind, Streudiagramm-Generator kann Ihnen dabei helfen, die Arbeitsleistung zu verbessern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie Streudiagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Toolservices zu erleben.",
+  "detailed_description": "Der Scatter Chart Generator ist ein webbasiertes Analysetool zur Erstellung von Streudiagrammen für die visuelle Untersuchung bivariater Verteilungen. Technisch gesehen verarbeitet das Tool CSV- oder tabellarische Daten im Client-Browser mittels JavaScript-Bibliotheken wie D3.js und ermöglicht die Zuordnung numerischer Variablen zu X/Y-Achsen sowie die Kategorisierung durch Farb- und Größenparameter. Die Rendering-Engine generiert dynamisch skalierbare SVG-Elemente mit interaktiven Features wie Tooltip-Anzeige bei Punkthover und Zoomfunktion für Datendichte-Cluster. Benutzer können logarithmische oder lineare Skalierungen wählen, Regressionslinien berechnen lassen und über präzise Axis-Labeling-Optionen Korrelationen bis zu einem Pearson-Koeffizienten von ±1 analysieren. Besonders nützlich für Wissenschaftler zur Mustererkennung in experimentellen Daten, Marketingleiter zur Identifikation von Kundenverhaltens-Trends oder Lehrkräfte zur Demonstration statistischer Zusammenhänge. Die Exportfunktion unterstützt hochaufgelöste PNG-Rasterbilder mit 300dpi und optimierte SVG-Vektorgrafiken mit minimaler Pfaddaten-Kompression für Präsentationen oder wissenschaftliche Publikationen.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Streudiagramm-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Optionen und Einstellungen des Tools wie erforderlich an",
-    "Klicken Sie auf die Schaltfläche 'Verarbeiten', um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Navigieren Sie zur Tool-Seite über den direkten Slug-Link (scatter-chart-generator).",
+    "Importieren Sie Daten über den CSV-Uploader oder geben Sie Werte manuell in die zweidimensionale Tabelle ein.",
+    "Wählen Sie im Konfigurationspanel die X- und Y-Achsenvariablen aus den verfügbaren Spalten aus.",
+    "Aktivieren Sie die dritte Dimension durch Zuweisung einer Kategorie-Spalte zu Farbverläufen oder Punktgrößen.",
+    "Passen Sie die Skalierung an, indem Sie zwischen linearer, logarithmischer oder inverser Achsendarstellung wechseln.",
+    "Exportieren Sie das Diagramm über den Download-Button im gewünschten Format (PNG/SVG) mit anpassbarer Auflösung."
   ],
   "usage_examples": [
-    "Verwenden Sie Streudiagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell verarbeitete Ergebnisse ohne zu warten"
+    "Ein Forschungsteam analysiert die Korrelation zwischen Lufttemperatur und Solarstromertrag über mehrere Jahreszeiten mit farbkodierten Windgeschwindigkeitsstufen.",
+    "Ein Einzelhändler visualisiert den Zusammenhang zwischen Rabatthöhe und Verkaufszahlen, wobei Umsatzkategorien durch unterschiedliche Punktgrößen dargestellt werden.",
+    "Ein Medizinstatistiker untersucht den Zusammenhang zwischen BMI und Blutdruckwerten in einer klinischen Studie mit über 1000 Probanden.",
+    "Ein Data Scientist nutzt das Tool zur Identifikation von Ausreißern in Finanzdaten durch Streudiagramme von Kursvolatilität versus Handelsvolumen."
   ]
 }

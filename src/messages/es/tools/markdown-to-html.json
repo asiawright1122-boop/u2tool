@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Markdown a HTML es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Markdown a HTML, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Markdown a HTML puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Markdown a HTML inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "La herramienta Markdown a HTML transforma texto escrito en sintaxis Markdown (como encabezados, listas, bloques de código y enlaces) en código HTML semántico y válido. Utiliza un motor de análisis léxico basado en CommonMark, que procesa el documento mediante tokenización para generar un árbol de sintaxis abstracta (AST), asegurando precisión en la conversión de elementos complejos como tablas, citas anidadas o extensiones GFM (GitHub Flavored Markdown). Los desarrolladores necesitan esta herramienta para integrar contenido dinámico en aplicaciones web, generar documentación técnica (por ejemplo, archivos README.md a páginas HTML interactivas) o preparar correos electrónicos estilizados. El proceso incluye detección automática de indentación, manejo de entidades HTML y soporte para atributos personalizados en etiquetas. Además, permite preservar bloques de código con resaltado de sintaxis vía librerías como Highlight.js, optimizando la legibilidad en entornos de desarrollo.",
   "usage_steps": [
-    "Abre la página de la herramienta Markdown a HTML",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Pega tu texto Markdown en el área de edición principal con soporte para arrastrar y soltar archivos .md",
+    "Selecciona opciones avanzadas: activa 'Preservar espacios' o elige un tema de resaltado de código en el menú desplegable",
+    "Haz clic en 'Convertir' para procesar el contenido a través del motor CommonMark-DOM",
+    "Revisa el HTML resultante en el panel de salida con numeración de líneas y resaltado de sintaxis",
+    "Copia el código al portapapeles usando el botón 'Copiar todo' o selecciona secciones específicas",
+    "Descarga el archivo HTML generado con un nombre personalizado o comparte el resultado vía enlace temporal"
   ],
   "usage_examples": [
-    "Usa Markdown a HTML para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un desarrollador convierte una guía de API en Markdown a HTML para integrarla en una documentación interactiva con JavaScript",
+    "Un creador de contenido transforma un artículo con listas y tablas en HTML para publicarlo en una plataforma de blogs que no soporta Markdown",
+    "Un estudiante genera una página web académica a partir de apuntes en Markdown, manteniendo el formato de ecuaciones matemáticas",
+    "Un ingeniero DevOps automatiza la conversión de informes técnicos en Markdown a informes HTML con estilos personalizados para compartir en equipos no técnicos"
   ]
 }

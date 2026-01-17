@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Gruppiertes Liniendiagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Gruppiertes Liniendiagramm-Generator können Sie verschiedene Daten problemlos verarbeiten, ohne Software oder Plugins zu installieren. Dieses Tool hat eine einfache Benutzeroberfläche und ist einfach zu verwenden, sodass Sie schnell loslegen und es effizient nutzen können. Egal, ob Sie Entwickler, Designer oder allgemeiner Benutzer sind, Gruppiertes Liniendiagramm-Generator kann Ihnen helfen, die Arbeitseffizienz zu verbessern. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser und gewährleistet die Sicherheit Ihrer Daten und wird nicht auf einen Server hochgeladen. Verwenden Sie Gruppiertes Liniendiagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Tool-Dienste zu erleben.",
+  "detailed_description": "Der Grouped Line Chart Generator ist ein spezialisierter Visualisierungstool für die Erstellung von mehrdimensionalen Liniendiagrammen mit dynamischer Datenbindung. Technisch basiert das Tool auf SVG-basierten Rendering-Techniken in Verbindung mit dem D3.js-Framework, das komplexe Datenvisualisierungen durch präzise Koordinatentransformationen ermöglicht. Nutzer können mehrere Datenserien parallel darstellen, wobei jede Serie individuelle Skalierungsparameter und Interpolationsmethoden (linear, kubisch, stufenweise) unterstützt. Das Tool ist besonders für Anwender relevant, die trendbasierte Muster in multivariaten Datensätzen identifizieren müssen – beispielsweise bei der Analyse von Zeitreihen in Finanzkontexten, wissenschaftlichen Studien oder Performance-Monitoring. Die Implementierung nutzt responsives Design durch adaptive Axis-Scaling und interaktive Legenden, die onMouseOver-Ereignisse zur Darstellung präziser Datenpunkte ermöglichen. Die Datenintegration erfolgt über eine JSON- oder CSV-Schnittstelle mit optionaler Validierung durch Schema-Constraints, während die Exportfunktionalität hochauflösende Vektorgrafiken (SVG) und Rasterformate (PNG) mit anpassbaren DPI-Werten generiert.",
   "usage_steps": [
-    "Öffnen Sie die Gruppiertes Liniendiagramm-Generator-Tool-Seite",
-    "Geben Sie den Inhalt, den Sie verarbeiten möchten, in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Passen Sie die Tool-Optionen und -Einstellungen nach Bedarf an",
-    "Klicken Sie auf die Schaltfläche Verarbeiten, um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Importieren Sie Ihre Daten über das mehrzeilige Eingabefeld im CSV-Format oder manuell über die interaktive Datenmatrix.",
+    "Weisen Sie Spalten der X-Achse sowie bis zu sechs Y-Achsen-Serien zu, wobei jede Serie eigenständige Interpolationsmethoden konfigurieren kann.",
+    "Passen Sie die Koordinatensysteme an, inklusive logarithmischer Skalierung oder Zeitstempel-basierter Achsenformate.",
+    "Wählen Sie pro Serie eine diskrete Farbpalette aus dem HSL-Farbraum oder definieren Sie benutzerdefinierte HEX-Codes.",
+    "Testen Sie die interaktive Legende durch Simulation von Hover-Ereignissen zur Überprüfung der Datenpunktabfrage.",
+    "Exportieren Sie das finale Diagramm im SVG-Format für Druckanwendungen oder als PNG mit 300 DPI für digitale Reports."
   ],
   "usage_examples": [
-    "Verwenden Sie Gruppiertes Liniendiagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie Verarbeitungsergebnisse schnell ohne Warten"
+    "Vergleich von Umsatzwachstumsraten verschiedener Produktlinien über drei Geschäftsjahre mit unterschiedlichen Skalierungen auf sekundären Y-Achsen.",
+    "Visualisierung von Zinssatzentwicklungen konkurrierender Anleihen im Kontext des Euribor-Indexes mit kubischer Interpolation.",
+    "Analyse von Temperaturverläufen in polarer, gemäßigter und tropischer Klimazone mit logarithmischer Y-Achsen-Skalierung für Differenzbetrachtungen.",
+    "Monitoring von Conversion-Raten vor und nach A/B-Tests mit dynamischer Datenaktualisierung über integrierte JSON-API-Schnittstellen."
   ]
 }

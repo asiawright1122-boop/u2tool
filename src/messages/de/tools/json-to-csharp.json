@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON zu C# ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON zu C# können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Oberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, JSON zu C# kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie JSON zu C# sofort, um schnell, sichere und kostenlose Online-Toolservices zu erleben.",
+  "detailed_description": "Der JSON-to-C#-Converter ist ein spezialisierter Code-Generierer, der semistrukturierte JSON-Daten in typsichere C#-Klassen transformiert. Technisch gesehen analysiert das Tool JSON-Objekte auf der Grundlage von Typanalyse und Schema-Inferenz, um geeignete .NET-Datentypen (z.B. string, int, DateTime, Dictionary) zu identifizieren und hierarchische Klassenstrukturen mit korrekten Zugriffsmodifikatoren zu erstellen. Besonders bei verschachtelten JSON-Arrays oder polymorphen Feldern wendet der Konverter Strategien wie JSON-Schema-Deduktion und Mustererkennung an, um präzise POCO-Objekte (Plain Old CLR Objects) mit DataContract-Attributen zu generieren. Entwickler profitieren durch automatisierte Modellbildung beim Konsumieren von REST-APIs, der Verarbeitung von Konfigurationsdateien oder der Migration von NoSQL-Datenbanken. Anders als generische Konverter unterstützt dieses Tool C#-spezifische Features wie Nullable-Referenztypen, benutzerdefinierte Type Aliases und automatische JSON-Property-Mapping über [JsonProperty]-Attribute. Die Implementierung erfolgt durch einen mehrstufigen Parsing-Prozess: Zuerst wird das JSON-Dokument lexikalisch analysiert, danach werden Typkonflikte durch statistische Auswertung häufiger Muster aufgelöst, bevor der finalen C#-Code mit vollständiger Namespace-Deklaration generiert wird.",
   "usage_steps": [
-    "Öffnen Sie die Seite des JSON zu C#-Tools",
-    "Fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Einstellungen und -optionen, wenn nötig, an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Öffnen Sie den JSON-Editor und fügen Sie Ihr JSON-Dokument in den markierten Textbereich ein",
+    "Aktivieren Sie die Option 'Schlussfolgerung von verschachtelten Klassen' im Einstellungsmenü",
+    "Wählen Sie im Dropdown 'Zielframework' Ihre .NET-Version (z.B. .NET 6.0) aus",
+    "Klicken Sie auf 'Typanalyse starten', um automatische Datentyp-Vorschläge zu generieren",
+    "Passen Sie ggf. manuell Typzuordnungen im Tabellen-Editor für spezielle Fälle an",
+    "Laden Sie das Ergebnis als .cs-Datei herunter oder kopieren Sie den Code direkt aus dem Ausgabefeld"
   ],
   "usage_examples": [
-    "Verwenden Sie JSON zu C# für die Datenverarbeitung",
-    "Erhalten Sie die Verarbeitungsresultate schnell ohne zu warten"
+    "Automatisches Erzeugen von API-Modellen für Azure-Funktionen aus Swagger/OpenAPI-JSON-Definitionen",
+    "Migration von MongoDB-Dokumenten (JSON-exportiert) zu Entity-Framework-Core-Entitäten",
+    "Generierung typisierter Konfigurationsklassen für appsettings.json in ASP.NET-Projekten",
+    "Erstellung von Testdaten-Objekten aus JSON-Beispieldaten für xUnit-Tests in C#"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "DNS Lookup est un outil pratique en ligne qui vous aide à effectuer rapidement diverses tâches. Avec DNS Lookup, vous pouvez facilement traiter diverses données sans installer de logiciels ou de plugins. Cette outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement l'outil. Que vous soyez un développeur, un designer ou un utilisateur général, DNS Lookup peut vous aider à améliorer votre efficacité de travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et évitant leur upload vers n'importe quel serveur. Utilisez immédiatement DNS Lookup pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "L'outil DNS Lookup permet d'interroger les serveurs DNS pour récupérer les enregistrements associés à un domaine. Techniquement, il exécute des requêtes DNS de type A, AAAA, CNAME, MX, TXT, NS et SOA en utilisant des protocoles UDP ou TCP, simulant le comportement d'un résolveur DNS. Il affiche des informations critiques comme les adresses IP associées au domaine, les serveurs de messagerie configurés, ou les enregistrements de vérification SPF/DKIM. Ce outil est indispensable pour diagnostiquer les problèmes de résolution DNS, valider la configuration des enregistrements après modification, ou analyser les enregistrements de sécurité comme DNSSEC. Contrairement aux outils basiques, il intègre une option de simulation de requête récursive et affiche les délais de réponse pour identifier les goulets d'étranglement réseau. Il utilise des bibliothèques de bas niveau comme c-ares ou des appels système getaddrinfo pour garantir une précision maximale.",
   "usage_steps": [
-    "Ouvrez la page de l'outil de recherche DNS",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et les paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour afficher les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Saisissez le nom de domaine dans le champ « Domaine cible » (ex: exemple.com)",
+    "Sélectionnez les types d'enregistrements à récupérer via les cases à cocher (A, MX, TXT, etc.)",
+    "Activez l'option « Afficher les détails techniques » pour voir les TTL et autorités",
+    "Choisissez un serveur DNS personnalisé dans le menu déroulant (ex: 8.8.8.8 de Google)",
+    "Cliquez sur « Lancer la requête DNS » pour exécuter la recherche",
+    "Analysez les résultats dans l'onglet « Réponse brute » ou « Vue structurée »"
   ],
   "usage_examples": [
-    "Utilisez DNS Lookup pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Un administrateur système vérifie les enregistrements MX pour diagnostiquer un problème d'acheminement des emails",
+    "Un développeur teste la propagation des nouveaux enregistrements A après migration d'hébergeur",
+    "Un expert en cybersécurité analyse les enregistrements TXT pour valider la configuration SPF d'un domaine",
+    "Un responsable réseau identifie les délais DNS élevés en comparant les temps de réponse des serveurs racines"
   ]
 }

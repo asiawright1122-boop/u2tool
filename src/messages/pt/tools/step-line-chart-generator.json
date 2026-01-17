@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Linha em Passos é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos de Linha em Passos, você pode processar vários dados facilmente sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Linha em Passos pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo uploaded para nenhum servidor. Use o Gerador de Gráficos de Linha em Passos imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Step Line Chart Generator é uma ferramenta online que permite aos usuários criar gráficos de linha degrau, uma representação visual que destaca mudanças discretas nos dados ao longo do tempo. Esses gráficos são particularmente úteis para visualizar dados em intervalos definidos, onde as mudanças ocorrem de forma incremental e não contínua. O uso deste gráfico é essencial em cenários como análise de mercado, monitoramento de processos industriais e análise de dados financeiros, onde a precisão das mudanças de valor em pontos específicos do tempo é crucial.\n\nO Step Line Chart Generator oferece uma interface intuitiva e uma variedade de configurações personalizáveis, permitindo que os usuários ajustem o visual do gráfico para atender às suas necessidades específicas. Os usuários podem adicionar múltiplas séries de dados, personalizar a aparência das linhas, pontos e eixos, além de ajustar a escala e o intervalo dos eixos. A ferramenta suporta exportação dos gráficos em diversos formatos, como PNG, SVG e PDF, facilitando a integração com relatórios e apresentações.\n\nTecnologicamente, o Step Line Chart Generator utiliza bibliotecas de visualização de dados modernas, como D3.js, para renderizar os gráficos de forma eficiente e responsiva. A ferramenta é totalmente baseada em web, não requer instalação e pode ser acessada de qualquer dispositivo com conexão à internet, proporcionando flexibilidade e acessibilidade.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Linha em Passos",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse o Step Line Chart Generator no site e clique no botão 'Adicionar Dados' para iniciar a criação do gráfico.",
+    "Na seção 'Dados', insira os valores de X e Y para cada ponto de dados. Você pode adicionar múltiplos pontos clicando em 'Adicionar Ponto'.",
+    "Personalize a aparência do gráfico navegando até a seção 'Personalização'. Aqui, você pode ajustar a cor das linhas, o estilo dos pontos, o título do gráfico e os rótulos dos eixos.",
+    "Selecione a opção 'Linhas de Referência' para adicionar linhas horizontais ou verticais que ajudem a destacar valores específicos nos dados.",
+    "No painel 'Configurações Avançadas', ajuste a escala dos eixos, definindo o mínimo e o máximo, e escolha o formato de exportação do gráfico.",
+    "Após configurar todos os detalhes, clique em 'Gerar Gráfico' para visualizar o resultado. Você pode então exportar o gráfico nos formatos PNG, SVG ou PDF, clicando no botão 'Exportar'."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Linha em Passos para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um analista financeiro pode usar o Step Line Chart Generator para visualizar as mudanças nos preços das ações em intervalos específicos de tempo, destacando os momentos exatos de compra e venda.",
+    "Um engenheiro de produção pode criar gráficos de linha degrau para monitorar as variações de temperatura em um processo industrial, identificando rapidamente os pontos onde ocorreram mudanças significativas.",
+    "Um gerente de marketing pode utilizar a ferramenta para analisar a evolução das métricas de campanhas de marketing ao longo do tempo, como cliques e conversões, para otimizar as estratégias de publicidade.",
+    "Um pesquisador de mercado pode gerar gráficos de linha degrau para comparar as vendas de diferentes produtos em períodos específicos, ajudando a identificar tendências e padrões no comportamento do consumidor."
   ]
 }

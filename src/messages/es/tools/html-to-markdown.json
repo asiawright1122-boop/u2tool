@@ -1,14 +1,17 @@
 {
-  "detailed_description": "HTML a Markdown es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Usando HTML a Markdown, puedes procesar fácilmente diversos datos sin instalar ninguna software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y usarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, HTML a Markdown puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza HTML a Markdown inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El convertidor HTML a Markdown es una herramienta que transforma documentos HTML estructurados en sintaxis Markdown mediante un proceso de análisis léxico y semántico. Técnicamente, utiliza un parser HTML5 para construir un DOM virtual, identificando elementos semánticos como <article>, <section> y <figcaption>, y los mapea a equivalentes en Markdown: encabezados, listas no ordenadas o bloques de código. Soporta atributos como data-* y microformatos, preservando metadatos relevantes. Los desarrolladores lo necesitan para migrar contenido desde CMS como WordPress a generadores de sitios estáticos (Jekyll, Hugo), automatizar documentación técnica desde páginas web, o limpiar HTML generado por editores WYSIWYG. Internamente, aplica reglas de transformación basadas en prioridades de encabezados, convierte tablas responsive a formatos compatibles con Markdown y normaliza entidades HTML (ej. &nbsp; → espacio). La salida incluye extensiones como footnotes y tareas (checkboxes) cuando se detectan patrones específicos en el HTML original.",
   "usage_steps": [
-    "Abre la página del convertidor HTML a Markdown",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Navega a la sección 'Convertidores' en el sitio web y selecciona 'HTML a Markdown'.",
+    "2. Pega tu código HTML en el área de texto con resaltado de sintaxis, disponible en pestañas 'Código' y 'Vista previa'.",
+    "3. Activa la opción 'Preservar atributos' si necesitas mantener IDs, clases o data-* en la salida.",
+    "4. Elige el modo de conversión: 'Estándar' para compatibilidad básica o 'Avanzado' para soporte de tablas y footnotes.",
+    "5. Haz clic en 'Convertir' para iniciar el procesamiento mediante el motor CommonMark.js integrado.",
+    "6. Copia el resultado en Markdown usando el botón 'Copiar al portapapeles' o descarga el archivo .md generado."
   ],
   "usage_examples": [
-    "Usa HTML a Markdown para procesar tu datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "1. Convierte una página HTML de documentación técnica generada con Javadoc a Markdown para integrarla en un repositorio GitHub.",
+    "2. Transforma un newsletter HTML creado en Mailchimp a formato Markdown para usarlo en un sistema de CMS headless.",
+    "3. Extrae y formatea contenido desde una página web raspada (web scraping) que contiene artículos con estructura <div class=\"post-body\">.",
+    "4. Prepara contenido de un sitio WordPress exportado (con shortcodes y divs anidados) para migrarlo a un blog en Docusaurus."
   ]
 }

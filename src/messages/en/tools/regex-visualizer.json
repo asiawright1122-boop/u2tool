@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Regex Visualizer is a practical online tool that helps you quickly complete various tasks. Using Regex Visualizer, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Regex Visualizer can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Regex Visualizer immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Regex Visualizer transforms regular expressions into interactive railroad diagrams by parsing pattern syntax into directed graph structures. This tool leverages finite automaton theory to map capture groups, quantifiers, and alternations into visual components, displaying regex logic as interconnected nodes and edges. Developers benefit from concrete visualization of abstract pattern logic, particularly useful for debugging complex expressions with nested lookaheads or balancing groups. The tool supports multiple regex engines (PCRE, Python, JavaScript) and includes real-time matching analysis against test strings, highlighting capture group boundaries and failure points. Built with a WebAssembly-powered regex parser, it provides instant feedback without server-side processing, ensuring sensitive patterns remain client-local.",
   "usage_steps": [
-    "Open the Regex Visualizer tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Input regex pattern in the syntax-highlighted editor, with dropdown selection for target engine (PCRE/Python/JS)",
+    "Toggle 'Debug View' to display state transitions in the automaton diagram",
+    "Enter test strings in the parallel input panel to see match visualizations with colored path tracing",
+    "Click specific nodes in the diagram to highlight corresponding regex tokens and capture groups",
+    "Adjust quantifier bounds using interactive sliders to experiment with pattern variations",
+    "Export SVG diagram or copy analysis report with match details and engine compatibility notes"
   ],
   "usage_examples": [
-    "Use Regex Visualizer to process your data",
-    "Get processing results quickly without waiting"
+    "Validating email address patterns by visualizing RFC 5322-compliant regex structure",
+    "Optimizing log parsing expressions through visual identification of backtracking hotspots",
+    "Teaching regex syntax to junior developers using interactive diagram annotations",
+    "Reverse-engineering complex validation patterns from legacy codebases through visual decomposition"
   ]
 }

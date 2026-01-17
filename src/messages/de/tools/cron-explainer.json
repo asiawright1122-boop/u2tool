@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Cron-Ausdruck Erklärungs-Service ist ein praktisches Online-Tool, das Ihnen dabei hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Cron-Ausdruck Erklärungs-Service können Sie verschiedene Daten verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Benutzer sind, der Cron-Ausdruck Erklärungs-Service kann Ihnen helfen, Ihre Arbeitswirkung zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Cron-Ausdruck Erklärungs-Service sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu genießen.",
+  "detailed_description": "Der Cron-Expression-Explainer ist ein spezialisierter Entwicklertools, der komplexe Cron-Ausdrücke in verständliche Zeitpläne übersetzt. Das Tool parst standardmäßige Cron-Syntax mit fünf Feldern (Minute, Stunde, Tag des Monats, Monat, Wochentag) sowie erweiterte Elemente wie Schrägstrich-Notation (/5), Komma-getrennte Werte (1,3,5) und den 'L'-Operator für den letzten Tag des Monats. Es validiert Cron-Ausdrücke auf syntaktische Korrektheit und berechnet zusätzlich die nächsten konkreten Ausführungszeitpunkte basierend auf der aktuellen Systemzeit. Technisch implementiert das Tool ein mehrstufiges Parsing-System, das reguläre Ausdrücke mit domänenspezifischer Logik kombiniert, um sowohl einfache als auch komplexe Cron-Ausdrücke präzise zu analysieren. Die Ergebnisse werden in mehreren internationalisierten Formaten ausgegeben, einschließlich natürlicher Sprache, Tabellenansicht und maschinenlesbarem JSON. Besonders nützlich ist das Tool für Entwickler, die Cron-Jobs für Serverwartung, Datenmigration oder Batch-Processing erstellen, sowie für DevOps-Teams, die zeitbasierte Workflows in CI/CD-Pipelines überwachen. Das Tool unterstützt auch Zeitzonen-Konvertierung gemäß IANA Time Zone Database, um Synchronisation zwischen verteilten Systemen zu vereinfachen.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Cron-Ausdruck Erklärungs-Tools",
-    "Geben Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Einstellungen und Optionen nach Bedarf an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Öffnen Sie das Eingabefeld \"Cron-Ausdruck\" im Hauptbereich der Oberfläche",
+    "Geben Sie einen gültigen Cron-Ausdruck ein, z.B. \"0 0 1,15 * 1-5\" für tägliche Ausführungen am 1. und 15. eines Monats",
+    "Wählen Sie im Dropdown-Menü \"Zeitzone\" Ihre aktuelle Zeitzone aus, um korrekte Ausführungszeiten zu berechnen",
+    "Klicken Sie auf den \"Analysieren\" Button, um den Ausdruck in natürliche Sprache zu übersetzen",
+    "Überprüfen Sie die Ergebnisse in der \"Nächste Ausführungen\" Tabelle, die bis zu 10 zukünftige Termine anzeigt",
+    "Nutzen Sie die \"Export\" Funktion, um das Ergebnis als JSON oder Textdatei herunterzuladen"
   ],
   "usage_examples": [
-    "Verwenden Sie den Cron-Ausdruck Erklärungs-Service, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Ein Entwickler möchte einen Cron-Job einrichten, der jeden Werktag um 8:00 Uhr morgens und 18:00 Uhr abends läuft, um Arbeitszeiten zu berücksichtigen",
+    "Ein Systemadministrator muss den letzten Donnerstag jedes Monats für Datenbanksicherungen nutzen und benötigt einen zuverlässigen Ausdruck mit dem 'L' und 'W'-Operator",
+    "Ein DevOps-Ingenieur plant einen Batch-Prozess, der alle 15 Minuten außerhalb der Hauptgeschäftszeiten (19:00-5:00) läuft",
+    "Ein Support-Team benötigt eine klare Übersetzung für einen komplexen Cron-Ausdruck in ihrer Dokumentation, um Nicht-Technikern die Planung zu erklären"
   ]
 }

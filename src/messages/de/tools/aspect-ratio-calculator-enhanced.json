@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Der Seitenverhältnis-Rechner hilft Ihnen, Seitenverhältnisse für Bilder und Videos zu berechnen und zu konvertieren. Sperren Sie das Verhältnis, um Proportionen beizubehalten, wenn Sie vergrößern oder verkleinern, oder verwenden Sie gängige Vorlagen wie 16:9, 4:3 und 1:1. Perfekt für Designer, Videobearbeiter und Content Creator.",
+  "detailed_description": "Der erweiterte Aspect Ratio Calculator ist ein präzises Werkzeug zur mathematischen Analyse und Umwandlung von Seitenverhältnissen für digitale Medien. Technisch berechnet das Tool das Verhältnis zwischen Breite und Höhe durch Division der Pixelwerte und vereinfacht komplexe Verhältnisse wie 1920:1080 zu 16:9 mittels des euklidischen Algorithmus. Es ermöglicht die Skalierung unter Beibehaltung des Verhältnisses durch Cross-Multiplication, um Verzerrungen zu vermeiden, und berechnet automatisch Letterboxing/Pillarboxing-Werte für nicht kompatible Ausgabegeräte. Entwickler benötigen dieses Tool für responsive Webdesign, Videobearbeitung (z.B. Konvertierung von 4K- zu 1080p-Inhalten) oder Social-Media-Optimierung, wo Plattformen spezifische Formate verlangen. Besondere Funktionen umfassen die Verarbeitung von Dezimalzahlen für präzise Anpassungen, die Umrechnung zwischen verschiedenen Einheitensystemen (Pixel, Prozent, Millimeter) und die Anzeige von Fehlerquoten bei nicht exakten Verhältnissen. Die interne Logik verwendet Gleitkommazahlen mit 64-Bit-Genauigkeit, um Rundungsfehler zu minimieren.",
   "usage_steps": [
-    "Geben Sie Breite und Höhe ein",
-    "Sehen Sie sich das berechnete Seitenverhältnis an",
-    "Verhältnis sperren, um Proportionen beim Vergrößern oder Verkleinern beizubehalten",
-    "Verwenden Sie gängige Vorlagen für Standardformate",
-    "Sehen Sie sich das Seitenverhältnis visuell an"
+    "Geben Sie die Originalbreite und -höhe in die numerischen Eingabefelder ein, wobei Dezimalwerte für nicht-ganzzahlige Verhältnisse erlaubt sind.",
+    "Wählen Sie im Dropdown-Menü zwischen den Modi 'Vereinfachen', 'Skalieren' oder 'Konvertieren' basierend auf Ihrem Anwendungsfall.",
+    "Für den Skaliermodus aktivieren Sie das Kontrollkästchen 'Proportionen beibehalten' und geben Sie entweder die neue Breite oder Höhe ein.",
+    "Im Konvertiermodus wählen Sie ein Zielverhältnis aus der vordefinierten Liste (z.B. 4:3, 16:9) oder geben ein benutzerdefiniertes Verhältnis ein.",
+    "Passen Sie mithilfe des Schiebereglers die Dezimalpräzision an, um Ergebnisse auf bis zu 10 Nachkommastellen darzustellen.",
+    "Klicken Sie auf 'Berechnung starten', um die Ergebnisse in tabellarischer Form mit allen relevanten Metriken (z.B. erforderliche Pixel, Fehlerquote) zu erhalten."
   ],
   "usage_examples": [
-    "Bilder vergrößern oder verkleinern, dabei das Seitenverhältnis beibehalten",
-    "Videoabmessungen für verschiedene Plattformen berechnen",
-    "Zwischen gängigen Seitenverhältnissen umrechnen"
+    "Ein Webentwickler passt ein 800x600-Pixel-Banner (4:3) für eine responsive Webseite auf 1920x1080 (16:9) an, wobei das Tool die notwendigen Crop-Bereiche berechnet.",
+    "Ein Videoproduzent konvertiert ein 3840x2160-Video (2160p) für Instagram, wobei das Tool die optimale Einschränkung auf 4:5 mit automatischer Berechnung von schwarzen Balken (Letterboxing) vorschlägt.",
+    "Ein Spieleentwickler berechnet die Skalierungsfaktoren für eine UI, die auf verschiedenen Bildschirmverhältnissen (16:9, 18:9, 21:9) pixelgenau dargestellt werden muss.",
+    "Ein Fotograf optimiert ein 5184x3456-Foto (3:2) für Twitter-Carousels, wobei das Tool die Mindestauflösung und erforderliche Zuschnitte unter Berücksichtigung von Twitter's 5:4-Richtlinien berechnet."
   ]
 }

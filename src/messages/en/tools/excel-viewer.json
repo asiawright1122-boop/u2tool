@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Excel Viewer is a practical online tool that helps you quickly complete various tasks. Using Excel Viewer, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Excel Viewer can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Excel Viewer immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Excel Viewer is a web-based application that enables direct manipulation and analysis of XLSX files within a browser environment. Built on HTML5 and JavaScript, it leverages the SheetJS library for parsing and rendering spreadsheet data, while implementing DOM-based rendering for interactive features like column sorting and dynamic filtering. Users can navigate between worksheets using tabbed navigation, which maintains state via URL hash parameters. The tool processes files client-side, ensuring data privacy by avoiding server-side storage. It supports MIME type validation for file security and uses Web Workers for background processing to prevent UI freezing during large data operations. This tool addresses scenarios where users require immediate data inspection without installing office software, such as verifying CSV imports, auditing financial records, or analyzing sensor data logs. Advanced features include multi-column sorting with customizable sort orders and regex-based filtering for complex dataset interrogation.",
   "usage_steps": [
-    "Open the Excel Viewer tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Drag-and-drop an XLSX file onto the designated drop zone or click 'Browse' to select a file from your device",
+    "Use the worksheet dropdown menu at the top-left to switch between multiple sheets within the workbook",
+    "Click any column header to activate ascending/descending sort (double-click to remove sort)",
+    "Apply filters by clicking the funnel icon in column headers and entering filter criteria using comparison operators (>, <, =)",
+    "Export filtered/sorted data to CSV or JSON using the 'Export' button in the toolbar",
+    "Navigate large datasets using keyboard shortcuts: Ctrl+Arrow keys to jump to data boundaries"
   ],
   "usage_examples": [
-    "Use Excel Viewer to process your data",
-    "Get processing results quickly without waiting"
+    "A financial analyst reviews quarterly sales data from a client, sorting revenue columns in descending order to identify top-performing regions without installing Excel",
+    "A project manager filters a Gantt chart spreadsheet to display only delayed tasks while preparing a status report for stakeholders",
+    "A researcher analyzes experimental results by applying multiple filters to isolate specific data ranges before exporting to JSON for visualization",
+    "A developer debugs spreadsheet data integration issues by exporting filtered views to CSV for comparison against database records"
   ]
 }

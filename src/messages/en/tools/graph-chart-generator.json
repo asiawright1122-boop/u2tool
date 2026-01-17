@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Graph Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Graph Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Graph Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Graph Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Graph Chart Generator is a powerful web-based application designed to create and visualize complex graph and network charts. It leverages advanced graph theory algorithms and data visualization techniques to help users represent and analyze relationships and connections within datasets. Whether you are a data scientist, a network engineer, or a business analyst, this tool can significantly enhance your ability to understand and communicate intricate data relationships. The tool supports various graph types, including directed and undirected graphs, and allows for the customization of nodes and edges to meet specific visualization needs. Users can export their charts in high-quality PNG and SVG formats, making it easy to integrate these visuals into reports, presentations, and web applications. The Graph Chart Generator is particularly useful for tasks such as network topology mapping, social network analysis, and dependency visualization in software development.",
   "usage_steps": [
-    "Open the Graph Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Step 1: Navigate to the Graph Chart Generator website and click on the 'Create New Graph' button to start a new project.",
+    "Step 2: In the 'Nodes' section, use the 'Add Node' button to create new nodes. Enter a unique identifier and any additional properties for each node.",
+    "Step 3: Switch to the 'Edges' tab to define the relationships between nodes. Click 'Add Edge', select the source and target nodes, and specify the edge type (directed or undirected).",
+    "Step 4: Customize your graph by adjusting the layout using the 'Layout' options. Choose from various algorithms such as 'Force Directed', 'Circle', or 'Tree' to arrange your nodes and edges effectively.",
+    "Step 5: Use the 'Style' settings to modify the appearance of nodes and edges. You can change colors, sizes, and labels to enhance the visual clarity of your chart.",
+    "Step 6: Once your graph is complete, click the 'Export' button and select the desired format (PNG or SVG) to download your chart for use in other applications."
   ],
   "usage_examples": [
-    "Use Graph Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: A network engineer uses the Graph Chart Generator to map the topology of a corporate network, identifying critical nodes and potential bottlenecks to optimize network performance.",
+    "Example 2: A social media analyst visualizes the connections between users in a social network to identify key influencers and community clusters for targeted marketing campaigns.",
+    "Example 3: A software developer creates a dependency graph of a complex codebase to understand the relationships between different modules and identify areas for refactoring.",
+    "Example 4: A business analyst uses the tool to visualize customer journey maps, highlighting touchpoints and decision points to improve user experience and conversion rates."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Sunburst-Diagramm-Generator ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Sunburst-Diagramm-Generator können Sie verschiedene Daten einfach verarbeiten, ohne Software oder Plugins installieren zu müssen. Dieses Tool hat eine einfache Oberfläche und ist leicht zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie ein Entwickler, Designer oder allgemeiner Benutzer sind, der Sunburst-Diagramm-Generator kann Ihnen dabei helfen, die Arbeitsproduktivität zu verbessern. Alle Bearbeitungen werden lokal in Ihrem Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Sunburst-Diagramm-Generator sofort, um schnelle, sichere und kostenlose Online-Tools zu erleben.",
+  "detailed_description": "Der Sunburst Chart Generator ist ein spezialisierter Online-Editor zur visuellen Analyse hierarchischer Datenstrukturen durch radial partitionierte Kreisdiagramme. Das Tool verwendet D3.js-basierte Rendering-Techniken, um mehrdimensionale Datensätze in konzentrischen Ringen darzustellen, wobei jeder Ring eine Hierarchieebene repräsentiert. Technisch basiert die Visualisierung auf einer TreeMap-Variante, die durch polare Koordinaten transformierte Rechtecke in gekrümmte Segmente umwandelt. Nutzer profitieren besonders bei der Analyse von Dateisystemhierarchien, Organigrammen oder Kategoriestrukturen mit bis zu 5 Ebenen Tiefe. Die Datenimport-Funktion unterstützt CSV- und JSON-Formate mit definierten Parent-Child-Beziehungen, während das Styling-Modul Farbverläufe, Winkeloffsets und dynamische Zoomfunktionen für Detailanalysen ermöglicht. Die Exportfunktion generiert skalierbare Vektorgrafiken (SVG) mit integriertem Tooltip-Interaktivitätscode oder rasterbasierte PNGs mit 300dpi-Auflösung.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Sunburst-Diagramm-Generators",
-    "Geben Sie oder fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Passen Sie die Tool-Optionen und Einstellungen wie erforderlich an",
-    "Klicken Sie auf die Schaltfläche 'Verarbeiten', um die Ergebnisse anzuzeigen",
-    "Kopieren oder laden Sie die verarbeiteten Ergebnisse herunter"
+    "Laden Sie eine CSV-Datei mit Spalten für Element-ID, Eltern-ID und numerische Werte in den Datenimport-Editor hoch",
+    "Wählen Sie im Hierarchie-Konfigurator die gewünschte Anzahl an Darstellungsebenen (max. 5) über den Schieberegler aus",
+    "Passen Sie im Farbmodul die Chromatik-Skala an Ihren Branding-Guide an, inklusive Gradientenstart/-ende für visuelle Schwerpunkte",
+    "Aktivieren Sie die interaktive Tooltip-Anzeige durch Setzen des Hakens im Interaktivitäts-Panel",
+    "Verfeinern Sie die Segmentierung durch Anpassung des minimalen Winkelbereichs für kleine Datensätze im Partitioning-Modul",
+    "Exportieren Sie das Ergebnis als SVG mit eingebettetem JavaScript-Code oder als druckfähige PNG-Datei über den Download-Button"
   ],
   "usage_examples": [
-    "Verwenden Sie den Sunburst-Diagramm-Generator, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell verarbeitete Ergebnisse ohne zu warten"
+    "Ein IT-Administrator visualisiert die Speichernutzung eines Serversystems durch geschachtelte Dateipfade in Echtzeit",
+    "Ein Marketing-Team erstellt eine interaktive Produkthierarchie für eine E-Commerce-Plattform mit Kategorien, Unterkategorien und Artikeln",
+    "Ein Biologe demonstriert die phylogenetische Klassifikation von Arten durch farbkodierte Taxonomie-Ringe",
+    "Ein Finanzanalyst identifiziert Ausgabenmuster durch Aufteilung von Budgetposten in tiefenstrukturierte Kostenkategorien"
   ]
 }

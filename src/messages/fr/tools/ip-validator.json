@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Le Vérificateur d'Adresse IP est un outil en ligne pratique qui vous aide à accomplir rapidement diverses tâches. Avec le Vérificateur d'Adresse IP, vous pouvez traiter diverses données sans installer de logiciel ou de plugin. Cet outil a une interface simple et est facile à utiliser, ce qui vous permet de commencer rapidement et de l'utiliser efficacement. Que vous soyez développeur, designer ou utilisateur général, le Vérificateur d'Adresse IP peut vous aider à améliorer l'efficacité de votre travail. Toutes les opérations sont effectuées localement dans votre navigateur, assurant ainsi la sécurité de vos données et ne sont pas téléchargées sur aucun serveur. Utilisez immédiatement le Vérificateur d'Adresse IP pour découvrir des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Le validateur d'adresses IP analyse les adresses IPv4 et IPv6 selon les normes RFC 791 et RFC 8200. Il vérifie non seulement le format syntaxique (comme les points pour IPv4 ou les doubles-points pour IPv6), mais aussi la validité des plages numériques, la conformité des masques réseau (CIDR) et l'absence de caractères non autorisés. L'outil décompose chaque composante (octets, hextets, suffixes de zone) et effectue des contrôles de cohérence logique, comme la détection d'adresses réservées (ex: 127.0.0.1) ou de notations compressées invalides (:::). Ce validateur est indispensable pour les administrateurs réseau diagnostiquant des erreurs de routage, les développeurs testant des applications multi-protocole, ou les ingénieurs sécurité auditant des logs. Contrairement aux validateurs basiques, il fournit des diagnostics précis (ex: 'IPv6 non compressée correctement' ou 'Masque CIDR incompatible avec la classe d'adresse') et affiche des métadonnées techniques comme la version IP détectée, la longueur du préfixe ou le type d'adresse (unicast, multicast).",
   "usage_steps": [
-    "Ouvrez la page de l'outil Vérificateur d'Adresse IP",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Ajustez les options et les réglages de l'outil au besoin",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Accédez à l'outil via l'URL /network/ip-validator",
+    "Saisissez l'adresse dans le champ texte principal avec un fond bleu clair",
+    "Cochez l'option 'Forcer IPv4' ou 'Forcer IPv6' si nécessaire",
+    "Cliquez sur le bouton 'Valider' entouré d'une icône de loupe",
+    "Examinez les résultats détaillés dans le panneau inférieur avec codes de statut HTTP",
+    "Utilisez le bouton 'Exporter JSON' pour récupérer les données structurées"
   ],
   "usage_examples": [
-    "Utilisez le Vérificateur d'Adresse IP pour traiter vos données",
-    "Obtenez des résultats de traitement rapidement sans attendre"
+    "Un développeur vérifie si une API retourne des adresses IPv6 correctement formatées avec extension de zone (ex: fe80::1%eth0)",
+    "Un administrateur réseau identifie des logs contenant des adresses IPv4 au format décimal pointillé invalide (ex: 192.168.01.1)",
+    "Un testeur de pare-feu valide la syntaxe d'une liste de règles combinant CIDR IPv4 et adresses IPv6 link-local",
+    "Un étudiant analyse les différences de notation entre IPv4 compatible (::ffff:192.168.1.1) et IPv4 mappé (::ffff:0c42:0101)"
   ]
 }

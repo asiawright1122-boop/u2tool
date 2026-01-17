@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Base85 Encoder/Decoder ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit Base85 Encoder/Decoder können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Unabhängig davon, ob Sie Entwickler, Designer oder einfach Benutzer sind, kann Base85 Encoder/Decoder Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungen werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie Base85 Encoder/Decoder sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Base85 Encoder/Decoder ermöglicht die bidirektionale Konvertierung von Binärdaten in das Ascii85-Format, das in Protokollen wie PDF, PostScript und Git verwendet wird. Base85 kodiert 4 Byte Binärdaten in 5 ASCII-Zeichen aus einem Zeichensatz von 85 verschiedenen Zeichen (ASCII 33–117), was eine kompaktere Darstellung als Base64 (33% Overhead) ermöglicht. Entwickler benötigen dieses Tool, um Daten für Anwendungen präzise zu verarbeiten, z.B. zum Einbetten von Binärdateien in JSON- oder E-Mail-Protokolle, bei der Analyse von PDF-Inhalten oder der Inspektion von Git-Objekten. Der Encoder transformiert Binärdaten durch Division in 32-Bit-Blöcke, die per Zerlegung in 5-Zeichen-Gruppen aus dem Ascii85-Zeichensatz abgebildet werden. Der Decoder führt die inverse Operation durch, einschließlich der Behandlung von Padding-Zeichen für unvollständige Blöcke. Das Tool unterstützt die vollständige IETF-RFC-1942-Compliance, inklusive Behandlung von Sonderfällen wie Nullblöcken und Whitespace-Handling.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Base85 Encoder/Decoder-Tools",
-    "Geben Sie den zu verarbeitenden Inhalt in das Eingabefeld ein oder kopieren Sie ihn ein",
-    "Passen Sie die Tool-Einstellungen und Optionen nach Bedarf an",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "1. Öffnen Sie die Base85-Toolseite und wählen Sie durch Klick auf 'Encoder' oder 'Decoder' den gewünschten Modus.",
+    "2. Fügen Sie Binärdaten (z.B. hex-Dump oder Rohbytes) im Textfeld 'Eingabedaten' ein oder laden Sie eine Datei über den 'Datei importieren'-Button.",
+    "3. Aktivieren Sie im Abschnitt 'Optionen' die Checkbox 'Padding hinzufügen' für Encoder-Vorgänge oder 'Whitespace ignorieren' beim Decodieren.",
+    "4. Wählen Sie den Zielzeichensatz (Standard: Adobe Ascii85 oder Git-Pack-Format) über das Dropdown-Menü.",
+    "5. Klicken Sie auf 'Starte Verarbeitung', um die konvertierten Daten im Ausgabefeld zu generieren.",
+    "6. Kopieren Sie das Ergebnis über den 'In Zwischenablage kopieren'-Button oder exportieren Sie es als .txt-Datei."
   ],
   "usage_examples": [
-    "Verwenden Sie Base85 Encoder/Decoder, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie die Verarbeitungsresultate schnell, ohne zu warten"
+    "Codierung einer PNG-Grafik in Ascii85 für die Einbettung in ein JSON-API-Payload ohne Base64-Overhead.",
+    "Dekodierung eines PDF-Objekts (z.B. /FlateDecode-Streams) zur Analyse komprimierter Inhaltsdaten.",
+    "Konvertierung eines Git-Packobjekts in lesbare ASCII-Zeichen für die manuelle Inspektion von Commit-Deltas.",
+    "Erstellung von Ascii85-kodierten E-Mail-Anhängen, die kompakter als traditionelle MIME-Base64 sind."
   ]
 }

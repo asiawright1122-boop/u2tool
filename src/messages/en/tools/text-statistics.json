@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text Statistics is a practical online tool that helps you quickly complete various tasks. Using Text Statistics, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Text Statistics can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Text Statistics immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "Text Statistics is a sophisticated tool designed to provide comprehensive insights into the structural and lexical components of any given text. By analyzing the text, the tool breaks down the content into granular details, including character counts, word frequencies, sentence lengths, and paragraph distributions. This level of analysis is invaluable for a variety of applications, such as content quality assessment, academic research, and data preprocessing for machine learning models. For instance, content creators can use Text Statistics to ensure their writing meets specific word count requirements or to identify repetitive word usage that might detract from the readability of their content. Researchers can leverage the tool to extract precise metrics needed for their studies, such as the average sentence length in a literary corpus. The tool employs advanced algorithms to process the text efficiently, providing real-time updates as you input or modify your content. It supports multiple languages and text formats, making it a versatile solution for a wide range of users.",
   "usage_steps": [
-    "Open the Text Statistics tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Step 1: Navigate to the Text Statistics tool page on our website and click on the 'Start Analysis' button.",
+    "Step 2: In the 'Input Text' box, paste or type the text you wish to analyze. You can also upload a text file by clicking the 'Upload File' button.",
+    "Step 3: Choose the specific analysis options you need by checking the relevant boxes. Options include 'Character Count,' 'Word Frequency,' 'Sentence Length,' and 'Paragraph Distribution.'",
+    "Step 4: Click the 'Analyze' button to process your text. The tool will display a detailed report in the 'Results' section.",
+    "Step 5: Review the results, which are presented in a clear and organized format. Each section of the report provides a breakdown of the selected metrics.",
+    "Step 6: If needed, you can export the results by clicking the 'Export Report' button, which will generate a downloadable file in your preferred format (e.g., CSV, PDF)."
   ],
   "usage_examples": [
-    "Use Text Statistics to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: A freelance writer is working on a 1,500-word article and uses Text Statistics to ensure the word count is accurate and to check for any overused words that might need to be replaced for better readability.",
+    "Example 2: A linguistics professor is conducting a study on sentence complexity in Shakespeare's plays. They use Text Statistics to analyze the average sentence length and word frequency in different sections of the plays.",
+    "Example 3: A content marketing team wants to optimize their blog posts for SEO. They use Text Statistics to ensure each post has a balanced distribution of paragraphs and a consistent use of keywords.",
+    "Example 4: A data scientist is preparing text data for a machine learning model. They use Text Statistics to preprocess the data by identifying and removing any outliers in sentence length and character count to ensure the model is trained on clean, consistent data."
   ]
 }

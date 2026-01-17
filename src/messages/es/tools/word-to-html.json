@@ -1,11 +1,17 @@
 {
-  "detailed_description": "Convierte Word a HTML.",
+  "detailed_description": "La herramienta Word to HTML es una solución especializada para la transformación precisa de documentos DOCX a código HTML5, preservando elementos de formato complejos como estilos personalizados, tablas con celdas combinadas, listas multinivel, hipervínculos y objetos incrustados. Internamente, utiliza un motor de análisis que descomprime el archivo DOCX (basado en el estándar OpenXML) para mapear las partes relacionadas con el contenido (como /word/document.xml) y sus estilos asociados (en /word/styles.xml). Estos componentes se procesan mediante un sistema de transformación XSLT que convierte cada elemento Word en HTML semántico equivalente, generando clases CSS específicas para mantener la tipografía original. Además, soporta la conversión de imágenes en formato base64 y la retención de anotaciones y comentarios en el HTML final. Esta herramienta es esencial para desarrolladores que necesitan integrar contenido de documentos corporativos en sistemas CMS, diseñadores que requieren migrar informes técnicos a páginas web responsivas, o equipos de marketing que deben convertir folletos digitales en correos electrónicos HTML sin perder el diseño original.",
   "usage_steps": [
-    "Subir archivo Word",
-    "Esperar conversión",
-    "Descargar HTML"
+    "Haz clic en 'Seleccionar archivo' y carga tu documento DOCX desde tu dispositivo local",
+    "Activa la opción 'Mantener estilos avanzados' para preservar formatos personalizados y tablas complejas",
+    "Elige 'Incrustar imágenes como Base64' si necesitas un único archivo HTML sin recursos externos",
+    "Selecciona 'Dividir por encabezados' para convertir automáticamente el documento en secciones HTML5 estructuradas",
+    "Haz clic en 'Procesar documento' para iniciar la transformación basada en OpenXML",
+    "Descarga el resultado comprimido en ZIP o copia el código HTML generado directamente desde el visor de salida"
   ],
   "usage_examples": [
-    "Convertir Word para web"
+    "Un desarrollador web convierte un manual técnico de 50 páginas con gráficos y tablas complejas a HTML para integrarlo en un portal de documentación sin reconstruir el diseño desde cero",
+    "Un diseñador gráfico transforma una presentación corporativa DOCX en un newsletter HTML responsivo manteniendo las fuentes y colores de marca",
+    "Un equipo legal digitaliza contratos antiguos en DOCX y los convierte a HTML para implementar un sistema de búsqueda semántica en el código",
+    "Un docente crea una página web educativa convirtiendo un libro de texto DOCX con ecuaciones matemáticas en HTML5 compatible con lectores de pantalla"
   ]
 }

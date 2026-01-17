@@ -1,14 +1,17 @@
 {
-  "detailed_description": "A Calculadora de Porcentagens é uma ferramenta online prática que ajuda você a concluir tarefas rapidamente. Usando a Calculadora de Porcentagens, você pode processar facilmente diferentes dados sem precisar instalar nenhum software ou plugins. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use eficientemente. Seja desenvolvedor, designer ou usuário geral, a Calculadora de Porcentagens pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados a qualquer servidor. Use a Calculadora de Porcentagens imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O Percentage Calculator é uma ferramenta técnica desenvolvida para realizar operações matemáticas avançadas com precisão decimal, abrangendo três funcionalidades principais: cálculo de porcentagem simples, variação percentual (delta) e variação absoluta de valores. Internamente, utiliza fórmulas como (Parte/Total)*100 para porcentagens básicas, ((Novo - Antigo)/|Antigo|)*100 para mudanças percentuais e (Novo - Antigo) para variações absolutas, garantindo resultados compatíveis com padrões de análise financeira e científica. Profissionais de áreas como contabilidade, engenharia e ciência de dados necessitam desta ferramenta para validar relações proporcionalidade em relatórios, calcular taxas de juros compostos, ou analisar tendências em conjuntos de dados. A interface intuitiva apresenta campos de entrada com validação numérica e botões de ação que ativam scripts em JavaScript otimizados, processando valores em tempo real sem necessidade de recarregamento da página. Diferente de ferramentas genéricas, inclui suporte a números negativos, percentuais acima de 100% e formatação automática de resultados com duas casas decimais, adequando-se a contextos profissionais exigentes.",
   "usage_steps": [
-    "Abra a página da Calculadora de Porcentagens",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Selecione o modo de cálculo desejado usando as abas: 'Porcentagem', 'Variação (%)' ou 'Diferença Absoluta'.",
+    "Insira valores numéricos nos campos específicos, incluindo números negativos ou decimais (ex: -25.5 ou 150.75).",
+    "Ative a opção 'Arredondar' se precisar de resultados simplificados para duas casas decimais.",
+    "Clique no botão 'Calcular' para executar a operação matemática selecionada.",
+    "Visualize o resultado no painel destacado, que exibe também a fórmula utilizada e os valores intermediários.",
+    "Use o botão 'Limpar' para reiniciar os campos e realizar novos cálculos sem recarregar a página."
   ],
   "usage_examples": [
-    "Use a Calculadora de Porcentagens para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um comerciante precisa calcular 18% de imposto sobre um produto de R$ 532,40, obtendo R$ 95,83 de tributo.",
+    "Um analista financeiro compara o crescimento de receita trimestral: de R$ 120.000 para R$ 150.000, resultando em 25% de aumento.",
+    "Um estudante verifica a redução de 30% no preço de um curso online, que cai de R$ 450 para R$ 315 após o desconto.",
+    "Um engenheiro avalia a eficiência energética de equipamentos, calculando a variação de consumo entre dois modelos: de 2.4kWh para 1.9kWh, uma redução de 20.83%."
   ]
 }

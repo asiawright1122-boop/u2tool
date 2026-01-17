@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de SQL é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com o Gerador de SQL, você pode processar diferentes tipos de dados sem a necessidade de instalar nenhum software ou plugin. A interface é simples e fácil de usar, permitindo que você comece rapidamente e utilize o ferramenta de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de SQL pode ajudá-lo a melhorar a produtividade. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviado para nenhum servidor. Use o Gerador de SQL imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O SQL Generator é uma ferramenta técnica especializada em criar consultas SQL parametrizadas para operações de banco de dados relacionais. Seu funcionamento baseia-se em uma engine de template dinâmico que mapeia esquemas lógicos e aplica regras de sintaxe específicas a partir de inputs estruturados. A ferramenta suporta operações complexas como multi-table JOINs com diferentes tipos (INNER, LEFT OUTER), subconsultas aninhadas, cláusulas condicionais (WHERE, HAVING), e comandos DML (INSERT, UPDATE, DELETE) com constraints de integridade. Utiliza um parser de esquema para validar relacionamentos entre tabelas e sugerir automaticamente aliases apropriados. A necessidade surge em cenários de desenvolvimento ágil, onde a construção manual de queries consome tempo e está propensa a erros de sintaxe ou incompatibilidade com dialetos SQL específicos (MySQL, PostgreSQL, SQL Server). A ferramenta também inclui opções avançadas como geração de CTEs (Common Table Expressions) e cláusulas ON CONFLICT para upserts em PostgreSQL. Internamente, processa os inputs através de um motor de análise léxica que transforma a lógica declarativa do usuário em código SQL otimizado, com opção de formatação estética (indentação, caixa alta de palavras-chave).",
   "usage_steps": [
-    "Abra a página do Gerador de SQL",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "1. Selecione o tipo de operação desejada (SELECT com JOIN, INSERT com múltiplos registros, UPDATE condicional, etc.) no dropdown principal.",
+    "2. Insira o nome das tabelas envolvidas e marque as colunas relevantes nas checkboxes da seção 'Campos'.",
+    "3. Configure cláusulas WHERE personalizadas usando o construtor visual com operadores lógicos (AND/OR) e funções agregadas.",
+    "4. Ative a opção 'Mostrar DDL' para incluir comandos de criação de tabelas temporárias se necessário.",
+    "5. Escolha o dialeto SQL específico (MySQL 8.0, PostgreSQL 14, etc.) no seletor de compatibilidade.",
+    "6. Clique no botão 'Gerar Query' para visualizar o código SQL com placeholders parametrizados prontos para substituição."
   ],
   "usage_examples": [
-    "Use o Gerador de SQL para processar seus dados",
-    "Obtenha resultados de processamento rapidamente, sem precisar esperar"
+    "1. Um desenvolvedor precisa migrar dados de um sistema legado para uma nova estrutura de banco com esquema complexo: usando o gerador para criar comandos INSERT massivos com conversão de tipos de dados.",
+    "2. Um analista de BI montando relatório de vendas mensais com junção de tabelas de clientes, pedidos e produtos, incluindo agregações com GROUPING SETS.",
+    "3. Um DBA automatizando rotina de atualização de preços com base em condições de data e estoque, aplicando lógica CASE WHEN diretamente na query UPDATE.",
+    "4. Um engenheiro de dados construindo pipeline ETL que requer subconsultas correlacionadas para calcular métricas de desempenho em tabelas particionadas."
   ]
 }

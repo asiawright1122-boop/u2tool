@@ -1,14 +1,17 @@
 {
-  "detailed_description": "오픈그래프 생성기는 다양한 작업을 빠르게 완료할 수 있도록 도와주는 실용적인 온라인 도구입니다. 오픈그래프 생성기를 사용하면 소프트웨어나 플러그인을 설치하지 않고도 다양한 데이터를 쉽게 처리할 수 있습니다. 이 도구는 간단한 인터페이스를 가지고 있어 사용하기 쉬우며, 빠르게 시작하고 효율적으로 사용할 수 있습니다. 개발자, 디자이너, 일반 사용자 등 누구에게나 도움이 되는 도구입니다. 모든 처리는 브라우저 내에서 이루어지므로 데이터 보안이 확보되며 서버에 업로드되지 않습니다. 오픈그래프 생성기를 즉시 사용하여 빠르고 안전하며 무료의 온라인 도구 서비스를 경험해보세요.",
+  "detailed_description": "Open Graph Generator는 Facebook Open Graph Protocol과 Twitter Cards 표준을 준수하는 메타 태그를 자동 생성하는 개발자 도구입니다. 이 도구는 URL, 제목, 설명, 이미지, 사이트 이름 등의 필수 속성을 입력하면, HTML <head> 섹션에 삽입 가능한 OG:TYPE, OG:TITLE, OG:DESCRIPTION, OG:IMAGE, OG:URL, OG:SITENAME, OG:DETERMINER, OG:LOCALE 등 10개 이상의 메타 프로퍼티 어트리뷰트를 정확한 구문으로 생성합니다. 특히 canonical URL 설정, 다국어 지원을 위한 로케일 지정, 미디어 파일 MIME 타입 검증 기능을 포함해 Facebook Sharing Debugger와 Twitter Card Validator의 검증 기준을 충족시킵니다. 개발자는 수동으로 Open Graph 태그를 작성할 때 발생하는 오타나 구조적 오류를 방지할 수 있으며, SEO 최적화와 소셜 미디어 콘텐츠 프리뷰 품질 향상을 위해 필수적입니다. 도구 내부에서는 URL 파싱, 문자 인코딩 변환, 이미지 파일 크기 제한 검사, SSL 인증서 유효성 확인 등의 백엔드 프로세스를 처리합니다.",
   "usage_steps": [
-    "오픈그래프 생성기 도구 페이지 열기",
-    "처리하고자 하는 내용을 입력 박스에 입력하거나 붙여넣기",
-    "필요에 따라 도구 옵션과 설정 조정",
-    "결과를 확인하기 위해 처리 버튼 클릭",
-    "처리된 결과 복사 또는 다운로드"
+    "1. 생성할 페이지의 canonical URL을 'Page URL' 입력창에 삽입하세요.",
+    "2. 'Content Type' 드롭다운에서 website/article/video.movie 등 타겟 유형을 선택하세요.",
+    "3. 'Image URL' 필드에 200x200px 이상의 이미지 경로를 입력하고 'Secure URL' 체크박스를 활성화하세요.",
+    "4. 'Locale' 섹션에서 언어 코드(ko_KR, en_US 등)를 지정해 다국어 지원을 설정하세요.",
+    "5. 'Generate Tags' 버튼을 클릭한 후 결과 창에 표시된 HTML 코드를 복사하세요.",
+    "6. 'Live Preview' 탭에서 다양한 소셜 미디어 플랫폼에서의 렌더링 결과를 확인하세요."
   ],
   "usage_examples": [
-    "오픈그래프 생성기를 사용하여 데이터 처리",
-    "즉시 처리 결과 확인"
+    "블로그 포스트 공유 시 제목과 설명, 썸네일이 정확하게 표시되도록 OG 태그 생성",
+    "전자상거래 제품 페이지에 OG:PRICE:USD, OG:AVAILABILITY 등 부가 속성 포함",
+    "유튜브 영상 URL로 Twitter Summary Card 구조화된 메타데이터 생성",
+    "포트폴리오 웹사이트에 OG:DETERMINER='a' 설정으로 기사형 프리뷰 최적화"
   ]
 }

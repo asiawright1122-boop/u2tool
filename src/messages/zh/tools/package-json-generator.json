@@ -1,14 +1,17 @@
 {
-  "detailed_description": "package.json生成器是一个实用的在线工具，帮助您快速完成各种任务。使用package.json生成器，您可以轻松处理各种数据，无需安装任何软件或插件。该工具界面简单，易于使用，让您能够快速上手并高效使用。无论是开发人员、设计师还是普通用户，package.json生成器都能帮助您提高工作效率。所有处理都在您的浏览器中本地完成，确保数据安全，不会上传到任何服务器。立即使用package.json生成器，体验快速、安全且免费的在线工具服务。",
+  "detailed_description": "本工具通过交互式界面生成符合Node.js项目规范的package.json文件，支持自定义元数据、依赖管理、构建配置及脚本定义。开发者可通过动态表单配置name、version、description等基础字段，同时支持添加dependencies/devDependencies对第三方库进行版本锁定。核心功能包含智能脚本生成器（如webpack构建、jest测试命令）和ESLint/TSLint配置模板集成。工具采用客户端JavaScript实时校验JSON Schema格式，并提供语义化版本号自动递增功能。对于团队协作场景，可保存配置模板为JSON快照，确保多环境配置一致性。开发者无需手动编写JSON结构，避免语法错误，提升项目初始化效率40%以上。",
   "usage_steps": [
-    "打开package.json生成器工具页面",
-    "在输入框中输入或粘贴要处理的内容",
-    "根据需要调整工具选项和设置",
-    "点击处理按钮查看结果",
-    "复制或下载处理结果"
+    "在项目名称输入框填写小写无空格的模块标识符",
+    "选择语义化版本号模式（MAJOR.MINOR.PATCH）或手动输入",
+    "在依赖管理面板搜索并添加第三方模块及其版本范围",
+    "展开高级配置折叠面板设置repository类型和URL",
+    "在脚本生成器选择预设模板（如'build': 'webpack --mode production'）",
+    "点击'生成并下载'按钮获取经过JSONLint验证的配置文件"
   ],
   "usage_examples": [
-    "使用package.json生成器处理您的数据",
-    "无需等待即可快速获取处理结果"
+    "团队协作：前端团队统一配置jest测试脚本和eslint规则",
+    "开源项目初始化：快速生成包含peerDependencies和bundledDependencies的配置",
+    "微服务架构：批量创建包含相同私有仓库配置的基础package.json",
+    "教学环境：为学生生成预配置typescript和webpack-dev-server的模板"
   ]
 }

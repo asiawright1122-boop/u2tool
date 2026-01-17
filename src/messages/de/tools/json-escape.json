@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON Escape/Unescape ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit JSON Escape/Unescape können Sie verschiedene Daten leicht verarbeiten, ohne irgendeine Software oder Plugins zu installieren. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, JSON Escape/Unescape kann Ihnen helfen, Ihre Arbeitswirkungsrate zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie JSON Escape/Unescape sofort, um schnell, sichere und kostenlose Online-Tools zu nutzen.",
+  "detailed_description": "Der JSON Escape/Unescape-Tool konvertiert Zeichenketten zwischen rohem Text und JSON-konformer Formatierung durch gezielte Steuerung von Sonderzeichen. Technisch gesehen ersetzt der Escape-Modus Steuerzeichen wie Zeilenumbrüche (\\n), Tabulatoren (\\t) und Anführungszeichen (\") durch ihre Unicode-escaped Entsprechungen (z.B. \\u0022 für Anführungszeichen) gemäß RFC 8259. Der Unescape-Vorgang führt diese Transformation rückwärts durch, analysiert JSON-escapete Zeichenketten und konvertiert sie in lesbare Zeichen. Entwickler benötigen dieses Werkzeug, um JSON-Datenvalidierung in APIs zu gewährleisten, wo falsch formatierte Zeichen wie Umlaute (äöü) oder nicht-ASCII-Zeichen zu Parsing-Fehlern führen. Das Tool implementiert einen rekursiven Parser, der geschachtelte JSON-Strukturen analysiert und sowohl String-literals als auch Schlüssel-Wert-Paare präzise verarbeitet. Besonders bei der Verarbeitung von JSONP (JSON with Padding) oder der Generierung von JSON-LD (Linked Data) für semantische Webanwendungen verhindert es Syntaxfehler durch falsch codierte Zeichenketten.",
   "usage_steps": [
-    "Öffnen Sie die Seite des JSON Escape/Unescape-Tools",
-    "Geben Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Anpassen Sie die Tool-Einstellungen und Einstellungen nach Bedarf",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Navigieren Sie zur Tool-Website über den Link 'JSON Escape/Unescape' im Encoding-Bereich.",
+    "Kopieren Sie Ihren Roh-Text oder JSON-Code in das Eingabefeld 'Quelltext'.",
+    "Wählen Sie im Dropdown 'Modus' zwischen 'Escape' (Zeichen escapen) oder 'Unescape' (Zeichen entschlüsseln).",
+    "Aktivieren Sie die Checkbox 'Unicode optimieren', um nicht-ASCII-Zeichen (z.B. Emoji) automatisch in \\uXXXX-Notation zu konvertieren.",
+    "Klicken Sie auf 'Verarbeiten', um die Transformation durchzuführen.",
+    "Kopieren Sie das Ergebnis aus dem Ausgabefeld 'Verarbeiteter JSON' in Ihre Anwendung oder speichern Sie es als .json-Datei."
   ],
   "usage_examples": [
-    "Verwenden Sie JSON Escape/Unescape, um Ihren Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Vorbereitung von API-Anfragen: Escape von Benutzereingaben mit Sonderzeichen (z.B. Anführungszeichen in Produktbeschreibungen) vor dem JSON-POST-Versand.",
+    "Log-Datei-Analyse: Unescape von JSON-kodierten Serverlogs zur menschenlesbaren Darstellung von Fehlermeldungen mit Umlauten.",
+    "Datenmigration: Konvertierung von Legacy-Textdaten mit ISO-8859-1-Zeichen in Unicode-konformes JSON für moderne Systeme.",
+    "Webentwicklung: Escapen von JavaScript-Variableninhalten mit dynamischen HTML-Inhalten, um XSS-Sicherheitslücken zu vermeiden."
   ]
 }

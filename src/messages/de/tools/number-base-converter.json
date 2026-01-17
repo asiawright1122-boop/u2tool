@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Der Zahlenbasis-Converter ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit dem Zahlenbasis-Converter können Sie verschiedene Daten ohne das Installieren von Software oder Plugins verarbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell damit anfangen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Nutzer sind, der Zahlenbasis-Converter kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden lokal im Browser durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie den Zahlenbasis-Converter sofort, um schnell, sichere und kostenlose Online-Tool-Dienstleistungen zu erleben.",
+  "detailed_description": "Der Number Base Converter ist ein präzises Instrument zur Transformation von numerischen Werten zwischen verschiedenen Stellenwertsystemen, darunter Binär (Basis 2), Oktal (Basis 8), Dezimal (Basis 10) und Hexadezimal (Basis 16). Technisch gesehen implementiert das Tool Algorithmen zur Radix-Konversion, die sowohl ganzzahlige als auch gebrochene Anteile unter Berücksichtigung der Positionalität der Ziffern behandeln. Jede Eingabe wird zunächst in ein internes Dezimalformat umgewandelt, bevor sie in das Zielzahlensystem überführt wird, wobei spezielle Logik zur Verarbeitung von Vorzeichen (zweierkomplement) und Nachkommastellen (z.B. Binärpunkte) zum Einsatz kommt. Entwickler benötigen dieses Tool, um beispielsweise IPv4-Adressen in hexadezimale MAC-Adressen zu übersetzen, Speicheradressen in Debugging-Umgebungen zu analysieren oder Daten aus Sensoren (oft hexadezimal codiert) in verarbeitbare Dezimalwerte zu konvertieren. Die Unterstützung von Eingaben mit variabler Bit-Länge und die optionale Anzeige von Nullen-aufgefüllten Bytes machen das Tool besonders für Low-Level-Programmierung oder Netzwerktechnik relevant.",
   "usage_steps": [
-    "Öffnen Sie die Seite des Zahlenbasis-Converters",
-    "Geben Sie den zu verarbeitenden Inhalt in das Eingabefeld ein oder fügen Sie ihn ein",
-    "Anpassen Sie die Tool-Einstellungen und Optionen nach Bedarf",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Wählen Sie die Quellbasis aus dem Drop-down-Menü 'Eingabeformat' (z.B. 'Binär').",
+    "Geben Sie die zu konvertierende Zahl ein, einschließlich des Dezimalpunkts für gebrochene Werte (z.B. '110.101').",
+    "Wählen Sie die Zielbasis im Feld 'Ausgabeformat' (z.B. 'Hexadezimal').",
+    "Klicken Sie auf den 'Konvertieren'-Button, um das Ergebnis zu generieren.",
+    "Nutzen Sie den 'Swap'-Button für eine sofortige Umkehrung von Quell- und Zielbasis.",
+    "Aktivieren Sie die Checkbox 'Zweierkomplement', um negative Binärzahlen korrekt zu interpretieren."
   ],
   "usage_examples": [
-    "Verwenden Sie den Zahlenbasis-Converter, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne zu warten"
+    "Ein Netzwerktechniker konvertiert die IPv4-Adresse 192.168.1.1 in hexadezimale Darstellung (C0A80101) für eine Paketanalyse.",
+    "Ein Embedded-Entwickler transformiert einen 16-Bit-Sensorwert (z.B. 0x3FFA) in dezimale Millivoltangaben für eine Kalibrierungstabelle.",
+    "Ein Informatikstudent wandelt die Oktalzahl 173 in Binär (01111011) und Hexadezimal (7B), um eine Klausuraufgabe zu lösen.",
+    "Ein Datenwissenschaftler übersetzt hexadezimale Farbcodes (#FF5733) in RGB-Werte (255, 87, 51) für ein Visualisierungsprojekt."
   ]
 }

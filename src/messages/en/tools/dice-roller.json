@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Dice Roller simulates rolling various types of dice including D4, D6, D8, D10, D12, and D20.",
+  "detailed_description": "The Dice Roller tool is a sophisticated web application designed to simulate the rolling of virtual dice, catering to a variety of needs from gaming to statistical simulations. Technically, the tool utilizes a pseudo-random number generator (PRNG) to ensure that each roll is as unpredictable and unbiased as possible. Users can select from a range of dice types, including the standard six-sided die (d6), as well as more specialized dice like the d4, d8, d10, d12, and d20. The tool also allows for the rolling of multiple dice at once, making it highly versatile for complex scenarios. For instance, a user can roll 3d6 (three six-sided dice) to generate a sum, which is particularly useful in role-playing games for character attribute generation. The Dice Roller is not just a simple simulation; it provides a robust interface for configuring rolls, tracking results, and even saving custom dice sets for future use. This makes it an essential tool for game developers, statisticians, and anyone looking to add an element of chance to their projects or games.",
   "usage_steps": [
-    "Select dice type",
-    "Choose number of dice",
-    "Add modifier if needed",
-    "Click roll button",
-    "View results and history"
+    "Step 1: Open the Dice Roller tool on the website and locate the main interface.",
+    "Step 2: Select the type of dice you want to roll from the drop-down menu. Options include d4, d6, d8, d10, d12, and d20.",
+    "Step 3: Enter the number of dice you want to roll in the 'Quantity' field. For example, input '3' to roll three dice.",
+    "Step 4: Click the 'Roll' button to generate the results. The tool will display each individual die roll and the total sum.",
+    "Step 5: Use the 'History' tab to review past rolls and save specific configurations for future use.",
+    "Step 6: Optionally, click the 'Settings' icon to customize the tool further, such as setting a seed for the random number generator or enabling advanced statistical tracking."
   ],
   "usage_examples": [
-    "Roll for tabletop RPGs",
-    "Board game dice rolls",
-    "Random number generation"
+    "Example 1: A game developer is creating a new tabletop role-playing game and needs to test the balance of character attribute generation. They use the Dice Roller to simulate rolling 3d6 for each attribute to ensure the distribution is fair and consistent.",
+    "Example 2: A statistics student is conducting a study on probability distributions. They use the Dice Roller to generate a large number of d10 rolls to analyze the frequency of each outcome and compare it to theoretical probabilities.",
+    "Example 3: A teacher is conducting a probability lesson in a high school math class. They use the Dice Roller to demonstrate the concept of expected value by rolling multiple d6 dice and calculating the average result over several trials.",
+    "Example 4: A board game enthusiast is playing a game that requires rolling a d20 for combat encounters. They use the Dice Roller to ensure fairness and transparency in the game, especially during critical moments where the outcome could significantly affect the game's progression."
   ]
 }

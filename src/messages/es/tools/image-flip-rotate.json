@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Voltear e Invertir Imágenes es una herramienta online práctica que te ayuda a completar rápidamente diversas tareas. Con Voltear e Invertir Imágenes, puedes procesar fácilmente diferentes datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz sencilla y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Voltear e Invertir Imágenes puede ayudarte a mejorar la eficiencia en el trabajo. Todos los procesos se realizan localmente en tu navegador, asegurando la seguridad de tus datos y evitando que se suban a cualquier servidor. Usa Voltear e Invertir Imágenes ahora para experimentar servicios rápidos, seguros y gratuitos en línea.",
+  "detailed_description": "La herramienta Image Flip & Rotate permite aplicar transformaciones geométricas a imágenes digitales mediante operaciones de espejado (horizontal/vertical) y rotación arbitraria en cualquier ángulo. Técnicamente, procesa matrices de píxeles utilizando algoritmos de interpolación bicúbica para preservar la calidad durante rotaciones no ortogonales. Al manipular los parámetros de transformación afín, el usuario puede corregir orientación de imágenes con metadatos EXIF dañados, generar simetrías para diseño UI/UX, o preparar assets 2D para desarrollo de videojuegos. El motor backend implementa bibliotecas de procesamiento como ImageMagick o OpenCV para garantizar precisión subpíxel y compatibilidad con formatos rasterizados (JPEG, PNG, BMP). Su utilidad radica en la necesidad de ajustes rápidos sin pérdida de calidad, especialmente en flujos de trabajo ágiles donde se requiere validar visualmente alineaciones o crear efectos ópticos complejos.",
   "usage_steps": [
-    "Abre la página de la herramienta Voltear e Invertir Imágenes",
-    "Introduce o pega el contenido que deseas procesar en la casilla de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesamiento para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Haz clic en 'Cargar imagen' para seleccionar tu archivo desde el explorador de archivos.",
+    "Elige entre 'Espejo horizontal', 'Espejo vertical' o 'Rotación manual' en el panel de opciones.",
+    "Para rotación libre, ajusta el ángulo deseado mediante el control deslizante de 0° a 360° con precisión de 0.1°.",
+    "Previsualiza los cambios en tiempo real en el visor principal con zoom ajustable.",
+    "Confirma las transformaciones pulsando el botón 'Aplicar cambios' en la barra de acciones.",
+    "Descarga el resultado con el formato original preservado usando el enlace 'Guardar como'."
   ],
   "usage_examples": [
-    "Usa Voltear e Invertir Imágenes para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un fotógrafo corrige una imagen arquitectónica tomada invertida, restaurando la perspectiva vertical.",
+    "Un diseñador web crea un patrón simétrico duplicando y espejando una mitad de logotipo SVG.",
+    "Un desarrollador ajusta sprites de personaje rotando 27.5° para alinear una animación isométrica.",
+    "Un usuario domestica metadatos EXIF conflictivos al rotar 90° una foto de smartphone para compatibilidad en PDF."
   ]
 }

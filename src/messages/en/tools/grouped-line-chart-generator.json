@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Grouped Line Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Grouped Line Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Grouped Line Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Grouped Line Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Grouped Line Chart Generator is a specialized tool for rendering comparative multi-series line charts using SVG and JavaScript. Technically, it employs D3.js for dynamic data binding, enabling users to visualize up to 10 datasets simultaneously through interpolated Bézier curves. This tool addresses the need for trend comparison across distinct data groups, such as quarterly sales metrics across regions, stock price fluctuations, or sensor data from IoT devices. Users upload structured data in CSV/JSON format, where each column represents a data series. The generator processes timestamps or numerical values for X/Y axes, with optional color scales (sequential, categorical) and axis label customization. It supports logarithmic scale transformations and tooltip interactivity for data point inspection. Technical features include responsive scaling with domain/range adjustments, gridline alignment, and exportable SVG/PNG outputs compliant with WCAG accessibility standards. The tool's unique value lies in its ability to handle asynchronous time-series data while maintaining visual clarity through stacked or overlaid line configurations.",
   "usage_steps": [
-    "Open the Grouped Line Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Load data via CSV/JSON upload or manual entry in the tabular editor, specifying delimiter types (commas, tabs, semicolons)",
+    "2. Map columns to data series using the 'Add Series' dropdown, selecting X/Y axis fields and choosing interpolation methods (linear, step, monotone)",
+    "3. Configure visual parameters in the 'Style Panel' including stroke width (1-5px), opacity gradients, and color palettes (RGB/HEX inputs or preset schemes)",
+    "4. Adjust axis scales using the 'Scale Settings' menu - enable logarithmic transforms, set domain boundaries, or lock aspect ratios",
+    "5. Enable interactive features via the 'Tooltip Control' panel, selecting data fields for display and customizing hover effects",
+    "6. Generate chart with the 'Render' button, then use the 'Export Manager' to download SVG/PNG files or copy embedded HTML code"
   ],
   "usage_examples": [
-    "Use Grouped Line Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Comparing monthly website traffic sources (organic, paid, referral) across three years with dual Y-axis for bounce rate overlay",
+    "Visualizing temperature and humidity trends from five IoT sensors in a warehouse with 15-minute interval data points",
+    "Analyzing stock market volatility by plotting daily closing prices of tech companies against NASDAQ composite index",
+    "Tracking A/B test conversion rates across four demographic segments with confidence interval shading between data series"
   ]
 }

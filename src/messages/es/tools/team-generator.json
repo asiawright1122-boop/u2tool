@@ -1,15 +1,17 @@
 {
-  "detailed_description": "El Generador de Equipos divide aleatoriamente una lista de personas en equipos equilibrados.",
+  "detailed_description": "El Generador de Equipos es una herramienta técnica que implementa algoritmos de aleatorización con restricciones para distribuir participantes en grupos balanceados. Esta solución emplea técnicas de muestreo estratificado y asignación óptima basada en criterios predefinidos, permitiendo equilibrar atributos como nivel de habilidad, experiencia o preferencias específicas cuando están disponibles. Los usuarios necesitan esta herramienta para evitar sesgos manuales en la creación de equipos competitivos, garantizar justicia en competencias deportivas o educativas, y optimizar dinámicas colaborativas en entornos empresariales. El núcleo del algoritmo utiliza un proceso de permutación aleatoria controlada, donde cada iteración evalúa métricas de equilibrio entre grupos mediante un cálculo de desviación estándar ponderado. Los usuarios pueden definir parámetros como número de equipos, criterios de balanceo (por ejemplo, experiencia técnica o nivel físico) y restricciones de agrupación. La herramienta también soporta entrada de datos estructurada en formato CSV con metadatos asociados, permitiendo asignaciones avanzadas basadas en características multidimensionales de los participantes.",
   "usage_steps": [
-    "Ingrese los nombres de los participantes",
-    "Establezca el número de equipos",
-    "Haga clic en generar",
-    "Ver las asignaciones de equipos",
-    "Barajar si es necesario"
+    "Accede a la interfaz web y localiza el área de texto 'Integrantes', donde introduces nombres separados por líneas o comas.",
+    "Selecciona el número exacto de equipos requeridos usando el selector numérico 'Equipos a formar' (mínimo 2, máximo 10).",
+    "Activa la opción 'Balancear por habilidad' si deseas considerar niveles técnicos y completa los campos de puntuación asociados.",
+    "Haz clic en 'Generar Equipos' para ejecutar el algoritmo de permutación aleatoria con restricciones de equilibrio.",
+    "Revisa los resultados en el panel de salida, donde cada equipo muestra su composición y métricas de equilibrio estadístico.",
+    "Utiliza el botón 'Exportar CSV' para descargar la configuración generada o 'Rebalancear' para nueva distribución aleatoria."
   ],
   "usage_examples": [
-    "Cree equipos deportivos",
-    "Divida la clase en grupos",
-    "Organice equipos para juegos"
+    "Un profesor organiza un torneo deportivo con 30 estudiantes, dividiéndolos en 5 equipos equilibrados considerando su condición física previamente evaluada.",
+    "Un gerente de proyectos asigna 12 empleados a 3 equipos de desarrollo cruzados, asegurando distribución equitativa de expertos en backend/frontend.",
+    "Un organizador de un hackathon distribuye 40 participantes en grupos de 4 miembros, integrando desarrolladores, diseñadores y analistas en proporciones controladas.",
+    "Un entrenador de fútbol amateur forma 6 equipos semanales rotativos desde una base de 36 jugadores, aplicando restricciones para evitar repetición de combinaciones."
   ]
 }

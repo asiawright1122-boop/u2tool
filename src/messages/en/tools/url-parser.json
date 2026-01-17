@@ -1,14 +1,17 @@
 {
-  "detailed_description": "URL Parser is a practical online tool that helps you quickly complete various tasks. Using URL Parser, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, URL Parser can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use URL Parser immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The URL Parser is a specialized tool that deconstructs Uniform Resource Locators into their standardized components, enabling developers to analyze and validate URL structures programmatically. This tool processes URLs according to RFC 3986 specifications, extracting elements such as scheme (protocol), authentication credentials, subdomains, domain hierarchy, port numbers, path segments, query string parameters (with proper decoding), and fragment identifiers. Developers benefit from precise parsing capabilities when debugging redirect chains, constructing API endpoints, or auditing SEO-friendly URL structures. The tool employs a two-phase parsing algorithm: first tokenizing the input string using regex-based pattern matching, then reconstructing the components into a hierarchical object model. Advanced features include handling internationalized domain names (IDN), detecting top-level domains (TLDs), and normalizing URL encoding. By exposing the underlying structure of URLs, this tool helps identify security risks in redirect parameters, validate domain ownership for webhooks, and ensure compliance with RESTful API design principles.",
   "usage_steps": [
-    "Open the URL Parser tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Enter the target URL into the primary input field labeled 'URL Source'",
+    "Toggle 'Strict Parsing Mode' to enforce RFC compliance or allow lenient parsing for malformed URLs",
+    "Select output format preference: JSON tree view or tab-separated key-value pairs",
+    "Click 'Parse URL' to generate component breakdown in the results panel",
+    "Review highlighted validation flags (e.g., invalid port numbers, unsafe characters)",
+    "Use the 'Copy Raw Output' button to transfer results to IDEs or documentation tools"
   ],
   "usage_examples": [
-    "Use URL Parser to process your data",
-    "Get processing results quickly without waiting"
+    "Debugging OAuth2 redirect URIs by validating callback domains against registered endpoints",
+    "Analyzing search engine crawl patterns through query parameter decomposition",
+    "Auditing affiliate marketing links for tracking parameter consistency across domains",
+    "Verifying CDN asset URL structures for proper versioned path segmentation"
   ]
 }

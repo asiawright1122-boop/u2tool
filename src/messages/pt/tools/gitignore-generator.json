@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de .gitignore é uma ferramenta online prática que ajuda você a concluir diversas tarefas rapidamente. Usando o Gerador de .gitignore, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. Esta ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize eficientemente. Seja desenvolvedor, designer ou usuário geral, o Gerador de .gitignore pode ajudá-lo a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não sendo enviados a nenhum servidor. Use o Gerador de .gitignore imediatamente para experimentar serviços de ferramentas online rápidas, seguras e gratuitas.",
+  "detailed_description": "O .gitignore Generator é uma ferramenta técnica especializada para automação da criação de arquivos de configuração .gitignore em repositórios Git. Ele opera agregando padrões de exclusão baseados em linguagens de programação, frameworks, sistemas operacionais e dependências específicas selecionadas pelo usuário. Internamente, utiliza uma base de conhecimento com templates pré-definidos que implementam regras de pattern matching com sintaxe Git, incluindo wildcards, negações (!) e diretórios recursivos. Essa ferramenta é essencial para evitar o commit acidental de artefatos como arquivos de build (ex: /dist/), dependências de pacotes (node_modules/), logs temporários, credenciais sensíveis (arquivos .env) e metadados de IDEs. Sua engine combina seleções múltiplas do usuário com validação cruzada de conflitos entre regras, garantindo consistência lógica no arquivo final. Para desenvolvedores, economiza tempo em configurações manuais propensas a erros e padroniza políticas de versionamento entre equipes diversas.",
   "usage_steps": [
-    "Abra a página do Gerador de .gitignore",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a interface e selecione linguagens/frameworks relevantes nos checkboxes (ex: 'Python', 'ReactJS', 'Docker')",
+    "Escolha opções específicas como 'Ignorar arquivos temporários do VS Code' ou 'Excluir pastas de cache do Webpack'",
+    "Adicione regras personalizadas no campo 'Entradas customizadas' usando sintaxe Git (ex: '*.log', '/temp/')",
+    "Clique em 'Gerar .gitignore' para compilar as regras selecionadas em um arquivo único",
+    "Revise o preview com marcação de sintaxe e ajuste manual, se necessário",
+    "Baixe o arquivo gerado ou copie o conteúdo para seu repositório local"
   ],
   "usage_examples": [
-    "Use o Gerador de .gitignore para processar seus dados",
-    "Obtenha rapidamente os resultados do processamento sem aguardar"
+    "Configuração de projeto de ciência de dados Python com regras para ignorar ambientes virtuais (venv/), notebooks temporários (~.ipynb) e datasets locais (/data/)",
+    "Criação de .gitignore para aplicação full-stack com React (node_modules/, .env) e backend em Node.js (logs/, uploads/)",
+    "Otimização de repositório Unity com exclusão de arquivos temporários do editor (.sln, .tmp) e pastas de cache de assets",
+    "Implementação de políticas de segurança em equipes PHP com regras para excluir arquivos de configuração locais (config.local.php) e logs de depuração"
   ]
 }

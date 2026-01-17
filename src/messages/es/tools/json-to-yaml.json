@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON a YAML es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Con JSON a YAML, puedes procesar diversos datos sin necesidad de instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, JSON a YAML puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza JSON a YAML inmediatamente para experimentar un servicio de herramienta en línea rápida, segura y gratuita.",
+  "detailed_description": "El conversor JSON a YAML es una utilidad especializada que transforma datos estructurados en formato JSON (JavaScript Object Notation) a YAML (YAML Ain't Markup Language), preservando tipos de datos nativos como objetos, matrices, cadenas y valores booleanos. Esta herramienta utiliza analizadores sintácticos (parsers) para validar la estructura JSON de entrada y aplicar las reglas de indentación y anidamiento propias de YAML. Es esencial para desarrolladores que necesitan migrar configuraciones entre sistemas heterogéneos, ya sea para automatizar despliegues en Kubernetes (que usan YAML) o integrar APIs RESTful que devuelven JSON. El proceso incluye la deserialización del JSON original, la normalización de claves y la generación de un esquema YAML válido con niveles de sangrado explícitos. A diferencia de herramientas genéricas, este conversor soporta notaciones avanzadas como alias de nodos y literales escalares en bloques, manteniendo la integridad de metadatos críticos durante la transformación.",
   "usage_steps": [
-    "Abre la página del convertidor JSON a YAML",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Abre el editor web y localiza el área de texto 'Código JSON' con resaltado de sintaxis.",
+    "Pega tu JSON válido o arrastra un archivo .json desde tu dispositivo.",
+    "Activa la opción 'Mantener tipos de datos' si tu JSON contiene números o booleanos no entrecomillados.",
+    "Ajusta el nivel de indentación usando el selector de espacios (2-8) según tus necesidades de formato.",
+    "Haz clic en el botón 'Convertir' para iniciar el análisis y transformación sintáctica.",
+    "Revisa el YAML generado en el panel de salida y descárgalo en formato .yaml con un clic derecho."
   ],
   "usage_examples": [
-    "Utiliza JSON a YAML para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Transformar respuestas de API en JSON a YAML para documentación técnica en proyectos de microservicios.",
+    "Migrar archivos de configuración de aplicaciones Node.js (JSON) a entornos Docker que requieren YAML.",
+    "Convertir logs estructurados en JSON a formato YAML legible para auditorías de seguridad.",
+    "Preparar datos de prueba en formato YAML para frameworks de testing como Behave o PyTest."
   ]
 }

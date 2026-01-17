@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Conversor YAML/JSON é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Com o Conversor YAML/JSON, você pode processar diversos dados sem precisar instalar nenhum software ou plugin. A ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e use eficientemente. Seja desenvolvedor, designer ou usuário geral, o Conversor YAML/JSON pode ajudar a melhorar a eficiência do trabalho. Todos os processos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use o Conversor YAML/JSON imediatamente para experimentar serviços de ferramenta online rápidos, seguros e gratuitos.",
+  "detailed_description": "O YAML/JSON Converter é uma ferramenta técnica especializada em transformações bidirecionais entre estruturas de dados YAML (YAML Ain't Markup Language) e JSON (JavaScript Object Notation). Internamente, o conversor utiliza parsers baseados em gramáticas formais para validar e transformar documentos YAML em árvores de sintaxe abstrata (AST), que são serializadas em JSON ou vice-versa, preservando tipos de dados escalares, estruturas recursivas (arrays aninhados, dicionários) e metadados como âncoras e referências. Essa precisão é crítica para casos como a migração de arquivos de configuração (ex: Kubernetes manifests) ou adaptação de APIs que exigem formatos específicos. A ferramenta destaca-se por lidar com peculiaridades como identação sensível no YAML, diferenciação explícita entre strings e números em JSON, além de realçar erros de sintaxe em tempo real, como vírgulas ausentes ou chaves mal alinhadas. Desenvolvedores precisam desta ferramenta para evitar inconsistências manuais ao converter manualmente, especialmente em projetos que utilizam ambas as notações para serialização de dados, como microsserviços (YAML para configurações locais e JSON para payloads REST) ou pipelines de CI/CD.",
   "usage_steps": [
-    "Abra a página do Conversor YAML/JSON",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a interface web e selecione a direção da conversão usando o seletor 'YAML para JSON' ou 'JSON para YAML' na barra superior.",
+    "Cole o documento bruto no editor de código com suporte a syntax highlighting, que identifica automaticamente o formato de entrada.",
+    "Ajuste opções avançadas via painel lateral, como nível de identação (2-4 espaços), uso de aspas duplas/simples ou compactação de arrays.",
+    "Clique em 'Validar Estrutura' para detectar erros no formato original, com mensagens específicas indicando linhas problemáticas.",
+    "Pressione 'Converter' para gerar o output no formato oposto, mantendo comentários existentes (se compatível com o destino).",
+    "Copie o resultado via botão 'Copiar para Área de Transferência' ou baixe como arquivo .json/.yaml usando 'Exportar'."
   ],
   "usage_examples": [
-    "Use o Conversor YAML/JSON para processar seus dados",
-    "Obtenha os resultados de processamento rapidamente sem esperar"
+    "Um engenheiro de DevOps converte um deployment.yaml do Kubernetes para JSON, necessário para uma API de orquestração legada que não aceita YAML.",
+    "Um desenvolvedor transforma um arquivo swagger.yaml em JSON para integrar com uma ferramenta de documentação que só processa JSON.",
+    "Migração de um playbook Ansible (YAML) para um sistema de automação que utiliza JSON como formato padrão de entrada.",
+    "Transformação de logs estruturados em JSON para YAML, permitindo edição manual mais legível devido à menor verbosidade da sintaxe YAML."
   ]
 }

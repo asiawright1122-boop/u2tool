@@ -1,16 +1,17 @@
 {
-  "detailed_description": "ROI Calculator is a comprehensive investment analysis tool that helps you calculate return on investment instantly. Enter your initial investment, final value, and time period to get ROI percentage, annualized returns, and profit/loss analysis. Perfect for evaluating investment performance and comparing different investment opportunities.",
+  "detailed_description": "The ROI Calculator is a precision financial instrument designed to quantify investment performance through dual-metric analysis. It computes both absolute ROI (Return on Investment) and annualized ROI using time-weighted methodologies, accommodating variable holding periods across asset classes. The tool employs the formula: Absolute ROI = (Final Value - Initial Investment) / Initial Investment * 100, while annualized calculations apply compound growth rate principles: Annualized ROI = (1 + Absolute ROI)^(1/Years) - 1, where Years = (End Date - Start Date)/365. Users benefit from cross-asset comparability through standardized time conversions, enabling accurate evaluation of investments ranging from short-term trading positions to decade-long equity holdings. The interface supports multi-currency inputs and automatically normalizes time periods from daily to annual scales via dropdown selectors. Technical advantages include precise handling of fractional periods (e.g., 2.5 years) and transparent profit breakdowns showing both absolute monetary gains and percentage-based returns. This dual-perspective analysis is essential for institutional investors benchmarking portfolios against indices, venture capitalists assessing startup exits, and individual investors optimizing retirement allocations.",
   "usage_steps": [
-    "Enter your initial investment amount",
-    "Enter the final value of your investment",
-    "Specify the time period in years or months",
-    "View the calculated ROI percentage",
-    "Check the annualized ROI for comparison",
-    "See your total profit or loss"
+    "Input initial investment amount in USD or selected currency into the 'Initial Investment' numeric field",
+    "Enter final asset value post-investment period in the 'Final Value' input box",
+    "Select investment start and end dates using the dual calendar date-pickers to establish holding period",
+    "Choose preferred time unit (Days, Weeks, Months, Years) from the 'Annualization Basis' radio group",
+    "Click 'Calculate' to trigger three-part output: absolute ROI percentage, annualized ROI, and absolute profit amount",
+    "Review embedded time-value breakdown showing profit attribution across calculated investment duration"
   ],
   "usage_examples": [
-    "Calculate stock investment returns over 3 years",
-    "Compare ROI of different investment options",
-    "Analyze real estate investment performance"
+    "A stock trader calculates 18-month cryptocurrency ROI: $10k → $14.5k shows 45% absolute return vs 27.68% annualized ROI for accurate cross-period comparison",
+    "Real estate investor compares two properties: 4-year $250k investment yielding $400k (60% ROI) vs 2.5-year $300k property generating $475k, revealing superior annualized performance despite lower absolute return",
+    "Private equity firm evaluates Series A startup exit: $2M seed investment returning $12M after 3.25 years with 500% absolute ROI vs 58.48% annualized rate for portfolio benchmarking",
+    "Retirement account manager analyzes bond ladder performance: $85k → $102k over 22 months produces 20% absolute ROI, which converts to 10.75% annualized return for asset allocation adjustments"
   ]
 }

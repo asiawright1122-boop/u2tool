@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Explicador de Expresiones Cron es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Usando el Explicador de Expresiones Cron, puedes procesar diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, el Explicador de Expresiones Cron puede ayudarte a mejorar tu eficiencia laboral. Todos los procesamientos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza el Explicador de Expresiones Cron inmediatamente para experimentar servicios de herramienta en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "El Explicador de Expresiones Cron es una herramienta técnica diseñada para descomponer y visualizar cronogramas definidos mediante sintaxis cronológica. Internamente, el analizador lexico-sintáctico interpreta las cinco o seis columnas de una expresión cron (minutos, horas, días de mes, meses y días de semana, opcionalmente segundos), convirtiéndolas en descripciones naturales legibles como 'Cada lunes a las 14:30' o 'Último viernes de cada mes'. La herramienta implementa algoritmos de cálculo de fechas que consideran ajustes horarios, cambios de horario de verano e incluso excepciones como 'tercer jueves' mediante evaluación de patrones modulares. Es esencial para desarrolladores que depuran trabajos programados en entornos Unix/Linux, administradores de sistemas que validan configuraciones de crontab, o ingenieros DevOps que automatizan pipelines en Kubernetes, ya que evita errores de interpretación manual en expresiones complejas con wildcards, rangos o pasos (ej: '0/5 * * * ?'). Al procesar la entrada, el motor genera un AST (Árbol Sintáctico Abstracto) que se traduce a lenguaje natural y calcula los próximos tres eventos programados usando la biblioteca temporalis.js para manejar zonas horarias y fechas de forma precisa.",
   "usage_steps": [
-    "Abre la página del Explicador de Expresiones Cron",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Accede a la herramienta en la sección 'Desarrollo' del panel principal",
+    "2. Introduce la expresión cron en el campo de texto monoespaciado con resaltado de sintaxis",
+    "3. Selecciona la zona horaria específica en el menú desplegable UTC/GMT±XX:XX",
+    "4. Haz clic en 'Analizar Expresión' para generar la descomposición por componentes",
+    "5. Revisa los próximos tres horarios calculados en la tabla de resultados",
+    "6. Utiliza el botón 'Copiar Traducción' para exportar la descripción natural al portapapeles"
   ],
   "usage_examples": [
-    "Utiliza el Explicador de Expresiones Cron para procesar tus datos",
-    "Obtén resultados de procesamiento rápidos sin esperar"
+    "Un desarrollador corrige un job de procesamiento nocturno que fallaba por malinterpretar la expresión '0 0/2 1,15 * 1-5' (cada 2 horas entre días 1 y 15 de meses impares)",
+    "Un administrador de sistemas valida que el backup diario '0 23 * * 0' se ejecute correctamente a las 23:00 UTC los domingos",
+    "Un ingeniero DevOps configura un pipeline en Argo Workflows con la expresión cron '0 0 8-14/3 * *' y verifica que coincida con los días laborables",
+    "Un equipo de soporte técnico traduce la expresión heredada '0 0 0/4 1/1 * ? *' para entender que ejecuta tareas cada 4 días a medianoche"
   ]
 }

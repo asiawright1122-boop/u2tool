@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Calculadora Básica é uma ferramenta online prática que ajuda você a completar rapidamente várias tarefas. Usando Calculadora Básica, você pode processar facilmente vários dados sem instalar nenhum software ou plugin. Esta ferramenta tem uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a use com eficiência. Seja você desenvolvedor, designer ou usuário geral, Calculadora Básica pode ajudá-lo a melhorar a eficiência do trabalho. Todo o processamento é feito localmente no seu navegador, garantindo a segurança dos seus dados e não será enviado para nenhum servidor. Use Calculadora Básica imediatamente para experimentar serviços de ferramentas online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Base Calculator é uma ferramenta técnica projetada para realizar operações aritméticas complexas em sistemas de numeração não decimais, suportando bases de 2 a 36. Seu funcionamento se baseia na análise de expressões matemáticas completas (como adição, subtração, multiplicação e divisão) diretamente na base especificada, eliminando a necessidade de conversão manual prévia. Internamente, o sistema utiliza algoritmos de parsing que reconhecem símbolos alfanuméricos (0-9, A-Z) para bases superiores a 10, aplica regras de aritmética modular para cálculos intermediários e converte resultados para a base desejada mantendo precisão em números fracionários através do tratamento de pontos radiais. Profissionais de redes, desenvolvedores de firmware e estudantes de eletrônica digital encontram nessa ferramenta uma solução para desafios como verificação de endereços IPv6 em hexadecimal, cálculo de máscaras de sub-rede binárias ou validação de códigos BCD (Binary-Coded Decimal). Diferente de conversores simples, esta ferramenta executa operações completas em bases arbitrárias, preservando a integridade dos valores fracionários e implementando lógica de complemento de dois para números negativos.",
   "usage_steps": [
-    "Abra a página da ferramenta Calculadora Básica",
-    "Digite ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processar para ver os resultados",
-    "Copie ou baixe os resultados processados"
+    "Selecione a base numérica de entrada (2-36) usando o seletor 'Base Origem'.",
+    "Digite a expressão aritmética completa no campo 'Entrada' (ex: 'A3 + 1B' em hexadecimal).",
+    "Escolha a operação desejada (adição, subtração, etc.) ou deixe em 'Automático' para detecção inteligente.",
+    "Defina a base de saída no campo 'Converter Para' ou mantenha igual à base de origem para operações intrabase.",
+    "Ative a opção 'Tratar Frações' se a expressão contiver pontos radiais (ex: '3.14' em base 16).",
+    "Clique em 'Calcular' para obter o resultado com notação expandida mostrando etapas intermediárias da conversão."
   ],
   "usage_examples": [
-    "Use Calculadora Básica para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Um engenheiro de redes convertendo endereços IPv6 em hexadecimal para notação decimal sem erros de arredondamento.",
+    "Um desenvolvedor calculando checksums CRC-32 diretamente em base 2 para validação de pacotes de dados.",
+    "Um aluno de arquitetura de computadores verificando overflow em operações de complemento de dois em base octal.",
+    "Um designer digital convertendo valores de cores em hexadecimais para ajustes precisos em displays RGB com calibração fracional."
   ]
 }

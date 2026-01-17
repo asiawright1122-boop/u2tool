@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON to YAML is a practical online tool that helps you quickly complete various tasks. Using JSON to YAML, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON to YAML can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON to YAML immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The JSON to YAML Converter transforms structured JSON data into YAML format, preserving hierarchical relationships and data types. This tool leverages recursive parsing algorithms to interpret JSON objects, arrays, and primitive values, then maps them to YAML's indentation-based syntax. Developers need this tool for scenarios requiring human-readable configuration files, such as Kubernetes manifests or Ansible playbooks, where YAML's whitespace-sensitive structure offers better maintainability than JSON. The converter handles edge cases like circular references, trailing commas, and Unicode characters, ensuring data integrity during transformation. It also normalizes JSON structures by resolving nested references and converting JSON arrays to YAML block sequences. Technically, the tool uses a two-phase process: first parsing JSON into an abstract syntax tree (AST), then serializing the AST into YAML through a context-aware renderer that adjusts indentation levels based on nesting depth.",
   "usage_steps": [
-    "Open the JSON to YAML tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Open the converter and paste valid JSON into the 'Source Data' textarea with line numbers enabled",
+    "Toggle the 'Pretty Print' checkbox to control output indentation (2-8 spaces)",
+    "Select 'Single Quotes' or 'Double Quotes' for scalar value formatting",
+    "Click 'Convert' to initiate AST parsing and YAML generation",
+    "Review the 'Conversion Report' for potential data type warnings (e.g. NaN values)",
+    "Copy the YAML output from the 'Result' pane or download as .yaml file"
   ],
   "usage_examples": [
-    "Use JSON to YAML to process your data",
-    "Get processing results quickly without waiting"
+    "Migrating AWS CloudFormation templates from JSON to YAML format for team collaboration",
+    "Converting MongoDB document exports to YAML for initializing test databases",
+    "Transforming API gateway response schemas for OpenAPI specification compliance",
+    "Creating Helm chart values.yaml files from JSON-based application configurations"
   ]
 }

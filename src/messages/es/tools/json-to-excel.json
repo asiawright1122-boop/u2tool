@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON a Excel es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando JSON a Excel, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, JSON a Excel puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa JSON a Excel inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+  "detailed_description": "La herramienta JSON a Excel realiza una conversión precisa de datos estructurados en formato JSON a hojas de cálculo XLSX mediante un análisis avanzado de esquemas. Al cargar un archivo JSON, el sistema ejecuta un mapeo automático de claves en columnas, identificando patrones jerárquicos y convirtiendo arrays anidados en filas relacionadas. Utiliza un motor de inferencia para determinar tipos de datos (cadenas, números, fechas) y aplica formatos de celda correspondientes. Esta solución es esencial para desarrolladores que necesitan migrar datos desde APIs RESTful a informes financieros, transformar registros de logs en matrices analíticas o integrar datos NoSQL en sistemas ERP. A diferencia de convertidores básicos, soporta objetos multidimensionales mediante técnicas de flattening que preservan relaciones padre-hijo, mostrando un preview interactivo con opciones de personalización como selección de campos, delimitadores de anidamiento y ajuste de zonas horarias para valores datetime. El resultado es un archivo XLSX totalmente compatible con Microsoft Excel y Google Sheets, listo para análisis o procesos ETL posteriores.",
   "usage_steps": [
-    "Abre la página de la herramienta JSON a Excel",
-    "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-    "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Haz clic en el botón 'Cargar archivo JSON' y selecciona tu documento fuente desde el explorador de archivos",
+    "Revisa el panel de previsualización en tiempo real donde se muestra el esquema estructural analizado",
+    "Selecciona las claves deseadas en el árbol de navegación para incluirlas como columnas en la hoja",
+    "Configura opciones avanzadas: elige delimitador para arrays (coma, salto de línea) y formato de fecha",
+    "Haz clic en 'Generar Excel' para iniciar el proceso de transformación con el motor V8 optimizado",
+    "Descarga el archivo XLSX resultante o copia el enlace compartible con permisos de solo lectura"
   ],
   "usage_examples": [
-    "Usa JSON a Excel para procesar tus datos",
-    "Obtén resultados de procesamiento rápidamente sin esperar"
+    "Un ingeniero de datos transforma 10,000 registros de usuarios desde una API REST en un informe financiero mensual",
+    "Un analista de IoT convierte logs de dispositivos en formato JSON a una tabla de Excel para análisis de tendencias de sensores",
+    "Un desarrollador de e-commerce mapea un catálogo de productos con atributos jerárquicos a una plantilla de Excel para gestión de inventario",
+    "Un científico de datos prepara un dataset de encuestas con respuestas anidadas para modelado estadístico en Power BI"
   ]
 }

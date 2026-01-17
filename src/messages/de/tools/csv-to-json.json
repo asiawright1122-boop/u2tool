@@ -1,14 +1,17 @@
 {
-  "detailed_description": "CSV zu JSON ist ein praktisches Online-Tool, das Ihnen hilft, verschiedene Aufgaben schnell zu erledigen. Mit CSV zu JSON können Sie verschiedene Daten ohne das Installieren von Software oder Plugins bearbeiten. Das Tool hat eine einfache Benutzeroberfläche und ist einfach zu bedienen, sodass Sie schnell loslegen und effizient arbeiten können. Ob Sie Entwickler, Designer oder allgemeine Benutzer sind, CSV zu JSON kann Ihnen helfen, Ihre Arbeitseffizienz zu verbessern. Alle Verarbeitungsvorgänge werden in Ihrem Browser lokal durchgeführt, was Ihre Datensicherheit gewährleistet und sicherstellt, dass Ihre Daten nicht auf irgendeinem Server hochgeladen werden. Nutzen Sie CSV zu JSON sofort, um schnell, sicher und kostenlosen Online-Tool-Dienstleistungen zu genießen.",
+  "detailed_description": "Der CSV-zu-JSON-Konverter wandelt strukturierte Tabellendaten aus CSV-Dateien in ein hierarchisches JSON-Format um. Technisch erfolgt dies durch Parsing des CSV-Inhalts mittels regulärer Ausdrücke zur Trennzeichenerkennung (z.B. Komma, Semikolon, Tabulator) und anschließender Serialisierung in ein JSON-Objektbaum. Besonders bei komplexen Daten mit verschachtelten Arrays oder Objekten ermöglicht das Tool präzise Typzuordnungen (String, Number, Boolean) durch kontextbasierte Mustervergleiche. Entwickler benötigen diese Funktionalität für Datenmigrationen in NoSQL-Datenbanken wie MongoDB, API-Tests mit JSON-basierten Endpoints oder die Vorbereitung von Daten für Visualisierungsframeworks wie D3.js. Das Tool verarbeitet Daten clientseitig im Browser mit Web Workers für große Dateien, unterstützt MIME-Typ-Prüfung und bietet eine Live-Vorschau der konvertierten Struktur. Besonders nützlich ist die automatische Erkennung von Kopfzeilen und die Option zur manuellen Anpassung von Feldnamen für JSON-Schlüssel.",
   "usage_steps": [
-    "Öffnen Sie die Seite des CSV zu JSON-Tools",
-    "Fügen Sie den Inhalt ein, den Sie verarbeiten möchten, in das Eingabefeld ein",
-    "Anpassen Sie die Tool-Einstellungen und Optionen nach Bedarf",
-    "Klicken Sie auf den Verarbeitungsbutton, um die Ergebnisse anzuzeigen",
-    "Kopieren oder herunterladen Sie die verarbeiteten Ergebnisse"
+    "Laden Sie die CSV-Datei über den Dateiuploader oder ziehen Sie sie per Drag-and-Drop in den Arbeitsbereich.",
+    "Wählen Sie das explizite Trennzeichen aus dem Auswahlfeld: Komma, Semikolon, Tabulator oder benutzerdefiniertes Zeichen.",
+    "Aktivieren Sie die Checkbox 'Erste Zeile als Header' für automatische Schlüsselgenerierung im JSON-Objekt.",
+    "Passen Sie bei Bedarf die Datentypen der Spalten manuell im Typzuordnungs-Editor an (z.B. von String zu Number).",
+    "Klicken Sie auf 'Konvertieren', um den JSON-Code in der Ergebnisansicht zu generieren.",
+    "Kopieren Sie den Ergebniscode über den 'Copy to Clipboard'-Button oder laden Sie die JSON-Datei herunter."
   ],
   "usage_examples": [
-    "Verwenden Sie CSV zu JSON, um Ihre Daten zu verarbeiten",
-    "Erhalten Sie schnell die Verarbeitungsresultate ohne Warten"
+    "Migration von Kundendaten aus Excel-Tabellen (CSV) in eine MongoDB-Datenbank mit verschachtelten Dokumentenstrukturen.",
+    "Erstellung von Testdatensätzen für API-Endpunkte, die JSON-Eingaben im POST-Request erwarten.",
+    "Konvertierung von Zeitreihendaten für Echtzeitvisualisierungen mit der JavaScript-Bibliothek Chart.js.",
+    "Vorbereitung von maschinellem Lernmaterial in Python, das JSON-Arrays für Scikit-learn-Modelle benötigt."
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Redimensionador de Imágenes es una herramienta en línea práctica que te ayuda a completar diversas tareas de manera rápida. Con el Redimensionador de Imágenes, puedes procesar fácilmente diversos datos sin necesidad de instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite comenzar rápidamente y utilizarla eficientemente. Ya sea que seas desarrollador, diseñador o usuario general, el Redimensionador de Imágenes puede ayudarte a mejorar tu eficiencia laboral. Todos los procesos se realizan localmente en tu navegador, lo que garantiza la seguridad de tus datos y no se suben a ningún servidor. Utiliza el Redimensionador de Imágenes inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "El Image Resizer es una herramienta de procesamiento de imágenes que permite a los usuarios cambiar el tamaño de sus archivos de imagen a dimensiones personalizadas. Esta herramienta utiliza algoritmos de reescalado avanzados para asegurar que las imágenes mantengan su calidad y nitidez, incluso al redimensionarlas a tamaños muy diferentes de su resolución original. El Image Resizer es especialmente útil para desarrolladores y diseñadores que necesitan adaptar imágenes para diferentes plataformas y dispositivos, como sitios web, aplicaciones móviles y redes sociales. Además, la herramienta ofrece opciones para ajustar la calidad de la imagen y el formato de salida, lo que permite un control preciso sobre el resultado final. El Image Resizer soporta una amplia variedad de formatos de imagen, incluyendo JPEG, PNG, GIF y BMP, y es capaz de procesar múltiples imágenes de manera simultánea, lo que ahorra tiempo y esfuerzo en tareas repetitivas.",
   "usage_steps": [
-    "Abre la página del Redimensionador de Imágenes",
-    "Ingresa o pega el contenido que deseas procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del tool según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Abra la página de Image Resizer en su navegador y haga clic en el botón 'Cargar Imagen' para seleccionar el archivo que desea redimensionar.",
+    "Una vez que la imagen esté cargada, use el deslizador 'Ancho' y 'Alto' para establecer las nuevas dimensiones en píxeles. También puede introducir valores numéricos directamente en los campos de entrada.",
+    "Si lo desea, active la opción 'Mantener relación de aspecto' para asegurarse de que la imagen no se distorsione durante el proceso de redimensionamiento.",
+    "En la sección 'Calidad de la imagen', ajuste el nivel de compresión utilizando el deslizador. Un valor más alto resultará en una imagen de mayor calidad, pero con un tamaño de archivo mayor.",
+    "Seleccione el formato de salida deseado desde el menú desplegable 'Formato de salida', que ofrece opciones como JPEG, PNG, GIF y BMP.",
+    "Finalmente, haga clic en 'Aplicar Cambios' para procesar la imagen. El Image Resizer generará la imagen redimensionada, que podrá descargar haciendo clic en el botón 'Descargar Imagen'."
   ],
   "usage_examples": [
-    "Utiliza el Redimensionador de Imágenes para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Un diseñador gráfico necesita crear versiones de diferentes tamaños de un logotipo para usar en un sitio web, una aplicación móvil y tarjetas de visita. Utiliza Image Resizer para generar rápidamente las versiones necesarias, asegurándose de que todas mantengan la calidad y la proporción correcta.",
+    "Un fotógrafo profesional debe subir sus imágenes a una plataforma de redes sociales que requiere un tamaño específico. Con Image Resizer, puede ajustar el tamaño de las imágenes a las dimensiones requeridas sin perder calidad, y descargarlas directamente para subirlas.",
+    "Un desarrollador de software está creando un juego para dispositivos móviles y necesita optimizar las imágenes de los personajes y elementos del juego. Usa Image Resizer para reducir el tamaño de las imágenes sin comprometer la calidad, mejorando así el rendimiento del juego en dispositivos con recursos limitados.",
+    "Un bloguero necesita preparar imágenes para una entrada de blog, y quiere asegurarse de que las imágenes se carguen rápidamente en la página. Con Image Resizer, puede ajustar el tamaño y la calidad de las imágenes para que sean óptimas para la web, mejorando la experiencia del usuario."
   ]
 }

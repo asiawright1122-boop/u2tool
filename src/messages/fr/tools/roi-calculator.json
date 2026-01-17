@@ -1,16 +1,17 @@
 {
-  "detailed_description": "Le Calculateur de ROI est un outil d'analyse d'investissement complet qui vous aide à calculer instantanément le retour sur investissement. Entrez votre investissement initial, la valeur finale et la période pour obtenir le pourcentage de ROI, les rendements annualisés et l'analyse des profits/pertes. Parfait pour évaluer la performance des investissements et comparer différentes opportunités d'investissement.",
+  "detailed_description": "Notre Calculateur de ROI est un outil technique conçu pour mesurer la rentabilité d'un investissement en intégrant des paramètres financiers précis. Il permet de calculer à la fois le ROI classique [(Valeur Finale - Investissement Initial)/Investissement Initial × 100] et le ROI annualisé [(Valeur Finale/Investissement Initial)^(1/Années) - 1] × 100, avec prise en compte de la fréquence de composition (mensuelle, trimestrielle, annuelle). L'outil intègre également une analyse du profit net (revenu total - coûts cumulés) et un ajustement via un taux d'actualisation pour évaluer la valeur actuelle des rendements. Les utilisateurs peuvent modéliser des scénarios complexes comme des investissements en capital-risque, des projets immobiliers ou des campagnes marketing, en tenant compte de variables comme les coûts de transaction ou les fluctuations monétaires. La fonctionnalité de comparaison côte à côte permet d'évaluer simultanément jusqu'à trois investissements, utile pour prioriser des opportunités selon leur ratio risque/rendement. Ce calculateur s'appuie sur des algorithmes de traitement des données financières en temps réel, adaptés aux professionnels exigeant des résultats conformes aux normes IRR (Internal Rate of Return).",
   "usage_steps": [
-    "Entrez le montant de votre investissement initial",
-    "Entrez la valeur finale de votre investissement",
-    "Spécifiez la période en années ou mois",
-    "Visualisez le pourcentage de ROI calculé",
-    "Vérifiez le ROI annualisé pour comparaison",
-    "Voyez votre profit ou perte total"
+    "Saisissez le montant de l'investissement initial (champ 'Investissement de départ') en euros, dollars ou livres sterling.",
+    "Entrez la valeur finale estimée ou réalisée dans le champ 'Résultat final', excluant les frais annexes.",
+    "Sélectionnez la période exacte d'investissement via le sélecteur de dates (format JJ/MM/AAAA).",
+    "Choisissez la fréquence de composition (mensuelle, trimestrielle, annuelle) selon le type d'actif.",
+    "Ajustez le taux d'actualisation (%) pour intégrer l'inflation ou le coût du capital.",
+    "Cliquez sur 'Calculer' pour obtenir le ROI brut, le ROI annualisé et la marge de profit nette."
   ],
   "usage_examples": [
-    "Calculer les rendements d'investissement en actions sur 3 ans",
-    "Comparer le ROI de différentes options d'investissement",
-    "Analyser la performance des investissements immobiliers"
+    "Un investisseur évalue un achat d'actions à 50 000 € vendues 72 000 € après 3 ans avec composition trimestrielle : résultat affichant un ROI annualisé de 12,65%.",
+    "Une entreprise compare deux campagnes marketing A/B avec des budgets respectifs de 15k€ et 22k€, mesurant leur rentabilité via le ROI net après déduction des coûts opérationnels.",
+    "Un promoteur immobilier analyse un projet nécessitant 300 000 € d'investissement et générant 410 000 € en 5 ans, intégrant un taux d'actualisation de 4% pour évaluer sa performance réelle.",
+    "Un fonds de capital-risque calcule le ROI d'un portefeuille de startups, en modélisant des scénarios de sortie (IPO, rachat) avec différentes fréquences de composition pour ajuster sa stratégie."
   ]
 }

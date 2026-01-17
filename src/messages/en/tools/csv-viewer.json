@@ -1,14 +1,17 @@
 {
-  "detailed_description": "CSV Viewer is a practical online tool that helps you quickly complete various tasks. Using CSV Viewer, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, CSV Viewer can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use CSV Viewer immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The CSV Viewer is a client-side web application designed to parse, visualize, and manipulate comma-separated values (CSV) data through an interactive HTML table interface. Built with JavaScript and leveraging the HTML5 FileReader API, it processes CSV files locally without server-side uploads, ensuring data privacy. The tool employs a stateful parsing engine that auto-detects delimiters (commas, tabs, semicolons) and handles edge cases like embedded line breaks, quoted fields, and RFC 4180-compliant headers. Users gain granular control via a toolbar enabling delimiter customization, header row specification, and encoding selection (UTF-8, UTF-16, Latin-1). The rendering engine dynamically generates a scrollable, responsive table with column sorting arrows and row highlighting, while a metadata panel displays file statistics like row count, column count, and delimiter type. Developers can access parsed JSON data through a built-in console tab for debugging integration workflows. This tool addresses critical use cases such as data validation for ETL pipelines, debugging malformed CSVs from IoT devices, and cross-dataset reconciliation for machine learning training sets.",
   "usage_steps": [
-    "Open the CSV Viewer tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Drag/drop a CSV file onto the dashboard or click 'Upload File' to select from your device",
+    "2. Choose delimiter type from dropdown (auto-detected by default) including custom delimiters via the 'Other' input field",
+    "3. Toggle 'First Row Headers' to enable/disable header parsing, with optional header case normalization",
+    "4. Click 'Parse CSV' to render the data table, displaying up to 5000 rows with virtual scrolling",
+    "5. Use column sort arrows to order data, or click 'Show Raw Preview' to view unprocessed CSV content",
+    "6. Export results via 'Copy to Clipboard' (TSV or CSV format) or download as a formatted HTML table"
   ],
   "usage_examples": [
-    "Use CSV Viewer to process your data",
-    "Get processing results quickly without waiting"
+    "A data engineer validates 10GB server log exports by sampling parsed rows before database ingestion",
+    "A financial analyst corrects inconsistent decimal separators in EU/US currency datasets using the delimiter override feature",
+    "A bioinformatics researcher merges two clinical study datasets by visually aligning header columns across files",
+    "An e-commerce manager debugs product inventory discrepancies by sorting CSV rows by stock ID and filtering null values"
   ]
 }

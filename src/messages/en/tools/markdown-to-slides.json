@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Markdown to Slides Converter transforms Markdown documents into presentation slides. Use simple Markdown syntax to create professional slideshows.",
+  "detailed_description": "Markdown to Slides is a client-side conversion tool that transforms markdown-formatted text into interactive HTML presentations using advanced parsing algorithms. The application leverages the PEG.js parser to analyze markdown syntax, identifying header hierarchies to segment content into discrete slides. It supports two rendering engines: Reveal.js for HTML-based presentations with CSS3 transitions and Deck.js for nested slide structures. Users can embed YAML front matter to customize slide properties like background images, transition effects, and code syntax highlighting through Prism.js integrations. This tool addresses the specific needs of developers who need to rapidly prototype technical presentations from existing documentation, educators creating lecture slides from research notes, and open-source contributors preparing conference talks without leaving their preferred text editors. The processing pipeline includes automatic table of contents generation, responsive design adaptation via Bootstrap 5, and optional PDF export through headless browser rendering.",
   "usage_steps": [
-    "Write slides in Markdown format",
-    "Separate slides with ---",
-    "Add speaker notes with Notes:",
-    "Preview your presentation",
-    "Present or export to HTML"
+    "1. Paste markdown content into the editor window or load a .md file using the file picker",
+    "2. Select preferred rendering engine (Reveal.js or Deck.js) from the framework dropdown",
+    "3. Choose from 12 built-in themes or upload a custom CSS file for presentation styling",
+    "4. Set slide transition effects using the animation controls (available options: fade, slide, convex)",
+    "5. Use the YAML editor to define slide-specific metadata like speaker notes and background images",
+    "6. Click 'Generate Presentation' to process content and download results as HTML or PDF"
   ],
   "usage_examples": [
-    "Create quick presentations",
-    "Technical talks from docs",
-    "Educational slideshows"
+    "A developer converts a GitHub README.md containing API documentation into a presentation with code block highlighting and animated diagram transitions",
+    "A technical writer repurposes a software user manual into a sales demonstration by adding branded themes and speaker notes through YAML metadata",
+    "A university professor transforms research notes written in markdown into a responsive HTML lecture presentation with embedded equations using KaTeX",
+    "An open-source contributor creates a conference talk from version-controlled markdown slides that automatically update with git hooks and CI pipelines"
   ]
 }

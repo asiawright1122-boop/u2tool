@@ -1,15 +1,17 @@
 {
-  "detailed_description": "O Gerador de Fontes Instagram converte seu texto em fontes elegantes em Unicode.",
+  "detailed_description": "O Gerador de Fontes para Instagram é uma ferramenta especializada em transformar texto comum em variações estilizadas utilizando o padrão Unicode. Tecnicamente, o processo envolve mapear caracteres ASCII tradicionais para seus equivalentes em blocos Unicode não latinos, como Mathematical Alphanumeric Symbols, Emoticons ou Hangul Jamo. A ferramenta emprega algoritmos de substituição baseados em fontes pré-definidas (ex: Fraktur, Monospace, Circled) e combinações de diacríticos para criar efeitos visuais únicos. Isso é especialmente útil para usuários que desejam destacar perfis ou posts no Instagram, onde as fontes nativas são limitadas. A transformação ocorre em tempo real por meio de uma engine JavaScript que processa cada caractere individualmente, garantindo compatibilidade com a renderização de texto do Instagram. Diferente de ferramentas genéricas, nosso gerador oferece controle granular sobre estilos, permitindo combinações personalizadas de negrito, itálico e efeitos ornamentais através de uma interface baseada em seletores de fonte e modificadores CSS-like.",
   "usage_steps": [
-    "Insira seu texto",
-    "Navegue pelos estilos de fonte",
-    "Clique para copiar o estilo",
-    "Cole no Instagram",
-    "Misture diferentes estilos"
+    "1. Acesse a página do gerador e localize a caixa de texto principal rotulada 'Texto de Entrada'.",
+    "2. Insira o conteúdo desejado (máximo 255 caracteres) que será convertido.",
+    "3. Escolha um estilo base no seletor 'Fonte Primária' (opções como 'Gótico', 'Manuscrito' ou '3D').",
+    "4. Ative modificadores adicionais usando os checkboxes 'Efeito Sombra' ou 'Caracteres Invertidos' para camadas visuais extras.",
+    "5. Visualize o resultado em tempo real na área 'Prévia Instagram', ajustando conforme necessário.",
+    "6. Clique no botão 'Copiar para Área de Transferência' para colar o texto estilizado diretamente no Instagram."
   ],
   "usage_examples": [
-    "Estilize sua bio no Instagram",
-    "Crie legendas elegantes",
-    "Destaque-se nos comentários"
+    "Um influenciador criando um bio com texto cursivo personalizado para destacar sua marca pessoal.",
+    "Um empreendedor convertendo o nome de sua loja virtual em fonte 3D para chamadas em posts promocionais.",
+    "Um designer gráfico combinando múltiplos estilos de fonte para criar uma assinatura digital única em descrições de fotos.",
+    "Um usuário adicionando símbolos circulados e diacríticos em uma legenda temática de festivais ou eventos especiais."
   ]
 }

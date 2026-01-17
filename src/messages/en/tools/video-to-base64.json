@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Video to Base64 is a practical online tool that helps you quickly complete various tasks. Using Video to Base64, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Video to Base64 can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Video to Base64 immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Video to Base64 tool performs binary-to-text encoding of video files using Base64 MIME encoding standards. This process converts raw binary video data into an ASCII string format suitable for transmission over media designed to handle textual data. The tool leverages JavaScript's FileReader API to process files client-side, preserving original video metadata and container formats (e.g., MP4, AVI, MOV) while transforming their binary content into RFC 4648-compliant Base64 strings. Developers need this tool for scenarios requiring video embedding in JSON payloads, CSS data URIs, or XML documents where binary data transmission is restricted. The encoding process maintains exact byte alignment through padding and proper MIME type handling, ensuring decoded videos retain full integrity. Unlike simple text encoders, this tool handles large file segmentation with Web Worker threads to prevent browser freezes during processing.",
   "usage_steps": [
-    "Open the Video to Base64 tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Navigate to the Video to Base64 tool interface and locate the 'Select Video File' input field.",
+    "Click 'Choose File' to browse and select your source video in MP4, AVI, MOV, or WebM format.",
+    "Adjust the advanced settings dropdown to specify custom MIME type parameters if required.",
+    "Initiate conversion by clicking the 'Start Base64 Encoding' button, which triggers FileReader API operations.",
+    "Monitor the progress bar displaying binary chunk processing status during large file conversion.",
+    "Copy the generated Base64 string from the output text area or download it as a .b64 file using the export button."
   ],
   "usage_examples": [
-    "Use Video to Base64 to process your data",
-    "Get processing results quickly without waiting"
+    "Embedding short tutorial videos directly into HTML emails using data URIs for client demonstrations.",
+    "Preparing video attachments for API requests requiring Base64 payloads in JSON-RPC endpoints.",
+    "Converting surveillance footage for storage in blockchain transaction metadata fields with strict text requirements.",
+    "Creating self-contained SVG animations by embedding Base64 video streams in XML elements for web applications."
   ]
 }

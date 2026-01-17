@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Code Screenshot Generator creates beautiful images of your code with syntax highlighting.",
+  "detailed_description": "The Code Screenshot Generator is a precision tool that transforms source code into publication-ready images through a multi-stage rendering pipeline. Leveraging a combination of lexical analysis and GPU-accelerated rendering, this tool parses code using language-specific parsers to construct abstract syntax trees (ASTs), applying customizable syntax highlighting through configurable TextMate grammars. Unlike basic screenshot tools, it offers pixel-perfect control over typography, including font ligature toggling, subpixel anti-aliasing adjustments, and line height calibration. Developers can export images in both PNG and SVG formats with embedded CSS for web responsiveness. The tool's unique value lies in its ability to programmatically generate consistent visuals for documentation, eliminating manual screenshot workflows. It supports 150+ programming languages with 20+ syntax themes, including custom CSS injection for bespoke styling. Technical teams use it to automate documentation generation in CI/CD pipelines, while educators utilize it for creating syntax-highlighted teaching materials. The web-based interface utilizes WebAssembly modules for client-side processing, ensuring code privacy, and integrates with VS Code-style keyboard shortcuts for efficient workflow integration.",
   "usage_steps": [
-    "Paste your code",
-    "Select theme and language",
-    "Adjust styling options",
-    "Preview the result",
-    "Download as PNG"
+    "1. Open the interactive editor pane and paste your code or import from GitHub Gist via URL",
+    "2. Select language mode from the dropdown menu (e.g., JavaScript, Python, SQL) for accurate AST parsing",
+    "3. Apply syntax theme from the live-preview grid showing 20+ options including Dracula and Monokai",
+    "4. Adjust rendering parameters using the settings panel: toggle line numbers, set padding (0-50px), enable dark mode",
+    "5. Click 'Export' to generate image with resolution scaling (1x-4x) and copy Base64 data to clipboard",
+    "6. Use the built-in Markdown generator to create embeddable image links with alt-text metadata"
   ],
   "usage_examples": [
-    "Share code on social media",
-    "Create documentation images",
-    "Make tutorial screenshots"
+    "Creating consistent code visuals for API documentation with matching syntax themes across 100+ endpoints",
+    "Generating dark-mode screenshots for a machine learning tutorial series with precise NumPy array formatting",
+    "Building automated build badges that display current test coverage percentages styled with conditional color coding",
+    "Producing social media posts with Instagram-friendly aspect ratios (9:16) and embedded developer handles"
   ]
 }

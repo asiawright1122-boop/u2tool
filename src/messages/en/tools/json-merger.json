@@ -1,14 +1,17 @@
 {
-  "detailed_description": "JSON Merger is a practical online tool that helps you quickly complete various tasks. Using JSON Merger, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, JSON Merger can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use JSON Merger immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The JSON Merger tool enables developers to programmatically combine multiple JSON objects using customizable merge strategies, supporting deep merging of nested structures, array concatenation, and conflict resolution. Unlike basic concatenation tools, this implementation parses JSON inputs into abstract syntax trees (ASTs), then applies recursive merging algorithms to handle nested key collisions. Users can select strategies like 'overwrite' (prioritize last-value wins), 'recursive merge' (combine nested objects), or 'array union' (de-duplicated array merging). This tool addresses critical use cases in API development, configuration management, and schema migration where manual merging would risk human error. For instance, when integrating microservices that return fragmented datasets, the tool's AST-based approach ensures type consistency across merged values while preserving original data hierarchies. Developers working with IoT telemetry streams can utilize array union operations to consolidate sensor readings without duplicate entries. The implementation uses ECMA-404 compliant parsing with strict mode validation to maintain data integrity, and all operations execute client-side to prevent sensitive data exposure.",
   "usage_steps": [
-    "Open the JSON Merger tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Select merge strategy from dropdown: 'overwrite', 'recursive', or 'array union'",
+    "2. Paste 2+ JSON objects into input panes labeled JSON 1, JSON 2, etc.",
+    "3. Use arrow buttons to reorder input priority for conflict resolution",
+    "4. Toggle 'strict type checking' to enforce data type consistency during merge",
+    "5. Review merged output in syntax-highlighted preview panel with conflict markers",
+    "6. Click 'Download JSON' to save result or 'Copy to Clipboard' for immediate use"
   ],
   "usage_examples": [
-    "Use JSON Merger to process your data",
-    "Get processing results quickly without waiting"
+    "Merging user profile data from separate authentication services where address fields require deep merging while subscription status should use last-write-wins",
+    "Combining environment-specific configuration files (dev/staging/prod) while preserving nested database connection strings",
+    "Aggregating real-time sensor data from multiple IoT gateways using array union to eliminate duplicate timestamp entries",
+    "Migrating legacy API responses to new schemas by merging deprecated fields with current endpoint structures using recursive strategy"
   ]
 }

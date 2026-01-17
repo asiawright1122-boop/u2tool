@@ -1,15 +1,17 @@
 {
-  "detailed_description": "O Conversor de Número do Calçado ajuda você a encontrar o tamanho correto de sapato em diferentes sistemas de tamanho.",
+  "detailed_description": "O Conversor de Numeração de Calçados é uma ferramenta técnica especializada que realiza conversões precisas entre sistemas de medidas de calçados como US, UK, EU e ASIAN, considerando padrões industriais e variações anatômicas. A ferramenta é essencial para usuários que lidam com comércio internacional de calçados, desenvolvimento de produtos ou necessitam adaptar medidas pessoais para diferentes regiões. Seu funcionamento baseia-se em algoritmos de interpolação linear e tabelas de conversão normalizadas pela ISO 9407 (Mondopoint), levando em conta diferenças entre sistemas baseados em polegadas (US/UK), centímetros (EU) e escalas adaptativas (ASIAN). O processo inclui correção automática para variações de largura do pé (narrow/medium/wide), usando fórmulas específicas do Brannock Device para cálculo proporcional. A interface processa entradas via campos numéricos com precisão de 0.5 unidades e retorna resultados ajustados conforme tolerâncias de fabricação do setor calçadista.",
   "usage_steps": [
-    "Selecione a categoria de gênero",
-    "Escolha o sistema de tamanho de entrada",
-    "Entre com seu tamanho",
-    "Visualize todas as conversões",
-    "Verifique o comprimento do pé"
+    "Selecione o sistema de origem no dropdown superior (ex: US, UK, EU, ASIAN)",
+    "Insira a medida exata do pé em polegadas ou centímetros no campo 'Comprimento do Pé'",
+    "Ajuste o seletor de largura do pé (narrow/medium/wide) para correção proporcional",
+    "Clique no botão 'Converter' para processar os dados através das tabelas ISO 9407",
+    "Visualize os resultados nas abas inferiores, incluindo equivalências em todos os sistemas",
+    "Utilize o botão 'Exportar CSV' para obter os dados estruturados com especificações técnicas"
   ],
   "usage_examples": [
-    "Converter de EUA para Europa",
-    "Encontrar o equivalente do Reino Unido",
-    "Compre marcas internacionais"
+    "Um designer de calçados brasileiro precisa converter medidas EU 42 para UK para produção em parceria com fábrica inglesa",
+    "Viajante que comprou tênis online na China (ASIAN 255mm) e precisa verificar equivalência no sistema US",
+    "Importador verificando tolerâncias de fabricação ao converter US Women's 8.5 para sistema métrico decimal",
+    "Fabricante ajustando padrões de corte para exportação, convertendo UK Men's 9 com correção de largura wide para EU sizing"
   ]
 }

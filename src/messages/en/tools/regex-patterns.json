@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Regex Patterns Library is a practical online tool that helps you quickly complete various tasks. Using Regex Patterns Library, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Regex Patterns Library can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Regex Patterns Library immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Regex Patterns Library is a curated repository of battle-tested regular expressions designed to address common data validation and extraction challenges in software development. This tool provides ready-to-implement PCRE-compatible patterns for email addresses (RFC 5322 compliant), internationalized URLs (supporting IDN and IPv6), E.164 phone number formats, semantic versioning, and more. Developers benefit from rigorously tested patterns that handle edge cases often overlooked in custom implementations, such as proper TLD validation in emails or handling URI encoded characters in URLs. The tool's interactive sandbox allows real-time testing with live match highlighting, capture group inspection, and performance profiling. Technical teams reduce regex-related vulnerabilities like ReDoS by using optimized patterns with bounded quantifiers and atomic grouping where appropriate. Each pattern includes syntax breakdowns showing character classes, anchors, and lookahead assertions, with language-specific adjustments for JavaScript, Python, and Java implementations.",
   "usage_steps": [
-    "Open the Regex Patterns Library tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Use the search bar to find patterns by keyword (e.g., 'ISBN') or select from primary categories like 'Networking' or 'Data Formats'",
+    "Click 'Show Pattern Details' to view syntax breakdown with explanations of components like lookbehind assertions or octal escapes",
+    "Input sample data in the sandbox's multi-line editor to test matches with real-time result visualization",
+    "Adjust regex modifiers using the flags panel (e.g., enabling 'Unicode' or 'Case-Insensitive' modes)",
+    "Select target language from the code generator dropdown to obtain properly escaped implementation examples",
+    "Export results as code snippets or copy raw regex patterns with included whitespace normalization instructions"
   ],
   "usage_examples": [
-    "Use Regex Patterns Library to process your data",
-    "Get processing results quickly without waiting"
+    "Validating user registration emails with strict MX record format checking during form submission in a Node.js application",
+    "Extracting timestamped error codes from multi-line server logs using grouped captures with configurable delimiters",
+    "Implementing phone number formatting for 150+ countries in a React form component using E.164 normalization patterns",
+    "Sanitizing user-generated content in a Python API by removing unwanted HTML tags while preserving allowed formatting"
   ]
 }

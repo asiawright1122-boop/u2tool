@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Mixed Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Mixed Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Mixed Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Mixed Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Mixed Chart Generator enables developers to create dual-axis visualizations combining bar and line series, ideal for comparing datasets with different measurement scales. This tool leverages HTML5 Canvas and SVG rendering to produce responsive charts that maintain clarity across devices. Technically, it processes user input through a two-stage data mapping system: categorical X-axis values are synchronized with dual Y-axes that automatically scale independently using logarithmic or linear transformations. The generator supports stacked bar configurations alongside multi-line overlays, with optional data normalization features to handle extreme value disparities. Developers will appreciate the tool's ability to handle complex data joins, where series alignment can be configured via key-value matching or positional indexing. Built-in TypeScript type guards ensure data integrity during parsing, while WebAssembly modules optimize rendering performance for large datasets. The resulting charts include interactive legends that toggle series visibility and tooltips displaying synchronized data points across both series types.",
   "usage_steps": [
-    "Open the Mixed Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "1. Select 'Bar+Line' from the chart type dropdown in the configuration panel",
+    "2. Input comma-separated values in the primary data grid, specifying category labels in the first column",
+    "3. Use the 'Series Mapping' interface to assign columns to either bar clusters or line series",
+    "4. Configure dual Y-axes using the format panel: set primary axis scale type (log/linear) and secondary axis offset percentage",
+    "5. Customize visual properties through the style editor: select color palettes, adjust bar widths, and modify line tension values",
+    "6. Export the chart using the download control, choosing between SVG, PNG, or JSON configuration formats"
   ],
   "usage_examples": [
-    "Use Mixed Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Comparing monthly sales figures (bars) with profit margins (line) when financial metrics have different magnitude ranges",
+    "Visualizing temperature trends (line) against precipitation amounts (bars) in climate research reports",
+    "Displaying website traffic volume (bars) alongside conversion rates (line) for digital marketing analysis",
+    "Tracking stock prices (line) with trading volume indicators (bars) in financial dashboard development"
   ]
 }

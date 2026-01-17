@@ -1,15 +1,17 @@
 {
-  "detailed_description": "O Testador CORS verifica a configuração de Cross-Origin Resource Sharing para qualquer URL. Visualize cabeçalhos CORS, teste requisições preflight e depure problemas cross-origin.",
+  "detailed_description": "O CORS Tester é uma ferramenta técnica especializada para diagnosticar configurações de Cross-Origin Resource Sharing (CORS) em servidores web. Ele permite enviar requisições HTTP simuladas com diferentes origens, métodos e cabeçalhos para analisar como o servidor responde a solicitações cross-origin. A ferramenta verifica automaticamente a presença e validade de cabeçalhos como Access-Control-Allow-Origin, Access-Control-Allow-Methods, Access-Control-Allow-Headers e Access-Control-Expose-Headers, além de detectar se o preflight (requisição OPTIONS) está corretamente configurado. Desenvolvedores precisam deste instrumento para resolver erros como 'No 'Access-Control-Allow-Origin' header present' ou 'Request method not allowed', comuns ao integrar APIs com frontends em domínios distintos. O funcionamento baseia-se em requisições AJAX controladas via JavaScript Fetch API, com análise detalhada do handshake HTTP entre cliente e servidor, incluindo credenciais e tipos de conteúdo.",
   "usage_steps": [
-    "Digite a URL para testar",
-    "Selecione o método de requisição",
-    "Adicione origem personalizada se necessário",
-    "Envie a requisição de teste CORS",
-    "Revise os cabeçalhos CORS na resposta"
+    "Cole a URL completa do recurso que deseja testar no campo 'Endpoint URL'",
+    "Selecione o método HTTP desejado (GET, POST, PUT, DELETE, etc.) no dropdown 'Método'",
+    "Adicione cabeçalhos customizados na seção 'Headers' usando o formato 'Chave: Valor'",
+    "Ative a opção 'Incluir credenciais' se precisar testar requisições com cookies ou auth",
+    "Clique em 'Enviar Requisição' para executar o teste CORS e aguarde a resposta",
+    "Analise os cabeçalhos de resposta exibidos e verifique o status do preflight na aba 'Detalhes'"
   ],
   "usage_examples": [
-    "Depurar erros CORS",
-    "Verificar configuração CORS de API",
-    "Testar requisições preflight"
+    "Diagnosticar por que uma API REST está bloqueando requisições de um domínio específico com erro 403",
+    "Verificar se um backend Node.js está corretamente configurado para aceitar requisições de um frontend React rodando em localhost:3000",
+    "Testar se um serviço de upload de arquivos em AWS S3 permite cross-origin requests com cabeçalhos Content-Type e Authorization",
+    "Validar a configuração de preflight para uma API GraphQL consumida por um aplicativo mobile híbrido"
   ]
 }

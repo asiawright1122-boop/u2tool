@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Árvore é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos de Árvore, você pode facilmente processar vários dados sem instalar nenhum software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e a utilize de maneira eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Árvore pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são feitos localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para qualquer servidor. Use o Gerador de Gráficos de Árvore imediatamente para experimentar serviços rápidos, seguros e gratuitos de ferramentas online.",
+  "detailed_description": "O Tree Chart Generator é uma ferramenta técnica especializada na criação de diagramas hierárquicos baseados em algoritmos de layout ortogonal e radial, utilizando estruturas de dados em formato de árvore. Essencial para visualizar relações parentesco-filho em sistemas complexos, o tool aplica algoritmos como Reingold-Tilford para layouts ortogonais (nodos alinhados em grades) ou arranjos circulares para layouts radiais (nodos distribuídos em arcos concêntricos). Suporta importação de dados em JSON ou CSV, permitindo mapeamento customizado de propriedades como identificadores de nó, rótulos e pesos de conexão. A renderização ocorre via SVG com aceleração de WebGPU, garantindo performance em grandes datasets. Inclui recursos avançados como colapso dinâmico de subárvores, aplicação de classes CSS personalizadas para estilização condicional e exportação em múltiplos formatos (PNG, SVG, PDF). Desenvolvedores podem integrar a ferramenta via API RESTful para geração automatizada de fluxogramas de sistemas ou diagramas de decisão em machine learning.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Árvore",
-    "Insira ou cole o conteúdo que você deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações da ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Acesse a interface e selecione o tipo de layout desejado (ortogonal ou radial) no seletor superior.",
+    "Carregue seu arquivo JSON/CSV contendo a hierarquia através do botão 'Importar Dados' no painel esquerdo.",
+    "Mapeie campos do arquivo para propriedades do gráfico (ex: 'id' para nós, 'parentId' para conexões) no editor de schema.",
+    "Ajuste estilos dinâmicos aplicando classes CSS no painel de estilização, usando atributos como cor de profundidade ou peso do nó.",
+    "Use o modo interativo para reorganizar manualmente nós arrastando-os com o mouse, enquanto o algoritmo recalcula automaticamente as conexões.",
+    "Exporte o resultado via botão 'Gerar Arquivo' escolhendo formato SVG ou PNG, ou copie o código HTML para incorporar no seu projeto."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Árvore para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem esperar"
+    "Criar organograma corporativo com múltiplos níveis de gestão, mostrando relações de subordinação em formato radial para apresentações executivas.",
+    "Visualizar dependências de pacotes em projetos de software, com nós coloridos por versão semântica e conexões espessas indicando número de dependências indiretas.",
+    "Construir árvore genealógica interativa com expansão progressiva de ramos familiares, usando layout ortogonal para claridade em documentos históricos.",
+    "Mapear árvores de decisão de modelos de machine learning, aplicando gradientes de cor nos nós terminais para representar probabilidades de resultados."
   ]
 }

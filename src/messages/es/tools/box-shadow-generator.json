@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Generador de Sombra de Caja es una herramienta online práctica que te ayuda a completar diversas tareas de manera rápida. Utilizando el Generador de Sombra de Caja, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta cuenta con una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y utilizarla de manera eficiente. Ya sea que seas desarrollador, diseñador o usuario general, el Generador de Sombra de Caja puede ayudarte a mejorar la eficiencia de tu trabajo. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y asegurándote de que no serán subidos a ningún servidor. Utiliza el Generador de Sombra de Caja inmediatamente para experimentar servicios de herramientas online rápidas, seguras y gratuitas.",
+  "detailed_description": "El Box Shadow Generator es una herramienta especializada para diseñadores y desarrolladores web que permite crear y ajustar sombras en elementos CSS mediante un editor visual interactivo. Técnicamente, genera código CSS utilizando la propiedad 'box-shadow', permitiendo configurar parámetros como offset horizontal/vertical, radio de desenfoque, radio de expansión, color (en RGBA o hexadecimal) y tipo de sombra (inset u outset). Los usuarios necesitan esta herramienta para prototipar efectos visuales complejos sin recurrir a editores gráficos, especialmente útil para componentes reutilizables como tarjetas, botones o tarjetas de producto. El motor del editor renderiza en tiempo real los cambios aplicados, mostrando una previsualización del elemento con la sombra generada, lo que elimina la necesidad de pruebas manuales en el navegador. Incorpora controles precisos como sliders de valores decimales y selector de color con transparencia, optimizando el workflow de diseño.",
   "usage_steps": [
-    "Abre la página del Generador de Sombra de Caja",
-    "Ingresa o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "Accede al generador y selecciona el modo 'Sombra Simple' o 'Múltiples Sombras' en el selector de configuración.",
+    "Ajusta el control deslizante de 'Offset X' para definir el desplazamiento horizontal de la sombra, usando valores negativos para direcciones izquierdas.",
+    "Modifica el campo 'Blur Radius' con un valor entre 0 y 100px para controlar la difusión del borde de la sombra.",
+    "Utiliza el selector de color RGBA para elegir tonos con transparencia, ideal para sombras semi-transparentes sobre fondos dinámicos.",
+    "Activa la opción 'Inset' para crear sombras internas, útiles en elementos como inputs o contenedores de texto.",
+    "Copia el código CSS generado en el área de texto inferior y pégalo en tu hoja de estilos, ajustando selectores según tu estructura HTML."
   ],
   "usage_examples": [
-    "Utiliza el Generador de Sombra de Caja para procesar tus datos",
-    "Obtén rápidamente los resultados del procesamiento sin esperar"
+    "Diseñar una tarjeta de producto para e-commerce con sombra doble (una principal y una sutil para profundidad) que resalte sobre fondos claros y oscuros.",
+    "Crear una sombra inset en una caja de comentarios para dar efecto de relieve sin sobresalir visualmente del layout.",
+    "Generar sombras responsivas para botones en interfaces móviles, ajustando blur radius según el tamaño de pantalla.",
+    "Implementar un efecto de elevación en una tabla de precios comparativas, aplicando diferentes sombras a la fila destacada."
   ]
 }

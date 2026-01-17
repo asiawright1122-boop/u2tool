@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Twitter Card Generator is a practical online tool that helps you quickly complete various tasks. Using Twitter Card Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Twitter Card Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Twitter Card Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Twitter Card Generator is a specialized tool designed to help developers and content creators enhance the visual appeal and engagement of their tweets by generating the necessary meta tags for Twitter Card integration. Twitter Cards allow users to attach rich media experiences to their tweets, such as images, videos, and summary cards, which can significantly improve click-through rates and user engagement. By using this tool, developers can ensure that their web content is displayed optimally when shared on Twitter, making it an indispensable resource for anyone looking to maximize the impact of their social media presence. The tool works by analyzing the provided URL or manually entered data, generating the appropriate `<meta>` tags that need to be embedded in the HTML `<head>` section of the web page. These tags include `og:title`, `og:description`, `og:image`, and `twitter:card` among others, which are then used by Twitter to render the card. This process not only enhances the visual appeal of the tweet but also provides additional context and information to the audience, leading to higher engagement and better user experience.",
   "usage_steps": [
-    "Open the Twitter Card Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Step 1: Navigate to the Twitter Card Generator page on the website.",
+    "Step 2: Enter the URL of the web page you want to generate the Twitter Card meta tags for in the 'URL' input field.",
+    "Step 3: Alternatively, if you prefer to manually input the data, click the 'Manual Input' tab and fill in the required fields such as Title, Description, and Image URL.",
+    "Step 4: Customize the card type by selecting from the dropdown menu options, such as 'Summary', 'Summary with Large Image', 'App', or 'Player'.",
+    "Step 5: Review the generated `<meta>` tags in the output area. Ensure that all the information is accurate and complete.",
+    "Step 6: Copy the generated `<meta>` tags and paste them into the `<head>` section of your web page's HTML code."
   ],
   "usage_examples": [
-    "Use Twitter Card Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Example 1: A blogger wants to share a new blog post on Twitter. Using the Twitter Card Generator, they can create a summary card with a large image and a compelling description, enhancing the post's visibility and engagement when shared.",
+    "Example 2: An e-commerce company is launching a new product. By generating Twitter Card meta tags for the product page, they can ensure that the product image, title, and description are displayed prominently in tweets, increasing the likelihood of user clicks and purchases.",
+    "Example 3: A content creator is hosting a live streaming event. They can use the tool to generate a player card that embeds the live stream directly into the tweet, allowing followers to watch the event without leaving Twitter.",
+    "Example 4: A mobile app developer is promoting a new app. By creating an app card with the Twitter Card Generator, they can provide direct links to download the app from both the App Store and Google Play, streamlining the user experience and driving app installs."
   ]
 }

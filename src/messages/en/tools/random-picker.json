@@ -1,15 +1,17 @@
 {
-  "detailed_description": "Random Picker selects random items from your list with fun animation.",
+  "detailed_description": "The Random Picker is a dynamic web application designed to select random items from a user-provided list, enhanced with engaging animation effects. Technically, the tool leverages JavaScript for its core functionality, incorporating modern web technologies such as HTML5 and CSS3 to ensure a smooth and visually appealing user experience. The animation effects are powered by CSS transitions and JavaScript animations, providing a delightful interaction that goes beyond simple text-based outputs. The tool is particularly useful for scenarios where randomness and visual engagement are key, such as team-building activities, educational quizzes, or even casual decision-making processes. Users can input a list of items, and the tool will randomly select one, displaying the result with a unique animation to capture attention and enhance the user experience. The Random Picker is not just a functional tool but also a fun and interactive way to introduce randomness into various activities, making it a versatile addition to any developer's toolkit.",
   "usage_steps": [
-    "Enter items one per line",
-    "Set number of winners",
-    "Click pick button",
-    "Watch the animation",
-    "See random winners"
+    "Step 1: Open the Random Picker tool on the website and locate the 'List of Items' input field.",
+    "Step 2: Enter each item you want to include in the random selection, separated by commas. For example: 'Apple, Banana, Cherry, Date'.",
+    "Step 3: Customize the animation effect by selecting an option from the 'Animation Style' dropdown menu. Choices include 'Fade In', 'Slide Down', 'Bounce', and 'Zoom In'.",
+    "Step 4: Set the duration of the animation using the 'Animation Duration' slider. Adjust it to your preference, ranging from 1 to 10 seconds.",
+    "Step 5: Click the 'Pick Random Item' button to start the selection process. The tool will display the selected item with the chosen animation effect.",
+    "Step 6: If you need to perform another random selection, simply add or modify your list and repeat the process."
   ],
   "usage_examples": [
-    "Pick raffle winners",
-    "Random team selection",
-    "Choose contest winners"
+    "Example 1: A teacher uses the Random Picker to select students for a classroom activity, ensuring a fair and engaging way to choose participants.",
+    "Example 2: A project manager uses the tool to randomly assign tasks to team members during a sprint planning session, adding an element of surprise and fun.",
+    "Example 3: A restaurant hostess uses the Random Picker to decide the order in which diners are seated, ensuring a random and fair seating arrangement.",
+    "Example 4: A group of friends uses the tool to decide which movie to watch, inputting a list of movie titles and letting the Random Picker make the final choice."
   ]
 }

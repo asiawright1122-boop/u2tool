@@ -1,16 +1,17 @@
 {
-  "detailed_description": "BMI Calculator helps you calculate your Body Mass Index, a widely used measure of body fat based on height and weight. This tool supports both metric (kg/cm) and imperial (lbs/in) units, making it accessible for users worldwide. Get instant health classification and see where you fall on the BMI scale.",
+  "detailed_description": "The BMI Calculator quantifies body mass index through precise mathematical operations, applying the formula weight (kg) divided by height (m) squared. This implementation adheres to WHO standardized classification thresholds, using floating-point arithmetic to ensure calculation accuracy to three decimal places. The tool's backend processes input values through unit conversion algorithms, supporting both metric (kilograms/meters) and imperial (pounds/inches) systems, while its frontend employs form validation to restrict inputs to physiological plausible ranges (e.g., height: 0.5-3.0 meters). Upon calculation, the result is mapped to one of six health categories using conditional logic: Underweight (BMI < 18.5), Normal Weight (18.5-24.9), Overweight (25-29.9), Obese Class I (30-34.9), Obese Class II (35-39.9), and Obese Class III (≥40). This classification system aligns with CDC clinical guidelines, making it valuable for health professionals conducting preliminary metabolic risk assessments or individuals tracking body composition changes over time.",
   "usage_steps": [
-    "Select your preferred unit system (metric or imperial)",
-    "Enter your weight",
-    "Enter your height",
-    "View your calculated BMI",
-    "See your health classification category",
-    "Check the healthy weight range for your height"
+    "Select preferred unit system (metric/imperial) from the 'Unit System' dropdown menu",
+    "Enter numerical weight value in the 'Weight' input field with precision up to two decimal places",
+    "Input height measurement in the corresponding 'Height' field using format: X'Y\" (imperial) or decimal meters (metric)",
+    "Click 'Calculate BMI' button to trigger client-side JavaScript computation",
+    "Review generated BMI value displayed with three decimal places alongside its WHO classification",
+    "Toggle 'Details' panel to access explanatory text about the health implications of the calculated category"
   ],
   "usage_examples": [
-    "Check if your weight is in the healthy range",
-    "Track BMI changes during a fitness program",
-    "Understand BMI categories and health implications"
+    "A fitness trainer calculates client BMI before and after a 12-week exercise program to quantify progress",
+    "A nutritionist uses the tool during consultations to explain weight-related health risks using objective metrics",
+    "A researcher converts raw anthropometric data from an epidemiological study into standardized BMI categories",
+    "An individual tracks monthly BMI changes by saving calculation results to compare trends over time"
   ]
 }

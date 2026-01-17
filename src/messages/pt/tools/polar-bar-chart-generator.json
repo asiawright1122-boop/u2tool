@@ -1,14 +1,17 @@
 {
-  "detailed_description": "O Gerador de Gráficos de Barras Polares é uma ferramenta online prática que ajuda você a concluir várias tarefas rapidamente. Usando o Gerador de Gráficos de Barras Polares, você pode facilmente processar vários dados sem instalar qualquer software ou plugin. Este ferramenta possui uma interface simples e é fácil de usar, permitindo que você comece rapidamente e utilize-a de forma eficiente. Seja você um desenvolvedor, designer ou usuário geral, o Gerador de Gráficos de Barras Polares pode ajudar a melhorar a eficiência do seu trabalho. Todos os processamentos são realizados localmente no seu navegador, garantindo a segurança dos seus dados e não serão enviados para nenhum servidor. Use o Gerador de Gráficos de Barras Polares imediatamente para experimentar serviços online rápidos, seguros e gratuitos.",
+  "detailed_description": "O Polar Bar Chart Generator é uma ferramenta técnica especializada na criação de gráficos de barras radiais, utilizando coordenadas polares para representar dados multidimensionais. Este instrumento converte valores cartesianos em eixos angulares e radiais, permitindo visualizações circulares onde o comprimento das barras corresponde à magnitude dos dados. Ideal para análises em campos como meteorologia, engenharia e ciência de dados, a ferramenta suporta exportação em PNG rasterizado e SVG vetorial, preservando qualidade para impressões ou integração web. A interface emprega bibliotecas de renderização baseadas em WebGL para aceleração de gráficos, garantindo desempenho mesmo com grandes volumes de dados. Funcionalidades como escalonamento logarítmico do eixo radial, personalização de paletas cromáticas por série e sobreposição de grids polares facilitam análises complexas. Desenvolvedores podem integrar os gráficos gerados via código embed ou APIs RESTful para atualizações dinâmicas.",
   "usage_steps": [
-    "Abra a página do Gerador de Gráficos de Barras Polares",
-    "Insira ou cole o conteúdo que deseja processar na caixa de entrada",
-    "Ajuste as opções e configurações do ferramenta conforme necessário",
-    "Clique no botão de processamento para visualizar os resultados",
-    "Copie ou baixe os resultados processados"
+    "Preencha o campo 'Data Points' com valores no formato CSV, especificando categorias e magnitudes (ex: 'janeiro,45;fevereiro,67').",
+    "Mapeie variáveis para eixos usando o seletor 'Angular Axis' (categorias) e 'Radial Axis' (valores), ajustando intervalos manuais se necessário.",
+    "Configure parâmetros de visualização com o painel 'Bar Settings', definindo espessura das barras (range: 5-30px) e sobreposição entre séries.",
+    "Ative o grid polar através do checkbox 'Show Polar Grid' e ajuste divisões angulares via slider 'Angle Steps' (5° a 45°).",
+    "Personalize paleta de cores com o seletor 'Series Colors', aplicando esquemas divergentes ou categóricos via paletas pré-definidas ou HEX personalizado.",
+    "Exporte o gráfico final clicando em 'Download' e escolha entre PNG de alta resolução ou SVG editável, com opção de copiar código embed diretamente."
   ],
   "usage_examples": [
-    "Use o Gerador de Gráficos de Barras Polares para processar seus dados",
-    "Obtenha resultados de processamento rapidamente sem espera"
+    "Visualização de padrões climáticos mensais, representando temperaturas médias em eixo radial e meses do ano distribuídos em 360°.",
+    "Análise de desempenho de portfólios financeiros, com setores de mercado dispostos em formato circular e barras indicando ROI percentual.",
+    "Monitoramento de carga horária de servidores, mostrando picos de uso ao longo de 24 horas em formato de relógio analógico digitalizado.",
+    "Comparação de vendas por região geográfica, usando coordenadas angulares para direções cardeais e magnitude de receita em barras radiais."
   ]
 }

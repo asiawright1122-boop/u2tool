@@ -1,14 +1,17 @@
 {
-  "detailed_description": "El Visualizador de Markdown es una herramienta práctica en línea que te ayuda a completar rápidamente diversas tareas. Con el Visualizador de Markdown, puedes procesar fácilmente diversos datos sin instalar ningún software o complementos. Esta herramienta tiene una interfaz simple y es fácil de usar, lo que te permite empezar rápidamente y utilizarla de manera eficiente. Ya sea que seas un desarrollador, diseñador o usuario general, el Visualizador de Markdown puede ayudarte a mejorar la eficiencia de trabajo. Todos los procesos se realizan localmente en tu navegador, garantizando la seguridad de tus datos y evitando que se suban a ningún servidor. Utiliza el Visualizador de Markdown inmediatamente para experimentar servicios de herramientas en línea rápidas, seguras y gratuitas.",
+  "detailed_description": "La herramienta Markdown Preview permite transformar código Markdown en una vista previa HTML en tiempo real mediante un motor de análisis léxico. Al escribir en el editor de texto, el contenido se procesa a través de un parser compatible con CommonMark, aplicando reglas de tokenización para convertir elementos como encabezados, listas y énfasis en elementos DOM estructurados. La previsualización utiliza técnicas de renderizado diferido (debouncing) para optimizar el rendimiento durante escritura continua. Los usuarios pueden exportar el resultado final como archivo HTML5 válido, incluyendo soporte para atributos como tabindex y roles ARIA. Esta herramienta es esencial para desarrolladores que necesitan validar estructuras de documentación técnica, crear interfaces de usuario basadas en componentes markdown, o generar contenido para estáticos generados con Jekyll o Hugo. El motor utiliza Web Workers para el procesamiento en segundo plano, garantizando que la interfaz permanezca receptiva incluso con documentos extensos.",
   "usage_steps": [
-    "Abre la página del Visualizador de Markdown",
-    "Escribe o pega el contenido que quieres procesar en la caja de entrada",
-    "Ajusta las opciones y configuraciones del herramienta según sea necesario",
-    "Haz clic en el botón de procesar para ver los resultados",
-    "Copia o descarga los resultados procesados"
+    "1. Accede al editor dividido con paneles de escritura (izquierda) y previsualización (derecha).",
+    "2. Escribe código Markdown usando sintaxis estándar o extensiones como GitHub Flavored Markdown.",
+    "3. Observa la actualización automática del DOM en el panel de previsualización al escribir.",
+    "4. Utiliza el botón 'Exportar HTML' para generar un archivo HTML5 con estilos integrados.",
+    "5. Activa la opción 'Modo oscuro' en el menú de configuración para cambiar el tema de resaltado.",
+    "6. Prueba fragmentos de código con bloques de sintaxis especificando lenguajes como JavaScript o Python."
   ],
   "usage_examples": [
-    "Utiliza el Visualizador de Markdown para procesar tus datos",
-    "Obtén los resultados de procesamiento rápidamente sin esperar"
+    "Validar la estructura de un README.md antes de publicar un paquete NPM.",
+    "Crear una página de documentación API con ejemplos de código resaltados en tiempo real.",
+    "Preparar presentaciones técnicas usando Markdown convertido a diapositivas Reveal.js.",
+    "Diseñar plantillas de correo electrónico HTML manteniendo la sintaxis simplificada de Markdown."
   ]
 }

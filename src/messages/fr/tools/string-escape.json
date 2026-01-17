@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Escape/Dééchapper des Chaînes de Caractères est un outil pratique en ligne qui vous aide à réaliser rapidement diverses tâches. Avec Escape/Dééchapper des Chaînes de Caractères, vous pouvez facilement traiter diverses données sans installer de logiciel ou de plugins. Cet outil a une interface simple et est facile à utiliser, vous permettant de vous lancer rapidement et d'utiliser efficacement. Que vous soyez un développeur, un concepteur ou un utilisateur général, Escape/Dééchapper des Chaînes de Caractères peut vous aider à améliorer l'efficacité de votre travail. Toutes les traitements sont effectués localement dans votre navigateur, assurant la sécurité de vos données et ne seront pas uploadés sur aucun serveur. Utilisez Escape/Dééchapper des Chaînes de Caractères immédiatement pour expérimenter des services d'outils en ligne rapides, sécurisés et gratuits.",
+  "detailed_description": "Cet outil applique et retire les séquences d'échappement normalisées pour JSON, HTML, URL et JavaScript. Il suit les spécifications RFC 8259 (JSON), WHATWG HTML (entités), RFC 3986 (URL) et ECMA‑262 (littéraux JS), en gérant les guillemets, apostrophes, esperluettes, signes « < > », barres obliques, caractères de contrôle (U+0000–U+001F), diacritiques et emojis. Il traite les séquences d'échappement Unicode (\\uXXXX, \\u{XXXXXX}) et, pour l'URL, applique le percent‑encoding aux caractères non‑réservés. En mode unescape, il décode les entités HTML, les échappements JSON/JS et les encodages URL, tout en validant la cohérence des séquences (par exemple, détection d'échappements incomplets). Les options avancées permettent de préserver les retours à la ligne, de ignorer les séquences déjà échappées, de basculer entre échappement et non‑échappement, et de choisir le type de guillemet cible en JS (simple/double). L'outil est utile pour préparer des charges utiles API conformes, sécuriser du HTML généré côté client, construire des URL robustes et éviter les erreurs de syntaxe dans du code JavaScript injecté dynamiquement.",
   "usage_steps": [
-    "Ouvrez la page de l'outil d'Escape/Dééchapper des Chaînes de Caractères",
-    "Entrez ou collez le contenu que vous souhaitez traiter dans la zone de saisie",
-    "Adaptez les options et paramètres de l'outil selon vos besoins",
-    "Cliquez sur le bouton de traitement pour voir les résultats",
-    "Copiez ou téléchargez les résultats traités"
+    "Collez votre chaîne dans le champ « Chaîne source » (volet de gauche).",
+    "Dans le sélecteur « Format », choisissez JSON, HTML, URL ou JavaScript, puis activez « Échapper » ou « Unescape ».",
+    "Ajustez les options: « Préserver les retours à la ligne », « Ignorer les séquences déjà échappées », « Guillemet cible » (pour JS) et « Encoder les caractères non‑ASCII » (pour URL).",
+    "Cliquez sur « Échapper » ou « Unescape »; le résultat s'affiche dans le volet « Sortie » avec un indicateur de longueur.",
+    "Utilisez « Copier » pour placer le résultat dans le presse‑papiers ou « Télécharger .txt » pour l'exporter.",
+    "Pour comparer, activez « Vue côte à côte » afin de voir la source et la sortie simultanément."
   ],
   "usage_examples": [
-    "Utilisez Escape/Dééchapper des Chaînes de Caractères pour traiter vos données",
-    "Obtenez rapidement les résultats de traitement sans attendre"
+    "Intégration JSON‑LD dans du HTML: pour un bloc JSON‑LD contenant des guillemets et des emojis, choisissez JSON + Échapper; collez le JSON, cliquez Échapper, puis insérez le résultat dans une balise <script type=\"application/ld+json\"> pour éviter les erreurs de parsing côté navigateur.",
+    "Construction d'une URL d'API REST: saisissez une chaîne comme '/api/v1/recherche?terme=café & crème' puis, en mode URL + Échapper, obtenez la version percent‑encodée '/api/v1/recherche?terme=caf%C3%A9%20%26%20cr%C3%A8me' prête à être passée à fetch().",
+    "Affichage sécurisé de contenu utilisateur en HTML: pour un commentaire contenant '<script>alert(1)</script>', utilisez HTML + Échapper; l'outil transforme les caractères dangereux en entités (par exemple '&lt;' et '&gt;') pour prévenir les attaques XSS lors de l'affichage.",
+    "Injection de chaînes dans du JavaScript côté client: pour une chaîne JS contenant des apostrophes et des sauts de ligne, choisissez JavaScript + Échapper; l'outil applique les échappements \\', \\n, \\uXXXX, etc., afin que la valeur puisse être insérée sans erreur dans un littéral ou une expression injectée."
   ]
 }

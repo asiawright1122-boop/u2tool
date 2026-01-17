@@ -1,14 +1,17 @@
 {
-  "detailed_description": "Text to NATO is a practical online tool that helps you quickly complete various tasks. Using Text to NATO, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Text to NATO can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Text to NATO immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Text to NATO tool performs phonetic encoding by mapping each alphabetic character in input text to its corresponding NATO phonetic alphabet word (e.g., 'A' → 'ALPHA', 'B' → 'BRAVO'). This conversion follows the International Radiotelephony Spelling Alphabet (IRSA) standard, which is critical for unambiguous oral communication in high-noise or international contexts. The tool's engine processes text through three stages: first, it normalizes character encoding to UTF-8 and converts all letters to uppercase; second, it filters characters using regex to retain only A-Z letters while preserving original whitespace and punctuation structure; third, it executes a dictionary lookup against a precompiled JSON map of NATO phonetic terms. Non-alphabetic characters are either omitted or displayed in brackets with their ASCII decimal codes, depending on user configuration. This tool is essential for professionals requiring error-free transmission verification in aviation (e.g., ICAO flight code communication), military operations (coordinate confirmation), emergency services (ID number relay), and amateur radio (call sign transmission). Technical implementations include Unicode support for multilingual text preprocessing and optional case-sensitive output toggling.",
   "usage_steps": [
-    "Open the Text to NATO tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Navigate to the 'Text to NATO' interface and locate the 'Input Text Area' field",
+    "Enter plain text or paste UTF-8 encoded content containing standard alphabet characters",
+    "Toggle the 'Space Preservation' switch to maintain original spacing or 'Compact Output' for condensed format",
+    "Select 'Case Handling' option: preserve original, force uppercase, or force lowercase",
+    "Click the 'Convert to NATO Phonetic' button to initiate processing",
+    "Review results in the 'Output Display' section, which shows both phonetic words and original character positions"
   ],
   "usage_examples": [
-    "Use Text to NATO to process your data",
-    "Get processing results quickly without waiting"
+    "A commercial pilot cross-checking ICAO flight codes (e.g., 'UAL123' → 'UNIFORM ALFA LIMA ONE TWO THREE') during air traffic control communication",
+    "Field technician transmitting equipment serial numbers over radio with guaranteed character clarity (e.g., 'CH7X4K9' → 'CHARLIE HOTEL SEVEN X-RAY FOUR KILO NINE')",
+    "Cybersecurity instructor demonstrating phonetic encoding for password verification training scenarios",
+    "Search and rescue operator relaying GPS coordinates with precise letter/number differentiation (e.g., 'N42°15.3' → 'NOVEMBER FOUR TWO DEGREES ONE FIVE DECIMAL THREE')"
   ]
 }
