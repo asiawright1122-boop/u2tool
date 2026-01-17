@@ -19,8 +19,8 @@ describe('SidebarNavigation - Data Integrity', () => {
    * Feature: sidebar-category-navigation, Property 1: 分类导航完整性与数据正确性
    * Validates: Requirements 1.1, 1.6
    */
-  it('should have exactly 11 categories defined', () => {
-    expect(categories.length).toBe(11);
+  it('should have exactly 14 categories defined', () => {
+    expect(categories.length).toBe(14);
   });
 
   it('should have all required category properties', () => {
@@ -50,7 +50,8 @@ describe('SidebarNavigation - Data Integrity', () => {
   it('should have all expected category IDs', () => {
     const expectedIds = [
       'text', 'encoding', 'generators', 'converters', 'development',
-      'security', 'network', 'image', 'math', 'charts', 'office'
+      'security', 'network', 'image', 'math', 'charts', 'office',
+      'lifestyle', 'finance', 'fun'
     ];
     const actualIds = categories.map(c => c.id);
     

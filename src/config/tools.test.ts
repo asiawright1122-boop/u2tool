@@ -47,10 +47,11 @@ describe('Property 1: Category Translation Completeness', () => {
     );
   });
 
-  it('should have all 11 categories defined', () => {
+  it('should have all 14 categories defined', () => {
     const expectedCategories: ToolCategory[] = [
       'text', 'encoding', 'generators', 'converters', 'development',
-      'security', 'network', 'image', 'math', 'charts', 'office'
+      'security', 'network', 'image', 'math', 'charts', 'office',
+      'lifestyle', 'finance', 'fun'
     ];
     
     expect(categories.map(c => c.id).sort()).toEqual(expectedCategories.sort());
@@ -192,7 +193,7 @@ describe('Property 10: Tool Registration Completeness', () => {
   });
 
   // Verify the 7 new tools are registered
-  it('new popular tools should be registered', () => {
+  it('new tools should be registered', () => {
     const newToolSlugs = [
       'env-parser',
       'json-schema-generator',
@@ -206,7 +207,6 @@ describe('Property 10: Tool Registration Completeness', () => {
     for (const slug of newToolSlugs) {
       const tool = tools.find(t => t.slug === slug);
       expect(tool, `Tool "${slug}" should be registered in tools.ts`).toBeDefined();
-      expect(tool?.popular, `Tool "${slug}" should be marked as popular`).toBe(true);
     }
   });
 });

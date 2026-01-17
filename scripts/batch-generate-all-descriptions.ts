@@ -6,6 +6,45 @@
  *   npx tsx scripts/batch-generate-all-descriptions.ts
  *   npx tsx scripts/batch-generate-all-descriptions.ts --start-from <slug>  # 从指定工具开始
  *   npx tsx scripts/batch-generate-all-descriptions.ts --dry-run            # 只生成不应用
+ * 
+ * 选择 AI 模型 (--provider):
+ *   免费模型:
+ *     --provider hunyuan-free     # 腾讯混元翻译 (完全免费，默认)
+ * 
+ *   NVIDIA NIM (免费额度，需要 NVIDIA_API_KEY):
+ *     --provider nvidia-llama3-8b    # Llama 3 8B
+ *     --provider nvidia-llama3-70b   # Llama 3 70B
+ *     --provider nvidia-mistral-7b   # Mistral 7B
+ *     --provider nvidia-mixtral-8x7b # Mixtral 8x7B
+ *     --provider nvidia-gemma-7b     # Gemma 7B
+ *     --provider nvidia-qwen2-7b     # Qwen2 7B
+ *     --provider nvidia-deepseek-r1  # DeepSeek R1
+ * 
+ *   超低价模型 ($0.02/M tokens):
+ *     --provider deepseek-r1-1.5b # DeepSeek-R1-Distill-Qwen-1.5B
+ * 
+ *   低价模型 ($0.05-$0.06/M tokens):
+ *     --provider qwen2.5-7b       # Qwen2.5-7B-Instruct
+ *     --provider deepseek-r1-7b   # DeepSeek-R1-Distill-Qwen-7B
+ *     --provider llama-3.1-8b     # Meta-Llama-3.1-8B-Instruct
+ *     --provider qwen3-8b         # Qwen3-8B
+ *     --provider deepseek-r1-8b   # DeepSeek-R1-Distill-Llama-8B
+ * 
+ *   中等价格模型 ($0.09-$0.10/M tokens):
+ *     --provider glm-z1-9b        # GLM-Z1-9B-0414
+ *     --provider glm-4-9b         # GLM-4-9B-0414
+ *     --provider qwen2.5-14b      # Qwen2.5-14B-Instruct
+ *     --provider deepseek-r1-14b  # DeepSeek-R1-Distill-Qwen-14B
+ * 
+ *   高质量模型 ($0.59/M tokens):
+ *     --provider siliconflow      # Qwen2.5-72B-Instruct
+ * 
+ *   其他提供商:
+ *     --provider deepseek         # DeepSeek (需要 DEEPSEEK_API_KEY)
+ *     --provider openai           # OpenAI (需要 OPENAI_API_KEY)
+ * 
+ * 示例:
+ *   npx tsx scripts/batch-generate-all-descriptions.ts --provider nvidia-llama3-8b --start-from fake-name-generator
  */
 
 import * as fs from 'fs';
@@ -15,8 +54,231 @@ import * as dotenv from 'dotenv';
 // 加载环境变量
 dotenv.config({ path: '.env.local' });
 
-const SILICONFLOW_API_URL = 'https://api.siliconflow.cn/v1/chat/completions';
-const MODEL = 'Qwen/Qwen2.5-72B-Instruct';
+// AI 提供商配置
+interface AIProvider {
+  name: string;
+  apiUrl: string;
+  model: string;
+  apiKeyEnv: string;
+}
+
+const AI_PROVIDERS: Record<string, AIProvider> = {
+  // ===== 免费模型 =====
+  'hunyuan-free': {
+    name: 'SiliconFlow FREE (Hunyuan-MT-7B 腾讯混元翻译)',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'tencent/Hunyuan-MT-7B',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  
+  // ===== NVIDIA NIM (免费额度) =====
+  // 专业翻译模型（推荐用于翻译任务）
+  'nvidia-riva-translate': {
+    name: 'NVIDIA Riva Translate 4B (专业翻译模型)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'nvidia/riva-translate-4b-instruct-v1.1',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  // 通用大模型
+  'nvidia-minimax-m2': {
+    name: 'NVIDIA NIM (MiniMax M2)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'minimaxai/minimax-m2',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-minimax-m2.1': {
+    name: 'NVIDIA NIM (MiniMax M2.1)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'minimaxai/minimax-m2.1',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-glm4.7': {
+    name: 'NVIDIA NIM (智谱 GLM-4.7)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'z-ai/glm4.7',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-kimi-k2': {
+    name: 'NVIDIA NIM (Kimi K2)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'moonshotai/kimi-k2-instruct',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-deepseek-v3.2': {
+    name: 'NVIDIA NIM (DeepSeek V3.2)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'deepseek-ai/deepseek-v3.2',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-qwen3-235b': {
+    name: 'NVIDIA NIM (Qwen3 235B)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'qwen/qwen3-235b-a22b',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-llama3-8b': {
+    name: 'NVIDIA NIM (Llama 3 8B)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'meta/llama3-8b-instruct',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-llama3-70b': {
+    name: 'NVIDIA NIM (Llama 3 70B)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'meta/llama3-70b-instruct',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-mistral-7b': {
+    name: 'NVIDIA NIM (Mistral 7B)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'mistralai/mistral-7b-instruct-v0.3',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-mixtral-8x7b': {
+    name: 'NVIDIA NIM (Mixtral 8x7B)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'mistralai/mixtral-8x7b-instruct-v0.1',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-gemma-7b': {
+    name: 'NVIDIA NIM (Gemma 7B)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'google/gemma-7b',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-gemma2-9b': {
+    name: 'NVIDIA NIM (Gemma 2 9B)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'google/gemma-2-9b-it',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-qwen2-7b': {
+    name: 'NVIDIA NIM (Qwen2 7B)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'qwen/qwen2-7b-instruct',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-deepseek-r1': {
+    name: 'NVIDIA NIM (DeepSeek R1)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'deepseek-ai/deepseek-r1',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  'nvidia-phi3-mini': {
+    name: 'NVIDIA NIM (Phi-3 Mini 128K)',
+    apiUrl: 'https://integrate.api.nvidia.com/v1/chat/completions',
+    model: 'microsoft/phi-3-mini-128k-instruct',
+    apiKeyEnv: 'NVIDIA_API_KEY',
+  },
+  
+  // ===== 超低价模型 ($0.02/M tokens) =====
+  'deepseek-r1-1.5b': {
+    name: 'SiliconFlow (DeepSeek-R1-Distill-Qwen-1.5B) $0.02/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  
+  // ===== 低价模型 ($0.05-$0.06/M tokens) =====
+  'qwen2.5-7b': {
+    name: 'SiliconFlow (Qwen2.5-7B) $0.05/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'Qwen/Qwen2.5-7B-Instruct',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  'deepseek-r1-7b': {
+    name: 'SiliconFlow (DeepSeek-R1-Distill-Qwen-7B) $0.05/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-7B',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  'llama-3.1-8b': {
+    name: 'SiliconFlow (Llama-3.1-8B) $0.06/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'meta-llama/Meta-Llama-3.1-8B-Instruct',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  'qwen3-8b': {
+    name: 'SiliconFlow (Qwen3-8B) $0.06/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'Qwen/Qwen3-8B',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  'deepseek-r1-8b': {
+    name: 'SiliconFlow (DeepSeek-R1-Distill-Llama-8B) $0.06/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'deepseek-ai/DeepSeek-R1-Distill-Llama-8B',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  
+  // ===== 中等价格模型 ($0.09-$0.10/M tokens) =====
+  'glm-z1-9b': {
+    name: 'SiliconFlow (GLM-Z1-9B) $0.09/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'THUDM/GLM-Z1-9B-0414',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  'glm-4-9b': {
+    name: 'SiliconFlow (GLM-4-9B) $0.09/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'THUDM/GLM-4-9B-0414',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  'qwen2.5-14b': {
+    name: 'SiliconFlow (Qwen2.5-14B) $0.10/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'Qwen/Qwen2.5-14B-Instruct',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  'deepseek-r1-14b': {
+    name: 'SiliconFlow (DeepSeek-R1-Distill-Qwen-14B) $0.10/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-14B',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  
+  // ===== 高质量模型 =====
+  siliconflow: {
+    name: 'SiliconFlow (Qwen2.5-72B) $0.59/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'Qwen/Qwen2.5-72B-Instruct',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  
+  // ===== 其他提供商 =====
+  deepseek: {
+    name: 'DeepSeek',
+    apiUrl: 'https://api.deepseek.com/v1/chat/completions',
+    model: 'deepseek-chat',
+    apiKeyEnv: 'DEEPSEEK_API_KEY',
+  },
+  openai: {
+    name: 'OpenAI',
+    apiUrl: 'https://api.openai.com/v1/chat/completions',
+    model: 'gpt-4o-mini',
+    apiKeyEnv: 'OPENAI_API_KEY',
+  },
+  
+  // ===== 兼容旧名称 =====
+  'siliconflow-free': {
+    name: 'SiliconFlow (Qwen2.5-7B) $0.05/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'Qwen/Qwen2.5-7B-Instruct',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+  'siliconflow-glm': {
+    name: 'SiliconFlow (GLM-4-9B) $0.09/M',
+    apiUrl: 'https://api.siliconflow.cn/v1/chat/completions',
+    model: 'THUDM/GLM-4-9B-0414',
+    apiKeyEnv: 'SILICONFLOW_API_KEY',
+  },
+};
+
+// 从命令行参数获取提供商，默认使用 NVIDIA Qwen3 235B（快速且免费）
+const args = process.argv.slice(2);
+const providerIndex = args.indexOf('--provider');
+const providerName = providerIndex !== -1 ? args[providerIndex + 1] : 'nvidia-qwen3-235b';
+const PROVIDER = AI_PROVIDERS[providerName] || AI_PROVIDERS['nvidia-qwen3-235b'];
 
 const LOCALES = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
 
@@ -173,37 +435,58 @@ Output ONLY valid JSON in this exact format:
 }`;
 }
 
-async function callSiliconFlowAPI(prompt: string, retries = 3): Promise<string> {
-  const apiKey = process.env.SILICONFLOW_API_KEY;
-  if (!apiKey) throw new Error('SILICONFLOW_API_KEY not set');
+async function callAIAPI(prompt: string, retries = 5): Promise<string> {
+  const apiKey = process.env[PROVIDER.apiKeyEnv];
+  if (!apiKey) throw new Error(`${PROVIDER.apiKeyEnv} not set`);
 
   for (let i = 0; i < retries; i++) {
     try {
-      const response = await fetch(SILICONFLOW_API_URL, {
+      const response = await fetch(PROVIDER.apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: MODEL,
+          model: PROVIDER.model,
           messages: [{ role: 'user', content: prompt }],
-          temperature: 0.8,
+          temperature: 0.7,
           max_tokens: 3000,
         }),
       });
 
       if (!response.ok) {
         const errorText = await response.text();
-        throw new Error(`API failed: ${response.status} ${errorText}`);
+        // 处理速率限制
+        if (response.status === 429) {
+          const waitTime = Math.min(30000, 5000 * Math.pow(2, i));
+          console.log(`    Rate limited, waiting ${waitTime/1000}s...`);
+          await new Promise(resolve => setTimeout(resolve, waitTime));
+          continue;
+        }
+        // 处理服务器错误
+        if (response.status >= 500) {
+          console.log(`    Server error ${response.status}, retrying...`);
+          await new Promise(resolve => setTimeout(resolve, 5000));
+          continue;
+        }
+        throw new Error(`API failed: ${response.status} ${errorText.substring(0, 200)}`);
       }
 
       const data = await response.json();
-      return data.choices?.[0]?.message?.content || '';
+      const content = data.choices?.[0]?.message?.content || '';
+      
+      // 检查是否返回了有效内容
+      if (!content || content.length < 50) {
+        throw new Error('Empty or too short response');
+      }
+      
+      return content;
     } catch (error) {
       if (i === retries - 1) throw error;
-      console.log(`    Retry ${i + 1}/${retries}...`);
-      await new Promise(resolve => setTimeout(resolve, 3000));
+      const waitTime = 3000 * (i + 1);
+      console.log(`    Retry ${i + 1}/${retries} after ${waitTime/1000}s...`);
+      await new Promise(resolve => setTimeout(resolve, waitTime));
     }
   }
   throw new Error('Max retries exceeded');
@@ -211,15 +494,45 @@ async function callSiliconFlowAPI(prompt: string, retries = 3): Promise<string> 
 
 function parseDescription(content: string): ToolDescription | null {
   try {
-    const jsonMatch = content.match(/\{[\s\S]*\}/);
-    if (jsonMatch) {
-      const parsed = JSON.parse(jsonMatch[0]);
-      if (parsed.detailed_description && parsed.usage_steps && parsed.usage_examples) {
-        return parsed;
+    // 尝试多种方式提取 JSON
+    let jsonStr = content;
+    
+    // 1. 尝试提取 markdown 代码块中的 JSON
+    const codeBlockMatch = content.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (codeBlockMatch) {
+      jsonStr = codeBlockMatch[1].trim();
+    } else {
+      // 2. 尝试提取最外层的 JSON 对象
+      const jsonMatch = content.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        jsonStr = jsonMatch[0];
       }
     }
+    
+    // 3. 清理常见的 JSON 格式问题
+    jsonStr = jsonStr
+      .replace(/,\s*}/g, '}')  // 移除尾随逗号
+      .replace(/,\s*]/g, ']')  // 移除数组尾随逗号
+      .replace(/[\x00-\x1F\x7F]/g, ' ')  // 移除控制字符
+      .replace(/\n\s*\n/g, '\n');  // 移除多余空行
+    
+    const parsed = JSON.parse(jsonStr);
+    
+    // 验证必需字段
+    if (parsed.detailed_description && parsed.usage_steps && parsed.usage_examples) {
+      // 确保数组格式正确
+      if (!Array.isArray(parsed.usage_steps)) {
+        parsed.usage_steps = [parsed.usage_steps];
+      }
+      if (!Array.isArray(parsed.usage_examples)) {
+        parsed.usage_examples = [parsed.usage_examples];
+      }
+      return parsed;
+    }
     return null;
-  } catch {
+  } catch (e) {
+    // 调试：打印解析失败的内容
+    // console.log('Parse error:', e, '\nContent:', content.substring(0, 500));
     return null;
   }
 }
@@ -234,7 +547,7 @@ async function generateToolDescriptions(slug: string): Promise<Record<string, To
     process.stdout.write(`  ${locale}...`);
     try {
       const prompt = generateDescriptionPrompt(tool, locale);
-      const response = await callSiliconFlowAPI(prompt);
+      const response = await callAIAPI(prompt);
       const parsed = parseDescription(response);
       
       if (parsed) {
@@ -277,7 +590,8 @@ async function main() {
   const startFrom = startFromIndex !== -1 ? args[startFromIndex + 1] : null;
   
   let tools = getToolsNeedingImprovement();
-  console.log(`\n📋 Found ${tools.length} tools needing improvement\n`);
+  console.log(`\n📋 Found ${tools.length} tools needing improvement`);
+  console.log(`🤖 Using AI Provider: ${PROVIDER.name} (${PROVIDER.model})\n`);
   
   if (startFrom) {
     const idx = tools.indexOf(startFrom);

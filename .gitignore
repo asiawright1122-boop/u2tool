@@ -42,3 +42,6 @@ next-env.d.ts
 logs/*.json
 reports/*.json
 reports/*.md
+
+# Generated descriptions (temporary files)
+generated-descriptions/

@@ -94,7 +94,8 @@ describe('Technical SEO Infrastructure', () => {
 
     it('alternates languages should include all locales', () => {
       const alternates = generateAlternates('en', '/tools');
-      expect(Object.keys(alternates.languages)).toHaveLength(10);
+      // 10 locales + x-default = 11 keys
+      expect(Object.keys(alternates.languages)).toHaveLength(11);
     });
 
     it('alternates should be consistent across locales', () => {

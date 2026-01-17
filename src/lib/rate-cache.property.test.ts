@@ -112,13 +112,19 @@ describe('RateCache Property Tests', () => {
           (entries) => {
             const cache = new RateCache(60);
             
-            // Set all entries
-            entries.forEach(({ base, rates }) => {
+            // Deduplicate entries by base to avoid overwriting
+            const uniqueEntries = new Map<string, typeof entries[0]>();
+            entries.forEach(entry => {
+              uniqueEntries.set(entry.base, entry);
+            });
+            
+            // Set all unique entries
+            uniqueEntries.forEach(({ base, rates }) => {
               cache.set(base, rates);
             });
             
             // Verify each entry is stored independently
-            entries.forEach(({ base, rates }) => {
+            uniqueEntries.forEach(({ base, rates }) => {
               const entry = cache.get(base);
               expect(entry).not.toBeNull();
               expect(entry!.base).toBe(base);

@@ -175,6 +175,9 @@ describe('Calculator Utils', () => {
         fc.property(
           fc.date({ min: new Date('1920-01-01'), max: new Date('2020-01-01') }),
           (birthDate) => {
+            // Skip invalid dates
+            if (isNaN(birthDate.getTime())) return true;
+            
             const referenceDate = new Date('2025-01-07');
             const result = calculateAge({ birthDate, referenceDate });
 
@@ -202,6 +205,9 @@ describe('Calculator Utils', () => {
         fc.property(
           fc.date({ min: new Date('1950-01-01'), max: new Date('2020-12-31') }),
           (birthDate) => {
+            // Skip invalid dates
+            if (isNaN(birthDate.getTime())) return true;
+            
             const referenceDate = new Date('2025-01-07');
             const result = calculateAge({ birthDate, referenceDate });
 

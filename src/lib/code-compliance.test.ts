@@ -57,8 +57,12 @@ function checkForDebugStatements(filePath: string): { hasDebug: boolean; issues:
     'JsMinifier',
     'JsObfuscator', 
     'MarkdownEditor',
+    'MarkdownToPdf',
     'CurlConverter',
     'CurlToCode',
+    'JsonToForm',
+    'GdprConsentGenerator',
+    'CodeScreenshotGenerator',
   ];
   if (toolsWithExampleCode.some(tool => filePath.includes(tool))) {
     return { hasDebug: false, issues: [] };

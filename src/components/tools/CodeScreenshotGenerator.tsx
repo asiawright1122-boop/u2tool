@@ -63,7 +63,7 @@ export default function CodeScreenshotGenerator() {
             <textarea
               value={code}
               onChange={(e) => setCode(e.target.value)}
-              className="w-full h-48 p-3 border rounded-lg font-mono text-sm dark:bg-gray-800 dark:border-gray-600"
+              className="w-full h-48 p-3 border rounded-lg font-mono text-sm bg-white dark:bg-gray-800 dark:border-gray-600"
               placeholder={tCommon('inputPlaceholder')}
             />
           </div>
@@ -72,14 +72,14 @@ export default function CodeScreenshotGenerator() {
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('theme')}</label>
               <select value={theme} onChange={(e) => setTheme(e.target.value as keyof typeof themes)}
-                className="w-full p-2 border rounded-lg dark:bg-gray-800 dark:border-gray-600">
+                className="w-full p-2 border rounded-lg bg-white dark:bg-gray-800 dark:border-gray-600">
                 {Object.keys(themes).map(t => <option key={t} value={t}>{t}</option>)}
               </select>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{t('language')}</label>
               <select value={language} onChange={(e) => setLanguage(e.target.value)}
-                className="w-full p-2 border rounded-lg dark:bg-gray-800 dark:border-gray-600">
+                className="w-full p-2 border rounded-lg bg-white dark:bg-gray-800 dark:border-gray-600">
                 {languages.map(l => <option key={l} value={l}>{l}</option>)}
               </select>
             </div>
