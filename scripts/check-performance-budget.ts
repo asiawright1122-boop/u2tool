@@ -20,12 +20,9 @@ import * as path from 'path';
 import {
   BUNDLE_SIZE_BUDGET,
   BUDGET_WARNING_THRESHOLD,
-  isBundleSizeWithinBudget,
-  isBundleSizeNearBudget,
   formatBytes,
 } from '../src/config/performance-budget';
 import {
-  criticalCSS,
   getCriticalCSSSize,
   CRITICAL_CSS_SIZE_LIMIT,
 } from '../src/lib/critical-css';

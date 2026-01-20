@@ -513,7 +513,8 @@ function parseDescription(content: string): ToolDescription | null {
     jsonStr = jsonStr
       .replace(/,\s*}/g, '}')  // 移除尾随逗号
       .replace(/,\s*]/g, ']')  // 移除数组尾随逗号
-      .replace(/[\x00-\x1F\x7F]/g, ' ')  // 移除控制字符
+      // eslint-disable-next-line no-control-regex
+      .replace(/[\u0000-\u001F\u007F]/g, ' ')  // 移除控制字符
       .replace(/\n\s*\n/g, '\n');  // 移除多余空行
     
     const parsed = JSON.parse(jsonStr);
@@ -530,7 +531,7 @@ function parseDescription(content: string): ToolDescription | null {
       return parsed;
     }
     return null;
-  } catch (e) {
+  } catch {
     // 调试：打印解析失败的内容
     // console.log('Parse error:', e, '\nContent:', content.substring(0, 500));
     return null;

@@ -224,8 +224,7 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* === 性能优化：预加载关键资源 === */}
-        <link rel="preload" as="style" href="/globals.css" />
+        {/* Next.js 自动处理 CSS 加载，无需手动预加载 */}
         
         {/* === 移动端优化：Apple 特定标签 === */}
         {/* Apple 启动画面（不同设备尺寸） */}

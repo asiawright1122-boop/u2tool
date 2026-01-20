@@ -39,9 +39,10 @@ describe('Resource Hints - Property Tests', () => {
       expect(layoutContent).toContain('crossOrigin="anonymous"');
     });
 
-    // 测试 preload 链接存在
-    it('should have preload links for critical resources', () => {
-      expect(layoutContent).toContain('rel="preload"');
+    // 测试不应该有错误的 globals.css preload 链接
+    it('should not have incorrect preload link for /globals.css', () => {
+      expect(layoutContent).not.toContain('href="/globals.css"');
+      expect(layoutContent).not.toContain('<link rel="preload" as="style" href="/globals.css"');
     });
 
     // 测试分析服务的 dns-prefetch
