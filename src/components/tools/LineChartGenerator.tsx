@@ -3,7 +3,8 @@
 import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import ReactEChartsCore from 'echarts-for-react/lib/core';
-import { echarts, type EChartsOption } from '@/lib/echartsCore';
+import * as echarts from 'echarts/core';
+import type { EChartsOption } from 'echarts';
 import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 数据系列类型
