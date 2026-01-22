@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
+import { sanitizeMarkdownHtml } from '@/lib/sanitize';
 
 // Simple markdown parser (for basic features)
 // 注意：为避免 SEO 问题（页面已有 H1），markdown 中的标题降级处理：
@@ -51,7 +52,8 @@ code blocks
 `);
   const [copied, setCopied] = useState(false);
 
-  const html = useMemo(() => parseMarkdown(markdown), [markdown]);
+  // 解析 Markdown 并净化 HTML，防止 XSS 攻击
+  const html = useMemo(() => sanitizeMarkdownHtml(parseMarkdown(markdown)), [markdown]);
 
   const copyHtml = async () => {
     await navigator.clipboard.writeText(html);

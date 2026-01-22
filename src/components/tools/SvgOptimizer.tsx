@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { sanitizeSvg } from '@/lib/sanitize';
 
 export default function SvgOptimizer() {
   const t = useTranslations('tools');
@@ -12,45 +13,45 @@ export default function SvgOptimizer() {
 
   const optimize = () => {
     if (!input.trim()) return;
-    
+
     let svg = input;
     const originalSize = new Blob([input]).size;
-    
+
     // Remove comments
     svg = svg.replace(/<!--[\s\S]*?-->/g, '');
-    
+
     // Remove unnecessary whitespace
     svg = svg.replace(/>\s+</g, '><');
     svg = svg.replace(/\s+/g, ' ');
-    
+
     // Remove empty attributes
     svg = svg.replace(/\s+[a-zA-Z-]+=""/g, '');
-    
+
     // Remove default values
     svg = svg.replace(/\s+fill-opacity="1"/g, '');
     svg = svg.replace(/\s+stroke-opacity="1"/g, '');
     svg = svg.replace(/\s+opacity="1"/g, '');
-    
+
     // Remove metadata
     svg = svg.replace(/<metadata[\s\S]*?<\/metadata>/gi, '');
-    
+
     // Remove title and desc if empty
     svg = svg.replace(/<title>\s*<\/title>/gi, '');
     svg = svg.replace(/<desc>\s*<\/desc>/gi, '');
-    
+
     // Remove unnecessary xmlns
     svg = svg.replace(/\s+xmlns:xlink="[^"]*"/g, '');
-    
+
     // Clean up numbers
     svg = svg.replace(/(\d+)\.0+([^\d])/g, '$1$2');
     svg = svg.replace(/0+(\.\d+)/g, '$1');
-    
+
     // Trim
     svg = svg.trim();
-    
+
     const optimizedSize = new Blob([svg]).size;
     const savedPercent = originalSize > 0 ? Math.round((1 - optimizedSize / originalSize) * 100) : 0;
-    
+
     setOutput(svg);
     setStats({
       original: originalSize,
@@ -124,7 +125,8 @@ export default function SvgOptimizer() {
       {output && (
         <div>
           <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('svgOptimizer.preview')}</label>
-          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-4 flex justify-center" dangerouslySetInnerHTML={{ __html: output }} />
+          {/* 净化 SVG 防止 XSS 攻击 */}
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-4 flex justify-center" dangerouslySetInnerHTML={{ __html: sanitizeSvg(output) }} />
         </div>
       )}
     </div>

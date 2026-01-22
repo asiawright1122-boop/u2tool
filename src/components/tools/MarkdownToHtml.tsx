@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
+import { sanitizeMarkdownHtml } from '@/lib/sanitize';
 
 export default function MarkdownToHtml() {
   const t = useTranslations('tools');
@@ -10,59 +11,60 @@ export default function MarkdownToHtml() {
 
   const convertToHtml = (md: string): string => {
     let html = md;
-    
+
     // Headers
     html = html.replace(/^### (.*$)/gm, '<h3>$1</h3>');
     html = html.replace(/^## (.*$)/gm, '<h2>$1</h2>');
     html = html.replace(/^# (.*$)/gm, '<h1>$1</h1>');
-    
+
     // Bold
     html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     html = html.replace(/__(.*?)__/g, '<strong>$1</strong>');
-    
+
     // Italic
     html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
     html = html.replace(/_(.*?)_/g, '<em>$1</em>');
-    
+
     // Code blocks
     html = html.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
-    
+
     // Inline code
     html = html.replace(/`(.*?)`/g, '<code>$1</code>');
-    
+
     // Links
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
-    
+
     // Images
     html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" />');
-    
+
     // Unordered lists
     html = html.replace(/^\* (.*$)/gm, '<li>$1</li>');
     html = html.replace(/^- (.*$)/gm, '<li>$1</li>');
     html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
-    
+
     // Ordered lists
     html = html.replace(/^\d+\. (.*$)/gm, '<li>$1</li>');
-    
+
     // Blockquotes
     html = html.replace(/^> (.*$)/gm, '<blockquote>$1</blockquote>');
-    
+
     // Horizontal rule
     html = html.replace(/^---$/gm, '<hr />');
-    
+
     // Line breaks
     html = html.replace(/\n\n/g, '</p><p>');
     html = html.replace(/\n/g, '<br />');
-    
+
     // Wrap in paragraph if not already wrapped
     if (!html.startsWith('<')) {
       html = '<p>' + html + '</p>';
     }
-    
+
     return html;
   };
 
-  const html = useMemo(() => convertToHtml(markdown), [markdown]);
+  // 转换 Markdown 并净化 HTML，防止 XSS 攻击
+  const html = useMemo(() => sanitizeMarkdownHtml(convertToHtml(markdown)), [markdown]);
 
   const copyHtml = () => {
     navigator.clipboard.writeText(html);
@@ -99,7 +101,7 @@ export default function MarkdownToHtml() {
 
       <div>
         <label className="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('mdToHtml.preview')}</label>
-        <div 
+        <div
           className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded p-4 prose prose-sm max-w-none"
           dangerouslySetInnerHTML={{ __html: html }}
         />

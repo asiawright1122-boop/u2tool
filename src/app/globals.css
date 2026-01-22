@@ -90,6 +90,151 @@
   }
 }
 
+/* ============================================
+ * Glassmorphism Design System (P3 Enhancement)
+ * 毛玻璃效果 - 现代 SaaS 风格
+ * ============================================ */
+
+/* 基础毛玻璃效果 */
+.glass {
+  @apply bg-white/70 dark:bg-gray-900/70 
+         backdrop-blur-xl 
+         border border-white/20 dark:border-gray-700/30
+         shadow-lg shadow-black/5;
+}
+
+/* 轻量毛玻璃 - 用于卡片和面板 */
+.glass-light {
+  @apply bg-white/50 dark:bg-gray-900/50 
+         backdrop-blur-md 
+         border border-white/30 dark:border-gray-700/20;
+}
+
+/* 强烈毛玻璃 - 用于模态框和重要元素 */
+.glass-strong {
+  @apply bg-white/80 dark:bg-gray-900/80 
+         backdrop-blur-2xl 
+         border border-white/40 dark:border-gray-600/40
+         shadow-xl shadow-black/10;
+}
+
+/* 毛玻璃卡片 - 悬停效果增强 */
+.glass-card {
+  @apply bg-white/60 dark:bg-gray-800/60 
+         backdrop-blur-lg 
+         border border-gray-200/50 dark:border-gray-700/50 
+         rounded-xl
+         transition-all duration-300 ease-out;
+}
+
+.glass-card:hover {
+  @apply bg-white/80 dark:bg-gray-800/80 
+         border-blue-500/30 dark:border-blue-400/30
+         shadow-lg shadow-blue-500/10
+         -translate-y-0.5;
+}
+
+/* 毛玻璃按钮 */
+.glass-button {
+  @apply px-4 py-2 
+         bg-white/20 dark:bg-gray-800/30 
+         backdrop-blur-md 
+         border border-white/30 dark:border-gray-600/30 
+         rounded-lg
+         text-gray-900 dark:text-white
+         transition-all duration-200
+         hover:bg-white/40 dark:hover:bg-gray-700/50
+         hover:border-white/50 dark:hover:border-gray-500/50
+         hover:shadow-lg hover:shadow-black/5
+         active:scale-[0.98];
+}
+
+/* 毛玻璃导航 */
+.glass-nav {
+  @apply bg-white/70 dark:bg-gray-900/70 
+         backdrop-blur-xl 
+         border-b border-white/20 dark:border-gray-700/30;
+}
+
+/* ============================================
+ * Enhanced Hover Effects (P3 Enhancement)
+ * 增强的悬停动效
+ * ============================================ */
+
+/* 悬浮效果 - 轻微上浮 */
+.hover-lift {
+  @apply transition-all duration-300 ease-out;
+}
+
+.hover-lift:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+/* 发光效果 */
+.hover-glow {
+  @apply transition-all duration-300;
+}
+
+.hover-glow:hover {
+  @apply shadow-lg shadow-blue-500/20;
+}
+
+/* 边框高亮 */
+.hover-border-glow {
+  @apply transition-all duration-300 border border-transparent;
+}
+
+.hover-border-glow:hover {
+  @apply border-blue-500/50 shadow-lg shadow-blue-500/10;
+}
+
+/* 缩放效果 */
+.hover-scale {
+  @apply transition-transform duration-200 ease-out;
+}
+
+.hover-scale:hover {
+  @apply scale-[1.02];
+}
+
+/* 渐变背景动画 */
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 光泽扫过效果 */
+.shine-on-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-on-hover::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  transform: rotate(45deg) translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.shine-on-hover:hover::after {
+  transform: rotate(45deg) translateX(100%);
+}
 
 /* File drop zone */
 .tool-dropzone {

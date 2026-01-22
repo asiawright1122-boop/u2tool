@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
+import { sanitizeSvg } from '@/lib/sanitize';
 
 export default function SvgToImage() {
   const t = useTranslations('tools.svg-to-image');
@@ -212,11 +213,12 @@ export default function SvgToImage() {
         <div className="space-y-4">
           <label className="block text-sm font-medium text-gray-700 dark:text-white">{t('preview')}</label>
           <div className="p-4 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg min-h-[300px] flex items-center justify-center"
-               style={{ backgroundImage: 'linear-gradient(45deg, #ddd 25%, transparent 25%), linear-gradient(-45deg, #ddd 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ddd 75%), linear-gradient(-45deg, transparent 75%, #ddd 75%)', backgroundSize: '20px 20px', backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px' }}>
+            style={{ backgroundImage: 'linear-gradient(45deg, #ddd 25%, transparent 25%), linear-gradient(-45deg, #ddd 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ddd 75%), linear-gradient(-45deg, transparent 75%, #ddd 75%)', backgroundSize: '20px 20px', backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px' }}>
             {previewUrl ? (
               <img src={previewUrl} alt="Preview" className="max-w-full max-h-[400px] object-contain" />
             ) : svgCode ? (
-              <div dangerouslySetInnerHTML={{ __html: svgCode }} className="max-w-full max-h-[400px]" />
+              // 净化 SVG 防止 XSS 攻击
+              <div dangerouslySetInnerHTML={{ __html: sanitizeSvg(svgCode) }} className="max-w-full max-h-[400px]" />
             ) : (
               <div className="text-gray-500 dark:text-gray-300 text-center">
                 <p className="text-4xl mb-2">📷</p>

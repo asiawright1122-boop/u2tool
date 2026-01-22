@@ -44,8 +44,21 @@ const nextConfig = {
 
   // 性能优化：优化打包
   experimental: {
-    // 优化包导入（移除 next-intl，因为不再使用插件）
-    optimizePackageImports: ['lucide-react'],
+    // 优化重依赖包的导入，启用更好的 tree-shaking
+    // 这些包体积较大，优化导入可显著减少 bundle 大小
+    optimizePackageImports: [
+      'lucide-react',      // 图标库 ~200KB
+      'echarts',           // 图表库 ~1MB
+      'echarts/core',      // ECharts 核心
+      'echarts-for-react', // React 封装
+      'xlsx',              // Excel 处理 ~400KB
+      'pdf-lib',           // PDF 处理 ~300KB
+      'marked',            // Markdown 解析
+      'react-markdown',    // Markdown 渲染
+      'jspdf',             // PDF 生成
+      'jszip',             // ZIP 处理
+      'qrcode',            // 二维码生成
+    ],
   },
 
   // 性能优化：HTTP 头部缓存策略

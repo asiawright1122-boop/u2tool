@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
@@ -17,7 +17,15 @@ import GlobalSidebar from '@/components/layout/GlobalSidebar';
 import WebVitalsReporter from '@/components/WebVitalsReporter';
 import { criticalCSS } from '@/lib/critical-css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+// Plus Jakarta Sans - 现代 SaaS 风格字体，友好、清洁、专业
+// 性能优化：只加载必需的 weights (减少约 100KB)
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  weight: ['400', '600', '700'],  // 移除 300/500，减少字体文件大小
+  display: 'swap',
+  preload: true,
+});
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';
 
@@ -212,10 +220,9 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  // 在布局层加载精简版基础翻译（不含 tools 对象）
-  // 优化：从 ~1.4MB 减少到 ~120KB（减少约 90%）
-  // 工具特定翻译在 tools/[slug]/page.tsx 中按需加载
-  const messages = await loadSlimBaseMessages(locale as SupportedLocale);
+  // 在布局层加载基础翻译（包含所有命名空间如 tools, nav, home 等）
+  // 翻译文件从 @/messages/{locale}.json 加载
+  const messages = await loadBaseMessages(locale as SupportedLocale);
 
   return (
     // 动态设置 lang 属性，确保搜索引擎和辅助技术正确识别页面语言
@@ -265,7 +272,7 @@ export default async function LocaleLayout({
         {/* === 语言和地区优化 === */}
         <meta httpEquiv="Content-Language" content={locale} />
       </head>
-      <body className={`${inter.variable} bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen font-sans`}>
+      <body className={`${plusJakartaSans.variable} bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen font-sans`}>
 
 
         <ThemeProvider
