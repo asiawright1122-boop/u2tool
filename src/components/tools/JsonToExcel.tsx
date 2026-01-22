@@ -6,7 +6,7 @@ import * as XLSX from 'xlsx';
 
 export default function JsonToExcel() {
   const t = useTranslations('tools');
-  
+
   const [jsonInput, setJsonInput] = useState<string>('');
   const [fileName, setFileName] = useState<string>('data');
   const [sheetName, setSheetName] = useState<string>('Sheet1');
@@ -40,7 +40,7 @@ export default function JsonToExcel() {
       let data: Record<string, unknown>[];
 
       if (Array.isArray(parsed)) {
-        data = parsed.map(item => 
+        data = parsed.map(item =>
           typeof item === 'object' && item !== null ? flattenObject(item) : { value: item }
         );
       } else if (typeof parsed === 'object' && parsed !== null) {
@@ -57,7 +57,7 @@ export default function JsonToExcel() {
 
       const allHeaders = new Set<string>();
       data.forEach(row => Object.keys(row).forEach(key => allHeaders.add(key)));
-      
+
       setHeaders(Array.from(allHeaders));
       setPreview(data.slice(0, 10));
     } catch {
@@ -76,7 +76,7 @@ export default function JsonToExcel() {
       let data: Record<string, unknown>[];
 
       if (Array.isArray(parsed)) {
-        data = parsed.map(item => 
+        data = parsed.map(item =>
           typeof item === 'object' && item !== null ? flattenObject(item) : { value: item }
         );
       } else if (typeof parsed === 'object' && parsed !== null) {
@@ -123,7 +123,7 @@ export default function JsonToExcel() {
           value={jsonInput}
           onChange={(e) => handleJsonChange(e.target.value)}
           placeholder={t('jsonToExcel.placeholder')}
-          className="w-full h-48 p-4 font-mono text-sm bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500"
+          className="tool-textarea h-48"
         />
       </div>
 
@@ -143,7 +143,7 @@ export default function JsonToExcel() {
             type="text"
             value={fileName}
             onChange={(e) => setFileName(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
+            className="tool-input"
           />
         </div>
         <div>
@@ -154,7 +154,7 @@ export default function JsonToExcel() {
             type="text"
             value={sheetName}
             onChange={(e) => setSheetName(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
+            className="tool-input"
           />
         </div>
       </div>

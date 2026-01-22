@@ -38,7 +38,7 @@ export default function PhoneFormatter() {
   const formatPhone = () => {
     const digits = phone.replace(/\D/g, '');
     const selectedCountry = countryFormats.find(c => c.code === country);
-    
+
     if (!selectedCountry || !digits) {
       setFormatted('');
       return;
@@ -46,20 +46,20 @@ export default function PhoneFormatter() {
 
     let result = selectedCountry.format;
     let digitIndex = 0;
-    
+
     for (let i = 0; i < result.length && digitIndex < digits.length; i++) {
       if (result[i] === 'X') {
         result = result.substring(0, i) + digits[digitIndex] + result.substring(i + 1);
         digitIndex++;
       }
     }
-    
+
     result = result.replace(/X/g, '').trim();
-    
+
     if (includeDialCode) {
       result = `${selectedCountry.dialCode} ${result}`;
     }
-    
+
     setFormatted(result);
   };
 
@@ -73,13 +73,13 @@ export default function PhoneFormatter() {
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label className="tool-label">
             {t('country')}
           </label>
           <select
             value={country}
             onChange={(e) => setCountry(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+            className="tool-select font-medium"
           >
             {countryFormats.map((c) => (
               <option key={c.code} value={c.code}>
@@ -90,7 +90,7 @@ export default function PhoneFormatter() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label className="tool-label">
             {t('phoneNumber')}
           </label>
           <input
@@ -98,7 +98,7 @@ export default function PhoneFormatter() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder={t('inputPlaceholder')}
-            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+            className="tool-input"
           />
         </div>
       </div>

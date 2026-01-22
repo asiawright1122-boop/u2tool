@@ -41,7 +41,7 @@ type CalculationMode = 'addVat' | 'removeVat' | 'vatOnly';
 
 export default function VatCalculator() {
   const t = useTranslations('tools.vat-calculator');
-  
+
   const [amount, setAmount] = useState<string>('100');
   const [country, setCountry] = useState<string>('DE');
   const [customRate, setCustomRate] = useState<string>('');
@@ -49,7 +49,7 @@ export default function VatCalculator() {
   const [mode, setMode] = useState<CalculationMode>('addVat');
   const [selectedRateType, setSelectedRateType] = useState<'standard' | 'reduced' | 'superReduced'>('standard');
   const [reducedIndex, setReducedIndex] = useState(0);
-  
+
   const [result, setResult] = useState<{
     netAmount: number;
     vatAmount: number;
@@ -63,7 +63,7 @@ export default function VatCalculator() {
     }
     const countryData = vatRates[country];
     if (!countryData) return 0;
-    
+
     if (selectedRateType === 'standard') return countryData.standard;
     if (selectedRateType === 'superReduced' && countryData.superReduced) return countryData.superReduced;
     if (selectedRateType === 'reduced' && countryData.reduced.length > 0) {
@@ -128,7 +128,7 @@ export default function VatCalculator() {
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              className="w-full pl-8 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-lg"
+              className="tool-input pl-8 text-lg"
               placeholder="100.00"
               min="0"
               step="0.01"
@@ -143,7 +143,7 @@ export default function VatCalculator() {
           <select
             value={mode}
             onChange={(e) => setMode(e.target.value as CalculationMode)}
-            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+            className="tool-select"
           >
             <option value="addVat">{t('addVat')}</option>
             <option value="removeVat">{t('removeVat')}</option>
@@ -152,7 +152,7 @@ export default function VatCalculator() {
         </div>
       </div>
 
-      <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg space-y-4">
+      <div className="tool-card space-y-4">
         <div className="flex items-center gap-4">
           <label className="flex items-center gap-2 cursor-pointer">
             <input
@@ -175,7 +175,7 @@ export default function VatCalculator() {
                 type="number"
                 value={customRate}
                 onChange={(e) => setCustomRate(e.target.value)}
-                className="w-full px-4 py-2 pr-8 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="tool-input pr-8"
                 placeholder="19"
                 min="0"
                 max="100"
@@ -197,7 +197,7 @@ export default function VatCalculator() {
                   setSelectedRateType('standard');
                   setReducedIndex(0);
                 }}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="tool-select"
               >
                 {Object.entries(vatRates).map(([code, data]) => (
                   <option key={code} value={code}>
@@ -222,7 +222,7 @@ export default function VatCalculator() {
                     setSelectedRateType(value as 'standard' | 'superReduced');
                   }
                 }}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="tool-select"
               >
                 <option value="standard">
                   {t('standardRate')} ({countryData?.standard}%)
@@ -244,15 +244,15 @@ export default function VatCalculator() {
       </div>
 
       {result && (
-        <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl">
+        <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl border border-blue-100 dark:border-blue-800/30">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-lg">
+            <div className="text-center p-4 bg-white/80 dark:bg-gray-800/80 rounded-lg shadow-sm backdrop-blur-sm">
               <div className="text-sm text-gray-500 dark:text-gray-400">{t('netAmount')}</div>
               <div className="text-2xl font-bold text-gray-900 dark:text-white">
                 €{result.netAmount.toFixed(2)}
               </div>
             </div>
-            <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-lg">
+            <div className="text-center p-4 bg-white/80 dark:bg-gray-800/80 rounded-lg shadow-sm backdrop-blur-sm">
               <div className="text-sm text-gray-500 dark:text-gray-400">
                 {t('vatAmount')} ({result.vatRate}%)
               </div>
@@ -260,7 +260,7 @@ export default function VatCalculator() {
                 €{result.vatAmount.toFixed(2)}
               </div>
             </div>
-            <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-lg">
+            <div className="text-center p-4 bg-white/80 dark:bg-gray-800/80 rounded-lg shadow-sm backdrop-blur-sm">
               <div className="text-sm text-gray-500 dark:text-gray-400">{t('grossAmount')}</div>
               <div className="text-2xl font-bold text-green-600 dark:text-green-400">
                 €{result.grossAmount.toFixed(2)}

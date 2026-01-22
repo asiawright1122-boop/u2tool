@@ -32,7 +32,7 @@ const units: Record<UnitCategory, Record<string, UnitDef>> = {
   },
   temperature: {
     c: { name: 'Celsius', toBase: v => v, fromBase: v => v },
-    f: { name: 'Fahrenheit', toBase: v => (v - 32) * 5/9, fromBase: v => v * 9/5 + 32 },
+    f: { name: 'Fahrenheit', toBase: v => (v - 32) * 5 / 9, fromBase: v => v * 9 / 5 + 32 },
     k: { name: 'Kelvin', toBase: v => v - 273.15, fromBase: v => v + 273.15 },
   },
   area: {
@@ -77,15 +77,15 @@ export default function UnitConverter() {
   const convert = (): string => {
     const value = parseFloat(inputValue);
     if (isNaN(value)) return '';
-    
+
     const fromDef = units[category][fromUnit];
     const toDef = units[category][toUnit];
-    
+
     if (!fromDef || !toDef) return '';
-    
+
     const baseValue = fromDef.toBase(value);
     const result = toDef.fromBase(baseValue);
-    
+
     return result.toLocaleString(undefined, { maximumFractionDigits: 10 });
   };
 
@@ -120,9 +120,8 @@ export default function UnitConverter() {
                 setFromUnit(unitKeys[0]);
                 setToUnit(unitKeys[1] || unitKeys[0]);
               }}
-              className={`px-4 py-2 rounded-lg text-sm transition-colors ${
-                category === cat ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700'
-              }`}
+              className={`px-4 py-2 rounded-lg text-sm transition-colors ${category === cat ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700'
+                }`}
             >
               {t(`unit.${cat}`)}
             </button>
@@ -131,21 +130,22 @@ export default function UnitConverter() {
       </div>
 
       {/* Conversion */}
-      <div className="grid md:grid-cols-[1fr,auto,1fr] gap-4 items-end">
-        <div>
-          <label className="tool-label">{t('unit.from')}</label>
-          <div className="flex gap-2">
+      <div className="grid md:grid-cols-[1fr,auto,1fr] gap-4 items-stretch">
+        {/* From Section */}
+        <div className="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-700 transition-all hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10">
+          <label className="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{t('unit.from')}</label>
+          <div className="space-y-3">
             <input
               type="number"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              className="flex-1 tool-input"
+              className="tool-input text-2xl md:text-3xl font-mono text-center h-16 bg-white dark:bg-gray-800 shadow-sm"
               placeholder={tu('enterValue')}
             />
             <select
               value={fromUnit}
               onChange={(e) => setFromUnit(e.target.value)}
-              className="tool-input w-auto"
+              className="tool-select text-center font-medium bg-white dark:bg-gray-800 shadow-sm"
             >
               {categoryUnits.map(([key, def]) => (
                 <option key={key} value={key}>{def.name}</option>
@@ -154,24 +154,38 @@ export default function UnitConverter() {
           </div>
         </div>
 
-        <button
-          onClick={swapUnits}
-          className="p-3 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg transition-colors"
-          title={tu('swapUnits')}
-        >
-          ⇄
-        </button>
+        {/* Swap Button */}
+        <div className="flex items-center justify-center self-center py-2 md:py-0">
+          <button
+            onClick={swapUnits}
+            className="p-4 rounded-full bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-500 hover:text-blue-600 hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all duration-200 active:scale-90 group"
+            title={tu('swapUnits')}
+            aria-label={tu('swapUnits')}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-6 h-6 transform group-hover:rotate-180 transition-transform duration-500"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+            </svg>
+          </button>
+        </div>
 
-        <div>
-          <label className="tool-label">{t('unit.to')}</label>
-          <div className="flex gap-2">
-            <div className="flex-1 px-4 py-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg font-mono text-gray-900 dark:text-white">
+        {/* To Section */}
+        <div className="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-700 transition-all hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10">
+          <label className="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{t('unit.to')}</label>
+          <div className="space-y-3">
+            <div className="tool-input flex items-center justify-center text-2xl md:text-3xl font-mono h-16 bg-white dark:bg-gray-800 shadow-sm overflow-hidden text-ellipsis whitespace-nowrap">
               {result || '0'}
             </div>
             <select
               value={toUnit}
               onChange={(e) => setToUnit(e.target.value)}
-              className="tool-input w-auto"
+              className="tool-select text-center font-medium bg-white dark:bg-gray-800 shadow-sm"
             >
               {categoryUnits.map(([key, def]) => (
                 <option key={key} value={key}>{def.name}</option>

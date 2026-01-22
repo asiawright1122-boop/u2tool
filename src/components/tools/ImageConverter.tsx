@@ -109,7 +109,7 @@ export default function ImageConverter() {
               setTargetFormat(e.target.value as ImageFormat);
               setConvertedImage(null);
             }}
-            className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-3 py-1.5 text-sm text-gray-900 dark:text-white"
+            className="tool-select py-1.5 px-3 text-sm h-9 w-auto"
           >
             {formats.map((f) => (
               <option key={f.value} value={f.value}>
@@ -145,7 +145,7 @@ export default function ImageConverter() {
       {/* File Input */}
       <div
         onClick={() => fileInputRef.current?.click()}
-        className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
+        className="tool-dropzone"
       >
         <input
           ref={fileInputRef}
@@ -172,7 +172,7 @@ export default function ImageConverter() {
                 {t('original')} ({originalFormat})
               </label>
             </div>
-            <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
+            <div className="tool-card flex items-center justify-center min-h-[200px] p-4">
               <img
                 src={originalImage}
                 alt="Original"
@@ -187,7 +187,7 @@ export default function ImageConverter() {
                 {t('converted')} ({targetFormat.toUpperCase()})
               </label>
             </div>
-            <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
+            <div className="tool-card flex items-center justify-center min-h-[200px] p-4">
               {convertedImage ? (
                 <img
                   src={convertedImage}
@@ -224,7 +224,7 @@ export default function ImageConverter() {
       )}
 
       {/* Format Info */}
-      <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+      <div className="tool-card bg-gray-50 dark:bg-gray-800/50">
         <h3 className="font-medium mb-3 text-gray-900 dark:text-white">{t('formatInfo')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
           <div>

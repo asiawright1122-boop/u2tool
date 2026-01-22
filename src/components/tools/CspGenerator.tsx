@@ -87,7 +87,7 @@ export default function CspGenerator() {
         }
         return `${d.name} ${d.values.join(' ')}`;
       });
-    
+
     return parts.join('; ');
   };
 
@@ -116,16 +116,15 @@ export default function CspGenerator() {
           <h3 className="text-lg font-medium text-gray-900 dark:text-white">
             {t('directives')}
           </h3>
-          
+
           <div className="space-y-3 max-h-[500px] overflow-y-auto pr-2">
             {directives.map((directive, index) => (
               <div
                 key={directive.name}
-                className={`p-4 border rounded-lg ${
-                  directive.enabled
+                className={`p-4 border rounded-lg ${directive.enabled
                     ? 'border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-900/20'
                     : 'border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800'
-                }`}
+                  }`}
               >
                 <div className="flex items-center justify-between mb-2">
                   <label className="flex items-center gap-2 cursor-pointer">
@@ -143,7 +142,7 @@ export default function CspGenerator() {
                 <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">
                   {directive.description}
                 </p>
-                
+
                 {directive.enabled && directive.name !== 'upgrade-insecure-requests' && directive.name !== 'block-all-mixed-content' && (
                   <div className="space-y-2">
                     <div className="flex flex-wrap gap-1">
@@ -167,7 +166,7 @@ export default function CspGenerator() {
                         addValue(index, e.target.value);
                         e.target.value = '';
                       }}
-                      className="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      className="tool-select py-1 text-sm h-9"
                       defaultValue=""
                     >
                       <option value="">{t('addValue')}</option>
@@ -197,14 +196,14 @@ export default function CspGenerator() {
             <select
               value={outputFormat}
               onChange={(e) => setOutputFormat(e.target.value as 'header' | 'meta')}
-              className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="tool-select w-auto py-1 px-3 text-sm h-9"
             >
               <option value="header">{t('httpHeader')}</option>
               <option value="meta">{t('metaTag')}</option>
             </select>
           </div>
 
-          <div className="p-4 bg-gray-900 rounded-lg">
+          <div className="tool-result bg-gray-900 dark:bg-black border-gray-800">
             <pre className="text-sm font-mono text-green-400 whitespace-pre-wrap break-all">
               {getOutput()}
             </pre>

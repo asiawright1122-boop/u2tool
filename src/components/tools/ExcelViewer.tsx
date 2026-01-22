@@ -14,7 +14,7 @@ type SortDirection = 'asc' | 'desc' | null;
 
 export default function ExcelViewer() {
   const t = useTranslations('tools');
-  
+
   const [sheets, setSheets] = useState<SheetData[]>([]);
   const [selectedSheet, setSelectedSheet] = useState<string>('');
   const [fileName, setFileName] = useState<string>('');
@@ -46,7 +46,7 @@ export default function ExcelViewer() {
       try {
         const data = new Uint8Array(event.target?.result as ArrayBuffer);
         const workbook = XLSX.read(data, { type: 'array' });
-        
+
         const parsedSheets: SheetData[] = workbook.SheetNames.map(name => {
           const worksheet = workbook.Sheets[name];
           const jsonData = XLSX.utils.sheet_to_json<Record<string, unknown>>(worksheet);
@@ -80,7 +80,7 @@ export default function ExcelViewer() {
 
   const processedData = useMemo(() => {
     if (!currentSheet) return [];
-    
+
     let data = [...currentSheet.data];
 
     // Filter
@@ -96,11 +96,11 @@ export default function ExcelViewer() {
       data.sort((a, b) => {
         const aVal = a[sortColumn];
         const bVal = b[sortColumn];
-        
+
         if (aVal === bVal) return 0;
         if (aVal === null || aVal === undefined) return 1;
         if (bVal === null || bVal === undefined) return -1;
-        
+
         const comparison = String(aVal).localeCompare(String(bVal), undefined, { numeric: true });
         return sortDirection === 'asc' ? comparison : -comparison;
       });
@@ -112,7 +112,7 @@ export default function ExcelViewer() {
   return (
     <div className="space-y-6">
       {/* File Upload */}
-      <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
+      <div className="tool-dropzone">
         <input type="file" accept=".xlsx,.xls" onChange={handleFileUpload} className="hidden" id="excel-viewer-upload" />
         <label htmlFor="excel-viewer-upload" className="cursor-pointer flex flex-col items-center">
           <span className="text-4xl mb-2">👁️</span>
@@ -140,11 +140,10 @@ export default function ExcelViewer() {
             <button
               key={sheet.name}
               onClick={() => { setSelectedSheet(sheet.name); setFilterColumn(''); setFilterValue(''); }}
-              className={`px-4 py-2 rounded-t-lg text-sm font-medium transition-colors ${
-                selectedSheet === sheet.name
+              className={`px-4 py-2 rounded-t-lg text-sm font-medium transition-colors ${selectedSheet === sheet.name
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-              }`}
+                }`}
             >
               {sheet.name}
             </button>
@@ -162,7 +161,7 @@ export default function ExcelViewer() {
             <select
               value={filterColumn}
               onChange={(e) => setFilterColumn(e.target.value)}
-              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
+              className="tool-select"
             >
               <option value="">{t('excelViewer.selectColumn')}</option>
               {currentSheet.headers.map(h => <option key={h} value={h}>{h}</option>)}
@@ -177,7 +176,7 @@ export default function ExcelViewer() {
               value={filterValue}
               onChange={(e) => setFilterValue(e.target.value)}
               placeholder={t('excelViewer.enterValue')}
-              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800"
+              className="tool-input"
               disabled={!filterColumn}
             />
           </div>
