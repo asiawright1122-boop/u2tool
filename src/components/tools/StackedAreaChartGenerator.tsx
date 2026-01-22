@@ -152,18 +152,27 @@ export default function StackedAreaChartGenerator() {
   }, [categories, series, chartTitle, colorTheme, showLegend, showGrid, smooth, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor]);
 
   const exportChart = (format: 'png' | 'svg') => {
-    if (chartRef.current) {
-      const echartInstance = chartRef.current.getEchartsInstance();
-      const url = echartInstance.getDataURL({
-        type: format === 'svg' ? 'svg' : 'png',
-        pixelRatio: 2,
-        backgroundColor: chartTheme.backgroundColor,
-      });
-      const link = document.createElement('a');
-      link.download = `stacked-area-chart-${Date.now()}.${format}`;
-      link.href = url;
-      link.click();
+    if (!chartRef.current) {
+      console.warn('Chart ref not available');
+      return;
     }
+    
+    const echartInstance = chartRef.current.getEchartsInstance();
+    if (!echartInstance) {
+      console.warn('ECharts instance not ready');
+      return;
+    }
+    
+    const url = echartInstance.getDataURL({
+      type: format === 'svg' ? 'svg' : 'png',
+      pixelRatio: 2,
+      backgroundColor: chartTheme.backgroundColor,
+    });
+
+    const link = document.createElement('a');
+    link.download = `stacked-area-chart-${Date.now()}.${format}`;
+    link.href = url;
+    link.click();
   };
 
   const loadSampleData = () => {

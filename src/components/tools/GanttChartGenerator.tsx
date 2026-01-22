@@ -280,18 +280,26 @@ export default function GanttChartGenerator() {
     };
 
     const exportChart = (format: 'png' | 'svg') => {
-        if (chartRef.current) {
-            const echartInstance = chartRef.current.getEchartsInstance();
-            const url = echartInstance.getDataURL({
-                type: format,
-                pixelRatio: 2,
-                backgroundColor: chartTheme.backgroundColor,
-            });
-            const link = document.createElement('a');
-            link.download = `gantt-chart-${Date.now()}.${format}`;
-            link.href = url;
-            link.click();
+        if (!chartRef.current) {
+            console.warn('Chart ref not available');
+            return;
         }
+        
+        const echartInstance = chartRef.current.getEchartsInstance();
+        if (!echartInstance) {
+            console.warn('ECharts instance not ready');
+            return;
+        }
+        
+        const url = echartInstance.getDataURL({
+            type: format,
+            pixelRatio: 2,
+            backgroundColor: chartTheme.backgroundColor,
+        });
+        const link = document.createElement('a');
+        link.download = `gantt-chart-${Date.now()}.${format}`;
+        link.href = url;
+        link.click();
     };
 
     const clearData = () => {
