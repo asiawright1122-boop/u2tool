@@ -334,6 +334,71 @@ AreaChartGenerator, BoxplotChartGenerator, BubbleChartGenerator, CandlestickChar
 - 批量修复时使用脚本可以提高效率
 - 未使用的导入应该及时清理
 
+### 2026-01-22 (第四次修复): ECharts exportChart 函数防御性编程
+
+**问题**：修复 React Hooks 依赖项后，图表工具仍然出现运行时错误
+**错误**：`Cannot read properties of undefined (reading 'setOption')`
+**错误位置**：ToolWrapper.tsx:14（实际发生在图表组件的 exportChart 函数中）
+
+**根本原因**：
+1. exportChart 函数没有检查 ECharts 实例是否存在
+2. `chartRef.current.getEchartsInstance()` 可能返回 `undefined`
+3. 缺少防御性编程措施，直接调用 `echartInstance.getDataURL()` 导致崩溃
+
+**解决方案**：
+1. 在所有 40 个图表组件的 exportChart 函数中添加安全检查
+2. 检查 `chartRef.current` 是否存在
+3. 检查 `echartInstance` 是否为 `undefined`
+4. 添加 `console.warn` 日志用于调试
+5. 提供友好的错误处理而非崩溃
+
+**修复模式**：
+```typescript
+// 修复前
+const exportChart = (format: 'png' | 'svg') => {
+  if (chartRef.current) {
+    const echartInstance = chartRef.current.getEchartsInstance();
+    const url = echartInstance.getDataURL({  // ❌ 可能崩溃
+      // ...
+    });
+  }
+};
+
+// 修复后
+const exportChart = (format: 'png' | 'svg') => {
+  if (!chartRef.current) {
+    console.warn('Chart ref not available');
+    return;
+  }
+  
+  const echartInstance = chartRef.current.getEchartsInstance();
+  if (!echartInstance) {
+    console.warn('ECharts instance not ready');
+    return;
+  }
+  
+  const url = echartInstance.getDataURL({  // ✅ 安全
+    // ...
+  });
+};
+```
+
+**修复的组件 (40个)**：
+BarChartGenerator, LineChartGenerator, AreaChartGenerator, BoxplotChartGenerator, BubbleChartGenerator, CandlestickChartGenerator, DoughnutChartGenerator, FunnelChartGenerator, GanttChartGenerator, GaugeChartGenerator, GraphChartGenerator, GroupedBarChartGenerator, GroupedLineChartGenerator, HalfDoughnutChartGenerator, HeatmapChartGenerator, LiquidFillChartGenerator, MixedChartGenerator, MultiRingChartGenerator, NestedPieChartGenerator, NightingaleRoseChartGenerator, ParallelChartGenerator, PercentageStackedBarChartGenerator, PictorialBarChartGenerator, PieChartGenerator, PolarBarChartGenerator, PositiveNegativeBarChartGenerator, RadarChartGenerator, RingProgressChartGenerator, SankeyChartGenerator, ScatterChartGenerator, StackedAreaChartGenerator, StackedBarChartGenerator, StepLineChartGenerator, SunburstChartGenerator, ThemeRiverGenerator, TimelineChartGenerator, TreeChartGenerator, TreemapChartGenerator, WaterfallChartGenerator, WordCloudGenerator, CalendarHeatmapGenerator
+
+**影响**：
+- 防止所有图表工具的导出功能崩溃
+- 提供友好的错误提示
+- 不影响正常的图表渲染和导出功能
+- 提升用户体验和系统稳定性
+
+**经验教训**：
+- **永远不要假设外部依赖一定存在** - 第三方库的方法可能返回 undefined
+- **防御性编程是必须的，不是可选的** - 访问可能为 undefined 的对象前必须检查
+- **早期返回模式** - 使用 early return 而非嵌套 if，代码更清晰
+- **有意义的日志** - 使用 console.warn 而非 console.error（不是致命错误）
+- **批量修复工具** - 创建脚本批量修复相似问题，提高效率
+
 ---
 
 ## 📝 八、常用命令
@@ -368,7 +433,8 @@ node check-translations.js
 
 ## 🔄 九、更新日志
 
-- **2026-01-22**: 批量修复所有 48 个 ECharts 图表工具的 React Hooks 依赖项问题
+- **2026-01-22 (第四次修复)**: 添加 ECharts exportChart 函数的防御性检查，修复运行时错误
+- **2026-01-22 (第三次修复)**: 批量修复所有 48 个 ECharts 图表工具的 React Hooks 依赖项问题
 - **2026-01-16**: 全面优化 - 清理临时文件、添加环境检查日志、补全所有工具 FAQ（394 个工具 100% 覆盖）
 - **2025-01-07**: 创建综合开发规则文档
 - **2025-01-06**: 修复 Google Search Console 报告的问题
