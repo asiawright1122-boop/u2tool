@@ -9,7 +9,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { routing } from '@/i18n/routing';
 import { SEO_CONFIG, getVerificationTags } from '@/lib/seo';
-import { loadSlimBaseMessages, type SupportedLocale } from '@/lib/translations-slim';
+import { loadBaseMessages, type SupportedLocale } from '@/lib/translations';
 
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
