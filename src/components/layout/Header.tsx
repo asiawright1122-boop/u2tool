@@ -7,6 +7,7 @@ import { useState, useRef, useEffect } from 'react';
 import { locales, localeNames, type Locale } from '@/i18n/routing';
 import { tools } from '@/config/tools';
 import ThemeToggle from '@/components/ThemeToggle';
+import { useDebounce } from '@/hooks/useDebounce';
 
 export default function Header() {
   const t = useTranslations();
@@ -27,9 +28,11 @@ export default function Header() {
   };
 
   // 搜索功能
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+
   useEffect(() => {
-    if (searchQuery.trim().length > 0) {
-      const query = searchQuery.toLowerCase();
+    if (debouncedSearchQuery.trim().length > 0) {
+      const query = debouncedSearchQuery.toLowerCase();
       const results = tools.filter(tool => {
         const toolName = t(`tools.${tool.slug}.name`).toLowerCase();
         const toolDesc = t(`tools.${tool.slug}.description`).toLowerCase();
@@ -45,7 +48,7 @@ export default function Header() {
       setSearchResults([]);
       setShowSearchResults(false);
     }
-  }, [searchQuery, t]);
+  }, [debouncedSearchQuery, t]);
 
   // 点击外部关闭搜索结果
   useEffect(() => {
@@ -75,7 +78,7 @@ export default function Header() {
   };
 
   return (
-    <header 
+    <header
       className="fixed top-0 right-0 left-0 md:left-[64px] lg:left-[220px] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md z-40 h-16 border-b border-gray-200 dark:border-gray-800"
     >
       <div className="h-full px-4 flex items-center justify-between">
@@ -89,22 +92,29 @@ export default function Header() {
               onKeyDown={handleSearchKeyDown}
               onFocus={() => searchQuery && setShowSearchResults(true)}
               placeholder={t('nav.searchPlaceholder')}
+              aria-label={t('nav.searchPlaceholder')}
               className="w-full px-4 py-2 pl-10 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
             />
-            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             {searchQuery && (
               <button
                 onClick={() => { setSearchQuery(''); setShowSearchResults(false); }}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+                aria-label={t('common.clear') || 'Clear search'}
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             )}
           </div>
+
+          {/* ... (search results results) ... */}
+          {/* 搜索结果下拉 - preserved implicitly by not changing lines outside the chunk, wait, I need to match the target content carefully or use broader context */}
+          {/* I will break this into chunks to be safe */}
+
 
           {/* 搜索结果下拉 */}
           {showSearchResults && (
@@ -149,12 +159,15 @@ export default function Header() {
 
           {/* 语言切换 */}
           <div className="relative group">
-            <button className="flex items-center gap-1 px-3 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300 transition-colors">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button
+              className="flex items-center gap-1 px-3 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300 transition-colors"
+              aria-label={`Current language: ${localeNames[currentLocale]}`}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
               <span className="hidden sm:inline">{localeNames[currentLocale]}</span>
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -163,9 +176,8 @@ export default function Header() {
                 <button
                   key={locale}
                   onClick={() => handleLocaleChange(locale)}
-                  className={`block w-full text-left px-4 py-2.5 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg ${
-                    locale === currentLocale ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-700/50' : 'text-gray-700 dark:text-gray-300'
-                  }`}
+                  className={`block w-full text-left px-4 py-2.5 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg ${locale === currentLocale ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-700/50' : 'text-gray-700 dark:text-gray-300'
+                    }`}
                 >
                   {localeNames[locale]}
                 </button>

@@ -1,10 +1,12 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactECharts from 'echarts-for-react';
-import type { EChartsOption } from 'echarts';
+import ReactEChartsCore from 'echarts-for-react/lib/core';
+import { echarts, type EChartsOption } from '@/lib/echartsCore';
+// EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
+import { useDebounce } from '@/hooks/useDebounce';
 
 // 颜色主题预设
 const colorThemes = {
@@ -94,7 +96,7 @@ export default function GraphChartGenerator() {
     { source: '5', target: '6' },
   ]);
 
-  const chartRef = useRef<ReactECharts>(null);
+  const chartRef = useRef<ReactEChartsCore>(null);
   const chartTheme = useChartTheme();
 
   // 生成 ECharts 配置
@@ -453,11 +455,13 @@ export default function GraphChartGenerator() {
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
-            <ReactECharts
+            <ReactEChartsCore
               ref={chartRef}
+              echarts={echarts}
               option={getChartOption()}
               style={{ height: '400px', width: '100%' }}
               notMerge={true}
+              lazyUpdate={true}
             />
           </div>
         </div>

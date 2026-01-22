@@ -2,9 +2,11 @@
 
 import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactECharts from 'echarts-for-react';
-import type { EChartsOption } from 'echarts';
+import ReactEChartsCore from 'echarts-for-react/lib/core';
+import { echarts, type EChartsOption } from '@/lib/echartsCore';
+// EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
+import { useDebounce } from '@/hooks/useDebounce';
 
 // 颜色主题预设
 const colorThemes = {
@@ -76,7 +78,7 @@ export default function SunburstChartGenerator() {
 
   const [parseError, setParseError] = useState<string>('');
 
-  const chartRef = useRef<ReactECharts>(null);
+  const chartRef = useRef<ReactEChartsCore>(null);
   const chartTheme = useChartTheme();
 
   // 解析 JSON 数据 - 使用 useMemo 避免在渲染期间调用 setState
@@ -348,11 +350,13 @@ export default function SunburstChartGenerator() {
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</label>
           <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
-            <ReactECharts
+            <ReactEChartsCore
               ref={chartRef}
+              echarts={echarts}
               option={getChartOption()}
               style={{ height: '400px', width: '100%' }}
               notMerge={true}
+              lazyUpdate={true}
             />
           </div>
         </div>

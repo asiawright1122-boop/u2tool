@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+import ToolIcon from './ToolIcon';
 
 interface Tool {
   slug: string;
@@ -16,24 +17,24 @@ interface PopularToolsCarouselProps {
   rotateInterval?: number;
 }
 
-export default function PopularToolsCarousel({ 
-  tools, 
+export default function PopularToolsCarousel({
+  tools,
   displayCount = 12,
-  rotateInterval = 8000 
+  rotateInterval = 8000
 }: PopularToolsCarouselProps) {
   const t = useTranslations();
   const [currentPage, setCurrentPage] = useState(0);
-  
+
   // Calculate pages
   const totalPages = Math.ceil(tools.length / displayCount);
-  const pages = Array.from({ length: totalPages }, (_, i) => 
+  const pages = Array.from({ length: totalPages }, (_, i) =>
     tools.slice(i * displayCount, (i + 1) * displayCount)
   );
 
   // Auto rotation
   useEffect(() => {
     if (totalPages <= 1) return;
-    
+
     const timer = setInterval(() => {
       setCurrentPage(prev => (prev + 1) % totalPages);
     }, rotateInterval);
@@ -53,7 +54,7 @@ export default function PopularToolsCarousel({
     <div className="relative">
       {/* Sliding Window */}
       <div className="overflow-hidden">
-        <div 
+        <div
           className="flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentPage * 100}%)` }}
         >
@@ -67,7 +68,11 @@ export default function PopularToolsCarousel({
                     className="group p-6 bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-black/20 transition-all"
                   >
                     <div className="flex items-start gap-4">
-                      <span className="text-4xl group-hover:scale-110 transition-transform">{tool.icon}</span>
+                      <ToolIcon
+                        slug={tool.slug}
+                        emoji={tool.icon}
+                        className="w-10 h-10 text-gray-500 group-hover:text-blue-600 dark:text-gray-400 dark:group-hover:text-blue-400 group-hover:scale-110 transition-all duration-300"
+                      />
                       <div className="flex-1 min-w-0">
                         <h3 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                           {t(`tools.${tool.slug}.name`)}
@@ -106,11 +111,10 @@ export default function PopularToolsCarousel({
             <button
               key={index}
               onClick={() => setCurrentPage(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                currentPage === index 
-                  ? 'w-6 bg-blue-500' 
+              className={`w-2 h-2 rounded-full transition-all ${currentPage === index
+                  ? 'w-6 bg-blue-500'
                   : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
-              }`}
+                }`}
               aria-label={`Page ${index + 1}`}
             />
           ))}

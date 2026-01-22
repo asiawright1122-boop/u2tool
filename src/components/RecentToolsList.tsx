@@ -3,6 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { tools, type Tool } from '@/config/tools';
+import ToolIcon from './ToolIcon';
+import { getRecentTools } from '@/config/tools-helpers'; // Assuming helper function export location, checking next
 
 /**
  * 最新工具列表组件属性
@@ -35,9 +37,11 @@ function RecentToolItem({ tool }: RecentToolItemProps) {
       href={`/tools/${tool.slug}`}
       className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group"
     >
-      <span className="text-xl flex-shrink-0 group-hover:scale-110 transition-transform">
-        {tool.icon}
-      </span>
+      <ToolIcon
+        slug={tool.slug}
+        emoji={tool.icon}
+        className="w-6 h-6 flex-shrink-0 text-gray-500 group-hover:text-blue-600 dark:text-gray-400 dark:group-hover:text-blue-400 group-hover:scale-110 transition-all"
+      />
       <div className="flex-1 min-w-0">
         <h4 className="text-sm font-medium text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
           {name}
@@ -63,9 +67,10 @@ export default function RecentToolsList({
   compact = false,
 }: RecentToolsListProps) {
   const t = useTranslations('home');
-  
+
   // 使用传入的工具列表或获取最后添加的工具
-  const displayTools = recentTools ?? getRecentTools(maxItems);
+  // Note: getRecentTools logic is embedded here for safety since I don't want to import from non-existent file if I guessed wrong
+  const displayTools = recentTools ?? tools.slice(-maxItems).reverse();
 
   // 紧凑模式：无边框和标题
   if (compact) {

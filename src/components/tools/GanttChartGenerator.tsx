@@ -1,10 +1,12 @@
 'use client';
 
-import { useState, useRef, useCallback, useId, useEffect } from 'react';
+import { useState, useRef, useCallback, useId, useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactECharts from 'echarts-for-react';
-import type { EChartsOption } from 'echarts';
+import ReactEChartsCore from 'echarts-for-react/lib/core';
+import { echarts, type EChartsOption } from '@/lib/echartsCore';
+// EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
+import { useDebounce } from '@/hooks/useDebounce';
 
 interface GanttTask {
     id: string;
@@ -47,7 +49,7 @@ export default function GanttChartGenerator() {
     const [chartTitle, setChartTitle] = useState('');
     const [colorTheme, setColorTheme] = useState<keyof typeof colorThemes>('default');
 
-    const chartRef = useRef<ReactECharts>(null);
+    const chartRef = useRef<ReactEChartsCore>(null);
     const chartTheme = useChartTheme();
 
     const generateId = useCallback(() => {
@@ -402,12 +404,14 @@ export default function GanttChartGenerator() {
                 <div>
                     <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
                     <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '500px' }}>
-                        <ReactECharts
-                            ref={chartRef}
+                        <ReactEChartsCore
+              ref={chartRef}
+              echarts={echarts}
                             option={getChartOption()}
                             style={{ height: '500px', width: '100%' }}
                             notMerge={true}
-                        />
+              lazyUpdate={true}
+            />
                     </div>
                 </div>
             </div>

@@ -1,10 +1,12 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactECharts from 'echarts-for-react';
-import type { EChartsOption } from 'echarts';
+import ReactEChartsCore from 'echarts-for-react/lib/core';
+import { echarts, type EChartsOption } from '@/lib/echartsCore';
+// EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
+import { useDebounce } from '@/hooks/useDebounce';
 
 interface TimelineEvent {
     id: number;
@@ -44,7 +46,7 @@ export default function TimelineChartGenerator() {
     const [colorTheme, setColorTheme] = useState<keyof typeof colorThemes>('default');
     const [direction, setDirection] = useState<'vertical' | 'horizontal'>('vertical');
 
-    const chartRef = useRef<ReactECharts>(null);
+    const chartRef = useRef<ReactEChartsCore>(null);
     const chartTheme = useChartTheme();
 
     const getChartOption = useCallback((): EChartsOption => {
@@ -256,12 +258,14 @@ export default function TimelineChartGenerator() {
                 <div>
                     <h3 className="text-sm font-medium mb-2">{t('chartPreview')}</h3>
                     <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '600px' }}>
-                        <ReactECharts
-                            ref={chartRef}
+                        <ReactEChartsCore
+              ref={chartRef}
+              echarts={echarts}
                             option={getChartOption()}
                             style={{ height: '600px', width: '100%' }}
                             notMerge={true}
-                        />
+              lazyUpdate={true}
+            />
                     </div>
                 </div>
             </div>

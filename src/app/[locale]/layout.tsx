@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
+
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from 'next-themes';
@@ -7,13 +9,15 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { routing } from '@/i18n/routing';
 import { SEO_CONFIG, getVerificationTags } from '@/lib/seo';
-import { loadBaseMessages, type SupportedLocale } from '@/lib/translations';
+import { loadSlimBaseMessages, type SupportedLocale } from '@/lib/translations-slim';
 
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GlobalSidebar from '@/components/layout/GlobalSidebar';
 import WebVitalsReporter from '@/components/WebVitalsReporter';
 import { criticalCSS } from '@/lib/critical-css';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';
 
@@ -124,13 +128,13 @@ export const metadata: Metadata = {
     'applicable-device': 'pc,mobile',
     // 百度 MIP 声明（移动网页加速）
     'baidu-site-verification': process.env.BAIDU_SITE_VERIFICATION || '',
-    
+
     // === 浏览器渲染优化 ===
     // 360 浏览器渲染模式（优先使用 webkit 内核）
     'renderer': 'webkit',
     // IE/Edge 兼容模式
     'X-UA-Compatible': 'IE=edge,chrome=1',
-    
+
     // === 转码禁止 ===
     // 禁止百度转码
     'Cache-Control': 'no-transform',
@@ -138,7 +142,7 @@ export const metadata: Metadata = {
     'no-siteapp': 'true',
     // 禁止搜狗转码
     'sogou_site_verification': process.env.SOGOU_SITE_VERIFICATION || '',
-    
+
     // === Apple 移动端优化 ===
     // 启用全屏模式
     'apple-mobile-web-app-capable': 'yes',
@@ -146,11 +150,11 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
     // 应用标题
     'apple-mobile-web-app-title': SEO_CONFIG.siteName,
-    
+
     // === Android 移动端优化 ===
     // 启用全屏模式
     'mobile-web-app-capable': 'yes',
-    
+
     // === 微软/Windows 优化 ===
     // Windows 磁贴颜色
     'msapplication-TileColor': SEO_CONFIG.themeColor,
@@ -158,7 +162,7 @@ export const metadata: Metadata = {
     'msapplication-TileImage': '/icons/icon-144x144.png',
     // Windows 配置文件
     'msapplication-config': '/browserconfig.xml',
-    
+
     // === 搜索引擎特定优化 ===
     // Google 新闻标记
     'news_keywords': 'developer tools, online tools, web tools, free tools',
@@ -169,7 +173,7 @@ export const metadata: Metadata = {
     // 地理位置（可选，用于本地化搜索）
     'geo.region': 'US',
     'geo.placename': 'United States',
-    
+
     // === 社交媒体优化 ===
     // Pinterest 验证
     'p:domain_verify': process.env.PINTEREST_VERIFICATION || '',
@@ -202,30 +206,28 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  
+
   // 验证 locale 是否在支持的语言列表中
   if (!routing.locales.includes(locale as typeof routing.locales[number])) {
     notFound();
   }
 
-  // 在布局层加载基础翻译
-  // 这样可以避免翻译文件被打包到 Edge Function 中
-  const messages = await loadBaseMessages(locale as SupportedLocale);
+  // 在布局层加载精简版基础翻译（不含 tools 对象）
+  // 优化：从 ~1.4MB 减少到 ~120KB（减少约 90%）
+  // 工具特定翻译在 tools/[slug]/page.tsx 中按需加载
+  const messages = await loadSlimBaseMessages(locale as SupportedLocale);
 
   return (
     // 动态设置 lang 属性，确保搜索引擎和辅助技术正确识别页面语言
     <html lang={locale} suppressHydrationWarning>
       <head>
         {/* === 性能优化：DNS 预取和预连接 === */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//hm.baidu.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+
+
         {/* Next.js 自动处理 CSS 加载，无需手动预加载 */}
-        
+
         {/* === 移动端优化：Apple 特定标签 === */}
         {/* Apple 启动画面（不同设备尺寸） */}
         <link rel="apple-touch-startup-image" href="/icons/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" />
@@ -235,35 +237,37 @@ export default async function LocaleLayout({
         <link rel="apple-touch-startup-image" href="/icons/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" />
         <link rel="apple-touch-startup-image" href="/icons/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" />
         <link rel="apple-touch-startup-image" href="/icons/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" />
-        
+
         {/* === 搜索引擎优化：百度移动适配 === */}
         {/* 百度移动适配协议 - 告知百度 PC 和移动页面的对应关系 */}
         <meta name="mobile-agent" content={`format=html5; url=${BASE_URL}/${locale}`} />
-        
+
         {/* === 搜索引擎优化：神马搜索（UC 浏览器） === */}
         <meta name="shenma-site-verification" content={process.env.SHENMA_SITE_VERIFICATION || ''} />
-        
+
         {/* === 搜索引擎优化：头条搜索 === */}
         <meta name="bytedance-verification-code" content={process.env.BYTEDANCE_VERIFICATION || ''} />
-        
+
         {/* === 搜索引擎优化：Yandex Webmaster === */}
         <meta name="yandex-verification" content={SEO_CONFIG.verification.yandex || ''} />
-        
+
         {/* === 搜索引擎优化：360站长平台 === */}
         <meta name="360-site-verification" content={SEO_CONFIG.verification.so360 || ''} />
-        
+
         {/* === 安全优化 === */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        
+
         {/* === 关键 CSS 内联 - 减少渲染阻塞 === */}
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
-        
+
         {/* === 语言和地区优化 === */}
         <meta httpEquiv="Content-Language" content={locale} />
       </head>
-      <body className="bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen font-sans">
+      <body className={`${inter.variable} bg-white dark:bg-black text-gray-900 dark:text-white min-h-screen font-sans`}>
+
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

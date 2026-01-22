@@ -1,10 +1,12 @@
 'use client';
 
-import { useState, useRef, useCallback, useId, useEffect } from 'react';
+import { useState, useRef, useCallback, useId, useEffect, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactECharts from 'echarts-for-react';
-import type { EChartsOption } from 'echarts';
+import ReactEChartsCore from 'echarts-for-react/lib/core';
+import { echarts, type EChartsOption } from '@/lib/echartsCore';
+// EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
+import { useDebounce } from '@/hooks/useDebounce';
 
 interface RingData {
   id: string;
@@ -48,7 +50,7 @@ export default function MultiRingChartGenerator() {
     }
   }, [t, isInitialized]);
 
-  const chartRef = useRef<ReactECharts>(null);
+  const chartRef = useRef<ReactEChartsCore>(null);
   const chartTheme = useChartTheme();
 
   const generateId = useCallback(() => {
@@ -225,7 +227,11 @@ export default function MultiRingChartGenerator() {
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style={{ minHeight: '400px' }}>
-            <ReactECharts ref={chartRef} option={getChartOption()} style={{ height: '400px', width: '100%' }} notMerge={true} />
+            <ReactEChartsCore
+              ref={chartRef}
+              echarts={echarts} option={getChartOption()} style={{ height: '400px', width: '100%' }} notMerge={true}
+              lazyUpdate={true}
+            />
           </div>
         </div>
       </div>

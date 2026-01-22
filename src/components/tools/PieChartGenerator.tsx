@@ -2,8 +2,8 @@
 
 import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactECharts from 'echarts-for-react';
-import type { EChartsOption } from 'echarts';
+import ReactEChartsCore from 'echarts-for-react/lib/core';
+import { echarts, type EChartsOption } from '@/lib/echartsCore';
 import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 饼图数据行类型
@@ -26,16 +26,16 @@ const defaultDataValues = [
 function parseCSV(csvText: string): { name: string; value: number }[] {
   const lines = csvText.trim().split('\n');
   const result: { name: string; value: number }[] = [];
-  
+
   for (const line of lines) {
     const trimmedLine = line.trim();
     if (!trimmedLine) continue;
-    
+
     // 支持逗号或制表符分隔
-    const parts = trimmedLine.includes('\t') 
-      ? trimmedLine.split('\t') 
+    const parts = trimmedLine.includes('\t')
+      ? trimmedLine.split('\t')
       : trimmedLine.split(',');
-    
+
     if (parts.length >= 2) {
       const name = parts[0].trim();
       const value = parseFloat(parts[1].trim());
@@ -44,7 +44,7 @@ function parseCSV(csvText: string): { name: string; value: number }[] {
       }
     }
   }
-  
+
   return result;
 }
 
@@ -59,13 +59,13 @@ const colorThemes = {
 export default function PieChartGenerator() {
   const t = useTranslations('tools.pie-chart-generator');
   const tg = useTranslations('tools');
-  
+
   const baseId = useId();
   const [idCounter, setIdCounter] = useState(100);
   const [isInitialized, setIsInitialized] = useState(false);
-  
+
   // 图表数据 - 使用静态初始值
-  const [data, setData] = useState<PieDataRow[]>(() => 
+  const [data, setData] = useState<PieDataRow[]>(() =>
     defaultDataValues.map(item => ({ id: item.id, name: item.nameKey, value: item.value }))
   );
 
@@ -82,16 +82,16 @@ export default function PieChartGenerator() {
   useEffect(() => {
     if (!isInitialized) {
       setChartTitle(t('defaultTitle'));
-      setData(defaultDataValues.map(item => ({ 
-        id: item.id, 
-        name: t(`sampleData.${item.nameKey}`), 
-        value: item.value 
+      setData(defaultDataValues.map(item => ({
+        id: item.id,
+        name: t(`sampleData.${item.nameKey}`),
+        value: item.value
       })));
       setIsInitialized(true);
     }
   }, [t, isInitialized]);
 
-  const chartRef = useRef<ReactECharts>(null);
+  const chartRef = useRef<ReactEChartsCore>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // 生成唯一 ID
@@ -116,7 +116,7 @@ export default function PieChartGenerator() {
 
   // 更新数据行
   const updateRow = (id: string, field: 'name' | 'value', value: string | number) => {
-    setData(data.map(row => 
+    setData(data.map(row =>
       row.id === id ? { ...row, [field]: field === 'value' ? Number(value) || 0 : value } : row
     ));
   };
@@ -161,8 +161,8 @@ export default function PieChartGenerator() {
           label: {
             show: showLabels,
             color: chartTheme.labelColor,
-            formatter: showPercentage 
-              ? '{b}: {d}%' 
+            formatter: showPercentage
+              ? '{b}: {d}%'
               : '{b}: {c}',
           },
           labelLine: {
@@ -193,7 +193,7 @@ export default function PieChartGenerator() {
         pixelRatio: 2,
         backgroundColor: chartTheme.backgroundColor,
       });
-      
+
       const link = document.createElement('a');
       link.download = `pie-chart-${Date.now()}.${format}`;
       link.href = url;
@@ -233,7 +233,7 @@ export default function PieChartGenerator() {
     reader.onload = (e) => {
       const csvText = e.target?.result as string;
       const parsedData = parseCSV(csvText);
-      
+
       if (parsedData.length > 0) {
         const newData = parsedData.map((item, index) => ({
           id: `${baseId}-csv-${idCounter + index}`,
@@ -248,7 +248,7 @@ export default function PieChartGenerator() {
       }
     };
     reader.readAsText(file);
-    
+
     // 重置文件输入，允许重复选择同一文件
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
@@ -438,11 +438,13 @@ export default function PieChartGenerator() {
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
-            <ReactECharts
+            <ReactEChartsCore
               ref={chartRef}
+              echarts={echarts}
               option={getChartOption()}
               style={{ height: '400px', width: '100%' }}
               notMerge={true}
+              lazyUpdate={true}
             />
           </div>
         </div>

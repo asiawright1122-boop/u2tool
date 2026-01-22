@@ -2,8 +2,8 @@
 
 import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactECharts from 'echarts-for-react';
-import type { EChartsOption } from 'echarts';
+import ReactEChartsCore from 'echarts-for-react/lib/core';
+import { echarts, type EChartsOption } from '@/lib/echartsCore';
 import { useChartTheme } from '@/hooks/useChartTheme';
 
 // 数据系列类型
@@ -35,27 +35,27 @@ const defaultSeriesData = [
 function parseMultiSeriesCSV(csvText: string): { categories: string[]; seriesData: { name: string; data: number[] }[] } | null {
   const lines = csvText.trim().split('\n');
   if (lines.length < 2) return null;
-  
+
   // 解析表头获取系列名称
   const headerLine = lines[0].trim();
-  const headers = headerLine.includes('\t') 
-    ? headerLine.split('\t') 
+  const headers = headerLine.includes('\t')
+    ? headerLine.split('\t')
     : headerLine.split(',');
-  
+
   if (headers.length < 2) return null;
-  
+
   const seriesNames = headers.slice(1).map(h => h.trim());
   const categories: string[] = [];
   const seriesData: number[][] = seriesNames.map(() => []);
-  
+
   // 解析数据行
   for (let i = 1; i < lines.length; i++) {
     const line = lines[i].trim();
     if (!line) continue;
-    
+
     const parts = line.includes('\t') ? line.split('\t') : line.split(',');
     if (parts.length < 2) continue;
-    
+
     categories.push(parts[0].trim());
     for (let j = 1; j < parts.length && j <= seriesNames.length; j++) {
       const value = parseFloat(parts[j].trim());
@@ -66,9 +66,9 @@ function parseMultiSeriesCSV(csvText: string): { categories: string[]; seriesDat
       seriesData[j - 1].push(0);
     }
   }
-  
+
   if (categories.length === 0) return null;
-  
+
   return {
     categories,
     seriesData: seriesNames.map((name, index) => ({ name, data: seriesData[index] }))
@@ -78,18 +78,18 @@ function parseMultiSeriesCSV(csvText: string): { categories: string[]; seriesDat
 export default function LineChartGenerator() {
   const t = useTranslations('tools.line-chart-generator');
   const tg = useTranslations('tools');
-  
+
   const baseId = useId();
   const [idCounter, setIdCounter] = useState(100);
   const [isInitialized, setIsInitialized] = useState(false);
-  
+
   // X轴类别 - 使用静态初始值
-  const [categories, setCategories] = useState<string[]>(() => 
+  const [categories, setCategories] = useState<string[]>(() =>
     defaultCategories.map(key => key)
   );
-  
+
   // 数据系列 - 使用静态初始值
-  const [series, setSeries] = useState<DataSeries[]>(() => 
+  const [series, setSeries] = useState<DataSeries[]>(() =>
     defaultSeriesData.map(item => ({ id: item.id, name: item.nameKey, data: item.data }))
   );
 
@@ -107,16 +107,16 @@ export default function LineChartGenerator() {
     if (!isInitialized) {
       setChartTitle(t('defaultTitle'));
       setCategories(defaultCategories.map(key => t(`sampleData.${key}`)));
-      setSeries(defaultSeriesData.map(item => ({ 
-        id: item.id, 
-        name: t(`sampleData.${item.nameKey}`), 
-        data: item.data 
+      setSeries(defaultSeriesData.map(item => ({
+        id: item.id,
+        name: t(`sampleData.${item.nameKey}`),
+        data: item.data
       })));
       setIsInitialized(true);
     }
   }, [t, isInitialized]);
 
-  const chartRef = useRef<ReactECharts>(null);
+  const chartRef = useRef<ReactEChartsCore>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const chartTheme = useChartTheme();
 
@@ -259,7 +259,7 @@ export default function LineChartGenerator() {
         pixelRatio: 2,
         backgroundColor: chartTheme.backgroundColor,
       });
-      
+
       const link = document.createElement('a');
       link.download = `line-chart-${Date.now()}.${format}`;
       link.href = url;
@@ -301,7 +301,7 @@ export default function LineChartGenerator() {
     reader.onload = (e) => {
       const csvText = e.target?.result as string;
       const parsed = parseMultiSeriesCSV(csvText);
-      
+
       if (parsed && parsed.categories.length > 0 && parsed.seriesData.length > 0) {
         setCategories(parsed.categories);
         const newSeries = parsed.seriesData.map((s, index) => ({
@@ -317,7 +317,7 @@ export default function LineChartGenerator() {
       }
     };
     reader.readAsText(file);
-    
+
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -521,11 +521,13 @@ export default function LineChartGenerator() {
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
-            <ReactECharts
+            <ReactEChartsCore
               ref={chartRef}
+              echarts={echarts}
               option={getChartOption()}
               style={{ height: '400px', width: '100%' }}
               notMerge={true}
+              lazyUpdate={true}
             />
           </div>
         </div>

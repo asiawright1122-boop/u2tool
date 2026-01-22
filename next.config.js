@@ -23,10 +23,10 @@ const nextConfig = {
   turbopack: {
     root: __dirname,
   },
-  
+
   // 性能优化：启用压缩
   compress: true,
-  
+
   // 性能优化：优化图片
   images: {
     // 启用图片优化
@@ -38,16 +38,16 @@ const nextConfig = {
     // 最小化缓存时间（秒）
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 天
   },
-  
+
   // 性能优化：启用严格模式
   reactStrictMode: true,
-  
+
   // 性能优化：优化打包
   experimental: {
     // 优化包导入（移除 next-intl，因为不再使用插件）
     optimizePackageImports: ['lucide-react'],
   },
-  
+
   // 性能优化：HTTP 头部缓存策略
   async headers() {
     return [
@@ -110,12 +110,16 @@ const nextConfig = {
             value: 'on',
           },
           {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
+            value: 'strict-origin-when-cross-origin',
           },
           {
             key: 'X-Frame-Options',
@@ -126,6 +130,14 @@ const nextConfig = {
             value: '1; mode=block',
           },
           {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.google-analytics.com https://ssl.google-analytics.com https://hm.baidu.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://www.google-analytics.com https://hm.baidu.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://hm.baidu.com; frame-ancestors 'none';",
+          },
+          {
             // 允许 Service Worker 作用域
             key: 'Service-Worker-Allowed',
             value: '/',
@@ -134,10 +146,10 @@ const nextConfig = {
       },
     ];
   },
-  
+
   // 注意：根路径重定向由 middleware 处理，支持基于 IP 的语言检测
   // 不要在这里添加 '/' -> '/en' 的重定向，否则会覆盖 middleware 的语言检测逻辑
-  
+
   // URL 重写规则（如需要可在此添加）
   // 注意：IndexNow key 文件直接放在 public 目录下，无需重写
 };
