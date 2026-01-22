@@ -9,228 +9,210 @@
 ### 错误信息
 
 ```
-Cannot read properties of undefined (reading 'setOption')
-at ToolWrapper.tsx:14
+Uncaught (in promise) Error: Renderer 'undefined' is not imported. Please import it first.
+at new ZRender (zrender.js:61:23)
 ```
 
-### 错误发生位置
+和
 
-虽然错误堆栈显示在 ToolWrapper.tsx:14，但实际错误发生在图表组件的 `exportChart` 函数中：
+```
+TypeError: Cannot read properties of undefined (reading 'setOption')
+at EChartsReactCore.updateEChartsOption (core.tsx:223:20)
+```
+
+### 真正的根本原因
+
+**ECharts 5.x 需要显式导入和注册渲染器**
+
+ECharts 5.x 采用了按需导入的架构，不再自动包含所有组件。必须：
+
+1. **导入渲染器**：`CanvasRenderer` 或 `SVGRenderer`
+2. **导入图表类型**：`BarChart`, `LineChart`, `PieChart` 等
+3. **导入组件**：`TitleComponent`, `TooltipComponent`, `GridComponent` 等
+4. **注册组件**：使用 `echarts.use([...])` 注册所有导入的组件
+
+### 为什么之前能工作？
+
+之前的代码可能：
+- 使用了完整的 ECharts 包（`echarts` 而非 `echarts/core`）
+- 或者在其他地方全局注册了组件
+
+### 修复前的代码
 
 ```typescript
-const exportChart = (format: 'png' | 'svg') => {
-  if (chartRef.current) {
-    const echartInstance = chartRef.current.getEchartsInstance();
-    // echartInstance 是 undefined！
-    const url = echartInstance.getDataURL({  // ❌ 错误发生在这里
-      type: format === 'svg' ? 'svg' : 'png',
-      pixelRatio: 2,
-      backgroundColor: chartTheme.backgroundColor,
-    });
-    // ...
-  }
-};
+import * as echarts from 'echarts/core';
+import type { EChartsOption } from 'echarts';
+// ❌ 缺少渲染器和组件导入
 ```
 
-### 可能的原因
+### 修复后的代码
 
-1. **ECharts 实例未初始化**: ReactEChartsCore 组件还没有完成初始化
-2. **ref 绑定问题**: chartRef 没有正确绑定到 ReactEChartsCore 组件
-3. **时序问题**: exportChart 在 ECharts 实例创建之前被调用
-4. **依赖项问题**: useCallback 的依赖项配置导致函数引用丢失
-
-### 对比修复前后的代码
-
-**修复前（c78038f）**:
 ```typescript
-const getChartOption = useCallback((): EChartsOption => {
-  // ...
-}, [data, chartTitle, colorTheme, showLegend, showGrid, horizontal, t, chartTheme]);
+import * as echarts from 'echarts/core';
+import {
+  BarChart,
+  LineChart,
+  PieChart,
+  // ... 其他图表类型
+} from 'echarts/charts';
+import {
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  // ... 其他组件
+} from 'echarts/components';
+import { LabelLayout, UniversalTransition } from 'echarts/features';
+import { CanvasRenderer } from 'echarts/renderers';
+
+// ✅ 注册所有组件
+echarts.use([
+  BarChart,
+  LineChart,
+  PieChart,
+  // ... 所有导入的组件
+  CanvasRenderer,
+]);
 ```
-
-**修复后（ec9a108）**:
-```typescript
-const getChartOption = useCallback((): EChartsOption => {
-  // ...
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [data, chartTitle, colorTheme, showLegend, showGrid, horizontal, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor, chartTheme.labelColor]);
-```
-
-**关键差异**:
-- 移除了翻译函数 `t`
-- 将 `chartTheme` 对象替换为具体属性
-
-这些修改本身是正确的，但可能触发了其他问题。
 
 ## Solution Design
 
-### Solution 1: 添加安全检查（推荐）
+### Solution: 添加完整的 ECharts 导入（已实施）
 
-在 `exportChart` 函数中添加防御性检查：
+在所有图表组件中添加必要的 ECharts 导入和注册：
 
 ```typescript
-const exportChart = (format: 'png' | 'svg') => {
-  if (chartRef.current) {
-    const echartInstance = chartRef.current.getEchartsInstance();
-    
-    // ✅ 添加安全检查
-    if (!echartInstance) {
-      console.warn('ECharts instance not ready');
-      return;
-    }
-    
-    const url = echartInstance.getDataURL({
-      type: format === 'svg' ? 'svg' : 'png',
-      pixelRatio: 2,
-      backgroundColor: chartTheme.backgroundColor,
-    });
+import * as echarts from 'echarts/core';
+import {
+  BarChart,
+  LineChart,
+  PieChart,
+  ScatterChart,
+  RadarChart,
+  MapChart,
+  TreeChart,
+  TreemapChart,
+  GraphChart,
+  GaugeChart,
+  FunnelChart,
+  ParallelChart,
+  SankeyChart,
+  BoxplotChart,
+  CandlestickChart,
+  EffectScatterChart,
+  LinesChart,
+  HeatmapChart,
+  PictorialBarChart,
+  ThemeRiverChart,
+  SunburstChart,
+  CustomChart,
+} from 'echarts/charts';
+import {
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  PolarComponent,
+  AriaComponent,
+  ParallelComponent,
+  LegendComponent,
+  RadarComponent,
+  ToolboxComponent,
+  DataZoomComponent,
+  VisualMapComponent,
+  TimelineComponent,
+  CalendarComponent,
+  GraphicComponent,
+  MarkPointComponent,
+  MarkLineComponent,
+  MarkAreaComponent,
+  DatasetComponent,
+  TransformComponent,
+} from 'echarts/components';
+import { LabelLayout, UniversalTransition } from 'echarts/features';
+import { CanvasRenderer } from 'echarts/renderers';
 
-    const link = document.createElement('a');
-    link.download = `bar-chart-${Date.now()}.${format}`;
-    link.href = url;
-    link.click();
-  }
-};
+// 注册 ECharts 组件
+echarts.use([
+  BarChart,
+  LineChart,
+  PieChart,
+  ScatterChart,
+  RadarChart,
+  MapChart,
+  TreeChart,
+  TreemapChart,
+  GraphChart,
+  GaugeChart,
+  FunnelChart,
+  ParallelChart,
+  SankeyChart,
+  BoxplotChart,
+  CandlestickChart,
+  EffectScatterChart,
+  LinesChart,
+  HeatmapChart,
+  PictorialBarChart,
+  ThemeRiverChart,
+  SunburstChart,
+  CustomChart,
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  PolarComponent,
+  AriaComponent,
+  ParallelComponent,
+  LegendComponent,
+  RadarComponent,
+  ToolboxComponent,
+  DataZoomComponent,
+  VisualMapComponent,
+  TimelineComponent,
+  CalendarComponent,
+  GraphicComponent,
+  MarkPointComponent,
+  MarkLineComponent,
+  MarkAreaComponent,
+  DatasetComponent,
+  TransformComponent,
+  LabelLayout,
+  UniversalTransition,
+  CanvasRenderer,
+]);
 ```
 
 **优点**:
-- 简单直接，不影响其他逻辑
-- 防止崩溃，提供友好的错误处理
-- 适用于所有图表组件
+- 解决了根本问题
+- 符合 ECharts 5.x 的最佳实践
+- 支持按需加载（虽然这里导入了所有组件）
 
 **缺点**:
-- 治标不治本，没有解决 ECharts 实例为 undefined 的根本原因
+- 增加了代码量
+- 每个组件都需要相同的导入（可以考虑创建共享配置）
 
-### Solution 2: 使用 useEffect 确保实例存在
+### 未来优化方案
 
-添加 useEffect 来验证 ECharts 实例：
-
-```typescript
-const [isChartReady, setIsChartReady] = useState(false);
-
-useEffect(() => {
-  if (chartRef.current) {
-    const instance = chartRef.current.getEchartsInstance();
-    if (instance) {
-      setIsChartReady(true);
-    }
-  }
-}, []);
-
-const exportChart = (format: 'png' | 'svg') => {
-  if (!isChartReady || !chartRef.current) {
-    alert(t('chartNotReady'));
-    return;
-  }
-  
-  const echartInstance = chartRef.current.getEchartsInstance();
-  // ...
-};
-```
-
-**优点**:
-- 明确跟踪 ECharts 实例状态
-- 可以禁用导出按钮直到图表准备好
-
-**缺点**:
-- 增加了状态管理复杂度
-- 需要添加翻译键
-
-### Solution 3: 延迟导出调用
-
-使用 setTimeout 延迟导出调用，确保 ECharts 实例已创建：
+可以创建一个共享的 ECharts 配置文件：
 
 ```typescript
-const exportChart = (format: 'png' | 'svg') => {
-  // 延迟执行，确保 ECharts 实例已创建
-  setTimeout(() => {
-    if (chartRef.current) {
-      const echartInstance = chartRef.current.getEchartsInstance();
-      if (!echartInstance) {
-        console.warn('ECharts instance not ready');
-        return;
-      }
-      // ...
-    }
-  }, 100);
-};
+// src/lib/echarts-config.ts
+import * as echarts from 'echarts/core';
+import { /* ... 所有导入 */ } from 'echarts/charts';
+// ...
+
+echarts.use([/* ... 所有组件 */]);
+
+export { echarts };
 ```
 
-**优点**:
-- 简单实现
-- 给 ECharts 实例创建留出时间
-
-**缺点**:
-- 不可靠，100ms 可能不够
-- 用户体验差（延迟）
-
-### Solution 4: 检查 ReactEChartsCore 配置
-
-验证 ReactEChartsCore 组件配置是否正确：
+然后在组件中：
 
 ```typescript
-<ReactEChartsCore
-  ref={chartRef}
-  echarts={echarts}  // ✅ 确保正确导入
-  option={getChartOption()}  // ✅ 确保返回有效配置
-  style={{ height: '400px', width: '100%' }}
-  notMerge={true}
-  lazyUpdate={true}
-/>
+import { echarts } from '@/lib/echarts-config';
 ```
 
-检查点：
-1. `echarts` 是否正确导入：`import * as echarts from 'echarts/core'`
-2. `getChartOption()` 是否返回有效的 EChartsOption
-3. `ref` 是否正确绑定
-
-## Recommended Approach
-
-**采用 Solution 1 + Solution 4 的组合**：
-
-1. **立即修复**: 在所有 48 个图表组件的 `exportChart` 函数中添加安全检查
-2. **验证配置**: 检查 ReactEChartsCore 配置是否正确
-3. **测试验证**: 逐个测试图表工具，确保修复有效
-
-### 修复模式
-
-```typescript
-// 修复前
-const exportChart = (format: 'png' | 'svg') => {
-  if (chartRef.current) {
-    const echartInstance = chartRef.current.getEchartsInstance();
-    const url = echartInstance.getDataURL({  // ❌ 可能崩溃
-      // ...
-    });
-    // ...
-  }
-};
-
-// 修复后
-const exportChart = (format: 'png' | 'svg') => {
-  if (!chartRef.current) {
-    console.warn('Chart ref not available');
-    return;
-  }
-  
-  const echartInstance = chartRef.current.getEchartsInstance();
-  if (!echartInstance) {
-    console.warn('ECharts instance not ready');
-    return;
-  }
-  
-  const url = echartInstance.getDataURL({  // ✅ 安全
-    type: format === 'svg' ? 'svg' : 'png',
-    pixelRatio: 2,
-    backgroundColor: chartTheme.backgroundColor,
-  });
-
-  const link = document.createElement('a');
-  link.download = `${slug}-chart-${Date.now()}.${format}`;
-  link.href = url;
-  link.click();
-};
-```
+这样可以：
+- 减少重复代码
+- 统一管理 ECharts 配置
+- 更容易维护
 
 ## Implementation Strategy
 
