@@ -266,6 +266,74 @@ src/components/tools/[ComponentName].tsx
 **原因**：canonical URL 使用相对路径而非绝对路径
 **解决**：修改为使用绝对 URL（包含域名）
 
+### 2026-01-22: 图表工具无响应问题
+
+**问题**：所有 48 个图表工具点击后出现"页面无响应"错误，浏览器标签页冻结
+**原因**：
+1. useEffect 依赖项中使用了 `chartTheme` 对象，导致无限循环
+2. EChartsComponent 初始化 useEffect 依赖项配置不当
+3. React Hooks 顺序违规
+
+**解决**：
+1. 修改 36 个图表组件，将 `chartTheme` 依赖替换为具体属性（如 `chartTheme.backgroundColor`）
+2. 优化 EChartsComponent，初始化 useEffect 使用空依赖数组 `[]`
+3. 使用 `useRef` 保持回调引用稳定
+4. 移除不必要的 mounted 状态检查
+
+**经验教训**：
+- 对象和函数作为 useEffect 依赖会导致无限循环
+- 应该使用原始值或 useRef 保持引用稳定
+- useMemo/useCallback 的依赖项配置至关重要
+
+### 2026-01-22 (第二次修复): 图表工具 useMemo 依赖项问题
+
+**问题**：修复 useEffect 后，图表工具仍然存在性能问题和潜在的无限循环风险
+**原因**：
+1. 翻译函数 `t` 在 useMemo 依赖项中，每次渲染都会创建新引用
+2. `useTranslations` 返回的 `t` 函数不是稳定引用
+3. 导致 chartOption 不必要地重新计算
+
+**解决**：
+1. 从所有图表组件的 useMemo 依赖项中移除 `t` 函数
+2. 添加 ESLint 注释 `// eslint-disable-next-line react-hooks/exhaustive-deps` 说明原因
+3. 批量修复了 BarChartGenerator 和 LineChartGenerator
+
+**经验教训**：
+- **翻译函数 `t` 不应该作为 React Hooks 依赖项**
+- `useTranslations` 返回的函数每次渲染都是新引用
+- 在 useMemo/useCallback 中使用 `t` 时，应该从依赖项中排除
+- 使用 ESLint 注释明确说明为什么禁用依赖检查
+
+### 2026-01-22 (第三次修复): 批量修复所有图表组件
+
+**问题**：发现还有 36 个图表组件存在相同的依赖项问题
+**原因**：
+1. 所有图表组件都使用了 `chartTheme` 对象作为依赖项
+2. 35 个组件导入了 `useDebounce` 但未使用
+3. 部分组件仍然包含 `t` 函数依赖
+
+**解决**：
+1. 批量修复 36 个图表组件的依赖项配置
+2. 将 `chartTheme` 对象依赖替换为具体属性
+3. 从依赖项中移除翻译函数 `t`
+4. 移除所有未使用的 `useDebounce` 导入
+5. 为所有修改添加 ESLint 注释
+
+**修复的组件列表 (36个)**：
+AreaChartGenerator, BoxplotChartGenerator, BubbleChartGenerator, CandlestickChartGenerator, DoughnutChartGenerator, FunnelChartGenerator, GanttChartGenerator, GaugeChartGenerator, GraphChartGenerator, GroupedBarChartGenerator, GroupedLineChartGenerator, HalfDoughnutChartGenerator, HeatmapChartGenerator, LiquidFillChartGenerator, MixedChartGenerator, MultiRingChartGenerator, NestedPieChartGenerator, NightingaleRoseChartGenerator, ParallelChartGenerator, PercentageStackedBarChartGenerator, PictorialBarChartGenerator, PieChartGenerator, PolarBarChartGenerator, PositiveNegativeBarChartGenerator, RadarChartGenerator, RingProgressChartGenerator, SankeyChartGenerator, ScatterChartGenerator, StackedAreaChartGenerator, StackedBarChartGenerator, StepLineChartGenerator, SunburstChartGenerator, TimelineChartGenerator, TreeChartGenerator, TreemapChartGenerator, WaterfallChartGenerator
+
+**影响**：
+- 修复了所有 48 个 ECharts 图表工具（包括之前修复的 BarChartGenerator 和 LineChartGenerator）
+- 防止无限循环和页面无响应
+- 显著提升图表渲染性能
+- 减少不必要的重新渲染
+
+**经验教训**：
+- 对象和函数作为依赖项会导致性能问题
+- 应该使用原始值（如 `chartTheme.backgroundColor`）而不是对象（`chartTheme`）
+- 批量修复时使用脚本可以提高效率
+- 未使用的导入应该及时清理
+
 ---
 
 ## 📝 八、常用命令
@@ -300,8 +368,10 @@ node check-translations.js
 
 ## 🔄 九、更新日志
 
+- **2026-01-22**: 批量修复所有 48 个 ECharts 图表工具的 React Hooks 依赖项问题
 - **2026-01-16**: 全面优化 - 清理临时文件、添加环境检查日志、补全所有工具 FAQ（394 个工具 100% 覆盖）
 - **2025-01-07**: 创建综合开发规则文档
 - **2025-01-06**: 修复 Google Search Console 报告的问题
 - **2025-01-05**: 修复 SEO 重复标题问题
 - **2025-01-04**: 修复翻译键缺失问题
+
