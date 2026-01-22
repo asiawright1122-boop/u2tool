@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 // 散点数据点类型
 interface ScatterPoint {
@@ -239,7 +238,8 @@ export default function ScatterChartGenerator() {
         itemStyle: { color: colors[index % colors.length] },
       })),
     };
-  }, [series, chartTitle, colorTheme, showLegend, showGrid, symbolSize, xAxisName, yAxisName, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [series, chartTitle, colorTheme, showLegend, showGrid, symbolSize, xAxisName, yAxisName, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {

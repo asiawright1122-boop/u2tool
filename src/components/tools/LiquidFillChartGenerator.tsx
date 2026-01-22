@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 import 'echarts-liquidfill';
 
 const colorThemes = {
@@ -95,7 +94,8 @@ export default function LiquidFillChartGenerator() {
         },
       ],
     } as EChartsOption;
-  }, [chartTitle, percentage, colorTheme, shape, showAnimation, waveAnimation, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chartTitle, percentage, colorTheme, shape, showAnimation, waveAnimation, chartTheme.backgroundColor, chartTheme.textColor]);
 
   const exportChart = (format: 'png' | 'svg') => {
     if (chartRef.current) {

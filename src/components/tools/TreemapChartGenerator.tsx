@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 // 树图节点类型
 interface TreemapNode {
@@ -242,7 +241,8 @@ export default function TreemapChartGenerator() {
         },
       ],
     };
-  }, [data, chartTitle, colorTheme, showLabels, showBreadcrumb, leafDepth, t, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, chartTitle, colorTheme, showLabels, showBreadcrumb, leafDepth, chartTheme.backgroundColor, chartTheme.textColor]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {

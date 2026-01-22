@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 interface DataRow {
   id: string;
@@ -179,7 +178,8 @@ export default function HalfDoughnutChartGenerator() {
         },
       ],
     };
-  }, [data, chartTitle, colorTheme, showLegend, showLabels, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, chartTitle, colorTheme, showLegend, showLabels, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText]);
 
   const exportChart = (format: 'png' | 'svg') => {
     if (chartRef.current) {

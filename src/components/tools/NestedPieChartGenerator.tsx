@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 interface InnerData {
   id: string;
@@ -210,7 +209,8 @@ export default function NestedPieChartGenerator() {
         },
       ],
     };
-  }, [innerData, outerData, chartTitle, colorTheme, showLegend, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [innerData, outerData, chartTitle, colorTheme, showLegend, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText]);
 
   const exportChart = (format: 'png' | 'svg') => {
     if (chartRef.current) {

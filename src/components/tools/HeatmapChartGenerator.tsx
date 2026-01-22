@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 // 颜色主题预设
 const colorThemes = {
@@ -224,7 +223,8 @@ export default function HeatmapChartGenerator() {
         },
       ],
     };
-  }, [xAxisData, yAxisData, heatmapData, chartTitle, colorTheme, showLabels, minValue, maxValue, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [xAxisData, yAxisData, heatmapData, chartTitle, colorTheme, showLabels, minValue, maxValue, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.axisLineColor, chartTheme.axisLabelColor]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {

@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 interface DataRow {
   id: string;
@@ -143,7 +142,8 @@ export default function StepLineChartGenerator() {
         },
       ],
     };
-  }, [data, chartTitle, colorTheme, showLegend, showGrid, stepPosition, areaFill, t, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, chartTitle, colorTheme, showLegend, showGrid, stepPosition, areaFill, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor]);
 
   const exportChart = (format: 'png' | 'svg') => {
     if (chartRef.current) {

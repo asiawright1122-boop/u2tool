@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 interface SeriesData {
   name: string;
@@ -149,7 +148,8 @@ export default function StackedAreaChartGenerator() {
         lineStyle: { color: colors[index % colors.length] },
       })),
     };
-  }, [categories, series, chartTitle, colorTheme, showLegend, showGrid, smooth, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categories, series, chartTitle, colorTheme, showLegend, showGrid, smooth, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor]);
 
   const exportChart = (format: 'png' | 'svg') => {
     if (chartRef.current) {

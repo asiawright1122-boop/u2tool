@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 // 颜色主题预设
 const colorThemes = {
@@ -158,7 +157,8 @@ export default function SunburstChartGenerator() {
         },
       ],
     };
-  }, [chartTitle, colorTheme, showLabel, innerRadius, outerRadius, parsedData, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chartTitle, colorTheme, showLabel, innerRadius, outerRadius, parsedData, chartTheme.backgroundColor, chartTheme.textColor]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {

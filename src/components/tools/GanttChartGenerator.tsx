@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 interface GanttTask {
     id: string;
@@ -253,7 +252,8 @@ export default function GanttChartGenerator() {
                 }
             ]
         };
-    }, [tasks, chartTitle, colorTheme, t, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [tasks, chartTitle, colorTheme, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor]);
 
     const addTask = () => {
         const today = new Date();

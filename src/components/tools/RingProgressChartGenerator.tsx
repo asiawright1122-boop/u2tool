@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 const colorThemes = {
   default: ['#5470c6', '#91cc75', '#fac858', '#ee6666'],
@@ -106,7 +105,8 @@ export default function RingProgressChartGenerator() {
         },
       ],
     };
-  }, [chartTitle, percentage, label, colorTheme, ringWidth, showAnimation, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chartTitle, percentage, label, colorTheme, ringWidth, showAnimation, chartTheme.backgroundColor, chartTheme.textColor]);
 
   const exportChart = (format: 'png' | 'svg') => {
     if (chartRef.current) {

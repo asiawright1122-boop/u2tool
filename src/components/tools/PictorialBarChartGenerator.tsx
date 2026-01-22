@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 interface DataRow {
   id: string;
@@ -208,7 +207,8 @@ export default function PictorialBarChartGenerator() {
       },
       series: [...mainSeries, backgroundSeries] as EChartsOption['series'],
     };
-  }, [data, chartTitle, colorTheme, symbol, showLegend, horizontal, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, chartTitle, colorTheme, symbol, showLegend, horizontal, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor]);
 
   const exportChart = (format: 'png' | 'svg') => {
     if (chartRef.current) {

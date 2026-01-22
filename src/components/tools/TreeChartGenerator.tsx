@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 interface TreeNode {
     id: string;
@@ -156,7 +155,8 @@ export default function TreeChartGenerator() {
                 }
             ]
         };
-    }, [nodes, chartTitle, colorTheme, layout, orient, buildTree, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [nodes, chartTitle, colorTheme, layout, orient, buildTree, chartTheme.backgroundColor, chartTheme.textColor]);
 
     const addNode = (parentId: string | null = null) => {
         const newId = generateId();

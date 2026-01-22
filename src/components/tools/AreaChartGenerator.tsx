@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 // 数据系列类型
 interface AreaSeries {
@@ -191,7 +190,8 @@ export default function AreaChartGenerator() {
         itemStyle: { color: colors[index % colors.length] },
       })),
     };
-  }, [categories, series, chartTitle, colorTheme, showLegend, showGrid, smooth, stacked, fillOpacity, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categories, series, chartTitle, colorTheme, showLegend, showGrid, smooth, stacked, fillOpacity, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {

@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 // 颜色主题预设
 const colorThemes = {
@@ -160,7 +159,8 @@ export default function GraphChartGenerator() {
         },
       ],
     };
-  }, [chartTitle, colorTheme, layout, showLabel, repulsion, categories, nodes, links, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chartTitle, colorTheme, layout, showLabel, repulsion, categories, nodes, links, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {

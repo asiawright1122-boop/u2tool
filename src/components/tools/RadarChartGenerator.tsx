@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 // 雷达图指标类型
 interface RadarIndicator {
@@ -287,7 +286,8 @@ export default function RadarChartGenerator() {
         },
       ],
     };
-  }, [indicators, series, chartTitle, colorTheme, showLegend, fillOpacity, shape, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [indicators, series, chartTitle, colorTheme, showLegend, fillOpacity, shape, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.splitLineColor, chartTheme.axisLineColor]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {

@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 interface RingData {
   id: string;
@@ -144,7 +143,8 @@ export default function MultiRingChartGenerator() {
       },
       series,
     };
-  }, [data, chartTitle, ringWidth, showAnimation, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, chartTitle, ringWidth, showAnimation, chartTheme.backgroundColor, chartTheme.textColor]);
 
   const exportChart = (format: 'png' | 'svg') => {
     if (chartRef.current) {

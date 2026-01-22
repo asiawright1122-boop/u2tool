@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 // K线数据项: [开盘, 收盘, 最低, 最高]
 interface CandlestickData {
@@ -182,7 +181,8 @@ export default function CandlestickChartGenerator() {
       ],
       series,
     };
-  }, [chartTitle, data, upColor, downColor, showMA5, showMA10, showMA20, calculateMA, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chartTitle, data, upColor, downColor, showMA5, showMA10, showMA20, calculateMA, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {

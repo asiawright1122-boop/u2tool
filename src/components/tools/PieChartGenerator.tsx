@@ -182,7 +182,8 @@ export default function PieChartGenerator() {
         },
       ],
     };
-  }, [data, chartTitle, colorTheme, showLegend, showLabels, showPercentage, isDonut, isRose, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, chartTitle, colorTheme, showLegend, showLabels, showPercentage, isDonut, isRose, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.axisLabelColor]);
 
 
   // 导出图表

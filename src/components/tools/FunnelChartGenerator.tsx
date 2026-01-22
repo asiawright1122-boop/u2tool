@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 // 漏斗数据行类型
 interface FunnelDataRow {
@@ -171,7 +170,8 @@ export default function FunnelChartGenerator() {
         },
       ],
     };
-  }, [data, chartTitle, colorTheme, showLegend, showLabels, sortOrder, funnelAlign, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, chartTitle, colorTheme, showLegend, showLabels, sortOrder, funnelAlign, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {

@@ -7,7 +7,6 @@ import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 interface TimelineEvent {
     id: number;
@@ -120,7 +119,8 @@ export default function TimelineChartGenerator() {
                 }
             ]
         };
-    }, [events, chartTitle, colorTheme, direction, t, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [events, chartTitle, colorTheme, direction, chartTheme.backgroundColor, chartTheme.textColor]);
 
     const addEvent = () => {
         const nextId = events.length > 0 ? Math.max(...events.map(e => e.id)) + 1 : 1;
