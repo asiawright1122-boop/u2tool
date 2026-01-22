@@ -6,7 +6,6 @@ import ReactEChartsCore from 'echarts-for-react/lib/core';
 import * as echarts from 'echarts/core';
 import type { EChartsOption } from 'echarts';
 import { useChartTheme } from '@/hooks/useChartTheme';
-import { useDebounce } from '@/hooks/useDebounce';
 
 // 数据行类型
 interface DataRow {
@@ -200,7 +199,8 @@ export default function BarChartGenerator() {
         },
       ],
     };
-  }, [data, chartTitle, colorTheme, showLegend, showGrid, horizontal, t, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, chartTitle, colorTheme, showLegend, showGrid, horizontal, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor, chartTheme.labelColor]);
 
   // 导出图表为 PNG/SVG
   const exportChart = (format: 'png' | 'svg') => {

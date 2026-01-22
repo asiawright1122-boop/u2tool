@@ -249,7 +249,8 @@ export default function LineChartGenerator() {
         },
       })),
     };
-  }, [categories, series, chartTitle, colorTheme, showLegend, showGrid, smooth, areaFill, lineStyle, chartTheme]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categories, series, chartTitle, colorTheme, showLegend, showGrid, smooth, areaFill, lineStyle, chartTheme.backgroundColor, chartTheme.textColor, chartTheme.legendText, chartTheme.splitLineColor, chartTheme.axisLineColor, chartTheme.axisLabelColor]);
 
   // 导出图表
   const exportChart = (format: 'png' | 'svg') => {
