@@ -4,7 +4,6 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { tools, type Tool } from '@/config/tools';
 import ToolIcon from './ToolIcon';
-import { getRecentTools } from '@/config/tools-helpers'; // Assuming helper function export location, checking next
 
 /**
  * 最新工具列表组件属性
