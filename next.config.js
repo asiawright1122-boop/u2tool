@@ -1,4 +1,7 @@
 const createNextIntlPlugin = require('next-intl/plugin');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
 
 /**
  * Next.js 配置
@@ -167,4 +170,4 @@ const nextConfig = {
   // 注意：IndexNow key 文件直接放在 public 目录下，无需重写
 };
 
-module.exports = withNextIntl(nextConfig);
+module.exports = withBundleAnalyzer(withNextIntl(nextConfig));

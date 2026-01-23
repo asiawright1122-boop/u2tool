@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface FormField {
@@ -20,6 +20,7 @@ export default function JsonToForm() {
   const [outputFormat, setOutputFormat] = useState<'html' | 'react'>('html');
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const inferFieldType = (value: unknown): string => {
     if (typeof value === 'boolean') return 'checkbox';
@@ -205,7 +206,8 @@ export default function JsonToForm() {
     const code = outputFormat === 'html' ? generateHtml() : generateReact();
     navigator.clipboard.writeText(code);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadExample = () => {
@@ -219,6 +221,17 @@ export default function JsonToForm() {
       country: ["USA", "Canada", "UK", "Germany", "France"]
     }, null, 2));
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

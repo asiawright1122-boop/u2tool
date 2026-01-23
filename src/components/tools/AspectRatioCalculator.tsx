@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 function gcd(a: number, b: number): number {
@@ -30,6 +30,7 @@ export default function AspectRatioCalculator() {
   const [newHeight, setNewHeight] = useState(1080);
   const [lockRatio, setLockRatio] = useState(true);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const ratio = calculateAspectRatio(width, height);
 
@@ -77,8 +78,20 @@ export default function AspectRatioCalculator() {
   const copyDimensions = async () => {
     await navigator.clipboard.writeText(`${newWidth}x${newHeight}`);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

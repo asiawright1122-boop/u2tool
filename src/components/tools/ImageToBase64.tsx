@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function ImageToBase64() {
@@ -10,6 +10,7 @@ export default function ImageToBase64() {
   const [preview, setPreview] = useState('');
   const [fileInfo, setFileInfo] = useState<{ name: string; size: string; type: string } | null>(null);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,20 +34,28 @@ export default function ImageToBase64() {
   const formatFileSize = (bytes: number) => {
     if (bytes < 1024) return bytes + ' B';
     if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + ' KB';
+    useEffect(() => {
+      return () => {
+        if (timerRef.current) clearTimeout(timerRef.current);
+      };
+    }, []);
+
     return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
   };
 
   const copyDataUrl = async () => {
     await navigator.clipboard.writeText(base64);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const copyRawBase64 = async () => {
     const raw = base64.split(',')[1] || base64;
     await navigator.clipboard.writeText(raw);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const clearAll = () => {

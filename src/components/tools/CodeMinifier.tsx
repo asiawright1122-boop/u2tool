@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type CodeType = 'html' | 'css' | 'js';
@@ -43,6 +43,7 @@ export default function CodeMinifier() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const minify = () => {
     if (!input.trim()) {
@@ -68,7 +69,8 @@ export default function CodeMinifier() {
   const copyOutput = async () => {
     await navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const stats = {
@@ -76,6 +78,17 @@ export default function CodeMinifier() {
     minified: output.length,
     saved: input.length > 0 ? Math.round((1 - output.length / input.length) * 100) : 0,
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

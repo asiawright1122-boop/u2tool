@@ -35,7 +35,8 @@ export default function VennDiagramGenerator() {
             { ...prev[1], label: t('sampleSet2') },
             { ...prev[2], label: t('sampleSet3') }
         ]);
-    }, [t]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     // Adjust positions based on mode
     const getVisibleSets = () => {

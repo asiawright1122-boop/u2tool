@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function TextSummarizer() {
@@ -10,6 +10,7 @@ export default function TextSummarizer() {
   const [text, setText] = useState('');
   const [summaryLength, setSummaryLength] = useState<'short' | 'medium' | 'long'>('medium');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const summary = useMemo(() => {
     if (!text.trim()) return null;
@@ -85,9 +86,21 @@ export default function TextSummarizer() {
     if (summary) {
       await navigator.clipboard.writeText(summary.text);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
     }
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

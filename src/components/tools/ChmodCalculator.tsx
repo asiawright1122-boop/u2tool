@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function ChmodCalculator() {
@@ -8,6 +8,7 @@ export default function ChmodCalculator() {
   const [perms, setPerms] = useState({ owner: { r: true, w: true, x: false }, group: { r: true, w: false, x: false }, other: { r: true, w: false, x: false } });
   const [octal, setOctal] = useState('644');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const calcOctal = (p: typeof perms) => {
     const calc = (o: { r: boolean; w: boolean; x: boolean }) => (o.r ? 4 : 0) + (o.w ? 2 : 0) + (o.x ? 1 : 0);
@@ -36,7 +37,8 @@ export default function ChmodCalculator() {
   const copy = async (text: string) => {
     await navigator.clipboard.writeText(text);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const Checkbox = ({ who, perm, label }: { who: 'owner' | 'group' | 'other'; perm: 'r' | 'w' | 'x'; label: string }) => (
@@ -45,6 +47,17 @@ export default function ChmodCalculator() {
       <span>{label}</span>
     </label>
   );
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function HashGenerator() {
@@ -8,6 +8,7 @@ export default function HashGenerator() {
   const [input, setInput] = useState('');
   const [hashes, setHashes] = useState<Record<string, string>>({});
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateHashes = async () => {
     if (!input.trim()) {
@@ -36,6 +37,17 @@ export default function HashGenerator() {
     setCopied(algo);
     setTimeout(() => setCopied(''), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

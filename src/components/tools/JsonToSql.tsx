@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export interface JsonToSqlOptions {
@@ -102,6 +102,7 @@ export default function JsonToSql() {
   const [dialect, setDialect] = useState<'mysql' | 'postgresql' | 'sqlite'>('mysql');
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
 
   const handleConvert = useCallback(() => {
@@ -118,7 +119,8 @@ export default function JsonToSql() {
   const handleCopy = async () => {
     await navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const handleClear = () => {
@@ -134,6 +136,17 @@ export default function JsonToSql() {
       { id: 3, name: "Charlie", email: "charlie@example.com", age: 35, active: true }
     ], null, 2));
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

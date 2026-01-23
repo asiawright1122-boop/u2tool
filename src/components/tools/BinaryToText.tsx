@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function BinaryToText() {
@@ -10,6 +10,7 @@ export default function BinaryToText() {
   const [mode, setMode] = useState<'toText' | 'toBinary'>('toText');
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const binaryToText = (bin: string): string => {
     const cleaned = bin.replace(/[^01]/g, '');
@@ -49,13 +50,25 @@ export default function BinaryToText() {
     const content = mode === 'toText' ? text : binary;
     navigator.clipboard.writeText(content);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const swapMode = () => {
     setMode(mode === 'toText' ? 'toBinary' : 'toText');
     setError('');
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

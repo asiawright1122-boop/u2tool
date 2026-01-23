@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-01-23T07:43:12.994Z",
+  "totalFiles": 402,
+  "totalIssues": 1,
+  "criticalIssues": 1,
+  "warningIssues": 0,
+  "issues": [
+    {
+      "file": "src/components/tools/IpAddressGenerator.tsx",
+      "line": 33,
+      "severity": "critical",
+      "category": "无限循环风险",
+      "message": "发现可能的无限循环，没有明显的退出条件",
+      "code": "while (true) {"
+    }
+  ],
+  "byCategory": {
+    "无限循环风险": 1
+  }
+}

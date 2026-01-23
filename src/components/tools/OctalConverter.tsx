@@ -82,7 +82,8 @@ export default function OctalConverter() {
     } catch {
       setError(t('errorConversion'));
     }
-  }, [input, mode, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [input, mode]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(output);

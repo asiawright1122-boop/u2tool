@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type DiceType = 'd4' | 'd6' | 'd8' | 'd10' | 'd12' | 'd20' | 'd100';
@@ -32,6 +32,7 @@ export default function DiceRoller() {
   const [isRolling, setIsRolling] = useState(false);
   const [currentResult, setCurrentResult] = useState<RollResult | null>(null);
   const [history, setHistory] = useState<RollResult[]>([]);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const roll = () => {
     const count = Math.min(parseInt(diceCount) || 1, 20);
@@ -64,6 +65,17 @@ export default function DiceRoller() {
     setHistory([]);
     setCurrentResult(null);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

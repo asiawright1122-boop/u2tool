@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function HtaccessToNginx() {
@@ -9,6 +9,7 @@ export default function HtaccessToNginx() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convertRules: Array<{
     pattern: RegExp;
@@ -179,7 +180,8 @@ ${convertedLines.map(l => l ? '    ' + l : '').join('\n')}
   const copyOutput = async () => {
     await navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadSample = () => {
@@ -211,6 +213,17 @@ Header set X-Frame-Options "SAMEORIGIN"
 # Disable directory listing
 Options -Indexes`);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

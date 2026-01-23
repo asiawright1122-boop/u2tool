@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function NumberBaseConverter() {
@@ -10,6 +10,7 @@ export default function NumberBaseConverter() {
   const [results, setResults] = useState<{ base: number; value: string; name: string }[]>([]);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const bases = [
     { base: 2, name: 'Binary' },
@@ -49,6 +50,17 @@ export default function NumberBaseConverter() {
     setCopied(String(base));
     setTimeout(() => setCopied(''), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

@@ -15,6 +15,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GlobalSidebar from '@/components/layout/GlobalSidebar';
 import WebVitalsReporter from '@/components/WebVitalsReporter';
+import PerformanceMonitor from '@/components/PerformanceMonitor';
 import { criticalCSS } from '@/lib/critical-css';
 
 // Plus Jakarta Sans - 现代 SaaS 风格字体，友好、清洁、专业
@@ -298,6 +299,8 @@ export default async function LocaleLayout({
             </div>
             {/* Web Vitals 监控 */}
             <WebVitalsReporter />
+            {/* 性能监控（仅开发环境） */}
+            <PerformanceMonitor />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

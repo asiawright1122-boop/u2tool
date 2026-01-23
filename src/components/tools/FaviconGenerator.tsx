@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 const FAVICON_SIZES = [16, 32, 48, 64, 128, 256];
@@ -17,6 +17,7 @@ export default function FaviconGenerator() {
   const [fileName, setFileName] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [selectedSizes, setSelectedSizes] = useState<number[]>([16, 32, 48, 64]);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -110,6 +111,17 @@ export default function FaviconGenerator() {
   const copyHtml = () => {
     navigator.clipboard.writeText(generateIcoHtml());
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

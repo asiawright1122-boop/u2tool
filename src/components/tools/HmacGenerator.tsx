@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type Algorithm = 'SHA-1' | 'SHA-256' | 'SHA-384' | 'SHA-512';
@@ -12,6 +12,7 @@ export default function HmacGenerator() {
   const [algorithm, setAlgorithm] = useState<Algorithm>('SHA-256');
   const [result, setResult] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateHmac = async () => {
     if (!message || !secretKey) {
@@ -45,9 +46,21 @@ export default function HmacGenerator() {
     if (result) {
       await navigator.clipboard.writeText(result);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
     }
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

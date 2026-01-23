@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 const nameData = {
@@ -46,6 +46,7 @@ export default function FakeNameGenerator() {
   const [count, setCount] = useState(10);
   const [names, setNames] = useState<string[]>([]);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateNames = () => {
     const data = nameData[country];
@@ -73,7 +74,8 @@ export default function FakeNameGenerator() {
   const copyNames = () => {
     navigator.clipboard.writeText(names.join('\n'));
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const countryLabels: Record<Country, string> = {
@@ -84,6 +86,17 @@ export default function FakeNameGenerator() {
     de: t('german'),
     es: t('spanish'),
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

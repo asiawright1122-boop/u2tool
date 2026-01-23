@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function JsonPathTester() {
@@ -11,6 +11,7 @@ export default function JsonPathTester() {
   const [result, setResult] = useState('');
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const evaluatePath = () => {
     if (!json.trim()) {
@@ -61,7 +62,8 @@ export default function JsonPathTester() {
   const copyResult = async () => {
     await navigator.clipboard.writeText(result);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const examples = [
@@ -70,6 +72,17 @@ export default function JsonPathTester() {
     { path: '$.users[0].name', descKey: 'exFirstUserName' },
     { path: '$.data.items', descKey: 'exNestedItems' },
   ];
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

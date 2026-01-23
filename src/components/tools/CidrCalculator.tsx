@@ -94,7 +94,8 @@ export default function CidrCalculator() {
       setResult(null);
       setError('');
     }
-  }, [cidr, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cidr]);
 
   const commonPrefixes = [8, 16, 24, 25, 26, 27, 28, 29, 30, 31, 32];
 

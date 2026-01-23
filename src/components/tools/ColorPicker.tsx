@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function ColorPicker() {
@@ -8,6 +8,7 @@ export default function ColorPicker() {
   const [color, setColor] = useState('#3b82f6');
   const [recentColors, setRecentColors] = useState<string[]>([]);
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Convert hex to RGB
   const hexToRgb = (hex: string) => {
@@ -73,6 +74,17 @@ export default function ColorPicker() {
     '#8b5cf6', '#a855f7', '#d946ef', '#ec4899', '#f43f5e', '#000000',
     '#374151', '#6b7280', '#9ca3af', '#d1d5db', '#f3f4f6', '#ffffff',
   ];
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

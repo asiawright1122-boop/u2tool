@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 // 计算函数 - 导出供测试使用
@@ -66,6 +66,7 @@ export default function ScientificCalculator() {
   const [memory, setMemory] = useState<number>(0);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const appendToExpression = useCallback((value: string) => {
     setError(null);
@@ -102,7 +103,8 @@ export default function ScientificCalculator() {
       setError(t('sci.error'));
       setDisplay('Error');
     }
-  }, [expression, isRadians, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [expression, isRadians]);
 
   const clear = useCallback(() => {
     setDisplay('0');
@@ -131,7 +133,8 @@ export default function ScientificCalculator() {
       setError(t('sci.error'));
       setDisplay('Error');
     }
-  }, [display, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [display]);
 
   const memoryStore = () => setMemory(parseFloat(display) || 0);
   const memoryRecall = () => { setDisplay(memory.toString()); setExpression(memory.toString()); };
@@ -141,7 +144,8 @@ export default function ScientificCalculator() {
   const copyResult = async () => {
     await navigator.clipboard.writeText(display);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const Button = ({ value, onClick, className = '' }: { value: string; onClick: () => void; className?: string }) => (
@@ -152,6 +156,12 @@ export default function ScientificCalculator() {
       {value}
     </button>
   );
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   return (
     <div className="max-w-md mx-auto space-y-4">

@@ -44,7 +44,8 @@ export default function AudioToBase64() {
       setError(t('errorReading'));
     };
     reader.readAsDataURL(file);
-  }, [includeDataUri, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [includeDataUri]);
 
   const handleDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
@@ -72,7 +73,8 @@ export default function AudioToBase64() {
       }
     };
     reader.readAsDataURL(file);
-  }, [includeDataUri, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [includeDataUri]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(base64);

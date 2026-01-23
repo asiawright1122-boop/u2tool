@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { sanitizeMarkdownHtml } from '@/lib/sanitize';
 
@@ -51,6 +51,7 @@ code blocks
 [Link example](https://example.com)
 `);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // 解析 Markdown 并净化 HTML，防止 XSS 攻击
   const html = useMemo(() => sanitizeMarkdownHtml(parseMarkdown(markdown)), [markdown]);
@@ -58,8 +59,20 @@ code blocks
   const copyHtml = async () => {
     await navigator.clipboard.writeText(html);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

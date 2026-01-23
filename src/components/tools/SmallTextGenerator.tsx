@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type TextStyle = 'subscript' | 'superscript' | 'smallcaps';
@@ -36,6 +36,7 @@ export default function SmallTextGenerator() {
   const t = useTranslations('tools.small-text-generator');
   const [input, setInput] = useState('');
   const [copied, setCopied] = useState<string | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convertText = (text: string, style: TextStyle): string => {
     const map = style === 'subscript' ? subscriptMap : style === 'superscript' ? superscriptMap : smallCapsMap;
@@ -56,6 +57,17 @@ export default function SmallTextGenerator() {
     { type: 'subscript', label: t('subscript'), example: 'ₛᵤᵦₛ꜀ᵣᵢₚₜ' },
     { type: 'smallcaps', label: t('smallCaps'), example: 'sᴍᴀʟʟ ᴄᴀᴘs' },
   ];
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

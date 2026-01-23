@@ -169,7 +169,8 @@ export default function CrontabCalendar() {
       setParsedCron(null);
       setError(t('invalidCron'));
     }
-  }, [expression, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [expression]);
 
   const handleClear = () => {
     setExpression('');

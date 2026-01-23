@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 // CSS to Tailwind mapping
@@ -58,6 +58,7 @@ export default function CssToTailwind() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convert = () => {
     const lines = input.split('\n');
@@ -148,7 +149,8 @@ export default function CssToTailwind() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(output.split('\n')[0]);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadExample = () => {
@@ -163,6 +165,17 @@ border-radius: 8px;
 font-weight: bold;
 text-align: center;`);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

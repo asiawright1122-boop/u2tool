@@ -2,7 +2,6 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import * as XLSX from 'xlsx';
 
 interface SheetData {
   name: string;
@@ -42,8 +41,9 @@ export default function ExcelViewer() {
     setFilterValue('');
 
     const reader = new FileReader();
-    reader.onload = (event) => {
+    reader.onload = async (event) => {
       try {
+        const XLSX = await import('xlsx');
         const data = new Uint8Array(event.target?.result as ArrayBuffer);
         const workbook = XLSX.read(data, { type: 'array' });
 
@@ -63,7 +63,8 @@ export default function ExcelViewer() {
       }
     };
     reader.readAsArrayBuffer(file);
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const currentSheet = sheets.find(s => s.name === selectedSheet);
 

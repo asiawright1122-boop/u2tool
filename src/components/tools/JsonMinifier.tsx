@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function JsonMinifier() {
@@ -10,6 +10,7 @@ export default function JsonMinifier() {
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
   const [stats, setStats] = useState<{ original: number; minified: number; saved: number } | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const minify = () => {
     if (!input.trim()) {
@@ -55,7 +56,8 @@ export default function JsonMinifier() {
   const copyOutput = async () => {
     await navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadSample = () => {
@@ -71,6 +73,17 @@ export default function JsonMinifier() {
   "hobbies": ["reading", "gaming", "coding"]
 }`);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

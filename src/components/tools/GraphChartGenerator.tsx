@@ -1,105 +1,8 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactEChartsCore from 'echarts-for-react/lib/core';
-import * as echarts from 'echarts/core';
-import {
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-} from 'echarts/charts';
-import {
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-} from 'echarts/components';
-import { LabelLayout, UniversalTransition } from 'echarts/features';
-import { CanvasRenderer } from 'echarts/renderers';
-
-// 注册 ECharts 组件
-echarts.use([
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-  LabelLayout,
-  UniversalTransition,
-  CanvasRenderer,
-]);
-import type { EChartsOption } from 'echarts';
+import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
 
@@ -178,7 +81,8 @@ export default function GraphChartGenerator() {
       ]);
       setIsInitialized(true);
     }
-  }, [t, isInitialized]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInitialized]);
 
   // 链接
   const [links, setLinks] = useState<GraphLink[]>([
@@ -190,8 +94,9 @@ export default function GraphChartGenerator() {
     { source: '4', target: '6' },
     { source: '5', target: '6' },
   ]);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const chartRef = useRef<ReactEChartsCore>(null);
+  const chartRef = useRef<EChartsWrapperRef>(null);
   const chartTheme = useChartTheme();
 
   // 生成 ECharts 配置
@@ -379,6 +284,17 @@ export default function GraphChartGenerator() {
     }
   };
 
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
+
   return (
     <div className="space-y-4">
       {/* 工具栏 */}
@@ -560,9 +476,8 @@ export default function GraphChartGenerator() {
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
-            <ReactEChartsCore
+            <EChartsWrapper
               ref={chartRef}
-              echarts={echarts}
               option={getChartOption()}
               style={{ height: '400px', width: '100%' }}
               notMerge={true}

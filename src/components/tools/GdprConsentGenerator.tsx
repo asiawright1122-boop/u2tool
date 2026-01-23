@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface ConsentConfig {
@@ -41,6 +41,7 @@ export default function GdprConsentGenerator() {
   });
 
   const [copied, setCopied] = useState<string | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateHtmlCode = (): string => {
     const bgColor = config.theme === 'light' ? '#ffffff' : '#1f2937';
@@ -240,6 +241,17 @@ We may update this Privacy Policy from time to time. We will notify you of any c
     setCopied(type);
     setTimeout(() => setCopied(null), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

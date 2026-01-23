@@ -234,7 +234,8 @@ export default function RegexVisualizer() {
       setSvg('');
       setMatches([]);
     }
-  }, [pattern, testString, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pattern, testString]);
 
   const handleClear = () => {
     setPattern('');

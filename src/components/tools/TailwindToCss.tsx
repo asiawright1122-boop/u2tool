@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 // Tailwind to CSS mapping
@@ -124,6 +124,7 @@ export default function TailwindToCss() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convertClass = (className: string): string | null => {
     // Direct mapping
@@ -252,12 +253,24 @@ export default function TailwindToCss() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadExample = () => {
     setInput('flex flex-col justify-center items-center p-4 m-2 bg-[#ffffff] rounded-lg font-bold text-center');
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import * as XLSX from 'xlsx';
 
 interface FileData {
   id: string;
@@ -31,8 +30,9 @@ export default function ExcelMerger() {
       }
 
       const reader = new FileReader();
-      reader.onload = (event) => {
+      reader.onload = async (event) => {
         try {
+          const XLSX = await import('xlsx');
           const data = new Uint8Array(event.target?.result as ArrayBuffer);
           const workbook = XLSX.read(data, { type: 'array' });
           
@@ -52,7 +52,8 @@ export default function ExcelMerger() {
     });
 
     e.target.value = '';
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const removeFile = (id: string) => {
     setFiles(prev => prev.filter(f => f.id !== id));
@@ -70,7 +71,7 @@ export default function ExcelMerger() {
     }));
   };
 
-  const handleMerge = () => {
+  const handleMerge = async () => {
     const selectedSheets = files.flatMap(f => 
       f.sheets.filter(s => s.selected).map(s => ({ fileName: f.name, ...s }))
     );
@@ -81,6 +82,7 @@ export default function ExcelMerger() {
     }
 
     try {
+      const XLSX = await import('xlsx');
       const mergedData: Record<string, unknown>[] = [];
 
       if (mergeMode === 'vertical') {

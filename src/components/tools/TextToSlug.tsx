@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function TextToSlug() {
@@ -10,6 +10,7 @@ export default function TextToSlug() {
   const [separator, setSeparator] = useState('-');
   const [lowercase, setLowercase] = useState(true);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     let result = input
@@ -29,8 +30,20 @@ export default function TextToSlug() {
   const copySlug = async () => {
     await navigator.clipboard.writeText(slug);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

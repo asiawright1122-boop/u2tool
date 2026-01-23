@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function PasswordGenerator() {
@@ -15,6 +15,7 @@ export default function PasswordGenerator() {
     symbols: true,
   });
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generatePassword = () => {
     let chars = '';
@@ -44,12 +45,24 @@ export default function PasswordGenerator() {
   const copyPassword = async () => {
     await navigator.clipboard.writeText(password);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const toggleOption = (key: keyof typeof options) => {
     setOptions((prev) => ({ ...prev, [key]: !prev[key] }));
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

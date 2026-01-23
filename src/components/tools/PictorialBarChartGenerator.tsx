@@ -1,105 +1,8 @@
 'use client';
 
-import { useState, useRef, useCallback, useId, useEffect, useMemo } from 'react';
+import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactEChartsCore from 'echarts-for-react/lib/core';
-import * as echarts from 'echarts/core';
-import {
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-} from 'echarts/charts';
-import {
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-} from 'echarts/components';
-import { LabelLayout, UniversalTransition } from 'echarts/features';
-import { CanvasRenderer } from 'echarts/renderers';
-
-// 注册 ECharts 组件
-echarts.use([
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-  LabelLayout,
-  UniversalTransition,
-  CanvasRenderer,
-]);
-import type { EChartsOption } from 'echarts';
+import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
 
@@ -148,6 +51,7 @@ export default function PictorialBarChartGenerator() {
   const [symbol, setSymbol] = useState('roundRect');
   const [showLegend, setShowLegend] = useState(false);
   const [horizontal, setHorizontal] = useState(true);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     if (!isInitialized) {
@@ -159,9 +63,10 @@ export default function PictorialBarChartGenerator() {
       })));
       setIsInitialized(true);
     }
-  }, [t, isInitialized]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInitialized]);
 
-  const chartRef = useRef<ReactEChartsCore>(null);
+  const chartRef = useRef<EChartsWrapperRef>(null);
   const chartTheme = useChartTheme();
 
   const generateId = useCallback(() => {
@@ -340,6 +245,17 @@ export default function PictorialBarChartGenerator() {
     ]);
   };
 
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
+
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap gap-2">
@@ -427,9 +343,8 @@ export default function PictorialBarChartGenerator() {
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style={{ minHeight: '400px' }}>
-            <ReactEChartsCore
-              ref={chartRef}
-              echarts={echarts} option={getChartOption()} style={{ height: '400px', width: '100%' }} notMerge={true}
+            <EChartsWrapper
+              ref={chartRef} option={getChartOption()} style={{ height: '400px', width: '100%' }} notMerge={true}
               lazyUpdate={true}
             />
           </div>

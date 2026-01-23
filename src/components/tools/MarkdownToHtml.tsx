@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { sanitizeMarkdownHtml } from '@/lib/sanitize';
 
@@ -8,6 +8,7 @@ export default function MarkdownToHtml() {
   const t = useTranslations('tools');
   const [markdown, setMarkdown] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convertToHtml = (md: string): string => {
     let html = md;
@@ -69,8 +70,20 @@ export default function MarkdownToHtml() {
   const copyHtml = () => {
     navigator.clipboard.writeText(html);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

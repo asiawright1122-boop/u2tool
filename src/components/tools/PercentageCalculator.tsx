@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 // 计算函数
@@ -44,11 +44,13 @@ export default function PercentageCalculator() {
   const [isIncrease, setIsIncrease] = useState(true);
 
   const [copied, setCopied] = useState<string | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const copyResult = async (value: string, id: string) => {
     await navigator.clipboard.writeText(value);
     setCopied(id);
-    setTimeout(() => setCopied(null), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(null), 2000);
   };
 
   const result1 = calculatePercentageOf(parseFloat(value1) || 0, parseFloat(percent1) || 0);
@@ -59,6 +61,12 @@ export default function PercentageCalculator() {
     parseFloat(changePercent) || 0,
     isIncrease
   );
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   return (
     <div className="space-y-6">

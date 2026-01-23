@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 function inferGraphQLType(value: unknown, key: string): string {
@@ -72,6 +72,7 @@ export default function JsonToGraphql() {
   const [typeName, setTypeName] = useState('User');
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convert = () => {
     if (!input.trim()) {
@@ -93,7 +94,8 @@ export default function JsonToGraphql() {
   const copyOutput = async () => {
     await navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadSample = () => {
@@ -114,6 +116,17 @@ export default function JsonToGraphql() {
     }, null, 2));
     setTypeName('User');
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

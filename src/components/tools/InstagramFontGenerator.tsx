@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 // Unicode font mappings
@@ -73,6 +73,7 @@ export default function InstagramFontGenerator() {
   
   const [input, setInput] = useState('');
   const [copiedStyle, setCopiedStyle] = useState<string | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convertText = (text: string, style: string): string => {
     const mapping = fontMappings[style];
@@ -97,6 +98,17 @@ export default function InstagramFontGenerator() {
       // Fallback
     }
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

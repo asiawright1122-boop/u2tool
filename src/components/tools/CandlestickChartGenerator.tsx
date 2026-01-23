@@ -1,105 +1,8 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactEChartsCore from 'echarts-for-react/lib/core';
-import * as echarts from 'echarts/core';
-import {
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-} from 'echarts/charts';
-import {
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-} from 'echarts/components';
-import { LabelLayout, UniversalTransition } from 'echarts/features';
-import { CanvasRenderer } from 'echarts/renderers';
-
-// 注册 ECharts 组件
-echarts.use([
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-  LabelLayout,
-  UniversalTransition,
-  CanvasRenderer,
-]);
-import type { EChartsOption } from 'echarts';
+import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
 
@@ -129,7 +32,8 @@ export default function CandlestickChartGenerator() {
       setChartTitle(t('defaultTitle'));
       setIsInitialized(true);
     }
-  }, [t, isInitialized]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInitialized]);
   const [showMA10, setShowMA10] = useState(true);
   const [showMA20, setShowMA20] = useState(false);
   const [upColor, setUpColor] = useState('#00da3c');
@@ -146,8 +50,9 @@ export default function CandlestickChartGenerator() {
     { date: '2024-01-09', open: 112, close: 118, low: 111, high: 122 },
     { date: '2024-01-10', open: 118, close: 116, low: 114, high: 125 },
   ]);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const chartRef = useRef<ReactEChartsCore>(null);
+  const chartRef = useRef<EChartsWrapperRef>(null);
   const chartTheme = useChartTheme();
 
   // 计算移动平均线
@@ -378,6 +283,17 @@ export default function CandlestickChartGenerator() {
     }
   };
 
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
+
   return (
     <div className="space-y-4">
       {/* 工具栏 */}
@@ -539,9 +455,8 @@ export default function CandlestickChartGenerator() {
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
-            <ReactEChartsCore
+            <EChartsWrapper
               ref={chartRef}
-              echarts={echarts}
               option={getChartOption()}
               style={{ height: '400px', width: '100%' }}
               notMerge={true}

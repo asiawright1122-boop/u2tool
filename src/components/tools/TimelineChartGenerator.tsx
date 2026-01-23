@@ -1,105 +1,8 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactEChartsCore from 'echarts-for-react/lib/core';
-import * as echarts from 'echarts/core';
-import {
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-} from 'echarts/charts';
-import {
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-} from 'echarts/components';
-import { LabelLayout, UniversalTransition } from 'echarts/features';
-import { CanvasRenderer } from 'echarts/renderers';
-
-// 注册 ECharts 组件
-echarts.use([
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-  LabelLayout,
-  UniversalTransition,
-  CanvasRenderer,
-]);
-import type { EChartsOption } from 'echarts';
+import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
 
@@ -135,13 +38,15 @@ export default function TimelineChartGenerator() {
             { id: 2, year: '2021', title: t('sampleTitle2'), description: t('sampleDesc2') },
             { id: 3, year: '2022', title: t('sampleTitle3'), description: t('sampleDesc3') },
         ]);
-    }, [t]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const [chartTitle, setChartTitle] = useState('');
     const [colorTheme, setColorTheme] = useState<keyof typeof colorThemes>('default');
     const [direction, setDirection] = useState<'vertical' | 'horizontal'>('vertical');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-    const chartRef = useRef<ReactEChartsCore>(null);
+    const chartRef = useRef<EChartsWrapperRef>(null);
     const chartTheme = useChartTheme();
 
     const getChartOption = useCallback((): EChartsOption => {
@@ -269,6 +174,17 @@ export default function TimelineChartGenerator() {
         }
     };
 
+    useEffect(() => {
+
+      return () => {
+
+        if (timerRef.current) clearTimeout(timerRef.current);
+
+      };
+
+    }, []);
+
+
     return (
         <div className="space-y-4">
             <div className="flex flex-wrap gap-2">
@@ -362,9 +278,8 @@ export default function TimelineChartGenerator() {
                 <div>
                     <h3 className="text-sm font-medium mb-2">{t('chartPreview')}</h3>
                     <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '600px' }}>
-                        <ReactEChartsCore
+                        <EChartsWrapper
               ref={chartRef}
-              echarts={echarts}
                             option={getChartOption()}
                             style={{ height: '600px', width: '100%' }}
                             notMerge={true}

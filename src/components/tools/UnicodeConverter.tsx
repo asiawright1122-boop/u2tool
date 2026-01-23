@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function UnicodeConverter() {
@@ -9,6 +9,7 @@ export default function UnicodeConverter() {
   const [output, setOutput] = useState('');
   const [format, setFormat] = useState<'unicode' | 'html' | 'css'>('unicode');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const textToUnicode = () => {
     if (!input.trim()) {
@@ -72,7 +73,8 @@ export default function UnicodeConverter() {
   const copyOutput = async () => {
     await navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const examples = [
@@ -81,6 +83,17 @@ export default function UnicodeConverter() {
     { text: '日本語', desc: 'Japanese' },
     { text: '한국어', desc: 'Korean' },
   ];
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

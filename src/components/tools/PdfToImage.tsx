@@ -2,7 +2,6 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import * as pdfjsLib from 'pdfjs-dist';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 
@@ -24,7 +23,9 @@ export default function PdfToImage() {
 
   // Initialize PDF.js worker on client side only
   useEffect(() => {
-    pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+    import('pdfjs-dist').then((pdfjsLib) => {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+    });
   }, []);
 
   const handleFileUpload = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,6 +42,7 @@ export default function PdfToImage() {
     setFileName(file.name.replace('.pdf', ''));
 
     try {
+      const pdfjsLib = await import('pdfjs-dist');
       const arrayBuffer = await file.arrayBuffer();
       const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
       const previews: PagePreview[] = [];
@@ -66,7 +68,8 @@ export default function PdfToImage() {
       setLoading(false);
     }
     e.target.value = '';
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const togglePage = (pageNum: number) => {
     setPages(prev => prev.map(p => p.pageNum === pageNum ? { ...p, selected: !p.selected } : p));
@@ -84,6 +87,7 @@ export default function PdfToImage() {
 
     setLoading(true);
     try {
+      const pdfjsLib = await import('pdfjs-dist');
       const file = document.querySelector<HTMLInputElement>('#pdf-upload')?.files?.[0];
       if (!file) return;
 

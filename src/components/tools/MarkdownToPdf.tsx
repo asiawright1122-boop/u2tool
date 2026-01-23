@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function MarkdownToPdf() {
@@ -42,6 +42,7 @@ function hello() {
   const [title, setTitle] = useState('Document');
   const [fontSize, setFontSize] = useState(12);
   const [pageSize, setPageSize] = useState('a4');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const previewRef = useRef<HTMLDivElement>(null);
 
   const parseMarkdown = (md: string): string => {
@@ -155,6 +156,17 @@ function hello() {
       printWindow.print();
     }, 250);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

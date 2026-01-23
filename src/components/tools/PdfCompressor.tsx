@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import { PDFDocument } from 'pdf-lib';
 import { saveAs } from 'file-saver';
 
 export default function PdfCompressor() {
@@ -35,7 +34,8 @@ export default function PdfCompressor() {
     setCompressedBlob(null);
     setError('');
     e.target.value = '';
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleCompress = async () => {
     if (!file) return;
@@ -43,6 +43,7 @@ export default function PdfCompressor() {
     setError('');
 
     try {
+      const { PDFDocument } = await import('pdf-lib');
       const arrayBuffer = await file.arrayBuffer();
       const pdfDoc = await PDFDocument.load(arrayBuffer);
       

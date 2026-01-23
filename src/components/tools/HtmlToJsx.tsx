@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function HtmlToJsx() {
@@ -8,6 +8,7 @@ export default function HtmlToJsx() {
   const [html, setHtml] = useState('');
   const [jsx, setJsx] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convert = () => {
     let result = html
@@ -41,8 +42,20 @@ export default function HtmlToJsx() {
   const copy = async () => {
     await navigator.clipboard.writeText(jsx);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

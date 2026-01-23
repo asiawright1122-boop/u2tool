@@ -2,8 +2,6 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { PDFDocument, degrees } from 'pdf-lib';
-import * as pdfjsLib from 'pdfjs-dist';
 import { saveAs } from 'file-saver';
 
 interface PageInfo {
@@ -23,7 +21,9 @@ export default function PdfRotator() {
 
   // Initialize PDF.js worker on client side only
   useEffect(() => {
-    pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+    import('pdfjs-dist').then((pdfjsLib) => {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+    });
   }, []);
 
   const handleFileUpload = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,6 +38,7 @@ export default function PdfRotator() {
     setPdfFile(file);
 
     try {
+      const pdfjsLib = await import('pdfjs-dist');
       const arrayBuffer = await file.arrayBuffer();
       const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
       const pageInfos: PageInfo[] = [];
@@ -61,7 +62,8 @@ export default function PdfRotator() {
       setLoading(false);
     }
     e.target.value = '';
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const rotatePage = (pageNum: number, angle: number) => {
     setPages(prev => prev.map(p => 
@@ -83,6 +85,7 @@ export default function PdfRotator() {
     setError('');
 
     try {
+      const { PDFDocument, degrees } = await import('pdf-lib');
       const arrayBuffer = await pdfFile.arrayBuffer();
       const pdfDoc = await PDFDocument.load(arrayBuffer);
       const pdfPages = pdfDoc.getPages();

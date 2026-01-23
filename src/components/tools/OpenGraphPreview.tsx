@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function OpenGraphPreview() {
@@ -24,6 +24,7 @@ export default function OpenGraphPreview() {
   const [url, setUrl] = useState('');
   const [siteName, setSiteName] = useState('');
   const [previewType, setPreviewType] = useState<'facebook' | 'twitter' | 'linkedin'>('facebook');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // 初始化翻译值（只在组件挂载时执行一次）
   useEffect(() => {
@@ -34,7 +35,8 @@ export default function OpenGraphPreview() {
       setUrl('https://example.com/page');
       setIsInitialized(true);
     }
-  }, [t, isInitialized]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInitialized]);
 
   // 抓取 URL 的 OG 标签
   const fetchOgTags = async () => {
@@ -147,7 +149,8 @@ export default function OpenGraphPreview() {
     try {
       await navigator.clipboard.writeText(generateOgTags());
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
     } catch {
       // 复制失败
     }
@@ -157,6 +160,12 @@ export default function OpenGraphPreview() {
   const renderImage = (aspectClass: string) => {
     // 如果没有图片URL，显示默认占位图（模拟真实社交媒体预览）
     if (!image) {
+      useEffect(() => {
+        return () => {
+          if (timerRef.current) clearTimeout(timerRef.current);
+        };
+      }, []);
+
       return (
         <div className={`${aspectClass} bg-gradient-to-br from-gray-600 to-gray-800 relative`}>
           <div className="w-full h-full flex items-center justify-center text-gray-400">

@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import { PDFDocument } from 'pdf-lib';
 import { saveAs } from 'file-saver';
 
 interface PdfItem {
@@ -26,6 +25,7 @@ export default function PdfMerger() {
 
     setError('');
     const newPdfs: PdfItem[] = [];
+    const { PDFDocument } = await import('pdf-lib');
 
     for (const file of Array.from(files)) {
       if (!file.name.toLowerCase().endsWith('.pdf')) {
@@ -49,7 +49,8 @@ export default function PdfMerger() {
 
     setPdfs(prev => [...prev, ...newPdfs]);
     e.target.value = '';
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const removePdf = (id: string) => setPdfs(prev => prev.filter(p => p.id !== id));
 
@@ -71,6 +72,7 @@ export default function PdfMerger() {
     setError('');
 
     try {
+      const { PDFDocument } = await import('pdf-lib');
       const mergedPdf = await PDFDocument.create();
 
       for (const pdf of pdfs) {

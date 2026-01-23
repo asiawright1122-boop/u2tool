@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type StyleType = 'strikethrough' | 'underline' | 'crosshatch' | 'slash';
@@ -9,6 +9,7 @@ export default function StrikethroughText() {
   const t = useTranslations('tools.strikethrough-text');
   const [input, setInput] = useState('');
   const [copied, setCopied] = useState<string | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const applyStyle = (text: string, style: StyleType): string => {
     const chars: Record<StyleType, string> = {
@@ -32,6 +33,17 @@ export default function StrikethroughText() {
     { type: 'crosshatch', label: t('crosshatch'), example: 'C̷r̷o̷s̷s̷' },
     { type: 'slash', label: t('slash'), example: 'S̸l̸a̸s̸h̸' },
   ];
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

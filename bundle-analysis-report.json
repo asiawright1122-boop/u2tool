@@ -1,0 +1,3571 @@
+{
+  "timestamp": "2026-01-23T05:11:15.301Z",
+  "buildTime": "2026-01-23T04:23:23.881Z",
+  "totalSize": 8721304,
+  "totalGzipSize": 2737736,
+  "jsSize": 8595981,
+  "jsGzipSize": 2719605,
+  "cssSize": 125323,
+  "cssGzipSize": 18131,
+  "pages": [
+    {
+      "route": "/_app",
+      "files": [],
+      "totalSize": 0,
+      "totalGzipSize": 0,
+      "sharedChunks": []
+    }
+  ],
+  "chunks": [
+    {
+      "name": "01140cb7564c143e.js",
+      "path": "static/chunks/01140cb7564c143e.js",
+      "size": 1013958,
+      "gzipSize": 328935,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "921e394838ac6d37.js",
+      "path": "static/chunks/921e394838ac6d37.js",
+      "size": 408931,
+      "gzipSize": 138620,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d627a8f3344d4253.js",
+      "path": "static/chunks/d627a8f3344d4253.js",
+      "size": 417592,
+      "gzipSize": 133153,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c821cc0b1a883c4b.js",
+      "path": "static/chunks/c821cc0b1a883c4b.js",
+      "size": 403106,
+      "gzipSize": 116849,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "4b16d01399800fed.js",
+      "path": "static/chunks/4b16d01399800fed.js",
+      "size": 383749,
+      "gzipSize": 103529,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f1f678cbdda0b9e6.js",
+      "path": "static/chunks/f1f678cbdda0b9e6.js",
+      "size": 127881,
+      "gzipSize": 95399,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ae8d1dcdb3f64b58.js",
+      "path": "static/chunks/ae8d1dcdb3f64b58.js",
+      "size": 394504,
+      "gzipSize": 93893,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e389e09072bd51fe.js",
+      "path": "static/chunks/e389e09072bd51fe.js",
+      "size": 223660,
+      "gzipSize": 69913,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d4c617790317beab.js",
+      "path": "static/chunks/d4c617790317beab.js",
+      "size": 198804,
+      "gzipSize": 57352,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "bcb4554b5fd2d4a4.js",
+      "path": "static/chunks/bcb4554b5fd2d4a4.js",
+      "size": 157897,
+      "gzipSize": 49408,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2988bfaf82a45b76.js",
+      "path": "static/chunks/2988bfaf82a45b76.js",
+      "size": 198173,
+      "gzipSize": 45574,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8400175e58cec339.js",
+      "path": "static/chunks/8400175e58cec339.js",
+      "size": 155901,
+      "gzipSize": 40113,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a6dad97d9634a72d.js",
+      "path": "static/chunks/a6dad97d9634a72d.js",
+      "size": 112594,
+      "gzipSize": 39627,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e2a0b7a71c474ff9.js",
+      "path": "static/chunks/e2a0b7a71c474ff9.js",
+      "size": 144782,
+      "gzipSize": 32432,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6c469c659e50f6f1.js",
+      "path": "static/chunks/6c469c659e50f6f1.js",
+      "size": 91009,
+      "gzipSize": 28853,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "941680f0f7bc628f.js",
+      "path": "static/chunks/941680f0f7bc628f.js",
+      "size": 76144,
+      "gzipSize": 25228,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "638053bd5c9a5269.css",
+      "path": "static/chunks/638053bd5c9a5269.css",
+      "size": 121367,
+      "gzipSize": 17447,
+      "type": "css",
+      "category": "chunk"
+    },
+    {
+      "name": "fa6d8f4eceffebfb.js",
+      "path": "static/chunks/fa6d8f4eceffebfb.js",
+      "size": 48678,
+      "gzipSize": 16350,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "afa0516fe177dcfa.js",
+      "path": "static/chunks/afa0516fe177dcfa.js",
+      "size": 50688,
+      "gzipSize": 14831,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "fc6c5d08fee5361a.js",
+      "path": "static/chunks/fc6c5d08fee5361a.js",
+      "size": 54322,
+      "gzipSize": 14613,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "44ad702f7db2bad8.js",
+      "path": "static/chunks/44ad702f7db2bad8.js",
+      "size": 48134,
+      "gzipSize": 14390,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f1fc8e88e236133d.js",
+      "path": "static/chunks/f1fc8e88e236133d.js",
+      "size": 40845,
+      "gzipSize": 13461,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b21de4377f81eab2.js",
+      "path": "static/chunks/b21de4377f81eab2.js",
+      "size": 44065,
+      "gzipSize": 13255,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8f604070932bf869.js",
+      "path": "static/chunks/8f604070932bf869.js",
+      "size": 36794,
+      "gzipSize": 12560,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f4c91274c137f50d.js",
+      "path": "static/chunks/f4c91274c137f50d.js",
+      "size": 37180,
+      "gzipSize": 11489,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2cd692b73388f149.js",
+      "path": "static/chunks/2cd692b73388f149.js",
+      "size": 35693,
+      "gzipSize": 11302,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e803760541a3f00d.js",
+      "path": "static/chunks/e803760541a3f00d.js",
+      "size": 35713,
+      "gzipSize": 11279,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "49b2302d59036ad8.js",
+      "path": "static/chunks/49b2302d59036ad8.js",
+      "size": 35776,
+      "gzipSize": 11095,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "4096ed90fd338ab5.js",
+      "path": "static/chunks/4096ed90fd338ab5.js",
+      "size": 34350,
+      "gzipSize": 10961,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8426fe2e67cedb7f.js",
+      "path": "static/chunks/8426fe2e67cedb7f.js",
+      "size": 34540,
+      "gzipSize": 10952,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ba2a61aab762b3aa.js",
+      "path": "static/chunks/ba2a61aab762b3aa.js",
+      "size": 34557,
+      "gzipSize": 10932,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f6651ba17a6f339a.js",
+      "path": "static/chunks/f6651ba17a6f339a.js",
+      "size": 34275,
+      "gzipSize": 10913,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "456e08494e72563b.js",
+      "path": "static/chunks/456e08494e72563b.js",
+      "size": 34080,
+      "gzipSize": 10904,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "51170deaeb4acd97.js",
+      "path": "static/chunks/51170deaeb4acd97.js",
+      "size": 33871,
+      "gzipSize": 10892,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f51055eb6f3c097d.js",
+      "path": "static/chunks/f51055eb6f3c097d.js",
+      "size": 34409,
+      "gzipSize": 10870,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "baa5d26005c2cd9c.js",
+      "path": "static/chunks/baa5d26005c2cd9c.js",
+      "size": 34022,
+      "gzipSize": 10869,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "bc8e5125141f3dba.js",
+      "path": "static/chunks/bc8e5125141f3dba.js",
+      "size": 34092,
+      "gzipSize": 10837,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e0b94c9addc429f6.js",
+      "path": "static/chunks/e0b94c9addc429f6.js",
+      "size": 33712,
+      "gzipSize": 10833,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "7425ac6f44b004f8.js",
+      "path": "static/chunks/7425ac6f44b004f8.js",
+      "size": 33457,
+      "gzipSize": 10826,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "66c7abbd91204572.js",
+      "path": "static/chunks/66c7abbd91204572.js",
+      "size": 34494,
+      "gzipSize": 10822,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "fbaa78eaa362dfa8.js",
+      "path": "static/chunks/fbaa78eaa362dfa8.js",
+      "size": 34187,
+      "gzipSize": 10789,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "684783ec8a66366a.js",
+      "path": "static/chunks/684783ec8a66366a.js",
+      "size": 33822,
+      "gzipSize": 10762,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5680160ecd8cf5e6.js",
+      "path": "static/chunks/5680160ecd8cf5e6.js",
+      "size": 33197,
+      "gzipSize": 10733,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "dcc3cd5f61622a4e.js",
+      "path": "static/chunks/dcc3cd5f61622a4e.js",
+      "size": 32700,
+      "gzipSize": 10723,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e4e2b56af125f3fe.js",
+      "path": "static/chunks/e4e2b56af125f3fe.js",
+      "size": 33238,
+      "gzipSize": 10716,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b0046f553e1ff9cb.js",
+      "path": "static/chunks/b0046f553e1ff9cb.js",
+      "size": 33610,
+      "gzipSize": 10709,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "aabf58cd657632af.js",
+      "path": "static/chunks/aabf58cd657632af.js",
+      "size": 34042,
+      "gzipSize": 10708,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "05082b3bf95e4f76.js",
+      "path": "static/chunks/05082b3bf95e4f76.js",
+      "size": 34135,
+      "gzipSize": 10706,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "50ca5a1d4488e74c.js",
+      "path": "static/chunks/50ca5a1d4488e74c.js",
+      "size": 33372,
+      "gzipSize": 10667,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b0cfd428502fabe9.js",
+      "path": "static/chunks/b0cfd428502fabe9.js",
+      "size": 32527,
+      "gzipSize": 10660,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "44c5a0c998fab979.js",
+      "path": "static/chunks/44c5a0c998fab979.js",
+      "size": 33002,
+      "gzipSize": 10633,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2a1078e111b3eec4.js",
+      "path": "static/chunks/2a1078e111b3eec4.js",
+      "size": 33207,
+      "gzipSize": 10532,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ab44fd0355205a05.js",
+      "path": "static/chunks/ab44fd0355205a05.js",
+      "size": 32116,
+      "gzipSize": 10530,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ab917eb69edd1955.js",
+      "path": "static/chunks/ab917eb69edd1955.js",
+      "size": 33591,
+      "gzipSize": 10512,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "798cd847a44cb032.js",
+      "path": "static/chunks/798cd847a44cb032.js",
+      "size": 32076,
+      "gzipSize": 10473,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5dbeb1f0beefe134.js",
+      "path": "static/chunks/5dbeb1f0beefe134.js",
+      "size": 32047,
+      "gzipSize": 10439,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2a30a447b18fe843.js",
+      "path": "static/chunks/2a30a447b18fe843.js",
+      "size": 31956,
+      "gzipSize": 10397,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "02704f28d9619033.js",
+      "path": "static/chunks/02704f28d9619033.js",
+      "size": 33349,
+      "gzipSize": 10360,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d4f2b14a97f40376.js",
+      "path": "static/chunks/d4f2b14a97f40376.js",
+      "size": 31642,
+      "gzipSize": 10339,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a1efffae6bbdd141.js",
+      "path": "static/chunks/a1efffae6bbdd141.js",
+      "size": 31984,
+      "gzipSize": 10300,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "00d62794ed82dee8.js",
+      "path": "static/chunks/00d62794ed82dee8.js",
+      "size": 30880,
+      "gzipSize": 10250,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "178472f74560a1f5.js",
+      "path": "static/chunks/178472f74560a1f5.js",
+      "size": 31314,
+      "gzipSize": 10236,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "bf6ac878919f39a8.js",
+      "path": "static/chunks/bf6ac878919f39a8.js",
+      "size": 31072,
+      "gzipSize": 10171,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2f7e5e457a246779.js",
+      "path": "static/chunks/2f7e5e457a246779.js",
+      "size": 30714,
+      "gzipSize": 10159,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "4a90dba12fe2638b.js",
+      "path": "static/chunks/4a90dba12fe2638b.js",
+      "size": 30297,
+      "gzipSize": 10067,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "bdd7cdba5fb8647e.js",
+      "path": "static/chunks/bdd7cdba5fb8647e.js",
+      "size": 29752,
+      "gzipSize": 9751,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2518f30b5bf06807.js",
+      "path": "static/chunks/2518f30b5bf06807.js",
+      "size": 25075,
+      "gzipSize": 9405,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b0ec8859ea966e9b.js",
+      "path": "static/chunks/b0ec8859ea966e9b.js",
+      "size": 23855,
+      "gzipSize": 9018,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1185fb3010c225e5.js",
+      "path": "static/chunks/1185fb3010c225e5.js",
+      "size": 28049,
+      "gzipSize": 8971,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d6800c905110f460.js",
+      "path": "static/chunks/d6800c905110f460.js",
+      "size": 27544,
+      "gzipSize": 8949,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "358007621ee47222.js",
+      "path": "static/chunks/358007621ee47222.js",
+      "size": 27568,
+      "gzipSize": 8938,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "46603fba5a342911.js",
+      "path": "static/chunks/46603fba5a342911.js",
+      "size": 27883,
+      "gzipSize": 8912,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "87a02bc56f381441.js",
+      "path": "static/chunks/87a02bc56f381441.js",
+      "size": 27079,
+      "gzipSize": 8844,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8719d874626f0aac.js",
+      "path": "static/chunks/8719d874626f0aac.js",
+      "size": 27659,
+      "gzipSize": 8843,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "022afc80f69f73e4.js",
+      "path": "static/chunks/022afc80f69f73e4.js",
+      "size": 26726,
+      "gzipSize": 8534,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e551d4a510c7c3c6.js",
+      "path": "static/chunks/e551d4a510c7c3c6.js",
+      "size": 22200,
+      "gzipSize": 8460,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c32fa4ed0a1a94ab.js",
+      "path": "static/chunks/c32fa4ed0a1a94ab.js",
+      "size": 25957,
+      "gzipSize": 8431,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5d4cd7455740f278.js",
+      "path": "static/chunks/5d4cd7455740f278.js",
+      "size": 25946,
+      "gzipSize": 8428,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "7100c3fa025356ae.js",
+      "path": "static/chunks/7100c3fa025356ae.js",
+      "size": 25688,
+      "gzipSize": 8352,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "276d7276c46e76c6.js",
+      "path": "static/chunks/276d7276c46e76c6.js",
+      "size": 22058,
+      "gzipSize": 8345,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0da9bc89c65fcdc4.js",
+      "path": "static/chunks/0da9bc89c65fcdc4.js",
+      "size": 44391,
+      "gzipSize": 8325,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9c4b3812ad655463.js",
+      "path": "static/chunks/9c4b3812ad655463.js",
+      "size": 25396,
+      "gzipSize": 8234,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "963c71eec1d89c3f.js",
+      "path": "static/chunks/963c71eec1d89c3f.js",
+      "size": 30808,
+      "gzipSize": 7489,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6754254aba73bb55.js",
+      "path": "static/chunks/6754254aba73bb55.js",
+      "size": 22704,
+      "gzipSize": 7167,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "3effec5e71bdd6cb.js",
+      "path": "static/chunks/3effec5e71bdd6cb.js",
+      "size": 20763,
+      "gzipSize": 6520,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "cfc0503a5f5c0b4b.js",
+      "path": "static/chunks/cfc0503a5f5c0b4b.js",
+      "size": 25522,
+      "gzipSize": 5603,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a9997dda409adf71.js",
+      "path": "static/chunks/a9997dda409adf71.js",
+      "size": 17349,
+      "gzipSize": 5129,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e6e0fe82689c2ed4.js",
+      "path": "static/chunks/e6e0fe82689c2ed4.js",
+      "size": 11371,
+      "gzipSize": 4675,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5dc184421b429008.js",
+      "path": "static/chunks/5dc184421b429008.js",
+      "size": 11238,
+      "gzipSize": 4157,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6167f6a8f53eac7d.js",
+      "path": "static/chunks/6167f6a8f53eac7d.js",
+      "size": 18012,
+      "gzipSize": 4060,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a0ed531e633b3124.js",
+      "path": "static/chunks/a0ed531e633b3124.js",
+      "size": 11042,
+      "gzipSize": 4022,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "turbopack-02bf2039e78d1718.js",
+      "path": "static/chunks/turbopack-02bf2039e78d1718.js",
+      "size": 10215,
+      "gzipSize": 4000,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f47133b436f7dea9.js",
+      "path": "static/chunks/f47133b436f7dea9.js",
+      "size": 16426,
+      "gzipSize": 3944,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "41a832cdce0298ff.js",
+      "path": "static/chunks/41a832cdce0298ff.js",
+      "size": 10380,
+      "gzipSize": 3916,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ef6a0e71ac67de9a.js",
+      "path": "static/chunks/ef6a0e71ac67de9a.js",
+      "size": 10683,
+      "gzipSize": 3895,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "275ac6d1df08fc00.js",
+      "path": "static/chunks/275ac6d1df08fc00.js",
+      "size": 10568,
+      "gzipSize": 3873,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8dd8354990cbbbea.js",
+      "path": "static/chunks/8dd8354990cbbbea.js",
+      "size": 11632,
+      "gzipSize": 3857,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c0615fd1d0504d69.js",
+      "path": "static/chunks/c0615fd1d0504d69.js",
+      "size": 9435,
+      "gzipSize": 3852,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e69e2a9531a19424.js",
+      "path": "static/chunks/e69e2a9531a19424.js",
+      "size": 10873,
+      "gzipSize": 3730,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b54ee47ac19c0c54.js",
+      "path": "static/chunks/b54ee47ac19c0c54.js",
+      "size": 10888,
+      "gzipSize": 3728,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "fd8473d8f2cd72cc.js",
+      "path": "static/chunks/fd8473d8f2cd72cc.js",
+      "size": 10215,
+      "gzipSize": 3726,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "885551939c772eb0.js",
+      "path": "static/chunks/885551939c772eb0.js",
+      "size": 10121,
+      "gzipSize": 3709,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ac8cc4da3d13a1d8.js",
+      "path": "static/chunks/ac8cc4da3d13a1d8.js",
+      "size": 9996,
+      "gzipSize": 3658,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "dd0068c3857d6c4f.js",
+      "path": "static/chunks/dd0068c3857d6c4f.js",
+      "size": 9914,
+      "gzipSize": 3590,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "4abf4235c56f106a.js",
+      "path": "static/chunks/4abf4235c56f106a.js",
+      "size": 7118,
+      "gzipSize": 3532,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "df8ae67bf579eb79.js",
+      "path": "static/chunks/df8ae67bf579eb79.js",
+      "size": 9588,
+      "gzipSize": 3511,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "32cfa72e70da4429.js",
+      "path": "static/chunks/32cfa72e70da4429.js",
+      "size": 10117,
+      "gzipSize": 3449,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6a6fe58356b0a478.js",
+      "path": "static/chunks/6a6fe58356b0a478.js",
+      "size": 11564,
+      "gzipSize": 3429,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "3229ff03b53737bf.js",
+      "path": "static/chunks/3229ff03b53737bf.js",
+      "size": 13243,
+      "gzipSize": 3427,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9a39fb8793129c0b.js",
+      "path": "static/chunks/9a39fb8793129c0b.js",
+      "size": 9379,
+      "gzipSize": 3124,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c74a79d43e016d37.js",
+      "path": "static/chunks/c74a79d43e016d37.js",
+      "size": 8311,
+      "gzipSize": 3087,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "196c170cf3f61daf.js",
+      "path": "static/chunks/196c170cf3f61daf.js",
+      "size": 6923,
+      "gzipSize": 3059,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1a237119c0386ddd.js",
+      "path": "static/chunks/1a237119c0386ddd.js",
+      "size": 9524,
+      "gzipSize": 3058,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9eba98f42b68adb0.js",
+      "path": "static/chunks/9eba98f42b68adb0.js",
+      "size": 7479,
+      "gzipSize": 3019,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1dba4f20852e67b2.js",
+      "path": "static/chunks/1dba4f20852e67b2.js",
+      "size": 9329,
+      "gzipSize": 2991,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0a6724de1caca099.js",
+      "path": "static/chunks/0a6724de1caca099.js",
+      "size": 10260,
+      "gzipSize": 2971,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "60503d8519544bee.js",
+      "path": "static/chunks/60503d8519544bee.js",
+      "size": 12356,
+      "gzipSize": 2928,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9fcdc777e926c6af.js",
+      "path": "static/chunks/9fcdc777e926c6af.js",
+      "size": 8961,
+      "gzipSize": 2910,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a54789ffa7d7b18f.js",
+      "path": "static/chunks/a54789ffa7d7b18f.js",
+      "size": 9257,
+      "gzipSize": 2901,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "dce26123de8005c8.js",
+      "path": "static/chunks/dce26123de8005c8.js",
+      "size": 11034,
+      "gzipSize": 2837,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "195770bbb7468b28.js",
+      "path": "static/chunks/195770bbb7468b28.js",
+      "size": 9660,
+      "gzipSize": 2815,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "da52461633b5bcf7.js",
+      "path": "static/chunks/da52461633b5bcf7.js",
+      "size": 10871,
+      "gzipSize": 2812,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "edbc935de5b63e88.js",
+      "path": "static/chunks/edbc935de5b63e88.js",
+      "size": 8442,
+      "gzipSize": 2775,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d59e6323b369eb5e.js",
+      "path": "static/chunks/d59e6323b369eb5e.js",
+      "size": 8906,
+      "gzipSize": 2753,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9bc802cb313c6620.js",
+      "path": "static/chunks/9bc802cb313c6620.js",
+      "size": 6663,
+      "gzipSize": 2744,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8c52a23d34202f15.js",
+      "path": "static/chunks/8c52a23d34202f15.js",
+      "size": 8562,
+      "gzipSize": 2633,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "7deeb6e6902de10b.js",
+      "path": "static/chunks/7deeb6e6902de10b.js",
+      "size": 6526,
+      "gzipSize": 2610,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0713274f8057a0fc.js",
+      "path": "static/chunks/0713274f8057a0fc.js",
+      "size": 4663,
+      "gzipSize": 2603,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "35ef3bbfc6052856.js",
+      "path": "static/chunks/35ef3bbfc6052856.js",
+      "size": 5662,
+      "gzipSize": 2598,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b16b58b7cdacc3f5.js",
+      "path": "static/chunks/b16b58b7cdacc3f5.js",
+      "size": 8000,
+      "gzipSize": 2598,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "20c8c6657db80f98.js",
+      "path": "static/chunks/20c8c6657db80f98.js",
+      "size": 8985,
+      "gzipSize": 2556,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "4f830d1c91a27e61.js",
+      "path": "static/chunks/4f830d1c91a27e61.js",
+      "size": 7730,
+      "gzipSize": 2553,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a982a62ef52a8001.js",
+      "path": "static/chunks/a982a62ef52a8001.js",
+      "size": 6415,
+      "gzipSize": 2522,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "95c8e38ddfd480c3.js",
+      "path": "static/chunks/95c8e38ddfd480c3.js",
+      "size": 7497,
+      "gzipSize": 2487,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b4c34c8eebaec4af.js",
+      "path": "static/chunks/b4c34c8eebaec4af.js",
+      "size": 7645,
+      "gzipSize": 2487,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9ce0f8af1fb3333c.js",
+      "path": "static/chunks/9ce0f8af1fb3333c.js",
+      "size": 7313,
+      "gzipSize": 2481,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "fee2b597454d02fa.js",
+      "path": "static/chunks/fee2b597454d02fa.js",
+      "size": 7018,
+      "gzipSize": 2473,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f1a63be52993cec9.js",
+      "path": "static/chunks/f1a63be52993cec9.js",
+      "size": 6718,
+      "gzipSize": 2451,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "dcacc14123449c08.js",
+      "path": "static/chunks/dcacc14123449c08.js",
+      "size": 6976,
+      "gzipSize": 2437,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ad84e6d153459a29.js",
+      "path": "static/chunks/ad84e6d153459a29.js",
+      "size": 8337,
+      "gzipSize": 2428,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6d25ecb005c88bbb.js",
+      "path": "static/chunks/6d25ecb005c88bbb.js",
+      "size": 10594,
+      "gzipSize": 2422,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c0d014f6fe17084c.js",
+      "path": "static/chunks/c0d014f6fe17084c.js",
+      "size": 7359,
+      "gzipSize": 2391,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f5a7828a0fda75ca.js",
+      "path": "static/chunks/f5a7828a0fda75ca.js",
+      "size": 5797,
+      "gzipSize": 2388,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "7619ee093dd661a9.js",
+      "path": "static/chunks/7619ee093dd661a9.js",
+      "size": 7369,
+      "gzipSize": 2355,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "633d81bad51e389f.js",
+      "path": "static/chunks/633d81bad51e389f.js",
+      "size": 6205,
+      "gzipSize": 2350,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "02ebe36c595fc31a.js",
+      "path": "static/chunks/02ebe36c595fc31a.js",
+      "size": 5386,
+      "gzipSize": 2319,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "16731f4437d3596a.js",
+      "path": "static/chunks/16731f4437d3596a.js",
+      "size": 8362,
+      "gzipSize": 2303,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "51570dbeade5f77f.js",
+      "path": "static/chunks/51570dbeade5f77f.js",
+      "size": 6953,
+      "gzipSize": 2284,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8986543f4cfa5bf1.js",
+      "path": "static/chunks/8986543f4cfa5bf1.js",
+      "size": 7296,
+      "gzipSize": 2283,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "4a17245e6d5f1c97.js",
+      "path": "static/chunks/4a17245e6d5f1c97.js",
+      "size": 7931,
+      "gzipSize": 2274,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a85f973061447750.js",
+      "path": "static/chunks/a85f973061447750.js",
+      "size": 5662,
+      "gzipSize": 2267,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0eefeedddbeef4ae.js",
+      "path": "static/chunks/0eefeedddbeef4ae.js",
+      "size": 7707,
+      "gzipSize": 2240,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d7cd4c13092f5d6b.js",
+      "path": "static/chunks/d7cd4c13092f5d6b.js",
+      "size": 6114,
+      "gzipSize": 2202,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "4dc7db52a4e8388f.js",
+      "path": "static/chunks/4dc7db52a4e8388f.js",
+      "size": 7007,
+      "gzipSize": 2199,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0d65e917faf0fc7b.js",
+      "path": "static/chunks/0d65e917faf0fc7b.js",
+      "size": 6436,
+      "gzipSize": 2194,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "712b1900293ea35c.js",
+      "path": "static/chunks/712b1900293ea35c.js",
+      "size": 6635,
+      "gzipSize": 2182,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "fc422a89aea139f7.js",
+      "path": "static/chunks/fc422a89aea139f7.js",
+      "size": 9562,
+      "gzipSize": 2175,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8fe950e05d293ef2.js",
+      "path": "static/chunks/8fe950e05d293ef2.js",
+      "size": 5937,
+      "gzipSize": 2156,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f7b4aa1bb001c403.js",
+      "path": "static/chunks/f7b4aa1bb001c403.js",
+      "size": 5392,
+      "gzipSize": 2147,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "61e9216b17b9c762.js",
+      "path": "static/chunks/61e9216b17b9c762.js",
+      "size": 6445,
+      "gzipSize": 2116,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0440ca646bf41972.js",
+      "path": "static/chunks/0440ca646bf41972.js",
+      "size": 6681,
+      "gzipSize": 2115,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "7227e4e15e3ea7d3.js",
+      "path": "static/chunks/7227e4e15e3ea7d3.js",
+      "size": 6538,
+      "gzipSize": 2115,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "47fe29b1356e2918.js",
+      "path": "static/chunks/47fe29b1356e2918.js",
+      "size": 5738,
+      "gzipSize": 2105,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d4333d57c9c5c9aa.js",
+      "path": "static/chunks/d4333d57c9c5c9aa.js",
+      "size": 7472,
+      "gzipSize": 2087,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f35487fc5369f2fc.js",
+      "path": "static/chunks/f35487fc5369f2fc.js",
+      "size": 6227,
+      "gzipSize": 2082,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "00a413cce976a9d7.js",
+      "path": "static/chunks/00a413cce976a9d7.js",
+      "size": 5426,
+      "gzipSize": 2048,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b423bb7d429e9508.js",
+      "path": "static/chunks/b423bb7d429e9508.js",
+      "size": 5570,
+      "gzipSize": 2042,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a7d3ce89bb237ec9.js",
+      "path": "static/chunks/a7d3ce89bb237ec9.js",
+      "size": 6007,
+      "gzipSize": 2039,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "dae4c84ccd8987cf.js",
+      "path": "static/chunks/dae4c84ccd8987cf.js",
+      "size": 6824,
+      "gzipSize": 2028,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1b1f30c34ea8bceb.js",
+      "path": "static/chunks/1b1f30c34ea8bceb.js",
+      "size": 6748,
+      "gzipSize": 2018,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "df3bff5375edb383.js",
+      "path": "static/chunks/df3bff5375edb383.js",
+      "size": 6439,
+      "gzipSize": 2015,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "71a143219afffd67.js",
+      "path": "static/chunks/71a143219afffd67.js",
+      "size": 4773,
+      "gzipSize": 2008,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ab20f5febd8c65fe.js",
+      "path": "static/chunks/ab20f5febd8c65fe.js",
+      "size": 6141,
+      "gzipSize": 1993,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "754c692c3db96f66.js",
+      "path": "static/chunks/754c692c3db96f66.js",
+      "size": 5653,
+      "gzipSize": 1979,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "976d68864d2ba882.js",
+      "path": "static/chunks/976d68864d2ba882.js",
+      "size": 5428,
+      "gzipSize": 1956,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1407f52e00d8c9bd.js",
+      "path": "static/chunks/1407f52e00d8c9bd.js",
+      "size": 8484,
+      "gzipSize": 1949,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a0d509adeb960625.js",
+      "path": "static/chunks/a0d509adeb960625.js",
+      "size": 4141,
+      "gzipSize": 1949,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b281a4e77fea9105.js",
+      "path": "static/chunks/b281a4e77fea9105.js",
+      "size": 6187,
+      "gzipSize": 1949,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2f63376e7db9a4fb.js",
+      "path": "static/chunks/2f63376e7db9a4fb.js",
+      "size": 5688,
+      "gzipSize": 1946,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1625bd5d2a3be8b2.js",
+      "path": "static/chunks/1625bd5d2a3be8b2.js",
+      "size": 9121,
+      "gzipSize": 1943,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "eeca6af01244f100.js",
+      "path": "static/chunks/eeca6af01244f100.js",
+      "size": 4892,
+      "gzipSize": 1935,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9e37534aba3647f3.js",
+      "path": "static/chunks/9e37534aba3647f3.js",
+      "size": 5971,
+      "gzipSize": 1929,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c9d37d4d5d85cff5.js",
+      "path": "static/chunks/c9d37d4d5d85cff5.js",
+      "size": 6440,
+      "gzipSize": 1916,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8725f1f8596727e4.js",
+      "path": "static/chunks/8725f1f8596727e4.js",
+      "size": 6397,
+      "gzipSize": 1890,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "19e264c58ade6b8c.js",
+      "path": "static/chunks/19e264c58ade6b8c.js",
+      "size": 7840,
+      "gzipSize": 1888,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2be117816e0346bf.js",
+      "path": "static/chunks/2be117816e0346bf.js",
+      "size": 7808,
+      "gzipSize": 1884,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a14fc589fe2a4a66.js",
+      "path": "static/chunks/a14fc589fe2a4a66.js",
+      "size": 4637,
+      "gzipSize": 1875,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "24a917f610a6424f.js",
+      "path": "static/chunks/24a917f610a6424f.js",
+      "size": 6641,
+      "gzipSize": 1867,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0525f319543f3d07.js",
+      "path": "static/chunks/0525f319543f3d07.js",
+      "size": 5955,
+      "gzipSize": 1861,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "892fd5e99545b230.js",
+      "path": "static/chunks/892fd5e99545b230.js",
+      "size": 7925,
+      "gzipSize": 1857,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5adaf8b2a33413c8.js",
+      "path": "static/chunks/5adaf8b2a33413c8.js",
+      "size": 5677,
+      "gzipSize": 1849,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e98f4a649071a26e.js",
+      "path": "static/chunks/e98f4a649071a26e.js",
+      "size": 7070,
+      "gzipSize": 1841,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b62eee0b882c5afa.js",
+      "path": "static/chunks/b62eee0b882c5afa.js",
+      "size": 4479,
+      "gzipSize": 1832,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d5a2217ac18996df.js",
+      "path": "static/chunks/d5a2217ac18996df.js",
+      "size": 5633,
+      "gzipSize": 1826,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "783047e5e5a415b2.js",
+      "path": "static/chunks/783047e5e5a415b2.js",
+      "size": 4741,
+      "gzipSize": 1823,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "3bfe389d522fd072.js",
+      "path": "static/chunks/3bfe389d522fd072.js",
+      "size": 5586,
+      "gzipSize": 1818,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "acfb11dce0ca5746.js",
+      "path": "static/chunks/acfb11dce0ca5746.js",
+      "size": 5656,
+      "gzipSize": 1817,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "59ea5224eef4f003.js",
+      "path": "static/chunks/59ea5224eef4f003.js",
+      "size": 5056,
+      "gzipSize": 1816,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e7588649dae22c29.js",
+      "path": "static/chunks/e7588649dae22c29.js",
+      "size": 5993,
+      "gzipSize": 1803,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "13e28223e616dabc.js",
+      "path": "static/chunks/13e28223e616dabc.js",
+      "size": 4590,
+      "gzipSize": 1801,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ca2accf19b8a7097.js",
+      "path": "static/chunks/ca2accf19b8a7097.js",
+      "size": 5059,
+      "gzipSize": 1800,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e57e7ded8613d692.js",
+      "path": "static/chunks/e57e7ded8613d692.js",
+      "size": 5638,
+      "gzipSize": 1785,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c7da665db46eb02e.js",
+      "path": "static/chunks/c7da665db46eb02e.js",
+      "size": 6126,
+      "gzipSize": 1781,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "412775aad2c02c84.js",
+      "path": "static/chunks/412775aad2c02c84.js",
+      "size": 7203,
+      "gzipSize": 1780,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f745f645f1ff77c2.js",
+      "path": "static/chunks/f745f645f1ff77c2.js",
+      "size": 6355,
+      "gzipSize": 1778,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "657cea631301fb82.js",
+      "path": "static/chunks/657cea631301fb82.js",
+      "size": 5247,
+      "gzipSize": 1775,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2bb4ada1590171de.js",
+      "path": "static/chunks/2bb4ada1590171de.js",
+      "size": 5412,
+      "gzipSize": 1771,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "662474e64fd54d9a.js",
+      "path": "static/chunks/662474e64fd54d9a.js",
+      "size": 5418,
+      "gzipSize": 1770,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e60330ff33063f80.js",
+      "path": "static/chunks/e60330ff33063f80.js",
+      "size": 4558,
+      "gzipSize": 1752,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f36d26f7ec62be00.js",
+      "path": "static/chunks/f36d26f7ec62be00.js",
+      "size": 4721,
+      "gzipSize": 1740,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "98638a57411f4d04.js",
+      "path": "static/chunks/98638a57411f4d04.js",
+      "size": 5241,
+      "gzipSize": 1738,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d8b082cfefb055c2.js",
+      "path": "static/chunks/d8b082cfefb055c2.js",
+      "size": 5423,
+      "gzipSize": 1737,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9e38a9935a742080.js",
+      "path": "static/chunks/9e38a9935a742080.js",
+      "size": 3548,
+      "gzipSize": 1735,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "697e8fb0add2af56.js",
+      "path": "static/chunks/697e8fb0add2af56.js",
+      "size": 7076,
+      "gzipSize": 1731,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b1f7d64e3774f327.js",
+      "path": "static/chunks/b1f7d64e3774f327.js",
+      "size": 5010,
+      "gzipSize": 1729,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "fd3e74b3fc0596f0.js",
+      "path": "static/chunks/fd3e74b3fc0596f0.js",
+      "size": 4354,
+      "gzipSize": 1715,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "3cdb905c7b607e57.js",
+      "path": "static/chunks/3cdb905c7b607e57.js",
+      "size": 4851,
+      "gzipSize": 1712,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "035eaf325526bbe3.js",
+      "path": "static/chunks/035eaf325526bbe3.js",
+      "size": 4676,
+      "gzipSize": 1706,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2e37568b17f9fbde.js",
+      "path": "static/chunks/2e37568b17f9fbde.js",
+      "size": 4193,
+      "gzipSize": 1706,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "7918e2e8fd7ba469.js",
+      "path": "static/chunks/7918e2e8fd7ba469.js",
+      "size": 6186,
+      "gzipSize": 1705,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e675fc743298b305.js",
+      "path": "static/chunks/e675fc743298b305.js",
+      "size": 4086,
+      "gzipSize": 1698,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "17157db57ccef8b2.js",
+      "path": "static/chunks/17157db57ccef8b2.js",
+      "size": 4834,
+      "gzipSize": 1697,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "065b58806427ab5a.js",
+      "path": "static/chunks/065b58806427ab5a.js",
+      "size": 7274,
+      "gzipSize": 1692,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2b16b657e87dc5b2.js",
+      "path": "static/chunks/2b16b657e87dc5b2.js",
+      "size": 5358,
+      "gzipSize": 1691,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "eaa9e48e6e11e9dc.js",
+      "path": "static/chunks/eaa9e48e6e11e9dc.js",
+      "size": 4752,
+      "gzipSize": 1690,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "746b31d97ec07984.js",
+      "path": "static/chunks/746b31d97ec07984.js",
+      "size": 5190,
+      "gzipSize": 1678,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8c7cb9d5d3120eb0.js",
+      "path": "static/chunks/8c7cb9d5d3120eb0.js",
+      "size": 5680,
+      "gzipSize": 1677,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d43c1b8873877231.js",
+      "path": "static/chunks/d43c1b8873877231.js",
+      "size": 5672,
+      "gzipSize": 1669,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ae8f963521cba5d2.js",
+      "path": "static/chunks/ae8f963521cba5d2.js",
+      "size": 4563,
+      "gzipSize": 1668,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5fd321ea95246d67.js",
+      "path": "static/chunks/5fd321ea95246d67.js",
+      "size": 3572,
+      "gzipSize": 1665,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "59185ab4976a01f7.js",
+      "path": "static/chunks/59185ab4976a01f7.js",
+      "size": 4952,
+      "gzipSize": 1660,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "3330b759744e9173.js",
+      "path": "static/chunks/3330b759744e9173.js",
+      "size": 4354,
+      "gzipSize": 1651,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c6e6c917b211e6d7.js",
+      "path": "static/chunks/c6e6c917b211e6d7.js",
+      "size": 4673,
+      "gzipSize": 1650,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e59d2b6b0b357cc1.js",
+      "path": "static/chunks/e59d2b6b0b357cc1.js",
+      "size": 4973,
+      "gzipSize": 1648,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d748be2a04c7e970.js",
+      "path": "static/chunks/d748be2a04c7e970.js",
+      "size": 3684,
+      "gzipSize": 1647,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "79acde97aad45888.js",
+      "path": "static/chunks/79acde97aad45888.js",
+      "size": 5497,
+      "gzipSize": 1644,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2717125f284eb3f9.js",
+      "path": "static/chunks/2717125f284eb3f9.js",
+      "size": 5884,
+      "gzipSize": 1636,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c036850d5f9210c1.js",
+      "path": "static/chunks/c036850d5f9210c1.js",
+      "size": 8210,
+      "gzipSize": 1634,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0fed5cb95d6a4328.js",
+      "path": "static/chunks/0fed5cb95d6a4328.js",
+      "size": 5759,
+      "gzipSize": 1630,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f254e6d980782528.js",
+      "path": "static/chunks/f254e6d980782528.js",
+      "size": 8170,
+      "gzipSize": 1624,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ba9238bc582674ed.js",
+      "path": "static/chunks/ba9238bc582674ed.js",
+      "size": 4036,
+      "gzipSize": 1611,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e50161b7129d359f.js",
+      "path": "static/chunks/e50161b7129d359f.js",
+      "size": 4384,
+      "gzipSize": 1597,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6ba381d0d4df4728.js",
+      "path": "static/chunks/6ba381d0d4df4728.js",
+      "size": 5340,
+      "gzipSize": 1591,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "be26cd31e5110884.js",
+      "path": "static/chunks/be26cd31e5110884.js",
+      "size": 6132,
+      "gzipSize": 1589,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "577bae33033789ce.js",
+      "path": "static/chunks/577bae33033789ce.js",
+      "size": 5782,
+      "gzipSize": 1575,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "70183647805f70a2.js",
+      "path": "static/chunks/70183647805f70a2.js",
+      "size": 3201,
+      "gzipSize": 1575,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a684b9fa9be9a929.js",
+      "path": "static/chunks/a684b9fa9be9a929.js",
+      "size": 4293,
+      "gzipSize": 1575,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "348c2ddc09ec2f13.js",
+      "path": "static/chunks/348c2ddc09ec2f13.js",
+      "size": 3417,
+      "gzipSize": 1574,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d95a252469a74f3e.js",
+      "path": "static/chunks/d95a252469a74f3e.js",
+      "size": 4253,
+      "gzipSize": 1567,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "369f3598cba0e532.js",
+      "path": "static/chunks/369f3598cba0e532.js",
+      "size": 4604,
+      "gzipSize": 1557,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d71760143bb982d9.js",
+      "path": "static/chunks/d71760143bb982d9.js",
+      "size": 4318,
+      "gzipSize": 1552,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e0c72c783a9fe0fa.js",
+      "path": "static/chunks/e0c72c783a9fe0fa.js",
+      "size": 4315,
+      "gzipSize": 1551,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f3fb3ba7ab4d71ef.js",
+      "path": "static/chunks/f3fb3ba7ab4d71ef.js",
+      "size": 4059,
+      "gzipSize": 1550,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5d9f333ed4af23ff.js",
+      "path": "static/chunks/5d9f333ed4af23ff.js",
+      "size": 4238,
+      "gzipSize": 1545,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "52839c131998fde5.js",
+      "path": "static/chunks/52839c131998fde5.js",
+      "size": 4344,
+      "gzipSize": 1540,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d1fac5aae0f71c98.js",
+      "path": "static/chunks/d1fac5aae0f71c98.js",
+      "size": 4607,
+      "gzipSize": 1535,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5053937e69833915.js",
+      "path": "static/chunks/5053937e69833915.js",
+      "size": 5925,
+      "gzipSize": 1533,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f8a9dc2e94789eb4.js",
+      "path": "static/chunks/f8a9dc2e94789eb4.js",
+      "size": 4222,
+      "gzipSize": 1528,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "12b44630d98ca5e2.js",
+      "path": "static/chunks/12b44630d98ca5e2.js",
+      "size": 6617,
+      "gzipSize": 1523,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "57eb417c59ace429.js",
+      "path": "static/chunks/57eb417c59ace429.js",
+      "size": 5057,
+      "gzipSize": 1523,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "3adfc0d6bb49cc40.js",
+      "path": "static/chunks/3adfc0d6bb49cc40.js",
+      "size": 4280,
+      "gzipSize": 1521,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "eaa59c21418e1953.js",
+      "path": "static/chunks/eaa59c21418e1953.js",
+      "size": 4487,
+      "gzipSize": 1517,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "82fd1267d5708f26.js",
+      "path": "static/chunks/82fd1267d5708f26.js",
+      "size": 4888,
+      "gzipSize": 1516,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d1f82abb86413de0.js",
+      "path": "static/chunks/d1f82abb86413de0.js",
+      "size": 6281,
+      "gzipSize": 1514,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5f311c2499a4cd44.js",
+      "path": "static/chunks/5f311c2499a4cd44.js",
+      "size": 4731,
+      "gzipSize": 1510,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f4a4149f33a473c2.js",
+      "path": "static/chunks/f4a4149f33a473c2.js",
+      "size": 4189,
+      "gzipSize": 1510,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2538115a44843de6.js",
+      "path": "static/chunks/2538115a44843de6.js",
+      "size": 5016,
+      "gzipSize": 1499,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9c66572af3bcd8b7.js",
+      "path": "static/chunks/9c66572af3bcd8b7.js",
+      "size": 3802,
+      "gzipSize": 1498,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a1e1ecfd5fe86988.js",
+      "path": "static/chunks/a1e1ecfd5fe86988.js",
+      "size": 4171,
+      "gzipSize": 1493,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b02d9f7a93d20d40.js",
+      "path": "static/chunks/b02d9f7a93d20d40.js",
+      "size": 5258,
+      "gzipSize": 1493,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "857ce95af7397102.js",
+      "path": "static/chunks/857ce95af7397102.js",
+      "size": 4171,
+      "gzipSize": 1490,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "dea5878902ffb3f9.js",
+      "path": "static/chunks/dea5878902ffb3f9.js",
+      "size": 4347,
+      "gzipSize": 1490,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8f487de8773d012e.js",
+      "path": "static/chunks/8f487de8773d012e.js",
+      "size": 4191,
+      "gzipSize": 1489,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "cbe3296c6555a05d.js",
+      "path": "static/chunks/cbe3296c6555a05d.js",
+      "size": 3785,
+      "gzipSize": 1488,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e146e15a222fb19a.js",
+      "path": "static/chunks/e146e15a222fb19a.js",
+      "size": 4449,
+      "gzipSize": 1486,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "976bfc83f192fe11.js",
+      "path": "static/chunks/976bfc83f192fe11.js",
+      "size": 6234,
+      "gzipSize": 1468,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c8765a47417187a3.js",
+      "path": "static/chunks/c8765a47417187a3.js",
+      "size": 3816,
+      "gzipSize": 1468,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1dbf27ee4bceb1ef.js",
+      "path": "static/chunks/1dbf27ee4bceb1ef.js",
+      "size": 4127,
+      "gzipSize": 1465,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "61101a67e9456234.js",
+      "path": "static/chunks/61101a67e9456234.js",
+      "size": 4354,
+      "gzipSize": 1465,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2083def7c238ecc9.js",
+      "path": "static/chunks/2083def7c238ecc9.js",
+      "size": 4465,
+      "gzipSize": 1464,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "74eff14e7d76f466.js",
+      "path": "static/chunks/74eff14e7d76f466.js",
+      "size": 3993,
+      "gzipSize": 1456,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "81845bd0d4467e45.js",
+      "path": "static/chunks/81845bd0d4467e45.js",
+      "size": 9060,
+      "gzipSize": 1456,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0052e9ca3bd60a4b.js",
+      "path": "static/chunks/0052e9ca3bd60a4b.js",
+      "size": 5642,
+      "gzipSize": 1453,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f11876dc0647cabf.js",
+      "path": "static/chunks/f11876dc0647cabf.js",
+      "size": 3358,
+      "gzipSize": 1452,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f5833969f3c88ef7.js",
+      "path": "static/chunks/f5833969f3c88ef7.js",
+      "size": 4463,
+      "gzipSize": 1452,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0c9fc2f453d27d73.js",
+      "path": "static/chunks/0c9fc2f453d27d73.js",
+      "size": 4189,
+      "gzipSize": 1437,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ac0bce763a698b2d.js",
+      "path": "static/chunks/ac0bce763a698b2d.js",
+      "size": 5138,
+      "gzipSize": 1434,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "47997f0cbc7e143b.js",
+      "path": "static/chunks/47997f0cbc7e143b.js",
+      "size": 3670,
+      "gzipSize": 1423,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "bc0389491670a373.js",
+      "path": "static/chunks/bc0389491670a373.js",
+      "size": 5768,
+      "gzipSize": 1422,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "67a70e1dd93d905e.js",
+      "path": "static/chunks/67a70e1dd93d905e.js",
+      "size": 6787,
+      "gzipSize": 1419,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ef088b22279701ff.js",
+      "path": "static/chunks/ef088b22279701ff.js",
+      "size": 4487,
+      "gzipSize": 1415,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "90fcd22bcdea991a.js",
+      "path": "static/chunks/90fcd22bcdea991a.js",
+      "size": 4859,
+      "gzipSize": 1414,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f2f77be891a41737.js",
+      "path": "static/chunks/f2f77be891a41737.js",
+      "size": 3801,
+      "gzipSize": 1411,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a574dd8d1788edb8.js",
+      "path": "static/chunks/a574dd8d1788edb8.js",
+      "size": 3113,
+      "gzipSize": 1410,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "4245727520c17b06.js",
+      "path": "static/chunks/4245727520c17b06.js",
+      "size": 4592,
+      "gzipSize": 1409,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f42f6c7bf6bc9bf3.js",
+      "path": "static/chunks/f42f6c7bf6bc9bf3.js",
+      "size": 3970,
+      "gzipSize": 1409,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ac4fb9346cbe356c.js",
+      "path": "static/chunks/ac4fb9346cbe356c.js",
+      "size": 4803,
+      "gzipSize": 1407,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "cdd34b783c5d5d28.js",
+      "path": "static/chunks/cdd34b783c5d5d28.js",
+      "size": 5631,
+      "gzipSize": 1407,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "04859cda1a09217a.js",
+      "path": "static/chunks/04859cda1a09217a.js",
+      "size": 4066,
+      "gzipSize": 1404,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "960a3188060904ae.js",
+      "path": "static/chunks/960a3188060904ae.js",
+      "size": 3646,
+      "gzipSize": 1392,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0525b318e05e1045.js",
+      "path": "static/chunks/0525b318e05e1045.js",
+      "size": 6193,
+      "gzipSize": 1387,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8ebf783ac3fb1376.js",
+      "path": "static/chunks/8ebf783ac3fb1376.js",
+      "size": 3822,
+      "gzipSize": 1384,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "89f185ed93e88612.js",
+      "path": "static/chunks/89f185ed93e88612.js",
+      "size": 4030,
+      "gzipSize": 1383,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "13795eb77d8b48da.js",
+      "path": "static/chunks/13795eb77d8b48da.js",
+      "size": 4887,
+      "gzipSize": 1380,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0b4f9c515d57544e.js",
+      "path": "static/chunks/0b4f9c515d57544e.js",
+      "size": 4113,
+      "gzipSize": 1377,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "74449fa537c2bd98.js",
+      "path": "static/chunks/74449fa537c2bd98.js",
+      "size": 4482,
+      "gzipSize": 1367,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "24e6acf7203f641d.js",
+      "path": "static/chunks/24e6acf7203f641d.js",
+      "size": 3228,
+      "gzipSize": 1366,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f56acfd654844b95.js",
+      "path": "static/chunks/f56acfd654844b95.js",
+      "size": 7389,
+      "gzipSize": 1364,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "054cf14041dc1507.js",
+      "path": "static/chunks/054cf14041dc1507.js",
+      "size": 3643,
+      "gzipSize": 1363,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "4df74db3be81f0fe.js",
+      "path": "static/chunks/4df74db3be81f0fe.js",
+      "size": 3224,
+      "gzipSize": 1362,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a7c174f8be9143f2.js",
+      "path": "static/chunks/a7c174f8be9143f2.js",
+      "size": 4538,
+      "gzipSize": 1360,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0e97d7400b81bc5f.js",
+      "path": "static/chunks/0e97d7400b81bc5f.js",
+      "size": 4318,
+      "gzipSize": 1358,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "3cb7556d94be74b6.js",
+      "path": "static/chunks/3cb7556d94be74b6.js",
+      "size": 4848,
+      "gzipSize": 1358,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a7667012b40c4085.js",
+      "path": "static/chunks/a7667012b40c4085.js",
+      "size": 4226,
+      "gzipSize": 1353,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "687081bb4a56a672.js",
+      "path": "static/chunks/687081bb4a56a672.js",
+      "size": 5043,
+      "gzipSize": 1346,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1aad48e18800350f.js",
+      "path": "static/chunks/1aad48e18800350f.js",
+      "size": 4224,
+      "gzipSize": 1342,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e5233e31692992c8.js",
+      "path": "static/chunks/e5233e31692992c8.js",
+      "size": 3076,
+      "gzipSize": 1342,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f2b1cf2bda90b27d.js",
+      "path": "static/chunks/f2b1cf2bda90b27d.js",
+      "size": 4708,
+      "gzipSize": 1341,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9853ba557001e718.js",
+      "path": "static/chunks/9853ba557001e718.js",
+      "size": 3753,
+      "gzipSize": 1335,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ff99662e4d494548.js",
+      "path": "static/chunks/ff99662e4d494548.js",
+      "size": 3214,
+      "gzipSize": 1335,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6d3a7dda683fdc23.js",
+      "path": "static/chunks/6d3a7dda683fdc23.js",
+      "size": 4020,
+      "gzipSize": 1332,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "059dc534a954e82e.js",
+      "path": "static/chunks/059dc534a954e82e.js",
+      "size": 4679,
+      "gzipSize": 1330,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "99877bdac7f91be4.js",
+      "path": "static/chunks/99877bdac7f91be4.js",
+      "size": 3276,
+      "gzipSize": 1326,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "63da508507e2a678.js",
+      "path": "static/chunks/63da508507e2a678.js",
+      "size": 3071,
+      "gzipSize": 1325,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5159e7be9126f264.js",
+      "path": "static/chunks/5159e7be9126f264.js",
+      "size": 4356,
+      "gzipSize": 1322,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "20b329d9851ac582.js",
+      "path": "static/chunks/20b329d9851ac582.js",
+      "size": 5209,
+      "gzipSize": 1319,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "91eba6224cb15fe4.js",
+      "path": "static/chunks/91eba6224cb15fe4.js",
+      "size": 3955,
+      "gzipSize": 1313,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e11cbf3b8fbdf90a.js",
+      "path": "static/chunks/e11cbf3b8fbdf90a.js",
+      "size": 4871,
+      "gzipSize": 1311,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5ceb974282902af0.js",
+      "path": "static/chunks/5ceb974282902af0.js",
+      "size": 3128,
+      "gzipSize": 1309,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2e42afbdab074e80.js",
+      "path": "static/chunks/2e42afbdab074e80.js",
+      "size": 2935,
+      "gzipSize": 1306,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "62e9895fd7445d97.js",
+      "path": "static/chunks/62e9895fd7445d97.js",
+      "size": 3051,
+      "gzipSize": 1304,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9607486e7bf03fb1.js",
+      "path": "static/chunks/9607486e7bf03fb1.js",
+      "size": 4309,
+      "gzipSize": 1304,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "fd0929d762ede638.js",
+      "path": "static/chunks/fd0929d762ede638.js",
+      "size": 2995,
+      "gzipSize": 1304,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9a2609c2db3a296f.js",
+      "path": "static/chunks/9a2609c2db3a296f.js",
+      "size": 4216,
+      "gzipSize": 1303,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "fce910af22cc1c4c.js",
+      "path": "static/chunks/fce910af22cc1c4c.js",
+      "size": 3265,
+      "gzipSize": 1302,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "7705b79d04250173.js",
+      "path": "static/chunks/7705b79d04250173.js",
+      "size": 3965,
+      "gzipSize": 1299,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d018820ba0326429.js",
+      "path": "static/chunks/d018820ba0326429.js",
+      "size": 2874,
+      "gzipSize": 1286,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5f5797cdb8f769af.js",
+      "path": "static/chunks/5f5797cdb8f769af.js",
+      "size": 3793,
+      "gzipSize": 1285,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6100fbd1167dff9c.js",
+      "path": "static/chunks/6100fbd1167dff9c.js",
+      "size": 3260,
+      "gzipSize": 1285,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "7908e79360560d3a.js",
+      "path": "static/chunks/7908e79360560d3a.js",
+      "size": 4010,
+      "gzipSize": 1285,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8072180e2f16d2aa.js",
+      "path": "static/chunks/8072180e2f16d2aa.js",
+      "size": 3335,
+      "gzipSize": 1285,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9dfe5cd94c1e4a50.js",
+      "path": "static/chunks/9dfe5cd94c1e4a50.js",
+      "size": 5083,
+      "gzipSize": 1280,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b98d51cc78581f59.js",
+      "path": "static/chunks/b98d51cc78581f59.js",
+      "size": 2732,
+      "gzipSize": 1279,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "199c05a71c1fa7ed.js",
+      "path": "static/chunks/199c05a71c1fa7ed.js",
+      "size": 3228,
+      "gzipSize": 1274,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "4a7dc34f2f71a1c7.js",
+      "path": "static/chunks/4a7dc34f2f71a1c7.js",
+      "size": 3413,
+      "gzipSize": 1272,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "353b402f25d7f446.js",
+      "path": "static/chunks/353b402f25d7f446.js",
+      "size": 3142,
+      "gzipSize": 1271,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c03a844368cd2749.js",
+      "path": "static/chunks/c03a844368cd2749.js",
+      "size": 3622,
+      "gzipSize": 1268,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1bfdf2638664c835.js",
+      "path": "static/chunks/1bfdf2638664c835.js",
+      "size": 3409,
+      "gzipSize": 1265,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "549e3222f6a38a5f.js",
+      "path": "static/chunks/549e3222f6a38a5f.js",
+      "size": 3582,
+      "gzipSize": 1262,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "89c34f85b20caf6a.js",
+      "path": "static/chunks/89c34f85b20caf6a.js",
+      "size": 5206,
+      "gzipSize": 1260,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d062a33a739e7d4f.js",
+      "path": "static/chunks/d062a33a739e7d4f.js",
+      "size": 3491,
+      "gzipSize": 1259,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2ab8a400dc057370.js",
+      "path": "static/chunks/2ab8a400dc057370.js",
+      "size": 3107,
+      "gzipSize": 1255,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "73a7bf3df82e23c3.js",
+      "path": "static/chunks/73a7bf3df82e23c3.js",
+      "size": 4800,
+      "gzipSize": 1247,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8576be60f70a43dd.js",
+      "path": "static/chunks/8576be60f70a43dd.js",
+      "size": 3598,
+      "gzipSize": 1246,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "7f375fa8df684d1c.js",
+      "path": "static/chunks/7f375fa8df684d1c.js",
+      "size": 4577,
+      "gzipSize": 1240,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0b71243b28e53dab.js",
+      "path": "static/chunks/0b71243b28e53dab.js",
+      "size": 3104,
+      "gzipSize": 1238,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "32226cc5edee31ee.js",
+      "path": "static/chunks/32226cc5edee31ee.js",
+      "size": 3445,
+      "gzipSize": 1238,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f4cd94e516f61973.js",
+      "path": "static/chunks/f4cd94e516f61973.js",
+      "size": 2876,
+      "gzipSize": 1235,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "cf911db537d4f2f4.js",
+      "path": "static/chunks/cf911db537d4f2f4.js",
+      "size": 3450,
+      "gzipSize": 1229,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "369f56b0801ae4e4.js",
+      "path": "static/chunks/369f56b0801ae4e4.js",
+      "size": 2798,
+      "gzipSize": 1221,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ca174ae415cf0d6d.js",
+      "path": "static/chunks/ca174ae415cf0d6d.js",
+      "size": 3559,
+      "gzipSize": 1210,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "32c0d2f7f2c9a940.js",
+      "path": "static/chunks/32c0d2f7f2c9a940.js",
+      "size": 3147,
+      "gzipSize": 1209,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "7a957d8e666e0554.js",
+      "path": "static/chunks/7a957d8e666e0554.js",
+      "size": 2499,
+      "gzipSize": 1208,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9f80c823cec80d04.js",
+      "path": "static/chunks/9f80c823cec80d04.js",
+      "size": 3361,
+      "gzipSize": 1207,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2200b4862a6d44df.js",
+      "path": "static/chunks/2200b4862a6d44df.js",
+      "size": 3053,
+      "gzipSize": 1205,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c912ed12e83d9717.js",
+      "path": "static/chunks/c912ed12e83d9717.js",
+      "size": 3076,
+      "gzipSize": 1202,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "32b11de96b63f87b.js",
+      "path": "static/chunks/32b11de96b63f87b.js",
+      "size": 3062,
+      "gzipSize": 1201,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9089486444ebd545.js",
+      "path": "static/chunks/9089486444ebd545.js",
+      "size": 3667,
+      "gzipSize": 1194,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "077e1079a918f52a.js",
+      "path": "static/chunks/077e1079a918f52a.js",
+      "size": 2940,
+      "gzipSize": 1192,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "88f2c42b7df62919.js",
+      "path": "static/chunks/88f2c42b7df62919.js",
+      "size": 2740,
+      "gzipSize": 1191,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e40b90d283c7e44f.js",
+      "path": "static/chunks/e40b90d283c7e44f.js",
+      "size": 3696,
+      "gzipSize": 1191,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1a6bbda91a309686.js",
+      "path": "static/chunks/1a6bbda91a309686.js",
+      "size": 4084,
+      "gzipSize": 1181,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b17350ce0a5604fd.js",
+      "path": "static/chunks/b17350ce0a5604fd.js",
+      "size": 2923,
+      "gzipSize": 1181,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ac6d86a7eb6f8125.js",
+      "path": "static/chunks/ac6d86a7eb6f8125.js",
+      "size": 2924,
+      "gzipSize": 1173,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c29b31e1f6dcf343.js",
+      "path": "static/chunks/c29b31e1f6dcf343.js",
+      "size": 2797,
+      "gzipSize": 1163,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "43085549b799d672.js",
+      "path": "static/chunks/43085549b799d672.js",
+      "size": 2978,
+      "gzipSize": 1151,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "028dde1f0f2b1dbf.js",
+      "path": "static/chunks/028dde1f0f2b1dbf.js",
+      "size": 2938,
+      "gzipSize": 1142,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5641cb6828703454.js",
+      "path": "static/chunks/5641cb6828703454.js",
+      "size": 2946,
+      "gzipSize": 1140,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "21ad8aca3d2969ae.js",
+      "path": "static/chunks/21ad8aca3d2969ae.js",
+      "size": 2995,
+      "gzipSize": 1135,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f249cc271b92c76f.js",
+      "path": "static/chunks/f249cc271b92c76f.js",
+      "size": 3256,
+      "gzipSize": 1134,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0addefd92b702316.js",
+      "path": "static/chunks/0addefd92b702316.js",
+      "size": 3019,
+      "gzipSize": 1130,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "620b0100a0c46981.js",
+      "path": "static/chunks/620b0100a0c46981.js",
+      "size": 2953,
+      "gzipSize": 1128,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "73325be966b21c3c.js",
+      "path": "static/chunks/73325be966b21c3c.js",
+      "size": 2760,
+      "gzipSize": 1124,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e1b40d5f36bcc618.js",
+      "path": "static/chunks/e1b40d5f36bcc618.js",
+      "size": 3147,
+      "gzipSize": 1117,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "880c2f3f64f7bcac.js",
+      "path": "static/chunks/880c2f3f64f7bcac.js",
+      "size": 3151,
+      "gzipSize": 1101,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5b9bb21de205d1b7.js",
+      "path": "static/chunks/5b9bb21de205d1b7.js",
+      "size": 2614,
+      "gzipSize": 1097,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1ee4c86b53cccf51.js",
+      "path": "static/chunks/1ee4c86b53cccf51.js",
+      "size": 3157,
+      "gzipSize": 1096,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "319d03afb1ecd0ec.js",
+      "path": "static/chunks/319d03afb1ecd0ec.js",
+      "size": 3195,
+      "gzipSize": 1096,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f534399af55bd383.js",
+      "path": "static/chunks/f534399af55bd383.js",
+      "size": 3337,
+      "gzipSize": 1096,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "2cd50ee96dea0600.js",
+      "path": "static/chunks/2cd50ee96dea0600.js",
+      "size": 2743,
+      "gzipSize": 1091,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "98733adb61dc3e38.js",
+      "path": "static/chunks/98733adb61dc3e38.js",
+      "size": 2642,
+      "gzipSize": 1091,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6d89ec47fd86dfe3.js",
+      "path": "static/chunks/6d89ec47fd86dfe3.js",
+      "size": 3411,
+      "gzipSize": 1087,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5064ef7cbf7d85cf.js",
+      "path": "static/chunks/5064ef7cbf7d85cf.js",
+      "size": 2890,
+      "gzipSize": 1082,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "56886939e469c78e.js",
+      "path": "static/chunks/56886939e469c78e.js",
+      "size": 2501,
+      "gzipSize": 1077,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "807c6498819d5ae5.js",
+      "path": "static/chunks/807c6498819d5ae5.js",
+      "size": 2596,
+      "gzipSize": 1066,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "3ad0d51133f27e06.js",
+      "path": "static/chunks/3ad0d51133f27e06.js",
+      "size": 3554,
+      "gzipSize": 1065,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5c11ce28553c0757.js",
+      "path": "static/chunks/5c11ce28553c0757.js",
+      "size": 3542,
+      "gzipSize": 1052,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "aec49b9ad0096c91.js",
+      "path": "static/chunks/aec49b9ad0096c91.js",
+      "size": 3448,
+      "gzipSize": 1047,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "5953caef91c5a4ad.js",
+      "path": "static/chunks/5953caef91c5a4ad.js",
+      "size": 5432,
+      "gzipSize": 1046,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "65c1316310e94a50.js",
+      "path": "static/chunks/65c1316310e94a50.js",
+      "size": 2714,
+      "gzipSize": 1045,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6b678177abfb5be0.js",
+      "path": "static/chunks/6b678177abfb5be0.js",
+      "size": 3459,
+      "gzipSize": 1039,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "8056265a2cb7ac36.js",
+      "path": "static/chunks/8056265a2cb7ac36.js",
+      "size": 4757,
+      "gzipSize": 1020,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "55ff26609e0cac86.js",
+      "path": "static/chunks/55ff26609e0cac86.js",
+      "size": 2645,
+      "gzipSize": 1015,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0ab83c1f2455b68c.js",
+      "path": "static/chunks/0ab83c1f2455b68c.js",
+      "size": 2886,
+      "gzipSize": 1008,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "76a9c6aa8b464eee.js",
+      "path": "static/chunks/76a9c6aa8b464eee.js",
+      "size": 2425,
+      "gzipSize": 1008,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "9040f7039a052a0d.js",
+      "path": "static/chunks/9040f7039a052a0d.js",
+      "size": 2709,
+      "gzipSize": 1007,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "74d16cdb3fa91855.js",
+      "path": "static/chunks/74d16cdb3fa91855.js",
+      "size": 2332,
+      "gzipSize": 1005,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "1a8a4d37269f6942.js",
+      "path": "static/chunks/1a8a4d37269f6942.js",
+      "size": 2274,
+      "gzipSize": 974,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "ef5b9d9add530fa6.js",
+      "path": "static/chunks/ef5b9d9add530fa6.js",
+      "size": 2838,
+      "gzipSize": 973,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "42197c909a27f519.js",
+      "path": "static/chunks/42197c909a27f519.js",
+      "size": 2191,
+      "gzipSize": 971,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a3054ad9eb98106f.js",
+      "path": "static/chunks/a3054ad9eb98106f.js",
+      "size": 1974,
+      "gzipSize": 966,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "971a217c48061269.js",
+      "path": "static/chunks/971a217c48061269.js",
+      "size": 2497,
+      "gzipSize": 957,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f87cef7679443591.js",
+      "path": "static/chunks/f87cef7679443591.js",
+      "size": 2171,
+      "gzipSize": 951,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "bf6fd1fdd48a7171.js",
+      "path": "static/chunks/bf6fd1fdd48a7171.js",
+      "size": 2113,
+      "gzipSize": 950,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a7e14cde40bc8dc7.js",
+      "path": "static/chunks/a7e14cde40bc8dc7.js",
+      "size": 2450,
+      "gzipSize": 931,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e469424c64dbf8ae.js",
+      "path": "static/chunks/e469424c64dbf8ae.js",
+      "size": 2322,
+      "gzipSize": 929,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "a8ee39c38ccea78b.js",
+      "path": "static/chunks/a8ee39c38ccea78b.js",
+      "size": 2486,
+      "gzipSize": 928,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "cd6a66e2c425c788.js",
+      "path": "static/chunks/cd6a66e2c425c788.js",
+      "size": 3452,
+      "gzipSize": 927,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "c28791365701e4b5.js",
+      "path": "static/chunks/c28791365701e4b5.js",
+      "size": 2498,
+      "gzipSize": 918,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "e9f31836efd7006d.js",
+      "path": "static/chunks/e9f31836efd7006d.js",
+      "size": 2214,
+      "gzipSize": 900,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "3b7368ddaf91475c.js",
+      "path": "static/chunks/3b7368ddaf91475c.js",
+      "size": 2236,
+      "gzipSize": 883,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "bfbfe570a472324f.js",
+      "path": "static/chunks/bfbfe570a472324f.js",
+      "size": 2869,
+      "gzipSize": 874,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "55d11450ee542c62.js",
+      "path": "static/chunks/55d11450ee542c62.js",
+      "size": 2043,
+      "gzipSize": 860,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "68c46861f57046a1.js",
+      "path": "static/chunks/68c46861f57046a1.js",
+      "size": 2606,
+      "gzipSize": 838,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "b643a77937f43c5e.js",
+      "path": "static/chunks/b643a77937f43c5e.js",
+      "size": 1920,
+      "gzipSize": 833,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "f236256d584c3aa4.js",
+      "path": "static/chunks/f236256d584c3aa4.js",
+      "size": 2537,
+      "gzipSize": 824,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0bfe29b1217bf094.js",
+      "path": "static/chunks/0bfe29b1217bf094.js",
+      "size": 1881,
+      "gzipSize": 799,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "0db850fcc0d13275.js",
+      "path": "static/chunks/0db850fcc0d13275.js",
+      "size": 2856,
+      "gzipSize": 796,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "3ba06a6895d181b6.js",
+      "path": "static/chunks/3ba06a6895d181b6.js",
+      "size": 1834,
+      "gzipSize": 795,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "48269f16710caabb.js",
+      "path": "static/chunks/48269f16710caabb.js",
+      "size": 2008,
+      "gzipSize": 776,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "59efb028c9293dc5.css",
+      "path": "static/chunks/59efb028c9293dc5.css",
+      "size": 3956,
+      "gzipSize": 684,
+      "type": "css",
+      "category": "chunk"
+    },
+    {
+      "name": "374a2d2dabd529be.js",
+      "path": "static/chunks/374a2d2dabd529be.js",
+      "size": 707,
+      "gzipSize": 372,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "6b2d5607668039cc.js",
+      "path": "static/chunks/6b2d5607668039cc.js",
+      "size": 659,
+      "gzipSize": 368,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d6e39d4772e08a3e.js",
+      "path": "static/chunks/d6e39d4772e08a3e.js",
+      "size": 602,
+      "gzipSize": 345,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "15819019a8ea3b4d.js",
+      "path": "static/chunks/15819019a8ea3b4d.js",
+      "size": 292,
+      "gzipSize": 246,
+      "type": "js",
+      "category": "chunk"
+    },
+    {
+      "name": "d96012bcfc98706a.js",
+      "path": "static/chunks/d96012bcfc98706a.js",
+      "size": 283,
+      "gzipSize": 225,
+      "type": "js",
+      "category": "chunk"
+    }
+  ],
+  "staticFiles": [
+    {
+      "name": "_buildManifest.js",
+      "path": "static/oGUto0LmliGVt3-fSr54w/_buildManifest.js",
+      "size": 219,
+      "gzipSize": 154,
+      "type": "js",
+      "category": "static"
+    },
+    {
+      "name": "_ssgManifest.js",
+      "path": "static/oGUto0LmliGVt3-fSr54w/_ssgManifest.js",
+      "size": 496,
+      "gzipSize": 192,
+      "type": "js",
+      "category": "static"
+    }
+  ],
+  "budget": {
+    "totalSize": {
+      "budget": 2048,
+      "actual": 2674,
+      "passed": false
+    },
+    "jsSize": {
+      "budget": 1536,
+      "actual": 2656,
+      "passed": false
+    },
+    "cssSize": {
+      "budget": 256,
+      "actual": 18,
+      "passed": true
+    },
+    "initialLoad": {
+      "budget": 512,
+      "actual": 0,
+      "passed": true
+    },
+    "violations": [
+      "总 bundle 大小 (2674KB) 超出预算 (2048KB)",
+      "JS 大小 (2656KB) 超出预算 (1536KB)"
+    ]
+  },
+  "recommendations": [
+    "## ⚠️ 性能预算违规",
+    "- 总 bundle 大小 (2674KB) 超出预算 (2048KB)",
+    "- JS 大小 (2656KB) 超出预算 (1536KB)",
+    "",
+    "## 🔧 JavaScript 优化",
+    "- JS 占总大小的 99.3%，建议：",
+    "  - 使用动态导入 (dynamic import) 拆分大型组件",
+    "  - 启用 tree-shaking 移除未使用的代码",
+    "  - 考虑使用更轻量的替代库",
+    "",
+    "## 💡 通用优化建议",
+    "- 使用 `@next/bundle-analyzer` 可视化分析 bundle",
+    "- 启用 Next.js 的 SWC 编译器（更快的构建）",
+    "- 使用 `next/image` 优化图片加载",
+    "- 启用 HTTP/2 服务器推送",
+    "- 考虑使用 CDN 加载大型第三方库"
+  ]
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function JsonToProto() {
@@ -11,6 +11,7 @@ export default function JsonToProto() {
   const [packageName, setPackageName] = useState('mypackage');
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const inferType = (value: unknown, key: string): string => {
     if (value === null) return 'string';
@@ -128,8 +129,20 @@ export default function JsonToProto() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

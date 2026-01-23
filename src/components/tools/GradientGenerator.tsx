@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface ColorStop {
@@ -17,6 +17,7 @@ export default function GradientGenerator() {
     { color: '#764ba2', position: 100 },
   ]);
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateCSS = (): string => {
     const colorStops = colors
@@ -67,6 +68,17 @@ export default function GradientGenerator() {
     { nameKey: 'night', colors: [{ color: '#0f0c29', position: 0 }, { color: '#302b63', position: 50 }, { color: '#24243e', position: 100 }] },
     { nameKey: 'rainbow', colors: [{ color: '#ff0000', position: 0 }, { color: '#ffff00', position: 25 }, { color: '#00ff00', position: 50 }, { color: '#00ffff', position: 75 }, { color: '#0000ff', position: 100 }] },
   ];
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

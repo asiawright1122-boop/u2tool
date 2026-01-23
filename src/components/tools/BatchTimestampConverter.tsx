@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type TimestampFormat = 'seconds' | 'milliseconds' | 'iso8601' | 'unknown';
@@ -103,6 +103,7 @@ export default function BatchTimestampConverter() {
   const [timezone, setTimezone] = useState('UTC');
   const [outputFormat, setOutputFormat] = useState('local');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleConvert = useCallback(() => {
     if (!input.trim()) {
@@ -161,8 +162,20 @@ export default function BatchTimestampConverter() {
     const text = entries.map(e => `${e.input} → ${e.output}`).join('\n');
     await navigator.clipboard.writeText(text);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

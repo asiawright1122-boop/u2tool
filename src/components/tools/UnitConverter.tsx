@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type UnitCategory = 'length' | 'weight' | 'temperature' | 'area' | 'volume' | 'speed' | 'data';
@@ -73,6 +73,7 @@ export default function UnitConverter() {
   const [toUnit, setToUnit] = useState('km');
   const [inputValue, setInputValue] = useState('1');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convert = (): string => {
     const value = parseFloat(inputValue);
@@ -94,7 +95,8 @@ export default function UnitConverter() {
   const copyResult = async () => {
     await navigator.clipboard.writeText(result);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const swapUnits = () => {
@@ -104,6 +106,17 @@ export default function UnitConverter() {
   };
 
   const categoryUnits = Object.entries(units[category]);
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

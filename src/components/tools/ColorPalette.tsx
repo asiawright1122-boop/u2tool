@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function ColorPalette() {
   const t = useTranslations('tools');
   const [baseColor, setBaseColor] = useState('#3B82F6');
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const hexToHsl = (hex: string): [number, number, number] => {
     const r = parseInt(hex.slice(1, 3), 16) / 255;
@@ -48,6 +49,17 @@ export default function ColorPalette() {
       <p className="text-xs text-center mt-1 text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white">{copied === color ? '✓' : color}</p>
     </div>
   );
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function DataUri() {
@@ -9,6 +9,7 @@ export default function DataUri() {
   const [dataUri, setDataUri] = useState('');
   const [fileInfo, setFileInfo] = useState<{ name: string; size: string; type: string } | null>(null);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +30,8 @@ export default function DataUri() {
   const copy = async () => {
     await navigator.clipboard.writeText(dataUri);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const clear = () => {
@@ -37,6 +39,17 @@ export default function DataUri() {
     setFileInfo(null);
     if (fileRef.current) fileRef.current.value = '';
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

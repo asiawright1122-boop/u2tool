@@ -24,7 +24,8 @@ export default function TypingSpeedTest() {
       t('sampleTexts.hard.1'),
       t('sampleTexts.hard.2'),
     ],
-  }), [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }), []);
 
   const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium');
   const [targetText, setTargetText] = useState<string>('');

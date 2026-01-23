@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import mammoth from 'mammoth';
 
 export default function WordToTxt() {
   const t = useTranslations('tool.wordToTxt');
@@ -19,15 +18,17 @@ export default function WordToTxt() {
     setFileName(file.name);
 
     try {
+      const mammoth = await import('mammoth');
       const arrayBuffer = await file.arrayBuffer();
-      const result = await mammoth.extractRawText({ arrayBuffer });
+      const result = await mammoth.default.extractRawText({ arrayBuffer });
       setText(result.value);
     } catch {
       setError(t('errorParsing'));
     } finally {
       setLoading(false);
     }
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -37,7 +38,8 @@ export default function WordToTxt() {
     } else {
       setError(t('errorInvalidFile'));
     }
-  }, [extractText, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [extractText]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

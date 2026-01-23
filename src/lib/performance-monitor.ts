@@ -1,335 +1,286 @@
 /**
- * 性能监控增强模块
- * 提供性能分析、建议生成和报告功能
- * @see Requirements 1.1, 1.2, 1.5
+ * 性能监控工具
+ * 
+ * 用于追踪和记录应用性能指标，帮助诊断性能问题
  */
 
-import {
-  type MetricName,
-  type PageType,
-  type WebVitalsMetric,
-  getPageType,
-  getMetricRating,
-  formatMetricValue,
-  getMetricDescription,
-} from './web-vitals';
-
-// 性能报告接口
-export interface PerformanceReport {
-  pageType: PageType;
-  url: string;
-  metrics: Partial<Record<MetricName, number>>;
-  ratings: Partial<Record<MetricName, 'good' | 'needs-improvement' | 'poor'>>;
-  overallRating: 'good' | 'needs-improvement' | 'poor';
-  recommendations: string[];
-  timestamp: Date;
-  warnings: PerformanceWarning[];
+interface PerformanceMetric {
+  timestamp: number;
+  duration: number;
+  metadata?: Record<string, unknown>;
 }
 
-// 性能警告接口
-export interface PerformanceWarning {
-  metric: MetricName;
-  value: number;
-  threshold: number;
-  message: string;
-  severity: 'warning' | 'critical';
+interface MemoryInfo {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
 }
 
-// 性能趋势数据
-export interface TrendData {
-  date: Date;
-  pageType: PageType;
-  metrics: Partial<Record<MetricName, number>>;
-  overallRating: 'good' | 'needs-improvement' | 'poor';
-}
-
-// 性能阈值配置
-const THRESHOLDS: Record<MetricName, { good: number; poor: number }> = {
-  CLS: { good: 0.1, poor: 0.25 },
-  FCP: { good: 1800, poor: 3000 },
-  FID: { good: 100, poor: 300 },
-  INP: { good: 200, poor: 500 },
-  LCP: { good: 2500, poor: 4000 },
-  TTFB: { good: 800, poor: 1800 },
-};
-
-// 核心 Web Vitals 指标（用于整体评级）
-const CORE_WEB_VITALS: MetricName[] = ['LCP', 'INP', 'CLS'];
-
-/**
- * 分析性能指标并生成报告
- * @param metrics - Web Vitals 指标数组
- * @param url - 页面 URL
- * @returns 性能报告
- */
-export function analyzeMetrics(
-  metrics: WebVitalsMetric[],
-  url: string = ''
-): PerformanceReport {
-  const pageType = url ? getPageType(new URL(url).pathname) : 'other';
-  const metricsMap: Partial<Record<MetricName, number>> = {};
-  const ratingsMap: Partial<Record<MetricName, 'good' | 'needs-improvement' | 'poor'>> = {};
-  const warnings: PerformanceWarning[] = [];
-
-  // 处理每个指标
-  for (const metric of metrics) {
-    metricsMap[metric.name] = metric.value;
-    const rating = getMetricRating(metric.name, metric.value);
-    ratingsMap[metric.name] = rating;
-
-    // 检查是否超出阈值，生成警告
-    const threshold = THRESHOLDS[metric.name];
-    if (metric.value > threshold.poor) {
-      warnings.push({
-        metric: metric.name,
-        value: metric.value,
-        threshold: threshold.poor,
-        message: `${metric.name} (${formatMetricValue(metric.name, metric.value)}) exceeds poor threshold (${formatMetricValue(metric.name, threshold.poor)})`,
-        severity: 'critical',
-      });
-    } else if (metric.value > threshold.good) {
-      warnings.push({
-        metric: metric.name,
-        value: metric.value,
-        threshold: threshold.good,
-        message: `${metric.name} (${formatMetricValue(metric.name, metric.value)}) needs improvement (target: ${formatMetricValue(metric.name, threshold.good)})`,
-        severity: 'warning',
-      });
+export class PerformanceMonitor {
+  private static instance: PerformanceMonitor;
+  private toolLoadMetrics: Map<string, PerformanceMetric[]> = new Map();
+  private navigationMetrics: PerformanceMetric[] = [];
+  private memorySnapshots: MemoryInfo[] = [];
+  private isEnabled: boolean = true;
+  
+  private constructor() {
+    // 在开发环境和本地环境启用
+    // 检查多个条件以确保在开发时可用
+    this.isEnabled = 
+      process.env.NODE_ENV === 'development' || 
+      process.env.NEXT_PUBLIC_ENV === 'development' ||
+      (typeof window !== 'undefined' && window.location.hostname === 'localhost');
+    
+    if (this.isEnabled && typeof window !== 'undefined') {
+      // 每 10 秒记录一次内存使用
+      setInterval(() => this.recordMemorySnapshot(), 10000);
+      
+      // 页面卸载时输出报告
+      window.addEventListener('beforeunload', () => this.printReport());
     }
   }
-
-  // 计算整体评级（基于核心 Web Vitals）
-  const overallRating = calculateOverallRating(ratingsMap);
-
-  // 生成建议
-  const recommendations = generateRecommendations({
-    pageType,
-    url,
-    metrics: metricsMap,
-    ratings: ratingsMap,
-    overallRating,
-    recommendations: [],
-    timestamp: new Date(),
-    warnings,
-  });
-
-  return {
-    pageType,
-    url,
-    metrics: metricsMap,
-    ratings: ratingsMap,
-    overallRating,
-    recommendations,
-    timestamp: new Date(),
-    warnings,
-  };
-}
-
-/**
- * 计算整体性能评级
- * @param ratings - 各指标评级
- * @returns 整体评级
- */
-function calculateOverallRating(
-  ratings: Partial<Record<MetricName, 'good' | 'needs-improvement' | 'poor'>>
-): 'good' | 'needs-improvement' | 'poor' {
-  const coreRatings = CORE_WEB_VITALS
-    .map(name => ratings[name])
-    .filter((r): r is 'good' | 'needs-improvement' | 'poor' => r !== undefined);
-
-  if (coreRatings.length === 0) {
-    return 'good'; // 没有数据时默认为 good
-  }
-
-  // 如果任何核心指标为 poor，整体为 poor
-  if (coreRatings.some(r => r === 'poor')) {
-    return 'poor';
-  }
-
-  // 如果任何核心指标需要改进，整体需要改进
-  if (coreRatings.some(r => r === 'needs-improvement')) {
-    return 'needs-improvement';
-  }
-
-  return 'good';
-}
-
-/**
- * 基于性能报告生成优化建议
- * @param report - 性能报告
- * @returns 建议数组
- */
-export function generateRecommendations(report: PerformanceReport): string[] {
-  const recommendations: string[] = [];
-  const { metrics, ratings, pageType } = report;
-
-  // LCP 优化建议
-  if (ratings.LCP === 'poor' || ratings.LCP === 'needs-improvement') {
-    recommendations.push('优化 LCP: 预加载关键资源，使用 CDN 加速图片加载');
-    recommendations.push('优化 LCP: 考虑使用 WebP 格式图片减少文件大小');
-    if (pageType === 'tool-detail') {
-      recommendations.push('优化 LCP: 延迟加载非关键工具组件');
+  
+  static getInstance(): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor();
     }
+    return PerformanceMonitor.instance;
   }
-
-  // INP 优化建议
-  if (ratings.INP === 'poor' || ratings.INP === 'needs-improvement') {
-    recommendations.push('优化 INP: 减少主线程阻塞，拆分长任务');
-    recommendations.push('优化 INP: 使用 Web Workers 处理复杂计算');
-    if (pageType === 'tools-list') {
-      recommendations.push('优化 INP: 实现虚拟滚动减少 DOM 节点');
+  
+  /**
+   * 记录工具加载时间
+   */
+  trackToolLoad(slug: string, duration: number, metadata?: Record<string, unknown>): void {
+    if (!this.isEnabled) return;
+    
+    if (!this.toolLoadMetrics.has(slug)) {
+      this.toolLoadMetrics.set(slug, []);
     }
-  }
-
-  // CLS 优化建议
-  if (ratings.CLS === 'poor' || ratings.CLS === 'needs-improvement') {
-    recommendations.push('优化 CLS: 为图片和视频设置明确的宽高属性');
-    recommendations.push('优化 CLS: 避免在现有内容上方插入新内容');
-    recommendations.push('优化 CLS: 使用 CSS transform 代替改变布局的属性');
-  }
-
-  // FCP 优化建议
-  if (ratings.FCP === 'poor' || ratings.FCP === 'needs-improvement') {
-    recommendations.push('优化 FCP: 减少渲染阻塞资源');
-    recommendations.push('优化 FCP: 内联关键 CSS');
-  }
-
-  // TTFB 优化建议
-  if (ratings.TTFB === 'poor' || ratings.TTFB === 'needs-improvement') {
-    recommendations.push('优化 TTFB: 使用 CDN 减少服务器响应时间');
-    recommendations.push('优化 TTFB: 启用服务器端缓存');
-    recommendations.push('优化 TTFB: 考虑使用边缘计算');
-  }
-
-  // 页面类型特定建议
-  if (pageType === 'home' && recommendations.length === 0) {
-    recommendations.push('首页性能良好，继续保持');
-  }
-
-  if (pageType === 'tool-detail') {
-    if ((metrics.LCP || 0) > 2000) {
-      recommendations.push('工具页面: 考虑预渲染热门工具页面');
-    }
-  }
-
-  return recommendations;
-}
-
-/**
- * 记录性能警告到控制台
- * @param warning - 性能警告
- */
-export function logPerformanceWarning(warning: PerformanceWarning): void {
-  // 仅在开发环境输出日志
-  if (process.env.NODE_ENV !== 'development') {
-    return;
-  }
-  
-  const prefix = warning.severity === 'critical' ? '🔴 CRITICAL' : '🟡 WARNING';
-  const description = getMetricDescription(warning.metric);
-  
-  console.warn(
-    `[Performance ${prefix}] ${warning.message}\n` +
-    `  Metric: ${description}\n` +
-    `  Current: ${formatMetricValue(warning.metric, warning.value)}\n` +
-    `  Threshold: ${formatMetricValue(warning.metric, warning.threshold)}`
-  );
-}
-
-/**
- * 批量记录性能警告
- * @param report - 性能报告
- */
-export function logReportWarnings(report: PerformanceReport): void {
-  // 仅在开发环境输出日志
-  if (process.env.NODE_ENV !== 'development') {
-    return;
-  }
-  
-  if (report.warnings.length === 0) {
-    return;
-  }
-
-  console.group(`[Performance Report] ${report.url || 'Unknown URL'}`);
-  console.log(`Page Type: ${report.pageType}`);
-  console.log(`Overall Rating: ${report.overallRating}`);
-  
-  for (const warning of report.warnings) {
-    logPerformanceWarning(warning);
-  }
-
-  if (report.recommendations.length > 0) {
-    console.log('\nRecommendations:');
-    report.recommendations.forEach((rec, i) => {
-      console.log(`  ${i + 1}. ${rec}`);
+    
+    this.toolLoadMetrics.get(slug)!.push({
+      timestamp: Date.now(),
+      duration,
+      metadata,
     });
-  }
-
-  console.groupEnd();
-}
-
-/**
- * 检查指标是否超出阈值
- * @param metric - 指标名称
- * @param value - 指标值
- * @returns 是否超出阈值
- */
-export function isMetricExceedingThreshold(
-  metric: MetricName,
-  value: number
-): boolean {
-  const threshold = THRESHOLDS[metric];
-  return value > threshold.good;
-}
-
-/**
- * 获取指标阈值
- * @param metric - 指标名称
- * @returns 阈值配置
- */
-export function getMetricThreshold(
-  metric: MetricName
-): { good: number; poor: number } {
-  return THRESHOLDS[metric];
-}
-
-/**
- * 格式化性能报告为可读字符串
- * @param report - 性能报告
- * @returns 格式化字符串
- */
-export function formatReport(report: PerformanceReport): string {
-  const lines: string[] = [
-    '=== Performance Report ===',
-    `URL: ${report.url || 'N/A'}`,
-    `Page Type: ${report.pageType}`,
-    `Overall Rating: ${report.overallRating.toUpperCase()}`,
-    `Timestamp: ${report.timestamp.toISOString()}`,
-    '',
-    '--- Metrics ---',
-  ];
-
-  for (const [name, value] of Object.entries(report.metrics)) {
-    const rating = report.ratings[name as MetricName] || 'unknown';
-    lines.push(`${name}: ${formatMetricValue(name as MetricName, value as number)} (${rating})`);
-  }
-
-  if (report.warnings.length > 0) {
-    lines.push('', '--- Warnings ---');
-    for (const warning of report.warnings) {
-      lines.push(`[${warning.severity.toUpperCase()}] ${warning.message}`);
+    
+    // 如果加载时间超过 1 秒，记录警告
+    if (duration > 1000) {
+      console.warn(`⚠️ Slow tool load: ${slug} took ${duration}ms`, metadata);
+    }
+    
+    // 如果加载时间超过 3 秒，记录错误
+    if (duration > 3000) {
+      console.error(`🔴 Very slow tool load: ${slug} took ${duration}ms`, metadata);
     }
   }
-
-  if (report.recommendations.length > 0) {
-    lines.push('', '--- Recommendations ---');
-    report.recommendations.forEach((rec, i) => {
-      lines.push(`${i + 1}. ${rec}`);
+  
+  /**
+   * 记录导航时间
+   */
+  trackNavigation(from: string, to: string, duration: number): void {
+    if (!this.isEnabled) return;
+    
+    this.navigationMetrics.push({
+      timestamp: Date.now(),
+      duration,
+      metadata: { from, to },
     });
+    
+    if (duration > 500) {
+      console.warn(`⚠️ Slow navigation: ${from} → ${to} took ${duration}ms`);
+    }
   }
-
-  return lines.join('\n');
+  
+  /**
+   * 记录内存快照
+   */
+  private recordMemorySnapshot(): void {
+    if (!this.isEnabled || typeof window === 'undefined') return;
+    
+    // @ts-ignore - performance.memory 是 Chrome 特有的 API
+    const memory = (performance as any).memory;
+    if (!memory) return;
+    
+    const snapshot: MemoryInfo = {
+      usedJSHeapSize: memory.usedJSHeapSize,
+      totalJSHeapSize: memory.totalJSHeapSize,
+      jsHeapSizeLimit: memory.jsHeapSizeLimit,
+    };
+    
+    this.memorySnapshots.push(snapshot);
+    
+    // 只保留最近 100 个快照
+    if (this.memorySnapshots.length > 100) {
+      this.memorySnapshots.shift();
+    }
+    
+    // 检查内存增长
+    if (this.memorySnapshots.length > 10) {
+      const first = this.memorySnapshots[0];
+      const last = this.memorySnapshots[this.memorySnapshots.length - 1];
+      const growth = last.usedJSHeapSize - first.usedJSHeapSize;
+      const growthPercent = (growth / first.usedJSHeapSize) * 100;
+      
+      if (growthPercent > 50) {
+        console.warn(`⚠️ Memory growth detected: ${growthPercent.toFixed(1)}% increase`);
+        console.warn(`   From: ${this.formatBytes(first.usedJSHeapSize)}`);
+        console.warn(`   To: ${this.formatBytes(last.usedJSHeapSize)}`);
+      }
+    }
+  }
+  
+  /**
+   * 获取工具加载统计
+   */
+  getToolLoadStats(slug: string): {
+    count: number;
+    avgDuration: number;
+    minDuration: number;
+    maxDuration: number;
+  } | null {
+    const metrics = this.toolLoadMetrics.get(slug);
+    if (!metrics || metrics.length === 0) return null;
+    
+    const durations = metrics.map(m => m.duration);
+    return {
+      count: durations.length,
+      avgDuration: durations.reduce((a, b) => a + b, 0) / durations.length,
+      minDuration: Math.min(...durations),
+      maxDuration: Math.max(...durations),
+    };
+  }
+  
+  /**
+   * 获取所有工具加载统计
+   */
+  getAllToolLoadStats(): Record<string, ReturnType<typeof this.getToolLoadStats>> {
+    const stats: Record<string, ReturnType<typeof this.getToolLoadStats>> = {};
+    for (const slug of this.toolLoadMetrics.keys()) {
+      stats[slug] = this.getToolLoadStats(slug);
+    }
+    return stats;
+  }
+  
+  /**
+   * 获取内存使用情况
+   */
+  getMemoryUsage(): {
+    current: MemoryInfo | null;
+    snapshots: MemoryInfo[];
+    trend: 'increasing' | 'stable' | 'decreasing' | 'unknown';
+  } {
+    const current = this.memorySnapshots[this.memorySnapshots.length - 1] || null;
+    
+    let trend: 'increasing' | 'stable' | 'decreasing' | 'unknown' = 'unknown';
+    if (this.memorySnapshots.length >= 5) {
+      const recent = this.memorySnapshots.slice(-5);
+      const first = recent[0].usedJSHeapSize;
+      const last = recent[recent.length - 1].usedJSHeapSize;
+      const change = ((last - first) / first) * 100;
+      
+      if (change > 10) trend = 'increasing';
+      else if (change < -10) trend = 'decreasing';
+      else trend = 'stable';
+    }
+    
+    return {
+      current,
+      snapshots: this.memorySnapshots,
+      trend,
+    };
+  }
+  
+  /**
+   * 打印性能报告
+   */
+  printReport(): void {
+    if (!this.isEnabled) return;
+    
+    console.group('📊 Performance Report');
+    
+    // 工具加载统计
+    console.group('🔧 Tool Load Statistics');
+    const toolStats = this.getAllToolLoadStats();
+    const sortedTools = Object.entries(toolStats)
+      .sort((a, b) => (b[1]?.avgDuration || 0) - (a[1]?.avgDuration || 0))
+      .slice(0, 10);
+    
+    console.table(sortedTools.map(([slug, stats]) => ({
+      Tool: slug,
+      'Avg Load Time': `${stats?.avgDuration.toFixed(0)}ms`,
+      'Max Load Time': `${stats?.maxDuration}ms`,
+      'Load Count': stats?.count,
+    })));
+    console.groupEnd();
+    
+    // 内存使用
+    console.group('💾 Memory Usage');
+    const memoryUsage = this.getMemoryUsage();
+    if (memoryUsage.current) {
+      console.log('Current:', this.formatBytes(memoryUsage.current.usedJSHeapSize));
+      console.log('Limit:', this.formatBytes(memoryUsage.current.jsHeapSizeLimit));
+      console.log('Trend:', memoryUsage.trend);
+      
+      if (memoryUsage.trend === 'increasing') {
+        console.warn('⚠️ Memory usage is increasing - possible memory leak!');
+      }
+    }
+    console.groupEnd();
+    
+    // 导航统计
+    if (this.navigationMetrics.length > 0) {
+      console.group('🧭 Navigation Statistics');
+      const avgNavDuration = this.navigationMetrics.reduce((sum, m) => sum + m.duration, 0) / this.navigationMetrics.length;
+      console.log('Total Navigations:', this.navigationMetrics.length);
+      console.log('Average Duration:', `${avgNavDuration.toFixed(0)}ms`);
+      console.groupEnd();
+    }
+    
+    console.groupEnd();
+  }
+  
+  /**
+   * 格式化字节数
+   */
+  private formatBytes(bytes: number): string {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return Math.round((bytes / Math.pow(k, i)) * 100) / 100 + ' ' + sizes[i];
+  }
+  
+  /**
+   * 清除所有指标
+   */
+  clear(): void {
+    this.toolLoadMetrics.clear();
+    this.navigationMetrics = [];
+    this.memorySnapshots = [];
+  }
+  
+  /**
+   * 启用/禁用监控
+   */
+  setEnabled(enabled: boolean): void {
+    this.isEnabled = enabled;
+  }
 }
 
-// 导出类型
-export type { MetricName, PageType, WebVitalsMetric };
+// 导出单例实例
+export const performanceMonitor = PerformanceMonitor.getInstance();
+
+// 在浏览器环境中将监控器暴露到全局（开发和本地环境）
+if (typeof window !== 'undefined') {
+  const isLocalOrDev = 
+    process.env.NODE_ENV === 'development' || 
+    process.env.NEXT_PUBLIC_ENV === 'development' ||
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1';
+    
+  if (isLocalOrDev) {
+    (window as any).__performanceMonitor = performanceMonitor;
+    console.log('💡 Performance monitor available at window.__performanceMonitor');
+    console.log('   Use __performanceMonitor.printReport() to see statistics');
+  }
+}

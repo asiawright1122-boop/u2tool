@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import * as XLSX from 'xlsx';
 
 export default function ExcelToCsv() {
   const t = useTranslations('tool.excelToCsv');
@@ -13,7 +12,7 @@ export default function ExcelToCsv() {
   const [fileName, setFileName] = useState('');
   const [sheets, setSheets] = useState<string[]>([]);
   const [selectedSheet, setSelectedSheet] = useState('');
-  const [workbook, setWorkbook] = useState<XLSX.WorkBook | null>(null);
+  const [workbook, setWorkbook] = useState<any | null>(null);
 
   const loadExcel = useCallback(async (file: File) => {
     setLoading(true);
@@ -22,6 +21,7 @@ export default function ExcelToCsv() {
     setFileName(file.name);
 
     try {
+      const XLSX = await import('xlsx');
       const arrayBuffer = await file.arrayBuffer();
       const wb = XLSX.read(arrayBuffer, { type: 'array' });
       setWorkbook(wb);
@@ -34,10 +34,12 @@ export default function ExcelToCsv() {
     } finally {
       setLoading(false);
     }
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const handleSheetChange = (sheetName: string) => {
+  const handleSheetChange = async (sheetName: string) => {
     if (workbook) {
+      const XLSX = await import('xlsx');
       setSelectedSheet(sheetName);
       const csvData = XLSX.utils.sheet_to_csv(workbook.Sheets[sheetName]);
       setCsv(csvData);
@@ -52,7 +54,8 @@ export default function ExcelToCsv() {
     } else {
       setError(t('errorInvalidFile'));
     }
-  }, [loadExcel, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loadExcel]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

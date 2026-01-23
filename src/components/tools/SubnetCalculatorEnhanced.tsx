@@ -74,7 +74,8 @@ export default function SubnetCalculatorEnhanced() {
       wildcardMask: numberToIp(wildcardMaskNum),
       cidr, ipClass: getIpClass(ipAddress), isPrivate: isPrivateIp(ipAddress)
     });
-  }, [ipAddress, cidr, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ipAddress, cidr]);
 
   const commonSubnets = [
     { cidr: 8, name: '/8 (Class A)' }, { cidr: 16, name: '/16 (Class B)' }, { cidr: 24, name: '/24 (Class C)' },

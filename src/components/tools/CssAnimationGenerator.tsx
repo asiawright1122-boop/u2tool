@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 const presetKeys = ['bounce', 'pulse', 'shake', 'spin', 'fadeIn', 'slideIn', 'zoomIn', 'flip'] as const;
@@ -26,6 +26,7 @@ export default function CssAnimationGenerator() {
   const [timing, setTiming] = useState('ease');
   const [iteration, setIteration] = useState('infinite');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const timingFunctions = ['ease', 'linear', 'ease-in', 'ease-out', 'ease-in-out'];
   const iterations = ['1', '2', '3', 'infinite'];
@@ -39,6 +40,12 @@ export default function CssAnimationGenerator() {
       style.textContent = allKeyframes;
       document.head.appendChild(style);
     }
+    useEffect(() => {
+      return () => {
+        if (timerRef.current) clearTimeout(timerRef.current);
+      };
+    }, []);
+
     return () => {
       const style = document.getElementById(styleId);
       if (style) style.remove();
@@ -51,7 +58,8 @@ export default function CssAnimationGenerator() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(fullCSS);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   return (

@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import * as XLSX from 'xlsx';
 
 export default function JsonToExcel() {
   const t = useTranslations('tools');
@@ -63,15 +62,17 @@ export default function JsonToExcel() {
     } catch {
       setError(t('jsonToExcel.parseError'));
     }
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     if (!jsonInput.trim()) {
       setError(t('jsonToExcel.noInput'));
       return;
     }
 
     try {
+      const XLSX = await import('xlsx');
       const parsed = JSON.parse(jsonInput);
       let data: Record<string, unknown>[];
 

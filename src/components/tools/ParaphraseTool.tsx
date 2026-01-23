@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type Style = 'formal' | 'casual' | 'simple' | 'creative';
@@ -37,6 +37,7 @@ export default function ParaphraseTool() {
   const [style, setStyle] = useState<Style>('formal');
   const [output, setOutput] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const styles: { id: Style; icon: string }[] = [
     { id: 'formal', icon: '👔' },
@@ -93,8 +94,20 @@ export default function ParaphraseTool() {
   const copyToClipboard = async () => {
     await navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

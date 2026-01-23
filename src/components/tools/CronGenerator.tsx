@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function CronGenerator() {
@@ -14,6 +14,7 @@ export default function CronGenerator() {
   const [expression, setExpression] = useState('* * * * *');
   const [description, setDescription] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const cron = `${minute} ${hour} ${dayOfMonth} ${month} ${dayOfWeek}`;
@@ -66,8 +67,20 @@ export default function CronGenerator() {
   const copyExpression = async () => {
     await navigator.clipboard.writeText(expression);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

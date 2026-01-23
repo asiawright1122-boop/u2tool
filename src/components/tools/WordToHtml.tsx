@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import mammoth from 'mammoth';
 
 export default function WordToHtml() {
   const t = useTranslations('tool.wordToHtml');
@@ -20,15 +19,17 @@ export default function WordToHtml() {
     setFileName(file.name);
 
     try {
+      const mammoth = await import('mammoth');
       const arrayBuffer = await file.arrayBuffer();
-      const result = await mammoth.convertToHtml({ arrayBuffer });
+      const result = await mammoth.default.convertToHtml({ arrayBuffer });
       setHtml(result.value);
     } catch {
       setError(t('errorParsing'));
     } finally {
       setLoading(false);
     }
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -38,7 +39,8 @@ export default function WordToHtml() {
     } else {
       setError(t('errorInvalidFile'));
     }
-  }, [convertToHtml, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [convertToHtml]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

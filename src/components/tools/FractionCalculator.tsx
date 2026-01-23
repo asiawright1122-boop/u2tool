@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function FractionCalculator() {
@@ -12,6 +12,7 @@ export default function FractionCalculator() {
   const [operation, setOperation] = useState<'+' | '-' | '×' | '÷'>('+');
   const [result, setResult] = useState<{ num: number; den: number } | null>(null);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const gcd = (a: number, b: number): number => {
     a = Math.abs(a);
@@ -59,7 +60,8 @@ export default function FractionCalculator() {
     if (result) {
       navigator.clipboard.writeText(`${result.num}/${result.den}`);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
     }
   };
 
@@ -83,6 +85,17 @@ export default function FractionCalculator() {
       </div>
     </div>
   );
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

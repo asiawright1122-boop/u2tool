@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function HexBase64Converter() {
@@ -11,6 +11,7 @@ export default function HexBase64Converter() {
   const [mode, setMode] = useState<'hex-to-base64' | 'base64-to-hex'>('hex-to-base64');
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const hexToBase64 = (hex: string): string => {
     // Remove spaces and validate
@@ -78,7 +79,8 @@ export default function HexBase64Converter() {
   const copyOutput = async () => {
     await navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadSample = () => {
@@ -88,6 +90,17 @@ export default function HexBase64Converter() {
       setInput('SGVsbG8gV29ybGQh');
     }
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

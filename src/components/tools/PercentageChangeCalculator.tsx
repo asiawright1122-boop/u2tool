@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function PercentageChangeCalculator() {
@@ -9,6 +9,7 @@ export default function PercentageChangeCalculator() {
   const [newValue, setNewValue] = useState('');
   const [result, setResult] = useState<{ change: number; isIncrease: boolean } | null>(null);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const calculate = () => {
     const old = parseFloat(oldValue);
@@ -25,7 +26,8 @@ export default function PercentageChangeCalculator() {
     if (result) {
       navigator.clipboard.writeText(`${result.change >= 0 ? '+' : ''}${result.change.toFixed(2)}%`);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
     }
   };
 
@@ -34,6 +36,17 @@ export default function PercentageChangeCalculator() {
     setNewValue(oldValue);
     setResult(null);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

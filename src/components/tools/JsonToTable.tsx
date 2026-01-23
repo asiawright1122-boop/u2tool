@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function JsonToTable() {
@@ -9,6 +9,7 @@ export default function JsonToTable() {
   const [tableData, setTableData] = useState<{ headers: string[]; rows: string[][] } | null>(null);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const flattenObject = (obj: Record<string, unknown>, prefix = ''): Record<string, string> => {
     const result: Record<string, string> = {};
@@ -86,7 +87,8 @@ export default function JsonToTable() {
 
     navigator.clipboard.writeText(html);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const copyAsCsv = () => {
@@ -99,7 +101,8 @@ export default function JsonToTable() {
 
     navigator.clipboard.writeText(csv);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const downloadCsv = () => {
@@ -118,6 +121,17 @@ export default function JsonToTable() {
     a.click();
     URL.revokeObjectURL(url);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

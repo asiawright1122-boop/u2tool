@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 const chineseWords = [
@@ -40,6 +40,7 @@ export default function ChineseLoremIpsum() {
   const [count, setCount] = useState<string>('3');
   const [output, setOutput] = useState<string>('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateWords = (num: number): string => {
     const result: string[] = [];
@@ -89,8 +90,20 @@ export default function ChineseLoremIpsum() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

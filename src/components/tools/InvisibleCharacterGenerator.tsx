@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 const invisibleChars = [
@@ -24,6 +24,7 @@ export default function InvisibleCharacterGenerator() {
   const [count, setCount] = useState(1);
   const [copied, setCopied] = useState<string | null>(null);
   const [testInput, setTestInput] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateChars = (): string => {
     return selectedChar.code.repeat(count);
@@ -53,6 +54,17 @@ export default function InvisibleCharacterGenerator() {
   };
 
   const detectedChars = detectInvisible(testInput);
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

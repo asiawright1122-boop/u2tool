@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function CssGridGenerator() {
@@ -14,6 +14,7 @@ export default function CssGridGenerator() {
   const [justifyItems, setJustifyItems] = useState('stretch');
   const [alignItems] = useState('stretch');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const updateColumns = (newCols: number) => {
     setColumns(newCols);
@@ -47,10 +48,22 @@ export default function CssGridGenerator() {
   const copyCSS = async () => {
     await navigator.clipboard.writeText(css);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const sizeOptions = ['auto', '1fr', '2fr', '3fr', 'min-content', 'max-content', '100px', '200px', '50%'];
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Heart, Share2, RefreshCw } from 'lucide-react';
 
@@ -18,6 +18,7 @@ export default function LoveCalculator() {
   const [name2, setName2] = useState<string>('');
   const [result, setResult] = useState<LoveResult | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const calculateLove = useCallback(() => {
     if (!name1.trim() || !name2.trim()) return;
@@ -62,7 +63,8 @@ export default function LoveCalculator() {
       setResult({ percentage, message, emoji });
       setIsCalculating(false);
     }, 1500);
-  }, [name1, name2, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [name1, name2]);
 
   const reset = () => {
     setName1('');
@@ -79,6 +81,17 @@ export default function LoveCalculator() {
       navigator.clipboard.writeText(text);
     }
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

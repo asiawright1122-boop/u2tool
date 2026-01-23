@@ -63,7 +63,7 @@ export default function Crc32Calculator() {
     } catch {
       setError(t('errorReadFile'));
     }
-  }, [calculateForBytes, file, inputMode, t, text]);
+  }, [calculateForBytes, file, inputMode, text]);
 
   const handleCopy = (value: string) => {
     navigator.clipboard.writeText(value);

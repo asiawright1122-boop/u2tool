@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function SvgEditor() {
@@ -13,6 +13,7 @@ export default function SvgEditor() {
   const [stroke, setStroke] = useState('#1e40af');
   const [strokeWidth, setStrokeWidth] = useState(2);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const defaultSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -84,7 +85,8 @@ export default function SvgEditor() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(svgCode);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const downloadSvg = () => {
@@ -96,6 +98,17 @@ export default function SvgEditor() {
     a.click();
     URL.revokeObjectURL(url);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

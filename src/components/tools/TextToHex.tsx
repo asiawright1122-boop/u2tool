@@ -86,7 +86,8 @@ export default function TextToHex() {
     }
 
     return '';
-  }, [encoding, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [encoding]);
 
   const handleConvert = () => {
     if (mode === 'encode') {

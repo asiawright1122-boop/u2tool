@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function CaseConverter() {
@@ -8,6 +8,7 @@ export default function CaseConverter() {
   const tg = useTranslations('tools');
   const [input, setInput] = useState('');
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const conversions = [
     { id: 'upper', label: t('uppercase'), fn: (s: string) => s.toUpperCase() },
@@ -25,6 +26,17 @@ export default function CaseConverter() {
     setCopied(id);
     setTimeout(() => setCopied(''), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

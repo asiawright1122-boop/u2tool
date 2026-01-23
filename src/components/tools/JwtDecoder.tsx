@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface JwtPayload {
@@ -16,6 +16,7 @@ export default function JwtDecoder() {
   const [decoded, setDecoded] = useState<JwtPayload | null>(null);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const decodeJwt = () => {
     if (!input.trim()) {
@@ -49,6 +50,17 @@ export default function JwtDecoder() {
   const formatDate = (timestamp: number) => {
     return new Date(timestamp * 1000).toLocaleString();
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

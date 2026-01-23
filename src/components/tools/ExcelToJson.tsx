@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import * as XLSX from 'xlsx';
 
 interface SheetData {
   name: string;
@@ -19,6 +18,7 @@ export default function ExcelToJson() {
   const [fileName, setFileName] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -44,8 +44,9 @@ export default function ExcelToJson() {
     setFileName(file.name);
 
     const reader = new FileReader();
-    reader.onload = (event) => {
+    reader.onload = async (event) => {
       try {
+        const XLSX = await import('xlsx');
         const data = new Uint8Array(event.target?.result as ArrayBuffer);
         const workbook = XLSX.read(data, { type: 'array' });
         
@@ -66,7 +67,8 @@ export default function ExcelToJson() {
       }
     };
     reader.readAsArrayBuffer(file);
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSheetChange = (sheetName: string) => {
     setSelectedSheet(sheetName);
@@ -80,7 +82,8 @@ export default function ExcelToJson() {
     try {
       await navigator.clipboard.writeText(jsonOutput);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
     } catch {
       setError(t('excelToJson.copyError'));
     }
@@ -99,6 +102,17 @@ export default function ExcelToJson() {
   };
 
   const currentSheet = sheets.find(s => s.name === selectedSheet);
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

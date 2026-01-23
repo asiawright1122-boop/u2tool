@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export type ExtractType = 'email' | 'url' | 'phone' | 'ip' | 'number' | 'hashtag' | 'mention';
@@ -48,6 +48,7 @@ export default function TextExtractor() {
   const [results, setResults] = useState<string[]>([]);
   const [allResults, setAllResults] = useState<Record<ExtractType, string[]> | null>(null);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleExtract = useCallback(() => {
     if (extractType === 'all') {
@@ -64,7 +65,8 @@ export default function TextExtractor() {
   const handleCopy = async (text: string) => {
     await navigator.clipboard.writeText(text);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const handleCopyAll = async () => {
@@ -101,6 +103,17 @@ export default function TextExtractor() {
   const totalResults = allResults 
     ? Object.values(allResults).reduce((sum, arr) => sum + arr.length, 0)
     : results.length;
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

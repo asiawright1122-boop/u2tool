@@ -2,8 +2,6 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { PDFDocument } from 'pdf-lib';
-import * as pdfjsLib from 'pdfjs-dist';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 
@@ -27,7 +25,9 @@ export default function PdfSplitter() {
 
   // Initialize PDF.js worker on client side only
   useEffect(() => {
-    pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+    import('pdfjs-dist').then((pdfjsLib) => {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+    });
   }, []);
 
   const handleFileUpload = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,6 +43,7 @@ export default function PdfSplitter() {
     setFileName(file.name.replace('.pdf', ''));
 
     try {
+      const pdfjsLib = await import('pdfjs-dist');
       const arrayBuffer = await file.arrayBuffer();
       const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
       const pageInfos: PageInfo[] = [];
@@ -67,7 +68,8 @@ export default function PdfSplitter() {
       setLoading(false);
     }
     e.target.value = '';
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const togglePage = (pageNum: number) => {
     setPages(prev => prev.map(p => p.pageNum === pageNum ? { ...p, selected: !p.selected } : p));
@@ -82,6 +84,7 @@ export default function PdfSplitter() {
     setError('');
 
     try {
+      const { PDFDocument } = await import('pdf-lib');
       const arrayBuffer = await pdfFile.arrayBuffer();
       const srcDoc = await PDFDocument.load(arrayBuffer);
       const totalPages = srcDoc.getPageCount();

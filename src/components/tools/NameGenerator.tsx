@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { RefreshCw, Copy, Check, User, Users } from 'lucide-react';
 import { generateNames, getAvailableOrigins, type Gender, type Origin } from '@/lib/data/names';
@@ -15,6 +15,7 @@ export default function NameGenerator() {
   const [names, setNames] = useState<string[]>([]);
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [copiedAll, setCopiedAll] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generate = useCallback(() => {
     const newNames = generateNames(count, gender, origin);
@@ -30,10 +31,22 @@ export default function NameGenerator() {
   const copyAll = () => {
     navigator.clipboard.writeText(names.join('\n'));
     setCopiedAll(true);
-    setTimeout(() => setCopiedAll(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopiedAll(false), 2000);
   };
 
   const origins = getAvailableOrigins();
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

@@ -48,7 +48,8 @@ export default function Header() {
       setSearchResults([]);
       setShowSearchResults(false);
     }
-  }, [debouncedSearchQuery, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedSearchQuery]);
 
   // 点击外部关闭搜索结果
   useEffect(() => {

@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface Experience { id: string; company: string; position: string; startDate: string; endDate: string; description: string; current: boolean; }
@@ -32,6 +32,7 @@ export default function ResumeBuilder() {
   
   const [experiences, setExperiences] = useState<Experience[]>([]);
   const [educations, setEducations] = useState<Education[]>([]);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handlePhotoUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -248,6 +249,12 @@ export default function ResumeBuilder() {
 
   const renderResumePreview = () => {
     if (!hasContent) {
+      useEffect(() => {
+        return () => {
+          if (timerRef.current) clearTimeout(timerRef.current);
+        };
+      }, []);
+
       return (
         <div className="flex items-center justify-center h-96 text-gray-400">
           <div className="text-center">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function NumberFormatter() {
@@ -9,6 +9,7 @@ export default function NumberFormatter() {
   const [style, setStyle] = useState<'decimal' | 'currency' | 'percent'>('decimal');
   const [currency, setCurrency] = useState('USD');
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const formats = useMemo(() => {
     const num = parseFloat(number);
@@ -30,6 +31,17 @@ export default function NumberFormatter() {
     setCopied(text);
     setTimeout(() => setCopied(''), 1500);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

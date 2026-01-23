@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 const flipMap: Record<string, string> = {
@@ -36,6 +36,7 @@ export default function FlipText() {
   const t = useTranslations('tools.flip-text');
   const [input, setInput] = useState('');
   const [copied, setCopied] = useState<string | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const flipText = (text: string): string => {
     return text.split('').map(char => flipMap[char] || char).reverse().join('');
@@ -60,6 +61,17 @@ export default function FlipText() {
     { type: 'mirrored', label: t('mirrored'), text: mirrorText(input) },
     { type: 'reversed', label: t('reversed'), text: reverseText(input) },
   ];
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

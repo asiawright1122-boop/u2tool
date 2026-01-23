@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function CssFlexboxGenerator() {
@@ -12,6 +12,7 @@ export default function CssFlexboxGenerator() {
   const [gap, setGap] = useState(16);
   const [itemCount, setItemCount] = useState(5);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateCSS = () => {
     return `.flex-container {
@@ -33,8 +34,20 @@ export default function CssFlexboxGenerator() {
   const copyCSS = async () => {
     await navigator.clipboard.writeText(css);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

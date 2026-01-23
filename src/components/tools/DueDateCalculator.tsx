@@ -101,7 +101,8 @@ export default function DueDateCalculator() {
       progress,
       milestones
     };
-  }, [method, date, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [method, date]);
 
   const formatDate = (date: Date) => {
     return date.toLocaleDateString('en-US', {

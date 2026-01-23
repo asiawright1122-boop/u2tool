@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface CspDirective {
@@ -50,6 +50,7 @@ export default function CspGenerator() {
   const [directives, setDirectives] = useState<CspDirective[]>(defaultDirectives);
   const [copied, setCopied] = useState(false);
   const [outputFormat, setOutputFormat] = useState<'header' | 'meta'>('header');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const toggleDirective = (index: number) => {
     const newDirectives = [...directives];
@@ -102,12 +103,24 @@ export default function CspGenerator() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(getOutput());
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const resetToDefaults = () => {
     setDirectives(defaultDirectives.map(d => ({ ...d, values: [...d.values] })));
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

@@ -1,105 +1,8 @@
 'use client';
 
-import { useState, useRef, useCallback, useId, useEffect, useMemo } from 'react';
+import { useState, useRef, useCallback, useId, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactEChartsCore from 'echarts-for-react/lib/core';
-import * as echarts from 'echarts/core';
-import {
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-} from 'echarts/charts';
-import {
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-} from 'echarts/components';
-import { LabelLayout, UniversalTransition } from 'echarts/features';
-import { CanvasRenderer } from 'echarts/renderers';
-
-// 注册 ECharts 组件
-echarts.use([
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-  LabelLayout,
-  UniversalTransition,
-  CanvasRenderer,
-]);
-import type { EChartsOption } from 'echarts';
+import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
 
@@ -133,8 +36,9 @@ export default function TreeChartGenerator() {
     const [colorTheme, setColorTheme] = useState<keyof typeof colorThemes>('default');
     const [layout, setLayout] = useState<'orthogonal' | 'radial'>('orthogonal');
     const [orient, setOrient] = useState<'LR' | 'RL' | 'TB' | 'BT'>('LR');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-    const chartRef = useRef<ReactEChartsCore>(null);
+    const chartRef = useRef<EChartsWrapperRef>(null);
     const chartTheme = useChartTheme();
 
     const generateId = useCallback(() => {
@@ -157,7 +61,8 @@ export default function TreeChartGenerator() {
             ]);
             setIsInitialized(true);
         }
-    }, [t, isInitialized, baseId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isInitialized, baseId]);
 
     const buildTree = useCallback((nodeList: TreeNode[]) => {
         interface TreeNodeData {
@@ -318,6 +223,17 @@ export default function TreeChartGenerator() {
         }
     };
 
+    useEffect(() => {
+
+      return () => {
+
+        if (timerRef.current) clearTimeout(timerRef.current);
+
+      };
+
+    }, []);
+
+
     return (
         <div className="space-y-4">
             <div className="flex flex-wrap gap-2">
@@ -464,9 +380,8 @@ export default function TreeChartGenerator() {
                 <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</label>
                     <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style={{ minHeight: '500px' }}>
-                        <ReactEChartsCore
+                        <EChartsWrapper
               ref={chartRef}
-              echarts={echarts}
                             option={getChartOption()}
                             style={{ height: '500px', width: '100%' }}
                             notMerge={true}

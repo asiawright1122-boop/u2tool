@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function RandomColorGenerator() {
@@ -9,6 +9,7 @@ export default function RandomColorGenerator() {
   const [copied, setCopied] = useState<number | null>(null);
   const [count, setCount] = useState(5);
   const [format, setFormat] = useState<'hex' | 'rgb' | 'hsl'>('hex');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateRandomHex = (): string => {
     return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0').toUpperCase();
@@ -70,6 +71,17 @@ export default function RandomColorGenerator() {
     const b = parseInt(hex.slice(5, 7), 16) / 255;
     return 0.299 * r + 0.587 * g + 0.114 * b;
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

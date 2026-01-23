@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function UrlParser() {
@@ -8,6 +8,7 @@ export default function UrlParser() {
   const tg = useTranslations('tools');
   const [url, setUrl] = useState('https://example.com:8080/path/to/page?name=John&age=30#section');
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const parseUrl = () => {
     try {
@@ -45,6 +46,17 @@ export default function UrlParser() {
       </div>
     </div>
   );
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

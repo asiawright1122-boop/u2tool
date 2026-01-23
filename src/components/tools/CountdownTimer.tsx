@@ -42,7 +42,8 @@ export default function CountdownTimer() {
         }
       });
     }
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (isRunning && timeLeft > 0) {

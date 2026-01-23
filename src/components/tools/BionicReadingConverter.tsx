@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function BionicReadingConverter() {
@@ -8,6 +8,7 @@ export default function BionicReadingConverter() {
   const [input, setInput] = useState('');
   const [fixationStrength, setFixationStrength] = useState(50);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convertToBionic = (text: string): string => {
     const words = text.split(/(\s+)/);
@@ -28,7 +29,8 @@ export default function BionicReadingConverter() {
   const copyHtml = () => {
     navigator.clipboard.writeText(bionicHtml);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const copyPlainText = () => {
@@ -36,8 +38,20 @@ export default function BionicReadingConverter() {
     tempDiv.innerHTML = bionicHtml;
     navigator.clipboard.writeText(tempDiv.textContent || '');
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

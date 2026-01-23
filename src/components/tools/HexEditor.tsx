@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function HexEditor() {
@@ -8,6 +8,7 @@ export default function HexEditor() {
   const [text, setText] = useState('');
   const [hex, setHex] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const textToHex = () => {
     const result = Array.from(new TextEncoder().encode(text))
@@ -27,8 +28,20 @@ export default function HexEditor() {
   const copy = async (val: string) => {
     await navigator.clipboard.writeText(val);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

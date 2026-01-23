@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 // Common words dictionary
@@ -61,6 +61,7 @@ export default function WordUnscrambler() {
   const t = useTranslations('tools.word-unscrambler');
   const [input, setInput] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const findWords = (letters: string): string[] => {
     const results: string[] = [];
@@ -102,8 +103,20 @@ export default function WordUnscrambler() {
   const copyResults = () => {
     navigator.clipboard.writeText(results.join(', '));
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

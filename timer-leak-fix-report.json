@@ -1,0 +1,677 @@
+{
+  "timestamp": "2026-01-23T02:18:12.101Z",
+  "summary": {
+    "total": 166,
+    "success": 164,
+    "skipped": 2,
+    "error": 0
+  },
+  "results": [
+    {
+      "file": "src/components/tools/AnagramSolver.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/AreaChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/AspectRatioCalculator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/BarChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/Base32.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/Base58.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/Base64.tsx",
+      "status": "skipped",
+      "reason": "已手动修复"
+    },
+    {
+      "file": "src/components/tools/BatchTimestampConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/BinaryToText.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/BionicReadingConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/BoxplotChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/BubbleChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CalendarHeatmapGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CandlestickChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CaseConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CharacterMap.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ChineseConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ChineseLoremIpsum.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ChmodCalculator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CodeMinifier.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CoinFlipper.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ColorConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ColorExtractor.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ColorPalette.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ColorPicker.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CronGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CspGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CssAnimationGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CssClipPathGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CssFlexboxGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CssGridGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CssToTailwind.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/CsvToJson.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/DataUri.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/DiceRoller.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/DoughnutChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/EmojiPicker.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/EnvParser.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ExcelToJson.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/FakeDataGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/FakeNameGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/FaviconGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/FlipText.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/FractionCalculator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/FunnelChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/GanttChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/GaugeChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/GdprConsentGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/GradientGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/GraphChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/GraphqlFormatter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/GroupedBarChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/GroupedLineChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HalfDoughnutChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HashGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HeatmapChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HexBase64Converter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HexEditor.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HmacGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HtaccessToNginx.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HtmlEncoder.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HtmlEntityConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HtmlMinifier.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HtmlTableGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HtmlToJsx.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/HtmlToPdf.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ImageToBase64.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/InstagramFontGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/InvisibleCharacterGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsObfuscator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonEscape.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonFormatter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonMinifier.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonPathFinder.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonPathTester.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonSchemaGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToCsv.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToForm.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToGo.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToGraphql.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToProto.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToSql.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToTable.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToTypescript.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToXml.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToYaml.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JsonToZod.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JwtDebugger.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JwtDecoder.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/JwtGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/LineChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/LiquidFillChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/LoremIpsum.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/LoveCalculator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/MarkdownPreview.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/MarkdownTableGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/MarkdownToHtml.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/MarkdownToPdf.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/MetaTagGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/MixedChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/MorseCodePlayer.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/MultiRingChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/NameGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/NestedPieChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/NightingaleRoseChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/NumberBaseConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/NumberFormatter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/OpenGraphPreview.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ParallelChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ParaphraseTool.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/PasswordGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/PercentageCalculator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/PercentageChangeCalculator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/PercentageStackedBarChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/PictorialBarChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/PieChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/PinyinConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/PngToSvg.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/PolarBarChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/PositiveNegativeBarChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/RadarChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/RandomColorGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/RegexPatterns.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ResumeBuilder 2.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/RingProgressChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/RobotsTxtGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/RomanNumeralConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/SankeyChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ScatterChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ScientificCalculator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/SmallTextGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/SqlFormatter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/SqlToMongo.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/SriHashGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/StackedAreaChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/StackedBarChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/StatisticsCalculator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/StepLineChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/StrikethroughText.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/SunburstChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/SvgEditor.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/SvgOptimizer.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TailwindToCss.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TextExtractor.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TextRepeater.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TextSorter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TextSummarizer.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TextToBinary.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TextToSlug.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TextWrapper.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/ThemeRiverGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TimeCalculator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TimelineChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TimezoneConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TreeChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/TreemapChartGenerator.tsx",
+      "status": "skipped",
+      "reason": "无法找到 React 导入语句"
+    },
+    {
+      "file": "src/components/tools/TypescriptToJson.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/UnicodeConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/UnitConverter.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/UrlEncoder.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/UrlParser.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/UuidGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/WaterfallChartGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/WordCloudGenerator.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/WordUnscrambler.tsx",
+      "status": "success"
+    },
+    {
+      "file": "src/components/tools/XmlFormatter.tsx",
+      "status": "success"
+    }
+  ]
+}

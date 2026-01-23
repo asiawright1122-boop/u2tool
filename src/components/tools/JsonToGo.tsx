@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function JsonToGo() {
@@ -11,6 +11,7 @@ export default function JsonToGo() {
   const [structName, setStructName] = useState('Root');
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const toGoType = (val: unknown): string => {
     if (val === null) return 'interface{}';
@@ -48,8 +49,20 @@ export default function JsonToGo() {
   const copy = async () => {
     await navigator.clipboard.writeText(goCode);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function JsObfuscator() {
@@ -16,6 +16,7 @@ export default function JsObfuscator() {
     controlFlowFlattening: false,
     unicodeEscape: true,
   });
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const obfuscate = () => {
     if (!input.trim()) {
@@ -118,7 +119,8 @@ export default function JsObfuscator() {
   const copyOutput = async () => {
     await navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadSample = () => {
@@ -137,6 +139,17 @@ const userName = "World";
 greetUser(userName);
 console.log(calculateSum(5, 10));`);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

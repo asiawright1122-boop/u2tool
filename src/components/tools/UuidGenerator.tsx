@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -9,6 +9,7 @@ export default function UuidGenerator() {
   const [uuids, setUuids] = useState<string[]>([uuidv4()]);
   const [count, setCount] = useState(1);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateUuids = () => {
     const newUuids = Array.from({ length: count }, () => uuidv4());
@@ -18,14 +19,27 @@ export default function UuidGenerator() {
   const copyAll = async () => {
     await navigator.clipboard.writeText(uuids.join('\n'));
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const copySingle = async (uuid: string) => {
     await navigator.clipboard.writeText(uuid);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

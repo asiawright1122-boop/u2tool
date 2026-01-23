@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export type SortType = 'alphabetical' | 'numerical' | 'natural' | 'length';
@@ -76,6 +76,7 @@ export default function TextSorter() {
   const [removeDups, setRemoveDups] = useState(false);
   const [removeEmpty, setRemoveEmpty] = useState(true);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleSort = useCallback(() => {
     let lines = input.split('\n');
@@ -95,7 +96,8 @@ export default function TextSorter() {
   const handleCopy = async () => {
     await navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const handleClear = () => {
@@ -109,6 +111,17 @@ export default function TextSorter() {
 
   const inputLines = input.split('\n').filter(l => l.trim()).length;
   const outputLines = output.split('\n').filter(l => l.trim()).length;
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

@@ -91,7 +91,8 @@ export default function MacAddressGenerator() {
     }
 
     setOutput(results.join('\n'));
-  }, [count, uppercase, separator, locallyAdministered, multicast, prefixBytes, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [count, uppercase, separator, locallyAdministered, multicast, prefixBytes]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(output);

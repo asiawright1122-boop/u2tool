@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 const characterCategories = {
@@ -23,6 +23,7 @@ export default function CharacterMap() {
   const [copied, setCopied] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   const [recentlyUsed, setRecentlyUsed] = useState<string[]>([]);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const copyChar = (char: string) => {
     navigator.clipboard.writeText(char);
@@ -53,6 +54,17 @@ export default function CharacterMap() {
     music: t('music'),
     tech: t('tech'),
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

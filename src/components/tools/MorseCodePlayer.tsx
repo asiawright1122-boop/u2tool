@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { textToMorse, morseToText } from '@/lib/calculator-utils';
 
@@ -16,6 +16,7 @@ export default function MorseCodePlayer() {
   const [frequency, setFrequency] = useState<number>(600);
   const audioContextRef = useRef<AudioContext | null>(null);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const convert = useCallback(() => {
     if (mode === 'encode') {
@@ -88,8 +89,20 @@ export default function MorseCodePlayer() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(morseCode);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

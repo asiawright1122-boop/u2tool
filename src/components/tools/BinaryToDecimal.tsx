@@ -65,7 +65,8 @@ export default function BinaryToDecimal() {
     } catch {
       setError(t('errorConversion'));
     }
-  }, [input, mode, bitLength, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [input, mode, bitLength]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(output);

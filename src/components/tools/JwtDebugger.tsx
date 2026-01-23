@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface JwtParts {
@@ -17,6 +17,7 @@ export default function JwtDebugger() {
   const [secret, setSecret] = useState('');
   const [isValid, setIsValid] = useState<boolean | null>(null);
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const base64UrlDecode = (str: string): string => {
     const base64 = str.replace(/-/g, '+').replace(/_/g, '/');
@@ -79,6 +80,12 @@ export default function JwtDebugger() {
 
   const renderValue = (key: string, value: unknown) => {
     if ((key === 'exp' || key === 'iat' || key === 'nbf') && typeof value === 'number') {
+      useEffect(() => {
+        return () => {
+          if (timerRef.current) clearTimeout(timerRef.current);
+        };
+      }, []);
+
       return (
         <span>
           {value} <span className="text-gray-500">({formatTimestamp(value)})</span>

@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
-import * as XLSX from 'xlsx';
 
 export default function CsvToExcel() {
   const t = useTranslations('tool.csvToExcel');
@@ -44,7 +43,8 @@ export default function CsvToExcel() {
     } finally {
       setLoading(false);
     }
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -54,18 +54,25 @@ export default function CsvToExcel() {
     } else {
       setError(t('errorInvalidFile'));
     }
-  }, [loadCsv, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loadCsv]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) loadCsv(file);
   };
 
-  const downloadExcel = () => {
-    const ws = XLSX.utils.aoa_to_sheet(data);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
-    XLSX.writeFile(wb, fileName.replace('.csv', '.xlsx'));
+  const downloadExcel = async () => {
+    try {
+      const XLSX = await import('xlsx');
+      const ws = XLSX.utils.aoa_to_sheet(data);
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+      XLSX.writeFile(wb, fileName.replace('.csv', '.xlsx'));
+    } catch (error) {
+      console.error('Failed to export Excel:', error);
+      setError(t('errorExport'));
+    }
   };
 
   return (

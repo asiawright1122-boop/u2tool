@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function TextRepeater() {
@@ -10,6 +10,7 @@ export default function TextRepeater() {
   const [separator, setSeparator] = useState('newline');
   const [addNumbering, setAddNumbering] = useState(false);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const separators: Record<string, string> = {
     newline: '\n',
@@ -35,7 +36,8 @@ export default function TextRepeater() {
   const copyResult = () => {
     navigator.clipboard.writeText(result);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const downloadResult = () => {
@@ -47,6 +49,17 @@ export default function TextRepeater() {
     a.click();
     URL.revokeObjectURL(url);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

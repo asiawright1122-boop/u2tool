@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { sanitizeSvg } from '@/lib/sanitize';
 
@@ -10,6 +10,7 @@ export default function SvgOptimizer() {
   const [output, setOutput] = useState('');
   const [stats, setStats] = useState({ original: 0, optimized: 0, saved: 0 });
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const optimize = () => {
     if (!input.trim()) return;
@@ -63,11 +64,18 @@ export default function SvgOptimizer() {
   const copyOutput = () => {
     navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return bytes + ' B';
+    useEffect(() => {
+      return () => {
+        if (timerRef.current) clearTimeout(timerRef.current);
+      };
+    }, []);
+
     return (bytes / 1024).toFixed(2) + ' KB';
   };
 

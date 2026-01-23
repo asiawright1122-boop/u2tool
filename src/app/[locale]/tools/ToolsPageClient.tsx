@@ -24,9 +24,11 @@ export default function ToolsPageClient() {
       setActiveCategory(categoryParam);
       const element = document.getElementById(`category-${categoryParam}`);
       if (element) {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
+        
+        return () => clearTimeout(timer);
       }
     }
   }, [categoryParam]);

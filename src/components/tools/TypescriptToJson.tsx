@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function TypescriptToJson() {
@@ -9,6 +9,7 @@ export default function TypescriptToJson() {
   const [output, setOutput] = useState('');
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const parseTypeScript = (code: string): Record<string, unknown> => {
     const result: Record<string, unknown> = {};
@@ -122,7 +123,8 @@ export default function TypescriptToJson() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadExample = () => {
@@ -140,6 +142,17 @@ export default function TypescriptToJson() {
   };
 }`);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

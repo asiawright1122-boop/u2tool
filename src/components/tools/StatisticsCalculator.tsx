@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 // 计算函数 - 导出供测试使用
@@ -76,6 +76,7 @@ export default function StatisticsCalculator() {
   const [input, setInput] = useState('10, 20, 30, 40, 50, 30, 30');
   const [isPopulation, setIsPopulation] = useState(true);
   const [copied, setCopied] = useState<string | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const numbers = parseNumbers(input);
   const mean = calculateMean(numbers);
@@ -97,6 +98,17 @@ export default function StatisticsCalculator() {
   const formatNumber = (n: number): string => {
     return Number.isInteger(n) ? n.toString() : n.toFixed(6).replace(/\.?0+$/, '');
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

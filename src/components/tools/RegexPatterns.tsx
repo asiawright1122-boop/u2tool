@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface Pattern {
@@ -34,6 +34,7 @@ export default function RegexPatterns() {
   const [testInput, setTestInput] = useState('');
   const [selectedPattern, setSelectedPattern] = useState<Pattern | null>(null);
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const copyPattern = (pattern: string) => {
     navigator.clipboard.writeText(pattern);
@@ -49,6 +50,17 @@ export default function RegexPatterns() {
   const isMatch = selectedPattern && testInput
     ? new RegExp(selectedPattern.pattern).test(testInput)
     : null;
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

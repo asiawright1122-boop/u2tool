@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function JsonToZod() {
@@ -10,6 +10,7 @@ export default function JsonToZod() {
   const [schemaName, setSchemaName] = useState('MySchema');
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const inferZodType = (value: unknown, key: string, indent: number = 0): string => {
     const indentStr = '  '.repeat(indent);
@@ -106,7 +107,8 @@ export default function JsonToZod() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(output);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadExample = () => {
@@ -127,6 +129,17 @@ export default function JsonToZod() {
     }, null, 2));
     setSchemaName('UserSchema');
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

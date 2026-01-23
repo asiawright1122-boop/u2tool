@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 const timezones = [
@@ -35,6 +35,7 @@ export default function TimezoneConverter() {
   const [inputTime, setInputTime] = useState('');
   const [result, setResult] = useState<{ date: string; time: string; full: string } | null>(null);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const now = new Date();
@@ -103,9 +104,21 @@ export default function TimezoneConverter() {
     if (result) {
       await navigator.clipboard.writeText(result.full);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
     }
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

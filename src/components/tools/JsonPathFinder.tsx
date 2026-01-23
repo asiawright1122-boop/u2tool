@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface PathResult {
@@ -16,6 +16,7 @@ export default function JsonPathFinder() {
   const [results, setResults] = useState<PathResult[]>([]);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const findPaths = (obj: unknown, currentPath: string = '$'): PathResult[] => {
     const paths: PathResult[] = [];
@@ -80,6 +81,17 @@ export default function JsonPathFinder() {
       ]
     }, null, 2));
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

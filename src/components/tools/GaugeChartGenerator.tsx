@@ -1,105 +1,8 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import ReactEChartsCore from 'echarts-for-react/lib/core';
-import * as echarts from 'echarts/core';
-import {
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-} from 'echarts/charts';
-import {
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-} from 'echarts/components';
-import { LabelLayout, UniversalTransition } from 'echarts/features';
-import { CanvasRenderer } from 'echarts/renderers';
-
-// 注册 ECharts 组件
-echarts.use([
-  BarChart,
-  LineChart,
-  PieChart,
-  ScatterChart,
-  RadarChart,
-  MapChart,
-  TreeChart,
-  TreemapChart,
-  GraphChart,
-  GaugeChart,
-  FunnelChart,
-  ParallelChart,
-  SankeyChart,
-  BoxplotChart,
-  CandlestickChart,
-  EffectScatterChart,
-  LinesChart,
-  HeatmapChart,
-  PictorialBarChart,
-  ThemeRiverChart,
-  SunburstChart,
-  CustomChart,
-  TitleComponent,
-  TooltipComponent,
-  GridComponent,
-  PolarComponent,
-  AriaComponent,
-  ParallelComponent,
-  LegendComponent,
-  RadarComponent,
-  ToolboxComponent,
-  DataZoomComponent,
-  VisualMapComponent,
-  TimelineComponent,
-  CalendarComponent,
-  GraphicComponent,
-  MarkPointComponent,
-  MarkLineComponent,
-  MarkAreaComponent,
-  DatasetComponent,
-  TransformComponent,
-  LabelLayout,
-  UniversalTransition,
-  CanvasRenderer,
-]);
-import type { EChartsOption } from 'echarts';
+import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper';
 // EChartsOption imported from echartsCore
 import { useChartTheme } from '@/hooks/useChartTheme';
 
@@ -128,7 +31,8 @@ export default function GaugeChartGenerator() {
       setChartTitle(t('defaultTitle'));
       setIsInitialized(true);
     }
-  }, [t, isInitialized]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInitialized]);
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(100);
   const [unit, setUnit] = useState('%');
@@ -136,8 +40,9 @@ export default function GaugeChartGenerator() {
   const [showPointer, setShowPointer] = useState(true);
   const [showProgress, setShowProgress] = useState(true);
   const [gaugeType, setGaugeType] = useState<'default' | 'stage' | 'grade'>('default');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const chartRef = useRef<ReactEChartsCore>(null);
+  const chartRef = useRef<EChartsWrapperRef>(null);
   const chartTheme = useChartTheme();
 
   // 生成 ECharts 配置
@@ -362,6 +267,17 @@ export default function GaugeChartGenerator() {
     }
   };
 
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
+
   return (
     <div className="space-y-4">
       {/* 工具栏 */}
@@ -526,9 +442,8 @@ export default function GaugeChartGenerator() {
         <div>
           <label className="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div className="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style={{ minHeight: '400px' }}>
-            <ReactEChartsCore
+            <EChartsWrapper
               ref={chartRef}
-              echarts={echarts}
               option={getChartOption()}
               style={{ height: '400px', width: '100%' }}
               notMerge={true}

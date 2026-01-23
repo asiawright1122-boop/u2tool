@@ -62,7 +62,8 @@ export default function PdfToText() {
     } finally {
       setLoading(false);
     }
-  }, [t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -72,7 +73,8 @@ export default function PdfToText() {
     } else {
       setError(t('errorInvalidFile'));
     }
-  }, [extractText, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [extractText]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

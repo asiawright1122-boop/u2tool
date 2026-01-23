@@ -1,0 +1,420 @@
+{
+  "timestamp": "2026-01-23T07:40:34.642Z",
+  "totalFiles": 444,
+  "totalIssues": 45,
+  "criticalIssues": 0,
+  "warningIssues": 42,
+  "issues": [
+    {
+      "file": "src/components/tools/AreaChartGenerator.tsx",
+      "line": 300,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/BarChartGenerator.tsx",
+      "line": 309,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/BoxplotChartGenerator.tsx",
+      "line": 286,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/BubbleChartGenerator.tsx",
+      "line": 300,
+      "column": 49,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/CalendarHeatmapGenerator.tsx",
+      "line": 238,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/CandlestickChartGenerator.tsx",
+      "line": 291,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/DoughnutChartGenerator.tsx",
+      "line": 235,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/FunnelChartGenerator.tsx",
+      "line": 286,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/GanttChartGenerator.tsx",
+      "line": 385,
+      "column": 49,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/GaugeChartGenerator.tsx",
+      "line": 327,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/GraphChartGenerator.tsx",
+      "line": 269,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/GroupedBarChartGenerator.tsx",
+      "line": 253,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/GroupedLineChartGenerator.tsx",
+      "line": 252,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/HalfDoughnutChartGenerator.tsx",
+      "line": 287,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/HeatmapChartGenerator.tsx",
+      "line": 333,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/LineChartGenerator.tsx",
+      "line": 359,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/LiquidFillChartGenerator.tsx",
+      "line": 203,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/MixedChartGenerator.tsx",
+      "line": 272,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/MultiRingChartGenerator.tsx",
+      "line": 252,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/NestedPieChartGenerator.tsx",
+      "line": 318,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/NightingaleRoseChartGenerator.tsx",
+      "line": 265,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/ParallelChartGenerator.tsx",
+      "line": 265,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/PercentageStackedBarChartGenerator.tsx",
+      "line": 287,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/PictorialBarChartGenerator.tsx",
+      "line": 316,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/PieChartGenerator.tsx",
+      "line": 293,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/PolarBarChartGenerator.tsx",
+      "line": 243,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/PositiveNegativeBarChartGenerator.tsx",
+      "line": 299,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/RadarChartGenerator.tsx",
+      "line": 396,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/RingProgressChartGenerator.tsx",
+      "line": 214,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/SankeyChartGenerator.tsx",
+      "line": 236,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/ScatterChartGenerator.tsx",
+      "line": 348,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/StackedAreaChartGenerator.tsx",
+      "line": 257,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/StackedBarChartGenerator.tsx",
+      "line": 253,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/StepLineChartGenerator.tsx",
+      "line": 251,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/SunburstChartGenerator.tsx",
+      "line": 268,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/ThemeRiverGenerator.tsx",
+      "line": 258,
+      "column": 49,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/TimelineChartGenerator.tsx",
+      "line": 250,
+      "column": 49,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/TreeChartGenerator.tsx",
+      "line": 298,
+      "column": 49,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/TreemapChartGenerator.tsx",
+      "line": 350,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/WaterfallChartGenerator.tsx",
+      "line": 331,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/WordCloudGenerator.tsx",
+      "line": 250,
+      "column": 45,
+      "severity": "warning",
+      "category": "内存泄漏",
+      "message": "ECharts 实例可能没有正确销毁",
+      "suggestion": "在组件卸载时调用 echartInstance.dispose()"
+    },
+    {
+      "file": "src/components/tools/ToolWrapper.tsx",
+      "line": 0,
+      "column": 0,
+      "severity": "warning",
+      "category": "代码分割",
+      "message": "ToolWrapper 可能没有使用动态导入",
+      "suggestion": "使用 next/dynamic 进行代码分割"
+    },
+    {
+      "file": "package.json",
+      "line": 0,
+      "column": 0,
+      "severity": "info",
+      "category": "依赖优化",
+      "message": "大型依赖: echarts (~800KB)",
+      "suggestion": "考虑使用动态导入或按需加载来减少初始 bundle 大小"
+    },
+    {
+      "file": "package.json",
+      "line": 0,
+      "column": 0,
+      "severity": "info",
+      "category": "依赖优化",
+      "message": "大型依赖: next (~500KB)",
+      "suggestion": "考虑使用动态导入或按需加载来减少初始 bundle 大小"
+    },
+    {
+      "file": "package.json",
+      "line": 0,
+      "column": 0,
+      "severity": "info",
+      "category": "依赖优化",
+      "message": "大型依赖: typescript (~300KB)",
+      "suggestion": "考虑使用动态导入或按需加载来减少初始 bundle 大小"
+    }
+  ],
+  "summary": {
+    "hooksIssues": 0,
+    "memoryLeakRisks": 41,
+    "largeDependencies": 3,
+    "missingCodeSplitting": 1
+  }
+}

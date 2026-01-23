@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type Alignment = 'left' | 'center' | 'right';
@@ -17,6 +17,7 @@ export default function MarkdownTableGenerator() {
   ]);
   const [alignments, setAlignments] = useState<Alignment[]>(['left', 'left', 'left']);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const updateCell = (row: number, col: number, value: string) => {
     const newData = [...data];
@@ -101,7 +102,8 @@ export default function MarkdownTableGenerator() {
   const copyMarkdown = async () => {
     await navigator.clipboard.writeText(generateMarkdown());
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const loadSample = () => {
@@ -126,6 +128,17 @@ export default function MarkdownTableGenerator() {
     setCols(3);
     setRows(3);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

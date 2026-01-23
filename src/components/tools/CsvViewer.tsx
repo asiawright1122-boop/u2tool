@@ -20,7 +20,8 @@ export default function CsvViewer() {
       setInput(t('csvViewer.defaultInput'));
       setIsInitialized(true);
     }
-  }, [t, isInitialized]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInitialized]);
 
   const parseCSV = (text: string, delim: string): string[][] => {
     const lines = text.trim().split('\n');

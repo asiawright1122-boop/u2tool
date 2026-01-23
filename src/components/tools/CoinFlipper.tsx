@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface FlipResult {
@@ -16,6 +16,7 @@ export default function CoinFlipper() {
   const [currentResult, setCurrentResult] = useState<'heads' | 'tails' | null>(null);
   const [history, setHistory] = useState<FlipResult[]>([]);
   const [flipCount, setFlipCount] = useState('1');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const flip = () => {
     const count = Math.min(parseInt(flipCount) || 1, 100);
@@ -45,6 +46,17 @@ export default function CoinFlipper() {
   const tailsCount = history.filter(h => h.result === 'tails').length;
   const headsPercent = history.length > 0 ? (headsCount / history.length * 100).toFixed(1) : '0';
   const tailsPercent = history.length > 0 ? (tailsCount / history.length * 100).toFixed(1) : '0';
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

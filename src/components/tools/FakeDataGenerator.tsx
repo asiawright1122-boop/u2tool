@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
 type FieldType = 'name' | 'firstName' | 'lastName' | 'email' | 'phone' | 'address' | 'city' | 'country' | 'company' | 'jobTitle' | 'date' | 'number' | 'uuid' | 'url' | 'username';
@@ -250,6 +250,7 @@ export default function FakeDataGenerator() {
   const [copied, setCopied] = useState(false);
   const [editingCell, setEditingCell] = useState<{ row: number; field: string } | null>(null);
   const [editValue, setEditValue] = useState('');
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Ensure client-side only rendering for dynamic content
   useEffect(() => {
@@ -367,8 +368,15 @@ export default function FakeDataGenerator() {
     const json = JSON.stringify(data, null, 2);
     await navigator.clipboard.writeText(json);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
 
   return (
     <div className="space-y-4">

@@ -43,7 +43,8 @@ export default function TextToNato() {
 
     const sep = separator === 'newline' ? '\n' : separator === 'dash' ? ' - ' : ' ';
     return results.join(sep);
-  }, [separator, showOriginal, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [separator, showOriginal]);
 
   const handleConvert = () => {
     setOutput(textToNato(input));

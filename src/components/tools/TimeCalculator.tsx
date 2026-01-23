@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface TimeValue {
@@ -56,6 +56,7 @@ export default function TimeCalculator() {
   const [result, setResult] = useState<TimeValue | null>(null);
   const [format, setFormat] = useState<'12h' | '24h'>('24h');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleCalculate = useCallback(() => {
     const seconds1 = toSeconds(time1);
@@ -83,7 +84,8 @@ export default function TimeCalculator() {
       const text = formatTime(result, format);
       await navigator.clipboard.writeText(text);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
     }
   };
 
@@ -145,6 +147,17 @@ export default function TimeCalculator() {
       </div>
     </div>
   );
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

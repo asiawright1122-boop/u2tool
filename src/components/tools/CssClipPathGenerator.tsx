@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type ShapeType = 'circle' | 'ellipse' | 'polygon' | 'inset';
@@ -28,6 +28,7 @@ export default function CssClipPathGenerator() {
   const t = useTranslations('tools');
   const [clipPath, setClipPath] = useState('polygon(50% 0%, 0% 100%, 100% 100%)');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handlePreset = (preset: string) => {
     setClipPath(presets[preset].value);
@@ -36,8 +37,20 @@ export default function CssClipPathGenerator() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(`clip-path: ${clipPath};`);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export type EmojiCategory = 'smileys' | 'people' | 'animals' | 'food' | 'travel' | 'activities' | 'objects' | 'symbols' | 'flags';
@@ -232,6 +232,7 @@ export default function EmojiPicker() {
   const [selectedCategory, setSelectedCategory] = useState<EmojiCategory | 'all'>('all');
   const [copied, setCopied] = useState<string | null>(null);
   const [recentEmojis, setRecentEmojis] = useState<string[]>([]);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const filteredEmojis = useMemo(() => {
     let emojis = search ? searchEmojis(search) : emojiData;
@@ -255,6 +256,17 @@ export default function EmojiPicker() {
 
 
   const categories: EmojiCategory[] = ['smileys', 'people', 'animals', 'food', 'travel', 'activities', 'objects', 'symbols', 'flags'];
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

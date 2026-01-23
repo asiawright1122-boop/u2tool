@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 export default function HtmlToPdf() {
@@ -9,6 +9,7 @@ export default function HtmlToPdf() {
   const [pageSize, setPageSize] = useState('a4');
   const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
   const [margin, setMargin] = useState(20);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const defaultHtml = `<!DOCTYPE html>
@@ -54,6 +55,17 @@ export default function HtmlToPdf() {
     doc.write(html || defaultHtml);
     doc.close();
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

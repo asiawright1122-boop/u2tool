@@ -84,7 +84,8 @@ export default function WebSocketTester() {
       addMessage('system', t('errorInvalidUrl'));
       setIsConnecting(false);
     }
-  }, [url, addMessage, t]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [url, addMessage]);
 
   const disconnect = useCallback(() => {
     if (wsRef.current) {

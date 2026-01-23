@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 function base64UrlEncode(str: string): string {
@@ -20,6 +20,7 @@ export default function JwtGenerator() {
   const [token, setToken] = useState('');
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateToken = async () => {
     try {
@@ -66,7 +67,8 @@ export default function JwtGenerator() {
   const copyToken = async () => {
     await navigator.clipboard.writeText(token);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   const addClaim = (claim: string) => {
@@ -94,6 +96,17 @@ export default function JwtGenerator() {
       // ignore
     }
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

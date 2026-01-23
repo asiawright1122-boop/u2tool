@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface ExtractedColor {
@@ -17,6 +17,7 @@ export default function ColorExtractor() {
   const [colorCount, setColorCount] = useState(8);
   const [isProcessing, setIsProcessing] = useState(false);
   const [copiedColor, setCopiedColor] = useState<string | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -135,6 +136,17 @@ export default function ColorExtractor() {
       fileInputRef.current.value = '';
     }
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-6">

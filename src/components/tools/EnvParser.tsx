@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface EnvEntry {
@@ -152,6 +152,7 @@ export default function EnvParser() {
   const [outputFormat, setOutputFormat] = useState<'env' | 'json' | 'yaml'>('env');
   const [showValues, setShowValues] = useState(false);
   const [copied, setCopied] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleParse = useCallback(() => {
     if (!input.trim()) {
@@ -181,7 +182,8 @@ export default function EnvParser() {
     if (output) {
       await navigator.clipboard.writeText(output);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
     }
   };
 
@@ -191,6 +193,17 @@ export default function EnvParser() {
   };
 
   const output = getOutput();
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface SchemaOptions {
@@ -120,6 +120,7 @@ export default function JsonSchemaGenerator() {
     includeExamples: false,
     markAllRequired: false,
   });
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleGenerate = useCallback(() => {
     if (!input.trim()) {
@@ -143,7 +144,8 @@ export default function JsonSchemaGenerator() {
     if (output) {
       await navigator.clipboard.writeText(output);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => setCopied(false), 2000);
     }
   };
 
@@ -152,6 +154,17 @@ export default function JsonSchemaGenerator() {
     setOutput('');
     setError('');
   };
+
+  useEffect(() => {
+
+    return () => {
+
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+    };
+
+  }, []);
+
 
   return (
     <div className="space-y-4">
