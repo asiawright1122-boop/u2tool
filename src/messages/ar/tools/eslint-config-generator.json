@@ -1,0 +1,18 @@
+{
+  "detailed_description": "يساعدك مُولِد تكوين ESLint في إنشاء ملفات تكوين ESLint المخصصة لمشاريع JavaScript وTypeScript. اختر من بين دلائل الأسلوب الشهيرة بما في ذلك Airbnb، Standard، Google، وغيرها. ضبط القواعد الخاصة بالإطارات مثل React، Vue، Angular، أو Node.js. قم بتمكين دعم TypeScript، ضبط تكامل Prettier، وتخصيص القواعد الفردية. يولد الأداة ملف .eslintrc.json كامل جاهز للاستخدام في مشروعك.",
+  "usage_steps": [
+    "اختر دليل الأسلوب المفضل (Airbnb، Standard، Google، إلخ)",
+    "اختر الإطار (React، Vue، Angular، Node.js)",
+    "قم بتمكين دعم TypeScript إذا لزم الأمر",
+    "ضبط تكامل Prettier",
+    "تخصيص القواعد الفردية حسب الحاجة",
+    "انقر على Generate لإنشاء تكوين ESLint الخاص بك",
+    "انسخ التكوين إلى مشروعك"
+  ],
+  "usage_examples": [
+    "ضبط ESLint لمشروع React TypeScript",
+    "تكوين ESLint مع دليل الأسلوب Airbnb",
+    "إنشاء تكوين فحص لمشروع Node.js الخلفي",
+    "ضبط ESLint مع تكامل Prettier"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "detailed_description": "TSConfig Generator vous aide à créer des fichiers de configuration TypeScript personnalisés pour vos projets. Configurez les options du compilateur, notamment la version ECMAScript cible, le système de modules, les paramètres du mode strict et les alias de chemin. Choisissez parmi les présélections pour React, Node.js, le développement de bibliothèques ou créez une configuration personnalisée. L'outil explique chaque option et génère un fichier tsconfig.json complet avec des commentaires expliquant les paramètres.",
+  "usage_steps": [
+    "Sélectionnez un type de projet prédéfini (React, Node.js, Bibliothèque, etc.)",
+    "Choisissez la version ECMAScript cible",
+    "Configurez le système de modules et la résolution",
+    "Activez les options de mode strict selon vos besoins",
+    "Configurez les alias de chemin pour les imports",
+    "Configurez le répertoire de sortie et d'autres options",
+    "Cliquez sur Générer et copiez le fichier tsconfig.json"
+  ],
+  "usage_examples": [
+    "Configurer TypeScript pour un nouveau projet React",
+    "Configurer TypeScript pour un backend Node.js",
+    "Créer un fichier tsconfig pour une bibliothèque de packages npm",
+    "Configurer les alias de chemin pour des imports plus propres"
+  ]
+}

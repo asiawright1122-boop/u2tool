@@ -12770,7 +12770,10 @@
       "speed": "속도",
       "finishTime": "완주 시간",
       "metric": "미터법",
-      "imperial": "야드파운드법"
+      "imperial": "야드파운드법",
+      "hoursShort": "시",
+      "minutesShort": "분",
+      "secondsShort": "초"
     },
     "shoe-size-converter": {
       "name": "신발尺수 변환기",
@@ -14879,7 +14882,9 @@
       "bodyPlaceholder": "요청 본문 (JSON)...",
       "responseBody": "응답 본문",
       "responseHeaders": "응답 헤더",
-      "sending": "전송 중..."
+      "sending": "전송 중...",
+      "headerNamePlaceholder": "헤더 이름",
+      "headerValuePlaceholder": "값"
     },
     "jwt-debugger": {
       "name": "JWT 디버거",
@@ -15158,6 +15163,1227 @@
       "fullscreen": "전체 화면",
       "exitFullscreen": "전체 화면 종료",
       "slideOf": "/"
+    },
+    "text-spinner": {
+      "name": "문장 스핀너",
+      "description": "유의어를 사용하여 고유한 변형을 생성합니다.",
+      "seo_title": "무료 온라인 문장 스핀너 - 유의어로 콘텐츠 재작성",
+      "seo_description": "문장 스핀너 | 무료 온라인 도구, 유의어 사용, 고유한 변형 생성, 즉시 결과",
+      "detailed_description": "문장 스핀너는 개발자, 디자이너, 콘텐츠 크리에이터를 위한 무료 온라인 도구입니다. 유의어를 사용하여 고유한 변형을 생성합니다. 회원가입 없이 즉시 결과를 확인할 수 있습니다. 콘텐츠 최적화를 위해 유용합니다.",
+      "usage_steps": [
+        "문장을 붙여넣기",
+        "수준 선택",
+        "스핀 클릭",
+        "결과 복사"
+      ],
+      "usage_examples": [
+        "제품 설명 변형 생성",
+        "고유한 기사 생성"
+      ],
+      "spin": "스핀",
+      "inputPlaceholder": "텍스트 입력...",
+      "uniqueness": "고유성",
+      "level": "수준",
+      "conservative": "보수적",
+      "moderate": "적당",
+      "aggressive": "적극적"
+    },
+    "readability-checker": {
+      "name": "읽기 용이성 분석기",
+      "description": "플레시킨케이드 등 다양한 점수로 텍스트 읽기 용이성 분석",
+      "seo_title": "무료 온라인 읽기 용이성 분석기 - 플레시킨케이드 계산기",
+      "seo_description": "읽기 용이성 분석기 - 텍스트 읽기 용이성을 즉시 분석하세요. 플레시킨케이드 등 다양한 점수로 결과 제공, 무료, 온라인, 회원가입 필요없음",
+      "detailed_description": "읽기 용이성 분석기는 개발자, 디자이너, 콘텐츠 제작자 등이 텍스트의 읽기 용이성을 분석할 수 있는 온라인 도구입니다. 플레시킨케이드, 구글 등 다양한 점수로 결과를 제공하며, 즉시 결과를 확인할 수 있습니다. 회원가입이나 다운로드 필요없이 무료로 사용할 수 있습니다. 콘텐츠 최적화, 사용자 경험 향상 등에 도움이 됩니다.",
+      "usage_steps": [
+        "텍스트 붙여넣기",
+        "점수 확인",
+        "제안 사항 확인"
+      ],
+      "usage_examples": [
+        "블로그 읽기 용이성 확인",
+        "마케팅 카피 최적화"
+      ],
+      "inputPlaceholder": "가독성 분석할 텍스트 입력...",
+      "statistics": "통계",
+      "words": "단어",
+      "sentences": "문장",
+      "characters": "문자",
+      "fleschReading": "Flesch 가독성",
+      "fleschKincaid": "Flesch-Kincaid 등급",
+      "gunningFog": "Gunning Fog 지수",
+      "smog": "SMOG 지수",
+      "gradeLevel": "학년 수준",
+      "easeScore": "가독성 점수",
+      "interpretation": "해석",
+      "excellent": "우수",
+      "good": "양호",
+      "average": "보통",
+      "recommendations": "권장사항"
+    },
+    "grammar-checker": {
+      "name": "문법 체커",
+      "description": "문법 오류를 확인하고 교정 제안을 받으세요",
+      "seo_title": "무료 온라인 문법 체커 - 문법 오류 바로잡기",
+      "seo_description": "문법, 맞춤법, 띄어쓰기 오류를 확인하세요. 쓰기 개선 제안을 받으세요.",
+      "detailed_description": "문법 체커는 일반적인 문법 오류를 분석하고 교정을 제안합니다.",
+      "usage_steps": [
+        "텍스트를 붙여넣기",
+        "오류를 강조 표시",
+        "제안을 적용",
+        "수정된 텍스트를 복사"
+      ],
+      "usage_examples": [
+        "이메일을 교정",
+        "에세이를 확인",
+        "블로그 글을 개선"
+      ],
+      "inputPlaceholder": "문법 검사할 텍스트 입력...",
+      "foundErrors": "오류 발견",
+      "noErrors": "오류 없음",
+      "fix": "수정",
+      "fixAll": "모두 수정",
+      "suggestion": "제안"
+    },
+    "typescript-playground": {
+      "name": "타입스크립트 플레이그라운드",
+      "description": "브라우저에서 타입스크립트 코드를 작성하고 컴파일하세요",
+      "seo_title": "무료 온라인 타입스크립트 플레이그라운드 - TS를 JS로 컴파일",
+      "seo_description": "타입스크립트 코드를 작성하고 즉시 컴파일된 자바스크립트 출력을 확인하세요. 무료 온라인 컴파일러, 가입 불필요",
+      "detailed_description": "타입스크립트 플레이그라운드는 타입스크립트를 작성하고 컴파일된 자바스크립트를 확인할 수 있습니다.",
+      "usage_steps": [
+        "타입스크립트 작성",
+        "옵션 설정",
+        "컴파일된 JS 확인",
+        "출력 복사"
+      ],
+      "usage_examples": [
+        "타입스크립트 학습",
+        "타입 정의 테스트",
+        "코드 스니펫 공유"
+      ],
+      "inputPlaceholder": "TypeScript 코드 입력...",
+      "compile": "컴파일",
+      "target": "대상"
+    },
+    "python-formatter": {
+      "name": "파이썬 포맷터",
+      "description": "PEP 8 스타일 가이드에 따라 파이썬 코드를 정렬합니다",
+      "seo_title": "무료 파이썬 포맷터 온라인 - PEP 8 코드 포맷터",
+      "seo_description": "PEP 8 스타일 가이드라인을 따르는 무료 온라인 파이썬 코드 포맷터입니다. 적절한 들여쓰기, 공백 및 줄 바꿈으로 파이썬 코드를 자동으로 포맷하고美화합니다. 설치가 필요하지 않습니다.",
+      "detailed_description": "파이썬 포맷터는 PEP 8 스타일 가이드라인에 따라 파이썬 코드를 자동으로 포맷하는 강력한 온라인 도구입니다. 파이썬을 처음 배우는 초보자이든 대규모 코드베이스를 관리하는 경험豊한 개발자이든, 이 도구는 일관된 코드 스타일을 보장하는 데 도움이 됩니다. 들여쓰기, 줄 길이, 연산자 주변 공백, 함수 사이의 빈 줄 등 다양한 항목을 처리합니다. 코드를 붙여넣고 포맷 버튼을 클릭하면 깨끗하고 읽기 쉬운 파이썬 코드를 즉시 얻을 수 있습니다. 코드 리뷰, 코드 조각 공유 또는 지저분한 스크립트 정리 등에 적합합니다.",
+      "usage_steps": [
+        "파이썬 코드를 붙여넣기",
+        "옵션을 설정",
+        "포맷 버튼 클릭",
+        "정렬된 코드 복사"
+      ],
+      "usage_examples": [
+        "스크립트 정리",
+        "팀 코드 표준화",
+        "코드 리뷰 준비"
+      ],
+      "inputPlaceholder": "Python 코드 입력...",
+      "indentSize": "들여쓰기 크기"
+    },
+    "go-formatter": {
+      "name": "고 포매팅 도구",
+      "description": "gofmt 스타일로 고 코드 포매팅",
+      "seo_title": "무료 온라인 고 포매팅 도구 - gofmt 스타일 포매팅",
+      "seo_description": "공식 gofmt 규칙을 따르는 무료 온라인 Go 코드 포매팅 도구입니다. 설치 없이 자동으로 코드를 정렬하고 표준화하여 적절한 들여쓰기와 공백을 적용합니다.",
+      "detailed_description": "Go Formatter는 Go 커뮤니티에서 사용하는 공식 gofmt 규칙을 따르는 온라인 도구입니다. 코드의 들여쓰기, 정렬, 공백 및 임포트 정리를 자동으로 처리하여 Go의 엄격한 포매팅 표준을 준수합니다. 이는 코드를 읽고 유지 보수하기 쉽게 만듭니다. 작은 스크립트부터 큰 Go 프로젝트까지, 이 포매팅 도구는 코드베이스 전반에 일관된 코드 스타일을 유지하는 데 도움이 됩니다. 간단하게 Go 코드를 붙여넣으면 몇 초 내에 완벽하게 포매팅된 출력을 얻을 수 있습니다.",
+      "usage_steps": [
+        "고 코드를 붙여넣기",
+        "포매팅 클릭",
+        "포매팅된 코드 복사"
+      ],
+      "usage_examples": [
+        "고 패키지 포매팅",
+        "커밋 전 코드 정리"
+      ],
+      "inputPlaceholder": "Go 코드 입력..."
+    },
+    "yaml-formatter": {
+      "name": "YAML 포맷터",
+      "description": "맞춤 옵션으로 YAML을 포맷하고 유효성을 검사합니다",
+      "seo_title": "무료 온라인 YAML 포맷터 - YAML 유효성 검사 및 포맷",
+      "seo_description": "무료 온라인 YAML 포맷터 및 유효성 검사기. YAML 파일의 들여쓰기 및 유효성을 즉시 확인하고 수정합니다. 복잡한 중첩 구조 및 다중 문서 YAML 지원.",
+      "detailed_description": "YAML 포맷터는 YAML 파일의 포맷팅 및 유효성 검사를 위한 포괄적인 온라인 도구입니다. 자동으로 들여쓰기 문제를 수정하고, 구문을 유효성 검사하며, YAML 구성 파일을美화합니다. 이 도구는 복잡한 중첩 구조, 배열, 다중 라인 문자열 및 다중 문서 YAML 파일을 지원합니다. 쿠버네티스 매니페스트, CI/CD 파이프라인 또는 YAML 기반 구성과 함께 작업하는 DevOps 엔지니어에게 적합합니다. 즉시 구문 오류에 대한 피드백을 받고, 깨끗하고 올바르게 들여쓰기 된 YAML 출력을 생성합니다.",
+      "usage_steps": [
+        "YAML을 붙여넣기",
+        "들여쓰기 크기 설정",
+        "포맷 클릭",
+        "결과 복사"
+      ],
+      "usage_examples": [
+        "설정 파일 포맷",
+        "쿠버네티스 매니페스트 유효성 검사"
+      ],
+      "inputPlaceholder": "YAML 내용 입력...",
+      "indentSize": "들여쓰기 크기"
+    },
+    "svg-pattern-generator": {
+      "name": "SVG 패턴 생성기",
+      "description": "배경용 SVG 패턴 생성",
+      "seo_title": "무료 온라인 SVG 패턴 생성기 - 배경 패턴",
+      "seo_description": "웹 배경용 무료 온라인 SVG 패턴 생성기. 기하학적 패턴, 스트라이프, 점, 및 사용자 정의 디자인을 생성하세요. SVG 코드 또는 CSS 배경으로 내보내기.",
+      "detailed_description": "SVG 패턴 생성기는 웹 배경 및 그래픽에 대한 무한 반복 패턴을 디자인하기 위한 창의적인 도구입니다. 기하학적 도형, 스트라이프, 점, 파도 등 다양한 패턴 유형 중에서 선택하세요. 색상, 크기, 간격 및 회전을 사용자 정의하여 고유한 디자인을 만들 수 있습니다. 이 도구는 가볍고 모든 해상도에서 완벽하게 확장되는 최적화된 SVG 코드를 생성합니다. 인라인 SVG, CSS 배경 이미지 또는 다운로드 가능한 SVG 파일로 패턴을 내보낼 수 있습니다. 웹 디자이너, UI 개발자 및 사용자 정의 배경 패턴이 필요한 모든 사람에게 적합합니다.",
+      "usage_steps": [
+        "패턴 유형 선택",
+        "색상 및 크기 설정",
+        "미리보기",
+        "SVG 또는 CSS 내보내기"
+      ],
+      "usage_examples": [
+        "웹사이트 배경 만들기",
+        "카드 패턴 디자인"
+      ],
+      "pattern": "패턴",
+      "size": "크기",
+      "color": "색상",
+      "bgColor": "배경색",
+      "preview": "미리보기",
+      "dots": "점",
+      "lines": "선",
+      "grid": "그리드",
+      "waves": "파도",
+      "triangles": "삼각형",
+      "hexagons": "육각형",
+      "zigzag": "지그재그"
+    },
+    "rust-formatter": {
+      "name": "러스트 포매팅 도구",
+      "description": "러스트fmt 스타일로 러스트 코드 포매팅",
+      "seo_title": "무료 온라인 러스트 포매팅 도구 - 러스트fmt 스타일",
+      "seo_description": "러스트fmt 스타일 규칙을 따르는 무료 온라인 러스트 코드 포매팅 도구입니다. 적절한 들여쓰기와 구조로 러스트 코드를 자동으로 포매팅하고 예쁘게 만듭니다. 등록이나 설정이 필요하지 않습니다.",
+      "detailed_description": "러스트 포매팅 도구는 러스트fmt 스타일 가이드라인에 따라 러스트 코드를 포매팅하는 온라인 도구입니다. 들여쓰기, 줄 바꿈, 연산자 주변 공백, 구조체/열거형 포매팅을 자동으로 처리하여 러스트 프로젝트에서 일관된 코드 스타일을 유지합니다. 추가 도구 설치 없이 깨끗하고 읽기 쉬운 러스트 코드를 원하는 개발자에게 적합합니다. 시스템 코드, 웹 서비스 또는 CLI 애플리케이션을 러스트로 작성하든, 이 포매팅 도구는 코드가 커뮤니티 표준을 따르도록 합니다.",
+      "usage_steps": [
+        "러스트 코드 붙여넣기",
+        "포매팅 클릭",
+        "포매팅된 코드 복사"
+      ],
+      "usage_examples": [
+        "러스트 모듈 포매팅",
+        "코드 리뷰 준비"
+      ],
+      "inputPlaceholder": "Rust 코드 입력..."
+    },
+    "text-shadow-generator": {
+      "name": "텍스트 그림자 생성기",
+      "description": "시각 편집기를 사용하여 CSS 텍스트 그림자를 생성합니다",
+      "seo_title": "무료 온라인 CSS 텍스트 그림자 생성기",
+      "seo_description": "라이브 미리보기가 있는 무료 온라인 CSS 텍스트 그림자 생성기. 여러 그림자, 흐림, 색상으로 놀라운 텍스트 효과를 만드세요. 즉시 사용할 수 있는 CSS 코드를 복사하세요.",
+      "detailed_description": "텍스트 그림자 생성기는 웹 프로젝트에 아름다운 텍스트 그림자 효과를 만드는 데 도움이 되는 시각적 CSS 도구입니다. 수평 및 수직 오프셋, 흐림 반경, 퍼짐, 색상을 조정하여 완벽한 그림자 효과를 얻으세요. 라이브 미리보기는 실시간으로 변경 사항을 보여주며, 복잡한 효과를 위해 여러 그림자 레이어를 추가할 수 있습니다. 미묘한 깊이, 빛나는 텍스트 또는 극적인 3D 효과를 만들고 있는지 여부에 관계없이 이 도구는 직접 스타일시트에 복사할 수 있는 깨끗한 CSS 코드를 생성합니다.",
+      "usage_steps": [
+        "그림자 설정을 조정합니다",
+        "여러 계층을 추가합니다",
+        "효과를预览합니다",
+        "CSS를 복사합니다"
+      ],
+      "usage_examples": [
+        "글로우 효과를 생성합니다",
+        "3D 텍스트를 디자인합니다",
+        "제목에 깊이를 추가합니다"
+      ],
+      "preview": "미리보기",
+      "previewText": "미리보기 텍스트",
+      "shadows": "그림자",
+      "addShadow": "그림자 추가",
+      "blur": "흐림",
+      "color": "색상",
+      "opacity": "불투명도",
+      "glow": "글로우",
+      "neon": "네온",
+      "emboss": "엠보스",
+      "3d": "3D"
+    },
+    "css-triangle-generator": {
+      "name": "CSS 삼각형 생성기",
+      "description": "경계선 기법을 사용하여 CSS 삼각형을 생성합니다",
+      "seo_title": "무료 온라인 CSS 삼각형 생성기",
+      "seo_description": "보더 기법을 사용하는 무료 온라인 CSS 삼각형 생성기. 사용자 지정 크기와 색상으로任意 방향의 삼각형을 만들 수 있습니다. 순수한 CSS 코드를 즉시 복사하세요.",
+      "detailed_description": "CSS 삼각형 생성기는 이미지나 SVG가 필요없는 순수한 CSS 삼각형을 보더 기법을 사용하여 생성합니다. 단순히 방향(위, 아래, 왼쪽, 오른쪽 또는 대각선)을 선택하고 크기와 색상을 설정하면 깨끗한 CSS 코드를 즉시 얻을 수 있습니다. 이 도구는 툴팁, 드롭다운 화살표, 브레드크럼 구분자 및 장식 요소에 완벽한 가벼운 가변 삼각형을 생성합니다. 실시간으로 삼각형을 미리 보고 CSS 코드를 직접 스타일시트에 복사하세요. 프론트엔드 개발자에게 반드시 필요한 도구입니다.",
+      "usage_steps": [
+        "방향 선택",
+        "크기와 색상 설정",
+        "미리보기",
+        "CSS 복사"
+      ],
+      "usage_examples": [
+        "툴팁 화살표 생성",
+        "네비게이션 표시기 디자인"
+      ],
+      "preview": "미리보기",
+      "size": "크기",
+      "color": "색상",
+      "width": "너비",
+      "height": "높이"
+    },
+    "aspect-ratio-box-generator": {
+      "name": "비율 상자 생성기",
+      "description": "반응형 비율 상자용 CSS 생성",
+      "seo_title": "무료 온라인 CSS 비율 상자 생성기",
+      "seo_description": "무료 온라인 CSS 가로세로 비율 박스 생성기. 가로세로 비율을 유지하는 반응형 컨테이너를 만들 수 있습니다. 최신 aspect-ratio 속성 및 padding-bottom 대체 지원.",
+      "detailed_description": "가로세로 비율 박스 생성기는 화면 크기에 관계없이 특정 가로세로 비율을 유지하는 반응형 컨테이너를 위한 CSS 코드를 생성합니다. 16:9, 4:3, 1:1와 같은 일반적인 프리셋 중에서 선택하거나 사용자 지정 비율을 입력할 수 있습니다. 이 도구는 최신 CSS를 사용한 aspect-ratio 속성과 구형 브라우저를 위한 padding-bottom 대체를 모두 지원합니다. 비디오 삽입, 이미지 플레이스홀더, 카드 레이아웃 및 비율을 유지해야 하는 모든 요소에 적합합니다. 즉시 깨끗하고 브라우저 호환성이 높은 CSS 코드를 얻을 수 있습니다.",
+      "usage_steps": [
+        "비율 입력 또는 미리 설정된 값 선택",
+        "CSS 방법 선택",
+        "미리 보기",
+        "CSS 복사"
+      ],
+      "usage_examples": [
+        "비디오 컨테이너 만들기",
+        "반응형 이미지 프레임 디자인"
+      ],
+      "preview": "미리보기",
+      "width": "너비",
+      "height": "높이",
+      "aspectRatioProperty": "종횡비 속성",
+      "paddingMethod": "패딩 방식",
+      "paddingNote": "참고: 패딩 방식은 구형 브라우저 지원용",
+      "method": "방식"
+    },
+    "typing-time-calculator": {
+      "name": "타이핑 시간 계산기",
+      "description": "문서 타이핑에 필요한 시간을 예측합니다",
+      "seo_title": "무료 온라인 타이핑 시간 계산기",
+      "seo_description": "무료 온라인 타이핑 시간 계산기. 단어 수와 타이핑 속도(WPM)에 따라 任意의 텍스트를 타이핑하는 데 걸리는 시간을 예상할 수 있습니다. 작가, 학생, 콘텐츠 제작자에게 적합합니다.",
+      "detailed_description": "타이핑 시간 계산기는 단어 수와 타이핑 속도에 따라 문서를 타이핑하는 데 걸리는 시간을 예상합니다. 텍스트 또는 단어 수를 입력하고, 분당 단어 수(WPM)로 타이핑 속도를 선택하면 정확한 시간 예상치를 얻을 수 있습니다. 이 도구는 초보자부터 전문 타이피스트까지 다양한 스킬 레벨에 맞춘 예약 속도가 포함되어 있습니다. 작업 세션을 계획하는 작가, 과제 완료 시간을 예상하는 학생, 타이핑 생산성에 대해 궁금한 사람에게 적합합니다. 또한 전사 시간 예상에도 유용합니다.",
+      "usage_steps": [
+        "단어 수를 입력하거나 텍스트를 붙여넣기",
+        "타이핑 속도를 설정",
+        "시간 예측 결과 보기"
+      ],
+      "usage_examples": [
+        "글쓰기 세션 계획하기",
+        "프로젝트 타임라인 예측하기"
+      ],
+      "wordCount": "단어 수",
+      "typingSpeed": "타이핑 속도 (WPM)",
+      "beginner": "초보자",
+      "average": "평균",
+      "professional": "전문가",
+      "expert": "숙련자",
+      "pureTypingTime": "순수 타이핑 시간",
+      "totalWithBreaks": "휴식 포함 총 시간",
+      "recommendedBreaks": "권장 휴식 횟수",
+      "minutes": "분",
+      "seconds": "초"
+    },
+    "screen-time-calculator": {
+      "name": "화면 시간 계산기",
+      "description": "일일, 주간, 연간 화면 시간을 계산합니다",
+      "seo_title": "무료 온라인 화면 시간 계산기",
+      "seo_description": "무료 온라인 스크린 타임 계산기. 일일 기기 사용량을 추적하고, 주간 및 월간 총합을 계산하며, 건강 추천을 받으세요. 디지털 습관을 더 잘 이해하세요.",
+      "detailed_description": "스크린 타임 계산기는 디지털 기기 사용량을 이해하고 관리하는 데 도움이 됩니다. 다양한 기기와 활동에 대한 일일 스크린 타임을 입력하면, 도구가 총 일일, 주간, 월간, 연간 스크린 타임을 계산합니다. 또한 기상 시간의 몇 퍼센트를 스크린에 사용하는지 보여주고, 건강 기관의 가이드라인에 따라 건강 추천을 제공합니다. 스크린 타임을 줄이려는 경우, 생산성을 추적하거나 디지털 습관을 이해하려는 경우, 이 계산기는 귀중한 통찰력을 제공합니다.",
+      "usage_steps": [
+        "일일 화면 시간을 입력하세요",
+        "계산된 총 시간을 확인하세요",
+        "건강 관련 제안을 읽으세요"
+      ],
+      "usage_examples": [
+        "휴대폰 사용 시간을 추적하세요",
+        "화면 시간 목표를 설정하세요"
+      ],
+      "hoursPerDay": "하루 시간",
+      "wakeHours": "깨어있는 시간",
+      "daily": "일일",
+      "weekly": "주간",
+      "monthly": "월간",
+      "yearly": "연간",
+      "percentOfWake": "깨어있는 시간 비율",
+      "healthStatus": "건강 상태",
+      "excessive": "과도",
+      "high": "높음",
+      "moderate": "적당",
+      "good": "양호",
+      "excellent": "우수",
+      "recommendations": "권장사항",
+      "ergonomicTips": "인체공학 팁"
+    },
+    "download-time-calculator": {
+      "name": "다운로드 시간 계산기",
+      "description": "연결 속도에 따른 파일 다운로드 시간 계산",
+      "seo_title": "무료 온라인 다운로드 시간 계산기",
+      "seo_description": "무료 온라인 다운로드 시간 계산기. 파일 크기와 인터넷 속도에 따라 파일 다운로드 시간을 예측합니다. 3G부터 광섬유까지 다양한 연결 유형에 대한 시간을 비교합니다.",
+      "detailed_description": "다운로드 시간 계산기는 파일 크기와 인터넷 연결 속도에 따라 파일 다운로드에 걸리는 시간을 예측합니다. 파일 크기를任意 단위(KB, MB, GB, TB)로 입력하고 연결 속도를 선택하거나 사용자 지정 값을 입력합니다. 도구는 3G, 4G, 5G, DSL, 케이블 및 광섬유를 포함한 다양한 연결 유형에 대한 예상 다운로드 시간을 표시합니다. 대용량 다운로드 계획, 백업 시간 예측 또는 연결 속도가 다운로드에 미치는 영향 이해에 적합합니다. 빠른 참조를 위한 비교 표가 포함되어 있습니다.",
+      "usage_steps": [
+        "파일 크기 입력",
+        "연결 속도 선택 또는 입력",
+        "다운로드 시간 확인"
+      ],
+      "usage_examples": [
+        "대용량 다운로드 계획",
+        "연결 속도 비교"
+      ],
+      "fileSize": "파일 크기",
+      "downloadSpeed": "다운로드 속도",
+      "connection": "연결",
+      "estimatedTime": "예상 시간",
+      "days": "일",
+      "minutes": "분",
+      "seconds": "초",
+      "comparisonTable": "비교표"
+    },
+    "ical-parser": {
+      "name": "iCal 파서",
+      "description": "iCalendar (.ics) 파일을 파싱하고 보기",
+      "seo_title": "무료 온라인 iCal 파서 - ICS 캘린더 파일 보기",
+      "seo_description": "무료 온라인 iCal/ICS 파일 파서 및 뷰어. ICS 캘린더 데이터를 업로드하거나 붙여넣어 읽기 쉬운 형식으로 이벤트를 확인하세요. 날짜, 시간, 위치 및 설명을 추출합니다.",
+      "detailed_description": "iCal 파서는 ICS 캘린더 파일을 읽고 보는 데 사용하는 온라인 도구입니다. ICS 파일을 업로드하거나 원시 iCal 데이터를 붙여넣으면 모든 이벤트가 깨끗하고 읽기 쉬운 표 형식으로 표시됩니다. 파서는 이벤트 제목, 시작 및 종료 시간, 위치, 설명, 참석자 및 반복 규칙을 추출합니다. 캘린더 통합 디버깅, 캘린더 내보내기 보기 또는 ICS 파일에서 이벤트 데이터 추출에 적합합니다. 단일 이벤트 및 반복 이벤트 시리즈를 모두 지원하며 전체 시간대 처리를 지원합니다.",
+      "usage_steps": [
+        "ICS 파일 업로드 또는 내용 붙여넣기",
+        "파싱된 이벤트 보기",
+        "JSON으로 내보내기"
+      ],
+      "usage_examples": [
+        "캘린더 내보내기 보기",
+        "이벤트 데이터 추출"
+      ],
+      "parse": "파싱",
+      "uploadFile": "파일 업로드",
+      "icsContent": "iCal 내용",
+      "foundEvents": "이벤트 발견",
+      "summary": "요약",
+      "start": "시작",
+      "end": "종료",
+      "location": "위치",
+      "unnamed": "이름 없는 이벤트",
+      "exportJSON": "JSON 내보내기",
+      "inputPlaceholder": "iCal/ICS 내용을 여기에 붙여넣거나 파일을 업로드..."
+    },
+    "vcard-parser": {
+      "name": "vCard 파서",
+      "description": "vCard (.vcf) 연락처 파일을 파싱하고 보기",
+      "seo_title": "무료 온라인 vCard 파서 - VCF 연락처 파일 보기",
+      "seo_description": "무료 온라인 vCard/VCF 파일 파서 및 뷰어. VCF 연락처 데이터를 업로드하거나 붙여넣어 가독성 있는 형식으로 연락처 정보를 확인하세요. vCard 2.1, 3.0 및 4.0 버전 지원.",
+      "detailed_description": "vCard 파서는 VCF 연락처 파일을 읽고 보는 데 사용되는 온라인 도구입니다. VCF 파일을 업로드하거나 원시 vCard 데이터를 붙여넣으면 모든 연락처 정보가 깨끗하고 정리된 형식으로 표시됩니다. 파서는 이름, 전화번호, 이메일 주소, 실제 주소, 조직, 직함, 사진 및 소셜 프로필을 추출합니다. vCard 버전 2.1, 3.0 및 4.0을 지원합니다. 연락처 내보내기, 연락처 동기화 문제 디버깅 또는 연락처 앱에 가져오지 않고 VCF 파일에서 데이터를 추출하는 데 적합합니다.",
+      "usage_steps": [
+        "VCF 파일을 업로드하거나 내용을 붙여넣기",
+        "파싱된 연락처 보기",
+        "JSON으로 내보내기"
+      ],
+      "usage_examples": [
+        "연락처 내보내기 보기",
+        "연락처 데이터 추출"
+      ],
+      "parse": "파싱",
+      "uploadFile": "파일 업로드",
+      "vcardContent": "vCard 내용",
+      "foundContacts": "연락처 발견",
+      "exportJSON": "JSON 내보내기",
+      "unnamed": "이름 없음",
+      "inputPlaceholder": "vCard/VCF 내용을 여기에 붙여넣거나 파일을 업로드..."
+    },
+    "ai-text-humanizer": {
+      "name": "AI 텍스트 인간화 도구",
+      "description": "AI로 생성된 텍스트를 더 자연스럽고 인간적인 것으로 변환합니다",
+      "seo_title": "무료 온라인 AI 텍스트 인간화 도구 - AI 텍스트를 인간처럼 들리게 합니다",
+      "seo_description": "AI로 생성된 텍스트를 더 자연스럽고 인간적인 것으로 변환합니다. 로봇적인 패턴을 제거하고 자연스러운 흐름을 추가하며 AI 감지를 피합니다. 무료 온라인 도구입니다.",
+      "detailed_description": "AI 텍스트 인간화 도구는 고급 텍스트 변환 도구로, AI로 생성된 콘텐츠를 자연스럽고 인간적인 문체로 변환합니다. 정교한 규칙 기반 엔진을 사용하여, 공통적인 AI 작성 패턴, 공식 어휘 및 반복적인 구조를 더 대화적인 대안으로 교체합니다. 도구는 AI 마커를 분석하며, 이러한 마커를 식별하고 지능적인 대체를 적용합니다. 원래 의미와 문맥을 보존합니다. 세 가지 강도 수준(경, 중, 강)을 사용하여 사용자는 변환 강도를 제어할 수 있습니다. 인간화 점수는 텍스트가 얼마나 자연스럽게 들리는지에 대한 실시간 피드백을 제공합니다. 콘텐츠 작성자, 학생, 마케터 및 더 진정성 있고 매력적인 AI 보조 작성물을 원하는 모든 사람에게 적합합니다.",
+      "usage_steps": [
+        "입력 영역에 AI로 생성된 텍스트를 붙여넣기",
+        "변환 강도(경, 중, 강)를 선택",
+        "필러 단어 및 문장 변형 옵션을 활성화 또는 비활성화",
+        "실시간으로 인간화된 출력과 인간 점수를 검토",
+        "변환된 텍스트를 클립보드로 복사",
+        "필요한 경우 더 나은 결과를 위해 설정을 조정하고 다시 생성"
+      ],
+      "usage_examples": [
+        "ChatGPT로 생성된 블로그 게시물을 더 개인적이고 매력적으로 들리게 변환",
+        "전자 상거래 웹사이트의 공식적인 AI로 작성된 제품 설명을 캐주얼하고 친근하게 변환",
+        "공식적인 AI로 생성된 이메일을 캐주얼하고 친근하게 변환",
+        "정확성을 유지하면서 학술적인 AI 보조 작성물을 더 자연스럽게 들리게 변환"
+      ],
+      "enterText": "AI로 생성된 텍스트 입력",
+      "characters": "문자",
+      "options": "변환 옵션",
+      "intensity": "변환 강도",
+      "light": "경",
+      "medium": "중",
+      "strong": "강",
+      "lightDescription": "부드러운 변환 - 가장 명백한 AI 패턴만 교체",
+      "mediumDescription": "균형 잡힌 변환 - 자연스러움과 원래 의미의 좋은 조합",
+      "strongDescription": "최대 인간화 - 광범위한 재구성 및 스타일 변경",
+      "addFillerWords": "자연스러운 필러 단어 추가",
+      "varyingSentenceLength": "문장 구조 다양화",
+      "humanScore": "인간 점수",
+      "scoreExcellent": "우수",
+      "scoreGood": "좋음",
+      "scoreFair": "보통",
+      "scorePoor": "개선 필요",
+      "changesCount": "변경 사항",
+      "outputLength": "출력 길이",
+      "humanizedText": "인간화된 텍스트",
+      "tips": "최상의 결과를 위한 팁",
+      "tip1": "균형 잡힌 결과를 위해 중간 강도로 시작",
+      "tip2": "자연스러운 톤을 위해 필러 단어 활성화",
+      "tip3": "부자연스러운 구절을 수동으로 조정",
+      "tip4": "다양한 결과를 위해 여러 번 실행",
+      "addFillers": "자연스러운 필러 단어 추가",
+      "humanize": "인간화",
+      "inputPlaceholder": "AI 생성 텍스트를 여기에 붙여넣기..."
+    },
+    "dockerfile-generator": {
+      "name": "도커파일 생성기",
+      "description": "프로젝트에 필요한 도커파일 구성 생성",
+      "seo_title": "무료 온라인 도커파일 생성기 - 도커 구성 생성",
+      "seo_description": "도커파일 구성 생성을 쉽게 도와주는 무료 온라인 도구입니다. 베이스 이미지 선택, 명령어, 포트 및 환경 변수 설정을 통해 최적화된 도커 이미지를 생성할 수 있습니다. 설치 필요없음.",
+      "detailed_description": "도커파일 생성기는 애플리케이션을 컨테이너화하기 위해 도커파일 구성 생성을 도와주는 종합적인 온라인 도구입니다. Node.js, Python, Go와 같은 인기 있는 베이스 이미지를 선택하거나 사용자 지정 이미지를 사용할 수 있습니다. 작업 디렉토리, 복사 명령어, 실행 명령어, 노출 포트 및 환경 변수를 설정할 수 있습니다. 이 도구는 최적화된, 프로덕션 준비가 완료된 도커파일을 생성하며, 최고의 관행을 따릅니다. 도커에 익숙하지 않은 개발자나 빠르게 컨테이너 구성 생성을 원하는 개발자에게 적합합니다.",
+      "usage_steps": [
+        "드롭다운에서 베이스 이미지를 선택하거나 사용자 지정 이미지를 입력",
+        "애플리케이션의 작업 디렉토리를 설정",
+        "필요한 경우 COPY 및 RUN 명령어 추가",
+        "노출할 포트를 지정",
+        "필요한 경우 환경 변수 추가",
+        "생성 버튼을 클릭하여 도커파일 생성",
+        "생성된 도커파일을 복사하거나 다운로드"
+      ],
+      "usage_examples": [
+        "Node.js 애플리케이션 컨테이너 생성",
+        "Python Flask/Django 컨테이너 빌드",
+        "Go 애플리케이션을 위한 멀티 스테이지 빌드 설정",
+        "개발 환경 컨테이너 설정"
+      ]
+    },
+    "eslint-config-generator": {
+      "name": "ESLint 설정 생성기",
+      "description": "자바스크립트/타입스크립트 프로젝트를 위한 ESLint 설정 파일 생성",
+      "seo_title": "무료 온라인 ESLint 설정 생성기 - .eslintrc 설정 생성",
+      "seo_description": "우리 무료 온라인 도구를 사용하여 ESLint 설정 파일을 쉽게 생성하세요. 에어비앤비, 스탠다드, 구글 같은 인기 있는 스타일 가이드 중에서 선택하세요. 리액트, 뷰, 타입스크립트 등에 대한 규칙을 구성하세요.",
+      "detailed_description": "ESLint 설정 생성기는 자바스크립트와 타입스크립트 프로젝트를 위한 맞춤형 ESLint 설정 파일을 생성하는 데 도움이 됩니다. 에어비앤비, 스탠다드, 구글 등 인기 있는 스타일 가이드 중에서 선택하세요. 리액트, 뷰, 앵귤러, 노드.js 등 프레임워크별 규칙을 구성하세요. 타입스크립트 지원을 활성화하고, 프리티어 통합을 설정하고, 개별 규칙을 사용자 지정하세요. 도구는 프로젝트에서 사용할 수 있는 완전한 .eslintrc.json 파일을 생성합니다.",
+      "usage_steps": [
+        "원하는 스타일 가이드를 선택하세요 (에어비앤비, 스탠다드, 구글 등)",
+        "프레임워크를 선택하세요 (리액트, 뷰, 앵귤러, 노드.js)",
+        "필요한 경우 타입스크립트 지원을 활성화하세요",
+        "프리티어 통합을 설정하세요",
+        "필요한 경우 개별 규칙을 사용자 지정하세요",
+        "생성 버튼을 클릭하여 ESLint 설정을 생성하세요",
+        "설정을 프로젝트에 복사하세요"
+      ],
+      "usage_examples": [
+        "리액트 타입스크립트 프로젝트를 위한 ESLint 설정",
+        "에어비앤비 스타일 가이드와 함께 ESLint 설정",
+        "노드.js 백엔드 린팅 설정 생성",
+        "프리티어 통합과 함께 ESLint 설정"
+      ]
+    },
+    "prettier-config-generator": {
+      "name": "프리티어 설정 생성기",
+      "description": "코드 서식을 위한 프리티어 설정 파일 생성",
+      "seo_title": "무료 온라인 프리티어 설정 생성기 - .prettierrc 설정 생성",
+      "seo_description": "무료 온라인 도구를 사용하여 프리티어 설정 파일을 쉽게 생성하세요. 탭 너비, 따옴표, 세미콜론, 후행 쉼표 등 사용자 지정할 수 있습니다. 팀 전체에 일관된 코드 서식을 적용하세요.",
+      "detailed_description": "프리티어 설정 생성기는 일관된 코드 서식을 위한 사용자 지정 프리티어 설정 파일을 생성하는 데 도움이 됩니다. 인쇄 너비, 탭 너비, 단일 또는 이중 따옴표, 세미콜론, 후행 쉼표, 대괄호 간격 등 주요 옵션을 모두 구성할 수 있습니다. 다른 설정으로 코드가 서식되는 방식을 미리 보실 수 있습니다. 이 도구는 JSON 형식의 .prettierrc 파일을 생성하여 JavaScript, TypeScript, CSS 또는 HTML 프로젝트에서 사용할 수 있습니다.",
+      "usage_steps": [
+        "기본값 80인 인쇄 너비를 설정하세요",
+        "탭 너비와 탭 또는 공백 사용 여부를 선택하세요",
+        "단일 또는 이중 따옴표를 선택하세요",
+        "세미콜론 사용 여부를 구성하세요",
+        "후행 쉼표 사용 여부를 설정하세요",
+        "대괄호 간격 및 기타 옵션을 조정하세요",
+        "생성 버튼을 클릭하고 설정을 복사하세요"
+      ],
+      "usage_examples": [
+        "팀 프로젝트를 위한 프리티어 설정 생성",
+        "모노레포를 위한 일관된 서식 설정",
+        "리액트 프로젝트를 위한 프리티어 설정",
+        "레거시 코드베이스 마이그레이션을 위한 서식 사용자 지정"
+      ]
+    },
+    "tsconfig-generator": {
+      "name": "TSConfig 생성기",
+      "description": "프로젝트에 맞는 TypeScript 구성 파일을 생성합니다",
+      "seo_title": "무료 온라인 TSConfig 생성기 - tsconfig.json 구성 생성",
+      "seo_description": "무료 온라인 도구를 사용하여 TypeScript tsconfig.json 파일을 쉽게 생성하세요. 컴파일러 옵션, 모듈 해상도, 엄격한 모드 등 설정을 구성하세요. React, Node.js, 라이브러리 프로젝트에 적합합니다.",
+      "detailed_description": "TSConfig 생성기는 프로젝트에 맞는 맞춤형 TypeScript 구성 파일을 생성하는 데 도움이 됩니다. 대상 ECMAScript 버전, 모듈 시스템, 엄격한 모드 설정, 경로 별칭 등 컴파일러 옵션을 구성하세요. React, Node.js, 라이브러리 개발을 위한 프리셋 중 하나를 선택하거나 사용자 지정 구성 파일을 생성하세요. 도구는 각 옵션에 대한 설명과 설정에 대한 주석이 포함된 완전한 tsconfig.json 파일을 생성합니다.",
+      "usage_steps": [
+        "프로젝트 유형 프리셋(React, Node.js, 라이브러리 등)을 선택하세요",
+        "대상 ECMAScript 버전을 선택하세요",
+        "모듈 시스템 및 해상도를 구성하세요",
+        "필요한 경우 엄격한 모드 옵션을 활성화하세요",
+        "경로 별칭을 설정하여 임포트를 정리하세요",
+        "출력 디렉토리 및 기타 옵션을 구성하세요",
+        "생성 버튼을 클릭하고 tsconfig.json을 복사하세요"
+      ],
+      "usage_examples": [
+        "새로운 React 프로젝트에 TypeScript를 설정하세요",
+        "Node.js 백엔드에 TypeScript를 구성하세요",
+        "npm 패키지 라이브러리에 대한 tsconfig를 생성하세요",
+        "경로 별칭을 설정하여 임포트를 정리하세요"
+      ]
+    },
+    "editorconfig-generator": {
+      "name": "에디터 구성 파일 생성기",
+      "description": "일관된 코딩 스타일을 위한 에디터 구성 파일 생성",
+      "seo_title": "무료 에디터 구성 파일 생성기 - 온라인 .editorconfig 파일 생성",
+      "seo_description": "무료 온라인 도구를 사용하여 에디터 구성 파일을 쉽게 생성하세요. 들여쓰기 스타일, 들여쓰기 크기, 줄 끝, 문자 집합 등 설정을 구성하세요. 다양한 에디터와 IDE에서 일관된 코딩 스타일을 유지하세요.",
+      "detailed_description": "에디터 구성 파일 생성기는 다양한 에디터와 IDE에서 일관된 코딩 스타일을 유지하기 위해 .editorconfig 파일을 생성하는 데 도움이 됩니다. 들여쓰기 스타일(탭 vs 공백), 들여쓰기 크기, 줄 끝 문자, 문자 집합 및 후행 공백 처리를 위한 설정을 구성하세요. 다른 파일 유형에 대한 다른 규칙을 설정하세요. 이 도구는 VS Code, Sublime Text, Vim 및 많은 다른 에디터와 호환되는 완전한 .editorconfig 파일을 생성합니다.",
+      "usage_steps": [
+        "프로젝트 루트에 대한 루트 속성을 true로 설정하세요",
+        "모든 파일에 대한 기본 설정을 구성하세요",
+        "들여쓰기 스타일(탭 또는 공백)을 선택하세요",
+        "들여쓰기 크기(2, 4 등)를 선택하세요",
+        "줄 끝 문자(lf, crlf)를 구성하세요",
+        "필요한 경우 파일 유형별 오버라이드를 추가하세요",
+        "생성 클릭하고 .editorconfig 파일을 복사하세요"
+      ],
+      "usage_examples": [
+        "팀에서 일관된 형식을 유지하세요",
+        "다른 파일 유형에 대한 다른 규칙을 설정하세요",
+        "모노레포에 대한 에디터 구성 파일을 구성하세요",
+        "다양한 플랫폼에서 일관된 줄 끝을 유지하세요"
+      ]
+    },
+    "github-readme-generator": {
+      "name": "GitHub README 생성기",
+      "description": "GitHub 프로젝트용 전문적인 README.md 파일을 생성합니다",
+      "seo_title": "무료 온라인 GitHub README 생성기 - 전문적인 README 파일 만들기",
+      "seo_description": "무료 온라인 도구를 사용하여 GitHub 프로젝트용 전문적인 README.md 파일을 생성하세요. 배지, 기능, 설치 지침, 사용 예시 등을 추가하세요. 프로젝트를 돋보이게 만드세요.",
+      "detailed_description": "GitHub README 생성기는 GitHub 저장소용 전문적이고 구조화된 README.md 파일을 생성하는 데 도움이 됩니다. 프로젝트 제목, 설명, 배지(빌드 상태, 라이선스, npm 버전), 기능 목록, 설치 지침, 사용 예시, API 문서, 기여 지침 및 라이선스 정보를 추가하세요. 도구는 올바른 포맷으로 Markdown을 생성하여 프로젝트를 더 쉽게 찾고 사용자 친화적으로 만듭니다.",
+      "usage_steps": [
+        "프로젝트 이름과 설명을 입력하세요",
+        "빌드 상태, 라이선스 등에 대한 배지를 추가하세요",
+        "프로젝트의 주요 기능을 나열하세요",
+        "설치 지침을 작성하세요",
+        "코드 블록과 함께 사용 예시를 추가하세요",
+        "기여 지침을 포함하세요",
+        "라이선스를 선택하고 README를 생성하세요"
+      ],
+      "usage_examples": [
+        "오픈 소스 라이브러리에 대한 README를 생성하세요",
+        "사용 예시와 함께 CLI 도구를 문서화하세요",
+        "웹 애플리케이션에 대한 README를 설정하세요",
+        "API 프로젝트에 대한 문서를 생성하세요"
+      ],
+      "projectNamePlaceholder": "멋진 프로젝트",
+      "descriptionPlaceholder": "프로젝트에 대한 간단한 설명...",
+      "authorPlaceholder": "홍길동",
+      "authorGithubPlaceholder": "honggildong",
+      "featurePlaceholder": "기능 설명...",
+      "installationPlaceholder": "npm install your-package",
+      "usagePlaceholder": "import { something } from 'your-package';"
+    },
+    "changelog-generator": {
+      "name": "변경 로그 생성기",
+      "description": "Keep a Changelog 형식에 따라 CHANGELOG.md 파일을 생성합니다",
+      "seo_title": "무료 온라인 변경 로그 생성기 - CHANGELOG.md 파일 생성",
+      "seo_description": "Keep a Changelog 형식에 따라 CHANGELOG.md 파일을 생성하는 무료 온라인 도구입니다. 각 버전의 추가, 변경, 폐기, 제거, 수정 및 보안 변경 사항을 추적합니다.",
+      "detailed_description": "변경 로그 생성기는 Keep a Changelog 형식에 따라 잘 구조화된 CHANGELOG.md 파일을 생성하는 데 도움이 됩니다. 버전 항목을 날짜와 함께 추가하고 변경 사항을 추가, 변경, 폐기, 제거, 수정 및 보안 섹션으로 분류합니다. 이 도구는 의미 버전 관리 규칙을 따르는 Markdown을 생성하여 사용자가 소프트웨어 버전 간에 변경된 내용을 쉽게 이해할 수 있도록 합니다.",
+      "usage_steps": [
+        "버전 번호를 입력하세요 (예: 1.0.0)",
+        "릴리즈 날짜를 설정하세요",
+        "적절한 카테고리에 항목을 추가하세요",
+        "새로운 기능에 Added를 사용하세요",
+        "기존 기능의 변경에 Changed를 사용하세요",
+        "버그 수정에 Fixed를 사용하세요",
+        "변경 로그 항목을 생성하고 복사하세요"
+      ],
+      "usage_examples": [
+        "메이저 버전 릴리즈를 문서화하세요",
+        "패치 릴리즈의 버그 수정을 추적하세요",
+        "새로운 버전의 중단 변경 사항을 기록하세요",
+        "npm 패키지에 대한 변경 로그를 유지하세요"
+      ],
+      "projectNamePlaceholder": "내 프로젝트",
+      "projectUrlPlaceholder": "https://github.com/user/repo",
+      "versionPlaceholder": "1.0.0",
+      "itemPlaceholder": "항목 입력..."
+    },
+    "license-generator": {
+      "name": "라이선스 생성기",
+      "description": "프로젝트에 오픈 소스 라이선스 파일을 생성합니다",
+      "seo_title": "무료 온라인 라이선스 생성기 - 오픈 소스 라이선스 파일 생성",
+      "seo_description": "무료 온라인 도구를 사용하여 오픈 소스 라이선스 파일을 생성하세요. MIT, Apache 2.0, GPL 3.0, BSD, ISC 등 다양한 라이선스를 선택할 수 있습니다. 이름과 년도를 자동으로 추가할 수 있습니다. GitHub 프로젝트에 적합합니다.",
+      "detailed_description": "라이선스 생성기는 오픈 소스 프로젝트에 라이선스 파일을 생성하는 데 도움이 됩니다. MIT, Apache 2.0, GPL 3.0, BSD 2-Clause, BSD 3-Clause, ISC, Mozilla Public License 등 다양한 라이선스를 선택할 수 있습니다. 이름을 입력하면 현재 년도가 자동으로 채워지고 완전한 라이선스 텍스트가 생성됩니다. 각 라이선스에는 라이선스의 조건에 대한 간략한 설명이 포함되어 있으므로 프로젝트에 적합한 라이선스를 선택하는 데 도움이 됩니다.",
+      "usage_steps": [
+        "라이선스와 설명을 확인하세요",
+        "프로젝트에 적합한 라이선스를 선택하세요",
+        "이름이나 조직을 입력하세요",
+        "현재 년도가 자동으로 채워집니다",
+        "생성 버튼을 클릭하여 라이선스를 생성하세요",
+        "라이선스 텍스트를 LICENSE 파일에 복사하세요"
+      ],
+      "usage_examples": [
+        "새 npm 패키지에 MIT 라이선스를 추가하세요",
+        "기업 오픈 소스 프로젝트에 Apache 2.0 라이선스를 선택하세요",
+        "카피레프트 프로젝트에 GPL 라이선스를 선택하세요",
+        "간단한 허가 라이선스에 ISC 라이선스를 사용하세요"
+      ],
+      "authorPlaceholder": "홍길동",
+      "yearPlaceholder": "2024"
+    },
+    "rot13-encoder": {
+      "name": "ROT13 인코더",
+      "description": "ROT13 암호를 사용하여 텍스트를 인코딩 및 디코딩합니다",
+      "seo_title": "무료 온라인 ROT13 인코더/디코더 - 시저 암호 도구",
+      "seo_description": "ROT13 암호를 사용하여 텍스트를 인코딩 및 디코딩하는 무료 온라인 도구입니다. ROT13은 각 문자를 알파벳에서 13자리 뒤의 문자로 대체하는 단순한 문자 대체 암호입니다.",
+      "detailed_description": "ROT13 인코더는 ROT13 암호를 사용하여 텍스트를 인코딩 및 디코딩하는 간단한 도구입니다. ROT13(13자리 회전)은 각 문자를 알파벳에서 13자리 뒤의 문자로 대체하는 시저 암호의 특수한 경우입니다. 알파벳에는 26개의 문자가 있기 때문에 ROT13을 두 번 적용하면 원래 텍스트가 반환되므로, 이는 자신의 역함수입니다. ROT13은 스포일러를 숨기거나, 퍼즐 풀이, 또는 약간의 텍스트를 흐리게 하기 위해 일반적으로 사용됩니다.",
+      "usage_steps": [
+        "입력 영역에 텍스트를 입력하거나 붙여넣기",
+        "ROT13 변환은 자동으로 적용됩니다",
+        "인코딩/디코딩 결과를 확인",
+        "클립보드로 결과를 복사",
+        "디코딩을 위해 다시 ROT13을 적용"
+      ],
+      "usage_examples": [
+        "온라인 토론에서 스포일러를 숨기기",
+        "퍼즐 풀이를 인코딩",
+        "기본적인 암호학을 배우기",
+        "ROT13으로 인코딩된 메시지를 디코딩"
+      ]
+    },
+    "caesar-cipher": {
+      "name": "카이사르 암호",
+      "description": "사용자 지정 시프트를 사용하여 텍스트를 암호화하고 복호화합니다.",
+      "seo_title": "무료 온라인 카이사르 암호 도구 - 텍스트 암호화 및 복호화",
+      "seo_description": "카이사르 암호를 사용하여 텍스트를 암호화하고 복호화하는 무료 온라인 도구입니다. 1-25 사이의 임의의 시프트 값을 선택할 수 있습니다. 율리우스 카이사르가 사용한 가장 오래된 암호화 방법 중 하나를 알아보세요.",
+      "detailed_description": "카이사르 암호 도구를 사용하면 클래식 카이사르 암호 알고리즘을 사용하여 텍스트를 암호화하고 복호화할 수 있습니다. 율리우스 카이사르가 군사 통신에 사용한 것에서 이름을 따온 이 암호는 알파벳의 고정된 위치로 각 문자를 시프트합니다. 1에서 25 사이의 임의의 시프트 값을 선택할 수 있으며, ROT13은 시프트 13의 특별한 경우입니다. 이 도구는 암호화 및 복호화 모드를 모두 지원하며 비 알파벳 문자를 보존합니다.",
+      "usage_steps": [
+        "입력 영역에 텍스트를 입력하세요",
+        "시프트 값을 선택하세요 (1-25)",
+        "암호화 또는 복호화 모드를 선택하세요",
+        "변환된 결과를 확인하세요",
+        "클립보드로 결과를 복사하세요",
+        "복호화에 동일한 시프트 값을 사용하세요"
+      ],
+      "usage_examples": [
+        "고전적인 암호학에 대해 알아보세요",
+        "간단한 암호화된 메시지를 생성하세요",
+        "카이사르 암호 퍼즐을 풀어보세요",
+        "학생들에게 암호화의 기본을 가르치세요"
+      ]
+    },
+    "vigenere-cipher": {
+      "name": "비제네르 암호",
+      "description": "키워드를 사용하여 비제네르 암호로 텍스트를 암호화하고 복호화합니다.",
+      "seo_title": "무료 비제네르 암호 도구 온라인 - 다중 알파벳 대체 암호화",
+      "seo_description": "키워드를 사용하여 비제네르 암호로 텍스트를 암호화하고 복호화하는 무료 온라인 도구입니다. 다중 알파벳 대체를 위한 키워드를 사용합니다. 단순한 시저 암호보다 보안성이 뛰어납니다.",
+      "detailed_description": "비제네르 암호 도구는 비제네르 암호, 다중 알파벳 대체 암호를 사용하여 텍스트를 암호화하고 복호화할 수 있습니다. 단일 시프트를 사용하는 시저 암호와는 달리, 비제네르 암호는 각 문자가 다른 시프트를 결정하는 키워드를 사용합니다. 이것은 단순한 대체 암호보다 훨씬 더 안전합니다. 도구는 암호화 및 복호화를 모두 지원하며 비 알파벳 문자를 보존합니다.",
+      "usage_steps": [
+        "입력 영역에 텍스트를 입력합니다.",
+        "키워드(문자만)를 입력합니다.",
+        "암호화 또는 복호화 모드를 선택합니다.",
+        "변환된 결과를 확인합니다.",
+        "클립보드로 결과를 복사합니다.",
+        "같은 키워드를 사용하여 복호화합니다."
+      ],
+      "usage_examples": [
+        "더욱 안전한 암호화된 메시지를 생성합니다.",
+        "다중 알파벳 대체 암호에 대해 학습합니다.",
+        "비제네르 암호 퍼즐을 해결합니다.",
+        "역사적인 암호화 방법을 연구합니다."
+      ]
+    },
+    "checksum-verifier": {
+      "name": "체크섬 검증기",
+      "description": "파일 체크섬(MD5, SHA-1, SHA-256, SHA-512) 계산 및 검증",
+      "seo_title": "무료 온라인 체크섬 검증기 - MD5, SHA-1, SHA-256, SHA-512",
+      "seo_description": "무료 온라인 도구를 사용하여 파일 체크섬을 계산하고 검증하세요. MD5, SHA-1, SHA-256, SHA-512 해시 알고리즘 지원. 파일 무결성을 확인하고 변조를 탐지하세요.",
+      "detailed_description": "체크섬 검증기는 여러 해시 알고리즘을 사용하여 파일 체크섬을 계산하고 검증하는 종합적인 도구입니다. 파일을 업로드하여 MD5, SHA-1, SHA-256, SHA-512 해시를 동시에 계산할 수 있습니다. 계산된 해시를 예상 값과 비교하여 파일 무결성을 확인하세요. 이 도구는 Web Crypto API를 사용하여 브라우저에서 파일을 완전히 처리하므로 파일이 서버에 업로드되지 않습니다.",
+      "usage_steps": [
+        "클릭하거나 파일을 끌어다 놓아 업로드하세요",
+        "해시 계산이 완료될 때까지 기다리세요",
+        "MD5, SHA-1, SHA-256, SHA-512 해시를 확인하세요",
+        "선택적으로 예상 체크섬을 입력하세요",
+        "도구가 체크섬이 일치하는지 여부를 표시합니다",
+        "클립보드로 해시 값을 복사하세요"
+      ],
+      "usage_examples": [
+        "다운로드한 소프트웨어 무결성을 확인하세요",
+        "파일 전송 중에 파일이 손상되었는지 확인하세요",
+        "해시를 사용하여 파일 버전을 비교하세요",
+        "백업 파일 무결성을 확인하세요"
+      ]
+    },
+    "inflation-calculator": {
+      "name": "인플레이션 계산기",
+      "description": "시간이 지남에 따라 구매력을 인플레이션의 영향으로 계산합니다",
+      "seo_title": "무료 온라인 인플레이션 계산기 - 구매력을 계산하세요",
+      "seo_description": "무료 온라인 도구를 사용하여 인플레이션의 구매력에 미치는 영향을 계산하세요. 과거의 돈이 오늘날 얼마나 될지, 또는 미래에 얼마가 필요한지 확인하세요.",
+      "detailed_description": "인플레이션 계산기는 돈의 가치가 시간이 지남에 따라 어떻게 변하는지 이해하는 데 도움이 됩니다. 금액을 입력하고 시작 년도와 끝 년도를 선택한 다음 인플레이션율을 지정하여 등가 가치를 확인하세요. 과거의 돈이 오늘날 얼마나 될지 계산하거나 미래에 동일한 구매력을 유지하기 위해 얼마가 필요한지 추정하세요. 도구는 조정된 가치와 총 백분율 변화를 모두 표시합니다.",
+      "usage_steps": [
+        "원래 금액을 입력하세요",
+        "시작 년도를 선택하세요",
+        "끝 년도를 선택하세요",
+        "연간 인플레이션율을 입력하세요",
+        "결과를 확인하려면 계산을 클릭하세요",
+        "인플레이션 조정 가치를 확인하세요",
+        "총 백분율 변화를 확인하세요"
+      ],
+      "usage_examples": [
+        "1990년의 100달러가 오늘날 얼마나 될지 계산하세요",
+        "미래의 은퇴 저축 필요량을 추정하세요",
+        "과거 가격을 현재 가치와 비교하세요",
+        "장기 투자에서 인플레이션을 계획하세요"
+      ]
+    },
+    "break-even-calculator": {
+      "name": "손익분기점 계산기",
+      "description": "사업의 손익분기점을 계산합니다",
+      "seo_title": "무료 온라인 손익분기점 계산기 - 사업 분석 도구",
+      "seo_description": "고정 비용, 가변 비용, 판매 가격을 입력하여 비용을 충당하기 위해 얼마나 많은 단위를 판매해야 하는지 계산합니다. 회원가입 없이 무료로 사용할 수 있습니다.",
+      "detailed_description": "손익분기점 계산기는 사업이 총 수익과 총 비용이 같아지는 지점을 결정하는 데 도움이 됩니다. 고정 비용(임대료, 급여 등), 단위당 가변 비용(재료, 노동력), 단위당 판매 가격을 입력합니다. 도구는 단위와 수익에서 손익분기점을 계산하여 비용을 충당하기 위해 얼마나 많은 단위를 판매해야 하는지 정확하게 보여줍니다. 가격 결정, 사업 계획, 재무 분석을 위한 필수 도구입니다.",
+      "usage_steps": [
+        "총 고정 비용을 입력하세요",
+        "단위당 가변 비용을 입력하세요",
+        "단위당 판매 가격을 입력하세요",
+        "결과를 보려면 계산을 클릭하세요",
+        "단위별 손익분기점을 확인하세요",
+        "손익분기점 수익 금액을 확인하세요",
+        "기여 이익을 분석하세요"
+      ],
+      "usage_examples": [
+        "새로운 제품의 가격을 결정하세요",
+        "사업의 수익성을 분석하세요",
+        "생산량을 계획하세요",
+        "정보에 기반한 가격 결정"
+      ]
+    },
+    "margin-calculator": {
+      "name": "마진 계산기",
+      "description": "이익 마진과 마크업 퍼센트를 계산합니다",
+      "seo_title": "무료 마진 계산기 온라인 - 이익 마진과 마크업",
+      "seo_description": "비용과 판매 가격을 입력하여 총 마진, 마크업 퍼센트, 이익 금액을 계산하는 무료 온라인 도구입니다.",
+      "detailed_description": "마진 계산기는 제품 또는 서비스의 수익성을 이해하는 데 도움이 됩니다. 비용과 판매 가격을 입력하여 총 이익 마진(판매 가격의 이익 퍼센트)과 마크업 퍼센트(비용의 이익 퍼센트)를 계산합니다. 또한 절대 이익 금액을 표시합니다. 가격 전략, 경쟁 분석 및 재무 계획에 필수적입니다.",
+      "usage_steps": [
+        "비용 가격을 입력하세요",
+        "판매 가격을 입력하세요",
+        "계산 결과를 보려면 계산을 클릭하세요",
+        "이익 금액을 확인하세요",
+        "이익 마진 퍼센트를 확인하세요",
+        "마크업 퍼센트를 확인하세요",
+        "마진과 마크업을 비교하세요"
+      ],
+      "usage_examples": [
+        "제품 수익성을 분석하세요",
+        "제품 간 마진을 비교하세요",
+        "경쟁 가격을 설정하세요",
+        "공급자 가격을 평가하세요"
+      ]
+    },
+    "markup-calculator": {
+      "name": "마진 계산기",
+      "description": "원가와 원하는 마진율을 기준으로 판매 가격을 계산합니다",
+      "seo_title": "무료 마진 계산기 온라인 - 판매 가격 계산",
+      "seo_description": "원가와 원하는 마진율을 입력하여 최적의 판매 가격과 이익을 계산하는 무료 온라인 도구입니다. 원가와 마진율을 입력하여 판매 가격과 이익을 확인하세요.",
+      "detailed_description": "마진 계산기는 원가와 원하는 마진율을 기준으로 제품의 판매 가격을 결정하는 데 도움이 됩니다. 원가와 목표 마진율을 입력하면 도구가 판매 가격과 이익 금액을 계산합니다. 소매 가격 책정, 도매 계산, 제품 라인 전체에 걸쳐 일관된 이익 마진을 유지하는 데 유용합니다.",
+      "usage_steps": [
+        "원가 가격을 입력하세요",
+        "원하는 마진율을 입력하세요",
+        "결과를 확인하려면 계산을 클릭하세요",
+        "계산된 판매 가격을 확인하세요",
+        "이익 금액을 확인하세요",
+        "가격을 최적화하려면 마진을 조정하세요"
+      ],
+      "usage_examples": [
+        "도매 원가에서 소매 가격을 설정하세요",
+        "일관된 마진율로 가격을 계산하세요",
+        "서비스의 가격을 결정하세요",
+        "프로모션 가격을 계획하세요"
+      ]
+    },
+    "hashtag-generator": {
+      "name": "해시태그 생성기",
+      "description": "소셜 미디어 포스트에 적합한 해시태그 생성",
+      "seo_title": "무료 온라인 해시태그 생성기 - 소셜 미디어 해시태그",
+      "seo_description": "무료 온라인 도구를 사용하여 소셜 미디어 포스트에 적합한 해시태그를 생성하세요. 주제를 입력하고 인스타그램, 트위터, 틱톡 등에 대한 해시태그 제안을 받으세요.",
+      "detailed_description": "해시태그 생성기는 소셜 미디어 콘텐츠에 적합한 해시태그를 찾는 데 도움이 됩니다. 주제 또는 키워드를 입력하고 대상 플랫폼(인스타그램, 트위터, 틱톡, 링크드인)을 선택한 다음, 큐레이션된 해시태그 목록을 받으세요. 도구는 콘텐츠의 범위를 최대화하기 위해 인기, 니치 및 트렌드 해시태그를 혼합하여 생성합니다. 클릭 한 번으로 모든 해시태그를 복사하고 직접 포스트에 붙여넣으세요.",
+      "usage_steps": [
+        "주제 또는 키워드를 입력하세요",
+        "대상 플랫폼을 선택하세요",
+        "해시태그의 수를 선택하세요",
+        "제안을 받으려면 생성을 클릭하세요",
+        "목록을 검토하고 사용자 지정하세요",
+        "클립보드로 모든 해시태그를 복사하세요",
+        "소셜 미디어 포스트에 붙여넣으세요"
+      ],
+      "usage_examples": [
+        "인스타그램 포스트에 대한 해시태그 찾기",
+        "트렌드 주제에 대한 트위터 해시태그 생성",
+        "틱톡 해시태그 전략 만들기",
+        "링크드인 포스트 가시성 최적화"
+      ]
+    },
+    "email-signature-generator": {
+      "name": "이메일 서명 생성기",
+      "description": "HTML 및 일반 텍스트로 전문적인 이메일 서명을 만듭니다.",
+      "seo_title": "무료 온라인 이메일 서명 생성기 - 전문적인 서명",
+      "seo_description": "무료 온라인 도구를 사용하여 전문적인 이메일 서명을 만듭니다. 이름, 직함, 회사, 연락처 정보 및 소셜 링크를 추가합니다. HTML 및 일반 텍스트 버전을 생성합니다.",
+      "detailed_description": "이메일 서명 생성기는 Gmail, Outlook, Apple Mail 및 기타 이메일 클라이언트용 전문적인 이메일 서명을 만드는 데 도움이 됩니다. 이름, 직함, 회사, 전화번호, 이메일, 웹사이트 및 소셜 미디어 링크를 입력합니다. 여러 디자인 템플릿 중에서 선택하고 색상을 맞춤설정할 수 있습니다. 이 도구는 서명을 복사하여 이메일 설정에 붙여넣을 수 있는 HTML(리치 포매팅용) 및 일반 텍스트 버전을 생성합니다.",
+      "usage_steps": [
+        "이름과 직함을 입력합니다.",
+        "회사 이름을 추가합니다.",
+        "연락처 정보(전화, 이메일)를 입력합니다.",
+        "웹사이트 URL을 추가합니다.",
+        "소셜 미디어 링크를 포함합니다.",
+        "디자인 템플릿을 선택합니다.",
+        "HTML 또는 일반 텍스트 서명을 복사합니다."
+      ],
+      "usage_examples": [
+        "전문적인 비즈니스 서명을 만듭니다.",
+        "소셜 링크가 포함된 서명을 디자인합니다.",
+        "최소한의 이메일 서명을 만듭니다.",
+        "팀 구성원용 서명을 생성합니다."
+      ],
+      "namePlaceholder": "홍길동",
+      "titlePlaceholder": "소프트웨어 엔지니어",
+      "companyPlaceholder": "주식회사 예시",
+      "emailPlaceholder": "hong@example.com",
+      "phonePlaceholder": "+82 10-1234-5678",
+      "websitePlaceholder": "www.example.com",
+      "usernamePlaceholder": "honggildong"
+    },
+    "glassmorphism-generator": {
+      "name": "Glassmorphism Generator",
+      "description": "Create modern glass-like UI effects with customizable blur, transparency, and borders",
+      "seo_title": "Free Glassmorphism CSS Generator Online - Glass Effect Tool",
+      "seo_description": "Generate beautiful glassmorphism CSS effects with our free online tool. Customize blur, transparency, border, and shadow to create modern frosted glass UI designs.",
+      "detailed_description": "Glassmorphism Generator is a powerful CSS tool that helps you create stunning frosted glass effects for modern UI designs. This technique, popularized by Apple and Microsoft, creates a sense of depth and hierarchy in your interfaces. Our generator provides real-time preview and customizable parameters including blur intensity, background transparency, border opacity, and shadow effects. Perfect for creating cards, modals, navigation bars, and other UI components with a contemporary aesthetic.",
+      "usage_steps": [
+        "Adjust the blur slider to control the frosted glass intensity",
+        "Set the transparency level for the background",
+        "Configure border opacity for subtle edge definition",
+        "Customize the shadow opacity for depth",
+        "Choose your preferred background color",
+        "Copy the generated CSS code to use in your project"
+      ],
+      "usage_examples": [
+        "Creating modern card components with glass effect",
+        "Designing navigation bars with frosted glass background",
+        "Building modal dialogs with glassmorphism style"
+      ],
+      "previewText": "Beautiful frosted glass effect",
+      "blur": "Blur",
+      "transparency": "Transparency",
+      "borderOpacity": "Border Opacity",
+      "shadowOpacity": "Shadow Opacity",
+      "backgroundColor": "Background Color"
+    },
+    "neumorphism-generator": {
+      "name": "Neumorphism Generator",
+      "description": "Generate soft UI neumorphic effects with customizable shadows and shapes",
+      "seo_title": "Free Neumorphism CSS Generator Online - Soft UI Tool",
+      "seo_description": "Create beautiful neumorphic soft UI effects with our free online generator. Customize shadows, shapes, and colors to design modern skeuomorphic interfaces.",
+      "detailed_description": "Neumorphism Generator creates the popular soft UI design style that combines flat design with subtle 3D effects. This tool generates CSS code for elements that appear to extrude from or press into the background. Customize the light source direction, shadow intensity, blur amount, and border radius to achieve the perfect soft, tactile appearance for buttons, cards, and input fields.",
+      "usage_steps": [
+        "Select your preferred background color",
+        "Choose a shape style: flat, concave, convex, or pressed",
+        "Adjust the shadow distance for depth effect",
+        "Set the intensity for light and dark shadows",
+        "Configure blur amount for softness",
+        "Copy the CSS code for your project"
+      ],
+      "usage_examples": [
+        "Designing soft UI buttons and toggles",
+        "Creating neumorphic form inputs",
+        "Building dashboard cards with soft shadows"
+      ],
+      "backgroundColor": "Background Color",
+      "shape": "Shape",
+      "shapes": {
+        "flat": "Flat",
+        "concave": "Concave",
+        "convex": "Convex",
+        "pressed": "Pressed"
+      },
+      "distance": "Distance",
+      "intensity": "Intensity",
+      "blur": "Blur",
+      "borderRadius": "Border Radius"
+    },
+    "blob-generator": {
+      "name": "Blob Generator",
+      "description": "Create random organic blob shapes as SVG for backgrounds and decorations",
+      "seo_title": "Free Blob Shape Generator Online - SVG Blob Maker",
+      "seo_description": "Generate unique organic blob shapes with our free online tool. Create random SVG blobs for backgrounds, decorations, and modern web designs.",
+      "detailed_description": "Blob Generator creates unique, organic shapes perfect for modern web design. Generate random blob shapes as SVG that can be used for backgrounds, decorative elements, or as clip-paths. Customize the complexity, contrast, size, and color to create the perfect organic shape for your design needs.",
+      "usage_steps": [
+        "Adjust complexity to control the number of points",
+        "Set contrast for shape variation",
+        "Choose your preferred size",
+        "Select a fill color",
+        "Click Generate for a new random shape",
+        "Copy SVG code or download the file"
+      ],
+      "usage_examples": [
+        "Creating decorative background elements",
+        "Designing organic hero section shapes",
+        "Making unique avatar masks"
+      ],
+      "complexity": "Complexity",
+      "contrast": "Contrast",
+      "size": "Size",
+      "color": "Color",
+      "generate": "Generate New",
+      "copySvg": "Copy SVG"
+    },
+    "wave-generator": {
+      "name": "Wave Generator",
+      "description": "Generate SVG wave patterns for section dividers and backgrounds",
+      "seo_title": "Free SVG Wave Generator Online - Wave Divider Maker",
+      "seo_description": "Create beautiful SVG wave patterns for section dividers with our free online tool. Customize height, frequency, and layers for stunning web designs.",
+      "detailed_description": "Wave Generator creates smooth, customizable SVG wave patterns perfect for section dividers, headers, and footers. Generate single or multi-layer waves with adjustable height, frequency, and amplitude. The generated SVG is optimized for web use and can be positioned at the top or bottom of sections.",
+      "usage_steps": [
+        "Set the wave height in pixels",
+        "Adjust frequency for wave count",
+        "Configure amplitude for wave intensity",
+        "Add multiple layers for depth effect",
+        "Choose top or bottom position",
+        "Copy or download the SVG code"
+      ],
+      "usage_examples": [
+        "Creating section dividers between content",
+        "Designing wave headers for landing pages",
+        "Building animated wave backgrounds"
+      ],
+      "height": "Height",
+      "frequency": "Frequency",
+      "amplitude": "Amplitude",
+      "layers": "Layers",
+      "position": "Position",
+      "top": "Top",
+      "bottom": "Bottom",
+      "color": "Color"
+    },
+    "mesh-gradient-generator": {
+      "name": "Mesh Gradient Generator",
+      "description": "Create beautiful mesh gradients with multiple color points",
+      "seo_title": "Free Mesh Gradient Generator Online - CSS Gradient Tool",
+      "seo_description": "Generate stunning mesh gradients with our free online tool. Create multi-color gradient backgrounds with customizable color points and positions.",
+      "detailed_description": "Mesh Gradient Generator creates complex, multi-color gradient backgrounds using radial gradients positioned at different points. Unlike linear gradients, mesh gradients create organic, flowing color transitions that add depth and visual interest to your designs. Customize each color point position and color to create unique gradient effects.",
+      "usage_steps": [
+        "Click on color swatches to change colors",
+        "Drag X and Y sliders to position each color point",
+        "Adjust blur for gradient softness",
+        "Click Randomize for new color combinations",
+        "Preview the result in real-time",
+        "Copy the CSS code for your project"
+      ],
+      "usage_examples": [
+        "Creating vibrant hero section backgrounds",
+        "Designing colorful card backgrounds",
+        "Building gradient overlays for images"
+      ],
+      "colorPoints": "Color Points",
+      "point": "Point",
+      "blur": "Blur",
+      "randomize": "Randomize Colors"
+    },
+    "noise-texture-generator": {
+      "name": "Noise Texture Generator",
+      "description": "Generate noise textures and grain effects for backgrounds",
+      "seo_title": "Free Noise Texture Generator Online - Grain Effect Tool",
+      "seo_description": "Create noise textures and grain effects with our free online tool. Generate random, perlin, or film grain patterns for modern web designs.",
+      "detailed_description": "Noise Texture Generator creates customizable noise patterns for adding texture to your designs. Choose from random noise, perlin-like patterns, or film grain effects. Adjust intensity, scale, and colors to create the perfect texture overlay for backgrounds, cards, or any design element that needs subtle visual interest.",
+      "usage_steps": [
+        "Select noise type: random, perlin, or grain",
+        "Adjust intensity for noise visibility",
+        "Set scale for pattern size",
+        "Choose base and noise colors",
+        "Select output size",
+        "Download PNG or copy data URL"
+      ],
+      "usage_examples": [
+        "Adding film grain to hero images",
+        "Creating textured card backgrounds",
+        "Designing vintage-style overlays"
+      ],
+      "noiseType": "Noise Type",
+      "types": {
+        "random": "Random",
+        "perlin": "Perlin",
+        "grain": "Grain"
+      },
+      "intensity": "Intensity",
+      "scale": "Scale",
+      "size": "Size",
+      "baseColor": "Base Color",
+      "noiseColor": "Noise Color",
+      "regenerate": "Regenerate",
+      "copyDataUrl": "Copy Data URL",
+      "usage": "Usage"
+    },
+    "commit-message-generator": {
+      "name": "Commit Message Generator",
+      "description": "Generate conventional commit messages following best practices",
+      "seo_title": "Free Git Commit Message Generator Online - Conventional Commits",
+      "seo_description": "Generate well-formatted Git commit messages following conventional commits specification. Create consistent, meaningful commit messages for your projects.",
+      "detailed_description": "Commit Message Generator helps you create well-structured Git commit messages following the Conventional Commits specification. This format makes your commit history more readable and enables automated changelog generation. Choose from standard commit types, add optional scope, and write clear descriptions for consistent version control.",
+      "usage_steps": [
+        "Select the commit type (feat, fix, docs, etc.)",
+        "Optionally add a scope for the change",
+        "Write a clear, concise subject line",
+        "Check breaking change if applicable",
+        "Add optional body for detailed explanation",
+        "Copy the formatted commit message"
+      ],
+      "usage_examples": [
+        "Creating feature commits: feat(auth): add login functionality",
+        "Writing bug fix commits: fix(api): resolve timeout issue",
+        "Documenting changes: docs(readme): update installation guide"
+      ],
+      "type": "Type",
+      "scope": "Scope",
+      "scopePlaceholder": "e.g., auth, api, ui",
+      "subject": "Subject",
+      "subjectPlaceholder": "Short description of the change",
+      "body": "Body",
+      "bodyPlaceholder": "Detailed explanation of the change...",
+      "footer": "Footer",
+      "footerPlaceholder": "e.g., Closes #123, BREAKING CHANGE: ...",
+      "breakingChange": "Breaking Change",
+      "commitMessage": "Commit Message",
+      "preview": "Enter subject to preview...",
+      "optional": "optional",
+      "characters": "characters",
+      "recommended50": "recommended max 50",
+      "tips": "Tips",
+      "tip1": "Use imperative mood: \"add\" not \"added\" or \"adds\"",
+      "tip2": "Keep subject under 50 characters",
+      "tip3": "Separate subject from body with blank line"
+    },
+    "bandwidth-calculator": {
+      "name": "Bandwidth Calculator",
+      "description": "Calculate required bandwidth from file size and transfer time",
+      "seo_title": "Free Bandwidth Calculator Online - Network Speed Tool",
+      "seo_description": "Calculate required bandwidth from file size and transfer time. Convert between Mbps, Gbps, and other network speed units with our free online tool.",
+      "detailed_description": "Bandwidth Calculator helps you determine the required network bandwidth to transfer files within a specific time frame. Enter your file size and desired transfer time to calculate the necessary bandwidth in various units including bps, Kbps, Mbps, Gbps, and bytes per second. Perfect for network planning and capacity estimation.",
+      "usage_steps": [
+        "Enter the file size you want to transfer",
+        "Select the appropriate size unit (KB, MB, GB, TB)",
+        "Enter the desired transfer time",
+        "Choose the time unit (seconds, minutes, hours)",
+        "View the required bandwidth in multiple units",
+        "Copy the results for your reference"
+      ],
+      "usage_examples": [
+        "Planning video streaming bandwidth requirements",
+        "Estimating backup transfer speeds",
+        "Calculating cloud upload/download needs"
+      ],
+      "fileSize": "File Size",
+      "transferTime": "Transfer Time",
+      "timeUnits": {
+        "seconds": "Seconds",
+        "minutes": "Minutes",
+        "hours": "Hours"
+      },
+      "requiredBandwidth": "Required Bandwidth",
+      "bitsPerSecond": "Bits per Second",
+      "bytesPerSecond": "Bytes per Second",
+      "commonBandwidths": "Common Bandwidth References"
+    },
+    "data-transfer-calculator": {
+      "name": "Data Transfer Calculator",
+      "description": "Calculate file transfer time based on connection speed",
+      "seo_title": "Free Data Transfer Time Calculator Online - Download Time Tool",
+      "seo_description": "Calculate how long it takes to transfer files at different connection speeds. Estimate download and upload times with our free online calculator.",
+      "detailed_description": "Data Transfer Calculator estimates how long it will take to transfer files based on your connection speed. Enter your file size and network speed to get accurate transfer time estimates. Includes preset speeds for common connection types like 4G, 5G, WiFi, and Ethernet for quick calculations.",
+      "usage_steps": [
+        "Enter the file size to transfer",
+        "Select the size unit (KB, MB, GB, TB)",
+        "Enter your connection speed",
+        "Or click a preset speed button",
+        "View the estimated transfer time",
+        "Copy the results for reference"
+      ],
+      "usage_examples": [
+        "Estimating large file download times",
+        "Planning data migration schedules",
+        "Comparing transfer times across networks"
+      ],
+      "fileSize": "File Size",
+      "connectionSpeed": "Connection Speed",
+      "presetSpeeds": "Preset Speeds",
+      "estimatedTime": "Estimated Transfer Time",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds",
+      "note": "Note: Actual transfer times may vary due to network conditions, overhead, and other factors."
+    },
+    "pixel-density-calculator": {
+      "name": "Pixel Density Calculator",
+      "description": "Calculate PPI and pixel pitch from screen resolution and size",
+      "seo_title": "Free Pixel Density (PPI) Calculator Online - Screen Resolution Tool",
+      "seo_description": "Calculate pixel density (PPI), pixel pitch, and screen dimensions from resolution and display size. Free online tool for display analysis.",
+      "detailed_description": "Pixel Density Calculator computes the pixels per inch (PPI) and other display metrics from screen resolution and diagonal size. Understand your display quality by calculating pixel pitch, aspect ratio, and total megapixels. Includes presets for common resolutions from HD to 8K and popular devices.",
+      "usage_steps": [
+        "Enter the screen width in pixels",
+        "Enter the screen height in pixels",
+        "Enter the diagonal screen size in inches",
+        "Or select a common resolution preset",
+        "View PPI, pixel pitch, and other metrics",
+        "Copy the results for reference"
+      ],
+      "usage_examples": [
+        "Comparing display quality across monitors",
+        "Evaluating smartphone screen sharpness",
+        "Choosing the right display for design work"
+      ],
+      "width": "Width",
+      "height": "Height",
+      "diagonal": "Diagonal",
+      "inches": "inches",
+      "commonResolutions": "Common Resolutions",
+      "results": "Results",
+      "pixelsPerInch": "Pixels Per Inch",
+      "pixelPitch": "Pixel Pitch",
+      "aspectRatio": "Aspect Ratio",
+      "megapixels": "Megapixels",
+      "physicalWidth": "Physical Width",
+      "physicalHeight": "Physical Height",
+      "totalPixels": "Total Pixels",
+      "ppiReference": "PPI Reference",
+      "quality": {
+        "excellent": "Excellent - Retina quality",
+        "good": "Good - Sharp display",
+        "average": "Average - Standard quality",
+        "low": "Low - Visible pixels"
+      }
+    },
+    "dpi-calculator": {
+      "name": "DPI Calculator",
+      "description": "Calculate DPI for printing or required resolution for target DPI",
+      "seo_title": "Free DPI Calculator Online - Print Resolution Tool",
+      "seo_description": "Calculate DPI from image resolution and print size, or find required pixels for target DPI. Free online tool for print quality planning.",
+      "detailed_description": "DPI Calculator helps you determine the print quality of your images or calculate the required resolution for a target DPI. Switch between two modes: calculate DPI from existing image dimensions and print size, or calculate required pixel dimensions for a specific DPI and print size. Essential for photographers, designers, and print professionals.",
+      "usage_steps": [
+        "Choose calculation mode: DPI or Pixels",
+        "For DPI mode: enter image resolution and print size",
+        "For Pixels mode: enter target DPI and print size",
+        "Select a common print size preset if needed",
+        "View the calculated results",
+        "Copy the results for reference"
+      ],
+      "usage_examples": [
+        "Checking if an image is suitable for printing",
+        "Calculating required resolution for large prints",
+        "Planning photo book image requirements"
+      ],
+      "calculateDpi": "Calculate DPI",
+      "calculatePixels": "Calculate Pixels",
+      "imageResolution": "Image Resolution",
+      "printSize": "Print Size",
+      "targetDpi": "Target DPI",
+      "width": "Width",
+      "height": "Height",
+      "inches": "inches",
+      "commonPrintSizes": "Common Print Sizes",
+      "calculatedDpi": "Calculated DPI",
+      "requiredResolution": "Required Resolution",
+      "horizontal": "Horizontal",
+      "vertical": "Vertical",
+      "megapixels": "Megapixels",
+      "dpiGuide": "DPI Guide",
+      "screen": "Screen/Web",
+      "draft": "Draft Print",
+      "print": "Quality Print",
+      "highQuality": "High Quality",
+      "quality": {
+        "excellent": "Excellent print quality",
+        "good": "Good print quality",
+        "acceptable": "Acceptable for viewing distance",
+        "low": "Low quality - may appear pixelated"
+      }
     }
   },
   "tool": {

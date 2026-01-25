@@ -480,6 +480,67 @@ export const TOOL_COMPONENTS_MAP: Record<string, ComponentType> = {
   'json-to-zod': createToolImport(() => import('./JsonToZod'), 'converter'),
   'typescript-to-json': createToolImport(() => import('./TypescriptToJson'), 'converter'),
   'markdown-to-slides': createToolImport(() => import('./MarkdownToSlides'), 'editor'),
+  // Batch 53 - AI/Text Processing Tools (AI/文本处理工具)
+  'ai-text-humanizer': createToolImport(() => import('./AiTextHumanizer'), 'editor'),
+  'text-spinner': createToolImport(() => import('./TextSpinner'), 'editor'),
+  'readability-checker': createToolImport(() => import('./ReadabilityChecker'), 'editor'),
+  'grammar-checker': createToolImport(() => import('./GrammarChecker'), 'editor'),
+  // Batch 53 - Code Formatters (代码格式化工具)
+  'typescript-playground': createToolImport(() => import('./TypescriptPlayground'), 'editor', false),
+  'python-formatter': createToolImport(() => import('./PythonFormatter'), 'editor'),
+  'go-formatter': createToolImport(() => import('./GoFormatter'), 'editor'),
+  'rust-formatter': createToolImport(() => import('./RustFormatter'), 'editor'),
+  'yaml-formatter': createToolImport(() => import('./YamlFormatter'), 'editor'),
+  // Batch 53 - CSS Design Tools (CSS 设计工具)
+  'text-shadow-generator': createToolImport(() => import('./TextShadowGenerator'), 'generator'),
+  'svg-pattern-generator': createToolImport(() => import('./SvgPatternGenerator'), 'generator'),
+  'css-triangle-generator': createToolImport(() => import('./CssTriangleGenerator'), 'generator'),
+  'aspect-ratio-box-generator': createToolImport(() => import('./AspectRatioBoxGenerator'), 'generator'),
+  // Batch 53 - Calculators (计算器工具)
+  'screen-time-calculator': createToolImport(() => import('./ScreenTimeCalculator'), 'generator'),
+  'typing-time-calculator': createToolImport(() => import('./TypingTimeCalculator'), 'generator'),
+  'download-time-calculator': createToolImport(() => import('./DownloadTimeCalculator'), 'generator'),
+  // Batch 53 - Data Converters (数据转换工具)
+  'ical-parser': createToolImport(() => import('./IcalParser'), 'converter'),
+  'vcard-parser': createToolImport(() => import('./VcardParser'), 'converter'),
+  // Batch 51 - Config Generators (配置生成器)
+  'dockerfile-generator': createToolImport(() => import('./DockerfileGenerator'), 'generator'),
+  'eslint-config-generator': createToolImport(() => import('./EslintConfigGenerator'), 'generator'),
+  'prettier-config-generator': createToolImport(() => import('./PrettierConfigGenerator'), 'generator'),
+  'tsconfig-generator': createToolImport(() => import('./TsconfigGenerator'), 'generator'),
+  'editorconfig-generator': createToolImport(() => import('./EditorconfigGenerator'), 'generator'),
+  // Batch 51 - Doc Generators (文档生成器)
+  'github-readme-generator': createToolImport(() => import('./GithubReadmeGenerator'), 'generator'),
+  'changelog-generator': createToolImport(() => import('./ChangelogGenerator'), 'generator'),
+  'license-generator': createToolImport(() => import('./LicenseGenerator'), 'generator'),
+  // Batch 51 - Cipher Tools (加密工具)
+  'rot13-encoder': createToolImport(() => import('./Rot13Encoder'), 'converter'),
+  'caesar-cipher': createToolImport(() => import('./CaesarCipher'), 'converter'),
+  'vigenere-cipher': createToolImport(() => import('./VigenereCipher'), 'converter'),
+  // Batch 51 - Checksum Tool (校验和工具)
+  'checksum-verifier': createToolImport(() => import('./ChecksumVerifier'), 'default'),
+  // Batch 51 - Finance Calculators (财务计算器)
+  'inflation-calculator': createToolImport(() => import('./InflationCalculator'), 'generator'),
+  'break-even-calculator': createToolImport(() => import('./BreakEvenCalculator'), 'generator'),
+  'margin-calculator': createToolImport(() => import('./MarginCalculator'), 'generator'),
+  'markup-calculator': createToolImport(() => import('./MarkupCalculator'), 'generator'),
+  // Batch 51 - Social Tools (社交工具)
+  'hashtag-generator': createToolImport(() => import('./HashtagGenerator'), 'generator'),
+  'email-signature-generator': createToolImport(() => import('./EmailSignatureGenerator'), 'generator'),
+  // Batch 52 - CSS Design Generators (CSS 设计生成器)
+  'glassmorphism-generator': createToolImport(() => import('./GlassmorphismGenerator'), 'generator'),
+  'neumorphism-generator': createToolImport(() => import('./NeumorphismGenerator'), 'generator'),
+  'blob-generator': createToolImport(() => import('./BlobGenerator'), 'generator'),
+  'wave-generator': createToolImport(() => import('./WaveGenerator'), 'generator'),
+  'mesh-gradient-generator': createToolImport(() => import('./MeshGradientGenerator'), 'generator'),
+  'noise-texture-generator': createToolImport(() => import('./NoiseTextureGenerator'), 'generator'),
+  // Batch 52 - Developer Tools (开发者工具)
+  'commit-message-generator': createToolImport(() => import('./CommitMessageGenerator'), 'generator'),
+  // Batch 52 - Calculators (计算器)
+  'bandwidth-calculator': createToolImport(() => import('./BandwidthCalculator'), 'generator'),
+  'data-transfer-calculator': createToolImport(() => import('./DataTransferCalculator'), 'generator'),
+  'pixel-density-calculator': createToolImport(() => import('./PixelDensityCalculator'), 'generator'),
+  'dpi-calculator': createToolImport(() => import('./DpiCalculator'), 'generator'),
 };
 
 

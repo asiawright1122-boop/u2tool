@@ -1,0 +1,18 @@
+{
+  "detailed_description": "Le générateur de fichiers EditorConfig vous aide à créer des fichiers .editorconfig pour maintenir des styles de codage cohérents sur différents éditeurs et IDE. Configurez les paramètres pour le style d'indentation (onglets ou espaces), la taille d'indentation, les caractères de fin de ligne, le jeu de caractères et la gestion des espaces blancs en fin de ligne. Définissez des règles différentes pour différents types de fichiers. L'outil génère un fichier .editorconfig complet qui fonctionne avec VS Code, Sublime Text, Vim et de nombreux autres éditeurs.",
+  "usage_steps": [
+    "Définissez la propriété root sur true pour la racine du projet",
+    "Configurez les paramètres par défaut pour tous les fichiers",
+    "Sélectionnez le style d'indentation (onglets ou espaces)",
+    "Choisissez la taille d'indentation (2, 4, etc.)",
+    "Configurez le caractère de fin de ligne (lf, crlf)",
+    "Ajoutez des règles spécifiques à chaque type de fichier si nécessaire",
+    "Cliquez sur Générer et copiez le fichier .editorconfig"
+  ],
+  "usage_examples": [
+    "Créez une mise en forme cohérente au sein d'une équipe",
+    "Définissez des règles différentes pour différents types de fichiers",
+    "Configurez EditorConfig pour un monorepo",
+    "Assurez-vous d'avoir des fins de ligne cohérentes sur différentes plateformes"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "detailed_description": "YAML 格式化器是一款全面的在线工具，用于格式化和验证 YAML 文件。自动修复缩进问题、验证语法并美化配置文件。支持复杂嵌套结构、数组、多行字符串和多文档 YAML 文件。非常适合处理 Kubernetes 清单、CI/CD 管道或任何基于 YAML 的配置的 DevOps 工程师。即时获得语法错误反馈，生成整洁、正确缩进的 YAML 输出。",
+  "usage_steps": [
+    "粘贴 YAML",
+    "设置缩进大小",
+    "点击格式化",
+    "复制结果"
+  ],
+  "usage_examples": [
+    "格式化配置文件",
+    "验证 Kubernetes 清单"
+  ]
+}

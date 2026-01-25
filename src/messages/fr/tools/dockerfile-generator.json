@@ -1,0 +1,18 @@
+{
+  "detailed_description": "Le Générateur de Dockerfile est un outil en ligne complet qui vous aide à créer des configurations Dockerfile pour conteneuriser vos applications. Sélectionnez des images de base populaires comme Node.js, Python, Go ou des images personnalisées. Configurez les répertoires de travail, les commandes de copie, les commandes d'exécution, les ports exposés et les variables d'environnement. L'outil génère des Dockerfiles optimisés et prêts pour la production en suivant les meilleures pratiques. Parfait pour les développeurs débutants avec Docker ou ceux qui veulent rapidement créer des configurations de conteneur.",
+  "usage_steps": [
+    "Sélectionnez une image de base dans la liste déroulante ou entrez une image personnalisée",
+    "Configurez le répertoire de travail pour votre application",
+    "Ajoutez des commandes COPY et RUN si nécessaire",
+    "Spécifiez les ports à exposer",
+    "Ajoutez des variables d'environnement si nécessaire",
+    "Cliquez sur Générer pour créer votre Dockerfile",
+    "Copiez ou téléchargez le Dockerfile généré"
+  ],
+  "usage_examples": [
+    "Créez un conteneur d'application Node.js",
+    "Construisez un conteneur Flask/Django Python",
+    "Configurez une construction multi-étapes pour les applications Go",
+    "Configurez un environnement de développement conteneur"
+  ]
+}

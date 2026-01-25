@@ -513,6 +513,69 @@ export const tools: Tool[] = [
   { slug: 'json-to-zod', category: 'converters', icon: '⚡', component: 'JsonToZod' },
   { slug: 'typescript-to-json', category: 'converters', icon: '🔷', component: 'TypescriptToJson' },
   { slug: 'markdown-to-slides', category: 'converters', icon: '📽️', component: 'MarkdownToSlides' },
+
+  // Batch 51 - Config Generators (配置生成器)
+  { slug: 'dockerfile-generator', category: 'development', icon: '🐳', component: 'DockerfileGenerator' },
+  { slug: 'eslint-config-generator', category: 'development', icon: '📏', component: 'EslintConfigGenerator' },
+  { slug: 'prettier-config-generator', category: 'development', icon: '✨', component: 'PrettierConfigGenerator' },
+  { slug: 'tsconfig-generator', category: 'development', icon: '🔷', component: 'TsconfigGenerator' },
+  { slug: 'editorconfig-generator', category: 'development', icon: '📝', component: 'EditorconfigGenerator' },
+  // Batch 51 - Doc Generators (文档生成器)
+  { slug: 'github-readme-generator', category: 'generators', icon: '📖', component: 'GithubReadmeGenerator' },
+  { slug: 'changelog-generator', category: 'generators', icon: '📋', component: 'ChangelogGenerator' },
+  { slug: 'license-generator', category: 'generators', icon: '📜', component: 'LicenseGenerator' },
+  // Batch 51 - Cipher Tools (加密工具)
+  { slug: 'rot13-encoder', category: 'encoding', icon: '🔄', component: 'Rot13Encoder' },
+  { slug: 'caesar-cipher', category: 'encoding', icon: '🏛️', component: 'CaesarCipher' },
+  { slug: 'vigenere-cipher', category: 'encoding', icon: '🔐', component: 'VigenereCipher' },
+  // Batch 51 - Checksum Tool (校验和工具)
+  { slug: 'checksum-verifier', category: 'security', icon: '✅', component: 'ChecksumVerifier' },
+  // Batch 51 - Finance Calculators (财务计算器)
+  { slug: 'inflation-calculator', category: 'finance', icon: '📈', component: 'InflationCalculator' },
+  { slug: 'break-even-calculator', category: 'finance', icon: '⚖️', component: 'BreakEvenCalculator' },
+  { slug: 'margin-calculator', category: 'finance', icon: '💹', component: 'MarginCalculator' },
+  { slug: 'markup-calculator', category: 'finance', icon: '🏷️', component: 'MarkupCalculator' },
+  // Batch 51 - Social Tools (社交工具)
+  { slug: 'hashtag-generator', category: 'generators', icon: '#️⃣', component: 'HashtagGenerator' },
+  { slug: 'email-signature-generator', category: 'generators', icon: '✉️', component: 'EmailSignatureGenerator' },
+  // Batch 52 - CSS Design Generators (CSS 设计生成器)
+  { slug: 'glassmorphism-generator', category: 'generators', icon: '🪟', component: 'GlassmorphismGenerator' },
+  { slug: 'neumorphism-generator', category: 'generators', icon: '🔘', component: 'NeumorphismGenerator' },
+  { slug: 'blob-generator', category: 'generators', icon: '💧', component: 'BlobGenerator' },
+  { slug: 'wave-generator', category: 'generators', icon: '🌊', component: 'WaveGenerator' },
+  { slug: 'mesh-gradient-generator', category: 'generators', icon: '🎨', component: 'MeshGradientGenerator' },
+  { slug: 'noise-texture-generator', category: 'generators', icon: '📺', component: 'NoiseTextureGenerator' },
+  // Batch 52 - Developer Tools (开发者工具)
+  { slug: 'commit-message-generator', category: 'development', icon: '💬', component: 'CommitMessageGenerator' },
+  // Batch 52 - Calculators (计算器)
+  { slug: 'bandwidth-calculator', category: 'network', icon: '📶', component: 'BandwidthCalculator' },
+  { slug: 'data-transfer-calculator', category: 'network', icon: '⏱️', component: 'DataTransferCalculator' },
+  { slug: 'pixel-density-calculator', category: 'image', icon: '🔍', component: 'PixelDensityCalculator' },
+  { slug: 'dpi-calculator', category: 'image', icon: '🖨️', component: 'DpiCalculator' },
+
+  // Batch 53 - AI/Text Processing Tools (AI/文本处理工具) - 最新添加
+  { slug: 'ai-text-humanizer', category: 'text', icon: '🤖', component: 'AiTextHumanizer' },
+  { slug: 'text-spinner', category: 'text', icon: '🔄', component: 'TextSpinner' },
+  { slug: 'readability-checker', category: 'text', icon: '📖', component: 'ReadabilityChecker' },
+  { slug: 'grammar-checker', category: 'text', icon: '✓', component: 'GrammarChecker' },
+  // Batch 53 - Code Formatters (代码格式化工具)
+  { slug: 'typescript-playground', category: 'development', icon: '🔷', component: 'TypescriptPlayground' },
+  { slug: 'python-formatter', category: 'development', icon: '🐍', component: 'PythonFormatter' },
+  { slug: 'go-formatter', category: 'development', icon: '🐹', component: 'GoFormatter' },
+  { slug: 'rust-formatter', category: 'development', icon: '🦀', component: 'RustFormatter' },
+  { slug: 'yaml-formatter', category: 'development', icon: '📄', component: 'YamlFormatter' },
+  // Batch 53 - CSS Design Tools (CSS 设计工具)
+  { slug: 'text-shadow-generator', category: 'generators', icon: '🌑', component: 'TextShadowGenerator' },
+  { slug: 'svg-pattern-generator', category: 'generators', icon: '🔲', component: 'SvgPatternGenerator' },
+  { slug: 'css-triangle-generator', category: 'generators', icon: '▲', component: 'CssTriangleGenerator' },
+  { slug: 'aspect-ratio-box-generator', category: 'generators', icon: '📐', component: 'AspectRatioBoxGenerator' },
+  // Batch 53 - Calculators (计算器工具)
+  { slug: 'screen-time-calculator', category: 'math', icon: '📱', component: 'ScreenTimeCalculator' },
+  { slug: 'typing-time-calculator', category: 'math', icon: '⌨️', component: 'TypingTimeCalculator' },
+  { slug: 'download-time-calculator', category: 'math', icon: '⬇️', component: 'DownloadTimeCalculator' },
+  // Batch 53 - Data Converters (数据转换工具)
+  { slug: 'ical-parser', category: 'converters', icon: '📅', component: 'IcalParser' },
+  { slug: 'vcard-parser', category: 'converters', icon: '👤', component: 'VcardParser' },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [

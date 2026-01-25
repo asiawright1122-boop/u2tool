@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Checksum Verifier es una herramienta integral para calcular y verificar sumas de verificación de archivos utilizando múltiples algoritmos de hash. Sube cualquier archivo para calcular sus hashes MD5, SHA-1, SHA-256 y SHA-512 simultáneamente. Compara los hashes calculados con los valores esperados para verificar la integridad del archivo. La herramienta procesa archivos enteramente en tu navegador utilizando la API Web Crypto, asegurando que tus archivos nunca se suban a ningún servidor.",
+  "usage_steps": [
+    "Sube un archivo haciendo clic o arrastrando",
+    "Espera a que se complete el cálculo de hash",
+    "Visualiza los hashes MD5, SHA-1, SHA-256 y SHA-512",
+    "Opcionalmente, ingresa una suma de verificación esperada",
+    "La herramienta indicará si las sumas de verificación coinciden",
+    "Copia cualquier valor de hash al portapapeles"
+  ],
+  "usage_examples": [
+    "Verifica la integridad del software descargado",
+    "Comprueba si un archivo se corrompió durante la transferencia",
+    "Compara versiones de archivos utilizando hashes",
+    "Valida la integridad de archivos de respaldo"
+  ]
+}

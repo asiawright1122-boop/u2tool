@@ -232,7 +232,7 @@ export default function PaceCalculator() {
                   value={hours}
                   onChange={(e) => setHours(e.target.value)}
                   min="0"
-                  placeholder="H"
+                  placeholder={t('hoursShort')}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-center"
                 />
                 <div className="text-xs text-center text-gray-500 mt-1">{t('hours')}</div>
@@ -244,7 +244,7 @@ export default function PaceCalculator() {
                   onChange={(e) => setMinutes(e.target.value)}
                   min="0"
                   max="59"
-                  placeholder="M"
+                  placeholder={t('minutesShort')}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-center"
                 />
                 <div className="text-xs text-center text-gray-500 mt-1">{t('minutes')}</div>
@@ -256,7 +256,7 @@ export default function PaceCalculator() {
                   onChange={(e) => setSeconds(e.target.value)}
                   min="0"
                   max="59"
-                  placeholder="S"
+                  placeholder={t('secondsShort')}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-center"
                 />
                 <div className="text-xs text-center text-gray-500 mt-1">{t('seconds')}</div>
@@ -279,7 +279,7 @@ export default function PaceCalculator() {
                   value={paceMinutes}
                   onChange={(e) => setPaceMinutes(e.target.value)}
                   min="0"
-                  placeholder="M"
+                  placeholder={t('minutesShort')}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-center"
                 />
                 <div className="text-xs text-center text-gray-500 mt-1">{t('minutes')}</div>
@@ -291,7 +291,7 @@ export default function PaceCalculator() {
                   onChange={(e) => setPaceSeconds(e.target.value)}
                   min="0"
                   max="59"
-                  placeholder="S"
+                  placeholder={t('secondsShort')}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-center"
                 />
                 <div className="text-xs text-center text-gray-500 mt-1">{t('seconds')}</div>

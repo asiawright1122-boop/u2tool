@@ -1,0 +1,18 @@
+{
+  "detailed_description": "O Gerador de Configuração do Prettier ajuda a criar arquivos de configuração personalizados do Prettier para formatação de código consistente. Configure todas as principais opções, incluindo largura de impressão, largura de tabulação, aspas simples ou duplas, ponto e vírgula, vírgulas finais, espaçamento de colchetes e muito mais. Visualize como seu código será formatado com diferentes configurações. A ferramenta gera arquivos .prettierrc no formato JSON prontos para uso em qualquer projeto JavaScript, TypeScript, CSS ou HTML.",
+  "usage_steps": [
+    "Defina a largura de impressão preferida (padrão 80)",
+    "Escolha a largura de tabulação e se deseja usar tabs ou espaços",
+    "Selecione aspas simples ou duplas",
+    "Configure o uso do ponto e vírgula",
+    "Defina a preferência de vírgula final",
+    "Ajuste o espaçamento de colchetes e outras opções",
+    "Clique em Gerar e copie a configuração"
+  ],
+  "usage_examples": [
+    "Crie uma configuração do Prettier para um projeto de equipe",
+    "Configure a formatação consistente para um monorepositório",
+    "Configure o Prettier para um projeto React",
+    "Personalize a formatação para migração de código legado"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "detailed_description": "Der Changelog-Generator hilft Ihnen, gut strukturierte CHANGELOG.md-Dateien im Keep a Changelog-Format zu erstellen. Fügen Sie Versions-Einträge mit Datum hinzu und kategorisieren Sie Änderungen in die Bereiche Hinzugefügt, Geändert, Veraltet, Entfernt, Behoben und Sicherheit ein. Das Tool generiert Markdown, das semantische Versionskonventionen folgt und es Benutzern leicht macht, zu verstehen, was sich zwischen den Versionen Ihrer Software geändert hat.",
+  "usage_steps": [
+    "Geben Sie die Versionsnummer ein (z. B. 1.0.0)",
+    "Legen Sie das Veröffentlichungsdatum fest",
+    "Fügen Sie Einträge unter den entsprechenden Kategorien hinzu",
+    "Verwenden Sie Hinzugefügt für neue Funktionen",
+    "Verwenden Sie Geändert für Änderungen an bestehender Funktionalität",
+    "Verwenden Sie Behoben für Fehlerkorrekturen",
+    "Generieren und kopieren Sie den Changelog-Eintrag"
+  ],
+  "usage_examples": [
+    "Dokumentieren Sie eine Hauptversionsveröffentlichung",
+    "Verfolgen Sie Fehlerkorrekturen in einer Patch-Veröffentlichung",
+    "Dokumentieren Sie umfassende Änderungen in einer neuen Version",
+    "Pflegen Sie einen Changelog für ein npm-Paket"
+  ]
+}

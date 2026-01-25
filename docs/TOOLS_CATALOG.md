@@ -2,9 +2,9 @@
 
 > 本文档记录项目中所有已注册的工具，方便查阅和避免添加重复工具。
 > 
-> 最后更新: 2026-01-13
+> 最后更新: 2026-01-24
 > 
-> 工具总数: **394 个**
+> 工具总数: **414 个**
 
 ---
 
@@ -63,8 +63,12 @@
 | 28 | `char-frequency` | 📊 | CharFrequency | ✅ |
 | 29 | `markdown-editor` | 📝 | MarkdownEditor | ✅ |
 | 30 | `typing-speed-test` | ⌨️ | TypingSpeedTest | ✅ |
+| 31 | `ai-text-humanizer` | 🤖 | AiTextHumanizer | ✅ |
+| 32 | `text-spinner` | 🔄 | TextSpinner | |
+| 33 | `readability-checker` | 📖 | ReadabilityChecker | ✅ |
+| 34 | `grammar-checker` | ✏️ | GrammarChecker | ✅ |
 
-**小计: 30 个工具**
+**小计: 34 个工具**
 
 ---
 
@@ -197,8 +201,10 @@
 | 49 | `json-to-zod` | 🔷 | JsonToZod | |
 | 50 | `typescript-to-json` | 🔷 | TypescriptToJson | |
 | 51 | `markdown-to-slides` | 📊 | MarkdownToSlides | |
+| 52 | `ical-parser` | 📅 | IcalParser | |
+| 53 | `vcard-parser` | 👤 | VcardParser | |
 
-**小计: 51 个工具**
+**小计: 53 个工具**
 
 ---
 
@@ -253,8 +259,17 @@
 | 45 | `csp-generator` | 🔒 | CspGenerator | |
 | 46 | `sri-hash-generator` | 🔐 | SriHashGenerator | |
 | 47 | `cors-tester` | 🌐 | CorsTester | |
+| 48 | `typescript-playground` | 📘 | TypescriptPlayground | ✅ |
+| 49 | `python-formatter` | 🐍 | PythonFormatter | |
+| 50 | `go-formatter` | 🔵 | GoFormatter | |
+| 51 | `rust-formatter` | 🦀 | RustFormatter | |
+| 52 | `yaml-formatter` | 📄 | YamlFormatter | |
+| 53 | `text-shadow-generator` | 🌑 | TextShadowGenerator | ✅ |
+| 54 | `svg-pattern-generator` | 🎨 | SvgPatternGenerator | |
+| 55 | `css-triangle-generator` | 🔺 | CssTriangleGenerator | |
+| 56 | `aspect-ratio-box-generator` | 📐 | AspectRatioBoxGenerator | |
 
-**小计: 47 个工具**
+**小计: 56 个工具**
 
 ---
 
@@ -364,8 +379,11 @@
 | 16 | `binary-calculator` | 01 | BinaryCalculator | ✅ |
 | 17 | `hex-calculator` | 0x | HexCalculator | ✅ |
 | 18 | `aspect-ratio-calculator-enhanced` | 📐 | AspectRatioCalculatorEnhanced | ✅ |
+| 19 | `screen-time-calculator` | 📱 | ScreenTimeCalculator | ✅ |
+| 20 | `typing-time-calculator` | ⌨️ | TypingTimeCalculator | |
+| 21 | `download-time-calculator` | ⬇️ | DownloadTimeCalculator | |
 
-**小计: 18 个工具**
+**小计: 21 个工具**
 
 ---
 
@@ -680,26 +698,27 @@ const toolSlug = 'your-tool-slug';
 
 | 分类 | 数量 |
 |------|------|
-| 📝 文本工具 | 35 |
+| 📝 文本工具 | 34 |
 | 🔐 编码工具 | 29 |
 | ⚡ 生成器 | 28 |
-| 🔄 转换器 | 44 |
-| 💻 开发工具 | 42 |
+| 🔄 转换器 | 53 |
+| 💻 开发工具 | 56 |
 | 🔒 安全工具 | 11 |
 | 🌐 网络工具 | 17 |
 | 🖼️ 图像工具 | 31 |
-| 🔢 数学工具 | 24 |
+| 🔢 数学工具 | 21 |
 | 📈 图表工具 | 42 |
 | 📄 办公工具 | 26 |
 | 🏃 生活工具 | 12 |
 | 🎮 娱乐工具 | 7 |
 | 💰 财务工具 | 7 |
-| **总计** | **344** |
+| **总计** | **414** |
 
 ---
 
 ## 更新日志
 
+- **2026-01-24**: 添加 18 个热门低竞争工具 (Batch 53: ai-text-humanizer, text-spinner, readability-checker, grammar-checker, typescript-playground, python-formatter, go-formatter, rust-formatter, yaml-formatter, text-shadow-generator, svg-pattern-generator, css-triangle-generator, aspect-ratio-box-generator, screen-time-calculator, typing-time-calculator, download-time-calculator, ical-parser, vcard-parser)
 - **2026-01-13**: 添加 20 个海外热门开发工具 (Batch 50: json-to-proto, svg-to-png, webp-to-png, png-to-svg, html-to-pdf, json-to-table, yaml-validator, xml-validator, css-to-tailwind, tailwind-to-css, svg-editor, json-to-form, api-tester, jwt-debugger, csp-generator, sri-hash-generator, cors-tester, json-to-zod, typescript-to-json, markdown-to-slides)
 - **2026-01-11**: 添加 10 个新热门工具 (Batch 49: anagram-solver, word-unscrambler, text-to-pdf, unit-price-calculator, bionic-reading-converter, palindrome-checker, character-map, text-repeater, fake-name-generator, invisible-character-generator)
 - **2026-01-10**: 添加 6 个欧洲热门工具 (iban-validator, vat-calculator, carbon-footprint-calculator, gdpr-consent-generator, metric-imperial-converter, bic-swift-lookup)

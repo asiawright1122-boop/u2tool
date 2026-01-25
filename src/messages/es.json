@@ -12764,7 +12764,10 @@
       "speed": "Velocidad",
       "finishTime": "Tiempo de Llegada",
       "metric": "Métrico",
-      "imperial": "Imperial"
+      "imperial": "Imperial",
+      "hoursShort": "H",
+      "minutesShort": "M",
+      "secondsShort": "S"
     },
     "shoe-size-converter": {
       "name": "Convertidor de Talla de Zapatos",
@@ -14918,7 +14921,9 @@
       "bodyPlaceholder": "Cuerpo de la solicitud (JSON)...",
       "responseBody": "Cuerpo de respuesta",
       "responseHeaders": "Encabezados de respuesta",
-      "sending": "Enviando..."
+      "sending": "Enviando...",
+      "headerNamePlaceholder": "Nombre del encabezado",
+      "headerValuePlaceholder": "Valor"
     },
     "jwt-debugger": {
       "name": "Depurador JWT",
@@ -15199,6 +15204,1227 @@
       "fullscreen": "Pantalla completa",
       "exitFullscreen": "Salir de pantalla completa",
       "slideOf": "de"
+    },
+    "text-spinner": {
+      "name": "Girador de Texto",
+      "description": "Reescribe texto utilizando sinónimos para crear variaciones únicas",
+      "seo_title": "Girador de Texto Gratis Online - Reescribe Contenido con Sinónimos",
+      "seo_description": "Reescribe texto de forma instantánea con nuestro girador de texto en línea. ¡Gratis, sin registro y fácil de usar!",
+      "detailed_description": "Nuestro girador de texto es una herramienta en línea que reescribe texto utilizando sinónimos para crear variaciones únicas. Diseñado para desarrolladores, diseñadores y creadores de contenido que buscan evitar el plagio y mejorar la SEO de sus textos. ¡Sin registro ni costo, obtén resultados instantáneos!",
+      "usage_steps": [
+        "Pega texto",
+        "Selecciona nivel",
+        "Haz clic en Girar",
+        "Copia resultado"
+      ],
+      "usage_examples": [
+        "Crea variaciones de descripciones de productos",
+        "Genera artículos únicos"
+      ],
+      "spin": "Girar",
+      "inputPlaceholder": "Ingrese texto...",
+      "uniqueness": "Unicidad",
+      "level": "Nivel",
+      "conservative": "Conservador",
+      "moderate": "Moderado",
+      "aggressive": "Agresivo"
+    },
+    "readability-checker": {
+      "name": "Verificador de Legibilidad",
+      "description": "Analiza la legibilidad del texto con Flesch-Kincaid y otras puntuaciones",
+      "seo_title": "Verificador de Legibilidad Gratis en Línea - Calculadora Flesch-Kincaid",
+      "seo_description": "Verifica la legibilidad de tus textos de forma gratuita y en línea. No requiere registro y ofrece resultados instantáneos con Flesch-Kincaid y otras puntuaciones.",
+      "detailed_description": "El Verificador de Legibilidad es una herramienta en línea gratuita que analiza la legibilidad de tus textos utilizando puntuaciones como Flesch-Kincaid, Gunning-Fog y SMOG. Diseñada para escritores, diseñadores y creadores de contenido, esta herramienta te ayuda a mejorar la claridad y comprensibilidad de tus textos. Con resultados instantáneos y sin necesidad de registro, puedes verificar la legibilidad de tus textos en segundos.",
+      "usage_steps": [
+        "Pega el texto",
+        "Verifica las puntuaciones",
+        "Revisa las sugerencias"
+      ],
+      "usage_examples": [
+        "Verifica la legibilidad de un blog",
+        "Optimiza el contenido de marketing"
+      ],
+      "inputPlaceholder": "Ingrese texto para analizar...",
+      "statistics": "Estadísticas",
+      "words": "Palabras",
+      "sentences": "Oraciones",
+      "characters": "Caracteres",
+      "fleschReading": "Flesch Lectura",
+      "fleschKincaid": "Flesch-Kincaid",
+      "gunningFog": "Gunning Fog",
+      "smog": "SMOG",
+      "gradeLevel": "Nivel de Grado",
+      "easeScore": "Puntuación",
+      "interpretation": "Interpretación",
+      "excellent": "Excelente",
+      "good": "Bueno",
+      "average": "Promedio",
+      "recommendations": "Recomendaciones"
+    },
+    "grammar-checker": {
+      "name": "Revisión de Gramática",
+      "description": "Revisa el texto en busca de errores gramaticales y recibe sugerencias de corrección",
+      "seo_title": "Revisión de Gramática Gratis en Línea - Corrige Errores Gramaticales",
+      "seo_description": "Revisa errores de gramática, ortografía y puntuación. Recibe sugerencias para mejorar tu escritura. Gratis, online y sin registro.",
+      "detailed_description": "La Revisión de Gramática analiza el texto en busca de errores gramaticales comunes y sugiere correcciones.",
+      "usage_steps": [
+        "Pega el texto",
+        "Ver errores resaltados",
+        "Aplica sugerencias",
+        "Copia el texto corregido"
+      ],
+      "usage_examples": [
+        "Revisa correos electrónicos",
+        "Revisa ensayos",
+        "Mejora entradas de blog"
+      ],
+      "inputPlaceholder": "Ingrese texto para verificar...",
+      "foundErrors": "Errores Encontrados",
+      "noErrors": "Sin errores",
+      "fix": "Corregir",
+      "fixAll": "Corregir Todo",
+      "suggestion": "Sugerencia"
+    },
+    "typescript-playground": {
+      "name": "Zona de pruebas de TypeScript",
+      "description": "Escribe y compila código TypeScript en el navegador",
+      "seo_title": "Zona de pruebas de TypeScript gratuita en línea - Compila TS a JS",
+      "seo_description": "Escribe código TypeScript y ve el resultado compilado en JavaScript de inmediato. Compilador en línea gratuito.",
+      "detailed_description": "La zona de pruebas de TypeScript te permite escribir código TypeScript y ver el resultado compilado en JavaScript.",
+      "usage_steps": [
+        "Escribe código TypeScript",
+        "Configura opciones",
+        "Ver resultado compilado en JS",
+        "Copia el resultado"
+      ],
+      "usage_examples": [
+        "Aprende TypeScript",
+        "Prueba definiciones de tipos",
+        "Comparte fragmentos de código"
+      ],
+      "inputPlaceholder": "Ingrese código TypeScript...",
+      "compile": "Compilar",
+      "target": "Objetivo"
+    },
+    "python-formatter": {
+      "name": "Formateador de Python",
+      "description": "Formatea el código Python según la guía de estilo PEP 8",
+      "seo_title": "Formateador de Python Gratis en Línea - Formateador de Código PEP 8",
+      "seo_description": "Formateador de código Python en línea gratuito que sigue las pautas de estilo PEP 8. Formatee y embellezca automáticamente su código Python con sangría, espaciado y saltos de línea adecuados. Sin instalación necesaria.",
+      "detailed_description": "Python Formatter es una herramienta en línea potente que formatea automáticamente su código Python según las pautas de estilo PEP 8. Ya sea que sea un principiante aprendiendo Python o un desarrollador experimentado que mantiene grandes bases de código, esta herramienta ayuda a garantizar un estilo de código consistente. Maneja la sangría, la longitud de línea, el espacio en blanco alrededor de los operadores, las líneas en blanco entre funciones y más. Simplemente pegue su código, haga clic en formato y obtenga código Python limpio y legible de inmediato. Perfecto para revisiones de código, compartir fragmentos de código o limpiar scripts desordenados.",
+      "usage_steps": [
+        "Pega el código Python",
+        "Establece las opciones",
+        "Haz clic en Formatear",
+        "Copia el código formateado"
+      ],
+      "usage_examples": [
+        "Limpia los scripts",
+        "Establece un estándar para el código del equipo",
+        "Prepara el código para revisión"
+      ],
+      "inputPlaceholder": "Ingrese código Python...",
+      "indentSize": "Tamaño de Sangría"
+    },
+    "go-formatter": {
+      "name": "Formateador de Go",
+      "description": "Formatea código Go en estilo gofmt",
+      "seo_title": "Formateador de Go en línea gratis - Formateador de estilo gofmt",
+      "seo_description": "Formateador de código Go en línea gratuito que sigue las convenciones oficiales de gofmt. Formatee y estandarice automáticamente su código Go con sangría y espaciado adecuados. Sin necesidad de instalación.",
+      "detailed_description": "Go Formatter es una herramienta en línea que formatea su código Go siguiendo las convenciones oficiales de gofmt utilizadas por la comunidad de Go. Asegura que su código cumpla con los estrictos estándares de formato de Go, lo que lo hace más fácil de leer y mantener. La herramienta maneja la sangría, alineación, espaciado y organización de importaciones automáticamente. Ya sea que esté trabajando en un pequeño script o en un gran proyecto de Go, este formateador ayuda a mantener un estilo de código consistente en toda su base de código. Simplemente pegue su código Go y obtenga una salida perfectamente formateada en segundos.",
+      "usage_steps": [
+        "Pega código Go",
+        "Haz clic en Formatear",
+        "Copia el código formateado"
+      ],
+      "usage_examples": [
+        "Formatea paquetes de Go",
+        "Limpia el código antes de confirmar"
+      ],
+      "inputPlaceholder": "Ingrese código Go..."
+    },
+    "rust-formatter": {
+      "name": "Formateador de Rust",
+      "description": "Formatea código Rust en estilo rustfmt",
+      "seo_title": "Formateador de Rust en línea gratis - Formateador de estilo rustfmt",
+      "seo_description": "Formateador de código Rust en línea gratuito que sigue las convenciones de estilo de rustfmt. Formatee y embellezca automáticamente su código Rust con sangría y estructura adecuadas. Sin configuración necesaria.",
+      "detailed_description": "Rust Formatter es una herramienta en línea que formatea su código Rust según las directrices de estilo de rustfmt. Ayuda a mantener un estilo de código consistente en sus proyectos de Rust manejando automáticamente la sangría, el envoltorio de líneas, el espacio alrededor de los operadores y el formato de estructuras y enumeraciones. La herramienta es perfecta para los desarrolladores que desean código Rust limpio y legible sin instalar herramientas adicionales. Ya sea que esté escribiendo código de sistemas, servicios web o aplicaciones de línea de comandos en Rust, este formateador garantiza que su código sigue los estándares de la comunidad.",
+      "usage_steps": [
+        "Pega el código Rust",
+        "Haz clic en Formatear",
+        "Copia el código formateado"
+      ],
+      "usage_examples": [
+        "Formatea módulos de Rust",
+        "Prepara código para revisión"
+      ],
+      "inputPlaceholder": "Ingrese código Rust..."
+    },
+    "yaml-formatter": {
+      "name": "Formateador de YAML",
+      "description": "Formatea y valida YAML con opciones personalizables",
+      "seo_title": "Formateador de YAML en línea gratis - Valida y formatea YAML",
+      "seo_description": "Formateador y validador YAML en línea gratuito. Formatee, valide y corrija la indentación en sus archivos YAML de forma instantánea. Soporte para estructuras anidadas complejas y YAML multi-documento.",
+      "detailed_description": "YAML Formatter es una herramienta en línea integral para formatear y validar archivos YAML. Corrige automáticamente los problemas de indentación, valida la sintaxis y formatea sus archivos de configuración YAML. La herramienta admite estructuras anidadas complejas, matrices, cadenas multilínea y archivos YAML multi-documento. Ideal para ingenieros de DevOps que trabajan con manifiestos de Kubernetes, pipelines de CI/CD o cualquier configuración basada en YAML. Obtenga retroalimentación instantánea sobre errores de sintaxis y produzca una salida YAML limpia y correctamente indentada.",
+      "usage_steps": [
+        "Pega YAML",
+        "Establece el tamaño de la sangría",
+        "Haz clic en Formatear",
+        "Copia el resultado"
+      ],
+      "usage_examples": [
+        "Formatea archivos de configuración",
+        "Valida manifiestos de Kubernetes"
+      ],
+      "inputPlaceholder": "Ingrese contenido YAML...",
+      "indentSize": "Tamaño de Sangría"
+    },
+    "text-shadow-generator": {
+      "name": "Generador de Sombra de Texto",
+      "description": "Crea sombras de texto CSS con editor visual",
+      "seo_title": "Generador de Sombra de Texto CSS Gratis en Línea",
+      "seo_description": "Generador de sombra de texto CSS en línea gratuito con vista previa en vivo. Crea impresionantes efectos de texto con múltiples sombras, desenfoque y colores. Copia el código CSS listo para usar de inmediato.",
+      "detailed_description": "Generador de sombra de texto es una herramienta visual de CSS que te ayuda a crear hermosos efectos de sombra de texto para tus proyectos web. Ajusta los desplazamientos horizontal y vertical, radio de desenfoque, propagación y color para lograr el efecto de sombra perfecto. La vista previa en vivo muestra tus cambios en tiempo real, y puedes agregar múltiples capas de sombra para efectos complejos. Ya sea que estés creando un efecto de profundidad sutil, texto brillante o efectos 3D dramáticos, esta herramienta genera código CSS limpio que puedes copiar directamente en tus hojas de estilo.",
+      "usage_steps": [
+        "Ajusta los ajustes de sombra",
+        "Agrega múltiples capas",
+        "Vista previa del efecto",
+        "Copia el CSS"
+      ],
+      "usage_examples": [
+        "Crea efectos de resplandor",
+        "Diseña texto 3D",
+        "Agrega profundidad a los títulos"
+      ],
+      "preview": "Vista Previa",
+      "previewText": "Texto de Vista Previa",
+      "shadows": "Sombras",
+      "addShadow": "Añadir Sombra",
+      "blur": "Desenfoque",
+      "color": "Color",
+      "opacity": "Opacidad",
+      "glow": "Brillo",
+      "neon": "Neón",
+      "emboss": "Relieve",
+      "3d": "3D"
+    },
+    "svg-pattern-generator": {
+      "name": "Generador de Patrones SVG",
+      "description": "Genera patrones SVG para fondos",
+      "seo_title": "Generador de Patrones SVG Gratis en Línea - Fondos de Patrones",
+      "seo_description": "Generador de patrones SVG en línea gratuito para fondos web. Crea patrones geométricos, rayas, puntos y diseños personalizados. Exporta como código SVG o fondo CSS.",
+      "detailed_description": "El Generador de Patrones SVG es una herramienta creativa para diseñar patrones sin costuras para fondos web y gráficos. Elige entre varios tipos de patrones, incluyendo formas geométricas, rayas, puntos, ondas y más. Personaliza colores, tamaños, espaciado y rotación para crear diseños únicos. La herramienta genera código SVG optimizado que es ligero y se escala perfectamente en cualquier resolución. Exporta tus patrones como SVG en línea, fondo de imagen CSS o archivos SVG descargables. Ideal para diseñadores web, desarrolladores de UI y cualquier persona que necesite patrones de fondo personalizados.",
+      "usage_steps": [
+        "Selecciona el tipo de patrón",
+        "Personaliza colores y tamaño",
+        "Vista previa",
+        "Exporta SVG o CSS"
+      ],
+      "usage_examples": [
+        "Crea fondos de sitio web",
+        "Diseña patrones de tarjetas"
+      ],
+      "pattern": "Patrón",
+      "size": "Tamaño",
+      "color": "Color",
+      "bgColor": "Color de Fondo",
+      "preview": "Vista Previa",
+      "dots": "Puntos",
+      "lines": "Líneas",
+      "grid": "Cuadrícula",
+      "waves": "Ondas",
+      "triangles": "Triángulos",
+      "hexagons": "Hexágonos",
+      "zigzag": "Zigzag"
+    },
+    "css-triangle-generator": {
+      "name": "Generador de Triángulos CSS",
+      "description": "Genera triángulos CSS utilizando la técnica de borde",
+      "seo_title": "Generador de Triángulos CSS Gratis en Línea",
+      "seo_description": "Generador de triángulos CSS en línea gratuito utilizando la técnica de borde. Crea triángulos que apuntan en cualquier dirección con tamaño y color personalizado. Copia el código CSS puro instantáneamente.",
+      "detailed_description": "El Generador de Triángulos CSS crea triángulos CSS puros utilizando la técnica de borde, sin necesidad de imágenes ni SVG. Simplemente selecciona la dirección (hacia arriba, hacia abajo, hacia la izquierda, hacia la derecha o diagonal), establece el tamaño y el color, y obtén un código CSS limpio instantáneamente. La herramienta genera triángulos ligeros y escalables perfectos para tooltips, flechas de dropdown, separadores de breadcrumb y elementos decorativos. Previsualiza tu triángulo en tiempo real y copia el código CSS directamente en tu hoja de estilos. Una herramienta imprescindible para desarrolladores front-end.",
+      "usage_steps": [
+        "Selecciona la dirección",
+        "Establece tamaño y color",
+        "Visualiza",
+        "Copia el CSS"
+      ],
+      "usage_examples": [
+        "Crea flechas de tooltips",
+        "Diseña indicadores de navegación"
+      ],
+      "preview": "Vista Previa",
+      "size": "Tamaño",
+      "color": "Color",
+      "width": "Ancho",
+      "height": "Alto"
+    },
+    "aspect-ratio-box-generator": {
+      "name": "Generador de Cajas de Relación de Aspecto",
+      "description": "Genera CSS para contenedores de relación de aspecto responsivos",
+      "seo_title": "Generador de Cajas de Relación de Aspecto CSS Gratis en Línea",
+      "seo_description": "Generador de cajas de relación de aspecto CSS en línea gratuito. Crea contenedores responsivos que mantienen la relación de ancho a alto. Soporte para la propiedad de relación de aspecto moderna y fallback de padding-bottom.",
+      "detailed_description": "El Generador de Cajas de Relación de Aspecto crea código CSS para contenedores responsivos que mantienen una relación de ancho a alto específica independientemente del tamaño de la pantalla. Elija entre presets comunes como 16:9, 4:3, 1:1 o ingrese relaciones personalizadas. La herramienta genera tanto CSS moderno utilizando la propiedad de relación de aspecto como un fallback de padding-bottom para navegadores más antiguos. Perfecto para incrustaciones de video, marcadores de posición de imagen, diseños de tarjeta y cualquier elemento que necesite mantener proporciones. Obtenga código CSS limpio y compatible con varios navegadores de forma instantánea y sin registro.",
+      "usage_steps": [
+        "Ingrese la relación o seleccione un preset",
+        "Elija el método de CSS",
+        "Vista previa",
+        "Copie el CSS"
+      ],
+      "usage_examples": [
+        "Crea contenedores de video",
+        "Diseña marcos de imagen responsivos"
+      ],
+      "preview": "Vista Previa",
+      "width": "Ancho",
+      "height": "Alto",
+      "aspectRatioProperty": "Propiedad Aspect Ratio",
+      "paddingMethod": "Método Padding",
+      "paddingNote": "Nota: El método padding es para navegadores antiguos",
+      "method": "Método"
+    },
+    "typing-time-calculator": {
+      "name": "Calculadora de Tiempo de Escritura",
+      "description": "Estima el tiempo necesario para escribir un documento",
+      "seo_title": "Calculadora de Tiempo de Escritura Gratis en Línea",
+      "seo_description": "Calculadora de tiempo de escritura en línea gratuita. Estima el tiempo que lleva escribir cualquier texto según el recuento de palabras y la velocidad de escritura (palabras por minuto, ppm). Ideal para escritores, estudiantes y creadores de contenido.",
+      "detailed_description": "La calculadora de tiempo de escritura estima el tiempo que llevará escribir un documento según el recuento de palabras y la velocidad de escritura. Introduce tu texto o recuento de palabras, selecciona tu velocidad de escritura en palabras por minuto (ppm) y obtén estimaciones de tiempo precisas. La herramienta incluye velocidades preestablecidas para diferentes niveles de habilidad, desde principiante hasta mecanógrafo profesional. Perfecta para escritores que planifican sus sesiones de trabajo, estudiantes que estiman el tiempo de finalización de tareas o cualquier persona curiosa sobre la productividad de escritura. También útil para estimar el tiempo de transcripción.",
+      "usage_steps": [
+        "Ingresa la cantidad de palabras o pega el texto",
+        "Establece tu velocidad de escritura",
+        "Verifica la estimación de tiempo"
+      ],
+      "usage_examples": [
+        "Planifica sesiones de escritura",
+        "Estima los plazos de proyectos"
+      ],
+      "wordCount": "Conteo de Palabras",
+      "typingSpeed": "Velocidad de Escritura (PPM)",
+      "beginner": "Principiante",
+      "average": "Promedio",
+      "professional": "Profesional",
+      "expert": "Experto",
+      "pureTypingTime": "Tiempo de Escritura Puro",
+      "totalWithBreaks": "Total con Descansos",
+      "recommendedBreaks": "Descansos Recomendados",
+      "minutes": "minutos",
+      "seconds": "segundos"
+    },
+    "screen-time-calculator": {
+      "name": "Calculadora de Tiempo de Pantalla",
+      "description": "Calcula el tiempo de pantalla diario, semanal y anual",
+      "seo_title": "Calculadora de Tiempo de Pantalla Gratis en Línea",
+      "seo_description": "Calculadora gratuita de tiempo de pantalla en línea. Registra el uso diario de dispositivos, calcula totales semanales y mensuales, y recibe recomendaciones de salud. Comprende mejor tus hábitos digitales.",
+      "detailed_description": "La calculadora de tiempo de pantalla te ayuda a entender y gestionar el uso de tus dispositivos digitales. Ingresa tu tiempo de pantalla diario para diferentes dispositivos y actividades, y la herramienta calcula tu tiempo de pantalla total diario, semanal, mensual y anual. También muestra qué porcentaje de tus horas de vigilia pasas en pantallas y proporciona recomendaciones de salud basadas en las directrices de organizaciones de salud. Ya sea que estés tratando de reducir el tiempo de pantalla, rastrear la productividad o comprender tus hábitos digitales, esta calculadora proporciona información valiosa.",
+      "usage_steps": [
+        "Ingresa las horas de pantalla diarias",
+        "Visualiza los totales calculados",
+        "Lee sugerencias de salud"
+      ],
+      "usage_examples": [
+        "Seguir el uso del teléfono",
+        "Establecer metas de tiempo de pantalla"
+      ],
+      "hoursPerDay": "Horas Por Día",
+      "wakeHours": "Horas Despierto",
+      "daily": "Diario",
+      "weekly": "Semanal",
+      "monthly": "Mensual",
+      "yearly": "Anual",
+      "percentOfWake": "Porcentaje Despierto",
+      "healthStatus": "Estado de Salud",
+      "excessive": "Excesivo",
+      "high": "Alto",
+      "moderate": "Moderado",
+      "good": "Bueno",
+      "excellent": "Excelente",
+      "recommendations": "Recomendaciones",
+      "ergonomicTips": "Consejos Ergonómicos"
+    },
+    "download-time-calculator": {
+      "name": "Calculadora de Tiempo de Descarga",
+      "description": "Calcula el tiempo de descarga de archivos según la velocidad de conexión",
+      "seo_title": "Calculadora de Tiempo de Descarga Gratis en Línea",
+      "seo_description": "Calculadora gratuita de tiempo de descarga en línea. Estima la duración de la descarga de archivos para cualquier tamaño de archivo y velocidad de internet. Compara tiempos en diferentes tipos de conexión desde 3G hasta fibra.",
+      "detailed_description": "La calculadora de tiempo de descarga estima cuánto tiempo tardará en descargar archivos en función del tamaño del archivo y la velocidad de conexión a internet. Introduce el tamaño de tu archivo en cualquier unidad (KB, MB, GB, TB) y selecciona tu velocidad de conexión o introduce un valor personalizado. La herramienta muestra los tiempos de descarga estimados para varios tipos de conexión, incluyendo 3G, 4G, 5G, DSL, cable y fibra. Ideal para planificar descargas grandes, estimar tiempos de respaldo o entender cómo la velocidad de conexión afecta tus descargas. Incluye una tabla de comparación para referencia rápida.",
+      "usage_steps": [
+        "Ingresa el tamaño del archivo",
+        "Selecciona o ingresa la velocidad de conexión",
+        "Verifica el tiempo de descarga"
+      ],
+      "usage_examples": [
+        "Planifica descargas grandes",
+        "Compara velocidades de conexión"
+      ],
+      "fileSize": "Tamaño de Archivo",
+      "downloadSpeed": "Velocidad de Descarga",
+      "connection": "Conexión",
+      "estimatedTime": "Tiempo Estimado",
+      "days": "días",
+      "minutes": "minutos",
+      "seconds": "segundos",
+      "comparisonTable": "Tabla de Comparación"
+    },
+    "ical-parser": {
+      "name": "Analizador de iCal",
+      "description": "Analiza y visualiza archivos de calendario iCalendar (.ics)",
+      "seo_title": "Analizador de iCal Gratuito en Línea - Ver Archivos de Calendario ICS",
+      "seo_description": "Analizador y visor de archivos iCal/ICS en línea y gratuito. Sube o pega datos de calendario ICS para ver eventos en un formato legible. Extrae fechas, horas, ubicaciones y descripciones.",
+      "detailed_description": "iCal Parser es una herramienta en línea para leer y visualizar archivos de calendario ICS. Sube un archivo ICS o pega los datos iCal sin procesar para ver todos los eventos mostrados en un formato de tabla limpio y legible. El analizador extrae títulos de eventos, horarios de inicio y fin, ubicaciones, descripciones, asistentes y reglas de recurrencia. Perfecto para depurar integraciones de calendario, ver exportaciones de calendario o extraer datos de eventos de archivos ICS. Soporta eventos únicos y series de eventos recurrentes con manejo completo de zonas horarias.",
+      "usage_steps": [
+        "Sube el archivo ICS o pega el contenido",
+        "Visualiza los eventos analizados",
+        "Exporta a JSON"
+      ],
+      "usage_examples": [
+        "Ver exportaciones de calendario",
+        "Extraer datos de eventos"
+      ],
+      "parse": "Analizar",
+      "uploadFile": "Subir Archivo",
+      "icsContent": "Contenido iCal",
+      "foundEvents": "Eventos Encontrados",
+      "summary": "Resumen",
+      "start": "Inicio",
+      "end": "Fin",
+      "location": "Ubicación",
+      "unnamed": "Evento Sin Nombre",
+      "exportJSON": "Exportar JSON",
+      "inputPlaceholder": "Pegue el contenido iCal/ICS aquí o suba un archivo..."
+    },
+    "vcard-parser": {
+      "name": "Analizador de vCard",
+      "description": "Analiza y visualiza archivos de contacto vCard (.vcf)",
+      "seo_title": "Analizador de vCard Gratuito en Línea - Ver Archivos de Contacto VCF",
+      "seo_description": "Analizador y visor de archivos vCard/VCF en línea y gratuito. Sube o pega datos de contacto VCF para ver la información de contacto en un formato legible. Compatible con vCard 2.1, 3.0 y 4.0.",
+      "detailed_description": "vCard Parser es una herramienta en línea para leer y visualizar archivos de contacto VCF. Sube un archivo VCF o pega los datos vCard sin procesar para ver toda la información de contacto mostrada en un formato limpio y organizado. El analizador extrae nombres, números de teléfono, direcciones de correo electrónico, direcciones físicas, organizaciones, títulos de trabajo, fotos y perfiles sociales. Compatible con versiones vCard 2.1, 3.0 y 4.0. Ideal para visualizar exportaciones de contactos, depurar problemas de sincronización de contactos o extraer datos de archivos VCF sin importarlos a tu aplicación de contactos.",
+      "usage_steps": [
+        "Carga el archivo VCF o pega el contenido",
+        "Visualiza los contactos analizados",
+        "Exporta a JSON"
+      ],
+      "usage_examples": [
+        "Visualiza las exportaciones de contactos",
+        "Extrae datos de contacto"
+      ],
+      "parse": "Analizar",
+      "uploadFile": "Subir Archivo",
+      "vcardContent": "Contenido vCard",
+      "foundContacts": "Contactos Encontrados",
+      "exportJSON": "Exportar JSON",
+      "unnamed": "Sin Nombre",
+      "inputPlaceholder": "Pegue el contenido vCard/VCF aquí o suba un archivo..."
+    },
+    "ai-text-humanizer": {
+      "name": "Humanizador de Texto de IA",
+      "description": "Transforma el texto generado por IA para que suene más natural y humano",
+      "seo_title": "Humanizador de Texto de IA Gratis en Línea - Haz que el Texto de IA Suene Humano",
+      "seo_description": "Transforma el texto generado por IA para que suene más natural y humano. Elimina patrones robóticos, agrega flujo natural y evita la detección de IA. Herramienta en línea gratuita.",
+      "detailed_description": "El Humanizador de Texto de IA es una herramienta de transformación de texto avanzada que convierte el contenido generado por IA en prosa natural y humana. Utilizando un motor basado en reglas sofisticadas, identifica y reemplaza patrones de escritura comunes de IA, vocabulario formal y estructuras repetitivas con alternativas más conversacionales. La herramienta analiza el texto en busca de marcadores de IA como palabras de transición sobreutilizadas (además, por lo tanto, en consecuencia), frases formales (es importante tener en cuenta, en conclusión) y construcciones en voz pasiva. Luego aplica sustituciones inteligentes mientras preserva el significado y el contexto originales. Con tres niveles de intensidad (ligero, medio, fuerte), los usuarios pueden controlar cuánta transformación se aplica. La puntuación de humanización proporciona retroalimentación en tiempo real sobre cuán natural suena el texto. Perfecto para creadores de contenido, estudiantes, marketeros y cualquier persona que desee que su escritura asistida por IA se sienta más auténtica y atractiva.",
+      "usage_steps": [
+        "Pega el texto generado por IA en el área de entrada",
+        "Selecciona la intensidad de la transformación (ligero, medio o fuerte)",
+        "Activa o desactiva las opciones de palabras de relleno y variación de oraciones",
+        "Revisa la salida humanizada y la puntuación de humanización en tiempo real",
+        "Copia el texto transformado al portapapeles",
+        "Ajusta los ajustes y regenera si es necesario para obtener mejores resultados"
+      ],
+      "usage_examples": [
+        "Transforma publicaciones de blog generadas por ChatGPT para que suenen más personales y atractivas",
+        "Humaniza descripciones de productos escritas por IA para sitios web de comercio electrónico",
+        "Convierte correos electrónicos formales generados por IA en mensajes casuales y amigables",
+        "Haz que la escritura académica asistida por IA suene más natural mientras se mantiene la precisión"
+      ],
+      "enterText": "Ingrese el Texto Generado por IA",
+      "characters": "caracteres",
+      "options": "Opciones de Transformación",
+      "intensity": "Intensidad de la Transformación",
+      "light": "Ligero",
+      "medium": "Medio",
+      "strong": "Fuerte",
+      "lightDescription": "Cambios sutiles - reemplaza solo los patrones de IA más obvios",
+      "mediumDescription": "Transformación equilibrada - buena mezcla de naturalidad y significado original",
+      "strongDescription": "Humanización máxima - reescritura y cambios de estilo extensivos",
+      "addFillerWords": "Agrega palabras de relleno naturales",
+      "varyingSentenceLength": "Varía la estructura de las oraciones",
+      "humanScore": "Puntuación de Humanización",
+      "scoreExcellent": "Excelente",
+      "scoreGood": "Bueno",
+      "scoreFair": "Regular",
+      "scorePoor": "Necesita Trabajo",
+      "changesCount": "Cambios Realizados",
+      "outputLength": "Longitud de la Salida",
+      "humanizedText": "Texto Humanizado",
+      "tips": "Consejos para Obtener los Mejores Resultados",
+      "tip1": "Comienza con intensidad media para obtener resultados equilibrados",
+      "tip2": "Activa las palabras de relleno para un tono más conversacional",
+      "tip3": "Revisa y ajusta manualmente cualquier frase incómoda",
+      "tip4": "Ejecuta varias veces con diferentes ajustes para obtener variedad",
+      "addFillers": "Añadir palabras de relleno",
+      "humanize": "Humanizar",
+      "inputPlaceholder": "Pegue su texto generado por IA aquí..."
+    },
+    "dockerfile-generator": {
+      "name": "Generador de Dockerfile",
+      "description": "Genera configuraciones de Dockerfile para tus proyectos",
+      "seo_title": "Generador de Dockerfile Gratuito en Línea - Crea Configuraciones de Docker",
+      "seo_description": "Genera configuraciones de Dockerfile de manera fácil con nuestra herramienta gratuita en línea. Crea imágenes de Docker optimizadas con selección de imágenes base, comandos, puertos y variables de entorno. Sin instalación necesaria.",
+      "detailed_description": "El Generador de Dockerfile es una herramienta integral en línea que te ayuda a crear configuraciones de Dockerfile para contenerizar tus aplicaciones. Selecciona entre imágenes base populares como Node.js, Python, Go o imágenes personalizadas. Configura directorios de trabajo, comandos de copia, comandos de ejecución, puertos expuestos y variables de entorno. La herramienta genera Dockerfiles optimizados y listos para producción siguiendo las mejores prácticas. Ideal para desarrolladores nuevos en Docker o aquellos que desean crear rápidamente configuraciones de contenedores.",
+      "usage_steps": [
+        "Selecciona una imagen base desde el menú desplegable o ingresa una imagen personalizada",
+        "Configura el directorio de trabajo para tu aplicación",
+        "Agrega comandos COPY y RUN según sea necesario",
+        "Especifica los puertos que deseas exponer",
+        "Agrega variables de entorno si es necesario",
+        "Haz clic en Generar para crear tu Dockerfile",
+        "Copia o descarga el Dockerfile generado"
+      ],
+      "usage_examples": [
+        "Crea un contenedor de aplicación Node.js",
+        "Construye un contenedor Flask/Django de Python",
+        "Configura una compilación en varias etapas para aplicaciones Go",
+        "Configura un contenedor de entorno de desarrollo"
+      ]
+    },
+    "prettier-config-generator": {
+      "name": "Generador de configuración de Prettier",
+      "description": "Genera archivos de configuración de Prettier para formato de código",
+      "seo_title": "Generador de configuración de Prettier gratuito en línea - Crea configuración .prettierrc",
+      "seo_description": "Genera archivos de configuración de Prettier fácilmente con nuestra herramienta gratuita en línea. Personaliza el ancho de tabulación, comillas, punto y coma, comas finales y más. Crea un formato de código consistente en todo tu equipo.",
+      "detailed_description": "El Generador de configuración de Prettier te ayuda a crear archivos de configuración de Prettier personalizados para un formato de código consistente. Configura todas las opciones principales, incluyendo el ancho de impresión, el ancho de tabulación, comillas simples o dobles, punto y coma, comas finales, espaciado de corchetes y más. Previsualiza cómo se formateará tu código con diferentes configuraciones. La herramienta genera archivos .prettierrc en formato JSON listos para usar en cualquier proyecto de JavaScript, TypeScript, CSS o HTML.",
+      "usage_steps": [
+        "Establece el ancho de impresión preferido (predeterminado 80)",
+        "Elige el ancho de tabulación y si usar tabuladores o espacios",
+        "Selecciona comillas simples o dobles",
+        "Configura el uso del punto y coma",
+        "Establece la preferencia de comas finales",
+        "Ajusta el espaciado de corchetes y otras opciones",
+        "Haz clic en Generar y copia la configuración"
+      ],
+      "usage_examples": [
+        "Crea una configuración de Prettier para un proyecto de equipo",
+        "Configura un formato de código consistente para un monorepositorio",
+        "Configura Prettier para un proyecto de React",
+        "Personaliza el formato para la migración de una base de código heredada"
+      ]
+    },
+    "tsconfig-generator": {
+      "name": "Generador de TSConfig",
+      "description": "Genera archivos de configuración de TypeScript para tus proyectos",
+      "seo_title": "Generador de TSConfig gratuito en línea - Crea configuración de tsconfig.json",
+      "seo_description": "Genera archivos tsconfig.json de TypeScript de forma fácil con nuestra herramienta gratuita en línea. Configura opciones del compilador, resolución de módulos, modo estricto y más. Perfecto para proyectos de React, Node.js y bibliotecas.",
+      "detailed_description": "El Generador de TSConfig te ayuda a crear archivos de configuración de TypeScript personalizados para tus proyectos. Configura opciones del compilador, incluyendo la versión de ECMAScript objetivo, sistema de módulos, ajustes de modo estricto y alias de ruta. Elige entre presets para React, Node.js, desarrollo de bibliotecas o crea una configuración personalizada. La herramienta explica cada opción y genera un archivo tsconfig.json completo con comentarios que explican los ajustes.",
+      "usage_steps": [
+        "Selecciona un preset de tipo de proyecto (React, Node.js, Biblioteca, etc.)",
+        "Elige la versión de ECMAScript objetivo",
+        "Configura el sistema de módulos y resolución",
+        "Habilita las opciones de modo estricto según sea necesario",
+        "Configura alias de ruta para importaciones",
+        "Configura el directorio de salida y otras opciones",
+        "Haz clic en Generar y copia el archivo tsconfig.json"
+      ],
+      "usage_examples": [
+        "Configura TypeScript para un nuevo proyecto de React",
+        "Configura TypeScript para un backend de Node.js",
+        "Crea un archivo tsconfig para una biblioteca de paquetes npm",
+        "Configura alias de ruta para importaciones más limpias"
+      ]
+    },
+    "editorconfig-generator": {
+      "name": "Generador de EditorConfig",
+      "description": "Genera archivos EditorConfig para estilos de codificación consistentes",
+      "seo_title": "Generador de EditorConfig Gratuito en Línea - Crea archivos .editorconfig",
+      "seo_description": "Genera archivos EditorConfig fácilmente con nuestra herramienta gratuita en línea. Configura estilo de sangría, tamaño de sangría, fin de línea, conjunto de caracteres y más. Asegura estilos de codificación consistentes en diferentes editores e IDEs.",
+      "detailed_description": "El Generador de EditorConfig te ayuda a crear archivos .editorconfig para mantener estilos de codificación consistentes en diferentes editores e IDEs. Configura ajustes para estilo de sangría (pestañas vs espacios), tamaño de sangría, caracteres de fin de línea, conjunto de caracteres y manejo de espacios en blanco al final. Establece diferentes reglas para diferentes tipos de archivo. La herramienta genera un archivo .editorconfig completo que funciona con VS Code, Sublime Text, Vim y muchos otros editores.",
+      "usage_steps": [
+        "Establece la propiedad raíz en true para la raíz del proyecto",
+        "Configura ajustes predeterminados para todos los archivos",
+        "Establece estilo de sangría (pestañas o espacios)",
+        "Elige tamaño de sangría (2, 4, etc.)",
+        "Configura carácter de fin de línea (lf, crlf)",
+        "Agrega anulaciones específicas de tipo de archivo si es necesario",
+        "Haz clic en Generar y copia el archivo .editorconfig"
+      ],
+      "usage_examples": [
+        "Crea formato consistente en un equipo",
+        "Establece diferentes reglas para diferentes tipos de archivo",
+        "Configura EditorConfig para un monorepositorio",
+        "Asegura finales de línea consistentes en diferentes plataformas"
+      ]
+    },
+    "github-readme-generator": {
+      "name": "Generador de README de GitHub",
+      "description": "Genera archivos README.md profesionales para proyectos de GitHub",
+      "seo_title": "Generador de README de GitHub Gratuito en Línea - Crea Archivos README Profesionales",
+      "seo_description": "Genera archivos README.md profesionales para tus proyectos de GitHub con nuestra herramienta gratuita en línea. Agrega insignias, características, instrucciones de instalación, ejemplos de uso y más. Haz que tus proyectos destaquen.",
+      "detailed_description": "El Generador de README de GitHub te ayuda a crear archivos README.md profesionales y bien estructurados para tus repositorios de GitHub. Agrega título del proyecto, descripción, insignias (estado de compilación, licencia, versión de npm), lista de características, instrucciones de instalación, ejemplos de uso, documentación de API, pautas de contribución y información de licencia. La herramienta genera Markdown con formato adecuado, lo que hace que tus proyectos sean más descubribles y fáciles de usar.",
+      "usage_steps": [
+        "Ingresa el nombre y la descripción de tu proyecto",
+        "Agrega insignias para el estado de compilación, licencia, etc.",
+        "Enumera las características clave de tu proyecto",
+        "Escribe instrucciones de instalación",
+        "Agrega ejemplos de uso con bloques de código",
+        "Incluye pautas de contribución",
+        "Selecciona una licencia y genera el README"
+      ],
+      "usage_examples": [
+        "Crea un README para una biblioteca de código abierto",
+        "Documenta una herramienta de línea de comandos con ejemplos de uso",
+        "Configura un README para una aplicación web",
+        "Crea documentación para un proyecto de API"
+      ],
+      "projectNamePlaceholder": "Mi Proyecto Increíble",
+      "descriptionPlaceholder": "Una breve descripción de tu proyecto...",
+      "authorPlaceholder": "Juan Pérez",
+      "authorGithubPlaceholder": "juanperez",
+      "featurePlaceholder": "Descripción de la característica...",
+      "installationPlaceholder": "npm install your-package",
+      "usagePlaceholder": "import { something } from 'your-package';"
+    },
+    "changelog-generator": {
+      "name": "Generador de Changelog",
+      "description": "Genera archivos CHANGELOG.md siguiendo el formato Keep a Changelog",
+      "seo_title": "Generador de Changelog Gratuito en Línea - Crea Archivos CHANGELOG.md",
+      "seo_description": "Genera archivos CHANGELOG.md siguiendo el formato Keep a Changelog con nuestra herramienta gratuita en línea. Registra cambios Agregados, Cambiados, Obsoletos, Eliminados, Corregidos y de Seguridad para cada versión.",
+      "detailed_description": "El Generador de Changelog te ayuda a crear archivos CHANGELOG.md bien estructurados siguiendo el formato Keep a Changelog. Agrega entradas de versión con fechas y categoriza cambios en secciones Agregados, Cambiados, Obsoletos, Eliminados, Corregidos y de Seguridad. La herramienta genera Markdown que sigue las convenciones de versionado semántico y facilita a los usuarios entender qué cambió entre versiones de tu software.",
+      "usage_steps": [
+        "Ingresa el número de versión (por ejemplo, 1.0.0)",
+        "Establece la fecha de lanzamiento",
+        "Agrega entradas bajo las categorías correspondientes",
+        "Usa Agregados para nuevas características",
+        "Usa Cambiados para cambios en la funcionalidad existente",
+        "Usa Corregidos para correcciones de errores",
+        "Genera y copia la entrada del changelog"
+      ],
+      "usage_examples": [
+        "Documenta un lanzamiento de versión principal",
+        "Registra correcciones de errores en un lanzamiento de parche",
+        "Registra cambios importantes en una nueva versión",
+        "Mantén un changelog para un paquete npm sin registro"
+      ],
+      "projectNamePlaceholder": "Mi Proyecto",
+      "projectUrlPlaceholder": "https://github.com/usuario/repo",
+      "versionPlaceholder": "1.0.0",
+      "itemPlaceholder": "Ingrese elemento..."
+    },
+    "license-generator": {
+      "name": "Generador de Licencias",
+      "description": "Genera archivos de licencia de código abierto para tus proyectos",
+      "seo_title": "Generador de Licencias Gratuito en Línea - Crea Archivos de Licencia de Código Abierto",
+      "seo_description": "Genera archivos de licencia de código abierto con nuestra herramienta gratuita en línea. Elige entre MIT, Apache 2.0, GPL 3.0, BSD, ISC, y más. Agrega tu nombre y año automáticamente. Perfecto para proyectos de GitHub.",
+      "detailed_description": "El Generador de Licencias te ayuda a crear archivos de licencia para tus proyectos de código abierto. Elige entre licencias populares como MIT, Apache 2.0, GPL 3.0, BSD 2-Clause, BSD 3-Clause, ISC, Mozilla Public License, y más. Ingresa tu nombre y la herramienta llena automáticamente el año y genera el texto de licencia completo. Cada licencia incluye una breve descripción de sus términos para ayudarte a elegir la adecuada para tu proyecto.",
+      "usage_steps": [
+        "Explora las licencias disponibles y sus descripciones",
+        "Selecciona la licencia que se adapte a tus necesidades",
+        "Ingresa tu nombre o organización",
+        "El año actual se llena automáticamente",
+        "Haz clic en Generar para crear la licencia",
+        "Copia el texto de la licencia en tu archivo LICENSE"
+      ],
+      "usage_examples": [
+        "Agrega una licencia MIT a un nuevo paquete npm",
+        "Elige Apache 2.0 para un proyecto de código abierto corporativo",
+        "Selecciona GPL para un proyecto de copyleft",
+        "Utiliza ISC para una licencia permisiva simple"
+      ],
+      "authorPlaceholder": "Juan Pérez",
+      "yearPlaceholder": "2024"
+    },
+    "rot13-encoder": {
+      "name": "Codificador ROT13",
+      "description": "Codifica y decodifica texto utilizando el cifrado ROT13",
+      "seo_title": "Codificador/Decodificador ROT13 Gratuito en Línea - Herramienta de Cifrado César",
+      "seo_description": "Codifica y decodifica texto utilizando el cifrado ROT13 con nuestra herramienta gratuita en línea. ROT13 es un cifrado de sustitución de letras simple que reemplaza cada letra con la letra 13 posiciones después en el alfabeto.",
+      "detailed_description": "ROT13 Encoder es una herramienta sencilla para codificar y decodificar texto utilizando el cifrado ROT13. ROT13 (rotar 13 posiciones) es un caso especial del cifrado César que reemplaza cada letra con la letra 13 posiciones después en el alfabeto. Dado que el alfabeto tiene 26 letras, aplicar ROT13 dos veces devuelve el texto original, lo que lo convierte en su propia inversa. ROT13 se utiliza comúnmente para ocultar spoilers, soluciones de puzzles o texto ligeramente oscurecido.",
+      "usage_steps": [
+        "Ingrese o pegue su texto en el área de entrada",
+        "La transformación ROT13 se aplica automáticamente",
+        "Vea el resultado codificado/descodificado",
+        "Copie el resultado al portapapeles",
+        "Aplicar ROT13 nuevamente para decodificar"
+      ],
+      "usage_examples": [
+        "Ocultar spoilers en discusiones en línea",
+        "Codificar soluciones de puzzles",
+        "Aprender sobre criptografía básica",
+        "Decodificar mensajes codificados con ROT13"
+      ]
+    },
+    "caesar-cipher": {
+      "name": "Cifrado César",
+      "description": "Cifra y descifra texto utilizando el cifrado César con desplazamiento personalizado",
+      "seo_title": "Herramienta de Cifrado César Gratis en Línea - Cifra y Descifra Texto",
+      "seo_description": "Cifra y descifra texto utilizando el cifrado César con nuestra herramienta gratuita en línea. Elige cualquier valor de desplazamiento entre 1 y 25. Aprende sobre uno de los métodos de cifrado más antiguos utilizados por Julio César.",
+      "detailed_description": "La herramienta de Cifrado César te permite cifrar y descifrar texto utilizando el algoritmo clásico de cifrado César. Nombrado en honor a Julio César, quien lo utilizó para comunicaciones militares, este cifrado desplaza cada letra un número fijo de posiciones en el alfabeto. Elige cualquier valor de desplazamiento entre 1 y 25, siendo ROT13 el caso especial de desplazamiento 13. La herramienta admite ambos modos de cifrado y descifrado y preserva los caracteres no alfabéticos.",
+      "usage_steps": [
+        "Ingresa tu texto en el área de entrada",
+        "Selecciona el valor de desplazamiento (1-25)",
+        "Elige el modo de cifrado o descifrado",
+        "Visualiza el resultado transformado",
+        "Copia el resultado al portapapeles",
+        "Utiliza el mismo valor de desplazamiento para descifrar"
+      ],
+      "usage_examples": [
+        "Aprende sobre criptografía clásica",
+        "Crea mensajes codificados simples",
+        "Resuelve puzzles de cifrado César",
+        "Enseña los fundamentos del cifrado a estudiantes"
+      ]
+    },
+    "vigenere-cipher": {
+      "name": "Cifrado de Vigenère",
+      "description": "Cifra y descifra texto utilizando el cifrado de Vigenère con una palabra clave",
+      "seo_title": "Herramienta de Cifrado de Vigenère Gratis en Línea - Cifrado Polialfabético",
+      "seo_description": "Cifra y descifra texto utilizando el cifrado de Vigenère con nuestra herramienta gratuita en línea. Utiliza una palabra clave para sustitución polialfabética. Más seguro que el simple cifrado César.",
+      "detailed_description": "La herramienta de Cifrado de Vigenère te permite cifrar y descifrar texto utilizando el cifrado de Vigenère, un cifrado de sustitución polialfabética. A diferencia del cifrado César que utiliza un solo desplazamiento, el cifrado de Vigenère utiliza una palabra clave donde cada letra determina un desplazamiento diferente. Esto lo hace mucho más difícil de descifrar que los simples cifrados de sustitución. La herramienta admite tanto la cifra como la descifra y preserva los caracteres no alfabéticos.",
+      "usage_steps": [
+        "Ingresa tu texto en el área de entrada",
+        "Ingresa una palabra clave (solo letras)",
+        "Elige el modo de cifrado o descifrado",
+        "Visualiza el resultado transformado",
+        "Copia el resultado al portapapeles",
+        "Utiliza la misma palabra clave para descifrar"
+      ],
+      "usage_examples": [
+        "Crea mensajes codificados más seguros",
+        "Aprende sobre cifrados polialfabéticos",
+        "Resuelve acertijos de cifrado de Vigenère",
+        "Estudia métodos históricos de criptografía"
+      ]
+    },
+    "checksum-verifier": {
+      "name": "Verificador de Suma de Verificación",
+      "description": "Calcula y verifica sumas de verificación de archivos (MD5, SHA-1, SHA-256, SHA-512)",
+      "seo_title": "Verificador de Suma de Verificación Gratuito en Línea - MD5, SHA-1, SHA-256, SHA-512",
+      "seo_description": "Calcula y verifica sumas de verificación de archivos con nuestra herramienta gratuita en línea. Soporte para algoritmos de hash MD5, SHA-1, SHA-256 y SHA-512. Verifica la integridad de archivos y detecta manipulaciones. Sin registro ni descarga.",
+      "detailed_description": "Checksum Verifier es una herramienta integral para calcular y verificar sumas de verificación de archivos utilizando múltiples algoritmos de hash. Sube cualquier archivo para calcular sus hashes MD5, SHA-1, SHA-256 y SHA-512 simultáneamente. Compara los hashes calculados con los valores esperados para verificar la integridad del archivo. La herramienta procesa archivos enteramente en tu navegador utilizando la API Web Crypto, asegurando que tus archivos nunca se suban a ningún servidor.",
+      "usage_steps": [
+        "Sube un archivo haciendo clic o arrastrando",
+        "Espera a que se complete el cálculo de hash",
+        "Visualiza los hashes MD5, SHA-1, SHA-256 y SHA-512",
+        "Opcionalmente, ingresa una suma de verificación esperada",
+        "La herramienta indicará si las sumas de verificación coinciden",
+        "Copia cualquier valor de hash al portapapeles"
+      ],
+      "usage_examples": [
+        "Verifica la integridad del software descargado",
+        "Comprueba si un archivo se corrompió durante la transferencia",
+        "Compara versiones de archivos utilizando hashes",
+        "Valida la integridad de archivos de respaldo"
+      ]
+    },
+    "inflation-calculator": {
+      "name": "Calculadora de Inflación",
+      "description": "Calcula el efecto de la inflación en el poder adquisitivo a lo largo del tiempo",
+      "seo_title": "Calculadora de Inflación Gratuita en Línea - Calcula Poder Adquisitivo",
+      "seo_description": "Calcula el efecto de la inflación en el poder adquisitivo con nuestra herramienta gratuita en línea. Verifica cuánto vale el dinero del pasado hoy en día o cuánto necesitarás en el futuro. Sin registro ni costo adicional.",
+      "detailed_description": "La Calculadora de Inflación te ayuda a entender cómo la inflación afecta el valor del dinero a lo largo del tiempo. Ingresa una cantidad, selecciona los años de inicio y fin, y especifica una tasa de inflación para ver el valor equivalente. Calcula cuánto vale el dinero del pasado en dólares de hoy, o estima cuánto necesitarás en el futuro para mantener el mismo poder adquisitivo. La herramienta muestra tanto el valor ajustado como el cambio porcentual total.",
+      "usage_steps": [
+        "Ingresa la cantidad original",
+        "Selecciona el año de inicio",
+        "Selecciona el año de fin",
+        "Ingresa la tasa de inflación anual",
+        "Haz clic en Calcular para ver los resultados",
+        "Verifica el valor ajustado por inflación",
+        "Verifica el cambio porcentual total"
+      ],
+      "usage_examples": [
+        "Calcula cuánto vale $100 de 1990 hoy en día",
+        "Estima tus necesidades de ahorro para la jubilación",
+        "Compara precios históricos con valores actuales",
+        "Planifica la inflación en inversiones a largo plazo"
+      ]
+    },
+    "break-even-calculator": {
+      "name": "Calculadora de Punto de Equilibrio",
+      "description": "Calcula el punto de equilibrio para tu negocio",
+      "seo_title": "Calculadora de Punto de Equilibrio Gratis en Línea - Herramienta de Análisis de Negocios",
+      "seo_description": "Calcula tu punto de equilibrio con nuestra herramienta gratuita en línea. Ingresa costos fijos, costos variables y precio de venta para encontrar cuántas unidades necesitas vender para cubrir costos.",
+      "detailed_description": "La Calculadora de Punto de Equilibrio ayuda a las empresas a determinar el punto en el que los ingresos totales igualan los costos totales. Ingresa tus costos fijos (alquiler, salarios, etc.), costo variable por unidad (materiales, mano de obra) y precio de venta por unidad. La herramienta calcula el punto de equilibrio en unidades y ingresos, mostrando exactamente cuántas unidades necesitas vender para cubrir todos los costos. Esencial para decisiones de precios, planificación de negocios y análisis financiero.",
+      "usage_steps": [
+        "Ingresa tus costos fijos totales",
+        "Ingresa el costo variable por unidad",
+        "Ingresa el precio de venta por unidad",
+        "Haz clic en Calcular para ver resultados",
+        "Verifica el punto de equilibrio en unidades",
+        "Verifica el monto de ingresos de equilibrio",
+        "Analiza la contribución marginal"
+      ],
+      "usage_examples": [
+        "Determina el precio para un nuevo producto",
+        "Analiza la rentabilidad de una empresa",
+        "Planifica volúmenes de producción",
+        "Toma decisiones informadas de precios"
+      ]
+    },
+    "margin-calculator": {
+      "name": "Calculadora de Margen",
+      "description": "Calcula los porcentajes de margen de beneficio y margen de utilidad",
+      "seo_title": "Calculadora de Margen Gratis en Línea - Margen de Beneficio y Margen de Utilidad",
+      "seo_description": "Calcula los porcentajes de margen de beneficio y margen de utilidad con nuestra herramienta gratuita en línea. Ingresa el costo y el precio de venta para ver el margen bruto, el porcentaje de margen de utilidad y la cantidad de beneficio.",
+      "detailed_description": "La Calculadora de Margen te ayuda a entender la rentabilidad de tus productos o servicios. Ingresa el costo y el precio de venta para calcular el margen bruto de beneficio (beneficio como porcentaje del precio de venta) y el porcentaje de margen de utilidad (beneficio como porcentaje del costo). La herramienta también muestra la cantidad absoluta de beneficio. Esencial para la estrategia de precios, el análisis competitivo y la planificación financiera.",
+      "usage_steps": [
+        "Ingresa el precio de costo",
+        "Ingresa el precio de venta",
+        "Haz clic en Calcular para ver los resultados",
+        "Ver la cantidad de beneficio",
+        "Ver el porcentaje de margen de beneficio",
+        "Ver el porcentaje de margen de utilidad",
+        "Comparar margen vs margen de utilidad"
+      ],
+      "usage_examples": [
+        "Analiza la rentabilidad de los productos",
+        "Compara márgenes entre productos",
+        "Establece precios competitivos",
+        "Evalúa los precios de los proveedores"
+      ]
+    },
+    "markup-calculator": {
+      "name": "Calculadora de Margen",
+      "description": "Calcula el precio de venta en función del costo y el margen deseado",
+      "seo_title": "Calculadora de Margen Gratis en Línea - Calcula el Precio de Venta",
+      "seo_description": "Calcula el precio de venta en función del costo y el margen deseado con nuestra herramienta gratuita en línea. Ingresa el costo y el porcentaje de margen para encontrar el precio de venta óptimo y la ganancia.",
+      "detailed_description": "La Calculadora de Margen te ayuda a determinar el precio de venta de tus productos en función del costo y el porcentaje de margen deseado. Ingresa el costo y tu porcentaje de margen objetivo, y la herramienta calcula el precio de venta y la cantidad de ganancia. Útil para la fijación de precios al por menor, cálculos al por mayor y garantizar márgenes de ganancia consistentes en toda tu línea de productos.",
+      "usage_steps": [
+        "Ingresa el precio de costo",
+        "Ingresa el porcentaje de margen deseado",
+        "Haz clic en Calcular para ver los resultados",
+        "Visualiza el precio de venta calculado",
+        "Verifica la cantidad de ganancia",
+        "Ajusta el margen para optimizar los precios"
+      ],
+      "usage_examples": [
+        "Establece precios al por menor a partir de costos al por mayor",
+        "Calcula precios con un margen consistente",
+        "Determina precios para servicios",
+        "Planifica precios promocionales"
+      ]
+    },
+    "hashtag-generator": {
+      "name": "Generador de Hashtags",
+      "description": "Genera hashtags relevantes para publicaciones en redes sociales",
+      "seo_title": "Generador de Hashtags Gratuito en Línea - Hashtags de Redes Sociales",
+      "seo_description": "Genera hashtags relevantes para tus publicaciones en redes sociales con nuestra herramienta gratuita en línea. Ingresa un tema y obtén sugerencias de hashtags para Instagram, Twitter, TikTok y más.",
+      "detailed_description": "El Generador de Hashtags te ayuda a encontrar hashtags relevantes para tu contenido en redes sociales. Ingresa un tema o palabras clave, selecciona la plataforma objetivo (Instagram, Twitter, TikTok, LinkedIn) y obtén una lista curada de hashtags. La herramienta genera una mezcla de hashtags populares, de nicho y tendencia para maximizar el alcance de tu contenido. Copia todos los hashtags con un clic y pégalos directamente en tus publicaciones.",
+      "usage_steps": [
+        "Ingresa tu tema o palabras clave",
+        "Selecciona la plataforma objetivo",
+        "Elige el número de hashtags",
+        "Haz clic en Generar para obtener sugerencias",
+        "Revisa y personaliza la lista",
+        "Copia todos los hashtags al portapapeles",
+        "Pega en tu publicación de redes sociales"
+      ],
+      "usage_examples": [
+        "Encuentra hashtags para publicaciones de Instagram",
+        "Genera hashtags de Twitter para temas de tendencia",
+        "Crea estrategias de hashtags para TikTok",
+        "Optimiza la visibilidad de tus publicaciones en LinkedIn"
+      ]
+    },
+    "email-signature-generator": {
+      "name": "Generador de Firmas de Correo Electrónico",
+      "description": "Crea firmas de correo electrónico profesionales con HTML y texto plano",
+      "seo_title": "Generador de Firmas de Correo Electrónico Gratuito en Línea - Firmas Profesionales",
+      "seo_description": "Crea firmas de correo electrónico profesionales con nuestra herramienta gratuita en línea. Agrega tu nombre, título, empresa, información de contacto y enlaces sociales. Genera versiones en HTML y texto plano.",
+      "detailed_description": "El Generador de Firmas de Correo Electrónico te ayuda a crear firmas de correo electrónico profesionales para Gmail, Outlook, Apple Mail y otros clientes de correo electrónico. Ingresa tu nombre, título laboral, empresa, número de teléfono, correo electrónico, sitio web y enlaces de redes sociales. Elige entre múltiples plantillas de diseño y personaliza colores. La herramienta genera versiones en HTML (para formato rico) y texto plano de tu firma, listas para copiar y pegar en tus configuraciones de correo electrónico.",
+      "usage_steps": [
+        "Ingresa tu nombre y título laboral",
+        "Agrega el nombre de tu empresa",
+        "Ingresa información de contacto (teléfono, correo electrónico)",
+        "Agrega la URL de tu sitio web",
+        "Incluye enlaces de redes sociales",
+        "Elige una plantilla de diseño",
+        "Copia la firma en HTML o texto plano"
+      ],
+      "usage_examples": [
+        "Crea una firma de negocios profesional",
+        "Diseña una firma con enlaces sociales",
+        "Crea una firma de correo electrónico minimalista",
+        "Genera firmas para miembros del equipo"
+      ],
+      "namePlaceholder": "Juan Pérez",
+      "titlePlaceholder": "Ingeniero de Software",
+      "companyPlaceholder": "Empresa S.A.",
+      "emailPlaceholder": "juan@ejemplo.com",
+      "phonePlaceholder": "+34 612 345 678",
+      "websitePlaceholder": "www.ejemplo.com",
+      "usernamePlaceholder": "juanperez"
+    },
+    "eslint-config-generator": {
+      "name": "Generador de Configuración de ESLint",
+      "description": "Genera archivos de configuración de ESLint para proyectos de JavaScript/TypeScript",
+      "seo_title": "Generador de Configuración de ESLint Gratuito en Línea - Crea Configuración .eslintrc",
+      "seo_description": "Genera archivos de configuración de ESLint fácilmente con nuestra herramienta gratuita en línea. Elige entre guías de estilo populares como Airbnb, Standard o Google. Configura reglas para React, Vue, TypeScript y más.",
+      "detailed_description": "El Generador de Configuración de ESLint te ayuda a crear archivos de configuración de ESLint personalizados para tus proyectos de JavaScript y TypeScript. Elige entre guías de estilo populares como Airbnb, Standard, Google y más. Configura reglas específicas para frameworks como React, Vue, Angular o Node.js. Activa el soporte de TypeScript, configura la integración con Prettier y personaliza reglas individuales. La herramienta genera un archivo .eslintrc.json completo listo para usar en tu proyecto.",
+      "usage_steps": [
+        "Selecciona tu guía de estilo preferida (Airbnb, Standard, Google, etc.)",
+        "Elige tu framework (React, Vue, Angular, Node.js)",
+        "Activa el soporte de TypeScript si es necesario",
+        "Configura la integración con Prettier",
+        "Personaliza reglas individuales según sea necesario",
+        "Haz clic en Generar para crear tu configuración de ESLint",
+        "Copia la configuración a tu proyecto"
+      ],
+      "usage_examples": [
+        "Configura ESLint para un proyecto de React con TypeScript",
+        "Configura ESLint con la guía de estilo de Airbnb",
+        "Crea una configuración de linting para un backend de Node.js",
+        "Configura ESLint con integración de Prettier"
+      ]
+    },
+    "glassmorphism-generator": {
+      "name": "Glassmorphism Generator",
+      "description": "Create modern glass-like UI effects with customizable blur, transparency, and borders",
+      "seo_title": "Free Glassmorphism CSS Generator Online - Glass Effect Tool",
+      "seo_description": "Generate beautiful glassmorphism CSS effects with our free online tool. Customize blur, transparency, border, and shadow to create modern frosted glass UI designs.",
+      "detailed_description": "Glassmorphism Generator is a powerful CSS tool that helps you create stunning frosted glass effects for modern UI designs. This technique, popularized by Apple and Microsoft, creates a sense of depth and hierarchy in your interfaces. Our generator provides real-time preview and customizable parameters including blur intensity, background transparency, border opacity, and shadow effects. Perfect for creating cards, modals, navigation bars, and other UI components with a contemporary aesthetic.",
+      "usage_steps": [
+        "Adjust the blur slider to control the frosted glass intensity",
+        "Set the transparency level for the background",
+        "Configure border opacity for subtle edge definition",
+        "Customize the shadow opacity for depth",
+        "Choose your preferred background color",
+        "Copy the generated CSS code to use in your project"
+      ],
+      "usage_examples": [
+        "Creating modern card components with glass effect",
+        "Designing navigation bars with frosted glass background",
+        "Building modal dialogs with glassmorphism style"
+      ],
+      "previewText": "Beautiful frosted glass effect",
+      "blur": "Blur",
+      "transparency": "Transparency",
+      "borderOpacity": "Border Opacity",
+      "shadowOpacity": "Shadow Opacity",
+      "backgroundColor": "Background Color"
+    },
+    "neumorphism-generator": {
+      "name": "Neumorphism Generator",
+      "description": "Generate soft UI neumorphic effects with customizable shadows and shapes",
+      "seo_title": "Free Neumorphism CSS Generator Online - Soft UI Tool",
+      "seo_description": "Create beautiful neumorphic soft UI effects with our free online generator. Customize shadows, shapes, and colors to design modern skeuomorphic interfaces.",
+      "detailed_description": "Neumorphism Generator creates the popular soft UI design style that combines flat design with subtle 3D effects. This tool generates CSS code for elements that appear to extrude from or press into the background. Customize the light source direction, shadow intensity, blur amount, and border radius to achieve the perfect soft, tactile appearance for buttons, cards, and input fields.",
+      "usage_steps": [
+        "Select your preferred background color",
+        "Choose a shape style: flat, concave, convex, or pressed",
+        "Adjust the shadow distance for depth effect",
+        "Set the intensity for light and dark shadows",
+        "Configure blur amount for softness",
+        "Copy the CSS code for your project"
+      ],
+      "usage_examples": [
+        "Designing soft UI buttons and toggles",
+        "Creating neumorphic form inputs",
+        "Building dashboard cards with soft shadows"
+      ],
+      "backgroundColor": "Background Color",
+      "shape": "Shape",
+      "shapes": {
+        "flat": "Flat",
+        "concave": "Concave",
+        "convex": "Convex",
+        "pressed": "Pressed"
+      },
+      "distance": "Distance",
+      "intensity": "Intensity",
+      "blur": "Blur",
+      "borderRadius": "Border Radius"
+    },
+    "blob-generator": {
+      "name": "Blob Generator",
+      "description": "Create random organic blob shapes as SVG for backgrounds and decorations",
+      "seo_title": "Free Blob Shape Generator Online - SVG Blob Maker",
+      "seo_description": "Generate unique organic blob shapes with our free online tool. Create random SVG blobs for backgrounds, decorations, and modern web designs.",
+      "detailed_description": "Blob Generator creates unique, organic shapes perfect for modern web design. Generate random blob shapes as SVG that can be used for backgrounds, decorative elements, or as clip-paths. Customize the complexity, contrast, size, and color to create the perfect organic shape for your design needs.",
+      "usage_steps": [
+        "Adjust complexity to control the number of points",
+        "Set contrast for shape variation",
+        "Choose your preferred size",
+        "Select a fill color",
+        "Click Generate for a new random shape",
+        "Copy SVG code or download the file"
+      ],
+      "usage_examples": [
+        "Creating decorative background elements",
+        "Designing organic hero section shapes",
+        "Making unique avatar masks"
+      ],
+      "complexity": "Complexity",
+      "contrast": "Contrast",
+      "size": "Size",
+      "color": "Color",
+      "generate": "Generate New",
+      "copySvg": "Copy SVG"
+    },
+    "wave-generator": {
+      "name": "Wave Generator",
+      "description": "Generate SVG wave patterns for section dividers and backgrounds",
+      "seo_title": "Free SVG Wave Generator Online - Wave Divider Maker",
+      "seo_description": "Create beautiful SVG wave patterns for section dividers with our free online tool. Customize height, frequency, and layers for stunning web designs.",
+      "detailed_description": "Wave Generator creates smooth, customizable SVG wave patterns perfect for section dividers, headers, and footers. Generate single or multi-layer waves with adjustable height, frequency, and amplitude. The generated SVG is optimized for web use and can be positioned at the top or bottom of sections.",
+      "usage_steps": [
+        "Set the wave height in pixels",
+        "Adjust frequency for wave count",
+        "Configure amplitude for wave intensity",
+        "Add multiple layers for depth effect",
+        "Choose top or bottom position",
+        "Copy or download the SVG code"
+      ],
+      "usage_examples": [
+        "Creating section dividers between content",
+        "Designing wave headers for landing pages",
+        "Building animated wave backgrounds"
+      ],
+      "height": "Height",
+      "frequency": "Frequency",
+      "amplitude": "Amplitude",
+      "layers": "Layers",
+      "position": "Position",
+      "top": "Top",
+      "bottom": "Bottom",
+      "color": "Color"
+    },
+    "mesh-gradient-generator": {
+      "name": "Mesh Gradient Generator",
+      "description": "Create beautiful mesh gradients with multiple color points",
+      "seo_title": "Free Mesh Gradient Generator Online - CSS Gradient Tool",
+      "seo_description": "Generate stunning mesh gradients with our free online tool. Create multi-color gradient backgrounds with customizable color points and positions.",
+      "detailed_description": "Mesh Gradient Generator creates complex, multi-color gradient backgrounds using radial gradients positioned at different points. Unlike linear gradients, mesh gradients create organic, flowing color transitions that add depth and visual interest to your designs. Customize each color point position and color to create unique gradient effects.",
+      "usage_steps": [
+        "Click on color swatches to change colors",
+        "Drag X and Y sliders to position each color point",
+        "Adjust blur for gradient softness",
+        "Click Randomize for new color combinations",
+        "Preview the result in real-time",
+        "Copy the CSS code for your project"
+      ],
+      "usage_examples": [
+        "Creating vibrant hero section backgrounds",
+        "Designing colorful card backgrounds",
+        "Building gradient overlays for images"
+      ],
+      "colorPoints": "Color Points",
+      "point": "Point",
+      "blur": "Blur",
+      "randomize": "Randomize Colors"
+    },
+    "noise-texture-generator": {
+      "name": "Noise Texture Generator",
+      "description": "Generate noise textures and grain effects for backgrounds",
+      "seo_title": "Free Noise Texture Generator Online - Grain Effect Tool",
+      "seo_description": "Create noise textures and grain effects with our free online tool. Generate random, perlin, or film grain patterns for modern web designs.",
+      "detailed_description": "Noise Texture Generator creates customizable noise patterns for adding texture to your designs. Choose from random noise, perlin-like patterns, or film grain effects. Adjust intensity, scale, and colors to create the perfect texture overlay for backgrounds, cards, or any design element that needs subtle visual interest.",
+      "usage_steps": [
+        "Select noise type: random, perlin, or grain",
+        "Adjust intensity for noise visibility",
+        "Set scale for pattern size",
+        "Choose base and noise colors",
+        "Select output size",
+        "Download PNG or copy data URL"
+      ],
+      "usage_examples": [
+        "Adding film grain to hero images",
+        "Creating textured card backgrounds",
+        "Designing vintage-style overlays"
+      ],
+      "noiseType": "Noise Type",
+      "types": {
+        "random": "Random",
+        "perlin": "Perlin",
+        "grain": "Grain"
+      },
+      "intensity": "Intensity",
+      "scale": "Scale",
+      "size": "Size",
+      "baseColor": "Base Color",
+      "noiseColor": "Noise Color",
+      "regenerate": "Regenerate",
+      "copyDataUrl": "Copy Data URL",
+      "usage": "Usage"
+    },
+    "commit-message-generator": {
+      "name": "Commit Message Generator",
+      "description": "Generate conventional commit messages following best practices",
+      "seo_title": "Free Git Commit Message Generator Online - Conventional Commits",
+      "seo_description": "Generate well-formatted Git commit messages following conventional commits specification. Create consistent, meaningful commit messages for your projects.",
+      "detailed_description": "Commit Message Generator helps you create well-structured Git commit messages following the Conventional Commits specification. This format makes your commit history more readable and enables automated changelog generation. Choose from standard commit types, add optional scope, and write clear descriptions for consistent version control.",
+      "usage_steps": [
+        "Select the commit type (feat, fix, docs, etc.)",
+        "Optionally add a scope for the change",
+        "Write a clear, concise subject line",
+        "Check breaking change if applicable",
+        "Add optional body for detailed explanation",
+        "Copy the formatted commit message"
+      ],
+      "usage_examples": [
+        "Creating feature commits: feat(auth): add login functionality",
+        "Writing bug fix commits: fix(api): resolve timeout issue",
+        "Documenting changes: docs(readme): update installation guide"
+      ],
+      "type": "Type",
+      "scope": "Scope",
+      "scopePlaceholder": "e.g., auth, api, ui",
+      "subject": "Subject",
+      "subjectPlaceholder": "Short description of the change",
+      "body": "Body",
+      "bodyPlaceholder": "Detailed explanation of the change...",
+      "footer": "Footer",
+      "footerPlaceholder": "e.g., Closes #123, BREAKING CHANGE: ...",
+      "breakingChange": "Breaking Change",
+      "commitMessage": "Commit Message",
+      "preview": "Enter subject to preview...",
+      "optional": "optional",
+      "characters": "characters",
+      "recommended50": "recommended max 50",
+      "tips": "Tips",
+      "tip1": "Use imperative mood: \"add\" not \"added\" or \"adds\"",
+      "tip2": "Keep subject under 50 characters",
+      "tip3": "Separate subject from body with blank line"
+    },
+    "bandwidth-calculator": {
+      "name": "Bandwidth Calculator",
+      "description": "Calculate required bandwidth from file size and transfer time",
+      "seo_title": "Free Bandwidth Calculator Online - Network Speed Tool",
+      "seo_description": "Calculate required bandwidth from file size and transfer time. Convert between Mbps, Gbps, and other network speed units with our free online tool.",
+      "detailed_description": "Bandwidth Calculator helps you determine the required network bandwidth to transfer files within a specific time frame. Enter your file size and desired transfer time to calculate the necessary bandwidth in various units including bps, Kbps, Mbps, Gbps, and bytes per second. Perfect for network planning and capacity estimation.",
+      "usage_steps": [
+        "Enter the file size you want to transfer",
+        "Select the appropriate size unit (KB, MB, GB, TB)",
+        "Enter the desired transfer time",
+        "Choose the time unit (seconds, minutes, hours)",
+        "View the required bandwidth in multiple units",
+        "Copy the results for your reference"
+      ],
+      "usage_examples": [
+        "Planning video streaming bandwidth requirements",
+        "Estimating backup transfer speeds",
+        "Calculating cloud upload/download needs"
+      ],
+      "fileSize": "File Size",
+      "transferTime": "Transfer Time",
+      "timeUnits": {
+        "seconds": "Seconds",
+        "minutes": "Minutes",
+        "hours": "Hours"
+      },
+      "requiredBandwidth": "Required Bandwidth",
+      "bitsPerSecond": "Bits per Second",
+      "bytesPerSecond": "Bytes per Second",
+      "commonBandwidths": "Common Bandwidth References"
+    },
+    "data-transfer-calculator": {
+      "name": "Data Transfer Calculator",
+      "description": "Calculate file transfer time based on connection speed",
+      "seo_title": "Free Data Transfer Time Calculator Online - Download Time Tool",
+      "seo_description": "Calculate how long it takes to transfer files at different connection speeds. Estimate download and upload times with our free online calculator.",
+      "detailed_description": "Data Transfer Calculator estimates how long it will take to transfer files based on your connection speed. Enter your file size and network speed to get accurate transfer time estimates. Includes preset speeds for common connection types like 4G, 5G, WiFi, and Ethernet for quick calculations.",
+      "usage_steps": [
+        "Enter the file size to transfer",
+        "Select the size unit (KB, MB, GB, TB)",
+        "Enter your connection speed",
+        "Or click a preset speed button",
+        "View the estimated transfer time",
+        "Copy the results for reference"
+      ],
+      "usage_examples": [
+        "Estimating large file download times",
+        "Planning data migration schedules",
+        "Comparing transfer times across networks"
+      ],
+      "fileSize": "File Size",
+      "connectionSpeed": "Connection Speed",
+      "presetSpeeds": "Preset Speeds",
+      "estimatedTime": "Estimated Transfer Time",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds",
+      "note": "Note: Actual transfer times may vary due to network conditions, overhead, and other factors."
+    },
+    "pixel-density-calculator": {
+      "name": "Pixel Density Calculator",
+      "description": "Calculate PPI and pixel pitch from screen resolution and size",
+      "seo_title": "Free Pixel Density (PPI) Calculator Online - Screen Resolution Tool",
+      "seo_description": "Calculate pixel density (PPI), pixel pitch, and screen dimensions from resolution and display size. Free online tool for display analysis.",
+      "detailed_description": "Pixel Density Calculator computes the pixels per inch (PPI) and other display metrics from screen resolution and diagonal size. Understand your display quality by calculating pixel pitch, aspect ratio, and total megapixels. Includes presets for common resolutions from HD to 8K and popular devices.",
+      "usage_steps": [
+        "Enter the screen width in pixels",
+        "Enter the screen height in pixels",
+        "Enter the diagonal screen size in inches",
+        "Or select a common resolution preset",
+        "View PPI, pixel pitch, and other metrics",
+        "Copy the results for reference"
+      ],
+      "usage_examples": [
+        "Comparing display quality across monitors",
+        "Evaluating smartphone screen sharpness",
+        "Choosing the right display for design work"
+      ],
+      "width": "Width",
+      "height": "Height",
+      "diagonal": "Diagonal",
+      "inches": "inches",
+      "commonResolutions": "Common Resolutions",
+      "results": "Results",
+      "pixelsPerInch": "Pixels Per Inch",
+      "pixelPitch": "Pixel Pitch",
+      "aspectRatio": "Aspect Ratio",
+      "megapixels": "Megapixels",
+      "physicalWidth": "Physical Width",
+      "physicalHeight": "Physical Height",
+      "totalPixels": "Total Pixels",
+      "ppiReference": "PPI Reference",
+      "quality": {
+        "excellent": "Excellent - Retina quality",
+        "good": "Good - Sharp display",
+        "average": "Average - Standard quality",
+        "low": "Low - Visible pixels"
+      }
+    },
+    "dpi-calculator": {
+      "name": "DPI Calculator",
+      "description": "Calculate DPI for printing or required resolution for target DPI",
+      "seo_title": "Free DPI Calculator Online - Print Resolution Tool",
+      "seo_description": "Calculate DPI from image resolution and print size, or find required pixels for target DPI. Free online tool for print quality planning.",
+      "detailed_description": "DPI Calculator helps you determine the print quality of your images or calculate the required resolution for a target DPI. Switch between two modes: calculate DPI from existing image dimensions and print size, or calculate required pixel dimensions for a specific DPI and print size. Essential for photographers, designers, and print professionals.",
+      "usage_steps": [
+        "Choose calculation mode: DPI or Pixels",
+        "For DPI mode: enter image resolution and print size",
+        "For Pixels mode: enter target DPI and print size",
+        "Select a common print size preset if needed",
+        "View the calculated results",
+        "Copy the results for reference"
+      ],
+      "usage_examples": [
+        "Checking if an image is suitable for printing",
+        "Calculating required resolution for large prints",
+        "Planning photo book image requirements"
+      ],
+      "calculateDpi": "Calculate DPI",
+      "calculatePixels": "Calculate Pixels",
+      "imageResolution": "Image Resolution",
+      "printSize": "Print Size",
+      "targetDpi": "Target DPI",
+      "width": "Width",
+      "height": "Height",
+      "inches": "inches",
+      "commonPrintSizes": "Common Print Sizes",
+      "calculatedDpi": "Calculated DPI",
+      "requiredResolution": "Required Resolution",
+      "horizontal": "Horizontal",
+      "vertical": "Vertical",
+      "megapixels": "Megapixels",
+      "dpiGuide": "DPI Guide",
+      "screen": "Screen/Web",
+      "draft": "Draft Print",
+      "print": "Quality Print",
+      "highQuality": "High Quality",
+      "quality": {
+        "excellent": "Excellent print quality",
+        "good": "Good print quality",
+        "acceptable": "Acceptable for viewing distance",
+        "low": "Low quality - may appear pixelated"
+      }
     }
   },
   "tool": {

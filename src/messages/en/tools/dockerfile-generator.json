@@ -1,0 +1,18 @@
+{
+  "detailed_description": "Dockerfile Generator is a comprehensive online tool that helps you create Dockerfile configurations for containerizing your applications. Select from popular base images like Node.js, Python, Go, or custom images. Configure working directories, copy commands, run commands, exposed ports, and environment variables. The tool generates optimized, production-ready Dockerfiles following best practices. Perfect for developers new to Docker or those who want to quickly scaffold container configurations.",
+  "usage_steps": [
+    "Select a base image from the dropdown or enter a custom image",
+    "Configure the working directory for your application",
+    "Add COPY and RUN commands as needed",
+    "Specify ports to expose",
+    "Add environment variables if required",
+    "Click Generate to create your Dockerfile",
+    "Copy or download the generated Dockerfile"
+  ],
+  "usage_examples": [
+    "Create a Node.js application container",
+    "Build a Python Flask/Django container",
+    "Set up a multi-stage build for Go applications",
+    "Configure a development environment container"
+  ]
+}

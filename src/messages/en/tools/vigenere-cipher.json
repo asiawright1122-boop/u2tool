@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Vigenère Cipher tool allows you to encrypt and decrypt text using the Vigenère cipher, a polyalphabetic substitution cipher. Unlike the Caesar cipher which uses a single shift, the Vigenère cipher uses a keyword where each letter determines a different shift. This makes it much harder to crack than simple substitution ciphers. The tool supports both encryption and decryption and preserves non-alphabetic characters.",
+  "usage_steps": [
+    "Enter your text in the input area",
+    "Enter a keyword (letters only)",
+    "Choose encrypt or decrypt mode",
+    "View the transformed result",
+    "Copy the result to clipboard",
+    "Use the same keyword to decrypt"
+  ],
+  "usage_examples": [
+    "Create more secure encoded messages",
+    "Learn about polyalphabetic ciphers",
+    "Solve Vigenère cipher puzzles",
+    "Study historical cryptography methods"
+  ]
+}

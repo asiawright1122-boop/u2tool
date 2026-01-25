@@ -1,0 +1,12 @@
+{
+  "detailed_description": "iCal Parser is an online tool for reading and viewing ICS calendar files. Upload an ICS file or paste the raw iCal data to see all events displayed in a clean, readable table format. The parser extracts event titles, start and end times, locations, descriptions, attendees, and recurrence rules. Perfect for debugging calendar integrations, viewing calendar exports, or extracting event data from ICS files. Supports both single events and recurring event series with full timezone handling.",
+  "usage_steps": [
+    "Upload ICS file or paste content",
+    "View parsed events",
+    "Export to JSON"
+  ],
+  "usage_examples": [
+    "View calendar exports",
+    "Extract event data"
+  ]
+}

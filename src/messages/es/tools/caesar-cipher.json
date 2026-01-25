@@ -1,0 +1,17 @@
+{
+  "detailed_description": "La herramienta de Cifrado César te permite cifrar y descifrar texto utilizando el algoritmo clásico de cifrado César. Nombrado en honor a Julio César, quien lo utilizó para comunicaciones militares, este cifrado desplaza cada letra un número fijo de posiciones en el alfabeto. Elige cualquier valor de desplazamiento entre 1 y 25, siendo ROT13 el caso especial de desplazamiento 13. La herramienta admite ambos modos de cifrado y descifrado y preserva los caracteres no alfabéticos.",
+  "usage_steps": [
+    "Ingresa tu texto en el área de entrada",
+    "Selecciona el valor de desplazamiento (1-25)",
+    "Elige el modo de cifrado o descifrado",
+    "Visualiza el resultado transformado",
+    "Copia el resultado al portapapeles",
+    "Utiliza el mismo valor de desplazamiento para descifrar"
+  ],
+  "usage_examples": [
+    "Aprende sobre criptografía clásica",
+    "Crea mensajes codificados simples",
+    "Resuelve puzzles de cifrado César",
+    "Enseña los fundamentos del cifrado a estudiantes"
+  ]
+}

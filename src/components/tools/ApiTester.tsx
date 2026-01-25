@@ -208,14 +208,14 @@ export default function ApiTester() {
                     type="text"
                     value={header.key}
                     onChange={(e) => updateHeader(index, 'key', e.target.value)}
-                    placeholder="Header name"
+                    placeholder={t('headerNamePlaceholder')}
                     className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
                   />
                   <input
                     type="text"
                     value={header.value}
                     onChange={(e) => updateHeader(index, 'value', e.target.value)}
-                    placeholder="Value"
+                    placeholder={t('headerValuePlaceholder')}
                     className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-sm"
                   />
                   <button

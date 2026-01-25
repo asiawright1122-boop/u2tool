@@ -1,0 +1,17 @@
+{
+  "detailed_description": "L'outil de chiffre de Vigenère vous permet de chiffrez et déchiffrez du texte en utilisant le chiffre de Vigenère, un chiffre de substitution polyalphabétique. Contrairement au chiffre de César qui utilise un seul décalage, le chiffre de Vigenère utilise un mot-clé où chaque lettre détermine un décalage différent. Cela le rend beaucoup plus difficile à craquer que les chiffres de substitution simples. L'outil prend en charge à la fois le chiffrement et le déchiffrement et conserve les caractères non alphabétiques.",
+  "usage_steps": [
+    "Entrez votre texte dans la zone de saisie",
+    "Entrez un mot-clé (lettres uniquement)",
+    "Choisissez le mode de chiffrement ou de déchiffrement",
+    "Affichez le résultat transformé",
+    "Copiez le résultat dans le presse-papiers",
+    "Utilisez le même mot-clé pour déchiffrer"
+  ],
+  "usage_examples": [
+    "Créez des messages codés plus sécurisés",
+    "Apprenez sur les chiffres polyalphabétiques",
+    "Résolvez des puzzles de chiffre de Vigenère",
+    "Étudiez les méthodes de cryptographie historiques"
+  ]
+}

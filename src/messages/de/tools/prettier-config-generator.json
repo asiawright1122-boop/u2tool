@@ -1,0 +1,18 @@
+{
+  "detailed_description": "Der Prettier-Konfigurationsgenerator hilft Ihnen, benutzerdefinierte Prettier-Konfigurationsdateien für eine konsistente Codeformatierung zu erstellen. Konfigurieren Sie alle wichtigen Optionen, einschließlich Druckbreite, Tabulatorenbreite, einfache oder doppelte Anführungszeichen, Semikolons, nachgestellte Kommata, Klammernabstand und vieles mehr. Vorschau, wie Ihr Code mit verschiedenen Einstellungen formatiert wird. Das Tool generiert .prettierrc-Dateien im JSON-Format, die in jedem JavaScript-, TypeScript-, CSS- oder HTML-Projekt verwendet werden können.",
+  "usage_steps": [
+    "Legen Sie Ihre bevorzugte Druckbreite fest (Standard 80)",
+    "Wählen Sie die Tabulatorenbreite und entscheiden Sie, ob Sie Tabulatoren oder Leerzeichen verwenden",
+    "Wählen Sie einfache oder doppelte Anführungszeichen",
+    "Konfigurieren Sie die Verwendung von Semikolons",
+    "Legen Sie Ihre Präferenz für nachgestellte Kommata fest",
+    "Passen Sie den Klammernabstand und andere Optionen an",
+    "Klicken Sie auf Generieren und kopieren Sie die Konfiguration"
+  ],
+  "usage_examples": [
+    "Erstellen Sie eine Prettier-Konfiguration für ein Teamprojekt",
+    "Richten Sie eine konsistente Formatierung für ein Monorepo ein",
+    "Konfigurieren Sie Prettier für ein React-Projekt",
+    "Passen Sie die Formatierung für die Migration eines Legacy-Codebases an"
+  ]
+}

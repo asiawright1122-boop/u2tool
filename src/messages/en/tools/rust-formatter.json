@@ -1,0 +1,12 @@
+{
+  "detailed_description": "Rust Formatter is an online tool that formats your Rust code according to rustfmt style guidelines. It helps maintain consistent code style across your Rust projects by automatically handling indentation, line wrapping, spacing around operators, and struct/enum formatting. The tool is perfect for developers who want clean, readable Rust code without installing additional tools. Whether you're writing systems code, web services, or CLI applications in Rust, this formatter ensures your code follows community standards.",
+  "usage_steps": [
+    "Paste Rust code",
+    "Click Format",
+    "Copy formatted code"
+  ],
+  "usage_examples": [
+    "Format Rust modules",
+    "Prepare code for review"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Das Caesar-Verschlüsselungs-Tool ermöglicht es Ihnen, Text mit dem klassischen Caesar-Verschlüsselungs-Algorithmus zu verschlüsseln und zu entschlüsseln. Benannt nach Julius Caesar, der es für militärische Kommunikationen verwendete, verschiebt diese Verschlüsselung jeden Buchstaben um eine feste Anzahl von Positionen im Alphabet. Wählen Sie jeden beliebigen Versatzwert von 1 bis 25, wobei ROT13 der spezielle Fall mit einem Versatz von 13 ist. Das Tool unterstützt sowohl die Verschlüsselung als auch die Entschlüsselung und bewahrt nicht-alphabetische Zeichen.",
+  "usage_steps": [
+    "Geben Sie Ihren Text in das Eingabefeld ein",
+    "Wählen Sie den Versatzwert (1-25)",
+    "Wählen Sie den Modus Verschlüsseln oder Entschlüsseln",
+    "Sehen Sie das transformierte Ergebnis an",
+    "Kopieren Sie das Ergebnis in die Zwischenablage",
+    "Verwenden Sie den gleichen Versatzwert, um zu entschlüsseln"
+  ],
+  "usage_examples": [
+    "Erfahren Sie mehr über klassische Kryptographie",
+    "Erstellen Sie einfache verschlüsselte Nachrichten",
+    "Lösen Sie Caesar-Verschlüsselungs-Rätsel",
+    "Unterrichten Sie Grundlagen der Verschlüsselung bei Schülern"
+  ]
+}

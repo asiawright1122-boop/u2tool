@@ -1,0 +1,17 @@
+{
+  "detailed_description": "License Generator helps you create license files for your open source projects. Choose from popular licenses including MIT, Apache 2.0, GPL 3.0, BSD 2-Clause, BSD 3-Clause, ISC, Mozilla Public License, and more. Enter your name and the tool automatically fills in the year and generates the complete license text. Each license includes a brief description of its terms to help you choose the right one for your project.",
+  "usage_steps": [
+    "Browse available licenses and their descriptions",
+    "Select the license that fits your needs",
+    "Enter your name or organization",
+    "The current year is automatically filled",
+    "Click Generate to create the license",
+    "Copy the license text to your LICENSE file"
+  ],
+  "usage_examples": [
+    "Add an MIT license to a new npm package",
+    "Choose Apache 2.0 for a corporate open source project",
+    "Select GPL for a copyleft project",
+    "Use ISC for a simple permissive license"
+  ]
+}

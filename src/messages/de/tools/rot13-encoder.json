@@ -1,0 +1,16 @@
+{
+  "detailed_description": "Der ROT13-Encoder ist ein einfaches Tool zum Verschlüsseln und Entschlüsseln von Texten mithilfe des ROT13-Algorithmus. ROT13 (Drehung um 13 Positionen) ist ein spezieller Fall des Caesar-Chiffres, der jeden Buchstaben durch den Buchstaben 13 Positionen weiter im Alphabet ersetzt. Da das Alphabet 26 Buchstaben hat, führt die zweimalige Anwendung von ROT13 zum ursprünglichen Text zurück, was es zu seinem eigenen Inversen macht. ROT13 wird häufig verwendet, um Spoiler, Lösungen von Rätseln oder leicht verschlüsselten Text zu verbergen.",
+  "usage_steps": [
+    "Geben Sie Ihren Text im Eingabefeld ein oder fügen Sie ihn ein",
+    "Die ROT13-Transformation wird automatisch angewendet",
+    "Betrachten Sie das verschlüsselte/entschlüsselte Ergebnis",
+    "Kopieren Sie das Ergebnis in die Zwischenablage",
+    "Wenden Sie ROT13 erneut an, um zu entschlüsseln"
+  ],
+  "usage_examples": [
+    "Verbergen Sie Spoiler in Online-Diskussionen",
+    "Verschlüsseln Sie Lösungen von Rätseln",
+    "Erfahren Sie mehr über Grundlagen der Kryptographie",
+    "Entschlüsseln Sie ROT13-verschlüsselte Nachrichten"
+  ]
+}

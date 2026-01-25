@@ -1,0 +1,18 @@
+{
+  "detailed_description": "Le Générateur de Changelog vous aide à créer des fichiers CHANGELOG.md bien structurés suivant le format Keep a Changelog. Ajoutez des entrées de version avec des dates et catégorisez les modifications dans les sections Ajoutées, Modifiées, Obsolètes, Supprimées, Corrigées et de Sécurité. L'outil génère du Markdown qui suit les conventions de versionnage sémantique et facilite la compréhension des modifications apportées entre les versions de votre logiciel.",
+  "usage_steps": [
+    "Entrez le numéro de version (par exemple, 1.0.0)",
+    "Définissez la date de sortie",
+    "Ajoutez des entrées sous les catégories appropriées",
+    "Utilisez Ajoutées pour les nouvelles fonctionnalités",
+    "Utilisez Modifiées pour les modifications de fonctionnalités existantes",
+    "Utilisez Corrigées pour les corrections de bogues",
+    "Générez et copiez l'entrée de changelog"
+  ],
+  "usage_examples": [
+    "Documenter une sortie de version majeure",
+    "Suivre les corrections de bogues dans une sortie de correctif",
+    "Enregistrer les modifications cassantes dans une nouvelle version",
+    "Maintenir un changelog pour un package npm"
+  ]
+}

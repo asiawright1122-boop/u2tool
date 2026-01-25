@@ -13,23 +13,28 @@ import { tools } from '@/config/tools';
 
 /**
  * 最新发布的工具 slugs（按发布时间倒序，15个）
+ * 更新于 2026-01-25: 添加 Batch 53 工具
  */
 const NEWEST_TOOLS = [
-  'excel-merger',
-  'excel-viewer',
-  'json-to-excel',
-  'excel-to-json',
-  'salary-calculator',
-  'business-days-calculator',
-  'meeting-notes',
-  'pomodoro-timer',
-  'signature-pad',
-  'resume-builder',
-  'invoice-generator',
-  'color-extractor',
-  'exif-viewer',
-  'image-to-webp',
-  'gif-compressor',
+  // Batch 53 - AI/Text Processing Tools
+  'ai-text-humanizer',
+  'text-spinner',
+  'readability-checker',
+  'grammar-checker',
+  // Batch 53 - Code Formatters
+  'typescript-playground',
+  'python-formatter',
+  'go-formatter',
+  'rust-formatter',
+  'yaml-formatter',
+  // Batch 53 - CSS Design Tools
+  'text-shadow-generator',
+  'svg-pattern-generator',
+  'css-triangle-generator',
+  'aspect-ratio-box-generator',
+  // Batch 53 - Calculators & Data Converters
+  'screen-time-calculator',
+  'typing-time-calculator',
 ];
 
 /**

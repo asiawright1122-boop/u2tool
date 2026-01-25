@@ -1,0 +1,13 @@
+{
+  "detailed_description": "O Gerador de Caixa de Proporção de Aspecto cria código CSS para contêineres responsivos que mantêm uma proporção largura-altura específica, independentemente do tamanho da tela. Escolha entre presets comuns como 16:9, 4:3, 1:1 ou insira proporções personalizadas. A ferramenta gera tanto CSS moderno usando a propriedade de proporção de aspecto quanto um fallback de padding-bottom para navegadores mais antigos. Perfeito para incorporações de vídeo, espaçadores de imagem, layouts de cartão e qualquer elemento que precise manter proporções. Obtenha código CSS limpo e compatível com vários navegadores instantaneamente.",
+  "usage_steps": [
+    "Insira a proporção ou selecione um preset",
+    "Escolha o método CSS",
+    "Visualize",
+    "Copie o CSS"
+  ],
+  "usage_examples": [
+    "Crie contêineres de vídeo",
+    "Projete molduras de imagem responsivas"
+  ]
+}

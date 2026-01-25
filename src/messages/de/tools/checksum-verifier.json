@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Prüfsummen-Überprüfer ist ein umfassendes Tool zur Berechnung und Überprüfung von Datei-Prüfsummen mit mehreren Hash-Algorithmen. Laden Sie eine beliebige Datei hoch, um deren MD5-, SHA-1-, SHA-256- und SHA-512-Hash-Werte gleichzeitig zu berechnen. Vergleichen Sie die berechneten Hash-Werte mit den erwarteten Werten, um die Datei-Integrität zu überprüfen. Das Tool verarbeitet Dateien vollständig in Ihrem Browser mithilfe der Web Crypto API, sodass Ihre Dateien niemals auf einen Server hochgeladen werden.",
+  "usage_steps": [
+    "Laden Sie eine Datei hoch, indem Sie klicken oder ziehen",
+    "Warten Sie, bis die Hash-Berechnung abgeschlossen ist",
+    "Anzeigen Sie die MD5-, SHA-1-, SHA-256- und SHA-512-Hash-Werte",
+    "Geben Sie optional eine erwartete Prüfsumme ein",
+    "Das Tool zeigt an, ob die Prüfsummen übereinstimmen",
+    "Kopieren Sie einen beliebigen Hash-Wert in die Zwischenablage"
+  ],
+  "usage_examples": [
+    "Überprüfen Sie die Integrität heruntergeladener Software",
+    "Überprüfen Sie, ob eine Datei während des Transfers beschädigt wurde",
+    "Vergleichen Sie Dateiversionen mithilfe von Hash-Werten",
+    "Überprüfen Sie die Integrität von Sicherungsdateien"
+  ]
+}

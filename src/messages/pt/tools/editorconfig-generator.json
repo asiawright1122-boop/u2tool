@@ -1,0 +1,18 @@
+{
+  "detailed_description": "O Gerador de EditorConfig ajuda a criar arquivos .editorconfig para manter estilos de codificação consistentes em diferentes editores e IDEs. Configure configurações para estilo de indentação (tabs vs espaços), tamanho de indentação, caracteres de fim de linha, conjunto de caracteres e tratamento de espaços em branco no final. Defina regras diferentes para diferentes tipos de arquivos. A ferramenta gera um arquivo .editorconfig completo que funciona com VS Code, Sublime Text, Vim e muitos outros editores.",
+  "usage_steps": [
+    "Defina a propriedade raiz como verdadeira para a raiz do projeto",
+    "Configure configurações padrão para todos os arquivos",
+    "Defina o estilo de indentação (tabs ou espaços)",
+    "Escolha o tamanho de indentação (2, 4, etc.)",
+    "Configure o caractere de fim de linha (lf, crlf)",
+    "Adicione substituições específicas de tipo de arquivo se necessário",
+    "Clique em Gerar e copie o arquivo .editorconfig"
+  ],
+  "usage_examples": [
+    "Crie formatação consistente em toda a equipe",
+    "Defina regras diferentes para diferentes tipos de arquivos",
+    "Configure o EditorConfig para um monorepositório",
+    "Garanta terminações de linha consistentes em diferentes plataformas"
+  ]
+}

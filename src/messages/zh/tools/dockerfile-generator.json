@@ -1,0 +1,18 @@
+{
+  "detailed_description": "Dockerfile 生成器是一个全面的在线工具，帮助您为容器化应用程序创建 Dockerfile 配置。选择流行的基础镜像，如 Node.js、Python、Go 或自定义镜像。配置工作目录、复制命令、运行命令、暴露端口和环境变量。该工具生成优化的、生产就绪的 Dockerfile，遵循最佳实践。适合新手 Docker 开发者或快速搭建容器配置的开发者。",
+  "usage_steps": [
+    "从下拉菜单中选择基础镜像或输入自定义镜像",
+    "配置应用程序的工作目录",
+    "根据需要添加 COPY 和 RUN 命令",
+    "指定要暴露的端口",
+    "如果需要添加环境变量",
+    "点击生成创建您的 Dockerfile",
+    "复制或下载生成的 Dockerfile"
+  ],
+  "usage_examples": [
+    "创建 Node.js 应用程序容器",
+    "构建 Python Flask/Django 容器",
+    "为 Go 应用程序设置多阶段构建",
+    "配置开发环境容器"
+  ]
+}

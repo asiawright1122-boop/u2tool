@@ -1,0 +1,18 @@
+{
+  "detailed_description": "ESLint Config Generator helps you create customized ESLint configuration files for your JavaScript and TypeScript projects. Choose from popular style guides including Airbnb, Standard, Google, and more. Configure framework-specific rules for React, Vue, Angular, or Node.js. Enable TypeScript support, set up Prettier integration, and customize individual rules. The tool generates a complete .eslintrc.json file ready to use in your project.",
+  "usage_steps": [
+    "Select your preferred style guide (Airbnb, Standard, Google, etc.)",
+    "Choose your framework (React, Vue, Angular, Node.js)",
+    "Enable TypeScript support if needed",
+    "Configure Prettier integration",
+    "Customize individual rules as needed",
+    "Click Generate to create your ESLint config",
+    "Copy the configuration to your project"
+  ],
+  "usage_examples": [
+    "Set up ESLint for a React TypeScript project",
+    "Configure ESLint with Airbnb style guide",
+    "Create a Node.js backend linting configuration",
+    "Set up ESLint with Prettier integration"
+  ]
+}

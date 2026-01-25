@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Verificador de Checksum é uma ferramenta abrangente para calcular e verificar checksums de arquivos usando múltiplos algoritmos de hash. Envie qualquer arquivo para calcular seus hashes MD5, SHA-1, SHA-256 e SHA-512 simultaneamente. Compare os hashes calculados com os valores esperados para verificar a integridade do arquivo. A ferramenta processa os arquivos inteiramente no seu navegador usando a API Web Crypto, garantindo que seus arquivos nunca sejam enviados para qualquer servidor.",
+  "usage_steps": [
+    "Envie um arquivo clicando ou arrastando",
+    "Aguarde até que o cálculo do hash seja concluído",
+    "Visualize os hashes MD5, SHA-1, SHA-256 e SHA-512",
+    "Opcionalmente, insira um checksum esperado",
+    "A ferramenta indicará se os checksums correspondem",
+    "Copie qualquer valor de hash para a área de transferência"
+  ],
+  "usage_examples": [
+    "Verifique a integridade de software baixado",
+    "Verifique se um arquivo foi corrompido durante a transferência",
+    "Compare versões de arquivos usando hashes",
+    "Valide a integridade de arquivos de backup"
+  ]
+}
