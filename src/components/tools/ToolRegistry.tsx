@@ -618,8 +618,8 @@ export const TOOL_COMPONENTS_MAP: Record<string, ComponentType> = {
   'financial-forecast-calculator': createToolImport(() => import('./FinancialForecastCalculator'), 'generator'),
 
   // Batch 55 - Popular Tools
-  'ip-geolocation': createToolImport(() => import('./IpGeolocation'), 'network'),
-  'screen-recorder': createToolImport(() => import('./ScreenRecorder'), 'office'),
+  'ip-geolocation': createToolImport(() => import('./IpGeolocation'), 'default'),
+  'screen-recorder': createToolImport(() => import('./ScreenRecorder'), 'default'),
 };
 
 
