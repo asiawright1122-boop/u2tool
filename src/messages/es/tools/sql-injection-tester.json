@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Prueba de Inyección SQL analiza consultas SQL y patrones de código para identificar posibles vulnerabilidades de inyección SQL.",
+  "usage_steps": [
+    "Pega consulta SQL o código",
+    "Introduce las entradas de prueba",
+    "Haz clic en Test",
+    "Ver problemas de seguridad",
+    "Obtén ejemplos parametrizados"
+  ],
+  "usage_examples": [
+    "Prueba el manejo de entrada de usuarios",
+    "Identifica la concatenación de cadenas",
+    "Aprende patrones seguros"
+  ]
+}

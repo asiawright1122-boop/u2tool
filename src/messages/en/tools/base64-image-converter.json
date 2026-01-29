@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Base64 Image Converter encodes images (PNG, JPG, GIF, SVG, WebP) to Base64 data URI strings and decodes Base64 back to images.",
+  "usage_steps": [
+    "Upload image or paste Base64",
+    "For encoding: drag image",
+    "For decoding: paste Base64",
+    "Preview result",
+    "Copy or download"
+  ],
+  "usage_examples": [
+    "Embed icons in CSS as data URIs",
+    "Convert API Base64 images",
+    "Create inline images for emails"
+  ]
+}

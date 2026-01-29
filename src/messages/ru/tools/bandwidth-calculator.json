@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Bandwidth Calculator helps you determine the required network bandwidth to transfer files within a specific time frame. Enter your file size and desired transfer time to calculate the necessary bandwidth in various units including bps, Kbps, Mbps, Gbps, and bytes per second. Perfect for network planning and capacity estimation.",
+  "detailed_description": "Калькулятор пропускной способности помогает определить необходимую сетевую пропускную способность для передачи файлов в определенный временной интервал. Введите размер файла и желаемое время передачи для расчета необходимой пропускной способности в различных единицах, включая bps, Kbps, Mbps, Gbps и байты в секунду. Отлично подходит для планирования сети и оценки��容量。",
   "usage_steps": [
-    "Enter the file size you want to transfer",
-    "Select the appropriate size unit (KB, MB, GB, TB)",
-    "Enter the desired transfer time",
-    "Choose the time unit (seconds, minutes, hours)",
-    "View the required bandwidth in multiple units",
-    "Copy the results for your reference"
+    "Введите размер файла, который вы хотите передать",
+    "Выберите соответствующую единицу измерения размера (KB, MB, GB, TB)",
+    "Введите желаемое время передачи",
+    "Выберите единицу времени (секунды, минуты, часы)",
+    "Просмотрите необходимую банквайтедность в различных единицах измерения",
+    "Скопируйте результаты для дальнейшего использования"
   ],
   "usage_examples": [
-    "Planning video streaming bandwidth requirements",
-    "Estimating backup transfer speeds",
-    "Calculating cloud upload/download needs"
+    "Планирование требований к банквайтедности для стриминга видео",
+    "Оценка скорости передачи резервных копий",
+    "Вычисление потребностей в загрузке/выгрузке в облако"
   ]
 }

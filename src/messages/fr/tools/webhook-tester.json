@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Testeur de Webhook vous permet d'envoyer des requêtes de test aux points de terminaison webhook avec des chargeurs personnalisés, des en-têtes et des méthodes HTTP.",
+  "usage_steps": [
+    "Entrez l'URL webhook",
+    "Sélectionnez la méthode HTTP",
+    "Ajoutez des en-têtes personnalisés",
+    "Entrez un chargeur JSON",
+    "Envoyez et visualisez la réponse"
+  ],
+  "usage_examples": [
+    "Testez les webhooks Stripe",
+    "Déboguez les intégrations GitHub",
+    "Vérifiez les webhooks Slack"
+  ]
+}

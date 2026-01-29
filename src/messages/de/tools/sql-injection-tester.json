@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der SQL-Injektionstester analysiert SQL-Abfragen und Code-Pattern, um potenzielle SQL-Injektionslücken zu erkennen.",
+  "usage_steps": [
+    "Fügen Sie SQL-Abfrage oder Code ein",
+    "Geben Sie Testeingaben ein",
+    "Klicken Sie auf Test",
+    "Betrachten Sie Sicherheitsprobleme",
+    "Erhalten Sie parametrisierte Beispiele"
+  ],
+  "usage_examples": [
+    "Testen Sie die Verarbeitung von Benutzerinput",
+    "Identifizieren Sie die Kettenverbindung von Zeichenfolgen",
+    "Erlernen Sie sichere Mustern"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Gestionnaire de Tags Git aide à organiser et à créer des tags Git suivant la version sémantique.",
+  "usage_steps": [
+    "Saisissez la version actuelle",
+    "Sélectionnez le type de bump",
+    "Ajoutez un message de tag",
+    "Générez la commande",
+    "Copiez les commandes de tag"
+  ],
+  "usage_examples": [
+    "Créez des tags de version sémantiques",
+    "Générez des tags annotés",
+    "Planifiez la numérotation des versions"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Webhook Tester allows you to send test requests to webhook endpoints with custom payloads, headers, and HTTP methods.",
+  "usage_steps": [
+    "Enter webhook URL",
+    "Select HTTP method",
+    "Add custom headers",
+    "Enter JSON payload",
+    "Send and view response"
+  ],
+  "usage_examples": [
+    "Test Stripe webhooks",
+    "Debug GitHub integrations",
+    "Verify Slack webhooks"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Base64 이미지 변환기는 이미지(PNG, JPG, GIF, SVG, WebP)를 Base64 데이터 URI 문자열로 인코딩하고 Base64를 다시 이미지로 디코딩합니다.",
+  "usage_steps": [
+    "이미지 업로드 또는 Base64 붙여넣기",
+    "인코딩 시: 이미지를 드래그하세요",
+    "디코딩 시: Base64 붙여넣기",
+    "결과 미리보기",
+    "복사 또는 다운로드"
+  ],
+  "usage_examples": [
+    "CSS에 데이터 URI로 아이콘 삽입",
+    "API Base64 이미지 변환",
+    "이메일에 내장 이미지 생성"
+  ]
+}

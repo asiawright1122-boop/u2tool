@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Générateur de Variables d'Environnement aide à créer des fichiers .env bien formatés avec des modèles pour les services courants.",
+  "usage_steps": [
+    "Sélectionnez un modèle ou commencez à partir de zéro",
+    "Ajoutez des noms et des valeurs de variables",
+    "Utilisez le générateur secret",
+    "Validez le nommage",
+    "Exportez en .env"
+  ],
+  "usage_examples": [
+    "Créez des modèles .env.example",
+    "Générez des clés API sécurisées",
+    "Construisez des configurations Docker"
+  ]
+}

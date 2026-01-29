@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Generador de Variables de Entorno ayuda a crear archivos .env bien formateados con plantillas para servicios comunes.",
+  "usage_steps": [
+    "Seleccione una plantilla o comience desde cero",
+    "Añada nombres y valores de variables",
+    "Utilice el generador de secretos",
+    "Validar el nombre",
+    "Exportar como .env"
+  ],
+  "usage_examples": [
+    "Cree plantillas .env.example",
+    "Genera claves API seguras",
+    "Construya configuraciones Docker"
+  ]
+}

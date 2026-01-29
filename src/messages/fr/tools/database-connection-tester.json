@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Testeur de Connexion Base de Données analyse et valide les chaînes de connexion de base de données pour diverses bases.",
+  "usage_steps": [
+    "Coller la chaîne de connexion",
+    "Sélectionner le type de base de données",
+    "Cliquez sur Analyser",
+    "Voir les détails analysés",
+    "Valider le format"
+  ],
+  "usage_examples": [
+    "Valider avant déploiement",
+    "Analyser les URIs MongoDB",
+    "Déboguer les problèmes de connexion"
+  ]
+}

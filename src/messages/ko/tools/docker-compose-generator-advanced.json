@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Docker Compose 생성기는 다중 컨테이너 애플리케이션의 docker-compose.yml 설정을 생성합니다.",
+  "usage_steps": [
+    "템플릿에서 서비스 선택",
+    "포트 및 볼륨 설정",
+    "네트워크 구성",
+    "건강 검사 추가",
+    "docker-compose.yml 다운로드"
+  ],
+  "usage_examples": [
+    "개발 환경 생성",
+    "생산 환경 설정",
+    "マイ크로서비스 스택 빌드"
+  ]
+}

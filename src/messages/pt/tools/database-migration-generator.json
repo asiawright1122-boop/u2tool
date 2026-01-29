@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Gerador de Migração de Banco de Dados cria scripts de migração para operações comuns de banco de dados, suportando múltiplos bancos de dados.",
+  "usage_steps": [
+    "Selecione o tipo de migração",
+    "Escolha o tipo de banco de dados",
+    "Defina as alterações de esquema",
+    "Gere scripts de subida e descida",
+    "Copie ou baixe"
+  ],
+  "usage_examples": [
+    "Gere migrações CREATE TABLE",
+    "Crie scripts ALTER TABLE",
+    "Construa migrações de índice"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der URL-Abfragezeichenkette-Parser zerlegt komplexe URLs in Komponenten und extrahiert sowie entschlüsselt Abfragezeichenketten in eine lesbare Tabelle.",
+  "usage_steps": [
+    "Fügen Sie die vollständige URL oder die Abfragezeichenkette ein",
+    "Betrachten Sie die geparseden Parameter",
+    "Sehen Sie die entschlüsselten Werte",
+    "Bearbeiten Sie die Werte, wenn erforderlich",
+    "Kopieren oder URL neu aufbauen"
+  ],
+  "usage_examples": [
+    "Tracking-Parameter debuggen",
+    "OAuth-Rückrufe analysieren",
+    "API-Endpunktparameter extrahieren"
+  ]
+}

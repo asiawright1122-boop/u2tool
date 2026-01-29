@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Validador de Nombres de Ramas de Git verifica los nombres de ramas contra convenciones comunes como GitFlow.",
+  "usage_steps": [
+    "Introduce el nombre de la rama",
+    "Selecciona la convención",
+    "Haz clic en Validar",
+    "Visualiza los resultados",
+    "Copia el nombre corregido"
+  ],
+  "usage_examples": [
+    "Validar ramas de características",
+    "Aplicar estándares de equipo",
+    "Revisar en CI/CD"
+  ]
+}

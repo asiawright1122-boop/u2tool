@@ -1,0 +1,15 @@
+{
+  "detailed_description": "JSONからProtobuf変換ツールはJSONデータ構造を分析し、対応するプロトコルバッファメッセージ定義を作成します。",
+  "usage_steps": [
+    "JSONデータを貼り付ける",
+    "メッセージ名を入力する",
+    "オプションを設定する",
+    "生成をクリックする",
+    ".protoファイルをダウンロードする"
+  ],
+  "usage_examples": [
+    "JSON APIから.protoを作成する",
+    "gRPCメッセージを生成する",
+    "JSONスキーマを変換する"
+  ]
+}

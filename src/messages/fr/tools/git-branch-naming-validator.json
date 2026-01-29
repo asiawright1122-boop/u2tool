@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Valideur de Nom de Branche Git vérifie les noms des branches par rapport aux conventions de nommage courantes telles que GitFlow.",
+  "usage_steps": [
+    "Entrez le nom de la branche",
+    "Sélectionnez la convention",
+    "Cliquez sur Valider",
+    "Voyez les résultats",
+    "Copiez le nom corrigé"
+  ],
+  "usage_examples": [
+    "Valider les branches fonctionnelles",
+    "Imposer les normes d'équipe",
+    "Vérification dans CI/CD"
+  ]
+}

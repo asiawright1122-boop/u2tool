@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Base64 Bildkonverter kodiert Bilder (PNG, JPG, GIF, SVG, WebP) in Base64-Daten-URIs und dekodiert Base64 zurück in Bilder.",
+  "usage_steps": [
+    "Bild hochladen oder Base64 einfügen",
+    "Für Kodierung: Bild ziehen",
+    "Für Dekodierung: Base64 einfügen",
+    "Ergebnis ansehen",
+    "Kopieren oder Herunterladen"
+  ],
+  "usage_examples": [
+    "Symbole in CSS als Daten-URIs einbetten",
+    "API-Bilder in Base64 konvertieren",
+    "Inline-Bilder für E-Mails erstellen"
+  ]
+}

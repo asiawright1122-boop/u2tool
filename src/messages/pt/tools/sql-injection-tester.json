@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Testador de Injeção SQL analisa consultas SQL e padrões de código para identificar possíveis vulnerabilidades de injeção SQL.",
+  "usage_steps": [
+    "Cole a consulta SQL ou código",
+    "Insira as entradas de teste",
+    "Clique em Testar",
+    "Visualize problemas de segurança",
+    "Obtenha exemplos parametrizados"
+  ],
+  "usage_examples": [
+    "Teste o manejo de entrada do usuário",
+    "Identifique concatenação de strings",
+    "Aprenda padrões seguros"
+  ]
+}

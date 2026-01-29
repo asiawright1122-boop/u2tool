@@ -1,0 +1,15 @@
+{
+  "detailed_description": "SQLからMongoDB変換ツールは、データベース移行用にSQLクエリを相当するMongoDBクエリ文法に変換します。",
+  "usage_steps": [
+    "SQLクエリを貼り付ける",
+    "MongoDBドライバを選択する",
+    "変換をクリックする",
+    "MongoDB文法を確認する",
+    "クエリをコピーする"
+  ],
+  "usage_examples": [
+    "SQLからMongoDBへの移行",
+    "MongoDB文法を学ぶ",
+    "WHEREを$matchに変換する"
+  ]
+}

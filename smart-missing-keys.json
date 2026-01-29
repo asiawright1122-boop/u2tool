@@ -1,0 +1,343 @@
+{
+  "summary": {
+    "totalMissing": 80,
+    "componentsAffected": 51
+  },
+  "details": {
+    "ResumeBuilder.tsx": {
+      "slug": "resume-builder",
+      "keys": [
+        "html2pdf.js",
+        "placeholders.name",
+        "placeholders.title",
+        "templates.professional",
+        "templates.minimal",
+        "templates.creative",
+        "placeholders.email",
+        "placeholders.phone",
+        "placeholders.location",
+        "placeholders.website"
+      ]
+    },
+    "EChartsWrapper.tsx": {
+      "slug": "e-charts-wrapper",
+      "keys": [
+        "echarts-for-react/lib/core",
+        "echarts/core",
+        "echarts/renderers",
+        "echarts/charts",
+        "echarts/components",
+        "echarts/features"
+      ]
+    },
+    "CarbonFootprintCalculator.tsx": {
+      "slug": "carbon-footprint-calculator",
+      "keys": [
+        "levels.low",
+        "levels.average",
+        "levels.high",
+        "levels.veryHigh"
+      ]
+    },
+    "DpiCalculator.tsx": {
+      "slug": "dpi-calculator",
+      "keys": [
+        "quality.excellent",
+        "quality.good",
+        "quality.acceptable",
+        "quality.low"
+      ]
+    },
+    "PixelDensityCalculator.tsx": {
+      "slug": "pixel-density-calculator",
+      "keys": [
+        "quality.excellent",
+        "quality.good",
+        "quality.average",
+        "quality.low"
+      ]
+    },
+    "GifCompressor.tsx": {
+      "slug": "gif-compressor",
+      "keys": [
+        "gifuct-js",
+        "gif.js"
+      ]
+    },
+    "HexBase64Converter.tsx": {
+      "slug": "hex-base64-converter",
+      "keys": [
+        "48 65 6C 6C 6F 20 57 6F 72 6C 64 21",
+        "SGVsbG8gV29ybGQh"
+      ]
+    },
+    "InvoiceGenerator.tsx": {
+      "slug": "invoice-generator",
+      "keys": [
+        "html2canvas",
+        "jspdf"
+      ]
+    },
+    "PdfRotator.tsx": {
+      "slug": "pdf-rotator",
+      "keys": [
+        "pdfjs-dist",
+        "pdf-lib"
+      ]
+    },
+    "PdfSplitter.tsx": {
+      "slug": "pdf-splitter",
+      "keys": [
+        "pdfjs-dist",
+        "pdf-lib"
+      ]
+    },
+    "UnicodeConverter.tsx": {
+      "slug": "unicode-converter",
+      "keys": [
+        "Error: Invalid Unicode format",
+        "css"
+      ]
+    },
+    "BinaryToDecimal.tsx": {
+      "slug": "binary-to-decimal",
+      "keys": [
+        "FF"
+      ]
+    },
+    "CidrCalculator.tsx": {
+      "slug": "cidr-calculator",
+      "keys": [
+        "/"
+      ]
+    },
+    "CronExplainer.tsx": {
+      "slug": "cron-explainer",
+      "keys": [
+        "/"
+      ]
+    },
+    "CrontabCalendar.tsx": {
+      "slug": "crontab-calendar",
+      "keys": [
+        "/"
+      ]
+    },
+    "CssAnimationGenerator.tsx": {
+      "slug": "css-animation-generator",
+      "keys": [
+        "style"
+      ]
+    },
+    "CsvToExcel.tsx": {
+      "slug": "csv-to-excel",
+      "keys": [
+        "xlsx"
+      ]
+    },
+    "DatabaseConnectionTester.tsx": {
+      "slug": "database-connection-tester",
+      "keys": [
+        "${connStr}"
+      ]
+    },
+    "ElectricityCostCalculator.tsx": {
+      "slug": "electricity-cost-calculator",
+      "keys": [
+        "appliance.ledBulb"
+      ]
+    },
+    "EmailValidator.tsx": {
+      "slug": "email-validator",
+      "keys": [
+        "@"
+      ]
+    },
+    "ExcelMerger.tsx": {
+      "slug": "excel-merger",
+      "keys": [
+        "xlsx"
+      ]
+    },
+    "ExcelToCsv.tsx": {
+      "slug": "excel-to-csv",
+      "keys": [
+        "xlsx"
+      ]
+    },
+    "ExcelToJson.tsx": {
+      "slug": "excel-to-json",
+      "keys": [
+        "xlsx"
+      ]
+    },
+    "ExcelViewer.tsx": {
+      "slug": "excel-viewer",
+      "keys": [
+        "xlsx"
+      ]
+    },
+    "ExifViewer.tsx": {
+      "slug": "exif-viewer",
+      "keys": [
+        "exifreader"
+      ]
+    },
+    "FinancialForecastCalculator.tsx": {
+      "slug": "financial-forecast-calculator",
+      "keys": [
+        "-Q"
+      ]
+    },
+    "GaugeChartGenerator.tsx": {
+      "slug": "gauge-chart-generator",
+      "keys": [
+        "%"
+      ]
+    },
+    "GdprConsentGenerator.tsx": {
+      "slug": "gdpr-consent-generator",
+      "keys": [
+        "Cookie settings - implement your custom modal here"
+      ]
+    },
+    "GifMaker.tsx": {
+      "slug": "gif-maker",
+      "keys": [
+        "gif.js"
+      ]
+    },
+    "GifSplitter.tsx": {
+      "slug": "gif-splitter",
+      "keys": [
+        "gifuct-js"
+      ]
+    },
+    "HexEditor.tsx": {
+      "slug": "hex-editor",
+      "keys": [
+        "Error"
+      ]
+    },
+    "HtmlToJsx.tsx": {
+      "slug": "html-to-jsx",
+      "keys": [
+        ";"
+      ]
+    },
+    "HttpStatusCodeReference.tsx": {
+      "slug": "http-status-code-reference",
+      "keys": [
+        "nav.noResults"
+      ]
+    },
+    "ImageConverter.tsx": {
+      "slug": "image-converter",
+      "keys": [
+        "/"
+      ]
+    },
+    "ImageToPdf.tsx": {
+      "slug": "image-to-pdf",
+      "keys": [
+        "pdf-lib"
+      ]
+    },
+    "JsonToExcel.tsx": {
+      "slug": "json-to-excel",
+      "keys": [
+        "xlsx"
+      ]
+    },
+    "MemoryLeakDetector.tsx": {
+      "slug": "memory-leak-detector",
+      "keys": [
+        "ws://example.com"
+      ]
+    },
+    "OctalConverter.tsx": {
+      "slug": "octal-converter",
+      "keys": [
+        "1ED"
+      ]
+    },
+    "PdfCompressor.tsx": {
+      "slug": "pdf-compressor",
+      "keys": [
+        "pdf-lib"
+      ]
+    },
+    "PdfMerger.tsx": {
+      "slug": "pdf-merger",
+      "keys": [
+        "pdf-lib"
+      ]
+    },
+    "PdfToImage.tsx": {
+      "slug": "pdf-to-image",
+      "keys": [
+        "pdfjs-dist"
+      ]
+    },
+    "PdfToText.tsx": {
+      "slug": "pdf-to-text",
+      "keys": [
+        "pdfjs-dist"
+      ]
+    },
+    "SqlToMongo.tsx": {
+      "slug": "sql-to-mongo",
+      "keys": [
+        "="
+      ]
+    },
+    "SqlToMongodbConverter.tsx": {
+      "slug": "sql-to-mongodb-converter",
+      "keys": [
+        "="
+      ]
+    },
+    "SriHashGenerator.tsx": {
+      "slug": "sri-hash-generator",
+      "keys": [
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      ]
+    },
+    "TailwindToCss.tsx": {
+      "slug": "tailwind-to-css",
+      "keys": [
+        "flex flex-col justify-center items-center p-4 m-2 bg-[#ffffff] rounded-lg font-bold text-center"
+      ]
+    },
+    "TextSorter.tsx": {
+      "slug": "text-sorter",
+      "keys": [
+        "banana\\napple\\nCherry\\n10\\n2\\n1\\nfile1.txt\\nfile10.txt\\nfile2.txt"
+      ]
+    },
+    "TextToHex.tsx": {
+      "slug": "text-to-hex",
+      "keys": [
+        "Hello, World! 你好世界"
+      ]
+    },
+    "TextToPdf.tsx": {
+      "slug": "text-to-pdf",
+      "keys": [
+        "jspdf"
+      ]
+    },
+    "UrlEncoder.tsx": {
+      "slug": "url-encoder",
+      "keys": [
+        "Error: Invalid URL encoding"
+      ]
+    },
+    "VigenereCipher.tsx": {
+      "slug": "vigenere-cipher",
+      "keys": [
+        "none"
+      ]
+    }
+  }
+}

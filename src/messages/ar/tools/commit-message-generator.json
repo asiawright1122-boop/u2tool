@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Commit Message Generator helps you create well-structured Git commit messages following the Conventional Commits specification. This format makes your commit history more readable and enables automated changelog generation. Choose from standard commit types, add optional scope, and write clear descriptions for consistent version control.",
+  "detailed_description": "يساعد جهاز إنشاء رسالة التزامك في إنشاء رسائل التزام Git منظمة وفقًا لمواصفات Commits التقليدية. هذا النمط يجعل تاريخ التزاماتك أكثر قابلية للقراءة ويسهل إنشاء سجل التغييرات التلقائي. يمكنك اختيار أنواع التزامات موحدة، إضافة مجال اختياري، وكتابة وصف واضح للتحكم المتجانس في الإصدارات.",
   "usage_steps": [
-    "Select the commit type (feat, fix, docs, etc.)",
-    "Optionally add a scope for the change",
-    "Write a clear, concise subject line",
-    "Check breaking change if applicable",
-    "Add optional body for detailed explanation",
-    "Copy the formatted commit message"
+    "اختر نوع التزام (feat، fix، docs، إلخ.)",
+    "أضف نطاقًا اختياريًا للتغيير",
+    "اكتب عنوانًا موضوعيًا واضحًا وموجزًا",
+    "تحقق من التغيير الذي ينطوي على كسر إذا كان примلاً",
+    "أضف شرح مفصل اختياري",
+    "نسخ الرسالة المهيكلة للتزام"
   ],
   "usage_examples": [
-    "Creating feature commits: feat(auth): add login functionality",
-    "Writing bug fix commits: fix(api): resolve timeout issue",
-    "Documenting changes: docs(readme): update installation guide"
+    "إنشاء تزامن الميزات: feat(auth): إضافة وظيفة تسجيل الدخول",
+    "كتابة تزامن الإصلاحات: fix(api): حل مشكلة التأخير",
+    "توثيق التغييرات: docs(readme): تحديث دليل التثبيت"
   ]
 }

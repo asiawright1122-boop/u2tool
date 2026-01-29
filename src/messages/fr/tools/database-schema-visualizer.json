@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Visualiseur de Schéma de Base de Données crée des diagrammes ER visuels à partir de statements SQL CREATE TABLE.",
+  "usage_steps": [
+    "Collez des statements CREATE TABLE",
+    "Cliquez sur Visualiser",
+    "Voyez les relations",
+    "Glissez pour organiser",
+    "Exportez en PNG/SVG"
+  ],
+  "usage_examples": [
+    "Documenter la structure de la base de données",
+    "Comprendre les bases de données héritées",
+    "Planifier des modifications de schéma"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Webhook-Tester ermöglicht es Ihnen, Testanfragen an Webhook-Endpunkte mit benutzerdefinierten Payloads, Headers und HTTP-Methoden zu senden.",
+  "usage_steps": [
+    "Geben Sie die Webhook-URL ein",
+    "Wählen Sie die HTTP-Methode",
+    "Fügen Sie benutzerdefinierte Headers hinzu",
+    "Geben Sie den JSON-Payload ein",
+    "Senden und Anzeigen der Antwort"
+  ],
+  "usage_examples": [
+    "Stripe-Webhooks testen",
+    "GitHub-Integrationen debuggen",
+    "Slack-Webhooks überprüfen"
+  ]
+}

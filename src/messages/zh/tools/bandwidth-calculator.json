@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Bandwidth Calculator helps you determine the required network bandwidth to transfer files within a specific time frame. Enter your file size and desired transfer time to calculate the necessary bandwidth in various units including bps, Kbps, Mbps, Gbps, and bytes per second. Perfect for network planning and capacity estimation.",
+  "detailed_description": "带宽计算器帮助您确定在特定时间内传输文件所需的网络带宽。输入文件大小和期望的传输时间，以计算不同单位（bps、Kbps、Mbps、Gbps 和字节/秒）所需的带宽。适用于网络规划和容量估算。",
   "usage_steps": [
-    "Enter the file size you want to transfer",
-    "Select the appropriate size unit (KB, MB, GB, TB)",
-    "Enter the desired transfer time",
-    "Choose the time unit (seconds, minutes, hours)",
-    "View the required bandwidth in multiple units",
-    "Copy the results for your reference"
+    "输入您要传输的文件大小",
+    "选择适当的数据单位（KB、MB、GB、TB）",
+    "输入期望的传输时间",
+    "选择时间单位（秒、分钟、小时）",
+    "查看以多种单位表示的所需带宽",
+    "复制结果以供参考"
   ],
   "usage_examples": [
-    "Planning video streaming bandwidth requirements",
-    "Estimating backup transfer speeds",
-    "Calculating cloud upload/download needs"
+    "规划视频流媒体带宽需求",
+    "估算备份传输速度",
+    "计算云上传/下载需求"
   ]
 }

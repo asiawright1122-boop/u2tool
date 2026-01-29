@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Code Duplikat Finder erkennt duplizierte oder ähnliche Code-Abschnitte, die das DRY-Prinzip verletzen.",
+  "usage_steps": [
+    "Fügen Sie Ihren Code ein",
+    "Setzen Sie die Mindestgröße des Blocks",
+    "Klicken Sie auf 'Duplikate finden'",
+    "Betrachten Sie die hervorgehobenen Abschnitte",
+    "Erhalten Sie Refaktorierungsvorschläge"
+  ],
+  "usage_examples": [
+    "Kopierte Abschnitte finden",
+    "Nutzbare Kandidaten identifizieren",
+    "Minderung der Wartungsbelastung"
+  ]
+}

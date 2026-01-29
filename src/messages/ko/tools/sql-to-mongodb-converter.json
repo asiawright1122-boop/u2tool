@@ -1,0 +1,15 @@
+{
+  "detailed_description": "SQL to MongoDB 변환기는 데이터베이스 이전을 위해 SQL 쿼리를 동등한 MongoDB 쿼리 문법으로 변환합니다.",
+  "usage_steps": [
+    "SQL 쿼리 붙여넣기",
+    "MongoDB 드라이버 선택",
+    "변환 버튼 클릭",
+    "MongoDB 문법 확인",
+    "쿼리 복사"
+  ],
+  "usage_examples": [
+    "SQL을 MongoDB로 이전",
+    "MongoDB 문법 배우기",
+    "WHERE를 $match로 변환"
+  ]
+}

@@ -576,6 +576,81 @@ export const tools: Tool[] = [
   // Batch 53 - Data Converters (数据转换工具)
   { slug: 'ical-parser', category: 'converters', icon: '📅', component: 'IcalParser' },
   { slug: 'vcard-parser', category: 'converters', icon: '👤', component: 'VcardParser' },
+
+  // Batch 54 - Developer Tools - API and Network Tools (开发者工具 - API 和网络工具)
+  { slug: 'curl-to-code-generator', category: 'development', icon: '🔄', component: 'CurlToCodeGenerator' },
+  { slug: 'http-status-code-reference', category: 'network', icon: '🌐', component: 'HttpStatusCodeReference' },
+  { slug: 'jwt-payload-decoder', category: 'security', icon: '🎫', component: 'JwtPayloadDecoder' },
+  { slug: 'base64-image-converter', category: 'image', icon: '🖼️', component: 'Base64ImageConverter' },
+  { slug: 'url-query-string-parser', category: 'network', icon: '🔗', component: 'UrlQueryStringParser' },
+  { slug: 'request-header-builder', category: 'development', icon: '📋', component: 'RequestHeaderBuilder' },
+  { slug: 'webhook-tester', category: 'development', icon: '🔌', component: 'WebhookTester' },
+  { slug: 'api-response-formatter', category: 'development', icon: '📄', component: 'ApiResponseFormatter' },
+
+  // Batch 54 - Developer Tools - Code Conversion and Generation (开发者工具 - 代码转换和生成)
+  { slug: 'sql-to-mongodb-converter', category: 'development', icon: '🍃', component: 'SqlToMongodbConverter' },
+  { slug: 'json-to-protobuf-converter', category: 'converters', icon: '📦', component: 'JsonToProtobufConverter' },
+  { slug: 'regex-to-code-generator', category: 'development', icon: '🔍', component: 'RegexToCodeGenerator' },
+  { slug: 'swagger-to-code-generator', category: 'development', icon: '📚', component: 'SwaggerToCodeGenerator' },
+  { slug: 'database-migration-generator', category: 'development', icon: '🗃️', component: 'DatabaseMigrationGenerator' },
+  { slug: 'environment-variables-generator', category: 'development', icon: '⚙️', component: 'EnvironmentVariablesGenerator' },
+  { slug: 'docker-compose-generator-advanced', category: 'development', icon: '🐳', component: 'DockerComposeGeneratorAdvanced' },
+  { slug: 'kubernetes-manifest-generator', category: 'development', icon: '☸️', component: 'KubernetesManifestGenerator' },
+
+  // Batch 54 - Developer Tools - Code Analysis and Optimization (开发者工具 - 代码分析和优化)
+  { slug: 'code-complexity-analyzer', category: 'development', icon: '📊', component: 'CodeComplexityAnalyzer' },
+  { slug: 'dependency-vulnerability-checker', category: 'security', icon: '⚠️', component: 'DependencyVulnerabilityChecker' },
+  { slug: 'performance-profiler', category: 'development', icon: '⚡', component: 'PerformanceProfiler' },
+  { slug: 'memory-leak-detector', category: 'development', icon: '💾', component: 'MemoryLeakDetector' },
+  { slug: 'code-duplication-finder', category: 'development', icon: '🔍', component: 'CodeDuplicationFinder' },
+  { slug: 'unused-imports-finder', category: 'development', icon: '🧹', component: 'UnusedImportsFinder' },
+  { slug: 'dead-code-analyzer', category: 'development', icon: '💀', component: 'DeadCodeAnalyzer' },
+
+  // Batch 54 - Developer Tools - Database Tools (开发者工具 - 数据库工具)
+  { slug: 'sql-query-optimizer', category: 'development', icon: '⚡', component: 'SqlQueryOptimizer' },
+  { slug: 'database-schema-visualizer', category: 'development', icon: '📊', component: 'DatabaseSchemaVisualizer' },
+  { slug: 'sql-injection-tester', category: 'security', icon: '🔓', component: 'SqlInjectionTester' },
+  { slug: 'database-connection-tester', category: 'network', icon: '🔌', component: 'DatabaseConnectionTester' },
+  { slug: 'query-execution-planner', category: 'development', icon: '📈', component: 'QueryExecutionPlanner' },
+  { slug: 'database-backup-scheduler', category: 'development', icon: '💾', component: 'DatabaseBackupScheduler' },
+
+  // Batch 54 - Developer Tools - Version Control Tools (开发者工具 - 版本控制工具)
+  { slug: 'git-commit-message-generator', category: 'development', icon: '💬', component: 'GitCommitMessageGenerator' },
+  { slug: 'git-branch-naming-validator', category: 'development', icon: '🌿', component: 'GitBranchNamingValidator' },
+  { slug: 'merge-conflict-resolver', category: 'development', icon: '⚔️', component: 'MergeConflictResolver' },
+  { slug: 'git-history-visualizer', category: 'development', icon: '📜', component: 'GitHistoryVisualizer' },
+  { slug: 'changelog-generator-advanced', category: 'generators', icon: '📋', component: 'ChangelogGeneratorAdvanced' },
+  { slug: 'git-tag-manager', category: 'development', icon: '🏷️', component: 'GitTagManager' },
+
+  // Batch 54 - Office Tools - Document and Content Management (办公工具 - 文档和内容管理)
+  { slug: 'markdown-to-html-converter', category: 'converters', icon: '📝', component: 'MarkdownToHtmlConverter' },
+  { slug: 'document-outline-generator', category: 'generators', icon: '📑', component: 'DocumentOutlineGenerator' },
+  { slug: 'table-of-contents-generator', category: 'generators', icon: '📚', component: 'TableOfContentsGenerator' },
+  { slug: 'document-word-counter', category: 'text', icon: '🔢', component: 'DocumentWordCounter' },
+  { slug: 'document-formatter', category: 'office', icon: '✨', component: 'DocumentFormatter' },
+  { slug: 'citation-formatter', category: 'office', icon: '📖', component: 'CitationFormatter' },
+
+  // Batch 54 - Office Tools - Project Management Tools (办公工具 - 项目管理工具)
+  { slug: 'project-estimation-calculator', category: 'office', icon: '📊', component: 'ProjectEstimationCalculator' },
+  { slug: 'sprint-velocity-calculator', category: 'office', icon: '🚀', component: 'SprintVelocityCalculator' },
+  { slug: 'resource-allocation-planner', category: 'office', icon: '👥', component: 'ResourceAllocationPlanner' },
+  { slug: 'project-risk-analyzer', category: 'office', icon: '⚠️', component: 'ProjectRiskAnalyzer' },
+  { slug: 'milestone-tracker', category: 'office', icon: '🎯', component: 'MilestoneTracker' },
+  { slug: 'team-capacity-planner', category: 'office', icon: '📈', component: 'TeamCapacityPlanner' },
+
+  // Batch 54 - Office Tools - Meeting and Schedule Tools (办公工具 - 会议和日程工具)
+  { slug: 'meeting-minutes-generator', category: 'office', icon: '📝', component: 'MeetingMinutesGenerator' },
+  { slug: 'timezone-meeting-scheduler', category: 'office', icon: '🌍', component: 'TimezoneMeetingScheduler' },
+  { slug: 'meeting-agenda-builder', category: 'office', icon: '📋', component: 'MeetingAgendaBuilder' },
+  { slug: 'calendar-availability-finder', category: 'office', icon: '📅', component: 'CalendarAvailabilityFinder' },
+  { slug: 'meeting-room-finder', category: 'office', icon: '🏢', component: 'MeetingRoomFinder' },
+
+  // Batch 54 - Office Tools - Finance and Budget Tools (办公工具 - 财务和预算工具)
+  { slug: 'invoice-template-generator', category: 'finance', icon: '🧾', component: 'InvoiceTemplateGenerator' },
+  { slug: 'expense-report-generator', category: 'finance', icon: '💰', component: 'ExpenseReportGenerator' },
+  { slug: 'budget-variance-analyzer', category: 'finance', icon: '📊', component: 'BudgetVarianceAnalyzer' },
+  { slug: 'cost-benefit-analyzer', category: 'finance', icon: '⚖️', component: 'CostBenefitAnalyzer' },
+  { slug: 'financial-forecast-calculator', category: 'finance', icon: '📈', component: 'FinancialForecastCalculator' },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [

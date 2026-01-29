@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Buscador de Código Duplicado identifica bloques de código duplicados o similares que violan el principio DRY.",
+  "usage_steps": [
+    "Pega tu código",
+    "Establece el tamaño mínimo del bloque",
+    "Haz clic en 'Buscar Duplicados'",
+    "Visualiza los bloques resaltados",
+    "Obtén sugerencias de refactorización"
+  ],
+  "usage_examples": [
+    "Encuentra código copiado y pegado",
+    "Identifica candidatos para utilidades",
+    "Reduce la carga de mantenimiento"
+  ]
+}

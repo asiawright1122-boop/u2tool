@@ -1,16 +1,16 @@
 {
-  "detailed_description": "DPI Calculator helps you determine the print quality of your images or calculate the required resolution for a target DPI. Switch between two modes: calculate DPI from existing image dimensions and print size, or calculate required pixel dimensions for a specific DPI and print size. Essential for photographers, designers, and print professionals.",
+  "detailed_description": "DPI カルキュレーターは、画像の印刷品質を確認するのや、特定の DPI と印刷サイズに対する必要な解像度を計算するのに役立ちます。2つのモードを切り替えることができます：既存の画像サイズと印刷サイズから DPI を計算するモード、または特定の DPI と印刷サイズに対する必要なピクセルサイズを計算するモード。フォトグラファー、デザイナー、印刷専門家にとって必須のツールです。",
   "usage_steps": [
-    "Choose calculation mode: DPI or Pixels",
-    "For DPI mode: enter image resolution and print size",
-    "For Pixels mode: enter target DPI and print size",
-    "Select a common print size preset if needed",
-    "View the calculated results",
-    "Copy the results for reference"
+    "計算モードを選択：DPIまたはピクセル",
+    "DPIモードの場合：画像の解像度と印刷サイズを入力",
+    "ピクセルモードの場合：目標DPIと印刷サイズを入力",
+    "必要に応じて一般的な印刷サイズのプリセットを選択",
+    "計算結果を確認",
+    "結果をコピーして参照"
   ],
   "usage_examples": [
-    "Checking if an image is suitable for printing",
-    "Calculating required resolution for large prints",
-    "Planning photo book image requirements"
+    "印刷に適した画像かどうかの確認",
+    "大きな印刷用の必要な解像度の計算",
+    "写真集の画像要件の計画"
   ]
 }

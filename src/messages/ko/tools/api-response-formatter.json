@@ -1,0 +1,15 @@
+{
+  "detailed_description": "API 응답 포맷터는 JSON 또는 XML 형식의 원시 API 응답을 문법 강조 표시와 접근 가능한 트리 뷰로 미화합니다.",
+  "usage_steps": [
+    "API 응답 붙여넣기",
+    "자동 감지 또는 포맷 선택",
+    "포맷된 출력 보기",
+    "노드 확장/축소",
+    "포맷된 버전 복사"
+  ],
+  "usage_examples": [
+    "미니파이드 JSON 포맷",
+    "XML SOAP 응답 미화",
+    "API 응답 비교"
+  ]
+}

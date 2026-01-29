@@ -13,28 +13,30 @@ import { tools } from '@/config/tools';
 
 /**
  * 最新发布的工具 slugs（按发布时间倒序，15个）
- * 更新于 2026-01-25: 添加 Batch 53 工具
+ * 更新于 2026-01-27: 添加 Batch 54 工具（开发者工具和办公工具）
  */
 const NEWEST_TOOLS = [
-  // Batch 53 - AI/Text Processing Tools
-  'ai-text-humanizer',
-  'text-spinner',
-  'readability-checker',
-  'grammar-checker',
-  // Batch 53 - Code Formatters
-  'typescript-playground',
-  'python-formatter',
-  'go-formatter',
-  'rust-formatter',
-  'yaml-formatter',
-  // Batch 53 - CSS Design Tools
-  'text-shadow-generator',
-  'svg-pattern-generator',
-  'css-triangle-generator',
-  'aspect-ratio-box-generator',
-  // Batch 53 - Calculators & Data Converters
-  'screen-time-calculator',
-  'typing-time-calculator',
+  // Batch 54 - API & Network Tools
+  'curl-to-code-generator',
+  'webhook-tester',
+  'api-response-formatter',
+  // Batch 54 - Code Generation & Conversion
+  'kubernetes-manifest-generator',
+  'docker-compose-generator-advanced',
+  'swagger-to-code-generator',
+  // Batch 54 - Code Analysis
+  'code-complexity-analyzer',
+  'dependency-vulnerability-checker',
+  // Batch 54 - Database Tools
+  'sql-query-optimizer',
+  'database-schema-visualizer',
+  // Batch 54 - Version Control
+  'git-commit-message-generator',
+  'changelog-generator-advanced',
+  // Batch 54 - Office & Project Management
+  'project-estimation-calculator',
+  'meeting-minutes-generator',
+  'invoice-template-generator',
 ];
 
 /**

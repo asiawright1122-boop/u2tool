@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Swagger到代码生成器可从OpenAPI/Swagger规范创建带类型接口的API客户端代码。",
+  "usage_steps": [
+    "粘贴Swagger JSON/YAML",
+    "选择目标语言",
+    "选择HTTP库",
+    "配置选项",
+    "下载客户端代码"
+  ],
+  "usage_examples": [
+    "生成TypeScript客户端",
+    "创建Python SDK",
+    "构建Go HTTP客户端"
+  ]
+}

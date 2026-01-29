@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Planificateur d'Exécution de Requêtes aide à comprendre et à optimiser les plans d'exécution des requêtes SQL.",
+  "usage_steps": [
+    "Coller la sortie EXPLAIN",
+    "Sélectionnez le type de base de données",
+    "Cliquez sur Analyser",
+    "Visualisez le plan",
+    "Obtenez des recommandations"
+  ],
+  "usage_examples": [
+    "Comprenez les requêtes lentes",
+    "Identifiez les scans de table complète",
+    "Comparez les plans d'exécution"
+  ]
+}

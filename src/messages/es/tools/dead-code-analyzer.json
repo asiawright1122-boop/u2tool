@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Analizador de Código Muerto identifica código que nunca se ejecuta ni se referencia en tu base de código.",
+  "usage_steps": [
+    "Pega tu código",
+    "Selecciona el idioma",
+    "Haz clic en Analizar",
+    "Visualiza el código inaccesible",
+    "Obtén sugerencias de eliminación"
+  ],
+  "usage_examples": [
+    "Encuentra funciones no llamadas",
+    "Identifica código después de un retorno",
+    "Limpia código legado"
+  ]
+}

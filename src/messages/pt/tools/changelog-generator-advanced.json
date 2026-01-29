@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Gerador de Registros de Alterações cria registros de alterações formatados a partir das mensagens de commit do Git.",
+  "usage_steps": [
+    "Cole as mensagens de commit",
+    "Selecione o formato",
+    "Configure a versão/data",
+    "Clique em Gerar",
+    "Copie ou baixe"
+  ],
+  "usage_examples": [
+    "Gerar notas de lançamento",
+    "Criar CHANGELOG.md",
+    "Documentar histórico de versões"
+  ]
+}

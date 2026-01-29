@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Database Backup Scheduler helps create backup schedules and generates backup scripts for databases.",
+  "usage_steps": [
+    "Select database type",
+    "Configure frequency",
+    "Set destination",
+    "Generate script",
+    "Copy cron expression"
+  ],
+  "usage_examples": [
+    "Create daily backup scripts",
+    "Generate cron jobs",
+    "Plan retention policies"
+  ]
+}

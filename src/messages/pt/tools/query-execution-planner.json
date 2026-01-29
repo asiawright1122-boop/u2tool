@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Planejador de Execução de Consultas ajuda a entender e otimizar planos de execução de consultas SQL.",
+  "usage_steps": [
+    "Cole a saída do EXPLAIN",
+    "Selecione o tipo de banco de dados",
+    "Clique em Analisar",
+    "Visualize o plano",
+    "Obtenha recomendações"
+  ],
+  "usage_examples": [
+    "Entenda consultas lentas",
+    "Identifique scans de tabelas completas",
+    "Compare planos de execução"
+  ]
+}

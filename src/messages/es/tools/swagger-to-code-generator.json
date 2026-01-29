@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Generador de Código desde Swagger crea código de cliente de API a partir de especificaciones OpenAPI/Swagger con interfaces tipizadas.",
+  "usage_steps": [
+    "Pegue Swagger JSON/YAML",
+    "Seleccione el lenguaje de destino",
+    "Elija la biblioteca HTTP",
+    "Configurar opciones",
+    "Descargue el código de cliente"
+  ],
+  "usage_examples": [
+    "Genere cliente TypeScript",
+    "Cree SDK Python",
+    "Construya cliente HTTP Go"
+  ]
+}

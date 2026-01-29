@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Gerador de Manifestos Kubernetes cria manifestos YAML para Implantações, Serviços, ConfigMaps e outros recursos K8s.",
+  "usage_steps": [
+    "Selecione o tipo de recurso",
+    "Configure o imagem do container",
+    "Defina limites de recursos",
+    "Adicione variáveis de ambiente",
+    "Baixe o manifesto YAML"
+  ],
+  "usage_examples": [
+    "Gere manifestos de implantação",
+    "Crie configurações de serviço",
+    "Construa recursos ConfigMap"
+  ]
+}

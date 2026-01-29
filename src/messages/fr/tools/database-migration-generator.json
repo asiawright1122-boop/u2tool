@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Générateur de Migration de Base de Données crée des scripts de migration pour les opérations courantes de base de données, supportant plusieurs bases de données.",
+  "usage_steps": [
+    "Sélectionner le type de migration",
+    "Choisir le type de base de données",
+    "Définir les changements de schéma",
+    "Générer les scripts de montée et de descente",
+    "Copier ou télécharger"
+  ],
+  "usage_examples": [
+    "Générer des migrations CREATE TABLE",
+    "Créer des scripts ALTER TABLE",
+    "Construire des migrations d'index"
+  ]
+}

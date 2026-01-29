@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Code Duplication Finder identifica blocos de código duplicados ou semelhantes que violam o princípio DRY.",
+  "usage_steps": [
+    "Cole seu código",
+    "Defina o tamanho mínimo do bloco",
+    "Clique em 'Encontrar Duplicados'",
+    "Visualize os blocos destacados",
+    "Obtenha sugestões de refatoração"
+  ],
+  "usage_examples": [
+    "Encontre código copiado e colado",
+    "Identifique candidatos a utilitários",
+    "Reduza a carga de manutenção"
+  ]
+}

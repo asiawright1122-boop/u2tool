@@ -1,0 +1,15 @@
+{
+  "detailed_description": "L'Analyseur de Code Mort identifie le code qui n'est jamais exécuté ou référencé dans votre base de code.",
+  "usage_steps": [
+    "Collez votre code",
+    "Choisissez la langue",
+    "Cliquez sur Analyser",
+    "Voyez le code inatteignable",
+    "Obtenez des suggestions de suppression"
+  ],
+  "usage_examples": [
+    "Trouvez les fonctions non appelées",
+    "Identifiez le code après un retour",
+    "Nettoyez le code hérité"
+  ]
+}

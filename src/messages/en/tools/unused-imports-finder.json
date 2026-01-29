@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Unused Imports Finder scans your code to identify imports that are declared but never used.",
+  "usage_steps": [
+    "Paste code with imports",
+    "Select language",
+    "Click Analyze",
+    "View unused imports",
+    "Copy cleaned code"
+  ],
+  "usage_examples": [
+    "Clean npm imports",
+    "Reduce bundle size",
+    "Maintain clean imports"
+  ]
+}

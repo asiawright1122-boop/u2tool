@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Construtor de Cabeçalhos de Solicitações HTTP ajuda a construir cabeçalhos HTTP bem formatados para solicitações de API, com opções de cabeçalhos comuns e exportação.",
+  "usage_steps": [
+    "Selecione cabeçalhos comuns",
+    "Ou adicione cabeçalhos personalizados",
+    "Configurar Autorização",
+    "Definir Content-Type",
+    "Exportar no formato preferido"
+  ],
+  "usage_examples": [
+    "Construa cabeçalhos de Autorização",
+    "Crie cabeçalhos CORS",
+    "Gerar cabeçalhos de webhook"
+  ]
+}

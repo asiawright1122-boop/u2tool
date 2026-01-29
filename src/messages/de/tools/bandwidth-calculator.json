@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Bandwidth Calculator helps you determine the required network bandwidth to transfer files within a specific time frame. Enter your file size and desired transfer time to calculate the necessary bandwidth in various units including bps, Kbps, Mbps, Gbps, and bytes per second. Perfect for network planning and capacity estimation.",
+  "detailed_description": "Der Bandbreitenrechner hilft Ihnen dabei, die notwendige Netzwerkbreite zu bestimmen, um Dateien innerhalb eines bestimmten Zeitraums zu übertragen. Geben Sie die Dateigröße und den gewünschten Übertragungszeitraum an, um die erforderliche Bandbreite in verschiedenen Einheiten wie bps, Kbps, Mbps, Gbps und Bytes pro Sekunde zu berechnen. Ideal für Netzwerkanalyse und Kapazitätsabschätzung.",
   "usage_steps": [
-    "Enter the file size you want to transfer",
-    "Select the appropriate size unit (KB, MB, GB, TB)",
-    "Enter the desired transfer time",
-    "Choose the time unit (seconds, minutes, hours)",
-    "View the required bandwidth in multiple units",
-    "Copy the results for your reference"
+    "Geben Sie die Dateigröße ein, die Sie übertragen möchten",
+    "Wählen Sie die richtige Größenseinheit (KB, MB, GB, TB)",
+    "Geben Sie die gewünschte Übertragungszeit ein",
+    "Wählen Sie die Zeiteinheit (Sekunden, Minuten, Stunden)",
+    "Überprüfen Sie die erforderliche Bandbreite in verschiedenen Einheiten",
+    "Kopieren Sie die Ergebnisse für Ihre Referenz"
   ],
   "usage_examples": [
-    "Planning video streaming bandwidth requirements",
-    "Estimating backup transfer speeds",
-    "Calculating cloud upload/download needs"
+    "Planung der Bandbreitennachforderungen für Videostraming",
+    "Abschätzung der Übertragungsgeschwindigkeiten für Backups",
+    "Berechnung der Bedürfnisse für Cloud-Upload/Download"
   ]
 }

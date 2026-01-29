@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Code Duplication Finder identifies duplicate or similar code blocks that violate the DRY principle.",
+  "usage_steps": [
+    "Paste your code",
+    "Set minimum block size",
+    "Click Find Duplicates",
+    "View highlighted blocks",
+    "Get refactoring suggestions"
+  ],
+  "usage_examples": [
+    "Find copy-pasted code",
+    "Identify utility candidates",
+    "Reduce maintenance burden"
+  ]
+}

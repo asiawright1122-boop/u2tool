@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Analisador de Código Morto identifica código que nunca é executado ou referenciado no seu código-fonte.",
+  "usage_steps": [
+    "Cole seu código",
+    "Selecione o idioma",
+    "Clique em Analisar",
+    "Visualize o código inacessível",
+    "Obtenha sugestões de remoção"
+  ],
+  "usage_examples": [
+    "Encontre funções não chamadas",
+    "Identifique código após o return",
+    "Limpe código legado"
+  ]
+}

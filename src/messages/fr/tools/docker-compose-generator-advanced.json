@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Générateur de Configuration Docker Compose crée des fichiers docker-compose.yml pour des applications multi-conteneurs.",
+  "usage_steps": [
+    "Sélectionnez des services à partir des modèles",
+    "Configurer les ports et les volumes",
+    "Configurer les réseaux",
+    "Ajouter des contrôles de santé",
+    "Télécharger docker-compose.yml"
+  ],
+  "usage_examples": [
+    "Créer un environnement de développement",
+    "Générer une configuration de production",
+    "Construire un stack de microservices"
+  ]
+}

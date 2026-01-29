@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Database Migration Generator creates migration scripts for common database operations supporting multiple databases.",
+  "usage_steps": [
+    "Select migration type",
+    "Choose database type",
+    "Define schema changes",
+    "Generate up/down scripts",
+    "Copy or download"
+  ],
+  "usage_examples": [
+    "Generate CREATE TABLE migrations",
+    "Create ALTER TABLE scripts",
+    "Build index migrations"
+  ]
+}

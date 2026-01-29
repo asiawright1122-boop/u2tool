@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Umgebungsvariablen-Generator hilft bei der Erstellung von korrekt formatierten .env-Dateien mit Vorlagen für häufig verwendete Dienste.",
+  "usage_steps": [
+    "Wählen Sie eine Vorlage oder beginnen Sie von vorne",
+    "Fügen Sie Variablennamen und Werte hinzu",
+    "Verwenden Sie den Geheimwerts-Generator",
+    "Namen überprüfen",
+    "Als .env exportieren"
+  ],
+  "usage_examples": [
+    "Erstellen Sie .env.example-Vorlagen",
+    "Generieren Sie sichere API-Schlüssel",
+    "Bauen Sie Docker-Konfigurationen"
+  ]
+}

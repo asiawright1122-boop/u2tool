@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Visualizador de Esquemas de Banco de Dados cria diagramas ER visuais a partir de declarações SQL CREATE TABLE.",
+  "usage_steps": [
+    "Cole declarações CREATE TABLE",
+    "Clique em Visualizar",
+    "Veja as relações",
+    "Arraste para organizar",
+    "Exporte como PNG/SVG"
+  ],
+  "usage_examples": [
+    "Documentar a estrutura do banco de dados",
+    "Entender bancos de dados legados",
+    "Planejar mudanças no esquema"
+  ]
+}

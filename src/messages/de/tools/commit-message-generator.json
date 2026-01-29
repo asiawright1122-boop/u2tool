@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Commit Message Generator helps you create well-structured Git commit messages following the Conventional Commits specification. This format makes your commit history more readable and enables automated changelog generation. Choose from standard commit types, add optional scope, and write clear descriptions for consistent version control.",
+  "detailed_description": "Der Commit Message Generator hilft Ihnen, nach der Conventional Commits-Spezifikation gut strukturierte Git-Commit-Nachrichten zu erstellen. Dieser Formatierung macht Ihre Versionshistorie lesbarer und ermöglicht die automatisierte Erstellung eines Änderungsprotokolls. Wählen Sie aus standardmäßigen Commit-Typen, fügen Sie optionalen Scope hinzu und schreiben Sie klare Beschreibungen für konsistente Versionskontrolle.",
   "usage_steps": [
-    "Select the commit type (feat, fix, docs, etc.)",
-    "Optionally add a scope for the change",
-    "Write a clear, concise subject line",
-    "Check breaking change if applicable",
-    "Add optional body for detailed explanation",
-    "Copy the formatted commit message"
+    "Wählen Sie den Commit-Typ (feat, fix, docs, usw.)",
+    "Fügen Sie optional einen Bereich für den Änderungsbereich hinzu",
+    "Schreiben Sie eine klare, präzise Betreffzeile",
+    "Prüfen Sie, ob es sich um eineBreaking Change handelt",
+    "Fügen Sie optional eine Erklärung im Detailtext hinzu",
+    "Fügen Sie die formatierte Commit-Botschaft in Ihre Arbeit ein"
   ],
   "usage_examples": [
-    "Creating feature commits: feat(auth): add login functionality",
-    "Writing bug fix commits: fix(api): resolve timeout issue",
-    "Documenting changes: docs(readme): update installation guide"
+    "Erstellen von Feature-Commits: feat(auth): add login functionality",
+    "Erstellen von Bug-Fix-Commits: fix(api): resolve timeout issue",
+    "Dokumentieren von Änderungen: docs(readme): update installation guide"
   ]
 }

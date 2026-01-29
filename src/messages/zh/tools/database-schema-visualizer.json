@@ -1,0 +1,15 @@
+{
+  "detailed_description": "数据库架构可视化工具可从SQL CREATE TABLE语句创建可视化的ER图。",
+  "usage_steps": [
+    "粘贴CREATE TABLE语句",
+    "点击可视化",
+    "查看关系",
+    "拖动以排列",
+    "导出为PNG/SVG"
+  ],
+  "usage_examples": [
+    "文档化数据库结构",
+    "理解遗留数据库",
+    "规划架构变更"
+  ]
+}

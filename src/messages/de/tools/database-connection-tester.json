@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Datenbankverbindungstester parst und validiert Datenbankverbindungszeichenfolgen für verschiedene Datenbanken.",
+  "usage_steps": [
+    "Fügen Sie die Verbindungszeichenfolge ein",
+    "Wählen Sie den Datenbanktyp",
+    "Klicken Sie auf 'Analyisieren'",
+    "Sehen Sie sich die analysierten Details an",
+    "Validieren Sie das Format"
+  ],
+  "usage_examples": [
+    "Vor der Bereitstellung validieren",
+    "MongoDB URIs analysieren",
+    "Verbindungsprobleme debuggen"
+  ]
+}

@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Bandwidth Calculator helps you determine the required network bandwidth to transfer files within a specific time frame. Enter your file size and desired transfer time to calculate the necessary bandwidth in various units including bps, Kbps, Mbps, Gbps, and bytes per second. Perfect for network planning and capacity estimation.",
+  "detailed_description": "El Calculador de Ancho de Banda te ayuda a determinar el ancho de banda de red necesario para transferir archivos dentro de un período de tiempo específico. Ingresa el tamaño de tu archivo y el tiempo de transferencia deseado para calcular el ancho de banda necesario en diversas unidades, incluyendo bps, Kbps, Mbps, Gbps y bytes por segundo. Perfecto para el planeamiento de redes y la estimación de capacidad.",
   "usage_steps": [
-    "Enter the file size you want to transfer",
-    "Select the appropriate size unit (KB, MB, GB, TB)",
-    "Enter the desired transfer time",
-    "Choose the time unit (seconds, minutes, hours)",
-    "View the required bandwidth in multiple units",
-    "Copy the results for your reference"
+    "Ingrese el tamaño del archivo que desea transferir",
+    "Seleccione la unidad de tamaño adecuada (KB, MB, GB, TB)",
+    "Ingrese el tiempo de transferencia deseado",
+    "Elige la unidad de tiempo (segundos, minutos, horas)",
+    "Visualice el ancho de banda necesario en múltiples unidades",
+    "Copie los resultados para su referencia"
   ],
   "usage_examples": [
-    "Planning video streaming bandwidth requirements",
-    "Estimating backup transfer speeds",
-    "Calculating cloud upload/download needs"
+    "Planificación de requisitos de ancho de banda para transmisión de video",
+    "Estimación de velocidades de transferencia de respaldo",
+    "Cálculo de necesidades de carga y descarga en la nube"
   ]
 }

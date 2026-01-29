@@ -1,0 +1,15 @@
+{
+  "detailed_description": "JWT Payload Decoder extracts and displays the header and payload from JSON Web Tokens without requiring the secret key.",
+  "usage_steps": [
+    "Paste JWT token",
+    "Token auto-decodes",
+    "View header info",
+    "Inspect payload claims",
+    "Check expiration"
+  ],
+  "usage_examples": [
+    "Debug authentication issues",
+    "Verify token expiration",
+    "Extract user info from tokens"
+  ]
+}

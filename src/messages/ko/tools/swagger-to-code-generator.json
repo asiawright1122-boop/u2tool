@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Swagger to Code Generator는 OpenAPI/Swagger 스펙ifik션을 통해 타이핑된 인터페이스를 가진 API 클라이언트 코드를 생성합니다.",
+  "usage_steps": [
+    "Swagger JSON/YAML 붙여넣기",
+    "타겟 언어 선택",
+    "HTTP 라이브러리 선택",
+    "옵션 설정",
+    "클라이언트 코드 다운로드"
+  ],
+  "usage_examples": [
+    "TypeScript 클라이언트 생성",
+    "Python SDK 생성",
+    "Go HTTP 클라이언트 빌드"
+  ]
+}

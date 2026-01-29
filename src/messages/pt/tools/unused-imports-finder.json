@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Encontrador de Importações Não Utilizadas varre seu código para identificar importações que são declaradas mas nunca utilizadas.",
+  "usage_steps": [
+    "Cole código com importações",
+    "Selecione o idioma",
+    "Clique em Analisar",
+    "Visualize as importações não utilizadas",
+    "Copie o código limpo"
+  ],
+  "usage_examples": [
+    "Limpe importações do npm",
+    "Reduza o tamanho do pacote",
+    "Mantenha importações limpas"
+  ]
+}

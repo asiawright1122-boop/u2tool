@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Data Transfer Calculator estimates how long it will take to transfer files based on your connection speed. Enter your file size and network speed to get accurate transfer time estimates. Includes preset speeds for common connection types like 4G, 5G, WiFi, and Ethernet for quick calculations.",
+  "detailed_description": "数据传输计算器根据您的网络速度估算文件传输所需的时间。输入文件大小和网络速度以获得准确的传输时间估算。包括常见的连接类型（如4G、5G、WiFi和以太网）的预设速度，以便快速计算。",
   "usage_steps": [
-    "Enter the file size to transfer",
-    "Select the size unit (KB, MB, GB, TB)",
-    "Enter your connection speed",
-    "Or click a preset speed button",
-    "View the estimated transfer time",
-    "Copy the results for reference"
+    "输入要传输的文件大小",
+    "选择大小单位（KB、MB、GB、TB）",
+    "输入您的连接速度",
+    "或点击预设速度按钮",
+    "查看估算的传输时间",
+    "复制结果以备参考"
   ],
   "usage_examples": [
-    "Estimating large file download times",
-    "Planning data migration schedules",
-    "Comparing transfer times across networks"
+    "估算大文件下载时间",
+    "规划数据迁移时间表",
+    "比较不同网络上的传输时间"
   ]
 }

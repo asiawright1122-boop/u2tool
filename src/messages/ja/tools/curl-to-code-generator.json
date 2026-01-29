@@ -1,0 +1,15 @@
+{
+  "detailed_description": "cURLコード生成ツールは、Python（requests）、JavaScript（fetch/axios）、Go、PHP、Rubyなど、複数のプログラミング言語のコードスニペットを作成するためのcURLコマンドを変換します。",
+  "usage_steps": [
+    "cURLコマンドをペースト",
+    "ターゲット言語を選択",
+    "HTTPライブラリを選択",
+    "変換をクリック",
+    "生成されたコードをコピー"
+  ],
+  "usage_examples": [
+    "APIテストcURLをPython requestsに変換",
+    "DevToolsのcURLからJS fetchを生成",
+    "ドキュメントからGo HTTPクライアントを作成"
+  ]
+}

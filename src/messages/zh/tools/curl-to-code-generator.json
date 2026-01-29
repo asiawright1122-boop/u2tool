@@ -1,0 +1,15 @@
+{
+  "detailed_description": "cURL到代码生成器将cURL命令转换为多种编程语言的代码片段，包括Python（requests）、JavaScript（fetch/axios）、Go、PHP、Ruby等。",
+  "usage_steps": [
+    "粘贴您的cURL命令",
+    "选择目标语言",
+    "选择HTTP库",
+    "点击转换",
+    "复制生成的代码"
+  ],
+  "usage_examples": [
+    "将API测试cURL转换为Python requests",
+    "从DevTools cURL生成JS fetch",
+    "从文档创建Go HTTP客户端"
+  ]
+}

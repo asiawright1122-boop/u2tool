@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Testeur d'Injection SQL analyse les requêtes SQL et les patrons de code pour identifier les vulnérabilités potentielles d'injection SQL.",
+  "usage_steps": [
+    "Coller une requête SQL ou du code",
+    "Entrer les entrées de test",
+    "Cliquez sur Test",
+    "Voir les problèmes de sécurité",
+    "Obtenir des exemples paramétrés"
+  ],
+  "usage_examples": [
+    "Testez la gestion des entrées utilisateur",
+    "Identifiez la concaténation de chaînes",
+    "Apprenez les patrons sécurisés"
+  ]
+}

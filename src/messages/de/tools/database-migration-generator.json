@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Datenbank-Migration-Generator erstellt Migrationsskripte für gängige Datenbankoperationen, die mehrere Datenbanken unterstützen.",
+  "usage_steps": [
+    "Wählen Sie den Migrationstyp",
+    "Wählen Sie den Datenbanktyp",
+    "Definieren Sie Schema-Änderungen",
+    "Generieren Sie Up/Down-Skripte",
+    "Kopieren oder Herunterladen"
+  ],
+  "usage_examples": [
+    "Generieren Sie CREATE TABLE-Migrations",
+    "Erstellen Sie ALTER TABLE-Skripte",
+    "Bauen Sie Index-Migrations"
+  ]
+}

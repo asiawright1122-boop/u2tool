@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Convertidor de Imágenes Base64 codifica imágenes (PNG, JPG, GIF, SVG, WebP) a cadenas de datos URI Base64 y decodifica Base64 devolviendo imágenes.",
+  "usage_steps": [
+    "Sube una imagen o pega Base64",
+    "Para codificar: arrastra la imagen",
+    "Para decodificar: pega Base64",
+    "Previsualiza el resultado",
+    "Copia o descarga"
+  ],
+  "usage_examples": [
+    "Inserta íconos en CSS como URI de datos",
+    "Convierte imágenes Base64 de API",
+    "Crea imágenes en línea para correos electrónicos"
+  ]
+}

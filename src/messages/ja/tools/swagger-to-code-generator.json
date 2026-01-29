@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Swaggerからコード生成ツールは、OpenAPI/Swagger仕様からタイピングインターフェースを持つAPIクライアントコードを作成します。",
+  "usage_steps": [
+    "Swagger JSON/YAMLをペースト",
+    "ターゲット言語を選択",
+    "HTTPライブラリを選択",
+    "オプションを設定",
+    "クライアントコードをダウンロード"
+  ],
+  "usage_examples": [
+    "TypeScriptクライアントの生成",
+    "Python SDKの作成",
+    "Go HTTPクライアントの構築"
+  ]
+}

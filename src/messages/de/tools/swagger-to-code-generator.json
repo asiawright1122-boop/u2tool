@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Swagger nach Code Generator erstellt API-Kundencode aus OpenAPI/Swagger-Spezifikationen mit typisierten Schnittstellen.",
+  "usage_steps": [
+    "Fügen Sie Swagger JSON/YAML ein",
+    "Wählen Sie die Zielsprache",
+    "Wählen Sie die HTTP-Bibliothek",
+    "Konfigurieren Sie die Optionen",
+    "Laden Sie den Kundencode herunter"
+  ],
+  "usage_examples": [
+    "TypeScript-Kunde generieren",
+    "Python SDK erstellen",
+    "Go HTTP-Kunde bauen"
+  ]
+}

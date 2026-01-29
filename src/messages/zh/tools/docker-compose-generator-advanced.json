@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Docker Compose 生成器为多容器应用程序创建 docker-compose.yml 配置。",
+  "usage_steps": [
+    "从模板中选择服务",
+    "配置端口和卷",
+    "设置网络",
+    "添加健康检查",
+    "下载 docker-compose.yml"
+  ],
+  "usage_examples": [
+    "创建开发环境",
+    "生成生产级 Compose 文件",
+    "构建微服务堆栈"
+  ]
+}

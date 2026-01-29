@@ -210,7 +210,10 @@ export default function middleware(request: NextRequest) {
       if (redirectTo) {
         // 使用绝对 URL 进行 301 永久重定向
         // @see Requirements 2.1, 2.2
-        const CANONICAL_DOMAIN = 'https://www.u2tool.com';
+        // 本地开发时使用当前 origin，生产环境使用规范域名
+        const hostname = request.nextUrl.hostname;
+        const isLocalDev = hostname === 'localhost' || hostname === '127.0.0.1';
+        const CANONICAL_DOMAIN = isLocalDev ? request.nextUrl.origin : 'https://www.u2tool.com';
         const absoluteUrl = `${CANONICAL_DOMAIN}/${currentLocale}/tools/${redirectTo}`;
         return NextResponse.redirect(absoluteUrl, { status: 301 });
       }
@@ -237,9 +240,14 @@ export default function middleware(request: NextRequest) {
   const detectedLocale = detectLocale(request);
   const savedLocale = request.cookies.get(LOCALE_COOKIE)?.value as Locale | undefined;
   
+  // 检测是否为本地开发环境
+  const hostname = request.nextUrl.hostname;
+  const isLocalDev = hostname === 'localhost' || hostname === '127.0.0.1';
+  
   // 规范域名（确保使用 www 前缀）
   // @see Requirements 2.1, 2.2 - 使用绝对 URL 重定向
-  const CANONICAL_DOMAIN = 'https://www.u2tool.com';
+  // 本地开发时使用当前 origin，生产环境使用规范域名
+  const CANONICAL_DOMAIN = isLocalDev ? request.nextUrl.origin : 'https://www.u2tool.com';
   
   // 构建绝对 URL（使用规范域名）
   const targetPath = pathname === '/' 

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Base64图像转换器将图像（PNG、JPG、GIF、SVG、WebP）编码为Base64数据URI字符串，并将Base64解码回图像。",
+  "usage_steps": [
+    "上传图像或粘贴Base64",
+    "编码时：拖动图像",
+    "解码时：粘贴Base64",
+    "预览结果",
+    "复制或下载"
+  ],
+  "usage_examples": [
+    "将图标作为数据URI嵌入CSS",
+    "转换API Base64图像",
+    "为电子邮件创建内嵌图像"
+  ]
+}

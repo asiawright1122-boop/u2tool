@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Générateur de Manifestations Kubernetes crée des manifestations YAML pour les Déploiements, Services, ConfigMaps et autres ressources K8s.",
+  "usage_steps": [
+    "Sélectionnez le type de ressource",
+    "Configurer l'image du conteneur",
+    "Définir les limites des ressources",
+    "Ajouter des variables d'environnement",
+    "Télécharger la manifestation YAML"
+  ],
+  "usage_examples": [
+    "Générez des manifestations de déploiement",
+    "Créez des configurations de service",
+    "Construisez des ressources ConfigMap"
+  ]
+}

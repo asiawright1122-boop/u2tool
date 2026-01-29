@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Commit Message Generator helps you create well-structured Git commit messages following the Conventional Commits specification. This format makes your commit history more readable and enables automated changelog generation. Choose from standard commit types, add optional scope, and write clear descriptions for consistent version control.",
+  "detailed_description": "Commit Message Generator 帮助您根据 Conventional Commits 规范创建结构良好的 Git 提交信息。这种格式使您的提交历史更易于阅读，并能实现自动化变更日志生成。您可以选择标准的提交类型、添加可选的作用域，并编写清晰的描述以实现一致的版本控制。",
   "usage_steps": [
-    "Select the commit type (feat, fix, docs, etc.)",
-    "Optionally add a scope for the change",
-    "Write a clear, concise subject line",
-    "Check breaking change if applicable",
-    "Add optional body for detailed explanation",
-    "Copy the formatted commit message"
+    "选择提交类型（feat、fix、docs 等）",
+    "可选地添加变更范围",
+    "编写清晰简洁的主题行",
+    "如果适用，请检查是否有重大更改",
+    "添加可选的正文以进行详细说明",
+    "复制格式化的提交信息"
   ],
   "usage_examples": [
-    "Creating feature commits: feat(auth): add login functionality",
-    "Writing bug fix commits: fix(api): resolve timeout issue",
-    "Documenting changes: docs(readme): update installation guide"
+    "创建功能提交：feat(auth): 添加登录功能",
+    "编写修复提交：fix(api): 解决超时问题",
+    "记录变更：docs(readme): 更新安装指南"
   ]
 }

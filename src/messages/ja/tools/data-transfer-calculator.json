@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Data Transfer Calculator estimates how long it will take to transfer files based on your connection speed. Enter your file size and network speed to get accurate transfer time estimates. Includes preset speeds for common connection types like 4G, 5G, WiFi, and Ethernet for quick calculations.",
+  "detailed_description": "データ転送計算機は、あなたの接続速度に基づいてファイル転送にどのくらいの時間がかかるかを推定します。ファイルサイズとネットワーク速度を入力して正確な転送時間の推定値を得ることができます。一般的な接続タイプ如き4G、5G、Wi-Fi、以太網などのpreset速度で迅速な計算が可能です。",
   "usage_steps": [
-    "Enter the file size to transfer",
-    "Select the size unit (KB, MB, GB, TB)",
-    "Enter your connection speed",
-    "Or click a preset speed button",
-    "View the estimated transfer time",
-    "Copy the results for reference"
+    "転送するファイルサイズを入力",
+    "サイズ単位を選択 (KB, MB, GB, TB)",
+    "接続速度を入力",
+    "または既定の速度ボタンをクリック",
+    "転送時間の見積もりを確認",
+    "結果をコピーして参照用に保存"
   ],
   "usage_examples": [
-    "Estimating large file download times",
-    "Planning data migration schedules",
-    "Comparing transfer times across networks"
+    "大きなファイルのダウンロード時間の見積もり",
+    "データ移行スケジュールの計画",
+    "ネットワーク間の転送時間の比較"
   ]
 }

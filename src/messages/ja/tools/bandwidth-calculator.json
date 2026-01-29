@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Bandwidth Calculator helps you determine the required network bandwidth to transfer files within a specific time frame. Enter your file size and desired transfer time to calculate the necessary bandwidth in various units including bps, Kbps, Mbps, Gbps, and bytes per second. Perfect for network planning and capacity estimation.",
+  "detailed_description": "バンド幅計算機は、特定の時間フレーム内でファイルを転送するために必要なネットワークのバンド幅を決定するのに役立ちます。ファイルサイズと望む転送時間を入力し、bps、Kbps、Mbps、Gbps、およびバイト/秒などのさまざまな単位で必要なバンド幅を計算できます。ネットワーク計画や容量見積もりに最適です。",
   "usage_steps": [
-    "Enter the file size you want to transfer",
-    "Select the appropriate size unit (KB, MB, GB, TB)",
-    "Enter the desired transfer time",
-    "Choose the time unit (seconds, minutes, hours)",
-    "View the required bandwidth in multiple units",
-    "Copy the results for your reference"
+    "転送したいファイルサイズを入力",
+    "適切なサイズ単位を選択（KB、MB、GB、TB）",
+    "希望の転送時間を入力",
+    "時間単位を選択（秒、分、時間）",
+    "複数の単位で必要な帯域幅を確認",
+    "結果をコピーしておきます"
   ],
   "usage_examples": [
-    "Planning video streaming bandwidth requirements",
-    "Estimating backup transfer speeds",
-    "Calculating cloud upload/download needs"
+    "ビデオストリーミングの帯域幅要件計画",
+    "バックアップ転送速度の見積もり",
+    "クラウドアップロード/ダウンロードの必要性計算"
   ]
 }

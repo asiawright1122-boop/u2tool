@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Git Branch Naming Validator checks branch names against common naming conventions like GitFlow.",
+  "usage_steps": [
+    "Enter branch name",
+    "Select convention",
+    "Click Validate",
+    "View results",
+    "Copy corrected name"
+  ],
+  "usage_examples": [
+    "Validate feature branches",
+    "Enforce team standards",
+    "Check in CI/CD"
+  ]
+}

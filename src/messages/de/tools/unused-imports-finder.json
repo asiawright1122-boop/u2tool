@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Unbenutzte Importe Finder durchsucht Ihren Code, um Importe zu identifizieren, die deklariert, aber nie verwendet wurden.",
+  "usage_steps": [
+    "Fügen Sie Code mit Importen ein",
+    "Wählen Sie die Sprache",
+    "Klicken Sie auf Analyisieren",
+    "Anzeigen unbenutzter Importe",
+    "Kopieren Sie den bereinigten Code"
+  ],
+  "usage_examples": [
+    "Bereinigen Sie npm-Importe",
+    "Verringern Sie die Bundle-Größe",
+    "Bewahren Sie saubere Importe bei"
+  ]
+}

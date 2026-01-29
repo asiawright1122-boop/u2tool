@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Rechercheur de Duplication de Code identifie les blocs de code dupliqués ou similaires qui enfreignent le principe DRY.",
+  "usage_steps": [
+    "Collez votre code",
+    "Définissez la taille minimale du bloc",
+    "Cliquez sur Trouver les Doublons",
+    "Visualisez les blocs mis en surbrillance",
+    "Obtenez des suggestions de refactorisation"
+  ],
+  "usage_examples": [
+    "Trouvez du code copié-collé",
+    "Identifiez des candidats pour les utilitaires",
+    "Réduisez la charge de maintenance"
+  ]
+}

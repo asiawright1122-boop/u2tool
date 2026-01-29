@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Database Connection Tester parses and validates database connection strings for various databases.",
+  "usage_steps": [
+    "Paste connection string",
+    "Select database type",
+    "Click Parse",
+    "View parsed details",
+    "Validate format"
+  ],
+  "usage_examples": [
+    "Validate before deployment",
+    "Parse MongoDB URIs",
+    "Debug connection issues"
+  ]
+}

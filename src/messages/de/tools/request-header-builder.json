@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der HTTP-Anfragekopfbildungs-Tool hilft bei der Erstellung korrekt formatierter HTTP-Kopfzeilen für API-Anfragen mit Standardkopfzeilen und Exportoptionen.",
+  "usage_steps": [
+    "Wählen Sie Standardkopfzeilen",
+    "Oder fügen Sie benutzerdefinierte Kopfzeilen hinzu",
+    "Autorisierung konfigurieren",
+    "Content-Type festlegen",
+    "Exportieren im bevorzugten Format"
+  ],
+  "usage_examples": [
+    "Autorisierungs-Kopfzeilen erstellen",
+    "CORS-Kopfzeilen erstellen",
+    "Webhook-Kopfzeilen generieren"
+  ]
+}

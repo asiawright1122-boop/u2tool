@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Kubernetes 표현식 생성기는 Deployments, Services, ConfigMaps 및 다른 K8s 자원에 대한 YAML 표현식을 생성합니다.",
+  "usage_steps": [
+    "자원 유형 선택",
+    "컨테이너 이미지 구성",
+    "자원 제한 설정",
+    "환경 변수 추가",
+    "YAML 표현식 다운로드"
+  ],
+  "usage_examples": [
+    "Deployment 표현식 생성",
+    "서비스 구성 작성",
+    "ConfigMap 자원 구축"
+  ]
+}

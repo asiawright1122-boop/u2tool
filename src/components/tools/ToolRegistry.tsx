@@ -541,6 +541,81 @@ export const TOOL_COMPONENTS_MAP: Record<string, ComponentType> = {
   'data-transfer-calculator': createToolImport(() => import('./DataTransferCalculator'), 'generator'),
   'pixel-density-calculator': createToolImport(() => import('./PixelDensityCalculator'), 'generator'),
   'dpi-calculator': createToolImport(() => import('./DpiCalculator'), 'generator'),
+
+  // Batch 54 - Developer Tools - API and Network Tools (开发者工具 - API 和网络工具)
+  'curl-to-code-generator': createToolImport(() => import('./CurlToCodeGenerator'), 'converter'),
+  'http-status-code-reference': createToolImport(() => import('./HttpStatusCodeReference'), 'default'),
+  'jwt-payload-decoder': createToolImport(() => import('./JwtPayloadDecoder'), 'converter'),
+  'base64-image-converter': createToolImport(() => import('./Base64ImageConverter'), 'converter'),
+  'url-query-string-parser': createToolImport(() => import('./UrlQueryStringParser'), 'converter'),
+  'request-header-builder': createToolImport(() => import('./RequestHeaderBuilder'), 'generator'),
+  'webhook-tester': createToolImport(() => import('./WebhookTester'), 'default'),
+  'api-response-formatter': createToolImport(() => import('./ApiResponseFormatter'), 'editor'),
+
+  // Batch 54 - Developer Tools - Code Conversion and Generation (开发者工具 - 代码转换和生成)
+  'sql-to-mongodb-converter': createToolImport(() => import('./SqlToMongodbConverter'), 'converter'),
+  'json-to-protobuf-converter': createToolImport(() => import('./JsonToProtobufConverter'), 'converter'),
+  'regex-to-code-generator': createToolImport(() => import('./RegexToCodeGenerator'), 'generator'),
+  'swagger-to-code-generator': createToolImport(() => import('./SwaggerToCodeGenerator'), 'generator'),
+  'database-migration-generator': createToolImport(() => import('./DatabaseMigrationGenerator'), 'generator'),
+  'environment-variables-generator': createToolImport(() => import('./EnvironmentVariablesGenerator'), 'generator'),
+  'docker-compose-generator-advanced': createToolImport(() => import('./DockerComposeGeneratorAdvanced'), 'generator'),
+  'kubernetes-manifest-generator': createToolImport(() => import('./KubernetesManifestGenerator'), 'generator'),
+
+  // Batch 54 - Developer Tools - Code Analysis and Optimization (开发者工具 - 代码分析和优化)
+  'code-complexity-analyzer': createToolImport(() => import('./CodeComplexityAnalyzer'), 'editor'),
+  'dependency-vulnerability-checker': createToolImport(() => import('./DependencyVulnerabilityChecker'), 'default'),
+  'performance-profiler': createToolImport(() => import('./PerformanceProfiler'), 'editor'),
+  'memory-leak-detector': createToolImport(() => import('./MemoryLeakDetector'), 'editor'),
+  'code-duplication-finder': createToolImport(() => import('./CodeDuplicationFinder'), 'editor'),
+  'unused-imports-finder': createToolImport(() => import('./UnusedImportsFinder'), 'editor'),
+  'dead-code-analyzer': createToolImport(() => import('./DeadCodeAnalyzer'), 'editor'),
+
+  // Batch 54 - Developer Tools - Database Tools (开发者工具 - 数据库工具)
+  'sql-query-optimizer': createToolImport(() => import('./SqlQueryOptimizer'), 'editor'),
+  'database-schema-visualizer': createToolImport(() => import('./DatabaseSchemaVisualizer'), 'default'),
+  'sql-injection-tester': createToolImport(() => import('./SqlInjectionTester'), 'editor'),
+  'database-connection-tester': createToolImport(() => import('./DatabaseConnectionTester'), 'default'),
+  'query-execution-planner': createToolImport(() => import('./QueryExecutionPlanner'), 'editor'),
+  'database-backup-scheduler': createToolImport(() => import('./DatabaseBackupScheduler'), 'generator'),
+
+  // Batch 54 - Developer Tools - Version Control Tools (开发者工具 - 版本控制工具)
+  'git-commit-message-generator': createToolImport(() => import('./GitCommitMessageGenerator'), 'generator'),
+  'git-branch-naming-validator': createToolImport(() => import('./GitBranchNamingValidator'), 'default'),
+  'merge-conflict-resolver': createToolImport(() => import('./MergeConflictResolver'), 'editor'),
+  'git-history-visualizer': createToolImport(() => import('./GitHistoryVisualizer'), 'default'),
+  'changelog-generator-advanced': createToolImport(() => import('./ChangelogGeneratorAdvanced'), 'generator'),
+  'git-tag-manager': createToolImport(() => import('./GitTagManager'), 'generator'),
+
+  // Batch 54 - Office Tools - Document and Content Management (办公工具 - 文档和内容管理)
+  'markdown-to-html-converter': createToolImport(() => import('./MarkdownToHtmlConverter'), 'converter'),
+  'document-outline-generator': createToolImport(() => import('./DocumentOutlineGenerator'), 'generator'),
+  'table-of-contents-generator': createToolImport(() => import('./TableOfContentsGenerator'), 'generator'),
+  'document-word-counter': createToolImport(() => import('./DocumentWordCounter'), 'editor'),
+  'document-formatter': createToolImport(() => import('./DocumentFormatter'), 'editor'),
+  'citation-formatter': createToolImport(() => import('./CitationFormatter'), 'converter'),
+
+  // Batch 54 - Office Tools - Project Management Tools (办公工具 - 项目管理工具)
+  'project-estimation-calculator': createToolImport(() => import('./ProjectEstimationCalculator'), 'generator'),
+  'sprint-velocity-calculator': createToolImport(() => import('./SprintVelocityCalculator'), 'generator'),
+  'resource-allocation-planner': createToolImport(() => import('./ResourceAllocationPlanner'), 'generator'),
+  'project-risk-analyzer': createToolImport(() => import('./ProjectRiskAnalyzer'), 'generator'),
+  'milestone-tracker': createToolImport(() => import('./MilestoneTracker'), 'default'),
+  'team-capacity-planner': createToolImport(() => import('./TeamCapacityPlanner'), 'generator'),
+
+  // Batch 54 - Office Tools - Meeting and Schedule Tools (办公工具 - 会议和日程工具)
+  'meeting-minutes-generator': createToolImport(() => import('./MeetingMinutesGenerator'), 'generator'),
+  'timezone-meeting-scheduler': createToolImport(() => import('./TimezoneMeetingScheduler'), 'generator'),
+  'meeting-agenda-builder': createToolImport(() => import('./MeetingAgendaBuilder'), 'generator'),
+  'calendar-availability-finder': createToolImport(() => import('./CalendarAvailabilityFinder'), 'default'),
+  'meeting-room-finder': createToolImport(() => import('./MeetingRoomFinder'), 'default'),
+
+  // Batch 54 - Office Tools - Finance and Budget Tools (办公工具 - 财务和预算工具)
+  'invoice-template-generator': createToolImport(() => import('./InvoiceTemplateGenerator'), 'generator'),
+  'expense-report-generator': createToolImport(() => import('./ExpenseReportGenerator'), 'generator'),
+  'budget-variance-analyzer': createToolImport(() => import('./BudgetVarianceAnalyzer'), 'generator'),
+  'cost-benefit-analyzer': createToolImport(() => import('./CostBenefitAnalyzer'), 'generator'),
+  'financial-forecast-calculator': createToolImport(() => import('./FinancialForecastCalculator'), 'generator'),
 };
 
 

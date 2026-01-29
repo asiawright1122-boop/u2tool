@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Detectador de fugas de memoria analiza patrones de código para identificar fugas potenciales como oyentes de eventos no eliminados.",
+  "usage_steps": [
+    "Pega código JS/TS",
+    "Haz clic en Analizar",
+    "Ver fugas detectadas",
+    "Lee sugerencias de solución",
+    "Aplica cambios"
+  ],
+  "usage_examples": [
+    "Encuentra fugas de componentes React",
+    "Detecta problemas de clausura",
+    "Identifica fugas de temporizadores"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Validador de Nomes de Ramificações do Git verifica nomes de ramificações contra convenções comuns, como GitFlow.",
+  "usage_steps": [
+    "Insira o nome da ramificação",
+    "Selecione a convenção",
+    "Clique em Validar",
+    "Visualize os resultados",
+    "Copie o nome corrigido"
+  ],
+  "usage_examples": [
+    "Validar ramificações de funcionalidade",
+    "Impor padrões de equipe",
+    "Verificar em CI/CD"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Decodificador de Carga JWT extrae y muestra el encabezado y la carga de los Tokens JSON Web sin requerir la clave secreta.",
+  "usage_steps": [
+    "Pegue el token JWT",
+    "El token se decodifica automáticamente",
+    "Visualice información del encabezado",
+    "Inspeccione afirmaciones de carga",
+    "Verifique la expiración"
+  ],
+  "usage_examples": [
+    "Depurar problemas de autenticación",
+    "Verificar expiración de token",
+    "Extraer información de usuario de tokens"
+  ]
+}

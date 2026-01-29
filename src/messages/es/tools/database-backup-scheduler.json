@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Programador de Copias de Seguridad de Bases de Datos ayuda a crear horarios de copias de seguridad y genera scripts de copias de seguridad para bases de datos.",
+  "usage_steps": [
+    "Seleccione el tipo de base de datos",
+    "Configure la frecuencia",
+    "Establezca el destino",
+    "Genere el script",
+    "Copie la expresión cron"
+  ],
+  "usage_examples": [
+    "Cree scripts de copia de seguridad diarios",
+    "Genere tareas programadas",
+    "Planifique políticas de retención"
+  ]
+}

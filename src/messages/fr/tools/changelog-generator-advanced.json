@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Générateur de Journal des Changements crée des journaux des changements formatés à partir des messages de commits Git.",
+  "usage_steps": [
+    "Coller les messages de commit",
+    "Sélectionner le format",
+    "Configurer la version/date",
+    "Cliquez sur Générer",
+    "Copier ou télécharger"
+  ],
+  "usage_examples": [
+    "Générer des notes de version",
+    "Créer un CHANGELOG.md",
+    "Documenter l'historique des versions"
+  ]
+}

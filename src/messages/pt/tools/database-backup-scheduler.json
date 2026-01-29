@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Agendador de Backup de Banco de Dados ajuda a criar agendamentos e gera scripts de backup para bancos de dados.",
+  "usage_steps": [
+    "Selecione o tipo de banco de dados",
+    "Configure a frequência",
+    "Defina o destino",
+    "Gerar script",
+    "Copiar expressão cron"
+  ],
+  "usage_examples": [
+    "Crie scripts de backup diários",
+    "Gere jobs cron",
+    "Planeje políticas de retenção"
+  ]
+}

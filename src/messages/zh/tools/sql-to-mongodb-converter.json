@@ -1,0 +1,15 @@
+{
+  "detailed_description": "SQL到MongoDB转换器将SQL查询转换为等效的MongoDB查询语法，用于数据库迁移。",
+  "usage_steps": [
+    "粘贴SQL查询",
+    "选择MongoDB驱动程序",
+    "点击转换",
+    "查看MongoDB语法",
+    "复制查询"
+  ],
+  "usage_examples": [
+    "将SQL迁移到MongoDB",
+    "学习MongoDB语法",
+    "将WHERE转换为$match"
+  ]
+}

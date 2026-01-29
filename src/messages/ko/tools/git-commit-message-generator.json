@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Git 커밋 메시지 생성기는 Conventional Commits 规格에 따라 잘 정리된 커밋 메시지를 생성합니다.",
+  "usage_steps": [
+    "커밋 유형 선택",
+    "스코프 입력",
+    "설명 작성",
+    "바디/푸터 추가",
+    "formatted 메시지 복사"
+  ],
+  "usage_examples": [
+    "일관된 커밋 생성",
+    "챗로그 친화적인 형식 생성",
+    "의미적 버전 관리 따르기"
+  ]
+}

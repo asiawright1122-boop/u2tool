@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Speicherleckdetektor analysiert Code Mustern, um mögliche Speicherlecks wie nicht entfernte Event-Listener zu identifizieren.",
+  "usage_steps": [
+    "Fügen Sie JS/TS-Code ein",
+    "Klicken Sie auf Analysieren",
+    "Betrachten Sie erkannte Lecks",
+    "Lesen Sie Reparaturvorschläge",
+    "Wenden Sie Änderungen an"
+  ],
+  "usage_examples": [
+    "Finden Sie Lecks in React-Komponenten",
+    "Erkennen Sie Closure-Probleme",
+    "Identifizieren Sie Timer-Lecks"
+  ]
+}

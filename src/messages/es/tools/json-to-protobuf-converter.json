@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Convertidor JSON a Protobuf analiza la estructura de datos JSON y genera las definiciones de mensajes de Protocol Buffer correspondientes.",
+  "usage_steps": [
+    "Pega datos JSON",
+    "Introduce el nombre del mensaje",
+    "Configura las opciones",
+    "Haz clic en Generar",
+    "Descarga el archivo .proto"
+  ],
+  "usage_examples": [
+    "Crear .proto a partir de APIs JSON",
+    "Generar mensajes gRPC",
+    "Convertir esquemas JSON"
+  ]
+}

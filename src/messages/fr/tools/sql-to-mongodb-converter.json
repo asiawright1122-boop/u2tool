@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Convertisseur SQL vers MongoDB traduit les requêtes SQL en syntaxe de requête MongoDB équivalente pour la migration de base de données.",
+  "usage_steps": [
+    "Coller la requête SQL",
+    "Sélectionnez le pilote MongoDB",
+    "Cliquez sur Convertir",
+    "Voir la syntaxe MongoDB",
+    "Copier la requête"
+  ],
+  "usage_examples": [
+    "Migrer SQL vers MongoDB",
+    "Apprendre la syntaxe MongoDB",
+    "Convertir WHERE en $match"
+  ]
+}

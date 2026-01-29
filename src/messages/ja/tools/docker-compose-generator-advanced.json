@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Docker Compose ジェネレーターは、マルチコンテナアプリケーションのためのdocker-compose.yml設定を作成します。",
+  "usage_steps": [
+    "テンプレートからサービスを選択",
+    "ポートとボリュームを設定",
+    "ネットワークの設定",
+    "ヘルスチェックの追加",
+    "docker-compose.ymlのダウンロード"
+  ],
+  "usage_examples": [
+    "開発環境の作成",
+    "プロダクション向けのcompose生成",
+    "マイクロサービススタックの構築"
+  ]
+}

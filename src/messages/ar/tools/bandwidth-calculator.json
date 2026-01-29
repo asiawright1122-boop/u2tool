@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Bandwidth Calculator helps you determine the required network bandwidth to transfer files within a specific time frame. Enter your file size and desired transfer time to calculate the necessary bandwidth in various units including bps, Kbps, Mbps, Gbps, and bytes per second. Perfect for network planning and capacity estimation.",
+  "detailed_description": "يُساعد حساب السعة الترددية في تحديد السعة الترددية المطلوبة لنقل الملفات داخل فترة زمنية محددة. أدخل حجم الملف المرغوب ووقت النقل المطلوب لحساب السعة اللازمة بالوحدات المختلفة بما في ذلك bps، Kbps، Mbps، Gbps، وبايت في الثانية. مناسب تمامًا لplanning الشبكي والتقدير�容量估计。",
   "usage_steps": [
-    "Enter the file size you want to transfer",
-    "Select the appropriate size unit (KB, MB, GB, TB)",
-    "Enter the desired transfer time",
-    "Choose the time unit (seconds, minutes, hours)",
-    "View the required bandwidth in multiple units",
-    "Copy the results for your reference"
+    "أدخل حجم الملف الذي تريد نقله",
+    "اختر وحدة الحجم المناسبة (KB، MB، GB، TB)",
+    "أدخل وقت النقل المطلوب",
+    "اختر وحدة الوقت (ثواني، دقائق، ساعات)",
+    "شاهد السعة الترددية المطلوبة في وحدات متعددة",
+    "نسخ النتائج للاستخدام كمرجع"
   ],
   "usage_examples": [
-    "Planning video streaming bandwidth requirements",
-    "Estimating backup transfer speeds",
-    "Calculating cloud upload/download needs"
+    "حساب متطلبات السعة الترددية لبث الفيديو",
+    "تقدير سرعات نقل النسخ الاحتياطية",
+    "حساب احتياجات نقل السحابة إلى السحابة من الأعلى"
   ]
 }

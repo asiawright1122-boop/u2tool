@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Probador de Conexión a Base de Datos analiza y valida cadenas de conexión para diversas bases de datos.",
+  "usage_steps": [
+    "Pega la cadena de conexión",
+    "Selecciona el tipo de base de datos",
+    "Haz clic en Analizar",
+    "Visualiza los detalles analizados",
+    "Valida el formato"
+  ],
+  "usage_examples": [
+    "Validar antes de la implementación",
+    "Analizar URIs de MongoDB",
+    "Depurar problemas de conexión"
+  ]
+}

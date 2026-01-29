@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der JSON nach Protobuf Konverter analysiert die JSON-Datenstruktur und generiert die entsprechenden Protokollbuffer-Nachrichtendefinitionen.",
+  "usage_steps": [
+    "Fügen Sie JSON-Daten ein",
+    "Geben Sie den Nachrichtenname ein",
+    "Einstellungen konfigurieren",
+    "Erstellen klicken",
+    ".proto-Datei herunterladen"
+  ],
+  "usage_examples": [
+    "Erstellen Sie .proto aus JSON-APIs",
+    "Generieren Sie gRPC-Nachrichten",
+    "Konvertieren Sie JSON-Schemata"
+  ]
+}

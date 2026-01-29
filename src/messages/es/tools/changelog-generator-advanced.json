@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Generador de Historial de Cambios crea historiales de cambios formateados a partir de mensajes de commit de Git.",
+  "usage_steps": [
+    "Pegue los mensajes de commit",
+    "Seleccione el formato",
+    "Configurar versión/fecha",
+    "Haga clic en Generar",
+    "Copie o descargue"
+  ],
+  "usage_examples": [
+    "Genere notas de lanzamiento",
+    "Cree un archivo CHANGELOG.md",
+    "Documente el historial de versiones"
+  ]
+}

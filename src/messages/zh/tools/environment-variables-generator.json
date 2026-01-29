@@ -1,0 +1,15 @@
+{
+  "detailed_description": "环境变量生成器帮助创建格式正确的 .env 文件，并提供常见服务的模板。",
+  "usage_steps": [
+    "选择模板或从头开始",
+    "添加变量名称和值",
+    "使用密钥生成器",
+    "验证命名",
+    "导出为 .env"
+  ],
+  "usage_examples": [
+    "创建 .env.example 模板",
+    "生成安全的 API 密钥",
+    "构建 Docker 配置"
+  ]
+}

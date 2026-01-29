@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Webhook测试工具允许您使用自定义有效载荷、头部信息和HTTP方法向webhook端点发送测试请求。",
+  "usage_steps": [
+    "输入webhook URL",
+    "选择HTTP方法",
+    "添加自定义头部",
+    "输入JSON有效载荷",
+    "发送并查看响应"
+  ],
+  "usage_examples": [
+    "测试Stripe webhook",
+    "调试GitHub集成",
+    "验证Slack webhook"
+  ]
+}

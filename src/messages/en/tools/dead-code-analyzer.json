@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Dead Code Analyzer identifies code that is never executed or referenced in your codebase.",
+  "usage_steps": [
+    "Paste your code",
+    "Select language",
+    "Click Analyze",
+    "View unreachable code",
+    "Get removal suggestions"
+  ],
+  "usage_examples": [
+    "Find uncalled functions",
+    "Identify code after return",
+    "Clean legacy code"
+  ]
+}

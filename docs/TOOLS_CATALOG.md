@@ -2,9 +2,9 @@
 
 > 本文档记录项目中所有已注册的工具，方便查阅和避免添加重复工具。
 > 
-> 最后更新: 2026-01-24
+> 最后更新: 2026-01-25
 > 
-> 工具总数: **414 个**
+> 工具总数: **500 个**
 
 ---
 
@@ -702,22 +702,23 @@ const toolSlug = 'your-tool-slug';
 | 🔐 编码工具 | 29 |
 | ⚡ 生成器 | 28 |
 | 🔄 转换器 | 53 |
-| 💻 开发工具 | 56 |
-| 🔒 安全工具 | 11 |
-| 🌐 网络工具 | 17 |
-| 🖼️ 图像工具 | 31 |
+| 💻 开发工具 | 91 |
+| 🔒 安全工具 | 13 |
+| 🌐 网络工具 | 19 |
+| 🖼️ 图像工具 | 32 |
 | 🔢 数学工具 | 21 |
 | 📈 图表工具 | 42 |
-| 📄 办公工具 | 26 |
+| 📄 办公工具 | 48 |
 | 🏃 生活工具 | 12 |
 | 🎮 娱乐工具 | 7 |
-| 💰 财务工具 | 7 |
-| **总计** | **414** |
+| 💰 财务工具 | 12 |
+| **总计** | **500** |
 
 ---
 
 ## 更新日志
 
+- **2026-01-25**: 添加 57 个热门开发者和办公工具 (Batch 54: curl-to-code-generator, http-status-code-reference, jwt-payload-decoder, base64-image-converter, url-query-string-parser, request-header-builder, webhook-tester, api-response-formatter, sql-to-mongodb-converter, json-to-protobuf-converter, regex-to-code-generator, swagger-to-code-generator, database-migration-generator, environment-variables-generator, docker-compose-generator-advanced, kubernetes-manifest-generator, code-complexity-analyzer, dependency-vulnerability-checker, performance-profiler, memory-leak-detector, code-duplication-finder, unused-imports-finder, dead-code-analyzer, sql-query-optimizer, database-schema-visualizer, sql-injection-tester, database-connection-tester, query-execution-planner, database-backup-scheduler, git-commit-message-generator, git-branch-naming-validator, merge-conflict-resolver, git-history-visualizer, changelog-generator-advanced, git-tag-manager, markdown-to-html-converter, document-outline-generator, table-of-contents-generator, document-word-counter, document-formatter, citation-formatter, project-estimation-calculator, sprint-velocity-calculator, resource-allocation-planner, project-risk-analyzer, milestone-tracker, team-capacity-planner, meeting-minutes-generator, timezone-meeting-scheduler, meeting-agenda-builder, calendar-availability-finder, meeting-room-finder, invoice-template-generator, expense-report-generator, budget-variance-analyzer, cost-benefit-analyzer, financial-forecast-calculator)
 - **2026-01-24**: 添加 18 个热门低竞争工具 (Batch 53: ai-text-humanizer, text-spinner, readability-checker, grammar-checker, typescript-playground, python-formatter, go-formatter, rust-formatter, yaml-formatter, text-shadow-generator, svg-pattern-generator, css-triangle-generator, aspect-ratio-box-generator, screen-time-calculator, typing-time-calculator, download-time-calculator, ical-parser, vcard-parser)
 - **2026-01-13**: 添加 20 个海外热门开发工具 (Batch 50: json-to-proto, svg-to-png, webp-to-png, png-to-svg, html-to-pdf, json-to-table, yaml-validator, xml-validator, css-to-tailwind, tailwind-to-css, svg-editor, json-to-form, api-tester, jwt-debugger, csp-generator, sri-hash-generator, cors-tester, json-to-zod, typescript-to-json, markdown-to-slides)
 - **2026-01-11**: 添加 10 个新热门工具 (Batch 49: anagram-solver, word-unscrambler, text-to-pdf, unit-price-calculator, bionic-reading-converter, palindrome-checker, character-map, text-repeater, fake-name-generator, invisible-character-generator)

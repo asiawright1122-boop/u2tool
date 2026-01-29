@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Environment Variables Generator helps create properly formatted .env files with templates for common services.",
+  "usage_steps": [
+    "Select template or start fresh",
+    "Add variable names and values",
+    "Use secret generator",
+    "Validate naming",
+    "Export as .env"
+  ],
+  "usage_examples": [
+    "Create .env.example templates",
+    "Generate secure API keys",
+    "Build Docker configs"
+  ]
+}

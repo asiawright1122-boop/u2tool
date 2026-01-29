@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Regex zu Code-Generator wandelt reguläre Ausdrucksformeln in sofort einsetzbare Code-Snippets für verschiedene Sprachen um.",
+  "usage_steps": [
+    "Geben Sie das Regex-Muster ein",
+    "Wählen Sie die Zielsprache",
+    "Wählen Sie die Operation",
+    "Konfigurieren Sie die Flags",
+    "Kopieren Sie den Code-Snippet"
+  ],
+  "usage_examples": [
+    "Python re-Code generieren",
+    "JS RegExp-Code erstellen",
+    "In Java Pattern umwandeln"
+  ]
+}

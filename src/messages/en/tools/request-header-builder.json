@@ -1,0 +1,15 @@
+{
+  "detailed_description": "HTTP Request Header Builder helps construct properly formatted HTTP headers for API requests with common headers and export options.",
+  "usage_steps": [
+    "Select common headers",
+    "Or add custom headers",
+    "Configure Authorization",
+    "Set Content-Type",
+    "Export in preferred format"
+  ],
+  "usage_examples": [
+    "Build Authorization headers",
+    "Create CORS headers",
+    "Generate webhook headers"
+  ]
+}

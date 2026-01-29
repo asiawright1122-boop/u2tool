@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Kubernetes Manifest Generator creates YAML manifests for Deployments, Services, ConfigMaps, and other K8s resources.",
+  "usage_steps": [
+    "Select resource type",
+    "Configure container image",
+    "Set resource limits",
+    "Add environment variables",
+    "Download YAML manifest"
+  ],
+  "usage_examples": [
+    "Generate Deployment manifests",
+    "Create Service configs",
+    "Build ConfigMap resources"
+  ]
+}

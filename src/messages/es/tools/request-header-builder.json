@@ -1,0 +1,15 @@
+{
+  "detailed_description": "El Constructor de Encabezados de Solicitud HTTP ayuda a construir encabezados HTTP bien formateados para solicitudes de API con opciones de encabezados comunes y exportación.",
+  "usage_steps": [
+    "Seleccionar encabezados comunes",
+    "O añadir encabezados personalizados",
+    "Configurar Autorización",
+    "Establecer Tipo de Contenido",
+    "Exportar en el formato preferido"
+  ],
+  "usage_examples": [
+    "Construir encabezados de Autorización",
+    "Crear encabezados CORS",
+    "Generar encabezados de webhook"
+  ]
+}

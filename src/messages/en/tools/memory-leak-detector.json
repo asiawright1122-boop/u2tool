@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Memory Leak Detector analyzes code patterns to identify potential memory leaks like unremoved event listeners.",
+  "usage_steps": [
+    "Paste JS/TS code",
+    "Click Analyze",
+    "View detected leaks",
+    "Read fix suggestions",
+    "Apply changes"
+  ],
+  "usage_examples": [
+    "Find React component leaks",
+    "Detect closure issues",
+    "Identify timer leaks"
+  ]
+}

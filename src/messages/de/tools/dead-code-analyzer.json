@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der toter Code-Analyzer identifiziert Code, der niemals in Ihrer Codebasis ausgeführt oder referenziert wird.",
+  "usage_steps": [
+    "Geben Sie Ihren Code ein",
+    "Wählen Sie die Sprache",
+    "Klicken Sie auf Analyseren",
+    "Sehen Sie sich den nicht erreichbaren Code an",
+    "Erhalten Sie Entfernungsvorschläge"
+  ],
+  "usage_examples": [
+    "Nicht aufgerufene Funktionen finden",
+    "Code nach Return identifizieren",
+    "Altes Code bereinigen"
+  ]
+}

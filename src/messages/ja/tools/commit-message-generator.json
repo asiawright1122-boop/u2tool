@@ -1,16 +1,16 @@
 {
-  "detailed_description": "Commit Message Generator helps you create well-structured Git commit messages following the Conventional Commits specification. This format makes your commit history more readable and enables automated changelog generation. Choose from standard commit types, add optional scope, and write clear descriptions for consistent version control.",
+  "detailed_description": "コミットメッセージジェネレーターは、Conventional Commits仕様に従ってwell-構造化的Gitコミットメッセージを作成するのに役立ちます。このフォーマットは、コミット履歴をより読みやすくし、自動的な変更ログ生成を可能にします。標準のコミットタイプから選択し、オプションのスコープを追加し、一貫したバージョン管理のために明確な説明を記述できます。",
   "usage_steps": [
-    "Select the commit type (feat, fix, docs, etc.)",
-    "Optionally add a scope for the change",
-    "Write a clear, concise subject line",
-    "Check breaking change if applicable",
-    "Add optional body for detailed explanation",
-    "Copy the formatted commit message"
+    "コミットタイプを選択（feat, fix, docsなど）",
+    "変更の範囲をオプションで追加",
+    "明確で簡潔なサブジェクトラインを記入",
+    "ブロッキング変更がある場合はチェック",
+    "詳細な説明をオプションで追加",
+    "フォーマットされたコミットメッセージをコピー"
   ],
   "usage_examples": [
-    "Creating feature commits: feat(auth): add login functionality",
-    "Writing bug fix commits: fix(api): resolve timeout issue",
-    "Documenting changes: docs(readme): update installation guide"
+    "機能コミットの作成: feat(auth): ログイン機能を追加",
+    "バグ修正コミットの作成: fix(api): タイムアウト問題を解決",
+    "変更のドキュメント作成: docs(readme): インストールガイドを更新"
   ]
 }

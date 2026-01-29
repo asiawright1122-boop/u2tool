@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Kubernetes Manifest-Generator erstellt YAML-Manifeste für Deployments, Services, ConfigMaps und andere K8s-Ressourcen.",
+  "usage_steps": [
+    "Wählen Sie den Ressourcentyp",
+    "Konfigurieren Sie das Container-Image",
+    "Stellen Sie Ressourcenlimits ein",
+    "Fügen Sie Umgebungsvariablen hinzu",
+    "Laden Sie das YAML-Manifest herunter"
+  ],
+  "usage_examples": [
+    "Deployment-Manifeste generieren",
+    "Service-Konfigurationen erstellen",
+    "ConfigMap-Ressourcen erstellen"
+  ]
+}

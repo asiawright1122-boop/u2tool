@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Query Execution Planner helps understand and optimize SQL query execution plans.",
+  "usage_steps": [
+    "Paste EXPLAIN output",
+    "Select database type",
+    "Click Analyze",
+    "View plan visualization",
+    "Get recommendations"
+  ],
+  "usage_examples": [
+    "Understand slow queries",
+    "Identify full table scans",
+    "Compare execution plans"
+  ]
+}

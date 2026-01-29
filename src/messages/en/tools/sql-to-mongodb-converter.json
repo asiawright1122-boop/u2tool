@@ -1,0 +1,15 @@
+{
+  "detailed_description": "SQL to MongoDB Converter translates SQL queries into equivalent MongoDB query syntax for database migration.",
+  "usage_steps": [
+    "Paste SQL query",
+    "Select MongoDB driver",
+    "Click Convert",
+    "View MongoDB syntax",
+    "Copy the query"
+  ],
+  "usage_examples": [
+    "Migrate SQL to MongoDB",
+    "Learn MongoDB syntax",
+    "Convert WHERE to $match"
+  ]
+}

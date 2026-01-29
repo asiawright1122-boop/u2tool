@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Der Datenbank-Sicherungsplaner hilft bei der Erstellung von Sicherungsplänen und generiert Sicherungsskripts für Datenbanken.",
+  "usage_steps": [
+    "Datenbanktyp auswählen",
+    "Häufigkeit konfigurieren",
+    "Ziel festlegen",
+    "Skript generieren",
+    "Cron-Ausdruck kopieren"
+  ],
+  "usage_examples": [
+    "Tägliche Sicherungsskripts erstellen",
+    "Cron-Jobs generieren",
+    "Rückhaltepolitik planen"
+  ]
+}

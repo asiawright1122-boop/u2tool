@@ -1,0 +1,15 @@
+{
+  "detailed_description": "JSON转Protobuf转换器分析JSON数据结构并生成相应的协议缓冲区消息定义。",
+  "usage_steps": [
+    "粘贴JSON数据",
+    "输入消息名称",
+    "配置选项",
+    "点击生成",
+    "下载.proto文件"
+  ],
+  "usage_examples": [
+    "从JSON API创建.proto文件",
+    "生成gRPC消息",
+    "转换JSON模式"
+  ]
+}

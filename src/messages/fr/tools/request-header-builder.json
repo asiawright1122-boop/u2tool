@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Le Constructeur d'En-têtes HTTP aide à construire des en-têtes HTTP correctement formatés pour les requêtes API avec des options d'exportation courantes.",
+  "usage_steps": [
+    "Sélectionnez des en-têtes courants",
+    "Ou ajoutez des en-têtes personnalisés",
+    "Configurer l'Authorization",
+    "Définir le Content-Type",
+    "Exporter dans le format préféré"
+  ],
+  "usage_examples": [
+    "Construisez des en-têtes d'Authorization",
+    "Créez des en-têtes CORS",
+    "Générez des en-têtes de webhook"
+  ]
+}

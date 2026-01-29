@@ -1,0 +1,15 @@
+{
+  "detailed_description": "O Detector de vazamentos de memória analisa padrões de código para identificar vazamentos de memória潜力 como ouvintes de eventos não removidos.",
+  "usage_steps": [
+    "Cole código JS/TS",
+    "Clique em Analisar",
+    "Visualize os vazamentos detectados",
+    "Leia sugestões de correção",
+    "Aplique as mudanças"
+  ],
+  "usage_examples": [
+    "Encontre vazamentos de componentes React",
+    "Detecte problemas de closures",
+    "Identifique vazamentos de temporizadores"
+  ]
+}

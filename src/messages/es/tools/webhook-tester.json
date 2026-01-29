@@ -1,0 +1,15 @@
+{
+  "detailed_description": "Webhook Tester te permite enviar solicitudes de prueba a puntos finales de webhook con carga útil personalizada, encabezados y métodos HTTP.",
+  "usage_steps": [
+    "Introduce la URL del webhook",
+    "Selecciona el método HTTP",
+    "Añade encabezados personalizados",
+    "Introduce la carga útil JSON",
+    "Envía y ve la respuesta"
+  ],
+  "usage_examples": [
+    "Prueba webhook de Stripe",
+    "Depura integraciones de GitHub",
+    "Verifica webhook de Slack"
+  ]
+}
