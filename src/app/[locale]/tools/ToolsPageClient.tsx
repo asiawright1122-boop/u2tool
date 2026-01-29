@@ -91,7 +91,7 @@ export default function ToolsPageClient() {
   const categoryParam = searchParams.get('category');
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
   const [_activeCategory, setActiveCategory] = useState<string | undefined>(categoryParam || undefined);
-  const scrollTimeoutRef = useRef<NodeJS.Timeout>();
+  const scrollTimeoutRef = useRef<NodeJS.Timeout>(undefined);
 
   // 切换分类展开状态
   const toggleCategory = useCallback((categoryId: string) => {
