@@ -12,8 +12,6 @@ dotenv.config({ path: '.env' });
 
 import { tools } from '../src/config/tools';
 
-import { tools } from '../src/config/tools';
-
 const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.u2tool.com';
 const BAIDU_TOKEN = process.env.BAIDU_PUSH_TOKEN || '';
 const BAIDU_SITE = process.env.BAIDU_SITE || SITE_URL;

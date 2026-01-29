@@ -1,11 +1,10 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import dynamic from 'next/dynamic';
 import { tools, getToolBySlug, categories } from '@/config/tools';
 import { routing } from '@/i18n/routing';
 import ToolWrapper from '@/components/tools/ToolWrapper';
 import Breadcrumb from '@/components/Breadcrumb';
-import RelatedTools from '@/components/RelatedTools';
-import ToolFAQ from '@/components/ToolFAQ';
 import {
   SEO_CONFIG,
   generateAlternates,
@@ -29,6 +28,15 @@ import {
 } from '@/lib/eeat';
 import { getToolMetadata } from '@/config/tool-metadata';
 import { extendTitle } from '@/lib/seo-title';
+
+// 懒加载非首屏组件，提升 LCP
+const RelatedTools = dynamic(() => import('@/components/RelatedTools'), {
+  loading: () => <div className="h-40 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />,
+});
+
+const ToolFAQ = dynamic(() => import('@/components/ToolFAQ'), {
+  loading: () => <div className="h-32 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />,
+});
 
 // 生成静态参数（仅预渲染热门工具，减少构建日志大小）
 // 非热门工具将在首次访问时按需生成并缓存

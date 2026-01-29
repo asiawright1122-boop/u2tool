@@ -88,12 +88,12 @@ const nextConfig = {
         ],
       },
       {
-        // HTML 页面缓存（1小时，可重新验证）
+        // HTML 页面缓存（24小时，可重新验证7天）
         source: '/:locale(en|zh|es|pt|ja|ko|fr|de|ru|ar)/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=3600, stale-while-revalidate=86400',
+            value: 'public, max-age=86400, stale-while-revalidate=604800',
           },
         ],
       },
