@@ -616,6 +616,10 @@ export const TOOL_COMPONENTS_MAP: Record<string, ComponentType> = {
   'budget-variance-analyzer': createToolImport(() => import('./BudgetVarianceAnalyzer'), 'generator'),
   'cost-benefit-analyzer': createToolImport(() => import('./CostBenefitAnalyzer'), 'generator'),
   'financial-forecast-calculator': createToolImport(() => import('./FinancialForecastCalculator'), 'generator'),
+
+  // Batch 55 - Popular Tools
+  'ip-geolocation': createToolImport(() => import('./IpGeolocation'), 'network'),
+  'screen-recorder': createToolImport(() => import('./ScreenRecorder'), 'office'),
 };
 
 

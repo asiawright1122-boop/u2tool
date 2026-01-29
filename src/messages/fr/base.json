@@ -15667,6 +15667,52 @@
     "word-cloud-generator": {
       "png": "PNG",
       "svg": "SVG"
+    },
+    "ip-geolocation": {
+      "name": "Géolocalisation IP",
+      "description": "Rechercher les informations de localisation géographique pour toute adresse IP",
+      "seo_title": "Outil gratuit de géolocalisation IP en ligne",
+      "seo_description": "Recherchez la localisation géographique, le FAI, le fuseau horaire et plus pour toute adresse IP. Outil gratuit de géolocalisation IP avec des résultats précis.",
+      "ipAddress": "Adresse IP",
+      "placeholder": "Entrez l'adresse IP (ex: 8.8.8.8) ou laissez vide pour votre IP",
+      "lookup": "Rechercher",
+      "loading": "Recherche...",
+      "myIp": "Mon adresse IP",
+      "results": "Résultats de géolocalisation",
+      "country": "Pays",
+      "region": "Région",
+      "city": "Ville",
+      "zipCode": "Code postal",
+      "timezone": "Fuseau horaire",
+      "coordinates": "Coordonnées",
+      "isp": "FAI",
+      "organization": "Organisation",
+      "asn": "ASN",
+      "viewOnMap": "Voir sur la carte",
+      "invalidIp": "Adresse IP invalide",
+      "lookupError": "Échec de la recherche d'adresse IP"
+    },
+    "screen-recorder": {
+      "name": "Enregistreur d'écran",
+      "description": "Enregistrez votre écran directement dans le navigateur",
+      "seo_title": "Enregistreur d'écran en ligne gratuit - Sans installation",
+      "seo_description": "Enregistrez votre écran directement dans le navigateur. Enregistreur d'écran en ligne gratuit sans installation. Téléchargez les enregistrements en WebM.",
+      "start": "Démarrer l'enregistrement",
+      "stop": "Arrêter",
+      "pause": "Pause",
+      "resume": "Reprendre",
+      "recording": "Enregistrement...",
+      "paused": "En pause",
+      "preview": "Aperçu",
+      "download": "Télécharger l'enregistrement",
+      "newRecording": "Nouvel enregistrement",
+      "notSupported": "L'enregistrement d'écran n'est pas pris en charge par votre navigateur. Utilisez Chrome, Edge ou Firefox.",
+      "permissionDenied": "Permission de partage d'écran refusée",
+      "startError": "Échec du démarrage de l'enregistrement",
+      "instructions": "Instructions",
+      "instruction1": "Cliquez sur \"Démarrer l'enregistrement\"",
+      "instruction2": "Sélectionnez l'écran, la fenêtre ou l'onglet à enregistrer",
+      "instruction3": "Cliquez sur \"Arrêter\" une fois terminé et téléchargez"
     }
   }
 }

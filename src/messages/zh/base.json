@@ -21273,6 +21273,52 @@
     "word-cloud-generator": {
       "png": "PNG",
       "svg": "SVG"
+    },
+    "ip-geolocation": {
+      "name": "IP 地理位置查询",
+      "description": "查询任意 IP 地址的地理位置信息",
+      "seo_title": "免费在线 IP 地理位置查询工具",
+      "seo_description": "查询任意 IP 地址的地理位置、ISP、时区等信息。免费在线 IP 地理位置查询工具，结果准确。",
+      "ipAddress": "IP 地址",
+      "placeholder": "输入 IP 地址（如 8.8.8.8）或留空查询您的 IP",
+      "lookup": "查询",
+      "loading": "查询中...",
+      "myIp": "查询我的 IP",
+      "results": "地理位置结果",
+      "country": "国家",
+      "region": "地区",
+      "city": "城市",
+      "zipCode": "邮编",
+      "timezone": "时区",
+      "coordinates": "坐标",
+      "isp": "运营商",
+      "organization": "组织",
+      "asn": "ASN",
+      "viewOnMap": "在地图上查看",
+      "invalidIp": "无效的 IP 地址",
+      "lookupError": "IP 地址查询失败"
+    },
+    "screen-recorder": {
+      "name": "屏幕录制",
+      "description": "直接在浏览器中录制屏幕",
+      "seo_title": "免费在线屏幕录制工具 - 无需安装",
+      "seo_description": "直接在浏览器中录制屏幕。免费在线屏幕录制工具，无需安装任何软件。录制文件可下载为 WebM 格式。",
+      "start": "开始录制",
+      "stop": "停止",
+      "pause": "暂停",
+      "resume": "继续",
+      "recording": "录制中...",
+      "paused": "已暂停",
+      "preview": "录制预览",
+      "download": "下载录制",
+      "newRecording": "新建录制",
+      "notSupported": "您的浏览器不支持屏幕录制。请使用 Chrome、Edge 或 Firefox。",
+      "permissionDenied": "屏幕共享权限被拒绝",
+      "startError": "启动屏幕录制失败",
+      "instructions": "使用说明",
+      "instruction1": "点击\"开始录制\"按钮",
+      "instruction2": "选择要录制的屏幕、窗口或标签页",
+      "instruction3": "完成后点击\"停止\"，然后下载录制文件"
     }
   }
 }

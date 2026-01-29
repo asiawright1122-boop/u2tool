@@ -15500,6 +15500,52 @@
     "word-cloud-generator": {
       "png": "PNG",
       "svg": "SVG"
+    },
+    "ip-geolocation": {
+      "name": "IP Geolocation",
+      "description": "Look up geographic location information for any IP address",
+      "seo_title": "Free IP Geolocation Lookup Tool Online",
+      "seo_description": "Look up geographic location, ISP, timezone and more for any IP address. Free online IP geolocation tool with accurate results.",
+      "ipAddress": "IP Address",
+      "placeholder": "Enter IP address (e.g., 8.8.8.8) or leave empty for your IP",
+      "lookup": "Lookup",
+      "loading": "Looking up...",
+      "myIp": "My IP Address",
+      "results": "Geolocation Results",
+      "country": "Country",
+      "region": "Region",
+      "city": "City",
+      "zipCode": "ZIP Code",
+      "timezone": "Timezone",
+      "coordinates": "Coordinates",
+      "isp": "ISP",
+      "organization": "Organization",
+      "asn": "ASN",
+      "viewOnMap": "View on Map",
+      "invalidIp": "Invalid IP address",
+      "lookupError": "Failed to lookup IP address"
+    },
+    "screen-recorder": {
+      "name": "Screen Recorder",
+      "description": "Record your screen directly in the browser",
+      "seo_title": "Free Online Screen Recorder - No Installation Required",
+      "seo_description": "Record your screen directly in the browser. Free online screen recorder with no installation required. Download recordings as WebM.",
+      "start": "Start Recording",
+      "stop": "Stop",
+      "pause": "Pause",
+      "resume": "Resume",
+      "recording": "Recording...",
+      "paused": "Paused",
+      "preview": "Recording Preview",
+      "download": "Download Recording",
+      "newRecording": "New Recording",
+      "notSupported": "Screen recording is not supported in your browser. Please use Chrome, Edge, or Firefox.",
+      "permissionDenied": "Screen sharing permission was denied",
+      "startError": "Failed to start screen recording",
+      "instructions": "How to use",
+      "instruction1": "Click \"Start Recording\" to begin",
+      "instruction2": "Select the screen, window, or tab you want to record",
+      "instruction3": "Click \"Stop\" when finished, then download your recording"
     }
   }
 }

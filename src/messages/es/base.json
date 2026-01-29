@@ -15696,6 +15696,52 @@
     "word-cloud-generator": {
       "png": "PNG",
       "svg": "SVG"
+    },
+    "ip-geolocation": {
+      "name": "Geolocalización IP",
+      "description": "Buscar información de ubicación geográfica para cualquier dirección IP",
+      "seo_title": "Herramienta gratuita de geolocalización IP en línea",
+      "seo_description": "Busque ubicación geográfica, ISP, zona horaria y más para cualquier dirección IP. Herramienta gratuita de geolocalización IP con resultados precisos.",
+      "ipAddress": "Dirección IP",
+      "placeholder": "Ingrese dirección IP (ej: 8.8.8.8) o deje vacío para su IP",
+      "lookup": "Buscar",
+      "loading": "Buscando...",
+      "myIp": "Mi dirección IP",
+      "results": "Resultados de geolocalización",
+      "country": "País",
+      "region": "Región",
+      "city": "Ciudad",
+      "zipCode": "Código postal",
+      "timezone": "Zona horaria",
+      "coordinates": "Coordenadas",
+      "isp": "ISP",
+      "organization": "Organización",
+      "asn": "ASN",
+      "viewOnMap": "Ver en mapa",
+      "invalidIp": "Dirección IP inválida",
+      "lookupError": "Error al buscar dirección IP"
+    },
+    "screen-recorder": {
+      "name": "Grabador de pantalla",
+      "description": "Grabe su pantalla directamente en el navegador",
+      "seo_title": "Grabador de pantalla en línea gratuito - Sin instalación",
+      "seo_description": "Grabe su pantalla directamente en el navegador. Grabador de pantalla en línea gratuito sin instalación. Descargue grabaciones como WebM.",
+      "start": "Iniciar grabación",
+      "stop": "Detener",
+      "pause": "Pausar",
+      "resume": "Reanudar",
+      "recording": "Grabando...",
+      "paused": "Pausado",
+      "preview": "Vista previa",
+      "download": "Descargar grabación",
+      "newRecording": "Nueva grabación",
+      "notSupported": "La grabación de pantalla no es compatible con su navegador. Use Chrome, Edge o Firefox.",
+      "permissionDenied": "Permiso de compartir pantalla denegado",
+      "startError": "Error al iniciar grabación",
+      "instructions": "Instrucciones",
+      "instruction1": "Haga clic en \"Iniciar grabación\"",
+      "instruction2": "Seleccione la pantalla, ventana o pestaña a grabar",
+      "instruction3": "Haga clic en \"Detener\" al terminar y descargue"
     }
   }
 }

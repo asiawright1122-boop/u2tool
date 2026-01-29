@@ -15692,6 +15692,52 @@
     "word-cloud-generator": {
       "png": "PNG",
       "svg": "SVG"
+    },
+    "ip-geolocation": {
+      "name": "Geolocalização IP",
+      "description": "Pesquisar informações de localização geográfica para qualquer endereço IP",
+      "seo_title": "Ferramenta gratuita de geolocalização IP online",
+      "seo_description": "Pesquise localização geográfica, ISP, fuso horário e mais para qualquer endereço IP. Ferramenta gratuita de geolocalização IP com resultados precisos.",
+      "ipAddress": "Endereço IP",
+      "placeholder": "Digite o endereço IP (ex: 8.8.8.8) ou deixe vazio para seu IP",
+      "lookup": "Pesquisar",
+      "loading": "Pesquisando...",
+      "myIp": "Meu endereço IP",
+      "results": "Resultados de geolocalização",
+      "country": "País",
+      "region": "Região",
+      "city": "Cidade",
+      "zipCode": "CEP",
+      "timezone": "Fuso horário",
+      "coordinates": "Coordenadas",
+      "isp": "ISP",
+      "organization": "Organização",
+      "asn": "ASN",
+      "viewOnMap": "Ver no mapa",
+      "invalidIp": "Endereço IP inválido",
+      "lookupError": "Falha ao pesquisar endereço IP"
+    },
+    "screen-recorder": {
+      "name": "Gravador de tela",
+      "description": "Grave sua tela diretamente no navegador",
+      "seo_title": "Gravador de tela online gratuito - Sem instalação",
+      "seo_description": "Grave sua tela diretamente no navegador. Gravador de tela online gratuito sem instalação. Baixe gravações como WebM.",
+      "start": "Iniciar gravação",
+      "stop": "Parar",
+      "pause": "Pausar",
+      "resume": "Retomar",
+      "recording": "Gravando...",
+      "paused": "Pausado",
+      "preview": "Pré-visualização",
+      "download": "Baixar gravação",
+      "newRecording": "Nova gravação",
+      "notSupported": "A gravação de tela não é suportada no seu navegador. Use Chrome, Edge ou Firefox.",
+      "permissionDenied": "Permissão de compartilhamento de tela negada",
+      "startError": "Falha ao iniciar gravação",
+      "instructions": "Instruções",
+      "instruction1": "Clique em \"Iniciar gravação\"",
+      "instruction2": "Selecione a tela, janela ou aba para gravar",
+      "instruction3": "Clique em \"Parar\" ao terminar e baixe"
     }
   }
 }

@@ -651,6 +651,10 @@ export const tools: Tool[] = [
   { slug: 'budget-variance-analyzer', category: 'finance', icon: '📊', component: 'BudgetVarianceAnalyzer' },
   { slug: 'cost-benefit-analyzer', category: 'finance', icon: '⚖️', component: 'CostBenefitAnalyzer' },
   { slug: 'financial-forecast-calculator', category: 'finance', icon: '📈', component: 'FinancialForecastCalculator' },
+
+  // Batch 55 - Popular Tools (热门工具)
+  { slug: 'ip-geolocation', category: 'network', icon: '📍', component: 'IpGeolocation', popular: true },
+  { slug: 'screen-recorder', category: 'office', icon: '🎬', component: 'ScreenRecorder', popular: true },
 ];
 
 export const categories: { id: ToolCategory; icon: string }[] = [

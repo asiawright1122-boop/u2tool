@@ -15714,6 +15714,52 @@
     "word-cloud-generator": {
       "png": "PNG",
       "svg": "SVG"
+    },
+    "ip-geolocation": {
+      "name": "IP-Geolokalisierung",
+      "description": "Geografische Standortinformationen für jede IP-Adresse nachschlagen",
+      "seo_title": "Kostenloses Online IP-Geolokalisierungs-Tool",
+      "seo_description": "Suchen Sie geografischen Standort, ISP, Zeitzone und mehr für jede IP-Adresse. Kostenloses Online IP-Geolokalisierungs-Tool mit genauen Ergebnissen.",
+      "ipAddress": "IP-Adresse",
+      "placeholder": "IP-Adresse eingeben (z.B. 8.8.8.8) oder leer lassen für Ihre IP",
+      "lookup": "Suchen",
+      "loading": "Suche...",
+      "myIp": "Meine IP-Adresse",
+      "results": "Geolokalisierungsergebnisse",
+      "country": "Land",
+      "region": "Region",
+      "city": "Stadt",
+      "zipCode": "PLZ",
+      "timezone": "Zeitzone",
+      "coordinates": "Koordinaten",
+      "isp": "ISP",
+      "organization": "Organisation",
+      "asn": "ASN",
+      "viewOnMap": "Auf Karte anzeigen",
+      "invalidIp": "Ungültige IP-Adresse",
+      "lookupError": "IP-Adresse konnte nicht gefunden werden"
+    },
+    "screen-recorder": {
+      "name": "Bildschirmrekorder",
+      "description": "Nehmen Sie Ihren Bildschirm direkt im Browser auf",
+      "seo_title": "Kostenloser Online-Bildschirmrekorder - Keine Installation erforderlich",
+      "seo_description": "Nehmen Sie Ihren Bildschirm direkt im Browser auf. Kostenloser Online-Bildschirmrekorder ohne Installation. Aufnahmen als WebM herunterladen.",
+      "start": "Aufnahme starten",
+      "stop": "Stoppen",
+      "pause": "Pause",
+      "resume": "Fortsetzen",
+      "recording": "Aufnahme...",
+      "paused": "Pausiert",
+      "preview": "Vorschau",
+      "download": "Aufnahme herunterladen",
+      "newRecording": "Neue Aufnahme",
+      "notSupported": "Bildschirmaufnahme wird von Ihrem Browser nicht unterstützt. Verwenden Sie Chrome, Edge oder Firefox.",
+      "permissionDenied": "Bildschirmfreigabe-Berechtigung verweigert",
+      "startError": "Aufnahme konnte nicht gestartet werden",
+      "instructions": "Anleitung",
+      "instruction1": "Klicken Sie auf \"Aufnahme starten\"",
+      "instruction2": "Wählen Sie den Bildschirm, das Fenster oder den Tab aus",
+      "instruction3": "Klicken Sie auf \"Stoppen\" und laden Sie die Aufnahme herunter"
     }
   }
 }
