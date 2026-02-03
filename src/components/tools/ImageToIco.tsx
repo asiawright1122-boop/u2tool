@@ -174,12 +174,15 @@ export default function ImageToIco() {
                       ? 'bg-blue-50 dark:bg-blue-900/20 ring-2 ring-blue-500'
                       : 'bg-gray-100 dark:bg-gray-800'
                   }`}
+                  style={{ minWidth: Math.max(preview.size + 16, 60) }}
                 >
                   <img
                     src={preview.dataUrl}
                     alt={`${preview.size}x${preview.size}`}
+                    width={preview.size}
+                    height={preview.size}
                     className="mx-auto border border-gray-300 dark:border-gray-600"
-                    style={{ width: preview.size, height: preview.size, imageRendering: 'pixelated' }}
+                    style={{ width: preview.size, height: preview.size, imageRendering: 'pixelated', aspectRatio: '1/1' }}
                   />
                   <p className="text-xs mt-1 text-gray-600 dark:text-gray-400">{preview.size}px</p>
                   <button

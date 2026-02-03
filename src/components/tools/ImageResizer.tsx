@@ -88,7 +88,7 @@ export default function ImageResizer() {
               <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
                 {t('imageResizer.original')}: {originalSize.width} × {originalSize.height}
               </div>
-              <img src={image} alt="Original" className="max-w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700" />
+              <img src={image} alt="Original" className="max-w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700" style={{ aspectRatio: 'auto' }} />
             </div>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
@@ -126,7 +126,7 @@ export default function ImageResizer() {
               {resizedImage && (
                 <div>
                   <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('imageResizer.resized')}: {newWidth} × {newHeight}</div>
-                  <img src={resizedImage} alt="Resized" className="max-w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700" />
+                  <img src={resizedImage} alt="Resized" className="max-w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700" style={{ aspectRatio: 'auto' }} />
                   <button onClick={downloadImage} className="mt-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg">
                     {t('download')}
                   </button>

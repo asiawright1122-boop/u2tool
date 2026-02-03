@@ -79,18 +79,22 @@ describe('Script Loading Strategy Property Tests', () => {
 
 describe('Tool Component Isolation Property Tests', () => {
   describe('Property 8: Tool Component Isolation', () => {
+    // 动态导入现在在 ToolRegistry.tsx 中定义
+    const registryPath = path.join(process.cwd(), 'src/components/tools/ToolRegistry.tsx');
+    const registryContent = fs.readFileSync(registryPath, 'utf-8');
+    
     const wrapperPath = path.join(process.cwd(), 'src/components/tools/ToolWrapper.tsx');
     const wrapperContent = fs.readFileSync(wrapperPath, 'utf-8');
 
     it('uses dynamic imports for all tool components', () => {
-      // 检查是否使用 dynamic 函数
-      expect(wrapperContent).toContain("import dynamic from 'next/dynamic'");
-      expect(wrapperContent).toContain('createToolImport');
+      // 检查 ToolRegistry 是否使用 dynamic 函数
+      expect(registryContent).toContain("import dynamic from 'next/dynamic'");
+      expect(registryContent).toContain('createToolImport');
     });
 
     it('all tool imports use createToolImport helper', () => {
       // 统计 createToolImport 调用次数
-      const matches = wrapperContent.match(/createToolImport\(/g);
+      const matches = registryContent.match(/createToolImport\(/g);
       expect(matches).not.toBeNull();
       // 应该有大量工具使用此函数
       expect(matches!.length).toBeGreaterThan(100);
@@ -98,7 +102,7 @@ describe('Tool Component Isolation Property Tests', () => {
 
     it('chart tools disable SSR', () => {
       // 图表工具应该禁用 SSR
-      expect(wrapperContent).toContain("'chart', false");
+      expect(registryContent).toContain("'chart', false");
     });
 
     it('PDF tools disable SSR', () => {
@@ -113,14 +117,14 @@ describe('Tool Component Isolation Property Tests', () => {
       ];
       
       pdfToolsWithSsrFalse.forEach(tool => {
-        const toolLine = wrapperContent.split('\n').find(line => line.includes(tool));
+        const toolLine = registryContent.split('\n').find(line => line.includes(tool));
         expect(toolLine).toContain('false');
       });
     });
 
     it('includes loading skeleton for each tool', () => {
       // 检查 createToolImport 函数定义包含 loading 选项
-      expect(wrapperContent).toContain('loading: () => <ToolSkeleton');
+      expect(registryContent).toContain('loading: () => <ToolSkeleton');
     });
 
     it('wraps tools with error boundary', () => {

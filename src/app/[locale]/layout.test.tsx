@@ -44,11 +44,10 @@ describe('LocaleLayout Component', () => {
     const layoutPath = path.join(process.cwd(), 'src/app/[locale]/layout.tsx');
     const layoutContent = await fs.readFile(layoutPath, 'utf-8');
     
-    // 验证 DNS prefetch links 存在
-    expect(layoutContent).toContain('rel="dns-prefetch" href="//fonts.googleapis.com"');
-    expect(layoutContent).toContain('rel="dns-prefetch" href="//fonts.gstatic.com"');
-    expect(layoutContent).toContain('rel="dns-prefetch" href="//www.google-analytics.com"');
-    expect(layoutContent).toContain('rel="dns-prefetch" href="//hm.baidu.com"');
+    // 验证 DNS prefetch links 存在（用于非关键资源）
+    expect(layoutContent).toContain('rel="dns-prefetch"');
+    expect(layoutContent).toContain('//www.google-analytics.com');
+    expect(layoutContent).toContain('//hm.baidu.com');
   });
 
   it('should preserve preconnect links', async () => {
@@ -58,9 +57,10 @@ describe('LocaleLayout Component', () => {
     const layoutPath = path.join(process.cwd(), 'src/app/[locale]/layout.tsx');
     const layoutContent = await fs.readFile(layoutPath, 'utf-8');
     
-    // 验证 preconnect links 存在
-    expect(layoutContent).toContain('rel="preconnect" href="https://fonts.googleapis.com"');
-    expect(layoutContent).toContain('rel="preconnect" href="https://fonts.gstatic.com"');
+    // 验证 preconnect links 存在（用于关键资源如字体）
+    expect(layoutContent).toContain('rel="preconnect"');
+    expect(layoutContent).toContain('https://fonts.googleapis.com');
+    expect(layoutContent).toContain('https://fonts.gstatic.com');
   });
 
   it('should preserve Apple startup images', async () => {
@@ -75,14 +75,15 @@ describe('LocaleLayout Component', () => {
     expect(layoutContent).toContain('apple-splash-2048-2732.png');
   });
 
-  it('should have comment explaining Next.js automatic CSS handling', async () => {
+  it('should have comment explaining Next.js font handling', async () => {
     const fs = await import('fs/promises');
     const path = await import('path');
     
     const layoutPath = path.join(process.cwd(), 'src/app/[locale]/layout.tsx');
     const layoutContent = await fs.readFile(layoutPath, 'utf-8');
     
-    // 验证包含说明注释
-    expect(layoutContent).toContain('Next.js 自动处理 CSS 加载');
+    // 验证包含字体预加载说明注释
+    expect(layoutContent).toContain('next/font/google');
+    expect(layoutContent).toContain('字体预加载说明');
   });
 });

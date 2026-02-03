@@ -82,9 +82,9 @@ export default function Header() {
     <header
       className="fixed top-0 right-0 left-0 md:left-[64px] lg:left-[220px] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md z-40 h-16 border-b border-gray-200 dark:border-gray-800"
     >
-      <div className="h-full px-4 flex items-center justify-between">
-        {/* 搜索框 */}
-        <div className="relative flex-1 max-w-md" ref={searchRef}>
+      <div className="h-full px-4 flex items-center justify-center">
+        {/* 搜索框 - 居中显示 */}
+        <div className="relative w-full max-w-md" ref={searchRef}>
           <div className="relative">
             <input
               type="text"
@@ -154,8 +154,8 @@ export default function Header() {
           )}
         </div>
 
-        {/* 右侧：主题切换 + 语言切换 */}
-        <div className="flex items-center gap-3 ml-4">
+        {/* 右侧：主题切换 + 语言切换 - 绝对定位 */}
+        <div className="absolute right-4 flex items-center gap-3">
           <ThemeToggle />
 
           {/* 语言切换 */}

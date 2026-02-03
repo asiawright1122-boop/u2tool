@@ -73,9 +73,9 @@ export default function DataUri() {
         <button onClick={clear} className="px-4 py-2 bg-gray-500 dark:bg-gray-600 text-white rounded hover:bg-gray-600 dark:hover:bg-gray-700">{t('clear')}</button>
       </div>
       {dataUri && dataUri.startsWith('data:image') && (
-        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 min-h-[200px]">
           <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('dataUri.preview')}</p>
-          <img src={dataUri} alt="Preview" className="max-w-full max-h-64 mx-auto" />
+          <img src={dataUri} alt="Preview" className="max-w-full max-h-64 mx-auto" style={{ aspectRatio: 'auto' }} />
         </div>
       )}
     </div>

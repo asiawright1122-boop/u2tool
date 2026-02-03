@@ -32,32 +32,34 @@ export default function IpGeolocation() {
     setGeoData(null);
 
     try {
+      // 使用 ipapi.co - 支持 HTTPS 的免费 IP 地理位置 API
+      // 免费版本：每天 1000 次请求
       const url = targetIp 
-        ? `http://ip-api.com/json/${targetIp}?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query`
-        : `http://ip-api.com/json/?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query`;
+        ? `https://ipapi.co/${targetIp}/json/`
+        : `https://ipapi.co/json/`;
       
       const response = await fetch(url);
       const data = await response.json();
 
-      if (data.status === 'fail') {
-        setError(data.message || t('ip-geolocation.invalidIp'));
+      if (data.error) {
+        setError(data.reason || t('ip-geolocation.invalidIp'));
         return;
       }
 
       setGeoData({
-        ip: data.query,
-        country: data.country,
-        countryCode: data.countryCode,
-        region: data.region,
-        regionName: data.regionName,
-        city: data.city,
-        zip: data.zip,
-        lat: data.lat,
-        lon: data.lon,
-        timezone: data.timezone,
-        isp: data.isp,
-        org: data.org,
-        as: data.as,
+        ip: data.ip,
+        country: data.country_name,
+        countryCode: data.country_code,
+        region: data.region_code || '',
+        regionName: data.region || '',
+        city: data.city || '',
+        zip: data.postal || '',
+        lat: data.latitude,
+        lon: data.longitude,
+        timezone: data.timezone || '',
+        isp: data.org || '',
+        org: data.org || '',
+        as: data.asn ? `${data.asn} ${data.org || ''}` : '',
       });
     } catch {
       setError(t('ip-geolocation.lookupError'));

@@ -192,7 +192,10 @@ export default function OpenGraphPreview() {
           <img 
             src={image} 
             alt={title || 'Open Graph preview image'} 
-            className="w-full h-full object-cover" 
+            className="w-full h-full object-cover"
+            width={1200}
+            height={630}
+            style={{ aspectRatio: '1.91/1' }}
             onError={() => setImageError(true)} 
           />
         )}

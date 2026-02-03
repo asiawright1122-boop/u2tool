@@ -282,7 +282,7 @@ export default async function ToolPage({
           className="mb-6"
         />
 
-        {/* Tool Header */}
+        {/* Tool Header - LCP 区域，优先渲染 */}
         <div className="text-center mb-8">
           {/* 工具图标容器 - 固定尺寸防止 CLS */}
           <div className="tool-icon-container mx-auto mb-4">
@@ -294,7 +294,13 @@ export default async function ToolPage({
               {tool.icon}
             </span>
           </div>
-          <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">{toolName}</h1>
+          {/* 工具名称 - LCP 元素 */}
+          <h1 
+            className="text-3xl font-bold mb-2 text-gray-900 dark:text-white"
+            style={{ contentVisibility: 'auto' }}
+          >
+            {toolName}
+          </h1>
           <p className="text-gray-600 dark:text-gray-300 tool-description">{toolDescription}</p>
         </div>
 

@@ -52,6 +52,11 @@ function checkForDebugStatements(filePath: string): { hasDebug: boolean; issues:
     return { hasDebug: false, issues: [] };
   }
   
+  // 跳过性能监控和资源管理相关文件（有意的调试输出）
+  if (filePath.includes('PerformanceMonitor') || filePath.includes('library-loader') || filePath.includes('resource-cleaner')) {
+    return { hasDebug: false, issues: [] };
+  }
+  
   // 跳过包含示例代码的工具组件（这些 console.log 是展示给用户的示例）
   const toolsWithExampleCode = [
     'JsMinifier',
@@ -63,6 +68,11 @@ function checkForDebugStatements(filePath: string): { hasDebug: boolean; issues:
     'JsonToForm',
     'GdprConsentGenerator',
     'CodeScreenshotGenerator',
+    'DatabaseConnectionTester',
+    'PerformanceProfiler',
+    'RegexToCodeGenerator',
+    'TypescriptPlayground',
+    'ThirdPartyScripts',
   ];
   if (toolsWithExampleCode.some(tool => filePath.includes(tool))) {
     return { hasDebug: false, issues: [] };

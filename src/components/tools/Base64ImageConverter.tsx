@@ -210,8 +210,8 @@ export default function Base64ImageConverter() {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {t('preview')}
                 </label>
-                <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                  <img src={imagePreview} alt="Preview" className="max-w-full max-h-64 mx-auto" />
+                <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-900 min-h-[200px] flex items-center justify-center">
+                  <img src={imagePreview} alt="Preview" className="max-w-full max-h-64 mx-auto" style={{ aspectRatio: 'auto' }} />
                 </div>
               </div>
               <div>
@@ -281,8 +281,8 @@ export default function Base64ImageConverter() {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t('preview')}
               </label>
-              <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                <img src={imagePreview} alt="Decoded" className="max-w-full max-h-96 mx-auto" />
+              <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 bg-gray-50 dark:bg-gray-900 min-h-[200px] flex items-center justify-center">
+                <img src={imagePreview} alt="Decoded" className="max-w-full max-h-96 mx-auto" style={{ aspectRatio: 'auto' }} />
               </div>
               <div className="mt-4">
                 <button

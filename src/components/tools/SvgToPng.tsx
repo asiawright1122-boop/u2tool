@@ -167,7 +167,7 @@ export default function SvgToPng() {
           </label>
           <div className="border border-gray-300 dark:border-gray-600 rounded-lg p-4 min-h-64 flex items-center justify-center bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAADFJREFUOE9jZGBg+M+ABRw9epQRm3QYGxvDJRgZGRmxKcamBpsabGqwqcGmBpsabGoAAPvfB/1uTd4UAAAAAElFTkSuQmCC')]">
             {previewUrl ? (
-              <img src={previewUrl} alt="SVG Preview" className="max-w-full max-h-64" />
+              <img src={previewUrl} alt="SVG Preview" className="max-w-full max-h-64" style={{ aspectRatio: 'auto' }} />
             ) : (
               <span className="text-gray-400">{t('noPreview')}</span>
             )}

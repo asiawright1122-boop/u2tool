@@ -28,8 +28,11 @@ export default function HomePageClient() {
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-slate-500/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
               
               <div className="relative z-10 text-center">
-                {/* 标题 */}
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
+                {/* 标题 - LCP 元素，使用高优先级渲染 */}
+                <h1 
+                  className="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight"
+                  style={{ contentVisibility: 'auto' }}
+                >
                   {t('home.hero.title')}
                 </h1>
                 

@@ -177,11 +177,25 @@ export default function ColorBlindnessSimulator() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">{t('original')}</div>
-              <img src={image} alt="Original" className="w-full rounded-lg" />
+              <div className="relative min-h-[200px]" style={{ aspectRatio: 'auto' }}>
+                <img 
+                  src={image} 
+                  alt="Original" 
+                  className="w-full rounded-lg"
+                  style={{ aspectRatio: 'auto' }}
+                />
+              </div>
             </div>
             <div>
               <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">{t(`types.${selectedType}`)}</div>
-              <img src={image} alt="Simulated" className="w-full rounded-lg" style={getFilterStyle(selectedType)} />
+              <div className="relative min-h-[200px]" style={{ aspectRatio: 'auto' }}>
+                <img 
+                  src={image} 
+                  alt="Simulated" 
+                  className="w-full rounded-lg" 
+                  style={{ ...getFilterStyle(selectedType), aspectRatio: 'auto' }} 
+                />
+              </div>
             </div>
           </div>
         </div>

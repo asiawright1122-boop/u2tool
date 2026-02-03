@@ -2,6 +2,7 @@
 
 import { TOOL_COMPONENTS_MAP } from './ToolRegistry';
 import ToolErrorBoundary from './ToolErrorBoundary';
+import ToolSkeleton from './ToolSkeleton';
 import { useEffect, useState, useRef, useCallback, memo, startTransition } from 'react';
 import { trackToolLoad } from '@/components/PerformanceMonitor';
 import { getCachedComponent, cacheComponent } from '@/lib/component-cache';
@@ -13,20 +14,6 @@ type LoadingState = 'idle' | 'loading' | 'loaded' | 'error' | 'timeout';
 
 // 加载超时时间（毫秒）
 const LOAD_TIMEOUT = 10000;
-
-// 骨架屏组件
-function ToolSkeleton() {
-  return (
-    <div className="animate-pulse space-y-4 p-4">
-      <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-1/3"></div>
-      <div className="space-y-3">
-        <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
-        <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6"></div>
-        <div className="h-32 bg-gray-200 dark:bg-gray-700 rounded"></div>
-      </div>
-    </div>
-  );
-}
 
 // 错误显示组件
 function ToolError({ 

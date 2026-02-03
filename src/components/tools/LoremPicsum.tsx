@@ -193,12 +193,18 @@ export default function LoremPicsum() {
 
         <div className="space-y-4">
           <h3 className="font-medium text-gray-900 dark:text-gray-100">{t('preview')}</h3>
-          <div className="border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center min-h-[300px]">
+          <div 
+            className="border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center min-h-[300px]"
+            style={{ aspectRatio: `${width}/${height}` }}
+          >
             {imageUrl ? (
               <img
                 src={imageUrl}
                 alt="Generated placeholder"
+                width={width}
+                height={height}
                 className="max-w-full max-h-[400px] object-contain"
+                style={{ aspectRatio: `${width}/${height}` }}
               />
             ) : (
               <p className="text-gray-500 dark:text-gray-300">{t('noPreview')}</p>

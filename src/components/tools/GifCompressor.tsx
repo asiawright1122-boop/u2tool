@@ -201,7 +201,7 @@ export default function GifCompressor() {
                 <span className="text-sm text-gray-600 dark:text-gray-400">{formatSize(originalSize)}</span>
               </div>
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
-                <img src={originalGif} alt="Original GIF" className="max-w-full max-h-64 object-contain" />
+                <img src={originalGif} alt="Original GIF" className="max-w-full max-h-64 object-contain" style={{ aspectRatio: 'auto' }} />
               </div>
             </div>
             <div>
@@ -215,7 +215,7 @@ export default function GifCompressor() {
               </div>
               <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex items-center justify-center min-h-[200px]">
                 {compressedGif ? (
-                  <img src={compressedGif} alt="Compressed GIF" className="max-w-full max-h-64 object-contain" />
+                  <img src={compressedGif} alt="Compressed GIF" className="max-w-full max-h-64 object-contain" style={{ aspectRatio: 'auto' }} />
                 ) : (
                   <p className="text-gray-500">{t('compressFirst')}</p>
                 )}

@@ -16,6 +16,7 @@ import Footer from '@/components/layout/Footer';
 import GlobalSidebar from '@/components/layout/GlobalSidebar';
 import WebVitalsReporter from '@/components/WebVitalsReporter';
 import PerformanceMonitor from '@/components/PerformanceMonitor';
+import ThirdPartyScripts from '@/components/ThirdPartyScripts';
 import { criticalCSS } from '@/lib/critical-css';
 
 // Plus Jakarta Sans - 现代 SaaS 风格字体，友好、清洁、专业
@@ -229,12 +230,24 @@ export default async function LocaleLayout({
     // 动态设置 lang 属性，确保搜索引擎和辅助技术正确识别页面语言
     <html lang={locale} suppressHydrationWarning>
       <head>
-        {/* === 性能优化：DNS 预取和预连接 === */}
+        {/* === 性能优化：关键资源预加载 === */}
+        {/* 预连接到关键外部域名（限制 3 个以内，避免过多连接开销） */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* DNS 预取（低优先级，用于非关键资源） */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//hm.baidu.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
 
-
-        {/* Next.js 自动处理 CSS 加载，无需手动预加载 */}
+        {/* 
+          字体预加载说明：
+          Next.js 的 next/font/google 已自动处理字体预加载和优化：
+          - 自动生成 preload 链接
+          - 自动设置 font-display: swap
+          - 自动进行字体子集化
+          因此无需手动添加字体 preload 链接
+        */}
 
         {/* === 移动端优化：Apple 特定标签 === */}
         {/* Apple 启动画面（不同设备尺寸） */}
@@ -301,6 +314,10 @@ export default async function LocaleLayout({
             <WebVitalsReporter />
             {/* 性能监控（仅开发环境） */}
             <PerformanceMonitor />
+            {/* 第三方脚本优化加载（百度统计等） */}
+            <ThirdPartyScripts
+              baiduAnalyticsId={process.env.NEXT_PUBLIC_BAIDU_ANALYTICS_ID}
+            />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

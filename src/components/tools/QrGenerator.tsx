@@ -66,7 +66,14 @@ export default function QrGenerator() {
 
       {qrDataUrl && (
         <div className="flex justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
-          <img src={qrDataUrl} alt="QR Code" className="max-w-[300px]" />
+          <img 
+            src={qrDataUrl} 
+            alt="QR Code" 
+            width={300}
+            height={300}
+            className="max-w-[300px]"
+            style={{ aspectRatio: '1/1' }}
+          />
         </div>
       )}
     </div>

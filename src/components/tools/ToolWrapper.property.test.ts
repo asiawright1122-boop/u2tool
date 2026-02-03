@@ -8,7 +8,7 @@ import { getSkeletonVariant, SkeletonVariant } from './ToolSkeleton';
  * Property 1: Skeleton Loading Behavior
  * 验证所有工具都有对应的骨架屏变体
  * 
- * @see Requirements 1.1, 1.3
+ * @see Requirements 1.1, 1.3, 3.3, 3.5
  */
 
 describe('ToolWrapper Property Tests', () => {
@@ -54,10 +54,37 @@ describe('ToolWrapper Property Tests', () => {
       });
     });
 
+    it('encoding tools get converter skeleton variant', () => {
+      const encodingTools = tools.filter(tool => tool.category === 'encoding');
+      
+      encodingTools.forEach(tool => {
+        const variant = getSkeletonVariant(tool.category);
+        expect(variant).toBe('converter');
+      });
+    });
+
     it('generator tools get generator skeleton variant', () => {
       const generatorTools = tools.filter(tool => tool.category === 'generators');
       
       generatorTools.forEach(tool => {
+        const variant = getSkeletonVariant(tool.category);
+        expect(variant).toBe('generator');
+      });
+    });
+
+    it('math tools get generator skeleton variant', () => {
+      const mathTools = tools.filter(tool => tool.category === 'math');
+      
+      mathTools.forEach(tool => {
+        const variant = getSkeletonVariant(tool.category);
+        expect(variant).toBe('generator');
+      });
+    });
+
+    it('finance tools get generator skeleton variant', () => {
+      const financeTools = tools.filter(tool => tool.category === 'finance');
+      
+      financeTools.forEach(tool => {
         const variant = getSkeletonVariant(tool.category);
         expect(variant).toBe('generator');
       });
@@ -78,6 +105,60 @@ describe('ToolWrapper Property Tests', () => {
       devTools.forEach(tool => {
         const variant = getSkeletonVariant(tool.category);
         expect(variant).toBe('editor');
+      });
+    });
+
+    it('security tools get converter skeleton variant', () => {
+      const securityTools = tools.filter(tool => tool.category === 'security');
+      
+      securityTools.forEach(tool => {
+        const variant = getSkeletonVariant(tool.category);
+        expect(variant).toBe('converter');
+      });
+    });
+
+    it('image tools get default skeleton variant', () => {
+      const imageTools = tools.filter(tool => tool.category === 'image');
+      
+      imageTools.forEach(tool => {
+        const variant = getSkeletonVariant(tool.category);
+        expect(variant).toBe('default');
+      });
+    });
+
+    it('network tools get default skeleton variant', () => {
+      const networkTools = tools.filter(tool => tool.category === 'network');
+      
+      networkTools.forEach(tool => {
+        const variant = getSkeletonVariant(tool.category);
+        expect(variant).toBe('default');
+      });
+    });
+
+    it('office tools get default skeleton variant', () => {
+      const officeTools = tools.filter(tool => tool.category === 'office');
+      
+      officeTools.forEach(tool => {
+        const variant = getSkeletonVariant(tool.category);
+        expect(variant).toBe('default');
+      });
+    });
+
+    it('lifestyle tools get default skeleton variant', () => {
+      const lifestyleTools = tools.filter(tool => tool.category === 'lifestyle');
+      
+      lifestyleTools.forEach(tool => {
+        const variant = getSkeletonVariant(tool.category);
+        expect(variant).toBe('default');
+      });
+    });
+
+    it('fun tools get default skeleton variant', () => {
+      const funTools = tools.filter(tool => tool.category === 'fun');
+      
+      funTools.forEach(tool => {
+        const variant = getSkeletonVariant(tool.category);
+        expect(variant).toBe('default');
       });
     });
   });

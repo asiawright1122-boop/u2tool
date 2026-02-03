@@ -16,6 +16,13 @@
  * - 暗色模式基础样式
  */
 export const criticalCSS = `
+/* === LCP 优化 === */
+/* 确保 LCP 元素（标题）尽快渲染 */
+h1 {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 48px;
+}
+
 /* 骨架屏动画 */
 @keyframes pulse {
   0%, 100% { opacity: 1; }
@@ -33,6 +40,16 @@ export const criticalCSS = `
 
 .tool-error-boundary {
   min-height: 300px;
+}
+
+/* 工具 textarea 骨架屏样式 - 匹配实际 textarea 高度 */
+.tool-textarea-skeleton {
+  min-height: 8rem; /* 匹配 h-32 */
+}
+
+/* 图表预览区域骨架屏 - 匹配实际 400px 高度 */
+.h-\\[400px\\] {
+  height: 400px;
 }
 
 /* 工具图标容器固定尺寸防止 CLS */

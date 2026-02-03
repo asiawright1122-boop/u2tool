@@ -119,12 +119,16 @@
 }
 
 /* 毛玻璃卡片 - 悬停效果增强 */
+/* 性能优化：使用具体的过渡属性，避免布局属性动画 */
+/* @see Requirements 3.7 */
 .glass-card {
   @apply bg-white/60 dark:bg-gray-800/60 
          backdrop-blur-lg 
          border border-gray-200/50 dark:border-gray-700/50 
-         rounded-xl
-         transition-all duration-300 ease-out;
+         rounded-xl;
+  transition-property: background-color, border-color, box-shadow, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
 }
 
 .glass-card:hover {
@@ -135,6 +139,8 @@
 }
 
 /* 毛玻璃按钮 */
+/* 性能优化：使用具体的过渡属性，避免布局属性动画 */
+/* @see Requirements 3.7 */
 .glass-button {
   @apply px-4 py-2 
          bg-white/20 dark:bg-gray-800/30 
@@ -142,11 +148,12 @@
          border border-white/30 dark:border-gray-600/30 
          rounded-lg
          text-gray-900 dark:text-white
-         transition-all duration-200
          hover:bg-white/40 dark:hover:bg-gray-700/50
          hover:border-white/50 dark:hover:border-gray-500/50
          hover:shadow-lg hover:shadow-black/5
          active:scale-[0.98];
+  transition-property: background-color, border-color, box-shadow, transform;
+  transition-duration: 200ms;
 }
 
 /* 毛玻璃导航 */
@@ -162,8 +169,12 @@
  * ============================================ */
 
 /* 悬浮效果 - 轻微上浮 */
+/* 性能优化：只过渡 transform 和 box-shadow */
+/* @see Requirements 3.7 */
 .hover-lift {
-  @apply transition-all duration-300 ease-out;
+  transition-property: transform, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
 }
 
 .hover-lift:hover {
@@ -171,8 +182,11 @@
 }
 
 /* 发光效果 */
+/* 性能优化：只过渡 box-shadow */
+/* @see Requirements 3.7 */
 .hover-glow {
-  @apply transition-all duration-300;
+  transition-property: box-shadow;
+  transition-duration: 300ms;
 }
 
 .hover-glow:hover {
@@ -180,8 +194,12 @@
 }
 
 /* 边框高亮 */
+/* 性能优化：只过渡 border-color 和 box-shadow */
+/* @see Requirements 3.7 */
 .hover-border-glow {
-  @apply transition-all duration-300 border border-transparent;
+  @apply border border-transparent;
+  transition-property: border-color, box-shadow;
+  transition-duration: 300ms;
 }
 
 .hover-border-glow:hover {
@@ -253,9 +271,12 @@
 }
 
 /* Button styles - 使用 transform 优化动画 */
+/* 性能优化：只过渡 background-color 和 transform */
+/* @see Requirements 3.7 */
 .btn-primary {
-  @apply px-4 py-2 bg-blue-600 text-white rounded-lg 
-         transition-all duration-200 font-medium;
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg font-medium;
+  transition-property: background-color, transform;
+  transition-duration: 200ms;
 }
 
 .btn-primary:hover {
@@ -264,8 +285,9 @@
 }
 
 .btn-secondary {
-  @apply px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg 
-         transition-all duration-200 font-medium;
+  @apply px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg font-medium;
+  transition-property: background-color, transform;
+  transition-duration: 200ms;
 }
 
 .btn-secondary:hover {
@@ -378,12 +400,15 @@
  * ============================================ */
 
 /* 侧边栏分类项 */
+/* 性能优化：只过渡 background-color 和 color */
+/* @see Requirements 3.7 */
 .sidebar-item {
   @apply flex items-center gap-3 px-3 py-2.5 rounded-lg 
-         transition-all duration-200
          text-gray-600 dark:text-gray-400 
          hover:bg-gray-100 dark:hover:bg-gray-800 
          hover:text-gray-900 dark:hover:text-white;
+  transition-property: background-color, color;
+  transition-duration: 200ms;
 }
 
 /* 侧边栏分类项 - 活动状态 */
@@ -460,8 +485,10 @@
  * ============================================ */
 
 /* 主内容区域 - 响应式边距 */
+/* 性能优化：移除 margin 过渡，避免布局偏移 */
+/* @see Requirements 3.7 */
 .main-content {
-  @apply transition-all duration-300;
+  /* 不使用过渡动画，避免布局属性动画导致 CLS */
 }
 
 /* 桌面端：左侧边栏展开 */
@@ -494,27 +521,39 @@
  * ============================================ */
 
 /* 网格视图卡片 */
+/* 性能优化：只过渡 border-color 和 box-shadow */
+/* @see Requirements 3.7 */
 .tool-card-grid {
   @apply p-4 bg-white dark:bg-gray-800/50 
          border border-gray-200 dark:border-gray-700/50 
-         rounded-xl transition-all duration-200
+         rounded-xl
          hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10;
+  transition-property: border-color, box-shadow;
+  transition-duration: 200ms;
 }
 
 /* 列表视图卡片 */
+/* 性能优化：只过渡 border-color 和 background-color */
+/* @see Requirements 3.7 */
 .tool-card-list {
   @apply p-4 bg-white dark:bg-gray-800/50 
          border border-gray-200 dark:border-gray-700/50 
-         rounded-lg transition-all duration-200
+         rounded-lg
          hover:border-blue-500/50 hover:bg-gray-50 dark:hover:bg-gray-800;
+  transition-property: border-color, background-color;
+  transition-duration: 200ms;
 }
 
 /* 紧凑视图卡片 */
+/* 性能优化：只过渡 border-color */
+/* @see Requirements 3.7 */
 .tool-card-compact {
   @apply p-2 bg-white dark:bg-gray-800/50 
          border border-gray-200 dark:border-gray-700/50 
-         rounded-lg transition-all duration-200
+         rounded-lg
          hover:border-blue-500/50;
+  transition-property: border-color;
+  transition-duration: 200ms;
 }
 
 /* 热门工具徽章 */
@@ -618,39 +657,49 @@
   @apply block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300;
 }
 
+/* 性能优化：只过渡 background-color, border-color, box-shadow */
+/* @see Requirements 3.7 */
 .tool-input {
   @apply w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-900
          border border-gray-200 dark:border-gray-700
-         rounded-lg outline-none transition-all duration-200
+         rounded-lg outline-none
          placeholder:text-gray-400 dark:placeholder:text-gray-500
          focus:bg-white dark:focus:bg-gray-800
          focus:border-blue-500 dark:focus:border-blue-500
          focus:ring-2 focus:ring-blue-500/20;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 200ms;
 }
 
 .tool-textarea {
   @apply w-full px-4 py-3 bg-gray-50 dark:bg-gray-900
          border border-gray-200 dark:border-gray-700
-         rounded-lg outline-none transition-all duration-200
+         rounded-lg outline-none
          placeholder:text-gray-400 dark:placeholder:text-gray-500
          focus:bg-white dark:focus:bg-gray-800
          focus:border-blue-500 dark:focus:border-blue-500
          focus:ring-2 focus:ring-blue-500/20
          font-mono text-sm leading-relaxed;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 200ms;
 }
 
 .tool-textarea-tall {
   @apply tool-textarea min-h-[200px];
 }
 
+/* 性能优化：只过渡 background-color, border-color, box-shadow */
+/* @see Requirements 3.7 */
 .tool-select {
   @apply w-full px-4 py-2.5 bg-gray-50 dark:bg-gray-900
          border border-gray-200 dark:border-gray-700
-         rounded-lg outline-none transition-all duration-200
+         rounded-lg outline-none
          cursor-pointer appearance-none
          focus:bg-white dark:focus:bg-gray-800
          focus:border-blue-500 dark:focus:border-blue-500
          focus:ring-2 focus:ring-blue-500/20;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 200ms;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
   background-position: right 0.75rem center;
   background-repeat: no-repeat;
@@ -665,10 +714,14 @@
          font-mono text-sm text-gray-600 dark:text-gray-300;
 }
 
+/* 性能优化：只过渡 box-shadow 和 border-color */
+/* @see Requirements 3.7 */
 .tool-card {
   @apply p-6 bg-white dark:bg-gray-800 
          border border-gray-200 dark:border-gray-700 
-         rounded-xl shadow-sm transition-all duration-200;
+         rounded-xl shadow-sm;
+  transition-property: box-shadow, border-color;
+  transition-duration: 200ms;
 }
 
 .tool-btn-group {
@@ -676,3 +729,80 @@
 }
 
 
+
+/* ============================================
+ * Image CLS Prevention Styles
+ * 防止图片加载时的布局偏移
+ * @see Requirements 3.1, 1.4
+ * ============================================ */
+
+/* 图片容器 - 预留空间防止 CLS */
+.img-container {
+  @apply relative overflow-hidden;
+  contain: layout;
+}
+
+/* 固定宽高比容器 */
+.img-container-1x1 {
+  aspect-ratio: 1 / 1;
+}
+
+.img-container-16x9 {
+  aspect-ratio: 16 / 9;
+}
+
+.img-container-4x3 {
+  aspect-ratio: 4 / 3;
+}
+
+.img-container-og {
+  aspect-ratio: 1.91 / 1; /* Open Graph 标准比例 */
+}
+
+/* 图片加载占位符 */
+.img-placeholder {
+  @apply absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse;
+}
+
+/* 图片加载完成后的淡入效果 */
+.img-fade-in {
+  @apply transition-opacity duration-300;
+}
+
+.img-fade-in.loading {
+  @apply opacity-0;
+}
+
+.img-fade-in.loaded {
+  @apply opacity-100;
+}
+
+/* 响应式图片容器 - 保持宽高比 */
+.img-responsive {
+  @apply w-full h-auto;
+  aspect-ratio: auto;
+}
+
+/* 预览图片容器 - 固定最大尺寸 */
+.img-preview {
+  @apply max-w-full max-h-64 object-contain;
+  aspect-ratio: auto;
+}
+
+/* 缩略图容器 - 固定尺寸 */
+.img-thumbnail {
+  @apply w-20 h-20 object-cover rounded;
+  aspect-ratio: 1 / 1;
+}
+
+/* 骨架屏变体 - 用于图片加载 */
+.skeleton-img {
+  @apply bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse;
+  min-height: 100px;
+}
+
+/* 图片错误占位符 */
+.img-error-placeholder {
+  @apply flex items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-lg text-gray-400;
+  min-height: 100px;
+}

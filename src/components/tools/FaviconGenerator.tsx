@@ -173,11 +173,12 @@ export default function FaviconGenerator() {
       {originalImage && (
         <div className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
           <label className="text-sm font-medium text-gray-700 dark:text-gray-300 block mb-2">{t('original')}</label>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center min-h-[192px]">
             <img
               src={originalImage}
               alt="Original"
               className="max-w-full max-h-48 object-contain"
+              style={{ aspectRatio: 'auto' }}
             />
           </div>
         </div>
@@ -215,10 +216,12 @@ export default function FaviconGenerator() {
                 key={favicon.size}
                 className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center"
               >
-                <div className="flex items-center justify-center h-20 mb-2">
+                <div className="flex items-center justify-center h-20 mb-2" style={{ aspectRatio: '1/1' }}>
                   <img
                     src={favicon.dataUrl}
                     alt={`${favicon.size}x${favicon.size}`}
+                    width={Math.min(favicon.size, 64)}
+                    height={Math.min(favicon.size, 64)}
                     style={{ width: Math.min(favicon.size, 64), height: Math.min(favicon.size, 64) }}
                     className="pixelated"
                   />

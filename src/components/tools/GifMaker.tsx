@@ -206,10 +206,13 @@ export default function GifMaker() {
                 className={`relative group w-20 h-20 ${
                   index === previewFrame ? 'ring-2 ring-blue-500' : ''
                 }`}
+                style={{ aspectRatio: '1/1' }}
               >
                 <img
                   src={frame.dataUrl}
                   alt={`Frame ${index + 1}`}
+                  width={80}
+                  height={80}
                   className="w-full h-full object-cover rounded border border-gray-200 dark:border-gray-700"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity rounded flex items-center justify-center gap-1">
@@ -271,8 +274,16 @@ export default function GifMaker() {
       {result && (
         <div className="space-y-2">
           <h3 className="font-medium">{t('result')}</h3>
-          <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex justify-center">
-            <img src={result} alt="GIF Result" className="max-w-full max-h-96 rounded" />
+          <div 
+            className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex justify-center"
+            style={{ minHeight: '200px' }}
+          >
+            <img 
+              src={result} 
+              alt="GIF Result" 
+              className="max-w-full max-h-96 rounded"
+              style={{ aspectRatio: 'auto' }}
+            />
           </div>
         </div>
       )}

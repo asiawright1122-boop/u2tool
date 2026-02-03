@@ -11,18 +11,33 @@ import { getSkeletonVariant, SkeletonVariant } from './ToolSkeleton';
 describe('getSkeletonVariant', () => {
   describe('category to variant mapping', () => {
     const testCases: Array<{ category: string; expected: SkeletonVariant }> = [
+      // 图表类
       { category: 'charts', expected: 'chart' },
+      
+      // 转换类
       { category: 'converters', expected: 'converter' },
       { category: 'encoders', expected: 'converter' },
+      { category: 'encoding', expected: 'converter' },
+      { category: 'security', expected: 'converter' },
+      
+      // 编辑器类
       { category: 'formatters', expected: 'editor' },
+      { category: 'text', expected: 'editor' },
+      { category: 'development', expected: 'editor' },
+      
+      // 生成器类
       { category: 'generators', expected: 'generator' },
       { category: 'calculators', expected: 'generator' },
+      { category: 'math', expected: 'generator' },
+      { category: 'finance', expected: 'generator' },
+      
+      // 通用类
       { category: 'validators', expected: 'default' },
-      { category: 'text', expected: 'editor' },
       { category: 'image', expected: 'default' },
-      { category: 'security', expected: 'converter' },
       { category: 'network', expected: 'default' },
-      { category: 'development', expected: 'editor' },
+      { category: 'office', expected: 'default' },
+      { category: 'lifestyle', expected: 'default' },
+      { category: 'fun', expected: 'default' },
     ];
 
     testCases.forEach(({ category, expected }) => {
@@ -51,9 +66,9 @@ describe('getSkeletonVariant', () => {
 
     it('all returned variants are valid SkeletonVariant types', () => {
       const categories = [
-        'charts', 'converters', 'encoders', 'formatters', 'generators',
+        'charts', 'converters', 'encoders', 'encoding', 'formatters', 'generators',
         'calculators', 'validators', 'text', 'image', 'security',
-        'network', 'development', 'unknown'
+        'network', 'development', 'math', 'finance', 'office', 'lifestyle', 'fun', 'unknown'
       ];
 
       categories.forEach((category) => {
