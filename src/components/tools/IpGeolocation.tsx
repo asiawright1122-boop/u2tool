@@ -31,37 +31,82 @@ export default function IpGeolocation() {
     setError('');
     setGeoData(null);
 
+    // 尝试多个 API，如果一个失败就尝试下一个
+    const apis = [
+      // 主 API: ipapi.co (支持 HTTPS，每天 1000 次)
+      {
+        url: targetIp 
+          ? `https://ipapi.co/${targetIp}/json/`
+          : `https://ipapi.co/json/`,
+        parse: (data: any) => {
+          if (data.error) throw new Error(data.reason || 'Invalid IP');
+          return {
+            ip: data.ip,
+            country: data.country_name,
+            countryCode: data.country_code,
+            region: data.region_code || '',
+            regionName: data.region || '',
+            city: data.city || '',
+            zip: data.postal || '',
+            lat: data.latitude,
+            lon: data.longitude,
+            timezone: data.timezone || '',
+            isp: data.org || '',
+            org: data.org || '',
+            as: data.asn ? `${data.asn} ${data.org || ''}` : '',
+          };
+        }
+      },
+      // 备用 API: ipwho.is (支持 HTTPS，无限制)
+      {
+        url: targetIp 
+          ? `https://ipwho.is/${targetIp}`
+          : `https://ipwho.is/`,
+        parse: (data: any) => {
+          if (!data.success) throw new Error(data.message || 'Invalid IP');
+          return {
+            ip: data.ip,
+            country: data.country,
+            countryCode: data.country_code,
+            region: data.region_code || '',
+            regionName: data.region || '',
+            city: data.city || '',
+            zip: data.postal || '',
+            lat: data.latitude,
+            lon: data.longitude,
+            timezone: data.timezone?.id || '',
+            isp: data.connection?.isp || '',
+            org: data.connection?.org || '',
+            as: data.connection?.asn ? `AS${data.connection.asn} ${data.connection.org || ''}` : '',
+          };
+        }
+      },
+    ];
+
     try {
-      // 使用 ipapi.co - 支持 HTTPS 的免费 IP 地理位置 API
-      // 免费版本：每天 1000 次请求
-      const url = targetIp 
-        ? `https://ipapi.co/${targetIp}/json/`
-        : `https://ipapi.co/json/`;
-      
-      const response = await fetch(url);
-      const data = await response.json();
-
-      if (data.error) {
-        setError(data.reason || t('ip-geolocation.invalidIp'));
-        return;
+      for (const api of apis) {
+        try {
+          const response = await fetch(api.url, {
+            headers: {
+              'Accept': 'application/json',
+            },
+          });
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          
+          const data = await response.json();
+          const result = api.parse(data);
+          setGeoData(result);
+          return; // 成功，退出循环
+        } catch (err) {
+          console.warn('API failed:', api.url, err);
+          continue; // 尝试下一个 API
+        }
       }
-
-      setGeoData({
-        ip: data.ip,
-        country: data.country_name,
-        countryCode: data.country_code,
-        region: data.region_code || '',
-        regionName: data.region || '',
-        city: data.city || '',
-        zip: data.postal || '',
-        lat: data.latitude,
-        lon: data.longitude,
-        timezone: data.timezone || '',
-        isp: data.org || '',
-        org: data.org || '',
-        as: data.asn ? `${data.asn} ${data.org || ''}` : '',
-      });
-    } catch {
+      
+      // 所有 API 都失败了
       setError(t('ip-geolocation.lookupError'));
     } finally {
       setLoading(false);
