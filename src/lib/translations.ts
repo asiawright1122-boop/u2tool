@@ -108,57 +108,20 @@ export async function loadToolMessages(
 
 /**
  * v2 模式：从拆分文件加载工具翻译
+ * 
+ * 注意：v2 模式已禁用（Vercel 磁盘空间不足）
+ * 此函数保留用于未来可能的重新启用
+ * 使用动态路径避免 TypeScript 编译时检查不存在的文件
  */
 async function loadToolMessagesV2(
   locale: SupportedLocale,
   toolSlug: string,
   cacheKey: string
 ): Promise<Messages> {
-  let toolMeta: Messages = {};
-  let toolDetail: Messages = {};
-  
-  // 1. 从 tools-index.json 加载元数据
-  try {
-    const toolsIndex = (await import(`@/messages/${locale}/v2/tools-index.json`)).default as Record<string, Messages>;
-    if (toolsIndex[toolSlug]) {
-      toolMeta = toolsIndex[toolSlug];
-    }
-  } catch {
-    // 回退到英文
-    if (locale !== 'en') {
-      try {
-        const toolsIndex = (await import(`@/messages/en/v2/tools-index.json`)).default as Record<string, Messages>;
-        if (toolsIndex[toolSlug]) {
-          toolMeta = toolsIndex[toolSlug];
-        }
-      } catch {
-        // 忽略
-      }
-    }
-  }
-  
-  // 2. 从 tools/{slug}.json 加载详细内容
-  try {
-    toolDetail = (await import(`@/messages/${locale}/v2/tools/${toolSlug}.json`)).default;
-  } catch {
-    // 回退到英文
-    if (locale !== 'en') {
-      try {
-        toolDetail = (await import(`@/messages/en/v2/tools/${toolSlug}.json`)).default;
-      } catch {
-        // 忽略
-      }
-    }
-  }
-  
-  // 3. 合并
-  const mergedMessages: Messages = {
-    ...toolDetail,
-    ...toolMeta,
-  };
-  
-  translationCache.set(cacheKey, mergedMessages);
-  return mergedMessages;
+  // v2 模式已禁用，直接回退到 v1
+  // 如果需要重新启用，请先运行 scripts/split-translations-v2.ts 生成文件
+  console.warn('v2 translation mode is disabled, falling back to v1');
+  return loadToolMessagesV1(locale, toolSlug, cacheKey);
 }
 
 /**
