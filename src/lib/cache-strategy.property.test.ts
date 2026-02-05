@@ -140,7 +140,8 @@ describe('Cache Strategy Property Tests', () => {
      * **Validates: Requirements 8.3**
      */
     it('API responses should support stale-while-revalidate', () => {
-      expect(nextConfigContent).toContain('stale-while-revalidate=300');
+      // 更新后的配置使用 86400 秒（24小时）的 stale-while-revalidate
+      expect(nextConfigContent).toContain('stale-while-revalidate=86400');
     });
   });
 

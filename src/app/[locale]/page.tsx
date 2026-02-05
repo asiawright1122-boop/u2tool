@@ -9,7 +9,28 @@ import {
   getHomepageFAQs,
   jsonLdToString
 } from '@/lib/seo';
+import { routing } from '@/i18n/routing';
 import HomePageClient from './HomePageClient';
+
+/**
+ * ISR 配置 - 30 天重新验证
+ * 
+ * 首页内容相对稳定，设置 30 天的 revalidate 时间
+ * 
+ * @see Requirements 1.3 - 优化 ISR 配置减少 Fast Origin Transfer
+ */
+export const revalidate = 2592000; // 30 天 = 30 * 24 * 60 * 60
+
+/**
+ * 生成静态参数，为每个语言生成首页
+ * 
+ * 预生成所有 10 种语言的首页
+ * 
+ * @see Requirements 2.3 - 增加静态生成页面数量
+ */
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

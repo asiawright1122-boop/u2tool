@@ -305,6 +305,7 @@ describe('LCP Optimization Property Tests', () => {
      * **Validates: Requirements 5.1, 5.2, 5.5**
      * 
      * 验证第三方脚本不影响 LCP
+     * 注意：已迁移到 Cloudflare Workers，移除了 Vercel Analytics
      */
 
     it('Google Analytics uses @next/third-parties for optimized loading', () => {
@@ -312,12 +313,10 @@ describe('LCP Optimization Property Tests', () => {
       expect(layoutContent).toContain("@next/third-parties/google");
     });
 
-    it('analytics scripts are placed after body content', () => {
-      // 验证分析脚本在 body 内容之后，不阻塞 LCP
-      const bodyCloseIndex = layoutContent.indexOf('</body>');
-      const analyticsIndex = layoutContent.indexOf('<Analytics');
-      
-      expect(analyticsIndex).toBeGreaterThan(bodyCloseIndex);
+    it('does not use Vercel-specific analytics (migrated to Cloudflare)', () => {
+      // 已迁移到 Cloudflare，不应包含 Vercel 专用组件
+      expect(layoutContent).not.toContain("@vercel/analytics");
+      expect(layoutContent).not.toContain("<Analytics");
     });
 
     it('Google Analytics is conditionally loaded', () => {

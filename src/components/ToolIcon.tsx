@@ -1,4 +1,5 @@
 import { iconRegistry, DefaultIcon } from '@/config/iconRegistry';
+import { cloneElement, isValidElement } from 'react';
 
 interface ToolIconProps {
     slug: string;
@@ -9,22 +10,14 @@ interface ToolIconProps {
 export default function ToolIcon({ slug, emoji, className = "w-6 h-6" }: ToolIconProps) {
     const icon = iconRegistry[slug];
 
-    if (icon) {
+    if (icon && isValidElement(icon)) {
+        // Clone the lucide-react icon element and apply className
         return (
             <div className={className}>
-                {/* Clone element to add className if needed, though usually className is on wrapper */}
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-full h-full"
-                >
-                    {icon.props.children}
-                </svg>
+                {cloneElement(icon, {
+                    className: "w-full h-full",
+                    strokeWidth: 2,
+                })}
             </div>
         );
     }

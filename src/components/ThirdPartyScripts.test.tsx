@@ -151,34 +151,13 @@ describe('Layout Integration', () => {
   });
 
   /**
-   * **Validates: Requirements 5.5**
-   * 验证第三方脚本在 body 之后加载
+   * 验证已迁移到 Cloudflare Workers，不再使用 Vercel 专用组件
    */
-  it('should load analytics scripts after body content', () => {
-    const bodyCloseIndex = layoutContent.indexOf('</body>');
-    const gaIndex = layoutContent.indexOf('<GoogleAnalytics');
-    const analyticsIndex = layoutContent.indexOf('<Analytics');
-    
-    expect(gaIndex).toBeGreaterThan(bodyCloseIndex);
-    expect(analyticsIndex).toBeGreaterThan(bodyCloseIndex);
-  });
-
-  /**
-   * **Validates: Requirements 5.1**
-   * 验证 Vercel Analytics 正确配置
-   */
-  it('should use official Vercel Analytics', () => {
-    expect(layoutContent).toContain("@vercel/analytics/react");
-    expect(layoutContent).toContain("<Analytics");
-  });
-
-  /**
-   * **Validates: Requirements 5.1**
-   * 验证 Vercel Speed Insights 正确配置
-   */
-  it('should use official Vercel Speed Insights', () => {
-    expect(layoutContent).toContain("@vercel/speed-insights/next");
-    expect(layoutContent).toContain("<SpeedInsights");
+  it('should not use Vercel-specific analytics (migrated to Cloudflare)', () => {
+    expect(layoutContent).not.toContain("@vercel/analytics");
+    expect(layoutContent).not.toContain("@vercel/speed-insights");
+    expect(layoutContent).not.toContain("<Analytics");
+    expect(layoutContent).not.toContain("<SpeedInsights");
   });
 });
 

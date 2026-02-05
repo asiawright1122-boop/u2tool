@@ -3,6 +3,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
+// Cloudflare Workers 开发环境初始化
+// 仅在开发模式下初始化，生产构建由 opennextjs-cloudflare 处理
+if (process.env.NODE_ENV === 'development') {
+  const { initOpenNextCloudflareForDev } = require('@opennextjs/cloudflare');
+  initOpenNextCloudflareForDev();
+}
+
 /**
  * Next.js 配置
  * 
@@ -15,6 +22,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
  * - @see src/app/[locale]/tools/[slug]/page.tsx
  * - @see https://vercel.link/build-log-size-limit
  * 
+ * 部署平台：Cloudflare Workers (via @opennextjs/cloudflare)
+ * @see .kiro/specs/vercel-to-cloudflare-migration/
  * @see .kiro/specs/middleware-size-optimization/
  */
 
@@ -65,6 +74,7 @@ const nextConfig = {
   },
 
   // 性能优化：HTTP 头部缓存策略
+  // @see Requirements 3.1, 15.1, 15.2 - 优化 HTTP 缓存头减少 Fast Data Transfer
   async headers() {
     return [
       {
@@ -88,22 +98,38 @@ const nextConfig = {
         ],
       },
       {
-        // HTML 页面缓存（24小时，可重新验证7天）
+        // HTML 页面缓存（7天，可重新验证30天）
+        // 从 24 小时延长到 7 天，显著减少 Fast Data Transfer
         source: '/:locale(en|zh|es|pt|ja|ko|fr|de|ru|ar)/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, stale-while-revalidate=604800',
+            value: 'public, max-age=604800, stale-while-revalidate=2592000',
+          },
+          {
+            // Vercel CDN 专用缓存控制头（不会返回给浏览器）
+            key: 'Vercel-CDN-Cache-Control',
+            value: 'public, max-age=604800, stale-while-revalidate=2592000',
           },
         ],
       },
       {
-        // API 路由缓存
+        // API 路由缓存（1小时，可重新验证24小时）
+        // 从 1 分钟延长到 1 小时
         source: '/api/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=60, stale-while-revalidate=300',
+            value: 'public, max-age=3600, stale-while-revalidate=86400',
+          },
+          {
+            key: 'Vercel-CDN-Cache-Control',
+            value: 'public, max-age=3600, stale-while-revalidate=86400',
+          },
+          {
+            // 添加 Vary 头防止缓存污染
+            key: 'Vary',
+            value: 'Accept-Encoding',
           },
         ],
       },

@@ -2,12 +2,13 @@
  * 动态 OG 图片生成 API
  * 使用 Next.js ImageResponse 生成 1200x630 像素的 OG 图片
  * @see Requirements 2.4 - OG 图片缓存优化
+ * 
+ * 注意：已移除 Edge Runtime 声明以兼容 Cloudflare Workers
+ * OpenNext 会自动处理运行时环境
  */
 
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
-
-export const runtime = 'edge';
 
 // OG 图片尺寸
 const OG_WIDTH = 1200;

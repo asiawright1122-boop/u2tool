@@ -38,19 +38,55 @@ const ToolFAQ = dynamic(() => import('@/components/ToolFAQ'), {
   loading: () => <div className="h-32 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />,
 });
 
-// 生成静态参数（仅预渲染热门工具，减少构建日志大小）
-// 非热门工具将在首次访问时按需生成并缓存
-// @see https://vercel.link/build-log-size-limit
+/**
+ * ISR 配置 - 30 天重新验证
+ * 
+ * 设置较长的 revalidate 时间以减少 Fast Origin Transfer：
+ * - 工具页面内容很少变化
+ * - 30 天后才会重新生成页面
+ * - 配合 stale-while-revalidate 策略，用户始终能快速获取内容
+ * 
+ * @see Requirements 1.1 - 优化 ISR 配置减少 Fast Origin Transfer
+ */
+export const revalidate = 2592000; // 30 天 = 30 * 24 * 60 * 60
+
+/**
+ * 生成静态参数 - 扩展预生成范围
+ * 
+ * 优化策略：
+ * 1. 预生成前 3 种语言（en, zh, ja）的所有工具页面
+ * 2. 预生成其他语言的热门工具页面
+ * 
+ * 这样可以：
+ * - 减少 ISR Writes（首次访问不需要生成）
+ * - 减少 Fast Origin Transfer（页面已在边缘缓存）
+ * - 保持构建时间在合理范围内
+ * 
+ * @see Requirements 2.1, 2.5 - 增加静态生成页面数量
+ */
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
-  // 仅预渲染热门工具，减少构建时间和日志大小
-  // 其他工具将通过 dynamicParams = true 按需生成
-  const popularTools = tools.filter(t => t.popular);
-  for (const locale of routing.locales) {
-    for (const tool of popularTools) {
+  
+  // 优先语言列表（流量最大的 3 种语言）
+  const priorityLocales = ['en', 'zh', 'ja'];
+  
+  // 1. 预生成优先语言的所有工具页面
+  for (const locale of priorityLocales) {
+    for (const tool of tools) {
       params.push({ locale, slug: tool.slug });
     }
   }
+  
+  // 2. 预生成其他语言的热门工具页面
+  const popularTools = tools.filter(t => t.popular);
+  for (const locale of routing.locales) {
+    if (!priorityLocales.includes(locale)) {
+      for (const tool of popularTools) {
+        params.push({ locale, slug: tool.slug });
+      }
+    }
+  }
+  
   return params;
 }
 

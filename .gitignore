@@ -31,6 +31,11 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# Cloudflare Workers
+.dev.vars
+.open-next
+.wrangler
+
 # Vercel
 .vercel
 

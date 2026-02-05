@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/routing';
+import { routing } from '@/i18n/routing';
 import { 
   SEO_CONFIG, 
   generateAlternates, 
@@ -13,10 +14,32 @@ import {
 import { categories, getToolsByCategory, ToolCategory } from '@/config/tools';
 
 /**
- * 生成静态参数，为每个分类生成页面
+ * ISR 配置 - 7 天重新验证
+ * 
+ * 分类页面内容相对稳定，设置 7 天的 revalidate 时间
+ * 
+ * @see Requirements 1.2 - 优化 ISR 配置减少 Fast Origin Transfer
+ */
+export const revalidate = 604800; // 7 天 = 7 * 24 * 60 * 60
+
+/**
+ * 生成静态参数，为每个分类和语言组合生成页面
+ * 
+ * 预生成所有分类页面（所有 10 种语言）
+ * 
+ * @see Requirements 2.2 - 增加静态生成页面数量
  */
 export function generateStaticParams() {
-  return categories.map((cat) => ({ id: cat.id }));
+  const params: { locale: string; id: string }[] = [];
+  
+  // 预生成所有语言的所有分类页面
+  for (const locale of routing.locales) {
+    for (const category of categories) {
+      params.push({ locale, id: category.id });
+    }
+  }
+  
+  return params;
 }
 
 /**
