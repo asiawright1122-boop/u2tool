@@ -1,17 +1,0 @@
-{
-  "detailed_description": "Le trieur de texte permet de classer des lignes de données selon des critères algorithmiques précis. Techniquement, il implémente des algorithmes de tri tels que le tri par ordre lexicographique Unicode, le tri numérique basé sur l'analyse des valeurs décimales, et le tri par longueur de chaîne via la fonction de calcul de la cardinalité UTF-8. Pour les données numériques mixtes, le moteur détecte automatiquement les motifs (entiers, décimaux, notation scientifique) et applique un parsing en virgule flottante avant le tri. Les utilisateurs peuvent contrôler la sensibilité à la casse, l'élimination des espaces blancs via le paramètre 'Trim', et choisir entre des tris stables ou instables selon leurs besoins. Ce dernier est particulièrement utile pour les développeurs qui doivent organiser des logs serveur, préparer des datasets pour l'analyse statistique, ou structurer des listes de balayage DNS. Le traitement se fait ligne par ligne via un analyseur de terminaison (\n, \r\n,  ), avec option de suppression des doublons grâce à une table de hachage temporaire. La sortie conserve les formats d'origine grâce à un mécanisme de reconstruction des séparateurs.",
-  "usage_steps": [
-    "Collez votre texte brut dans la zone d'édition multi-lignes en utilisant Ctrl+V ou le bouton 'Importer'",
-    "Sélectionnez l'ordre de tri (croissant/décroissant) via le menu déroulant 'Direction du tri'",
-    "Activez/désactivez l'option 'Sensible à la casse' selon vos besoins en collation Unicode",
-    "Choisissez le mode de tri : 'Alphabétique', 'Numérique' ou 'Par longueur' dans le sélecteur principal",
-    "Cochez 'Nettoyer les espaces' pour supprimer les espaces en début/fin de ligne avant le tri",
-    "Cliquez sur 'Exécuter le tri' et récupérez le résultat avec le bouton 'Copier tout' ou 'Télécharger'"
-  ],
-  "usage_examples": [
-    "Classer des logs Apache par horodatage en format ISO 8601 pour diagnostiquer des erreurs chronologiques",
-    "Organiser une liste de SKUs e-commerce selon la longueur des codes-barres pour l'intégration API",
-    "Trier des adresses IP en notation CIDR pour l'analyse de routage réseau",
-    "Préparer un jeu de données CSV en supprimant les doublons et en ordonnant les valeurs numériques pour un apprentissage machine"
-  ]
-}
