@@ -120,7 +120,6 @@ async function loadToolMessagesV2(
 ): Promise<Messages> {
   // v2 模式已禁用，直接回退到 v1
   // 如果需要重新启用，请先运行 scripts/split-translations-v2.ts 生成文件
-  console.warn('v2 translation mode is disabled, falling back to v1');
   return loadToolMessagesV1(locale, toolSlug, cacheKey);
 }
 

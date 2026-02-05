@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "dev:turbo": "next dev --turbopack",
+    "dev:cf": "wrangler dev --local",
     "build": "next build",
+    "build:cf": "npx @opennextjs/cloudflare build",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
@@ -22,7 +24,9 @@
     "submit:baidu": "npx ts-node scripts/submit-urls.ts --engine=baidu",
     "submit:indexnow": "npx ts-node scripts/submit-urls.ts --engine=indexnow",
     "submit:all": "npx ts-node scripts/submit-urls.ts --engine=all",
-    "submit:dry-run": "npx ts-node scripts/submit-urls.ts --engine=all --dry-run"
+    "submit:dry-run": "npx ts-node scripts/submit-urls.ts --engine=all --dry-run",
+    "deploy:cf": "npm run build:cf && wrangler deploy",
+    "deploy:cf:preview": "npm run build:cf && wrangler deploy --env preview"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",
