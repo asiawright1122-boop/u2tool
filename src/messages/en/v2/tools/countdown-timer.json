@@ -1,0 +1,31 @@
+{
+  "detailed_description": "Online Countdown Timer is a feature-rich timing tool that supports custom hours, minutes, and seconds. Provides common preset times like 1 minute, 5 minutes, 10 minutes, 15 minutes, 30 minutes, and 1 hour for quick one-click setup. During countdown, displays a beautiful circular progress bar showing remaining time ratio. Sends browser notification when countdown ends (requires permission). Supports pause, resume, and reset functions. Perfect for Pomodoro technique, cooking timing, break reminders, and more.",
+  "usage_steps": [
+    "Open the Countdown Timer tool page",
+    "Select a preset time or manually enter hours, minutes, seconds",
+    "Click the green 'Start' button to begin countdown",
+    "Watch the circular progress bar for remaining time",
+    "Click 'Pause' to pause the countdown",
+    "You'll receive a notification when countdown ends"
+  ],
+  "usage_examples": [
+    "25-minute focus sessions for Pomodoro technique",
+    "Set cooking times for eggs, noodles, etc.",
+    "Meeting or presentation time control",
+    "Break reminders to get up and move"
+  ],
+  "faqs": [
+    {
+      "question": "Will I get a reminder when countdown ends?",
+      "answer": "Yes, a browser notification is sent when countdown ends. On first use, the browser will ask permission for notifications - please allow to enable the reminder feature."
+    },
+    {
+      "question": "How long can I set the timer for?",
+      "answer": "Supports any combination of 0-23 hours, 0-59 minutes, and 0-59 seconds. Maximum countdown is 23:59:59."
+    },
+    {
+      "question": "Can I continue after pausing?",
+      "answer": "Yes. After clicking pause, the countdown maintains its current state. Click 'Resume' to continue from where you paused."
+    }
+  ]
+}

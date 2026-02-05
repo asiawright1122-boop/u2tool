@@ -1,0 +1,31 @@
+{
+  "detailed_description": "El Cronómetro Online es una herramienta de cronometraje precisa con una precisión de hasta la centésima de segundo (10 milisegundos). Soporta funciones de inicio, detención, reinicio y vueltas. La función de vueltas graba múltiples tiempos de segmento y marca automáticamente las vueltas más rápidas y más lentas. Muestra el tiempo individual de cada vuelta y el tiempo total acumulado. Interfaz limpia e intuitiva con fuente grande para una fácil visualización. Adecuado para entrenamiento deportivo, cronometraje de cocción, cronometraje de estudios y varios otros escenarios. Todos los cronometrajes ocurren localmente en tu navegador, sin conexión a internet necesaria.",
+  "usage_steps": [
+    "Abre la página del herramienta Cronómetro",
+    "Haz clic en el botón verde 'Iniciar' para comenzar a cronometrar",
+    "Haz clic en 'Vuelta' durante el cronometraje para registrar los tiempos de segmento",
+    "Haz clic en el botón rojo 'Detener' para pausar el cronometraje",
+    "Haz clic en 'Iniciar' nuevamente para continuar el cronometraje",
+    "Haz clic en 'Reiniciar' para borrar todos los registros"
+  ],
+  "usage_examples": [
+    "Registrar vueltas y tiempos durante el entrenamiento deportivo",
+    "Cronometraje preciso mientras se cocina",
+    "Cronometraje de la técnica Pomodoro para estudiar",
+    "Probar cuánto tiempo toma completar tareas"
+  ],
+  "faqs": [
+    {
+      "question": "¿Cuál es la precisión del cronómetro?",
+      "answer": "La precisión del cronómetro es de 10 milisegundos (una centésima de segundo), mostrada como minutos:segundos.centésimas, suficiente para las necesidades de cronometraje diarias."
+    },
+    {
+      "question": "¿Se guardan los registros de vueltas?",
+      "answer": "Los registros de vueltas se borran cuando se recarga la página. Si necesitas guardar los registros, recomendamos registrarlos manualmente o tomar capturas de pantalla después de su uso."
+    },
+    {
+      "question": "¿Cómo se marcan las vueltas más rápidas y más lentas?",
+      "answer": "Cuando se graban 2 o más vueltas, el sistema automáticamente marca la vuelta más rápida con 🏆 y la más lenta con 🐢, ayudándote a analizar el rendimiento."
+    }
+  ]
+}

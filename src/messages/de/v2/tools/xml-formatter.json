@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der XML Formatter ist ein spezialisierter Online-Editor zur strukturellen Optimierung von XML-Dokumenten. Technisch gesehen analysiert das Tool XML-Code durch einen SAX-Parser, identifiziert syntaktische Inkonsistenzen und formatiert den Inhalt entsprechend der XML 1.0 Spezifikation. Bei der Formatierung werden Namespaces korrekt berücksichtigt, CDATA-Sektionen beibehalten und Attribute lexikographisch sortiert. Die Minify-Funktion entfernt überflüssige Leerzeichen, Kommentare und Zeilenumbrüche, ohne die semantische Integrität zu gefährden. Entwickler benötigen dieses Tool, um XML-Daten für Systemintegrationen präzise zu validieren, Debugging-Prozesse zu beschleunigen oder Datenübertragungen zu optimieren. Die Validierung erzeugt detaillierte Fehlerberichte mit Zeilennummern und spezifischen Fehlercodes wie 'mismatched-tag' oder 'invalid-character'. Technisch basiert das Tool auf einem clientseitig kompilierten WebAssembly-Modul, das XML-Operationen nativ ausführt, wodurch sensible Daten niemals den Browser verlassen.",
+  "usage_steps": [
+    "Öffnen Sie die XML Formatter Seite und klicken Sie auf 'Neues Dokument' im Header-Bereich.",
+    "Fügen Sie Ihren XML-Code in das linke Bearbeitungsfeld oder laden Sie eine .xml-Datei über den 'Datei hochladen' Button.",
+    "Aktivieren Sie die 'Syntaxvalidierung' Checkbox, um Fehler wie fehlende End-Tags oder ungültige Zeichen zu identifizieren.",
+    "Passen Sie die Formatierungsoptionen an: Wählen Sie Einzugstiefe (2-8 Leerzeichen), Attribute sortieren und CDATA-Beibehaltung.",
+    "Klicken Sie auf 'Formatieren' um den strukturierten XML-Output im rechten Panel zu generieren oder 'Minify' für kompakte Darstellung.",
+    "Laden Sie das Ergebnis über den 'Download XML' Button herunter oder kopieren Sie den Code über die Zwischenablage-Schaltfläche."
+  ],
+  "usage_examples": [
+    "Ein Entwickler validiert einen RSS-Feed mit Namespaces vor der Integration in eine Webanwendung, um fehlende media:content-Tags zu erkennen.",
+    "Ein Systemadministrator formatiert eine 100MB große server.xml Konfigurationsdatei mit Einzugstiefe 4 und deaktiviert Kommentarentfernung zur besseren Lesbarkeit.",
+    "Ein Data Engineer minifiziert XML-Daten für eine AWS Lambda-Funktion, um die Payload-Größenbeschränkung von 6MB einzuhalten.",
+    "Ein QA-Tester analysiert ein von einem IoT-Gerät generiertes XML-Dokument auf Syntaxfehler nach einem Firmware-Update, das nicht escapte Umlaute enthält."
+  ]
+}

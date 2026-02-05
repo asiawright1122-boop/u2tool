@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Text-zu-Binär-Konverter realisiert die bidirektionale Transformation zwischen Zeichenketten und binären Daten durch Anwendung von ASCII- und UTF-8-Codierungsschemata. Technisch gesehen führt das Tool bei Text-zu-Binär-Konvertierung eine Byteweise Abbildung durch: Jedes Zeichen wird entsprechend der RFC 3629-Spezifikation in eine Folge von 8-Bit-Oktetten umgewandelt, wobei Multi-Byte-Zeichen wie Unicode-SMP-Glyphen korrekt verarbeitet werden. Bei der Rücktransformation analysiert der Decoder die Binärsequenz auf gültige UTF-8-Framestrukturen, prüft Paritätsbits und rekonstruiert unter Berücksichtigung von Endianness die ursprünglichen Codepoints. Dieses Werkzeug ist unverzichtbar für Entwickler, die Netzwerkprotokolle debuggen, Embedded-Systeme programmieren oder Speicherlayouts analysieren. Anwender können präzise Steuerzeichen wie NUL-Terminatoren visualisieren, Bitmuster für Hardware-Register konfigurieren oder Rohdaten aus TCP/IP-Paketen decodieren. Die Implementierung nutzt WebAssembly-basierte Bitmanipulationsroutinen für Echtzeitverarbeitung ohne Serverkommunikation, wobei sowohl Little-Endian als auch Big-Endian-Repräsentationen wählbar sind.",
+  "usage_steps": [
+    "1. Eingabefeld 'Quelldaten' mit Klartext oder Hexdump-Inhalt füllen",
+    "2. Codierungsvorgabe im Dropdown-Menü zwischen ASCII, UTF-8 und EBCDIC wählen",
+    "3. Konvertierungsmodus durch Aktivierung des 'Text → Binär' oder 'Binär → Text' Toggle-Schalters setzen",
+    "4. Byte-Trennzeichen (Leerzeichen, Komma oder Doppelpunkt) im Format-Panel anpassen",
+    "5. 'Starte Konvertierung' Schaltfläche klicken, um maschinenlesbaren Output zu generieren",
+    "6. Ergebnis im Ausgabefeld kopieren oder über 'Datei exportieren' als .bin-Datei speichern"
+  ],
+  "usage_examples": [
+    "Ein IoT-Entwickler analysiert Sensordaten im Hexdump-Format und konvertiert spezifische Bytebereiche zurück in lesbare ASCII-Werte",
+    "Ein Sicherheitsforscher decodiert Base64-kodierte Payloads aus Malware-Kommunikation in Rohbytes für Memory Forensics",
+    "Ein FPGA-Programmierer erstellt initialisierte Memory-Blocks durch Konvertierung von Konfigurationstexten in Bitmuster",
+    "Ein Spiele-Emulator-Entwickler vergleicht ROM-Inhalte durch bidirektionale Konvertierung von Hex-Cheats in ASCII-Strings"
+  ]
+}

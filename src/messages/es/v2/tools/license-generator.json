@@ -1,0 +1,28 @@
+{
+  "detailed_description": "El Generador de Licencias te ayuda a crear archivos de licencia para tus proyectos de código abierto. Elige entre licencias populares como MIT, Apache 2.0, GPL 3.0, BSD 2-Clause, BSD 3-Clause, ISC, Mozilla Public License, y más. Ingresa tu nombre y la herramienta llena automáticamente el año y genera el texto de licencia completo. Cada licencia incluye una breve descripción de sus términos para ayudarte a elegir la adecuada para tu proyecto.",
+  "usage_steps": [
+    "Explora las licencias disponibles y sus descripciones",
+    "Selecciona la licencia que se adapte a tus necesidades",
+    "Ingresa tu nombre o organización",
+    "El año actual se llena automáticamente",
+    "Haz clic en Generar para crear la licencia",
+    "Copia el texto de la licencia en tu archivo LICENSE"
+  ],
+  "usage_examples": [
+    "Agrega una licencia MIT a un nuevo paquete npm",
+    "Elige Apache 2.0 para un proyecto de código abierto corporativo",
+    "Selecciona GPL para un proyecto de copyleft",
+    "Utiliza ISC para una licencia permisiva simple"
+  ],
+  "authorPlaceholder": "Juan Pérez",
+  "yearPlaceholder": "2024",
+  "selectLicense": "Seleccionar licencia",
+  "permissions": "Permisos",
+  "conditions": "Condiciones",
+  "none": "Ninguno",
+  "limitations": "Limitaciones",
+  "author": "Autor",
+  "year": "Año",
+  "generate": "Generar",
+  "download": "Descargar"
+}

@@ -1,0 +1,27 @@
+{
+  "input": "Entrée JSON",
+  "output": "Résultat",
+  "copy": "Copier",
+  "mode": "Mode",
+  "flatten": "Platifier",
+  "unflatten": "Déplatifier",
+  "delimiter": "Délimiteur",
+  "process": "Traiter",
+  "inputPlaceholder": "Coller votre JSON ici...",
+  "outputPlaceholder": "Le résultat apparaîtra ici...",
+  "detailed_description": "Le JSON Flattener est un outil technique permettant de transformer des objets JSON hiérarchiques en structures linéaires ou de restaurer des données aplaties à leur format imbriqué initial. Il utilise des algorithmes récursifs pour analyser chaque niveau de profondeur d'un JSON, convertissant les chemins d'accès imbriqués en clés textuelles avec notation paramétrable (ex: \"user.address.zip\" ou \"user[address][zip]\"). Cette opération est essentielle pour l'ingestion de données dans des bases non relationnelles, la normalisation de logs ou la simplification de schémas complexes pour l'analyse BI. Le processus inverse (unflatten) reconstruit la structure originale en interprétant les délimiteurs comme des indicateurs de hiérarchie. L'outil gère automatiquement les types de données (chaînes, nombres, booléens) et préserve les métadonnées grâce à une désambiguïsation contextuelle des clés. Les développeurs l'utilisent notamment pour migrer des données entre formats de stockage, préparer des exports CSV/TSV ou déboguer des réponses d'API complexes.",
+  "usage_steps": [
+    "Collez votre JSON dans la zone de texte principale ou chargez un fichier via le bouton 'Importer'.",
+    "Sélectionnez 'Aplatir' ou 'Désaplatir' selon votre objectif dans le menu déroulant 'Mode'.",
+    "Choisissez un délimiteur personnalisé (points, crochets, etc.) ou conservez le format par défaut.",
+    "Activez l'option 'Conserver les types' pour préserver les booléens/nombres lors de l'aplatissage.",
+    "Cliquez sur 'Traiter JSON' pour exécuter la transformation.",
+    "Téléchargez le résultat via le bouton 'Exporter' ou copiez-le depuis la zone de sortie."
+  ],
+  "usage_examples": [
+    "Transformer une réponse API imbriquée (ex: données géolocalisées) en un format linéaire pour l'import dans une base de données relationnelle.",
+    "Normaliser des logs JSON hétérogènes provenant de microservices pour un pipeline ETL uniforme.",
+    "Convertir un schéma JSON complexe en dictionnaire plat pour simplifier la validation avec JSON Schema.",
+    "Préparer des données hiérarchiques pour l'analyse dans des outils BI qui requièrent des structures tabulaires."
+  ]
+}

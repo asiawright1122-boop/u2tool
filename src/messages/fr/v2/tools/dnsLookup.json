@@ -1,0 +1,18 @@
+{
+  "placeholder": "Saisissez le domaine (par exemple, example.com)",
+  "lookup": "Chercher",
+  "loading": "En levant les yeux...",
+  "error": "La recherche a échoué",
+  "ipError": "Veuillez saisir un nom de domaine et non une adresse IP. Exemple : google.com",
+  "recordTypes": "Types d'enregistrements",
+  "records": "{type} Enregistrements",
+  "ttl": "TTL: {ttl}s",
+  "recordDesc": {
+    "A": "IPv4 address",
+    "AAAA": "IPv6 address",
+    "CNAME": "Nom canonique",
+    "MX": "Échange de courrier",
+    "NS": "Serveur de noms",
+    "TXT": "Enregistrement de texte"
+  }
+}

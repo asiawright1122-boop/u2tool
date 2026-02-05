@@ -1,0 +1,32 @@
+{
+  "ipAddress": "Dirección IP",
+  "results": "Detalles de Subred",
+  "networkAddress": "Dirección de Red",
+  "broadcastAddress": "Dirección de Broadcast",
+  "firstHost": "Primer Host",
+  "lastHost": "Último Host",
+  "subnetMask": "Máscara de Subred",
+  "wildcardMask": "Máscara Wildcard",
+  "totalHosts": "Total de Hosts",
+  "usableHosts": "Hosts Utilizables",
+  "privateIp": "IP Privada",
+  "publicIp": "IP Pública",
+  "class": "Clase",
+  "invalidIp": "Dirección IP inválida",
+  "invalidCidr": "Notación CIDR inválida",
+  "detailed_description": "El Subnet Calculator Enhanced es una herramienta técnica diseñada para realizar cálculos de subredes IPv4 e IPv6 con precisión, incluyendo direcciones de red, broadcast, rango de hosts utilizables, máscara de subred y cantidad de hosts por subred. Permite a ingenieros de red y desarrolladores realizar subnetting mediante notación CIDR (Classless Inter-Domain Routing) o máscaras decimales, compatible con técnicas como VLSM (Variable Length Subnet Masking) para optimización de espacio de direcciones. La herramienta convierte internamente la IP ingresada a formato binario, aplica operaciones lógicas AND entre la dirección IP y la máscara de subred para determinar la red base, y calcula los límites superior e inferior del rango de hosts. Es indispensable para diseñar topologías de red eficientes, evitar conflictos de direcciones en entornos híbridos (nube/local), y validar configuraciones en dispositivos de capa 3. A diferencia de otras, soporta cálculos avanzados para redes IPv6 con prefijos /64, /120, y análisis de bloques de subred superpuestos.",
+  "usage_steps": [
+    "1. Ingresa una dirección IP válida (ej: 192.168.10.45) en el campo 'Dirección IP'.",
+    "2. Selecciona la versión de IP (IPv4 o IPv6) usando el botón de alternancia 'Versión'.",
+    "3. Introduce el prefijo CIDR (ej: /24) o la máscara de subred (ej: 255.255.255.0) en el campo correspondiente.",
+    "4. Activa la opción 'Cálculo VLSM' si deseas dividir la red en subredes de tamaño variable.",
+    "5. Haz clic en el botón 'Calcular Subred' para procesar los datos.",
+    "6. Revisa los resultados detallados: red base, broadcast, rango de hosts, y tabla de subredes en formato CIDR."
+  ],
+  "usage_examples": [
+    "Un administrador segmenta una red corporativa en subredes para departamentos (ventas, TI, marketing) usando VLSM, asegurando eficiencia en el uso de IPs.",
+    "Un desarrollador configura una VPC en AWS con subredes privadas y públicas, verificando rangos de IPs no solapados.",
+    "Un estudiante practica ejercicios de subnetting para exámenes de certificación CCNA, validando cálculos manuales contra los resultados de la herramienta.",
+    "Un ingeniero de DevOps planifica una infraestructura con IPv6, comprobando bloques de direcciones /64 para redes de contenedores."
+  ]
+}

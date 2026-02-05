@@ -1,0 +1,37 @@
+{
+  "detailed_description": "Der GitHub README-Generator hilft Ihnen, professionelle, gut strukturierte README.md-Dateien für Ihre GitHub-Repositorys zu erstellen. Fügen Sie den Projekt-Titel, die Beschreibung, Badges (Build-Status, Lizenz, npm-Version), eine Liste der Funktionen, Installationsanweisungen, Beispiele, API-Dokumentation, Richtlinien für die Mitarbeit und Lizenzinformationen hinzu. Das Tool generiert Markdown mit korrekter Formatierung, wodurch Ihre Projekte besser entdeckbar und benutzerfreundlicher werden.",
+  "usage_steps": [
+    "Geben Sie den Namen und die Beschreibung Ihres Projekts ein",
+    "Fügen Sie Badges für den Build-Status, die Lizenz usw. hinzu",
+    "Listen Sie die wichtigsten Funktionen Ihres Projekts auf",
+    "Schreiben Sie Installationsanweisungen",
+    "Fügen Sie Beispiele mit Code-Blöcken hinzu",
+    "Fügen Sie Richtlinien für die Mitarbeit hinzu",
+    "Wählen Sie eine Lizenz aus und generieren Sie die README-Datei"
+  ],
+  "usage_examples": [
+    "Erstellen Sie eine README-Datei für eine Open-Source-Bibliothek",
+    "Dokumentieren Sie ein CLI-Tool mit Beispielen",
+    "Richten Sie eine README-Datei für eine Webanwendung ein",
+    "Erstellen Sie eine Dokumentation für ein API-Projekt"
+  ],
+  "projectNamePlaceholder": "Mein Tolles Projekt",
+  "descriptionPlaceholder": "Eine kurze Beschreibung Ihres Projekts...",
+  "authorPlaceholder": "Max Mustermann",
+  "authorGithubPlaceholder": "maxmustermann",
+  "featurePlaceholder": "Funktionsbeschreibung...",
+  "installationPlaceholder": "npm install your-package",
+  "usagePlaceholder": "import { something } from 'your-package';",
+  "projectName": "Projektname",
+  "author": "Autor",
+  "authorGithub": "Autor GitHub",
+  "badges": "Abzeichen",
+  "features": "Funktionen",
+  "addFeature": "Funktion hinzufügen",
+  "installation": "Installation",
+  "usage": "Verwendung",
+  "license": "Lizenz",
+  "includeTableOfContents": "Inhaltsverzeichnis einschließen",
+  "generate": "Generieren",
+  "download": "Herunterladen"
+}

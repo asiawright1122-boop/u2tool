@@ -177,6 +177,7 @@ const EChartsWrapper = forwardRef<EChartsWrapperRef, EChartsWrapperProps>(
           components.RadarComponent,
           components.ParallelComponent,
           components.AriaComponent,
+          components.SingleAxisComponent,
           features.LabelLayout,
           features.UniversalTransition,
           CanvasRenderer,

@@ -1,0 +1,20 @@
+{
+  "detailed_description": "El Generador de Cajas de Relación de Aspecto crea código CSS para contenedores responsivos que mantienen una relación de ancho a alto específica independientemente del tamaño de la pantalla. Elija entre presets comunes como 16:9, 4:3, 1:1 o ingrese relaciones personalizadas. La herramienta genera tanto CSS moderno utilizando la propiedad de relación de aspecto como un fallback de padding-bottom para navegadores más antiguos. Perfecto para incrustaciones de video, marcadores de posición de imagen, diseños de tarjeta y cualquier elemento que necesite mantener proporciones. Obtenga código CSS limpio y compatible con varios navegadores de forma instantánea y sin registro.",
+  "usage_steps": [
+    "Ingrese la relación o seleccione un preset",
+    "Elija el método de CSS",
+    "Vista previa",
+    "Copie el CSS"
+  ],
+  "usage_examples": [
+    "Crea contenedores de video",
+    "Diseña marcos de imagen responsivos"
+  ],
+  "preview": "Vista Previa",
+  "width": "Ancho",
+  "height": "Alto",
+  "aspectRatioProperty": "Propiedad Aspect Ratio",
+  "paddingMethod": "Método Padding",
+  "paddingNote": "Nota: El método padding es para navegadores antiguos",
+  "method": "Método"
+}

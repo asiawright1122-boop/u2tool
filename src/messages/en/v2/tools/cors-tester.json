@@ -1,0 +1,38 @@
+{
+  "detailed_description": "The CORS Tester is a specialized diagnostic utility that enables developers to validate and debug Cross-Origin Resource Sharing (CORS) policies implemented by web servers. This tool sends customizable HTTP requests containing specific origin headers to test how servers respond with CORS metadata such as Access-Control-Allow-Origin, Access-Control-Allow-Methods, and Access-Control-Allow-Headers. It analyzes preflight OPTIONS requests and actual request responses to determine compliance with W3C CORS specifications. Developers need this tool to identify misconfigurations causing blocked cross-origin requests in web applications, particularly when integrating APIs, building SPAs, or deploying microservices. The tool displays raw response headers, calculates CORS compliance scores, and highlights security vulnerabilities like overly permissive wildcard configurations. Technically, it operates by spoofing origin headers, simulating browser preflight checks, and parsing server responses against RFC 6454 standards to provide actionable diagnostic reports.",
+  "usage_steps": [
+    "1. Enter the target URL in the 'Endpoint' input field",
+    "2. Select the desired HTTP method (GET/POST/PUT/DELETE/OPTIONS) from the dropdown menu",
+    "3. Configure custom headers in the key-value table (e.g., Content-Type, Authorization)",
+    "4. Click 'Send Request' to initiate the CORS test sequence",
+    "5. Review the 'Raw Response' tab containing complete HTTP transaction details",
+    "6. Check the 'CORS Analysis' panel for compliance verification and security recommendations"
+  ],
+  "usage_examples": [
+    "Example 1: A frontend developer troubleshoots a 403 error from a React app by testing different origin headers against their Node.js API",
+    "Example 2: A DevOps engineer verifies AWS S3 bucket CORS policies before deploying a static website integration",
+    "Example 3: An API maintainer checks if their Django application correctly handles preflight requests with custom authentication headers",
+    "Example 4: A security auditor identifies insecure 'Access-Control-Allow-Origin: *' headers on legacy endpoints during a penetration test"
+  ],
+  "url": "URL to Test",
+  "origin": "Origin",
+  "method": "Method",
+  "test": "Test CORS",
+  "results": "Results",
+  "corsHeaders": "CORS Headers",
+  "allowed": "Allowed",
+  "notAllowed": "Not Allowed",
+  "urlPlaceholder": "https://api.example.com/endpoint",
+  "urlToTest": "URL to Test",
+  "testCors": "Test CORS",
+  "loadExample": "Load Example",
+  "whatIsCors": "What is CORS?",
+  "corsExplanation": "Cross-Origin Resource Sharing (CORS) is a security feature that controls how web pages can request resources from different domains.",
+  "corsBlocked": "CORS Blocked",
+  "corsBlockedDescription": "The request was blocked by CORS policy",
+  "corsEnabled": "CORS Enabled",
+  "corsEnabledAll": "CORS enabled for all origins",
+  "corsEnabledNoHeader": "CORS enabled (no Access-Control-Allow-Origin header)",
+  "testing": "Testing...",
+  "unknown": "Unknown"
+}

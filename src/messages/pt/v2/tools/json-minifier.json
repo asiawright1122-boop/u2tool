@@ -1,0 +1,18 @@
+{
+  "detailed_description": "O JSON Minifier é uma ferramenta especializada para otimização de dados estruturados no formato JSON, realizando a remoção de espaços em branco redundantes, quebras de linha e caracteres não essenciais sem comprometer a integridade sintática. Tecnicamente, o processo envolve a análise léxica (tokenização) do documento JSON, identificação de elementos descartáveis (como comentários e formatação estética) e reestruturação do Abstract Syntax Tree (AST) para gerar uma saída compactada. Essa redução de tamanho é crítica em aplicações web onde a latência de rede afeta performance, como APIs RESTful ou transmissão de payloads em SPAs (Single Page Applications). Além disso, desenvolvedores que trabalham com armazenamento limitado (ex.: localStorage) ou transmissão de dados em ambientes de baixa banda (IoT) se beneficiam da compressão eficiente. A ferramenta valida previamente a sintaxe JSON, assegurando que o resultado minificado mantenha a funcionalidade original, mesmo após a eliminação de 80-90% do volume inicial.",
+  "usage_steps": [
+    "Acesse a página do JSON Minifier no site através da barra de navegação ou busca rápida.",
+    "Cole seu código JSON no campo de texto centralizado, ou arraste um arquivo .json para a área de upload.",
+    "Ative a opção 'Comprimir Chaves' para transformar nomes de propriedades longos em identificadores mínimos, quando aplicável.",
+    "Marque 'Preservar Estrutura' se precisar manter arrays/objetos em linhas separadas para legibilidade parcial.",
+    "Clique no botão 'Minificar' para iniciar o processamento baseado em algoritmos de parsing recursivo.",
+    "Copie o JSON otimizado da caixa de saída ou use o botão 'Download' para salvar o arquivo compactado em formato .min.json."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor reduz de 5MB para 1,2MB o payload de uma API de geolocalização, acelerando respostas em uma aplicação móvel.",
+    "Um engenheiro de dados minifica logs JSON armazenados em S3, economizando custos de armazenamento em nuvem.",
+    "Um front-end otimiza um arquivo de tradução multilíngua para carregamento instantâneo em um PWA, eliminando 75% dos caracteres não essenciais.",
+    "Um integrador de sistemas prepara um webhook para transmissão em rede corporativa com limitação de banda, garantindo entrega confiável sem overhead."
+  ],
+  "inputPlaceholder": "Insira o texto aqui..."
+}

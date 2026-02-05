@@ -1,0 +1,30 @@
+{
+  "detailed_description": "Le Générateur de Texture Bruitée crée des motifs de bruit personnalisables pour ajouter une texture à vos designs. Choisissez parmi le bruit aléatoire, les motifs similaires à Perlin ou les effets de grain de pellicule. Adaptez l'intensité, l'échelle et les couleurs pour créer un superposés de texture parfait pour des arrière-plans, des cartes ou tout élément de design nécessitant un intérêt visuel subtil.",
+  "usage_steps": [
+    "Sélectionnez le type de bruit : aléatoire, de Perlin ou de grain",
+    "Adaptez l'intensité de la visibilité du bruit",
+    "Définissez l'échelle pour la taille du motif",
+    "Choisissez les couleurs de base et de bruit",
+    "Sélectionnez la taille de sortie",
+    "Téléchargez en PNG ou copiez l'URL de données"
+  ],
+  "usage_examples": [
+    "Ajouter du grain de film aux images d'accroche",
+    "Créer des arrière-plans de cartes texturés",
+    "Concevoir des superpositions à l'ancienne mode"
+  ],
+  "noiseType": "Noise Type",
+  "types": {
+    "random": "Random",
+    "perlin": "Perlin",
+    "grain": "Grain"
+  },
+  "intensity": "Intensity",
+  "scale": "Scale",
+  "size": "Size",
+  "baseColor": "Base Color",
+  "noiseColor": "Noise Color",
+  "regenerate": "Regenerate",
+  "copyDataUrl": "Copy Data URL",
+  "usage": "Usage"
+}

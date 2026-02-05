@@ -1,0 +1,26 @@
+{
+  "input": "JSON Input",
+  "output": "Swift Output",
+  "convert": "Convert",
+  "copy": "Copy",
+  "structName": "Struct Name",
+  "useCodable": "Use Codable",
+  "inputPlaceholder": "Paste JSON here...",
+  "outputPlaceholder": "Swift structs will appear here...",
+  "errorInvalidJson": "// Error: Invalid JSON input",
+  "detailed_description": "The JSON to Swift tool automates the generation of type-safe Swift structs from JSON payloads using advanced type inference algorithms. By analyzing JSON structure and value patterns, the tool accurately maps primitive types (String, Int, Double, Bool), array collections, and nested objects to corresponding Swift data models. It leverages Swift's Codable protocol architecture to create structs with proper type annotations, including optional handling (T?), array generics ([T]), and enum representations for fixed-value fields. Developers benefit from reduced manual coding errors when implementing API response models, local data persistence structures, or third-party SDK integrations. The tool's intelligent schema detection resolves ambiguous type cases through context-aware analysis, while preserving JSON key naming conventions through customizable coding keys. Output includes properly indented Swift syntax with configurable access modifiers (public/internal/private) and optional documentation comment stubs, ensuring seamless integration into Xcode projects targeting iOS, macOS, or server-side Swift environments.",
+  "usage_steps": [
+    "Paste raw JSON data into the syntax-highlighted input editor",
+    "Adjust the 'Struct Prefix' field to add custom命名空间 identifiers",
+    "Select desired access control level from the 'Visibility' dropdown menu",
+    "Toggle 'Include Documentation Comments' for empty comment templates",
+    "Click the 'Generate Swift Struct' button to execute conversion",
+    "Copy the formatted Swift code from the output panel using the clipboard icon"
+  ],
+  "usage_examples": [
+    "Creating type-safe models for REST API responses in an iOS weather application",
+    "Generating data transfer objects (DTOs) for Firebase Firestore document mapping",
+    "Converting complex nested JSON from a GraphQL API into queryable Swift structs",
+    "Building configuration models from dynamic JSON settings files in macOS apps"
+  ]
+}

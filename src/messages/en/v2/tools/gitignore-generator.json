@@ -1,0 +1,22 @@
+{
+  "detailed_description": "The .gitignore Generator is a precision tool for creating version-control-compliant exclusion rules that prevent unwanted files from entering Git repositories. This utility automates the generation of .gitignore files by combining template-based patterns with user-defined parameters, addressing common pain points in repository management. Developers need this tool to systematically exclude transient files like OS-generated artifacts (e.g., .DS_Store, Thumbs.db), build outputs (e.g., /dist, /tmp), and dependency directories (e.g., node_modules, vendor). The generator leverages Git's pattern matching syntax, supporting wildcards (*), negation (!), and directory-specific rules (/) to create hierarchical exclusion logic. Users select project-specific configurations through a structured interface that maps to canonical .gitignore templates maintained by the Git community. Advanced features include framework-specific boilerplate integration (e.g., React, Django) and cross-platform compatibility checks that account for OS-specific path conventions. The output is a validated .gitignore file that adheres to Git's rule prioritization hierarchy, ensuring that higher-level repository settings don't override critical exclusion patterns.",
+  "usage_steps": [
+    "1. Select your project type from a structured taxonomy (e.g., 'Web App', 'Machine Learning', 'Game Engine')",
+    "2. Check language-specific boxes (JavaScript, Python, Rust) to include corresponding exclusion patterns",
+    "3. Choose framework-specific configurations (React, Django, Unity) for specialized ignore rules",
+    "4. Enable OS-specific exclusions (macOS, Windows, Linux) to filter platform-dependent artifacts",
+    "5. Customize advanced options like version control nesting level and artifact directory depth",
+    "6. Click 'Generate' to compile and download your tailored .gitignore file with syntax validation"
+  ],
+  "usage_examples": [
+    "1. Full-stack JavaScript developer combines Node.js server and React client templates to exclude both /node_modules and /build directories",
+    "2. Data scientist generates a Python-specific .gitignore that excludes virtual environments (.venv) and Jupyter notebook checkpoints",
+    "3. Game developer using Unity adds engine-specific patterns to ignore Editor.log files and AssetStoreTools directory",
+    "4. DevOps engineer creates a multi-environment .gitignore that excludes both Docker build artifacts and Terraform state files"
+  ],
+  "languages": "Languages",
+  "frameworks": "Frameworks",
+  "os": "Operating Systems",
+  "custom": "Custom Rules",
+  "customPlaceholder": "Add custom rules..."
+}

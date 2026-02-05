@@ -1,0 +1,82 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "showLabels": "显示标签",
+  "minValue": "最小值",
+  "maxValue": "最大值",
+  "addColumn": "添加列",
+  "addRow": "添加行",
+  "randomFill": "随机填充",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "周活动",
+  "sampleTitle": "活动热力图",
+  "dataEditor": "数据编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "sampleData": {
+    "mon": "周一",
+    "tue": "周二",
+    "wed": "周三",
+    "thu": "周四",
+    "fri": "周五",
+    "sat": "周六",
+    "sun": "周日"
+  },
+  "tips": {
+    "title": "小贴士",
+    "tip1": "在网格中输入值",
+    "tip2": "添加行和列",
+    "tip3": "使用随机填充进行测试",
+    "tip4": "调整颜色范围",
+    "tip5": "导出为PNG或SVG"
+  },
+  "column": "列",
+  "row": "行",
+  "detailed_description": "Heatmap Chart Generator 是基于WebGL技术实现的高性能数据可视化工具，能够将二维数据矩阵转换为带颜色梯度的热力图。该工具采用分层渲染架构，通过GPU加速实现百万级数据点的实时绘制。其核心算法将数值矩阵映射为HSL颜色空间，支持自定义色谱配置和动态范围调整。开发者可利用此工具分析用户行为热区、监控系统负载分布或展示地理信息密度。在技术实现上，工具通过离屏Canvas生成纹理缓冲，结合双线性插值算法优化低分辨率数据的平滑渲染。用户需上传包含X/Y坐标及对应强度值的JSON数组，系统自动进行数据归一化处理并生成带交互的可缩放热力图。支持WebP和SVG两种导出模式，其中SVG输出采用路径分组技术实现矢量图形的可编辑性。",
+  "usage_steps": [
+    "在数据输入区域粘贴符合GeoJSON规范的FeatureCollection格式数据",
+    "通过配置面板设置网格分辨率（16x16至256x256像素）和插值模式（线性/最近邻）",
+    "在色谱选择器中选取预设方案（如Viridis或Plasma）或自定义HSL渐变范围",
+    "调整动态范围滑块过滤异常值，设置透明度阈值隐藏低密度区域",
+    "启用坐标轴工具添加带刻度标注的参考系并配置图例显示参数",
+    "点击'渲染预览'触发WebGL上下文初始化，完成后选择PNG-24或SVG格式导出"
+  ],
+  "usage_examples": [
+    "电商平台分析用户页面滚动行为：通过埋点收集Y轴滚动位置和停留时长数据，生成热力图识别内容盲区",
+    "医疗研究可视化基因表达水平：将microarray实验数据转换为二维热图，使用双聚类算法发现基因关联性",
+    "金融机构监控交易系统负载：将服务器请求延迟数据映射为热力图，X轴为小时粒度时间序列，Y轴为节点ID",
+    "物流公司优化配送网络：基于历史订单的经纬度坐标生成密度热图，识别服务盲点并规划新仓储中心布局"
+  ],
+  "faqs": [
+    {
+      "question": "Heatmap Chart Generator 是免费的吗？",
+      "answer": "是的，Heatmap Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Heatmap Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Heatmap Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Heatmap Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Heatmap Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

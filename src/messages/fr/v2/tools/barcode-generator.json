@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le générateur de codes-barres permet de créer des codes-barres dans quatre formats normalisés : Code 128 (haute densité, idéal pour les données alphanumériques), Code 39 (utilisé dans l'industrie et la logistique), EAN-13 (standard pour les produits de vente au détail) et UPC (spécifique aux États-Unis et Canada). Ce outil s'adresse aux développeurs, gestionnaires de stock et entreprises nécessitant des codes conformes aux normes ISO/IEC 15417 et ISO/IEC 16390. Techniquement, l'outil convertit les données saisies en une représentation graphique vectorielle (SVG ou PNG) en appliquant des algorithmes de codage spécifiques à chaque symbologie, incluant les chiffres de contrôle et les motifs de démarrage/arrêt. Les paramètres comme la résolution (DPI), la hauteur et la couleur des barres peuvent être ajustés pour répondre à des besoins d'impression professionnels ou de lecture par scanner laser.",
+  "usage_steps": [
+    "Sélectionnez la symbologie désirée (Code 128, Code 39, EAN-13 ou UPC) dans le menu déroulant.",
+    "Saisissez les données à encoder dans le champ texte, en respectant les contraintes de format (ex: 12 chiffres pour UPC).",
+    "Ajustez les paramètres avancés via les curseurs : hauteur du code-barres (en pixels), résolution (72 à 600 DPI) et épaisseur des barres.",
+    "Activez l'option 'Ajouter checksum' pour les formats nécessitant un calcul de vérification automatique.",
+    "Cliquez sur 'Générer' pour produire le code-barres et visualisez-le dans la zone de prévisualisation interactive.",
+    "Téléchargez le résultat au format SVG ou PNG haute qualité via le bouton 'Exporter' après validation."
+  ],
+  "usage_examples": [
+    "Une entreprise de cosmétiques génère des codes EAN-13 pour ses produits afin de les enregistrer dans les systèmes de distribution européens.",
+    "Un entrepôt logistique utilise le Code 128 pour créer des étiquettes de palette avec des données concaténées (numéro de lot + date d'expiration).",
+    "Un développeur d'application médicale intègre des codes-barres Code 39 pour identifier des échantillons biologiques en laboratoire.",
+    "Un artisan créateur de bières locales génère des codes UPC pour ses produits avant leur mise en vente dans des supermarchés américains."
+  ]
+}

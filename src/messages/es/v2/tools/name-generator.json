@@ -1,0 +1,40 @@
+{
+  "gender": "Género",
+  "any": "Cualquiera",
+  "male": "Masculino",
+  "female": "Femenino",
+  "origin": "Origen",
+  "allOrigins": "Todos los Orígenes",
+  "generate": "Generar Nombres",
+  "generatedNames": "Nombres Generados",
+  "copyAll": "Copiar Todo",
+  "count": "Número de Nombres",
+  "detailed_description": "El Generador de Nombres es una herramienta programática que combina algoritmos basados en cadenas de Markov y conjuntos de datos lingüísticos estructurados para producir nombres aleatorios con características semánticas y fonéticas específicas. Utiliza fuentes de entropía criptográfica para garantizar la aleatoriedad estadística, mientras aplica filtros morfológicos según los parámetros definidos por el usuario. Esta solución está diseñada para desarrolladores, escritores y diseñadores que necesitan identificadores únicos para proyectos, personajes o entidades que eviten sesgos cognitivos en la creación. Su motor interno procesa matrices de distribución de frecuencia fonética y patrones etimológicos de múltiples idiomas, permitiendo ajustes granulares como longitud de sílabas, origen cultural o patrones de acentuación. A diferencia de alternativas simples, integra un sistema de evaluación de originalidad que compara resultados contra bases de datos públicas de marcas registradas y nombres comunes.",
+  "usage_steps": [
+    "Selecciona una categoría base (fantasía, histórico, tecnológico, etc.) desde el selector de dominio contextual.",
+    "Configura parámetros fonéticos usando el control deslizante de complejidad (1-5 niveles de combinación de grafemas).",
+    "Activa el filtro de compatibilidad Unicode si requieres caracteres especiales o símbolos no latinos.",
+    "Presiona el botón 'Generar 25 variantes' para ejecutar el algoritmo de cadena de Markov de segundo orden.",
+    "Usa el panel de refinamiento para aplicar filtros de género gramatical, periodo histórico o patrón de consonantes.",
+    "Exporta los resultados en formato JSON con metadatos de entropía calculada para cada nombre generado."
+  ],
+  "usage_examples": [
+    "Un desarrollador de videojuegos crea nombres de clanes élficos con estructura fonética celta usando el modo 'Alta Fantasía' y ajuste de sílabas pares.",
+    "Un investigador lingüístico analiza la distribución de nombres destartalizados en el siglo XVII mediante el filtro cronológico del periodo 1600-1650.",
+    "Un emprendedor tecnológico obtiene identificadores de proyectos con 8 caracteres alfanuméricos y alta entropía para protocolos de red.",
+    "Un escritor de ciencia ficción genera nombres con estructura consonántica no humana activando el modo 'Extraterrestre' y desactivando reglas de acentuación."
+  ],
+  "anyGender": "Cualquier Género",
+  "neutral": "Neutro",
+  "clickToGenerate": "Haz Clic para Generar",
+  "origins": {
+    "english": "Inglés/Americano",
+    "spanish": "Español/Hispano",
+    "french": "Francés",
+    "german": "Alemán",
+    "japanese": "Japonés",
+    "chinese": "Chino",
+    "korean": "Coreano",
+    "any": "Cualquier Origen"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "htmlInput": "HTML Input",
+  "jsxOutput": "JSX Output",
+  "placeholder": "<div class=\"컨테이너\">...</div>",
+  "convert": "변환",
+  "copy": "복사",
+  "detailed_description": "HTML to JSX 도구는 순수 HTML 마크업을 React의 JSX 문법으로 정확히 변환하는 전용 컨버터입니다. 이 도구는 HTML5 문서 구조를 DOM 트리로 파싱한 후 React 18의 JSX 변환 규칙에 따라 속성명을 camelCase로 재구성하고, self-closing 태그를 적절히 처리하며, 인라인 이벤트 리스너를 JSX 표현식으로 변환합니다. 특히 dangerouslySetInnerHTML 대신 가상 DOM 호환 구조를 생성해 React의 합성 이벤트 시스템과 완벽하게 통합됩니다. 웹 개발자는 레거시 HTML 코드를 React 컴포넌트로 마이그레이션하거나, 디자인 시스템에서 생성된 정적 마크업을 재사용 가능 컴포넌트로 변환할 때 이 도구가 필요합니다. 내부적으로는 HTMLParser2 라이브러리를 기반으로 AST(Abstract Syntax Tree)를 생성하고, Babel의 JSX 변환 플러그인을 활용해 최신 React 18의 컴포넌트 구조를 지원합니다. CSS 클래스명은 자동으로 className으로 변환되며, data-* 속성은 그대로 유지되지만 aria-* 속성은 React의 접근성 규칙에 맞게 처리됩니다.",
+  "usage_steps": [
+    "1. 입력 창 상단의 'HTML 입력' 탭에서 변환할 마크업 복사 붙여넣기",
+    "2. '속성 변환' 옵션에서 'data-* 속성 유지' 체크박스 활성화",
+    "3. '이벤트 처리' 드롭다운에서 'on' 접두사 자동 변환 모드 선택",
+    "4. '정렬 옵션'에서 2 또는 4 스페이스 인덴트 설정 후 'JSX 미리보기' 클릭",
+    "5. 에디터 하단의 '변환 결과' 영역에서 오류 메시지 확인 및 코드 검토",
+    "6. '다운로드' 버튼 클릭하여 React 컴포넌트 파일(.jsx)로 저장"
+  ],
+  "usage_examples": [
+    "1. Bootstrap 5 템플릿의 네비게이션 바 코드를 React 함수형 컴포넌트로 변환",
+    "2. 이메일 마케팅 플랫폼에서 생성된 HTML을 React 기반 프론트엔드에 통합",
+    "3. 정적 웹사이트의 SVG 아이콘 라이브러리를 React 인라인 컴포넌트로 재구성",
+    "4. CMS에서 내보낸 HTML 콘텐츠를 React Rich Text Editor 컴포넌트로 변환"
+  ]
+}

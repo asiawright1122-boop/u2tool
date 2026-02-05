@@ -1,0 +1,44 @@
+{
+  "detailed_description": "JWT Debugger 是一款面向开发者的专业安全工具，专门用于分析和验证JSON Web Token（JWT）的结构完整性与签名有效性。该工具通过解析JWT的Header、Payload和Signature三部分，结合Base64Url解码、签名算法验证（如HS256/RSA等）及时间戳校验（如exp/nbf字段），帮助用户精准定位令牌问题。当开发者需要排查身份认证系统中的令牌错误（如签名不匹配、过期或篡改）时，该工具能通过可视化解析展示令牌元数据，并实时验证签名是否与指定密钥匹配。工具内置多种加密算法检测逻辑，支持手动输入对称密钥或上传公钥证书（PEM格式），实现与真实认证服务器的验证流程同步。其核心价值在于将复杂的加密验证过程透明化，避免因令牌解析错误导致的身份验证漏洞。",
+  "usage_steps": [
+    "1. 在输入框粘贴完整JWT字符串（含三个Dot分隔部分）",
+    "2. 点击'Parse Token'按钮自动分解并高亮显示Header/Payload/Signature",
+    "3. 在解码区域查看JSON格式的明文载荷及JWT注册声明（如iss/exp）",
+    "4. 在'Signature Verification'面板选择验证模式（Symmetric/Asymmetric）",
+    "5. 输入共享密钥或上传公钥文件，点击'Validate Signature'执行签名比对",
+    "6. 查看验证结果详情（含算法匹配性、签名一致性及时间戳有效性），下载调试报告"
+  ],
+  "usage_examples": [
+    "开发OAuth2服务时验证生成的JWT是否符合RFC7519规范",
+    "测试环境出现401错误时，检查测试令牌是否因过期时间(exp)设置不当失效",
+    "排查微服务间通信时因密钥长度不足导致的HS256签名验证失败",
+    "学习JWT结构时通过工具辅助理解嵌套声明（Nested Claims）的解析逻辑"
+  ],
+  "token": "JWT令牌",
+  "header": "头部",
+  "payload": "载荷",
+  "signature": "签名",
+  "secret": "密钥",
+  "verify": "验证签名",
+  "valid": "签名有效",
+  "invalid": "签名无效",
+  "expired": "令牌已过期",
+  "tokenPlaceholder": "在此粘贴您的JWT令牌...",
+  "notExpired": "令牌有效",
+  "expiresAt": "过期时间",
+  "errors": {
+    "invalidFormat": "无效的JWT格式",
+    "decodeFailed": "解码令牌失败"
+  },
+  "placeholder": "在此粘贴JWT令牌...",
+  "loadExample": "加载示例",
+  "tokenInput": "令牌输入",
+  "claim": "声明",
+  "claims": "声明",
+  "copied": "已复制！",
+  "copy": "复制",
+  "secretPlaceholder": "输入密钥...",
+  "value": "值",
+  "verifyNote": "注意：签名验证在客户端完成",
+  "verifySignature": "验证签名"
+}

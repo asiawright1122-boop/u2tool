@@ -1,0 +1,55 @@
+{
+  "inputPlaceholder": "1704067200\n1704067200000\n2024-01-01T00:00:00Z",
+  "convert": "全部转换",
+  "timezone": "输出时区",
+  "outputFormat": "日期格式",
+  "exportCsv": "导出CSV",
+  "exportJson": "导出JSON",
+  "input": "输入",
+  "detected": "已检测",
+  "output": "输出",
+  "valid": "有效",
+  "invalid": "无效",
+  "seconds": "Unix (s)",
+  "milliseconds": "Unix (ms)",
+  "iso8601": "ISO 8601",
+  "unknown": "未知",
+  "detailed_description": "Batch Timestamp Converter 是一款专为开发人员设计的高级时间戳转换工具。该工具支持一次性转换多个时间戳，并能够自动检测输入的时间戳格式，从而简化了时间戳的处理流程。用户可以将各种格式的时间戳（如 Unix 时间戳、日期时间字符串等）一次性上传，工具将自动识别并转换为所需的目标格式，如 ISO 8601、毫秒时间戳等。此外，转换结果可以导出为 CSV 文件或直接复制粘贴，极大地方便了数据的进一步处理和分析。这种工具在日志分析、API 测试、数据迁移等场景中尤为有用，能够显著提高工作效率，减少手动处理的时间和出错率。",
+  "usage_steps": [
+    "Step 1: 打开 Batch Timestamp Converter 页面，点击“选择文件”按钮，上传包含时间戳的文本文件。",
+    "Step 2: 上传文件后，工具将自动检测文件中的时间戳格式。点击“检测格式”按钮，查看检测结果。",
+    "Step 3: 在“目标格式”下拉菜单中选择您希望转换的时间戳格式，例如 ISO 8601、Unix 时间戳、毫秒时间戳等。",
+    "Step 4: 选择“输出选项”，可以选择将结果导出为 CSV 文件或直接显示在页面上。",
+    "Step 5: 点击“开始转换”按钮，工具将自动处理并显示或导出转换结果。",
+    "Step 6: 如果选择导出为 CSV 文件，点击“下载结果”按钮，保存文件以备后续使用。"
+  ],
+  "usage_examples": [
+    "Example 1: 在进行日志分析时，开发人员需要将多个日志条目的 Unix 时间戳转换为可读的日期时间格式，以便更直观地查看日志时间。使用 Batch Timestamp Converter 可以一次性处理大量时间戳，减少手动转换的工作量。",
+    "Example 2: 在进行 API 测试时，测试人员需要将请求中返回的 ISO 8601 时间戳转换为 Unix 时间戳，以便与系统内部的时间戳进行比对。通过批量转换，可以快速完成这一任务。",
+    "Example 3: 在数据迁移过程中，数据库管理员需要将数据库中的日期时间字段转换为毫秒时间戳，以便在新的系统中使用。Batch Timestamp Converter 可以帮助管理员批量完成这一转换，确保数据的一致性和准确性。",
+    "Example 4: 在数据分析项目中，数据科学家需要将不同来源的时间戳数据统一为同一格式，以便进行进一步的数据处理和分析。使用该工具可以一键完成多个时间戳的格式转换，提高数据准备的效率。"
+  ],
+  "faqs": [
+    {
+      "question": "Batch Timestamp Converter 是免费的吗？",
+      "answer": "是的，Batch Timestamp Converter 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Batch Timestamp Converter 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "支持哪些格式转换？",
+      "answer": "Batch Timestamp Converter 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Batch Timestamp Converter 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Batch Timestamp Converter 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "localFormat": "本地格式"
+}

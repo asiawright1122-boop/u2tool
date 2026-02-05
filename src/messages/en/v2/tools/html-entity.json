@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The HTML Entity Converter transforms plain text into HTML entities and back, supporting named character references (e.g., &amp;, &lt;, &gt;) and numeric character references in both decimal (&#8212;) and hexadecimal (&x2014;) forms. It preserves Unicode beyond ASCII by emitting code point references for characters outside the basic set. The tool distinguishes between contexts where entities are required for validity (e.g., attribute values, preformatted text) versus contexts where they are optional, and it can selectively encode only the minimal subset needed to render safely. For decoding, it parses both named and numeric references, normalizes case (e.g., &nbsp; vs &NBSP;), and handles ambiguous ampersands by decoding only valid sequences. You can configure output to prefer named entities for readability, pure NCRs for strict input acceptance, or a mixed mode that uses named entities for common symbols and numeric references for everything else. It supports UTF‑8 input, avoids double-encoding, and preserves whitespace and newlines. Use cases include hardening user-generated content, assembling HTML fragments from data pipelines, ensuring JSON‑LD or microdata remain valid in markup, and fixing legacy CMS exports that intermingle raw characters with entities.",
+  "usage_steps": [
+    "Open the HTML Entity Converter at /tools/html-entity and paste your text into the Input textbox.",
+    "Choose Convert mode: Encode to Entities, Decode Entities, or Detect and Auto-Convert using the Mode segment control.",
+    "Select Output options: toggle Named Entities, Numeric (Decimal), and Numeric (Hex), and check Preserve whitespace to retain spaces and newlines.",
+    "If encoding, pick an Entities scope—Minimal (only < > & \" '), Full ASCII, or Full Unicode—to control which characters are converted.",
+    "Click the Convert button; the Result panel updates with your transformed text and a character/byte count summary.",
+    "Copy the result with the Copy button or Download as .txt; use the Swap arrows to move the output back to input for further processing."
+  ],
+  "usage_examples": [
+    "Sanitize a blog comment that includes <script> and smart quotes: encode the comment with Minimal scope to escape < > & \" ' and convert curly quotes to numeric references for consistent display.",
+    "Embed JSON-LD within an HTML page and ensure quotes and hyphens are entities; use Mixed output to keep &amp; readable while escaping em/en dashes as &#8211; and &#8212; to prevent accidental truncation by validators.",
+    "Build a newsletter template from dynamic content and encode only ASCII symbols while leaving UTF‑8 intact, avoiding double-encoding by selecting Full ASCII scope and leaving Unicode characters unchanged.",
+    "Fix a legacy CMS export that mixes raw and encoded characters by using Detect/Auto-Convert to normalize all entities to a consistent set of named references for the common symbols."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "detailed_description": "O Bloco de Notas Online é uma ferramenta de anotações simples e prática para criar e gerenciar rapidamente notas adesivas coloridas. Suporta 6 cores (amarelo, verde, azul, rosa, roxo, laranja) para tornar suas notas mais visíveis e organizadas. Cada nota pode ter um título e conteúdo, com timestamps de criação e atualização automáticos. Todas as notas são salvas automaticamente no armazenamento local do navegador, preservadas mesmo após fechar a página. Suporta funcionalidade de busca para encontrar notas rapidamente. Exporte para o formato JSON para backup e migração. Interface limpa com operação intuitiva.",
+  "usage_steps": [
+    "Abra a página da ferramenta Bloco de Notas",
+    "Clique no botão 'Nova Nota' para criar uma nova nota",
+    "Insira o título e o conteúdo da nota",
+    "Clique nos botões de cor para mudar a cor da nota",
+    "Clique em uma nota para editá-la",
+    "Use a caixa de busca para encontrar notas rapidamente",
+    "Clique em 'Exportar' para fazer backup de todas as notas"
+  ],
+  "usage_examples": [
+    "Registre itens a fazer e listas de tarefas",
+    "Salve ideias e inspirações temporárias",
+    "Registre pontos de encontro e anotações de reuniões",
+    "Salve informações frequentemente usadas, como dicas de senhas, contatos, etc."
+  ],
+  "faqs": [
+    {
+      "question": "As notas são salvas automaticamente?",
+      "answer": "Sim, todas as notas são salvas automaticamente no armazenamento local do navegador. Mesmo após fechar a página ou o navegador, as notas são preservadas quando você retornar."
+    },
+    {
+      "question": "Onde são armazenados os dados das notas?",
+      "answer": "Os dados das notas são armazenados no localStorage do seu navegador, não são enviados para nenhum servidor. A limpeza dos dados do navegador pode causar a perda de notas, portanto, recomendamos exportações regulares para backup."
+    },
+    {
+      "question": "Como eu faço backup das minhas notas?",
+      "answer": "Clique no botão 'Exportar' para exportar todas as notas como um arquivo JSON. Você pode salvar esse arquivo como backup."
+    },
+    {
+      "question": "Quantas notas posso criar?",
+      "answer": "Não há limite no número de notas. Crie quantas precisar. Note que o armazenamento local do navegador tem limites de capacidade (tipicamente 5-10MB)."
+    }
+  ]
+}

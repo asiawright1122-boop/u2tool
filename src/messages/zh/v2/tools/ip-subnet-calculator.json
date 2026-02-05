@@ -1,0 +1,29 @@
+{
+  "ipAddress": "IP地址",
+  "subnetMask": "子网掩码",
+  "networkAddress": "网络地址",
+  "broadcastAddress": "广播地址",
+  "firstHost": "第一个可用的主机",
+  "lastHost": "最后一个可用的主机",
+  "usableHosts": "可用的主机数",
+  "subnetMaskDecimal": "子网掩码",
+  "cidr": "CIDR",
+  "wildcardMask": "通配符掩码",
+  "invalidIp": "无效的IP地址",
+  "invalidMask": "无效的子网掩码",
+  "calculationError": "计算错误",
+  "dottedDecimal": "点分十进制",
+  "detailed_description": "IP子网计算器帮助网络管理员从IP地址和子网掩码中计算子网信息。获取网络地址、广播地址、第一个和最后一个可用的主机以及可用的主机总数。对于网络规划和故障排除至关重要。",
+  "usage_steps": [
+    "输入IP地址",
+    "选择或输入子网掩码（支持CIDR表示法）",
+    "查看计算出的网络信息",
+    "查看可用的主机范围和数量",
+    "检查通配符掩码以配置ACL"
+  ],
+  "usage_examples": [
+    "规划网络子网",
+    "计算可用的IP范围",
+    "配置网络设备"
+  ]
+}

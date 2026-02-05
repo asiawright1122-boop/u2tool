@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O UUID Validator é uma ferramenta técnica para verificar a integridade e conformidade de strings UUID (Universally Unique Identifier) segundo padrões como RFC 4122. Ele analisa a estrutura hexadecimal de 32 caracteres, divididos em 5 partes separadas por hífens, validando bits específicos de versão (1 a 5) e variante (geralmente 10xx no quarto octeto). O usuário pode identificar se o UUID é nil (todos zeros), se contém versões obsoletas (como v1 em sistemas que exigem v4) ou se está malformado. Ferramentas semelhantes muitas vezes ignoram validações profundas, como checar se UUIDs v3/v5 usam hashing MD5/SHA-1 correto ou se UUIDs v2 possuem formato válido de timestamp. Este analisador também detecta inconsistências em namespaces e endereços MAC embutidos, essencial para sistemas distribuídos onde colisões ou dados inválidos podem comprometer integridade de bancos de dados ou APIs. Desenvolvedores e engenheiros QA usam esta ferramenta para depurar problemas em autenticação baseada em tokens, validação de logs ou integração de serviços terceirizados.",
+  "usage_steps": [
+    "Cole o UUID no campo de texto principal com formato 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.",
+    "Ative o modo 'Strict Mode' para validar conformidade exata com RFC 4122 ou 'Lenient' para tolerar espaços ou maiúsculas.",
+    "Clique no botão 'Validar' para iniciar a análise.",
+    "Revise o painel de resultados que exibe versão detectada (v1-v5), variante (0b10xx), e status de validade.",
+    "Verifique a seção 'Detalhes Técnicos' para análise de bits críticos e estrutura hexadecimal.",
+    "Use o botão 'Limpar' para resetar o formulário ou 'Histórico' para revisar validações anteriores."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor backend testa se UUIDs v4 gerados por um serviço de autenticação estão em conformidade com RFC 4122 para evitar falhas em tokens JWT.",
+    "Um engenheiro de dados verifica se UUIDs v1 extraídos de logs contêm timestamps válidos e não possuem endereços MAC falsificados.",
+    "Um QA tester confirma se uma API rejeita UUIDs v2, que são obsoletos em sistemas modernos, garantindo compliance com padrões de segurança.",
+    "Um administrador de banco de dados analisa se registros com UUIDs nil ('00000000-0000-0000-0000-000000000000') estão causando chaves primárias inválidas em tabelas relacionais."
+  ]
+}

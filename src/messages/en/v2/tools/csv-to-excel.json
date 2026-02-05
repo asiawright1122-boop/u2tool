@@ -1,0 +1,27 @@
+{
+  "detailed_description": "The CSV to Excel converter transforms comma-separated values (CSV) files into Office Open XML (.xlsx) spreadsheets through a multi-step parsing and serialization process. This tool employs a streaming CSV parser to handle large datasets efficiently, automatically detecting delimiters (commas, tabs, semicolons) and encoding formats (UTF-8, UTF-16). It constructs a normalized data matrix in memory, preserving numeric types, date formats, and text qualifiers while resolving edge cases like embedded line breaks within quoted fields. The conversion engine leverages the Open Packaging Conventions to generate XLSX files with multiple worksheets, maintaining original column widths and cell formatting through ECMA-376 standard compliance. Users require this tool for scenarios demanding Excel's advanced formula capabilities, pivot table analysis, or integration with enterprise systems requiring strict OOXML validation. Unlike basic converters, this implementation supports RFC 4180-compliant parsing, custom delimiter mapping, and preserves metadata like column headers and whitespace indentation. Technical advantages include client-side processing via WebAssembly modules for speed, with MIME type verification during download to ensure browser compatibility.",
+  "usage_steps": [
+    "1. Click 'Choose File' to upload your CSV (max 50MB) with UTF-8/BOM encoding support",
+    "2. Select delimiter type from dropdown (auto-detected values shown in preview panel)",
+    "3. Toggle 'First Row Header' to preserve column metadata during worksheet creation",
+    "4. Use 'Data Type Mapping' grid to specify numeric/date formats for each column",
+    "5. Adjust worksheet name and tab color via sidebar options before conversion",
+    "6. Click 'Generate XLSX' to compile binary file, then download with verified Content-Type header"
+  ],
+  "usage_examples": [
+    "Financial analysts converting bank transaction exports (with comma-separated thousand separators) to Excel for pivot table analysis",
+    "Research teams migrating survey responses (containing text fields with embedded commas) to XLSX for statistical analysis add-ins",
+    "Accountants transforming UTF-16 encoded payroll CSVs into Excel workbooks with currency formatting preserved",
+    "Developers automating conversion of API-generated CSV reports to XLSX for clients requiring macro-enabled templates"
+  ],
+  "faqs": [
+    {
+      "question": "Does it handle large files?",
+      "answer": "Yes, but very large files may take longer to process. We recommend files under 10MB for best performance."
+    },
+    {
+      "question": "Are special characters preserved?",
+      "answer": "Yes, UTF-8 encoding is used to preserve special characters and international text."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "allowAll": "Allow All",
+  "blockAll": "Block All",
+  "standard": "Standard",
+  "wordpress": "WordPress",
+  "rule": "Rule {index}",
+  "remove": "Remove",
+  "userAgent": "User-agent",
+  "allow": "Allow (one per line)",
+  "disallow": "Disallow (one per line)",
+  "addRule": "+ Add Rule",
+  "sitemapUrl": "Sitemap URL",
+  "crawlDelay": "Crawl Delay (seconds)",
+  "output": "robots.txt",
+  "detailed_description": "This tool programmatically constructs robots.txt files that dictate how search engine crawlers interact with web content. Technically, it generates standardized directives adhering to the Robots Exclusion Protocol (REP), supporting User-agent identification, path-based Disallow/Allow rules, crawl delay parameters, and Sitemap references. Developers require this utility to precisely control spider access for SEO optimization, prevent overloading servers with excessive requests, or blocking sensitive directories from public search indexes. The generator parses user input through form fields mapping directly to REP syntax elements, automatically resolving conflicting rules using crawler-specific precedence logic. Advanced features include wildcard pattern matching for dynamic URL structures, HTTP status code validation for referenced assets, and automatic canonicalization of absolute/relative paths. Unlike basic editors, this tool enforces proper directive sequencing and escapes special characters in path definitions to prevent syntax errors that could cause unintended access permissions.",
+  "usage_steps": [
+    "Select default template based on common use cases (e.g., 'Full Access', 'Development Block', 'E-commerce Restrictions')",
+    "Add custom rules by specifying User-agent strings, path patterns, and crawl permissions using the multi-field rule builder",
+    "Configure crawl delay values in milliseconds for specific bots to prevent server overload",
+    "Use the 'Wildcard Assistant' to create pattern-matching rules for dynamic URLs containing query parameters",
+    "Validate rule conflicts using the built-in analyzer that highlights overlapping directives",
+    "Download the final robots.txt after reviewing the syntax-highlighted preview with line-numbered annotations"
+  ],
+  "usage_examples": [
+    "Blocking search engines from indexing a staging environment at /staging/ while allowing production content",
+    "Preventing duplicate content penalties by disallowing crawler access to printer-friendly page versions ending with ?print=1",
+    "Rate-limiting Googlebot to 5,000 requests/day on a budget hosting plan using the crawl delay and request limit calculator",
+    "Creating bot-specific rules to allow image crawlers access to /media/ while restricting general web archiving bots"
+  ],
+  "copied": "Copied!",
+  "copy": "Copy",
+  "allow-all": "Allow All",
+  "block-all": "Block All"
+}

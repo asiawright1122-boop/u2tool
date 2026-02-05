@@ -1,0 +1,17 @@
+{
+  "detailed_description": "La herramienta de DNS Lookup permite realizar consultas directas a servidores DNS para obtener registros de dominios específicos, incluyendo A, AAAA, CNAME, MX, TXT, NS y SOA. Esta funcionalidad es esencial para diagnosticar problemas de resolución de nombres, validar configuraciones de dominios y analizar la infraestructura de red de un sitio web. A diferencia de otros servicios, muestra no solo los valores de los registros sino también sus valores TTL (Time to Live) y la jerarquía de delegación DNS. El funcionamiento técnico se basa en el envío de consultas DNS tipo 'query' a través de UDP o TCP, simulando el proceso de resolución que realizaría un resolver recursivo, e incluye la capacidad de especificar servidores DNS personalizados (como 8.8.8.8 de Google o 1.1.1.1 de Cloudflare) para análisis comparativo. Los resultados se presentan en un formato estructurado que muestra la autoridad de respuesta, flags del mensaje DNS, y posibles errores como NXDOMAIN o SERVFAIL.",
+  "usage_steps": [
+    "1. Introduce el dominio objetivo en el campo de texto 'Dominio' con formato abc.com (sin http://).",
+    "2. Selecciona los tipos de registro a consultar mediante checkboxes: A, AAAA, MX, TXT, etc.",
+    "3. Elige el servidor DNS de destino en un menú desplegable que incluye opciones como 'Default Resolver', 'Google DNS' o 'Cloudflare DNS'.",
+    "4. Haz clic en el botón 'Ejecutar Consulta DNS' para iniciar la petición.",
+    "5. Analiza los resultados en la tabla que muestra: nombre del registro, tipo, TTL, clase e información adicional como preferencias MX.",
+    "6. Revisa el diagrama de flujo de la consulta DNS que muestra los servidores contactados en cada nivel de delegación."
+  ],
+  "usage_examples": [
+    "Verificar la propagación de nuevos registros A después de migrar un sitio web a un nuevo hosting.",
+    "Diagnosticar fallos en envío de correos electrónicos comprobando la configuración de registros MX y SPF.",
+    "Analizar diferencias en respuestas DNS entre servidores públicos para detectar posibles problemas de caché.",
+    "Validar implementación correcta de DNSSEC revisando la presencia de registros DS y RRSIG en el dominio."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "pressAnyKey": "按任意键测试",
+  "keyCode": "键码",
+  "key": "按键",
+  "code": "代码",
+  "location": "位置",
+  "modifiers": "修饰键",
+  "shift": "Shift",
+  "ctrl": "Ctrl",
+  "alt": "Alt",
+  "meta": "Meta",
+  "keyHistory": "按键历史",
+  "clearHistory": "清除历史",
+  "lastKeyPressed": "最后按下的键",
+  "clear": "清除",
+  "noKeysPressed": "尚未按下任何键",
+  "tips": "提示",
+  "tip1": "此工具可用于测试键盘上的所有按键是否正常工作",
+  "tip2": "某些按键（如 Fn 键）可能无法被浏览器检测到",
+  "tip3": "按键历史记录最多保存最近 10 次按键",
+  "detailed_description": "Keyboard Tester 是面向开发者的底层键盘事件分析工具，通过实时捕获并解析DOM Level 3 KeyboardEvent对象的技术实现，精确显示按键触发时的keyCode、code、key、charCode等十六进制与十进制参数。该工具特别适用于处理Web应用中键盘快捷键冲突、游戏控制键位适配、国际化键盘布局检测等场景。其核心技术原理在于通过addEventListener('keydown')建立事件监听器，阻止默认事件冒泡以获取原始键值，并集成Unicode字符映射表实现特殊符号解析。工具界面采用分层渲染架构，左侧显示物理键位热区响应矩阵，右侧同步输出事件对象完整属性树，支持切换Event.code标准模式与Legacy.keyCode兼容模式。对于需要处理组合键（如AltGr+@）、检测系统修饰键（Meta/Control/Shift）状态、调试无障碍功能键（AccessKey）触发机制的开发者，该工具可直接输出符合W3C规范的事件对象原型数据。",
+  "usage_steps": [
+    "1. 打开工具页面后，观察主界面中央的虚拟键盘热区矩阵",
+    "2. 按下任意物理按键，查看左侧键位高亮状态与右侧事件属性面板的实时更新",
+    "3. 在'Event Mode'下拉菜单选择'code'或'keyCode'查看不同标准的键值编码",
+    "4. 长按组合键（如Ctrl+Shift+Esc），观察Modifier键状态指示灯变化",
+    "5. 点击'Capture'按钮录制完整按键序列，生成JSON格式的事件流数据",
+    "6. 使用'Layout'选项切换不同国家键盘布局（ANSI/ISO/JIS），测试跨区域兼容性"
+  ],
+  "usage_examples": [
+    "前端开发者调试React应用时，发现Mac用户Command+Z触发异常，通过工具检测到event.code值与Windows的Control+Z存在差异",
+    "游戏开发者验证手柄按键映射是否正确捕获浏览器焦点，检测到浏览器默认行为阻止了Alt+F4的keyCode=115",
+    "国际化团队测试俄语键盘布局下，Shift+2键入@符号时，确认event.key值符合Unicode U+0040标准",
+    "Electron应用开发者调试全局快捷键冲突，发现Vim插件的Ctrl+[与系统菜单快捷键产生事件冒泡干扰"
+  ]
+}

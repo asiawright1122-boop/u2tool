@@ -1,0 +1,19 @@
+{
+  "inputPlaceholder": "Insira os dados JSON aqui...",
+  "outputPlaceholder": "O JSON formatado aparecerá aqui...",
+  "detailed_description": "O JSON Formatter é uma ferramenta de formatação e validação de JSON projetada para desenvolvedores e profissionais de tecnologia. Técnica e precisamente, esta ferramenta analisa, formata e destaca a sintaxe de dados JSON, tornando-os mais legíveis e manuseáveis. Além disso, ela verifica a validade do JSON e pode ajudar a corrigir erros comuns, facilitando o processo de depuração e manutenção de dados estruturados.\n\nDesenvolvedores, integradores de sistemas e analistas de dados frequentemente lidam com JSON, um formato de dados leve e amplamente utilizado para troca de informações entre aplicativos e serviços. A necessidade de formatar e validar JSON surge em várias situações, como a integração de APIs, a análise de logs e a preparação de dados para testes. O JSON Formatter simplifica essas tarefas, oferecendo recursos essenciais para manipular JSON de forma eficiente.\n\nInternamente, a ferramenta utiliza métodos de análise de JSON, como JSON.parse, para garantir que os dados de entrada sejam válidos. Em seguida, aplica formatação e destaque de sintaxe usando algoritmos de formatação de texto. A ferramenta também suporta a minificação de JSON, removendo espaços em branco e indentações desnecessárias, o que é útil para otimizar o tamanho dos dados em transmissões de rede.\n\nCompatível com JSON padrão, o JSON Formatter é uma solução confiável para formatar e validar dados JSON. É importante salientar que a ferramenta não suporta formatos de dados não-estruturados ou JSON estendido (JSON5). Para obter os melhores resultados, é recomendável usar a ferramenta com JSON válido e bem-formado.",
+  "usage_steps": [
+    "Cole o JSON que deseja formatar no campo de entrada 'JSON de Entrada'.",
+    "Clique no botão 'Formatar JSON' para processar e formatar o JSON.",
+    "Revise o JSON formatado no campo 'JSON de Saída' para garantir que a formatação esteja correta.",
+    "Se encontrar erros, revise o JSON de entrada e tente novamente.",
+    "Clique no botão 'Copiar' para copiar o JSON formatado diretamente para a área de transferência.",
+    "Clique no botão 'Limpar Tudo' para remover o conteúdo dos campos de entrada e saída."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor de backend está integrando uma API que retorna JSON complexo. Ele usa o JSON Formatter para validar e formatar a resposta da API, facilitando a leitura e a depuração de possíveis erros.",
+    "Um analista de dados precisa transformar dados brutos em um formato mais legível para análise. O JSON Formatter ajuda a organizar e formatar os dados, tornando-os mais fáceis de trabalhar em ferramentas de análise de dados.",
+    "Um integrador de sistemas está configurando uma integração entre dois sistemas que trocam dados em JSON. Ele usa o JSON Formatter para garantir que os dados enviados e recebidos estejam em um formato válido e bem-estruturado.",
+    "Um QA Engineer está testando uma aplicação que utiliza JSON extensivamente. O JSON Formatter é usado para validar os dados de entrada e saída, garantindo que a aplicação processe corretamente os dados JSON."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "flip": "Münze würfeln",
+  "flipping": "Würfeln...",
+  "heads": "Kopf",
+  "tails": "Zahl",
+  "result": "Ergebnis",
+  "statistics": "Statistiken",
+  "totalFlips": "Gesamt-Würfe",
+  "headsCount": "Köpfe",
+  "tailsCount": "Zahlen",
+  "resetStats": "Statistiken zurücksetzen",
+  "detailed_description": "Der Coin Flipper ist ein interaktives Webtool, das eine physikalisch basierte Simulation eines Münzwurfs implementiert. Technisch gesehen generiert der Algorithmus Zufallszahlen durch kryptografisch sichere Pseudozufallszahlengeneratoren (CSPRNG), die in JavaScript über die Web Crypto API realisiert werden. Die Animation erfolgt mittels CSS-Transformationsmatrizen und requestAnimationFrame für flüssige 60-FPS-Darstellung. Ein physikbasiertes Modell berechnet Rotation (in Radiant) und Trajektorie unter Berücksichtigung von Gravitationskonstanten (9.81 m/s²) und Reibungskoeffizienten. Benutzer benötigen dieses Tool für statistische Stichprobenziehung, Entscheidungsfindung bei Deadlocks oder zur Demonstration von Wahrscheinlichkeitsverteilungen. Die integrierte Statistikanalyse berechnet Konfidenzintervalle (95%) und Chi-Quadrat-Tests für Serien von Würfen. Besonders nützlich für Entwickler, die Zufallsgeneratoren testen, oder Lehrkräfte, die Stochastik veranschaulichen möchten.",
+  "usage_steps": [
+    "1. Wählen Sie im Drop-down-Menü 'Modus' zwischen 'Einzelwurf' oder 'Serienwurf (10-1000 Würfe)'",
+    "2. Klicken Sie auf 'Münzdesign' und laden Sie ein benutzerdefiniertes SVG-Bild für die Vorder- bzw. Rückseite hoch",
+    "3. Aktivieren Sie im Schieberegler 'Unfairness-Faktor' zwischen 0.1-0.9 für gewichtete Wahrscheinlichkeiten",
+    "4. Starten Sie die Animation durch Klick auf 'Wurf' und beobachten Sie die Euler-Winkel-Berechnung in Echtzeit",
+    "5. Exportieren Sie die Ergebnisse als CSV oder visualisieren Sie diese im integrierten Histogramm",
+    "6. Nutzen Sie die API-Schnittstelle (POST /flip) für automatisierte Tests mit benutzerdefinierten Headers"
+  ],
+  "usage_examples": [
+    "Entscheidungsunterstützung bei der Wahl zwischen zwei gleichwertigen Code-Architekturen",
+    "Simulation von Binomialverteilungen für statistische Hypothesentests",
+    "Entwicklung von Zufallsgeneratoren für kryptografische Anwendungen",
+    "Unterrichtsdemonstration zur Konvergenz der relativen Häufigkeit gegen die theoretische Wahrscheinlichkeit"
+  ],
+  "flipCount": "Wurfzähler",
+  "total": "Gesamt",
+  "recentFlips": "Kürzliche Würfe"
+}

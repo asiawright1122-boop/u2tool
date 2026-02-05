@@ -1,0 +1,39 @@
+{
+  "detailed_description": "CSS Flexbox Generator 是一款面向前端开发者的可视化弹性盒子布局构建工具，通过动态交互界面解析Flex容器属性与子元素特性。该工具深度整合Flexbox规范中的主轴/交叉轴对齐模式、弹性生长系数、元素排序等核心概念，支持实时拖拽调整flex-direction、flex-wrap、justify-content等关键CSS属性值。用户可通过可视化网格系统直观预览容器尺寸变化对子元素排列的影响，特别适用于响应式导航栏布局、卡片式内容排列等复杂场景。技术实现上采用双向数据绑定机制，当用户操作控件时，系统即时生成标准化CSS代码并同步渲染预览窗口，同时处理浏览器兼容性前缀问题，极大降低传统手写代码的试错成本。",
+  "usage_steps": [
+    "在布局设置面板选择容器方向（row/column）并启用wrap换行模式",
+    "通过滑块调节justify-content主轴对齐方式（flex-start/space-between等）",
+    "点击元素库添加不同flex-grow权重的子项模块，观察尺寸动态变化",
+    "拖动间距调节器设置gap值，实时查看元素间距的像素级变化",
+    "在代码面板切换查看未压缩的标准CSS代码与压缩后的生产级代码",
+    "通过预览窗口的分辨率滑块模拟不同设备视口下的布局响应效果"
+  ],
+  "usage_examples": [
+    "构建响应式导航栏：设置容器为row方向，启用space-around对齐，添加带flex-shrink属性的菜单项",
+    "实现卡片瀑布流：选择column-wrap布局，设置align-content为space-evenly，调整元素order排序",
+    "垂直水平居中：配置flex-direction为column，设置justify-content与align-items为center",
+    "动态间距控制：通过range控件实时调整margin/padding值，观察元素排列的弹性收缩效果"
+  ],
+  "faqs": [
+    {
+      "question": "Css Flexbox Generator 是免费的吗？",
+      "answer": "是的，Css Flexbox Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Css Flexbox Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Css Flexbox Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Css Flexbox Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Css Flexbox Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

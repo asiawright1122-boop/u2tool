@@ -1,0 +1,37 @@
+{
+  "defaultTitle": "Mi pagina impresionante",
+  "defaultDescription": "Esta es una descripción de mi increíble página que aparecerá en las redes sociales.",
+  "defaultSiteName": "Mi sitio web",
+  "modeFetch": "Obtener etiquetas OG de la URL",
+  "modeManual": "Entrada manual",
+  "fetchUrlLabel": "Ingrese la URL de la página web",
+  "fetchButton": "Buscar",
+  "fetching": "Atractivo...",
+  "fetchError": "No se puede recuperar la página web. Por favor verifique la URL o vuelva a intentarlo más tarde.",
+  "title": "Título",
+  "titlePlaceholder": "Título de la página",
+  "siteName": "Nombre del sitio",
+  "siteNamePlaceholder": "Nombre del sitio web",
+  "descriptionPlaceholder": "Descripción de la página...",
+  "imageUrl": "URL de la imagen (se recomienda 1200x630)",
+  "imageUrlPlaceholder": "https://ejemplo.com/imagen.jpg",
+  "pageUrl": "URL de la página",
+  "pageUrlPlaceholder": "https://ejemplo.com",
+  "imageLoadError": "La imagen no pudo cargarse",
+  "enterImageUrl": "Ingrese la URL de la imagen arriba",
+  "generatedCode": "Metaetiquetas generadas",
+  "platform": {
+    "facebook": "Facebook",
+    "twitter": "Gorjeo",
+    "linkedin": "LinkedIn"
+  },
+  "preview": "Vista previa",
+  "recommendations": {
+    "title": "Recomendaciones",
+    "imageSize": "Tamaño de imagen: 1200x630 píxeles (relación 1,91:1)",
+    "titleLength": "Título: 60-70 caracteres máximo",
+    "descriptionLength": "Descripción: 150-160 caracteres máximo",
+    "highQuality": "Utilice imágenes relevantes y de alta calidad.",
+    "testDebugger": "Prueba con el depurador de uso compartido de Facebook"
+  }
+}

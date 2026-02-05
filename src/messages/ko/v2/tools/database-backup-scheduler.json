@@ -1,0 +1,39 @@
+{
+  "detailed_description": "데이터베이스 백업 스케줄러는 백업 스케줄을 생성하고 데이터베이스 백업 스크립트를 생성하는 도구입니다.",
+  "usage_steps": [
+    "데이터베이스 유형 선택",
+    "주기 설정",
+    "대상 설정",
+    "스크립트 생성",
+    "크론 표현식 복사"
+  ],
+  "usage_examples": [
+    "매일 백업 스크립트 생성",
+    "크론 작업 생성",
+    "보존 정책 계획"
+  ],
+  "input": "입력",
+  "output": "출력",
+  "process": "처리",
+  "copy": "복사",
+  "clear": "지우기",
+  "inputPlaceholder": "여기에 입력하세요...",
+  "outputPlaceholder": "결과가 여기에 표시됩니다...",
+  "errors": {
+    "emptyInput": "입력을 입력해 주세요"
+  },
+  "database": "데이터베이스",
+  "host": "호스트",
+  "databaseName": "데이터베이스 이름",
+  "username": "사용자 이름",
+  "schedule": "일정",
+  "retention": "보존 기간 (일)",
+  "outputPath": "출력 경로",
+  "enableCompression": "압축 활성화 (gzip)",
+  "backupScript": "백업 스크립트",
+  "crontabEntry": "Crontab 항목",
+  "hourly": "매시간",
+  "daily": "매일 (오전 2시)",
+  "weekly": "매주 (일요일)",
+  "monthly": "매월 (1일)"
+}

@@ -1,0 +1,37 @@
+{
+  "detailed_description": "O Gerador de README do GitHub ajuda a criar arquivos README.md profissionais e bem estruturados para seus repositórios do GitHub. Adicione título do projeto, descrição, badges (status de build, licença, versão do npm), lista de recursos, instruções de instalação, exemplos de uso, documentação da API, diretrizes de contribuição e informações de licença. A ferramenta gera Markdown com formatação adequada, tornando seus projetos mais descobríveis e amigáveis ao usuário.",
+  "usage_steps": [
+    "Digite o nome e a descrição do seu projeto",
+    "Adicione badges para status de build, licença, etc.",
+    "Liste os principais recursos do seu projeto",
+    "Escreva as instruções de instalação",
+    "Adicione exemplos de uso com blocos de código",
+    "Inclua diretrizes de contribuição",
+    "Selecione uma licença e gere o README"
+  ],
+  "usage_examples": [
+    "Crie um README para uma biblioteca de código aberto",
+    "Documente uma ferramenta CLI com exemplos de uso",
+    "Configure um README para uma aplicação web",
+    "Crie documentação para um projeto de API"
+  ],
+  "projectNamePlaceholder": "Meu Projeto Incrível",
+  "descriptionPlaceholder": "Uma breve descrição do seu projeto...",
+  "authorPlaceholder": "João Silva",
+  "authorGithubPlaceholder": "joaosilva",
+  "featurePlaceholder": "Descrição do recurso...",
+  "installationPlaceholder": "npm install your-package",
+  "usagePlaceholder": "import { something } from 'your-package';",
+  "projectName": "Nome do projeto",
+  "author": "Autor",
+  "authorGithub": "GitHub do autor",
+  "badges": "Emblemas",
+  "features": "Recursos",
+  "addFeature": "Adicionar recurso",
+  "installation": "Instalação",
+  "usage": "Uso",
+  "license": "Licença",
+  "includeTableOfContents": "Incluir índice",
+  "generate": "Gerar",
+  "download": "Baixar"
+}

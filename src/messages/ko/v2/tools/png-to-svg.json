@@ -1,0 +1,32 @@
+{
+  "detailed_description": "PNG을 SVG로 변환기는 레이저 이미지를 추적하고 스케일 가능한 벡터 그래픽으로 변환합니다. 비트맵 이미지로부터 해상도에 의존하지 않는 로고와 아이콘을 생성하는 데 이상적입니다.",
+  "usage_steps": [
+    "PNG 이미지 업로드",
+    "추적 설정 조정",
+    "벡터 결과 미리보기",
+    "색상과 경로 세부 조정",
+    "SVG 파일 다운로드"
+  ],
+  "usage_examples": [
+    "스케일링을 위한 로고 벡터화",
+    "아이콘을 SVG 형식으로 변환",
+    "사진에서 벡터 아트 생성"
+  ],
+  "uploadPng": "PNG 이미지 업로드",
+  "colorMode": "색상 모드",
+  "blackWhite": "흑백",
+  "color": "색상",
+  "threshold": "임계값",
+  "convert": "SVG로 변환",
+  "download": "SVG 다운로드",
+  "preview": "미리보기",
+  "dropzone": "PNG 파일을 여기에 놓거나 클릭하여 선택",
+  "selectFile": "파일 선택",
+  "conversionMode": "변환 모드",
+  "copied": "복사됨!",
+  "copy": "복사",
+  "embedMode": "Base64로 임베드",
+  "removeImage": "이미지 제거",
+  "svgOutput": "SVG 출력",
+  "traceMode": "벡터로 추적"
+}

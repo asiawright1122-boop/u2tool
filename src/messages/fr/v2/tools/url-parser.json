@@ -1,0 +1,29 @@
+{
+  "urlLabel": "URL",
+  "protocol": "Protocole",
+  "hostname": "Hôte",
+  "port": "Port",
+  "pathname": "Chemin",
+  "search": "Chaîne de requête",
+  "hash": "Hash",
+  "origin": "Origine",
+  "queryParams": "Paramètres de requête",
+  "invalid": "URL invalide",
+  "defaultPort": "(par défaut)",
+  "none": "(aucun)",
+  "detailed_description": "Le parseur d'URL permet de décomposer et d'analyser les composants d'un identifiant uniforme de ressource (URI) conformément aux standards RFC 3986 et RFC 6995. Cet outil extrait avec précision les éléments structurels tels que le schéma (HTTP/HTTPS), l'autorité (domaine et port), le chemin d'accès segmenté, les paramètres de requête structurés sous forme de paires clé/valeur, et l'identifiant de fragment. Conçu pour les développeurs et administrateurs systèmes, il intègre un moteur de normalisation qui gère les encodages URL (percent-encoding) et les sous-domaines internationaux (IDN). L'analyse syntaxique profonde permet d'identifier les vulnérabilités dans les chaînes de requête ou les redirections, tout en fournissant un arbre hiérarchique des paramètres imbriqués. L'algorithme utilise des expressions régulières optimisées pour valider la structure de l'URL avant extraction, avec prise en charge des schémas personnalisés (ws://, ftp://, etc.). La fonctionnalité de comparaison entre URL brute et URL normalisée aide à détecter les tentatives de manipulation ou les erreurs de routage dans les applications web.",
+  "usage_steps": [
+    "Collez l'URL complète dans le champ de saisie textuel étiqueté « Entrée URI ».",
+    "Cliquez sur le bouton « Analyser » pour déclencher le processus de parsing.",
+    "Examinez le panneau de résultats divisé en onglets (Schéma, Hôte, Chemin, Requête, Fragment).",
+    "Utilisez la case à cocher « Décoder les caractères » pour afficher les valeurs en clair.",
+    "Consultez le tableau des paramètres de requête avec leurs index et types de données détectés.",
+    "Téléchargez le JSON structuré via le bouton « Exporter les données » pour intégration API."
+  ],
+  "usage_examples": [
+    "Un développeur identifie des paramètres manquants dans une URL de callback OAuth en analysant les requêtes capturées via l'outil.",
+    "Un auditeur sécurité détecte des tokens d'API exposés dans les fragments d'URL utilisés par une application SPA.",
+    "Un référenceur optimise les URL de campagne marketing en vérifiant la structure des paramètres UTM via l'analyse hiérarchique.",
+    "Un administrateur réseau diagnostique des erreurs de routage en comparant les composants d'URL avant et après redirections 301."
+  ]
+}

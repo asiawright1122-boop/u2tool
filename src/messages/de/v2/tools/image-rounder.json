@@ -1,0 +1,21 @@
+{
+  "uploadImage": "Bild hochladen",
+  "circleMode": "Kreismodus",
+  "radius": "Eckradius",
+  "noImage": "Bitte laden Sie ein Bild hoch",
+  "detailed_description": "Der Image Rounder ist ein spezialisierter Bildverarbeitungsalgorithmus, der es ermöglicht, präzise abgerundete Ecken zu generieren oder vollständig kreisförmige Bilder zu erstellen. Technisch gesehen modifiziert das Tool die Pixelmatrix des hochgeladenen Bildes, indem es eine maschenspezifische Alphakanal-Manipulation durchführt. Bei abgerundeten Ecken wird ein konfigurierbarer Radius in Pixeln verwendet, um Bézier-Kurven zu berechnen, während bei der Kreisoption eine elliptische Maske mit 100%iger Krümmung angewendet wird. Das Verfahren nutzt Anti-Aliasing-Techniken, um Treppeneffekte an den Kanten zu minimieren, und berücksichtigt dabei die ursprüngliche Bildauflösung, um Qualitätsverluste zu vermeiden. Entwickler benötigen dieses Tool für Responsive Webdesign-Projekte, um CSS border-radius-Effekte prototypisch vorzuberechnen, oder zur Erstellung von Avatar-Bildern mit transparentem Hintergrund. Das Tool ist besonders nützlich für UI/UX-Designer, die pixelgenaue Vorschauen für mobile App-Icons benötigen, sowie für E-Commerce-Plattformen, die Produktbilder einheitlich abrunden möchten. Die Verarbeitung erfolgt clientseitig mit WebAssembly-optimierten Image-Processing-Bibliotheken, wodurch sensible Bilddaten nicht serverseitig gespeichert werden.",
+  "usage_steps": [
+    "Klicken Sie auf 'Bild hochladen' und wählen Sie eine Bilddatei im PNG, JPEG oder WebP-Format mit maximal 10 MB aus.",
+    "Aktivieren Sie den Schieberegler 'Eckenradius' und legen Sie den gewünschten Abrundungsgrad zwischen 0 (keine Abrundung) und 50% (vollkreis) fest.",
+    "Aktivieren Sie die Checkbox 'Kreisförmig' für vollständig runde Bilder, wobei das Bild automatisch auf quadratische Dimensionen skaliert wird.",
+    "Passen Sie im Bereich 'Hintergrund' die Transparenzoptionen an: Behalten Sie den Originalhintergrund, setzen Sie ihn auf festes Weiß oder aktivieren Sie Alpha-Kanäle für Transparenz.",
+    "Klicken Sie auf 'Anwenden', um den Verarbeitungsalgorithmus zu starten, der das Bild in Echtzeit im Vorschaufenster anzeigt.",
+    "Laden Sie das Ergebnis mit dem Button 'Bild herunterladen' im gewünschten Format (PNG mit Alphakanal oder JPEG) herunter."
+  ],
+  "usage_examples": [
+    "Ein Webentwickler erstellt ein Button-Design mit 12px abgerundeten Ecken und transparentem Hintergrund für ein SaaS-Dashboard.",
+    "Ein Social-Media-Manager konvertiert quadratische Porträtfotos in kreisförmige Profilebilder für LinkedIn-Profilseiten.",
+    "Ein App-Designer bereitet 1024x1024px große Icons mit 15% Eckenradius für eine iOS-App vor, mit Export als PNG-24 mit Transparenz.",
+    "Ein Online-Shop-Betreiber standardisiert Produktbilder auf 30px Abrundung und weißem Hintergrund für ein einheitliches E-Commerce-Layout."
+  ]
+}

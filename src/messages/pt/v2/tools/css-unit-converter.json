@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O CSS Unit Converter é uma ferramenta técnica especializada para transformar valores entre unidades CSS como px, rem, em, pt, vw e vh, considerando contextos de design responsivo e tipográfico. Desenvolvedores utilizam esta ferramenta para resolver problemas específicos como converter tamanhos absolutos (px) para unidades relativas (rem) visando acessibilidade, adaptar medidas de fontes aninhadas com cálculos em 'em', ou escalar elementos proporcionalmente ao viewport através de 'vw' e 'vh'. O conversor aplica fórmulas matemáticas precisas: 1rem = 16px (padrão base), 1pt = 1.333px, e unidades viewport calculadas com base na dimensão da janela (1vw = 1% da largura do viewport). Internamente, o algoritmo processa entradas numéricas com até 4 casas decimais, suporta notação científica e preserva proporções em conversões múltiplas. Diferentes de outras ferramentas, esta inclui histórico de conversões recentes e preview em tempo real do CSS resultante, essencial para projetos que exigem consistência entre frameworks como Bootstrap e sistemas de design customizados.",
+  "usage_steps": [
+    "1. Selecione a unidade de origem no seletor dropdown (ex: 'px')",
+    "2. Insira o valor numérico no campo de entrada (ex: '14')",
+    "3. Ative as unidades de destino desejadas marcando as checkboxes (ex: 'rem' e 'em')",
+    "4. Ajuste o valor de referência base (default: 16px) se necessário para conversões personalizadas",
+    "5. Clique no botão 'Converter' para gerar resultados imediatos",
+    "6. Use o botão 'Copiar' para exportar o código CSS com os valores convertidos"
+  ],
+  "usage_examples": [
+    "Converter 16px para rem para manter consistência em sistemas de design baseados em tokens",
+    "Transformar 24pt em vw para criar textos responsivos que escalam com o tamanho da tela",
+    "Converter 1.5em em px absolutos para depurar problemas de herança em componentes aninhados",
+    "Calcular valores de vh para seções full-height em landing pages com scroll suave"
+  ]
+}

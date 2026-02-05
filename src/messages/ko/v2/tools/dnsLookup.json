@@ -1,0 +1,18 @@
+{
+  "placeholder": "도메인 입력(예: example.com)",
+  "lookup": "조회",
+  "loading": "조회 중...",
+  "error": "조회 실패",
+  "ipError": "IP 주소가 아닌 도메인 이름을 입력하세요. 예: google.com",
+  "recordTypes": "레코드 유형",
+  "records": "{유형} 레코드",
+  "ttl": "TTL: {ttl}s",
+  "recordDesc": {
+    "A": "IPv4 address",
+    "AAAA": "IPv6 address",
+    "CNAME": "표준 이름",
+    "MX": "메일교환",
+    "NS": "네임서버",
+    "TXT": "텍스트 기록"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der JSON Path Finder ist ein Spezialwerkzeug zur präzisen Extraktion und Visualisierung von Pfade-Referenzen in JSON-Datenstrukturen. Technisch gesehen parst der Tool einen eingegebenen JSON-Text in einen abstrakten Syntaxbaum (AST) und generiert für jeden Wert eine vollständige JSON Pointer-Referenz (im Format '/Pfad/zu/Wert'). Entwickler benötigen dieses Tool, um komplexe verschachtelte Datenstrukturen zu analysieren, Fehler in API-Antworten zu diagnostizieren oder spezifische Datenfelder für Transformationen (ETL-Prozesse) zu identifizieren. Anders als einfache Formatierer zeigt der Path Finder interaktiv die gesamte Hierarchie an, inklusive Array-Indizes und verschachtelter Objekte. Die Implementierung nutzt recursive Tree-Walking-Algorithmen, um alle möglichen Pfade zu enumerieren, und unterstützt sowohl Dot-Notation (.) als auch Bracket-Notation ([]) für die Pfadarstellung. Ein integrierter Kopiermechanismus erlaubt das direkte Exportieren von Pfaden in Zwischenablage oder als CSV-Liste.",
+  "usage_steps": [
+    "1. JSON-Daten in das Eingabefeld im JSON Path Finder einfügen oder per Drag-and-Drop laden.",
+    "2. Auf 'Struktur analysieren' klicken, um den JSON-AST zu generieren und die Pfad-Hierarchie zu berechnen.",
+    "3. Die interaktive Baumansicht nutzen, um Knoten zu expandieren und spezifische Werte auszuwählen.",
+    "4. Im Dropdown 'Pfadformat wählen' zwischen JSON Pointer, Dot-Notation oder Python-Dict-Syntax wechseln.",
+    "5. Den gewünschten Pfad über den 'Kopieren'-Button rechts neben jedem Eintrag in die Zwischenablage übernehmen.",
+    "6. Bei Bedarf alle Pfade über 'Exportieren als CSV' herunterladen, um sie in anderen Tools weiterzuverarbeiten."
+  ],
+  "usage_examples": [
+    "Ein Backend-Entwickler analysiert eine 2000-Zeilen-JSON-Antwort einer REST-API, um den genauen Pfad für ein paginiertes Ergebnis-Feld zu identifizieren.",
+    "Ein Data Engineer validiert während eines ETL-Prozesses, ob alle benötigten Felder aus einem IoT-Sensordatenstrom vorhanden sind, indem er alle Pfade mit einem bestimmten Präfix extrahiert.",
+    "Ein Frontend-Entwickler navigiert durch eine komplexe Konfigurationsdatei für eine Cloud-Infrastruktur, um den exakten Pfad für ein verschachteltes Timeout-Parameterobjekt zu finden.",
+    "Ein QA-Tester dokumentiert für ein API-Testskript alle möglichen Fehlercodes, indem er alle Pfade filtert, die '/error/code' enthalten, und die Ergebnisse als CSV für Regressionstests exportiert."
+  ]
+}

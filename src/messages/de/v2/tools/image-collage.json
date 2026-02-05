@@ -1,0 +1,35 @@
+{
+  "addImages": "Bilder hinzufügen",
+  "layout": "Layout",
+  "grid": "Raster",
+  "horizontal": "Horizontal",
+  "vertical": "Vertikal",
+  "columns": "Spalten",
+  "gap": "Abstand",
+  "backgroundColor": "Hintergrundfarbe",
+  "create": "Montage erstellen",
+  "download": "Bild herunterladen",
+  "noImages": "Bitte fügen Sie mindestens 2 Bilder hinzu",
+  "direction": "Richtung",
+  "spacing": "Abstand",
+  "dropzone": "Klicken oder ziehen Sie Bilder, um sie hochzuladen",
+  "multipleHint": "Sie können mehrere Bilder auswählen",
+  "imageList": "Bilister",
+  "createCollage": "Montage erstellen",
+  "result": "Ergebnis",
+  "detailed_description": "Das Image Collage Tool ermöglicht es Benutzern, mehrere Bilder in ein einzigartiges Kollage zu kombinieren, wobei eine Vielzahl von Layout-Optionen zur Verfügung steht. Technisch gesehen, lädt der Benutzer seine Bilder hoch, wählt ein Layout und kann verschiedene Einstellungen wie Größe, Position und Effekte anpassen. Das Tool nutzt moderne Webtechnologien wie HTML5, CSS3 und JavaScript, um eine benutzerfreundliche Oberfläche und schnelle Bildverarbeitung zu gewährleisten. Die Verarbeitung erfolgt clientseitig, was bedeutet, dass die Bilder nicht auf einen Server hochgeladen werden, sondern direkt im Browser bearbeitet werden. Dies gewährleistet nicht nur eine schnellere Bearbeitung, sondern auch eine höhere Datensicherheit und Privatsphäre.\n\nDie Bedeutung des Image Collage Tools liegt in der Fähigkeit, visuell ansprechende Kollagebilder zu erstellen, die für verschiedene Zwecke verwendet werden können. Designkünstler können damit kreative Visitenkarten, Poster oder Social-Media-Inhalte erstellen. Fotografen können eine Geschichte erzählen, indem sie mehrere Bildmomente in einem einzigen Bild zusammenführen. Für Marketingzwecke kann das Kollage Tool dazu verwendet werden, um Produkte oder Ereignisse in einem attraktiven Format darzustellen.\n\nDas Tool bietet eine intuitive Benutzeroberfläche, bei der Benutzer verschiedene Layouts auswählen und anpassen können. Es unterstützt verschiedene Bildformate und ermöglicht die Hinzufügung von Text, Rahmen und visuellen Effekten, um das Kollage individuell zu gestalten.",
+  "usage_steps": [
+    "Öffnen Sie das Image Collage Tool in Ihrem Browser und klicken Sie auf den Button 'Bilder hochladen', um Ihre Bilder auszuwählen.",
+    "Nach dem Hochladen erscheinen die Bilder in der Vorschau. Wählen Sie ein Layout aus der vorgegebenen Palette, z.B. '2x2 Quadrat' oder 'Frei positionierbar'.",
+    "Passen Sie die Größe und Position der Bilder im Layout an, indem Sie sie ziehen und vergrößern oder verkleinern.",
+    "Fügen Sie zusätzliche Elemente hinzu, wie Text, Rahmen oder visuelle Effekte, indem Sie die entsprechenden Optionen in der Werkzeugleiste auswählen.",
+    "Bewerten Sie das fertige Kollage in der Vorschau und passen Sie es bei Bedarf weiter an.",
+    "Speichern Sie das endgültige Kollagebild, indem Sie auf den Button 'Kollage speichern' klicken und den gewünschten Speicherort auf Ihrem Gerät auswählen."
+  ],
+  "usage_examples": [
+    "Ein Fotograf möchte eine Serie von Reisebildern in einem einzigen Bild präsentieren, um eine visuelle Geschichte zu erzählen. Er nutzt das Image Collage Tool, um die Bilder in einem freien Layout zu kombinieren und ergänzt sie mit Text, der die Orte beschreibt.",
+    "Eine Marketingagentur erstellt ein Poster für ein Musikfestival, auf dem verschiedene Bands und Auftritte dargestellt werden sollen. Mit dem Image Collage Tool kombiniert sie Fotos der Bands in einem kreativen Layout und fügt Elemente wie Logos und Termininformationen hinzu.",
+    "Ein Social-Media-Manager plant einen Instagram-Beitrag, der verschiedene Produkte eines Online-Shops zeigt. Er verwendet das Image Collage Tool, um die Produktbilder in einem attraktiven 2x2-Quadrat-Layout zu kombinieren und ergänzt das Bild mit Markenlogos und Werbetexten.",
+    "Ein Designkünstler arbeitet an einem kreativen Projektablau für eine Galerieausstellung. Mit dem Image Collage Tool erstellt er eine Komposition aus verschiedenen Kunstwerken und experimentiert mit verschiedenen Layouts und visuellen Effekten, um die bestmögliche Darstellung zu finden."
+  ]
+}

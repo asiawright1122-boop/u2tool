@@ -1,0 +1,53 @@
+{
+  "monthly": "월간",
+  "yearly": "연간",
+  "month": "월",
+  "year": "년",
+  "transportation": "교통",
+  "carDistance": "자동차 거리",
+  "petrol": "휘발유",
+  "diesel": "디젤",
+  "hybrid": "하이브리드",
+  "electric": "전기",
+  "flightHours": "비행 시간",
+  "shortHaul": "단거리 (<3시간)",
+  "mediumHaul": "중거리 (3-6시간)",
+  "longHaul": "장거리 (>6시간)",
+  "trainDistance": "기차 거리",
+  "busDistance": "버스 거리",
+  "homeEnergy": "가정 에너지",
+  "electricity": "전기",
+  "naturalGas": "천연가스",
+  "heatingOil": "난방유",
+  "lifestyle": "라이프스타일",
+  "dietType": "식단 유형",
+  "diets": {
+    "meat": "육식 위주",
+    "average": "평균",
+    "vegetarian": "채식주의자",
+    "vegan": "비건"
+  },
+  "results": "당신의 탄소 발자국",
+  "total": "총계",
+  "treesNeeded": "상쇄에 필요한 나무",
+  "trees": "그루/년",
+  "levels": {
+    "low": "낮은 영향",
+    "average": "평균",
+    "high": "높은 영향",
+    "veryHigh": "매우 높은 영향"
+  },
+  "detailed_description": "탄소발자국 계산기는 교통, 가정 에너지 사용, 식단 선택으로 인한 CO2 배출량을 계산하여 환경에 미치는 영향을 측정하는 데 도움을 줍니다. 이 도구는 귀하의 탄소발자국에 대한 상세한 분석을 제공하며, 배출량을 상쇄하기 위해 필요한 나무의 수도 보여줍니다.",
+  "usage_steps": [
+    "월간 또는 연간 계산 기간을 선택하세요",
+    "교통 관련 데이터(자동차, 항공기, 기차, 버스)를 입력하세요",
+    "가정 에너지 사용량(전기, 가스, 난방)을 입력하세요",
+    "식단 유형을 선택하세요",
+    "총 탄소발자국 및 배출량 분석 결과를 확인하세요"
+  ],
+  "usage_examples": [
+    "시간 경과에 따른 개인의 환경 영향을 추적하세요",
+    "다양한 생활습관의 탄소발자국을 비교하세요",
+    "개인 또는 기업을 위한 탄소 상쇄 전략을 계획하세요"
+  ]
+}

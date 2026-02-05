@@ -1,0 +1,25 @@
+{
+  "tableName": "Tabellenname",
+  "dialect": "Dialekt",
+  "includeCreate": "CREATE TABLE einschließen",
+  "loadExample": "Beispiel laden",
+  "jsonPlaceholder": "JSON-Array eingeben...",
+  "input": "Eingabe",
+  "output": "Ausgabe",
+  "detailed_description": "Der JSON-zu-SQL-Konverter analysiert strukturierte JSON-Arrays und generiert entsprechende SQL-INSERT-Anweisungen samt optionaler CREATE-TABLE-Definition. Das Tool verwendet Schema-Infereenz, um aus den JSON-Feldern Datentypen (VARCHAR, INT, DATE etc.) und NULL-Bedingungen abzuleiten, wobei geschachtelte Objekte in relationale Tabellenstrukturen transformiert werden. Entwickler benötigen diesen Konverter, um beispielsweise API-Antworten, NoSQL-Dumps oder IoT-Sensordaten schnell in relationale Datenbanken zu migrieren, ohne manuelles Mapping. Die Verarbeitung erfolgt clientseitig im Browser mittels JavaScript: Der JSON-Parser traversiert den Datenbaum, normalisiert Arrays mit unterschiedlichen Feldkombinationen und erstellt dabei optimierte SQL-Batches mit Batch-Size-Konfiguration. Besonders bei dynamischen Schemata oder heterogenen Datensätzen spart das Tool manuelle Fehlerrisiken ein.",
+  "usage_steps": [
+    "1. JSON-Datei hochladen oder JSON-Code direkt in den Editor einfügen.",
+    "2. Formatoption 'JSON-Array' oder 'Newline-Delimited JSON' im Auswahlfeld wählen.",
+    "3. Tabellenname und Primärschlüssel-Einstellungen im Konfigurationspanel festlegen.",
+    "4. Datentypen pro Feld im Mapping-Grid manuell anpassen (z.B. VARCHAR(255) zu TEXT).",
+    "5. SQL-Vorschau mit automatisch generierten CREATE-TABLE- und INSERT-Anweisungen prüfen.",
+    "6. SQL-Skript per Klick auf 'Download' speichern oder in die Zwischenablage kopieren."
+  ],
+  "usage_examples": [
+    "Entwickler migriert Benutzerdaten aus einer REST-API (JSON) in eine MySQL-Datenbank für eine Legacy-Anwendung.",
+    "Datenanalyst erstellt Testdaten für ein Data-Warehouse durch Konvertierung von JSON-Logdateien in dimensionale Tabellen.",
+    "IoT-Engineer transformiert Sensormesswerte im NDJSON-Format zu partitionierten SQL-INSERTs für Zeitreihenanalysen.",
+    "E-Commerce-Administrator synchronisiert Produktkataloge von NoSQL-Speichern in relationale Lagerhaltungssysteme."
+  ],
+  "inputPlaceholder": "JSON hier einfügen..."
+}

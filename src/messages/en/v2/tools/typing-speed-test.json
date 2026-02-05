@@ -1,0 +1,57 @@
+{
+  "startTyping": "Start typing to begin the test",
+  "wpm": "WPM",
+  "accuracy": "Accuracy",
+  "time": "Time",
+  "characters": "Characters",
+  "correct": "Correct",
+  "incorrect": "Incorrect",
+  "difficulty": "Difficulty",
+  "easy": "Easy",
+  "medium": "Medium",
+  "hard": "Hard",
+  "restart": "Restart Test",
+  "completed": "Test Completed!",
+  "newText": "New Text",
+  "tryAgain": "Try Again",
+  "typing": "Typing",
+  "correctChars": "Correct Characters",
+  "incorrectChars": "Incorrect Characters",
+  "duration": "Duration",
+  "rating": "Rating",
+  "beginner": "Beginner",
+  "average": "Average",
+  "aboveAverage": "Above Average",
+  "fast": "Fast",
+  "professional": "Professional",
+  "sampleTexts": {
+    "easy": [
+      "The quick brown fox jumps over the lazy dog.",
+      "Pack my box with five dozen liquor jugs.",
+      "How vexingly quick daft zebras jump!"
+    ],
+    "medium": [
+      "The five boxing wizards jump quickly at dawn while the lazy dog sleeps peacefully nearby.",
+      "Sphinx of black quartz, judge my vow. The quick brown fox jumps over the lazy dog.",
+      "Two driven jocks help fax my big quiz. The five boxing wizards jump quickly."
+    ],
+    "hard": [
+      "The job requires extra pluck and zeal from every young wage earner. Crazy Frederick bought many very exquisite opal jewels.",
+      "We promptly judged antique ivory buckles for the next prize. How razorback-jumping frogs can level six piqued gymnasts!",
+      "Sixty zippers were quickly picked from the woven jute bag. The quick onyx goblin jumps over the lazy dwarf."
+    ]
+  },
+  "detailed_description": "Typing Speed Test measures your typing speed in words per minute (WPM) and accuracy percentage. Choose from easy, medium, or hard difficulty levels with different text samples. Track correct and incorrect characters, duration, and get a skill rating.",
+  "usage_steps": [
+    "Select a difficulty level",
+    "Start typing the displayed text",
+    "Complete the text to see your results",
+    "View WPM, accuracy, and skill rating",
+    "Try again with new text to improve"
+  ],
+  "usage_examples": [
+    "Measure your typing speed",
+    "Practice to improve typing accuracy",
+    "Compare typing skills across difficulty levels"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "L'outil Canvas Drawing est un éditeur graphique basé sur le standard HTML5 Canvas, permettant de créer et modifier des images matricielles (raster) via une interface interactive. Techniquement, il utilise le contexte 2D de l'élément <canvas> pour tracer des chemins vectoriels dynamiques avec des algorithmes de rasterisation en temps réel. La brosse applique des opérations de dessin avec possibilité de réglage de la dureté, de la pression (simulée) et de l'opacité, tandis que la gomme utilise des modes de fusion (compositing) pour supprimer des pixels en ajustant les canaux RGBA. Ce toolchain est utile pour les développeurs web souhaitant tester des prototypes d'interfaces, les designers créant des assets 2D simplifiés, ou les enseignants annotant des diagrammes techniques. L'outil gère les événements tactiles et souris pour capturer les mouvements, lesquels sont convertis en séries de points interpolés pour fluidifier les tracés. Les fichiers générés peuvent être exportés en PNG ou JPEG avec différentes résolutions, incluant des options de mise à l'échelle basées sur des ratios d'affichage paramétrables.",
+  "usage_steps": [
+    "Sélectionnez l'outil 'Brosse' ou 'Gomme' dans le panneau latéral de contrôle",
+    "Ajustez la taille du pinceau via le curseur de diamètre (5 à 50 pixels) et configurez l'opacité (0-100%)",
+    "Utilisez le sélecteur de couleur HSL pour définir la teinte, la saturation et la luminosité de votre tracé",
+    "Dessinez ou effacez en maintenant le clic gauche de la souris ou en glissant un doigt sur l'écran tactile",
+    "Modifiez les dimensions du canvas dans les paramètres d'affichage (de 320x240 à 1920x1080 pixels)",
+    "Exportez votre création via le bouton 'Télécharger' en format PNG ou JPEG avec compression ajustable"
+  ],
+  "usage_examples": [
+    "Créer un wireframe d'application mobile avec des formes géométriques et des annotations textuelles",
+    "Retoucher une capture d'écran en masquant des éléments sensibles avec la gomme opalescente",
+    "Dessiner des sprites 2D pour un jeu vidéo avec des dimensions adaptées aux ratios d'affichage",
+    "Illustrer un diagramme de flux en combinant dessins à main levée et formes vectorielles précises"
+  ]
+}

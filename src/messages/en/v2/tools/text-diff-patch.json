@@ -1,0 +1,26 @@
+{
+  "createPatch": "Create Patch",
+  "applyPatch": "Apply Patch",
+  "originalText": "Original Text",
+  "modifiedText": "Modified Text",
+  "generatedPatch": "Generated Patch",
+  "patch": "Patch",
+  "result": "Result",
+  "errorApply": "Error applying patch",
+  "patchPlaceholder": "Paste patch here...",
+  "detailed_description": "Text Diff & Patch is a specialized tool for generating and applying precise textual deltas using algorithmic comparison techniques. This tool implements Myers' O(ND) difference algorithm to produce line-wise or character-wise comparisons between two text versions, outputting standard Unified Diff (diff -u) formatted patches. Developers and technical teams use it to track incremental changes in source code, configuration files, or documentation without transferring entire files. The patch application component supports fuzzy matching for handling whitespace variations and partial matches during reconstruction. Technically, it tokenizes input streams into line-based sequences, computes optimal edit scripts, and applies patch hunks through context-sensitive validation. This enables efficient version control operations, collaborative editing workflows, and automated configuration synchronization across distributed systems.",
+  "usage_steps": [
+    "1. Paste original text into 'Base Text' editor or upload a file using the file picker",
+    "2. Enter modified text in 'Revised Text' panel or load from disk via 'Import' button",
+    "3. Adjust comparison settings: choose 'Line-based' or 'Character-based' diff mode using the toggle",
+    "4. Click 'Generate Patch' to create Unified Diff output in the results pane",
+    "5. For application: Load target file and patch content using 'Apply Patch' tab's dual editors",
+    "6. Review conflict markers (if any) in the 'Resolution Viewer' and manually fix mismatched hunks"
+  ],
+  "usage_examples": [
+    "A developer creates a patch to submit code changes to an open-source project maintainer",
+    "System administrator generates delta configuration for applying security updates to Apache HTTPD",
+    "Technical writer tracks revisions between documentation versions for regulatory compliance auditing",
+    "DevOps engineer synchronizes environment variables across Kubernetes clusters using minimal patches"
+  ]
+}

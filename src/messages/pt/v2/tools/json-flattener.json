@@ -1,0 +1,27 @@
+{
+  "input": "Entrada JSON",
+  "output": "Resultado",
+  "copy": "Copiar",
+  "mode": "Modo",
+  "flatten": "Aplique",
+  "unflatten": "Desaplique",
+  "delimiter": "Delimitador",
+  "process": "Processar",
+  "inputPlaceholder": "Cole o JSON aqui...",
+  "outputPlaceholder": "O resultado aparecerá aqui...",
+  "detailed_description": "O JSON Flattener é uma ferramenta especializada para transformar objetos JSON com estruturas profundamente aninhadas em formatos lineares ou planos, eliminando hierarquias complexas. Ele opera percorrendo recursivamente todas as chaves e valores do JSON original, convertendo caminhos aninhados em representações com notação de pontos (ex.: 'usuario.endereco.cidade') ou índices de array explícitos. Essa transformação é essencial para integrações com sistemas que exigem dados em formato não hierárquico, como bancos de dados relacionais, APIs REST que utilizam parâmetros query string ou ferramentas de análise de dados que não suportam objetos multidimensionais. O processo é reversível: ao unflattenizar, o algoritmo reconstrói a estrutura original a partir das chaves achatadas, garantindo conversão sem perdas. Funcionalidades como preservação de tipos primitivos (números, booleanos) e tratamento de arrays multidimensionais diferenciam esta ferramenta de conversores genéricos, oferecendo maior precisão para casos de uso específicos em pipelines de processamento de dados ou migração de esquemas.",
+  "usage_steps": [
+    "Acesse o JSON Flattener na categoria 'Codificação' do site.",
+    "Cole seu JSON no editor de código com suporte a syntax highlighting.",
+    "Selecione a operação desejada: 'Achatamento' ou 'Desachatamento' no menu suspenso 'Modo de Processamento'.",
+    "Ative a opção 'Manter Tipos' para preservar booleanos e números como valores não-string.",
+    "Clique em 'Processar JSON' para aplicar a transformação em tempo real.",
+    "Copie o resultado do campo de saída ou exporte como arquivo .json."
+  ],
+  "usage_examples": [
+    "Converter uma resposta de API com objetos aninhados em um formato compatível com armazenamento em planilhas CSV.",
+    "Transformar um arquivo de configuração JSON complexo em um conjunto de variáveis de ambiente com chaves textuais.",
+    "Preparar dados para ingestão em um banco de dados NoSQL que exige documentos com profundidade limitada.",
+    "Simplificar estruturas JSON para facilitar a depuração em aplicativos que utilizam serialização de objetos complexos."
+  ]
+}

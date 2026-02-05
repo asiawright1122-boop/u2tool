@@ -1,0 +1,29 @@
+{
+  "rows": "Rows",
+  "cols": "Columns",
+  "split": "Split",
+  "downloadAll": "Download All",
+  "preview": "Preview",
+  "piece": "Piece",
+  "dropzone": "Click or drag image to upload",
+  "originalSize": "Original Size",
+  "partSize": "Part Size",
+  "processing": "Processing...",
+  "result": "Result",
+  "parts": "parts",
+  "detailed_description": "The Image Splitter tool enables precise raster image segmentation through configurable grid parameters. By specifying numerical values for rows and columns, users can partition a source image into non-overlapping rectangular regions using pixel-coordinate mapping. This tool leverages HTML5 Canvas for client-side image processing, maintaining original color depth and resolution metadata during division. Each resulting slice preserves the source's EXIF data and alpha channel information when applicable. The algorithm employs bi-linear interpolation to ensure edge continuity between segments, particularly beneficial for large images requiring sub-pixel accuracy. Web developers can utilize this tool for responsive design optimization by creating image grids that adapt to CSS grid layouts. Artists may decompose digital paintings into modular components for printmaking, while game designers can generate puzzle tile sets with exact dimensional consistency. The tool supports popular formats including PNG, JPEG, and WebP, with output slices available as individual downloads or compressed ZIP packages. Advanced users can fine-tune slice dimensions using percentage-based or absolute pixel values, enabling precise alignment with UI frameworks like Bootstrap or Flexbox.",
+  "usage_steps": [
+    "1. Upload a source image file (PNG, JPEG, or WebP) using the file input element",
+    "2. Enter numeric values in the 'Rows' and 'Columns' fields to define the grid matrix",
+    "3. Adjust slice overlap percentage using the precision slider for pixel-level edge adjustments",
+    "4. Toggle the 'Maintain Aspect Ratio' switch to preserve original proportions during division",
+    "5. Review segmented output in the interactive preview pane with coordinate overlays",
+    "6. Select individual slices or use the 'Download All' button to save results as ZIP archive"
+  ],
+  "usage_examples": [
+    "A graphic designer splits a 3000×2000 promotional banner into 3×2 grid for Instagram story frames with exact dimensional requirements",
+    "A web developer decomposes a responsive hero image into 4-column slices for CSS grid layout implementation with pixel-perfect alignment",
+    "An educator creates a 25-piece puzzle game by splitting an educational diagram into a 5×5 matrix with 2% overlap for print cutting allowance",
+    "A photographer divides a high-resolution panorama into 8×2 grid for standard 4x6 print sizing while maintaining EXIF copyright metadata"
+  ]
+}

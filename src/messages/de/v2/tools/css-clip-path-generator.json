@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der CSS Clip Path Generator ist ein visueller Editor zur Erstellung komplexer CSS-Clip-Path-Formen mit präziser Kontrolle über die Geometrie. Technisch basiert das Tool auf SVG-basierten Echtzeit-Berechnungen, die polygonale Formen, Kreise oder Ellipsen durch interaktive Koordinatenanpassung ermöglichen. Entwickler benötigen dieses Tool, um beispielsweise responsiv gestaltete Formen für moderne Webdesigns zu generieren, die mit reinem CSS umsetzbar sind, ohne auf Bilddateien zurückzugreifen. Die Hauptfunktionen umfassen die dynamische Manipulation von Ankerpunkten, die automatische Umrechnung von SVG-Koordinaten in CSS-Syntax sowie die Optimierung von Pfadkomplexität durch intelligente Punktreduktion. Die Echtzeitvorschau renderet die Form über ein HTML5-Canvas-Overlay, während der generierte Code alle relevanten -webkit- und standardisierten CSS-Properties enthält. Besonders nützlich ist die Möglichkeit, responsive Prozentwerte statt fester Pixelwerte zu verwenden, was die Integration in flexible Layouts vereinfacht.",
+  "usage_steps": [
+    "Wählen Sie im Form-Auswahldropdown zwischen Polygon, Kreis oder Ellipse als Basisform",
+    "Platzieren Sie Ankerpunkte durch Klicks auf den bearbeitbaren Bereich und justieren Sie deren Position mit Drag-and-Drop-Handles",
+    "Passen Sie im Eingabefeld-Panel die Koordinaten manuell im Prozent- oder Pixelmodus an",
+    "Aktivieren Sie die \"Responsive Vorschau\" für eine Simulation der Formdarstellung bei unterschiedlichen Viewportgrößen",
+    "Kopieren Sie den generierten CSS-Code aus dem Exportbereich, der automatisch optimierte path()-Werte und Browser-Präfixe enthält",
+    "Nutzen Sie den \"Form-Export\"-Button, um SVG-Pfade für weitere Bearbeitung in Design-Tools herunterzuladen"
+  ],
+  "usage_examples": [
+    "Erstellung einer hexagonalen Bildmaske für eine interaktive Team-Mitglieder-Galerie mit hover-Animationen",
+    "Design eines responsiven diagonalen Hero-Bereichs mit abgeschnittenem Hintergrundbild für moderne Layouts",
+    "Generierung eines kreisförmigen Ladeindikators durch animierte Clip-Path-Transformation",
+    "Umsetzung einer trapezförmigen Call-to-Action-Box mit schrägen Kanten ohne zusätzliche HTML-Elemente"
+  ]
+}

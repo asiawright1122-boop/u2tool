@@ -1,0 +1,37 @@
+{
+  "pasteText": "Paste your text",
+  "placeholder": "Paste your article, blog post, or any text here to calculate reading time...",
+  "readingSpeed": "Reading Speed:",
+  "wpm": "WPM",
+  "words": "Words",
+  "characters": "Characters",
+  "sentences": "Sentences",
+  "paragraphs": "Paragraphs",
+  "readingTime": "Reading Time",
+  "speakingTime": "Speaking Time",
+  "reference": "Reading Speed Reference",
+  "slow": "Slow:",
+  "average": "Average:",
+  "fast": "Fast:",
+  "tip": "💡 Tip: The average adult reads at about 200-250 words per minute. Technical content may require slower reading (150-200 WPM), while familiar topics can be read faster (300+ WPM).",
+  "lessThanMinute": "Less than a minute",
+  "minute": "1 minute",
+  "minutes": "{n} minutes",
+  "hour": "{n} hour",
+  "hours": "{n} hours",
+  "detailed_description": "The Reading Time Calculator precisely estimates the duration required to consume written content by analyzing lexical density, syntactic complexity, and formatting elements. This tool employs tokenization algorithms to count words while excluding non-content elements like headers and code blocks. It calculates time based on adjustable parameters: default WPM (words per minute) rates for different audiences (200 WPM for casual readers, 300 for professionals), with modifiers for technical content (+15% for dense terminology) and markdown syntax. Unlike basic calculators, it parses HTML/XML structures to ignore tags and processes LaTeX equations as single reading units. The algorithm weights paragraphs differently than lists, applying cognitive load theory to estimate comprehension time. Technical writers use this to optimize documentation length, educators validate assignment feasibility, and content marketers ensure reader engagement metrics align with SEO strategies.",
+  "usage_steps": [
+    "Paste formatted text into the syntax-aware editor window",
+    "Click 'Process Document' to activate content parsing engine",
+    "Adjust baseline WPM using the slider (150-450 range)",
+    "Toggle 'Technical Content' mode for STEM documents",
+    "Select output format: simple timer, segmented analysis, or CSV breakdown",
+    "Export results via 'Download Timing Report' button"
+  ],
+  "usage_examples": [
+    "A technical documentation specialist verifies that API reference material falls under 8-minute reading threshold for developer tutorials",
+    "Graduate student quantifies time investment for literature review sections across 12 research papers",
+    "UX writer optimizes onboarding flow text to maintain 45-second first-read experience",
+    "Podcast producer cross-references transcript reading time with audio duration metrics"
+  ]
+}

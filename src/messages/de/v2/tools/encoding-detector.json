@@ -1,0 +1,25 @@
+{
+  "input": "Eingabe",
+  "placeholder": "Fügen Sie den Text ein, um die Codierung zu detektieren...",
+  "analyzeText": "Text analysieren",
+  "uploadFile": "Datei hochladen",
+  "file": "Datei",
+  "size": "Größe",
+  "results": "Erkennungsergebnisse",
+  "confidence": "Vertrauenswürdigkeit",
+  "detailed_description": "Der Encoding Detector ist ein Spezialwerkzeug zur präzisen Identifizierung von Zeichenkodierungen in Rohdaten. Technisch analysiert es Byte-Folgen durch kombinierte Methoden wie statistische Modellierung, Signaturvergleich und Entropieberechnung. Die Software verwendet Algorithmen, die spektrale Muster von ASCII, UTF-8, UTF-16LE/BE, ISO-8859-1 bis hin zu exotischeren Kodierungen wie Shift_JIS oder EUC-KR erkennen. Kernkomponenten sind ein Bayessches Klassifizierungsmodell für häufige Kodierungen und ein deterministischer Parser für Byte Order Marks (BOM). Entwickler benötigen dieses Tool, um Kodierungsprobleme in heterogenen Datensätzen zu beheben, z.B. bei der Migration alter Datenbanken, der Verarbeitung von CSV-Dateien mit unklarer Herkunft oder der Fehlersuche in APIs, die inkonsistente UTF-8-Ausgaben liefern. Die Analyse erfolgt durch mehrstufige Validierung: Zunächst erfolgt eine schnelle Erkennung durch Magic Bytes, gefolgt von Deep-Scan-Modus mit N-Gram-Statistik für unsichere Fälle. Das Tool berechnet auch Konfidenzwerte für jede mögliche Kodierung und zeigt Kandidaten mit über 70% Wahrscheinlichkeit an.",
+  "usage_steps": [
+    "1. Öffnen Sie den Encoding Detector über die Web-Oberfläche und wählen Sie den Analysemodus (Schnellprüfung oder Tiefenanalyse) im Dropdown-Menü.",
+    "2. Laden Sie eine Datei per Drag-and-Drop in den dafür vorgesehenen Bereich oder fügen Sie Rohdaten über das Textfeld mit der Kennzeichnung 'Daten eingeben' ein.",
+    "3. Aktivieren Sie optional den Expertenmodus, um benutzerdefinierte Whitelist-Filter für spezifische Kodierungsgruppen (z.B. nur 8-Bit-Zeichensätze) zu konfigurieren.",
+    "4. Starten Sie die Analyse durch Klick auf den 'Detect Encoding'-Button und warten Sie auf die Verarbeitungsergebnisse (Typischerweise innerhalb von 2-5 Sekunden).",
+    "5. Prüfen Sie die Ergebnisliste, die neben der primären Kodierung auch alternative Kandidaten mit Konfidenzprozentangaben anzeigt.",
+    "6. Exportieren Sie das Analyseprotokoll im JSON-Format oder verwenden Sie die integrierte Konvertierungsfunktion, um Daten direkt in eine Zielkodierung zu transformieren."
+  ],
+  "usage_examples": [
+    "Ein Entwickler erhält eine CSV-Datei aus einer Legacy-AS400-Datenbank mit unleserlichen Sonderzeichen. Mit dem Encoding Detector identifiziert er korrekt die Kodierung IBM437 und konvertiert die Daten nach UTF-8.",
+    "Ein Data Scientist analysiert Web-Scraping-Ergebnisse mit gemischten HTML-Encoding-Problemen. Das Tool zeigt inkonsistente Metadaten-Kopfzeilen auf und empfiehlt UTF-8 mit Latin-1-Fallback.",
+    "Ein Systemadministrator migrert alte Dokumente aus einem verschlüsselten Filesystem. Das Tool deckt versteckte UTF-16BE-Kodierungen auf, die standardmäßige Editorerkennung übersehen hätte.",
+    "Ein Support-Mitarbeiter erhält eine Fehlerlog-Datei mit undefinierten Zeichenfolgen. Die Tiefenanalyse-Funktion enthüllt, dass 8-Bit-Codewörter einer veralteten Codepage 866 (kyrillisch) entsprechen."
+  ]
+}

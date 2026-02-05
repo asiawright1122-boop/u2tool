@@ -1,0 +1,25 @@
+{
+  "detailed_description": "JSON转表格转换器将JSON数据转换为可读的HTML表格。非常适合可视化API响应、数据导出和结构化信息。",
+  "usage_steps": [
+    "粘贴您的JSON数据",
+    "点击转换以生成表格",
+    "查看格式化后的表格",
+    "自定义表格样式",
+    "复制HTML或导出数据"
+  ],
+  "usage_examples": [
+    "可视化API响应",
+    "创建数据报告",
+    "将JSON导出到电子表格"
+  ],
+  "jsonInput": "JSON输入",
+  "tableOutput": "表格输出",
+  "convert": "转换为表格",
+  "copyHtml": "复制HTML",
+  "inputPlaceholder": "在此粘贴JSON数组或对象...",
+  "noData": "没有数据可显示",
+  "placeholder": "在此粘贴JSON数组...",
+  "copied": "已复制！",
+  "copyCsv": "复制CSV",
+  "downloadCsv": "下载CSV"
+}

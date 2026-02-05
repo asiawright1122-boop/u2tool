@@ -1,0 +1,31 @@
+{
+  "detailed_description": "O Contador Regressivo Online é uma ferramenta de cronometragem rica em funcionalidades que suporta horas, minutos e segundos personalizados. Fornece tempos pré-definidos comuns como 1 minuto, 5 minutos, 10 minutos, 15 minutos, 30 minutos e 1 hora para configuração rápida com um clique. Durante o countdown, exibe uma bela barra de progresso circular que mostra a proporção de tempo restante. Envia notificação do navegador quando o countdown termina (requer permissão). Suporta funções de pausa, continuação e reinicialização. Perfeito para a técnica Pomodoro, cronometragem de cozinha, lembretes de pausa e muito mais.",
+  "usage_steps": [
+    "Abra a página da ferramenta de Contador Regressivo",
+    "Selecione um tempo pré-definido ou insira manualmente horas, minutos e segundos",
+    "Clique no botão verde 'Iniciar' para começar o countdown",
+    "Observar a barra de progresso circular para o tempo restante",
+    "Clique em 'Pausar' para pausar o countdown",
+    "Você receberá uma notificação quando o countdown terminar"
+  ],
+  "usage_examples": [
+    "Sessões de foco de 25 minutos para a técnica Pomodoro",
+    "Configurar tempos de cozimento para ovos, macarrão, etc.",
+    "Controle de tempo para reuniões ou apresentações",
+    "Lembretes de pausa para levantar e se movimentar"
+  ],
+  "faqs": [
+    {
+      "question": "Receberei um lembrete quando o countdown terminar?",
+      "answer": "Sim, uma notificação do navegador é enviada quando o countdown termina. Na primeira utilização, o navegador pedirá permissão para notificações - por favor, permita para ativar o recurso de lembrete."
+    },
+    {
+      "question": "Por quanto tempo posso configurar o timer?",
+      "answer": "Suporta qualquer combinação de 0-23 horas, 0-59 minutos e 0-59 segundos. O countdown máximo é 23:59:59."
+    },
+    {
+      "question": "Posso continuar após pausar?",
+      "answer": "Sim. Após clicar em pausa, o countdown mantém seu estado atual. Clique em 'Continuar' para retomar a partir do ponto onde pausou."
+    }
+  ]
+}

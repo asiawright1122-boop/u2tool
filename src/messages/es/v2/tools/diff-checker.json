@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El Diff Checker es una herramienta de procesamiento de texto diseñada para comparar dos versiones de un documento y resaltar las diferencias entre ellas. Utiliza algoritmos avanzados de comparación de cadenas, como el Algoritmo de Levenshtein, para identificar adiciones, eliminaciones y cambios en el texto. Esta funcionalidad es particularmente útil para desarrolladores y escritores que necesitan verificar modificaciones en códigos fuente, documentos legales, o artículos. Además, el Diff Checker soporta múltiples formatos de texto, incluyendo plain text, HTML y Markdown, lo que lo hace versátil para una variedad de necesidades. La herramienta también ofrece una interfaz de usuario intuitiva que permite a los usuarios navegar fácilmente entre los cambios, y proporciona opciones para exportar los resultados en diferentes formatos, facilitando la revisión y el control de versiones.",
+  "usage_steps": [
+    "Abra la página de Diff Checker en su navegador web.",
+    "En la sección 'Texto 1', pegue o escriba el contenido de la primera versión del texto que desea comparar.",
+    "En la sección 'Texto 2', pegue o escriba el contenido de la segunda versión del texto que desea comparar.",
+    "Seleccione el formato de texto en el que están escritos los documentos utilizando el menú desplegable 'Formato de Texto'. Las opciones incluyen 'Texto Plano', 'HTML' y 'Markdown'.",
+    "Haga clic en el botón 'Comparar' para que la herramienta procese y resalte las diferencias entre los dos textos.",
+    "Revise los resultados en la sección 'Diferencias', donde las adiciones se muestran en verde, las eliminaciones en rojo, y los cambios en naranja. También puede exportar los resultados en formato HTML o PDF utilizando las opciones proporcionadas."
+  ],
+  "usage_examples": [
+    "Un desarrollador necesita comparar dos versiones de un archivo de código fuente para identificar qué cambios se realizaron entre la versión 1.0 y la 2.0. Utiliza Diff Checker para resaltar las diferencias y asegurarse de que todas las modificaciones sean coherentes y correctas.",
+    "Un redactor de contenido web debe revisar un artículo antes de su publicación final. Utiliza Diff Checker para comparar el borrador inicial con la versión final, asegurándose de que todas las correcciones y actualizaciones hayan sido realizadas.",
+    "Un abogado necesita verificar las modificaciones en un contrato legal antes de firmarlo. Utiliza Diff Checker para comparar la versión original del contrato con la versión revisada, resaltando cualquier cambio en cláusulas y términos.",
+    "Un profesor de literatura desea comparar dos versiones de un ensayo de un estudiante para evaluar la calidad de las revisiones realizadas. Utiliza Diff Checker para identificar y resaltar las adiciones, eliminaciones y cambios realizados en el ensayo, facilitando la evaluación y el feedback."
+  ]
+}

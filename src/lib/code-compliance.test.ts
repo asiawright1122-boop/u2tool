@@ -53,7 +53,7 @@ function checkForDebugStatements(filePath: string): { hasDebug: boolean; issues:
   }
   
   // 跳过性能监控和资源管理相关文件（有意的调试输出）
-  if (filePath.includes('PerformanceMonitor') || filePath.includes('library-loader') || filePath.includes('resource-cleaner')) {
+  if (filePath.includes('PerformanceMonitor') || filePath.includes('library-loader') || filePath.includes('resource-cleaner') || filePath.includes('resource-monitor')) {
     return { hasDebug: false, issues: [] };
   }
   

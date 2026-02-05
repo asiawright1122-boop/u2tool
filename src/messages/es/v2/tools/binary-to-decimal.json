@@ -1,0 +1,39 @@
+{
+  "mode": "Modo",
+  "binToDec": "Binario → Decimal",
+  "decToBin": "Decimal → Binario",
+  "binToHex": "Binario → Hex",
+  "hexToBin": "Hex → Binario",
+  "bitLength": "Longitud de Bit",
+  "bit8": "8-bit",
+  "bit16": "16-bit",
+  "bit32": "32-bit",
+  "bit64": "64-bit",
+  "loadSample": "Cargar Ejemplo",
+  "input": "Entrada",
+  "inputPlaceholder": "Introduce valor...",
+  "output": "Salida",
+  "outputPlaceholder": "El resultado aparecerá aquí...",
+  "copy": "Copiar",
+  "convert": "Convertir",
+  "quickRef": "Referencia Rápida",
+  "errorInvalidBinary": "Entrada binaria no válida",
+  "errorInvalidDecimal": "Entrada decimal no válida",
+  "errorInvalidHex": "Entrada hexadecimal no válida",
+  "errorConversion": "Error en la conversión",
+  "detailed_description": "Este conversor realiza transformaciones precisas entre sistemas numéricos binario, decimal y hexadecimal, utilizando algoritmos de análisis posicional y aritmética computacional. Para conversiones binario-decimal, aplica el teorema fundamental de la numeración ponderada, multiplicando cada bit por 2ⁿ según su posición. En conversiones decimales, implementa divisiones sucesivas por 16 o 2 según la base destino, mientras que para hexadecimal se emplea agrupamiento de nibbles (4 bits) con representación alfanumérica. Es esencial para desarrolladores que depuran operaciones de bajo nivel, administradores de red que calculan máscaras CIDR, o estudiantes de electrónica digital que necesitan validar cálculos de lógica combinacional. El motor interno valida automáticamente la sintaxis de entrada (como dígitos no binarios o hexadecimales inválidos) y soporta números negativos mediante representación en complemento a dos. Su diferencial técnico radica en el procesamiento en tiempo real sin recarga de página, manteniendo consistencia en conversiones múltiples mediante un motor en JavaScript optimizado para operaciones bitwise.",
+  "usage_steps": [
+    "Seleccione el modo de conversión deseado usando las pestañas 'Binario → Decimal', 'Decimal → Hex' u otras opciones disponibles",
+    "Introduzca el valor numérico en el campo de entrada correspondiente, asegurándose de usar el formato correcto (ej. '0b' para binario, '0x' para hex)",
+    "Active la casilla 'Mostrar pasos' si requiere visualizar el desglose matemático de la conversión",
+    "Haga clic en el botón 'Convertir' para ejecutar la transformación",
+    "Revise el resultado en el panel de salida, que muestra valores equivalentes en las tres bases simultáneamente",
+    "Use el botón 'Copiar' para transferir el resultado al portapapeles en formato compatible con entornos de desarrollo"
+  ],
+  "usage_examples": [
+    "Un desarrollador de firmware convierte '11010101' a hexadecimal para programar registros de memoria en un microcontrolador",
+    "Un estudiante de arquitectura de computadoras transforma '-45' (decimal) a binario para verificar implementación de números negativos",
+    "Un ingeniero de redes traduce '255.192.0.0' a notación CIDR mediante conversión previa a binario",
+    "Un analista de seguridad transforma hashes hexadecimales a decimal para auditorías criptográficas"
+  ]
+}

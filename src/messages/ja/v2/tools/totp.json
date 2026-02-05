@@ -1,0 +1,10 @@
+{
+  "secret": "秘密鍵 (Base32)",
+  "secretPlaceholder": "Base32 シークレットを入力または生成...",
+  "secretHint": "シークレットは 16 文字以上である必要があります",
+  "currentCode": "現在のコード",
+  "howItWorks": "仕組み",
+  "step1": "TOTP generates time-based one-time passwords",
+  "step2": "コードは 30 秒ごとに更新されます",
+  "step3": "Google認証システムに対応"
+}

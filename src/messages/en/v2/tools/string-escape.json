@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The String Escape/Unescape tool converts plain text into correctly escaped representations for multiple contexts: JSON, HTML, URL, and JavaScript. It resolves escape sequences such as \\n, \\uXXXX, and \\xNN back to their original characters, and performs the inverse transformation by escaping special characters according to each format’s rules. For JSON, it escapes backslashes, double quotes, and control characters (U+0000–U+001F and U+007F) while offering an option to escape non‑ASCII characters to \\uXXXX sequences. For HTML, it encodes reserved characters (< > & \" ') into named or numeric entities and decodes them back, handling numeric entities like &#xNN; and &#NNNN; as well as the five predefined entities. For URL components, it percent‑encodes bytes outside the unreserved set (A–Z a–z 0–9 - _ . ~) and decodes percent‑encoded sequences, with separate handling for query strings and path segments. For JavaScript, it escapes backslashes and quotes while offering mode toggles for single‑quote and double‑quote strings. The engine normalizes newlines, validates surrogate pairs, and flags invalid percent‑encoding and lone surrogates. Use cases include debugging API payloads, sanitizing user‑generated content for safe DOM insertion, preparing URL paths and query parameters, and constructing source code strings without syntax errors.",
+  "usage_steps": [
+    "Open the Format selector and choose JSON, HTML, URL, or JavaScript; use the Action toggle to switch between Escape and Unescape.",
+    "Paste or type your source text into the Input area; enable Auto‑detect to automatically switch between Escape and Unescape when the text begins with common escape prefixes.",
+    "If available, set mode options: for JSON, toggle Non‑ASCII to \\uXXXX; for HTML, choose Named or Numeric entities; for URL, pick Component (path/query) vs Full URL; for JavaScript, choose Single‑quote or Double‑quote string.",
+    "Click Convert to produce escaped or unescaped output in the Result pane; invalid sequences and lone surrogates will be highlighted.",
+    "Use Copy to copy the result to the clipboard or Download to save it as a .txt file.",
+    "Use Swap to exchange Input and Result, or Clear to reset both panes; the tool preserves line endings and shows byte/character counts."
+  ],
+  "usage_examples": [
+    "A REST client needs a JSON body with a multiline description and embedded quotes; escape the payload so it contains valid escape sequences like \\n and \\\" and no literal control characters.",
+    "A frontend developer receives a query string from user input and must safely append it to a URL; percent‑encode only the query component to avoid breaking the URL structure.",
+    "A CMS stores user comments and must render them in HTML without XSS; unescape any existing escape sequences, then encode reserved HTML characters to named or numeric entities.",
+    "A QA engineer writes Playwright test scripts and must inject dynamic text into a JavaScript string; escape backslashes and quotes according to the chosen quote style to prevent syntax errors."
+  ]
+}

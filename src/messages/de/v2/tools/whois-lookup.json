@@ -1,0 +1,27 @@
+{
+  "loading": "Suche durchführen...",
+  "lookup": "WHOIS Lookup",
+  "registrar": "Registrierer",
+  "dnssec": "DNSSEC",
+  "createdDate": "Erstellungsdatum",
+  "expiryDate": "Ablaufdatum",
+  "updatedDate": "Aktualisiertes Datum",
+  "nameServers": "Nameserver",
+  "domainStatus": "Domänenstatus",
+  "note": "💡 Hinweis: Dies ist eine Demo-Version. Für Produktionsnutzung integrieren Sie eine WHOIS-API-Dienstleistung ein.",
+  "detailed_description": "Der WHOIS-Lookup-Tool ermöglicht es Nutzern, detaillierte Registrierungsinformationen von Domains zu erfassen, indem er das WHOIS-Protokoll (RFC 3912) nutzt, um Abfragen an die zentralen Domain-Registries und Registrar-Datenbanken zu senden. Technisch gesehen überträgt das Tool die Anfrage über TCP-Port 43 an den entsprechenden WHOIS-Server der Top-Level-Domain (TLD), verarbeitet die Rohdaten und stellt relevante Felder wie Registrar, Registrierungsdatum, Ablaufzeit, Name Server, DNSSEC-Konfiguration und Kontaktdaten des Registranten strukturiert dar. Entwickler und Netzwerkadministratoren benötigen diesen Tool, um Domains auf Verfügbarkeit zu prüfen, Cyber-Bedrohungen wie Phishing-Domains zu analysieren, rechtliche Eigentumsfragen zu klären oder DNS-Konfigurationsprobleme zu diagnostizieren. Die Ergebnisse werden oft in Klartext oder strukturierten Formaten (z.B. JSON) ausgegeben, wobei das Tool automatisch zwischen verschiedenen WHOIS-Servern für gTLDs, ccTLDs und IDNs wechselt. Besonders bei internationalisierten Domainnamen (IDN) decodiert der Tool die Punycode-Darstellung in lesbares Unicode.",
+  "usage_steps": [
+    "Geben Sie den Domainnamen in das Eingabefeld 'Domain-Name' ein, inklusive TLD (z.B. .com, .de).",
+    "Wählen Sie im Dropdown 'Abfragetyp' zwischen Standard-, Raw- oder Erweitertmodus für detaillierte Registry-Informationen.",
+    "Aktivieren Sie das Kontrollkästchen 'IDN-Decodierung', wenn der Domainname nicht-lateinische Zeichen enthält.",
+    "Klicken Sie auf 'WHOIS-Abfrage starten', um die Daten vom zuständigen Registry-Server anzufordern.",
+    "Überprüfen Sie im Ergebnisbereich die 'Registrar'-Angaben, 'Name Server'-Einträge und das 'Status'-Feld für Domain-Sperren.",
+    "Nutzen Sie die Schaltfläche 'Ergebnis exportieren', um die Daten im JSON-Format für automatische Auswertungen zu speichern."
+  ],
+  "usage_examples": [
+    "Ein Entwickler prüft die Verfügbarkeit einer Domain, indem er den WHOIS-Status 'available' oder 'registered' analysiert, bevor er eine Registrierung initiiert.",
+    "Ein Sicherheitsanalyst untersucht eine verdächtige Domain, um den physischen Standort des Registranten und die Registrierungszeit zu ermitteln, um Cyber-Bedrohungen zuzuordnen.",
+    "Ein Unternehmen verifiziert die korrekte Eintragung seiner Domain, indem es die übereinstimmung der 'Administrative Contact'-E-Mail und der DNSSEC-Signaturen überprüft.",
+    "Ein Systemadministrator identifiziert Konfigurationsfehler bei DNS-Zonenübertragungen durch die Analyse der 'Name Server'-Einträge im Vergleich zur lokalen Bind-Konfiguration."
+  ]
+}

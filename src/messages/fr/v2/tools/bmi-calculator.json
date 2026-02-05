@@ -1,0 +1,32 @@
+{
+  "weight": "Poids",
+  "height": "Taille",
+  "unit": "Système d'Unités",
+  "metric": "Métrique",
+  "imperial": "Impérial",
+  "yourBmi": "Votre IMC",
+  "category": "Catégorie",
+  "underweight": "Insuffisance pondérale",
+  "normal": "Normal",
+  "overweight": "Surpoids",
+  "obese": "Obésité",
+  "healthyRange": "Plage Saine",
+  "bmiScale": "Échelle IMC",
+  "healthyWeightRange": "Plage de Poids Sain",
+  "bmiCategories": "Catégories d'IMC",
+  "detailed_description": "L'outil BMI Calculator permet de déterminer précisément l'indice de masse corporelle (IMC) en appliquant la formule mathématique standardisée : IMC = poids (kg) / (taille × taille) (m²). Contrairement aux outils basiques, notre solution intègre un système de validation des entrées (vérification de la cohérence numérique, gestion des valeurs extrêmes) et une classification adaptée aux recommandations de l'OMS. Ce calculateur s'adresse aux professionnels de santé pour des évaluations rapides, aux particuliers souhaitant surveiller leur santé, ainsi qu'aux chercheurs en épidémiologie pour analyser des tendances démographiques. Techniquement, l'application utilise une logique de calcul en temps réel avec mise à jour dynamique de l'affichage, couplée à un système de codage couleur (degré de gravité en rouge/orange/vert) pour faciliter l'interprétation. Les données sont traitées localement sans enregistrement, garantissant confidentialité et conformité RGPD. Des options avancées permettent d'ajuster les unités (kg/lbs, m/cm/pouces) et d'exporter les résultats au format CSV pour analyse ultérieure.",
+  "usage_steps": [
+    "Sélectionnez l'unité de poids souhaitée (kilogrammes ou livres) via le menu déroulant",
+    "Saisissez votre poids dans le champ prévu, en veillant à utiliser une virgule pour les décimales",
+    "Choisissez le format de mesure de taille (mètres, centimètres ou pouces) depuis le sélecteur",
+    "Entrez votre taille dans le champ correspondant, avec précision au centimètre ou demi-pouce près",
+    "Cliquez sur le bouton 'Calculer l'IMC' pour déclencher le calcul instantané",
+    "Consultez le résultat affiché avec code couleur et interprétation contextuelle dans la zone de résumé"
+  ],
+  "usage_examples": [
+    "Un médecin calcule l'IMC de 28 patients en 5 minutes grâce au mode de saisie séquentielle optimisée",
+    "Un coach sportif compare les évolutions d'IMC de ses clients sur 3 mois via les exports CSV",
+    "Un étudiant en nutrition analyse la corrélation IMC/taille dans une cohorte de 500 personnes",
+    "Un patient diabétique suit son IMC mensuel avec un marqueur de tendance sur 12 mois"
+  ]
+}

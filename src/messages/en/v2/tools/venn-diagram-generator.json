@@ -1,0 +1,36 @@
+{
+  "title": "Venn Diagram Generator",
+  "defaultTitle": "Venn Diagram Example",
+  "settings": "Settings",
+  "chartTitlePlaceholder": "Enter title...",
+  "mode2Set": "2 Sets",
+  "mode3Set": "3 Sets",
+  "dataEditor": "Data Editor",
+  "labelPlaceholder": "Label...",
+  "chartPreview": "Preview",
+  "downloadPng": "Download PNG",
+  "downloadSvg": "Download SVG",
+  "dragNote": "You can drag circles to adjust position (SVG mode usually works best).",
+  "tipsTitle": "Tips",
+  "tip1": "Unique visual for showing commonalities and differences",
+  "tip2": "Customize circle size and color",
+  "confirmClear": "Clear all?",
+  "sampleSet1": "Set A",
+  "sampleSet2": "Set B",
+  "sampleSet3": "Set C",
+  "detailed_description": "The Venn Diagram Generator is a specialized tool for visualizing set-theoretic relationships through dynamically calculated Euler diagrams. This tool accepts input in JSON, CSV, or manual entry formats, allowing users to define sets with unique elements and their cardinalities. It employs combinatorial logic to calculate intersections, unions, and symmetric differences, rendering proportional circles with precise area calculations based on set sizes. The SVG-based rendering engine uses force-directed algorithms to optimize circle placement, ensuring overlapping regions correspond to actual Venn identities. Users can customize color gradients with hex codes, adjust stroke weights for clarity, and enable dynamic labeling that auto-scales with diagram complexity. The tool's unique value lies in its ability to handle up to 5-set configurations while maintaining mathematical accuracy, a challenge often mishandled by simpler diagram tools. Data scientists use it to visualize dataset overlaps, while educators employ it to demonstrate Boolean algebra principles. The backend processes input through a constraint satisfaction system that maintains topological validity while preserving user-defined aesthetic parameters.",
+  "usage_steps": [
+    "Access the tool's control panel to select input format (JSON, CSV, or manual entry)",
+    "Enter set identifiers and element counts in the designated matrix grid",
+    "Adjust circle proportionality using the 'Area Scaling' slider for weighted visualizations",
+    "Customize overlap logic via the 'Set Relations' dropdown (exclusive/inclusive modes)",
+    "Apply color schemes using the HEX code picker or pre-defined accessibility palettes",
+    "Export results in SVG format with embedded metadata or PNG for publication-ready graphics"
+  ],
+  "usage_examples": [
+    "A machine learning engineer comparing feature overlaps between three classification models using CSV input",
+    "A biologist visualizing gene set intersections from RNA-seq experiments with weighted circles representing expression levels",
+    "An IT architect mapping infrastructure overlaps between cloud providers using manually entered JSON data",
+    "A statistics professor creating textbook diagrams with LaTeX-embedded labels and precise set notation"
+  ]
+}

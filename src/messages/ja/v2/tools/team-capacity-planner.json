@@ -1,0 +1,45 @@
+{
+  "detailed_description": "チームキャパシティプランナーは、休暇や会議を考慮して、利用可能なチームキャパシティを計算します。",
+  "usage_steps": [
+    "チームメンバーの追加",
+    "作業時間の設定",
+    "会議の考慮",
+    "キャパシティの計算",
+    "割り当ての計画"
+  ],
+  "usage_examples": [
+    "スプリントキャパシティの計画",
+    "休暇の考慮",
+    "作業負荷のバランス"
+  ],
+  "input": "入力",
+  "output": "出力",
+  "process": "処理",
+  "copy": "コピー",
+  "clear": "クリア",
+  "inputPlaceholder": "ここに入力を入力...",
+  "outputPlaceholder": "結果はここに表示されます...",
+  "errors": {
+    "emptyInput": "入力を入力してください"
+  },
+  "sprintDuration": "スプリント期間（日）",
+  "holidays": "祝日",
+  "focusFactor": "集中係数",
+  "addMember": "+ メンバー追加",
+  "totalCapacity": "総キャパシティ",
+  "avgPerPerson": "一人当たり平均",
+  "utilization": "稼働率",
+  "teamSize": "チーム規模",
+  "role": "役割",
+  "hoursPerDay": "1日の時間",
+  "daysOff": "休暇日数",
+  "meetings": "会議（時間）",
+  "admin": "管理（時間）",
+  "capacity": "キャパシティ",
+  "capacityByRole": "役割別キャパシティ",
+  "capacityFormula": "キャパシティ計算式",
+  "newTeam": "新チーム",
+  "forming": "形成中",
+  "established": "確立済み",
+  "highPerforming": "高パフォーマンス"
+}

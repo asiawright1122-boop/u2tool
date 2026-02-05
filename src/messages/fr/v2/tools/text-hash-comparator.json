@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le Comparateur de Hashs Textuels est un outil spécialisé permettant de valider l'intégrité et l'identité de deux chaînes de caractères via leurs empreintes cryptographiques. Contrairement à une simple comparaison textuelle, ce dispositif utilise des algorithmes de hachage (SHA-256, SHA-1, MD5, SHA-512) pour générer des sommes de contrôle uniques, représentées en hexadécimal ou Base64. L'utilisateur peut ainsi détecter des différences invisibles à l'œil nu, comme des espaces discrets ou des caractères Unicode cachés. Les développeurs l'utiliseront pour vérifier l'intégrité des fichiers transférés, auditer des configurations serveur, ou valider des signatures numériques. Le processus s'appuie sur la fonction de hachage unidirectionnelle : chaque texte est transformé en digest cryptographique, puis les deux résultats sont comparés en binaire avant affichage. La détection de collision entre deux hashes garantit une vérification robuste contre les altérations accidentelles ou malveillantes.",
+  "usage_steps": [
+    "Accédez à l'interface et repérez les deux zones de texte 'Contenu A' et 'Contenu B'.",
+    "Collez ou saisissez les deux chaînes à comparer dans les zones respectives.",
+    "Sélectionnez l'algorithme de hachage souhaité via le menu déroulant (SHA-256 par défaut).",
+    "Cliquez sur 'Générer les Hashs' pour obtenir les empreintes hexadécimales de chaque contenu.",
+    "Activez l'option 'Comparer en binaire' pour une analyse précise des différences de bits.",
+    "Consultez le résultat affiché : 'Identiques' ou 'Différents' avec détails des premières divergences."
+  ],
+  "usage_examples": [
+    "Un administrateur système vérifie si un fichier de configuration Apache a été modifié après un redémarrage.",
+    "Un développeur compare les hashes d'un binaire téléchargé avec sa signature PGP sur GitHub.",
+    "Un auditeur de blockchain valide qu'un smart contract déployé correspond bien au code source fourni.",
+    "Un journaliste crypte un document avec GPG et utilise le hash SHA-512 pour prouver son intégrité à un moment T."
+  ]
+}

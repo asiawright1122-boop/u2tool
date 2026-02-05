@@ -1,0 +1,41 @@
+{
+  "detailed_description": "Markdown to Slides 是一款基于解析器组合的文档格式转换工具，通过将Markdown源文件解析为抽象语法树（AST），再映射为Reveal.js或Deck.js兼容的HTML5演示结构。该工具采用PegDown解析器进行语法分析，支持CommonMark规范及扩展语法（如任务列表、数学公式），利用自定义布局引擎实现分页逻辑。开发者可借此将技术文档、API说明或会议纪要直接转换为具有响应式布局的演示文稿，特别适用于敏捷开发中的迭代汇报、技术分享会的代码文档联动展示，以及远程团队的知识传递场景。系统内置CSS主题编译器，允许通过Sass变量定制视觉风格，并支持将图片资源自动转换为Base64嵌入。转换过程通过Web Worker实现多线程处理，确保大体积文档的处理效率。",
+  "usage_steps": [
+    "点击'导入文件'按钮上传本地.md文档，或通过GitLab/GitHub仓库URL直接拉取",
+    "在格式选项面板中选择目标框架（Reveal.js/Deck.js）及分页策略（按标题层级/分隔符）",
+    "使用'代码高亮'设置选择Prism.js语法主题，启用'实时预览'查看转换效果",
+    "通过'布局调试'模式调整段落断行阈值及图片缩放比例",
+    "点击'导出'按钮选择生成单页HTML或包含资源目录的完整包",
+    "在'版本历史'面板查看并恢复之前的转换配置"
+  ],
+  "usage_examples": [
+    "将GitHub项目的README.md转换为技术路演用的响应式幻灯片",
+    "把API设计文档的Markdown版本批量生成带代码示例的演示稿",
+    "在团队周会中实时将会议纪要Markdown转为可投影的简洁版面",
+    "为在线课程制作包含LaTeX公式的教学演示文稿并嵌入视频资源"
+  ],
+  "markdownInput": "Markdown输入",
+  "preview": "预览",
+  "convert": "转换",
+  "present": "演示",
+  "exportHtml": "导出HTML",
+  "prev": "上一张",
+  "next": "下一张",
+  "exitPresent": "退出演示",
+  "speakerNotes": "演讲者备注",
+  "noSlides": "没有幻灯片可显示",
+  "loadSample": "加载示例",
+  "inputPlaceholder": "在此输入Markdown...",
+  "hint": "使用 --- 分隔幻灯片",
+  "themeLight": "浅色",
+  "themeDark": "深色",
+  "themeGradient": "渐变",
+  "placeholder": "在此输入Markdown...",
+  "loadExample": "加载示例",
+  "slideCount": "幻灯片",
+  "prevSlide": "上一张",
+  "nextSlide": "下一张",
+  "fullscreen": "全屏",
+  "exitFullscreen": "退出全屏",
+  "slideOf": "/"
+}

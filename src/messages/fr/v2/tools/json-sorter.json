@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le JSON Sorter est un outil spécialisé permettant de réorganiser systématiquement les paires clé-valeur dans un objet JSON selon l'ordre lexicographique des clés. Conçu pour les développeurs manipulant des données structurées, ce tool garantit une cohérence dans la représentation des objets JSON, ce qui est crucial pour les comparaisons de fichiers, la versioning d'API ou la normalisation de configurations. L'outil prend en charge le tri récursif des structures imbriquées (objets dans des objets ou tableaux) et préserve les types de données natives (nombres, booléens, null). Il utilise un parser JSON 3.1 RFC-compliant pour valider l'entrée, puis applique un algorithme de tri stable basé sur les règles Unicode. Contrairement aux solutions basiques, il gère correctement les clés contenant des caractères spéciaux ou des espaces, tout en offrant des options avancées comme l'inversion de l'ordre de tri ou l'alignement des indentations. Cette précision technique est indispensable pour les équipes travaillant sur des systèmes distribués où les différences d'ordre dans les JSON peuvent générer des faux positifs lors des comparaisons Git ou des tests automatisés.",
+  "usage_steps": [
+    "Collez votre JSON non trié dans la zone de texte principale avec la bordure bleue",
+    "Activez/désactivez l'option 'Trier récursivement les objets imbriqués' selon vos besoins",
+    "Choisissez l'ordre de tri (croissant ou décroissant) via les boutons radio sous l'étiquette 'Paramètres de tri'",
+    "Ajustez le niveau d'indentation du JSON de sortie avec le curseur allant de 0 à 8 espaces",
+    "Cliquez sur le bouton 'Trier les clés JSON' en vert pour déclencher le traitement",
+    "Copiez le JSON trié depuis la zone de résultat ou téléchargez-le au format .json"
+  ],
+  "usage_examples": [
+    "Standardiser les réponses d'API avant de les comparer dans un pipeline CI/CD",
+    "Préparer des fichiers JSON pour des tests de regression où l'ordre des clés affecte les résultats",
+    "Nettoyer des exports de bases de données NoSQL où l'ordre des champs varie aléatoirement",
+    "Organiser les fichiers de configuration JSON partagés entre plusieurs développeurs pour améliorer la lisibilité"
+  ]
+}

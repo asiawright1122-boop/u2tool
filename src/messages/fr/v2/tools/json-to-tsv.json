@@ -1,0 +1,24 @@
+{
+  "includeHeaders": "Inclure les en-têtes",
+  "jsonInput": "Entrée JSON",
+  "tsvOutput": "Sortie TSV",
+  "jsonPlaceholder": "Entrez un tableau JSON...",
+  "tsvPlaceholder": "La sortie TSV apparaîtra ici...",
+  "convert": "Convertir vers TSV",
+  "copy": "Copier la sortie",
+  "detailed_description": "Ce convertisseur JSON vers TSV permet de transformer des données structurées au format JSON (JavaScript Object Notation) en TSV (Tab-Separated Values), un format tabulaire utilisant des tabulations pour délimiter les champs. Techniquement, l'outil analyse la structure hiérarchique d'un tableau JSON, gère les données imbriquées via des algorithmes de flattening, et génère un fichier TSV compatible avec les outils d'analyse comme Excel, Pandas ou les systèmes ETL. Ce processus implique l'extraction récursive des clés JSON pour les convertir en en-têtes de colonnes et la gestion des valeurs scalaires ou matricielles. Cette solution est essentielle pour les développeurs traitant des données issues d'API REST, de bases de données NoSQL ou de logs complexes, nécessitant une transformation vers un format linéaire pour l'import dans des entrepôts de données ou des outils de BI. Contrairement à d'autres outils, il supporte les structures JSON profondément imbriquées et préserve les types de données (nombres, booléens, dates) lors de la conversion. Le traitement s'effectue entièrement côté client via WebAssembly, garantissant confidentialité et rapidité sans latence réseau.",
+  "usage_steps": [
+    "Collez votre JSON valide dans la zone de texte centrale, en veillant à ce qu'il soit structuré sous forme de tableau (ex: [{\"nom\":\"Alice\", \"âge\":30}]",
+    "Activez l'option 'Aplatir les objets imbriqués' si vos données contiennent des structures hiérarchiques à convertir en colonnes multiples",
+    "Sélectionnez 'Garder les tableaux JSON' pour conserver les listes dans une colonne, ou désactivez pour les diviser en lignes multiples",
+    "Cliquez sur 'Mapper les en-têtes' pour ajuster manuellement les correspondances entre clés JSON et noms de colonnes TSV",
+    "Cliquez sur 'Convertir' pour déclencher le parsing et l'affichage du résultat TSV formaté",
+    "Copiez le TSV généré ou téléchargez-le via le bouton 'Enregistrer sous .tsv'"
+  ],
+  "usage_examples": [
+    "Transformer une réponse API d'une API REST (ex: données de géolocalisation) en TSV pour import dans Google Sheets",
+    "Convertir des logs serveur au format JSON avec champs imbriqués en TSV pour traitement avec Hadoop",
+    "Préparer des données de capteurs IoT (température, humidité) stockées en JSON pour l'analyse statistique avec RStudio",
+    "Migrer des documents MongoDB stockés en JSON vers un format TSV pour insertion dans une base relationnelle comme PostgreSQL"
+  ]
+}

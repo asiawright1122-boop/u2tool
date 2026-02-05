@@ -1,0 +1,25 @@
+{
+  "detailed_description": "Le Décodeur de Charge Utilisateur JWT extrait et affiche l'en-tête et la charge utile des jetons JSON Web Token sans nécessiter la clé secrète.",
+  "usage_steps": [
+    "Coller le jeton JWT",
+    "Décodeur automatique",
+    "Voir les informations d'en-tête",
+    "Inspecter les revendications de charge utile",
+    "Vérifier l'expiration"
+  ],
+  "usage_examples": [
+    "Déboguer des problèmes d'authentification",
+    "Vérifier l'expiration du jeton",
+    "Extraire des informations utilisateur des jetons"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Traitement",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Entrez votre entrée ici...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez entrer quelque chose en entrée"
+  }
+}

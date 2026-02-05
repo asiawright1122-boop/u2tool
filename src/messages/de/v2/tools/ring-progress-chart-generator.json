@@ -1,0 +1,46 @@
+{
+  "chartTitle": "Chartentitel",
+  "chartTitlePlaceholder": "Geben Sie den Chartentitel ein",
+  "colorTheme": "Farbthema",
+  "label": "Beschriftung",
+  "labelPlaceholder": "Geben Sie die Beschriftung ein",
+  "percentage": "Prozentsatz",
+  "ringWidth": "Ringbreite",
+  "showAnimation": "Animation anzeigen",
+  "loadSample": "Beispiel laden",
+  "downloadPng": "PNG herunterladen",
+  "downloadSvg": "SVG herunterladen",
+  "defaultTitle": "Fortschritt",
+  "defaultLabel": "Abgeschlossen",
+  "sampleTitle": "Projektfortschritt",
+  "sampleLabel": "Abgeschlossen",
+  "chartPreview": "Chartenvorschau",
+  "chartSettings": "Charteneinstellungen",
+  "themeDefault": "Standard",
+  "themeOcean": "Ozean",
+  "themeSunset": "Sonnenuntergang",
+  "themeForest": "Wald",
+  "tips": {
+    "title": "Tipps",
+    "tip1": "Verschieben Sie den Schieberegler, um den Prozentsatzwert anzupassen",
+    "tip2": "Passen Sie die Ringbreite für verschiedene visuelle Effekte an",
+    "tip3": "Aktivieren Sie die Animation für einen dynamischen Ladeeffekt"
+  },
+  "detailed_description": "Der Ring Progress Chart Generator erstellt dynamische Kreisdiagramme zur visuellen Darstellung von Prozentwerten mithilfe von SVG- und HTML5-Technologie. Das Tool generiert skalierbare Vektorgrafiken mit anpassbaren Eigenschaften wie Farbverläufen, Strichbreiten und Animationen. Entwickler können über präzise Einstellungen für den Füllwinkel, Startpunkt-Rotation und Layer-Übergänge arbeiten. Der Generator implementiert moderne Webstandards wie ARIA-Rollen für Barrierefreiheit und responsives Verhalten durch Viewport-Optimierung. Besonders nützlich ist er für Dashboard-Anwendungen, wo Prozentsätze in Echtzeit aktualisiert werden müssen – beispielsweise für Software-Installationen, Ladevorgänge oder Leistungsmetriken. Die Exportfunktion unterstützt sowohl statische Bilddateien als auch interaktive Code-Snippets für direkte Integration in Webprojekte. Technisch basiert die Rendering-Engine auf trigonometrischen Berechnungen für den Ringbogen und nutzt CSS-Transformationsmatrizen für dynamische Übergänge.",
+  "usage_steps": [
+    "Geben Sie den gewünschten Prozentwert im numerischen Eingabefeld ein (0-100) und aktivieren Sie ggf. den Live-Update-Schalter.",
+    "Wählen Sie im Farbselektor einen radialen Verlauf für den Fortschrittsbalken oder definieren Sie benutzerdefinierte HEX-Werte für Start- und Endfarbe.",
+    "Passen Sie die Ringbreite über den Schieberegler an (Standard: 10px) und legen Sie den Abstand zum äußeren Kreisradius fest.",
+    "Aktivieren Sie die Animationsoption und konfigurieren Sie die Dauer (ms) sowie den Easing-Algorithmus (linear, ease-in-out, bounce).",
+    "Exportieren Sie das Ergebnis über den Download-Button als SVG-Datei, PNG-Bitmap oder kopieren Sie den HTML/CSS-Code direkt in Ihre Anwendung.",
+    "Nutzen Sie den 'Dark Mode'-Toggle für kontrastreiche Darstellung oder passen Sie den Hintergrund über den Farbpicker an."
+  ],
+  "usage_examples": [
+    "Ein Projektmanagement-Tool verwendet animierte Ringcharts für Team-Statusberichte, wobei jeder Ring einen Sprint-Anteil repräsentiert.",
+    "Ein Fitness-App-Entwickler generiert Herzfrequenz-Indikatoren mit dynamisch wechselnden Farbverläufen bei Erreichen von Trainingszielen.",
+    "Ein E-Commerce-Team implementiert einen Checkout-Fortschrittsanzeiger mit mehrfachen Ringebenen für Zahlungs- und Versandstatus.",
+    "Ein LMS-Anbieter integriert responsive Ringcharts in Kursabschlussstatistiken, die sich automatisch an mobile Bildschirme anpassen."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

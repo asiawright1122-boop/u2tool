@@ -1,0 +1,27 @@
+{
+  "input": "Entrée JSON",
+  "output": "Sortie Rust",
+  "convert": "Convertir",
+  "copy": "Copier",
+  "structName": "Nom de la structure",
+  "useSerde": "Utiliser Serde",
+  "useOptionForNull": "Utiliser Option pour les valeurs nulles",
+  "inputPlaceholder": "Coller votre JSON ici...",
+  "outputPlaceholder": "Les structures Rust apparaîtront ici...",
+  "errorInvalidJson": "// Erreur : entrée JSON invalide",
+  "detailed_description": "Le convertisseur JSON vers Rust est un outil spécialisé qui permet de transformer des données JSON en définitions de structures Rust optimisées pour la désérialisation via la bibliothèque Serde. Techniquement, l'outil analyse le schéma JSON fourni, effectue une inférence de types pour déterminer les types Rust appropriés (y compris les types imbriqués et les énumérations), et génère des structs annotées avec les macros de dérivation #[derive(Serialize, Deserialize)]. Ce processus élimine les erreurs manuelles lors de la création de modèles de données en Rust, notamment pour des cas complexes comme les objets hiérarchiques ou les champs optionnels. L'outil est particulièrement utile pour les développeurs intégrant des API REST, configurant des applications via des fichiers JSON, ou migrant des données vers des applications système en Rust. Il prend en charge les types avancés comme les tuples, les tableaux dynamiques, et les attributs personnalisés Serde (#[serde(rename)], #[serde(default)]). La sortie inclut des commentaires de documentation intégrés et une gestion des durées de vie ('a) pour les références.",
+  "usage_steps": [
+    "1. Ouvrez l'outil dans votre navigateur et accédez à l'éditeur JSON intégré.",
+    "2. Collez votre objet JSON valide dans le panneau de gauche ou utilisez le bouton 'Charger un exemple' pour importer un fichier.",
+    "3. Configurez les options avancées (nom de la struct racine, activation de #[serde(tag = \"type\")] pour les enums, gestion des champs inconnus).",
+    "4. Cliquez sur 'Générer les Structs' pour lancer l'analyse du schéma et la création des définitions Rust.",
+    "5. Revisez la sortie dans le panneau droit, qui affiche les structs hiérarchisées avec les attributs Serde correctement formatés.",
+    "6. Copiez le code avec le bouton 'Copier dans le presse-papiers' ou téléchargez-le au format .rs via 'Exporter le module Rust'."
+  ],
+  "usage_examples": [
+    "1. Un développeur d'une API Rust utilise l'outil pour convertir la réponse JSON d'une API externe en structs typées pour la désérialisation sécurisée.",
+    "2. Un ingénieur système génère automatiquement des configurations de service à partir d'un fichier JSON existant, en intégrant #[serde(default)] pour les valeurs optionnelles.",
+    "3. Un jeu vidéo en Rust convertit ses fichiers de données (comme les niveaux ou les items) depuis un format JSON vers des structs optimisées pour l'efficacité mémoire.",
+    "4. Un formateur en ligne de commande les étudiants à générer des modèles de données Rust à partir d'exemples JSON pour illustrer le pattern de dérivation Serde."
+  ]
+}

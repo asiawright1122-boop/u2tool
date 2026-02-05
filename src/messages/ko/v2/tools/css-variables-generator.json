@@ -1,0 +1,38 @@
+{
+  "prefix": "프리픽스",
+  "prefixPlaceholder": "예: app",
+  "scope": "스코프",
+  "cssLabel": "CSS",
+  "scssLabel": "SCSS",
+  "jsLabel": "JavaScript",
+  "presets": "프리셋",
+  "presetLight": "라이트",
+  "presetDark": "다크",
+  "presetBrand": "브랜드",
+  "variables": "변수",
+  "addVariable": "변수 추가",
+  "typeColor": "색상",
+  "typeSize": "사이즈",
+  "typeFont": "폰트",
+  "typeOther": "기타",
+  "varNamePlaceholder": "변수이름",
+  "varValuePlaceholder": "값",
+  "copy": "복사",
+  "noOutput": "변수를 추가하여 코드를 생성하세요",
+  "remove": "제거",
+  "detailed_description": "CSS Variables Generator는 CSS 사용자 정의 속성(CSS Custom Properties)을 시각적 인터페이스로 생성하는 개발 도구입니다. 전통적인 CSS 프리프로세서 없이도 동적 스타일링을 가능하게 하며, HSL 색상 모델, 변수 스코핑, 폴백 값 설정 등 고급 기능을 지원합니다. 개발자는 이 도구를 통해 테마 관리, 반응형 디자인 구현, 색상 일관성 유지 등의 작업을 효율적으로 처리할 수 있습니다. 도구는 브라우저 내에서 CSSOM API를 활용해 실시간 미리보기를 제공하며, 사용자가 정의한 변수를 CSS 코드로 내보낼 수 있습니다. 특히 변수 이름 자동 완성, 색상 변환 엔진, 미디어 쿼리 통합 옵션을 통해 복잡한 스타일 시트 관리를 단순화합니다.",
+  "usage_steps": [
+    "도구에 접속해 '변수 추가' 버튼 클릭 후 '--primary-color'와 같은 변수명 입력",
+    "색상 피커에서 HSL 슬라이더를 조정해 기준 색상 선택 또는 RGB 값 수동 입력",
+    "입력란에 폴백 값('#FF0000') 설정으로 브라우저 호환성 보장",
+    "'미리보기' 패널에서 생성된 CSS 코드 확인 및 DOM 요소 적용 테스트",
+    "드롭다운 메뉴에서 '다크 모드' 테마 변수 그룹 생성 및 조건부 스타일링 설정",
+    "'내보내기' 버튼 클릭으로 최적화된 CSS 코드 복사 또는 .css 파일 다운로드"
+  ],
+  "usage_examples": [
+    "디자인 시스템 구축 시 브랜드 색상 팔레트를 HSL 색상 공간에서 계층화하여 관리",
+    "사용자 인터페이스 테마 스위처 구현을 위한 런타임 변수 업데이트 스크립트 생성",
+    "반응형 타이포그래피 구현을 위해 뷰포트 단위 기반의 동적 폰트 크기 변수 설정",
+    "다중 프로젝트 간 공통 디자인 토큰 동기화를 위한 중앙 집중식 변수 저장소 구축"
+  ]
+}

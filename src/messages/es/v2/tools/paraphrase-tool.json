@@ -1,0 +1,34 @@
+{
+  "enterText": "Ingresa Texto para Parafrasear",
+  "paraphrase": "Parafrasear",
+  "style": "Estilo de Escritura",
+  "standard": "Estándar",
+  "formal": "Formal",
+  "casual": "Casual",
+  "creative": "Creativo",
+  "simplified": "Simplificado",
+  "result": "Texto Parafraseado",
+  "originalText": "Texto Original",
+  "detailed_description": "El Paráfrasis Tool utiliza técnicas avanzadas de procesamiento de lenguaje natural (NLP) basadas en modelos transformer bidireccionales y embeddings contextuales para reescribir texto manteniendo su significado semántico. Esta herramienta implementa algoritmos de generación de lenguaje mediante redes neuronales profundas que analizan la estructura sintáctica y semántica del texto original, identifican sinónimos contextualmente apropiados, y reconfiguran la estructura gramatical mediante técnicas de análisis de dependencias. Los usuarios necesitan esta herramienta para tareas como: optimizar contenido para SEO manteniendo la densidad de keywords, adaptar textos académicos a diferentes niveles de complejidad lectora, evitar redundancias en documentación técnica, o transformar tonos narrativos en creación literaria. Su motor emplea un sistema híbrido de reglas lingüísticas y aprendizaje automático supervisado, permitiendo ajustar parámetros como el nivel de formalidad, complejidad léxica y profundidad semántica. La tecnología subyacente combina modelos BERT multilingües con redes de atención secuencial para garantizar coherencia contextual y preservar la intención comunicativa original.",
+  "usage_steps": [
+    "Pega tu texto en el área de edición con soporte para formato RTF y plain text.",
+    "Selecciona el nivel de paráfrasis usando el control deslizante 'Intensidad' (bajo/media/alta).",
+    "Activa la opción 'Preservar términos técnicos' si tu texto contiene jerga especializada.",
+    "Elige el estilo lingüístico deseado en el menú desplegable: académico, conversacional, técnico o creativo.",
+    "Haz clic en 'Generar variantes' para obtener tres versiones con diferentes estructuras sintácticas.",
+    "Usa el comparador lateral para evaluar diferencias semánticas y seleccionar la mejor opción."
+  ],
+  "usage_examples": [
+    "Reescribir un abstract de investigación para cumplir con directrices de revistas indexadas sin perder precisión técnica.",
+    "Adaptar un contenido de marketing para múltiples segmentos demográficos manteniendo consistencia de marca.",
+    "Simplificar documentación médica para pacientes sin formación científica previa.",
+    "Transformar un relato literario de primera persona a narrativa objetiva manteniendo la tensión dramática."
+  ],
+  "selectStyle": "Seleccionar estilo",
+  "paraphrasedText": "Paraphrased Text",
+  "tips": "Consejos",
+  "tip1": "Diferentes estilos producen diferentes resultados",
+  "tip2": "La herramienta usa reemplazo de sinónimos",
+  "tip3": "Revise la salida para verificar la precisión",
+  "simple": "Simple"
+}

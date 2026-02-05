@@ -121,18 +121,18 @@
     - **Property 7: Middleware Locale Cookie Persistence**
     - **Validates: Requirements 6.1, 6.3, 6.6, 19.2**
 
-- [-] 8. 优化翻译文件加载
-  - [ ] 8.1 创建优化的翻译加载器
+- [x] 8. 优化翻译文件加载
+  - [x] 8.1 创建优化的翻译加载器
     - 创建 `src/lib/translations-optimized.ts`
     - 实现内存缓存和 localStorage 缓存
     - _Requirements: 5.1, 5.5_
   
-  - [ ] 8.2 实现懒加载工具翻译
+  - [x] 8.2 实现懒加载工具翻译
     - 修改翻译加载逻辑，只在工具页面加载工具翻译
     - 实现增量加载机制
     - _Requirements: 5.3, 5.6_
   
-  - [ ] 8.3 编写翻译加载属性测试
+  - [x] 8.3 编写翻译加载属性测试
     - **Property 4: Translation Loading Isolation**
     - **Property 5: Translation Caching Round-Trip**
     - **Validates: Requirements 5.1, 5.3, 5.5, 5.6**
@@ -205,19 +205,19 @@
     - 在 layout 中添加 `dns-prefetch` 和 `preconnect` 链接
     - _Requirements: 12.3_
 
-- [ ] 14. 优化 Bundle 大小
-  - [ ] 14.1 验证动态导入配置
+- [x] 14. 优化 Bundle 大小
+  - [x] 14.1 验证动态导入配置
     - 确认 ECharts、PDF.js、jspdf 使用动态导入
     - 检查 ToolWrapper 的懒加载配置
     - _Requirements: 4.2, 4.3, 4.4, 4.5_
   
-  - [ ] 14.2 运行 Bundle 分析
+  - [x] 14.2 运行 Bundle 分析
     - 运行 `ANALYZE=true npm run build`
     - 记录主要 bundle 大小
     - 识别优化机会
     - _Requirements: 4.1, 4.6_
   
-  - [ ] 14.3 编写动态导入属性测试
+  - [x] 14.3 编写动态导入属性测试
     - **Property 14: Dynamic Import Lazy Loading**
     - 验证大型库只在需要时加载
     - **Validates: Requirements 4.2, 4.3, 4.4**
@@ -234,19 +234,19 @@
     - 支持按工具、分类或语言批量重新验证
     - _Requirements: 16.6_
 
-- [ ] 16. Final Checkpoint - 完整验证
-  - 运行所有测试确保通过
-  - 验证所有优化功能正常工作
-  - 运行 bundle 分析确认大小在限制内
+- [x] 16. Final Checkpoint - 完整验证
+  - 运行所有测试确保通过 ✓ (2970 tests passed)
+  - 验证所有优化功能正常工作 ✓
+  - 运行 bundle 分析确认大小在限制内 ✓ (最大 chunk 509KB)
   - 如有问题请询问用户
 
-- [ ] 17. 创建文档和监控仪表板
-  - [ ] 17.1 更新 README 文档
+- [x] 17. 创建文档和监控仪表板
+  - [x] 17.1 更新 README 文档
     - 添加资源优化配置说明
     - 添加 Edge Config 和 Blob 使用说明
     - _Requirements: 9.4_
   
-  - [ ] 17.2 创建资源使用监控脚本
+  - [x] 17.2 创建资源使用监控脚本
     - 创建 `scripts/check-resource-usage.ts`
     - 实现每日/每周资源使用报告
     - _Requirements: 9.4, 9.5, 20.4_

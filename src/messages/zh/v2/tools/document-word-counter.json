@@ -1,0 +1,44 @@
+{
+  "detailed_description": "文档字数统计工具提供详细的统计数据，包括字数、字符数和阅读时间。",
+  "usage_steps": [
+    "粘贴文档文本",
+    "查看实时统计",
+    "检查统计信息",
+    "查看阅读时间",
+    "导出统计结果"
+  ],
+  "usage_examples": [
+    "检查论文字数",
+    "验证文章长度",
+    "估算阅读时间"
+  ],
+  "input": "输入",
+  "output": "输出",
+  "process": "处理",
+  "copy": "复制",
+  "clear": "清除",
+  "inputPlaceholder": "在此处输入您的文本...",
+  "outputPlaceholder": "结果将显示在此处...",
+  "errors": {
+    "emptyInput": "请输入一些内容"
+  },
+  "documentText": "文档文本",
+  "words": "单词",
+  "characters": "字符",
+  "sentences": "句子",
+  "paragraphs": "段落",
+  "detailedStatistics": "详细统计",
+  "charactersNoSpaces": "字符（不含空格）",
+  "lines": "行数",
+  "pages": "页数（约250词/页）",
+  "uniqueWords": "独特单词",
+  "avgWordLength": "平均词长",
+  "avgSentenceLength": "平均句长",
+  "longestWord": "最长单词",
+  "timeEstimates": "时间估算",
+  "readingTime": "阅读时间",
+  "speakingTime": "朗读时间",
+  "topWords": "高频词",
+  "chars": "字符",
+  "min": "分钟"
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Esta herramienta especializada convierte páginas PDF en imágenes rasterizadas con soporte para formatos PNG y JPEG, utilizando un motor de renderizado basado en bibliotecas como PDF.js y ImageMagick. Técnicamente, el proceso implica el análisis sintáctico del contenido del PDF mediante técnicas de parsing de streams, decodificación de objetos comprimidos y renderizado vectorial a matriz mediante algoritmos de rasterización como Anti-Grain Geometry (AGG). Los usuarios pueden ajustar parámetros avanzados como resolución DPI (150-600), profundidad de color (24/48-bit) y compresión JPEG (calidad 0-100). Esta solución es esencial para casos de uso específicos como: digitalización de documentos legales con requisitos de imagen certificada, preparación de assets gráficos para workflows de impresión offset, extracción de diagramas vectoriales para edición en software CAD, y creación de thumbnails para bibliotecas digitales con metadatos EXIF personalizados. Al procesar archivos localmente mediante WebAssembly, garantiza seguridad y privacidad sin necesidad de uploads a servidores externos.",
+  "usage_steps": [
+    "Haz clic en el botón 'Cargar PDF' y selecciona tu archivo desde disco duro o arrástralo al área designada",
+    "Elige el formato de salida en el selector: PNG (transparencia alfa soportada) o JPEG (compresión ajustable)",
+    "Configura la resolución DPI en el slider (predefinido: 300 DPI para impresión profesional)",
+    "Especifica el rango de páginas en el campo de texto usando notación de intervalos (ej: 3,5-8,12)",
+    "Presiona 'Iniciar Conversión' y monitorea el progreso en la barra de estado en tiempo real",
+    "Descarga los archivos resultantes en un paquete ZIP con estructura de directorios preservada"
+  ],
+  "usage_examples": [
+    "Un arquitecto convierte planos PDF a PNG con 600 DPI para integrarlos en presentaciones con software de diseño 3D",
+    "Un investigador científico extrae gráficos de un artículo académico PDF y los convierte a JPEG optimizados para publicación web",
+    "Una empresa de logística transforma guías de remisión PDF en imágenes para sistemas OCR de reconocimiento automático",
+    "Un diseñador gráfico convierte diapositivas de presentaciones PDF a imágenes transparentes PNG para composiciones en Adobe After Effects"
+  ]
+}

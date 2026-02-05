@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Convertidor de PNG a SVG traza imágenes rasterizadas y las convierte en gráficos vectoriales escalables. Ideal para crear logotipos e iconos independientes de la resolución a partir de imágenes bitácora.",
+  "usage_steps": [
+    "Sube tu imagen PNG",
+    "Ajusta los parámetros de trazado",
+    "Revisa el resultado vectorial",
+    "Ajusta los colores y las rutas",
+    "Descarga el archivo SVG"
+  ],
+  "usage_examples": [
+    "Vectoriza logotipos para escalar",
+    "Convierte iconos a formato SVG",
+    "Crea arte vectorial a partir de fotos"
+  ],
+  "uploadPng": "Sube una imagen PNG",
+  "colorMode": "Modo de Color",
+  "blackWhite": "Negro y Blanco",
+  "color": "Color",
+  "threshold": "Umbral",
+  "convert": "Convertir a SVG",
+  "download": "Descargar SVG",
+  "preview": "Vista previa",
+  "dropzone": "Suelte el archivo PNG aquí o haga clic para seleccionar",
+  "selectFile": "Seleccionar archivo",
+  "conversionMode": "Modo de conversión",
+  "copied": "¡Copiado!",
+  "copy": "Copiar",
+  "embedMode": "Incrustar como Base64",
+  "removeImage": "Eliminar imagen",
+  "svgOutput": "Salida SVG",
+  "traceMode": "Trazar a vector"
+}

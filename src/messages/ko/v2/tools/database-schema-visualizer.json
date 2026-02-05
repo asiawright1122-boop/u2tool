@@ -1,0 +1,53 @@
+{
+  "detailed_description": "데이터베이스 스키마 시각화 도구는 SQL CREATE TABLE 문장으로부터 시각적 ER 도표를 생성합니다.",
+  "usage_steps": [
+    "CREATE TABLE 문장을 붙여넣으세요",
+    "시각화를 클릭하세요",
+    "관계를 확인하세요",
+    "드래그하여 정렬하세요",
+    "PNG/SVG로 내보내세요"
+  ],
+  "usage_examples": [
+    "데이터베이스 구조 문서화",
+    "유산 데이터베이스 이해",
+    "스키마 변경 계획"
+  ],
+  "input": "입력",
+  "output": "출력",
+  "process": "처리",
+  "copy": "복사",
+  "clear": "지우기",
+  "inputPlaceholder": "CREATE TABLE 문을 붙여넣으세요...",
+  "outputPlaceholder": "결과가 여기에 표시됩니다...",
+  "errors": {
+    "emptyInput": "입력을 입력해 주세요"
+  },
+  "loadExample": "예제 로드",
+  "analyze": "분석",
+  "generate": "생성",
+  "format": "포맷",
+  "convert": "변환",
+  "validate": "검증",
+  "export": "내보내기",
+  "preview": "미리보기",
+  "reset": "초기화",
+  "add": "추가",
+  "remove": "제거",
+  "save": "저장",
+  "cancel": "취소",
+  "settings": "설정",
+  "options": "옵션",
+  "results": "결과",
+  "noResults": "결과 없음",
+  "loading": "로딩 중...",
+  "success": "성공",
+  "failed": "실패",
+  "warning": "경고",
+  "info": "정보",
+  "sqlSchema": "SQL 스키마 (CREATE TABLE 문)",
+  "schemaVisualization": "스키마 시각화",
+  "tables": "테이블",
+  "relationships": "관계",
+  "primaryKey": "기본 키",
+  "foreignKey": "FK"
+}

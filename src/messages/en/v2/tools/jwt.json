@@ -1,0 +1,20 @@
+{
+  "algorithm": "Algorithm",
+  "secretKey": "Secret Key",
+  "secretPlaceholder": "Enter secret key...",
+  "payload": "Payload (JSON)",
+  "generate": "Generate JWT",
+  "generatedToken": "Generated Token",
+  "commonClaims": "Common Claims",
+  "invalidPayload": "Invalid payload JSON",
+  "error": "Failed to generate JWT",
+  "claims": {
+    "iss": "Issuer",
+    "sub": "Subject",
+    "aud": "Audience",
+    "exp": "Expiration Time",
+    "nbf": "Not Before",
+    "iat": "Issued At",
+    "jti": "JWT ID"
+  }
+}

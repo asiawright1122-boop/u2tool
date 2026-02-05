@@ -1,0 +1,45 @@
+{
+  "detailed_description": "Der Teamkapazitätsplaner berechnet die verfügbare Teamkapazität, indem Feiertage und Besprechungen berücksichtigt werden.",
+  "usage_steps": [
+    "Fügen Sie Teammitglieder hinzu",
+    "Arbeitszeiten einstellen",
+    "Besprechungen berücksichtigen",
+    "Kapazität berechnen",
+    "Zuteilung planen"
+  ],
+  "usage_examples": [
+    "Sprintkapazität planen",
+    "Feiertage berücksichtigen",
+    "Lastverteilung ausgleichen"
+  ],
+  "input": "Eingabe",
+  "output": "Ausgabe",
+  "process": "Prozess",
+  "copy": "Kopieren",
+  "clear": "Löschen",
+  "inputPlaceholder": "Geben Sie hier Ihre Eingabe ein...",
+  "outputPlaceholder": "Ergebnisse werden hier angezeigt...",
+  "errors": {
+    "emptyInput": "Bitte geben Sie eine Eingabe ein"
+  },
+  "sprintDuration": "Sprint-Dauer (Tage)",
+  "holidays": "Feiertage",
+  "focusFactor": "Fokus-Faktor",
+  "addMember": "+ Mitglied hinzufügen",
+  "totalCapacity": "Gesamtkapazität",
+  "avgPerPerson": "Durchschnitt pro Person",
+  "utilization": "Auslastung",
+  "teamSize": "Teamgröße",
+  "role": "Rolle",
+  "hoursPerDay": "Stunden/Tag",
+  "daysOff": "Freie Tage",
+  "meetings": "Meetings (h)",
+  "admin": "Admin (h)",
+  "capacity": "Kapazität",
+  "capacityByRole": "Kapazität nach Rolle",
+  "capacityFormula": "Kapazitätsformel",
+  "newTeam": "Neues Team",
+  "forming": "In Bildung",
+  "established": "Etabliert",
+  "highPerforming": "Hochleistung"
+}

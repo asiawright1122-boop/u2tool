@@ -1,0 +1,18 @@
+{
+  "detailed_description": "El CSS Beautifier es una herramienta esencial para desarrolladores que trabajan con hojas de estilo en cascada (CSS). Este instrumento no solo formatea el código CSS, sino que también ofrece opciones de minificación y embellecimiento, lo que facilita la lectura y el mantenimiento del código. La minificación reduce el tamaño del archivo eliminando espacios en blanco, comentarios y simplificando las declaraciones, lo que es crucial para la optimización de la carga de sitios web. Por otro lado, el embellecimiento (o 'beautify') agrega indentaciones y saltos de línea, lo que hace que el código sea más legible y estructurado, ideal para la colaboración en proyectos de equipo. La herramienta es especialmente útil en escenarios donde los desarrolladores deben trabajar con archivos CSS generados automáticamente o desordenados, o cuando se requiere una revisión rápida del código antes de su implementación. La interfaz intuitiva y las opciones personalizables permiten a los usuarios adaptar la salida a sus necesidades específicas, ya sea para mejorar la performance del sitio o para facilitar la depuración y el mantenimiento.",
+  "usage_steps": [
+    "Abra la página de CSS Beautifier en su navegador web.",
+    "Copie el código CSS que desea formatear en el cuadro de texto de entrada.",
+    "Seleccione la opción 'Beautify' si desea mejorar la legibilidad del código, o 'Minify' si necesita reducir el tamaño del archivo para la optimización.",
+    "Ajuste las opciones adicionales, como la cantidad de espacios para la indentación, si está utilizando la opción 'Beautify'.",
+    "Haga clic en el botón 'Procesar' para aplicar los cambios al código CSS.",
+    "Copie el código procesado del cuadro de texto de salida y guárdelo en su archivo CSS o intégrelo directamente en su proyecto."
+  ],
+  "usage_examples": [
+    "Un desarrollador frontend trabaja en un proyecto grande donde múltiples desarrolladores contribuyen a un archivo CSS. Para asegurarse de que el código sea consistente y legible, utiliza el CSS Beautifier para formatear el archivo antes de cada entrega al repositorio de control de versiones.",
+    "Una diseñadora web debe revisar un archivo CSS generado automáticamente por un framework. El archivo es difícil de leer debido a la falta de indentación y la presencia de comentarios innecesarios. Utiliza el CSS Beautifier para embellecer el código, lo que facilita la identificación de errores y la modificación de estilos.",
+    "Un desarrollador de rendimiento necesita optimizar la carga de una página web. Utiliza la opción 'Minify' del CSS Beautifier para reducir el tamaño del archivo CSS, lo que ayuda a acelerar la carga de la página y mejorar la experiencia del usuario.",
+    "Un estudiante de programación trabaja en un proyecto de curso y necesita compartir su código CSS con sus compañeros para recibir comentarios. Utiliza el CSS Beautifier para formatear el código de manera profesional, lo que facilita la revisión y el aprendizaje colaborativo."
+  ],
+  "indent": "Sangría"
+}

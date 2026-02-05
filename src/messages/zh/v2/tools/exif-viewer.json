@@ -1,0 +1,51 @@
+{
+  "uploadImage": "上传图片",
+  "noExif": "未找到EXIF数据",
+  "camera": "相机信息",
+  "datetime": "日期与时间",
+  "gps": "GPS位置",
+  "image": "图片",
+  "removeExif": "移除EXIF",
+  "download": "无EXIF下载",
+  "dropzone": "点击或拖拽图片进行上传",
+  "supportedFormats": "支持JPEG, TIFF格式",
+  "downloadClean": "无EXIF下载",
+  "exifRemoved": "EXIF数据已移除",
+  "exifData": "EXIF数据",
+  "loading": "加载中...",
+  "noExifData": "未找到EXIF数据",
+  "fieldsFound": "找到字段",
+  "detailed_description": "EXIF Viewer 是一款面向开发者的专业图像元数据解析与编辑工具。该工具通过解析JPEG/TIFF格式文件的APP1标记段，可精确提取EXIF 2.3标准定义的全部元数据，包括相机参数（如光圈值FNumber、快门速度ExposureTime）、GPS定位数据、IPTC信息以及XMP扩展元数据。开发者可通过此工具诊断图片来源安全性，例如检测移动设备拍摄照片中隐藏的地理坐标，或验证CDN缓存图片的缓存有效性（通过DateTimeOriginal字段）。工具采用WebAssembly构建的二进制解析引擎，在浏览器端实现毫秒级元数据剥离，支持选择性清除特定数据段（如删除GPSInfo但保留拍摄时间），同时保持图像无损压缩格式。其核心优势在于提供原始字节级操作界面，可查看十六进制数据偏移量，并支持导出结构化JSON格式的元数据报告。",
+  "usage_steps": [
+    "点击'上传文件'选择本地图片，支持拖拽上传或文件系统路径输入",
+    "在预览窗口右键点击图像，选择'显示EXIF结构树'展开元数据层级",
+    "通过过滤器下拉菜单选择需要清除的数据节点（如GPS、JPEG缩略图）",
+    "勾选'保留时间戳'选项以防止修改文件修改时间",
+    "点击'应用修改'触发Web Worker执行二进制重组",
+    "在输出面板查看修改后的HEX数据校验码，下载优化后的图像文件"
+  ],
+  "usage_examples": [
+    "新闻机构在发布事故现场照片前，批量清除救援车辆GPS坐标",
+    "电商平台开发者验证产品图是否包含原始相机序列号作为防伪标识",
+    "无人机航拍团队自动剥离飞行高度信息保护客户地理数据安全",
+    "数字取证专家对比EXIF中拍摄时间与文件系统时间戳检测图像篡改"
+  ],
+  "faqs": [
+    {
+      "question": "Exif Viewer 是免费的吗？",
+      "answer": "是的，Exif Viewer 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Exif Viewer 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Exif Viewer 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Exif Viewer 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "input": "Entrée JSON",
+  "inputPlaceholder": "Coller votre JSON ici...",
+  "parseView": "Analyser & Visualiser",
+  "expandAll": "Développer Tout",
+  "collapseAll": "Réduire Tout",
+  "items": "{count} éléments",
+  "detailed_description": "Le JSON Viewer est un outil puissant conçu pour faciliter la visualisation et l'exploration de données JSON de manière structurée. Contrairement à un simple affichage brut, cet outil organise les données JSON en un arbre hiérarchique, ce qui permet une meilleure compréhension et une analyse plus facile des structures complexes. Les développeurs et les professionnels du web peuvent utiliser ce JSON Viewer pour valider la structure de leurs données JSON, identifier les erreurs de formatage, et naviguer rapidement à travers de grandes quantités de données. L'outil supporte également la minimisation et l'expansion des nœuds, ce qui rend la gestion des données JSON volumineuses plus intuitive. En outre, il offre des fonctionnalités de recherche et de filtrage, permettant aux utilisateurs de trouver rapidement les informations spécifiques dont ils ont besoin. Le JSON Viewer est particulièrement utile dans le développement d'applications web, de APIs, et de services de données, où la précision et la clarté des données JSON sont cruciales.",
+  "usage_steps": [
+    "Ouvrez le JSON Viewer sur votre navigateur web.",
+    "Cliquez sur le bouton 'Charger JSON' pour importer votre fichier JSON ou collez directement votre code JSON dans la zone de texte.",
+    "Une fois le JSON chargé, l'outil affichera automatiquement les données sous forme d'arbre hiérarchique.",
+    "Utilisez les flèches de contraction et de décontraction à gauche de chaque nœud pour explorer les différentes parties de votre JSON.",
+    "Si vous souhaitez rechercher des éléments spécifiques, utilisez la barre de recherche en haut de l'interface et entrez votre requête.",
+    "Enfin, vous pouvez exporter les données modifiées ou affichées en utilisant l'option 'Exporter' dans le menu des actions."
+  ],
+  "usage_examples": [
+    "Un développeur travaillant sur une API REST souhaite vérifier la structure de la réponse JSON renvoyée par son service. En utilisant le JSON Viewer, il peut facilement visualiser et valider que toutes les clés et valeurs sont correctement formatées et présentes.",
+    "Une équipe de test QA a besoin d'examiner en détail une réponse JSON reçue lors d'un test d'intégration. Le JSON Viewer leur permet de naviguer rapidement à travers les différentes couches de l'objet JSON pour identifier les anomalies ou les erreurs.",
+    "Un data analyste doit analyser un grand ensemble de données JSON provenant d'un fichier de logs. Grâce aux fonctionnalités de recherche et de filtrage du JSON Viewer, il peut extraire les informations pertinentes pour son analyse sans avoir à parcourir manuellement les données.",
+    "Un développeur front-end souhaite intégrer des données JSON dans une application web. Le JSON Viewer lui permet de visualiser la structure des données avant de les incorporer dans le code, assurant ainsi une meilleure compatibilité et un rendu correct."
+  ]
+}

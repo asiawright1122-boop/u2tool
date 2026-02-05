@@ -1,0 +1,32 @@
+{
+  "enterText": "Enter Your Text",
+  "fontStyles": "Font Styles",
+  "preview": "Preview",
+  "bold": "Bold",
+  "italic": "Italic",
+  "boldItalic": "Bold Italic",
+  "script": "Script",
+  "fraktur": "Fraktur",
+  "doubleStruck": "Double Struck",
+  "circled": "Circled",
+  "squared": "Squared",
+  "detailed_description": "The Instagram Font Generator is a specialized Unicode transformation tool that converts standard ASCII text into visually distinctive typographic styles by leveraging the extended Unicode standard. Unlike traditional font applications, this tool utilizes Instagram's text rendering engine limitations to create stylized text through strategic character substitution rather than actual font files. It works by mapping standard characters to their typographically enhanced Unicode equivalents in categories like Mathematical Alphanumeric Symbols, Enclosed Alphanumerics, and Dingbats. This enables users to generate script, bold, italic, monospace, and decorative text styles that render consistently across iOS, Android, and web platforms. The tool's necessity arises from Instagram's restrictive font ecosystem, where only system fonts are supported. Content creators, social media marketers, and digital artists use this solution to craft attention-grabbing bios, post headers, and story elements that maintain visual integrity across devices without requiring image-based text workarounds.",
+  "usage_steps": [
+    "Type your base text into the input field labeled 'Original Text'",
+    "Select a preferred typographic style from the 12 available Unicode mappings using the style dropdown menu",
+    "Preview real-time character transformations in the 'Output Preview' section",
+    "Adjust character spacing using the 'Kerning Control' slider for optimal Instagram rendering",
+    "Click the 'Copy to Clipboard' button with Unicode preservation checkmark activated",
+    "Paste directly into Instagram bio, captions, or stories with guaranteed cross-platform compatibility"
+  ],
+  "usage_examples": [
+    "A fashion influencer creates a cursive signature style for their Instagram bio using Mathematical Script characters",
+    "A small business formats promotional text for story highlights with bold sans-serif Unicode glyphs",
+    "A musician generates stylized album title text that renders correctly in Instagram comments section",
+    "A digital artist crafts decorative text separators for post descriptions using specialized Unicode dingbats"
+  ],
+  "tips": "Tips",
+  "tip1": "Tip1",
+  "tip2": "Tip2",
+  "tip3": "Tip3"
+}

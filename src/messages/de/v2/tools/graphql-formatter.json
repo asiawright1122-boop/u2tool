@@ -1,0 +1,26 @@
+{
+  "enterQuery": "GraphQL-Abfrage eingeben",
+  "validate": "Validieren",
+  "formatted": "Formatierte Abfrage",
+  "valid": "Gültiges GraphQL",
+  "invalid": "Ungültiges GraphQL",
+  "syntaxError": "Syntaxfehler",
+  "detailed_description": "Der GraphQL Formatter ist ein spezialisierter Code-Optimierer für GraphQL-Abfragen und -Schemata, der mittels präziser Syntaxanalyse und AST-Transformation (Abstract Syntax Tree) eine strukturelle Neugestaltung vornimmt. Das Tool identifiziert automatisch Token wie Typedefinitionen, Query-Operationen, Fragmente und Directives, um sie gemäß best practices einzugliedern. Kernfunktionen umfassen semantische Einrückung basierend auf Schachtelungstiefe, Alphabetisierung von Feldern, Entfernung redundanter Leerzeichen sowie Validierung gegen GraphQL-Syntaxregeln (z.B. korrekte Verwendung von colons und Commata). Entwickler benötigen dieses Werkzeug, um komplexe Abfragen bei der Zusammenarbeit im Team lesbar zu gestalten, Fehler in Schemata schneller zu identifizieren oder API-Dokumentationen einheitlich zu formatieren. Technisch arbeitet der Formatter mit einem Parser, der die Eingabe in einen Baum von Knoten zerlegt, diese anpassbar transformiert und unter Berücksichtigung von Kontext (z.B. Schema Definition Language vs. Query Language) serialisiert. Besonders nützlich ist die Unterstützung für Fragment-Spreading, Inline-Fragmente und Variablendeklarationen, die oft in realen Anwendungen vorkommen.",
+  "usage_steps": [
+    "Kopieren Sie den zu formatierenden GraphQL-Code in den Eingabebereich 'Raw Input' (Linksbereich des Interfaces).",
+    "Wählen Sie im Dropdown 'Indentation Level' die gewünschte Einrücktiefe (2, 4 oder 8 Leerzeichen) für Schachtelungsstrukturen.",
+    "Aktivieren Sie die Checkbox 'Sort Fields Alphabetically', um Felder in Typdefinitionen alphabetisch zu ordnen.",
+    "Klicken Sie auf 'Validate Schema', um Syntaxfehler in Schemata zu erkennen und markierte Problemzonen anzuzeigen.",
+    "Nutzen Sie den Schieberegler 'Line Wrapping', um Zeilenumbrüche bei langen Query-Zeilen zu aktivieren.",
+    "Exportieren Sie das Ergebnis über den Button 'Copy Formatted Output' oder verwenden Sie die 'Diff View' zur visuellen Vergleichsansicht."
+  ],
+  "usage_examples": [
+    "Ein Frontend-Entwickler formatiert eine verschachtelte Query mit mehreren Fragments für ein Code-Review, um Lesbarkeit zu gewährleisten.",
+    "Ein API-Designer validiert ein komplexes Schema mit Custom Directives auf Syntaxkonformität, bevor es in die Produktion geht.",
+    "Ein Data Engineer standardisiert die Einrückung von Drittanbieter-Schemata, um ein einheitliches Style-Guide für das Unternehmen durchzusetzen.",
+    "Ein Einsteiger analysiert durch automatisches Formatieren die Struktur einer komprimierten Beispiel-Abfrage aus einer Dokumentation."
+  ],
+  "placeholder": "Fügen Sie Ihre GraphQL-Abfrage hier ein...",
+  "minify": "Minimieren",
+  "example": "Beispiel"
+}

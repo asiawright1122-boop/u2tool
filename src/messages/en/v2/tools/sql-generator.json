@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The SQL Generator is a precision tool for creating syntactically correct SQL queries tailored to specific database schemas and operational requirements. This tool addresses the need for rapid query construction in environments where manual coding risks syntax errors or inefficiencies. Developers working with complex JOIN operations, subqueries, or database migrations can automate query generation while maintaining control over execution plans. The tool parses user-defined schema structures, validates column references against table definitions, and applies dialect-specific optimizations for MySQL, PostgreSQL, and SQLite. By accepting structured input formats like JSON schema definitions or ER diagrams, it eliminates manual query drafting while ensuring referential integrity and proper use of constraints like FOREIGN KEYs and INDEXes. Advanced features include batch operation support for bulk inserts and transaction-safe ALTER TABLE statements for schema evolution.",
+  "usage_steps": [
+    "Select target SQL dialect (MySQL/PostgreSQL/SQLite) from the dropdown menu",
+    "Choose operation type: SELECT with JOINs, INSERT BATCH, CREATE TABLE with constraints, or UPDATE with subqueries",
+    "Upload database schema file or manually input table/column relationships in the Schema Builder interface",
+    "Define query parameters using the condition matrix with operators (=, IN, BETWEEN, LIKE) and logical groupings",
+    "Preview generated query with syntax highlighting and execution plan analysis in the Output Panel",
+    "Export query or copy directly to clipboard with optional transaction wrapper (BEGIN/COMMIT)"
+  ],
+  "usage_examples": [
+    "Migrating data from MySQL to PostgreSQL by generating dialect-specific INSERT statements with type casting",
+    "Creating daily reports with complex JOINs across 5+ tables using point-and-click column selection",
+    "Building audit trails through automated UPDATE triggers with BEFORE/AFTER image capture",
+    "Optimizing slow queries by generating covering indexes with INCLUDE() clauses for PostgreSQL"
+  ]
+}

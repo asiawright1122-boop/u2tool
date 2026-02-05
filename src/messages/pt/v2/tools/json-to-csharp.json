@@ -1,0 +1,27 @@
+{
+  "input": "Entrada JSON",
+  "output": "Saída C#",
+  "convert": "Converter",
+  "copy": "Copiar",
+  "className": "Nome da Classe",
+  "useProperties": "Usar Propriedades",
+  "useNullable": "Tipos Nulos",
+  "inputPlaceholder": "Cole o JSON aqui...",
+  "outputPlaceholder": "Classes C# aparecerão aqui...",
+  "errorInvalidJson": "// Erro: Entrada JSON inválida",
+  "detailed_description": "O conversor JSON para C# é uma ferramenta especializada que transforma estruturas de dados JSON em classes C# fortemente tipadas, ideal para projetos .NET que exigem integração com APIs RESTful ou manipulação de payloads JSON. Quando desenvolvedores recebem respostas JSON dinâmicas, especialmente de serviços de terceiros, a criação manual de classes POCO (Plain Old CLR Objects) para desserialização se torna um processo propenso a erros e demorado. Esta ferramenta resolve esse problema mapeando automaticamente tipos primitivos (string, int, double, bool) e estruturas complexas (arrays, objetos aninhados) para propriedades C# com suporte a nullable types (ex: int?), tipos genéricos (List<T>, Dictionary<TKey,TValue>) e atributos de serialização [JsonProperty] do Newtonsoft.Json. O processo utiliza análise léxica e gramatical para identificar padrões no JSON, inferindo tipos com precisão, e gera código compatível com frameworks como .NET Core, ASP.NET MVC e Xamarin. Além disso, oferece opções de personalização como definição de namespace, modificadores de acesso (public, internal) e formatação de nomes de propriedades (PascalCase ou customizado).",
+  "usage_steps": [
+    "Cole seu JSON no campo de texto central com suporte a syntax highlighting.",
+    "Ative a opção 'Detectar Arrays' se o JSON raiz for uma coleção.",
+    "Defina o namespace desejado no campo de texto 'Namespace' para organização do código.",
+    "Escolha o modificador de acesso padrão usando o dropdown (public/internal).",
+    "Clique no botão 'Gerar Classes C#' para iniciar a conversão.",
+    "Revise o código gerado na área de saída e utilize o botão 'Baixar .cs' para salvar o arquivo."
+  ],
+  "usage_examples": [
+    "Converter a resposta de uma API pública como a GitHub REST API (ex: dados de repositórios) em classes C# para integração com um cliente HTTP no Unity3D.",
+    "Mapear payloads de eventos AWS Lambda com estrutura JSON para classes utilizáveis em funções serverless em C#.",
+    "Transformar arquivos de configuração JSON em modelos C# para validação fortemente tipada em aplicações ASP.NET Core.",
+    "Gerar classes de domínio a partir de dados de sensores IoT no formato JSON para sistemas de monitoramento industrial em .NET MAUI."
+  ]
+}

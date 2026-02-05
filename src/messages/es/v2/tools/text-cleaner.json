@@ -1,0 +1,33 @@
+{
+  "input": "Texto de Entrada",
+  "clear": "Borrar",
+  "cleanedText": "Texto Limpiado",
+  "copyResult": "Copiar Resultado",
+  "options": "Opciones",
+  "trimLines": "Recortar Líneas",
+  "removeEmptyLines": "Eliminar Líneas Vacías",
+  "removeDuplicateLines": "Eliminar Líneas Duplicadas",
+  "removeExtraSpaces": "Eliminar Espacios Extraños",
+  "removeHtmlTags": "Eliminar Etiquetas HTML",
+  "removePunctuation": "Eliminar Puntuación",
+  "lowercase": "Convertir a Minúsculas",
+  "uppercase": "Convertir a Mayúsculas",
+  "characters": "Caracteres",
+  "lines": "Líneas",
+  "placeholder": "Pega tu texto aquí...",
+  "detailed_description": "El LimpiaTexto es una herramienta especializada en la normalización y optimización de cadenas de caracteres mediante técnicas de procesamiento lexicográfico. Su funcionalidad principal incluye la eliminación de espacios múltiples, saltos de línea no deseados, tabulaciones excedentes y caracteres no imprimibles (como \u0000 o ). Utiliza expresiones regulares avanzadas para identificar patrones de texto sucio y aplica algoritmos de transformación basados en estándares Unicode (UTF-8/16), permitiendo la normalización de diacríticos y símbolos especiales. Los desarrolladores necesitan esta herramienta cuando requieren preprocesar datos para entrenamiento de modelos NLP, donde la eliminación de noise léxico mejora la precisión del análisis semántico. También es crucial en entornos DevOps para limpiar registros de logs antes de su indexación en sistemas como Elasticsearch, o en la preparación de datasets CSV para machine learning, donde la inconsistencia en espaciado puede generar errores en parsers. Internamente, el motor descompone el texto en tokens léxicos, aplica filtros gramaticales y reensambla el contenido mediante algoritmos de bufferización en memoria, garantizando bajo consumo de recursos incluso con entradas de 100KB+.",
+  "usage_steps": [
+    "1. Acceder a la herramienta a través del panel de herramientas de texto.",
+    "2. Pegar el contenido en el área de edición multilínea con soporte para arrastrar y soltar archivos .txt.",
+    "3. Activar/desactivar opciones específicas en el panel lateral: Eliminar espacios redundantes, Eliminar líneas vacías, Normalizar Unicode, Convertir a minúsculas.",
+    "4. Hacer clic en el botón 'Procesar' para iniciar el análisis léxico y aplicar las transformaciones seleccionadas.",
+    "5. Revisar el resultado en el visor de salida con comparación lado a lado del texto original y procesado.",
+    "6. Descargar el texto limpio en formato .txt o copiarlo al portapapeles usando el botón de acción rápida."
+  ],
+  "usage_examples": [
+    "Limpiar código HTML copiado del portapapeles antes de insertarlo en un editor de código para evitar errores de renderizado.",
+    "Preparar un corpus de textos en español para un modelo BERT, eliminando espacios irregulares y normalizando tildes.",
+    "Sanitizar datos de entrada de formularios web que contienen múltiples saltos de línea generados por usuarios.",
+    "Unificar múltiples archivos de logs de servidores con diferentes codificaciones, eliminando caracteres no imprimibles."
+  ]
+}

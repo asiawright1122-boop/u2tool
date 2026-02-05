@@ -1,0 +1,47 @@
+{
+  "detailed_description": "Query Execution Planner helps understand and optimize SQL query execution plans.",
+  "usage_steps": [
+    "Paste EXPLAIN output",
+    "Select database type",
+    "Click Analyze",
+    "View plan visualization",
+    "Get recommendations"
+  ],
+  "usage_examples": [
+    "Understand slow queries",
+    "Identify full table scans",
+    "Compare execution plans"
+  ],
+  "input": "Input",
+  "output": "Output",
+  "process": "Process",
+  "copy": "Copy",
+  "clear": "Clear",
+  "inputPlaceholder": "Enter your SQL query...",
+  "outputPlaceholder": "Results will appear here...",
+  "errors": {
+    "emptyInput": "Please enter some input"
+  },
+  "loadExample": "Load Example",
+  "analyze": "Analyze",
+  "generate": "Generate",
+  "format": "Format",
+  "convert": "Convert",
+  "validate": "Validate",
+  "export": "Export",
+  "preview": "Preview",
+  "reset": "Reset",
+  "add": "Add",
+  "remove": "Remove",
+  "save": "Save",
+  "cancel": "Cancel",
+  "settings": "Settings",
+  "options": "Options",
+  "results": "Results",
+  "noResults": "No results",
+  "loading": "Loading...",
+  "success": "Success",
+  "failed": "Failed",
+  "warning": "Warning",
+  "info": "Info"
+}

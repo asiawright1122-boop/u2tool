@@ -1,0 +1,29 @@
+{
+  "inputValue": "Valor de Entrada",
+  "unit": "Unidade",
+  "base": "Base",
+  "binary": "Binário",
+  "decimal": "Decimal",
+  "byteConversions": "Conversões de Bytes",
+  "bitConversions": "Conversões de Bits",
+  "totalBytes": "Total em Bytes",
+  "bytes": "bytes",
+  "info": "Informações",
+  "binaryDesc": "Usa 1024 como multiplicador (KiB, MiB, GiB). Usado por sistemas operacionais.",
+  "decimalDesc": "Usa 1000 como multiplicador (KB, MB, GB). Usado por fabricantes de armazenamento.",
+  "detailed_description": "O File Size Calculator é uma ferramenta técnica projetada para realizar conversões precisas entre unidades de medida de armazenamento digital, incluindo múltiplos decimais (KB, MB, GB, TB) e binários (KiB, MiB, GiB, TiB). O diferencial está na sua capacidade de lidar com fatores de conversão exatos (1024³ para unidades binárias vs. 1000³ para decimais), essencial para profissionais que lidam com sistemas de arquivos, protocolos de rede ou desenvolvimento de software. A ferramenta é indispensável para calcular requisitos de armazenamento em ambientes virtualizados, validar capacidades de dispositivos IoT, ou converter metadados de vídeo em 4K (geralmente expressos em GiB) para unidades comerciais (GB). O algoritmo processa a entrada numérica e aplica fórmulas de normalização, como GiB × 1024² = MiB ou TB ÷ 1000³ = PB, garantindo precisão em ambientes heterogêneos. A interface permite configurar a base de cálculo (binária/decimal) e visualizar a equivalência em múltiplas unidades simultaneamente, evitando erros em projetos de infraestrutura crítica.",
+  "usage_steps": [
+    "Insira o valor numérico no campo 'Tamanho Original'",
+    "Selecione a unidade de origem (ex: MiB, GB, TiB) no primeiro dropdown",
+    "Escolha a unidade de destino (ex: KiB, PB, GiB) no segundo dropdown",
+    "Ative a opção 'Usar base binária' se necessário para compatibilidade com sistemas Linux",
+    "Clique no botão 'Converter' para executar o cálculo em tempo real",
+    "Verifique o resultado na seção 'Equivalências' que exibe todas as unidades compatíveis"
+  ],
+  "usage_examples": [
+    "Converter 1.5TiB de armazenamento em NVMe para GB para comparar com SSDs comerciais",
+    "Calcular o tamanho real de um arquivo de 700MiB em MB para upload em plataforma de backup em nuvem",
+    "Converter 4.375KiB de memória EEPROM em bytes para programação de microcontrolador",
+    "Transformar 2.5PB de dados de telemetria em TiB para configuração de cluster Hadoop"
+  ]
+}

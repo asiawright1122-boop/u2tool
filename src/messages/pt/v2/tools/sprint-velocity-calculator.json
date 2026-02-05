@@ -1,0 +1,40 @@
+{
+  "detailed_description": "O Calculador de Velocidade de Sprint monitora e calcula a velocidade da equipe ao longo dos sprints.",
+  "usage_steps": [
+    "Insira pontos de história por sprint",
+    "Adicione múltiplos sprints",
+    "Visualize a velocidade média",
+    "Veja a tendência de velocidade",
+    "Use para planejamento"
+  ],
+  "usage_examples": [
+    "Calcule a velocidade da equipe",
+    "Monitore tendências de velocidade",
+    "Preveja datas de lançamento"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processo",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Insira sua entrada aqui...",
+  "outputPlaceholder": "Resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum input"
+  },
+  "addSprint": "+ Adicionar Sprint",
+  "avgVelocity": "Velocidade Média",
+  "predictedNext": "Próximo Previsto",
+  "completionRate": "Taxa de Conclusão",
+  "trend": "Tendência",
+  "velocityChart": "Gráfico de Velocidade",
+  "committed": "Comprometido",
+  "completed": "Concluído",
+  "sprint": "Sprint",
+  "rate": "Taxa",
+  "median": "Mediana",
+  "min": "Mín",
+  "max": "Máx",
+  "range": "Intervalo",
+  "sprintDefault": "Sprint"
+}

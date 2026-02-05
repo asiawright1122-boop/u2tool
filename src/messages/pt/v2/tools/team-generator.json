@@ -1,0 +1,29 @@
+{
+  "enterNames": "Insira nomes (um por linha)",
+  "numberOfTeams": "Número de Equipes",
+  "teams": "Equipes",
+  "team": "Equipe",
+  "shuffle": "Baralhar Novamente",
+  "members": "membros",
+  "detailed_description": "O Team Generator é uma ferramenta algorítmica projetada para dividir grupos de pessoas em equipes balanceadas com base em critérios aleatórios e lógica de otimização. O núcleo do funcionamento utiliza o algoritmo de embaralhamento de Fisher-Yates para randomização dos nomes inseridos, combinado com uma heurística de distribuição proporcional que considera atributos como habilidades declaradas (opcionalmente informadas) e tamanho desejado das equipes. Essa abordagem garante que equipes maiores ou mais heterogêneas mantenham equilíbrio estatístico em relação a parâmetros pré-definidos. O usuário precisa deste recurso em cenários onde a imparcialidade é crítica, como torneios de e-sports, divisão de grupos em metodologias ágeis (Scrum), eventos corporativos de team building ou atividades educacionais colaborativas. A ferramenta processa os dados em memória utilizando JavaScript ES6+, sem armazenar informações permanentemente, e emprega técnicas de programação funcional para evitar side effects durante a manipulação dos arrays de participantes.",
+  "usage_steps": [
+    "1. Acesse a página do Team Generator no navegador e localize o campo de entrada de texto rotulado 'Participantes (um por linha)'",
+    "2. Insira os nomes dos participantes, separados por quebra de linha, ou cole uma lista pré-formatada de um arquivo CSV",
+    "3. Utilize o seletor numérico para definir a quantidade exata de equipes desejadas (mínimo 2, máximo igual ao número de participantes)",
+    "4. Ative a opção 'Distribuição Balanceada' se quiser considerar atributos adicionais como nível de habilidade (informado entre parênteses após cada nome)",
+    "5. Clique no botão 'Gerar Equipes' que dispara a função shuffleAndDistribute(), executando o algoritmo de embaralhamento e particionamento",
+    "6. Analise o resultado exibido em cards coloridos, onde cada equipe é apresentada com listagem de membros e estatísticas de balanceamento quando aplicável"
+  ],
+  "usage_examples": [
+    "Organização de um torneio de League of Legends com 20 jogadores distribuídos em 4 equipes equilibradas considerando o rank MMR declarado",
+    "Divisão de uma turma de 30 alunos em 6 grupos para um projeto de desenvolvimento de software, garantindo mistura de perfis técnicos",
+    "Formação de equipes para um hackathon corporativo com 48 participantes, mantendo proporção semelhante de desenvolvedores front-end/back-end",
+    "Sorteio aleatório de duplas em um campeonato de tênis de mesa com 16 funcionários, evitando combinações anteriores já testadas"
+  ],
+  "\\n": "\\n",
+  "enterMembers": "Insira Membros",
+  "membersPlaceholder": "Espaço para Membros",
+  "teamNames": "Nomes das Equipes",
+  "optional": "Opcional",
+  "teamNamesPlaceholder": "Espaço para Nomes das Equipes"
+}

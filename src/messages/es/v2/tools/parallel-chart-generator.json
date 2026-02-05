@@ -1,0 +1,65 @@
+{
+  "chartTitle": "Título del Gráfico",
+  "chartTitlePlaceholder": "Introduce el título del gráfico",
+  "colorTheme": "Tema de Color",
+  "showLegend": "Mostrar Leyenda",
+  "lineWidth": "Ancho de Línea",
+  "lineOpacity": "Opacidad de Línea",
+  "smoothLine": "Línea Suave",
+  "dimension": "Dimensión",
+  "dimensionName": "Nombre de la Dimensión",
+  "addDimension": "Añadir Dimensión",
+  "series": "Serie",
+  "seriesName": "Nombre de la Serie",
+  "addSeries": "Añadir Serie",
+  "loadSample": "Cargar Ejemplo",
+  "downloadPng": "Descargar PNG",
+  "downloadSvg": "Descargar SVG",
+  "confirmClear": "¿Estás seguro de que deseas borrar todos los datos?",
+  "defaultTitle": "Análisis Multidimensional",
+  "sampleTitle": "Comparación de Productos",
+  "dimensionEditor": "Editor de Dimensión",
+  "seriesEditor": "Editor de Serie",
+  "chartPreview": "Vista Previa del Gráfico",
+  "chartSettings": "Ajustes del Gráfico",
+  "themeDefault": "Predeterminado",
+  "themeOcean": "Océano",
+  "themeSunset": "Amanecer",
+  "themeForest": "Bosque",
+  "sampleDimensions": {
+    "dim1": "Precio",
+    "dim2": "Calidad",
+    "dim3": "Velocidad",
+    "dim4": "Soporte"
+  },
+  "sampleSeries": {
+    "series1": "Producto A",
+    "series2": "Producto B",
+    "series3": "Producto C"
+  },
+  "tips": {
+    "title": "Consejos",
+    "tip1": "Define las dimensiones",
+    "tip2": "Añade series de datos",
+    "tip3": "Ajusta el ancho y la opacidad de la línea",
+    "tip4": "Habilita líneas suaves",
+    "tip5": "Exporta como PNG o SVG"
+  },
+  "detailed_description": "El Generador de Gráficos Paralelos permite visualizar de forma eficiente datos multidimensionales mediante coordenadas paralelas, una técnica que representa cada dimensión en ejes verticales paralelos conectados por líneas que reflejan los valores de cada registro. Esta herramienta es esencial para identificar patrones, correlaciones o anomalías en conjuntos de datos complejos, como en análisis de rendimiento de productos, estudios estadísticos o comparativas de KPIs. Al cargar datos en formatos CSV/TSV, el sistema normaliza automáticamente las escalas de cada eje, permitiendo ajustes manuales mediante controles deslizantes para enfocar rangos específicos. Incorpora funcionalidades avanzadas como 'brushing' interactivo para filtrar subconjuntos de datos en tiempo real y codificación por colores basada en gradientes o categorías. La renderización se realiza mediante bibliotecas de gráficos vectoriales (SVG) para asegurar calidad en exportaciones, mientras que el soporte para arrastrar y reordenar ejes facilita explorar relaciones no lineales. Los resultados se pueden exportar como PNG para presentaciones o SVG para edición posterior en software de diseño.",
+  "usage_steps": [
+    "Importa tus datos en formato CSV/TSV mediante el botón 'Cargar Datos' en la interfaz principal.",
+    "Arrastra y suelta las columnas de tu dataset sobre los ejes paralelos para asignar variables a cada dimensión.",
+    "Ajusta las escalas de cada eje usando los controles deslizantes 'Min/Max' para enfocar rangos críticos.",
+    "Activa la función 'Brushing' y selecciona un área en un eje para filtrar dinámicamente las líneas visibles.",
+    "Personaliza el estilo aplicando gradientes de color según una métrica o categorías definidas en el panel de diseño.",
+    "Descarga el gráfico final como PNG o SVG utilizando los botones 'Exportar' en la barra superior."
+  ],
+  "usage_examples": [
+    "Comparar el rendimiento de diferentes modelos de automóviles basándose en variables como consumo de combustible, potencia y emisiones de CO2.",
+    "Analizar el comportamiento de indicadores financieros (liquidez, margen de beneficio, deuda) entre empresas de distintos sectores.",
+    "Visualizar datos ambientales multidimensionales (temperatura, humedad, índice UV, contaminación) en múltiples estaciones de monitoreo.",
+    "Evaluar el desempeño académico de universidades a través de criterios como tasa de graduación, empleabilidad de egresados, financiamiento y número de publicaciones."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

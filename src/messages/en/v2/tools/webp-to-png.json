@@ -1,0 +1,26 @@
+{
+  "detailed_description": "WebP to PNG Converter transforms WebP images into PNG format for broader compatibility. Process images entirely in your browser without uploading to servers.",
+  "usage_steps": [
+    "Upload your WebP image file",
+    "Preview the image",
+    "Click Convert to process",
+    "Download the PNG result",
+    "Use in any application"
+  ],
+  "usage_examples": [
+    "Convert WebP for older browsers",
+    "Export images for print",
+    "Share images on platforms without WebP support"
+  ],
+  "uploadWebp": "Upload WebP Image",
+  "dropHere": "Drop WebP file here or click to upload",
+  "convert": "Convert to PNG",
+  "download": "Download PNG",
+  "preview": "Preview",
+  "processing": "Processing...",
+  "dropzone": "Drop WebP file here or click to select",
+  "selectFile": "Select File",
+  "fileName": "File Name",
+  "quality": "Quality",
+  "removeImage": "Remove Image"
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Contador de Linhas é uma ferramenta de processamento de texto projetada para contar o número de linhas em um bloco de texto, oferecendo opções avançadas para melhorar a eficiência e a precisão dos resultados. Esta ferramenta é particularmente útil em cenários onde a manipulação e análise de dados textuais são frequentes, como na preparação de dados para análise de texto, na limpeza de arquivos de log ou na preparação de listas de itens em projetos de desenvolvimento de software. O Contador de Linhas permite aos usuários remover linhas duplicadas, excluir linhas vazias e ordenar as linhas em ordem alfabética, o que facilita a identificação de padrões e a redução de redundâncias. Tecnicamente, a ferramenta processa o texto de entrada, aplicando algoritmos de comparação e ordenação para produzir um resultado refinado e organizado. A interface é intuitiva, mas poderosa, permitindo que os usuários realizem tarefas complexas com apenas alguns cliques.",
+  "usage_steps": [
+    "Abra a página do Contador de Linhas no navegador.",
+    "Cole ou digite o texto que deseja analisar na caixa de texto principal.",
+    "Selecione a opção 'Remover Linhas Duplicadas' na seção de configurações para garantir que cada linha seja única.",
+    "Marque a caixa 'Remover Linhas Vazias' para excluir linhas em branco do resultado final.",
+    "Se necessário, escolha a opção 'Ordenar Linhas' para organizar o texto em ordem alfabética.",
+    "Clique no botão 'Contar Linhas' para processar o texto e ver o resultado no painel inferior."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor de software precisa preparar um arquivo de log para análise. Ele usa o Contador de Linhas para remover linhas duplicadas e vazias, garantindo que o arquivo seja mais gerenciável e fácil de analisar.",
+    "Uma equipe de marketing está compilando uma lista de clientes potenciais. Eles utilizam o Contador de Linhas para remover entradas duplicadas e organizar a lista em ordem alfabética, facilitando a revisão e o envio de campanhas de marketing.",
+    "Um escritor technical precisa preparar um documento técnico para publicação. Ele usa o Contador de Linhas para garantir que não haja linhas em branco desnecessárias e que todas as seções estejam em ordem lógica.",
+    "Um analista de dados precisa processar um grande conjunto de dados de texto. Ele utiliza o Contador de Linhas para limpar o conjunto de dados, removendo redundâncias e organizando as informações antes de realizar análises mais aprofundadas."
+  ]
+}

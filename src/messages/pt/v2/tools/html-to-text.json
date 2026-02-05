@@ -1,0 +1,32 @@
+{
+  "preserveLinks": "Preservar links como (URL)",
+  "preserveLineBreaks": "Preservar quebras de linha",
+  "preserveLists": "Preservar formatação de listas",
+  "loadSample": "Carregar Exemplo",
+  "htmlInput": "Entrada HTML",
+  "textOutput": "Saída de Texto",
+  "htmlPlaceholder": "Cole o código HTML aqui...",
+  "textPlaceholder": "O texto puro aparecerá aqui...",
+  "copy": "Copiar",
+  "convert": "Converter",
+  "features": "Recursos",
+  "feature1": "Remove todos os tags HTML",
+  "feature2": "Decodifica entidades HTML",
+  "feature3": "Preserva estrutura do texto",
+  "feature4": "Trata elementos aninhados",
+  "detailed_description": "O HTML to Text é uma ferramenta poderosa destinada a desenvolvedores e profissionais de tecnologia que precisam converter conteúdo HTML em texto simples, eliminando todas as tags HTML. Esta ferramenta é essencial em diversos cenários, como a extração de texto de arquivos HTML para processamento posterior, a criação de resumos ou a geração de conteúdo para mecanismos de busca. O processo de conversão é baseado em uma análise sintática do código HTML, onde o parser identifica e remove todas as tags, preservando apenas o texto visível. Além disso, a ferramenta oferece opções para configurar o tratamento de entidades HTML, garantindo que caracteres especiais sejam convertidos corretamente. O HTML to Text é extremamente útil para automatizar tarefas de limpeza de dados, facilitando a manipulação de texto em ambientes de desenvolvimento e produção.",
+  "usage_steps": [
+    "Acesse a ferramenta HTML to Text no site da plataforma de desenvolvimento.",
+    "Clique no botão 'Carregar Arquivo' para selecionar o arquivo HTML que deseja converter.",
+    "Alternativamente, cole o código HTML diretamente no campo de texto disponível na interface.",
+    "Selecione a opção 'Converter Entidades HTML' se quiser que caracteres especiais sejam convertidos para sua representação textual.",
+    "Clique no botão 'Converter' para iniciar o processo de conversão.",
+    "Após a conversão, o texto simples será exibido no campo de saída. Você pode copiar o texto ou baixá-lo como um arquivo de texto."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor de SEO precisa extrair o conteúdo textual de páginas HTML para analisar a densidade de palavras-chave. O HTML to Text permite que ele obtenha rapidamente o texto limpo, sem as tags HTML que podem distorcer a análise.",
+    "Um analista de dados está trabalhando em um projeto que envolve a limpeza de dados extraídos de sites. O HTML to Text é usado para remover todas as tags HTML, deixando apenas o texto puro, facilitando a análise e a manipulação dos dados.",
+    "Um redator de conteúdo precisa criar resumos de artigos web. O HTML to Text ajuda a extrair o texto principal dos artigos, permitindo que o redator foque na criação de resumos precisos e concisos.",
+    "Um engenheiro de software está desenvolvendo uma aplicação que envia notificações por e-mail. Ele precisa garantir que o conteúdo das notificações seja exibido corretamente em clientes de e-mail que não suportam HTML. O HTML to Text é usado para converter o conteúdo HTML em texto simples, garantindo a compatibilidade."
+  ]
+}

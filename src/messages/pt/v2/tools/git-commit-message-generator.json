@@ -1,0 +1,54 @@
+{
+  "detailed_description": "O Gerador de Mensagens de Commit do Git cria mensagens de commit bem formatadas seguindo a especificação Conventional Commits.",
+  "usage_steps": [
+    "Selecione o tipo de commit",
+    "Entre com o escopo",
+    "Escreva a descrição",
+    "Adicione o corpo/rodapé",
+    "Copie a mensagem formatada"
+  ],
+  "usage_examples": [
+    "Crie commits consistentes",
+    "Gerar formato amigável para o registro de mudanças",
+    "Seguir a versão semântica"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processo",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Insira sua entrada aqui...",
+  "outputPlaceholder": "Os resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum input"
+  },
+  "commitType": "Tipo de Commit",
+  "scope": "Escopo (opcional)",
+  "scopePlaceholder": "ex., api, ui, auth",
+  "subject": "Assunto",
+  "subjectPlaceholder": "Descrição breve da mudança",
+  "subjectHint": "Use modo imperativo: \"adicionar recurso\" não \"adicionou recurso\"",
+  "body": "Corpo (opcional)",
+  "bodyPlaceholder": "Descrição detalhada da mudança...",
+  "breakingChange": "Mudança Importante",
+  "breakingDescription": "Descrição da Mudança Importante",
+  "breakingPlaceholder": "Descreva o que quebra e como migrar...",
+  "relatedIssues": "Issues Relacionadas (opcional)",
+  "issuesPlaceholder": "#123, #456 ou URLs de issues",
+  "generatedMessage": "Mensagem de Commit Gerada",
+  "emptyMessage": "Digite um assunto para gerar a mensagem",
+  "formatTitle": "Formato Conventional Commits",
+  "types": {
+    "feat": "Um novo recurso",
+    "fix": "Correção de bug",
+    "docs": "Apenas mudanças na documentação",
+    "style": "Mudanças de estilo de código (formatação, etc)",
+    "refactor": "Refatoração de código",
+    "perf": "Melhorias de desempenho",
+    "test": "Adicionar ou atualizar testes",
+    "build": "Sistema de build ou dependências",
+    "ci": "Configuração CI/CD",
+    "chore": "Outras mudanças",
+    "revert": "Reverter um commit anterior"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "password": "パスワード",
+  "placeholder": "パスワードを入力して確認してください...",
+  "show": "表示",
+  "hide": "非表示",
+  "strength": "強さ",
+  "score": "スコア",
+  "length": "長さ",
+  "chars": "文字",
+  "charTypes": "文字の種類",
+  "weak": "弱い",
+  "fair": "公平",
+  "good": "良い",
+  "strong": "強い",
+  "suggestions": "提案",
+  "suggest": {
+    "length": "少なくとも 8 文字を使用してください",
+    "lowercase": "小文字 (a ～ z) を追加します",
+    "uppercase": "大文字 (A ～ Z) を追加します",
+    "numbers": "数字を加算します (0 ～ 9)",
+    "symbols": "特殊記号 (!@#$...) を追加します。",
+    "common": "一般的なパスワードを避ける",
+    "repeated": "文字の繰り返しを避ける",
+    "sequential": "連続文字を避ける"
+  }
+}

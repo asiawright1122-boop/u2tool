@@ -1,0 +1,40 @@
+{
+  "detailed_description": "Калькулятор плотности пикселей вычисляет количество пикселей на дюйм (PPI) и другие параметры экрана на основе разрешения экрана и диагонального размера. Вы можете понять качество вашего экрана, вычислив размер пикселя, соотношение сторон и общее количество мегапикселей. Включает предустановки для распространенных разрешений от HD до 8K и популярных устройств.",
+  "usage_steps": [
+    "Введите ширину экрана в пикселях",
+    "Введите высоту экрана в пикселях",
+    "Введите диагональ экрана в дюймах",
+    "Или выберите общее предустановленное разрешение",
+    "Просмотрите PPI, размер пиксельной сетки и другие метрики",
+    "Скопируйте результаты для использования в качестве ссылки"
+  ],
+  "usage_examples": [
+    "Сравнение качества экранов между мониторами",
+    "Оценка четкости экрана смартфона",
+    "Выбор правильного экрана для работы дизайнера"
+  ],
+  "width": "Width",
+  "height": "Height",
+  "diagonal": "Diagonal",
+  "inches": "inches",
+  "commonResolutions": "Common Resolutions",
+  "results": "Results",
+  "pixelsPerInch": "Pixels Per Inch",
+  "pixelPitch": "Pixel Pitch",
+  "aspectRatio": "Aspect Ratio",
+  "megapixels": "Megapixels",
+  "physicalWidth": "Physical Width",
+  "physicalHeight": "Physical Height",
+  "totalPixels": "Total Pixels",
+  "ppiReference": "PPI Reference",
+  "quality": {
+    "excellent": "Excellent - Retina quality",
+    "good": "Good - Sharp display",
+    "average": "Average - Standard quality",
+    "low": "Low - Visible pixels"
+  },
+  "screenWidth": "Ширина экрана (px)",
+  "screenHeight": "Высота экрана (px)",
+  "diagonalSize": "Диагональ (дюймы)",
+  "ppi": "Пикселей на дюйм"
+}

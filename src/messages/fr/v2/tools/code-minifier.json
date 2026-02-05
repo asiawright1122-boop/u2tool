@@ -1,0 +1,28 @@
+{
+  "codeType": "Type de Code",
+  "placeholder": "Entrez le code {type} à minifier...",
+  "original": "Original",
+  "minified": "Minifié",
+  "saved": "Sauvegardé",
+  "detailed_description": "Le Code Minifier est un outil en ligne dédié à la minimisation du code source des fichiers HTML, CSS et JavaScript. Cette opération consiste à supprimer tous les espaces, les commentaires, et les sauts de ligne inutiles, tout en conservant la fonctionnalité du code intacte. Grâce à cette réduction de taille, le chargement des pages web est accéléré, améliorant ainsi la performance globale des applications et des sites web. Les développeurs utilisent le Code Minifier principalement pour optimiser les ressources avant leur déploiement en production, réduisant ainsi le temps de chargement et l'utilisation de la bande passante. De plus, la minimisation du code rend plus difficile son analyse par les concurrents, offrant un avantage en termes de protection de la propriété intellectuelle. L'outil fonctionne en analysant le code source fourni, en identifiant les éléments superflus, puis en les éliminant tout en préservant la structure et la sémantique du code. Le processus de minimisation est effectué par des algorithmes spécifiques pour chaque type de fichier (HTML, CSS, JavaScript), garantissant un résultat optimal et sans erreurs.",
+  "usage_steps": [
+    "Accédez à la page de l'outil Code Minifier sur le site.",
+    "Sélectionnez le type de fichier que vous souhaitez minimiser (HTML, CSS, ou JavaScript) à l'aide du menu déroulant.",
+    "Copiez le code source de votre fichier dans la zone de texte prévue à cet effet.",
+    "Cliquez sur le bouton 'Minifier le code' pour lancer le processus de minimisation.",
+    "Une fois le processus terminé, l'outil affichera le code minimisé dans une nouvelle zone de texte.",
+    "Copiez le code minimisé et intégrez-le dans votre projet ou téléchargez-le directement en utilisant l'option de téléchargement."
+  ],
+  "usage_examples": [
+    "Un développeur frontend souhaite optimiser le chargement d'une page web pour une meilleure expérience utilisateur. Il utilise le Code Minifier pour réduire la taille des fichiers HTML, CSS et JavaScript, ce qui améliore significativement la vitesse de chargement de la page.",
+    "Une équipe de développement travaille sur une application mobile qui utilise des ressources web. Pour réduire la bande passante nécessaire, ils minimisent les fichiers CSS et JavaScript avec l'outil Code Minifier avant le déploiement sur les appareils mobiles.",
+    "Un développeur indépendant crée un thème WordPress et veut protéger son code source. Il utilise le Code Minifier pour obsfucquer le code, rendant sa lecture et sa copie plus difficiles pour les utilisateurs non autorisés.",
+    "Une agence de web design prépare le lancement d'un site e-commerce. Pour garantir des performances optimales, ils utilisent le Code Minifier pour minimiser tous les fichiers statics, réduisant ainsi le temps de chargement des pages et améliorant l'expérience utilisateur."
+  ],
+  "input": "Entrée",
+  "minify": "Minifier",
+  "clear": "Effacer",
+  "output": "Sortie",
+  "copied": "Copié !",
+  "copy": "Copier"
+}

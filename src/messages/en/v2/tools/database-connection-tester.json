@@ -1,0 +1,36 @@
+{
+  "detailed_description": "Database Connection Tester parses and validates database connection strings for various databases.",
+  "usage_steps": [
+    "Paste connection string",
+    "Select database type",
+    "Click Parse",
+    "View parsed details",
+    "Validate format"
+  ],
+  "usage_examples": [
+    "Validate before deployment",
+    "Parse MongoDB URIs",
+    "Debug connection issues"
+  ],
+  "input": "Input",
+  "output": "Output",
+  "process": "Process",
+  "copy": "Copy",
+  "clear": "Clear",
+  "inputPlaceholder": "Enter your input here...",
+  "outputPlaceholder": "Results will appear here...",
+  "errors": {
+    "emptyInput": "Please enter some input"
+  },
+  "useSSL": "Use SSL/TLS",
+  "codeSnippet": "Code Snippet",
+  "note": "Note",
+  "noteText": "This tool generates connection strings locally. No data is sent to any server. Always use environment variables for sensitive credentials in production.",
+  "databaseType": "Database Type",
+  "host": "Host",
+  "port": "Port",
+  "database": "Database",
+  "username": "Username",
+  "password": "Password",
+  "connectionString": "Connection String"
+}

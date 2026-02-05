@@ -1,0 +1,32 @@
+{
+  "separator": "Separador",
+  "sepNewline": "Nueva línea",
+  "sepDash": "Guion",
+  "sepSpace": "Espacio",
+  "showOriginal": "Mostrar carácter original",
+  "loadSample": "Cargar ejemplo",
+  "textInput": "Entrada de texto",
+  "textPlaceholder": "Introduce el texto que deseas convertir...",
+  "natoOutput": "Salida NATO",
+  "natoPlaceholder": "El alfabeto fonético aparecerá aquí...",
+  "copy": "Copiar",
+  "convert": "Convertir",
+  "alphabet": "Alfabeto",
+  "unknown": "Desconocido",
+  "sampleText": "Hola Mundo 123",
+  "detailed_description": "La herramienta 'Text to NATO' realiza una conversión sistemática de caracteres alfanuméricos en su equivalente según el alfabeto fonético de la OTAN (NATO Phonetic Alphabet), estándarizado por la Organización de Aviación Civil Internacional (ICAO). Técnicamente, el proceso implica mapear cada carácter de entrada (letras mayúsculas, minúsculas y dígitos) a su código fonético asociado mediante una tabla de correspondencias basada en Unicode, preservando la capitalización original y normalizando caracteres acentuados (por ejemplo, 'ñ' se convierte en 'November' al ser transliterada a 'n'). Esta herramienta es esencial en entornos donde la claridad auditiva es crítica, como comunicaciones aéreas, operaciones militares o radioafición, donde la ambigüedad en la pronunciación de letras (como 'B' y 'D') puede generar errores. El algoritmo procesa el texto en dos fases: primero identifica y clasifica cada carácter (alfabético, numérico o espacio), y luego aplica reglas de sustitución que incluyen prefijos numéricos (como 'Zero' para '0') y separadores lógicos para mantener la estructura del mensaje original. Su implementación en JavaScript permite operar sin conexión, garantizando privacidad y compatibilidad con estándares web modernos.",
+  "usage_steps": [
+    "Accede a la herramienta a través de la categoría 'Texto' en el sitio web.",
+    "Escribe o pega el texto en el área de entrada con soporte para Unicode (incluye acentos y caracteres especiales).",
+    "Activa la opción 'Mantener mayúsculas/minúsculas' si deseas preservar la capitalización en la salida.",
+    "Selecciona el modo de tratamiento de números: 'Incluir códigos numéricos' o 'Omitir dígitos'.",
+    "Haz clic en 'Convertir a NATO' para iniciar el procesamiento basado en la tabla ICAO.",
+    "Copia el resultado formateado usando el botón 'Copiar al portapapeles', que incluye separadores entre palabras."
+  ],
+  "usage_examples": [
+    "Un controlador de tráfico aéreo confirma un código de vuelo 'BAW123' como 'Bravo Alpha Whiskey One Two Three' para evitar errores en una comunicación con interferencias.",
+    "Un ingeniero de telecomunicaciones transmite una contraseña 'SecreT42!' como 'Sierra Echo Charlie Romeo Tango Four Two' en un canal con ruido ambiental.",
+    "Un equipo de rescate recibe las coordenadas GPS 'N40°44.9' como 'November Four Zero Dash Four Four Decimal Nine' durante una operación nocturna.",
+    "Un radioaficionado comunica su indicativo 'LU1ABC' como 'Lima Uniform One Alpha Bravo Charlie' en una conexión de baja calidad en la banda HF."
+  ]
+}

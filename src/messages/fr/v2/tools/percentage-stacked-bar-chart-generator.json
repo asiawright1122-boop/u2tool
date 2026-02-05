@@ -1,0 +1,61 @@
+{
+  "chartTitle": "Titre du Graphique",
+  "chartTitlePlaceholder": "Entrez le titre du graphique",
+  "colorTheme": "Thème de Couleur",
+  "showLegend": "Afficher la Légende",
+  "horizontal": "Horizontal",
+  "category": "Catégorie",
+  "series": "Série",
+  "series1": "Série A",
+  "series2": "Série B",
+  "series3": "Série C",
+  "item": "Article",
+  "addRow": "Ajouter une Ligne",
+  "addSeries": "Ajouter une Série",
+  "seriesNames": "Noms des Séries",
+  "loadSample": "Charger un Échantillon",
+  "downloadPng": "Télécharger en PNG",
+  "downloadSvg": "Télécharger en SVG",
+  "defaultTitle": "Distribution Trimestrielle",
+  "sampleTitle": "Usage des Appareils par Année",
+  "dataEditor": "Éditeur de Données",
+  "chartPreview": "Aperçu du Graphique",
+  "chartSettings": "Paramètres du Graphique",
+  "themeDefault": "Par défaut",
+  "themeOcean": "Océan",
+  "themeSunset": "Coucher de Soleil",
+  "themeForest": "Forêt",
+  "percentageNote": "Les valeurs représentent des pourcentages et doivent sommer à 100% par catégorie",
+  "sampleData": {
+    "Q1": "T1",
+    "Q2": "T2",
+    "Q3": "T3",
+    "Q4": "T4",
+    "mobile": "Mobile",
+    "tablet": "Tablette",
+    "desktop": "Ordinateur de Bureau"
+  },
+  "tips": {
+    "title": "Conseils",
+    "tip1": "Chaque ligne doit sommer à 100% pour une représentation précise",
+    "tip2": "Ajoutez ou supprimez des séries pour comparer différentes catégories",
+    "tip3": "Basculer en mode horizontal pour des barres empilées horizontales"
+  },
+  "detailed_description": "Le générateur de graphiques à barres empilées en pourcentage permet de visualiser la composition proportionnelle des données catégorielles en normalisant chaque groupe à 100%. Techniquement, l'outil utilise des bibliothèques de rendu SVG pour créer des barres segmentées dont chaque section correspond à un ratio relatif. Les données d'entrée, structurées en format CSV ou JSON, sont interprétées pour calculer les proportions via une fonction de normalisation (chaque valeur est divisée par la somme totale du groupe). L'axe X représente les catégories, tandis que l'axe Y affiche les pourcentages. Les utilisateurs peuvent personnaliser les échelles de couleur via des palettes HEX ou RGB, ajuster les étiquettes dynamiques, et intégrer des infobulles (tooltips) pour une analyse interactive. Ce type de graphique est essentiel pour comparer des distributions de marché, analyser des résultats d'enquêtes ou illustrer des répartitions budgétaires, où l'accent est mis sur les relations entre parties plutôt que sur des valeurs absolues.",
+  "usage_steps": [
+    "Accédez à l'outil et cliquez sur 'Importer des données' pour charger un fichier CSV/TSV ou coller manuellement vos données dans l'éditeur.",
+    "Sélectionnez la colonne représentant les catégories (axe X) et les valeurs numériques à empiler via le menu déroulant 'Configuration des axes'.",
+    "Activez l'option 'Normalisation 100%' pour convertir les valeurs en pourcentages et choisissez la direction de l'empilement (vertical ou horizontal).",
+    "Personnalisez les couleurs des segments en utilisant le sélecteur de palette ou insérez des codes HEX personnalisés dans la section 'Style des données'.",
+    "Ajoutez des annotations dynamiques en cochant 'Afficher les étiquettes' et ajustez le format d'affichage (ex: 2 chiffres après la virgule).",
+    "Prévisualisez le graphique, téléchargez-le au format SVG ou PNG, ou générez un code intégrable HTML/JavaScript pour un site web."
+  ],
+  "usage_examples": [
+    "Un analyste marketing compare les parts de marché de trois marques dans cinq régions en représentant chaque région comme une barre divisée par marque.",
+    "Un chercheur en sociologie visualise la répartition des réponses à un sondage (très satisfait, satisfait, insatisfait) par tranche d'âge.",
+    "Un directeur financier illustre la répartition des dépenses (RH, R&D, marketing) sur quatre trimestres avec des pourcentages cumulés.",
+    "Un administrateur réseau analyse la distribution du trafic web (mobile, bureau, tablette) sur 12 mois via un graphique à barres horizontales."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

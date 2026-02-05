@@ -1,0 +1,30 @@
+{
+  "dropzone": "Suelta el archivo de video aquí o haz clic para subir",
+  "maxSize": "Tamaño máximo de archivo: 10MB",
+  "errorNotVideo": "Por favor selecciona un archivo de video",
+  "errorTooLarge": "El archivo es demasiado grande. El tamaño máximo es de 10MB.",
+  "errorReading": "Error al leer el archivo",
+  "processing": "Procesando video...",
+  "originalSize": "Tamaño original",
+  "includeDataUri": "Incluir prefijo URI de datos",
+  "base64Output": "Salida Base64",
+  "copy": "Copiar",
+  "outputPlaceholder": "La salida Base64 aparecerá aquí...",
+  "warning": "Advertencia",
+  "warningText": "Los archivos de video pueden ser muy grandes. La codificación Base64 aumenta el tamaño en aproximadamente un 33%. Considera usar archivos de video más pequeños.",
+  "detailed_description": "El convertidor de video a Base64 transforma archivos de video en una cadena de texto codificada en Base64, permitiendo su integración en entornos que solo aceptan datos de texto. Esta herramienta es fundamental para desarrolladores que necesitan incrustar videos directamente en documentos HTML5, CSS o JSON sin depender de archivos externos. El proceso implica leer el archivo binario del video, segmentarlo en fragmentos manejables mediante chunked processing, y aplicar codificación MIME (como video/mp4 o video/webm) para garantizar compatibilidad en navegadores. Los datos resultantes se estructuran en un Data URL (por ejemplo, data:video/mp4;base64,XXXX), optimizado para transferencias HTTP/2. A diferencia de otras herramientas, este conversor permite ajustar el tamaño de los fragmentos para equilibrar rendimiento y memoria RAM utilizada, crucial al manejar videos de alta resolución. Además, incluye una opción de previsualización del tamaño final en Base64, evitando sobrecargas en sistemas sensibles a límites de datos.",
+  "usage_steps": [
+    "1. Haz clic en 'Seleccionar archivo' y elige tu video (formatos admitidos: MP4, WebM, AVI).",
+    "2. En el menú desplegable, especifica el tipo MIME correspondiente (ej. video/mp4).",
+    "3. Ajusta el tamaño de fragmento (chunk size) entre 1MB y 10MB usando el control deslizante.",
+    "4. Activa la opción 'Codificar encabezado' si necesitas incluir metadatos como duración o resolución.",
+    "5. Presiona 'Iniciar codificación' y espera la barra de progreso del 0% al 100%.",
+    "6. Copia el resultado en Base64 desde el campo de texto o descárgalo como archivo .txt."
+  ],
+  "usage_examples": [
+    "Incrustar un video corto en una página HTML5 sin servir archivos adicionales: <video src=\"data:video/mp4;base64,...\">.",
+    "Generar payloads para pruebas de API que requieran adjuntar videos en formato JSON.",
+    "Codificar fragmentos de video para almacenamiento en cookies o localStorage con límites de tamaño.",
+    "Preparar archivos para sistemas heredados que solo acepten transmisión de datos en texto plano."
+  ]
+}

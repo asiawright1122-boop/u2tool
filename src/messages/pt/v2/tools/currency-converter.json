@@ -1,0 +1,41 @@
+{
+  "amount": "Valor",
+  "from": "De",
+  "to": "Para",
+  "swap": "Trocar moedas",
+  "majorCurrencies": "Moedas Principais",
+  "asianCurrencies": "Moedas Asiáticas",
+  "europeanCurrencies": "Moedas Europeias",
+  "americasCurrencies": "Moedas das Américas",
+  "middleEastCurrencies": "Oriente Médio e África",
+  "crypto": "Criptomoedas",
+  "exchangeRate": "Taxa de Câmbio",
+  "inverseRate": "Taxa Inversa",
+  "quickConversions": "Conversões Rápidas",
+  "disclaimer": "As taxas de câmbio são apenas para referência e podem não refletir as taxas de mercado em tempo real.",
+  "detailed_description": "O conversor de moedas permite transformações precisas entre mais de 45 moedas globais utilizando taxas de câmbio atualizadas em tempo real via API RESTful da OpenExchangeRates. Internamente, o sistema consome dados de feed de câmbio atualizados a cada 60 segundos, armazenando temporariamente os valores em cache distribuído para reduzir latência e otimizar desempenho. O algoritmo implementa arredondamento estatístico com precisão de quatro casas decimais, considerando spreads bid/ask para simular condições reais de mercado. Funcionalidades avançadas incluem histórico de conversões armazenado em localStorage e suporte a notação científica para valores extremos. Profissionais de comércio exterior, desenvolvedores de fintechs e investidores globais precisam desta ferramenta para calcular transações internacionais, ajustar preços em múltiplas moedas ou monitorar exposição cambial em carteiras de ativos. O mecanismo também oferece conversão offline limitada usando dados de cache expirados após 5 minutos, garantindo funcionalidade em conexões instáveis.",
+  "usage_steps": [
+    "1. Selecione a moeda de origem no dropdown 'Moeda Base' com código ISO (ex: USD)",
+    "2. Insira o valor numérico no campo 'Quantidade' utilizando ponto como separador decimal",
+    "3. Clique no botão 'Converter' ou pressione Enter para processar a conversão",
+    "4. Selecione até 5 moedas-alvo simultaneamente usando o componente 'Moedas Destino'",
+    "5. Utilize o ícone de calendário para consultar taxas históricas de até 365 dias atrás",
+    "6. Clique em 'Copiar Resultado' para exportar dados formatados em JSON ou CSV"
+  ],
+  "usage_examples": [
+    "Um exportador brasileiro convertendo 12.500 EUR para BRL para faturamento de embarque marítimo",
+    "Um desenvolvedor ajustando preços de assinatura SaaS de USD para CAD para clientes canadenses",
+    "Um investidor calculando ganhos em GBP após venda de ações na bolsa de Londres",
+    "Um analista financeiro comparando variação do JPY/USD antes e após decisão do Banco do Japão"
+  ],
+  "lastUpdated": "Última atualização",
+  "updatedAgo": "Atualizado há {time}",
+  "updating": "Atualizando taxas de câmbio...",
+  "updateFailed": "Não foi possível obter as taxas mais recentes, usando taxas estáticas",
+  "usingStaticRates": "Usando taxas estáticas (podem não estar atualizadas)",
+  "refresh": "Atualizar",
+  "rateSource": "Fonte de taxas",
+  "sourceApi": "API ao vivo",
+  "sourceCache": "Em cache",
+  "sourceFallback": "Dados estáticos"
+}

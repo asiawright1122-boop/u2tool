@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The CSS Animation Generator is a precision tool for crafting complex CSS animations through a visual interface that maps directly to keyframe syntax. Unlike basic animation tools, it provides granular control over timing functions, transform matrices, and animation composition. Users manipulate Bézier curves in a dedicated easing editor to create custom cubic-bezier timing functions, while a timeline grid enables precise placement of keyframes at specific percentages. The tool generates corresponding @keyframes rules with optimized vendor prefixes, supporting advanced properties like animation-fill-mode and animation-direction. Developers benefit from real-time rendering of animations applied to a live HTML element tree, allowing immediate validation of complex multi-layered effects. This tool addresses the need for debugging animation performance issues by displaying composite animation durations and providing FLIP optimization suggestions. Technical teams use it to standardize animation patterns across projects, exporting SCSS mixins or CSS variables for theme consistency.",
+  "usage_steps": [
+    "Open the visual editor and select element type (block/inline/positioned) from the target dropdown",
+    "Define animation duration and iteration count using the time control panel",
+    "Click the timeline grid to create keyframes at specific percentage markers",
+    "Adjust transform properties (translate/rotate/scale) in the matrix editor for each keyframe",
+    "Select custom easing functions from the Bézier curve editor or choose from predefined steps() patterns",
+    "Preview animation in the responsive viewer and export optimized CSS with source maps"
+  ],
+  "usage_examples": [
+    "Creating a modal transition animation with staggered keyframes for entrance and exit states",
+    "Designing a loading spinner with synchronized rotation and pulse effects using multiple animation layers",
+    "Implementing a parallax scrolling effect with percentage-based keyframe positioning",
+    "Generating cross-browser compatible animations with automatic vendor prefix injection for legacy projects"
+  ]
+}

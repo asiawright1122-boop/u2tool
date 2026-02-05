@@ -1,0 +1,56 @@
+{
+  "chartTitle": "Chart-Titel",
+  "chartTitlePlaceholder": "Geben Sie den Chart-Titel ein",
+  "colorTheme": "Farbthema",
+  "gaugeType": "Gauge-Typ",
+  "typeDefault": "Standard",
+  "typeStage": "Stufe",
+  "typeGrade": "Note",
+  "currentValue": "Aktuell Wert",
+  "minValue": "Mindestwert",
+  "maxValue": "Maximalwert",
+  "unit": "Einheit",
+  "showPointer": "Zeige Zeiger",
+  "showProgress": "Zeige Fortschritt",
+  "quickPresets": "Schnellvorlagen",
+  "loadSample": "Muster laden",
+  "downloadPng": "PNG herunterladen",
+  "downloadSvg": "SVG herunterladen",
+  "confirmClear": "Sind Sie sicher, dass Sie alle Daten löschen möchten?",
+  "defaultTitle": "Fertigkeitsgrad",
+  "sampleTitle": "Leistung Gauge",
+  "chartPreview": "Chart-Vorschau",
+  "chartSettings": "Chart-Einstellungen",
+  "themeDefault": "Standard",
+  "themeOcean": "Ozean",
+  "themeSunset": "Sonnenuntergang",
+  "themeForest": "Wald",
+  "sampleData": {
+    "value": 75
+  },
+  "tips": {
+    "title": "Tipps",
+    "tip1": "Setzen Sie den aktuellen Wert",
+    "tip2": "Definieren Sie Mindest- und Maximalwerte",
+    "tip3": "Wählen Sie den Gauge-Typ",
+    "tip4": "Fügen Sie eine Einheitenschilderung hinzu",
+    "tip5": "Als PNG oder SVG exportieren"
+  },
+  "detailed_description": "Der Gauge Chart Generator ist eine Online-Anwendung, die es Entwicklern und Datenanalysten ermöglicht, interaktive Gauge-Diagramme zu erstellen. Diese Diagramme, auch bekannt als Drehkreuzdiagramme oder Radialdiagramme, sind ideal zur Visualisierung von Messwerten, Fortschrittsangaben und Schlüsselindikatoren (KPIs). Die Anwendung unterstützt die Erstellung von PNG- und SVG-Dateien, die in Websites, Berichten oder Präsentationen integriert werden können. Users können die Skalierung, Farben, Label und andere visuelle Elemente anpassen, um die Daten präzise und ansprechend darzustellen. Die interaktive Oberfläche ermöglicht es, schnell und einfach verschiedene Einstellungen zu testen, ohne Code zu schreiben. Dies macht den Gauge Chart Generator zu einem wertvollen Werkzeug für Dashboard-Entwickler, die effizient und visuell ansprechende Fortschrittsanzeigen erstellen müssen.",
+  "usage_steps": [
+    "Öffnen Sie die Seite des Gauge Chart Generator in Ihrem Webbrowser.",
+    "Wählen Sie im Menü auf der linken Seite die Option 'Werte' aus, um die Messdaten einzugeben, die Sie visualisieren möchten.",
+    "Navigieren Sie zur Registerkarte 'Design', um die Farben, Schriftarten und Skalierung des Diagramms zu personalisieren.",
+    "Unter 'Optionen' können Sie zusätzliche Einstellungen vornehmen, wie z.B. die Anzeige von Werten, Labels und den Anfangs- und Endwerten der Skala.",
+    "Klicken Sie auf 'Vorschau', um das Diagramm in der rechten Ansicht anzuzeigen und visuelle Anpassungen vorzunehmen.",
+    "Sobald Sie zufrieden sind, verwenden Sie die Schaltflächen 'PNG exportieren' oder 'SVG exportieren', um das Diagramm in der gewünschten Dateiformat herunterzuladen."
+  ],
+  "usage_examples": [
+    "Ein Data Scientist erstellt ein Gauge Diagramm, um den Fortschritt einer Maschinelles-Lernen-Modell bei der Vorhersage von Kundenchurn zu visualisieren. Das Diagramm wird in einer interaktiven Dashboard-Anwendung verwendet, um Stakeholdern den aktuellen Modellstatus zu präsentieren.",
+    "Ein Projektmanager nutzt den Gauge Chart Generator, um den Projektfortschritt in Prozent anzuzeigen. Das Diagramm wird regelmäßig in Meeting-Präsentationen und Berichten integriert, um den Teammitgliedern und Auftraggebern den aktuellen Projektstatus zu demonstrieren.",
+    "Ein Systemadministrator erstellt ein Gauge Diagramm, um den Speicherplatzverbrauch auf einem Server zu überwachen. Das Diagramm wird in ein internes Monitoring-Dashboard eingebunden, um schnell und visuell zu erkennen, ob der Speicherplatz knapp wird.",
+    "Ein Marketing-Experte verwendet den Generator, um die KPIs einer digitalen Marketing-Kampagne zu visualisieren. Das Gauge Diagramm zeigt den aktuellen Click-Through-Rate (CTR) im Vergleich zum Zielwert. Die Bilder werden in Berichten und Präsentationen verwendet, um die Kampagnenleistung zu veranschaulichen."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

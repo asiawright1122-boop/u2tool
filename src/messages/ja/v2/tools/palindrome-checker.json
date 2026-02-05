@@ -1,0 +1,26 @@
+{
+  "detailed_description": "回文チェッカーは、テキストが前後同じかどうかをテストします。スペース、句読点、大文字小文字を無視して、フレーズや文に隠れた回文を見つけることができます。",
+  "usage_steps": [
+    "単語またはフレーズを入力",
+    "比較オプションを選択",
+    "回文かどうかを確認",
+    "有名な回文の例を試す",
+    "自分の回文を作成"
+  ],
+  "usage_examples": [
+    "単語の回文をテスト",
+    "フレーズの回文を見つける",
+    "教育的な単語ゲーム"
+  ],
+  "inputLabel": "テキストを入力",
+  "inputPlaceholder": "単語またはフレーズを入力...",
+  "ignoreCase": "大文字小文字を無視",
+  "ignoreSpaces": "スペースを無視",
+  "ignorePunctuation": "句読点を無視",
+  "isPalindrome": "回文です！",
+  "notPalindrome": "回文ではありません",
+  "processedText": "処理されたテキスト",
+  "forward": "順方向",
+  "backward": "逆方向",
+  "examples": "これらの例を試してください"
+}

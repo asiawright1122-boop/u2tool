@@ -1,0 +1,34 @@
+{
+  "categories": {
+    "longueur": "Longueur",
+    "poids": "Poids",
+    "volume": "Volume",
+    "température": "Température",
+    "superficie": "Superficie",
+    "vitesse": "Vitesse",
+    "length": "Longueur",
+    "weight": "Poids",
+    "temperature": "Température",
+    "area": "Surface",
+    "speed": "Vitesse"
+  },
+  "from": "De",
+  "to": "Vers",
+  "swap": "Échanger les unités",
+  "metric": "Métrique",
+  "imperial": "Impérial",
+  "quickReference": "Référence rapide",
+  "detailed_description": "Le Convertisseur de mesures métriques et impériales est un outil complet de conversion d'unités qui prend en charge les conversions de longueur, de poids, de volume, de température, de superficie et de vitesse. Convertissez facilement entre les unités métriques (mètres, kilogrammes, litres) et les unités impériales (pieds, livres, gallons) avec des résultats instantanés.",
+  "usage_steps": [
+    "Sélectionnez une catégorie de conversion (longueur, poids, volume, etc.)",
+    "Saisissez la valeur que vous souhaitez convertir",
+    "Choisissez l'unité de départ dans le menu déroulant",
+    "Sélectionnez l'unité de destination pour la conversion",
+    "Affichez le résultat de la conversion instantanément"
+  ],
+  "usage_examples": [
+    "Convertissez des kilomètres en miles pour la planification de voyages",
+    "Convertissez des kilogrammes en livres pour le suivi du poids",
+    "Convertissez des degrés Celsius en degrés Fahrenheit pour la comparaison des températures"
+  ]
+}

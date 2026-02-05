@@ -1,0 +1,26 @@
+{
+  "uploadHint": "Clique para fazer upload ou arraste e solte",
+  "supportedFormats": "PNG, JPG, GIF, SVG, WebP",
+  "copyDataUrl": "Copiar URL de Dados",
+  "copyRawBase64": "Copiar Base64 Puro",
+  "base64Output": "Saída Base64",
+  "htmlImageTag": "Tag de Imagem HTML",
+  "cssBackground": "Fundo CSS",
+  "detailed_description": "O conversor de Imagem para Base64 codifica arquivos gráficos em sequências alfanuméricas seguindo o padrão MIME base64, permitindo incorporar dados binários diretamente em documentos HTML, CSS ou JSON. Essa técnica elimina chamadas HTTP externas ao embutir imagens como strings inline, ideal para ícones, favicons ou assets críticos de carregamento rápido. O processo utiliza codificação binária para transformar bytes da imagem em caracteres ASCII, compatível com formatos como PNG, JPEG e SVG. Desenvolvedores precisam deste recurso para otimizar performance de SPAs (Single Page Applications), criar CSS com imagens embutidas ou gerar payloads de APIs REST com anexos codificados. A ferramenta processa o cabeçalho do arquivo para identificar o MIME type correto e gera strings prefixadas com data:[<mediatype>][;base64], garantindo validade em padrões web. Funciona totalmente no cliente via WebAssembly, preservando privacidade e evitando upload de arquivos sensíveis.",
+  "usage_steps": [
+    "1. Clique em 'Selecionar Arquivo' para carregar a imagem desejada (PNG, JPEG ou SVG).",
+    "2. Escolha o formato de saída no dropdown: 'data URI completo' ou 'apenas string base64'.",
+    "3. Ative a opção 'Minificar' para remover espaços em branco e reduzir tamanho da string.",
+    "4. Revise o preview do código gerado na área de visualização com syntax highlighting.",
+    "5. Utilize o botão 'Copiar para Área de Transferência' para inserir imediatamente no código.",
+    "6. Valide a compatibilidade com seu projeto usando o checker integrado que verifica erros de codificação."
+  ],
+  "usage_examples": [
+    "Incorporar um favicon.png em uma single-page application sem dependências externas.",
+    "Criar um CSS de temas com ícones SVG embutidos para componentes reutilizáveis.",
+    "Enviar imagens de assinatura digital em requisições POST para APIs de documentos.",
+    "Gerar e-mails HTML com imagens inline que funcionam em clientes de e-mail restritivos."
+  ],
+  "clear": "Limpar",
+  "copied": "Copiado!"
+}

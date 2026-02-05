@@ -1,0 +1,26 @@
+{
+  "detailed_description": "El Convertidor de Formatos de Imagen es una herramienta técnica diseñada para transformar archivos gráficos entre los formatos PNG, JPEG y WebP, optimizando su rendimiento y compatibilidad. Permite a los desarrolladores y diseñadores ajustar sus imágenes según las necesidades específicas de cada proyecto, ya sea para reducir tamaño manteniendo calidad (WebP), preservar transparencias (PNG) o garantizar compatibilidad universal (JPEG). Internamente, el conversor utiliza bibliotecas como libpng, jpegtran y libwebp para realizar conversiones sin pérdida de calidad o con compresión ajustable. Soporta metadatos EXIF/IPTC y permite ajustar parámetros como nivel de compresión (0-100 para JPEG), calidad de color (RGB/CMYK) y preservación de canales alfa. El proceso incluye una validación automática de integridad del archivo y optimización de estructura binaria para evitar corrupción. Ideal para integración en flujos de trabajo DevOps o tareas de procesamiento masivo, con capacidad de arrastrar y soltar múltiples archivos simultáneamente.",
+  "usage_steps": [
+    "1. Arrastra los archivos al área de carga con soporte para múltiples selecciones (máximo 50 archivos de hasta 50MB cada uno)",
+    "2. Selecciona el formato de destino en el menú desplegable (PNG, JPEG o WebP) según tus necesidades de compresión y transparencia",
+    "3. Ajusta los parámetros avanzados en el panel de opciones: calidad (80% por defecto para JPEG), conservar metadatos o modo de color (RGB/Grayscale)",
+    "4. Activa la opción 'Optimizar para web' para aplicar compresión adicional sin afectar calidad visual perceptible",
+    "5. Haz clic en 'Procesar' para iniciar la conversión paralela mediante Web Workers (procesamiento en segundo plano sin congelamiento)",
+    "6. Descarga los archivos convertidos individualmente o como archivo ZIP comprimido con los resultados organizados por formato y fecha"
+  ],
+  "usage_examples": [
+    "Un desarrollador frontend convierte imágenes PNG con transparencia a WebP para reducir el tamaño de carga de una PWA en un 40%",
+    "Un fotógrafo digital transforma archivos RAW procesados a JPEG con compresión ajustada al 85% para compartir pruebas con clientes vía correo electrónico",
+    "Un diseñador de UX convierte capturas de pantalla de alta resolución a PNG optimizado para documentación técnica con anotaciones en capas",
+    "Un administrador de sistemas automatiza la conversión por lotes de archivos TIFF heredados a JPEG para integrarlos en un CMS con límite de tamaño de 2MB por imagen"
+  ],
+  "targetFormat": "Formato de destino",
+  "quality": "Calidad",
+  "converted": "Convertido",
+  "convertFirst": "Primero convierte una imagen",
+  "processing": "Procesando...",
+  "formatInfo": "Info del formato",
+  "pngDesc": "Compresión sin pérdida, soporta transparencia",
+  "jpegDesc": "Compresión con pérdida, tamaño menor",
+  "webpDesc": "Formato moderno, mejor compresión"
+}

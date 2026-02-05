@@ -1,0 +1,52 @@
+{
+  "detailed_description": "Le DéTECTEUR DE FUITES DE MÉMOIRE analyse les schémas de code pour identifier les fuites de mémoire potentielles telles que les écouteurs d'événements non supprimés.",
+  "usage_steps": [
+    "Coller le code JS/TS",
+    "Cliquez sur Analyser",
+    "Voir les fuites détectées",
+    "Lire les suggestions de correction",
+    "Appliquer les modifications"
+  ],
+  "usage_examples": [
+    "Trouvez les fuites de composants React",
+    "Détectez les problèmes de fermeture",
+    "Identifiez les fuites de temporisateurs"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Processus",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Collez votre code JavaScript/React ici...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez saisir un certain nombre d'entrée"
+  },
+  "loadExample": "Charger un exemple",
+  "analyze": "Analyser",
+  "generate": "Générer",
+  "format": "Formater",
+  "convert": "Convertir",
+  "validate": "Valider",
+  "export": "Exporter",
+  "preview": "Aperçu",
+  "reset": "Réinitialiser",
+  "add": "Ajouter",
+  "remove": "Supprimer",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "settings": "Paramètres",
+  "options": "Options",
+  "results": "Résultats",
+  "noResults": "Aucun résultat",
+  "loading": "Chargement...",
+  "success": "Succès",
+  "failed": "Échec",
+  "warning": "Avertissement",
+  "info": "Information",
+  "memorySafetyScore": "Score de Sécurité Mémoire",
+  "high": "Élevé",
+  "medium": "Moyen",
+  "low": "Faible",
+  "potentialMemoryLeaks": "Fuites de Mémoire Potentielles"
+}

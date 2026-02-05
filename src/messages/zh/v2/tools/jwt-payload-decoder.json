@@ -1,0 +1,25 @@
+{
+  "detailed_description": "JWT 负载解码器可提取并显示 JSON Web 令牌的头部和负载，无需密钥。",
+  "usage_steps": [
+    "粘贴 JWT 令牌",
+    "令牌自动解码",
+    "查看头部信息",
+    "检查负载声明",
+    "检查过期时间"
+  ],
+  "usage_examples": [
+    "调试身份验证问题",
+    "验证令牌过期情况",
+    "从令牌中提取用户信息"
+  ],
+  "input": "输入",
+  "output": "输出",
+  "process": "处理",
+  "copy": "复制",
+  "clear": "清除",
+  "inputPlaceholder": "在此处输入您的输入...",
+  "outputPlaceholder": "结果将显示在此处...",
+  "errors": {
+    "emptyInput": "请输入一些内容"
+  }
+}

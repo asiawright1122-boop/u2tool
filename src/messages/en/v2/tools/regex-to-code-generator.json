@@ -1,0 +1,50 @@
+{
+  "detailed_description": "Regex to Code Generator converts regular expression patterns into ready-to-use code snippets for various languages.",
+  "usage_steps": [
+    "Enter regex pattern",
+    "Select target language",
+    "Choose operation",
+    "Configure flags",
+    "Copy code snippet"
+  ],
+  "usage_examples": [
+    "Generate Python re code",
+    "Create JS RegExp code",
+    "Convert to Java Pattern"
+  ],
+  "input": "Input",
+  "output": "Output",
+  "process": "Process",
+  "copy": "Copy",
+  "clear": "Clear",
+  "inputPlaceholder": "Enter your input here...",
+  "outputPlaceholder": "Results will appear here...",
+  "errors": {
+    "emptyInput": "Please enter some input"
+  },
+  "patternPlaceholder": "\\d+",
+  "testTextPlaceholder": "Sample text to test",
+  "replacementPlaceholder": "Replacement text",
+  "loadExample": "Load Example",
+  "analyze": "Analyze",
+  "generate": "Generate",
+  "format": "Format",
+  "convert": "Convert",
+  "validate": "Validate",
+  "export": "Export",
+  "preview": "Preview",
+  "reset": "Reset",
+  "add": "Add",
+  "remove": "Remove",
+  "save": "Save",
+  "cancel": "Cancel",
+  "settings": "Settings",
+  "options": "Options",
+  "results": "Results",
+  "noResults": "No results",
+  "loading": "Loading...",
+  "success": "Success",
+  "failed": "Failed",
+  "warning": "Warning",
+  "info": "Info"
+}

@@ -1,0 +1,27 @@
+{
+  "detailed_description": "El Calculador de Ancho de Banda te ayuda a determinar el ancho de banda de red necesario para transferir archivos dentro de un período de tiempo específico. Ingresa el tamaño de tu archivo y el tiempo de transferencia deseado para calcular el ancho de banda necesario en diversas unidades, incluyendo bps, Kbps, Mbps, Gbps y bytes por segundo. Perfecto para el planeamiento de redes y la estimación de capacidad.",
+  "usage_steps": [
+    "Ingrese el tamaño del archivo que desea transferir",
+    "Seleccione la unidad de tamaño adecuada (KB, MB, GB, TB)",
+    "Ingrese el tiempo de transferencia deseado",
+    "Elige la unidad de tiempo (segundos, minutos, horas)",
+    "Visualice el ancho de banda necesario en múltiples unidades",
+    "Copie los resultados para su referencia"
+  ],
+  "usage_examples": [
+    "Planificación de requisitos de ancho de banda para transmisión de video",
+    "Estimación de velocidades de transferencia de respaldo",
+    "Cálculo de necesidades de carga y descarga en la nube"
+  ],
+  "fileSize": "File Size",
+  "transferTime": "Transfer Time",
+  "timeUnits": {
+    "seconds": "Seconds",
+    "minutes": "Minutes",
+    "hours": "Hours"
+  },
+  "requiredBandwidth": "Required Bandwidth",
+  "bitsPerSecond": "Bits per Second",
+  "bytesPerSecond": "Bytes per Second",
+  "commonBandwidths": "Common Bandwidth References"
+}

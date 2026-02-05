@@ -1,0 +1,21 @@
+{
+  "output": "URI de Dados",
+  "detailed_description": "O Data URI Generator converte arquivos binários ou de texto em URLs de dados no formato RFC 2397, permitindo incorporar recursos diretamente no código HTML, CSS ou JavaScript. Esta ferramenta codifica arquivos usando Base64 (para binários) ou codificação de texto simples, adicionando automaticamente o tipo MIME apropriado (como 'image/png' ou 'text/css'). Técnicos utilizam URLs de dados para reduzir requisições HTTP em projetos web, evitar problemas de CORS ao carregar recursos externos e criar documentos autossuficientes. Internamente, o gerador utiliza a API FileReader do navegador para processar arquivos localmente, garantindo segurança e velocidade. A saída inclui a URI completa, pronta para uso em atributos src, URLs CSS ou injeção em DOM. Observação: URLs de dados podem aumentar o tamanho do documento final, sendo ideal para pequenos recursos como ícones ou imagens de fundo.",
+  "usage_steps": [
+    "1. Acesse a ferramenta no site e clique no botão 'Selecionar Arquivo' para carregar seu conteúdo local.",
+    "2. Escolha entre codificação Base64 (padrão para binários) ou 'Texto Simples' no seletor 'Tipo de Codificação'.",
+    "3. Confirme o tipo MIME detectado automaticamente ou modifique-o manualmente no campo 'Tipo MIME' se necessário.",
+    "4. Visualize a URL de dados gerada em tempo real na caixa de saída, incluindo cabeçalhos como 'data:image/png;base64,'.",
+    "5. Clique em 'Copiar URI' para armazenar a URL de dados na área de transferência.",
+    "6. Cole a URI em seu código HTML (ex: <img src='[URI]'>) ou CSS (ex: url('[URI]')) conforme necessário."
+  ],
+  "usage_examples": [
+    "Incorporar um ícone SVG inline em um documento HTML para evitar requisições adicionais em uma PWA.",
+    "Criar uma folha de estilo CSS com imagens de fundo embutidas para um tema WordPress sem dependências externas.",
+    "Gerar uma URL de dados para um pequeno gráfico de verificação em um e-mail HTML que não permite imagens externas.",
+    "Converter um arquivo de fonte WOFF em URI para uso em um componente web autossuficiente sem referências a CDN."
+  ],
+  "copied": "Copiado!",
+  "copy": "Copiar",
+  "clear": "Limpar"
+}

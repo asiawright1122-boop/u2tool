@@ -1,0 +1,33 @@
+{
+  "inputLabel": "Dirección IP",
+  "placeholder": "Introduce la dirección IP (por ejemplo, 192.168.1.1)",
+  "validate": "Validar",
+  "valid": "Dirección IP válida",
+  "invalid": "Dirección IP no válida",
+  "type": "Tipo",
+  "class": "Clase",
+  "private": "Privada",
+  "loopback": "Bucle de retroalimentación",
+  "multicast": "Multicast",
+  "yes": "Sí",
+  "no": "No",
+  "examples": "Ejemplos",
+  "privateAddress": "Dirección IP privada",
+  "publicAddress": "Dirección IP pública",
+  "loopbackAddress": "Dirección IP de bucle de retroalimentación",
+  "detailed_description": "El Validador de Direcciones IP es una herramienta técnica diseñada para analizar y verificar la integridad de direcciones IPv4 e IPv6, incluyendo notaciones CIDR y máscaras de subred. Esta herramienta identifica automáticamente si una dirección cumple con los estándares RFC 791 (IPv4) y RFC 8200 (IPv6), validando rangos octetos, longitud de bits, grupos hexadecimales y sintaxis específica. Utiliza expresiones regulares optimizadas para detectar patrones inválidos como octetos fuera de rango (0-255), letras no hexadecimales en IPv6 o errores en la representación comprimida (::). Además, proporciona información detallada sobre la clase de red, máscara de subred asociada, ubicación geográfica (si está disponible) y si la dirección pertenece a un rango privado/reservado. Los desarrolladores y administradores de redes lo necesitan para depurar configuraciones de firewall, validar entradas de usuarios en formularios, verificar registros DNS o implementar sistemas de geolocalización precisa. A diferencia de herramientas básicas, este validador incluye análisis de formato canónico, detección de IPv4 mapeado en IPv6 y cálculo de rangos de subred.",
+  "usage_steps": [
+    "Ingresa la dirección IP en el campo de texto central etiquetado 'Dirección IP' (ej: 192.168.1.1 o 2001:db8::1).",
+    "Selecciona manualmente el protocolo (IPv4 o IPv6) en el selector desplegable o deja que la herramienta lo detecte automáticamente.",
+    "Activa la opción 'Modo estricto' para validar que la dirección esté en formato canónico (sin ceros iniciales en IPv4 o grupos omitidos redundantes en IPv6).",
+    "Haz clic en el botón 'Validar' para ejecutar el análisis, que mostrará un ícono de verificación y un panel con resultados detallados.",
+    "Revisa el informe que incluye: estado de validez, versión IP detectada, máscara de subred, rango geográfico y categorización (pública/privada/reservada).",
+    "Usa el botón 'Copiar detalles' para exportar el análisis en formato JSON o CSV, incluyendo campos como network_class y cidr_notation."
+  ],
+  "usage_examples": [
+    "Un administrador de sistemas verifica que una dirección IPv6 configurada en un servidor web (2a03:2880:f::1) no tenga errores de sintaxis antes de implementar un balanceador de carga.",
+    "Un desarrollador de aplicaciones móviles valida que las direcciones IP introducidas por usuarios en un formulario (10.0.0.300) sean inválidas por exceder rangos octetos.",
+    "Un analista de seguridad examina una dirección IPv4 (172.31.255.192/24) para confirmar si pertenece a una subred privada y detectar posibles fugas de información.",
+    "Un ingeniero de redes evalúa una dirección IPv6 con notación CIDR (2001:db8::/32) para verificar su conformidad con estándares de documentación RFC 3849."
+  ]
+}

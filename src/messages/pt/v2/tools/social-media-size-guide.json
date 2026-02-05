@@ -1,0 +1,35 @@
+{
+  "platform": "Plataforma",
+  "imageType": "Tipo de Imagem",
+  "dimensions": "Dimensões",
+  "aspectRatio": "Proporção",
+  "fileSize": "Tamanho Máximo de Arquivo",
+  "profilePhoto": "Foto de Perfil",
+  "coverPhoto": "Foto de Capa",
+  "post": "Publicação",
+  "story": "Story",
+  "thumbnail": "Miniatura",
+  "banner": "Banner",
+  "recommended": "Recomendado",
+  "minimum": "Mínimo",
+  "detailed_description": "O Social Media Size Guide é uma ferramenta técnica que centraliza as especificações de dimensões, resoluções e proporções de imagem exigidas por 15+ plataformas de mídia social. Seu funcionamento baseia-se em uma base de dados atualizada constantemente com parâmetros como densidade de pixels (PPI/DPI), formatos suportados (JPEG, PNG, WEBP), limitações de tamanho de arquivo e proporções de aspecto (1:1, 4:5, 9:16). A ferramenta utiliza algoritmos de análise de imagem para validar metadados e identificar incompatibilidades com os padrões de cada rede social. Diferente de soluções genéricas, integra previews responsivos que simulam o comportamento visual da imagem em feeds, stories e anúncios, aplicando regras de smart cropping e upscale prevention. Ideal para desenvolvedores que precisam automatizar validações de assets, designers que evitam reprocessamento e equipes de marketing que garantem consistência visual cross-platform.",
+  "usage_steps": [
+    "Acesse a seção 'Plataformas' e selecione a rede social (Instagram, Facebook, TikTok etc.) na lista suspensa categorizada por tipo de conteúdo (Feed, Story, Cover).",
+    "Verifique no painel lateral os requisitos técnicos exibidos em tempo real: largura/altura mínima, peso máximo do arquivo e formato recomendado.",
+    "Arraste sua imagem para a área de upload ou cole uma URL de imagem hospedada, ativando a análise automática de conformidade.",
+    "Observe os alertas de validação em destaque: proporção incorreta, resolução insuficiente ou compressão excessiva com base nos padrões da plataforma.",
+    "Use a ferramenta de preview interativo para ajustar manualmente o crop, aplicando máscaras de proporção pré-definidas para cada canal.",
+    "Exporte a imagem final com metadados otimizados, escolhendo o formato ideal (PNG-24 para transparência, JPEG-85 para equilíbrio qualidade-peso)."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor ajusta imagens para um CMS que publica simultaneamente no LinkedIn e Pinterest, verificando automaticamente as diferenças de proporção 3:4 vs 2:3.",
+    "Um designer cria thumbnails para YouTube e Twitch, comparando visualmente o safe zone para texto em 1080x1920 vs 1200x675 pixels.",
+    "Uma equipe de e-commerce redimensiona 500 imagens de produtos para Instagram Shopping, garantindo 1080x1080 pixels com 72 DPI sem perda de qualidade.",
+    "Um gestor de tráfego paga validação de anúncios no Google Ads e Facebook Meta, identificando automaticamente quais imagens precisam de upscale para atender 1.5x o tamanho exibido."
+  ],
+  "searchPlaceholder": "Pesquisar plataformas ou tipos de imagem...",
+  "all": "Todos",
+  "type": "Tipo",
+  "notes": "Notas",
+  "copy": "Copiar"
+}

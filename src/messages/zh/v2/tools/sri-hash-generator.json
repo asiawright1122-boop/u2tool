@@ -1,0 +1,37 @@
+{
+  "detailed_description": "SRI哈希生成器为外部资源创建子资源完整性哈希。通过验证资源完整性来保护您的网站免受被入侵的CDN影响。",
+  "usage_steps": [
+    "输入资源URL或粘贴内容",
+    "选择哈希算法（SHA-256/384/512）",
+    "生成SRI哈希",
+    "复制完整性属性",
+    "添加到您的script/link标签"
+  ],
+  "usage_examples": [
+    "保护CDN资源",
+    "保护外部脚本",
+    "验证样式表完整性"
+  ],
+  "resourceUrl": "资源URL",
+  "resourceContent": "或粘贴内容",
+  "algorithm": "算法",
+  "generate": "生成哈希",
+  "copy": "复制",
+  "copied": "已复制！",
+  "integrityAttribute": "完整性属性",
+  "fullTag": "完整HTML标签",
+  "urlPlaceholder": "输入资源URL...",
+  "fromUrl": "从URL",
+  "fromContent": "从内容",
+  "urlInput": "输入资源URL",
+  "loadExample": "加载示例",
+  "recommended": "推荐",
+  "contentInput": "内容输入",
+  "contentPlaceholder": "在此粘贴JavaScript或CSS内容...",
+  "linkTag": "Link标签",
+  "scriptTag": "Script标签",
+  "sriExplanation": "子资源完整性（SRI）是一种安全功能，使浏览器能够验证获取的资源是否未被意外篡改。",
+  "sriHash": "SRI哈希",
+  "whatIsSri": "什么是SRI？",
+  "generating": "生成中..."
+}

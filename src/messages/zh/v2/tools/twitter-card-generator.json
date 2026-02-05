@@ -1,0 +1,39 @@
+{
+  "detailed_description": "Twitter Card Generator 是一个专门用于生成 Twitter 卡片元标签的工具，旨在帮助网站开发者优化在 Twitter 上分享的内容。通过生成这些元标签，开发者可以确保他们的网站在 Twitter 上被分享时，能够显示更丰富、更吸引人的预览信息，如标题、描述、图片等。这不仅提升了用户体验，也增加了内容的传播率。Twitter 卡片元标签是一种嵌入在 HTML 页面头部的特殊标签，它们告诉 Twitter 如何解析页面并在推文中呈现预览。使用 Twitter Card Generator，用户可以轻松地输入页面的 URL 或手动填写卡片信息，工具会自动生成所需的元标签代码，用户只需将这些代码复制到网站的 HTML 文件中即可。此外，工具还支持多种卡片类型，如摘要卡、大图卡等，以适应不同的内容需求。",
+  "usage_steps": [
+    "Step 1: 打开 Twitter Card Generator 工具页面，选择“生成 Twitter 卡片”选项。",
+    "Step 2: 在“URL”输入框中输入您要生成卡片的网页地址，或者选择“手动填写”来直接输入卡片信息。",
+    "Step 3: 如果选择手动填写，您需要依次填写卡片的标题、描述、图片 URL 以及其他可选信息，如作者、网站名称等。",
+    "Step 4: 选择卡片类型，支持的类型包括：摘要卡（Summary）、大图卡（Summary with Large Image）等。",
+    "Step 5: 点击“生成代码”按钮，工具将自动生成包含所有必要元标签的 HTML 代码。",
+    "Step 6: 将生成的代码复制并粘贴到您的网站 HTML 文件的 <head> 部分，保存并发布，确保更改生效。"
+  ],
+  "usage_examples": [
+    "Example 1: 博客作者使用 Twitter Card Generator 为每篇文章生成卡片，这样在分享文章链接时，读者可以看到文章的标题、摘要和特色图片，提高点击率。",
+    "Example 2: 电商网站开发者利用此工具为产品页面添加大图卡片，使产品在 Twitter 上的分享更加直观，吸引更多的用户点击购买。",
+    "Example 3: 新闻网站的技术团队使用 Twitter Card Generator 为重要新闻文章生成卡片，确保新闻在社交媒体上的传播更广泛，提升网站流量。",
+    "Example 4: 摄影师在个人网站上使用此工具为摄影集生成卡片，分享时能够展示高质量的图片预览，吸引更多的关注和分享。"
+  ],
+  "faqs": [
+    {
+      "question": "Twitter Card Generator 是免费的吗？",
+      "answer": "是的，Twitter Card Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Twitter Card Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Twitter Card Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Twitter Card Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Twitter Card Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

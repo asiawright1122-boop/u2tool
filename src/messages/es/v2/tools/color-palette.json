@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El Generador de Paletas de Colores es una herramienta técnica que aplica principios de teoría del color para crear combinaciones armónicas basadas en modelos matemáticos. Utiliza el espacio de color HSL (Hue, Saturation, Lightness) para calcular variaciones cromáticas precisas, permitiendo generar esquemas complementarios (colores opuestos en la rueda del color), análogos (colores adyacentes) y triádicos (tres colores equidistantes en 120°). Su algoritmo implementa fórmulas de conversión entre modelos RGB y CMYK, ajustando parámetros como tonalidad, saturación y luminosidad con incrementos del 5% para evitar transiciones abruptas. Los diseñadores web y gráficos necesitan esta herramienta para garantizar consistencia visual en interfaces, cumplir con estándares de accesibilidad WCAG 2.1 (contraste mínimo 4.5:1), o prototipar identidades de marca. Al introducir un color base hexadecimal o RGB, el sistema aplica transformaciones matriciales para generar hasta 5 variantes controladas por sliders de ajuste fino, ofreciendo resultados exportables en formatos como CSS variables, PNG o SVG.",
+  "usage_steps": [
+    "1. Selecciona un color base usando el selector HSL o introduce un código HEX/RGB en el campo de entrada.",
+    "2. Elige un esquema de armonía en el dropdown: complementario, análogo, triádico o cuadrado (4 colores en rectángulo).",
+    "3. Ajusta los controles deslizantes de 'Saturación' (20%-100%) y 'Luminosidad' (10%-90%) para refinar las tonalidades.",
+    "4. Haz clic en 'Generar Paleta' para ejecutar el algoritmo de conversión y visualizar hasta 5 variaciones controladas.",
+    "5. Copia los códigos HEX/RGB de cada color desde la tabla de resultados o usa el botón 'Exportar' para descargar en formato CSS.",
+    "6. Prueba la accesibilidad de la paleta usando la función integrada de análisis de contraste entre colores principales."
+  ],
+  "usage_examples": [
+    "Un diseñador web crea una paleta triádica para botones de acción en una aplicación SaaS, asegurando alta visibilidad con un contraste de 7:1.",
+    "Un ilustrador genera colores análogos para una infografía médica, manteniendo coherencia visual en diagramas de anatomía.",
+    "Un equipo de branding desarrolla una identidad corporativa usando esquemas complementarios que respetan la normativa de contrastes para personas con daltonismo.",
+    "Un desarrollador de temas WordPress ajusta manualmente la luminosidad de una paleta monocromática para optimizar la legibilidad en modos claro/oscuro."
+  ]
+}

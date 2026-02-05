@@ -1,0 +1,29 @@
+{
+  "ipAddress": "Dirección IP",
+  "subnetMask": "Máscara de Subred",
+  "networkAddress": "Dirección de Red",
+  "broadcastAddress": "Dirección de Difusión",
+  "firstHost": " Primer Host Utilizable",
+  "lastHost": "Último Host Utilizable",
+  "usableHosts": "Hosts Utilizables",
+  "subnetMaskDecimal": "Máscara de Subred Decimal",
+  "cidr": "CIDR",
+  "wildcardMask": "Máscara de Wildcard",
+  "invalidIp": "Dirección IP no válida",
+  "invalidMask": "Máscara de subred no válida",
+  "calculationError": "Error en la Cálculo",
+  "dottedDecimal": "Punto Decimal",
+  "detailed_description": "El Calculador de Subredes IP ayuda a los administradores de redes a calcular información de subredes a partir de direcciones IP y máscaras de subred. Obten la dirección de red, la dirección de difusión, los primeros y últimos hosts utilizables, y el recuento total de hosts utilizables. Esencial para la planificación de redes y la resolución de problemas.",
+  "usage_steps": [
+    "Ingresa una dirección IP",
+    "Selecciona o ingresa la máscara de subred (admitida la notación CIDR)",
+    "Verifica la información de red calculada",
+    "Mira el rango y el recuento de hosts utilizables",
+    "Verifica la máscara de wildcard para la configuración de ACL"
+  ],
+  "usage_examples": [
+    "Planifica subredes de red",
+    "Calcula rangos de IP utilizables",
+    "Configura dispositivos de red"
+  ]
+}

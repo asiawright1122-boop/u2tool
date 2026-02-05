@@ -1,0 +1,24 @@
+{
+  "includeHeaders": "Incluir Cabeçalhos",
+  "jsonInput": "Entrada JSON",
+  "tsvOutput": "Saída TSV",
+  "jsonPlaceholder": "Digite o array JSON...",
+  "tsvPlaceholder": "A saída TSV aparecerá aqui...",
+  "convert": "Converter para TSV",
+  "copy": "Copiar Saída",
+  "detailed_description": "O conversor JSON para TSV processa arrays JSON estruturados e transforma-os em formato TSV (Valores Separados por Tabulação), ideal para análise de dados em planilhas ou sistemas que exigem formato tabular. Diferente de conversores básicos, esta ferramenta implementa um parser de JSON robusto que mantém a integridade de tipos de dados (como números, booleanos e strings) e escapa corretamente caracteres especiais (como quebras de linha e tabs dentro de campos). O usuário precisa deste tool para integrar APIs que retornam dados em JSON com sistemas legados que aceitam apenas TSV, preparar datasets para análise estatística em R ou Python, ou migrar dados para bancos de dados que utilizam TSV como formato de importação. O funcionamento ocorre em três etapas: validação do JSON via parser conforme RFC 8259, mapeamento recursivo de campos aninhados em colunas planas usando notação de ponto (ex: 'endereco.cidade'), e serialização em TSV com delimitadores Unicode U+0009. A ferramenta também preserva a ordem das colunas e permite configurar se a primeira linha conterá cabeçalhos.",
+  "usage_steps": [
+    "Cole o JSON válido na área de texto principal, observando o indicador de validação em tempo real.",
+    "Ative a opção 'Usar primeira linha como cabeçalho' se o array contém um objeto de metadados.",
+    "Clique em 'Processar JSON' para iniciar a análise e transformação dos dados.",
+    "Revise a pré-visualização da tabela gerada, verificando colunas com dados aninhados.",
+    "Ajuste manualmente a ordem das colunas arrastando-as na interface, se necessário.",
+    "Clique em 'Baixar TSV' para obter o arquivo pronto ou copie o resultado diretamente da área de saída."
+  ],
+  "usage_examples": [
+    "Converter respostas de APIs REST (como dados de usuários ou métricas de vendas) para análise em Excel ou Google Sheets.",
+    "Migrar logs em formato JSON para um data warehouse que requer TSV com esquema pré-definido.",
+    "Transformar dados de configuração hierárquicos em um formato legível para relatórios automatizados.",
+    "Preparar dataset para machine learning em Python, onde pandas aceita TSV como entrada mas exige formatação específica."
+  ]
+}

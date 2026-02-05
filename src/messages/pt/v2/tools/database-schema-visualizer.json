@@ -1,0 +1,53 @@
+{
+  "detailed_description": "O Visualizador de Esquemas de Banco de Dados cria diagramas ER visuais a partir de declarações SQL CREATE TABLE.",
+  "usage_steps": [
+    "Cole declarações CREATE TABLE",
+    "Clique em Visualizar",
+    "Veja as relações",
+    "Arraste para organizar",
+    "Exporte como PNG/SVG"
+  ],
+  "usage_examples": [
+    "Documentar a estrutura do banco de dados",
+    "Entender bancos de dados legados",
+    "Planejar mudanças no esquema"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processo",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Cole suas instruções CREATE TABLE...",
+  "outputPlaceholder": "Os resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum input"
+  },
+  "loadExample": "Carregar exemplo",
+  "analyze": "Analisar",
+  "generate": "Gerar",
+  "format": "Formatar",
+  "convert": "Converter",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Visualizar",
+  "reset": "Redefinir",
+  "add": "Adicionar",
+  "remove": "Remover",
+  "save": "Salvar",
+  "cancel": "Cancelar",
+  "settings": "Configurações",
+  "options": "Opções",
+  "results": "Resultados",
+  "noResults": "Sem resultados",
+  "loading": "Carregando...",
+  "success": "Sucesso",
+  "failed": "Falhou",
+  "warning": "Aviso",
+  "info": "Informação",
+  "sqlSchema": "Esquema SQL (instruções CREATE TABLE)",
+  "schemaVisualization": "Visualização do esquema",
+  "tables": "tabelas",
+  "relationships": "Relacionamentos",
+  "primaryKey": "Chave primária",
+  "foreignKey": "FK"
+}

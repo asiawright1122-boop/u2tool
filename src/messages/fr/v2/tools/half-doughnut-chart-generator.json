@@ -1,0 +1,56 @@
+{
+  "chartTitle": "Titre du graphique",
+  "chartTitlePlaceholder": "Saisissez le titre du graphique",
+  "colorTheme": "Thème de couleur",
+  "showLegend": "Afficher la légende",
+  "showLabels": "Afficher les étiquettes",
+  "nameLabel": "Nom",
+  "value": "Valeur",
+  "item": "Élément",
+  "addRow": "Ajouter une ligne",
+  "loadSample": "Charger un exemple",
+  "downloadPng": "Télécharger en PNG",
+  "downloadSvg": "Télécharger en SVG",
+  "defaultTitle": "Répartition",
+  "sampleTitle": "Satisfaction client",
+  "dataEditor": "Éditeur de données",
+  "chartPreview": "Aperçu du graphique",
+  "chartSettings": "Paramètres du graphique",
+  "themeDefault": "Par défaut",
+  "themeOcean": "Océan",
+  "themeSunset": "Coucher de soleil",
+  "themeForest": "Forêt",
+  "sampleData": {
+    "item1": "Catégorie A",
+    "item2": "Catégorie B",
+    "item3": "Catégorie C",
+    "item4": "Catégorie D",
+    "excellent": "Excellent",
+    "good": "Bon",
+    "average": "Moyen",
+    "poor": "Mauvais"
+  },
+  "tips": {
+    "title": "Conseils",
+    "tip1": "Le demi-donut est idéal pour les visualisations de style jauge",
+    "tip2": "Basculez les étiquettes pour afficher ou masquer les valeurs en pourcentage",
+    "tip3": "Les valeurs sont automatiquement converties en pourcentages"
+  },
+  "detailed_description": "Le Générateur de Graphiques en Demi-Couronne permet de créer des visualisations de données semi-circulaires basées sur des principes de géométrie vectorielle SVG. Contrairement aux graphiques circulaires traditionnels, cet outil se concentre sur une représentation en arc de 180 degrés, idéale pour les interfaces nécessitant un espace d'affichage restreint sans compromettre la lisibilité. Techniquement, il utilise des algorithmes de traçage de chemins (path tracing) pour dessiner des segments proportionnels en fonction des valeurs d'entrée, avec des options avancées de personnalisation comme les dégradés linéaires pour les remplissages, la gestion des étiquettes de données avec des angles d'alignement dynamiques, et la possibilité de définir des seuils de visibilité pour les petites proportions. L'outil est particulièrement utile pour les tableaux de bord d'applications mobiles, les rapports financiers verticaux ou les interfaces IoT où l'espace horizontal est limité. Il supporte le chargement de données en JSON ou CSV, et génère des graphiques scalables (responsive) adaptés aux écrans de toutes tailles, avec des attributs ARIA pour l'accessibilité. Le rendu est calculé côté client en temps réel, sans dépendance à des bibliothèques externes, garantissant une exécution rapide et une intégration simplifiée.",
+  "usage_steps": [
+    "Sélectionnez le format d'entrée de données via l'onglet 'Source' (manuel via le tableau de valeurs ou import CSV en glissant-déposant un fichier).",
+    "Saisissez au moins deux catégories avec leurs valeurs numériques et couleurs hexadécimales personnalisées dans le panneau d'édition de données.",
+    "Ajustez l'angle de départ (0-360°) et l'arc total (jusqu'à 180°) à l'aide des curseurs sous l'option 'Paramètres de rotation'.",
+    "Activez le mode 'Dégradé' pour appliquer des transitions entre couleurs ou définissez une largeur de trait personnalisée en pixels.",
+    "Utilisez le bouton 'Aperçu en temps réel' pour visualiser les modifications avant l'exportation.",
+    "Téléchargez le graphique généré au format SVG ou PNG haute résolution via le menu 'Exporter'."
+  ],
+  "usage_examples": [
+    "Un responsable marketing visualise l'avancement d'une campagne de 6 mois sur un tableau de bord vertical, en utilisant un demi-cercle pour symboliser la progression de 0 à 100%.",
+    "Un comptable présente un rapport trimestriel avec un graphique en demi-couronne montrant la répartition des dépenses (salaires, logistique, R&D) dans une présentation PowerPoint.",
+    "Un développeur d'application de fitness intègre un indicateur circulaire de 50% pour illustrer l'atteinte quotidienne d'objectifs de pas, s'adaptant à un design UI mobile compact.",
+    "Un analyste en communication mesure l'engagement social (likes, partages, commentaires) sur une plateforme web responsive, en superposant deux demi-couronnes pour comparer deux campagnes."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

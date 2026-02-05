@@ -1,0 +1,40 @@
+{
+  "detailed_description": "Le Calculateur de Vitesse de Sprint suit et calcule la vitesse d'équipe sur les sprints.",
+  "usage_steps": [
+    "Saisissez les points d'histoire par sprint",
+    "Ajoutez plusieurs sprints",
+    "Voyez la vitesse moyenne",
+    "Voyez la tendance de la vitesse",
+    "Utilisez-le pour la planification"
+  ],
+  "usage_examples": [
+    "Calculez la vitesse de l'équipe",
+    "Suivez les tendances de la vitesse",
+    "Prévoyez les dates de lancement"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Processus",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Saisissez votre entrée ici...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez saisir quelque chose"
+  },
+  "addSprint": "+ Ajouter Sprint",
+  "avgVelocity": "Vélocité Moyenne",
+  "predictedNext": "Prochain Prédit",
+  "completionRate": "Taux de Complétion",
+  "trend": "Tendance",
+  "velocityChart": "Graphique de Vélocité",
+  "committed": "Engagé",
+  "completed": "Terminé",
+  "sprint": "Sprint",
+  "rate": "Taux",
+  "median": "Médiane",
+  "min": "Min",
+  "max": "Max",
+  "range": "Plage",
+  "sprintDefault": "Sprint"
+}

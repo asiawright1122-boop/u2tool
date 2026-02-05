@@ -1,0 +1,17 @@
+{
+  "detailed_description": "L'analyseur d'en-têtes HTTP est un outil technique conçu pour décortiquer les en-têtes HTTP bruts, qu'ils proviennent de requêtes ou de réponses, en les structurant dans un format lisible. Il identifie chaque champ (comme Content-Type, Cache-Control ou Set-Cookie) et y associe des explications contextuelles basées sur les normes RFC 7230-7235. Ce tool est indispensable pour les développeurs confrontés à des problèmes de compatibilité entre clients et serveurs, les auditeurs de sécurité évaluant des en-têtes de protection (X-Content-Type-Options, Strict-Transport-Security) ou les architectes optimisant les mécanismes de mise en cache via les directives ETag ou Expires. L'outil fonctionne en analysant les données ASCII saisies dans un textarea, en les segmentant ligne par ligne selon les règles de délimitation CRLF, puis en appliquant des règles de correspondance pour extraire les clés, valeurs et paramètres optionnels. Les résultats s'affichent sous forme d'un arbre hiérarchique interactif, avec des indicateurs de conformité (ex: présence de en-têtes obsolètes) et une estimation de la charge utile en octets. Tout le traitement s'effectue en client-side, garantissant confidentialité des données.",
+  "usage_steps": [
+    "Collez vos en-têtes HTTP bruts dans la zone de texte intitulée 'Saisie brute' (exemple: 'GET / HTTP/1.1\\r\\nHost: example.com')",
+    "Activez/désactivez l'option 'Afficher les valeurs brutes' pour voir les données encodées (ex: base64 dans Authorization)",
+    "Cliquez sur 'Analyser' pour générer un affichage structuré avec code couleur par famille (général, demande, réponse)",
+    "Utilisez les onglets 'Validation' et 'Conformité' pour identifier les en-têtes non standards ou dépréciés",
+    "Exploitez les boutons 'Copier comme JSON' ou 'Générer CURL' pour réutiliser les données dans des tests automatisés",
+    "Consultez la section 'Métriques' affichant le nombre d'en-têtes, octets totaux et temps d'analyse (<50ms)"
+  ],
+  "usage_examples": [
+    "Un développeur Node.js débugge une API REST renvoyant des erreurs 400 en analysant les en-têtes Content-Length et Transfer-Encoding",
+    "Un pentester vérifie la présence de l'en-tête Content-Security-Policy avec directives 'strict-dynamic' pour atténuer XSS",
+    "Un ingénieur DevOps optimise les en-têtes Cache-Control et Vary pour un CDN en comparant les réponses de différentes versions de serveur",
+    "Un étudiant visualise les différences entre en-têtes HTTP/1.1 et HTTP/2 (ex: suppression de Connection: keep-alive dans les versions récentes)"
+  ]
+}

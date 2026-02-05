@@ -1,0 +1,32 @@
+{
+  "detailed_description": "バイナリテキスト変換器はバイナリコードと読み取り可能なテキスト間で変換します。",
+  "usage_steps": [
+    "変換モードを選択",
+    "バイナリコードまたはテキストを入力",
+    "変換をクリックして結果を表示",
+    "変換された出力をコピー",
+    "スワップボタンでモードを素早く切り替え"
+  ],
+  "usage_examples": [
+    "バイナリメッセージをデコード",
+    "バイナリエンコーディングを学習",
+    "秘密のバイナリメッセージを作成"
+  ],
+  "binaryToText": "バイナリ → テキスト",
+  "textToBinary": "テキスト → バイナリ",
+  "binaryInput": "バイナリ入力",
+  "textInput": "テキスト入力",
+  "binaryOutput": "バイナリ出力",
+  "textOutput": "テキスト出力",
+  "binaryPlaceholder": "バイナリを入力（例: 01001000 01101001）...",
+  "textPlaceholder": "変換するテキストを入力...",
+  "outputPlaceholder": "結果がここに表示されます...",
+  "convert": "変換",
+  "swap": "スワップ",
+  "copy": "コピー",
+  "copied": "コピーしました！",
+  "invalidBinary": "無効なバイナリ入力",
+  "exampleTitle": "例",
+  "text": "テキスト",
+  "binary": "バイナリ"
+}

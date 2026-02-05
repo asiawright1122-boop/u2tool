@@ -1,0 +1,32 @@
+{
+  "amount": "Amount",
+  "calculationMode": "Calculation Mode",
+  "addVat": "Add VAT to amount",
+  "removeVat": "Remove VAT from amount",
+  "vatOnly": "Calculate VAT only",
+  "useCustomRate": "Use custom VAT rate",
+  "customRate": "Custom Rate",
+  "country": "Country",
+  "rateType": "Rate Type",
+  "standardRate": "Standard Rate",
+  "reducedRate": "Reduced Rate",
+  "reducedRates": "Reduced Rates",
+  "superReducedRate": "Super Reduced Rate",
+  "netAmount": "Net Amount",
+  "vatAmount": "VAT Amount",
+  "grossAmount": "Gross Amount",
+  "euVatRates": "EU VAT Rates Reference",
+  "detailed_description": "VAT Calculator is a comprehensive tool for calculating Value Added Tax across European countries. It supports standard, reduced, and super-reduced VAT rates for all EU member states. You can add VAT to a net amount, remove VAT from a gross amount, or calculate the VAT portion only.",
+  "usage_steps": [
+    "Enter the amount you want to calculate VAT for",
+    "Select the calculation mode (add VAT, remove VAT, or VAT only)",
+    "Choose a country or enter a custom VAT rate",
+    "Select the rate type (standard, reduced, or super-reduced)",
+    "View the calculated net amount, VAT amount, and gross amount"
+  ],
+  "usage_examples": [
+    "Calculate VAT for invoices and business transactions",
+    "Determine net price from VAT-inclusive prices",
+    "Compare VAT rates across different EU countries"
+  ]
+}

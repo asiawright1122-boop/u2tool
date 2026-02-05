@@ -1,0 +1,31 @@
+{
+  "columns": "Colunas",
+  "rows": "Linhas",
+  "gap": "Espaçamento (px)",
+  "justifyItems": "Alinhar Itens",
+  "stretch": "Esticar",
+  "start": "Início",
+  "center": "Centro",
+  "end": "Fim",
+  "columnSizes": "Tamanhos de Coluna",
+  "col": "Col {index}",
+  "rowSizes": "Tamanhos de Linha",
+  "row": "Linha {index}",
+  "preview": "Pré-visualizar",
+  "generatedCss": "CSS Gerado",
+  "detailed_description": "Nosso gerador de grade CSS grátis ajuda os desenvolvedores web a criar layouts de grade complexos sem escrever código do zero. A grade CSS é um sistema de layout bidimensional poderoso que revolucionou o design web ao permitir um controle preciso sobre linhas e colunas. Com este construtor visual de grade CSS, você pode definir o número de colunas e linhas, definir tamanhos personalizados usando unidades fr, pixels ou porcentagens, e ajustar o espaçamento entre os itens da grade. A pré-visualização em tempo real mostra exatamente como seu layout ficará, facilitando experimentações com diferentes configurações. Perfeito para criar layouts de site responsivos, grade de cartões, galerias de imagens e designs de painel. Copie o código CSS gerado diretamente em seu projeto. Funciona com todos os navegadores modernos, incluindo Chrome, Firefox, Safari e Edge.",
+  "usage_steps": [
+    "Defina o número de colunas e linhas para seu layout de grade",
+    "Ajuste os tamanhos de coluna e linha usando fr, px ou porcentagens",
+    "Defina o valor de espaçamento para controlar o espaçamento entre os itens da grade",
+    "Escolha o alinhamento de justify-items (esticar, início, centro, fim)",
+    "Pré-visualize seu layout e copie o código CSS gerado"
+  ],
+  "usage_examples": [
+    "Crie uma grade de cartões responsiva com 3 colunas de tamanhos iguais usando 1fr 1fr 1fr",
+    "Construa um layout de painel com uma barra lateral (250px) e uma área de conteúdo principal (1fr)",
+    "Diseñe uma grade de galeria de imagens com 4 colunas e 20px de espaçamento"
+  ],
+  "copied": "Copiado!",
+  "copy": "Copiar"
+}

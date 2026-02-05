@@ -1,0 +1,28 @@
+{
+  "roll": "Würfeln",
+  "rolling": "Würfeln...",
+  "diceType": "Würfeltyp",
+  "numberOfDice": "Anzahl der Würfel",
+  "result": "Ergebnis",
+  "total": "Gesamt",
+  "individual": "Einzelwürfe",
+  "history": "Würfelhistorie",
+  "clearHistory": "Historie löschen",
+  "modifier": "Modifikator",
+  "detailed_description": "Der Dice Roller ist ein digitales Werkzeug, das es Nutzern ermöglicht, virtuelle Würfel zu werfen, um Zufallszahlen zu generieren. Technisch gesehen handelt es sich dabei um einen zufallsgesteuerten Algorithmus, der unterschiedliche Würfeltypen und -mengen unterstützt. Die Würfel können von 4-seitigen Tetraedern bis hin zu 20-seitigen Ikosaedern variieren. Dieses Tool ist besonders nützlich für Spiele, die auf Zufallsentscheidungen beruhen, oder für statistische Simulationen, bei denen eine gleichmäßige Verteilung der Ereignisse wichtig ist. Nutzer können beispielsweise in Pen & Paper Rollenspielen, wie Dungeons & Dragons, oder bei Entscheidungsfindungen in wissenschaftlichen Experimenten von diesem Tool profitieren. Die Funktionsweise basiert auf der Generierung von Pseudozufallszahlen, die durch einen seedbasierten Zufallszahlengenerator (Random Number Generator, RNG) erzeugt werden. Dies stellt sicher, dass jede Würfelebene die gleiche Wahrscheinlichkeit hat, auf eine bestimmte Seite zu fallen, was die Fairness und Unparteilichkeit des Spiels gewährleistet.",
+  "usage_steps": [
+    "Öffnen Sie die Dice Roller Seite auf der Website und laden Sie die Seite vollständig.",
+    "Wählen Sie den Würfeltyp aus, den Sie werfen möchten, indem Sie auf den entsprechenden Dropdown-Menü klicken. Optionen reichen von 4-seitigen bis hin zu 20-seitigen Würfeln.",
+    "Geben Sie die Anzahl der Würfel ein, die Sie werfen möchten, in das Eingabefeld neben dem Würfeltyp.",
+    "Klicken Sie auf den 'Würfeln' Button, um die virtuellen Würfel zu werfen. Die Ergebnisse werden sofort angezeigt.",
+    "Falls Sie fortlaufende Würfe durchführen möchten, können Sie die Option 'Fortlaufend Würfeln' aktivieren, indem Sie das entsprechende Kästchen ankreuzen.",
+    "Um die Würfelergebnisse zu speichern oder zu teilen, klicken Sie auf den 'Ergebnisse speichern/teilen' Button, um einen Link oder eine Datei herunterzuladen."
+  ],
+  "usage_examples": [
+    "Ein Rollenspielleiter (Dungeon Master) verwendet den Dice Roller, um die Ergebnisse von Würfeln in einem Dungeons & Dragons Spiel in Echtzeit zu generieren, ohne physische Würfel benutzen zu müssen.",
+    "Ein Lehrer in einem Mathematikunterricht nutzt den Dice Roller, um Schüler die Konzepte von Wahrscheinlichkeitsverteilungen und statistischer Analyse visuell und interaktiv zu vermitteln.",
+    "Ein Softwareentwickler verwendet den Dice Roller, um Zufallstests für eine Anwendung durchzuführen, die zufällige Ereignisse simulieren muss, um die Robustheit des Systems zu testen.",
+    "Ein Hobbyforscher, der an einem wissenschaftlichen Projekt arbeitet, benutzt den Dice Roller, um faire Zufallsauswahlen in Experimenten zu erzeugen, um Verzerrungen in den Daten zu minimieren."
+  ],
+  "selectDice": "Würfel auswählen"
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "L'outil Image to PDF est conçu pour convertir plusieurs images en un seul document PDF. Ce processus est réalisé en utilisant des algorithmes de compression et de gestion de la qualité des images, assurant ainsi que le document final conserve une qualité optimale tout en étant de taille raisonnable. Les utilisateurs peuvent ajuster les paramètres de la page, tels que la mise en page, l'orientation, et la qualité des images, avant de procéder à la conversion. Ce outil est particulièrement utile pour les professionnels qui ont besoin de compiler des rapports visuels, des présentations, ou des portfolios en format PDF. Il permet également aux étudiants et aux chercheurs de convertir rapidement des graphiques, des diagrammes, et des images en documents PDF pour une inclusion dans des travaux de recherche ou des articles académiques. La capacité de gérer plusieurs images en une seule action rend ce outil indispensable pour toute personne travaillant avec des ensembles d'images volumineux.",
+  "usage_steps": [
+    "Cliquez sur le bouton 'Sélectionner des images' pour ouvrir l'explorateur de fichiers et choisir les images à convertir.",
+    "Une fois les images sélectionnées, elles apparaîtront dans la liste de preview. Utilisez les options de tri pour organiser l'ordre des pages du PDF.",
+    "Configurez les paramètres de la page en cliquant sur 'Paramètres de la page'. Vous pouvez ajuster l'orientation, la taille de la page, et la qualité des images.",
+    "Si vous le souhaitez, vous pouvez ajouter un titre ou une description à chaque page dans l'onglet 'Métadonnées'.",
+    "Après avoir configuré tous les paramètres, cliquez sur 'Convertir en PDF' pour lancer la conversion.",
+    "Le processus de conversion démarre, et une barre de progression affiche l'avancement. Une fois terminé, le PDF est disponible pour téléchargement."
+  ],
+  "usage_examples": [
+    "Un graphiste souhaite convertir une série de designs de logotypes en un portfolio PDF pour une présentation à des clients potentiels.",
+    "Un étudiant en architecture doit compiler des plans et des maquettes en un document PDF pour une soumission de projet.",
+    "Un responsable marketing a besoin de créer un dossier de presse contenant des captures d'écran d'une nouvelle application mobile.",
+    "Un chercheur en sciences environnementales veut regrouper des photos de terrain et des graphiques de données en un rapport PDF pour une publication scientifique."
+  ]
+}

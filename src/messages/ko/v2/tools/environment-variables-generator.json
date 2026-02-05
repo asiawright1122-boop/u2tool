@@ -1,0 +1,50 @@
+{
+  "detailed_description": "환경 변수 생성기는 일반 서비스의 템플릿으로 정확한 포맷의 `.env` 파일을 생성하는 도구입니다.",
+  "usage_steps": [
+    "템플릿 선택 또는 새로 시작",
+    "변수 이름과 값 추가",
+    "비밀 생성기 사용",
+    "이름��정",
+    ".env로 내보내기"
+  ],
+  "usage_examples": [
+    ".env.example 템플릿 생성",
+    "안전한 API 키 생성",
+    "Docker 설정 구축"
+  ],
+  "input": "입력",
+  "output": "출력",
+  "process": "처리",
+  "copy": "복사",
+  "clear": "지우기",
+  "inputPlaceholder": "여기에 입력하세요...",
+  "outputPlaceholder": "결과가 여기에 표시됩니다...",
+  "errors": {
+    "emptyInput": "입력을 입력해 주세요"
+  },
+  "keyNamePlaceholder": "키 이름",
+  "valuePlaceholder": "값",
+  "descriptionPlaceholder": "설명",
+  "loadExample": "예제 로드",
+  "analyze": "분석",
+  "generate": "생성",
+  "format": "포맷",
+  "convert": "변환",
+  "validate": "검증",
+  "export": "내보내기",
+  "preview": "미리보기",
+  "reset": "초기화",
+  "add": "추가",
+  "remove": "제거",
+  "save": "저장",
+  "cancel": "취소",
+  "settings": "설정",
+  "options": "옵션",
+  "results": "결과",
+  "noResults": "결과 없음",
+  "loading": "로딩 중...",
+  "success": "성공",
+  "failed": "실패",
+  "warning": "경고",
+  "info": "정보"
+}

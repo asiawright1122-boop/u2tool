@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O conversor de timestamp é uma ferramenta especializada para transformar valores numéricos do formato Unix Epoch (segundos ou milissegundos desde 01/01/1970 UTC) em representações legíveis de data/hora no padrão ISO 8601 (YYYY-MM-DDTHH:mm:ssZ) e vice-versa. Este recurso é essencial para desenvolvedores que lidam com logs de sistemas, APIs REST que retornam timestamps em JSON, ou depuração de problemas de sincronização de horários em ambientes distribuídos. O mecanismo interno realiza parsing do input numérico, aplica correções de fuso horário baseadas na biblioteca IANA Time Zone e suporta conversão para formatos alternativos como RFC 2822 ou data SQL. Funciona com precisão de microssegundos quando necessário, identificando automaticamente se o valor fornecido está em segundos (10 dígitos) ou milissegundos (13 dígitos). A interface permite ajustar manualmente o offset UTC e selecionar entre modos de conversão bidirecional através de radio buttons específicos.",
+  "usage_steps": [
+    "Selecione o modo de conversão usando os botões de rádio: 'Timestamp para Data' ou 'Data para Timestamp'",
+    "Insira o valor numérico no campo de entrada (ex: 1717182000000) ou a data formatada (ex: 2024-06-01T15:00:00-03:00)",
+    "Ajuste o fuso horário desejado no seletor dropdown (ex: America/Sao_Paulo ou UTC)",
+    "Clique no botão 'Converter' para processar a transformação",
+    "Analise o resultado exibido em múltiplos formatos simultaneamente (ISO 8601, RFC 2822 e timestamp numérico)",
+    "Utilize o botão 'Copiar Resultado' para transferir o valor convertido para a área de transferência"
+  ],
+  "usage_examples": [
+    "Um desenvolvedor analisa logs de servidores AWS onde timestamps são registrados em UTC e precisa convertê-los para horário local do Brasil para auditoria",
+    "Um engenheiro de dados recebe feeds de APIs externas com datas em formato Unix de 13 dígitos e precisa transformá-las para formato SQL compatível com seu data warehouse",
+    "Um QA identifica inconsistências em horários de transações financeiras e usa o conversor para validar se diferenças de fusos horários estão corretamente aplicadas em um sistema de pagamentos",
+    "Um administrador de sistemas precisa gerar um timestamp futuro correspondente a uma manutenção agendada para configurar um cron job em servidores Linux"
+  ]
+}

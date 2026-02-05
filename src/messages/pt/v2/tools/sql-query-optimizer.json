@@ -1,0 +1,52 @@
+{
+  "detailed_description": "O Otimizador de Consultas SQL analisa suas consultas SQL e fornece sugestões de otimização para melhor desempenho.",
+  "usage_steps": [
+    "Cole a consulta SQL",
+    "Selecione o tipo de banco de dados",
+    "Clique em Otimizar",
+    "Visualize as sugestões",
+    "Aplique as mudanças"
+  ],
+  "usage_examples": [
+    "Otimizar SELECT lento",
+    "Obter recomendações de índices",
+    "Reescrever subconsultas"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processar",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Digite sua consulta SQL...",
+  "outputPlaceholder": "Os resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum conteúdo"
+  },
+  "loadExample": "Carregar exemplo",
+  "analyze": "Analisar",
+  "generate": "Gerar",
+  "format": "Formatar",
+  "convert": "Converter",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Visualizar",
+  "reset": "Redefinir",
+  "add": "Adicionar",
+  "remove": "Remover",
+  "save": "Salvar",
+  "cancel": "Cancelar",
+  "settings": "Configurações",
+  "options": "Opções",
+  "results": "Resultados",
+  "noResults": "Sem resultados",
+  "loading": "Carregando...",
+  "success": "Sucesso",
+  "failed": "Falhou",
+  "warning": "Aviso",
+  "info": "Informação",
+  "sqlQuery": "Consulta SQL",
+  "queryPerformanceScore": "Pontuação de desempenho",
+  "optimizationSuggestions": "Sugestões de otimização",
+  "formattedQuery": "Consulta formatada",
+  "fix": "Correção"
+}

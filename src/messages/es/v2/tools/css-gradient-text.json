@@ -1,0 +1,33 @@
+{
+  "output": "Salida CSS",
+  "copy": "Copiar CSS",
+  "text": "Texto",
+  "color1": "Color 1",
+  "color2": "Color 2",
+  "color3": "Color 3 (opcional)",
+  "angle": "Ángulo",
+  "fontSize": "Tamaño de Fuente",
+  "fontWeight": "Negrita",
+  "presets": "Plantillas",
+  "presetSunset": "Atardecer",
+  "presetOcean": "Océano",
+  "presetPurple": "Morado",
+  "presetFire": "Fuego",
+  "presetMint": "Menta",
+  "presetNight": "Noche",
+  "detailed_description": "El generador CSS Gradient Text es una herramienta avanzada que permite a los desarrolladores y diseñadores web crear efectos de texto degradado utilizando CSS. Este tool se basa en la propiedad `background-clip` y `linear-gradient` para aplicar colores degradados a los textos, permitiendo una personalización visual detallada. Los usuarios pueden experimentar con diferentes ángulos, colores y puntos de inicio y final para lograr el efecto deseado. Este generador es esencial para proyectos web que buscan un toque de elegancia y modernidad, ya que los textos degradados pueden mejorar significativamente la estética de un sitio web. Además, el tool facilita la implementación de estos efectos sin necesidad de escribir manualmente complejas líneas de código CSS, ahorrando tiempo y reduciendo la posibilidad de errores.",
+  "usage_steps": [
+    "1. Accede a la página del generador CSS Gradient Text y haz clic en el botón 'Iniciar' para abrir la interfaz de diseño.",
+    "2. En la sección de 'Configuración del Degradado', selecciona el tipo de degradado (lineal, radial, etc.) y ajusta los colores utilizando el selector de colores.",
+    "3. Define el ángulo del degradado en el campo 'Ángulo' y ajusta los puntos de inicio y final del degradado en los campos correspondientes.",
+    "4. Personaliza el texto que deseas aplicar el efecto degradado en el área de 'Texto'. Puedes cambiar el tamaño, la fuente y el estilo del texto utilizando las opciones disponibles.",
+    "5. Visualiza el resultado en tiempo real en la sección 'Vista Previa'. Si necesitas ajustes adicionales, vuelve a los pasos anteriores y modifica los parámetros.",
+    "6. Una vez que estés satisfecho con el efecto, haz clic en el botón 'Generar Código' para obtener el código CSS. Copia el código generado y pégalo en tu archivo CSS o HTML."
+  ],
+  "usage_examples": [
+    "1. En un sitio web de moda, un diseñador puede usar CSS Gradient Text para crear títulos degradados que resalten en la página principal, dándole un toque sofisticado y atractivo.",
+    "2. Un desarrollador de una aplicación financiera puede aplicar efectos degradados a los encabezados de las secciones para mejorar la legibilidad y la estética, haciendo que la interfaz sea más agradable para los usuarios.",
+    "3. Para un blog de viajes, el propietario del sitio puede utilizar CSS Gradient Text para dar a los títulos de los posts un efecto degradado con colores que reflejen los paisajes descritos, creando una conexión visual con el contenido.",
+    "4. En un portfolio de diseño gráfico, un diseñador puede emplear CSS Gradient Text para crear un logotipo degradado que se destaque en el encabezado del sitio, atrayendo la atención de los visitantes."
+  ]
+}

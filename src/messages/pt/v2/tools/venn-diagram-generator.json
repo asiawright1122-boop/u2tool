@@ -1,0 +1,36 @@
+{
+  "title": "Gerador de Diagramas de Venn",
+  "defaultTitle": "Exemplo de diagrama de Venn",
+  "settings": "Configurações",
+  "chartTitlePlaceholder": "Digite o título...",
+  "mode2Set": "2 conjuntos",
+  "mode3Set": "3 conjuntos",
+  "dataEditor": "Editor de dados",
+  "labelPlaceholder": "Rótulo...",
+  "chartPreview": "Visualização",
+  "downloadPng": "Baixar PNG",
+  "downloadSvg": "Baixar SVG",
+  "dragNote": "Você pode arrastar círculos para ajustar a posição (o modo SVG geralmente funciona melhor).",
+  "tipsTitle": "Dicas",
+  "tip1": "Visual exclusivo para mostrar pontos em comum e diferenças",
+  "tip2": "Personalize o tamanho e a cor do círculo",
+  "confirmClear": "Limpar tudo?",
+  "sampleSet1": "Conjunto A",
+  "sampleSet2": "Conjunto B",
+  "sampleSet3": "Conjunto C",
+  "detailed_description": "O Gerador de Diagramas de Venn é uma ferramenta avançada que permite a criação de diagramas de Venn para visualizar relações lógicas entre conjuntos de dados. Esta ferramenta é essencial para profissionais e estudantes que precisam analisar e apresentar informações complexas de forma clara e visual. Ao usar o Gerador de Diagramas de Venn, os usuários podem explorar interseções, uniões e diferenças entre diferentes conjuntos, facilitando a compreensão de relações complexas.\n\nO Gerador de Diagramas de Venn é baseado em algoritmos de otimização geométrica que garantem a precisão das representações. Os usuários podem ajustar o tamanho, a cor e a posição dos círculos para refletir as proporções e relações dos conjuntos. Além disso, a ferramenta oferece opções de personalização, como adicionar rótulos, legendas e anotações, para melhorar a clareza e a apresentação dos diagramas.\n\nEsta ferramenta é particularmente útil em áreas como ciência de dados, matemática, estatística, educação e comunicação de negócios. Profissionais podem utilizá-la para criar apresentações impactantes e informadas, enquanto pesquisadores e estudantes podem usá-la para ilustrar conceitos complexos e analisar dados de pesquisa.",
+  "usage_steps": [
+    "Passo 1: Acesse a página do Gerador de Diagramas de Venn no site.",
+    "Passo 2: No painel de entrada de dados, insira os nomes dos conjuntos e os elementos de cada conjunto, separados por vírgulas.",
+    "Passo 3: Personalize as configurações do diagrama, como o tamanho e a cor dos círculos, usando as opções disponíveis no painel de estilização.",
+    "Passo 4: Adicione rótulos e legendas para os conjuntos, se necessário, através do painel de anotações.",
+    "Passo 5: Clique no botão 'Gerar Diagrama' para visualizar o diagrama de Venn com as configurações escolhidas.",
+    "Passo 6: Salve o diagrama gerado em formato de imagem ou PDF, ou compartilhe-o diretamente via link."
+  ],
+  "usage_examples": [
+    "Exemplo 1: Um analista de dados está comparando os públicos de três redes sociais diferentes para uma campanha de marketing. Usando o Gerador de Diagramas de Venn, ele pode visualizar a sobreposição de usuários entre as plataformas e identificar os segmentos mais promissores.",
+    "Exemplo 2: Um professor de matemática está preparando uma aula sobre conjuntos e subconjuntos. Com o Gerador de Diagramas de Venn, ele cria exemplos visuais para ilustrar conceitos como interseção e união, facilitando a compreensão dos alunos.",
+    "Exemplo 3: Um cientista de dados está analisando os resultados de uma pesquisa sobre hábitos alimentares. Ele usa o Gerador de Diagramas de Venn para mostrar a interseção entre diferentes grupos de alimentos consumidos, ajudando na identificação de padrões e tendências.",
+    "Exemplo 4: Uma equipe de marketing está planejando uma campanha que envolve diferentes canais de comunicação. Usando o Gerador de Diagramas de Venn, eles podem mapear a sobreposição de clientes que utilizam múltiplos canais, otimizando assim a estratégia de marketing."
+  ]
+}

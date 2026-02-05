@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El Rotador de PDF permite modificar la orientación de páginas individuales o múltiples dentro de un documento PDF mediante transformaciones matriciales precisas. Esta herramienta actúa directamente sobre los metadatos de orientación de cada página, aplicando matrices de transformación afín para rotaciones de 90°, 180° o 270° en sentido horario o antihorario. Utiliza bibliotecas de procesamiento PDF como PDFBox o iText para analizar la estructura interna del archivo, identificar los objetos de página y modificar sus atributos de rotación sin alterar el contenido vectorial ni las fuentes incrustadas. El proceso garantiza una reconstrucción precisa del documento mediante la actualización de los parámetros de la matriz de transformación y la conservación de la integridad del contenido. Los usuarios necesitan esta herramienta para corregir documentos escaneados con orientación incorrecta, preparar libros electrónicos con páginas mixtas, ajustar informes técnicos para impresión en formatos específicos o estandarizar documentos recibidos de múltiples fuentes. Su modo por lotes permite procesar múltiples páginas simultáneamente, manteniendo la coherencia en documentos extensos, mientras que la opción individual permite ajustes precisos sin afectar otras secciones del archivo.",
+  "usage_steps": [
+    "1. Haga clic en 'Seleccionar Archivo PDF' para cargar su documento desde el explorador de archivos.",
+    "2. Utilice la vista de miniaturas para marcar las páginas específicas que desea rotar con checkboxes individuales.",
+    "3. Elija el ángulo de rotación (90°, 180°, 270°) desde el menú desplegable 'Orientación'.",
+    "4. Active la opción 'Previsualizar cambios' para verificar la orientación modificada en el panel de visualización.",
+    "5. Haga clic en 'Aplicar rotación' para ejecutar el procesamiento basado en matrices de transformación afín.",
+    "6. Descargue el PDF resultante desde el botón 'Guardar documento rotado' en formato comprimido ZIP."
+  ],
+  "usage_examples": [
+    "Un ingeniero que necesita corregir un manual técnico donde ciertas páginas de planos aparecen en orientación horizontal al escanearlas desde un documento físico.",
+    "Un editor de libros electrónicos ajustando páginas individuales de un manuscrito para garantizar consistencia visual en dispositivos de lectura vertical.",
+    "Un contable recibiendo facturas digitales con orientaciones mezcladas que deben estandarizarse antes de almacenarlas en un sistema ERP.",
+    "Un diseñador gráfico rotando páginas específicas de un catálogo para crear efectos visuales asimétricos en un proyecto de impresión."
+  ]
+}

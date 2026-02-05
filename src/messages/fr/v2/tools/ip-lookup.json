@@ -1,0 +1,27 @@
+{
+  "detailed_description": "L'outil IP Lookup permet d'extraire des données techniques précises à partir d'une adresse IPv4 ou IPv6, notamment sa localisation géographique (latitude, longitude, fuseau horaire), le fournisseur d'accès (ISP), l'ASN (Autonomous System Number), le pays et la ville, ainsi que des informations complémentaires comme le code postal et les coordonnées géographiques. Conçu pour les développeurs et administrateurs réseau, il utilise des requêtes API vers des bases de données géolocalisées (comme MaxMind ou IP-API) et des serveurs WHOIS pour récupérer ces données en temps réel. Ce outil est essentiel pour diagnostiquer des problèmes de routage, analyser l'origine de trafic réseau suspect, ou optimiser la distribution de contenu via un CDN. Techniquement, l'utilisateur saisit une adresse IP, le système la valide via des expressions régulières (regex), puis effectue des requêtes simultanées aux APIs configurés. Les résultats sont ensuite parsés et affichés en format structuré (JSON, tableau), avec des métadonnées comme le code pays ISO ou le type de connexion (DSL, fibre, etc.).",
+  "usage_steps": [
+    "Accédez à l'outil via le menu 'Réseau' ou la barre de recherche en haut de page.",
+    "Saisissez l'adresse IP (IPv4/IPv6) dans le champ de saisie principal, avec validation automatique par regex.",
+    "Cliquez sur le bouton 'Rechercher' pour déclencher les requêtes API vers les bases de données géolocales.",
+    "Explorez les résultats affichés dans un tableau détaillé : ISP, ASN, coordonnées GPS, code postal, et fuseau horaire.",
+    "Utilisez le bouton 'Exporter' pour télécharger les données en format JSON ou CSV.",
+    "Consultez l'historique des recherches récentes via l'onglet 'Mes consultations' en bas de page."
+  ],
+  "usage_examples": [
+    "Un développeur teste la localisation d'un serveur CDN pour vérifier la latence d'accès depuis différentes régions.",
+    "Un analyste en cybersécurité identifie l'origine géographique d'une attaque DDoS via l'adresse IP source.",
+    "Un marketeur analyse les logs d'accès pour adapter le contenu d'un site aux fuseaux horaires des visiteurs.",
+    "Un utilisateur lambda vérifie si son adresse IP publique correspond bien à la ville déclarée par son FAI."
+  ],
+  "lookup": "Rechercher",
+  "myIp": "Mon IP",
+  "loading": "Chargement...",
+  "ipAddress": "Adresse IP",
+  "country": "Pays",
+  "region": "Région",
+  "city": "Ville",
+  "isp": "FAI",
+  "timezone": "Fuseau horaire",
+  "coordinates": "Coordonnées"
+}

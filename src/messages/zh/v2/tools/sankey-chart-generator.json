@@ -1,0 +1,90 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "showLabel": "显示标签",
+  "nodeWidth": "节点宽度",
+  "nodeGap": "节点间距",
+  "orient": "方向",
+  "orientHorizontal": "水平",
+  "orientVertical": "垂直",
+  "source": "源",
+  "target": "目标",
+  "value": "值",
+  "addLink": "添加链接",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "能量流动",
+  "sampleTitle": "预算流动",
+  "dataEditor": "数据编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "sampleData": {
+    "visit": "访问",
+    "browse": "浏览",
+    "cart": "购物车",
+    "checkout": "结账",
+    "purchase": "购买",
+    "leave": "离开"
+  },
+  "tips": {
+    "title": "提示",
+    "tip1": "定义源和目标节点",
+    "tip2": "设置流动值",
+    "tip3": "调整节点宽度和间距",
+    "tip4": "选择方向",
+    "tip5": "导出为PNG或SVG"
+  },
+  "nodeA": "A",
+  "nodeB": "B",
+  "nodeC": "C",
+  "nodeD": "D",
+  "nodeE": "E",
+  "nodeF": "F",
+  "node": "节点",
+  "detailed_description": "Sankey Chart Generator 是基于 D3.js 构建的矢量可视化工具，通过有向加权图呈现多维度流量数据。该工具采用力导向图算法动态计算节点布局，支持 CSV/JSON 数据格式导入，自动解析源-目标-值三元组并构建流量矩阵。用户可通过调节贝塞尔曲线曲率控制边交叉密度，在 WebGL 渲染引擎中实现百万级数据点的实时渲染。内置的渐变色映射系统支持 HSL 颜色空间插值，可生成具有视觉连续性的流向图谱。特别适用于能源流动分析、供应链路径追踪和网络流量监控等场景，通过交互式节点拖拽功能可自定义布局拓扑结构，配合动态缩放视口实现复杂关系网络的深度探索。",
+  "usage_steps": [
+    "在数据输入面板选择 CSV/JSON 格式，通过拖拽上传或手动输入节点-边关系数据",
+    "使用字段映射器将数据列绑定到 '源节点'、'目标节点' 和 '流量值' 三个维度",
+    "在颜色配置界面为节点分类设置 HSL 色相渐变范围，启用透明度梯度增强视觉层次",
+    "调整力导向图参数滑块，控制节点斥力系数和边弹性系数优化布局密度",
+    "通过右键菜单启用 '流量比例缩放' 功能，使边宽度严格遵循对数刻度映射",
+    "点击导出面板选择 SVG/PNG 格式，调整 DPI 参数至 300-600 范围获取印刷级图像"
+  ],
+  "usage_examples": [
+    "能源部门分析区域电网电力输送损耗，通过节点大小对比发电量与消耗量差异",
+    "电商平台追踪用户购物流程，可视化购物车放弃率与支付转化路径",
+    "物流公司优化运输网络，识别多式联运中的瓶颈路段和冗余节点",
+    "金融机构绘制跨境资金流向图，通过颜色编码追踪不同币种的流通路径"
+  ],
+  "faqs": [
+    {
+      "question": "Sankey Chart Generator 是免费的吗？",
+      "answer": "是的，Sankey Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Sankey Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Sankey Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Sankey Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Sankey Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

@@ -1,0 +1,38 @@
+{
+  "detailed_description": "Le Générateur de configuration Prettier vous aide à créer des fichiers de configuration Prettier personnalisés pour une mise en forme de code cohérente. Configurez toutes les options principales, notamment la largeur d'impression, la largeur des onglets, les guillemets simples ou doubles, les points-virgules, les virgules de fin, l'espacement des crochets et plus encore. Prévisualisez la mise en forme de votre code avec différents paramètres. L'outil génère des fichiers .prettierrc au format JSON prêts à être utilisés dans n'importe quel projet JavaScript, TypeScript, CSS ou HTML.",
+  "usage_steps": [
+    "Définissez votre largeur d'impression préférée (par défaut 80)",
+    "Choisissez la largeur des onglets et si vous utilisez des onglets ou des espaces",
+    "Sélectionnez des guillemets simples ou doubles",
+    "Configurez l'utilisation des points-virgules",
+    "Définissez votre préférence pour les virgules de fin",
+    "Ajustez l'espacement des crochets et d'autres options",
+    "Cliquez sur Générer et copiez la configuration"
+  ],
+  "usage_examples": [
+    "Créez une configuration Prettier pour un projet d'équipe",
+    "Configurez une mise en forme cohérente pour un monorepo",
+    "Configurez Prettier pour un projet React",
+    "Personnalisez la mise en forme pour une migration de codebase héritée"
+  ],
+  "none": "Aucun",
+  "all": "Tous",
+  "always": "Toujours",
+  "avoid": "Éviter",
+  "auto": "Auto",
+  "preserve": "Préserver",
+  "never": "Jamais",
+  "printWidth": "Largeur de ligne",
+  "tabWidth": "Largeur de tabulation",
+  "trailingComma": "Virgule finale",
+  "arrowParens": "Parenthèses fléchées",
+  "endOfLine": "Fin de ligne",
+  "proseWrap": "Retour à la ligne prose",
+  "useTabs": "Utiliser les tabulations",
+  "semi": "Point-virgule",
+  "singleQuote": "Guillemets simples",
+  "bracketSpacing": "Espacement des crochets",
+  "bracketSameLine": "Crochet sur la même ligne",
+  "generate": "Générer",
+  "download": "Télécharger"
+}

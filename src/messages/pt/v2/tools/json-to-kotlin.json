@@ -1,0 +1,33 @@
+{
+  "className": "Nome da Classe",
+  "packageName": "Nome do Pacote",
+  "serializer": "Serializador",
+  "noSerializer": "Nenhum",
+  "useDataClass": "Usar classe de dados",
+  "useNullable": "Usar tipos nulos",
+  "input": "Entrada JSON",
+  "output": "Saída Kotlin",
+  "loadSample": "Carregar Amostra",
+  "copy": "Copiar",
+  "convert": "Converter",
+  "inputPlaceholder": "Insira o objeto JSON...",
+  "outputPlaceholder": "O código Kotlin aparecerá aqui...",
+  "detailed_description": "O JSON to Kotlin é uma ferramenta técnica especializada para transformar estruturas de dados JSON em classes de dados Kotlin otimizadas para serialização. Internamente, o parser analisa o JSON de entrada, infere o esquema com base nos tipos de valores (incluindo tipos aninhados e listas) e gera código Kotlin com anotações @JsonClass ou @Serializable, dependendo da biblioteca escolhida (Moshi ou Kotlinx.serialization). A ferramenta suporta geração de classes imutáveis com val properties, tratamento de campos opcionais via nullable types e preservação de nomes de campos personalizados através de @Json ou @SerialName. Diferente de ferramentas genéricas, esta implementa heurísticas avançadas para resolver ambiguidades em tipos heterogêneos e oferece opções para customizar o namespace do pacote, prefixos de classe e níveis de indentação. É indispensável para desenvolvedores Android que precisam mapear respostas de APIs REST ou trabalhar com configurações dinâmicas em projetos multiplataforma, eliminando erros manuais de conversão e garantindo tipagem segura.",
+  "usage_steps": [
+    "Colete seu JSON no editor de código usando o botão 'Colete seu JSON' ou arrastando o arquivo diretamente",
+    "Ative a opção 'Formatar JSON' para validar e corrigir identação automática antes da conversão",
+    "Escolha o nível de indentação (2-8 espaços) e selecione a biblioteca de serialização desejada (Moshi ou Kotlinx)",
+    "Defina o nome do pacote Kotlin no campo 'Nome do Pacote' para integração direta com seu projeto",
+    "Clique em 'Gerar Classes' para obter o código Kotlin com data classes aninhadas e imports configurados",
+    "Copie o resultado com o botão 'Copiar para Área de Transferência' ou baixe como arquivo .kt via 'Baixar Arquivo ZIP'"
+  ],
+  "usage_examples": [
+    "Converter resposta de API OpenWeatherMap em data classes para app Android que mostra previsão do tempo",
+    "Gerar modelos de dados para microserviço Kotlin no backend que consome mensagens JSON de um broker Kafka",
+    "Transformar configurações de jogo em formato JSON para classes serializáveis em projeto Unity com Kotlin Multiplatform",
+    "Criar estruturas de dados imutáveis a partir de logs JSON para processamento com Apache Spark em cluster Big Data"
+  ],
+  "moshi": "Moshi",
+  "gson": "Gson",
+  "kotlinxSerialization": "Kotlinx Serialization"
+}

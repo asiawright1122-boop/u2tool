@@ -1,0 +1,38 @@
+{
+  "detailed_description": "CORS Testerは、Web開発者がCORS（Cross-Origin Resource Sharing）の設定や関連するHTTPヘッダーを詳細に検証するためのツールです。このツールは、指定されたエンドポイントに擬似的なHTTPリクエスト（特にOPTIONSプリフライトリクエスト）を送信し、サーバーが返すレスポンスヘッダーを解析して、CORSポリシーの適用状況を確認します。具体的には、Access-Control-Allow-Origin、Access-Control-Allow-Methods、Access-Control-Allow-Headersなどの主要ヘッダーの存在や値をチェックし、ブラウザのセキュリティポリシーに準拠しているかを評価します。開発者は、APIの跨域リクエストがブロックされる原因を特定したり、サーバー設定の誤りを修正する際にこのツールを活用できます。技術的には、ツール内部でXMLHttpRequestまたはFetch APIを模倣し、実際のブラウザ動作と同じフローでテストを実行します。これにより、開発環境と本番環境の差異によるCORSエラーを未然に検出可能です。",
+  "usage_steps": [
+    "1. テストしたいエンドポイントのURLを入力するテキストボックスに値を入力してください。",
+    "2. HTTPメソッド選択肢（GET/POST/PUT/DELETE/OPTIONS）から目的のメソッドを選択してください。",
+    "3. リクエストヘッダーをカスタマイズする場合は、「カスタムヘッダーを追加」セクションにキーと値を入力してください。",
+    "4. 「リクエストを送信」ボタンをクリックしてテストを開始します。",
+    "5. レスポンスセクションで表示されるヘッダー情報を確認し、CORS関連の項目をチェックしてください。",
+    "6. 「結果の解析」パネルに表示される診断メッセージを参考に、CORSポリシーの妥当性を評価してください。"
+  ],
+  "usage_examples": [
+    "APIサーバーのAccess-Control-Allow-Originが特定のドメインのみを許可しているか検証する。",
+    "プリフライトリクエストが失敗する原因を特定するため、Access-Control-Allow-Headersの設定ミスを確認する。",
+    "認証情報を含むリクエストを許可するために、Access-Control-Allow-Credentialsの有効性をテストする。",
+    "複数のオリジンを許可する設定で、Originヘッダーの値が正しく反映されているか確認する。"
+  ],
+  "url": "テストURL",
+  "origin": "オリジン",
+  "method": "メソッド",
+  "test": "CORSテスト",
+  "results": "結果",
+  "corsHeaders": "CORSヘッダー",
+  "allowed": "許可",
+  "notAllowed": "不許可",
+  "urlPlaceholder": "https://api.example.com/endpoint",
+  "urlToTest": "テストするURL",
+  "testCors": "CORSをテスト",
+  "loadExample": "例を読み込む",
+  "whatIsCors": "CORSとは？",
+  "corsExplanation": "クロスオリジンリソース共有（CORS）は、Webページが異なるドメインからリソースをリクエストする方法を制御するセキュリティ機能です。",
+  "corsBlocked": "CORSブロック",
+  "corsBlockedDescription": "リクエストはCORSポリシーによってブロックされました",
+  "corsEnabled": "CORS有効",
+  "corsEnabledAll": "すべてのオリジンでCORS有効",
+  "corsEnabledNoHeader": "CORS有効（Access-Control-Allow-Originヘッダーなし）",
+  "testing": "テスト中...",
+  "unknown": "不明"
+}

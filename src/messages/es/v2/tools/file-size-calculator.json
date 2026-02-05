@@ -1,0 +1,29 @@
+{
+  "inputValue": "Valor de Entrada",
+  "unit": "Unidad",
+  "base": "Base",
+  "binary": "Binario",
+  "decimal": "Decimal",
+  "byteConversions": "Conversión de Bytes",
+  "bitConversions": "Conversión de Bits",
+  "totalBytes": "Bytes Totales",
+  "bytes": "bytes",
+  "info": "Información",
+  "binaryDesc": "Usa 1024 como multiplicador (KiB, MiB, GiB). Utilizado por los sistemas operativos.",
+  "decimalDesc": "Usa 1000 como multiplicador (KB, MB, GB). Utilizado por los fabricantes de almacenamiento.",
+  "detailed_description": "El Calculador de Tamaño de Archivo es una herramienta técnica diseñada para realizar conversiones bidireccionales entre múltiples unidades de almacenamiento digital, incluyendo prefijos binarios (KiB, MiB, GiB) y decimales (KB, MB, GB). Internamente, aplica factores de conversión precisos según el estándar IEC 60027-2, donde 1 KiB = 1024 bytes y 1 KB = 1000 bytes, resolviendo discrepancias comunes en sistemas operativos versus dispositivos de almacenamiento. Esta utilidad es esencial para desarrolladores que optimizan recursos en servidores cloud, ingenieros de datos validando límites de transferencia o usuarios técnicos que administran particiones de disco. Al procesar entradas numéricas en tiempo real mediante un algoritmo de detección de cambios en el DOM, actualiza automáticamente resultados en múltiples unidades sin recargar la página, utilizando técnicas de memoización para mejorar el rendimiento en conversiones repetidas.",
+  "usage_steps": [
+    "Selecciona la unidad de origen en el desplegable 'Desde': bytes, KiB, MiB, GiB, KB, MB o GB.",
+    "Introduce el valor numérico en el campo de texto con precisión decimal (ej. 1536.5).",
+    "Elige la unidad de destino en el segundo desplegable 'Hacia', diferente a la unidad de origen.",
+    "Observa el resultado instantáneo en el panel de salida, que muestra el valor convertido con 4 decimales.",
+    "Para conversiones múltiples, haz clic en 'Agregar unidad adicional' y selecciona hasta 3 unidades de destino simultáneas.",
+    "Usa el botón 'Intercambiar' para invertir rápidamente las unidades de origen y destino."
+  ],
+  "usage_examples": [
+    "Un desarrollador web convierte 2.3 GiB a GB para verificar compatibilidad con un servicio de hosting que limita uploads a 2.5 GB.",
+    "Un fotógrafo profesional transforma 768000 KB a TiB para evaluar si sus archivos RAW caben en un NAS de 1TB.",
+    "Un administrador de sistemas convierte 1536 MiB a GB para calcular asignación de memoria RAM en servidores virtuales.",
+    "Un estudiante de informática transforma 4294967296 bytes a GiB para entender la capacidad real de un dispositivo de 4GB frente a su representación binaria."
+  ]
+}

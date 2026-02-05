@@ -1,0 +1,20 @@
+{
+  "algorithm": "خوارزمية",
+  "secretKey": "المفتاح السري",
+  "secretPlaceholder": "أدخل المفتاح السري...",
+  "payload": "الحمولة (JSON)",
+  "generate": "إنشاء JWT",
+  "generatedToken": "الرمز المميز الذي تم إنشاؤه",
+  "commonClaims": "المطالبات المشتركة",
+  "invalidPayload": "حمولة JSON غير صالحة",
+  "error": "فشل في إنشاء JWT",
+  "claims": {
+    "iss": "المصدر",
+    "sub": "موضوع",
+    "aud": "جمهور",
+    "exp": "وقت انتهاء الصلاحية",
+    "nbf": "ليس قبل",
+    "iat": "صدرت في",
+    "jti": "JWT ID"
+  }
+}

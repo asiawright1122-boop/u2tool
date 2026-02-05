@@ -1,0 +1,3172 @@
+{
+  "regex": {},
+  "password": {},
+  "base64": {
+    "name": "Base64エンコーダー/デコーダー",
+    "description": "テキストを Base64 にエンコードしたり、Base64 をテキストに瞬時にデコードしたりできます。",
+    "seo_title": "無料のBase64エンコーダおよびデコーダオンライン",
+    "seo_description": "無料でオンラインでテキストを Base64 にエンコードしたり、Base64 文字列をデコードしたりできます。データのアップロードを必要としない安全なブラウザベースのツール。開発者に最適です。"
+  },
+  "json": {},
+  "hash": {},
+  "qr": {},
+  "color": {},
+  "timestamp": {},
+  "wordCounter": {},
+  "case": {},
+  "html": {},
+  "markdown": {},
+  "lorem": {},
+  "url": {},
+  "xml": {},
+  "chinese": {},
+  "unit": {},
+  "gradient": {},
+  "diffChecker": {},
+  "colorContrast": {},
+  "unicode": {},
+  "minifier": {},
+  "sql": {},
+  "pinyin": {},
+  "colorPicker": {},
+  "aspect": {},
+  "cssBeautifier": {},
+  "jsBeautifier": {},
+  "htmlPreview": {},
+  "ipLookup": {},
+  "morseCode": {},
+  "random": {},
+  "textReverser": {},
+  "lineCounter": {},
+  "stringEscape": {},
+  "yamlJson": {},
+  "dateCalc": {},
+  "dedup": {},
+  "colorBlend": {},
+  "jsonSort": {},
+  "placeholder": {},
+  "encryption": {},
+  "fileHash": {},
+  "tableGen": {},
+  "schemaValidator": {},
+  "regexPatterns": {},
+  "byteCounter": {},
+  "jsonTs": {},
+  "svgOptimizer": {},
+  "textBinary": {},
+  "mdToHtml": {},
+  "epoch": {},
+  "cssUnit": {},
+  "textStats": {},
+  "hexEditor": {},
+  "palette": {},
+  "httpStatus": {},
+  "dataUri": {},
+  "textCompare": {},
+  "jsonGo": {},
+  "chmod": {},
+  "barcode": {},
+  "tts": {},
+  "urlParser": {},
+  "textWrapper": {},
+  "csvJson": {},
+  "csvViewer": {},
+  "csvToJson": {},
+  "htmlEntity": {},
+  "numberFormat": {},
+  "hmac": {},
+  "jwt": {},
+  "metaTagGenerator": {
+    "description": "説明 (150 ～ 160 文字を推奨)"
+  },
+  "openGraphGenerator": {},
+  "twitterCardGenerator": {
+    "description": "説明"
+  },
+  "sqlGenerator": {},
+  "termsGenerator": {},
+  "cssFlexboxGenerator": {},
+  "privacyPolicyGenerator": {},
+  "openGraphPreview": {
+    "description": "説明"
+  },
+  "pwStrength": {},
+  "totp": {},
+  "uaParser": {},
+  "cidr": {},
+  "httpHeader": {},
+  "percent": {},
+  "stats": {},
+  "sci": {},
+  "jsonSql": {},
+  "emoji": {},
+  "extractor": {},
+  "sorter": {},
+  "toml-json": {
+    "name": "TOML/JSON Converter",
+    "description": "TOML 形式と JSON 形式の間で双方向に変換します。",
+    "seo_title": "無料のオンライン TOML JSON コンバーター",
+    "seo_description": "TOML から JSON へ、または JSON から TOML へオンラインで無料で変換します。構文の強調表示を使用して構成ファイルを検証し、フォーマットします。 Rust および Python プロジェクトに不可欠です。"
+  },
+  "json-to-java": {
+    "name": "JSON to Java",
+    "description": "Lombok サポートを使用して、JSON データを Java POJO クラスに変換します。",
+    "seo_title": "無料のJSONからJavaへのオンラインコンバーター",
+    "seo_description": "オンラインで JSON を Java クラスに無料で変換します。 Lombok、ゲッター/セッター、ビルダー パターンをサポートします。 API 開発とデータ モデリングに最適です。"
+  },
+  "json-to-python": {
+    "name": "JSON to Python",
+    "description": "JSON データを Python データクラス、Pydantic、または TypedDict に変換します。",
+    "seo_title": "無料のJSONからPythonへのオンラインコンバーター",
+    "seo_description": "オンラインで JSON を Python データクラスまたは Pydantic モデルに無料で変換します。検証を使用してタイプセーフな Python コードを生成します。 Python API開発には必須です。"
+  },
+  "json-to-kotlin": {
+    "name": "JSON to Kotlin",
+    "description": "シリアル化サポートを使用して、JSON データを Kotlin データ クラスに変換します。",
+    "seo_title": "無料のJSONからKotlinへのオンラインコンバーター",
+    "seo_description": "オンラインで JSON を Kotlin データ クラスに無料で変換します。 Moshi、Gson、Kotlinx アノテーションをサポートします。 Android および Kotlin バックエンド開発に最適です。"
+  },
+  "imageCompressor": {},
+  "imageConverter": {},
+  "favicon": {},
+  "imageCropper": {},
+  "gitignore": {},
+  "dockerCompose": {},
+  "packageJson": {
+    "name": "パッケージ名",
+    "description": "説明",
+    "seo_title": "無料オンラインパッケージ名ツール",
+    "seo_description": "パッケージ名を生成し、管理するための無料オンラインツール。JSON、Base64、SVG、CSS、HTML、PDF、URL、API、GIF、D4、D6、D8、D10、D12、D20に対応。"
+  },
+  "clipPath": {},
+  "uuidValidator": {},
+  "hashCompare": {},
+  "jsonPathFinder": {},
+  "canvas": {},
+  "jsonEscape": {},
+  "cssAnimation": {},
+  "caseCounter": {},
+  "dnsLookup": {},
+  "imageResizer": {},
+  "json-formatter": {
+    "name": "JSONフォーマッター",
+    "description": "構文の強調表示を使用して JSON データをフォーマットし、美しくします。 JSON を検証し、一般的なエラーを修正します。",
+    "seo_title": "オンラインの無料の JSON フォーマッタとバリデータ",
+    "seo_description": "JSON データをオンラインで無料でフォーマット、整形、検証します。構文の強調表示、エラー検出、簡単なコピー。開発者に最適です。"
+  },
+  "uuid-generator": {
+    "name": "UUIDジェネレーター",
+    "description": "ランダムな UUID (v4) を即座に生成します。単一または一括の UUID をコピーします。",
+    "seo_title": "無料のオンライン UUID ジェネレーター - UUID v4 を生成",
+    "seo_description": "ランダムな UUID v4 文字列をオンラインで無料で生成します。一度に複数の UUID の一括生成をサポートします。安全かつ高速で、ブラウザ上で動作します。"
+  },
+  "url-encoder": {
+    "name": "URL Encoder/Decoder",
+    "description": "URL とクエリ文字列を安全にエンコードまたはデコードします。",
+    "seo_title": "無料のオンライン URL エンコーダおよびデコーダ",
+    "seo_description": "URL とクエリ文字列をオンラインで無料でエンコードおよびデコードします。 Web 開発で特殊文字を安全に処理します。高速かつ安全なブラウザ ツール。"
+  },
+  "password-generator": {
+    "name": "パスワード生成",
+    "description": "カスタマイズ可能なオプションを使用して、強力で安全なランダム パスワードを生成します。",
+    "seo_title": "無料の強力なパスワード生成オンライン",
+    "seo_description": "安全なランダムパスワードをオンラインで無料で生成します。大文字、小文字、数字、記号を含めて長さをカスタマイズします。データは保存またはアップロードされません。"
+  },
+  "hash-generator": {
+    "name": "ハッシュジェネレータ",
+    "description": "テキストから MD5、SHA-1、SHA-256 ハッシュを生成します。",
+    "seo_title": "無料の MD5、SHA ハッシュ ジェネレーター オンライン",
+    "seo_description": "MD5、SHA-1、SHA-256、SHA-512 ハッシュをオンラインで無料で生成します。データのアップロードを行わない安全なブラウザベースのハッシュ。ファイルの整合性チェックに最適です。"
+  },
+  "qr-generator": {
+    "name": "QRコード生成",
+    "description": "テキストまたは URL から QR コードを生成します。 PNG としてダウンロードします。",
+    "seo_title": "オンラインで無料の QR コード ジェネレーター",
+    "seo_description": "オンラインでテキスト、URL、またはデータから QR コードを無料で生成します。高品質の PNG 画像としてダウンロードします。サイズとエラー修正レベルをカスタマイズします。"
+  },
+  "color-converter": {
+    "name": "カラーコンバーター",
+    "description": "HEX、RGB、HSL 形式の間で色を変換します。",
+    "seo_title": "無料のカラー コンバーター - HEX RGB HSL オンライン",
+    "seo_description": "オンラインで HEX、RGB、HSL、HSV 形式の間で色を無料で変換できます。ライブプレビューによる瞬時のカラーフォーマット変換。デザイナーにとって必需品。"
+  },
+  "timestamp-converter": {
+    "name": "タイムスタンプ変換",
+    "description": "Unix タイムスタンプを人間が判読できる日付に変換したり、その逆に変換したりできます。",
+    "seo_title": "無料のオンライン Unix タイムスタンプ コンバーター",
+    "seo_description": "Unix タイムスタンプを人間が判読できる日付に変換したり、日付をタイムスタンプにオンラインで無料で変換したりできます。複数の日付形式とタイムゾーンをサポートします。開発者向け。"
+  },
+  "word-counter": {
+    "name": "文字数カウント",
+    "description": "テキスト内の単語、文字、文、段落を数え​​ます。",
+    "seo_title": "無料のワードカウンターと文字カウンターオンライン",
+    "seo_description": "オンラインで単語、文字、文章、段落を無料で数えます。推定読書時間と詳細なテキスト統計を取得します。ライターや編集者に最適です。"
+  },
+  "case-converter": {
+    "name": "大文字・小文字変換",
+    "description": "テキストを大文字、小文字、タイトル文字などに変換します。",
+    "seo_title": "オンラインのフリーテキストケースコンバーター",
+    "seo_description": "テキストケースをオンラインで無料で変換します。大文字、小文字、タイトルケース、センテンスケース、キャメルケース、スネークケースに変換します。開発者とライター向け。"
+  },
+  "html-encoder": {
+    "name": "HTMLエンコーダー/デコーダー",
+    "description": "特殊文字を HTML エンティティにエンコードするか、デコードして戻します。",
+    "seo_title": "無料の HTML エンコーダおよびデコーダ オンライン",
+    "seo_description": "HTML エンティティをオンラインで無料でエンコードおよびデコードします。 Web 開発で特殊文字を安全に処理します。 XSS 攻撃を防止し、HTML を正しく表示します。"
+  },
+  "markdown-preview": {
+    "name": "マークダウンプレビュー",
+    "description": "Markdown を記述してライブ プレビューを確認します。 HTML にエクスポートします。",
+    "seo_title": "無料の Markdown エディターとオンラインでのプレビュー",
+    "seo_description": "Markdown をオンラインで無料で作成してプレビューできます。構文の強調表示と HTML エクスポートを備えたライブ プレビュー。ドキュメント、README ファイル、ブログ投稿に最適です。"
+  },
+  "lorem-ipsum": {
+    "name": "ローレム・イプサムジェネレーター",
+    "description": "デザインやモックアップ用のプレースホルダー テキストを生成します。",
+    "seo_title": "無料のLorem Ipsumジェネレーターオンライン",
+    "seo_description": "Lorem Ipsum プレースホルダー テキストをオンラインで無料で生成します。モックアップやデザイン用の段落、文章、単語を作成します。 Web デザイナーや開発者に最適です。"
+  },
+  "regex-tester": {
+    "name": "正規表現テスター",
+    "description": "リアルタイムのマッチングと強調表示を使用して正規表現をテストします。",
+    "seo_title": "無料のオンライン正規表現テスターとデバッガー",
+    "seo_description": "正規表現をオンラインで無料でテストおよびデバッグします。構文の強調表示と一致グループによるリアルタイムの一致。開発者やデータ処理に最適です。"
+  },
+  "jwt-decoder": {
+    "name": "JWTデコーダー",
+    "description": "JWT トークンをデコードして検査します。ヘッダー、ペイロード、署名を表示します。",
+    "seo_title": "無料の JWT デコーダー オンライン",
+    "seo_description": "JWT (JSON Web Token) をオンラインで無料でデコードして検査します。ヘッダー、ペイロード、署名を検証せずに表示します。認証のデバッグに不可欠です。"
+  },
+  "diff-checker": {
+    "name": "差分チェッカー",
+    "description": "2 つのテキストを比較し、それらの違いを強調表示します。",
+    "seo_title": "オンラインの無料テキスト差分チェッカー",
+    "seo_description": "2 つのテキストをオンラインで無料で比較します。追加、削除、変更されたコンテンツを並べて表示して強調表示します。コードレビューとドキュメントの比較に不可欠です。"
+  },
+  "json-to-csv": {
+    "name": "JSONからCSV",
+    "description": "JSON データを CSV 形式に変換するか、CSV を JSON に変換します。",
+    "seo_title": "無料のJSONからCSVへのオンラインコンバーター",
+    "seo_description": "オンラインで JSON を CSV に、または CSV から JSON に無料で変換します。カスタマイズ可能な区切り文字を使用して、ネストされたオブジェクトと配列を処理します。データのエクスポートやスプレッドシートの作業に最適です。"
+  },
+  "image-to-base64": {
+    "name": "画像をBase64に変換",
+    "description": "HTML および CSS で使用できるように画像を Base64 エンコードに変換します。",
+    "seo_title": "無料の画像からBase64へのオンラインコンバーター",
+    "seo_description": "オンラインで画像を Base64 エンコード文字列に無料で変換します。 PNG、JPG、GIF、SVG 形式をサポートします。 CSS、HTML、JSON データに画像を埋め込むのに最適です。"
+  },
+  "cron-generator": {
+    "name": "Cron 式ジェネレーター",
+    "description": "cron 式を視覚的に生成して解析します。",
+    "seo_title": "オンラインで無料の Cron 式ジェネレーター",
+    "seo_description": "オンラインで cron 式を無料で生成および解析します。プリセットと人間が読める説明を備えたビジュアル エディター。タスクのスケジュール設定や自動化に最適です。"
+  },
+  "text-to-slug": {
+    "name": "テキストからスラッグ",
+    "description": "テキストを URL に適したスラッグ形式に変換します。",
+    "seo_title": "オンラインの無料テキストからスラッグへのコンバーター",
+    "seo_description": "テキストをオンラインで URL に適したスラッグ形式に無料で変換します。特殊文字を削除し、Unicode を処理し、SEO に適した URL を作成します。 Web開発に最適です。"
+  },
+  "number-base-converter": {
+    "name": "基数コンバーター",
+    "description": "数値を 2 進数、8 進数、10 進数、16 進数の間で変換します。",
+    "seo_title": "無料のオンライン数値ベースコンバーター",
+    "seo_description": "2進数、8進数、10進数、16進数をオンラインで無料で変換できます。大きな数値と即時変換をサポートします。プログラマーや学生にとっては必須です。"
+  },
+  "json-path-tester": {
+    "name": "JSONPath Tester",
+    "description": "JSON データに対して JSONPath 式をテストして評価します。",
+    "seo_title": "無料の JSONPath テスター オンライン",
+    "seo_description": "JSONPath 式をオンラインで無料でテストおよびデバッグします。リアルタイムの結果と構文の強調表示を使用して JSON データをクエリします。 API開発には必須です。"
+  },
+  "xml-formatter": {
+    "name": "XMLフォーマッター",
+    "description": "XML データをフォーマットして圧縮し、XML 構文を検証します。",
+    "seo_title": "無料の XML フォーマッタ オンライン",
+    "seo_description": "XML データをオンラインで無料でフォーマット、整形、縮小します。構文の強調表示、エラー検出、ツリー ビュー。 API 開発および構成ファイルに最適です。"
+  },
+  "chinese-converter": {
+    "name": "中国語コンバーター",
+    "description": "簡体字と繁体字の間で変換します。",
+    "seo_title": "無料の中国語簡体字/繁体字コンバーター",
+    "seo_description": "簡体字中国語と繁体字中国語をオンラインで無料で変換します。フレーズのサポートによる正確な文字変換。中国語コンテンツのローカライズに最適です。"
+  },
+  "unit-converter": {
+    "name": "単位変換",
+    "description": "長さ、重量、温度、面積などの単位を変換します。",
+    "seo_title": "オンラインで無料の単位コンバーター",
+    "seo_description": "長さ、重量、温度、面積、体積、速度、データなどのさまざまな単位をオンラインで無料で変換します。クイックリファレンステーブルと即時変換。"
+  },
+  "gradient-generator": {
+    "name": "グラジエントジェネレーター",
+    "description": "線形および放射状のオプションを使用して、CSS グラデーションを視覚的に作成します。",
+    "seo_title": "無料の CSS グラデーション ジェネレーター オンライン",
+    "seo_description": "CSS グラデーションをオンラインで無料で作成します。 CSS と Tailwind コードを使用して線形および放射状のグラデーションを生成します。カラーピッカーとプリセットテンプレートを備えたビジュアルエディター。"
+  },
+  "unicode-converter": {
+    "name": "Unicode変換",
+    "description": "複数の形式でテキストと Unicode エンコードの間で変換します。",
+    "seo_title": "無料のオンライン Unicode コンバーター",
+    "seo_description": "テキストと Unicode エンコードをオンラインで無料で変換します。 HTML エンティティ、CSS エスケープ シーケンス、およびさまざまな Unicode 形式をサポートします。国際化には欠かせません。"
+  },
+  "code-minifier": {
+    "name": "コード圧縮",
+    "description": "HTML、CSS、JavaScript コードを縮小してファイル サイズを削減します。",
+    "seo_title": "オンラインの無料コードミニファイアー",
+    "seo_description": "HTML、CSS、JavaScript コードをオンラインで無料で縮小します。ファイル サイズを削減し、ページの読み込み速度を向上させます。 Web パフォーマンスの最適化と展開に不可欠です。"
+  },
+  "sql-formatter": {
+    "name": "SQL Formatter",
+    "description": "SQL クエリをフォーマットして整形し、読みやすくします。",
+    "seo_title": "無料の SQL フォーマッタ オンライン",
+    "seo_description": "SQL クエリをオンラインで無料でフォーマットして整形します。構文の強調表示とインデントを使用して複数の SQL 言語をサポートします。データベース開発には必須です。"
+  },
+  "pinyin-converter": {
+    "name": "ピンイン変換",
+    "description": "中国語の文字を声調付きまたは声調なしでピンインに変換します。",
+    "seo_title": "無料の中国語からピンインへのコンバーター",
+    "seo_description": "オンラインで中国語の文字をピンインに無料で変換します。音符と番号付きトーンをサポートします。中国語の学習と発音のガイドに欠かせません。"
+  },
+  "color-picker": {
+    "name": "カラーピッカー",
+    "description": "色を選択し、複数の形式で HEX、RGB、HSL 値を取得します。",
+    "seo_title": "無料のオンラインカラーピッカー",
+    "seo_description": "色を選択し、HEX、RGB、HSL 形式でオンラインで色の値を無料で取得します。プリセットパレットと最近の色を備えたビジュアルカラーピッカー。デザイナーに最適です。"
+  },
+  "aspect-ratio": {
+    "name": "アスペクト比計算ツール",
+    "description": "アスペクト比を計算し、それに比例して寸法を変更します。",
+    "seo_title": "無料のアスペクト比計算ツール",
+    "seo_description": "アスペクト比を計算し、オンラインで画像を比例的にサイズ変更することが無料です。 16:9、4:3、1:1 などの一般的な比率をサポートします。ビデオ編集やデザインに最適です。"
+  },
+  "css-beautifier": {
+    "name": "CSS Beautifier",
+    "description": "縮小オプションと美化オプションを使用して CSS コードをフォーマットし、美化します。",
+    "seo_title": "無料の CSS ビューティファイアーオンライン",
+    "seo_description": "CSS コードをオンラインで無料でフォーマット、整形、縮小します。カスタマイズ可能なインデントを使用した構文の強調表示。 Web 開発者とフロントエンドの最適化に最適です。"
+  },
+  "js-beautifier": {
+    "name": "JavaScript Beautifier",
+    "description": "縮小オプションと美化オプションを使用して、JavaScript コードをフォーマットし、美化します。",
+    "seo_title": "無料のJavaScript美容ツールオンライン",
+    "seo_description": "JavaScript コードをオンラインで無料でフォーマット、整形、縮小します。カスタマイズ可能なインデントを使用した構文の強調表示。 Web 開発者と最適化に最適です。"
+  },
+  "html-preview": {
+    "name": "HTMLプレビュー",
+    "description": "CSS と JavaScript のサポートにより、HTML コードをリアルタイムでプレビューします。",
+    "seo_title": "無料HTMLプレビューツール - リアルタイムレンダリング | U2Tool",
+    "seo_description": "HTMLコードをリアルタイムでプレビュー。CSS/JavaScriptサポート付きで即座にレンダリング。Web開発、プロトタイピング、コード学習に最適な無料オンラインツール。"
+  },
+  "ip-lookup": {
+    "name": "IP検索",
+    "description": "IP アドレスの場所、ISP、その他の情報を検索します。",
+    "seo_title": "オンラインで無料の IP アドレス検索",
+    "seo_description": "IP アドレスの地理位置情報をオンラインで無料で検索します。国、都市、ISP、タイムゾーン、座標を取得します。ネットワークのトラブルシューティングやセキュリティ分析に最適です。"
+  },
+  "morse-code": {
+    "name": "モールス信号コンバータ",
+    "description": "テキストをモールス信号に、またはモールス信号をテキストに変換します。",
+    "seo_title": "無料のオンラインモールス信号コンバータ",
+    "seo_description": "テキストをモールス信号に、またはモールス信号をテキストにオンラインで無料で変換します。速度を調整できるオーディオ再生のサポート。学習者や愛好家に最適です。"
+  },
+  "random-generator": {
+    "name": "乱数ジェネレーター",
+    "description": "一括生成と独自のオプションを使用して、指定された範囲内の乱数を生成します。",
+    "seo_title": "オンラインで無料の乱数ジェネレーター",
+    "seo_description": "オンラインで無料で乱数を生成します。カスタム範囲、一意の数値、および複数の結果をサポートします。ゲーム、宝くじ、ランダム選択タスクに最適です。"
+  },
+  "text-reverser": {
+    "name": "テキスト反転",
+    "description": "テキスト内の文字、単語、または行の順序を逆にします。",
+    "seo_title": "オンラインのフリーテキストリバーサー",
+    "seo_description": "テキストの文字、単語、行をオンラインで無料で反転できます。インスタントプレビューを備えた複数の反転モード。パズル、エンコード、テキスト操作に最​​適です。"
+  },
+  "line-counter": {
+    "name": "行数カウント",
+    "description": "重複、空行の削除、並べ替えのオプションを使用して、テキスト内の行をカウントします。",
+    "seo_title": "オンライン無料ラインカウンター",
+    "seo_description": "行数を数え、重複を削除し、テキストをオンラインで無料で並べ替えます。合計行、空行、および一意の行に関する統計を取得します。データのクリーニングやテキスト処理に最適です。"
+  },
+  "string-escape": {
+    "name": "文字列のエスケープ/エスケープ解除",
+    "description": "JSON、HTML、URL、および JavaScript 形式の文字列をエスケープまたはエスケープ解除します。",
+    "seo_title": "オンラインの無料文字列エスケープ ツール",
+    "seo_description": "さまざまなプログラミング言語の文字列を無料でオンラインでエスケープおよびエスケープ解除します。 JSON、HTML、URL、および正規表現のエスケープをサポートします。開発者に最適です。"
+  },
+  "yaml-json": {
+    "name": "YAML/JSON変換",
+    "description": "YAML 形式と JSON 形式の間で変換します。",
+    "seo_title": "無料のYAML JSONコンバータオンライン",
+    "seo_description": "YAML から JSON へ、または JSON から YAML へオンラインで無料で変換します。構文の強調表示を使用して構成ファイルを検証し、フォーマットします。 DevOps と構成に不可欠です。"
+  },
+  "date-calculator": {
+    "name": "日付計算機",
+    "description": "2 つの日付の差を計算したり、日付から日数を加算または減算したりできます。",
+    "seo_title": "オンラインの無料日付計算ツール",
+    "seo_description": "日付の差を計算し、オンラインで日数を無料で加算/減算できます。日付間の日、週、月、年を取得します。プロジェクトの計画とスケジュール管理に最適です。"
+  },
+  "text-deduplicator": {
+    "name": "重複行削除",
+    "description": "テキストから重複行を削除し、一意のコンテンツのみを保持します。",
+    "seo_title": "オンラインの無料テキスト重複除去ツール",
+    "seo_description": "オンラインでテキストから重複行を無料で削除します。大文字と小文字を区別する一致と行のトリミングをサポートします。データクリーニングやリスト処理タスクに最適です。"
+  },
+  "color-blender": {
+    "name": "カラーブレンダー",
+    "description": "2 つの色をブレンドし、グラデーション ステップを生成します。",
+    "seo_title": "オンラインの無料カラーブレンダー",
+    "seo_description": "2 つの色をブレンドし、オンラインで無料でグラデーション ステップを生成します。カスタマイズ可能なステップでスムーズなカラートランジションを作成します。デザイナーやパレットに最適です。"
+  },
+  "json-sorter": {
+    "name": "JSON Sorter",
+    "description": "JSON オブジェクトをキー名で並べ替えます。",
+    "seo_title": "無料のオンライン JSON ソーター",
+    "seo_description": "JSON キーをオンラインで無料でアルファベット順に並べ替えます。ネストされたオブジェクトの並べ替えで昇順と降順をサポートします。 API開発には必須です。"
+  },
+  "placeholder-image": {
+    "name": "プレースホルダー画像ジェネレーター",
+    "description": "カスタム サイズと色のプレースホルダー画像を生成します。",
+    "seo_title": "無料のプレースホルダー画像ジェネレーター",
+    "seo_description": "カスタムの寸法と色のプレースホルダー画像をオンラインで無料で生成します。モックアップ、ワイヤーフレーム、Web デザインのプロトタイピングに最適です。 PNG としてダウンロードします。"
+  },
+  "text-encryption": {
+    "name": "テキスト暗号化",
+    "description": "パスワードを使用した AES 暗号化を使用してテキストを暗号化および復号化します。",
+    "seo_title": "オンラインの無料テキスト暗号化ツール",
+    "seo_description": "オンラインで AES-256 暗号化を使用してテキストを無料で暗号化および復号化します。パスワード保護による安全なブラウザベースの暗号化。サーバーにデータがアップロードされていません。"
+  },
+  "file-hash": {
+    "name": "ファイルハッシュ計算機",
+    "description": "ファイルの MD5、SHA-1、SHA-256、SHA-512 ハッシュを計算します。",
+    "seo_title": "オンラインの無料ファイル ハッシュ計算ツール",
+    "seo_description": "ファイル ハッシュ (MD5、SHA-1、SHA-256、SHA-512) をオンラインで無料で計算します。ファイルの整合性を確認し、変更を検出します。安全なブラウザベースの処理。"
+  },
+  "html-table-generator": {
+    "name": "HTML Table Generator",
+    "description": "カスタマイズ可能な行と列を含む HTML テーブルを視覚的に生成します。",
+    "seo_title": "無料のオンライン HTML テーブル ジェネレーター",
+    "seo_description": "オンラインのビジュアルエディターを使用して HTML テーブルを無料で生成します。行、列、ヘッダー、スタイルをカスタマイズします。 Web サイトのクリーンな HTML コードをエクスポートします。"
+  },
+  "json-schema-validator": {
+    "name": "JSON Schema Validator",
+    "description": "JSON スキーマに対して JSON データを検証します。",
+    "seo_title": "無料のオンライン JSON スキーマ検証ツール",
+    "seo_description": "JSON データを JSON スキーマに対してオンラインで無料で検証します。ドラフト-04、ドラフト-06、およびドラフト-07 スキーマをサポートします。詳細なエラー メッセージと検証レポートを取得します。"
+  },
+  "regex-patterns": {
+    "name": "正規表現パターン ライブラリ",
+    "description": "電子メール、URL、電話などの一般的な正規表現パターン。",
+    "seo_title": "無料の正規表現パターン ライブラリ",
+    "seo_description": "電子メール、URL、電話番号、IP アドレス、日付などの一般的な正規表現パターンをオンラインで無料で参照できます。ワンクリックでコピーしてコード内で使用できます。開発者向けリファレンス。"
+  },
+  "byte-counter": {
+    "name": "バイト数カウント",
+    "description": "UTF-8、UTF-16、および ASCII エンコードをサポートしてテキスト内のバイトをカウントします。",
+    "seo_title": "オンラインの無料バイトカウンター",
+    "seo_description": "UTF-8、UTF-16、その他のエンコーディングのテキスト バイトをオンラインで無料でカウントします。文字数、単語数、バイトサイズを取得します。データ サイズの見積もりに不可欠です。"
+  },
+  "json-to-typescript": {
+    "name": "JSONからTypeScript",
+    "description": "JSON データを TypeScript インターフェイス定義に変換します。",
+    "seo_title": "無料の JSON から TypeScript コンバーター",
+    "seo_description": "オンラインで JSON を TypeScript インターフェイスおよび型に無料で変換します。オプションのプロパティとネストされた型を使用して、タイプセーフなコードを生成します。 TS 開発者にとって必須です。"
+  },
+  "svg-optimizer": {
+    "name": "SVG Optimizer",
+    "description": "SVG コードを最適化および圧縮してファイル サイズを削減します。",
+    "seo_title": "無料の SVG オプティマイザー オンライン",
+    "seo_description": "SVG ファイルをオンラインで無料で最適化および圧縮します。不要なメタデータを削除し、コードを縮小し、ファイル サイズを削減します。 Web パフォーマンスの最適化に最適です。"
+  },
+  "text-to-binary": {
+    "name": "テキストからバイナリへ",
+    "description": "テキストをバイナリに、またはバイナリからテキストに変換します。",
+    "seo_title": "フリーテキストからバイナリへのコンバーター",
+    "seo_description": "オンラインでテキストをバイナリ コードに、またはバイナリからテキストに無料で変換します。 ASCII および Unicode エンコーディングをサポートします。バイナリおよびデータ エンコーディングの概念を学習するのに最適です。"
+  },
+  "markdown-to-html": {
+    "name": "HTML へのマークダウン",
+    "description": "Markdown テキストを HTML コードに変換します。",
+    "seo_title": "無料のマークダウンから HTML へのコンバーター",
+    "seo_description": "オンラインでMarkdownをHTMLに無料で変換します。テーブル、コード ブロック、タスク リストを使用して GitHub Flavored Markdown をサポートします。クリーンな HTML 出力をプレビューしてコピーします。"
+  },
+  "html-minifier": {
+    "name": "HTML Minifier",
+    "description": "HTML コードを縮小および美化し、ファイル サイズを削減します。",
+    "seo_title": "無料のオンライン HTML ミニファイアー",
+    "seo_description": "HTML コードをオンラインで無料で縮小および圧縮します。空白やコメントを削除し、属性を最適化します。ファイル サイズを削減し、ページの読み込み速度を向上させます。"
+  },
+  "json-diff": {
+    "name": "JSON Diff",
+    "description": "2 つの JSON オブジェクトを比較し、相違点を見つけます。",
+    "seo_title": "無料のオンライン JSON Diff ツール",
+    "seo_description": "2 つの JSON オブジェクトを比較し、オンラインで無料で相違点を見つけます。追加、削除、および変更された値を並べて表示して強調表示します。 API のデバッグには必須です。"
+  },
+  "base32": {
+    "name": "Base32 エンコーダ/デコーダ",
+    "description": "テキストを Base32 にエンコードするか、Base32 をテキストにデコードします。",
+    "seo_title": "無料のBase32エンコーダおよびデコーダオンライン",
+    "seo_description": "オンラインでテキストを Base32 にエンコードしたり、Base32 文字列をデコードしたりできます。 RFC 4648 標準エンコーディングをサポートします。 TOTP シークレットと安全なデータ エンコーディングに最適です。"
+  },
+  "epoch-converter": {
+    "name": "エポックコンバーター",
+    "description": "エポック/Unix タイムスタンプと日付時刻の間で変換します。",
+    "seo_title": "無料のエポックタイムコンバータオンライン",
+    "seo_description": "Unix エポック タイムスタンプを人間が判読できる日付に、またはその逆にオンラインで無料で変換します。ミリ秒と秒をサポートします。開発者とログにとって必須です。"
+  },
+  "css-unit-converter": {
+    "name": "CSS Unit Converter",
+    "description": "px、rem、em、pt、vw、vh などの CSS 単位間で変換します。",
+    "seo_title": "無料のオンライン CSS 単位コンバーター",
+    "seo_description": "CSS 単位 (px、em、rem、%、vw、vh) をオンラインで無料で変換します。基本フォント サイズを使用してレスポンシブ値を計算します。レスポンシブ Web デザインには必須です。"
+  },
+  "text-statistics": {
+    "name": "テキスト統計",
+    "description": "文字、単語、文章、段落などの詳細な統計。",
+    "seo_title": "オンラインの無料テキスト統計ツール",
+    "seo_description": "オンラインでテキスト統計を無料で分析します。単語数、文字数、文章数、読書時間、読みやすさのスコアを取得します。ライターや編集者に最適です。"
+  },
+  "hex-editor": {
+    "name": "16進エディタ",
+    "description": "テキストと 16 進数の間で変換し、バイト データを表示します。",
+    "seo_title": "無料のオンライン Hex エディター",
+    "seo_description": "テキストを 16 進数に、16 進数をテキストにオンラインで無料で変換します。 ASCII プレビューで 16 進データを表示および編集します。デバッグとバイナリ データ分析に不可欠です。"
+  },
+  "color-palette": {
+    "name": "カラーパレット生成",
+    "description": "色合い、補色、類似色、および三項配色を生成します。",
+    "seo_title": "オンラインで無料のカラー パレット ジェネレーター",
+    "seo_description": "カラー パレットとスキームをオンラインで無料で生成します。相補的、類似した、3 要素の、単色のパレットを作成します。 CSS、SCSS、または JSON 形式でエクスポートします。"
+  },
+  "http-status": {
+    "name": "HTTP Status Codes",
+    "description": "HTTP ステータス コードとその意味を調べてください。",
+    "seo_title": "HTTPステータスコード完全リファレンス",
+    "seo_description": "HTTPステータスコードの完全なリファレンス。1xx、2xx、3xx、4xx、5xxコードの意味を解説。"
+  },
+  "json-to-yaml": {
+    "name": "JSON to YAML",
+    "description": "JSON データを YAML 形式に変換します。",
+    "seo_title": "無料のJSONからYAMLへのオンラインコンバーター",
+    "seo_description": "オンラインで JSON を YAML 形式に無料で変換します。適切なインデントと書式設定でデータ構造を保持します。構成ファイルと DevOps に最適です。"
+  },
+  "data-uri": {
+    "name": "データ URI ジェネレーター",
+    "description": "ファイルを HTML/CSS に埋め込むためのデータ URI 形式に変換します。",
+    "seo_title": "オンラインの無料データ URI ジェネレーター",
+    "seo_description": "オンラインでファイルまたはテキストからデータ URI を無料で生成します。画像、フォント、ファイルを Base64 データ URL に変換します。 CSS や HTML にアセットを埋め込むのに最適です。"
+  },
+  "text-compare": {
+    "name": "テキスト類似度比較",
+    "description": "2 つのテキスト間の類似性を比較し、編集距離を計算します。",
+    "seo_title": "フリーテキストの類似性比較ツール",
+    "seo_description": "テキストの類似性を比較し、オンラインで相違点を無料で見つけます。レーベンシュタイン距離と類似性のパーセンテージを計算します。コンテンツのレビューには必須です。"
+  },
+  "json-to-go": {
+    "name": "JSON to Go Struct",
+    "description": "JSON データを Go 構造体定義に変換します。",
+    "seo_title": "無料の JSON to Go 構造体コンバーター",
+    "seo_description": "オンラインで JSON を Go 構造体に無料で変換します。適切なフィールドタグとネストされた構造体のサポートを備えたタイプセーフな Go コードを生成します。 Go API 開発には必須です。"
+  },
+  "html-to-jsx": {
+    "name": "HTML to JSX",
+    "description": "HTML コードを React JSX 形式に変換します。",
+    "seo_title": "無料のHTMLからJSXへのオンラインコンバーター",
+    "seo_description": "HTML コードをオンラインで React JSX 形式に無料で変換します。クラスを className に変換し、スタイル文字列をオブジェクトに変換します。 React 開発者にとって必須。"
+  },
+  "chmod-calculator": {
+    "name": "Chmod 計算機",
+    "description": "Linux/Unix ファイルのアクセス許可を 8 進数および記号表記で計算します。",
+    "seo_title": "無料のオンライン Chmod 計算ツール",
+    "seo_description": "Unix ファイルのアクセス許可 (chmod) をオンラインで無料で計算します。数値表記と記号表記の間で変換します。読み取り、書き込み、実行の権限を視覚化します。"
+  },
+  "barcode-generator": {
+    "name": "バーコードジェネレーター",
+    "description": "Code 128、Code 39、EAN-13、および UPC 形式でバーコードを生成します。",
+    "seo_title": "無料のオンラインバーコードジェネレーター",
+    "seo_description": "オンラインで無料でバーコードを生成します。 Code128、Code39、EAN-13、UPC-A などの形式をサポートします。 PNG または SVG としてダウンロードします。在庫や製品のラベル付けに最適です。"
+  },
+  "text-to-speech": {
+    "name": "テキスト読み上げ",
+    "description": "音声、速度、ピッチを調整してテキストを音声に変換します。",
+    "seo_title": "オンラインでの無料テキスト読み上げ",
+    "seo_description": "オンラインでテキストを音声に無料で変換します。速度とピッチを調整できる複数の音声と言語。音声をダウンロードするか、ブラウザで聞いてください。"
+  },
+  "url-parser": {
+    "name": "URL Parser",
+    "description": "プロトコル、ホスト、パス、クエリ パラメーターなどの URL コンポーネントを解析および分析します。",
+    "seo_title": "無料のオンライン URL パーサー",
+    "seo_description": "オンラインで URL を無料で解析および分析します。プロトコル、ホスト、ポート、パス、クエリパラメータ、ハッシュを抽出します。 URL コンポーネントをエンコードおよびデコードします。"
+  },
+  "json-to-xml": {
+    "name": "JSON to XML",
+    "description": "JSON データを XML 形式に変換します。",
+    "seo_title": "無料のJSONからXMLへのオンラインコンバーター",
+    "seo_description": "オンラインで JSON を XML 形式に無料で変換します。適切な要素のネストと属性を含むデータ構造を保持します。 API 統合とデータ交換に最適です。"
+  },
+  "text-wrapper": {
+    "name": "テキスト折り返し",
+    "description": "指定した線幅でテキストを折り返す。",
+    "seo_title": "オンラインの無料テキストラッパー",
+    "seo_description": "指定した幅でテキストをオンラインで無料で折り返すことができます。単語の境界または固定位置に改行を追加します。コードのコメントやドキュメントの書式設定に最適です。"
+  },
+  "csv-to-json": {
+    "name": "CSV to JSON",
+    "description": "カスタマイズ可能な区切り文字を使用して CSV データを JSON 形式に変換します。",
+    "seo_title": "無料のCSVからJSONへのオンラインコンバーター",
+    "seo_description": "オンラインで CSV を JSON 形式に無料で変換します。カスタムの区切り文字とヘッダーを使用して CSV を解析します。ネストされたオブジェクトと配列をサポートします。データのインポートに最適です。"
+  },
+  "html-entity": {
+    "name": "HTML Entity Converter",
+    "description": "特殊文字や記号を含む HTML エンティティをエンコードおよびデコードします。",
+    "seo_title": "無料のオンライン HTML エンティティ コンバーター",
+    "seo_description": "HTML エンティティをオンラインで無料で変換します。特殊文字を HTML エンティティにエンコードし、エンティティを文字にデコードします。 XSS 攻撃を防止し、HTML を表示します。"
+  },
+  "number-formatter": {
+    "name": "数値フォーマッタ",
+    "description": "小数点、通貨、およびパーセントのスタイルを使用して、さまざまなロケールで数値を書式設定します。",
+    "seo_title": "無料のオンライン数値フォーマッタ",
+    "seo_description": "さまざまなロケールの数値をオンラインで無料でフォーマットできます。千の区切り文字、小数点以下の桁数、通貨記号、パーセントの書式設定を追加します。 i18n には必須です。"
+  },
+  "hmac-generator": {
+    "name": "HMAC Generator",
+    "description": "SHA-1、SHA-256、SHA-512 アルゴリズムを使用して HMAC 署名を生成します。",
+    "seo_title": "無料の HMAC ジェネレーター オンライン",
+    "seo_description": "MD5、SHA-1、SHA-256、SHA-512 アルゴリズムを使用して HMAC 署名をオンラインで無料で生成します。 API の安全なメッセージ認証とデータ整合性検証。"
+  },
+  "password-strength": {
+    "name": "パスワード強度チェッカー",
+    "description": "長さ、文字の種類、一般的なパターンをチェックしてパスワードの強度を分析します。",
+    "seo_title": "無料のオンラインパスワード強度チェッカー",
+    "seo_description": "パスワードの強度をオンラインで無料でチェックできます。エントロピー スコア、クラック時間の推定、改善提案を含む詳細な分析を取得します。セキュリティには欠かせません。"
+  },
+  "totp-generator": {
+    "name": "TOTP Generator",
+    "description": "Google Authenticator と互換性のある時間ベースのワンタイム パスワードを生成します。",
+    "seo_title": "オンラインの無料 TOTP ジェネレーター",
+    "seo_description": "TOTP ワンタイム パスワードをオンラインで無料で生成します。カスタム秘密鍵と時間間隔を使用して、Google Authenticator と互換性のあるコードをサポートします。 2FA テスト用。"
+  },
+  "user-agent-parser": {
+    "name": "ユーザーエージェントパーサー",
+    "description": "ユーザー エージェント文字列を解析して、ブラウザ、OS、デバイスの情報を特定します。",
+    "seo_title": "無料のユーザー エージェント パーサー オンライン",
+    "seo_description": "ユーザー エージェント文字列をオンラインで無料で解析します。ブラウザ、OS、デバイスの種類、バージョン情報を抽出します。 Web 分析とデバイス検出に不可欠です。"
+  },
+  "cidr-calculator": {
+    "name": "CIDR Calculator",
+    "description": "IP アドレス範囲、サブネット マスク、および利用可能なホストを計算します。",
+    "seo_title": "無料のオンラインCIDR計算ツール",
+    "seo_description": "CIDR サブネット情報をオンラインで無料で計算します。ネットワーク アドレス、ブロードキャスト アドレス、ホスト範囲、およびサブネット マスクを取得します。ネットワーク管理者にとって必須です。"
+  },
+  "http-header-parser": {
+    "name": "HTTP Header Parser",
+    "description": "各ヘッダーの説明を含む HTTP ヘッダーを解析してフォーマットします。",
+    "seo_title": "無料のオンライン HTTP ヘッダー パーサー",
+    "seo_description": "HTTP ヘッダーをオンラインで無料で解析します。詳細な説明とともにリクエストとレスポンスのヘッダーを分析します。 API デバッグと Web 開発に不可欠です。"
+  },
+  "percentage-calculator": {
+    "name": "パーセンテージ計算機",
+    "description": "パーセンテージ、パーセンテージの変化、および値の増減を計算します。",
+    "seo_title": "オンラインの無料パーセンテージ計算ツール",
+    "seo_description": "オンラインでパーセンテージ、変化率、比率を無料で計算します。 X が Y の何パーセントであるかをパーセント単位で増減して求めます。数学には必須です。"
+  },
+  "statistics-calculator": {
+    "name": "統計計算機",
+    "description": "平均、中央値、最頻値、標準偏差、分散などを計算します。",
+    "seo_title": "オンラインの無料統計計算ツール",
+    "seo_description": "オンラインで統計指標を無料で計算します。平均、中央値、最頻値、標準偏差、分散などを取得します。データ分析と研究には不可欠です。"
+  },
+  "scientific-calculator": {
+    "name": "関数電卓",
+    "description": "三角関数、対数関数、指数関数を使用して科学計算を実行します。",
+    "seo_title": "無料オンライン関数電卓",
+    "seo_description": "sin、cos、tan、log、ln、sqrt、power などの関数を備えた無料のオンライン関数電卓。括弧と複雑な式をサポートします。学生向け。"
+  },
+  "text-sorter": {
+    "name": "テキストソート",
+    "description": "さまざまなオプションを使用して、テキスト行をアルファベット順、数値順、または長さ順に並べ替えます。",
+    "seo_title": "オンラインの無料テキストソーター",
+    "seo_description": "テキスト行をアルファベット順、数値順、自然順、または長さ順にオンラインで無料で並べ替えます。昇順と降順をサポートします。データ整理には欠かせません。"
+  },
+  "text-extractor": {
+    "name": "テキスト抽出",
+    "description": "テキストから電子メール、URL、電話番号、IP アドレスなどを抽出します。",
+    "seo_title": "オンラインの無料テキスト抽出ツール",
+    "seo_description": "オンラインでテキストから電子メール、URL、電話番号、IP アドレス、ハッシュタグ、メンションを無料で抽出します。ワンクリックで一括抽出。データマイニングには必須です。"
+  },
+  "emoji-picker": {
+    "name": "絵文字ピッカー",
+    "description": "ワンクリックで絵文字をカテゴリ別に参照、検索、コピーできます。",
+    "seo_title": "無料のオンライン絵文字ピッカー",
+    "seo_description": "オンラインでカテゴリ別に絵文字を無料で閲覧してコピーできます。肌色のバリエーションを含む名前で絵文字を検索します。ワンクリックでクリップボードにコピーできます。ソーシャルメディアに最適です。"
+  },
+  "json-to-sql": {
+    "name": "JSON to SQL",
+    "description": "CREATE TABLE サポートを使用して、JSON 配列を SQL INSERT ステートメントに変換します。",
+    "seo_title": "無料のJSONからSQLへのオンラインコンバーター",
+    "seo_description": "オンラインで JSON データを SQL INSERT ステートメントに無料で変換します。 MySQL、PostgreSQL、SQLite 構文をサポートします。データベースインポートのための一括挿入生成。"
+  },
+  "image-compressor": {
+    "name": "画像圧縮器",
+    "description": "画像を圧縮して、品質を維持しながらファイル サイズを削減します。",
+    "seo_title": "オンラインの無料画像コンプレッサー",
+    "seo_description": "オンラインで無料で画像を圧縮します。品質を調整して PNG、JPEG、WebP ファイル サイズを縮小します。バッチ圧縮のサポート。ウェブの最適化に最適です。"
+  },
+  "image-converter": {
+    "name": "画像フォーマットコンバータ",
+    "description": "画像を PNG、JPEG、WebP 形式の間で変換します。",
+    "seo_title": "無料のオンライン画像フォーマットコンバーター",
+    "seo_description": "オンラインで画像を PNG、JPEG、WebP、GIF 形式の間で無料で変換できます。品質設定を使用したバッチ変換。 Web の最適化と互換性に最適です。"
+  },
+  "favicon-generator": {
+    "name": "ファビコンジェネレーター",
+    "description": "任意の画像から複数のサイズのファビコンを生成します。",
+    "seo_title": "オンラインで無料のファビコンジェネレーター",
+    "seo_description": "複数のサイズ (16x16、32x32、48x48、64x64) のファビコンをオンラインで無料で生成します。画像をアップロードし、ファビコン パックをダウンロードします。ウェブサイトのブランディングには欠かせません。"
+  },
+  "image-cropper": {
+    "name": "画像クロッパー",
+    "description": "自由または固定のアスペクト比を選択して画像をトリミングします。",
+    "seo_title": "無料画像クロッパーオンライン",
+    "seo_description": "カスタムまたはプリセットのアスペクト比を使用して、画像をオンラインで無料で切り抜きます。 1:1、4:3、16:9、およびフリーフォームのトリミングをサポートします。トリミングされた画像を即座にダウンロードします。"
+  },
+  "gitignore-generator": {
+    "name": ".gitignore ジェネレーター",
+    "description": "さまざまなプロジェクトの種類と言語に対応する .gitignore ファイルを生成します。",
+    "seo_title": "無料の .gitignore ジェネレーター オンライン",
+    "seo_description": "Node.js、Python、Java、Go、Ruby などの .gitignore ファイルをオンラインで無料で生成します。テンプレートを選択し、ルールをカスタマイズします。リポジトリをクリーンな状態に保ちます。"
+  },
+  "docker-compose-generator": {
+    "name": "Docker Compose ジェネレーター",
+    "description": "MySQL、Redis、Nginx などの一般的なサービスを使用して docker-compose.yml ファイルを生成します。",
+    "seo_title": "オンラインの無料 Docker Compose ジェネレーター",
+    "seo_description": "MySQL、PostgreSQL、Redis、Nginx などのサービスをオンラインで無料で docker-compose.yml ファイルを生成します。 YAML プレビューと検証を備えたビジュアル エディター。"
+  },
+  "package-json-generator": {
+    "name": "package.json ジェネレーター",
+    "description": "カスタム構成とスクリプトを使用して package.json ファイルを生成します。",
+    "seo_title": "無料の package.json ジェネレーター オンライン",
+    "seo_description": "カスタム スクリプト、依存関係、devDependency、構成を含む package.json ファイルをオンラインで無料で生成します。 npm レジストリ検索を備えたビジュアル エディター。"
+  },
+  "json-minifier": {
+    "name": "JSON Minifier",
+    "description": "空白と書式を削除して JSON を縮小し、ファイル サイズを削減します。",
+    "seo_title": "無料の JSON ミニファイアー オンライン",
+    "seo_description": "JSON データをオンラインで無料で縮小および圧縮します。空白とコメントを削除し、ファイル サイズを最大 60% 削減します。 API の最適化に不可欠です。"
+  },
+  "timezone-converter": {
+    "name": "タイムゾーンコンバータ",
+    "description": "世界時計を使用して、世界中の異なるタイムゾーン間の時間を変換します。",
+    "seo_title": "無料のオンラインタイムゾーンコンバーター",
+    "seo_description": "オンラインでタイムゾーン間の時間を無料で変換します。主要都市を含む世界時計、DST サポート、会議プランナー。グローバルチームの調整に不可欠です。"
+  },
+  "color-contrast-checker": {
+    "name": "カラーコントラストチェッカー",
+    "description": "WCAG アクセシビリティ準拠の色のコントラスト比を確認してください。",
+    "seo_title": "無料カラーコントラストチェッカー - WCAGアクセシビリティ検証 | U2Tool",
+    "seo_description": "WCAG AA/AAAアクセシビリティ基準に準拠したカラーコントラスト比をオンラインで無料チェック。前景色と背景色をテストして即座に合否判定。Webデザイナー必携ツール。"
+  },
+  "markdown-table-generator": {
+    "name": "Markdownテーブル生成",
+    "description": "ビジュアル エディターとライブ プレビューを使用して Markdown テーブルを作成および編集します。",
+    "seo_title": "オンラインで無料のマークダウン テーブル ジェネレーター",
+    "seo_description": "オンラインのビジュアルエディターを使用してMarkdownテーブルを無料で生成します。ライブ プレビュー、列の配置、CSV インポート。 GitHub README やドキュメントに最適です。"
+  },
+  "base58": {
+    "name": "Base58 エンコーダ/デコーダ",
+    "description": "ビットコインや暗号通貨で使用される Base58 文字列をエンコードおよびデコードします。",
+    "seo_title": "無料のBase58エンコーダおよびデコーダオンライン",
+    "seo_description": "Base58 文字列をオンラインで無料でエンコードおよびデコードします。ビットコイン アドレス、IPFS ハッシュ、暗号通貨ウォレットで使用されます。安全なブラウザベースのエンコードツール。"
+  },
+  "meta-tag-generator": {
+    "name": "メタタグ生成",
+    "description": "Web サイトの SEO メタ タグ、Open Graph、Twitter Card タグを生成します。",
+    "seo_title": "無料のオンラインメタタグジェネレーター - SEOツール",
+    "seo_description": "SEO メタ タグ、Open Graph、Twitter Card タグをオンラインで無料で生成します。検索結果やソーシャル メディアの共有にページがどのように表示されるかをプレビューします。"
+  },
+  "robots-txt-generator": {
+    "name": "robots.txt ジェネレーター",
+    "description": "robots.txt ファイルを生成して、検索エンジン クローラーを制御します。",
+    "seo_title": "無料の robots.txt ジェネレーター オンライン",
+    "seo_description": "Web サイト用の robots.txt ファイルをオンラインで無料で生成します。許可/禁止ルール、サイトマップ リンク、クロール遅延設定を使用して検索エンジン クローラーを制御します。"
+  },
+  "opengraph-preview": {
+    "name": "グラフプレビューを開く",
+    "description": "ソーシャル メディアで共有したときにページがどのように見えるかをプレビューします。",
+    "seo_title": "無料のオンライン オープン グラフ プレビュー ツール",
+    "seo_description": "Facebook、Twitter、LinkedIn などのソーシャル メディア共有カードをオンラインで無料でプレビューできます。公開する前に、Open Graph と Twitter Card のメタ タグをテストします。"
+  },
+  "css-grid-generator": {
+    "name": "CSS Grid生成",
+    "description": "ライブ プレビューを備えたビジュアル CSS グリッド レイアウト ジェネレーター。",
+    "seo_title": "無料CSS Gridジェネレーター - レスポンシブレイアウト作成 | U2Tool",
+    "seo_description": "CSS Gridレイアウトをビジュアルに生成。行、列、ギャップ、配置をカスタマイズしてリアルタイムプレビュー。レスポンシブWebデザイン用CSSコードを即座にコピー。"
+  },
+  "css-flexbox-generator": {
+    "name": "CSS Flexbox生成",
+    "description": "ライブ プレビューを備えたビジュアル CSS Flexbox レイアウト ジェネレーター。",
+    "seo_title": "オンラインの無料 CSS フレックスボックス ジェネレーター",
+    "seo_description": "無料のオンライン ライブ プレビューを使用して、CSS Flexbox レイアウトを視覚的に生成します。方向、折り返し、位置揃え、整列のプロパティをカスタマイズします。 CSS コードを即座にコピーします。"
+  },
+  "jwt-generator": {
+    "name": "JWT Generator",
+    "description": "カスタム ペイロードと秘密キーを使用して JSON Web トークンを生成します。",
+    "seo_title": "オンラインで無料の JWT ジェネレーター",
+    "seo_description": "カスタム クレーム、有効期限、HMAC/RSA 署名を含む JWT トークンをオンラインで無料で生成します。 API 認証および認可テスト用のアクセス トークンを作成します。"
+  },
+  "cron-explainer": {
+    "name": "Cron 式の説明",
+    "description": "次回の実行時間を人間が判読できる形式で cron 式を説明します。",
+    "seo_title": "無料の Cron 式解説オンライン",
+    "seo_description": "オンラインで人間が読める説明で cron 式を無料で理解できます。次回の実行時間で cron 構文を解析して検証します。スケジュール調整用。"
+  },
+  "json-to-graphql": {
+    "name": "JSON to GraphQL",
+    "description": "JSON オブジェクトを GraphQL スキーマ タイプに変換します。",
+    "seo_title": "無料のJSONからGraphQLへのオンラインコンバーター",
+    "seo_description": "オンラインで JSON を GraphQL スキーマ タイプに無料で変換します。 JSON データから型定義、クエリ、およびミューテーションを生成します。 GraphQL API 開発には必須です。"
+  },
+  "sql-to-mongo": {
+    "name": "SQL to MongoDB",
+    "description": "SQL クエリを MongoDB クエリに変換します。",
+    "seo_title": "無料のSQLからMongoDBへのオンラインコンバータ",
+    "seo_description": "SQL クエリを MongoDB クエリにオンラインで無料で変換します。 SELECT、INSERT、UPDATE、DELETE を find、insertOne、updateOne に変換します。データベース移行ツール。"
+  },
+  "json-to-csharp": {
+    "name": "JSON to C#",
+    "description": "JSON オブジェクトを C# クラスに変換します。",
+    "seo_title": "無料のJSONからC#へのオンラインコンバーター",
+    "seo_description": "プロパティ、コンストラクター、JSON シリアル化属性を含む JSON を C# クラスにオンラインで無料で変換します。 null 許容型とネストされたクラスをサポートします。"
+  },
+  "json-to-rust": {
+    "name": "JSON to Rust",
+    "description": "JSON オブジェクトを Rust 構造体に変換します。",
+    "seo_title": "無料のJSONからRustへのオンラインコンバーター",
+    "seo_description": "オンラインで Serde 派生マクロを使用して JSON を Rust 構造体に無料で変換します。 Null 許容フィールドのオプション型を使用してタイプセーフなコードを生成します。 Rust開発用。"
+  },
+  "json-to-swift": {
+    "name": "JSON to Swift",
+    "description": "JSON オブジェクトを Swift 構造体に変換します。",
+    "seo_title": "無料のJSONからSwiftへのオンラインコンバーター",
+    "seo_description": "Codable プロトコルに準拠した JSON を Swift 構造体にオンラインで無料で変換します。 API 統合のために、CodingKeys を使用してタイプセーフ モデルを生成します。"
+  },
+  "css-minifier": {
+    "name": "CSS Minifier",
+    "description": "CSS コードを縮小して圧縮します。",
+    "seo_title": "無料の CSS ミニファイアー オンライン",
+    "seo_description": "CSS コードをオンラインで無料で縮小および圧縮します。空白やコメントを削除し、セレクターを最適化します。ファイル サイズを削減し、ページの読み込み速度を向上させます。"
+  },
+  "js-minifier": {
+    "name": "JavaScript Minifier",
+    "description": "JavaScript コードを縮小して圧縮します。",
+    "seo_title": "無料のJavaScriptミニファイアーオンライン",
+    "seo_description": "JavaScript コードをオンラインで無料で縮小および圧縮します。空白やコメントを削除し、変数名を短くします。読み込みを高速化するためにファイル サイズを小さくします。"
+  },
+  "box-shadow-generator": {
+    "name": "ボックスシャドウ生成",
+    "description": "ビジュアルエディターでCSSボックスシャドウを生成します。",
+    "seo_title": "無料の CSS ボックス シャドウ ジェネレーター オンライン",
+    "seo_description": "オンラインのビジュアルエディターを使用して CSS ボックスシャドウを無料で生成します。オフセット、ブラー、スプレッド、カラーをカスタマイズします。ワンクリックでプロジェクトの CSS コードをコピーします。"
+  },
+  "border-radius-generator": {
+    "name": "ボーダー半径生成",
+    "description": "ビジュアルエディターを使用してCSSボーダー半径を生成します。",
+    "seo_title": "オンラインで無料の CSS 境界線半径ジェネレーター",
+    "seo_description": "オンラインのビジュアルエディターを使用してCSSボーダー半径を無料で生成します。各角にカスタム値を使用して丸い角を作成します。 CSS コードを即座にコピーします。"
+  },
+  "text-to-ascii-art": {
+    "name": "テキストからASCIIアート",
+    "description": "テキストを ASCII アートに変換します。",
+    "seo_title": "無料のテキストからアスキーアートへのオンラインコンバーター",
+    "seo_description": "テキストをオンラインで無料でアスキーアートに変換します。複数のフォント スタイルと文字セットが利用可能です。ターミナルのバナー、コメント、クリエイティブなプロジェクトに最適です。"
+  },
+  "color-shades-generator": {
+    "name": "色合い生成",
+    "description": "ベースカラーから色の濃淡と色合いを生成します。",
+    "seo_title": "オンラインの無料カラー シェード ジェネレーター",
+    "seo_description": "あらゆる色から色の色合いや色合いをオンラインで無料で生成します。カスタマイズ可能なステップで、明るい色と暗い色のバリエーションを作成します。 CSS またはデザイン ツールにエクスポートします。"
+  },
+  "json-flattener": {
+    "name": "JSON Flattener",
+    "description": "ネストされた JSON オブジェクトをフラット化または非フラット化します。",
+    "seo_title": "無料のJSONフラットナーオンライン",
+    "seo_description": "ネストされた JSON オブジェクトをオンラインで無料でフラット化または非フラット化します。深い構造をドット表記に、またはその逆に変換します。データ変換と API に不可欠です。"
+  },
+  "base85": {
+    "name": "Base85 エンコーダ/デコーダ",
+    "description": "Base85 (Ascii85) データをエンコードおよびデコードします。",
+    "seo_title": "無料のBase85エンコーダ/デコーダオンライン",
+    "seo_description": "Base85 (Ascii85) データをオンラインで無料でエンコードおよびデコードします。 PDF ファイル、PostScript、データ圧縮で使用されます。安全なブラウザベースのエンコードツール。"
+  },
+  "html-to-markdown": {
+    "name": "HTML to Markdown",
+    "description": "HTMLをMarkdown形式に変換します。",
+    "seo_title": "無料のHTMLからマークダウンへのコンバーターオンライン",
+    "seo_description": "オンラインでHTMLをMarkdown形式に無料で変換します。書式設定、リンク、画像、コード ブロックを保持します。コンテンツを Markdown ベースのシステムに移行するのに最適です。"
+  },
+  "regex-generator": {
+    "name": "正規表現ジェネレーター",
+    "description": "一般的なパターンを使用して正規表現を生成し、テストします。",
+    "seo_title": "オンラインの無料正規表現ジェネレーター",
+    "seo_description": "正規表現をオンラインで無料で生成してテストします。ビジュアルヘルパーを使用してパターンを構築し、サンプルテキストに対してテストします。パターン マッチング タスクに不可欠です。"
+  },
+  "url-shortener-preview": {
+    "name": "URL Shortener Preview",
+    "description": "短縮された URL をプレビューして分析します。",
+    "seo_title": "オンラインでの無料の URL 短縮プレビュー",
+    "seo_description": "短縮 URL をオンラインで無料でプレビューおよび分析できます。 bit.ly、tinyurl、その他の短いリンクを展開すると、リンク先が表示されます。安全を確認してからクリックしてください。"
+  },
+  "json-viewer": {
+    "name": "JSON Viewer",
+    "description": "JSON データをツリー構造で表示および探索します。",
+    "seo_title": "無料のオンライン JSON ビューア",
+    "seo_description": "オンラインでツリー構造の JSON データを無料で表示および探索できます。ノードの展開と折りたたみ、値の検索、パスのコピーを行います。 API のデバッグには必須です。"
+  },
+  "xml-to-json": {
+    "name": "XML to JSON",
+    "description": "XML を JSON 形式に変換します。",
+    "seo_title": "無料のXMLからJSONへのオンラインコンバーター",
+    "seo_description": "オンラインで XML を JSON 形式に無料で変換します。属性、名前空間、およびネストされた要素を保持します。 API 統合とデータ変換に最適です。"
+  },
+  "ip-address-generator": {
+    "name": "IP Address Generator",
+    "description": "ランダムな IP アドレス (IPv4、IPv6、プライベート、パブリック) を生成します。",
+    "seo_title": "無料のオンライン IP アドレス生成ツール",
+    "seo_description": "ランダムな IP アドレスをオンラインで無料で生成します。カスタム範囲を使用して IPv4 および IPv6 形式をサポートします。テスト、開発、ネットワーク シミュレーションに最適です。"
+  },
+  "css-gradient-text": {
+    "name": "CSSグラデーションテキスト",
+    "description": "CSS を使用してグラデーションのテキスト効果を作成します。",
+    "seo_title": "オンラインで無料の CSS グラデーション テキスト ジェネレーター",
+    "seo_description": "CSS を使用してグラデーション テキスト効果をオンラインで無料で作成します。ライブ プレビューを使用して、テキストに線形および放射状のグラデーションを適用します。 Web プロジェクトの CSS コードをコピーします。"
+  },
+  "sitemap-generator": {
+    "name": "サイトマップ生成",
+    "description": "Web サイトの XML サイトマップを生成します。",
+    "seo_title": "オンラインの無料サイトマップジェネレーター",
+    "seo_description": "Web サイトの XML サイトマップをオンラインで無料で生成します。優先度、変更頻度、最終変更日を指定して URL を追加します。 SEO と検索インデックス作成に不可欠です。"
+  },
+  "json-to-php": {
+    "name": "JSON to PHP",
+    "description": "JSON を PHP 配列構文に変換します。",
+    "seo_title": "無料のJSONからPHPへのオンラインコンバーター",
+    "seo_description": "JSON を PHP 配列構文にオンラインで無料で変換します。適切なエスケープと書式設定を使用して連想配列を生成します。 PHP バックエンド開発には必須です。"
+  },
+  "css-filter-generator": {
+    "name": "CSSフィルター生成",
+    "description": "ビジュアルエディターを使用してCSSフィルター効果を生成します。",
+    "seo_title": "無料の CSS フィルター ジェネレーター オンライン",
+    "seo_description": "オンラインのビジュアルエディターを使用して CSS フィルター効果を無料で生成します。ぼかし、明るさ、コントラスト、グレースケールなどを適用します。プロジェクトの CSS コードをコピーします。"
+  },
+  "text-diff-patch": {
+    "name": "テキスト差分とパッチ",
+    "description": "テキストパッチを作成して適用します。",
+    "seo_title": "オンラインの無料テキスト差分およびパッチツール",
+    "seo_description": "テキスト パッチをオンラインで無料で作成して適用します。統合された diff 形式のパッチを生成し、テキストに適用します。バージョン管理とコードレビューに不可欠です。"
+  },
+  "encoding-detector": {
+    "name": "エンコード検出器",
+    "description": "テキストとファイルのエンコーディングを検出します。",
+    "seo_title": "無料のオンラインエンコーディング検出器",
+    "seo_description": "オンラインでテキストとファイルのエンコードを無料で検出します。 UTF-8、UTF-16、ISO-8859、およびその他の文字エンコーディングを識別します。国際的なテキストを処理するために不可欠です。"
+  },
+  "css-clip-path-generator": {
+    "name": "CSSクリップパス生成",
+    "description": "ビジュアルエディターを使用して CSS クリップパスシェイプを作成します。",
+    "seo_title": "オンラインで無料の CSS クリップ パス ジェネレーター",
+    "seo_description": "オンラインのビジュアルエディターを使用して、CSS クリップパスシェイプを無料で作成します。多角形、円、楕円、カスタム パスをデザインします。クリエイティブ レイアウトの CSS コードをコピーします。"
+  },
+  "uuid-validator": {
+    "name": "UUID Validator",
+    "description": "UUID 文字列を検証して分析します。",
+    "seo_title": "無料のオンライン UUID バリデーター",
+    "seo_description": "UUID 文字列をオンラインで無料で検証および分析します。 UUID の形式、バージョン、バリアントを確認します。 UUID v1 および v7 からタイムスタンプを抽出します。デバッグには必須です。"
+  },
+  "text-hash-comparator": {
+    "name": "テキスト ハッシュ コンパレータ",
+    "description": "テキストをハッシュ値で比較します。",
+    "seo_title": "オンラインのフリーテキストハッシュ比較ツール",
+    "seo_description": "オンラインでテキストをハッシュ値で無料で比較します。 MD5、SHA-1、SHA-256 ハッシュを並べて生成して比較します。ファイルの整合性検証に不可欠です。"
+  },
+  "json-path-finder": {
+    "name": "JSON Path Finder",
+    "description": "データから JSON パスを検索してコピーします。",
+    "seo_title": "無料の JSON パス ファインダー オンライン",
+    "seo_description": "オンラインでデータから JSON パスを無料で検索してコピーします。任意の値をクリックして、その JSONPath 式を取得します。 API 開発とデータ抽出に不可欠です。"
+  },
+  "canvas-drawing": {
+    "name": "キャンバスの描画",
+    "description": "ブラシと消しゴムを使ったシンプルな描画ツール。",
+    "seo_title": "オンラインの無料キャンバス描画ツール",
+    "seo_description": "ブラシと消しゴムを備えたシンプルな描画ツールをオンラインで無料でご利用いただけます。ブラシのサイズ、色、不透明度をカスタマイズします。アートワークを PNG としてダウンロードします。簡単なスケッチに最適です。"
+  },
+  "json-escape": {
+    "name": "JSON Escape/Unescape",
+    "description": "JSON 文字列をエスケープおよびエスケープ解除します。",
+    "seo_title": "オンラインの無料 JSON エスケープ/アンエスケープ ツール",
+    "seo_description": "JSON 文字列をオンラインで無料でエスケープおよびエスケープ解除します。特殊文字、引用符、制御文字を処理します。文字列に JSON を埋め込む場合に必須です。"
+  },
+  "css-animation-generator": {
+    "name": "CSSアニメーション生成",
+    "description": "ビジュアルエディターでCSSアニメーションを作成します。",
+    "seo_title": "無料の CSS アニメーション ジェネレーター オンライン",
+    "seo_description": "オンラインのビジュアルエディターを使用して CSS アニメーションを無料で作成します。キーフレーム、タイミング関数、アニメーション プロパティを設計します。 Web プロジェクトの CSS コードをコピーします。"
+  },
+  "text-case-counter": {
+    "name": "大文字・小文字カウント",
+    "description": "大文字、小文字、その他の文字タイプをカウントします。",
+    "seo_title": "オンラインのフリーテキストケースカウンター",
+    "seo_description": "大文字、小文字、数字、スペース、特殊文字をオンラインで無料で数えます。詳細な文字タイプの統計を取得します。テキスト分析には必須です。"
+  },
+  "dns-lookup": {
+    "name": "DNS Lookup",
+    "description": "任意のドメインの DNS レコードを検索します。",
+    "seo_title": "無料のオンライン DNS ルックアップ ツール",
+    "seo_description": "あらゆるドメインの DNS レコードをオンラインで無料で検索できます。 A、AAAA、MX、TXT、NS、CNAME、および SOA レコードをクエリします。ドメインのトラブルシューティングと検証に不可欠です。"
+  },
+  "image-resizer": {
+    "name": "画像リサイザー",
+    "description": "画像のサイズをカスタム寸法に変更します。",
+    "seo_title": "無料のオンライン画像リサイザー",
+    "seo_description": "オンラインで画像をカスタム寸法に無料でサイズ変更できます。アスペクト比を維持するか、正確な幅と高さを設定します。 PNG、JPEG、WebP 形式をサポートします。すぐにダウンロードしてください。"
+  },
+  "ssl-checker": {
+    "name": "SSL Certificate Checker",
+    "description": "ドメインの SSL 証明書の有効性と詳細を確認します。",
+    "seo_title": "無料の SSL 証明書チェッカー オンライン",
+    "seo_description": "SSL 証明書の有効性と有効期限をオンラインで無料で確認できます。証明書チェーン、発行者、セキュリティの詳細を確認します。 Web サイトのセキュリティに不可欠です。"
+  },
+  "whois-lookup": {
+    "name": "WHOIS Lookup",
+    "description": "ドメイン登録情報を調べます。",
+    "seo_title": "無料のオンライン WHOIS ルックアップ ツール",
+    "seo_description": "ドメインの登録と所有権情報をオンラインで無料で検索できます。レジストラ、作成日、有効期限、ネームサーバーを取得します。ドメイン調査ツール。"
+  },
+  "websocket-tester": {
+    "name": "WebSocket Tester",
+    "description": "WebSocket 接続をテストし、メッセージを送受信します。",
+    "seo_title": "無料の WebSocket テスター オンライン",
+    "seo_description": "WebSocket 接続をテストし、オンラインでメッセージを無料で送受信します。カスタムヘッダーとプロトコルをサポートします。リアルタイム アプリケーション開発には不可欠です。"
+  },
+  "port-scanner": {
+    "name": "ポートスキャナー",
+    "description": "一般的なネットワーク ポートとサービスのリファレンス ガイド。",
+    "seo_title": "無料のポート スキャナーとオンライン リファレンス",
+    "seo_description": "一般的なネットワーク ポートとそのサービスをオンラインで無料で検索できます。ポート番号またはサービス名で検索します。ネットワーク管理者および開発者向けのリファレンス。"
+  },
+  "port-reference": {
+    "name": "ポートリファレンス",
+    "description": "一般的なネットワーク ポートとサービスのリファレンス ガイド。",
+    "seo_title": "ネットワークポートリファレンスガイド",
+    "seo_description": "一般的なネットワーク ポートとサービスに関する完全なリファレンス ガイド。既知のポート (0 ～ 1023)、登録済みポート、および動的ポートを参照します。ネットワーキングには必須です。"
+  },
+  "privacy-policy-generator": {
+    "name": "プライバシーポリシー生成",
+    "description": "Web サイトのプライバシー ポリシーを作成します。",
+    "seo_title": "無料のプライバシー ポリシー ジェネレーター オンライン",
+    "seo_description": "Web サイト用にカスタマイズされたプライバシー ポリシーをオンラインで無料で生成します。データ収集、Cookie、ユーザー権利をカバーします。 GDPR および CCPA に準拠したテンプレート。"
+  },
+  "terms-generator": {
+    "name": "利用規約生成",
+    "description": "Web サイトの利用規約を作成します。",
+    "seo_title": "無料の利用規約ジェネレーター オンライン",
+    "seo_description": "Web サイト用にカスタマイズされた利用規約をオンラインで無料で生成します。ユーザー契約、責任、知的財産、紛争解決をカバーします。"
+  },
+  "cookie-policy-generator": {
+    "name": "クッキーポリシー生成",
+    "description": "Web サイトの Cookie ポリシーを生成します。",
+    "seo_title": "無料のオンライン Cookie ポリシー ジェネレーター",
+    "seo_description": "Web サイト用にカスタマイズされた Cookie ポリシーをオンラインで無料で生成します。 Cookie の種類、目的、同意オプションについて説明します。 GDPRおよびCCPAに準拠。"
+  },
+  "json-to-tsv": {
+    "name": "JSON to TSV Converter",
+    "description": "JSON 配列を TSV (タブ区切り値) に変換します。",
+    "seo_title": "無料のJSONからTSVへのオンラインコンバーター",
+    "seo_description": "JSON 配列をオンラインで TSV (タブ区切り値) 形式に無料で変換します。ネストされたオブジェクトと配列を処理します。スプレッドシートのインポートやデータ分析に最適です。"
+  },
+  "csv-viewer": {
+    "name": "CSV Viewer",
+    "description": "CSV データを表形式で表示および解析します。",
+    "seo_title": "無料のオンライン CSV ビューア",
+    "seo_description": "CSV データをオンラインで表形式で無料で表示および解析できます。カスタム区切り文字、ヘッダー、および大きなファイルをサポートします。データを簡単に並べ替え、フィルタリング、検索できます。"
+  },
+  "htaccess-generator": {
+    "name": ".htaccess ジェネレーター",
+    "description": "Apache サーバーの .htaccess 構成を生成します。",
+    "seo_title": "オンラインの無料 .htaccess ジェネレーター",
+    "seo_description": "Apache サーバーの .htaccess 構成をオンラインで無料で生成します。リダイレクト、リライト、セキュリティ ルール、キャッシュ ディレクティブを作成します。ウェブホスティングの必需品。"
+  },
+  "nginx-config-generator": {
+    "name": "Nginx 構成ジェネレーター",
+    "description": "Nginx サーバー構成ファイルを生成します。",
+    "seo_title": "オンラインの無料 Nginx 構成ジェネレーター",
+    "seo_description": "Nginx サーバー構成ファイルをオンラインで無料で生成します。サーバー ブロック、SSL 設定、プロキシ ルール、およびキャッシュを作成します。最新の Web 展開には不可欠です。"
+  },
+  "curl-converter": {
+    "name": "cURLコンバータ",
+    "description": "cURL コマンドをさまざまな言語のコードに変換します。",
+    "seo_title": "無料の cURL からコードへのオンライン コンバーター",
+    "seo_description": "cURL コマンドをオンラインで JavaScript、Python、PHP、Go、Java コードに無料で変換します。ヘッダー、本文、認証を解析します。 API 統合には必須です。"
+  },
+  "reading-time-calculator": {
+    "name": "読書時間計算機",
+    "description": "テキストや記事の読書時間を計算します。",
+    "seo_title": "オンライン無料読書時間計算ツール",
+    "seo_description": "オンラインであらゆるテキストの読書時間と単語数を無料で計算します。平均的なリーダー、遅いリーダー、および速いリーダーの推定値を取得します。コンテンツクリエイターに最適です。"
+  },
+  "open-graph-generator": {
+    "name": "Open Graph生成",
+    "description": "ソーシャル メディア共有用の Open Graph メタ タグを生成します。",
+    "seo_title": "無料のオープングラフジェネレーターオンライン",
+    "seo_description": "Facebook、LinkedIn、その他のソーシャル プラットフォーム用の Open Graph メタ タグをオンラインで無料で生成します。ソーシャル メディアで共有したときにコンテンツがどのように表示されるかをプレビューします。"
+  },
+  "twitter-card-generator": {
+    "name": "Twitterカード生成",
+    "description": "ツイートのプレビューを改善するために Twitter Card メタ タグを生成します。",
+    "seo_title": "無料のオンライン Twitter カード ジェネレーター",
+    "seo_description": "オンラインでリッチツイートプレビュー用の Twitter Card メタタグを無料で生成します。概要、大きな画像、選手カードをサポート。 Twitter 共有用に最適化します。"
+  },
+  "mime-type-lookup": {
+    "name": "MIME Type Lookup",
+    "description": "拡張子または説明で MIME タイプを検索します。",
+    "seo_title": "無料の MIME タイプ検索ツール",
+    "seo_description": "ファイル拡張子または説明によって MIME タイプをオンラインで無料で検索します。 Web 開発用のコンテンツ タイプの完全なデータベース。 HTTP ヘッダーには必須です。"
+  },
+  "http-status-codes": {
+    "name": "HTTP Status Codes",
+    "description": "すべての HTTP ステータス コードのリファレンス ガイド。",
+    "seo_title": "HTTPステータスコード検索ツール",
+    "seo_description": "HTTPステータスコードをオンラインで検索。Web開発者向けのクイックリファレンス。"
+  },
+  "string-obfuscator": {
+    "name": "文字列難読化ツール",
+    "description": "さまざまなエンコード方法を使用して文字列を難読化します。",
+    "seo_title": "無料のオンライン文字列難読化ツール",
+    "seo_description": "Base64、Hex、HTML エンティティ、URL エンコード、ROT13 をオンラインで無料で使用して文字列を難読化します。保護のための複数のエンコード層。テスト目的のため。"
+  },
+  "text-cleaner": {
+    "name": "テキストクリーナー",
+    "description": "スペースや行などを削除して、テキストを整理して書式設定します。",
+    "seo_title": "オンラインの無料テキストクリーナー",
+    "seo_description": "余分なスペース、空行、HTML タグなどをオンラインで無料で削除して、テキストをクリーンアップして書式設定します。空白を正規化し、一般的な書式設定の問題を修正します。"
+  },
+  "list-randomizer": {
+    "name": "リストランダム化",
+    "description": "アイテムのリストをシャッフルしてランダム化します。",
+    "seo_title": "オンラインの無料リスト ランダマイザー",
+    "seo_description": "オンラインでアイテムや名前のリストをシャッフルしたりランダム化したりできます。ランダムな選択、宝くじ、公平な注文に最適です。安全なランダム化。"
+  },
+  "sql-generator": {
+    "name": "SQL Generator",
+    "description": "一般的な操作用の SQL クエリを生成します。",
+    "seo_title": "無料のオンライン SQL ジェネレーター",
+    "seo_description": "SELECT、INSERT、UPDATE、DELETE、CREATE TABLE の SQL クエリをオンラインで無料で生成します。構文強調表示を備えたビジュアル クエリ ビルダー。すべてのデータベース用。"
+  },
+  "htaccess-to-nginx": {
+    "name": "htaccessからNginxへのコンバーター",
+    "description": "Apache .htaccess ルールを Nginx 構成に変換します。",
+    "seo_title": "Nginx コンバーター オンラインへの無料の htaccess",
+    "seo_description": "Apache htaccess ルールをオンラインで Nginx config に無料で変換します。リダイレクト、リライト、セキュリティ ルールを変換します。サーバーの移行と展開に不可欠です。"
+  },
+  "js-obfuscator": {
+    "name": "JavaScript Obfuscator",
+    "description": "JavaScript コードを難読化してソースを保護します。",
+    "seo_title": "無料の JavaScript 難読化ツール オンライン",
+    "seo_description": "JavaScript コードをオンラインで無料で難読化して保護します。変数の名前を変更し、文字列をエンコードし、デッドコードを追加します。知的財産を保護します。"
+  },
+  "image-watermark": {
+    "name": "画像の透かし",
+    "description": "画像にテキストの透かしを追加します。",
+    "seo_title": "オンラインの無料画像透かしツール",
+    "seo_description": "オンラインで画像にテキストの透かしを無料で追加します。フォント、サイズ、色、不透明度、位置をカスタマイズします。写真やアートワークを不正使用から保護します。"
+  },
+  "svg-to-image": {
+    "name": "SVG to Image",
+    "description": "SVG ファイルを PNG、JPEG、または WebP 画像に変換します。",
+    "seo_title": "無料のSVGから画像へのオンラインコンバーター",
+    "seo_description": "オンラインでSVGをPNG、JPEG、WebPに無料で変換します。カスタム寸法と背景色を設定します。 Web や印刷用にベクター グラフィックをエクスポートするのに最適です。"
+  },
+  "hex-base64-converter": {
+    "name": "16進数Base64コンバータ",
+    "description": "16 進数と Base64 エンコーディングの間で変換します。",
+    "seo_title": "無料の Hex Base64 コンバーター オンライン",
+    "seo_description": "Hex と Base64 の間でオンラインで無料で変換します。 16 進数を Base64 にエンコードするか、Base64 を 16 進数にデコードします。暗号化およびデータ エンコードのタスクに不可欠です。"
+  },
+  "pdf-to-base64": {
+    "name": "PDF to Base64",
+    "description": "PDF ファイルを Base64 エンコードに変換します。",
+    "seo_title": "無料のPDFからBase64へのオンラインコンバーター",
+    "seo_description": "オンラインで PDF ファイルを Base64 エンコードに無料で変換します。 PDF を HTML、JSON、またはデータ URI に埋め込みます。サーバーにファイルをアップロードする必要がなく、安全なブラウザベースの変換。"
+  },
+  "audio-to-base64": {
+    "name": "音声をBase64に変換",
+    "description": "オーディオ ファイルを Base64 エンコードに変換します。",
+    "seo_title": "無料のオーディオからBase64へのオンラインコンバーター",
+    "seo_description": "オンラインでオーディオ ファイルを Base64 エンコードに無料で変換します。 MP3、WAV、OGG 形式をサポートします。 HTML、JSON、またはデータ URI に音声を埋め込みます。ブラウザベースの処理。"
+  },
+  "video-to-base64": {
+    "name": "ビデオを Base64 に変換",
+    "description": "ビデオ ファイルを Base64 エンコードに変換します。",
+    "seo_title": "無料のビデオからBase64へのオンラインコンバーター",
+    "seo_description": "オンラインでビデオ ファイルを Base64 エンコードに無料で変換します。 MP4、WebM、その他の形式をサポートします。 HTML、JSON、またはデータ URI にビデオを埋め込みます。ブラウザベースの処理。"
+  },
+  "file-size-calculator": {
+    "name": "ファイルサイズ計算ツール",
+    "description": "異なるファイル サイズ単位間で変換します。",
+    "seo_title": "オンラインの無料ファイル サイズ計算ツール",
+    "seo_description": "オンラインでバイト、KB、MB、GB、TBなどの間で無料で変換できます。ファイル サイズは 2 進数 (1024) または 10 進数 (1000) 単位で計算します。ストレージ計画に不可欠です。"
+  },
+  "ascii-table": {
+    "name": "ASCII表",
+    "description": "完全な ASCII 文字参照テーブル。",
+    "seo_title": "ASCII表 - 文字コード一覧・変換リファレンス | U2Tool",
+    "seo_description": "完全なASCII文字コード表。10進数、16進数、8進数、2進数値を含む128文字すべてを検索可能。プログラマー・開発者必携のリファレンスツール。"
+  },
+  "text-to-hex": {
+    "name": "テキストを 16 進数に変換",
+    "description": "テキストを 16 進数に、またはその逆に変換します。",
+    "seo_title": "オンラインの無料テキストから 16 進数へのコンバーター",
+    "seo_description": "オンラインでテキストを 16 進数エンコードに変換し、16 進数をテキストにデコードします。 UTF-8 および ASCII エンコーディングをサポートします。デバッグとデータ分析に不可欠です。"
+  },
+  "css-variables-generator": {
+    "name": "CSS Variables Generator",
+    "description": "ビジュアルエディターを使用してCSSカスタムプロパティ(変数)を生成します。",
+    "seo_title": "オンラインの無料 CSS 変数ジェネレーター",
+    "seo_description": "ビジュアル カラー ピッカーを使用して CSS カスタム プロパティを生成し、CSS、SCSS、または JavaScript にエクスポートします。プロジェクト全体で一貫したテーマを設定するためのデザイン トークンを作成します。"
+  },
+  "lorem-picsum": {
+    "name": "ロレム・ピクサム",
+    "description": "Picsum Photos からランダムなプレースホルダー画像を生成します。",
+    "seo_title": "オンラインで無料の Lorem Picsum 画像ジェネレーター",
+    "seo_description": "カスタム寸法、グレースケール、ぼかし効果を備えたランダムなプレースホルダー画像を生成します。モックアップ、ワイヤーフレーム、Web デザインのプロトタイピングに最適です。"
+  },
+  "regex-escape": {
+    "name": "正規表現のエスケープ",
+    "description": "特殊な正規表現文字をエスケープまたはエスケープ解除します。",
+    "seo_title": "オンラインの無料正規表現エスケープ ツール",
+    "seo_description": "オンラインの正規表現で使用する特殊文字を無料でエスケープします。のようなメタ文字を処理します。 * + ? ^ $ { } [ ] \\ | ()。パターンには必須です。"
+  },
+  "html-to-text": {
+    "name": "HTMLからテキスト",
+    "description": "HTML をプレーン テキストに変換し、すべてのタグを削除します。",
+    "seo_title": "無料のHTMLからテキストへのオンラインコンバーター",
+    "seo_description": "すべてのタグを削除し、コンテンツ構造を保持しながら、HTML をプレーン テキストに変換します。リンク、リスト、テーブルをインテリジェントに処理します。コンテンツ抽出用。"
+  },
+  "binary-to-decimal": {
+    "name": "2進数から10進数へ",
+    "description": "2 進数、10 進数、16 進数の間で変換します。",
+    "seo_title": "2進数から10進数へのオンラインコンバーター",
+    "seo_description": "バイナリを 10 進数に、10 進数を 2 進数に、2 進数を 16 進数に、16 進数をバイナリにオンラインで無料で変換します。大きな数値と即時変換をサポートします。プログラマー向け。"
+  },
+  "octal-converter": {
+    "name": "8進数コンバータ",
+    "description": "8 進数と他の基数の間で変換します。",
+    "seo_title": "オンライン 8 進数コンバーター",
+    "seo_description": "オンラインで8進数を10進数、2進数、16進数に無料で変換します。また、10 進数、2 進数、または 16 進数から 8 進数に変換します。 Unix 権限とプログラミングに不可欠です。"
+  },
+  "text-to-nato": {
+    "name": "テキストからNATOフォネティック",
+    "description": "テキストを NATO 発音アルファベットに変換します。",
+    "seo_title": "テキストから NATO 発音文字へのコンバーター",
+    "seo_description": "オンラインで文字と数字を NATO 発音アルファベット単語に無料で変換します。明確なコミュニケーションのためのアルファ、ブラボー、チャーリー形式。ラジオと電話用。"
+  },
+  "crc32-calculator": {
+    "name": "CRC32 Calculator",
+    "description": "テキストまたはファイルの CRC32 を計算します。",
+    "seo_title": "CRC32 チェックサム計算機 - 無料オンラインツール",
+    "seo_description": "無料オンライン CRC32 チェックサム計算機。ファイルやテキストの CRC32 ハッシュ値を素早く計算。"
+  },
+  "mac-address-generator": {
+    "name": "MAC Address Generator",
+    "description": "オプションを使用してランダムな MAC アドレスを生成します。",
+    "seo_title": "MACアドレス生成器 - 無料オンラインツール",
+    "seo_description": "無料オンライン MAC アドレス生成器。ランダムまたはカスタム MAC アドレスを生成。"
+  },
+  "curl-to-code": {
+    "name": "cURLコード変換ツール",
+    "description": "複数のプログラミング言語でのcURLコマンドをコードに変換します。",
+    "seo_title": "cURL コマンドを無料オンラインツールでコードに変換",
+    "seo_description": "さまざまなプログラミング言語で cURL コマンドを自動変換。無料のオンラインツールで迅速に API と JSON を操作します。"
+  },
+  "ip-validator": {
+    "name": "IPアドレス検証ツール",
+    "description": "IPv4およびIPv6アドレスの検証を行い、詳細な情報を提供します。",
+    "seo_title": "無料のオンラインIPアドレス検証ツール",
+    "seo_description": "IPv4とIPv6アドレスを検証。詳細情報付き。無料でオンラインで使用可能。"
+  },
+  "json-merger": {
+    "name": "JSON Merger",
+    "description": "異なる戦略で複数のJSONオブジェクトをマージします。",
+    "seo_title": "無料オンラインJSONマージツール",
+    "seo_description": "異なる戦略で複数のJSONオブジェクトをマージ。無料でオンラインで利用可能です。"
+  },
+  "text-template": {
+    "name": "テキストテンプレート",
+    "description": "テキストテンプレート内の変数を値で置き換えます。",
+    "seo_title": "無料オンラインテキストテンプレート置換ツール",
+    "seo_description": "テキストテンプレート内の変数を値に置換する無料オンラインツール。簡単操作で効率的に作業を進めましょう。"
+  },
+  "base-calculator": {
+    "name": "ベース計算機",
+    "description": "異なる数の基準で計算を行います。",
+    "seo_title": "無料オンライン基数計算ツール",
+    "seo_description": "異なる数値の基数で計算。無料のオンラインツールで簡単な計算を swiftly 実行。"
+  },
+  "color-name-finder": {
+    "name": "カラーネームファインダー",
+    "description": "どんな色値でも最も近いカラーネームを見つけます。",
+    "seo_title": "無料オンラインの色名検索ツール",
+    "seo_description": "任意の色値から最も近い色名を簡単に見つける無料のオンラインツールです。"
+  },
+  "char-frequency": {
+    "name": "文字出現頻度分析",
+    "description": "テキスト内の文字の頻度を分析します。",
+    "seo_title": "無料オンライン文字頻度解析ツール",
+    "seo_description": "テキスト内の文字頻度を分析。無料でオンラインで使用可能です。"
+  },
+  "json-to-dart": {
+    "name": "JSON to Dart",
+    "description": "JSONをDartクラスに変換するfromJsonとtoJsonメソッドを持つツール。",
+    "seo_title": "JSONをDartクラスに変換する無料オンラインツール",
+    "seo_description": "JSONをDartクラスに自動的に変換し、fromJsonとtoJsonメソッドを生成します。無料でオンラインで使用可能です。"
+  },
+  "sql-to-json": {
+    "name": "SQL to JSON",
+    "description": "SQL INSERT文をJSON配列に変換します。",
+    "seo_title": "SQLINSERT文を無料オンラインツールでJSONに変換",
+    "seo_description": "SQLINSERT文をJSON配列に簡単変換。無料のオンラインツールでデータを整理しましょう。"
+  },
+  "bar-chart-generator": {
+    "name": "バーガチャート生成ツール",
+    "description": "オンラインでバーガチャートを作成。データ、色をカスタマイズし、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンラインbarチャート生成ツール",
+    "seo_description": "データをカスタマイズしてbarチャートを作成。色を変更し、PNG/SVGでエクスポート。便利な無料オンラインツール。"
+  },
+  "line-chart-generator": {
+    "name": "ラインチャートジェネレーター",
+    "description": "オンラインでラインチャートを作成。複数のデータシリーズでトレンドを視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンライン線グラフ生成ツール",
+    "seo_description": "複数のデータシリーズでトレンドを可視化し、PNG/SVGとしてエクスポート。便利な無料オンラインツール。"
+  },
+  "pie-chart-generator": {
+    "name": "円グラフ生成ツール",
+    "description": "オンラインで円グラフを作成。データの割合を視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンライン円グラフ生成ツール",
+    "seo_description": "データの比率を可視化し、PNG/SVGとしてエクスポート。便利な無料オンラインツールです。"
+  },
+  "radar-chart-generator": {
+    "name": "レーダーチャートジェネレータ",
+    "description": "オンラインでレーダーチャートを作成。複数の次元を比較してPNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンライン Radar チャート生成ツール",
+    "seo_description": "複数の次元を比較し、PNG/SVGとしてエクスポート。便利なオンライン Radar チャート生成ツール。"
+  },
+  "scatter-chart-generator": {
+    "name": "散布図生成ツール",
+    "description": "オンラインで散布図を作成。関連性を分析し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンライン散布図生成ツール",
+    "seo_description": "データの相関関係を分析し、PNG/SVGとしてエクスポート。便利な無料オンラインツールです。"
+  },
+  "area-chart-generator": {
+    "name": "エリアチャートジェネレーター",
+    "description": "オンラインでエリアチャートを作成。累積データを視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンラインエリアチャート生成ツール",
+    "seo_description": "cumulativeデータを可視化し、PNG/SVGとしてエクスポート。便利な無料オンラインツール。"
+  },
+  "funnel-chart-generator": {
+    "name": "ファンネルチャートジェネレーター",
+    "description": "オンラインでファンネルチャートを作成。コンバージョンプロセスを視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料のオンラインフーネルチャート生成ツール",
+    "seo_description": " Conversionプロセスを可視化し、PNG/SVGとしてエクスポート。簡単なフロントエンドと強力なAPI。"
+  },
+  "gauge-chart-generator": {
+    "name": "ガウジチャートジェネレーター",
+    "description": "オンラインでガウジチャートを作成。進捗やメトリクスをPNG/SVGでエクスポート表示。",
+    "seo_title": "無料オンライン Gauge Chart ジェネレーター",
+    "seo_description": "プログレスやメトリクスを表示するための無料オンライン Gauge Chart ジェネレーター。PNG/SVG 出力で簡単に使用可能です。"
+  },
+  "heatmap-chart-generator": {
+    "name": "ヒートマップチャート生成ツール",
+    "description": "オンラインでヒートマップチャートを作成。データ密度を視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンラインヒートマップチャート生成ツール",
+    "seo_description": "データ密度を可視化し、PNG/SVGとしてエクスポート。便利な無料オンラインツール。"
+  },
+  "treemap-chart-generator": {
+    "name": "ツリーマップチャート生成ツール",
+    "description": "オンラインでツリーマップチャートを作成。階層データを視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンラインツール：ツリーマップチャート生成器",
+    "seo_description": "階層データを可視化し、PNG/SVGとしてエクスポート。無料のオンラインツールで簡単にツリーマップチャートを作成。"
+  },
+  "doughnut-chart-generator": {
+    "name": "ドーナッツチャートジェネレーター",
+    "description": "オンラインでドーナッツチャートを作成。中空の中心で割合を視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンラインドーナッツチャート生成ツール",
+    "seo_description": " proportions を視覚化し、PNG/SVG でエクスポート。シンプルで使いやすい無料オンラインツール。"
+  },
+  "sankey-chart-generator": {
+    "name": "サンキーチャートジェネレーター",
+    "description": "オンラインでサンキーチャートを作成。フローデータを視覚化してPNG/SVGとしてエクスポート。",
+    "seo_title": "オンラインのサンキー図生成ツール",
+    "seo_description": "フローデータを可視化し、PNG/SVGとしてエクスポート。無料で使用可能。"
+  },
+  "sunburst-chart-generator": {
+    "name": "サンブースチャートジェネレーター",
+    "description": "オンラインでサンブースチャートを作成。階層データを放射状に視覚化してPNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンラインSunburstチャート生成ツール",
+    "seo_description": "階層データの-radially-可視化。PNG/SVGとしてエクスポート可能。無料オンラインツール"
+  },
+  "candlestick-chart-generator": {
+    "name": "株価チャート生成ツール",
+    "description": "オンラインで株価チャートを作成。データを視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンラインチャート生成ツール： Candlestick Chart Generator",
+    "seo_description": "株式データを可視化し、PNG/SVGとしてエクスポートできる無料のオンラインツール。 Candlestick Chart Generator を試してみましょう。"
+  },
+  "boxplot-chart-generator": {
+    "name": "ボックスプロットチャート生成ツール",
+    "description": "オンラインでボックスプロットチャートを作成。統計分布を視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンラインボックスプロットチャート生成ツール",
+    "seo_description": "統計分布を可視化し、PNG/SVGとしてエクスポートできる無料オンラインツール。ボックスプロットチャートを簡単に作成します。"
+  },
+  "wordcloud-generator": {
+    "name": "単語クラウド生成ツール",
+    "description": "オンラインで単語クラウドを作成。テキストデータを視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "無料オンライン単語クラウド生成ツール",
+    "seo_description": "テキストデータを可視化し、PNG/SVGとしてエクスポート。無料のオンライン単語クラウド生成ツール。"
+  },
+  "graph-chart-generator": {
+    "name": "グラフチャートジェネレーター",
+    "description": "オンラインでグラフ/ネットワークチャートを作成。関係を視覚化してPNG/SVGとしてエクスポート。",
+    "seo_title": "オンライングラフチャート生成無料ツール",
+    "seo_description": "関係を可視化し、PNG/SVGとしてエクスポートできるオンラインチャート生成ツール。無料で使用可能。"
+  },
+  "calendar-heatmap-generator": {
+    "name": "カレンダーヒートマップジェネレーター",
+    "description": "オンラインでカレンダーヒートマップを作成。日次データを視覚化し、PNG/SVGとしてエクスポート。",
+    "seo_title": "オンラインカレンダーヒートマップ生成ツール",
+    "seo_description": "無料で日常データを可視化し、PNG/SVGとしてエクスポート。カレンダーヒートマップ作成ツール。"
+  },
+  "polar-bar-chart-generator": {
+    "name": "極棒グラフジェネレーター",
+    "description": "オンラインで極棒グラフを作成します。データを放射状に視覚化し、PNG/SVG としてエクスポートします。",
+    "seo_title": "無料オンライン棒グラフツール：極座標チャート生成",
+    "seo_description": "データを円形に可視化し、PNG/SVGとしてエクスポート。無料のオンラインツールで極座標チャートを作成します。"
+  },
+  "parallel-chart-generator": {
+    "name": "平行チャートジェネレーター",
+    "description": "平行座標チャートをオンラインで作成します。多次元データを比較し、PNG/SVG としてエクスポートします。",
+    "seo_title": "並行座標チャート作成オンラインツール",
+    "seo_description": "多次元データを比較し、PNG/SVGとしてエクスポートする無料のオンラインツール"
+  },
+  "bubble-chart-generator": {
+    "name": "バブルチャートジェネレーター",
+    "description": "X、Y、サイズの関係を示す3Dバブルチャートを作成。",
+    "seo_title": "無料オンラインBubbleチャート生成ツール",
+    "seo_description": "X、Y、サイズの関係を3D Bubbleチャートで視覚化。無料でオンラインで使用可能。"
+  },
+  "tree-chart-generator": {
+    "name": "ツリーチャート生成",
+    "description": "直交や放射状レイアウトで階層ツリー図を作成。",
+    "seo_title": "無料オンラインツール：ツリー図チャートジェネレータ",
+    "seo_description": "階層的なツリー図チャートを作成。正交レイアウトと放射レイアウトから選択。無料のオンラインツールです。"
+  },
+  "theme-river-generator": {
+    "name": "テーマリバー生成ツール",
+    "description": "時間を通じてデータの流れを示すテーマリバーチャートを作成。",
+    "seo_title": "無料オンラインのテーマリバー生成ツール",
+    "seo_description": "データの時間経過による流れを示すテーマリバーチャートを作成。無料でオンラインで使用可能。"
+  },
+  "gantt-chart-generator": {
+    "name": "ガントチャート作成",
+    "description": "ガント チャートを作成して、プロジェクトの進捗状況とスケジュールを視覚化します。",
+    "seo_title": "無料オンラインGanttチャート作成ツール",
+    "seo_description": "プロジェクトの進行状況とスケジュールを可視化するための無料オンラインGanttチャート作成ツール。"
+  },
+  "venn-diagram-generator": {
+    "name": "円図作成ツール",
+    "description": "集合間の論理的な関係を示すための円図を作成。",
+    "seo_title": "無料オンラインVenn Diagram Generator",
+    "seo_description": "論理的な関係を示すVenn図を作成するための無料オンラインツール。JSON、Base64、SVG、CSS、HTML、PDF、URL、API、GIFをサポートします。"
+  },
+  "timeline-chart-generator": {
+    "name": "タイムライン作成",
+    "description": "タイムライン チャートを作成して、一連のイベントを表示します。",
+    "seo_title": "無料オンラインタイムラインチャート生成ツール",
+    "seo_description": "イベントの順序を示すタイムラインチャートを作成。無料でオンラインで使用可能な便利なツールです。"
+  },
+  "nightingale-rose-chart-generator": {
+    "name": "ナイチンゲールローズチャート作成",
+    "description": "ナイチンゲールローズチャート（極座標面積図）をオンラインで作成。半径の異なるデータを視覚化。",
+    "seo_title": "無料オンラインNightingaleローズチャート生成ツール",
+    "seo_description": "データを視覚化するための無料オンラインツール。異なる半径を使用したNightingaleローズチャートを作成します。"
+  },
+  "grouped-bar-chart-generator": {
+    "name": "グループ化バーバーチャートジェネレーター",
+    "description": "オンラインでグループ化バーバーチャートを作成。並行して複数のデータシリーズを比較します。",
+    "seo_title": "無料オンライングループバー図生成ツール",
+    "seo_description": "複数のデータシリーズを並べて比較するための無料オンライングループバー図生成ツール。SVG、CSS、HTML、PDFをサポートしています。"
+  },
+  "stacked-bar-chart-generator": {
+    "name": "積み重ね棒グラフ生成器",
+    "description": "オンラインで積み重ね棒グラフを作成。カテゴリごとの合計の構成を表示します。",
+    "seo_title": "無料のオンラインStacked Bar Chart生成ツール",
+    "seo_description": "カテゴリごとの総計の構成を可視化するための無料オンラインStacked Bar Chart生成ツール。JSON、Base64、SVG、CSS、HTML、PDF、URL、API、GIFをサポートします。"
+  },
+  "grouped-line-chart-generator": {
+    "name": "グループ折れ線グラフ作成",
+    "description": "複数系列の折れ線グラフをオンラインで作成。異なるデータセット間のトレンドを比較。",
+    "seo_title": "無料オンライングループ化線グラフ生成ツール",
+    "seo_description": "異なるデータセット間のトレンドを比較するためのマルチシリーズ線グラフを作成。無料で使いやすいオンラインツール。"
+  },
+  "step-line-chart-generator": {
+    "name": "階段折れ線グラフ作成",
+    "description": "階段折れ線グラフをオンラインで作成。時間経過によるデータの離散的な変化を視覚化。",
+    "seo_title": "無料のオンラインステップ線グラフ生成ツール",
+    "seo_description": "データの時系列の離散変化を視覚化。オンラインで簡単にステップ線グラフを作成するための無料ツールです。"
+  },
+  "waterfall-chart-generator": {
+    "name": "ウォーターフォールチャート生成ツール",
+    "description": "オンラインでウォーターフォールチャートを作成。値が連続的に増加または減少する方法を視覚化します。",
+    "seo_title": "無料オンライン waterfall チャート生成ツール",
+    "seo_description": "オンラインでウォーターフォールチャートを作成。値が順次増減するのを視覚化します。"
+  },
+  "stacked-area-chart-generator": {
+    "name": "積み重ねエリアチャート作成ツール",
+    "description": "オンラインで積み重ねエリアチャートを作成。時間の経過に伴う各要素の合計への貢献を示します。",
+    "seo_title": "無料オンライン積み重ねエリアチャート生成ツール",
+    "seo_description": "時間経過とともに部品が合計にどのように貢献するかを可視化。無料でオンラインで簡単に作成。"
+  },
+  "positive-negative-bar-chart-generator": {
+    "name": "ポジティブネガティブ棒グラフジェネレーター",
+    "description": "オンラインでポジティブ/ネガティブ棒グラフを作成。ポジティブおよびネガティブの値を視覚化します。",
+    "seo_title": "無料オンラインネガティブポジティブ棒グラフ生成ツール",
+    "seo_description": "データを可視化するためにオンラインでネガティブとポジティブの棒グラフを作成。無料で簡単に使用可能。"
+  },
+  "percentage-stacked-bar-chart-generator": {
+    "name": "100%積み上げ棒グラフ作成",
+    "description": "100%積み上げ棒グラフをオンラインで作成。カテゴリ全体の比率構成を表示。",
+    "seo_title": "無料オンライン100%堆叠棒グラフ生成ツール",
+    "seo_description": "カテゴリ間の比例構成を示す無料のオンライン100%堆叠棒グラフ生成ツール。プロポーションを可視化して分析します。"
+  },
+  "mixed-chart-generator": {
+    "name": "混在グラフジェネレーター",
+    "description": "オンラインで複合棒グラフと線グラフを作成。異なるスケールで2つのデータシリーズを表示。",
+    "seo_title": "無料オンライン Mixed Chart Generator",
+    "seo_description": "異なるスケールの2つのデータシリーズを表示するための組み合わせ棒グラフと線グラフを作成するための無料オンラインツール。"
+  },
+  "ring-progress-chart-generator": {
+    "name": "リング進捗グラフ作成",
+    "description": "リング進捗グラフをオンラインで作成。円形ゲージで完了率を表示。",
+    "seo_title": "無料のオンラインリング進捗チャート生成ツール",
+    "seo_description": "パーセンテージの進捗を円形ゲージで表示するための無料のオンラインリング進捗チャート生成ツール。SVG、CSS、HTMLを使用してカスタマイズできます。"
+  },
+  "liquid-fill-chart-generator": {
+    "name": "液体充填チャートジェネレーター",
+    "description": "オンラインで液体充填チャートを作成。アニメーションウェーブ効果でパーセンテージを表示。",
+    "seo_title": "無料オンライン液体充填チャート生成ツール",
+    "seo_description": "パーセンテージ表示にアニメーション波効果を追加して液体充填チャートを作成。簡単な操作で Beautiful SVG 出力。"
+  },
+  "multi-ring-chart-generator": {
+    "name": "マルチリングチャートジェネレータ",
+    "description": "オンラインでマルチリングプロセスグラフを作成。同心円で複数のメトリクスを比較します。",
+    "seo_title": "無料オンラインマルチリングチャート生成ツール",
+    "seo_description": "複数の指標を concentric リングで比較。直感的なインターフェースで多機能なマルチリングチャートを無料で作成。"
+  },
+  "half-doughnut-chart-generator": {
+    "name": "半ドーナッツチャートジェネレータ",
+    "description": "オンラインで半ドーナッツチャートを作成。データを半円のパイチャートで表示。",
+    "seo_title": "無料オンライン半円グラフ生成ツール",
+    "seo_description": "データを半円形のピースチャートで可視化。無料でオンラインで使用可能。半円グラフ生成ツール。"
+  },
+  "nested-pie-chart-generator": {
+    "name": "階層的なピーチャート作成ツール",
+    "description": "オンラインで階層的なピーチャートを作成。内側と外側の輪でデータを視覚化します。",
+    "seo_title": "オンラインネストドパイチャート生成ツール",
+    "seo_description": "無料で階層データを内側と外側のリングで表示。オンラインでネストドパイチャートを作成する専門的なツール。"
+  },
+  "pictorial-bar-chart-generator": {
+    "name": "画像棒グラフ作成ツール",
+    "description": "オンラインで画像棒グラフを作成。繰り返しシンボルでデータを視覚化。",
+    "seo_title": "オンラインピクトグラム棒グラフ生成ツール",
+    "seo_description": "無料でデータを視覚化。繰り返しシンボルを使用した ONLINE ピクトグラム棒グラフ生成ツールです。"
+  },
+  "env-parser": {
+    "name": "Env ファイルパーサー",
+    "description": "Env ファイルのパースと検証を行い、.env、JSON、YAML フォーマット間で変換します。",
+    "seo_title": ".envファイルを無料でオンラインで解析・変換するツール",
+    "seo_description": ".env、JSON、YAML形式間のファイルを無料でオンラインで解析・変換。 Env File Parserを使用して安全にデータを管理します。"
+  },
+  "json-schema-generator": {
+    "name": "JSONスキーマジェネレーター",
+    "description": "サンプルJSONデータからJSONスキーマを生成します。Draft-07およびDraft-2020-12をサポートしています。",
+    "seo_title": "無料オンラインJSONスキーマ生成ツール",
+    "seo_description": "サンプルJSONデータからJSONスキーマを生成。Draft-07とDraft-2020-12をサポートします。"
+  },
+  "time-calculator": {
+    "name": "時間計算ツール",
+    "description": "時間を足し算、引き算し、時間の差を計算します。",
+    "seo_title": "無料オンライン時間計算ツール",
+    "seo_description": "時刻を加算、減算し、差を計算。便利な無料オンライン時間計算ツール。"
+  },
+  "batch-timestamp-converter": {
+    "name": "バッチタイムスタンプ変換ツール",
+    "description": "一度に複数のタイムスタンプを変換。形式を自動検出して結果をエクスポート。",
+    "seo_title": "無料オンラインツール：一度に多数のタイムスタンプを変換",
+    "seo_description": "自動形式検出と結果エクスポート機能付きの無料オンラインツールで、一度に多数のタイムスタンプを変換します。"
+  },
+  "regex-visualizer": {
+    "name": "正規表現ビジュアル化ツール",
+    "description": "正規表現をレールディアグラムで視覚化。サンプル文字列でパターンをテストします。",
+    "seo_title": "無料オンライン正規表現可視化ツール Regex Visualizer",
+    "seo_description": "正規表現を鉄道図形として視覚化し、サンプル文字列でパターンをテスト。オンラインで使いやすい無料ツール。"
+  },
+  "crontab-calendar": {
+    "name": "Crontabカレンダー",
+    "description": "カレンダーでcronスケジュールを視覚化。ジョブの実行時期を見てみましょう。",
+    "seo_title": "無料のオンラインcronスケジュールカレンダーツール",
+    "seo_description": "cronスケジュールをカレンダーアプリで視覚化。ジョブの実行時間を一目で確認。無料のオンラインツール"
+  },
+  "fake-data-generator": {
+    "name": "フェイクデータジェネレーター",
+    "description": "テスト用にリアルなフェイクデータを生成。名前、メール、住所など、さまざまなデータを生成します。",
+    "seo_title": "無料オンライン.fake data generatorツール",
+    "seo_description": "テスト用にリアルな偽データを生成。名前、メール、住所など。無料でオンラインで利用可能。"
+  },
+  "image-collage": {
+    "name": "画像コラージュ",
+    "description": "様々なレイアウトオプションで複数の画像を1つのコラージュにまとめます。",
+    "seo_title": "無料オンライン画像コラージュツール",
+    "seo_description": "複数の画像を1つのコラージュに組み合わせる無料オンラインツール。様々なレイアウトオプションをご用意しています。"
+  },
+  "image-splitter": {
+    "name": "画像分割ツール",
+    "description": "カスタム行と列で画像を複数のピースに分割します。",
+    "seo_title": "無料オンライン画像分割ツール",
+    "seo_description": "カスタム行と列で画像を分割。無料でオンラインで使用可能な便利なツールです。"
+  },
+  "image-rounder": {
+    "name": "画像角丸化ツール",
+    "description": "画像に角丸を追加したり、円形の画像を作成します。",
+    "seo_title": "オンラインで無料のImage Rounderツール",
+    "seo_description": "画像に丸角を追加したり、円形の画像を作成する無料のオンラインツール。"
+  },
+  "image-border": {
+    "name": "画像枠線ツール",
+    "description": "カスタムカラーで画像に枠線とパディングを追加します。",
+    "seo_title": "無料オンライン画像ボーダー工具",
+    "seo_description": "画像にカスタムカラーのボーダーとパディングを追加。オンラインで簡単に使用可能。"
+  },
+  "image-flip-rotate": {
+    "name": "画像フリップ・回転ツール",
+    "description": "画像を水平・垂直・任意の角度でフリップや回転します。",
+    "seo_title": "オンラインで無料の画像回転・反転ツール",
+    "seo_description": "任意の角度で水平、垂直に画像を回転または反転。シンプルで使いやすい無料オンラインツール。"
+  },
+  "image-adjustment": {
+    "name": "画像調整ツール",
+    "description": "明るさ、コントラスト、彩度など、画像を調整。",
+    "seo_title": "オンライン画像調整ツール 無料で使用",
+    "seo_description": "画像の明るさ、コントラスト、彩度を調整。オンラインで無料で使用可能。"
+  },
+  "image-frosted-glass": {
+    "name": " frosted glass effect ",
+    "description": "画像にアクリルガラスのぼやけ効果を追加。",
+    "seo_title": "無料のオンラインツール：画像にフロストガラスぼかし効果を追加",
+    "seo_description": "画像にフロストガラスぼかし効果を簡単に追加できる無料のオンラインツール。SVG、JSON、CSS、HTMLを使用して高度な編集を実現します。"
+  },
+  "image-to-ico": {
+    "name": "画像をICOに変換",
+    "description": "画像をICOアイコン形式に変換します。複数サイズ対応。",
+    "seo_title": "無料オンラインのImage to ICOツール",
+    "seo_description": "様々なサイズで画像をICOアイコン形式に変換する無料のオンラインツールです。"
+  },
+  "gif-maker": {
+    "name": "GIF作成",
+    "description": "複数の画像からアニメーションGIFを作成します。",
+    "seo_title": "無料オンラインGIF作成ツール",
+    "seo_description": "複数の画像からアニメーションGIFを作成する無料のオンラインツール。簡単に動画をGIFに変換します。"
+  },
+  "gif-splitter": {
+    "name": "GIF分解",
+    "description": "アニメーションGIFから個別のフレームを抽出します。",
+    "seo_title": "無料オンラインGIFスプリッター",
+    "seo_description": "アニメーションGIFから個別フレームを抽出。無料でオンラインで使用可能な便利なツール。"
+  },
+  "gif-compressor": {
+    "name": "GIF圧縮",
+    "description": "アニメーションを維持しながらGIFファイルサイズを圧縮します。",
+    "seo_title": "無料オンラインGIF圧縮ツール - サイズを小さくする",
+    "seo_description": "アニメーションを保持しながらGIFファイルのサイズを圧縮。無料のオンラインツールで簡単に操作。"
+  },
+  "image-to-webp": {
+    "name": "画像をWebPに変換",
+    "description": "画像をWebP形式に変換してファイルサイズを小さくします。",
+    "seo_title": "無料オンライン画像をWebPに変換ツール",
+    "seo_description": "画像をWebP形式に変換してファイルサイズを小さく。無料でオンラインで使用可能な便利なツールです。"
+  },
+  "exif-viewer": {
+    "name": "EXIFビューア",
+    "description": "画像のEXIFメタデータを表示・削除します。",
+    "seo_title": "無料オンラインEXIFビューアー",
+    "seo_description": "画像のEXIFメタデータを視覚化し、簡単に削除。無料のオンラインツールで画像を安全に管理します。"
+  },
+  "color-extractor": {
+    "name": "カラーエクストラクタ",
+    "description": "画像から主要色とカラーパレットを抽出。",
+    "seo_title": "無料オンラインの色抽出ツール",
+    "seo_description": "画像から主な色とカラーパレットを抽出。無料でオンラインで利用可能。"
+  },
+  "invoice-generator": {
+    "name": "請求書作成ツール",
+    "description": "カスタマイズ可能なテンプレートとPDF出力でプロフェッショナルな請求書を作成。",
+    "seo_title": "無料オンラインインボイスジェネレーター",
+    "seo_description": "カスタマイズ可能なテンプレートを使用して専門的なインボイスを作成し、PDFとしてエクスポート。無料のオンラインツール。"
+  },
+  "resume-builder": {
+    "name": "履歴書ビルダー",
+    "description": "複数のテンプレートとPDFエクスポートでプロフェッショナルな履歴書を作成。",
+    "seo_title": "無料オンライン履歴書作成ツール",
+    "seo_description": "複数のテンプレートから選んでプロフェッショナルな履歴書を作成し、PDFでエクスポート。無料のオンラインツールです。"
+  },
+  "signature-pad": {
+    "name": "電子署名パッド",
+    "description": "カスタマイズ可能なペンの色とエクスポートオプションでデジタル署名を作成。",
+    "seo_title": "無料オンラインサインパッド - カスタマイズ可能ペン色",
+    "seo_description": "無料オンラインサインパッドでデジタルサインを作成し、カスタマイズ可能なペン色とエクスポートオプションを活用してPDFやSVG形式に保存。"
+  },
+  "pomodoro-timer": {
+    "name": "ポモドーロタイマー",
+    "description": "ポモドーロテクニックで生産性を向上。",
+    "seo_title": "無料オンラインポモドーロタイマー",
+    "seo_description": "生産性を向上させるためのポモドーロ技術タイマー。無料でオンラインで使用できます。"
+  },
+  "meeting-notes": {
+    "name": "ミーティングノート",
+    "description": "参加者、アジェンダ、アクションアイテムを含む構造化されたミーティングノートを作成します。",
+    "seo_title": "オンラインミーティングノート作成無料ツール",
+    "seo_description": " Attendees、Agenda、Action Itemsを含む構造化されたミーティングノートを作成。無料でオンラインで使用可能な便利なツールです。"
+  },
+  "business-days-calculator": {
+    "name": "営業日計算機",
+    "description": "週末と祝日を除いた日付間の営業日を計算。",
+    "seo_title": "ビジネステイズカウントラー：無料オンラインツール",
+    "seo_description": "休日と週末を除いた日数を計算。無料のオンラインビジネス日カウントラー。"
+  },
+  "salary-calculator": {
+    "name": "給与計算機",
+    "description": "時給、日給、週給、月給、年収間で給与を変換。",
+    "seo_title": "無料オンライン給与計算ツール",
+    "seo_description": "給与を時間別、日別、週別、月別、年別に変換する無料のオンラインツール。効率的な給与管理に役立ちます。"
+  },
+  "invoice": {
+    "description": "説明"
+  },
+  "resume": {
+    "description": "説明"
+  },
+  "signature": {},
+  "pomodoro": {},
+  "meeting": {},
+  "businessDays": {},
+  "salary": {},
+  "excel-to-json": {
+    "name": "Excel から JSON",
+    "description": "Excel ファイルを JSON 形式に変換。シート選択とデータプレビュー対応。",
+    "seo_title": "Excelファイルを無料オンラインツールでJSON形式に変換",
+    "seo_description": "ExcelをJSONに変換する無料オンラインツール。シート選択とデータプレビュー機能付き。"
+  },
+  "json-to-excel": {
+    "name": "JSON から Excel",
+    "description": "JSON データを Excel スプレッドシートに変換。自動列検出対応。",
+    "seo_title": "JSONデータをExcelに変換する無料オンラインツール",
+    "seo_description": "JSONデータを自動カラム検出でExcelスプレッドシートに変換。便利な無料オンラインツールです。"
+  },
+  "excel-viewer": {
+    "name": "Excelビューア",
+    "description": "オンラインでExcelファイルをソート、フィルタリング、シートナビゲーションで表示。",
+    "seo_title": "オンラインで無料のExcelファイルを確認するツール",
+    "seo_description": "オンラインでExcelファイルを閲覧、ソート、フィルター、シートナビゲーション。無料の便利なツールです。"
+  },
+  "excel-merger": {
+    "name": "Excel 結合ツール",
+    "description": "複数の Excel ファイルを1つに結合。垂直または水平結合オプション対応。",
+    "seo_title": "無料オンラインExcel Mergerツール",
+    "seo_description": "複数のExcelファイルを縦横にマージして一つに。無料のオンラインツールで簡単操作。"
+  },
+  "pdf-to-image": {
+    "name": "PDF から画像",
+    "description": "PDF ページを高品質な PNG または JPEG 画像に変換。",
+    "seo_title": "PDFを高品質なPNGまたはJPEGに変換する無料オンラインツール",
+    "seo_description": "PDFを画像に変換する専門的な無料オンラインツール。高品質なPNGまたはJPEGフォーマットでPDFページを保存できます。"
+  },
+  "image-to-pdf": {
+    "name": "画像から PDF",
+    "description": "複数の画像を1つの PDF ドキュメントに変換。ページ設定対応。",
+    "seo_title": "無料オンライン画像をPDF変換ツール",
+    "seo_description": "複数の画像を1つのPDFドキュメントに変換。ページ設定も自由に変更可能です。"
+  },
+  "pdf-merger": {
+    "name": "PDFマージャー",
+    "description": "複数のPDFファイルをドラッグ＆ドロップで順番に並べて、1つのドキュメントに統合します。",
+    "seo_title": "無料オンラインPDFマージツール",
+    "seo_description": "複数のPDFファイルをドラッグ&ドロップで並べ替えて1つのドキュメントにマージ。無料のオンラインPDFマージツールです。"
+  },
+  "pdf-splitter": {
+    "name": "PDF 分割ツール",
+    "description": "ページ選択、ページ範囲で PDF ファイルを分割、または各ページを抽出。",
+    "seo_title": "PDF Splitter オンライン無料ツール",
+    "seo_description": "ページ選択やページ範囲でPDFファイルを分割。無料のオンラインPDF分割ツールです。"
+  },
+  "pdf-compressor": {
+    "name": "PDF 圧縮ツール",
+    "description": "品質を維持しながら PDF ファイルを圧縮してファイルサイズを削減。",
+    "seo_title": "無料オンラインPDF圧縮ツール",
+    "seo_description": "ファイルサイズを削減しながら品質を維持する無料のオンラインPDF圧縮ツール。"
+  },
+  "pdf-rotator": {
+    "name": "PDF ページ回転ツール",
+    "description": "PDF ページを 90°、180°、270° 回転。個別または一括回転対応。",
+    "seo_title": "PDF Rotator：無料のオンラインツール",
+    "seo_description": "PDFのページを90°、180°、270°に個別または一括で回転させる無料のオンラインツール。"
+  },
+  "markdown-editor": {
+    "name": "Markdown エディター",
+    "description": "Markdown を書いてリアルタイムでプレビュー。MD または HTML にエクスポート。",
+    "seo_title": "無料のオンラインMarkdownエディタで文章を書く",
+    "seo_description": "Markdownを書くとプレビューがリアルタイムで表示される無料のオンラインツール。MDまたはHTMLとしてエクスポート可能です。"
+  },
+  "world-clock": {
+    "name": "世界時計",
+    "description": "世界中の複数の都市の現在時刻を同時に表示。",
+    "seo_title": "世界時計：無料オンラインツール",
+    "seo_description": "複数の都市の現在時刻を同時に確認。便利な無料オンライン時計ツールです。"
+  },
+  "stopwatch": {
+    "name": "ストップウォッチ",
+    "description": "ラップタイム機能付き精密ストップウォッチ。複数のラップを記録し、最速/最遅を表示。",
+    "seo_title": "無料オンラインラップタイム計",
+    "seo_description": " Precise stopwatch with lap timing. 多くのラップを追跡し、最良と最悪のラップを示します。無料オンラインツール。"
+  },
+  "countdown-timer": {
+    "name": "カウントダウンタイマー",
+    "description": "視覚的な進捗と通知でカスタムカウントダウンタイマーを設定。",
+    "seo_title": "無料オンラインカウントダウンタイマー - ビジュアル進捗と通知",
+    "seo_description": "カスタムカウントダウンタイマーを作成。ビジュアルな進捗表示と通知をオンラインで利用可能。無料で始める！"
+  },
+  "note-pad": {
+    "name": "ノートパッド",
+    "description": "カラフルなスタイリッシュなノートを作成・整理。ブラウザストレージに自動保存。",
+    "seo_title": "無料のオンラインノートツール - 色彩豊かな sticky notes",
+    "seo_description": "Note Padは、色彩豊かなsticky notesを作成および整理し、ブラウザストレージに自動保存する無料のオンラインツールです。"
+  },
+  "excelToJson": {},
+  "jsonToExcel": {},
+  "excelViewer": {},
+  "excelMerger": {},
+  "pdfToImage": {},
+  "imageToPdf": {},
+  "pdfMerger": {},
+  "pdfSplitter": {},
+  "pdfCompressor": {},
+  "pdfRotator": {},
+  "markdownEditor": {},
+  "worldClock": {},
+  "stopwatchUI": {},
+  "countdownTimer": {},
+  "notePad": {},
+  "pdf-to-text": {
+    "name": "PDFからテキスト",
+    "description": "PDFファイルからテキスト内容を抽出。ページマーカー付きの多ページPDFをサポート。",
+    "seo_title": "PDFからテキストを無料でオンラインで抽出するツール",
+    "seo_description": "多ページのPDFからテキストを抽出。ページマーカー付きのPDFもサポートします。無料のオンラインツールで簡単操作。"
+  },
+  "word-to-txt": {
+    "name": "Wordからテキスト",
+    "description": "Word文書(.docx)をプレーンテキストに変換。",
+    "seo_title": "無料オンラインツール：Word文書をテキストに変換",
+    "seo_description": "Word to Textは、.docxファイルを無料でオンラインで簡単にテキスト形式に変換するための便利なツールです。"
+  },
+  "word-to-html": {
+    "name": "WordからHTML",
+    "description": "Word文書(.docx)をHTML形式に変換。",
+    "seo_title": "Word文書を無料オンラインツールでHTMLに変換",
+    "seo_description": "Word(.docx)ファイルをHTMLに無料でオンライン変換。形式を保持し、簡単な操作で高品質なHTMLを作成します。"
+  },
+  "excel-to-csv": {
+    "name": "ExcelからCSVへの変換ツール",
+    "description": "Excelスプレッドシート（.xlsx、.xls）をCSV形式に変換します。",
+    "seo_title": "Excelを無料オンラインツールでCSVに変換",
+    "seo_description": "Excelスプレッドシート(.xlsx, .xls)を無料でオンラインのツールを使用してCSV形式に変換。簡単な操作でデータを移行します。"
+  },
+  "csv-to-excel": {
+    "name": "CSVからExcel",
+    "description": "CSVファイルをExcel形式(.xlsx)に変換。",
+    "seo_title": "CSVファイルをオンラインツールでExcelに変換",
+    "seo_description": "無料のオンラインツールを使ってCSVファイルをExcelスプレッドシート形式(.xlsx)に変換します。"
+  },
+  "loan-calculator": {
+    "name": "ローン計算機",
+    "description": "ローンの支払い、利息、償還スケジュールを計算。",
+    "seo_title": "無料オンラインローン計算ツール",
+    "seo_description": "ローンの返済額、利息、 amortization スケジュールを計算。便利な無料オンラインツールです。"
+  },
+  "bmi-calculator": {
+    "name": "BMI計算機",
+    "description": "体格指数と健康分類を計算。",
+    "seo_title": "無料オンラインBMI計算ツール",
+    "seo_description": "健康診断のためにあなたのBMIを無料でオンラインで計算。体重指数と健康状態の分類を知りましょう。"
+  },
+  "age-calculator": {
+    "name": "年齢計算ツール",
+    "description": "年齢を年、月、日で正確に計算します。",
+    "seo_title": "無料オンライン年齢計算ツール",
+    "seo_description": "正確な年月日で年齢を計算。無料のオンライン年齢計算ツールです。"
+  },
+  "tip-calculator": {
+    "name": "チップ計算機",
+    "description": "チップを計算し、複数人で割り勘。",
+    "seo_title": "無料オンラインチップ計算ツール",
+    "seo_description": "複数の人と料金を分割し、チップを計算。便利な無料オンラインツール。"
+  },
+  "discount-calculator": {
+    "name": "割引計算機",
+    "description": "割引価格と節約額を計算。",
+    "seo_title": "オンライン無料の割引計算ツール",
+    "seo_description": "この無料のオンラインツールを使用して、割引価格と節約額を簡単に計算します。"
+  },
+  "compound-interest-calculator": {
+    "name": "複利計算機",
+    "description": "複利と投資成長を計算。",
+    "seo_title": "無料オンライン複利計算ツール",
+    "seo_description": "投資成長を計算。無料のオンライン複利計算ツールで資産の増加を把握しましょう。"
+  },
+  "binary-calculator": {
+    "name": "バイナリ計算機",
+    "description": "バイナリアリスティックとビット演算を実行します。",
+    "seo_title": "無料オンライン バイナリ計算ツール",
+    "seo_description": "二進数の算術とビット操作を実行。無料で安全にオンラインで使用可能なツール。"
+  },
+  "hex-calculator": {
+    "name": "16進数計算機",
+    "description": "16進数の算術演算とビット演算を実行。",
+    "seo_title": "無料オンライン ヘキサデシマル計算ツール",
+    "seo_description": "各種ヘキサデシマル演算とビット操作を無料でオンラインで実行。便利なヘキサ計算ツール。"
+  },
+  "ip-subnet-calculator": {
+    "name": "IPサブネット計算ツール",
+    "description": "IPサブネット情報とアドレス範囲を計算します。",
+    "seo_title": "無料オンラインIPサブネット計算ツール",
+    "seo_description": "IPサブネット情報とアドレス範囲を計算。無料でオンライン使用可能。"
+  },
+  "aspect-ratio-calculator-enhanced": {
+    "name": "アスペクト比計算ツール",
+    "description": "画像や動画のアスペクト比を計算・変換します。",
+    "seo_title": "無料オンラインアスペクト比計算ツール",
+    "seo_description": "画像や動画のアスペクト比を計算・変換。無料で簡単にオンラインで使用できます。"
+  },
+  "chinese-lorem-ipsum": {
+    "name": "中国ロレムイプス",
+    "description": "デザインモックアップ用の中国語のプレースホルダーテキストを生成します。",
+    "seo_title": "無料のオンラインChinese Lorem Ipsumツール",
+    "seo_description": "デザインのモックアップ用にChineseのプレースホルダーテキストを生成する無料のオンラインツール"
+  },
+  "text-to-image": {
+    "name": "テキストから画像",
+    "description": "テキストをダウンロード可能なPNG画像に変換。",
+    "seo_title": "無料オンラインのテキストから画像変換ツール",
+    "seo_description": "テキストをダウンロード可能なPNG画像に無料で変換。オンラインのテキストから画像変換ツール。"
+  },
+  "text-to-handwriting": {
+    "name": "テキストから手書き",
+    "description": "テキストを手書き風の画像に変換。",
+    "seo_title": "無料オンラインのテキストを手書き風画像に変換ツール",
+    "seo_description": "テキストを手書き風の画像に簡単に変換。無料でオンラインで利用可能な便利なツールです。"
+  },
+  "screen-resolution-tester": {
+    "name": "画面解像度テスター",
+    "description": "画面解像度とビューポート情報をテスト・表示。",
+    "seo_title": "無料オンラインスクリーン解像度テストツール",
+    "seo_description": "デバイスのスクリーン解像度とビューポート情報を無料でオンラインでテスト。"
+  },
+  "keyboard-tester": {
+    "name": "キーボードテスター",
+    "description": "キーボードキーをテストしてキーコードを表示。",
+    "seo_title": "無料オンラインキーボードテストツール",
+    "seo_description": "キーボードのキーをテストし、キー コードを確認する無料のオンラインツールです。"
+  },
+  "typing-speed-test": {
+    "name": "タイピング速度テスト",
+    "description": "タイピング速度と正確性をテスト。",
+    "seo_title": "無料オンラインタイピングスピードテストツール",
+    "seo_description": "あなたのタイピング速度と正確性を無料でオンラインで測定。効果的な打鍵トレーニング。"
+  },
+  "morse-code-player": {
+    "name": "モールス信号プレーヤー",
+    "description": "テキストをモールス信号に変換して音声再生。",
+    "seo_title": "無料オンライン・モールスコードプレイヤー",
+    "seo_description": "テキストをモールスコードに変換し、音声を再生する無料オンラインツール"
+  },
+  "currency-converter": {
+    "name": "通貨換算",
+    "description": "45以上の世界通貨をリアルタイム為替レートで換算。",
+    "seo_title": "無料オンライン通貨換算ツール",
+    "seo_description": "45以上の通貨をリアルタイムの為替レートで換算。便利な無料オンラインツールです。"
+  },
+  "roi-calculator": {
+    "name": "ROI計算ツール",
+    "description": "年率化ROIと利益分析で投資のリターンを計算。",
+    "seo_title": "ROI計算ツール：無料オンラインで年度別ROIと利益分析",
+    "seo_description": "ROI Calculatorを使用して、無料でオンラインで年度別ROIと利益分析を行います。効果的な投資判断をサポートします。"
+  },
+  "mortgage-calculator": {
+    "name": "住宅ローン計算ツール",
+    "description": "住宅ローンの支払い、総利息を計算し、返済スケジュールを確認。",
+    "seo_title": "無料オンライン住宅ローン計算ツール",
+    "seo_description": "住宅ローンの支払い、総利息、 amortization スケジュールを計算。無料でオンラインで使用可能。"
+  },
+  "tax-calculator": {
+    "name": "税計算機",
+    "description": "所得控除と実効税率を示すことで連邦所得税を推定します。",
+    "seo_title": "無料オンライン税率計算ツール",
+    "seo_description": " Bracket breakdownと有効税率を含む連邦所得税をestimします。無料のオンライン税率計算ツール。"
+  },
+  "calorie-calculator": {
+    "name": "カロリー計算機",
+    "description": "年齢、体重、身長、活動レベルに基づいて日々のカロリー必要量を計算します。",
+    "seo_title": "無料オンラインカロリー計算ツール",
+    "seo_description": "年齢、体重、身長、活動レベルに基づいて、あなたの日常のカロリー需要を計算します。無料でオンラインで使用可能です。"
+  },
+  "water-intake-calculator": {
+    "name": "水摂取計算ツール",
+    "description": "体重と活動レベルに基づいて日々の水摂取量を計算します。",
+    "seo_title": "無料オンライン水摂取計算ツール",
+    "seo_description": "体重と活動レベルに基づいて、あなたの毎日の水摂取量を計算。無料でオンラインで利用可能。"
+  },
+  "sleep-calculator": {
+    "name": "睡眠計算機",
+    "description": "睡眠サイクルに基づいて最適な就寝時間や起床時間を計算します。",
+    "seo_title": "無料のオンライン睡眠計算ツール",
+    "seo_description": "睡眠サイクルに基づいて最適な就寝時間や起床時間を計算する無料のオンラインツールです。"
+  },
+  "due-date-calculator": {
+    "name": "妊娠予定日計算ツール",
+    "description": "妊娠の予定日を計算し、妊娠の重要な節目を追跡します。",
+    "seo_title": "無料オンライン出産日計算ツール",
+    "seo_description": "出産日の計算と出産 milestones の追跡を無料でオンラインで。安心の出産準備をサポートします。"
+  },
+  "love-calculator": {
+    "name": "愛のカリculator",
+    "description": "楽しい名前の相性を計算して、愛の合図をチェックしましょう。",
+    "seo_title": "無料オンライン愛の相性診断ツール",
+    "seo_description": "2人の名前を入力して、楽しい愛の相性を計算しましょう。無料で簡単にオンラインで使用できます。"
+  },
+  "decision-wheel": {
+    "name": "決定の車輪",
+    "description": "オプションを回転させてランダムな決定を下しましょう。",
+    "seo_title": "オンラインで無料の決定ツール：Decision Wheel",
+    "seo_description": "ランダムな決定をサポートするDecision Wheelをオンラインで無料で使用。D4からD20までのサイコロを回転させましょう。"
+  },
+  "name-generator": {
+    "name": "ネームジェネレーター",
+    "description": "キャラクター、赤ちゃん、プロジェクト用のランダムな名前を生成。",
+    "seo_title": "無料オンライン名前生成ツール",
+    "seo_description": "キャラクター、赤ちゃん、プロジェクト用のランダムな名前を生成します。無料でオンラインで利用可能です。"
+  },
+  "random-picker": {
+    "name": "ランダムピッカーウェブサイト",
+    "description": "リストからアニメーション効果でランダムにアイテムを選ぶ無料オンラインツールです。",
+    "seo_title": "無料オンラインRandom Pickerツール",
+    "seo_description": "リストからランダムなアイテムを選択し、アニメーション効果を追加。無料でオンラインで利用可能です。"
+  },
+  "coin-flipper": {
+    "name": "コインフリッパー",
+    "description": "リアルなアニメーションと統計でバーチャルコインをフリップ。",
+    "seo_title": "無料オンラインコインフリッパー",
+    "seo_description": "リアルなアニメーションと統計を備えた無料のオンラインコインフリッパー。D4〜D20まで利用可能。"
+  },
+  "dice-roller": {
+    "name": "ダイスローラー",
+    "description": "様々な種類と数のバーチャルダイスをロールできます。",
+    "seo_title": "無料オンラインサイコロローラーツール",
+    "seo_description": "様々なサイコロをオンラインで無料でroll。D4, D6, D8, D10, D12, D20など多数のサイコロタイプをサポートします。"
+  },
+  "team-generator": {
+    "name": "チーム生成ツール",
+    "description": "ランダムに人々をバランスの取れたチームに分ける。",
+    "seo_title": "無料オンラインチーム生成ツール",
+    "seo_description": "人々をバランスの取れたチームにランダムに分割する無料オンラインツール。"
+  },
+  "countdown-days-calculator": {
+    "name": "カウントダウン日数計算ツール",
+    "description": "特定の日付までまたはその後の日数を計算します。",
+    "seo_title": "無料オンラインカウントダウン日数計算ツール",
+    "seo_description": "特定の日までまたはから何日かを計算。無料でオンラインで使用可能なカウントダウン日数計算ツール。"
+  },
+  "fuel-cost-calculator": {
+    "name": "燃料費計算ツール",
+    "description": "距離と燃料効率に基づいて旅行の燃料費を計算します。",
+    "seo_title": "無料オンライン燃料コスト計算ツール",
+    "seo_description": "旅行の距離と燃費に基づいて燃料コストを計算。無料でオンラインで使用可能。"
+  },
+  "electricity-cost-calculator": {
+    "name": "電気代計算機",
+    "description": "家電の使用状況に基づいて電気代を計算します。",
+    "seo_title": "無料オンライン電気料金計算ツール",
+    "seo_description": "家電の使用量に基づいて電気料金を計算。無料で簡単にオンラインで使用可能。"
+  },
+  "gpa-calculator": {
+    "name": "GPA計算ツール",
+    "description": "成績と単位数からGPAを計算します。",
+    "seo_title": "無料オンライン GPA 計算ツール",
+    "seo_description": "学点と学分から GPA を計算する無料オンラインツール。簡単にあなたの GPA を知りましょう。"
+  },
+  "pace-calculator": {
+    "name": "ペース計算機",
+    "description": "ランニングのペース、時間、距離を計算します。",
+    "seo_title": "無料オンラインペース計算ツール",
+    "seo_description": "ランニングのペース、時間、距離を計算。無料でオンラインで使用できます。"
+  },
+  "shoe-size-converter": {
+    "name": "シューズサイズ変換ツール",
+    "description": "US、UK、EU、アジアのサイズシステム間でシューズサイズを変換します。",
+    "seo_title": "無料オンラインシューズサイズ変換ツール",
+    "seo_description": "US、UK、EU、アジアのシューズサイズを無料でオンラインで変換。正確なサイズ変換が必要な方へ。"
+  },
+  "ring-size-calculator": {
+    "name": "指輪サイズ計算機",
+    "description": "異なる測定方法で指輪サイズを見つける。",
+    "seo_title": "無料オンラインリングサイズ計算ツール",
+    "seo_description": "異なる測定方法を使用して、あなたのリングサイズを簡単に見つける無料オンラインツール。"
+  },
+  "bra-size-calculator": {
+    "name": "ブラサイズ計算機",
+    "description": "アンダーバストとバストの測定からブラサイズを計算。",
+    "seo_title": "ブラサイズ計算オンラインツール 無料",
+    "seo_description": "ブラサイズを BustとBand の測定値から計算。無料でオンラインで使用可能な便利なツール。"
+  },
+  "concrete-calculator": {
+    "name": "コンクリート計算機",
+    "description": "スラブ、基礎、柱に必要なコンクリート量を計算。",
+    "seo_title": "無料オンラインコンクリート計算ツール",
+    "seo_description": "スラブ、フット ing 、コラムのコンクリート量を計算。無料のオンラインツールで正確な見積もり。"
+  },
+  "paint-calculator": {
+    "name": "塗料計算ツール",
+    "description": "ドアと窓の減算を含めた壁の塗料必要量を計算。",
+    "seo_title": "無料オンライン塗料計算ツール",
+    "seo_description": "壁の塗料を計算し、ドアと窓の面積を引きます。無料のオンライン塗料計算ツールで正確な塗料量を知りましょう。"
+  },
+  "tile-calculator": {
+    "name": "タイル計算機",
+    "description": "廃棄率を含む床と壁に必要なタイル数を計算。",
+    "seo_title": "無料オンラインタイル計算ツール",
+    "seo_description": "壁と床のタイルが必要な数を計算。廃材率を考慮した無料のオンラインツール。"
+  },
+  "instagram-font-generator": {
+    "name": "インスタグラムフォントジェネレーター",
+    "description": "インスタグラムのプロフィールや投稿に使えるファンシーなユニコードフォントを生成。",
+    "seo_title": "Instagramフォント生成オンラインツール",
+    "seo_description": "無料で fancy Unicodeフォントを生成し、Instagramプロフィールと投稿に使用。"
+  },
+  "social-media-size-guide": {
+    "name": "ソーシャルメディアサイズガイド",
+    "description": "ソーシャルメディアプラットフォーム全体の画像サイズ参照ガイド。",
+    "seo_title": "ソーシャルメディア用画像サイズガイド（無料オンラインツール）",
+    "seo_description": "ソーシャルメディアプラットフォームでの画像サイズを一覧化した無料オンラインツール。適切なサイズを確認して効果的な投稿を！"
+  },
+  "keyword-density-checker": {
+    "name": "キーワード密度チェッカー",
+    "description": "コンテンツ内のキーワード頻度と密度を分析。",
+    "seo_title": "無料のキーワード密度チェックオンラインツール",
+    "seo_description": "コンテンツのキーワード頻度と密度を分析する無料のオンラインツール。SEO最適化を支援します。"
+  },
+  "text-summarizer": {
+    "name": "テキスト要約ツール",
+    "description": "重要な文を抽出して長いテキストを要約。",
+    "seo_title": "無料オンラインテキストサマライザツール",
+    "seo_description": "長文をキーフレーズでサマライズ。無料でオンラインで利用可能です。"
+  },
+  "paraphrase-tool": {
+    "name": "パラフレーズツール",
+    "description": "意味を保ちつつ、異なるスタイルでテキストを書き換えます。",
+    "seo_title": "無料オンライン文書再構成ツール",
+    "seo_description": "意味を保ちながら異なるスタイルでテキストを再構成。無料で使いやすいオンラインツール。"
+  },
+  "graphql-formatter": {
+    "name": "GraphQLフォーマッター",
+    "description": "GraphQLクエリとスキーマをフォーマットして整形。",
+    "seo_title": "オンラインGraphQLフォーマッタ無料ツール",
+    "seo_description": "GraphQLクエリとスキーマを形式化し、beautifulに変換する無料のオンラインツール。"
+  },
+  "code-screenshot-generator": {
+    "name": "コードスクリーンショットジェネレーター",
+    "description": "シンタックスハイライト付きの美しいコードスクリーンショットを作成。",
+    "seo_title": "コードスクリーンショット生成オンラインツール",
+    "seo_description": "無料で美しいコードスクリーンショットを作成。構文ハイライト付き。オンラインツール利用可能。"
+  },
+  "number-system-converter": {
+    "name": "進数変換",
+    "description": "2進数、8進数、10進数、16進数間で数値を変換。",
+    "seo_title": "無料オンライン数値変換ツール",
+    "seo_description": "デシマル、バイナリ、オクタル、ヘキサデシマル間の数値変換を簡単に。無料でオンラインで利用できます。"
+  },
+  "subnet-calculator-enhanced": {
+    "name": "サブネット計算機",
+    "description": "ネットワークアドレス、ブロードキャスト、ホスト範囲を含むサブネット詳細を計算。",
+    "seo_title": "無料オンラインサブネット計算ツール",
+    "seo_description": "ネットワークアドレス、ブロードキャスト、ホスト範囲を計算する無料のオンラインサブネット計算ツール。"
+  },
+  "iban-validator": {
+    "name": "IBAN検証ツール",
+    "description": "ヨーロッパ諸国のIBAN銀行口座番号を検証・解析します。",
+    "seo_title": "IBAN Validator オンライン無料ツール",
+    "seo_description": "欧州の銀行口座番号を無料でオンラインで検証し、解析します。"
+  },
+  "vat-calculator": {
+    "name": "VAT計算機",
+    "description": "ヨーロッパ各国の異なるVAT（付加価値税）率を計算します。",
+    "seo_title": "EU諸国のVAT計算無料オンラインツール",
+    "seo_description": "異なる税率でEU諸国のVATを計算。無料のオンラインツールで簡単に利用可能。"
+  },
+  "carbon-footprint-calculator": {
+    "name": "カーボンフットプリント計算機",
+    "description": "交通、エネルギー、ライフスタイルから個人のカーボンフットプリントを計算します。",
+    "seo_title": "無料オンラインカーボン footprint カalculator",
+    "seo_description": "交通、エネルギー、ライフスタイルからあなたの個人的なカーボン footprint を計算。無料のオンラインツールで瞬時に結果を得る。"
+  },
+  "gdpr-consent-generator": {
+    "name": "GDPR同意生成ツール",
+    "description": "GDPR準拠のCookie同意バナーとプライバシーポリシーテンプレートを生成します。",
+    "seo_title": "GDPRコンプライアンス対応クッキー同意バナー生成オンラインツール",
+    "seo_description": "無料でGDPR準拠のクッキー同意バナーとプライバシーポリシーテンプレートを生成。オンラインツール利用は簡単です。"
+  },
+  "metric-imperial-converter": {
+    "name": "メートル法・ヤードポンド法変換",
+    "description": "長さ、重量、体積などのメートル法とヤードポンド法の単位を変換します。",
+    "seo_title": "単位変換オンラインツール - メトリックとイマージョン間の無料変換",
+    "seo_description": "長さ、重量、体積など、様々な単位を無料でオンラインで変換。 Metric Imperial Converter を使用して、簡単に単位を変換します。"
+  },
+  "bic-swift-lookup": {
+    "name": "BIC/SWIFTコード検索",
+    "description": "国際銀行送金用のBIC/SWIFTコードを検索・検証します。",
+    "seo_title": "国際送金用BIC/SWIFTコード検索オンラインツール",
+    "seo_description": "無料で使用可能なBIC/SWIFTコード検索ツール。国際送金に安全かつ正確に利用ください。"
+  },
+  "color-blindness-simulator": {
+    "name": "色覚障害シミュレーター",
+    "description": "さまざまなタイプの色覚障害を持つ人にとって色や画像がどのように見えるかをシミュレートします。",
+    "seo_title": "無料オンラインの色盲シミュレーター",
+    "seo_description": "さまざまな色盲のタイプで色と画像がどのように見えるかシミュレートする無料のオンラインツールです。"
+  },
+  "credit-card-validator": {
+    "name": "クレジットカード検証ツール",
+    "description": "ルーンアルゴリズムを使用してクレジットカード番号を検証し、カードの種類を判定します。",
+    "seo_title": "クレジットカード検証オンラインツール",
+    "seo_description": "無料でオンラインでクレジットカード番号を検証し、カードタイプを検出します。Luhnアルゴリズムを使用。"
+  },
+  "email-validator": {
+    "name": "メールアドレス検証",
+    "description": "メールアドレスの形式を検証し、一般的なタイプミスや使い捨てドメインをチェックします。",
+    "seo_title": "無料オンラインメール検証ツール",
+    "seo_description": "メールアドレスを検証し、一般的なスペリングミスと一時的なドメインをチェックします。"
+  },
+  "phone-formatter": {
+    "name": "電話番号フォーマッター",
+    "description": "国際標準に従って電話番号をフォーマットします。",
+    "seo_title": "国際基準に沿った電話番号フォーマッターオンラインツール",
+    "seo_description": "無料で利用可能な電話番号フォーマッターオンラインツール。さまざまな国に沿ったフォーマットを提供します。"
+  },
+  "aspect-ratio-resizer": {
+    "name": "アスペクト比リサイザー",
+    "description": "特定のアスペクト比やソーシャルメディアサイズに画像をリサイズします。",
+    "seo_title": "オンライン画像リサイズツール 無料.aspect ratio resizer",
+    "seo_description": "特定のアスペクト比やソーシャルメディアのサイズに画像をリサイズ。無料のオンラインツールで簡単操作。"
+  },
+  "markdown-to-pdf": {
+    "name": "Markdown から PDF",
+    "description": "Markdown ドキュメントを PDF ファイルに変換",
+    "seo_title": "無料のオンラインMarkdown to PDFツール",
+    "seo_description": "Markdownドキュメントをカスタマイズ可能なスタイルでPDFに変換する無料のオンラインツール"
+  },
+  "speech-timer": {
+    "name": "スピーチタイマー",
+    "description": "スピーチやプレゼンの時間を計測",
+    "seo_title": "無料オンラインプレゼンテーションタイマー",
+    "seo_description": "無料でオンラインで使用できるプレゼンテーションとスピーチタイマー。単語数推定機能付き。"
+  },
+  "habit-tracker": {
+    "name": "習慣トラッカー",
+    "description": "毎日の習慣を追跡し、連続記録を構築",
+    "seo_title": " Habit Tracker フリー オンライン ツール",
+    "seo_description": "毎日の習慣を追跡し、連続日数を増やしましょう。無料のオンライン Habit Tracker ツールで、あなたの目標を達成します。"
+  },
+  "flip-text": {
+    "name": "テキスト反転",
+    "description": "テキストを上下反転、ミラー、逆転",
+    "seo_title": "無料オンラインのテキスト翻轉ツール",
+    "seo_description": "テキストを裏返し、鏡像、または逆順に変換する無料のオンラインツール。Flip Textを使用して、簡単にテキストを操作できます。"
+  },
+  "small-text-generator": {
+    "name": "小さい文字ジェネレーター",
+    "description": "上付き、下付き、スモールキャップス文字を生成",
+    "seo_title": "無料オンライン的小文字生成ツール",
+    "seo_description": "Superscript、Subscript、Small Capsテキストを生成する無料のオンラインツール。簡単な操作で必要なフォーマットを取得できます。"
+  },
+  "strikethrough-text": {
+    "name": "取り消し線テキスト",
+    "description": "取り消し線、下線、クロスアウトテキストを生成",
+    "seo_title": "無料オンラインの罫線テキストツール",
+    "seo_description": "HTML、CSS、SVGを使用した罫線、下線、通過線テキスト生成ツール。オンラインで簡単に使用できます。"
+  },
+  "roman-numeral-converter": {
+    "name": "ローマ数字変換器",
+    "description": "ローマ数字とアラビア数字の相互変換",
+    "seo_title": "無料オンラインローマ数字変換ツール",
+    "seo_description": "ローマ数字とアラビア数字を無料でオンラインで簡単に変換。便利なローマ数字変換ツールです。"
+  },
+  "binary-to-text": {
+    "name": "バイナリからテキスト",
+    "description": "バイナリとテキストの相互変換",
+    "seo_title": "無料オンライン バイナリーツール - 文字とバイナリ変換",
+    "seo_description": "無料で利用できるオンラインツールとして、Binary to Textはバイナリデータをテキストに変換し、逆も可能。便利な変換ツールです。"
+  },
+  "fraction-calculator": {
+    "name": "分数計算機",
+    "description": "分数の加減乗除計算",
+    "seo_title": "無料オンライン分数計算ツール",
+    "seo_description": "分数の計算に役立つ無料オンラインツール。加算、減算、乗算、除算を簡単に実行できます。"
+  },
+  "percentage-change-calculator": {
+    "name": "パーセント変化計算機",
+    "description": "2つの値間のパーセント増減を計算",
+    "seo_title": "無料オンラインのパーセンテージ変化計算ツール",
+    "seo_description": "値間の増減を簡単に計算。無料で使用可能なオンラインツール。"
+  },
+  "random-color-generator": {
+    "name": "ランダムカラージェネレーター",
+    "description": "HEX、RGB、HSL形式でランダムな色を生成",
+    "seo_title": "無料オンラインのランダムカラー生成ツール",
+    "seo_description": "HEX、RGB、HSLの値でランダムカラーを生成。無料で簡単に使用可能なオンラインツールです。"
+  },
+  "anagram-solver": {
+    "name": "アナグラムソルバー",
+    "description": "手違いの文字から全ての可能な単語を見つけ出します",
+    "seo_title": "無料オンラインアナグラムソーラー",
+    "seo_description": "混同行きのすべての可能性のある単語を見つけましょう。便利な無料オンラインツールです。"
+  },
+  "word-unscrambler": {
+    "name": "ワードアナライザー",
+    "description": "シャッフルされた文字からすべての可能な単語を見つけます",
+    "seo_title": "無料オンライン単語解け消しツール",
+    "seo_description": "不明な文字列を解け消しし、すべての可能性のある単語を見つけ出す無料のオンラインツールです。"
+  },
+  "text-to-pdf": {
+    "name": "テキストからPDF",
+    "description": "プレーンテキストをPDFドキュメントに変換",
+    "seo_title": "無料のオンラインText to PDFツール",
+    "seo_description": "テキストをPDFに変換する無料のオンラインツール。簡単な操作で高品質なPDFドキュメントを作成します。"
+  },
+  "unit-price-calculator": {
+    "name": "単価計算機",
+    "description": "単価を比較して最もお得な商品を見つける",
+    "seo_title": "単位価格計算器 - 無料オンラインツール",
+    "seo_description": "単位あたりの価格を比較し、最高の価値を見つける無料のオンラインツールです。"
+  },
+  "bionic-reading-converter": {
+    "name": "バイオニックリーディング変換",
+    "description": "テキストをバイオニックリーディング形式に変換して速読",
+    "seo_title": "無料オンラインツール：テキストをバイオニックリーディングフォーマットに変換",
+    "seo_description": "テキストをバイオニックリーディング形式に変換し、読み取り速度を向上させる無料のオンラインツール。PDF、URL、APIを使用して簡単に変換。"
+  },
+  "palindrome-checker": {
+    "name": "回文チェッカー",
+    "description": "テキストが前後同じかどうかをチェック",
+    "seo_title": "無料オンラインのパラドリンチェックツール",
+    "seo_description": "テキストが前後で同じかどうかチェック。無料でオンラインで利用可能です。"
+  },
+  "character-map": {
+    "name": "文字マップ",
+    "description": "特殊文字と記号を閲覧してコピー",
+    "seo_title": "無料オンラインキャラクターマップツール",
+    "seo_description": "特殊文字とシンボルを閲覧してコピー。無料のオンラインツールで簡単操作。"
+  },
+  "text-repeater": {
+    "name": "テキストリピーター",
+    "description": "カスタム区切り文字でテキストを複数回繰り返す",
+    "seo_title": "無料オンラインテキストリピーターツール",
+    "seo_description": "テキストをカスタマイズされたセパレーターで繰り返し生成。無料でオンライン使用可能。"
+  },
+  "fake-name-generator": {
+    "name": "偽名ジェネレーター",
+    "description": "異なる国からランダムでリアルな名前を生成",
+    "seo_title": "無料オンライン名前生成ツール",
+    "seo_description": "様々な国のリアルな名前をランダムに生成。無料でオンラインで利用可能です。"
+  },
+  "invisible-character-generator": {
+    "name": "不可視文字ジェネレーター",
+    "description": "不可視のUnicode文字を生成・検出",
+    "seo_title": "無料の Invisible Character Generator オンラインツール",
+    "seo_description": " Invisible Character Generator を使用して、Unicode の非表示文字を生成したり検出したり。無料で簡単にオンラインで使用できます。"
+  },
+  "json-to-proto": {
+    "name": "JSONからProtocol Buffersへの変換ツール",
+    "description": "JSONデータをProtocol Buffersスキーマ定義に変換する無料オンラインツール",
+    "seo_title": "JSONをProtocol Buffersに変換する無料オンラインツール",
+    "seo_description": "JSONデータをProtocol Buffersスキーマ定義に無料でオンラインで変換。簡単に使用できる便利なツールです。"
+  },
+  "svg-to-png": {
+    "name": "SVGからPNGへの変換ツール",
+    "description": "SVGベクタ画像をPNGレシーバーフォーマットに変換",
+    "seo_title": "SVGをPNGに無料オンライン変換ツール",
+    "seo_description": "SVGベクターアイコンをPNGラスター形式にオンラインで無料で変換。簡単操作のコンバータツール。"
+  },
+  "webp-to-png": {
+    "name": "WebPからPNG変換ツール",
+    "description": "WebP画像をPNG形式に変換",
+    "seo_title": "WebPをPNGに無料オンライン変換ツール",
+    "seo_description": "WebP画像をPNG形式に変換する無料のオンラインツール。簡単に使用して高品質な画像を保存。"
+  },
+  "png-to-svg": {
+    "name": "PNGからSVGへの変換ツール",
+    "description": "PNGレースター画像をSVGベクターフォーマットに変換",
+    "seo_title": "PNGをSVGに無料オンライン変換ツール",
+    "seo_description": "PNGラスタ画像をSVGベクタ形式に無料でオンラインで変換。簡単操作の便利なツールです。"
+  },
+  "html-to-pdf": {
+    "name": "HTMLからPDF変換ツール",
+    "description": "HTMLコンテンツをPDFドキュメントに変換",
+    "seo_title": "無料オンラインHTML to PDF変換ツール",
+    "seo_description": "HTMLコンテンツをPDFドキュメントに無料でオンラインで変換。簡単な操作で高品質なPDFを作成。"
+  },
+  "json-to-table": {
+    "name": "JSON to Table Converter",
+    "description": "JSONデータをHTMLテーブル形式に変換",
+    "seo_title": "JSONデータをHTMLテーブルに変換する無料オンラインツール",
+    "seo_description": "JSONデータを簡単にHTMLテーブル形式に変換。無料でオンラインで利用できます。"
+  },
+  "yaml-validator": {
+    "name": "YAMLバリデーター",
+    "description": "YAMLの構文と構造を確認",
+    "seo_title": "無料のオンラインYAMLValidatorツール",
+    "seo_description": "YAMLの構文と構造を無料でオンラインで検証。データの正確性を確認する便利なツールです。"
+  },
+  "xml-validator": {
+    "name": "XMLバリデーター",
+    "description": "XMLの構文と正規性を確認",
+    "seo_title": "XML Validator：無料のオンラインツール",
+    "seo_description": "XMLの構文とwell-formednessを無料でオンラインでチェック。信頼性の高いXML Validatorツール。"
+  },
+  "css-to-tailwind": {
+    "name": "CSS to Tailwindコンバータ",
+    "description": "CSSスタイルをTailwind CSSクラスに変換",
+    "seo_title": "CSSをTailwind CSSに無料オンラインツール",
+    "seo_description": "CSSスタイルをTailwind CSSクラスに変換する無料のオンラインツール。簡単にデザインシステムを統一してください。"
+  },
+  "tailwind-to-css": {
+    "name": "Tailwind CSSからCSSへの変換ツール",
+    "description": "Tailwind CSSのクラスを標準CSSに変換",
+    "seo_title": " Tailwind CSSを無料オンラインツールで標準CSSに変換",
+    "seo_description": "Tailwind CSSクラスを標準CSSに無料でオンラインで変換するためのツール。簡単に Tailwind CSS を標準 CSS に変換します。"
+  },
+  "svg-editor": {
+    "name": "SVGエディタ",
+    "description": "ライブプレビューでSVGコードの編集と修正を行います",
+    "seo_title": "無料オンラインSVGエディタ - ライブプレビュー付き",
+    "seo_description": "SVGコードの編集と修正に無料でオンラインで使用できるSVGエディタ。ライブプレビューで変更を確認できます。"
+  },
+  "json-to-form": {
+    "name": "JSONからフォーム生成ツール",
+    "description": "JSONスキーマからHTMLフォームを作成",
+    "seo_title": "JSONからフォームをオンラインで無料生成するツール",
+    "seo_description": "JSONスキーマからHTMLフォームを生成する無料のオンラインツール。簡単な操作でデータをフォームに変換します。"
+  },
+  "api-tester": {
+    "name": "APIテスター",
+    "description": "カスタムリクエストとヘッダーでREST APIをテスト",
+    "seo_title": "無料オンラインAPIテストツール",
+    "seo_description": "REST APIのテストに最適な無料オンラインツール。カスタムリクエストとヘッダーを使用して検証します。"
+  },
+  "jwt-debugger": {
+    "name": "JWTデバッガー",
+    "description": "署名検証付きでJWTトークンをデバッグ・検証",
+    "seo_title": "JWT Debugger：無料オンラインツール",
+    "seo_description": "JWTトークンの署名検証でデバッグと検証。無料でオンラインで使用できます。"
+  },
+  "csp-generator": {
+    "name": "CSPジェネレーター",
+    "description": "コンテンツセキュリティポリシーヘッダーを生成",
+    "seo_title": "無料のオンラインCSP生成ツール",
+    "seo_description": "Content Security Policy ヘッダーを無料で生成します。オンラインで簡単に使用可能。"
+  },
+  "sri-hash-generator": {
+    "name": "SRIハッシュジェネレーター",
+    "description": "スクリプトとスタイル用のサブリソース整合性ハッシュを生成",
+    "seo_title": "SRIハッシュ生成オンラインツール",
+    "seo_description": "スクリプトとスタイルのSubresource Integrityハッシュを無料で生成。オンラインツールを使用して安全なコンテンツを確認します。"
+  },
+  "cors-tester": {
+    "name": "CORSテスター",
+    "description": "CORS設定とヘッダーをテスト",
+    "seo_title": "無料のオンラインCORSテストツール",
+    "seo_description": "CORS構成とヘッダーをテスト。無料で簡単にオンラインで使用できます。"
+  },
+  "json-to-zod": {
+    "name": "JSON to Zodスキーマ",
+    "description": "JSONをZod検証スキーマに変換",
+    "seo_title": "JSONをZodスキーマにオンラインで無料変換するツール",
+    "seo_description": "JSONをZodのバリデーションスキーマに無料でオンラインで変換するための便利なツール。シンプルで使いやすい。"
+  },
+  "typescript-to-json": {
+    "name": "TypeScript to JSON",
+    "description": "TypeScriptインターフェースをJSONスキーマに変換",
+    "seo_title": "TypeScriptインターフェースをJSONスキーマに無料オンラインツール",
+    "seo_description": "TypeScriptインターフェースをJSONスキーマに簡単に変換する無料のオンラインツール。コードを直接入力して直感的なインターフェースで変換を行います。"
+  },
+  "markdown-to-slides": {
+    "name": "Markdownからスライド",
+    "description": "Markdownをプレゼンテーションスライドに変換",
+    "seo_title": "Markdownをオンラインプレゼンテーションスライドに変換する無料ツール",
+    "seo_description": "Markdownをスライドに簡単に変換。無料でオンラインで使用可能な便利なツールです。"
+  },
+  "text-spinner": {
+    "name": "テキストスピナー",
+    "description": "類義語を使用してユニークなバリエーションを作成する",
+    "seo_title": "無料オンラインテキストスピンナーツール",
+    "seo_description": "独自のバリエーションを作成するために文を同义词替换。便利な無料オンラインツール。"
+  },
+  "readability-checker": {
+    "name": "読みやすさチェッカー",
+    "description": "フレッシュ・キンケイドなど複数のスコアで文章の読みやすさを分析",
+    "seo_title": "無料オンライン読解度チェックツール",
+    "seo_description": "Flesch-Kincaidスコアを含むテキストの読解度を分析。無料のオンラインツールで簡単に使用できます。"
+  },
+  "grammar-checker": {
+    "name": "文法チェッカー",
+    "description": "文法エラーをチェックし、修正案を取得",
+    "seo_title": "無料オンライン文法チェックツール",
+    "seo_description": "文法エラーを検出する無料オンラインツールで文章を改善。修正提案も受け取ることができます。"
+  },
+  "typescript-playground": {
+    "name": "TypeScript プレイグラウンド",
+    "description": "ブラウザで TypeScript コードを書いてコンパイル",
+    "seo_title": "TypeScriptオンライン playground無料ツール",
+    "seo_description": "ブラウザ上でTypeScriptコードを書くことができます。無料のオンラインツールでコンパイルも簡単に行えます。"
+  },
+  "python-formatter": {
+    "name": "Pythonコード整形ツール",
+    "description": "PEP 8スタイルガイドに基づいてPythonコードを整形",
+    "seo_title": "無料のオンラインPythonフォーマットツール",
+    "seo_description": "PEP 8スタイルガイドに従ってPythonコードを自動フォーマット。無料でオンラインで利用可能です。"
+  },
+  "go-formatter": {
+    "name": "Goコード整形ツール",
+    "description": "gofmtスタイルでGoコードを整形",
+    "seo_title": "Goフォーマット無料オンラインツール",
+    "seo_description": "Goコードをgofmtスタイルでフォーマットする無料のオンラインツール。簡単にコードを整えることができます。"
+  },
+  "yaml-formatter": {
+    "name": "YAML整形ツール",
+    "description": "カスタマイズ可能なオプションでYAMLを整形・検証",
+    "seo_title": "YAMLフォーマッターオンライン無料ツール",
+    "seo_description": "YAMLのフォーマットと検証をオンラインで行う無料ツール。カスタマイズ可能なオプションを提供します。"
+  },
+  "text-shadow-generator": {
+    "name": "テキストシャドウジェネレーター",
+    "description": "ビジュアルエディターでCSSテキストシャドウを作成",
+    "seo_title": "無料オンラインのテキストシャドウ生成ツール",
+    "seo_description": "CSSのテキストシャドウを作成するための無料オンラインツール。視覚的なエディタで簡単に操作できます。"
+  },
+  "svg-pattern-generator": {
+    "name": "SVGパターンジェネレーター",
+    "description": "背景用のSVGパターンを作成",
+    "seo_title": "無料オンラインSVGパターン生成ツール",
+    "seo_description": "SVG背景パターンを簡単に生成。無料のオンラインツールでデザインをカスタマイズ。"
+  },
+  "rust-formatter": {
+    "name": "Rustコード整形ツール",
+    "description": "rustfmtスタイルでRustコードを整形",
+    "seo_title": "Rustフォーマッタオンラインツール",
+    "seo_description": "無料でRustコードをrustfmtスタイルでフォーマットするオンラインツール。"
+  },
+  "css-triangle-generator": {
+    "name": "CSS三角形ジェネレーター",
+    "description": "ボーダー技法を使用したCSS三角形の生成",
+    "seo_title": "無料オンラインCSS三角形生成ツール",
+    "seo_description": "HTMLとCSSを使用して三角形を生成。無料でオンラインで利用できます。"
+  },
+  "aspect-ratio-box-generator": {
+    "name": "アスペクト比ボックスジェネレーター",
+    "description": "レスポンシブなアスペクト比コンテナ用のCSSを生成",
+    "seo_title": "無料オンライン Aspect Ratio Box Generator",
+    "seo_description": " RESPONSIVE アスペクト比コンテナの CSS を生成する無料オンラインツール"
+  },
+  "typing-time-calculator": {
+    "name": "タイピング時間計算ツール",
+    "description": "文書の入力時間を予測",
+    "seo_title": "無料オンラインタイピング時間計算ツール",
+    "seo_description": "ドキュメントのタイピングに必要な時間を無料で計算。オンラインツールで迅速に結果を知りましょう。"
+  },
+  "screen-time-calculator": {
+    "name": "スクリーンタイム計算ツール",
+    "description": "1日、1週間、1年のスクリーンタイムを計算",
+    "seo_title": "無料オンライン Screen Time Calculator",
+    "seo_description": "デイリーや年間のスクリーンタイムを計算。無料のオンラインツールで効果的に時間管理!"
+  },
+  "download-time-calculator": {
+    "name": "ダウンロード時間計算ツール",
+    "description": "接続速度に基づいてファイルダウンロード時間を計算",
+    "seo_title": "無料オンラインツール：ファイルダウンロード時間計算",
+    "seo_description": "インターネット接続速度に基づいてファイルのダウンロード時間を計算する無料のオンラインツール。"
+  },
+  "ical-parser": {
+    "name": "iCal パーサー",
+    "description": "iCalendar (.ics) ファイルを解析して表示",
+    "seo_title": "iCalファイルを無料でオンラインで解析するツール",
+    "seo_description": "iCal Parserは、iCalendar(.ics)ファイルをオンラインで無料で解析し、視覚的に表示するための強力なツールです。"
+  },
+  "vcard-parser": {
+    "name": "vCard パーサー",
+    "description": "vCard (.vcf) コンタクトファイルを解析して表示",
+    "seo_title": "vCard (.vcf) ファイルを無料でオンラインでパース",
+    "seo_description": "vCard Parserは、.vcf形式の連絡先ファイルを無料でオンラインでパースし、視覚的に表示するためのツールです。"
+  },
+  "ai-text-humanizer": {
+    "name": "AIテキストヒューマナイザー",
+    "description": "AI生成テキストをより自然で人間らしいものに変換",
+    "seo_title": "無料オンラインツール：AI生成テキストを自然に",
+    "seo_description": "AI Text Humanizerは、AI生成のテキストをより自然で人間らしいものに変換する無料のオンラインツールです。"
+  },
+  "dockerfile-generator": {
+    "name": "Dockerfile ジェネレーター",
+    "description": "プロジェクト用の Dockerfile 構成を生成します",
+    "seo_title": "無料オンラインDockerfile生成ツール",
+    "seo_description": "プロジェクトのDockerfile構成を無料でオンラインで生成。簡単操作で効率アップ！"
+  },
+  "eslint-config-generator": {
+    "name": "ESLint設定ファイルジェネレーター",
+    "description": "JavaScript/TypeScriptプロジェクト用のESLint設定ファイルを生成します",
+    "seo_title": "無料オンライン ESLint Config Generatorツール",
+    "seo_description": "JavaScript/TypeScriptプロジェクト用のESLint設定ファイルを簡単に生成。無料でオンラインで利用可能です。"
+  },
+  "prettier-config-generator": {
+    "name": "Prettier設定ファイルジェネレーター",
+    "description": "コードフォーマットのためのPrettier設定ファイルを生成する",
+    "seo_title": "無料のオンラインPrettier設定生成ツール",
+    "seo_description": "コードフォーマット用のPrettier設定ファイルを無料で生成するオンラインツール。JSON、Base64、SVG、CSS、HTML、PDF、URL、API、GIF、D4、D6、D8、D10、D12、D20をサポートします。"
+  },
+  "tsconfig-generator": {
+    "name": "TSConfigジェネレーター",
+    "description": "プロジェクト用のTypeScript設定ファイルを生成します",
+    "seo_title": "無料のオンラインTSConfig生成ツール",
+    "seo_description": "あなたのプロジェクトのTypeScript設定ファイルを無料でオンラインで生成。TSConfig Generatorを使用して簡単に管理します。"
+  },
+  "editorconfig-generator": {
+    "name": "EditorConfigジェネレーター",
+    "description": "一貫したコードスタイルを実現するためのEditorConfigファイルを生成",
+    "seo_title": "無料オンラインEditorConfig生成ツール",
+    "seo_description": "コーディングスタイルを一贯させるためのEditorConfigファイルを無料で生成。オンラインツール利用简单。"
+  },
+  "github-readme-generator": {
+    "name": "GitHub READMEジェネレーター",
+    "description": "GitHubプロジェクト用のプロフェッショナルなREADME.mdファイルを生成",
+    "seo_title": "GitHub README生成ツール 無料オンライン",
+    "seo_description": "GitHubプロジェクトのプロフェッショナルなREADME.mdファイルを作成。無料でオンラインで利用できます。"
+  },
+  "changelog-generator": {
+    "name": "変更ログジェネレーター",
+    "description": "Keep a Changelog形式に従ったCHANGELOG.mdファイルを生成します",
+    "seo_title": "無料のオンラインChangelog Generatorツール",
+    "seo_description": "Keep a Changelog形式でCHANGELOG.mdファイルを作成。無料のオンラインツール。"
+  },
+  "license-generator": {
+    "name": "ライセンスジェネレーター",
+    "description": "プロジェクト用のオープンソースライセンスファイルを生成します",
+    "seo_title": "オープンソースライセンス生成オンラインツール",
+    "seo_description": "無料でプロジェクトのためのオープンソースライセンスファイルをオンラインで生成。JSON、Base64、SVG、CSS、HTML、PDF、URL、API、GIF、D4、D6、D8、D10、D12、D20"
+  },
+  "rot13-encoder": {
+    "name": "ROT13 エンコーダー",
+    "description": "ROT13 暗号を使用してテキストをエンコードおよびデコードします",
+    "seo_title": "無料のオンラインROT13エンコーダー",
+    "seo_description": "テキストをROT13暗号で暗号化または復号化。便利な無料オンラインツールです。"
+  },
+  "caesar-cipher": {
+    "name": "シーザー暗号",
+    "description": "カスタムシフトを使用したシーザー暗号によるテキストの暗号化と復号化",
+    "seo_title": "無料のオンライン Caesar シフト暗号ツール",
+    "seo_description": "テキストをカイザーシフトで暗号化・復号化。カスタムシフトで安全なメッセージを作成します。"
+  },
+  "vigenere-cipher": {
+    "name": "ヴィジュネル暗号",
+    "description": "キーワードを使用してヴィジュネル暗号でテキストを暗号化および復号化します",
+    "seo_title": "無料オンラインのVigenère暗号ツール",
+    "seo_description": "テキストをキーワードを使用して暗号化または復号化。安全で便利な無料オンラインツール。"
+  },
+  "checksum-verifier": {
+    "name": "チェックサム検証ツール",
+    "description": "ファイルのチェックサム (MD5、SHA-1、SHA-256、SHA-512) を計算して検証します",
+    "seo_title": "ファイルチェックサムを無料でオンラインで計算・検証するツール",
+    "seo_description": "MD5、SHA-1、SHA-256、SHA-512のファイルチェックサムを無料でオンラインで計算・検証。データの正確性を確認する便利なツールです。"
+  },
+  "inflation-calculator": {
+    "name": "インフレーション計算機",
+    "description": "時間の経過による購買力へのインフレーションの影響を計算します",
+    "seo_title": "無料オンラインインフレーション計算ツール",
+    "seo_description": "購入力の変化を時間経過とともに計算。無料のオンラインインフレーション計算ツールで経済的な影響を把握します。"
+  },
+  "break-even-calculator": {
+    "name": "損益分岐点計算機",
+    "description": "ビジネスの損益分岐点を計算",
+    "seo_title": "無料のオンラインブレake-even計算ツール",
+    "seo_description": "あなたのビジネスのブレake-evenポイントをオンラインで計算。無料の便利なツールです。"
+  },
+  "margin-calculator": {
+    "name": "マージン計算機",
+    "description": "利益率とマークアップ率を計算",
+    "seo_title": "無料オンライン利益率計算ツール",
+    "seo_description": "商品の利益率とマークアップ率を計算する無料オンラインツール。コスト、販売価格、利益を簡単に計算。ビジネスの価格設定に最適です。"
+  },
+  "markup-calculator": {
+    "name": "マークアップ計算機",
+    "description": "原価と希望マークアップ率に基づいて販売価格を計算します",
+    "seo_title": "無料オンライン Markup Calculator 販売価格計算ツール",
+    "seo_description": "コストとマーカッピングに基づいて販売価格を計算。無料のオンライン Markup Calculatorツールで簡単に価格設定。"
+  },
+  "hashtag-generator": {
+    "name": "ハッシュタグジェネレーター",
+    "description": "ソーシャルメディア投稿用の関連ハッシュタグを生成",
+    "seo_title": "無料のオンラインハッシュタグジェネレータツール",
+    "seo_description": "ソーシャルメディア投稿に最適な関連ハッシュタグを生成する無料のオンラインツール。簡単操作で効果的な投稿を!"
+  },
+  "email-signature-generator": {
+    "name": "メール署名ジェネレーター",
+    "description": "HTMLとプレーンテキストでプロフェッショナルなメール署名を作成",
+    "seo_title": "無料オンラインメールサインatures生成ツール",
+    "seo_description": "プロフェッショナルなメールサインaturesをHTMLとテキストで作成。無料のオンラインツールで簡単に始める！"
+  },
+  "glassmorphism-generator": {
+    "name": "Glassmorphism ジェネレーター",
+    "description": "カスタマイズ可能なぼかし、透明度、ボーダーでモダンなガラス風UIエフェクトを作成",
+    "seo_title": "無料オンラインのGlassmorphism Generator",
+    "seo_description": "現代的なガラスのようなUI効果を作成。カスタマイズ可能なぼかし、透明度、枠線を追加して、独自のデザインを作り出します。"
+  },
+  "neumorphism-generator": {
+    "name": "Neumorphism ジェネレーター",
+    "description": "カスタマイズ可能なシャドウとカラーでソフトなニューモーフィズムUIエフェクトを生成",
+    "seo_title": "無料オンラインネウモーフィックUIジェネレーター",
+    "seo_description": "カスタマイズ可能な影と形状でソフトなUIのネウモーフィック効果を生成。SVG、CSS、HTMLを使用したデザインをPDFやGIF形式でダウンロードできます。"
+  },
+  "blob-generator": {
+    "name": "Blob シェイプジェネレーター",
+    "description": "背景や装飾用のランダムな有機的ブロブ形状をSVGで作成",
+    "seo_title": "無料オンラインのBlobジェネレータツール",
+    "seo_description": "SVG形式で背景や装飾用のランダムな有機的なBlob形状を作成。無料でオンライン使用可能。"
+  },
+  "wave-generator": {
+    "name": "Wave ウェーブジェネレーター",
+    "description": "セクション区切りや背景用のSVGウェーブパターンを生成",
+    "seo_title": "無料オンラインウェーブジェネレーター",
+    "seo_description": "SVGのウェーブパターンを生成し、セクションの区切り線や背景に使用。使いやすいオンラインツールです。"
+  },
+  "mesh-gradient-generator": {
+    "name": "Mesh グラデーションジェネレーター",
+    "description": "複数のカラーポイントで美しいメッシュグラデーションを作成",
+    "seo_title": "無料オンラインメッシュグラデーション生成ツール",
+    "seo_description": "複数の色ポイントで美しいメッシュグラデーションを作成。 ONLINE ツールで簡単に使用できます。"
+  },
+  "noise-texture-generator": {
+    "name": "ノイズテクスチャジェネレーター",
+    "description": "背景用のノイズテクスチャとグレインエフェクトを生成",
+    "seo_title": "無料オンラインノイズテクスチャ生成ツール",
+    "seo_description": "背景用のノイズテクスチャや grain効果を簡単に生成する無料オンラインツール。"
+  },
+  "commit-message-generator": {
+    "name": "Git コミットメッセージジェネレーター",
+    "description": "規約に準拠したGitコミットメッセージを生成",
+    "seo_title": "無料のオンラインコミットメッセージ生成ツール",
+    "seo_description": "従来のコミットメッセージをプロの慣習に従って生成する無料のオンラインツール。"
+  },
+  "bandwidth-calculator": {
+    "name": "帯域幅計算機",
+    "description": "ネットワーク帯域幅の要件とデータ転送時間を計算",
+    "seo_title": "無料のオンライン帯域幅計算ツール",
+    "seo_description": "ファイルサイズと転送時間から必要な帯域幅を計算。無料で簡単にオンライン使用可能。"
+  },
+  "data-transfer-calculator": {
+    "name": "データ転送計算機",
+    "description": "ファイル転送時間と必要な帯域幅を計算",
+    "seo_title": "ファイル転送時間計算オンラインツール",
+    "seo_description": "無料でオンラインで使用できるファイル転送時間計算ツール。接続速度に基づいて正確に計算します。"
+  },
+  "pixel-density-calculator": {
+    "name": "ピクセル密度計算機",
+    "description": "画面のPPIとピクセル密度を計算",
+    "seo_title": "無料オンラインピクセル密度計算ツール",
+    "seo_description": "スクリーンの解像度とサイズからPPIとピクセルピッチを計算。無料のオンラインツールです。"
+  },
+  "dpi-calculator": {
+    "name": "DPI 計算機",
+    "description": "印刷とディスプレイのDPI値を計算",
+    "seo_title": "無料オンライン DPI 計算ツール",
+    "seo_description": "目標 DPI に必要な解像度を計算。無料でオンラインで使用可能。"
+  },
+  "curl-to-code-generator": {
+    "name": "cURLコード生成ツール",
+    "description": "cURLコマンドをPython、JavaScript、Go、PHPなど、複数のプログラミング言語のコードに変換",
+    "seo_title": "cURLをコードにオンラインで無料変換するツール",
+    "seo_description": "cURLコマンドをPython、JavaScript、Go、PHPなどに無料でオンラインで変換する便利なツール。"
+  },
+  "http-status-code-reference": {
+    "name": "HTTPステータスコードリファレンス",
+    "description": "説明と解決策付きの完全なHTTPステータスコードリファレンス",
+    "seo_title": "無料のHTTPステータスコードオンラインツール",
+    "seo_description": "詳細なHTTPステータスコードリファレンスと解説、問題解決方法を提供する無料のオンラインツールです。"
+  },
+  "jwt-payload-decoder": {
+    "name": "JWT ペイロード解読器",
+    "description": "検証なしでJWTトークンのペイロードを解読および確認",
+    "seo_title": "JWT Payload Decoder オンライン無料ツール",
+    "seo_description": "JWTトークンのペイロードをオンラインで無料でデコード・inspectします。認証情報を安全に確認するための強力なツールです。"
+  },
+  "base64-image-converter": {
+    "name": "Base64 画像変換ツール",
+    "description": "画像を Base64 文字列に変換、または Base64 を画像に変換",
+    "seo_title": "無料オンライン画像をBase64文字列に変換ツール",
+    "seo_description": "画像をBase64文字列に、またはBase64文字列を画像に変換する無料のオンラインツール。便利な画像変換機能を試してみてください。"
+  },
+  "url-query-string-parser": {
+    "name": "URLクエリ文字列パーサー",
+    "description": "URLクエリパラメータをキー-バリュー対にパースおよび分析",
+    "seo_title": "URLクエリ文字列パーサー フリーオンラインツール",
+    "seo_description": "URLのクエリパラメータをキーとバリューに分解し、分析します。無料でオンラインで使用可能なパワフルなツールです。"
+  },
+  "request-header-builder": {
+    "name": "HTTPリクエストヘッダー作成ツール",
+    "description": "APIテスト用にHTTPリクエストヘッダーを作成およびフォーマット",
+    "seo_title": "無料オンラインのHTTPリクエストヘッダー構築ツール",
+    "seo_description": "APIテストのためにHTTPリクエストヘッダーを簡単に構築・フォーマット。無料でオンラインで利用できます。"
+  },
+  "webhook-tester": {
+    "name": "ウェブフックテスター",
+    "description": "カスタムペイロードでウェブフックエンドポイントをテストおよびデバッグ",
+    "seo_title": "無料オンラインWebhook Testerツール",
+    "seo_description": "Webhookエンドポイントをテストし、カスタムペイロードでデバッグ。無料でオンラインで利用可能です。"
+  },
+  "api-response-formatter": {
+    "name": "APIレスポンスフォーマッター",
+    "description": "APIレスポンス（JSON、XML）を可読性向上のためにフォーマットおよび美しく整えます",
+    "seo_title": "APIレスポンスフォーマッターオンライン無料ツール",
+    "seo_description": "APIレスポンス（JSON, XML）を読みやすくフォーマットする無料オンラインツール。レスポンスを美しく整形して管理しやすくします。"
+  },
+  "sql-to-mongodb-converter": {
+    "name": "SQLからMongoDB変換ツール",
+    "description": "SQLクエリをMongoDBクエリ文法に変換",
+    "seo_title": "SQLをMongoDBに無料でオンライン変換するツール",
+    "seo_description": "SQLクエリをMongoDBのクエリ構文に無料でオンラインで変換。簡単に使いやすいツールです。"
+  },
+  "json-to-protobuf-converter": {
+    "name": "JSONからProtobuf変換ツール",
+    "description": "JSONデータからプロトコルバッファ定義を作成",
+    "seo_title": "JSONをProtocol Bufferに変換する無料オンラインツール",
+    "seo_description": "JSONデータからProtocol Buffer定義を生成する便利な無料オンラインツール。簡単に使用できます。"
+  },
+  "regex-to-code-generator": {
+    "name": "正規表現からコード生成ツール",
+    "description": "複数の言語での正規表現パターン用のコードスニペットを生成",
+    "seo_title": "無料オンライン正規表現コード生成ツール",
+    "seo_description": "複数のプログラミング言語で正規表現パターンのコードスニペットを生成。無料でオンラインで利用可能。"
+  },
+  "swagger-to-code-generator": {
+    "name": "Swaggerからコード生成ツール",
+    "description": "Swagger/OpenAPI仕様からAPIクライアントコードを生成",
+    "seo_title": "Swagger/OpenAPI仕様からコード生成する無料オンラインツール",
+    "seo_description": "Swagger/OpenAPI仕様からAPIクライアントコードを無料でオンラインで生成します。便利な開発支援ツールです。"
+  },
+  "database-migration-generator": {
+    "name": "データベース移行生成ツール",
+    "description": "スキーマ変更用のデータベース移行スクリプトを生成",
+    "seo_title": "無料オンラインデータベース移行ツール",
+    "seo_description": "スキーマ変更のためのデータベース移行スクリプト生成。無料でオンラインで使用可能。"
+  },
+  "environment-variables-generator": {
+    "name": "環境変数生成ツール",
+    "description": "環境変数設定と.envファイルの生成",
+    "seo_title": "無料オンライン環境変数生成ツール",
+    "seo_description": "JSON、Base64、SVG、CSS、HTML、PDF、URL、API、GIF、D4、D6、D8、D10、D12、D20の.envファイルと環境変数設定を生成します。"
+  },
+  "docker-compose-generator-advanced": {
+    "name": "Docker Compose ジェネレーター",
+    "description": "マルチコンテナアプリケーションのためのDocker Compose設定を作成",
+    "seo_title": "無料オンラインDocker Compose生成ツール",
+    "seo_description": "複数コンテナアプリケーションのDocker Compose設定を生成。便利な無料オンラインツールです。"
+  },
+  "kubernetes-manifest-generator": {
+    "name": "Kubernetes マニフェスト生成ツール",
+    "description": "Kubernetesデプロイメントマニフェスト(YAML)の生成",
+    "seo_title": "無料オンラインのKubernetes Manifest生成ツール",
+    "seo_description": "Kubernetesデプロイメントマニフェスト（YAML）を無料でオンラインで生成。簡単に使用可能な便利なツール。"
+  },
+  "code-complexity-analyzer": {
+    "name": "コード複雑度解析ツール",
+    "description": "コードの複雑度指標（サイクロマティック複雑度、LOC）を分析します",
+    "seo_title": "無料オンラインコード複雑性分析ツール",
+    "seo_description": " Cyclomatic Complexity, LOCなどのコード複雑性指標を分析。無料でオンラインで使用可能。"
+  },
+  "dependency-vulnerability-checker": {
+    "name": "依存関係脆弱性チェッカ",
+    "description": "パッケージの依存関係に対する既知のセキュリティ脆弱性をチェック",
+    "seo_title": "無料オンラインDependency Vulnerability Checkerツール",
+    "seo_description": "パッケージの依存関係に既知のセキュリティ脆弱性をチェック。無料でオンラインで使用可能です。"
+  },
+  "performance-profiler": {
+    "name": "コードパフォーマンスプロファイラ",
+    "description": "コードのパフォーマンスをプロファイルし、ボトルネックを特定",
+    "seo_title": "コードパフォーマンス解析ツール：無料オンラインで Bottleneck 探索",
+    "seo_description": "無料のオンラインツールでコードパフォーマンスを解析し、Bottleneck を特定します。迅速で効果的なデバッグを実現します。"
+  },
+  "memory-leak-detector": {
+    "name": "メモリリーク検出ツール",
+    "description": "コードパターンにおける潜在的メモリリークを検出します",
+    "seo_title": "無料オンラインメモリリーク検出ツール",
+    "seo_description": "コードパターンで潜在的なメモリリークを検出する無料オンラインツール。迅速で正確な結果を提供します。"
+  },
+  "code-duplication-finder": {
+    "name": "コード重複検出ツール",
+    "description": "重複するコードブロックを見つけ、リファクタリングを提案します",
+    "seo_title": "コード重複検出無料オンラインツール",
+    "seo_description": "コードブロックの重複を検出し、リファクタリングの提案を行います。無料でオンラインで使用可能。"
+  },
+  "unused-imports-finder": {
+    "name": "未使用のインポート検出ツール",
+    "description": "コード内の未使用のインポートと依存関係を特定します",
+    "seo_title": "コード内の未使用インポートを検出する無料オンラインツール",
+    "seo_description": "未使用のインポートと依存関係を迅速に特定。コードの最適化と保守を支援する無料のオンラインツール。"
+  },
+  "dead-code-analyzer": {
+    "name": "デッドコードアナライザ",
+    "description": "削除できる到達不可能またはデッドコードを見つけます",
+    "seo_title": "無料オンラインのデッドコード分析ツール",
+    "seo_description": "非達成コードを検出し削除。無料のオンラインツールで効率的なコード管理。"
+  },
+  "sql-query-optimizer": {
+    "name": "SQLクエリ最適化ツール",
+    "description": "パフォーマンス向上のためのSQLクエリの分析と最適化",
+    "seo_title": "無料オンラインSQLクエリ最適化ツール",
+    "seo_description": "SQLクエリの分析と最適化を行い、パフォーマンスを向上させます。無料でオンラインで使用可能。"
+  },
+  "database-schema-visualizer": {
+    "name": "データベーススキーマビジュアライザ",
+    "description": "データベーススキーマとテーブルの関係を視覚化",
+    "seo_title": "データベーススキーマビジュライザ無料オンラインツール",
+    "seo_description": "データベーススキーマとテーブルの関係を可視化する無料のオンラインツール。直观的な視覚化でデータベース設計を効率化。"
+  },
+  "sql-injection-tester": {
+    "name": "SQLインジェクションテスター",
+    "description": "SQLクエリのインジェクション脆弱性をテストします",
+    "seo_title": "無料オンラインのSQLインジェクションテストツール",
+    "seo_description": "SQLクエリを Injection ボーダーにテストするための無料オンラインツール。セキュリティを強化します。"
+  },
+  "database-connection-tester": {
+    "name": "データベース接続テスター",
+    "description": "データベース接続文字列と設定をテストします",
+    "seo_title": "無料オンライン データベース接続テストツール",
+    "seo_description": "データベース接続文字列や設定を簡単にテスト。無料で使いやすいオンラインツールです。"
+  },
+  "query-execution-planner": {
+    "name": "クエリ実行計画ツール",
+    "description": "クエリ実行計画を分析し、最適化の提案を行います",
+    "seo_title": "無料オンラインのクエリ実行計画分析ツール",
+    "seo_description": "SQLクエリの実行計画を分析し、最適化の提案を行います。無料でオンラインで使用可能です。"
+  },
+  "database-backup-scheduler": {
+    "name": "データベースバックアップスケジューラー",
+    "description": "データベースのバックアップスケジュールとスクリプトを作成",
+    "seo_title": "無料オンラインデータベースバックアップスケジューラー",
+    "seo_description": "データベースのバックアップスケジュールとスクリプトを生成。無料でオンラインに利用可能な便利なツールです。"
+  },
+  "git-commit-message-generator": {
+    "name": "Gitコミットメッセージ生成ツール",
+    "description": "ベストプラクティスに従った標準的なコミットメッセージを生成",
+    "seo_title": "無料のオンラインGitコミットメッセージ生成ツール",
+    "seo_description": "従来のコミットメッセージを最善の実践に従って生成する無料のオンラインツール。"
+  },
+  "git-branch-naming-validator": {
+    "name": "Gitブランチ名チェックツール",
+    "description": "Gitブランチ名の命名規則に従った検証を行います",
+    "seo_title": "無料のオンラインGitブランチネーミングバリデーションツール",
+    "seo_description": "Gitブランチ名を命名規則に従って検証。無料で使用できるオンラインツールです。"
+  },
+  "merge-conflict-resolver": {
+    "name": "マージコンフリクト解決ツール",
+    "description": "ビジュアルディフでGitマージコンフリクトを解決",
+    "seo_title": "Git メージョン解決オンラインツール 無料",
+    "seo_description": "Git メージョン衝突を視覚的な差分で解決する無料のオンラインツール。簡単な操作で問題解決。"
+  },
+  "git-history-visualizer": {
+    "name": "Git履歴ビジュアル化ツール",
+    "description": "Gitコミット履歴とブランチ構造を視覚化",
+    "seo_title": "Gitコミット履歴と分岐構造を可視化する無料オンラインツール",
+    "seo_description": "Git History Visualizerは、Gitのコミット履歴と分岐構造を視覚化するための無料のオンラインツールです。コードの変更履歴を一目で理解しましょう。"
+  },
+  "changelog-generator-advanced": {
+    "name": "変更履歴生成ツール",
+    "description": "さまざまなフォーマットでGitコミットから変更履歴を作成",
+    "seo_title": "Gitコミットから無料のオンラインツールでチャangelog生成",
+    "seo_description": "各種フォーマットでGitコミットからチャangelogを生成する無料のオンラインツール。簡単操作で便利な機能を多数ご用意しています。"
+  },
+  "git-tag-manager": {
+    "name": "Gitタグマネージャー",
+    "description": "リリースのためのGitタグの管理と整理",
+    "seo_title": "Gitタグ管理オンラインツール",
+    "seo_description": "Gitリリースタグの管理と組織化を無料で行うオンラインツールをお探しなら、当ツールをご利用ください。"
+  },
+  "markdown-to-html-converter": {
+    "name": "MarkdownからHTMLへの変換ツール",
+    "description": "スタイルオプション付きでMarkdown文書をHTMLに変換",
+    "seo_title": "MarkdownをHTMLに無料オンラインツール",
+    "seo_description": "マークダウンドキュメントをスタイルオプション付きのHTMLに変換する無料のオンラインツール。"
+  },
+  "document-outline-generator": {
+    "name": "ドキュメントオートライン生成ツール",
+    "description": "見出しと構造からドキュメントのオートラインを作成",
+    "seo_title": "無料オンラインドキュメントアウトライン生成ツール",
+    "seo_description": "ヘッダーからアウトラインを自動生成。無料のオンラインツールでドキュメントの構造化を簡単に実現します。"
+  },
+  "table-of-contents-generator": {
+    "name": "目次生成ツール",
+    "description": "ドキュメントの見出しから目次を作成",
+    "seo_title": "無料オンラインテーブルオブコンテンツスジェネレータ",
+    "seo_description": "ドキュメントのヘッドラインから無料のオンラインツールでテーブルオブコンテンツを作成。簡単操作で高品質なTOC生成。"
+  },
+  "document-word-counter": {
+    "name": "ドキュメント単語数計算ツール",
+    "description": "単語、文字、文、段落の数を計算",
+    "seo_title": "無料オンライン 文書単語カウンターツール",
+    "seo_description": "テキストの単語数、文字数、文数、段落数を計測する無料のオンラインツール。"
+  },
+  "document-formatter": {
+    "name": "ドキュメントフォーマッター",
+    "description": "さまざまなオプションでドキュメントのテキストをフォーマットし、クリーンアップします",
+    "seo_title": "ドキュメントフォーマット無料オンラインツール",
+    "seo_description": "各種オプションでドキュメントテキストを形式化・クリーニング。無料でオンライン利用可能です。"
+  },
+  "citation-formatter": {
+    "name": "引用フォーマッター",
+    "description": "APA、MLA、Chicago、その他のスタイルでの引用をフォーマット",
+    "seo_title": "APA、MLA、Chicagoの Citation Formatter オンライン無料ツール",
+    "seo_description": "さまざまなスタイルの引用を簡単にフォーマットする無料のオンライン Citation Formatter。APA、MLA、Chicagoなどのスタイルに対応しています。"
+  },
+  "project-estimation-calculator": {
+    "name": "プロジェクト予算計算ツール",
+    "description": "PERTとストーリーポイントを使用してプロジェクトの労力予測を計算",
+    "seo_title": "プロジェクト推定計算ツール：PERTとストーリーポイントで無料オンライン推定",
+    "seo_description": "無料のオンラインプロジェクト推定ツールを使用して、PERTとストーリーポイントでプロジェクト労働時間の推定を行います。正確な計画を実現しましょう。"
+  },
+  "sprint-velocity-calculator": {
+    "name": "スプリント・ベロシティ計算ツール",
+    "description": "アジャイルチームのためのスプリント・ベロシティを計算し、追跡",
+    "seo_title": "無料オンラインスプリント速度計算ツール",
+    "seo_description": "アジャイルチームのスプリント速度を計算・追跡。無料で ONLINE ツールで使用可能。"
+  },
+  "resource-allocation-planner": {
+    "name": "リソース割り当てプランナー",
+    "description": "プロジェクト間でのリソース割り当てを計画・最適化",
+    "seo_title": "プロジェクトのリソース割り当て計画オンライン無料ツール",
+    "seo_description": "Resource Allocation Plannerは、プロジェクト全体のリソース割り当て計画と最適化をオンラインで無料で行うためのツールです。"
+  },
+  "project-risk-analyzer": {
+    "name": "プロジェクトリスクアナライザ",
+    "description": "リスク軽減戦略でプロジェクトのリスクを特定および評価",
+    "seo_title": "プロジェクトリスク分析器 - 無料オンラインツール",
+    "seo_description": "プロジェクトリスクを特定し、評価し、対策を実施。無料のオンラインツールでリスク管理を効率化します。"
+  },
+  "milestone-tracker": {
+    "name": "マイルストーン・トラッカー",
+    "description": "プロジェクトのマイルストーンと締切日を追跡",
+    "seo_title": "プロジェクトのマイルストーンと期限を無料でオンラインで追跡するツール",
+    "seo_description": "Milestone Trackerは、プロジェクトのマイルストーンと期限をオンラインで追跡するための無料ツールです。効率的なプロジェクト管理を実現します。"
+  },
+  "team-capacity-planner": {
+    "name": "チームキャパシティプランナー",
+    "description": "チームのキャパシティと作業負荷の分配を計画",
+    "seo_title": "チームの能力を計画する無料オンラインツール",
+    "seo_description": "チームのキャパシティと作業分配を計画。無料でオンラインで使用可能なチームキャパシティプランナー。"
+  },
+  "meeting-minutes-generator": {
+    "name": "会議録生成ツール",
+    "description": "ノートから構造化された会議録を作成",
+    "seo_title": "無料オンライン会議要約生成ツール",
+    "seo_description": "ノートから構造化された会議要約を生成。無料でオンライン利用可能。"
+  },
+  "timezone-meeting-scheduler": {
+    "name": "時差会議スケジューラー",
+    "description": "複数の時差での会議をスケジュール",
+    "seo_title": "無料オンライン Meeting シケジューラー",
+    "seo_description": "複数のタイムゾーンで会議をスケジューリング。便利で無料のオンラインツールです。"
+  },
+  "meeting-agenda-builder": {
+    "name": "会議アジェンダビルダー",
+    "description": "時間割り振り付きで構造化された会議アジェンダを作成",
+    "seo_title": "無料オンラインMeeting Agenda Builder",
+    "seo_description": "時間割り当て付きの構造化されたMeeting Agendaを作成。無料のオンラインツールで効率的な会議を。"
+  },
+  "calendar-availability-finder": {
+    "name": "カレンダー利用可能時刻検索ツール",
+    "description": "複数のカレンダーの共通の利用可能時刻を探します",
+    "seo_title": "オンライン予定見つける無料ツール",
+    "seo_description": "複数のカレンダーで共通の空き時間を簡単に見つける無料オンラインツール。"
+  },
+  "meeting-room-finder": {
+    "name": "会議室検索ツール",
+    "description": "利用可能な会議室を検索および予約",
+    "seo_title": " Meeting Room Finder - 無料でオンライン予約",
+    "seo_description": " Meeting Room Finderは、利用可能な会議室を簡単に見つけてオンラインで予約できる無料のツールです。"
+  },
+  "invoice-template-generator": {
+    "name": "請求書テンプレート作成ツール",
+    "description": "説明",
+    "seo_title": "無料のインボイステンプレート生成オンラインツール",
+    "seo_description": "インボイステンプレート生成オンラインツールで、JSON, Base64, SVG, CSS, HTML, PDF, URL, API, GIF, D4, D6, D8, D10, D12, D20 を使用したカスタマイズ可能なインボイスを作成。"
+  },
+  "expense-report-generator": {
+    "name": "経費報告生成ツール",
+    "description": "説明",
+    "seo_title": "無料のオンライン経費報告書生成ツール",
+    "seo_description": "経費を簡単に管理し、効率的に報告。無料のオンライン経費報告書生成ツールで経費を整理しましょう。"
+  },
+  "budget-variance-analyzer": {
+    "name": "予算変動分析ツール",
+    "description": "予算と実際の支出の変動を分析",
+    "seo_title": "予算_vs_実際の支出差異を分析する無料オンラインツール",
+    "seo_description": "Budget Variance Analyzerは、予算_vs_実際の支出差異を分析するための無料オンラインツールです。JSON, Base64, SVG, CSS, HTML, PDF, URL, API, GIF, D4, D6, D8, D10, D12, D20などの専門用語もサポートしています。"
+  },
+  "cost-benefit-analyzer": {
+    "name": "コスト・ベネフィット分析ツール",
+    "description": "説明",
+    "seo_title": "無料オンラインコスト利益分析ツール",
+    "seo_description": "無料で使用できるコスト利益分析ツール。ビジネスの決定を効率化します。オンラインで即座に結果を確認。"
+  },
+  "financial-forecast-calculator": {
+    "name": "財務予測計算機",
+    "description": "様々なモデルを使用して財務予測を作成",
+    "seo_title": "無料オンライン金融予測計算ツール",
+    "seo_description": "様々なモデルを使用して金融予測を作成。無料でオンラインで利用可能。"
+  },
+  "web-socket-tester": {},
+  "word-cloud-generator": {},
+  "ip-geolocation": {
+    "name": "IP ジオロケーション",
+    "description": "任意の IP アドレスの地理的位置情報を検索",
+    "seo_title": "無料オンライン IP ジオロケーション検索ツール",
+    "seo_description": "任意の IP アドレスの地理的位置、ISP、タイムゾーンなどを検索。無料のオンライン IP ジオロケーションツール。"
+  },
+  "screen-recorder": {
+    "name": "スクリーンレコーダー",
+    "description": "ブラウザで直接画面を録画",
+    "seo_title": "無料オンラインスクリーンレコーダー - インストール不要",
+    "seo_description": "ブラウザで直接画面を録画。インストール不要の無料オンラインスクリーンレコーダー。WebM 形式でダウンロード可能。"
+  },
+  "pdfToText": {},
+  "wordToTxt": {},
+  "wordToHtml": {},
+  "excelToCsv": {},
+  "csvToExcel": {}
+}

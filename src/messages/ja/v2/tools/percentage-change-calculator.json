@@ -1,0 +1,35 @@
+{
+  "detailed_description": "パーセント変化計算機は2つの値間のパーセント増加または減少を計算し、価格変動、成長率、データ比較の分析に使用します。",
+  "usage_steps": [
+    "元の値を入力",
+    "新しい値を入力",
+    "計算をクリックしてパーセント変化を表示",
+    "増加か減少かを確認",
+    "結果をコピー"
+  ],
+  "usage_examples": [
+    "価格変動を計算",
+    "売上成長を分析",
+    "パフォーマンス指標を比較"
+  ],
+  "oldValue": "元の値",
+  "newValue": "新しい値",
+  "oldValuePlaceholder": "元の値を入力...",
+  "newValuePlaceholder": "新しい値を入力...",
+  "calculate": "計算",
+  "swap": "入れ替え",
+  "copy": "コピー",
+  "copied": "コピーしました！",
+  "percentageChange": "パーセント変化",
+  "increase": "増加",
+  "decrease": "減少",
+  "difference": "差",
+  "formula": "公式",
+  "formulaText": "((新 - 旧) / |旧|) × 100%",
+  "example1Title": "株価",
+  "example1": "投資変動を追跡",
+  "example2Title": "給与",
+  "example2": "昇給率を計算",
+  "example3Title": "売上",
+  "example3": "成長率を測定"
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O HTTP Status Codes é uma ferramenta interativa que consulta e decodifica códigos de status HTTP, incluindo padrões RFC 7231 e códigos personalizados não documentados. Essencial para desenvolvedores que precisam diagnosticar problemas de comunicação cliente-servidor, validar comportamentos de APIs RESTful ou entender respostas inesperadas em requisições. O funcionamento baseia-se em um banco de dados estruturado que mapeia códigos numéricos (1xx a 5xx) a descrições técnicas, categorias semânticas e possíveis causas. A interface realiza validação em tempo real, destacando a classe do código (informativo, redirecionamento, erro etc.) e sugerindo soluções práticas com base no contexto do método de requisição (GET, POST, etc.).",
+  "usage_steps": [
+    "Acesse a categoria 'network' e selecione 'HTTP Status' na interface principal.",
+    "Digite um código numérico (ex: 404) no campo 'Código de Status' ou selecione 'Listar Todos' para visualizar o catálogo completo.",
+    "Escolha o método de requisição associado no dropdown (ex: GET, PUT) para filtrar comportamentos específicos.",
+    "Clique em 'Buscar Detalhes' para carregar a explicação técnica, incluindo RFCs aplicáveis e exemplos de uso.",
+    "Navegue pelas abas 'Causas Comuns' e 'Soluções' para orientações de resolução de problemas.",
+    "Copie o conteúdo ou compartilhe o link gerado para documentação de equipes ou registros técnicos."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor identifica um erro 502 Bad Gateway em uma API e utiliza a ferramenta para verificar se o problema está relacionado ao servidor intermediário ou à configuração do reverse proxy.",
+    "Um QA analisa uma resposta 301 Moved Permanently em um teste de redirecionamento e confirma se o cabeçalho 'Location' está corretamente configurado.",
+    "Um estudante de desenvolvimento web investiga a diferença entre 401 Unauthorized e 403 Forbidden ao implementar autenticação em uma aplicação.",
+    "Um engenheiro DevOps verifica um código de status personalizado 418 I'm a teapot em uma API interna para assegurar que o middleware está tratando respostas não padrão conforme documentado."
+  ]
+}

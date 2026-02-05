@@ -1,0 +1,23 @@
+{
+  "detailed_description": "Der iCal-Parser ist ein Online-Tool zum Lesen und Anzeigen von ICS-Kalenderdateien. Laden Sie eine ICS-Datei hoch oder fügen Sie die rohe iCal-Daten ein, um alle Ereignisse in einem sauberen, lesbaren Tabellenformat anzuzeigen. Der Parser extrahiert Ereignistitel, Start- und Endzeiten, Orte, Beschreibungen, Teilnehmer und Wiederholungsregeln. Ideal zum Debuggen von Kalenderintegrationen, zum Anzeigen von Kalenderexporten oder zum Extrahieren von Ereignisdaten aus ICS-Dateien. Unterstützt sowohl einzelne Ereignisse als auch wiederkehrende Ereignisreihen mit vollständiger Zeitzonenerfassung.",
+  "usage_steps": [
+    "ICS-Datei hochladen oder Inhalt einfügen",
+    "Geparste Ereignisse anzeigen",
+    "Als JSON exportieren"
+  ],
+  "usage_examples": [
+    "Kalenderexporte anzeigen",
+    "Ereignisdaten extrahieren"
+  ],
+  "parse": "Analysieren",
+  "uploadFile": "Datei Hochladen",
+  "icsContent": "iCal Inhalt",
+  "foundEvents": "Ereignisse Gefunden",
+  "summary": "Zusammenfassung",
+  "start": "Start",
+  "end": "Ende",
+  "location": "Ort",
+  "unnamed": "Unbenanntes Ereignis",
+  "exportJSON": "JSON Exportieren",
+  "inputPlaceholder": "iCal/ICS-Inhalt hier einfügen oder Datei hochladen..."
+}

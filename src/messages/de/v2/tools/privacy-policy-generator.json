@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Privacy Policy Generator ist ein spezialisierter Code-Generator, der rechtssichere Datenschutzerklärungen auf Basis von EU-DSGVO, BDSG und anderen internationalen Datenschutzvorschriften erstellt. Technisch gesehen verwendet das Tool ein modulares Template-System mit dynamischen Entscheidungsbäumen, die je nach Anwendungsfall spezifische Klauseln und Compliance-Anforderungen einfügen. Entwickler können granulare Einstellungen vornehmen, z.B. zur IP-Adressen-Logik, Server-Logfile-Speicherung, Cookie-Kategorisierung oder Third-Party-Integrationshinweisen. Das Tool analysiert automatisch Konflikte zwischen ausgewählten Datenschutzvorschriften und schlägt passende Anpassungen vor. Besonders nützlich für Web-Anwendungen mit Benutzerkonten, E-Commerce-Transaktionen oder IoT-Datenverarbeitung, da es komplexen Datennutzungsflüsse und pseudonymisierte Speicherung gerecht wird. Die Ausgabe erfolgt im HTML- oder Markdown-Format mit strukturiertem Schema.org-Markup für maschinenlesbare Datenschutzhinweise.",
+  "usage_steps": [
+    "Rufen Sie den Privacy Policy Generator unter /privacy-policy-generator auf.",
+    "Wählen Sie im Dropdown-Menü den geltenden Rechtsraum (z.B. EU-DSGVO, CCPA, Schweizer DSG).",
+    "Aktivieren Sie im Abschnitt 'Datenverarbeitung' die genutzten Kategorien (Cookies, IP-Tracking, Zahlungsdaten).",
+    "Passen Sie im Formular 'Third-Party-Dienste' die Anbieter und deren Datenverarbeitungszwecke manuell an.",
+    "Überprüfen Sie im Vorschau-Panel automatisch generierte Klauseln wie Einwilligungserklärungen oder Widerspruchsrechte.",
+    "Laden Sie die finale Datenschutzerklärung im gewünschten Format (HTML, DOCX, PDF) herunter und integrieren Sie diese in Ihr CMS."
+  ],
+  "usage_examples": [
+    "Ein E-Commerce-Shopbetreiber in Deutschland erstellt eine DSGVO-konforme Datenschutzerklärung inklusive Widerrufsbelehrung und Payment-Provider-Hinweisen.",
+    "Ein Mobile-App-Entwickler generiert eine gekürzte Privacy Policy für die App-Landingpage mit Fokus auf Biometrische Datenverarbeitung.",
+    "Ein SaaS-Anbieter nutzt das Tool, um unterschiedliche Datenschutzerklärungen für EU- und US-Kunden automatisch zu erstellen.",
+    "Ein IoT-Gerätehersteller integriert automatisch aktualisierte Hinweise zu Gerätedaten-Speicherung und Remote-Zugriffsrechten in seine Website."
+  ]
+}

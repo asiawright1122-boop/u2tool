@@ -1,0 +1,64 @@
+{
+  "title": "甘特图生成器",
+  "defaultTitle": "项目进度表",
+  "chartSettings": "图表设置",
+  "chartTitle": "标题",
+  "chartTitlePlaceholder": "输入标题...",
+  "colorTheme": "颜色主题",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "dataEditor": "任务编辑器",
+  "addTask": "添加任务",
+  "taskName": "任务名称",
+  "start": "开始",
+  "end": "结尾",
+  "progress": "进步",
+  "newTask": "新任务",
+  "chartPreview": "预览",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载 SVG",
+  "tipsTitle": "提示",
+  "tip1": "甘特图非常适合项目管理",
+  "tip2": "输入开始和结束日期以自动计算持续时间",
+  "confirmClear": "全部清除？",
+  "sampleTask1": "要求",
+  "sampleTask2": "设计",
+  "sampleTask3": "发展",
+  "detailed_description": "图表可视化工具可以快速生成各种类型的图表，用于数据可视化。 Gantt Chart Generator 是一个便捷的在线生成器，可以快速生成各种类型的数据。 使用 Gantt Chart Generator，您可以轻松创建符合特定格式要求的数据，无需手动编写。 这个工具支持多种配置选项，让您可以根据需要定制生成的内容。 无论您需要生成测试数据、示例内容还是随机值，Gantt Chart Generator 都能满足您的需求。 所有生成都在浏览器本地完成，确保您的隐私安全，不会上传任何数据。 立即使用 Gantt Chart Generator，体验快速、安全、免费的在线工具服务。",
+  "usage_steps": [
+    "打开 Gantt Chart Generator 工具页面",
+    "根据需要配置生成选项（如长度、格式等）",
+    "点击生成按钮，查看生成结果",
+    "复制或下载生成的内容"
+  ],
+  "usage_examples": [
+    "使用 Gantt Chart Generator 生成符合要求的数据",
+    "可以配置各种参数来定制生成结果"
+  ],
+  "faqs": [
+    {
+      "question": "Gantt Chart Generator 是免费的吗？",
+      "answer": "是的，Gantt Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Gantt Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Gantt Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Gantt Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Gantt Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

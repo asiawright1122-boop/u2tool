@@ -1,0 +1,17 @@
+{
+  "detailed_description": "L'Emoji Picker est un outil de traitement de texte conçu pour optimiser la sélection et l'intégration d'emojis conformes aux standards Unicode. Techniquement, il indexe plus de 3 000 glyphes via une base de données structurée en catégories (Smileys, Animaux, Symboles, etc.) et implémente un moteur de recherche full-text avec filtre contextuel. L'interface utilise l'API Clipboard pour permettre un copier-coller direct via des événements 'click' sur les éléments DOM. Le rendu est géré par du JavaScript côté client, éliminant tout appel serveur et garantissant une latence inférieure à 50ms. Ce tool répond aux besoins spécifiques de développeurs web (intégration d'emojis dans des interfaces), de community managers (création de posts engageants) ou de rédacteurs (enrichissement de contenus). Son architecture en arborescence permet un accès immédiat aux sous-catégories, tandis que l'indexation par mots-clés (ex: 'feu' → 🔥) accélère la recherche sémantique. La prévisualisation en temps réel dans une zone dédiée permet de valider l'emoji avant insertion.",
+  "usage_steps": [
+    "Ouvrez l'interface web et explorez les catégories principales (barre latérale gauche) : cliquez sur 'Nourriture' pour afficher les emojis associés.",
+    "Utilisez la barre de recherche en haut pour entrer un terme (ex: 'technologie') et obtenez des suggestions filtrées en temps réel.",
+    "Survolez un emoji pour afficher son nom Unicode (ex: U+1F4BB) et son équivalent hexadécimal dans le pied de page.",
+    "Cliquez sur un emoji pour l'ajouter automatiquement à la zone de prévisualisation en bas à droite de l'écran.",
+    "Appuyez sur le bouton 'Copier' (icône presse-papiers) pour transférer l'emoji sélectionné dans le clipboard système via l'API Async Clipboard.",
+    "Accédez aux 'Récents' (onglet en haut) pour réutiliser les 10 derniers emojis insérés, stockés en localStorage avec persistance de session."
+  ],
+  "usage_examples": [
+    "Un développeur web insère rapidement des emojis accessibles dans un formulaire de notation (⭐️⭐️⭐️⭐️☆) sans quitter son IDE grâce à la recherche par mot-clé 'étoile'.",
+    "Un community manager prépare un post Twitter sur le climat et utilise les filtres 'Météo' et 'Environnement' pour sélectionner 🌍🔥💧 avec un taux de conversion accru.",
+    "Un enseignant crée des supports pédagogiques pour enfants et intègre des emojis animaux (🦁🐘🦜) organisés par taxonomie biologique via les sous-catégories.",
+    "Un designer UI teste la compatibilité d'emojis cross-platform en comparant le rendu visuel de U+1F600 😄 sur différentes polices système via la prévisualisation."
+  ]
+}

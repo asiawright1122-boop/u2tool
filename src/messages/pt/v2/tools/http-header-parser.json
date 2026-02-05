@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O HTTP Header Parser é uma ferramenta técnica especializada para decompor e analisar estruturalmente cabeçalhos HTTP, exibindo seus componentes em formato organizado com explicações contextuais. Quando você insere um bloco de cabeçalhos brutos (como os de uma requisição ou resposta HTTP), o parser identifica automaticamente campos como 'Host', 'User-Agent', 'Content-Length' e outros, categorizando-os conforme os padrões RFC 7230-7235. A ferramenta destaca valores em formato legível, associa cada header a sua especificação técnica e fornece alertas sobre práticas obsoletas ou potenciais vulnerabilidades de segurança, como uso inadequado de 'X-Content-Type-Options'. É essencial para desenvolvedores que precisam depurar problemas de CORS, validar conformidade de headers de segurança, ou entender o comportamento de APIs terceirizadas. Sua engine de parsing implementa algoritmos lineares para processar entradas em formato raw ou codificado, suportando modos strict (validação rigorosa) e permissive (tolerância a formatos não padrão), com saída em JSON estruturado ou tabela HTML interativa.",
+  "usage_steps": [
+    "Cole o bloco completo de cabeçalhos HTTP na textarea identificada por 'Input Raw Headers'",
+    "Ative o modo 'Strict Parsing' para validação RFC ou 'Permissive Mode' para entradas parciais",
+    "Selecione o formato de saída desejado: 'JSON Tree' ou 'Interactive Table' no seletor abaixo",
+    "Marque a opção 'Show Header Descriptions' para exibir explicações técnicas de cada campo",
+    "Clique em 'Validate Syntax' para verificar erros de formatação ou valores inválidos",
+    "Use o botão 'Export Results' para baixar o output em formato de sua escolha (JSON, CSV ou HTML)"
+  ],
+  "usage_examples": [
+    "Um desenvolvedor frontend analisa headers de resposta de uma API para identificar causas de bloqueio CORS, verificando campos como 'Access-Control-Allow-Origin' e 'Vary'",
+    "Um engenheiro de segurança audita configurações de headers em um servidor Nginx, detectando ausência de 'Content-Security-Policy' e 'Strict-Transport-Security'",
+    "Um QA testa o cache de uma CDN comparando valores de 'Cache-Control' e 'ETag' entre requisições, usando o parser para validar consistência",
+    "Um arquiteto investiga lentidão em requisições, analisando o 'Transfer-Encoding', 'Content-Length' e 'Server-Timing' para diagnosticar gargalos"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "measurementMethod": "Messmethode",
+  "circumference": "Umfang",
+  "diameter": "Durchmesser",
+  "existingRing": "Vorhandene Ringgröße",
+  "enterMeasurement": "Messung eingeben",
+  "mm": "mm",
+  "inches": "Zoll",
+  "yourSize": "Ihre Ringgröße",
+  "usSize": "US-Größe",
+  "ukSize": "UK-Größe",
+  "euSize": "EU-Größe",
+  "measureTips": "Wie man misst",
+  "detailed_description": "Der Ringgrößenrechner ist ein spezialisiertes Werkzeug, das entwickelt wurde, um Benutzer dabei zu unterstützen, ihre Ringgröße in verschiedenen Messsystemen zu bestimmen. Dieses Tool integriert verschiedene Messmethoden, darunter die Messung der Innendurchmesser, der inneren Breite und des Umfangs der Ringfinger, um die korrekten Größenangaben zu berechnen. Die zentrale Funktionalität basiert auf präzise kalibrierten Algorithmen, die die Messwerte in die global akzeptierten Ringgrößenstandards umrechnen, einschließlich den international üblichen Maßeinheiten wie Millimeter (mm) und Inch. Die Notwendigkeit für ein solches Tool ist besonders bei Online-Shopping offensichtlich, wo Kunden oft nicht die Möglichkeit haben, die Ringe physisch zu probieren. Es ermöglicht es auch Juwelieren, Kunden individuelle Anpassungen vorzuschlagen, indem sie genaue Messungen liefern, die die Herstellung maßgefertigter Ringe vereinfachen. Die Verwendung von hochpräzisen Algorithmen sorgt dafür, dass die Berechnungen zuverlässig sind, was sowohl für den Endverbraucher als auch für den Händler von Vorteil ist.",
+  "usage_steps": [
+    "Öffnen Sie das Tool auf der Website und wählen Sie die Registerkarte 'Ringgrößenrechner' aus.",
+    "Wählen Sie die Messmethode aus, die Sie verwenden möchten, beispielsweise 'Innendurchmesser', 'Innere Breite' oder 'Umfang'.",
+    "Geben Sie die gemessenen Werte in das entsprechende Feld ein. Achten Sie darauf, die korrekten Maßeinheiten zu wählen, wie Millimeter (mm) oder Inch.",
+    "Klicken Sie auf die Schaltfläche 'Berechnen', um die Ringgröße zu ermitteln.",
+    "Das Tool zeigt Ihnen die errechnete Ringgröße in verschiedenen Systemen an, wie beispielsweise US, UK, EU oder Japan.",
+    "Drucken Sie das Ergebnis aus oder speichern Sie es, um es später zu verwenden oder es mit einem Juwelier zu teilen."
+  ],
+  "usage_examples": [
+    "Ein Online-Kunde möchte einen Verlobungsring kaufen, aber er ist sich nicht sicher, welche Ringgröße seine Partnerin trägt. Er nutzt den Ringgrößenrechner, um den Innendurchmesser eines bereits besitzenden Rings zu messen und die korrekte Größe zu bestimmen.",
+    "Ein Juwelier bietet maßgefertigte Ringe an. Ein potenzieller Kunde hat die Abmessungen seines aktuellen Rings, aber keine Ahnung, welche Ringgröße es entspricht. Der Juwelier verwendet den Ringgrößenrechner, um die genaue Größe zu ermitteln und das maßgefertigte Produkt anzubieten.",
+    "Eine Braut plant ihre Hochzeit und möchte sicherstellen, dass ihre Brautjungfern Ringe passen. Sie verwendet den Ringgrößenrechner, um die Fingerumfänge der Brautjungfern zu messen und die passenden Größen zu ermitteln.",
+    "Ein Hobby-Silberschmied möchte Ringe für einen lokalen Markt herstellen, aber er hat keine Messgeräte zur Hand. Er nutzt den Ringgrößenrechner, um die gebräuchlichsten Ringgrößen in seiner Region zu bestimmen und sicherzustellen, dass seine Produkte den Bedürfnissen der Kunden entsprechen."
+  ],
+  "convertMode": "Convert Mode",
+  "measureMode": "Measure Mode",
+  "selectUSSize": "Select U S Size",
+  "measurementType": "Measurement Type",
+  "yourRingSize": "Your Ring Size",
+  "sizeChart": "Size Chart",
+  "measurementTips": "Measurement Tips"
+}

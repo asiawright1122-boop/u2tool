@@ -1,0 +1,25 @@
+{
+  "input": "Input",
+  "output": "Output",
+  "encode": "Encode",
+  "decode": "Decode",
+  "copy": "Copy",
+  "inputPlaceholderEncode": "Enter text to encode...",
+  "inputPlaceholderDecode": "Enter Base85 to decode...",
+  "outputPlaceholder": "Result will appear here...",
+  "detailed_description": "The Base85 Encoder/Decoder converts binary data to ASCII text using the Base85 (Ascii85) encoding scheme, which represents 32-bit binary values as five printable ASCII characters from a set of 85 symbols. This tool supports both Adobe's original Ascii85 implementation and the Z85 variant defined in RFC 1924, achieving 25% smaller output compared to Base64 by leveraging a base-85 number system. Developers need this tool when working with PDF document streams, Git version control metadata, or network protocols requiring ASCII-armored binary transmission. The encoder processes input through a four-step algorithm: binary stream segmentation, 32-bit group conversion to base-85, dictionary mapping using the ASCII range 33-117, and final output formatting with optional '~>' delimiters. Decoding reverses this process using polynomial expansion while handling edge cases like incomplete 4-byte input blocks. Technical advantages include improved data density (1.25x size increase vs Base64's 1.33x) and compatibility with ASCII-based systems that reject null bytes or control characters.",
+  "usage_steps": [
+    "Open the Base85 tool interface and locate the 'Input Mode' dropdown to select either 'Encode Binary' or 'Decode Ascii85'",
+    "Paste raw binary data or ASCII85-encoded text into the designated 'Data Input' textarea",
+    "Toggle the 'Format Output' switch to enable/disable line breaks every 64 characters for enhanced readability",
+    "Click the 'Process Data' button to initiate the conversion algorithm",
+    "Review the output panel showing results in both standard Ascii85 and Z85 formats with byte count statistics",
+    "Use the 'Copy to Clipboard' icon to save the converted data or download it as a .txt file"
+  ],
+  "usage_examples": [
+    "Encoding a 256-color PNG image for embedding in a PDF document's XObject stream while maintaining ASCII compatibility",
+    "Decoding Base85-encoded Git object IDs from a .pack file to analyze repository internal structure",
+    "Converting binary cryptographic signatures into compact ASCII representations for JSON Web Token (JWT) headers",
+    "Debugging ZeroMQ network protocol messages that use Z85 encoding for efficient binary transport over text-based channels"
+  ]
+}

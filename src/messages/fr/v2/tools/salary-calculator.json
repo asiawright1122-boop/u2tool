@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le Salary Calculator est un outil technique permettant de convertir précisément des rémunérations entre cinq unités de mesure : horaire, journalière, hebdomadaire, mensuelle et annuelle. Conçu pour intégrer des paramètres de calcul standardisés (comme 35 heures/semaine ou 214 jours ouvrés/an en France), il applique des formules de conversion pro-rata temporis en tenant compte des ratios exacts entre chaque unité. Les utilisateurs peuvent ajuster manuellement les hypothèses (nombre d'heures par jour, jours de travail par an) pour refléter des contextes spécifiques comme le temps partiel ou les contrats internationaux. Cette flexibilité technique en fait un outil essentiel pour les professionnels des ressources humaines gérant des mobilités internationales, les indépendants calculant des devis en euros/heure, ou les employés comparant des offres d'emploi avec différentes structures de rémunération. L'outil gère également les conversions inverses (ex. annualisation d'une prime ponctuelle) et intègre un système de validation en temps réel des entrées pour éviter les erreurs de format. Sa précision algorithmique élimine les approximations courantes comme la simplification 'salaire mensuel = annuel / 12', en intégrant les mois fractionnés et les spécificités légales locales.",
+  "usage_steps": [
+    "Sélectionnez votre unité de salaire d'origine via le menu déroulant (ex: 'Annuel brut')",
+    "Saisissez le montant dans le champ numérique avec validation automatique du format",
+    "Ajustez les paramètres avancés (nombre d'heures par jour ouvré, jours fériés déduits) dans la section 'Options de calcul'",
+    "Cliquez sur le bouton 'Convertir' pour exécuter l'algorithme de transformation multi-unités",
+    "Consultez le tableau de résultats synchronisé en temps réel affichant toutes les conversions équivalentes",
+    "Utilisez l'option 'Exporter CSV' pour générer un rapport détaillé avec les formules de calcul appliquées"
+  ],
+  "usage_examples": [
+    "Un développeur freelance à Paris calcule son taux horaire équivalent à un revenu annuel de 55 000€, en intégrant 214 jours de travail et 8 heures/jour",
+    "Une entreprise multinationale convertit un package de rémunération annuel de 80 000 CAD vers un taux mensuel net en CFA pour un expatrié au Sénégal",
+    "Un étudiant en alternance détermine son salaire mensuel en convertissant un taux horaire de 12,50€ sur 18 heures/semaine",
+    "Un consultant compare le coût total d'un projet facturé 250€/heure versus un forfait mensuel de 4 200€, en analysant le seuil de rentabilité en heures"
+  ]
+}

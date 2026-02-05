@@ -1,0 +1,34 @@
+{
+  "output": "Sortie CSS",
+  "copy": "Copier le CSS",
+  "cornerRadius": "Rayon des Coins",
+  "linkAll": "Liens pour Tous",
+  "topLeft": "Haut Gauche",
+  "topRight": "Haut Droit",
+  "bottomLeft": "Bas Gauche",
+  "bottomRight": "Bas Droit",
+  "presets": "Pré-établis",
+  "presetSquare": "Carré",
+  "presetRounded": "Arrondi",
+  "presetPill": "Pilule",
+  "presetLeaf": "Feuille",
+  "presetDrop": "Plongeon",
+  "presetMessage": "Message",
+  "boxColor": "Couleur de la Boîte",
+  "preview": "Prévisualisation",
+  "detailed_description": "Le générateur de rayon de bordure est un outil technique conçu pour simplifier la création et la visualisation des propriétés CSS `border-radius`. Il permet de générer des valeurs précises pour arrondir les coins d'éléments HTML, en prenant en charge à la fois des unités fixes (px) et relatives (%). L'outil calcule dynamiquement les valeurs shorthand CSS (de 1 à 4 paramètres) et affiche un aperçu en temps réel d'un élément HTML stylé, intégrant des fonctionnalités comme la symétrie horizontale/verticale et la gestion indépendante de chaque coin. Les développeurs l'utiliseront pour créer des interfaces modernes avec des formes personnalisées (boutons circulaires, cartes asymétriques, cadres d'images responsifs) sans écrire manuellement les règles CSS. Il intègre également un panneau de code qui affiche la syntaxe validée pour garantir la compatibilité avec les navigateurs (inclus `-webkit-` et `-moz-` si nécessaire).",
+  "usage_steps": [
+    "Accédez à l'interface avec les quatre curseurs de réglage (haut-gauche, haut-droite, bas-droite, bas-gauche).",
+    "Ajustez individuellement chaque valeur en cliquant sur les icônes '+'/'-' ou en saisissant directement les chiffres.",
+    "Utilisez le bouton 'Symétrie' pour activer le mode miroir horizontal/vertical et réduire les saisies répétitives.",
+    "Sélectionnez l'unité de mesure (px ou %) via les menus déroulants associés à chaque coin.",
+    "Consultez l'aperçu interactif en bas de page qui met à jour un div de démonstration avec les styles appliqués.",
+    "Copiez le code CSS généré dans le panneau de droite, qui inclut les préfixes navigateur optionnels."
+  ],
+  "usage_examples": [
+    "Créer un bouton circulaire parfait en définissant un rayon de 50% pour toutes les valeurs.",
+    "Concevoir une carte de profil avec un coin supérieur gauche arrondi (15px) et les autres carrés.",
+    "Générer un masque d'image elliptique en utilisant des valeurs en pourcentage pour un design responsive.",
+    "Implémenter des coins asymétriques sur une section de héros avec des valeurs personnalisées (ex: 30px 10px 50px 5px)."
+  ]
+}

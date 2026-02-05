@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der CSS Animation Generator ist ein spezialisierter visueller Editor zur Erstellung komplexer CSS-Animationen ohne manuelle Codierung. Technisch basiert er auf der Generierung von @keyframes-Regeln, die mit benutzerdefinierten Timing-Funktionen (linear, ease-in-out, custom Cubic-Bezier-Kurven) und Animationseigenschaften wie animation-fill-mode, animation-direction und iteration-count kombiniert werden. Entwickler profitieren durch präzise Kontrolle über Transformationsmatrizen (translate, rotate, scale) und Opazitätsverläufe. Das Tool ist besonders nützlich für die Implementierung responsiver Hover-Effekte, Ladeanimationen oder Scroll-Triggers, da es die Synchronisation mehrerer Animationspfade über einen Timeline-Editor ermöglicht. Intern wandelt der Generator visuelle Eingaben in optimierten CSS-Code um, der mit Autopräfixen für Cross-Browser-Kompatibilität versehen wird, um Rendering-Probleme in unterschiedlichen Browsern zu vermeiden.",
+  "usage_steps": [
+    "Wählen Sie im Editor-Panel ein HTML-Element aus oder erstellen Sie ein neues Animation-Target über den 'Element-Selector'.",
+    "Definieren Sie Start- und Endzustände durch Anpassung von CSS-Eigenschaften (z.B. transform: translateY(100px), opacity: 0.5) im Property-Editor.",
+    "Fügen Sie im Timeline-Panel zusätzliche Keyframes hinzu und passen Sie deren Position in Millisekunden an.",
+    "Wählen Sie eine Timing-Funktion aus den Easing-Presets oder erstellen Sie eine benutzerdefinierte Bézier-Kurve im Graph-Editor.",
+    "Testen Sie die Animation in Echtzeit mit der Play/Pause-Schaltfläche und justieren Sie die animation-iteration-count und fill-mode-Einstellungen.",
+    "Exportieren Sie den generierten CSS-Code über den 'Copy'-Button oder laden Sie eine ZIP-Datei mit HTML/CSS-Beispieldateien herunter."
+  ],
+  "usage_examples": [
+    "Erstellen einer mehrspurigen Animation für ein dynamisches Hero-Banner mit Texteffekten und Hintergrundparallaxe.",
+    "Implementierung eines micro-interactions für ein Button-Hover-Feedback mit kombinierten scale()- und color-transition-Effekten.",
+    "Generierung eines animierten Ladeindikators mit kontinuierlicher Rotation und Farbverlauf für eine SPA-Loading-Sequence.",
+    "Design einer Scroll-Triggered-Reveal-Animation für Portfolio-Elemente mit kaskadierender Verzögerung und Stagger-Effekt."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le CSS Flexbox Generator est un outil interactif permettant de créer des mises en page CSS Flexbox en temps réel, avec un aperçu visuel immédiat. Techniquement, il permet de configurer les propriétés fondamentales de Flexbox telles que flex-direction (ligne, colonne, inverse), justify-content (espace entre les éléments, alignement), align-items (positionnement vertical), et flex-wrap (retour à la ligne automatique). L'outil gère également des paramètres avancés comme flex-shrink, flex-grow, la définition de la propriété order pour réorganiser les éléments, et l'espacement dynamique via gap, margin et padding. Ce générateur est indispensable pour les développeurs qui souhaitent visualiser l'impact des propriétés Flexbox sans passer par des cycles de codage-test répétitifs. Il simplifie la création de grilles réactives, de barres de navigation fluides, ou de composants d'interface complexes en supprimant les erreurs de calcul manuel. Le fonctionnement repose sur un moteur JavaScript qui met à jour dynamiquement le DOM en appliquant les styles sélectionnés, tandis qu'un panneau de code affiche la CSS générée, prête à être copiée. Les valeurs saisies via des contrôles graphiques (curseurs, menus déroulants, champs numériques) sont converties en déclarations CSS valides, avec une gestion des préfixes navigateurs pour une compatibilité optimale.",
+  "usage_steps": [
+    "Accédez à l'outil et sélectionnez l'orientation du conteneur (flex-direction) via les icônes 'ligne' ou 'colonne'.",
+    "Ajustez l'alignement des éléments sur l'axe principal avec le menu justify-content (espace entre, centré, etc.).",
+    "Utilisez les curseurs pour définir les valeurs de gap, margin et padding entre les éléments flexibles.",
+    "Ajoutez des éléments enfants avec le bouton '+ Item' et personnalisez leurs propriétés individuelles (flex-grow, flex-shrink, order).",
+    "Activez l'option 'flex-wrap' pour tester le comportement de retour à la ligne sur petits écrans.",
+    "Copiez le code CSS généré dans le panneau de sortie et intégrez-le directement dans votre projet."
+  ],
+  "usage_examples": [
+    "Créer une grille de portfolio responsive où les cartes s'adaptent automatiquement à la taille de l'écran en ajustant flex-wrap et gap.",
+    "Concevoir une barre de navigation horizontale avec des éléments équidistants en utilisant justify-content: space-between.",
+    "Aligner verticalement un formulaire au centre d'une page avec align-items: center et flex-direction: column.",
+    "Prototyper un carrousel d'images mobile en configurant flex-shrink pour les miniatures et flex-grow pour l'image active."
+  ]
+}

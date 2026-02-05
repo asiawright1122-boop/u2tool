@@ -1,0 +1,26 @@
+{
+  "sqlQuery": "Consulta SQL",
+  "sqlPlaceholder": "Ingresa la consulta SQL...",
+  "mongoQuery": "Consulta MongoDB",
+  "examples": "Ejemplos",
+  "exampleSimpleSelect": "SELECT simple",
+  "exampleSelectProjection": "SELECT con proyección",
+  "exampleInsert": "INSERT",
+  "exampleUpdate": "UPDATE",
+  "exampleDelete": "DELETE",
+  "detailed_description": "La herramienta SQL to MongoDB convierte consultas SQL estándar en operaciones equivalentes de MongoDB, optimizadas para la canalización de agregación. Técnicamente, el proceso implica analizar la estructura de la consulta SQL mediante un parser AST (Abstract Syntax Tree) para identificar cláusulas como SELECT, FROM, WHERE, JOIN o GROUP BY, y luego mapearlas a operadores de MongoDB como $project, $match, $lookup o $group. Por ejemplo, una sentencia JOIN en SQL se transforma en un $lookup con opciones de pipeline para replicar joins anidados, mientras que las condiciones WHERE se traducen en $expr o $match dependiendo del contexto. Este proceso es esencial para equipos que migran de bases de datos relacionales (MySQL, PostgreSQL) a MongoDB, o que necesitan integrar ambas tecnologías en arquitecturas híbridas. La herramienta soporta versiones modernas de MongoDB (5.0+) y permite ajustar el mapeo de tipos de datos (ej: DATE en SQL a BSON Date) y la estructura de documentos anidados. Su motor de conversión incluye validación de sintaxis y sugerencias en tiempo real para consultas complejas con subconsultas o funciones agregadas.",
+  "usage_steps": [
+    "1. Selecciona el dialecto SQL de origen (MySQL, PostgreSQL, SQL Server) en el menú desplegable 'Dialecto'.",
+    "2. Pega tu consulta SQL en el editor de código con resaltado de sintaxis.",
+    "3. Configura opciones avanzadas: mapea tablas a colecciones, define versiones de compatibilidad de MongoDB, y ajusta el tratamiento de campos anidados.",
+    "4. Haz clic en el botón 'Convertir' para ejecutar el análisis AST y generar la canalización de agregación.",
+    "5. Revisa el resultado en la pestaña 'Output' donde se muestra el código MongoDB junto con advertencias de posibles incompatibilidades.",
+    "6. Copia el código al portapapeles o descarga el resultado en formato .js para integrarlo en tu proyecto."
+  ],
+  "usage_examples": [
+    "1. Convierte una consulta de análisis de ventas mensuales (SELECT SUM(...) GROUP BY fecha) en un pipeline con $match y $group, adaptando fechas SQL a operadores $dateTrunc en MongoDB.",
+    "2. Transforma un JOIN entre tablas de clientes y pedidos en una operación $lookup con pipeline, optimizando para grandes volúmenes de datos.",
+    "3. Adapta una subconsulta correlacionada en la cláusula WHERE a una expresión $expr con $filter para arrays embebidos.",
+    "4. Migración de un informe de inventario con múltiples condiciones OR en WHERE a un $match con operador $or y validación de tipos de campos heterogéneos."
+  ]
+}

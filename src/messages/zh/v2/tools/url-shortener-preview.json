@@ -1,0 +1,47 @@
+{
+  "input": "输入文本",
+  "copy": "复制结果",
+  "note": "注意：由于浏览器安全限制，实际URL扩展需要服务器端请求。此工具识别短链接并显示其域名。",
+  "placeholder": "粘贴包含短链接的文本（bit.ly、tinyurl.com、t.co等）...",
+  "analyzing": "正在分析...",
+  "analyzeUrls": "分析URL",
+  "results": "结果",
+  "supportedServices": "支持的短链接服务",
+  "moreServices": "+{count} 更多",
+  "noShortUrls": "未找到短链接",
+  "noShortUrlsError": "输入中未识别到短链接",
+  "unableToExpand": "无法扩展（需要服务器端请求）",
+  "detailed_description": "URL Shortener Preview 是一款专为网络开发和安全分析设计的工具，它能够帮助用户解析和预览被缩短的URL，从而提供详细的URL信息和潜在的安全风险评估。在现代社会，URL缩短服务被广泛应用于社交媒体、电子邮件营销和网页链接分享。然而，这些被缩短的URL往往隐藏了其原始的完整路径，给用户带来了安全和隐私的隐患。URL Shortener Preview 通过解析这些被缩短的URL，揭示其原始的URL结构，包括查询参数和重定向目标，帮助用户评估链接的安全性和有效性。该工具利用先进的解析算法，支持多种URL缩短服务（如 bit.ly、tinyurl 等），确保解析结果的准确性和全面性。对于网络开发者和安全专家来说，URL Shortener Preview 是一个不可或缺的工具，它不仅提高了链接分析的效率，还增强了网络环境的安全性。",
+  "usage_steps": [
+    "Step 1: 打开 URL Shortener Preview 工具页面，您会看到一个输入框，用于输入您想要分析的缩短URL。",
+    "Step 2: 在输入框中粘贴或输入您需要解析的缩短URL，确保URL格式正确且可访问。",
+    "Step 3: 点击“解析”按钮，系统将自动解析该URL并展示详细信息。",
+    "Step 4: 在结果页面中，您可以看到解析后的原始URL、HTTP状态码、目标重定向地址等详细信息。",
+    "Step 5: 如果URL包含查询参数，工具还会解析并列出每个参数的名称和值，帮助您更好地理解URL的结构。",
+    "Step 6: 使用工具提供的“历史记录”功能，您可以查看之前解析过的URL记录，方便对比和参考。"
+  ],
+  "usage_examples": [
+    "Example 1: 作为电子邮件营销人员，您收到一封包含多个缩短链接的促销邮件，使用 URL Shortener Preview 可以快速解析这些链接，确保它们指向正确的营销页面，避免潜在的钓鱼网站。",
+    "Example 2: 作为一名网站管理员，您需要审核网站上的外部链接，URL Shortener Preview 可以帮助您验证这些链接的目的地，确保它们不会将用户引导到不安全或不合规的网站。",
+    "Example 3: 作为安全分析师，您需要调查一起网络攻击事件，其中涉及多个被缩短的恶意链接。通过使用 URL Shortener Preview，您可以快速解析这些链接，获取攻击者的服务器信息和攻击路径。",
+    "Example 4: 作为社交媒体管理者，您需要定期审核用户发布的内容，特别是包含外部链接的帖子。URL Shortener Preview 可以帮助您快速预览这些链接，确保它们不会引导用户到不当内容或危险网站。"
+  ],
+  "faqs": [
+    {
+      "question": "Url Shortener Preview 是免费的吗？",
+      "answer": "是的，Url Shortener Preview 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Url Shortener Preview 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Url Shortener Preview 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Url Shortener Preview 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "checking": "正在检查...",
+  "check": "检查SSL",
+  "valid": "SSL证书有效",
+  "invalid": "SSL证书无效",
+  "issuer": "颁发者",
+  "subject": "主题",
+  "validFrom": "有效从",
+  "validTo": "有效至",
+  "daysRemaining": "剩余天数",
+  "days": "天",
+  "protocol": "协议",
+  "serialNumber": "序列号",
+  "note": "💡 备注：这是演示版本。对于生产环境，请集成后端SSL检查API。",
+  "detailed_description": "SSL证书检查工具通过解析目标域名的X.509证书链，验证TLS/SSL协议配置合规性。该工具可检测证书有效期、密钥算法强度、域名匹配规则（SAN扩展）、CA信任链完整性，并支持OCSP Stapling状态查询。系统运维人员可通过此工具排查HTTPS握手失败原因，开发人员可用于验证证书部署正确性，安全审计人员可据此发现弱加密算法残留。工具采用异步Socket连接，通过建立TCP三次握手后触发ClientHello请求，捕获服务器返回的完整证书链数据，结合本地信任库进行逐级验证，并展示证书指纹、签发机构OID编码及CRL吊销列表检查结果。",
+  "usage_steps": [
+    "在域名输入框输入需检测的完整域名（如example.com）",
+    "选择目标服务器端口（默认443）及SSL/TLS协议版本（TLS1.2/TLS1.3）",
+    "点击「启动深度分析」按钮发起异步检测",
+    "查看证书层级拓扑图及每个节点的X.500 Distinguished Name信息",
+    "检查SubjectAltName扩展中的通配符域名覆盖范围",
+    "导出符合RFC 5280标准的证书合规性报告（支持TXT/JSON格式）"
+  ],
+  "usage_examples": [
+    "新部署的电商网站出现ERR_SSL_PROTOCOL_ERROR，通过检测发现证书链缺少中间CA",
+    "企业内网系统升级后，使用该工具验证是否仍存在SHA-1签名的过期证书",
+    "CDN服务商需要批量检查客户域名的OCSP响应时效性",
+    "开发人员测试多域名通配符证书时，确认SAN扩展是否包含所有子域名"
+  ],
+  "faqs": [
+    {
+      "question": "Ssl Checker 是免费的吗？",
+      "answer": "是的，Ssl Checker 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Ssl Checker 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Ssl Checker 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Ssl Checker 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "chartTitle": "Título del Gráfico",
+  "chartTitlePlaceholder": "Introduce el título del gráfico",
+  "colorTheme": "Tema de Color",
+  "label": "Etiqueta",
+  "labelPlaceholder": "Introduce la etiqueta",
+  "percentage": "Porcentaje",
+  "ringWidth": "Ancho del Anillo",
+  "showAnimation": "Mostrar Animación",
+  "loadSample": "Cargar Ejemplo",
+  "downloadPng": "Descargar PNG",
+  "downloadSvg": "Descargar SVG",
+  "defaultTitle": "Progreso",
+  "defaultLabel": "Finalización",
+  "sampleTitle": "Progreso del Proyecto",
+  "sampleLabel": "Completado",
+  "chartPreview": "Vista Previa del Gráfico",
+  "chartSettings": "Ajustes del Gráfico",
+  "themeDefault": "Predeterminado",
+  "themeOcean": "Océano",
+  "themeSunset": "Atardecer",
+  "themeForest": "Bosque",
+  "tips": {
+    "title": "Consejos",
+    "tip1": "Arrastra el deslizador para ajustar el valor del porcentaje",
+    "tip2": "Personaliza el ancho del anillo para diferentes efectos visuales",
+    "tip3": "Habilita la animación para un efecto de carga dinámico"
+  },
+  "detailed_description": "El Ring Progress Chart Generator es una herramienta técnica especializada en la creación de gráficos circulares de progreso basados en estándares web modernos. Utiliza gráficos vectoriales escalables (SVG) para renderizar visualizaciones dinámicas mediante cálculos de arcos y paths definidos en el DOM. El usuario define un valor porcentual entre 0 y 100, que se traduce en un arco parcial alrededor de un círculo base, con opciones avanzadas de personalización como gradientes radiales, anchos de trazo variables y animaciones de easing basadas en funciones matemáticas. La herramienta destaca por su capacidad de exportar configuraciones reutilizables en formato JSON, permitiendo integración directa con frameworks frontend. Es esencial para desarrolladores que requieren indicadores visuales de progreso en dashboards de aplicaciones SaaS, sistemas de monitoreo de servidores o interfaces de IoT, donde la precisión en la representación de estados intermedios es crítica. Su motor interno procesa en tiempo real los valores mediante scripts de JavaScript vanilla, optimizados para rendimiento sin dependencias externas.",
+  "usage_steps": [
+    "Accede al generador a través de la barra de búsqueda en la categoría 'charts'",
+    "Configura el valor porcentual en el input numérico (0-100) con precisión de decimales",
+    "Ajusta el color primario mediante el selector de paletas con soporte para HEX y RGB",
+    "Modifica el ancho de trazo usando el slider de 2px a 20px con preview en vivo",
+    "Activa animaciones de carga desde el dropdown 'transition type' con opciones como 'elastic' o 'linear'",
+    "Exporta el código SVG o JSON a través del botón 'copy to clipboard' para integración directa"
+  ],
+  "usage_examples": [
+    "Visualización en tiempo real del progreso de carga de archivos grandes en una aplicación de edición de video web",
+    "Dashboard de control médico mostrando porcentaje de cumplimiento en rutinas de rehabilitación diarias",
+    "Indicador de batería para dispositivos móviles con representación circular en una PWA de productividad",
+    "Sistema de gamificación en e-learning que muestra el avance de cursos completados por usuarios"
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

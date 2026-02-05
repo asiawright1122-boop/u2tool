@@ -1,0 +1,22 @@
+{
+  "websiteName": "Название веб-сайта",
+  "websiteNamePlaceholder": "Мой сайт",
+  "websiteUrl": "URL-адрес веб-сайта",
+  "websiteUrlPlaceholder": "https://example.com",
+  "companyName": "Название компании",
+  "companyNamePlaceholder": "Моя Компания Инк.",
+  "contactEmail": "Контактный адрес электронной почты",
+  "contactEmailPlaceholder": "Privacy@example.com",
+  "featuresTitle": "Функции",
+  "features": {
+    "collectsPersonalData": "Собирает персональные данные",
+    "usesCookies": "Использует файлы cookie",
+    "usesAnalytics": "Использует аналитику (например, Google Analytics)",
+    "usesAds": "Использует рекламу",
+    "allowsUserAccounts": "Разрешает учетные записи пользователей",
+    "sellsData": "Передает данные третьим лицам"
+  },
+  "generate": "Создать политику конфиденциальности",
+  "copyToClipboard": "Копировать в буфер обмена",
+  "generatedOutput": "Сгенерированная политика конфиденциальности (Markdown)"
+}

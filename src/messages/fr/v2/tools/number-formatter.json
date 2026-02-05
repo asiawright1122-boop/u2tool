@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le Number Formatter est un outil technique permettant de transformer numériquement des valeurs numériques selon les conventions de localisation (locales) spécifiques, en appliquant des règles de séparation décimale, de symboles monétaires et de notation de pourcentage. Il utilise en interne les normes ICU (International Components for Unicode) et les données du projet Unicode CLDR pour garantir une conformité précise aux standards internationaux. Ce formatage est essentiel pour les développeurs souhaitant adapter l'affichage des données financières, statistiques ou quantitatives dans des applications multilingues, par exemple lors de la localisation d'interfaces ou de la génération de rapports. L'outil prend en charge les paramètres de langue, de pays et de système numéraire (comme la notation arabe-indienne ou latine), et permet d'ajuster la précision décimale, les symboles de devise (€, ¥, $) et les formats de pourcentage. Techniquement, il analyse la valeur d'entrée, applique les règles de formatage basées sur la locale sélectionnée via l'API JavaScript Intl.NumberFormat, puis génère une représentation textuelle normalisée. Il gère également la conversion implicite entre systèmes décimaux et monétaires, avec possibilité de spécifier des options comme la notation compacte (ex: 1,5M pour 1,5 million).",
+  "usage_steps": [
+    "1. Saisissez la valeur numérique dans le champ d'entrée (ex: 1234567.89).",
+    "2. Sélectionnez la locale cible dans le menu déroulant (ex: fr-FR, en-US, de-DE).",
+    "3. Choisissez le style de formatage: Décimal, Monétaire ou Pourcentage.",
+    "4. Activez/désactivez les options avancées comme 'Afficher les milliers séparés' ou 'Notation compacte'.",
+    "5. Si le style monétaire est sélectionné, choisissez la devise (EUR, USD, JPY) via le sélecteur de code ISO.",
+    "6. Copiez le résultat formaté depuis le panneau de sortie ou téléchargez le JSON contenant toutes les variantes."
+  ],
+  "usage_examples": [
+    "Formater un salaire mensuel de 3450.5 en '3 450,50 €' pour un document RH en France (fr-FR).",
+    "Convertir une somme de 1500 USD en CAD avec le format '1 980,25 $CA' pour un devis au Canada.",
+    "Afficher une croissance de 0.158 en '15,8 %' avec la notation brésilienne (pt-BR) pour un tableau de bord financier.",
+    "Transformer le nombre 9876543 en '98,76,543' avec le format indien (en-IN) pour un rapport de population."
+  ]
+}

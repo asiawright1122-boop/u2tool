@@ -1,0 +1,36 @@
+{
+  "count": "Compte",
+  "separator": "Séparateur",
+  "sepColon": "Deux-points (:)",
+  "sepHyphen": "Tiret (-)",
+  "sepNone": "Aucun",
+  "uppercase": "Majuscules",
+  "reset": "Réinitialiser",
+  "prefix": "Préfixe",
+  "prefixPlaceholder": "Préfixe optionnel (par exemple, 00:1A:2B)",
+  "prefixHint": "Supporte le préfixe de 3 octets (OUI) ou 6 octets. Les caractères non hexadécimaux seront ignorés.",
+  "locallyAdministered": "Administré localement",
+  "multicast": "Multicast",
+  "generate": "Générer",
+  "output": "Sortie",
+  "outputPlaceholder": "Les adresses MAC générées apparaîtront ici...",
+  "copyAll": "Copier tout",
+  "info": "Informations",
+  "infoText": "Le bit 0 contrôle multicast/unicast et le bit 1 contrôle administré localement/global. Utilisez-le avec précaution.",
+  "errorInvalidPrefix": "Préfixe invalide. Utilisez 6 ou 12 caractères hexadécimaux.",
+  "detailed_description": "Le générateur d'adresses MAC est un outil spécialisé permettant de créer des adresses MAC aléatoires ou personnalisées conformes à la norme IEEE 802. Ce générateur produit des adresses structurées en trois octets d'Identifiant Organisationnel Unique (OUI) suivi de trois octets spécifiques au fournisseur, avec possibilité de contrôler le bit UAA (Universally Administered Address) ou LAA (Locally Administered Address), ainsi que les bits de diffusion multiple ou unidiffusion. Ce dispositif est essentiel pour les tests de configuration réseau, la simulation d'appareils dans des environnements de développement ou la vérification de politiques de contrôle d'accès réseau (NAC). Son fonctionnement repose sur des algorithmes de génération pseudo-aléatoire combinés à des opérations de masquage binaire pour garantir la conformité des adresses générées, avec la possibilité de forcer des OUI de fournisseurs réels ou d'utiliser des schémas personnalisés. Contrairement aux générateurs basiques, cet outil intègre des options techniques fines pour manipuler les champs de l'en-tête Ethernet au niveau bit, ce qui en fait un outil de diagnostic réseau avancé.",
+  "usage_steps": [
+    "Sélectionnez le type d'OUI via le menu déroulant : 'Aléatoire', 'Spécifique à un fournisseur', ou 'Personnalisé'",
+    "Activez/désactivez le bit de diffusion multiple via le commutateur 'Multicast/Unicast'",
+    "Choisissez le mode d'administration d'adresse avec l'option 'UAA' (administré par le fabricant) ou 'LAA' (administré localement)",
+    "Cliquez sur le bouton 'Générer' pour créer une adresse MAC conforme aux paramètres sélectionnés",
+    "Copiez le résultat au format '00:00:00:00:00:00' depuis la zone de sortie préformatée",
+    "Utilisez le bouton 'Réinitialiser' pour revenir aux paramètres par défaut ou modifier des paramètres spécifiques"
+  ],
+  "usage_examples": [
+    "Un développeur de logiciels réseau testant la gestion simultanée de plusieurs interfaces virtuelles nécessitant des adresses MAC uniques",
+    "Un administrateur système simulant des appareils IoT avec des OUI spécifiques à des fabricants réels pour valider des règles de filtrage",
+    "Un consultant en sécurité effectuant un audit de pare-feu réseau en générant des adresses MAC avec bits multicast pour tester les règles de contrôle",
+    "Un utilisateur domestique contournant temporairement un filtre MAC sur un réseau Wi-Fi public tout en préservant la validité des trames Ethernet"
+  ]
+}

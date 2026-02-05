@@ -1,0 +1,35 @@
+{
+  "detailed_description": "百分比变化计算器计算两个值之间的百分比增加或减少，用于分析价格变化、增长率和比较数据。",
+  "usage_steps": [
+    "输入原始值",
+    "输入新值",
+    "点击计算查看百分比变化",
+    "查看是增加还是减少",
+    "复制结果"
+  ],
+  "usage_examples": [
+    "计算价格变化",
+    "分析销售增长",
+    "比较绩效指标"
+  ],
+  "oldValue": "原始值",
+  "newValue": "新值",
+  "oldValuePlaceholder": "输入原始值...",
+  "newValuePlaceholder": "输入新值...",
+  "calculate": "计算",
+  "swap": "交换",
+  "copy": "复制",
+  "copied": "已复制！",
+  "percentageChange": "百分比变化",
+  "increase": "增加",
+  "decrease": "减少",
+  "difference": "差值",
+  "formula": "公式",
+  "formulaText": "((新值 - 旧值) / |旧值|) × 100%",
+  "example1Title": "股票价格",
+  "example1": "跟踪投资变化",
+  "example2Title": "薪资",
+  "example2": "计算加薪百分比",
+  "example3Title": "销售",
+  "example3": "衡量增长率"
+}

@@ -1,0 +1,54 @@
+{
+  "detailed_description": "El Generador de Mensajes de Commit de Git crea mensajes de commit bien formateados según la especificación de Commits Convencionales.",
+  "usage_steps": [
+    "Selecciona el tipo de commit",
+    "Introduce el ámbito",
+    "Escribe la descripción",
+    "Añade cuerpo/ pie de página",
+    "Copia el mensaje formateado"
+  ],
+  "usage_examples": [
+    "Crea commits consistentes",
+    "Genera un formato amigable para el registro de cambios",
+    "Sigue la versión semántica"
+  ],
+  "input": "Entrada",
+  "output": "Salida",
+  "process": "Proceso",
+  "copy": "Copiar",
+  "clear": "Borrar",
+  "inputPlaceholder": "Introduce aquí tu entrada...",
+  "outputPlaceholder": "Los resultados aparecerán aquí...",
+  "errors": {
+    "emptyInput": "Por favor, introduce algún dato"
+  },
+  "commitType": "Tipo de Commit",
+  "scope": "Alcance (opcional)",
+  "scopePlaceholder": "ej., api, ui, auth",
+  "subject": "Asunto",
+  "subjectPlaceholder": "Descripción breve del cambio",
+  "subjectHint": "Usa modo imperativo: \"agregar función\" no \"agregó función\"",
+  "body": "Cuerpo (opcional)",
+  "bodyPlaceholder": "Descripción detallada del cambio...",
+  "breakingChange": "Cambio Importante",
+  "breakingDescription": "Descripción del Cambio Importante",
+  "breakingPlaceholder": "Describe qué se rompe y cómo migrar...",
+  "relatedIssues": "Issues Relacionados (opcional)",
+  "issuesPlaceholder": "#123, #456 o URLs de issues",
+  "generatedMessage": "Mensaje de Commit Generado",
+  "emptyMessage": "Ingresa un asunto para generar el mensaje",
+  "formatTitle": "Formato Conventional Commits",
+  "types": {
+    "feat": "Una nueva característica",
+    "fix": "Corrección de error",
+    "docs": "Solo cambios en documentación",
+    "style": "Cambios de estilo de código (formato, etc)",
+    "refactor": "Refactorización de código",
+    "perf": "Mejoras de rendimiento",
+    "test": "Agregar o actualizar pruebas",
+    "build": "Sistema de compilación o dependencias",
+    "ci": "Configuración CI/CD",
+    "chore": "Otros cambios",
+    "revert": "Revertir un commit anterior"
+  }
+}

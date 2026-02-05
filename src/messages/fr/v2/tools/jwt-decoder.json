@@ -1,0 +1,30 @@
+{
+  "enterToken": "Veuillez entrer un jeton JWT",
+  "invalidFormat": "Format de jeton JWT invalide",
+  "invalidToken": "Jeton JWT invalide",
+  "header": "Tête",
+  "payload": "Chargement",
+  "signature": "Signature",
+  "issuedAt": "Émis le (iat)",
+  "expires": "Expire le (exp)",
+  "notBefore": "Avant de ne pas (nbf)",
+  "detailed_description": "Le JWT Decoder est un outil puissant conçu pour déchiffrer et inspecter les jetons JWT (JSON Web Tokens). Ce jeton est un standard ouvert largement utilisé pour l'authentification et l'autorisation entre applications. Structuré en trois parties (header, payload, et signature), le JWT contient des informations critiques sur l'utilisateur et les autorisations. L'utilisation de ce décodeur permet aux développeurs de vérifier la validité et l'intégrité des jetons, ainsi que d'inspecter leur contenu pour des fins de débogage ou de sécurité. Il est particulièrement utile dans les scénarios où l'authentification est essentielle, comme dans les applications web modernes et les API REST. En décodant le JWT, les développeurs peuvent facilement identifier les erreurs de format, les problèmes de signature, et s'assurer que les données sont correctement transmises et interprétées.",
+  "usage_steps": [
+    "Ouvrez la page du JWT Decoder sur le site de l'outil.",
+    "Collez le JWT que vous souhaitez déchiffrer dans le champ de texte 'Token JWT'.",
+    "Cliquez sur le bouton 'Décoder' pour initier le processus de décodage.",
+    "La section 'Header' s'affichera avec les informations de l'en-tête du jeton, telles que l'algorithme de signature et le type de jeton.",
+    "La section 'Payload' affichera les revendications (claims) contenues dans le jeton, y compris les données d'identification et d'autorisation.",
+    "La section 'Signature' montrera la signature du jeton, vous permettant de vérifier son intégrité et son authenticité."
+  ],
+  "usage_examples": [
+    "Un développeur souhaite tester l'authentification d'une API REST. Il utilise le JWT Decoder pour vérifier que le jeton reçu par l'API contient les revendications correctes et que la signature est valide.",
+    "Un administrateur de systèmes doit déboguer un problème de connexion d'un utilisateur. En utilisant le JWT Decoder, il peut inspecter le jeton pour s'assurer que l'ID de l'utilisateur et les autorisations sont correctement inclus et signés.",
+    "Une équipe de sécurité veut auditer l'authentification dans une application web. Le JWT Decoder leur permet de vérifier que les jetons sont générés et transmis en toute sécurité, et que les données sensibles ne sont pas exposées.",
+    "Un développeur front-end travaille sur l'implémentation d'une fonctionnalité d'authentification. Il utilise le JWT Decoder pour vérifier que les jetons générés par le backend sont bien structurés et contiennent les informations nécessaires pour l'authentification utilisateur."
+  ],
+  "input": "Entrée",
+  "decode": "Décodez",
+  "copied": "Copié !",
+  "copy": "Copier"
+}

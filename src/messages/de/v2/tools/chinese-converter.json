@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Chinese Converter ist ein präzises Textverarbeitungswerkzeug, das eine bidirektionale Konvertierung zwischen vereinfachten (Hànzì Fántǐ) und traditionellen (Hànzì Jiǎntǐ) chinesischen Schriftzeichen ermöglicht. Technisch basiert die Umwandlung auf den Unicode-Standard-Zeichensätzen (UCS) und verwendet spezifische Mapping-Tabellen des Unicode-Konsortiums, die 1:1-Zuordnungen zwischen den Zeichenversionen enthalten. Dabei wird jeder Unicode-Codepoint systematisch durchsucht und bei Bedarf durch den entsprechenden Gegenpart ersetzt, einschließlich Sonderzeichen für regionale Unterschiede (z.B. Hongkonger Formen). Das Tool integriert zusätzlich kontextsensitive Algorithmen, um mehrdeutige Zeichen (Homographen) korrekt zu interpretieren, basierend auf statistischen NLP-Modellen aus dem Bereich der chinesischen Lexik. Entwickler profitieren von der präzisen Behandlung von Zeichen wie '发' (vereinfacht) vs. '發/髮' (traditionell), wobei semantische Disambiguierung durch Trigramm-Analyse erfolgt. Anwender benötigen dieses Tool für die Lokalisierung von Software, wissenschaftliche Arbeiten mit historischen Texten, grenzüberschreitende Kommunikation oder die Vorbereitung von Dokumenten für verschiedene chinesischsprachige Regionen. Die Implementierung erfolgt serverseitig mit Python-basiertem Back-End und Just-In-Time-Compilierung für optimale Performance.",
+  "usage_steps": [
+    "Wählen Sie im Dropdown-Menü 'Konvertierungsrichtung' zwischen 'Vereinfacht zu Traditionell' oder 'Traditionell zu Vereinfacht'.",
+    "Fügen Sie den zu konvertierenden Text in das Eingabefeld ein oder laden Sie eine UTF-8-kodierte Textdatei hoch.",
+    "Aktivieren Sie bei Bedarf die Option 'Erweiterte Zeichenbehandlung' für die Berücksichtigung regionaler Sonderformen (z.B. Macau, Singapur).",
+    "Passen Sie im Abschnitt 'Kontextanalyse' die Sensitivität für mehrdeutige Zeichen an (Standard: mittel).",
+    "Klicken Sie auf den 'Konvertieren'-Button mit dem Schriftzeichen-Symbol (字), um den Prozess zu starten.",
+    "Überprüfen Sie das Ergebnis im unteren Bereich, der Unterschiede farblich hervorhebt und Original-Konvertierungsprotokolle anzeigt."
+  ],
+  "usage_examples": [
+    "Ein Forscher konvertiert akademische Zitate aus einer taiwanesischen Fachzeitschrift (traditionell) in das in der VR China übliche vereinfachte Format für eine Publikation.",
+    "Ein Spieleentwickler nutzt das Tool, um Dialogtexte seiner Indie-Game-Localisation für Hongkonger Nutzer automatisch in traditionelle Zeichen umzuwandeln.",
+    "Ein Rechtsanwalt bereitet Dokumente für eine grenzüberschreitende Unternehmensfusion vor, indem er amtliche Dokumente aus Shanghai (vereinfacht) in traditionelle Zeichen für Partner in Macau konvertiert.",
+    "Ein Student analysiert historische chinesische Literatur, indem er gescannte Texte aus einer Ming-Dynastie-Ausgabe (traditionell) in vereinfachte Zeichen umwandelt, um sie mit modernen digitalen Korpora zu vergleichen."
+  ]
+}

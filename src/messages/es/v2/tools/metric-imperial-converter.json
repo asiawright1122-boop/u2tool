@@ -1,0 +1,29 @@
+{
+  "categories": {
+    "length": "Longitud",
+    "weight": "Peso",
+    "volume": "Volumen",
+    "temperature": "Temperatura",
+    "area": "Área",
+    "speed": "Velocidad"
+  },
+  "from": "De",
+  "to": "A",
+  "swap": "Intercambiar unidades",
+  "metric": "Métrico",
+  "imperial": "Imperial",
+  "quickReference": "Referencia rápida",
+  "detailed_description": "El Conversor de Unidades Métricas e Imperiales es una herramienta completa para la conversión de unidades que soporta conversiones de longitud, peso, volumen, temperatura, área y velocidad. Convierta fácilmente entre unidades métricas (metros, kilogramos, litros) y unidades imperiales (pies, libras, galones) con resultados instantáneos.",
+  "usage_steps": [
+    "Selecciona una categoría de conversión (longitud, peso, volumen, etc.)",
+    "Introduce el valor que deseas convertir",
+    "Elige la unidad de origen del menú desplegable",
+    "Elige la unidad de destino para la conversión",
+    "Visualiza el resultado convertido al instante"
+  ],
+  "usage_examples": [
+    "Convierte kilómetros a millas para la planificación de viajes",
+    "Convierte kilogramos a libras para el seguimiento del peso",
+    "Convierte grados Celsius a grados Fahrenheit para la comparación del clima"
+  ]
+}

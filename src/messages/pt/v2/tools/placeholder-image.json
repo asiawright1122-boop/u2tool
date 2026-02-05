@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Gerador de Imagens de Placeholder é uma ferramenta técnica que permite a criação dinâmica de imagens de preenchimento com dimensões e cores personalizadas, ideal para desenvolvedores e designers que precisam de recursos visuais temporários durante o desenvolvimento de interfaces. A ferramenta opera por meio de uma API RESTful que processa requisições HTTP GET contendo parâmetros como largura, altura, cor de fundo e formato de saída (PNG ou JPEG). Internamente, utiliza bibliotecas de manipulação de imagens como o Cairo ou ImageMagick para gerar os arquivos em tempo real, sem necessidade de armazenamento prévio. Esse processo elimina a dependência de bancos de imagens externos e garante conformidade com diretrizes de acessibilidade, permitindo o uso de contrastes personalizados. É essencial para testar layouts responsivos, validar hierarquia visual em wireframes ou simular assets em aplicações que exigem imagens com metadados específicos. Além disso, o suporte a cores em formato hexadecimal, HSL ou RGB permite alinhamento preciso com sistemas de design, enquanto a geração instantânea evita latências em fluxos de trabalho ágeis.",
+  "usage_steps": [
+    "Acesse a ferramenta e localize os campos de entrada para largura e altura em pixels.",
+    "Insira valores numéricos nas caixas de texto ou utilize as setas de ajuste para definir as dimensões desejadas.",
+    "Clique no seletor de cores para escolher a paleta de fundo e texto, inserindo manualmente o código HEX ou utilizando o espectro de cores.",
+    "Marque a opção 'Texto de Sobrepõe' para adicionar dimensões ou rótulos na imagem, ajustando a cor e o tamanho da fonte.",
+    "Selecione o formato de saída (PNG ou JPEG) através do dropdown no painel de opções avançadas.",
+    "Clique em 'Gerar' para visualizar o resultado no painel de pré-visualização e utilize os botões de download ou compartilhamento para obter o link direto."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor front-end testa a responsividade de uma grade de cards em um e-commerce, gerando imagens de 300x200px com fundo cinza e texto branco para simular produtos.",
+    "Um designer cria um mockup de aplicativo utilizando imagens de placeholder de 800x600px com cores alinhadas à paleta de marca, garantindo consistência visual durante a apresentação do protótipo.",
+    "Um time de marketing precisa de um banner temporário para uma landing page em desenvolvimento, gerando um arquivo JPEG 1920x1080px com gradientes personalizados antes da definição da arte final.",
+    "Um desenvolvedor full-stack valida o carregamento assíncrono de imagens em um SPA, simulando diferentes proporções e pesos de arquivo com placeholders em formato PNG transparente."
+  ]
+}

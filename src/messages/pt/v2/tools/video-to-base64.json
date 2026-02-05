@@ -1,0 +1,30 @@
+{
+  "dropzone": "Solte o arquivo de vídeo aqui ou clique para fazer upload",
+  "maxSize": "Tamanho máximo do arquivo: 10MB",
+  "errorNotVideo": "Selecione um arquivo de vídeo",
+  "errorTooLarge": "O arquivo é muito grande. O tamanho máximo é 10 MB.",
+  "errorReading": "Erro ao ler o arquivo",
+  "processing": "Processando vídeo...",
+  "originalSize": "Tamanho original",
+  "includeDataUri": "Incluir prefixo de URI de dados",
+  "base64Output": "Saída Base64",
+  "copy": "Copiar",
+  "outputPlaceholder": "A saída Base64 aparecerá aqui...",
+  "warning": "Aviso",
+  "warningText": "Os arquivos de vídeo podem ser muito grandes. A codificação Base64 aumenta o tamanho em aproximadamente 33%. Considere usar arquivos de vídeo menores.",
+  "detailed_description": "O conversor de vídeo para Base64 permite transformar arquivos de vídeo (como MP4, AVI ou MOV) em uma sequência de caracteres ASCII utilizando o esquema de codificação Base64. Essa ferramenta é essencial para desenvolvedores que precisam integrar vídeos diretamente em documentos HTML, CSS ou JSON sem depender de URLs externas. A codificação Base64 representa dados binários em formato texto, ideal para incorporar mídias em páginas web estáticas, reduzir requisições HTTP ou transmitir vídeos via APIs REST que aceitam apenas payloads em texto. O processo ocorre inteiramente no navegador, usando a API FileReader do JavaScript para ler o arquivo local e aplicar algoritmos de codificação binária, garantindo privacidade e segurança, já que nenhum dado é enviado para servidores. O resultado é uma string compatível com padrões MIME, que pode ser usada em atributos como src de uma tag <video> ou em cabeçalhos de requisições.",
+  "usage_steps": [
+    "1. Acesse a ferramenta no site e clique no botão 'Selecionar Vídeo' para escolher um arquivo de até 2GB no seu dispositivo.",
+    "2. Marque a opção 'Preservar Metadados' se quiser manter informações como resolução e codec no Base64 gerado.",
+    "3. Clique em 'Converter para Base64' e aguarde a barra de progresso completar, o que pode levar alguns segundos dependendo do tamanho do arquivo.",
+    "4. Revise o resultado na área de saída, onde a string começará com o prefixo 'data:video/[formato];base64,'.",
+    "5. Utilize o botão 'Copiar para Área de Transferência' para armazenar a string codificada.",
+    "6. Cole o conteúdo em seu projeto, como no atributo src de uma tag <video> ou em uma payload JSON de API."
+  ],
+  "usage_examples": [
+    "Incorporar um vídeo introdutório diretamente em um email HTML sem anexos, usando a string Base64 no src de uma tag <video>.",
+    "Converter um vídeo curto para inseri-lo como fundo animado em um site estático, evitando dependências de servidores de mídia.",
+    "Enviar um arquivo de demonstração através de uma API que exige dados em formato texto, como em requisições PATCH para atualizar recursos multimídia.",
+    "Armazenar vídeos em bancos de dados NoSQL que não suportam blobs, salvando a string Base64 em campos de texto indexáveis."
+  ]
+}

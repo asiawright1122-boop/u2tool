@@ -1,0 +1,17 @@
+{
+  "detailed_description": "La biblioteca de patrones Regex es un repositorio especializado que ofrece expresiones regulares prevalidadas para tareas específicas como validación de correos electrónicos, detección de URLs, formateo de números telefónicos internacionales y extracción de datos estructurados. Esta herramienta está diseñada para resolver problemas comunes en el procesamiento de texto, donde la precisión en la sintaxis de las expresiones regulares es crítica. Los desarrolladores ahorran tiempo al evitar crear patrones desde cero, reduciendo errores comunes como falsos positivos en validaciones o fallos en la compatibilidad con caracteres Unicode. La biblioteca incluye variantes para diferentes motores de regex (PCRE, Python, JavaScript) y soporta modificadores avanzados como anchoring (^/), grupos de captura y lookaheads. Cada patrón incluye documentación sobre su cobertura de casos extremos, como dominios de correo con TLD internacionales o formatos telefónicos según normas E.164. La interfaz permite filtrar por categoría, probar expresiones en tiempo real con muestras de datos y exportar código integrable en lenguajes populares.",
+  "usage_steps": [
+    "1. Navegar por categorías predefinidas (Correos, URLs, Teléfonos) usando el menú lateral.",
+    "2. Utilizar el campo de búsqueda para encontrar patrones por palabra clave o funcionalidad específica.",
+    "3. Seleccionar un patrón para ver su sintaxis detallada, incluyendo modificadores y ejemplos de coincidencia.",
+    "4. Copiar el patrón directamente al portapapeles o exportar código de ejemplo en Python/JavaScript.",
+    "5. Ajustar los modificadores (ej: 'i' para insensible a mayúsculas, 'g' para búsqueda global) según el motor de regex utilizado.",
+    "6. Validar la expresión en tiempo real ingresando datos de prueba en el campo de ejecución."
+  ],
+  "usage_examples": [
+    "1. Validar formularios web para garantizar que las direcciones de correo cumplan con el estándar RFC 5322, incluyendo dominios con caracteres Unicode.",
+    "2. Extraer automáticamente números de teléfono de registros de logs, normalizándolos al formato E.164 (+1 para EE.UU., +44 para Reino Unido, etc.).",
+    "3. Filtrar URLs maliciosas en un firewall de aplicación, verificando coincidencias con dominios de alto riesgo usando patrones de subdominios dinámicos.",
+    "4. Procesar archivos CSV para identificar celdas que contengan fechas en formatos no estándar (ej: DD/MM/AAAA vs MM/DD/AAAA) mediante detección de patrones contextuales."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "documentTitle": "Titre du document",
+  "fontSize": "Taille de police",
+  "pageSize": "Taille de page",
+  "markdownInput": "Contenu Markdown à saisir",
+  "inputPlaceholder": "Saisissez votre contenu Markdown ici...",
+  "preview": "Prévisualisation",
+  "generatePdf": "Generer PDF",
+  "clear": "Effacer",
+  "supportedSyntax": "Syntaxe Markdown supportée",
+  "headings": "Titres (# ## ###)",
+  "boldItalic": "Gras & italique",
+  "lists": "Listes (- ou 1.)",
+  "codeBlocks": "Blocs de code",
+  "tables": "Tableaux",
+  "blockquotes": "Citations",
+  "horizontalRules": "Lignes horizontales",
+  "inlineCode": "Code en ligne",
+  "detailed_description": "Le convertisseur Markdown en PDF transforme vos documents Markdown en fichiers PDF de format professionnel. Il prend en charge les titres, les listes, les tableaux, les blocs de code, les citations, etc. Personnalisez la taille de la police et la taille de la page avant la génération.",
+  "usage_steps": [
+    "Saisissez ou collez votre contenu Markdown",
+    "Définissez le titre du document PDF",
+    "Choisissez la taille de la police et la taille de la page",
+    "Prévisualisez le résultat",
+    "Cliquez sur « Generer PDF » pour créer et télécharger"
+  ],
+  "usage_examples": [
+    "Convertissez des documents en PDF pour les partager",
+    "Créez des rapports imprimables à partir de notes Markdown",
+    "Genérer des versions PDF des fichiers README"
+  ]
+}

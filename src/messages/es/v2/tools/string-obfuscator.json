@@ -1,0 +1,29 @@
+{
+  "input": "Cadena de Entrada",
+  "inputPlaceholder": "Introduce el texto que deseas obfuscar...",
+  "obfuscate": "Obfuscar",
+  "result": "Resultado",
+  "copy": "Copiar",
+  "error": "Error al obfuscar la cadena",
+  "methodBase64": "Base64",
+  "methodHex": "Hex",
+  "methodHtml": "Entidades HTML",
+  "methodUrl": "Codificación URL",
+  "methodRot13": "ROT13",
+  "methodReverse": "Invertir",
+  "detailed_description": "El Obfuscador de Cadenas aplica técnicas avanzadas de codificación para transformar texto plano en representaciones ilegibles mediante algoritmos como Base64, codificación hexadecimal, rotación de caracteres (Caesar cipher) y técnicas de inserción de ruido. Esta herramienta es esencial para desarrolladores que necesitan proteger temporalmente credenciales en scripts, evitar detección de cadenas sensibles por analizadores estáticos, o incrementar la entropía de datos en entornos de prueba. Funciona mediante un motor que permite aplicar múltiples capas de transformación secuencial, donde cada método modifica la salida del anterior para crear una obfuscación compuesta. Al no depender de bibliotecas externas, garantiza procesamiento local en el navegador con cifrado en tiempo real, manteniendo los datos en memoria durante menos de 500ms para prevenir fugas.",
+  "usage_steps": [
+    "Selecciona los métodos de codificación deseados en el panel de opciones (ej: Base64 + Hex + Rot13)",
+    "Ingresa la cadena en el campo de texto principal, con indicadores visuales de longitud y complejidad",
+    "Activa la opción 'Inyectar sal aleatoria' para añadir bytes criptográficos a la entrada original",
+    "Configura parámetros avanzados como desplazamiento de Caesar cipher o formato de salida hexadecimal",
+    "Haz clic en 'Obfuscar' para iniciar el proceso de transformación secuencial",
+    "Copia el resultado en el portapapeles o descarga el archivo .txt con la cadena procesada y su huella SHA-256"
+  ],
+  "usage_examples": [
+    "Proteger temporalmente tokens de API en scripts de automatización antes de su implementación",
+    "Generar payloads ofuscados para pruebas de seguridad en entornos de desarrollo",
+    "Ocultar contraseñas en archivos de configuración de aplicaciones locales",
+    "Transformar datos sensibles antes de almacenarlos en registros de depuración (logs)"
+  ]
+}

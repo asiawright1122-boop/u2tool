@@ -1,0 +1,30 @@
+{
+  "detailed_description": "O Gerador de Textura de Ruído cria padrões de ruído personalizáveis para adicionar textura aos seus designs. Escolha entre ruídos aleatórios, padrões semelhantes ao perlin ou efeitos de grãos de filme. Ajuste a intensidade, escala e cores para criar uma superposição de textura perfeita para fundos, cartões ou qualquer elemento de design que precise de um interesse visual sutil.",
+  "usage_steps": [
+    "Selecione o tipo de ruído: aleatório, Perlin ou grãos",
+    "Ajuste a intensidade da visibilidade do ruído",
+    "Defina o escala do tamanho do padrão",
+    "Escolha as cores de base e de ruído",
+    "Selecione o tamanho de saída",
+    "Baixe como PNG ou copie a URL de dados"
+  ],
+  "usage_examples": [
+    "Adicionando grãos cinematográficos a imagens de destaque",
+    "Criando fundos de cartão texturizados",
+    "Desenhando sobreposições de estilo vintage"
+  ],
+  "noiseType": "Noise Type",
+  "types": {
+    "random": "Random",
+    "perlin": "Perlin",
+    "grain": "Grain"
+  },
+  "intensity": "Intensity",
+  "scale": "Scale",
+  "size": "Size",
+  "baseColor": "Base Color",
+  "noiseColor": "Noise Color",
+  "regenerate": "Regenerate",
+  "copyDataUrl": "Copy Data URL",
+  "usage": "Usage"
+}

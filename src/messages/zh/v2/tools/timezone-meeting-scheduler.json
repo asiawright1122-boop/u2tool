@@ -1,0 +1,34 @@
+{
+  "detailed_description": "时区会议调度器帮助寻找不同时区的参与者最佳会议时间。",
+  "usage_steps": [
+    "添加参与者位置",
+    "设置会议时长",
+    "查看时间对比",
+    "寻找重叠时段",
+    "选择并共享时间"
+  ],
+  "usage_examples": [
+    "安排国际通话",
+    "寻找美欧会议时间",
+    "协调远程团队"
+  ],
+  "input": "输入",
+  "output": "输出",
+  "process": "处理",
+  "copy": "复制",
+  "clear": "清除",
+  "inputPlaceholder": "在此处输入您的信息...",
+  "outputPlaceholder": "结果将显示于此...",
+  "errors": {
+    "emptyInput": "请输入一些信息"
+  },
+  "baseTimezone": "基准时区",
+  "duration": "时长（小时）",
+  "addParticipant": "+ 添加参与者",
+  "participants": "参与者",
+  "work": "工作",
+  "bestMeetingTimes": "最佳会议时间",
+  "copyBestTime": "复制最佳时间",
+  "best": "最佳",
+  "allWorking": "全员工作时间"
+}

@@ -1,0 +1,54 @@
+{
+  "detailed_description": "Gitコミットメッセージ生成ツールは、Conventional Commits仕様に従ったフォーマットされたコミットメッセージを作成します。",
+  "usage_steps": [
+    "コミットタイプを選択",
+    "範囲を入力",
+    "説明を記入",
+    "本文/フッターを追加",
+    "フォーマットされたメッセージをコピー"
+  ],
+  "usage_examples": [
+    "一貫したコミットの作成",
+    "変更ログフレンドリーなフォーマットの生成",
+    "セマンティックバージョニングに従う"
+  ],
+  "input": "入力",
+  "output": "出力",
+  "process": "処理",
+  "copy": "コピー",
+  "clear": "クリア",
+  "inputPlaceholder": "ここにあなたの入力を入力してください...",
+  "outputPlaceholder": "結果はここに表示されます...",
+  "errors": {
+    "emptyInput": "入力を入力してください"
+  },
+  "commitType": "コミットタイプ",
+  "scope": "スコープ（任意）",
+  "scopePlaceholder": "例：api, ui, auth",
+  "subject": "件名",
+  "subjectPlaceholder": "変更の簡単な説明",
+  "subjectHint": "命令形を使用：「機能を追加」ではなく「機能追加」",
+  "body": "本文（任意）",
+  "bodyPlaceholder": "変更の詳細な説明...",
+  "breakingChange": "破壊的変更",
+  "breakingDescription": "破壊的変更の説明",
+  "breakingPlaceholder": "何が壊れるか、移行方法を説明...",
+  "relatedIssues": "関連Issue（任意）",
+  "issuesPlaceholder": "#123, #456 またはIssue URL",
+  "generatedMessage": "生成されたコミットメッセージ",
+  "emptyMessage": "件名を入力してコミットメッセージを生成",
+  "formatTitle": "Conventional Commits形式",
+  "types": {
+    "feat": "新機能",
+    "fix": "バグ修正",
+    "docs": "ドキュメントのみの変更",
+    "style": "コードスタイルの変更（フォーマットなど）",
+    "refactor": "コードリファクタリング",
+    "perf": "パフォーマンス改善",
+    "test": "テストの追加・更新",
+    "build": "ビルドシステムまたは依存関係",
+    "ci": "CI/CD設定",
+    "chore": "その他の変更",
+    "revert": "以前のコミットを取り消し"
+  }
+}

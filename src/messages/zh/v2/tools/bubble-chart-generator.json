@@ -1,0 +1,71 @@
+{
+  "title": "气泡图生成器",
+  "defaultTitle": "气泡图示例",
+  "chartSettings": "图表设置",
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题...",
+  "xAxisName": "X轴名称",
+  "yAxisName": "Y轴名称",
+  "colorTheme": "颜色主题",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "showLegend": "显示图例",
+  "chartPreview": "图表预览",
+  "dataEditor": "数据编辑器",
+  "addSeries": "添加系列",
+  "seriesName": "系列名称",
+  "addPoint": "添加点",
+  "pointName": "名称（可选）",
+  "size": "大小",
+  "series": "系列",
+  "sampleSeries1": "2023数据",
+  "sampleSeries2": "2024数据",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "tipsTitle": "提示",
+  "tip1": "气泡大小表示第三维度的量级",
+  "tip2": "您可以为每个气泡添加名称标签",
+  "detailed_description": "Bubble Chart Generator 是一款在线工具，用于创建展示 X 轴、Y 轴和大小关系的三维气泡图。通过该工具，用户可以直观地展示数据点之间的复杂关系，尤其适用于多维度数据的可视化。例如，市场营销人员可以使用气泡图来分析不同广告渠道的投入与回报关系，科研人员可以利用气泡图来展现实验数据的多维特征。该工具的核心功能包括自定义气泡的颜色、透明度、大小，以及动态调整图表的视角，用户可以通过简单的拖拽操作调整图表的布局，实现数据的多角度展示。此外，Bubble Chart Generator 支持数据的导入和导出，用户可以将 CSV 或 Excel 文件直接上传到工具中，生成气泡图后，还可以将图表导出为 PNG、SVG 等多种格式，方便在报告或演示文稿中使用。",
+  "usage_steps": [
+    "Step 1: 访问 Bubble Chart Generator 工具页面，点击“上传数据”按钮，选择您的 CSV 或 Excel 文件。",
+    "Step 2: 数据上传后，系统会自动识别并显示数据列。选择 X 轴、Y 轴和气泡大小对应的列。",
+    "Step 3: 在“自定义设置”区域，调整气泡的颜色、透明度和大小范围，以满足您的需求。",
+    "Step 4: 使用“视角调整”功能，通过拖拽调整图表的视角，找到最佳的展示角度。",
+    "Step 5: 点击“预览”按钮，查看生成的气泡图，确保所有设置符合预期。",
+    "Step 6: 满意后，点击“导出”按钮，选择导出格式（如 PNG、SVG），保存生成的气泡图。"
+  ],
+  "usage_examples": [
+    "Example 1: 市场营销人员可以使用 Bubble Chart Generator 分析不同广告渠道的投入与回报关系，其中 X 轴为广告投入金额，Y 轴为广告产生的销售额，气泡大小表示广告的点击率。",
+    "Example 2: 医疗研究人员可以利用该工具展示患者数据，X 轴为患者的年龄，Y 轴为疾病持续时间，气泡大小表示患者的健康状况评分。",
+    "Example 3: 金融分析师可以使用气泡图来分析不同股票的收益率和波动性，X 轴为股票的市盈率，Y 轴为股票的年化收益率，气泡大小表示股票的市场资本。",
+    "Example 4: 教育机构可以利用 Bubble Chart Generator 展示学生的学习成果，X 轴为学生的考试成绩，Y 轴为学生的出勤率，气泡大小表示学生的参与度。"
+  ],
+  "faqs": [
+    {
+      "question": "Bubble Chart Generator 是免费的吗？",
+      "answer": "是的，Bubble Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Bubble Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Bubble Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Bubble Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Bubble Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

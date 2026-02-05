@@ -1,0 +1,42 @@
+{
+  "detailed_description": "リソース割り当てプランナーは、チームメンバーをプロジェクトとタスク間で分配するのに役立ちます。",
+  "usage_steps": [
+    "チームメンバーの追加",
+    "プロジェクト/タスクの作成",
+    "リソースの割り当て",
+    "視覚化の確認",
+    "衝突の解決"
+  ],
+  "usage_examples": [
+    "マルチプロジェクト割り当ての計画",
+    "作業負荷のバランス",
+    "ボトルネックの特定"
+  ],
+  "input": "入力",
+  "output": "出力",
+  "process": "プロセス",
+  "copy": "コピー",
+  "clear": "クリア",
+  "inputPlaceholder": "ここにあなたの入力を入力してください...",
+  "outputPlaceholder": "結果はここに表示されます...",
+  "errors": {
+    "emptyInput": "入力を入力してください"
+  },
+  "available": "利用可能",
+  "allocated": "割り当て済み",
+  "utilization": "稼働率",
+  "weeklyCost": "週間コスト",
+  "overallocated": "過剰割り当て",
+  "underutilized": "低稼働",
+  "resources": "リソース",
+  "projects": "プロジェクト",
+  "add": "+ 追加",
+  "avail": "可用",
+  "perHour": "$/時",
+  "required": "必要",
+  "high": "高",
+  "medium": "中",
+  "low": "低",
+  "resourceDefault": "リソース",
+  "projectDefault": "プロジェクト"
+}

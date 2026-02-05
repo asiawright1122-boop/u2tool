@@ -1,0 +1,23 @@
+{
+  "detailed_description": "The Image Cropper tool enables precise pixel-level manipulation of raster graphics through a browser-based interface powered by HTML5 Canvas rendering. Users can perform lossless cropping operations while maintaining original image metadata and color profiles. The tool supports fixed aspect ratios (1:1, 4:3, 16:9) and custom dimensions with sub-pixel accuracy, utilizing bilinear interpolation algorithms to preserve image quality during boundary adjustments. Built-in grid overlays with 3x3 and golden ratio compositions assist in implementing design principles like the rule of thirds. Technically, the tool processes image data through a WebAssembly-powered pipeline that handles JPEG, PNG, and WebP formats with embedded color space conversion. Developers benefit from the tool's ability to generate exact CSS background-position values and responsive image breakpoints during the cropping process, which is particularly valuable for creating optimized assets in design systems. The undo/redo stack maintains non-destructive editing capabilities through temporary canvas state snapshots, allowing iterative refinement without data degradation.",
+  "usage_steps": [
+    "Click 'Upload Image' to select a file from your device or drag/drop directly into the workspace",
+    "Choose aspect ratio from the dropdown menu or enter custom dimensions in the WxH input fields",
+    "Drag the corner handles of the selection box to adjust crop boundaries while holding Shift for aspect lock",
+    "Use the alignment grid toggle to visualize composition guidelines during adjustment",
+    "Preview cropped result in the right-hand panel with resolution and file size metrics displayed",
+    "Click 'Export Image' to download the cropped result with options to adjust compression level and format"
+  ],
+  "usage_examples": [
+    "Preparing Instagram story assets by cropping 1080x1920 vertical videos to 9:16 aspect ratio with pixel-perfect alignment",
+    "Optimizing e-commerce product photos for responsive web galleries by generating multiple 4:5 crops for portrait layouts",
+    "Creating retina-ready favicon sets by extracting 512x512px squares from larger source images with transparent backgrounds",
+    "Converting landscape architectural blueprints to 3:2 print ratios while maintaining critical dimensional annotations in the crop area"
+  ],
+  "aspectRatio": "Aspect Ratio",
+  "selectArea": "Select Area",
+  "changeImage": "Change Image",
+  "preview": "Preview",
+  "cropFirst": "Crop an image first",
+  "crop": "Crop"
+}

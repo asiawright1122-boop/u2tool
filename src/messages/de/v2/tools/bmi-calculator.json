@@ -1,0 +1,32 @@
+{
+  "weight": "Gewicht",
+  "height": "Größe",
+  "unit": "Einheitensystem",
+  "metric": "Metrisch",
+  "imperial": "Imperial",
+  "yourBmi": "Ihr BMI",
+  "category": "Kategorie",
+  "underweight": "Untergewicht",
+  "normal": "Normal",
+  "overweight": "Übergewicht",
+  "obese": "Adipositas",
+  "healthyRange": "Gesunder Bereich",
+  "bmiScale": "BMI-Skala",
+  "healthyWeightRange": "Gesunder Gewichtsbereich",
+  "bmiCategories": "BMI-Kategorien",
+  "detailed_description": "Der BMI-Rechner ist ein präzises Analysewerkzeug zur Berechnung des Body Mass Index basierend auf den Eingabewerten für Körpergewicht und -größe. Technisch gesehen implementiert der Rechner die standardisierte Formel (Gewicht in kg / (Größe in m)²) unter Berücksichtigung von Einheitenumrechnungen für imperialen Maßsysteme (Pfund und Zoll). Die Anwendung validiert Eingabewerte durch reguläre Ausdrücke, um ungültige Zeichenfolgen zu blockieren, und verwendet Gleitkommazahlen für präzise Dezimalberechnungen. Nach der Verarbeitung klassifiziert der Algorithmus das Ergebnis gemäß der WHO-Nomenklatur: Unterversorgung (BMI < 18,5), Normalgewicht (18,5–24,9), Übergewicht (25–29,9) und Adipositas (≥30). Entwickelt als Single-Page-Application mit responsivem Design, nutzt das Tool clientseitige JavaScript-Logik ohne Serveranbindung, gewährleistet somit Datenschutz durch lokale Datenverarbeitung. Besonders nützlich für medizinische Fachkräfte bei der klinischen Einschätzung der Körperzusammensetzung, Sportler zur Kontrolle von Trainingsfortschritten oder Privatanwender für präventive Gesundheitschecks. Die Implementierung enthält Echtzeit-Feedback durch dynamisches DOM-Rendering und unterstützt mehrere Dezimalstellen für wissenschaftliche Genauigkeit.",
+  "usage_steps": [
+    "Geben Sie Ihr Körpergewicht in das Eingabefeld 'Gewicht' ein, wobei Dezimalwerte bis zu zwei Nachkommastellen erlaubt sind",
+    "Tragen Sie Ihre Körpergröße in das Feld 'Größe' ein – akzeptiert werden Meter mit Dezimalpunkt oder Zoll im US-Format",
+    "Wählen Sie im Dropdown-Menü zwischen 'Metrisch' (kg/m) oder 'Imperial' (lb/inch) als Berechnungssystem",
+    "Klicken Sie auf den 'Berechnen'-Button, um den Algorithmus zu aktivieren",
+    "Lesen Sie den numerischen BMI-Wert aus der Ergebnisanzeige mit automatischer Farbcodierung (grün/orange/rot)",
+    "Überprüfen Sie die textuelle Klassifizierung unterhalb des Zahlenwerts gemäß WHO-Standard"
+  ],
+  "usage_examples": [
+    "Ein Leistungssportler analysiert monatliche BMI-Schwankungen zur Optimierung seiner Muskel-Masse-Verteilung",
+    "Ein Allgemeinmediziner integriert den Rechner in digitale Patientenakte für sofortige Auswertungen während Konsultationen",
+    "Eine Person mit chronischer Nierenerkrankung überwacht ihren BMI zur Früherkennung von Flüssigkeitsansammlungen",
+    "Ein Ernährungswissenschaftler nutzt das Tool in Kombination mit Stoffwechseltests für personalisierte Diätempfehlungen"
+  ]
+}

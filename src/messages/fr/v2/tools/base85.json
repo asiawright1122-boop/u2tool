@@ -1,0 +1,25 @@
+{
+  "input": "Entrée",
+  "output": "Sortie",
+  "encode": "Encoder",
+  "decode": "Décodeur",
+  "copy": "Copier",
+  "inputPlaceholderEncode": "Entrez le texte à encoder...",
+  "inputPlaceholderDecode": "Entrez le Base85 à décoder...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "detailed_description": "L'outil Base85 (également appelé Ascii85) permet d'encoder et de décoder des données binaires en utilisant un jeu de 85 caractères ASCII imprimables. Contrairement à Base64 qui encode les données en 6 bits par caractère, Base85 utilise un encodage en 8 bits par symbole, ce qui réduit la taille des données encodées de 25 %. Ce format est particulièrement utile pour des applications comme l'intégration de données binaires dans des formats textuels (ex. PDF, emails) ou les systèmes nécessitant une compacité accrue. L'encodage divise les données en blocs de 4 octets, convertit chaque bloc en un entier 32 bits non signé, puis le transforme en une séquence de 5 caractères à l'aide d'une base 85. Les blocs incomplets (moins de 4 octets) sont traités avec des caractères spéciaux ('z' pour représenter des zéros ou 'y' pour des espaces). Le décodage inverse ce processus en interprétant les séquences de 5 caractères pour restaurer les données binaires d'origine. Ce outil est indispensable pour les développeurs manipulant des formats comme Adobe PostScript, les protocoles Git (ex. packfiles) ou les échanges de données optimisés.",
+  "usage_steps": [
+    "Saisissez vos données binaires ou textuelles dans la zone de saisie principale.",
+    "Sélectionnez l'option 'Encoder en Base85' ou 'Décoder depuis Base85' selon votre besoin.",
+    "Activez l'option 'Ignorer les espaces' si vos données contiennent des caractères blancs non significatifs.",
+    "Cliquez sur le bouton 'Traiter' pour exécuter l'opération choisie.",
+    "Consultez le résultat affiché dans la section de sortie, avec une option de copie vers le presse-papiers.",
+    "Utilisez le bouton 'Exporter' pour télécharger le résultat au format .txt si nécessaire."
+  ],
+  "usage_examples": [
+    "Encoder un fichier binaire PDF pour son intégration dans un courriel sans corruption des données.",
+    "Décoder une chaîne Ascii85 extraite d'un document Adobe Illustrator corrompu.",
+    "Optimiser la taille des données transmises via une API en remplaçant Base64 par Base85.",
+    "Analyser un objet Git compressé avec l'algorithme Ascii85 lors du débogage de dépôts distants."
+  ]
+}

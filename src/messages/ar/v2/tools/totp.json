@@ -1,0 +1,10 @@
+{
+  "secret": "المفتاح السري (Base32)",
+  "secretPlaceholder": "أدخل أو أنشئ سر Base32...",
+  "secretHint": "يجب أن يكون السر 16 حرفًا على الأقل",
+  "currentCode": "الكود الحالي",
+  "howItWorks": "كيف يعمل",
+  "step1": "TOTP generates time-based one-time passwords",
+  "step2": "يتم تحديث الكود كل 30 ثانية",
+  "step3": "متوافق مع أداة مصادقة جوجل"
+}

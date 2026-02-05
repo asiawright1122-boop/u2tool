@@ -1,0 +1,29 @@
+{
+  "uploadGif": "Enviar GIF",
+  "frames": "Quadros",
+  "downloadAll": "Baixar Tudo",
+  "downloadFrame": "Baixar Quadro",
+  "processing": "Processando...",
+  "dropzone": "Clique ou arraste GIF para enviar",
+  "originalGif": "GIF Original",
+  "totalFrames": "Total de Quadros",
+  "selectedFrames": "Quadros Selecionados",
+  "selectAll": "Selecionar Tudo",
+  "deselectAll": "Desmarcar Tudo",
+  "downloadSelected": "Baixar Selecionados",
+  "detailed_description": "O GIF Splitter é uma ferramenta avançada de manipulação de imagens que permite a extração de quadros individuais de arquivos GIF animados. Técnicamente, o GIF Splitter utiliza algoritmos de processamento de imagem para descompilar o GIF original em imagens estáticas, mantendo a qualidade e as propriedades visuais de cada quadro. Essa funcionalidade é essencial para desenvolvedores e designers que precisam de controle granular sobre as imagens animadas, facilitando tarefas como otimização de performance, criação de sprites para jogos, e análise de animações frame a frame. A ferramenta suporta uma variedade de formatos de exportação, incluindo PNG, JPEG, e BMP, permitindo que os usuários escolham o formato mais adequado para suas necessidades específicas. Além disso, o GIF Splitter oferece opções para ajustar a qualidade das imagens exportadas, garantindo que os resultados atendam aos requisitos de qualidade mais rigorosos.",
+  "usage_steps": [
+    "Acesse a página do GIF Splitter no site de ferramentas de imagem.",
+    "Clique no botão 'Selecionar GIF' para carregar o arquivo GIF que deseja dividir.",
+    "Após o upload, utilize a barra de ferramentas para ajustar opções como formato de exportação (PNG, JPEG, BMP) e qualidade da imagem.",
+    "Selecione a opção 'Exportar Todos os Quadros' para extrair todos os quadros do GIF em sequência.",
+    "Para extrair quadros específicos, utilize a caixa de seleção abaixo da pré-visualização do GIF e marque os quadros desejados.",
+    "Clique em 'Baixar' para salvar os quadros extraídos no seu dispositivo."
+  ],
+  "usage_examples": [
+    "Um designer de jogos precisa criar sprites a partir de uma animação GIF para um personagem em movimento. Usando o GIF Splitter, ele pode extrair cada quadro da animação e organizá-los em uma folha de sprites.",
+    "Um desenvolvedor de e-commerce quer otimizar o carregamento de uma animação GIF em um site. Ele utiliza o GIF Splitter para dividir o GIF em imagens estáticas e implementar uma animação CSS mais leve e eficiente.",
+    "Um produtor de conteúdo digital precisa analisar frame a frame uma animação GIF para identificar problemas de sincronização. O GIF Splitter permite que ele extraia cada quadro e os examine individualmente.",
+    "Um artista digital deseja usar quadros de uma animação GIF como base para uma nova peça de arte. Com o GIF Splitter, ele extrai os quadros desejados e os utiliza como referência ou incorpora-os diretamente em seu projeto."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "output": "Sitemap Output",
+  "copy": "Copier",
+  "baseUrl": "URL de base",
+  "urls": "URLs",
+  "addUrl": "+ Ajouter une URL",
+  "remove": "Supprimer",
+  "generate": "Générer le Sitemap",
+  "download": "Télécharger",
+  "detailed_description": "Le Générateur de Sitemap est un outil puissant destiné aux développeurs et aux gestionnaires de sites web pour créer des sitemaps XML de manière efficace et précise. Un sitemap XML est un fichier qui liste toutes les pages de votre site web, facilitant l'indexation par les moteurs de recherche comme Google, Bing, et Yahoo. Cet outil est essentiel pour améliorer la visibilité de votre site en fournissant une carte claire et structurée de votre contenu aux robots de recherche.\n\nLes utilisateurs ont besoin de ce outil pour plusieurs raisons : il optimise le référencement (SEO) en permettant aux moteurs de recherche de mieux comprendre la structure de votre site, il facilite la découverte de nouvelles pages, et il aide à identifier les erreurs de navigation. De plus, un sitemap XML bien structuré peut améliorer le taux de conversion en offrant aux visiteurs une meilleure expérience de navigation.\n\nTechniquement, le Générateur de Sitemap fonctionne en analysant l'arborescence de votre site, en identifiant toutes les URLs, et en les organisant dans un format XML conforme aux standards de l'industrie. L'outil prend en compte les types de contenu, les dates de modification, et les priorités de chaque page pour créer un sitemap optimisé. Après la génération, vous pouvez télécharger le fichier XML et le soumettre aux moteurs de recherche via leurs outils respectifs, tels que Google Search Console.",
+  "usage_steps": [
+    "Accédez à la page du Générateur de Sitemap en utilisant le menu de navigation ou en tapant l'URL directement dans votre navigateur.",
+    "Entrez l'URL de la page d'accueil de votre site web dans le champ « URL de base » situé au centre de l'interface.",
+    "Sélectionnez les options de configuration en utilisant les onglets situés à droite de l'interface. Par exemple, choisissez la fréquence de mise à jour de vos pages et leur priorité relative.",
+    "Cliquez sur le bouton « Analyser » pour que l'outil commence à scanner votre site et à collecter les URLs de toutes les pages.",
+    "Une fois l'analyse terminée, passez en revue le sitemap généré dans la section « Aperçu du Sitemap » pour vous assurer que toutes les pages sont correctement répertoriées.",
+    "Téléchargez le fichier XML en utilisant le bouton « Télécharger » et soumettez-le aux moteurs de recherche via leurs outils de gestion, comme Google Search Console."
+  ],
+  "usage_examples": [
+    "Un développeur d'un petit site e-commerce souhaite améliorer la visibilité de ses produits en ligne. Il utilise le Générateur de Sitemap pour créer un sitemap XML détaillé, qui est ensuite soumis à Google Search Console pour accélérer l'indexation des nouvelles pages de produits.",
+    "Une entreprise de blogging avec un grand nombre d'articles souhaite optimiser son référencement. Le Générateur de Sitemap est utilisé pour créer un sitemap XML qui inclut toutes les URL des articles, facilitant ainsi la navigation des robots de recherche et améliorant la visibilité des contenus plus anciens.",
+    "Un gestionnaire de site web pour une entreprise multilingue utilise le Générateur de Sitemap pour créer des sitemaps distincts pour chaque version linguistique de son site, assurant ainsi que toutes les pages, quel que soit leur langage, sont correctement indexées par les moteurs de recherche.",
+    "Un webmaster d'un site gouvernemental utilise le Générateur de Sitemap pour créer un sitemap XML qui inclut les pages les plus fréquemment mises à jour, comme les annonces de nouvelles réglementations, pour s'assurer que ces informations cruciales sont rapidement accessibles aux citoyens et aux moteurs de recherche."
+  ]
+}

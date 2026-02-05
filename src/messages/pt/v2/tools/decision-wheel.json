@@ -1,0 +1,26 @@
+{
+  "addOption": "Adicionar Opção",
+  "enterOption": "Insira opção",
+  "spin": "Girar!",
+  "spinning": "Girando...",
+  "result": "Resultado",
+  "winner": "Vencedor",
+  "options": "Opções",
+  "clearAll": "Limpar Tudo",
+  "minOptions": "Adicione pelo menos 2 opções",
+  "detailed_description": "O Decision Wheel é uma ferramenta interativa e divertida que utiliza um gerador de números aleatórios (RNG) para selecionar uma das opções inseridas pelo usuário. Técnicamente, a ferramenta opera em um ambiente de navegador, não necessitando de downloads ou instalações. Quando o usuário insere as opções e inicia a roda, o algoritmo RNG é ativado, garantindo que cada resultado seja imprevisível e equitativo. A interface é construída usando HTML5, CSS3 e JavaScript, proporcionando uma experiência responsiva e fluida em qualquer dispositivo. Além disso, a ferramenta inclui recursos de personalização, permitindo que os usuários ajustem a aparência da roda, como cores e estilos, para atender a diferentes cenários de uso. O Decision Wheel é particularmente útil em situações onde a tomada de decisões pode ser estressante ou indecisa, como em grupos de amigos escolhendo um restaurante, em reuniões de equipe para decidir tarefas, ou até mesmo em atividades educacionais para introduzir conceitos de probabilidade.",
+  "usage_steps": [
+    "Abra a página do Decision Wheel no seu navegador e aguarde a carga completa da interface.",
+    "Na seção 'Adicione suas opções', digite cada uma das opções que você deseja incluir na roda, separadas por vírgulas ou pressionando Enter.",
+    "Personalize a aparência da roda clicando no ícone de configurações e ajustando as cores, estilos e outras opções disponíveis.",
+    "Quando estiver pronto, clique no botão 'Girar a roda' para iniciar o processo de seleção aleatória.",
+    "Observe a roda girar e pare automaticamente, exibindo a opção selecionada no topo.",
+    "Clique no botão 'Reiniciar' se desejar realizar uma nova rodada ou adicionar mais opções."
+  ],
+  "usage_examples": [
+    "Um grupo de amigos indecisos sobre onde jantar no fim de semana pode usar o Decision Wheel para inserir nomes de restaurantes e deixar a roda decidir o destino.",
+    "Um professor pode utilizar a ferramenta para selecionar aleatoriamente alunos para responder perguntas em sala de aula, garantindo uma participação mais equitativa.",
+    "Em uma reunião de equipe, o gerente pode usar o Decision Wheel para atribuir tarefas pendentes a diferentes membros do time, evitando conflitos e indecisões.",
+    "Um organizador de eventos pode usar a ferramenta para sortear premiações entre participantes, adicionando um elemento de surpresa e emoção à atividade."
+  ]
+}

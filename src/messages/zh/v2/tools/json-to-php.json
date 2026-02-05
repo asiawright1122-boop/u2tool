@@ -1,0 +1,47 @@
+{
+  "input": "JSON输入",
+  "output": "PHP输出",
+  "convert": "转换",
+  "copy": "复制",
+  "useShortArraySyntax": "使用简短数组语法（PHP 5.4+）",
+  "inputPlaceholder": "粘贴JSON内容...",
+  "outputPlaceholder": "PHP数组将显示在这里...",
+  "errorInvalidJson": "// 错误：无效的JSON输入",
+  "detailed_description": "JSON to PHP工具通过解析JSON格式字符串，将其转换为PHP原生数组语法。该工具基于PHP的json_decode函数实现，支持多维嵌套结构、特殊字符转义及类型映射（如JSON对象转关联数组）。开发者在构建API接口、处理第三方数据响应或调试JSON结构时，可快速生成可复用的PHP数组代码。转换过程包含JSON语法验证、递归结构解析及PHP变量序列化三个核心阶段，支持通过参数控制输出为索引数组或对象格式，转换结果直接展示带缩进的可读性代码。",
+  "usage_steps": [
+    "点击'粘贴JSON'文本框，输入符合RFC 8259标准的JSON字符串",
+    "勾选'关联数组'选项决定输出为array()或stdClass对象",
+    "选择'保留空值'选项控制NULL字段的显示策略",
+    "点击'转换'按钮触发JSON解析引擎",
+    "在结果区域查看带语法高亮的PHP数组代码",
+    "点击'复制代码'按钮将结果直接插入开发环境"
+  ],
+  "usage_examples": [
+    "将电商平台API返回的JSON商品列表转换为PHP数组进行业务逻辑处理",
+    "调试微信支付回调的JSON签名数据，验证字段完整性",
+    "将前端localStorage导出的JSON配置转换为PHP初始化数组",
+    "批量转换旧系统中的JSON配置文件为PHP数组实现平滑迁移"
+  ],
+  "faqs": [
+    {
+      "question": "Json To Php 是免费的吗？",
+      "answer": "是的，Json To Php 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Json To Php 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "支持哪些格式转换？",
+      "answer": "Json To Php 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Json To Php 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Json To Php 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "password": "Senha",
+  "placeholder": "Digite a senha para verificar...",
+  "show": "Mostrar",
+  "hide": "Esconder",
+  "strength": "Força",
+  "score": "Pontuação",
+  "length": "Comprimento",
+  "chars": "caracteres",
+  "charTypes": "Tipos de caracteres",
+  "weak": "Fraco",
+  "fair": "Justo",
+  "good": "Bom",
+  "strong": "Forte",
+  "suggestions": "Sugestões",
+  "suggest": {
+    "length": "Use pelo menos 8 caracteres",
+    "lowercase": "Adicione letras minúsculas (a-z)",
+    "uppercase": "Adicionar letras maiúsculas (A-Z)",
+    "numbers": "Adicione números (0-9)",
+    "symbols": "Adicione símbolos especiais (!@#$...)",
+    "common": "Evite senhas comuns",
+    "repeated": "Evite caracteres repetidos",
+    "sequential": "Evite caracteres sequenciais"
+  }
+}

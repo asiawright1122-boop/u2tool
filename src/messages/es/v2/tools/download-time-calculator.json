@@ -1,0 +1,21 @@
+{
+  "detailed_description": "La calculadora de tiempo de descarga estima cuánto tiempo tardará en descargar archivos en función del tamaño del archivo y la velocidad de conexión a internet. Introduce el tamaño de tu archivo en cualquier unidad (KB, MB, GB, TB) y selecciona tu velocidad de conexión o introduce un valor personalizado. La herramienta muestra los tiempos de descarga estimados para varios tipos de conexión, incluyendo 3G, 4G, 5G, DSL, cable y fibra. Ideal para planificar descargas grandes, estimar tiempos de respaldo o entender cómo la velocidad de conexión afecta tus descargas. Incluye una tabla de comparación para referencia rápida.",
+  "usage_steps": [
+    "Ingresa el tamaño del archivo",
+    "Selecciona o ingresa la velocidad de conexión",
+    "Verifica el tiempo de descarga"
+  ],
+  "usage_examples": [
+    "Planifica descargas grandes",
+    "Compara velocidades de conexión"
+  ],
+  "fileSize": "Tamaño de Archivo",
+  "downloadSpeed": "Velocidad de Descarga",
+  "connection": "Conexión",
+  "estimatedTime": "Tiempo Estimado",
+  "days": "días",
+  "minutes": "minutos",
+  "seconds": "segundos",
+  "comparisonTable": "Tabla de Comparación",
+  "time": "Tiempo"
+}

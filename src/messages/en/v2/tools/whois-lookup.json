@@ -1,0 +1,27 @@
+{
+  "loading": "Looking up...",
+  "lookup": "WHOIS Lookup",
+  "registrar": "Registrar",
+  "dnssec": "DNSSEC",
+  "createdDate": "Created Date",
+  "expiryDate": "Expiry Date",
+  "updatedDate": "Updated Date",
+  "nameServers": "Name Servers",
+  "domainStatus": "Domain Status",
+  "note": "💡 Note: This is a demo version. For production use, integrate with a WHOIS API service.",
+  "detailed_description": "This WHOIS Lookup tool provides granular access to domain registration records by querying authoritative WHOIS servers for top-level domains (TLDs) across global registries. Technically, it retrieves structured data containing domain creation and expiration timestamps (in epoch format), registrar identification codes, name server configurations (including IPv4/IPv6 addresses), DNSSEC validation status, and registrant contact information (when not redacted by GDPR/CCPA protections). The tool's value lies in its ability to expose critical infrastructure details for cybersecurity investigations, domain acquisition due diligence, and DNS configuration audits. It operates by establishing direct TCP/43 connections to TLD-specific WHOIS servers, parsing raw responses into human-readable key-value pairs while respecting rate-limiting policies and handling recursive queries for subdomains. Advanced features include displaying domain status codes (e.g., clientDeleteProhibited, serverRenewProhibited) and extracting technical contact hashes for abuse reporting.",
+  "usage_steps": [
+    "Navigate to the WHOIS Lookup interface and locate the 'Domain Search' input field",
+    "Enter the exact domain name (including TLD) in the UTF-8 encoded text box",
+    "Optionally select a specific WHOIS server from the registry dropdown menu",
+    "Choose output format preference: raw WHOIS response or parsed JSON representation",
+    "Click 'Execute Query' to initiate direct TCP/43 connection with authoritative server",
+    "Review results in the multi-tabbed interface, utilizing 'Export to CSV' for bulk analysis"
+  ],
+  "usage_examples": [
+    "A security analyst verifying registrar lock status (clientDeleteProhibited flag) to prevent domain hijacking",
+    "A penetration tester identifying technical contacts for a phishing domain to report malicious activity",
+    "A DevOps engineer cross-referencing DNSSEC DS records with WHOIS name server entries post-migration",
+    "A domain investor checking expiration dates and registrar information to assess acquisition opportunities"
+  ]
+}

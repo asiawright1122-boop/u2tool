@@ -1,0 +1,23 @@
+{
+  "json1": "JSON 1",
+  "json2": "JSON 2",
+  "placeholder": "{\"key\": \"value\"}",
+  "compare": "Comparar",
+  "differences": "Diferencias",
+  "identical": "Ambos objetos JSON son idénticos",
+  "detailed_description": "El comparador de JSON (JSON Diff) es una herramienta especializada que analiza diferencias estructurales y semánticas entre dos objetos JSON mediante algoritmos de comparación recursiva. Este proceso implica el parseo simultáneo de ambos documentos, validación de coincidencia en claves, tipos de datos (string, number, boolean, null), y estructuras anidadas (arrays y objetos). La herramienta destaca discrepancias en valores atómicos, desincronizaciones en esquemas (como claves faltantes o adicionales), y variaciones en la profundidad de nodos. Es especialmente útil para desarrolladores que necesitan depurar respuestas de APIs REST, comparar configuraciones versionadas en sistemas de control de cambios, validar migraciones de datos estructurados, o monitorear cambios en esquemas OpenAPI. Su motor implementa un algoritmo de comparación basado en árboles que permite identificar modificaciones en el orden de las propiedades, transformaciones en tipos de datos, o inconsistencias en listas ordenadas. La salida incluye un informe detallado con marcadores de contexto (líneas de código afectadas) y un modo de visualización en árbol para facilitar la inspección de diferencias anidadas.",
+  "usage_steps": [
+    "1. Accede a la interfaz web y localiza los paneles de entrada divididos ('JSON Original' y 'JSON Modificado')",
+    "2. Carga o pega los documentos JSON en cada panel, utilizando la validación en tiempo real para corregir errores de sintaxis",
+    "3. Activa la opción 'Comparación Estricta' para detectar diferencias en tipos de datos (ej: 123 vs '123')",
+    "4. Haz clic en el botón 'Ejecutar Detección de Diferencias' para iniciar el análisis",
+    "5. Explora el resultado en la pestaña 'Vista en Árbol' para identificar discrepancias por nivel de profundidad",
+    "6. Usa el botón 'Exportar Informe' para obtener un resumen estructurado en formato JSON con los cambios detectados"
+  ],
+  "usage_examples": [
+    "Validar que un microservicio no haya introducido cambios no documentados en su respuesta API tras un despliegue",
+    "Comparar archivos de configuración JSON entre entornos de producción y staging para identificar desincronizaciones",
+    "Auditar migraciones de datos verificando que los registros transformados mantengan la integridad del esquema original",
+    "Analizar diferencias entre versiones de especificaciones OpenAPI para documentar cambios en endpoints de forma precisa"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El Gradient Generator es una herramienta técnica que permite crear y ajustar gradientes CSS mediante una interfaz visual interactiva. Soporta dos tipos principales: gradientes lineales (definidos por un ángulo y puntos de color) y radiales (basados en un punto central y radios). Los usuarios pueden manipular parámetros como la dirección, la distribución de los colores (color stops), modos de mezcla (blend modes) y transparencia, todo en tiempo real. La herramienta es ideal para diseñadores y desarrolladores que necesitan optimizar tiempos en proyectos web, evitar errores de sintaxis en CSS y explorar combinaciones visuales complejas sin codificar manualmente. Al finalizar, genera el código CSS compatible con múltiples navegadores, incluyendo prefijos estándar (-webkit-, -moz-), y permite exportarlo en formatos HEX, RGB, RGBA o HSL. Su motor utiliza la API Canvas 2D para renderizar la previsualización y actualiza dinámicamente las funciones CSS linear-gradient() y radial-gradient() según los ajustes del usuario.",
+  "usage_steps": [
+    "Accede al Gradient Generator y selecciona entre 'Lineal' o 'Radial' en el menú tipo de gradiente.",
+    "Ajusta el ángulo (0° a 360°) usando el control deslizante para gradientes lineales o arrastra el punto central en gradientes radiales.",
+    "Añade hasta 10 paradas de color con el botón '+ Color Stop' y asigna posiciones específicas (ej. 0%, 50%, 100%).",
+    "Personaliza cada color usando el selector HSV o ingresa valores manuales en campos HEX/RGB/RGBA/HSL.",
+    "Habilita la opción 'Modo de mezcla' para aplicar efectos como overlay o soft-light entre capas de color.",
+    "Haz clic en 'Generar Código' para obtener el CSS completo, incluyendo prefijos, y cópialo al portapapeles."
+  ],
+  "usage_examples": [
+    "Diseñar un fondo de landing page para una startup con un gradiente lineal de azul a morado que siga la dirección diagonal.",
+    "Crear un efecto hover en un botón de compra con un gradiente radial que simule iluminación centrada al interactuar.",
+    "Generar un patrón de gradiente cónico para un dashboard de datos, combinando HSL con transparencia en anillos concéntricos.",
+    "Implementar un texto degradado en una campaña de marketing digital, aplicando blend modes sobre una imagen de fondo."
+  ]
+}

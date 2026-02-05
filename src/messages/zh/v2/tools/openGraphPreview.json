@@ -1,0 +1,37 @@
+{
+  "defaultTitle": "我的精彩页面",
+  "defaultDescription": "这是对我的精彩页面的描述，该页面将出现在社交媒体分享中。",
+  "defaultSiteName": "我的网站",
+  "modeFetch": "从 URL 获取 OG 标签",
+  "modeManual": "手动输入",
+  "fetchUrlLabel": "输入网页网址",
+  "fetchButton": "获取",
+  "fetching": "正在获取...",
+  "fetchError": "无法获取网页。请检查 URL 或稍后重试。",
+  "title": "标题",
+  "titlePlaceholder": "页面标题",
+  "siteName": "站点名称",
+  "siteNamePlaceholder": "网站名称",
+  "descriptionPlaceholder": "页面描述...",
+  "imageUrl": "图片 URL（推荐 1200x630）",
+  "imageUrlPlaceholder": "https://example.com/image.jpg",
+  "pageUrl": "页面网址",
+  "pageUrlPlaceholder": "https://example.com",
+  "imageLoadError": "图片加载失败",
+  "enterImageUrl": "输入上面的图片网址",
+  "generatedCode": "生成的元标签",
+  "platform": {
+    "facebook": "Facebook",
+    "twitter": "X (Twitter)",
+    "linkedin": "LinkedIn"
+  },
+  "preview": "预览",
+  "recommendations": {
+    "title": "建议",
+    "imageSize": "图像尺寸：1200x630 像素（1.91:1 比例）",
+    "titleLength": "标题：最多 60-70 个字符",
+    "descriptionLength": "描述：最多 150-160 个字符",
+    "highQuality": "使用高质量的相关图像",
+    "testDebugger": "使用 Facebook 共享调试器进行测试"
+  }
+}

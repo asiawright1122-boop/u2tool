@@ -1,0 +1,32 @@
+{
+  "detailed_description": "API 테스터를 사용하면 모든 API 엔드포인트에 HTTP 요청을 보낼 수 있습니다. 모든 HTTP 메서드, 사용자 정의 헤더, 요청 본문을 지원하며 형식화된 응답을 표시합니다.",
+  "usage_steps": [
+    "API 엔드포인트 URL 입력",
+    "HTTP 메서드 선택",
+    "필요시 헤더 추가",
+    "POST/PUT용 요청 본문 입력",
+    "요청 전송 및 응답 확인"
+  ],
+  "usage_examples": [
+    "API 엔드포인트 테스트",
+    "API 응답 디버그",
+    "서드파티 API 탐색"
+  ],
+  "url": "URL",
+  "method": "메서드",
+  "headers": "헤더",
+  "body": "본문",
+  "send": "요청 전송",
+  "response": "응답",
+  "status": "상태",
+  "time": "시간",
+  "addHeader": "헤더 추가",
+  "urlPlaceholder": "https://api.example.com/endpoint",
+  "loadExample": "예제 로드",
+  "bodyPlaceholder": "요청 본문 (JSON)...",
+  "responseBody": "응답 본문",
+  "responseHeaders": "응답 헤더",
+  "sending": "전송 중...",
+  "headerNamePlaceholder": "헤더 이름",
+  "headerValuePlaceholder": "값"
+}

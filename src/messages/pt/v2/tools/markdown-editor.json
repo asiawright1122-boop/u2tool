@@ -1,0 +1,37 @@
+{
+  "detailed_description": "O Editor Markdown é uma poderosa ferramenta de edição de documentos online com funcionalidade de visualização em tempo real. Escreva sintaxe Markdown no lado esquerdo e veja instantaneamente o resultado renderizado no direito. Suporta toda a sintaxe Markdown padrão incluindo títulos, listas, blocos de código, tabelas, links, imagens e mais. Oferece três modos de visualização: dividido, apenas edição e apenas visualização. Exporte seu trabalho como arquivos .md ou .html com um clique. Botões de inserção rápida integrados para formatação comum. Toda a edição acontece localmente no seu navegador, garantindo a segurança dos dados.",
+  "usage_steps": [
+    "Abra a página da ferramenta Editor Markdown",
+    "Digite ou cole conteúdo Markdown na área de edição esquerda",
+    "A área de visualização direita mostra o resultado renderizado em tempo real",
+    "Use os botões da barra de ferramentas para inserir formatação comum rapidamente",
+    "Escolha o modo de visualização: dividido, edição ou visualização",
+    "Clique no botão de download para exportar como arquivo .md ou .html"
+  ],
+  "usage_examples": [
+    "Escrever documentação técnica e arquivos README",
+    "Criar posts de blog e notas",
+    "Redigir documentação de projetos",
+    "Visualizar formatação Markdown rapidamente"
+  ],
+  "faqs": [
+    {
+      "question": "Qual sintaxe Markdown é suportada?",
+      "answer": "Toda a sintaxe Markdown padrão é suportada, incluindo títulos, negrito, itálico, listas, blocos de código, tabelas, links, imagens, citações e mais. Extensões GFM (GitHub Flavored Markdown) também são suportadas."
+    },
+    {
+      "question": "Meu conteúdo é salvo automaticamente?",
+      "answer": "A versão atual não salva o conteúdo automaticamente. Recomendamos exportar seu arquivo após editar. Você pode exportar no formato .md ou .html."
+    },
+    {
+      "question": "Posso importar arquivos Markdown existentes?",
+      "answer": "Você pode copiar e colar conteúdo Markdown existente diretamente no editor. O editor reconhecerá e renderizará automaticamente a sintaxe Markdown."
+    }
+  ],
+  "errorParsingMarkdown": "Erro ao analisar markdown",
+  "list": "Lista",
+  "code": "Código",
+  "link": "Link",
+  "image": "Imagem",
+  "quote": "Citação"
+}

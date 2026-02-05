@@ -1,0 +1,50 @@
+{
+  "className": "类名",
+  "style": "样式",
+  "useOptional": "使用可选参数处理空值",
+  "loadSample": "加载示例",
+  "copy": "复制",
+  "convert": "转换",
+  "inputPlaceholder": "输入JSON对象...",
+  "outputPlaceholder": "Python代码将显示在这里...",
+  "detailed_description": "JSON转Python工具通过静态类型解析与代码生成技术，将结构化JSON数据精确映射到Python类型系统。该工具深度支持Python 3.7+的dataclass（PEP 557）、Pydantic（v1/v2）模型以及TypedDict（PEP 655）三种形态的转换，可自动识别嵌套结构、枚举类型及联合类型（Union）。开发者在构建API客户端时可直接将响应JSON转换为带类型验证的Pydantic模型，在处理配置文件时可生成可序列化的dataclass实例。工具内部采用多阶段处理：首先通过AST解析构建JSON结构的元模型，接着执行类型推断引擎处理复杂嵌套结构，最终通过Jinja2模板引擎生成符合PEP8规范的代码。支持保留原始JSON键名的__original_name__注解，允许自定义字段命名策略，确保与现有代码库的兼容性。",
+  "usage_steps": [
+    "在输入面板粘贴或拖拽JSON数据，支持.json文件导入",
+    "选择目标类型：Dataclass/Pydantic Model/TypedDict",
+    "勾选'生成嵌套类型'处理多层结构，启用'类型推断'自动识别int/float/datetime",
+    "点击'生成代码'触发异步转换，底层使用rust-wasm加速解析",
+    "在输出区域查看带语法高亮的Python代码，支持一键复制到剪贴板",
+    "通过'验证输出'按钮启动类型检查器验证生成代码的结构完整性"
+  ],
+  "usage_examples": [
+    "将OpenAPI规范生成的JSON Schema批量转换为Pydantic数据验证模型",
+    "将前端发送的复杂JSON表单数据转换为可序列化的dataclass用于持久化存储",
+    "将AWS Lambda日志JSON流转换为TypedDict集合，用于类型安全的分析处理",
+    "在机器学习管道中将实验配置JSON转换为带默认值的dataclass进行参数管理"
+  ],
+  "faqs": [
+    {
+      "question": "Json To Python 是免费的吗？",
+      "answer": "是的，Json To Python 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Json To Python 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "支持哪些格式转换？",
+      "answer": "Json To Python 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Json To Python 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Json To Python 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "pydanticBaseModel": "Pydantic BaseModel",
+  "typedDict": "TypedDict",
+  "plainClass": "普通类"
+}

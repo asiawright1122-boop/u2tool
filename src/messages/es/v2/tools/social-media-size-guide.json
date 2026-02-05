@@ -1,0 +1,35 @@
+{
+  "platform": "Plataforma",
+  "imageType": "Tipo de Imagen",
+  "dimensions": "Dimensiones",
+  "aspectRatio": "Relación de aspecto",
+  "fileSize": "Tamaño Máximo de Archivo",
+  "profilePhoto": "Foto de Perfil",
+  "coverPhoto": "Foto de Portada",
+  "post": "Publicación",
+  "story": "Historia",
+  "thumbnail": "Miniatura",
+  "banner": "Banner",
+  "recommended": "Recomendado",
+  "minimum": "Mínimo",
+  "detailed_description": "La Guía de Tamaños para Redes Sociales es una herramienta técnica especializada que proporciona un repositorio estructurado de dimensiones óptimas para imágenes en múltiples plataformas. Su funcionalidad se basa en una base de datos actualizada con parámetros de resolución, relaciones de aspecto y límites de peso recomendados por cada red social. Al integrar esta información con un motor de validación en tiempo real, permite a los desarrolladores y diseñadores verificar la conformidad de sus imágenes con estándares específicos antes de la publicación. La herramienta incluye algoritmos de cálculo automático para ajustar dimensiones manteniendo la integridad visual, aplicando técnicas como smart cropping y padding adaptativo. Es indispensable para evitar errores de visualización en dispositivos móviles, optimizar el rendimiento de cargas mediante compresión sin pérdida, y asegurar consistencia en campañas multicanal. Su motor backend procesa consultas de metadatos de imágenes y compara automáticamente sus EXIF data contra los requisitos de cada plataforma, ofreciendo reportes detallados de discrepancias.",
+  "usage_steps": [
+    "1. Selecciona las plataformas objetivo usando los checkboxes categorizados (Instagram, Twitter, LinkedIn, etc.).",
+    "2. Ingresa manualmente las dimensiones actuales de tu imagen en el campo 'Resolución Original' (en píxeles).",
+    "3. Activa la opción 'Validación Automática' para recibir alertas sobre relaciones de aspecto no compatibles.",
+    "4. Utiliza el botón 'Calcular Padding' para generar barras de relleno en formatos verticales/horizontales no nativos.",
+    "5. Revisa el panel de 'Optimización' que muestra recomendaciones de compresión según el formato (JPEG/PNG/WebP).",
+    "6. Exporta las especificaciones ajustadas en formato JSON para integrar directamente en pipelines de construcción."
+  ],
+  "usage_examples": [
+    "Un diseñador ajusta imágenes para una campaña en Instagram Stories y TikTok simultáneamente, verificando compatibilidad de 1080x1920px con márgenes dinámicos.",
+    "Un desarrollador frontend valida que las miniaturas de un sitio web cumplan con los 1200x630px exigidos por Facebook Open Graph.",
+    "Un community manager convierte un catálogo de productos a 1080x1080px cuadrados para Instagram Feed, corrigiendo automáticamente distorsiones.",
+    "Un equipo de marketing automatiza el redimensionamiento de banners para LinkedIn (usando 1584x396px) y Twitter (1200x600px) desde un único workflow."
+  ],
+  "searchPlaceholder": "Buscar plataformas o tipos de imagen...",
+  "all": "Todos",
+  "type": "Tipo",
+  "notes": "Notas",
+  "copy": "Copiar"
+}

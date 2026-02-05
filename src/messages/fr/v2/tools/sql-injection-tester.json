@@ -1,0 +1,47 @@
+{
+  "detailed_description": "Le Testeur d'Injection SQL analyse les requêtes SQL et les patrons de code pour identifier les vulnérabilités potentielles d'injection SQL.",
+  "usage_steps": [
+    "Coller une requête SQL ou du code",
+    "Entrer les entrées de test",
+    "Cliquez sur Test",
+    "Voir les problèmes de sécurité",
+    "Obtenir des exemples paramétrés"
+  ],
+  "usage_examples": [
+    "Testez la gestion des entrées utilisateur",
+    "Identifiez la concaténation de chaînes",
+    "Apprenez les patrons sécurisés"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Processus",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Collez votre code de requête de base de données...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez entrer quelques informations"
+  },
+  "loadExample": "Charger un exemple",
+  "analyze": "Analyser",
+  "generate": "Générer",
+  "format": "Formater",
+  "convert": "Convertir",
+  "validate": "Valider",
+  "export": "Exporter",
+  "preview": "Aperçu",
+  "reset": "Réinitialiser",
+  "add": "Ajouter",
+  "remove": "Supprimer",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "settings": "Paramètres",
+  "options": "Options",
+  "results": "Résultats",
+  "noResults": "Aucun résultat",
+  "loading": "Chargement...",
+  "success": "Succès",
+  "failed": "Échec",
+  "warning": "Avertissement",
+  "info": "Information"
+}

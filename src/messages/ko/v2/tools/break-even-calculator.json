@@ -1,0 +1,39 @@
+{
+  "detailed_description": "브레이크-에이니计算器帮助企业在总收益等于总成本时确定盈亏平衡点。输入固定成本（租金、工资等）、每单位的变动成本（材料、劳动力）以及每单位的售价。该工具计算盈亏平衡点的单位数和收益，显示您需要销售多少单位的产品来覆盖所有成本。这对于定价决策、商业规划和财务分析至关重要。",
+  "usage_steps": [
+    "전체 고정 비용을 입력하세요",
+    "단위당 변동 비용을 입력하세요",
+    "단위당 판매 가격을 입력하세요",
+    "계산 버튼을 클릭하여 결과를 확인하세요",
+    "단위별 이익률 점을 확인하세요",
+    "이익률 수익 금액을 확인하세요",
+    "기여 마진 분석하기"
+  ],
+  "usage_examples": [
+    "새 제품의 가격 결정",
+    "비즈니스 기회의 수익성 분석",
+    "생산량 계획",
+    "지식 있는 가격 결정"
+  ],
+  "info": "정보",
+  "fixedCosts": "고정 비용",
+  "fixedCostsHint": "고정 비용 힌트",
+  "variableCostPerUnit": "단위당 변동 비용",
+  "variableCostHint": "변동 비용 힌트",
+  "sellingPricePerUnit": "단위당 판매가",
+  "calculate": "계산",
+  "breakEvenUnits": "손익분기 수량",
+  "units": "수량",
+  "breakEvenRevenue": "손익분기 수익",
+  "contributionMargin": "공헌이익",
+  "perUnit": "단위당",
+  "contributionMarginRatio": "공헌이익률",
+  "profitLossTable": "손익표",
+  "revenue": "수익",
+  "totalCosts": "총 비용",
+  "profitLoss": "손익",
+  "breakEven": "손익분기점",
+  "formula": "공식",
+  "invalidInput": "잘못된 입력",
+  "priceError": "가격은 변동비보다 커야 합니다"
+}

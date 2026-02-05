@@ -1,0 +1,56 @@
+{
+  "addRow": "+ 添加行",
+  "addColumn": "+ 添加列",
+  "loadSample": "加载示例",
+  "columnAlignment": "列对齐",
+  "col": "列",
+  "left": "左对齐",
+  "center": "居中对齐",
+  "right": "右对齐",
+  "header": "表头",
+  "cell": "单元格",
+  "removeRow": "删除行",
+  "removeColumn": "删除列",
+  "markdownOutput": "Markdown 输出",
+  "preview": "预览",
+  "detailed_description": "该工具基于AST解析技术实现Markdown表格的可视化构建与双向编辑，通过WebAssembly编写的表格引擎实现毫秒级语法解析。用户在网格界面修改数据时，系统会实时生成符合CommonMark规范的表格语法，支持多列对齐控制、跨行合并单元格等高级特性。开发者可通过拖拽调整行列矩阵，同时利用内置的语法校验模块自动检测表格结构完整性。专业文档撰写场景中，该工具可处理最多50列的复杂表格结构，并提供HTML表格转换预览功能，满足技术文档、学术论文等场景对数据呈现的精确控制需求。",
+  "usage_steps": [
+    "在行列矩阵输入框中设置初始表格维度（最大支持20x50）",
+    "点击单元格进行内容编辑，使用Ctrl+Enter触发多行编辑模式",
+    "通过顶部工具栏的对齐按钮设置列对齐方式（左/右/居中）",
+    "启用「智能补全」功能自动填充重复数据模式",
+    "在实时预览窗格查看渲染效果，悬停表格触发HTML结构查看",
+    "点击「复制代码」按钮获取优化后的Markdown语法（含注释标记）"
+  ],
+  "usage_examples": [
+    "技术文档编写：快速创建API参数说明表，支持按数据类型自动着色",
+    "学术报告制作：将Excel数据转换为带合并单元格的Markdown表格",
+    "开源项目贡献：标准化PR请求中的变更日志表格格式",
+    "数据迁移处理：将CSV文件可视化转换为带格式校验的Markdown表格"
+  ],
+  "faqs": [
+    {
+      "question": "Markdown Table Generator 是免费的吗？",
+      "answer": "是的，Markdown Table Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Markdown Table Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Markdown Table Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Markdown Table Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Markdown Table Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "clear": "清空",
+  "copied": "已复制!",
+  "copy": "复制"
+}

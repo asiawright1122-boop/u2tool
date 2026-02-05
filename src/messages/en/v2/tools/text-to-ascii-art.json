@@ -1,0 +1,30 @@
+{
+  "input": "Text Input",
+  "output": "ASCII Art Output",
+  "convert": "Convert",
+  "copy": "Copy",
+  "placeholder": "Enter text (A-Z, 0-9, space)",
+  "character": "Character",
+  "charBlock": "█ Block",
+  "charHash": "# Hash",
+  "charStar": "* Star",
+  "charAt": "@ At",
+  "charDollar": "$ Dollar",
+  "charPlus": "+ Plus",
+  "outputPlaceholder": "ASCII art will appear here...",
+  "detailed_description": "The Text to ASCII Art tool is a specialized utility designed to transform ordinary text into intricate ASCII art. Technically, this tool leverages a combination of character mapping and formatting algorithms to convert each character of the input text into a series of ASCII characters that visually represent the original text. This process involves selecting an appropriate ASCII font from a predefined set, each offering a unique aesthetic and level of detail. Users can choose from a variety of fonts, each designed to produce different visual effects, from simple and clean to complex and ornate. The tool is particularly useful for developers, designers, and content creators who need to add a creative or retro touch to their projects, such as console-based applications, email signatures, or website headers. By converting text into ASCII art, users can enhance the visual appeal of their text content, making it stand out in a more engaging and memorable way.",
+  "usage_steps": [
+    "Step 1: Open the Text to ASCII Art tool on the website and locate the main input field labeled 'Enter Text'.",
+    "Step 2: Type or paste the text you want to convert into ASCII art into the input field.",
+    "Step 3: Below the input field, you will see a dropdown menu labeled 'Font Selection'. Click on it to reveal a list of available ASCII fonts.",
+    "Step 4: Select a font that best suits your desired visual effect. Each font will preview the transformed text in real-time, allowing you to see the changes immediately.",
+    "Step 5: Once you are satisfied with the selected font, click the 'Convert to ASCII Art' button to generate the final output.",
+    "Step 6: The converted ASCII art will appear in the output area below. You can then copy the ASCII art and use it in your project or save it as a text file for future use."
+  ],
+  "usage_examples": [
+    "Example 1: A web developer is creating a retro-themed website and needs a unique header. By using the Text to ASCII Art tool, they can convert the website's name into a stylized ASCII art logo, enhancing the retro aesthetic.",
+    "Example 2: A software engineer is developing a command-line tool and wants to add a visually appealing welcome message. They use the tool to convert the tool's name into ASCII art, which is displayed when the application starts.",
+    "Example 3: A graphic designer is working on a poster for a vintage arcade game event. They use the tool to transform the event's title into ASCII art, which is then integrated into the poster design, adding a nostalgic touch.",
+    "Example 4: A content creator is writing a blog post about retro computing and wants to include a visually interesting header. They use the tool to convert the blog post's title into ASCII art, making the header more engaging and relevant to the topic."
+  ]
+}

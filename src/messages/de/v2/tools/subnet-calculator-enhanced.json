@@ -1,0 +1,32 @@
+{
+  "ipAddress": "IP-Adresse",
+  "results": "Subnetzdetails",
+  "networkAddress": "Netzwerkadresse",
+  "broadcastAddress": "Broadcast-Adresse",
+  "firstHost": "Erster Host",
+  "lastHost": "Letzter Host",
+  "subnetMask": "Subnetzmaske",
+  "wildcardMask": "Wildcard-Maske",
+  "totalHosts": "Gesamte Hosts",
+  "usableHosts": "Nutzbare Hosts",
+  "privateIp": "Private IP",
+  "publicIp": "Öffentliche IP",
+  "class": "Klasse",
+  "invalidIp": "Ungültige IP-Adresse",
+  "invalidCidr": "Ungültige CIDR-Notation",
+  "detailed_description": "Der erweiterte Subnetz-Rechner ist ein präzises Werkzeug zur Analyse und Berechnung von Netzwerksegmenten basierend auf CIDR-Notation oder traditionellen Subnetzmasken. Das Tool führt binäre logische Operationen durch, um Netzwerkadressen, Broadcast-Adressen, verfügbare Host-Bereiche und die Anzahl der nutzbaren IPs zu ermitteln. Es unterstützt sowohl classful als auch classless Inter-Domain Routing (CIDR) und berücksichtigt dabei die Besonderheiten von IPv4-Adressklassen (A, B, C) sowie Variable Length Subnet Masking (VLSM). Anwender benötigen dieses Tool, um komplexe Netzwerkarchitekturen zu planen, IP-Konflikte zu vermeiden oder Fehler in Subnetzkonfigurationen zu diagnostizieren. Die Berechnung erfolgt durch die Analyse der eingegebenen IP-Adresse in Kombination mit der Subnetzmaske oder CIDR-Präfixlänge, gefolgt von der Anwendung von Bitmaskenoperationen zur Ermittlung der Netzwerk- und Broadcast-Adressen. Die Ergebnisse werden in Echtzeit angezeigt, einschließlich des ersten und letzten nutzbaren Hosts sowie der Gesamtanzahl an Hosts unter Berücksichtigung von Netzwerk- und Broadcast-Adressen als nicht nutzbar.",
+  "usage_steps": [
+    "Geben Sie eine gültige IPv4-Adresse in das Textfeld 'IP-Adresse' ein (z.B. 192.168.1.0).",
+    "Wählen Sie die Subnetzmaske entweder über den Schieberegler für CIDR-Präfixe (z.B. /24) oder geben Sie eine Dezimalmaske (z.B. 255.255.255.0) manuell ein.",
+    "Klicken Sie auf den 'Berechnen'-Button, um die Subnetzdetails zu generieren.",
+    "Überprüfen Sie die Ergebnisse im Bereich 'Netzwerkadresse', 'Broadcast-Adresse' und 'Host-Bereich' inklusive der Anzahl verfügbarer Hosts.",
+    "Nutzen Sie den 'Zurücksetzen'-Button, um eine neue Berechnung zu starten.",
+    "Wechseln Sie bei Bedarf zwischen IPv4 und IPv6 mithilfe des entsprechenden Tabs (falls implementiert)."
+  ],
+  "usage_examples": [
+    "Ein Netzwerkadministrator plant die Aufteilung eines 172.16.0.0/16-Netzes in Subnetze für 100 Abteilungen und überprüft mit dem Tool die optimale CIDR-Präfixlänge für jeweils 500 Hosts.",
+    "Ein Entwickler testet eine Container-Infrastruktur und validiert, ob die zugewiesene IP-Adresse 10.0.0.5 mit der Subnetzmaske 255.255.255.248 im selben Broadcast-Domain wie der Gateway-Server liegt.",
+    "Ein Sicherheitsexperte analysiert ein verdächtiges Subnetz (z.B. 192.168.10.32/28) und ermittelt die genaue Broadcast-Adresse, um potenzielle ARP-Spoofing-Angriffe einzugrenzen.",
+    "Ein Heimanwender berechnet für ein NAS-Gerät in seinem Heimnetz (192.168.178.0/24) den verfügbaren Host-Bereich, um IP-Konflikte mit mobilen Geräten zu vermeiden."
+  ]
+}

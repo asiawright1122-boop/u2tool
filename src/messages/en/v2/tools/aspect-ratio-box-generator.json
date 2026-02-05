@@ -1,0 +1,20 @@
+{
+  "detailed_description": "Aspect Ratio Box Generator creates CSS code for responsive containers that maintain a specific width-to-height ratio regardless of screen size. Choose from common presets like 16:9, 4:3, 1:1, or enter custom ratios. The tool generates both modern CSS using the aspect-ratio property and a padding-bottom fallback for older browsers. Perfect for video embeds, image placeholders, card layouts, and any element that needs to maintain proportions. Get clean, cross-browser compatible CSS code instantly.",
+  "usage_steps": [
+    "Enter ratio or select preset",
+    "Choose CSS method",
+    "Preview",
+    "Copy CSS"
+  ],
+  "usage_examples": [
+    "Create video containers",
+    "Design responsive image frames"
+  ],
+  "preview": "Preview",
+  "width": "Width",
+  "height": "Height",
+  "aspectRatioProperty": "Aspect Ratio Property",
+  "paddingMethod": "Padding Method",
+  "paddingNote": "Note: Padding method is for older browser support",
+  "method": "Method"
+}

@@ -1,0 +1,26 @@
+{
+  "addOption": "Ajouter une Option",
+  "enterOption": "Saisir une option",
+  "spin": "Tourner!",
+  "spinning": "En train de tourner...",
+  "result": "Résultat",
+  "winner": "Gagnant",
+  "options": "Options",
+  "clearAll": "Effacer tout",
+  "minOptions": "Ajoutez au moins 2 options",
+  "detailed_description": "Le Decision Wheel est une application web interactive qui utilise des algorithmes de génération de nombres aléatoires pour simuler le tour de roue physique. Cette roue est configurée avec des options définies par l'utilisateur, qui peuvent varier de simples choix binaires à des listes complexes de décisions. La roue est générée à l'aide de SVG (Scalable Vector Graphics), assurant une qualité visuelle adaptée à tous les écrans et appareils. L'algorithme derrière la roue garantit une distributionuniforme des résultats, rendant chaque tour aussi imprévisible et équitable que possible. Les utilisateurs peuvent bénéficier de cette outil pour des scénarios variés, tels que la prise de décisions groupales, l'organisation de jeux de hasard, ou même la résolution de dilemmes personnels. Son interface intuitive et son fonctionnement simple en font un outil accessible à tous, tout en offrant des fonctionnalités avancées pour les utilisateurs plus techniques.",
+  "usage_steps": [
+    "Accédez à la page du Decision Wheel via le lien 'decision-wheel' dans la catégorie 'fun'.",
+    "Cliquez sur le bouton 'Ajouter une option' pour saisir chaque choix que vous souhaitez inclure dans la roue.",
+    "Une fois toutes les options ajoutées, personnalisez l'apparence de la roue en utilisant les options de couleur et de style disponibles dans le menu 'Personnalisation'.",
+    "Cliquez sur le bouton 'Lancer la roue' pour initier le processus de spin. La roue tournera de manière animée avant de s'arrêter sur une option.",
+    "Observez l'option sélectionnée par la roue, affichée en surbrillance. Vous pouvez cliquer sur 'Rejouer' pour effectuer un nouveau spin si nécessaire.",
+    "Si vous souhaitez enregistrer la configuration actuelle de la roue, utilisez le bouton 'Enregistrer' pour créer un lien vers votre configuration personnalisée, que vous pourrez partager ou réutiliser plus tard."
+  ],
+  "usage_examples": [
+    "Dans un groupe d'amis, utiliser le Decision Wheel pour décider du restaurant où manger lors d'une sortie en ville. Chaque membre du groupe ajoute son restaurant préféré, et la roue choisit le gagnant.",
+    "Un enseignant peut utiliser le Decision Wheel pour sélectionner aléatoirement des étudiants pour répondre à des questions en classe, garantissant une participation équitable de tous les élèves.",
+    "Dans un contexte de développement de produit, une équipe peut utiliser le Decision Wheel pour sélectionner des idées de fonctionnalités parmi une liste de propositions, afin de démarrer rapidement des prototypes ou des tests.",
+    "Un auteur en quête d'inspiration peut utiliser le Decision Wheel pour choisir entre différents thèmes ou personnages pour son prochain roman, ajoutant un élément de surprise et de spontanéité à son processus créatif."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "detailed_description": "El Profiler de Rendimiento de Código mide el tiempo de ejecución y identifica cuellos de botella en tu código.",
+  "usage_steps": [
+    "Pega funciones de código",
+    "Establece el número de iteraciones",
+    "Haz clic en Ejecutar",
+    "Visualiza los tiempos de ejecución",
+    "Comparar implementaciones"
+  ],
+  "usage_examples": [
+    "Comparar algoritmos",
+    "Identificar funciones lentas",
+    "Comparar el rendimiento de bibliotecas"
+  ],
+  "input": "Entrada",
+  "output": "Salida",
+  "process": "Proceso",
+  "copy": "Copiar",
+  "clear": "Borrar",
+  "inputPlaceholder": "Pegue su código aquí...",
+  "outputPlaceholder": "Los resultados aparecerán aquí...",
+  "errors": {
+    "emptyInput": "Por favor, introduce alguna entrada"
+  },
+  "loadExample": "Cargar ejemplo",
+  "analyze": "Analizar",
+  "generate": "Generar",
+  "format": "Formatear",
+  "convert": "Convertir",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Vista previa",
+  "reset": "Restablecer",
+  "add": "Agregar",
+  "remove": "Eliminar",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "settings": "Configuración",
+  "options": "Opciones",
+  "results": "Resultados",
+  "noResults": "Sin resultados",
+  "loading": "Cargando...",
+  "success": "Éxito",
+  "failed": "Fallido",
+  "warning": "Advertencia",
+  "info": "Información"
+}

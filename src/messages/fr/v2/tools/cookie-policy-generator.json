@@ -1,0 +1,28 @@
+{
+  "websiteName": "Nom du Site Web",
+  "websiteUrl": "URL du Site Web",
+  "contactEmail": "Email de Contact",
+  "cookieTypes": "Types de Cookies Utilisés",
+  "essentialCookies": "Cookies Essentiels (Obligatoires)",
+  "functionalCookies": "Cookies Fonctionnels",
+  "analyticsCookies": "Cookies d'Analyse",
+  "marketingCookies": "Cookies Marketing/Publicitaires",
+  "generate": "Générer la Politique de Cookies",
+  "copy": "Copier dans le Presse-Papiers",
+  "output": "Politique de Cookies Générée (Markdown)",
+  "detailed_description": "Le Générateur de Politique de Cookies permet de créer automatiquement un document juridique précis basé sur l'analyse technique des cookies déployés sur un site web. Cet outil détecte les types de cookies utilisés (strictement nécessaires, de performance, de publicité, etc.), leurs durées de vie, leurs finalités et leur conformité avec les réglementations comme le RGPD ou la directive ePrivacy. Il génère un texte personnalisé intégrant des clauses spécifiques selon les juridictions sélectionnées, avec des mentions obligatoires pour les cookies tiers (ex: Google Analytics, pixels publicitaires). Le processus s'appuie sur un scan automatisé du site via son URL, croisant les données techniques avec une base de connaissances juridique mise à jour. Le résultat est un document structuré en HTML ou Markdown, intégrant des balises sémantiques pour une implémentation facile dans un CMS ou un framework frontend.",
+  "usage_steps": [
+    "Saisir l'URL du site web à analyser dans le champ dédié",
+    "Sélectionner les juridictions applicables via un menu déroulant (UE, Suisse, Californie, etc.)",
+    "Classifier manuellement les cookies détectés par catégories (obligatoires, statistiques, marketing)",
+    "Activer/désactiver les options de personnalisation (marque blanche, mentions spécifiques pour les cookies de géolocalisation)",
+    "Revoir le texte généré avec un aperçu en temps réel de la structure HTML",
+    "Exporter le document au format HTML ou copier le code intégrable directement dans le pied de page du site"
+  ],
+  "usage_examples": [
+    "Un e-commerçant français doit mettre en conformité son site avec le RGPD avant le Black Friday, en documentant précisément ses cookies de suivi de panier",
+    "Un blogueur utilisant des publicités Google AdSense génère une politique expliquant clairement les cookies tiers et leur opt-out",
+    "Un développeur d'application web progressive (PWA) configure une politique détaillant les cookies de session et les stockages locaux IndexedDB",
+    "Une entreprise multinationale crée des versions localisées de sa politique de cookies pour ses sites en .de, .es et .it avec les mentions légales adaptées"
+  ]
+}

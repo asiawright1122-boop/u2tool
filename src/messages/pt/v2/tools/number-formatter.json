@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Number Formatter é uma ferramenta técnica especializada em aplicar formatação internacionalizada a números, utilizando padrões de localidade definidos pelo ICU (International Components for Unicode). Ele permite transformar valores numéricos em representações decimais, monetárias ou percentuais, adaptando-se automaticamente às convenções de 150+ idiomas e sistemas monetários. Sua utilidade é crítica em aplicações financeiras, relatórios multilíngues e integrações de dados globais, onde inconsistências de formatação podem causar erros de interpretação. O núcleo da ferramenta processa entradas via JavaScript's Intl API, manipulando opcionalmente parâmetros como símbolos monetários ISO 4217, casas decimais configuráveis e sistemas de numeração (arábico, romano, indiano). A engine detecta automaticamente padrões regionais para separadores de milhares (vírgula, ponto ou espaço) e notação decimal, garantindo precisão em ambientes de desenvolvimento front-end/back-end.",
+  "usage_steps": [
+    "1. Acesse a ferramenta através do menu 'Conversores' no painel superior.",
+    "2. Insira o valor numérico bruto no campo de entrada 'Número Base' (ex: 1234567.89).",
+    "3. Selecione o locale desejado no dropdown 'Localidade' (ex: pt-BR, de-DE, ja-JP).",
+    "4. Escolha o estilo de formatação usando os botões de opção: Decimal, Moeda ou Porcentagem.",
+    "5. Para moedas, insira o código ISO (ex: BRL, EUR) no campo específico ou deixe em branco para uso padrão do locale.",
+    "6. Clique em 'Aplicar Formatação' para gerar o resultado no painel de saída com notação regional correta."
+  ],
+  "usage_examples": [
+    "1. Um e-commerce precisa exibir preços em R$ 1.234,56 (Brasil) e €1.234,56 (Alemanha) a partir do mesmo valor base em USD.",
+    "2. Um analista financeiro converte relatórios de receita em 15 idiomas, mantendo consistência em separadores de milhares e decimais.",
+    "3. Um desenvolvedor valida a exibição de porcentagens em dashboards para clientes japoneses (12,3456%) e franceses (12 345,67%).",
+    "4. Uma API de dados internacionais normaliza a saída de métricas numéricas para sistemas legados que exigem formatação específica de localidade."
+  ]
+}

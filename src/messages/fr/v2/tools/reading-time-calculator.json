@@ -1,0 +1,37 @@
+{
+  "pasteText": "Coller votre texte",
+  "placeholder": "Coller votre article, billet de blog ou tout autre texte ici pour calculer le temps de lecture...",
+  "readingSpeed": "Vitesse de Lecture :",
+  "wpm": "Mots par minute (WPM)",
+  "words": "Mots",
+  "characters": "Caractères",
+  "sentences": "Phrases",
+  "paragraphs": "Paragraphes",
+  "readingTime": "Temps de Lecture",
+  "speakingTime": "Temps de Parole",
+  "reference": "Référence de Vitesse de Lecture",
+  "slow": "Lent :",
+  "average": "Moyen :",
+  "fast": "Rapide :",
+  "tip": "💡 Conseil : L'adulte moyen lit à environ 200-250 mots par minute. Le contenu technique peut nécessiter une lecture plus lente (150-200 WPM), tandis que les sujets familiers peuvent être lus plus rapidement (300+ WPM).",
+  "lessThanMinute": "Moins d'une minute",
+  "minute": "1 minute",
+  "minutes": "{n} minutes",
+  "hour": "{n} heure",
+  "hours": "{n} heures",
+  "detailed_description": "Le Calculateur de Temps de Lecture est un outil avancé d'analyse de texte qui combine algorithmes de traitement du langage naturel (NLP) et modèles statistiques pour déterminer avec précision la durée nécessaire à la lecture d'un contenu. Techniquement, il décompose le texte en tokens, identifie les structures syntaxiques complexes (comme les propositions subordonnées ou les tournures idiomatiques) et applique des coefficients de difficulté variables selon le domaine (scientifique, littéraire, technique). Il intègre également des paramètres de typographie (taille des paragraphes, présence de listes, emphases en gras/italique) qui influencent le rythme de lecture. Cet outil s'adresse aux rédacteurs professionnels souhaitant optimiser la densité informationnelle de leurs articles, aux enseignants concevant des supports pédagogiques adaptés aux durées imparties, ou aux étudiants planifiant leur travail personnel. Contrairement aux solutions basiques basées sur un ratio fixe mots/minute, notre algorithme utilise des données réelles de lectures oculaires (eye-tracking studies) pour modéliser les pauses naturelles entre les phrases et les variations de vitesse selon la complexité lexicale mesurée via l'indice Flesch-Kincaid. Le calcul final intègre également une correction pour les contenus multimédias intégrés (liens, images) qui interrompent la lecture linéaire.",
+  "usage_steps": [
+    "Collez votre texte dans la zone d'analyse ou chargez un fichier .TXT/.HTML via le bouton 'Importer Fichier'",
+    "Sélectionnez le public cible à l'aide des curseurs : 'Expert' (vitesse moyenne 250 mots/minute) à 'Débutant' (100 mots/minute)",
+    "Activez/désactivez les options de correction avancée : 'Texte technique' (ajout 15% de temps) ou 'Lecture intensive' (doublement des pauses)",
+    "Choisissez le format de sortie : estimation brute, chronologie détaillée par section ou graphique de charge cognitive",
+    "Cliquez sur 'Calculer' pour lancer l'analyse sémantique en temps réel",
+    "Téléchargez le rapport PDF ou copiez le code d'intégration pour afficher l'estimation sur votre site"
+  ],
+  "usage_examples": [
+    "Un rédacteur technique évalue si sa documentation de 1800 mots nécessitera un briefing oral complémentaire en fonction de l'estimation de 8 minutes 23 secondes",
+    "Une chargée de communication ajuste les sous-titres de son article de blog pour respecter la durée moyenne de scroll de 2 minutes sur son audience cible",
+    "Un enseignant conçoit une fiche de lecture de 3 pages en tenant compte des 12 minutes supplémentaires nécessaires pour les passages avec vocabulaire spécialisé",
+    "Un UX designer compare les temps de lecture estimés entre deux versions d'un formulaire d'inscription pour optimiser le taux de conversion"
+  ]
+}

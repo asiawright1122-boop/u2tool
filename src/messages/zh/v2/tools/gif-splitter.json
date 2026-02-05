@@ -1,0 +1,47 @@
+{
+  "uploadGif": "上传GIF",
+  "frames": "帧",
+  "downloadAll": "下载全部",
+  "downloadFrame": "下载此帧",
+  "processing": "处理中...",
+  "dropzone": "点击或拖拽GIF上传",
+  "originalGif": "原始GIF",
+  "totalFrames": "总帧数",
+  "selectedFrames": "已选帧数",
+  "selectAll": "全选",
+  "deselectAll": "取消全选",
+  "downloadSelected": "下载选中",
+  "detailed_description": "GIF Splitter 是一款专为处理动画 GIF 文件而设计的工具，它可以将一个动画 GIF 分解成多个静态帧图像。这款工具通过解析 GIF 文件的帧序列，提取出每一帧并将其保存为独立的图像文件。对于需要对 GIF 文件进行精细化处理的用户来说，GIF Splitter 是一个不可或缺的工具。用户可以利用这些提取出的帧图像进行进一步的编辑、优化或分析。例如，设计师可以使用这些帧图像创建更复杂的动画效果，开发者可以利用这些帧图像进行性能测试或质量检查。GIF Splitter 支持多种输出格式，如 PNG、JPEG 等，同时提供批量处理功能，极大地提高了工作效率。",
+  "usage_steps": [
+    "Step 1: 访问 GIF Splitter 工具页面，点击“选择文件”按钮或直接将 GIF 文件拖放到指定区域。",
+    "Step 2: 选择需要分解的 GIF 文件，支持多文件同时选择。",
+    "Step 3: 在“输出格式”选项中，选择希望提取帧图像的格式，如 PNG 或 JPEG。",
+    "Step 4: 在“帧提取”选项中，设定提取的帧范围。可以提取所有帧，也可以指定起始和结束帧。",
+    "Step 5: 点击“开始提取”按钮，工具将开始处理并提取指定的帧。",
+    "Step 6: 提取完成后，点击“下载”按钮，将所有提取的帧图像打包下载到本地。"
+  ],
+  "usage_examples": [
+    "Example 1: 设计师在制作动画时，需要将一个复杂的 GIF 分解成多个静态帧，以便进行逐帧编辑和优化。",
+    "Example 2: 开发者在测试动画性能时，使用 GIF Splitter 提取每一帧，通过分析每一帧的加载时间和质量来优化动画效果。",
+    "Example 3: 视频编辑师在制作视频时，需要将动画 GIF 转换为一系列静态图像，以用于视频的逐帧导入和编辑。",
+    "Example 4: 网站管理员在处理用户上传的 GIF 文件时，使用 GIF Splitter 将 GIF 分解成静态图像，以便进行内容审核和管理。"
+  ],
+  "faqs": [
+    {
+      "question": "Gif Splitter 是免费的吗？",
+      "answer": "是的，Gif Splitter 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Gif Splitter 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Gif Splitter 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Gif Splitter 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

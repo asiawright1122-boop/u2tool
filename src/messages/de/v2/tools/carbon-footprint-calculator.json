@@ -1,0 +1,53 @@
+{
+  "monthly": "Monatlich",
+  "yearly": "Jährlich",
+  "month": "Monat",
+  "year": "Jahr",
+  "transportation": "Transport",
+  "carDistance": "Autofahrstrecke",
+  "petrol": "Benzin",
+  "diesel": "Diesel",
+  "hybrid": "Hybrid",
+  "electric": "Elektrisch",
+  "flightHours": "Flugstunden",
+  "shortHaul": "Kurzstrecke (<3h)",
+  "mediumHaul": "Mittelstrecke (3-6h)",
+  "longHaul": "Langstrecke (>6h)",
+  "trainDistance": "Zugstrecke",
+  "busDistance": "Busstrecke",
+  "homeEnergy": "Haushaltsenergie",
+  "electricity": "Strom",
+  "naturalGas": "Erdgas",
+  "heatingOil": "Heizöl",
+  "lifestyle": "Lebensstil",
+  "dietType": "Ernährungstyp",
+  "diets": {
+    "meat": "Viel Fleisch",
+    "average": "Durchschnitt",
+    "vegetarian": "Vegetarisch",
+    "vegan": "Vegan"
+  },
+  "results": "Ihr CO₂-Fußabdruck",
+  "total": "Gesamt",
+  "treesNeeded": "Bäume zur Kompensation",
+  "trees": "Bäume pro Jahr",
+  "levels": {
+    "low": "Geringe Auswirkung",
+    "average": "Durchschnitt",
+    "high": "Hohe Auswirkung",
+    "veryHigh": "Sehr hohe Auswirkung"
+  },
+  "detailed_description": "Der CO2-Fußabdruck-Rechner hilft Ihnen, Ihre Umweltauswirkungen zu messen.",
+  "usage_steps": [
+    "Berechnungszeitraum wählen",
+    "Transportdaten eingeben",
+    "Hausenergieverbrauch eingeben",
+    "Ernährungstyp wählen",
+    "Gesamten CO2-Fußabdruck anzeigen"
+  ],
+  "usage_examples": [
+    "Persönliche Umweltauswirkungen verfolgen",
+    "Verschiedene Lebensstilentscheidungen vergleichen",
+    "CO2-Ausgleichsstrategien planen"
+  ]
+}

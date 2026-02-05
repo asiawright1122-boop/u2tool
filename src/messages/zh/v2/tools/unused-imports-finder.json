@@ -1,0 +1,52 @@
+{
+  "detailed_description": "未使用导入查找器会扫描您的代码，以识别已声明但未使用的导入。",
+  "usage_steps": [
+    "粘贴包含导入的代码",
+    "选择语言",
+    "点击分析",
+    "查看未使用导入",
+    "复制清理后的代码"
+  ],
+  "usage_examples": [
+    "清理npm导入",
+    "减少包大小",
+    "维护干净的导入"
+  ],
+  "input": "输入",
+  "output": "输出",
+  "process": "处理",
+  "copy": "复制",
+  "clear": "清除",
+  "inputPlaceholder": "在此粘贴 JavaScript/TypeScript 代码...",
+  "outputPlaceholder": "结果将显示在此处...",
+  "errors": {
+    "emptyInput": "请输入一些内容"
+  },
+  "loadExample": "加载示例",
+  "analyze": "分析",
+  "generate": "生成",
+  "format": "格式化",
+  "convert": "转换",
+  "validate": "验证",
+  "export": "导出",
+  "preview": "预览",
+  "reset": "重置",
+  "add": "添加",
+  "remove": "移除",
+  "save": "保存",
+  "cancel": "取消",
+  "settings": "设置",
+  "options": "选项",
+  "results": "结果",
+  "noResults": "无结果",
+  "loading": "加载中...",
+  "success": "成功",
+  "failed": "失败",
+  "warning": "警告",
+  "info": "信息",
+  "importStatements": "导入语句",
+  "unusedImports": "未使用的导入",
+  "usedImports": "已使用的导入",
+  "click": "点击",
+  "clickToAnalyze": "点击分析"
+}

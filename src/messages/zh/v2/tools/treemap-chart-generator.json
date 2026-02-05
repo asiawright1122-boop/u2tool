@@ -1,0 +1,94 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "showLabels": "显示标签",
+  "showBreadcrumb": "显示导航路径",
+  "leafDepth": "叶子深度",
+  "nodeName": "节点名称",
+  "value": "值",
+  "item": "项目",
+  "addNode": "添加节点",
+  "addChild": "添加子节点",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "组织结构",
+  "sampleTitle": "文件结构",
+  "dataEditor": "数据编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "sampleData": {
+    "root": "根",
+    "child1": "子节点1",
+    "child2": "子节点2",
+    "child3": "子节点3",
+    "categoryA": "类别A",
+    "categoryB": "类别B",
+    "categoryC": "类别C",
+    "categoryD": "类别D",
+    "tech": "技术",
+    "software": "软件",
+    "hardware": "硬件",
+    "services": "服务",
+    "finance": "金融",
+    "banking": "银行",
+    "insurance": "保险",
+    "healthcare": "医疗保健",
+    "pharma": "制药",
+    "medical": "医疗设备",
+    "energy": "能源"
+  },
+  "tips": {
+    "title": "小贴士",
+    "tip1": "添加节点和子节点",
+    "tip2": "设置节点值",
+    "tip3": "启用导航路径",
+    "tip4": "调整叶子深度",
+    "tip5": "导出为PNG或SVG"
+  },
+  "detailed_description": "Treemap Chart Generator 是一个在线工具，用于创建树状图（Treemap），这是一种可视化层次数据结构的有效方式。通过将数据集中的每个项目表示为矩形，这些矩形的大小和颜色可以反映不同的数据维度，如数量、比例或类别。树状图特别适用于展示多层级的数据结构，如组织架构、文件系统或产品分类。用户可以轻松导入数据，调整布局和颜色方案，然后导出为 PNG 或 SVG 格式的图像，适用于报告、网站或演示文稿。通过 Treemap Chart Generator，用户不仅能够快速生成高质量的树状图，还可以在不同的数据集和视觉风格之间进行灵活切换，从而更好地满足各种展示需求。",
+  "usage_steps": [
+    "Step 1: 打开 Treemap Chart Generator 网页，点击页面顶部的“导入数据”按钮，选择 CSV、JSON 或 Excel 文件上传。",
+    "Step 2: 在“数据预览”区域检查上传的数据，确保所有列和行都正确显示。如果有需要，可以点击“编辑数据”按钮进行手动调整。",
+    "Step 3: 转到“图表设置”部分，选择合适的图表类型（如平方布局或条形布局），并调整矩形的大小和颜色方案。",
+    "Step 4: 在“标签设置”中，选择是否显示每个矩形的标签，以及标签的字体大小和颜色。",
+    "Step 5: 点击“预览图表”按钮，查看生成的树状图。如果需要进一步调整，可以返回上一步进行修改。",
+    "Step 6: 确认图表无误后，点击“导出图表”按钮，选择 PNG 或 SVG 格式，然后保存到本地设备。"
+  ],
+  "usage_examples": [
+    "Example 1: 一家公司的市场部门使用 Treemap Chart Generator 来展示不同产品线的销售业绩，每个矩形的大小表示销售额，颜色表示利润率，帮助管理层一目了然地了解各产品线的表现。",
+    "Example 2: 一位数据分析师在处理庞大的文件系统时，利用 Treemap Chart Generator 可视化文件夹和文件的大小分布，快速识别占用空间较大的文件或文件夹，优化存储管理。",
+    "Example 3: 一个在线教育平台使用 Treemap Chart Generator 展示不同课程类别的注册人数，每个矩形的大小表示注册人数，颜色表示课程完成率，帮助平台优化课程内容和推广策略。",
+    "Example 4: 一家电商公司通过 Treemap Chart Generator 分析不同类别的商品销售情况，每个矩形的大小表示销售额，颜色表示退货率，从而快速发现高退货率的商品类别，改进供应链管理。"
+  ],
+  "faqs": [
+    {
+      "question": "Treemap Chart Generator 是免费的吗？",
+      "answer": "是的，Treemap Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Treemap Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Treemap Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Treemap Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Treemap Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

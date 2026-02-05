@@ -1,0 +1,28 @@
+{
+  "strategy": "Estrategia de Combinación",
+  "shallow": "Fusión Superficial",
+  "deep": "Fusión Profunda",
+  "concat": "Concatenar Arreglos",
+  "shallowDesc": "Sobrescribe las claves de nivel superior",
+  "deepDesc": "Fusiona recursivamente objetos anidados",
+  "concatDesc": "Concatena arreglos en lugar de sobrescribir",
+  "merge": "Combinar",
+  "result": "Resultado",
+  "copy": "Copiar",
+  "inputPlaceholder": "Introduce JSON...",
+  "detailed_description": "El JSON Merger es una herramienta especializada para combinar múltiples objetos JSON aplicando estrategias de fusión avanzadas. Técnicamente, permite la unión de estructuras de datos heterogéneas mediante algoritmos de resolución de conflictos, concatenación de arrays y fusión recursiva de objetos anidados. Los usuarios lo necesitan para integrar datos provenientes de múltiples APIs REST, consolidar archivos de configuración en arquitecturas de microservicios, o normalizar datos en pipelines de ETL. Internamente, el parser analiza los JSONs de entrada, identifica claves coincidentes y aplica la estrategia seleccionada: sobrescritura (overwrite), unión (union), o mezcla profunda (deep merge). Soporta operaciones en arrays mediante concatenación o eliminación de duplicados, y resuelve conflictos de tipos de datos mediante coerción o priorización de valores. Esto lo diferencia de herramientas básicas de concatenación, ya que ofrece control granular sobre la lógica de fusión mediante un motor basado en árboles de sintaxis abstractos (AST).",
+  "usage_steps": [
+    "1. Arrastra hasta la zona de carga o selecciona hasta 5 archivos JSON desde tu dispositivo",
+    "2. Elige la estrategia de fusión en el selector: 'Sobrescribir', 'Concatenar arrays' o 'Fusión profunda'",
+    "3. Activa la opción 'Eliminar duplicados' si deseas normalizar arrays durante la fusión",
+    "4. Haz clic en 'Iniciar fusión' para procesar los archivos con el motor AST",
+    "5. Revisa el resultado en el visor de JSON con resaltado de sintaxis y árbol estructurado",
+    "6. Descarga el JSON fusionado o copia el código directamente al portapapeles"
+  ],
+  "usage_examples": [
+    "Integrar respuestas de múltiples endpoints de una API GraphQL en un único objeto para visualización en D3.js",
+    "Consolidar archivos de configuración de entornos de desarrollo, staging y producción en un microservicio",
+    "Combinar datos de sensores IoT con estructuras heterogéneas para un sistema de monitoreo ambiental",
+    "Fusionar datasets de usuarios provenientes de diferentes CRMs para un proceso de machine learning"
+  ]
+}

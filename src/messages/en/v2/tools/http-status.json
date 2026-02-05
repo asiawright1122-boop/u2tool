@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The HTTP Status Codes tool provides a comprehensive reference for interpreting HTTP response status codes defined in RFC 7231 and related standards. This utility maps numeric status codes to their canonical reason phrases while offering technical context including response class categorization (1xx-5xx), applicable request methods, and associated headers. Developers use it to diagnose web server interactions, debug API integrations, audit SEO performance, and validate error handling logic. The tool's database indexes all standardized codes with metadata about their semantic meaning, cacheability, and connection management implications. When users input a code, the backend performs a lookup against a precomputed trie structure containing all valid status code permutations, returning both human-readable explanations and machine-parsable metadata. Advanced features include filtering by response class, searching by header field relationships, and code-specific troubleshooting guidance derived from IETF specifications.",
+  "usage_steps": [
+    "Access the tool's search interface containing a numeric keypad and text input field",
+    "Enter a 3-digit HTTP status code (e.g., 404) or select from the response class dropdown (1xx-5xx)",
+    "Review the color-coded response classification displayed in the status summary panel",
+    "Examine the technical details section showing applicable headers (e.g., Location for 302)",
+    "Toggle between 'Developer Explanation' and 'RFC Specification' views using the tab control",
+    "Use the 'Common Causes' accordion menu to explore troubleshooting scenarios"
+  ],
+  "usage_examples": [
+    "A developer debugging a 502 Bad Gateway error identifies misconfigured proxy servers by cross-referencing the 'Connection' header information",
+    "An SEO specialist auditing site migrations verifies 301 redirect implementations using the status code's cache-control directives",
+    "API consumers validating error responses compare 4xx series codes against documented endpoints in the troubleshooting pane",
+    "Students learning HTTP protocols explore 1xx informational responses through the interactive response class filter"
+  ]
+}

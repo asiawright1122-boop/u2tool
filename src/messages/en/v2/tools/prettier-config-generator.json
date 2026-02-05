@@ -1,0 +1,38 @@
+{
+  "detailed_description": "Prettier Config Generator helps you create customized Prettier configuration files for consistent code formatting. Configure all major options including print width, tab width, single vs double quotes, semicolons, trailing commas, bracket spacing, and more. Preview how your code will be formatted with different settings. The tool generates .prettierrc files in JSON format ready to use in any JavaScript, TypeScript, CSS, or HTML project.",
+  "usage_steps": [
+    "Set your preferred print width (default 80)",
+    "Choose tab width and whether to use tabs or spaces",
+    "Select single or double quotes",
+    "Configure semicolon usage",
+    "Set trailing comma preference",
+    "Adjust bracket spacing and other options",
+    "Click Generate and copy the configuration"
+  ],
+  "usage_examples": [
+    "Create a Prettier config for a team project",
+    "Set up consistent formatting for a monorepo",
+    "Configure Prettier for a React project",
+    "Customize formatting for legacy codebase migration"
+  ],
+  "none": "None",
+  "all": "All",
+  "always": "Always",
+  "avoid": "Avoid",
+  "auto": "Auto",
+  "preserve": "Preserve",
+  "never": "Never",
+  "printWidth": "print Width",
+  "tabWidth": "tab Width",
+  "trailingComma": "trailing Comma",
+  "arrowParens": "arrow Parens",
+  "endOfLine": "end Of Line",
+  "proseWrap": "prose Wrap",
+  "useTabs": "use Tabs",
+  "semi": "semi",
+  "singleQuote": "single Quote",
+  "bracketSpacing": "bracket Spacing",
+  "bracketSameLine": "bracket Same Line",
+  "generate": "Generate",
+  "download": "Download"
+}

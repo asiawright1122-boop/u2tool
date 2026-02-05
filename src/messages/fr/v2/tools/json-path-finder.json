@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le JSON Path Finder est un outil technique conçu pour identifier et extraire des chemins spécifiques dans des données structurées au format JSON. Il permet aux développeurs de générer des expressions JSONPath valides en analysant la structure arborescente du document, y compris les objets imbriqués, les tableaux et les types de données hétérogènes. Lorsqu'un utilisateur charge un JSON, l'outil construit un arbre syntaxique abstrait (AST) pour cartographier les relations hiérarchiques et attribue des chemins normalisés à chaque nœud. Cela est particulièrement utile pour le débogage d'API, la transformation de données ou l'automatisation de tests, où isoler des champs spécifiques (comme des jetons d'authentification ou des identifiants) est critique. L'interface intègre un analyseur lexical qui prend en charge les notations pointées (dot-notation), les indices de tableau et les expressions conditionnelles ($..[?(@.status == 'error')]). Les résultats affichent des chemins complets en syntaxe JSONPath standard, avec une coloration syntaxique pour faciliter la lecture. Contrairement à d'autres outils, il propose une validation en temps réel des chemins générés via une évaluation statique du JSON d'entrée, évitant les erreurs fréquentes liées aux structures dynamiques.",
+  "usage_steps": [
+    "1. Collez votre JSON brut dans l'éditeur de code à gauche de l'interface.",
+    "2. Cliquez sur le bouton 'Analyser JSON' pour générer l'arbre syntaxique interactif.",
+    "3. Sélectionnez un nœud dans le navigateur visuel à droite pour afficher son chemin absolu.",
+    "4. Copiez l'expression JSONPath surlignée en bleu dans le champ de sortie.",
+    "5. Utilisez les options de filtrage pour appliquer des prédicats ou modifier la notation (dot/bracket).",
+    "6. Validez le chemin via le bouton 'Tester' pour vérifier sa correspondance avec le JSON source."
+  ],
+  "usage_examples": [
+    "1. Un développeur extrait le chemin $.user[0].token d'une réponse API pour automatiser des tests d'authentification.",
+    "2. Un ingénieur DevOps identifie les chemins $.logs[*].error.code dans des fichiers JSON de logs pour créer des alertes personnalisées.",
+    "3. Un architecte de données transforme un JSON complexe en CSV en sélectionnant les chemins pertinents pour un ETL (Extract, Transform, Load).",
+    "4. Un administrateur système modifie un fichier de configuration en localisant précisément le chemin $.network.interfaces[?(@.type == 'vlan')].ip."
+  ]
+}

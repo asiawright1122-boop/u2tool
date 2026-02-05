@@ -1,0 +1,26 @@
+{
+  "detailed_description": "Der JSON nach Protocol Buffers Konverter wandelt JSON-Daten in Protocol Buffers Schema-Definitionen um. Perfekt für Entwickler, die mit gRPC, Microservices und leistungsfähiger Datenserialisierung arbeiten.",
+  "usage_steps": [
+    "Fügen Sie Ihre JSON-Daten im Eingabebereich ein",
+    "Konfigurieren Sie die Nachrichtennamen und Paketoptionen",
+    "Klicken Sie auf 'Konvertieren', um das Proto-Schema zu generieren",
+    "Bewerten Sie die generierte .proto-Definition",
+    "Kopieren oder laden Sie die Proto-Datei herunter"
+  ],
+  "usage_examples": [
+    "Generieren Sie Proto-Schemata aus API-Antworten",
+    "Erstellen Sie gRPC-Dienstdefinitionen",
+    "Konvertieren Sie REST-APIs in gRPC"
+  ],
+  "jsonInput": "JSON-Eingabe",
+  "protoOutput": "Proto-Ausgabe",
+  "messageName": "Nachrichtename",
+  "packageName": "Paketname",
+  "convert": "Konvertieren",
+  "copy": "Kopieren",
+  "copied": "Kopiert!",
+  "download": "Herunterladen .proto",
+  "inputPlaceholder": "Fügen Sie hier Ihren JSON ein...",
+  "placeholder": "JSON hier einfügen...",
+  "outputPlaceholder": "Protocol Buffers-Ausgabe erscheint hier..."
+}

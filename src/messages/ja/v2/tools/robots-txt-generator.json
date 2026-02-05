@@ -1,0 +1,34 @@
+{
+  "allowAll": "すべてを許可",
+  "blockAll": "すべてをブロック",
+  "standard": "標準",
+  "wordpress": "WordPress",
+  "rule": "ルール {index}",
+  "remove": "削除",
+  "userAgent": "User-agent",
+  "allow": "許可（一行ずつ）",
+  "disallow": "ブロック（一行ずつ）",
+  "addRule": "+ ルール追加",
+  "sitemapUrl": "サイトマップ URL",
+  "crawlDelay": "クロール遅延（秒）",
+  "output": "robots.txt",
+  "detailed_description": "robots.txt Generatorは、ウェブサイトのクロール制御を正確に設計するためのツールです。クロールディレクティブ（User-agent、Disallow、Allow、Sitemap）を基に、検索エンジンボットのアクセス許可/制限ルールを構築します。開発者はSEO最適化、クロール予算管理、非公開リソース保護のために必要です。たとえば、管理画面ディレクトリや一時ファイルのインデックス回避、特定ボットのアクセス制限が可能です。ツール内部では、ユーザーが選択したディレクティブをRFC 9309準拠の構文に変換し、動的にrobots.txtファイルを生成します。ワイルドカード（*）、エンドスラッシュ（$）などのURLパターン、Crawl-Delayパラメータ、複数User-agentの条件分岐もサポートします。生成後はHTTPリクエストで/.well-known/robots.txtまたはルートパスに配置し、レスポンスコード200で正しく配信されるように構成する必要があります。",
+  "usage_steps": [
+    "1. ボット種別選択：User-agentセクションで特定ボット（Googlebot、Yandexなど）または「*」を選択",
+    "2. パス制限設定：Disallow欄に制限するURLパス（例：/admin/）を入力し、ワイルドカード使用可能",
+    "3. 許可ルール追加：特定ディレクトリ内でAllowルールを設定して例外アクセスを許可",
+    "4. サイトマップ登録：Sitemap欄にXMLサイトマップURLを追加し検索エンジンに通知",
+    "5. クロールレート設定：Crawl-Delay欄にリクエスト間隔（秒）を入力しサーバー負荷軽減",
+    "6. ダウンロード：生成されたrobots.txtファイルを「robots.txt」名で保存しサーバーに配置"
+  ],
+  "usage_examples": [
+    "例1：ECサイトの管理画面（/admin/）を全ボットからブロックし、セキュリティ強化",
+    "例2：一時的なキャンペーンページ（/summer2024/）を検索結果から除外し公開前にテスト可能に",
+    "例3：開発用ステージング環境（staging.example.com）をクロール対象外として誤インデックス防止",
+    "例4：高頻度アクセスの画像ディレクトリ（/images/）にCrawl-Delayを設定しサーバー負荷を調整"
+  ],
+  "copied": "コピーしました!",
+  "copy": "コピー",
+  "allow-all": "すべて許可",
+  "block-all": "すべてブロック"
+}

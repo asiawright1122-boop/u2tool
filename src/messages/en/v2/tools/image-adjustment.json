@@ -1,0 +1,27 @@
+{
+  "uploadImage": "Upload Image",
+  "brightness": "Brightness",
+  "contrast": "Contrast",
+  "saturation": "Saturation",
+  "hue": "Hue",
+  "blur": "Blur",
+  "grayscale": "Grayscale",
+  "sepia": "Sepia",
+  "reset": "Reset",
+  "noImage": "Please upload an image",
+  "detailed_description": "The Image Adjustment tool provides granular control over raster image processing through a web interface, enabling manipulation of luminance values, color channels, and spatial filters. Technically, it leverages HTML5 Canvas for client-side pixel manipulation and WebGL shaders for real-time rendering of adjustments. Users can modify brightness via luminance channel scaling, adjust contrast using sigmoidal transfer functions, and manipulate saturation through HSL color space conversion. Advanced features include per-channel RGB curve adjustments, unsharp masking for sharpening, and gamma correction for display calibration. This tool addresses needs across photography (post-processing RAW conversions), UI/UX design (asset optimization), and digital marketing (visual consistency). All operations occur in-browser via WebAssembly modules, preserving privacy and supporting non-destructive editing through layer composites. Histogram analysis tools help users identify clipping points and dynamic range issues.",
+  "usage_steps": [
+    "1. Click 'Upload Image' to load a bitmap (PNG/JPEG/WebP) or vector (SVG) file up to 25MB",
+    "2. Use the 'Brightness' slider to adjust luminance values with real-time preview in the split-view comparator",
+    "3. Engage 'Advanced Mode' to access individual RGB channel curves and CMYK color space conversion",
+    "4. Apply unsharp masking via the 'Sharpen' panel with customizable radius (0.3-5.0px) and amount (50-150%)",
+    "5. Utilize the 'Histogram Equalization' toggle to automatically balance tonal distribution",
+    "6. Click 'Download Adjusted Image' to export with custom DPI settings (72-1200) and compression level"
+  ],
+  "usage_examples": [
+    "Example 1: A photographer normalizes exposure across a product shoot by matching histograms and applying lens correction profiles",
+    "Example 2: A web designer reduces image file size by adjusting JPEG quality to 85 while maintaining visual fidelity",
+    "Example 3: A social media manager creates Instagram stories with consistent color grading using HSL presets",
+    "Example 4: An OCR specialist enhances document scans by increasing contrast and applying adaptive thresholding"
+  ]
+}

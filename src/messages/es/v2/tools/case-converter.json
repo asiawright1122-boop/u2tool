@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El Conversor de Mayúsculas y Minúsculas es una herramienta de procesamiento de texto basada en algoritmos de normalización Unicode que permite transformar cadenas de caracteres mediante operaciones de case mapping definidas en el estándar Unicode 15.0. Soporta conversiones precisas a mayúsculas (uppercase), minúsculas (lowercase), formato de título (title case) y estilo de alternancia (alternating case), aplicando reglas contextuales para lenguajes específicos. Utiliza un motor de procesamiento sin estado (stateless) que garantiza consistencia en conversiones masivas, manteniendo intactos caracteres especiales y espacios múltiples mediante técnicas de anchoring regex. La herramienta es esencial para desarrolladores que necesitan estandarizar datos entrantes de APIs, preparar textos para tokenización NLP, o corregir inconsistencias en bases de datos no normalizadas. Su implementación en JavaScript con Web Workers permite procesamiento en cliente sin latencia de servidor, ideal para manipular texto en entornos CI/CD o workflows de integración continua.",
+  "usage_steps": [
+    "Pega tu texto en el área de edición con soporte para arrastrar y soltar archivos .txt/.csv",
+    "Selecciona el modo de conversión usando el selector de operaciones: 'UPPERCASE', 'lowercase', 'Title Case' o 'AlternatingCase'",
+    "Activa la opción 'Preservar espacios' para mantener tabulaciones o 'Normalizar Unicode' para aplicar formas NFC/NFD",
+    "Usa el campo 'Delimitadores personalizados' para definir caracteres que evitar en conversiones específicas",
+    "Haz clic en 'Vista previa en tiempo real' para ver cambios antes de la exportación",
+    "Descarga el resultado en formato .txt o copia el texto convertido al portapapeles mediante el botón 'Copiar sin formato'"
+  ],
+  "usage_examples": [
+    "Convertir respuestas de API en JSON a lowercase para comparación de strings en sistemas legacy",
+    "Estandarizar nombres de columnas en scripts SQL generados automáticamente con mixedCase a snake_case",
+    "Preparar contenido para SEO normalizando títulos en title case siguiendo directrices de Google",
+    "Transformar logs del sistema en formato alternado para mejorar legibilidad en informes técnicos"
+  ]
+}

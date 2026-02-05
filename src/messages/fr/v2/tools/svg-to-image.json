@@ -1,0 +1,27 @@
+{
+  "uploadSvg": "Télécharger un fichier SVG",
+  "svgCode": "SVG Code",
+  "loadSample": "Charger un exemple",
+  "placeholder": "Collez le code SVG ici...",
+  "format": "Format de sortie",
+  "scale": "Échelle",
+  "backgroundColor": "Couleur d'arrière-plan",
+  "transparentBackground": "Fond transparent",
+  "preview": "Aperçu",
+  "noPreview": "Entrez le code SVG ou téléchargez un fichier",
+  "detailed_description": "Le convertisseur SVG vers Image permet de transformer des fichiers vectoriels au format SVG (Scalable Vector Graphics) en images matricielles au format PNG, JPEG ou WebP. Ce processus s'adresse aux développeurs et designers confrontés à des limitations d'interopérabilité entre les formats vectoriels et les formats d'image raster utilisés dans des contextes web, mobile ou d'impression. L'outil utilise un moteur de rendu basé sur des bibliothèques de traitement graphique comme Cairo ou librsvg pour parser le DOM SVG, interpréter les chemins vectoriels, les dégradés et filtres, puis appliquer une rasterisation à résolution configurable (jusqu'à 600 DPI). Les utilisateurs peuvent ajuster des paramètres critiques comme la densité de pixels, la couleur de fond transparente ou non, et la compression sans perte/pertes selon le format cible. Contrairement aux outils basiques, ce convertisseur préserve les subtilités du rendu SVG comme les masques alpha et les transformations matricielles, tout en optimisant les fichiers de sortie pour des performances web (WebP) ou une qualité d'impression (PNG haute définition).",
+  "usage_steps": [
+    "1. Cliquez sur 'Importer SVG' pour charger votre fichier vectoriel depuis votre appareil ou collez directement le code SVG dans l'éditeur de texte.",
+    "2. Sélectionnez le format de sortie souhaité (PNG, JPEG ou WebP) via le menu déroulant 'Format de conversion'.",
+    "3. Ajustez la résolution en DPI à l'aide du curseur (1x à 4x) ou entrez une valeur personnalisée pour les besoins d'impression ou d'affichage haute densité.",
+    "4. Activez/désactivez l'option 'Arrière-plan transparent' selon que vous souhaitez conserver la transparence du SVG ou ajouter un fond uni.",
+    "5. Appuyez sur 'Démarrer la conversion' pour lancer le processus de rasterisation assisté par GPU.",
+    "6. Téléchargez l'image générée ou copiez le lien partageable avec les paramètres de conversion appliqués."
+  ],
+  "usage_examples": [
+    "Un développeur convertit un logo SVG en PNG 300 DPI pour l'intégrer dans une brochure PDF destinée à l'impression offset.",
+    "Un designer web optimise des icônes SVG en format WebP avec compression adaptative pour réduire le poids d'une page mobile.",
+    "Un illustrateur transforme une infographie vectorielle complexe en JPEG haute qualité pour un article de blog nécessitant un chargement rapide.",
+    "Un intégrateur HTML exporte des diagrammes SVG générés dynamiquement vers le format PNG avec fond transparent pour des présentations PowerPoint."
+  ]
+}

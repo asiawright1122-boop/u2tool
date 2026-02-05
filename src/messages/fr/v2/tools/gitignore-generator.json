@@ -1,0 +1,22 @@
+{
+  "detailed_description": "Le générateur .gitignore permet de créer des fichiers de configuration pour Git, définissant les règles d'exclusion de fichiers et répertoires dans un dépôt. Ceux-ci évitent l'ajout accidentel de fichiers temporaires, de dépendances, de fichiers de build ou de données sensibles (comme les clés API ou les fichiers de configuration locaux). Les utilisateurs ont besoin de ce outil pour automatiser la création de règles complexes basées sur des langages (Node.js, Python, etc.), des frameworks (React, Django), ou des environnements (Docker, Kubernetes). Le générateur utilise une base de données de modèles préconfigurés, combinés via des algorithmes de correspondance de motifs glob, et vérifie la syntaxe via des analyseurs lexicaux pour éviter les erreurs. Il intègre également des optimisations pour éviter les conflits entre modèles, garantissant une structure de dépôt propre et performante.",
+  "usage_steps": [
+    "1. Sélectionnez votre type de projet (ex. : 'Frontend', 'Backend', 'Machine Learning') dans le menu déroulant 'Catégorie'.",
+    "2. Activez les cases à cocher correspondant aux langages ou outils utilisés (ex. : 'JavaScript', 'Python', 'Docker').",
+    "3. Ajoutez des règles personnalisées dans le champ 'Règles supplémentaires', en utilisant la syntaxe glob (ex. : '/logs/*.log').",
+    "4. Utilisez le bouton 'Prévisualiser' pour afficher le fichier .gitignore généré avec la mise en évidence des lignes actives.",
+    "5. Cliquez sur 'Valider la syntaxe' pour vérifier les erreurs via un parseur Git natif intégré.",
+    "6. Téléchargez le fichier final avec le bouton 'Exporter' ou copiez son contenu dans votre dépôt via le clipboard."
+  ],
+  "usage_examples": [
+    "Un développeur full-stack crée un projet combinant React, Django et PostgreSQL, et génère un .gitignore couvrant les fichiers node_modules, __pycache__, et les fichiers de migration.",
+    "Un data scientist exclut des dossiers '/data/raw' et '/models/checkpoints' volumineux lors du partage d'un dépôt sur GitHub, en ajoutant des règles spécifiques.",
+    "Une équipe standardise les exclusions de fichiers IDE (ex. : '.idea/', '.vscode/') à travers plusieurs projets en générant un modèle commun.",
+    "Un contributeur open-source adapte les règles pour exclure temporairement les dépendances locales pendant le développement d'un package Python."
+  ],
+  "languages": "Langages",
+  "frameworks": "Frameworks",
+  "os": "Systèmes d'exploitation",
+  "custom": "Règles personnalisées",
+  "customPlaceholder": "Ajouter des règles personnalisées..."
+}

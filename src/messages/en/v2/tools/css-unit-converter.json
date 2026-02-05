@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The CSS Unit Converter is a precision tool for web developers that programmatically translates values between CSS length units, accounting for contextual dependencies. It handles conversions between absolute units (px, pt) and relative units (em, rem, vw, vh) by applying calculation formulas rooted in CSS specification standards. For rem/em conversions, the tool factors in user-defined root or parent font sizes to accurately resolve inherited values. Viewport units (vw/vh) are recalculated based on hypothetical viewport dimensions, while pt-to-px conversions use the standard 1pt=1.333px ratio. Developers need this tool to solve responsive design challenges, maintain typographic hierarchy across component trees, and ensure cross-browser consistency. The backend engine uses JavaScript to dynamically compute values in real-time, with an optional base font size input field that adjusts rem/em calculations globally. This tool stands out by visualizing conversion contexts through unit-specific tooltips and displaying technical notes about potential rounding discrepancies.",
+  "usage_steps": [
+    "Open the converter and select your source unit from the dropdown (px, rem, em, pt, vw, vh).",
+    "Enter the numeric value in the primary input field.",
+    "Adjust the optional 'Base Font Size' field (default: 16px) for precise rem/em calculations.",
+    "Choose target units from the conversion matrix checkboxes.",
+    "Click the 'Convert' button to populate results with technical annotations.",
+    "Copy converted values via the clipboard icon or drag-drop into CSS files."
+  ],
+  "usage_examples": [
+    "Convert 1.5rem to px with a custom base font size of 10px to implement accessible spacing in a design system.",
+    "Transform 30em font-size to vw units for a hero heading that scales fluidly between device widths.",
+    "Calculate 24pt line-height to pixel equivalent for print stylesheet compatibility.",
+    "Convert 75vh container height to percentage-based units to create scroll-driven animations that work across viewport sizes."
+  ]
+}

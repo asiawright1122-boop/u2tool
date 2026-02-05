@@ -1,0 +1,29 @@
+{
+  "detailed_description": "L'outil JSON to Zod Schema permet de générer automatiquement des schémas de validation Zod à partir de données JSON. Techniquement, il analyse la structure d'un objet JSON d'entrée, effectue une inférence de type statique (y compris pour les champs imbriqués, tableaux et types unions), puis produit un code Zod utilisable pour la validation au runtime. Ce processus repose sur une logique d'analyse syntaxique récursive qui identifie les types primitifs, les objets composites et les contraintes potentielles (valeurs null, champs optionnels). Les développeurs TypeScript bénéficieront particulièrement de cette conversion automatisée pour créer des modèles de données sécurisés sans écrire manuellement des centaines de lignes de code de validation. L'outil intègre également la gestion des alias de champs via .transform() et propose des options pour personnaliser les règles de validation stricte. En convertissant directement des exemples de données en schémas réutilisables, il réduit les erreurs de type dans les pipelines de données asynchrones et améliore la cohérence des interfaces API.",
+  "usage_steps": [
+    "Accédez à l'interface web de l'outil via la section 'Convertisseurs' du site",
+    "Collez votre objet JSON valide dans la zone de texte 'Données d'entrée' située à gauche",
+    "Activez/désactivez les options avancées (mode strict, inférence des UUID, gestion des dates) selon vos besoins",
+    "Cliquez sur le bouton 'Générer le schéma Zod' pour déclencher la conversion",
+    "Examinez le code Zod généré dans le panneau de sortie, qui inclut les imports nécessaires",
+    "Copiez le schéma dans votre projet TypeScript ou téléchargez-le au format .ts via l'option dédiée"
+  ],
+  "usage_examples": [
+    "Un développeur backend construit un microservice REST et convertit les exemples de payloads de requêtes en schémas Zod pour valider les entrées utilisateur",
+    "Une équipe frontend mappe les réponses d'une API GraphQL en schémas de type Zod pour typer strictement les données avant le rendu UI",
+    "Un ingénieur données crée des validateurs automatiques pour des fichiers JSONL contenant des logs système, avec gestion des champs optionnels",
+    "Un architecte logiciel convertit un fichier de configuration JSON en schéma Zod pour documenter et valider les paramètres d'environnement"
+  ],
+  "jsonInput": "Entrée JSON",
+  "zodOutput": "Schéma Zod",
+  "convert": "Convertir en Zod",
+  "copy": "Copier",
+  "copied": "Copié !",
+  "inputPlaceholder": "Collez votre JSON ici...",
+  "placeholder": "Collez JSON ici...",
+  "outputPlaceholder": "Le schéma Zod apparaîtra ici...",
+  "loadExample": "Charger l'exemple",
+  "schemaName": "Nom du schéma",
+  "whatIsZod": "Qu'est-ce que Zod ?",
+  "zodExplanation": "Zod est une bibliothèque de validation de schémas TypeScript-first avec inférence de types statiques."
+}

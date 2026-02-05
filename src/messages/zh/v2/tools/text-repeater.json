@@ -1,0 +1,33 @@
+{
+  "detailed_description": "文本重复器可以根据需要多次复制您的文本。从各种分隔符中选择，并可选择添加编号。非常适合测试、创建示例数据或填充内容。",
+  "usage_steps": [
+    "输入要重复的文本",
+    "设置重复次数",
+    "选择分隔符类型",
+    "可选添加编号",
+    "复制或下载结果"
+  ],
+  "usage_examples": [
+    "创建测试数据",
+    "填充占位内容",
+    "生成模式"
+  ],
+  "inputLabel": "要重复的文本",
+  "inputPlaceholder": "在此输入文本...",
+  "repeatCount": "重复次数",
+  "separator": "分隔符",
+  "newline": "换行",
+  "space": "空格",
+  "comma": "逗号",
+  "semicolon": "分号",
+  "tab": "制表符",
+  "none": "无",
+  "addNumbering": "添加编号",
+  "result": "结果",
+  "copy": "复制",
+  "copied": "已复制！",
+  "download": "下载",
+  "resultPlaceholder": "结果将显示在这里...",
+  "characters": "字符",
+  "lines": "行"
+}

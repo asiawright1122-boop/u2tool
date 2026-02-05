@@ -1,0 +1,26 @@
+{
+  "detailed_description": "Der Image Format Converter ist ein präzises Werkzeug zur verlustfreien oder optimierten Konvertierung von Rasterbildern zwischen den Formaten PNG, JPEG und WebP. Technisch basiert der Konverter auf leistungsfähigen Bibliotheken wie libpng, libjpeg-turbo und Google's WebP-Codec, die eine präzise Steuerung von Farbtiefen, Kompressionsparametern und Metadaten ermöglichen. Der Tool behält bei der Umwandlung ICC-Farbprofile, EXIF-Daten und bei PNG-Dateien Transparenzkanäle (Alpha-Kanal) bei. Entwickler und Designer benötigen dieses Tool, um spezifische Anforderungen wie die Optimierung von Web-Ressourcen (WebP für geringere Ladezeiten), die Minimierung von Speicherbedarf bei Fotografien (JPEG mit variabler Qualitätsstufe) oder die Sicherstellung kompatibler Formate für Legacy-Systeme (Rückkonvertierung zu PNG) zu erfüllen. Die serverseitige Verarbeitung erfolgt in Echtzeit ohne Qualitätsverlust durch mehrfache Dekodierung. Besonders nützlich ist die manuelle Anpassung von Kompressionsstufen über einen Regler, der Parameter wie die JPEG-Qualität (0-100) oder den WebP-Effort-Wert (0-6) steuert.",
+  "usage_steps": [
+    "Klicken Sie auf 'Datei auswählen' und laden Sie Ihr Bild (max. 50 MB) im PNG, JPEG oder WebP Format hoch.",
+    "Wählen Sie im Format-Auswahlfeld das gewünschte Zielformat (z.B. PNG → WebP) aus.",
+    "Passen Sie bei Bedarf die Kompressionseinstellungen an: Regler für JPEG-Qualität oder WebP-Lossy-Parameter.",
+    "Aktivieren Sie den 'Transparenz beibehalten'-Schalter, wenn Alpha-Kanäle im Quellbild vorhanden sind.",
+    "Starten Sie die Konvertierung durch Klick auf den 'Jetzt konvertieren'-Button.",
+    "Laden Sie das konvertierte Bild über den 'Download'-Link herunter oder kopieren Sie den direkten CDN-Link."
+  ],
+  "usage_examples": [
+    "Ein Webentwickler wandelt 20 PNG-Banner in verlustbehaftetes WebP um, um die Gesamtgröße einer Landingpage um 60% zu reduzieren.",
+    "Ein Fotograf konvertiert RAW-JPEG-Mischabbildungen in PNG, um bei sozialen Medien verlustfreie Qualität zu garantieren.",
+    "Ein UI-Designer optimiert Icons durch Konvertierung zu WebP mit Alpha-Transparenz für moderne Browser-Support.",
+    "Ein E-Commerce-Manager reduziert Produktfotos von 3 MB auf 800 KB durch Anpassung der JPEG-Qualität auf 85 ohne sichtbaren Qualitätsverlust."
+  ],
+  "targetFormat": "Zielformat",
+  "quality": "Qualität",
+  "converted": "Konvertiert",
+  "convertFirst": "Konvertieren Sie zuerst ein Bild",
+  "processing": "Verarbeitung...",
+  "formatInfo": "Formatinfo",
+  "pngDesc": "Verlustfreie Kompression, unterstützt Transparenz",
+  "jpegDesc": "Verlustbehaftete Kompression, kleinere Dateigröße",
+  "webpDesc": "Modernes Format, beste Kompression"
+}

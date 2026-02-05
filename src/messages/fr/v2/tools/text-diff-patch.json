@@ -1,0 +1,26 @@
+{
+  "createPatch": "Créer un patch",
+  "applyPatch": "Appliquer un patch",
+  "originalText": "Texte original",
+  "modifiedText": "Texte modifié",
+  "generatedPatch": "Patch généré",
+  "patch": "Patch",
+  "result": "Résultat",
+  "errorApply": "Erreur lors de l'application du patch",
+  "patchPlaceholder": "Coller votre patch ici...",
+  "detailed_description": "Le Text Diff & Patch est un outil de traitement de texte permettant de générer des deltas binaires ou textuels entre deux versions d'un document, puis d'appliquer ces patches pour synchroniser ou restaurer des modifications. Techniquement, il utilise des algorithmes de diff comme Myers ou Ratcliff/Obershelp pour identifier les différences lexicales et syntaxiques au niveau des lignes ou des caractères. Ce processus repose sur le principe de programmation dynamique pour aligner les séquences de tokens, en produisant un format de patch standard (Unified Diff ou Context Diff) comprenant des opérations d'insertion, suppression et modification. Les développeurs l'utilisent pour comparer des versions de code source, détecter des régressions, ou automatiser des migrations de données. Les équipes de documentation s'en servent pour suivre l'évolution de documents techniques. L'application d'un patch se fait via un parseur qui reconstruit l'arbre de modifications en respectant les checksums de lignes contextuelles, garantissant l'intégrité des changements même en cas de modifications partielles.",
+  "usage_steps": [
+    "Sélectionnez le mode de comparaison (ligne/colonne) via le menu déroulant 'Granularité des diffs'",
+    "Collez les versions originale et modifiée dans les zones de texte 'Source' et 'Cible' respectivement",
+    "Activez/désactivez les options avancées (ignorer les espaces, casse, ou les commentaires)",
+    "Cliquez sur 'Générer le diff' pour obtenir un patch au format Unified Diff avec numéros de lignes et contextes",
+    "Éditez manuellement le patch dans l'éditeur intégré pour inclure/exclure des hunks spécifiques",
+    "Appliquez le patch via le bouton 'Patch apply' ou générez un script d'application automatique en Bash/Python"
+  ],
+  "usage_examples": [
+    "Un développeur compare deux versions d'un fichier Python pour identifier des fuites de mémoire dans les nouvelles fonctions",
+    "Une équipe de documentation technique synchronise des manuels utilisateur entre plusieurs rédacteurs en conservant l'historique des modifications",
+    "Un administrateur système applique un patch de sécurité sur un fichier de configuration sans redémarrer le service",
+    "Un contributeur open-source résout des conflits de merge dans un dépôt Git en visualisant les différences contextuelles"
+  ]
+}

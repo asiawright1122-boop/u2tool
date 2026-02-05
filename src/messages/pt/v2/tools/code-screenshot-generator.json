@@ -1,0 +1,26 @@
+{
+  "theme": "Tema",
+  "language": "Linguagem",
+  "padding": "Preenchimento",
+  "fontSize": "Tamanho da fonte",
+  "lineNumbers": "Números de linha",
+  "windowControls": "Controles de janela",
+  "detailed_description": "O Code Screenshot Generator é uma ferramenta de código aberto que converte snippets de programação em imagens visualmente atraentes com destaque sintático preciso. Utilizando mecanismos como Prism.js ou Highlight.js para análise léxica, o tooling gera representações visuais de alta fidelidade de código-fonte em linguagens como JavaScript, Python, Rust e SQL. A renderização ocorre por meio de um motor baseado em Puppeteer ou Playwright, criando screenshots em formatos PNG ou JPEG com resolução configurável (1x, 2x, 4x). Diferente de alternativas genéricas, permite personalização avançada de temas (Light/Obsidian/Dracula), tamanho de fonte (8-32pt), espaçamento de linhas (1.0-2.5), além de suporte a numeração de linhas e sombras de profundidade. Desenvolvedores precisam desta ferramenta para criar previews de código para documentação técnica, compartilhamento em redes sociais com formatação consistente, inclusão em apresentações sem perder o contexto de sintaxe, e até para preservar a aparência de trechos críticos de código em relatórios de segurança.",
+  "usage_steps": [
+    "Selecione a linguagem de programação no seletor de syntax (ex: 'TypeScript', 'GoLang', 'GraphQL')",
+    "Cole seu código no editor monoespaçado com suporte a indentação automática",
+    "Escolha um tema visual entre 12 opções pré-carregadas ou importe um tema customizado via JSON",
+    "Ajuste parâmetros de renderização: resolução (1x/2x/4x), padding (0-50px), tamanho de fonte (8-32pt)",
+    "Ative/desative elementos visuais: numeração de linhas, sombra de profundidade, borda arredondada",
+    "Clique em 'Exportar' para baixar a imagem ou copiar o link direto para a screenshot gerada"
+  ],
+  "usage_examples": [
+    "Criar previews de código para postagens técnicas no LinkedIn mantendo o destaque de sintaxe",
+    "Incluir screenshots de funções críticas em documentação Swagger/OpenAPI hospedada no GitHub Pages",
+    "Gerar imagens de código para apresentações em PDF sem perder qualidade ao converter de slides",
+    "Documentar vulnerabilidades em relatórios de segurança com screenshots de exploits em Bash/Python"
+  ],
+  "html2canvas": "Html2canvas",
+  "a": "A",
+  "\\n": "\\n"
+}

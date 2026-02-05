@@ -1,0 +1,29 @@
+{
+  "detailed_description": "ESLint 配置生成器帮助您为 JavaScript 和 TypeScript 项目创建自定义 ESLint 配置文件。选择流行的样式指南，包括 Airbnb、Standard、Google 等。配置特定框架的规则，如 React、Vue、Angular 或 Node.js。启用 TypeScript 支持，设置 Prettier 集成，并自定义单个规则。工具生成一个完整的 .eslintrc.json 文件，准备好在您的项目中使用。",
+  "usage_steps": [
+    "选择您喜欢的样式指南（Airbnb、Standard、Google 等）",
+    "选择您的框架（React、Vue、Angular、Node.js）",
+    "如果需要启用 TypeScript 支持",
+    "配置 Prettier 集成",
+    "根据需要自定义单个规则",
+    "点击生成以创建您的 ESLint 配置",
+    "将配置复制到您的项目中"
+  ],
+  "usage_examples": [
+    "为 React TypeScript 项目设置 ESLint",
+    "使用 Airbnb 样式指南配置 ESLint",
+    "创建 Node.js 后端 linting 配置",
+    "使用 Prettier 集成设置 ESLint"
+  ],
+  "browser": "浏览器",
+  "off": "关闭",
+  "warn": "警告",
+  "error": "错误",
+  "framework": "框架",
+  "styleGuide": "样式指南",
+  "typescript": "TypeScript",
+  "environment": "环境",
+  "rules": "规则",
+  "generate": "生成",
+  "download": "下载"
+}

@@ -1,0 +1,36 @@
+{
+  "detailed_description": "Speech Timer é uma ferramenta de tempo de apresentação profissional que ajuda palestrantes a praticar e entregar palestras de maneira eficaz. Ele oferece contagem regressiva em tempo real, estimativa de palavras com base no ritmo de fala e alertas visuais quando o tempo está ficando curto.",
+  "usage_steps": [
+    "Defina a duração da sua palestra",
+    "Opcionalmente insira o texto da sua palestra para contagem de palavras",
+    "Clique em 'iniciar' para começar a contagem regressiva",
+    "Monitore o indicador de progresso visual",
+    "Receba alertas quando o tempo estiver quase acabando"
+  ],
+  "usage_examples": [
+    "Pratique apresentações no estilo TED",
+    "Controle palestras de conferências acadêmicas",
+    "Prepare-se para apresentações de entrevistas de emprego"
+  ],
+  "duration": "Duração",
+  "minutes": "minutos",
+  "wordsPerMinute": "Palavras por minuto",
+  "estimatedWords": "Palavras estimadas",
+  "start": "Iniciar",
+  "pause": "Pausar",
+  "reset": "Reiniciar",
+  "timeRemaining": "Tempo Restante",
+  "speechText": "Texto da Palestra (opcional)",
+  "speechPlaceholder": "Cole sua palestra aqui para contar palavras...",
+  "wordCount": "Contagem de Palavras",
+  "speakingPace": "Ritmo de Fala",
+  "slow": "Lento",
+  "normal": "Normal",
+  "fast": "Rápido",
+  "timeUp": "O Tempo Acabou!",
+  "presets": "Pré-definições",
+  "targetDuration": "Duração alvo",
+  "min": "min",
+  "words": "palavras",
+  "remaining": "Restante"
+}

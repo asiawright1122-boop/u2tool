@@ -1,0 +1,32 @@
+{
+  "detailed_description": "APIテスターは任意のAPIエンドポイントにHTTPリクエストを送信できます。すべてのHTTPメソッド、カスタムヘッダー、リクエストボディをサポートし、フォーマットされたレスポンスを表示します。",
+  "usage_steps": [
+    "APIエンドポイントURLを入力",
+    "HTTPメソッドを選択",
+    "必要に応じてヘッダーを追加",
+    "POST/PUT用のリクエストボディを入力",
+    "リクエストを送信してレスポンスを確認"
+  ],
+  "usage_examples": [
+    "APIエンドポイントのテスト",
+    "APIレスポンスのデバッグ",
+    "サードパーティAPIの探索"
+  ],
+  "url": "URL",
+  "method": "メソッド",
+  "headers": "ヘッダー",
+  "body": "ボディ",
+  "send": "リクエスト送信",
+  "response": "レスポンス",
+  "status": "ステータス",
+  "time": "時間",
+  "addHeader": "ヘッダー追加",
+  "urlPlaceholder": "https://api.example.com/endpoint",
+  "loadExample": "例を読み込む",
+  "bodyPlaceholder": "リクエストボディ (JSON)...",
+  "responseBody": "レスポンスボディ",
+  "responseHeaders": "レスポンスヘッダー",
+  "sending": "送信中...",
+  "headerNamePlaceholder": "ヘッダー名",
+  "headerValuePlaceholder": "値"
+}

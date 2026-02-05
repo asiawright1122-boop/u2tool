@@ -1,0 +1,33 @@
+{
+  "principal": "Initial Investment",
+  "annualRate": "Annual Interest Rate (%)",
+  "years": "Investment Period (Years)",
+  "compoundingFrequency": "Compounding Frequency",
+  "daily": "Daily",
+  "monthly": "Monthly",
+  "quarterly": "Quarterly",
+  "annually": "Annually",
+  "regularContribution": "Regular Contribution",
+  "contributionFrequency": "Contribution Frequency",
+  "finalAmount": "Final Amount",
+  "totalInterest": "Total Interest Earned",
+  "totalContributions": "Total Contributions",
+  "growthChart": "Growth Chart",
+  "initialInvestment": "Initial Investment",
+  "growthOverTime": "Growth Over Time",
+  "year": "Year",
+  "detailed_description": "Compound Interest Calculator shows how your investments grow over time with the power of compound interest. Configure initial investment, interest rate, compounding frequency, and regular contributions to see projected growth. Visual charts help you understand the impact of different investment strategies.",
+  "usage_steps": [
+    "Enter your initial investment amount",
+    "Set the annual interest rate",
+    "Choose the investment period in years",
+    "Select compounding frequency (daily, monthly, quarterly, annually)",
+    "Optionally add regular contributions",
+    "View final amount, total interest, and growth chart"
+  ],
+  "usage_examples": [
+    "Project retirement savings growth",
+    "Compare different investment scenarios",
+    "Understand the impact of compounding frequency"
+  ]
+}

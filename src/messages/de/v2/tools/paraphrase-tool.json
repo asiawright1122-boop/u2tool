@@ -1,0 +1,34 @@
+{
+  "enterText": "Text zum Paraphrasieren eingeben",
+  "paraphrase": "Paraphrasieren",
+  "style": "Schreibstil",
+  "standard": "Standard",
+  "formal": "Formell",
+  "casual": "Lässig",
+  "creative": "Kreativ",
+  "simplified": "Vereinfacht",
+  "result": "Paraphrasierter Text",
+  "originalText": "Originaltext",
+  "detailed_description": "Der Paraphrase-Tool nutzt fortschrittliche NLP-Algorithmen zur semantischen Umstrukturierung von Texten. Technisch basiert er auf Transformer-Modellen, die durch kontextuelle Embedding-Verfahren wie BERT kontextsensitive Synonymersetzung und Satzrestrukturierung ermöglichen. Der Tool analysiert die syntaktische Struktur des Eingabetextes, identifiziert semantisch redundante Phrasen und generiert alternative Formulierungen durch Permutationsmatrizen, wobei die koreferenzielle Kohärenz erhalten bleibt. Benutzer benötigen diesen Tool für präzise Textmodifikationen bei wissenschaftlichen Arbeiten, um Plagiate zu vermeiden, oder für die Optimierung von SEO-Inhalten durch diversifizierte Keyword-Phrasierung. Ein weiterer Anwendungsfall liegt in der sprachlichen Adaptation von Fachtexten für unterschiedliche Zielgruppen (z.B. medizinische Inhalte für Laien). Der Prozess erfolgt in drei Stufen: Tokenisierung, kontextuelle Disambiguierung und Generierung durch beam search-Optimierung, wobei Nutzer individuelle Parameter wie Formalitätsgrad oder Vokabularkomplexität anpassen können.",
+  "usage_steps": [
+    "1. Einfügen des Originaltexts in das mehrzeilige Eingabefeld unterhalb der Registerkarte 'Quelltext'.",
+    "2. Auswahl des gewünschten Paraphrasemodus (akademisch, kreativ, technisch) über die Schaltfläche 'Stilvorlage'.",
+    "3. Anpassen des Synonymdichte-Schiebereglers zwischen 30% und 80% je nach gewünschter Textdiversität.",
+    "4. Aktivieren der 'Deep Restructure'-Option für komplexe Satzumstellungen im erweiterten Modus.",
+    "5. Klicken auf 'Generieren' und visuelles Vergleichen der Ergebnisse in der geteilten Oberfläche mit Farbmarkierungen für Änderungen.",
+    "6. Exportieren des bearbeiteten Textes im gewünschten Format (TXT, DOCX, LaTeX) über die Download-Schaltfläche."
+  ],
+  "usage_examples": [
+    "Ein Wissenschaftler paraphrasiert Methodenbeschreibungen, um die Textoriginalität für eine Fachzeitschrift zu erhöhen, während die terminologische Präzision erhalten bleibt.",
+    "Ein Content-Marketer transformiert Produktbeschreibungen für verschiedene Zielgruppen durch Anpassung des Formalitätsniveaus und Integration spezifischer Branchenbegriffe.",
+    "Ein Softwareentwickler vereinfacht technische Dokumentation für Einsteiger durch kontextuelle Umsetzung komplexer Begriffe in alltägliche Sprache.",
+    "Ein Student vermeidet versehentliches Plagiat in Hausarbeiten durch strukturelle Umformulierung von Zitaten mit Erhaltung des wissenschaftlichen Kontextes."
+  ],
+  "selectStyle": "Stil auswählen",
+  "paraphrasedText": "Paraphrased Text",
+  "tips": "Tipps",
+  "tip1": "Verschiedene Stile erzeugen verschiedene Ergebnisse",
+  "tip2": "Das Tool verwendet Synonymersetzung",
+  "tip3": "Überprüfen Sie die Ausgabe auf Genauigkeit",
+  "simple": "Simple"
+}

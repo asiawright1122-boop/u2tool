@@ -1,0 +1,27 @@
+{
+  "uploadImage": "Télécharger une image",
+  "brightness": "Luminosité",
+  "contrast": "Contraste",
+  "saturation": "Saturation",
+  "hue": "Teinte",
+  "blur": "Flou",
+  "grayscale": "Niveau de gris",
+  "sepia": "Toné",
+  "reset": "Réinitialiser",
+  "noImage": "Veuillez télécharger une image",
+  "detailed_description": "L'outil Image Adjustment permet de modifier précisément les paramètres d'une image via des algorithmes de traitement d'image. Il agit sur les canaux RGB, la courbe de luminosité, le contraste dynamique et la saturation chromatique. Techniquement, il utilise des matrices de transformation pour recalculer les valeurs de pixels en temps réel, sans altérer le fichier original. Cette approche non destructive préserve la qualité initiale grâce à un rendu en 16 bits par canal. Les développeurs et designers l'utiliseront pour optimiser des assets web en réduisant la profondeur de couleur, les photographes pour corriger des clichés sous-exposés via l'histogramme RGB, et les graphistes pour harmoniser la palette chromatique de visuels imprimés. L'interface intègre un éditeur de courbes de niveau permettant d'ajuster séparément les tons clairs, moyens et sombres, ainsi qu'un correcteur de teinte HSV pour des recalibrages colorimétriques précis.",
+  "usage_steps": [
+    "Chargez le fichier image (formats supportés: PNG, JPEG, BMP) via le sélecteur de fichiers en haut de l'interface",
+    "Ajustez la luminosité en modifiant le curseur de compensation d'exposition de -100 à +100",
+    "Réglez le contraste dynamique à l'aide de la molette de facteur multiplicatif (0.1 à 3.0)",
+    "Modifiez la saturation chromatique via l'échelle de teinte HSV avec sélection manuelle des teintes ciblées",
+    "Appliquez un filtre de température de couleur prédéfini (ambre, cyan, sépia) ou créez un profil personnalisé",
+    "Téléchargez le résultat en format optimisé (WebP ou JPEG XR) ou exportez les paramètres comme profil ICC"
+  ],
+  "usage_examples": [
+    "Un photographe de produits corrige les ombres portées sur des clichés de vêtements en augmentant la luminosité locale de 25% et en réduisant le contraste global de 15%",
+    "Un designer UI/UX adapte une bibliothèque d'icônes SVG pour un thème sombre en inversant les valeurs RGB et en appliquant un filtre de saturation négative",
+    "Un restaurateur d'art numérique élimine les dominantes jaunes dans une photo d'archive en ajustant la teinte cyan de +15° et la saturation verte de -30%",
+    "Un développeur web optimise des images pour un site e-commerce en réduisant la profondeur de couleur à 8 bits et en appliquant un profil de contraste standardisé"
+  ]
+}

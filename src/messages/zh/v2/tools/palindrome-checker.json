@@ -1,0 +1,26 @@
+{
+  "detailed_description": "回文检测器测试您的文本正读和反读是否相同。它可以忽略空格、标点符号和大小写，以发现短语和句子中隐藏的回文。",
+  "usage_steps": [
+    "输入单词或短语",
+    "选择比较选项",
+    "查看是否为回文",
+    "尝试著名的回文示例",
+    "创建自己的回文"
+  ],
+  "usage_examples": [
+    "测试单词回文",
+    "发现短语回文",
+    "教育性文字游戏"
+  ],
+  "inputLabel": "输入文本",
+  "inputPlaceholder": "输入单词或短语...",
+  "ignoreCase": "忽略大小写",
+  "ignoreSpaces": "忽略空格",
+  "ignorePunctuation": "忽略标点符号",
+  "isPalindrome": "这是回文！",
+  "notPalindrome": "不是回文",
+  "processedText": "处理后的文本",
+  "forward": "正向",
+  "backward": "反向",
+  "examples": "试试这些示例"
+}

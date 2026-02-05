@@ -1,0 +1,38 @@
+{
+  "detailed_description": "El Buscador de Disponibilidad de Calendario ayuda a encontrar horarios disponibles comunes al programar con varias personas.",
+  "usage_steps": [
+    "Añade disponibilidad de participantes",
+    "Establece la duración de la reunión",
+    "Especifica el rango de fechas",
+    "Visualiza los horarios comunes",
+    "Selecciona la hora de la reunión"
+  ],
+  "usage_examples": [
+    "Encuentra horarios para reuniones de equipo",
+    "Programa entrevistas",
+    "Coordinar eventos grupales"
+  ],
+  "input": "Entrada",
+  "output": "Salida",
+  "process": "Proceso",
+  "copy": "Copiar",
+  "clear": "Limpiar",
+  "inputPlaceholder": "Introduce aquí tu entrada...",
+  "outputPlaceholder": "Los resultados aparecerán aquí...",
+  "errors": {
+    "emptyInput": "Por favor, introduce algún dato"
+  },
+  "workHoursStart": "Inicio de Jornada",
+  "workHoursEnd": "Fin de Jornada",
+  "minDuration": "Duración Mínima",
+  "addPerson": "+ Agregar Persona",
+  "participantsBusyTimes": "Participantes y Horarios Ocupados",
+  "noBusyTimes": "Sin horarios ocupados",
+  "addBusyTime": "Agregar Horario Ocupado",
+  "selectPerson": "Seleccionar persona",
+  "to": "a",
+  "availableSlots": "Horarios Disponibles",
+  "noAvailableSlots": "No se encontraron horarios disponibles",
+  "tryAdjusting": "Intente ajustar las horas de trabajo o la duración",
+  "timeline": "Línea de Tiempo"
+}

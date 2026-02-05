@@ -1,0 +1,47 @@
+{
+  "detailed_description": "El Convertidor SQL a MongoDB traduce consultas SQL a una sintaxis de consulta equivalente de MongoDB para la migración de bases de datos.",
+  "usage_steps": [
+    "Pega consulta SQL",
+    "Selecciona el driver MongoDB",
+    "Haz clic en Convertir",
+    "Ver sintaxis MongoDB",
+    "Copia la consulta"
+  ],
+  "usage_examples": [
+    "Migra SQL a MongoDB",
+    "Aprende la sintaxis de MongoDB",
+    "Convierte WHERE a $match"
+  ],
+  "input": "Entrada",
+  "output": "Salida",
+  "process": "Procesar",
+  "copy": "Copiar",
+  "clear": "Borrar",
+  "inputPlaceholder": "SELECT * FROM users WHERE age > 18",
+  "outputPlaceholder": "Los resultados aparecerán aquí...",
+  "errors": {
+    "emptyInput": "Por favor, introduce algún dato"
+  },
+  "loadExample": "Cargar ejemplo",
+  "analyze": "Analizar",
+  "generate": "Generar",
+  "format": "Formatear",
+  "convert": "Convertir",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Vista previa",
+  "reset": "Restablecer",
+  "add": "Agregar",
+  "remove": "Eliminar",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "settings": "Configuración",
+  "options": "Opciones",
+  "results": "Resultados",
+  "noResults": "Sin resultados",
+  "loading": "Cargando...",
+  "success": "Éxito",
+  "failed": "Fallido",
+  "warning": "Advertencia",
+  "info": "Información"
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Notre outil JSON vers Excel permet de transformer des données structurées au format JSON en feuilles de calcul Excel (XLSX) en préservant la logique complexe des données. Techniquement, il analyse les structures imbriquées (objets, tableaux, valeurs null) et détecte automatiquement les colonnes en identifiant les clés dynamiques à travers tous les niveaux de profondeur. Contrairement aux solutions basiques, il gère les tableaux hétérogènes en créant des onglets séparés pour les sous-structures divergentes, tout en conservant les types de données (numériques, booléens, dates formatées). Ce processus utilise un algorithme de flattening intelligent qui évite la perte d'information lors de la conversion. Utile pour les développeurs extrayant des données d'API REST, les analystes préparant des rapports financiers à partir de logs JSON, ou les administrateurs systèmes consolidant des configurations distribuées, cet outil élimine le travail manuel fastidieux de mappage colonne par colonne. La sortie Excel générée inclut des styles conditionnels pour mettre en évidence les données manquantes et un sommaire des relations hiérarchiques dans une feuille annexe.",
+  "usage_steps": [
+    "1. Cliquez sur 'Importer JSON' pour charger votre fichier ou collez directement le code dans l'éditeur syntaxique.",
+    "2. Activez 'Analyse approfondie' pour détecter les clés imbriquées jusqu'à 5 niveaux de profondeur.",
+    "3. Utilisez le sélecteur 'Gestion des tableaux' pour choisir entre la dénormalisation ou la création d'onglets séparés.",
+    "4. Ajustez les mappings de colonnes dans la vue arborescente interactive pour renommer/supprimer des champs spécifiques.",
+    "5. Sélectionnez le format de sortie (XLSX avec macros ou CSV UTF-8) et activez 'Calculs automatiques' pour ajouter des formules de synthèse.",
+    "6. Cliquez sur 'Générer Excel' et téléchargez le fichier avec l'historique de conversion intégré."
+  ],
+  "usage_examples": [
+    "Un data scientist convertit des résultats de modèles ML au format JSON (avec métriques imbriquées) en un tableau comparatif Excel pour une présentation managériale.",
+    "Un e-commerçant agrège quotidiennement des fichiers JSON provenant de 3 API logistiques différentes vers un tableau de bord Excel avec mise à jour automatique des stocks.",
+    "Un administrateur réseau transforme des logs de firewall JSON (avec structures variables selon les équipements) en feuilles Excel standardisées pour audit de sécurité.",
+    "Un développeur mobile exporte les préférences utilisateurs stockées en JSON vers Excel pour effectuer une analyse statistique des comportements via les outils d'analyse intégrés."
+  ]
+}

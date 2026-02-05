@@ -1,0 +1,18 @@
+{
+  "detailed_description": "L'éditeur hexadécimal permet une conversion bidirectionnelle entre les représentations textuelles et hexadécimales, tout en offrant une visualisation précise des données binaires au niveau du byte. Ce type d'outil est essentiel pour les développeurs manipulant des formats de fichiers binaires, des protocoles réseau ou des structures de données à faible niveau. Contrairement à des convertisseurs basiques, cet outil gère les encodages Unicode (UTF-8, UTF-16) et ASCII, avec une option pour basculer entre les modes little-endian et big-endian lors de l'interprétation des séquences d'octets. Il inclut également un mode d'édition en temps réel des valeurs hexadécimales, utile pour analyser ou modifier des dumps mémoire, des en-têtes de fichiers (comme les signatures PNG ou PDF), ou des trames réseau capturées via Wireshark. La conversion utilise des algorithmes de mappage direct des points de code Unicode vers leurs représentations hexadécimales, avec validation des séquences invalides. Une fonctionnalité clé est la visualisation des caractères non imprimables via leur notation caret (^A pour SOH, etc.), facilitant le débogage de flux binaires.",
+  "usage_steps": [
+    "Ouvrir l'éditeur hexadécimal via l'interface web et sélectionner l'onglet 'Convertir Texte → Hex'",
+    "Coller le texte brut dans la zone d'entrée et choisir l'encodage source (ASCII, UTF-8, UTF-16LE/BE) depuis le menu déroulant",
+    "Cliquer sur 'Convertir' pour générer la représentation hexadécimale par paquets de 2 octets",
+    "Basculer vers l'onglet 'Éditer Hex → Texte' et saisir manuellement une séquence hexadécimale (ex: 48656C6C6F)",
+    "Activer l'option 'Afficher non imprimables' pour visualiser les contrôles ASCII (CR, LF, NUL) dans le résultat",
+    "Télécharger le résultat au format .hex ou l'exporter vers un éditeur hexadécimal externe via l'API intégrée"
+  ],
+  "usage_examples": [
+    "Analyser l'en-tête d'un fichier binaire pour identifier sa signature magique (ex: 504B0304 pour un ZIP)",
+    "Débuguer un payload MQTT en convertissant les flags d'octets de contrôle en valeurs décimales",
+    "Créer manuellement un fichier PCAP avec des trames Ethernet valides via l'édition hexadécimale",
+    "Corriger un fichier de configuration corrompu en modifiant ses octets UTF-8 invalides directement"
+  ],
+  "inputPlaceholder": "Entrez le texte ici..."
+}

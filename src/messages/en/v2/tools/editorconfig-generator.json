@@ -1,0 +1,31 @@
+{
+  "detailed_description": "EditorConfig Generator helps you create .editorconfig files to maintain consistent coding styles across different editors and IDEs. Configure settings for indent style (tabs vs spaces), indent size, end of line characters, charset, and trailing whitespace handling. Set up different rules for different file types. The tool generates a complete .editorconfig file that works with VS Code, Sublime Text, Vim, and many other editors.",
+  "usage_steps": [
+    "Set the root property to true for project root",
+    "Configure default settings for all files",
+    "Set indent style (tabs or spaces)",
+    "Choose indent size (2, 4, etc.)",
+    "Configure end of line character (lf, crlf)",
+    "Add file-type specific overrides if needed",
+    "Click Generate and copy the .editorconfig"
+  ],
+  "usage_examples": [
+    "Create consistent formatting across a team",
+    "Set up different rules for different file types",
+    "Configure EditorConfig for a monorepo",
+    "Ensure consistent line endings across platforms"
+  ],
+  "root": "Root (stop searching parent directories)",
+  "defaultSettings": "Default Settings",
+  "indentStyle": "Indent Style",
+  "indentSize": "Indent Size",
+  "endOfLine": "End of Line",
+  "charset": "Charset",
+  "trimTrailingWhitespace": "Trim Trailing Whitespace",
+  "insertFinalNewline": "Insert Final Newline",
+  "addFileType": "Add File Type Override",
+  "fileTypeSettings": "File Type Specific Settings",
+  "remove": "Remove",
+  "generate": "Generate",
+  "download": "Download"
+}

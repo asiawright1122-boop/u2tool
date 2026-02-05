@@ -1,0 +1,30 @@
+{
+  "encodeBtn": "Codificar a Base58",
+  "decodeBtn": "Decodificar desde Base58",
+  "placeholder": "Introduce el texto para codificar o Base58 para decodificar...",
+  "resultPlaceholder": "El resultado aparecerá aquí...",
+  "aboutTitle": "Sobre Base58",
+  "aboutText": "Base58 es un codificador binario a texto utilizado en Bitcoin y otras criptomonedas. Excluye caracteres confusos (0, O, I, l) para una mejor legibilidad.",
+  "detailed_description": "El Base58 Encoder/Decoder es una herramienta esencial para desarrolladores y usuarios de criptomonedas que necesitan manipular datos en formato Base58. Este formato es particularmente relevante en el ecosistema de Bitcoin y otras criptomonedas, ya que se utiliza para representar claves públicas, direcciones de billeteras y otros datos sensibles de manera legible y segura. La herramienta permite tanto la codificación como la decodificación de cadenas Base58, facilitando la validación y el manejo de información crucial en aplicaciones financieras descentralizadas.\n\nEl Base58 es una representación de cadena de caracteres que utiliza 58 dígitos diferentes, excluyendo caracteres que podrían ser confusos o difíciles de distinguir en contextos de texto, como el cero numérico (0), la letra 'O' mayúscula, la letra 'I' mayúscula y la letra 'l' minúscula. Esta característica reduce significativamente el riesgo de errores de transcripción, lo que es crucial en transacciones financieras donde la precisión es fundamental.\n\nLa herramienta funciona al tomar una cadena de entrada y aplicar el algoritmo Base58 para codificar o decodificar la información. El proceso de codificación convierte la entrada en una representación Base58, mientras que la decodificación transforma una cadena Base58 de vuelta a su formato original. Los usuarios pueden beneficiarse de esta herramienta en una variedad de escenarios, desde la verificación de direcciones de criptomonedas hasta la integración de funciones de codificación en aplicaciones de blockchain.",
+  "usage_steps": [
+    "Paso 1: Accede a la página del Base58 Encoder/Decoder a través de la sección de 'Herramientas de Codificación' en el menú principal.",
+    "Paso 2: En la interfaz, selecciona la pestaña 'Codificar' si deseas convertir una cadena a Base58, o la pestaña 'Decodificar' si tienes una cadena Base58 que deseas convertir de vuelta a su formato original.",
+    "Paso 3: Introduce la cadena de texto en el campo 'Entrada'. Asegúrate de que la cadena sea válida y no contenga caracteres no permitidos.",
+    "Paso 4: Si estás en la pestaña 'Codificar', presiona el botón 'Codificar' para convertir la cadena a Base58. Si estás en la pestaña 'Decodificar', presiona el botón 'Decodificar' para convertir la cadena Base58 a su formato original.",
+    "Paso 5: La herramienta mostrará el resultado en el campo 'Resultado'. Verifica la salida para asegurarte de que la conversión se haya realizado correctamente.",
+    "Paso 6: Copia el resultado haciendo clic en el botón 'Copiar' ubicado junto al campo de resultado. Pega el texto en el lugar donde lo necesites, como en una billetera de criptomonedas o en tu aplicación de desarrollo."
+  ],
+  "usage_examples": [
+    "Ejemplo 1: Un desarrollador de una aplicación de criptomonedas necesita verificar la integridad de las direcciones generadas por su sistema. Utiliza el Base58 Encoder/Decoder para codificar las direcciones y compararlas con las generadas por la billetera del usuario.",
+    "Ejemplo 2: Un usuario de Bitcoin recibe una dirección en formato Base58 y desea asegurarse de que es válida antes de realizar una transacción. Utiliza la herramienta para decodificar la dirección y verificar que no haya errores de transcripción.",
+    "Ejemplo 3: Un integrador de blockchain necesita convertir claves públicas en formato Base58 para integrarlas en un contrato inteligente. Utiliza el Base58 Encoder/Decoder para codificar las claves y asegurarse de que se inserten correctamente en el código del contrato.",
+    "Ejemplo 4: Un auditar de seguridad de una plataforma financiera descentralizada (DeFi) necesita revisar los datos de entrada y salida de transacciones en formato Base58. Utiliza la herramienta para decodificar y analizar los datos, asegurándose de que no haya manipulaciones o errores."
+  ],
+  "errorEncoding": "Error de codificación",
+  "errorInvalidInput": "Entrada inválida",
+  "input": "Entrada",
+  "clear": "Borrar",
+  "output": "Salida",
+  "copied": "Copiado!",
+  "copy": "Copiar"
+}

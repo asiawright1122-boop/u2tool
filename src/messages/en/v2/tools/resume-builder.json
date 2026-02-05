@@ -1,0 +1,54 @@
+{
+  "detailed_description": "The Resume Builder is a sophisticated web application designed to streamline the creation of professional resumes. It leverages a user-friendly interface and advanced templating engine to produce polished, industry-standard documents. The tool supports multiple layout templates, each optimized for different career fields and levels of experience. Users can customize these templates with their personal information, skills, and work history, and the tool automatically formats the content to ensure readability and visual appeal. The Resume Builder also includes a robust PDF export feature, allowing users to generate high-quality, print-ready documents that can be easily shared with potential employers. For developers and job seekers, this tool is invaluable for crafting resumes that stand out in a competitive job market. The technical underpinnings include client-side JavaScript for dynamic content manipulation and server-side processing for PDF generation, ensuring a seamless and efficient user experience.",
+  "usage_steps": [
+    "Step 1: Open the Resume Builder and select 'Start New Resume' from the homepage.",
+    "Step 2: Choose a template from the available options, such as 'Modern Tech Professional' or 'Classic Executive.'",
+    "Step 3: Fill in the required fields in the 'Personal Information' section, including your name, address, email, and phone number.",
+    "Step 4: Navigate to the 'Work Experience' tab and add your job history, including company names, dates of employment, and key responsibilities.",
+    "Step 5: Move to the 'Skills' section to list your technical and soft skills, and use the 'Education' tab to detail your academic background.",
+    "Step 6: Once your resume is complete, click 'Export as PDF' to download a polished, professional document ready for submission."
+  ],
+  "usage_examples": [
+    "Example 1: A recent computer science graduate uses the Resume Builder to create a modern, clean resume that highlights their projects, skills, and academic achievements, making it easier to stand out in tech job applications.",
+    "Example 2: A mid-level marketing professional leverages the tool to update their resume with new certifications and recent successful campaigns, ensuring their document reflects their current qualifications and impact.",
+    "Example 3: A freelance graphic designer uses the Resume Builder to craft a visually appealing portfolio summary, showcasing their design skills and client testimonials in a format that aligns with their creative style.",
+    "Example 4: A senior executive preparing for a career change uses the tool to create a tailored executive resume that emphasizes leadership experience and strategic accomplishments, positioning them for high-level roles in a new industry."
+  ],
+  "editTab": "Edit",
+  "previewTab": "Preview",
+  "exportPDF": "Export PDF",
+  "jobDescription": "Job Description",
+  "fieldOfStudy": "Field of Study",
+  "gpa": "GPA",
+  "summary": "Summary",
+  "experience": "Experience",
+  "present": "Present",
+  "education": "Education",
+  "skills": "Skills",
+  "languages": "Languages",
+  "accentColor": "Accent Color",
+  "personalInfo": "Personal Info",
+  "summaryPlaceholder": "Write a brief summary...",
+  "addExperience": "Add Experience",
+  "company": "Company",
+  "position": "Position",
+  "addEducation": "Add Education",
+  "school": "School",
+  "degree": "Degree",
+  "addSkill": "Add Skill",
+  "noSkills": "No skills added",
+  "addLanguage": "Add Language",
+  "templates": {
+    "professional": "Professional",
+    "minimal": "Minimal",
+    "creative": "Creative"
+  },
+  "placeholders": {
+    "name": "Your Name",
+    "title": "Job Title",
+    "email": "email@example.com",
+    "phone": "+1 234 567 890",
+    "location": "City, Country",
+    "website": "website.com"
+  }
+}

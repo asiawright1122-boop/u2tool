@@ -1,0 +1,37 @@
+{
+  "detailed_description": "Der Markdown-Editor ist ein leistungsstarkes Online-Dokumentenbearbeitungstool mit Echtzeit-Vorschaufunktion. Schreiben Sie Markdown-Syntax auf der linken Seite und sehen Sie sofort das gerenderte Ergebnis auf der rechten Seite. Unterstützt alle Standard-Markdown-Syntax einschließlich Überschriften, Listen, Codeblöcke, Tabellen, Links, Bilder und mehr. Bietet drei Ansichtsmodi: geteilt, nur Bearbeitung und nur Vorschau. Exportieren Sie Ihre Arbeit mit einem Klick als .md- oder .html-Dateien. Integrierte Schnelleinfüge-Schaltflächen für gängige Formatierungen. Alle Bearbeitungen erfolgen lokal in Ihrem Browser und gewährleisten Datensicherheit.",
+  "usage_steps": [
+    "Öffnen Sie die Markdown-Editor-Werkzeugseite",
+    "Geben Sie Markdown-Inhalt im linken Bearbeitungsbereich ein oder fügen Sie ihn ein",
+    "Der rechte Vorschaubereich zeigt das gerenderte Ergebnis in Echtzeit",
+    "Verwenden Sie die Symbolleisten-Schaltflächen, um schnell gängige Formatierungen einzufügen",
+    "Wählen Sie den Ansichtsmodus: geteilt, Bearbeitung oder Vorschau",
+    "Klicken Sie auf die Download-Schaltfläche, um als .md- oder .html-Datei zu exportieren"
+  ],
+  "usage_examples": [
+    "Technische Dokumentation und README-Dateien schreiben",
+    "Blog-Beiträge und Notizen erstellen",
+    "Projektdokumentation entwerfen",
+    "Markdown-Formatierung schnell vorschauen"
+  ],
+  "faqs": [
+    {
+      "question": "Welche Markdown-Syntax wird unterstützt?",
+      "answer": "Alle Standard-Markdown-Syntax wird unterstützt, einschließlich Überschriften, Fett, Kursiv, Listen, Codeblöcke, Tabellen, Links, Bilder, Zitate und mehr. GFM (GitHub Flavored Markdown) Erweiterungen werden ebenfalls unterstützt."
+    },
+    {
+      "question": "Wird mein Inhalt automatisch gespeichert?",
+      "answer": "Die aktuelle Version speichert Inhalte nicht automatisch. Wir empfehlen, Ihre Datei nach der Bearbeitung zu exportieren. Sie können im .md- oder .html-Format exportieren."
+    },
+    {
+      "question": "Kann ich vorhandene Markdown-Dateien importieren?",
+      "answer": "Sie können vorhandenen Markdown-Inhalt direkt in den Editor kopieren und einfügen. Der Editor erkennt und rendert die Markdown-Syntax automatisch."
+    }
+  ],
+  "errorParsingMarkdown": "Fehler beim Parsen von Markdown",
+  "list": "Liste",
+  "code": "Code",
+  "link": "Link",
+  "image": "Bild",
+  "quote": "Zitat"
+}

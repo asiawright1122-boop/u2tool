@@ -1,0 +1,47 @@
+{
+  "detailed_description": "Le Planificateur d'Exécution de Requêtes aide à comprendre et à optimiser les plans d'exécution des requêtes SQL.",
+  "usage_steps": [
+    "Coller la sortie EXPLAIN",
+    "Sélectionnez le type de base de données",
+    "Cliquez sur Analyser",
+    "Visualisez le plan",
+    "Obtenez des recommandations"
+  ],
+  "usage_examples": [
+    "Comprenez les requêtes lentes",
+    "Identifiez les scans de table complète",
+    "Comparez les plans d'exécution"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Processus",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Entrez votre requête SQL...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez entrer quelque chose"
+  },
+  "loadExample": "Charger un exemple",
+  "analyze": "Analyser",
+  "generate": "Générer",
+  "format": "Formater",
+  "convert": "Convertir",
+  "validate": "Valider",
+  "export": "Exporter",
+  "preview": "Aperçu",
+  "reset": "Réinitialiser",
+  "add": "Ajouter",
+  "remove": "Supprimer",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "settings": "Paramètres",
+  "options": "Options",
+  "results": "Résultats",
+  "noResults": "Aucun résultat",
+  "loading": "Chargement...",
+  "success": "Succès",
+  "failed": "Échec",
+  "warning": "Avertissement",
+  "info": "Information"
+}

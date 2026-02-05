@@ -1,0 +1,30 @@
+{
+  "checking": "Verificando...",
+  "check": "Verificar SSL",
+  "valid": "Certificado SSL Válido",
+  "invalid": "Certificado SSL Inválido",
+  "issuer": "Emissor",
+  "subject": "Assunto",
+  "validFrom": "Valido a partir de",
+  "validTo": "Valido até",
+  "daysRemaining": "Dias Restantes",
+  "days": "dias",
+  "protocol": "Protocolo",
+  "serialNumber": "Número de Série",
+  "note": "💡 Nota: Esta é uma versão de demonstração. Para uso em produção, integre com uma API de verificação SSL backend.",
+  "detailed_description": "O SSL Certificate Checker é uma ferramenta técnica especializada que analisa a validade e os detalhes de certificados SSL/TLS de domínios via protocolo HTTPS. Ele verifica automaticamente a data de validade, a cadeia de confiança, o emissor (CA), a presença de SAN (Subject Alternative Name), algoritmos criptográficos utilizados (como RSA, ECDSA), tamanho da chave pública, e se há vulnerabilidades conhecidas (ex: certificados SHA-1 obsoletos). A ferramenta também valida a revogação através de OCSP (Online Certificate Status Protocol) e CRL (Certificate Revocation List), além de inspecionar configurações de segurança como HSTS (HTTP Strict Transport Security) e suporte a protocolos modernos (TLS 1.2/1.3). Essa análise é essencial para desenvolvedores identificarem certificados expirados antes de falhas em produção, administradores de sistema diagnosticarem problemas de confiança em servidores proxy reversos, ou profissionais de segurança avaliarem conformidade com padrões PCI-DSS. O funcionamento se dá através de uma conexão TCP no port 443, seguida de um handshake TLS para extrair o certificado X.509 do servidor e decodificar seus campos ASN.1/DER, apresentando um relatório técnico com alertas sobre anomalias críticas.",
+  "usage_steps": [
+    "Acesse a página do SSL Certificate Checker e insira o domínio completo no campo 'Domínio (ex: exemplo.com)'",
+    "Selecione a opção 'Incluir subdomínios' para validar certificados wildcard ou múltiplos SANs",
+    "Clique no botão 'Verificar Conexão Segura' para iniciar a análise",
+    "Analise a seção 'Detalhes Técnicos' com informações sobre a CA, algoritmo de assinatura e extensões do certificado",
+    "Verifique o status de revogação exibido como 'OCSP: Não Revogado' ou 'CRL: Revogado'",
+    "Revise o painel de 'Recomendações de Segurança' para identificar configurações frágeis (ex: TLS 1.0 habilitado)"
+  ],
+  "usage_examples": [
+    "Um desenvolvedor frontend identifica que um CDN está servindo conteúdo com certificado expirado causando mixed content warnings",
+    "Um sysadmin detecta que um servidor interno possui certificado autofirmado sem SAN, bloqueando conexões de aplicativos mobile",
+    "Um auditor de segurança verifica se fornecedores de API pública estão utilizando certificados ECC (Elliptic Curve) para conformidade regulatória",
+    "Um administrador de WordPress descobre que o certificado Let's Encrypt não foi renovado automaticamente devido a configuração errada no plugin"
+  ]
+}

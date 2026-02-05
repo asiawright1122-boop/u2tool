@@ -1,0 +1,38 @@
+{
+  "detailed_description": "O Buscador de Disponibilidade de Calendário ajuda a encontrar horários livres comuns ao agendar com várias pessoas.",
+  "usage_steps": [
+    "Adicionar disponibilidade de participantes",
+    "Definir a duração da reunião",
+    "Especificar o intervalo de datas",
+    "Visualizar horários comuns",
+    "Selecionar horário da reunião"
+  ],
+  "usage_examples": [
+    "Encontre horários para reuniões de equipe",
+    "Agende entrevistas",
+    "Coordene eventos de grupo"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processo",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Insira sua entrada aqui...",
+  "outputPlaceholder": "Os resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum input"
+  },
+  "workHoursStart": "Início do Expediente",
+  "workHoursEnd": "Fim do Expediente",
+  "minDuration": "Duração Mínima",
+  "addPerson": "+ Adicionar Pessoa",
+  "participantsBusyTimes": "Participantes e Horários Ocupados",
+  "noBusyTimes": "Sem horários ocupados",
+  "addBusyTime": "Adicionar Horário Ocupado",
+  "selectPerson": "Selecionar pessoa",
+  "to": "até",
+  "availableSlots": "Horários Disponíveis",
+  "noAvailableSlots": "Nenhum horário disponível encontrado",
+  "tryAdjusting": "Tente ajustar o horário de trabalho ou a duração",
+  "timeline": "Linha do Tempo"
+}

@@ -1,0 +1,27 @@
+{
+  "cardNumber": "卡号",
+  "inputPlaceholder": "输入卡号...",
+  "validate": "验证",
+  "valid": "有效",
+  "invalid": "无效",
+  "luhnCheck": "Luhn 检测",
+  "passed": "通过",
+  "failed": "失败",
+  "digits": "位数",
+  "digitsCount": "位",
+  "disclaimer": "此工具仅验证卡号的数学结构。它不验证卡是否有效或有余额。切勿在不受信任的网站上输入真实卡号。",
+  "supportedCards": "支持的卡类型",
+  "detailed_description": "信用卡验证器使用 Luhn 算法检查信用卡号是否在数学上有效。它会自动检测卡类型（Visa、Mastercard、Amex 等）并提供详细的验证结果。仅用于测试和开发目的。",
+  "usage_steps": [
+    "在输入框中输入信用卡号",
+    "卡号会自动格式化并添加空格",
+    "点击验证按钮检查卡号",
+    "查看卡类型、发卡机构和 Luhn 检测结果",
+    "检查位数以进行额外验证"
+  ],
+  "usage_examples": [
+    "测试支付表单验证逻辑",
+    "在处理前验证卡号格式",
+    "根据卡号前缀识别卡类型"
+  ]
+}

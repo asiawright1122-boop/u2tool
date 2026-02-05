@@ -1,0 +1,36 @@
+{
+  "detailed_description": "Der Commit Message Generator hilft Ihnen, nach der Conventional Commits-Spezifikation gut strukturierte Git-Commit-Nachrichten zu erstellen. Dieser Formatierung macht Ihre Versionshistorie lesbarer und ermöglicht die automatisierte Erstellung eines Änderungsprotokolls. Wählen Sie aus standardmäßigen Commit-Typen, fügen Sie optionalen Scope hinzu und schreiben Sie klare Beschreibungen für konsistente Versionskontrolle.",
+  "usage_steps": [
+    "Wählen Sie den Commit-Typ (feat, fix, docs, usw.)",
+    "Fügen Sie optional einen Bereich für den Änderungsbereich hinzu",
+    "Schreiben Sie eine klare, präzise Betreffzeile",
+    "Prüfen Sie, ob es sich um eineBreaking Change handelt",
+    "Fügen Sie optional eine Erklärung im Detailtext hinzu",
+    "Fügen Sie die formatierte Commit-Botschaft in Ihre Arbeit ein"
+  ],
+  "usage_examples": [
+    "Erstellen von Feature-Commits: feat(auth): add login functionality",
+    "Erstellen von Bug-Fix-Commits: fix(api): resolve timeout issue",
+    "Dokumentieren von Änderungen: docs(readme): update installation guide"
+  ],
+  "type": "Type",
+  "scope": "Scope",
+  "scopePlaceholder": "e.g., auth, api, ui",
+  "subject": "Subject",
+  "subjectPlaceholder": "Short description of the change",
+  "body": "Body",
+  "bodyPlaceholder": "Detailed explanation of the change...",
+  "footer": "Footer",
+  "footerPlaceholder": "e.g., Closes #123, BREAKING CHANGE: ...",
+  "breakingChange": "Breaking Change",
+  "commitMessage": "Commit Message",
+  "preview": "Enter subject to preview...",
+  "optional": "optional",
+  "characters": "characters",
+  "recommended50": "recommended max 50",
+  "tips": "Tips",
+  "tip1": "Use imperative mood: \"add\" not \"added\" or \"adds\"",
+  "tip2": "Keep subject under 50 characters",
+  "tip3": "Separate subject from body with blank line",
+  "breaking": "Breaking Change"
+}

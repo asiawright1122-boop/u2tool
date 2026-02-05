@@ -1,0 +1,36 @@
+{
+  "uploadGif": "Enviar GIF",
+  "colors": "Número de Cores",
+  "skipFrames": "Pular Quadros",
+  "scale": "Escala",
+  "compress": "Comprimir",
+  "download": "Baixar",
+  "original": "Original",
+  "compressed": "Comprimido",
+  "saved": "Economizado",
+  "processing": "Processando...",
+  "compressionLevel": "Nível de Compressão",
+  "compressionHint": "Valor mais baixo produz arquivo menor",
+  "reduceColors": "Reduzir Cores",
+  "maxColors": "Máximo de Cores",
+  "dropzone": "Clique ou arraste GIF para enviar",
+  "compressFirst": "Clique em comprimir para começar",
+  "originalSize": "Tamanho Original",
+  "compressedSize": "Tamanho Comprimido",
+  "reduction": "Redução",
+  "detailed_description": "O Compressor de GIF otimiza arquivos GIF preservando a animação através de técnicas avançadas de compressão semiperda. O algoritmo emprega quantização adaptativa de paleta para reduzir a profundidade de cor sem degradar perceptivelmente a qualidade visual, combinada com otimização de quadros redundantes via detecção de diferenças entre frames consecutivos. A ferramenta também reaproveita os metadados de controle de animação (como delays e disposal methods) enquanto aplica compressão LZW refinada com ajuste de parâmetros de buffer. Ideal para desenvolvedores web que precisam reduzir tempos de carregamento de páginas, criadores de conteúdo que compartilham GIFs em redes sociais com limites de tamanho, ou profissionais que incorporam animações em aplicativos móveis onde a eficiência de banda é crítica. O processo ocorre em tempo real no navegador usando WebAssembly, garantindo que os dados permaneçam privados e não sejam enviados a servidores externos.",
+  "usage_steps": [
+    "1. Clique no botão 'Selecionar Arquivo' para carregar seu GIF (até 50MB)",
+    "2. Ajuste o seletor de 'Qualidade de Compressão' entre 10-90% para balancear qualidade e tamanho",
+    "3. Ative a opção 'Otimizar Paleta' para reduzir o número de cores mantendo a aparência original",
+    "4. Marque 'Remover Metadados' para eliminar informações desnecessárias do cabeçalho",
+    "5. Visualize a prévia da animação comprimida no painel lateral para verificar integridade",
+    "6. Clique em 'Baixar GIF Otimizado' para salvar o arquivo processado localmente"
+  ],
+  "usage_examples": [
+    "Um desenvolvedor front-end comprime um GIF de 15MB para 3MB para integrar em um banner responsivo sem prejudicar o Lighthouse Score",
+    "Um influencer redimensiona um GIF de stories do Instagram para respeitar o limite de 8MB da plataforma mantendo a qualidade visual",
+    "Um designer UI prepara uma animação de carregamento para um aplicativo híbrido, reduzindo de 200 quadros para 120 com preservação de fluidez",
+    "Um profissional de marketing digital otimiza GIFs para newsletters, garantindo compatibilidade com clientes de e-mail que limitam anexos a 10MB"
+  ]
+}

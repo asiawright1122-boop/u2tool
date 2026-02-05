@@ -1,0 +1,36 @@
+{
+  "pressAnyKey": "Press any key to test",
+  "keyCode": "Key Code",
+  "key": "Key",
+  "code": "Code",
+  "location": "Location",
+  "modifiers": "Modifiers",
+  "shift": "Shift",
+  "ctrl": "Ctrl",
+  "alt": "Alt",
+  "meta": "Meta",
+  "keyHistory": "Key History",
+  "clearHistory": "Clear History",
+  "lastKeyPressed": "Last Key Pressed",
+  "clear": "Clear",
+  "noKeysPressed": "No keys pressed yet",
+  "tips": "Tips",
+  "tip1": "This tool can be used to test if all keys on your keyboard are working properly",
+  "tip2": "Some keys (like Fn) may not be detected by the browser",
+  "tip3": "Key history stores up to 10 recent key presses",
+  "detailed_description": "The Keyboard Tester tool captures and visualizes keyboard input at the DOM event level, providing developers with granular insight into key interactions. By attaching event listeners to the document body, it intercepts keydown events and extracts properties including keyCode, code, key, and modifier states (Shift, Ctrl, Alt, Meta). This enables precise identification of scancodes, virtual key codes, and browser-specific key mappings, which is critical for debugging JavaScript event handling, developing game controls, or implementing custom keyboard shortcuts. The tool's interface displays a dynamic key matrix that updates in real-time, showing both legacy keyCode values (per DOM Level 3 events) and modern 'code' attributes (per UI5 Events specification). Developers can diagnose issues like key ghosting, verify cross-browser consistency, or validate hardware-specific inputs (e.g., multimedia keys) that may not conform to standard key code tables. Built-in modifier state indicators resolve ambiguities in event propagation, making it particularly useful for applications requiring complex key combinations or accessibility compliance testing.",
+  "usage_steps": [
+    "1. Open the tool and observe the blank key matrix display with modifier state indicators (Shift, Ctrl, Alt, Meta) in the top panel.",
+    "2. Press any key to activate the matrix - the corresponding key cell will highlight with the key's code value (e.g., 'KeyA' for 'A') and decimal keyCode.",
+    "3. Hold modifier keys to see their individual state indicators illuminate and observe how they alter event properties (e.g., Shift+CapsLock combination).",
+    "4. Use the 'Copy' button beneath the matrix to export raw event data (including isTrusted flag and event timestamp) to clipboard for debugging.",
+    "5. Test key sequences by pressing multiple keys in succession - the event order and timestamp deltas help identify debounce issues or input lag.",
+    "6. Click 'Reset' to clear the matrix and begin a new testing session, ensuring clean state for hardware diagnostics or cross-browser comparisons."
+  ],
+  "usage_examples": [
+    "Example 1: A game developer debugging WASD movement controls discovers conflicting keyCode values between Firefox and Chrome, using the tool to implement browser-specific fallbacks.",
+    "Example 2: An accessibility auditor verifies that screen reader shortcut keys (e.g., JAWS key+H) produce consistent code attributes across different operating systems.",
+    "Example 3: A hardware engineer tests a mechanical keyboard's anti-ghosting capabilities by pressing 6+ keys simultaneously and analyzing event order in the timestamp log.",
+    "Example 4: A security researcher investigates keylogger detection mechanisms by comparing the tool's raw event data against browser extensions that intercept keyboard events."
+  ]
+}

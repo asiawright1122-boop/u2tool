@@ -1,0 +1,22 @@
+{
+  "output": "CSS-Ausgabe",
+  "copy": "Kopieren",
+  "baseColor": "Basifarbe",
+  "numberOfShades": "Anzahl der Schattierungen: {count}",
+  "copyCssVariables": "CSS-Variable kopieren",
+  "detailed_description": "Der Color Shades Generator analysiert eine Eingabefarbe im RGB- oder HSL-Farbmodell und berechnet algorithmisch abgestufte Töne durch präzise Modulation von Helligkeit (Luminanz) und Sättigung. Technisch basiert der Prozess auf nichtlinearen Interpolationsmethoden, die sowohl additive Weißmischung (Tints) als auch subtraktive Schwarzmodulation (Shades) simulieren. Der Algorithmus berücksichtigt dabei die menschliche Wahrnehmung von Helligkeitsstufen durch Gamma-Korrektur und verwendet CIE Lab-Farbräume für gleichmäßige visuelle Abstände zwischen den Schattierungen. Entwickler benötigen dieses Werkzeug, um kontrastreiche UI-Komponenten zu erstellen, Farbpaletten für Designsysteme zu generieren oder barrierefreie Text-Farbkombinationen zu prüfen. Das Tool bietet manuelle Steuerung über HSL-Parameter (Farbton, Sättigung, Lichtwert) und automatische Berechnung von bis zu 12 Schattierungen pro Basisfarbe. Technisch ist die Implementierung besonders für Projekte relevant, die konsistente Farbgradienten in CSS, SVG oder Datenvisualisierungen benötigen, ohne manuelle Farbabstimmung durchzuführen.",
+  "usage_steps": [
+    "Wählen Sie eine Basisfarbe über den integrierten Farbpicker oder geben Sie HEX-/RGB-Werte direkt ein.",
+    "Aktivieren Sie den 'Shade' oder 'Tint'-Modus, um entweder dunklere oder hellere Abstufungen zu erzeugen.",
+    "Passen Sie die Stufenanzahl (3-12) und Helligkeitsdifferenz pro Schritt über den Schieberegler an.",
+    "Nutzen Sie die 'Gamut-Prüfung'-Funktion, um außergamutliegende Farben automatisch im sRGB-Raum zu clippnen.",
+    "Klicken Sie auf 'Palette generieren', um die Ergebnisse als interaktives Farbquadrat anzuzeigen.",
+    "Exportieren Sie die Schattierungen als CSS-Variable-Block, SVG-Definition oder CSV-Datensatz."
+  ],
+  "usage_examples": [
+    "Erstellung einer 5-stufigen Blauton-Palette für einen responsiven Navigationsheader mit Hover-States.",
+    "Generierung von barrierefreien Rot-Tönen für kritische UI-Elemente gemäß WCAG 2.1 Kontraststandards.",
+    "Berechnung abgestimmter Pastellfarben für ein Finanzdashboard mit mehrdimensionalen Datenvisualisierungen.",
+    "Entwicklung eines dynamischen Designsystems, das automatisch Schattierungen für Dark-/Light-Mode erzeugt."
+  ]
+}

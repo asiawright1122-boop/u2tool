@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The Scientific Calculator is a precision-engineered tool designed for executing advanced mathematical computations beyond basic arithmetic. It supports trigonometric functions (sine, cosine, tangent, and their inverses), logarithmic operations (base 10, base e, and custom bases), and exponential calculations (including e^x and power towers). The calculator handles complex expressions with nested parentheses, adhering to strict operator precedence (PEMDAS/BODMAS rules) and maintains floating-point precision up to 15 decimal places. Its core engine leverages JavaScript's Math library augmented with custom algorithms for hyperbolic functions and degree-radian conversions. Engineers can use it for signal processing calculations, data scientists for statistical modeling, and students for calculus problems involving limits or parametric equations. Input parsing includes real-time syntax validation with error highlighting, and results can be copied in scientific notation. The tool uniquely supports direct entry of π, τ, and Euler's number (e) via dedicated keys, eliminating manual approximations.",
+  "usage_steps": [
+    "1. Toggle the DEG/RAD switch to set angular measurement mode for trigonometric calculations.",
+    "2. Input complex expressions using the virtual keypad, including nested parentheses for operation grouping.",
+    "3. Press the 'sinh⁻¹' or 'cos⁻¹' buttons for inverse hyperbolic/trigonometric functions with automatic domain validation.",
+    "4. Use the 'logₐᵇ' function to specify custom logarithmic bases by entering values in the dedicated input fields.",
+    "5. Calculate exponential expressions using the 'eˣ' button for natural exponentiation or 'xʸ' for arbitrary powers.",
+    "6. Access the calculation history panel to review previous expressions and results with timestamp annotations."
+  ],
+  "usage_examples": [
+    "Example 1: Calculate the impedance phase angle in an AC circuit using arctangent( (Xʟ - Xc)/R ) with values Xʟ=150Ω, Xc=50Ω, R=100Ω.",
+    "Example 2: Model bacterial growth with N(t) = N₀e^(kt) where N₀=500, k=0.03/min, t=20 minutes.",
+    "Example 3: Convert 50°C to Fahrenheit using the formula F = (C × 9/5) + 32, then calculate its Kelvin equivalent.",
+    "Example 4: Solve for earthquake magnitude on the Richter scale using M = log₁₀(A/A₀) with amplitude ratio A/A₀=800."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "websiteName": "网站名称",
+  "websiteUrl": "网站网址",
+  "companyName": "公司名称",
+  "privacyEmail": "隐私咨询邮箱",
+  "cookieTypes": "Cookie 类型",
+  "cookies": {
+    "necessary": "必要",
+    "analytics": "分析",
+    "marketing": "营销",
+    "preferences": "偏好设置"
+  },
+  "position": "横幅位置",
+  "positionTop": "顶部",
+  "positionBottom": "底部",
+  "theme": "主题风格",
+  "themeLight": "浅色主题",
+  "themeDark": "深色主题",
+  "htmlCode": "HTML 代码",
+  "cssCode": "CSS 代码",
+  "privacyPolicy": "隐私政策模板",
+  "copy": "复制代码",
+  "copied": "代码已复制！",
+  "bannerTitle": "Cookie 同意",
+  "decline": "拒绝",
+  "customize": "自定义",
+  "acceptAll": "全部接受",
+  "disclaimer": "本工具提供的模板仅供参考。请咨询法律专业人士，以确保您的具体情况完全符合 GDPR 规定。",
+  "detailed_description": "GDPR 同意生成器可创建符合欧洲数据保护法规的 Cookie 同意横幅和隐私政策模板。提供可自定义的 HTML 和 CSS 代码，支持不同类型的 Cookie、横幅位置及主题风格。",
+  "usage_steps": [
+    "输入您的网站和公司信息",
+    "选择您的网站使用的 Cookie 类型",
+    "选择横幅的位置和主题风格",
+    "复制生成的 HTML 和 CSS 代码",
+    "根据需要自定义隐私政策模板"
+  ],
+  "usage_examples": [
+    "为网站添加符合 GDPR 规定的 Cookie 同意功能",
+    "为欧盟用户创建隐私政策文档",
+    "实现用户 Cookie 偏好设置管理"
+  ]
+}

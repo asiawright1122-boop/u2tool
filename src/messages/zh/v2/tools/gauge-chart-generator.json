@@ -1,0 +1,78 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "gaugeType": "仪表类型",
+  "typeDefault": "默认",
+  "typeStage": "阶段",
+  "typeGrade": "等级",
+  "currentValue": "当前值",
+  "minValue": "最小值",
+  "maxValue": "最大值",
+  "unit": "单位",
+  "showPointer": "显示指针",
+  "showProgress": "显示进度",
+  "quickPresets": "快速预设",
+  "loadSample": "加载示例",
+  "downloadPng": "下载 PNG",
+  "downloadSvg": "下载 SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "完成率",
+  "sampleTitle": "性能仪表",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "sampleData": {
+    "value": 75
+  },
+  "tips": {
+    "title": "提示",
+    "tip1": "设置当前值",
+    "tip2": "定义最小和最大值",
+    "tip3": "选择仪表类型",
+    "tip4": "添加单位标签",
+    "tip5": "导出为 PNG 或 SVG"
+  },
+  "detailed_description": "Gauge Chart Generator 是一款在线工具，专门用于创建仪表盘图表。该工具允许用户通过简单的界面操作，快速生成视觉效果丰富的仪表盘图表，以展示各种进度和度量数据。仪表盘图表广泛应用于数据可视化领域，特别是在需要直观显示某一指标当前状态的场景中，如系统健康度、项目进度、目标完成度等。用户可以通过该工具自定义图表的样式和数据，支持 PNG 和 SVG 两种格式的图表导出，适用于网页、报告和演示等多种场合。该工具的核心优势在于其强大的自定义能力和实时预览功能，使得用户能够根据具体需求调整图表的外观，包括颜色、指针样式、刻度线等。通过精确的数据输入和灵活的参数设置，用户可以轻松创建出符合自己需求的仪表盘图表。",
+  "usage_steps": [
+    "Step 1: 打开 Gauge Chart Generator 工具页面，初始界面会显示一个默认的仪表盘图表。",
+    "Step 2: 在‘数据输入’区域，输入或拖动滑块来设置仪表盘的最小值、最大值、当前值和阈值范围。",
+    "Step 3: 转到‘样式设置’选项卡，选择指针样式、刻度线样式、颜色方案等，以自定义仪表盘的外观。",
+    "Step 4: 在‘高级设置’中，调整字体大小、标签位置、背景颜色等细节，以满足更具体的需求。",
+    "Step 5: 预览并调整图表，确保所有设置符合预期。",
+    "Step 6: 点击‘导出’按钮，选择 PNG 或 SVG 格式，保存生成的仪表盘图表。"
+  ],
+  "usage_examples": [
+    "Example 1: 项目管理团队可以使用 Gauge Chart Generator 来创建项目进度仪表盘，直观显示当前项目完成度，帮助团队成员了解项目的实际进展。",
+    "Example 2: IT 运维团队可以通过该工具生成系统健康度仪表盘，实时监控服务器的 CPU 使用率、内存占用等关键指标，快速发现潜在问题。",
+    "Example 3: 营销部门可以利用 Gauge Chart Generator 创建营销活动绩效仪表盘，展示活动的转化率、参与度等关键数据，帮助优化营销策略。",
+    "Example 4: 质量控制部门可以使用该工具生成产品质量仪表盘，显示产品合格率、缺陷率等指标，以便及时调整生产流程。"
+  ],
+  "faqs": [
+    {
+      "question": "Gauge Chart Generator 是免费的吗？",
+      "answer": "是的，Gauge Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Gauge Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Gauge Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Gauge Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Gauge Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

@@ -1,0 +1,30 @@
+{
+  "detailed_description": "Das Geräusch-Textur-Generator erstellt anpassbare Geräuschmuster zur Hinzufügung von Textur zu Ihren Designs. Wählen Sie zwischen zufälligem Geräusch, perlinähnlichen Mustern oder Filmmistwirkungen. Adapieren Sie Intensität, Skalierung und Farben, um die perfekte Texturüberlagerung für Hintergründe, Karten oder beliebige Designelemente zu erstellen, die eine subtile visuelle Interaktion benötigen.",
+  "usage_steps": [
+    "Wählen Sie den Noise-Typ: zufällig, Perlin oder Granulat",
+    "Anpassen Sie die Intensität des Noise-Visibilitätsgrades",
+    "Legen Sie den Skalierungswert für das Mustergröße fest",
+    "Wählen Sie die Grund- und Noise-Farben",
+    "Wählen Sie die Ausgabegröße",
+    "Herunterladen Sie als PNG oder kopieren Sie den Daten-URL"
+  ],
+  "usage_examples": [
+    "Fügen Sie Filmmaterial-Grain zu Hero-Bildern hinzu",
+    "Erstellen Sie texturierte Kartenhintergründe",
+    "Entwerfen SieVintage-Stil-Überlagerungen"
+  ],
+  "noiseType": "Noise Type",
+  "types": {
+    "random": "Random",
+    "perlin": "Perlin",
+    "grain": "Grain"
+  },
+  "intensity": "Intensity",
+  "scale": "Scale",
+  "size": "Size",
+  "baseColor": "Base Color",
+  "noiseColor": "Noise Color",
+  "regenerate": "Regenerate",
+  "copyDataUrl": "Copy Data URL",
+  "usage": "Usage"
+}

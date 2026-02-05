@@ -1,0 +1,18 @@
+{
+  "detailed_description": "O Word Counter é uma ferramenta técnica de processamento de texto que realiza análise lexical e estatística em conteúdo não estruturado. O mecanismo emprega algoritmos de tokenização baseados em padrões de regex para identificar e contabilizar palavras, caracteres, sentenças e parágrafos com precisão. Utiliza normalização Unicode (UTF-8) para reconhecer corretamente caracteres acentuados e símbolos em múltiplos idiomas. A detecção de sentenças é feita através de análise de pontuação final (., !, ?) combinada com reconhecimento de quebras de linha, enquanto a identificação de parágrafos considera espaçamentos verticais e elementos HTML semânticos quando aplicável. Desenvolvido em JavaScript puro, o processamento ocorre localmente no navegador, garantindo privacidade e baixa latência mesmo com grandes volumes de texto. Profissionais de SEO utilizam a métrica de densidade lexical (palavras-chave vs total de termos) para otimização de conteúdo, enquanto redatores técnicos monitoram a complexidade textual através do cálculo da média de caracteres por palavra e proporção de sentenças complexas. O modo avançado permite configurar regras personalizadas, como ignorar números ou definir delimitadores específicos, essencial para validação de formatos de dados em workflows de desenvolvimento.",
+  "usage_steps": [
+    "Cole seu texto na Área de Trabalho de Texto com suporte a formatação RTF e HTML",
+    "Clique no botão 'Processar' para ativar o mecanismo de análise léxica em tempo real",
+    "Acesse 'Configurações Avançadas' para personalizar regras de tokenização (ex: ignorar URLs ou códigos)",
+    "Visualize o painel de estatísticas detalhadas contendo contagem de palavras únicas, média de caracteres por termo e índice de complexidade textual",
+    "Use o botão 'Exportar Dados' para baixar relatório CSV com métricas estruturadas para análise posterior",
+    "Limpe a área de trabalho com o botão 'Reiniciar' para nova análise ou compare múltiplos textos sequencialmente"
+  ],
+  "usage_examples": [
+    "Um acadêmico verifica se seu resumo de dissertação atende ao limite de 500 palavras exigido pela ABNT",
+    "Um redator de conteúdo SEO analisa a densidade de palavras-chave em um artigo de 2000 termos para otimização do Google",
+    "Um desenvolvedor front-end valida a conformidade de descrições técnicas com limites de caracteres em uma API REST",
+    "Um professor de línguas gera relatórios estatísticos comparativos sobre complexidade textual entre alunos de diferentes níveis"
+  ],
+  "inputPlaceholder": "Insira o texto aqui..."
+}

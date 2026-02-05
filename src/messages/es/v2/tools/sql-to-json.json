@@ -1,0 +1,23 @@
+{
+  "sqlInput": "Declaraciones SQL INSERT",
+  "placeholder": "Introduce declaraciones SQL INSERT...",
+  "convert": "Convertir",
+  "copy": "Copiar",
+  "noInsertFound": "No se encontraron declaraciones INSERT",
+  "supportedFormat": "Formato soportado:",
+  "detailed_description": "La herramienta SQL a JSON permite transformar declaraciones SQL INSERT INTO en estructuras JSON válidas mediante un proceso de análisis léxico y sintáctico. Al recibir código SQL, el parser identifica columnas, valores y tipos de datos (VARCHAR, INT, DATE, etc.) para construir un array de objetos con esquema dinámico. Esta conversión es crucial para migraciones de bases de datos relacionales a formatos NoSQL o para integrar datos en APIs REST que requieren payloads estructurados. El motor implementa técnicas de tokenización para separar instrucciones múltiples y resuelve ambigüedades en la sintaxis SQL mediante reglas de gramática formal. Los usuarios necesitan esta herramienta para automatizar conversiones complejas con preservación de tipos de datos, especialmente cuando trabajan con datasets heterogéneos que contienen cadenas escapadas, fechas formateadas o números en notación científica.",
+  "usage_steps": [
+    "Pega tu código SQL en el editor de texto con resaltado de sintaxis",
+    "Selecciona la opción 'INSERT múltiples' si el código contiene varias sentencias",
+    "Activa el interruptor 'Inferir tipos' para conversión automática de cadenas a números/fechas",
+    "Ajusta el nivel de indentación JSON usando el selector (2-8 espacios)",
+    "Haz clic en 'Transformar' para ejecutar el algoritmo de análisis ascendente",
+    "Copia el JSON resultante desde el área de salida con soporte para selección parcial"
+  ],
+  "usage_examples": [
+    "Migrar datos de clientes desde MySQL a MongoDB manteniendo relaciones anidadas",
+    "Generar payloads de prueba para endpoints API Express.js desde dumps SQL",
+    "Convertir historiales de pedidos en Access a objetos JSON para Firebase Realtime Database",
+    "Crear archivos de configuración dinámicos en formato JSON a partir de tablas de parámetros SQL"
+  ]
+}

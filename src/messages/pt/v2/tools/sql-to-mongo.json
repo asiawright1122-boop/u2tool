@@ -1,0 +1,26 @@
+{
+  "sqlQuery": "Consulta SQL",
+  "sqlPlaceholder": "Digite a consulta SQL...",
+  "mongoQuery": "Consulta MongoDB",
+  "examples": "Exemplos",
+  "exampleSimpleSelect": "SELECT simples",
+  "exampleSelectProjection": "SELECT com projeção",
+  "exampleInsert": "INSERIR",
+  "exampleUpdate": "ATUALIZAR",
+  "exampleDelete": "EXCLUIR",
+  "detailed_description": "A ferramenta SQL to MongoDB é um conversor especializado que transforma consultas SQL em operações compatíveis com o MongoDB, adaptando conceitos relacionais para o modelo de documentos NoSQL. Tecnicamente, o processo envolve o parsing de sintaxe SQL, mapeamento de tabelas para coleções, conversão de cláusulas WHERE para operadores de filtro ($match), e tradução de JOINs usando $lookup no estágio de agregação. Essa ferramenta é essencial para desenvolvedores que desejam migrar bancos de dados relacionais para MongoDB, ajustar esquemas para escalabilidade horizontal ou integrar sistemas legados com aplicações modernas. Internamente, o conversor utiliza algoritmos de análise sintática para identificar estruturas SQL complexas, como subconsultas e agrupamentos, e as reescreve em estágios do pipeline de agregação ou métodos CRUD. Além disso, otimiza consultas denormalizadas para aproveitar as vantagens do modelo de documentos, como embedded data e arrays aninhados, enquanto mantém a consistência lógica entre os comandos originais e os resultados gerados.",
+  "usage_steps": [
+    "Acesse a ferramenta através do menu 'Conversores' no painel do usuário.",
+    "Cole o código SQL na área de texto designada, identificada como 'Insira sua consulta SQL aqui'.",
+    "Selecione a versão do MongoDB (ex.: 4.4, 5.0) no dropdown 'Versão de destino' para garantir compatibilidade com operadores específicos.",
+    "Escolha o modo de conversão: 'Pipeline de Agregação' ou 'Operações CRUD' usando os botões de rádio abaixo do campo de entrada.",
+    "Clique no botão 'Converter' para processar a consulta e visualizar o resultado no painel à direita.",
+    "Revise o código MongoDB gerado, copie-o para a área de transferência utilizando o ícone de clipboard ao lado do resultado."
+  ],
+  "usage_examples": [
+    "Migrar uma consulta SQL de clientes com múltiplos JOINs (ex.: INNER JOIN com tabelas de pedidos) para um pipeline MongoDB que utiliza $lookup e $unwind para replicar dados relacionais em documentos hierárquicos.",
+    "Converter uma query complexa de relatório, como SELECT COUNT(*) GROUP BY com filtros condicionais, em um estágio $group com acumuladores ($sum, $avg) e $match para análise de dados em tempo real.",
+    "Transformar uma cláusula WHERE com LIKE '%termo%' em expressão regular (/$regex/) para buscas flexíveis em campos de texto dentro de coleções MongoDB.",
+    "Adaptar uma instrução UPDATE com múltiplos campos condicionais para operações $set e $unset, integrando lógica de atualização em documentos já existentes na base."
+  ]
+}

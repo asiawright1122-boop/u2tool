@@ -1,0 +1,27 @@
+{
+  "date": "Date",
+  "time": "Time",
+  "now": "Now",
+  "fromTimezone": "From Timezone",
+  "toTimezone": "To Timezone",
+  "swapTimezones": "Swap timezones",
+  "convertedTime": "Converted Time",
+  "worldClock": "World Clock",
+  "detailed_description": "The Timezone Converter tool leverages the IANA Time Zone Database to provide precise conversions between global timezones, including accurate handling of Daylight Saving Time (DST) transitions. Unlike basic converters, this tool allows developers and professionals to process timestamps across historical or future date ranges, accounting for jurisdiction-specific DST rules encoded in zoneinfo files. Users can input times in ISO 8601 format or epoch timestamps, which the tool parses using JavaScript's Date API to calculate UTC offsets dynamically. The interface exposes dual timezone selectors that update in real-time, showing both local and target times with second-level precision. This becomes critical for systems requiring temporal synchronization across distributed teams, such as coordinating CI/CD pipelines in DevOps environments or validating cross-regional financial transactions. The backend engine programmatically adjusts for meridian crossings and calendar irregularities, ensuring accuracy within ±50 milliseconds. By exposing raw timestamp conversions alongside formatted date-time strings, this tool empowers users to debug timezone-related bugs in applications or APIs that rely on temporal data integrity.",
+  "usage_steps": [
+    "Access the tool and locate the dual timezone selection dropdowns labeled 'Source' and 'Target'.",
+    "Enter an exact timestamp in the input field using ISO 8601 format (e.g., 2023-09-20T14:30:00) or input epoch milliseconds.",
+    "Select the source timezone from the dropdown (e.g., America/New_York) to activate DST-aware parsing.",
+    "Choose the target timezone (e.g., Asia/Tokyo) to display the converted time in the output pane below.",
+    "Use the 'Swap Timezones' button to reverse source/target zones while preserving the original timestamp.",
+    "Click the 'Copy Output' button to transfer the converted time in both ISO 8601 and localized string formats to clipboard."
+  ],
+  "usage_examples": [
+    "A software engineer in Berlin converts a MongoDB ISODate timestamp to São Paulo time to debug a replication lag issue across AWS regions.",
+    "An aviation logistics coordinator calculates arrival times for cargo flights crossing multiple meridians, ensuring compliance with airport slot regulations.",
+    "A fintech compliance officer verifies transaction timestamps from a Tokyo-based exchange against UTC for SEC reporting requirements.",
+    "A satellite operations team schedules antenna calibration windows across three continents, factoring in each location's current DST status."
+  ],
+  "copied": "Copied!",
+  "copy": "Copy"
+}

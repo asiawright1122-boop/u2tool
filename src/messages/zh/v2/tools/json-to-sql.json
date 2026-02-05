@@ -1,0 +1,47 @@
+{
+  "tableName": "表名",
+  "dialect": "方言",
+  "includeCreate": "包括创建表",
+  "loadExample": "加载示例",
+  "jsonPlaceholder": "输入 JSON 数组...",
+  "input": "输入",
+  "output": "输出",
+  "detailed_description": "本工具通过解析JSON数组结构自动生成SQL数据操作语句，支持从多维嵌套数据到关系型数据库模式的智能映射。其核心技术在于动态模式推导引擎，可自动识别数值类型（INT/FLOAT）、字符串（VARCHAR）、布尔值（BOOLEAN）及时间戳（DATETIME）等字段类型，并生成对应的CREATE TABLE语句。针对批量数据导入场景，采用批处理优化算法将多条INSERT语句合并为带值列表的复合语句，显著提升导入效率。开发者在进行API数据持久化存储、测试数据准备或跨数据库迁移时，可通过该工具实现结构化数据的快速转换。特别适合处理包含嵌套对象、数组集合的复杂JSON结构，自动展开嵌套层级并生成规范化的关系表结构。",
+  "usage_steps": [
+    "通过拖拽或文件选择器上传JSON文件（支持.json扩展名）",
+    "在数据预览面板查看解析后的结构化表格视图",
+    "在Schema配置面板调整字段类型映射（如将string强制转为DATETIME）",
+    "选择输出模式：生成带CREATE TABLE的完整建表语句或仅INSERT数据操作语句",
+    "设置高级选项（如表名前缀、字段名转小写、启用ON DUPLICATE KEY UPDATE）",
+    "点击'Generate SQL'按钮生成结果并复制到数据库客户端执行"
+  ],
+  "usage_examples": [
+    "开发REST API时，将Postman返回的JSON示例数据转换为测试用数据库种子数据",
+    "将电商平台导出的JSON格式订单数据批量导入MySQL进行销售分析",
+    "物联网设备上报的嵌套JSON传感器数据转换为时序数据库存储结构",
+    "前端开发时将Mock.js生成的JSON模拟数据转换为SQLite初始化脚本"
+  ],
+  "faqs": [
+    {
+      "question": "Json To Sql 是免费的吗？",
+      "answer": "是的，Json To Sql 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Json To Sql 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "支持哪些格式转换？",
+      "answer": "Json To Sql 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Json To Sql 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Json To Sql 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "inputPlaceholder": "在此粘贴 JSON..."
+}

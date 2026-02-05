@@ -1,0 +1,65 @@
+{
+  "chartTitle": "Titre du Graphique",
+  "chartTitlePlaceholder": "Entrez le titre du graphique",
+  "colorTheme": "Thème de Couleur",
+  "showLegend": "Afficher la Légende",
+  "lineWidth": "Largeur de la Ligne",
+  "lineOpacity": "Opacité de la Ligne",
+  "smoothLine": "Ligne Lisse",
+  "dimension": "Dimension",
+  "dimensionName": "Nom de la Dimension",
+  "addDimension": "Ajouter une Dimension",
+  "series": "Série",
+  "seriesName": "Nom de la Série",
+  "addSeries": "Ajouter une Série",
+  "loadSample": "Charger un Échantillon",
+  "downloadPng": "Télécharger PNG",
+  "downloadSvg": "Télécharger SVG",
+  "confirmClear": "Voulez-vous vraiment effacer toutes les données?",
+  "defaultTitle": "Analyse Multidimensionnelle",
+  "sampleTitle": "Comparaison de Produits",
+  "dimensionEditor": "Éditeur de Dimension",
+  "seriesEditor": "Éditeur de Série",
+  "chartPreview": "Aperçu du Graphique",
+  "chartSettings": "Paramètres du Graphique",
+  "themeDefault": "Par défaut",
+  "themeOcean": "Océan",
+  "themeSunset": "Coucher de Soleil",
+  "themeForest": "Forêt",
+  "sampleDimensions": {
+    "dim1": "Prix",
+    "dim2": "Qualité",
+    "dim3": "Vitesse",
+    "dim4": "Support"
+  },
+  "sampleSeries": {
+    "series1": "Produit A",
+    "series2": "Produit B",
+    "series3": "Produit C"
+  },
+  "tips": {
+    "title": "Astuces",
+    "tip1": "Définir les dimensions",
+    "tip2": "Ajouter des séries de données",
+    "tip3": "Ajuster la largeur et l'opacité des lignes",
+    "tip4": "Activer les lignes lisses",
+    "tip5": "Exporter en PNG ou SVG"
+  },
+  "detailed_description": "Le générateur de diagrammes parallèles permet de visualiser des données multidimensionnelles en projetant chaque variable sur un axe vertical parallèle. Ce outil est conçu pour révéler des corrélations, des tendances et des points aberrants dans des jeux de données complexes, notamment ceux issus d'analyses statistiques, de simulations ou de bases de données relationnelles. Il utilise un algorithme de normalisation des valeurs d'axes pour garantir une comparaison équitable entre des dimensions hétérogènes (ex. : données temporelles, quantitatives et catégorielles). L'interface intègre des fonctionnalités avancées comme le brossage interactif (« interactive brushing ») pour isoler des sous-ensembles de données et le réordonnancement dynamique des axes via un glisser-déposer, facilitant l'exploration exploratoire. Les graphiques générés exploitent les standards SVG et Canvas pour une résolution adaptée aux publications scientifiques ou aux tableaux de bord métier. Contrairement aux outils classiques, il supporte les données manquantes en appliquant un algorithme d'imputation conditionnelle ou en affichant des segments disjoints.",
+  "usage_steps": [
+    "Importez vos données au format CSV/TSV via le sélecteur de fichier en haut de l'écran.",
+    "Sélectionnez les colonnes à visualiser en cochant les cases correspondantes dans le panneau de configuration à gauche.",
+    "Ajustez les échelles des axes individuellement (linéaire, logarithmique ou catégorielle) via le menu contextuel d'axe (clic droit sur un axe).",
+    "Activez le mode de brossage (bouton « Sélectionner ») et tracez un rectangle sur un axe pour filtrer les données associées.",
+    "Personnalisez les couleurs des lignes via l'éditeur de style en bas, en assignant des palettes discrètes ou dégradées selon les dimensions.",
+    "Exportez le graphique final en SVG ou PNG HD via l'icône « Télécharger » située dans la barre d'outils supérieure."
+  ],
+  "usage_examples": [
+    "Un chercheur compare les performances de 5 algorithmes d'apprentissage automatique selon 8 métriques (précision, temps d'entraînement, etc.) pour identifier les meilleurs compromis.",
+    "Un ingénieur analyse les données de capteurs d'une turbine à gaz (température, pression, vibration) pour détecter des combinaisons de valeurs anormales.",
+    "Un analyste financier évalue les KPI (ROE, levier, liquidité) de 20 entreprises pour segmenter les portefeuilles à risque élevé.",
+    "Un écologiste étudie les corrélations entre les paramètres environnementaux (pH, nitrates, biodiversité) dans 15 zones de surveillance."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

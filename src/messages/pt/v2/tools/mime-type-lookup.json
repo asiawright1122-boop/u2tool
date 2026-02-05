@@ -1,0 +1,17 @@
+{
+  "detailed_description": "A Ferramenta de Consulta de Tipo MIME é uma solução técnica especializada para identificar e validar tipos MIME conforme padrões IANA (Internet Assigned Numbers Authority). Este recurso permite que desenvolvedores realizem buscas reversas entre extensões de arquivos e seus respectivos tipos MIME registrados, essencial para configurações precisas em servidores web, APIs e cabeçalhos HTTP. A ferramenta opera através de um banco de dados estruturado em formato JSON, atualizado com a lista oficial de tipos MIME, aplicando algoritmos de correspondência parcial e insensibilidade a maiúsculas/minúsculas para maior eficiência. Quando um usuário insere uma extensão ou termo descritivo, o mecanismo executa consultas em índices otimizados, retornando resultados com grau de confiança baseado na conformidade IANA. Este processo é fundamental para resolver problemas de negociação de conteúdo, garantir compatibilidade em serviços RESTful e prevenir falhas de segurança causadas por tipos MIME incorretos.",
+  "usage_steps": [
+    "Selecione o modo de pesquisa no seletor de interface: 'Por Extensão' ou 'Por Descrição'.",
+    "Insira o termo desejado no campo de busca: use '.mp4' para extensões ou 'áudio comprimido' para descrições.",
+    "Ative o filtro avançado para restringir resultados a categorias específicas (ex: áudio, vídeo, aplicativo).",
+    "Analise a tabela de resultados que exibe Tipo MIME, extensão correspondente e grau de conformidade IANA.",
+    "Clique no botão 'Copiar' para transferir o Tipo MIME exato para configurações de servidor ou cabeçalhos HTTP.",
+    "Valide a precisão do resultado comparando com a especificação oficial no repositório IANA acessível via link integrado."
+  ],
+  "usage_examples": [
+    "Configurar corretamente o cabeçalho Content-Type em uma API Node.js para arquivos .webp gerados dinamicamente.",
+    "Diagnosticar por que um navegador não renderiza corretamente PDFs servidos com tipo MIME application/octet-stream.",
+    "Atualizar manualmente o arquivo .htaccess do Apache para incluir novos tipos MIME de formatos 3D como .glb.",
+    "Validar se um CMS legado suporta o tipo MIME image/avif para compatibilidade com novos navegadores."
+  ]
+}

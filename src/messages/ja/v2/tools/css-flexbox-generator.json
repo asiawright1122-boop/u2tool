@@ -1,0 +1,17 @@
+{
+  "detailed_description": "CSS Flexbox Generatorは、柔軟なWebレイアウトを視覚的に構築するための開発者向けツールです。Flexboxのコンテナプロパティ（flex-direction, flex-wrap, justify-content, align-items, align-content）とアイテムプロパティ（order, flex-grow, flex-shrink, flex-basis, align-self）をリアルタイムに調整可能で、生成されたCSSコードは即時プレビューに反映されます。開発者は複雑なFlexbox構文を手書きする必要がなくなり、視覚的なフィードバックを得ながら最適なレイアウトを設計できます。特にレスポンシブデザイン構築時のグリッド配置や要素の整列調整に有効で、CSS Gridとの併用時におけるボックスモデルの挙動確認にも役立ちます。バックエンドではJavaScriptによる動的CSS生成エンジンが動作し、ユーザー操作に応じてAST（抽象構文木）を構築しながらスタイルシートを出力します。",
+  "usage_steps": [
+    "1. メインパネルの「Flex Direction」ドロップダウンからrow/columnを指定してコンテナ軸を設定",
+    "2. 「Wrap」セクションでno-wrap/wrap-reverseを選択し、折り返し動作をシミュレート",
+    "3. 「Justify Content」スライダーで主軸方向の余白分配アルゴリズムを選択",
+    "4. 個別アイテムの「Flex Grow」入力ボックスに数値を入力して可変幅比率を定義",
+    "5. 「Code Preview」タブで生成されたCSSコードをコピーしプロジェクトに貼り付け",
+    "6. ブラウザでプレビューしながら「Align Self」オプションで個別アイテムの垂直配置を微調整"
+  ],
+  "usage_examples": [
+    "レスポンシブナビゲーションバーのメニューアイテム均等分配：justify-content: space-betweenの代替としてflex-growプロパティで動的幅調整",
+    "カード型ギャラリーレイアウト：flex-wrapとalign-contentの組み合わせでグリッド風デザインを実装",
+    "中央揃えモーダルダイアログ：display: flexコンテナ内でalign-items/justify-contentをmiddle/ceterに設定",
+    "不揃いな高さのカラム整列：align-selfプロパティで特定アイテムの垂直位置を個別制御"
+  ]
+}

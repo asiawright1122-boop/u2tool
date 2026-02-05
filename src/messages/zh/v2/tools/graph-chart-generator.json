@@ -1,0 +1,86 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "layout": "布局",
+  "layoutForce": "力",
+  "layoutCircular": "环形",
+  "showLabel": "显示标签",
+  "repulsion": "斥力",
+  "nodeName": "节点名称",
+  "nodeSize": "节点大小",
+  "source": "源",
+  "target": "目标",
+  "addNode": "添加节点",
+  "addLink": "添加链接",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "网络结构",
+  "sampleTitle": "关系图",
+  "nodeEditor": "节点编辑器",
+  "linkEditor": "链接编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "categoryA": "类别A",
+  "categoryB": "类别B",
+  "categoryC": "类别C",
+  "sampleData": {
+    "node1": "节点A",
+    "node2": "节点B",
+    "node3": "节点C"
+  },
+  "tips": {
+    "title": "提示",
+    "tip1": "添加节点和链接",
+    "tip2": "选择布局类型",
+    "tip3": "调整斥力",
+    "tip4": "设置节点大小",
+    "tip5": "导出为PNG或SVG"
+  },
+  "node": "节点",
+  "detailed_description": "Graph Chart Generator 是一款在线图形/网络图表生成工具，旨在帮助用户通过可视化的方式展示复杂的数据关系。该工具支持多种图表类型，如节点链接图、力导向图等，用户可以轻松调整节点和边的样式，以突出关键信息。Graph Chart Generator 适用于数据科学家、网络分析师、项目管理人员等多个领域，特别是在处理复杂网络结构、社会关系图、项目依赖关系等方面有广泛的应用。用户可以通过上传数据文件或手动输入数据来创建图表，工具支持的数据格式包括 CSV、JSON 等。图表生成后，用户可以进行进一步的自定义，如调整节点颜色、边的粗细、添加标签等。此外，图表支持导出为 PNG 和 SVG 格式，方便用户在报告、演示文稿或网页中使用。",
+  "usage_steps": [
+    "Step 1: 访问 Graph Chart Generator 网站，点击页面顶部的“创建新图表”按钮。",
+    "Step 2: 在“数据来源”选项中，选择“上传文件”并选择您的 CSV 或 JSON 文件，或选择“手动输入”并直接在文本框中输入数据。",
+    "Step 3: 选择图表类型，如“节点链接图”或“力导向图”，点击“应用”按钮以生成初始图表。",
+    "Step 4: 在“图表设置”面板中，调整节点和边的样式，如颜色、大小和边的粗细，以优化图表的视觉效果。",
+    "Step 5: 使用“标签”选项卡添加或编辑节点和边的标签，以便更清晰地展示信息。",
+    "Step 6: 完成图表编辑后，点击“导出”按钮，选择 PNG 或 SVG 格式，下载图表文件。"
+  ],
+  "usage_examples": [
+    "Example 1: 数据科学家使用 Graph Chart Generator 分析社交媒体平台上的用户关系网络，通过节点颜色和大小展示不同用户群体的互动情况。",
+    "Example 2: 项目管理人员利用该工具展示项目任务之间的依赖关系，帮助团队成员更好地理解项目进度和关键路径。",
+    "Example 3: 生物信息学研究人员使用 Graph Chart Generator 可视化基因表达网络，探索不同基因之间的相互作用。",
+    "Example 4: 企业架构师通过该工具构建企业内部的应用程序和数据流图，帮助决策者优化 IT 资源的分配。"
+  ],
+  "faqs": [
+    {
+      "question": "Graph Chart Generator 是免费的吗？",
+      "answer": "是的，Graph Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Graph Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Graph Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Graph Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Graph Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

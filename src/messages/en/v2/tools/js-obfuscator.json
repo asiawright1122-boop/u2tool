@@ -1,0 +1,29 @@
+{
+  "inputCode": "JavaScript Input",
+  "obfuscatedCode": "Obfuscated Output",
+  "loadSample": "Load Sample",
+  "placeholder": "Paste your JavaScript code here...",
+  "obfuscate": "Obfuscate",
+  "renameVariables": "Rename Variables",
+  "stringEncoding": "String Encoding",
+  "unicodeEscape": "Unicode Escape",
+  "deadCodeInjection": "Dead Code Injection",
+  "controlFlowFlattening": "Control Flow Flattening",
+  "info": "Information",
+  "infoText": "This is a basic obfuscator. For production use, consider professional tools like javascript-obfuscator.",
+  "detailed_description": "The JavaScript Obfuscator transforms readable code into a protected, reverse-engineering-resistant format using advanced lexical analysis and abstract syntax tree (AST) manipulation. This tool employs multi-layered obfuscation techniques including variable and function name mangling via entropy-optimized symbol generation, control flow obfuscation through nested conditional insertion, and string literal encryption using AES-256-CBC. Developers can protect sensitive logic, such as proprietary algorithms or authentication handlers, by converting source code into functionally equivalent but human-unintelligible output. The tool integrates anti-debugging measures like self-modifying code patterns and devirtualized execution paths to deter runtime analysis. Unlike basic minifiers, it systematically disrupts static analysis by breaking lexical scoping rules and injecting syntactic noise. Users benefit from protection against IP theft in client-side applications, security through obscurity for critical business logic, and mitigation of credential exposure in embedded API keys. The obfuscation engine preserves runtime behavior while invalidating standard deobfuscation heuristics, making it particularly effective for securing single-page applications and browser-based game engines.",
+  "usage_steps": [
+    "1. Paste unobfuscated JavaScript into the editor with syntax highlighting support",
+    "2. Configure obfuscation intensity using the entropy slider (Low/Medium/High/Ultra)",
+    "3. Toggle advanced protections: enable 'Control Flow Flattening' or 'String Encryption'",
+    "4. Adjust identifier mangling depth with custom seed values for deterministic output",
+    "5. Preview obfuscated result in the split-pane viewer with original code comparison",
+    "6. Download output as .js file or copy to clipboard with integrity checksum"
+  ],
+  "usage_examples": [
+    "Example 1: A SaaS company obfuscates client-side payment processing logic to prevent bypassing subscription checks",
+    "Example 2: Game developer protects WebGL rendering algorithms against asset extraction in browser-based 3D engines",
+    "Example 3: Enterprise application secures OAuth2 token handling routines embedded in frontend code",
+    "Example 4: IoT dashboard developer disguises device communication protocols to prevent firmware reverse-engineering"
+  ]
+}

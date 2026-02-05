@@ -1,0 +1,44 @@
+{
+  "detailed_description": "Der Dokument-Wortzähler bietet detaillierte Statistiken einschließlich Wortzählung, Zeichenzählung und Lesedauer.",
+  "usage_steps": [
+    "Text in das Dokument einfügen",
+    "Realzeit-Zählung anzeigen",
+    "Statistiken überprüfen",
+    "Lesedauer anzeigen",
+    "Statistiken exportieren"
+  ],
+  "usage_examples": [
+    "Zählung der Wortzahl in einer Arbeit überprüfen",
+    "Artikel-Länge überprüfen",
+    "Lesedauer schätzen"
+  ],
+  "input": "Eingabe",
+  "output": "Ausgabe",
+  "process": "Verarbeitung",
+  "copy": "Kopieren",
+  "clear": "Leeren",
+  "inputPlaceholder": "Geben Sie hier Ihren Eingabe ein...",
+  "outputPlaceholder": "Ergebnisse werden hier angezeigt...",
+  "errors": {
+    "emptyInput": "Bitte geben Sie einige Eingabe ein"
+  },
+  "documentText": "Dokumenttext",
+  "words": "Wörter",
+  "characters": "Zeichen",
+  "sentences": "Sätze",
+  "paragraphs": "Absätze",
+  "detailedStatistics": "Detaillierte Statistiken",
+  "charactersNoSpaces": "Zeichen (ohne Leerzeichen)",
+  "lines": "Zeilen",
+  "pages": "Seiten (~250 Wörter)",
+  "uniqueWords": "Einzigartige Wörter",
+  "avgWordLength": "Durchschnittliche Wortlänge",
+  "avgSentenceLength": "Durchschnittliche Satzlänge",
+  "longestWord": "Längstes Wort",
+  "timeEstimates": "Zeitschätzungen",
+  "readingTime": "Lesezeit",
+  "speakingTime": "Sprechzeit",
+  "topWords": "Top-Wörter",
+  "chars": "Zeichen",
+  "min": "Min"
+}

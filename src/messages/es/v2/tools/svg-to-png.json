@@ -1,0 +1,29 @@
+{
+  "detailed_description": "El Convertidor de SVG a PNG transforma gráficos vectoriales escalables al formato de gráficos de red portátil. Soporta dimensiones personalizadas, colores de fondo y exportaciones de alta calidad.",
+  "usage_steps": [
+    "Sube o pega tu archivo SVG",
+    "Establece las dimensiones de salida (ancho/alto)",
+    "Elige el color de fondo (transparente o sólido)",
+    "Haz clic en Convertir para generar PNG",
+    "Descarga la imagen convertida"
+  ],
+  "usage_examples": [
+    "Convierte logotipos para redes sociales",
+    "Exporta iconos para aplicaciones móviles",
+    "Crea versiones raster de arte vectorial"
+  ],
+  "uploadSvg": "Subir SVG",
+  "pasteSvg": "O pega el código SVG",
+  "width": "Ancho",
+  "height": "Alto",
+  "backgroundColor": "Color de Fondo",
+  "transparent": "Transparente",
+  "convert": "Convertir a PNG",
+  "download": "Descargar PNG",
+  "preview": "Vista previa",
+  "orPasteSvg": "O pegue código SVG",
+  "placeholder": "Pegue código SVG aquí...",
+  "scale": "Escala",
+  "background": "Fondo",
+  "noPreview": "Sin vista previa"
+}

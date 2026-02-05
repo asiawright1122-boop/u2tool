@@ -1,0 +1,36 @@
+{
+  "measurementMethod": "Méthode de Mesure",
+  "circumference": "Circonférence",
+  "diameter": "Diamètre",
+  "existingRing": "Taille de Bague Existante",
+  "enterMeasurement": "Entrez la Mesure",
+  "mm": "mm",
+  "inches": "pouces",
+  "yourSize": "Votre Taille",
+  "usSize": "Taille US",
+  "ukSize": "Taille UK",
+  "euSize": "Taille EU",
+  "measureTips": "Comment Mesurer",
+  "detailed_description": "Le Calculateur de Taille de Bague est un outil en ligne conçu pour déterminer avec précision la taille de bague correspondant à une circonférence de doigt, une largeur de bague, ou même une taille de bague existante. Ce calculateur utilise des algorithmes basés sur des normes internationales, y compris les systèmes de taille de bague américains, britanniques, et européens. En intégrant ces normes, l'outil assure une conversion fiable et précise des mesures, facilitant ainsi l'achat en ligne de bijoux. Les utilisateurs peuvent notamment s'en servir pour vérifier la taille exacte d'une bague avant un achat, ajuster la taille d'une bague existante, ou même pour créer une bague sur mesure. La précision de ce calculateur repose sur des données empiriques et des formules mathématiques éprouvées, offrant ainsi une solution fiable pour une large gamme de besoins en bijouterie.",
+  "usage_steps": [
+    "Ouvrez le Calculateur de Taille de Bague sur le site web.",
+    "Choisissez le système de taille de bague souhaité (Américain, Britannique, Européen) à partir du menu déroulant.",
+    "Sélectionnez la méthode de mesure que vous allez utiliser : circonférence du doigt, largeur de bague, ou taille de bague existante.",
+    "Entrez la mesure correspondante dans le champ de saisie. Par exemple, si vous choisissez la circonférence du doigt, entrez la mesure en millimètres.",
+    "Cliquez sur le bouton 'Calculer' pour obtenir la taille de bague équivalente.",
+    "La taille de bague calculée s'affichera en dessous du bouton, avec une explication claire de la conversion effectuée."
+  ],
+  "usage_examples": [
+    "Un client souhaite acheter une bague en ligne mais ne connaît pas sa taille exacte. Il utilise le Calculateur de Taille de Bague pour convertir la circonférence de son doigt en taille de bague américaine.",
+    "Un bijoutier reçoit une commande pour ajuster la taille d'une bague. Il utilise l'outil pour déterminer la nouvelle taille requise en se basant sur la mesure de la largeur actuelle de la bague.",
+    "Une personne veut créer une bague sur mesure pour une surprise. Elle utilise le calculateur pour vérifier que la taille de bague qu'elle a mesurée est correcte selon les normes européennes.",
+    "Un collectionneur de bijoux souhaite convertir la taille de ses bagues de l'échelle britannique à l'échelle américaine pour faciliter la gestion de sa collection. Il utilise le Calculateur de Taille de Bague pour effectuer les conversions nécessaires."
+  ],
+  "convertMode": "Convert Mode",
+  "measureMode": "Measure Mode",
+  "selectUSSize": "Select U S Size",
+  "measurementType": "Measurement Type",
+  "yourRingSize": "Your Ring Size",
+  "sizeChart": "Size Chart",
+  "measurementTips": "Measurement Tips"
+}

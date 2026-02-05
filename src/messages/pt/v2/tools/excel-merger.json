@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Excel Merger é uma ferramenta técnica especializada na fusão precisa de múltiplos arquivos Excel (XLSX) e CSV, permitindo combinações verticais (por linhas) ou horizontais (por colunas) com controle avançado de integridade dos dados. Para operações verticais, o algoritmo alinha colunas com base em cabeçalhos correspondentes, enquanto fusões horizontais utilizam uma coluna-chave (como IDs ou códigos únicos) para correlacionar registros. A ferramenta processa arquivos localmente no navegador, garantindo segurança, e suporta tipos de dados heterogêneos, preservando formatação condicional, fórmulas e metadados. É essencial para profissionais que lidam com consolidação de relatórios financeiros de diferentes departamentos, integração de bases de dados de CRM, preparação de conjuntos de dados para machine learning ou auditorias que exijam verificação cruzada de informações. Sua engine de processamento otimizada evita duplicidades através de estratégias configuráveis (ignorar, destacar ou somar valores numéricos), enquanto permite mapeamento manual de colunas em casos de divergências estruturais entre as planilhas.",
+  "usage_steps": [
+    "1. Acesse a interface e clique em 'Selecionar Arquivos' para carregar até 20 planilhas XLSX ou CSV simultaneamente.",
+    "2. Escolha o modo de fusão no seletor 'Vertical' (empilhar linhas) ou 'Horizontal' (juntar colunas via chave primária).",
+    "3. Para fusão vertical, ative a opção 'Alinhar por Cabeçalho' e selecione colunas críticas no menu suspenso para garantir consistência estrutural.",
+    "4. No modo horizontal, especifique a coluna-chave comum usando o campo 'Definir ID de Junção' e selecione o tipo de correspondência (exata ou parcial).",
+    "5. Ajuste regras de tratamento de duplicatas no painel 'Opções Avançadas', escolhendo entre manter primeiras ocorrências, somar valores numéricos ou marcar conflitos.",
+    "6. Clique em 'Gerar Arquivo' e escolha o formato de saída (XLSX, CSV ou JSON) antes de baixar o resultado consolidado."
+  ],
+  "usage_examples": [
+    "Uma equipe de vendas integra relatórios mensais de cinco regiões distintas, alinhando dados em uma única planilha vertical para análise de tendências trimestrais.",
+    "Um cientista de dados une bases de clientes (com CPF como chave) de três sistemas legados em uma única tabela horizontal para treinamento de modelo preditivo.",
+    "Um contador consolida balanços semestrais de filiais, configurando o modo vertical com alinhamento automático de contas contábeis e soma de valores duplicados.",
+    "Um pesquisador acadêmico mescla respostas de questionários coletados em diferentes formatos CSV, usando mapeamento manual de colunas para homogeneizar variáveis qualitativas."
+  ]
+}

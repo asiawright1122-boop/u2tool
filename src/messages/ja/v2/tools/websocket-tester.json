@@ -1,0 +1,37 @@
+{
+  "serverUrl": "WebSocketサーバーURL",
+  "connect": "接続",
+  "disconnect": "切断",
+  "connecting_btn": "接続中...",
+  "connecting": "接続中... {url}に接続しています...",
+  "connected": "接続成功",
+  "disconnected": "切断されました（コード: {code}）",
+  "errorConnection": "接続エラーが発生しました",
+  "errorInvalidUrl": "無効なWebSocket URL",
+  "quickConnect": "クイック接続",
+  "statusConnected": "接続済み",
+  "statusConnecting": "接続中...",
+  "statusDisconnected": "切断済み",
+  "messages": "メッセージ",
+  "clear": "クリア",
+  "noMessages": "まだメッセージはありません。WebSocketサーバーに接続してから始めてください。",
+  "messagePlaceholder": "メッセージを入力...",
+  "send": "送信",
+  "note": "注意",
+  "noteText": "一部のWebSocketサーバーは、CORS制限によりブラウザからの接続を受け入れないことがあります。エコーサーバーは、送信したメッセージをすべて返すパブリックテストサーバーです。",
+  "detailed_description": "WebSocketテスタは、リアルタイムでWebSocket接続をテストおよびデバッグする強力なオンラインツールです。開発者が任意のWebSocketサーバーに接続し、メッセージを送信し、受信したレスポンスを即座に確認できます。このツールは標準のWebSocketプロトコル（ws://およびwss://）をサポートしており、チャットアプリケーション、ライブデータフィード、ゲームサーバー、その他のリアルタイムコミュニケーションシステムのテストに最適です。接続状態の監視、メッセージ履歴、テストサーバーへのクイック接続などの機能を備えており、WebSocketに基づくアプリケーションを扱う開発者にとって不可欠です。テストはブラウザ内で直接行われ、外部サーバーにデータが送信されることはありません。",
+  "usage_steps": [
+    "WebSocketサーバーのURL（ws://またはwss://）を入力する",
+    "ConnectをクリックしてWebSocket接続を確立する",
+    "入力フィールドにメッセージを入力する",
+    "Sendをクリックしてメッセージをサーバーに送信する",
+    "メッセージ履歴パネルで受信したメッセージを確認する",
+    "テストが終わったらDisconnectをクリックする"
+  ],
+  "usage_examples": [
+    "WebSocketエコーサーバーをテストして接続機能を確認する",
+    "リアルタイムチャットアプリケーションのメッセージ処理をデバッグする",
+    "WebSocket APIからのライブデータフィードを監視する",
+    "開発中にWebSocketサーバーのレスポンスを確認する"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le PDF Splitter est un outil de traitement de documents avancé qui permet aux utilisateurs de diviser des fichiers PDF en plusieurs documents plus petits selon différentes méthodes de segmentation. Technique de décomposition, l'outil offre la flexibilité de sélectionner des intervalles de pages spécifiques, d'extraire des pages individuelles ou de segmenter un document en fonction d'une sélection de pages. Cette fonctionnalité est particulièrement utile pour les professionnels du droit, les éditeurs, et les chercheurs qui ont besoin de manipuler des documents volumineux de manière précise. L'outil utilise des algorithmes de traitement de documents pour garantir que chaque nouveau document généré conserve la même qualité et la même structure que l'original, y compris la mise en page, les images, et les liens hypertextes. Les utilisateurs peuvent ainsi gagner du temps en évitant de devoir imprimer et recopier manuellement des sections de documents.",
+  "usage_steps": [
+    "Ouvrez l'outil PDF Splitter sur le site web et chargez votre fichier PDF en cliquant sur le bouton 'Sélectionner un fichier' ou en faisant glisser le fichier dans la zone désignée.",
+    "Une fois le fichier chargé, choisissez le mode de séparation souhaité dans la section 'Méthode de séparation' : 'Par intervalle de pages', 'Par page unique', ou 'Par sélection de pages'.",
+    "Si vous choisissez 'Par intervalle de pages', spécifiez le nombre de pages par document en entrant le nombre dans le champ correspondant.",
+    "Si vous optez pour 'Par page unique', l'outil générera un fichier PDF pour chaque page du document original.",
+    "Pour 'Par sélection de pages', saisissez les numéros de page ou les intervalles de pages que vous souhaitez extraire, par exemple, '1-5, 10, 15-20'.",
+    "Cliquez sur le bouton 'Démarrer la séparation' pour procéder. Une fois le processus terminé, téléchargez les nouveaux fichiers PDF générés en cliquant sur 'Télécharger' à côté de chaque document."
+  ],
+  "usage_examples": [
+    "Un avocat doit soumettre plusieurs documents juridiques à un tribunal. Il utilise PDF Splitter pour extraire des sections spécifiques de documents volumineux, chacune constituant un document distinct pour une présentation organisée.",
+    "Un éditeur de livres prépare une collection de chapitres écrits par différents auteurs. Il utilise l'outil pour séparer chaque chapitre en un fichier PDF individuel, facilitant la relecture et la distribution aux auteurs.",
+    "Un chercheur en sciences sociales a un document de recherche de 100 pages et souhaite le partager avec des collègues pour des commentaires. Il utilise PDF Splitter pour diviser le document en sections de 10 pages chacune, permettant une révision plus facile et ciblée.",
+    "Un étudiant en architecture doit soumettre des plans de construction détaillés. Il utilise l'outil pour extraire des pages contenant des sections spécifiques des plans, facilitant la présentation et l'évaluation par le jury."
+  ]
+}

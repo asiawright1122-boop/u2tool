@@ -1,0 +1,48 @@
+{
+  "count": "Número de Registros",
+  "locale": "Localización",
+  "fields": "Campos",
+  "addField": "Agregar Campo",
+  "removeField": "Eliminar",
+  "fieldName": "Nombre del Campo",
+  "fieldType": "Tipo de Campo",
+  "generate": "Generar Datos",
+  "exportJson": "Exportar JSON",
+  "exportCsv": "Exportar CSV",
+  "exportSql": "Exportar SQL",
+  "tableName": "Nombre de la Tabla",
+  "preview": "Vista Previa",
+  "clickToEdit": "Hacer clic para editar",
+  "types": {
+    "name": "Nombre Completo",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "address": "Dirección",
+    "city": "Ciudad",
+    "country": "País",
+    "company": "Compañía",
+    "jobTitle": "Título del Trabajo",
+    "date": "Fecha",
+    "number": "Número",
+    "uuid": "UUID",
+    "url": "URL",
+    "username": "Nombre de Usuario"
+  },
+  "detailed_description": "El Generador de Datos Falsos es una herramienta avanzada diseñada para crear datos simulados de alta calidad para diversos propósitos de desarrollo y pruebas. Técnica y funcionalmente, esta herramienta utiliza algoritmos de generación de datos basados en modelos estadísticos y lógicas de patrones lingüísticos para producir datos que se asemejan a datos reales, incluyendo nombres, correos electrónicos, direcciones, números de teléfono, y más. La importancia de esta herramienta radica en su capacidad para proporcionar a los desarrolladores y probadores un conjunto de datos realistas sin infringir la privacidad de individuos reales. Esto es crucial en escenarios de desarrollo de aplicaciones, pruebas de funcionalidad, y simulaciones de uso en entornos controlados.\n\nLos usuarios necesitan esta herramienta para varios casos de uso específicos. Por ejemplo, en el desarrollo de aplicaciones web, es esencial contar con datos de prueba que reflejen la variedad y complejidad de los datos reales para asegurar que la aplicación funcione correctamente en todas las condiciones. En pruebas de rendimiento, los datos generados pueden ayudar a simular cargas de trabajo reales y evaluar la capacidad del sistema. Además, en entornos de formación y capacitación, los datos falsos permiten a los nuevos desarrolladores aprender y practicar sin riesgo de dañar datos reales.\n\nLa herramienta funciona a través de una interfaz de usuario intuitiva que permite a los usuarios seleccionar los tipos de datos que desean generar, configurar los parámetros específicos, y obtener el resultado en formato CSV, JSON, o directamente en el navegador. La generación de datos se realiza en tiempo real, y los algoritmos utilizados aseguran que los datos sean consistentes y lógicamente correctos, lo que aumenta su valor para pruebas y desarrollo.",
+  "usage_steps": [
+    "Acceda a la herramienta a través del menú principal y seleccione 'Generador de Datos Falsos'.",
+    "En el panel de configuración, elija el tipo de datos que desea generar, como nombres, correos electrónicos, direcciones, etc.",
+    "Personalice los parámetros específicos para cada tipo de dato. Por ejemplo, para nombres, puede seleccionar el país y el idioma para generar nombres más precisos y contextuales.",
+    "Configure el número de registros que desea generar y el formato de salida (CSV, JSON, o texto plano).",
+    "Haga clic en el botón 'Generar Datos' para iniciar el proceso de creación de datos falsos.",
+    "Una vez generados, los datos se mostrarán en la pantalla y podrán ser descargados en el formato seleccionado."
+  ],
+  "usage_examples": [
+    "Desarrollo de una aplicación de gestión de clientes: Un equipo de desarrollo necesita datos de prueba que incluyan nombres, direcciones, y correos electrónicos para simular el comportamiento de los usuarios en la aplicación. El Generador de Datos Falsos permite crear un conjunto de datos realistas y voluminoso para probar la funcionalidad y el rendimiento de la aplicación.",
+    "Pruebas de seguridad en una plataforma de comercio electrónico: Los responsables de seguridad necesitan verificar la capacidad de la plataforma para manejar y proteger datos sensibles. Utilizando el Generador de Datos Falsos, pueden crear datos de prueba que incluyan información de tarjetas de crédito y direcciones de facturación, simulando un entorno real sin poner en riesgo datos reales.",
+    "Formación de desarrolladores junior: Un mentor de desarrollo utiliza el Generador de Datos Falsos para crear un conjunto de datos que los desarrolladores en formación pueden usar para practicar consultas SQL y operaciones de base de datos. Esto ayuda a los nuevos desarrolladores a familiarizarse con el manejo de datos sin afectar sistemas de producción.",
+    "Pruebas de rendimiento en una aplicación móvil: Un equipo de pruebas necesita simular una gran cantidad de usuarios activos para evaluar el rendimiento de la aplicación. El Generador de Datos Falsos permite crear perfiles de usuario ficticios, incluyendo nombres, correos electrónicos, y ubicaciones, para simular un uso real de la aplicación y evaluar su capacidad de respuesta."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "sizes": "Tamanhos",
+  "selectSizes": "Selecionar Tamanhos",
+  "convert": "Converter para ICO",
+  "download": "Baixar ICO",
+  "dropzone": "Clique ou arraste imagem para enviar",
+  "preview": "Visualizar",
+  "downloadIco": "Baixar ICO",
+  "detailed_description": "O Image to ICO é uma ferramenta técnica especializada para conversão de imagens em ícones no formato ICO (Windows Icon), compatível com múltiplas resoluções e profundidades de cor. O processo interno utiliza bibliotecas de processamento de imagens para redimensionar o arquivo de entrada (PNG, JPEG, BMP ou WebP) para dimensões padronizadas como 16×16, 32×32, 48×48, 64×64, 128×128 e 256×256 pixels, garantindo escalabilidade em diferentes densidades de tela. A ferramenta aplica algoritmos de interpolação bicúbica para preservar a qualidade durante o redimensionamento e permite a seleção de profundidade de cor (24-bit ou 32-bit com canal alfa), essencial para transparências. O formato ICO resultante é um container que embute múltiplas variações do ícone, otimizado para uso em sistemas Windows, sites (favicons) ou aplicativos desktop. Desenvolvedores precisam desta ferramenta para gerar ícones compatíveis com o Resource Manager do Windows, designers de UI/UX para criar assets escaláveis, e programadores de jogos para suportar diferentes resoluções em menus ou interfaces. O processo elimina a necessidade de ferramentas proprietárias, automatizando a geração de ícones em workflows ágeis de desenvolvimento.",
+  "usage_steps": [
+    "Acesse a ferramenta e arraste seu arquivo PNG/JPEG para a área de upload ou clique em 'Selecionar Imagem'.",
+    "Escolha as dimensões desejadas nos checkboxes (ex: 32×32, 64×64, 256×256) ou selecione 'Todas' para inclusão automática.",
+    "Ajuste a profundidade de cor: 24-bit (sem transparência) ou 32-bit (com canal alfa) via menu suspenso.",
+    "Ative a opção 'Compactar' para reduzir o tamanho final do arquivo ICO sem perda de qualidade.",
+    "Visualize a prévia da estrutura do ícone, que exibe as variações de tamanho e formato embutidos.",
+    "Clique em 'Baixar ICO' para salvar o arquivo pronto, pronto para uso imediato em projetos Windows ou web."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor criando um ícone para um software desktop que precise de compatibilidade com Windows 10/11, incluindo versões de alta DPI.",
+    "Um designer web gerando um favicon.ico com múltiplas resoluções para garantir nitidez em abas de navegadores e dispositivos móveis.",
+    "Um artista de jogos preparando ícones para menus de jogos em 2D, com suporte a diferentes escalas de interface.",
+    "Um designer UI/UX testando como um logotipo se adapta a tamanhos pequenos (ex: 16×16 pixels) para identificar perdas de detalhe."
+  ]
+}

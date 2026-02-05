@@ -1,0 +1,26 @@
+{
+  "theme": "Theme",
+  "language": "Sprache",
+  "padding": "Abstand",
+  "fontSize": "Schriftgröße",
+  "lineNumbers": "Zeilennummern",
+  "windowControls": "Fenstersteuerung",
+  "detailed_description": "Der Code Screenshot Generator ist ein Spezialwerkzeug zur präzisen Erstellung von hochwertigen Code-Visualisierungen mit pixelgenauer Syntaxhervorhebung. Technisch setzt er auf eine Kombination aus Prism.js für die Spracherkennung und einem modifizierten SVG-Rendering-Engine, um Code-Blöcke in vektorbasierte Grafiken umzuwandeln. Unterstützt werden über 150 Programmiersprachen durch dynamisches Parsing, wobei Farbschemata via benutzerdefinierter CSS-Tokens gesteuert werden. Das Tool unterscheidet sich durch die Implementierung eines virtuellen DOM-Puffers, der Layout-Brechungen verhindert und Zeilenumbrüche in Echtzeit berechnet. Entwickler benötigen dieses Tool, um Code-Dokumentationen für Open-Source-Projekte zu erstellen, Präsentationen mit pixelgenauen Visualisierungen zu versehen oder Social-Media-Inhalte mit konsistenten Code-Styles zu generieren. Die Exportfunktion bietet optionale Schatten-Effekte, benutzerdefinierte Hintergrundtransparenz und die Möglichkeit, Zeilennummern mit oder ohne Highlight-Markup zu rendern.",
+  "usage_steps": [
+    "1. Fügen Sie Ihren Code in den Editor ein und wählen Sie die Programmiersprache aus dem Dropdown-Menü 'Language' (z.B. JavaScript, Python, Rust).",
+    "2. Passen Sie das Erscheinungsbild an: Wählen Sie ein Farbschema ('Theme') und aktivieren Sie ggf. 'Line Highlighting' für spezifische Zeilen.",
+    "3. Konfigurieren Sie den Export: Legen Sie die DPI-Auflösung (bis zu 600 DPI) und das Format (PNG oder SVG) im 'Export Settings'-Panel fest.",
+    "4. Klicken Sie auf 'Render Preview', um eine Vorschau mit exakter Pixelwiederholung des finalen Bildes zu generieren.",
+    "5. Nutzen Sie den 'Padding'-Regler, um den weißen Rand um den Code-Block zu justieren (0-50px einstellbar).",
+    "6. Laden Sie das endgültige Bild herunter oder kopieren Sie den SVG-Code direkt in Ihre Dokumentation."
+  ],
+  "usage_examples": [
+    "Ein Full-Stack-Entwickler erstellt für einen Medium-Blog-Post Screenshots von React-Komponenten mit dark-mode-kompatiblen Farbschemata.",
+    "Ein Informatikdozent generiert für seine Vorlesungsfolien skalierbare SVG-Code-Beispiele, die bei Projektoren keine Pixelung aufweisen.",
+    "Ein Open-Source-Maintainer visualisiert Versionsunterschiede in GitHub-Release-Notes durch farblich kontrastierte Code-Diffs.",
+    "Ein UI/UX-Designer dokumentiert Design-System-Komponenten in Figma mit eingebetteten PNG-Bildern, die Schriftgrößen präzise auf das Design abgestimmt sind."
+  ],
+  "html2canvas": "Html2canvas",
+  "a": "A",
+  "\\n": "\\n"
+}

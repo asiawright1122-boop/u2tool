@@ -1,0 +1,37 @@
+{
+  "detailed_description": "El Editor Markdown es una potente herramienta de edición de documentos en línea con funcionalidad de vista previa en tiempo real. Escribe sintaxis Markdown en el lado izquierdo y ve instantáneamente el resultado renderizado en el derecho. Soporta toda la sintaxis Markdown estándar incluyendo encabezados, listas, bloques de código, tablas, enlaces, imágenes y más. Ofrece tres modos de vista: dividido, solo edición y solo vista previa. Exporta tu trabajo como archivos .md o .html con un clic. Botones de inserción rápida integrados para formato común. Toda la edición ocurre localmente en tu navegador, garantizando la seguridad de los datos.",
+  "usage_steps": [
+    "Abre la página de la herramienta Editor Markdown",
+    "Ingresa o pega contenido Markdown en el área de edición izquierda",
+    "El área de vista previa derecha muestra el resultado renderizado en tiempo real",
+    "Usa los botones de la barra de herramientas para insertar formato común rápidamente",
+    "Elige el modo de vista: dividido, edición o vista previa",
+    "Haz clic en el botón de descarga para exportar como archivo .md o .html"
+  ],
+  "usage_examples": [
+    "Escribir documentación técnica y archivos README",
+    "Crear publicaciones de blog y notas",
+    "Redactar documentación de proyectos",
+    "Previsualizar formato Markdown rápidamente"
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué sintaxis Markdown es compatible?",
+      "answer": "Se soporta toda la sintaxis Markdown estándar, incluyendo encabezados, negrita, cursiva, listas, bloques de código, tablas, enlaces, imágenes, citas y más. También se soportan las extensiones GFM (GitHub Flavored Markdown)."
+    },
+    {
+      "question": "¿Mi contenido se guarda automáticamente?",
+      "answer": "La versión actual no guarda el contenido automáticamente. Recomendamos exportar tu archivo después de editar. Puedes exportar en formato .md o .html."
+    },
+    {
+      "question": "¿Puedo importar archivos Markdown existentes?",
+      "answer": "Puedes copiar y pegar contenido Markdown existente directamente en el editor. El editor reconocerá y renderizará automáticamente la sintaxis Markdown."
+    }
+  ],
+  "errorParsingMarkdown": "Error al analizar markdown",
+  "list": "Lista",
+  "code": "Código",
+  "link": "Enlace",
+  "image": "Imagen",
+  "quote": "Cita"
+}

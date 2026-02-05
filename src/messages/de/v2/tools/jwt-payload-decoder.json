@@ -1,0 +1,25 @@
+{
+  "detailed_description": "JWT Payload Decoder extrahiert und zeigt den Header und den Payload von JSON Web Tokens an, ohne das Geheimniswort zu benötigen.",
+  "usage_steps": [
+    "JWT-Token einfügen",
+    "Automatische Dekodierung des Tokens",
+    "Header-Informationen anzeigen",
+    "Payload-Ansprüche untersuchen",
+    "Ablaufdatum überprüfen"
+  ],
+  "usage_examples": [
+    "Authentifizierungsprobleme debuggen",
+    "Token-Ablaufdatum überprüfen",
+    "Benutzerinformationen aus Token extrahieren"
+  ],
+  "input": "Eingabe",
+  "output": "Ausgabe",
+  "process": "Verarbeitung",
+  "copy": "Kopieren",
+  "clear": "Löschen",
+  "inputPlaceholder": "Geben Sie hier Ihre Eingabe ein...",
+  "outputPlaceholder": "Ergebnisse werden hier angezeigt...",
+  "errors": {
+    "emptyInput": "Bitte geben Sie eine Eingabe ein"
+  }
+}

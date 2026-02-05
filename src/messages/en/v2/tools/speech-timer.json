@@ -1,0 +1,36 @@
+{
+  "detailed_description": "Speech Timer is a professional presentation timing tool that helps speakers practice and deliver speeches effectively. It provides real-time countdown, word count estimation based on speaking pace, and visual alerts when time is running low.",
+  "usage_steps": [
+    "Set your target speech duration",
+    "Optionally enter your speech text for word count",
+    "Click start to begin the countdown",
+    "Monitor the visual progress indicator",
+    "Receive alerts when time is almost up"
+  ],
+  "usage_examples": [
+    "Practice TED-style presentations",
+    "Time academic conference talks",
+    "Prepare for job interview presentations"
+  ],
+  "targetDuration": "Target Duration",
+  "duration": "Duration",
+  "minutes": "minutes",
+  "min": "min",
+  "wordsPerMinute": "Words per minute",
+  "estimatedWords": "Estimated words",
+  "words": "words",
+  "remaining": "Remaining",
+  "start": "Start",
+  "pause": "Pause",
+  "reset": "Reset",
+  "timeRemaining": "Time Remaining",
+  "speechText": "Speech Text (optional)",
+  "speechPlaceholder": "Paste your speech here to count words...",
+  "wordCount": "Word Count",
+  "speakingPace": "Speaking Pace",
+  "slow": "Slow",
+  "normal": "Normal",
+  "fast": "Fast",
+  "timeUp": "Time's Up!",
+  "presets": "Presets"
+}

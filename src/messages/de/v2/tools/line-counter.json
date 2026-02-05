@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Line Counter ist ein leistungsstarkes Textverarbeitungstool, das es Benutzern ermöglicht, die Anzahl der Zeilen in einem Text zu zählen. Dieses Tool ist besonders nützlich für Entwickler und Datenanalytiker, die Textdateien in verschiedenen Formaten verarbeiten müssen. Neben dem einfachen Zeilenzählmechanismus bietet der Line Counter erweiterte Funktionen, wie das Entfernen von Duplikaten, das Filtern leerer Zeilen und das Sortieren der Ergebnisse. Diese Funktionen garantieren, dass die Textdaten sauber und strukturiert sind, was die Nachbearbeitung und Analyse erheblich erleichtert. Technisch gesehen verwendet der Line Counter reguläre Ausdrücke und String-Manipulationsalgorithmen, um die Eingabetexte zu analysieren und zu verarbeiten. Die Option zum Entfernen von Duplikaten nutzt hashtabellenbasierte Methoden, um die Effizienz zu maximieren, während das Filtern leerer Zeilen durch String-Trimming-Funktionen realisiert wird. Die Sortierung erfolgt durch den Einsatz von Sortieralgorithmen, die die Textzeilen alphabetisch oder numerisch ordnen können.",
+  "usage_steps": [
+    "Öffnen Sie die Website und navigieren Sie zum Line Counter-Tool.",
+    "Klicken Sie auf den Bereich 'Text einfügen' und fügen Sie Ihren Text ein oder laden Sie eine Textdatei hoch, indem Sie auf 'Datei hochladen' klicken.",
+    "Aktivieren Sie das Kontrollkästchen 'Duplikate entfernen', wenn Sie identische Zeilen aus dem Ergebnis ausschließen möchten.",
+    "Wählen Sie die Option 'Leere Zeilen entfernen', um Leerzeilen aus dem Text zu filtern.",
+    "Klicken Sie auf 'Sortieren', um die Zeilen alphabetisch oder numerisch zu ordnen. Wählen Sie die Sortierreihenfolge (aufsteigend oder absteigend) aus.",
+    "Drücken Sie den 'Zählen' Button, um die Zeilen zu zählen und die verarbeiteten Textzeilen anzuzeigen. Das Ergebnis wird unten auf der Seite angezeigt."
+  ],
+  "usage_examples": [
+    "Ein Entwickler muss eine große Log-Datei analysieren, um bestimmte Muster zu finden. Er verwendet den Line Counter, um die Log-Datei auf Doppelgänger zu überprüfen und leerzeilige Einträge zu entfernen, bevor er die Daten weiterverarbeitet.",
+    "Ein Datenjournalist arbeitet an einem Bericht über öffentliche Dokumente. Mit dem Line Counter kann er die Anzahl der einzigartigen Zeilen in einem Text extrahieren, um redundante Informationen zu eliminieren und den Überblick über die Daten zu behalten.",
+    "Ein Software-Tester überprüft die Ausgabe einer Anwendung, die Textdateien generiert. Der Line Counter hilft ihm, die Zeilen zu zählen und zu sortieren, um sicherzustellen, dass die Ausgabe korrekt und konsistent ist.",
+    "Ein Linguist studiert sprachliche Muster in Texten. Mit dem Line Counter kann er Textdokumente bereinigen, um nur relevante und einzigartige Zeilen für seine Analyse zu verwenden."
+  ]
+}

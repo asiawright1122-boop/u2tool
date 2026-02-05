@@ -1,0 +1,37 @@
+{
+  "detailed_description": "GitHub README Generator helps you create professional, well-structured README.md files for your GitHub repositories. Add project title, description, badges (build status, license, npm version), features list, installation instructions, usage examples, API documentation, contributing guidelines, and license information. The tool generates Markdown with proper formatting, making your projects more discoverable and user-friendly.",
+  "usage_steps": [
+    "Enter your project name and description",
+    "Add badges for build status, license, etc.",
+    "List key features of your project",
+    "Write installation instructions",
+    "Add usage examples with code blocks",
+    "Include contributing guidelines",
+    "Select a license and generate the README"
+  ],
+  "usage_examples": [
+    "Create a README for an open source library",
+    "Document a CLI tool with usage examples",
+    "Set up a README for a web application",
+    "Create documentation for an API project"
+  ],
+  "projectNamePlaceholder": "My Awesome Project",
+  "descriptionPlaceholder": "A brief description of your project...",
+  "authorPlaceholder": "John Doe",
+  "authorGithubPlaceholder": "johndoe",
+  "featurePlaceholder": "Feature description...",
+  "installationPlaceholder": "npm install your-package",
+  "usagePlaceholder": "import { something } from 'your-package';",
+  "projectName": "project Name",
+  "author": "author",
+  "authorGithub": "author Github",
+  "badges": "badges",
+  "features": "features",
+  "addFeature": "add Feature",
+  "installation": "installation",
+  "usage": "usage",
+  "license": "license",
+  "includeTableOfContents": "include Table Of Contents",
+  "generate": "Generate",
+  "download": "Download"
+}

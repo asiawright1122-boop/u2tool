@@ -1,0 +1,39 @@
+{
+  "detailed_description": "データベースバックアップスケジューラーは、バックアップスケジュールを作成し、データベースのバックアップスクリプトを生成するのに役立ちます。",
+  "usage_steps": [
+    "データベースタイプを選択",
+    "頻度を設定",
+    "保存先を設定",
+    "スクリプトを生成",
+    "cron表現をコピー"
+  ],
+  "usage_examples": [
+    "日次バックアップスクリプトの作成",
+    "cronジョブの生成",
+    "保存ポリシーの計画"
+  ],
+  "input": "入力",
+  "output": "出力",
+  "process": "処理",
+  "copy": "コピー",
+  "clear": "クリア",
+  "inputPlaceholder": "ここに入力を入力してください...",
+  "outputPlaceholder": "結果はここに表示されます...",
+  "errors": {
+    "emptyInput": "入力を入力してください"
+  },
+  "database": "データベース",
+  "host": "ホスト",
+  "databaseName": "データベース名",
+  "username": "ユーザー名",
+  "schedule": "スケジュール",
+  "retention": "保持日数",
+  "outputPath": "出力パス",
+  "enableCompression": "圧縮を有効化 (gzip)",
+  "backupScript": "バックアップスクリプト",
+  "crontabEntry": "Crontabエントリ",
+  "hourly": "毎時",
+  "daily": "毎日 (午前2時)",
+  "weekly": "毎週 (日曜)",
+  "monthly": "毎月 (1日)"
+}

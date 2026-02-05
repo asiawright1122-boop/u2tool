@@ -1,0 +1,48 @@
+{
+  "sqlQuery": "SQL查询",
+  "sqlPlaceholder": "输入SQL查询...",
+  "mongoQuery": "MongoDB查询",
+  "examples": "示例",
+  "exampleSimpleSelect": "简单的SELECT",
+  "exampleSelectProjection": "带有投影的SELECT",
+  "exampleInsert": "INSERT",
+  "exampleUpdate": "UPDATE",
+  "exampleDelete": "DELETE",
+  "detailed_description": "本工具通过解析SQL语法树实现到MongoDB查询语句的精准转换，支持将关系型SQL的JOIN、子查询、窗口函数等复杂结构映射为MongoDB聚合管道操作符。当开发者需要将传统关系型数据库迁移至文档型数据库，或需要在混合架构中实现跨数据库查询时，该工具可自动处理表结构到BSON文档的嵌套转换，解决SQL与NoSQL之间语法体系不兼容的核心痛点。转换过程采用基于规则的AST转换引擎，先将SQL语句解析为中间表示层，再根据MongoDB的聚合框架规范生成对应管道阶段，特别针对$lookup、$unwind、$group等操作进行优化，同时保留原始查询的逻辑完整性。对于日期函数、字符串处理等差异较大的操作符，系统内置了智能适配模块进行语义等价转换。",
+  "usage_steps": [
+    "1. 在输入区域粘贴标准SQL语句，选择源数据库类型（MySQL/PostgreSQL/Oracle）",
+    "2. 指定目标集合结构：上传JSON Schema或自动推断文档结构",
+    "3. 配置转换模式：选择生成聚合管道或CRUD操作语句",
+    "4. 调整字段映射：通过可视化界面建立表字段与嵌套文档路径的对应关系",
+    "5. 设置嵌套处理策略：指定JOIN操作转换为$lookup或文档嵌套层级",
+    "6. 点击'生成MongoDB语句'，在输出区查看并下载转换结果"
+  ],
+  "usage_examples": [
+    "将MySQL的多表关联查询转换为MongoDB的$lookup管道，实现电商订单系统的微服务数据迁移",
+    "将PostgreSQL的复杂报表查询重构为聚合管道，优化社交平台的用户行为分析性能",
+    "将Oracle的分层查询转换为递归文档结构，用于物联网设备数据的时序存储改造",
+    "将SQL窗口函数转换为$setWindowFields操作，实现金融风控系统中的实时指标计算迁移"
+  ],
+  "faqs": [
+    {
+      "question": "Sql To Mongo 是免费的吗？",
+      "answer": "是的，Sql To Mongo 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Sql To Mongo 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "支持哪些格式转换？",
+      "answer": "Sql To Mongo 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Sql To Mongo 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Sql To Mongo 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

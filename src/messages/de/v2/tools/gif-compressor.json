@@ -1,0 +1,36 @@
+{
+  "uploadGif": "GIF hochladen",
+  "colors": "Farbanzahl",
+  "skipFrames": "Frames überspringen",
+  "scale": "Skalierung",
+  "compress": "Komprimieren",
+  "download": "Herunterladen",
+  "original": "Original",
+  "compressed": "Komprimiert",
+  "saved": "Gespart",
+  "processing": "Verarbeitung...",
+  "compressionLevel": "Komprimierungsstufe",
+  "compressionHint": "Niedrigerer Wert erzeugt kleinere Datei",
+  "reduceColors": "Farben reduzieren",
+  "maxColors": "Maximale Farben",
+  "dropzone": "Klicken oder GIF ziehen zum Hochladen",
+  "compressFirst": "Klicken Sie auf Komprimieren, um zu starten",
+  "originalSize": "Originalgröße",
+  "compressedSize": "Komprimierte Größe",
+  "reduction": "Reduzierung",
+  "detailed_description": "Der GIF Compressor optimiert animierte GIF-Dateien durch eine Kombination aus farbraum-spezifischer Quantisierung, frameübergreifender Differenzanalyse und prädiktiver LZW-Komprimierung. Technisch gesehen identifiziert das Tool redundante Pixelmuster zwischen aufeinanderfolgenden Frames, generiert Delta-Frames und reduziert die Farbpalette durch adaptive Histogrammanalyse, wobei dithering-Muster intelligent beibehalten werden. Webentwickler benötigen dieses Tool, um animierte Inhalte für responsive Designs zu optimieren, da unkomprimierte GIFs bis zu 60% mehr Bandbreite verbrauchen können. Der Algorithmus nutzt die GIF89a-Spezifikation vollständig aus, aktiviert interlaced Rendering-Optionen und optimiert globale Farbtabellen durch clustergestützte Farbzuordnung. Besonders bei GIFs mit hoher Frame-Dichte (z.B. Screencasts) reduziert die Entfernung von Keyframes mit minimaler visueller Divergenz die Dateigröße um bis zu 75%, ohne das animierte Erlebnis zu brechen.",
+  "usage_steps": [
+    "1. GIF per Drag-and-Drop oder Dateiauswahl-Dialog in den Arbeitsbereich laden",
+    "2. Komprimierungsmodus wählen: 'Maximal' (verlustbehaftet mit Farbreduktion) oder 'Verlustfrei' (Palette beibehalten)",
+    "3. Farbquantisierung manuell anpassen: Schieberegler von 256 auf 128 oder 64 Farben setzen",
+    "4. Frame-Optimierung aktivieren: Checkbox 'Redundante Frames entfernen' markieren",
+    "5. Qualitätsvergleich im Split-Screen-Viewer prüfen (Original vs. komprimierte Version)",
+    "6. Optimiertes GIF mit Metadaten-Option (EXIF beibehalten/löschen) herunterladen"
+  ],
+  "usage_examples": [
+    "Ein Social-Media-Manager reduziert ein 15MB GIF eines Produktdesigns auf 3.8MB für Twitter-Posts, ohne Qualitätsverlust durch adaptive Farbclusterung",
+    "Ein E-Mail-Marketer komprimiert animierte Newsletter-Header von 8.2MB auf 1.9MB, um SPF-Richtlinien bezüglich Anhangsgrößen einzuhalten",
+    "Ein Webdesigner optimiert GIF-Previews für ein Portfolio, indem er Frame-Differenzen analysiert und 40% der redundanten Einzelbilder entfernt",
+    "Ein Support-Mitarbeiter konvertiert umfangreiche GIF-Tutorials in mobilefreundliche Versionen mit 30% der Originalgröße durch interlaced Encoding-Techniken"
+  ]
+}

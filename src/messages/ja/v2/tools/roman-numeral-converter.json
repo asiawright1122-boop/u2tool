@@ -1,0 +1,27 @@
+{
+  "detailed_description": "ローマ数字変換器はローマ数字とアラビア数字間で変換します。",
+  "usage_steps": [
+    "変換方向を選択",
+    "ローマ数字またはアラビア数字を入力",
+    "変換をクリックして結果を表示",
+    "変換された値をコピー",
+    "参照チャートを使用してヘルプを得る"
+  ],
+  "usage_examples": [
+    "年をローマ数字に変換",
+    "時計のローマ数字をデコード",
+    "ローマ数字システムを学習"
+  ],
+  "arabicToRoman": "アラビア → ローマ",
+  "romanToArabic": "ローマ → アラビア",
+  "arabicNumber": "アラビア数字",
+  "romanNumeral": "ローマ数字",
+  "arabicPlaceholder": "数字を入力（1-3999）...",
+  "romanPlaceholder": "ローマ数字を入力...",
+  "result": "結果",
+  "convert": "変換",
+  "copy": "コピー",
+  "copied": "コピーしました！",
+  "invalidInput": "無効な入力",
+  "referenceTitle": "参照チャート"
+}

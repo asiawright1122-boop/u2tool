@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Der Date Calculator ist ein präzises Werkzeug zur Durchführung von Datumsoperationen auf Grundlage des Gregorianischen Kalenders und der ISO 8601-Standardisierung. Technisch ermöglicht er die Berechnung der chronologischen Differenz zwischen zwei Zeitpunkten in Tagen, Stunden oder Sekunden sowie die Addition/Subtraktion von Zeitspannen zu einem Referenzdatum. Das Tool nutzt JavaScripts Date-Objekt zur Verarbeitung, berücksichtigt aber explizit Zeitstempel in UTC und lokale Zeitzonen, einschließlich Anpassungen für Sommerzeit. Anwender profitieren bei Aufgaben wie der Projektdauerplanung, der Berechnung von Fristverläufen oder der Synchronisierung zeitgesteuerter Systemprozesse. Die Ergebnisse werden in einem strukturierten Format ausgegeben, das sowohl absolute Differenzen als auch normalisierte Perioden (z.B. Jahre, Monate) enthält. Besonders bei komplexen Szenarien wie der Abrechnung von Lizenzperioden oder der Analyse von Zeitreihendaten bietet das Tool eine programmatisch genaue Alternative zu manuellen Berechnungen.",
+  "usage_steps": [
+    "Wählen Sie das Ausgangsdatum im Kalenderfeld 'Startdatum' oder geben Sie einen ISO-konformen Zeitstempel ein.",
+    "Legen Sie das Zieldatum im zweiten Datumsfeld fest oder aktivieren Sie den 'Offset-Modus', um Tage/Monate zu addieren/subtrahieren.",
+    "Wählen Sie im Dropdown 'Berechnungsmodus' zwischen 'Differenzberechnung' oder 'Datumsanpassung'.",
+    "Geben Sie im numerischen Feld 'Offset-Wert' die zu addierenden/subtrahierenden Tage inklusive Vorzeichen ein.",
+    "Aktivieren Sie die Checkbox 'Zeitzone berücksichtigen', wenn die Berechnung auf lokalen Uhrzeiten basieren soll.",
+    "Klicken Sie auf 'Berechnen' und analysieren Sie das Ergebnis im JSON-Format, das Sekundenbruchteile und Zeitstempel-Differenzen enthält."
+  ],
+  "usage_examples": [
+    "Berechnung der genauen Laufzeit eines Software-Lizenzzertifikats von Ausstellungsdatum bis Ablaufdatum.",
+    "Ermittlung des nächsten Arbeitstags nach einem Feiertag inklusive Wochenendkorrektur für ein CRM-System.",
+    "Synchronisation von Backup-Intervallen in einer verteilten Cloud-Infrastruktur über mehrere Zeitzonen.",
+    "Validierung von SLA-Fristen in Support-Tickets durch präzise Messung der Zeit zwischen Meldung und Abschluss."
+  ],
+  "dateDiff": "Datumsunterschied",
+  "startDate": "Startdatum",
+  "endDate": "Enddatum",
+  "days": "Tage",
+  "weeks": "Wochen",
+  "months": "Monate",
+  "years": "Jahre",
+  "addSubtract": "Addieren/Subtrahieren",
+  "baseDate": "Basisdatum",
+  "operation": "Operation",
+  "subtract": "Subtrahieren"
+}

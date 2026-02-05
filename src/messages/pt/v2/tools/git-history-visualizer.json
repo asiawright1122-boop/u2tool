@@ -1,0 +1,53 @@
+{
+  "detailed_description": "O Visualizador de Histórico do Git cria representações visuais da história de commit do Git.",
+  "usage_steps": [
+    "Cole a saída do git log",
+    "Ou insira dados de commit",
+    "Clique em Visualizar",
+    "Explore ramificações",
+    "Exporte como imagem"
+  ],
+  "usage_examples": [
+    "Entenda a história de ramificações",
+    "Documente estratégias de lançamento",
+    "Visualize padrões de merge"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processar",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Cole a saída do git log aqui...",
+  "outputPlaceholder": "Os resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum input"
+  },
+  "loadExample": "Carregar exemplo",
+  "analyze": "Analisar",
+  "generate": "Gerar",
+  "format": "Formatar",
+  "convert": "Converter",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Visualizar",
+  "reset": "Redefinir",
+  "add": "Adicionar",
+  "remove": "Remover",
+  "save": "Salvar",
+  "cancel": "Cancelar",
+  "settings": "Configurações",
+  "options": "Opções",
+  "results": "Resultados",
+  "noResults": "Sem resultados",
+  "loading": "Carregando...",
+  "success": "Sucesso",
+  "failed": "Falhou",
+  "warning": "Aviso",
+  "info": "Informação",
+  "hash": "Hash",
+  "message": "Mensagem",
+  "author": "Autor",
+  "date": "Data",
+  "legend": "Legenda",
+  "branch": "Branch"
+}

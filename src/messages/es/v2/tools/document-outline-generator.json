@@ -1,0 +1,51 @@
+{
+  "detailed_description": "El Generador de Estructura de Documentos extrae la estructura de encabezados de los documentos para crear resúmenes jerárquicos.",
+  "usage_steps": [
+    "Pegue el contenido del documento",
+    "Seleccione el formato",
+    "Haga clic en Generar",
+    "Vea la estructura",
+    "Copie el resumen"
+  ],
+  "usage_examples": [
+    "Cree resúmenes para documentos",
+    "Analice la estructura del documento",
+    "Genere menús de navegación"
+  ],
+  "input": "Entrada",
+  "output": "Salida",
+  "process": "Proceso",
+  "copy": "Copiar",
+  "clear": "Borrar",
+  "inputPlaceholder": "Pegue su documento con encabezados...",
+  "outputPlaceholder": "Los resultados aparecerán aquí...",
+  "errors": {
+    "emptyInput": "Por favor, introduzca algún dato"
+  },
+  "loadExample": "Cargar ejemplo",
+  "analyze": "Analizar",
+  "generate": "Generar",
+  "format": "Formatear",
+  "convert": "Convertir",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Vista previa",
+  "reset": "Restablecer",
+  "add": "Agregar",
+  "remove": "Eliminar",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "settings": "Configuración",
+  "options": "Opciones",
+  "results": "Resultados",
+  "noResults": "Sin resultados",
+  "loading": "Cargando...",
+  "success": "Éxito",
+  "failed": "Fallido",
+  "warning": "Advertencia",
+  "info": "Información",
+  "markdown": "Markdown",
+  "plainText": "Texto Plano",
+  "maxDepth": "Profundidad Máxima",
+  "numbered": "Numerado"
+}

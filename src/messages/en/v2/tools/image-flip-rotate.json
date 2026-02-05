@@ -1,0 +1,24 @@
+{
+  "uploadImage": "Upload Image",
+  "flip": "Flip",
+  "horizontal": "Horizontal",
+  "vertical": "Vertical",
+  "rotation": "Rotation",
+  "reset": "Reset",
+  "noImage": "Please upload an image",
+  "detailed_description": "The Image Flip & Rotate tool performs pixel-level affine transformations on raster images using HTML5 Canvas and JavaScript-based processing. It supports lossless manipulation of JPEG, PNG, BMP, and WEBP formats through browser-side computation, preserving EXIF metadata during orientation adjustments. Technically, horizontal/vertical flips modify the image matrix by inverting pixel coordinates along the X/Y axis, while arbitrary rotation applies a 2D transformation matrix with cosine/sine angle calculations. This enables precise 90° increments or custom degree adjustments (0-360°) with bilinear interpolation to prevent jagged edges. Developers and designers benefit from its EXIF-aware rotation, which corrects camera-generated orientation flags without altering pixel data when possible. The tool's zero-dependency architecture ensures fast client-side execution without server uploads, ideal for privacy-sensitive workflows or batch processing.",
+  "usage_steps": [
+    "Click 'Choose Image' to select a file from your device (drag/drop supported)",
+    "Toggle 'Horizontal Flip' or 'Vertical Flip' switches to invert image axes",
+    "Enter exact rotation degrees (e.g., 45, 90, 270) or use the slider for manual adjustment",
+    "View real-time transformations in the high-resolution preview window",
+    "Click 'Apply Transformations' to process the image in-memory",
+    "Download the output as a compressed PNG or original format using the 'Save As' button"
+  ],
+  "usage_examples": [
+    "Correcting portrait orientation in mobile photos with embedded EXIF rotation tags",
+    "Generating symmetrical patterns for graphic design by flipping logo elements",
+    "Preparing architectural blueprints for printing by rotating 180°",
+    "Creating mirrored website buttons by horizontally flipping UI element screenshots"
+  ]
+}

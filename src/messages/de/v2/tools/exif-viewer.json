@@ -1,0 +1,33 @@
+{
+  "uploadImage": "Bild hochladen",
+  "noExif": "Keine EXIF-Daten gefunden",
+  "camera": "Kamera-Informationen",
+  "datetime": "Datum & Uhrzeit",
+  "gps": "GPS-Position",
+  "image": "Bild",
+  "removeExif": "EXIF entfernen",
+  "download": "Herunterladen ohne EXIF",
+  "dropzone": "Klicken oder ziehen Sie ein Bild, um es hochzuladen",
+  "supportedFormats": "Unterstützt JPEG- und TIFF-Formate",
+  "downloadClean": "Herunterladen ohne EXIF",
+  "exifRemoved": "EXIF-Daten entfernt",
+  "exifData": "EXIF-Daten",
+  "loading": "Lädt...",
+  "noExifData": "Keine EXIF-Daten gefunden",
+  "fieldsFound": "Gefundene Felder",
+  "detailed_description": "Der EXIF Viewer analysiert und manipuliert Metadaten in Bilddateien, die gemäß dem EXIF-Standard (Exchangeable Image File Format) gespeichert sind. Technisch gesehen parst das Tool die Header-Informationen von JPEG-, PNG- oder HEIC-Dateien, extrahiert detaillierte Metadaten wie GPS-Koordinaten, Kameramodell, Aufnahmezeitstempel, Blende/Wert, sowie Software-Referenzen, und stellt diese in einer strukturierten Oberfläche dar. Nutzer benötigen dieses Tool, um gezielt sensible Daten zu entfernen – beispielsweise bei der Veröffentlichung von Bildern in sozialen Netzwerken, um Geotagging-Daten zu anonymisieren. Zudem ermöglicht die vollständige Kontrolle über Metadaten die Optimierung von Bilddateien durch das Entfernen redundanter Segmente wie Thumbnail-Previews oder unbekannter MakerNotes. Das Tool arbeitet clientseitig im Browser, nutzt JavaScript-Bibliotheken zur Datei-Parsing (z.B. ExifTool.js) und vermeidet Server-Uploads, wodurch die Datenintegrität gewährleistet bleibt. Besonders praktisch ist die Funktion, spezifische Tags zu filtern und selektiv zu löschen, ohne den Bildinhalt zu verfälschen, was bei der Vorbereitung von Profilbildern für Entwicklungsprojekte oder der Einhaltung von DSGVO-Anforderungen entscheidend ist.",
+  "usage_steps": [
+    "Laden Sie die Bilddatei per Drag-and-Drop in den zentralen Upload-Bereich oder klicken Sie auf 'Datei auswählen'.",
+    "Navigieren Sie im linken Panel zu den erweiterten EXIF-Feldern (z.B. GPS, Interop, Makernote) und expandieren Sie diese per Klick.",
+    "Aktivieren Sie die Checkboxen neben spezifischen Tags wie 'GPS-Latitude', 'CameraModel' oder 'Software', die entfernt werden sollen.",
+    "Klicken Sie auf 'Ausgewählte Metadaten löschen', um die Änderungen im Dateiheader zu implementieren.",
+    "Überprüfen Sie im rechten Preview-Bereich die modifizierte Metadata-Struktur auf Vollständigkeit.",
+    "Laden Sie die bereinigte Datei im Originalformat (JPEG/PNG/HEIC) herunter oder nutzen Sie die 'Batch-Export'-Option für mehrere Bilder."
+  ],
+  "usage_examples": [
+    "Ein Fotograf entfernt gezielt GPS-Koordinaten aus Reisebildern, bevor er sie auf einer Portfolio-Website veröffentlicht.",
+    "Ein Unternehmen bereinigt Produktbilder um interne Referenzen (z.B. 'MakerNote') vor der Bereitstellung für externe Marketingagenturen.",
+    "Ein Blogger reduziert die Dateigröße von PNG-Grafiken durch das Löschen redundanter 'tEXt'-Blöcke ohne Qualitätsverlust.",
+    "Ein Entwickler prüft EXIF-Tags auf inkonsistente Zeitstempel, um automatisierte Bildverarbeitungsskripte für ein Machine-Learning-Dataset zu debuggen."
+  ]
+}

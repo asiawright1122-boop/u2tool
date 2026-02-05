@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Gerador de Termos de Uso automatiza a criação de documentos jurídicos para websites utilizando templates parametrizados e lógica condicional. Técnica e estruturalmente, ele coleta dados do usuário via formulário web (como nome da empresa, jurisdição e políticas específicas), aplica cláusulas pré-validadas conforme frameworks de compliance (GDPR, LGPD, COPPA) e gera um documento em formato HTML ou Markdown com marca d'água digital. O mecanismo emprega placeholders dinâmicos para informações como URLs, datas e termos personalizados, além de oferecer exportação em JSON para integração com sistemas de gestão de documentos. Desenvolvedores e empreendedores necessitam desta ferramenta para evitar lacunas legais em plataformas digitais, especialmente em casos de coleta de dados, monetização ou conteúdo gerado por usuários. A arquitetura backend processa as respostas através de um motor de template baseado em expressões regulares, garantindo que cláusulas conflitantes sejam automaticamente resolvidas com base em prioridades pré-estabelecidas de compliance.",
+  "usage_steps": [
+    "1. Selecione o template base adequado ao seu modelo de negócio (e-commerce, SaaS ou plataforma de conteúdo) no menu suspenso 'Tipo de Serviço'.",
+    "2. Preencha os campos obrigatórios com dados da empresa: nome completo, CNPJ, endereço físico e URL principal no formulário de identificação.",
+    "3. Ative checkboxes para incluir cláusulas específicas como 'Política de Reembolsos', 'Direitos de Autor' ou 'Resolução de Disputas' na seção de termos adicionais.",
+    "4. Utilize o campo de texto 'Definições Personalizadas' para declarar termos técnicos ou regras exclusivas da sua plataforma.",
+    "5. Revise o documento pré-visualizado, ajustando a formatação com a barra de ferramentas de edição WYSIWYG.",
+    "6. Exporte o arquivo final em formato desejado (HTML, Markdown ou PDF) e valide a assinatura digital gerada automaticamente no rodapé."
+  ],
+  "usage_examples": [
+    "Um marketplace de arte digital precisa incluir cláusulas sobre direitos autorais e royalties para criadores de NFTs.",
+    "Uma edtech que opera em múltiplos países deve gerar termos adaptados a regulamentações locais de proteção de dados de crianças.",
+    "Um fórum de discussão requer políticas de moderação e responsabilidade por conteúdo gerado por usuários (UGC).",
+    "Uma API de pagamento precisa de disposições técnicas sobre limitações de responsabilidade em transações financeiras eletrônicas."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "inputLabel": "Introduce el IBAN",
+  "placeholder": "Por ejemplo: DE89370400440532013000",
+  "validate": "Validar",
+  "valid": "IBAN válido",
+  "invalid": "IBAN no válido",
+  "country": "País",
+  "checkDigits": "Verificar dígitos",
+  "bankCode": "Código del banco",
+  "bban": "BBAN (Número básico de cuenta bancaria)",
+  "formatted": "IBAN formateado",
+  "copy": "Copiar",
+  "exampleIbans": "Ejemplos de números de IBAN",
+  "errors": {
+    "empty": "Por favor, introduce un IBAN",
+    "invalidFormat": "Formato de IBAN no válido",
+    "unknownCountry": "Código de país desconocido",
+    "invalidLength": "Longitud no válida: se esperan {expected} caracteres, se recibieron {actual}",
+    "invalidChecksum": "Chequeo de suma no válido: el IBAN puede estar incorrecto"
+  },
+  "detailed_description": "El Validador de IBAN es una herramienta completa para verificar números de cuentas bancarias internacionales (IBAN). Comprueba el formato, el código del país, la longitud y el chequeo de suma de los números de IBAN de todos los países europeos. La herramienta también analiza el IBAN para mostrar el código del banco, la información del país y los detalles de la cuenta bancaria (BBAN)",
+  "usage_steps": [
+    "Introduce o pega un número de IBAN en el campo de entrada",
+    "Haz clic en el botón de Validar para comprobar el IBAN",
+    "Visualiza los resultados de la validación, incluyendo la información del país y del banco",
+    "Usa los ejemplos de IBAN para probar diferentes formatos de países",
+    "Copia el IBAN formateado para usarlo en transferencias bancarias"
+  ],
+  "usage_examples": [
+    "Verifica el IBAN antes de realizar transferencias bancarias internacionales",
+    "Comprueba los números de cuentas bancarias proporcionados por los clientes",
+    "Valida el formato del IBAN para los sistemas de procesamiento de pagos"
+  ]
+}

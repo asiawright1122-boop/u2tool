@@ -1,0 +1,33 @@
+{
+  "detailed_description": "O Gerador de Dockerfile é uma ferramenta online abrangente que ajuda a criar configurações de Dockerfile para containerizar suas aplicações. Selecione imagens base populares como Node.js, Python, Go ou imagens personalizadas. Configure diretórios de trabalho, comandos de cópia, comandos de execução, portas expostas e variáveis de ambiente. A ferramenta gera Dockerfiles otimizados e prontos para produção, seguindo as melhores práticas. Perfeito para desenvolvedores novatos em Docker ou aqueles que desejam criar rapidamente configurações de container.",
+  "usage_steps": [
+    "Selecione uma imagem base no menu suspenso ou insira uma imagem personalizada",
+    "Configure o diretório de trabalho para sua aplicação",
+    "Adicione comandos COPY e RUN conforme necessário",
+    "Especifique as portas a serem expostas",
+    "Adicione variáveis de ambiente se necessário",
+    "Clique em Gerar para criar seu Dockerfile",
+    "Copie ou baixe o Dockerfile gerado"
+  ],
+  "usage_examples": [
+    "Crie um contêiner de aplicação Node.js",
+    "Construa um contêiner Python Flask/Django",
+    "Configure um build em várias etapas para aplicações Go",
+    "Configure um ambiente de desenvolvimento em contêiner"
+  ],
+  "baseImage": "Imagem base",
+  "workdir": "Diretório de trabalho",
+  "envVars": "Variáveis de ambiente",
+  "envKey": "Chave",
+  "envValue": "Valor",
+  "addEnvVar": "Adicionar variável",
+  "copyCommands": "Comandos de cópia",
+  "addCopy": "Adicionar cópia",
+  "runCommands": "Comandos de execução",
+  "addRun": "Adicionar execução",
+  "exposePort": "Expor porta",
+  "entrypoint": "Ponto de entrada",
+  "cmd": "CMD",
+  "generate": "Gerar",
+  "download": "Baixar"
+}

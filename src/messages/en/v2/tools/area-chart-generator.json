@@ -1,0 +1,63 @@
+{
+  "chartTitle": "Chart Title",
+  "chartTitlePlaceholder": "Enter chart title",
+  "colorTheme": "Color Theme",
+  "showLegend": "Show Legend",
+  "showGrid": "Show Grid",
+  "smooth": "Smooth",
+  "stacked": "Stacked",
+  "fillOpacity": "Fill Opacity",
+  "category": "Category",
+  "series": "Series",
+  "addCategory": "Add Category",
+  "addSeries": "Add Series",
+  "loadSample": "Load Sample",
+  "downloadPng": "Download PNG",
+  "downloadSvg": "Download SVG",
+  "confirmClear": "Are you sure you want to clear all data?",
+  "defaultTitle": "Trend Analysis",
+  "sampleTitle": "Revenue Trend",
+  "dataEditor": "Data Editor",
+  "chartPreview": "Chart Preview",
+  "chartSettings": "Chart Settings",
+  "themeDefault": "Default",
+  "themeOcean": "Ocean",
+  "themeSunset": "Sunset",
+  "themeForest": "Forest",
+  "sampleData": {
+    "jan": "January",
+    "feb": "February",
+    "mar": "March",
+    "apr": "April",
+    "may": "May",
+    "jun": "June",
+    "series1": "Revenue",
+    "series2": "Cost",
+    "series3": "Profit"
+  },
+  "tips": {
+    "title": "Tips",
+    "tip1": "Enter categories and values",
+    "tip2": "Enable Stacked to stack series",
+    "tip3": "Adjust fill opacity",
+    "tip4": "Enable Smooth for curves",
+    "tip5": "Export as PNG or SVG"
+  },
+  "detailed_description": "The Area Chart Generator enables developers to create layered area charts that visualize cumulative quantitative data across time or categories. This tool specializes in rendering stacked area charts using SVG path elements and Canvas 2D contexts, allowing precise control over data density gradients and axis interpolation. Developers can map multi-series datasets to dual Y-axes, apply logarithmic scaling for exponential data ranges, and configure Bezier curve tension for smoothed visual transitions. The tool's unique value lies in its ability to handle sparse time-series datasets through smart interpolation algorithms that maintain data integrity while producing visually cohesive areas. Built on a D3.js core with WebAssembly acceleration, it supports programmatic data binding through JSON/CSV imports and provides granular control over stacking modes (normal, 100%, streamgraph) and axis tick formatting via ICU localization. Technical users benefit from the generator's support for responsive aspect ratio constraints and its implementation of ARIA accessibility standards for screen reader navigation of chart regions.",
+  "usage_steps": [
+    "Input tabular data in the dynamic spreadsheet interface, specifying X/Y coordinates with optional null values for discontinuous series",
+    "Configure dual-axis parameters through the Axes Configuration Panel, setting logarithmic scales or time-unit intervals for temporal data",
+    "Apply stacking modes using the Series Behavior Dropdown to toggle between absolute, relative, and expanding visual representations",
+    "Customize gradient fills through the Color Gradient Editor, selecting hex stops for multi-stop linear gradients across data series",
+    "Adjust curve interpolation settings in the Shape Configuration Tab to modify Bezier curve tension or enable stepwise transitions",
+    "Export the rendered chart using the High-Fidelity Exporter, choosing between SVG with embedded metadata or PNG at custom DPI settings"
+  ],
+  "usage_examples": [
+    "Marketing analysts visualizing monthly campaign ROI with dual-axis comparisons between ad spend (left Y-axis) and conversion rates (right Y-axis)",
+    "Climate researchers displaying temperature anomalies over 50 years with streamgraph stacking to highlight deviation patterns",
+    "Startup CFOs comparing quarterly revenue streams across multiple products using 100% stacked areas to demonstrate market share shifts",
+    "Social media engineers tracking API rate limits versus actual usage through stepwise area charts with discontinuous data gaps"
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

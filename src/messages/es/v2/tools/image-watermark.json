@@ -1,0 +1,32 @@
+{
+  "uploadImage": "Subir Imagen",
+  "watermarkText": "Texto de Marca de Agua",
+  "textPlaceholder": "Introduce el texto de marca de agua...",
+  "position": "Posición",
+  "posCenter": "Centro",
+  "posTopLeft": "Arriba a la Izquierda",
+  "posTopRight": "Arriba a la Derecha",
+  "posBottomLeft": "Abajo a la Izquierda",
+  "posBottomRight": "Abajo a la Derecha",
+  "posTile": "Repetir",
+  "fontSize": "Tamaño de Fuente",
+  "opacity": "Opacidad",
+  "rotation": "Rotación",
+  "color": "Color",
+  "noImage": "Sube una imagen para añadir marca de agua",
+  "detailed_description": "La herramienta Image Watermark permite añadir marcas de agua de texto a imágenes digitales mediante técnicas de procesamiento de gráficos rasterizados. Utiliza el motor HTML5 Canvas para renderizar las imágenes en el cliente, aplicando operaciones de composición alfa-blending entre el texto y los píxeles de la imagen original. Los usuarios pueden ajustar parámetros técnicos como la opacidad del texto (valores entre 0.1 y 1.0), tamaño de fuente (8-200px), tipo de fuente (incluyendo opciones web-safe y Google Fonts), y posición exacta mediante coordenadas X/Y relativas. Esta herramienta resuelve necesidades específicas como la protección de propiedad intelectual mediante marcas visibles, la personalización de assets corporativos con logotipos textuales, o la prevención de uso no autorizado de contenido visual. A diferencia de herramientas básicas, ofrece opciones avanzadas como el ajuste de desplazamiento de texto en múltiples líneas, renderizado anti-aliasing para texto nítido, y soporte para espaciado de caracteres (tracking) en unidades CSS. El proceso mantiene la calidad de la imagen original (hasta 4K) sin compresión perceptible, generando resultados en formato WebP o PNG con preservación de metadatos EXIF cuando es compatible.",
+  "usage_steps": [
+    "Arrastra la imagen al área de carga o selecciona un archivo desde tu dispositivo (formatos soportados: JPG, PNG, WEBP).",
+    "Escribe el texto de la marca de agua en el campo de entrada 'Texto de marca' (máximo 255 caracteres).",
+    "Ajusta la posición con el controlador de coordenadas X/Y o usa el botón 'Centrar' para alineación automática.",
+    "Configura las propiedades de estilo: selecciona fuente, tamaño, color hexadecimal y ajusta el deslizador de opacidad.",
+    "Activa la opción 'Múltiples líneas' para crear patrones de marca repetidos con espaciado vertical controlado.",
+    "Haz clic en 'Generar imagen' y descarga el resultado en el formato deseado (PNG o WebP)."
+  ],
+  "usage_examples": [
+    "Un fotógrafo profesional añade su firma digital con 30% de opacidad en fuente Roboto Bold para proteger sus trabajos en portafolios online.",
+    "Un departamento de marketing corporativo automatiza la adición de logotipos textuales en imágenes institucionales con posición fija en esquina superior derecha.",
+    "Un artista digital aplica marcas de agua diagonales en capas semi-transparentes para proteger su obra en redes sociales sin interferir con la composición visual.",
+    "Un creador de contenido educativo inserta códigos QR de texto como marcas de agua invisibles (opacidad 8%) para rastrear distribución no autorizada."
+  ]
+}

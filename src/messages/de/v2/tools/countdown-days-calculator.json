@@ -1,0 +1,40 @@
+{
+  "targetDate": "Zieldatum",
+  "eventName": "Veranstaltungsname",
+  "daysUntil": "Tage bis",
+  "daysSince": "Tage seit",
+  "today": "Heute",
+  "weeks": "Wochen",
+  "months": "Monate",
+  "years": "Jahre",
+  "workdays": "Arbeitstage",
+  "weekends": "Wochenenden",
+  "detailed_description": "Der Countdown-Tage-Rechner ist ein präzises Instrument zur Berechnung des zeitlichen Abstands zwischen einem Referenzdatum und einem Zielzeitpunkt. Technisch basiert der Algorithmus auf der Differenzberechnung zweier Unix-Zeitstempel, wobei Datumsangaben zunächst in maschinenlesbare Formate (ISO 8601) konvertiert werden. Die Anwendung berücksichtigt automatisch Schaltjahre, unterschiedliche Monatslängen und optional Zeitzoneinstellungen durch die IANA-Zeitzonendatenbank. Entwickler profitieren von der präzisen Berechnung von Tagen, Stunden und Sekunden für Projekte wie Release-Planung oder SLA-Monitoring, während Privatanwender Countdowns für Ereignisse wie Geburtstage oder Reisen erstellen können. Die Berechnung erfolgt clientseitig im Browser ohne Serveranbindung, garantiert somit Datenschutz. Besonders ist die optionale Ausgabe als JavaScript-kompatibler Date-Objekt-String für Entwickler.",
+  "usage_steps": [
+    "1. Öffnen Sie die Webanwendung im Browser und wählen Sie im Dropdown 'Modus' zwischen 'Zukunft' oder 'Vergangenheit'.",
+    "2. Geben Sie das Ausgangsdatum manuell im Format JJJJ-MM-DD ein oder aktivieren Sie 'Aktuelles Datum verwenden'.",
+    "3. Wählen Sie das Zielereignisdatum über den integrierten Kalender aus, der Datumsnavigation mit Pfeiltasten unterstützt.",
+    "4. Aktivieren Sie bei Bedarf den Zeitzone-Modus und wählen Sie aus 564 verfügbaren Zeitzonen (z.B. Europe/Berlin).",
+    "5. Klicken Sie auf 'Berechnen' und analysieren Sie die Ergebnisanzeige mit Tages-, Stunden- und Sekundenzählung.",
+    "6. Kopieren Sie optional den JavaScript-kompatiblen Date-String über den 'Code-Export'-Button für Entwicklungsprojekte."
+  ],
+  "usage_examples": [
+    "Berechnung der verbleibenden 47 Arbeitstage bis zum geplanten Launch eines Software-Updates, unter Berücksichtigung von Feiertagen.",
+    "Ermittlung der 1.826 Tage seit dem Start eines langfristigen Forschungsprojekts mit Datumsvalidierung über das ISO-Format.",
+    "Präzise Countdownanzeige für eine Messe in Tokio mit Anpassung an die Japan Standard Time (JST) ohne manueller Umrechnung.",
+    "Verifizierung der 90-Tage-Frist für eine Kundenreklamation durch Export des berechneten Date-Objekts in ein Ticketingsystem."
+  ],
+  "newYear": "Neujahr",
+  "christmas": "Weihnachten",
+  "valentines": "Valentinstag",
+  "addCountdown": "Countdown hinzufügen",
+  "add": "Hinzufügen",
+  "quickAdd": "Schnell hinzufügen",
+  "days": "Tage",
+  "daysShort": "Tage",
+  "hours": "Stunden",
+  "minutes": "Minuten",
+  "seconds": "Sekunden",
+  "eventPassed": "Veranstaltung ist vorbei",
+  "noCountdowns": "Noch keine Countdowns. Fügen Sie einen oben hinzu!"
+}

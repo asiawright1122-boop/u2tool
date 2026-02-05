@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Text Wrapper ist ein leistungsstarkes Werkzeug zur Textverarbeitung, das es Benutzern ermöglicht, Textzeilen auf eine spezifische Zeilenlänge zu beschränken. Dieses Tool ist insbesondere für Entwickler und Content-Ersteller hilfreich, die mit Texten arbeiten, die in verschiedenen Formaten und auf verschiedenen Plattformen veröffentlicht werden. Die Fähigkeit, Texte sauber und strukturiert zu formatieren, ist unerlässlich, um die Lesbarkeit und das Layout von Dokumenten, Emails, Webseiten und anderen Textinhalten zu verbessern. Technisch gesehen, verwendet der Text Wrapper Algorithmen, um Textzeilen zu analysieren und an den geeigneten Stellen umzubrechen, ohne die semantische Integrität des Textes zu beeinträchtigen. Dies wird durch die Anwendung von Word-Wrapping-Techniken erreicht, die Berücksichtigung von Leerzeichen, Satzzeichen und Satzstrukturen ermöglichen. Benutzer können verschiedene Einstellungen vornehmen, wie zum Beispiel die maximale Zeilenlänge, die Art der Umbrüche (Hard- oder Soft-Wraps) und die Behandlung von längeren Wörtern. Dieses Tool ist besonders nützlich für die Vorbereitung von Texten für Druckmedien, die Erstellung von Code-Dokumentationen und das Formatieren von E-Mails und Nachrichten, die auf Geräten mit unterschiedlichen Bildschirmgrößen angezeigt werden.",
+  "usage_steps": [
+    "Öffnen Sie die Text Wrapper Seite im Browser.",
+    "Klicken Sie auf das Textfeld mit der Bezeichnung 'Eingabetext' und fügen Sie den Text ein, den Sie formatieren möchten.",
+    "Passen Sie die Zeilenlänge an, indem Sie den Slider unter 'Maximale Zeilenlänge' verschieben oder den Wert direkt eingeben.",
+    "Wählen Sie die Art der Umbrüche aus, indem Sie auf 'Umbruchstyp' klicken und zwischen 'Hard-Wrap' und 'Soft-Wrap' auswählen.",
+    "Falls gewünscht, aktivieren Sie die Option 'Längere Wörter zertrennen', um zu verhindern, dass einzelne Wörter über die maximale Zeilenlänge hinausgehen.",
+    "Klicken Sie auf den Button 'Text umbrechen', um den formatierten Text anzuzeigen und diesen optional zu kopieren oder herunterzuladen."
+  ],
+  "usage_examples": [
+    "E-Mail-Newsletter: Ein Marketing-Team erstellt einen Newsletter für Abonnenten. Der Text Wrapper hilft, den Text auf eine konstante Zeilenlänge zu beschränken, um eine konsistente und ansprechende Darstellung in verschiedenen E-Mail-Clients zu gewährleisten.",
+    "Code-Dokumentation: Ein Software-Entwickler dokumentiert einen komplexen Codeblock. Durch die Verwendung des Text Wrappers kann der Entwickler den Text auf eine angemessene Zeilenlänge begrenzen, die leicht lesbar und gut für Versionierungs-Systeme geeignet ist.",
+    "Buchveröffentlichung: Ein Verleger bereitet ein Manuskript vor, das für den Druck gedruckt werden soll. Der Text Wrapper ermöglicht es, den Text so zu formatieren, dass er den spezifischen Satzspiegel des Buches entspricht, ohne dass manuell Umbrüche eingefügt werden müssen.",
+    "Webseiten-Texte: Ein Content-Manager optimiert den Text für eine neue Webpage. Der Text Wrapper sorgt dafür, dass der Text auf mobilen Geräten ebenso gut lesbar ist wie auf Desktops, indem er die Zeilenlänge automatisch anpasst."
+  ]
+}

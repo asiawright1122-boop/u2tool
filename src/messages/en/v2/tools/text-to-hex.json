@@ -1,0 +1,36 @@
+{
+  "encoding": "Encoding",
+  "separator": "Separator",
+  "sepSpace": "Space",
+  "sepNone": "None",
+  "sepComma": "Comma",
+  "sepPrefix": "Prefix",
+  "uppercase": "Uppercase",
+  "loadSample": "Load Sample",
+  "textInput": "Text Input",
+  "hexOutput": "Hex Output",
+  "copy": "Copy",
+  "textPlaceholder": "Enter text to convert...",
+  "hexPlaceholder": "Enter hex values...",
+  "textToHex": "Text → Hex",
+  "hexToText": "Hex → Text",
+  "swap": "Swap",
+  "info": "Information",
+  "infoText": "Supports UTF-8, ASCII, and UTF-16 encoding. Use the separator option to format the hex output.",
+  "errorInvalidHex": "Invalid hexadecimal input",
+  "detailed_description": "The Text to Hex tool performs bidirectional conversion between ASCII/UTF-8 character streams and hexadecimal byte representations. Technically, when converting text to hex, each character's Unicode code point is transformed into its 8-bit binary equivalent, then grouped into nibbles (4-bit segments) for hexadecimal representation. For hex-to-text conversion, the tool validates the input's hexadecimal integrity, pads incomplete bytes with leading zeros, and maps each two-character hex sequence to its corresponding Unicode scalar value. This tool is essential for developers working with low-level protocols (e.g., crafting TCP/IP packets), reverse-engineering binary files, generating hexadecimal color codes for web design, or debugging memory dumps. The conversion engine implements strict error checking for invalid hex sequences and supports both uppercase and lowercase output formatting through a case-preserving algorithm that maintains input structure while respecting hexadecimal standards.",
+  "usage_steps": [
+    "Enter text in the primary input field labeled 'ASCII/UTF-8 Input' or paste hex values in the 'Hexadecimal Input' section",
+    "Select conversion direction using the 'Convert to Hex' or 'Convert to Text' radio buttons",
+    "Toggle 'Uppercase Hex' checkbox to control output case format (0-9, A-F)",
+    "Enable 'Preserve Line Breaks' to maintain text structure during conversion",
+    "Click the 'Process Conversion' button to execute transformation",
+    "Copy results from the synchronized output panels or download as .hex/.txt file"
+  ],
+  "usage_examples": [
+    "Network engineers converting IPv4 addresses to hex for crafting custom Ethernet frames",
+    "Game developers translating hexadecimal RGB values from memory dumps into readable color codes",
+    "Security analysts examining hexadecimal representations of API request payloads for injection testing",
+    "Embedded systems programmers validating hexadecimal firmware configurations against ASCII specifications"
+  ]
+}

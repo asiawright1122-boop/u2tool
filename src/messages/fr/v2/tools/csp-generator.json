@@ -1,0 +1,34 @@
+{
+  "detailed_description": "Le générateur CSP (Content Security Policy) permet de créer des en-têtes HTTP de sécurité pour contrer les attaques XSS (Cross-Site Scripting) et les injections de code. Ce outil analyse les besoins spécifiques de votre application web et génère une stratégie basée sur des directives telles que 'script-src', 'connect-src' ou 'img-src', avec des sources ('self', domaines spécifiques), des nonces cryptographiques ou des empreintes SHA-256. Les développeurs l'utilisent pour durcir la sécurité de sites complexes, notamment lors de migrations vers HTTPS, de l'intégration de bibliothèques tierces, ou pour respecter les normes comme le RGPD. Le générateur CSP intègre un analyseur syntaxique qui vérifie la cohérence des règles (ex: détection des conflits entre 'unsafe-inline' et les nonces), propose des recommandations pour minimiser les surfaces d'attaque, et exporte le header au format RAW ou compatible avec les serveurs NGINX/Apache. Contrairement aux outils génériques, il intègre une base de données de sources de confiance prévalidées (Google Fonts, CDN populaires) et un simulateur d'attaque XSS pour tester la résilience de la politique générée.",
+  "usage_steps": [
+    "Sélectionnez les directives critiques (ex: 'script-src', 'style-src') via des cases à cocher hiérarchiques",
+    "Ajoutez des sources autorisées en utilisant le champ de saisie avec autocomplétion (ex: 'https://analytics.example.com')",
+    "Générez automatiquement des nonces sécurisés en cliquant sur 'Créer nonce aléatoire' pour chaque script inline",
+    "Activez le mode strict pour désactiver 'unsafe-inline' et 'unsafe-eval' par défaut",
+    "Utilisez le bouton 'Prévisualiser en-tête' pour voir la syntaxe CSP finale avec les rapports d'erreurs intégrés",
+    "Téléchargez le fichier .htaccess ou nginx.conf avec la configuration prête à déployer"
+  ],
+  "usage_examples": [
+    "Un développeur e-commerce configure 'script-src' avec nonces pour autoriser les paiements via Stripe tout en bloquant les scripts externes non certifiés",
+    "Un administrateur système génère une CSP stricte pour un portail bancaire, limitant 'connect-src' aux APIs internes et chiffrant les requêtes via 'upgrade-insecure-requests'",
+    "Un architecte web sécurise un blog WordPress en combinant 'img-src' avec Cloudflare et 'font-src' pour Google Fonts, tout en désactivant les plugins non nécessaires",
+    "Une startup SAAS implémente 'report-to' pour collecter les violations CSP en temps réel dans un dashboard Prometheus, avec alertes automatiques sur Slack"
+  ],
+  "directives": "Directives",
+  "defaultSrc": "default-src",
+  "scriptSrc": "script-src",
+  "styleSrc": "style-src",
+  "imgSrc": "img-src",
+  "fontSrc": "font-src",
+  "connectSrc": "connect-src",
+  "generate": "Générer CSP",
+  "copy": "Copier",
+  "copied": "Copié !",
+  "output": "En-tête CSP",
+  "addValue": "Ajouter une valeur...",
+  "resetDefaults": "Réinitialiser",
+  "httpHeader": "En-tête HTTP",
+  "metaTag": "Balise Meta",
+  "testingTip": "Conseil de test",
+  "testingTipText": "Utilisez les outils de développement du navigateur pour vérifier si votre CSP fonctionne correctement. Recherchez les rapports de violation CSP dans la console."
+}

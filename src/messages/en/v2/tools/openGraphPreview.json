@@ -1,0 +1,37 @@
+{
+  "defaultTitle": "My Awesome Page",
+  "defaultDescription": "This is a description of my awesome page that will appear in social media shares.",
+  "defaultSiteName": "My Website",
+  "modeFetch": "Fetch OG Tags from URL",
+  "modeManual": "Manual Input",
+  "fetchUrlLabel": "Enter webpage URL",
+  "fetchButton": "Fetch",
+  "fetching": "Fetching...",
+  "fetchError": "Unable to fetch the webpage. Please check the URL or try again later.",
+  "title": "Title",
+  "titlePlaceholder": "Page Title",
+  "siteName": "Site Name",
+  "siteNamePlaceholder": "Website Name",
+  "descriptionPlaceholder": "Page description...",
+  "imageUrl": "Image URL (1200x630 recommended)",
+  "imageUrlPlaceholder": "https://example.com/image.jpg",
+  "pageUrl": "Page URL",
+  "pageUrlPlaceholder": "https://example.com",
+  "imageLoadError": "Image failed to load",
+  "enterImageUrl": "Enter image URL above",
+  "generatedCode": "Generated Meta Tags",
+  "platform": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn"
+  },
+  "preview": "Preview",
+  "recommendations": {
+    "title": "Recommendations",
+    "imageSize": "Image size: 1200x630 pixels (1.91:1 ratio)",
+    "titleLength": "Title: 60-70 characters max",
+    "descriptionLength": "Description: 150-160 characters max",
+    "highQuality": "Use high-quality, relevant images",
+    "testDebugger": "Test with Facebook Sharing Debugger"
+  }
+}

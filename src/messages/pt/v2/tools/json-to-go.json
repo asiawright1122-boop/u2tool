@@ -1,0 +1,20 @@
+{
+  "structName": "Nome da Estrutura",
+  "input": "Entrada JSON",
+  "output": "Estrutura Go",
+  "detailed_description": "O JSON to Go Struct é uma ferramenta técnica que transforma dados JSON em definições de structs em Go, resolvendo um desafio comum no desenvolvimento de aplicações backend. Quando desenvolvedores Go precisam integrar APIs RESTful, processar payloads de webhooks ou mapear respostas de serviços externos, a criação manual de structs com tags de serialização corretas consome tempo e é propensa a erros. A ferramenta analisa sintaxe JSON, identifica tipos primitivos (strings, números, booleanos), estruturas aninhadas e slices, gerando structs com campos nomeados seguindo padrões de exportação do Go (maiúsculas) e tags JSON personalizáveis. Funciona com inferência de tipos automática, mas também permite ajustes manuais via interface para casos complexos, como structs anônimas ou campos opcionais com ponteiros. Diferente de conversores genéricos, suporta JSON com chaves dinâmicas e preserva a ordem dos campos para compatibilidade com APIs que exigem estruturas específicas. O código gerado é compatível com as versões estáveis do Go (1.18+) e inclui comentários explicativos para documentação embutida.",
+  "usage_steps": [
+    "Cole seu JSON válido no editor de texto multi-linhas rotulado 'Insira seu JSON aqui'",
+    "Marque a opção 'Usar Ponteiros' se precisar de campos niláveis para structs de API PATCH",
+    "Clique no botão 'Gerar Struct' para processar o JSON com o parser baseado em AST",
+    "Revise a struct Go exibida, que incluirá tipos específicos (ex: time.Time para campos de data)",
+    "Ajuste nomes de campos manualmente no painel editável caso o mapeamento automático não corresponda à convenção desejada",
+    "Copie o código gerado com o botão 'Copiar para Área de Transferência' e cole diretamente no seu projeto Go"
+  ],
+  "usage_examples": [
+    "Converter uma resposta de API de clima em formato JSON (com coordenadas, previsão e unidades de medida) para structs Go que alimentam um microserviço de dashboard meteorológico",
+    "Mapear um arquivo config.json com parâmetros de conexão a bancos de dados em structs tipadas para inicialização de pool de conexões",
+    "Gerar modelos de dados a partir de exemplos de payloads de webhooks de pagamento (como status de transações) para integração com gateways como Stripe",
+    "Transformar JSON de logs estruturados em structs para implementação de analisadores de logs em Go que alimentam sistemas de monitoramento"
+  ]
+}

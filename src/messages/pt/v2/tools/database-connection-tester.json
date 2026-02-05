@@ -1,0 +1,36 @@
+{
+  "detailed_description": "O Testador de Conexão de Banco de Dados analisa e valida strings de conexão de vários bancos de dados.",
+  "usage_steps": [
+    "Cole a string de conexão",
+    "Selecione o tipo de banco de dados",
+    "Clique em Analisar",
+    "Visualize os detalhes analisados",
+    "Valide o formato"
+  ],
+  "usage_examples": [
+    "Validar antes da implementação",
+    "Analisar URIs de MongoDB",
+    "Depurar problemas de conexão"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processo",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Insira sua entrada aqui...",
+  "outputPlaceholder": "Resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum input"
+  },
+  "useSSL": "Usar SSL/TLS",
+  "codeSnippet": "Trecho de Código",
+  "note": "Nota",
+  "noteText": "Esta ferramenta gera strings de conexão localmente. Nenhum dado é enviado para qualquer servidor. Sempre use variáveis de ambiente para credenciais sensíveis em produção.",
+  "databaseType": "Tipo de Banco de Dados",
+  "host": "Host",
+  "port": "Porta",
+  "database": "Banco de Dados",
+  "username": "Usuário",
+  "password": "Senha",
+  "connectionString": "String de Conexão"
+}

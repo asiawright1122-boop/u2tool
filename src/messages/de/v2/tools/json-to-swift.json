@@ -1,0 +1,26 @@
+{
+  "input": "JSON-Eingabe",
+  "output": "Swift-Ausgabe",
+  "convert": "Konvertieren",
+  "copy": " kopieren",
+  "structName": "Strukturname",
+  "useCodable": "Codable verwenden",
+  "inputPlaceholder": "Füge hier JSON ein...",
+  "outputPlaceholder": "Swift-Strukturen erscheinen hier...",
+  "errorInvalidJson": "// Fehler: Ungültige JSON-Eingabe",
+  "detailed_description": "Der JSON-to-Swift-Konverter analysiert JSON-Daten und generiert entsprechende Swift-Strukturen, die das Codable-Protokoll implementieren. Das Tool verwendet präzise Typinferenz, um komplexe Hierarchien, verschachtelte Objekte und Arrays korrekt abzubilden. Dabei werden JSON-Schlüssel automatisch in Swift-Eigenschaftsnamen übersetzt, wobei optionale Typen (z.B. Int?) und enum-basierte Union-Typen bei diskriminierten Daten erkannt. Entwickler profitieren besonders bei der Integration von REST-APIs in iOS-Projekte, da manuelle Fehlerquellen bei der Strukturdefinition entfallen. Die Konvertierung erfolgt clientseitig im Browser mittels WebAssembly-basiertem Swift-Compiler-Framework, garantierend Datenprivatsphäre. Besondere Merkmale: Unterstützung für benutzerdefinierte Struct-Namenräume, Zugriffsmodifikatoren (public/internal/private) und automatische Anpassung von JSON-Schlüssel-Konventionen (snake_case ↔ camelCase).",
+  "usage_steps": [
+    "1. Öffnen Sie die JSON-to-Swift-Webanwendung im Safari/Chrome-Browser.",
+    "2. Fügen Sie Ihren validen JSON-Code in das linke Multiline-Textfeld („JSON-Eingabe“) ein.",
+    "3. Wählen Sie im Dropdown „Struktur-Optionen“ die gewünschte Swift-Version (5.5 oder neuer) und Zugriffsmodifikator (z.B. public).",
+    "4. Aktivieren Sie per Checkbox „Enums für Union-Typen generieren“, falls heterogene JSON-Felder vorhanden sind.",
+    "5. Klicken Sie auf den „Swift generieren“-Button, um den konvertierten Code im rechten Bereich anzuzeigen.",
+    "6. Laden Sie den Swift-Code über den „Speichern als .swift“-Button herunter oder kopieren Sie ihn direkt via „Zwischenablage kopieren“."
+  ],
+  "usage_examples": [
+    "Ein iOS-Entwickler integriert eine REST-API für Wetterdaten und generiert Swift-Structs für die automatische Decodierung von API-Antworten.",
+    "Bei der Migration einer Firebase-Datenbank wird JSON-Beispieldaten in typsichere Swift-Modelle konvertiert, um CoreData-Entities zu erstellen.",
+    "Ein Team nutzt das Tool während des Prototyping, um schnell Mockup-JSON-Daten in verwaltbaren Swift-Code umzuwandeln.",
+    "Beim Refactoring einer Film-Datenbank-App werden verschachtelte JSON-Arrays mit Metadaten automatisch in hierarchische Swift-Strukturen übersetzt."
+  ]
+}

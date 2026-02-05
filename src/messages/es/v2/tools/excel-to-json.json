@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Excel to JSON es una herramienta robusta diseñada para facilitar la conversión de archivos de Excel a formato JSON, un formato de intercambio de datos ampliamente utilizado en el desarrollo web y en aplicaciones de backend. Esta herramienta no solo convierte los datos, sino que también permite seleccionar hojas específicas y previews de los datos antes de la conversión. Esto es particularmente útil para desarrolladores y profesionales de datos que necesitan integrar datos de Excel en aplicaciones web o bases de datos que utilizan JSON. La herramienta es ideal para automatizar tareas repetitivas, reducir errores humanos y mejorar la eficiencia en el manejo de datos. La conversión se realiza de manera precisa, manteniendo la estructura de los datos y asegurando que los tipos de datos sean correctamente interpretados durante el proceso.",
+  "usage_steps": [
+    "Sube tu archivo Excel: Haz clic en el botón 'Seleccionar archivo' y elige el archivo Excel que deseas convertir.",
+    "Selecciona la hoja: En la lista desplegable 'Seleccionar hoja', elige la hoja que deseas convertir a JSON.",
+    "Ajusta las opciones: Si es necesario, ajusta las opciones de conversión, como la codificación de caracteres y el formato de fecha.",
+    "Preview de los datos: Antes de la conversión, revisa el preview de los datos en la sección 'Preview'. Esto te permite verificar que los datos se han cargado correctamente.",
+    "Convierte los datos: Una vez que estés satisfecho con el preview, haz clic en 'Convertir a JSON'. La herramienta procesará los datos y generará el archivo JSON.",
+    "Descarga el archivo JSON: Finalmente, haz clic en 'Descargar JSON' para obtener tu archivo convertido."
+  ],
+  "usage_examples": [
+    "Integración de datos en una API: Un desarrollador de backend necesita incorporar datos de un archivo Excel en una API RESTful. Utiliza Excel to JSON para convertir los datos y luego los importa directamente en la base de datos mediante la API.",
+    "Análisis de datos en un entorno de desarrollo: Un científico de datos tiene un conjunto de datos en Excel que necesita analizar en un entorno de desarrollo que solo acepta JSON. Utiliza la herramienta para convertir los datos y luego los carga en su entorno de análisis.",
+    "Actualización de configuraciones en una aplicación web: Un desarrollador frontend necesita actualizar las configuraciones de una aplicación web que almacena datos en formato JSON. Utiliza Excel to JSON para convertir las nuevas configuraciones desde un archivo Excel y luego las implementa en la aplicación.",
+    "Generación de reportes dinámicos: Un analista de negocios quiere generar reportes dinámicos en una aplicación web que utiliza JSON para representar los datos. Convierte los datos de Excel a JSON con la herramienta y los integra en la aplicación para generar reportes en tiempo real."
+  ]
+}

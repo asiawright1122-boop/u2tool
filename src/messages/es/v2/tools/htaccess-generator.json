@@ -1,0 +1,32 @@
+{
+  "urlSettings": "Configuración de URL y SSL",
+  "forceHttps": "Forzar HTTPS",
+  "forceWww": "Forzar prefijo WWW",
+  "removeWww": "Quitar prefijo WWW",
+  "performance": "Rendimiento",
+  "enableGzip": "Habilitar compresión Gzip",
+  "enableCaching": "Habilitar caché del navegador",
+  "security": "Seguridad",
+  "blockHotlinking": "Bloquear enlaces de imágenes",
+  "customErrorPages": "Páginas de error personalizadas",
+  "blockIps": "Bloquear direcciones IP (una por línea)",
+  "redirects": "Redirecciones (de a, una por línea)",
+  "generate": "Generar .htaccess",
+  "copy": "Copiar al portapapeles",
+  "output": "Generado .htaccess",
+  "detailed_description": "El generador de .htaccess es una utilidad técnica diseñada para simplificar la creación de archivos de configuración para servidores Apache. Este archivo, ubicado en el directorio raíz de un sitio web, permite controlar funciones críticas como reescritura de URLs (mod_rewrite), redirecciones HTTP, autenticación básica, compresión GZIP, configuración de encabezados CORS y gestión de caché del navegador. Los desarrolladores necesitan este recurso para implementar configuraciones avanzadas sin riesgo de errores sintácticos, especialmente al manejar entornos con múltiples dominios, configuraciones de seguridad PCI-DSS o optimizaciones SEO que requieren redirecciones 301 permanentes. El generador funciona mediante un motor que mapea opciones seleccionadas en una interfaz web a directivas de Apache validadas, generando automáticamente las secciones necesarias (<IfModule>, <Directory>, etc.) con soporte para expresiones regulares en patrones de URL. Además, incluye verificación en tiempo real de conflictos entre reglas, evitando errores 500 internos por configuraciones incorrectas.",
+  "usage_steps": [
+    "Elige una plantilla base según el escenario (ej: 'Seguridad mínima', 'Optimización SEO' o 'API REST') en el selector de configuración inicial.",
+    "Configura redirecciones HTTP especificando códigos de estado (301, 302, 403) y patrones de URL con soporte para variables dinámicas (%{REQUEST_URI}).",
+    "Activa la protección por contraseña marcando 'Habilitar autenticación' e ingresa el nombre del área protegida y la ruta al archivo .htpasswd.",
+    "Establece reglas de reescritura de URL mediante el formulario de mod_rewrite, definiendo condiciones (RewriteCond) y reglas (RewriteRule) con validación de sintaxis.",
+    "Personaliza encabezados HTTP adicionales en la sección 'Headers avanzados', como HSTS (HTTP Strict Transport Security) o políticas de seguridad de contenido (CSP).",
+    "Descarga el archivo .htaccess generado y desplázalo al directorio objetivo en tu servidor Apache, verificando permisos de lectura (chmod 644)."
+  ],
+  "usage_examples": [
+    "Un desarrollador implementa redirecciones canónicas para dominios www y no-www mediante reglas de reescritura condicional que verifican el encabezado Host.",
+    "Un administrador de sistemas bloquea accesos maliciosos configurando IP-based restrictions con listas negras dinámicas en tiempo real.",
+    "Un equipo de SEO crea URLs amigables para un CMS heredado, transformando solicitudes como '/articulo.php?id=123' en '/blog/titulo-articulo/'.",
+    "Un arquitecto de aplicaciones web configura encabezados CORS para permitir solicitudes desde un dominio específico, definiendo políticas de Access-Control-Allow-Origin."
+  ]
+}

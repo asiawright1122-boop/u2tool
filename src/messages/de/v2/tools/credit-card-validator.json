@@ -1,0 +1,27 @@
+{
+  "cardNumber": "Kartennummer",
+  "inputPlaceholder": "Geben Sie die Kartennummer ein...",
+  "validate": "Validieren",
+  "valid": "Gültig",
+  "invalid": "Ungültig",
+  "luhnCheck": "Luhn-Prüfung",
+  "passed": "Bestanden",
+  "failed": "Fehlgeschlagen",
+  "digits": "Ziffern",
+  "digitsCount": "Anzahl der Ziffern",
+  "disclaimer": "Dieses Tool überprüft nur die mathematische Struktur der Kartennummern. Es stellt nicht sicher, ob die Karte aktiv ist oder über ausreichend Guthaben verfügt. Geben Sie niemals echte Kartennummern auf unzuverlässigen Webseiten ein.",
+  "supportedCards": "Unterstützte Kartenarten",
+  "detailed_description": "Der Kreditkarten-Validierer prüft, ob eine Kreditkartennummer mathematisch gültig ist, indem er den Luhn-Algorithmus anwendet. Er erkennt automatisch die Kartenart (Visa, Mastercard, Amex usw.) und liefert detaillierte Validierungsergebnisse. Nur für Test- und Entwicklungszwecke geeignet.",
+  "usage_steps": [
+    "Geben Sie eine Kreditkartennummer in das Eingabefeld ein.",
+    "Die Zahl wird automatisch mit Leerzeichen formatiert.",
+    "Klicken Sie auf „Validieren“, um die Karte zu überprüfen.",
+    "Sehen Sie die Kartenart, den Emittenten sowie das Ergebnis der Luhn-Prüfung an.",
+    "Überprüfen Sie die Anzahl der Ziffern für zusätzliche Validierung."
+  ],
+  "usage_examples": [
+    "Prüfen Sie die Validierungslogik von Zahlungsformularen.",
+    "Stellen Sie vor der Verarbeitung die Formatierung der Kartennummer sicher.",
+    "Identifizieren Sie die Kartenart anhand des Nummernvorzeichens."
+  ]
+}

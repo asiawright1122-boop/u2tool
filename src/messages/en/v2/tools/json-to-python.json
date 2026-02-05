@@ -1,0 +1,28 @@
+{
+  "className": "Class Name",
+  "style": "Style",
+  "useOptional": "Use Optional for nullable",
+  "loadSample": "Load Sample",
+  "copy": "Copy",
+  "convert": "Convert",
+  "inputPlaceholder": "Enter JSON object...",
+  "outputPlaceholder": "Python code will appear here...",
+  "detailed_description": "This tool specializes in transforming JSON data structures into idiomatic Python type declarations, including dataclasses, Pydantic models, and TypedDicts. By analyzing JSON schema patterns and value types, the converter generates type-hinted Python code that preserves data integrity through static typing. The parser engine employs recursive type inference to handle nested structures, automatically mapping JSON primitives to equivalent Python types (e.g., JSON number → Union[int, float]) while maintaining field name consistency. Developers benefit from this tool when building API interfaces requiring strict type validation, creating domain models from NoSQL database schemas, or implementing configuration systems with guaranteed type safety. The conversion engine supports advanced Python typing features like Optional fields, Literal types, and Union types, ensuring generated code meets modern type-checking standards. For Pydantic models, the tool incorporates validation directives based on JSON schema constraints, while dataclass implementations include proper default value handling and frozen class options.",
+  "usage_steps": [
+    "Open the tool's input panel and paste valid JSON data containing representative values for each field",
+    "Select target output format using the type selector dropdown (dataclass, pydantic_model, or typed_dict)",
+    "Toggle advanced options to configure naming conventions, type hint imports, or field validation rules",
+    "Click 'Generate Code' to initiate schema analysis and type inference process",
+    "Review the output panel showing side-by-side comparison of original JSON structure and generated Python types",
+    "Copy the type-safe Python code to clipboard using the dedicated 'Copy Code' button"
+  ],
+  "usage_examples": [
+    "Creating FastAPI request/response models from JSON API documentation samples",
+    "Generating type definitions for DynamoDB table schemas to enforce strong typing in serverless applications",
+    "Building configuration loaders with MyPy-compatible type hints from JSON config files",
+    "Converting legacy MongoDB collections to validated Pydantic models for database schema migration projects"
+  ],
+  "pydanticBaseModel": "Pydantic BaseModel",
+  "typedDict": "TypedDict",
+  "plainClass": "Plain Class"
+}

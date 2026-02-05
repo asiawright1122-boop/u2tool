@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O CSV Viewer é uma ferramenta técnica especializada em análise e renderização de arquivos CSV (Comma-Separated Values) em formato tabular dinâmico, com suporte a delimitadores personalizados (como vírgulas, pontos e vírgulas ou tabs), detecção automática de codificação de caracteres (UTF-8, ISO-8859-1) e tratamento eficiente de grandes volumes de dados. Ele processa arquivos no lado cliente usando algoritmos de streaming para minimizar o consumo de memória, permitindo visualização instantânea de estruturas complexas, como campos com textos multilinha ou valores numéricos formatados. Diferente de ferramentas genéricas, este viewer oferece recursos como identificação de inconsistências na estrutura (colunas faltando ou linhas truncadas), pré-visualização com paginação e realce de sintaxe para identificar rapidamente padrões ou erros. É essencial para desenvolvedores que precisam validar a integridade de exports de bancos de dados, cientistas de dados analisando datasets brutos, ou engenheiros depurando logs estruturados em CSV, garantindo precisão sem depender de softwares proprietários.",
+  "usage_steps": [
+    "1. Clique no botão 'Carregar Arquivo' para selecionar seu CSV do dispositivo local ou cole o conteúdo diretamente na área de texto.",
+    "2. Escolha o delimitador correto no menu suspenso (vírgula, ponto e vírgula, tabulação) ou marque 'Detectar Automaticamente' para análise inteligente.",
+    "3. Selecione a codificação de caracteres no campo 'Encoding' (UTF-8, UTF-16, ISO-8859-1) para garantir leitura correta de acentos e símbolos especiais.",
+    "4. Revise a pré-visualização da tabela: use a barra de rolagem horizontal para verificar alinhamento de colunas ou ative a opção 'Mostrar Números de Linhas' para auditoria.",
+    "5. Utilize o filtro interativo acima de cada coluna para buscar valores específicos ou clique nos cabeçalhos para ordenar dados alfabeticamente ou numericamente.",
+    "6. Para análise avançada, habilite o modo 'Exibir Erros' que destaca linhas com inconsistências de formatação ou campos vazios em vermelho."
+  ],
+  "usage_examples": [
+    "1. Um desenvolvedor backend verifica inconsistências em um export CSV de transações financeiras gerado por um sistema legado, identificando rapidamente campos numéricos com formatação incorreta.",
+    "2. Um cientista de dados analisa um dataset de 500MB de registros meteorológicos, usando a paginação e o filtro por data para extrair subconjuntos relevantes sem carregar o arquivo completo na memória.",
+    "3. Um analista de suporte técnico valida a estrutura de um arquivo de log CSV gerado por um aplicativo IoT, confirmando que todas as linhas possuem o número esperado de colunas.",
+    "4. Um estudante converte um CSV de dados acadêmicos em uma tabela HTML responsiva para integrar em um relatório web, utilizando o viewer para ajustar o delimitador antes da exportação."
+  ]
+}

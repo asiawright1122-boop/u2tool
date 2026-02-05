@@ -1,0 +1,29 @@
+{
+  "serverName": "Nome do Servidor",
+  "rootPath": "Caminho Raiz",
+  "proxyPass": "Passagem de Proxy (opcional)",
+  "features": "Funcionalidades",
+  "enableSsl": "Habilitar SSL/HTTPS",
+  "enableGzip": "Habilitar Compressão Gzip",
+  "enableCaching": "Habilitar Cache de Arquivos Estáticos",
+  "enablePhp": "Habilitar PHP-FPM",
+  "generate": "Gerar Configuração Nginx",
+  "copy": "Copiar para Área de Transferência",
+  "output": "Configuração Nginx Gerada",
+  "detailed_description": "O Nginx Config Generator é uma ferramenta especializada para automação na criação de arquivos de configuração do servidor Nginx. Ele permite definir blocos de servidores virtuais, regras de reescrita de URL, configurações de SSL/TLS (incluindo caminhos de certificados e protocolos como HTTP/2), além de parâmetros avançados como balanceamento de carga, caching de conteúdo estático e compressão Brotli/GZIP. Desenvolvedores precisam deste recurso para evitar erros manuais em arquivos de configuração complexos, especialmente em ambientes de múltiplos domínios ou microsserviços. A ferramenta processa as entradas do usuário através de um mecanismo de template dinâmico, validando sintaxe em tempo real e aplicando melhores práticas de segurança, como headers de proteção XSS e Content-Security-Policy. O resultado é um arquivo pronto para deploy no diretório /etc/nginx/sites-available, com opção de recarregamento automático do serviço Nginx via SSH.",
+  "usage_steps": [
+    "1. Selecione o tipo de configuração: 'Servidor Básico', 'Proxy Reverso' ou 'Balanceamento de Carga'.",
+    "2. Preencha o campo 'Domínio' e escolha as portas de escuta (ex: 80, 443) no seletor de protocolos.",
+    "3. Configure SSL/TLS marcando 'Habilitar HTTPS' e inserindo caminhos de certificado (ex: /etc/letsencrypt/live/exemplo.com/fullchain.pem).",
+    "4. Defina regras de reescrita de URL no campo específico, usando sintaxe PCRE (Perl Compatible Regular Expressions).",
+    "5. Ative recursos avançados como 'Ativar GZIP' ou 'Cache de Imagens' através de checkboxes organizados em categorias.",
+    "6. Clique em 'Gerar Configuração' para visualizar o código final e baixe o arquivo ou copie o conteúdo para o clipboard."
+  ],
+  "usage_examples": [
+    "1. Configurar um proxy reverso para uma aplicação Node.js rodando em localhost:3000 com SSL obtido via Let's Encrypt.",
+    "2. Criar regras de redirecionamento 301 para migração de domínio, incluindo reescrita de URLs antigas para novas estruturas.",
+    "3. Implementar balanceamento de carga entre três instâncias de um backend PHP usando algoritmo round-robin e health checks.",
+    "4. Otimizar entrega de assets estáticos com configurações de cache HTTP e compressão Brotli para um site WordPress."
+  ],
+  "exampleDomain": "exemplo.com"
+}

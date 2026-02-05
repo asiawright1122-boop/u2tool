@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El Number Formatter aplica estándares de internacionalización (i18n) para transformar valores numéricos según convenciones regionales. Utiliza internamente el API ECMAScript Intl.NumberFormat para convertir números en formatos decimales, monetarios o porcentuales, incluyendo sistemas numéricos como árabes-indios, devanagari o latinos. Los usuarios necesitan esta herramienta para garantizar coherencia en documentos financieros internacionales, interfaces de e-commerce multilingüe y visualizaciones de datos geolocalizados. El proceso implica seleccionar un código de localidad (es-ES, ja-JP, etc.), definir estilos de formato y ajustar parámetros como cantidad de decimales, símbolos monetarios o estrategias de redondeo. La herramienta implementa datos del Unicode Common Locale Data Repository (CLDR) para reflejar exactamente las convenciones oficiales de cada región, evitando errores críticos en contextos como transacciones bancarias transfronterizas o reportes estadísticos gubernamentales.",
+  "usage_steps": [
+    "1. Selecciona un código de localidad desde el menú desplegable (ej: pt-BR para Brasil, ar-SA para Arabia Saudita).",
+    "2. Elige el estilo de formato: decimal, moneda o porcentaje usando los botones de opción.",
+    "3. Introduce el valor numérico en el campo de texto principal (admite notación científica y números negativos).",
+    "4. Ajusta parámetros avanzados: casillas de verificación para mostrar separadores de miles, menú de moneda ISO 4217 y campos numéricos para decimales mínimos/máximos.",
+    "5. Haz clic en el botón 'Formatear' para activar el motor de transformación basado en ICU.",
+    "6. Copia el resultado del campo de salida con formato aplicado, incluyendo símbolos regionales y espaciado correcto."
+  ],
+  "usage_examples": [
+    "Un analista financiero convierte 1500.75 a formato alemán (1.500,75) para informes de la sede de Munich.",
+    "Un marketplace e-commerce transforma automáticamente precios de USD a formato japonés (¥1,250) para usuarios de Tokio.",
+    "Un investigador ajusta datos científicos a formato francés (1 234,56 %) para un artículo académico publicado en París.",
+    "Un desarrollador verifica la renderización de números en sistema numérico tamil (௧,௨௩௪.௫௬) para una aplicación en India."
+  ]
+}

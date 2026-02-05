@@ -1,0 +1,53 @@
+{
+  "detailed_description": "Der Finanzprognose-Rechner ist ein leistungsstarkes Online-Tool, das Ihnen hilft, Daten effizient zu verarbeiten und umzuwandeln. Mit einer benutzerfreundlichen Oberfläche und sofortigen Ergebnissen ist er ideal für Entwickler, Designer und Content-Creator.",
+  "usage_steps": [
+    "Geben Sie Ihre Eingabedaten ein oder fügen Sie sie ein",
+    "Konfigurieren Sie erforderliche Optionen",
+    "Klicken Sie auf die Prozess-Schaltfläche",
+    "Sehen Sie die Ergebnisse sofort an",
+    "Kopieren oder laden Sie das Ergebnis herunter"
+  ],
+  "usage_examples": [
+    "Verwenden Sie den Finanzprognose-Rechner für schnelle Datenverarbeitung",
+    "Integrieren Sie ihn in Ihre Arbeitsabläufe für Effizienz"
+  ],
+  "input": "Eingabe",
+  "output": "Ausgabe",
+  "process": "Verarbeiten",
+  "copy": "Kopieren",
+  "clear": "Löschen",
+  "inputPlaceholder": "Geben Sie hier Ihre Eingabe ein...",
+  "outputPlaceholder": "Ergebnisse erscheinen hier...",
+  "errors": {
+    "emptyInput": "Bitte geben Sie einige Eingaben ein"
+  },
+  "forecastMethod": "Prognosemethode",
+  "linearRegression": "Lineare Regression",
+  "exponentialGrowth": "Exponentielles Wachstum",
+  "movingAverage": "Gleitender Durchschnitt",
+  "forecastPeriods": "Prognoseperioden",
+  "growthRate": "Wachstumsrate (%)",
+  "maPeriods": "MA-Perioden",
+  "currency": "Währung",
+  "addPeriod": "+ Periode hinzufügen",
+  "avgRevenue": "Durchschn. Umsatz",
+  "avgExpenses": "Durchschn. Ausgaben",
+  "avgProfit": "Durchschn. Gewinn",
+  "profitMargin": "Gewinnmarge",
+  "growth": "Wachstum",
+  "change": "Änderung",
+  "historicalData": "Historische Daten",
+  "period": "Periode",
+  "revenue": "Umsatz",
+  "expenses": "Ausgaben",
+  "profit": "Gewinn",
+  "margin": "Marge",
+  "forecastVisualization": "Prognosevisualisierung",
+  "forecast": "Prognose",
+  "forecastSummary": "Prognosezusammenfassung",
+  "projectedRevenue": "Prognostizierter Umsatz",
+  "projectedExpenses": "Prognostizierte Ausgaben",
+  "projectedProfit": "Prognostizierter Gewinn",
+  "overPeriods": "über {periods} Perioden",
+  "exportForecastReport": "Prognosebericht exportieren"
+}

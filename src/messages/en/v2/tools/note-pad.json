@@ -1,0 +1,36 @@
+{
+  "detailed_description": "Online Note Pad is a simple and practical note-taking tool for quickly creating and managing colorful sticky notes. Supports 6 colors (yellow, green, blue, pink, purple, orange) to make your notes more visible and organized. Each note can have a title and content, with automatic creation and update timestamps. All notes auto-save to browser local storage, preserved even after closing the page. Supports search functionality to quickly find notes. Export to JSON format for backup and migration. Clean interface with intuitive operation.",
+  "usage_steps": [
+    "Open the Note Pad tool page",
+    "Click 'New Note' button to create a new note",
+    "Enter note title and content",
+    "Click color buttons to change note color",
+    "Click a note card to edit its content",
+    "Use the search box to quickly find notes",
+    "Click 'Export' to backup all notes"
+  ],
+  "usage_examples": [
+    "Record to-do items and task lists",
+    "Save temporary ideas and inspiration",
+    "Record meeting points and notes",
+    "Save frequently used info like password hints, contacts, etc."
+  ],
+  "faqs": [
+    {
+      "question": "Are notes saved automatically?",
+      "answer": "Yes, all notes are automatically saved to browser local storage. Even after closing the page or browser, notes are preserved when you return."
+    },
+    {
+      "question": "Where is note data stored?",
+      "answer": "Note data is stored in your browser's localStorage, not uploaded to any server. Clearing browser data may cause notes to be lost, so we recommend regular exports for backup."
+    },
+    {
+      "question": "How do I backup my notes?",
+      "answer": "Click the 'Export' button to export all notes as a JSON file. You can save this file as a backup."
+    },
+    {
+      "question": "How many notes can I create?",
+      "answer": "There's no limit on the number of notes. Create as many as you need. Note that browser local storage has capacity limits (typically 5-10MB)."
+    }
+  ]
+}

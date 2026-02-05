@@ -1,0 +1,25 @@
+{
+  "detailed_description": "Excel to CSV converter transforms Excel spreadsheets into CSV (Comma-Separated Values) format. Supports both .xlsx and .xls files. Select specific sheets to convert and preview data before downloading.",
+  "usage_steps": [
+    "Open the Excel to CSV tool page",
+    "Drag and drop an Excel file or click to select",
+    "Select the sheet to convert if multiple sheets exist",
+    "Preview the CSV data",
+    "Copy or download the CSV file"
+  ],
+  "usage_examples": [
+    "Convert Excel data for database import",
+    "Create CSV files for data analysis tools",
+    "Export spreadsheet data in universal format"
+  ],
+  "faqs": [
+    {
+      "question": "Can I convert multiple sheets?",
+      "answer": "Yes, you can select different sheets and convert them one at a time."
+    },
+    {
+      "question": "Are formulas converted?",
+      "answer": "Only the calculated values are exported, not the formulas themselves."
+    }
+  ]
+}

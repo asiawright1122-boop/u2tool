@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The HTTP Header Parser is a specialized utility that transforms raw HTTP header text into structured, human-readable output with technical annotations. This tool employs lexical analysis to dissect raw header streams into discrete name-value pairs, automatically categorizing each field according to RFC 9110 standards. It identifies 89+ standard headers and 30+ common non-standard headers, providing contextual explanations about each header's purpose, permissible directives, and security implications. Developers can analyze complex header interactions like Content Negotiation chains, caching control hierarchies, or CORS preflight sequences. The parser uses a dual-mode algorithm: strict parsing validates against IANA's header registry, while lenient mode handles custom server extensions. Technical outputs include ASCII tables with folding control, JSON trees showing header relationships, and security risk assessments for misconfigured directives like Cache-Control or Set-Cookie attributes.",
+  "usage_steps": [
+    "Paste raw HTTP header text into the dedicated text area, preserving exact line breaks and whitespace",
+    "Toggle between 'Strict RFC Validation' and 'Lenient Parsing' modes using the switch in the header processing panel",
+    "Click the 'Parse Headers' button to initiate lexical analysis of the header stream",
+    "Review structured output in the interactive pane, which displays headers organized by request/response direction and protocol version",
+    "Expand individual header cards to access technical documentation about field specifications and common implementation patterns",
+    "Use the 'Export' dropdown to generate curl commands, Postman collections, or HAR files with parsed header data"
+  ],
+  "usage_examples": [
+    "Debugging CORS issues by analyzing preflight request headers and corresponding Access-Control-* response fields",
+    "Auditing security headers (X-Content-Type-Options, HSTS, CSP) across multiple endpoints to ensure compliance with OWASP recommendations",
+    "Optimizing caching strategies by visualizing Cache-Control directive hierarchies and ETag validation patterns",
+    "Reverse-engineering third-party API authentication mechanisms by inspecting WWW-Authenticate challenge-response sequences"
+  ]
+}

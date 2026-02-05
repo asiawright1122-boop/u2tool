@@ -1,0 +1,30 @@
+{
+  "enterToken": "Introduce un token JWT",
+  "invalidFormat": "Formato de token JWT inválido",
+  "invalidToken": "Token JWT inválido",
+  "header": "Encabezado",
+  "payload": "Carga útil",
+  "signature": "Firma",
+  "issuedAt": "Emisión (iat)",
+  "expires": "Vence (exp)",
+  "notBefore": "No antes (nbf)",
+  "detailed_description": "El JWT Decoder es una herramienta esencial para desarrolladores y profesionales de seguridad que necesitan descomponer y analizar tokens JWT (JSON Web Tokens). Este token, que se utiliza ampliamente en la autenticación y autorización de aplicaciones web, consta de tres partes: header, payload y signature. El JWT Decoder permite a los usuarios decodificar estos tokens, visualizar su contenido y verificar su validez. Esta funcionalidad es crucial para asegurar que los tokens no hayan sido manipulados y que la información que contienen sea correcta y confiable. Además, el tool proporciona una vista detallada de cada componente del token, lo que facilita la depuración y el análisis de problemas relacionados con la autenticación.",
+  "usage_steps": [
+    "Paso 1: Accede a la página del JWT Decoder y asegúrate de que estás en la sección de decodificación.",
+    "Paso 2: Copia el token JWT que deseas decodificar y pégalo en el campo de texto llamado 'Token JWT'.",
+    "Paso 3: Haz clic en el botón 'Decodificar' para procesar el token.",
+    "Paso 4: Observa la sección 'Header' para ver los metadatos del token, incluyendo el tipo de token y el algoritmo de firma utilizado.",
+    "Paso 5: Revisa la sección 'Payload' para acceder a los claims del token, que incluyen información sobre el emisor, el receptor, y otros datos específicos de la aplicación.",
+    "Paso 6: Examina la sección 'Signature' para verificar la integridad del token y asegurarte de que no ha sido alterado."
+  ],
+  "usage_examples": [
+    "Ejemplo 1: Un desarrollador frontend está integrando un sistema de autenticación que usa JWT. Al recibir un token, utiliza el JWT Decoder para verificar que el token contiene los claims correctos y que la firma es válida antes de permitir el acceso del usuario.",
+    "Ejemplo 2: Un ingeniero de seguridad necesita auditar un servicio web que utiliza JWT para autenticación. Utiliza el JWT Decoder para analizar tokens recopilados en el tráfico de red y verificar que no haya tokens comprometidos o manipulados.",
+    "Ejemplo 3: Un equipo de desarrollo está depurando un problema de autorización en una API. Utilizan el JWT Decoder para examinar los tokens generados por el servidor y asegurarse de que los claims y la firma sean correctos.",
+    "Ejemplo 4: Un administrador de sistemas está configurando un servicio de autenticación OAuth 2.0 que emite JWT. Utiliza el JWT Decoder para validar los tokens generados y asegurarse de que cumplen con los estándares de seguridad antes de implementar el servicio en producción."
+  ],
+  "input": "Entrada",
+  "decode": "Decodificar",
+  "copied": "Copiado!",
+  "copy": "Copiar"
+}

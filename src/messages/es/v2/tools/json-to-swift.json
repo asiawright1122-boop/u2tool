@@ -1,0 +1,26 @@
+{
+  "input": "Entrada JSON",
+  "output": "Salida Swift",
+  "convert": "Convertir",
+  "copy": "Copiar",
+  "structName": "Nombre de la Estructura",
+  "useCodable": "Usar Codable",
+  "inputPlaceholder": "Pega el JSON aquí...",
+  "outputPlaceholder": "Las estructuras Swift aparecerán aquí...",
+  "errorInvalidJson": "// Error: Entrada JSON inválida",
+  "detailed_description": "La herramienta JSON a Swift transforma objetos JSON en estructuras Swift (structs) con conformidad automática al protocolo Codable, optimizando el flujo de trabajo en proyectos iOS o macOS. Técnicamente, analiza la estructura JSON mediante inferencia de tipos para generar structs con propiedades tipadas, manejando tipos complejos como arrays anidados, diccionarios y valores opcionales. Esto resuelve casos de uso críticos como la integración con APIs REST, donde la serialización manual de respuestas JSON consume tiempo y es propensa a errores. La herramienta aplica técnicas de análisis sintáctico (parsing) para identificar claves y valores, mapeándolos a propiedades Swift con convenciones de nomenclatura correctas (por ejemplo, snake_case a camelCase). Además, soporta la generación de structs con modificadores de acceso personalizados (public, internal) y permite ajustar nombres de propiedades mediante un mapeo explícito. Esto evita inconsistencias en modelos de datos grandes o estructuras profundamente anidadas, donde la gestión manual de Codable requeriría código repetitivo y verificación minuciosa.",
+  "usage_steps": [
+    "Pega tu JSON en el editor de código con resaltado de sintaxis en el área designada.",
+    "Especifica el nombre de la struct Swift en el campo 'Nombre de Struct' usando UpperCamelCase.",
+    "Selecciona el nivel de acceso (public/internal) desde el menú desplegable 'Modificador'.",
+    "Activa la opción 'Ajustar Nombres' para convertir claves snake_case a camelCase automáticamente.",
+    "Haz clic en 'Generar Swift' para obtener el código con inicializadores y conformidad Codable.",
+    "Copia el código generado y pégalo en tu proyecto Xcode, listo para usar con decoders JSON."
+  ],
+  "usage_examples": [
+    "Un desarrollador crea una app iOS que consume una API meteorológica; convierte la respuesta JSON con datos de temperatura y humedad en structs tipados para mostrar en la UI.",
+    "Un equipo migrando un backend Python a Swift necesita transformar rápidamente esquemas de datos existentes en modelos compatibles con Codable para serialización eficiente.",
+    "Un QA automatiza pruebas de integración generando structs desde respuestas JSON de muestra, asegurando coincidencia exacta con el esquema esperado.",
+    "Un diseñador de interfaces convierte un JSON complejo con coordenadas geográficas anidadas en structs para implementar un mapa SwiftUI con anotaciones dinámicas."
+  ]
+}

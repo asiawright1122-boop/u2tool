@@ -1,0 +1,47 @@
+{
+  "detailed_description": "O Testador de Injeção SQL analisa consultas SQL e padrões de código para identificar possíveis vulnerabilidades de injeção SQL.",
+  "usage_steps": [
+    "Cole a consulta SQL ou código",
+    "Insira as entradas de teste",
+    "Clique em Testar",
+    "Visualize problemas de segurança",
+    "Obtenha exemplos parametrizados"
+  ],
+  "usage_examples": [
+    "Teste o manejo de entrada do usuário",
+    "Identifique concatenação de strings",
+    "Aprenda padrões seguros"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processar",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Cole seu código de consulta de banco de dados...",
+  "outputPlaceholder": "Os resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira alguma entrada"
+  },
+  "loadExample": "Carregar exemplo",
+  "analyze": "Analisar",
+  "generate": "Gerar",
+  "format": "Formatar",
+  "convert": "Converter",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Visualizar",
+  "reset": "Redefinir",
+  "add": "Adicionar",
+  "remove": "Remover",
+  "save": "Salvar",
+  "cancel": "Cancelar",
+  "settings": "Configurações",
+  "options": "Opções",
+  "results": "Resultados",
+  "noResults": "Sem resultados",
+  "loading": "Carregando...",
+  "success": "Sucesso",
+  "failed": "Falhou",
+  "warning": "Aviso",
+  "info": "Informação"
+}

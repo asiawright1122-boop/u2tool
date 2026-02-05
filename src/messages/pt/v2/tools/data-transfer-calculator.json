@@ -1,0 +1,29 @@
+{
+  "detailed_description": "O Calculador de Transferência de Dados estimativa quanto tempo levará para transferir arquivos com base na velocidade da sua conexão. Insira o tamanho do arquivo e a velocidade da rede para obter estimativas precisas do tempo de transferência. Inclui velocidades pré-definidas para tipos comuns de conexão, como 4G, 5G, WiFi e Ethernet, para cálculos rápidos.",
+  "usage_steps": [
+    "Insira o tamanho do arquivo a ser transferido",
+    "Selecione a unidade de tamanho (KB, MB, GB, TB)",
+    "Insira a velocidade da sua conexão",
+    "Ou clique em um botão de velocidade pré-definida",
+    "Visualize o tempo estimado de transferência",
+    "Copie os resultados para referência"
+  ],
+  "usage_examples": [
+    "Estimando tempos de download de arquivos grandes",
+    "Planejando horários de migração de dados",
+    "Comparando tempos de transferência entre redes"
+  ],
+  "fileSize": "File Size",
+  "connectionSpeed": "Connection Speed",
+  "presetSpeeds": "Preset Speeds",
+  "estimatedTime": "Estimated Transfer Time",
+  "hours": "hours",
+  "minutes": "minutes",
+  "seconds": "seconds",
+  "note": "Note: Actual transfer times may vary due to network conditions, overhead, and other factors.",
+  "dataSize": "Tamanho dos dados",
+  "bandwidth": "Largura de banda",
+  "transferTime": "Tempo de transferência",
+  "speedUnit": "Unidade de velocidade",
+  "sizeUnit": "Unidade de tamanho"
+}

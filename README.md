@@ -163,6 +163,38 @@ NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 INDEXNOW_KEY=your-indexnow-key
 ```
 
+## ⚡ 性能优化
+
+### 资源优化配置
+
+项目已针对 Vercel 部署进行了全面的资源优化：
+
+- **ISR 配置**: 工具页面 30 天重新验证，分类页面 7 天重新验证
+- **HTTP 缓存**: HTML 页面 7 天缓存 + 30 天 stale-while-revalidate
+- **翻译加载**: 多层缓存（内存 + localStorage），按需加载工具翻译
+- **Bundle 优化**: 动态导入大型库（ECharts、PDF.js、jspdf）
+- **智能预取**: 悬停预取 + 网络感知
+
+### 资源监控
+
+```bash
+# 检查资源使用情况
+npx tsx scripts/check-resource-usage.ts
+
+# 生成详细报告
+npx tsx scripts/check-resource-usage.ts --report
+```
+
+### Bundle 分析
+
+```bash
+# 运行 bundle 分析
+ANALYZE=true npm run build -- --webpack
+
+# 查看报告
+open .next/analyze/client.html
+```
+
 ## 🏗️ 技术栈
 
 - **框架**: [Next.js 16](https://nextjs.org/) (App Router)

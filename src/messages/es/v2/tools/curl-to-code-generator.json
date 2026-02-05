@@ -1,0 +1,25 @@
+{
+  "detailed_description": "El Generador de Comandos cURL a Código convierte comandos cURL en fragmentos de código funcionales para múltiples lenguajes de programación, incluyendo Python (requests), JavaScript (fetch/axios), Go, PHP, Ruby y más.",
+  "usage_steps": [
+    "Pega tu comando cURL",
+    "Selecciona el lenguaje de destino",
+    "Elige la biblioteca HTTP",
+    "Haz clic en Convertir",
+    "Copia el código generado"
+  ],
+  "usage_examples": [
+    "Convierte comandos cURL de pruebas API a requests de Python",
+    "Genera código JS fetch desde cURL de DevTools",
+    "Crea un cliente HTTP Go desde la documentación"
+  ],
+  "input": "Entrada",
+  "output": "Salida",
+  "process": "Procesar",
+  "copy": "Copiar",
+  "clear": "Borrar",
+  "inputPlaceholder": "Introduce aquí tu entrada...",
+  "outputPlaceholder": "Los resultados aparecerán aquí...",
+  "errors": {
+    "emptyInput": "Por favor, introduce alguna entrada"
+  }
+}

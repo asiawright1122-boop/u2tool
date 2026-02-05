@@ -1,0 +1,29 @@
+{
+  "detailed_description": "ESLint設定ファイルジェネレーターは、JavaScriptとTypeScriptプロジェクト用のカスタマイズされたESLint設定ファイルを作成するのに役立ちます。人気のスタイルガイド（Airbnb、Standard、Googleなど）から選択できます。また、React、Vue、Angular、Node.jsなどのフレームワークに特化したルールを設定できます。TypeScriptのサポートを有効にし、Prettierの統合を設定し、個々のルールをカスタマイズできます。生成された.eslintrc.jsonファイルは、プロジェクトで使用する準備が整っています。",
+  "usage_steps": [
+    "好みのスタイルガイド（Airbnb、Standard、Googleなど）を選択します",
+    "使用するフレームワーク（React、Vue、Angular、Node.jsなど）を選択します",
+    "必要に応じてTypeScriptのサポートを有効にします",
+    "Prettierの統合を設定します",
+    "必要に応じて個々のルールをカスタマイズします",
+    "生成ボタンをクリックしてESLint設定ファイルを作成します",
+    "設定ファイルをプロジェクトにコピーします"
+  ],
+  "usage_examples": [
+    "ReactのTypeScriptプロジェクト用にESLintを設定する",
+    "Airbnbスタイルガイドを使用したESLintの設定",
+    "Node.jsバックエンドのリンティング設定ファイルを作成する",
+    "Prettier統合を使用したESLintの設定"
+  ],
+  "browser": "ブラウザ",
+  "off": "オフ",
+  "warn": "警告",
+  "error": "エラー",
+  "framework": "フレームワーク",
+  "styleGuide": "スタイルガイド",
+  "typescript": "TypeScript",
+  "environment": "環境",
+  "rules": "ルール",
+  "generate": "生成",
+  "download": "ダウンロード"
+}

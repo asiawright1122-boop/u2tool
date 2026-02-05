@@ -1,0 +1,25 @@
+{
+  "detailed_description": "O Conversor de Código Morse é uma ferramenta técnica especializada que realiza conversão bidirecional entre texto plano e representações em código Morse, utilizando padrões internacionais da ITU-R M.1677. A ferramenta suporta codificação de caracteres alfanuméricos, pontuação e símbolos especiais conforme a tabela de código Morse moderna, incluindo extensões para caracteres latinos com diacríticos (à, ç, ñ, etc.). Internamente, o algoritmo processa cadeias de texto através de uma tabela de mapeamento invertida, convertendo cada caractere em sequências de pontos (·) e traços (–) separadas por espaços, com implementação rigorosa das regras de intervalo entre palavras (7 unidades de espaço) e símbolos (3 unidades). Para decodificação, o mecanismo aplica técnicas de parsing com validação contextual, identificando padrões válidos e alertando sobre sequências inválidas. Esta ferramenta é essencial para desenvolvedores de sistemas de comunicação assistiva, engenheiros de rádio amador (ham radio), pesquisadores de protocolos históricos e educadores em ciência da computação. O modo 'strict' garante conformidade absoluta com padrões internacionais, rejeitando entradas ambíguas, enquanto o modo 'lenient' aplica correção automática de erros comuns em transmissões manuais.",
+  "usage_steps": [
+    "Acesse a interface e selecione a direção de conversão usando os botões 'Texto para Morse' ou 'Morse para Texto'.",
+    "Cole ou digite seu conteúdo na área de texto principal, que suporta até 5000 caracteres.",
+    "Ative o interruptor 'Strict Mode' para validar rigorosamente padrões internacionais ou deixe desativado para tolerância a variações.",
+    "Revise o painel de resultados em tempo real, que exibe a conversão e destaca erros de sintaxe em vermelho.",
+    "Use o botão 'Download' para exportar o resultado em formato .txt ou copie diretamente da caixa de saída.",
+    "Para reiniciar, clique no ícone de reciclagem que limpa todas as entradas e redefine as configurações."
+  ],
+  "usage_examples": [
+    "Um operador de rádio amador prepara mensagens de emergência pré-codificadas em Morse para transmissão via HF.",
+    "Um professor de história da tecnologia demonstra a conversão de documentos históricos do século XIX para seu formato Morse original.",
+    "Um engenheiro de IoT implementa decodificação de sinais Morse recebidos por um microcontrolador ESP32.",
+    "Um desenvolvedor de jogos acessíveis converte diálogos de um game para código Morse como modo de jogo alternativo para deficientes visuais."
+  ],
+  "text": "Texto",
+  "toMorse": "Para Morse",
+  "textPlaceholder": "Digite o texto...",
+  "morse": "Morse",
+  "toText": "Para texto",
+  "play": "Reproduzir",
+  "morsePlaceholder": "Digite o código morse...",
+  "reference": "Referência"
+}

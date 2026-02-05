@@ -1,0 +1,33 @@
+{
+  "className": "اسم الفئة",
+  "packageName": "اسم الحزمة",
+  "serializer": "مزيل التسلسل",
+  "noSerializer": "لا شيء",
+  "useDataClass": "استخدام فئة البيانات",
+  "useNullable": "استخدام أنواع القيم القابلة للتغيير",
+  "input": "مدخل JSON",
+  "output": "مخرجات Kotlin",
+  "loadSample": "تحميل مثال",
+  "copy": "نسخ",
+  "convert": "تحويل",
+  "inputPlaceholder": "ادخل جسم JSON...",
+  "outputPlaceholder": "سيظهر كود Kotlin هنا...",
+  "detailed_description": "يقوم أداة 'JSON إلى Kotlin' بتحويل البيانات التنسيقية بصيغة JSON إلى كائنات Kotlin باستخدام فئات البيانات (Data Classes) مع دعم сериализации (Serialization) المُخصصة. تُحل هذه الأداة مشكلة إنشاء الفئات اليدوية المعقدة عند التعامل مع واجهات برمجية (APIs) أو تخزين البيانات في تطبيقات Android أو الخوادم باستخدام Kotlin. تقنيًا، تحلل الأداة هيكل JSON باستخدام محلل قواعد البيانات (JSON Schema Validator) لاستنتاج أنواع البيانات (مثل Int، Double، String) وأسماء الحقول، ثم تولد كود Kotlin مُهيكل يحتوي على إعلانات مثل @Serializable و companion object لدعم сериализации العكسية (Deserialization). كما تدعم الأداة الكائنات المتداخلة (Nested Objects) والقوائم (Lists) مع خيارات تخصيص مثل تحديد اسم الحزمة (Package Name) واسم الفئة (Class Name). تُستخدم تقنية الـ Type Inference لتجنب الأخطاء في تحويل القيم الرقمية، وتُدمج ميزة التحقق من صحة JSON قبل التوليد لضمان توافق البيانات المدخلة مع الهيكل المطلوب.",
+  "usage_steps": [
+    "الصق نص JSON في حقل الإدخال المُسمى 'أدخل JSON هنا' مع التأكد من صحته.",
+    "أدخل اسم الحزمة (Package Name) في المربع المخصص، مثل 'com.example.models'.",
+    "اختر اسم الفئة الرئيسية (Root Class Name) التي ستُولد، مثل 'UserResponse'.",
+    "فعّل خيار 'استخدم Data Class' إذا كنت بحاجة إلى فئات غير قابلة للتغيير (Immutable).",
+    "اضبط إعدادات متقدمة مثل استراتيجية التسمية (CamelCase إلى snake_case) في القائمة المنسدلة.",
+    "انقر على زر 'توليد الكود' لعرض النتيجة في نافذة Kotlin Code Output."
+  ],
+  "usage_examples": [
+    "مطور Android يستهلك ردود فعل API RESTful يحتوي على بيانات مستخدمين معقدة ويريد إنشاء فئات Serializable تلقائيًا.",
+    "تحويل ملف JSON ضخم يحتوي على إعدادات تطبيق إلى فئات Kotlin قابلة للاستخدام مباشرة في مشروع Ktor Backend.",
+    "استخدام JSON كنموذج أولي لتحويله إلى فئات Kotlin في مشروع Multiplatform مع دعم сериализации عبر الأنظمة.",
+    "تصحيح أخطاء تسلسل البيانات في تطبيق Kotlin/Native باستخدام نموذج JSON مُتحقق من صحته قبل التوليد."
+  ],
+  "moshi": "Moshi",
+  "gson": "Gson",
+  "kotlinxSerialization": "Kotlinx Serialization"
+}

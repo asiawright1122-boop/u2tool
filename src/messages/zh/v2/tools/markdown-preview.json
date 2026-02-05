@@ -1,0 +1,36 @@
+{
+  "detailed_description": "Markdown Preview工具采用客户端实时解析技术，通过marked.js解析器将用户输入的Markdown语法即时转换为DOM节点。该工具内置双栏布局的Web组件，左侧编辑区绑定input事件监听器，当用户键入#、**等标记符号时，右侧预览区立即调用渲染引擎生成对应HTML元素。支持CommonMark规范及GitHub Flavored Markdown扩展，包含任务列表、代码高亮等特性。开发者可利用此工具在前端完成文档结构验证，技术作者在撰写API文档时可即时查看表格渲染效果，开源项目维护者能直观比对不同Markdown方言的输出差异。工具内核通过Web Worker处理复杂解析任务，确保主进程流畅响应，同时提供HTML导出接口，可将解析结果直接嵌入现有Web应用。",
+  "usage_steps": [
+    "打开工具页面，界面自动分割为左侧代码编辑区和右侧预览区",
+    "在编辑区顶部工具栏选择Markdown扩展模式（GFM/CommonMark）",
+    "输入#标题或>引用等Markdown语法时，预览区实时更新DOM结构",
+    "点击行号旁的「复制」按钮可提取特定段落的HTML代码片段",
+    "使用「导出HTML」按钮生成完整文档，自动生成<!DOCTYPE>声明",
+    "通过「同步滚动」开关控制编辑区与预览区的滚动联动状态"
+  ],
+  "usage_examples": [
+    "前端开发者编写Vue组件文档时，实时查看自定义代码块渲染效果",
+    "技术面试者准备简历Markdown文件，即时校验表格对齐与列表缩进",
+    "开源项目贡献者预览PR描述文档，确保GitHub风格任务列表正确解析",
+    "培训讲师制作教学PPT，将Markdown笔记实时转换为可演示的HTML结构"
+  ],
+  "faqs": [
+    {
+      "question": "Markdown Preview 是免费的吗？",
+      "answer": "是的，Markdown Preview 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Markdown Preview 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Markdown Preview 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Markdown Preview 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "inputPlaceholder": "在此处输入文本..."
+}

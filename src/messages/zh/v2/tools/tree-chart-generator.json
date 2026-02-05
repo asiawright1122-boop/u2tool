@@ -1,0 +1,79 @@
+{
+  "title": "树形图生成器",
+  "defaultTitle": "树形图示例",
+  "chartSettings": "图表设置",
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题...",
+  "colorTheme": "颜色主题",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "layout": "布局",
+  "orthogonal": "正交",
+  "radial": "辐射",
+  "orientation": "方向",
+  "orientLR": "从左到右",
+  "orientRL": "从右到左",
+  "orientTB": "从上到下",
+  "orientBT": "从下到上",
+  "dataEditor": "数据编辑器",
+  "addNode": "添加节点",
+  "nodeName": "节点名称",
+  "value": "值",
+  "parent": "父节点",
+  "node": "节点",
+  "root": "根节点",
+  "editorNote": "注意：目前仅支持单根树形结构。",
+  "chartPreview": "图表预览",
+  "sampleRoot": "公司",
+  "sampleChild1": "技术部门",
+  "sampleChild2": "市场营销",
+  "sampleGrandChild1": "前端",
+  "sampleGrandChild2": "后端",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "tipsTitle": "提示",
+  "tip1": "辐射布局适合深层层次结构树",
+  "tip2": "您可以拖动和缩放以查看大型树形图",
+  "detailed_description": "Tree Chart Generator是一款支持正交布局与径向布局的可视化树形结构构建工具。该工具采用WebGL渲染引擎实现千万级节点的高效绘制，通过JSON Schema校验确保数据结构合规性，采用改进型分层布局算法自动优化节点间距。开发者可使用该工具将JSON格式的嵌套数据转换为可视化层次结构，系统采用DFS遍历算法解析树深度并动态计算坐标映射。支持CSS变量控制样式主题，提供节点折叠/展开交互功能，内置最小生成树算法优化跨层连接线。典型应用场景包括：企业组织架构可视化、文件系统目录树生成、项目WBS分解展示、知识体系图谱构建等场景。",
+  "usage_steps": [
+    "1. 在布局选择面板切换正交/径向模式",
+    "2. 在数据输入区按Schema格式编写嵌套JSON",
+    "3. 使用节点属性编辑器配置颜色/形状/标签样式",
+    "4. 通过拖拽操作调整节点相对位置",
+    "5. 在导出面板选择SVG/PNG/JSON格式下载",
+    "6. 启用实时预览模式查看不同分辨率适配效果"
+  ],
+  "usage_examples": [
+    "生成上市公司股权结构图，展示多层控股关系",
+    "可视化Git版本库的分支合并历史树",
+    "绘制大型开源项目的依赖关系拓扑图",
+    "构建企业IT系统的微服务调用链路图"
+  ],
+  "faqs": [
+    {
+      "question": "Tree Chart Generator 是免费的吗？",
+      "answer": "是的，Tree Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Tree Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Tree Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Tree Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Tree Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

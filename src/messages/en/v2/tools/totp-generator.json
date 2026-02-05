@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The TOTP Generator creates time-based one-time passwords (TOTP) per RFC 6238 standards, enabling secure multi-factor authentication (MFA). It combines a cryptographic seed value with the current timestamp to generate 6-8 digit codes that refresh at set intervals (default 30 seconds). This tool uses HMAC-SHA1 hashing to derive tokens from a shared secret key, synchronized with authentication servers in applications like Google Authenticator, Microsoft Authenticator, and FreeOTP. Developers and security professionals need this tool to implement or troubleshoot TOTP authentication systems, verify token generation against reference implementations, or recover access to accounts without manual code entry. The generator accepts Base32-encoded secret keys, allows adjustment of time steps and skew, and displays both the raw counter value and final token. It supports manual timestamp input for testing historical/future tokens and includes validation checks to detect clock drift issues that could cause authentication failures.",
+  "usage_steps": [
+    "Input a Base32-encoded cryptographic seed in the 'Secret Key' field or scan a QR code from an authentication app",
+    "Adjust the 'Time Step' value (in seconds) to match your service's configuration (default: 30s)",
+    "Select the desired HMAC algorithm (SHA-1, SHA-256, or SHA-512) from the dropdown menu",
+    "Choose output format: numeric token only, or include raw HMAC and truncated values for debugging",
+    "Click 'Generate' to create the current token or input a custom timestamp for historical validation",
+    "Verify code synchronization by comparing displayed token with target authentication service"
+  ],
+  "usage_examples": [
+    "A developer testing TOTP implementation in a web app's login system against RFC 6238 test vectors",
+    "Recovering access to a cloud storage account by generating backup codes when the primary authenticator app is unavailable",
+    "A system administrator verifying clock synchronization between servers using TOTP-based SSH authentication",
+    "Security researchers analyzing token patterns to demonstrate time-window vulnerabilities in legacy MFA systems"
+  ]
+}

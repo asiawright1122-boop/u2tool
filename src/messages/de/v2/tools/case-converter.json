@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Case Converter ist ein präzises Textverarbeitungswerkzeug, das mithilfe von Unicode-Zeichenkodierungsstandards eine Vielzahl von Groß-/Kleinschreibungsoperationen durchführt. Technisch gesehen analysiert das Tool Eingabetexte durch reguläre Ausdrücke und wendet spezifische String-Transformationsalgorithmen an: FULLCAPS (ASCII-Großbuchstaben), lowercase (Unicode-normalisierte Kleinbuchstaben), Title Case (jeder Wortanfang großgeschrieben) und Sentence case (nur erster Satzbuchstabe). Die Verarbeitung erfolgt clientseitig in Echtzeit über JavaScript-Funktionen wie toUpperCase(), toLowerCase() und benutzerdefinierte Tokenizer für komplexe Fälle. Entwickler benötigen dieses Tool zur Normalisierung von Benutzereingaben in Formularen, zur Vorbereitung von Daten für API-Schnittstellen mit festgelegtem Case-Format oder zur Konvertierung von Code-Identifiern zwischen verschiedenen Schreibweisen (z.B. snake_case zu PascalCase). Besonders hilfreich ist die Unterstützung von Mehrsprachigkeit durch Unicode 15.0, die auch Umlaute und Sonderzeichen korrekt behandelt, sowie die optionale Beibehaltung von Whitespaces und Zeilenumbrüchen für strukturierte Texte.",
+  "usage_steps": [
+    "1. Öffnen Sie den Case Converter im Text-Tool-Panel auf der Website.",
+    "2. Fügen Sie den zu konvertierenden Text in das obere Eingabefeld mit der Bezeichnung 'Originaltext' ein.",
+    "3. Wählen Sie im Abschnitt 'Ziel-Schreibweise' die gewünschte Option per Radio-Button: Großbuchstaben, Kleinbuchstaben, Titel-Schreibweise oder Satzanfang-Schreibweise.",
+    "4. Aktivieren Sie optional das Kontrollkästchen 'Whitespace beibehalten' für formatierte Textblöcke.",
+    "5. Klicken Sie auf den blauen 'Konvertieren'-Button, um den transformierten Text zu generieren.",
+    "6. Kopieren Sie das Ergebnis aus dem unteren Textfeld mit dem Button 'Zwischenablage kopieren'."
+  ],
+  "usage_examples": [
+    "Normalisierung von CSV-Tabellen: Konvertieren Sie Spaltenüberschriften in Großbuchstaben für eine Datenbankimport-Schnittstelle, die case-sensitive ist.",
+    "Logfile-Standardisierung: Transformieren Sie heterogene Fehlermeldungen in ein einheitliches Kleinbuchstabenformat für maschinelles Lernen.",
+    "i18n-String-Vorbereitung: Wandeln Sie Übersetzungsstrings in Titel-Schreibweise, um kulturelle Schreibkonventionen in mehrsprachigen Anwendungen zu berücksichtigen.",
+    "Code-Reengineering: Konvertieren Sie Variablennamen aus snake_case in PascalCase beim Migrieren von Python-Projekten zu TypeScript."
+  ]
+}

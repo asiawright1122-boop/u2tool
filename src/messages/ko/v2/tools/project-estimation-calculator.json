@@ -1,0 +1,42 @@
+{
+  "detailed_description": "프로젝트 추정 계산기는 PERT와 스토리 포인트를 사용하여 프로젝트 노력을 추정하는 도구입니다.",
+  "usage_steps": [
+    "업무 설명 입력",
+    "추정치 제공",
+    "또는 스토리 포인트 사용",
+    "지속 시간 계산",
+    "신뢰区间 확인"
+  ],
+  "usage_examples": [
+    "소프트웨어 프로젝트 추정",
+    "스프린트 용량 계산",
+    "PERT를 사용한 시간표 계획"
+  ],
+  "input": "입력",
+  "output": "출력",
+  "process": "처리",
+  "copy": "복사",
+  "clear": "지우기",
+  "inputPlaceholder": "입력을 여기에 입력하세요...",
+  "outputPlaceholder": "결과가 여기에 표시됩니다...",
+  "errors": {
+    "emptyInput": "입력을 입력해 주세요"
+  },
+  "hours": "시간",
+  "days": "일",
+  "weeks": "주",
+  "addTask": "+ 작업 추가",
+  "taskName": "작업명",
+  "optimistic": "낙관적",
+  "mostLikely": "가장 가능성 높음",
+  "pessimistic": "비관적",
+  "expected": "예상",
+  "expectedDuration": "예상 기간",
+  "confidence68": "68% 신뢰 구간",
+  "confidence95": "95% 신뢰 구간",
+  "pertFormula": "PERT 공식",
+  "standardDeviation": "표준 편차",
+  "hrs": "시간",
+  "wks": "주",
+  "taskDefault": "작업"
+}

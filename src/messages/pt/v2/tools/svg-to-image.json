@@ -1,0 +1,27 @@
+{
+  "uploadSvg": "Carregar arquivo SVG",
+  "svgCode": "SVG Code",
+  "loadSample": "Carregar exemplo",
+  "placeholder": "Cole o código SVG aqui...",
+  "format": "Formato de saída",
+  "scale": "Escala",
+  "backgroundColor": "Cor de fundo",
+  "transparentBackground": "Fundo Transparente",
+  "preview": "Visualização",
+  "noPreview": "Insira o código SVG ou carregue um arquivo",
+  "detailed_description": "O conversor SVG para Imagem é uma ferramenta técnica que transforma arquivos vetoriais SVG (Scalable Vector Graphics) em formatos raster como PNG, JPEG ou WebP. SVGs, baseados em XML, descrevem imagens através de caminhos matemáticos, enquanto formatos raster armazenam dados em pixels. A conversão envolve a renderização vetorial via motores como Cairo ou librsvg, seguida de rasterização em resoluções definidas pelo usuário. Isso é essencial para cenários onde compatibilidade com sistemas legados, integração em plataformas de e-commerce ou otimização para dispositivos móveis são necessários. O processo inclui ajustes de densidade de pixels (DPI), antialiasing e, no caso do WebP, compressão com ou sem perdas. A ferramenta também permite manipular propriedades como fundo transparente, dimensões personalizadas e otimização de cores, garantindo resultados adaptados a usos específicos, desde banners web até assets para impressão.",
+  "usage_steps": [
+    "Clique em 'Carregar SVG' e selecione seu arquivo vetorial do computador ou insira uma URL pública.",
+    "Escolha o formato de saída desejado (PNG, JPEG ou WebP) no seletor de formato.",
+    "Ajuste a resolução em DPI (ex: 72 para web, 300 para impressão) e defina dimensões personalizadas em pixels.",
+    "Ative opções avançadas como 'Remover fundo transparente' ou 'Aplicar compressão máxima' conforme necessário.",
+    "Visualize a prévia em tempo real para verificar qualidade e proporções antes do download.",
+    "Clique em 'Converter e Baixar' para obter o arquivo rasterizado em seu dispositivo."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor web precisa converter um ícone SVG para PNG com 2x/3x de densidade para suporte a telas Retina em um site responsivo.",
+    "Um designer gráfico exporta uma ilustração SVG para JPEG com compressão otimizada para upload em um catálogo online com limitação de 100KB.",
+    "Um criador de conteúdo transforma um gráfico vetorial em WebP para usar como thumbnail no YouTube, aproveitando a alta compressão e transparência.",
+    "Um analista de dados converte gráficos SVG gerados em tempo real para imagens raster com dimensões fixas, compatíveis com relatórios em PDF automatizados."
+  ]
+}

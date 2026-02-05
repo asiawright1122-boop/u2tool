@@ -1,0 +1,33 @@
+{
+  "detailed_description": "Der Dockerfile-Generator ist ein umfassendes Online-Tool, das Ihnen hilft, Dockerfile-Konfigurationen für die Containerisierung Ihrer Anwendungen zu erstellen. Wählen Sie aus beliebten Basis-Images wie Node.js, Python, Go oder benutzerdefinierten Images. Konfigurieren Sie Arbeitsverzeichnisse, Kopier- und Ausführungsbefehle, exponierte Ports und Umgebungsvariablen. Das Tool generiert optimierte, produktionsbereite Dockerfiles, die den besten Praktiken folgen. Ideal für Entwickler, die neu bei Docker sind oder die schnell Container-Konfigurationen erstellen möchten.",
+  "usage_steps": [
+    "Wählen Sie ein Basis-Image aus dem Dropdown-Menü oder geben Sie ein benutzerdefiniertes Image ein",
+    "Konfigurieren Sie das Arbeitsverzeichnis für Ihre Anwendung",
+    "Fügen Sie COPY- und RUN-Befehle hinzu, wenn erforderlich",
+    "Geben Sie die Ports an, die Sie exponieren möchten",
+    "Fügen Sie Umgebungsvariablen hinzu, wenn erforderlich",
+    "Klicken Sie auf Generieren, um Ihr Dockerfile zu erstellen",
+    "Kopieren oder laden Sie das generierte Dockerfile herunter"
+  ],
+  "usage_examples": [
+    "Erstellen Sie einen Container für eine Node.js-Anwendung",
+    "Erstellen Sie einen Container für eine Python-Flask/Django-Anwendung",
+    "Richten Sie einen Mehrstufen-Build für Go-Anwendungen ein",
+    "Konfigurieren Sie einen Container für eine Entwicklungsumgebung"
+  ],
+  "baseImage": "Basis-Image",
+  "workdir": "Arbeitsverzeichnis",
+  "envVars": "Umgebungsvariablen",
+  "envKey": "Schlüssel",
+  "envValue": "Wert",
+  "addEnvVar": "Variable hinzufügen",
+  "copyCommands": "Kopierbefehle",
+  "addCopy": "Kopie hinzufügen",
+  "runCommands": "Ausführungsbefehle",
+  "addRun": "Ausführung hinzufügen",
+  "exposePort": "Port freigeben",
+  "entrypoint": "Einstiegspunkt",
+  "cmd": "CMD",
+  "generate": "Generieren",
+  "download": "Herunterladen"
+}

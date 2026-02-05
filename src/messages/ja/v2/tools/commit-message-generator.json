@@ -1,0 +1,36 @@
+{
+  "detailed_description": "コミットメッセージジェネレーターは、Conventional Commits仕様に従ってwell-構造化的Gitコミットメッセージを作成するのに役立ちます。このフォーマットは、コミット履歴をより読みやすくし、自動的な変更ログ生成を可能にします。標準のコミットタイプから選択し、オプションのスコープを追加し、一貫したバージョン管理のために明確な説明を記述できます。",
+  "usage_steps": [
+    "コミットタイプを選択（feat, fix, docsなど）",
+    "変更の範囲をオプションで追加",
+    "明確で簡潔なサブジェクトラインを記入",
+    "ブロッキング変更がある場合はチェック",
+    "詳細な説明をオプションで追加",
+    "フォーマットされたコミットメッセージをコピー"
+  ],
+  "usage_examples": [
+    "機能コミットの作成: feat(auth): ログイン機能を追加",
+    "バグ修正コミットの作成: fix(api): タイムアウト問題を解決",
+    "変更のドキュメント作成: docs(readme): インストールガイドを更新"
+  ],
+  "type": "Type",
+  "scope": "Scope",
+  "scopePlaceholder": "e.g., auth, api, ui",
+  "subject": "Subject",
+  "subjectPlaceholder": "Short description of the change",
+  "body": "Body",
+  "bodyPlaceholder": "Detailed explanation of the change...",
+  "footer": "Footer",
+  "footerPlaceholder": "e.g., Closes #123, BREAKING CHANGE: ...",
+  "breakingChange": "Breaking Change",
+  "commitMessage": "Commit Message",
+  "preview": "Enter subject to preview...",
+  "optional": "optional",
+  "characters": "characters",
+  "recommended50": "recommended max 50",
+  "tips": "Tips",
+  "tip1": "Use imperative mood: \"add\" not \"added\" or \"adds\"",
+  "tip2": "Keep subject under 50 characters",
+  "tip3": "Separate subject from body with blank line",
+  "breaking": "破壊的変更"
+}

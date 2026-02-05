@@ -1,0 +1,52 @@
+{
+  "chartTitle": "Diagrammtitel",
+  "chartTitlePlaceholder": "Geben Sie den Diagrammtitel ein",
+  "colorTheme": "Farbthema",
+  "percentage": "Prozentsatz",
+  "shape": "Form",
+  "showAnimation": "Animation anzeigen",
+  "waveAnimation": "Wellenanimation",
+  "loadSample": "Muster laden",
+  "downloadPng": "PNG herunterladen",
+  "downloadSvg": "SVG herunterladen",
+  "defaultTitle": "Fertigstellungsrate",
+  "sampleTitle": "Tankfüllstand",
+  "chartPreview": "Diagrammvorschau",
+  "chartSettings": "Diagrammeinstellungen",
+  "themeDefault": "Standard",
+  "themeOcean": "Ozean",
+  "themeSunset": "Sonnenuntergang",
+  "themeForest": "Wald",
+  "shapes": {
+    "circle": "Kreis",
+    "rect": "Rechteck",
+    "roundRect": "Abgerundetes Rechteck",
+    "triangle": "Dreieck",
+    "diamond": "Diamant",
+    "pin": "Pin",
+    "arrow": "Pfeil"
+  },
+  "tips": {
+    "title": "Tips",
+    "tip1": "Wählen Sie verschiedene Formen für einzigartige visuelle Effekte",
+    "tip2": "Aktivieren Sie die Wellenanimation für einen dynamischen Flüssigkeitseffekt",
+    "tip3": "Passen Sie den Prozentsatz an, um den Füllstand zu kontrollieren"
+  },
+  "detailed_description": "Der Liquid Fill Chart Generator erstellt dynamische Flüssigkeitsdiagramme mithilfe von SVG- und JavaScript-Technologien. Technisch gesehen generiert der Tool ein <svg>-Element mit animierten <path>-Daten, die eine sich bewegende Wellenform darstellen. Die Füllhöhe wird prozentual berechnet, wobei benutzerdefinierte Easing-Funktionen (z. B. sinusförmige oder kubische Interpolation) die Animationsgeschwindigkeit steuern. Die Welle selbst basiert auf parametrisierten Bezier-Kurven, deren Amplitude, Frequenz und Phasenverschiebung individuell angepasst werden können. Ein Canvas-basiertes Rendering-Modul sorgt für flüssige 60-FPS-Animationen, während der Chart-Wert dynamisch über ein JSON-API-Interface aktualisierbar ist. Entwickler benötigen dieses Tool, um visuell ansprechende Metriken in Webanwendungen einzubetten – etwa für Echtzeit-Dashboards mit dynamischen KPIs, animierte Prozentanzeigen in SPAs oder interaktive Datenvisualisierungen mit responsiven Design-Anpassungen.",
+  "usage_steps": [
+    "Wählen Sie im Eingabefeld 'Füllwert [%]' einen numerischen Wert zwischen 0 und 100 aus, um den Zielprozentsatz festzulegen.",
+    "Passen Sie im Farbwähler 'Primärfarbe' die Hauptfarbe des Flüssigkeitsbereichs an und konfigurieren Sie im benachbarten Feld die 'Hintergrundfarbe' für den nicht gefüllten Bereich.",
+    "Aktivieren Sie den Schieberegler 'Animation ein', um die Wellenanimation zu starten, und regulieren Sie die Geschwindigkeit über das 'Dauer [ms]' Eingabefeld.",
+    "Verändern Sie im Abschnitt 'Wellenparameter' die 'Amplitude' (Höhe der Wellen) und 'Frequenz' (Anzahl der Wellenberge) für kundenspezifische Effekte.",
+    "Klicken Sie auf 'Code exportieren', um das generierte SVG-XML oder den JavaScript-Initialisierungscode in Ihr Projekt zu integrieren.",
+    "Testen Sie die Responsivität im 'Vorschau'-Panel durch Anpassen der Container-Größe und optimieren Sie die 'Padding'-Werte für mobile Darstellungen."
+  ],
+  "usage_examples": [
+    "Ein Entwickler integriert einen animierten Speicherstatus-Indikator in ein Cloud-Backup-Dashboard, der bei 90% Füllstand eine Warnfarbe einblendet.",
+    "Ein UX-Designer erstellt eine interaktive Onboarding-Progressbar mit flüssigem Fülleffekt, der sich beim Scrollen dynamisch aktualisiert.",
+    "Ein Marketing-Team visualisiert Kampagnen-Performance-Daten in einer Präsentation mit mehreren synchronisierten Liquid-Charts für Klickrate, Conversion und Reichweite.",
+    "Ein Gesundheits-App-Entwickler implementiert einen täglichen Aktivitätszähler, der durch einen ansteigenden Flüssigkeitschart die Erreichung von Bewegungszielen zeigt."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

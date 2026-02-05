@@ -1,0 +1,29 @@
+{
+  "expression": "Expresión Cron",
+  "expressionPlaceholder": "0 9 * * 1-5",
+  "parse": "Analizar",
+  "nextRuns": "Próximos 10 Ejecuciones",
+  "calendarView": "Vista de Calendario",
+  "listView": "Vista de Lista",
+  "invalidCron": "Expresión cron no válida",
+  "scheduledRun": "Ejecución Programada",
+  "today": "Hoy",
+  "prevMonth": "Mes Anterior",
+  "nextMonth": "Mes Siguiente",
+  "formatHint": "Formato: minuto hora día-del-mes mes día-de-la-semana (por ejemplo, 0 9 * * 1-5)",
+  "detailed_description": "El Crontab Calendar es una herramienta que transforma expresiones cronológicas estándar en representaciones visuales estructuradas por fechas. Al procesar campos de cron (minutos, horas, días, meses, días de la semana) y soportar sintaxis avanzada como intervalos, listas y comodines, genera un calendario interactivo donde se resaltan las fechas y horas exactas de ejecución de tareas programadas. Integra un motor de análisis léxico para validar expresiones cron y un sistema de conversión horaria automática entre zonas horarias, crucial para equipos globales. Los desarrolladores necesitan esta herramienta para detectar conflictos en trabajos automatizados, verificar la frecuencia de ejecuciones críticas (ej: respaldos diarios o reportes mensuales) y asegurar que no haya solapamientos en la planificación. Funciona mediante un parser en JavaScript que interpreta la expresión cron, calcula las fechas de disparo en UTC y las ajusta a la zona horaria seleccionada, renderizando posteriormente los resultados en una cuadrícula calendarizada con colores codificados por frecuencia.",
+  "usage_steps": [
+    "Accede al generador y localiza el campo de texto 'Expresión Cronológica' en la interfaz.",
+    "Selecciona la zona horaria correspondiente desde el menú desplegable 'Zona Horaria' (ej: America/New_York).",
+    "Introduce la expresión cronológica en el formato estándar (ej: 0 2 * * 1-5) en el área designada.",
+    "Ajusta el rango de fechas usando los selectores 'Fecha Inicio' y 'Fecha Fin' para definir el período a visualizar.",
+    "Elige entre las vistas 'Mensual' o 'Semanal' según el nivel de detalle requerido para tu análisis.",
+    "Haz clic en el botón 'Generar Calendario' y examina los eventos resaltados en la cuadrícula, donde cada color representa un tipo de frecuencia (diaria, semanal, etc.)."
+  ],
+  "usage_examples": [
+    "Un desarrollador de DevOps verifica que un job de respaldo nocturno (0 3 * * *) no coincida con un proceso de indexación semanal (0 2 * * 0) al inicio del mes.",
+    "Un ingeniero de sistemas valida que un script de limpieza de logs (0 0/2 * * *) se ejecutará correctamente cada dos horas durante un período específico.",
+    "Un equipo de mantenimiento coordina ventanas de actualización sin conflictos visualizando cronogramas combinados de múltiples servidores en diferentes zonas horarias.",
+    "Un profesor de sistemas automatiza la programación de exámenes prácticos mostrando a estudiantes cómo las expresiones cronológicas se traducen en fechas reales de ejecución."
+  ]
+}

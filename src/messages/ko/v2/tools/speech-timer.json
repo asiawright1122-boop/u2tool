@@ -1,0 +1,36 @@
+{
+  "detailed_description": "스피치 타이머는 발표자가 효과적으로 발표와 연습을 도와주는 전문 발표 시간 관리 도구입니다. 실시간 카운트다운, 발표 속도 기반 단어 수 추정, 시간이 다가오면 시각적인 경고를 제공합니다.",
+  "usage_steps": [
+    "목표 발표 시간을 설정하세요",
+    "선택 사항으로 발표 텍스트를 입력하여 단어 수를 계산하세요",
+    "시작을 클릭하여 카운트다운을 시작하세요",
+    "시각적 진행 표시기를 모니터링하세요",
+    "시간이 거의 다가오면 경고를 받으세요"
+  ],
+  "usage_examples": [
+    "TED 스타일의 발표 연습",
+    "학술 회의 발표 시간 관리",
+    "면접 발표 준비"
+  ],
+  "duration": "지속 시간",
+  "minutes": "분",
+  "wordsPerMinute": "분당 단어 수",
+  "estimatedWords": "추정 단어 수",
+  "start": "시작",
+  "pause": "일시정지",
+  "reset": "리셋",
+  "timeRemaining": "남은 시간",
+  "speechText": "발표 텍스트 (선택 사항)",
+  "speechPlaceholder": "단어 수를 계산하기 위해 발표를 붙여넣어 주세요...",
+  "wordCount": "단어 수",
+  "speakingPace": "발표 속도",
+  "slow": "느리게",
+  "normal": "보통",
+  "fast": "빠르게",
+  "timeUp": "시간이 다되었습니다!",
+  "presets": "프리셋",
+  "targetDuration": "목표 시간",
+  "min": "분",
+  "words": "단어",
+  "remaining": "남은 시간"
+}

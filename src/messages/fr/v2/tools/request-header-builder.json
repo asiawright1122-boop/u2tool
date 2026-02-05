@@ -1,0 +1,52 @@
+{
+  "detailed_description": "Le Constructeur d'En-têtes HTTP aide à construire des en-têtes HTTP correctement formatés pour les requêtes API avec des options d'exportation courantes.",
+  "usage_steps": [
+    "Sélectionnez des en-têtes courants",
+    "Ou ajoutez des en-têtes personnalisés",
+    "Configurer l'Authorization",
+    "Définir le Content-Type",
+    "Exporter dans le format préféré"
+  ],
+  "usage_examples": [
+    "Construisez des en-têtes d'Authorization",
+    "Créez des en-têtes CORS",
+    "Générez des en-têtes de webhook"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Processus",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Entrez votre entrée ici...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez saisir quelque chose"
+  },
+  "headerNamePlaceholder": "Nom de l'en-tête",
+  "valuePlaceholder": "Valeur",
+  "loadExample": "Charger un exemple",
+  "analyze": "Analyser",
+  "generate": "Générer",
+  "format": "Formater",
+  "convert": "Convertir",
+  "validate": "Valider",
+  "export": "Exporter",
+  "preview": "Aperçu",
+  "reset": "Réinitialiser",
+  "add": "Ajouter",
+  "remove": "Supprimer",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "settings": "Paramètres",
+  "options": "Options",
+  "results": "Résultats",
+  "noResults": "Aucun résultat",
+  "loading": "Chargement...",
+  "success": "Succès",
+  "failed": "Échec",
+  "warning": "Avertissement",
+  "info": "Information",
+  "form": "Formulaire",
+  "cors": "CORS",
+  "auth": "Authentification"
+}

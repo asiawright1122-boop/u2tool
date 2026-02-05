@@ -1,0 +1,37 @@
+{
+  "currentResolution": "Resolución de Pantalla Actual",
+  "viewportSize": "Tamaño del Viewport",
+  "devicePixelRatio": "Relación de Píxeles del Dispositivo",
+  "colorDepth": "Profundidad de Color",
+  "orientation": "Orientación",
+  "portrait": "Vertical",
+  "landscape": "Horizontal",
+  "commonDevices": "Resoluciones de Dispositivos Comunes",
+  "testResolution": "Probar Resolución",
+  "currentScreen": "Información de Pantalla Actual",
+  "screenResolution": "Resolución de Pantalla",
+  "physicalResolution": "Resolución Física",
+  "customResolution": "Resolución Personalizada",
+  "width": "Ancho",
+  "height": "Alto",
+  "test": "Probar",
+  "commonResolutions": "Resoluciones Comunes",
+  "viewportIndicator": "Indicador de Viewport",
+  "note": "Nota",
+  "noteText": "Al hacer clic en los botones de resolución común se abrirá una nueva ventana para probar esa resolución. El tamaño real de la ventana puede variar ligeramente debido a los bordes del navegador.",
+  "detailed_description": "El Screen Resolution Tester es una herramienta técnica que recopila y visualiza datos precisos sobre las dimensiones del dispositivo, la densidad de píxeles y las características de orientación del viewport. Utiliza APIs del navegador como screen.width/height, window.devicePixelRatio y matchMedia() para obtener métricas en tiempo real. Los desarrolladores necesitan esta herramienta para validar comportamientos responsivos en diseños CSS Grid/Flexbox, depurar problemas de escalado en dispositivos retina, y verificar la correcta aplicación de media queries en frameworks como Bootstrap o Tailwind. Al mostrar información detallada sobre la relación de aspecto y la resolución lógica vs física, permite ajustar estrategias de diseño adaptativo. El sistema también detecta automáticamente cambios dinámicos en la orientación del dispositivo mediante eventos resize y orientationchange, mostrando actualizaciones en menos de 100ms.",
+  "usage_steps": [
+    "1. Abre la herramienta en tu navegador y haz clic en 'Iniciar Diagnóstico' para activar la detección de hardware.",
+    "2. Revisa el panel principal donde se muestra la resolución nativa (screen.width x screen.height) junto con el DPR (devicePixelRatio) actual.",
+    "3. Arrastra los controles deslizantes de 'Viewport Width' y 'Viewport Height' para simular diferentes tamaños de pantalla y observa cómo cambian las media queries aplicadas.",
+    "4. Usa el botón 'Forzar Orientación' para alternar entre modos portrait y landscape y verifica el comportamiento de tu CSS mediante el evento resize forzado.",
+    "5. Activa el modo 'Debugging Visual' para ver superpuestas en pantalla las líneas guía que representan los breakpoints detectados por el navegador.",
+    "6. Exporta los resultados como JSON o imagen PNG para documentar los tests realizados en diferentes configuraciones de dispositivo."
+  ],
+  "usage_examples": [
+    "1. Un desarrollador frontend ajusta las media queries de un sitio web corporativo probando en tiempo real cómo se comporta el layout desde 375px hasta 1440px de ancho.",
+    "2. Un equipo QA identifica problemas de escalado en un sitio web al comparar la resolución lógica vs la resolución física en dispositivos con alto DPI.",
+    "3. Un diseñador UI verifica que los componentes flexbox mantienen su alineación correcta al rotar un dispositivo móvil de portrait a landscape.",
+    "4. Un desarrollador de aplicaciones PWA valida que el viewport meta tag está correctamente configurado al observar las métricas reales en dispositivos móviles."
+  ]
+}

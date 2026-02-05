@@ -1,0 +1,19 @@
+{
+  "detailed_description": "Der vCard-Parser ist ein Online-Tool zum Lesen und Anzeigen von VCF-Kontaktdaten. Laden Sie eine VCF-Datei hoch oder fügen Sie die rohen vCard-Daten ein, um alle Kontaktdaten in einem sauberen, organisierten Format anzuzeigen. Der Parser extrahiert Namen, Telefonnummern, E-Mail-Adressen, physische Adressen, Organisationen, Jobtitel, Fotos und soziale Profile. Unterstützung für vCard-Versionen 2.1, 3.0 und 4.0. Ideal zum Anzeigen von Kontaktausgaben, zum Debuggen von Kontaktsynchronisierungsproblemen oder zum Extrahieren von Daten aus VCF-Dateien ohne diese in Ihre Kontakte-App zu importieren.",
+  "usage_steps": [
+    "VCF-Datei hochladen oder Inhalt einfügen",
+    "Geparste Kontakte anzeigen",
+    "Als JSON exportieren"
+  ],
+  "usage_examples": [
+    "Kontaktexporte anzeigen",
+    "Kontaktdaten extrahieren"
+  ],
+  "parse": "Analysieren",
+  "uploadFile": "Datei Hochladen",
+  "vcardContent": "vCard Inhalt",
+  "foundContacts": "Kontakte Gefunden",
+  "exportJSON": "JSON Exportieren",
+  "unnamed": "Unbenannt",
+  "inputPlaceholder": "vCard/VCF-Inhalt hier einfügen oder Datei hochladen..."
+}

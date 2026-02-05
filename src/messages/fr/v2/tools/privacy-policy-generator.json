@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le Générateur de Politique de Confidentialité permet de créer des documents juridiques conformes aux réglementations internationales (RGPD, CCPA, etc.) via un processus algorithmique basé sur des réponses contextuelles. Techniquement, l'outil utilise un moteur de templates paramétrables combiné à une logique conditionnelle dynamique : chaque réponse de l'utilisateur active des clauses spécifiques et adapte les mentions obligatoires. Le système intègre également des références juridiques en temps réel grâce à une API interrogeant des bases de données légales mises à jour. Les données saisies sont traitées en mémoire sans stockage persistant, avec chiffrement AES-256 lors de la génération temporaire du document. Cette approche élimine les coûts d'avocats pour des politiques standards, tout en garantissant la traçabilité des choix via un système d'horodatage. Les développeurs peuvent intégrer le résultat en format HTML, JSON ou Markdown, avec balises sémantiques structurées pour le référencement.",
+  "usage_steps": [
+    "1. Sélectionnez votre juridiction principale via un menu déroulant (ex: Union européenne, Californie).",
+    "2. Cochez les méthodes de collecte utilisées (cookies, formulaires, API tierces) dans la section 'Sources de données'.",
+    "3. Définissez les types de données traitées (identifiants personnels, données biométriques, etc.) avec des cases à cocher hiérarchiques.",
+    "4. Identifiez les services tiers impliqués (Google Analytics, Stripe) via une liste filtrable par catégories.",
+    "5. Activez les mesures de sécurité à mentionner (chiffrement TLS 1.3, audits tiers, etc.) via des interrupteurs binaires.",
+    "6. Téléchargez le document généré au format HTML5 structuré, prêt à déployer sur votre serveur web."
+  ],
+  "usage_examples": [
+    "Un e-commerçant français générant une politique RGPD-compliante incluant des clauses sur le droit à l'oubli et les cookies publicitaires.",
+    "Un développeur d'appli de santé intégrant des mentions spécifiques pour le traitement de données médicales sensibles selon l'article 9 du RGPD.",
+    "Un blogueur international créant un document multilingue avec des clauses adaptées aux lois de chaque pays de publication.",
+    "Un SaaS B2B rédigeant une politique incluant des engagements de DPA (Data Processing Agreement) pour ses clients entreprises."
+  ]
+}

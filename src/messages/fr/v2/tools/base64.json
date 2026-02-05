@@ -1,0 +1,21 @@
+{
+  "encodeToBase64": "Encodez en Base64",
+  "decodeFromBase64": "Décodez depuis Base64",
+  "inputPlaceholder": "Entrez le texte à encoder ou la Base64 à décoder...",
+  "outputPlaceholder": "Résultat apparaîtra ici...",
+  "detailed_description": "L'encodeur/décodeur Base64 permet de convertir des données binaires en séquences de caractères ASCII conformément à la spécification RFC 4648. Ce format utilise un jeu de 64 caractères (A-Z, a-z, 0-9, +, /) pour représenter des flux binaires sous forme textuelle, avec des caractères de remplissage '=' pour les blocs incomplets. Ce processus est essentiel pour transmettre des données binaires via des protocoles ou formats ne supportant que le texte, comme dans les en-têtes HTTP, les fichiers JSON ou les balises HTML. Les développeurs l'utilisent notamment pour intégrer des images en base64 dans les feuilles de style CSS, encoder des identifiants binaires dans des URLs, ou préparer des payloads pour des APIs REST. L'outil fonctionne en découpant les octets d'entrée en segments de 6 bits, puis en appliquant un mappage vers la table de caractères Base64 standard. Il supporte également les variantes sans remplissage (=) et les encodages compatibles URL (remplacement de '+' par '-', '/' par '_').",
+  "usage_steps": [
+    "Coller le texte brut ou la chaîne Base64 dans la zone d'entrée principale",
+    "Sélectionner l'option 'Encoder en Base64' ou 'Décoder depuis Base64' via les boutons radio",
+    "Cocher 'Format URL-Safe' pour remplacer +/ par -_ et supprimer le remplissage",
+    "Changer le jeu de caractères source si nécessaire (UTF-8/UTF-16/Latin-1)",
+    "Cliquez sur le bouton 'Exécuter' pour traiter la conversion",
+    "Copier le résultat dans le presse-papiers ou télécharger le fichier output.txt"
+  ],
+  "usage_examples": [
+    "Intégrer un logo SVG en Base64 dans une balise data:image pour réduire les requêtes HTTP",
+    "Décoder un token JWT expiré pour inspecter ses claims d'authentification",
+    "Encoder un fichier PDF binaire pour l'envoyer via une API REST acceptant uniquement du JSON textuel",
+    "Convertir des données de capteurs IoT hexadécimales en Base64 pour transmission MQTT"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "chartTitle": "Diagrammtitel",
+  "chartTitlePlaceholder": "Geben Sie den Diagrammtitel ein",
+  "colorTheme": "Farbthema",
+  "showLegend": "Legende anzeigen",
+  "showGrid": "Gitter anzeigen",
+  "smooth": "Glättet",
+  "stacked": "Gestapelt",
+  "fillOpacity": "Füllungsopazität",
+  "category": "Kategorie",
+  "series": "Serie",
+  "addCategory": "Kategorie hinzufügen",
+  "addSeries": "Serie hinzufügen",
+  "loadSample": "Muster laden",
+  "downloadPng": "PNG herunterladen",
+  "downloadSvg": "SVG herunterladen",
+  "confirmClear": "Sind Sie sicher, dass Sie alle Daten löschen möchten?",
+  "defaultTitle": "Trendanalyse",
+  "sampleTitle": "Einnahmetrend",
+  "dataEditor": "Dateneditor",
+  "chartPreview": "Diagrammvorschau",
+  "chartSettings": "Diagrammeinstellungen",
+  "themeDefault": "Standard",
+  "themeOcean": "Ozean",
+  "themeSunset": "Sonnenuntergang",
+  "themeForest": "Wald",
+  "sampleData": {
+    "jan": "Januar",
+    "feb": "Februar",
+    "mar": "März",
+    "apr": "April",
+    "may": "Mai",
+    "jun": "Juni",
+    "series1": "Einnahmen",
+    "series2": "Kosten",
+    "series3": "Gewinn"
+  },
+  "tips": {
+    "title": "Tips",
+    "tip1": "Geben Sie Kategorien und Werte ein",
+    "tip2": "Aktivieren Sie 'Gestapelt', um Serien zu stapeln",
+    "tip3": "Passen Sie die Füllungsopazität an",
+    "tip4": "Aktivieren Sie 'Glättet', um Kurven zu erzeugen",
+    "tip5": "Als PNG oder SVG exportieren"
+  },
+  "detailed_description": "Der Area Chart Generator ist ein spezialisierter Web-Editor für die Erstellung von Flächendiagrammen mit interaktiver Datenvisualisierung. Technisch basiert das Tool auf der D3.js-Bibliothek und ermöglicht die Darstellung kumulativer Datenmengen durch interpolierte Kurven unterhalb derer Flächen gefüllt werden. Der Generator unterstützt sowohl überlappende als auch gestapelte Darstellungsmodi, wobei die Y-Achse durch lineare oder logarithmische Skalierung angepasst werden kann. Besonders nützlich ist das Tool für Anwender, die Trends über Zeiträume analysieren oder Ressourcenverteilungen in mehreren Datensätzen vergleichen müssen. Die Datenintegration erfolgt über eine CSV/TSV-Parsing-Engine mit Echtzeit-Validierung, während die Rendering-Engine dynamisch Vorlagen für Linieninterpolation (linear, kubisch, schrittweise) berechnet. Exportfunktionen generieren präzise Rastergrafiken (PNG) mit 300dpi und skalierbare Vektorgrafiken (SVG) mit integrierter CSS-Stilisierung für Web-Anpassungen. Die Implementierung von Tooltips mit Crosshair-Funktion und der exportierbare JSON-Code für die Diagrammkonfiguration unterscheiden dieses Tool von Standard-Chart-Generatoren.",
+  "usage_steps": [
+    "Öffnen Sie den Area Chart Generator im Browser und wählen Sie im Tab 'Daten' den Importmodus (Manuelle Eingabe oder CSV-Upload).",
+    "Geben Sie mindestens zwei numerische Datenspalten ein, wobei die erste Spalte als X-Achsen-Werte interpretiert wird.",
+    "Wechseln Sie zum Tab 'Design' und aktivieren Sie 'Stacked Mode' für vergleichende Flächenanalyse oder '100% Stacked' für prozentuale Darstellung.",
+    "Passen Sie die Interpolationstechnik (Linear/Cubic Spline/Step) und die Farbverläufe über den 'Curve Settings'-Editor an.",
+    "Nutzten Sie den 'Axis Customizer', um logarithmische Skalierung oder inverse Achsen für spezielle Auswertungen zu konfigurieren.",
+    "Exportieren Sie das finalisierte Diagramm über den 'Download'-Button im gewünschten Format (PNG/SVG) mit optionaler Einbettung der Quelldaten."
+  ],
+  "usage_examples": [
+    "Ein Finanzanalyst visualisiert den kumulierten Wertzuwachs eines Investmentportfolios über mehrere Währungen mit gestapelten Flächen für monatliche Renditen.",
+    "Ein Logistikmanager erstellt ein 100% gestapeltes Diagramm, um den Prozentsatz von Frachtverzögerungen in verschiedenen Regionen über ein Quartal zu vergleichen.",
+    "Ein Klimaforscher analysiert kumulative Niederschlagsmengen mit logarithmischer Y-Achsen-Skalierung, um extreme Wetterereignisse in Jahrzehnten darzustellen.",
+    "Ein E-Commerce-Manager nutzt die Crosshair-Funktion, um zeitliche Korrelationen zwischen Website-Besucherzahlen und Verkaufspeak-Zeiten zu identifizieren."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

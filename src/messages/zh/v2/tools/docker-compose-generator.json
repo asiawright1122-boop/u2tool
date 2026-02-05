@@ -1,0 +1,49 @@
+{
+  "version": "Compose版本",
+  "databases": "数据库",
+  "messaging": "消息与搜索",
+  "utilities": "实用工具",
+  "generate": "生成",
+  "clear": "清除",
+  "copy": "复制",
+  "download": "下载",
+  "outputLabel": "docker-compose.yml",
+  "note": "注意：在生产环境中使用前请更改默认密码。",
+  "detailed_description": "Docker Compose Generator是一款面向开发者的YAML配置文件生成工具，通过结构化表单输入实现docker-compose.yml的智能编排。该工具基于容器化应用部署需求，将复杂的服务依赖关系转化为可视化配置，支持MySQL、Redis、Nginx等15+常用服务模板的自动注入。开发者可通过服务发现机制快速建立微服务测试环境，或使用预设的健康检查模板配置容器探针。工具内核采用AST语法树解析技术，将用户输入的环境变量、端口映射、卷挂载等参数转换为符合Compose Schema v3.8规范的配置文件，同时支持自定义Dockerfile构建指令和覆盖网络配置。",
+  "usage_steps": [
+    "1. 在服务选择面板勾选所需容器组件（如MySQL 8.0、Redis 7.0）",
+    "2. 在配置矩阵中设置每个服务的环境变量（如MYSQL_ROOT_PASSWORD）",
+    "3. 通过拓扑图编辑器拖拽建立服务依赖关系",
+    "4. 在高级设置中配置自定义网络（custom networks）和卷挂载路径",
+    "5. 选择Compose版本规范（v3.7/v3.8/v2.4）并启用资源限制（CPU/内存）",
+    "6. 点击生成按钮获取经过Lint校验的完整YAML文件"
+  ],
+  "usage_examples": [
+    "构建LAMP开发环境：配置Apache 2.4服务依赖MySQL 8.0，自动创建数据卷映射/var/www/html",
+    "微服务测试集群：生成包含Redis缓存、MongoDB分片和API网关的多容器拓扑",
+    "生产环境预演：为Jenkins CI/CD流水线生成包含Nginx负载均衡器的测试编排",
+    "定制化服务编排：通过command字段覆盖容器启动命令\\\"nginx -g 'daemon off';\\\"实现配置热加载"
+  ],
+  "faqs": [
+    {
+      "question": "Docker Compose Generator 是免费的吗？",
+      "answer": "是的，Docker Compose Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Docker Compose Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Docker Compose Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Docker Compose Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Docker Compose Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

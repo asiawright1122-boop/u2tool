@@ -1,0 +1,27 @@
+{
+  "paragraphs": "Parágrafos",
+  "sentences": "Frases",
+  "words": "Palavras",
+  "generateType": "Tipo de Geração",
+  "count": "Contagem",
+  "generatedText": "Texto Gerado",
+  "output": "Saída",
+  "characters": "caracteres",
+  "about": "Sobre",
+  "aboutText": "Esta ferramenta usa o Clássico dos Mil Caracteres como fonte para texto de placeholder chinês, gerando texto falso para design e tipografia.",
+  "detailed_description": "O gerador Chinese Lorem Ipsum é uma ferramenta técnica projetada para produzir texto de preenchimento em chinês que simula conteúdo tipográfico real em projetos de design. Utilizando um conjunto algorítmico baseado em estruturas gramaticais clássicas da língua chinesa, o tool gera cadeias de caracteres Unicode (UTF-8) com distribuição natural de ideogramas, pontuação chinesa e variação de comprimento de frases. Essa abordagem assegura a criação de blocos de texto visualmente realistas, fundamentais para testes de layout em interfaces destinadas ao público chinês. Desenvolvedores e designers utilizam esta ferramenta para validar questões de tipografia, balanceamento visual e responsividade em wireframes, protótipos de apps móveis ou materiais impressos, sem a distração de conteúdo semântico. O mecanismo roda inteiramente no cliente via JavaScript, garantindo geração instantânea sem latência de servidor, com suporte a exportação em HTML ou texto puro. O algoritmo diferencia entre scripts simplificados e tradicionais, permitindo customização conforme o público-alvo.",
+  "usage_steps": [
+    "Acesse o gerador Chinese Lorem Ipsum no domínio específico.",
+    "Ative o seletor de idioma para definir 'Simplificado' ou 'Tradicional'.",
+    "Ajuste o controle deslizante para escolher entre 1 a 10 parágrafos.",
+    "Marque a opção 'HTML' se necessitar de tags estruturais ou 'Texto Puro' para conteúdo plano.",
+    "Clique no botão 'Gerar Texto de Exemplo' para executar o algoritmo.",
+    "Utilize o ícone de cópia para transferir o conteúdo gerado para a área de transferência."
+  ],
+  "usage_examples": [
+    "Um designer de UX testa a legibilidade de um formulário web bilingue (português/chinês) com textos de preenchimento realistas.",
+    "Um desenvolvedor de apps móveis verifica o comportamento de um card com conteúdo dinâmico em uma interface para o mercado taiwanês.",
+    "Uma equipe de impressão analisa o impacto visual de parágrafos densos em um folheto promocional para uma exposição em Cantão.",
+    "Um arquiteto de informação simula a estrutura de um artigo wiki em chinês para validar hierarquia visual em um CMS multilíngue."
+  ]
+}

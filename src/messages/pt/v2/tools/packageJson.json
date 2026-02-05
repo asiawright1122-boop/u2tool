@@ -1,0 +1,32 @@
+{
+  "version": "Versão",
+  "main": "Ponto de Entrada",
+  "author": "Autor",
+  "license": "Licença",
+  "type": "Tipo de Módulo",
+  "keywords": "Palavras-chave",
+  "keywordsPlaceholder": "Palavras-chave separadas por vírgula",
+  "private": "Pacote privado",
+  "scripts": "Scripts",
+  "scriptName": "Nome do Script",
+  "scriptCommand": "Comando",
+  "commonScripts": "Scripts comuns",
+  "generate": "Gerar",
+  "copy": "Copiar",
+  "download": "Baixar",
+  "detailed_description": "A ferramenta Nome do Pacote é um analisador de configuração JSON especializado e grátis, projetado para simplificar o gerenciamento de package.json para desenvolvedores Node.js. Esta ferramenta online analisa, valida e otimiza arquivos package.json mapeando árvores de dependências, verificando conformidade com versionamento semântico e identificando vulnerabilidades de segurança em dependências diretas e transitivas. Desenvolvedores precisam desta ferramenta para resolver problemas comuns como incompatibilidades de versão, pacotes redundantes e dependências incompatíveis que causam erros em runtime. Ela utiliza análise estática de código para mapear relações entre dependências, APIs do registro npm para verificar pacotes descontinuados e regras semelhantes ao ESLint para garantir boas práticas na definição de scripts. O motor de resolução de conflitos cruza informações do manifesto do pacote com os módulos instalados no node_modules para detectar discrepâncias, enquanto o sistema de recomendações sugere atualizações precisas baseadas em restrições de versionamento semântico. As saídas técnicas incluem um mapa térmico de dependências visualizando a criticidade dos pacotes e um relatório de remediação com caminhos de atualização acionáveis.",
+  "usage_steps": [
+    "1. Abra a aba Mapeador de Dependências da ferramenta e faça upload do seu arquivo package.json usando o widget do explorador de arquivos",
+    "2. Ative o painel Linter Semântico para identificar inconsistências de versionamento e conflitos de peerDependency",
+    "3. Revise o relatório de Auditoria de Segurança que destaca pacotes vulneráveis e suas pontuações CVSS",
+    "4. Use o controle deslizante Atualizador de Versão para aplicar atualizações precisas em dependências selecionadas",
+    "5. Abra o Otimizador de Scripts para analisar a eficiência dos scripts npm e detectar comandos redundantes",
+    "6. Exporte o package.json otimizado usando o botão Baixar ou copie os comandos de resolução de conflitos do painel CLI"
+  ],
+  "usage_examples": [
+    "Exemplo 1: Resolver conflitos de dependências após mesclar branches de funcionalidades com versões diferentes de pacotes",
+    "Exemplo 2: Preparar um projeto legado para migração para Node.js 18 atualizando dependências incompatíveis",
+    "Exemplo 3: Gerar árvores de dependências mínimas para otimização de containers Docker",
+    "Exemplo 4: Auditar pacotes de terceiros para vulnerabilidades conhecidas antes da implantação em produção"
+  ]
+}

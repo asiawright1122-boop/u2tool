@@ -50,20 +50,18 @@ export default function ThemeRiverGenerator() {
     // Load initial data
     useEffect(() => {
         if (!isInitialized) {
-            setChartTitle(t('defaultTitle'));
-            const s1 = t('series1');
-            const s2 = t('series2');
-            const s3 = t('series3');
+            // 使用硬编码的默认值，避免在 useEffect 中调用 t()
+            setChartTitle('Theme River Chart');
             setData([
-                { id: `${baseId}-1`, date: '2023-01-01', value: 10, series: s1 },
-                { id: `${baseId}-2`, date: '2023-01-02', value: 15, series: s1 },
-                { id: `${baseId}-3`, date: '2023-01-03', value: 35, series: s1 },
-                { id: `${baseId}-4`, date: '2023-01-01', value: 20, series: s2 },
-                { id: `${baseId}-5`, date: '2023-01-02', value: 25, series: s2 },
-                { id: `${baseId}-6`, date: '2023-01-03', value: 15, series: s2 },
-                { id: `${baseId}-7`, date: '2023-01-01', value: 15, series: s3 },
-                { id: `${baseId}-8`, date: '2023-01-02', value: 10, series: s3 },
-                { id: `${baseId}-9`, date: '2023-01-03', value: 20, series: s3 },
+                { id: `${baseId}-1`, date: '2023-01-01', value: 10, series: 'Series A' },
+                { id: `${baseId}-2`, date: '2023-01-02', value: 15, series: 'Series A' },
+                { id: `${baseId}-3`, date: '2023-01-03', value: 35, series: 'Series A' },
+                { id: `${baseId}-4`, date: '2023-01-01', value: 20, series: 'Series B' },
+                { id: `${baseId}-5`, date: '2023-01-02', value: 25, series: 'Series B' },
+                { id: `${baseId}-6`, date: '2023-01-03', value: 15, series: 'Series B' },
+                { id: `${baseId}-7`, date: '2023-01-01', value: 15, series: 'Series C' },
+                { id: `${baseId}-8`, date: '2023-01-02', value: 10, series: 'Series C' },
+                { id: `${baseId}-9`, date: '2023-01-03', value: 20, series: 'Series C' },
             ]);
             setIsInitialized(true);
         }
@@ -176,7 +174,7 @@ export default function ThemeRiverGenerator() {
     };
 
     const clearData = () => {
-        if (confirm(t('confirmClear'))) {
+        if (confirm('Clear all data?')) {
             const newId = generateId();
             setData([{
                 id: newId,
@@ -184,7 +182,7 @@ export default function ThemeRiverGenerator() {
                 value: 10,
                 series: 'Series 1'
             }]);
-            setChartTitle(t('defaultTitle'));
+            setChartTitle('Theme River Chart');
         }
     };
 

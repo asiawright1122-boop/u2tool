@@ -1,0 +1,29 @@
+{
+  "swapColors": "Swap colors",
+  "sampleText": "The quick brown fox jumps over the lazy dog.",
+  "smallText": "Small text sample for accessibility testing.",
+  "guidelinesAA": "AA: Minimum contrast for normal text (4.5:1) and large text (3:1)",
+  "guidelinesAAA": "AAA: Enhanced contrast for normal text (7:1) and large text (4.5:1)",
+  "guidelinesLarge": "Large text: 18pt (24px) or 14pt (18.5px) bold",
+  "presetBlackOnWhite": "Black on White",
+  "presetWhiteOnBlack": "White on Black",
+  "presetDarkGrayOnLight": "Dark Gray on Light",
+  "presetBlueOnWhite": "Blue on White",
+  "presetWhiteOnBlue": "White on Blue",
+  "presetDarkOnYellow": "Dark on Yellow",
+  "detailed_description": "The Color Contrast Checker analyzes the luminance difference between two color values to determine if their contrast ratio meets WCAG 2.1 accessibility standards. This tool calculates the relative luminance (L) of foreground and background colors using the sRGB color space formula: L = 0.2126 × R + 0.7152 × G + 0.0722 × B, where R, G, and B values are normalized to 0-1 range after gamma correction. The contrast ratio (CR) is calculated as (L1 + 0.05) / (L2 + 0.05), where L1 and L2 represent the luminance values of lighter and darker colors respectively. Developers need this tool to validate text readability for users with low vision or color vision deficiencies, ensuring compliance with WCAG AA (4.5:1 for normal text, 3:1 for large text) and AAA (7:1 normal, 4.5:1 large) standards. The tool's precision engine accounts for font thickness by applying differential calculations when users select font-weight parameters, providing more accurate pass/fail results than simple ratio checks. It also identifies problematic color pairs that meet minimum ratios but fail in real-world applications due to text effects like shadows or anti-aliasing.",
+  "usage_steps": [
+    "Input foreground color hex code in the '#RRGGBB' field",
+    "Enter background color hex code in the corresponding input",
+    "Adjust font-size selector (12px/14px/18px) and toggle 'bold' for font-weight",
+    "Click 'Calculate Contrast' to initiate luminance-based analysis",
+    "Review contrast ratio display with pass/fail indicators for AA/AAA compliance",
+    "Examine recommended adjustments for non-compliant color pairs in the diagnostics panel"
+  ],
+  "usage_examples": [
+    "Validating error message text (#FF0000) against a white background (#FFFFFF) in a form validation system",
+    "Testing navigation bar icon contrast against dynamic dark mode backgrounds (#1A1A1A vs #CCCCCC)",
+    "Ensuring 10pt italic help text meets accessibility standards for a government website",
+    "Checking data visualization color palettes where text overlays intersect multiple background colors"
+  ]
+}

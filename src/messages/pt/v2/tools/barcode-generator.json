@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Gerador de Códigos de Barras é uma ferramenta técnica especializada para criar representações gráficas de códigos de barras nos formatos Code 128 (alta densidade, caracteres alfanuméricos), Code 39 (alfanumérico com verificação de redundância cíclica), EAN-13 (padrão global para produtos de varejo) e UPC (código universal de produtos). Desenvolvido com algoritmos de codificação linear e bibliotecas de renderização vetorial, converte dados textuais em padrões de barras e espaços seguindo especificações ISO/IEC. Ideal para sistemas de gestão de estoque, automação comercial, logística e identificação de ativos. Funciona através de um mecanismo que aplica fórmulas matemáticas para mapear caracteres em larguras de barras, calcula dígitos verificadores para integridade e exporta imagens PNG ou SVG com resolução ajustável (DPI), permitindo personalização de dimensões, cores e margens (quiet zones). Tecnologia especialmente útil para desenvolvedores que precisam integrar geração de códigos em aplicativos ou validar conformidade de códigos existentes.",
+  "usage_steps": [
+    "1. Acesse o painel de configurações e selecione o formato desejado (Code 128, Code 39, EAN-13 ou UPC) no seletor dropdown.",
+    "2. Preencha o campo 'Dados de Entrada' com a sequência alfanumérica a ser codificada (atenção às regras específicas de cada formato).",
+    "3. Ajuste os parâmetros técnicos: largura do módulo (X-dimension), altura total, proporção barras/espaços e margens laterais.",
+    "4. Ative a opção 'Exibir Texto' para sobrepor o valor legível abaixo das barras ou desative para layout minimalista.",
+    "5. Clique em 'Gerar Código' e aguarde o processador interno renderizar a imagem em tempo real usando Canvas 2D API.",
+    "6. Baixe o resultado nos formatos PNG (raster) ou SVG (vetorial) ou copie o código embeddable para integração web."
+  ],
+  "usage_examples": [
+    "1. Uma loja de varejo gera EAN-13 para etiquetas de produtos eletrônicos, garantindo compatibilidade com leitores de código de barras de supermercados.",
+    "2. Um laboratório clínico utiliza Code 128 para identificar tubos de amostras biológicas, aproveitando a capacidade de codificar ASCII estendido.",
+    "3. Um sistema de gestão de biblioteca implementa Code 39 para catalogar livros, usando caracteres alfanuméricos sem necessidade de checksum adicional.",
+    "4. Um desenvolvedor de software de gestão de frotas cria códigos UPC personalizados para identificação de veículos em pátios, integrando com PDAs de leitura industrial."
+  ]
+}

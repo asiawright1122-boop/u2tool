@@ -1,0 +1,27 @@
+{
+  "dropzone": "Suelte el archivo de audio aquí o haga clic para cargarlo.",
+  "acceptedFormats": "Compatible: MP3, WAV, OGG, WebM, AAC, FLAC",
+  "errorNotAudio": "Por favor seleccione un archivo de audio",
+  "errorReading": "Error al leer el archivo",
+  "originalSize": "Tamaño original",
+  "includeDataUri": "Incluir prefijo de URI de datos",
+  "base64Output": "Salida Base64",
+  "copy": "Copiar",
+  "outputPlaceholder": "La salida Base64 aparecerá aquí...",
+  "supportedFormats": "Formatos admitidos",
+  "detailed_description": "Esta herramienta convierte archivos de audio en codificación Base64, transformando datos binarios en una cadena alfanumérica ASCII que representa bytes en formato de 6 bits. Esencial para desarrolladores que necesitan integrar archivos de audio directamente en código HTML5, CSS o JSON sin dependencias externas. La conversión es útil en escenarios como el incrustado de sonidos en aplicaciones web progresivas (PWA), el envío de metadatos de audio en encabezados HTTP o la serialización de contenido multimedia en bases de datos NoSQL. El proceso utiliza el API FileReader del navegador para procesar archivos localmente, manteniendo la integridad del archivo original mediante algoritmos de codificación RFC 4648. La herramienta admite formatos como MP3, WAV, OGG y FLAC, y permite incluir automáticamente el prefijo MIME (ej: data:audio/wav;base64,) para facilitar su uso en etiquetas <audio> o Canvas. Para archivos grandes, implementa codificación por fragmentos (chunks) para evitar errores de memoria, garantizando compatibilidad con servidores que requieren transmisiones de datos codificadas en Base64.",
+  "usage_steps": [
+    "1. Haz clic en 'Seleccionar archivo' para cargar tu audio desde el dispositivo.",
+    "2. Elige el formato MIME correspondiente en el menú desplegable (ej: audio/mpeg para MP3).",
+    "3. Activa la opción 'Incluir prefijo MIME' si planeas usar el resultado en HTML/CSS.",
+    "4. Selecciona 'Codificar sin saltos de línea' para generar una cadena continua.",
+    "5. Presiona 'Convertir' y espera el indicador de progreso hasta 100%.",
+    "6. Copia el resultado con 'Copiar al portapapeles' o descarga el archivo .txt con el botón 'Guardar'."
+  ],
+  "usage_examples": [
+    "Integrar un sonido de notificación WAV en una aplicación web progresiva (PWA) sin requerir conexión a servidores externos.",
+    "Enviar una grabación de voz OGG como parte de un payload JSON en una API REST que requiere datos en formato Base64.",
+    "Almacenar en localStorage del navegador una versión codificada de un archivo FLAC para reproducción offline.",
+    "Generar un archivo VTT (WebVTT) para subtítulos sincronizados con audio incrustado en Base64 en un video HTML5."
+  ]
+}

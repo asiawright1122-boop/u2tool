@@ -1,0 +1,21 @@
+{
+  "detailed_description": "Le calculateur de temps de téléchargement estime le temps nécessaire pour télécharger des fichiers en fonction de la taille du fichier et de la vitesse de connexion à internet. Entrez la taille de votre fichier dans n'importe quelle unité (ko, Mo, Go, To) et sélectionnez votre vitesse de connexion ou entrez une valeur personnalisée. L'outil affiche les temps de téléchargement estimés pour différents types de connexion, notamment 3G, 4G, 5G, DSL, câble et fibre. Parfait pour planifier de grands téléchargements, estimer les temps de sauvegarde ou comprendre comment la vitesse de connexion affecte vos téléchargements. Inclut un tableau de comparaison pour référence rapide.",
+  "usage_steps": [
+    "Entrez la taille du fichier",
+    "Sélectionnez ou entrez votre vitesse de connexion",
+    "Affichez le temps de téléchargement"
+  ],
+  "usage_examples": [
+    "Planifiez vos téléchargements importants",
+    "Comparez vos vitesses de connexion"
+  ],
+  "fileSize": "Taille du Fichier",
+  "downloadSpeed": "Vitesse de Téléchargement",
+  "connection": "Connexion",
+  "estimatedTime": "Temps Estimé",
+  "days": "jours",
+  "minutes": "minutes",
+  "seconds": "secondes",
+  "comparisonTable": "Tableau de Comparaison",
+  "time": "Temps"
+}

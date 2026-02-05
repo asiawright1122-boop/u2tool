@@ -1,0 +1,65 @@
+{
+  "chartTitle": "Título do Gráfico",
+  "chartTitlePlaceholder": "Insira o título do gráfico",
+  "colorTheme": "Tema de Cor",
+  "showLegend": "Mostrar Legenda",
+  "lineWidth": "Largura da Linha",
+  "lineOpacity": "Opacidade da Linha",
+  "smoothLine": "Linha Suave",
+  "dimension": "Dimensão",
+  "dimensionName": "Nome da Dimensão",
+  "addDimension": "Adicionar Dimensão",
+  "series": "Série",
+  "seriesName": "Nome da Série",
+  "addSeries": "Adicionar Série",
+  "loadSample": "Carregar Amostra",
+  "downloadPng": "Baixar PNG",
+  "downloadSvg": "Baixar SVG",
+  "confirmClear": "Tem certeza de que deseja limpar todos os dados?",
+  "defaultTitle": "Análise Multidimensional",
+  "sampleTitle": "Comparação de Produtos",
+  "dimensionEditor": "Editor de Dimensão",
+  "seriesEditor": "Editor de Série",
+  "chartPreview": "Visualização do Gráfico",
+  "chartSettings": "Configurações do Gráfico",
+  "themeDefault": "Padrão",
+  "themeOcean": "Oceano",
+  "themeSunset": "Pôr do Sol",
+  "themeForest": "Floresta",
+  "sampleDimensions": {
+    "dim1": "Preço",
+    "dim2": "Qualidade",
+    "dim3": "Velocidade",
+    "dim4": "Suporte"
+  },
+  "sampleSeries": {
+    "series1": "Produto A",
+    "series2": "Produto B",
+    "series3": "Produto C"
+  },
+  "tips": {
+    "title": "Dicas",
+    "tip1": "Defina dimensões",
+    "tip2": "Adicione séries de dados",
+    "tip3": "Ajuste a largura e a opacidade da linha",
+    "tip4": "Ative linhas suaves",
+    "tip5": "Exporte como PNG ou SVG"
+  },
+  "detailed_description": "O Gerador de Gráficos Paralelos é uma ferramenta técnica especializada em visualização de dados multidimensionais através de eixos coordenados paralelos. Essencial para análise exploratória de datasets complexos, permite identificar padrões, correlações e outliers em variáveis heterogêneas. Utiliza algoritmos de escalonamento automático para normalizar dados categóricos e numéricos, aplicando técnicas de spline cúbico para suavizar linhas de conexão entre dimensões. Ideal para cientistas de dados que lidam com datasets de alta cardinalidade, engenheiros de machine learning validando features ou analistas de business intelligence comparando KPIs cruzados. A ferramenta processa dados em formato JSON/CSV, mapeando cada coluna para eixos verticais paralelos interativos, onde usuários podem aplicar filtros dinâmicos por brushing e exportar visualizações em SVG vetorial para publicações acadêmicas ou PNG de alta resolução para relatórios executivos.",
+  "usage_steps": [
+    "1. Clique em 'Importar Dados' e arraste seu arquivo CSV/JSON contendo múltiplas colunas numéricas/categóricas",
+    "2. Selecione o delimitador correto (vírgula, ponto e vírgula ou tabulação) no painel de pré-visualização",
+    "3. Configure os eixos Y: mantenha pressionado para reordenar dimensões ou clique com botão direito para inverter escala",
+    "4. Acesse 'Opções de Renderização' para ativar modo 'Cores por Dimensão' ou 'Agrupamento por Categoria'",
+    "5. Use o controle deslizante 'Transparência' para ajustar opacidade das linhas e evitar sobrecarga visual",
+    "6. Clique em 'Exportar' e escolha entre SVG (para edição em Adobe Illustrator) ou PNG a 300dpi"
+  ],
+  "usage_examples": [
+    "Comparar especificações técnicas de 10 modelos de smartphones em 8 dimensões (preço, bateria, RAM, etc) para análise de trade-offs",
+    "Visualizar dados de sensores IoT em tempo real com 5 variáveis ambientais (temperatura, umidade, CO2, luminosidade, pressão)",
+    "Analisar desempenho acadêmico de alunos cruzando 7 métricas (notas, presença, atividades, etc) em diferentes disciplinas",
+    "Validar clusters de clientes em segmentação de marketing com 6 indicadores financeiros e demográficos"
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

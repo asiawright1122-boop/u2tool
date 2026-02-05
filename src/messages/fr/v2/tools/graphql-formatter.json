@@ -1,0 +1,26 @@
+{
+  "enterQuery": "Entrez la Requête GraphQL",
+  "validate": "Valider",
+  "formatted": "Requête Formatée",
+  "valid": "GraphQL Valide",
+  "invalid": "GraphQL Invalide",
+  "syntaxError": "Erreur de Syntaxe",
+  "detailed_description": "Le GraphQL Formatter est un outil technique qui permet de structurer, d'indenter et de normaliser les requêtes et schémas GraphQL selon les standards de codage les plus exigeants. Il utilise un analyseur syntaxique (parser) basé sur l'AST (Abstract Syntax Tree) pour reconnaître les éléments clés comme les types, les champs, les arguments, les directives et les fragments. Cet outil est indispensable pour les développeurs qui souhaitent améliorer la lisibilité de leur code, respecter les conventions d'équipe (comme l'indentation de 2 ou 4 espaces, la casse des noms de variables) ou détecter les erreurs de syntaxe avant l'exécution. Grâce à des options de configuration avancées, il permet de transformer des requêtes chaotiques en code homogène, en triant automatiquement les champs par ordre alphabétique, en alignant les parenthèses, ou en convertissant les scalaires (String, Int, Boolean) en format standard. Contrairement aux formateurs génériques, il prend en charge les spécificités de GraphQL comme les unions, les interfaces ou les décorateurs @deprecated.",
+  "usage_steps": [
+    "1. Coller votre requête GraphQL brute dans la zone de texte principale.",
+    "2. Activer l'option 'Tri alphabétique des champs' pour organiser les propriétés.",
+    "3. Choisir l'indentation (2, 4 ou 8 espaces) via le sélecteur dédié.",
+    "4. Cocher 'Convertir en minuscules les noms de variables' pour uniformiser la casse.",
+    "5. Cliquer sur 'Formater' pour appliquer les transformations basées sur l'AST.",
+    "6. Utiliser le bouton 'Exporter JSON' pour télécharger le résultat formaté."
+  ],
+  "usage_examples": [
+    "1. Un développeur corrige une requête échouant à cause de parenthèses mal fermées grâce à la restructuration automatique.",
+    "2. Une équipe standardise ses schémas GraphQL avec un style commun avant de les intégrer à un dépôt Git.",
+    "3. Un architecte API prépare un exemple de requête pour la documentation en alignant les champs et en ajoutant des commentaires.",
+    "4. Un stagiaire nettoie une requête copiée-collée avec des espaces incohérents pour améliorer la lisibilité."
+  ],
+  "placeholder": "Collez votre requête GraphQL ici...",
+  "minify": "Minifier",
+  "example": "Exemple"
+}

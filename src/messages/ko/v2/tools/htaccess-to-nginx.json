@@ -1,0 +1,23 @@
+{
+  "htaccessInput": ".htaccess 입력",
+  "nginxOutput": "Nginx 출력",
+  "loadSample": "샘플 로드",
+  "placeholder": "여기에 .htaccess 규칙을 붙여넣어 주세요...",
+  "note": "주의사항",
+  "noteText": "이 변환기는 일반적인 htaccess 규칙을 처리합니다. 복잡한 구성은 수동 조정이 필요할 수 있습니다.",
+  "detailed_description": "htaccess to Nginx Converter는 Apache의 .htaccess 파일에서 Nginx 설정 파일로 규칙을 자동으로 변환하는 도구입니다. 이 도구는 웹 개발자가 서버 환경을 변경하거나 Nginx로 마이그레이션할 때 매우 유용합니다. .htaccess 파일은 주로 URL 리디렉션, 캐싱, 보안 설정 등을 처리하는데 사용되며, Nginx 설정 파일은 이러한 기능을 동일하게 구현하지만 문법과 구조가 다릅니다. 이 도구를 사용하면 개발자는 복잡한 변환 작업을 자동화할 수 있어 시간을 절약하고 오류를 줄일 수 있습니다. 특히, 웹사이트의 트래픽이 증가하거나 보안이 강화되어 서버를 업그레이드해야 할 때, 이 도구는 중요한 역할을 합니다. 이 도구는 Nginx의 반복적이고 복잡한 구문을 이해하지 않고도 .htaccess 규칙을 쉽게 변환할 수 있도록 설계되었습니다.",
+  "usage_steps": [
+    "1. htaccess to Nginx Converter 웹사이트에 접속합니다.",
+    "2. 'Upload .htaccess file' 버튼을 클릭하여 변환하고자 하는 .htaccess 파일을 업로드합니다.",
+    "3. 파일 업로드 후, 'Convert' 버튼을 클릭하여 변환 작업을 시작합니다.",
+    "4. 변환 작업이 완료되면, 결과 화면에서 Nginx 설정 코드가 표시됩니다.",
+    "5. 'Download Nginx config' 버튼을 클릭하여 변환된 Nginx 설정 파일을 다운로드합니다.",
+    "6. 다운로드한 Nginx 설정 파일을 서버에 적용하여 사용합니다."
+  ],
+  "usage_examples": [
+    "Example 1: 웹사이트가 성장하면서 트래픽이 증가해 Nginx로 서버를 마이그레이션해야 할 경우, 기존의 .htaccess 파일을 빠르게 Nginx 설정으로 변환하여 새로운 서버 환경을 설정할 수 있습니다.",
+    "Example 2: 웹사이트 보안을 강화하기 위해 Nginx로 이전할 때, .htaccess 파일에 포함된 보안 규칙을 Nginx 설정으로 자동 변환하여 보안 설정을 유지할 수 있습니다.",
+    "Example 3: 웹 개발자 팀이 여러 프로젝트에서 .htaccess 파일을 사용하고 있는데, 모듈화된 Nginx 설정으로 일관성을 유지하려는 경우, 이 도구를 사용하여 모든 프로젝트의 .htaccess 파일을 Nginx 설정으로 변환할 수 있습니다.",
+    "Example 4: 웹호스팅 제공업체가 고객의 .htaccess 파일을 Nginx로 자동 변환하여 Nginx 기반의 새로운 호스팅 서비스를 제공할 때, 이 도구를 활용하여 고객의 웹사이트를 빠르고 쉽게 이전할 수 있습니다."
+  ]
+}

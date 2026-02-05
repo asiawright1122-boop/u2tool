@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le convertisseur d'unités CSS est un outil technique qui permet de transformer des valeurs entre différentes unités de mesure utilisées en développement web (px, rem, em, pt, vw, vh). Il intègre des calculs basés sur les spécifications CSS, prenant en compte les ratios de conversion standard (comme 1rem = 16px par défaut) et les dimensions dynamiques du viewport. Ce tool est essentiel pour les développeurs qui doivent harmoniser des designs responsifs, migrer entre frameworks (ex: Bootstrap à Tailwind CSS), ou ajuster l'accessibilité (en évitant des px fixes). Il fonctionne via un moteur JavaScript qui applique des formules précises : conversion px/rem en multipliant par la taille de la police racine, calculs em en fonction de l'héritage CSS, ou adaptation des unités viewport (1vw = 1% de la largeur de fenêtre). La précision est assurée grâce à des arrondis configurables et une gestion des contextes variables (comme les media queries).",
+  "usage_steps": [
+    "Accédez à l'outil via la catégorie 'convertisseurs' sur le site.",
+    "Sélectionnez l'unité d'origine dans le menu déroulant (ex: 'px').",
+    "Choisissez l'unité cible (ex: 'rem') à l'aide du second sélecteur.",
+    "Saisissez la valeur numérique dans le champ d'entrée (ex: '24').",
+    "Ajustez les paramètres contextuels (ex: taille de la police racine en px) si nécessaire.",
+    "Observez le résultat instantané dans la case de conversion et copiez-le via le bouton 'Copier'."
+  ],
+  "usage_examples": [
+    "Transformer 14px en rem pour garantir une taille de texte accessible respectant WCAG.",
+    "Convertir 2.5em en vw lors de la création d'un header s'adaptant à la largeur de l'écran.",
+    "Calculer l'équivalent en pt d'une police de 18px pour un style d'impression PDF précis.",
+    "Adapter 75vh en pourcentage pour un conteneur full-screen compatible avec les anciens navigateurs."
+  ]
+}

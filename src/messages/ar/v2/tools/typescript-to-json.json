@@ -1,0 +1,27 @@
+{
+  "detailed_description": "يحول محول TypeScript إلى JSON واجهات وأنواع TypeScript إلى تنسيق مخطط JSON. مفيد لتوثيق API والتحقق عبر اللغات.",
+  "usage_steps": [
+    "الصق واجهة TypeScript",
+    "انقر على تحويل لإنشاء JSON",
+    "راجع مخطط JSON",
+    "اضبط خيارات المخطط",
+    "انسخ أو حمل النتيجة"
+  ],
+  "usage_examples": [
+    "إنشاء توثيق API",
+    "إنشاء مخططات التحقق",
+    "مشاركة الأنواع عبر اللغات"
+  ],
+  "tsInput": "إدخال TypeScript",
+  "jsonOutput": "مخطط JSON",
+  "convert": "تحويل إلى JSON",
+  "copy": "نسخ",
+  "copied": "تم النسخ!",
+  "inputPlaceholder": "الصق واجهة TypeScript هنا...",
+  "placeholder": "الصق واجهة TypeScript هنا...",
+  "outputPlaceholder": "سيظهر إخراج JSON هنا...",
+  "loadExample": "تحميل مثال",
+  "typescriptInput": "إدخال TypeScript",
+  "note": "ملاحظة",
+  "noteText": "تقوم هذه الأداة بإنشاء بيانات JSON نموذجية بناءً على واجهات TypeScript."
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The Pinyin Converter tool leverages advanced CJK Unicode processing to decompose modern Mandarin Chinese characters into standardized Hanyu Pinyin representations. This tool implements the ISO 7098 phonetic transcription standard with support for tone marking variations, including diacritical marks, numerical tone indicators, and toneless outputs. Technically, it utilizes a two-step process: first, Unicode normalization (NFKC) to handle glyph variations, then applies a statistical language model trained on 100 million Chinese tokens to resolve homophone ambiguities. Developers and linguists can programmatically convert text while preserving word boundaries through intelligent segmentation algorithms that handle edge cases like erhua syllables and loanwords. The tool's core engine uses a finite-state transducer to map over 50,000 CJK Unified Ideographs to their phonetic equivalents, supporting both simplified and traditional character sets. This enables precise phonetic transcription crucial for linguistic research, language learning applications, and natural language processing pipelines requiring Mandarin phoneme analysis.",
+  "usage_steps": [
+    "Paste Chinese text into the input field labeled 'Source Characters'",
+    "Select tone format using the 'Tone Style' dropdown: Macron (ā), Numerical (a1), or Toneless",
+    "Toggle 'Preserve Word Boundaries' to maintain original spacing or enable 'Split Words' for tokenized output",
+    "Choose case format: lowercase pinyin or title case for proper nouns",
+    "Click 'Convert' to process text through the phonetic mapping engine",
+    "Copy results from the 'Pinyin Output' pane or download as UTF-8 encoded .txt file"
+  ],
+  "usage_examples": [
+    "A language learner creates annotated flashcards by converting 汉字 to pinyin with macrons for proper tone study",
+    "A speech synthesis developer preprocesses Mandarin text into tone-number format compatible with TTS engines",
+    "A linguist analyzes regional dialect influences by comparing pinyin outputs of traditional vs simplified character sets",
+    "An international corporation prepares bilingual documentation by automatically generating phonetic guides for Chinese product names"
+  ]
+}
