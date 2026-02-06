@@ -36,6 +36,50 @@ const nextConfig = {
     root: __dirname,
   },
 
+  // Cloudflare Workers 优化：排除大型库从服务端 bundle
+  // 这些库只在客户端使用，不需要打包到 Worker
+  serverExternalPackages: [
+    'echarts',
+    'echarts/core',
+    'echarts-for-react',
+    'echarts-liquidfill',
+    'echarts-wordcloud',
+    'pdfjs-dist',
+    'jspdf',
+    'xlsx',
+    'mammoth',
+    'html2canvas',
+    'html2pdf.js',
+    'gif.js',
+    'gifuct-js',
+    'jszip',
+    'pdf-lib',
+    'qrcode',
+    'colorthief',
+    'exifreader',
+  ],
+
+  // 排除翻译文件从服务端 bundle（运行时从外部加载）
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      // 将翻译文件标记为外部依赖
+      config.externals = config.externals || [];
+      config.externals.push({
+        // 翻译文件不打包到服务端
+        '../messages/zh.json': 'commonjs ../messages/zh.json',
+        '../messages/ja.json': 'commonjs ../messages/ja.json',
+        '../messages/ko.json': 'commonjs ../messages/ko.json',
+        '../messages/es.json': 'commonjs ../messages/es.json',
+        '../messages/pt.json': 'commonjs ../messages/pt.json',
+        '../messages/fr.json': 'commonjs ../messages/fr.json',
+        '../messages/de.json': 'commonjs ../messages/de.json',
+        '../messages/ru.json': 'commonjs ../messages/ru.json',
+        '../messages/ar.json': 'commonjs ../messages/ar.json',
+      });
+    }
+    return config;
+  },
+
   // 性能优化：启用压缩
   compress: true,
 
@@ -57,19 +101,11 @@ const nextConfig = {
   // 性能优化：优化打包
   experimental: {
     // 优化重依赖包的导入，启用更好的 tree-shaking
-    // 这些包体积较大，优化导入可显著减少 bundle 大小
+    // 注意：不要包含 serverExternalPackages 中的包
     optimizePackageImports: [
       'lucide-react',      // 图标库 ~200KB
-      'echarts',           // 图表库 ~1MB
-      'echarts/core',      // ECharts 核心
-      'echarts-for-react', // React 封装
-      'xlsx',              // Excel 处理 ~400KB
-      'pdf-lib',           // PDF 处理 ~300KB
       'marked',            // Markdown 解析
       'react-markdown',    // Markdown 渲染
-      'jspdf',             // PDF 生成
-      'jszip',             // ZIP 处理
-      'qrcode',            // 二维码生成
     ],
   },
 
