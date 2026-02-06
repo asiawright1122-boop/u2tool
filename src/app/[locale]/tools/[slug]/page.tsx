@@ -51,32 +51,28 @@ const ToolFAQ = dynamic(() => import('@/components/ToolFAQ'), {
 export const revalidate = 2592000; // 30 天 = 30 * 24 * 60 * 60
 
 /**
- * 生成静态参数 - 最小化预生成
+ * 生成静态参数 - 平衡预生成
  * 
- * 优化策略（解决 Vercel 磁盘空间问题）：
- * 1. 只预生成英文的热门工具页面（~52 页）
- * 2. 其他所有页面使用 ISR 按需生成
+ * 优化策略：
+ * 1. 预生成主要语言（en, zh, ja）的热门工具页面
+ * 2. 预生成其他语言的热门工具页面
+ * 3. 非热门工具使用 ISR 按需生成
  * 
- * 原因：
- * - 每个页面嵌入完整翻译文件（1.6-2.5MB）
- * - 10 语言 × 500 工具 = 5000+ 页面 = 10GB+ 构建产物
- * - Vercel 免费版磁盘限制约 13GB
- * 
- * 效果：
- * - 构建产物从 10GB+ 降到 ~500MB
- * - 首次访问非热门页面会稍慢（ISR 生成，约 1-2 秒）
- * - 后续访问正常（已缓存 30 天）
- * 
- * @see docs/TRANSLATION_OPTIMIZATION_V3.md
+ * 预估页面数：~52 热门工具 × 10 语言 = ~520 页
+ * 构建产物约 2-3GB，在 Vercel 磁盘限制内
  */
 export function generateStaticParams() {
-  // 只预生成英文热门工具（约 52 个）
   const popularTools = tools.filter(t => t.popular);
-  
-  return popularTools.map(tool => ({
-    locale: 'en',
-    slug: tool.slug,
-  }));
+  const params: { locale: string; slug: string }[] = [];
+
+  // 所有语言的热门工具都预生成
+  for (const locale of routing.locales) {
+    for (const tool of popularTools) {
+      params.push({ locale, slug: tool.slug });
+    }
+  }
+
+  return params;
 }
 
 // 允许非预渲染的工具页面按需生成

@@ -188,11 +188,13 @@ export default function middleware(request: NextRequest) {
   // 检测是否为搜索引擎爬虫
   const isSearchEngineBot = SEARCH_ENGINE_BOTS.test(userAgent);
   
-  // 对搜索引擎爬虫访问根路径时，使用 rewrite 而非 redirect
-  // 这样爬虫可以看到页面内容（包括 meta 验证标签），而不会收到 307 重定向
-  if (isSearchEngineBot && pathname === '/') {
+  // 根路径统一使用 rewrite（不用 redirect）
+  // 原因：Cloudflare CDN 会缓存 301 响应，导致爬虫和用户拿到同样的缓存结果
+  // rewrite 不改变 URL，但返回正确的页面内容
+  if (pathname === '/') {
+    const locale = isSearchEngineBot ? DEFAULT_LOCALE : detectLocale(request);
     const url = request.nextUrl.clone();
-    url.pathname = '/zh'; // 默认 rewrite 到中文版本（百度主要面向中文用户）
+    url.pathname = `/${locale}`;
     return NextResponse.rewrite(url);
   }
   
@@ -236,36 +238,16 @@ export default function middleware(request: NextRequest) {
     return response;
   }
   
-  // 没有 locale 前缀，检测并重定向
+  // 没有 locale 前缀，使用 rewrite 显示正确语言的内容
+  // 注意：统一使用 rewrite 而非 redirect，避免 Cloudflare CDN 缓存 301 导致爬虫问题
   const detectedLocale = detectLocale(request);
   const savedLocale = request.cookies.get(LOCALE_COOKIE)?.value as Locale | undefined;
   
-  // 检测是否为本地开发环境
-  const hostname = request.nextUrl.hostname;
-  const isLocalDev = hostname === 'localhost' || hostname === '127.0.0.1';
+  const targetPath = `/${detectedLocale}${pathname}`;
   
-  // 规范域名（确保使用 www 前缀）
-  // @see Requirements 2.1, 2.2 - 使用绝对 URL 重定向
-  // 本地开发时使用当前 origin，生产环境使用规范域名
-  const CANONICAL_DOMAIN = isLocalDev ? request.nextUrl.origin : 'https://www.u2tool.com';
-  
-  // 构建绝对 URL（使用规范域名）
-  const targetPath = pathname === '/' 
-    ? `/${detectedLocale}` 
-    : `/${detectedLocale}${pathname}`;
-  const absoluteUrl = `${CANONICAL_DOMAIN}${targetPath}`;
-  
-  // 对搜索引擎爬虫使用 rewrite 而非 redirect，避免"网页会自动重定向"问题
-  // 这样爬虫可以直接看到页面内容，而不会收到重定向响应
-  if (isSearchEngineBot) {
-    const url = request.nextUrl.clone();
-    url.pathname = targetPath;
-    return NextResponse.rewrite(url);
-  }
-  
-  // 对普通用户使用 301 永久重定向到绝对 URL
-  // 这告诉浏览器和搜索引擎这是永久性的 URL 变更，并明确指定规范域名
-  const response = NextResponse.redirect(absoluteUrl, { status: 301 });
+  const url = request.nextUrl.clone();
+  url.pathname = targetPath;
+  const response = NextResponse.rewrite(url);
   
   // 设置语言偏好 cookie
   if (!savedLocale) {
