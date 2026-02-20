@@ -1,0 +1,66 @@
+---
+/**
+ * Breadcrumb.astro
+ *
+ * Renders breadcrumb navigation with JSON-LD BreadcrumbList structured data.
+ * Pure static Astro component (no client-side JS).
+ *
+ * Requirements: 6.7
+ */
+
+interface BreadcrumbItem {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  locale: string;
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+const BASE_URL = 'https://www.u2tool.com';
+
+// Generate JSON-LD BreadcrumbList structured data
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    item: item.href.startsWith('http') ? item.href : `${BASE_URL}${item.href}`,
+  })),
+};
+---
+
+<!-- JSON-LD Structured Data -->
+<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+
+<!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="py-3 px-4 sm:px-6 lg:px-8">
+  <ol class="flex items-center flex-wrap gap-1 text-sm text-gray-500 dark:text-gray-400">
+    {items.map((item, index) => (
+      <li class="flex items-center">
+        {index > 0 && (
+          <svg class="w-4 h-4 mx-1 text-gray-400 dark:text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        )}
+        {index === items.length - 1 ? (
+          <span class="text-gray-900 dark:text-white font-medium truncate max-w-[200px]">
+            {item.label}
+          </span>
+        ) : (
+          <a
+            href={item.href}
+            class="hover:text-gray-900 dark:hover:text-white transition-colors truncate max-w-[200px]"
+          >
+            {item.label}
+          </a>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

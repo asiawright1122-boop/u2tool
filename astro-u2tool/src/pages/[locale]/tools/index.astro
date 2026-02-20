@@ -1,0 +1,95 @@
+---
+/**
+ * Tool list page for each locale
+ * Route: /{locale}/tools/
+ * Includes sidebar layout matching the original Next.js design.
+ * Supports ?category= filtering via ToolsGrid Svelte component.
+ */
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import Sidebar from '@/components/layout/Sidebar.svelte';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import Breadcrumb from '@/components/layout/Breadcrumb.astro';
+import ToolsGrid from '@/components/tools/ToolsGrid.svelte';
+import { tools, categories } from '@/config/tools';
+import { locales } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
+import { loadBaseMessages } from '@/lib/translations';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return locales.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }));
+};
+
+const { locale } = Astro.props as { locale: Locale };
+const baseMessages = await loadBaseMessages(locale);
+const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+
+// Build tool name/description maps for the grid component
+const toolNames: Record<string, string> = {};
+const toolDescriptions: Record<string, string> = {};
+for (const tool of tools) {
+  const t = toolsObj[tool.slug] as Record<string, unknown> | undefined;
+  toolNames[tool.slug] = (t?.name as string) || tool.slug;
+  toolDescriptions[tool.slug] = (t?.description as string) || '';
+}
+
+const breadcrumbItems = [
+  { label: navMessages.home || 'Home', href: `/${locale}` },
+  { label: navMessages.allTools || 'All Tools', href: `/${locale}/tools` },
+];
+---
+
+<BaseLayout
+  title={`${navMessages.allTools || 'All Tools'} - U2Tool`}
+  description={`Browse ${tools.length}+ free online tools.`}
+  locale={locale}
+  canonicalPath="/tools"
+>
+  <!-- Sidebar - Desktop -->
+  <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
+    <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
+  </aside>
+  <!-- Sidebar - Tablet -->
+  <aside class="hidden md:block lg:hidden fixed left-0 top-0 bottom-0 z-40" style="width: 64px">
+    <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
+  </aside>
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} />
+
+    <main class="py-6 px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-6">
+          <Breadcrumb locale={locale} items={breadcrumbItems} />
+        </div>
+
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          {navMessages.allTools || 'All Tools'}
+        </h1>
+
+        <ToolsGrid
+          client:load
+          locale={locale}
+          categories={categories}
+          tools={tools.map(t => ({ slug: t.slug, category: t.category, icon: t.icon, popular: t.popular }))}
+          categoryNames={categoryMessages}
+          toolNames={toolNames}
+          toolDescriptions={toolDescriptions}
+          navMessages={navMessages}
+        />
+      </div>
+    </main>
+
+    <Footer locale={locale} />
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={navMessages} />
+</BaseLayout>

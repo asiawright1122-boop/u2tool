@@ -1,0 +1,144 @@
+<script lang="ts">
+  import { onDestroy } from 'svelte';
+
+  interface Props {
+    locale: string;
+    translations: Record<string, unknown>;
+  }
+
+  let { locale, translations }: Props = $props();
+
+  // Translation helpers
+  function t(key: string): string {
+    const scope = translations['tools'] as Record<string, unknown> || {};
+    const keys = key.split('.');
+    let value: unknown = scope;
+    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
+    return typeof value === 'string' ? value : `MISSING: tools.${key}`;
+  }
+
+  let animation = $state('bounce');
+
+  let duration = $state('1');
+
+  let timing = $state('ease');
+
+  let iteration = $state('infinite');
+
+  let copied = $state(false);
+
+  let timerRef = $state(null);
+
+  $effect(() => {
+    const styleId = 'css-animation-keyframes';
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement('style');
+      style.id = styleId;
+      style.textContent = allKeyframes;
+      document.head.appendChild(style);
+    }
+    useEffect(() => {
+      return () => {
+        if (timerRef) clearTimeout(timerRef);
+      };
+    }, []);
+
+    return () => {
+      const style = document.getElementById(styleId);
+      if (style) style.remove();
+    };
+  });  onDestroy(() => {
+    if (timerRef) clearTimeout(timerRef);
+  });
+
+  // Functions
+  const timingFunctions = ['ease', 'linear', 'ease-in', 'ease-out', 'ease-in-out'];
+  const iterations = ['1', '2', '3', 'infinite'];
+  const animationCSS = `animation: ${animation} ${duration}s ${timing} ${iteration};`;
+  const fullCSS = `${presetKeyframes[animation]}\n\n.animated {\n  ${animationCSS}\n}`;
+  function copyToClipboard() {
+    navigator.clipboard.writeText(fullCSS);
+    copied = true;
+    if (timerRef) clearTimeout(timerRef);
+    timerRef = setTimeout(() => copied = false, 2000);
+  }
+
+</script>
+
+
+    <div class="space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('cssAnimation.preset')}</label>
+            <div class="grid grid-cols-4 gap-2">
+              {#each presetKeys as key (key)}
+<button 
+                  onclick={() => animation = key}
+                  class={`p-2 rounded text-xs text-white ${animation === key ? 'bg-blue-600' : 'bg-gray-500 dark:bg-gray-800 hover:bg-gray-600 dark:hover:bg-gray-700'}`}
+                >
+                  {t(`cssAnimation.${key}`)}
+                </button>
+{/each}
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.duration')}</label>
+              <input
+                type="number"
+                bind:value={duration}
+                min="0.1"
+                step="0.1"
+                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white"
+              />
+            </div>
+            <div>
+              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.timing')}</label>
+              <select
+                bind:value={timing}
+                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white"
+              >
+                {#each timingFunctions as tf (tf)}
+<option  value={tf}>{tf}</option>
+{/each}
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('cssAnimation.iteration')}</label>
+              <select
+                bind:value={iteration}
+                class="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-gray-900 dark:text-white"
+              >
+                {#each iterations as i (i)}
+<option  value={i}>{i}</option>
+{/each}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{t('cssAnimation.preview')}</label>
+          <div class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-8 flex items-center justify-center min-h-[200px]">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"
+              style="animation: {animation} {duration}s {timing} {iteration}"></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <label class="text-sm font-medium text-gray-700 dark:text-gray-300">{t('output')}</label>
+          <button onclick={copyToClipboard} class="px-3 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-sm text-gray-900 dark:text-white">
+            {copied ? t('copied') : t('copy')}
+          </button>
+        </div>
+        <pre class="bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-4 text-sm font-mono text-green-700 dark:text-green-400 overflow-x-auto">
+          {fullCSS}
+        </pre>
+      </div>
+    </div>
+  

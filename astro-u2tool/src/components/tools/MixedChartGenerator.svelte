@@ -1,0 +1,338 @@
+<script lang="ts">
+  import { onDestroy } from 'svelte';
+
+  interface Props {
+    locale: string;
+    translations: Record<string, unknown>;
+  }
+
+  let { locale, translations }: Props = $props();
+
+  // Translation helpers
+  function t(key: string): string {
+    const scope = translations['tools']['mixed-chart-generator'] as Record<string, unknown> || {};
+    const keys = key.split('.');
+    let value: unknown = scope;
+    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
+    return typeof value === 'string' ? value : `MISSING: tools.mixed-chart-generator.${key}`;
+  }
+  function _tg(key: string): string {
+    const scope = translations['tools'] as Record<string, unknown> || {};
+    const keys = key.split('.');
+    let value: unknown = scope;
+    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
+    return typeof value === 'string' ? value : `MISSING: tools.${key}`;
+  }
+
+  // Imports
+  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import { useChartTheme } from '@/hooks/useChartTheme';
+
+  const colorThemes = {
+  default: { bar: '#5470c6', line: '#ee6666' },
+  ocean: { bar: '#0077b6', line: '#00b4d8' },
+  sunset: { bar: '#ff6b6b', line: '#feca57' },
+  forest: { bar: '#2d6a4f', line: '#95d5b2' },
+};
+
+  // Types
+  interface DataRow {
+  id: string;
+  category: string;
+  barValue: number;
+  lineValue: number;
+}
+
+  let _idCounter = $state(100);
+
+  let isInitialized = $state(false);
+
+  let data = $state(() =>
+    defaultDataValues.map(item => ({ id: item.id, category: item.categoryKey, barValue: item.barValue, lineValue: item.lineValue })));
+
+  let chartTitle = $state('');
+
+  let barSeriesName = $state('');
+
+  let lineSeriesName = $state('');
+
+  let colorTheme = $state('default');
+
+  let showLegend = $state(true);
+
+  let showGrid = $state(true);
+
+  let smoothLine = $state(true);
+
+  let timerRef = $state(null);
+
+  let chartRef = $state(null);
+
+  function generateId() {
+    const newId = `${_baseId}-${_idCounter}`;
+    _idCounter = _idCounter + 1;
+    return newId;
+  }
+
+  function getChartOption() {
+    const categories = data.map(d => d.category);
+    const barValues = data.map(d => d.barValue);
+    const lineValues = data.map(d => d.lineValue);
+    const colors = colorThemes[colorTheme];
+
+    return {
+      backgroundColor: chartTheme.backgroundColor,
+      title: {
+        text: chartTitle,
+        left: 'center',
+        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'cross', crossStyle: { color: '#999' } },
+      },
+      legend: {
+        show: showLegend,
+        bottom: 10,
+        data: [barSeriesName, lineSeriesName],
+        textStyle: { color: chartTheme.legendText },
+      },
+      grid: {
+        left: '3%', right: '4%',
+        bottom: showLegend ? '15%' : '3%',
+        top: '15%', containLabel: true,
+      },
+      xAxis: {
+        type: 'category',
+        data: categories,
+        axisPointer: { type: 'shadow' },
+        axisLine: { lineStyle: { color: chartTheme.axisLineColor } },
+        axisLabel: { color: chartTheme.axisLabelColor },
+      },
+      yAxis: [
+        {
+          type: 'value',
+          name: barSeriesName,
+          splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
+          axisLine: { show: true, lineStyle: { color: colors.bar } },
+          axisLabel: { color: chartTheme.axisLabelColor },
+        },
+        {
+          type: 'value',
+          name: lineSeriesName,
+          splitLine: { show: false },
+          axisLine: { show: true, lineStyle: { color: colors.line } },
+          axisLabel: { color: chartTheme.axisLabelColor },
+        },
+      ],
+      series: [
+        {
+          name: barSeriesName,
+          type: 'bar',
+          data: barValues,
+          itemStyle: { color: colors.bar },
+          label: { show: true, position: 'top', color: chartTheme.labelColor },
+        },
+        {
+          name: lineSeriesName,
+          type: 'line',
+          yAxisIndex: 1,
+          data: lineValues,
+          smooth: smoothLine,
+          itemStyle: { color: colors.line },
+          lineStyle: { width: 3 },
+          symbol: 'circle',
+          symbolSize: 8,
+        },
+      ],
+    };
+  }
+
+  $effect(() => {
+    if (!isInitialized) {
+      chartTitle = t('defaultTitle');
+      barSeriesName = t('barSeries');
+      lineSeriesName = t('lineSeries');
+      data = defaultDataValues.map(item => ({
+        id: item.id,
+        category: t(`sampleData.${item.categoryKey}`),
+        barValue: item.barValue,
+        lineValue: item.lineValue
+      }));
+      isInitialized = true;
+    }
+  });  onDestroy(() => {
+    if (timerRef) clearTimeout(timerRef);
+  });
+
+  // Functions
+  const _baseId = 'id-' + Math.random().toString(36).slice(2, 9);
+  const chartTheme = useChartTheme();
+  function addRow() {
+    const newId = generateId();
+    data = [...data, { id: newId, category: `${t('item')}${data.length + 1}`, barValue: 100, lineValue: 50 }];
+  }
+  function deleteRow(id: string) {
+    if (data.length > 1) {
+      data = data.filter(row => row.id !== id);
+    }
+  }
+  function updateRow(id: string, field: 'category' | 'barValue' | 'lineValue', value: string | number) {
+    data = data.map(row =>
+      row.id === id ? { ...row, [field]: field === 'category' ? value : Number(value) || 0 } : row
+    );
+  }
+  function exportChart(format: 'png' | 'svg') {
+    if (!chartRef) {
+      console.warn('Chart ref not available');
+      return;
+    }
+    
+    const echartInstance = chartRef.getEchartsInstance();
+    if (!echartInstance) {
+      console.warn('ECharts instance not ready');
+      return;
+    }
+    
+    const url = echartInstance.getDataURL({
+      type: format === 'svg' ? 'svg' : 'png',
+      pixelRatio: 2,
+      backgroundColor: chartTheme.backgroundColor,
+    });
+
+    const link = document.createElement('a');
+    link.download = `mixed-chart-${Date.now()}.${format}`;
+    link.href = url;
+    link.click();
+  }
+  function loadSampleData() {
+    data = [
+      { id: generateId(), category: t('sampleData.productA'), barValue: 320, lineValue: 85 },
+      { id: generateId(), category: t('sampleData.productB'), barValue: 240, lineValue: 72 },
+      { id: generateId(), category: t('sampleData.productC'), barValue: 180, lineValue: 68 },
+      { id: generateId(), category: t('sampleData.productD'), barValue: 290, lineValue: 91 },
+      { id: generateId(), category: t('sampleData.productE'), barValue: 150, lineValue: 55 },
+    ];
+    chartTitle = t('sampleTitle');
+    barSeriesName = t('sampleData.sales');
+    lineSeriesName = t('sampleData.satisfaction');
+  }
+
+</script>
+
+
+    <div class="space-y-4">
+      <div class="flex flex-wrap gap-2">
+        <button onclick={loadSampleData} class="btn-primary">📊 {t('loadSample')}</button>
+        <button onclick={() => exportChart('png')} class="btn-secondary">📥 {t('downloadPng')}</button>
+        <button onclick={() => exportChart('svg')} class="btn-secondary">📥 {t('downloadSvg')}</button>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <div>
+                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <input type="text" bind:value={chartTitle}
+                  class="tool-input" placeholder={t('chartTitlePlaceholder')} />
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <label class="block text-sm font-medium mb-1">{t('barSeriesName')}</label>
+                  <input type="text" bind:value={barSeriesName} class="tool-input" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-1">{t('lineSeriesName')}</label>
+                  <input type="text" bind:value={lineSeriesName} class="tool-input" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <select value={colorTheme} onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes} class="tool-input">
+                  <option value="default">{t('themeDefault')}</option>
+                  <option value="ocean">{t('themeOcean')}</option>
+                  <option value="sunset">{t('themeSunset')}</option>
+                  <option value="forest">{t('themeForest')}</option>
+                </select>
+              </div>
+              <div class="flex flex-wrap gap-6 text-sm">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" bind:checked={showLegend} class="w-4 h-4 accent-blue-500" />
+                  <span>{t('showLegend')}</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" bind:checked={showGrid} class="w-4 h-4 accent-blue-500" />
+                  <span>{t('showGrid')}</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" bind:checked={smoothLine} class="w-4 h-4 accent-blue-500" />
+                  <span>{t('smoothLine')}</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-sm font-medium">{t('dataEditor')}</label>
+              <button onclick={addRow} class="btn-secondary btn-sm">+ {t('addRow')}</button>
+            </div>
+            <div class="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3 overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th class="text-left py-2 px-2 font-medium">{t('category')}</th>
+                    <th class="text-left py-2 px-2 font-medium">{barSeriesName || t('barValue')}</th>
+                    <th class="text-left py-2 px-2 font-medium">{lineSeriesName || t('lineValue')}</th>
+                    <th class="w-10"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {#each data as row (row.id)}
+<tr  class="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
+                      <td class="py-2 px-2">
+                        <input type="text" value={row.category} onchange={(e) => updateRow(row.id, 'category', e.target.value)}
+                          class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
+                      </td>
+                      <td class="py-2 px-2">
+                        <input type="number" value={row.barValue} onchange={(e) => updateRow(row.id, 'barValue', e.target.value)}
+                          class="w-20 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
+                      </td>
+                      <td class="py-2 px-2">
+                        <input type="number" value={row.lineValue} onchange={(e) => updateRow(row.id, 'lineValue', e.target.value)}
+                          class="w-20 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
+                      </td>
+                      <td class="py-2 px-2">
+                        <button onclick={() => deleteRow(row.id)} class="text-red-400 hover:text-red-300 disabled:opacity-50" disabled={data.length <= 1}>✕</button>
+                      </td>
+                    </tr>
+{/each}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
+            <EChartsWrapper
+              bind:this={chartRef} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
+              lazyUpdate={true}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg text-sm text-blue-700 dark:text-blue-300">
+        <p class="font-medium mb-1">💡 {t('tips.title')}</p>
+        <ul class="space-y-0.5 text-blue-600 dark:text-blue-400">
+          <li>• {t('tips.tip1')}</li>
+          <li>• {t('tips.tip2')}</li>
+          <li>• {t('tips.tip3')}</li>
+        </ul>
+      </div>
+    </div>
+  

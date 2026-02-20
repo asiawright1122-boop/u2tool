@@ -1,0 +1,64 @@
+---
+/**
+ * BaseLayout.astro
+ *
+ * Base HTML layout for all pages. Handles:
+ * - HTML lang and dir attributes (RTL for Arabic)
+ * - Meta charset, viewport, title, description, canonical URL
+ * - Inline theme-detection script to prevent FOUC
+ * - Global CSS import
+ * - Named slots for head content and page body
+ *
+ * Requirements: 6.4, 6.5, 6.6
+ */
+
+import { isRTL } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
+import '@/styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: string;
+  canonicalPath?: string;
+}
+
+const { title, description, locale, canonicalPath } = Astro.props;
+
+const BASE_URL = 'https://www.u2tool.com';
+
+// Build canonical URL: base + /locale + path (without locale prefix)
+const pathWithoutLocale = canonicalPath || Astro.url.pathname.replace(new RegExp(`^/${locale}`), '');
+const canonical = `${BASE_URL}/${locale}${pathWithoutLocale}`;
+
+const isRtl = isRTL(locale as Locale);
+---
+
+<!doctype html>
+<html lang={locale} dir={isRtl ? 'rtl' : 'ltr'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | U2Tool</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Additional head content (hreflang, structured data, etc.) -->
+    <slot name="head" />
+
+    <!-- Inline theme-detection script: runs before render to prevent FOUC -->
+    <script is:inline>
+      (function () {
+        var t = localStorage.getItem('theme');
+        var d =
+          t === 'dark' ||
+          (!t && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', d);
+      })();
+    </script>
+  </head>
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <slot />
+  </body>
+</html>

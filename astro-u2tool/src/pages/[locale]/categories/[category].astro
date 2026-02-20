@@ -1,0 +1,54 @@
+---
+/**
+ * Category page for each category × each locale
+ * Route: /{locale}/categories/{category}
+ * Generates static paths for all 14 categories × all 10 locales
+ */
+import type { GetStaticPaths } from 'astro';
+import type { ToolCategory } from '@/config/tools';
+import { tools } from '@/config/tools';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  const locales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
+  const categories: ToolCategory[] = [
+    'text', 'encoding', 'generators', 'converters',
+    'development', 'security', 'network', 'image',
+    'math', 'charts', 'office', 'lifestyle',
+    'finance', 'fun',
+  ];
+
+  return locales.flatMap((locale) =>
+    categories.map((category) => {
+      const categoryTools = tools.filter((t) => t.category === category);
+      return {
+        params: { locale, category },
+        props: { locale, category, tools: categoryTools },
+      };
+    })
+  );
+};
+
+interface Props {
+  locale: string;
+  category: string;
+  tools: Array<{ slug: string; name: string }>;
+}
+
+const { locale, category, tools: categoryTools } = Astro.props;
+---
+
+<html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{category} - U2Tool - {locale}</title>
+  </head>
+  <body>
+    <main>
+      <h1>Category: {category}</h1>
+      <p>Locale: {locale}</p>
+      <p>Tools in category: {categoryTools.length}</p>
+      <p>Page type: category</p>
+    </main>
+  </body>
+</html>

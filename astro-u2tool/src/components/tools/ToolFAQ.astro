@@ -1,0 +1,113 @@
+---
+/**
+ * ToolFAQ.astro
+ *
+ * Renders FAQ items for a tool page with FAQPage JSON-LD structured data.
+ * Pure static Astro component — all FAQ content is visible in the initial HTML
+ * for optimal SEO (search engines can index all Q&A content).
+ *
+ * Uses HTML <details>/<summary> elements for native accordion behavior
+ * without any client-side JavaScript.
+ *
+ * Features:
+ * - Renders FAQ items as an accessible accordion using native HTML elements
+ * - Includes FAQPage JSON-LD structured data for rich search results
+ * - First FAQ item is open by default
+ * - Fully static — no JavaScript required
+ *
+ * Requirements: 5.4
+ */
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  /** Tool name for the heading */
+  toolName: string;
+  /** Array of FAQ items with question and answer */
+  faqs: FAQItem[];
+  /** Optional custom CSS class */
+  class?: string;
+}
+
+const { toolName, faqs, class: className = '' } = Astro.props;
+
+/**
+ * Generate FAQPage JSON-LD structured data.
+ * @see https://schema.org/FAQPage
+ */
+function generateFAQJsonLd(items: FAQItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+const faqJsonLd = faqs.length > 0 ? generateFAQJsonLd(faqs) : null;
+---
+
+{faqs.length > 0 && (
+  <section class={`mt-8 ${className}`} aria-labelledby="faq-heading">
+    {/* FAQPage JSON-LD Structured Data */}
+    {faqJsonLd && (
+      <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(faqJsonLd)}
+      />
+    )}
+
+    {/* Heading */}
+    <h2
+      id="faq-heading"
+      class="text-xl font-bold text-gray-900 dark:text-white mb-4"
+    >
+      FAQ - {toolName}
+    </h2>
+
+    {/* FAQ Accordion using native <details>/<summary> */}
+    <div class="space-y-3" role="list">
+      {faqs.map((faq, index) => (
+        <details
+          class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden group"
+          open={index === 0}
+        >
+          {/* Question */}
+          <summary class="flex items-center justify-between p-4 cursor-pointer bg-gray-100 dark:bg-gray-800/50 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors list-none [&::-webkit-details-marker]:hidden">
+            <h3 class="font-medium text-gray-900 dark:text-white pr-4 m-0 text-base">
+              {faq.question}
+            </h3>
+            <svg
+              class="w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </summary>
+
+          {/* Answer */}
+          <div class="p-4 bg-gray-50 dark:bg-gray-900/50 text-gray-700 dark:text-gray-300 leading-relaxed faq-answer">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+)}

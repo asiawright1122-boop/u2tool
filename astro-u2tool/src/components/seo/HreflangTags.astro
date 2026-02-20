@@ -1,0 +1,53 @@
+---
+/**
+ * HreflangTags.astro
+ *
+ * Generates <link rel="alternate" hreflang="..."> tags for all 10 supported locales
+ * plus x-default pointing to the English version.
+ * Uses absolute URLs with the production base URL.
+ *
+ * Requirements: 5.2, 5.3
+ */
+
+import { locales } from '@/lib/i18n';
+
+interface Props {
+  /** Path without locale prefix, e.g. `/tools/json-formatter` */
+  path: string;
+}
+
+const { path } = Astro.props;
+
+const BASE_URL = 'https://www.u2tool.com';
+
+// Ensure path starts with /
+const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+
+// Map locale codes to hreflang values
+// Most are the same, but some need region qualifiers for proper hreflang
+const hreflangMap: Record<string, string> = {
+  en: 'en',
+  zh: 'zh',
+  ja: 'ja',
+  ko: 'ko',
+  es: 'es',
+  pt: 'pt',
+  fr: 'fr',
+  de: 'de',
+  ru: 'ru',
+  ar: 'ar',
+};
+---
+
+{locales.map((locale) => (
+  <link
+    rel="alternate"
+    hreflang={hreflangMap[locale] || locale}
+    href={`${BASE_URL}/${locale}${normalizedPath}`}
+  />
+))}
+<link
+  rel="alternate"
+  hreflang="x-default"
+  href={`${BASE_URL}/en${normalizedPath}`}
+/>

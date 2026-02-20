@@ -1,0 +1,61 @@
+# Cloudflare Pages _redirects file
+# Format: source destination [status_code]
+#
+# Tool alias redirects - migrated from Next.js middleware TOOL_REDIRECTS
+# These handle historical URLs and common misspellings/variations.
+#
+# Requirements: 5.7, 5.8
+
+# Base64 tool aliases (all locales)
+/en/tools/base64-encoder /en/tools/base64 301
+/en/tools/base64-decoder /en/tools/base64 301
+/en/tools/base64-encode /en/tools/base64 301
+/en/tools/base64-decode /en/tools/base64 301
+
+/zh/tools/base64-encoder /zh/tools/base64 301
+/zh/tools/base64-decoder /zh/tools/base64 301
+/zh/tools/base64-encode /zh/tools/base64 301
+/zh/tools/base64-decode /zh/tools/base64 301
+
+/ja/tools/base64-encoder /ja/tools/base64 301
+/ja/tools/base64-decoder /ja/tools/base64 301
+/ja/tools/base64-encode /ja/tools/base64 301
+/ja/tools/base64-decode /ja/tools/base64 301
+
+/ko/tools/base64-encoder /ko/tools/base64 301
+/ko/tools/base64-decoder /ko/tools/base64 301
+/ko/tools/base64-encode /ko/tools/base64 301
+/ko/tools/base64-decode /ko/tools/base64 301
+
+/es/tools/base64-encoder /es/tools/base64 301
+/es/tools/base64-decoder /es/tools/base64 301
+/es/tools/base64-encode /es/tools/base64 301
+/es/tools/base64-decode /es/tools/base64 301
+
+/pt/tools/base64-encoder /pt/tools/base64 301
+/pt/tools/base64-decoder /pt/tools/base64 301
+/pt/tools/base64-encode /pt/tools/base64 301
+/pt/tools/base64-decode /pt/tools/base64 301
+
+/fr/tools/base64-encoder /fr/tools/base64 301
+/fr/tools/base64-decoder /fr/tools/base64 301
+/fr/tools/base64-encode /fr/tools/base64 301
+/fr/tools/base64-decode /fr/tools/base64 301
+
+/de/tools/base64-encoder /de/tools/base64 301
+/de/tools/base64-decoder /de/tools/base64 301
+/de/tools/base64-encode /de/tools/base64 301
+/de/tools/base64-decode /de/tools/base64 301
+
+/ru/tools/base64-encoder /ru/tools/base64 301
+/ru/tools/base64-decoder /ru/tools/base64 301
+/ru/tools/base64-encode /ru/tools/base64 301
+/ru/tools/base64-decode /ru/tools/base64 301
+
+/ar/tools/base64-encoder /ar/tools/base64 301
+/ar/tools/base64-decoder /ar/tools/base64 301
+/ar/tools/base64-encode /ar/tools/base64 301
+/ar/tools/base64-decode /ar/tools/base64 301
+
+# Root redirect to English homepage
+/ /en 302

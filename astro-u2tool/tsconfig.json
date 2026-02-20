@@ -1,0 +1,14 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "strict": true,
+    "jsx": "preserve",
+    "jsxImportSource": "astro"
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.astro", "src/**/*.svelte"],
+  "exclude": ["node_modules", "dist"]
+}

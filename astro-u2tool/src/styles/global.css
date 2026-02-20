@@ -1,0 +1,521 @@
+@import "tailwindcss";
+
+/* ============================================
+ * Tailwind CSS 4.x - CSS-first Configuration
+ * No tailwind.config.ts needed
+ * ============================================ */
+
+/* Dark mode: class-based strategy using @custom-variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================
+ * CSS Custom Properties (Design Tokens)
+ * Migrated from Next.js globals.css
+ * ============================================ */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262.1 83.3% 57.8%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 263.4 70% 50.4%;
+  }
+}
+
+/* ============================================
+ * Base Styles
+ * ============================================ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    @apply bg-white text-gray-900;
+  }
+
+  /* Dark mode body */
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+
+  /* RTL support for Arabic */
+  [dir="rtl"] {
+    text-align: right;
+  }
+
+  /* Border default color */
+  * {
+    border-color: hsl(var(--border));
+  }
+}
+
+/* ============================================
+ * Font Configuration
+ * ============================================ */
+
+@layer base {
+  @font-face {
+    font-display: swap;
+  }
+}
+
+/* ============================================
+ * Reduced Motion Support
+ * ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+ * Glassmorphism Design System
+ * ============================================ */
+
+.glass {
+  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg shadow-black/5;
+}
+.dark .glass {
+  @apply bg-gray-900/70 border-gray-700/30;
+}
+
+.glass-light {
+  @apply bg-white/50 backdrop-blur-md border border-white/30;
+}
+.dark .glass-light {
+  @apply bg-gray-900/50 border-gray-700/20;
+}
+
+.glass-strong {
+  @apply bg-white/80 backdrop-blur-2xl border border-white/40 shadow-xl shadow-black/10;
+}
+.dark .glass-strong {
+  @apply bg-gray-900/80 border-gray-600/40;
+}
+
+.glass-card {
+  @apply bg-white/60 backdrop-blur-lg border border-gray-200/50 rounded-xl;
+  transition-property: background-color, border-color, box-shadow, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+.dark .glass-card {
+  @apply bg-gray-800/60 border-gray-700/50;
+}
+.glass-card:hover {
+  @apply bg-white/80 border-blue-500/30 shadow-lg shadow-blue-500/10 -translate-y-0.5;
+}
+.dark .glass-card:hover {
+  @apply bg-gray-800/80 border-blue-400/30;
+}
+
+.glass-nav {
+  @apply bg-white/70 backdrop-blur-xl border-b border-white/20;
+}
+.dark .glass-nav {
+  @apply bg-gray-900/70 border-gray-700/30;
+}
+
+/* ============================================
+ * Hover Effects
+ * ============================================ */
+
+.hover-lift {
+  transition-property: transform, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+.hover-lift:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+.hover-glow {
+  transition-property: box-shadow;
+  transition-duration: 300ms;
+}
+.hover-glow:hover {
+  @apply shadow-lg shadow-blue-500/20;
+}
+
+.hover-scale {
+  @apply transition-transform duration-200 ease-out;
+}
+.hover-scale:hover {
+  @apply scale-[1.02];
+}
+
+/* ============================================
+ * Button Styles
+ * ============================================ */
+
+.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg font-medium;
+  transition-property: background-color, transform;
+  transition-duration: 200ms;
+}
+.btn-primary:hover {
+  @apply bg-blue-700;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-gray-200 text-gray-900 rounded-lg font-medium;
+  transition-property: background-color, transform;
+  transition-duration: 200ms;
+}
+.dark .btn-secondary {
+  @apply bg-gray-700 text-white;
+}
+.btn-secondary:hover {
+  @apply bg-gray-300;
+  transform: translateY(-1px);
+}
+.dark .btn-secondary:hover {
+  @apply bg-gray-600;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5 text-sm rounded;
+}
+
+/* ============================================
+ * Tool Component Styles
+ * ============================================ */
+
+.tool-label {
+  @apply block mb-2 text-sm font-medium text-gray-700;
+}
+.dark .tool-label {
+  @apply text-gray-300;
+}
+
+.tool-input {
+  @apply w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg outline-none;
+  @apply placeholder:text-gray-400;
+  @apply focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 200ms;
+}
+.dark .tool-input {
+  @apply bg-gray-900 border-gray-700 placeholder:text-gray-500;
+  @apply focus:bg-gray-800 focus:border-blue-500;
+}
+
+.tool-textarea {
+  @apply w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg outline-none;
+  @apply placeholder:text-gray-400 font-mono text-sm leading-relaxed;
+  @apply focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 200ms;
+}
+.dark .tool-textarea {
+  @apply bg-gray-900 border-gray-700 placeholder:text-gray-500;
+  @apply focus:bg-gray-800 focus:border-blue-500;
+}
+
+.tool-select {
+  @apply w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg outline-none;
+  @apply cursor-pointer appearance-none;
+  @apply focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 200ms;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+.dark .tool-select {
+  @apply bg-gray-900 border-gray-700;
+  @apply focus:bg-gray-800 focus:border-blue-500;
+}
+
+.tool-result {
+  @apply w-full p-4 bg-gray-50 border border-gray-200 rounded-lg overflow-x-auto;
+  @apply font-mono text-sm text-gray-600;
+}
+.dark .tool-result {
+  @apply bg-gray-900 border-gray-700 text-gray-300;
+}
+
+.tool-card {
+  @apply p-6 bg-white border border-gray-200 rounded-xl shadow-sm;
+  transition-property: box-shadow, border-color;
+  transition-duration: 200ms;
+}
+.dark .tool-card {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.tool-dropzone {
+  @apply p-8 border-2 border-dashed border-gray-300 rounded-lg;
+  @apply bg-gray-50 text-center cursor-pointer;
+  @apply hover:border-blue-500 hover:bg-blue-50 transition-colors;
+}
+.dark .tool-dropzone {
+  @apply border-gray-600 bg-gray-900;
+  @apply hover:bg-blue-900/20;
+}
+
+.tool-dropzone-active {
+  @apply border-blue-500 bg-blue-50;
+}
+.dark .tool-dropzone-active {
+  @apply bg-blue-900/20;
+}
+
+.tool-skeleton {
+  @apply bg-gray-200 rounded animate-pulse;
+}
+.dark .tool-skeleton {
+  @apply bg-gray-700;
+}
+
+.tool-btn-group {
+  @apply flex flex-wrap gap-2;
+}
+
+/* ============================================
+ * Tool Card Variants
+ * ============================================ */
+
+.tool-card-grid {
+  @apply p-4 bg-white border border-gray-200 rounded-xl;
+  @apply hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10;
+  transition-property: border-color, box-shadow;
+  transition-duration: 200ms;
+}
+.dark .tool-card-grid {
+  @apply bg-gray-800/50 border-gray-700/50;
+}
+
+.tool-card-list {
+  @apply p-4 bg-white border border-gray-200 rounded-lg;
+  @apply hover:border-blue-500/50 hover:bg-gray-50;
+  transition-property: border-color, background-color;
+  transition-duration: 200ms;
+}
+.dark .tool-card-list {
+  @apply bg-gray-800/50 border-gray-700/50;
+  @apply hover:bg-gray-800;
+}
+
+.tool-badge-popular {
+  @apply inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-full;
+  @apply bg-orange-100 text-orange-600;
+}
+.dark .tool-badge-popular {
+  @apply bg-orange-900/30 text-orange-400;
+}
+
+/* ============================================
+ * Sidebar Navigation
+ * ============================================ */
+
+.sidebar-item {
+  @apply flex items-center gap-3 px-3 py-2.5 rounded-lg;
+  @apply text-gray-600 hover:bg-gray-100 hover:text-gray-900;
+  transition-property: background-color, color;
+  transition-duration: 200ms;
+}
+.dark .sidebar-item {
+  @apply text-gray-400 hover:bg-gray-800 hover:text-white;
+}
+
+.sidebar-item-active {
+  @apply bg-blue-50 text-blue-600;
+  border-left-width: 3px;
+  @apply border-blue-500;
+}
+.dark .sidebar-item-active {
+  @apply bg-blue-900/30 text-blue-400;
+}
+
+/* ============================================
+ * Animations
+ * ============================================ */
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(209,213,219,0) 0%, rgba(209,213,219,0.5) 50%, rgba(209,213,219,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+.dark .animate-shimmer {
+  background: linear-gradient(90deg, rgba(55,65,81,0) 0%, rgba(55,65,81,0.5) 50%, rgba(55,65,81,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes copyPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.copy-success {
+  animation: copyPulse 0.3s ease-out;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* ============================================
+ * Layout Responsive Styles
+ * ============================================ */
+
+@media (min-width: 1024px) {
+  .main-content-with-sidebar {
+    margin-left: 220px;
+  }
+  .main-content-with-right-sidebar {
+    margin-right: 280px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-content-with-sidebar {
+    margin-left: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content-with-mobile-nav {
+    padding-bottom: 80px;
+  }
+}
+
+/* ============================================
+ * Mobile Bottom Navigation
+ * ============================================ */
+
+.mobile-bottom-nav {
+  @apply fixed bottom-0 left-0 right-0 z-50;
+  @apply bg-white border-t border-gray-200;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.dark .mobile-bottom-nav {
+  @apply bg-gray-900 border-gray-800;
+}
+
+/* ============================================
+ * Image CLS Prevention
+ * ============================================ */
+
+.img-container {
+  @apply relative overflow-hidden;
+  contain: layout;
+}
+
+.img-container-1x1 { aspect-ratio: 1 / 1; }
+.img-container-16x9 { aspect-ratio: 16 / 9; }
+.img-container-4x3 { aspect-ratio: 4 / 3; }
+
+.skeleton-img {
+  @apply bg-gray-200 rounded-lg animate-pulse;
+  min-height: 100px;
+}
+.dark .skeleton-img {
+  @apply bg-gray-700;
+}
+
+/* ============================================
+ * Utility Classes
+ * ============================================ */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px;
+}
+
+.safe-area-inset-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.border-l-3 {
+  border-left-width: 3px;
+}

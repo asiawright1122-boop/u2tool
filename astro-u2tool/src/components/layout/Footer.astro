@@ -1,0 +1,87 @@
+---
+/**
+ * Footer.astro
+ *
+ * Pure static Astro component (no client-side JS).
+ * Shows copyright, links, and site info.
+ *
+ * Requirements: 6.1
+ */
+
+import { getLocalizedPath } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const currentYear = new Date().getFullYear();
+
+const homePath = getLocalizedPath(locale as Locale, '/');
+const toolsPath = getLocalizedPath(locale as Locale, '/tools');
+---
+
+<footer class="border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Brand -->
+      <div>
+        <a href={homePath} class="flex items-center gap-2 text-lg font-bold text-gray-900 dark:text-white">
+          <span class="text-xl">🛠️</span>
+          <span>U2Tool</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+          Free online tools for developers and everyone.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">
+          Links
+        </h3>
+        <ul class="mt-3 space-y-2">
+          <li>
+            <a href={homePath}
+               class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href={toolsPath}
+               class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+              All Tools
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">
+          Legal
+        </h3>
+        <ul class="mt-3 space-y-2">
+          <li>
+            <span class="text-sm text-gray-600 dark:text-gray-400">
+              Privacy Policy
+            </span>
+          </li>
+          <li>
+            <span class="text-sm text-gray-600 dark:text-gray-400">
+              Terms of Service
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
+      <p class="text-center text-sm text-gray-500 dark:text-gray-400">
+        &copy; {currentYear} U2Tool. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

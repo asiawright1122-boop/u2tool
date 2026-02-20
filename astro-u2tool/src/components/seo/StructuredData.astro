@@ -1,0 +1,28 @@
+---
+/**
+ * StructuredData.astro
+ *
+ * Renders a <script type="application/ld+json"> tag with structured data.
+ * Supports multiple Schema.org types: SoftwareApplication, HowTo, FAQPage, BreadcrumbList.
+ *
+ * Requirements: 5.4
+ */
+
+interface Props {
+  /** Schema.org type: SoftwareApplication, HowTo, FAQPage, BreadcrumbList, WebSite, Organization, CollectionPage */
+  type: string;
+  /** The structured data object (without @context and @type — those are added automatically) */
+  data: Record<string, unknown>;
+}
+
+const { type, data } = Astro.props;
+
+// Build the full JSON-LD object
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': type,
+  ...data,
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

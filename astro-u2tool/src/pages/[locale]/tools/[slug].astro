@@ -1,0 +1,352 @@
+---
+/**
+ * Tool Detail Page — [slug].astro
+ *
+ * Route: /{locale}/tools/{slug}
+ *
+ * Generates static paths for all tools × all 10 locales (~5,100 pages).
+ * Loads tool-specific translations, renders SEO metadata (title, description,
+ * canonical, hreflang, structured data), and composes the page from:
+ * - Breadcrumb navigation (static)
+ * - Tool header with icon, name, description (static)
+ * - Detailed description section (static)
+ * - ToolWrapper with client:visible hydration (interactive island)
+ * - Usage instructions (static)
+ * - ToolFAQ with FAQPage structured data (static)
+ * - RelatedTools grid (static)
+ *
+ * Requirements: 1.4, 1.5, 3.4, 5.1, 5.2, 5.3, 5.4
+ */
+
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import Sidebar from '@/components/layout/Sidebar.svelte';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
+import Breadcrumb from '@/components/layout/Breadcrumb.astro';
+import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
+import RelatedTools from '@/components/tools/RelatedTools.astro';
+import ToolFAQ from '@/components/tools/ToolFAQ.astro';
+import { tools, categories, getToolsByCategory } from '@/config/tools';
+import type { Tool } from '@/config/tools';
+import { locales } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
+import { loadToolMessages, loadBaseMessages } from '@/lib/translations';
+
+// ---------------------------------------------------------------------------
+// Static path generation: all tools × all locales
+// ---------------------------------------------------------------------------
+export const getStaticPaths: GetStaticPaths = () => {
+  return locales.flatMap((locale) =>
+    tools.map((tool) => ({
+      params: { locale, slug: tool.slug },
+      props: { locale, tool },
+    }))
+  );
+};
+
+// ---------------------------------------------------------------------------
+// Page data loading
+// ---------------------------------------------------------------------------
+const { locale, tool } = Astro.props as { locale: Locale; tool: Tool };
+
+// Load tool-specific translations (merged base + detailed, with English fallback)
+const messages = await loadToolMessages(locale, tool.slug);
+
+// Load base messages for common UI strings (nav labels, category names, etc.)
+const baseMessages = await loadBaseMessages(locale);
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const toolsCommon = (baseMessages.tools as Record<string, unknown>) ?? {};
+
+// Extract tool metadata from translations
+const toolName = (messages.name as string) || tool.slug;
+const toolDescription = (messages.description as string) || '';
+const seoTitle = (messages.seo_title as string) || toolName;
+const seoDescription = (messages.seo_description as string) || toolDescription;
+const detailedDescription = (messages.detailed_description as string) || '';
+const usageSteps = messages.usage_steps as string[] | undefined;
+const usageExamples = messages.usage_examples as string[] | undefined;
+
+// Category name (localized)
+const categoryName = categoryMessages[tool.category] || tool.category;
+
+// Common UI labels
+const toolIntroductionLabel = (toolsCommon.toolIntroduction as string) || 'Tool Introduction';
+const usageInstructionsLabel = (toolsCommon.usageInstructions as string) || 'Usage Instructions';
+const usageStepsLabel = (toolsCommon.usageSteps as string) || 'Usage Steps';
+const usageExamplesLabel = (toolsCommon.usageExamples as string) || 'Usage Examples';
+const relatedToolsLabel = navMessages.relatedTools || 'Related Tools';
+const homeLabel = navMessages.home || 'Home';
+
+// ---------------------------------------------------------------------------
+// Breadcrumb items
+// ---------------------------------------------------------------------------
+const breadcrumbItems = [
+  { label: homeLabel, href: `/${locale}` },
+  { label: categoryName, href: `/${locale}/tools?category=${tool.category}` },
+  { label: toolName, href: `/${locale}/tools/${tool.slug}` },
+];
+
+// ---------------------------------------------------------------------------
+// Structured data: SoftwareApplication
+// ---------------------------------------------------------------------------
+const BASE_URL = 'https://www.u2tool.com';
+
+const softwareAppData = {
+  name: toolName,
+  description: seoDescription,
+  url: `${BASE_URL}/${locale}/tools/${tool.slug}`,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Any',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    ratingCount: '100',
+    bestRating: '5',
+    worstRating: '1',
+  },
+};
+
+// ---------------------------------------------------------------------------
+// Structured data: HowTo (if usage steps are available)
+// ---------------------------------------------------------------------------
+const howToData = usageSteps && usageSteps.length > 0
+  ? {
+      name: `How to use ${toolName}`,
+      description: seoDescription,
+      step: usageSteps.map((step, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        text: step,
+      })),
+      totalTime: 'PT2M',
+    }
+  : null;
+
+// ---------------------------------------------------------------------------
+// FAQ data: extract from translations if available
+// For now, FAQs are generated from the faq system. In the Astro version,
+// we look for faq_q1/faq_a1 pattern or faqs array in translations.
+// ---------------------------------------------------------------------------
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+function extractFAQs(msgs: Record<string, unknown>): FAQItem[] {
+  const faqs: FAQItem[] = [];
+
+  // Pattern 1: faqs array in translations
+  if (Array.isArray(msgs.faqs)) {
+    for (const item of msgs.faqs) {
+      if (item && typeof item === 'object' && 'question' in item && 'answer' in item) {
+        faqs.push({
+          question: String((item as Record<string, unknown>).question),
+          answer: String((item as Record<string, unknown>).answer),
+        });
+      }
+    }
+    return faqs;
+  }
+
+  // Pattern 2: faq_q1/faq_a1, faq_q2/faq_a2, ... pattern
+  for (let i = 1; i <= 20; i++) {
+    const question = msgs[`faq_q${i}`];
+    const answer = msgs[`faq_a${i}`];
+    if (typeof question === 'string' && typeof answer === 'string') {
+      faqs.push({ question, answer });
+    }
+  }
+
+  return faqs;
+}
+
+const faqs = extractFAQs(messages);
+
+// ---------------------------------------------------------------------------
+// Build translations object for ToolWrapper
+// Contains: generic tool keys (input, output, copy, etc.) + current tool translations
+// ---------------------------------------------------------------------------
+const genericToolKeys: Record<string, unknown> = {};
+for (const [key, value] of Object.entries(toolsCommon)) {
+  // Generic keys are string values (not tool slug objects)
+  if (typeof value === 'string') {
+    genericToolKeys[key] = value;
+  }
+}
+// Also include nested generic namespaces (e.g., json.invalidJson, stopwatchUI, etc.)
+for (const [key, value] of Object.entries(toolsCommon)) {
+  if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+    // Check if this is a tool slug (has 'name' key) or a generic namespace
+    const obj = value as Record<string, unknown>;
+    if (!obj.name && !obj.description) {
+      genericToolKeys[key] = value;
+    }
+  }
+}
+const toolTranslations = { tools: { ...genericToolKeys, [tool.slug]: messages } };
+const sameCategoryTools = getToolsByCategory(tool.category)
+  .filter((t) => t.slug !== tool.slug)
+  .slice(0, 6);
+
+// Build a minimal translations map for related tool names
+const relatedToolSlugs = new Set(sameCategoryTools.map((t) => t.slug));
+// Also include popular tools that might be used as fallback
+const popularFallbacks = tools
+  .filter((t) => t.popular && t.slug !== tool.slug && !relatedToolSlugs.has(t.slug))
+  .slice(0, 6);
+for (const t of popularFallbacks) {
+  relatedToolSlugs.add(t.slug);
+}
+
+// Extract tool names from base messages
+const allToolTranslations: Record<string, Record<string, unknown>> = {};
+for (const slug of relatedToolSlugs) {
+  const toolTrans = toolsCommon[slug];
+  if (toolTrans && typeof toolTrans === 'object') {
+    allToolTranslations[slug] = toolTrans as Record<string, unknown>;
+  }
+}
+---
+
+<BaseLayout title={seoTitle} description={seoDescription} locale={locale}>
+  {/* SEO: Hreflang tags for all 10 locales + x-default */}
+  <HreflangTags path={`/tools/${tool.slug}`} slot="head" />
+
+  {/* SEO: SoftwareApplication structured data */}
+  <StructuredData type="SoftwareApplication" data={softwareAppData} slot="head" />
+
+  {/* SEO: HowTo structured data (if usage steps available) */}
+  {howToData && (
+    <StructuredData type="HowTo" data={howToData} slot="head" />
+  )}
+
+  {/* OG Image meta tag */}
+  <meta
+    property="og:image"
+    content={`${BASE_URL}/api/og?title=${encodeURIComponent(toolName)}&locale=${locale}&icon=${encodeURIComponent(tool.icon)}`}
+    slot="head"
+  />
+  <meta property="og:type" content="website" slot="head" />
+  <meta property="og:url" content={`${BASE_URL}/${locale}/tools/${tool.slug}`} slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+
+  {/* Sidebar - Desktop */}
+  <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
+    <Sidebar client:idle locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName="U2Tool" />
+  </aside>
+  {/* Sidebar - Tablet */}
+  <aside class="hidden md:block lg:hidden fixed left-0 top-0 bottom-0 z-40" style="width: 64px">
+    <Sidebar client:idle locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName="U2Tool" />
+  </aside>
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} />
+    <div class="py-8 px-4">
+    <div class="max-w-4xl mx-auto">
+      {/* Breadcrumb navigation */}
+      <div class="mb-6">
+        <Breadcrumb locale={locale} items={breadcrumbItems} />
+      </div>
+
+      {/* Tool Header */}
+      <div class="text-center mb-8">
+        {/* Tool icon */}
+        <div class="mx-auto mb-4">
+          <span class="text-5xl" aria-label={toolName} role="img">
+            {tool.icon}
+          </span>
+        </div>
+        {/* Tool name (LCP element) */}
+        <h1 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
+          {toolName}
+        </h1>
+        <p class="text-gray-600 dark:text-gray-300">{toolDescription}</p>
+      </div>
+
+      {/* Detailed description */}
+      {detailedDescription && (
+        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-6 shadow-sm">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+            {toolIntroductionLabel}
+          </h2>
+          <div
+            class="text-gray-700 dark:text-gray-300 leading-relaxed"
+            set:html={detailedDescription.replace(/\n/g, '<br />')}
+          />
+        </div>
+      )}
+
+      {/* Tool Component — Island Architecture: hydrate only when visible */}
+      <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-sm mb-6">
+        <ToolWrapper
+          client:visible
+          slug={tool.slug}
+          locale={locale}
+          translations={toolTranslations}
+        />
+      </div>
+
+      {/* Usage instructions */}
+      {(usageSteps || usageExamples) && (
+        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-6 shadow-sm">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+            {usageInstructionsLabel}
+          </h2>
+
+          {usageSteps && Array.isArray(usageSteps) && (
+            <Fragment>
+              <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+                {usageStepsLabel}
+              </h3>
+              <ol class="list-decimal list-inside space-y-2 mb-6">
+                {usageSteps.map((step: string) => (
+                  <li class="text-gray-700 dark:text-gray-300">{step}</li>
+                ))}
+              </ol>
+            </Fragment>
+          )}
+
+          {usageExamples && Array.isArray(usageExamples) && (
+            <Fragment>
+              <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+                {usageExamplesLabel}
+              </h3>
+              <div class="space-y-3">
+                {usageExamples.map((example: string) => (
+                  <div class="bg-gray-100 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-700">
+                    <code class="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap break-words">
+                      {example}
+                    </code>
+                  </div>
+                ))}
+              </div>
+            </Fragment>
+          )}
+        </div>
+      )}
+
+      {/* FAQ section with FAQPage structured data */}
+      <ToolFAQ toolName={toolName} faqs={faqs} />
+
+      {/* Related tools */}
+      <RelatedTools
+        currentTool={tool}
+        locale={locale}
+        toolTranslations={allToolTranslations}
+        headingLabel={relatedToolsLabel}
+      />
+    </div>
+  </div>
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={navMessages} />
+</BaseLayout>

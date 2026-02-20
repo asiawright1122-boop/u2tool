@@ -1,0 +1,126 @@
+---
+/**
+ * RelatedTools.astro
+ *
+ * Displays 6 related tools based on the same category as the current tool.
+ * Pure static Astro component — no client-side JavaScript.
+ *
+ * Features:
+ * - Filters tools by same category, excluding the current tool
+ * - Displays up to 6 related tools in a responsive grid
+ * - Shows tool icon, localized name, and links to the tool page
+ * - Falls back to popular tools if same-category tools are insufficient
+ *
+ * Requirements: 5.1
+ */
+
+import { tools, getToolsByCategory } from '@/config/tools';
+import type { Tool, ToolCategory } from '@/config/tools';
+
+interface Props {
+  /** Current tool (to exclude from related list) */
+  currentTool: Tool;
+  /** Current locale for links and translations */
+  locale: string;
+  /** Tool translations map: { [slug]: { name, description } } */
+  toolTranslations: Record<string, Record<string, unknown>>;
+  /** Maximum number of related tools to display (default: 6) */
+  maxCount?: number;
+  /** Label for the "Related Tools" heading */
+  headingLabel?: string;
+}
+
+const {
+  currentTool,
+  locale,
+  toolTranslations,
+  maxCount = 6,
+  headingLabel = 'Related Tools',
+} = Astro.props;
+
+/**
+ * Get related tools: same category first, then fill with popular tools from other categories.
+ */
+function getRelatedTools(tool: Tool, max: number): Tool[] {
+  // 1. Get tools from the same category (excluding current)
+  const sameCategoryTools = getToolsByCategory(tool.category)
+    .filter((t) => t.slug !== tool.slug);
+
+  if (sameCategoryTools.length >= max) {
+    return sameCategoryTools.slice(0, max);
+  }
+
+  // 2. If not enough, supplement with popular tools from other categories
+  const result = [...sameCategoryTools];
+  const usedSlugs = new Set([tool.slug, ...result.map((t) => t.slug)]);
+
+  const popularFromOtherCategories = tools
+    .filter((t) => t.popular && !usedSlugs.has(t.slug))
+    .slice(0, max - result.length);
+
+  result.push(...popularFromOtherCategories);
+
+  // 3. If still not enough, add any remaining tools
+  if (result.length < max) {
+    const remaining = tools
+      .filter((t) => !usedSlugs.has(t.slug) && !result.some((r) => r.slug === t.slug))
+      .slice(0, max - result.length);
+    result.push(...remaining);
+  }
+
+  return result.slice(0, max);
+}
+
+const relatedTools = getRelatedTools(currentTool, maxCount);
+
+/**
+ * Get the localized tool name from translations, falling back to slug.
+ */
+function getToolName(slug: string): string {
+  const toolTrans = toolTranslations[slug];
+  if (toolTrans && typeof toolTrans.name === 'string') {
+    return toolTrans.name;
+  }
+  // Fallback: convert slug to title case
+  return slug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+---
+
+{relatedTools.length > 0 && (
+  <section class="mt-12" aria-labelledby="related-tools-heading">
+    <h2
+      id="related-tools-heading"
+      class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200"
+    >
+      {headingLabel}
+    </h2>
+
+    <nav aria-label="Related tools">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+        {relatedTools.map((tool) => {
+          const toolName = getToolName(tool.slug);
+          return (
+            <a
+              href={`/${locale}/tools/${tool.slug}`}
+              class="flex flex-col items-center p-3 bg-gray-100 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/50 rounded-lg hover:border-blue-500/30 hover:bg-gray-200 dark:hover:bg-gray-800 transition-all group"
+              title={toolName}
+            >
+              <span
+                class="text-2xl mb-2 group-hover:scale-110 transition-transform"
+                aria-hidden="true"
+              >
+                {tool.icon}
+              </span>
+              <span class="text-sm text-gray-700 dark:text-gray-300 text-center line-clamp-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+                {toolName}
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    </nav>
+  </section>
+)}
