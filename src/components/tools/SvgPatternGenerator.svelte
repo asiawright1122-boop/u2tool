@@ -156,7 +156,7 @@
       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 h-48 overflow-hidden">
         <div
           class="w-full h-full"
-          style="background-image: url("data:image/svg+xml,{encodeURIComponent(svgCode)}"); background-repeat: repeat"></div>
+          style="background-image: url('data:image/svg+xml,{encodeURIComponent(svgCode)}'); background-repeat: repeat"></div>
       </div>
 
       <div class="space-y-2">
