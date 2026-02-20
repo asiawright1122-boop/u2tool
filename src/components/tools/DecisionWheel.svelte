@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { Plus, Trash2, RotateCcw, Volume2, VolumeX } from 'lucide-react';
+  import { Plus, Trash2, RotateCcw, Volume2, VolumeX } from 'lucide-svelte';
 
   // Types
   interface WheelOption {

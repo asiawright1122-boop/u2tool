@@ -16,7 +16,7 @@
   }
 
   // Imports
-  import { Fuel, Car, DollarSign, ArrowLeftRight } from 'lucide-react';
+  import { Fuel, Car, DollarSign, ArrowLeftRight } from 'lucide-svelte';
 
   // Types
   type Unit = 'metric' | 'imperial';

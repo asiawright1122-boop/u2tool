@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { GraduationCap, Plus, Trash2, Calculator } from 'lucide-react';
+  import { GraduationCap, Plus, Trash2, Calculator } from 'lucide-svelte';
 
   // Types
   type GpaScale = '4.0' | '5.0';

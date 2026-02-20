@@ -25,7 +25,7 @@
   }
 
   // Imports
-  import { Heart, Share2, RefreshCw } from 'lucide-react';
+  import { Heart, Share2, RefreshCw } from 'lucide-svelte';
 
   // Types
   interface LoveResult {

@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { Calendar, Clock, Plus, Trash2, Save } from 'lucide-react';
+  import { Calendar, Clock, Plus, Trash2, Save } from 'lucide-svelte';
 
   // Types
   interface Countdown {

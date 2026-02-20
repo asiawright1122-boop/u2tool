@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { Timer, Route, Calculator, ArrowLeftRight } from 'lucide-react';
+  import { Timer, Route, Calculator, ArrowLeftRight } from 'lucide-svelte';
 
   // Types
   type CalculationMode = 'pace' | 'time' | 'distance';

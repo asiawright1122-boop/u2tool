@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { Baby, Calendar, Clock, Heart } from 'lucide-react';
+  import { Baby, Calendar, Clock, Heart } from 'lucide-svelte';
 
   // Types
   type CalculationMethod = 'lmp' | 'conception' | 'ivf';

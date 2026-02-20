@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { Droplets, Activity, Sun, Thermometer } from 'lucide-react';
+  import { Droplets, Activity, Sun, Thermometer } from 'lucide-svelte';
 
   // Types
   type Unit = 'metric' | 'imperial';

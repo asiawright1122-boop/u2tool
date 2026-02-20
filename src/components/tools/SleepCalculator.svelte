@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { Moon, Sun, Clock, Info } from 'lucide-react';
+  import { Moon, Sun, Clock, Info } from 'lucide-svelte';
 
   // Types
   type Mode = 'wake' | 'sleep';

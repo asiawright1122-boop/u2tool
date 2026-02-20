@@ -16,7 +16,7 @@
   }
 
   // Imports
-  import { Zap, Clock, DollarSign, Plus, Trash2 } from 'lucide-react';
+  import { Zap, Clock, DollarSign, Plus, Trash2 } from 'lucide-svelte';
 
   // Types
   interface Appliance {

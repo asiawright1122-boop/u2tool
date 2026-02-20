@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { Calculator, Activity, Scale, Ruler } from 'lucide-react';
+  import { Calculator, Activity, Scale, Ruler } from 'lucide-svelte';
 
   // Types
   type Gender = 'male' | 'female';

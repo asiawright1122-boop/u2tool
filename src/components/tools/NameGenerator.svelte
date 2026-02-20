@@ -25,7 +25,7 @@
   }
 
   // Imports
-  import { RefreshCw, Copy, Check, User, Users } from 'lucide-react';
+  import { RefreshCw, Copy, Check, User, Users } from 'lucide-svelte';
   import { generateNames, getAvailableOrigins, type Gender, type Origin } from '@/lib/data/names';
 
   let gender = $state('any');
