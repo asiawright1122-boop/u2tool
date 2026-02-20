@@ -1,0 +1,29 @@
+{
+  "detailed_description": "تُقدِّم مُقدِّم حساب وقت نقل البيانات تقديرًا لزمن نقل الملفات بناءً على سرعة اتصالك. أدخل حجم الملف وسرعة الشبكة للحصول على تقديرات دقيقة لزمن النقل. تتضمن سرعات مُحدَّثة مسبقًا لأنواع الاتصال الشائعة مثل 4G و 5G و Wi-Fi و Ethernet لحسابات سريعة.",
+  "usage_steps": [
+    "أدخل حجم الملف للنقل",
+    "اختر وحدة الحجم (كيلوبايت، ميغا بايت، جيغا بايت، تيرا بايت)",
+    "أدخل سرعة الاتصال الخاصة بك",
+    "أو انقر على زر سرعة مسبق",
+    "اطلع على وقت النقل المقدر",
+    "نسخ النتائج للرجوع إليها"
+  ],
+  "usage_examples": [
+    "تقدير وقت تنزيل الملفات الكبيرة",
+    "إعداد جداول نقل البيانات",
+    "مقارنة أوقات النقل عبر الشبكات المختلفة"
+  ],
+  "fileSize": "File Size",
+  "connectionSpeed": "Connection Speed",
+  "presetSpeeds": "Preset Speeds",
+  "estimatedTime": "Estimated Transfer Time",
+  "hours": "hours",
+  "minutes": "minutes",
+  "seconds": "seconds",
+  "note": "Note: Actual transfer times may vary due to network conditions, overhead, and other factors.",
+  "dataSize": "حجم البيانات",
+  "bandwidth": "عرض النطاق",
+  "transferTime": "وقت النقل",
+  "speedUnit": "وحدة السرعة",
+  "sizeUnit": "وحدة الحجم"
+}

@@ -1,0 +1,34 @@
+{
+  "allowAll": "Alle erlauben",
+  "blockAll": "Alle blockieren",
+  "standard": "Standard",
+  "wordpress": "WordPress",
+  "rule": "Regel {index}",
+  "remove": "Entfernen",
+  "userAgent": "User-agent",
+  "allow": "Erlauben (eintrag pro Zeile)",
+  "disallow": "Blockieren (eintrag pro Zeile)",
+  "addRule": "+ Regel hinzufügen",
+  "sitemapUrl": "Sitemap-URL",
+  "crawlDelay": "Crawl-Delay (Sekunden)",
+  "output": "robots.txt",
+  "detailed_description": "Der robots.txt Generator erstellt spezifische Robots Exclusion Protocol (REP)-Dateien, die Suchmaschinen-Crawlern präzise Anweisungen zur Indexierung einer Website geben. Die Datei steuert, welche URLs durch Bots wie Googlebot oder Bingbot durchsucht oder ignoriert werden sollen. Benutzer benötigen dieses Tool, um kritische Bereiche (z.B. Admin-Oberflächen, Testumgebungen) vor unerwünschtem Crawling zu schützen, Ressourcenengpässe zu vermeiden oder SEO-Strategien zu optimieren. Das Tool funktioniert durch eine interaktive Formularlogik: Nutzer definieren User-Agent-Spezifikationen, setzen Disallow-/Allow-Regeln für Pfade, integrieren Sitemap-Links und konfigurieren Crawldelays. Dabei werden Wildcard-Operatoren (*, $) für dynamische URL-Muster unterstützt, und die Ausgabevalidierung prüft Syntaxkonformität gemäß REP-Standard. Die generierte Datei wird als UTF-8-kodiertes Textdokument bereitgestellt, das direkt in das Hauptverzeichnis der Domain hochgeladen werden kann.",
+  "usage_steps": [
+    "Wählen Sie im Dropdown-Menü die Ziel-User-Agents aus (z.B. 'Googlebot', 'Bingbot' oder universelles '*').",
+    "Geben Sie im Textfeld 'Disallow' die zu blockierenden Verzeichnisse/Pfade ein (z.B. '/wp-admin/').",
+    "Nutzen Sie das 'Allow'-Feld für Ausnahmen innerhalb blockierter Bereiche (z.B. '/images/logo.jpg').",
+    "Setzen Sie einen Crawldelay-Wert (in Sekunden) zur Steuerung der Crawl-Frequenz (z.B. '10').",
+    "Fügen Sie optional einen Sitemap-Link über das Eingabefeld 'Sitemap:' hinzu (z.B. 'https://example.com/sitemap.xml').",
+    "Klicken Sie auf 'Vorschau generieren', prüfen Sie die Syntax und laden Sie die Datei im gewünschten Format herunter."
+  ],
+  "usage_examples": [
+    "Ein E-Commerce-Shop blockiert den '/checkout/'-Bereich, um sensible Zahlungsdaten vor Crawling zu schützen.",
+    "Ein Entwickler verhindert das Indexieren einer staging.example.com-Testumgebung durch Suchmaschinen.",
+    "Ein Blogger schränkt das Crawling von Kommentarbereichen ein, um Serverressourcen zu schonen.",
+    "Eine Nachrichtenwebsite definiert mit Wildcards ('/news/*.pdf$') das Ausschließen von PDF-Archiven und setzt einen Crawldelay von 5 Sekunden."
+  ],
+  "copied": "Kopiert!",
+  "copy": "Kopieren",
+  "allow-all": "Alle erlauben",
+  "block-all": "Alle blockieren"
+}

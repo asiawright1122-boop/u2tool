@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Diff Checker é uma ferramenta de comparação de texto avançada que permite aos usuários identificar e visualizar as diferenças entre dois conjuntos de texto. Utilizando algoritmos de detecção de diferenças, o Diff Checker destaca as linhas e palavras que foram adicionadas, removidas ou modificadas, proporcionando uma visão clara e detalhada das alterações. Esta ferramenta é essencial para desenvolvedores, editores de conteúdo, e qualquer pessoa que precise comparar versões de documentos, códigos fonte, ou textos em geral. Alguns dos casos de uso específicos incluem a revisão de contratos legais, a comparação de versões de códigos de software, e a verificação de alterações em documentos de colaboração. O Diff Checker opera de maneira eficiente, mesmo com grandes volumes de texto, garantindo que as diferenças sejam identificadas e exibidas de forma precisa e intuitiva.",
+  "usage_steps": [
+    "Abra a página do Diff Checker no seu navegador.",
+    "No painel esquerdo, cole o texto original na área de entrada 'Texto 1'.",
+    "No painel direito, cole o texto modificado ou a versão mais recente na área de entrada 'Texto 2'.",
+    "Clique no botão 'Comparar' localizado abaixo das áreas de entrada.",
+    "O Diff Checker processará os textos e exibirá as diferenças destacadas em cores diferentes: adições em verde, remoções em vermelho, e modificações em laranja.",
+    "Explore a visualização resultante e utilize as ferramentas de navegação para examinar as alterações em detalhes, como o botão 'Ir para Próxima Diferença' ou 'Ir para Diferença Anterior'."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor de software precisa comparar duas versões de um código-fonte para identificar as alterações feitas por um colega. O Diff Checker ajuda a localizar rapidamente as modificações, facilitando a revisão e a integração do código.",
+    "Um editor de um jornal online utiliza o Diff Checker para comparar a versão final de um artigo com a versão inicial, garantindo que todas as correções e melhorias tenham sido aplicadas corretamente.",
+    "Um advogado precisa revisar as alterações feitas em um contrato legal. O Diff Checker destaca as modificações, facilitando a análise e a aprovação do documento.",
+    "Um professor de literatura compara duas versões de um ensaio de um aluno para verificar a consistência e a originalidade do trabalho. O Diff Checker ajuda a identificar possíveis plágios ou erros de edição."
+  ]
+}

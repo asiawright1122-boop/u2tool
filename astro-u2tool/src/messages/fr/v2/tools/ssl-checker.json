@@ -1,0 +1,30 @@
+{
+  "checking": "En cours de vérification...",
+  "check": "Vérifier le certificat SSL",
+  "valid": "Certificat SSL Valide",
+  "invalid": "Certificat SSL Invalide",
+  "issuer": "Émetteur",
+  "subject": "Sujet",
+  "validFrom": "Valide à partir de",
+  "validTo": "Valide jusqu'au",
+  "daysRemaining": "Jours restants",
+  "days": "jours",
+  "protocol": "Protocole",
+  "serialNumber": "Numéro de série",
+  "note": "💡 Note : C'est une version de démonstration. Pour l'utilisation en production, intégrez avec une API de vérification SSL backend.",
+  "detailed_description": "Le SSL Certificate Checker est un outil technique conçu pour analyser les certificats SSL/TLS d'un domaine spécifique, en validant leur intégrité, leur chaîne de confiance et leurs paramètres de sécurité. Il effectue une connexion HTTPS simulée via le protocole TLS 1.2 ou supérieur, extrait le certificat X.509, puis vérifie sa période de validité, le nom commun (CN), les Subject Alternative Names (SAN), l'autorité émettrice (CA), et la présence de vulnérabilités comme SHA-1 ou les clés RSA inférieures à 2048 bits. Cet outil est essentiel pour diagnostiquer des erreurs de certificat causant des avertissements navigateur, auditer la conformité PCI-DSS, ou surveiller l'expiration de certificats EV (Extended Validation). Il utilise des requêtes OCSP (Online Certificate Status Protocol) et CRL (Certificate Revocation List) pour détecter les certificats révoqués, et affiche des détails cryptographiques comme l'algorithme de signature, les extensions critiques ou les paramètres ECDHE. En mode avancé, il teste également la configuration du serveur (HSTS, protocoles supportés, ordre des cipher suites) pour identifier des failles potentielles.",
+  "usage_steps": [
+    "Saisissez le domaine cible dans la barre de saisie 'Domaine' (ex: exemple.com).",
+    "Cochez l'option 'Vérification OCSP' pour activer le contrôle en temps réel de révocation.",
+    "Sélectionnez le port personnalisé (par défaut 443) si le serveur utilise une configuration non standard.",
+    "Cliquez sur 'Analyser SSL' pour initier la connexion TLS et récupérer les données certificat.",
+    "Explorez l'onglet 'Chaîne de Confiance' pour identifier les certificats intermédiaires manquants.",
+    "Consultez la section 'Recommandations' pour des conseils sur la mise à niveau de la sécurité (ex: désactiver TLS 1.0)."
+  ],
+  "usage_examples": [
+    "Un développeur identifie un certificat expirant dans 7 jours sur un site e-commerce avant une campagne marketing critique.",
+    "Un administrateur système diagnostique une erreur 'CERTIFICATE_VERIFY_FAILED' sur un serveur en validant la chaîne de certificats intermédiaires.",
+    "Un auditeur de sécurité vérifie qu'un certificat wildcard (*.domaine.fr) n'est pas vulnérable à une attaque d'homographie.",
+    "Un responsable IT compare les cipher suites configurées sur un serveur Apache avec les recommandations NIST pour renforcer TLS 1.3."
+  ]
+}

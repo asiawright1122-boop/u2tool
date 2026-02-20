@@ -1,0 +1,41 @@
+{
+  "bandMeasurement": "Medida de Banda",
+  "bustMeasurement": "Medida de Busto",
+  "measureUnder": "Medir debajo del busto",
+  "measureFullest": "Medir en el punto más lleno",
+  "bandSize": "Talla de Banda",
+  "cupSize": "Talla de Copa",
+  "sisterSizes": "Tallas Hermanas",
+  "measureGuide": "Cómo Medir",
+  "detailed_description": "El Bra Size Calculator es una herramienta de conversión técnica que determina la talla de sujetador ideal mediante el análisis matemático de dos medidas corporales críticas: la circunferencia torácica (bajo el busto) y la circunferencia busto (punto más prominente). Utiliza algoritmos que aplican estándares internacionales de confección, como la diferencia entre ambas medidas para calcular el volumen de la copa (en pulgadas o centímetros) y la talla base del bandeo. La herramienta resuelve problemas de ajuste frecuentes en la industria de la moda íntima, donde discrepancias de tallaje entre marcas, cambios hormonales o variaciones anatómicas pueden generar incomodidad o soporte inadecuado. Al procesar los datos con fórmulas de conversión precisas (ej: talla de bandeo = circunferencia torácica + ajuste elástico), el sistema genera recomendaciones que incluyen talla numérica, letra de copa y sugerencias para ajustes personalizados según elasticidad del tejido.",
+  "usage_steps": [
+    "Accede al calculador y localiza los campos de entrada numérica para 'Medida Torácica' y 'Medida Busto'.",
+    "Introduce la circunferencia torácica en centímetros o pulgadas, asegurando que la cinta métrica esté horizontal y ajustada.",
+    "Ingresa la medición del busto en la unidad seleccionada, tomada en el punto más saliente del pecho.",
+    "Activa el botón 'Calcular Talla' para procesar los datos mediante el motor de conversión.",
+    "Revisa el resultado detallado que muestra talla de bandeo, letra de copa y margen de error sugerido para variaciones de tejido.",
+    "Utiliza las recomendaciones adicionales para ajustar por morfología específica (ej: copas preformadas vs. sin relleno)."
+  ],
+  "usage_examples": [
+    "Una usuaria compra en línea un sujetador europeo (75B) pero requiere convertirlo a sistema estadounidense (34B) para comparar con catálogos internacionales.",
+    "Después de un embarazo, una persona necesita recalibrar su tallaje debido a cambios en el volumen mamario, usando las mediciones actuales para obtener una talla precisa.",
+    "Un diseñador de lencería adapta patrones a medida empleando el calculador para convertir medidas corporales en especificaciones técnicas de confección.",
+    "Al viajar a Japón, una cliente consulta su tallaje local (Wacoal) versus el estándar internacional para garantizar ajuste en prendas adquiridas en tiendas locales."
+  ],
+  "calculateMode": "Calculate Mode",
+  "convertMode": "Convert Mode",
+  "cm": "Cm",
+  "inch": "Inch",
+  "underbust": "Underbust",
+  "underbustHelp": "Underbust Help",
+  "bust": "Bust",
+  "bustHelp": "Bust Help",
+  "selectBand": "Select Band",
+  "selectCup": "Select Cup",
+  "yourSize": "Your Size",
+  "fittingTips": "Fitting Tips",
+  "tip1": "Bebe un vaso de agua al despertar",
+  "tip2": "Lleva una botella de agua contigo",
+  "tip3": "Configura recordatorios para beber agua",
+  "tip4": "Tip4"
+}

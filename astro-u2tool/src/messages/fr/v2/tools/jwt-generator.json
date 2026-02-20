@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le générateur JWT permet de créer des jetons Web JSON (JWT) conformes aux normes RFC 7519, intégrant des charges utiles personnalisées et des mécanismes de signature sécurisée. Ce dispositif technique sert à générer des jetons structurés en trois parties (en-tête, payload, signature) utilisant des algorithmes cryptographiques comme HMAC-SHA256 ou RS256. Les développeurs ont besoin de cet outil pour simuler des scénarios d'authentification stateless, tester la gestion des permissions dans les microservices, ou valider le comportement de middleware d'API. Le fonctionnement repose sur la saisie de revendications (claims) personnalisées sous format JSON, la sélection de l'algorithme de signature, et l'application d'une clé secrète (secret key) pour produire un token base64url encodé. L'interface décompose chaque composante du JWT, affichant en temps réel l'en-tête JWA, le payload JWS et la signature cryptographique finale, ce qui permet un débogage précis des en-têtes de sécurité.",
+  "usage_steps": [
+    "Accédez à l'onglet 'Payload' et définissez vos revendications (claims) personnalisées au format JSON (ex: {\"sub\": \"1234567890\", \"exp\": 1593423435})",
+    "Sélectionnez l'algorithme de signature désiré via le menu déroulant 'Algorithm' (HS256, HS384, HS512, RS256, etc.)",
+    "Saisissez votre clé secrète (secret key) dans le champ dédié, ou générez-en une automatiquement avec le bouton 'Generate Secure Key'",
+    "Activez l'option 'Add Standard Headers' pour inclure les paramètres JWA recommandés (typ, alg) dans l'en-tête",
+    "Cliquez sur 'Generate Token' pour produire le JWT complet avec séparation explicite des trois segments (header.payload.signature)",
+    "Utilisez le bouton 'Verify Signature' pour valider la structure cryptographique avant déploiement en environnement de test"
+  ],
+  "usage_examples": [
+    "Simuler un jeton d'authentification pour tester un middleware Node.js utilisant la bibliothèque express-jwt",
+    "Générer un token temporaire pour un système de réinitialisation de mot de passe avec expiration (claim 'exp') définie à 15 minutes",
+    "Créer des jetons de service-to-service avec des revendications de rôle RBAC pour sécuriser une architecture microservices",
+    "Tester la compatibilité d'un reverse proxy (ex: NGINX) avec les JWT lors de l'implémentation de l'authentification OAuth2 introspection"
+  ]
+}

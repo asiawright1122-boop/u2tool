@@ -1,0 +1,31 @@
+{
+  "detailed_description": "L'Horloge Mondiale est un outil pratique d'affichage multi-fuseaux horaires qui vous permet de voir l'heure actuelle dans plusieurs villes simultanément. Prend en charge l'ajout de plus de 20 grandes villes incluant New York, Londres, Tokyo, Sydney, Shanghai, Singapour et plus. Chaque carte de ville affiche l'heure actuelle, la date et le décalage horaire, avec des icônes soleil/lune indiquant s'il fait jour ou nuit localement. Prend en charge le basculement entre format 12/24 heures et l'affichage optionnel des secondes. Interface propre et belle avec mises à jour en temps réel. Outil essentiel pour le travail et les voyages entre fuseaux horaires.",
+  "usage_steps": [
+    "Ouvrez la page de l'outil Horloge Mondiale",
+    "L'affichage par défaut montre New York, Londres, Tokyo et Sydney",
+    "Sélectionnez une ville à ajouter dans le menu déroulant",
+    "Cliquez sur le bouton Ajouter une ville pour l'ajouter à l'affichage",
+    "Cliquez sur le × d'une carte de ville pour la supprimer",
+    "Utilisez les options supérieures pour basculer le format 24 heures ou afficher les secondes"
+  ],
+  "usage_examples": [
+    "Vérifier les heures dans différents lieux pour la collaboration d'équipes internationales",
+    "Planifier des réunions et appels internationaux",
+    "Connaître l'heure de destination lors de voyages à l'étranger",
+    "Confirmer l'heure lors de contacts avec amis et famille à l'étranger"
+  ],
+  "faqs": [
+    {
+      "question": "Quelles villes sont prises en charge ?",
+      "answer": "Plus de 20 grandes villes mondiales sont prises en charge, incluant New York, Los Angeles, Chicago, Londres, Paris, Berlin, Moscou, Dubaï, Mumbai, Singapour, Hong Kong, Shanghai, Tokyo, Séoul, Sydney, Auckland et plus."
+    },
+    {
+      "question": "L'heure est-elle précise ?",
+      "answer": "L'heure est basée sur l'heure système de votre appareil et se met à jour chaque seconde. Tant que l'heure de votre appareil est précise, les heures des villes affichées seront précises."
+    },
+    {
+      "question": "Comment savoir s'il fait jour ou nuit ?",
+      "answer": "Chaque carte de ville affiche une icône soleil ☀️ ou lune 🌙. Le soleil indique le jour (6:00-18:00), la lune indique la nuit (autres heures)."
+    }
+  ]
+}

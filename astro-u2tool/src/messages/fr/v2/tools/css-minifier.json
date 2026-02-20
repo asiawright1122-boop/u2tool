@@ -1,0 +1,26 @@
+{
+  "input": "Entrée CSS",
+  "output": "Sortie Minifiée",
+  "minify": "Minifier",
+  "copy": "Copier",
+  "detailed_description": "Le CSS Minifier est un outil de développement web qui optimise les feuilles de style CSS en supprimant les espaces inutiles, les commentaires, et en compressant les propriétés et valeurs CSS. Cette minification permet de réduire considérablement la taille des fichiers CSS, améliorant ainsi les temps de chargement des pages web et l'expérience utilisateur. Les développeurs web ont souvent besoin de ce type d'outil lorsqu'ils travaillent sur des projets à grande échelle, où chaque octet compte pour l'optimisation des performances. En utilisant le CSS Minifier, les développeurs peuvent non seulement améliorer les performances de leur site, mais aussi faciliter la maintenance et la gestion des fichiers CSS, car la version minifiée est plus compacte et plus rapide à déployer. L'outil fonctionne en analysant le code CSS d'entrée, en appliquant des algorithmes de compression, puis en générant une version minifiée et optimisée du code. Les utilisateurs peuvent également choisir de conserver ou de supprimer les commentaires, selon leurs besoins spécifiques.",
+  "usage_steps": [
+    "Accédez à la page du CSS Minifier via le menu de navigation du site.",
+    "Collez votre code CSS dans la zone de texte prévue à cet effet.",
+    "Sélectionnez les options de minification souhaitées, comme la suppression des commentaires, en cochant les cases correspondantes.",
+    "Cliquez sur le bouton 'Minifier' pour lancer le processus de compression.",
+    "Une fois le processus terminé, votre code CSS minifié apparaîtra dans la zone de texte de sortie.",
+    "Copiez le code minifié et utilisez-le dans votre projet en le sauvegardant dans un fichier .css."
+  ],
+  "usage_examples": [
+    "Un développeur travaillant sur un site web e-commerce avec de nombreux fichiers CSS souhaite réduire les temps de chargement des pages. Il utilise le CSS Minifier pour compresser tous les fichiers CSS, améliorant ainsi les performances du site.",
+    "Une équipe de développement frontend prépare le déploiement d'une nouvelle version d'une application web. Avant le déploiement, ils utilisent le CSS Minifier pour minifier les fichiers CSS, assurant ainsi que les utilisateurs bénéficieront d'une expérience de chargement optimisée.",
+    "Un développeur freelance travaille sur un projet de site vitrine pour un client. Pour respecter les délais et optimiser les performances, il utilise le CSS Minifier pour compresser les fichiers CSS, rendant le site plus rapide et plus efficace.",
+    "Un gestionnaire de projet web veut contrôler les coûts de bande passante et d'hébergement. En utilisant le CSS Minifier, il réduit la taille des fichiers CSS, ce qui permet de diminuer les coûts d'hébergement et d'améliorer l'efficacité de la distribution de contenu."
+  ],
+  "inputPlaceholder": "Entrez le code CSS...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "originalSize": "Taille Originale",
+  "minifiedSize": "Taille Minifiée",
+  "sizeReduced": "Taille Réduite"
+}

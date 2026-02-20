@@ -1,0 +1,29 @@
+{
+  "input": "Input String",
+  "inputPlaceholder": "Enter text to obfuscate...",
+  "obfuscate": "Obfuscate",
+  "result": "Result",
+  "copy": "Copy",
+  "error": "Error obfuscating string",
+  "methodBase64": "Base64",
+  "methodHex": "Hex",
+  "methodHtml": "HTML Entities",
+  "methodUrl": "URL Encode",
+  "methodRot13": "ROT13",
+  "methodReverse": "Reverse",
+  "detailed_description": "The String Obfuscator is a security tool designed to transform plaintext strings into obfuscated representations using multi-layered encoding techniques. It employs a combination of Base64 encoding, hexadecimal conversion, ASCII substitution, and configurable character shifting to render data unintelligible to casual observers. By processing input through sequential encoding stages with optional custom delimiter patterns and entropy injection, the tool creates non-reversible transformations that resist pattern recognition. Developers use this tool to protect sensitive information like API keys, credentials, or proprietary logic embedded in client-side code, configuration files, or logs. Unlike simple encoding tools, it introduces variable substitution and positional shuffling to prevent dictionary-based attacks. The output maintains string validity for programming contexts while eliminating human-readable patterns, making it ideal for scenarios requiring data concealment without cryptographic security guarantees.",
+  "usage_steps": [
+    "Navigate to the String Obfuscator interface and locate the 'Input String' textarea.",
+    "Select encoding layers from the dropdown menu (e.g., Base64 → Hex → ASCII Shift).",
+    "Enter your sensitive string (e.g., 'secretApiKey123') into the input field.",
+    "Toggle advanced options: enable 'Custom Delimiter' to insert randomized separators or adjust 'Shift Value' for ASCII offset.",
+    "Click the 'Obfuscate' button to process the string through selected encoding stages.",
+    "Copy the obfuscated output from the 'Result' box for implementation in your codebase or configuration files."
+  ],
+  "usage_examples": [
+    "Obfuscating API keys in JavaScript source code to prevent casual extraction during client-side execution.",
+    "Anonymizing user identifiers in log files while maintaining traceability for debugging purposes.",
+    "Securing database credentials in configuration files deployed to shared hosting environments.",
+    "Masking sensitive parameters in URLs to prevent information leakage through browser history or server logs."
+  ]
+}

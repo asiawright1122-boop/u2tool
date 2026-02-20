@@ -1,0 +1,33 @@
+{
+  "detailed_description": "Text Repeater duplicates your text as many times as you need. Choose from various separators and optionally add numbering. Great for testing, creating sample data, or filling content.",
+  "usage_steps": [
+    "Enter text to repeat",
+    "Set repeat count",
+    "Choose separator type",
+    "Optionally add numbering",
+    "Copy or download result"
+  ],
+  "usage_examples": [
+    "Create test data",
+    "Fill placeholder content",
+    "Generate patterns"
+  ],
+  "inputLabel": "Text to Repeat",
+  "inputPlaceholder": "Enter text here...",
+  "repeatCount": "Repeat Count",
+  "separator": "Separator",
+  "newline": "New Line",
+  "space": "Space",
+  "comma": "Comma",
+  "semicolon": "Semicolon",
+  "tab": "Tab",
+  "none": "None",
+  "addNumbering": "Add Numbering",
+  "result": "Result",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "download": "Download",
+  "resultPlaceholder": "Result will appear here...",
+  "characters": "characters",
+  "lines": "lines"
+}

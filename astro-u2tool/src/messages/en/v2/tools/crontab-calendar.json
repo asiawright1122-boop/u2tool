@@ -1,0 +1,29 @@
+{
+  "expression": "Cron Expression",
+  "expressionPlaceholder": "0 9 * * 1-5",
+  "parse": "Parse",
+  "nextRuns": "Next 10 Runs",
+  "calendarView": "Calendar View",
+  "listView": "List View",
+  "invalidCron": "Invalid cron expression",
+  "scheduledRun": "Scheduled Run",
+  "today": "Today",
+  "prevMonth": "Previous Month",
+  "nextMonth": "Next Month",
+  "formatHint": "Format: minute hour day-of-month month day-of-week (e.g., 0 9 * * 1-5)",
+  "detailed_description": "The Crontab Calendar is a specialized visualization tool that translates cron schedule expressions into interactive calendar representations. This tool parses standard cron syntax (including Vixie, AIX, and systemd variants) and maps scheduled execution times onto a navigable monthly or weekly calendar grid. It addresses the critical need for schedule verification in automated system maintenance, batch processing, and DevOps workflows where timing conflicts or misconfigurations can cause service disruptions. The engine employs precise timezone-aware date calculations using the system's locale settings and IANA Time Zone Database references to ensure accuracy across daylight saving transitions. Technical users benefit from granular controls like minute-level precision adjustment, recurrence rule expansion (e.g., handling '@hourly' macros), and conflict detection algorithms that highlight overlapping job executions. The interface renders ISO week-numbering calendar views alongside Gregorian dates, enabling alignment with enterprise scheduling standards. Advanced features include cron field validation, error margin visualization for system clock drift, and integration with CI/CD pipelines via programmatic output formats like JSON and iCalendar.",
+  "usage_steps": [
+    "Input cron expression into the multi-line text area using standard syntax (e.g., '0 2 * * 1-5')",
+    "Adjust date range using the dual-month calendar picker to set visualization window",
+    "Select target timezone from 593+ IANA-compliant options in the dropdown menu",
+    "Click 'Parse & Render' to generate schedule visualization with color-coded job slots",
+    "Use the timeline slider to drill down into specific hourly intervals and view execution stacks",
+    "Export calendar data via 'Download as iCal' or 'Copy JSON' buttons for integration with scheduling systems"
+  ],
+  "usage_examples": [
+    "Validating biweekly database backups at 02:00 AM during daylight saving transitions across EC2 instances",
+    "Coordinating containerized microservices deployments across three AWS regions with staggered maintenance windows",
+    "Auditing legacy cron job overlaps in a high-frequency trading system's market data ingestion pipeline",
+    "Debugging a misconfigured 'first Sunday of quarter' ETL process causing duplicate data ingestion incidents"
+  ]
+}

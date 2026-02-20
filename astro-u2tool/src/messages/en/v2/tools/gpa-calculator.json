@@ -1,0 +1,41 @@
+{
+  "course": "Course",
+  "grade": "Grade",
+  "credits": "Credits",
+  "addCourse": "Add Course",
+  "removeCourse": "Remove",
+  "gpaScale": "GPA Scale",
+  "scale4": "4.0 Scale",
+  "scale5": "5.0 Scale",
+  "currentGpa": "Current GPA",
+  "totalCredits": "Total Credits",
+  "gradePoints": "Grade Points",
+  "cumulativeGpa": "Cumulative GPA",
+  "detailed_description": "The GPA Calculator tool computes grade point averages by converting letter grades to standardized numerical values (e.g., A=4.0, B=3.0) and applying a weighted average formula based on credit hours. It addresses the need for precision in academic performance tracking, particularly for students managing multiple courses with varying credit weights, honors/AP designations, or pass/fail options. Technically, the tool uses a hash map to map grades to their corresponding values, then calculates quality points by multiplying each grade's value by its credit hours. These points are aggregated and divided by total attempted credits to produce a semester or cumulative GPA. The algorithm accounts for edge cases like repeated courses or non-traditional grading scales (e.g., A-=3.7, B+=3.3). It also supports weighted calculations for institutions where honors courses add 0.5 points to standard grade values. Users can simulate hypothetical scenarios (e.g., 'What if I earn a B+ in this 4-credit course?') to model academic outcomes, making it essential for degree planning, scholarship applications, or graduate school prerequisites.",
+  "usage_steps": [
+    "Click '+ Add Course' to create a dynamic form field for each class",
+    "Select course type (Standard, Honors, AP) from a dropdown menu to apply weighted grade points",
+    "Enter credit hours using a numerical input field (0.5 to 5.0 increments supported)",
+    "Choose letter grade (A+ to F) or percentage-based input (75-100%) via radio buttons",
+    "Toggle 'Excluded from GPA' checkbox for pass/fail courses that impact credit hours only",
+    "Click 'Calculate' to execute the weighted average algorithm and display results with two decimal precision"
+  ],
+  "usage_examples": [
+    "A first-year student calculates their semester GPA after receiving three B+ grades (3.3 each) in 3-credit courses and an A in a 4-credit honors class",
+    "A transfer student converts their community college percentage-based grades (87%, 92%, 81%) to GPA values using a 4.0 scale for university application",
+    "An engineering major determines the impact of retaking a failed 3-credit physics course on their cumulative 3.1 GPA",
+    "A high school senior uses weighted calculations to demonstrate eligibility for a merit scholarship requiring a 3.7 GPA with two AP courses"
+  ],
+  "excellent": "Excellent",
+  "good": "Good",
+  "satisfactory": "Satisfactory",
+  "passing": "Passing",
+  "needsImprovement": "Needs Improvement",
+  "scale": "Scale",
+  "courses": "Courses",
+  "courseName": "Course Name",
+  "yourGpa": "Your Gpa",
+  "totalPoints": "Total Points",
+  "percentage": "Percentage",
+  "gradeReference": "Grade Reference"
+}

@@ -1,0 +1,52 @@
+{
+  "detailed_description": "SQL查询优化器分析您的SQL查询，并提供优化建议以提升性能。",
+  "usage_steps": [
+    "粘贴SQL查询",
+    "选择数据库类型",
+    "点击优化",
+    "查看建议",
+    "应用更改"
+  ],
+  "usage_examples": [
+    "优化慢速SELECT查询",
+    "获取索引推荐",
+    "重写子查询"
+  ],
+  "input": "输入",
+  "output": "输出",
+  "process": "处理",
+  "copy": "复制",
+  "clear": "清除",
+  "inputPlaceholder": "输入 SQL 查询...",
+  "outputPlaceholder": "结果将显示在此处...",
+  "errors": {
+    "emptyInput": "请输入一些内容"
+  },
+  "loadExample": "加载示例",
+  "analyze": "分析",
+  "generate": "生成",
+  "format": "格式化",
+  "convert": "转换",
+  "validate": "验证",
+  "export": "导出",
+  "preview": "预览",
+  "reset": "重置",
+  "add": "添加",
+  "remove": "移除",
+  "save": "保存",
+  "cancel": "取消",
+  "settings": "设置",
+  "options": "选项",
+  "results": "结果",
+  "noResults": "无结果",
+  "loading": "加载中...",
+  "success": "成功",
+  "failed": "失败",
+  "warning": "警告",
+  "info": "信息",
+  "sqlQuery": "SQL 查询",
+  "queryPerformanceScore": "查询性能评分",
+  "optimizationSuggestions": "优化建议",
+  "formattedQuery": "格式化查询",
+  "fix": "修复"
+}

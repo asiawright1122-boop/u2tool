@@ -1,0 +1,35 @@
+{
+  "detailed_description": "Le générateur de noms fictifs produit des identités réalistes en combinant des patronymes et des prénoms selon des distributions de fréquence par langue. L’outil fonctionne par échantillonnage pondéré à partir de jeux de données par pays, en respectant la casse, les accents et les ordres nominaux (par exemple, nom de famille en dernier pour « fr-FR », patronyme mongol avec « oğlu », ou порядок по-русски). Il expose des paramètres déterministes: graine (seed) pour la reproductibilité, ratio de genres, nombre d’entrées, et options de translittération ou d’ASCII-only. La logique de duplication est contrôlée: si « éviter les doublons » est actif, un hash SHA-256 détecte les collisions et l’algorithme re-tire jusqu’à obtenir N identifiants uniques. Les formats de sortie incluent JSON et CSV avec entêtes; les champs retournent locale, script (Latin, Cyrillique, etc.), genre, prénom, nom, et, si demandé, une initiale du patronyme (comme « ben » en ar-SA). En interne, un PRNG de type Mulberry32 ou Xoshiro128** est alimenté par la graine, assurant une distribution stable à chaque rafraîchissement. L’outil convient aux tests UI, à la démo d’algorithmes d’authentification, à la validation de pipelines ETL, et aux tests d’accessibilité (lecture par screen readers) sans exposer de données réelles.",
+  "usage_steps": [
+    "Sélectionnez un pays (ex. « France ») et un script (Latin par défaut) dans le sélecteur « Pays/Script ».",
+    "Ajustez le curseur « Genre (F/H/Neutre) » et le champ « Nombre » (ex. 25) selon vos besoins de charge.",
+    "Activez « Éviter les doublons » et « Préserver les accents » pour conserver les diacritiques; désactivez-les pour une sortie ASCII-only.",
+    "Choisissez le format d’export (CSV ou JSON) et le séparateur (virgule, point-virgule ou tabulation).",
+    "Cliquez sur « Générer »: l’aperçu s’affiche avec colonnes locale, script, genre, prénom, nom, et option « Initiales » si disponible.",
+    "Utilisez « Télécharger » ou « Copier dans le presse-papiers » pour insérer le résultat dans vos tests automatisés ou vos outils CI."
+  ],
+  "usage_examples": [
+    "Équipe QA de localisation: vérifier l’affichage des scripts non latins (ex. Cyrillique pour ru-RU) et la compatibilité avec ICU en chargeant 120 profils via CSV pour des tests d’UI bidi.",
+    "Développeur backend: mocker une API d’utilisateurs avec des payloads JSON déterministes (seed définie), afin d’itérer sur la sérialisation et la validation de schémas sans PII réelle.",
+    "Analyste de données: simuler 10 000 identités pour un benchmark ETL (transformations, agrégations) et mesurer l’impact des accents sur la normalisation Unicode (NFC/NFKC) dans Spark.",
+    "Chercheur en UX: tester la perception d’accessibilité par screen readers avec 50 échantillons par genre et par langue, en exportant uniquement prénom et nom pour des sessions de tests contrôlées."
+  ],
+  "country": "Pays/Culture",
+  "english": "Anglais (US/UK)",
+  "chinese": "Chinois",
+  "japanese": "Japonais",
+  "korean": "Coréen",
+  "german": "Allemand",
+  "spanish": "Espagnol",
+  "gender": "Genre",
+  "random": "Aléatoire",
+  "male": "Masculin",
+  "female": "Féminin",
+  "count": "Nombre",
+  "generate": "Générer des noms",
+  "generatedNames": "Noms générés",
+  "copyAll": "Copier tout",
+  "copied": "Copié!",
+  "disclaimer": "Avertissement",
+  "disclaimerText": "Ces noms sont générés aléatoirement et toute ressemblance avec des personnes réelles est fortuite."
+}

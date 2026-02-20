@@ -1,0 +1,41 @@
+{
+  "bandMeasurement": "Medida da Banda",
+  "bustMeasurement": "Medida do Busto",
+  "measureUnder": "Medir abaixo do busto",
+  "measureFullest": "Medir no ponto mais cheio",
+  "bandSize": "Tamanho da Banda",
+  "cupSize": "Tamanho do Bojo",
+  "sisterSizes": "Tamanhos Irmãos",
+  "measureGuide": "Como Medir",
+  "detailed_description": "O Calculador de Tamanho de Sutiã é uma ferramenta técnica especializada que converte medidas corporais precisas em tamanhos de sutiã padronizados, utilizando algoritmos baseados em normas internacionais de confecção. O funcionamento envolve a coleta de duas variáveis críticas: a circunferência torácica (medida em centímetros ou polegadas diretamente sob o busto) e o perímetro máximo do busto. A ferramenta aplica cálculos de diferença entre essas medidas para determinar o tamanho do aro (band size) e o volume da taça (cup size), considerando sistemas de graduação como os padrões EUA, Reino Unido e UE. O cálculo do aro utiliza arredondamento matemático para ajustar medidas não inteiras, enquanto a diferença busto-aro é convertida em letras alfabéticas (A, B, C etc.) através de escalas de equivalência. A interface emprega validação de entrada em tempo real, garantindo que valores fora do intervalo fisiológico típico (ex: diferença de busto maior que 25cm) sejam rejeitados. Essa ferramenta é essencial para e-commerce de lingerie, profissionais de moda e usuários finais que buscam precisão na escolha de tamanhos, evitando retrabalho em confecções ou devoluções em vendas online.",
+  "usage_steps": [
+    "Acesse a interface web e localize os campos de entrada numérica com rótulos 'Circunferência Torácica' e 'Perímetro do Busto'.",
+    "Insira as medidas em centímetros ou polegadas utilizando o seletor de unidade de medida disponível.",
+    "Ative a opção 'Correção Automática' para ajuste de medidas fora do padrão fisiológico humano.",
+    "Selecione o sistema de graduação desejado (EUA, Reino Unido ou UE) no menu suspenso 'Padrão de Tamanho'.",
+    "Clique no botão 'Calcular' para executar o algoritmo de conversão e visualizar o resultado formatado.",
+    "Revise o tamanho calculado e a recomendação de ajuste exibidos em destaque na seção de resultados."
+  ],
+  "usage_examples": [
+    "Um e-commerce de lingerie precisa integrar um sistema de recomendação de tamanhos para reduzir taxas de devolução de produtos.",
+    "Um estilista desenvolve um novo molde de sutiã e utiliza a ferramenta para converter tabelas de medidas manuais para padrões digitais.",
+    "Uma usuária com medidas não convencionais (ex: 79cm de torácica e 94cm de busto) busca encontrar seu tamanho correto sem provador físico.",
+    "Um desenvolvedor de aplicativo de saúde feminina implementa a API do calculador para oferecer orientação sobre escolha de lingerie em seu app."
+  ],
+  "calculateMode": "Calculate Mode",
+  "convertMode": "Convert Mode",
+  "cm": "Cm",
+  "inch": "Inch",
+  "underbust": "Underbust",
+  "underbustHelp": "Underbust Help",
+  "bust": "Bust",
+  "bustHelp": "Bust Help",
+  "selectBand": "Select Band",
+  "selectCup": "Select Cup",
+  "yourSize": "Your Size",
+  "fittingTips": "Fitting Tips",
+  "tip1": "Beba um copo de água ao acordar",
+  "tip2": "Leve uma garrafa de água com você",
+  "tip3": "Configure lembretes para beber água",
+  "tip4": "Tip4"
+}

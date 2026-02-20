@@ -1,0 +1,85 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "showLegend": "显示图例",
+  "showLabel": "显示标签",
+  "innerRadius": "内半径",
+  "outerRadius": "外半径",
+  "roseType": "玫瑰类型",
+  "roseNone": "无",
+  "roseRadius": "半径",
+  "roseArea": "面积",
+  "item": "项目",
+  "addItem": "添加项目",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "数据分布",
+  "sampleTitle": "市场份额",
+  "dataEditor": "数据编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "namePlaceholder": "名称",
+  "valuePlaceholder": "值",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "sampleData": {
+    "jan": "一月",
+    "feb": "二月",
+    "mar": "三月",
+    "apr": "四月",
+    "may": "五月",
+    "jun": "六月"
+  },
+  "tips": {
+    "title": "提示",
+    "tip1": "添加带有名称和值的项",
+    "tip2": "调整内/外半径",
+    "tip3": "选择玫瑰类型",
+    "tip4": "启用标签",
+    "tip5": "导出为PNG或SVG"
+  },
+  "detailed_description": "环形图生成器通过HTML5 Canvas和SVG技术实现数据可视化，支持CSV/JSON格式数据输入。其核心功能基于D3.js图表库开发，采用响应式渲染技术确保图表在不同分辨率下的显示效果。用户可通过配置项调整内圆半径比例（20%-80%）、环形厚度（10-100px）及渐变色阶，支持自定义数据标签位置（内部/外部/隐藏）和动态交互提示框。该工具特别适用于需要展示多维比例关系的场景，如企业年报中的部门业绩占比分析、科研数据中的分类统计可视化、电商平台的订单类型分布图，以及教育领域的学生成绩等级比例展示。生成的矢量图形可保持高保真缩放，PNG格式支持透明背景导出。",
+  "usage_steps": [
+    "访问工具页面后选择'空白图表'或'预设模板'开始创建",
+    "在数据面板输入CSV格式数据（首列为分类名称，次列为数值）",
+    "通过颜色配置器选择单色系渐变或自定义RGB色值组合",
+    "拖动滑块调整内圆半径百分比（默认45%）和环形宽度（默认35px）",
+    "启用'动态悬停'功能添加交互提示信息字段映射",
+    "点击'生成预览'后下载SVG矢量文件或PNG透明背景图片"
+  ],
+  "usage_examples": [
+    "市场营销团队制作年度渠道销售占比报告，导出SVG嵌入PPT实现矢量缩放",
+    "医疗研究机构可视化不同病症患者比例，使用渐变色区分病患年龄层",
+    "网站开发者生成实时数据仪表盘，通过API动态更新JSON数据源",
+    "高校教师创建动态教学课件，使用交互式环形图演示统计学概念"
+  ],
+  "faqs": [
+    {
+      "question": "Doughnut Chart Generator 是免费的吗？",
+      "answer": "是的，Doughnut Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Doughnut Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Doughnut Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Doughnut Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Doughnut Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

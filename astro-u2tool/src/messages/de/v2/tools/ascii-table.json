@@ -1,0 +1,32 @@
+{
+  "searchPlaceholder": "Suche nach Zeichen, Code oder Beschreibung...",
+  "showExtended": "Erweiterte ASCII (128-255) anzeigen",
+  "selectedChar": "Ausgewähltes Zeichen",
+  "decimal": "Dezimal",
+  "hex": "Hexadezimal",
+  "octal": "Oktal",
+  "binary": "Binär",
+  "char": "Zeichen",
+  "descriptionHeader": "Beschreibung",
+  "noResults": "Keine passenden Zeichen gefunden",
+  "quickReference": "Schnellreferenz",
+  "controlChars": "Steuerzeichen",
+  "punctuation": "Punktzeichen & Symbole",
+  "digits": "Ziffern (0-9)",
+  "uppercase": "Großbuchstaben (A-Z)",
+  "lowercase": "Kleinbuchstaben (a-z)",
+  "extended": "Erweiterter ASCII",
+  "detailed_description": "Unsere umfassende ASCII-Tabelle bietet eine Referenz für alle 128 Standard-ASCII-Zeichen sowie erweiterten ASCII (128-255). ASCII (American Standard Code for Information Interchange) ist die grundlegende Zeichencodierungsstandards für Computer und elektronische Geräte. Diese ASCII-Kodierungsübersicht zeigt jedes Zeichen mit seinen Dezimal-, Hexadezimal-, Oktal- und Binärwerten - unerlässlich für Programmierer, die mit niedrigeren Datenlevel, Netzwerkprotokollen oder Dateiformaten arbeiten. Die Tabelle umfasst Steuerzeichen (0-31) wie NULL, TAB und Zeilenumbruch; druckbare Zeichen einschließlich Buchstaben, Zahlen und Symbole; und erweiterte ASCII-Zeichen für spezielle Symbole. Verwenden Sie die Suchfunktion, um schnell nach einem Zeichen anhand seines Codes oder seiner Beschreibung zu finden. Perfekt für die Fehlerbehebung von Zeichencodierungsproblemen, das Verständnis von Escape-Sequenzen oder das Lernen über die Repräsentation von Computerzeichen. Lassen Sie diese ASCII-Referenzübersicht als Lesezeichen für schnellen Zugriff während der Entwicklung.",
+  "usage_steps": [
+    "Durchsuchen Sie die ASCII-Tabelle, um Zeichenkodes zu finden",
+    "Verwenden Sie das Suchfeld, um spezifische Zeichen anhand ihres Codes oder ihrer Beschreibung zu finden",
+    "Klicken Sie auf ein Zeichen, um alle seine Kodierungsrepräsentationen anzuzeigen",
+    "Schalten Sie 'Erweiterte ASCII anzeigen' um, um Zeichen 128-255 zu betrachten",
+    "Verwenden Sie Schnellreferenzbereiche, um zu bestimmten Zeichengruppen zu springen"
+  ],
+  "usage_examples": [
+    "Finden Sie den ASCII-Code für den Zeilenumbruch (Dezimal 10, Hexadezimal 0A)",
+    "Nachschlagen des Hexadezimalwerts für den Großbuchstaben 'A' (Dezimal 65, Hexadezimal 41)",
+    "Steuerzeichencodes überprüfen für die Analyse von Textdateien und Protokollen"
+  ]
+}

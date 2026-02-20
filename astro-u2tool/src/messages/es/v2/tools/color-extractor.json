@@ -1,0 +1,31 @@
+{
+  "uploadImage": "Subir Imagen",
+  "dominantColor": "Color Dominante",
+  "palette": "Paleta de Colores",
+  "colors": "Número de Colores",
+  "copyColor": "Copiar Color",
+  "copied": "Copiado",
+  "colorCount": "Número de Colores",
+  "dropzone": "Haz clic o arrastra la imagen para extraer colores",
+  "image": "Imagen",
+  "processing": "Procesando...",
+  "extractColors": "Extraer Colores",
+  "downloadPalette": "Descargar Paleta",
+  "clickToCopy": "Haz clic para copiar",
+  "noColors": "Haz clic en 'Extraer Colores' para obtener la paleta de colores",
+  "detailed_description": "El Color Extractor es una herramienta de procesamiento de imagen que utiliza algoritmos avanzados de análisis de color para extraer los tonos dominantes y la paleta de colores de cualquier imagen. Esta herramienta es esencial para diseñadores, desarrolladores web y profesionales creativos que necesitan identificar y aplicar paletas de color coherentes en sus proyectos. Al subir una imagen, el algoritmo descompone los píxeles en sus componentes RGB, agrupando colores similares y calculando la frecuencia de aparición de cada tono. Los resultados se presentan en una interfaz intuitiva que permite a los usuarios seleccionar y exportar los colores en diferentes formatos, como hexadecimales, RGB o HSL. Esto facilita la integración de los colores extraídos en aplicaciones web, interfaces de usuario y diseños gráficos, garantizando una estética coherente y atractiva.",
+  "usage_steps": [
+    "Abra la página del Color Extractor en su navegador.",
+    "Haga clic en el botón 'Subir Imagen' y seleccione la imagen de la que desea extraer los colores.",
+    "Una vez que la imagen se ha cargado, el algoritmo comenzará automáticamente a procesarla.",
+    "Espere unos momentos mientras se extraen los colores dominantes y se generan las paletas.",
+    "Revise la paleta de colores generada y haga clic en los colores para copiar sus códigos hexadecimales, RGB o HSL.",
+    "Utilice los colores extraídos en sus diseños, aplicaciones web o proyectos creativos."
+  ],
+  "usage_examples": [
+    "Un diseñador web utiliza el Color Extractor para extraer la paleta de colores de un logotipo corporativo y aplicarla consistentemente en todas las secciones de un sitio web, manteniendo la identidad visual de la marca.",
+    "Un artista digital usa la herramienta para obtener los colores dominantes de una pintura famosa y aplicarlos en su propio trabajo, asegurando que su arte tenga una estética coherente con el original.",
+    "Un desarrollador frontend emplea el Color Extractor para identificar los colores utilizados en una interfaz de usuario de una competencia, con el fin de mejorar la estética y la usabilidad de su propia aplicación.",
+    "Un fotógrafo utiliza la herramienta para extraer los colores principales de una serie de fotos y crear una paleta de colores que refleje el tema y la atmósfera de su exposición de fotografía."
+  ]
+}

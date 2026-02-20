@@ -1,0 +1,34 @@
+{
+  "inputMode": "Mode d'Entrée",
+  "modeText": "Texte",
+  "modeFile": "Fichier",
+  "loadSample": "Charger un Échantillon",
+  "textInput": "Texte",
+  "textPlaceholder": "Entrez du texte...",
+  "fileInput": "Fichier",
+  "selectedFile": "Fichier Sélectionné",
+  "errorNoFile": "Veuillez choisir un fichier",
+  "errorReadFile": "Échec de la lecture du fichier",
+  "calculate": "Calculer",
+  "crcHex": "CRC32 (Hexadécimal)",
+  "crcDec": "CRC32 (Décimal)",
+  "copy": "Copier",
+  "info": "Informations",
+  "infoText": "CRC32 est un algorithme de somme de contrôle couramment utilisé pour la détection des erreurs. Cet outil calcule le CRC32 localement dans votre navigateur.",
+  "sampleText": "Bonjour, le monde !",
+  "detailed_description": "Le CRC32 Calculator est un outil technique permettant de générer et de valider des sommes de contrôle basées sur l'algorithme cyclique de redondance (CRC-32) selon la norme IEEE 802.3. Cette méthode, utilisée pour détecter les erreurs dans les transmissions de données, applique un polynôme générateur de degré 32 (0x04C11DB7) pour produire une empreinte numérique de 4 octets. Les développeurs ont besoin de cet outil pour vérifier l'intégrité des fichiers binaires, des paquets réseau ou des flux de données lors de la mise au point d'applications embarquées, de protocoles de communication ou de systèmes de stockage distribué. Le calcul s'effectue en traitant chaque octet de l'entrée via une table de précalcul (méthode de slicing par byte) ou un algorithme bit-à-bit, selon l'implémentation. Le résultat s'affiche en hexadécimal, avec la possibilité de l'ajuster selon les paramètres d'initialisation (0xFFFFFFFF), de post-inversion et d'octet final. L'outil prend en charge les encodages ASCII, UTF-8 et les données binaires brutes, avec une option pour inverser l'ordre des bits d'octet.",
+  "usage_steps": [
+    "Sélectionnez l'onglet 'Texte' ou 'Fichier' selon votre source de données",
+    "Saisissez le texte dans le champ dédié ou collez un hexdump avec l'option 'Hexa' activée",
+    "Choisissez l'encodage source (ASCII/UTF-8/UTF-16LE) pour les conversions de caractères",
+    "Glissez-déposez un fichier binaire ou sélectionnez-le via le bouton 'Parcourir'",
+    "Cliquez sur 'Calculer CRC32' pour exécuter l'algorithme avec les paramètres configurés",
+    "Copiez le résultat en hexadécimal ou téléchargez le rapport JSON contenant le CRC32, le polynôme utilisé et les flags de configuration"
+  ],
+  "usage_examples": [
+    "Validation d'une image firmware avant sa programmation sur un microcontrôleur, en comparant le CRC32 du fichier source et du binaire gravé",
+    "Vérification de l'intégrité des paquets UDP lors du développement d'une application de streaming vidéo en temps réel",
+    "Détection de corruption dans un journal binaire (logfile) après un crash système, en recalculant le CRC32 des enregistrements",
+    "Génération de clés de licence basées sur l'empreinte CRC32 d'un fichier de configuration client, combinée à une fonction de hachage cryptographique"
+  ]
+}

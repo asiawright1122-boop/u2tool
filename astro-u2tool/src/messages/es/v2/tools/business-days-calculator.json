@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El Calculador de Días Laborables es una herramienta técnica diseñada para calcular con precisión los días hábiles entre dos fechas, excluyendo automáticamente sábados, domingos y festivos configurables. Su algoritmo utiliza el calendario gregoriano y soporta zonas horarias personalizadas, permitiendo cálculos precisos para múltiples regiones. La herramienta parsea fechas en formato ISO 8601 y permite definir excepciones laborales mediante listas de festivos nacionales o corporativos, incluso con horarios variables. Esto es crucial para sectores como tecnología (cálculo de SLA), recursos humanos (nómina y licencias) o logística (plazos de entrega). Internamente, el motor emplea aritmética de fechas con ajuste de días no laborables, considerando configuraciones como fines de semana alternativos (ej. viernes/sábado en Oriente Medio) y festivos recurrentes o puntuales. Su motor permite importar calendarios en CSV/JSON o integrarse con APIs externas para actualización automática de festivos.",
+  "usage_steps": [
+    "Seleccione la fecha de inicio con el selector de calendario integrado, ajustando la hora precisa en formato HH:mm.",
+    "Defina la fecha de fin mediante entrada manual en formato ISO (YYYY-MM-DD) o selector gráfico.",
+    "Active las casillas correspondientes a días no laborables (lunes, festivos, etc.) o configure fines de semana personalizados.",
+    "Importe festivos mediante archivo CSV con columnas de fecha y descripción, o ingrese manualmente fechas separadas por comas.",
+    "Pulse el botón 'Calcular' para ejecutar el algoritmo que procesará las 480 posibles combinaciones de días no laborables.",
+    "Revise el resultado detallado que muestra días totales, laborables netos y lista de fechas excluidas con motivos."
+  ],
+  "usage_examples": [
+    "Un ingeniero de soporte calcula 15 días laborables para resolver un ticket SLA Nivel 1, excluyendo 3 festivos regionales y fines de semana.",
+    "El departamento de nómina determina 22 días efectivos en un ciclo de pago mensual, considerando 2 días de asueto corporativo.",
+    "Un gerente de proyecto internacional calcula plazos en múltiples zonas horarias, ajustando festivos de EUA, Alemania y Japón.",
+    "Un abogado calcula 30 días hábiles para una notificación legal, excluyendo fines de semana y 5 festivos nacionales específicos."
+  ]
+}

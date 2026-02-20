@@ -1,0 +1,27 @@
+{
+  "detailed_description": "Unser PDF-zu-Text-Tool extrahiert präzise maschinenlesbaren Text aus komplexen PDF-Dokumenten durch eine mehrstufige Analyse der internen PDF-Objektstruktur. Die Software verwendet eine Kombination aus lexikalischer Tokenisierung und syntaktischem Parsing, um Textinhalte inklusive spezieller Zeichen (z.B. Unicode-Glyphen, Subskripte) zu decodieren, die in traditionellen PDF-Parsern oft verloren gehen. Besonders bei multipage-Dokumenten mit nicht-linearen Objektverweisen generiert der Algorithmus automatisch Seitentrenner (<<PAGE_BREAK>>-Tags) zur Erhaltung der strukturellen Integrität. Entwickler profitieren von der präzisen Umwandlung von Vektorgrafik-basierten Texten durch die integrierte OCR-Technologie (mit Tesseract 5.0-Integration), während das Tool gleichzeitig die Zeichencodierung (UTF-8, ISO-8859-1) und Absatzstruktur (Einrückungen, Zeilenumbrüche) originalgetreu beibehält. Dieses Instrument ist unverzichtbar für Datenmigrationen in NLP-Pipelines, Content-Archivierung oder maschinellem Lernen mit historischen Dokumenten.",
+  "usage_steps": [
+    "1. Ziehen Sie das PDF-Dokument in den markierten Drag-and-Drop-Bereich oder klicken Sie auf 'Datei auswählen'.",
+    "2. Aktivieren Sie im Einstellungsmenü 'OCR erzwingen', falls Text in gescannten Dokumenten versteckt ist.",
+    "3. Wählen Sie im Seitenkonfigurator den gewünschten Extraktionsbereich (Einzelne Seiten, Bereich oder Alle Seiten).",
+    "4. Legen Sie die Ausgabecodierung (UTF-8/ASCII) und Trennzeichen für Seitenumbrüche (Standard: <<PAGE_BREAK>>) fest.",
+    "5. Klicken Sie auf 'Extrahieren' und überwachen Sie den Fortschritt im Echtzeit-Log (zeigt verarbeitete Objekte/Seiten an).",
+    "6. Laden Sie das Ergebnis als .txt herunter oder kopieren Sie den Text direkt aus dem interaktiven Vorschau-Fenster."
+  ],
+  "usage_examples": [
+    "1. Ein Wissenschaftler konvertiert eine 300-seitige Dissertation mit mathematischen Formeln in ein durchsuchbares Textdokument für Literaturverwaltungssoftware.",
+    "2. Ein Finanzanalyst extrahiert automatisiert Tabellenwerte aus quartalsweisen PDF-Berichten zur Weiterverarbeitung in Python-Pandas-Dataframes.",
+    "3. Ein Archivar wandelt 50 Jahre alte Zeitungsausgaben im PDF/A-Format in korpusfähigen Rohdatenbestand für ein digitales Gedächtnisprojekt.",
+    "4. Ein Softwareentwickler migriert Benutzeranleitungen aus PDFs in ein Markdown-basiertes Wiki-System durch batchweise Textextraktion."
+  ],
+  "faqs": [
+    {
+      "question": "Funktioniert das mit gescannten PDFs?",
+      "answer": "Dieses Tool extrahiert eingebetteten Text aus PDFs. Für gescannte Bilder benötigen Sie möglicherweise OCR-Software."
+    },
+    {
+      "question": "Gibt es eine Dateigrößenbegrenzung?",
+      "answer": "Die Verarbeitung erfolgt in Ihrem Browser, daher können sehr große Dateien langsam sein. Wir empfehlen Dateien unter 50MB."
+    }
+  ]
+}

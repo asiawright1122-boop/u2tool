@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Byte Counter é uma ferramenta técnica projetada para calcular com precisão o tamanho em bytes de uma sequência de texto, considerando as codificações UTF-8, UTF-16 (BE/LE) e ASCII. Ao processar o texto inserido, o tool aplica algoritmos de codificação conforme padrões do Unicode, expondo variações como a representação multibyte de caracteres especiais em UTF-8 ou o uso fixo de 2 bytes por caractere em UTF-16. Isso é essencial para desenvolvedores que precisam validar limites de payloads em APIs REST, otimizar armazenamento em bancos de dados NoSQL com quotas por documento ou diagnosticar discrepâncias em transmissões de dados binários. A ferramenta opera totalmente no cliente, usando a API TextEncoder do JavaScript para simular conversões reais sem enviar dados ao servidor, garantindo privacidade e conformidade com especificações ECMA-262. Diferentemente de contadores simplificados, ele exibe detalhes como inclusão opcional do BOM (Byte Order Mark) em UTF-16 e a diferença exata entre comprimento de string e ocupação em bytes, crucial para protocolos de rede sensíveis a tamanho.",
+  "usage_steps": [
+    "Cole ou digite o texto desejado na área de edição rotulada 'Texto de entrada'.",
+    "Selecione a codificação desejada (UTF-8, UTF-16BE, UTF-16LE ou ASCII) no menu suspenso 'Codificação'.",
+    "Marque a caixa 'Incluir BOM' se quiser calcular bytes com o marcador de ordem de bytes para UTF-16.",
+    "Clique no botão 'Calcular Bytes' para processar a análise imediata.",
+    "Revise os resultados detalhados mostrando bytes totais, caracteres contados e representação hexadecimal da sequência codificada.",
+    "Altere dinamicamente a codificação selecionada para comparar diferenças de tamanho entre formatos sem recarregar a página."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor de APIs verifica se um JSON de payload excede o limite de 2048 bytes em uma requisição HTTP POST.",
+    "Um engenheiro de dados analisa a eficiência de armazenamento entre UTF-8 e UTF-16 para um campo NCHAR em um banco de dados relacional.",
+    "Um especialista em protocolos de rede calcula o overhead exato adicionado pelo BOM em mensagens binárias UTF-16LE transmitidas via WebSockets.",
+    "Um aluno de ciência da computação explora a variação de bytes ao incluir emojis (que requerem 4 bytes em UTF-8) versus caracteres ASCII padrão."
+  ]
+}

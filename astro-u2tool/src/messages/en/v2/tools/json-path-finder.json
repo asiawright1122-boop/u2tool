@@ -1,0 +1,17 @@
+{
+  "detailed_description": "JSON Path Finder is a specialized utility for developers working with complex JSON structures, designed to automate the extraction and visualization of JSON traversal paths. This tool enables users to identify precise JSONPath expressions for specific nodes within nested objects and arrays, addressing challenges in API development, data transformation, and schema validation. By parsing input JSON and constructing an interactive tree visualization, the tool dynamically generates path expressions using both dot notation (e.g., $.store.book[0].title) and bracket notation (e.g., $['store']['book'][0]['title']). Advanced features include automatic handling of special characters in keys, array index detection, and support for nested query patterns. Developers benefit from reduced manual path construction errors and accelerated debugging of JSON processing workflows, particularly when handling deeply nested data from REST APIs, NoSQL databases, or configuration files.",
+  "usage_steps": [
+    "Paste valid JSON data into the code editor or upload a .json file",
+    "Click the 'Parse Structure' button to generate the interactive tree visualization panel",
+    "Expand/collapse nodes in the tree view to locate target data elements",
+    "Right-click a node to activate 'Copy Path' with options for syntax (dot/bracket) and format (plain text/escaped string)",
+    "Use the 'Path Preview' panel to see real-time expressions as you select different nodes",
+    "Export selected paths as a CSV list or integrate with the built-in JSON validation tool for immediate testing"
+  ],
+  "usage_examples": [
+    "Extracting shipping addresses from a nested e-commerce order API response for integration with logistics services",
+    "Mapping configuration settings from a multi-layered JSON config file to environment variables in a deployment script",
+    "Debugging malformed JSON data from a sensor network by identifying the exact path to invalid numeric values",
+    "Generating test cases for a GraphQL API by creating valid query paths from a reference schema document"
+  ]
+}

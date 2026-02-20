@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Das Tool Excel to JSON ermöglicht es Benutzern, Excel-Dateien in das JSON-Format zu konvertieren, wobei sie zwischen verschiedenen Tabellenblättern auswählen und die konvertierten Daten vorab ansehen können. Dies ist besonders nützlich, wenn Daten in ein JSON-Format überführt werden müssen, um sie in Webanwendungen oder APIs zu integrieren. Die Möglichkeit, Tabellenblätter auszuwählen, bietet Flexibilität, da nicht immer alle Daten in einer Excel-Datei für die Konvertierung relevant sind. Das Tool verwendet fortgeschrittete Datenverarbeitungsalgorithmen, um die Struktur der Excel-Tabellenblätter in ein JSON-Objekt zu transformieren, das in einer hierarchischen Struktur organisiert ist. Dies Supports die komplexen Datenstrukturierungen, die in modernen Anwendungen oft erforderlich sind. Benutzer können die konvertierten Daten vor dem Herunterladen in einer Vorschau angezeigt bekommen, um sicherzustellen, dass die Konvertierung den Anforderungen entspricht.",
+  "usage_steps": [
+    "Öffnen Sie die Website und navigieren Sie zu dem Tool Excel to JSON.",
+    "Klicken Sie auf den Button 'Datei auswählen', um Ihre Excel-Datei aus dem lokalen Dateisystem zu laden.",
+    "Wählen Sie das gewünschte Tabellenblatt aus der Dropdown-Liste 'Tabellenblatt auswählen'.",
+    "Klicken Sie auf 'Vorschau anzeigen', um die konvertierten JSON-Daten in der Vorschau anzuzeigen und sicherzustellen, dass sie korrekt formatiert sind.",
+    "Passen Sie die JSON-Struktur bei Bedarf an, indem Sie die Optionen in der 'Struktur anpassen'-Sektion nutzen.",
+    "Klicken Sie auf 'JSON herunterladen', um die konvertierte JSON-Datei auf Ihren Computer zu speichern."
+  ],
+  "usage_examples": [
+    "Ein Webentwickler muss Daten aus einer Excel-Tabelle mit Kundendetails in ein JSON-Format konvertieren, um sie in einer CRM-Software zu importieren. Mit Excel to JSON kann er das relevante Tabellenblatt auswählen und die Daten in das erforderliche Format bringen.",
+    "Ein Datenwissenschaftler arbeitet an einem Machine Learning-Projekt und benötigt Daten in JSON-Format für die Modelltraining. Er verwendet Excel to JSON, um die Trainingsdaten aus einer Excel-Datei zu extrahieren und in JSON umzuwandeln, wobei er die Datenstruktur an die Anforderungen des Modells anpasst.",
+    "Ein Geschäftsanalyst möchte Daten aus verschiedenen Excel-Tabellenblättern in eine API integrieren, um Echtzeit-Analysen durchzuführen. Mit Excel to JSON kann er die Datenblätter selektiv in JSON konvertieren und die API-Datenstruktur erstellen.",
+    "Ein Softwarearchitekt plant die Migration eines Legacy-Systems zu einer modernen Cloud-Plattform und muss dabei Daten aus alten Excel-Tabellenblättern in ein neues Datenmodell überführen. Excel to JSON hilft ihm, die Daten in das erforderliche JSON-Format zu bringen, um die Migration zu erleichtern."
+  ]
+}

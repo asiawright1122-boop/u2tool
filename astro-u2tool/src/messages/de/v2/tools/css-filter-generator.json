@@ -1,0 +1,36 @@
+{
+  "output": "CSS-Ausgabe",
+  "copy": "CSS kopieren",
+  "reset": "Zurücksetzen",
+  "uploadImage": "Bild hochladen",
+  "blur": "Schwärzen",
+  "brightness": "Helligkeit",
+  "contrast": "Kontrast",
+  "grayscale": "Grayscale",
+  "hueRotate": "Hue Rotate",
+  "invert": "Invertieren",
+  "saturate": "Sättigen",
+  "sepia": "Sepia",
+  "opacity": "Transparenz",
+  "presetGrayscale": "Grayscale",
+  "presetSepia": "Sepia",
+  "presetVintage": "Vintage",
+  "presetDramatic": "Dramatisch",
+  "presetFaded": "Verblasst",
+  "presetInverted": "Invertiert",
+  "detailed_description": "Der CSS Filter Generator ist ein spezialisiertes Werkzeug zur visuellen Erstellung und Optimierung von CSS-Filtereffekten für Webanwendungen. Technisch ermöglicht es die Kombination von SVG-Filtern und CSS-Filterfunktionen wie `blur()`, `brightness()`, `hue-rotate()` oder `drop-shadow()`, die über eine intuitive Oberfläche parametrisiert werden. Nutzer können präzise Steuerung über die Filterreihenfolge, Intensitätswerte und Fallback-Optionen für ältere Browser erhalten. Das Tool rendert Echtzeitvorschauen mittels `<canvas>`-Elementen und generiert kompatiblen CSS-Code mit `-webkit-`-Prefixes für maximale Browserabdeckung. Entwickler profitieren besonders bei responsiven Designs, da die Filterhardwarebeschleunigung durch `will-change`-Eigenschaften optimiert wird. Besonders nützlich ist es für dynamische Bildanpassungen in SPAs, Erstellung von Hover-States mit `transition`-Kompatibilität oder Prototyping von Designsystem-Vorgaben ohne manuelles Codieren.",
+  "usage_steps": [
+    "1. Wählen Sie ein Referenzbild über den 'Bild hochladen'-Button oder verwenden Sie die vordefinierten Testbilder.",
+    "2. Aktivieren Sie gewünschte Filterfunktionen über die Schaltflächenleiste (z.B. 'Blur', 'Contrast', 'Color Shift').",
+    "3. Passen Sie die Filterintensität per Schieberegler an und beobachten Sie die sofortige Änderung im Echtzeitvorschau-Panel.",
+    "4. Kombinieren Sie mehrere Filter durch Klick auf '+ Filter hinzufügen' und ordnen Sie die Anwendungsreihenfolge per Drag-and-Drop.",
+    "5. Nutzen Sie die 'Code-Preview'-Registerkarte, um den generierten CSS-Code mit oder ohne Vendor-Prefixes zu inspizieren.",
+    "6. Exportieren Sie den Filtercode über den 'Kopieren'-Button oder laden Sie eine `.css`-Datei mit vollständiger Regeldefinition herunter."
+  ],
+  "usage_examples": [
+    "Ein Social-Media-Tool benötigt dynamische Bildfilter für Benutzeruploads, die sich per JavaScript-Slider in Echtzeit anpassen lassen.",
+    "Ein E-Commerce-Shop implementiert einen 'Ausverkauft'-Overlay-Effekt mit `grayscale()` und `opacity()` für Produktbilder.",
+    "Ein Fotografie-Portfolio nutzt `drop-shadow()` und `brightness()` für animierte Hover-Effekte auf Galeriebildern mit CSS-Transitions.",
+    "Ein News-Aggregator wendet pro Themenbereich unterschiedliche `sepia()`- und `hue-rotate()`-Kombinationen für visuelle Differenzierung an."
+  ]
+}

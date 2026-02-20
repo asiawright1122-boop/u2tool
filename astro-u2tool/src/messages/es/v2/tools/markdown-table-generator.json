@@ -1,0 +1,34 @@
+{
+  "addRow": "+ Añadir Fila",
+  "addColumn": "+ Añadir Columna",
+  "loadSample": "Cargar Ejemplo",
+  "columnAlignment": "Alineación de Columnas",
+  "col": "Col",
+  "left": "Izquierda",
+  "center": "Centro",
+  "right": "Derecha",
+  "header": "Encabezado",
+  "cell": "Celda",
+  "removeRow": "Eliminar Fila",
+  "removeColumn": "Eliminar Columna",
+  "markdownOutput": "Salida Markdown",
+  "preview": "Vista Previa",
+  "detailed_description": "El Generador de Tablas Markdown es una herramienta de código abierto que permite crear y manipular tablas en formato Markdown mediante un editor visual basado en componentes reactivos. Técnicamente, el sistema utiliza un motor de renderizado bidireccional que sincroniza en tiempo real los cambios entre la interfaz gráfica y el código Markdown generado, aplicando algoritmos de validación de estructuras de tabla (como el equilibrio de columnas y celdas combinadas). Los usuarios necesitan esta herramienta para evitar errores sintácticos comunes en Markdown manual, especialmente al trabajar con tablas complejas en documentación técnica, informes académicos o prototipos de diseño web. Su funcionamiento se basa en un framework frontend (como React o Vue.js) que procesa las acciones del usuario en el DOM virtual, actualizando dinámicamente el preview mediante un parser de Markdown optimizado. Además, incluye características avanzadas como soporte para alineación múltiple de celdas, importación de datos CSV y exportación en múltiples formatos (HTML, LaTeX). Al operar en el lado del cliente mediante WebAssembly, garantiza privacidad y velocidad sin dependencia de servidores externos.",
+  "usage_steps": [
+    "Ajusta el número de columnas y filas usando los botones '+' y '-' en la barra de herramientas superior.",
+    "Haz clic en las celdas para ingresar contenido y utiliza el menú contextual para aplicar formato (negrita, cursiva, enlaces).",
+    "Selecciona opciones de alineación horizontal (izquierda, centro, derecha) desde el menú desplegable en cada encabezado.",
+    "Activa la vista previa en tiempo real con el botón 'Toggle Preview' para ver el renderizado exacto de la tabla.",
+    "Exporta el código Markdown generado mediante el botón 'Copiar al portapapeles' que utiliza la API Clipboard API.",
+    "Importa datos estructurados con el botón 'Importar CSV' para convertir automáticamente hojas de cálculo en tablas Markdown."
+  ],
+  "usage_examples": [
+    "Un desarrollador documenta una API usando tablas complejas con celdas combinadas, evitando errores en la generación manual de Markdown.",
+    "Un estudiante crea una tabla comparativa para un informe académico con alineación específica de columnas y formato mixto de texto.",
+    "Un diseñador web prototipa una tabla responsive para un sitio, verificando visualmente cómo se adapta el diseño en la previsualización.",
+    "Un analista de datos transforma rápidamente un archivo CSV con métricas financieras en una tabla Markdown para incluirla en un dashboard."
+  ],
+  "clear": "Limpiar",
+  "copied": "Copiado!",
+  "copy": "Copiar"
+}

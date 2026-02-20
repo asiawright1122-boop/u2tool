@@ -1,0 +1,93 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "showLegend": "显示图例",
+  "showGrid": "显示网格",
+  "stepPosition": "阶梯位置",
+  "stepStart": "起始",
+  "stepMiddle": "中间",
+  "stepEnd": "结束",
+  "areaFill": "区域填充",
+  "category": "类别",
+  "value": "数值",
+  "item": "项目",
+  "addRow": "添加行",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "确定要清除所有数据吗？",
+  "defaultTitle": "每周进度",
+  "sampleTitle": "价格随时间变化",
+  "dataEditor": "数据编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "sampleData": {
+    "mon": "周一",
+    "tue": "周二",
+    "wed": "周三",
+    "thu": "周四",
+    "fri": "周五",
+    "sat": "周六",
+    "sun": "周日",
+    "step1": "步骤1",
+    "step2": "步骤2",
+    "step3": "步骤3",
+    "step4": "步骤4",
+    "step5": "步骤5",
+    "step6": "步骤6",
+    "step7": "步骤7"
+  },
+  "importCsv": "导入CSV",
+  "csvImportSuccess": "已导入 {count} 行数据",
+  "csvImportError": "CSV格式无效",
+  "tips": {
+    "title": "提示",
+    "tip1": "阶梯图非常适合显示离散变化",
+    "tip2": "选择阶梯位置以控制阶梯发生的位置",
+    "tip3": "启用区域填充以突出显示线下区域"
+  },
+  "detailed_description": "Step Line Chart Generator 是一款在线图表生成工具，专门用于创建阶梯线图。阶梯线图通过水平和垂直线段来表示数据的变化，适用于展示离散时间点上的数据变化情况。这种图表类型特别适合用于显示那些在特定时间点发生显著变化的数据，例如库存水平、股票价格、或是任何需要精确描绘变化时间点的数据。使用 Step Line Chart Generator，用户可以轻松地将复杂的数据集转化为直观的图表，从而更好地理解和分析数据趋势。工具支持自定义图表样式，包括颜色、线条类型和文字标签，确保用户可以根据自己的需求生成最合适的图表。此外，该工具还提供了数据导入功能，支持 CSV 和 Excel 文件，使得数据处理更加便捷。",
+  "usage_steps": [
+    "Step 1: 访问 Step Line Chart Generator 的主页，点击“创建新图表”按钮。",
+    "Step 2: 在“数据输入”区域选择“手动输入”或“上传文件”方式。如果选择上传文件，支持 CSV 和 Excel 文件格式。",
+    "Step 3: 输入或导入数据后，点击“预览”按钮，查看图表的初步效果。",
+    "Step 4: 在“图表设置”面板中，调整图表的样式，包括线条颜色、宽度、标签样式等。",
+    "Step 5: 如果需要添加特定的时间点标注或注释，可以在“标注”选项卡中进行设置。",
+    "Step 6: 调整完毕后，点击“保存”按钮，选择导出格式（如 PNG、SVG 等），并将图表保存到本地。"
+  ],
+  "usage_examples": [
+    "Example 1: 一家零售公司需要监控其库存水平的变化。使用 Step Line Chart Generator，该公司可以将每月的库存数据导入图表，清晰地展示库存的变化趋势，帮助管理层做出更准确的决策。",
+    "Example 2: 一位股票分析师希望分析某只股票在过去一年中的价格波动。通过 Step Line Chart Generator，分析师可以将每日收盘价数据绘制成阶梯线图，直观地展示价格的离散变化，辅助进行技术分析。",
+    "Example 3: 一家能源公司需要记录和展示其在不同时间段内的电力消耗情况。利用 Step Line Chart Generator，该公司可以将每小时的电力消耗数据绘制成图表，帮助识别高峰时段和低谷时段，优化能源使用。",
+    "Example 4: 一位科研人员需要展示实验中不同时间点的温度变化。通过 Step Line Chart Generator，可以将实验数据导入图表，生成精确的温度变化图，以便在科研报告中直观呈现实验结果。"
+  ],
+  "faqs": [
+    {
+      "question": "Step Line Chart Generator 是免费的吗？",
+      "answer": "是的，Step Line Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Step Line Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Step Line Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Step Line Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Step Line Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

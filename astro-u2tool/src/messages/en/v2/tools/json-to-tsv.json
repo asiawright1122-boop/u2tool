@@ -1,0 +1,24 @@
+{
+  "includeHeaders": "Include Headers",
+  "jsonInput": "JSON Input",
+  "tsvOutput": "TSV Output",
+  "jsonPlaceholder": "Enter JSON array...",
+  "tsvPlaceholder": "TSV output will appear here...",
+  "convert": "Convert to TSV",
+  "copy": "Copy Output",
+  "detailed_description": "The JSON to TSV Converter transforms structured JSON arrays into flat, tab-separated values suitable for database imports, spreadsheet analysis, or log processing. This tool parses JSON input using a recursive traversal algorithm to identify hierarchical data patterns, automatically flattening nested objects and arrays into a two-dimensional format. It employs schema validation to ensure homogeneity across array elements, generating consistent column headers based on dot-notation paths (e.g., 'user.address.city'). During conversion, special characters are escaped using RFC 4180-compliant methods, while maintaining Unicode support for international datasets. Developers rely on this tool for migrating NoSQL document stores to relational databases, preparing machine-readable data for ETL pipelines, or debugging complex API responses in human-readable formats. The converter handles edge cases like missing fields through null placeholder insertion and supports large datasets via client-side WebAssembly processing, eliminating server upload latency.",
+  "usage_steps": [
+    "1. Paste valid JSON array into the 'Source Data' textarea with line-numbered syntax highlighting",
+    "2. Use the 'Array Path' selector to specify nested array location using JSON Pointer notation (e.g., '/users/active')",
+    "3. Configure 'Delimiter' settings to choose tab character or custom whitespace representation",
+    "4. Enable 'Header Generation' to create column names from first object's keys or disable for manual header input",
+    "5. Click 'Convert' to execute schema-aware transformation with real-time error reporting for malformed JSON",
+    "6. Copy formatted TSV from the output grid or download with 'Export' button for batch processing"
+  ],
+  "usage_examples": [
+    "Example 1: Convert a REST API's paginated response containing embedded customer order arrays into a TSV for SQL bulk insertion",
+    "Example 2: Transform MongoDB export files with nested geolocation data into a flattened format compatible with Excel pivot tables",
+    "Example 3: Prepare browser console logs structured as JSON arrays for ingestion into legacy syslog servers requiring TSV formatting",
+    "Example 4: Create configuration files for embedded systems by converting hierarchical IoT device metadata into single-line TSV records"
+  ]
+}

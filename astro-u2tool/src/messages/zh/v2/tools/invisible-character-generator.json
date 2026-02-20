@@ -1,0 +1,29 @@
+{
+  "detailed_description": "不可见字符生成器创建各种不可见的Unicode字符，如零宽空格。还包括检测器，用于查找文本中的隐藏字符。",
+  "usage_steps": [
+    "选择不可见字符类型",
+    "设置重复次数",
+    "复制不可见字符",
+    "粘贴到需要的地方",
+    "使用检测器查找隐藏字符"
+  ],
+  "usage_examples": [
+    "创建空白消息",
+    "添加不可见水印",
+    "测试文本处理"
+  ],
+  "selectCharacter": "选择字符类型",
+  "repeatCount": "重复次数",
+  "characters": "字符",
+  "copy": "复制",
+  "copied": "已复制！",
+  "allCharacters": "所有不可见字符",
+  "detectTitle": "检测不可见字符",
+  "detectPlaceholder": "在此粘贴文本以检测不可见字符...",
+  "found": "找到",
+  "noInvisibleFound": "未检测到不可见字符",
+  "useCases": "常见用途",
+  "useCase1": "创建空白社交媒体帖子",
+  "useCase2": "添加不可见文本水印",
+  "useCase3": "测试文本处理系统"
+}

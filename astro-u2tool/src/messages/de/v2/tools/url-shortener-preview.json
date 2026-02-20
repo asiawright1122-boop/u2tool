@@ -1,0 +1,29 @@
+{
+  "input": "Eingabe",
+  "copy": "Ergebnisse kopieren",
+  "note": "Hinweis: Aufgrund von Browser-Sicherheitsbeschränkungen erfordert die tatsächliche URL-Erweiterung eine Serverseitige Anfrage. Diese Werkzeug identifiziert kurze URLs und zeigt deren Domains an.",
+  "placeholder": "Fügen Sie Text mit kurzen URLs (bit.ly, tinyurl.com, t.co, etc.) ein...",
+  "analyzing": "Analyse...",
+  "analyzeUrls": "URLs analysieren",
+  "results": "Ergebnisse",
+  "supportedServices": "Unterstützte kurze URL-Dienste",
+  "moreServices": "+{count} weitere",
+  "noShortUrls": "Keine kurzen URLs gefunden",
+  "noShortUrlsError": "Keine erkannten kurzen URLs in der Eingabe",
+  "unableToExpand": "Erweiterung nicht möglich (erfordert Serverseitige Anfrage)",
+  "detailed_description": "Der URL Shortener Preview-Tool ermöglicht Entwicklern und Benutzern, verkürzte URLs zu analysieren und vorab anzuzeigen, ohne diese tatsächlich zu öffnen. Technisch gesehen, extrahiert das Tool die Ziel-URL aus dem verkürzten Link und zeigt Metadaten sowie potenzielle Sicherheitsrisiken an. Dies ist besonders nützlich, um Phishing-Angriffe oder maligne Inhalte zu erkennen, bevor eine Seite besucht wird. Nutzer können das Tool verwenden, um die Authentizität von Links zu überprüfen, die über soziale Medien, E-Mails oder andere Kommunikationskanäle empfangen werden. Die Analyse umfasst auch den HTTP-Antwortcode, den Content-Type und andere relevanten Header-Informationen, die den technischen Zustand der Ziel-URL widerspiegeln. Durch die Integration von DNS- und SSL-Prüfungen bietet das Tool umfassende Informationen, die die Entscheidung, ob ein Link sicher ist, erleichtern.",
+  "usage_steps": [
+    "Öffnen Sie die Website des URL Shortener Preview-Tools in Ihrem Webbrowser.",
+    "Navigieren Sie zur Eingabefeld-Sektion, die als 'Verkürzten URL einfügen' gekennzeichnet ist.",
+    "Fügen Sie die zu analysierende verkürzte URL in das Eingabefeld ein.",
+    "Klicken Sie auf den Button 'Analyse starten', um den Prozess zu initiieren.",
+    "Warten Sie, bis die Analyse abgeschlossen ist. Dies kann einige Sekunden dauern, je nach Serverlast und der Komplexität der URL.",
+    "Prüfen Sie die angezeigten Ergebnisse, einschließlich der Ziel-URL, Metadaten, Sicherheitsinformationen und technischen Details."
+  ],
+  "usage_examples": [
+    "Ein Social Media-Manager erhält über Twitter einen verkürzten Link zu einem angeblichen Gewinnspiel. Er verwendet den URL Shortener Preview-Tool, um sicherzustellen, dass der Link nicht zu einem Phishing-Website führt, bevor er die Nachricht weiterverbreitet.",
+    "Ein Entwickler testet eine neue Anwendung, die verkürzte URLs in E-Mails einbettet. Mit dem Tool können potenzielle Probleme erkannt werden, bevor die Anwendung in Produktion geht, um Benutzer vor unsicheren Links zu schützen.",
+    "Ein Content Creator findet in den Kommentaren seines Blog-Beitrags einen verkürzten Link zu einem angeblichen relevanten Artikel. Mit dem Tool kann er die Ziel-URL überprüfen, um sicherzustellen, dass sie nicht zu unangemessenen oder schädlichen Inhalten führt.",
+    "Ein IT-Administrator erhält von einem Kollegen einen Link per Slack, der zu einem internen Dokument führen soll. Um sicherzustellen, dass der Link nicht manipuliert wurde, verwendet er den URL Shortener Preview-Tool, um die URL zu analysieren und potenzielle Risiken zu identifizieren."
+  ]
+}

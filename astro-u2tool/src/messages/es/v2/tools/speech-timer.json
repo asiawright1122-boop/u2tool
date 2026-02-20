@@ -1,0 +1,36 @@
+{
+  "detailed_description": "Speech Timer es una herramienta profesional de temporización de presentaciones que ayuda a los oradores a practicar y entregar charlas de manera efectiva. Proporciona cuenta regresiva en tiempo real, estimación de palabras basada en el ritmo de habla y alertas visuales cuando el tiempo se está agotando.",
+  "usage_steps": [
+    "Establece la duración de tu charla objetivo",
+    "Opcionalmente ingresa tu texto de charla para contar palabras",
+    "Haz clic en comenzar para iniciar la cuenta regresiva",
+    "Monitorea el indicador de progreso visual",
+    "Recibe alertas cuando el tiempo casi se agote"
+  ],
+  "usage_examples": [
+    "Practica presentaciones de estilo TED",
+    "Controla charlas de conferencias académicas",
+    "Prepárate para presentaciones de entrevistas de trabajo"
+  ],
+  "duration": "Duración",
+  "minutes": "minutos",
+  "wordsPerMinute": "Palabras por minuto",
+  "estimatedWords": "Palabras estimadas",
+  "start": "Iniciar",
+  "pause": "Pausar",
+  "reset": "Reiniciar",
+  "timeRemaining": "Tiempo restante",
+  "speechText": "Texto de Charla (opcional)",
+  "speechPlaceholder": "Pega tu charla aquí para contar palabras...",
+  "wordCount": "Cuenta de Palabras",
+  "speakingPace": "Ritmo de Habla",
+  "slow": "Lento",
+  "normal": "Normal",
+  "fast": "Rápido",
+  "timeUp": "¡Se acabó el tiempo!",
+  "presets": "Prediseñados",
+  "targetDuration": "Duración objetivo",
+  "min": "min",
+  "words": "palabras",
+  "remaining": "Restante"
+}

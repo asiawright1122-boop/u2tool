@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Regex Tester ist ein spezialisierter Code-Analyzer, der Entwicklern ermöglicht, reguläre Ausdrücke in Echtzeit zu validieren und zu optimieren. Technisch basiert das Tool auf der JavaScript RegExp-Engine, erweitert durch Unterstützung für moderne Regex-Features wie Lookbehind Assertions, Unicode Property Escapes (\\p{L}) und Named Capture Groups. Bei Eingabe eines Musters wird dieses sofort gegen einen definierten Textkörper geprüft, wobei Treffer mit farbkodierten Hervorhebungen und Gruppenanalysen visualisiert werden. Die integrierte Debugging-Schnittstelle zeigt Match-Positionen, Backreference-Inhalte und Fehlerursachen bei ungültiger Syntax an. Entwickler benötigen dieses Tool, um komplexe Muster für Aufgaben wie Protokollparser, Datenextraktion aus unstrukturierten Texten oder Validierung spezifischer Zeichenkettentypen (z.B. IBAN-Formate) zu entwickeln. Die Echtzeitfeedback-Schleife reduziert die Testzyklen bei der Regex-Optimierung erheblich, während die visuelle Darstellung von Match-Objekten das Verständnis der Ausdruckslogik verbessert. Unterstützt werden alle Standard-Regex-Flags (g/m/s/u/i/y) sowie benutzerdefinierte Zeichensätze durch erweiterte Eingabefelder.",
+  "usage_steps": [
+    "Geben Sie Ihren Regex-Ausdruck in das 'Pattern'-Feld ein, z.B. \"\\d{2}-\\d{3}\" für Postleitzahlenmuster.",
+    "Aktivieren Sie die gewünschten Flags über die Schaltflächen (g/m/s/u/i/y) für globale Suche, Multiline-Unterstützung etc.",
+    "Fügen Sie Testdaten im 'Input'-Bereich hinzu, z.B. einen Textblock mit gemischten Postleitzahlenformaten.",
+    "Beobachten Sie die sofortige farbliche Hervorhebung aller Matches und der zugehörigen Capture-Gruppen in der Vorschau.",
+    "Nutzen Sie den 'Replace'-Tab, um Substitutionen mit Backreferences (z.B. \"$2-$1\") zu testen und Ergebnisse live zu sehen.",
+    "Konsultieren Sie das Fehlerprotokoll unterhalb des Pattern-Felds bei ungültiger Syntax, das präzise Zeilen- und Zeichenpositionen anzeigt."
+  ],
+  "usage_examples": [
+    "Validierung von benutzerdefinierten IBAN-Formaten durch Testen von Regex-Mustern für Ländercodes und Prüfziffern.",
+    "Extraktion von Hashtags aus Social-Media-Texten mit komplexen Mustern, die mehrere Sprachen und Emoji-Kombinationen berücksichtigen.",
+    "Debugging von Log-Parser-Regexen, die Zeitstempel im Format \"[23/Jul/2024:12:34:56 +0200]\" verarbeiten müssen.",
+    "Optimierung von Passwort-Regexen mit mehrfachen Lookahead-Assertions für Mindestlänge, Sonderzeichen und Zeichenvielfalt."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El generador JWT es una herramienta especializada para crear tokens web JSON (JWT) con configuraciones avanzadas de cabecera, payload y firma. Técnicamente, construye tokens según la especificación RFC 7519 mediante tres componentes críticos: un encabezado que define el algoritmo de cifrado (HS256, RS256, etc.), un payload con claims personalizados (como expiración, permisos o datos de usuario) y una firma digital generada a partir de una clave secreta o par de claves asimétricas. Este instrumento es esencial para desarrolladores que implementan sistemas de autenticación stateless, prueban políticas de expiración de sesiones o simulan flujos OAuth2. Al permitir ajustar parámetros como 'nbf' (not before) o 'aud' (audience), facilita pruebas de seguridad en APIs RESTful. La herramienta aplica codificación Base64Url seguida de firma criptográfica con SHA-256 o RSA, garantizando tokens válidos según estándares industriales. Su utilidad radica en permitir pruebas controladas de flujos de autenticación sin depender de servidores externos.",
+  "usage_steps": [
+    "Completa el formulario de claims en formato JSON con campos como 'sub', 'exp' y 'roles' en el editor de payload.",
+    "Selecciona el algoritmo de firma en el dropdown: opciones avanzadas como HS256, HS384, RS256 o None para depuración.",
+    "Ingresa una clave secreta de 256 bits o pega una clave privada RSA en formato PEM para firmas asimétricas.",
+    "Ajusta las opciones de codificación: activa 'Compact Serialization' para formato de una sola línea o 'JSON Serialization' para tokens JWS explícitos.",
+    "Haz clic en 'Generar Token' para obtener el JWT estructurado en tres partes: header.payload.signature.",
+    "Verifica el resultado en el panel de salida, donde se muestra el token y su representación decodificada en tiempo real."
+  ],
+  "usage_examples": [
+    "Simular un token de autenticación para probar endpoints de una API protegida sin iniciar sesión real.",
+    "Crear tokens expirados para validar políticas de renovación de sesiones en una aplicación móvil.",
+    "Generar credenciales para demostraciones de seguridad mostrando diferencias entre firma simétrica y asimétrica.",
+    "Probar vulnerabilidades de algoritmos débiles al seleccionar 'None' como método de firma en entornos de capacitación."
+  ]
+}

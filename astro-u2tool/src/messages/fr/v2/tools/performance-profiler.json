@@ -1,0 +1,47 @@
+{
+  "detailed_description": "Le Profileur de Performance de Code mesure le temps d'exécution et identifie les goulets d'étranglement de performance dans votre code.",
+  "usage_steps": [
+    "Collez des fonctions de code",
+    "Définissez le nombre d'itérations",
+    "Cliquez sur Exécuter",
+    "Voyez les temps d'exécution",
+    "Comparez les implémentations"
+  ],
+  "usage_examples": [
+    "Comparaison des algorithmes",
+    "Identification des fonctions lentes",
+    "Comparaison des performances des bibliothèques"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Processus",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Collez votre code ici...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez saisir une entrée"
+  },
+  "loadExample": "Charger un exemple",
+  "analyze": "Analyser",
+  "generate": "Générer",
+  "format": "Formater",
+  "convert": "Convertir",
+  "validate": "Valider",
+  "export": "Exporter",
+  "preview": "Aperçu",
+  "reset": "Réinitialiser",
+  "add": "Ajouter",
+  "remove": "Supprimer",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "settings": "Paramètres",
+  "options": "Options",
+  "results": "Résultats",
+  "noResults": "Aucun résultat",
+  "loading": "Chargement...",
+  "success": "Succès",
+  "failed": "Échec",
+  "warning": "Avertissement",
+  "info": "Information"
+}

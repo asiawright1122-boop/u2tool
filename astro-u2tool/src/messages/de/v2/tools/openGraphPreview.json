@@ -1,0 +1,37 @@
+{
+  "defaultTitle": "Meine tolle Seite",
+  "defaultDescription": "Dies ist eine Beschreibung meiner tollen Seite, die in Social-Media-Shares erscheinen wird.",
+  "defaultSiteName": "Meine Website",
+  "modeFetch": "OG-Tags von der URL abrufen",
+  "modeManual": "Manuelle Eingabe",
+  "fetchUrlLabel": "Geben Sie die URL der Webseite ein",
+  "fetchButton": "Bringen",
+  "fetching": "Abrufen...",
+  "fetchError": "Die Webseite konnte nicht abgerufen werden. Bitte überprüfen Sie die URL oder versuchen Sie es später erneut.",
+  "title": "Titel",
+  "titlePlaceholder": "Seitentitel",
+  "siteName": "Site-Name",
+  "siteNamePlaceholder": "Website-Name",
+  "descriptionPlaceholder": "Seitenbeschreibung...",
+  "imageUrl": "Bild-URL (1200 x 630 empfohlen)",
+  "imageUrlPlaceholder": "https://example.com/image.jpg",
+  "pageUrl": "Seiten-URL",
+  "pageUrlPlaceholder": "https://example.com",
+  "imageLoadError": "Das Bild konnte nicht geladen werden",
+  "enterImageUrl": "Geben Sie oben die Bild-URL ein",
+  "generatedCode": "Generierte Meta-Tags",
+  "platform": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn"
+  },
+  "preview": "Vorschau",
+  "recommendations": {
+    "title": "Empfehlungen",
+    "imageSize": "Bildgröße: 1200 x 630 Pixel (Verhältnis 1,91:1)",
+    "titleLength": "Titel: max. 60–70 Zeichen",
+    "descriptionLength": "Beschreibung: max. 150–160 Zeichen",
+    "highQuality": "Verwenden Sie hochwertige, relevante Bilder",
+    "testDebugger": "Testen Sie mit dem Facebook Sharing Debugger"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "typeName": "タイプ名",
+  "loadSample": "サンプルを読み込む",
+  "jsonInput": "JSON入力",
+  "placeholder": "JSONオブジェクトを入力...",
+  "graphqlOutput": "GraphQLスキーマ",
+  "typeInference": "型推測",
+  "detailed_description": "JSON to GraphQLツールは、任意のJSONオブジェクトを基にGraphQLスキーマ定義を自動生成するための変換ユーティリティです。このツールは、JSON構造を解析し、フィールド名・データ型・ネスト構造を自動認識してGraphQLのObjectTypeDefinitionやScalarTypeDefinitionを生成します。開発者はREST APIレスポンスやNoSQLデータベースのドキュメント構造をGraphQLスキーマに変換する際、手作業での型定義の工数を削減するために利用できます。内部ではAST（抽象構文木）解析エンジンを使用し、JSONの階層構造を再帰的にトラバースしてGraphQL SDL（Schema Definition Language）を構築します。配列型の自動検出、null許容フィールドの識別、カスタムスカラー型のマッピング機能を備えており、特に複雑なデータ構造を持つレガシーシステムのGraphQLマイグレーションに最適です。",
+  "usage_steps": [
+    "1. 「JSON入力エリア」に変換対象のJSONテキストをペーストするか、「ファイルアップロード」ボタンでJSONファイルを選択します。",
+    "2. 「タイプ推論設定」セクションで「厳密モード」または「柔軟モード」を選択し、スカラー型の検出精度を調整します。",
+    "3. 「フィールド解析プレビュー」で自動認識されたフィールド名とデータ型を確認し、必要に応じて「編集」アイコンから手動で修正します。",
+    "4. 「スキーマ構成オプション」で「ルートタイプ名」を指定し、必要に応じて「インターフェース抽出」を有効にします。",
+    "5. 「生成実行」ボタンをクリックしてGraphQLスキーマコードを生成します。",
+    "6. 生成されたスキーマコードを「クリップボードにコピー」または「schema.graphql」としてダウンロードします。"
+  ],
+  "usage_examples": [
+    "例1: レギュラーエクスプレッションでバリデーションが必要なユーザープロフィールデータをGraphQLカスタムスカラー型に変換",
+    "例2: Firebase Realtime DatabaseのJSONエクスポート構造からGraphQL Subscription対応のライブ更新スキーマを生成",
+    "例3: OpenAPI仕様書のレスポンス例からGraphQLクエリパッケージ用の型定義を自動生成",
+    "例4: 多言語対応が必要な翻訳辞書JSONをGraphQLユニオン型を用いたロケール対応スキーマに変換"
+  ],
+  "inputPlaceholder": "タイプ名を入力...",
+  "errorInvalidJson": "無効なJSON入力",
+  "convert": "変換",
+  "clear": "クリア",
+  "copied": "コピーしました！",
+  "copy": "コピー",
+  "string": "文字列",
+  "int": "整数",
+  "float": "浮動小数点",
+  "boolean": "ブール値"
+}

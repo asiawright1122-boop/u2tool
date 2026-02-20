@@ -1,0 +1,27 @@
+{
+  "paragraphs": "Absätze",
+  "sentences": "Sätze",
+  "words": "Wörter",
+  "generateType": "Generierungstyp",
+  "count": "Anzahl",
+  "generatedText": "Erstellter Text",
+  "output": "Ausgabe",
+  "characters": "Zeichen",
+  "about": "Über",
+  "aboutText": "Dieses Tool nutzt das Tausend-Zeichen-Klassiker als Quelle für chinesisches Platzhaltertext und generiert Dummy-Text für Design und Typografie.",
+  "detailed_description": "Der Chinese Lorem Ipsum Generator erzeugt syntaktisch korrekte Platzhalter-Texte im Unicode-Zeichensatz für Design-Prototypen und Entwicklungsprojekte. Im Gegensatz zu lateinischen Placeholder-Texten simuliert das Tool die sprachspezifischen Eigenschaften der chinesischen Schriftsprache, einschließlich Zeichen-Distribution, Satzstruktur und Interpunktion. Die Anwendung ist besonders für UI/UX-Designer nützlich, die Layouts für chinesischsprachige Zielgruppen erstellen, da lateinische Texte falsche Proportionen bei Zeichendichte und Linienlänge erzeugen. Das Tool verwendet UTF-8-kodierte Zeichenfolgen mit einer Kombination aus häufigen und seltenen Schriftzeichen (Hànzì), um natürliche Lesbarkeit zu imitieren. Technisch basiert es auf einem zufallsgesteuerten Auswahlalgorithmus aus einer Datenbank klassischer chinesischer Textmuster. Die Ausgabe kann als HTML-Code, reiner Text oder JSON-Objekt exportiert werden, wobei Optionen für Zeilenumbrüche und CSS-Klassen zur Verfügung stehen. Dies ermöglicht präzise Tests für responsives Design, Textumbruch-Verhalten und Schriftkompatibilität in chinesischen Web- und App-Anwendungen.",
+  "usage_steps": [
+    "Wählen Sie zwischen 'Vereinfachtes Chinesisch' oder 'Traditionellem Chinesisch' im Dropdown-Menü 'Zeichensatz'.",
+    "Passen Sie die Anzahl der Absätze (1-10) und Sätze pro Absatz (2-8) über die Schieberegler an.",
+    "Aktivieren Sie die Option 'Liste generieren' für nummerierte oder punktierte Ausgaben.",
+    "Klicken Sie auf den 'Text aktualisieren'-Button, um die Vorschau in Echtzeit zu laden.",
+    "Kopieren Sie den generierten Code über den 'Zwischenablage'-Button oder exportieren Sie als JSON/HTML.",
+    "Nutzen Sie den 'CSS-Klassen'-Schalter, um benutzerdefinierte Styling-Klassen direkt in den HTML-Output einzubetten."
+  ],
+  "usage_examples": [
+    "Erstellung eines Webdesign-Prototyps für eine E-Commerce-Plattform mit chinesischen Produktbeschreibungen.",
+    "Test der responsiven Textanordnung in einer mobilen App für ältere Nutzer mit chinesischsprachiger Oberfläche.",
+    "Druckvorlagen-Design für ein zweisprachiges (Deutsch-Chinesisch) Unternehmenshandbuch mit korrekter Zeichendichte.",
+    "Prototyping einer Nachrichten-App mit dynamischen Headlines, die die Breite von chinesischen Titeln simulieren."
+  ]
+}

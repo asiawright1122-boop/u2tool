@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le calculateur d'empreintes numériques permet de générer des hachés cryptographiques (MD5, SHA-1, SHA-256, SHA-512) pour tout type de fichier. Ces fonctions de hachage produisent des empreintes uniques représentant l'intégrité binaire d'un fichier, basées sur des algorithmes mathématiques irréversibles. Les développeurs utilisent ces empreintes pour valider l'intégrité des fichiers lors de transferts réseau, vérifier l'absence de corruption après stockage ou détecter les modifications non autorisées dans des documents sensibles. Le processus utilise l'API FileReader du navigateur pour lire les fichiers en mode asynchrone, applique les algorithmes via des bibliothèques WebCrypto optimisées et affiche les résultats en hexadécimal/base64. Le traitement s'effectue intégralement en client-side sans envoi des données vers un serveur, garantissant la confidentialité. La prise en charge du multithreading via Web Workers permet de gérer efficacement les gros fichiers. Les variantes SHA-256/512 offrent une résistance accrue aux collisions cryptographiques par rapport aux anciens MD5/SHA-1 dépréciés.",
+  "usage_steps": [
+    "Cliquez sur « Sélectionner un fichier » pour importer votre document via l'explorateur de fichiers",
+    "Choisissez l'algorithme souhaité dans le menu déroulant (MD5/SHA-1/SHA-256/SHA-512)",
+    "Cliquez sur « Calculer » pour initier le processus de hachage",
+    "Suivez la barre de progression en temps réel pendant l'analyse du fichier",
+    "Consultez le résultat affiché dans la case prévue, incluant la taille du fichier et la durée du calcul",
+    "Utilisez le bouton « Copier » pour enregistrer l'empreinte dans votre presse-papiers au format désiré (hexa/base64)"
+  ],
+  "usage_examples": [
+    "Un administrateur système vérifie l'intégrité d'une image ISO de système d'exploitation Linux après téléchargement en comparant son SHA-256 avec celui fourni par la distribution",
+    "Un juriste attache une empreinte SHA-512 à un document PDF contractuel pour prouver qu'il n'a pas été modifié après signature numérique",
+    "Un analyste de sécurité compare les empreintes MD5 de fichiers journaux entre deux serveurs pour détecter des intrusions ou modifications suspectes",
+    "Un développeur calcule les hachés SHA-256 de binaires compilés à travers différents environnements d'intégration continue pour garantir la cohérence des livrables"
+  ]
+}

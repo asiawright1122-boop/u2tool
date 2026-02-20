@@ -1,0 +1,26 @@
+{
+  "detailed_description": "WebP转PNG转换器将WebP图片转换为PNG格式，以实现更广泛的兼容性。在浏览器中处理图片，无需上传到服务器。",
+  "usage_steps": [
+    "上传您的WebP图片文件",
+    "预览图片",
+    "点击转换进行处理",
+    "下载PNG结果",
+    "在任何应用中使用"
+  ],
+  "usage_examples": [
+    "为旧版浏览器转换WebP",
+    "导出用于打印的图片",
+    "在不支持WebP的平台分享图片"
+  ],
+  "uploadWebp": "上传WebP图片",
+  "dropHere": "将WebP文件拖至此处或点击上传",
+  "convert": "转换为PNG",
+  "download": "下载PNG",
+  "preview": "预览",
+  "processing": "处理中...",
+  "dropzone": "拖放WebP文件到此处或点击选择",
+  "selectFile": "选择文件",
+  "fileName": "文件名",
+  "quality": "质量",
+  "removeImage": "移除图片"
+}

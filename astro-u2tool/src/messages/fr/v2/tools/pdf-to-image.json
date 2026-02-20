@@ -1,0 +1,17 @@
+{
+  "detailed_description": "L'outil PDF vers Image permet de convertir des pages de documents PDF en images raster haute résolution au format PNG ou JPEG. Techniquement, il utilise des bibliothèques de rendu PDF comme Poppler ou PDFium pour analyser et rasteriser le contenu vectoriel et textuel des fichiers. Chaque page est transformée en bitmap grâce à un moteur de rendu graphique, avec possibilité de régler la résolution (DPI) et la qualité de compression. Ce processus préserve les polices, graphiques et layout originaux. Indispensable pour extraire des illustrations techniques, archiver des documents administratifs en format image, préparer des visuels pour présentations ou intégrer du contenu PDF dans des applications web. Contrairement aux outils basiques, notre solution propose un contrôle granulaire sur la densité des pixels et la profondeur de couleur, adaptée aux besoins professionnels de précision.",
+  "usage_steps": [
+    "Cliquez sur 'Importer un fichier PDF' pour sélectionner votre document source.",
+    "Utilisez les curseurs pour définir les pages spécifiques à convertir (ex: 3-7).",
+    "Choisissez le format de sortie (PNG 24 bits ou JPEG avec réglage de qualité).",
+    "Réglez la résolution de rendu via le menu déroulant (options: 72, 150, 300 ou 600 DPI).",
+    "Activez l'option 'Anti-aliasing' pour lisser les contours des textes vectoriels.",
+    "Téléchargez l'archive ZIP contenant les images générées avec nommage séquentiel."
+  ],
+  "usage_examples": [
+    "Un chercheur extrait des graphiques scientifiques vectoriels depuis un article PDF pour les insérer dans un poster de conférence.",
+    "Un designer web convertit un PDF de maquette en images 300 DPI pour un site de portfolio.",
+    "Un enseignant transforme des exercices PDF en fichiers JPEG optimisés pour un LMS éducatif.",
+    "Un comptable archive des factures PDF en images PNG avec compression sans perte pour respecter les normes RGPD."
+  ]
+}

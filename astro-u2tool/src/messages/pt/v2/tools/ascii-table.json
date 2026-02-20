@@ -1,0 +1,32 @@
+{
+  "searchPlaceholder": "Pesquisar por caractere, código ou descrição...",
+  "showExtended": "Mostrar ASCII Extendido (128-255)",
+  "selectedChar": "Caractere Selecionado",
+  "decimal": "Decimal",
+  "hex": "Hexadecimal",
+  "octal": "Octal",
+  "binary": "Binário",
+  "char": "Caractere",
+  "descriptionHeader": "Descrição",
+  "noResults": "Nenhum caractere correspondente encontrado",
+  "quickReference": "Referência Rápida",
+  "controlChars": "Caracteres de Controle",
+  "punctuation": "Punctuation e Símbolos",
+  "digits": "Números (0-9)",
+  "uppercase": "Maiúsculas (A-Z)",
+  "lowercase": "Minúsculas (a-z)",
+  "extended": "ASCII Extendido",
+  "detailed_description": "Nossa tabela ASCII completa oferece uma referência completa para todos os 128 caracteres ASCII padrão e os caracteres ASCII extendidos (128-255). ASCII (American Standard Code for Information Interchange) é o padrão básico de codificação de caracteres usado em computadores e dispositivos eletrônicos. Este gráfico de código ASCII exibe cada caractere com seus valores decimais, hexadecimais, octais e binários - essencial para programadores que trabalham com dados de nível baixo, protocolos de rede ou formatos de arquivo. A tabela inclui caracteres de controle (0-31) como NULL, TAB e nova linha; caracteres impressíveis incluindo letras, números e símbolos; e caracteres ASCII extendidos para símbolos especiais. Use a função de busca para encontrar rapidamente qualquer caractere pelo seu código ou descrição. Perfeito para depuração de problemas de codificação de caracteres, compreensão de sequências de escape ou aprendizado sobre a representação de caracteres em computadores. Adicione este gráfico de referência ASCII aos favoritos para acesso rápido durante o desenvolvimento.",
+  "usage_steps": [
+    "Navegue pela tabela ASCII para encontrar códigos de caracteres",
+    "Use a caixa de pesquisa para encontrar caracteres específicos pelo código ou descrição",
+    "Clique em qualquer caractere para ver todas as suas representações de código",
+    "Ative 'Mostrar ASCII Extendido' para ver caracteres de 128 a 255",
+    "Use seções de referência rápida para saltar para ranges de caracteres específicos"
+  ],
+  "usage_examples": [
+    "Encontre o código ASCII para o caractere de nova linha (decimal 10, hex 0A)",
+    "Procure o valor hexadecimal para a letra maiúscula 'A' (decimal 65, hex 41)",
+    "Verifique os códigos de caracteres de controle para análise de arquivos de texto e protocolos"
+  ]
+}

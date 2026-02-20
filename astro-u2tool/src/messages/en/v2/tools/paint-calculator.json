@@ -1,0 +1,40 @@
+{
+  "roomDimensions": "Room Dimensions",
+  "doors": "Number of Doors",
+  "windows": "Number of Windows",
+  "coats": "Number of Coats",
+  "coverage": "Paint Coverage",
+  "sqftPerGallon": "sq ft per gallon",
+  "wallArea": "Wall Area",
+  "deductions": "Deductions",
+  "paintableArea": "Paintable Area",
+  "paintNeeded": "Paint Needed",
+  "gallons": "gallons",
+  "detailed_description": "The Paint Calculator precisely quantifies paint volume requirements for rectangular or irregular wall surfaces by applying computational geometry to subtract openings like doors and windows from total surface area. This tool addresses the critical need for accurate material estimation in residential and commercial painting projects, where manual calculations often lead to 15-20% overestimation due to failure to account for architectural voids. Utilizing the formula: Paint Volume (gallons) = [(Wall Area - (Σ Door Areas + Σ Window Areas)) × Paint Thickness (mils)] / Coverage Rate (sq ft/gallon), it incorporates user-defined parameters including wall height/width dimensions, multiple opening configurations, and paint specifications. The algorithm automatically converts metric/imperial units, applies ASTM D3924 standard coverage rates (350 sq ft/gallon for latex), and factors in multi-coat applications. Unique technical advantages include polygonal area calculation for vaulted ceilings and dynamic adjustment for textured surfaces using a 1.2x coefficient multiplier.",
+  "usage_steps": [
+    "Enter primary wall dimensions using the dual-input fields for height (ft/in) and width (ft/in), with decimal precision up to 0.1ft",
+    "Add architectural openings via the '+' button, specifying each void's shape (rectangle/arched door) and dimensions (width × height in inches)",
+    "Select paint type from the ASTM standards dropdown (latex/acrylic/epoxy) to activate corresponding coverage rate defaults",
+    "Adjust for surface texture using the toggle switch: smooth (1.0x), textured (1.2x), or rough (1.5x) absorption multipliers",
+    "Input desired coating thickness in mils (default: 3.0 mils for standard latex) using the slider control (1.0-10.0 mils range)",
+    "Click 'Calculate' to generate results showing base paint volume, total with waste allowance, and recommended gallonage rounded to industry-standard increments"
+  ],
+  "usage_examples": [
+    "Calculating paint needs for a 12'×14' living room with two 3'×7' doors and three 36\"×48\" windows, requiring two coats of eggshell latex",
+    "Estimating epoxy coating volume for a warehouse wall (100'×20') with six 6'×8' loading dock openings and concrete texture adjustment",
+    "Determining paint requirements for a cathedral ceiling room with 12' sloped walls and arched windows needing primer plus two top coats",
+    "Planning commercial office painting with 15 identical rooms (10'×12') each containing one 3'×6'8\" door and two 2'×5' windows using low-VOC acrylic"
+  ],
+  "metric": "Metric",
+  "imperial": "Imperial",
+  "walls": "Walls",
+  "addWall": "Add Wall",
+  "width": "Width",
+  "height": "Height",
+  "openings": "Openings",
+  "addOpening": "Add Opening",
+  "noOpenings": "No Openings",
+  "qty": "Qty",
+  "results": "Results",
+  "openingArea": "Opening Area"
+}

@@ -1,0 +1,18 @@
+{
+  "detailed_description": "Der URL Encoder/Decoder ist ein spezialisierter Netzwerktool zur präzisen Umwandlung von URLs und Query-Strings gemäß RFC 3986-Standard. Technisch gesehen führt das Tool URL-Encoding (auch Prozentencodierung genannt) durch, bei dem reservierte Zeichen wie Leerzeichen, Umlaute oder Sonderzeichen durch ein Prozentzeichen (%), gefolgt von zwei hexadezimalen Ziffern, ersetzt werden. Dies gewährleistet die korrekte Übertragung von Daten über HTTP(S), da Protokolle wie GET-Requests nur ASCII-Zeichen im URL-String erlauben. Besonders bei internationalisierten Domainnamen (IDN) oder OAuth-Token wird sichergestellt, dass nicht-lateinische Zeichen korrekt in Punycode-kompatible Formate umgewandelt werden. Der Decoder führt diesen Prozess invers durch, inklusive der Behandlung von '+'-Zeichen als Leerzeichen im CGI-Standard. Entwickler benötigen dieses Werkzeug, um sicherzustellen, dass Anfragen an REST-APIs, Formular-Submissions oder Deep-Linking-Strategien in Webanwendungen fehlerfrei funktionieren. Das Tool verarbeitet serverseitig UTF-8-Eingaben und wendet dabei strict RFC-Konformität an, wodurch es sich von einfachen Client-seitigen Implementierungen unterscheidet, die häufig Sicherheitslücken durch unvollständige Zeichenbereinigung öffnen.",
+  "usage_steps": [
+    "1. Öffnen Sie den URL Encoder/Decoder im Netzwerk-Toolabschnitt.",
+    "2. Wählen Sie im Dropdown-Menü zwischen 'URL codieren' oder 'URL decodieren'.",
+    "3. Geben Sie die URL oder Query-Parameter in das große Textfeld ein – Umlaute wie 'ü' oder Sonderzeichen wie '#' werden automatisch erkannt.",
+    "4. Aktivieren Sie optional das Kontrollkästchen 'Zeilenumbrüche beibehalten', wenn Sie mehrzeilige URLs verarbeiten.",
+    "5. Klicken Sie auf die 'Verarbeiten'-Schaltfläche, um die Transformation zu starten.",
+    "6. Kopieren Sie das Ergebnis aus dem Ausgabefeld direkt in Ihre Anwendung oder API-Dokumentation."
+  ],
+  "usage_examples": [
+    "1. Ein Entwickler muss einen OAuth2-Authorisierungscode mit dem Wert 'ab%20c#1' sicher in einem Redirect-URI übergeben und muss diesen manuell escapen, bevor er den Token-Server anfragt.",
+    "2. Eine Marketing-Abteilung erstellt Deep-Links für eine Kampagne mit dem Ziel-Parameter '?produkt=café', das in '%3Fprodukt%3Dcaf%C3%A9' umgewandelt werden muss.",
+    "3. Ein Backend-Entwickler decodiert einen von einem Legacy-System übermittelten Query-String 'name=John+Doe%40mail.com' zur Validierung von Benutzereingaben.",
+    "4. Ein API-Tester konstruiert manuell einen GET-Request mit dem Suchparameter '?query=100€' und benötigt die korrekte Kodierung als '?query=100%E2%82%AC'."
+  ],
+  "inputPlaceholder": "Hier eingeben..."
+}

@@ -1,0 +1,34 @@
+{
+  "enterText": "Entrez le Texte à Paraphraser",
+  "paraphrase": "Paraphraser",
+  "style": "Style d'Écriture",
+  "standard": "Standard",
+  "formal": "Formel",
+  "casual": "Décontracté",
+  "creative": "Créatif",
+  "simplified": "Simplifié",
+  "result": "Texte Paraphrasé",
+  "originalText": "Texte Original",
+  "detailed_description": "Le Paraphrase Tool est un outil avancé de traitement du langage naturel (NLP) qui permet de réécrire du texte en préservant son sens tout en modifiant sa structure syntaxique et lexicalement. Contrairement aux simples outils de remplacement de synonymes, il utilise des modèles basés sur des transformers (comme BERT ou T5) pour analyser le contexte sémantique global et générer des reformulations adaptatives. Cet outil répond à des besoins spécifiques comme l'optimisation de contenus académiques pour éviter le plagiat, la simplification de textes techniques pour un public non expert, ou encore l'adaptation de tonalité pour du marketing ciblé. Son moteur intègre des algorithmes de détection de relations logiques entre propositions, permettant des restructurations profondes plutôt que des modifications superficielles. Les utilisateurs peuvent ajuster la complexité linguistique et le niveau de créativité des reformulations via des paramètres précis, ce qui le rend particulièrement utile pour les développeurs souhaitant automatiser des tâches de réécriture dans des pipelines NLP.",
+  "usage_steps": [
+    "1. Collez votre texte dans la zone d'entrée multiligne avec compteur de mots dynamique.",
+    "2. Sélectionnez un style prédéfini (formel, académique, technique, créatif) ou personnalisé via le menu déroulant contextuel.",
+    "3. Ajustez le curseur de complexité linguistique (1-5) pour contrôler le niveau de sophistication du vocabulaire.",
+    "4. Activez/désactivez l'option « Maintenir termes techniques » selon que vous souhaitez conserver le jargon spécifique.",
+    "5. Cliquez sur « Générer reformulation » pour déclencher le traitement par le modèle NLP optimisé.",
+    "6. Comparez les versions originales et paraphrasées dans la vue parallèle avec mise en évidence des modifications syntaxiques."
+  ],
+  "usage_examples": [
+    "Un doctorant réécrit son mémoire en mode académique pour éviter les redondances avant soumission à une revue scientifique.",
+    "Un UX writer adapte les microcopies d'une application pour un public adolescent en utilisant le style informel et le niveau de complexité 2.",
+    "Un ingénieur en IA reformule un document technique pour le rendre compréhensible par des décideurs non techniques, en conservant les termes clés.",
+    "Un rédacteur web optimise un article pour le SEO en générant plusieurs variantes de phrases tout en maintenant la densité sémantique."
+  ],
+  "selectStyle": "Sélectionner le style",
+  "paraphrasedText": "Paraphrased Text",
+  "tips": "Conseils",
+  "tip1": "Différents styles produisent différents résultats",
+  "tip2": "L'outil utilise le remplacement de synonymes",
+  "tip3": "Vérifiez la sortie pour la précision",
+  "simple": "Simple"
+}

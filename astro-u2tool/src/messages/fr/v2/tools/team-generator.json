@@ -1,0 +1,29 @@
+{
+  "enterNames": "Saisissez les noms (un par ligne)",
+  "numberOfTeams": "Nombre d'Équipes",
+  "teams": "Équipes",
+  "team": "Équipe",
+  "shuffle": "Mélanger à nouveau",
+  "members": "membres",
+  "detailed_description": "Le Team Generator est un outil algorithmique conçu pour partitionner de manière optimale un ensemble d'individus en équipes équilibrées selon des critères prédéfinis. Il utilise un algorithme de partitionnement basé sur l'analyse combinatoire et l'optimisation stochastique, intégrant des métriques de similarité et de diversité. L'utilisateur peut spécifier des attributs quantitatifs (niveau de compétence, expérience) ou qualitatifs (compétences techniques, rôles fonctionnels) pour une distribution équitable. La solution combine un algorithme génétique pour explorer les combinaisons possibles et une fonction de coût adaptative minimisant les déséquilibres inter-équipes. Ce outil répond aux besoins des organisateurs de compétitions esports, des chefs de projet en management agile, ou des enseignants structurant des travaux collaboratifs. Sa force réside dans sa capacité à traiter des contraintes multidimensionnelles via un moteur d'optimisation hybride, contrairement aux méthodes aléatoires basiques qui ignorent les hétérogénéités structurelles.",
+  "usage_steps": [
+    "Saisissez les noms des participants dans le champ de texte dédié, séparés par des virgules.",
+    "Activez/désactivez l'option 'Équilibrage avancé' pour configurer des attributs personnalisés (niveau, rôle, spécialité).",
+    "Sélectionnez le nombre d'équipes ou spécifiez la taille maximale par équipe via le sélecteur numérique.",
+    "Utilisez le curseur 'Priorité stratégique' pour pondérer l'importance des critères d'équilibrage (0-100%).",
+    "Cliquez sur 'Générer' pour lancer l'algorithme d'optimisation stochastique.",
+    "Exportez les résultats au format JSON ou CSV, ou utilisez le bouton 'Réoptimiser' pour ajuster la distribution."
+  ],
+  "usage_examples": [
+    "Un organisateur de tournoi League of Legends attribuant des joueurs selon leur MMR et rôle principal.",
+    "Un professeur de programmation formant des binômes avec mixité de langages maîtrisés et niveaux techniques.",
+    "Un manager IT constituant des équipes de développement cross-fonctionnelles avec équilibre technique/métier.",
+    "Un coach sportif répartissant des athlètes en groupes de compétition avec équilibrage physique et expérience."
+  ],
+  "\\n": "\\n",
+  "enterMembers": "Saisissez les Membres",
+  "membersPlaceholder": "Placeholder pour les Membres",
+  "teamNames": "Noms des Équipes",
+  "optional": "Facultatif",
+  "teamNamesPlaceholder": "Placeholder pour les Noms des Équipes"
+}

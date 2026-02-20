@@ -1,0 +1,31 @@
+{
+  "enterContent": "Entrez Votre Contenu",
+  "analyze": "Analyser",
+  "totalWords": "Total de Mots",
+  "uniqueWords": "Mots Uniques",
+  "topKeywords": "Mots-clés Principaux",
+  "keyword": "Mot-clé",
+  "count": "Nombre",
+  "density": "Densité",
+  "excludeCommon": "Exclure les mots courants",
+  "minLength": "Longueur minimale",
+  "detailed_description": "Le vérificateur de densité des mots-clés effectue une analyse lexicale approfondie d'un texte en appliquant des techniques de traitement du langage naturel (NLP). L'outil décompose le contenu en tokens via un processus de tokenisation, filtre les mots vides (stop-words) selon des listes linguistiques configurables, puis calcule la fréquence d'occurrence de chaque mot-clé par rapport au corpus total. La densité est déterminée par la formule (nombre d'occurrences / nombre total de mots) × 100, avec possibilité d'analyser des combinaisons de termes (n-grams). Les développeurs et rédacteurs SEO utilisent cet outil pour optimiser le référencement naturel sans tomber dans le keyword stuffing, vérifier la cohérence thématique d'un contenu, ou auditer la stratégie de concurrents en identifiant leurs mots-clés stratégiques. Le moteur utilise des algorithmes de lemmatisation pour regrouper les variantes morphologiques (pluriels, conjugaisons) et propose des options de filtrage par casse (majuscules/minuscules) et d'exportation des résultats en CSV. Contrairement aux outils basiques, il intègre une analyse contextuelle des cooccurrences pour détecter les thèmes émergents.",
+  "usage_steps": [
+    "Collez votre texte dans l'éditeur multifonction avec coloration syntaxique.",
+    "Sélectionnez les mots-clés à analyser via le champ de saisie dédié ou activez la détection automatique des termes pertinents.",
+    "Ajustez les paramètres avancés : activation/désactivation de la sensibilité à la casse, exclusion des mots vides, définition de la longueur minimale des n-grams.",
+    "Cliquez sur le bouton 'Analyser' pour lancer le traitement via l'API NLP intégrée.",
+    "Explorez les résultats affichés sous forme de tableau interactif avec colonnes de fréquence absolue, densité relative, et score de pertinence contextuelle.",
+    "Téléchargez les données structurées au format CSV ou JSON pour intégration dans des outils d'analyse externe."
+  ],
+  "usage_examples": [
+    "Un rédacteur SEO optimise un article sur 'cybersécurité blockchain' en identifiant les lacunes de densité pour les termes techniques comme 'contrats intelligents'.",
+    "Un marketeur compare la répartition des mots-clés entre deux campagnes de contenu concurrentes pour ajuster sa stratégie sémantique.",
+    "Un auditeur qualité détecte du keyword stuffing automatiquement en filtrant les mots dépassant 5% de densité dans un texte institutionnel.",
+    "Un chercheur en linguistique analyse des corpus de discours politiques pour cartographier l'évolution de la densité des termes économiques sur plusieurs années."
+  ],
+  "enterText": "Enter Text",
+  "visual": "Visual",
+  "twoWordPhrases": "Two Word Phrases",
+  "threeWordPhrases": "Three Word Phrases"
+}

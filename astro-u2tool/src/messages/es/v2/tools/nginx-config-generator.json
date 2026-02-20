@@ -1,0 +1,29 @@
+{
+  "serverName": "Nombre del Servidor",
+  "rootPath": "Ruta Raíz",
+  "proxyPass": "Proxy Pass (opcional)",
+  "features": "Características",
+  "enableSsl": "Habilitar SSL/HTTPS",
+  "enableGzip": "Habilitar Compresión Gzip",
+  "enableCaching": "Habilitar Caché de Archivos Estáticos",
+  "enablePhp": "Habilitar PHP-FPM",
+  "generate": "Generar Configuración Nginx",
+  "copy": "Copiar al Portapapeles",
+  "output": "Configuración Nginx Generada",
+  "detailed_description": "El generador de configuración Nginx permite crear bloques de configuración precisos para servidores web Nginx mediante un formulario estructurado. Esta herramienta procesa parámetros como directivas de proxy inverso, balanceo de carga, terminación SSL/TLS y reglas de reescritura de URLs, generando archivos de configuración compatibles con las versiones modernas de Nginx (1.20+). Los desarrolladores necesitan esta herramienta para automatizar la creación de configuraciones complejas sin errores de sintaxis, especialmente al desplegar aplicaciones en entornos de contenedores, servidores cloud o infraestructuras de microservicios. Al introducir parámetros como nombres de dominio, puertos backend, ubicaciones de certificados y reglas de caching, el motor interno aplica plantillas basadas en mejores prácticas de seguridad y rendimiento, incluyendo configuraciones optimizadas para HTTP/2 y protección contra ataques DDoS mediante limitaciones de tasa.",
+  "usage_steps": [
+    "Selecciona el tipo de servidor (sitio estático, proxy inverso o balanceador de carga) usando los botones de opción.",
+    "Introduce el nombre de dominio en el campo 'server_name' y especifica el puerto de escucha (por ejemplo, 80 o 443).",
+    "Configura las reglas de proxy inverso indicando la dirección IP y puerto del backend en el campo 'proxy_pass'.",
+    "Activa SSL/TLS marcando la casilla correspondiente e ingresa las rutas a los certificados PEM y clave privada.",
+    "Ajusta parámetros avanzados como 'location blocks' para rutas específicas o reglas de compresión GZIP.",
+    "Haz clic en 'Generar Configuración' para obtener el archivo listo para ser copiado al directorio /etc/nginx/sites-available/."
+  ],
+  "usage_examples": [
+    "Configurar un servidor Nginx para alojar un sitio estático con cache de recursos en /var/www/html.",
+    "Crear un proxy inverso que enrute tráfico desde api.ejemplo.com a un clúster de servidores backend en 10.0.0.10:3000-3003.",
+    "Implementar balanceo de carga round-robin con terminación SSL para una aplicación de comercio electrónico.",
+    "Generar reglas de reescritura de URL para migrar un blog de WordPress a una nueva estructura de directorios."
+  ],
+  "exampleDomain": "ejemplo.com"
+}

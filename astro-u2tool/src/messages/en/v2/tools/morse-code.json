@@ -1,0 +1,25 @@
+{
+  "detailed_description": "The Morse Code Converter enables bidirectional translation between ASCII text and International Morse Code (ITU-R M.1677-1 standard) through precise symbol mapping and timing calculations. Users can encode alphanumeric text into dot-dash sequences with proper inter-character spacing or decode Morse signals into legible text, including special characters like prosigns and diacritical marks. This tool is essential for amateur radio operators requiring CW transmission practice, educators developing telegraphy training materials, or developers implementing Morse code interfaces in IoT devices. The converter processes input through a UTF-8 character parser, applies a lookup table matching 93 printable ASCII characters to standardized Morse equivalents, and calculates timing intervals measured in milliseconds for accurate tone generation. Advanced features include error handling for invalid sequences, automatic case conversion, and configurable spacing between words.",
+  "usage_steps": [
+    "Open the tool and locate the input text area labeled 'Text to Convert'",
+    "Select conversion direction using the arrow toggle button (⇅) between Text→Morse or Morse→Text",
+    "Enter content in the input field, using standard Morse format with spaces between characters and slashes (/) for word breaks when decoding",
+    "Adjust advanced settings in the 'Options' panel: enable tone playback, set words-per-minute speed, or modify spacing ratios",
+    "Click 'Convert' to generate results in the output text area with timing annotations",
+    "Use the 'Download' button to save conversions as .txt files or the 'Swap' icon to reverse conversion direction"
+  ],
+  "usage_examples": [
+    "A ham radio operator practicing QSO simulations by converting call signs to Morse for transmission drills",
+    "A STEM educator generating customized Morse code worksheets with embedded error correction exercises",
+    "A firmware developer validating Morse code output in a microcontroller-based emergency beacon prototype",
+    "A sound engineer creating time-coded audio files for Morse-based art installations using variable tone durations"
+  ],
+  "text": "Text",
+  "toMorse": "To Morse",
+  "textPlaceholder": "Enter text...",
+  "morse": "Morse",
+  "toText": "To Text",
+  "play": "Play",
+  "morsePlaceholder": "Enter morse code...",
+  "reference": "Reference"
+}

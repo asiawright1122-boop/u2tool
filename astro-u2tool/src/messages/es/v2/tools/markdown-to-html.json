@@ -1,0 +1,17 @@
+{
+  "detailed_description": "La herramienta Markdown a HTML transforma texto escrito en sintaxis Markdown (como encabezados, listas, bloques de código y enlaces) en código HTML semántico y válido. Utiliza un motor de análisis léxico basado en CommonMark, que procesa el documento mediante tokenización para generar un árbol de sintaxis abstracta (AST), asegurando precisión en la conversión de elementos complejos como tablas, citas anidadas o extensiones GFM (GitHub Flavored Markdown). Los desarrolladores necesitan esta herramienta para integrar contenido dinámico en aplicaciones web, generar documentación técnica (por ejemplo, archivos README.md a páginas HTML interactivas) o preparar correos electrónicos estilizados. El proceso incluye detección automática de indentación, manejo de entidades HTML y soporte para atributos personalizados en etiquetas. Además, permite preservar bloques de código con resaltado de sintaxis vía librerías como Highlight.js, optimizando la legibilidad en entornos de desarrollo.",
+  "usage_steps": [
+    "Pega tu texto Markdown en el área de edición principal con soporte para arrastrar y soltar archivos .md",
+    "Selecciona opciones avanzadas: activa 'Preservar espacios' o elige un tema de resaltado de código en el menú desplegable",
+    "Haz clic en 'Convertir' para procesar el contenido a través del motor CommonMark-DOM",
+    "Revisa el HTML resultante en el panel de salida con numeración de líneas y resaltado de sintaxis",
+    "Copia el código al portapapeles usando el botón 'Copiar todo' o selecciona secciones específicas",
+    "Descarga el archivo HTML generado con un nombre personalizado o comparte el resultado vía enlace temporal"
+  ],
+  "usage_examples": [
+    "Un desarrollador convierte una guía de API en Markdown a HTML para integrarla en una documentación interactiva con JavaScript",
+    "Un creador de contenido transforma un artículo con listas y tablas en HTML para publicarlo en una plataforma de blogs que no soporta Markdown",
+    "Un estudiante genera una página web académica a partir de apuntes en Markdown, manteniendo el formato de ecuaciones matemáticas",
+    "Un ingeniero DevOps automatiza la conversión de informes técnicos en Markdown a informes HTML con estilos personalizados para compartir en equipos no técnicos"
+  ]
+}

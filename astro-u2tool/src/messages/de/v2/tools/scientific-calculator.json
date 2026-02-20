@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Scientific Calculator ermöglicht präzise Berechnungen komplexer mathematischer Ausdrücke mit Unterstützung für trigonometrische Funktionen (sin, cos, tan, Arkusfunktionen), logarithmische Operationen (ln, log10, log mit beliebiger Basis), Exponentialfunktionen (e^x, 10^x) sowie hyperbolische Funktionen. Er verarbeitet Eingaben mit Operatorpräzedenz, Klammern und Konstanten wie π oder e, wobei Ergebnisse mit IEEE-754-Doppelgenauigkeitsarithmetik berechnet werden. Der Tool nutzt einen LL(1)-Parser zur Auswertung algebraischer Ausdrücke und unterstützt sowohl Grad- als auch Bogenmaßmodi für winkelbasierte Berechnungen. Ingenieure benötigen ihn für Strukturmechanik-Analysen, Physiker für Welleninterferenzberechnungen, Finanzanalysten für kontinuierliche Zinsmodelle. Die Echtzeit-Präfixnotation-Anzeige zeigt Zwischenresultate bei verschachtelten Operationen an, während die Speicherfunktion 'M+'/'M-' kumulative Berechnungen ermöglicht. Die Implementierung umfasst eine benutzerdefinierte Fehlerbehandlung für Divisionen durch Null oder ungültige Domänen bei Logarithmen.",
+  "usage_steps": [
+    "Wechseln Sie durch Klick auf die 'Shift'-Taste zwischen Standard- und inversen Funktionen (z.B. sin → sin⁻¹).",
+    "Verwenden Sie den 'Ans'-Knopf, um das letzte Ergebnis in nachfolgenden Berechnungen zu referenzieren.",
+    "Geben Sie Exponenten über die 'Exp'-Taste ein (z.B. 3Exp5 für 3×10⁵) und nutzen Sie 'x!' für Fakultäten.",
+    "Gruppieren Sie Terme mit Klammern '(', ')', um Prioritätsregeln für komplexe Formeln zu definieren.",
+    "Wählen Sie im Dropdown-Menü zwischen 'DEG' (Gradmaß) und 'RAD' (Bogenmaß) für winkelabhängige Berechnungen.",
+    "Rufen Sie über den 'History'-Button gespeicherte Berechnungsverläufe ab, um Fehler zu korrigieren oder Modellparameter zu iterieren."
+  ],
+  "usage_examples": [
+    "Berechnung der Resultierendenkraft in einem Trägersystem: 500*sin(30°) + 800*cos(45°) für Ingenieuranalysen.",
+    "Bestimmung der Phasendifferenz in der Optik: tan⁻¹((λ/d)) für Interferenzmuster mit Wellenlänge λ und Gitterabstand d.",
+    "Modellierung exponentieller Abnutzung in der Materialwissenschaft: A = A₀*e^(-kt) mit Relaxationszeitkonstante k.",
+    "Konvertierung einer Dezimalzahl in eine IEEE-754-Gleitkommadarstellung durch Eingabe 'Bin'-Modus und 123.45 für digitale Systeme."
+  ]
+}

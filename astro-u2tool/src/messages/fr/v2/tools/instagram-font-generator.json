@@ -1,0 +1,32 @@
+{
+  "enterText": "Entrez Votre Texte",
+  "fontStyles": "Styles de Police",
+  "preview": "Aperçu",
+  "bold": "Gras",
+  "italic": "Italique",
+  "boldItalic": "Gras Italique",
+  "script": "Script",
+  "fraktur": "Fraktur",
+  "doubleStruck": "Double Trait",
+  "circled": "Encerclé",
+  "squared": "Encadré",
+  "detailed_description": "Le générateur de polices Instagram est un outil technique qui convertit du texte standard en polices Unicode stylisées via des caractères spéciaux et des combinaisons OpenType. Il exploite des blocs Unicode comme les majuscules cursives (U+1D49C–U+1D4CF), les chiffres fraktur (U+1D504–U+1D50F), et les glyphes combinatoires pour créer des effets visuels uniques. Conçu pour contourner les limites des polices natives d'Instagram, il permet aux utilisateurs de générer des textes compatibles avec les bios, légendes et commentaires. L'algorithme mappe chaque caractère ASCII à des variantes visuelles équivalentes en Unicode, tout en préservant la lisibilité. L'outil utilise du JavaScript côté client pour le traitement immédiat, sans nécessiter de téléchargement. Cela répond aux besoins de marques souhaitant une cohérence visuelle, d'influenceurs cherchant à se démarquer, ou de designers testant des compositions textuelles. Il supporte également l'insertion de symboles décoratifs comme des cœurs ou étoiles via les blocs Emoticons et Supplemental Symbols.",
+  "usage_steps": [
+    "Saisissez votre texte dans le champ d'entrée en haut de l'écran.",
+    "Cochez les cases correspondant aux styles désirés (ex: 'Cursive', 'Fraktur', 'Double Stroke').",
+    "Utilisez le curseur 'Intensité' pour ajuster la densité des caractères combinatoires.",
+    "Observez la prévisualisation en temps réel dans la zone centrale.",
+    "Cliquez sur l'icône 'Copier' pour enregistrer le texte stylisé dans le presse-papiers.",
+    "Utilisez le bouton 'Réinitialiser' pour effacer les styles appliqués."
+  ],
+  "usage_examples": [
+    "Un restaurant modifie son bio Instagram avec des glyphes de fourchettes/couteaux Unicode (U+1F374) pour attirer l'œil.",
+    "Un graphiste teste différentes variantes de son nom en majuscules manuscrites (U+1D5A0) pour une signature digitale.",
+    "Une marque de mode utilise des caractères fraktur pour créer un hashtag exclusif (#🅕🅞🅝🅓🅐🅝🅒🅘🅐🅛).",
+    "Un influenceur ajoute des émojis d'étoile dorée (U+1F31F) entre chaque mot de sa légende pour un effet scintillant."
+  ],
+  "tips": "Conseils",
+  "tip1": "Buvez un verre d'eau au réveil",
+  "tip2": "Gardez une bouteille d'eau avec vous",
+  "tip3": "Définissez des rappels pour boire"
+}

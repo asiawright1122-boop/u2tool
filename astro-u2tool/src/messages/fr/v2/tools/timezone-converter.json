@@ -1,0 +1,27 @@
+{
+  "date": "Date",
+  "time": "Heure",
+  "now": "Maintenant",
+  "fromTimezone": "De",
+  "toTimezone": "À",
+  "swapTimezones": "Échanger les fuseaux horaires",
+  "convertedTime": "Heure convertie",
+  "worldClock": "Horloge mondiale",
+  "detailed_description": "Le convertisseur de fuseaux horaires permet de transformer des horodatages entre plus de 400 zones géographiques en tenant compte des règles complexes de changement d'heure (DST) et des décalages UTC. Techniquement, il s'appuie sur la base de données IANA Time Zone (tzdb) synchronisée avec les normes ISO 8601, garantissant une précision au milliseconde près. Ce outil est indispensable pour les développeurs gérant des logs distribués, les coordinateurs de services cloud ou les équipes travaillant à distance à travers le monde. Son moteur utilise l'API JavaScript Intl.DateTimeFormat avec détection automatique des règles historiques de DST, évitant les erreurs courantes liées aux modifications récentes des réglementations horaires. Contrairement aux solutions basiques, il affiche simultanément les conversions vers les 24 zones horaires principales tout en conservant la chronologie des événements via un affichage chronologique inversé.",
+  "usage_steps": [
+    "Sélectionnez le fuseau horaire source via un menu déroulant hiérarchique organisé par continents et villes principales",
+    "Saisissez la date/heure dans le format ISO 8601 étendu (AAAA-MM-JJTHH:mm:ssZ)",
+    "Activez/désactivez l'option « Heure d'été incluse » selon la spécificité du calcul requis",
+    "Choisissez jusqu'à 5 fuseaux horaires cibles à comparer en mode parallèle",
+    "Utilisez le bouton « Copier en format RFC 5545 » pour intégrer le résultat dans un fichier iCal",
+    "Exportez le résultat au format CSV avec paramétrage des colonnes affichées"
+  ],
+  "usage_examples": [
+    "Un développeur calcule l'horodatage d'un log système en UTC+2 pour le convertir en temps local Hawaïen (UTC-10) lors d'une investigation de bug",
+    "Un community manager planifie un post sur les réseaux sociaux à l'heure d'été européenne et vérifie l'affichage simultané en Japonais standard",
+    "Un administrateur système convertit les logs AWS (UTC) en heure locale pour un audit avec une équipe en Inde (UTC+5:30)",
+    "Un astronome synchronise des observations entre télescopes en Chili (UTC-3) et en Russie (UTC+8) en tenant compte des microsecondes"
+  ],
+  "copied": "Copié !",
+  "copy": "Copier"
+}

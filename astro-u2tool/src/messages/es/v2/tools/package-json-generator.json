@@ -1,0 +1,29 @@
+{
+  "detailed_description": "El Generador de package.json es una herramienta técnica diseñada para crear archivos de configuración de proyectos Node.js con opciones personalizadas. Este herramienta permite definir campos como name, version, main, type (CommonJS/ES Modules), dependencies, devDependencies, scripts, y propiedades avanzadas como engines, peerDependencies o export. Su utilidad radica en evitar errores manuales al estructurar proyectos, estandarizar configuraciones en equipos de desarrollo y generar boilerplate para diferentes casos de uso (API REST, CLI tools, bibliotecas). Internamente, la herramienta valida la sintaxis de campos obligatorios, soporta múltiples gestores de paquetes (npm, yarn, pnpm) y ofrece sugerencias inteligentes para scripts comunes (start, test, build). Incluye opciones avanzadas como la generación de campos type 'module' para ESM, configuración de husky hooks, o integración con frameworks como React o TypeScript.",
+  "usage_steps": [
+    "Selecciona el tipo de módulo (CommonJS o ES Modules) en el selector desplegable",
+    "Completa los campos obligatorios: nombre del proyecto, versión inicial y punto de entrada",
+    "Agrega dependencias mediante un buscador integrado que sugiere paquetes populares y sus versiones",
+    "Personaliza scripts NPM con un editor de comandos predefinidos (lint, test, build) o escribe comandos personalizados",
+    "Activa opciones avanzadas para configurar engines, private registry o campos de metadatos",
+    "Copia el resultado generado o descarga el archivo package.json directamente"
+  ],
+  "usage_examples": [
+    "Un desarrollador crea una API REST con Express y necesita configurar scripts de reinicio automático con nodemon",
+    "Un equipo implementa una biblioteca de componentes React que requiere exportaciones condicionales y type: 'module'",
+    "Un arquitecto de software estandariza configuraciones de proyectos en una organización con múltiples repositorios",
+    "Un desarrollador full-stack genera un package.json para un microservicio con dependencias específicas de AWS Lambda"
+  ],
+  "version": "Versión",
+  "main": "Principal",
+  "author": "Autor",
+  "license": "Licencia",
+  "type": "Tipo",
+  "keywords": "Palabras clave",
+  "keywordsPlaceholder": "Ingrese palabras clave separadas por coma",
+  "private": "Privado",
+  "scripts": "Scripts",
+  "scriptName": "Nombre del script",
+  "scriptCommand": "Comando",
+  "commonScripts": "Scripts comunes"
+}

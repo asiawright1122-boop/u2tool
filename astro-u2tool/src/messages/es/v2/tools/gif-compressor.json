@@ -1,0 +1,36 @@
+{
+  "uploadGif": "Subir GIF",
+  "colors": "Número de Colores",
+  "skipFrames": "Saltar Fotogramas",
+  "scale": "Escala",
+  "compress": "Comprimir",
+  "download": "Descargar",
+  "original": "Original",
+  "compressed": "Comprimido",
+  "saved": "Ahorrado",
+  "processing": "Procesando...",
+  "compressionLevel": "Nivel de Compresión",
+  "compressionHint": "Valor más bajo produce archivo más pequeño",
+  "reduceColors": "Reducir Colores",
+  "maxColors": "Máximo de Colores",
+  "dropzone": "Haz clic o arrastra GIF para subir",
+  "compressFirst": "Haz clic en comprimir para comenzar",
+  "originalSize": "Tamaño Original",
+  "compressedSize": "Tamaño Comprimido",
+  "reduction": "Reducción",
+  "detailed_description": "El Compresor de GIF optimiza archivos GIF mediante técnicas avanzadas de reducción de paleta de colores, compresión LZW y eliminación de metadatos redundantes. Utiliza algoritmos de quantización adaptativa para minimizar la pérdida visual mientras reduce hasta un 70% el tamaño del archivo. Esta herramienta es esencial para desarrolladores y diseñadores que necesitan mantener la calidad de animaciones en entornos web, donde el rendimiento es crítico. Funciona analizando frames redundantes, aplicando compresión diferencial en secuencias animadas y ajustando la profundidad de color sin afectar la percepción visual. A diferencia de otras herramientas, implementa una estrategia híbrida de compresión con soporte para optimización de transparencia y ajuste fino de parámetros como delay frames y calidad de dithering. Permite procesar múltiples GIFs simultáneamente manteniendo consistencia en calidad y velocidad de procesamiento.",
+  "usage_steps": [
+    "Arrastra tu GIF al área de carga o selecciona 'Buscar archivo' para importarlo",
+    "Ajusta el control deslizante de 'Calidad de compresión' entre 10-90 según necesites reducción máxima o calidad prioritaria",
+    "Activa 'Optimizar transparencia' si tu GIF contiene áreas transparentes para eliminar datos innecesarios",
+    "Selecciona 'Eliminar metadatos EXIF' para limpiar información oculta del archivo original",
+    "Haz clic en 'Iniciar compresión' y espera la barra de progreso del motor WebAssembly",
+    "Descarga el archivo comprimido con un solo click o selecciona 'Copiar enlace' para compartir directamente"
+  ],
+  "usage_examples": [
+    "Reducir un GIF de 15MB a 4MB para insertarlo en un email newsletter sin exceder límites de adjuntos",
+    "Optimizar GIFs animados para un blog WordPress manteniendo velocidad de carga bajo 3 segundos",
+    "Preparar una secuencia de animación para una landing page responsive con límite de 2MB por recurso",
+    "Comprimir GIFs de 30fps a formato web-optimized para subirlos a Twitter sin pérdida de velocidad de reproducción"
+  ]
+}

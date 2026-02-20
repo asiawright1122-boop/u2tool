@@ -1,0 +1,30 @@
+{
+  "enterToken": "Bitte geben Sie einen JWT Token ein",
+  "invalidFormat": "Ungültiger JWT-Format",
+  "invalidToken": "Ungültiger JWT Token",
+  "header": "Header",
+  "payload": "Payload",
+  "signature": "Signature",
+  "issuedAt": "Erfasst am (iat)",
+  "expires": "Ablaufdatum (exp)",
+  "notBefore": "Nicht vor (nbf)",
+  "detailed_description": "Der JWT Decoder ist ein mächtiges Werkzeug, das es Benutzern ermöglicht, JSON Web Tokens (JWT) zu entschlüsseln und zu inspizieren. JWTs sind von der Industrie anerkannte Standard-Token, die verwendet werden, um Nutzlasten sicher zwischen verschiedenen Systemen zu übertragen. Diese Nutzlasten können beispielsweise Benutzerinformationen, Zugriffsrechte oder andere relevante Daten enthalten. Der JWT Decoder ermöglicht es Entwicklern und Sicherheitsexperten, die Struktur eines JWTs in seinen drei Hauptkomponenten – Header, Nutzlast (Payload) und Signatur – zu zerlegen und diese einzeln zu überprüfen. Dies ist besonders nützlich bei der Fehlersuche, der Analyse von Sicherheitsproblemen und der Validierung der Integrität von Token. Durch die Verwendung des JWT Decoder können Entwickler sicherstellen, dass die Token korrekt signiert sind und die erwarteten Daten enthalten. Dies ist unerlässlich für die Entwicklung und Wartung sicherer und zuverlässiger Anwendungen, insbesondere in Umgebungen, in denen Authentifizierung und Autorisierung von großer Bedeutung sind.",
+  "usage_steps": [
+    "Öffnen Sie die JWT Decoder Seite und navigieren Sie zum Eingabefeld für den JWT-Token.",
+    "Fügen Sie den zu entschlüsselnden JWT-Token in das Eingabefeld ein. Stellen Sie sicher, dass der gesamte Token eingegeben wird, einschließlich aller Teile (Header, Payload und Signatur).",
+    "Klicken Sie auf die Schaltfläche 'Decode' oder drücken Sie die Enter-Taste, um den Token zu entschlüsseln.",
+    "Der Decoder zeigt nun die drei Hauptkomponenten des Tokens an: Header, Payload und Signatur. Jeder Teil wird separat angezeigt und kann detailliert überprüft werden.",
+    "Für die Payload können Sie die einzelnen Key-Value-Paare auf Validität und Richtigkeit überprüfen. Achten Sie darauf, ob die erwarteten Daten vorliegen und ob keine unerwarteten Felder vorhanden sind.",
+    "Falls erforderlich, können Sie den Token weiter analysieren oder modifizieren. Der Decoder bietet Optionen, um die Daten in verschiedenen Formaten anzuzeigen (z.B. JSON) und die Signatur zu überprüfen."
+  ],
+  "usage_examples": [
+    "Ein Entwickler möchte sicherstellen, dass ein von einem Server generierter JWT-Token korrekt signiert ist und die erwarteten Nutzlastdaten enthält. Er verwendet den JWT Decoder, um den Token zu entschlüsseln und die Signatur zu validieren.",
+    "Ein Sicherheitsexperte untersucht einen verdächtigen JWT-Token, der in einem Log-File gefunden wurde. Er verwendet den Decoder, um die Token-Struktur zu überprüfen und mögliche Manipulationen zu erkennen.",
+    "Ein API-Entwickler testet die Authentifizierungsfunktion einer neuen API. Er generiert JWT-Token und verwendet den Decoder, um sicherzustellen, dass die API korrekte Token akzeptiert und ungültige Token ablehnt.",
+    "Ein Systemadministrator möchte die Konfiguration eines JWT-basierten Authentifizierungssystems überprüfen. Er verwendet den JWT Decoder, um die Tokens, die von der Anwendung generiert werden, zu analysieren und sicherzustellen, dass sie die erforderlichen Claims enthalten."
+  ],
+  "input": "Eingabe",
+  "decode": "Decode",
+  "copied": "Kopiert!",
+  "copy": "Kopieren"
+}

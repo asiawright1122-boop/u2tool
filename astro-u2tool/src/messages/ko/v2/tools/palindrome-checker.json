@@ -1,0 +1,26 @@
+{
+  "detailed_description": "회문 검사기는 텍스트가 앞뒤로 같은지 테스트합니다. 공백, 구두점, 대소문자를 무시하여 구문과 문장에 숨겨진 회문을 찾을 수 있습니다.",
+  "usage_steps": [
+    "단어 또는 구문 입력",
+    "비교 옵션 선택",
+    "회문인지 확인",
+    "유명한 회문 예시 시도",
+    "자신만의 회문 만들기"
+  ],
+  "usage_examples": [
+    "단어 회문 테스트",
+    "구문 회문 찾기",
+    "교육적 단어 게임"
+  ],
+  "inputLabel": "텍스트 입력",
+  "inputPlaceholder": "단어 또는 구문을 입력하세요...",
+  "ignoreCase": "대소문자 무시",
+  "ignoreSpaces": "공백 무시",
+  "ignorePunctuation": "구두점 무시",
+  "isPalindrome": "회문입니다!",
+  "notPalindrome": "회문이 아닙니다",
+  "processedText": "처리된 텍스트",
+  "forward": "정방향",
+  "backward": "역방향",
+  "examples": "이 예시들을 시도해 보세요"
+}

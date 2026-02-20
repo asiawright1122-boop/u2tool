@@ -1,0 +1,26 @@
+{
+  "copy": "Copy All",
+  "ipType": "IP Type",
+  "ipv4Random": "IPv4 (Random)",
+  "ipv6": "IPv6",
+  "privateIpv4": "Private IPv4",
+  "publicIpv4": "Public IPv4",
+  "count": "Count",
+  "generate": "Generate",
+  "generatedIps": "Generated IPs",
+  "detailed_description": "The IP Address Generator is a specialized utility that programmatically creates random, syntactically valid IP addresses across multiple protocols and configurations. Technically, it employs cryptographically secure pseudo-random number generators (CSPRNGs) to produce IPv4 addresses adhering to RFC 791 standards and IPv6 addresses following RFC 8200 specifications. For IPv4, it supports classful addressing (A/B/C) and private ranges defined in RFC 1918 (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16). IPv6 generation includes unique local addresses (ULA) and link-local addresses. Developers can generate both public and private addresses with optional CIDR notation. This tool is essential for network engineers validating routing rules, QA teams testing edge cases in IP validation logic, and cybersecurity professionals simulating penetration test scenarios. The generator ensures mathematical correctness by validating address space boundaries and applying proper bitmask operations during CIDR prefix generation. It also supports bulk generation with configurable output formats (dotted decimal, hexadecimal, or integer representations) to accommodate testing of network devices, API rate-limiting systems, and database IP storage structures.",
+  "usage_steps": [
+    "1. Choose IP version using the protocol selector (IPv4/IPv6 toggle)",
+    "2. Enable 'Private Address' checkbox to restrict output to non-routable ranges",
+    "3. Set CIDR range (16-30 for IPv4, 64-126 for IPv6) using the prefix slider",
+    "4. Select output format (standard, hexadecimal, or integer) from the dropdown",
+    "5. Specify quantity (1-1000) in the batch generation input field",
+    "6. Click 'Generate' and download results in JSON, CSV, or plain text format"
+  ],
+  "usage_examples": [
+    "Example 1: A network administrator testing firewall ACLs generates 50 random public IPv4 addresses to simulate multi-region traffic patterns",
+    "Example 2: A backend developer validates IP geolocation API accuracy by comparing generated private IPv6 addresses against known range databases",
+    "Example 3: A DevOps engineer creates 200 test IP addresses in CIDR /24 format to stress-test a load balancer's routing capabilities",
+    "Example 4: A cybersecurity researcher generates 1000 unique local IPv6 addresses to audit a system's duplicate address detection (DAD) implementation"
+  ]
+}

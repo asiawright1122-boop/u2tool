@@ -1,0 +1,25 @@
+{
+  "input": "Input",
+  "placeholder": "Paste text to detect encoding...",
+  "analyzeText": "Analyze Text",
+  "uploadFile": "Upload File",
+  "file": "File",
+  "size": "Size",
+  "results": "Detection Results",
+  "confidence": "confidence",
+  "detailed_description": "The Encoding Detector identifies character encoding schemes in text streams and binary files by analyzing byte patterns, linguistic heuristics, and format signatures. This tool employs probabilistic models to determine encodings like UTF-8, UTF-16LE, ISO-8859-1, Windows-1252, and over 200 others through statistical analysis of byte frequency distributions and byte order marks (BOMs). Developers need this tool to resolve character corruption issues when integrating legacy systems, processing user-generated content, or handling internationalized text. For example, when XML parsers fail due to undetected UTF-8-BOM headers or JSON imports produce mojibake artifacts, this tool provides actionable insights. The detector combines deterministic checks (e.g., BOM validation) with machine learning-driven heuristics to analyze multi-byte sequences, offering confidence scores for each detected encoding. It supports both raw binary analysis and text content evaluation, making it suitable for debugging protocol buffers, fixing CSV imports, and validating file metadata.",
+  "usage_steps": [
+    "Upload a file via drag-and-drop or click 'Select File' to analyze binary content",
+    "Enter text directly in the editable textarea for content analysis",
+    "Toggle 'Deep Scan' mode to enable statistical analysis of ambiguous encodings",
+    "View the confidence score percentage and primary encoding detection result",
+    "Access alternative encoding possibilities in the 'Candidates' dropdown",
+    "Export detection report in JSON format using the 'Download Results' button"
+  ],
+  "usage_examples": [
+    "A developer troubleshooting a CSV file where Swedish characters appear as � symbols by detecting Windows-1252 encoding in a UTF-8 parser",
+    "Data analysts resolving encoding mismatches in a PostgreSQL database dump containing mixed Latin-1 and UTF-8MB4 sequences",
+    "Web application engineers validating character encoding consistency across API endpoints accepting multipart/form-data submissions",
+    "System administrators decoding legacy EBCDIC mainframe logs converted to ASCII with incorrect code page mapping"
+  ]
+}

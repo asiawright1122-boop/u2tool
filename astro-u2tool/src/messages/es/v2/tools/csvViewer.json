@@ -1,0 +1,14 @@
+{
+  "defaultInput": "Nombre, Edad, Ciudad, País\nJohn Doe, 30 años, Nueva York, EE. UU.\nJane Smith, 25 años, Londres, Reino Unido\nBob Johnson, 35, Sídney, Australia",
+  "delimiterComma": "Coma (,)",
+  "delimiterSemicolon": "Punto y coma (;)",
+  "delimiterTab": "Pestaña",
+  "delimiterPipe": "Tubería (|)",
+  "downloadCsv": "Descargar CSV",
+  "csvInput": "CSV Input",
+  "csvPlaceholder": "Pega tus datos CSV aquí...",
+  "tablePreview": "Vista previa de la tabla",
+  "stats": "{rows} filas × {columns} columnas",
+  "noData": "No hay datos para mostrar. Ingrese el contenido CSV arriba.",
+  "tip": "Consejo: Puede pegar datos directamente desde Excel o Google Sheets. La herramienta detectará automáticamente el formato."
+}

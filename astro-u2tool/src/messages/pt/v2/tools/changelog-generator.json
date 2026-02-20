@@ -1,0 +1,30 @@
+{
+  "detailed_description": "O Gerador de Changelog ajuda a criar arquivos CHANGELOG.md bem estruturados seguindo o formato Keep a Changelog. Adicione entradas de versão com datas e categorize as alterações em seções Adicionadas, Alteradas, Descontinuadas, Removidas, Corrigidas e de Segurança. A ferramenta gera Markdown que segue convenções de versionamento semântico e facilita para os usuários entenderem o que mudou entre as versões do seu software.",
+  "usage_steps": [
+    "Digite o número da versão (por exemplo, 1.0.0)",
+    "Defina a data de lançamento",
+    "Adicione entradas nas categorias apropriadas",
+    "Use Adicionadas para novos recursos",
+    "Use Alteradas para alterações na funcionalidade existente",
+    "Use Corrigidas para correções de bugs",
+    "Gere e copie a entrada do changelog"
+  ],
+  "usage_examples": [
+    "Documente um lançamento de versão major",
+    "Registre correções de bugs em um lançamento de patch",
+    "Registre alterações quebradas em uma nova versão",
+    "Mantenha um changelog para um pacote npm"
+  ],
+  "projectNamePlaceholder": "Meu Projeto",
+  "projectUrlPlaceholder": "https://github.com/usuario/repo",
+  "versionPlaceholder": "1.0.0",
+  "itemPlaceholder": "Digite o item...",
+  "projectName": "Nome do projeto",
+  "projectUrl": "URL do projeto",
+  "addVersion": "Adicionar versão",
+  "version": "Versão",
+  "date": "Data",
+  "removeVersion": "Remover versão",
+  "generate": "Gerar",
+  "download": "Baixar"
+}

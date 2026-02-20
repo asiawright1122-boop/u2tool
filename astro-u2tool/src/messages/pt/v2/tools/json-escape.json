@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O JSON Escape/Unescape é uma ferramenta técnica especializada em manipular caracteres especiais em strings JSON, garantindo conformidade com a sintaxe estrita do formato. Quando você 'escapa' uma string, o tool converte caracteres como aspas duplas (\"), barras invertidas (\\), quebras de linha (\\n) e outros símbolos não imprimíveis em suas sequências de escape correspondentes, essencial para validar payloads em APIs RESTful ou armazenar dados estruturados corretamente. O processo inverso, 'unescape', reconverte essas sequências para seu formato original, útil ao processar respostas JSON de serviços externos. Diferentemente de codificadores genéricos, este tool implementa o padrão RFC 8259, tratando corretamente casos como strings contendo Unicode (ex.: \\u00e1) ou delimitadores de controle (ex.: \\t). Desenvolvedores precisam deste recurso para depurar erros de parse em configurações JSON, gerar payloads seguros para requisições HTTP, ou corrigir inconsistências em logs que contenham dados malformados. Internamente, o parser identifica padrões regulares de caracteres proibidos em JSON válido, aplicando substituições baseadas em tabelas de mapeamento bidirecional, mantendo integridade semântica dos dados durante a serialização.",
+  "usage_steps": [
+    "1. Cole sua string JSON não formatada na caixa de texto central do painel 'Input'",
+    "2. Selecione a operação desejada usando os botões 'Escape' ou 'Unescape' no cabeçalho",
+    "3. Ative a opção 'Highlight Syntax' para visualizar caracteres especiais em destaque",
+    "4. Clique em 'Process' para aplicar a transformação à string inserida",
+    "5. Revise o resultado na seção 'Output' com marcações de linhas alteradas",
+    "6. Use o ícone de clipboard ao lado do resultado para copiar a string processada"
+  ],
+  "usage_examples": [
+    "Converter um objeto JavaScript contendo emojis (ex.: {\"mensagem\": \"🎉 Sucesso\"}) para formato seguro antes de enviar via API",
+    "Corrigir uma string JSON com quebras de linha malformadas extraídas de logs de servidor (ex.: \"erro\\nStackTrace\")",
+    "Preparar um snippet de configuração JSON para inserção em código-fonte, escapando barras invertidas para compatibilidade em strings C#",
+    "Decodificar sequências Unicode (ex.: \\u00c1rea\\u0042rava) em mensagens recebidas de sistemas legados"
+  ]
+}

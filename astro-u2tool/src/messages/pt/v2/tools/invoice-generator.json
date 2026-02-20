@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Gerador de Faturas é uma ferramenta web baseada em tecnologia front-end que permite a criação de documentos fiscais personalizados utilizando estruturas de dados JSON e renderização em tempo real com bibliotecas JavaScript como Mustache.js. O usuário pode modificar modelos HTML5 pré-definidos, aplicando estilos CSS3 e integrando variáveis dinâmicas para campos como itens, impostos e totais. A exportação para PDF é realizada via jsPDF, com opção de compressão de imagens e ajuste de layout responsivo. Desenvolvedores e profissionais autônomos precisam deste recurso para automatizar a geração de documentos fiscais com marca d'água, assinaturas digitais e cálculos automáticos de descontos e juros. A ferramenta também suporta internacionalização, permitindo a inserção de moedas e idiomas múltiplos, além de armazenar dados localmente com localStorage para retomada de projetos. Sua arquitetura modular permite a adição de plugins para integração com sistemas de pagamento ou exportação para formatos como XML e CSV.",
+  "usage_steps": [
+    "Acesse a página do Gerador de Faturas e selecione um modelo na seção de modelos pré-carregados ou faça upload de um template HTML personalizado.",
+    "Preencha os campos obrigatórios nos formulários de dados empresariais, incluindo CNPJ, endereço e logo em formato SVG ou PNG.",
+    "Utilize o editor de CSS integrado para ajustar cores, fontes e layout, aplicando classes personalizadas aos elementos da fatura.",
+    "Arraste e solte campos dinâmicos (como %ITBI, descontos por volume) na seção de itens para ativar cálculos automáticos.",
+    "Clique no botão 'Exportar para PDF' e selecione opções avançadas, como compressão de imagens (85% padrão) ou orientação paisagem.",
+    "Salve o projeto localmente usando o botão 'Salvar Progresso' ou compartilhe o link gerado com clientes para revisão colaborativa."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor freelancer cria uma fatura com campos para horas trabalhadas, taxa de câmbio em tempo real para clientes internacionais e QR code para pagamento PIX.",
+    "Uma loja de e-commerce gera notas fiscais com marca d'água de 'Rascunho' até a aprovação do cliente, integrando automaticamente dados de pedidos do Shopify.",
+    "Uma equipe remota configura modelos com múltiplas moedas e campos condicionais para taxas de IVA variáveis, adaptando-se a legislações de diferentes países.",
+    "Um consultor técnico adiciona cláusulas personalizadas em uma seção de termos, usando rich text editor, e exporta a fatura para XML compatível com sistemas da Receita Federal."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "sqlQuery": "SQL 쿼리",
+  "sqlPlaceholder": "SQL 쿼리를 입력하세요...",
+  "mongoQuery": "MongoDB 쿼리",
+  "examples": "예제",
+  "exampleSimpleSelect": "간단한 SELECT",
+  "exampleSelectProjection": "프로젝션 포함 SELECT",
+  "exampleInsert": "INSERT",
+  "exampleUpdate": "UPDATE",
+  "exampleDelete": "DELETE",
+  "detailed_description": "SQL to MongoDB 변환 도구는 관계형 데이터베이스의 SQL 쿼리를 MongoDB의 집계 파이프라인(Aggregation Pipeline) 또는 CRUD 작업으로 자동 변환하는 전문적인 솔루션입니다. 이 도구는 SQL의 SELECT 문, JOIN 구문, WHERE 절 등을 MongoDB의 $match, $project, $lookup 연산자로 정확히 매핑하며, 복잡한 서브쿼리나 UNION 구조도 $facet 또는 중첩 파이프라인으로 변환합니다. 기술적으로는 SQL 파서가 Abstract Syntax Tree(AST)를 생성한 후, 각 노드를 MongoDB의 문서 지향 구조에 맞게 재구성하는 방식으로 작동합니다. 특히, 다중 테이블 JOIN은 $lookup과 $unwind 단계의 조합으로, GROUP BY 절은 $group 연산자로 최적화됩니다. 사용자는 MySQL, PostgreSQL 등 다양한 SQL 문법을 지원하는 인터페이스에서 원본 데이터베이스의 특성을 지정할 수 있으며, 변환된 결과는 MongoDB 5.0 이상의 최신 기능(예: $setWindowFields)을 활용해 성능을 극대화합니다. 이 도구는 관계형 데이터베이스에서 NoSQL로 마이그레이션하는 기업 애플리케이션, 대규모 데이터 분석 파이프라인 구축, 또는 SQL 기반 보고서를 MongoDB BI 도구에 연동할 때 필수적입니다. 특히, 계층적 데이터 처리나 비정형 데이터 쿼리 최적화에 어려움을 겪는 개발자에게 즉시 활용 가능한 코드를 제공합니다.",
+  "usage_steps": [
+    "1. 'SQL 입력' 텍스트 영역에 변환하고자 하는 SQL 쿼리 입력 (예: SELECT * FROM users WHERE age > 30)",
+    "2. '대상 MongoDB 버전' 드롭다운에서 4.4 또는 5.0 선택 (버전별 연산자 호환성 차이 반영)",
+    "3. '출력 형식' 라디오 버튼에서 'Aggregation Pipeline' 또는 'CRUD Operation' 지정",
+    "4. '고급 설정' 체크박스에서 '쿼리 최적화' 및 '설명 주석 추가' 옵션 활성화",
+    "5. '변환 결과' 패널에서 생성된 MongoDB 쿼리 확인 및 'JSON 다운로드' 버튼 클릭",
+    "6. '테스트 환경 연동' 탭에서 MongoDB 연결 문자열 입력 후 실행하여 결과 검증"
+  ],
+  "usage_examples": [
+    "1. 전자상거래 플랫폼에서 MySQL 기반의 매출 보고서 SQL을 MongoDB Atlas의 실시간 분석 파이프라인으로 변환",
+    "2. 소셜 미디어 앱의 친구 관계 조회 쿼리(SQL JOIN)를 MongoDB의 $graphLookup을 활용한 추천 시스템 로직으로 재설계",
+    "3. 금융 서비스 기업의 복잡한 재무제표 생성 쿼리(UNION + GROUPING SETS)를 다중 $group 단계로 분할 변환",
+    "4. IoT 시스템에서 시간 기반 로그 분석을 위한 PostgreSQL의 window function을 MongoDB의 $setWindowFields로 이식"
+  ]
+}

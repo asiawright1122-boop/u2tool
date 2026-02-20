@@ -1,0 +1,18 @@
+{
+  "detailed_description": "Le CSS Beautifier est un outil de développement indispensable pour les développeurs web travaillant avec des feuilles de style en cascade (CSS). Techniquement, cet outil permet de formater et de beautifier du code CSS, offrant des options pour le minifier ou le rendre plus lisible. La minification est particulièrement utile pour réduire la taille des fichiers CSS, optimisant ainsi les temps de chargement des pages web. La beautification, quant à elle, aide à améliorer la lisibilité et la maintenance du code, en ajoutant des indentations et des retours à la ligne appropriés. Les développeurs ont besoin de cet outil pour plusieurs raisons : il facilite la collaboration en équipe, permet de comprendre rapidement des codes CSS complexes, et aide à détecter et corriger les erreurs plus facilement. Le CSS Beautifier utilise des algorithmes avancés pour analyser le code, supprimer les espaces inutiles, et appliquer une structure cohérente, tout en préservant la fonctionnalité originale du code.",
+  "usage_steps": [
+    "Ouvrez la page de l'outil CSS Beautifier sur le site de développement.",
+    "Dans la section 'Input', collez votre code CSS brute dans la zone de texte fournie.",
+    "Configurez les options de formatage selon vos besoins : choisissez entre 'Beautifier' pour une meilleure lisibilité ou 'Minify' pour une optimisation du code.",
+    "Si vous sélectionnez 'Beautifier', vous pouvez ajuster les paramètres d'indentation et de saut de ligne pour personnaliser le formatage.",
+    "Appuyez sur le bouton 'Process' pour appliquer les modifications au code CSS.",
+    "Le code formaté ou minifié apparaîtra dans la section 'Output', prêt à être copié et utilisé."
+  ],
+  "usage_examples": [
+    "Un développeur travaille sur un site web complexe et doit fusionner plusieurs fichiers CSS en un seul. En utilisant le CSS Beautifier avec l'option 'Minify', il peut réduire la taille du fichier final, optimisant les performances du site.",
+    "Une équipe de développeurs partage un projet et chaque membre a des styles de codage différents. Le CSS Beautifier, avec son option 'Beautifier', permet d’uniformiser le code CSS, facilitant la collaboration et la revue de code.",
+    "Un développeur doit déboguer un fichier CSS volumineux et mal formaté. En utilisant l'outil avec l'option 'Beautifier', il peut rendre le code plus lisible, ce qui facilite l’identification et la correction des erreurs.",
+    "Une développeuse crée un thème pour un CMS et doit fournir un code CSS propre et bien structuré. Le CSS Beautifier, avec ses options de personnalisation, lui permet de formater le code selon les standards de l’entreprise."
+  ],
+  "indent": "Indentation"
+}

@@ -1,0 +1,33 @@
+{
+  "detailed_description": "Der Text-Wiederholer dupliziert Ihren Text so oft wie nötig. Wählen Sie aus verschiedenen Trennzeichen und fügen Sie optional eine Nummerierung hinzu.",
+  "usage_steps": [
+    "Geben Sie den zu wiederholenden Text ein",
+    "Legen Sie die Anzahl der Wiederholungen fest",
+    "Wählen Sie den Trennzeichentyp",
+    "Fügen Sie optional eine Nummerierung hinzu",
+    "Kopieren oder laden Sie das Ergebnis herunter"
+  ],
+  "usage_examples": [
+    "Testdaten erstellen",
+    "Platzhalterinhalt füllen",
+    "Muster generieren"
+  ],
+  "inputLabel": "Zu wiederholender Text",
+  "inputPlaceholder": "Geben Sie hier Text ein...",
+  "repeatCount": "Anzahl der Wiederholungen",
+  "separator": "Trennzeichen",
+  "newline": "Neue Zeile",
+  "space": "Leerzeichen",
+  "comma": "Komma",
+  "semicolon": "Semikolon",
+  "tab": "Tabulator",
+  "none": "Keines",
+  "addNumbering": "Nummerierung hinzufügen",
+  "result": "Ergebnis",
+  "copy": "Kopieren",
+  "copied": "Kopiert!",
+  "download": "Herunterladen",
+  "resultPlaceholder": "Das Ergebnis wird hier angezeigt...",
+  "characters": "Zeichen",
+  "lines": "Zeilen"
+}

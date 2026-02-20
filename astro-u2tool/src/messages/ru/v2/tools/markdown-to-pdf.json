@@ -1,0 +1,32 @@
+{
+  "documentTitle": "Название документа",
+  "fontSize": "Размер шрифта",
+  "pageSize": "Размер страницы",
+  "markdownInput": "Markdown Input",
+  "inputPlaceholder": "Введите Markdown...",
+  "preview": "Предпросмотр",
+  "generatePdf": "Generate PDF",
+  "clear": "Clear",
+  "supportedSyntax": "Supported Markdown Syntax",
+  "headings": "Заголовки (# ## ###)",
+  "boldItalic": "Жирный и курсив",
+  "lists": "Списки (- или 1.)",
+  "codeBlocks": "Блоки кода",
+  "tables": "Таблицы",
+  "blockquotes": "Цитаты",
+  "horizontalRules": "Горизонтальные линии",
+  "inlineCode": "Встроенный код",
+  "detailed_description": "Markdown to PDF converter transforms your Markdown documents into professionally formatted PDF files. Supports headings, lists, tables, code blocks, blockquotes, and more. Customize font size and page size before generating.",
+  "usage_steps": [
+    "Enter or paste your Markdown content",
+    "Set the document title for the PDF",
+    "Choose font size and page size",
+    "Preview the formatted output",
+    "Click Generate PDF to create and download"
+  ],
+  "usage_examples": [
+    "Convert documentation to PDF for sharing",
+    "Create printable reports from Markdown notes",
+    "Generate PDF versions of README files"
+  ]
+}

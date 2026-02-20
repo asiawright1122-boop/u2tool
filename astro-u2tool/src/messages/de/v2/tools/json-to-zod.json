@@ -1,0 +1,29 @@
+{
+  "detailed_description": "Der JSON-to-Zod-Schema-Konverter analysiert strukturierte JSON-Daten und generiert automatisch ein typsicheres Validierungsschema mit Zod, einer TypeScript-basierten Bibliothek. Technisch gesehen führt das Tool eine AST-basierte Typinferenz durch, erkennt primitive Typen, verschachtelte Objekte, Arrays und discriminated unions und bildet diese auf Zod's Type-System ab (z.B. z.string(), z.array(), z.discriminatedUnion()). Entwickler benötigen dieses Tool, um manuelles Schreiben von Validierungsschemata für API-Endpunkte, Konfigurationsdateien oder Datenbankmodelle zu vermeiden. Es löst Probleme wie fehleranfällige manuelle Typdefinitionen und Inkonsistenzen zwischen JSON-Beispieldaten und tatsächlichen Laufzeitschemata. Besonders nützlich ist es bei der Migration bestehender JSON-Strukturen zu TypeScript-Projekten mit strikter Typüberprüfung. Das Tool verarbeitet optionale Eigenschaften (partial types), mapped Union-Typen korrekt und generiert lesbare Error-Messages durch zod's fluent API. Techniker nutzen intern eine Kombination aus statischer Code-Analyse und Heuristik-basierter Mustererkennung, um komplexe Szenarien wie verschachtelte Referenzen oder Zirkelabhängigkeiten zu behandeln.",
+  "usage_steps": [
+    "JSON-Daten in den Syntax-Highlighting-Editor einfügen (unterstützt JSON5 und kommentierte JSON-Dateien)",
+    "Strikter Modus aktivieren, um zusätzliche Typprüfungen für Null/Undefined-Werte zu erzwingen",
+    "Komplexe Typmuster wie Discriminated Unions manuell anpassen über den 'Typ-Editor'-Sidebar",
+    "Schema-Vorschau in Echtzeit im TypeScript-Code-Fenster prüfen (inklusive generierter JSDoc-Kommentare)",
+    "Validierungsregeln konfigurieren: Min/Max-Werte für Zahlen, String-Längenbegrenzungen oder Datumsformate",
+    "Zod-Schema als .ts-Datei herunterladen oder direkt in die Zwischenablage kopieren"
+  ],
+  "usage_examples": [
+    "Validierung von API-Request-Payloads für ein Node.js-Backend mit Express und Zod-Middleware",
+    "Erstellung typsicherer Konfigurationsdateien für CI/CD-Pipelines aus bestehenden JSON-Beispielen",
+    "Automatische Generierung von TypeScript-Interfaces und Zod-Schemata aus Swagger/OpenAPI-Dokumentationen",
+    "Migration veralteter JSON-basierter Datenmodelle zu einer typsicheren MongoDB-ODM-Lösung mit Zod als Validierungslayer"
+  ],
+  "jsonInput": "JSON-Eingabe",
+  "zodOutput": "Zod-Schema",
+  "convert": "In Zod konvertieren",
+  "copy": "Kopieren",
+  "copied": "Kopiert!",
+  "inputPlaceholder": "JSON hier einfügen...",
+  "placeholder": "JSON hier einfügen...",
+  "outputPlaceholder": "Zod-Schema erscheint hier...",
+  "loadExample": "Beispiel laden",
+  "schemaName": "Schema-Name",
+  "whatIsZod": "Was ist Zod?",
+  "zodExplanation": "Zod ist eine TypeScript-first Schema-Validierungsbibliothek mit statischer Typinferenz."
+}

@@ -1,0 +1,29 @@
+{
+  "enterNames": "Gib Namen ein (jeder Name auf einer neuen Zeile)",
+  "numberOfTeams": "Anzahl der Teams",
+  "teams": "Teams",
+  "team": "Team",
+  "shuffle": "Noch einmal mischen",
+  "members": "Mitglieder",
+  "detailed_description": "Der Team Generator ist ein Algorithmus-basierter Dienst zur stochastischen Aufteilung von Teilnehmerlisten in gleichmäßige Gruppen. Technisch implementiert als Single-Page-Application mit JavaScript, nutzt er ein modifiziertes Fisher-Yates-Shuffle-Verfahren zur Randomisierung, gefolgt von einer gleichmäßigen Verteilungslogik basierend auf der Teilnehmeranzahl und der Zielgruppengröße. Die Ausgewogenheit wird durch eine Gewichtungsfunktion erreicht, die bei aktivierter Option 'Skill-Balance' numerische Werte (z.B. Elo-Rating, Kompetenzscores) einbezieht, um optimierte Ressourcenallokation zu gewährleisten. Entwickler profitieren von der präzisen Steuerung über Query-Parameter und der Möglichkeit, CSV-Dateien als Eingabe zu verarbeiten. Besonders nützlich für agile Scrum-Teams bei Sprint-Planung, E-Sport-Organisatoren bei Turniermatchmakings oder Bildungseinrichtungen bei Praktikumsgruppen-Einteilung, da der Generator durch seine probabilistische Methode systematische Verzerrungen minimiert und gleichzeitig benutzerdefinierte Constraints wie Gruppengröße oder Priorisierungskriterien akzeptiert.",
+  "usage_steps": [
+    "1. Öffnen Sie den Tool-Link 'team-generator' im Browser.",
+    "2. Geben Sie im Textfeld 'Teilnehmerliste' mindestens 2 Namen ein, getrennt durch Zeilenumbrüche oder Kommata.",
+    "3. Wählen Sie im Dropdown 'Gruppenanzahl' die gewünschte Teamzahl zwischen 2 und 10 aus.",
+    "4. Aktivieren Sie per Checkbox 'Ausgewogene Teams', um die automatische Skill-Verteilung zu aktivieren (erfordert numerische Präfixe wie '1500:Max Mustermann' in der Liste).",
+    "5. Klicken Sie auf die Schaltfläche 'Teams generieren', um den Algorithmus zu starten.",
+    "6. Kopieren Sie das Ergebnis aus dem Ausgabefeld oder exportieren Sie die Teams als JSON über den 'Speichern'-Button."
+  ],
+  "usage_examples": [
+    "Ein Softwareentwicklungsunternehmen teilt 12 Mitarbeiter mit unterschiedlichen Expertenlevels (angegeben durch vorangestellte Punktezahlen) in drei gleichgewichtete Projektteams auf.",
+    "Ein Uni-Dozent erstellt per Zufallsprinzip vier gleich große Praktikumsgruppen aus einer Liste von 28 Informatikstudenten, wobei Vorlesungsteilnehmer automatisch gruppiert werden.",
+    "Ein E-Sport-Event-Organisator balanciert 16 Spieler mit Elo-Ratings zwischen 1200 und 1800 Punkten in zwei Teams für ein Counter-Strike-Turnier.",
+    "Ein Personalchef verteilt 20 neue Mitarbeiter auf vier Mentoring-Gruppen, wobei er die 'Skill-Balance'-Option deaktiviert, um rein zufällige soziale Mischung zu gewährleisten."
+  ],
+  "\\n": "\\n",
+  "enterMembers": "Gib Mitglieder ein",
+  "membersPlaceholder": "Mitglieder Platzhalter",
+  "teamNames": "Teamnamen",
+  "optional": "Optional",
+  "teamNamesPlaceholder": "Teamnamen Platzhalter"
+}

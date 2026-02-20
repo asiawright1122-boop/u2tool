@@ -1,0 +1,36 @@
+{
+  "yourName": "Votre Nom",
+  "partnerName": "Nom de Partenaire",
+  "compatibility": "Compatibilité",
+  "result": "Résultat d'Amour",
+  "perfectMatch": "Match Parfait!",
+  "greatMatch": "Grand Match!",
+  "goodMatch": "Bon Match",
+  "average": "Compatibilité Moyenne",
+  "needsWork": "Besoin de Travail",
+  "disclaimer": "Ceci est à des fins de divertissement uniquement",
+  "detailed_description": "Le Love Calculator est un outil d'analyse algorithmique basé sur des techniques d'appariement phonétique et de traitement du langage naturel (NLP). Ce générateur de compatibilité amoureuse utilise des métriques quantitatives pour évaluer la synergie entre deux noms propres. Techniquement, il combine trois couches d'analyse : une comparaison de graphèmes via l'algorithme de Levenshtein pour mesurer les similarités orthographiques, un appariement phonétique basé sur le code Soundex pour évaluer les résonances auditives, et une analyse étymologique croisant les origines culturelles des prénoms via une base de données de 15 000 noms internationaux. Les utilisateurs obtiennent un score composite (0-100%) avec un diagramme radar détaillant les contributions relatives de chaque critère. Ce dispositif s'adresse particulièrement aux couples curieux de tester leur compatibilité sur une base ludique, aux scénaristes vérifiant l'harmonie des noms de personnages, ou aux sociolinguistes explorant les dynamiques d'association onomastique. Le système intègre un module d'IA entraîné sur des corpus de données sociales pour affiner les prédictions selon les contextes culturels sélectionnés (francophone, anglo-saxon, etc.).",
+  "usage_steps": [
+    "Accédez à l'interface via le menu 'Outils de compatibilité' sur la page d'accueil",
+    "Saisissez le premier prénom dans le champ texte 'Prénom 1' avec option de correction orthographique automatique",
+    "Entrez le second prénom dans le champ 'Prénom 2' en précisant éventuellement le genre pour désambiguïser les homonymes",
+    "Sélectionnez le référentiel culturel d'analyse parmi 6 options (francophone, anglo-saxon, méditerranéen, etc.) via un sélecteur déroulant",
+    "Activez le mode 'Profondeur' pour obtenir l'analyse étymologique complète ou 'Rapide' pour le score synthétique",
+    "Cliquez sur 'Calculer la compatibilité' et explorez les résultats interactifs avec visualisations 3D des correspondances phonétiques"
+  ],
+  "usage_examples": [
+    "Un couple fête ses 5 ans ensemble et utilise l'outil pour vérifier si leur compatibilité nominative a évolué depuis leur rencontre",
+    "Un écrivain teste différentes combinaisons de prénoms pour ses personnages principaux afin d'assurer une harmonie linguistique dans son roman",
+    "Des collègues de bureau organisent un jeu de bureau en comparant les noms de leurs équipes sportives préférées",
+    "Un linguiste compare des paires de noms historiques pour analyser les corrélations entre similarité phonétique et alliances matrimoniales dans l'aristocratie médiévale"
+  ],
+  "result90": "Résultat90",
+  "result80": "Résultat80",
+  "result70": "Résultat70",
+  "result60": "Résultat60",
+  "result50": "Résultat50",
+  "enterName": "Entrez un Nom",
+  "calculating": "Calcul en cours",
+  "calculate": "Calculer",
+  "share": "Partager"
+}

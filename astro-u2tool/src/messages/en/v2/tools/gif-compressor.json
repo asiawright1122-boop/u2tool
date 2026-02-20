@@ -1,0 +1,36 @@
+{
+  "uploadGif": "Upload GIF",
+  "colors": "Color Count",
+  "skipFrames": "Skip Frames",
+  "scale": "Scale",
+  "compress": "Compress",
+  "download": "Download",
+  "original": "Original",
+  "compressed": "Compressed",
+  "saved": "Saved",
+  "processing": "Processing...",
+  "compressionLevel": "Compression Level",
+  "compressionHint": "Lower value produces smaller file",
+  "reduceColors": "Reduce Colors",
+  "maxColors": "Max Colors",
+  "dropzone": "Click or drag GIF to upload",
+  "compressFirst": "Click compress to start",
+  "originalSize": "Original Size",
+  "compressedSize": "Compressed Size",
+  "reduction": "Reduction",
+  "detailed_description": "The GIF Compressor reduces file sizes of animated GIFs through advanced lossy and lossless compression techniques while preserving visual integrity. By analyzing frame sequences and optimizing color tables, it eliminates redundant pixel data using LZW compression and delta encoding for inter-frame differences. Users often face challenges with GIFs consuming excessive bandwidth on web pages, exceeding social media upload limits, or causing slow email delivery. This tool addresses these issues by allowing granular control over color depth (1-256 colors), dithering patterns, and frame rate adjustments. Technical features include palette quantization to minimize color counts, metadata stripping, and smart frame blending to remove duplicate or near-identical frames. The algorithm prioritizes perceptual quality by adjusting error diffusion during color reduction, ensuring animations remain smooth even after aggressive compression.",
+  "usage_steps": [
+    "1. Drag-and-drop your GIF onto the upload interface or click 'Select File' to browse.",
+    "2. Choose compression mode: 'Lossless' for exact pixel replication or 'Lossy' for aggressive size reduction with adjustable quality sliders.",
+    "3. Adjust the color depth selector (default: 128 colors) to balance quality and file size.",
+    "4. Enable 'Frame Optimization' to automatically detect and remove redundant animation frames.",
+    "5. Preview compressed output using the split-screen viewer to compare original and optimized versions.",
+    "6. Click 'Download' to save the compressed GIF or 'Copy Link' to share via cloud storage."
+  ],
+  "usage_examples": [
+    "A web developer optimizes hero section GIFs to meet 2MB page weight budgets while maintaining smooth 15fps animation.",
+    "A social media manager compresses a 12MB product demo GIF to under 5MB for Twitter's file size restrictions.",
+    "An email marketer reduces animated newsletter headers to prevent email client image blocking.",
+    "A mobile app designer streamlines 30-frame loading animations by 40% to meet app store download speed requirements."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "uploadHint": "点击上传或拖拽文件",
+  "supportedFormats": "PNG, JPG, GIF, SVG, WebP",
+  "copyDataUrl": "复制Data URL",
+  "copyRawBase64": "复制原始Base64",
+  "base64Output": "Base64输出",
+  "htmlImageTag": "HTML图片标签",
+  "cssBackground": "CSS背景",
+  "detailed_description": "本工具将图像文件转换为Base64编码字符串，实现二进制数据到ASCII字符集的映射。通过数据URI方案，开发者可将图片直接嵌入HTML文档、CSS样式表或JSON数据中，有效减少HTTP请求次数。该技术特别适用于小体积图标、动态生成的验证码图片或移动端首屏优化场景。工具采用浏览器端Canvas元素进行图像预处理，支持PNG/JPEG/GIF格式的同步编码，可选择是否保留MIME类型头部信息。转换过程通过FileReader API读取文件流，在Worker线程中完成Base64编码计算，确保主界面响应流畅。输出结果包含完整的data URI前缀，可直接应用于img标签src属性或CSS background-image声明。",
+  "usage_steps": [
+    "在工具界面拖放图像文件至指定区域，或点击'选择文件'按钮导入本地图片",
+    "在编码模式选项中选择'完整数据URI'或'纯Base64字符串'输出格式",
+    "勾选'移除头部信息'复选框以获取纯编码内容（适用于特定API接口需求）",
+    "点击'开始转换'按钮触发异步处理流程，进度条实时显示转换状态",
+    "在结果面板查看生成的Base64字符串，使用'验证预览'功能确认图像完整性",
+    "点击'复制代码'按钮将编码结果快速插入剪贴板，直接粘贴至开发环境使用"
+  ],
+  "usage_examples": [
+    "将网站LOGO嵌入HTML邮件模板，确保在无网络环境下正确显示",
+    "为WebGL着色器生成内联纹理数据，避免异步加载导致的渲染延迟",
+    "在单页应用中将用户头像转换为Base64，实现本地存储身份信息",
+    "构建CSS雪碧图时，将小尺寸图标合并为Base64编码减少请求数量"
+  ],
+  "faqs": [
+    {
+      "question": "Image To Base64 是免费的吗？",
+      "answer": "是的，Image To Base64 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Image To Base64 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "支持哪些格式转换？",
+      "answer": "Image To Base64 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Image To Base64 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Image To Base64 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "clear": "清空",
+  "copied": "已复制！"
+}

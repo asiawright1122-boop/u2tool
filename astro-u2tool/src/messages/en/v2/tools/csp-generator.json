@@ -1,0 +1,34 @@
+{
+  "detailed_description": "The CSP Generator is a specialized tool for creating and refining Content Security Policy (CSP) HTTP headers to mitigate cross-site scripting (XSS), data injection attacks, and unauthorized resource loading. It enables developers to define granular source whitelists for scripts, styles, images, and other assets through a structured interface that maps directly to CSP directive syntax. Users input domain-specific policies using a combinatorial approach, combining keywords (e.g., 'self', 'unsafe-inline'), nonces, hashes, and URI schemes to construct robust security boundaries. The tool's engine validates directive compatibility across CSP levels 1-3, automatically escaping special characters in source expressions while providing warnings for deprecated practices like 'unsafe-eval'. By generating policies with precise 'strict-dynamic' token propagation and 'report-uri' endpoint configurations, it addresses modern web application security requirements while maintaining backward compatibility with legacy browsers. This eliminates manual errors in header composition and ensures consistent enforcement of least-privilege principles across complex content delivery networks.",
+  "usage_steps": [
+    "Select content categories via multi-select checkboxes (e.g., scripts, styles, images) to activate corresponding policy directives",
+    "Configure source lists using the domain input matrix with automatic syntax validation for tokens like 'nonce-...', 'sha256-...', and scheme sources",
+    "Enable advanced protections by toggling features like 'require-trusted-types-for', 'block-all-mixed-content', and 'upgrade-insecure-requests'",
+    "Specify report collection endpoints in the 'report-uri' field with support for batch URIs separated by spaces",
+    "Adjust policy mode from 'enforce' to 'report-only' using the header behavior switcher",
+    "Copy the generated header string with automatic header name ('Content-Security-Policy') and semicolon-delimited directive formatting"
+  ],
+  "usage_examples": [
+    "A SaaS platform hardening its dashboard against XSS by creating a script-src directive that combines 'self' with specific CDN domains and a nonce for inline initialization scripts",
+    "An e-commerce site implementing strict subresource integrity for payment gateway iframes using connect-src restrictions paired with 'strict-dynamic' tokens",
+    "A media streaming service configuring media-src directives with data: scheme allowances for legacy browser support while maintaining secure context requirements",
+    "A government portal generating audit-compliant CSP headers with mandatory 'no-unsafe-inline' policies and report-uri endpoints for security event monitoring"
+  ],
+  "directives": "Directives",
+  "defaultSrc": "default-src",
+  "scriptSrc": "script-src",
+  "styleSrc": "style-src",
+  "imgSrc": "img-src",
+  "fontSrc": "font-src",
+  "connectSrc": "connect-src",
+  "generate": "Generate CSP",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "output": "CSP Header",
+  "addValue": "Add value...",
+  "resetDefaults": "Reset to Defaults",
+  "httpHeader": "HTTP Header",
+  "metaTag": "Meta Tag",
+  "testingTip": "Testing Tip",
+  "testingTipText": "Use browser developer tools to check if your CSP is working correctly. Look for CSP violation reports in the console."
+}

@@ -1,0 +1,29 @@
+{
+  "serverName": "サーバ名",
+  "rootPath": "ルートパス",
+  "proxyPass": "プロキシパス（オプション）",
+  "features": "機能",
+  "enableSsl": "SSL/HTTPSを有効にする",
+  "enableGzip": "Gzip圧縮を有効にする",
+  "enableCaching": "静的ファイルキャッシュを有効にする",
+  "enablePhp": "PHP-FPMを有効にする",
+  "generate": "Nginx構成を生成",
+  "copy": "クリップボードにコピー",
+  "output": "生成されたNginx構成",
+  "detailed_description": "Nginx構成ジェネレーターは、Nginxのserverブロックとhttpディレクティブを自動生成する専門ツールです。このツールは、仮想ホスト設定、SSL終端、ロードバランシング、リバースプロキシ構成を必要とする開発者の作業効率を向上させます。従来、nginx.confやsites-availableディレクトリ内での手動設定は複雑な構文ルールを伴いますが、このツールはフォームベースのインターフェースにより、server_name、listenディレクティブ、upstreamブロックの定義を直感的に実行可能にします。HTTPS構成時には、TLSv1.3対応のcipher suite設定やOCSPスタプレングを自動で組み込みます。高度な機能として、HTTP/2プロトコル対応、gzip圧縮レベル調整、キャッシュコントロールディレクティブの挿入にも対応しています。生成された設定ファイルはnginx -tによる構文検証済みで、production環境での即時適用が可能です。",
+  "usage_steps": [
+    "「構成タイプ選択」セクションから『リバースプロキシ』『静的ホスティング』『ロードバランサ』のいずれかを選択",
+    "「基本設定」タブでドメイン名をserver_nameフィールドに入力し、IPv4/IPv6アドレスとポート番号を指定",
+    "SSL証明書使用時は「証明書設定」セクションで.pem/.keyファイルのパスを入力、HTTP/2有効化オプションを選択",
+    "「プロキシ設定」タブでupstreamサーバーのIPアドレスとポートをリスト形式で入力し、proxy_passルールを定義",
+    "「高度な設定」セクションでadd_headerディレクティブ、gzip圧縮レベル、proxy_cacheパラメータをカスタマイズ",
+    "「構成生成」ボタンをクリック後、ダウンロードされる.zipファイル内のnginx.confを/etc/nginx/conf.d/に配置"
+  ],
+  "usage_examples": [
+    "静的WebサイトをHTTPSでホスティングする際、HSTSヘッダーとOCSPスタプリングを自動挿入する構成を生成",
+    "複数のマイクロサービスをNginxロードバランサで統合する場合、least_connアルゴリズムとhealth check設定を自動生成",
+    "APIゲートウェイとして使用する際、rate limitingディレクティブで1分あたりのリクエスト数を制限するセキュリティ構成を作成",
+    "動画ストリーミングサーバー構築時に、X-Accel-RedirectヘッダーとTCP_NOPUSHオプションを組み合わせた最適化設定を出力"
+  ],
+  "exampleDomain": "example.com"
+}

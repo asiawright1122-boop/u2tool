@@ -1,0 +1,31 @@
+{
+  "detailed_description": "Der Online Countdown Timer ist ein vielseitiges Zeitmessungs-Tool, das individuelle Stunden, Minuten und Sekunden unterstützt. Bietet häufig verwendete voreingestellte Zeiten wie 1 Minute, 5 Minuten, 10 Minuten, 15 Minuten, 30 Minuten und 1 Stunde für eine schnelle Einrichtung mit einem Klick. Während des Countdowns wird eine schöne kreisförmige Fortschrittsanzeige angezeigt, die den verbleibenden Zeitanteil zeigt. Sendet eine Benachrichtigung, wenn der Countdown abgelaufen ist (erfordert Zustimmung). Unterstützt Pausieren, Fortsetzen und Neustarten. Perfekt für die Pomodoro-Technik, Kochzeiten, Pausen- Erinnerungen und mehr.",
+  "usage_steps": [
+    "Öffnen Sie die Seite des Countdown Timers",
+    "Wählen Sie eine voreingestellte Zeit oder geben Sie manuell Stunden, Minuten und Sekunden ein",
+    "Klicken Sie auf den grünen 'Start'-Button, um den Countdown zu beginnen",
+    "Beobachten Sie den kreisförmigen Fortschrittsbalken für die verbleibende Zeit",
+    "Klicken Sie auf 'Pausieren', um den Countdown zu pausieren",
+    "Sie erhalten eine Benachrichtigung, wenn der Countdown abgelaufen ist"
+  ],
+  "usage_examples": [
+    "25-minütige Fokus-Sitzungen für die Pomodoro-Technik",
+    "Kochzeiten für Eier, Nudeln usw. einstellen",
+    "Zeitkontrolle für Besprechungen oder Präsentationen",
+    "Pausen-Erinnerungen, um aufzustehen und sich zu bewegen"
+  ],
+  "faqs": [
+    {
+      "question": "Erhalte ich eine Erinnerung, wenn der Countdown abgelaufen ist?",
+      "answer": "Ja, eine Browser-Benachrichtigung wird gesendet, wenn der Countdown abgelaufen ist. Bei der ersten Verwendung wird der Browser um Erlaubnis für Benachrichtigungen bitten - bitte erlauben Sie, um die Erinnerungsfunktion zu aktivieren."
+    },
+    {
+      "question": "Wie lange kann ich die Uhr einstellen?",
+      "answer": "Unterstützt jede Kombination von 0-23 Stunden, 0-59 Minuten und 0-59 Sekunden. Maximale Countdown-Dauer ist 23:59:59."
+    },
+    {
+      "question": "Kann ich nach dem Pausieren weitermachen?",
+      "answer": "Ja. Nach dem Pausieren bleibt der Countdown bei seinem aktuellen Zustand. Klicken Sie auf 'Fortsetzen', um von dort fortzufahren."
+    }
+  ]
+}

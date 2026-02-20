@@ -1,0 +1,40 @@
+{
+  "detailed_description": "Pixel Density Calculator computes the pixels per inch (PPI) and other display metrics from screen resolution and diagonal size. Understand your display quality by calculating pixel pitch, aspect ratio, and total megapixels. Includes presets for common resolutions from HD to 8K and popular devices.",
+  "usage_steps": [
+    "Enter the screen width in pixels",
+    "Enter the screen height in pixels",
+    "Enter the diagonal screen size in inches",
+    "Or select a common resolution preset",
+    "View PPI, pixel pitch, and other metrics",
+    "Copy the results for reference"
+  ],
+  "usage_examples": [
+    "Comparing display quality across monitors",
+    "Evaluating smartphone screen sharpness",
+    "Choosing the right display for design work"
+  ],
+  "width": "Width",
+  "height": "Height",
+  "diagonal": "Diagonal",
+  "inches": "inches",
+  "commonResolutions": "Common Resolutions",
+  "results": "Results",
+  "pixelsPerInch": "Pixels Per Inch",
+  "pixelPitch": "Pixel Pitch",
+  "aspectRatio": "Aspect Ratio",
+  "megapixels": "Megapixels",
+  "physicalWidth": "Physical Width",
+  "physicalHeight": "Physical Height",
+  "totalPixels": "Total Pixels",
+  "ppiReference": "PPI Reference",
+  "quality": {
+    "excellent": "Excellent - Retina quality",
+    "good": "Good - Sharp display",
+    "average": "Average - Standard quality",
+    "low": "Low - Visible pixels"
+  },
+  "screenWidth": "Screen Width (px)",
+  "screenHeight": "Screen Height (px)",
+  "diagonalSize": "Diagonal Size (inches)",
+  "ppi": "Pixels Per Inch"
+}

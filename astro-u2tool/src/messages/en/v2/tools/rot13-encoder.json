@@ -1,0 +1,24 @@
+{
+  "detailed_description": "ROT13 Encoder is a simple tool for encoding and decoding text using the ROT13 cipher. ROT13 (rotate by 13 places) is a special case of the Caesar cipher that replaces each letter with the letter 13 positions after it in the alphabet. Since the alphabet has 26 letters, applying ROT13 twice returns the original text, making it its own inverse. ROT13 is commonly used to hide spoilers, puzzle solutions, or mildly obscure text.",
+  "usage_steps": [
+    "Enter or paste your text in the input area",
+    "The ROT13 transformation is applied automatically",
+    "View the encoded/decoded result",
+    "Copy the result to clipboard",
+    "Apply ROT13 again to decode"
+  ],
+  "usage_examples": [
+    "Hide spoilers in online discussions",
+    "Encode puzzle solutions",
+    "Learn about basic cryptography",
+    "Decode ROT13 encoded messages"
+  ],
+  "info": "info",
+  "inputPlaceholder": "input Placeholder",
+  "encode": "encode",
+  "swap": "swap",
+  "outputPlaceholder": "output Placeholder",
+  "mappingTable": "mapping Table",
+  "original": "original",
+  "encoded": "encoded"
+}

@@ -1,0 +1,27 @@
+{
+  "uploadImage": "Carregar Imagem",
+  "brightness": "Luminosidade",
+  "contrast": "Contraste",
+  "saturation": "Saturação",
+  "hue": "Tom",
+  "blur": "Desfoque",
+  "grayscale": "Preto e Branco",
+  "sepia": "Sepia",
+  "reset": "Redefinir",
+  "noImage": "Por favor, carregue uma imagem",
+  "detailed_description": "O Image Adjustment é uma ferramenta técnica especializada em manipulação de pixels e ajustes de parâmetros visuais em imagens rasterizadas. Ele opera diretamente nos canais RGB e HSV (Hue, Saturation, Value) para modificar brilho, contraste, saturação, equilíbrio de cores e curvas de tom. A ferramenta utiliza algoritmos de processamento em tempo real com suporte a formatos como JPEG, PNG e WebP, permitindo ajustes finos em 8-bit ou 16-bit por canal. Ideal para desenvolvedores e designers que precisam corrigir falhas de exposição em fotos digitais, otimizar imagens para diferentes displays ou preparar assets para web e impressão. O núcleo da ferramenta roda em WebAssembly, garantindo processamento acelerado sem perda de qualidade, enquanto o histograma interativo permite análise precisa da distribuição de tons antes e após os ajustes.",
+  "usage_steps": [
+    "1. Carregue a imagem através do seletor 'Enviar Arquivo' ou arraste diretamente para a área de trabalho.",
+    "2. Use o controle deslizante 'Brilho' para ajustar o nível de luminosidade geral (valores de -100 a +100).",
+    "3. Modifique o contraste com o slider específico, alterando a diferença entre tons claros e escuros (intervalo de -50 a +150).",
+    "4. Ajuste a saturação em 'Configurações Avançadas' para manipular a intensidade das cores (faixa de 0 a 200%).",
+    "5. Acesse a aba 'Curvas de Tom' para ajustes precisos nas sombras, meios-tons e realces usando pontos de controle.",
+    "6. Exporte a imagem processada selecionando o formato desejado (JPEG/PNG/WebP) e nível de compressão no painel de saída."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor ajusta a curva de tom de uma imagem de produto para melhorar o destaque em um e-commerce, corrigindo áreas subexpostas.",
+    "Um designer gráfico equaliza as cores de um banner publicitário para garantir consistência visual entre dispositivos com perfis ICC diferentes.",
+    "Um fotógrafo amador corrige o balanço de branco de uma foto em RAW convertida para JPEG, ajustando os canais RGB individualmente.",
+    "Um UX designer otimiza assets de interface aumentando o contraste para atender padrões de acessibilidade WCAG 2.1 em aplicativos móveis."
+  ]
+}

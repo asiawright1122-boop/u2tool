@@ -1,0 +1,34 @@
+{
+  "detailed_description": "Le calculateur d'inflation vous aide à comprendre comment l'inflation affecte la valeur de l'argent au fil du temps. Entrez un montant, sélectionnez les années de début et de fin, et spécifiez un taux d'inflation pour voir la valeur équivalente. Calculez combien d'argent du passé vaut en dollars d'aujourd'hui, ou estimez combien vous aurez besoin à l'avenir pour maintenir le même pouvoir d'achat. L'outil affiche à la fois la valeur ajustée et le changement total en pourcentage.",
+  "usage_steps": [
+    "Entrez le montant initial",
+    "Sélectionnez l'année de début",
+    "Sélectionnez l'année de fin",
+    "Entrez le taux d'inflation annuel",
+    "Cliquez sur Calculer pour voir les résultats",
+    "Affichez la valeur ajustée à l'inflation",
+    "Voyez le changement total en pourcentage"
+  ],
+  "usage_examples": [
+    "Calculez ce que valait 100 $ en 1990 aujourd'hui",
+    "Estimez vos besoins futurs en épargne-retraite",
+    "Comparez les prix historiques aux valeurs actuelles",
+    "Prévoyez l'inflation dans vos investissements à long terme"
+  ],
+  "info": "Info",
+  "amount": "Montant",
+  "annualRate": "Taux annuel",
+  "startYear": "Année de début",
+  "endYear": "Année de fin",
+  "commonRates": "Taux courants",
+  "calculate": "Calculer",
+  "adjustedValue": "Valeur ajustée",
+  "totalInflation": "Inflation totale",
+  "purchasingPowerLoss": "Perte de pouvoir d'achat",
+  "yearlyBreakdown": "Répartition annuelle",
+  "year": "Année",
+  "value": "Valeur",
+  "cumulativeInflation": "Inflation cumulée",
+  "formula": "Formule",
+  "formulaExplanation": "Explication de la formule"
+}

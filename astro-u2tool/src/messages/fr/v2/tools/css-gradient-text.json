@@ -1,0 +1,33 @@
+{
+  "output": "CSS Output",
+  "copy": "Copier CSS",
+  "text": "Texte",
+  "color1": "Couleur 1",
+  "color2": "Couleur 2",
+  "color3": "Couleur 3 (optionnelle)",
+  "angle": "Angle",
+  "fontSize": "Taille de police",
+  "fontWeight": "Poids de police",
+  "presets": "Pré-établis",
+  "presetSunset": "Coucher de soleil",
+  "presetOcean": "Mer",
+  "presetPurple": "Fushia",
+  "presetFire": "Feu",
+  "presetMint": "Menthe",
+  "presetNight": "Nuit",
+  "detailed_description": "L'outil CSS Gradient Text permet aux développeurs de créer des effets de texte dégradé en utilisant CSS. Ce générateur offre une interface intuitive pour expérimenter avec différents types de dégradés, que ce soit linéaire, radial ou conique, et vous permet de contrôler précisément les couleurs, les angles et les positions. Les utilisateurs peuvent également ajouter des ombres et des effets de transparence pour enrichir leur texte. Cette fonctionnalité est particulièrement utile pour les designers web qui cherchent à améliorer l'aspect visuel de leurs sites ou applications. Les dégradés de texte peuvent être utilisés pour mettre en valeur des titres, des citations ou des éléments de navigation, ajoutant ainsi une touche de modernité et d'élégance à l'interface utilisateur. L'outil génère du code CSS personnalisé, prêt à être intégré directement dans votre projet, simplifiant ainsi le processus de développement et améliorant l'efficacité du travail.",
+  "usage_steps": [
+    "Ouvrez l'outil CSS Gradient Text depuis la section des générateurs sur le site.",
+    "Sélectionnez le type de dégradé que vous souhaitez appliquer (linéaire, radial, conique) à partir du menu déroulant.",
+    "Choisissez les couleurs de début et de fin du dégradé en utilisant les sélecteurs de couleur. Vous pouvez également ajouter plus de points de couleur pour un dégradé plus complexe.",
+    "Ajustez l'angle du dégradé (pour les dégradés linéaires) ou la position du centre (pour les dégradés radiaux) en utilisant les contrôles fournis.",
+    "Si nécessaire, ajoutez des ombres à votre texte en configurant les paramètres de l'ombre (couleur, flou, distance, angle).",
+    "Une fois que vous êtes satisfait du rendu, copiez le code CSS généré et intégrez-le dans votre projet."
+  ],
+  "usage_examples": [
+    "Un designer web souhaite créer un titre accrocheur pour une page de présentation de produit. Il utilise l'outil CSS Gradient Text pour générer un dégradé linéaire allant du bleu au violet, ajoutant une ombre légère pour un effet 3D.",
+    "Un développeur de sites e-commerce veut rendre les boutons d'achat plus visuellement attrayants. Il applique un dégradé radial avec des teintes de vert pour donner un aspect de bouton en relief aux boutons d'achat.",
+    "Un graphiste conçoit une page de blog et désire mettre en valeur les citations. Il utilise un dégradé conique avec des couleurs pastel pour un effet subtil et élégant.",
+    "Un créateur de thèmes WordPress veut personnaliser les en-têtes de section de son thème. Il utilise l'outil pour créer un dégradé linéaire horizontal avec des couleurs contrastées, ajoutant une ombre douce pour un rendu professionnel."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "count": "Anzahl",
+  "separator": "Trennzeichen",
+  "sepColon": "Doppelpunkt (:)",
+  "sepHyphen": "Bindestrich (-)",
+  "sepNone": "Kein",
+  "uppercase": "Großbuchstaben",
+  "reset": "Zurücksetzen",
+  "prefix": "Präfix",
+  "prefixPlaceholder": "Optionales Präfix (z.B. 00:1A:2B)",
+  "prefixHint": "Unterstützt 3-byte (OUI) oder 6-byte Präfix. Nicht-hexadezimale Zeichen werden ignoriert.",
+  "locallyAdministered": "Lokal verwaltet",
+  "multicast": "Multicast",
+  "generate": "Generieren",
+  "output": "Ausgabe",
+  "outputPlaceholder": "Erstellte MAC-Adressen werden hier angezeigt...",
+  "copyAll": "Alles kopieren",
+  "info": "Information",
+  "infoText": "Bit 0 steuert Multicast/Unicast und Bit 1 steuert lokal verwaltet/global. Verwenden Sie mit Vorsicht.",
+  "errorInvalidPrefix": "Ungültiges Präfix. Verwenden Sie 6 oder 12 hexadezimale Ziffern.",
+  "detailed_description": "Der MAC-Adressgenerator ist ein technisches Werkzeug zur Erzeugung valider, zufälliger Media Access Control (MAC)-Adressen unter Berücksichtigung spezifischer Netzwerkanforderungen. Die 48-Bit-Adresse wird nach IEEE-802-Standards generiert, wobei die ersten 24 Bit (Organizationally Unique Identifier/OUI) entweder standardisiert oder benutzerdefiniert festgelegt werden können. Das Tool ermöglicht die Manipulation des zweiten niederwertigsten Bits des ersten Oktetts zur Steuerung von Unicast-/Multicast-Zuordnungen sowie das Setzen des Lokal Administrated Address (LAA)-Bits zur Kennzeichnung nicht-flüchtiger, manuell zugewiesener Adressen. Die Zufallsquelle nutzt kryptografisch sichere Algorithmen (z.B. SHA-256-Hashing über systeminterne Entropiequellen) zur Gewährleistung von Unvorhersagbarkeit. Entwickler benötigen dieses Tool für Netzwerk-Simulationen, Sicherheitstests (z.B. MAC-Spoofing-Analysen), IoT-Gerätesimulationen oder zur Überwindung von MAC-basierten Zugriffsbeschränkungen. Die präzise Kontrolle über die Adressstruktur erlaubt das Testen von Edge Cases in Netzwerkkonfigurationen sowie die Erstellung reproduzierbarer Testumgebungen für Switch-Flood-Angriffe oder ARP-Caching-Verhalten.",
+  "usage_steps": [
+    "Wählen Sie im OUI-Modus 'Standard' (zufälliger Herstellercode) oder 'Benutzerdefiniert' mit Eingabe eines 3-Oktett-Präfixes.",
+    "Aktivieren Sie den 'Multicast'-Switch, um das individuelle/Gruppenadressbit im ersten Oktett zu setzen.",
+    "Haken Sie 'LAA-Modus' an, um lokal verwaltete Adressen (mit gesetztem U/L-Bit) zu generieren.",
+    "Geben Sie die Anzahl der zu erstellenden Adressen (1–1000) in das Zahlenfeld ein.",
+    "Wählen Sie das Ausgabeformat: Doppelpunkte, Bindestriche oder keine Trennzeichen.",
+    "Klicken Sie auf 'Generieren', um die CSV-Datei mit Metadaten (OUI-Hersteller, Bit-Muster) herunterzuladen."
+  ],
+  "usage_examples": [
+    "Testen von Netzwerksimulatoren durch Erzeugung von 500 eindeutigen MACs für virtuelle Endgeräte in NS-3.",
+    "Durchführen von Sicherheitsaudits durch automatisierte MAC-Spoofing-Tests in Unternehmensnetzwerken.",
+    "Erstellen von Testdatensätzen für IEEE 802.1AR-Compliant Device Identity-Validierung in IoT-Systemen.",
+    "Lehreinheit zur Analyse von ARP-Verkehrsmustern durch gezielte Generierung von multicast-fähigen MAC-Adressen."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le calculateur de pourcentage effectue des opérations mathématiques avancées basées sur les formules standardisées (pourcentage = (partie/totale)×100, variation = ((valeur finale - valeur initiale)/valeur initiale)×100). Ce outil est indispensable pour les analyses financières précises, la modélisation statistique, ou l'évaluation de performances commerciales. Il permet aux utilisateurs de traiter des cas complexes comme le calcul de marges bénéficiaires, d'indices de croissance, ou de pondérations dans des ensembles de données. Techniquement, l'interface intègre un parseur d'expressions mathématiques qui valide les entrées numériques, applique les priorités opératoires, et affiche les résultats avec une précision configurable jusqu'à 4 chiffres après la virgule. Le moteur de calcul optimisé gère les arrondis selon les règles de la norme IEEE 754 pour garantir l'exactitude des résultats.",
+  "usage_steps": [
+    "Accéder à l'interface principale et sélectionner le mode de calcul requis via l'onglet 'Type d'opération' (pourcentage simple, variation, augmentation, ou diminution)",
+    "Saisir la valeur numérique principale dans le champ 'Valeur de référence' avec possibilité d'utiliser la notation scientifique (ex: 1.5e3)",
+    "Entrer la seconde valeur dans le champ 'Valeur à comparer' ou spécifier le pourcentage souhaité selon le mode sélectionné",
+    "Activer l'option 'Calcul détaillé' pour obtenir la décomposition pas-à-pas des opérations effectuées",
+    "Cliquer sur le bouton 'Calculer' pour exécuter l'opération, ou utiliser la touche 'Enter' pour confirmer les saisies",
+    "Exporter les résultats au format CSV ou copier la formule LaTeX générée via le bouton 'Partager' pour documentation scientifique"
+  ],
+  "usage_examples": [
+    "Un commerçant détermine la réduction exacte à appliquer sur un produit de 89,99€ pour atteindre une marge de 35% après remise",
+    "Un data scientist calcule l'augmentation en pourcentage de la population urbaine sur dix ans à partir de données brutes en format exponentiel",
+    "Un chef de projet évalue la progression en pourcentage d'un chantier en comparant les heures travaillées aux estimations initiales",
+    "Un enseignant établit automatiquement les statistiques de réussite par matière à partir des résultats bruts des étudiants"
+  ]
+}

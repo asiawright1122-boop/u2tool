@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der HMAC Generator ermöglicht die sichere Erstellung von Hash-basierten Nachrichtenauthentifizierungscodes (HMAC) unter Verwendung der kryptografischen Algorithmen SHA-1, SHA-256 und SHA-512. Diese Technik kombiniert einen geheimen Schlüssel mit einem Nachrichteninput durch mehrfache Hash-Operationen, um digitale Signaturen zu erzeugen, die sowohl Datenintegrität als auch Senderauthentizität garantieren. Entwickler benötigen dieses Werkzeug für Szenarien wie API-Anfragesignierung, Webhook-Validierung oder sichere Inter-Service-Kommunikation, wo asymmetrische Verschlüsselung ungeeignet ist. Das Tool implementiert den FIPS 198-1-Standard durch eine zweistufige Hash-Funktion: Zuerst wird der geheime Schlüssel mit einem Innere-Äußere-Pad (ipad/opad) kombiniert, dann werden die Nachrichtendaten angehängt und doppelt gehasht. Besonders bei der Implementierung von OAuth 2.0-Token-Handshake-Prozessen oder der Prüfung von CDN-Cache-Busting-Signaturen bietet der Generator präzise, reproduzierbare Ergebnisse. Die clientseitige Verarbeitung stellt sicher, dass sensible Schlüssel niemals serverseitig gespeichert werden, was den Sicherheitsstandard erhöht.",
+  "usage_steps": [
+    "Wählen Sie den gewünschten Algorithmus (SHA-1/SHA-256/SHA-512) aus dem Dropdown-Menü.",
+    "Geben Sie die zu signierende Nachricht in das 'Dateninput'-Feld ein (Text oder Hex-Format).",
+    "Fügen Sie den kryptografischen Schlüssel im entsprechenden Feld hinzu (unterstützt ebenfalls Hex- und Base64-Eingaben).",
+    "Wählen Sie das Ausgabeformat des HMAC: Hexadezimal oder Base64-kodiert.",
+    "Klicken Sie auf den 'Generieren'-Button, um die HMAC-Berechnung zu starten.",
+    "Kopieren Sie das Ergebnis aus dem Ausgabefeld oder exportieren Sie es als TXT-Datei."
+  ],
+  "usage_examples": [
+    "API-Entwickler signieren REST-Anfragen mit HMAC-SHA256, um Man-in-the-Middle-Angriffe zu verhindern.",
+    "Webhook-Endpunkte validieren GitHub-Bereitstellungsbenachrichtigungen durch Vergleich des gesendeten X-Hub-Signature-Headers.",
+    "IoT-Geräte generieren stündliche HMAC-SHA512-Hashes von Sensordaten, um Manipulationen im Übertragungsprozess nachzuweisen.",
+    "Content-Delivery-Networks (CDNs) verwenden HMAC-SHA1 zur Erstellung zeitlich begrenzter Cache-Busting-Tokens für statische Assets."
+  ]
+}

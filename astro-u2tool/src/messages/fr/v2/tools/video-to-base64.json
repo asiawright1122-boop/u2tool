@@ -1,0 +1,30 @@
+{
+  "dropzone": "Déposez le fichier vidéo ici ou cliquez pour télécharger",
+  "maxSize": "Taille maximale du fichier : 10 Mo",
+  "errorNotVideo": "Veuillez sélectionner un fichier vidéo",
+  "errorTooLarge": "Le fichier est trop volumineux. La taille maximale est de 10 Mo.",
+  "errorReading": "Erreur de lecture du fichier",
+  "processing": "Traitement de la vidéo...",
+  "originalSize": "Taille originale",
+  "includeDataUri": "Inclure le préfixe URI des données",
+  "base64Output": "Sortie Base64",
+  "copy": "Copier",
+  "outputPlaceholder": "La sortie Base64 apparaîtra ici...",
+  "warning": "Avertissement",
+  "warningText": "Les fichiers vidéo peuvent être très volumineux. L'encodage Base64 augmente la taille d'environ 33 %. Pensez à utiliser des fichiers vidéo plus petits.",
+  "detailed_description": "L'outil Video to Base64 permet de transformer des fichiers vidéo (MP4, AVI, MOV) en une chaîne de caractères ASCII encodée en Base64. Ce processus consiste à convertir les données binaires du fichier vidéo en blocs de 6 bits, puis à les mapper sur un jeu de 64 caractères alphanumériques et symboliques. Cette méthode est particulièrement utile pour intégrer des vidéos directement dans des documents HTML, CSS, JSON ou des requêtes d'API sans dépendance externe. Les développeurs l'utilisent notamment pour générer des URI de données (data URLs) optimisées, envoyer des vidéos via des protocoles textuels comme WebSocket, ou stocker des miniatures en Base64 dans une base de données relationnelle. L'outil traite les fichiers côté client via l'API FileReader de JavaScript, garantissant une conversion instantanée sans envoi au serveur. Le résultat inclut automatiquement l'en-tête MIME (ex: data:video/mp4;base64,) pour une utilisation immédiate. À noter que la taille du Base64 généré augmente de ~33% par rapport au fichier original, ce qui en fait une solution adaptée aux petits fichiers ou cas d'usage spécifiques.",
+  "usage_steps": [
+    "Cliquez sur 'Parcourir' ou glissez-déposez votre fichier vidéo (MP4/AVI/MOV) dans la zone dédiée.",
+    "Sélectionnez le type MIME souhaité dans le menu déroulant (ex: video/webm, video/ogg) selon votre usage.",
+    "Activez/désactivez l'option 'Inclure en-tête MIME' si vous avez besoin d'une data URL complète.",
+    "Cliquez sur 'Convertir' pour déclencher le traitement en Web Worker sans blocage de l'interface.",
+    "Copiez le résultat avec le bouton 'Copier dans le presse-papiers' ou téléchargez-le en tant que .txt.",
+    "Utilisez la zone de prévisualisation pour tester l'intégration HTML avec la vidéo encodée via <video src=\"data:...\">."
+  ],
+  "usage_examples": [
+    "Intégrer une animation vidéo de 2 secondes directement dans un email HTML sans pièces jointes externes.",
+    "Envoyer une vidéo de diagnostic via une API REST qui n'accepte que des payloads textuels en Base64.",
+    "Créer une vignette miniature encodée en Base64 pour un carrousel web avec chargement asynchrone.",
+    "Stocker des séquences vidéo courtes dans une base de données SQLite comme texte pour une application offline."
+  ]
+}

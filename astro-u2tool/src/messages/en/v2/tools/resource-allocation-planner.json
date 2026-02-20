@@ -1,0 +1,42 @@
+{
+  "detailed_description": "Resource Allocation Planner helps distribute team members across projects and tasks.",
+  "usage_steps": [
+    "Add team members",
+    "Create projects/tasks",
+    "Assign resources",
+    "View visualization",
+    "Resolve conflicts"
+  ],
+  "usage_examples": [
+    "Plan multi-project allocation",
+    "Balance workload",
+    "Identify bottlenecks"
+  ],
+  "input": "Input",
+  "output": "Output",
+  "process": "Process",
+  "copy": "Copy",
+  "clear": "Clear",
+  "inputPlaceholder": "Enter your input here...",
+  "outputPlaceholder": "Results will appear here...",
+  "errors": {
+    "emptyInput": "Please enter some input"
+  },
+  "available": "Available",
+  "allocated": "Allocated",
+  "utilization": "Utilization",
+  "weeklyCost": "Weekly Cost",
+  "overallocated": "Overallocated",
+  "underutilized": "Underutilized",
+  "resources": "Resources",
+  "projects": "Projects",
+  "add": "+ Add",
+  "avail": "Avail",
+  "perHour": "$/hr",
+  "required": "Required",
+  "high": "High",
+  "medium": "Medium",
+  "low": "Low",
+  "resourceDefault": "Resource",
+  "projectDefault": "Project"
+}

@@ -1,0 +1,36 @@
+{
+  "operand1": "First Operand (Binary)",
+  "operand2": "Second Operand (Binary)",
+  "operation": "Operation",
+  "add": "Add",
+  "subtract": "Subtract",
+  "multiply": "Multiply",
+  "divide": "Divide",
+  "and": "AND",
+  "or": "OR",
+  "xor": "XOR",
+  "not": "NOT",
+  "leftShift": "Left Shift",
+  "rightShift": "Right Shift",
+  "shiftAmount": "Shift Amount",
+  "result": "Result",
+  "binary": "Binary",
+  "decimal": "Decimal",
+  "hexadecimal": "Hexadecimal",
+  "invalidBinary": "Invalid binary number",
+  "calculationError": "Calculation error",
+  "calculation": "Calculation",
+  "detailed_description": "Binary Calculator performs arithmetic and bitwise operations on binary numbers. Support for addition, subtraction, multiplication, division, and bitwise operations (AND, OR, XOR, NOT, shifts) makes it essential for programmers and computer science students. Results are shown in binary, decimal, and hexadecimal formats.",
+  "usage_steps": [
+    "Enter the first binary operand",
+    "Enter the second binary operand (if needed)",
+    "Select the operation to perform",
+    "For shift operations, specify the shift amount",
+    "View results in binary, decimal, and hexadecimal"
+  ],
+  "usage_examples": [
+    "Perform binary arithmetic for programming",
+    "Learn bitwise operations",
+    "Convert between number systems"
+  ]
+}

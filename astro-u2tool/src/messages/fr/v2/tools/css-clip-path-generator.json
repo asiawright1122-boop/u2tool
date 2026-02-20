@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le générateur CSS Clip Path est un outil technique permettant de créer et d'optimiser des formes CSS avec une précision géométrique. Il permet de définir des zones de découpage personnalisées via la propriété CSS `clip-path`, en générant des valeurs polygonales, elliptiques ou personnalisées. Ce tool est indispensable pour les développeurs souhaitant intégrer des designs non rectangulaires sans recourir à des images ou SVG. Il simplifie la manipulation de coordonnées cartésiennes, de courbes de Bézier ou de pourcentages relatifs au viewport. Grâce à son éditeur visuel, les utilisateurs peuvent ajuster des points d'ancrage, des angles et des unités (px, %, vw/vh), tout en visualisant en temps réel le rendu sur un élément HTML de référence. L'outil intègre également des options avancées comme la gestion de `inset()` pour les masquages rectangulaires avec arrondis, et la compatibilité cross-browsers avec préfixes automatiques (-webkit-, -moz-). Cela élimine les erreurs manuelles dans le calcul des coordonnées et garantit des résultats réactifs, adaptés aux différentes résolutions d'écran.",
+  "usage_steps": [
+    "Sélectionnez un type de forme de base (polygon, ellipse, inset) dans le menu déroulant 'Shape Type'.",
+    "Utilisez la grille interactive pour déplacer/ajouter des points de contrôle en cliquant sur le canvas.",
+    "Ajustez les paramètres avancés comme 'stroke-width' ou 'border-radius' pour les formes inset via les sliders dédiés.",
+    "Activez le mode 'Path Editor' pour modifier les courbes de Bézier en manipulant les poignées de tangente.",
+    "Générez le code CSS dans la section 'Output' avec options de préfixes navigateurs et unités personnalisables.",
+    "Testez la réactivité en redimensionnant la fenêtre de prévisualisation et ajustez les breakpoints si nécessaire."
+  ],
+  "usage_examples": [
+    "Créer un header en zigzag responsive en combinant plusieurs formes polygonales pour un design moderne.",
+    "Découper une image de galerie en hexagones parfaits avec des marges dynamiques adaptées au viewport.",
+    "Implémenter un effet de survol où un élément se découvre progressivement via une transition `clip-path` animée.",
+    "Générer une forme de masquage complexe pour un SVG intégré, en évitant les calculs manuels de points de chemin."
+  ]
+}

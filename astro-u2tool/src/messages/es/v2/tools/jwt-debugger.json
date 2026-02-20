@@ -1,0 +1,44 @@
+{
+  "detailed_description": "El JWT Debugger es una herramienta técnica para desarrolladores que necesitan analizar, validar y solucionar problemas en tokens JWT (JSON Web Token) desde una perspectiva de seguridad. Este herramienta descompone el token en sus tres componentes principales: encabezado (header), carga útil (payload) y firma digital (signature), permitiendo verificar la integridad criptográfica mediante algoritmos como HMAC-SHA256, RS256 o ES256. Al decodificar las reclamaciones (claims) estándar (ej. exp, nbf, iss, aud) y aplicar validaciones estrictas de formato RFC 7519, los usuarios pueden identificar errores en la configuración de proveedores de autenticación, verificar si un token ha sido manipulado o comprobar coincidencias en claves asimétricas. Es especialmente útil para equipos que implementan OAuth2, OpenID Connect o sistemas de microservicios con tokens de sesión, ya que permite validar la firma sin exponer claves privadas al servidor. La herramienta también incluye un verificador de caducidad temporal (expiración) y análisis de políticas de seguridad (como la validez de la hora de emisión 'iat' o el 'leeway' para sincronización de relojes).",
+  "usage_steps": [
+    "Pegue el token JWT completo en el campo de texto 'Token de entrada' en la interfaz.",
+    "Haga clic en 'Decodificar' para separar y mostrar en paneles individuales el header, payload y signature en formato JSON.",
+    "Revise el campo 'alg' en el header para confirmar el algoritmo de firma utilizado (ej. RS256, HS256).",
+    "Ingrese la clave pública o secreta en el campo 'Clave de verificación' y seleccione el método de validación (simétrico/asimétrico).",
+    "Analice el resultado de 'Estado de firma' para confirmar si la firma es válida o si hay discrepancias.",
+    "Utilice la sección 'Reclamaciones' para verificar fechas de expiración (exp), emisor (iss), audiencia (aud) y otros metadatos críticos."
+  ],
+  "usage_examples": [
+    "Un desarrollador implementa OAuth2 y descubre que los tokens generados por su proveedor no pasan la validación debido a un error en el formato de la clave pública RSA.",
+    "Un equipo de seguridad identifica tokens con fechas 'nbf' (not before) incorrectas, causando fallos en la autorización de microservicios.",
+    "Un ingeniero verifica que una firma ES256 generada por una aplicación móvil coincide con la clave pública del backend para prevenir ataques de suplantación.",
+    "Un auditor examina reclamaciones personalizadas en el payload para asegurar que no contienen datos sensibles en texto plano, cumpliendo con políticas de privacidad."
+  ],
+  "token": "Token JWT",
+  "header": "Encabezado",
+  "payload": "Payload",
+  "signature": "Firma",
+  "secret": "Clave Secreta",
+  "verify": "Verificar Firma",
+  "valid": "Firma Válida",
+  "invalid": "Firma Inválida",
+  "expired": "Token Expirado",
+  "tokenPlaceholder": "Pegue su token JWT aquí...",
+  "notExpired": "Token Válido",
+  "expiresAt": "Expira en",
+  "errors": {
+    "invalidFormat": "Formato JWT inválido",
+    "decodeFailed": "Error al decodificar token"
+  },
+  "placeholder": "Pegue el token JWT aquí...",
+  "loadExample": "Cargar ejemplo",
+  "tokenInput": "Entrada de token",
+  "claim": "Reclamación",
+  "claims": "Reclamaciones",
+  "copied": "¡Copiado!",
+  "copy": "Copiar",
+  "secretPlaceholder": "Ingrese la clave secreta...",
+  "value": "Valor",
+  "verifyNote": "Nota: La verificación de firma se realiza del lado del cliente",
+  "verifySignature": "Verificar firma"
+}

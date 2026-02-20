@@ -1,0 +1,26 @@
+{
+  "addOption": "Add Option",
+  "enterOption": "Enter option",
+  "spin": "Spin!",
+  "spinning": "Spinning...",
+  "result": "Result",
+  "winner": "Winner",
+  "options": "Options",
+  "clearAll": "Clear All",
+  "minOptions": "Add at least 2 options",
+  "detailed_description": "The Decision Wheel is a dynamic, web-based application designed to facilitate random decision-making through a visually engaging interface. Technically, it leverages a combination of JavaScript for interactivity, CSS for styling, and HTML for structure. The tool employs a pseudo-random number generator to ensure that each spin of the wheel produces a fair and unbiased outcome. Users can input a list of options, each of which is represented as a segment on the wheel. The application uses a canvas element to render the wheel and animate the spinning effect, providing a smooth and interactive experience. The Decision Wheel is particularly useful in scenarios where making a choice can be challenging, such as deciding on a group activity, selecting a winner for a contest, or choosing a topic for a project. By automating the decision process, it helps reduce indecision and adds an element of fun and excitement.",
+  "usage_steps": [
+    "Step 1: Open the Decision Wheel tool on your web browser.",
+    "Step 2: Click the 'Edit Options' button to input your choices. Each choice will be a separate segment on the wheel.",
+    "Step 3: Enter your options in the text boxes provided, one per line. You can add or remove options using the '+' and '-' buttons.",
+    "Step 4: Once you have entered all your options, click the 'Save' button to apply the changes and return to the main screen.",
+    "Step 5: Click the 'Spin' button to start the wheel. The wheel will spin and eventually come to a stop on one of the segments.",
+    "Step 6: The selected option will be highlighted, and a notification will appear at the top of the screen. You can choose to spin again or reset the wheel using the 'Reset' button."
+  ],
+  "usage_examples": [
+    "Example 1: A group of friends is deciding where to go for dinner. Each person suggests a restaurant, and they use the Decision Wheel to randomly select one of the options, ensuring everyone has an equal say in the final decision.",
+    "Example 2: A teacher wants to randomly select a student to answer a question in class. She lists all the students' names and uses the Decision Wheel to pick a student, making the selection process fair and transparent.",
+    "Example 3: An event organizer needs to choose a winner for a raffle. By entering the names of all participants into the Decision Wheel, the organizer can randomly select a winner, adding an element of excitement to the event.",
+    "Example 4: A content creator is trying to decide on the topic for their next blog post. They list several potential topics and use the Decision Wheel to randomly select one, providing a fun and unbiased way to make the decision."
+  ]
+}

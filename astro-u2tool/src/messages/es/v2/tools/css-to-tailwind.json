@@ -1,0 +1,24 @@
+{
+  "detailed_description": "El Convertidor CSS a Tailwind transforma estilos CSS tradicionales en clases de utilidad de Tailwind CSS. Ideal para migrar proyectos existentes al framework Tailwind CSS.",
+  "usage_steps": [
+    "Pega tus estilos CSS",
+    "Haz clic en Convertir para transformar",
+    "Revisa las clases de Tailwind",
+    "Copia las clases generadas",
+    "Aplica a tus elementos HTML"
+  ],
+  "usage_examples": [
+    "Migra proyectos a Tailwind",
+    "Aprende equivalencias de Tailwind",
+    "Convierte estilos de sistema de diseño"
+  ],
+  "cssInput": "Entrada CSS",
+  "tailwindOutput": "Clases Tailwind",
+  "convert": "Convertir a Tailwind",
+  "copy": "Copiar",
+  "copied": "¡Copiado!",
+  "inputPlaceholder": "Pega tu CSS aquí...",
+  "placeholder": "Pegue CSS aquí...",
+  "outputPlaceholder": "Las clases Tailwind aparecerán aquí...",
+  "loadExample": "Cargar ejemplo"
+}

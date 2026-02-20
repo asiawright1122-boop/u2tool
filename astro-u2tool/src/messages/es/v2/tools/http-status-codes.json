@@ -1,0 +1,25 @@
+{
+  "searchPlaceholder": "Buscar códigos de estado...",
+  "allCategories": "Todas las Categorías",
+  "informational": "1xx Información",
+  "success": "2xx Éxito",
+  "redirection": "3xx Redirección",
+  "clientError": "4xx Error del Cliente",
+  "serverError": "5xx Error del Servidor",
+  "noResults": "No se encontraron códigos de estado.",
+  "detailed_description": "La herramienta HTTP Status Codes es un recurso crucial para desarrolladores que necesitan comprender y gestionar las respuestas de sus solicitudes HTTP. Esta herramienta proporciona un completo y detallado catálogo de todos los códigos de estado HTTP, junto con sus descripciones y significados. Cada código de estado viene acompañado de un ejemplo de uso y una explicación técnica de las situaciones en las que puede surgir. El objetivo principal de esta herramienta es facilitar la depuración y el diagnóstico de problemas en aplicaciones web, permitiendo a los desarrolladores identificar rápidamente las causas de errores y respuestas inesperadas. Además, la herramienta es particularmente útil para aquellos que están trabajando en APIs o en la integración de servicios web, ya que proporciona una referencia clara y accesible para entender la semántica detrás de cada respuesta HTTP.",
+  "usage_steps": [
+    "Acceda a la página principal de HTTP Status Codes en el sitio web de herramientas de desarrollo.",
+    "Utilice el buscador en la parte superior de la página para buscar el código de estado específico que desea consultar.",
+    "Haga clic en el código de estado que le interesa para ver la página detallada del código.",
+    "En la página del código de estado, revise la descripción técnica, los posibles escenarios de uso y los ejemplos de solicitudes y respuestas HTTP.",
+    "Si es necesario, explore los enlaces relacionados a otras páginas de códigos de estado para obtener una comprensión más amplia de las respuestas HTTP.",
+    "Utilice la información obtenida para mejorar la lógica de su aplicación, depurar problemas y optimizar la comunicación entre los servicios."
+  ],
+  "usage_examples": [
+    "Un desarrollador de backend está integrando una nueva API de pago en su aplicación. Al recibir una respuesta con el código 400 Bad Request, utiliza la herramienta HTTP Status Codes para entender que los datos enviados en la solicitud están mal formados y necesita revisar los parámetros de la solicitud.",
+    "Una ingeniera de frontend está desarrollando una función para manejar errores en una aplicación de e-commerce. Al recibir el código 503 Service Unavailable, consulta la herramienta para confirmar que el servicio está temporalmente fuera de línea y decide implementar un mensaje de error personalizado para informar al usuario.",
+    "Un desarrollador de seguridad está auditando una API para identificar posibles vulnerabilidades. Al detectar el código 401 Unauthorized, utiliza la herramienta para confirmar que la autenticación es requerida y verifica que el mecanismo de autenticación esté correctamente configurado en la API.",
+    "Un equipo de soporte técnico recibe informes de usuarios que no pueden acceder a ciertas funcionalidades de un sitio web. Al analizar los registros del servidor, encuentran múltiples instancias del código 500 Internal Server Error. Usando la herramienta HTTP Status Codes, identifican que hay un error en el servidor y se comunican con el equipo de desarrollo para resolver el problema."
+  ]
+}

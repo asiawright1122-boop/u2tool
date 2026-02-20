@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El JSON Sorter es una herramienta especializada que reordena recursivamente las claves de objetos JSON en orden lexicográfico, manteniendo la integridad de estructuras anidadas. Esta funcionalidad es crítica para desarrolladores que necesitan estandarizar formatos en entornos de integración API, donde discrepancias en el orden de claves pueden generar fallos en comparaciones automatizadas o en procesos de validación de esquemas. El algoritmo implementa un recorrido post-orden para garantizar que todos los nodos hijos sean ordenados antes que sus padres, preservando tipos de datos nativos (strings, números, booleanos) durante el proceso. Utiliza un comparador personalizable que permite ignorar mayúsculas/minúsculas y manejar caracteres Unicode según normas UTS #10. La herramienta opera completamente en el cliente mediante Web Workers, evitando transmisión de datos sensibles a servidores externos, lo cual es fundamental para cumplir con protocolos de seguridad en entornos empresariales.",
+  "usage_steps": [
+    "Pega tu JSON en el editor de código con resaltado sintáctico en tiempo real.",
+    "Activa la opción 'Ordenar recursivamente' para procesar objetos anidados profundos.",
+    "Selecciona el modo de ordenamiento: ascendente, descendente o personalizado mediante expresión lambda.",
+    "Marca 'Preservar duplicados' para mantener claves repetidas en arrays asociativos.",
+    "Haz clic en 'Ordenar JSON' para ejecutar el algoritmo optimizado con complejidad O(n log n).",
+    "Usa el comparador visual lado a lado para verificar cambios estructurales antes de descargar el resultado."
+  ],
+  "usage_examples": [
+    "Un desarrollador de microservicios ordena respuestas JSON de APIs para comparar versiones de esquemas OpenAPI.",
+    "Un ingeniero de datos normaliza metadatos de imágenes antes de indexarlos en un almacén NoSQL.",
+    "Un auditor de seguridad estandariza registros de logs JSON para facilitar análisis forense automatizado.",
+    "Un arquitecto de sistemas reconcilia configuraciones desplegadas en múltiples regiones de cloud computing."
+  ]
+}

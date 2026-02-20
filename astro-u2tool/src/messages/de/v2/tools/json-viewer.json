@@ -1,0 +1,23 @@
+{
+  "input": "JSON-Eingabe",
+  "inputPlaceholder": "JSON hier einfügen...",
+  "parseView": "Analysieren & Anzeigen",
+  "expandAll": "Alle erweitern",
+  "collapseAll": "Alle falten",
+  "items": "{count} Elemente",
+  "detailed_description": "Der JSON Viewer ist ein leistungsstarkes Werkzeug, das es Entwicklern ermöglicht, JSON-Daten in einer klaren und übersichtlichen Baumstruktur anzuzeigen und zu analysieren. JSON (JavaScript Object Notation) ist ein weit verbreitetes Datenformat, das zur Serialisierung und Übertragung von Informationen in Webanwendungen und APIs verwendet wird. Mit diesem Tool können Entwickler komplexe JSON-Strukturen visuell erfassen und spezifische Werte schnell identifizieren. Dies ist besonders nützlich bei der Debugging von API-Aufrufen, der Überprüfung von Konfigurationsdateien oder der Analyse von Backend-Daten. Der JSON Viewer unterstützt auch die Validierung der JSON-Struktur, was hilfreich ist, um Fehler in der Syntax zu erkennen und zu korrigieren. Technisch gesehen, parst das Tool die eingegebenen JSON-Daten und baut eine Baumstruktur auf, die die Hierarchie der Schlüssel-Wert-Paare darstellt. Jedes Knotenobjekt kann erweitert oder reduziert werden, um eine detaillierte Ansicht der Daten zu ermöglichen. Zudem bietet das Tool Funktionen wie die Suche nach spezifischen Werten und das Kopieren von JSON-Pfadangaben, die die Arbeit mit komplexen Datensätzen wesentlich erleichtern.",
+  "usage_steps": [
+    "Öffnen Sie die JSON Viewer Seite auf der Website.",
+    "Klicken Sie auf das Textfeld, das als 'JSON-Daten einfügen' beschriftet ist, und fügen Sie Ihre JSON-Daten ein.",
+    "Nachdem Sie die Daten eingefügt haben, klicken Sie auf den Button 'JSON ansehen', um die Daten zu parsen und die Baumstruktur zu generieren.",
+    "Die JSON-Daten werden nun in einer Baumstruktur angezeigt. Erweitern Sie die Knoten, indem Sie auf das Pluszeichen (+) rechts neben den Knoten klicken, um detailliertere Informationen anzuzeigen.",
+    "Verwenden Sie das Suchfeld oben, um nach spezifischen Schlüsseln oder Werten in den JSON-Daten zu suchen.",
+    "Klicken Sie auf den Button 'JSON-Pfad kopieren', um den Pfad zu einem bestimmten JSON-Objekt in die Zwischenablage zu kopieren, was nützlich ist, um Referenzen in anderen Teilen Ihres Projekts zu erstellen."
+  ],
+  "usage_examples": [
+    "Ein Webentwickler verwendet den JSON Viewer, um die Antworten von einer REST-API zu inspizieren und sicherzustellen, dass die erwarteten Daten korrekt formatiert und übertragen werden. Dies hilft bei der Identifikation von Fehlern in der API-Logik.",
+    "Ein Systemadministrator verwendet das Tool, um eine große Konfigurationsdatei in JSON-Format zu analysieren. Die Baumstruktur ermöglicht ihm, schnell spezifische Einstellungen zu finden und zu überprüfen, ob sie korrekt konfiguriert sind.",
+    "Ein Data Analyst verwendet den JSON Viewer, um JSON-Dateien zu durchsuchen, die von einem IoT-Gerät generiert werden. Die Funktion zur Suche nach spezifischen Werten hilft ihm, Trends und Anomalien in den übertragenen Daten zu identifizieren.",
+    "Ein Softwareentwickler verwendet das Tool, um JSON-Daten aus einer Datenbankabfrage zu validieren. Die Möglichkeit, den JSON-Pfad zu kopieren, erleichtert es ihm, den korrekten Datenpfad in seinen Code zu integrieren und so die Datenverarbeitung zu optimieren."
+  ]
+}

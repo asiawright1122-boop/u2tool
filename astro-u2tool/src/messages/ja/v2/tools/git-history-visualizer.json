@@ -1,0 +1,53 @@
+{
+  "detailed_description": "Git履歴ビジュアル化ツールは、Gitコミット履歴の視覚的な表現を作成します。",
+  "usage_steps": [
+    "git logの出力を貼り付ける",
+    "またはコミットデータを入力する",
+    "ビジュアル化をクリックする",
+    "ブランチを探索する",
+    "画像としてエクスポートする"
+  ],
+  "usage_examples": [
+    "ブランチの履歴を理解する",
+    "リリース戦略を文書化する",
+    "マージパターンを視覚化する"
+  ],
+  "input": "入力",
+  "output": "出力",
+  "process": "処理",
+  "copy": "コピー",
+  "clear": "クリア",
+  "inputPlaceholder": "git log出力を貼り付けてください...",
+  "outputPlaceholder": "結果はここに表示されます...",
+  "errors": {
+    "emptyInput": "入力を入力してください"
+  },
+  "loadExample": "例を読み込む",
+  "analyze": "分析",
+  "generate": "生成",
+  "format": "フォーマット",
+  "convert": "変換",
+  "validate": "検証",
+  "export": "エクスポート",
+  "preview": "プレビュー",
+  "reset": "リセット",
+  "add": "追加",
+  "remove": "削除",
+  "save": "保存",
+  "cancel": "キャンセル",
+  "settings": "設定",
+  "options": "オプション",
+  "results": "結果",
+  "noResults": "結果なし",
+  "loading": "読み込み中...",
+  "success": "成功",
+  "failed": "失敗",
+  "warning": "警告",
+  "info": "情報",
+  "hash": "ハッシュ",
+  "message": "メッセージ",
+  "author": "作者",
+  "date": "日付",
+  "legend": "凡例",
+  "branch": "ブランチ"
+}

@@ -1,0 +1,24 @@
+{
+  "uploadImage": "Bild hochladen",
+  "flip": "Spiegeln",
+  "horizontal": "Horizontal",
+  "vertical": "Vertikal",
+  "rotation": "Drehung",
+  "reset": "Zurücksetzen",
+  "noImage": "Bitte laden Sie ein Bild hoch",
+  "detailed_description": "Der Image Flip & Rotate-Tool ermöglicht präzise geometrische Transformationen von Rasterbildern durch Manipulation der Pixelmatrix. Technisch gesehen führt das Tool affine Transformationen durch, die entweder horizontale/vertikale Spiegelungen (Reflection) oder beliebige Rotationswinkel (Rotation) um den Koordinatenursprung beinhalten. Bei der Rotation wird eine Bilinear-Interpolation angewendet, um Qualitätsverluste durch Neuberechnung der Pixelwerte zu minimieren. Besonders nützlich ist dies, um kamerainterne EXIF-Orientierungsinformationen zu überschreiben, perspektivische Verzerrungen zu korrigieren oder Bildkompositionen für Printmedien vorzubereiten. Das Tool verarbeitet gängige Formate wie JPEG, PNG, BMP und WEBP mit Unterstützung für Alphakanäle. Die Transformationen erfolgen in Echtzeit auf Basis der Canvas-API, wobei der Benutzer die Option hat, die ursprüngliche Metadatenstruktur beizubehalten oder zu bereinigen.",
+  "usage_steps": [
+    "Klicken Sie auf 'Datei hochladen', um ein Bild im JPEG/PNG/BMP/WEBP-Format auszuwählen.",
+    "Wählen Sie im Bedienfeld 'Transformation' zwischen 'Horizontal spiegeln', 'Vertikal spiegeln' oder 'Winkelrotation' aus.",
+    "Geben Sie bei Winkelrotation einen Wert zwischen -360° und +360° in das Eingabefeld ein oder nutzen Sie den Drehregler.",
+    "Aktivieren Sie den 'Qualitätsmodus' für bilineare Interpolation bei Rotationen oder deaktivieren Sie ihn für schnellere, aber kantigere Transformationen.",
+    "Verwenden Sie den 'Vorschau'-Button, um die Transformation vor der Anwendung zu überprüfen.",
+    "Klicken Sie auf 'Speichern unter', wählen Sie das Zielformat und laden Sie das transformierte Bild herunter."
+  ],
+  "usage_examples": [
+    "Ein Fotograf korrigiert die vertikale Ausrichtung eines Landschaftsbildes, das versehentlich im Hochformat aufgenommen wurde.",
+    "Ein Grafikdesigner erstellt ein symmetrisches Muster, indem er ein PNG-Bild horizontal spiegelt und kachelweise anordnet.",
+    "Ein Social-Media-Manager dreht ein Produktfoto um 90°, um es für eine Instagram-Story im Hochformat zu optimieren.",
+    "Ein Archivar passt den Winkel gescannter Dokumente an, um perspektivische Verzerrungen durch schrägen Scan auszugleichen."
+  ]
+}

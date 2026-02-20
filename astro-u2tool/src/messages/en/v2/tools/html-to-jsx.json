@@ -1,0 +1,22 @@
+{
+  "htmlInput": "HTML Input",
+  "jsxOutput": "JSX Output",
+  "placeholder": "<div class=\"container\">...</div>",
+  "convert": "Convert",
+  "copy": "Copy",
+  "detailed_description": "The HTML to JSX converter transforms standard HTML markup into syntactically valid React JSX code while maintaining structural integrity and React-specific conventions. This tool parses raw HTML through an abstract syntax tree (AST) to identify elements, attributes, and nested structures, then systematically converts them to React-compatible syntax. Key technical transformations include replacing HTML attributes like 'class' with 'className', converting inline event handlers (e.g., 'onclick' to 'onClick'), and ensuring self-closing tags follow JSX requirements. Developers working on modernizing legacy websites to React frameworks or integrating static HTML templates into component-based architectures will find this tool essential. The converter handles complex cases like preserving conditional expressions in attributes and maintaining proper JSX fragment structures. Unlike basic string-replacement tools, this converter uses Babel's parsing capabilities to ensure output conforms to React best practices, including automatic key generation for list elements and proper handling of dangerouslySetInnerHTML. The result is production-ready JSX that requires minimal manual refactoring, making it ideal for teams migrating large codebases or creating component libraries from existing HTML assets.",
+  "usage_steps": [
+    "1. Open the converter interface and locate the 'Raw HTML Input' textarea",
+    "2. Paste your HTML markup into the editor, ensuring proper indentation for readability",
+    "3. Toggle advanced options: enable 'Preserve Whitespace' for layout-sensitive content or 'Convert Class Names' to automatically transform CSS classes to camelCase",
+    "4. Click the 'Convert to JSX' button to initiate the AST-based parsing process",
+    "5. Review the generated JSX in the 'Output Preview' panel, checking for proper component structure and event handler conversions",
+    "6. Use the 'Copy to Clipboard' button to transfer the converted code, then paste it directly into your React component file"
+  ],
+  "usage_examples": [
+    "Example 1: Converting a Bootstrap 4 navigation bar HTML snippet into a React component with dynamic state handling for active links",
+    "Example 2: Migrating a legacy WordPress theme's HTML template files into modular JSX components for a Gatsby.js rebuild",
+    "Example 3: Transforming email template HTML with inline styles into React components for a marketing dashboard UI",
+    "Example 4: Converting SVG icons from raw HTML to JSX format while maintaining accessibility attributes and preserving path data"
+  ]
+}

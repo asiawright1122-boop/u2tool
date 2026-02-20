@@ -1,0 +1,24 @@
+{
+  "uploadImage": "Bild hochladen",
+  "presets": "Voreinstellungen",
+  "light": "Leicht",
+  "medium": "Mittel",
+  "heavy": "Stark",
+  "blurIntensity": "Verwischungsstärke",
+  "noImage": "Bitte laden Sie ein Bild hoch",
+  "detailed_description": "Der Frosted-Glass-Effect-Generator simuliert das visuelle Erscheinungsbild von satiniertem Glas über Bilddateien durch eine Kombination aus algorithmischen Bildverarbeitungstechniken. Technisch gesehen wird ein mehrschichtiger Prozess angewandt: Zuerst wird ein Gaußscher Weichzeichnungsfilter mit anpassbarem Radius auf die Hintergrundbildschicht angewendet. Anschließend erfolgt die Erzeugung einer semitransparenten Overlay-Schicht mit kontrollierter Opazität und optionaler Farbtönung. Die Schichtenkompositionierung erfolgt unter Berücksichtigung der Alpha-Kanäle, wobei speziell die Kantenerkennungsalgorithmen die Konturen des zugrunde liegenden Bildmaterials analysieren, um realistische Lichtbrechungseffekte zu generieren. Entwickler benötigen dieses Tool, um moderne UI/UX-Designs zu erstellen, die Tiefenwirkung erzeugen (z.B. für App-Fenster mit Glasästhetik) oder um Fokussierungseffekte für Web-Inhalte zu implementieren. Der Effekt wird durch WebGL-basierte Berechnungen im Browser ohne Server-Interaktion in Echtzeit gerendert, wodurch datenschutzkonforme Verarbeitung gewährleistet ist.",
+  "usage_steps": [
+    "Importieren Sie Ihr Bild über den Datei-Importer mit Unterstützung für PNG, JPEG und WEBP Formate.",
+    "Passen Sie den Blur-Radius mit dem Schieberegler zwischen 0 und 50 Pixel an, um die Intensität des Glasdiffusions-Effekts zu steuern.",
+    "Aktivieren Sie den 'Edge Enhancement'-Modus, um kontextabhängige Kantenschärfung für bessere Lesbarkeit überlagerter Inhalte zu aktivieren.",
+    "Verwenden Sie die Farbauswahl, um eine subtile Tönung (z.B. rgba(255,255,255,0.3)) hinzuzufügen, die den Glasfarbton simuliert.",
+    "Öffnen Sie den 'Transparenz-Editor' und legen Sie den Alpha-Wert zwischen 0.2 und 0.8 fest, um das Lichtdurchlässigkeitsverhalten zu definieren.",
+    "Exportieren Sie das Ergebnis in Ihrem gewünschten Format mit oder ohne Transparenzkanal über die Download-Schaltfläche."
+  ],
+  "usage_examples": [
+    "Erstellen eines visuellen Fokus auf einem Website-Header, wobei der Hintergrundbildschärfeeffekt den Textinhalt hervorhebt.",
+    "Designen von semi-transparenten Overlay-Menüs für Progressive Web Apps mit realistischer Materialdarstellung.",
+    "Post-Processing von Fotografien, um Gesichter oder sensible Inhalte diskret zu verfremden, ohne vollständige Unkenntlichkeit zu erzwingen.",
+    "Implementierung von parallax-basierten Hintergründen in digitalen Präsentationen mit dynamischen Blur-Transitions."
+  ]
+}

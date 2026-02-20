@@ -1,0 +1,53 @@
+{
+  "detailed_description": "Git历史可视化工具创建Git提交历史的可视化表示。",
+  "usage_steps": [
+    "粘贴git log输出",
+    "或输入提交数据",
+    "点击可视化",
+    "探索分支",
+    "导出为图片"
+  ],
+  "usage_examples": [
+    "理解分支历史",
+    "记录发布策略",
+    "可视化合并模式"
+  ],
+  "input": "输入",
+  "output": "输出",
+  "process": "处理",
+  "copy": "复制",
+  "clear": "清除",
+  "inputPlaceholder": "粘贴 git log 输出...",
+  "outputPlaceholder": "结果将显示在此处...",
+  "errors": {
+    "emptyInput": "请输入一些内容"
+  },
+  "loadExample": "加载示例",
+  "analyze": "分析",
+  "generate": "生成",
+  "format": "格式化",
+  "convert": "转换",
+  "validate": "验证",
+  "export": "导出",
+  "preview": "预览",
+  "reset": "重置",
+  "add": "添加",
+  "remove": "移除",
+  "save": "保存",
+  "cancel": "取消",
+  "settings": "设置",
+  "options": "选项",
+  "results": "结果",
+  "noResults": "无结果",
+  "loading": "加载中...",
+  "success": "成功",
+  "failed": "失败",
+  "warning": "警告",
+  "info": "信息",
+  "hash": "哈希",
+  "message": "消息",
+  "author": "作者",
+  "date": "日期",
+  "legend": "图例",
+  "branch": "分支"
+}

@@ -1,0 +1,31 @@
+{
+  "detailed_description": "O Gerador de Caracteres Invisíveis opera sobre o plano multilíngue básico da Unicode, incluindo zero-width joiners (U+200D), non-joiners (U+200C), spaces (U+200B), no-break spaces (U+00A0), soft hyphens (U+00AD), word joiners (U+2060), ideographic spaces (U+3000) e marcas de direção (U+200E, U+200F, U+202A–U+202E). A ferramenta oferece dois modos complementares: geração, com paleta de categorias e contagem exata por tipo; e detecção, com varredura por code point, agrupamento por nome e normalização opcional via NFC/NFD. O painel de saída exibe código hexadecimal, nome canônico, contagem por grupo e visualização em escapes (\\uXXXX). Você pode exportar dados sanitizados, comparando texto original vs. normalizado e destacando diffs de caracteres ocultos. Internamente, a lógica percorre grapheme clusters e detecta padrões bidi (LRM/RLM) que afetam a ordem de renderização, evitando confusões em pipelines de texto. Casos comuns incluem: diffs com whitespace invisível em VCS, tokens de SEO quebrados, sanitização de formulários e geração de CSS/JS com seletores que falham devido a caracteres zero-width. A interface também expõe opções de formatação (UTF-8 bruto, JSON, percent-encoding) e suporte a copiar/colar em lote. Isso permite integrar o resultado diretamente em testes automatizados, validações de CI e auditorias de segurança.",
+  "usage_steps": [
+    "Abra a página e selecione a aba Gerar Invisíveis.",
+    "No painel Paleta, escolha os tipos a gerar (por exemplo, Zero Width Space, Zero Width Non-Joiner, Word Joiner, Ideographic Space) usando o dropdown de categorias; ajuste a quantidade com o controle deslizante Quantidade por tipo.",
+    "Na seção Formato, defina o tipo de saída (UTF‑8 bruto, JSON com \\uXXXX, percent-encoding) e ative/desative a opção Inserir separadores.",
+    "Clique em Gerar; visualize a saída na área Resultados (exibe hex, nome e contagem) e use o botão Copiar para colocar no clipboard.",
+    "Vá para a aba Detectar; cole o texto sob investigação no campo Texto de entrada e pressione Analisar.",
+    "Na tabela de resultados, revise code points encontrados, nomes e frequências; ative Normalizar para NFC ou NFD e exporte o texto sanitizado."
+  ],
+  "usage_examples": [
+    "Um diff no Git mostra linhas idênticas, mas o merge falha; ao colar o texto na aba Detectar, você descobre U+200B (ZERO WIDTH SPACE) e U+200C (ZERO WIDTH NON‑JOINER) e remove os caracteres para normalizar o arquivo.",
+    "Ao validar sanitização de um campo de busca, você gera um lote de caracteres invisíveis com o Gerar e envia ao endpoint; o Detectar confirma quais passaram pelo filtro, ajustando regras de segurança.",
+    "Uma página apresenta palavras-chave com tráfego, porém o tokenizador do buscador não reconhece os termos; o Detetor revela U+200D (ZWJ) e U+2060 (WORD JOINER) escondidos, e você normaliza o conteúdo para corrigir a indexação.",
+    "Um seletor CSS ou regex falha intermitentemente; ao colar a string na aba Detectar, você encontra U+00A0 (NO‑BREAK SPACE) e U+00AD (SOFT HYPHEN), remove e atualiza o seletor para funcionar de forma confiável."
+  ],
+  "selectCharacter": "Selecione o tipo de caractere",
+  "repeatCount": "Número de repetições",
+  "characters": "caracteres",
+  "copy": "Copiar",
+  "copied": "Copiado!",
+  "allCharacters": "Todos os caracteres invisíveis",
+  "detectTitle": "Detectar caracteres invisíveis",
+  "detectPlaceholder": "Cole o texto aqui para detectar caracteres invisíveis...",
+  "found": "encontrado",
+  "noInvisibleFound": "Nenhum caractere invisível detectado",
+  "useCases": "Casos de uso comuns",
+  "useCase1": "Criar posts em branco nas redes sociais",
+  "useCase2": "Adicionar marcas d'água de texto invisíveis",
+  "useCase3": "Testar sistemas de processamento de texto"
+}

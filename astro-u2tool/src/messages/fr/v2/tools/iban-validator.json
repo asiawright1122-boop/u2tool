@@ -1,0 +1,34 @@
+{
+  "inputLabel": "Entrez l'IBAN",
+  "placeholder": "ex: DE89370400440532013000",
+  "validate": "Valider",
+  "valid": "IBAN Valide",
+  "invalid": "IBAN Invalide",
+  "country": "Pays",
+  "checkDigits": "Chiffres de Contrôle",
+  "bankCode": "Code Banque",
+  "bban": "BBAN",
+  "formatted": "IBAN Formaté",
+  "copy": "Copier",
+  "exampleIbans": "Exemples d'IBAN",
+  "errors": {
+    "empty": "Veuillez entrer un IBAN",
+    "invalidFormat": "Format IBAN invalide",
+    "unknownCountry": "Code pays inconnu",
+    "invalidLength": "Longueur invalide",
+    "invalidChecksum": "Somme de contrôle invalide"
+  },
+  "detailed_description": "Le Validateur IBAN est un outil complet pour valider les numéros de compte bancaire internationaux.",
+  "usage_steps": [
+    "Entrez ou collez un numéro IBAN",
+    "Cliquez sur Valider",
+    "Consultez les résultats",
+    "Utilisez les exemples pour tester",
+    "Copiez l'IBAN formaté"
+  ],
+  "usage_examples": [
+    "Vérifier l'IBAN avant les virements internationaux",
+    "Vérifier les numéros de compte bancaire des clients",
+    "Valider le format IBAN pour les systèmes de paiement"
+  ]
+}

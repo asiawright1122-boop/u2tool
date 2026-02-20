@@ -1,0 +1,36 @@
+{
+  "detailed_description": "O Gerador de Mensagens de Commit o ajuda a criar mensagens de commit bem estruturadas seguindo a especificação Conventional Commits. Este formato torna sua história de commits mais legível e permite a geração automatizada de logs de versão. Escolha entre os tipos de commit padrão, adicione um escopo opcional e escreva descrições claras para controle de versão consistente.",
+  "usage_steps": [
+    "Selecione o tipo de commit (feat, fix, docs, etc.)",
+    "Adicione opcionalmente um escopo para o change",
+    "Escreva uma linha de assunto clara e concisa",
+    "Verifique se há alteração quebradora se aplicável",
+    "Adicione um corpo opcional para uma explicação detalhada",
+    "Copie a mensagem de commit formatada"
+  ],
+  "usage_examples": [
+    "Criando commits de funcionalidade: feat(auth): adicionar funcionalidade de login",
+    "Escrevendo commits de correção de bugs: fix(api): resolver problema de tempo limite",
+    "Documentando alterações: docs(readme): atualizar guia de instalação"
+  ],
+  "type": "Type",
+  "scope": "Scope",
+  "scopePlaceholder": "e.g., auth, api, ui",
+  "subject": "Subject",
+  "subjectPlaceholder": "Short description of the change",
+  "body": "Body",
+  "bodyPlaceholder": "Detailed explanation of the change...",
+  "footer": "Footer",
+  "footerPlaceholder": "e.g., Closes #123, BREAKING CHANGE: ...",
+  "breakingChange": "Breaking Change",
+  "commitMessage": "Commit Message",
+  "preview": "Enter subject to preview...",
+  "optional": "optional",
+  "characters": "characters",
+  "recommended50": "recommended max 50",
+  "tips": "Tips",
+  "tip1": "Use imperative mood: \"add\" not \"added\" or \"adds\"",
+  "tip2": "Keep subject under 50 characters",
+  "tip3": "Separate subject from body with blank line",
+  "breaking": "Mudança importante"
+}

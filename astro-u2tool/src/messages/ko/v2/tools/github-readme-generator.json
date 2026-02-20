@@ -1,0 +1,37 @@
+{
+  "detailed_description": "GitHub README 생성기는 GitHub 저장소용 전문적이고 구조화된 README.md 파일을 생성하는 데 도움이 됩니다. 프로젝트 제목, 설명, 배지(빌드 상태, 라이선스, npm 버전), 기능 목록, 설치 지침, 사용 예시, API 문서, 기여 지침 및 라이선스 정보를 추가하세요. 도구는 올바른 포맷으로 Markdown을 생성하여 프로젝트를 더 쉽게 찾고 사용자 친화적으로 만듭니다.",
+  "usage_steps": [
+    "프로젝트 이름과 설명을 입력하세요",
+    "빌드 상태, 라이선스 등에 대한 배지를 추가하세요",
+    "프로젝트의 주요 기능을 나열하세요",
+    "설치 지침을 작성하세요",
+    "코드 블록과 함께 사용 예시를 추가하세요",
+    "기여 지침을 포함하세요",
+    "라이선스를 선택하고 README를 생성하세요"
+  ],
+  "usage_examples": [
+    "오픈 소스 라이브러리에 대한 README를 생성하세요",
+    "사용 예시와 함께 CLI 도구를 문서화하세요",
+    "웹 애플리케이션에 대한 README를 설정하세요",
+    "API 프로젝트에 대한 문서를 생성하세요"
+  ],
+  "projectNamePlaceholder": "멋진 프로젝트",
+  "descriptionPlaceholder": "프로젝트에 대한 간단한 설명...",
+  "authorPlaceholder": "홍길동",
+  "authorGithubPlaceholder": "honggildong",
+  "featurePlaceholder": "기능 설명...",
+  "installationPlaceholder": "npm install your-package",
+  "usagePlaceholder": "import { something } from 'your-package';",
+  "projectName": "프로젝트 이름",
+  "author": "작성자",
+  "authorGithub": "작성자 GitHub",
+  "badges": "배지",
+  "features": "기능",
+  "addFeature": "기능 추가",
+  "installation": "설치",
+  "usage": "사용법",
+  "license": "라이선스",
+  "includeTableOfContents": "목차 포함",
+  "generate": "생성",
+  "download": "다운로드"
+}

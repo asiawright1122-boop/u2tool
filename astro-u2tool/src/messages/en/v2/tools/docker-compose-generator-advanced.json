@@ -1,0 +1,39 @@
+{
+  "detailed_description": "Docker Compose Generator creates docker-compose.yml configurations for multi-container applications.",
+  "usage_steps": [
+    "Select services from templates",
+    "Configure ports and volumes",
+    "Set up networks",
+    "Add health checks",
+    "Download docker-compose.yml"
+  ],
+  "usage_examples": [
+    "Create dev environment",
+    "Generate production compose",
+    "Build microservices stack"
+  ],
+  "input": "Input",
+  "output": "Output",
+  "process": "Process",
+  "copy": "Copy",
+  "clear": "Clear",
+  "inputPlaceholder": "Enter your input here...",
+  "outputPlaceholder": "Results will appear here...",
+  "errors": {
+    "emptyInput": "Please enter some input"
+  },
+  "quickAddService": "Quick Add Service",
+  "services": "Services",
+  "addEmptyService": "+ Add Empty Service",
+  "serviceName": "service_name",
+  "remove": "Remove",
+  "image": "Image",
+  "restartPolicy": "Restart Policy",
+  "ports": "Ports (comma separated, e.g., 3000:3000, 8080:80)",
+  "volumes": "Volumes (comma separated)",
+  "dependsOn": "Depends On (comma separated service names)",
+  "none": "none",
+  "always": "always",
+  "unlessStopped": "unless-stopped",
+  "onFailure": "on-failure"
+}

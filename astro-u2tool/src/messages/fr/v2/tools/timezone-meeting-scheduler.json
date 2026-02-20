@@ -1,0 +1,34 @@
+{
+  "detailed_description": "Le Planificateur d'Heures d'Accord aide à trouver les heures de réunion optimales pour les participants répartis dans différents fuseaux horaires.",
+  "usage_steps": [
+    "Ajoutez les emplacements des participants",
+    "Définissez la durée de la réunion",
+    "Visualisez la comparaison des heures",
+    "Trouvez les heures de chevauchement",
+    "Sélectionnez et partagez l'heure"
+  ],
+  "usage_examples": [
+    "Planifiez des appels internationaux",
+    "Trouvez des heures de réunion US-Europe",
+    "Coordonnez des équipes à distance"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Processus",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Entrez votre entrée ici...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez entrer quelques informations"
+  },
+  "baseTimezone": "Fuseau Horaire de Base",
+  "duration": "Durée (heures)",
+  "addParticipant": "+ Ajouter un Participant",
+  "participants": "Participants",
+  "work": "Travail",
+  "bestMeetingTimes": "Meilleurs Horaires de Réunion",
+  "copyBestTime": "Copier le Meilleur Horaire",
+  "best": "Meilleur",
+  "allWorking": "Tous au Travail"
+}

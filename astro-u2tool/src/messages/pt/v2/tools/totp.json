@@ -1,0 +1,10 @@
+{
+  "secret": "Chave secreta (Base32)",
+  "secretPlaceholder": "Insira ou gere o segredo Base32...",
+  "secretHint": "O segredo deve ter pelo menos 16 caracteres",
+  "currentCode": "Código Atual",
+  "howItWorks": "Como funciona",
+  "step1": "TOTP generates time-based one-time passwords",
+  "step2": "O código é atualizado a cada 30 segundos",
+  "step3": "Compatível com Google Autenticador"
+}

@@ -1,0 +1,24 @@
+{
+  "input": "Entrée HTML",
+  "output": "Sortie Markdown",
+  "convert": "Convertir",
+  "copy": "Copier",
+  "detailed_description": "L'outil HTML to Markdown réalise une conversion précise de documents HTML vers le format Markdown en exploitant une analyse syntaxique avancée. Il décompose le code source HTML en un arbre DOM (Document Object Model), identifie les balises imbriquées, attributs et nœuds textuels, puis applique des règles de mappage spécifiques pour transformer chaque élément en syntaxe Markdown équivalente. Les balises bloc comme <div> ou <section> sont converties en headers ou paragraphes, tandis que les éléments inline (<span>, <em>) sont traduits via la notation Markdown standard. Les tableaux complexes, listes ordonnées et blocs de code bénéficient d'un traitement particulier pour conserver leur structure. Ce processus utilise une AST (Abstract Syntax Tree) intermédiaire pour garantir la cohérence de la sortie, même face à des HTML mal formés ou contenant des entités HTML. Ce convertisseur est essentiel pour les développeurs souhaitant migrer du contenu vers des générateurs de sites statiques (Hugo, Jekyll), préparer des documentations pour GitBook, ou automatiser la conversion de templates HTML en format compatible avec des CMS Markdown (Grav, Kirby). L'outil gère également les caractères spéciaux, les URL encodées et les CSS inline, en les convertissant selon les bonnes pratiques Markdown.",
+  "usage_steps": [
+    "Accédez à l'interface web et collez votre HTML dans l'éditeur de code avec coloration syntaxique.",
+    "Activez/désactivez les options avancées comme 'Préserver les commentaires HTML' ou 'Nettoyer les balises vides'.",
+    "Cliquez sur le bouton 'Convertir en Markdown' pour lancer le processus d'analyse DOM.",
+    "Consultez le résultat en temps réel dans le panneau de prévisualisation avec rendu WYSIWYG.",
+    "Téléchargez le fichier .md généré ou copiez le résultat dans votre clipboard.",
+    "Utilisez l'option 'Exporter avec méta-données YAML' pour inclure des front-matters dans le résultat."
+  ],
+  "usage_examples": [
+    "Migrer des articles de blog HTML existants vers un générateur de site statique Jekyll nécessitant du Markdown.",
+    "Transformer des documentations techniques HTML en format compatible avec GitBook pour un projet Open Source.",
+    "Convertir des newsletters HTML en fichiers Markdown structurés pour une base de connaissances interne.",
+    "Automatiser la transformation de templates HTML en contenu Markdown pour un CMS comme Grav."
+  ],
+  "inputPlaceholder": "Entrez le code HTML...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "link": "Lien"
+}

@@ -1,0 +1,93 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "showLegend": "显示图例",
+  "fillOpacity": "填充不透明度",
+  "shape": "形状",
+  "shapePolygon": "多边形",
+  "shapeCircle": "圆形",
+  "indicator": "指标",
+  "indicatorName": "指标名称",
+  "maxValue": "最大值",
+  "series": "系列",
+  "seriesName": "系列名称",
+  "addIndicator": "添加指标",
+  "addSeries": "添加系列",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "性能分析",
+  "sampleTitle": "团队比较",
+  "indicatorEditor": "指标编辑器",
+  "dataEditor": "数据编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "sampleData": {
+    "sales": "销售",
+    "admin": "行政",
+    "tech": "技术",
+    "support": "客户支持",
+    "develop": "开发",
+    "marketing": "市场",
+    "budget": "预算",
+    "actual": "实际"
+  },
+  "tips": {
+    "title": "提示",
+    "tip1": "使用名称和最大值定义指标",
+    "tip2": "添加多个系列以比较不同的数据集",
+    "tip3": "调整填充不透明度以获得更好的可见性",
+    "tip4": "选择多边形或圆形形状",
+    "tip5": "点击下载PNG或下载SVG以保存",
+    "tip6": "使用CSV导入批量添加数据"
+  },
+  "importCsv": "导入CSV",
+  "csvFormat": "CSV格式：指标,值1,值2,...（每行一个）",
+  "csvImportSuccess": "已导入{count}行数据",
+  "csvImportError": "无效的CSV格式",
+  "detailed_description": "Radar Chart Generator 是一款在线生成雷达图的工具，它允许用户通过一个直观的界面创建多维度数据的可视化图表。雷达图（也称为蜘蛛图或星状图）是一种用于展示多个变量数据的图表，每个变量都有一个轴，所有轴的起点相同。用户可以用来比较不同维度的数据，识别数据集中的优势和劣势。Radar Chart Generator 通过提供多种自定义选项，如颜色、轴标签、数据点样式等，帮助用户创建个性化的雷达图。生成的图表可以导出为 PNG 或 SVG 格式，方便在报告、演示文稿或网页中使用。这款工具特别适用于需要多维度数据分析的场景，如市场调研、性能评估、产品特性对比等。",
+  "usage_steps": [
+    "Step 1: 打开 Radar Chart Generator 网页，点击“新建图表”按钮，进入图表编辑界面。",
+    "Step 2: 在“数据输入”区域，根据需要输入或粘贴您的数据。确保每行数据包含一个维度名称和相应的数值。",
+    "Step 3: 在“图表设置”区域，选择或输入图表标题、轴标签、数据点样式等选项，以自定义您的雷达图。",
+    "Step 4: 调整“样式设置”中的颜色、线条和填充等选项，使图表更加美观。",
+    "Step 5: 预览图表，确保所有信息准确无误，可以通过“预览”按钮查看图表效果。",
+    "Step 6: 点击“导出”按钮，选择 PNG 或 SVG 格式，保存您的雷达图到本地或直接分享到社交媒体。"
+  ],
+  "usage_examples": [
+    "Example 1: 市场调研人员可以使用 Radar Chart Generator 来比较不同产品的特性，如价格、性能、设计等，帮助决策者快速识别市场趋势。",
+    "Example 2: 产品经理可以通过雷达图展示新产品的各项指标，与竞品进行对比，突出自家产品的优势。",
+    "Example 3: 教育机构可以利用该工具来展示学生的多维度评估结果，如学术成绩、社会实践、团队合作等，帮助学生全面了解自己的表现。",
+    "Example 4: 体育教练可以使用 Radar Chart Generator 来分析运动员在不同项目上的表现，如速度、耐力、力量等，为训练计划提供科学依据。"
+  ],
+  "faqs": [
+    {
+      "question": "Radar Chart Generator 是免费的吗？",
+      "answer": "是的，Radar Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Radar Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Radar Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Radar Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Radar Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

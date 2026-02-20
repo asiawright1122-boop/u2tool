@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Emoji Picker é uma ferramenta web especializada em seleção eficiente de emojis baseada em categorias, utilizando Unicode 15.0 para garantir compatibilidade com plataformas modernas. O funcionamento técnico envolve indexação de 3.621 emojis organizados em 12 categorias semânticas (como 'Pessoas', 'Natureza' e 'Símbolos'), com busca otimizada via tokenização de palavras-chave em tempo real. Quando um usuário clica em um emoji, o sistema implementa Clipboard API para copiar o caractere UTF-8 diretamente para a área de transferência, preservando a codificação hexadecimal. A interface emprega event delegation para reduzir listeners de DOM, enquanto o mecanismo de busca usa lematização para relacionar termos como 'cachorro' e 'animal' com emojis de pets. Essa abordagem é especialmente útil para desenvolvedores que necessitam inserir emojis em strings de código sem erros de codificação, designers que buscam consistência visual ou profissionais de marketing que criam conteúdos para redes sociais com precisão semântica.",
+  "usage_steps": [
+    "1. Acesse a interface web e explore as abas de categorias (esquerda) organizadas em taxonomia hierárquica.",
+    "2. Utilize a barra de busca superior para pesquisar emojis por termos em português ou inglês, com suporte a sinônimos.",
+    "3. Ative o filtro 'Tons de pele' para selecionar variações cromáticas específicas de emojis humanos.",
+    "4. Posicione o cursor sobre o emoji desejado para ativar o tooltip com código Unicode (ex: U+1F600).",
+    "5. Clique no botão 'Copiar' dentro do tooltip ou pressione Ctrl+C para inserir o caractere no projeto.",
+    "6. Acesse a seção 'Recentes' (ícone de relógio) para recuperar até 20 emojis utilizados anteriormente."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor frontend inserindo emojis consistentes em uma documentação técnica do GitHub, garantindo renderização correta em terminais.",
+    "Uma equipe de marketing digital selecionando emojis para uma campanha no Instagram que precise de simbologia específica (como bandeiras ou ícones de redes sociais).",
+    "Um designer UI/UX testando a legibilidade de interfaces com emojis em diferentes escalas de cor e tamanho.",
+    "Um tradutor adaptando conteúdo para o público brasileiro, usando emojis regionalmente apropriados (como o samba ⚔️ ou a caipirinha 🍹)."
+  ]
+}

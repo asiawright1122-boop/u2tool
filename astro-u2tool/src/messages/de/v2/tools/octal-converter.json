@@ -1,0 +1,38 @@
+{
+  "mode": "Modus",
+  "octToDec": "Oktal → Dezimal",
+  "decToOct": "Dezimal → Oktal",
+  "octToBin": "Oktal → Binär",
+  "binToOct": "Binär → Oktal",
+  "octToHex": "Oktal → Hexadezimal",
+  "hexToOct": "Hexadezimal → Oktal",
+  "loadSample": "Beispiel laden",
+  "input": "Eingabe",
+  "inputPlaceholder": "Geben Sie einen Wert ein...",
+  "output": "Ausgabe",
+  "outputPlaceholder": "Ergebnis wird hier angezeigt...",
+  "copy": "Kopieren",
+  "convert": "Konvertieren",
+  "info": "Information",
+  "infoText": "Oktal verwendet die Ziffern 0-7. Beispiel: 755 (oktal) = 493 (dezimal).",
+  "errorInvalidOctal": "Ungültige oktale Eingabe",
+  "errorInvalidDecimal": "Ungültige dezimale Eingabe",
+  "errorInvalidBinary": "Ungültige binäre Eingabe",
+  "errorInvalidHex": "Ungültige hexadezimale Eingabe",
+  "errorConversion": "Konvertierungsfehler",
+  "detailed_description": "Der Octal Converter ist ein präzises Instrument zur bidirektionalen Konvertierung von Zahlen zwischen dem Oktalsystem (Basis 8) und anderen Zahlensystemen wie Dezimal (Basis 10), Binär (Basis 2) oder Hexadezimal (Basis 16). Die Anwendung nutzt die Prinzipien der Stellenwertsysteme, um Zahlenwerte durch modulare Arithmetik und Bit-Gruppierungsverfahren präzise zu transformieren. Bei der Umwandlung von Oktalzahlen in Dezimalzahlen erfolgt dies durch die Auswertung des Polynoms der Form Σ(a_i × 8^i), während die Umkehrung durch wiederholte Division mit Rest realisiert wird. Besondere Aufmerksamkeit wird der Behandlung von gebrochenen Zahlen gewidmet, bei denen die Nachkommastellen durch Multiplikation mit der Zielbasis und Extraktion des ganzzahligen Anteils verarbeitet werden. Entwickler benötigen dieses Tool beispielsweise zur Analyse von Dateiberechtigungen in Unix-Systemen (chmod-Oktalcodes), zur Fehlersuche in Legacy-Systemen mit Oktalrepräsentation oder für Low-Level-Programmieraufgaben in eingebetteten Systemen. Die Implementierung garantiert bitgenaue Ergebnisse ohne Rundungsfehler durch die Verwendung von arbitrary-precision-Integer-Objekten in der Backend-Logik.",
+  "usage_steps": [
+    "Wählen Sie im Dropdown-Menü 'Eingabebasis' den Quellzahlentyp (z.B. Octal, Decimal, Binary) aus.",
+    "Geben Sie den zu konvertierenden Wert im Textfeld ein, inklusive führender Nullen für exakte Bit-Darstellung (z.B. 017 für Oktal).",
+    "Aktivieren Sie das Kästchen 'Automatische Erkennung' für dynamische Identifizierung der Eingabeformate oder deaktivieren Sie es für manuelle Kontrolle.",
+    "Stellen Sie im Schieberegler 'Nachkommastellen' die gewünschte Präzision für gebrochene Zahlen (bis zu 20 Stellen) ein.",
+    "Klicken Sie auf 'Swap Bases', um Eingabe- und Ausgabebasen zu tauschen und die Konvertierungsrichtung umzukehren.",
+    "Kopieren Sie das Ergebnis aus dem farblich markierten Ausgabefeld oder laden Sie die Konvertierungshistorie als JSON-Datei herunter."
+  ],
+  "usage_examples": [
+    "Ein Systemadministrator konvertiert die Unix-Dateiberechtigung 0755 (Oktal) in Binär, um die expliziten Read/Write/Execute-Bits zu analysieren.",
+    "Ein Entwickler übersetzt einen Hexadezimalwert wie 0x1F8 in Oktal, um mit einem Legacy-Minicomputer-Emulator zu kommunizieren, der ausschließlich Oktalzahlen akzeptiert.",
+    "Ein Elektrotechnik-Student wandelt eine Binärsequenz wie 110110101 in Oktal um, um die Darstellung von Mikrocontroller-Registerwerten zu vereinfachen.",
+    "Ein Data-Scientist konvertiert einen Dezimalbruch wie 3.14159 in Oktal mit 10 Nachkommastellen, um Algorithmen für historische Computersysteme zu testen."
+  ]
+}

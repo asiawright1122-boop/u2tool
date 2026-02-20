@@ -1,0 +1,31 @@
+{
+  "uploadImage": "Carregar Imagem",
+  "dominantColor": "Cor Dominante",
+  "palette": "Paleta de Cores",
+  "colors": "Número de Cores",
+  "copyColor": "Copiar Cor",
+  "copied": "Copiado",
+  "colorCount": "Número de Cores",
+  "dropzone": "Clique ou arraste uma imagem para extrair cores",
+  "image": "Imagem",
+  "processing": "Processando...",
+  "extractColors": "Extrair Cores",
+  "downloadPalette": "Baixar Paleta",
+  "clickToCopy": "Clique para copiar",
+  "noColors": "Clique em 'Extrair Cores' para obter a paleta de cores",
+  "detailed_description": "O Color Extractor é uma ferramenta avançada projetada para analisar imagens e extrair cores dominantes e paletas de cores. Utilizando algoritmos de processamento de imagem, essa ferramenta é capaz de identificar as cores mais frequentes e representativas em uma imagem, gerando uma paleta que pode ser utilizada em diversos contextos de design e desenvolvimento. A necessidade de tal ferramenta é evidente em cenários onde a consistência de cores é crucial, como no desenvolvimento de interfaces de usuário (UI) ou na criação de marcas. Por exemplo, um designer pode usar o Color Extractor para analisar a paleta de cores de um logotipo existente e garantir que as novas peças de design estejam alinhadas com a identidade visual da marca. A ferramenta também é útil para desenvolvedores que precisam extrair cores de imagens para aplicar estilos dinâmicos em aplicativos web ou mobile. O processo de extração de cores é baseado em técnicas de análise de clusters, onde os pixels da imagem são agrupados de acordo com suas propriedades de cor, resultando em uma representação precisa da paleta de cores.",
+  "usage_steps": [
+    "Carregue a imagem que deseja analisar, clicando no botão 'Selecionar Imagem' ou arrastando e soltando a imagem na área designada.",
+    "Aguarde o processamento da imagem. A ferramenta irá analisar a imagem e extrair as cores dominantes automaticamente.",
+    "Visualize a paleta de cores extraída na seção 'Paleta de Cores'. As cores serão exibidas em formato hexadecimal.",
+    "Ajuste a quantidade de cores a serem extraídas usando o controle deslizante 'Número de Cores'.",
+    "Se necessário, aplique filtros para refinar a extração de cores, como 'Ignorar Cores Neutras' ou 'Aumentar Contraste'.",
+    "Salve a paleta de cores em um arquivo .json ou .txt, ou copie os códigos hexadecimais para uso em seus projetos."
+  ],
+  "usage_examples": [
+    "Um designer de UI está trabalhando em uma nova interface para um aplicativo de e-commerce. Ele usa o Color Extractor para analisar a imagem de fundo da tela inicial e extrair as cores dominantes, garantindo que os elementos de design sejam harmoniosos e coesos.",
+    "Um desenvolvedor de jogos mobile precisa criar um tema visual para um novo jogo. Ele utiliza o Color Extractor para extrair a paleta de cores de uma referência artística e aplica essas cores nos designs dos personagens e cenários do jogo.",
+    "Uma agência de marketing está criando uma campanha publicitária para uma marca de moda. O designer gráfico usa o Color Extractor para extrair as cores dominantes de uma foto de uma coleção de roupas, garantindo que os materiais de marketing estejam alinhados com a identidade visual da marca.",
+    "Um arquiteto está projetando uma fachada de prédio e precisa garantir que as cores dos materiais escolhidos sejam consistentes com o design geral. Ele utiliza o Color Extractor para analisar imagens de referência e extrair as cores dominantes, que serão usadas para selecionar os materiais apropriados."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "output": "CSS Output",
+  "copy": "Copiar CSS",
+  "reset": "Reiniciar",
+  "uploadImage": "Carregar Imagem",
+  "blur": "Desfoque",
+  "brightness": "Brilho",
+  "contrast": "Contraste",
+  "grayscale": "Grayscale",
+  "hueRotate": "Rotacionar Tom",
+  "invert": "Inverter",
+  "saturate": "Saturar",
+  "sepia": "Sepia",
+  "opacity": "Opacidade",
+  "presetGrayscale": "Grayscale",
+  "presetSepia": "Sepia",
+  "presetVintage": "Vintage",
+  "presetDramatic": "Dramático",
+  "presetFaded": "Desbotado",
+  "presetInverted": "Invertido",
+  "detailed_description": "O CSS Filter Generator é uma ferramenta técnica que permite criar efeitos de filtragem CSS dinâmicos através de uma interface visual interativa. Internamente, ele converte ajustes feitos em parâmetros como blur, brightness, contrast, hue-rotate e saturate em funções CSS filter válidas, incluindo suporte a primitivas de filtro SVG para efeitos avançados. Profissionais precisam dessa ferramenta para prototipar estilos visuais sem codificar manualmente, ajustar a estética de imagens responsivas ou aplicar correções de cor precisas em elementos web. O funcionamento baseia-se em um motor de renderização em tempo real que atualiza o preview conforme alterações nos controles deslizantes (sliders) ou campos numéricos, com opção de combinar múltiplos filtros simultaneamente. Cada ajuste é mapeado diretamente para a propriedade CSS filter, incluindo a ordem de aplicação e valores em porcentagem ou unidades específicas. A ferramenta também oferece opção de adicionar prefixos proprietários (-webkit-, -moz-) para compatibilidade cross-browser.",
+  "usage_steps": [
+    "1. Acesse o editor e selecione o tipo de filtro desejado (ex: Blur, Brightness) no menu suspenso de funções.",
+    "2. Ajuste a intensidade do efeito usando o slider ou insira um valor numérico exato no campo associado.",
+    "3. Ative a pré-visualização ao vivo para ver o efeito aplicado em um elemento de amostra ou faça upload de uma imagem personalizada.",
+    "4. Combine múltiplos filtros clicando no botão '+ Adicionar Filtro' e ajustando a ordem de aplicação na lista.",
+    "5. Utilize o botão 'Ver Código' para visualizar o CSS gerado com todas as propriedades e valores configurados.",
+    "6. Copie o código gerado ou faça download de um arquivo .css contendo as definições do filtro."
+  ],
+  "usage_examples": [
+    "Criar um efeito de escurecimento progressivo em imagens de galeria ao passar o mouse, usando a combinação de brightness(0.5) e contrast(120%).",
+    "Ajustar a saturação de ícones vetoriais para garantir consistência visual em diferentes temas de interface (ex: saturate(0.7) para modo escuro).",
+    "Aplicar um desfoque Gaussiano (blur(5px)) em elementos de fundo para destacar conteúdo principal em páginas de landing page.",
+    "Simular um filtro vintage com sequência específica de hue-rotate(15deg), sepia(40%) e contrast(90%) para fotografia web."
+  ]
+}

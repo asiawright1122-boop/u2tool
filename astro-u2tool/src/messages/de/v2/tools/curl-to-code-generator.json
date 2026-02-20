@@ -1,0 +1,25 @@
+{
+  "detailed_description": "Der cURL zu Code-Generator wandelt cURL-Befehle in funktionierende Code-Snippets für mehrere Programmiersprachen um, einschließlich Python (requests), JavaScript (fetch/axios), Go, PHP, Ruby und mehr.",
+  "usage_steps": [
+    "Fügen Sie Ihren cURL-Befehl ein",
+    "Wählen Sie die Zielsprache",
+    "Wählen Sie die HTTP-Bibliothek",
+    "Klicken Sie auf 'Konvertieren'",
+    "Kopieren Sie den generierten Code"
+  ],
+  "usage_examples": [
+    "API-Test cURL in Python requests konvertieren",
+    "JS fetch aus DevTools cURL generieren",
+    "Go HTTP-Client aus Dokumentation erstellen"
+  ],
+  "input": "Eingabe",
+  "output": "Ausgabe",
+  "process": "Verarbeitung",
+  "copy": "Kopieren",
+  "clear": "Leeren",
+  "inputPlaceholder": "Geben Sie hier Ihre Eingabe ein...",
+  "outputPlaceholder": "Ergebnisse werden hier angezeigt...",
+  "errors": {
+    "emptyInput": "Bitte geben Sie einige Eingaben ein"
+  }
+}

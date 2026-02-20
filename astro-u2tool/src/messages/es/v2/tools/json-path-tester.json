@@ -1,0 +1,27 @@
+{
+  "jsonData": "Datos JSON",
+  "jsonPlaceholder": "{\"name\": \"John\", \"users\": [{\"name\": \"Alice\"}, {\"name\": \"Bob\"}]}",
+  "expression": "Expresión JSONPath",
+  "expressionPlaceholder": "$.users[0].name",
+  "evaluate": "Evaluar",
+  "result": "Resultado",
+  "exGetName": "Obtener propiedad name",
+  "exFirstUser": "Primer usuario",
+  "exFirstUserName": "Nombre del primer usuario",
+  "exNestedItems": "Elementos anidados",
+  "detailed_description": "El JSONPath Tester es una herramienta técnica diseñada para validar y ejecutar expresiones JSONPath contra estructuras de datos JSON. Esta herramienta permite a los desarrolladores analizar sintácticamente expresiones mediante un motor basado en AST (Abstract Syntax Tree) para garantizar que siguen la especificación ECMA-404. Su funcionalidad principal incluye tokenización de expresiones, evaluación contra nodos JSON y retorno de resultados en formato estructurado. Los usuarios necesitan esta herramienta para depurar consultas en APIs RESTful, validar extracciones de campos anidados o probar expresiones complejas con operadores como [?(@.price > 100)] o ..book[0]. El motor interno implementa algoritmos de búsqueda en profundidad para manejar estructuras jerárquicas y soporta notación punto/paréntesis, arrays y filtros avanzados. Además, incluye un validador de sintaxis en tiempo real y un visualizador de árbol de resultados para facilitar la depuración.",
+  "usage_steps": [
+    "Pega tu JSON en el área de texto o carga un archivo .json usando el selector de archivos",
+    "Escribe la expresión JSONPath en el campo de entrada, utilizando operadores como $, @, [], o funciones como length()",
+    "Haz clic en 'Validar Sintaxis' para comprobar errores en tiempo real antes de ejecutar",
+    "Presiona 'Ejecutar Consulta' para procesar la expresión contra el documento JSON cargado",
+    "Revisa los resultados en el panel de salida, que muestra rutas coincidentes y valores extraídos",
+    "Usa la opción 'Mostrar AST' para inspeccionar el árbol de sintaxis abstracto de tu expresión"
+  ],
+  "usage_examples": [
+    "Validar que la expresión $.usuarios[?(@.rol=='admin')].email funciona correctamente antes de implementarla en un microservicio",
+    "Extraer todos los elementos con valor null de un JSON complejo usando $..[?(@ === null)]",
+    "Depurar una consulta que filtra productos por categoría y precio: $.inventario.categorías[?(@.nombre=='electrónica')].productos[?(@.precio < 500)]",
+    "Verificar que la estructura de respuesta de una API externa cumple con el contrato esperado mediante $.*.metadata.schema_version"
+  ]
+}

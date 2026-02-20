@@ -1,0 +1,44 @@
+{
+  "inputLabel": "Introduce el código BIC/SWIFT",
+  "placeholder": "Por ejemplo: DEUTDEFF",
+  "formatHint": "Formato: 8 o 11 caracteres (por ejemplo: DEUTDEFF o DEUTDEFFXXX)",
+  "lookup": "Buscar",
+  "validBic": "Código BIC/SWIFT válido",
+  "bankCode": "Código bancario",
+  "country": "País",
+  "locationCode": "Código de ubicación",
+  "branchCode": "Código de sucursal",
+  "headOffice": "Sede central",
+  "specificBranch": "Sucursal específica",
+  "bankInformation": "Información bancaria",
+  "bankName": "Nombre del banco",
+  "city": "Ciudad",
+  "branch": "Sucursal",
+  "copyBic": "Copiar código BIC",
+  "bicStructure": "Estructura del código BIC/SWIFT",
+  "structure": {
+    "bank": "Código bancario",
+    "country": "País",
+    "location": "Ubicación",
+    "branch": "Sucursal (opcional)"
+  },
+  "sampleCodes": "Códigos BIC de ejemplo",
+  "errors": {
+    "empty": "Por favor, introduce un código BIC/SWIFT",
+    "invalidFormat": "Formato de código BIC no válido. Debe tener 8 o 11 caracteres alfanuméricos.",
+    "unknownCountry": "Código de país desconocido"
+  },
+  "detailed_description": "La herramienta de búsqueda de códigos BIC/SWIFT valida y proporciona información sobre los códigos de identificación bancaria (BIC) utilizados para transferencias bancarias internacionales. Introduce un código BIC para verificar su formato y obtener detalles sobre el banco, el país y la sucursal. Es esencial para garantizar pagos internacionales precisos.",
+  "usage_steps": [
+    "Introduce un código BIC/SWIFT en el campo de entrada",
+    "Haz clic en 'Buscar' para verificar y obtener información bancaria",
+    "Visualiza la estructura del código analizado (banco, país, ubicación, sucursal)",
+    "Comprueba la información del banco si está disponible en la base de datos",
+    "Usa los códigos de ejemplo para explorar diferentes bancos"
+  ],
+  "usage_examples": [
+    "Verifica códigos BIC antes de realizar transferencias internacionales",
+    "Busca información bancaria a partir de códigos SWIFT",
+    "Valida los detalles de los pagos para transacciones transfronterizas"
+  ]
+}

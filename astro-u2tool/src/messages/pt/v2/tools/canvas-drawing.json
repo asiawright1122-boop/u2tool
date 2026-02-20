@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Canvas Drawing é uma ferramenta baseada em HTML5 Canvas que permite criação e edição de imagens raster e vetoriais através de operações de desenho programático. Tecnicalmente, utiliza o contexto 2D de renderização para capturar eventos de entrada (mousedown/touchstart) e mapear coordenadas em paths vetoriais, aplicando operações de compositing com controle de alpha transparency. A ferramenta implementa algoritmos de interpolação para suavização de traços (anti-aliasing) e permite configuração de propriedades de pincel (tamanho, opacidade, mistura de cores) usando modelos HSL/RGB. O modo borracha aplica operações 'destination-out' para remoção precisa de pixels. Desenvolvedores precisam desta ferramenta para prototipagem rápida de assets 2D, criação de máscaras de recorte para WebGL, ou debug visual de algoritmos gráficos. A funcionalidade de exportação SVG preserva vetores para integração em interfaces web responsivas, enquanto a saída PNG mantém profundidade de cor de 24 bits com compressão otimizada.",
+  "usage_steps": [
+    "Acesse o painel de controle e selecione a cor primária usando o seletor HSL com ajuste de luminosidade em tempo real",
+    "Configure o pincel ajustando diâmetro (5-50px) e pressão (0.1-1.0) no controle deslizante de intensidade",
+    "Ative o modo 'Bezier' para desenhar curvas paramétricas com pontos de controle dinâmicos",
+    "Utilize o atalho Shift+E para alternar entre pincel e borracha com troca automática de modo de composição",
+    "Ajuste a transparência global do canvas com o controle de opacidade (0-100%) para sobreposição de camadas",
+    "Exporte o resultado como SVG com preservação de vetores ou PNG com fundo transparente usando o botão de download"
+  ],
+  "usage_examples": [
+    "Criar máscaras de recorte para shaders GLSL com precisão de pixel para projetos WebGL",
+    "Prototipar ícones de aplicativos com exportação vetorial para manter qualidade em múltiplas resoluções",
+    "Visualizar algoritmos de geometria computacional em tempo real, como triangulações de Delaunay",
+    "Editar frames de spritesheets com ferramenta de corte e exportação em sequência numérica"
+  ]
+}

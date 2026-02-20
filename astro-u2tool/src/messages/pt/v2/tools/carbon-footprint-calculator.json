@@ -1,0 +1,91 @@
+{
+  "periodo_de_calculo": {
+    "mensal": "Mensal",
+    "anual": "Anual"
+  },
+  "aspectos_a_calcular": [
+    "Transporte",
+    "Energia Doméstica",
+    "Estilo de Vida",
+    "Dieta"
+  ],
+  "opções_de_dieta": {
+    "carne": "Consumidor de carne em excesso",
+    "medio": "Medio",
+    "vegetariano": "Vegetariano",
+    "vegano": "Vegano"
+  },
+  "resultados": "A sua Pegada de Carbono",
+  "total": "Total",
+  "árvores_necessárias": "Árvores necessárias para compensar as emissões",
+  "número_de_árvores_anual": "Número de árvores necessárias por ano",
+  "níveis_de_impacto": {
+    "baixo": "Baixo Impacto",
+    "medio": "Médio",
+    "alto": "Alto Impacto",
+    "muito_alto": "Muito Alto Impacto"
+  },
+  "descrição_detalhada": "A Calculadora de Pegada de Carbono ajuda a medir o seu impacto ambiental, calculando as emissões de CO2 provenientes de transporte, consumo de energia doméstica e escolhas alimentares. O ferramenta fornece uma análise completa da sua pegada de carbono e indica quantas árvores seriam necessárias para compensar as suas emissões.",
+  "passos_de_uso": [
+    "Selecionar o período de cálculo (mensal ou anual)",
+    "Inserir os dados de transporte (carro, voos, trem, ônibus)",
+    "Informar o consumo de energia doméstica (eletricidade, gás, aquecimento)",
+    "Selecionar o tipo de dieta",
+    "Ver a sua pegada de carbono total e a detalhada análise das emissões"
+  ],
+  "exemplos_de_uso": [
+    "Acompanhar o impacto ambiental ao longo do tempo",
+    "Comparar a pegada de carbono de diferentes estilos de vida",
+    "Planejar estratégias de compensação de emissões para indivíduos ou empresas"
+  ],
+  "monthly": "Mensal",
+  "yearly": "Anual",
+  "month": "mês",
+  "year": "ano",
+  "transportation": "Transporte",
+  "carDistance": "Distância de carro",
+  "petrol": "Gasolina",
+  "diesel": "Diesel",
+  "hybrid": "Híbrido",
+  "electric": "Elétrico",
+  "flightHours": "Horas de voo",
+  "shortHaul": "Curta distância (<3h)",
+  "mediumHaul": "Média distância (3-6h)",
+  "longHaul": "Longa distância (>6h)",
+  "trainDistance": "Distância de trem",
+  "busDistance": "Distância de ônibus",
+  "homeEnergy": "Energia doméstica",
+  "electricity": "Eletricidade",
+  "naturalGas": "Gás natural",
+  "heatingOil": "Óleo de aquecimento",
+  "lifestyle": "Estilo de vida",
+  "dietType": "Tipo de dieta",
+  "diets": {
+    "meat": "Grande consumidor de carne",
+    "average": "Médio",
+    "vegetarian": "Vegetariano",
+    "vegan": "Vegano"
+  },
+  "results": "Sua pegada de carbono",
+  "treesNeeded": "Árvores necessárias para compensar",
+  "trees": "árvores por ano",
+  "levels": {
+    "low": "Baixo impacto",
+    "average": "Médio",
+    "high": "Alto impacto",
+    "veryHigh": "Impacto muito alto"
+  },
+  "detailed_description": "A Calculadora de Pegada de Carbono ajuda você a medir seu impacto ambiental calculando as emissões de CO2 do transporte, uso de energia doméstica e escolhas alimentares. A ferramenta fornece uma análise completa da sua pegada de carbono e mostra quantas árvores seriam necessárias para compensar suas emissões.",
+  "usage_steps": [
+    "Select monthly or yearly calculation period",
+    "Enter your transportation data (car, flights, train, bus)",
+    "Input your home energy consumption (electricity, gas, heating)",
+    "Select your diet type",
+    "View your total carbon footprint and emission breakdown"
+  ],
+  "usage_examples": [
+    "Track personal environmental impact over time",
+    "Compare carbon footprint of different lifestyle choices",
+    "Plan carbon offset strategies for individuals or businesses"
+  ]
+}

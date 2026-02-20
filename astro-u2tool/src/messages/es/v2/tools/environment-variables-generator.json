@@ -1,0 +1,50 @@
+{
+  "detailed_description": "El Generador de Variables de Entorno ayuda a crear archivos .env bien formateados con plantillas para servicios comunes.",
+  "usage_steps": [
+    "Seleccione una plantilla o comience desde cero",
+    "Añada nombres y valores de variables",
+    "Utilice el generador de secretos",
+    "Validar el nombre",
+    "Exportar como .env"
+  ],
+  "usage_examples": [
+    "Cree plantillas .env.example",
+    "Genera claves API seguras",
+    "Construya configuraciones Docker"
+  ],
+  "input": "Entrada",
+  "output": "Salida",
+  "process": "Proceso",
+  "copy": "Copiar",
+  "clear": "Limpiar",
+  "inputPlaceholder": "Introduzca su entrada aquí...",
+  "outputPlaceholder": "Los resultados aparecerán aquí...",
+  "errors": {
+    "emptyInput": "Por favor, introduzca algún input"
+  },
+  "keyNamePlaceholder": "NOMBRE_CLAVE",
+  "valuePlaceholder": "valor",
+  "descriptionPlaceholder": "Descripción",
+  "loadExample": "Cargar ejemplo",
+  "analyze": "Analizar",
+  "generate": "Generar",
+  "format": "Formatear",
+  "convert": "Convertir",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Vista previa",
+  "reset": "Restablecer",
+  "add": "Agregar",
+  "remove": "Eliminar",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "settings": "Configuración",
+  "options": "Opciones",
+  "results": "Resultados",
+  "noResults": "Sin resultados",
+  "loading": "Cargando...",
+  "success": "Éxito",
+  "failed": "Fallido",
+  "warning": "Advertencia",
+  "info": "Información"
+}

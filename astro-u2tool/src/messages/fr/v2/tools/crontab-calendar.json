@@ -1,0 +1,29 @@
+{
+  "expression": "Expression Cron",
+  "expressionPlaceholder": "0 9 * * 1-5",
+  "parse": "Analyser",
+  "nextRuns": "10 Prochaines Exécutions",
+  "calendarView": "Vue Calendrier",
+  "listView": "Vue Liste",
+  "invalidCron": "Expression cron invalide",
+  "scheduledRun": "Exécution Planifiée",
+  "today": "Aujourd'hui",
+  "prevMonth": "Mois Précédent",
+  "nextMonth": "Mois Suivant",
+  "formatHint": "Format: minute heure jour-du-mois mois jour-de-la-semaine (par exemple, 0 9 * * 1-5)",
+  "detailed_description": "Le Crontab Calendar est un outil de développement qui permet de transformer visuellement des expressions cron en représentations calendaires interactives. Techniquement, il analyse la syntaxe cron (composée de champs pour les minutes, heures, jours, mois et jours de la semaine) et génère un calendrier dynamique où chaque cellule correspond à une date et une heure, colorisée pour indiquer si un job est programmé à ce moment. Ce parsing utilise des algorithmes de correspondance d'intervalles et de gestion des raccourcis (comme '@daily' ou '*/5'). L'outil intègre également une conversion de fuseau horaire en temps réel pour s'adapter aux environnements hétérogènes. Les développeurs l'utiliseront pour vérifier la concurrence de jobs, éviter les chevauchements critiques, ou planifier des tâches de maintenance sans impact. Contrairement aux outils classiques, il affiche non seulement les prochaines exécutions, mais aussi la périodicité complète sur un mois ou une année, avec un moteur de simulation basé sur la bibliothèque 'cron-parser' modifiée. La surcharge visuelle est réduite grâce à un système de filtrage par niveau de granularité (ex: masquer les exécutions horaires).",
+  "usage_steps": [
+    "Saisir l'expression cron complète dans la zone de texte à 5 ou 6 champs, avec support des alias standard (ex: '@hourly')",
+    "Sélectionner le fuseau horaire cible via le menu déroulant (UTC, système local ou personnalisé)",
+    "Définir la plage de visualisation avec les boutons 'Semaine en cours', 'Mois glissant' ou 'Vue annuelle'",
+    "Activer/désactiver les surbrillances pour les intervalles critiques (ex: jobs simultanés) via la légende interactive",
+    "Utiliser le curseur de granularité pour affiner la vue (afficher uniquement les exécutions quotidiennes, hebdomadaires, etc.)",
+    "Exporter le calendrier généré au format ICS ou CSV via le bouton 'Télécharger le planning'"
+  ],
+  "usage_examples": [
+    "Un administrateur système vérifie que les sauvegardes nocturnes (0 2 * * *) ne se chevauchent pas avec les mises à jour automatiques (0 3 * * 0)",
+    "Un développeur debuggue une tâche Laravel Scheduled pour confirmer qu'elle s'exécute bien tous les 15 minutes (*/15 * * * *) sans omission",
+    "Une équipe DevOps planifie un déploiement en production avec fenêtre de maintenance bloquée du 15 au 17 août, confirmant visuellement l'absence de jobs planifiés",
+    "Un utilisateur configure un script de nettoyage disque (0 0 * * 6) et l'aligne sur le calendrier pour éviter les week-ends fériés"
+  ]
+}

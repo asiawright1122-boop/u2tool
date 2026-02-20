@@ -1,0 +1,44 @@
+{
+  "inputLabel": "BIC/SWIFTコードを入力",
+  "placeholder": "例: DEUTDEFF",
+  "formatHint": "形式: 8または11文字",
+  "lookup": "検索",
+  "validBic": "有効なBIC/SWIFTコード",
+  "bankCode": "銀行コード",
+  "country": "国",
+  "locationCode": "所在地コード",
+  "branchCode": "支店コード",
+  "headOffice": "本店",
+  "specificBranch": "特定支店",
+  "bankInformation": "銀行情報",
+  "bankName": "銀行名",
+  "city": "都市",
+  "branch": "支店",
+  "copyBic": "BICをコピー",
+  "bicStructure": "BIC/SWIFTコード構造",
+  "structure": {
+    "bank": "銀行コード",
+    "country": "国",
+    "location": "所在地",
+    "branch": "支店（任意）"
+  },
+  "sampleCodes": "サンプルBICコード",
+  "errors": {
+    "empty": "BIC/SWIFTコードを入力してください",
+    "invalidFormat": "無効なBIC形式",
+    "unknownCountry": "不明な国コード"
+  },
+  "detailed_description": "BIC/SWIFT検索ツールは、国際送金に使用される銀行識別コードを検証し情報を提供します。",
+  "usage_steps": [
+    "BIC/SWIFTコードを入力",
+    "検索をクリック",
+    "コード構造を確認",
+    "銀行詳細を確認",
+    "サンプルコードを探索"
+  ],
+  "usage_examples": [
+    "国際送金前にBICコードを確認",
+    "SWIFTコードから銀行情報を検索",
+    "国境を越えた取引の支払い詳細を検証"
+  ]
+}

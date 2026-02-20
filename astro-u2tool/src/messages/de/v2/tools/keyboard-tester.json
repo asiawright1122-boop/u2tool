@@ -1,0 +1,36 @@
+{
+  "pressAnyKey": "Beliebige Taste drücken",
+  "keyCode": "Code",
+  "key": "Taste",
+  "code": "Code",
+  "location": "Position",
+  "modifiers": "Modifikatoren",
+  "shift": "Shift",
+  "ctrl": "Strg",
+  "alt": "Alt",
+  "meta": "Meta",
+  "keyHistory": "Verlauf",
+  "clearHistory": "Löschen",
+  "lastKeyPressed": "Zuletzt Gedrückte Taste",
+  "clear": "Löschen",
+  "noKeysPressed": "Noch keine Tasten gedrückt",
+  "tips": "Tipps",
+  "tip1": "Mit diesem Tool können Sie testen, ob alle Tasten Ihrer Tastatur ordnungsgemäß funktionieren",
+  "tip2": "Einige Tasten (wie Fn) werden möglicherweise nicht vom Browser erkannt",
+  "tip3": "Der Tastenverlauf speichert bis zu 10 kürzliche Tastendrücke",
+  "detailed_description": "Der Keyboard Tester ist ein präzises Analysewerkzeug für Tastaturereignisse, das Entwicklern ermöglicht, die technischen Eigenschaften von Tastendrücken in Echtzeit zu inspizieren. Das Tool nutzt native JavaScript-Event-Listener, um KeyDown- und KeyUp-Ereignisse aufzuzeichnen und decodiert die zugehörigen KeyboardEvent-Objekte. Es zeigt spezifische Eigenschaften wie keyCode, charCode, keyIdentifier, key und code an, die gemäß der W3C DOM-Level-3-Spezifikation standardisiert sind. Besonders bei der Entwicklung von Webanwendungen mit komplexen Tastenkombinationen oder bei der Fehlersuche in Eingabeverarbeitungsskripten ist dieses Tool unverzichtbar. Entwickler können prüfen, ob Browser-spezifische Unterschiede in der Tastaturbehandlung wie z.B. bei Modifier-Tasten (Shift, AltGr) oder nicht-lateinischen Tastaturlayouts korrekt verarbeitet werden. Die Oberfläche rendert dynamisch eine visuelle Tastaturmatrix, die physische Tastenpositionen mit ihren scancode-Werten abbildet, und bietet gleichzeitig eine tabellarische Ansicht der Event-Daten. Dies ermöglicht eine parallele Analyse der hardwarenahen und abstrakten Eingabedaten.",
+  "usage_steps": [
+    "1. Öffnen Sie das Tool im Browser und betrachten Sie die visuelle Tastaturmatrix in der Benutzeroberfläche.",
+    "2. Drücken Sie eine Taste auf Ihrer physischen Tastatur und beobachten Sie die Echtzeit-Hervorhebung der entsprechenden Taste in der virtuellen Matrix.",
+    "3. Inspektorfenster öffnen: Klicken Sie auf das 'Event Details' Dropdown, um die vollständigen KeyboardEvent-Eigenschaften wie location, repeat und modifierState anzuzeigen.",
+    "4. Testen Sie Unicode-Zeichen, indem Sie eine Eingabemethode (z.B. Koreanisch) aktivieren und die charCode-Zuordnung überprüfen.",
+    "5. Halten Sie die 'AltGr'-Taste gedrückt und drücken Sie weitere Tasten, um komplexe Belegungen im 'Scancode' Bereich zu analysieren.",
+    "6. Verwenden Sie den 'Zurücksetzen'-Button, um die Historie zu löschen und Testszenarien systematisch zu wiederholen."
+  ],
+  "usage_examples": [
+    "1. Ein Game-Entwickler debuggt Probleme mit W-A-S-D-Bewegungssteuerung in verschiedenen Browsern durch Analyse der keyIdentifier-Werte.",
+    "2. Ein QA-Tester überprüft die korrekte Behandlung von Ctrl+Alt+Del-Kombinationen in einer Remote-Desktop-Webapplikation.",
+    "3. Ein Entwickler optimiert ein Musik-Webtool, indem er prüft, ob Anschlaggeschwindigkeiten (repeat-Flag) bei Halten von Notentasten korrekt erkannt werden.",
+    "4. Ein Sicherheitsauditor analysiert die Tastatur-Ereignisse eines Login-Formulars, um eventuelle Keylogger-Risiken durch unsachgemäße Event-Weitergabe zu identifizieren."
+  ]
+}

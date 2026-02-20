@@ -1,0 +1,17 @@
+{
+  "detailed_description": "L'HTML Table Generator est un outil de développement web interactif permettant de construire des tableaux HTML sémantiques via une interface visuelle intuitive. Techniquement, il génère dynamiquement des structures HTML comprenant les éléments <table>, <thead>, <tbody>, <tr>, <th> et <td>, avec des options avancées pour intégrer des attributs ARIA, des classes CSS personnalisées et des styles inline. Il gère également la création de colonnes calculées, le tri dynamique côté client et l'intégration de pagination. Ce tool est indispensable pour les développeurs souhaitant éviter les erreurs de balisage manuel, les designers web prototypant des tableaux de données complexes ou les non-développeurs créant des grilles d'information structurées. Il fonctionne par manipulation du DOM en temps réel, avec un moteur de rendu basé sur des templates Handlebars.js pour les prévisualisations. Les utilisateurs peuvent définir des types de données par colonne (texte, numérique, date), configurer des attributs d'accessibilité et exporter le code final optimisé pour le responsive design (media queries intégrés).",
+  "usage_steps": [
+    "Sélectionnez le nombre de lignes et colonnes via les curseurs 'Rows' et 'Columns' dans l'onglet 'Structure'",
+    "Configurez les en-têtes dans la section 'Header' en choisissant entre 'Aucun', 'Ligne simple' ou 'Bloc complet' avec alignement horizontal/vertical",
+    "Remplissez les cellules en cliquant directement sur les cases, en utilisant les raccourcis clavier Ctrl+Shift+C (copier) et Ctrl+Shift+V (coller)",
+    "Appliquez des styles avancés via le sélecteur de classes CSS ou l'éditeur de styles inline dans le panneau 'Design'",
+    "Activez les fonctionnalités dynamiques (tri, pagination) dans l'onglet 'Comportement' en cochant les options correspondantes",
+    "Générez le code final avec le bouton 'Export HTML' et copiez-le dans votre projet avec le clipboard intégré"
+  ],
+  "usage_examples": [
+    "Un analyste de données crée un tableau comparatif de performances trimestrielles avec colonnes calculées de moyennes et pourcentages",
+    "Un designer web prototypant une interface de tableau de bord avec des cellules fusionnées (rowspan/colspan) et styles thématiques",
+    "Un développeur générant un template HTML pour afficher des résultats de requêtes SQL avec pagination intégrée",
+    "Un rédacteur technique documentant un API en créant un tableau des paramètres de requête avec types de données et contraintes"
+  ]
+}

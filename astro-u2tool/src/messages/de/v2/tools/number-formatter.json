@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Number Formatter ist ein i18n-optimierter Konverter, der Zahlenwerte unter Berücksichtigung kulturell-spezifischer Konventionen präzise formatiert. Technisch basiert das Tool auf dem ECMA-402-Standard (JavaScript Internationalization API) und nutzt Unicode CLDR-Daten, um Lokalisierungsregeln für über 500 Sprachregionen anzuwenden. Entwickler benötigen diesen Tool zur Behandlung von Zahlenformaten in internationalen Webanwendungen, etwa bei der Darstellung finanzmathematischer Berechnungen, der Validierung von Benutzereingaben oder der Aufbereitung von Datenvisualisierungen. Die Kernfunktionen umfassen die Umwandlung in Dezimal-, Währungs- oder Prozentformate, wobei sowohl implizite Tausendertrennzeichen (z.B. Punkte in DE, Kommas in US) als auch dezimalstellenabhängige Rundungsregeln berücksichtigt werden. Bei Währungsformaten kann zwischen ISO-Codes wie EUR, USD oder historischen Währungen wie BEF gewählt werden. Die Eingabe akzeptiert numerische Werte im IEEE-754-Format, inklusive wissenschaftlicher Notation (z.B. 1.23e+45). Das Tool ermöglicht zudem die manuelle Anpassung der Anzahl an Nachkommastellen und unterstützt bidirektionale Textformate für arabischsprachige Darstellungen.",
+  "usage_steps": [
+    "Wählen Sie im Dropdown 'Region' die gewünschte Lokalisierung (z.B. 'de-DE', 'en-IN', 'ar-EG').",
+    "Aktivieren Sie den Schalter 'Format-Typ' für Dezimalzahl, Währung oder Prozentwert.",
+    "Geben Sie den Rohwert in das Feld 'Eingabenummer' ein (z.B. 1234567.89).",
+    "Im Abschnitt 'Währungsoptionen' wählen Sie den ISO-Code (z.B. 'JPY') und aktivieren/deaktivieren das Währungssymbol.",
+    "Passen Sie die Anzahl der Dezimalstellen mit dem Schieberegler 'Genauigkeit' an (0-20 Stellen).",
+    "Klicken Sie auf 'Formatieren', um das Ergebnis im Feld 'Ausgabe' zu generieren und in die Zwischenablage kopieren."
+  ],
+  "usage_examples": [
+    "Formatierung von 1500.75 als Schweizer Franken (CHF 1'500.75) mit Schweizer Tausender-Trennzeichen.",
+    "Konvertierung von 0.3333 in einen Prozentwert für französische Finanzberichte (33,33 % mit Komma als Dezimaltrenner).",
+    "Darstellung von 123456789 als indische Lakhs/Rupees (₹12,34,56,789 mit kulturell korrekter Zifferngruppierung).",
+    "Validierung und Normalisierung von Benutzereingaben wie '1.234,56 €' in maschinenlesbares JSON (1234.56) für Backend-Verarbeitung."
+  ]
+}

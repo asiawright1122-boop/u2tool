@@ -1,0 +1,90 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "showLegend": "显示图例",
+  "showGrid": "显示网格",
+  "horizontal": "水平",
+  "category": "类别",
+  "value": "值",
+  "item": "项目",
+  "addRow": "添加行",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "月度销售数据",
+  "sampleTitle": "产品销售比较",
+  "dataEditor": "数据编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "sampleData": {
+    "jan": "一月",
+    "feb": "二月",
+    "mar": "三月",
+    "apr": "四月",
+    "may": "五月",
+    "jun": "六月",
+    "productA": "产品A",
+    "productB": "产品B",
+    "productC": "产品C",
+    "productD": "产品D",
+    "productE": "产品E"
+  },
+  "importCsv": "导入CSV",
+  "csvFormat": "CSV格式：类别,值（每行一个）",
+  "csvImportSuccess": "已导入{count}行数据",
+  "csvImportError": "CSV格式无效。预期：类别,值",
+  "tips": {
+    "title": "提示",
+    "tip1": "在数据表中输入类别名称和值",
+    "tip2": "点击添加行以添加更多数据项",
+    "tip3": "自定义图表标题和颜色主题",
+    "tip4": "勾选水平以切换到水平柱状图",
+    "tip5": "点击下载PNG或下载SVG以保存图表",
+    "tip6": "从CSV文件（类别,值格式）导入数据"
+  },
+  "detailed_description": "Bar Chart Generator是一款基于Web技术的数据可视化工具，采用D3.js与SVG渲染引擎实现动态图表生成。通过解析用户输入的JSON/CSV格式数据集，自动构建笛卡尔坐标系，支持单轴/双Y轴对比模式，允许开发者通过配置项调整柱状图宽度、间距、堆叠模式及渐变色填充方案。该工具特别适用于需要快速生成高精度矢量图表的技术文档编写者、需要多维数据对比的市场分析师以及要求响应式布局的前端开发者。用户可通过API接口动态加载数据，或使用内置数据编辑器手动输入，所有图表配置均支持JSON格式持久化存储。",
+  "usage_steps": [
+    "1. 在数据输入面板选择'JSON'或'CSV'格式，粘贴符合Schema规范的源数据",
+    "2. 通过'图表类型'下拉菜单选择基础柱状图、堆叠柱状图或分组柱状图",
+    "3. 在颜色配置器中为数据系列分配HEX/RGB颜色值，启用'渐变填充'选项增强视觉层次",
+    "4. 拖动'坐标轴控制柄'调整X/Y轴刻度密度，启用'双Y轴模式'实现异量纲数据对比",
+    "5. 在预览窗口右键点击图表选择'导出SVG'或'导出PNG'，自定义分辨率至最高300DPI",
+    "6. 通过'代码生成'标签页获取嵌入网页所需的HTML/JavaScript代码片段"
+  ],
+  "usage_examples": [
+    "市场部门使用堆叠柱状图展示不同产品线在季度销售目标中的完成占比",
+    "科研人员通过双Y轴模式对比不同实验组的温度变化与反应速率关联性",
+    "教育机构采用分组柱状图可视化不同班级在多学科考试中的成绩分布差异",
+    "自由职业者生成月度收入支出对比图表用于个人财务报告展示"
+  ],
+  "faqs": [
+    {
+      "question": "Bar Chart Generator 是免费的吗？",
+      "answer": "是的，Bar Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Bar Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Bar Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Bar Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Bar Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

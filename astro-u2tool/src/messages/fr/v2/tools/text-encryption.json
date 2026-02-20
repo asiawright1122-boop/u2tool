@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le chiffreur AES (Advanced Encryption Standard) proposé ici permet de crypter et décrypter des données textuelles en utilisant des clés dérivées de mots de passe. Ce chiffreur supporte les tailles de clé AES-128, AES-192 et AES-256 bits, opérant en mode Galois/Counter (GCM) pour garantir à la fois confidentialité et intégrité des données. Lors du chiffrement, un sel aléatoire est généré pour dériver la clé via PBKDF2-HMAC-SHA256 avec 100 000 itérations, assurant une résistance aux attaques par force brute. Le vecteur d'initialisation (IV) et le tag d'authentification sont encapsulés dans la sortie au format Base64. Ce tool est indispensable pour sécuriser des identifiants, échanger des données sensibles via des canaux non sécurisés, ou stocker des informations critiques sans risque de fuite. L'algorithme AES-GCM est particulièrement recommandé pour ses performances et sa sécurité prouvée mathématiquement, à condition d'utiliser des mots de passe suffisamment complexes.",
+  "usage_steps": [
+    "Saisir le texte à chiffrer dans le champ 'Texte en clair'",
+    "Sélectionner la taille de clé souhaitée (AES-128, AES-192 ou AES-256) via le menu déroulant",
+    "Entrer un mot de passe fort (minimum 16 caractères mixtes) dans le champ dédié",
+    "Cocher l'option 'Inclure le sel dans la sortie' pour permettre un déchiffrement ultérieur",
+    "Cliquer sur 'Chiffrer' pour obtenir le texte crypté au format Base64 avec en-tête GCM",
+    "Pour le déchiffrement, coller le texte codé dans le champ d'entrée et réutiliser le même mot de passe"
+  ],
+  "usage_examples": [
+    "Un développeur chiffre ses clés API avant de les stocker dans un fichier de configuration partagé",
+    "Un journaliste sécurise un message confidentiel avant de l'envoyer à une source via un chat non chiffré",
+    "Un administrateur système protège des identifiants de base de données dans un script automatisé",
+    "Un chercheur crypte des données médicales sensibles avant de les envoyer pour analyse statistique"
+  ]
+}

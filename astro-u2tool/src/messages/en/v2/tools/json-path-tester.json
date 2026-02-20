@@ -1,0 +1,27 @@
+{
+  "jsonData": "JSON Data",
+  "jsonPlaceholder": "{\"name\": \"John\", \"users\": [{\"name\": \"Alice\"}, {\"name\": \"Bob\"}]}",
+  "expression": "JSONPath Expression",
+  "expressionPlaceholder": "$.users[0].name",
+  "evaluate": "Evaluate",
+  "result": "Result",
+  "exGetName": "Get name property",
+  "exFirstUser": "First user",
+  "exFirstUserName": "First user name",
+  "exNestedItems": "Nested items",
+  "detailed_description": "The JSONPath Tester is a specialized tool for developers to validate and debug JSONPath expressions against structured JSON data. Technically, it parses JSON input and evaluates JSONPath queries using ECMA 404-compliant syntax, supporting features like array slicing, wildcard matching, and filter expressions. This tool addresses the critical need for precise data extraction in API development, where engineers must verify that their JSONPath queries correctly target nodes in complex hierarchical data structures. Unlike basic validators, this tool provides real-time visualization of matched nodes, displaying their absolute paths and values in a collapsible tree view. The engine employs a two-pass parsing strategy: first normalizing JSON syntax, then executing the JSONPath evaluation context against the document object model. Developers benefit from error diagnostics that pinpoint syntax issues in queries, including incorrect bracket notation or invalid operator usage. This tool is essential for scenarios requiring validation of nested data queries, such as testing GraphQL response handlers or debugging microservices data transformations.",
+  "usage_steps": [
+    "Paste valid JSON in the left-side editor or load from a URI using the 'Import JSON' button",
+    "Enter JSONPath expression in the dedicated query input field using dot notation (e.g., $.store.books[*].title)",
+    "Click 'Highlight Matches' to visualize selected nodes in the JSON tree with color-coded indicators",
+    "Use the 'Query Validation' panel to review syntax errors or warnings in real time",
+    "Toggle 'Raw Output' mode to view extracted values in plain text format suitable for scripting",
+    "Export results as JSON array or CSV using the 'Download Output' dropdown menu"
+  ],
+  "usage_examples": [
+    "Validating that a $.employees[?(@.department='engineering')] query correctly filters staff records in an HR API response",
+    "Extracting $.transactions[].amount values from a payment gateway's JSON response for batch processing scripts",
+    "Debugging a failing $.inventory.levels[(@.stock<10)] filter to identify low-stock products in an e-commerce system",
+    "Comparing $.user.preferences.theme values across different user segments for A/B testing configuration"
+  ]
+}

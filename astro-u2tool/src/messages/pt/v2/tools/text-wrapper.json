@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O Text Wrapper é uma ferramenta de processamento de texto que permite aos usuários formatar textos longos em linhas de uma largura específica. Técnicamente, o tool analisa o texto de entrada e o divide em segmentos que se adequam à largura de linha definida pelo usuário. Isso é particularmente útil em cenários onde a formatação do texto é essencial para a legibilidade ou para atender a requisitos de layout específicos. Por exemplo, ao preparar textos para impressão, onde o espaço é limitado, ou ao formatarem código-fonte em ambientes de desenvolvimento onde linhas muito longas podem dificultar a leitura. O Text Wrapper utiliza algoritmos de quebra de linha inteligentes que respeitam as regras de pontuação e espaçamento, garantindo que as palavras não sejam cortadas de forma inadequada. Além disso, a ferramenta oferece flexibilidade, permitindo que os usuários ajustem a largura das linhas de acordo com suas necessidades específicas, tornando-a uma opção valiosa para profissionais de desenvolvimento, redatores e qualquer pessoa que precise manipular textos de forma eficaz.",
+  "usage_steps": [
+    "Abra a página do Text Wrapper no site.",
+    "Na seção 'Texto de Entrada', cole ou digite o texto que deseja formatar.",
+    "Na opção 'Largura da Linha', insira o número de caracteres que você deseja para cada linha.",
+    "Selecione a opção 'Respeitar Pontuação e Espaçamento' se desejar que o tool respeite as regras de formatação padrão.",
+    "Clique no botão 'Formatar Texto' para aplicar as configurações e gerar o texto formatado.",
+    "Copie o texto formatado da seção 'Texto de Saída' e utilize-o conforme necessário."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor de software precisa formatar um longo bloco de código para inserir em um documento PDF. Ele usa o Text Wrapper para ajustar o código em linhas de 80 caracteres, facilitando a leitura e a impressão.",
+    "Um redator de conteúdo está preparando um artigo para um blog e deseja garantir que o texto seja fácil de ler em dispositivos móveis. Ele utiliza o Text Wrapper para limitar cada linha a 60 caracteres, otimizando a experiência do leitor.",
+    "Um designer gráfico está criando um flyer e precisa que o texto se ajuste perfeitamente em uma coluna estreita. Com o Text Wrapper, ele define a largura da linha para 30 caracteres, garantindo que o texto se adeque ao espaço disponível.",
+    "Um professor de inglês está preparando um material didático para alunos que estão aprendendo a escrever redações. Ele usa o Text Wrapper para formataar exemplos de textos em linhas de 50 caracteres, facilitando a compreensão e a prática dos alunos."
+  ]
+}

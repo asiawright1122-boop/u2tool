@@ -1,0 +1,33 @@
+{
+  "inputPlaceholder": "1704067200\n1704067200000\n2024-01-01T00:00:00Z",
+  "convert": "Convertir Todo",
+  "timezone": "Zona Horaria de Salida",
+  "outputFormat": "Formato de Fecha",
+  "exportCsv": "Exportar CSV",
+  "exportJson": "Exportar JSON",
+  "input": "Entrada",
+  "detected": "Detectado",
+  "output": "Salida",
+  "valid": "Válido",
+  "invalid": "No Válido",
+  "seconds": "Unix (s)",
+  "milliseconds": "Unix (ms)",
+  "iso8601": "ISO 8601",
+  "unknown": "Desconocido",
+  "detailed_description": "El Conversor de Timestamp por Lote es una herramienta robusta diseñada para facilitar la conversión de múltiples marcas de tiempo (timestamps) en diferentes formatos. Esta herramienta es especialmente útil en entornos donde se manejan grandes volúmenes de datos de tiempo, como en el análisis de registros de servidores, bases de datos y aplicaciones web. La funcionalidad clave de esta herramienta radica en su capacidad para auto-detectar el formato de entrada de los timestamps, lo que elimina la necesidad de configuraciones manuales y reduce el riesgo de errores. Los usuarios pueden importar sus datos en lote, y el conversor los procesará de manera eficiente, convirtiéndolos al formato deseado y permitiendo la exportación de los resultados en formato CSV, JSON o TXT. Esta funcionalidad es esencial para desarrolladores, analistas de datos y profesionales de IT que necesitan procesar y analizar series de tiempo de manera efectiva.",
+  "usage_steps": [
+    "Paso 1: Accede a la página del Conversor de Timestamp por Lote y haz clic en el botón 'Subir archivo' para importar el archivo que contiene los timestamps.",
+    "Paso 2: Elige el formato de salida deseado desde el menú desplegable 'Formato de salida'. Las opciones disponibles incluyen CSV, JSON y TXT.",
+    "Paso 3: Si tu archivo contiene múltiples columnas, selecciona la columna que contiene los timestamps en el menú desplegable 'Columna de timestamp'.",
+    "Paso 4: Haz clic en el botón 'Auto-detectar formato' para que la herramienta analice automáticamente el formato de los timestamps en tu archivo.",
+    "Paso 5: Revise los resultados en la vista previa de la tabla. Si los timestamps no se convierten correctamente, puedes ajustar manualmente el formato de entrada en el campo 'Formato de entrada'.",
+    "Paso 6: Una vez que estés satisfecho con los resultados, haz clic en el botón 'Exportar' para descargar el archivo en el formato de salida seleccionado."
+  ],
+  "usage_examples": [
+    "Ejemplo 1: Un desarrollador web necesita convertir los timestamps de los registros de acceso a un servidor en un formato más legible para incluirlos en un informe de rendimiento. Utiliza el Conversor de Timestamp por Lote para importar el archivo de logs, auto-detectar los formatos y exportar los resultados en CSV para su análisis.",
+    "Ejemplo 2: Un analista de datos trabaja con una base de datos que registra eventos de usuarios en diferentes formatos de timestamp. Utiliza el Conversor de Timestamp por Lote para estandarizar todos los timestamps a un formato universal, facilitando la integración de los datos en una sola tabla.",
+    "Ejemplo 3: Una empresa de e-commerce recibe datos de seguimiento de múltiples fuentes, cada una con su propio formato de timestamp. El equipo de IT utiliza el Conversor de Timestamp por Lote para procesar y unificar todos los timestamps antes de importarlos a su sistema de análisis centralizado.",
+    "Ejemplo 4: Un administrador de sistemas necesita auditar los registros de actividad de un servidor durante un período específico. Utiliza el Conversor de Timestamp por Lote para convertir los timestamps de los registros en un formato fácil de leer, facilitando la identificación de eventos críticos."
+  ],
+  "localFormat": "Formato Local"
+}

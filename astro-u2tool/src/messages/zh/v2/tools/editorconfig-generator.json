@@ -1,0 +1,31 @@
+{
+  "detailed_description": "EditorConfig 生成器帮助您创建 .editorconfig 文件，以保持不同编辑器和 IDE 中的一致编码风格。配置缩进样式（制表符 vs 空格）、缩进大小、行尾字符、字符集和尾随空白处理。为不同的文件类型设置不同的规则。该工具生成一个完整的 .editorconfig 文件，适用于 VS Code、Sublime Text、Vim 等许多编辑器。",
+  "usage_steps": [
+    "将根属性设置为 true，以表示项目根目录",
+    "配置所有文件的默认设置",
+    "设置缩进样式（制表符或空格）",
+    "选择缩进大小（2、4 等）",
+    "配置行尾字符（lf、crlf）",
+    "根据需要添加文件类型特定的覆盖设置",
+    "点击生成并复制 .editorconfig 文件"
+  ],
+  "usage_examples": [
+    "在团队中保持一致的格式化",
+    "为不同的文件类型设置不同的规则",
+    "为单体仓库配置 EditorConfig",
+    "确保跨平台的一致行尾"
+  ],
+  "root": "根配置（停止搜索父目录）",
+  "defaultSettings": "默认设置",
+  "indentStyle": "缩进风格",
+  "indentSize": "缩进大小",
+  "endOfLine": "行尾符",
+  "charset": "字符集",
+  "trimTrailingWhitespace": "删除行尾空格",
+  "insertFinalNewline": "文件末尾插入空行",
+  "addFileType": "添加文件类型覆盖",
+  "fileTypeSettings": "文件类型特定设置",
+  "remove": "移除",
+  "generate": "生成",
+  "download": "下载"
+}

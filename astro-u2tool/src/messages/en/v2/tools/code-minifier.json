@@ -1,0 +1,28 @@
+{
+  "codeType": "Code Type",
+  "placeholder": "Enter {type} code to minify...",
+  "original": "Original",
+  "minified": "Minified",
+  "saved": "Saved",
+  "detailed_description": "The Code Minifier is a powerful tool designed to optimize web development by reducing the size of HTML, CSS, and JavaScript files. This process, known as minification, involves removing unnecessary characters from the code, such as white spaces, comments, and line breaks, without altering the functionality of the code. The primary goal of minification is to enhance the performance of web applications by decreasing the amount of data that needs to be transferred from the server to the client's browser. This is particularly important for improving load times and reducing bandwidth usage, which can significantly enhance user experience and SEO rankings. The Code Minifier supports multiple file formats and employs advanced algorithms to ensure that the minified code remains fully functional and compliant with web standards. By using this tool, developers can streamline their workflow, enhance the efficiency of their web projects, and ensure that their applications perform optimally across a wide range of devices and network conditions.",
+  "usage_steps": [
+    "Step 1: Navigate to the Code Minifier page and select the 'Choose File' button to upload your HTML, CSS, or JavaScript file.",
+    "Step 2: Once the file is uploaded, use the 'File Type' dropdown menu to specify the type of file you are minifying (HTML, CSS, or JavaScript).",
+    "Step 3: If your file contains external resources or dependencies, use the 'Include External Resources' checkbox to ensure they are processed correctly.",
+    "Step 4: Customize the minification settings by adjusting the options in the 'Advanced Settings' panel, such as 'Preserve Comments' or 'Optimize for Size'.",
+    "Step 5: Click the 'Minify' button to start the process. The tool will analyze and optimize your code based on the selected settings.",
+    "Step 6: Once the minification is complete, download the optimized file using the 'Download Minified File' button and integrate it into your project."
+  ],
+  "usage_examples": [
+    "Example 1: A web developer is building a responsive e-commerce website and needs to ensure that the site loads quickly on mobile devices. By using the Code Minifier, the developer can reduce the file size of the website's CSS and JavaScript files, leading to faster load times and a better user experience.",
+    "Example 2: A front-end developer is working on a large-scale web application that uses multiple JavaScript libraries. The developer uses the Code Minifier to minify the combined JavaScript file, reducing the overall payload and improving the application's performance.",
+    "Example 3: A content manager is tasked with optimizing a company's blog for faster loading times. By minifying the HTML and CSS files of the blog, the manager can achieve faster page load speeds, which can improve the site's search engine rankings and user engagement.",
+    "Example 4: A team of developers is working on a web application that needs to be deployed on a server with limited bandwidth. By using the Code Minifier to reduce the file sizes of the application's resources, the team can ensure that the application performs efficiently even under constrained network conditions."
+  ],
+  "input": "Input",
+  "minify": "Minify",
+  "clear": "Clear",
+  "output": "Output",
+  "copied": "Copied!",
+  "copy": "Copy"
+}

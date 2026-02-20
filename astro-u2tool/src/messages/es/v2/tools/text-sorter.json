@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El ordenador de texto permite clasificar líneas de texto según criterios alfanuméricos, longitud o valores numéricos mediante algoritmos de clasificación optimizados. Técnicamente, el sistema procesa texto plano, interpreta delimitadores personalizables (saltos de línea, comas, tabulaciones) y aplica funciones de transformación como normalización de espacios o eliminación de caracteres invisibles. Utiliza comparadores basados en valores Unicode para ordenamiento lexicográfico y funciones de parseo numérico para ordenar secuencias matemáticas. Su utilidad es crítica en escenarios de preparación de datos para machine learning, depuración de logs estructurados o generación de listados ordenados para informes. El motor interno soporta codificaciones UTF-8/16 y permite configurar sensibilidad a mayúsculas/minúsculas, lo que lo hace indispensable para desarrolladores que requieren precisión en procesamiento de texto.",
+  "usage_steps": [
+    "Pega tu contenido en el área de entrada o arrastra un archivo de texto plano",
+    "Configura el delimitador de línea usando el selector (LF, CRLF, tabulación, espacio o personalizado)",
+    "Elige el modo de ordenamiento: ascendente/descendente con los botones de flecha",
+    "Activa 'Tratamiento numérico' para interpretar valores en notación científica o decimales",
+    "Marca 'Ignorar casos' para ordenar sin distinción de mayúsculas/minúsculas",
+    "Clica 'Procesar' y descarga el resultado en formato .txt o copia directamente al portapapeles"
+  ],
+  "usage_examples": [
+    "Ordenar alfabéticamente 2000 líneas de imports en Python antes de un commit",
+    "Clasificar logs del sistema por timestamp ISO 8601 usando orden numérico descendente",
+    "Normalizar listados de correos electrónicos eliminando espacios extras antes de importar a CRM",
+    "Organizar catálogos de productos por SKU numérico con soporte para ceros iniciales"
+  ]
+}

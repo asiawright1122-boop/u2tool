@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El calculador de salarios es una herramienta técnica diseñada para realizar conversiones precisas entre distintas unidades de remuneración (hora, día, semana, mes y año). Su funcionamiento se basa en algoritmos de prorrateo que consideran variables como jornadas laborales completas o parciales, días laborables efectivos y deducciones predefinidas (opcional). Internamente, aplica fórmulas matemáticas normalizadas para convertir montos brutos o netos entre unidades temporales, incluyendo ajustes por horas extras o bonificaciones variables si se especifican. Es esencial para profesionales freelance que necesitan cuantificar ingresos anuales a partir de tarifas horarias, reclutadores que construyen paquetes salariales con desgloses semanales, o empleados a tiempo parcial que comparan ofertas basadas en días trabajados. La herramienta permite personalizar parámetros como semanas laborales por mes (4.33, 4.2, etc.) y porcentajes de retención fiscal, logrando resultados con precisión contable.",
+  "usage_steps": [
+    "Selecciona la unidad temporal base (horas, días, semanas, meses o año) desde el menú desplegable principal",
+    "Introduce el monto salarial en el campo numérico correspondiente",
+    "Activa la opción 'Incluir deducciones' si deseas aplicar porcentajes de seguridad social o impuestos",
+    "Configura parámetros avanzados como horas semanales estándar (ej: 40h) o días laborables mensuales personalizados",
+    "Presiona el botón 'Calcular equivalencias' para ejecutar el conversor",
+    "Revisa las conversiones resultantes en las secciones desplegables por unidad temporal"
+  ],
+  "usage_examples": [
+    "Un desarrollador freelance en Argentina convierte $25 USD/hora a ingresos anuales considerando 1,600 horas anuales facturables",
+    "Un reclutador en México transforma un salario mensual bruto de $20,000 MXN a equivalente semanal para comparar con el SMI local",
+    "Un analista de recursos humanos en Colombia ajusta un salario anual de $45,000,000 COP a diario considerando 23.83 días laborables mensuales",
+    "Un ingeniero español calcula su equivalencia horaria neta desde un salario mensual de €2,500 aplicando el 19% de retención IRPF"
+  ]
+}

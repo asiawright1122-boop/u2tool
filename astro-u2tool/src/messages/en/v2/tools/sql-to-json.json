@@ -1,0 +1,23 @@
+{
+  "sqlInput": "SQL INSERT Statements",
+  "placeholder": "Enter SQL INSERT statements...",
+  "convert": "Convert",
+  "copy": "Copy",
+  "noInsertFound": "No INSERT statements found",
+  "supportedFormat": "Supported format:",
+  "detailed_description": "The SQL to JSON converter specializes in transforming SQL INSERT statements into structured JSON arrays by parsing the input SQL's lexical and syntactic structure. Technically, the tool employs a two-phase process: first, it performs lexical analysis to identify SQL tokens like column identifiers, string literals, and data values, then applies context-aware parsing to extract schema metadata (e.g., column names, data types) and row data. Unlike generic converters, it handles edge cases such as escaped quotes, nested parentheses, and SQL dialect variations (MySQL, PostgreSQL, SQL Server) through a customizable dialect selector. This tool is indispensable for developers migrating relational data to NoSQL databases like MongoDB, building API mocks from database backups, or transforming legacy SQL dumps into modern configuration files. The output JSON preserves data types (e.g., integers remain unquoted, NULL values retain case-sensitivity) and supports optional pretty-printing for readability. Internally, it uses a recursive descent parser to map SQL value lists to JSON array elements, ensuring 1:1 data fidelity while allowing users to remap column names via regex patterns during conversion.",
+  "usage_steps": [
+    "Paste raw SQL INSERT statements into the 'Input SQL' text area, ensuring consistent indentation for multi-line queries.",
+    "Select target SQL dialect from the dropdown (MySQL, PostgreSQL, or Generic SQL) to ensure correct syntax parsing.",
+    "Toggle 'Preserve Data Types' to maintain numeric/boolean values in JSON output or cast all as strings.",
+    "Click 'Parse & Convert' to trigger the parser engine, which highlights syntax errors in problematic SQL lines.",
+    "Adjust column mappings using the 'Edit Schema' modal to rename fields or exclude specific columns from JSON output.",
+    "Download the result as a .json file or copy the formatted JSON array directly to the clipboard using the 'Copy Output' button."
+  ],
+  "usage_examples": [
+    "Migrating a legacy MySQL users table to a MongoDB collection by converting INSERTs into document-insertion JSON arrays.",
+    "Generating sample API response payloads from SQL database backups for frontend developers using React Query.",
+    "Creating configuration JSON files for microservices by extracting specific rows from a PostgreSQL settings table.",
+    "Transforming SQL audit logs into structured JSON for ingestion into Elasticsearch data visualization pipelines."
+  ]
+}

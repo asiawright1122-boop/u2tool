@@ -1,0 +1,18 @@
+{
+  "detailed_description": "El Minificador JSON es una herramienta técnica diseñada para optimizar archivos JSON mediante la eliminación de espacios en blanco, saltos de línea y comentarios, sin alterar la estructura sintáctica del documento. Este proceso, conocido como minificación, reduce significativamente el tamaño del archivo, ideal para entornos donde la eficiencia en la transmisión de datos es crítica. Los desarrolladores lo utilizan en aplicaciones móviles con limitaciones de banda, APIs RESTful que requieren respuestas ultrarrápidas, o en procesos de serialización donde el tamaño del payload afecta el rendimiento. El minificador opera mediante un analizador sintáctico AST (Abstract Syntax Tree) que identifica y elimina caracteres no esenciales, comprime claves literales, y asegura la validez del JSON resultante. Además, soporta codificación UTF-8 y es compatible con estructuras anidadas, arrays y valores booleanos, manteniendo la integridad del contenido original. Su algoritmo está optimizado para procesar archivos de hasta 10MB sin pérdida de velocidad, integrando técnicas de compresión ligera similares a gzip, pero manteniendo el formato JSON legible para máquinas.",
+  "usage_steps": [
+    "Accede al minificador a través del enlace 'json-minifier' en la sección de herramientas de codificación.",
+    "Copia y pega tu JSON en el área de texto o usa el botón 'Cargar archivo' para importar un documento .json.",
+    "Activa la opción 'Eliminar comentarios' si deseas omitir líneas comentadas en el archivo original.",
+    "Haz clic en el botón 'Minificar' para iniciar el proceso de optimización basado en análisis léxico.",
+    "Revisa el JSON resultante en el panel de salida, verificando la eliminación de espacios y formato compacto.",
+    "Descarga el archivo minificado mediante el botón 'Guardar' o copia el contenido al portapapeles con 'Copiar'."
+  ],
+  "usage_examples": [
+    "Reducir el tamaño de un archivo de configuración JSON en una aplicación móvil para disminuir el consumo de datos móviles.",
+    "Optimizar respuestas de una API GraphQL comprimiendo payloads JSON antes de su envío a clientes web.",
+    "Preparar un archivo JSON de traducción para producción, eliminando comentarios internos de desarrollo.",
+    "Minificar datos almacenados en localStorage del navegador para mejorar el rendimiento en aplicaciones SPAs."
+  ],
+  "inputPlaceholder": "Escribe aquí el texto..."
+}

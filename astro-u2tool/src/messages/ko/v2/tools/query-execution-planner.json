@@ -1,0 +1,47 @@
+{
+  "detailed_description": "쿼리 실행 계획 도구는 SQL 쿼리 실행 계획을 이해하고 최적화하는 데 도움을 줍니다.",
+  "usage_steps": [
+    "EXPLAIN 출력 붙여넣기",
+    "데이터베이스 유형 선택",
+    "분석 클릭",
+    "계획 시각화 확인",
+    "추천 사항 얻기"
+  ],
+  "usage_examples": [
+    "느리는 쿼리 이해",
+    "전체 테이블 스캔 식별",
+    "실행 계획 비교"
+  ],
+  "input": "입력",
+  "output": "출력",
+  "process": "처리",
+  "copy": "복사",
+  "clear": "지우기",
+  "inputPlaceholder": "SQL 쿼리 입력...",
+  "outputPlaceholder": "결과가 여기에 표시됩니다...",
+  "errors": {
+    "emptyInput": "입력을 입력해 주세요"
+  },
+  "loadExample": "예제 로드",
+  "analyze": "분석",
+  "generate": "생성",
+  "format": "포맷",
+  "convert": "변환",
+  "validate": "검증",
+  "export": "내보내기",
+  "preview": "미리보기",
+  "reset": "초기화",
+  "add": "추가",
+  "remove": "제거",
+  "save": "저장",
+  "cancel": "취소",
+  "settings": "설정",
+  "options": "옵션",
+  "results": "결과",
+  "noResults": "결과 없음",
+  "loading": "로딩 중...",
+  "success": "성공",
+  "failed": "실패",
+  "warning": "경고",
+  "info": "정보"
+}

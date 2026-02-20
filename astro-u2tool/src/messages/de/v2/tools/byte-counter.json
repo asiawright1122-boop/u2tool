@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Byte Counter analysiert Texte durch verschiedene Kodierungsparadigmen und berechnet präzise deren Byte-Größe. Technisch wandelt das Tool eingegebene Zeichenfolgen gemäß UTF-8, UTF-16 (inklusive Big-Endian/Little-Endian-Differenzierung) oder ASCII in ihre binären Repräsentationen um. Dabei berücksichtigt es spezifische Kodierungsregeln wie UTF-8s variable Längencodierung (1-4 Bytes pro Codepoint) oder UTF-16s 2-Byte-Basiseinheiten mit Surrogatpaaren für ergänzende Zeichen. Entwickler benötigen diese Funktionalität, um Speicheranforderungen für String-Daten zu bewerten, API-Limits (z.B. Twitter's 280-Zeichen-Begrenzung mit UTF-8) zu überprüfen oder Unicode-Probleme in legacy Systemen zu diagnostizieren. Das Tool verwendet JavaScripts TextEncoder-API, kombiniert mit manuellem Byte-Zählen über ArrayBuffer-Operationen, um präzise Ergebnisse ohne externe Abhängigkeiten zu liefern. Im Gegensatz zu einfachen Zeichenzählern zeigt es explizit die tatsächlich allokierte Speichergröße an, einschließlich Kodierungs-spezifischer Overheads.",
+  "usage_steps": [
+    "Fügen Sie Ihren Text in das obere Textfeld ein oder laden Sie eine .txt-Datei hoch",
+    "Wählen Sie die gewünschte Kodierung aus dem Dropdown-Menü (UTF-8, UTF-16BE, UTF-16LE, ASCII)",
+    "Aktivieren Sie optional den 'BOM einbeziehen'-Schalter für UTF-16-Byte-Order-Mark-Berechnung",
+    "Klicken Sie auf 'Bytes zählen', um die Berechnung zu starten",
+    "Lesen Sie das Ergebnis im farblich markierten Ausgabefeld (z.B. '153 Bytes in UTF-8')",
+    "Wechseln Sie zwischen Kodierungen, um Vergleichswerte direkt im Verlaufsfenster zu analysieren"
+  ],
+  "usage_examples": [
+    "Berechnung des genauen Speicherbedarfs eines JSON-Payloads für eine AWS Lambda-Funktion mit 6MB Grenze",
+    "Validierung ob eine mehrsprachige Produktbeschreibung im UTF-16-Format unter Microsofts 32KB Registry-Limit bleibt",
+    "Prüfung ob ein Legacy-System mit ASCII-only-Schnittstelle Sonderzeichen korrekt verarbeitet",
+    "Analyse der Byte-Differenz zwischen Emojis (4 Bytes in UTF-8) und lateinischen Zeichen bei Social-Media-Posts"
+  ]
+}

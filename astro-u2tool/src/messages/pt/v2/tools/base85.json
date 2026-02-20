@@ -1,0 +1,25 @@
+{
+  "input": "Entrada",
+  "output": "Saída",
+  "encode": "Codificar",
+  "decode": "Decodificar",
+  "copy": "Copiar",
+  "inputPlaceholderEncode": "Digite o texto para codificar...",
+  "inputPlaceholderDecode": "Digite o Base85 para decodificar...",
+  "outputPlaceholder": "Os resultados aparecerão aqui...",
+  "detailed_description": "O Base85 Encoder/Decoder é uma ferramenta especializada para conversão de dados binários em formato de texto legível ASCII utilizando o algoritmo Ascii85. Este esquema de codificação representa dados em base 85, onde cada grupo de 4 bytes é transformado em 5 caracteres ASCII imprimíveis (intervalo 33 a 117), oferecendo uma densidade de informação 25% mais eficiente que o Base64. Ideal para aplicações como compressão de payloads em APIs REST, manipulação de streams PDF, ou serialização de binários em ambientes que exigem transmissão segura. O processo de decodificação realiza a transformação inversa, reconstruindo os bytes originais através de cálculos matemáticos de base 85 ponderada. A ferramenta suporta codificação de grandes arquivos binários e preserva caracteres especiais como quebras de linha e tabulações, essencial para integração com formatos como AMF (Action Message Format) e certificados digitais.",
+  "usage_steps": [
+    "Acesse o painel de codificação e selecione a aba 'Codificar' ou 'Decodificar' conforme necessário",
+    "Cole ou arraste o conteúdo binário/texto na área de edição principal (até 100MB suportados)",
+    "Ative a opção 'Manter formato original' para preservar espaços e quebras de linha",
+    "Clique no botão 'Processar Base85' para iniciar a conversão",
+    "Copie o resultado gerado ou clique em 'Baixar' para salvar como arquivo .txt",
+    "Use o histórico de conversões para revisitar operações anteriores (armazena últimas 10 conversões)"
+  ],
+  "usage_examples": [
+    "Codificar um arquivo PDF para inserção direta em corpo de e-mail SMTP sem corrupção de bytes",
+    "Converter dados de uma imagem PNG em string compatível com JSON para API payload",
+    "Decodificar objetos stream em documentos PDF manualmente para análise de estrutura interna",
+    "Processar pacotes de rede capturados em formato pcap para análise de payloads codificados em Ascii85"
+  ]
+}

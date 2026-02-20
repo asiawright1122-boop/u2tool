@@ -1,0 +1,39 @@
+{
+  "detailed_description": "Le Générateur de Configuration Docker Compose crée des fichiers docker-compose.yml pour des applications multi-conteneurs.",
+  "usage_steps": [
+    "Sélectionnez des services à partir des modèles",
+    "Configurer les ports et les volumes",
+    "Configurer les réseaux",
+    "Ajouter des contrôles de santé",
+    "Télécharger docker-compose.yml"
+  ],
+  "usage_examples": [
+    "Créer un environnement de développement",
+    "Générer une configuration de production",
+    "Construire un stack de microservices"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Processus",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Entrez votre entrée ici...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez saisir quelques informations"
+  },
+  "quickAddService": "Ajout Rapide de Service",
+  "services": "Services",
+  "addEmptyService": "+ Ajouter un Service Vide",
+  "serviceName": "nom_service",
+  "remove": "Supprimer",
+  "image": "Image",
+  "restartPolicy": "Politique de Redémarrage",
+  "ports": "Ports (séparés par virgule, ex: 3000:3000, 8080:80)",
+  "volumes": "Volumes (séparés par virgule)",
+  "dependsOn": "Dépend de (noms de services séparés par virgule)",
+  "none": "aucun",
+  "always": "toujours",
+  "unlessStopped": "sauf si arrêté",
+  "onFailure": "en cas d'échec"
+}

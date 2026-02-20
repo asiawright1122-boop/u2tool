@@ -1,0 +1,36 @@
+{
+  "pressAnyKey": "Pressione qualquer tecla",
+  "keyCode": "Código",
+  "key": "Tecla",
+  "code": "Código",
+  "location": "Localização",
+  "modifiers": "Modificadores",
+  "shift": "Shift",
+  "ctrl": "Ctrl",
+  "alt": "Alt",
+  "meta": "Meta",
+  "keyHistory": "Histórico",
+  "clearHistory": "Limpar",
+  "lastKeyPressed": "Última Tecla Pressionada",
+  "clear": "Limpar",
+  "noKeysPressed": "Nenhuma tecla pressionada ainda",
+  "tips": "Dicas",
+  "tip1": "Esta ferramenta pode ser usada para testar se todas as teclas do seu teclado estão funcionando corretamente",
+  "tip2": "Algumas teclas (como Fn) podem não ser detectadas pelo navegador",
+  "tip3": "O histórico de teclas armazena até 10 pressionamentos recentes",
+  "detailed_description": "O Keyboard Tester é uma ferramenta técnica para análise profunda de eventos de teclado em ambiente web. Ele captura e exibe em tempo real os códigos das teclas pressionadas (keyCode, code, key), estados das teclas modificadoras (Shift, Alt, Ctrl) e propriedades dos eventos DOM como event.type, event.repeat e event.location. Desenvolvido com base em ouvintes de eventos JavaScript (addEventListener('keydown/keyup')), o tool permite diagnosticar inconsistências na detecção de teclas entre navegadores, resolver problemas de mapeamento de atalhos e validar comportamentos em layouts de teclado internacionais (ABNT, QWERTY, AZERTY). Ideal para depuração de sistemas que exigem precisão em interações via teclado, como games, IDEs customizadas ou aplicações de acessibilidade.",
+  "usage_steps": [
+    "1. Acesse a ferramenta e observe o painel central de visualização de eventos.",
+    "2. Pressione qualquer tecla para ativar o registro automático no histórico de eventos.",
+    "3. Analise os campos exibidos: 'Key' (valor Unicode), 'Code' (identificador físico), 'KeyCode' (código numérico legado) e 'Modifiers' (teclas combinadas).",
+    "4. Utilize os filtros 'keydown' e 'keyup' para isolar eventos específicos.",
+    "5. Mantenha uma tecla pressionada para verificar o comportamento de 'event.repeat' em loops de entrada.",
+    "6. Clique em 'Redefinir' para limpar o histórico e testar novas sequências de teclas."
+  ],
+  "usage_examples": [
+    "Validar se uma tecla multimídia específica (ex: VolumeMute) está sendo corretamente reconhecida em um player web.",
+    "Diagnosticar por que um atalho Ctrl+Alt+Del não funciona em uma aplicação corporativa devido a políticas de segurança do navegador.",
+    "Testar o mapeamento de teclas numérico em um sistema de ponto de venda (POS) que utiliza teclados numéricos ABNT.",
+    "Depurar um editor de texto que falha ao capturar a tecla 'ç' em layouts portugueses devido a diferenças em event.key versus event.code."
+  ]
+}

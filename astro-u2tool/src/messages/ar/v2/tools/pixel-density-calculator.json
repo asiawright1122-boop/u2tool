@@ -1,0 +1,40 @@
+{
+  "detailed_description": "يقوم حساب كثافة البكسل بحساب البكسلات لكل بوصة (PPI) ومتريات العرض الأخرى من خلال حلولول الشاشة وحجم الزاوية القصوى. استوعب جودة شاشتك من خلال حساب حجم البكسل، نسبة الشكل، وعدد ميجابكسلات الكلي. يشمل إعدادات مسبقة للحلولول الشائعة من HD إلى 8K وأجهزة شائعة الاستخدام.",
+  "usage_steps": [
+    "أدخل عرض الشاشة في البكسل",
+    "أدخل ارتفاع الشاشة في البكسل",
+    "أدخل حجم الشاشة القصري بوصة",
+    "أو اختر تعيين ترقيم شائع",
+    "شاهد PPI، مسافة البكسل، ومقاييس أخرى",
+    "نسخ النتائج للرجوع إليها"
+  ],
+  "usage_examples": [
+    "مقارنة جودة العرض بين الشاشات",
+    "تقييم حدة شاشة الهاتف الذكي",
+    "اختيار الشاشة المناسبة للعمل التصميمي"
+  ],
+  "width": "Width",
+  "height": "Height",
+  "diagonal": "Diagonal",
+  "inches": "inches",
+  "commonResolutions": "Common Resolutions",
+  "results": "Results",
+  "pixelsPerInch": "Pixels Per Inch",
+  "pixelPitch": "Pixel Pitch",
+  "aspectRatio": "Aspect Ratio",
+  "megapixels": "Megapixels",
+  "physicalWidth": "Physical Width",
+  "physicalHeight": "Physical Height",
+  "totalPixels": "Total Pixels",
+  "ppiReference": "PPI Reference",
+  "quality": {
+    "excellent": "Excellent - Retina quality",
+    "good": "Good - Sharp display",
+    "average": "Average - Standard quality",
+    "low": "Low - Visible pixels"
+  },
+  "screenWidth": "عرض الشاشة (px)",
+  "screenHeight": "ارتفاع الشاشة (px)",
+  "diagonalSize": "الحجم القطري (بوصة)",
+  "ppi": "بكسل لكل بوصة"
+}

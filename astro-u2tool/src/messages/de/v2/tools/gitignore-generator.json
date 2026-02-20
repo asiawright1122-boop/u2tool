@@ -1,0 +1,22 @@
+{
+  "detailed_description": "Der .gitignore Generator erstellt präzise .gitignore-Konfigurationsdateien basierend auf projekttypspezifischen Mustern. Technisch gesehen analysiert das Tool Datei- und Ordnerstrukturen, die typischerweise von Git-Versionierungen ausgeschlossen werden müssen – wie Build-Artefakte (z.B. '/dist/', '/node_modules/'), temporäre Dateien (z.B. '.env.local') oder IDE-spezifische Metadaten. Der Generator implementiert glob-Muster gemäß Git's Syntax-Spezifikationen, inklusive Wildcards (*, **), Negationszeichen (!) und case-sensitiven Regeln. Nutzer benötigen dieses Werkzeug, um häufige Fehler wie das versehentliche Committen sensibler Daten (z.B. API-Schlüssel) oder redundanter Build-Dateien zu vermeiden, die die Repository-Performance beeinträchtigen. Die Kernfunktionalität basiert auf einer wählbaren Kombination von Templates für Sprachen (Python, Java), Frameworks (React, Django) und CI/CD-Systemen, die per XOR-Logik zusammengeführt werden, um Konflikte zwischen Regeln zu vermeiden. Zusätzlich unterstützt das Tool die Einbeziehung von benutzerdefinierten Pfaden mit automatischer Validierung gegen Git's Parsing-Regeln.",
+  "usage_steps": [
+    "Wählen Sie die Projektart aus den Kategorien 'Backend', 'Frontend', 'Datenbank' oder 'CI/CD' über die mehrfach auswählbaren Checkboxen.",
+    "Aktivieren Sie spezifische Frameworks oder Tools (z.B. 'React', 'Docker', 'Django') innerhalb der ausgewählten Kategorien.",
+    "Fügen Sie manuell benutzerdefinierte Pfade über das Eingabefeld hinzu und verwenden Sie den 'Validiere Regel'-Button, um Syntaxfehler zu prüfen.",
+    "Nutzen Sie den 'Regelkonflikt-Analyzer', um widersprüchliche Einträge zwischen ausgewählten Templates zu identifizieren und aufzulösen.",
+    "Passen Sie die Reihenfolge der Regeln per Drag-and-Drop an, um die Priorisierung gemäß Git's Last-Match-Wins-Logik zu steuern.",
+    "Laden Sie die generierte .gitignore-Datei herunter oder kopieren Sie den Code direkt in Ihr Projektverzeichnis."
+  ],
+  "usage_examples": [
+    "Ein Node.js-Entwickler generiert eine .gitignore-Datei, die '/node_modules/', '.env' und 'npm-debug.log' ausschließt, während er gleichzeitig spezifische Testdateien im '/integration-tests/'-Ordner versioniert.",
+    "Ein Data-Science-Team erstellt eine Konfiguration, die große Trainingsdaten im '/data/raw/'-Ordner ignoriert, aber Modelle im '/models/'-Verzeichnis mit einbezieht.",
+    "Ein DevOps-Ingenieur kombiniert Templates für Docker und Kubernetes, um temporäre Build-Dateien ('/tmp/') und lokale Helm-Charts-Konfigurationen ('/charts/.cache/') zu filtern.",
+    "Ein Mobile-App-Entwickler definiert Regeln für Flutter-Projekte, die '/build/', '.dart_tool/' und sensible Keystore-Dateien im '/android/app/'-Verzeichnis ausschließen."
+  ],
+  "languages": "Sprachen",
+  "frameworks": "Frameworks",
+  "os": "Betriebssysteme",
+  "custom": "Benutzerdefinierte Regeln",
+  "customPlaceholder": "Benutzerdefinierte Regeln hinzufügen..."
+}

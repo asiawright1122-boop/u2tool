@@ -1,0 +1,22 @@
+{
+  "output": "Saída CSS",
+  "copy": "Copiar",
+  "baseColor": "Cor Base",
+  "numberOfShades": "Número de Tons: {count}",
+  "copyCssVariables": "Copiar Variáveis CSS",
+  "detailed_description": "O Color Shades Generator é uma ferramenta técnica especializada que aplica algoritmos de manipulação de cores para criar variações de tons, sombras e destinos a partir de um valor base em hexadecimal, RGB ou HSL. Utilizando cálculos matemáticos precisos, o sistema ajusta parâmetros como luminosidade, saturação e matiz para gerar paletas harmoniosas. A ferramenta é essencial para designers que precisam validar contrastes segundo padrões WCAG 2.1, desenvolvedores criando sistemas de design responsivos ou artistas digitais explorando variações cromáticas sem perda de coerência visual. Seu núcleo processa os valores inseridos através de uma interface de domínio específico (DSL) que permite ajustes granulares em escala logarítmica, garantindo transições suaves entre os tons. A saída é fornecida em múltiplos formatos (HEX, RGB, HSL, CMYK) com opção de exportação para CSS variables ou JSON, facilitando integração em workflows de desenvolvimento front-end ou sistemas de design system automatizados.",
+  "usage_steps": [
+    "Acesse a interface e selecione o modo de entrada: HEX, RGB ou HSL através do seletor de formato no cabeçalho",
+    "Insira o valor da cor base nos campos específicos, utilizando o ícone de paleta para visualização em tempo real",
+    "Ajuste os controles deslizantes de 'Tonalidade' (±360°), 'Saturação' (0-100%) e 'Luminosidade' (0-100%) para definir a direção das variações",
+    "Ative o modo 'Acessibilidade' para calcular automaticamente contrastes válidos conforme critérios WCAG",
+    "Utilize o campo 'Quantidade de Variações' (5-50) para especificar a densidade da paleta gerada",
+    "Clique em 'Exportar' para baixar o resultado em formato CSS, JSON ou PNG com amostras de cores em grade matricial"
+  ],
+  "usage_examples": [
+    "Um designer UX criando um sistema de design escalável para aplicativo financeiro, necessitando de paletas de erro, sucesso e alerta com contrastes verificáveis",
+    "Um desenvolvedor front-end implementando tema escuro adaptativo com variações calculadas para elementos de interface em diferentes estados",
+    "Um ilustrador digital gerando esquema de cores para storyboard cinematográfico com transições suaves entre tons principais",
+    "Um analista de dados configurando visualizações em dashboard com escala cromática proporcional para representação de métricas financeiras"
+  ]
+}

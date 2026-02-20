@@ -1,0 +1,50 @@
+{
+  "detailed_description": "El Generador de Expresiones Regulares a Código convierte patrones de expresiones regulares en fragmentos de código listos para usar en varios lenguajes.",
+  "usage_steps": [
+    "Introduce el patrón de expresión regular",
+    "Selecciona el lenguaje de destino",
+    "Elige la operación",
+    "Configura las banderas",
+    "Copia el fragmento de código"
+  ],
+  "usage_examples": [
+    "Genera código re en Python",
+    "Crea código RegExp en JavaScript",
+    "Convierte a patrón en Java"
+  ],
+  "input": "Entrada",
+  "output": "Salida",
+  "process": "Procesar",
+  "copy": "Copiar",
+  "clear": "Borrar",
+  "inputPlaceholder": "Introduce tu entrada aquí...",
+  "outputPlaceholder": "Los resultados aparecerán aquí...",
+  "errors": {
+    "emptyInput": "Por favor, introduce algún dato"
+  },
+  "patternPlaceholder": "\\d+",
+  "testTextPlaceholder": "Texto de prueba",
+  "replacementPlaceholder": "Texto de reemplazo",
+  "loadExample": "Cargar ejemplo",
+  "analyze": "Analizar",
+  "generate": "Generar",
+  "format": "Formatear",
+  "convert": "Convertir",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Vista previa",
+  "reset": "Restablecer",
+  "add": "Agregar",
+  "remove": "Eliminar",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "settings": "Configuración",
+  "options": "Opciones",
+  "results": "Resultados",
+  "noResults": "Sin resultados",
+  "loading": "Cargando...",
+  "success": "Éxito",
+  "failed": "Fallido",
+  "warning": "Advertencia",
+  "info": "Información"
+}

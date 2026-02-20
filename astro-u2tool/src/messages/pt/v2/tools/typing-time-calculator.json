@@ -1,0 +1,29 @@
+{
+  "detailed_description": "A Calculadora de Tempo de Digitação estima quanto tempo levará para digitar um documento com base na contagem de palavras e velocidade de digitação. Insira seu texto ou contagem de palavras, selecione sua velocidade de digitação em palavras por minuto (palavras por minuto) e obtenha estimativas de tempo precisas. A ferramenta inclui velocidades pré-configuradas para diferentes níveis de habilidade, desde iniciante até digitador profissional. Perfeito para escritores que planejam suas sessões de trabalho, estudantes que estimam o tempo de conclusão de tarefas ou qualquer pessoa curiosa sobre a produtividade de digitação. Também útil para estimativas de tempo de transcrição.",
+  "usage_steps": [
+    "Insira a contagem de palavras ou cole o texto",
+    "Defina a velocidade de digitação",
+    "Visualize a estimativa de tempo"
+  ],
+  "usage_examples": [
+    "Planeje sessões de escrita",
+    "Estime prazos de projetos"
+  ],
+  "wordCount": "Contagem de Palavras",
+  "typingSpeed": "Velocidade de Digitação (PPM)",
+  "beginner": "Iniciante",
+  "average": "Médio",
+  "professional": "Profissional",
+  "expert": "Especialista",
+  "pureTypingTime": "Tempo de Digitação Puro",
+  "totalWithBreaks": "Total com Pausas",
+  "recommendedBreaks": "Pausas Recomendadas",
+  "minutes": "minutos",
+  "seconds": "segundos",
+  "estimatedTime": "Tempo estimado",
+  "minutesTotal": "Minutos totais",
+  "ergonomicTips": "Dicas ergonômicas",
+  "tip1": "Dica 1",
+  "tip2": "Dica 2",
+  "tip3": "Dica 3"
+}

@@ -1,0 +1,24 @@
+{
+  "detailed_description": "CSS转Tailwind转换器将传统CSS样式转换为Tailwind CSS实用类。非常适合将现有项目迁移到Tailwind CSS框架。",
+  "usage_steps": [
+    "粘贴您的CSS样式",
+    "点击转换进行转换",
+    "查看Tailwind类",
+    "复制生成的类",
+    "应用到您的HTML元素"
+  ],
+  "usage_examples": [
+    "将项目迁移到Tailwind",
+    "学习Tailwind等价类",
+    "转换设计系统样式"
+  ],
+  "cssInput": "CSS输入",
+  "tailwindOutput": "Tailwind类",
+  "convert": "转换为Tailwind",
+  "copy": "复制",
+  "copied": "已复制！",
+  "inputPlaceholder": "在此粘贴您的CSS...",
+  "placeholder": "在此粘贴CSS...",
+  "outputPlaceholder": "Tailwind类将显示在这里...",
+  "loadExample": "加载示例"
+}

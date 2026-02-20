@@ -1,0 +1,33 @@
+{
+  "mode": "Mode",
+  "escape": "Échapper",
+  "unescape": "Dééchapper",
+  "loadSample": "Charger un Échantillon",
+  "input": "Entrée",
+  "output": "Sortie",
+  "inputPlaceholder": "Entrez du texte avec des caractères spéciaux...",
+  "escapedPlaceholder": "Entrez une expression regex échappée...",
+  "outputPlaceholder": "Le résultat apparaîtra ici...",
+  "copy": "Copier",
+  "escapeBtn": "Échapper",
+  "unescapeBtn": "Dééchapper",
+  "swap": "Échanger",
+  "specialChars": "Caractères Spéciaux",
+  "info": "Informations",
+  "infoText": "Échappe ces caractères spéciaux regex : \\ ^ $ . '|' ? * + ( ) [ ] '{' '}'",
+  "detailed_description": "L'outil Regex Escape est un outil puissant destiné aux développeurs travaillant avec des expressions régulières (regex). Ce service en ligne permet d'échapper ou de déséchapper les caractères spéciaux utilisés dans les regex, une tâche qui peut devenir complexe lorsqu'on manipule des chaînes de caractères contenant des symboles spécifiques. Par exemple, les caractères tels que le point d'interrogation (?), le point (.), la parenthèse (()), ou la barre oblique inverse (\\) ont des significations spéciales dans les regex et doivent être correctement échappés pour éviter des erreurs d'interprétation. L'outil Regex Escape facilite cette tâche en automatisant le processus. Il est particulièrement utile lors de la création de filtres de recherche complexes, de l'analyse de logs, ou de la validation de formulaires. En utilisant Regex Escape, les développeurs peuvent s'assurer que leurs expressions régulières sont correctement formatées, réduisant ainsi les risques d'erreurs et de bugs. L'outil fonctionne en analysant les chaînes de caractères fournies, en identifiant les caractères spéciaux et en les échappant ou déséchapant selon le choix de l'utilisateur. Il est totalement configurable, permettant aux utilisateurs de choisir exactement quels caractères doivent être manipulés.",
+  "usage_steps": [
+    "Accédez à la page de l'outil Regex Escape sur le site.",
+    "Dans la section 'Entrée', copiez et collez la chaîne de caractères que vous souhaitez échapper ou déséchapper.",
+    "Sélectionnez l'option 'Échapper' ou 'Déséchapper' selon votre besoin dans le menu déroulant situé sous la zone de texte.",
+    "Si nécessaire, cochez les cases spécifiant les caractères spéciaux que vous voulez manipuler manuellement.",
+    "Cliquez sur le bouton 'Appliquer' pour exécuter l'opération.",
+    "Le résultat apparaîtra dans la section 'Sortie', prêt à être copié et utilisé dans votre code."
+  ],
+  "usage_examples": [
+    "Un développeur travaillant sur un moteur de recherche utilise Regex Escape pour échapper les caractères spéciaux d'une chaîne de recherche afin d'éviter des erreurs d'interprétation lors de l'exécution de la regex.",
+    "Un ingénieur en sécurité informatique utilise l'outil pour déséchapper des chaînes de caractères extraites de logs pour analyser des activités suspectes sans altérer la structure des logs.",
+    "Un développeur frontend utilise Regex Escape pour échapper les caractères spéciaux d'une adresse e-mail avant de l'insérer dans une expression régulière de validation de formulaire.",
+    "Un administrateur de base de données utilise l'outil pour échapper des requêtes SQL contenant des caractères spéciaux pour éviter des injections SQL."
+  ]
+}

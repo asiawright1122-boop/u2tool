@@ -1,0 +1,26 @@
+{
+  "detailed_description": "محوظة تحويل JSON إلى بروتوكول بافيرز تحويل بيانات JSON إلى تعريفات نموذج بروتوكول بافيرز. مثالية للمطورين الذين يعملون مع gRPC، خدمات الميكروسيرفيس، وتسلسل البيانات عالي الأداء.",
+  "usage_steps": [
+    "ألصق بيانات JSON الخاصة بك في منطقة الإدخال",
+    "ضبط خيارات اسم الرسالة والباقة",
+    "انقر على تحويل لإنشاء نموذج proto",
+    "مراجعة التعريف المُنتج .proto",
+    "نسخ أو تحميل ملف proto"
+  ],
+  "usage_examples": [
+    "إنشاء نماذج proto من استجابات API",
+    "إنشاء تعريفات خدمات gRPC",
+    "تحويل APIs REST إلى gRPC"
+  ],
+  "jsonInput": "إدخال JSON",
+  "protoOutput": "مخرجات Proto",
+  "messageName": "اسم الرسالة",
+  "packageName": "اسم الباقة",
+  "convert": "تحويل",
+  "copy": "نسخ",
+  "copied": "نسخت!",
+  "download": "تحميل .proto",
+  "inputPlaceholder": "ألصق JSON الخاص بك هنا...",
+  "placeholder": "الصق JSON هنا...",
+  "outputPlaceholder": "سيظهر إخراج Protocol Buffers هنا..."
+}

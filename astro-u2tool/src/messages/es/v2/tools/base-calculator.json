@@ -1,0 +1,31 @@
+{
+  "base": "Base Numérica",
+  "binary": "Binario",
+  "octal": "Octal",
+  "decimal": "Decimal",
+  "hex": "Hexadecimal",
+  "number1": "Número 1",
+  "number2": "Número 2",
+  "operation": "Operación",
+  "add": "Sumar",
+  "subtract": "Restar",
+  "multiply": "Multiplicar",
+  "divide": "Dividir",
+  "calculate": "Calcular",
+  "invalidNumber": "Número no válido para la base seleccionada",
+  "detailed_description": "La Calculadora de Bases permite ejecutar operaciones aritméticas directamente en sistemas numéricos no decimales, soportando desde la base 2 (binario) hasta la base 36. A diferencia de herramientas convencionales, este instrumento procesa operaciones matemáticas complejas manteniendo la coherencia del sistema posicional seleccionado, ideal para desarrolladores que trabajan con representaciones hexadecimales en memoria, ingenieros de redes que calculan máscaras CIDR o estudiantes que estudian aritmética modular. El motor interno utiliza algoritmos de conversión basados en el teorema de Horner para validar operandos y resultados dentro del rango permitido por cada base, manejando casos especiales como números negativos en complemento a dos o fracciones con punto flotante. Al finalizar cada cálculo, se muestra el procedimiento paso a paso incluyendo el ajuste de dígitos de acarreo en sumas binarias o la conversión implícita de símbolos alfanuméricos en bases superiores a 10.",
+  "usage_steps": [
+    "1. Selecciona la base numérica de entrada (2-36) usando el selector desplegable 'Base Origen'",
+    "2. Ingresa los operandos numéricos en los campos correspondientes utilizando dígitos válidos para la base seleccionada (ej: 'A' para hexadecimal)",
+    "3. Elige la operación aritmética deseada: suma, resta, multiplicación o división mediante los botones de operadores",
+    "4. Configura la base de salida en el campo 'Convertir a Base' si deseas el resultado en un sistema diferente",
+    "5. Haz clic en el botón 'Calcular' para ejecutar la operación y validar la sintaxis de los números ingresados",
+    "6. Revisa el panel de resultados que muestra el cálculo realizado con notación posicional y el valor convertido en la base destino"
+  ],
+  "usage_examples": [
+    "Un desarrollador convierte la dirección IPv6 2001:0db8::1/32 a notación binaria para verificar máscaras de red CIDR.",
+    "Un estudiante resuelve un problema de aritmética octal (745 + 123) en base 8 y compara el resultado con su solución manual.",
+    "Un ingeniero de sistemas calcula el desbordamiento (overflow) en una operación hexadecimal (0xAFFE + 0x000F) para depurar un buffer en lenguaje ensamblador.",
+    "Un científico de datos transforma un conjunto de números decimales a base 3 para implementar un algoritmo de compresión fractal."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "columns": "columnas",
+  "rows": "Filas",
+  "gap": "Espacio (px)",
+  "justifyItems": "Justificar elementos",
+  "stretch": "Estirar",
+  "start": "Comenzar",
+  "center": "Centro",
+  "end": "Fin",
+  "columnSizes": "Tamaños de columna",
+  "col": "Col {index}",
+  "rowSizes": "Tamaños de fila",
+  "row": "Fila {index}",
+  "preview": "Vista previa",
+  "generatedCss": "CSS generado",
+  "detailed_description": "Nuestro generador CSS Grid es una herramienta visual potente que simplifica la creación de layouts de cuadrícula complejos. Define filas y columnas con unidades flexibles (fr, px, %, auto), ajusta espaciados y ve los cambios instantáneamente en la vista previa en vivo. Perfecto para diseño web responsivo, layouts de dashboard e interfaces modernas basadas en CSS Grid.",
+  "usage_steps": [
+    "1. Establece el número de columnas y filas",
+    "2. Define los tamaños de columnas y filas (1fr, 200px, auto, etc.)",
+    "3. Ajusta el espacio entre elementos",
+    "4. Selecciona la alineación de elementos",
+    "5. Visualiza la vista previa y copia el código CSS generado"
+  ],
+  "usage_examples": [
+    "Crear layouts de sitios web responsivos",
+    "Cuadrículas de dashboard con diferentes anchos de columna",
+    "Galerías de imágenes con distribución uniforme",
+    "Layouts de blog con barra lateral y contenido principal"
+  ],
+  "copied": "¡Copiado!",
+  "copy": "Copiar"
+}

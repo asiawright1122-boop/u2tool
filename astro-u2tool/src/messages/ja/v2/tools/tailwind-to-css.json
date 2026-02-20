@@ -1,0 +1,24 @@
+{
+  "detailed_description": "Tailwind to CSS Converterは、Tailwindユーティリティクラスを標準CSSプロパティに変換します。学習、デバッグ、Tailwindプロジェクトからスタイルを抽出するのに役立ちます。",
+  "usage_steps": [
+    "Tailwindクラスを入力",
+    "「変換」をクリックしてCSSを生成",
+    "生成されたCSSを出力を確認",
+    "生成されたスタイルをコピー",
+    "スタイルシートに使用"
+  ],
+  "usage_examples": [
+    "TailwindからCSSを学ぶ",
+    "Tailwindのスタイルをデバッグ",
+    "非Tailwindプロジェクト用のCSSを抽出"
+  ],
+  "tailwindInput": "Tailwindクラス",
+  "cssOutput": "CSS出力",
+  "convert": "CSSに変換",
+  "copy": "コピー",
+  "copied": "コピー完了！",
+  "inputPlaceholder": "Tailwindクラスを入力（例：bg-blue-500 text-white p-4）",
+  "placeholder": "Tailwindクラスを入力...",
+  "outputPlaceholder": "CSS出力がここに表示されます...",
+  "loadExample": "例を読み込む"
+}

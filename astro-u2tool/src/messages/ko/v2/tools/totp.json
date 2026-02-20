@@ -1,0 +1,10 @@
+{
+  "secret": "비밀 키(Base32)",
+  "secretPlaceholder": "Base32 비밀번호를 입력하거나 생성하세요...",
+  "secretHint": "비밀번호는 16자 이상이어야 합니다.",
+  "currentCode": "현재 코드",
+  "howItWorks": "작동 원리",
+  "step1": "TOTP generates time-based one-time passwords",
+  "step2": "코드는 30초마다 새로 고쳐집니다.",
+  "step3": "Google OTP와 호환 가능"
+}

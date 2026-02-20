@@ -1,0 +1,18 @@
+{
+  "detailed_description": "The JSON Minifier eliminates all non-essential whitespace, comments, and formatting from JSON documents while preserving their lexical structure and syntactic validity. This tool employs a streaming parser that tokenizes JSON elements (objects, arrays, strings, and primitives) then reconstructs the output without spaces between delimiters, line breaks, or indentation. By reducing redundant characters, the minified JSON achieves up to 60% smaller file sizes, improving compression efficiency for HTTP payloads and CDN caching. Developers optimizing REST API responses for mobile clients, embedded systems engineers minimizing storage footprint in IoT devices, and DevOps teams streamlining AWS Lambda environment variables will benefit from this tool. Advanced features include JSON validity checking with error position highlighting, base64 encoding compatibility for binary data, and preservation of special Unicode characters. The minification process follows ECMA-404 JSON standard compliance, ensuring interoperability with JSON parsers across modern browsers and server environments.",
+  "usage_steps": [
+    "Open the JSON Minifier tool in your browser and locate the dual-pane interface",
+    "Paste your JSON content into the left-hand input panel with syntax highlighting",
+    "Toggle the 'Validate JSON' checkbox to enable pre-minification syntax checking",
+    "Click the 'Minify' button to process the document through the streaming parser",
+    "Review the compacted output in the right-hand panel showing byte count reduction",
+    "Copy the minified JSON using the clipboard icon or download as .json file"
+  ],
+  "usage_examples": [
+    "Optimizing 200KB JSON configuration files for Arduino-based edge devices with limited flash memory",
+    "Reducing 5MB+ GeoJSON map data files for faster client-side rendering in Leaflet.js web apps",
+    "Preparing JSON Web Tokens (JWTs) by removing whitespace before Base64Url encoding",
+    "Minifying package.json dependencies lists to meet AWS Lambda's 4KB environment variable size limit"
+  ],
+  "inputPlaceholder": "Enter text here..."
+}

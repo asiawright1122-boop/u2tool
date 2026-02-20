@@ -1,0 +1,14 @@
+{
+  "loadExample": "加载示例",
+  "jsonPlaceholder": "输入 JSON 数据...",
+  "schemaPlaceholder": "输入 JSON 架构...",
+  "validate": "验证",
+  "valid": "JSON 有效！",
+  "invalid": "JSON 无效",
+  "expectedType": "预期 {expected}，实际 {actual}",
+  "missingRequired": "缺少必需的属性：{prop}",
+  "stringTooShort": "字符串太短（最小：{min}）",
+  "stringTooLong": "字符串太长（最大：{max}）",
+  "numberTooSmall": "数字太小（最小：{min}）",
+  "numberTooLarge": "数字太大（最大：{max}）"
+}

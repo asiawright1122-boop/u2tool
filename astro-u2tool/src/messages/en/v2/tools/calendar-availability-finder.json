@@ -1,0 +1,38 @@
+{
+  "detailed_description": "Calendar Availability Finder helps find common free time slots when scheduling with multiple people.",
+  "usage_steps": [
+    "Add participant availability",
+    "Set meeting duration",
+    "Specify date range",
+    "View common slots",
+    "Select meeting time"
+  ],
+  "usage_examples": [
+    "Find team meeting times",
+    "Schedule interviews",
+    "Coordinate group events"
+  ],
+  "input": "Input",
+  "output": "Output",
+  "process": "Process",
+  "copy": "Copy",
+  "clear": "Clear",
+  "inputPlaceholder": "Enter your input here...",
+  "outputPlaceholder": "Results will appear here...",
+  "errors": {
+    "emptyInput": "Please enter some input"
+  },
+  "workHoursStart": "Work Hours Start",
+  "workHoursEnd": "Work Hours End",
+  "minDuration": "Min Duration",
+  "addPerson": "+ Add Person",
+  "participantsBusyTimes": "Participants & Busy Times",
+  "noBusyTimes": "No busy times",
+  "addBusyTime": "Add Busy Time",
+  "selectPerson": "Select person",
+  "to": "to",
+  "availableSlots": "Available Slots",
+  "noAvailableSlots": "No available slots found",
+  "tryAdjusting": "Try adjusting work hours or duration",
+  "timeline": "Timeline"
+}

@@ -1,0 +1,14 @@
+{
+  "loadExample": "샘플 로드",
+  "jsonPlaceholder": "JSON 데이터를 입력하세요...",
+  "schemaPlaceholder": "JSON 스키마 입력...",
+  "validate": "검증",
+  "valid": "JSON is valid!",
+  "invalid": "JSON is invalid",
+  "expectedType": "{예상} 예상, {실제} 획득",
+  "missingRequired": "필수 속성 누락: {prop}",
+  "stringTooShort": "문자열이 너무 짧습니다(최소: {min}).",
+  "stringTooLong": "문자열이 너무 깁니다(최대: {max}).",
+  "numberTooSmall": "숫자가 너무 작습니다(최소: {min})",
+  "numberTooLarge": "숫자가 너무 큽니다(최대: {max})."
+}

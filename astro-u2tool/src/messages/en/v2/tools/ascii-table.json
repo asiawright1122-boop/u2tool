@@ -1,0 +1,32 @@
+{
+  "searchPlaceholder": "Search by character, code, or description...",
+  "showExtended": "Show Extended ASCII (128-255)",
+  "selectedChar": "Selected Character",
+  "decimal": "Decimal",
+  "hex": "Hex",
+  "octal": "Octal",
+  "binary": "Binary",
+  "char": "Char",
+  "descriptionHeader": "Description",
+  "noResults": "No matching characters found",
+  "quickReference": "Quick Reference",
+  "controlChars": "Control Characters",
+  "punctuation": "Punctuation & Symbols",
+  "digits": "Digits (0-9)",
+  "uppercase": "Uppercase (A-Z)",
+  "lowercase": "Lowercase (a-z)",
+  "extended": "Extended ASCII",
+  "detailed_description": "Our comprehensive ASCII table provides a complete reference for all 128 standard ASCII characters plus extended ASCII (128-255). ASCII (American Standard Code for Information Interchange) is the fundamental character encoding standard used in computers and electronic devices. This ASCII code chart displays each character with its decimal, hexadecimal, octal, and binary values - essential for programmers working with low-level data, network protocols, or file formats. The table includes control characters (0-31) like NULL, TAB, and newline; printable characters including letters, numbers, and symbols; and extended ASCII characters for special symbols. Use the search function to quickly find any character by its code or description. Perfect for debugging character encoding issues, understanding escape sequences, or learning about computer character representation. Bookmark this ASCII reference chart for quick access during development.",
+  "usage_steps": [
+    "Browse the ASCII table to find character codes",
+    "Use the search box to find specific characters by code or description",
+    "Click on any character to see all its code representations",
+    "Toggle 'Show Extended ASCII' to view characters 128-255",
+    "Use quick reference sections to jump to specific character ranges"
+  ],
+  "usage_examples": [
+    "Find the ASCII code for newline character (decimal 10, hex 0A)",
+    "Look up the hex value for uppercase 'A' (decimal 65, hex 41)",
+    "Check control character codes for parsing text files and protocols"
+  ]
+}

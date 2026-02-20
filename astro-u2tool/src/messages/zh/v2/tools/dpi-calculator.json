@@ -1,0 +1,47 @@
+{
+  "detailed_description": "DPI计算器可以帮助您确定图像的打印质量或计算目标DPI所需的分辨率。您可以在这两种模式之间切换：从现有图像尺寸和打印尺寸计算DPI，或根据特定的DPI和打印尺寸计算所需的像素尺寸。对于摄影师、设计师和印刷专业人士来说必不可少。",
+  "usage_steps": [
+    "选择计算模式：DPI或像素",
+    "在DPI模式下：输入图像分辨率和打印尺寸",
+    "在像素模式下：输入目标DPI和打印尺寸",
+    "如需，选择常用打印尺寸预设",
+    "查看计算结果",
+    "复制结果以备参考"
+  ],
+  "usage_examples": [
+    "检查图像是否适合打印",
+    "计算大型打印所需的分辨率",
+    "规划相册图片要求"
+  ],
+  "calculateDpi": "Calculate DPI",
+  "calculatePixels": "Calculate Pixels",
+  "imageResolution": "Image Resolution",
+  "printSize": "Print Size",
+  "targetDpi": "Target DPI",
+  "width": "Width",
+  "height": "Height",
+  "inches": "inches",
+  "commonPrintSizes": "Common Print Sizes",
+  "calculatedDpi": "Calculated DPI",
+  "requiredResolution": "Required Resolution",
+  "horizontal": "Horizontal",
+  "vertical": "Vertical",
+  "megapixels": "Megapixels",
+  "dpiGuide": "DPI Guide",
+  "screen": "Screen/Web",
+  "draft": "Draft Print",
+  "print": "Quality Print",
+  "highQuality": "High Quality",
+  "quality": {
+    "excellent": "Excellent print quality",
+    "good": "Good print quality",
+    "acceptable": "Acceptable for viewing distance",
+    "low": "Low quality - may appear pixelated"
+  },
+  "imageWidth": "图像宽度 (px)",
+  "imageHeight": "图像高度 (px)",
+  "printWidth": "打印宽度",
+  "printHeight": "打印高度",
+  "dpi": "DPI",
+  "printQuality": "打印质量"
+}

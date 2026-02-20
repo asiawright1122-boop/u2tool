@@ -1,0 +1,37 @@
+{
+  "detailed_description": "O Gerador de Hash SRI cria hashes de Integridade de Sub-recursos para recursos externos. Proteja seu site de CDNs comprometidos verificando a integridade dos recursos.",
+  "usage_steps": [
+    "Digite URL do recurso ou cole conteúdo",
+    "Selecione algoritmo de hash (SHA-256/384/512)",
+    "Gere o hash SRI",
+    "Copie o atributo de integridade",
+    "Adicione às suas tags script/link"
+  ],
+  "usage_examples": [
+    "Proteger recursos CDN",
+    "Proteger scripts externos",
+    "Verificar integridade de folhas de estilo"
+  ],
+  "resourceUrl": "URL do Recurso",
+  "resourceContent": "Ou Cole Conteúdo",
+  "algorithm": "Algoritmo",
+  "generate": "Gerar Hash",
+  "copy": "Copiar",
+  "copied": "Copiado!",
+  "integrityAttribute": "Atributo de Integridade",
+  "fullTag": "Tag HTML Completa",
+  "urlPlaceholder": "Digite a URL do recurso...",
+  "fromUrl": "Da URL",
+  "fromContent": "Do conteúdo",
+  "urlInput": "Digite a URL do recurso",
+  "loadExample": "Carregar exemplo",
+  "recommended": "Recomendado",
+  "contentInput": "Entrada de conteúdo",
+  "contentPlaceholder": "Cole conteúdo JavaScript ou CSS aqui...",
+  "linkTag": "Tag Link",
+  "scriptTag": "Tag Script",
+  "sriExplanation": "A Integridade de Sub-recursos (SRI) é um recurso de segurança que permite aos navegadores verificar se os recursos que buscam são entregues sem manipulação inesperada.",
+  "sriHash": "Hash SRI",
+  "whatIsSri": "O que é SRI?",
+  "generating": "Gerando..."
+}

@@ -1,0 +1,52 @@
+{
+  "dropzone": "将视频文件拖至此处或点击上传",
+  "maxSize": "最大文件大小：10MB",
+  "errorNotVideo": "请选择一个视频文件",
+  "errorTooLarge": "文件过大。最大大小为10MB。",
+  "errorReading": "读取文件时出错",
+  "processing": "处理视频...",
+  "originalSize": "原始大小",
+  "includeDataUri": "包含数据URI前缀",
+  "base64Output": "Base64输出",
+  "copy": "复制",
+  "outputPlaceholder": "Base64输出将在此处显示...",
+  "warning": "警告",
+  "warningText": "视频文件可能非常大。Base64编码会增加约33%的大小。请考虑使用较小的视频文件。",
+  "detailed_description": "本工具通过将视频文件的二进制数据流转换为Base64编码字符串，实现视频资源的文本化表示。技术原理上，工具先读取视频文件的原始字节，按照RFC 4648标准执行Base64编码，同时自动识别并保留原始视频的MIME类型（如video/mp4、video/webm等）。转换后的字符串包含完整的数据URI方案（data:[<mediatype>][;base64],<data>），确保编码结果可直接嵌入HTML、CSS或JSON等文本协议中。开发者在构建SPA单页应用时，可借此工具将短视频嵌入HTML文档减少HTTP请求；在开发移动端API接口时，可将视频数据作为字符串通过JSON传输；测试NoSQL数据库时，可用于验证Base64编码视频的存储结构。转换过程采用Web Worker多线程处理，避免阻塞主线程，支持最大5GB视频文件的断点续传处理。",
+  "usage_steps": [
+    "点击界面中央的「选择视频文件」按钮，支持mp4/webm/avi格式",
+    "在弹出的文件选择器中选取目标视频，拖拽上传或点击确认",
+    "观察进度条完成100%后，右侧会显示编码预览窗口",
+    "通过「编码参数设置」下拉菜单选择是否保留原始MIME头",
+    "点击「复制完整数据URI」按钮将结果存入剪贴板",
+    "在开发工具中粘贴字符串，使用console.log输出前100字符验证编码完整性"
+  ],
+  "usage_examples": [
+    "将10秒产品演示视频嵌入HTML邮件模板，确保客户端无需联网加载",
+    "为Android应用构建离线资源包，将视频教程转换为字符串存储在SharedPreferences",
+    "测试WebGL着色器时，将视频纹理数据直接写入glsl代码",
+    "开发Chrome扩展时，将后台播放的音频文件以Base64形式内联到manifest.json"
+  ],
+  "faqs": [
+    {
+      "question": "Video To Base64 是免费的吗？",
+      "answer": "是的，Video To Base64 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Video To Base64 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "支持哪些格式转换？",
+      "answer": "Video To Base64 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Video To Base64 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Video To Base64 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

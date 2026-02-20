@@ -1,0 +1,28 @@
+{
+  "detailed_description": "The JSON to Protocol Buffers tool infers a proto3 schema from arbitrary JSON, producing a set of .proto message definitions that mirror the structure of your data. It performs a single-pass parse of the root object, applies type inference to each field, and emits messages with stable field numbering, repeated and map handling, and optional packaging into a namespace. Primitive values map to standard proto3 scalar types: number to double, boolean to bool, and string to string. Arrays become repeated fields using the element type inferred from the first non-null item, with nulls filtered when possible. Objects become nested messages or, when heterogeneous, resolve to google.protobuf.Struct. Maps are detected when an object has uniform string keys and homogeneous value types; otherwise they default to map<string, google.protobuf.Value>. Oneofs are proposed for sibling mutually exclusive keys (e.g., type/discriminator fields). Repeated arrays of objects are flattened into message fields, and arrays of primitives are emitted as repeated<T>. The generator assigns sequential field numbers and supports camelCase or snake_case naming styles. It can wrap Timestamp strings in google.protobuf.Timestamp and optionally emit WKTs for Duration, Wrappers, and Value. Options such as package name, message prefix, reserved ranges, and ordering are configurable. The tool validates identifiers and emits reserved statements for gaps, preventing future numbering collisions. Output includes comments referencing inferred origin paths, enabling traceability back to the original JSON.",
+  "usage_steps": [
+    "Open the tool, paste JSON into the Source JSON editor, or click Load Sample to try a prefilled payload.",
+    "Open the Options panel: set the Package (e.g., acme.events), Message Prefix (e.g., Event), and choose a Naming Style (camelCase or snake_case).",
+    "Toggle optional behaviors: Treat ISO 8601 timestamps as google.protobuf.Timestamp, emit WKTs for Duration/Wrappers/Value, and choose Map detection strategy (strict or relaxed).",
+    "Click Infer Schema. The output pane displays proto3 messages with numbered fields, nested messages, and map/repeated declarations.",
+    "Use the Jump to message and Find field controls to navigate the generated schema and check inferred types for any path.",
+    "Click Copy .proto or Download .proto to export, then paste into your codebase or compile with protoc."
+  ],
+  "usage_examples": [
+    "Convert a Stripe webhook JSON payload to a proto schema suitable for a payment service. Nested money objects become a Money message, timestamps map to google.protobuf.Timestamp, and idempotency keys use string fields, enabling consistent event ingestion and validation across multiple services.",
+    "Generate a schema for GitHub Actions workflow_run events. The tool emits nested messages for actor, repository, and workflow_job, handles repeated arrays of steps and checks as repeated Step messages, and uses oneof for the event discriminator, producing a compact, backward-compatible .proto.",
+    "Transform IoT telemetry JSON from devices into a compact schema for a streaming pipeline. Arrays of sensor readings become repeated fields, timestamp fields are treated as google.protobuf.Timestamp, and optional metadata is emitted using wrappers, minimizing serialization overhead on high-throughput topics.",
+    "Infer a schema from a GraphQL introspection JSON response. The tool creates messages for types and fields, emits oneofs for kind variants, maps repeatable flags to repeated bool, and produces a .proto that mirrors the introspection format, facilitating codegen and static analysis tooling."
+  ],
+  "jsonInput": "JSON Input",
+  "protoOutput": "Proto Output",
+  "messageName": "Message Name",
+  "packageName": "Package Name",
+  "convert": "Convert",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "download": "Download .proto",
+  "inputPlaceholder": "Paste your JSON here...",
+  "placeholder": "Paste your JSON here...",
+  "outputPlaceholder": "Protocol Buffers output will appear here..."
+}

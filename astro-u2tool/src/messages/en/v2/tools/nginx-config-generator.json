@@ -1,0 +1,29 @@
+{
+  "serverName": "Server Name",
+  "rootPath": "Root Path",
+  "proxyPass": "Proxy Pass (optional)",
+  "features": "Features",
+  "enableSsl": "Enable SSL/HTTPS",
+  "enableGzip": "Enable Gzip Compression",
+  "enableCaching": "Enable Static File Caching",
+  "enablePhp": "Enable PHP-FPM",
+  "generate": "Generate Nginx Config",
+  "copy": "Copy to Clipboard",
+  "output": "Generated Nginx Configuration",
+  "detailed_description": "The Nginx Config Generator is a specialized tool designed to automate the creation of Nginx server configuration files, ensuring precise syntax and optimal performance for diverse deployment scenarios. This tool addresses the complexities of manual configuration, which often leads to syntax errors, security vulnerabilities, or suboptimal resource utilization. By translating user-defined parameters into validated Nginx directives, it simplifies tasks like reverse proxy setup, load balancing, and SSL termination. Developers working with microservices, containerized applications, or high-traffic websites can leverage the tool's advanced options for HTTP/2, rate limiting, and upstream server pooling. The backend parses user inputs into structured NGINX configuration blocks (e.g., server, location, upstream), incorporating modules like ngx_http_ssl_module or ngx_http_gzip_module based on selected features. It also enforces security best practices by default, such as disabling outdated protocols and generating strong Diffie-Hellman parameters when SSL is enabled. The generated configurations are compatible with both traditional server deployments and modern container environments, supporting dynamic variable substitution for Kubernetes or Docker Swarm contexts.",
+  "usage_steps": [
+    "1. Select server type (HTTP, HTTPS, reverse proxy, or load balancer) from the configuration mode dropdown.",
+    "2. Enter domain names in the Server Name field and specify custom port numbers using the Advanced Port Mapping toggle.",
+    "3. Enable SSL/TLS by selecting Let's Encrypt integration or uploading certificate paths, which auto-generates ssl_certificate directives.",
+    "4. Configure reverse proxy settings by defining upstream server groups with weighted load balancing and health check parameters.",
+    "5. Activate advanced modules via checkboxes for features like HTTP/2 support, gzip compression, or rate limiting with customizable thresholds.",
+    "6. Click 'Generate Config' to produce a validated configuration file with error-checked syntax and embedded optimization headers."
+  ],
+  "usage_examples": [
+    "Example 1: A developer deploying a React SPA configures Nginx to serve static assets with Brotli compression and cache-control headers via the tool's performance optimization section.",
+    "Example 2: DevOps engineers use the load balancing template to distribute traffic across three Node.js microservices, specifying least-connected routing and sticky sessions.",
+    "Example 3: A system administrator generates a reverse proxy configuration with WebSockets support for a Dockerized Python application, including X-Forwarded-For headers.",
+    "Example 4: E-commerce teams create an HTTP/2-enabled configuration with OCSP stapling and HSTS headers, integrating existing Let's Encrypt certificates through file path inputs."
+  ],
+  "exampleDomain": "example.com"
+}

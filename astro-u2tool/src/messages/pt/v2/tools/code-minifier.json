@@ -1,0 +1,28 @@
+{
+  "codeType": "Tipo de Código",
+  "placeholder": "Insira o código {type} para minificar...",
+  "original": "Original",
+  "minified": "Minificado",
+  "saved": "Salvo",
+  "detailed_description": "O Code Minifier é uma ferramenta de desenvolvimento que otimiza o código HTML, CSS e JavaScript, reduzindo significativamente o tamanho dos arquivos sem afetar a funcionalidade. Essa otimização é crucial para melhorar o desempenho dos sites, especialmente em ambientes de produção onde cada byte economizado pode resultar em carregamentos mais rápidos e uma experiência do usuário mais fluida. A minificação remove espaços em branco, comentários, e reduz nomes de variáveis e funções, mantendo a estrutura lógica intacta. Desenvolvedores utilizam o Code Minifier para preparar seus projetos para implantação, garantindo que os arquivos sejam compactos e eficientes. A ferramenta suporta múltiplos formatos de entrada e saída, permitindo a integração com pipelines de desenvolvimento automatizados. Além disso, o Code Minifier oferece opções avançadas, como a preservação de comentários críticos e a geração de mapas de origem, facilitando a depuração do código minificado.",
+  "usage_steps": [
+    "Acesse a página do Code Minifier no site de ferramentas de desenvolvimento.",
+    "Selecione o tipo de código que deseja minificar: HTML, CSS ou JavaScript, usando o seletor de tipo de arquivo.",
+    "Cole o código que deseja minificar no campo de entrada, ou faça upload de um arquivo diretamente arrastando-o para a área designada.",
+    "Configure as opções avançadas, se necessário, como a preservação de comentários e a geração de mapas de origem, através do painel de configurações.",
+    "Clique no botão 'Minificar' para processar o código. A ferramenta irá analisar e otimizar o código de acordo com as configurações selecionadas.",
+    "Baixe o código minificado ou copie-o diretamente do campo de saída para uso em seu projeto."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor front-end está preparando uma página HTML para implantação em um servidor de produção. Ele usa o Code Minifier para remover todos os espaços em branco e comentários, garantindo que o arquivo HTML seja o menor possível, o que resulta em tempos de carregamento mais rápidos para os usuários.",
+    "Um designer web precisa otimizar um arquivo CSS extenso que contém muitos comentários e espaços em branco. Ele usa o Code Minifier para reduzir o tamanho do arquivo sem perder a funcionalidade, melhorando a performance do site e reduzindo o tempo de carregamento.",
+    "Um desenvolvedor de JavaScript está trabalhando em uma biblioteca que será distribuída para uso em diferentes projetos. Ele usa o Code Minifier para minificar o código da biblioteca, tornando-o mais compacto e eficiente, o que facilita a integração em projetos de terceiros.",
+    "Um time de desenvolvimento está automatizando o processo de implantação de um aplicativo web. Eles integram o Code Minifier em seu pipeline de CI/CD para minificar automaticamente os arquivos HTML, CSS e JavaScript antes da implantação, garantindo que os arquivos sejam otimizados e compactos para o ambiente de produção."
+  ],
+  "input": "Entrada",
+  "minify": "Minificar",
+  "clear": "Limpar",
+  "output": "Saída",
+  "copied": "Copiado!",
+  "copy": "Copiar"
+}

@@ -1,0 +1,19 @@
+{
+  "detailed_description": "vCard 解析器是一款在线工具，用于读取和查看 VCF 联系人文件。上传 VCF 文件或粘贴原始 vCard 数据，即可在整洁、有组织的格式中查看所有联系信息。解析器提取姓名、电话号码、电子邮件地址、实际地址、组织、职位、照片和社交资料。支持 vCard 版本 2.1、3.0 和 4.0。非常适合查看联系人导出、调试联系人同步问题或从 VCF 文件中提取数据而无需导入到联系人应用。",
+  "usage_steps": [
+    "上传 VCF 文件或粘贴内容",
+    "查看解析后的联系人",
+    "导出为 JSON 格式"
+  ],
+  "usage_examples": [
+    "查看联系人导出",
+    "提取联系人数据"
+  ],
+  "parse": "解析",
+  "uploadFile": "上传文件",
+  "vcardContent": "vCard 内容",
+  "foundContacts": "发现联系人",
+  "exportJSON": "导出 JSON",
+  "unnamed": "未命名联系人",
+  "inputPlaceholder": "在此粘贴 vCard/VCF 内容或上传文件..."
+}

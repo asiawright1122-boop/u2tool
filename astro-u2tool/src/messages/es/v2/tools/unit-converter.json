@@ -1,0 +1,22 @@
+{
+  "enterValue": "Introduce el valor",
+  "swapUnits": "Intercambia unidades",
+  "detailed_description": "El Convertidor de Unidades es una herramienta técnica diseñada para transformar magnitudes físicas entre sistemas de medición diversos. Utiliza una base de datos de factores de conversión predefinidos según estándares internacionales (como el SI y el sistema imperial), permitiendo conversiones precisas entre categorías como longitud (milímetros a pulgadas), masa (kilogramos a libras), temperatura (Celsius a Fahrenheit), área y volumen. Su motor matemático implementa algoritmos de redondeo controlado para preservar la precisión decimal y soporta notación científica en entradas/salidas. Los usuarios necesitan esta herramienta para proyectos de ingeniería multidisciplinaria, análisis de datos globales o desarrollo de software internacionalizado, donde la interoperabilidad de unidades es crítica. Al introducir un valor numérico y seleccionar las unidades de origen y destino, el sistema aplica inmediatamente la fórmula correspondiente (ej: °F = (°C × 9/5) + 32) y actualiza el resultado en tiempo real, incluyendo opciones de ajuste de decimales y formato exponencial.",
+  "usage_steps": [
+    "Selecciona la categoría de conversión (longitud, temperatura, etc.) en el menú desplegable principal.",
+    "Introduce el valor numérico en el campo de entrada de 'Valor Origen'.",
+    "Elige la unidad de origen y destino desde los selectores con íconos de banderas para unidades internacionales.",
+    "Ajusta el control deslizante de 'Precisión Decimal' para definir el número de cifras significativas.",
+    "Activa la opción 'Notación Científica' si se requiere formato exponencial en el resultado.",
+    "Copia el resultado convertido haciendo clic en el botón 'Copiar al Portapapeles' con animación de confirmación."
+  ],
+  "usage_examples": [
+    "Un desarrollador convierte coordenadas GPS de grados decimales a radianes para implementar un algoritmo de geolocalización.",
+    "Un estudiante transforma presiones atmosféricas de hectopascales a mmHg para un informe de meteorología.",
+    "Un ingeniero químico traduce caudales de litros por segundo a galones por minuto al diseñar tuberías en EE.UU.",
+    "Un chef profesional adapta recetas de cocina europeas (gramos) a tazas y onzas para un libro de cocina internacional."
+  ],
+  "copied": "Copiado!",
+  "copy": "Copiar",
+  "result": "Resultado"
+}

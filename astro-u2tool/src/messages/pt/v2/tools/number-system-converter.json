@@ -1,0 +1,25 @@
+{
+  "binary": "Binário",
+  "octal": "Octal",
+  "decimal": "Decimal",
+  "hexadecimal": "Hexadecimal",
+  "inputBase": "Base de Entrada",
+  "results": "Resultados",
+  "bitRepresentation": "Representação Binária",
+  "invalidInput": "Entrada inválida para {base}",
+  "detailed_description": "O Number System Converter é uma ferramenta técnica especializada para conversão de valores entre bases numéricas diferentes, incluindo binário (base 2), octal (base 8), decimal (base 10) e hexadecimal (base 16). Além da conversão direta, ele suporta representações com e sem sinal, números em ponto flutuante (IEEE 754) e detecção automática de prefixos comuns (como '0x' para hexadecimal). Desenvolvido com algoritmos otimizados baseados em expansão polinomial e método de divisão sucessiva, o conversor processa entradas de até 64 bits, lidando com casos complexos como complemento de dois para valores negativos. Essa ferramenta é essencial para engenheiros de redes que precisam decodificar endereços IPv4 em formato octal, programadores de sistemas que manipulam registradores em hexadecimal, ou analistas de dados trabalhando com formatos binários compactados. Sua engine interna valida automaticamente a notação da entrada (por exemplo, identificando '0b1101' como binário) e aplica regras específicas para truncamento ou arredondamento em conversões fracionárias, garantindo precisão em cenários críticos como cálculos de precisão finita em DSPs.",
+  "usage_steps": [
+    "1. Acesse a interface e selecione a base numérica de origem no menu suspenso 'Entrada'.",
+    "2. Insira o valor no campo designado, usando notações como '0x' para hexadecimal ou '0b' para binário.",
+    "3. Marque a opção 'Ponto Flutuante' se desejar converter números decimais fracionários.",
+    "4. Escolha a base de destino no segundo menu suspenso 'Saída'.",
+    "5. Ative o modo 'Detalhado' para visualizar o processo de conversão passo a passo.",
+    "6. Clique em 'Converter' e copie o resultado no formato necessário (texto, JSON ou tabela)."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor de firmware precisa converter endereços de memória de hexadecimal para binário ao depurar um microcontrolador ARM.",
+    "Um profissional de segurança da informação decodifica logs de sistema que exibem permissões de arquivos em octal para decimal.",
+    "Um cientista de dados transforma dados brutos de sensores (em formato hexadecimal) para decimal para análise em Python.",
+    "Um estudante de eletrônica converte números decimais negativos para complemento de dois em binário para simular circuitos lógicos."
+  ]
+}

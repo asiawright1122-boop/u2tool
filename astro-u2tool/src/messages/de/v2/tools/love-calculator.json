@@ -1,0 +1,36 @@
+{
+  "yourName": "Ihr Name",
+  "partnerName": "Partnername",
+  "compatibility": "Kompatibilität",
+  "result": "Liebesergebnis",
+  "perfectMatch": " perfekter Match!",
+  "greatMatch": "Großer Match!",
+  "goodMatch": "Guter Match",
+  "average": "Durchschnittliche Kompatibilität",
+  "needsWork": "Muss verbessert werden",
+  "disclaimer": "Dies dient nur zu Unterhaltungszwecken",
+  "detailed_description": "Der Love Calculator ist ein interaktiver Algorithmus, der auf der Grundlage von Zeichenkodierung und Hashing-Techniken eine spielerische Kompatibilitätsanalyse zwischen zwei Namen generiert. Technisch gesehen verarbeitet das Tool Eingaben durch eine Kombination aus ASCII-Wertsummen, modifizierten CRC32-Hashes und gewichteten Prozentberechnungen. Die Eingaben werden zunächst normalisiert (Entfernung von Sonderzeichen, Kleinbuchstaben-Konvertierung), dann werden die ASCII-Codes der Zeichen summiert und mit einem pseudo-kryptografischen Schlüssel multipliziert. Anschließend wird ein modifizierter CRC32-Hash berechnet, der in einen Prozentwert zwischen 0% und 100% skaliert wird. Diese Methode erzeugt reproduzierbare, wenn auch nicht wissenschaftlich validierte Ergebnisse, die besonders bei Nutzern beliebt sind, die algorithmische Kreativität in sozialen Kontexten schätzen. Entwickler können den Code als Beispiel für nicht-kryptografische Hash-Anwendungen analysieren, während Privatnutzer es für Partyspiele, Beziehungsanalysen oder kreative Schreibprojekte verwenden können. Der Calculator nutzt clientseitige JavaScript-Verarbeitung ohne Serveranbindung, wodurch Datenschutz und Echtzeitfeedback gewährleistet sind.",
+  "usage_steps": [
+    "Geben Sie den ersten Namen in das Eingabefeld 'Name 1' ein (max. 25 Zeichen, Sonderzeichen werden automatisch entfernt)",
+    "Tragen Sie den zweiten Namen in das Feld 'Name 2' ein und achten Sie auf korrekte Rechtschreibung",
+    "Wählen Sie im Dropdown 'Berechnungsmodus' zwischen 'Standard'-Algorithmus und 'Erweitert' (inkl. Berücksichtigung von Geburtsdaten)",
+    "Klicken Sie auf 'Kompatibilität berechnen' um den Algorithmus zu starten",
+    "Analysieren Sie das Ergebnis im interaktiven Diagramm, das Prozentwert, Herzsymbolik und Textkommentar kombiniert",
+    "Nutzen Sie die 'Ergebnis teilen'-Schaltfläche, um einen personalisierten Link mit Hash-Parameter für die Wiederholung zu generieren"
+  ],
+  "usage_examples": [
+    "Ein Paar berechnet vor einer Urlaubsreise ihre Kompatibilität für gemeinsame Entscheidungen",
+    "Ein Entwicklerteam nutzt das Tool als icebreaker für eine Teambuilding-Session mit algorithmischem Twist",
+    "Ein Schriftsteller analysiert fiktive Charakterpaare für Romankonflikte durch wiederholte Tests mit modifizierten Namen",
+    "Ein Data-Science-Student vergleicht die statistische Verteilung von 1000 Zufallsnamenpaaren als Proof-of-Concept für Hash-Funktionen"
+  ],
+  "result90": "Ergebnis 90%",
+  "result80": "Ergebnis 80%",
+  "result70": "Ergebnis 70%",
+  "result60": "Ergebnis 60%",
+  "result50": "Ergebnis 50%",
+  "enterName": "Geben Sie Namen ein",
+  "calculating": "Berechnen",
+  "calculate": "Berechnen",
+  "share": "Teilen"
+}

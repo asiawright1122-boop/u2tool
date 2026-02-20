@@ -1,0 +1,26 @@
+{
+  "uploadHint": "Click to upload or drag and drop",
+  "supportedFormats": "PNG, JPG, GIF, SVG, WebP",
+  "copyDataUrl": "Copy Data URL",
+  "copyRawBase64": "Copy Raw Base64",
+  "base64Output": "Base64 Output",
+  "htmlImageTag": "HTML Image Tag",
+  "cssBackground": "CSS Background",
+  "detailed_description": "This tool converts image files into Base64-encoded strings using MIME-type-aware binary-to-text encoding. By processing image headers and pixel data through a buffer allocation algorithm, it generates RFC 4648-compliant data URIs suitable for direct embedding in HTML, CSS, or JavaScript. Developers require this functionality to optimize page load performance by eliminating HTTP requests for small graphics, inline critical UI assets in single-page applications, or create self-contained email templates. The converter handles JPEG, PNG, and WebP formats by reading their binary structure, detecting color profiles, and applying Base64 alphabet encoding with proper padding. Output strings include the appropriate data URI scheme prefix (e.g., 'data:image/png;base64,') for immediate implementation in web contexts.",
+  "usage_steps": [
+    "1. Click 'Choose File' to select an image from your device (supports PNG, JPEG, WebP up to 10MB)",
+    "2. Toggle 'Preserve Transparency' for PNG files requiring alpha channel retention",
+    "3. Select target encoding format from dropdown (original format preserved by default)",
+    "4. Adjust quality slider (60-100%) for JPEG compression optimization",
+    "5. Click 'Convert' to process the image through the Base64 encoder",
+    "6. Copy the output URI from the text area or download the encoded string as .txt"
+  ],
+  "usage_examples": [
+    "Embedding a company logo in a transactional email template to ensure display across clients",
+    "Inlining social media icons in a progressive web app's service worker script",
+    "Creating data URI CSS sprites for responsive navigation bars",
+    "Generating embeddable favicons directly in HTML headers for SEO optimization"
+  ],
+  "clear": "Clear",
+  "copied": "Copied!"
+}

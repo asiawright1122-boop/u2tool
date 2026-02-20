@@ -1,0 +1,31 @@
+{
+  "columns": "Columns",
+  "rows": "Rows",
+  "gap": "Gap (px)",
+  "justifyItems": "Justify Items",
+  "stretch": "Stretch",
+  "start": "Start",
+  "center": "Center",
+  "end": "End",
+  "columnSizes": "Column Sizes",
+  "col": "Col {index}",
+  "rowSizes": "Row Sizes",
+  "row": "Row {index}",
+  "preview": "Preview",
+  "generatedCss": "Generated CSS",
+  "detailed_description": "Our free CSS Grid generator helps web developers create complex grid layouts without writing code from scratch. CSS Grid is a powerful two-dimensional layout system that revolutionized web design by enabling precise control over rows and columns. With this visual CSS grid builder, you can define the number of columns and rows, set custom sizes using fr units, pixels, or percentages, and adjust gaps between grid items. The live preview shows exactly how your layout will look, making it easy to experiment with different configurations. Perfect for creating responsive website layouts, card grids, image galleries, and dashboard designs. Copy the generated CSS code directly into your project. Works with all modern browsers including Chrome, Firefox, Safari, and Edge.",
+  "usage_steps": [
+    "Set the number of columns and rows for your grid layout",
+    "Adjust column and row sizes using fr units, px, or percentages",
+    "Set the gap value to control spacing between grid items",
+    "Choose justify-items alignment (stretch, start, center, end)",
+    "Preview your layout and copy the generated CSS code"
+  ],
+  "usage_examples": [
+    "Create a 3-column responsive card layout with equal widths using 1fr 1fr 1fr",
+    "Build a dashboard layout with a sidebar (250px) and main content area (1fr)",
+    "Design an image gallery grid with 4 columns and 20px gaps"
+  ],
+  "copied": "Copied!",
+  "copy": "Copy"
+}

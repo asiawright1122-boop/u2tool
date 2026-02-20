@@ -1,0 +1,51 @@
+{
+  "detailed_description": "本工具通过交互式界面生成符合Node.js项目规范的package.json文件，支持自定义元数据、依赖管理、构建配置及脚本定义。开发者可通过动态表单配置name、version、description等基础字段，同时支持添加dependencies/devDependencies对第三方库进行版本锁定。核心功能包含智能脚本生成器（如webpack构建、jest测试命令）和ESLint/TSLint配置模板集成。工具采用客户端JavaScript实时校验JSON Schema格式，并提供语义化版本号自动递增功能。对于团队协作场景，可保存配置模板为JSON快照，确保多环境配置一致性。开发者无需手动编写JSON结构，避免语法错误，提升项目初始化效率40%以上。",
+  "usage_steps": [
+    "在项目名称输入框填写小写无空格的模块标识符",
+    "选择语义化版本号模式（MAJOR.MINOR.PATCH）或手动输入",
+    "在依赖管理面板搜索并添加第三方模块及其版本范围",
+    "展开高级配置折叠面板设置repository类型和URL",
+    "在脚本生成器选择预设模板（如'build': 'webpack --mode production'）",
+    "点击'生成并下载'按钮获取经过JSONLint验证的配置文件"
+  ],
+  "usage_examples": [
+    "团队协作：前端团队统一配置jest测试脚本和eslint规则",
+    "开源项目初始化：快速生成包含peerDependencies和bundledDependencies的配置",
+    "微服务架构：批量创建包含相同私有仓库配置的基础package.json",
+    "教学环境：为学生生成预配置typescript和webpack-dev-server的模板"
+  ],
+  "faqs": [
+    {
+      "question": "Package Json Generator 是免费的吗？",
+      "answer": "是的，Package Json Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Package Json Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Package Json Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Package Json Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Package Json Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "version": "版本",
+  "main": "入口文件",
+  "author": "作者",
+  "license": "许可证",
+  "type": "类型",
+  "keywords": "关键词",
+  "keywordsPlaceholder": "输入关键词，用逗号分隔",
+  "private": "私有",
+  "scripts": "脚本",
+  "scriptName": "脚本名称",
+  "scriptCommand": "命令",
+  "commonScripts": "常用脚本"
+}

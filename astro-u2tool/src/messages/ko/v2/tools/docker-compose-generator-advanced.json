@@ -1,0 +1,39 @@
+{
+  "detailed_description": "Docker Compose 생성기는 다중 컨테이너 애플리케이션의 docker-compose.yml 설정을 생성합니다.",
+  "usage_steps": [
+    "템플릿에서 서비스 선택",
+    "포트 및 볼륨 설정",
+    "네트워크 구성",
+    "건강 검사 추가",
+    "docker-compose.yml 다운로드"
+  ],
+  "usage_examples": [
+    "개발 환경 생성",
+    "생산 환경 설정",
+    "マイ크로서비스 스택 빌드"
+  ],
+  "input": "입력",
+  "output": "출력",
+  "process": "처리",
+  "copy": "복사",
+  "clear": "지우기",
+  "inputPlaceholder": "여기에 입력하세요...",
+  "outputPlaceholder": "결과가 여기에 나타납니다...",
+  "errors": {
+    "emptyInput": "입력을 입력해 주세요"
+  },
+  "quickAddService": "빠른 서비스 추가",
+  "services": "서비스",
+  "addEmptyService": "+ 빈 서비스 추가",
+  "serviceName": "서비스_이름",
+  "remove": "제거",
+  "image": "이미지",
+  "restartPolicy": "재시작 정책",
+  "ports": "포트 (쉼표로 구분, 예: 3000:3000, 8080:80)",
+  "volumes": "볼륨 (쉼표로 구분)",
+  "dependsOn": "의존성 (쉼표로 구분된 서비스 이름)",
+  "none": "없음",
+  "always": "항상",
+  "unlessStopped": "중지되지 않는 한",
+  "onFailure": "실패 시"
+}

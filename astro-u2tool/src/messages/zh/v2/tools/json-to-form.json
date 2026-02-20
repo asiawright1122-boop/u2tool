@@ -1,0 +1,29 @@
+{
+  "detailed_description": "JSON to Form Generator 是一款将 JSON Schema 规范自动转换为交互式 HTML 表单的技术工具。通过解析 JSON 结构中的 type、properties、required 等关键字，该工具可动态生成包含输入验证、条件逻辑和嵌套结构的表单界面。开发者无需手动编写 HTML 表单代码，即可实现复杂的数据采集需求。该工具采用递归算法处理嵌套对象和数组类型，支持 enum 枚举选择、pattern 正则校验等高级功能。对于需要快速构建动态配置表单、API 请求界面或数据采集模板的场景，该工具可提升开发效率 70% 以上。其核心价值在于解决传统开发中表单与数据结构不一致的问题，特别适合微服务配置管理、多端数据同步等需要频繁调整表单结构的场景。",
+  "usage_steps": [
+    "在代码编辑区域粘贴符合 JSON Schema 规范的结构定义",
+    "通过右侧配置面板选择表单框架（如 Bootstrap 5 或 Ant Design）",
+    "映射字段类型：为每个属性选择对应的表单元素（输入框/选择器/复选框）",
+    "启用验证规则：勾选 required 字段自动添加必填校验，设置最小/最大值限制",
+    "点击「生成表单」按钮预览响应式布局效果",
+    "导出 HTML 代码或复制嵌入式 iframe 代码到目标项目"
+  ],
+  "usage_examples": [
+    "后端开发人员将 REST API 的请求体结构转换为测试表单，快速验证接口兼容性",
+    "数据分析师创建动态问卷模板，通过 JSON 配置实现分支逻辑题型",
+    "前端团队统一多个业务系统的表单样式，通过 JSON Schema 实现设计系统集成",
+    "物联网设备配置工具，将设备参数结构实时转换为可视化配置界面"
+  ],
+  "jsonSchema": "JSON模式",
+  "formPreview": "表单预览",
+  "htmlOutput": "HTML输出",
+  "generate": "生成表单",
+  "copy": "复制",
+  "copied": "已复制！",
+  "inputPlaceholder": "输入JSON模式...",
+  "placeholder": "在此粘贴JSON模式...",
+  "loadExample": "加载示例",
+  "jsonInput": "JSON输入",
+  "copyCode": "复制代码",
+  "submit": "提交"
+}

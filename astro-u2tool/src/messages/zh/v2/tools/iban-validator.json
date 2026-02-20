@@ -1,0 +1,34 @@
+{
+  "inputLabel": "输入IBAN",
+  "placeholder": "例如：DE89370400440532013000",
+  "validate": "验证",
+  "valid": "有效的IBAN",
+  "invalid": "无效的IBAN",
+  "country": "国家",
+  "checkDigits": "校验位",
+  "bankCode": "银行代码",
+  "bban": "基本银行账户号码（BBAN）",
+  "formatted": "格式化后的IBAN",
+  "copy": "复制",
+  "exampleIbans": "示例IBAN号码",
+  "errors": {
+    "empty": "请输入IBAN号码",
+    "invalidFormat": "IBAN格式无效",
+    "unknownCountry": "国家代码未知",
+    "invalidLength": "长度错误：应为{expected}个字符，实际为{actual}个字符",
+    "invalidChecksum": "校验和错误：IBAN可能不正确"
+  },
+  "detailed_description": "IBAN验证器是一个功能齐全的工具，用于验证国际银行账户号码（IBAN）。它可以检查来自所有欧洲国家的IBAN号码的格式、国家代码、长度和校验和。该工具还能解析IBAN，显示银行代码、国家信息及基本银行账户号码（BBAN）的详细信息。",
+  "usage_steps": [
+    "在输入框中输入或粘贴IBAN号码",
+    "点击“验证”按钮检查IBAN的有效性",
+    "查看包含国家及银行信息的验证结果",
+    "使用示例IBAN号码测试不同国家的IBAN格式",
+    "复制格式化后的IBAN号码以用于银行转账"
+  ],
+  "usage_examples": [
+    "在进行国际银行转账前验证IBAN号码",
+    "检查客户提供的银行账户号码",
+    "验证支付处理系统所需的IBAN格式"
+  ]
+}

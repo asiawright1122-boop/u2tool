@@ -1,0 +1,23 @@
+{
+  "detailed_description": "O Image Cropper é uma ferramenta especializada para recorte pixel-perfeito de imagens, ideal para desenvolvedores e designers que necessitam de precisão em ajustes de proporção e composição visual. Tecnologicamente, o tool permite definir áreas de recorte manuais ou pré-definidas (como 1:1, 4:3, 16:9 e proporção áurea), mantendo a integridade do metadata e resolução original através de algoritmos de interpolação bicúbica. A funcionalidade de 'smart crop' identifica automaticamente regiões de interesse usando análise de histograma de cores e detecção de bordas, preservando elementos centrais mesmo em cortes agressivos. Sua interface suporta manipulação de camadas vetoriais em formatos como PNG e SVG, além de manter perfis de cor ICC durante o processo. Essencial para preparação de assets para responsive design, criação de thumbnails otimizados, ou ajuste de imagens para redes sociais com requisitos específicos de dimensão. O processamento ocorre localmente no navegador via WebAssembly, garantindo velocidade e privacidade dos dados.",
+  "usage_steps": [
+    "Faça upload da imagem via seletor de arquivos ou arraste diretamente para a área de trabalho.",
+    "Escolha entre proporções fixas (1:1, 4:3, 16:9) ou insira valores personalizados no campo 'W:H' no painel de configurações.",
+    "Utilize a ferramenta de seleção para ajustar manualmente os limites da área de recorte, observando as coordenadas X/Y exibidas em tempo real.",
+    "Ative a opção 'Manter Qualidade' para preservar DPI e profundidade de cor durante o recorte.",
+    "Visualize o preview em alta resolução no painel lateral, alternando entre modos 'antes/depois' para comparar resultados.",
+    "Exporte o resultado em PNG, JPEG ou WebP, definindo manualmente o nível de compressão se necessário."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor ajusta imagens de produtos para e-commerce, garantindo proporções exatas para carrosséis em frameworks como Bootstrap.",
+    "Um designer prepara artes para Instagram Stories, convertendo fotos 3:4 em formatos verticais 9:16 sem perder elementos essenciais.",
+    "Um fotógrafo remove bordas indesejadas de retratos usando a função 'Content-Aware Crop', mantendo o foco no rosto do sujeito.",
+    "Um front-end engineer otimiza imagens para breakpoints específicos, exportando múltiplos tamanhos simultaneamente com nomes padronizados."
+  ],
+  "aspectRatio": "Proporção",
+  "selectArea": "Selecionar área",
+  "changeImage": "Alterar imagem",
+  "preview": "Visualizar",
+  "cropFirst": "Corte uma imagem primeiro",
+  "crop": "Cortar"
+}

@@ -1,0 +1,29 @@
+{
+  "swapColors": "Trocar cores",
+  "sampleText": "O rápido cão marrom salta sobre o cachorro preguiçoso.",
+  "smallText": "Amostra de texto pequeno para testes de acessibilidade.",
+  "guidelinesAA": "AA: Contraste mínimo de 4,5:1 para texto normal e 3:1 para texto grande",
+  "guidelinesAAA": "AAA: Contraste aprimorado de 7:1 para texto normal e 4,5:1 para texto grande",
+  "guidelinesLarge": "Texto grande: 18pt (24px) ou 14pt (18,5px) em negrito",
+  "presetBlackOnWhite": "Preto sobre Branco",
+  "presetWhiteOnBlack": "Branco sobre Preto",
+  "presetDarkGrayOnLight": "Cinza Escuro sobre Claro",
+  "presetBlueOnWhite": "Azul sobre Branco",
+  "presetWhiteOnBlue": "Branco sobre Azul",
+  "presetDarkOnYellow": "Cinza Escuro sobre Amarelo",
+  "detailed_description": "O Color Contrast Checker é uma ferramenta técnica projetada para calcular o índice de contraste relativo entre duas cores, verificando sua conformidade com as diretrizes WCAG 2.1 (Web Content Accessibility Guidelines). Utilizando a fórmula de luminância relativa (L = 0.2126 × R + 0.7152 × G + 0.0722 × B para componentes sRGB normalizados), a ferramenta converte valores hexadecimais ou RGB em componentes linearizados, aplica correção gama e calcula a razão (L1 + 0.05)/(L2 + 0.05), onde L1 e L2 representam as luminâncias do texto e do fundo. O resultado é comparado aos limiares estabelecidos: 4.5:1 para nível AA (mínimo recomendado) e 7:1 para nível AAA (acessibilidade aprimorada). Essencial para desenvolvedores e designers que precisam garantir acessibilidade para usuários com daltonismo, baixa visão ou outros déficits visuais, a ferramenta identifica automaticamente contrastes inadequados em interfaces, documentos PDF ou componentes UI. Além da análise numérica, exibe visualizações simuladas de diferentes tipos de deficiência visual, permitindo ajustes proativos.",
+  "usage_steps": [
+    "Acesse a ferramenta e insira os códigos hexadecimais ou RGB das cores de texto e fundo nos campos específicos.",
+    "Utilize o seletor de cores embutido para ajustar tons e visualizar combinações em tempo real.",
+    "Clique no botão 'Calcular Contraste' para executar o processamento da fórmula de luminância.",
+    "Analise o índice resultante exibido na escala cromática e verifique os indicadores de conformidade (AA/AAA).",
+    "Acesse a seção 'Simulação Visual' para validar a legibilidade sob condições de daltonismo protanopia, deuteranopia ou tritanopia.",
+    "Exporte o relatório em formato JSON com os valores técnicos (luminância, razão de contraste, status WCAG) para documentação do projeto."
+  ],
+  "usage_examples": [
+    "Um designer ajusta a paleta de cores de um portal de saúde, garantindo que textos em botões críticos (ex: #FF5733 sobre #FFFFFF) atendam ao mínimo AA para usuários idosos.",
+    "Um desenvolvedor identifica falhas em ícones de status (verde/vermelho) que se tornam indistinguíveis após simular acromatopsia, corrigindo-as com padrões texturizados.",
+    "Uma equipe de e-learning valida contrastes em materiais didáticos digitais, assegurando acessibilidade conforme exigido pela Lei Brasileira de Inclusão (LBI).",
+    "Um auditor de acessibilidade gera evidências técnicas para laudo pericial, comprovando conformidade WCAG 2.1 em uma aplicação governamental."
+  ]
+}

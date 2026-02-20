@@ -1,0 +1,20 @@
+{
+  "detailed_description": "Le générateur de boîte de ratio d'aspect crée du code CSS pour des conteneurs réactifs qui maintiennent un rapport largeur-hauteur spécifique, quel que soit la taille de l'écran. Choisissez parmi des paramètres prédéfinis courants comme 16:9, 4:3, 1:1, ou saisissez des ratios personnalisés. L'outil génère à la fois du CSS moderne utilisant la propriété aspect-ratio et une solution de rechange padding-bottom pour les anciens navigateurs. Parfait pour les intégrations de vidéos, les espaces réservés d'images, les dispositions de cartes et tout élément qui nécessite de maintenir les proportions. Obtenez du code CSS propre et compatible avec plusieurs navigateurs instantanément.",
+  "usage_steps": [
+    "Entrez le rapport ou sélectionnez un préréglage",
+    "Choisissez la méthode CSS",
+    "Aperçu",
+    "Copiez le CSS"
+  ],
+  "usage_examples": [
+    "Créez des conteneurs de vidéos",
+    "Concevez des cadres d'images responsifs"
+  ],
+  "preview": "Aperçu",
+  "width": "Largeur",
+  "height": "Hauteur",
+  "aspectRatioProperty": "Propriété Aspect Ratio",
+  "paddingMethod": "Méthode Padding",
+  "paddingNote": "Note: La méthode padding est pour les anciens navigateurs",
+  "method": "Méthode"
+}

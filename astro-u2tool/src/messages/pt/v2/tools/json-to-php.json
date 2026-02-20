@@ -1,0 +1,25 @@
+{
+  "input": "Entrada JSON",
+  "output": "Saída PHP",
+  "convert": "Converter",
+  "copy": "Copiar",
+  "useShortArraySyntax": "Usar Sintaxe de Array Curta (PHP 5.4+)",
+  "inputPlaceholder": "Cole o JSON aqui...",
+  "outputPlaceholder": "O array PHP aparecerá aqui...",
+  "errorInvalidJson": "// Erro: Entrada JSON inválida",
+  "detailed_description": "O conversor JSON para PHP transforma dados estruturados em formato JSON (JavaScript Object Notation) em arrays nativos do PHP, preservando hierarquias e tipos de dados. Esta ferramenta é essencial para desenvolvedores que precisam integrar APIs RESTful (que retornam JSON) com aplicações backend em PHP, migrar configurações de arquivos JSON para ambientes PHP ou debugar estruturas complexas. Internamente, o processo utiliza o parser JSON.parse para validar a sintaxe do input, seguido de uma serialização recursiva que mapeia objetos JSON para arrays associativos do PHP e arrays JSON para arrays indexados. Caracteres especiais são automaticamente escapados com addslashes(), e números em strings são convertidos mantendo seu tipo original se a opção 'strict types' estiver ativa. A ferramenta também oferece suporte a codificação UTF-8 sem BOM e permite personalização do recuo (indentação) para melhor legibilidade do código gerado.",
+  "usage_steps": [
+    "Cole seu JSON válido na área de texto central com rótulo 'Cole seu JSON aqui'",
+    "Clique no botão 'Validar JSON' para verificar a sintaxe antes da conversão",
+    "Selecione opções avançadas no painel lateral: 'Manter tipos primitivos' ou 'Forçar strings'",
+    "Ajuste o nível de indentação usando o slider 'Profundidade da tabulação' (2-8 espaços)",
+    "Clique em 'Converter para PHP' para gerar o array PHP sintaxe no painel de saída",
+    "Copie o resultado finalizado com o botão 'Copiar para área de transferência'"
+  ],
+  "usage_examples": [
+    "Converter resposta de API OpenWeatherMap em array PHP para processamento de dados climáticos",
+    "Migrar configurações de ambiente de arquivos .json para arrays PHP em projetos Laravel",
+    "Transformar dados de backup de MongoDB (exportados em JSON) para inserção em sistemas legacy PHP",
+    "Debugar estrutura complexa de JSON inválido identificando erros de sintaxe antes da conversão"
+  ]
+}

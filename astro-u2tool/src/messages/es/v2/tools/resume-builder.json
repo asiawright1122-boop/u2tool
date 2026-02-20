@@ -1,0 +1,54 @@
+{
+  "detailed_description": "El Resume Builder es una plataforma web diseñada para facilitar la creación de currículums profesionales de alta calidad. Utiliza un conjunto robusto de plantillas predefinidas, que están optimizadas para diferentes sectores y roles. El motor de diseño del Resume Builder permite a los usuarios personalizar cada sección del currículum, desde la información de contacto y el resumen personal, hasta las experiencias laborales y habilidades. Además, el tool integra un editor WYSIWYG (What You See Is What You Get) que asegura que el diseño final sea exactamente como se visualiza durante el proceso de creación. Una vez que el currículum está completo, el sistema ofrece la opción de exportarlo en formato PDF, garantizando que el documento sea compatible con cualquier dispositivo y sistema operativo. Este tool es esencial para profesionales que buscan destacar en procesos de selección, estudiantes que necesitan presentar un currículum para prácticas, y freelancers que requieren un perfil actualizado y profesional.",
+  "usage_steps": [
+    "Accede a la página principal del Resume Builder y selecciona 'Crear nuevo currículum' para iniciar.",
+    "Elige una plantilla de la galería disponible. Cada plantilla está diseñada para un sector específico, como tecnología, marketing, o diseño gráfico.",
+    "Personaliza tu currículum utilizando el editor WYSIWYG. Puedes agregar, editar y eliminar secciones como 'Experiencia laboral', 'Educación', y 'Habilidades'.",
+    "Sube fotos y documentos relevantes, como tu foto de perfil o certificados, utilizando el gestor de archivos integrado.",
+    "Revisa el diseño final de tu currículum en la vista previa. Asegúrate de que todos los elementos estén correctamente alineados y formateados.",
+    "Una vez que estés satisfecho con tu currículum, haz clic en 'Exportar a PDF' para generar un archivo PDF listo para enviar a empleadores o compartir en redes profesionales."
+  ],
+  "usage_examples": [
+    "Un ingeniero de software que busca un puesto en una startup tecnológica utiliza el Resume Builder para crear un currículum que resalte sus habilidades en programación y proyectos relevantes.",
+    "Una estudiante de administración de empresas que necesita presentar un currículum para una pasantía en una consultora usa el tool para generar un documento profesional y bien estructurado.",
+    "Un freelancer de diseño gráfico que trabaja de forma independiente emplea el Resume Builder para actualizar su perfil y presentarlo a nuevos clientes potenciales.",
+    "Un ejecutivo de ventas que busca un cambio de carrera a marketing digital utiliza el Resume Builder para crear un currículum que muestre su experiencia y habilidades transferibles en el nuevo sector."
+  ],
+  "editTab": "Editar",
+  "previewTab": "Vista previa",
+  "exportPDF": "Exportar PDF",
+  "jobDescription": "Descripción del trabajo",
+  "fieldOfStudy": "Campo de estudio",
+  "gpa": "GPA",
+  "summary": "Resumen",
+  "experience": "Experiencia",
+  "present": "Presente",
+  "education": "Educación",
+  "skills": "Habilidades",
+  "languages": "Idiomas",
+  "accentColor": "Color de acento",
+  "personalInfo": "Información personal",
+  "summaryPlaceholder": "Escribe un breve resumen...",
+  "addExperience": "Agregar experiencia",
+  "company": "Empresa",
+  "position": "Puesto",
+  "addEducation": "Agregar educación",
+  "school": "Escuela",
+  "degree": "Título",
+  "addSkill": "Agregar habilidad",
+  "noSkills": "Sin habilidades",
+  "addLanguage": "Agregar idioma",
+  "templates": {
+    "professional": "Profesional",
+    "minimal": "Minimalista",
+    "creative": "Creativo"
+  },
+  "placeholders": {
+    "name": "Tu nombre",
+    "title": "Título del puesto",
+    "email": "email@example.com",
+    "phone": "+34 612 345 678",
+    "location": "Ciudad, País",
+    "website": "website.com"
+  }
+}

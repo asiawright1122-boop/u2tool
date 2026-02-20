@@ -1,0 +1,29 @@
+{
+  "quality": "Qualité",
+  "convert": "Convertir en WebP",
+  "download": "Télécharger WebP",
+  "original": "Taille originale",
+  "converted": "Converti",
+  "saved": "Economisé",
+  "dropzone": "Cliquez ou glissez des images pour les télécharger",
+  "supportedFormats": "Formats pris en charge : JPG, PNG, GIF",
+  "images": "Images",
+  "totalSavings": "Économies totales",
+  "processing": "Traitement en cours...",
+  "downloadAll": "Télécharger tout",
+  "detailed_description": "L'outil Image to WebP est conçu pour convertir des images existantes en format WebP, un format de compression d'image développé par Google. Ce format offre une compression plus efficace que les formats traditionnels tels que JPEG ou PNG, permettant de réduire significativement la taille des fichiers sans compromettre la qualité visuelle. Cette réduction de la taille des fichiers est cruciale pour améliorer les performances de chargement des sites web et réduire la consommation de données, ce qui est particulièrement important sur les appareils mobiles et les connexions internet lentes. L'outil supporte une variété de formats d'entrée, notamment JPEG, PNG, BMP, et GIF. Il offre également des options de compression avancées, telles que la possibilité de choisir entre une compression lossless (sans perte) et lossy (avec perte), ainsi que de régler le niveau de compression pour s'adapter aux besoins spécifiques de chaque projet. La conversion est effectuée en utilisant des algorithmes de compression modernes, garantissant des résultats optimaux en termes de qualité et de performance.",
+  "usage_steps": [
+    "Accédez à la page de l'outil Image to WebP sur le site web.",
+    "Cliquez sur le bouton 'Sélectionner les images' pour choisir les fichiers que vous souhaitez convertir.",
+    "Une fois les images sélectionnées, utilisez le menu déroulant 'Type de compression' pour choisir entre 'Lossless' et 'Lossy'.",
+    "Réglez le curseur 'Niveau de compression' en fonction de vos besoins en termes de qualité et de taille de fichier.",
+    "Vérifiez les prévisualisations des images converties pour vous assurer que la qualité est satisfaisante.",
+    "Cliquez sur 'Convertir' pour lancer le processus, puis téléchargez les images WebP converties en utilisant le lien 'Télécharger les images'."
+  ],
+  "usage_examples": [
+    "Un développeur web souhaite optimiser les images d'un site e-commerce pour améliorer les temps de chargement et réduire l'empreinte de données. Il utilise Image to WebP pour convertir toutes les images de produits en format WebP avec une compression lossy modérée.",
+    "Un graphiste travaille sur un projet de Portfolio en ligne et veut s'assurer que les images sont de haute qualité tout en étant légères. Il utilise l'outil pour convertir ses images en format WebP avec une compression lossless, préservant ainsi les détails fins de ses œuvres.",
+    "Un photographe amateur veut partager une galerie de photos haute résolution sur un blog. Il utilise Image to WebP pour convertir les photos en WebP avec une compression lossy légère, permettant un chargement rapide sans perte importante de qualité.",
+    "Une entreprise de médias sociaux veut publier des images sur son site web et sur ses comptes de réseaux sociaux. Elle utilise Image to WebP pour convertir les images en format WebP, optimisant ainsi l'expérience utilisateur sur différents supports et appareils."
+  ]
+}

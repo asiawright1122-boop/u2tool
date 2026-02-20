@@ -1,0 +1,27 @@
+{
+  "date": "Datum",
+  "time": "Uhrzeit",
+  "now": "Jetzt",
+  "fromTimezone": "Von Zeitzone",
+  "toTimezone": "Nach Zeitzone",
+  "swapTimezones": "Zeitzone tauschen",
+  "convertedTime": "Konvertierte Zeit",
+  "worldClock": "Weltuhr",
+  "detailed_description": "Der Timezone Converter ist ein präzises Werkzeug zur Konvertierung von Zeitangaben zwischen beliebigen Zeitzonen unter Berücksichtigung komplexer Faktoren wie Sommerzeitregelungen (DST), historischer Zeitzonen-Verschiebungen und UTC-Offsets. Technisch basiert das Tool auf der IANA Time Zone Database und nutzt JavaScript's Intl.DateTimeFormat-API zur Echtzeitberechnung. Entwickler profitieren durch die automatische Berücksichtigung von Abweichungen wie unterschiedlichen DST-Startterminen zwischen Nord- und Südhalbkugel oder historischen Anpassungen durch politische Entscheidungen. Das Tool synchronisiert Zeitangaben über mehrere Zeitzonen gleichzeitig, zeigt sekundengenaue Unterschiede an und ermöglicht die Umrechnung sowohl vergangener als auch zukünftiger Zeitstempel. Besonders wertvoll ist dies bei der Planung globaler Software-Deployment-Zyklen, der Analyse international verteilter Log-Dateien oder der Koordination synchroner Videokonferenzen über mehrere Kontinente hinweg.",
+  "usage_steps": [
+    "Wählen Sie eine Quellzeitzone aus dem interaktiven Weltkarten-Widget aus, das geografische Koordinaten und aktuelle UTC-Offset-Differenz anzeigt.",
+    "Geben Sie das Ausgangsdatum über das JavaScript-basierte Kalenderwidget ein, das automatisch Schaltjahre und unterschiedliche Monatslängen berücksichtigt.",
+    "Aktivieren Sie den 'Multi-Zone-Modus', um bis zu 5 Zielzeitzonen parallel anzuzeigen, inklusive aktueller Sommerzeit-Indikatoren.",
+    "Nutzen Sie den 'Historischer Zeitstempel'-Modus, um Zeitumrechnungen für vergangene Datumsangaben mit historisch korrekten Offset-Werten durchzuführen.",
+    "Klicken Sie auf 'UTC-Synchronisation', um alle angezeigten Zeiten automatisch an den globalen Coordinated Universal Time-Standard anzupassen.",
+    "Exportieren Sie die Ergebnisse im ISO 8601-Format oder als programmierbare JavaScript-Funktion zur direkten Integration in Ihre Anwendung."
+  ],
+  "usage_examples": [
+    "Ein DevOps-Engineer berechnet die optimale Deployment-Zeit für ein Update, das gleichzeitig in Tokio, New York und Berlin live gehen soll, unter Berücksichtigung aktueller DST-Regelungen.",
+    "Ein Data Analyst konvertiert Server-Logs von UTC-Zeit in lokale Zeitangaben verschiedener Niederlassungen für ein präzises Incident-Analysis-Report.",
+    "Ein Event-Organisator synchronisiert den Startschuss eines globalen Online-Hackathons, bei dem Teilnehmer aus 15 verschiedenen Zeitzonen koordiniert werden müssen.",
+    "Ein Softwareentwickler testet die Zeitstempel-Konvertierung in einer Anwendung, die historische Wetterdaten von 1900 bis heute mit modernen Messwerten vergleicht."
+  ],
+  "copied": "Kopiert!",
+  "copy": "Kopieren"
+}

@@ -1,0 +1,27 @@
+{
+  "detailed_description": "Roman Numeral Converter translates between Roman numerals (I, V, X, L, C, D, M) and Arabic numbers (1-3999). Perfect for history students, clock makers, and anyone working with Roman numerals.",
+  "usage_steps": [
+    "Select conversion direction",
+    "Enter a Roman numeral or Arabic number",
+    "Click Convert to see the result",
+    "Copy the converted value",
+    "Use the reference chart for help"
+  ],
+  "usage_examples": [
+    "Convert years to Roman numerals",
+    "Decode Roman numerals on clocks",
+    "Learn Roman numeral system"
+  ],
+  "arabicToRoman": "Arabic → Roman",
+  "romanToArabic": "Roman → Arabic",
+  "arabicNumber": "Arabic Number",
+  "romanNumeral": "Roman Numeral",
+  "arabicPlaceholder": "Enter number (1-3999)...",
+  "romanPlaceholder": "Enter Roman numeral...",
+  "result": "Result",
+  "convert": "Convert",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "invalidInput": "Invalid input",
+  "referenceTitle": "Reference Chart"
+}

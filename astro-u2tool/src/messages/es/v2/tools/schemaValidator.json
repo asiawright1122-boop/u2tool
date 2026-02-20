@@ -1,0 +1,14 @@
+{
+  "loadExample": "Cargar ejemplo",
+  "jsonPlaceholder": "Introduzca datos JSON...",
+  "schemaPlaceholder": "Ingrese el esquema JSON...",
+  "validate": "Validar",
+  "valid": "JSON is valid!",
+  "invalid": "JSON is invalid",
+  "expectedType": "Se esperaba {esperado}, se obtuvo {real}",
+  "missingRequired": "Falta propiedad requerida: {prop}",
+  "stringTooShort": "Cadena demasiado corta (min: {min})",
+  "stringTooLong": "Cadena demasiado larga (max: {max})",
+  "numberTooSmall": "Número demasiado pequeño (min: {min})",
+  "numberTooLarge": "Número demasiado grande (max: {max})"
+}

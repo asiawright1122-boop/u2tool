@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Salary Calculator ist ein präzises Instrument zur interaktiven Umrechnung von Gehältern zwischen verschiedenen Zeitbasen, einschließlich Stunden-, Tages-, Wochen-, Monats- und Jahresgehältern. Technisch basiert die Berechnung auf standardisierten Umrechnungsfaktoren, wobei der Nutzer individuelle Arbeitszeiten (z. B. Wochenstunden) einbeziehen kann, um genaue Bruttobeträge zu ermitteln. Das Tool skaliert dynamisch zwischen den Einheiten, indem es Arbeitstage pro Woche, Urlaubsansprüche und regionale Feiertagsregelungen (optional) berücksichtigt. Entwickelt für Anwender, die präzise Vergleiche zwischen Festgehalt und Stundenvergütung benötigen – etwa bei der Vertragsverhandlung, der Kalkulation von Freelance-Projekten oder der Analyse von Teilzeitbeschäftigungsmodellen. Die Berechnung erfolgt bidirektional: Änderungen in einem Feld aktualisieren alle abhängigen Werte in Echtzeit, wobei der Algorithmus flexible Skalierungsfaktoren für unterschiedliche Arbeitszeitmodelle anwendet.",
+  "usage_steps": [
+    "Wählen Sie im Dropdown-Menü die Ausgangszeitbasis (z. B. 'jährlich') und geben Sie den Bruttobetrag in das Eingabefeld ein.",
+    "Legen Sie über den Schieberegler die durchschnittlichen Arbeitsstunden pro Woche fest (Standardwert: 40 Stunden).",
+    "Aktivieren Sie das Kontrollkästchen 'Individuelle Arbeitstage', um von der Standardrechnung abweichende Tage pro Woche anzupassen.",
+    "Klicken Sie auf 'Berechnung starten', um die konvertierten Beträge für alle verfügbaren Zeitbasen anzuzeigen.",
+    "Nutzen Sie die 'Kopier'-Buttons neben jedem Ergebnisfeld, um einzelne Werte in die Zwischenablage zu übernehmen.",
+    "Wechseln Sie bei Bedarf zur erweiterten Ansicht, um monatliche Abrechnungsbeträge unter Berücksichtigung von Feiertagen zu berechnen."
+  ],
+  "usage_examples": [
+    "Ein Freelancer möchte ein monatliches Honorar von 3.500€ in einen Stundenlohn umrechnen, um Auftragsvolumina zu kalkulieren.",
+    "Ein HR-Manager konvertiert ein Jahresgehalt von 55.000€ in einen täglichen Stundensatz für eine Werkstudentenstelle mit 20 Wochenstunden.",
+    "Ein Arbeitnehmer vergleicht ein angebotenes Festgehalt mit 4.200€ monatlich gegen eine alternative Stelle mit 22€ Stundenlohn bei 35 Wochenstunden.",
+    "Ein Selbständiger berechnet basierend auf 180 fakturierbaren Stunden pro Jahr sein notwendiges Tageshonorar zur Deckung von Fixkosten."
+  ]
+}

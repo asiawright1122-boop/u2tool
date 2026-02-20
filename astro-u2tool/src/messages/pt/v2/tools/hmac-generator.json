@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O HMAC Generator é uma ferramenta especializada para criar assinaturas HMAC (Keyed-Hash Message Authentication Code) utilizando algoritmos criptográficos avançados como SHA-1, SHA-256 e SHA-512. Esta ferramenta permite que desenvolvedores gerem códigos de autenticação que garantem a integridade e autenticidade de mensagens ou dados, especialmente em ambientes onde segurança e verificação são críticas. O HMAC combina uma chave secreta com os dados de entrada através de um algoritmo de hash específico, produzindo uma assinatura única que pode ser validada por sistemas que compartilham a mesma chave. Isso é essencial para aplicações como autenticação de APIs RESTful, verificação de integridade em payloads de webhooks, assinatura de tokens JWT e proteção contra manipulação de dados em transmissões HTTP. A ferramenta processa os dados em tempo real no navegador, usando funções criptográficas nativas da Web Crypto API, garantindo que nenhuma informação seja armazenada ou transmitida externamente.",
+  "usage_steps": [
+    "Acesse a seção 'Algoritmo' e selecione SHA-1, SHA-256 ou SHA-512 no menu suspenso, dependendo da exigência do sistema receptor.",
+    "Insira a chave secreta no campo 'Chave HMAC', utilizando caracteres ASCII ou hexadecimais conforme necessário.",
+    "Cole ou digite os dados brutos no campo 'Texto de entrada' – pode ser uma string JSON, parâmetros de requisição ou payload binário convertido.",
+    "Clique no botão 'Gerar HMAC' para executar o cálculo criptográfico baseado nos parâmetros definidos.",
+    "Visualize o resultado na seção 'Assinatura Gerada' em formatos hexadecimal e Base64, adequados para inclusão em cabeçalhos HTTP ou payloads.",
+    "Utilize o ícone de cópia ao lado do resultado para transferir instantaneamente a assinatura para a área de transferência no formato desejado."
+  ],
+  "usage_examples": [
+    "Assinar requisições API que exigem HMAC no cabeçalho Authorization, como integrações com gateways de pagamento ou exchanges de criptomoedas.",
+    "Validar payloads recebidos de provedores SaaS (ex: Shopify, GitHub Webhooks) comparando o HMAC gerado localmente com o enviado no cabeçalho X-Hub-Signature.",
+    "Criar tokens JWT seguros para autenticação stateless, usando HMAC-SHA256 como método de assinatura no cabeçalho do token.",
+    "Gerar checksums criptograficamente seguros para arquivos de configuração sensíveis antes de exportá-los para ambientes de staging ou CI/CD."
+  ]
+}

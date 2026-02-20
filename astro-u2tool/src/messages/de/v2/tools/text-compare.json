@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Text Similarity Compare-Tool analysiert die semantische und lexikalische Ähnlichkeit zwischen zwei Textdokumenten durch die Anwendung moderner Algorithmen der natürlichen Sprachverarbeitung. Technisch basiert das Tool auf einer Kombination aus Levenshtein-Distanz-Berechnung, Cosinus-Ähnlichkeit und Jaro-Winkler-Metrik, um präzise Übereinstimmungswerte zu generieren. Die Eingabetexte werden zunächst tokenisiert, anschließend werden Bag-of-Words-Modelle erstellt, um Vektorrepräsentationen zu generieren. Die semantische Bewertung erfolgt durch Normalisierung von Stopwörtern, Lemmatisierung und TF-IDF-Gewichtung. Zusätzlich wird ein Alignment-Algorithmus angewandt, der identische und abweichende Textsegmente visuell hervorhebt. Dieses Tool ist unverzichtbar für Entwickler, die Code-Duplikate erkennen möchten, Redakteure, die Versionen von Dokumenten vergleichen müssen, oder Forscher, die Textoriginalität überprüfen. Die browserbasierte Implementierung garantiert datenschutzkonforme Verarbeitung ohne Serverkommunikation, während die Kombination aus lexikalischer und struktureller Analyse einzigartige Einsichten liefert.",
+  "usage_steps": [
+    "1. Navigieren Sie zur Tool-Seite unter /tools/text-compare.",
+    "2. Geben Sie den ersten Text in das linke Eingabefeld mit der Bezeichnung 'Quelltext' ein oder laden Sie eine TXT-Datei hoch.",
+    "3. Fügen Sie den zu vergleichenden Text in das rechte Feld 'Zieltext' ein oder ziehen Sie eine Datei per Drag-and-Drop in das Feld.",
+    "4. Wählen Sie im Abschnitt 'Ähnlichkeitsmethode' zwischen Levenshtein, Cosinus oder Jaro-Winkler.",
+    "5. Aktivieren Sie die Option 'Detaillierte Differenzierung', um zusätzlich Token-Vergleiche und Vokabular-Überlappungen angezeigt zu bekommen.",
+    "6. Klicken Sie auf 'Berechnen' und analysieren Sie die Ergebnisse mit dem farblich markierten Vergleich und dem prozentualen Ähnlichkeitsindex."
+  ],
+  "usage_examples": [
+    "Ein Entwicklungsleiter identifiziert redundante Codeabschnitte in verschiedenen Projektzweigen durch wiederholten Vergleich von Quelltexten.",
+    "Ein Dokumentenmanager überprüft zwei Versionen einer Benutzeranleitung, um Änderungsumfang und -muster visuell darzustellen.",
+    "Ein Forschungsteam analysiert wissenschaftliche Arbeiten auf potenzielle Plagiate durch semantische Ähnlichkeitsbewertung über mehrere Abschnitte hinweg.",
+    "Ein Jurist vergleicht Klauseln in Verträgen, um Abweichungen in Rechtsformulierungen und vertraglichen Bedingungen präzise zu quantifizieren."
+  ]
+}

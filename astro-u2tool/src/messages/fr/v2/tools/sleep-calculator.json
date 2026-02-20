@@ -1,0 +1,42 @@
+{
+  "wakeUpTime": "Heure de Réveil",
+  "bedTime": "Heure de Coucher",
+  "calculateBedtime": "Calculer l'Heure de Coucher",
+  "calculateWakeTime": "Calculer l'Heure de Réveil",
+  "fallAsleepTime": "Heure de Sommeil",
+  "minutes": "minutes",
+  "recommendedBedtimes": "Heures de Coucher Recommandées",
+  "recommendedWakeTimes": "Heures de Réveil Recommandées",
+  "cycles": "cycles de sommeil",
+  "hoursOfSleep": "heures de sommeil",
+  "optimal": "Optimal",
+  "good": "Bon",
+  "minimum": "Minimum",
+  "sleepTips": "Conseils de Sommeil",
+  "detailed_description": "Le Calculateur de Sommeil est un outil en ligne conçu pour optimiser vos cycles de sommeil. Techniquement, il utilise des algorithmes basés sur la chronobiologie et la durée recommandée des cycles de sommeil (environ 90 minutes) pour déterminer le meilleur moment pour vous coucher ou vous réveiller. L'outil prend en compte les variations individuelles de la durée de sommeil et propose des horaires personnalisés pour maximiser la qualité de votre repos. Il est particulièrement utile pour les personnes souffrant d'insomnie, celles qui travaillent en horaires décalés, ou celles qui cherchent à améliorer leur bien-être général en alignant leurs horaires de sommeil avec leurs rythmes biologiques. Le calculateur permet également de tenir compte des facteurs tels que la durée de la phase de sommeil paradoxal (REM) et la période d'endormissement, ce qui contribue à une meilleure synchronisation de vos horaires avec vos besoins en sommeil.",
+  "usage_steps": [
+    "Accédez à la page du Calculateur de Sommeil via le menu de navigation ou en recherchant 'Calculateur de Sommeil' dans la barre de recherche du site.",
+    "Sélectionnez le mode de calcul : 'Calculer l'heure de coucher' ou 'Calculer l'heure de réveil' en fonction de vos besoins.",
+    "Dans le champ 'Durée de sommeil', saisissez le nombre d'heures que vous souhaitez dormir. Vous pouvez également ajuster ce paramètre en fonction de vos habitudes de sommeil.",
+    "Si nécessaire, indiquez le temps d'endormissement dans le champ 'Temps pour s'endormir'. Cela permet de prendre en compte le temps nécessaire pour vous endormir dans vos calculs.",
+    "Cliquez sur le bouton 'Calculer' pour obtenir vos horaires recommandés. L'outil affichera les heures optimales pour vous coucher ou vous réveiller, en tenant compte de vos paramètres.",
+    "Consultez les résultats et ajustez vos habitudes de sommeil en conséquence. Vous pouvez également enregistrer ces horaires pour une utilisation future ou les partager avec un professionnel de santé."
+  ],
+  "usage_examples": [
+    "Un étudiant prépare un examen important et souhaite maximiser sa concentration et sa mémoire. Il utilise le Calculateur de Sommeil pour déterminer le meilleur moment pour se coucher afin de bénéficier de cycles de sommeil complets et réparateurs.",
+    "Un cadre dirigeant travaille souvent tard le soir et se réveille tôt. Il utilise l'outil pour calculer l'heure optimale de réveil, en fonction de ses horaires de travail, pour éviter de se réveiller au milieu d'un cycle de sommeil et ainsi réduire la fatigue matinale.",
+    "Une personne souffrant d'insomnie cherche à établir une routine de sommeil plus régulière. Elle utilise le Calculateur de Sommeil pour identifier des horaires de coucher qui correspondent à ses cycles de sommeil naturels, facilitant ainsi l'endormissement.",
+    "Un sportif de haut niveau souhaite optimiser sa récupération après un entraînement intense. Il utilise l'outil pour calculer l'heure de coucher qui lui permettra de bénéficier d'un sommeil de qualité, en tenant compte de la durée recommandée de sommeil pour la récupération physique."
+  ],
+  "wakeUpMode": "Mode de Réveil",
+  "sleepMode": "Mode de Sommeil",
+  "bedtime": "Heure de Coucher",
+  "suggestedBedtimes": "Heures de Coucher Suggérées",
+  "suggestedWakeTimes": "Heures de Réveil Suggérées",
+  "hours": "Heures",
+  "aboutSleepCycles": "À Propos des Cycles de Sommeil",
+  "sleepCycleInfo": "Informations sur les Cycles de Sommeil",
+  "cycleInfo1": "Info Cycle1",
+  "cycleInfo2": "Info Cycle2",
+  "cycleInfo3": "Info Cycle3"
+}

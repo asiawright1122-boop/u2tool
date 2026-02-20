@@ -1,0 +1,87 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "showOutliers": "显示异常值",
+  "horizontal": "水平",
+  "categoryName": "类别名称",
+  "dataValues": "数据值",
+  "addCategory": "添加类别",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "统计分析",
+  "sampleTitle": "数据分布",
+  "dataEditor": "数据编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "group": "分组",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "max": "最大值",
+  "q3": "第三四分位数",
+  "median": "中位数",
+  "q1": "第一四分位数",
+  "min": "最小值",
+  "outlier": "异常值",
+  "sampleData": {
+    "cat1": "类别A",
+    "cat2": "类别B",
+    "cat3": "类别C",
+    "monday": "星期一",
+    "tuesday": "星期二",
+    "wednesday": "星期三",
+    "thursday": "星期四",
+    "friday": "星期五"
+  },
+  "tips": {
+    "title": "小贴士",
+    "tip1": "以逗号分隔输入数据值",
+    "tip2": "添加多个类别",
+    "tip3": "显示异常值",
+    "tip4": "切换为水平",
+    "tip5": "导出为PNG或SVG"
+  },
+  "detailed_description": "本工具基于D3.js和Canvas技术实现，提供专业的箱线图可视化功能。支持输入JSON/CSV格式的数值型数据集，自动计算四分位间距（IQR）、上下须限值及异常值标记。通过Web Worker进行分位数计算，支持Tukey和SAS两种分位方法切换。用户可自定义箱体颜色渐变、须线样式及离群点标记形状，实时渲染的SVG图表支持CSS动画交互。开发者可直接获取生成的Voronoi图路径数据用于二次开发，教育工作者可通过动态分位数计算演示统计学概念。导出的PNG支持300dpi印刷级分辨率，SVG文件包含完整的metadata注释。",
+  "usage_steps": [
+    "在数据输入区粘贴符合RFC 4180标准的CSV数据，首行为字段名，后续每列对应一个箱体",
+    "通过'分位计算'下拉菜单选择Tukey法或SAS Method 15",
+    "拖动'离群点阈值'滑块调整IQR倍数（0.5-3.0可调）",
+    "在样式面板启用'双箱体对比模式'并选择差异显著性标注等级（*,**,***）",
+    "勾选'数据标签'复选框显示精确的中位数/四分位数值",
+    "点击'SVG高清导出'按钮时选择是否嵌入可编辑的XML命名空间"
+  ],
+  "usage_examples": [
+    "教育机构分析不同班级数学成绩分布，自动标记异常高分/低分群体",
+    "电商平台对比不同品类商品的月销售额离散程度",
+    "生物统计学研究中可视化基因表达量的箱型分布差异",
+    "运维团队监控API接口响应时间的95%置信区间变化趋势"
+  ],
+  "faqs": [
+    {
+      "question": "Boxplot Chart Generator 是免费的吗？",
+      "answer": "是的，Boxplot Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Boxplot Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Boxplot Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Boxplot Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Boxplot Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

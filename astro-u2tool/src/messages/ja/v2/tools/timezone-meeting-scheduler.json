@@ -1,0 +1,34 @@
+{
+  "detailed_description": "時差会議スケジューラーは、異なる時差を持つ参加者のための最適な会議時間を見つけるのに役立ちます。",
+  "usage_steps": [
+    "参加者の場所を追加",
+    "会議の期間を設定",
+    "時間比較を表示",
+    "重複する時間を見つける",
+    "時間を選択し共有"
+  ],
+  "usage_examples": [
+    "国際電話をスケジュール",
+    "US-Europeの会議時間を見つける",
+    "リモートチームの調整"
+  ],
+  "input": "入力",
+  "output": "出力",
+  "process": "処理",
+  "copy": "コピー",
+  "clear": "クリア",
+  "inputPlaceholder": "ここに入力を入力してください...",
+  "outputPlaceholder": "結果はここに表示されます...",
+  "errors": {
+    "emptyInput": "入力を入力してください"
+  },
+  "baseTimezone": "基準タイムゾーン",
+  "duration": "時間（時間）",
+  "addParticipant": "+ 参加者を追加",
+  "participants": "参加者",
+  "work": "勤務",
+  "bestMeetingTimes": "最適な会議時間",
+  "copyBestTime": "最適な時間をコピー",
+  "best": "最適",
+  "allWorking": "全員勤務中"
+}

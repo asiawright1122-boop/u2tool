@@ -1,0 +1,29 @@
+{
+  "detailed_description": "Der Tippzeitrechner schätzt die Zeit, die zum Tippen eines Dokuments benötigt wird, basierend auf der Wortzahl und der Tippgeschwindigkeit. Geben Sie Ihren Text oder die Wortzahl ein, wählen Sie Ihre Tippgeschwindigkeit in Wörtern pro Minute (WPM) und erhalten Sie genaue Zeitabschätzungen. Das Tool enthält voreingestellte Geschwindigkeiten für verschiedene Fertigkeitsstufen von Anfänger bis professionellem Tippfertigkeit. Ideal für Autoren, die ihre Arbeitssitzungen planen, Studenten, die die Bearbeitungszeit von Aufgaben schätzen, oder jeden, der sich für die Tippproduktivität interessiert. Auch nützlich für die Schätzung der Transkriptionszeit.",
+  "usage_steps": [
+    "Geben Sie die Anzahl der Wörter ein oder fügen Sie Text ein",
+    "Legen Sie Ihre Schreibgeschwindigkeit fest",
+    "Anzeigen Sie die Zeitvorausschätzung"
+  ],
+  "usage_examples": [
+    "Planen Sie Ihre Schreibsitzungen",
+    "Schätzen Sie Projektzeiträume"
+  ],
+  "wordCount": "Wortanzahl",
+  "typingSpeed": "Tippgeschwindigkeit (WPM)",
+  "beginner": "Anfänger",
+  "average": "Durchschnitt",
+  "professional": "Professionell",
+  "expert": "Experte",
+  "pureTypingTime": "Reine Tippzeit",
+  "totalWithBreaks": "Gesamt mit Pausen",
+  "recommendedBreaks": "Empfohlene Pausen",
+  "minutes": "Minuten",
+  "seconds": "Sekunden",
+  "estimatedTime": "Geschätzte Zeit",
+  "minutesTotal": "Gesamtminuten",
+  "ergonomicTips": "Ergonomische Tipps",
+  "tip1": "Tipp 1",
+  "tip2": "Tipp 2",
+  "tip3": "Tipp 3"
+}

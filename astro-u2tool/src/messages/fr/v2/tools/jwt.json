@@ -1,0 +1,20 @@
+{
+  "algorithm": "Algorithme",
+  "secretKey": "Clé secrète",
+  "secretPlaceholder": "Entrez la clé secrète...",
+  "payload": "Charge utile (JSON)",
+  "generate": "Générer JWT",
+  "generatedToken": "Jeton généré",
+  "commonClaims": "Allégations courantes",
+  "invalidPayload": "Charge utile JSON non valide",
+  "error": "Échec de la génération de JWT",
+  "claims": {
+    "iss": "Émetteur",
+    "sub": "Sujet",
+    "aud": "Public",
+    "exp": "Délai d'expiration",
+    "nbf": "Pas avant",
+    "iat": "Publié à",
+    "jti": "JWT ID"
+  }
+}

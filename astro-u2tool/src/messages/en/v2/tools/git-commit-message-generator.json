@@ -1,0 +1,54 @@
+{
+  "detailed_description": "Git Commit Message Generator creates well-formatted commit messages following the Conventional Commits specification.",
+  "usage_steps": [
+    "Select commit type",
+    "Enter scope",
+    "Write description",
+    "Add body/footer",
+    "Copy formatted message"
+  ],
+  "usage_examples": [
+    "Create consistent commits",
+    "Generate changelog-friendly format",
+    "Follow semantic versioning"
+  ],
+  "input": "Input",
+  "output": "Output",
+  "process": "Process",
+  "copy": "Copy",
+  "clear": "Clear",
+  "inputPlaceholder": "Enter your input here...",
+  "outputPlaceholder": "Results will appear here...",
+  "errors": {
+    "emptyInput": "Please enter some input"
+  },
+  "commitType": "Commit Type",
+  "scope": "Scope (optional)",
+  "scopePlaceholder": "e.g., api, ui, auth",
+  "subject": "Subject",
+  "subjectPlaceholder": "Short description of the change",
+  "subjectHint": "Use imperative mood: \"add feature\" not \"added feature\"",
+  "body": "Body (optional)",
+  "bodyPlaceholder": "Detailed description of the change...",
+  "breakingChange": "Breaking Change",
+  "breakingDescription": "Breaking Change Description",
+  "breakingPlaceholder": "Describe what breaks and how to migrate...",
+  "relatedIssues": "Related Issues (optional)",
+  "issuesPlaceholder": "#123, #456 or issue URLs",
+  "generatedMessage": "Generated Commit Message",
+  "emptyMessage": "Enter a subject to generate commit message",
+  "formatTitle": "Conventional Commits Format",
+  "types": {
+    "feat": "A new feature",
+    "fix": "A bug fix",
+    "docs": "Documentation only changes",
+    "style": "Code style changes (formatting, etc)",
+    "refactor": "Code refactoring",
+    "perf": "Performance improvements",
+    "test": "Adding or updating tests",
+    "build": "Build system or dependencies",
+    "ci": "CI/CD configuration",
+    "chore": "Other changes",
+    "revert": "Revert a previous commit"
+  }
+}

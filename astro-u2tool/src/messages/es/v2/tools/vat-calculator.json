@@ -1,0 +1,32 @@
+{
+  "amount": "Importe",
+  "calculationMode": "Modo de cálculo",
+  "addVat": "Agregar IVA al importe",
+  "removeVat": "Quitar el IVA del importe",
+  "vatOnly": "Calcular únicamente el IVA",
+  "useCustomRate": "Usar una tasa de IVA personalizada",
+  "customRate": "Tasa de IVA personalizada",
+  "country": "País",
+  "rateType": "Tipo de tasa",
+  "standardRate": "Tasa estándar",
+  "reducedRate": "Tasa reducida",
+  "reducedRates": "Tasas reducidas",
+  "superReducedRate": "Tasa superreducida",
+  "netAmount": "Importe neto",
+  "vatAmount": "Importe del IVA",
+  "grossAmount": "Importe bruto",
+  "euVatRates": "Referencia de tasas de IVA de la UE",
+  "detailed_description": "La Calculadora de IVA es una herramienta completa para calcular el Impuesto sobre el Valor Añadido en los países europeos. Soporta tasas de IVA estándar, reducidas y superreducidas para todos los estados miembros de la UE. Puedes agregar el IVA a un importe neto, quitar el IVA de un importe bruto o calcular únicamente la parte correspondiente al IVA.",
+  "usage_steps": [
+    "Introduce el importe para el cual deseas calcular el IVA",
+    "Selecciona el modo de cálculo (agregar IVA, quitar IVA o calcular únicamente el IVA)",
+    "Elige un país o introduce una tasa de IVA personalizada",
+    "Selecciona el tipo de tasa (estándar, reducida o superreducida)",
+    "Visualiza el importe neto, el importe del IVA y el importe bruto calculados"
+  ],
+  "usage_examples": [
+    "Calcular el IVA en facturas y transacciones comerciales",
+    "Determinar el precio neto a partir de precios con IVA incluido",
+    "Comparar las tasas de IVA entre diferentes países de la UE"
+  ]
+}

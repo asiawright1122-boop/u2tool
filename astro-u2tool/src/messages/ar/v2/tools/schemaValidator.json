@@ -1,0 +1,14 @@
+{
+  "loadExample": "تحميل المثال",
+  "jsonPlaceholder": "أدخل بيانات JSON...",
+  "schemaPlaceholder": "أدخل مخطط JSON...",
+  "validate": "التحقق من صحة",
+  "valid": "JSON is valid!",
+  "invalid": "JSON is invalid",
+  "expectedType": "المتوقع {expected}، حصل على {actual}",
+  "missingRequired": "الخاصية المطلوبة مفقودة: {prop}",
+  "stringTooShort": "السلسلة قصيرة جدًا (الحد الأدنى: {min})",
+  "stringTooLong": "السلسلة طويلة جدًا (الحد الأقصى: {max})",
+  "numberTooSmall": "الرقم صغير جدًا (الحد الأدنى: {min})",
+  "numberTooLarge": "الرقم كبير جدًا (الحد الأقصى: {max})"
+}

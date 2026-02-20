@@ -1,0 +1,29 @@
+{
+  "detailed_description": "SVG to PNG Converter transforms scalable vector graphics into portable network graphics format. Supports custom dimensions, background colors, and high-quality exports.",
+  "usage_steps": [
+    "Upload or paste your SVG file",
+    "Set output dimensions (width/height)",
+    "Choose background color (transparent or solid)",
+    "Click Convert to generate PNG",
+    "Download the converted image"
+  ],
+  "usage_examples": [
+    "Convert logos for social media",
+    "Export icons for mobile apps",
+    "Create raster versions of vector art"
+  ],
+  "uploadSvg": "Upload SVG",
+  "pasteSvg": "Or paste SVG code",
+  "width": "Width",
+  "height": "Height",
+  "backgroundColor": "Background Color",
+  "transparent": "Transparent",
+  "convert": "Convert to PNG",
+  "download": "Download PNG",
+  "preview": "Preview",
+  "orPasteSvg": "Or paste SVG code",
+  "placeholder": "Paste SVG code here...",
+  "scale": "Scale",
+  "background": "Background",
+  "noPreview": "No preview available"
+}

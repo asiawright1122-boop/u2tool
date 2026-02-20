@@ -1,0 +1,33 @@
+{
+  "output": "Saída CSS",
+  "copy": "Copiar CSS",
+  "shadowLayers": "Camadas de Sombra",
+  "addLayer": "+ Adicionar Camada",
+  "layer": "Camada {index}",
+  "remove": "Remover",
+  "offsetX": "Offset X",
+  "offsetY": "Offset Y",
+  "blur": "Desfoque",
+  "spread": "Espalhamento",
+  "color": "Cor",
+  "opacity": "Opacidade",
+  "inset": "Interno",
+  "boxColor": "Cor do Caixa",
+  "borderRadius": "Raio de Canto",
+  "preview": "Pré-visualização",
+  "detailed_description": "O Box Shadow Generator é uma ferramenta técnica especializada em criar e ajustar sombras CSS3 de forma visual e precisa. Ele permite configurar propriedades como offset horizontal/vertical (X/Y), raio de desfoque (blur radius), raio de expansão (spread radius), cor RGBA (incluindo transparência) e sombras internas (inset), gerando automaticamente o código CSS compatível com padrões modernos. Desenvolvedores precisam deste recurso para evitar a codificação manual repetitiva, visualizar em tempo real o impacto de sombras em elementos como cards, botões flutuantes ou modais, e garantir consistência visual em diferentes resoluções. A ferramenta simula a renderização do navegador, ajustando automaticamente valores inválidos e organizando múltiplas sombras em sintaxe separada por vírgulas. Seu motor também inclui pré-visualização em um container adaptativo, permitindo testar responsividade e ajustar propriedades com base no contexto real de uso.",
+  "usage_steps": [
+    "Acesse o gerador e selecione 'Nova Sombra' no menu inicial para iniciar uma configuração limpa.",
+    "Ajuste o offset horizontal (X) usando o slider para posicionar a sombra à esquerda ou direita do elemento.",
+    "Configure o raio de desfoque (Blur Radius) para controlar a nitidez da borda da sombra, usando valores de 0 a 100px.",
+    "Escolha a cor da sombra com o seletor RGBA, ajustando opacidade para criar efeitos semi-transparentes.",
+    "Ative a opção 'Inset' para aplicar a sombra internamente, útil para efeitos de depressão em botões.",
+    "Adicione múltiplas sombras clicando em 'Nova Camada' e ajuste cada camada independentemente, visualizando a composição em tempo real."
+  ],
+  "usage_examples": [
+    "Criar uma sombra sutil em um card de produto com offset X: 2px, Y: 2px, blur: 4px e cor rgba(0,0,0,0.1) para dar profundidade sem distrair.",
+    "Produzir um botão flutuante com sombra dupla (duas camadas): uma interna (inset) para pressionamento e uma externa para elevação.",
+    "Simular um efeito de 'neumorfismo' em uma caixa de diálogo, combinando sombras internas e externas com cores claras e escuras.",
+    "Gerar sombras responsivas para banners em mobile, ajustando blur radius e spread para manter a estética em telas menores."
+  ]
+}

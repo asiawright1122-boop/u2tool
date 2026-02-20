@@ -1,0 +1,34 @@
+{
+  "addRow": "+ Zeile hinzufügen",
+  "addColumn": "+ Spalte hinzufügen",
+  "loadSample": "Beispiel laden",
+  "columnAlignment": "Spaltenausrichtung",
+  "col": "Spalte",
+  "left": "Links",
+  "center": "Zentriert",
+  "right": "Rechts",
+  "header": "Kopfzeile",
+  "cell": "Zelle",
+  "removeRow": "Zeile entfernen",
+  "removeColumn": "Spalte entfernen",
+  "markdownOutput": "Markdown-Ausgabe",
+  "preview": "Vorschau",
+  "detailed_description": "Der Markdown Table Generator ist ein webbasiertes Tool zur Erstellung und Bearbeitung von Markdown-Tabellen durch eine interaktive Oberfläche mit Echtzeitvorschau. Technisch gesehen analysiert das Tool Benutzereingaben in einem virtuellen DOM, wandelt sie in gültige Markdown-Syntax (z.B. Pipes, Dashes, Alignment-Indikatoren) um und rendert diese direkt im Preview-Bereich. Es unterstützt erweiterte Funktionen wie dynamische Zeilen-/Spaltenanpassung, Zelljustierung (links, rechts, zentriert) und Export in HTML-Tabellenformaten. Die Datenpersistenz erfolgt clientseitig über localStorage, sodass Bearachtungsschritte ohne Serveranbindung gespeichert werden. Entwickler profitieren von der automatisierten Generierung korrekter Tabellenstrukturen, die manuelle Fehler bei der Erstellung von |---|---| Separatoren vermeiden. Besonders bei der Dokumentation komplexer Datenstrukturen für GitHub-Repositories, API-Referenzen oder wissenschaftliche Berichte spart das Tool signifikante Zeit. Die Implementierung nutzt ein reaktives Framework für Echtzeit-Rendering, sodass Änderungen an der Tabellenmatrix sofort im Markdown-Code und der HTML-Vorschau reflektiert werden.",
+  "usage_steps": [
+    "1. Öffnen Sie den Markdown Table Generator über die Navigationsleiste der Generator-Kategorie.",
+    "2. Legen Sie die Tabellendimensionen im Gitterkonfigurationsbereich fest (Anzahl Zeilen/Spalten).",
+    "3. Füllen Sie die Tabellenköpfe und -zellen über die editierbaren Textfelder im Arbeitsbereich.",
+    "4. Passen Sie die Ausrichtung einzelner Spalten über die Schaltflächen \"Linksjustiert\", \"Zentriert\" oder \"Rechtsjustiert\" an.",
+    "5. Verfolgen Sie die generierte Markdown-Syntax in der synchronisierten Code-Ansicht rechts neben der Tabelle.",
+    "6. Exportieren Sie die finale Tabelle über den \"HTML-Export\"-Button oder kopieren Sie den Markdown-Code direkt in Ihre Dokumentation."
+  ],
+  "usage_examples": [
+    "Erstellung einer Versionsvergleichstabelle für ein Open-Source-Projekt auf GitHub mit Feature-Kompatibilitätsmatrix.",
+    "Generierung einer Preistabelle für SaaS-Produkte mit dynamischen Rabattkalkulationen in Markdown-Dokumenten.",
+    "Konvertierung einer CSV-Datentabelle aus wissenschaftlichen Messreihen in formatierte Markdown-Tabellen für Fachartikel.",
+    "Vorbereitung von Präsentationsfolien mit strukturierten Benchmark-Ergebnissen für technische Vorträge (Export als HTML Embedded Table)."
+  ],
+  "clear": "Löschen",
+  "copied": "Kopiert!",
+  "copy": "Kopieren"
+}

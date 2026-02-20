@@ -1,0 +1,40 @@
+{
+  "homePrice": "Precio de la Casa",
+  "downPayment": "Pago Inicial",
+  "downPaymentPercent": "{percent}% del precio de la casa",
+  "interestRate": "Tasa de Interés",
+  "loanTerm": "Plazo del Préstamo",
+  "years": "años",
+  "monthsShort": "meses",
+  "extraMonthlyPayment": "Pago Mensual Adicional",
+  "extra": "adicional",
+  "monthlyPayment": "Pago Mensual",
+  "totalInterest": "Interés Total",
+  "totalPayment": "Pago Total",
+  "loanSummary": "Resumen del Préstamo",
+  "loanAmount": "Monto del Préstamo",
+  "payoffTime": "Tiempo de Pago",
+  "showSchedule": "Mostrar Plan de Amortización",
+  "hideSchedule": "Ocultar Plan de Amortización",
+  "month": "Mes",
+  "payment": "Pago",
+  "principal": "Principal",
+  "interest": "Interés",
+  "balance": "Saldo",
+  "showingFirst36": "Mostrando los primeros 36 de {total} meses",
+  "detailed_description": "Nuestra Calculadora de Hipotecas implementa la fórmula estándar de amortización gradual para calcular pagos mensuales, intereses totales y generación de tablas de amortización. Técnicamente, aplica la ecuación PMT = P[r(1+r)^n]/[(1+r)^n-1], donde P es el principal, r la tasa de interés mensual y n el número total de pagos. El motor matemático considera además costos adicionales como impuestos prediales, seguro hipotecario y comisiones de manejo, permitiendo simulaciones precisas de cargas financieras a largo plazo. Esta herramienta es esencial para compradores primerizos que evalúan capacidad de endeudamiento, inversores analizando rentabilidad de propiedades o familias optimizando estructuras de deuda. Su motor en JavaScript procesa las entradas en tiempo real, mostrando desglose mensual de capital e intereses en un cronograma interactivo con formato CSV descargable. La precisión en el cálculo de la proporción de capital amortizado frente a intereses generados permite tomar decisiones informadas sobre refinanciamiento o prepago de préstamos.",
+  "usage_steps": [
+    "Ingrese el monto del préstamo en el campo numérico 'Valor del Inmueble' con ajuste por porcentaje de enganche",
+    "Establezca la tasa de interés anual efectiva en el control deslizante con precisión de dos decimales",
+    "Seleccione el plazo de amortización en años mediante el menú desplegable (opciones de 10 a 40 años)",
+    "Active las casillas correspondientes para incluir costos adicionales: seguro de vida, impuesto predial y mantenimiento",
+    "Haga clic en 'Generar Amortización' para obtener el cronograma detallado con columnas de pago número, monto fijo, capital amortizado, intereses y saldo pendiente",
+    "Utilice el botón 'Exportar PDF' para guardar el análisis comparativo de escenarios con distintas condiciones financieras"
+  ],
+  "usage_examples": [
+    "Un comprador de vivienda desea comparar el impacto en pagos mensuales al ajustar enganches del 10% vs 20% en un préstamo de $200,000 a 30 años",
+    "Un inversor calcula el retorno de capital al incluir impuestos y seguros en una propiedad de alquiler financiada con préstamo a 15 años",
+    "Una pareja evalúa el ahorro en intereses al considerar un prepago de $15,000 en su hipoteca restante de $120,000 a 20 años",
+    "Un asesor financiero demuestra la diferencia en intereses totales entre préstamos fijos a 15 y 30 años con la misma tasa de 4.5%"
+  ]
+}

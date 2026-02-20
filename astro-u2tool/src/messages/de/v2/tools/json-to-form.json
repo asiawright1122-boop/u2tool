@@ -1,0 +1,29 @@
+{
+  "detailed_description": "Der JSON-to-Form-Generator wandelt strukturierte JSON-Schemata automatisch in funktionale HTML-Formulare um. Technisch betrachtet analysiert das Tool JSON-Daten, identifiziert Datentypen (z.B. String, Number, Boolean), verschachtelte Objekte und Arrays, und generiert darauf basierend passende Formularfelder wie Input-Elemente, Dropdowns oder Checkboxen. Es unterstützt JSON-Schema-Standards wie 'required'-Felder, 'enum'-Werte oder 'minimum'-/ 'maximum'-Constraints, die in Formularvalidierungen übersetzt werden. Entwickler profitieren durch die Automatisierung repetitiver Formularerstellung, besonders bei komplexen Datenmodellen wie Benutzereinstellungen, Produktkonfiguratoren oder API-Testformularen. Das Tool verarbeitet die Eingabe clientseitig im Browser, garantiert somit Datenprivatsphäre und ermöglicht Offline-Nutzung. Die Ausgabe enthält semantisch korrekte Formularstrukturen mit Label-For-Attribute-Zuordnungen, ARIA-Rollentags für Barrierefreiheit und integrierten Validierungslogiken, die auf den JSON-Schema-Bedingungen basieren.",
+  "usage_steps": [
+    "1. JSON-Schema im Code-Editor eingeben oder per Drag-and-Drop importieren",
+    "2. 'Schema validieren'-Button klicken, um Syntaxfehler zu erkennen",
+    "3. Im Anpassungsbereich Feldtypen (Textfeld, Auswahlliste, etc.) manuell überschreiben",
+    "4. 'Formularvorschau'-Tab öffnen, um das gerenderte Formular in Echtzeit zu prüfen",
+    "5. Im Exportbereich 'HTML-Code kopieren'-Button verwenden oder ZIP-Download auswählen",
+    "6. Generierten Code in das eigene CMS/Backend einbetten und serverseitige Logik anbinden"
+  ],
+  "usage_examples": [
+    "1. Erstellung eines dynamischen Anmeldeformulars mit Validierungspflichten basierend auf Benutzerrollen in einem SaaS-System",
+    "2. Automatisierte Umwandlung eines OpenAPI-Spec-JSON in ein Testformular für API-Endpunkte",
+    "3. Generierung von Einstellungsformularen für IoT-Gerätekonfigurationen mit numerischen Grenzwerten und Enum-Auswahl",
+    "4. Entwicklung eines Multi-Step-Formulars für Versicherungsanträge durch Kombination mehrerer verschachtelter JSON-Schemata"
+  ],
+  "jsonSchema": "JSON Schema",
+  "formPreview": "Formularvorschau",
+  "htmlOutput": "HTML-Ausgabe",
+  "generate": "Formular erstellen",
+  "copy": "Kopieren",
+  "copied": "Kopiert!",
+  "inputPlaceholder": "Geben Sie JSON Schema ein...",
+  "placeholder": "JSON-Schema hier einfügen...",
+  "loadExample": "Beispiel laden",
+  "jsonInput": "JSON-Eingabe",
+  "copyCode": "Code kopieren",
+  "submit": "Absenden"
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le générateur d'animations CSS est un outil technique permettant de créer, visualiser et exporter des animations CSS3 sans codage manuel. Il génère des règles @keyframes optimisées avec des propriétés avancées comme animation-timing-function, animation-fill-mode, et transform-origin. Conçu pour les développeurs et designers, cet outil élimine les tâches répétitives liées aux animations complexes en offrant un éditeur visuel avec timeline dynamique, prévisualisation en temps réel, et gestion précise des points d'interpolation. Les utilisateurs peuvent manipuler des transformations 3D (rotateX, translateY, scaleZ), gérer des séquences imbriquées, et tester différents easing (cubic-bezier, steps(), etc.). L'export inclut automatiquement les préfixes vendeurs (-webkit-, -moz-) pour garantir la compatibilité. Cet outil est essentiel pour créer des micro-interactions (boutons dynamiques, loaders), des animations déclenchées par le scroll, ou des effets visuels pour SPAs, tout en optimisant les performances via l'utilisation de GPU acceleration.",
+  "usage_steps": [
+    "Sélectionnez un élément HTML cible via l'inspecteur DOM intégré ou créez un div temporaire pour l'animation.",
+    "Ajoutez des points clés (keyframes) en cliquant sur la timeline et configurez leurs positions temporelles (ex: 0%, 40%, 100%).",
+    "Modifiez les propriétés CSS animables dans chaque point clé : transform (translate/rotate/scale), opacity, color, ou filter.",
+    "Ajustez les paramètres avancés : durée totale, easing personnisé via l'éditeur de courbes, nombre d'itérations (infinite, 3x), et direction (alternate, reverse).",
+    "Utilisez la prévisualisation en mode 'DevTools' pour analyser les frames per second (FPS) et détecter les ralentissements potentiels.",
+    "Générez le code CSS final avec les préfixes adaptés et copiez-le directement dans votre feuille de style ou dans un <style> inline."
+  ],
+  "usage_examples": [
+    "Créer un bouton CTA avec effet de pulsation (scale: 1 → 1.1 → 1) sur hover, combiné à un dégradé de couleur animé.",
+    "Générer un loader circulaire avec rotation infinie et effet de contraction/expansion via scale() et opacity.",
+    "Concevoir une animation de scroll parallaxe où un élément translateX(-50%) pendant que son opacité varie de 0 à 1.",
+    "Imaginer une séquence d'entrée pour un modal : scale(0.8) → scale(1) avec easing 'elastic' et delay d'affichage progressif des éléments enfants."
+  ]
+}

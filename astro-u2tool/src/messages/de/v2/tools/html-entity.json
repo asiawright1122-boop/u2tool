@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der HTML Entity Converter ist ein präziser Encoder/Decoder für HTML-Entitäten, der sowohl benannte Entitäten (named entities) als auch numerische Zeichenreferenzen (NCRs) in Dezimal- und Hexadezimalform erzeugt und verarbeitet. Er arbeitet Unicode-basiert, versteht UTF‑8- und UTF‑16-Surrogate-Paare, und liefert deterministische Ergebnisse ohne Verlust. Der Modus wählbar: Encode (Zeichen → Entitäten), Decode (Entitäten → Zeichen) oder Smart (automatische Erkennung). Die Konfiguration umfasst die Ausgabeform (benannt, dezimal, hex, gemischt), die Großschreibung der Hex-Ausgabe, die Normalisierung von Unicode (NFC/NFKC) und die Behandlung von Tab/CR/LF. Für die Attributsicherheit können Anführungszeichen escapet und & durch &amp; geschützt werden. Der Decoder parst korrekt gemäß HTML‑Speifikation: Sequenzen wie &lt;, &gt;, &amp;, &quot; und &apos; werden in Zeichen überführt; &lt;script&gt; wird als Textkette dekodiert, ohne HTML-Tags zu interpretieren. Eingaben werden vollständig analysiert, inklusive optionaler Semikola-Erkennung, dezimaler/hexadezimaler NCR-Patterns, benannter Entitäten und Fehlerbehandlung unbekannter Sequenzen (als Rohtext belassen oder gemeldet). Der Converter eignet sich für Content‑Sanitization, XSS‑Prävention, die Vorbereitung von Texten für DOMParser/innerHTML, sichere E‑Mail‑Bodies mit Umlauten, die Migration von HTML‑4‑Entitäten nach HTML5 sowie für automatisierte Tests von Entitäten-Mappings.",
+  "usage_steps": [
+    "Öffnen Sie das Tool und wählen Sie den Modus: Encode, Decode oder Smart (automatische Erkennung) über das Dropdown „Modus“.",
+    "Klicken Sie auf „Eingabe einfügen“, um Quelltext einzufügen, oder nutzen Sie die Tastenkombination Strg+V (macOS: Cmd+V).",
+    "Aktivieren Sie im Bereich „Optionen“ die gewünschten Ausgabeformen (Named, Decimal NCR, Hex NCR, Mixed), setzen Sie ggf. „Hex Großbuchstaben“, „Unicode normalisieren (NFC/NFKC)“ und „Tab/CR/LF escapen“.",
+    "Für Attributsicherheit aktivieren Sie „Anführungszeichen escapen“ und „& schützen (&amp;)“; nutzen Sie bei Bedarf den Button „Attribute-Modus“.",
+    "Starten Sie die Konvertierung mit „Konvertieren“ (oder nutzen Sie Auto-Konvertierung bei jeder Eingabe); der aktualisierte Text erscheint im Ausgabefeld.",
+    "Kopieren Sie das Ergebnis mit „Kopieren“ (oder Strg+C) und prüfen Sie Fehler/Warnungen im Log, falls unbekannte Entitäten oder inkorrekte Semikola auftreten."
+  ],
+  "usage_examples": [
+    "Sanitization für ein Blog-Editorial: Unsichere Zeichen wie <, >, & und Anführungszeichen werden in &lt;, &gt;, &amp; und &quot; konvertiert; der Redakteur kann den Text gefahrlos in CMS-Felder einfügen und XSS verhindern.",
+    "E‑Mail‑Body mit Umlauten: UTF‑8‑Inhalte mit ä, ö, ü und & werden automatisch in sichere, standardsichere Entitäten (z. B. &auml;, &amp;) transformiert, sodass Header‑Encoding und HTML‑Kompatibilität gewährleistet sind.",
+    "Migration von HTML‑4‑Entitäten nach HTML5: Ein Legacy‑Dokument mit &nbsp; oder &shy; wird dekodiert und anschließend in moderne, browserfreundliche Entitäten (z. B. &#160; oder &#173;) oder korrekte Named Entities konvertiert.",
+    "Test von DOMParser/innerHTML: Ein Testskript kodiert spezielle Zeichen und setzt sie in innerHTML; durch Vergleich der dekodierten Ausgabe wird geprüft, ob der Browser korrekt Entities verarbeitet und keine unerwarteten Transformationen vornimmt."
+  ]
+}

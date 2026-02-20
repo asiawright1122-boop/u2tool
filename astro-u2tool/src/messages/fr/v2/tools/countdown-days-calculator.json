@@ -1,0 +1,40 @@
+{
+  "targetDate": "Date Cible",
+  "eventName": "Nom de l'Événement",
+  "daysUntil": "Jours Restants",
+  "daysSince": "Jours Déjà Passés",
+  "today": "Aujourd'hui",
+  "weeks": "Semaines",
+  "months": "Mois",
+  "years": "Années",
+  "workdays": "Jours Ouvrables",
+  "weekends": "Week-ends",
+  "detailed_description": "Le Calculateur de Jours de Compte à Rebours est un outil technique permettant de déterminer avec précision l'écart en jours entre deux dates, en tenant compte des spécificités calendaires. Conçu pour gérer des calculs basés sur le format ISO 8601, il intègre automatiquement les ajustements liés aux fuseaux horaires (UTC ou local) et aux années bissextiles. L'outil convertit chaque date en timestamp Unix, effectue une soustraction des valeurs en millisecondes, puis normalise le résultat en jours décimaux ou entiers selon le mode sélectionné. Cette approche évite les erreurs courantes liées aux calculs manuels ou aux outils simplifiés ignorant les décalages horaires ou les variations du calendrier grégorien. Les développeurs apprécieront la gestion des erreurs via des retours détaillés (ex. : « Date non valide » ou « Plage de dates invalide »). Ce calculateur s'adresse aux professionnels du développement, aux gestionnaires de projets nécessitant des jalons temporels précis, ou aux particuliers organisant des événements avec des contraintes de calendrier complexes. Son algorithme optimisé garantit une réponse instantanée même pour des dates s'étendant sur plusieurs décennies.",
+  "usage_steps": [
+    "Accédez à l'interface via le menu 'Outils de Date' dans la barre de navigation.",
+    "Saisissez la date de référence dans le champ 'Date Initiale' au format JJ/MM/AAAA ou en glissant-déposant un fichier .ics.",
+    "Choisissez le mode de calcul : 'Jours jusqu'au' ou 'Jours depuis le' via le sélecteur radio.",
+    "Activez l'option 'Calcul UTC' si nécessaire pour neutraliser les effets du fuseau horaire local.",
+    "Cliquez sur le bouton 'Exécuter Calcul' pour obtenir le résultat affiché en temps réel dans la zone de sortie.",
+    "Utilisez l'icône de copie pour intégrer le résultat dans un document ou exportez le calcul au format CSV."
+  ],
+  "usage_examples": [
+    "Un développeur calcule le délai restant jusqu'à la fin de son sprint en entrant la date de démarrage et la jour cible.",
+    "Un organisateur d'événements détermine le nombre de jours entre la réservation d'une salle et la date d'un mariage, en excluant les weekends.",
+    "Un étudiant mesure exactement la durée entre la publication d'un devoir et sa date limite, incluant les jours fériés locaux.",
+    "Un responsable RH compte les jours travaillés depuis le début d'un CDD en comparant la date de début de contrat avec la date actuelle."
+  ],
+  "newYear": "Nouvel An",
+  "christmas": "Noël",
+  "valentines": "Saint-Valentin",
+  "addCountdown": "Ajouter un Compte à Rebours",
+  "add": "Ajouter",
+  "quickAdd": "Ajout Rapide",
+  "days": "Jours",
+  "daysShort": "Jours",
+  "hours": "Heures",
+  "minutes": "Minutes",
+  "seconds": "Secondes",
+  "eventPassed": "L'événement est passé",
+  "noCountdowns": "Aucun compte à rebours pour le moment. Ajoutez-en un ci-dessus !"
+}

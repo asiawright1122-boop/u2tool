@@ -1,0 +1,52 @@
+{
+  "detailed_description": "El Detectador de fugas de memoria analiza patrones de código para identificar fugas potenciales como oyentes de eventos no eliminados.",
+  "usage_steps": [
+    "Pega código JS/TS",
+    "Haz clic en Analizar",
+    "Ver fugas detectadas",
+    "Lee sugerencias de solución",
+    "Aplica cambios"
+  ],
+  "usage_examples": [
+    "Encuentra fugas de componentes React",
+    "Detecta problemas de clausura",
+    "Identifica fugas de temporizadores"
+  ],
+  "input": "Entrada",
+  "output": "Salida",
+  "process": "Proceso",
+  "copy": "Copiar",
+  "clear": "Limpiar",
+  "inputPlaceholder": "Pegue su código JavaScript/React aquí...",
+  "outputPlaceholder": "Los resultados aparecerán aquí...",
+  "errors": {
+    "emptyInput": "Por favor, introduce algún contenido"
+  },
+  "loadExample": "Cargar ejemplo",
+  "analyze": "Analizar",
+  "generate": "Generar",
+  "format": "Formatear",
+  "convert": "Convertir",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Vista previa",
+  "reset": "Restablecer",
+  "add": "Agregar",
+  "remove": "Eliminar",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "settings": "Configuración",
+  "options": "Opciones",
+  "results": "Resultados",
+  "noResults": "Sin resultados",
+  "loading": "Cargando...",
+  "success": "Éxito",
+  "failed": "Fallido",
+  "warning": "Advertencia",
+  "info": "Información",
+  "memorySafetyScore": "Puntuación de Seguridad de Memoria",
+  "high": "Alto",
+  "medium": "Medio",
+  "low": "Bajo",
+  "potentialMemoryLeaks": "Posibles Fugas de Memoria"
+}

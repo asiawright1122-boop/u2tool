@@ -1,0 +1,18 @@
+{
+  "detailed_description": "El Generador de Hashes es una herramienta esencial para desarrolladores y profesionales de la seguridad que necesitan crear y verificar hashes de texto. Este generador permite la creación de hashes utilizando los algoritmos MD5, SHA-1 y SHA-256, proporcionando un método robusto para asegurar la integridad de los datos. Los hashes son representaciones únicas de texto que se utilizan para verificar la autenticidad y la integridad de los datos, lo que es crucial en aplicaciones de seguridad, autenticación y almacenamiento de contraseñas. Esta herramienta es esencial para aquellos que necesitan garantizar que los datos no han sido alterados durante el transporte o el almacenamiento. Además, el generador de hashes facilita la implementación de mecanismos de seguridad sin la necesidad de configurar complejos entornos de desarrollo. El proceso es sencillo: se introduce el texto original, se selecciona el algoritmo de hash deseado, y el generador produce una representación hash que puede ser utilizada para la verificación. La herramienta es compatible con múltiples algoritmos de hash, lo que asegura que los usuarios puedan elegir el nivel de seguridad que mejor se adapte a sus necesidades.",
+  "usage_steps": [
+    "Paso 1: Abre la página del Generador de Hashes en tu navegador web.",
+    "Paso 2: En el campo de texto `Entrada`, introduce el texto que deseas convertir en un hash.",
+    "Paso 3: Selecciona el algoritmo de hash que deseas utilizar desde el menú desplegable `Algoritmo`: MD5, SHA-1 o SHA-256.",
+    "Paso 4: Si deseas, puedes activar la opción `Mostrar hash en formato hexadecimal` para obtener el hash en un formato más legible.",
+    "Paso 5: Haz clic en el botón `Generar Hash` para procesar el texto y crear el hash.",
+    "Paso 6: El hash generado aparecerá en el campo `Resultado`. Puedes copiar este hash y utilizarlo en tus aplicaciones de seguridad."
+  ],
+  "usage_examples": [
+    "Ejemplo 1: Un desarrollador de aplicaciones web utiliza el Generador de Hashes para almacenar contraseñas de usuarios de manera segura. En lugar de guardar las contraseñas en texto plano, el desarrollador genera un hash SHA-256 de cada contraseña y lo almacena en la base de datos.",
+    "Ejemplo 2: Un administrador de sistemas necesita verificar la integridad de un archivo descargado de internet. Utiliza el Generador de Hashes para crear un hash MD5 del archivo original y compara este hash con el hash proporcionado por el sitio web del desarrollador del archivo.",
+    "Ejemplo 3: Un equipo de ciberseguridad utiliza el Generador de Hashes para detectar modificaciones en archivos sensibles. Generan hashes SHA-1 de los archivos importantes y los almacenan. Posteriormente, generan nuevos hashes y los comparan con los originales para detectar cualquier alteración.",
+    "Ejemplo 4: Un programador de blockchain utiliza el Generador de Hashes para crear hashes SHA-256 de bloques de datos. Estos hashes se utilizan para asegurar la integridad y la inmutabilidad de la cadena de bloques, lo que es fundamental para mantener la seguridad del sistema."
+  ],
+  "inputPlaceholder": "Introduce texto aquí..."
+}

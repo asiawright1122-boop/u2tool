@@ -1,0 +1,37 @@
+{
+  "detailed_description": "GitHub README生成器帮助您为GitHub仓库创建专业、结构良好的README.md文件。添加项目标题、描述、徽章（构建状态、许可证、npm版本）、功能列表、安装说明、使用示例、API文档、贡献指南和许可证信息。该工具生成带有适当格式的Markdown，使您的项目更易于发现和使用。",
+  "usage_steps": [
+    "输入您的项目名称和描述",
+    "添加构建状态、许可证等徽章",
+    "列出项目的关键功能",
+    "编写安装说明",
+    "添加带有代码块的使用示例",
+    "包括贡献指南",
+    "选择许可证并生成README"
+  ],
+  "usage_examples": [
+    "为开源库创建README",
+    "使用示例文档CLI工具",
+    "为Web应用程序设置README",
+    "为API项目创建文档"
+  ],
+  "projectNamePlaceholder": "我的精彩项目",
+  "descriptionPlaceholder": "项目简介...",
+  "authorPlaceholder": "张三",
+  "authorGithubPlaceholder": "zhangsan",
+  "featurePlaceholder": "功能描述...",
+  "installationPlaceholder": "npm install your-package",
+  "usagePlaceholder": "import { something } from 'your-package';",
+  "projectName": "项目名称",
+  "author": "作者",
+  "authorGithub": "作者 GitHub",
+  "badges": "徽章",
+  "features": "功能特性",
+  "addFeature": "添加功能",
+  "installation": "安装",
+  "usage": "使用方法",
+  "license": "许可证",
+  "includeTableOfContents": "包含目录",
+  "generate": "生成",
+  "download": "下载"
+}

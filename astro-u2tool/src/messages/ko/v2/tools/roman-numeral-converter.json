@@ -1,0 +1,27 @@
+{
+  "detailed_description": "로마 숫자 변환기는 로마 숫자와 아라비아 숫자 간에 변환합니다.",
+  "usage_steps": [
+    "변환 방향 선택",
+    "로마 숫자 또는 아라비아 숫자 입력",
+    "변환 클릭하여 결과 확인",
+    "변환된 값 복사",
+    "참조 차트 사용하여 도움 받기"
+  ],
+  "usage_examples": [
+    "연도를 로마 숫자로 변환",
+    "시계의 로마 숫자 디코딩",
+    "로마 숫자 시스템 학습"
+  ],
+  "arabicToRoman": "아라비아 → 로마",
+  "romanToArabic": "로마 → 아라비아",
+  "arabicNumber": "아라비아 숫자",
+  "romanNumeral": "로마 숫자",
+  "arabicPlaceholder": "숫자 입력 (1-3999)...",
+  "romanPlaceholder": "로마 숫자 입력...",
+  "result": "결과",
+  "convert": "변환",
+  "copy": "복사",
+  "copied": "복사됨!",
+  "invalidInput": "잘못된 입력",
+  "referenceTitle": "참조 차트"
+}

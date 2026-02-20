@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Business Days Calculator ist ein präzises Instrument zur Berechnung von Arbeitstagen zwischen zwei Datumsangaben, das automatisch Wochenenden (Samstag und Sonntag gemäß ISO 8601) sowie benutzerdefinierte oder länderspezifische Feiertage ausschließt. Dieses Tool ist unverzichtbar für Projektleiter, die Meilenstein-Fristen im agilen Umfeld planen, HR-Abteilungen zur Genauigkeit von Gehaltsabrechnungen oder Juristen, die rechtliche Fristen berechnen müssen. Technisch basiert der Algorithmus auf dem Gregorianischen Kalender und implementiert die Zeller-Kongruenz zur Wochentagsberechnung, kombiniert mit einer anpassbaren Feiertags-Datenbank, die auf öffentlichen APIs (z.B. Google Calendar Feiertage) oder benutzerdefinierten CSV-Importen basiert. Die Datumsverarbeitung erfolgt mit JavaScripts Date.parse()-Funktion unter Berücksichtigung von Time-Zonen-Verschiebungen (UTC±0), wobei der Nutzer zwischen inklusiver/exklusiver Zählung der Start-/Enddaten wählen kann. Besonders ist die Unterstützung für benutzerdefinierte Arbeitstage (z.B. 4-Tage-Woche) durch eine dynamische Wochentag-Maske, die sich an unterschiedliche Arbeitsmodelle anpasst.",
+  "usage_steps": [
+    "Rufen Sie das Tool über die URL https://tools.example.com/business-days-calculator auf.",
+    "Wählen Sie Start- und Enddatum mithilfe der integrierten HTML5-Datumsauswahl-Felder (Format: YYYY-MM-DD).",
+    "Aktivieren Sie die Checkbox 'Länderspezifische Feiertage einbeziehen' und wählen Sie Ihr Land aus dem Dropdown-Menü (z.B. Deutschland, USA).",
+    "Passen Sie bei Bedarf die Arbeitstage an, indem Sie die Wochentag-Maske (z.B. Montag-Freitag) manuell anpassen.",
+    "Klicken Sie auf den 'Berechnung starten'-Button, um das Ergebnis zu generieren.",
+    "Analysieren Sie die Ausgabe: Die Anzahl der Arbeitstage, ein täglicher Kalender mit markierten Feiertagen und ein Export-Button für CSV/ICAL-Formate."
+  ],
+  "usage_examples": [
+    "Ein Projektleiter berechnet die verfügbaren Arbeitstage für einen 3-monatigen Entwicklungszeitraum unter Einbeziehung deutscher Feiertage wie Pfingsten und 03.10.",
+    "Ein Support-Team nutzt das Tool zur SLA-Berechnung: 5 Arbeitstage für die Bearbeitung von Tickets, exklusive US-Feiertage wie Thanksgiving.",
+    "Die Lohnbuchhaltung berechnet die genaue Anzahl der Arbeitstage im Monat August 2024 für Teilzeitmitarbeiter mit reduziertem Dienstag-Programm.",
+    "Ein Anwalt ermittelt die Einreichfrist für eine Klage, die 15 Arbeitstage nach Zustellung des Schriftstücks beträgt, unter Ausschluss von französischen Feiertagen."
+  ]
+}

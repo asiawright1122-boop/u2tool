@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Text to PDF Converter transforms your plain text into professional PDF documents. Customize font, size, and page format to create documents that look exactly how you want.",
+  "usage_steps": [
+    "Enter or paste your text",
+    "Add an optional title",
+    "Choose font and size settings",
+    "Select page size (A4 or Letter)",
+    "Click Download PDF"
+  ],
+  "usage_examples": [
+    "Create printable documents",
+    "Save notes as PDF",
+    "Generate simple reports"
+  ],
+  "title": "Title",
+  "optional": "optional",
+  "titlePlaceholder": "Document title...",
+  "fontSize": "Font Size",
+  "font": "Font",
+  "pageSize": "Page Size",
+  "content": "Content",
+  "contentPlaceholder": "Enter your text here...",
+  "characters": "characters",
+  "generating": "Generating...",
+  "downloadPdf": "Download PDF",
+  "preview": "Preview",
+  "previewPlaceholder": "Your text will appear here...",
+  "arial": "Arial",
+  "times": "Times",
+  "courier": "Courier",
+  "letter": "Letter"
+}

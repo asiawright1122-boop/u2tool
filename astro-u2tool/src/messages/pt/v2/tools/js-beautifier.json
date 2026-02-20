@@ -1,0 +1,18 @@
+{
+  "detailed_description": "O JavaScript Beautifier é uma ferramenta técnica especializada para análise e transformação de código JavaScript, permitindo formatação (beautify) e minificação (minify) com controle granular sobre padrões de estilo. Internamente, o processo começa com a análise léxica e sintática do código-fonte, criando uma AST (Abstract Syntax Tree) que identifica estruturas como funções, blocos e declarações. Durante a formatação, o algoritmo aplica regras configuráveis de indentação (espaços ou tabs), posicionamento de chaves (K&R ou Allman), inserção opcional de pontos-e-vírgulas e normalização de literais (strings com aspas simples ou duplas). Para minificação, o mecanismo remove tokens redundantes (espaços, comentários, quebras de linha), renomeia variáveis locais para identificadores compactos e otimiza expressões lógicas sem comprometer a funcionalidade. Profissionais precisam deste recurso para padronizar código em projetos colaborativos, depurar scripts ofuscados ou reduzir a carga de arquivos em produção. Diferente de soluções genéricas, o JS Beautifier suporta sintaxe ES6+/TypeScript, preserva anotações JSDoc e permite ajustar regras via interface avançada, incluindo opções como 'quebrar arrays multidimensionais' ou 'alinhamento de operadores'.",
+  "usage_steps": [
+    "Cole o código JavaScript no editor de texto com suporte a realce de sintaxe.",
+    "Escolha entre as abas 'Formatar' ou 'Minificar' dependendo do objetivo.",
+    "Ajuste configurações avançadas: selecione tamanho de indentação (2, 4 ou 8 espaços), estilo de chaves e formato de strings.",
+    "Ative/desative a opção 'Remover comentários' para preservar documentação interna durante a formatação.",
+    "Clique no botão 'Processar Código' para aplicar transformações em tempo real.",
+    "Compare o resultado na área de saída e copie o código finalizado para sua base de desenvolvimento."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor recebe um script minificado de um cliente para manutenção - usa o JS Beautifier para expandir o código com indentação consistente e nomes de variáveis legíveis, facilitando a análise de bugs.",
+    "Time de front-end padroniza regras de estilo em projetos React, aplicando configurações específicas de indentação e aspas duplas para garantir uniformidade nos commits do Git.",
+    "Arquivo de vendor.js com 1,2MB é minificado usando opção de compressão máxima, reduzindo para 380KB e melhorando performance de carregamento em produção.",
+    "Estudante tenta entender código obfuscado em um desafio de segurança - utiliza a formatação automática para revelar estruturas lógicas e identificar padrões de vulnerabilidades."
+  ],
+  "indent": "Recuo"
+}

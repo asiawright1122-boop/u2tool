@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El generador de UUID v4 crea identificadores únicos universales basados en valores aleatorios criptográficamente seguros, según el estándar UUID versión 4 (RFC 4122). Cada UUID es una cadena de 36 caracteres (128 bits representados en hexadecimal) con una probabilidad extremadamente baja de colisión. Esta herramienta es esencial para desarrolladores que necesitan identificadores únicos en sistemas distribuidos, bases de datos NoSQL, tokens de sesión o pruebas automatizadas. Internamente utiliza un generador de números pseudoaleatorios (CSPRNG) que extrae entropía del sistema operativo para garantizar seguridad criptográfica. A diferencia de otros generadores, permite personalizar la salida con opciones como formato JSON/CSV, control de mayúsculas/minúsculas y eliminación de guiones, ideal para integrar directamente en pipelines de desarrollo o entornos de CI/CD.",
+  "usage_steps": [
+    "Accede al generador a través de la barra de navegación en la categoría 'Generadores'",
+    "Ajusta el número de UUIDs a generar (de 1 a 1000) usando el control deslizante 'Cantidad'",
+    "Selecciona las opciones de formato: activa 'Mayúsculas' para estándares SQL o desactiva 'Guiones' para claves compactas",
+    "Elige el formato de salida en el menú desplegable: 'Línea simple', 'JSON array' o 'CSV'",
+    "Haz clic en 'Generar UUID' para crear los identificadores inmediatamente en el área de resultados",
+    "Copia el resultado con un clic en el botón 'Copiar al portapapeles' o descarga como archivo .txt con el botón 'Descargar'"
+  ],
+  "usage_examples": [
+    "Crear 100 UUIDs en formato CSV para poblar una base de datos de pruebas con identificadores únicos en un entorno de staging",
+    "Generar un token de sesión en formato UUID v4 sin guiones para un API REST que requiere identificadores compactos de 24 caracteres",
+    "Producir 10 UUIDs en mayúsculas para definir constantes en código Java que siguen el estándar de nomenclatura UPPER_SNAKE_CASE",
+    "Exportar 500 UUIDs en formato JSON array para integrar directamente como fixture en pruebas unitarias de una aplicación Node.js"
+  ]
+}

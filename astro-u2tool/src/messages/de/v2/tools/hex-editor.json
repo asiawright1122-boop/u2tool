@@ -1,0 +1,18 @@
+{
+  "detailed_description": "Der Hex Editor ermöglicht präzise Manipulation und Analyse von Binärdaten durch bidirektionale Konvertierung zwischen Klartext und hexadezimaler Darstellung. Technisch gesehen interpretiert das Tool Eingabedaten als Byte-Arrays, kodiert diese entsprechend ASCII-, UTF-8- oder UTF-16-Standarddarstellungen und visualisiert den Hexdump mit Offset-Adressierung. Entwickler nutzen diese Funktionalität, um Speicherabbilder zu analysieren, Dateiheader zu modifizieren oder Netzwerkprotokolle zu debuggen. Besonders bei der Fehlersuche in kompilierten Programmen oder der manuellen Überprüfung von kryptographischen Hashes zeigt sich der praktische Mehrwert. Das Tool nutzt JavaScript-basierte Bit-Level-Operationen, um Zeichencodierungen präzise zu verarbeiten und dabei Endianness-Einstellungen (Big-Endian/Little-Endian) zu berücksichtigen. Die Echtzeit-Dualansicht zeigt sowohl hexadezimale Werte als auch die zugehörige Zeichendarstellung an, wodurch spezifische Muster wie Nullterminatoren oder strukturierte Binärformate leicht identifizierbar werden.",
+  "usage_steps": [
+    "1. Eingabedaten im Textfeld einfügen oder manuell eingeben.",
+    "2. Im Dropdown 'Zeichensatz' die gewünschte Kodierung (ASCII, UTF-8, UTF-16LE/BE) auswählen.",
+    "3. Auf 'Text zu HEX' klicken, um die hexadezimale Repräsentation zu generieren.",
+    "4. HEX-Werte im Hexdump-Editor direkt modifizieren oder per 'HEX zu Text' konvertieren.",
+    "5. Die Option 'Swap Endianness' nutzen, um Byte-Reihenfolge bei 16-Bit-Werten umzukehren.",
+    "6. Export-Funktion verwenden, um bearbeitete Daten als Binärdatei herunterzuladen."
+  ],
+  "usage_examples": [
+    "Validierung von PNG-Datei-Header-Signaturen durch direkte Hex-Bearbeitung.",
+    "Analyse von Memory-Dumps zur Fehlersuche in Embedded-System-Anwendungen.",
+    "Manuelle Überprüfung von SHA-256-Hash-Darstellungen im Hex-Format.",
+    "Modifikation von Netzwerkpaket-Payloads für Testzwecke im Hexdump-Editor."
+  ],
+  "inputPlaceholder": "Hier den Text eingeben..."
+}

@@ -1,0 +1,61 @@
+{
+  "chartTitle": "Diagrammtitel",
+  "chartTitlePlaceholder": "Geben Sie den Diagrammtitel ein",
+  "colorTheme": "Farbthema",
+  "showLegend": "Legende anzeigen",
+  "horizontal": "Horizontal",
+  "category": "Kategorie",
+  "series": "Serie",
+  "series1": "Serie A",
+  "series2": "Serie B",
+  "series3": "Serie C",
+  "item": "Artikel",
+  "addRow": "Zeile hinzufügen",
+  "addSeries": "Serie hinzufügen",
+  "seriesNames": "Seriennamen",
+  "loadSample": "Muster laden",
+  "downloadPng": "PNG herunterladen",
+  "downloadSvg": "SVG herunterladen",
+  "defaultTitle": "Quartilverteilung",
+  "sampleTitle": "Geräteverwendung nach Jahr",
+  "dataEditor": "Dateneditor",
+  "chartPreview": "Diagrammvorschau",
+  "chartSettings": "Diagrammeinstellungen",
+  "themeDefault": "Standard",
+  "themeOcean": "Ozean",
+  "themeSunset": "Sonnenuntergang",
+  "themeForest": "Wald",
+  "percentageNote": "Werte stellen Prozente dar und sollten pro Kategorie auf 100% summiert werden",
+  "sampleData": {
+    "Q1": "Q1",
+    "Q2": "Q2",
+    "Q3": "Q3",
+    "Q4": "Q4",
+    "mobile": "Mobil",
+    "tablet": "Tablet",
+    "desktop": "Desktop"
+  },
+  "tips": {
+    "title": "Tips",
+    "tip1": "Jede Zeile sollte auf 100% summiert werden, um eine genaue Darstellung zu gewährleisten",
+    "tip2": "Fügen Sie oder entfernen Sie Serien hinzu, um verschiedene Kategorien zu vergleichen",
+    "tip3": "Schalten Sie den horizontalen Modus ein, um horizontale stapelbare Balken anzuzeigen"
+  },
+  "detailed_description": "Der Percentage Stacked Bar Chart Generator ist ein spezialisierter Online-Tool zur Erstellung normierter Balkendiagramme, bei denen jede Bar eine 100%-Summe repräsentiert und die Segmente prozentuale Anteile darstellen. Technisch gesehen verarbeitet das Tool Rohdaten durch eine Normalisierungsfunktion, die absolute Werte in relative Prozentsätze umrechnet, sodass Vergleiche zwischen Kategorien mit unterschiedlichen Skalierungen möglich werden. Die Visualisierung basiert auf SVG-Rendering mit responsiver Skalierung, was für präzise Datenvisualisierung in akademischen Studien, Geschäftsberichten oder Marketingszenarien entscheidend ist. Nutzer benötigen diesen Generator, um komplexe Verteilungen wie Markanteilanalysen über verschiedene Regionen, demografische Verteilungen in Umfragen oder Budgetzusammensetzungen zu kommunizieren. Das Tool implementiert eine clientseitige Datenverarbeitung mit WebAssembly-Optimierung, um große Datensätze (>10.000 Zeilen) in Echtzeit zu aggregieren. Besondere Features umfassen automatische Farbschema-Generierung nach WCAG-Kontraststandards, CSV/TSV-Import mit Spaltenmappings und Exportoptionen für vektorbasierte Formate (SVG, PDF).",
+  "usage_steps": [
+    "1. Wählen Sie im Dashboard den Modus 'Manueller Import' oder laden Sie eine CSV-Datei mit Kategorien in der ersten Spalte und numerischen Werten in den folgenden Spalten.",
+    "2. Aktivieren Sie die 'Relative Normalisierung' Checkbox, um die Werte automatisch in Prozentanteile umzurechnen.",
+    "3. Passen Sie die Achsenbeschriftungen an, indem Sie im 'Konfigurationspanel' die Hauptkategorie (X-Achse) und die Serienbezeichnungen (Legende) definieren.",
+    "4. Wählen Sie im Farboptimierer ein divergierendes Farbschema (z.B. Blau-Rot-Gradient) oder erstellen Sie ein benutzerdefiniertes Palette mit HEX-Codes.",
+    "5. Verfeinern Sie die Darstellung durch Anpassung der Balkenbreite (10-50px), Abstand zwischen Segmenten (0-15px) und aktivieren Sie ggf. die Prozentlabel-Overlay-Funktion.",
+    "6. Generieren Sie das Diagramm mit Klick auf 'Visualisierung erstellen' und exportieren Sie das Ergebnis als SVG oder als PNG mit 400-800dpi Auflösung."
+  ],
+  "usage_examples": [
+    "Ein Marktforschungsteam analysiert die Altersverteilung von Kunden über verschiedene Verkaufsregionen, wobei jede Bar eine Region repräsentiert und die Segmente die Anteile der Altersgruppen zeigen.",
+    "Ein Finanzanalyst visualisiert den prozentualen Budgetanteil verschiedener Abteilungen innerhalb eines Unternehmens über mehrere Geschäftsjahre.",
+    "Ein Soziologe präsentiert die Verteilung von Bildungsabschlüssen in verschiedenen Bevölkerungsgruppen basierend auf Umfragedaten.",
+    "Ein E-Commerce-Manager vergleicht die Produktkategorienzusammensetzung der Quartalsumsätze, wobei jeder Bar ein Quartal entspricht."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

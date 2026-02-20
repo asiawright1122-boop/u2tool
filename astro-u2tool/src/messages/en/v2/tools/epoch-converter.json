@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The Epoch Converter tool facilitates bidirectional conversion between Unix timestamps (Epoch time) and human-readable date-time formats. Technically, Unix timestamps represent the number of seconds (or milliseconds) elapsed since 00:00:00 UTC on January 1, 1970, excluding leap seconds. This tool parses numerical inputs as Epoch values, converts them into ISO 8601-compliant datetime strings (e.g., '2024-03-20T14:30:45Z'), and supports reverse operations for date-to-timestamp conversions. Key use cases include debugging log files containing Epoch timestamps, synchronizing time-sensitive API transactions (e.g., OAuth token expiration), and normalizing timestamp formats across distributed systems. The converter handles precision variations (10-digit seconds, 13-digit milliseconds) and accounts for timezone offsets via UTC alignment. Internally, it employs JavaScript's Date.parse() for ISO/RFC 2822 format recognition and implements mathematical division/multiplication for unit conversions. Users can also customize output localization through format specifiers like 'YYYY-MM-DD HH:MM:SS' or 'RFC 2822'.",
+  "usage_steps": [
+    "Select conversion mode using the toggle: 'Epoch to DateTime' or 'DateTime to Epoch'.",
+    "Enter a numeric timestamp (e.g., 1711137045) or a date string (e.g., '2024-03-20 14:30:45') in the primary input field.",
+    "For Epoch inputs: choose unit precision via the dropdown (Seconds, Milliseconds).",
+    "For DateTime inputs: select the source timezone (UTC, Local, or custom offset) using the timezone selector.",
+    "Click the 'Convert' button to execute the transformation.",
+    "Copy the converted result from the output box using the 'Copy to Clipboard' icon for integration into code or documentation."
+  ],
+  "usage_examples": [
+    "A DevOps engineer converts a server log entry timestamp '1700000000' to '2023-11-13 04:53:20 UTC' to investigate incidents during a specific window.",
+    "An API developer generates an OAuth 2.0 token expiration value by converting '2025-01-01 00:00:00 UTC' to Epoch milliseconds (1735689600000).",
+    "A data analyst transforms a PostgreSQL timestamp column (TIMESTAMP WITH TIME ZONE) into Epoch seconds for compatibility with a legacy reporting tool.",
+    "A systems administrator calculates a cron job schedule by converting '2024-12-31 23:59:59 UTC-0500' to Epoch (1735676399) to verify execution timing."
+  ]
+}

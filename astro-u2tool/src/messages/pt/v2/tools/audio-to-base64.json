@@ -1,0 +1,27 @@
+{
+  "dropzone": "Solte o arquivo de áudio aqui ou clique para fazer upload",
+  "acceptedFormats": "Suportado: MP3, WAV, OGG, WebM, AAC, FLAC",
+  "errorNotAudio": "Selecione um arquivo de áudio",
+  "errorReading": "Erro ao ler o arquivo",
+  "originalSize": "Tamanho original",
+  "includeDataUri": "Incluir prefixo de URI de dados",
+  "base64Output": "Saída Base64",
+  "copy": "Copiar",
+  "outputPlaceholder": "A saída Base64 aparecerá aqui...",
+  "supportedFormats": "Formatos Suportados",
+  "detailed_description": "O conversor de áudio para Base64 transforma arquivos de som em uma sequência alfanumérica codificada segundo o padrão Base64, permitindo que dados binários sejam transmitidos como texto ASCII. Essa técnica é essencial em aplicações web que incorporam áudio diretamente em documentos HTML5 via data URLs, APIs RESTful que exigem payloads de mídia serializados em JSON ou XML, e sistemas que armazenam arquivos multimídia em bancos de dados NoSQL como MongoDB. O processo ocorre integralmente no navegador através da File API e FileReader API, lendo o conteúdo binário do arquivo selecionado, convertendo-o em ArrayBuffer e aplicando o algoritmo de codificação Base64 com padding conforme RFC 4648. O resultado inclui automaticamente o cabeçalho MIME type (ex: 'data:audio/wav;base64,') para facilitar a reutilização imediata, mantendo a integridade do sinal digital original sem perda de qualidade devido ao processo ser 100% lossless.",
+  "usage_steps": [
+    "1. Clique em 'Selecionar Arquivo' para carregar seu áudio (formatos suportados: WAV, MP3, OGG, FLAC)",
+    "2. Confirme ou ajuste manualmente o MIME type no seletor dropdown se necessário",
+    "3. Pressione 'Converter para Base64' para iniciar o processamento no cliente",
+    "4. Aguarde a barra de progresso indicar 100% (tempo varia conforme tamanho do arquivo)",
+    "5. Visualize o resultado na área de texto com formatação syntax-highlighted",
+    "6. Utilize os botões 'Copiar' ou 'Baixar .txt' para exportar o código gerado"
+  ],
+  "usage_examples": [
+    "Incorporar um efeito sonoro em uma página HTML5 sem dependências externas usando <audio src=\"data:audio/wav;base64,...\">",
+    "Preparar um arquivo de voz gravado para envio em uma API de assistente virtual que aceita apenas payloads codificados em Base64",
+    "Embedar uma música de fundo em um CSS module para aplicação React com carregamento otimizado",
+    "Converter gravações de atendimentos para armazenamento em campo string de um banco de dados Firebase"
+  ]
+}

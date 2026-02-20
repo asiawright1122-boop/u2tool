@@ -1,0 +1,33 @@
+{
+  "output": "Salida CSS",
+  "copy": "Copiar CSS",
+  "shadowLayers": "Capas de Sombra",
+  "addLayer": "+ Añadir Capa",
+  "layer": "Capa {index}",
+  "remove": "Eliminar",
+  "offsetX": "Desplazamiento X",
+  "offsetY": "Desplazamiento Y",
+  "blur": "Enfoque",
+  "spread": "Expansión",
+  "color": "Color",
+  "opacity": "Opacidad",
+  "inset": "Introducir",
+  "boxColor": "Color de la Caja",
+  "borderRadius": "Radio de Curvatura de los Borde",
+  "preview": "Vista Previa",
+  "detailed_description": "El Box Shadow Generator es una herramienta especializada para diseñadores y desarrolladores web que permite crear y ajustar sombras en elementos CSS mediante un editor visual interactivo. Técnicamente, genera código CSS utilizando la propiedad 'box-shadow', permitiendo configurar parámetros como offset horizontal/vertical, radio de desenfoque, radio de expansión, color (en RGBA o hexadecimal) y tipo de sombra (inset u outset). Los usuarios necesitan esta herramienta para prototipar efectos visuales complejos sin recurrir a editores gráficos, especialmente útil para componentes reutilizables como tarjetas, botones o tarjetas de producto. El motor del editor renderiza en tiempo real los cambios aplicados, mostrando una previsualización del elemento con la sombra generada, lo que elimina la necesidad de pruebas manuales en el navegador. Incorpora controles precisos como sliders de valores decimales y selector de color con transparencia, optimizando el workflow de diseño.",
+  "usage_steps": [
+    "Accede al generador y selecciona el modo 'Sombra Simple' o 'Múltiples Sombras' en el selector de configuración.",
+    "Ajusta el control deslizante de 'Offset X' para definir el desplazamiento horizontal de la sombra, usando valores negativos para direcciones izquierdas.",
+    "Modifica el campo 'Blur Radius' con un valor entre 0 y 100px para controlar la difusión del borde de la sombra.",
+    "Utiliza el selector de color RGBA para elegir tonos con transparencia, ideal para sombras semi-transparentes sobre fondos dinámicos.",
+    "Activa la opción 'Inset' para crear sombras internas, útiles en elementos como inputs o contenedores de texto.",
+    "Copia el código CSS generado en el área de texto inferior y pégalo en tu hoja de estilos, ajustando selectores según tu estructura HTML."
+  ],
+  "usage_examples": [
+    "Diseñar una tarjeta de producto para e-commerce con sombra doble (una principal y una sutil para profundidad) que resalte sobre fondos claros y oscuros.",
+    "Crear una sombra inset en una caja de comentarios para dar efecto de relieve sin sobresalir visualmente del layout.",
+    "Generar sombras responsivas para botones en interfaces móviles, ajustando blur radius según el tamaño de pantalla.",
+    "Implementar un efecto de elevación en una tabla de precios comparativas, aplicando diferentes sombras a la fila destacada."
+  ]
+}

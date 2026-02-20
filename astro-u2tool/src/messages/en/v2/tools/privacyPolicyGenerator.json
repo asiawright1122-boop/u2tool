@@ -1,0 +1,22 @@
+{
+  "websiteName": "Website Name",
+  "websiteNamePlaceholder": "My Website",
+  "websiteUrl": "Website URL",
+  "websiteUrlPlaceholder": "https://example.com",
+  "companyName": "Company Name",
+  "companyNamePlaceholder": "My Company Inc.",
+  "contactEmail": "Contact Email",
+  "contactEmailPlaceholder": "privacy@example.com",
+  "featuresTitle": "Features",
+  "features": {
+    "collectsPersonalData": "Collects Personal Data",
+    "usesCookies": "Uses Cookies",
+    "usesAnalytics": "Uses Analytics (e.g., Google Analytics)",
+    "usesAds": "Uses Advertising",
+    "allowsUserAccounts": "Allows User Accounts",
+    "sellsData": "Shares Data with Third Parties"
+  },
+  "generate": "Generate Privacy Policy",
+  "copyToClipboard": "Copy to Clipboard",
+  "generatedOutput": "Generated Privacy Policy (Markdown)"
+}

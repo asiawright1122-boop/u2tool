@@ -1,0 +1,25 @@
+{
+  "tableName": "Table Name",
+  "dialect": "Dialect",
+  "includeCreate": "Include CREATE TABLE",
+  "loadExample": "Load Example",
+  "jsonPlaceholder": "Enter JSON array...",
+  "input": "Input",
+  "output": "Output",
+  "detailed_description": "Transform structured JSON arrays into fully relational SQL schemas with automatic data type mapping and normalization. This tool parses JSON structures to infer column definitions, generating DDL statements for table creation alongside corresponding INSERT operations. The conversion process maintains referential integrity by normalizing nested objects into separate tables with foreign key relationships. Users gain precise control over schema generation through customizable type mapping (e.g., string→VARCHAR(255), number→DECIMAL), null constraint enforcement, and index creation options. The engine handles edge cases like array-of-objects recursion, special character escaping, and timestamp format conversion. Developers migrating NoSQL data to relational databases, ETL pipeline builders, and API maintainers will find value in its ability to produce transactionally consistent SQL batches with configurable batch size and transaction control. The tool preserves data fidelity through strict JSON schema validation prior to conversion, ensuring type consistency across generated SQL statements.",
+  "usage_steps": [
+    "Upload JSON file containing homogeneous array structures via the 'Input Data' section",
+    "Click 'Preview Schema' to view automatically inferred column definitions and data types",
+    "Adjust type mappings in the 'Data Type Configuration' grid using dropdown selectors",
+    "Enable 'Create Table' toggle and specify primary key column in the 'Table Options' panel",
+    "Configure output settings: batch size, transaction wrapping, and identifier quoting",
+    "Click 'Generate SQL' to produce conversion results displayed in the syntax-highlighted output pane"
+  ],
+  "usage_examples": [
+    "Migrating MongoDB collections to PostgreSQL by converting document arrays into relational tables with proper normalization",
+    "Generating test data for QA environments from API response samples with complex nested structures",
+    "Creating database seed files for mobile app backends using sample JSON payloads from device sensors",
+    "Transforming IoT telemetry data streams into time-series SQL tables with automatic timestamp conversion"
+  ],
+  "inputPlaceholder": "Paste JSON here..."
+}

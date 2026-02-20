@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Este recurso especializado permite realizar búsquedas bidireccionales en una base de datos de tipos MIME (Multipurpose Internet Mail Extensions), facilitando la identificación precisa de correspondencias entre extensiones de archivo, tipos de contenido y descripciones técnicas. Al introducir un término de búsqueda específico, el algoritmo desencadena un análisis léxico en tiempo real que explora patrones de coincidencia parcial en tres dominios: cadenas de extensión (ej. .avif), identificadores MIME completos (ej. video/mp4) y descripciones técnicas normalizadas. La herramienta implementa un motor de indexación invertido optimizado para consultas de metadatos, permitiendo a desarrolladores validar configuraciones de encabezados HTTP, diagnosticar errores en negociación de contenido o corregir inconsistencias en respuestas de servidores web. Su relevancia radica en la necesidad crítica de interoperabilidad en sistemas distribuidos, donde un tipo MIME incorrecto puede causar fallos en renderizado de recursos, rechazos en API Gateway o errores de seguridad en servidores proxy inversos.",
+  "usage_steps": [
+    "1. Activa el selector 'Modo de búsqueda' para elegir entre 'Extensión', 'Tipo MIME' o 'Descripción'",
+    "2. Introduce el término de consulta en el campo de texto con autocompletado inteligente",
+    "3. Haz clic en el botón 'Buscar' o presiona Enter para ejecutar la consulta",
+    "4. Examina los resultados mostrados en una tabla con columnas: MIME Type, Extensión, Descripción, RFC Asociado",
+    "5. Utiliza los filtros de categoría (Multimedia, Documento, Aplicación, etc.) para restringir resultados",
+    "6. Haz clic en el ícono de copiado junto a la entrada deseada para exportar el resultado en formato JSON"
+  ],
+  "usage_examples": [
+    "Un desarrollador backend configura encabezados MIME personalizados en un servidor Nginx para soportar nuevos formatos de imagen vectorial",
+    "Un QA Engineer valida que una API REST devuelve el tipo MIME application/problem+json en respuestas de error HTTP 4xx",
+    "Un arquitecto de sistemas investiga por qué un CDN no cachea correctamente archivos .woff2 identificando su tipo MIME incorrecto",
+    "Un desarrollador frontend implementa validación de carga de archivos en un formulario React, verificando tipos MIME permitidos"
+  ]
+}

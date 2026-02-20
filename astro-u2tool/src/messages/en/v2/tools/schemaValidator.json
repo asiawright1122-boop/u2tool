@@ -1,0 +1,14 @@
+{
+  "loadExample": "Load Example",
+  "jsonPlaceholder": "Enter JSON data...",
+  "schemaPlaceholder": "Enter JSON Schema...",
+  "validate": "Validate",
+  "valid": "JSON is valid!",
+  "invalid": "JSON is invalid",
+  "expectedType": "Expected {expected}, got {actual}",
+  "missingRequired": "Missing required property: {prop}",
+  "stringTooShort": "String too short (min: {min})",
+  "stringTooLong": "String too long (max: {max})",
+  "numberTooSmall": "Number too small (min: {min})",
+  "numberTooLarge": "Number too large (max: {max})"
+}

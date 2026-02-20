@@ -1,0 +1,31 @@
+{
+  "enterContent": "Digite Seu Conteúdo",
+  "analyze": "Analisar",
+  "totalWords": "Total de Palavras",
+  "uniqueWords": "Palavras Únicas",
+  "topKeywords": "Principais Palavras-chave",
+  "keyword": "Palavra-chave",
+  "count": "Quantidade",
+  "density": "Densidade",
+  "excludeCommon": "Excluir palavras comuns",
+  "minLength": "Comprimento mínimo",
+  "detailed_description": "O Verificador de Densidade de Palavras-chave é uma ferramenta técnica especializada em análise semântica e processamento de linguagem natural (NLP). Ele calcula a frequência absoluta e relativa de termos em textos, aplicando algoritmos de tokenização e normalização (lematização e remoção de acentos) para garantir precisão. A densidade é determinada pela fórmula (frequência do termo × 100) / total de palavras no documento, com possibilidade de análise de n-grams (bigramas e trigramas). Ideal para profissionais que precisam validar otimização SEO, auditar conteúdo concorrente ou validar consistência semântica em corpus acadêmico. A ferramenta diferencia-se por permitir ajustes finos, como exclusão de stopwords personalizadas e cálculo ponderado por TF-IDF (Term Frequency-Inverse Document Frequency) para análise contextual avançada.",
+  "usage_steps": [
+    "Cole seu texto na área de edição com suporte a formatação HTML ou texto plano",
+    "Ative a opção 'Processar N-grams' para identificar combinações de palavras relevantes",
+    "Selecione o nível de sensibilidade (case-sensitive) e personalize a lista de stopwords",
+    "Clique em 'Analizar Densidade' para executar o processamento baseado em algoritmos de NLP",
+    "Revise a matriz de resultados que mostra termos, frequência absoluta e densidade percentual",
+    "Exporte os dados em formato JSON ou CSV para análise estatística externa"
+  ],
+  "usage_examples": [
+    "Um especialista SEO ajustando conteúdo de blog para manter densidade de keyword principal entre 1-2%",
+    "Um redator verificando consistência temática em artigo acadêmico antes de submissão",
+    "Um analista de marketing comparando estratégia de palavras-chave em landing pages concorrentes",
+    "Um desenvolvedor validando eficácia de modelo de classificação de textos através de métricas estatísticas"
+  ],
+  "enterText": "Enter Text",
+  "visual": "Visual",
+  "twoWordPhrases": "Two Word Phrases",
+  "threeWordPhrases": "Three Word Phrases"
+}

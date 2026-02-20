@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Binary to Text Converter translates between binary code and readable text. Convert binary sequences like 01001000 01101001 to text, or encode your messages into binary format.",
+  "usage_steps": [
+    "Select conversion mode (Binary to Text or Text to Binary)",
+    "Enter binary code or text in the input field",
+    "Click Convert to see the result",
+    "Copy the converted output",
+    "Use swap button to quickly switch modes"
+  ],
+  "usage_examples": [
+    "Decode binary messages",
+    "Learn binary encoding",
+    "Create secret binary messages"
+  ],
+  "binaryToText": "Binary → Text",
+  "textToBinary": "Text → Binary",
+  "binaryInput": "Binary Input",
+  "textInput": "Text Input",
+  "binaryOutput": "Binary Output",
+  "textOutput": "Text Output",
+  "binaryPlaceholder": "Enter binary (e.g., 01001000 01101001)...",
+  "textPlaceholder": "Enter text to convert...",
+  "outputPlaceholder": "Result will appear here...",
+  "convert": "Convert",
+  "swap": "Swap",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "invalidBinary": "Invalid binary input",
+  "exampleTitle": "Example",
+  "text": "Text",
+  "binary": "Binary"
+}

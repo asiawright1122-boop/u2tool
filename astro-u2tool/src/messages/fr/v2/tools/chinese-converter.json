@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le Chinese Converter est un outil technique de traitement de caractères chinois permettant une conversion précise entre les jeux de caractères Simplifiés (Hànzì pinyin) et Traditionnels (Hànzì fan-t'iz). Contrairement aux méthodes basiques de remplacement unidirectionnel, cet outil utilise des tables de correspondance bidimensionnelles conformes aux normes Unicode 15.0, intégrant des algorithmes avancés de désambiguïsation contextuelle. La conversion s'appuie sur le projet OpenCC étendu, optimisé pour gérer les variantes régionales (comme les différences entre le chinois de Chine continentale et celui de Taïwan). Chaque caractère est analysé via un moteur NLP qui identifie les glyphes ambigus avant d'appliquer des règles de transformation basées sur le contexte syntaxique. Ce processus préserve les nuances lexicales tout en maintenant la cohérence orthographique. Des développeurs web ont besoin de cet outil pour adapter le contenu à différents publics (SEO localisé, compatibilité de bases de données), tandis que les chercheurs l'utilisent pour normaliser des corpus textuels historiques. L'implémentation utilise des arbres de décision binaire pour optimiser la vitesse de traitement, même sur de grands volumes de texte.",
+  "usage_steps": [
+    "Sélectionnez le mode d'entrée : zone de texte ou import de fichier (.txt/.srt)",
+    "Activez le bouton 'Traditionnel vers Simplifié' ou 'Simplifié vers Traditionnel' selon votre besoin",
+    "Collez votre contenu dans l'éditeur rich-text avec support de la coloration syntaxique",
+    "Cochez l'option 'Préserver les tons' si vous travaillez avec du pinyin annoté",
+    "Utilisez le sélecteur de variantes régionales pour spécifier 'Chine continentale' ou 'Taïwan'",
+    "Téléchargez le résultat au format .utf8 ou copiez-le directement depuis la console de débogage"
+  ],
+  "usage_examples": [
+    "Un développeur d'applications mobiles convertit les étiquettes d'interface pour un lancement simultané à Shanghai et à Hong Kong",
+    "Un chercheur en sinologie normalise des citations de textes classiques pour une publication académique internationale",
+    "Un traducteur professionnel traite des contrats juridiques nécessitant une précision absolue dans les termes techniques",
+    "Un designer graphique convertit des caractères pour garantir la compatibilité avec des polices OpenType anciennes sur macOS"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "detailed_description": "Le Convertisseur Tailwind en CSS transforme les classes d'utilitaires Tailwind en propriétés CSS standard. Utile pour l'apprentissage, le débogage et l'extraction des styles des projets Tailwind.",
+  "usage_steps": [
+    "Saisissez les classes Tailwind",
+    "Cliquez sur Convertir pour générer du CSS",
+    "Consulter la sortie CSS",
+    "Copier les styles générés",
+    "Utiliser dans votre feuille de styles"
+  ],
+  "usage_examples": [
+    "Apprendre le CSS avec Tailwind",
+    "Déboguer les styles de Tailwind",
+    "Extraction du CSS pour des projets non Tailwind"
+  ],
+  "tailwindInput": "Classes Tailwind",
+  "cssOutput": "Sortie CSS",
+  "convert": "Convertir en CSS",
+  "copy": "Copier",
+  "copied": "Copié!",
+  "inputPlaceholder": "Saisissez les classes Tailwind (par exemple, bg-blue-500 text-white p-4)",
+  "placeholder": "Entrez les classes Tailwind...",
+  "outputPlaceholder": "La sortie CSS apparaîtra ici...",
+  "loadExample": "Charger l'exemple"
+}

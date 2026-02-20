@@ -1,0 +1,32 @@
+{
+  "detailed_description": "El Convertidor Binario a Texto traduce entre código binario y texto legible.",
+  "usage_steps": [
+    "Selecciona el modo de conversión",
+    "Ingresa código binario o texto",
+    "Haz clic en Convertir para ver el resultado",
+    "Copia la salida convertida",
+    "Usa el botón de intercambio para cambiar modos rápidamente"
+  ],
+  "usage_examples": [
+    "Decodifica mensajes binarios",
+    "Aprende codificación binaria",
+    "Crea mensajes binarios secretos"
+  ],
+  "binaryToText": "Binario → Texto",
+  "textToBinary": "Texto → Binario",
+  "binaryInput": "Entrada Binaria",
+  "textInput": "Entrada de Texto",
+  "binaryOutput": "Salida Binaria",
+  "textOutput": "Salida de Texto",
+  "binaryPlaceholder": "Ingresa binario (ej. 01001000 01101001)...",
+  "textPlaceholder": "Ingresa texto para convertir...",
+  "outputPlaceholder": "El resultado aparecerá aquí...",
+  "convert": "Convertir",
+  "swap": "Intercambiar",
+  "copy": "Copiar",
+  "copied": "¡Copiado!",
+  "invalidBinary": "Entrada binaria inválida",
+  "exampleTitle": "Ejemplo",
+  "text": "Texto",
+  "binary": "Binario"
+}

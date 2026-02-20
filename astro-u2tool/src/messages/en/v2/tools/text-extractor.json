@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The Text Extractor employs advanced lexical analysis and pattern recognition to isolate specific data types from unstructured text. Using a combination of precompiled regular expressions, contextual tokenization, and grammar-based parsing, it identifies atomic elements like RFC 5322-compliant email addresses, URI-normalized URLs, E.164-formatted phone numbers, and CIDR-notation IP addresses. The tool's engine performs Unicode normalization (NFKC) to handle special characters and diacritics, while maintaining positional metadata for accurate extraction. Developers and analysts use this tool to automate data curation tasks, such as sanitizing PII from logs, generating contact lists from documents, or building training datasets for ML models. Unlike basic extractors, this implementation supports custom delimiter handling and preserves original text context through offset tracking, making it suitable for forensic text analysis or compliance auditing workflows.",
+  "usage_steps": [
+    "Paste raw text into the ACE editor panel with syntax highlighting enabled for structured visibility",
+    "Select target data types using the segmented control interface (emails/URLs/phones/IPv4/IPv6)",
+    "Adjust advanced settings in the sidebar: toggle case sensitivity, specify custom delimiters, or enable regex capture groups",
+    "Click 'Process' to initiate multi-threaded analysis, with progress shown in the status meter",
+    "Review extracted results in the interactive grid with column sorting and regex filtering capabilities",
+    "Export selections via the format dropdown (CSV, JSON-LD, or TSV) with optional header inclusion"
+  ],
+  "usage_examples": [
+    "A cybersecurity analyst extracts C2 server IP addresses from malware sample reports using CIDR range validation",
+    "An investigative journalist identifies embedded tracking URLs in leaked documents with domain categorization",
+    "A data engineer cleans phone number formats across 10,000 customer records using E.164 standardization",
+    "A digital forensics specialist recovers deleted email addresses from memory dumps through pattern entropy analysis"
+  ]
+}

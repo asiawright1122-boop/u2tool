@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Gradient Generator ist ein visueller Editor zur Erstellung von CSS-Gradienten, der lineare und radiale Gradienten über eine interaktive Oberfläche ermöglicht. Technisch gesehen generiert das Tool präzise CSS-Code-Snippets durch die Kombination von Farbverläufen, Winkeln, Radien und Stoppspezifikationen. Webentwickler:innen benötigen dieses Tool, um zeitaufwendige manuelle Codierung zu vermeiden, insbesondere bei komplexen Verläufen mit mehreren Farbstopps oder responsiven Designs, bei denen Browser-Kompatibilität entscheidend ist. Die Software nutzt HTML5 Canvas zur Echtzeitvorschau und wandelt Benutzereingaben wie Farbprofil-Änderungen (HEX, RGB, HSL), Richtungsanpassungen (Winkel in Grad) und Radialparameter (Größe, Position) direkt in validen CSS-Code um. Einzigartig ist die Implementierung von Feinjustierungs-Schiebereglern für Farbstopps, die pixelgenaue Positionierung ermöglichen, sowie die automatische Optimierung von Gradient-Syntax für moderne Browser-Engines.",
+  "usage_steps": [
+    "1. Wählen Sie im Dropdown-Menü zwischen 'Linearer Gradient' oder 'Radialer Gradient'.",
+    "2. Passen Sie die Richtung an: Verwenden Sie den Winkeldrehgeber für lineare Gradienten oder ziehen Sie den Fokuspunkt für radiale Gradienten.",
+    "3. Fügen Sie über den '+'-Button bis zu 10 Farbstopps hinzu und ordnen Sie diese entlang der Verlaufsachse an.",
+    "4. Klicken Sie auf einen Farbstopp, um den Farbwähler zu öffnen, und wählen Sie einen Farbmodus (HEX/RGB/RGBA/HSL).",
+    "5. Aktivieren Sie die Checkbox 'CSS3-Optimierung', um Kompatibilität mit älteren Browsern zu gewährleisten.",
+    "6. Kopieren Sie den generierten CSS-Code aus dem Textfeld oder exportieren Sie ihn als SCSS-Variable."
+  ],
+  "usage_examples": [
+    "Ein Webdesigner erstellt einen parallaktischen Hintergrund mit einem 45° linearen Gradienten von #00B4DB zu #00838F für eine Landing Page.",
+    "Ein UI/UX-Entwickler implementiert einen subtilen Hover-Effekt für Buttons durch einen radialen Gradienten mit transparentem Overlay.",
+    "Eine:e Frontend-Entwickler:in generiert einen responsiven Gradienten mit VW-Einheiten für ein hero-section-design, das sich dynamisch skaliert.",
+    "Ein:e Freelancer:in nutzt das Tool, um einen a11y-konformen Text-Hintergrund-Gradienten mit kontrastierten Farbstopps zu erstellen."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le convertisseur CSV en JSON permet de transformer des données structurées au format texte (CSV) en objets JSON hiérarchiques, en prenant en charge des délimiteurs personnalisés comme les virgules, points-virgules ou tabulations. Ce outil est indispensable pour les développeurs qui doivent migrer des données entre systèmes hétérogènes, générer des payloads pour des APIs REST ou préparer des fichiers de configuration. Contrairement aux solutions basiques, il gère automatiquement la détection des en-têtes, la conversion des types de données (nombres, booléens) et la gestion des caractères spéciaux via l'encodage UTF-8. Le processus utilise un analyseur en deux passes : d'abord l'identification des colonnes et des relations hiérarchiques, puis la génération du JSON avec indentation configurable (2 à 4 espaces). Les utilisateurs peuvent également choisir entre des tableaux JSON compacts ou formatés pour une meilleure lisibilité.",
+  "usage_steps": [
+    "1. Collez vos données CSV dans la zone de texte ou téléchargez un fichier via le bouton 'Importer CSV'.",
+    "2. Sélectionnez le délimiteur utilisé dans vos données (virgule, point-virgule, tabulation ou personnalisé) dans le menu déroulant.",
+    "3. Activez l'option 'Première ligne comme en-tête' si vos données contiennent des colonnes nommées.",
+    "4. Choisissez l'indentation souhaitée (2, 3 ou 4 espaces) pour le JSON de sortie via le sélecteur 'Formatage'.",
+    "5. Cochez 'Convertir types de données' pour transformer automatiquement les nombres et valeurs booléennes.",
+    "6. Cliquez sur 'Convertir' et téléchargez le résultat au format JSON via le bouton 'Exporter'."
+  ],
+  "usage_examples": [
+    "Un développeur e-commerce convertit un fichier CSV de produits (références, prix, stocks) en JSON pour alimenter une API Shopify.",
+    "Un data analyst prépare des logs serveur en format CSV pour les importer dans un dashboard Kibana nécessitant du JSON.",
+    "Un administrateur système migre des configurations réseau stockées en CSV vers une base MongoDB en format BSON (via JSON intermédiaire).",
+    "Un créateur d'API teste le mapping de données CSV vers JSON pour valider le schéma d'un endpoint REST avec Swagger."
+  ]
+}

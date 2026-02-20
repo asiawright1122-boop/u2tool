@@ -1,0 +1,27 @@
+{
+  "cardNumber": "Número de Tarjeta",
+  "inputPlaceholder": "Introduzca el número de la tarjeta...",
+  "validate": "Validar",
+  "valid": "Válido",
+  "invalid": "Inválido",
+  "luhnCheck": "Verificación Luhn",
+  "passed": "Aprobado",
+  "failed": "Rechazado",
+  "digits": "Dígitos",
+  "digitsCount": "Número de dígitos",
+  "disclaimer": "Esta herramienta solo valida la estructura matemática de los números de tarjeta. No verifica si la tarjeta está activa o si cuenta con fondos. Nunca introduzca números de tarjeta reales en sitios web no confiables.",
+  "supportedCards": "Tipos de Tarjetas Soportados",
+  "detailed_description": "El Validador de Tarjetas de Crédito comprueba si un número de tarjeta es matemáticamente válido utilizando el algoritmo Luhn. Detecta automáticamente el tipo de tarjeta (Visa, Mastercard, Amex, etc.) y proporciona resultados de validación detallados. Solo para fines de prueba y desarrollo.",
+  "usage_steps": [
+    "Introduzca un número de tarjeta en el campo de entrada",
+    "El número se formateará automáticamente con espacios",
+    "Haga clic en “Validar” para comprobar la tarjeta",
+    "Consulte el tipo de tarjeta, el emisor y el resultado de la verificación Luhn",
+    "Verifique el número de dígitos para una validación adicional"
+  ],
+  "usage_examples": [
+    "Probar la lógica de validación de formularios de pago",
+    "Verificar el formato del número de tarjeta antes del procesamiento",
+    "Identificar el tipo de tarjeta a partir del prefijo del número"
+  ]
+}

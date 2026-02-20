@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El conversor YAML/JSON es un motor de transformación bidireccional basado en análisis sintáctico (parsing) que permite intercambiar datos estructurados entre los formatos YAML 1.2 y JSON 5. Técnicamente, el proceso implica tres etapas: primero, el parser descompone el documento de entrada en un AST (Árbol Sintáctico Abstracto) mediante técnicas de tokenización; segundo, el motor de mapeo convierte nodos del AST aplicando reglas específicas como la transformación de mapas YAML a objetos JSON, resolviendo anclas y alias; tercero, el generador serializa el nuevo AST en el formato objetivo respetando tipos de datos nativos (null, boolean, number, string) y estructuras anidadas. La herramienta es fundamental para desarrolladores que trabajan en DevOps (ej. migración de manifiestos de Kubernetes a AWS CloudFormation) o integración de APIs REST que requieren serialización/deserialización de payloads. A diferencia de conversores básicos, este soporta anotaciones YAML (ej. etiquetas de tipo !!timestamp) y JSONPath para selección de subconjuntos de datos durante la conversión.",
+  "usage_steps": [
+    "Selecciona la dirección de conversión (YAML a JSON o JSON a YAML) usando el interruptor en la barra lateral izquierda.",
+    "Pega tu código fuente en el área de edición principal con soporte para sintaxis resaltada y autoindentación.",
+    "Activa la validación en tiempo real mediante el botón 'Verificar Esquema' para detectar errores de formato.",
+    "Ajusta parámetros avanzados como el nivel de sangría (indentation) o inclusión de comentarios en la sección 'Opciones de Conversión'.",
+    "Haz clic en el botón 'Transformar' para ejecutar el proceso de tokenización y generación de AST.",
+    "Descarga el resultado o cópialo al portapapeles usando los iconos de acción junto al campo de salida."
+  ],
+  "usage_examples": [
+    "Un ingeniero DevOps convierte archivos de configuración de Helm Charts (YAML) a JSON para integrarlos en una plantilla de infraestructura como código de Terraform.",
+    "Un desarrollador de microservicios depura un archivo JSON mal formado exportado desde MongoDB, convirtiéndolo a YAML para mejorar legibilidad antes de transformarlo nuevamente.",
+    "Un arquitecto de APIs transforma especificaciones OpenAPI 3.0 (YAML) a formato JSON para validarlas en herramientas que solo aceptan JSON Schema.",
+    "Un especialista en CI/CD normaliza archivos de configuración de múltiples repositorios convirtiendo YAML legacy a JSON estandarizado compatible con nuevas pipelines."
+  ]
+}

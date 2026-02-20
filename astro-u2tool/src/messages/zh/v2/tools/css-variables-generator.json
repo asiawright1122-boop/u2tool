@@ -1,0 +1,60 @@
+{
+  "prefix": "前缀",
+  "prefixPlaceholder": "例如，app",
+  "scope": "作用域",
+  "cssLabel": "CSS",
+  "scssLabel": "SCSS",
+  "jsLabel": "JavaScript",
+  "presets": "预设",
+  "presetLight": "浅色",
+  "presetDark": "深色",
+  "presetBrand": "品牌",
+  "variables": "变量",
+  "addVariable": "添加变量",
+  "typeColor": "颜色",
+  "typeSize": "尺寸",
+  "typeFont": "字体",
+  "typeOther": "其他",
+  "varNamePlaceholder": "变量名",
+  "varValuePlaceholder": "值",
+  "copy": "复制",
+  "noOutput": "添加变量以生成代码",
+  "remove": "移除",
+  "detailed_description": "CSS变量生成器是一款面向前端开发者的专业级CSS自定义属性管理工具，通过可视化界面实现动态样式系统的构建。该工具基于CSSOM规范，支持HSL/RGB/HEX多格式颜色转换，可自动生成带作用域前缀的变量命名方案。开发者可通过实时级联分析功能，直观查看变量在不同选择器中的优先级关系。其核心价值在于解决大型项目中主题变量分散管理难题，支持动态主题切换时的变量注入优化，特别适用于需要多品牌样式适配的组件库开发场景。工具内置变量冲突检测引擎，可自动识别命名空间重叠问题，并提供基于CSS-in-JS的变量注入代码片段。",
+  "usage_steps": [
+    "通过颜色面板选择基础色系，使用色轮微调HSL参数并锁定亮度值",
+    "在变量命名栏输入语义化前缀（如'app-'或'theme-'），系统自动生成BEM风格命名方案",
+    "设置作用域层级：选择':root'全局作用域或指定嵌套选择器作用域",
+    "启用级联分析模式，查看变量在不同媒体查询中的继承关系图谱",
+    "点击'冲突检测'按钮，系统高亮显示潜在的变量覆盖风险区域",
+    "导出时选择CSS变量块或JSON格式，并复制变量注入代码到项目入口文件"
+  ],
+  "usage_examples": [
+    "构建设计系统时批量生成按钮组件的悬停/禁用状态变量集",
+    "实现暗黑模式切换功能时，自动生成带过渡动画的变量映射方案",
+    "电商后台管理系统中创建品牌专属的主题变量包（支持多语言样式隔离）",
+    "响应式框架开发中生成基于视口单位的动态字体大小计算变量"
+  ],
+  "faqs": [
+    {
+      "question": "Css Variables Generator 是免费的吗？",
+      "answer": "是的，Css Variables Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Css Variables Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Css Variables Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Css Variables Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Css Variables Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

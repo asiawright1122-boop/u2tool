@@ -1,0 +1,40 @@
+{
+  "detailed_description": "Das Pixel-Dichte-Rechner berechnet die Pixel pro Zoll (PPI) und andere Anzeigemetriken aus Bildschirmauflösung und Diagonale. Verstehe die Qualität deines Bildschirms, indem du den Pixel-Pitch, die Verhältniszahl und die Gesamtzahl der Megapixel berechnest. Es enthält Voreinstellungen für allgemeine Auflösungen von HD bis hin zu 8K sowie beliebte Geräte.",
+  "usage_steps": [
+    "Geben Sie die Bildschirmbreite in Pixel ein",
+    "Geben Sie die Bildschirmhöhe in Pixel ein",
+    "Geben Sie die Diagonale des Bildschirms in Zoll ein",
+    "Oder wählen Sie eine häufig verwendete Auflösung vordefiniert aus",
+    "Anzeigen von PPI, Pixelabstand und anderen Metriken",
+    "Kopieren Sie die Ergebnisse für die Rückverweise"
+  ],
+  "usage_examples": [
+    "Bildschirmauflösung vergleichen über Monitore",
+    "Smartphone-Bildschirmschärfe bewerten",
+    "Die richtige Bildschirm für Designarbeit auswählen"
+  ],
+  "width": "Width",
+  "height": "Height",
+  "diagonal": "Diagonal",
+  "inches": "inches",
+  "commonResolutions": "Common Resolutions",
+  "results": "Results",
+  "pixelsPerInch": "Pixels Per Inch",
+  "pixelPitch": "Pixel Pitch",
+  "aspectRatio": "Aspect Ratio",
+  "megapixels": "Megapixels",
+  "physicalWidth": "Physical Width",
+  "physicalHeight": "Physical Height",
+  "totalPixels": "Total Pixels",
+  "ppiReference": "PPI Reference",
+  "quality": {
+    "excellent": "Excellent - Retina quality",
+    "good": "Good - Sharp display",
+    "average": "Average - Standard quality",
+    "low": "Low - Visible pixels"
+  },
+  "screenWidth": "Bildschirmbreite (px)",
+  "screenHeight": "Bildschirmhöhe (px)",
+  "diagonalSize": "Diagonale (Zoll)",
+  "ppi": "Pixel pro Zoll"
+}

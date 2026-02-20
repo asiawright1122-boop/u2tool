@@ -1,0 +1,33 @@
+{
+  "typeName": "Type Name",
+  "loadSample": "Load Sample",
+  "jsonInput": "JSON Input",
+  "placeholder": "Enter JSON object...",
+  "graphqlOutput": "GraphQL Schema",
+  "typeInference": "Type Inference",
+  "detailed_description": "The JSON to GraphQL converter transforms raw JSON data into a structured GraphQL schema by analyzing object hierarchies and inferring type definitions. The tool parses JSON key-value pairs, identifies scalar types (String, Int, Boolean), detects nested objects and arrays, and generates corresponding GraphQLObjectType and GraphQLList declarations. It employs type inference algorithms to determine non-nullable fields and optional values, applying GraphQL's type system rules to create precise schema definitions. Developers use this tool to accelerate API development by converting existing RESTful responses into GraphQL schemas, eliminating manual type mapping errors. The converter handles complex scenarios like recursive references, polymorphic types, and interface implementations through advanced JSON traversal techniques. Users benefit from automated schema generation during initial API prototyping, legacy system modernization, or when creating TypeScript interfaces from JSON payloads. The output includes properly formatted type definitions with field descriptions derived from JSON structure, enabling seamless integration with GraphQL servers using Apollo, Express, or AWS AppSync frameworks.",
+  "usage_steps": [
+    "Paste valid JSON in the input editor or upload a .json file through the file picker",
+    "Select type inference mode: 'Strict' for exact type detection or 'Lenient' for flexible scalar handling",
+    "Specify custom type name for the root object instead of default 'RootObject' if needed",
+    "Toggle 'Include Directives' to add @required or @deprecated markers based on JSON patterns",
+    "Click 'Generate Schema' to process JSON through AST parser and create GraphQL type definitions",
+    "Copy generated schema from output panel or download as .graphql file using the export button"
+  ],
+  "usage_examples": [
+    "A backend developer converts a 500-line REST API response into a GraphQL schema to build a federated gateway",
+    "A team lead creates sample schema from mock JSON data during initial API design sprint planning",
+    "A mobile developer generates TypeScript interfaces from JSON response to implement GraphQL queries",
+    "An educator demonstrates schema evolution by converting progressively complex JSON examples in a workshop"
+  ],
+  "inputPlaceholder": "Enter type name...",
+  "errorInvalidJson": "Invalid JSON input",
+  "convert": "Convert",
+  "clear": "Clear",
+  "copied": "Copied!",
+  "copy": "Copy",
+  "string": "String",
+  "int": "Int",
+  "float": "Float",
+  "boolean": "Boolean"
+}

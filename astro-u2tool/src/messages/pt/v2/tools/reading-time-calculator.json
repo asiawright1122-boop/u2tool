@@ -1,0 +1,37 @@
+{
+  "pasteText": "Cole o seu texto",
+  "placeholder": "Cole o seu artigo, post no blog ou qualquer texto aqui para calcular o tempo de leitura...",
+  "readingSpeed": "Velocidade de Leitura:",
+  "wpm": "WPM",
+  "words": "Palavras",
+  "characters": "Caracteres",
+  "sentences": "Sentenças",
+  "paragraphs": "Parágrafos",
+  "readingTime": "Tempo de Leitura",
+  "speakingTime": "Tempo de Fala",
+  "reference": "Referência de Velocidade de Leitura",
+  "slow": "Lento:",
+  "average": "Médio:",
+  "fast": "Rápido:",
+  "tip": "💡 Dica: O adulto médio lê a cerca de 200-250 palavras por minuto. Conteúdo técnico pode exigir uma leitura mais lenta (150-200 WPM), enquanto tópicos familiares podem ser lidos mais rápido (300+ WPM).",
+  "lessThanMinute": "Menos de um minuto",
+  "minute": "1 minuto",
+  "minutes": "{n} minutos",
+  "hour": "{n} hora",
+  "hours": "{n} horas",
+  "detailed_description": "O Reading Time Calculator é uma ferramenta de processamento de texto baseada em algoritmos de análise linguística quantitativa. O funcionamento técnico envolve três etapas principais: (1) tokenização do texto em palavras e sentenças, (2) aplicação de métricas de complexidade lexical (como índice de diversidade vocabular e densidade de termos técnicos), e (3) cálculo do tempo com base em velocidades médias de leitura ajustadas por nível de dificuldade. Utiliza um modelo probabilístico que considera variações de 200 a 400 palavras por minuto, conforme configurações pré-definidas ou personalizadas. Essencial para profissionais que precisam otimizar conteúdo digital, como editores verificando limites de leitura em publicações acadêmicas, desenvolvedores ajustando documentação técnica, ou educadores planejando atividades de leitura. A precisão é aprimorada através de heurísticas que identificam termos especializados e estruturas sintáticas complexas, oferecendo estimativas mais realistas que métodos baseados apenas em contagem bruta de palavras.",
+  "usage_steps": [
+    "1. Acesse a página 'reading-time-calculator' e localize a área de texto principal.",
+    "2. Cole seu conteúdo ou digite o texto diretamente no campo 'Insira seu texto aqui'.",
+    "3. Ajuste o parâmetro 'Velocidade de Leitura' usando o seletor deslizante (200-400 palavras/minuto).",
+    "4. Marque a opção 'Análise Avançada' para ativar cálculos com ajuste de complexidade lexical.",
+    "5. Clique no botão 'Calcular Tempo' para processar o texto com algoritmo de tokenização em tempo real.",
+    "6. Visualize o resultado formatado em minutos e segundos no painel de saída, com opção de exportar via CSV."
+  ],
+  "usage_examples": [
+    "Um redator freelancer precisa garantir que artigos para um cliente não excedam 3 minutos de leitura, ajustando o conteúdo com base nos resultados da análise.",
+    "Um professor universitário calcula o tempo médio de leitura para um conjunto de artigos científicos, ajustando o parâmetro de complexidade técnica.",
+    "Um desenvolvedor documenta uma API e utiliza a ferramenta para validar se a documentação permanece abaixo de 2 minutos de leitura por seção.",
+    "Um tradutor estima o tempo necessário para revisar um documento técnico bilíngue, comparando os resultados entre versões original e traduzida."
+  ]
+}

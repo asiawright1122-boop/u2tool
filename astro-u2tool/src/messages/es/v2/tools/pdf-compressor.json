@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El compresor de PDF es una herramienta técnica diseñada para optimizar archivos PDF mediante la eliminación de metadatos redundantes, la compresión de imágenes incrustadas con algoritmos como Flate o JPEG2000, y la reestructuración interna del contenido. Este proceso reduce significativamente el tamaño del archivo sin comprometer la calidad visual ni la integridad del texto, gracias a técnicas como la optimización de objetos XObject y la reducción de resolución en imágenes a niveles perceptualmente imperceptibles. Los usuarios necesitan esta herramienta para casos específicos como la transmisión eficiente de documentos corporativos por correo electrónico, la optimización de manuales académicos para plataformas de aprendizaje digital, o la reducción de costos de almacenamiento en servidores empresariales. El motor del compresor analiza cada objeto PDF (fuentes, imágenes, capas vectoriales) y aplica compresión diferenciada según el tipo de contenido, permitiendo ajustes manuales en niveles de compresión (bajo, medio, alto) y soportando perfiles de salida como PDF/A para cumplimiento archivístico.",
+  "usage_steps": [
+    "1. Arrastra tu archivo PDF al área de carga o selecciona 'Buscar archivo' para importarlo.",
+    "2. Elige el nivel de compresión en el selector: 'Básico' (para texto plano), 'Estándar' (equilibrio calidad/tamaño) o 'Avanzado' (máxima compresión con ajuste manual).",
+    "3. Activa la opción 'Optimizar imágenes' para aplicar compresión JPEG2000 a gráficos con pérdida ajustable del 10-90%.",
+    "4. Marca 'Eliminar metadatos' para suprimir información oculta como comentarios o datos EXIF de imágenes incrustadas.",
+    "5. Haz clic en 'Iniciar compresión' y espera el procesamiento progresivo mostrado en una barra de estado en tiempo real.",
+    "6. Descarga el PDF optimizado utilizando el enlace seguro con token de autenticación temporal generado al finalizar."
+  ],
+  "usage_examples": [
+    "1. Un estudiante comprime su tesis de 150MB a 18MB manteniendo fórmulas matemáticas en alta resolución para la entrega digital.",
+    "2. Un diseñador reduce de 800MB a 75MB un portfolio PDF con 50 páginas de diseños vectoriales y fotos para enviarlo por correo a un cliente.",
+    "3. Una empresa de consultoría comprime 200 informes técnicos mensuales (total 4.2GB) a 600MB para almacenarlos en SharePoint sin perder búsquedas OCR.",
+    "4. Un abogado prepara un contrato de 35MB para enviarlo por WhatsApp, activando 'Modo documento legal' que preserva capas de firmas digitales."
+  ]
+}

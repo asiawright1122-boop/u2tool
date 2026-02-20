@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Meeting Notes ist eine umfassende Webanwendung, die es Nutzern ermöglicht, strukturierte Protokolle für Meetings zu erstellen. Das Tool integriert verschiedene Funktionen, wie das Verwalten von Teilnehmern, die Erstellung einer Tagesordnung und die Verfolgung von Aufgaben. Technisch gesehen, basiert Meeting Notes auf einer modernen Single-Page-Application (SPA) Architektur, die mit React.js entwickelt wurde, um eine nahtlose und reaktive Benutzererfahrung zu gewährleisten. Die Daten werden in einer Cloud-Datenbank gespeichert, die für eine hohe Verfügbarkeit und Datenintegrität optimiert ist. Nutzer können per Drag-and-Drop-Funktionen einfach Inhalte organisieren und die automatische Synchronisierung sorgt dafür, dass die Protokolle immer auf dem neuesten Stand sind. Meeting Notes ist besonders nützlich für Teams, die in agilem Modus arbeiten, da es die Kommunikation und Koordination von Projekten erleichtert. Die Strukturierung von Informationen in klar definierten Abschnitten wie Teilnehmer, Agenda-Elemente und Action Items hilft, wichtige Entscheidungen und Verantwortlichkeiten transparent zu dokumentieren. Dies ist besonders wertvoll bei regelmäßigen Fortschrittsbesprechungen, wo die Nachverfolgbarkeit von Aufgaben und Entscheidungen essenziell ist.",
+  "usage_steps": [
+    "Öffnen Sie die Meeting Notes Anwendung in Ihrem Webbrowser und melden Sie sich mit Ihrem Benutzerkonto an.",
+    "Klicken Sie auf den Button 'Neues Meeting' in der oberen Navigationsleiste, um ein neues Protokoll zu erstellen.",
+    "Fügen Sie die Teilnehmer des Meetings hinzu, indem Sie ihre Namen in das entsprechende Feld eingeben oder sie aus Ihrer Kontaktliste auswählen.",
+    "Geben Sie die Agenda-Elemente ein, die im Meeting besprochen werden sollen. Jedes Element kann mit einem kurzen Beschreibungstext und einem Verantwortlichen versehen werden.",
+    "Während des Meetings können Sie Action Items hinzufügen, indem Sie den 'Action Item hinzufügen' Button klicken. Definieren Sie hier den Inhalt der Aufgabe, den Verantwortlichen und den Fälligkeitsdatum.",
+    "Abschließend können Sie das Protokoll speichern und es an die Teilnehmer per E-Mail versenden, indem Sie den 'Protokoll senden' Button verwenden."
+  ],
+  "usage_examples": [
+    "Ein Projektmanager verwendet Meeting Notes, um die wöchentlichen Fortschrittsbesprechungen mit dem Entwicklungsteam zu dokumentieren. Die strukturierten Protokolle helfen, Aufgaben und Fristen klar zu definieren und die Fortschritte im Projekt zu verfolgen.",
+    "Ein Marketing-Team setzt Meeting Notes ein, um Brainstorming-Sessions zu organisieren. Die Teilnehmer können Ideen in Echtzeit hinzufügen, und das Team kann nach dem Meeting die besten Vorschläge auswählen und in Action Items umwandeln.",
+    "Ein Lehrer nutzt die Anwendung, um Elternabende zu protokollieren. Die strukturierten Abschnitte für Teilnehmer, Agenda und Action Items helfen, wichtige Punkte und Vereinbarungen dokumentiert zu halten.",
+    "Ein Forschungsteam verwendet Meeting Notes, um wissenschaftliche Workshops zu organisieren. Die Teilnehmer können ihre Beiträge und Diskussionen strukturiert eintragen, und die Action Items helfen, die nächsten Schritte im Forschungsprozess zu planen."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "amount": "金额",
+  "calculationMode": "计算模式",
+  "addVat": "加上增值税",
+  "removeVat": "减去增值税",
+  "vatOnly": "仅计算增值税",
+  "useCustomRate": "使用自定义税率",
+  "customRate": "自定义税率",
+  "country": "国家",
+  "rateType": "税率类型",
+  "standardRate": "标准税率",
+  "reducedRate": "优惠税率",
+  "reducedRates": "优惠税率",
+  "superReducedRate": "超低税率",
+  "netAmount": "净额",
+  "vatAmount": "增值税额",
+  "grossAmount": "总额",
+  "euVatRates": "欧盟增值税税率参考",
+  "detailed_description": "增值税计算器是一个全面的工具，用于计算欧洲各国的增值税。支持所有欧盟成员国的标准税率、优惠税率和超低税率。",
+  "usage_steps": [
+    "输入要计算增值税的金额",
+    "选择计算模式",
+    "选择国家或输入自定义税率",
+    "选择税率类型",
+    "查看计算结果"
+  ],
+  "usage_examples": [
+    "计算发票和商业交易的增值税",
+    "从含税价格确定净价",
+    "比较不同欧盟国家的增值税率"
+  ]
+}

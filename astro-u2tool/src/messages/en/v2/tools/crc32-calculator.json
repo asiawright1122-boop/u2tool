@@ -1,0 +1,34 @@
+{
+  "inputMode": "Input Mode",
+  "modeText": "Text",
+  "modeFile": "File",
+  "loadSample": "Load Sample",
+  "textInput": "Text",
+  "textPlaceholder": "Enter text...",
+  "fileInput": "File",
+  "selectedFile": "Selected File",
+  "errorNoFile": "Please choose a file",
+  "errorReadFile": "Failed to read file",
+  "calculate": "Calculate",
+  "crcHex": "CRC32 (Hex)",
+  "crcDec": "CRC32 (Decimal)",
+  "copy": "Copy",
+  "info": "Information",
+  "infoText": "CRC32 is a common checksum used for error-detection. This tool calculates CRC32 locally in your browser.",
+  "sampleText": "Hello, World!",
+  "detailed_description": "The CRC32 Calculator implements the IEEE 802.3 32-bit cyclic redundancy check algorithm to generate checksums for arbitrary data inputs. This tool performs polynomial division over GF(2) using the generator polynomial 0x04C11DB7, processing data through a precomputed 256-entry lookup table with deferred endian conversion. Unlike simple checksums, CRC32 detects burst errors up to 32 bits through its algebraic properties, making it ideal for verifying data integrity during network transfers, storage operations, or firmware updates. Developers use this tool to validate file consistency in systems without native CRC support, debug data corruption issues in embedded systems, or verify patch file authenticity. The calculator supports both ASCII/UTF-8 text inputs and binary file uploads, processing data in 4KB chunks with progressive hashing to handle large files efficiently. The result is presented as a 32-bit hexadecimal value in both traditional CRC-32 and CRC-32/MPEG-2 formats, with optional byte-swapped output for hardware-specific implementations.",
+  "usage_steps": [
+    "1. Select 'Text' or 'File' tab based on input source type",
+    "2. For text input: Paste content into the UTF-8 encoded text area with line-ending normalization",
+    "3. For file input: Drag-and-drop or use the 'Browse' button to select files up to 2GB in size",
+    "4. Choose 'Calculate' to process data using the selected CRC-32 variant (standard or MPEG-2)",
+    "5. Review the 8-character hex digest with bit-length confirmation and match status",
+    "6. Use the 'Copy' icon to save results or 'Reset' for batch processing multiple files"
+  ],
+  "usage_examples": [
+    "Validating firmware image integrity before flashing embedded devices",
+    "Detecting transmission errors in game ROMs transferred over unstable serial connections",
+    "Matching file hashes in software license verification systems",
+    "Debugging packet corruption in custom network protocol implementations"
+  ]
+}

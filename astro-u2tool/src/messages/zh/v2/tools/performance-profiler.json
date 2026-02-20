@@ -1,0 +1,47 @@
+{
+  "detailed_description": "代码性能分析器测量执行时间并识别代码中的性能瓶颈。",
+  "usage_steps": [
+    "粘贴代码函数",
+    "设置迭代次数",
+    "点击运行",
+    "查看执行时间",
+    "比较实现方式"
+  ],
+  "usage_examples": [
+    "基准测试算法",
+    "识别慢速函数",
+    "比较库性能"
+  ],
+  "input": "输入",
+  "output": "输出",
+  "process": "处理",
+  "copy": "复制",
+  "clear": "清除",
+  "inputPlaceholder": "在此粘贴代码...",
+  "outputPlaceholder": "结果将显示在此处...",
+  "errors": {
+    "emptyInput": "请输入一些内容"
+  },
+  "loadExample": "加载示例",
+  "analyze": "分析",
+  "generate": "生成",
+  "format": "格式化",
+  "convert": "转换",
+  "validate": "验证",
+  "export": "导出",
+  "preview": "预览",
+  "reset": "重置",
+  "add": "添加",
+  "remove": "移除",
+  "save": "保存",
+  "cancel": "取消",
+  "settings": "设置",
+  "options": "选项",
+  "results": "结果",
+  "noResults": "无结果",
+  "loading": "加载中...",
+  "success": "成功",
+  "failed": "失败",
+  "warning": "警告",
+  "info": "信息"
+}

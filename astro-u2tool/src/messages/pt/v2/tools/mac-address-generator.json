@@ -1,0 +1,36 @@
+{
+  "count": "Contar",
+  "separator": "Separador",
+  "sepColon": "Ponto e vírgula (:)",
+  "sepHyphen": "Hífen (-)",
+  "sepNone": "Nenhum",
+  "uppercase": "Maiúsculas",
+  "reset": "Redefinir",
+  "prefix": "Prefixo",
+  "prefixPlaceholder": "Prefixo opcional (ex. 00:1A:2B)",
+  "prefixHint": "Suporta prefixo de 3 bytes (OUI) ou 6 bytes. Caracteres não-hex serão ignorados.",
+  "locallyAdministered": "Administrado localmente",
+  "multicast": "Multicast",
+  "generate": "Gerar",
+  "output": "Saída",
+  "outputPlaceholder": "Os endereços MAC gerados aparecerão aqui...",
+  "copyAll": "Copiar Tudo",
+  "info": "Informações",
+  "infoText": "O bit 0 controla multicast/unicast e o bit 1 controla administrado localmente/global. Use com cautela.",
+  "errorInvalidPrefix": "Prefixo inválido. Use 6 ou 12 dígitos hexadecimais.",
+  "detailed_description": "O Gerador de Endereços MAC é uma ferramenta técnica especializada para criar identificadores únicos de 48 bits seguindo os padrões IEEE 802. Um endereço MAC gerado inclui um OUI (Organizationally Unique Identifier) válido, um número de série NIC (Network Interface Controller) e bits de controle para especificar unicast/multicast ou endereços individuais/grupais. Desenvolvido com algoritmos que garantem a conformidade com a especificação EUI-48, o gerador aplica a verificação de checksum via CRC32 para validar a integridade de endereços virtuais. Usuários precisam deste recurso para testar redes sem expor dispositivos reais, simular ambientes de laboratório com múltiplos adaptadores virtuais, ou resolver conflitos de endereçamento em redes contêinerizadas. A ferramenta também permite a personalização de prefixos OUI para simulações de fabricantes específicos, útil em cenários de pentest ético ou desenvolvimento de drivers. Sua engine implementa técnicas de randomização criptograficamente seguras para evitar colisões, essencial em ambientes de virtualização como KVM ou Docker.",
+  "usage_steps": [
+    "Selecione o tipo de OUI desejado (padrão IEEE, virtualização ou personalizado) no seletor 'Prefixo do Fabricante'",
+    "Ative a opção 'Endereço Multicast' se precisar de identificadores para comunicação em grupo",
+    "Defina os últimos 3 bytes manualmente ou use a geração automática no campo 'Número de Série NIC'",
+    "Escolha o formato de saída (delimitado por dois-pontos, hífen ou sem formatação) no menu 'Estilo de Exibição'",
+    "Clique no botão 'Gerar 10 Endereços' para obter um conjunto válido de identificadores",
+    "Valide a conformidade dos resultados através do indicador CRC32 exibido junto a cada endereço"
+  ],
+  "usage_examples": [
+    "Um administrador de redes cria 100 endereços MAC únicos para simular dispositivos IoT em um ambiente de teste seguro",
+    "Um desenvolvedor de sistemas embarcados gera um OUI personalizado para validar a detecção de hardware em seu driver Linux",
+    "Um profissional de cibersegurança configura endereços multicast aleatórios para testar regras de firewall em VLANs",
+    "Um usuário de container Docker atribui MACs estáticos a contêineres sem causar conflitos na rede física do data center"
+  ]
+}

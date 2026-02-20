@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The Markdown to HTML converter is a specialized utility that transforms Markdown syntax into standards-compliant HTML markup through a multi-stage parsing and rendering pipeline. This tool leverages the CommonMark specification to accurately parse input text, tokenizing elements like headers, lists, code blocks, and inline formatting into an abstract syntax tree (AST). During the rendering phase, the AST is converted to HTML5 elements, with proper handling of character encoding, nested structures, and edge cases like escaped characters. Developers benefit from precise control over output quality through configurable options such as GitHub Flavored Markdown (GFM) support, custom CSS class injection, and whitespace preservation. The converter addresses critical workflows in documentation generation, content migration pipelines, and dynamic UI rendering where programmatic conversion between lightweight markup and structured HTML is required. Technical advantages include zero-dependency operation, sub-second processing for files up to 10MB, and strict validation against HTML5 specifications to prevent malformed output.",
+  "usage_steps": [
+    "Open the Markdown editor panel and paste your source text containing standard Markdown elements (# headers, - lists, `code`, etc.)",
+    "Toggle the 'GFM Support' switch if using GitHub-specific syntax like tables or task lists",
+    "Adjust output settings in the HTML Configuration drawer, including 'Preserve Whitespace' and 'Inject Base Classes'",
+    "Click the 'Parse & Convert' button to initiate AST generation and HTML rendering",
+    "Review the output in the synchronized preview pane, which highlights corresponding DOM elements",
+    "Copy the generated HTML from the output field or download as a .html file with embedded CSS"
+  ],
+  "usage_examples": [
+    "A DevOps engineer converts Kubernetes configuration documentation from Markdown to styled HTML for internal knowledge base integration",
+    "A technical writer processes 50+ API reference files using GFM tables, automating conversion to HTML for enterprise portal deployment",
+    "A web designer transforms Markdown-based email templates into responsive HTML with custom class attributes for email client compatibility",
+    "A student converts academic papers written in Markdown to HTML format with footnotes preserved for university CMS submission"
+  ]
+}

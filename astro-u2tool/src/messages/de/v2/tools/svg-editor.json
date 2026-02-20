@@ -1,0 +1,33 @@
+{
+  "detailed_description": "Der SVG-Editor bietet eine auf dem Code basierende Oberfläche zum Bearbeiten von SVG-Dateien mit Echtzeit-Vorschau. Verändern Sie Pfade, Farben, Transformationen und Attribute direkt im Browser.",
+  "usage_steps": [
+    "Laden Sie SVG-Code hoch oder fügen Sie ihn ein",
+    "Bearbeiten Sie die SVG-Markup",
+    "Sehen Sie die Änderungen in der Echtzeit-Vorschau",
+    "Verändern Sie Farben und Attribute",
+    "Laden Sie das geänderte SVG herunter"
+  ],
+  "usage_examples": [
+    "Schnelle Änderungen an SVG-Farben",
+    "Veränderung der Abmessungen von Symbolen",
+    "Beheben von SVG-Pfadproblemen"
+  ],
+  "svgCode": "SVG-Code",
+  "preview": "Vorschau",
+  "upload": "Hochladen",
+  "download": "Herunterladen",
+  "copy": "Kopieren",
+  "copied": "Kopiert!",
+  "reset": "Zurücksetzen",
+  "inputPlaceholder": "Fügen Sie hier SVG-Code ein...",
+  "placeholder": "SVG-Code hier einfügen...",
+  "loadExample": "Beispiel laden",
+  "uploadSvg": "SVG hochladen",
+  "width": "Breite",
+  "height": "Höhe",
+  "fill": "Füllung",
+  "stroke": "Kontur",
+  "strokeWidth": "Konturbreite",
+  "applyChanges": "Änderungen anwenden",
+  "noPreview": "Keine Vorschau"
+}

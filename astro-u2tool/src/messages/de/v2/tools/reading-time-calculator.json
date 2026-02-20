@@ -1,0 +1,37 @@
+{
+  "pasteText": "Ihr Text einfügen",
+  "placeholder": "Fügen Sie Ihren Artikel, Blogbeitrag oder jeden Text hier ein, um die Lesedauer zu berechnen...",
+  "readingSpeed": "Lesegeschwindigkeit:",
+  "wpm": "WPM",
+  "words": "Wörter",
+  "characters": "Zeichen",
+  "sentences": "Sätze",
+  "paragraphs": "Absätze",
+  "readingTime": "Lesedauer",
+  "speakingTime": "Sprechzeit",
+  "reference": "Lesegeschwindigkeitsreferenz",
+  "slow": "Langsam:",
+  "average": "Durchschnittlich:",
+  "fast": "Schnell:",
+  "tip": "💡 Tipp: Der durchschnittliche Erwachsene liest etwa 200-250 Wörter pro Minute. Technische Inhalte erfordern möglicherweise eine langsamere Lesegeschwindigkeit (150-200 WPM), während vertrautere Themen schneller gelesen werden können (300+ WPM).",
+  "lessThanMinute": "weniger als eine Minute",
+  "minute": "1 Minute",
+  "minutes": "{n} Minuten",
+  "hour": "{n} Stunde",
+  "hours": "{n} Stunden",
+  "detailed_description": "Der Reading Time Calculator ist ein präzises Analysetool, das mithilfe von Textverarbeitungsalgorithmen die Lesedauer beliebiger Texte berechnet. Technisch gesehen durchläuft der Input eine Tokenisierung, bei der Wörter und Satzzeichen als einzelne Tokens identifiziert werden. Anschließend erfolgt eine lexikalische Analyse zur Bestimmung der Wortdichte und Satzlänge, die in Kombination mit adaptiven Lesegeschwindigkeitsmodellen (z.B. 200-250 Wörter pro Minute für Erwachsene) die Dauer berechnet. Zusätzlich integriert das Tool Lesbarkeitsmetriken wie den Flesch-Reading-Ease-Score oder den Coleman-Liau-Index, um komplexe Texte dynamisch zu gewichten. Dies ist besonders für Bildungseinrichtungen, Content-Marketer und Technical-Writer relevant, die Zielgruppen-spezifische Lesemuster berücksichtigen möchten. Im Gegensatz zu Standardtools berücksichtigt der Calculator auch spezifische Faktoren wie Fachbegriffe oder Satzkomplexität, die über maschinelle Lernmodelle klassifiziert werden. Die Ergebnisse werden in absoluten Minuten und prozentualen Anteilen der Kernlesezeit vs. kognitiver Verarbeitung angezeigt, wodurch Nutzer präzise Einschätzungen für Zeitmanagement oder Barrierefreiheitsaudits erhalten.",
+  "usage_steps": [
+    "Fügen Sie Ihren Text in das mehrzeilige Eingabefeld ein oder laden Sie eine .txt-Datei hoch.",
+    "Wählen Sie die Zielgruppe aus den Optionen 'Erwachsene', 'Schüler' oder 'Laien', um standardisierte Lesegeschwindigkeitsparameter zu aktivieren.",
+    "Passen Sie die Basisgeschwindigkeit manuell über den Schieberegler (100-400 Wörter/Minute) an.",
+    "Aktivieren Sie den Schalter 'Komplexitätsanalyse', um automatisch Flesch- oder Coleman-Liau-Scores zu berechnen.",
+    "Klicken Sie auf den 'Berechnen'-Button, um das Ergebnis zu generieren.",
+    "Exportieren Sie die detaillierte Analyse als JSON oder CSV, einschließlich Wortanzahl, Durchsatzgeschwindigkeit und geschätzter Zeitaufteilung."
+  ],
+  "usage_examples": [
+    "Ein Online-Magazin nutzt das Tool, um die Lesedauer von Fachartikeln für Abonnenten anzuzeigen und die Klickrate zu optimieren.",
+    "Ein Hochschuldozent analysiert Vorlesungsslides auf Lesbarkeit für internationale Studierende mit reduzierter Lesegeschwindigkeit.",
+    "Ein UX-Designer prüft Anwenderanleitungen auf Barrierefreiheit, indem er die kognitive Belastung durch komplexe Satzkonstrukte bewertet.",
+    "Ein Buchautor testet Kapitelabschnitte auf optimale Länge für Lesegruppen, indem er dynamisch Wörterzahl und Fachbegriffsdichte anpasst."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "detailed_description": "盈亏平衡计算器帮助企业确定总收入等于总成本的点。输入固定成本（租金、工资等）、每单位的变动成本（材料、劳动力）以及每单位的售价。该工具计算出盈亏平衡点的数量和收入，显示你需要销售多少单位的产品来覆盖所有成本。对于定价决策、商业规划和财务分析至关重要。",
+  "usage_steps": [
+    "输入总固定成本",
+    "输入每个单位的变动成本",
+    "输入每个单位的销售价格",
+    "点击计算以查看结果",
+    "查看盈亏平衡点（单位数）",
+    "查看盈亏平衡收入金额",
+    "分析贡献毛利"
+  ],
+  "usage_examples": [
+    "为新产品确定价格",
+    "分析企业投资的盈利性",
+    "规划生产量",
+    "做出明智的价格决策"
+  ],
+  "info": "说明",
+  "fixedCosts": "固定成本",
+  "fixedCostsHint": "固定成本提示",
+  "variableCostPerUnit": "单位可变成本",
+  "variableCostHint": "可变成本提示",
+  "sellingPricePerUnit": "单位售价",
+  "calculate": "计算",
+  "breakEvenUnits": "盈亏平衡数量",
+  "units": "数量",
+  "breakEvenRevenue": "盈亏平衡收入",
+  "contributionMargin": "边际贡献",
+  "perUnit": "每单位",
+  "contributionMarginRatio": "边际贡献率",
+  "profitLossTable": "盈亏表",
+  "revenue": "收入",
+  "totalCosts": "总成本",
+  "profitLoss": "盈亏",
+  "breakEven": "盈亏平衡",
+  "formula": "公式",
+  "invalidInput": "输入无效",
+  "priceError": "价格必须大于可变成本"
+}

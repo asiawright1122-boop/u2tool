@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Color Converter ist ein präzises Werkzeug zur bidirektionalen Konvertierung von Farbwerten zwischen den Modellen HEX, RGB und HSL. Technisch gesehen führt der Algorithmus bei HEX-Eingaben eine hexadezimale Zerlegung in Rot-, Grün- und Blauanteile durch, normalisiert diese auf 8-Bit-Werte und berechnet anschließend die entsprechenden HSL-Komponenten über Helligkeits- und Chromazusammensetzung. Bei RGB-Eingaben erfolgt eine Umwandlung in den HSV-Farbraum, gefolgt von einer HSL-spezifischen Umrechnung der Farbtonwinkel (0-360°), Sättigungs- und Helligkeitswerte. Dieses Tool ist unverzichtbar für Entwickler, die präzise Farbanpassungen für CSS-Stylesheets, Grafikdesign-Tools oder Druckvorlagen benötigen. Beispielsweise ermöglicht die exakte Umrechnung von #FF6B6B in RGB(255, 107, 107) eine konsistente Farbdarstellung in Webanwendungen, während HSL-Werte wie HSL(0°, 100%, 71%) eine intuitive Anpassung von Farbvarianten durch Designern erlauben. Die Echtzeitverarbeitung erfolgt clientseitig im Browser, wodurch sensible Daten nicht übertragen werden.",
+  "usage_steps": [
+    "1. Wählen Sie im 'Eingabeformat'-Dropdown zwischen HEX, RGB oder HSL.",
+    "2. Geben Sie den Farbwert in das dafür vorgesehene Textfeld ein (z.B. #4A90E2 für HEX).",
+    "3. Aktivieren Sie optional das 'Validierungsfeedback'-Checkbox, um automatische Formatprüfung zu aktivieren.",
+    "4. Klicken Sie auf den 'Konvertieren'-Button, um die Berechnung zu starten.",
+    "5. Nutzen Sie die 'Farbvorschau'-Anzeige, um die visuelle Darstellung der konvertierten Farbe zu überprüfen.",
+    "6. Kopieren Sie die Ergebnisse aus den Ausgabefeldern für die gewünschten Zielformate (z.B. RGB(74, 144, 226))."
+  ],
+  "usage_examples": [
+    "Ein Frontend-Entwickler konvertiert HEX-Farbcodes aus einem Design-Prototypen in RGB-Werte für die Verwendung in CSS-Media-Queries mit Transparenzmodifikationen.",
+    "Ein Grafikdesigner passt die Sättigung eines Branding-Farbschemas systematisch über HSL-Interpolation an, um verschiedene Verpackungsvarianten zu erstellen.",
+    "Ein Spieleentwickler synchronisiert Farbpaletten zwischen einem 3D-Modellierungsprogramm (HSL) und einem WebGL-Shader (RGB), um visuelle Konsistenz zu gewährleisten.",
+    "Ein Barrierefreiheitsexperte berechnet kontrastreiche Alternativen zu Primärfarben durch gezielte Helligkeitsanpassung im HSL-Modell gemäß WCAG-Richtlinien."
+  ]
+}

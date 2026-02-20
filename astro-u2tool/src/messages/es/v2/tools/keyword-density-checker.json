@@ -1,0 +1,31 @@
+{
+  "enterContent": "Ingresa Tu Contenido",
+  "analyze": "Analizar",
+  "totalWords": "Total de Palabras",
+  "uniqueWords": "Palabras Únicas",
+  "topKeywords": "Palabras Clave Principales",
+  "keyword": "Palabra Clave",
+  "count": "Cantidad",
+  "density": "Densidad",
+  "excludeCommon": "Excluir palabras comunes",
+  "minLength": "Longitud mínima",
+  "detailed_description": "El Analizador de Densidad de Palabras Clave procesa texto mediante técnicas de tokenización y normalización léxica para identificar patrones de frecuencia en términos de búsqueda. Esta herramienta aplica algoritmos de conteo de n-gramas (unigramas, bigramas y trigramas) para calcular la densidad semántica mediante la fórmula: (frecuencia del término / cantidad total de tokens) × 100. Incorpóra funcionalidades avanzadas como detección de sinónimos mediante análisis de contexto vectorial (Word2Vec) y filtrado de stop words en múltiples idiomas. Ideal para SEO técnico, permite identificar sobre-optimización de contenido (keyword stuffing) y evaluar estrategias de posicionamiento competitivo. Su motor estadístico genera informes con métricas como TF-IDF (Term Frequency-Inverse Document Frequency) para análisis de relevancia semántica en documentos técnicos o páginas web. La herramienta también visualiza datos mediante mapas de calor que muestran distribución espacial de keywords en el texto.",
+  "usage_steps": [
+    "1. Accede al panel de análisis mediante el botón 'Cargar Contenido' en la interfaz principal",
+    "2. Pega el texto en el área de edición WYSIWYG o arrastra un archivo .txt/.docx desde tu dispositivo",
+    "3. Activa/desactiva opciones avanzadas: 'Detección de Sinónimos', 'Análisis de Bigramas' y 'Filtrado de Stop Words'",
+    "4. Ajusta el umbral de densidad crítica mediante el slider (valores entre 0.5% y 10%)",
+    "5. Haz clic en 'Iniciar Análisis Léxico' para procesar el contenido con el motor NLP multilenguaje",
+    "6. Descarga los resultados en formato JSON o CSV desde el panel de visualización interactiva"
+  ],
+  "usage_examples": [
+    "Optimización de artículos técnicos para revistas científicas, verificando densidad de terminología especializada",
+    "Auditoría de sitios web para detectar sobrefrecuencia de keywords en metadescripciones y encabezados",
+    "Análisis de sentimiento en encuestas abiertas mediante identificación de patrones léxicos recurrentes",
+    "Comparación de estrategias de contenido entre competidores en campañas de marketing digital"
+  ],
+  "enterText": "Enter Text",
+  "visual": "Visual",
+  "twoWordPhrases": "Two Word Phrases",
+  "threeWordPhrases": "Three Word Phrases"
+}

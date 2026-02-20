@@ -1,53 +1,30 @@
 # Dependencies
-node_modules
-.pnp
-.pnp.js
+node_modules/
 
-# Testing
-coverage
-test-results
+# Build output
+dist/
 
-# Next.js
-.next/
-out/
-build
+# Astro
+.astro/
 
-# Production
-dist
+# Cloudflare
+.wrangler/
 
-# Misc
+# Environment
+.env
+.env.local
+.env.production
+
+# OS
 .DS_Store
-*.pem
+Thumbs.db
+
+# IDE
+.vscode/
 
 # Debug
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
-
-# Local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Cloudflare Workers
-.dev.vars
-.open-next
-.wrangler
-
-# Vercel
-.vercel
 
 # TypeScript
 *.tsbuildinfo
-next-env.d.ts
-
-# Logs and reports (generated files)
-logs/*.json
-reports/*.json
-reports/*.md
-
-# Generated descriptions (temporary files)
-generated-descriptions/
-src/messages/*/v2/

@@ -1,0 +1,41 @@
+{
+  "bandMeasurement": "Band Measurement",
+  "bustMeasurement": "Bust Measurement",
+  "measureUnder": "Measure under bust",
+  "measureFullest": "Measure at fullest point",
+  "bandSize": "Band Size",
+  "cupSize": "Cup Size",
+  "sisterSizes": "Sister Sizes",
+  "measureGuide": "How to Measure",
+  "detailed_description": "The Bra Size Calculator is a precision tool that converts anatomical chest measurements into standardized bra sizes using international sizing formulas. It employs two key inputs: band measurement (underbust circumference in inches or centimeters) and bust measurement (fullest point circumference). The algorithm subtracts band measurement from bust measurement to determine cup volume, then maps this against band size increments to output standardized sizes like 34B or 75C. Users require this tool for critical applications such as online lingerie purchases, medical garment fittings, and costume design where dimensional accuracy matters. The tool accounts for variations in sizing systems (US, EU, UK) and provides fractional band size adjustments for precision. Technical implementation uses adaptive calculation matrices to handle regional size chart discrepancies, ensuring proper fit metrics for diverse body geometries.",
+  "usage_steps": [
+    "Access the measurement interface and select preferred units (imperial or metric)",
+    "Enter underbust measurement in the 'Band Size' input field using precise tape measure positioning",
+    "Input bust circumference at the bust apex in the designated 'Bust Measurement' field",
+    "Choose desired sizing standard (US/EU/UK) from the dropdown menu for regional accuracy",
+    "Click 'Calculate' to execute the band-bust differential algorithm",
+    "Review size recommendation with cup letter conversion and band size tolerance indicators"
+  ],
+  "usage_examples": [
+    "A fashion designer verifying European size conversions for a US-based lingerie production run",
+    "A post-surgical patient determining compression garment sizing using medical tape measurements",
+    "A cosplayer creating armor components that require precise chest dimension mapping",
+    "A vintage clothing restorer adapting 1950s patterns to modern sizing specifications using original measurements"
+  ],
+  "calculateMode": "Calculate Mode",
+  "convertMode": "Convert Mode",
+  "cm": "Cm",
+  "inch": "Inch",
+  "underbust": "Underbust",
+  "underbustHelp": "Underbust Help",
+  "bust": "Bust",
+  "bustHelp": "Bust Help",
+  "selectBand": "Select Band",
+  "selectCup": "Select Cup",
+  "yourSize": "Your Size",
+  "fittingTips": "Fitting Tips",
+  "tip1": "Tip1",
+  "tip2": "Tip2",
+  "tip3": "Tip3",
+  "tip4": "Tip4"
+}

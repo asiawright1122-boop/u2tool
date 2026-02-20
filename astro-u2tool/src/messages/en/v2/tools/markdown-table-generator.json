@@ -1,0 +1,34 @@
+{
+  "addRow": "+ Add Row",
+  "addColumn": "+ Add Column",
+  "loadSample": "Load Sample",
+  "columnAlignment": "Column Alignment",
+  "col": "Col",
+  "left": "Left",
+  "center": "Center",
+  "right": "Right",
+  "header": "Header",
+  "cell": "Cell",
+  "removeRow": "Remove row",
+  "removeColumn": "Remove column",
+  "markdownOutput": "Markdown Output",
+  "preview": "Preview",
+  "detailed_description": "The Markdown Table Generator is a specialized tool that bridges the gap between visual table design and Markdown syntax generation. Technically, it employs a responsive grid layout engine with drag-and-drop cell manipulation, enabling users to construct tables through intuitive UI interactions rather than manual code entry. Behind the interface, an event-driven JavaScript framework captures structural modifications in real time and converts them into properly formatted Markdown table syntax adhering to the CommonMark specification. Users benefit from bidirectional synchronization between the visual editor and code output panel, which updates character-by-character as changes occur. This eliminates the cognitive load of remembering pipe character placement, column alignment markers, and header separator syntax. Developers working on documentation portals, API references, or data reports can rapidly prototype complex tables with merged cells, varying column widths, and custom alignment settings. The tool's unique value lies in its support for advanced Markdown table features like column sorting indicators, responsive column resizing handles, and a syntax validation layer that highlights formatting errors before export.",
+  "usage_steps": [
+    "1. Access the tool via the web interface and locate the interactive grid canvas with default 2x2 table structure",
+    "2. Use the '+' buttons in row/column headers to add new cells or drag the grid's bottom-right handle to expand dimensions",
+    "3. Right-click any cell to access merge options, then select 'Merge down/right' to create combined cells for headers or grouped data",
+    "4. Adjust column alignment using the toggle buttons (left/center/right) in the toolbar, which automatically updates pipe character syntax",
+    "5. Enter content directly into cells, observing live syntax updates in the code panel below, including escaped characters for special symbols",
+    "6. Click 'Export' to copy pure Markdown code or download as .md file, preserving any custom formatting like nested lists within table cells"
+  ],
+  "usage_examples": [
+    "Example 1: Creating a responsive API endpoint reference table with merged header cells for authentication requirements and rate limits",
+    "Example 2: Generating a feature comparison matrix between software versions with conditional formatting using emoji indicators in table cells",
+    "Example 3: Building a project roadmap with timeline milestones where merged cells span multiple weeks and include embedded task lists",
+    "Example 4: Constructing a database schema documentation table with complex column types and sample value annotations in right-aligned columns"
+  ],
+  "clear": "Clear",
+  "copied": "Copied!",
+  "copy": "Copy"
+}

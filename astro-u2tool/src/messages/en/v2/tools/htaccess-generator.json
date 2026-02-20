@@ -1,0 +1,32 @@
+{
+  "urlSettings": "URL & SSL Settings",
+  "forceHttps": "Force HTTPS",
+  "forceWww": "Force WWW prefix",
+  "removeWww": "Remove WWW prefix",
+  "performance": "Performance",
+  "enableGzip": "Enable Gzip Compression",
+  "enableCaching": "Enable Browser Caching",
+  "security": "Security",
+  "blockHotlinking": "Block Image Hotlinking",
+  "customErrorPages": "Custom Error Pages",
+  "blockIps": "Block IP Addresses (one per line)",
+  "redirects": "Redirects (from to, one per line)",
+  "generate": "Generate .htaccess",
+  "copy": "Copy to Clipboard",
+  "output": "Generated .htaccess",
+  "detailed_description": "The .htaccess Generator is a specialized utility for creating Apache server configuration snippets that control directory-level settings without modifying main server files. This tool automates the generation of directives for URL rewriting (mod_rewrite), access control (IP whitelisting/blacklisting), MIME type configuration, client-side caching (ExpiresHeader), and error handling (custom 404/500 pages). Developers need this tool to implement critical server behaviors without manual syntax errors, particularly when managing legacy systems or optimizing site performance. The interface maps complex Apache modules to intuitive forms: users select required features, input parameters (e.g., redirect targets, IP ranges), and the tool compiles valid directives with proper escaping and order prioritization. It handles edge cases like properly formatted RewriteCond chains and ensures compatibility with specific Apache versions (2.2 vs 2.4 syntax differences). The output is a ready-to-deploy .htaccess file that can enforce HTTPS, block malicious bots, or implement RESTful URL structures.",
+  "usage_steps": [
+    "Select your Apache server version (2.2 or 2.4) from the version dropdown to ensure syntax compatibility",
+    "Navigate to the 'Redirects' tab and choose between 301/302 redirect types while entering source/destination URLs",
+    "Configure IP-based access control using CIDR notation in the 'Firewall' section to block/allow specific ranges",
+    "Enable browser caching by setting expiration times for asset types (images, CSS, JS) in the 'Performance' panel",
+    "Generate password-protected directories by specifying realm names and htpasswd file paths in the Authentication builder",
+    "Click 'Validate Syntax' to check for conflicts, then download the output file with automatically sorted directive priorities"
+  ],
+  "usage_examples": [
+    "Migrating a legacy site: Create batch 301 redirects from old /product.php?id=123 URLs to new /products/123 slugs while maintaining SEO equity",
+    "Implementing geo-restriction: Block entire ASN ranges from high-abuse regions using pre-formatted Require not ip blocks",
+    "Hardening WordPress security: Generate rules to deny access to wp-config.php and disable PHP execution in uploads directory",
+    "Optimizing single-page apps: Configure fallback rewrites from /app/abc to /app/index.html for client-side routing compatibility"
+  ]
+}

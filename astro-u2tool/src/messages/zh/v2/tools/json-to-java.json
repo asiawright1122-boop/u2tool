@@ -1,0 +1,49 @@
+{
+  "className": "Class Name",
+  "packageName": "Package Name",
+  "useLombok": "使用 Lombok @Data",
+  "useGettersSetters": "生成 Getters/Setters",
+  "useBuilder": "使用 @Builder",
+  "loadSample": "加载示例",
+  "copy": "复制",
+  "convert": "转换",
+  "inputPlaceholder": "输入 JSON 对象...",
+  "outputPlaceholder": "Java 代码将出现这里...",
+  "detailed_description": "本工具通过AST解析技术将JSON数据结构转换为Java领域模型对象（POJO），支持Lombok注解自动生成getter/setter/toString方法。开发者可直接将API响应数据或配置文件转换为可序列化的Java类，特别适用于构建微服务实体类或Android数据解析场景。其核心优势在于智能类型推断系统，可自动识别LocalDateTime、BigDecimal等复杂类型，并提供@Jackson注解兼容模式。与同类工具相比，独创的嵌套结构平铺算法可处理多层嵌套JSON对象，同时支持字段命名策略（SNAKE_CASE/LOWER_CAMEL）和自定义类型映射。",
+  "usage_steps": [
+    "1. 在左侧编辑器粘贴标准JSON格式数据",
+    "2. 在'Class Name'输入框指定主类名称，在'Package'填写Java包路径",
+    "3. 勾选'Lombok Support'启用@Data注解生成",
+    "4. 通过'Type Mapping'下拉菜单调整特殊字段类型映射规则",
+    "5. 点击'Generate Code'触发解析引擎",
+    "6. 在右侧代码框复制生成结果或点击'Download'保存为.zip文件"
+  ],
+  "usage_examples": [
+    "将Spring Boot项目中的REST API响应JSON快速转为Entity类，减少样板代码编写",
+    "在Android开发中将GSON格式的本地配置文件转换为可Parcelable的数据模型",
+    "对接第三方支付接口时，将返回的多层嵌套JSON结构转换为可序列化的Java对象",
+    "重构遗留系统时，批量将旧系统的JSON配置文件转换为类型安全的Java配置类"
+  ],
+  "faqs": [
+    {
+      "question": "Json To Java 是免费的吗？",
+      "answer": "是的，Json To Java 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Json To Java 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "支持哪些格式转换？",
+      "answer": "Json To Java 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Json To Java 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Json To Java 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

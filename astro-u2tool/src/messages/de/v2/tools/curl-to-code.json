@@ -1,0 +1,34 @@
+{
+  "curlInput": "cURL Befehl",
+  "placeholder": "Fügen Sie Ihren cURL-Befehl ein...",
+  "targetLanguage": "ZielSprache",
+  "convert": "Konvertieren",
+  "copy": "Kopieren",
+  "codeOutput": "Erzeugter Code",
+  "outputPlaceholder": "Der erzeugte Code wird hier angezeigt...",
+  "loadSample": "Beispiel laden",
+  "errorEmpty": "Bitte geben Sie einen cURL-Befehl ein",
+  "errorInvalid": "Ungültiger cURL-Befehl",
+  "errorNoUrl": "URL konnte nicht verarbeitet werden",
+  "errorParsing": "Fehler beim Verarbeiten des cURL-Befehls",
+  "supportedFeatures": "Unterstützte Funktionen",
+  "feature1": "HTTP-Methoden (-X)",
+  "feature2": "Headers (-H)",
+  "feature3": "Request-Body (-d, --data)",
+  "feature4": "8 Programmiersprachen unterstützt",
+  "detailed_description": "cURL to Code ist ein Entwicklertools, das cURL-Befehle in äquivalenten Code in mehreren Programmiersprachen umwandelt. Fügen Sie einfach Ihren cURL-Befehl ein und erhalten Sie sofort arbeitbaren Code für JavaScript (fetch), Python (requests), PHP (cURL), Go (net/http), Java (HttpClient), C# (HttpClient), Ruby (Net::HTTP) und Rust (reqwest). Das Tool verarbeitet automatisch HTTP-Methoden, Headers, Request-Body und Authentifizierung aus Ihrem cURL-Befehl. Perfekt für API-Integration, Testing und Dokumentation. Alle Konvertierungen erfolgen lokal in Ihrem Browser für Ihre Sicherheit.",
+  "usage_steps": [
+    "Fügen Sie Ihren cURL-Befehl im Eingabefeld ein",
+    "Wählen Sie Ihre Zielprogrammiersprache aus dem Dropdown-Menü",
+    "Klicken Sie auf 'Konvertieren', um den Code zu generieren",
+    "Überprüfen Sie den generierten Code im Ausgabefenster",
+    "Klicken Sie auf 'Kopieren', um den Code in die Zwischenablage zu kopieren",
+    "Verwenden Sie 'Beispiel laden', um ein Beispiel für einen cURL-Befehl zu sehen"
+  ],
+  "usage_examples": [
+    "Konvertieren Sie cURL-Beispiel in der API-Dokumentation in Ihre bevorzugte Sprache",
+    "Generieren Sie fetch-Code aus cURL-Exports im Browser-DevTools",
+    "Erstellen Sie Python-requests-Code für API-Automatisierungsskripte",
+    "Konvertieren Sie komplexe cURL-Befehle mit Headers und Authentifizierung"
+  ]
+}

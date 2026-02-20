@@ -1,0 +1,32 @@
+{
+  "detailed_description": "이진수 텍스트 변환기는 이진 코드와 읽을 수 있는 텍스트 간에 변환합니다.",
+  "usage_steps": [
+    "변환 모드 선택",
+    "이진 코드 또는 텍스트 입력",
+    "변환 클릭하여 결과 확인",
+    "변환된 출력 복사",
+    "스왑 버튼으로 모드 빠르게 전환"
+  ],
+  "usage_examples": [
+    "이진 메시지 디코딩",
+    "이진 인코딩 학습",
+    "비밀 이진 메시지 만들기"
+  ],
+  "binaryToText": "이진수 → 텍스트",
+  "textToBinary": "텍스트 → 이진수",
+  "binaryInput": "이진수 입력",
+  "textInput": "텍스트 입력",
+  "binaryOutput": "이진수 출력",
+  "textOutput": "텍스트 출력",
+  "binaryPlaceholder": "이진수 입력 (예: 01001000 01101001)...",
+  "textPlaceholder": "변환할 텍스트 입력...",
+  "outputPlaceholder": "결과가 여기에 표시됩니다...",
+  "convert": "변환",
+  "swap": "교환",
+  "copy": "복사",
+  "copied": "복사됨!",
+  "invalidBinary": "잘못된 이진수 입력",
+  "exampleTitle": "예시",
+  "text": "텍스트",
+  "binary": "이진수"
+}

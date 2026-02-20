@@ -1,0 +1,25 @@
+{
+  "detailed_description": "JSON to Table Converter transforms JSON data into readable HTML tables. Perfect for visualizing API responses, data exports, and structured information.",
+  "usage_steps": [
+    "Paste your JSON data",
+    "Click Convert to generate table",
+    "View the formatted table",
+    "Customize table styling",
+    "Copy HTML or export data"
+  ],
+  "usage_examples": [
+    "Visualize API responses",
+    "Create data reports",
+    "Export JSON to spreadsheets"
+  ],
+  "jsonInput": "JSON Input",
+  "tableOutput": "Table Output",
+  "convert": "Convert to Table",
+  "copyHtml": "Copy HTML",
+  "inputPlaceholder": "Paste JSON array or object here...",
+  "noData": "No data to display",
+  "placeholder": "Paste JSON array here...",
+  "copied": "Copied!",
+  "copyCsv": "Copy CSV",
+  "downloadCsv": "Download CSV"
+}

@@ -1,0 +1,29 @@
+{
+  "detailed_description": "Le générateur de formulaires JSON transforme des schémas JSON structurés en formulaires HTML fonctionnels avec validation intégrée. Cet outil s'adresse aux développeurs front-end et back-end qui souhaitent automatiser la création d'interfaces de saisie à partir de spécifications API ou de structures de données préexistantes. Il supporte les formats JSON Schema (Draft 4, 6, 7) et permet de générer des formulaires avec champs conditionnels (affichage dynamique selon les valeurs), validations personnalisées (regex, min/max), et intégration avec des bibliothèques comme React Hook Form ou Vue.js. Le processus utilise un moteur de rendu basé sur des templates Mustache, avec possibilité de personnaliser l'accessibilité (ARIA attributes) et les classes CSS. Les développeurs gagnent du temps en évitant le codage manuel des formulaires et en assurant une cohérence avec les schémas backend.",
+  "usage_steps": [
+    "Accédez à l'éditeur en ligne et sélectionnez l'onglet 'JSON Schema Input'.",
+    "Collez votre schéma JSON valide ou utilisez le bouton 'Générer depuis exemple' pour charger un template préconfiguré.",
+    "Activez/désactivez les options avancées : 'Validation en temps réel', 'Champs conditionnels', ou 'Compatibilité React/Vue'.",
+    "Cliquez sur 'Générer formulaire' pour obtenir le code HTML/CSS dans le panneau de sortie.",
+    "Personnalisez l'apparence via l'éditeur de style intégré ou en modifiant les classes dans le code.",
+    "Téléchargez le résultat compressé ou copiez-le directement dans votre projet."
+  ],
+  "usage_examples": [
+    "Créer un formulaire de checkout dynamique qui adapte ses champs selon le pays sélectionné (ex: afficher le champ TVA pour l'UE).",
+    "Générer un questionnaire médical avec validations complexes (ex: plage de valeurs pour la tension artérielle).",
+    "Transformer un schéma OpenAPI d'API REST en interface de test utilisateur pour les développeurs.",
+    "Intégrer des formulaires réutilisables dans un CMS comme WordPress via des shortcodes personnalisés."
+  ],
+  "jsonSchema": "Schéma JSON",
+  "formPreview": "Aperçu du Formulaire",
+  "htmlOutput": "Sortie HTML",
+  "generate": "Générer le Formulaire",
+  "copy": "Copier",
+  "copied": "Copié !",
+  "inputPlaceholder": "Entrez le schéma JSON...",
+  "placeholder": "Collez le schéma JSON ici...",
+  "loadExample": "Charger l'exemple",
+  "jsonInput": "Entrée JSON",
+  "copyCode": "Copier le code",
+  "submit": "Soumettre"
+}

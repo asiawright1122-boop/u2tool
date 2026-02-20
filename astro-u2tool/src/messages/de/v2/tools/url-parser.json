@@ -1,0 +1,29 @@
+{
+  "urlLabel": "URL",
+  "protocol": "Protokoll",
+  "hostname": "Hostname",
+  "port": "Port",
+  "pathname": "Pfad",
+  "search": "Query-String",
+  "hash": "Hash",
+  "origin": "Ursprung",
+  "queryParams": "Query-Parameter",
+  "invalid": "Ungültige URL",
+  "defaultPort": "(standardmäßig)",
+  "none": "(keine)",
+  "detailed_description": "Der URL Parser ist ein spezialisierter Online-Analyzer für Netzwerkprotokoll-URI-Strukturen, der URLs nach RFC 3986-Standard präzise in ihre semantischen Bestandteile zerlegt. Das Tool extrahiert nicht nur offensichtliche Komponenten wie Protokoll (http/https), Hostname und Pfad, sondern identifiziert auch subdomain-spezifische Hierarchien, Top-Level-Domains mit ICANN-Klassifizierung und numerische Portnummern. Bei der Verarbeitung werden Prozent-codierte Zeichen durch UTF-8-dekodierte Werte ersetzt, während die Query-Parameter in strukturierten Key-Value-Paaren dargestellt werden. Entwickler profitieren von der präzisen Darstellung von Fragment-Identifikatoren und der Validierung komplexer URL-Schemata gemäß W3C-Spezifikationen. Das Tool ist unverzichtbar für Debugging von Webanwendungen, Migration von Legacy-URL-Strukturen oder Sicherheitsanalysen von Redirect-Parametern. Technisch realisiert wird dies durch eine clientseitige Implementierung der JavaScript URL API, ergänzt um erweiterte Regex-Muster für internationale Domainnamen (IDN) und IPv6-Adressen. Die Ausgabe erfolgt in einer semantisch getaggten JSON-Struktur mit zusätzlicher visueller Highlighting-Funktion für potenziell unsichere Komponenten.",
+  "usage_steps": [
+    "1. Öffnen Sie das Tool im Netzwerk-Tools-Abschnitt der Website.",
+    "2. Fügen Sie die zu analysierende URL in das große Eingabefeld mit der Beschriftung 'URI eingeben' ein.",
+    "3. Klicken Sie auf den 'Parse' Button unterhalb des Eingabefelds.",
+    "4. Expandieren Sie die einzelnen Abschnitte (Protokoll, Host, Pfad usw.) im Ergebnisbereich.",
+    "5. Nutzen Sie die 'Kopieren'-Schaltflächen neben jedem Wert für die Zwischenablage.",
+    "6. Verwenden Sie den 'Query-Export'-Button, um Parameter als CSV oder JSON herunterzuladen."
+  ],
+  "usage_examples": [
+    "Ein Backend-Entwickler debuggt fehlerhafte Redirects, indem er die Query-Parameter-Zeichenkette auf ungültige Codierungen untersucht.",
+    "Ein SEO-Spezialist überprüft die Konsistenz von Canonical-Tags durch Vergleich der extrahierten Host-Komponenten.",
+    "Ein API-Tester validiert die korrekte Struktur von Endpunktparametern in automatisierten Testskripten.",
+    "Ein Datenanalyst extrahiert und aggregiert Marketing-Kampagnen-Parameter aus Logdateien für Reporting-Zwecke."
+  ]
+}

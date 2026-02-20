@@ -1,0 +1,95 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "showLegend": "显示图例",
+  "showGrid": "显示网格",
+  "smooth": "平滑曲线",
+  "areaFill": "区域填充",
+  "lineStyle": "线条样式",
+  "styleSolid": "实线",
+  "styleDashed": "虚线",
+  "styleDotted": "点线",
+  "category": "类别",
+  "series": "系列",
+  "addCategory": "添加类别",
+  "addSeries": "添加系列",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "月度趋势数据",
+  "sampleTitle": "销售和利润趋势",
+  "dataEditor": "数据编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "sampleData": {
+    "jan": "一月",
+    "feb": "二月",
+    "mar": "三月",
+    "apr": "四月",
+    "may": "五月",
+    "jun": "六月",
+    "series1": "系列1",
+    "series2": "系列2",
+    "series3": "系列3",
+    "sales": "销售",
+    "profit": "利润"
+  },
+  "importCsv": "导入CSV",
+  "csvFormat": "CSV格式：类别，系列1，系列2...（第一行是标题）",
+  "csvImportSuccess": "导入{count}行数据",
+  "csvImportError": "CSV格式无效。预期：类别，系列1，系列2...",
+  "tips": {
+    "title": "提示",
+    "tip1": "添加多个数据系列以比较趋势",
+    "tip2": "点击添加类别以添加X轴数据点",
+    "tip3": "启用平滑曲线以获得平滑的线条",
+    "tip4": "启用区域填充以填充线条下方",
+    "tip5": "选择线条样式（实线、虚线、点线）",
+    "tip6": "从CSV文件导入数据"
+  },
+  "detailed_description": "本工具基于D3.js框架实现动态SVG渲染，支持多维数据集的线型图表构建。用户可通过上传CSV/JSON文件或手动输入数据矩阵，生成支持缩放交互的矢量图表。核心功能包括：双Y轴同步渲染、贝塞尔曲线平滑插值、时间序列自动对齐，以及支持WebGL加速的百万级数据点渲染。开发者可自定义数据映射规则，通过维度字段绑定实现多系列对比，同时提供十六进制色值配置器和透明度通道调节功能。该工具特别适用于金融数据分析、物联网时序数据可视化及科研论文图表制作场景，采用响应式布局确保在Retina屏幕和移动设备上的清晰显示。",
+  "usage_steps": [
+    "在数据输入面板选择'CSV粘贴'或'JSON文件上传'，支持多列数据自动识别",
+    "启用'双轴模式'配置主次Y轴关联字段，设置坐标轴刻度间隔类型（线性/对数）",
+    "通过'曲线拟合'下拉菜单选择线性插值或三次样条插值算法",
+    "在颜色编码器中输入十六进制色值并调整透明度滑块，应用至指定数据系列",
+    "启用'交互模式'后配置提示框内容模板，设置缩放区域限制范围",
+    "导出时选择SVG或PNG格式，调整DPI参数（300/600/1200）及画布边界裁剪区域"
+  ],
+  "usage_examples": [
+    "电商分析师导入销售数据，对比不同品类的季度增长趋势，导出高分辨率SVG插入PPT",
+    "气象科研人员上传温度监测数据，使用双轴模式叠加降水概率曲线分析相关性",
+    "前端开发人员生成实时更新的WebSocket数据流图表，嵌入监控仪表板",
+    "股票研究员配置多支股票的历史价格数据，应用贝塞尔曲线生成平滑趋势对比图"
+  ],
+  "faqs": [
+    {
+      "question": "Line Chart Generator 是免费的吗？",
+      "answer": "是的，Line Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Line Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Line Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Line Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Line Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

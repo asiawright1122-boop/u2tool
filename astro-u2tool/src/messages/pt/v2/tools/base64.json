@@ -1,0 +1,21 @@
+{
+  "encodeToBase64": "Codificar para Base64",
+  "decodeFromBase64": "Decodificar a partir de Base64",
+  "inputPlaceholder": "Insira o texto para codificar ou Base64 para decodificar...",
+  "outputPlaceholder": "Resultado aparecerá aqui...",
+  "detailed_description": "O codificador/decodificador Base64 permite transformar dados binários ou texto em uma sequência alfanumérica compatível com sistemas de transmissão de texto puro. O algoritmo Base64 divide dados em blocos de 24 bits, convertendo-os em quatro caracteres ASCII de 6 bits cada, utilizando uma tabela de mapeamento padrão (RFC 4648). Esta ferramenta é essencial para desenvolvedores que precisam integrar dados binários em formatos que exigem compatibilidade com texto, como cabeçalhos HTTP, tokens JWT ou SVG inline. A codificação é realizada diretamente no navegador usando Web Workers para processamento paralelo, garantindo velocidade e segurança, já que nenhum dado é enviado para servidores externos. A decodificação automaticamente trata padding inválido e detecta anomalias como caracteres não conformes à especificação Base64. A interface suporta codificação com variantes URL-safe e tradicional, permitindo ajustes finos para diferentes cenários de uso.",
+  "usage_steps": [
+    "Acesse o painel 'Codificar para Base64' ou 'Decodificar de Base64' conforme necessário",
+    "Cole o conteúdo bruto no campo de texto superior (até 5MB de dados)",
+    "Ative a opção 'Remover quebras de linha' se estiver processando dados contínuos",
+    "Selecione o modo de codificação: Padrão (RFC 4648) ou URL-safe (substitui '+' por '-' e '/' por '_')",
+    "Clique no botão 'Processar' para iniciar a transformação criptográfica",
+    "Copie o resultado no campo inferior ou utilize o botão 'Baixar como .txt' para armazenamento persistente"
+  ],
+  "usage_examples": [
+    "Converter um logo SVG em data URI para incorporação direta em CSS sem requisições HTTP adicionais",
+    "Decodificar o payload de um token JWT para verificar claims de autenticação manualmente",
+    "Codificar credenciais para cabeçalho Basic Auth em requisições API sensíveis",
+    "Transformar um arquivo PDF de 2KB em sequência Base64 para inclusão em corpo de e-mail multipart"
+  ]
+}

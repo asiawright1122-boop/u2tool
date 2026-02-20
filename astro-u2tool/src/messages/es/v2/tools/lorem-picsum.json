@@ -1,0 +1,32 @@
+{
+  "width": "Ancho",
+  "height": "Altura",
+  "seed": "Semilla",
+  "optional": "opcional",
+  "seedPlaceholder": "Texto para imágenes consistentes",
+  "imageId": "ID de la imagen",
+  "grayscale": "Escala de grises",
+  "blur": "Desenfoque",
+  "generate": "Generar imagen",
+  "imageUrl": "URL de la imagen",
+  "copy": "Copiar",
+  "preview": "Vista previa",
+  "noPreview": "Haz clic en 'Generar' para ver la imagen",
+  "info": "Información",
+  "infoText": "Usa la API de Picsum Photos. La semilla asegura que la imagen sea la misma para resultados consistentes. El ID de la imagen (0-1084) selecciona una foto específica.",
+  "detailed_description": "Lorem Picsum es una herramienta técnica que permite generar imágenes aleatorias de alta calidad desde la API de Picsum Photos, una biblioteca de imágenes de dominio público optimizada para desarrollo web y diseño UI/UX. Este servicio funciona mediante solicitudes HTTP GET a endpoints RESTful, permitiendo a los usuarios especificar parámetros como dimensiones (ancho/alto en píxeles), formato de imagen (JPEG/PNG/WebP) y opciones de procesamiento como escala de grises o enfoque suave. Al integrar un CDN global, las imágenes se entregan con baja latencia y compatibilidad con modernos estándares web como AVIF. Es especialmente útil para desarrolladores front-end que necesitan prototipos visuales sin violar derechos de autor, diseñadores que prueban layouts responsive o equipos ágiles construyendo MVPs. Su capacidad para generar imágenes con proporciones específicas (1:1, 4:3, 16:9) y soporte para atributos srcset y sizes lo convierte en una solución profesional para testing de diseño adaptativo.",
+  "usage_steps": [
+    "Accede al generador de URLs en la sección 'Parámetros de Imagen' del panel de control",
+    "Especifica el ancho deseado en el campo numérico 'Width' (rango: 100-4000px)",
+    "Ajusta la altura en el campo 'Height' o deja en blanco para proporción automática",
+    "Marca la opción 'Grayscale' si necesitas imágenes en blanco y negro para pruebas de accesibilidad",
+    "Selecciona el formato de imagen preferido (PNG, JPEG, WebP) en el menú desplegable",
+    "Haz clic en 'Generar URL' para obtener el enlace CDN listo para incrustar en código HTML/CSS"
+  ],
+  "usage_examples": [
+    "Un desarrollador front-end implementa imágenes responsivas en una galería de portafolio usando srcset con múltiples dimensiones generadas",
+    "Un diseñador UX prueba la jerarquía visual de un sitio de noticias con imágenes aleatorias en proporción 3:4 para artículos destacados",
+    "Un equipo ágil de startups genera placeholders para un MVP de e-commerce con imágenes cuadradas (1:1) para tarjetas de productos",
+    "Un creador de temas WordPress integra URLs dinámicas de Lorem Picsum para demostrar variantes de diseño de encabezados hero"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "mode": "Modus",
+  "binToDec": "Binär → Dezimal",
+  "decToBin": "Dezimal → Binär",
+  "binToHex": "Binär → Hexadezimal",
+  "hexToBin": "Hexadezimal → Binär",
+  "bitLength": "Bitlänge",
+  "bit8": "8-bit",
+  "bit16": "16-bit",
+  "bit32": "32-bit",
+  "bit64": "64-bit",
+  "loadSample": "Beispiel laden",
+  "input": "Eingabe",
+  "inputPlaceholder": "Geben Sie einen Wert ein...",
+  "output": "Ausgabe",
+  "outputPlaceholder": "Ergebnis wird hier angezeigt...",
+  "copy": "Kopieren",
+  "convert": "Konvertieren",
+  "quickRef": "Schnellreferenz",
+  "errorInvalidBinary": "Ungültige binäre Eingabe",
+  "errorInvalidDecimal": "Ungültige dezimale Eingabe",
+  "errorInvalidHex": "Ungültige hexadezimale Eingabe",
+  "errorConversion": "Konvertierungsfehler",
+  "detailed_description": "Der Binary to Decimal Konverter ist ein präzises Instrument zur bidirektionalen Umrechnung von Zahlen zwischen binärem (Basis 2), dezimalem (Basis 10) und hexadezimalem (Basis 16) Zahlensystem. Technisch basiert die Konvertierung auf dem Positionssystem, bei dem jedes Bit in einer Binärzahl entsprechend seiner Position gewichtet wird (2^n). Für Hexadezimalwerte erfolgt die Umrechnung über nibblebasierte Gruppierung. Anwender benötigen dieses Tool bei Aufgaben wie Subnetting in Netzwerken, Bitmasken-Interpretation in der Systemprogrammierung oder Fehlersuche in Embedded-Systemen. Die Implementierung nutzt optimierte Algorithmen wie das Horner-Schema für effiziente Berechnung selbst langer Bitfolgen. Ein Validierungssystem prüft Eingaben auf gültige Zeichensätze (0-1 für Binär, 0-9A-F für Hex) und verhindert Eingabefehler durch Echtzeit-Feedback.",
+  "usage_steps": [
+    "1. Wählen Sie im Auswahlfeld 'Eingabeformat' zwischen BIN, DEC oder HEX.",
+    "2. Geben Sie den zu konvertierenden Wert im Haupt-Eingabefeld ein (z.B. '1101' für Binär).",
+    "3. Aktivieren Sie den Schalter 'Automatische Konversion' für Echtzeitberechnung oder klicken Sie 'Konvertieren'.",
+    "4. Inspektezieren Sie die Ergebnisse in den farbkodierten Ausgabefeldern für alle drei Zahlensysteme.",
+    "5. Nutzen Sie den 'Kopieren'-Button neben dem gewünschten Ergebnis für Zwischenablage-Export.",
+    "6. Überprüfen Sie bei Fehlernmeldungen die Eingabe auf ungültige Zeichen oder übermäßige führende Nullen."
+  ],
+  "usage_examples": [
+    "Ein Netzwerkadministrator konvertiert eine Subnetzmaske (z.B. 255.255.240.0) in CIDR-Notation durch Zerlegung in Binärwerte.",
+    "Ein Embedded-Entwickler analysiert einen 16-Bit-Registerwert (z.B. 0xA3F5) zur Fehlersuche in Hardware-Steuerungssignalen.",
+    "Ein Spieleprogrammierer optimiert Farbmanipulationen durch schnelle Umrechnung von RGB-Werten in Hexadezimalcodes.",
+    "Ein Informatikstudent demonstriert den Unterschied zwischen Big-Endian und Little-Endian durch schrittweise Konversion von Bytefolgen."
+  ]
+}

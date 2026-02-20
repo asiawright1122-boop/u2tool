@@ -1,0 +1,22 @@
+{
+  "htmlInput": "HTML Input",
+  "jsxOutput": "JSX Output",
+  "placeholder": "<div class=\"container\">...</div>",
+  "convert": "Konvertieren",
+  "copy": "Kopieren",
+  "detailed_description": "Das Tool HTML zu JSX ist eine leistungsstarke Umwandlungskomponente, die HTML-Code in React JSX-Format umwandelt. Dieses Tool ist für Entwickler und Frontend-Entwickler von entscheidender Bedeutung, da es den Prozess der Konvertierung von traditionellen HTML-Elementen in React-kompatibles JSX erheblich vereinfacht. Die Notwendigkeit für dieses Tool ergibt sich daraus, dass React und andere JavaScript-basierte Frameworks JSX-Elemente verwenden, um komponentenbasierte Benutzeroberflächen zu erstellen. HTML-Code, der in einem Legacy-System oder einer statischen Website verwendet wird, muss oft in JSX konvertiert werden, um in modernen React-Anwendungen verwendet werden zu können. Dieses Tool übernimmt die komplexen syntaktischen Unterschiede, wie z.B. die Verwendung von Klassennamen (class vs. className) und das Hinzufügen von React-Spezifika, wie z.B. die Verwendung von geschweiften Klammern für Inline-Expressen. Durch die Automatisierung dieses Prozesses spart das Tool wertvolle Entwicklerzeit und minimiert Fehler, die manuell bei der Umwandlung entstehen könnten.",
+  "usage_steps": [
+    "Öffnen Sie die Website und navigieren Sie zur Seite 'HTML to JSX'.",
+    "Klicken Sie auf den Button 'HTML-Code einfügen' und fügen Sie Ihren HTML-Code in das Textfeld ein.",
+    "Wählen Sie im Dropdown-Menü 'Konvertierungsoptionen' die gewünschten Einstellungen, wie z.B. die Verwendung von Single- oder Double-Quotes.",
+    "Klicken Sie auf den Button 'Konvertieren', um den HTML-Code in JSX umzuwandeln.",
+    "Sobald die Konvertierung abgeschlossen ist, wird der umgewandelte JSX-Code im unteren Textfeld angezeigt.",
+    "Klicken Sie auf den Button 'Code kopieren', um den JSX-Code in Ihre Zwischenablage zu übertragen und in Ihr Projekt einzufügen."
+  ],
+  "usage_examples": [
+    "Ein Entwickler hat eine statische HTML-Vorlage für eine Landing Page und möchte diese in eine reaktive React-Komponente umwandeln, um sie in eine bestehende Single-Page-Anwendung (SPA) zu integrieren.",
+    "Eine Webdesign-Agentur erstellt eine komplexe HTML-Tabelle und muss sie in eine React-Komponente konvertieren, um sie in einem Customer-Portal zu verwenden.",
+    "Ein Freelancer entwickelt ein E-Commerce-Plugin und benötigt eine schnelle Umwandlung von HTML-Formularen in JSX, um sie in React-kompatiblen Themen zu integrieren.",
+    "Ein Team von Frontend-Entwicklern möchte bestehende HTML-Widgets von einem Legacy-System in ein neues React-Projekt übertragen, um die Wiederverwendbarkeit des Codes zu maximieren."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The Text Case Counter is a Unicode-compliant text analysis tool that quantifies character distribution across three distinct categories: uppercase (Lu), lowercase (Ll), and non-alphabetic characters (including punctuation, digits, and whitespace). This tool leverages Unicode block classification to precisely identify character types, ensuring accurate counts even in multilingual text containing accented characters or non-Latin scripts. Developers and data scientists use this tool for tasks requiring case sensitivity validation, such as password policy enforcement (e.g., verifying mixed-case requirements), text normalization preprocessing in NLP pipelines, or linguistic pattern analysis in corpus studies. The counter operates by iterating through UTF-8 encoded code points, applying bitwise classification to each character. It maintains three separate counters that update in O(1) time complexity per character, enabling efficient processing of multi-megabyte texts with constant memory usage. Unlike basic implementations, this tool distinguishes between alphabetic cases and explicitly handles Unicode-special cases like title-case characters and modifier letters.",
+  "usage_steps": [
+    "Open the tool's interface and locate the primary text editor panel.",
+    "Paste content via clipboard or use the 'Import File' button to load UTF-8 text.",
+    "Toggle the 'Include Whitespace' switch to determine if spaces/tabs should count as 'Other'.",
+    "Click the 'Analyze Text' button to initiate Unicode character classification.",
+    "Review the results displayed in the JSON-formatted output panel showing exact counts and percentages.",
+    "Use the 'Export Results' dropdown to save analysis data as CSV or copy JSON to clipboard."
+  ],
+  "usage_examples": [
+    "A security engineer validating that user-generated passwords contain at least 2 uppercase and 3 lowercase characters.",
+    "A computational linguist comparing case usage patterns in historical vs modern English texts.",
+    "A QA specialist verifying that API responses maintain consistent case formatting in JSON keys.",
+    "A typographer analyzing manuscript drafts to ensure proper capitalization of technical terminology."
+  ]
+}

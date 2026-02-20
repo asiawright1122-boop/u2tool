@@ -1,0 +1,17 @@
+{
+  "detailed_description": "L'outil JSON to TypeScript permet de transformer des données JSON structurées en définitions d'interfaces TypeScript typées. Il analyse syntaxiquement le JSON fourni pour inférer automatiquement les types de données (primitifs, objets imbriqués, tableaux, unions) et génère un code TypeScript conforme aux spécifications du langage. Ce processus repose sur une analyse contextuelle des valeurs (détection de motifs comme les UUID, dates au format ISO 8601) et une logique de normalisation des clés (conversion en PascalCase pour les interfaces). Il est particulièrement utile pour les développeurs Angular ou React nécessitant des modèles de données robustes lors de l'intégration d'API REST, la création de schémas de validation ou la génération automatique de DTO. L'outil supporte les structures récursives et propose des options avancées comme la gestion des champs optionnels (ajout de '?') ou la conversion des enums en types littéraux. Sa capacité à produire du code compatible avec les versions récentes de TypeScript (4.9+) garantit une intégration sans friction dans les projets modernes.",
+  "usage_steps": [
+    "Collez votre JSON valide dans l'éditeur de code à gauche de l'interface",
+    "Activez l'option 'Détection avancée' pour identifier les types complexes comme les dates ou les nombres hexadécimaux",
+    "Ajustez les règles de nommage via le sélecteur 'Convention de casse' (PascalCase, camelCase, snake_case)",
+    "Cliquez sur le bouton 'Générer Interface' pour déclencher la transformation",
+    "Utilisez le commutateur 'Afficher les détails' pour visualiser les inférences de type par champ",
+    "Copiez le code généré dans votre fichier .ts ou téléchargez-le au format ZIP"
+  ],
+  "usage_examples": [
+    "Création d'interfaces pour les réponses d'une API météorologique avec gestion des valeurs nullables",
+    "Génération de modèles de données à partir de fichiers de configuration JSON pour une application Electron",
+    "Transformation de payloads IoT (JSON imbriqué avec timestamps et mesures) en types hiérarchiques",
+    "Conversion de spécifications OpenAPI en interfaces TypeScript pour un projet de microservices"
+  ]
+}

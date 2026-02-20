@@ -1,0 +1,28 @@
+{
+  "className": "Clase Nombre",
+  "style": "Estilo",
+  "useOptional": "Usar Opcional para campos nulos",
+  "loadSample": "Cargar Ejemplo",
+  "copy": "Copiar",
+  "convert": "Convertir",
+  "inputPlaceholder": "Introduce un objeto JSON...",
+  "outputPlaceholder": "El código Python aparecerá aquí...",
+  "detailed_description": "La herramienta JSON a Python permite a los desarrolladores transformar datos JSON en estructuras de Python tipadas como dataclass, modelos de Pydantic o TypedDict. Esto es fundamental en escenarios donde se requiere integración entre APIs RESTful y aplicaciones Python, ya que convierte automáticamente esquemas JSON en modelos con validación de tipos, evitando errores en tiempo de ejecución. El proceso técnico implica un analizador sintáctico AST que infiere tipos de datos anidados, detecta patrones como fechas en formato ISO 8601, y genera código compatible con PEP 589. Para Pydantic, implementa validadores personalizados, mientras que en dataclass incluye campos con valores predeterminados y tipos explícitos. Su valor añadido radica en soportar esquemas complejos con uniones de tipos (por ejemplo, Union[str, None]) y propiedades opcionales, facilitando la documentación automática en frameworks como FastAPI o la serialización bidireccional en microservicios. Además, ofrece opciones para personalizar alias de campos y mapear tipos personalizados, esencial para proyectos que exigen estricta coherencia de datos.",
+  "usage_steps": [
+    "Accede a la interfaz web y selecciona el formato de salida deseado (dataclass, Pydantic v2 o TypedDict) mediante el selector en la sección 'Tipo de Modelo'.",
+    "Pega tu JSON en el editor de código con resaltado de sintaxis, o carga un archivo .json usando el botón 'Importar Archivo'.",
+    "Activa la opción 'Detectar Fechas' si el JSON contiene cadenas en formato ISO 8601 para convertirlas automáticamente a objetos datetime.",
+    "Personaliza los campos en la sección 'Configuración Avanzada', como definir campos obligatorios o mapear tipos personalizados (por ejemplo, números como Decimal).",
+    "Haz clic en 'Generar Código' para obtener el script Python en el panel de salida, con documentación de tipos incluida.",
+    "Copia el resultado al portapapeles con el botón 'Copiar' o descárgalo como archivo .py para integrarlo directamente en tu proyecto."
+  ],
+  "usage_examples": [
+    "Un desarrollador crea un microservicio FastAPI y convierte un esquema OpenAPI JSON en modelos Pydantic para validación automática de solicitudes y respuestas.",
+    "Al migrar datos de una base de datos NoSQL como MongoDB, se generan dataclass para manejar documentos con estructura fija y tipos definidos.",
+    "Un equipo frontend envía objetos JSON desde una aplicación React y el backend los transforma en TypedDict para mantener consistencia de tipos en funciones asíncronas.",
+    "Un ingeniero de datos procesa logs en formato JSON y genera estructuras tipadas para integrarlas con bibliotecas de análisis como Pandas, asegurando inferencia correcta de tipos."
+  ],
+  "pydanticBaseModel": "Pydantic BaseModel",
+  "typedDict": "TypedDict",
+  "plainClass": "Clase Simple"
+}

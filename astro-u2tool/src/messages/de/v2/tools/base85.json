@@ -1,0 +1,25 @@
+{
+  "input": "Eingabe",
+  "output": "Ausgabe",
+  "encode": "Codeieren",
+  "decode": "Dezidieren",
+  "copy": "Kopieren",
+  "inputPlaceholderEncode": "Text zum Codeieren eingeben...",
+  "inputPlaceholderDecode": "Base85 zum Dezidieren eingeben...",
+  "outputPlaceholder": "Ergebnisse hier erscheinen...",
+  "detailed_description": "Der Base85 Encoder/Decoder ermöglicht die bidirektionale Konvertierung von Binärdaten in das Ascii85-Format, das in Protokollen wie PDF, PostScript und Git verwendet wird. Base85 kodiert 4 Byte Binärdaten in 5 ASCII-Zeichen aus einem Zeichensatz von 85 verschiedenen Zeichen (ASCII 33–117), was eine kompaktere Darstellung als Base64 (33% Overhead) ermöglicht. Entwickler benötigen dieses Tool, um Daten für Anwendungen präzise zu verarbeiten, z.B. zum Einbetten von Binärdateien in JSON- oder E-Mail-Protokolle, bei der Analyse von PDF-Inhalten oder der Inspektion von Git-Objekten. Der Encoder transformiert Binärdaten durch Division in 32-Bit-Blöcke, die per Zerlegung in 5-Zeichen-Gruppen aus dem Ascii85-Zeichensatz abgebildet werden. Der Decoder führt die inverse Operation durch, einschließlich der Behandlung von Padding-Zeichen für unvollständige Blöcke. Das Tool unterstützt die vollständige IETF-RFC-1942-Compliance, inklusive Behandlung von Sonderfällen wie Nullblöcken und Whitespace-Handling.",
+  "usage_steps": [
+    "1. Öffnen Sie die Base85-Toolseite und wählen Sie durch Klick auf 'Encoder' oder 'Decoder' den gewünschten Modus.",
+    "2. Fügen Sie Binärdaten (z.B. hex-Dump oder Rohbytes) im Textfeld 'Eingabedaten' ein oder laden Sie eine Datei über den 'Datei importieren'-Button.",
+    "3. Aktivieren Sie im Abschnitt 'Optionen' die Checkbox 'Padding hinzufügen' für Encoder-Vorgänge oder 'Whitespace ignorieren' beim Decodieren.",
+    "4. Wählen Sie den Zielzeichensatz (Standard: Adobe Ascii85 oder Git-Pack-Format) über das Dropdown-Menü.",
+    "5. Klicken Sie auf 'Starte Verarbeitung', um die konvertierten Daten im Ausgabefeld zu generieren.",
+    "6. Kopieren Sie das Ergebnis über den 'In Zwischenablage kopieren'-Button oder exportieren Sie es als .txt-Datei."
+  ],
+  "usage_examples": [
+    "Codierung einer PNG-Grafik in Ascii85 für die Einbettung in ein JSON-API-Payload ohne Base64-Overhead.",
+    "Dekodierung eines PDF-Objekts (z.B. /FlateDecode-Streams) zur Analyse komprimierter Inhaltsdaten.",
+    "Konvertierung eines Git-Packobjekts in lesbare ASCII-Zeichen für die manuelle Inspektion von Commit-Deltas.",
+    "Erstellung von Ascii85-kodierten E-Mail-Anhängen, die kompakter als traditionelle MIME-Base64 sind."
+  ]
+}

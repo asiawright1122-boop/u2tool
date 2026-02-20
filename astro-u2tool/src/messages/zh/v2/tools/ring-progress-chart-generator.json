@@ -1,0 +1,68 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "label": "标签",
+  "labelPlaceholder": "输入标签",
+  "percentage": "百分比",
+  "ringWidth": "环形宽度",
+  "showAnimation": "显示动画",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "defaultTitle": "进度",
+  "defaultLabel": "完成度",
+  "sampleTitle": "项目进度",
+  "sampleLabel": "已完成",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "tips": {
+    "title": "小贴士",
+    "tip1": "拖动滑块调整百分比值",
+    "tip2": "自定义环形宽度以产生不同视觉效果",
+    "tip3": "启用动画以实现动态加载效果"
+  },
+  "detailed_description": "环形进度图表生成器是一款基于Web技术实现的可视化数据呈现工具，采用SVG/Canvas双模渲染引擎，通过路径动画与渐进增强技术实现动态环形进度展示。该工具支持通过JSON数据绑定实时更新百分比数值，利用CSS3 transform属性实现环形缺口角度调节，内置HSL色彩空间转换器可生成渐变色谱。开发者可通过API接口直接获取基于Web Components规范的可复用代码组件，适用于需要将复杂数据转化为直观视觉反馈的场景。该工具特别适合前端开发人员快速构建管理驾驶舱仪表盘、SaaS产品功能完成度指示器、游戏化界面成就进度条等应用场景，其支持响应式布局与A11Y无障碍访问的特性，解决了传统环形图表在多端适配与可访问性方面的技术痛点。",
+  "usage_steps": [
+    "在工具界面顶部输入框输入目标百分比数值（0-100）",
+    "通过左侧属性面板选择环形样式（单色/双色/渐变）",
+    "拖动色轮组件配置主色系与高亮过渡色值",
+    "调整动画持续时间滑块（200-2000ms）设置加载动效",
+    "在预览窗口右键点击图表选择'查看代码'获取HTML/CSS/JS源码",
+    "使用'导出PNG'功能保存带透明背景的图表图像"
+  ],
+  "usage_examples": [
+    "产品经理在需求文档中嵌入动态环形图，可视化展示功能开发进度百分比",
+    "游戏开发者构建玩家成就系统，用环形进度条显示任务完成度",
+    "在线教育平台课程详情页，实时显示用户学习进度的环形指示器",
+    "智能硬件控制面板中，使用环形进度条展示设备充电状态与电池健康度"
+  ],
+  "faqs": [
+    {
+      "question": "Ring Progress Chart Generator 是免费的吗？",
+      "answer": "是的，Ring Progress Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Ring Progress Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Ring Progress Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Ring Progress Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Ring Progress Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

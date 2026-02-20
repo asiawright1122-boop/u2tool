@@ -1,0 +1,32 @@
+{
+  "width": "Largura",
+  "height": "Altura",
+  "seed": "Seed",
+  "optional": "opcional",
+  "seedPlaceholder": "Qualquer texto para imagens consistentes",
+  "imageId": "ID da Imagem",
+  "grayscale": "Tons de Cinza",
+  "blur": "Borrão",
+  "generate": "Gerar Imagem",
+  "imageUrl": "URL da Imagem",
+  "copy": "Copiar",
+  "preview": "Pré-visualizar",
+  "noPreview": "Clique em Gerar para pré-visualizar a imagem",
+  "info": "Informações",
+  "infoText": "Usa a API de Fotos Picsum. O Seed garante que a mesma imagem seja gerada para resultados consistentes. O ID da Imagem (0-1084) seleciona uma foto específica.",
+  "detailed_description": "O Lorem Picsum é uma ferramenta técnica que integra a API RESTful do serviço Picsum Photos para gerar imagens de placeholder programaticamente. Ao acessar endpoints específicos, o sistema realiza requisições HTTP GET com parâmetros customizáveis (como largura, altura e seed aleatório) que definem as características da imagem retornada. A API responde com URLs de imagens em formato JPEG/PNG, incluindo metadados em JSON sobre a foto, como dimensões originais e informações de licenciamento. Este recurso é essencial para desenvolvedores front-end que necessitam testar layouts responsivos com conteúdo visual realista sem depender de assets estáticos, além de servir como mock de dados visuais em protótipos de interfaces. A implementação utiliza técnicas de lazy loading e cache control via headers ETag, garantindo eficiência em ambientes de desenvolvimento ágil.",
+  "usage_steps": [
+    "1. Acesse a página do Lorem Picsum e insira valores numéricos nos campos 'Width' e 'Height' para definir dimensões específicas.",
+    "2. Ative a opção 'Grayscale' se desejar imagens em preto e branco para testes de acessibilidade visual.",
+    "3. Utilize o campo 'Seed' para fixar uma imagem específica ou deixe vazio para resultados aleatórios a cada requisição.",
+    "4. Clique no botão 'Generate' para disparar a requisição HTTP e visualizar a imagem renderizada em tempo real.",
+    "5. Copie o URL gerado na caixa de texto abaixo da prévia para integrar diretamente no código HTML/CSS ou em frameworks como React/Vue.",
+    "6. Use o link 'API Documentation' para explorar endpoints adicionais, como listagem de fotos aleatórias ou busca por categorias específicas."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor front-end testando media queries para um site responsivo, usando imagens de diferentes proporções para validar quebras de layout.",
+    "Um designer de UX criando um protótipo Figma com conteúdo dinâmico, utilizando URLs aleatórios para simular galerias de produtos variáveis.",
+    "Um redator de conteúdo preparando um template de blog WordPress, inserindo imagens placeholder antes da definição do material fotográfico final.",
+    "Um engenheiro de software testando pipelines de processamento de imagens em Node.js, usando o serviço como fonte de dados não determinística para validação de algoritmos."
+  ]
+}

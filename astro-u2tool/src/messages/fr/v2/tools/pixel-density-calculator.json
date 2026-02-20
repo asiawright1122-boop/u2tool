@@ -1,0 +1,40 @@
+{
+  "detailed_description": "Le Calculateur de Densité de Pixels calcule le nombre de pixels par pouce (PPI) et d'autres métriques d'affichage à partir de la résolution de l'écran et de la taille diagonale. Comprenez la qualité de votre affichage en calculant le pitch des pixels, le rapport d'aspect et le nombre total de mégapixels. Inclut des paramètres prédéfinis pour des résolutions courantes allant de HD à 8K et des appareils populaires.",
+  "usage_steps": [
+    "Entrez la largeur de l'écran en pixels",
+    "Entrez la hauteur de l'écran en pixels",
+    "Entrez la taille diagonale de l'écran en pouces",
+    "Ou sélectionnez une configuration de résolution commune",
+    "Vérifiez la PPI, le pitch de pixels et d'autres métriques",
+    "Copiez les résultats pour référence"
+  ],
+  "usage_examples": [
+    "Comparaison de la qualité d'affichage entre différents moniteurs",
+    "Évaluation de la netteté de l'écran des smartphones",
+    "Choix de l'affichage approprié pour le travail de conception"
+  ],
+  "width": "Width",
+  "height": "Height",
+  "diagonal": "Diagonal",
+  "inches": "inches",
+  "commonResolutions": "Common Resolutions",
+  "results": "Results",
+  "pixelsPerInch": "Pixels Per Inch",
+  "pixelPitch": "Pixel Pitch",
+  "aspectRatio": "Aspect Ratio",
+  "megapixels": "Megapixels",
+  "physicalWidth": "Physical Width",
+  "physicalHeight": "Physical Height",
+  "totalPixels": "Total Pixels",
+  "ppiReference": "PPI Reference",
+  "quality": {
+    "excellent": "Excellent - Retina quality",
+    "good": "Good - Sharp display",
+    "average": "Average - Standard quality",
+    "low": "Low - Visible pixels"
+  },
+  "screenWidth": "Largeur d'écran (px)",
+  "screenHeight": "Hauteur d'écran (px)",
+  "diagonalSize": "Taille diagonale (pouces)",
+  "ppi": "Pixels par pouce"
+}

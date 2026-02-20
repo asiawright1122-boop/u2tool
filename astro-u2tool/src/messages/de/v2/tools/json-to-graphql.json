@@ -1,0 +1,33 @@
+{
+  "typeName": "Typename",
+  "loadSample": "Beispiel laden",
+  "jsonInput": "JSON-Eingabe",
+  "placeholder": "JSON-Objekt eingeben...",
+  "graphqlOutput": "GraphQL-Schema",
+  "typeInference": "Typinferenz",
+  "detailed_description": "Der JSON-to-GraphQL-Converter analysiert strukturierte JSON-Daten und generiert automatisch ein valides GraphQL-Schema, das die Hierarchie und Typisierung des Eingabeobjekts widerspiegelt. Das Tool identifiziert skalare Typen (String, Int, Boolean), erstellt Composite Types für verschachtelte Objekte und Arrays sowie entsprechende Input- und Output-Typen für Queries und Mutations. Entwickler benötigen dieses Tool, um manuelles Schema-Design zu vermeiden, besonders bei komplexen Datenmodellen oder bei der Migration von REST-API-Antworten zu GraphQL. Der Algorithmus verwendet Type Inference, um aus Beispieldaten Typdefinitionen abzuleiten, und unterstützt benutzerdefinierte Anpassungen wie Namenskonventionen oder die Zuordnung spezifischer Directives. Die präzise Umwandlung berücksichtigt auch optionale Felder durch die 'nullable'-Flag und generiert Dokumentationskommentare basierend auf Feldinhalten.",
+  "usage_steps": [
+    "Öffnen Sie den Converter und wählen Sie den Tab 'JSON-Eingabe'.",
+    "Fügen Sie Ihr JSON-Objekt in das linke Editor-Feld ein oder laden Sie eine Datei über den 'Datei importieren'-Button hoch.",
+    "Aktivieren Sie den Schalter 'Typisierungsoptionen' und wählen Sie zwischen 'Query', 'Mutation' oder 'Input Type'-Generierung.",
+    "Passen Sie die Namenskonvention an (z.B. PascalCase für Typen, snake_case für Felder) im Bereich 'Schema-Konfiguration'.",
+    "Klicken Sie auf 'Schema generieren' und überprüfen Sie das Ergebnis im rechten Bereich, das inklusive Type Definitions und Directives angezeigt wird.",
+    "Kopieren Sie das Schema über den 'Zwischenablage'-Button oder exportieren Sie es als .graphql-Datei über den Download-Link."
+  ],
+  "usage_examples": [
+    "Ein Entwickler konvertiert eine JSON-Antwort einer Legacy-REST-API in ein GraphQL-Schema, um einen Proxy-Service mit korrekten Typdefinitionen zu implementieren.",
+    "Ein Frontend-Team generiert aus Beispieldaten eines Blog-Posts ein Schema, das für die Implementierung einer Headless CMS-Integration verwendet wird.",
+    "Ein API-Architekt wandelt eine JSON-basierte OpenAPI-Spezifikation in ein GraphQL-Schema um, um ein vereinheitlichtes Backend-Interface zu erstellen.",
+    "Ein Data Engineer erstellt aus Rohdaten eines IoT-Sensors ein typisiertes Schema, das als Grundlage für eine Echtzeit-Datenpipeline dient."
+  ],
+  "inputPlaceholder": "Typename eingeben...",
+  "errorInvalidJson": "Ungültige JSON-Eingabe",
+  "convert": "Konvertieren",
+  "clear": "Löschen",
+  "copied": "Kopiert!",
+  "copy": "Kopieren",
+  "string": "String",
+  "int": "Integer",
+  "float": "Float",
+  "boolean": "Boolean"
+}

@@ -1,0 +1,47 @@
+{
+  "detailed_description": "Le Calculateur de PPI vous aide à déterminer la qualité d'impression de vos images ou à calculer la résolution requise pour un PPI cible. Alternatif entre deux modes : calculer le PPI à partir des dimensions existantes de l'image et de la taille d'impression, ou calculer les dimensions en pixels nécessaires pour un PPI et une taille d'impression spécifiques. Essentiel pour les photographes, les designers et les professionnels de l'impression.",
+  "usage_steps": [
+    "Choisissez le mode de calcul : DPI ou Pixels",
+    "Pour le mode DPI : entrez la résolution de l'image et la taille d'impression",
+    "Pour le mode Pixels : entrez le DPI cible et la taille d'impression",
+    "Sélectionnez une taille d'impression prédéfinie si nécessaire",
+    "Visualisez les résultats calculés",
+    "Copiez les résultats pour référence"
+  ],
+  "usage_examples": [
+    "Vérifier si une image est adaptée à l'impression",
+    "Calculer la résolution requise pour de grandes impressions",
+    "Planifier les exigences en matière d'image pour un album photo"
+  ],
+  "calculateDpi": "Calculate DPI",
+  "calculatePixels": "Calculate Pixels",
+  "imageResolution": "Image Resolution",
+  "printSize": "Print Size",
+  "targetDpi": "Target DPI",
+  "width": "Width",
+  "height": "Height",
+  "inches": "inches",
+  "commonPrintSizes": "Common Print Sizes",
+  "calculatedDpi": "Calculated DPI",
+  "requiredResolution": "Required Resolution",
+  "horizontal": "Horizontal",
+  "vertical": "Vertical",
+  "megapixels": "Megapixels",
+  "dpiGuide": "DPI Guide",
+  "screen": "Screen/Web",
+  "draft": "Draft Print",
+  "print": "Quality Print",
+  "highQuality": "High Quality",
+  "quality": {
+    "excellent": "Excellent print quality",
+    "good": "Good print quality",
+    "acceptable": "Acceptable for viewing distance",
+    "low": "Low quality - may appear pixelated"
+  },
+  "imageWidth": "Largeur d'image (px)",
+  "imageHeight": "Hauteur d'image (px)",
+  "printWidth": "Largeur d'impression",
+  "printHeight": "Hauteur d'impression",
+  "dpi": "DPI",
+  "printQuality": "Qualité d'impression"
+}

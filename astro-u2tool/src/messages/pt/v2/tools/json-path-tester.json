@@ -1,0 +1,27 @@
+{
+  "jsonData": "Dados JSON",
+  "jsonPlaceholder": "{\"name\": \"John\", \"users\": [{\"name\": \"Alice\"}, {\"name\": \"Bob\"}]}",
+  "expression": "Expressão JSONPath",
+  "expressionPlaceholder": "$.users[0].name",
+  "evaluate": "Evaluar",
+  "result": "Resultado",
+  "exGetName": "Obter propriedade nome",
+  "exFirstUser": "Primeiro usuário",
+  "exFirstUserName": "Nome do primeiro usuário",
+  "exNestedItems": "Itens aninhados",
+  "detailed_description": "O JSONPath Tester é uma ferramenta técnica especializada para desenvolvedores que trabalham com manipulação de dados no formato JSON. Este instrumento permite validar e executar expressões JSONPath contra estruturas de dados JSON complexas, oferecendo feedback imediato sobre resultados e possíveis erros de sintaxe. Internamente, o tool realiza o parsing do JSON fornecido, construindo uma árvore de objetos em memória, e aplica algoritmos de travessia para avaliar expressões que utilizam operadores como $ (root), . (dot notation), [] (array index), * (wildcard) e filtros com predicados (ex: ?(@.chave>5)). Desenvolvedores precisam desta ferramenta para testar consultas em APIs REST que retornam JSON, validar transformações de dados com bibliotecas como Jayway JsonPath ou Newtonsoft.Json, e depurar expressões complexas em pipelines de integração contínua. O funcionamento baseia-se em motores de avaliação que implementam o padrão Visitor para percorrer a estrutura do JSON, combinando técnicas de tokenização e análise léxica para interpretar expressões conforme a especificação ECMA-404. Recursos avançados incluem autocomplete de caminhos, realce de sintaxe e diagnóstico de erros em tempo real.",
+  "usage_steps": [
+    "Cole seu JSON válido no painel de entrada à esquerda utilizando o botão 'Colar JSON'",
+    "Digite a expressão JSONPath desejada na barra de edição superior, aproveitando o autocompletar de chaves",
+    "Clique em 'Executar Avaliação' para processar a expressão contra o documento JSON",
+    "Analise os resultados no painel direito, que exibe valores correspondentes em formato estruturado",
+    "Utilize o modo 'Visualização em Árvore' para explorar interativamente a estrutura do JSON",
+    "Acesse o histórico de expressões testadas através do ícone de relógio na barra lateral"
+  ],
+  "usage_examples": [
+    "Extrair todos os emails de usuários ativos de uma resposta de API complexa usando $.usuarios[?(@.status==\"ativo\")].email",
+    "Validar se uma estrutura JSON de log contém campos específicos com $.logs[*].timestamp && $.logs[*].nivel",
+    "Depurar uma expressão que retorna resultado vazio, verificando passo a passo a travessia da árvore JSON",
+    "Transformar dados aninhados em formato flat para integração com sistemas legados usando múltiplas projeções JSONPath"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "detailed_description": "Конвертер TypeScript в JSON преобразует интерфейсы и типы TypeScript в формат JSON-схемы. Полезен для документации API и межъязыковой валидации.",
+  "usage_steps": [
+    "Вставьте интерфейс TypeScript",
+    "Нажмите Конвертировать для генерации JSON",
+    "Просмотрите JSON-схему",
+    "Настройте параметры схемы",
+    "Скопируйте или скачайте результат"
+  ],
+  "usage_examples": [
+    "Генерация документации API",
+    "Создание схем валидации",
+    "Обмен типами между языками"
+  ],
+  "tsInput": "TypeScript-ввод",
+  "jsonOutput": "JSON-схема",
+  "convert": "Конвертировать в JSON",
+  "copy": "Копировать",
+  "copied": "Скопировано!",
+  "inputPlaceholder": "Вставьте интерфейс TypeScript здесь...",
+  "placeholder": "Вставьте TypeScript интерфейс здесь...",
+  "outputPlaceholder": "JSON вывод появится здесь...",
+  "loadExample": "Загрузить пример",
+  "typescriptInput": "TypeScript ввод",
+  "note": "Примечание",
+  "noteText": "Этот инструмент генерирует примеры JSON данных на основе TypeScript интерфейсов."
+}

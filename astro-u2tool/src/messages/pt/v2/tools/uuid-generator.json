@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O UUID Generator é uma ferramenta técnica especializada na criação de identificadores universais únicos (UUIDs) conforme o padrão RFC 4122, versão 4. Esses identificadores são strings de 36 caracteres (32 em formato hexadecimal com hífens) gerados com base em valores aleatórios criptograficamente seguros, garantindo uma probabilidade extremamente baixa de colisão. A versão 4 utiliza números pseudoaleatórios gerados através de algoritmos de entropia elevada, como os fornecidos por bibliotecas como `crypto.randomBytes` no backend Node.js ou Web Crypto API no frontend. Profissionais precisam desta ferramenta para criar chaves primárias em bancos de dados distribuídos, tokens de autenticação sem rastreabilidade, identificadores de sessão em microsserviços, ou até mesmo IDs temporários em sistemas de fila de mensagens. O funcionamento interno inclui a geração de 122 bits aleatórios concatenados com 6 bits fixos que indicam a versão (100xxxxx-xxxx-4xxx-yxxx-xxxx) e variantes (xxxx-xxxx-xxxx), garantindo conformidade com especificações técnicas rigorosas.",
+  "usage_steps": [
+    "Acesse a página e selecione 'UUID v4' no seletor de versões (v1/v4).",
+    "Defina a quantidade de UUIDs (1-1000) usando o campo numérico 'Quantidade'.",
+    "Escolha o formato: minúsculo, maiúsculo ou URN (ex: urn:uuid:...).",
+    "Clique em 'Gerar UUIDs' para executar o algoritmo de criptografia baseado em entropia.",
+    "Revise os resultados exibidos em tempo real na tabela interativa com colunas 'UUID' e 'Copiar'.",
+    "Use os botões de cópia individuais ou o botão 'Copiar Todos' para exportar os UUIDs para a área de transferência."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor backend gera 500 UUIDs v4 para IDs de transação em um sistema de pagamento blockchain, evitando rastreabilidade de sequências numéricas.",
+    "Um engenheiro de dados utiliza a ferramenta para criar identificadores únicos para documentos NoSQL em um cluster MongoDB distribuído globalmente.",
+    "Um arquiteto de sistemas gera UUIDs para tokens de API temporários em um serviço serverless, garantindo segurança contra ataques de enumeração.",
+    "Um QA automatiza testes de carga usando 1000 UUIDs únicos para simular usuários distintos em um sistema de autenticação OAuth 2.0."
+  ]
+}

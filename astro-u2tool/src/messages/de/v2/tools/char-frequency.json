@@ -1,0 +1,24 @@
+{
+  "inputLabel": "Text",
+  "placeholder": "Geben Sie den Text ein, der analysiert werden soll...",
+  "ignoreSpaces": "Leerzeichen ignorieren",
+  "caseSensitive": "Groß-/Kleinschreibung berücksichtigen",
+  "analyze": "Analyse durchführen",
+  "uniqueChars": "Einzelne Zeichen",
+  "totalChars": "Gesamtzeichen",
+  "detailed_description": "Der Character Frequency Analyzer untersucht systematisch die Häufigkeitsverteilung von Zeichen in einem gegebenen Textkorpus. Technisch gesehen verwendet das Tool eine Hashmap-basierte Algorithmenarchitektur, um Unicode-Zeichen (inklusive Sonderzeichen, Umlaute und Emoji) zu erfassen, ihre absoluten und relativen Häufigkeiten zu berechnen und nach Benutzerpräferenzen zu sortieren. Dabei werden reguläre Ausdrücke genutzt, um optionale Filter wie Groß-/Kleinschreibung oder Leerzeichen zu verarbeiten. Dieses Instrument ist besonders für kryptanalytische Anwendungen, linguistische Korpusanalysen und Qualitätskontrollen in Datenverarbeitungspipelines unverzichtbar. Entwickler können damit Encoding-Probleme identifizieren, Forscher nutzen es für stilometrische Studien, und SEO-Experten analysieren damit Keyword-Dichte-Muster. Die Verarbeitung erfolgt clientseitig im Browser, wodurch Datenvertraulichkeit garantiert wird, während eine D3.js-basierte Visualisierung die Ergebnisse interaktiv darstellt.",
+  "usage_steps": [
+    "Navigieren Sie zur Seite 'char-frequency' auf dem Developer-Tool-Portal.",
+    "Fügen Sie Ihren Rohdaten-Text über das mehrzeilige Eingabefeld 'Textanalyse' ein oder laden Sie eine UTF-8-kodierte Datei hoch.",
+    "Aktivieren Sie den Schalter 'Groß-/Kleinschreibung unterscheiden' für differenzierte Analyse oder deaktivieren Sie ihn für Normalisierung.",
+    "Setzen Sie Häkchen bei 'Leerzeichen ignorieren' und/oder 'Zahlen ausschließen', um spezifische Zeichengruppen zu filtern.",
+    "Klicken Sie auf 'Analysieren starten', um den Algorithmus zu initiieren, der die Frequenzmatrix generiert.",
+    "Nutzen Sie die Export-Funktion für CSV-Download oder den 'Visualisieren'-Button für interaktive Balkendiagrammdarstellung."
+  ],
+  "usage_examples": [
+    "Ein Linguist untersucht die Häufigkeitsverteilung von Umlauten in deutschsprachigen Zeitungsartikeln zur Verifikation regionaler Schreibkonventionen.",
+    "Ein Sicherheitsanalyst identifiziert durch ungewöhnliche Zeichencluster in verschlüsselten Nachrichten potenzielle Schwächen klassischer Chiffren.",
+    "Ein Datenbankadministrator validiert die Integrität von ETL-Prozessen durch Überprüfung erwarteter Zeichenprofile in Rohdaten.",
+    "Ein Webentwickler optimiert den Unicode-Support seiner Anwendung durch Erkennung selten verwendeter Glyphen in Benutzereingaben."
+  ]
+}

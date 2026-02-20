@@ -1,0 +1,36 @@
+{
+  "detailed_description": "Generador de Mensajes de Confirmación te ayuda a crear mensajes de confirmación de Git bien estructurados según la especificación de Commits Convenionales. Este formato hace que tu historia de confirmaciones sea más legible y permite la generación automatizada de registros de cambios. Elige entre los tipos de confirmación estándar, añade un ámbito opcional y escribe descripciones claras para un control de versiones consistente.",
+  "usage_steps": [
+    "Selecciona el tipo de comit (feat, fix, docs, etc.)",
+    "Opcionalmente añade un ámbito para el cambio",
+    "Escribe una línea de título clara y concisa",
+    "Revisa si hay cambios que rompan (breaking change)",
+    "Añade un cuerpo opcional para una explicación detallada",
+    "Copia el mensaje de comit formateado"
+  ],
+  "usage_examples": [
+    "Creando comits de características: feat(auth): añadir funcionalidad de inicio de sesión",
+    "Escribiendo comits de corrección de errores: fix(api): resolver problema de tiempo de espera",
+    "Documentando cambios: docs(readme): actualizar guía de instalación"
+  ],
+  "type": "Type",
+  "scope": "Scope",
+  "scopePlaceholder": "e.g., auth, api, ui",
+  "subject": "Subject",
+  "subjectPlaceholder": "Short description of the change",
+  "body": "Body",
+  "bodyPlaceholder": "Detailed explanation of the change...",
+  "footer": "Footer",
+  "footerPlaceholder": "e.g., Closes #123, BREAKING CHANGE: ...",
+  "breakingChange": "Breaking Change",
+  "commitMessage": "Commit Message",
+  "preview": "Enter subject to preview...",
+  "optional": "optional",
+  "characters": "characters",
+  "recommended50": "recommended max 50",
+  "tips": "Tips",
+  "tip1": "Use imperative mood: \"add\" not \"added\" or \"adds\"",
+  "tip2": "Keep subject under 50 characters",
+  "tip3": "Separate subject from body with blank line",
+  "breaking": "Cambio importante"
+}

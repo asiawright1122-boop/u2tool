@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der CSV-zu-JSON-Konverter wandelt strukturierte Tabellendaten aus CSV-Dateien in ein hierarchisches JSON-Format um. Technisch erfolgt dies durch Parsing des CSV-Inhalts mittels regulärer Ausdrücke zur Trennzeichenerkennung (z.B. Komma, Semikolon, Tabulator) und anschließender Serialisierung in ein JSON-Objektbaum. Besonders bei komplexen Daten mit verschachtelten Arrays oder Objekten ermöglicht das Tool präzise Typzuordnungen (String, Number, Boolean) durch kontextbasierte Mustervergleiche. Entwickler benötigen diese Funktionalität für Datenmigrationen in NoSQL-Datenbanken wie MongoDB, API-Tests mit JSON-basierten Endpoints oder die Vorbereitung von Daten für Visualisierungsframeworks wie D3.js. Das Tool verarbeitet Daten clientseitig im Browser mit Web Workers für große Dateien, unterstützt MIME-Typ-Prüfung und bietet eine Live-Vorschau der konvertierten Struktur. Besonders nützlich ist die automatische Erkennung von Kopfzeilen und die Option zur manuellen Anpassung von Feldnamen für JSON-Schlüssel.",
+  "usage_steps": [
+    "Laden Sie die CSV-Datei über den Dateiuploader oder ziehen Sie sie per Drag-and-Drop in den Arbeitsbereich.",
+    "Wählen Sie das explizite Trennzeichen aus dem Auswahlfeld: Komma, Semikolon, Tabulator oder benutzerdefiniertes Zeichen.",
+    "Aktivieren Sie die Checkbox 'Erste Zeile als Header' für automatische Schlüsselgenerierung im JSON-Objekt.",
+    "Passen Sie bei Bedarf die Datentypen der Spalten manuell im Typzuordnungs-Editor an (z.B. von String zu Number).",
+    "Klicken Sie auf 'Konvertieren', um den JSON-Code in der Ergebnisansicht zu generieren.",
+    "Kopieren Sie den Ergebniscode über den 'Copy to Clipboard'-Button oder laden Sie die JSON-Datei herunter."
+  ],
+  "usage_examples": [
+    "Migration von Kundendaten aus Excel-Tabellen (CSV) in eine MongoDB-Datenbank mit verschachtelten Dokumentenstrukturen.",
+    "Erstellung von Testdatensätzen für API-Endpunkte, die JSON-Eingaben im POST-Request erwarten.",
+    "Konvertierung von Zeitreihendaten für Echtzeitvisualisierungen mit der JavaScript-Bibliothek Chart.js.",
+    "Vorbereitung von maschinellem Lernmaterial in Python, das JSON-Arrays für Scikit-learn-Modelle benötigt."
+  ]
+}

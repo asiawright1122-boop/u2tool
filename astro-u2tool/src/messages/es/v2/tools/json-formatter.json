@@ -1,0 +1,19 @@
+{
+  "inputPlaceholder": "Introduce aquí los datos JSON...",
+  "outputPlaceholder": "El JSON formateado aparecerá aquí...",
+  "detailed_description": "El JSON Formatter es una herramienta de formato y validación de datos JSON que proporciona un entorno interactivo para mejorar la legibilidad y la precisión de los archivos JSON. Técnicamente, esta herramienta analiza la estructura del JSON proporcionado, aplica la indentación adecuada y resalta la sintaxis para facilitar su revisión. Además, ofrece la capacidad de minimizar el JSON para su uso en entornos donde el tamaño de los datos es crucial. La herramienta también verifica la validez del JSON y ayuda a identificar y corregir errores comunes, lo que la convierte en un recurso valioso para desarrolladores, ingenieros de software y analistas de datos. La compatibilidad con múltiples navegadores y su naturaleza de código abierto lo hacen accesible y confiable. Mejores prácticas incluyen utilizar la herramienta para validar datos antes de integrarlos en sistemas críticos y aprovechar la función de copia para facilitar la transferencia de datos formateados.",
+  "usage_steps": [
+    "Pega tu JSON no formateado en el campo de entrada 'JSON Input'.",
+    "Haz clic en el botón 'Format JSON' para aplicar la indentación y resaltar la sintaxis.",
+    "Revisa el JSON formateado en el campo de salida 'JSON Output' y corrige cualquier error indicado.",
+    "En caso de encontrar errores, utiliza el botón 'Fix Errors' para obtener sugerencias de corrección.",
+    "Si necesitas un JSON minimizado, haz clic en 'Minify JSON' para eliminar espacios y saltos de línea.",
+    "Utiliza el botón 'Copy JSON' para copiar el JSON formateado o minimizado al portapapeles."
+  ],
+  "usage_examples": [
+    "Un desarrollador frontend está trabajando en una API que devuelve datos JSON. Antes de integrar estos datos en su aplicación, utiliza el JSON Formatter para asegurarse de que el JSON es válido y bien formateado, lo que facilita la depuración y la integración.",
+    "Un ingeniero de backend necesita enviar un JSON complejo a un servicio externo. Utiliza el JSON Formatter para minimizar el JSON y reducir su tamaño, optimizando así el rendimiento de la transmisión de datos.",
+    "Un analista de datos recibe un archivo JSON con múltiples niveles de anidamiento. Utiliza el JSON Formatter para formatear el JSON y resaltar la sintaxis, lo que facilita la comprensión y el análisis de los datos.",
+    "Un desarrollador de software está creando un script que genera JSON dinámicamente. Utiliza el JSON Formatter para validar el JSON generado y asegurarse de que no hay errores de sintaxis, lo que garantiza la funcionalidad del script."
+  ]
+}

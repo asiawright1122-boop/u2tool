@@ -1,0 +1,29 @@
+{
+  "inputCode": "Code JavaScript à entrer",
+  "obfuscatedCode": "Sortie Obfusquée",
+  "loadSample": "Charger un exemple",
+  "placeholder": "Collez votre code JavaScript ici...",
+  "obfuscate": "Obfuser",
+  "renameVariables": "Renommer les variables",
+  "stringEncoding": "Encodage des chaînes",
+  "unicodeEscape": "Échappement Unicode",
+  "deadCodeInjection": "Injection de code mort",
+  "controlFlowFlattening": "Flattening du flux de contrôle",
+  "info": "Informations",
+  "infoText": "Cet obfuscatteur est de base. Pour une utilisation en production, envisagez des outils professionnels comme javascript-obfuscator.",
+  "detailed_description": "L'obfuscateur JavaScript est un outil technique conçu pour transformer le code source JavaScript en une version fonctionnellement équivalente mais rendue illisible pour les humains et difficilement analysable par les outils automatisés. Ce processus repose sur des techniques avancées telles que le renommage des variables en identifiants aléatoires (mangling), la flattisation du flux de contrôle, l'encodage des chaînes de caractères (Base64, Hex), l'insertion de code mort (dead code), et la génération de fonctions dynamiques. Les développeurs ont recours à cet outil pour protéger leur propriété intellectuelle, dissuader le piratage de logiciels, sécuriser les clés API ou tokens sensibles intégrés côté client, et réduire la surface d'attaque lors de l'exposition de scripts front-end. L'outil opère en analysant l'AST (Arbre Syntaxique Abstrait) du code source via des parseurs comme Esprima, applique des transformations polymorphiques non linéaires, puis génère un bytecode optimisé. Des options avancées permettent d'activer des mécanismes anti-debugging comme l'interception des points de rupture ou la vérification d'environnement d'exécution. Contrairement aux méthodes basiques, ce processus intègre un混淆ation contextuelle qui préserve les comportements asynchrones et les closures complexes.",
+  "usage_steps": [
+    "Collez votre code JavaScript dans l'éditeur de code syntaxique situé à gauche de l'interface.",
+    "Sélectionnez le niveau d'obfuscation (Bas/Moyen/Élevé) via le sélecteur en haut à droite.",
+    "Activez/désactivez les modules spécifiques : 'Mélange du flux de contrôle', 'Encodage Base64 des chaînes', 'Insertion de code mort'.",
+    "Ajustez les paramètres avancés : profondeur de polymorphisme (slider 1-10), seuil d'obfuscation des fonctions (checkbox).",
+    "Cliquez sur le bouton 'Obfusquer maintenant' pour déclencher le traitement par le moteur Babel-Obfuscator.",
+    "Téléchargez le résultat dans un fichier .js sécurisé ou copiez-le directement depuis l'éditeur de sortie."
+  ],
+  "usage_examples": [
+    "Un éditeur de logiciels SaaS obfusque son SDK JavaScript pour empêcher l'extraction de l'algorithme de chiffrement propriétaire.",
+    "Un développeur freelance sécurise le code d'une extension Chrome qui contient des identifiants OAuth dans des variables globales.",
+    "Une entreprise fintech protège les logiques de validation côté client d'une application de paiement contre l'ingénierie inverse.",
+    "Un contributeur open-source anonymise les noms de fonctions et les structures de données d'une bibliothèque avant publication publique."
+  ]
+}

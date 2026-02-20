@@ -1,0 +1,58 @@
+{
+  "title": "韦恩图生成器",
+  "defaultTitle": "韦恩图示例",
+  "settings": "设置",
+  "chartTitlePlaceholder": "输入标题...",
+  "mode2Set": "2 集模式",
+  "mode3Set": "3 集模式",
+  "dataEditor": "数据编辑器",
+  "labelPlaceholder": "标签...",
+  "chartPreview": "预览",
+  "downloadPng": "下载 PNG",
+  "downloadSvg": "下载 SVG",
+  "dragNote": "您可以拖动圆形来调整位置（SVG模式通常效果最佳）。",
+  "tipsTitle": "小贴士",
+  "tip1": "独特的视觉展示共同点和差异",
+  "tip2": "自定义圆形大小和颜色",
+  "confirmClear": "清除所有？",
+  "sampleSet1": "集合 A",
+  "sampleSet2": "集合 B",
+  "sampleSet3": "集合 C",
+  "detailed_description": "本工具基于集合论数学原理，通过可视化算法生成欧拉图与Venn图的精确拓扑映射。采用D3.js与Canvas双渲染引擎，支持最多6组集合的复杂关系建模。开发者通过计算集合间的Jaccard相似系数矩阵，动态生成符合面积比例的交叠区域，使用多级透明度叠加技术实现色值混合。内置Voronoi算法优化标签定位，确保文本与图形元素的空间最优布局。适用于机器学习特征选择分析、生物信息学基因本体比对、市场调研用户画像交集分析等场景。用户可通过API接口直接传入JSON格式的集合数据，系统自动进行欧几里得距离校准与坐标变换，输出符合出版标准的SVG矢量图形。",
+  "usage_steps": [
+    "在参数面板选择3-6维集合模式，激活对应的坐标轴对齐工具",
+    "通过矩阵输入器定义各集合的基数(Cardinality)数值",
+    "使用关系权重滑块调整集合间的交叠比例系数",
+    "在颜色编码面板选择CIELAB色域的渐变方案",
+    "启用动态标注开关自动计算最佳文本锚点位置",
+    "导出时选择PNG-24或可编辑的SVG格式进行DPI调节"
+  ],
+  "usage_examples": [
+    "数据分析师处理电商平台的购物篮关联规则，可视化不同商品类目的购买重叠度",
+    "生物研究员对比三个物种的基因组注释数据，定位保守基因区域",
+    "产品经理分析用户调研中的多维度画像交叉特征，识别核心用户群",
+    "数学教师演示包含补集运算的复杂集合关系教学案例"
+  ],
+  "faqs": [
+    {
+      "question": "Venn Diagram Generator 是免费的吗？",
+      "answer": "是的，Venn Diagram Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Venn Diagram Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Venn Diagram Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Venn Diagram Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Venn Diagram Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ]
+}

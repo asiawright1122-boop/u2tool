@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Epoch Converter ist ein präzises Werkzeug zur bidirektionalen Konvertierung zwischen Unix-Zeitstempeln (in Sekunden oder Millisekunden) und menschenlesbaren Datums-/Uhrzeitformaten gemäß ISO 8601 oder benutzerdefinierten Formaten. Technisch gesehen nutzt das Tool die systemeigene Zeitbehandlung moderner Programmiersprachen (z.B. JavaScript's Date.parse() oder Python's datetime.utcfromtimestamp()), um Zeitstempel mit Berücksichtigung von Zeitzonenverschiebungen (inklusive UTC-Offset) und Schaltjahresberechnungen korrekt zu verarbeiten. Entwickler benötigen dieses Tool, um etwaige Inkonsistenzen in Protokolldateien zu diagnostizieren, API-Anfragen mit zeitbasierten Tokens (wie JWT) zu validieren oder Zeitstempel in relationale Datenbanken zu transformieren. Die Eingabe von Epoch-Werten erfolgt über ein validiertes Textfeld mit automatischer Längenprüfung (10-stellig für Sekunden, 13-stellig für Millisekunden), wobei die Ausgabeoptionen zwischen UTC-Zeit, lokaler Systemzeit oder einer explizit ausgewählten Zeitzone unterscheiden. Ein integrierter Copy-Paste-Mechanismus ermöglicht die direkte Weiterverwendung der Ergebnisse in Code-Editoren oder Debugging-Umgebungen.",
+  "usage_steps": [
+    "1. Öffnen Sie den Epoch Converter im Browser und lokalisieren Sie das Eingabefeld 'Zeitstempel-Wert' (unterstützt 10- oder 13-stellige numerische Eingaben).",
+    "2. Wählen Sie im Dropdown-Menü 'Konvertierungsrichtung' zwischen 'Epoch → Datum' oder 'Datum → Epoch'.",
+    "3. Bei Bedarf aktivieren Sie das Zeitzone-Auswahlfeld und selektieren Sie eine spezifische Zeitzone (z.B. Europe/Berlin) für die Umrechnung.",
+    "4. Geben Sie einen Unix-Zeitstempel (z.B. 1717027200) oder ein Datumsformat (z.B. 2024-06-01T12:00:00Z) in das entsprechende Textfeld ein.",
+    "5. Klicken Sie auf den 'Konvertieren'-Button, um das Ergebnis in der Zielzeitzone und im gewählten Format (ISO 8601 oder benutzerdefiniert) anzuzeigen.",
+    "6. Nutzen Sie den 'In Zwischenablage kopieren'-Button, um das Ergebnis für die Weiterverwendung in Ihrer Entwicklungsumgebung zu exportieren."
+  ],
+  "usage_examples": [
+    "1. Ein Backend-Entwickler konvertiert einen JWT-Expiration-Claim (z.B. 1717113600) in ein lesbares Datum, um ein Token-Timeout am 1. Juni 2024 00:00:00 UTC zu verifizieren.",
+    "2. Ein Datenanalytiker transformiert Zeitstempel aus einem Apache-Logfile (z.B. 1625648937123) in lokale Zeit (Europe/Paris), um Zugriffsmuster zu visualisieren.",
+    "3. Ein IoT-Entwickler rechnet ein UTC-Datum (z.B. 2023-12-25T23:59:59Z) in Millisekunden um, um einen Timer für ein Gerät zu programmieren.",
+    "4. Ein Frontend-Developer konvertiert einen JavaScript-Date.now()-Wert (13-stellig) in ein ISO-Format, um Datumseingaben im HTML5 <input type='datetime-local'> zu validieren."
+  ]
+}

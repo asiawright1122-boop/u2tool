@@ -1,0 +1,33 @@
+{
+  "typeName": "Nome do Tipo",
+  "loadSample": "Carregar Exemplo",
+  "jsonInput": "Entrada JSON",
+  "placeholder": "Digite um objeto JSON...",
+  "graphqlOutput": "Esquema GraphQL",
+  "typeInference": "Inferência de Tipo",
+  "detailed_description": "O JSON to GraphQL é uma ferramenta técnica que transforma objetos JSON em esquemas de tipos GraphQL compatíveis com a especificação GraphQL SDL (Schema Definition Language). Seu funcionamento baseia-se na análise recursiva de estruturas JSON para inferir tipos escalares (String, Int, Boolean), objetos aninhados e listas, criando automaticamente definições de tipos com campos tipados. A ferramenta é essencial para desenvolvedores que desejam migrar dados estruturados de APIs REST, payloads de eventos ou documentos NoSQL para uma camada GraphQL, evitando a codificação manual de esquemas. Quando um usuário envia um JSON válido, o parser identifica padrões de dados, como valores nulos, tipos heterogêneos e hierarquias complexas, convertendo-os em declarações do tipo `type` ou `input` com anotações de nullable e listas. Além disso, suporta a definição de tipos raiz personalizados e a detecção automática de chaves primárias para geração de IDs. Este processo elimina erros manuais e acelera o desenvolvimento de backends GraphQL, especialmente em projetos de integração de dados ou prototipagem rápida.",
+  "usage_steps": [
+    "Cole ou faça upload do seu JSON no campo 'Input JSON'.",
+    "Insira o nome do tipo raiz no campo 'Root Type Name' (ex: 'UserResponse').",
+    "Selecione as opções de inferência: modo estrito (tipos não anuláveis) ou flexível (campos com ?).",
+    "Revise o esquema pré-visualizado na seção 'GraphQL Schema Preview'.",
+    "Clique em 'Generate Schema' para criar o esquema finalizado.",
+    "Copie o código gerado ou faça download em formato .graphql."
+  ],
+  "usage_examples": [
+    "Converter a resposta de uma API REST de usuários em um tipo GraphQL para integração com Apollo Server.",
+    "Gerar esquema a partir de dados mockados de um protótipo Figma, acelerando o desenvolvimento frontend.",
+    "Mapear documentos MongoDB com estruturas hierárquicas para tipos GraphQL em uma aplicação de analytics.",
+    "Criar tipos de entrada (input types) para mutações GraphQL com base em payloads de formulários validados."
+  ],
+  "inputPlaceholder": "Digite o nome do tipo...",
+  "errorInvalidJson": "Entrada JSON inválida",
+  "convert": "Converter",
+  "clear": "Limpar",
+  "copied": "Copiado!",
+  "copy": "Copiar",
+  "string": "String",
+  "int": "Inteiro",
+  "float": "Float",
+  "boolean": "Booleano"
+}

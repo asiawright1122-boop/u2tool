@@ -1,0 +1,25 @@
+{
+  "detailed_description": "JSON to Table ConverterはJSONデータを読みやすいHTMLテーブルに変換します。APIレスポンス、データエクスポート、構造化情報の可視化に最適です。",
+  "usage_steps": [
+    "JSONデータをペースト",
+    "テーブルに変換するために「変換」をクリック",
+    "フォーマットされたテーブルを表示",
+    "テーブルのスタイルをカスタマイズ",
+    "HTMLをコピーまたはデータをエクスポート"
+  ],
+  "usage_examples": [
+    "APIレスポンスの可視化",
+    "データレポートの作成",
+    "JSONをスプレッドシートにエクスポート"
+  ],
+  "jsonInput": "JSON入力",
+  "tableOutput": "テーブル出力",
+  "convert": "テーブルに変換",
+  "copyHtml": "HTMLをコピー",
+  "inputPlaceholder": "JSON配列やオブジェクトをここにペースト...",
+  "noData": "表示するデータがありません",
+  "placeholder": "JSON配列をここに貼り付け...",
+  "copied": "コピーしました！",
+  "copyCsv": "CSVをコピー",
+  "downloadCsv": "CSVをダウンロード"
+}

@@ -1,0 +1,41 @@
+{
+  "detailed_description": "L'outil Markdown to Slides est un convertisseur avancé qui transforme du contenu Markdown en présentations structurées au format HTML ou PDF. Il utilise un parseur CommonMark pour analyser la syntaxe Markdown standard, puis génère une représentation AST (Abstract Syntax Tree) pour mapper les éléments de contenu vers des diapositives. Les séparations de diapositives sont déterminées par des thematic breaks (---) ou des en-têtes de niveau supérieur. Le moteur intègre un système de templating qui applique des styles CSS personnalisables et gère les transitions via des classes animées. Les utilisateurs peuvent exporter leurs présentations avec des options comme Reveal.js ou une version PDF imprimable. Cet outil est essentiel pour les développeurs souhaitant convertir rapidement des documents techniques en présentations, les enseignants structurant des cours en Markdown, ou les équipes produisant des rapports visuels à partir de fichiers README. Contrairement aux outils génériques, il supporte les extensions Markdown comme les tables, les blocs de code colorés et les graphiques Mermaid.js intégrés.",
+  "usage_steps": [
+    "Collez votre contenu Markdown dans l'éditeur WYSIWYG avec aperçu en temps réel à gauche.",
+    "Utilisez les en-têtes # pour créer des titres de diapositives et --- pour insérer des séparations.",
+    "Sélectionnez un thème CSS dans le menu déroulant (ex: 'Solarized', 'Monokai', 'Corporate') pour styliser les diapositives.",
+    "Activez l'option 'Transitions animées' pour ajouter des effets de fondu ou de glissement entre les slides.",
+    "Cliquez sur 'Aperçu' pour visualiser la présentation dans un lecteur intégré simulant un écran projeté.",
+    "Exportez au format HTML cliquable ou PDF via le bouton 'Générer' avec les options de résolution et d'orientation."
+  ],
+  "usage_examples": [
+    "Un développeur convertit un fichier README.md contenant la documentation d'une API en présentation Reveal.js pour une démonstration client.",
+    "Un enseignant transforme ses notes de cours en Markdown en diapositives imprimables avec des blocs de code syntaxiquement colorés.",
+    "Un architecte technique génère une présentation PDF à partir d'un cahier des charges rédigé en Markdown pour un comité de direction.",
+    "Une équipe agile produit une revue de sprint interactive en intégrant des graphiques Mermaid.js dans des diapositives animées."
+  ],
+  "markdownInput": "Entrée Markdown",
+  "preview": "Aperçu",
+  "convert": "Convertir",
+  "present": "Présenter",
+  "exportHtml": "Exporter HTML",
+  "prev": "Précédent",
+  "next": "Suivant",
+  "exitPresent": "Quitter la présentation",
+  "speakerNotes": "Notes du présentateur",
+  "noSlides": "Aucune diapositive à afficher",
+  "loadSample": "Charger un exemple",
+  "inputPlaceholder": "Entrez Markdown ici...",
+  "hint": "Utilisez --- pour séparer les diapositives",
+  "themeLight": "Clair",
+  "themeDark": "Sombre",
+  "themeGradient": "Dégradé",
+  "placeholder": "Entrez Markdown ici...",
+  "loadExample": "Charger l'exemple",
+  "slideCount": "Diapositives",
+  "prevSlide": "Précédent",
+  "nextSlide": "Suivant",
+  "fullscreen": "Plein écran",
+  "exitFullscreen": "Quitter le plein écran",
+  "slideOf": "sur"
+}

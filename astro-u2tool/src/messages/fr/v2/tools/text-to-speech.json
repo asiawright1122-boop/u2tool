@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Notre outil de synthèse vocale utilise l'API Web Speech (spécification W3C) pour convertir du texte en parole naturelle, avec un contrôle granulaire sur les paramètres prosodiques. Techniquement, il effectue une normalisation du texte (tokenisation, désambiguïsation contextuelle), suivie d'une conversion phonétique via des dictionnaires linguistiques, puis génère des prosodies (rythme, accentuation) adaptatives selon les réglages d'intensité et de débit. L'algorithme de synthèse paramétrique (HMM-based) ou concaténatif (unit selection) est choisi automatiquement selon la langue sélectionnée parmi les 25+ voix polyglottes disponibles. Ce outil s'adresse aux développeurs intégrant des fonctionnalités d'accessibilité dans des applications, aux éducateurs créant des contenus audio pédagogiques, ou aux créateurs de podcasts automatisant la production d'épisodes à partir de scripts. Il supporte le balisage SSML pour un contrôle avancé des pauses, emphases et variations de tonalité. La sortie audio est encodée en temps réel via Web Audio API avec options de compression (MP3 à 64/128/192kbps ou WAV PCM).",
+  "usage_steps": [
+    "1. Sélectionnez une voix dans le menu déroulant (ex: 'Google français (France)', 'Microsoft Hortense')",
+    "2. Réglez le taux de parole avec le curseur (0.5x à 2x, précision de 0.1)",
+    "3. Ajustez l'intonation via le sélecteur de pitch (valeurs de 0.1 à 2.0 en incrément de 0.05)",
+    "4. Collez votre texte dans l'éditeur WYSIWYG avec détection automatique du langage",
+    "5. Activez l'option 'SSML' et insérez des balises <prosody>, <break> ou <emphasis> pour un contrôle avancé",
+    "6. Cliquez sur 'Générer' et téléchargez le fichier audio dans le format souhaité (MP3 ou WAV)"
+  ],
+  "usage_examples": [
+    "Un développeur d'applications mobiles ajoute une fonction de lecture vocale pour les utilisateurs malvoyants, en synchronisant les palettes de voix avec les paramètres linguistiques du système",
+    "Un professeur de FLE crée des fichiers audio de prononciation avec des variations d'intonation pour illustrer les questions versus affirmations",
+    "Un journaliste convertit automatiquement ses articles en podcasts audio en batch, en appliquant des profils SSML pour distinguer titres, citations et corps de texte",
+    "Un créateur de jeux vidéo génère des dialogues dynamiques en plusieurs langues, en ajustant le pitch pour différencier les personnages"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "allowAll": "Permitir todo",
+  "blockAll": "Bloquear todo",
+  "standard": "Estándar",
+  "wordpress": "WordPress",
+  "rule": "Regla {index}",
+  "remove": "Eliminar",
+  "userAgent": "User-agent",
+  "allow": "Permitir (uno por línea)",
+  "disallow": "No permitir (uno por línea)",
+  "addRule": "+ Añadir Regla",
+  "sitemapUrl": "URL del sitemap",
+  "crawlDelay": "Retraso de crawleos (segundos)",
+  "output": "robots.txt",
+  "detailed_description": "El Generador de robots.txt permite crear archivos de configuración que regulan el comportamiento de los rastreadores de motores de búsqueda en servidores web. Esta herramienta implementa directivas como User-agent, Disallow, Allow y Crawl-delay siguiendo el estándar Robots Exclusion Protocol. Los desarrolladores necesitan controlar el acceso a directorios sensibles (ej: /admin), evitar duplicados de contenido o optimizar la exploración de contenido dinámico. El sistema procesa entradas mediante un motor de validación que verifica la sintaxis y prioriza las reglas según las especificaciones de Googlebot, Bingbot y otros crawlers. Incorpora autocompletado para agentes conocidos y validación en tiempo real de rutas UNIX, garantizando compatibilidad con servidores Apache, Nginx y entornos cloud. Los usuarios avanzados pueden configurar patrones complejos con wildcards (*, $) y excepciones jerárquicas.",
+  "usage_steps": [
+    "Selecciona los User-agents objetivo mediante checkboxes predefinidos (Googlebot, Bingbot, etc.) o personaliza con campos de texto",
+    "Especifica rutas a bloquear usando campos de entrada con sugerencias de directorios comunes (/wp-admin, /temp)",
+    "Activa el modo avanzado para configurar Crawl-delay con valores milisegundos o establecer patrones con expresiones regulares",
+    "Utiliza el validador de sintaxis en tiempo real que resalta errores en directivas y prioridades conflictivas",
+    "Previsualiza el archivo generado con resaltado de código y explicación de cada regla aplicada",
+    "Descarga el archivo robots.txt o copia el código generado al portapapeles para implementarlo en el directorio raíz del servidor"
+  ],
+  "usage_examples": [
+    "Un CMS multinivel necesita bloquear accesos a archivos de configuración (/config.php) mientras permite crawleo parcial de contenido público",
+    "Una tienda e-commerce desea prevenir la indexación de páginas de categoría con parámetros de filtro dinámico que generan contenido duplicado",
+    "Un desarrollador de WordPress quiere restringir temporalmente el acceso a un staging environment en subdominio antes del lanzamiento",
+    "Un sitio con alto tráfico configura Crawl-delay diferenciado para Googlebot y Baiduspider para evitar sobrecarga en servidores legacy"
+  ],
+  "copied": "Copiado!",
+  "copy": "Copiar",
+  "allow-all": "Permitir todo",
+  "block-all": "Bloquear todo"
+}

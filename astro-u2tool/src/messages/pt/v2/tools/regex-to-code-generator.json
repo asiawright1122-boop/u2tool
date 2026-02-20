@@ -1,0 +1,50 @@
+{
+  "detailed_description": "O Gerador de Regex para Código converte padrões de expressões regulares em trechos de código prontos para uso em várias linguagens.",
+  "usage_steps": [
+    "Insira o padrão regex",
+    "Selecione o idioma alvo",
+    "Escolha a operação",
+    "Configure as opções",
+    "Copie o trecho de código"
+  ],
+  "usage_examples": [
+    "Gerar código re do Python",
+    "Criar código RegExp do JS",
+    "Converter para Java Pattern"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processar",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Insira sua entrada aqui...",
+  "outputPlaceholder": "Resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum conteúdo"
+  },
+  "patternPlaceholder": "\\d+",
+  "testTextPlaceholder": "Texto de teste",
+  "replacementPlaceholder": "Texto de substituição",
+  "loadExample": "Carregar exemplo",
+  "analyze": "Analisar",
+  "generate": "Gerar",
+  "format": "Formatar",
+  "convert": "Converter",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Visualizar",
+  "reset": "Redefinir",
+  "add": "Adicionar",
+  "remove": "Remover",
+  "save": "Salvar",
+  "cancel": "Cancelar",
+  "settings": "Configurações",
+  "options": "Opções",
+  "results": "Resultados",
+  "noResults": "Sem resultados",
+  "loading": "Carregando...",
+  "success": "Sucesso",
+  "failed": "Falhou",
+  "warning": "Aviso",
+  "info": "Informação"
+}

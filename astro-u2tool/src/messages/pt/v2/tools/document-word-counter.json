@@ -1,0 +1,44 @@
+{
+  "detailed_description": "O Contador de Palavras de Documentos oferece estatísticas detalhadas, incluindo contagem de palavras, contagem de caracteres e estimativa de tempo de leitura.",
+  "usage_steps": [
+    "Cole o texto do documento",
+    "Veja as contagens em tempo real",
+    "Verifique as estatísticas",
+    "Veja o tempo de leitura",
+    "Exporte as estatísticas"
+  ],
+  "usage_examples": [
+    "Verifique o número de palavras de um ensaio",
+    "Verifique o comprimento de um artigo",
+    "Estime o tempo de leitura"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processar",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Insira sua entrada aqui...",
+  "outputPlaceholder": "Os resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum texto"
+  },
+  "documentText": "Texto do Documento",
+  "words": "Palavras",
+  "characters": "Caracteres",
+  "sentences": "Frases",
+  "paragraphs": "Parágrafos",
+  "detailedStatistics": "Estatísticas Detalhadas",
+  "charactersNoSpaces": "Caracteres (sem espaços)",
+  "lines": "Linhas",
+  "pages": "Páginas (~250 palavras)",
+  "uniqueWords": "Palavras Únicas",
+  "avgWordLength": "Comprimento Médio da Palavra",
+  "avgSentenceLength": "Comprimento Médio da Frase",
+  "longestWord": "Palavra Mais Longa",
+  "timeEstimates": "Estimativas de Tempo",
+  "readingTime": "Tempo de Leitura",
+  "speakingTime": "Tempo de Fala",
+  "topWords": "Principais Palavras",
+  "chars": "caracteres",
+  "min": "min"
+}

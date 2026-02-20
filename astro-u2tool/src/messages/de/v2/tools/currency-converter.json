@@ -1,0 +1,41 @@
+{
+  "amount": "Betrag",
+  "from": "Von",
+  "to": "Nach",
+  "swap": "Währungen tauschen",
+  "majorCurrencies": "Hauptwährungen",
+  "asianCurrencies": "Asiatische Währungen",
+  "europeanCurrencies": "Europäische Währungen",
+  "americasCurrencies": "Amerikanische Währungen",
+  "middleEastCurrencies": "Vorderer Orient & Afrika",
+  "crypto": "Kryptowährungen",
+  "exchangeRate": "Wechselkurs",
+  "inverseRate": "Umgekehrter Wechselkurs",
+  "quickConversions": "Schnelle Konvertierungen",
+  "disclaimer": "Wechselkurse dienen nur der Information und spiegeln möglicherweise nicht die Echtzeitmarktkurse wider.",
+  "detailed_description": "Der Currency Converter ist ein leistungsstarkes Werkzeug zur präzisen Umrechnung von über 45 globalen Währungen unter Verwendung aktuellster Wechselkurse aus vertrauenswürdigen Quellen wie Open Exchange Rates oder der Europäischen Zentralbank. Technisch gesehen realisiert der Converter asynchrone API-Anfragen über HTTPS, um in Echtzeit JSON-Daten mit aktualisierten Kursen abzurufen. Die Berechnung erfolgt durch eine serverseitige Middleware, die Multiplikationen mit Gleitkommazahlen durchführt und dabei Rundungsregeln nach IEEE 754 berücksichtigt. Ein integrierter Caching-Mechanismus reduziert API-Abfragen durch lokale Speicherung häufig genutzter Währungspaare für 60 Sekunden, während gleichzeitig die Einhaltung von CORS-Richtlinien gewährleistet ist. Entwickler profitieren von der Unterstützung von ISO 4217-Währungscodes und der Fähigkeit, Batch-Konversionen über ein programmiertes Interface durchzuführen. Das Tool ist besonders wertvoll für internationale E-Commerce-Transaktionen, Finanzreporting mit mehreren Währungen oder die Planung von Reisebudgets, da es auch historische Kurse bis zu einem definierten Datum zurückliefern kann.",
+  "usage_steps": [
+    "Wählen Sie im Dropdown-Menü 'Ausgangswährung' die gewünschte Quellwährung (z.B. EUR) aus einer alphabetisch sortierten Liste.",
+    "Geben Sie den zu konvertierenden Betrag in das Eingabefeld ein, inklusive bis zu 8 Nachkommastellen für Kryptowährungen.",
+    "Aktivieren Sie im Abschnitt 'Zielwährungen' mehrere Optionen über Checkboxen (z.B. USD, JPY, BTC) für parallele Umrechnungen.",
+    "Klicken Sie auf 'Swap', um Quell- und Zielwährung mit einem Klick zu tauschen, ohne die Eingabedaten erneut eingeben zu müssen.",
+    "Kopieren Sie das strukturierte JSON-Ergebnis direkt aus dem Ausgabefeld oder nutzen Sie den 'Download CSV'-Button für tabellarische Exporte.",
+    "Setzen Sie die Konversion zurück, indem Sie auf 'Clear All' klicken, um alle Eingaben und Ergebnisse zu löschen."
+  ],
+  "usage_examples": [
+    "Ein Importeur berechnet die Kosten von Rohstofflieferungen aus Australien (AUD) in die lokalen Buchungswährungen (CHF, SEK) unter Berücksichtigung aktueller Handelsaufschläge.",
+    "Ein Forscher konvertiert monatliche Forschungsbudgets von EUR in mehrere afrikanische Währungen (ZAR, KES) für Feldstudien im nächsten Quartal.",
+    "Ein Blockchain-Entwickler testet die Umrechnung von Ethereum (ETH) zu Fiat-Währungen für eine DeFi-Anwendung mit automatisierten Wechselkurs-Updates.",
+    "Ein Investor vergleicht die Performance eines Portfolios in verschiedenen Märkten durch tägliche Konversion von USD-Aktienkursen zu lokalen Indizes (Nikkei, FTSE)."
+  ],
+  "lastUpdated": "Zuletzt aktualisiert",
+  "updatedAgo": "Aktualisiert vor {time}",
+  "updating": "Aktualisiere Wechselkurse...",
+  "updateFailed": "Aktualisierung der neuesten Kurse nicht möglich, verwende statische Kurse",
+  "usingStaticRates": "Verwende statische Kurse (könnten nicht auf dem neuesten Stand sein)",
+  "refresh": "Aktualisieren",
+  "rateSource": "Kursquelle",
+  "sourceApi": "Live API",
+  "sourceCache": "Cache",
+  "sourceFallback": "Statische Daten"
+}

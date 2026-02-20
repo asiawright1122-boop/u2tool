@@ -1,0 +1,30 @@
+{
+  "detailed_description": "使用Flesch-Kincaid等多种评分标准，分析文本可读性，帮助开发者、设计师、内容创作者等快速评估文本易读性，改善内容质量，适用于博客、文章、网页等文本内容的优化",
+  "usage_steps": [
+    "粘贴文本",
+    "查看评分",
+    "检查建议"
+  ],
+  "usage_examples": [
+    "检查博客可读性",
+    "优化营销文案"
+  ],
+  "inputPlaceholder": "输入要分析可读性的文本...",
+  "statistics": "统计",
+  "words": "单词",
+  "sentences": "句子",
+  "characters": "字符",
+  "fleschReading": "Flesch 阅读难度",
+  "fleschKincaid": "Flesch-Kincaid 等级",
+  "gunningFog": "Gunning Fog 指数",
+  "smog": "SMOG 指数",
+  "gradeLevel": "年级水平",
+  "easeScore": "易读分数",
+  "interpretation": "解释",
+  "excellent": "优秀",
+  "good": "良好",
+  "average": "一般",
+  "recommendations": "建议",
+  "readingTime": "阅读时间",
+  "minutes": "分钟"
+}

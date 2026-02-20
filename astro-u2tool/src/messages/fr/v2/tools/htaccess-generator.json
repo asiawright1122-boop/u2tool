@@ -1,0 +1,32 @@
+{
+  "urlSettings": "Paramètres URL & SSL",
+  "forceHttps": "Forcer HTTPS",
+  "forceWww": "Forcer le préfixe WWW",
+  "removeWww": "Supprimer le préfixe WWW",
+  "performance": "Performance",
+  "enableGzip": "Activer la compression Gzip",
+  "enableCaching": "Activer le cache des navigateurs",
+  "security": "Sécurité",
+  "blockHotlinking": "Bloquer la hotlinking d’images",
+  "customErrorPages": "Pages d’erreur personnalisées",
+  "blockIps": "Bloquer des adresses IP (une par ligne)",
+  "redirects": "Redirections (de vers à, une par ligne)",
+  "generate": "Générer .htaccess",
+  "copy": "Copier dans le presse-papier",
+  "output": "Génération de .htaccess",
+  "detailed_description": "Le .htaccess Generator est un outil unique conçu pour simplifier la création de fichiers de configuration .htaccess pour les serveurs Apache. Ce fichier, souvent utilisé pour la gestion des paramètres de serveur au niveau des répertoires, peut être complexe à mettre en place manuellement. L'outil .htaccess Generator permet aux développeurs de générer facilement des configurations robustes et sécurisées en quelques étapes simples. Il est particulièrement utile pour les tâches telles que la redirection d'URL, la gestion des erreurs, la protection des répertoires, et l'optimisation des performances. En offrant une interface conviviale, ce générateur élimine les erreurs courantes de syntaxe et assure une configuration optimale, adapté aux besoins spécifiques de chaque projet.",
+  "usage_steps": [
+    "Accédez à la page principale du .htaccess Generator et sélectionnez l'option 'Créer une nouvelle configuration'.",
+    "Dans le menu des options, choisissez les modules Apache que vous souhaitez activer pour votre configuration, tels que 'Rewrite', 'Auth', et 'Cache'.",
+    "Pour chaque module sélectionné, configurez les paramètres spécifiques. Par exemple, pour le module 'Rewrite', vous pouvez définir des règles de redirection et de réécriture d'URL.",
+    "Ajoutez des directives de sécurité en configurant les options de protection des répertoires, en spécifiant les utilisateurs autorisés et en définissant les méthodes d'authentification.",
+    "Vérifiez la syntaxe de votre configuration générée en utilisant l'outil de validation intégré. Cet outil vérifie les erreurs courantes et suggère des corrections si nécessaire.",
+    "Une fois votre configuration validée, copiez le contenu du fichier .htaccess généré et collez-le dans le répertoire approprié de votre serveur Apache."
+  ],
+  "usage_examples": [
+    "Un développeur de sites web souhaite rediriger toutes les URL en HTTP vers HTTPS pour renforcer la sécurité. Il utilise le .htaccess Generator pour créer une règle de réécriture de redirection 301, garantissant que toutes les requêtes HTTP sont automatiquement redirigées vers HTTPS.",
+    "Un administrateur de serveur doit protéger un répertoire contenant des fichiers sensibles. Il configure le .htaccess Generator pour activer l'authentification de base, définissant un nom d'utilisateur et un mot de passe pour accéder au répertoire.",
+    "Une entreprise souhaite optimiser les performances de son site web en mettant en cache les ressources statiques. En utilisant le .htaccess Generator, elle configure les en-têtes de cache pour les fichiers CSS, JS, et images, réduisant le temps de chargement des pages.",
+    "Un développeur de CMS souhaite personnaliser les pages d'erreur de son site. Il utilise le .htaccess Generator pour spécifier des fichiers personnalisés pour les erreurs 404 (page non trouvée) et 500 (erreur interne du serveur), améliorant ainsi l'expérience utilisateur."
+  ]
+}

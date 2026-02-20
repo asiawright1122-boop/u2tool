@@ -1,0 +1,22 @@
+{
+  "detailed_description": "El conversor Text to Slug es una herramienta esencial para desarrolladores y gestores de contenido que necesitan transformar textos en formatos URL-amigables. Técnicamente, la herramienta realiza una serie de operaciones sobre el texto de entrada para asegurar que el resultado sea válido para uso en URLs. Estas operaciones incluyen la eliminación de caracteres no alfanuméricos, la conversión de espacios en guiones y la sustitución de caracteres acentuados por sus equivalentes sin acento. El objetivo principal es facilitar la creación de slugs, o identificadores únicos, que se utilizan en rutas de URL, títulos de artículos, nombres de archivos y más. Los usuarios necesitan esta herramienta para garantizar que sus URLs sean limpias, legibles y SEO-friendly, lo que mejora la experiencia del usuario y la indexación en motores de búsqueda. Además, el conversor Text to Slug es especialmente útil en entornos de desarrollo web donde la consistencia y la estructura correcta de las URLs son cruciales para el funcionamiento y la mantenibilidad de los sitios web.",
+  "usage_steps": [
+    "Acceda a la página de la herramienta Text to Slug en el sitio web de herramientas de texto.",
+    "En la sección 'Texto de entrada', escriba o pegue el texto que desea convertir en un slug.",
+    "Seleccione las opciones de conversión según sea necesario. Por ejemplo, puede elegir si desea convertir el texto a minúsculas o mantener las mayúsculas.",
+    "Haga clic en el botón 'Convertir' para procesar el texto y generar el slug.",
+    "El slug resultante se mostrará en la sección 'Resultado'. Revise el slug para asegurarse de que cumple con sus requisitos.",
+    "Copie el slug generado y utilícelo en la URL, el título de un artículo, o cualquier otro lugar donde sea necesario."
+  ],
+  "usage_examples": [
+    "Un redactor de contenido de un blog necesita crear una URL amigable para un nuevo artículo titulado 'Cómo crear una página web con HTML y CSS'. Utiliza el conversor Text to Slug para generar el slug 'como-crear-una-pagina-web-con-html-y-css' y lo usa en la URL del artículo.",
+    "Un desarrollador web está creando una aplicación que requiere slugs únicos para cada entrada de usuario. Utiliza la herramienta para convertir títulos de entradas en slugs válidos para las rutas de la aplicación, asegurando que no contengan caracteres especiales que puedan causar errores.",
+    "Un gestor de proyectos en una agencia digital necesita nombrar archivos de proyecto de manera consistente. Utiliza el conversor Text to Slug para transformar títulos de proyectos en nombres de archivos limpios y estructurados, facilitando la organización y búsqueda de archivos.",
+    "Un SEO specialist está optimizando las URLs de un sitio web para mejorar su posición en los resultados de búsqueda. Utiliza la herramienta para convertir títulos de páginas largos y complejos en slugs cortos y relevantes, lo que mejora la legibilidad y la indexación de las URLs."
+  ],
+  "inputPlaceholder": "Escribe el texto aquí...",
+  "separator": "Separador",
+  "none": "Ninguno",
+  "lowercase": "Minúsculas",
+  "slug": "Slug"
+}

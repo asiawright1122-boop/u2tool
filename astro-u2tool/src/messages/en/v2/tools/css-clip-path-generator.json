@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The CSS Clip Path Generator is a specialized tool that enables developers to create complex CSS shapes using a WYSIWYG editor by manipulating vector path data. It converts interactive Bézier curve adjustments into optimized `clip-path` CSS syntax supporting polygons, ellipses, and custom SVG paths. Developers need this tool to bypass manual coordinate calculations and browser rendering inconsistencies when implementing non-rectangular layouts, image masks, or animated transitions. The editor uses a coordinate system grid with snapping functionality to ensure precision, while its path simplification algorithm reduces anchor points for maintainable code. Real-time visual feedback shows how shapes render across different viewport sizes, and the tool generates both standard CSS and SVG fallbacks for cross-browser compatibility.",
+  "usage_steps": [
+    "1. Select a base shape (polygon, circle, or custom path) from the shape library panel",
+    "2. Drag control handles to adjust Bézier curve segments or click to add/remove anchor points",
+    "3. Use the coordinate inspector to input exact X/Y values for precision alignment",
+    "4. Switch between absolute/relative units in the settings panel to control sizing behavior",
+    "5. Apply path simplification to reduce complexity while maintaining shape integrity",
+    "6. Export generated CSS with browser-specific prefixes and SVG path data simultaneously"
+  ],
+  "usage_examples": [
+    "Create a diagonal hero section with a clipped polygon shape that reveals a background gradient",
+    "Generate a circular profile image mask with a customizable border-radius equivalent in CSS",
+    "Design an animated SVG path transition between two complex shapes for a data visualization",
+    "Build a responsive magazine-style text wrap around a custom SVG shape for editorial layouts"
+  ]
+}

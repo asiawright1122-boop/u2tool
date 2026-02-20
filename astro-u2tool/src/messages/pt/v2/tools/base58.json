@@ -1,0 +1,30 @@
+{
+  "encodeBtn": "Codificar para Base58",
+  "decodeBtn": "Decodificar de Base58",
+  "placeholder": "Digite o texto para codificar ou Base58 para decodificar...",
+  "resultPlaceholder": "Resultado aparecerá aqui...",
+  "aboutTitle": "Sobre Base58",
+  "aboutText": "Base58 é uma codificação binária para texto usada em Bitcoin e outras criptomoedas. Exclui caracteres facilmente confundidos (0, O, I, l) para melhor legibilidade.",
+  "detailed_description": "O Base58 Encoder/Decoder é uma ferramenta especializada para a codificação e decodificação de strings no formato Base58, um sistema de codificação utilizado amplamente em criptomoedas, como Bitcoin. Este formato é projetado para ser mais eficiente e seguro, eliminando caracteres que podem ser confundidos visualmente, como '0' (zero), 'O' (letra o), 'I' (letra i) e 'l' (letra L).\n\nProfissionais de desenvolvimento, blockchain e criptomoedas utilizam esta ferramenta para garantir a integridade e a legibilidade das chaves e endereços utilizados em transações. A necessidade de converter dados para o formato Base58 surge em cenários como a geração de endereços Bitcoin, a criação de chaves privadas e a verificação de assinaturas digitais.\n\nTécnicamente, o processo de codificação envolve a conversão de um número inteiro, geralmente representado em hexadecimal, em uma string alfanumérica curta e legível. A decodificação inverte este processo, permitindo a recuperação do número original a partir da string Base58. A ferramenta Base58 Encoder/Decoder simplifica essas operações, fornecendo uma interface intuitiva e eficiente para desenvolvedores e entusiastas de criptomoedas.",
+  "usage_steps": [
+    "Acesse a página do Base58 Encoder/Decoder no site da ferramenta.",
+    "No campo de entrada, insira a string que deseja codificar ou decodificar. Certifique-se de que a string esteja no formato apropriado (Base58 para decodificação, texto ou hexadecimal para codificação).",
+    "Selecione a opção 'Codificar' ou 'Decodificar' no menu de operações disponíveis.",
+    "Caso esteja decodificando, escolha o formato de saída desejado (por exemplo, hexadecimal) no menu suspenso 'Formato de Saída'.",
+    "Clique no botão 'Executar' para processar a string.",
+    "A ferramenta exibirá o resultado no campo de saída, pronto para ser utilizado ou copiado."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor de blockchain precisa criar um endereço Bitcoin a partir de uma chave pública. Ele utiliza a ferramenta Base58 Encoder para converter a chave pública em um endereço Bitcoin válido, garantindo que a string final seja curta e legível.",
+    "Um analista de segurança deseja verificar a integridade de uma assinatura digital em uma transação Bitcoin. Ele usa a ferramenta Base58 Decoder para decodificar a string Base58 da assinatura e compara o resultado com o valor original para confirmar sua autenticidade.",
+    "Um usuário de criptomoedas recebe um endereço Bitcoin em formato Base58 e precisa confirmar se ele corresponde a uma chave pública conhecida. Ele usa a ferramenta para decodificar o endereço e comparar a chave pública resultante.",
+    "Um programador está desenvolvendo uma aplicação que gera chaves privadas para uma criptomoeda. Ele utiliza a ferramenta Base58 Encoder para converter as chaves privadas em strings Base58, facilitando o armazenamento e a transmissão segura dessas chaves."
+  ],
+  "errorEncoding": "Erro ao codificar",
+  "errorInvalidInput": "Entrada inválida",
+  "input": "Entrada",
+  "clear": "Limpar",
+  "output": "Saída",
+  "copied": "Copiado!",
+  "copy": "Copiar"
+}

@@ -1,0 +1,52 @@
+{
+  "detailed_description": "El Constructor de Encabezados de Solicitud HTTP ayuda a construir encabezados HTTP bien formateados para solicitudes de API con opciones de encabezados comunes y exportación.",
+  "usage_steps": [
+    "Seleccionar encabezados comunes",
+    "O añadir encabezados personalizados",
+    "Configurar Autorización",
+    "Establecer Tipo de Contenido",
+    "Exportar en el formato preferido"
+  ],
+  "usage_examples": [
+    "Construir encabezados de Autorización",
+    "Crear encabezados CORS",
+    "Generar encabezados de webhook"
+  ],
+  "input": "Entrada",
+  "output": "Salida",
+  "process": "Procesar",
+  "copy": "Copiar",
+  "clear": "Borrar",
+  "inputPlaceholder": "Introduce tu entrada aquí...",
+  "outputPlaceholder": "Los resultados aparecerán aquí...",
+  "errors": {
+    "emptyInput": "Por favor, introduce algún dato"
+  },
+  "headerNamePlaceholder": "Nombre del encabezado",
+  "valuePlaceholder": "Valor",
+  "loadExample": "Cargar ejemplo",
+  "analyze": "Analizar",
+  "generate": "Generar",
+  "format": "Formatear",
+  "convert": "Convertir",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Vista previa",
+  "reset": "Restablecer",
+  "add": "Agregar",
+  "remove": "Eliminar",
+  "save": "Guardar",
+  "cancel": "Cancelar",
+  "settings": "Configuración",
+  "options": "Opciones",
+  "results": "Resultados",
+  "noResults": "Sin resultados",
+  "loading": "Cargando...",
+  "success": "Éxito",
+  "failed": "Fallido",
+  "warning": "Advertencia",
+  "info": "Información",
+  "form": "Formulario",
+  "cors": "CORS",
+  "auth": "Autenticación"
+}

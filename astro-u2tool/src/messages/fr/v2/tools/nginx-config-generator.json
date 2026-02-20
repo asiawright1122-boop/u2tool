@@ -1,0 +1,29 @@
+{
+  "serverName": "Nom du serveur",
+  "rootPath": "Chemin racine",
+  "proxyPass": "Passer le proxy (facultatif)",
+  "features": "Fonctionnalités",
+  "enableSsl": "Activer SSL/HTTPS",
+  "enableGzip": "Activer la compression Gzip",
+  "enableCaching": "Activer le stockage en cache des fichiers statiques",
+  "enablePhp": "Activer PHP-FPM",
+  "generate": "Générer la configuration Nginx",
+  "copy": "Copier dans le presse-papier",
+  "output": "Configuration Nginx générée",
+  "detailed_description": "Le générateur de configuration Nginx est un outil technique spécialisé permettant de créer des fichiers de configuration pour le serveur web Nginx. Ce tooling s'adresse aux développeurs et administrateurs système cherchant à automatiser la génération de blocs de configuration optimisés, évitant les erreurs syntaxiques courantes et les mauvaises pratiques de sécurité. Il prend en charge la définition de directives complexes comme proxy_pass, upstream, location, ou encore des paramètres SSL (TLS termination). L'outil intègre une logique de validation des dépendances entre options, garantissant la cohérence des configurations générées. Son moteur analyse les besoins spécifiques (type d'hébergement, règles de réécriture, gestion des erreurs) pour produire des fichiers prêts à l'emploi, conformes aux standards de performance actuels.",
+  "usage_steps": [
+    "Sélectionnez le type de configuration (serveur statique, reverse proxy, load balancing)",
+    "Renseignez le nom de domaine et le port d'écoute dans le champ 'server_name'",
+    "Activez/désactivez le support HTTP/2 via le toggle 'Protocole'",
+    "Configurez les chemins racine et alias via l'explorateur de fichiers intégré",
+    "Paramétrez les règles de réécriture d'URL avec l'éditeur de regex avancé",
+    "Générez le fichier complet avec le bouton 'Exporter NGINX conf'"
+  ],
+  "usage_examples": [
+    "Configurer un reverse proxy pour une application Node.js avec compression Gzip et cache de contenu statique",
+    "Créer une configuration optimisée pour servir une application React SPA avec routage client-side",
+    "Mettre en place un load balancing avec health checks pour un cluster de microservices",
+    "Générer des règles de sécurité renforcées (rate limiting, IP whitelisting) pour un API REST"
+  ],
+  "exampleDomain": "example.com"
+}

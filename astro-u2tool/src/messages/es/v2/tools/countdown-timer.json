@@ -1,0 +1,31 @@
+{
+  "detailed_description": "El Cronómetro de Cuenta Atrás Online es una herramienta de temporización rica en características que admite horas, minutos y segundos personalizados. Ofrece tiempos preestablecidos comunes como 1 minuto, 5 minutos, 10 minutos, 15 minutos, 30 minutos y 1 hora para una configuración rápida con un solo clic. Durante la cuenta atrás, muestra una bonita barra de progreso circular que indica la proporción de tiempo restante. Envía una notificación del navegador cuando finaliza la cuenta atrás (requiere permiso). Soporta funciones de pausa, reanudación y reinicio. Perfecto para la técnica Pomodoro, control de tiempos de cocción, recordatorios de descanso y más.",
+  "usage_steps": [
+    "Abre la página del herramienta Cronómetro de Cuenta Atrás",
+    "Elige un tiempo preestablecido o introduce manualmente horas, minutos y segundos",
+    "Haz clic en el botón verde 'Iniciar' para comenzar la cuenta atrás",
+    "Observa la barra de progreso circular para ver el tiempo restante",
+    "Haz clic en 'Pausa' para pausar la cuenta atrás",
+    "Recibirás una notificación cuando finalice la cuenta atrás"
+  ],
+  "usage_examples": [
+    "Sesiones de concentración de 25 minutos para la técnica Pomodoro",
+    "Configura tiempos de cocción para huevos, fideos, etc.",
+    "Control de tiempo para reuniones o presentaciones",
+    "Recordatorios de descanso para levantarte y moverte"
+  ],
+  "faqs": [
+    {
+      "question": "¿Recibiré un recordatorio cuando finalice la cuenta atrás?",
+      "answer": "Sí, se enviará una notificación del navegador cuando finalice la cuenta atrás. Al primer uso, el navegador solicitará permiso para las notificaciones - por favor, permite para activar la función de recordatorio."
+    },
+    {
+      "question": "¿Cuánto tiempo puedo configurar el temporizador?",
+      "answer": "Admite cualquier combinación de 0-23 horas, 0-59 minutos y 0-59 segundos. El tiempo máximo de cuenta atrás es 23:59:59."
+    },
+    {
+      "question": "¿Puedo continuar después de pausar?",
+      "answer": "Sí. Después de hacer clic en pausa, la cuenta atrás mantiene su estado actual. Haz clic en 'Reanudar' para continuar desde donde lo pausaste."
+    }
+  ]
+}

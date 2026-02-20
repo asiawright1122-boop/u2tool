@@ -1,0 +1,29 @@
+{
+  "detailed_description": "数据传输计算器根据您的网络速度估算文件传输所需的时间。输入文件大小和网络速度以获得准确的传输时间估算。包括常见的连接类型（如4G、5G、WiFi和以太网）的预设速度，以便快速计算。",
+  "usage_steps": [
+    "输入要传输的文件大小",
+    "选择大小单位（KB、MB、GB、TB）",
+    "输入您的连接速度",
+    "或点击预设速度按钮",
+    "查看估算的传输时间",
+    "复制结果以备参考"
+  ],
+  "usage_examples": [
+    "估算大文件下载时间",
+    "规划数据迁移时间表",
+    "比较不同网络上的传输时间"
+  ],
+  "fileSize": "File Size",
+  "connectionSpeed": "Connection Speed",
+  "presetSpeeds": "Preset Speeds",
+  "estimatedTime": "Estimated Transfer Time",
+  "hours": "hours",
+  "minutes": "minutes",
+  "seconds": "seconds",
+  "note": "Note: Actual transfer times may vary due to network conditions, overhead, and other factors.",
+  "dataSize": "数据大小",
+  "bandwidth": "带宽",
+  "transferTime": "传输时间",
+  "speedUnit": "速度单位",
+  "sizeUnit": "大小单位"
+}

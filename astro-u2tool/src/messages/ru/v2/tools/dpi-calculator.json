@@ -1,0 +1,47 @@
+{
+  "detailed_description": "Калькулятор DPI поможет вам определить качество печати ваших изображений или рассчитать необходимое разрешение для цели DPI. Переключайтесь между двумя режимами: рассчитывайте DPI на основе существующих размеров изображения и размера печати, или рассчитывайте необходимые размеры пикселей для конкретного DPI и размера печати. Необходим для фотографов, дизайнеров и профессионалов по печати.",
+  "usage_steps": [
+    "Выберите режим расчета: DPI или Пиксели",
+    "Для режима DPI: введите разрешение изображения и размер печати",
+    "Для режима Пиксели: введите целевое DPI и размер печати",
+    "Выберите готовый размер печати, если это необходимо",
+    "Просмотрите вычисленные результаты",
+    "Скопируйте результаты для использования в качестве ссылки"
+  ],
+  "usage_examples": [
+    "Проверка, подходит ли изображение для печати",
+    "Вычисление необходимого разрешения для больших печатных работ",
+    "Планирование требований к изображениям для фотоальбома"
+  ],
+  "calculateDpi": "Calculate DPI",
+  "calculatePixels": "Calculate Pixels",
+  "imageResolution": "Image Resolution",
+  "printSize": "Print Size",
+  "targetDpi": "Target DPI",
+  "width": "Width",
+  "height": "Height",
+  "inches": "inches",
+  "commonPrintSizes": "Common Print Sizes",
+  "calculatedDpi": "Calculated DPI",
+  "requiredResolution": "Required Resolution",
+  "horizontal": "Horizontal",
+  "vertical": "Vertical",
+  "megapixels": "Megapixels",
+  "dpiGuide": "DPI Guide",
+  "screen": "Screen/Web",
+  "draft": "Draft Print",
+  "print": "Quality Print",
+  "highQuality": "High Quality",
+  "quality": {
+    "excellent": "Excellent print quality",
+    "good": "Good print quality",
+    "acceptable": "Acceptable for viewing distance",
+    "low": "Low quality - may appear pixelated"
+  },
+  "imageWidth": "Ширина изображения (px)",
+  "imageHeight": "Высота изображения (px)",
+  "printWidth": "Ширина печати",
+  "printHeight": "Высота печати",
+  "dpi": "DPI",
+  "printQuality": "Качество печати"
+}

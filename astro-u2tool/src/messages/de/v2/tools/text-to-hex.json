@@ -1,0 +1,36 @@
+{
+  "encoding": "Kodierung",
+  "separator": "Trennzeichen",
+  "sepSpace": "Leerzeichen",
+  "sepNone": "Kein",
+  "sepComma": "Komma",
+  "sepPrefix": "Präfix",
+  "uppercase": "Großbuchstaben",
+  "loadSample": "Beispiel laden",
+  "textInput": "Texteingabe",
+  "hexOutput": "Hexadezimalausgabe",
+  "copy": "Kopieren",
+  "textPlaceholder": "Geben Sie den zu konvertierenden Text ein...",
+  "hexPlaceholder": "Geben Sie Hexadezimalwerte ein...",
+  "textToHex": "Text → Hex",
+  "hexToText": "Hex → Text",
+  "swap": "Umschalten",
+  "info": "Information",
+  "infoText": "Unterstützt UTF-8, ASCII und UTF-16 Kodierung. Verwenden Sie die Trennzeichenoption, um die Hexadezimalausgabe zu formatieren.",
+  "errorInvalidHex": "Ungültige Hexadezimaleingabe",
+  "detailed_description": "Der Text-zu-Hex-Konverter ermöglicht die bidirektionale Umwandlung von Zeichenfolgen in hexadezimale Darstellung und umgekehrt. Technisch gesehen basiert das Tool auf standardisierten Zeichencodierungen wie ASCII, UTF-8 und UTF-16, wobei jeder Zeichenwert in ein 2-stelliges Hexadezimalformat (00-FF) konvertiert wird. Bei der Rückwärtsumwandlung werden Hex-Paare als Byte interpretiert und in Unicode-Zeichen decodiert. Entwickler benötigen dieses Tool für Aufgaben wie das Debugging von Netzwerkprotokollen, das Generieren von Binärdaten für Embedded-Systeme oder das Verständnis von Memory-Dumps. Das Tool verarbeitet Eingaben zeilenweise, unterstützt Sonderzeichen durch Escape-Sequenzen und bietet Optionen zur Groß-/Kleinschreibung der Hex-Ausgabe. Bei der Kodierung wird jeder Text in seine Byte-Representation zerlegt, wobei z.B. das Leerzeichen (ASCII 32) in '20' umgewandelt wird. Bei der Dekodierung erfolgt die Prüfung auf gültige Hex-Syntax sowie die Behandlung von Nicht-ASCII-Zeichen durch spezifische Decodierungsstrategien.",
+  "usage_steps": [
+    "Geben Sie den zu konvertierenden Text in das Eingabefeld 'Quelltext' ein.",
+    "Wählen Sie im Dropdown-Menü die gewünschte Zeichencodierung (UTF-8 oder ASCII).",
+    "Aktivieren Sie das Kontrollkästchen 'Hexadezimal groß geschrieben' für Großbuchstaben in der Ausgabe.",
+    "Klicken Sie auf den Button 'In Hex konvertieren', um den Text in hexadezimale Bytes umzuwandeln.",
+    "Umgekehrt: Fügen Sie Hex-Daten in das Feld 'Hex-Eingabe' ein und klicken Sie auf 'Text decodieren'.",
+    "Kopieren Sie das Ergebnis über die Schaltfläche 'Zwischenablage kopieren' oder laden Sie es als .hex-Datei herunter."
+  ],
+  "usage_examples": [
+    "Ein IoT-Entwickler konvertiert Steuerbefehle wie 'START|STOP' in Hex, um sie als Binärdaten an ein Mikrocontroller-System zu senden.",
+    "Ein Sicherheitsanalyst decodiert Hex-Strings aus einem Memory-Dump, um verborgene Textinformationen in einem Malware-Sample zu identifizieren.",
+    "Ein Webentwickler wandelt Sonderzeichen für URL-Parameter manuell in Hex um, um Probleme mit ungültigen Encodierungen zu testen.",
+    "Ein Spiele-Programmierer bearbeitet Hex-Dumps alter ROM-Dateien, um Textinhalte in verschiedenen Sprachen zu übersetzen."
+  ]
+}

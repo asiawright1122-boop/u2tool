@@ -1,0 +1,24 @@
+{
+  "detailed_description": "Конвертер Tailwind в CSS преобразует утилитные классы Tailwind в стандартные свойства CSS. Полезен для обучения, отладки и извлечения стилей из проектов Tailwind.",
+  "usage_steps": [
+    "Введите классы Tailwind",
+    "Нажмите 'Конвертировать', чтобы сгенерировать CSS",
+    "Просмотрите результат CSS",
+    "Скопируйте сгенерированные стили",
+    "Используйте в своей таблице стилей"
+  ],
+  "usage_examples": [
+    "Изучите CSS с помощью Tailwind",
+    "Отладите стили Tailwind",
+    "Извлеките CSS для проектов, не использующих Tailwind"
+  ],
+  "tailwindInput": "Классы Tailwind",
+  "cssOutput": "Результат CSS",
+  "convert": "Конвертировать в CSS",
+  "copy": "Скопировать",
+  "copied": "Скопировано!",
+  "inputPlaceholder": "Введите классы Tailwind (например, bg-blue-500 text-white p-4)",
+  "placeholder": "Введите классы Tailwind...",
+  "outputPlaceholder": "CSS вывод появится здесь...",
+  "loadExample": "Загрузить пример"
+}

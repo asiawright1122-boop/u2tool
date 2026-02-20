@@ -1,0 +1,47 @@
+{
+  "detailed_description": "Le Résolveur de Conflits de Fusion fournit une interface visuelle pour résoudre les conflits de fusion Git.",
+  "usage_steps": [
+    "Coller le contenu en conflit",
+    "Voir les conflits mis en surbrillance",
+    "Choisir les modifications",
+    "Éditer le résultat de la fusion",
+    "Copier le contenu résolu"
+  ],
+  "usage_examples": [
+    "Résoudre des conflits de code",
+    "Fusionner des modifications de configuration",
+    "Gérer les conflits de package.json"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Traitement",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Collez le contenu du fichier avec les conflits de fusion...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez saisir quelque chose"
+  },
+  "loadExample": "Charger un exemple",
+  "analyze": "Analyser",
+  "generate": "Générer",
+  "format": "Formater",
+  "convert": "Convertir",
+  "validate": "Valider",
+  "export": "Exporter",
+  "preview": "Aperçu",
+  "reset": "Réinitialiser",
+  "add": "Ajouter",
+  "remove": "Supprimer",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "settings": "Paramètres",
+  "options": "Options",
+  "results": "Résultats",
+  "noResults": "Aucun résultat",
+  "loading": "Chargement...",
+  "success": "Succès",
+  "failed": "Échec",
+  "warning": "Avertissement",
+  "info": "Information"
+}

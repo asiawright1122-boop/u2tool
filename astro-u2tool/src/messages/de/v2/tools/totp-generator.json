@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der TOTP-Generator (Time-Based One-Time Password) erstellt kryptografisch sichere Einmalpasswörter, die temporär gültig sind und mit Standards wie RFC 6238 kompatibel sind. Das Tool verwendet den HMAC-SHA1-Algorithmus, um aus einem geheimen Schlüssel (meist Base32-kodiert) und dem aktuellen Unix-Zeitstempel einen dynamischen Code zu generieren. Diese Passwörter sind für 30 Sekunden gültig und werden häufig für Zwei-Faktor-Authentifizierung (2FA) in Anwendungen wie Google Authenticator verwendet. Entwickler und Sicherheitsexperten benötigen dieses Tool, um manuell TOTPs zu erzeugen, etwa bei der Implementierung von Authentifizierungssystemen ohne physische Hardware-Tokens, bei der Fehlersuche in 2FA-Integrationen oder beim Testen von OAuth2-Flows. Die Generierung erfolgt durch die Berechnung des Zeitfensters (Time Step) und die dynamische Trunkierung des Hash-Ergebnisses auf 6-8 Stellen. Ein geheimer Schlüssel im Base32-Format (z.B. 'JBSWY3DPEHPK3PXP') ist erforderlich, um konsistente Codes mit kompatiblen Authenticator-Apps zu erzeugen.",
+  "usage_steps": [
+    "Geben Sie einen Base32-kodierten geheimen Schlüssel in das Feld 'Geheimer Schlüssel' ein.",
+    "Wählen Sie das gewünschte Zeitintervall (Standard: 30 Sekunden) im Dropdown 'Time Step'.",
+    "Legen Sie die Passwortlänge (6 bis 8 Ziffern) über den Schieberegler 'Code-Länge' fest.",
+    "Aktivieren Sie das Kontrollkästchen 'QR-Code anzeigen', um den Schlüssel mit Authenticator-Apps zu synchronisieren.",
+    "Klicken Sie auf 'Generieren', um den aktuellen TOTP-Code basierend auf der Systemzeit anzuzeigen.",
+    "Kopieren Sie den Code über die Schaltfläche 'In Zwischenablage kopieren' für die sofortige Verwendung."
+  ],
+  "usage_examples": [
+    "Ein Entwickler generiert manuell einen TOTP-Code, um die 2FA-Integration einer Webanwendung zu testen, bevor Hardware-Token bereitgestellt werden.",
+    "Ein DevOps-Engineer erstellt temporäre Authentifizierungscodes für CI/CD-Pipelines, die mit GitHub Actions oder GitLab CI kompatibel sind.",
+    "Ein Sicherheitsberater demonstriert Kunden die Funktionsweise von TOTP ohne Installation von Apps, um Zero-Trust-Authentifizierung zu erklären.",
+    "Ein Nutzer rekonstruiert verlorene 2FA-Codes für ein Cloud-Konto, nachdem das Smartphone mit Google Authenticator verloren ging."
+  ]
+}

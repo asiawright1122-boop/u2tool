@@ -1,0 +1,38 @@
+{
+  "prefix": "Prefijo",
+  "prefixPlaceholder": "por ejemplo, app",
+  "scope": " Alcance",
+  "cssLabel": "CSS",
+  "scssLabel": "SCSS",
+  "jsLabel": "JavaScript",
+  "presets": "Preajustes",
+  "presetLight": "Claro",
+  "presetDark": "Oscuro",
+  "presetBrand": "Marca",
+  "variables": "Variables",
+  "addVariable": "Agregar Variable",
+  "typeColor": "Color",
+  "typeSize": "Tamaño",
+  "typeFont": "Fuente",
+  "typeOther": "Otro",
+  "varNamePlaceholder": "variable-nombre",
+  "varValuePlaceholder": "valor",
+  "copy": "Copiar",
+  "noOutput": "Añade variables para generar código",
+  "remove": "Eliminar",
+  "detailed_description": "El Generador de Variables CSS permite crear y gestionar propiedades personalizadas (CSS Custom Properties) mediante un editor visual intuitivo. Esta herramienta está diseñada para desarrolladores que necesitan implementar sistemas de diseño dinámicos, gestionar temas multibrand o mantener consistencia en proyectos escalables. Permite definir variables para colores, tipografías, espaciados y más, con soporte para formatos HSL, RGB y HEX. Al generar código CSS nativo, elimina la dependencia de preprocesadores como SASS o LESS. Los usuarios pueden exportar las variables en múltiples formatos (JSON, SCSS, CSS puro) y aplicarlas directamente en sus proyectos. Incorpora validación en tiempo real para evitar valores inválidos y ofrece una vista de cascada visual que muestra cómo se heredan las variables en diferentes selectores. Es especialmente útil para implementar sistemas de diseño basados en principios como Atomic Design o cuando se requiere soporte para múltiples temas con variables condicionales.",
+  "usage_steps": [
+    "Accede al editor visual y selecciona 'Nuevo Proyecto' para iniciar una hoja de variables.",
+    "Utiliza el campo 'Nombre de Variable' para definir identificadores siguiendo la convención '--nombre-variable'.",
+    "Selecciona un valor usando el selector de color HSL/RGB o ingresa directamente valores numéricos.",
+    "Activa 'Modo Cascada' para visualizar cómo las variables se heredan entre selectores padres e hijos.",
+    "Haz clic en 'Exportar CSS' para obtener el código listo para copiar/pegar o descargar como archivo .css.",
+    "Usa la pestaña 'Validación' para verificar compatibilidad con navegadores legacy o detectar valores no estándar."
+  ],
+  "usage_examples": [
+    "Desarrollar un sistema de diseño para una aplicación SaaS con múltiples marcas, cada una con su paleta de colores definida por variables.",
+    "Crear una escala tipográfica responsiva donde las variables de fuente cambian según breakpoints definidos en el editor.",
+    "Implementar un sistema de espaciado coherente usando variables para márgenes y padding en un diseño de rejilla CSS Grid.",
+    "Configurar un tema oscuro y claro alternativo mediante variables condicionales que se activan con prefers-color-scheme."
+  ]
+}

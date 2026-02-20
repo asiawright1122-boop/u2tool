@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The File Hash Calculator is a cryptographic utility that generates unique hexadecimal digests for files using industry-standard algorithms including MD5, SHA-1, SHA-256, and SHA-512. This tool employs cryptographic hash functions to process file data through deterministic mathematical transformations, producing fixed-length output values that serve as digital fingerprints. Security professionals use these hashes to verify data integrity, detect unauthorized modifications, and ensure file authenticity across systems. The tool operates via client-side JavaScript, reading files in binary mode and processing them through Web Crypto API implementations. Each algorithm processes data blocks with distinct mathematical operations: SHA-256 uses 32-bit words and 64 rounds of compression, while SHA-512 employs 64-bit words with 80 rounds for enhanced collision resistance. Results display both uppercase and lowercase hexadecimal representations, with options to copy individual hash values. Technical applications include checksum validation for software distribution, forensic analysis of digital evidence, and entropy verification in security protocols.",
+  "usage_steps": [
+    "1. Access the tool through the Security Tools dashboard and locate the drag-and-drop file uploader",
+    "2. Select your target file using the file browser dialog or drag it into the designated zone",
+    "3. Enable desired algorithms using the toggle switches for MD5, SHA-1, SHA-256, and SHA-512",
+    "4. Click 'Process File' to initiate cryptographic computation - progress bar indicates binary reading status",
+    "5. Review generated hash values in both uppercase and lowercase formats displayed in separate result cards",
+    "6. Use the 'Copy All Results' button to save output or export JSON containing file metadata and hash pairs"
+  ],
+  "usage_examples": [
+    "Example 1: Validating software integrity by comparing SHA-256 hashes of downloaded Linux ISO images against publisher-provided checksums",
+    "Example 2: Forensic investigators creating hash sets for evidence files to detect tampering during legal proceedings",
+    "Example 3: System administrators verifying configuration file consistency across servers using MD5 checksums",
+    "Example 4: Blockchain developers testing SHA-512 outputs for cryptographic key generation in distributed ledger implementations"
+  ]
+}

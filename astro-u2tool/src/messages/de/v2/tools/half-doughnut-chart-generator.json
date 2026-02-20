@@ -1,0 +1,56 @@
+{
+  "chartTitle": "Diagrammtitel",
+  "chartTitlePlaceholder": "Geben Sie den Diagrammtitel ein",
+  "colorTheme": "Farbthema",
+  "showLegend": "Legende anzeigen",
+  "showLabels": "Beschriftungen anzeigen",
+  "nameLabel": "Name",
+  "value": "Wert",
+  "item": "Eintrag",
+  "addRow": "Zeile hinzufügen",
+  "loadSample": "Beispiel laden",
+  "downloadPng": "PNG herunterladen",
+  "downloadSvg": "SVG herunterladen",
+  "defaultTitle": "Verteilung",
+  "sampleTitle": "Kundenzufriedenheit",
+  "dataEditor": "Dateneditor",
+  "chartPreview": "Diagrammvorschau",
+  "chartSettings": "Diagrammeinstellungen",
+  "themeDefault": "Standard",
+  "themeOcean": "Ozean",
+  "themeSunset": "Sonnenuntergang",
+  "themeForest": "Wald",
+  "sampleData": {
+    "item1": "Kategorie A",
+    "item2": "Kategorie B",
+    "item3": "Kategorie C",
+    "item4": "Kategorie D",
+    "excellent": "Ausgezeichnet",
+    "good": "Gut",
+    "average": "Durchschnittlich",
+    "poor": "Schlecht"
+  },
+  "tips": {
+    "title": "Tipps",
+    "tip1": "Der Halbmond ist ideal für Gauge-style Visualisierungen",
+    "tip2": "Wechseln Sie die Beschriftungen, um prozentuale Werte anzuzeigen oder zu verbergen",
+    "tip3": "Werte werden automatisch in Prozente umgerechnet"
+  },
+  "detailed_description": "Der Half Doughnut Chart Generator ist ein spezialisierter Visualisierungstool zur Erstellung von halbkreisförmigen Tortendiagrammen mit dynamischen SVG-Elementen. Das Werkzeug konvertiert numerische Datensätze in proportionale Segmente innerhalb eines 180°-Kreissegments, wobei Benutzer die Kontrolle über technische Parameter wie Füllfarben, Strichstärken, Legendenpositionierung und interaktive Tooltips behalten. Die Implementierung erfolgt durch die Berechnung von Bogenwinkeln basierend auf Datenwerten, unter Verwendung von SVG-path-Elementen für präzise Formdarstellung. Die Halbkreisarchitektur eignet sich besonders für Dashboards mit begrenztem Platzangebot oder asymmetrische Layouts, da sie im Gegensatz zu vollständigen Doughnut-Charts einen fokussierten Datenbereich hervorhebt. Technisch ermöglicht der Generator die Anpassung des Innen- und Außendurchmessers, die Implementierung von Datenbeschriftungen via DOM-Manipulation und die Exportfunktionalität in Vektor- und Rasterformaten. Entwickler profitieren von der Integration von ARIA-Labels für Barrierefreiheit und der Möglichkeit, den Chart über JavaScript-APIs dynamisch zu aktualisieren, ohne das gesamte Diagramm neu laden zu müssen.",
+  "usage_steps": [
+    "1. Geben Sie numerische Werte in die Tabellenfelder ein und weisen Sie jedem Segment eine eindeutige Beschriftung zu.",
+    "2. Wählen Sie ein Farbschema aus dem verfügbaren CSS-Farbpaletten-Modul oder definieren Sie benutzerdefinierte HEX-Codes.",
+    "3. Passen Sie die Segmentabstände durch Eingabe von Pixelwerten für den 'Padding' und 'Margin' Parameter an.",
+    "4. Aktivieren Sie den 'Legend Docking' Schalter, um die Legende an der linken, rechten oder unteren Seite des Diagramms zu positionieren.",
+    "5. Verfeinern Sie die interaktiven Tooltips durch Aktivierung von 'Value Display Mode' für absolute oder prozentuale Anzeige.",
+    "6. Exportieren Sie das generierte Diagramm durch Klick auf den 'Download SVG/PNG' Button oder integrieren Sie den Embed-Code direkt in Ihre Webseite."
+  ],
+  "usage_examples": [
+    "Ein Projektmanager visualisiert den Fertigstellungsstand von Meilensteinen in einer Dashboard-Spalte mit begrenztem Platz.",
+    "Ein Finanzanalyst zeigt Quartalsgewinne im Vergleich zum Vorjahreszeitraum in einem asymmetrischen Report-Layout an.",
+    "Ein UX-Designer demonstriert Nutzerbefragungsergebnisse (z.B. 0-100%-Skala) in einem responsiven Web-Prototypen.",
+    "Ein Bildungsanbieter präsentiert Abschlussraten verschiedener Kurse in einer kompakten Infografik für mobile Endgeräte."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

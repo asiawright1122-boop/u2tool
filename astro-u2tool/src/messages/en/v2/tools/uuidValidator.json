@@ -1,0 +1,12 @@
+{
+  "input": "UUID Input",
+  "placeholder": "Enter UUIDs (one per line)...",
+  "validate": "Validate",
+  "valid": "Valid",
+  "invalid": "Invalid",
+  "invalidFormat": "Invalid format",
+  "versions": "UUID Versions",
+  "v1Desc": "Time-based UUID",
+  "v4Desc": "Random UUID (most common)",
+  "v5Desc": "Name-based UUID (SHA-1)"
+}

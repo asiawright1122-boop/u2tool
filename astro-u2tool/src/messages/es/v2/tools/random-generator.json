@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El Generador de Números Aleatorios es una herramienta técnica basada en algoritmos criptográficamente seguros (como el uso de funciones de hash SHA-256) que permite crear secuencias numéricas con control preciso sobre rango, cardinalidad y propiedades estadísticas. Su núcleo utiliza un generador de números pseudoaleatorios (PRNG) inicializado con una semilla de entropía variable, lo que garantiza distribuciones uniformes o sesgadas según la configuración. Los usuarios pueden especificar límites inferior/superior (inclusive valores negativos), cantidad de dígitos decimales, y activar opciones como 'valores únicos' para evitar repeticiones mediante tablas de dispersión (hash tables). Soporta generación masiva de hasta 10,000 números con exportación en formatos estructurados (CSV, JSON, XML). Es esencial para pruebas de estrés en sistemas financieros, simulaciones Monte Carlo, generación de tokens de autenticación y muestreo estadístico con control de varianza.",
+  "usage_steps": [
+    "1. Ingresa los valores 'Mínimo' y 'Máximo' en los campos numéricos correspondientes, incluyendo decimales si es necesario.",
+    "2. Activa la casilla 'Valores Únicos' para generar una secuencia sin duplicados o desactívala para permitir repeticiones.",
+    "3. Selecciona la cantidad de números a generar usando el control deslizante 'Cantidad' (1-10,000).",
+    "4. Introduce una semilla personalizada en el campo 'Semilla Aleatoria' para reproducir secuencias específicas.",
+    "5. Haz clic en el botón 'Generar' para ejecutar el algoritmo basado en el motor CSPRNG (Cryptographically Secure PRNG).",
+    "6. Descarga los resultados mediante el enlace de exportación en el formato deseado (CSV, JSON o XML)."
+  ],
+  "usage_examples": [
+    "Un desarrollador de sistemas bancarios generando 500 números aleatorios entre -1,000,000 y 1,000,000 para simular transacciones extremas.",
+    "Un profesor de estadística creando 25 IDs únicos con 4 dígitos decimales para asignar proyectos de investigación.",
+    "Un diseñador de juegos configurando una tabla de probabilidades para drops de items raros usando valores entre 0 y 1 con 6 decimales.",
+    "Un científico de datos extrayendo una muestra aleatoria de 1,200 registros de un dataset de 1 millón usando semillas reproducibles."
+  ]
+}

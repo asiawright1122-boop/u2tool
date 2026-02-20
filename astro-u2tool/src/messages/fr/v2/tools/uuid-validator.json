@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Le validateur UUID est un outil technique permettant d'analyser et de vérifier la validité des chaînes d'identifiants universels uniques (UUID) conformément aux spécifications RFC 4122. Il effectue des contrôles structurels précis sur les formats versions 1 à 5, y compris la validation des schémas de génération basés sur l'horodatage (UUIDv1), les namespaces (UUIDv3/v5), ou les adresses MAC (UUIDv1). L'outil détecte les erreurs de syntaxe comme les caractères non hexadécimaux, les longueurs incorrectes, ou les versions non conformes. Il vérifie également l'intégrité du checksum pour les UUIDv4 et analyse les motifs d'horodatage potentiellement compromis. Ce validateur s'adresse aux développeurs confrontés à des problèmes de compatibilité inter-service, aux équipes de sécurité auditant les identifiants sensibles, ou aux architectes s'assurant de la normalisation des données dans des systèmes distribués. Son moteur utilise des expressions régulières optimisées et des fonctions de parsing binaire pour analyser les 128 bits de l'UUID, en fournissant un retour détaillé sur chaque composant (time_low, node, clock_seq, etc.).",
+  "usage_steps": [
+    "Saisir la chaîne UUID dans le champ de texte principal (ex: '550e8400-e29b-41d4-a716-446655440000')",
+    "Sélectionner manuellement la version attendue (v1 à v5) ou choisir 'Auto-detect' pour analyse complète",
+    "Cocher l'option 'Vérifier le checksum' pour les UUIDv4 ou 'Analyser le node MAC' pour les UUIDv1",
+    "Cliquez sur 'Valider' pour obtenir une réponse structurée en JSON avec statut de validité et détails techniques",
+    "Examiner la section 'Détails de parsing' montrant les octets bruts, la version détectée et les erreurs potentielles",
+    "Utiliser le bouton 'Exporter résultat' pour générer un rapport au format CSV ou XML avec les métadonnées d'analyse"
+  ],
+  "usage_examples": [
+    "Un développeur backend vérifie les UUID reçus via une API REST pour s'assurer qu'ils respectent la version 4 exigée par la norme OpenAPI",
+    "Une équipe de cybersécurité analyse des UUID générés par des clients pour détecter d'éventuelles fuites d'adresses MAC (UUIDv1) dans les logs",
+    "Un administrateur de base de données valide les identifiants stockés dans un champ UUID PostgreSQL après un processus d'importation de données",
+    "Un architecte système teste la génération d'UUIDv5 en utilisant différents namespaces pour garantir l'unicité globale dans un environnement multi-locataire"
+  ]
+}

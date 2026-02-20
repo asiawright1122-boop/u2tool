@@ -1,0 +1,74 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "percentage": "百分比",
+  "shape": "形状",
+  "showAnimation": "显示动画",
+  "waveAnimation": "波浪动画",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "defaultTitle": "完成率",
+  "sampleTitle": "油箱液位",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "shapes": {
+    "circle": "圆形",
+    "rect": "矩形",
+    "roundRect": "圆角矩形",
+    "triangle": "三角形",
+    "diamond": "菱形",
+    "pin": "大头针",
+    "arrow": "箭头"
+  },
+  "tips": {
+    "title": "小贴士",
+    "tip1": "选择不同的形状以获得独特的视觉效果",
+    "tip2": "启用波浪动画以获得动态液体效果",
+    "tip3": "调整百分比以控制填充水平"
+  },
+  "detailed_description": "液态填充图表生成器是一款基于WebGL技术实现的可视化工具，通过Shader编程渲染动态液态效果。该工具采用贝塞尔曲线算法生成平滑波浪形态，结合粒子系统模拟液体流动物理特性，支持0-100%范围内的百分比动态映射。开发者可自定义波形频率、振幅、液体密度等核心参数，通过HSV色彩空间实现渐变填充效果。该工具特别适用于需要情感化数据展示的场景，如金融仪表盘、健康监测应用、游戏成就系统等。其核心技术在于将SVG路径数据实时转换为Canvas像素渲染，通过requestAnimationFrame实现60fps流畅动画。用户可导出包含完整交互逻辑的HTML组件，或生成Base64格式的静态图像资源。",
+  "usage_steps": [
+    "拖动百分比滑块设置目标数值（支持键盘微调±0.5%）",
+    "在色谱矩阵中选择主色系与高光渐变色（支持HEX/RGB切换）",
+    "通过波形控制面板调节正弦波频率（0.5-3.0Hz可调）",
+    "设置容器边框宽度（0-10px）及圆角半径（0-50%）参数",
+    "启用动态加载动画开关并设置初始偏移角度（-180°~180°）",
+    "点击'生成代码'获取包含CSS3硬件加速优化的完整实现方案"
+  ],
+  "usage_examples": [
+    "电商后台实时库存看板，使用红色警示波浪效果提示临界库存",
+    "智能手环健康数据报告，生成带光晕效果的心率达标率图表",
+    "区块链浏览器区块确认进度条，实现脉冲式液体填充动画",
+    "在线教育平台课程完成度徽章，导出SVG格式嵌入用户证书"
+  ],
+  "faqs": [
+    {
+      "question": "Liquid Fill Chart Generator 是免费的吗？",
+      "answer": "是的，Liquid Fill Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Liquid Fill Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Liquid Fill Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Liquid Fill Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Liquid Fill Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

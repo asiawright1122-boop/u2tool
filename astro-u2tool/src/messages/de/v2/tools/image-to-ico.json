@@ -1,0 +1,24 @@
+{
+  "sizes": "Größen",
+  "selectSizes": "Größen auswählen",
+  "convert": "In ICO konvertieren",
+  "download": "ICO herunterladen",
+  "dropzone": "Klicken oder Bild ziehen zum Hochladen",
+  "preview": "Vorschau",
+  "downloadIco": "ICO herunterladen",
+  "detailed_description": "Der Image to ICO Converter ermöglicht die präzise Transformation von Rastergrafiken in das mehrfachdimensionale ICO-Format, das für Windows-Systemicons erforderlich ist. Technisch gesehen extrahiert das Tool die Bilddaten aus Eingangsformaten wie PNG oder JPEG, skaliert diese durch adaptive Resampling-Algorithmen (z.B. Lanczos) auf standardkonforme Größen (16x16, 32x32, 48x48, 64x64, 128x128, 256x256, 512x512 Pixel) und packt sie in eine strukturierte ICONDIR-Datei mit eingebetteten BMP- oder PNG-Containern. Dies ist kritisch für Entwickler, die plattformübergreifende Anwendungen mit konsistenten Visuals erstellen oder Webanwendungen mit maßgeschneiderten Favicons ausstatten müssen. Die Implementierung nutzt WebAssembly-basierte Bildverarbeitungsbibliotheken für verlustfreie Konvertierung und ermöglicht optional die Einbeziehung von Alpha-Kanälen für Transparenzeffekte. Im Gegensatz zu einfachen Konvertern unterstützt dieses Tool die gleichzeitige Generierung von High-DPI-Icons für moderne 4K-Displays und gewährleistet die Einhaltung der Microsoft Windows Icon Resource Spezifikationen.",
+  "usage_steps": [
+    "1. Klicken Sie auf den 'Datei auswählen'-Button, um Ihr Quellbild im PNG/JPEG/BMP-Format hochzuladen.",
+    "2. Aktivieren Sie im Größen-Panel die gewünschten Zielauflösungen (z.B. 16x16, 256x256, 512x512) über die Checkboxen.",
+    "3. Wählen Sie im Qualitätsoptimizer zwischen 'Standard' (optimierte Größenanpassung) oder 'Verlustfrei' für exakte Pixel-Mapping.",
+    "4. Aktivieren Sie den 'Alpha-Kanal beibehalten'-Schalter, falls Transparenz im Ausgabebild erforderlich ist.",
+    "5. Klicken Sie auf 'Konvertieren', um den mehrfachdimensionalen ICO-Container im Browser zu generieren.",
+    "6. Laden Sie das Ergebnis über den 'Download'-Button herunter oder kopieren Sie den Base64-Encoded-String für Inline-Verwendung."
+  ],
+  "usage_examples": [
+    "Ein Webentwickler erstellt ein Favicon.ico mit 7 verschiedenen Größen für eine responsive Webseite, um die Darstellung auf Smartphones und 5K-Monitoren zu optimieren.",
+    "Ein Software-Engineer konvertiert ein SVG-Logo in ein mehrschichtiges ICO-Format für eine Windows-Desktopanwendung, die auf Windows 10 und 11 kompatibel bleiben muss.",
+    "Ein UI/UX-Designer generiert ein Iconset mit High-DPI-Unterstützung für eine Electron.js-App, die auf verschiedenen Bildschirmauflösungen konsistent angezeigt werden soll.",
+    "Ein Game Developer erstellt ein Systemicon für ein Steam-Spiel, das sowohl im Datei-Explorer als auch im Taskbar-Menü professionell skaliert dargestellt wird."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "uploadHint": "Cliquez pour télécharger ou glissez-déposez",
+  "supportedFormats": "PNG, JPG, GIF, SVG, WebP",
+  "copyDataUrl": "Copier l'URL de données",
+  "copyRawBase64": "Copier l'encodage Base64 brut",
+  "base64Output": "Sortie Base64",
+  "htmlImageTag": "Balise HTML Image",
+  "cssBackground": "Fond CSS",
+  "detailed_description": "Le convertisseur Image en Base64 permet d'intégrer des fichiers graphiques (PNG, JPEG, SVG) directement dans des documents HTML, CSS ou JavaScript via un encodage alphanumérique. Ce processus utilise l'algorithme Base64, qui transforme les données binaires de l'image en une chaîne de caractères ASCII compatible avec les standards web. Ce type de conversion est essentiel pour réduire le nombre de requêtes HTTP lors du chargement de pages web, notamment pour les petites images comme les icônes ou les logos. Le outil conserve les métadonnées de l'image originale, incluant son type MIME et sa taille, tout en générant un URI de données conforme au format 'data:[<mediatype>][;base64],<data>'. Techniquement, l'outil lit le fichier via l'API FileReader du navigateur, applique l'encodage binaire via l'algorithme RFC 4648, puis affiche le résultat dans un champ éditable. Cela évite les latences liées aux requêtes réseau pour les ressources statiques de petite taille, optimisant ainsi les performances web selon les recommandations du W3C.",
+  "usage_steps": [
+    "Sélectionner le fichier image via le bouton 'Parcourir' (formats acceptés : PNG, JPEG, GIF, SVG)",
+    "Activer l'option 'Préserver les métadonnées EXIF' si nécessaire",
+    "Choisir la qualité de compression (80% par défaut pour JPEG)",
+    "Cliquez sur 'Convertir' pour déclencher le traitement via l'API WebAssembly",
+    "Copier le résultat encodé depuis la zone de texte préformatée",
+    "Coller le code généré dans votre CSS ('background-image: url(data:image/png;base64,...)') ou HTML"
+  ],
+  "usage_examples": [
+    "Incorporer un favicon dans un courriel HTML pour éviter les problèmes de blocage des images externes",
+    "Optimiser le chargement d'une interface single-page application (SPA) en intégrant des icônes SVG encodées",
+    "Créer un fichier HTML autonome contenant toutes les images nécessaires pour une documentation offline",
+    "Intégrer des sprites d'authentification dans un CSS critique pour améliorer le score Lighthouse"
+  ],
+  "clear": "Effacer",
+  "copied": "Copié !"
+}

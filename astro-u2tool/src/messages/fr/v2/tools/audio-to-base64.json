@@ -1,0 +1,27 @@
+{
+  "dropzone": "Déposez le fichier audio ici ou cliquez pour télécharger",
+  "acceptedFormats": "Pris en charge : MP3, WAV, OGG, WebM, AAC, FLAC",
+  "errorNotAudio": "Veuillez sélectionner un fichier audio",
+  "errorReading": "Erreur de lecture du fichier",
+  "originalSize": "Taille originale",
+  "includeDataUri": "Inclure le préfixe URI des données",
+  "base64Output": "Sortie Base64",
+  "copy": "Copier",
+  "outputPlaceholder": "La sortie Base64 apparaîtra ici...",
+  "supportedFormats": "Formats pris en charge",
+  "detailed_description": "L'outil Audio vers Base64 permet de transformer des fichiers audio (WAV, MP3, OGG, etc.) en chaînes de caractères encodées en Base64, un format binaire-à-texte basé sur l'alphabet ASCII. Ce processus implique la lecture du fichier audio en tant que flux binaire, suivi d'une conversion en utilisant l'algorithme Base64 qui segmente les données en triplets d'octets pour les encoder en 4 caractères alphanumériques. Ce type d'encodage est essentiel pour intégrer des ressources audio directement dans des documents JSON, des balises HTML5 <audio> avec des URLs de données, ou des requêtes HTTP multipart sans dépendance externe. Les développeurs l'utiliseront notamment pour optimiser les performances des applications web en réduisant les requêtes HTTP, ou pour transmettre des fichiers audio dans des environnements n'acceptant que du texte pur, comme certaines APIs REST. Le processus s'appuie sur l'API FileReader du navigateur pour charger le fichier en mémoire, convertir le buffer binaire avec btoa(), et générer une sortie compatible avec les normes RFC 4648. L'outil gère également automatiquement la détection du type MIME du fichier audio pour garantir une intégration correcte dans les contextes web.",
+  "usage_steps": [
+    "1. Cliquez sur le bouton 'Parcourir' pour sélectionner un fichier audio (.wav, .mp3, .ogg, etc.)",
+    "2. Choisissez le type MIME souhaité dans le menu déroulant (audio/wav, audio/mpeg, audio/ogg)",
+    "3. Activez l'option 'Prévisualiser' pour voir un aperçu de la balise <audio> générée",
+    "4. Cliquez sur 'Convertir' pour lancer le processus de transformation binaire vers Base64",
+    "5. Copiez la chaîne Base64 générée depuis la zone de texte bleue",
+    "6. Utilisez le bouton 'Télécharger' pour exporter le résultat au format .txt ou .json"
+  ],
+  "usage_examples": [
+    "Intégrer un effet sonore de notification dans une application web sans recourir à un fichier externe, en l'incorporant directement dans le code HTML via data:audio/wav;base64,[chaîne]",
+    "Encoder des messages vocaux courts pour les transmettre dans le corps d'une requête JSON vers un service d'analyse de sentiment audio",
+    "Créer un jeu HTML5 où tous les assets audio sont stockés en Base64 dans le localStorage du navigateur pour fonctionner hors ligne",
+    "Générer des payloads de test pour valider le traitement des fichiers audio encodés en Base64 dans une API RESTful"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "detailed_description": "Le Générateur de Code à partir de Regex convertit les motifs d'expressions régulières en extraits de code prêts à utiliser pour divers langages.",
+  "usage_steps": [
+    "Saisissez le motif regex",
+    "Sélectionnez la langue cible",
+    "Choisissez l'opération",
+    "Configurer les drapeaux",
+    "Copier l'extrait de code"
+  ],
+  "usage_examples": [
+    "Générer du code re Python",
+    "Créer un code JS RegExp",
+    "Convertir en Pattern Java"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Traitement",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Saisissez votre entrée ici...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez saisir quelque chose"
+  },
+  "patternPlaceholder": "\\d+",
+  "testTextPlaceholder": "Texte de test",
+  "replacementPlaceholder": "Texte de remplacement",
+  "loadExample": "Charger un exemple",
+  "analyze": "Analyser",
+  "generate": "Générer",
+  "format": "Formater",
+  "convert": "Convertir",
+  "validate": "Valider",
+  "export": "Exporter",
+  "preview": "Aperçu",
+  "reset": "Réinitialiser",
+  "add": "Ajouter",
+  "remove": "Supprimer",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "settings": "Paramètres",
+  "options": "Options",
+  "results": "Résultats",
+  "noResults": "Aucun résultat",
+  "loading": "Chargement...",
+  "success": "Succès",
+  "failed": "Échec",
+  "warning": "Avertissement",
+  "info": "Information"
+}

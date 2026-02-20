@@ -1,0 +1,35 @@
+{
+  "time1": "Heure 1",
+  "time2": "Heure 2",
+  "operation": "Opération",
+  "add": "Ajouter",
+  "subtract": "Soustraire",
+  "difference": "Différence",
+  "calculate": "Calculer",
+  "result": "Résultat",
+  "hours": "Heures",
+  "minutes": "Minutes",
+  "seconds": "Secondes",
+  "format": "Format de l'Heure",
+  "format12h": "12 heures",
+  "format24h": "24 heures",
+  "totalMinutes": "Minutes Totales",
+  "totalSeconds": "Secondes Totales",
+  "detailed_description": "Le Time Calculator est un outil technique conçu pour effectuer des opérations précises sur des données temporelles, incluant l'addition, la soustraction et le calcul de différences entre deux horodatages. Contrairement aux outils basiques, il intègre des fonctionnalités avancées comme la gestion des fuseaux horaires (UTC/GMT/locales), la prise en compte des changements d'heure (été/hiver) et la conversion entre formats (HH:MM:SS, millisecondes, ISO 8601). Ce calculateur est indispensable pour les développeurs, gestionnaires de projets ou professionnels du transport nécessitant une précision millimétrique : planifier des synchronisations de logs serveur à travers le monde, calculer des durées de travail en tenant compte des pauses non continues, ou convertir des timestamps pour des API nécessitant des références temporelles absolues. Techniquement, l'outil utilise des algorithmes de normalisation basés sur la bibliothèque moment.js, avec validation des entrées via des expressions régulières (ex: ^\\d{2}:\\d{2}(?::\\d{2})?$) et gestion des débordements horaires (24h+). Les calculs internes exploitent les timestamps Unix pour éviter les erreurs de calendrier grégorien, en incluant les années bissextiles et les variations de 60/61 secondes.",
+  "usage_steps": [
+    "Sélectionnez les fuseaux horaires source et cible via les menus déroulants (ex: UTC+3 pour Moscou, UTC-5 pour New York).",
+    "Choisissez l'opération désirée : additionner des heures/minutes/secondes à un horaire, soustraire deux dates, ou calculer une différence absolue.",
+    "Saisissez vos horaires dans les champs formatés (HH:MM:SS ou JJ/MM/YYYY HH:MM), avec validation en temps réel par regex.",
+    "Activez/désactivez l'option 'Gérer les changements d'heure' pour ajuster automatiquement les calculs en cas de transition d'heure d'été/hiver.",
+    "Cliquez sur 'Calculer' pour obtenir le résultat en format choisi (durée totale en secondes, date ISO 8601, ou affichage 12/24h).",
+    "Utilisez le bouton 'Exporter' pour récupérer le résultat en JSON, CSV ou code JavaScript intégrant la date calculée."
+  ],
+  "usage_examples": [
+    "Un administrateur système calcule la durée totale d'incidents en UTC à partir de logs horodatés en JST (Japon) et PST (Californie), en tenant compte des décalages de +9h et -8h.",
+    "Un chef de projet détermine la charge réelle d'une équipe internationale en soustrayant les pauses non continues (ex: 12h30 à 13h15 locales) des heures de travail totales.",
+    "Un développeur convertit un timestamp Unix (1698765432) en date lisible pour un client en Australie (UTC+11), incluant le passage à l'heure d'été.",
+    "Un logisticien calcule la durée exacte d'un vol transcontinental partant à 22h30 CET et arrivant à 5h15 EET, en intégrant le changement de fuseau horaire."
+  ],
+  "24h": "24 heures",
+  "12h": "12 heures"
+}

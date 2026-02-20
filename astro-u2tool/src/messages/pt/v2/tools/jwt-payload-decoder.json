@@ -1,0 +1,25 @@
+{
+  "detailed_description": "O Decodificador de Carga JWT extrai e exibe o cabeçalho e a carga dos Tokens JSON Web sem a necessidade da chave secreta.",
+  "usage_steps": [
+    "Cole o token JWT",
+    "Token é decodificado automaticamente",
+    "Visualize informações do cabeçalho",
+    "Insira reivindicações de carga",
+    "Verifique a expiração"
+  ],
+  "usage_examples": [
+    "Depurar problemas de autenticação",
+    "Verificar expiração do token",
+    "Extrair informações do usuário dos tokens"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processar",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Insira sua entrada aqui...",
+  "outputPlaceholder": "Resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum input"
+  }
+}

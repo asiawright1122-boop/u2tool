@@ -1,0 +1,23 @@
+{
+  "inputPlaceholder": "'{'\n  \"name\": \"John\",\n  \"age\": 30,\n  \"email\": \"john@example.com\"\n'}'",
+  "generate": "Generar Schema",
+  "draft": "Draft de Schema",
+  "includeExamples": "Incluir Ejemplos",
+  "markRequired": "Marcar Todo Requerido",
+  "generatedSchema": "Schema Generado",
+  "detailed_description": "El Generador de Esquemas JSON es una herramienta especializada que automatiza la creación de esquemas conforme a las especificaciones JSON Schema Draft-07 y Draft-2020-12. Técnicamente, analiza datos JSON de entrada mediante algoritmos de inferencia de tipos para identificar estructuras, tipos de datos (incluyendo arrays, objetos y primitivas), restricciones de formato (como URI o expresiones regulares) y relaciones jerárquicas. Genera esquemas con keywords como $schema, $id, type, properties y validación cruzada mediante oneOf/allOf. Esta herramienta es crítica para desarrolladores que necesitan validar estructuras en APIs REST, estandarizar payloads de microservicios o documentar interfaces con OpenAPI. Su motor interno implementa estrategias de inferencia contextual para manejar casos complejos como tipos heterogéneos en arrays y detección automática de campos requeridos. Al soportar meta-esquemas, permite personalizar la rigidez de validación según entornos de producción o desarrollo.",
+  "usage_steps": [
+    "Pega tu JSON de ejemplo en el editor de código con resaltado syntaxético",
+    "Selecciona la versión de esquema deseada (Draft-07 o Draft-2020-12) en el menú desplegable",
+    "Haz clic en 'Generar Esquema' para activar el análisis de inferencia de tipos",
+    "Revisa el esquema resultante en el panel de salida con navegación por pestañas",
+    "Ajusta manualmente las propiedades inferidas usando los selectores de tipo de datos",
+    "Exporta el esquema validado en formato .json o comparte mediante enlace único"
+  ],
+  "usage_examples": [
+    "Validar respuestas consistentes en un API de comercio electrónico con variantes de productos",
+    "Generar esquemas de sensores IoT que acepten valores numéricos con tolerancias de formato",
+    "Documentar configuraciones de microservicios con campos obligatorios y valores por defecto",
+    "Crear esquemas recursivos para representar estructuras de árboles de categorías anidadas"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "detailed_description": "Le convertisseur Binaire à Texte traduit entre le code binaire et le texte lisible. Convertissez les séquences binaires telles que 01001000 01101001 en texte, ou encodez vos messages en format binaire.",
+  "usage_steps": [
+    "Sélectionnez le mode de conversion (Binaire à Texte ou Texte à Binaire)",
+    "Entrez le code binaire ou le texte dans le champ d'entrée",
+    "Cliquez sur Convertir pour voir le résultat",
+    "Copiez la sortie convertie",
+    "Utilisez le bouton d'échange pour passer rapidement aux modes"
+  ],
+  "usage_examples": [
+    "Décodez les messages binaires",
+    "Apprenez l'encodage binaire",
+    "Créez des messages secrets en binaire"
+  ],
+  "binaryToText": "Binaire → Texte",
+  "textToBinary": "Texte → Binaire",
+  "binaryInput": "Entrée Binaire",
+  "textInput": "Entrée Texte",
+  "binaryOutput": "Sortie Binaire",
+  "textOutput": "Sortie Texte",
+  "binaryPlaceholder": "Entrez le binaire (par exemple, 01001000 01101001)...",
+  "textPlaceholder": "Entrez le texte à convertir...",
+  "outputPlaceholder": "Le résultat apparaîtra ici...",
+  "convert": "Convertir",
+  "swap": "Échanger",
+  "copy": "Copier",
+  "copied": "Copié!",
+  "invalidBinary": "Entrée binaire invalide",
+  "exampleTitle": "Exemple",
+  "text": "Texte",
+  "binary": "Binaire"
+}

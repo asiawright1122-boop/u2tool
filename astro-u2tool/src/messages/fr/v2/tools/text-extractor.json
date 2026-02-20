@@ -1,0 +1,17 @@
+{
+  "detailed_description": "L'Extracteur de Texte est un outil technique conçu pour identifier et isoler des motifs spécifiques dans un corpus textuel. En utilisant des expressions régulières (regex) optimisées, il détecte des adresses e-mail conformes à la norme RFC 5322, des URL basées sur des motifs de protocoles (http, https), des numéros de téléphone au format E.164, et des adresses IPv4/IPv6. Le processus débute par une tokenisation du texte d'entrée, suivie d'un balayage itératif avec des regex adaptées à chaque type de données. Le résultat est structuré en JSON ou CSV, avec métadonnées (position, type, longueur). Cet outil est indispensable pour les développeurs souhaitant automatiser l'extraction de données non structurées, les analystes effectuant du nettoyage de données, ou les équipes de cybersécurité analysant des logs. Il permet de gagner des heures de traitement manuel, tout en garantissant une précision élevée grâce à des modèles validés. Par exemple, son moteur regex est configuré pour ignorer les adresses e-mail invalides ou les formats de numéros de téléphone ambigus, évitant ainsi des faux positifs courants.",
+  "usage_steps": [
+    "Collez votre texte dans la zone d'entrée située en haut de l'interface.",
+    "Sélectionnez les types de données à extraire via les cases à cocher (emails, URLs, téléphones, IPs).",
+    "Activez le mode 'Strict' pour des résultats conformes aux standards officiels (ex: RFC 5322).",
+    "Cliquez sur le bouton 'Extraire' pour déclencher le traitement.",
+    "Consultez les résultats dans le tableau interactif affichant type, valeur et position.",
+    "Téléchargez les données en format CSV ou JSON, ou copiez-les directement via le bouton 'Copier tout'."
+  ],
+  "usage_examples": [
+    "Un marketeur récupère toutes les adresses e-mail valides d'un rapport PDF pour créer une liste de diffusion.",
+    "Un administrateur système extrait des adresses IP suspectes à partir de fichiers logs Apache pour une analyse forensique.",
+    "Un data scientist nettoie un jeu de données en supprimant les numéros de téléphone au format non standard.",
+    "Un développeur teste la conformité des URL dans un CMS en comparant les résultats d'extraction avec des spécifications RFC."
+  ]
+}

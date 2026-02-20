@@ -1,0 +1,32 @@
+{
+  "separator": "Séparateur",
+  "sepNewline": "Nouvelle ligne",
+  "sepDash": "Tiret",
+  "sepSpace": "Espace",
+  "showOriginal": "Afficher le caractère original",
+  "loadSample": "Charger un exemple",
+  "textInput": "Entrée de texte",
+  "textPlaceholder": "Entrez le texte à convertir...",
+  "natoOutput": "Sortie NATO",
+  "natoPlaceholder": "L'alphabet phonétique apparaîtra ici...",
+  "copy": "Copier",
+  "convert": "Convertir",
+  "alphabet": "Alphabet",
+  "unknown": "Inconnu",
+  "sampleText": "Bonjour le monde 123",
+  "detailed_description": "Le convertisseur Texte vers NATO est un outil de traitement de texte basé sur l'algorithme de mappage des caractères ASCII vers l'alphabet phonétique de l'OTAN (International Radiotelephony Spelling Alphabet). Techniquement, chaque caractère alphabétique (A-Z, indépendamment de la casse) est transformé en un mot-code spécifique (ex: 'A' → 'Alpha', 'B' → 'Bravo') conformément à la norme UIT-R M.1677-1. Ce processus inclut une validation préalable des encodages UTF-8 et ASCII pour garantir l'intégrité des caractères non latins. L'outil intègre un mécanisme de filtrage des caractères non alphanumériques, remplaçant les chiffres par leur équivalent phonétique (ex: '0' → 'Nadazero') et ignorant les symboles spéciaux. Utile dans des contextes critiques comme les communications aériennes civiles/militaires, la transcription de codes sensibles en environnements bruyants (ex: tours de contrôle), ou la normalisation de données vocales pour l'IA, l'outil inclut une option de conversion inversée (NATO vers texte) pour vérification bidirectionnelle. Son moteur utilise un dictionnaire JSON préchargé en mémoire pour des conversions en temps réel (<50ms).",
+  "usage_steps": [
+    "1. Ouvrez l'interface web et localisez la zone de saisie principale intitulée 'Texte brut' (format UTF-8 accepté)",
+    "2. Cochez l'option 'Conserver les espaces' si vous souhaitez préserver la structure des mots",
+    "3. Activez le mode 'Conversion numérique' pour inclure les chiffres dans le format OTAN étendu",
+    "4. Cliquez sur le bouton 'Convertir vers NATO' pour déclencher le traitement par blocs de caractères",
+    "5. Utilisez la fonction 'Copier dans le presse-papiers' pour récupérer la sortie formatée en XML structuré",
+    "6. Pour les gros volumes, téléchargez le résultat au format CSV via le lien 'Exporter les données'"
+  ],
+  "usage_examples": [
+    "Un contrôleur aérien transcrit manuellement un indicatif d'appel 'AFR5723' en 'Alpha-Foxtrot-Romeo-Five-Seven-Two-Three' pour communication radio",
+    "Un officier de marine chiffre un message opérationnel 'RENDEZVOUS 21H00' en format phonétique pour transmission par radio analogique",
+    "Un ingénieur en reconnaissance vocale teste la précision de transcription d'un assistant IA sur des données converties en alphabet OTAN",
+    "Un radioamateur prépare une liste de codes QRM en format phonétique pour optimiser les contacts HF en conditions de brouillage"
+  ]
+}

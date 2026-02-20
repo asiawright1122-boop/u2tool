@@ -1,0 +1,23 @@
+{
+  "detailed_description": "iCal Parser es una herramienta en línea para leer y visualizar archivos de calendario ICS. Sube un archivo ICS o pega los datos iCal sin procesar para ver todos los eventos mostrados en un formato de tabla limpio y legible. El analizador extrae títulos de eventos, horarios de inicio y fin, ubicaciones, descripciones, asistentes y reglas de recurrencia. Perfecto para depurar integraciones de calendario, ver exportaciones de calendario o extraer datos de eventos de archivos ICS. Soporta eventos únicos y series de eventos recurrentes con manejo completo de zonas horarias.",
+  "usage_steps": [
+    "Sube el archivo ICS o pega el contenido",
+    "Visualiza los eventos analizados",
+    "Exporta a JSON"
+  ],
+  "usage_examples": [
+    "Ver exportaciones de calendario",
+    "Extraer datos de eventos"
+  ],
+  "parse": "Analizar",
+  "uploadFile": "Subir Archivo",
+  "icsContent": "Contenido iCal",
+  "foundEvents": "Eventos Encontrados",
+  "summary": "Resumen",
+  "start": "Inicio",
+  "end": "Fin",
+  "location": "Ubicación",
+  "unnamed": "Evento Sin Nombre",
+  "exportJSON": "Exportar JSON",
+  "inputPlaceholder": "Pegue el contenido iCal/ICS aquí o suba un archivo..."
+}

@@ -1,0 +1,38 @@
+{
+  "detailed_description": "El CORS Tester permite verificar configuraciones de políticas de seguridad cruzada (CORS) mediante la simulación de solicitudes HTTP desde diferentes orígenes. Esta herramienta especializada ejecuta pruebas de preflight request para evaluar encabezados como Access-Control-Allow-Origin, Access-Control-Allow-Methods y Access-Control-Allow-Headers, detectando inconsistencias que podrían provocar errores de seguridad en navegadores. Los desarrolladores necesitan este instrumento para diagnosticar problemas en APIs RESTful que fallan al recibir solicitudes desde aplicaciones frontend, validar configuraciones de servidores proxy inverso, o depurar extensiones de navegador que requieren acceso a recursos externos. Al generar solicitudes personalizadas con credenciales o encabezados específicos, la herramienta desglosa las respuestas del servidor, mostrando detalles de los encabezados CORS y el estado HTTP obtenido. Su motor interno utiliza XMLHttpRequest y Fetch API para comparar comportamientos entre navegadores, revelando discrepancias en el manejo de políticas de seguridad.",
+  "usage_steps": [
+    "1. Ingresa la URL del endpoint a probar en el campo 'Dirección destino'.",
+    "2. Selecciona el método HTTP (GET, POST, PUT, DELETE, etc.) desde el menú desplegable 'Método de solicitud'.",
+    "3. Configura encabezados personalizados en la sección 'Headers adicionales' usando formato JSON key-value.",
+    "4. Activa la opción 'Con credenciales' si la prueba requiere envío de cookies o tokens de autenticación.",
+    "5. Haz clic en 'Ejecutar prueba CORS' para iniciar la simulación desde el origen ficticio del tool.",
+    "6. Analiza el informe detallado con el estado HTTP, encabezados de respuesta y diagnóstico de políticas CORS."
+  ],
+  "usage_examples": [
+    "Un desarrollador frontend prueba una API Node.js que devuelve errores 403 en solicitudes desde React, verificando si el servidor envía Access-Control-Allow-Origin correctamente.",
+    "Un DevOps valida la configuración de un proxy NGINX que debe permitir solicitudes desde dominios específicos, comprobando encabezados CORS en respuestas estaticas.",
+    "Un equipo de QA detecta inconsistencias en la implementación de CORS entre Chrome y Firefox al usar Fetch API con credenciales en una aplicación de pago.",
+    "Un desarrollador de extensiones de navegador prueba el acceso a una API pública desde un content script, asegurándose de que los encabezados de solicitud pasan las políticas de seguridad."
+  ],
+  "url": "URL a Probar",
+  "origin": "Origen",
+  "method": "Método",
+  "test": "Probar CORS",
+  "results": "Resultados",
+  "corsHeaders": "Encabezados CORS",
+  "allowed": "Permitido",
+  "notAllowed": "No Permitido",
+  "urlPlaceholder": "https://api.example.com/endpoint",
+  "urlToTest": "URL a probar",
+  "testCors": "Probar CORS",
+  "loadExample": "Cargar ejemplo",
+  "whatIsCors": "¿Qué es CORS?",
+  "corsExplanation": "El intercambio de recursos de origen cruzado (CORS) es una función de seguridad que controla cómo las páginas web pueden solicitar recursos de diferentes dominios.",
+  "corsBlocked": "CORS bloqueado",
+  "corsBlockedDescription": "La solicitud fue bloqueada por la política CORS",
+  "corsEnabled": "CORS habilitado",
+  "corsEnabledAll": "CORS habilitado para todos los orígenes",
+  "corsEnabledNoHeader": "CORS habilitado (sin encabezado Access-Control-Allow-Origin)",
+  "testing": "Probando...",
+  "unknown": "Desconocido"
+}

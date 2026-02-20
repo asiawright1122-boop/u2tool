@@ -1,0 +1,22 @@
+{
+  "enterValue": "Enter value",
+  "swapUnits": "Swap units",
+  "detailed_description": "The Unit Converter tool provides precise multi-domain unit transformations using standardized conversion algorithms. Built on a foundation of SI units and imperial measurement equivalencies, it handles dimensional analysis for 15+ unit categories including length (meters to miles), mass (grams to ounces), thermodynamic temperature (Celsius to Kelvin), and derived units like area (square feet to hectares) and volume. The tool employs IEEE 754 floating-point precision to maintain calculation accuracy up to 15 decimal places, crucial for engineering calculations and scientific research. Users benefit from its ability to manage complex conversions requiring multiple-step dimensional analysis, such as converting BTU/hr to kilowatts for HVAC load calculations or transforming geological measurements between cubic kilometers and acre-feet. The backend uses a matrix-based conversion engine that cross-references over 500 unit pairs, eliminating cumulative conversion errors through direct base-unit normalization.",
+  "usage_steps": [
+    "Select a conversion category from the segmented control: Length, Mass, Temperature, Area, Volume, or Energy",
+    "Enter the source value in the primary input field with up to 15 decimal precision support",
+    "Choose source and target units from the dual-column dropdown menus featuring over 50 unit symbols",
+    "Toggle the 'Bidirectional' switch to enable simultaneous reverse conversion display",
+    "Adjust significant figures using the precision slider (1-15 digits) for engineering notation requirements",
+    "Click 'Copy' to export conversion results in LaTeX-ready format for technical documentation"
+  ],
+  "usage_examples": [
+    "A mechanical engineer converting 3500 psi to megapascals for material stress analysis calculations",
+    "A chef scaling a recipe by transforming 1.25 cups (US customary) to deciliters for metric kitchen equipment",
+    "An astrophysicist converting 14.7 light-years to parsecs for stellar distance calculations",
+    "A land surveyor transforming 220 acres to square kilometers for international property documentation"
+  ],
+  "copied": "Copied!",
+  "copy": "Copy",
+  "result": "Result"
+}

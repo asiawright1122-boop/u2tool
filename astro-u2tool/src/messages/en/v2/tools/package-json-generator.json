@@ -1,0 +1,29 @@
+{
+  "detailed_description": "The package.json Generator is a precision tool for creating and configuring Node.js project manifests with programmatic accuracy. This utility automates the generation of package.json files by allowing developers to specify project metadata, dependency hierarchies, and execution scripts through a structured interface. Unlike manual editing, which risks syntax errors or version mismatch conflicts, this tool enforces JSON schema validation and semantic versioning conventions while supporting npm, yarn, and pnpm package managers. Developers can define complex dependency trees with version ranges, peerDependencies, and optionalDependencies through an intuitive form-based input system. The tool also implements ESLint-compatible configuration injection for script hooks, enabling automatic integration with build tools like Webpack or Babel. Technical advantages include automatic resolution of module resolution paths, creation of standardized test/command scripts, and enforcement of organizational dependency policies through preset templates. This is particularly valuable for teams migrating legacy projects, initializing microservices with specific runtime requirements, or ensuring consistency across monorepos.",
+  "usage_steps": [
+    "Select framework preset (React, Node.js, Vue, etc.) to auto-populate required dependencies",
+    "Input project metadata including name, version, description, and author using npm naming conventions",
+    "Add dependencies via searchable dropdown with version range selectors (exact, caret, tilde)",
+    "Configure script commands using predefined templates (start, build, test) or custom Node.js CLI commands",
+    "Enable advanced options like private repository flags, module type (CommonJS/ESM), or engine restrictions",
+    "Validate generated output with built-in JSONLint and download package.json with one-click deployment"
+  ],
+  "usage_examples": [
+    "Creating a Node.js API service with Express, including devDependencies for Babel and ESLint with appropriate script hooks",
+    "Generating a React application manifest with Webpack build scripts, CSS-in-JS library dependencies, and Husky git hooks",
+    "Building a CLI tool package.json with bin mappings, commander.js integration, and cross-platform execution permissions",
+    "Migrating a legacy Bower project by converting dependencies to npm format with version range optimization and script modernization"
+  ],
+  "version": "Version",
+  "main": "Main",
+  "author": "Author",
+  "license": "License",
+  "type": "Type",
+  "keywords": "Keywords",
+  "keywordsPlaceholder": "Enter keywords separated by comma",
+  "private": "Private",
+  "scripts": "Scripts",
+  "scriptName": "Script Name",
+  "scriptCommand": "Command",
+  "commonScripts": "Common Scripts"
+}

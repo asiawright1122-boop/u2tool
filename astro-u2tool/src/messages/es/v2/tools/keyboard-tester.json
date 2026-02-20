@@ -1,0 +1,36 @@
+{
+  "pressAnyKey": "Presione cualquier tecla para probar",
+  "keyCode": "Código de Tecla",
+  "key": "Tecla",
+  "code": "Código",
+  "location": "Ubicación",
+  "modifiers": "Modificadores",
+  "shift": "Shift",
+  "ctrl": "Ctrl",
+  "alt": "Alt",
+  "meta": "Meta",
+  "keyHistory": "Historial de Teclas",
+  "clearHistory": "Limpiar Historial",
+  "lastKeyPressed": "Última Tecla Presionada",
+  "clear": "Limpiar",
+  "noKeysPressed": "Aún no se han presionado teclas",
+  "tips": "Consejos",
+  "tip1": "Esta herramienta se puede usar para probar si todas las teclas de su teclado funcionan correctamente",
+  "tip2": "Algunas teclas (como Fn) pueden no ser detectadas por el navegador",
+  "tip3": "El historial de teclas almacena hasta 10 pulsaciones recientes",
+  "detailed_description": "El Keyboard Tester es una herramienta técnica que permite a desarrolladores analizar eventos de teclado a nivel de DOM, mostrando códigos de tecla (keyCode), identificadores de tecla (key/charCode) y estados de modificadores en tiempo real. Esta herramienta es esencial para depurar problemas de compatibilidad entre diferentes diseños de teclado, validar implementaciones de accesibilidad y probar atajos personalizados en aplicaciones web. Al capturar eventos de 'keydown', 'keyup' y 'keypress', muestra información como el código físico del teclado (scanCode), el valor del carácter generado, y el estado de teclas modificadoras (Shift, Ctrl, Alt, etc.). Los desarrolladores pueden verificar cómo los navegadores interpretan las pulsaciones, incluyendo teclas especiales como multimedia o funciones de hardware. La interfaz visualiza en tiempo real el árbol de propiedades del evento del teclado, permitiendo inspeccionar detalles como 'location', 'repeat' y 'isComposing', lo cual es crítico para depurar implementaciones de editores de texto o juegos que requieren precisión en la entrada de teclado.",
+  "usage_steps": [
+    "Accede a la herramienta y observa el panel de visualización en tiempo real.",
+    "Presiona cualquier tecla para ver su código numérico y representación de carácter en la tabla de eventos.",
+    "Mantén pulsadas teclas modificadoras (Shift/Ctrl/Alt) para ver su estado actualizado en el indicador de modificadores.",
+    "Haz clic en 'Mostrar Detalles' para expandir el árbol de propiedades del evento del teclado (DOM event properties).",
+    "Activa el modo oscuro usando el interruptor 'Tema' para mejor visibilidad en entornos con poca luz.",
+    "Usa la sección 'Historial' para revisar eventos recientes y verificar secuencias de pulsación complejas."
+  ],
+  "usage_examples": [
+    "Un desarrollador web prueba atajos de teclado personalizados para una aplicación de edición de código, verificando que no haya conflictos con combinaciones del sistema operativo.",
+    "Un ingeniero de accesibilidad valida que un lector de pantalla interprete correctamente secuencias de teclas en un teclado de distribución AZERTY.",
+    "Un creador de juegos web depura problemas de entrada en teclados mecánicos con teclas multimedia que generan scanCodes no estándar.",
+    "Un QA tester verifica que las teclas de función (F1-F12) en un portátil Macbook con Touch Bar funcionen correctamente dentro de una aplicación web."
+  ]
+}

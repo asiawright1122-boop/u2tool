@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The Open Graph Generator is a specialized tool that creates compliant Open Graph Protocol (OGP) metadata for web content. This tool constructs structured metadata tags—including og:title, og:description, og:image, og:url, and og:type—that social media platforms and messaging apps use to render rich previews when URLs are shared. Developers and marketers need this tool to control how their content appears on networks like Facebook, LinkedIn, and Discord, ensuring visual consistency and engagement. The generator validates input parameters against OGP specifications, enforcing correct MIME types for images, character limits for text fields, and canonical URL formatting. It also auto-detects missing metadata properties and cross-checks Twitter Card compatibility. Users input content details into form fields, and the tool outputs a complete <head> section snippet with properly ordered meta tags, including fallback properties like og:site_name. Advanced features include real-time debugging indicators that flag issues such as oversized images (>5MB) or insecure HTTP image URLs, which many social crawlers reject.",
+  "usage_steps": [
+    "Enter the canonical Page URL in the dedicated input field, ensuring it matches your server's HTTPS configuration.",
+    "Specify the content's Open Graph type using the Object Type dropdown (e.g., 'article', 'product', 'video.movie').",
+    "Input the title text (max 60 characters) that will appear as the preview's headline in social feeds.",
+    "Paste a high-resolution image URL (1200x630 pixels recommended) into the Image Source field, with automatic validation for file size and format.",
+    "Configure optional metadata including og:locale, og:video:url, or product:price:amount using the Expandable Fields toggle.",
+    "Click the 'Generate Code' button to produce a complete HTML meta tag block, then copy the output to your page's <head> section."
+  ],
+  "usage_examples": [
+    "A content creator preparing a Medium blog post adds their article URL, featured image, and excerpt to ensure Facebook shares display the correct thumbnail and description.",
+    "An e-commerce developer generates product-specific Open Graph tags for a Shopify store, embedding price and availability metadata visible in WhatsApp share previews.",
+    "A video hosting platform uses the tool to create dynamic og:video:type tags for HTML5 video content, ensuring compatibility with LinkedIn's crawler.",
+    "A PR agency builds press release pages with custom og:site_name values and Twitter Card integration to maintain brand consistency across social shares."
+  ]
+}

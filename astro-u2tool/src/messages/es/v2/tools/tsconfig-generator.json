@@ -1,0 +1,27 @@
+{
+  "detailed_description": "El Generador de TSConfig te ayuda a crear archivos de configuración de TypeScript personalizados para tus proyectos. Configura opciones del compilador, incluyendo la versión de ECMAScript objetivo, sistema de módulos, ajustes de modo estricto y alias de ruta. Elige entre presets para React, Node.js, desarrollo de bibliotecas o crea una configuración personalizada. La herramienta explica cada opción y genera un archivo tsconfig.json completo con comentarios que explican los ajustes.",
+  "usage_steps": [
+    "Selecciona un preset de tipo de proyecto (React, Node.js, Biblioteca, etc.)",
+    "Elige la versión de ECMAScript objetivo",
+    "Configura el sistema de módulos y resolución",
+    "Habilita las opciones de modo estricto según sea necesario",
+    "Configura alias de ruta para importaciones",
+    "Configura el directorio de salida y otras opciones",
+    "Haz clic en Generar y copia el archivo tsconfig.json"
+  ],
+  "usage_examples": [
+    "Configura TypeScript para un nuevo proyecto de React",
+    "Configura TypeScript para un backend de Node.js",
+    "Crea un archivo tsconfig para una biblioteca de paquetes npm",
+    "Configura alias de ruta para importaciones más limpias"
+  ],
+  "presets": "Preajustes",
+  "target": "Objetivo",
+  "module": "Módulo",
+  "moduleResolution": "Resolución de módulos",
+  "outDir": "Directorio de salida",
+  "rootDir": "Directorio raíz",
+  "lib": "Bibliotecas",
+  "generate": "Generar",
+  "download": "Descargar"
+}

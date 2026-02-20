@@ -1,0 +1,30 @@
+{
+  "checking": "Checking...",
+  "check": "Check SSL",
+  "valid": "SSL Certificate Valid",
+  "invalid": "SSL Certificate Invalid",
+  "issuer": "Issuer",
+  "subject": "Subject",
+  "validFrom": "Valid From",
+  "validTo": "Valid To",
+  "daysRemaining": "Days Remaining",
+  "days": "days",
+  "protocol": "Protocol",
+  "serialNumber": "Serial Number",
+  "note": "💡 Note: This is a demo version. For production use, integrate with a backend SSL checking API.",
+  "detailed_description": "The SSL Certificate Checker analyzes X.509 digital certificates used in TLS/SSL protocols to secure web communications. This tool connects to a specified domain's HTTPS endpoint, retrieves the presented certificate chain, and performs validation checks including expiration dates, issuer trust hierarchy, Subject Alternative Name (SAN) coverage, key usage constraints, and revocation status via OCSP/CRL. Technically, it uses a browser-based WebAssembly implementation of OpenSSL to parse ASN.1-encoded certificate structures, verify signature algorithms, and cross-check root certificates against Mozilla's CA store. Users need this tool to diagnose mixed-content warnings, confirm certificate transparency logging compliance, validate SAN configurations for multi-domain setups, and proactively identify imminent certificate expiration risks. The tool's unique value lies in its ability to decode complex certificate extensions like Authority Information Access (AIA) and display raw DER-encoded bytes for forensic analysis.",
+  "usage_steps": [
+    "Enter the target domain name in the 'Host' field and specify non-standard TLS ports (e.g., 8443) if required",
+    "Click 'Check Certificate' to initiate a TLS handshake simulation with server name indication (SNI) support",
+    "Review the parsed certificate fields including Not Before/After timestamps, public key algorithm (RSA/ECDSA), and signature hash algorithm (SHA-256/384)",
+    "Inspect the 'Subject Alternative Names' section to verify coverage of all required subdomains and DNS aliases",
+    "Check the 'Revocation Status' indicator showing OCSP/CRL results and nextUpdate timestamps",
+    "Download the PEM-formatted certificate chain or export JSON analysis for audit documentation"
+  ],
+  "usage_examples": [
+    "A DevOps engineer verifies wildcard certificate coverage across microservices by checking SAN entries for *.api.example.com and associated subdomains",
+    "A security auditor confirms HTTP Public Key Pinning (HPKP) headers match the pin-sha256 values extracted from the certificate's SPKI hash",
+    "A web developer troubleshoots 'NET::ERR_CERT_COMMON_NAME_INVALID' by cross-referencing the certificate's CN/SAN with the server's DNS records",
+    "A compliance officer checks Extended Validation (EV) certificate fields to ensure organization name matches legal entity registered with the CA"
+  ]
+}

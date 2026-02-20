@@ -1,0 +1,37 @@
+{
+  "serverUrl": "WebSocket服务器URL",
+  "connect": "连接",
+  "disconnect": "断开连接",
+  "connecting_btn": "正在连接...",
+  "connecting": "正在连接到{url}...",
+  "connected": "连接成功",
+  "disconnected": "已断开连接（代码：{code})",
+  "errorConnection": "连接错误发生",
+  "errorInvalidUrl": "无效的WebSocket URL",
+  "quickConnect": "快速连接",
+  "statusConnected": "已连接",
+  "statusConnecting": "正在连接...",
+  "statusDisconnected": "已断开",
+  "messages": "消息",
+  "clear": "清除",
+  "noMessages": "暂无消息。连接到WebSocket服务器开始。",
+  "messagePlaceholder": "输入消息...",
+  "send": "发送",
+  "note": "注意",
+  "noteText": "一些WebSocket服务器可能由于CORS限制而无法从浏览器接受连接。回声服务器是一个公共测试服务器，它会回显您发送的任何消息。",
+  "detailed_description": "WebSocket测试工具是一款强大的在线工具，用于实时测试和调试WebSocket连接。开发者可以连接到任何WebSocket服务器，发送消息，并立即查看传入的响应。该工具支持标准的WebSocket协议（ws://和wss://），非常适合测试聊天应用、实时数据流、游戏服务器和其他实时通信系统。具有连接状态监控、消息历史记录和快速连接测试服务器等功能，对于任何使用基于WebSocket的应用的开发者来说都是必不可少的。所有测试都在您的浏览器中直接进行，不会将数据发送到外部服务器。",
+  "usage_steps": [
+    "输入WebSocket服务器URL（ws://或wss://）",
+    "点击连接以建立WebSocket连接",
+    "在输入字段中输入您的消息",
+    "点击发送将消息传输到服务器",
+    "在消息历史记录面板中查看收到的消息",
+    "测试完成后点击断开连接"
+  ],
+  "usage_examples": [
+    "测试WebSocket回声服务器以验证连接功能",
+    "调试实时聊天应用的消息处理",
+    "监控WebSocket API的实时数据流",
+    "在开发过程中验证WebSocket服务器的响应"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "detailed_description": "يتيح لك اختبار API إرسال طلبات HTTP إلى أي نقطة نهاية API. يدعم جميع طرق HTTP والرؤوس المخصصة وجسم الطلب ويعرض الاستجابات المنسقة.",
+  "usage_steps": [
+    "أدخل عنوان URL لنقطة نهاية API",
+    "حدد طريقة HTTP",
+    "أضف الرؤوس إذا لزم الأمر",
+    "أدخل الجسم لـ POST/PUT",
+    "أرسل الطلب واعرض الاستجابة"
+  ],
+  "usage_examples": [
+    "اختبار نقاط نهاية API",
+    "تصحيح استجابات API",
+    "استكشاف واجهات API الخارجية"
+  ],
+  "url": "URL",
+  "method": "الطريقة",
+  "headers": "الرؤوس",
+  "body": "الجسم",
+  "send": "إرسال الطلب",
+  "response": "الاستجابة",
+  "status": "الحالة",
+  "time": "الوقت",
+  "addHeader": "إضافة رأس",
+  "urlPlaceholder": "https://api.example.com/endpoint",
+  "loadExample": "تحميل مثال",
+  "bodyPlaceholder": "نص الطلب (JSON)...",
+  "responseBody": "نص الاستجابة",
+  "responseHeaders": "رؤوس الاستجابة",
+  "sending": "جاري الإرسال...",
+  "headerNamePlaceholder": "اسم الترويسة",
+  "headerValuePlaceholder": "القيمة"
+}

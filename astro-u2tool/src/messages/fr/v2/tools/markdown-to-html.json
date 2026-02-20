@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Notre outil Markdown vers HTML est un convertisseur syntaxique avancé basé sur le moteur CommonMark et compatible avec les extensions GitHub Flavored Markdown (GFM). Il effectue une analyse lexicale et syntaxique précise des éléments Markdown (en-têtes, listes imbriquées, blocs de code avec coloration, tableaux alignés) pour générer du code HTML5 structuré et valide. Conçu pour les développeurs et rédacteurs techniques, il permet d'automatiser la génération de documentation web dynamique, la création de pages statiques Jekyll ou la préparation de contenu éditorial HTML à partir de fichiers .md. Le processus de conversion s'appuie sur un parseur AST (Abstract Syntax Tree) qui préserve les attributs personnalisés HTML et intègre une option de nettoyage sécurisé (sanitize) pour éviter les vulnérabilités XSS. Le traitement s'effectue intégralement côté client grâce à WebAssembly, garantissant confidentialité des données et performances optimisées même sur des fichiers volumineux.",
+  "usage_steps": [
+    "Collez votre texte Markdown dans l'éditeur multiligne avec coloration syntaxique",
+    "Sélectionnez la variante de conversion (CommonMark, GFM ou Pandoc) via le sélecteur",
+    "Activez/désactivez les options avancées (génération de TOC, conversion MathJax, préservation des commentaires HTML)",
+    "Cliquez sur le bouton 'Convertir' pour déclencher l'analyse syntaxique en temps réel",
+    "Consultez la prévisualisation HTML dans le panneau de droite ou basculez en mode source pour copier le code",
+    "Téléchargez le résultat au format .html ou exportez-le directement vers un CMS via l'API intégrée"
+  ],
+  "usage_examples": [
+    "Un développeur convertit son fichier README.md (avec diagrammes Mermaid) en page HTML pour son portefeuille professionnel",
+    "Un rédacteur de documentation technique transforme des chapitres Markdown en articles compatibles avec un système de gestion de contenu (CMS) propriétaire",
+    "Un enseignant génère des supports de cours HTML à partir de notes Markdown, avec inclusion automatique de numéros de lignes dans les exemples de code",
+    "Un designer UI prévisualise l'intégration d'un email HTML rédigé en Markdown avec des composants interactifs en JavaScript"
+  ]
+}

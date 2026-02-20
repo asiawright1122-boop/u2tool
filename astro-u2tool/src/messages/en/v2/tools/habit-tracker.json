@@ -1,0 +1,31 @@
+{
+  "detailed_description": "Habit Tracker is a simple yet powerful tool for building and maintaining daily habits. Track multiple habits, view your streaks, and stay motivated with visual progress indicators. All data is stored locally in your browser.",
+  "usage_steps": [
+    "Add a new habit with a name and icon",
+    "Click on a habit to mark it complete for today",
+    "View your current streak for each habit",
+    "Track your weekly completion rate",
+    "Delete habits you no longer want to track"
+  ],
+  "usage_examples": [
+    "Track daily exercise routines",
+    "Monitor reading habits",
+    "Build meditation practice"
+  ],
+  "addHabit": "Add Habit",
+  "habit": "Habit",
+  "habitName": "Habit Name",
+  "habitPlaceholder": "Enter habit name...",
+  "selectIcon": "Select Icon",
+  "add": "Add",
+  "cancel": "Cancel",
+  "streak": "Streak",
+  "days": "days",
+  "today": "Today",
+  "completed": "Completed",
+  "noHabits": "No habits yet. Add your first habit!",
+  "deleteConfirm": "Delete this habit?",
+  "completedToday": "Completed today",
+  "weeklyProgress": "Weekly Progress",
+  "tip": "Tip: Click on a day to mark it complete. Build your streak by completing habits daily!"
+}

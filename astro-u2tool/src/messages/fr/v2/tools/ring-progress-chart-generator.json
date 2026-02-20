@@ -1,0 +1,46 @@
+{
+  "chartTitle": "Titre du Graphique",
+  "chartTitlePlaceholder": "Entrez le titre du graphique",
+  "colorTheme": "Thème de Couleur",
+  "label": "Étiquette",
+  "labelPlaceholder": "Entrez l'étiquette",
+  "percentage": "Pourcentage",
+  "ringWidth": "Largeur du Cercle",
+  "showAnimation": "Afficher l'Animation",
+  "loadSample": "Charger un Échantillon",
+  "downloadPng": "Télécharger PNG",
+  "downloadSvg": "Télécharger SVG",
+  "defaultTitle": "Progrès",
+  "defaultLabel": "Complétion",
+  "sampleTitle": "Progrès du Projet",
+  "sampleLabel": "Complété",
+  "chartPreview": "Aperçu du Graphique",
+  "chartSettings": "Paramètres du Graphique",
+  "themeDefault": "Par défaut",
+  "themeOcean": "Océan",
+  "themeSunset": "Coucher de Soleil",
+  "themeForest": "Forêt",
+  "tips": {
+    "title": "Conseils",
+    "tip1": "Déplacez le curseur pour ajuster la valeur du pourcentage",
+    "tip2": "Personnalisez la largeur du cercle pour des effets visuels différents",
+    "tip3": "Activer l'animation pour un effet de chargement dynamique"
+  },
+  "detailed_description": "Le générateur de diagrammes à anneaux progressifs est un outil technique permettant de créer des visualisations circulaires dynamiques pour représenter des pourcentages ou des états de progression. Contrairement aux graphiques standards, cet outil utilise le rendu vectoriel SVG (Scalable Vector Graphics) pour générer des anneaux paramétrables avec des segments de cercle (arcs) modifiables. Les utilisateurs peuvent ajuster la largeur de l'anneau, les dégradés de couleur, les effets d'animation (comme les fonctions d'interpolation CSS ou JavaScript) et même la résolution du tracé (via les propriétés 'stroke-dasharray' et 'stroke-linecap'). Ce type de visualisation est particulièrement utile pour intégrer des indicateurs de statut dans des tableaux de bord web, des applications de suivi de santé (ex: pourcentage de calories quotidiennes), ou des interfaces IoT affichant des données en temps réel. Le moteur interne calcule automatiquement les angles de départ et d'arrivée de l'arc en fonction du pourcentage saisi, tout en permettant l'overlay de texte personnalisé (comme des labels ou des valeurs absolues). La compatibilité avec les frameworks frontaux comme React ou Vue.js est assurée via l'export des composants codés.",
+  "usage_steps": [
+    "1. Ajustez le curseur 'Pourcentage' pour définir la valeur numérique (0-100) à visualiser.",
+    "2. Utilisez les sélecteurs de couleur 'Remplissage' et 'Arrière-plan' pour personnaliser les tons de l'anneau.",
+    "3. Modifiez l'épaisseur de l'anneau via le champ 'Largeur du trait' (valeurs en pixels, 2 à 20px).",
+    "4. Activez l'option 'Animation' pour ajouter un effet de transition fluide (durée ajustable en millisecondes).",
+    "5. Cochez 'Afficher la valeur' pour superposer le pourcentage numérique au centre de l'anneau.",
+    "6. Cliquez sur 'Exporter' pour télécharger le code SVG ou PNG, ou copiez le snippet HTML/CSS généré."
+  ],
+  "usage_examples": [
+    "Un développeur web intègre un anneau de progression animé pour illustrer le statut de chargement d'un formulaire long (ex: 67% de complété).",
+    "Un designer UI crée un tableau de bord médical avec des anneaux colorés représentant les métriques de fréquence cardiaque en temps réel.",
+    "Une application de gestion de projets utilise des anneaux statiques pour afficher le pourcentage de tâches réalisées par équipe.",
+    "Un ingénieur IoT développe une interface de suivi énergétique avec des anneaux à dégradé radial reflétant le niveau de charge de batteries."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

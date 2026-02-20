@@ -1,0 +1,24 @@
+{
+  "sizes": "Sizes",
+  "selectSizes": "Select Sizes",
+  "convert": "Convert to ICO",
+  "download": "Download ICO",
+  "dropzone": "Click or drag image to upload",
+  "preview": "Preview",
+  "downloadIco": "Download ICO",
+  "detailed_description": "The Image to ICO Converter enables developers to generate Windows ICO icon files from standard image formats, supporting multi-resolution asset creation for desktop applications and websites. This tool addresses the technical requirement for Windows icons to contain multiple embedded bitmap images at varying sizes (typically 16x16, 32x32, 48x48, 256x256) and color depths (including 24-bit and 32-bit with alpha channels). The converter utilizes high-quality image scaling algorithms to maintain sharpness during resizing, applies PNG optimization for smaller file sizes, and structures the output according to Microsoft's ICONDIR format specifications. Users benefit from precise control over output dimensions, color depth selection, and the ability to preview composite icon layouts before export. This tool is essential for developers creating favicons that comply with Windows Shell requirements, game developers packaging assets for Steam/Windows applications, and designers preparing multi-DPI icons for Electron apps or installers requiring consistent visual representation across display densities.",
+  "usage_steps": [
+    "1. Drag-and-drop your source image (PNG, JPEG, BMP) into the canvas or click 'Upload Image' to select from your device",
+    "2. Configure target resolutions using the checkbox grid (select individual sizes like 16x16, 32x32, 48x48, or 256x256px)",
+    "3. Choose color depth options: 24-bit RGB for solid backgrounds or 32-bit ARGB for transparency preservation",
+    "4. Enable 'Sharpen Resized Images' to enhance clarity in scaled-down versions using Lanczos filtering",
+    "5. Click 'Generate ICO' to process the multi-size composite file in your browser's WebAssembly engine",
+    "6. Download the resulting .ico file with embedded cursor hotspots (for custom cursor creation) or use the copy-to-clipboard feature for base64-encoded output"
+  ],
+  "usage_examples": [
+    "Creating a Windows-compatible favicon by converting a 512x512 PNG logo to include 16x16, 32x32, and 48x48 sizes for website root directory deployment",
+    "Preparing Steam game icons with 256x256px normal map and 48x48px low-res variant for legacy UI compatibility",
+    "Generating high-DPI application icons for an Electron app requiring 1024x1024 source image scaling to Windows-standard sizes",
+    "Converting a transparent PNG design to 32-bit ARGB ICO format for use as a custom mouse cursor in Windows application development"
+  ]
+}

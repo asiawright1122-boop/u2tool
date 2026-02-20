@@ -1,0 +1,36 @@
+{
+  "measurementMethod": "Método de Medição",
+  "circumference": "Circunferência",
+  "diameter": "Diâmetro",
+  "existingRing": "Tamanho de Anel Existente",
+  "enterMeasurement": "Digite Medida",
+  "mm": "mm",
+  "inches": "polegadas",
+  "yourSize": "Seu Tamanho",
+  "usSize": "Tamanho US",
+  "ukSize": "Tamanho UK",
+  "euSize": "Tamanho EU",
+  "measureTips": "Como Medir",
+  "detailed_description": "O Ring Size Calculator é uma ferramenta online especializada para determinar o tamanho de anel adequado a partir de diferentes métodos de medição. Tecnologicamente, a ferramenta utiliza algoritmos precisos que convertem as medições de diâmetro, circunferência e largura interna em tamanhos de anéis padrão. Isso é essencial para usuários que precisam de uma solução confiável para a compra de joias online, onde a precisão das medidas é crítica. Além disso, a ferramenta suporta múltiplos sistemas de tamanhos de anéis, incluindo EUA, Reino Unido, França e Brasil, garantindo uma abrangência global. A precisão desses cálculos é crucial, pois um tamanho de anel incorreto pode resultar em um anel que não fica bem, causando desconforto ou até a impossibilidade de removê-lo. A interface é intuitiva, permitindo que os usuários insiram as medições manualmente ou usem uma fita métrica fornecida para obter resultados precisos.",
+  "usage_steps": [
+    "Selecione o método de medição: Diâmetro Interno, Circunferência Interna ou Largura Interna.",
+    "Insira a medição exata no campo correspondente. Certifique-se de usar a unidade de medida correta (milímetros ou polegadas).",
+    "Escolha o sistema de tamanho de anel desejado no menu suspenso (EUA, Reino Unido, França, Brasil).",
+    "Clique no botão 'Calcular Tamanho' para obter o resultado.",
+    "Verifique o tamanho calculado no campo de resultado. A ferramenta também fornecerá o tamanho em diferentes sistemas, caso necessário.",
+    "Se necessário, ajuste as medições e repita o processo para garantir a maior precisão."
+  ],
+  "usage_examples": [
+    "Uma cliente que deseja comprar um anel de noivado online e precisa garantir que o tamanho esteja perfeito para a sua noiva. Ela usa a ferramenta para medir a circunferência interna de um anel que já possui e converter essa medida para o tamanho de anel do Brasil.",
+    "Um joalheiro que precisa determinar o tamanho de anéis personalizados para seus clientes. Ele utiliza a ferramenta para converter as medições fornecidas pelos clientes em tamanhos padrão, garantindo que os anéis sejam feitos com precisão.",
+    "Um casal planejando a compra de alianças de casamento online. Eles usam a ferramenta para medir a largura interna de seus anéis atuais e encontrar o tamanho correto em diferentes sistemas, como EUA e Reino Unido, para comprar de lojas internacionais.",
+    "Um designer de joias que cria anéis sob medida. Ele utiliza a ferramenta para converter as medições de clientes internacionais em tamanhos de anéis do Brasil, facilitando a comunicação e garantindo a precisão nos designs."
+  ],
+  "convertMode": "Convert Mode",
+  "measureMode": "Measure Mode",
+  "selectUSSize": "Select U S Size",
+  "measurementType": "Measurement Type",
+  "yourRingSize": "Your Ring Size",
+  "sizeChart": "Size Chart",
+  "measurementTips": "Measurement Tips"
+}

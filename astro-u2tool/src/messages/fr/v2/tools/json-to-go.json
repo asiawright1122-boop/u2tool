@@ -1,0 +1,20 @@
+{
+  "structName": "Nom de la struct",
+  "input": "Entrée JSON",
+  "output": "Struct Go",
+  "detailed_description": "L'outil JSON to Go Struct permet de transformer des données JSON en définitions de structures Go typées. Techniquement, il analyse la hiérarchie imbriquée d'un document JSON pour en déduire les types de données Go correspondants (string, int, float64, bool, slices, maps, etc.) et génère automatiquement des structs avec les balises `json:\"...\"` nécessaires. Il gère notamment les cas complexes comme les tableaux hétérogènes, les structures imbriquées, et les valeurs pouvant être nulles grâce à l'option `omitempty`. Ce convertisseur s'adresse principalement aux développeurs Go qui consomment des APIs REST ou manipulent des fichiers JSON, évitant ainsi le travail manuel fastidieux de création de structs adaptées. Le processus utilise un analyseur syntaxique JSON qui construit une représentation AST (Abstract Syntax Tree) pour déterminer les schémas de données, applique des règles d'inférence de types, puis génère le code Go structuré avec des noms de champs capitalisés selon les conventions Go. L'outil garantit une conversion précise tout en permettant des ajustements via des options avancées comme la personnalisation des noms de structs ou le mapping de types spécifiques.",
+  "usage_steps": [
+    "Collez votre JSON dans la zone de saisie multi-lignes avec mise en évidence syntaxique",
+    "Activez le mode avancé via le bouton 'Options' pour configurer les balises `json` ou les mappings de types",
+    "Sélectionnez l'option 'Conserver les champs nuls' pour générer des pointeurs au lieu de valeurs directes",
+    "Cliquez sur le bouton 'Convertir' pour lancer l'analyse syntaxique et l'inférence de schéma",
+    "Examinez la sortie dans le panneau dédié montrant les structs Go générés avec annotations de type",
+    "Utilisez le bouton 'Copier' pour intégrer le code dans votre projet Go ou téléchargez le résultat au format .go"
+  ],
+  "usage_examples": [
+    "Un développeur consommant l'API GitHub doit modéliser la réponse JSON d'un webhook d'événement 'push' avec des champs imbriqués comme `head_commit.author`",
+    "Un ingénieur migre une configuration JSON existante vers une application Go et a besoin de structs compatibles avec les fonctions `json.Unmarshal`",
+    "Un professeur prépare un cours sur le marshaling JSON en Go et génère des exemples de structs à partir de données réelles",
+    "Un data scientist convertit des résultats d'analyse stockés en JSON (avec types hétérogènes) en structures typées pour l'intégration avec des librairies Go"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "detailed_description": "O resolvedor de anagramas é uma ferramenta baseada em algoritmos de combinação e permutação que processa um conjunto de caracteres para gerar todas as sequências válidas dentro de um dicionário linguístico. Ele utiliza estruturas de dados como árvores trie para otimizar a busca de palavras existentes, aplicando técnicas de backtracking recursivo para explorar todas as combinações possíveis sem repetição de padrões. Profissionais de linguagem, jogadores de palavras cruzadas e desenvolvedores de quebra-cabeças usam esse recurso para decompor sequências criptografadas em mensagens, criar mnemônicos a partir de números de protocolos ou otimizar estratégias em jogos de tabuleiro como Scrabble. O funcionamento se dá através de uma API REST que recebe o conjunto de caracteres, aplica filtros morfológicos (como tamanho mínimo/máximo de palavras) e retorna resultados ordenados por complexidade sintática. O motor interno utiliza técnicas de memoização para evitar cálculos redundantes e implementa lematização para garantir a validade gramatical das respostas.",
+  "usage_steps": [
+    "Acesse a página principal do resolvedor de anagramas e localize o campo de entrada de texto rotulado 'Letras Disponíveis'.",
+    "Digite os caracteres desordenados (ex: 'RATACO') e marque as opções avançadas como 'Incluir Prefixos' ou 'Excluir Verbos'.",
+    "Selecione o idioma do dicionário de referência (Português BR, Inglês, Espanhol) usando o seletor de idioma na barra lateral.",
+    "Ajuste os parâmetros de filtragem com os controles deslizantes para definir o comprimento mínimo e máximo das palavras desejadas.",
+    "Clique no botão 'Processar Anagrama' para iniciar o cálculo, que ocorre em tempo real através de Web Workers para não travar a interface.",
+    "Navegue pelos resultados organizados em árvore de possibilidades e utilize o botão 'Exportar CSV' para salvar combinações relevantes."
+  ],
+  "usage_examples": [
+    "Um designer criativo precisa transformar o número de série '789456' em uma senha memorizável, usando o resolvedor para gerar opções como '7D9Era' ou '8F4Luz'.",
+    "Um jogador de Scrabble tem as letras 'MESA' e precisa identificar palavras de 3 letras para bloquear oponentes, encontrando 'MAS', 'SAM' e 'AME'.",
+    "Um professor de criptografia demonstra como quebrar cifras simples ao inserir 'XKJQZ' e mostrar que nenhuma palavra válida existe, indicando aleatoriedade adequada.",
+    "Um roteirista busca sinônimos criativos para 'transformação' e encontra 'metamorfose' ou 'mutação' ao inserir os caracteres da palavra original."
+  ],
+  "inputLabel": "Insira Letras",
+  "inputPlaceholder": "Digite letras para desembaralhar...",
+  "results": "Resultados",
+  "noResults": "Nenhuma palavra encontrada. Tente diferentes letras.",
+  "copy": "Copiar",
+  "copied": "Copiado!",
+  "tipTitle": "Dicas",
+  "tipDescription": "Insira de 2 a 15 letras para encontrar todas as palavras possíveis em inglês. Os resultados são classificados por comprimento."
+}

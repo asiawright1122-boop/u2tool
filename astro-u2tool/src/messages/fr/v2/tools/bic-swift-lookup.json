@@ -1,0 +1,44 @@
+{
+  "inputLabel": "Entrez le code BIC/SWIFT",
+  "placeholder": "Par exemple : DEUTDEFF",
+  "formatHint": "Format : 8 ou 11 caractères (par exemple : DEUTDEFF ou DEUTDEFFXXX)",
+  "lookup": "Rechercher",
+  "validBic": "Code BIC/SWIFT valide",
+  "bankCode": "Code bancaire",
+  "country": "Pays",
+  "locationCode": "Code de localisation",
+  "branchCode": "Code de succursale",
+  "headOffice": "Siège social",
+  "specificBranch": "Succursale spécifique",
+  "bankInformation": "Informations bancaires",
+  "bankName": "Nom de la banque",
+  "city": "Ville",
+  "branch": "Succursale",
+  "copyBic": "Copier le code BIC",
+  "bicStructure": "Structure du code BIC/SWIFT",
+  "structure": {
+    "bank": "Code bancaire",
+    "country": "Pays",
+    "location": "Localisation",
+    "branch": "Succursale (optionnel)"
+  },
+  "sampleCodes": "Exemples de codes BIC",
+  "errors": {
+    "empty": "Veuillez saisir un code BIC/SWIFT",
+    "invalidFormat": "Format de code BIC invalide. Il doit comporter 8 ou 11 caractères alphanumériques.",
+    "unknownCountry": "Code de pays inconnu"
+  },
+  "detailed_description": "L'outil de recherche de codes BIC/SWIFT valide et fournit des informations sur les codes d'identification bancaire (BIC) utilisés pour les virements internationaux. Entrez un code BIC pour vérifier son format et obtenir des détails sur la banque, le pays et la succursale. Essentiel pour garantir des paiements internationaux précis.",
+  "usage_steps": [
+    "Saisissez un code BIC/SWIFT dans la zone de saisie",
+    "Cliquez sur « Rechercher » pour valider et obtenir des informations bancaires",
+    "Affichez la structure du code analysé (banque, pays, localisation, succursale)",
+    "Vérifiez les détails de la banque s'ils sont disponibles dans la base de données",
+    "Utilisez les exemples de codes pour découvrir différentes banques"
+  ],
+  "usage_examples": [
+    "Vérifiez les codes BIC avant de réaliser des virements internationaux",
+    "Recherchez des informations bancaires à partir de codes SWIFT",
+    "Validez les détails des paiements pour les transactions transfrontalières"
+  ]
+}

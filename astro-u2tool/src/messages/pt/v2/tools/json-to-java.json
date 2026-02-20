@@ -1,0 +1,27 @@
+{
+  "className": "Nome da Classe",
+  "packageName": "Nome do Pacote",
+  "useLombok": "Usar Lombok @Data",
+  "useGettersSetters": "Gerar Getters/Setters",
+  "useBuilder": "Usar @Builder",
+  "loadSample": "Carregar Exemplo",
+  "copy": "Copiar",
+  "convert": "Converter",
+  "inputPlaceholder": "Digite um objeto JSON...",
+  "outputPlaceholder": "Código Java aparecerá aqui...",
+  "detailed_description": "O conversor JSON para Java é uma ferramenta técnica especializada que transforma estruturas de dados JSON em classes Java POJO (Plain Old Java Object) otimizadas, com suporte opcional para anotações do Lombok. Internamente, o algoritmo realiza *schema inference* para mapear tipos JSON (objetos, arrays, primitivos) para equivalentes Java, identificando automaticamente campos como `String`, `LocalDateTime`, `List<>` ou até enums. A ferramenta destaca-se por gerar código com *getter*, *setter*, `toString()` e `equals()` através do `@Data` do Lombok, reduzindo significativamente código boilerplate. Desenvolvedores precisam deste recurso ao integrar APIs REST que retornam JSON dinâmico, mapear configurações externas ou criar modelos para testes unitários. O processo utiliza parser Jackson para validar o JSON de entrada, seguido de análise semântica para inferir tipos complexos e hierarquias de classes, garantindo compatibilidade com Java 11+. O resultado é um código compilável com pacotes configuráveis, nomes de classes personalizados e suporte a campos aninhados com classes estáticas internas.",
+  "usage_steps": [
+    "Cole o JSON na área de texto com formatação automática (botão 'Colar JSON')",
+    "Ative o toggle 'Usar Lombok' para incluir dependências do Lombok no código gerado",
+    "Defina o nome base das classes via campo 'Nome da Classe Raiz'",
+    "Escolha a versão do Java alvo (8, 11 ou 17) no seletor de versão",
+    "Clique em 'Visualizar Código' para inspecionar a estrutura antes do download",
+    "Baixe o .zip com as classes ou copie o código diretamente da área de preview"
+  ],
+  "usage_examples": [
+    "Converter resposta de uma API pública (ex: dados de clima em JSON) para objetos Java usáveis em um backend Spring Boot",
+    "Mapear um arquivo JSON de configurações de microserviço para classes de configuração tipadas",
+    "Criar estrutura de domínio para testes automatizados a partir de exemplos de payloads de requisições",
+    "Transformar um JSON com campos aninhados e arrays multidimensionais em classes com relacionamentos compostos"
+  ]
+}

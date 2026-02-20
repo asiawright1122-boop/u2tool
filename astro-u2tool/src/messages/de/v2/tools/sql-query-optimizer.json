@@ -1,0 +1,52 @@
+{
+  "detailed_description": "Der SQL-Abfrage-Optimierer analysiert Ihre SQL-Abfragen und bietet Optimierungsvorschläge für eine bessere Leistung.",
+  "usage_steps": [
+    "Fügen Sie SQL-Abfrage ein",
+    "Datenbanktyp auswählen",
+    "Optimieren klicken",
+    "Vorschläge anzeigen",
+    "Änderungen anwenden"
+  ],
+  "usage_examples": [
+    "Langsame SELECT-Abfragen optimieren",
+    "Index-Empfehlungen erhalten",
+    "Teilabfragen neu schreiben"
+  ],
+  "input": "Eingabe",
+  "output": "Ausgabe",
+  "process": "Verarbeitung",
+  "copy": "Kopieren",
+  "clear": "Leeren",
+  "inputPlaceholder": "Geben Sie Ihre SQL-Abfrage ein...",
+  "outputPlaceholder": "Ergebnisse werden hier angezeigt...",
+  "errors": {
+    "emptyInput": "Bitte geben Sie eine Eingabe ein"
+  },
+  "loadExample": "Beispiel laden",
+  "analyze": "Analysieren",
+  "generate": "Generieren",
+  "format": "Formatieren",
+  "convert": "Konvertieren",
+  "validate": "Validieren",
+  "export": "Exportieren",
+  "preview": "Vorschau",
+  "reset": "Zurücksetzen",
+  "add": "Hinzufügen",
+  "remove": "Entfernen",
+  "save": "Speichern",
+  "cancel": "Abbrechen",
+  "settings": "Einstellungen",
+  "options": "Optionen",
+  "results": "Ergebnisse",
+  "noResults": "Keine Ergebnisse",
+  "loading": "Laden...",
+  "success": "Erfolg",
+  "failed": "Fehlgeschlagen",
+  "warning": "Warnung",
+  "info": "Information",
+  "sqlQuery": "SQL-Abfrage",
+  "queryPerformanceScore": "Abfrage-Leistungsbewertung",
+  "optimizationSuggestions": "Optimierungsvorschläge",
+  "formattedQuery": "Formatierte Abfrage",
+  "fix": "Lösung"
+}

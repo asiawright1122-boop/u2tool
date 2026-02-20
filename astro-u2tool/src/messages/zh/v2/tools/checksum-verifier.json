@@ -1,0 +1,30 @@
+{
+  "detailed_description": "校验和验证器是一款功能全面的工具，用于使用多种哈希算法计算和验证文件校验和。上传任意文件即可同时计算其MD5、SHA-1、SHA-256和SHA-512哈希值。将计算出的哈希值与预期值进行比较，以验证文件完整性。该工具使用Web Crypto API在浏览器中完全处理文件，因此您的文件永远不会上传到任何服务器。",
+  "usage_steps": [
+    "通过点击或拖拽上传文件",
+    "等待哈希计算完成",
+    "查看MD5、SHA-1、SHA-256和SHA-512哈希值",
+    "可选：输入预期的校验和",
+    "工具将指示校验和是否匹配",
+    "复制任意哈希值到剪贴板"
+  ],
+  "usage_examples": [
+    "验证下载软件的完整性",
+    "检查文件在传输过程中是否被损坏",
+    "使用哈希值比较文件版本",
+    "验证备份文件的完整性"
+  ],
+  "selectFile": "选择文件",
+  "clickToUpload": "点击上传",
+  "maxSize": "最大大小",
+  "expectedChecksum": "预期校验和",
+  "expectedChecksumPlaceholder": "输入预期校验和进行验证...",
+  "match": "匹配",
+  "noMatch": "不匹配",
+  "calculatedChecksums": "计算的校验和",
+  "fileTooLarge": "文件过大",
+  "calculating": "计算中...",
+  "md5Note": "MD5 不建议用于安全目的",
+  "calculate": "计算",
+  "algorithm": "算法"
+}

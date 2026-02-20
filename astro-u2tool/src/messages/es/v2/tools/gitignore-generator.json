@@ -1,0 +1,22 @@
+{
+  "detailed_description": "El Generador de .gitignore es una herramienta especializada para crear archivos de configuración que excluyen archivos y directorios no deseados en repositorios Git. Permite a los desarrolladores definir patrones de exclusión basados en lenguajes de programación (como Python, Java o Node.js), frameworks (React, Django) y dependencias específicas (venv, node_modules). Esta utilidad es esencial para evitar la inclusión accidental de archivos sensibles (credenciales, claves API), artefactos de compilación (archivos .o, dist/) o configuraciones de entornos locales. La herramienta funciona mediante un motor de combinación de plantillas predefinidas que aplican reglas de coincidencia de patrones, comodines (*) y negación (!) según el estándar de Git. Soporta múltiples capas de configuración, permitiendo personalizar exclusiones adicionales a través de un campo de rutas personalizadas, ideal para proyectos híbridos o estructuras no convencionales.",
+  "usage_steps": [
+    "1. Selecciona tu lenguaje principal en el menú desplegable 'Lenguaje Base'.",
+    "2. Activa las casillas de frameworks o herramientas específicas (Ej: React, Docker).",
+    "3. Ingresa rutas personalizadas en el campo 'Exclusiones Adicionales' usando sintaxis de patrones.",
+    "4. Revisa los patrones generados en el área de vista previa, modificando si es necesario.",
+    "5. Haz clic en 'Generar .gitignore' para compilar las reglas seleccionadas.",
+    "6. Descarga el archivo o cópialo directamente al directorio raíz de tu proyecto."
+  ],
+  "usage_examples": [
+    "1. Un desarrollador Python que necesita excluir el directorio venv/ y archivos .pyc de su repositorio.",
+    "2. Un equipo front-end trabajando con React que desea evitar el commit de carpetas node_modules y archivos .env.",
+    "3. Un ingeniero DevOps configurando un proyecto Docker que debe ignorar archivos .swp y logs/ generados en contenedores.",
+    "4. Un proyecto multiplataforma que requiere excluir automáticamente archivos temporales de editores (como .vscode/ o .idea/)."
+  ],
+  "languages": "Lenguajes",
+  "frameworks": "Frameworks",
+  "os": "Sistemas operativos",
+  "custom": "Reglas personalizadas",
+  "customPlaceholder": "Agregar reglas personalizadas..."
+}

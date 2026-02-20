@@ -1,0 +1,31 @@
+{
+  "base": "Number Base",
+  "binary": "Binary",
+  "octal": "Octal",
+  "decimal": "Decimal",
+  "hex": "Hexadecimal",
+  "number1": "Number 1",
+  "number2": "Number 2",
+  "operation": "Operation",
+  "add": "Add",
+  "subtract": "Subtract",
+  "multiply": "Multiply",
+  "divide": "Divide",
+  "calculate": "Calculate",
+  "invalidNumber": "Invalid number for selected base",
+  "detailed_description": "The Base Calculator is a specialized computational tool designed for arithmetic operations across arbitrary number bases (radices 2-36). This tool enables developers and engineers to directly manipulate integers and floating-point values in binary, octal, hexadecimal, or any base between 2 and 36, with precision conversion between formats. Unlike conventional calculators that normalize inputs to base 10, this implementation maintains numerical integrity through intermediate decimal conversion while preserving radix-specific representation rules, including fractional components. Internally, it employs positional numeral system algorithms to parse input symbols, validate against base-specific digit constraints (e.g., hexadecimal's A-F range), and execute operations through decimal intermediation before output encoding. The tool's architecture incorporates two's complement detection for negative values and supports precision control for repeating fractions during base transformation. This is particularly valuable for low-level programming tasks involving memory addressing, cryptographic key manipulation, or embedded systems development where register values must be interpreted in multiple bases. Networking professionals also benefit from streamlined IP subnet calculations requiring hexadecimal-to-binary translations, while digital electronics engineers can validate logic gate configurations using base-16/2 conversions. The calculator's ability to handle base-specific error checking (e.g., invalid symbols in base 7) and its support for exponential notation across all bases make it uniquely suited for academic research and industrial applications requiring rigorous numerical representation across multiple numeral systems.",
+  "usage_steps": [
+    "Select the input base (2-36) from the 'First Number Base' dropdown menu",
+    "Enter the first operand using valid characters for the selected base (e.g., G in base 17)",
+    "Choose the arithmetic operation (+, -, ×, ÷) from the operator panel",
+    "Input the second operand with base-specific digit constraints automatically enforced",
+    "Set the desired output base (2-36) in the 'Result Base' selector",
+    "Click 'Calculate' to execute conversion and view the result with fractional precision control"
+  ],
+  "usage_examples": [
+    "Web developers converting CSS hexadecimal color codes to decimal RGB values for animation gradients",
+    "Network engineers calculating IPv6 address ranges by performing hexadecimal addition operations",
+    "Quantum computing researchers validating qubit state representations across ternary (base 3) systems",
+    "Architectural engineers working with Babylonian base-60 measurements for historical structure analysis"
+  ]
+}

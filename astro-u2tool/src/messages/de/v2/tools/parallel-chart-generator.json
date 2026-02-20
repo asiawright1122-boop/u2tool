@@ -1,0 +1,65 @@
+{
+  "chartTitle": "Diagrammtitel",
+  "chartTitlePlaceholder": "Geben Sie den Diagrammtitel ein",
+  "colorTheme": "Farbthema",
+  "showLegend": "Legende anzeigen",
+  "lineWidth": "Linienbreite",
+  "lineOpacity": "Liniendeckkraft",
+  "smoothLine": "Glatte Linie",
+  "dimension": "Dimension",
+  "dimensionName": "Dimension Name",
+  "addDimension": "Dimension hinzufügen",
+  "series": "Serie",
+  "seriesName": "Serie Name",
+  "addSeries": "Serie hinzufügen",
+  "loadSample": "Beispiel laden",
+  "downloadPng": "PNG herunterladen",
+  "downloadSvg": "SVG herunterladen",
+  "confirmClear": "Sind Sie sicher, dass Sie alle Daten löschen möchten?",
+  "defaultTitle": "Mehrdimensionale Analyse",
+  "sampleTitle": "Produktvergleich",
+  "dimensionEditor": "Dimension Editor",
+  "seriesEditor": "Serie Editor",
+  "chartPreview": "Diagrammvorschau",
+  "chartSettings": "Diagrammeinstellungen",
+  "themeDefault": "Standard",
+  "themeOcean": "Ozean",
+  "themeSunset": "Sonnenuntergang",
+  "themeForest": "Wald",
+  "sampleDimensions": {
+    "dim1": "Preis",
+    "dim2": "Qualität",
+    "dim3": "Geschwindigkeit",
+    "dim4": "Support"
+  },
+  "sampleSeries": {
+    "series1": "Produkt A",
+    "series2": "Produkt B",
+    "series3": "Produkt C"
+  },
+  "tips": {
+    "title": "Tipps",
+    "tip1": "Definieren Sie Dimensionen",
+    "tip2": "Fügen Sie Datenreihen hinzu",
+    "tip3": "Passen Sie Linienbreite und Deckkraft an",
+    "tip4": "Aktivieren Sie glatte Linien",
+    "tip5": "Als PNG oder SVG exportieren"
+  },
+  "detailed_description": "Der Parallel Chart Generator ist ein webbasiertes Analysewerkzeug zur Erstellung von Parallelkoordinaten-Diagrammen, das speziell für die visuelle Exploration multi-dimensionaler Datensätze konzipiert wurde. Technisch gesehen projiziert das Tool jede Dimension eines Datensatzes auf separate vertikale Achsen, die horizontal angeordnet sind, und verbindet die Werte einzelner Datensätze durch polygonale Linien. Dies ermöglicht die Identifizierung von Mustern, Clusterbildungen oder Ausreißern in hochdimensionalen Datenräumen. Der Generator unterstützt die Normalisierung von Datenwerten, die Anpassung von Farbschemata für Kategorien und interaktive Funktionen wie Brushing zum Filtern spezifischer Wertebereiche. Entwickler und Data Scientists benötigen dieses Tool, um komplexe Beziehungen zwischen Variablen zu analysieren, z.B. bei der Optimierung von Machine-Learning-Modellen, der Vergleichbarkeit von Produktmerkmalen oder der Erkennung von Korrelationen in Finanzdaten. Die Implementierung erfolgt mittels D3.js für die dynamische SVG-Renderung, während die Datenverarbeitung in Echtzeit über clientseitige JavaScript-Algorithmen erfolgt. Exportoptionen umfassen skalierbare Vektorgrafiken (SVG) für Druckqualität und PNG für Webpräsentationen.",
+  "usage_steps": [
+    "1. Öffnen Sie den Parallel Chart Generator über den Kategorie-Link 'Diagramme' auf der Startseite.",
+    "2. Laden Sie Ihren Datensatz im CSV-Format hoch oder fügen Sie Daten manuell in den Tabellen-Editor ein, wobei jede Spalte eine Dimension repräsentiert.",
+    "3. Konfigurieren Sie die Achsenparameter über das 'Achsen-Layout'-Panel: Wählen Sie relevante Dimensionen aus, legen Sie die Reihenfolge fest und aktivieren Sie die Normalisierung für heterogene Skalen.",
+    "4. Passen Sie die visuelle Darstellung an: Wählen Sie ein Farbschema aus dem Dropdown-Menü, aktivieren Sie den 'Interaktiver Liniendickenmodus' für dichte Datensätze und definieren Sie Brushing-Bereiche durch Ziehen zwischen Achsen.",
+    "5. Nutzen Sie den 'Vorschau-Modus' zum Testen von Zoom-Funktionen und Kategoriefiltern, die über das Kontextmenü rechts neben dem Diagramm aktiviert werden.",
+    "6. Exportieren Sie das finale Diagramm über die Schaltflächen 'SVG-Export' oder 'PNG-Download' unterhalb des Vorschau-Bereichs."
+  ],
+  "usage_examples": [
+    "1. Ein Automobilhersteller vergleicht Prototypen anhand von 8 Dimensionen (Kraftstoffverbrauch, Leistung, Kosten, CO2-Emissionen etc.) um Optimierungspotenziale zu identifizieren.",
+    "2. Ein Data Scientist analysiert die Leistungsmetriken (Genauigkeit, Rechenzeit, F1-Score) von 5 verschiedenen Machine-Learning-Modellen über mehrere Datensätze.",
+    "3. Ein Finanzanalyst visualisiert die Entwicklung von Unternehmenskennzahlen (Umsatz, Gewinn, Schuldenquote, Börsenkurs) über 5 Geschäftsjahre zur Erkennung von Trends.",
+    "4. Ein Umweltforscher untersucht Korrelationen zwischen 6 Luftschadstoffen (NO2, PM10, CO, O3, SO2, PM2.5) an 20 Messstationen während einer Smogperiode."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

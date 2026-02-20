@@ -1,0 +1,24 @@
+{
+  "detailed_description": "Wave Generator 创建平滑且可自定义的 SVG 波纹图案，适用于分节分割线、标题和页脚。您可以生成单层或多层波纹，并调整高度、频率和振幅。生成的 SVG 已优化用于网页，并可将波纹定位在分节的顶部或底部。",
+  "usage_steps": [
+    "设置波纹高度（以像素为单位）",
+    "调整频率以改变波纹数量",
+    "配置振幅以改变波纹强度",
+    "添加多层以创建深度效果",
+    "选择顶部或底部位置",
+    "复制或下载SVG代码"
+  ],
+  "usage_examples": [
+    "在内容之间创建节分隔符",
+    "为落地页设计波纹标题",
+    "构建动画波纹背景"
+  ],
+  "height": "Height",
+  "frequency": "Frequency",
+  "amplitude": "Amplitude",
+  "layers": "Layers",
+  "position": "Position",
+  "top": "Top",
+  "bottom": "Bottom",
+  "color": "Color"
+}

@@ -1,0 +1,27 @@
+{
+  "jsonData": "Données JSON",
+  "jsonPlaceholder": "{\"name\": \"John\", \"users\": [{\"name\": \"Alice\"}, {\"name\": \"Bob\"}]}",
+  "expression": "Expression JSONPath",
+  "expressionPlaceholder": "$.users[0].name",
+  "evaluate": "Évaluer",
+  "result": "Résultat",
+  "exGetName": "Obtenir la propriété nom",
+  "exFirstUser": "Premier utilisateur",
+  "exFirstUserName": "Nom du premier utilisateur",
+  "exNestedItems": "Éléments imbriqués",
+  "detailed_description": "Le JSONPath Tester permet d'analyser, valider et exécuter des expressions JSONPath (conformément à la spécification IETF) sur des données JSON structurées. Techniquement, l'outil intègre un parseur qui transforme l'expression JSONPath en AST (Abstract Syntax Tree) avant d'appliquer l'évaluation récursive sur l'arbre de données JSON fourni. Cette approche permet de supporter les opérateurs avancés comme les filtres logiques ([?(@.price > 100)]), les sélections imbriquées ($..book[0].title), ou les expressions régulières avec la syntaxe ECMA 262. Les développeurs l'utilisent notamment pour déboguer des APIs REST en validant les chemins d'extraction de données, vérifier la structure d'objets JSON complexes, ou optimiser des requêtes NoSQL utilisant le format JSONPath. L'interface affiche en temps réel les résultats d'évaluation avec coloration syntaxique des correspondances, et signale les erreurs de syntaxe via un analyseur lexical prédictif. Contrairement aux outils basiques, il inclut un navigateur d'objets JSON interactif pour explorer visuellement les chemins possibles.",
+  "usage_steps": [
+    "Collez votre document JSON dans la zone d'entrée à gauche, ou utilisez le bouton 'Importer depuis URL' pour charger des données externes",
+    "Saisissez votre expression JSONPath dans le champ dédié avec autocomplétion contextuelle des opérateurs valides",
+    "Cliquez sur 'Exécuter' pour déclencher l'analyse syntaxique et l'évaluation sur le document JSON chargé",
+    "Examinez les résultats dans le panneau de droite : chemins résolus, valeurs extraites et arbre de correspondance hiérarchique",
+    "Utilisez le mode 'Débogage' pour visualiser étape par étape le parcours de l'évaluateur JSONPath dans l'arbre JSON",
+    "Exportez les résultats au format CSV ou JSON via le bouton 'Télécharger' pour intégration dans des scripts d'automatisation"
+  ],
+  "usage_examples": [
+    "Valider qu'une API de commerce électronique retourne bien tous les produits en promotion avec l'expression $.products[?(@.discount > 0)]",
+    "Extraire la liste des emails des utilisateurs administrateurs d'un fichier JSON de configuration : $.users[?(@.role == 'admin')].email",
+    "Vérifier la structure d'un webhook GitHub en testant $..commits[?(@.author.name == 'john_doe')].modified_files[*]",
+    "Déboguer une requête NoSQL Cassandra qui utilise JSONPath comme critère de sélection de colonnes"
+  ]
+}

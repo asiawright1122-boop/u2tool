@@ -1,0 +1,24 @@
+{
+  "inputLabel": "Text",
+  "placeholder": "Enter text to analyze...",
+  "ignoreSpaces": "Ignore Spaces",
+  "caseSensitive": "Case Sensitive",
+  "analyze": "Analyze",
+  "uniqueChars": "Unique Characters",
+  "totalChars": "Total Characters",
+  "detailed_description": "The Character Frequency Analyzer performs granular statistical analysis of textual input by calculating the occurrence distribution of Unicode characters, glyphs, and byte values. This tool leverages UTF-8 encoding validation, case-insensitive comparison flags, and customizable whitespace handling to generate multi-dimensional frequency metrics. Developers and researchers use this tool for cryptanalysis of classical ciphers, linguistic pattern recognition, data quality assessment, and algorithm optimization. It processes input through a three-stage pipeline: first normalizing text using Unicode Normalization Form C, then constructing a hash table mapping character code points to counters, and finally applying entropy calculation algorithms to determine distribution patterns. The output includes raw counts, percentage weights, and visual heatmaps that highlight statistical outliers in the character distribution.",
+  "usage_steps": [
+    "Paste UTF-8 encoded text into the resizable input textarea or drag-and-drop a .txt/.csv file",
+    "Toggle 'Case-Sensitive Mode' to differentiate uppercase/lowercase characters",
+    "Select 'Whitespace Handling' options: include/exclude spaces, tabs, newlines, or Unicode whitespace",
+    "Click 'Analyze' to initiate the multi-threaded processing engine",
+    "Review interactive histogram showing frequency distribution and entropy metrics",
+    "Export results via JSON download or copy-paste the tab-separated values table"
+  ],
+  "usage_examples": [
+    "Cryptographers analyzing Vigenère cipher outputs to detect key length patterns through periodic frequency spikes",
+    "Linguists comparing vowel consonant ratios across different language corpora for phonetic research",
+    "Data engineers validating JSON log files by checking for anomalous ASCII control character frequencies",
+    "Game developers optimizing text rendering performance by identifying most-used glyphs in UI strings"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "detailed_description": "正则表达式转代码生成器将正则表达式模式转换为各种语言的现成代码片段。",
+  "usage_steps": [
+    "输入正则表达式模式",
+    "选择目标语言",
+    "选择操作",
+    "配置标志",
+    "复制代码片段"
+  ],
+  "usage_examples": [
+    "生成Python re代码",
+    "创建JS RegExp代码",
+    "转换为Java模式"
+  ],
+  "input": "输入",
+  "output": "输出",
+  "process": "处理",
+  "copy": "复制",
+  "clear": "清除",
+  "inputPlaceholder": "在此处输入您的输入...",
+  "outputPlaceholder": "结果将显示于此...",
+  "errors": {
+    "emptyInput": "请输入一些内容"
+  },
+  "patternPlaceholder": "\\d+",
+  "testTextPlaceholder": "测试文本",
+  "replacementPlaceholder": "替换文本",
+  "loadExample": "加载示例",
+  "analyze": "分析",
+  "generate": "生成",
+  "format": "格式化",
+  "convert": "转换",
+  "validate": "验证",
+  "export": "导出",
+  "preview": "预览",
+  "reset": "重置",
+  "add": "添加",
+  "remove": "移除",
+  "save": "保存",
+  "cancel": "取消",
+  "settings": "设置",
+  "options": "选项",
+  "results": "结果",
+  "noResults": "无结果",
+  "loading": "加载中...",
+  "success": "成功",
+  "failed": "失败",
+  "warning": "警告",
+  "info": "信息"
+}

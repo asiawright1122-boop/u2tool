@@ -1,0 +1,32 @@
+{
+  "uploadImage": "Bild hochladen",
+  "watermarkText": "Wasserzeichentext",
+  "textPlaceholder": "Wasserzeichentext eingeben...",
+  "position": "Position",
+  "posCenter": "Center",
+  "posTopLeft": "Oben links",
+  "posTopRight": "Oben rechts",
+  "posBottomLeft": "Unten links",
+  "posBottomRight": "Unten rechts",
+  "posTile": "Kacheln (Wiederholen)",
+  "fontSize": "Schriftgröße",
+  "opacity": "Opazität",
+  "rotation": "Drehung",
+  "color": "Farbe",
+  "noImage": "Laden Sie ein Bild hoch, um ein Wasserzeichen hinzuzufügen",
+  "detailed_description": "Das Image Watermark Tool ermöglicht es Benutzern, textbasierte Wasserzeichen präzise und technisch flexibel in Bilddateien einzubetten. Technisch gesehen nutzt das Tool serverseitige Bildverarbeitungsbibliotheken, die Rasterisierung und Alphablending kombinieren, um Textwasserzeichen mit anpassbarer Transparenz auf verschiedenen Bildformaten (JPEG, PNG, WebP) zu rendern. Die Texte werden in einem separaten Bildschicht-Overlay-Prozess mit Kantenglättung (Anti-Aliasing) über das Hauptbild gelegt, wobei der Farbraum (RGB/RGBA) automatisch angepasst wird, um Farbkonflikte zu vermeiden. Benutzer können Schriftgrößen, Farbtiefen (HEX/RGB/CMYK-Konversion) und Positionierungsparameter (X/Y-Koordinaten, Prozentangaben zur Bildgröße) definieren. Besonders bei Urheberrechtsvermerken oder Markenlogos ist die präzise Kontrolle über den Transparenzkanal entscheidend, um die Lesbarkeit bei gleichzeitiger optischer Diskretion zu gewährleisten. Das Tool unterstützt zudem Batch-Verarbeitung für Massenoperationen und bietet eine Vorschau-Funktion mit Echtzeit-Rendering, die Änderungen pixelgenau anzeigt.",
+  "usage_steps": [
+    "1. Laden Sie Ihr Bild über den Drag-and-Drop-Bereich oder den Datei-Explorer hoch.",
+    "2. Wählen Sie im Dropdown-Menü die gewünschte Schriftart (z.B. Arial, Roboto, Custom Font Upload) und passen Sie die Schriftgröße per Pixel-Schieberegler an.",
+    "3. Geben Sie den Wasserzeichentext in das Eingabefeld ein und aktivieren Sie optional den 'Dynamic Text Wrap'-Modus für mehrzeilige Anordnungen.",
+    "4. Regulieren Sie die Deckkraft des Wasserzeichens mit dem Transparenz-Schieberegler (0-100%) und wählen Sie den Positioniermodus (manuell per Koordinateneingabe oder automatisch in einer der 9 Gitterpositionen).",
+    "5. Aktivieren Sie den 'Batch-Modus' für die gleichzeitige Bearbeitung mehrerer Bilder und legen Sie das Ausgabeformat (JPEG/PNG/WebP) mit spezifischer Komprimierung fest.",
+    "6. Klicken Sie auf 'Apply Watermark', um das Ergebnis herunterzuladen oder direkt in die Zwischenablage kopieren."
+  ],
+  "usage_examples": [
+    "Ein Fotograf fügt dynamische Copyright-Texte mit automatischer Datumsaktualisierung zu Produktfotos hinzu, um Rechtsansprüche zu sichern.",
+    "Ein Marketing-Team integriert halbtransparente Markenlogos in Social-Media-Bilder, wobei die Schriftfarbe auf den dominierenden Bildbereich abgestimmt wird.",
+    "Ein Entwickler automatisiert die Wasserzeichen-Erstellung für 1000 Screenshots durch Batch-Processing und relative Positionierung.",
+    "Ein Designer erstellt wassergezeichnete Portfolio-Vorschauen mit benutzerdefinierten Schriftarten, die in Echtzeit in verschiedenen Bildformaten getestet werden."
+  ]
+}

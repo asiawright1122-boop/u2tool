@@ -1,0 +1,25 @@
+{
+  "searchPlaceholder": "Search status codes...",
+  "allCategories": "All Categories",
+  "informational": "1xx Informational",
+  "success": "2xx Success",
+  "redirection": "3xx Redirection",
+  "clientError": "4xx Client Error",
+  "serverError": "5xx Server Error",
+  "noResults": "No status codes found.",
+  "detailed_description": "The HTTP Status Codes tool is a comprehensive reference guide designed to help developers understand and troubleshoot HTTP status codes. HTTP status codes are three-digit numbers returned by a server in response to a client's request, indicating the outcome of the request. These codes are crucial for diagnosing issues in web applications, APIs, and network communications. The tool provides detailed explanations for each status code, including its meaning, typical scenarios where it is encountered, and suggestions for resolving issues. For instance, a 404 error indicates that the requested resource was not found, while a 500 error signifies an internal server error. By using this tool, developers can quickly identify the root cause of HTTP errors, enhance their debugging capabilities, and improve the overall user experience of their applications.",
+  "usage_steps": [
+    "Step 1: Visit the HTTP Status Codes tool page on the website.",
+    "Step 2: Use the search bar at the top of the page to enter the specific HTTP status code you are interested in, or browse the list of codes.",
+    "Step 3: Click on the status code to expand its details, which include a brief description, common causes, and potential solutions.",
+    "Step 4: If you need more information, use the 'See More' button to access additional resources and related articles.",
+    "Step 5: For certain status codes, the tool provides code snippets or API examples that demonstrate how to handle the error in different programming languages.",
+    "Step 6: Bookmark the page or use the 'Add to Favorites' button to save the tool for quick reference in the future."
+  ],
+  "usage_examples": [
+    "Example 1: A backend developer is troubleshooting an API endpoint that returns a 500 Internal Server Error. By using the HTTP Status Codes tool, they can quickly understand common causes and find a code snippet that helps them log more detailed error messages for better debugging.",
+    "Example 2: A frontend developer is working on a web application that occasionally encounters a 403 Forbidden error when trying to access certain resources. The tool provides insights into why the server is denying access and suggests checking the client's authentication credentials and permissions.",
+    "Example 3: A DevOps engineer is monitoring a server that frequently returns a 503 Service Unavailable error during peak traffic times. The tool helps them identify that the server is overloaded and suggests scaling the infrastructure or optimizing resource allocation.",
+    "Example 4: A security analyst is reviewing logs and notices a 401 Unauthorized error. The HTTP Status Codes tool provides a detailed explanation of this status code and suggests reviewing the authentication mechanisms and access control policies to ensure they are correctly configured."
+  ]
+}

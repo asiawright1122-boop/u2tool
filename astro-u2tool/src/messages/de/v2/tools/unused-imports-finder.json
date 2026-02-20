@@ -1,0 +1,52 @@
+{
+  "detailed_description": "Der Unbenutzte Importe Finder durchsucht Ihren Code, um Importe zu identifizieren, die deklariert, aber nie verwendet wurden.",
+  "usage_steps": [
+    "Fügen Sie Code mit Importen ein",
+    "Wählen Sie die Sprache",
+    "Klicken Sie auf Analyisieren",
+    "Anzeigen unbenutzter Importe",
+    "Kopieren Sie den bereinigten Code"
+  ],
+  "usage_examples": [
+    "Bereinigen Sie npm-Importe",
+    "Verringern Sie die Bundle-Größe",
+    "Bewahren Sie saubere Importe bei"
+  ],
+  "input": "Eingabe",
+  "output": "Ausgabe",
+  "process": "Verarbeitung",
+  "copy": "Kopieren",
+  "clear": "Leeren",
+  "inputPlaceholder": "Fügen Sie Ihren JavaScript/TypeScript-Code hier ein...",
+  "outputPlaceholder": "Ergebnisse werden hier angezeigt...",
+  "errors": {
+    "emptyInput": "Bitte geben Sie einige Eingaben ein"
+  },
+  "loadExample": "Beispiel laden",
+  "analyze": "Analysieren",
+  "generate": "Generieren",
+  "format": "Formatieren",
+  "convert": "Konvertieren",
+  "validate": "Validieren",
+  "export": "Exportieren",
+  "preview": "Vorschau",
+  "reset": "Zurücksetzen",
+  "add": "Hinzufügen",
+  "remove": "Entfernen",
+  "save": "Speichern",
+  "cancel": "Abbrechen",
+  "settings": "Einstellungen",
+  "options": "Optionen",
+  "results": "Ergebnisse",
+  "noResults": "Keine Ergebnisse",
+  "loading": "Laden...",
+  "success": "Erfolg",
+  "failed": "Fehlgeschlagen",
+  "warning": "Warnung",
+  "info": "Information",
+  "importStatements": "Import-Anweisungen",
+  "unusedImports": "Unbenutzte Imports",
+  "usedImports": "Benutzte Imports",
+  "click": "Klicken",
+  "clickToAnalyze": "Klicken zum Analysieren"
+}

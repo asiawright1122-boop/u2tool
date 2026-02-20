@@ -1,0 +1,27 @@
+{
+  "date": "Fecha",
+  "time": "Tiempo",
+  "now": "Ahora",
+  "fromTimezone": "Desde zona horaria",
+  "toTimezone": "A zona horaria",
+  "swapTimezones": "Intercambiar zonas horarias",
+  "convertedTime": "Tiempo convertido",
+  "worldClock": "Reloj mundial",
+  "detailed_description": "El convertidor de zonas horarias es una herramienta técnica que permite transformar instantes de tiempo entre diferentes husos horarios globales, integrando ajustes de horario de verano (DST) y desplazamientos UTC. Utiliza la API de Internationalization (Intl) de JavaScript, respaldada por la base de datos IANA Time Zone, para garantizar precisiones en milisegundos. Su algoritmo procesa fechas en formato ISO 8601, ajustando automáticamente las conversiones mediante cálculos de desplazamiento relativo al meridiano de Greenwich. Es esencial para desarrolladores que gestionan sistemas distribuidos, sincronización de eventos multizona o logs de servidores en UTC. Su valor técnico radica en el manejo de casos complejos como cambios históricos en zonas horarias o regiones con reglas DST irregulares. La interfaz web aprovecha las capacidades de DateTimeFormat para renderizar resultados en múltiples formatos legibles, incluyendo representaciones locales y UTC.",
+  "usage_steps": [
+    "Selecciona la zona horaria de origen desde el desplegable buscable (ej. 'Europe/Madrid')",
+    "Introduce la fecha y hora en formato ISO 8601 extendido (YYYY-MM-DDTHH:MM:SS)",
+    "Activa el selector 'Usar horario de verano' si necesitas forzar ajustes DST",
+    "Marca las zonas horarias destino mediante checkboxes organizadas por continente",
+    "Haz clic en 'Convertir' para ejecutar el cálculo sincrónico en el worker del navegador",
+    "Revisa la tabla de resultados con columnas: UTC Offset, formato local y marca de tiempo POSIX"
+  ],
+  "usage_examples": [
+    "Un ingeniero DevOps convierte timestamps de logs AWS en UTC a hora local de su equipo en Santiago de Chile para análisis forense",
+    "Un desarrollador de aplicaciones móviles valida la correcta conversión de fechas entre servidores en Frankfurt y usuarios en Sydney durante pruebas de localización",
+    "Un coordinador de eventos internacionales programa un webinar con participantes desde 5 zonas horarias distintas, verificando horarios simultáneos",
+    "Un analista de datos transforma series temporales en formato UTC provenientes de sensores IoT a hora local para reportes ejecutivos en Nueva York"
+  ],
+  "copied": "¡Copiado!",
+  "copy": "Copiar"
+}

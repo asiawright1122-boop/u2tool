@@ -1,0 +1,42 @@
+{
+  "websiteName": "ウェブサイト名",
+  "websiteUrl": "ウェブサイトURL",
+  "companyName": "会社名",
+  "privacyEmail": "プライバシー連絡先メール",
+  "cookieTypes": "Cookieの種類",
+  "cookies": {
+    "necessary": "必須",
+    "analytics": "分析",
+    "marketing": "マーケティング",
+    "preferences": "設定"
+  },
+  "position": "バナー位置",
+  "positionTop": "上部",
+  "positionBottom": "下部",
+  "theme": "テーマ",
+  "themeLight": "ライト",
+  "themeDark": "ダーク",
+  "htmlCode": "HTMLコード",
+  "cssCode": "CSSコード",
+  "privacyPolicy": "プライバシーポリシーテンプレート",
+  "copy": "コピー",
+  "copied": "コピーしました！",
+  "bannerTitle": "Cookie同意",
+  "decline": "拒否",
+  "customize": "カスタマイズ",
+  "acceptAll": "すべて承認",
+  "disclaimer": "このジェネレーターは参考用のテンプレートを提供します。",
+  "detailed_description": "GDPR同意生成ツールは、欧州データ保護規制に準拠したCookie同意バナーを作成します。",
+  "usage_steps": [
+    "ウェブサイト情報を入力",
+    "Cookieの種類を選択",
+    "バナー位置とテーマを選択",
+    "コードをコピー",
+    "プライバシーポリシーをカスタマイズ"
+  ],
+  "usage_examples": [
+    "ウェブサイトにGDPR準拠のCookie同意を追加",
+    "プライバシーポリシー文書を作成",
+    "Cookie設定管理を実装"
+  ]
+}

@@ -1,0 +1,3170 @@
+{
+  "regex": {},
+  "password": {},
+  "base64": {
+    "name": "Base64 Encoder/Decoder",
+    "description": "Encode text to Base64 or decode Base64 to text instantly.",
+    "seo_title": "Free Base64 Encoder & Decoder Online",
+    "seo_description": "Encode text to Base64 or decode Base64 strings instantly online for free. Secure browser-based tool with no data upload. Perfect for developers."
+  },
+  "json": {},
+  "hash": {},
+  "qr": {},
+  "color": {},
+  "timestamp": {},
+  "wordCounter": {},
+  "case": {},
+  "html": {},
+  "markdown": {},
+  "lorem": {},
+  "url": {},
+  "xml": {},
+  "chinese": {},
+  "unit": {},
+  "gradient": {},
+  "diffChecker": {},
+  "colorContrast": {},
+  "unicode": {},
+  "minifier": {},
+  "sql": {},
+  "pinyin": {},
+  "colorPicker": {},
+  "aspect": {},
+  "cssBeautifier": {},
+  "jsBeautifier": {},
+  "htmlPreview": {},
+  "ipLookup": {},
+  "morseCode": {},
+  "random": {},
+  "textReverser": {},
+  "lineCounter": {},
+  "stringEscape": {},
+  "yamlJson": {},
+  "dateCalc": {},
+  "dedup": {},
+  "colorBlend": {},
+  "jsonSort": {},
+  "placeholder": {},
+  "encryption": {},
+  "fileHash": {},
+  "tableGen": {},
+  "schemaValidator": {},
+  "regexPatterns": {},
+  "byteCounter": {},
+  "jsonTs": {},
+  "svgOptimizer": {},
+  "textBinary": {},
+  "mdToHtml": {},
+  "epoch": {},
+  "cssUnit": {},
+  "textStats": {},
+  "hexEditor": {},
+  "palette": {},
+  "httpStatus": {},
+  "dataUri": {},
+  "textCompare": {},
+  "jsonGo": {},
+  "chmod": {},
+  "barcode": {},
+  "tts": {},
+  "urlParser": {},
+  "textWrapper": {},
+  "csvJson": {},
+  "csvViewer": {},
+  "csvToJson": {},
+  "htmlEntity": {},
+  "numberFormat": {},
+  "hmac": {},
+  "jwt": {},
+  "metaTagGenerator": {
+    "description": "Description (150-160 chars recommended)"
+  },
+  "openGraphGenerator": {},
+  "twitterCardGenerator": {
+    "description": "Description"
+  },
+  "sqlGenerator": {},
+  "termsGenerator": {},
+  "cssFlexboxGenerator": {},
+  "privacyPolicyGenerator": {},
+  "openGraphPreview": {
+    "description": "Description"
+  },
+  "pwStrength": {},
+  "totp": {},
+  "uaParser": {},
+  "cidr": {},
+  "httpHeader": {},
+  "percent": {},
+  "stats": {},
+  "sci": {},
+  "jsonSql": {},
+  "emoji": {},
+  "extractor": {},
+  "sorter": {},
+  "toml-json": {
+    "name": "TOML/JSON Converter",
+    "description": "Convert between TOML and JSON formats bidirectionally.",
+    "seo_title": "Free TOML JSON Converter Online",
+    "seo_description": "Convert TOML to JSON or JSON to TOML online for free. Validate and format configuration files with syntax highlighting. Essential for Rust and Python projects."
+  },
+  "json-to-java": {
+    "name": "JSON to Java",
+    "description": "Convert JSON data to Java POJO classes with Lombok support.",
+    "seo_title": "Free JSON to Java Converter Online",
+    "seo_description": "Convert JSON to Java classes online for free. Support Lombok, getters/setters, and builder patterns. Perfect for API development and data modeling."
+  },
+  "json-to-python": {
+    "name": "JSON to Python",
+    "description": "Convert JSON data to Python dataclass, Pydantic, or TypedDict.",
+    "seo_title": "Free JSON to Python Converter Online",
+    "seo_description": "Convert JSON to Python dataclass or Pydantic models online for free. Generate type-safe Python code with validation. Essential for Python API development."
+  },
+  "json-to-kotlin": {
+    "name": "JSON to Kotlin",
+    "description": "Convert JSON data to Kotlin data classes with serialization support.",
+    "seo_title": "Free JSON to Kotlin Converter Online",
+    "seo_description": "Convert JSON to Kotlin data classes online for free. Support Moshi, Gson, and Kotlinx annotations. Perfect for Android and Kotlin backend development."
+  },
+  "imageCompressor": {},
+  "imageConverter": {},
+  "favicon": {},
+  "imageCropper": {},
+  "gitignore": {},
+  "dockerCompose": {},
+  "packageJson": {
+    "name": "Package Name",
+    "description": "Description"
+  },
+  "clipPath": {},
+  "uuidValidator": {},
+  "hashCompare": {},
+  "jsonPathFinder": {},
+  "canvas": {},
+  "jsonEscape": {},
+  "cssAnimation": {},
+  "caseCounter": {},
+  "dnsLookup": {},
+  "imageResizer": {},
+  "json-formatter": {
+    "name": "JSON Formatter",
+    "description": "Format and beautify JSON data with syntax highlighting. Validate JSON and fix common errors.",
+    "seo_title": "Free JSON Formatter & Validator Online",
+    "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers."
+  },
+  "uuid-generator": {
+    "name": "UUID Generator",
+    "description": "Generate random UUIDs (v4) instantly. Copy single or bulk UUIDs.",
+    "seo_title": "Free UUID Generator Online - Generate UUID v4",
+    "seo_description": "Generate random UUID v4 strings online for free. Supports bulk generation of multiple UUIDs at once. Secure, fast, and works in your browser."
+  },
+  "url-encoder": {
+    "name": "URL Encoder/Decoder",
+    "description": "Encode or decode URLs and query strings safely.",
+    "seo_title": "Free URL Encoder & Decoder Online",
+    "seo_description": "Encode and decode URLs and query strings online for free. Handle special characters safely for web development. Fast and secure browser tool."
+  },
+  "password-generator": {
+    "name": "Password Generator",
+    "description": "Generate strong, secure random passwords with customizable options.",
+    "seo_title": "Free Strong Password Generator Online",
+    "seo_description": "Generate secure random passwords online for free. Customize length, include uppercase, lowercase, numbers, and symbols. No data stored or uploaded."
+  },
+  "hash-generator": {
+    "name": "Hash Generator",
+    "description": "Generate MD5, SHA-1, SHA-256 hashes from text.",
+    "seo_title": "Free MD5, SHA Hash Generator Online",
+    "seo_description": "Generate MD5, SHA-1, SHA-256, SHA-512 hashes online for free. Secure browser-based hashing with no data upload. Perfect for file integrity checks."
+  },
+  "qr-generator": {
+    "name": "QR Code Generator",
+    "description": "Generate QR codes from text or URLs. Download as PNG.",
+    "seo_title": "Free QR Code Generator Online",
+    "seo_description": "Generate QR codes from text, URLs, or data online for free. Download as high-quality PNG image. Customize size and error correction level."
+  },
+  "color-converter": {
+    "name": "Color Converter",
+    "description": "Convert colors between HEX, RGB, and HSL formats.",
+    "seo_title": "Free Color Converter - HEX RGB HSL Online",
+    "seo_description": "Convert colors between HEX, RGB, HSL, and HSV formats online for free. Instant color format conversion with live preview. Essential for designers."
+  },
+  "timestamp-converter": {
+    "name": "Timestamp Converter",
+    "description": "Convert Unix timestamps to human-readable dates and vice versa.",
+    "seo_title": "Free Unix Timestamp Converter Online",
+    "seo_description": "Convert Unix timestamps to human-readable dates and dates to timestamps online for free. Support multiple date formats and timezones. For developers."
+  },
+  "word-counter": {
+    "name": "Word Counter",
+    "description": "Count words, characters, sentences, and paragraphs in your text.",
+    "seo_title": "Free Word Counter & Character Counter Online",
+    "seo_description": "Count words, characters, sentences, and paragraphs online for free. Get reading time estimates and detailed text statistics. Perfect for writers and editors."
+  },
+  "case-converter": {
+    "name": "Case Converter",
+    "description": "Convert text to uppercase, lowercase, title case, and more.",
+    "seo_title": "Free Text Case Converter Online",
+    "seo_description": "Convert text case online for free. Transform to uppercase, lowercase, title case, sentence case, camelCase, and snake_case. For developers and writers."
+  },
+  "html-encoder": {
+    "name": "HTML Encoder/Decoder",
+    "description": "Encode special characters to HTML entities or decode them back.",
+    "seo_title": "Free HTML Encoder & Decoder Online",
+    "seo_description": "Encode and decode HTML entities online for free. Handle special characters safely for web development. Prevent XSS attacks and display HTML correctly."
+  },
+  "markdown-preview": {
+    "name": "Markdown Preview",
+    "description": "Write Markdown and see live preview. Export to HTML.",
+    "seo_title": "Free Markdown Editor & Preview Online",
+    "seo_description": "Write and preview Markdown online for free. Live preview with syntax highlighting and HTML export. Perfect for documentation, README files, and blog posts."
+  },
+  "lorem-ipsum": {
+    "name": "Lorem Ipsum Generator",
+    "description": "Generate placeholder text for your designs and mockups.",
+    "seo_title": "Free Lorem Ipsum Generator Online",
+    "seo_description": "Generate Lorem Ipsum placeholder text online for free. Create paragraphs, sentences, or words for mockups and designs. Perfect for web designers and developers."
+  },
+  "regex-tester": {
+    "name": "Regex Tester",
+    "description": "Test regular expressions with real-time matching and highlighting.",
+    "seo_title": "Free Regex Tester & Debugger Online",
+    "seo_description": "Test and debug regular expressions online for free. Real-time matching with syntax highlighting and match groups. Perfect for developers and data processing."
+  },
+  "jwt-decoder": {
+    "name": "JWT Decoder",
+    "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
+    "seo_title": "Free JWT Decoder Online",
+    "seo_description": "Decode and inspect JWT (JSON Web Tokens) online for free. View header, payload, and signature without verification. Essential for debugging auth."
+  },
+  "diff-checker": {
+    "name": "Diff Checker",
+    "description": "Compare two texts and highlight the differences between them.",
+    "seo_title": "Free Text Diff Checker Online",
+    "seo_description": "Compare two texts online for free. Highlight added, removed, and changed content with side-by-side view. Essential for code review and document comparison."
+  },
+  "json-to-csv": {
+    "name": "JSON to CSV",
+    "description": "Convert JSON data to CSV format, or CSV to JSON.",
+    "seo_title": "Free JSON to CSV Converter Online",
+    "seo_description": "Convert JSON to CSV or CSV to JSON online for free. Handle nested objects and arrays with customizable delimiters. Perfect for data export and spreadsheet work."
+  },
+  "image-to-base64": {
+    "name": "Image to Base64",
+    "description": "Convert images to Base64 encoding for use in HTML and CSS.",
+    "seo_title": "Free Image to Base64 Converter Online",
+    "seo_description": "Convert images to Base64 encoded strings online for free. Support PNG, JPG, GIF, and SVG formats. Perfect for embedding images in CSS, HTML, and JSON data."
+  },
+  "cron-generator": {
+    "name": "Cron Expression Generator",
+    "description": "Generate and parse cron expressions visually.",
+    "seo_title": "Free Cron Expression Generator Online",
+    "seo_description": "Generate and parse cron expressions online for free. Visual editor with presets and human-readable descriptions. Perfect for scheduling tasks and automation."
+  },
+  "text-to-slug": {
+    "name": "Text to Slug",
+    "description": "Convert text to URL-friendly slug format.",
+    "seo_title": "Free Text to Slug Converter Online",
+    "seo_description": "Convert text to URL-friendly slug format online for free. Remove special characters, handle unicode, and create SEO-friendly URLs. Perfect for web development."
+  },
+  "number-base-converter": {
+    "name": "Number Base Converter",
+    "description": "Convert numbers between binary, octal, decimal, and hexadecimal.",
+    "seo_title": "Free Number Base Converter Online",
+    "seo_description": "Convert between binary, octal, decimal, and hexadecimal online for free. Support large numbers and instant conversion. Essential for programmers and students."
+  },
+  "json-path-tester": {
+    "name": "JSONPath Tester",
+    "description": "Test and evaluate JSONPath expressions against your JSON data.",
+    "seo_title": "Free JSONPath Tester Online",
+    "seo_description": "Test and debug JSONPath expressions online for free. Query JSON data with real-time results and syntax highlighting. Essential for API development."
+  },
+  "xml-formatter": {
+    "name": "XML Formatter",
+    "description": "Format and minify XML data, validate XML syntax.",
+    "seo_title": "Free XML Formatter Online",
+    "seo_description": "Format, beautify and minify XML data online for free. Syntax highlighting, error detection, and tree view. Perfect for API development and configuration files."
+  },
+  "chinese-converter": {
+    "name": "Chinese Converter",
+    "description": "Convert between Simplified and Traditional Chinese characters.",
+    "seo_title": "Free Chinese Simplified/Traditional Converter",
+    "seo_description": "Convert between Simplified and Traditional Chinese online for free. Accurate character conversion with phrase support. Perfect for Chinese content localization."
+  },
+  "unit-converter": {
+    "name": "Unit Converter",
+    "description": "Convert between length, weight, temperature, area and more units.",
+    "seo_title": "Free Unit Converter Online",
+    "seo_description": "Convert various units online for free: length, weight, temperature, area, volume, speed, and data. Quick reference tables and instant conversion."
+  },
+  "gradient-generator": {
+    "name": "Gradient Generator",
+    "description": "Create CSS gradients visually with linear and radial options.",
+    "seo_title": "Free CSS Gradient Generator Online",
+    "seo_description": "Create CSS gradients online for free. Generate linear and radial gradients with CSS and Tailwind code. Visual editor with color picker and preset templates."
+  },
+  "unicode-converter": {
+    "name": "Unicode Converter",
+    "description": "Convert between text and Unicode encoding in multiple formats.",
+    "seo_title": "Free Unicode Converter Online",
+    "seo_description": "Convert text and Unicode encoding online for free. Support HTML entities, CSS escape sequences, and various Unicode formats. Essential for internationalization."
+  },
+  "code-minifier": {
+    "name": "Code Minifier",
+    "description": "Minify HTML, CSS, JavaScript code to reduce file size.",
+    "seo_title": "Free Code Minifier Online",
+    "seo_description": "Minify HTML, CSS, and JavaScript code online for free. Reduce file size and improve page load speed. Essential for web performance optimization and deployment."
+  },
+  "sql-formatter": {
+    "name": "SQL Formatter",
+    "description": "Format and beautify SQL queries for better readability.",
+    "seo_title": "Free SQL Formatter Online",
+    "seo_description": "Format and beautify SQL queries online for free. Support multiple SQL dialects with syntax highlighting and indentation. Essential for database development."
+  },
+  "pinyin-converter": {
+    "name": "Pinyin Converter",
+    "description": "Convert Chinese characters to Pinyin with or without tones.",
+    "seo_title": "Free Chinese to Pinyin Converter",
+    "seo_description": "Convert Chinese characters to Pinyin online for free. Support tone marks and numbered tones. Essential for Chinese language learning and pronunciation guides."
+  },
+  "color-picker": {
+    "name": "Color Picker",
+    "description": "Pick colors and get HEX, RGB, HSL values in multiple formats.",
+    "seo_title": "Free Online Color Picker",
+    "seo_description": "Pick colors and get color values in HEX, RGB, HSL formats online for free. Visual color picker with preset palettes and recent colors. Perfect for designers."
+  },
+  "aspect-ratio": {
+    "name": "Aspect Ratio Calculator",
+    "description": "Calculate aspect ratio and resize dimensions proportionally.",
+    "seo_title": "Free Aspect Ratio Calculator",
+    "seo_description": "Calculate aspect ratio and resize images proportionally online for free. Support common ratios like 16:9, 4:3, 1:1. Perfect for video editing and design."
+  },
+  "css-beautifier": {
+    "name": "CSS Beautifier",
+    "description": "Format and beautify CSS code with minify and beautify options.",
+    "seo_title": "Free CSS Beautifier Online",
+    "seo_description": "Format, beautify and minify CSS code online for free. Syntax highlighting with customizable indentation. Perfect for web developers and front-end optimization."
+  },
+  "js-beautifier": {
+    "name": "JavaScript Beautifier",
+    "description": "Format and beautify JavaScript code with minify and beautify options.",
+    "seo_title": "Free JavaScript Beautifier Online",
+    "seo_description": "Format, beautify and minify JavaScript code online for free. Syntax highlighting with customizable indentation. Perfect for web developers and optimization."
+  },
+  "html-preview": {
+    "name": "HTML Preview",
+    "description": "Preview HTML code in real-time with CSS and JavaScript support.",
+    "seo_title": "Free HTML Preview Online",
+    "seo_description": "Preview HTML code in real-time online for free. Live rendering with instant updates as you type. Perfect for web development and quick prototyping."
+  },
+  "ip-lookup": {
+    "name": "IP Lookup",
+    "description": "Look up IP address location, ISP, and other information.",
+    "seo_title": "Free IP Address Lookup Online",
+    "seo_description": "Look up IP address geolocation online for free. Get country, city, ISP, timezone, and coordinates. Perfect for network troubleshooting and security analysis."
+  },
+  "morse-code": {
+    "name": "Morse Code Converter",
+    "description": "Convert text to Morse code or Morse code to text.",
+    "seo_title": "Free Morse Code Converter Online",
+    "seo_description": "Convert text to Morse code or Morse code to text online for free. Audio playback support with adjustable speed. Perfect for learning and enthusiasts."
+  },
+  "random-generator": {
+    "name": "Random Number Generator",
+    "description": "Generate random numbers within a specified range, with bulk generation and unique options.",
+    "seo_title": "Free Random Number Generator Online",
+    "seo_description": "Generate random numbers online for free. Support custom range, unique numbers, and multiple results. Perfect for games, lotteries, and random selection tasks."
+  },
+  "text-reverser": {
+    "name": "Text Reverser",
+    "description": "Reverse the order of characters, words, or lines in text.",
+    "seo_title": "Free Text Reverser Online",
+    "seo_description": "Reverse text characters, words, or lines online for free. Multiple reversal modes with instant preview. Perfect for puzzles, encoding, and text manipulation."
+  },
+  "line-counter": {
+    "name": "Line Counter",
+    "description": "Count lines in text, with options to remove duplicates, empty lines, and sort.",
+    "seo_title": "Free Line Counter Online",
+    "seo_description": "Count lines, remove duplicates, and sort text online for free. Get statistics for total, empty, and unique lines. Perfect for data cleaning and text processing."
+  },
+  "string-escape": {
+    "name": "String Escape/Unescape",
+    "description": "Escape or unescape strings for JSON, HTML, URL, and JavaScript formats.",
+    "seo_title": "Free String Escape Tool Online",
+    "seo_description": "Escape and unescape strings for various programming languages online for free. Support JSON, HTML, URL, and regex escaping. Perfect for developers."
+  },
+  "yaml-json": {
+    "name": "YAML/JSON Converter",
+    "description": "Convert between YAML and JSON formats.",
+    "seo_title": "Free YAML JSON Converter Online",
+    "seo_description": "Convert YAML to JSON or JSON to YAML online for free. Validate and format config files with syntax highlighting. Essential for DevOps and configuration."
+  },
+  "date-calculator": {
+    "name": "Date Calculator",
+    "description": "Calculate the difference between two dates, or add/subtract days from a date.",
+    "seo_title": "Free Date Calculator Online",
+    "seo_description": "Calculate date differences and add/subtract days online for free. Get days, weeks, months, and years between dates. Perfect for project planning and scheduling."
+  },
+  "text-deduplicator": {
+    "name": "Text Deduplicator",
+    "description": "Remove duplicate lines from text, keeping only unique content.",
+    "seo_title": "Free Text Deduplicator Online",
+    "seo_description": "Remove duplicate lines from text online for free. Support case-sensitive matching and line trimming. Perfect for data cleaning and list processing tasks."
+  },
+  "color-blender": {
+    "name": "Color Blender",
+    "description": "Blend two colors and generate gradient steps.",
+    "seo_title": "Free Color Blender Online",
+    "seo_description": "Blend two colors and generate gradient steps online for free. Create smooth color transitions with customizable steps. Perfect for designers and palettes."
+  },
+  "json-sorter": {
+    "name": "JSON Sorter",
+    "description": "Sort JSON objects by key names.",
+    "seo_title": "Free JSON Sorter Online",
+    "seo_description": "Sort JSON keys alphabetically online for free. Support ascending and descending order with nested object sorting. Essential for API development."
+  },
+  "placeholder-image": {
+    "name": "Placeholder Image Generator",
+    "description": "Generate placeholder images with custom size and colors.",
+    "seo_title": "Free Placeholder Image Generator",
+    "seo_description": "Generate placeholder images with custom dimensions and colors online for free. Perfect for mockups, wireframes, and web design prototyping. Download as PNG."
+  },
+  "text-encryption": {
+    "name": "Text Encryption",
+    "description": "Encrypt and decrypt text using AES encryption with a password.",
+    "seo_title": "Free Text Encryption Tool Online",
+    "seo_description": "Encrypt and decrypt text with AES-256 encryption online for free. Secure browser-based encryption with password protection. No data uploaded to servers."
+  },
+  "file-hash": {
+    "name": "File Hash Calculator",
+    "description": "Calculate MD5, SHA-1, SHA-256, SHA-512 hashes for files.",
+    "seo_title": "Free File Hash Calculator Online",
+    "seo_description": "Calculate file hashes (MD5, SHA-1, SHA-256, SHA-512) online for free. Verify file integrity and detect changes. Secure browser-based processing."
+  },
+  "html-table-generator": {
+    "name": "HTML Table Generator",
+    "description": "Generate HTML tables visually with customizable rows and columns.",
+    "seo_title": "Free HTML Table Generator Online",
+    "seo_description": "Generate HTML tables with visual editor online for free. Customize rows, columns, headers, and styling. Export clean HTML code for your website."
+  },
+  "json-schema-validator": {
+    "name": "JSON Schema Validator",
+    "description": "Validate JSON data against JSON Schema.",
+    "seo_title": "Free JSON Schema Validator Online",
+    "seo_description": "Validate JSON data against JSON Schema online for free. Support draft-04, draft-06, and draft-07 schemas. Get detailed error messages and validation reports."
+  },
+  "regex-patterns": {
+    "name": "Regex Patterns Library",
+    "description": "Common regex patterns for email, URL, phone, and more.",
+    "seo_title": "Free Regex Patterns Library",
+    "seo_description": "Browse common regex patterns for email, URL, phone, IP address, date, and more online for free. Copy and use in your code with one click. Developer reference."
+  },
+  "byte-counter": {
+    "name": "Byte Counter",
+    "description": "Count bytes in text with UTF-8, UTF-16, and ASCII encoding support.",
+    "seo_title": "Free Byte Counter Online",
+    "seo_description": "Count text bytes in UTF-8, UTF-16, and other encodings online for free. Get character count, word count, and byte size. Essential for data size estimation."
+  },
+  "json-to-typescript": {
+    "name": "JSON to TypeScript",
+    "description": "Convert JSON data to TypeScript interface definitions.",
+    "seo_title": "Free JSON to TypeScript Converter",
+    "seo_description": "Convert JSON to TypeScript interfaces and types online for free. Generate type-safe code with optional properties and nested types. Essential for TS devs."
+  },
+  "svg-optimizer": {
+    "name": "SVG Optimizer",
+    "description": "Optimize and compress SVG code to reduce file size.",
+    "seo_title": "Free SVG Optimizer Online",
+    "seo_description": "Optimize and compress SVG files online for free. Remove unnecessary metadata, minify code, and reduce file size. Perfect for web performance optimization."
+  },
+  "text-to-binary": {
+    "name": "Text to Binary",
+    "description": "Convert text to binary or binary to text.",
+    "seo_title": "Free Text to Binary Converter",
+    "seo_description": "Convert text to binary code or binary to text online for free. Support ASCII and Unicode encoding. Perfect for learning binary and data encoding concepts."
+  },
+  "markdown-to-html": {
+    "name": "Markdown to HTML",
+    "description": "Convert Markdown text to HTML code.",
+    "seo_title": "Free Markdown to HTML Converter",
+    "seo_description": "Convert Markdown to HTML online for free. Support GitHub Flavored Markdown with tables, code blocks, and task lists. Preview and copy clean HTML output."
+  },
+  "html-minifier": {
+    "name": "HTML Minifier",
+    "description": "Minify and beautify HTML code to reduce file size.",
+    "seo_title": "Free HTML Minifier Online",
+    "seo_description": "Minify and compress HTML code online for free. Remove whitespace, comments, and optimize attributes. Reduce file size and improve page load speed."
+  },
+  "json-diff": {
+    "name": "JSON Diff",
+    "description": "Compare two JSON objects and find differences.",
+    "seo_title": "Free JSON Diff Tool Online",
+    "seo_description": "Compare two JSON objects and find differences online for free. Highlight added, removed, and changed values with side-by-side view. Essential for API debugging."
+  },
+  "base32": {
+    "name": "Base32 Encoder/Decoder",
+    "description": "Encode text to Base32 or decode Base32 to text.",
+    "seo_title": "Free Base32 Encoder & Decoder Online",
+    "seo_description": "Encode text to Base32 or decode Base32 strings online for free. Support RFC 4648 standard encoding. Perfect for TOTP secrets and secure data encoding."
+  },
+  "epoch-converter": {
+    "name": "Epoch Converter",
+    "description": "Convert between Epoch/Unix timestamps and date time.",
+    "seo_title": "Free Epoch Time Converter Online",
+    "seo_description": "Convert Unix epoch timestamps to human-readable dates and vice versa online for free. Support milliseconds and seconds. Essential for developers and logs."
+  },
+  "css-unit-converter": {
+    "name": "CSS Unit Converter",
+    "description": "Convert between CSS units like px, rem, em, pt, vw, vh.",
+    "seo_title": "Free CSS Unit Converter Online",
+    "seo_description": "Convert CSS units (px, em, rem, %, vw, vh) online for free. Calculate responsive values with base font size. Essential for responsive web design."
+  },
+  "text-statistics": {
+    "name": "Text Statistics",
+    "description": "Detailed statistics for characters, words, sentences, paragraphs and more.",
+    "seo_title": "Free Text Statistics Tool Online",
+    "seo_description": "Analyze text statistics online for free. Get word count, character count, sentence count, reading time, and readability scores. Perfect for writers and editors."
+  },
+  "hex-editor": {
+    "name": "Hex Editor",
+    "description": "Convert between text and hexadecimal, view byte data.",
+    "seo_title": "Free Hex Editor Online",
+    "seo_description": "Convert text to hexadecimal and hex to text online for free. View and edit hex data with ASCII preview. Essential for debugging and binary data analysis."
+  },
+  "color-palette": {
+    "name": "Color Palette Generator",
+    "description": "Generate color shades, complementary, analogous and triadic color schemes.",
+    "seo_title": "Free Color Palette Generator Online",
+    "seo_description": "Generate color palettes and schemes online for free. Create complementary, analogous, triadic, and monochromatic palettes. Export to CSS, SCSS, or JSON format."
+  },
+  "http-status": {
+    "name": "HTTP Status Codes",
+    "description": "Look up HTTP status codes and their meanings.",
+    "seo_title": "HTTP Status Codes - Complete Reference Guide",
+    "seo_description": "Complete HTTP status codes reference. Learn about 1xx, 2xx, 3xx, 4xx, 5xx status codes with examples."
+  },
+  "json-to-yaml": {
+    "name": "JSON to YAML",
+    "description": "Convert JSON data to YAML format.",
+    "seo_title": "Free JSON to YAML Converter Online",
+    "seo_description": "Convert JSON to YAML format online for free. Preserve data structure with proper indentation and formatting. Perfect for configuration files and DevOps."
+  },
+  "data-uri": {
+    "name": "Data URI Generator",
+    "description": "Convert files to Data URI format for embedding in HTML/CSS.",
+    "seo_title": "Free Data URI Generator Online",
+    "seo_description": "Generate Data URIs from files or text online for free. Convert images, fonts, and files to base64 data URLs. Perfect for embedding assets in CSS and HTML."
+  },
+  "text-compare": {
+    "name": "Text Similarity Compare",
+    "description": "Compare similarity between two texts, calculate edit distance.",
+    "seo_title": "Free Text Similarity Comparison Tool",
+    "seo_description": "Compare text similarity and find differences online for free. Calculate Levenshtein distance and similarity percentage. Essential for content review."
+  },
+  "json-to-go": {
+    "name": "JSON to Go Struct",
+    "description": "Convert JSON data to Go struct definitions.",
+    "seo_title": "Free JSON to Go Struct Converter",
+    "seo_description": "Convert JSON to Go structs online for free. Generate type-safe Go code with proper field tags and nested struct support. Essential for Go API development."
+  },
+  "html-to-jsx": {
+    "name": "HTML to JSX",
+    "description": "Convert HTML code to React JSX format.",
+    "seo_title": "Free HTML to JSX Converter Online",
+    "seo_description": "Convert HTML code to React JSX format online for free. Transform class to className, style strings to objects. Essential for React developers."
+  },
+  "chmod-calculator": {
+    "name": "Chmod Calculator",
+    "description": "Calculate Linux/Unix file permissions in octal and symbolic notation.",
+    "seo_title": "Free Chmod Calculator Online",
+    "seo_description": "Calculate Unix file permissions (chmod) online for free. Convert between numeric and symbolic notation. Visualize read, write, execute permissions."
+  },
+  "barcode-generator": {
+    "name": "Barcode Generator",
+    "description": "Generate barcodes in Code 128, Code 39, EAN-13, and UPC formats.",
+    "seo_title": "Free Barcode Generator Online",
+    "seo_description": "Generate barcodes online for free. Support Code128, Code39, EAN-13, UPC-A, and more formats. Download as PNG or SVG. Perfect for inventory and product labeling."
+  },
+  "text-to-speech": {
+    "name": "Text to Speech",
+    "description": "Convert text to speech with adjustable voice, rate, and pitch.",
+    "seo_title": "Free Text to Speech Online",
+    "seo_description": "Convert text to speech online for free. Multiple voices and languages with adjustable speed and pitch. Download audio or listen in browser."
+  },
+  "url-parser": {
+    "name": "URL Parser",
+    "description": "Parse and analyze URL components including protocol, host, path, and query parameters.",
+    "seo_title": "Free URL Parser Online",
+    "seo_description": "Parse and analyze URLs online for free. Extract protocol, host, port, path, query parameters, and hash. Encode and decode URL components."
+  },
+  "json-to-xml": {
+    "name": "JSON to XML",
+    "description": "Convert JSON data to XML format.",
+    "seo_title": "Free JSON to XML Converter Online",
+    "seo_description": "Convert JSON to XML format online for free. Preserve data structure with proper element nesting and attributes. Perfect for API integration and data exchange."
+  },
+  "text-wrapper": {
+    "name": "Text Wrapper",
+    "description": "Wrap text to a specified line width.",
+    "seo_title": "Free Text Wrapper Online",
+    "seo_description": "Wrap text to specified width online for free. Add line breaks at word boundaries or fixed positions. Perfect for formatting code comments and documentation."
+  },
+  "csv-to-json": {
+    "name": "CSV to JSON",
+    "description": "Convert CSV data to JSON format with customizable delimiter.",
+    "seo_title": "Free CSV to JSON Converter Online",
+    "seo_description": "Convert CSV to JSON format online for free. Parse CSV with custom delimiters and headers. Support nested objects and arrays. Perfect for data import."
+  },
+  "html-entity": {
+    "name": "HTML Entity Converter",
+    "description": "Encode and decode HTML entities including special characters and symbols.",
+    "seo_title": "Free HTML Entity Converter Online",
+    "seo_description": "Convert HTML entities online for free. Encode special characters to HTML entities and decode entities to characters. Prevent XSS attacks and display HTML."
+  },
+  "number-formatter": {
+    "name": "Number Formatter",
+    "description": "Format numbers in different locales with decimal, currency, and percent styles.",
+    "seo_title": "Free Number Formatter Online",
+    "seo_description": "Format numbers in different locales online for free. Add thousand separators, decimal places, currency symbols, and percentage formatting. Essential for i18n."
+  },
+  "hmac-generator": {
+    "name": "HMAC Generator",
+    "description": "Generate HMAC signatures using SHA-1, SHA-256, SHA-512 algorithms.",
+    "seo_title": "Free HMAC Generator Online",
+    "seo_description": "Generate HMAC signatures online for free with MD5, SHA-1, SHA-256, SHA-512 algorithms. Secure message authentication for APIs and data integrity verification."
+  },
+  "password-strength": {
+    "name": "Password Strength Checker",
+    "description": "Analyze password strength by checking length, character types, and common patterns.",
+    "seo_title": "Free Password Strength Checker Online",
+    "seo_description": "Check password strength online for free. Get detailed analysis with entropy score, crack time estimate, and improvement suggestions. Essential for security."
+  },
+  "totp-generator": {
+    "name": "TOTP Generator",
+    "description": "Generate time-based one-time passwords compatible with Google Authenticator.",
+    "seo_title": "Free TOTP Generator Online",
+    "seo_description": "Generate TOTP one-time passwords online for free. Support Google Authenticator compatible codes with custom secret keys and time intervals. For 2FA testing."
+  },
+  "user-agent-parser": {
+    "name": "User Agent Parser",
+    "description": "Parse User Agent strings to identify browser, OS, and device information.",
+    "seo_title": "Free User Agent Parser Online",
+    "seo_description": "Parse User Agent strings online for free. Extract browser, OS, device type, and version information. Essential for web analytics and device detection."
+  },
+  "cidr-calculator": {
+    "name": "CIDR Calculator",
+    "description": "Calculate IP address ranges, subnet masks, and available hosts.",
+    "seo_title": "Free CIDR Calculator Online",
+    "seo_description": "Calculate CIDR subnet information online for free. Get network address, broadcast address, host range, and subnet mask. Essential for network administrators."
+  },
+  "http-header-parser": {
+    "name": "HTTP Header Parser",
+    "description": "Parse and format HTTP headers with descriptions for each header.",
+    "seo_title": "Free HTTP Header Parser Online",
+    "seo_description": "Parse HTTP headers online for free. Analyze request and response headers with detailed explanations. Essential for API debugging and web development."
+  },
+  "percentage-calculator": {
+    "name": "Percentage Calculator",
+    "description": "Calculate percentages, percentage changes, and increase/decrease values.",
+    "seo_title": "Free Percentage Calculator Online",
+    "seo_description": "Calculate percentages, percentage changes, and ratios online for free. Find what percent X is of Y, increase/decrease by percent. Essential for math."
+  },
+  "statistics-calculator": {
+    "name": "Statistics Calculator",
+    "description": "Calculate mean, median, mode, standard deviation, variance and more.",
+    "seo_title": "Free Statistics Calculator Online",
+    "seo_description": "Calculate statistical measures online for free. Get mean, median, mode, standard deviation, variance, and more. Essential for data analysis and research."
+  },
+  "scientific-calculator": {
+    "name": "Scientific Calculator",
+    "description": "Perform scientific calculations with trigonometric, logarithmic, and exponential functions.",
+    "seo_title": "Free Scientific Calculator Online",
+    "seo_description": "Free online scientific calculator with sin, cos, tan, log, ln, sqrt, power, and more functions. Support parentheses and complex expressions. For students."
+  },
+  "text-sorter": {
+    "name": "Text Sorter",
+    "description": "Sort text lines alphabetically, numerically, or by length with various options.",
+    "seo_title": "Free Text Sorter Online",
+    "seo_description": "Sort text lines alphabetically, numerically, naturally, or by length online for free. Support ascending and descending order. Essential for data organization."
+  },
+  "text-extractor": {
+    "name": "Text Extractor",
+    "description": "Extract emails, URLs, phone numbers, IP addresses and more from text.",
+    "seo_title": "Free Text Extractor Online",
+    "seo_description": "Extract emails, URLs, phone numbers, IP addresses, hashtags, and mentions from text online for free. Bulk extraction with one click. Essential for data mining."
+  },
+  "emoji-picker": {
+    "name": "Emoji Picker",
+    "description": "Browse, search and copy emojis by category with one click.",
+    "seo_title": "Free Emoji Picker Online",
+    "seo_description": "Browse and copy emojis by category online for free. Search emojis by name with skin tone variants. One-click copy to clipboard. Perfect for social media."
+  },
+  "json-to-sql": {
+    "name": "JSON to SQL",
+    "description": "Convert JSON arrays to SQL INSERT statements with CREATE TABLE support.",
+    "seo_title": "Free JSON to SQL Converter Online",
+    "seo_description": "Convert JSON data to SQL INSERT statements online for free. Support MySQL, PostgreSQL, SQLite syntax. Bulk insert generation for database import."
+  },
+  "image-compressor": {
+    "name": "Image Compressor",
+    "description": "Compress images to reduce file size while maintaining quality.",
+    "seo_title": "Free Image Compressor Online",
+    "seo_description": "Compress images online for free. Reduce PNG, JPEG, WebP file size with adjustable quality. Batch compression support. Perfect for web optimization."
+  },
+  "image-converter": {
+    "name": "Image Format Converter",
+    "description": "Convert images between PNG, JPEG, and WebP formats.",
+    "seo_title": "Free Image Format Converter Online",
+    "seo_description": "Convert images between PNG, JPEG, WebP, and GIF formats online for free. Batch conversion with quality settings. Perfect for web optimization and compatibility."
+  },
+  "favicon-generator": {
+    "name": "Favicon Generator",
+    "description": "Generate favicons in multiple sizes from any image.",
+    "seo_title": "Free Favicon Generator Online",
+    "seo_description": "Generate favicons in multiple sizes (16x16, 32x32, 48x48, 64x64) online for free. Upload image and download favicon pack. Essential for website branding."
+  },
+  "image-cropper": {
+    "name": "Image Cropper",
+    "description": "Crop images with free or fixed aspect ratio selection.",
+    "seo_title": "Free Image Cropper Online",
+    "seo_description": "Crop images online for free with custom or preset aspect ratios. Support 1:1, 4:3, 16:9, and freeform cropping. Download cropped image instantly."
+  },
+  "gitignore-generator": {
+    "name": ".gitignore Generator",
+    "description": "Generate .gitignore files for various project types and languages.",
+    "seo_title": "Free .gitignore Generator Online",
+    "seo_description": "Generate .gitignore files for Node.js, Python, Java, Go, Ruby, and more online for free. Select templates and customize rules. Keep repositories clean."
+  },
+  "docker-compose-generator": {
+    "name": "Docker Compose Generator",
+    "description": "Generate docker-compose.yml files with common services like MySQL, Redis, Nginx.",
+    "seo_title": "Free Docker Compose Generator Online",
+    "seo_description": "Generate docker-compose.yml files with MySQL, PostgreSQL, Redis, Nginx, and more services online for free. Visual editor with YAML preview and validation."
+  },
+  "package-json-generator": {
+    "name": "package.json Generator",
+    "description": "Generate package.json files with custom configuration and scripts.",
+    "seo_title": "Free package.json Generator Online",
+    "seo_description": "Generate package.json files with custom scripts, dependencies, devDependencies, and configuration online for free. Visual editor with npm registry search."
+  },
+  "json-minifier": {
+    "name": "JSON Minifier",
+    "description": "Minify JSON by removing whitespace and formatting to reduce file size.",
+    "seo_title": "Free JSON Minifier Online",
+    "seo_description": "Minify and compress JSON data online for free. Remove whitespace and comments, reduce file size by up to 60%. Essential for API optimization."
+  },
+  "timezone-converter": {
+    "name": "Timezone Converter",
+    "description": "Convert time between different timezones worldwide with world clock.",
+    "seo_title": "Free Timezone Converter Online",
+    "seo_description": "Convert time between timezones online for free. World clock with major cities, DST support, and meeting planner. Essential for global team coordination."
+  },
+  "color-contrast-checker": {
+    "name": "Color Contrast Checker",
+    "description": "Check color contrast ratio for WCAG accessibility compliance.",
+    "seo_title": "Free Color Contrast Checker Online - WCAG",
+    "seo_description": "Check color contrast ratio for WCAG AA and AAA accessibility compliance online for free. Test foreground and background colors with instant pass/fail results."
+  },
+  "markdown-table-generator": {
+    "name": "Markdown Table Generator",
+    "description": "Create and edit Markdown tables with visual editor and live preview.",
+    "seo_title": "Free Markdown Table Generator Online",
+    "seo_description": "Generate Markdown tables with visual editor online for free. Live preview, column alignment, and CSV import. Perfect for GitHub READMEs and docs."
+  },
+  "base58": {
+    "name": "Base58 Encoder/Decoder",
+    "description": "Encode and decode Base58 strings used in Bitcoin and cryptocurrencies.",
+    "seo_title": "Free Base58 Encoder & Decoder Online",
+    "seo_description": "Encode and decode Base58 strings online for free. Used in Bitcoin addresses, IPFS hashes, and cryptocurrency wallets. Secure browser-based encoding tool."
+  },
+  "meta-tag-generator": {
+    "name": "Meta Tag Generator",
+    "description": "Generate SEO meta tags, Open Graph, and Twitter Card tags for your website.",
+    "seo_title": "Free Meta Tag Generator Online - SEO Tools",
+    "seo_description": "Generate SEO meta tags, Open Graph, and Twitter Card tags online for free. Preview how your page appears in search results and social media shares."
+  },
+  "robots-txt-generator": {
+    "name": "robots.txt Generator",
+    "description": "Generate robots.txt files to control search engine crawlers.",
+    "seo_title": "Free robots.txt Generator Online",
+    "seo_description": "Generate robots.txt files for your website online for free. Control search engine crawlers with allow/disallow rules, sitemap links, and crawl-delay settings."
+  },
+  "opengraph-preview": {
+    "name": "Open Graph Preview",
+    "description": "Preview how your page will look when shared on social media.",
+    "seo_title": "Free Open Graph Preview Tool Online",
+    "seo_description": "Preview social media share cards for Facebook, Twitter, LinkedIn, and more online for free. Test Open Graph and Twitter Card meta tags before publishing."
+  },
+  "css-grid-generator": {
+    "name": "CSS Grid Generator",
+    "description": "Visual CSS Grid layout generator with live preview.",
+    "seo_title": "Free CSS Grid Generator Online",
+    "seo_description": "Generate CSS Grid layouts visually with live preview online for free. Customize rows, columns, gaps, and alignment. Copy CSS code for responsive web design."
+  },
+  "css-flexbox-generator": {
+    "name": "CSS Flexbox Generator",
+    "description": "Visual CSS Flexbox layout generator with live preview.",
+    "seo_title": "Free CSS Flexbox Generator Online",
+    "seo_description": "Generate CSS Flexbox layouts visually with live preview online for free. Customize direction, wrap, justify, and align properties. Copy CSS code instantly."
+  },
+  "jwt-generator": {
+    "name": "JWT Generator",
+    "description": "Generate JSON Web Tokens with custom payload and secret key.",
+    "seo_title": "Free JWT Generator Online",
+    "seo_description": "Generate JWT tokens with custom claims, expiration, and HMAC/RSA signing online for free. Create access tokens for API authentication and authorization testing."
+  },
+  "cron-explainer": {
+    "name": "Cron Expression Explainer",
+    "description": "Explain cron expressions in human-readable format with next run times.",
+    "seo_title": "Free Cron Expression Explainer Online",
+    "seo_description": "Understand cron expressions with human-readable explanations online for free. Parse and validate cron syntax with next execution times. For scheduling."
+  },
+  "json-to-graphql": {
+    "name": "JSON to GraphQL",
+    "description": "Convert JSON objects to GraphQL schema types.",
+    "seo_title": "Free JSON to GraphQL Converter Online",
+    "seo_description": "Convert JSON to GraphQL schema types online for free. Generate type definitions, queries, and mutations from JSON data. Essential for GraphQL API development."
+  },
+  "sql-to-mongo": {
+    "name": "SQL to MongoDB",
+    "description": "Convert SQL queries to MongoDB queries.",
+    "seo_title": "Free SQL to MongoDB Converter Online",
+    "seo_description": "Convert SQL queries to MongoDB queries online for free. Transform SELECT, INSERT, UPDATE, DELETE to find, insertOne, updateOne. Database migration tool."
+  },
+  "json-to-csharp": {
+    "name": "JSON to C#",
+    "description": "Convert JSON objects to C# classes.",
+    "seo_title": "Free JSON to C# Converter Online",
+    "seo_description": "Convert JSON to C# classes with properties, constructors, and JSON serialization attributes online for free. Support nullable types and nested classes."
+  },
+  "json-to-rust": {
+    "name": "JSON to Rust",
+    "description": "Convert JSON objects to Rust structs.",
+    "seo_title": "Free JSON to Rust Converter Online",
+    "seo_description": "Convert JSON to Rust structs with serde derive macros online for free. Generate type-safe code with Option types for nullable fields. For Rust development."
+  },
+  "json-to-swift": {
+    "name": "JSON to Swift",
+    "description": "Convert JSON objects to Swift structs.",
+    "seo_title": "Free JSON to Swift Converter Online",
+    "seo_description": "Convert JSON to Swift structs with Codable protocol conformance online for free. Generate type-safe models with CodingKeys for API integration."
+  },
+  "css-minifier": {
+    "name": "CSS Minifier",
+    "description": "Minify and compress CSS code.",
+    "seo_title": "Free CSS Minifier Online",
+    "seo_description": "Minify and compress CSS code online for free. Remove whitespace, comments, and optimize selectors. Reduce file size and improve page load speed."
+  },
+  "js-minifier": {
+    "name": "JavaScript Minifier",
+    "description": "Minify and compress JavaScript code.",
+    "seo_title": "Free JavaScript Minifier Online",
+    "seo_description": "Minify and compress JavaScript code online for free. Remove whitespace, comments, and shorten variable names. Reduce file size for faster loading."
+  },
+  "box-shadow-generator": {
+    "name": "Box Shadow Generator",
+    "description": "Generate CSS box-shadow with visual editor.",
+    "seo_title": "Free CSS Box Shadow Generator Online",
+    "seo_description": "Generate CSS box-shadow with visual editor online for free. Customize offset, blur, spread, and color. Copy CSS code with one click for your projects."
+  },
+  "border-radius-generator": {
+    "name": "Border Radius Generator",
+    "description": "Generate CSS border-radius with visual editor.",
+    "seo_title": "Free CSS Border Radius Generator Online",
+    "seo_description": "Generate CSS border-radius with visual editor online for free. Create rounded corners with custom values for each corner. Copy CSS code instantly."
+  },
+  "text-to-ascii-art": {
+    "name": "Text to ASCII Art",
+    "description": "Convert text to ASCII art.",
+    "seo_title": "Free Text to ASCII Art Converter Online",
+    "seo_description": "Convert text to ASCII art online for free. Multiple font styles and character sets available. Perfect for terminal banners, comments, and creative projects."
+  },
+  "color-shades-generator": {
+    "name": "Color Shades Generator",
+    "description": "Generate color shades and tints from a base color.",
+    "seo_title": "Free Color Shades Generator Online",
+    "seo_description": "Generate color shades and tints from any color online for free. Create lighter and darker variations with customizable steps. Export to CSS or design tools."
+  },
+  "json-flattener": {
+    "name": "JSON Flattener",
+    "description": "Flatten or unflatten nested JSON objects.",
+    "seo_title": "Free JSON Flattener Online",
+    "seo_description": "Flatten or unflatten nested JSON objects online for free. Convert deep structures to dot notation and vice versa. Essential for data transformation and APIs."
+  },
+  "base85": {
+    "name": "Base85 Encoder/Decoder",
+    "description": "Encode and decode Base85 (Ascii85) data.",
+    "seo_title": "Free Base85 Encoder/Decoder Online",
+    "seo_description": "Encode and decode Base85 (Ascii85) data online for free. Used in PDF files, PostScript, and data compression. Secure browser-based encoding tool."
+  },
+  "html-to-markdown": {
+    "name": "HTML to Markdown",
+    "description": "Convert HTML to Markdown format.",
+    "seo_title": "Free HTML to Markdown Converter Online",
+    "seo_description": "Convert HTML to Markdown format online for free. Preserve formatting, links, images, and code blocks. Perfect for migrating content to Markdown-based systems."
+  },
+  "regex-generator": {
+    "name": "Regex Generator",
+    "description": "Generate and test regular expressions with common patterns.",
+    "seo_title": "Free Regex Generator Online",
+    "seo_description": "Generate and test regular expressions online for free. Build patterns with visual helpers and test against sample text. Essential for pattern matching tasks."
+  },
+  "url-shortener-preview": {
+    "name": "URL Shortener Preview",
+    "description": "Preview and analyze shortened URLs.",
+    "seo_title": "Free URL Shortener Preview Online",
+    "seo_description": "Preview and analyze shortened URLs online for free. Expand bit.ly, tinyurl, and other short links to see the destination. Check for safety before clicking."
+  },
+  "json-viewer": {
+    "name": "JSON Viewer",
+    "description": "View and explore JSON data in a tree structure.",
+    "seo_title": "Free JSON Viewer Online",
+    "seo_description": "View and explore JSON data in a tree structure online for free. Expand and collapse nodes, search values, and copy paths. Essential for API debugging."
+  },
+  "xml-to-json": {
+    "name": "XML to JSON",
+    "description": "Convert XML to JSON format.",
+    "seo_title": "Free XML to JSON Converter Online",
+    "seo_description": "Convert XML to JSON format online for free. Preserve attributes, namespaces, and nested elements. Perfect for API integration and data transformation."
+  },
+  "ip-address-generator": {
+    "name": "IP Address Generator",
+    "description": "Generate random IP addresses (IPv4, IPv6, private, public).",
+    "seo_title": "Free IP Address Generator Online",
+    "seo_description": "Generate random IP addresses online for free. Support IPv4 and IPv6 formats with custom ranges. Perfect for testing, development, and network simulation."
+  },
+  "css-gradient-text": {
+    "name": "CSS Gradient Text",
+    "description": "Create gradient text effects with CSS.",
+    "seo_title": "Free CSS Gradient Text Generator Online",
+    "seo_description": "Create gradient text effects with CSS online for free. Apply linear and radial gradients to text with live preview. Copy CSS code for your web projects."
+  },
+  "sitemap-generator": {
+    "name": "Sitemap Generator",
+    "description": "Generate XML sitemaps for your website.",
+    "seo_title": "Free Sitemap Generator Online",
+    "seo_description": "Generate XML sitemaps for your website online for free. Add URLs with priority, change frequency, and last modified date. Essential for SEO and search indexing."
+  },
+  "json-to-php": {
+    "name": "JSON to PHP",
+    "description": "Convert JSON to PHP array syntax.",
+    "seo_title": "Free JSON to PHP Converter Online",
+    "seo_description": "Convert JSON to PHP array syntax online for free. Generate associative arrays with proper escaping and formatting. Essential for PHP backend development."
+  },
+  "css-filter-generator": {
+    "name": "CSS Filter Generator",
+    "description": "Generate CSS filter effects with visual editor.",
+    "seo_title": "Free CSS Filter Generator Online",
+    "seo_description": "Generate CSS filter effects with visual editor online for free. Apply blur, brightness, contrast, grayscale, and more. Copy CSS code for your projects."
+  },
+  "text-diff-patch": {
+    "name": "Text Diff & Patch",
+    "description": "Create and apply text patches.",
+    "seo_title": "Free Text Diff & Patch Tool Online",
+    "seo_description": "Create and apply text patches online for free. Generate unified diff format patches and apply them to text. Essential for version control and code review."
+  },
+  "encoding-detector": {
+    "name": "Encoding Detector",
+    "description": "Detect text and file encoding.",
+    "seo_title": "Free Encoding Detector Online",
+    "seo_description": "Detect text and file encoding online for free. Identify UTF-8, UTF-16, ISO-8859, and other character encodings. Essential for handling international text."
+  },
+  "css-clip-path-generator": {
+    "name": "CSS Clip Path Generator",
+    "description": "Create CSS clip-path shapes with visual editor.",
+    "seo_title": "Free CSS Clip Path Generator Online",
+    "seo_description": "Create CSS clip-path shapes with visual editor online for free. Design polygons, circles, ellipses, and custom paths. Copy CSS code for creative layouts."
+  },
+  "uuid-validator": {
+    "name": "UUID Validator",
+    "description": "Validate and analyze UUID strings.",
+    "seo_title": "Free UUID Validator Online",
+    "seo_description": "Validate and analyze UUID strings online for free. Check format, version, and variant of UUIDs. Extract timestamp from UUID v1 and v7. Essential for debugging."
+  },
+  "text-hash-comparator": {
+    "name": "Text Hash Comparator",
+    "description": "Compare text by their hash values.",
+    "seo_title": "Free Text Hash Comparator Online",
+    "seo_description": "Compare text by their hash values online for free. Generate and compare MD5, SHA-1, SHA-256 hashes side by side. Essential for file integrity verification."
+  },
+  "json-path-finder": {
+    "name": "JSON Path Finder",
+    "description": "Find and copy JSON paths from your data.",
+    "seo_title": "Free JSON Path Finder Online",
+    "seo_description": "Find and copy JSON paths from your data online for free. Click on any value to get its JSONPath expression. Essential for API development and data extraction."
+  },
+  "canvas-drawing": {
+    "name": "Canvas Drawing",
+    "description": "Simple drawing tool with brush and eraser.",
+    "seo_title": "Free Canvas Drawing Tool Online",
+    "seo_description": "Simple drawing tool with brush and eraser online for free. Customize brush size, color, and opacity. Download artwork as PNG. Perfect for quick sketches."
+  },
+  "json-escape": {
+    "name": "JSON Escape/Unescape",
+    "description": "Escape and unescape JSON strings.",
+    "seo_title": "Free JSON Escape/Unescape Tool Online",
+    "seo_description": "Escape and unescape JSON strings online for free. Handle special characters, quotes, and control characters. Essential for embedding JSON in strings."
+  },
+  "css-animation-generator": {
+    "name": "CSS Animation Generator",
+    "description": "Create CSS animations with visual editor.",
+    "seo_title": "Free CSS Animation Generator Online",
+    "seo_description": "Create CSS animations with visual editor online for free. Design keyframes, timing functions, and animation properties. Copy CSS code for your web projects."
+  },
+  "text-case-counter": {
+    "name": "Text Case Counter",
+    "description": "Count uppercase, lowercase, and other character types.",
+    "seo_title": "Free Text Case Counter Online",
+    "seo_description": "Count uppercase, lowercase, digits, spaces, and special characters online for free. Get detailed character type statistics. Essential for text analysis."
+  },
+  "dns-lookup": {
+    "name": "DNS Lookup",
+    "description": "Look up DNS records for any domain.",
+    "seo_title": "Free DNS Lookup Tool Online",
+    "seo_description": "Look up DNS records for any domain online for free. Query A, AAAA, MX, TXT, NS, CNAME, and SOA records. Essential for domain troubleshooting and verification."
+  },
+  "image-resizer": {
+    "name": "Image Resizer",
+    "description": "Resize images to custom dimensions.",
+    "seo_title": "Free Image Resizer Online",
+    "seo_description": "Resize images to custom dimensions online for free. Maintain aspect ratio or set exact width and height. Support PNG, JPEG, WebP formats. Download instantly."
+  },
+  "ssl-checker": {
+    "name": "SSL Certificate Checker",
+    "description": "Check SSL certificate validity and details for any domain.",
+    "seo_title": "Free SSL Certificate Checker Online",
+    "seo_description": "Check SSL certificate validity and expiration date online for free. Verify certificate chain, issuer, and security details. Essential for website security."
+  },
+  "whois-lookup": {
+    "name": "WHOIS Lookup",
+    "description": "Look up domain registration information.",
+    "seo_title": "Free WHOIS Lookup Tool Online",
+    "seo_description": "Look up domain registration and ownership information online for free. Get registrar, creation date, expiration date, and nameservers. Domain research tool."
+  },
+  "websocket-tester": {
+    "name": "WebSocket Tester",
+    "description": "Test WebSocket connections and send/receive messages.",
+    "seo_title": "Free WebSocket Tester Online",
+    "seo_description": "Test WebSocket connections, send and receive messages online for free. Support custom headers and protocols. Essential for real-time application development."
+  },
+  "port-scanner": {
+    "name": "Port Scanner",
+    "description": "Reference guide for common network ports and services.",
+    "seo_title": "Free Port Scanner & Reference Online",
+    "seo_description": "Look up common network ports and their services online for free. Search by port number or service name. Reference for network administrators and developers."
+  },
+  "port-reference": {
+    "name": "Port Reference",
+    "description": "Reference guide for common network ports and services.",
+    "seo_title": "Network Port Reference Guide",
+    "seo_description": "Complete reference guide for common network ports and services. Browse well-known ports (0-1023), registered ports, and dynamic ports. Essential for networking."
+  },
+  "privacy-policy-generator": {
+    "name": "Privacy Policy Generator",
+    "description": "Generate a privacy policy for your website.",
+    "seo_title": "Free Privacy Policy Generator Online",
+    "seo_description": "Generate a customized privacy policy for your website online for free. Cover data collection, cookies, and user rights. GDPR and CCPA compliant templates."
+  },
+  "terms-generator": {
+    "name": "Terms of Service Generator",
+    "description": "Generate terms of service for your website.",
+    "seo_title": "Free Terms of Service Generator Online",
+    "seo_description": "Generate customized terms of service for your website online for free. Cover user agreements, liability, intellectual property, and dispute resolution."
+  },
+  "cookie-policy-generator": {
+    "name": "Cookie Policy Generator",
+    "description": "Generate a cookie policy for your website.",
+    "seo_title": "Free Cookie Policy Generator Online",
+    "seo_description": "Generate a customized cookie policy for your website online for free. Explain cookie types, purposes, and consent options. GDPR and CCPA compliant."
+  },
+  "json-to-tsv": {
+    "name": "JSON to TSV Converter",
+    "description": "Convert JSON arrays to TSV (Tab-Separated Values).",
+    "seo_title": "Free JSON to TSV Converter Online",
+    "seo_description": "Convert JSON arrays to TSV (Tab-Separated Values) format online for free. Handle nested objects and arrays. Perfect for spreadsheet import and data analysis."
+  },
+  "csv-viewer": {
+    "name": "CSV Viewer",
+    "description": "View and parse CSV data in a table format.",
+    "seo_title": "Free CSV Viewer Online",
+    "seo_description": "View and parse CSV data in a table format online for free. Support custom delimiters, headers, and large files. Sort, filter, and search your data easily."
+  },
+  "htaccess-generator": {
+    "name": ".htaccess Generator",
+    "description": "Generate .htaccess configuration for Apache servers.",
+    "seo_title": "Free .htaccess Generator Online",
+    "seo_description": "Generate .htaccess configuration for Apache servers online for free. Create redirects, rewrites, security rules, and caching directives. Web hosting essential."
+  },
+  "nginx-config-generator": {
+    "name": "Nginx Config Generator",
+    "description": "Generate Nginx server configuration files.",
+    "seo_title": "Free Nginx Config Generator Online",
+    "seo_description": "Generate Nginx server configuration files online for free. Create server blocks, SSL settings, proxy rules, and caching. Essential for modern web deployment."
+  },
+  "curl-converter": {
+    "name": "cURL Converter",
+    "description": "Convert cURL commands to code in various languages.",
+    "seo_title": "Free cURL to Code Converter Online",
+    "seo_description": "Convert cURL commands to JavaScript, Python, PHP, Go, and Java code online for free. Parse headers, body, and authentication. Essential for API integration."
+  },
+  "reading-time-calculator": {
+    "name": "Reading Time Calculator",
+    "description": "Calculate reading time for any text or article.",
+    "seo_title": "Free Reading Time Calculator Online",
+    "seo_description": "Calculate reading time and word count for any text online for free. Get estimates for average, slow, and fast readers. Perfect for content creators."
+  },
+  "open-graph-generator": {
+    "name": "Open Graph Generator",
+    "description": "Generate Open Graph meta tags for social media sharing.",
+    "seo_title": "Free Open Graph Generator Online",
+    "seo_description": "Generate Open Graph meta tags for Facebook, LinkedIn and other social platforms online for free. Preview how your content appears when shared on social media."
+  },
+  "twitter-card-generator": {
+    "name": "Twitter Card Generator",
+    "description": "Generate Twitter Card meta tags for better tweet previews.",
+    "seo_title": "Free Twitter Card Generator Online",
+    "seo_description": "Generate Twitter Card meta tags for rich tweet previews online for free. Support summary, large image, and player cards. Optimize for Twitter sharing."
+  },
+  "mime-type-lookup": {
+    "name": "MIME Type Lookup",
+    "description": "Search for MIME types by extension or description.",
+    "seo_title": "Free MIME Type Lookup Tool",
+    "seo_description": "Search for MIME types by file extension or description online for free. Complete database of content types for web development. Essential for HTTP headers."
+  },
+  "http-status-codes": {
+    "name": "HTTP Status Codes",
+    "description": "Reference guide for all HTTP status codes.",
+    "seo_title": "HTTP Status Code Checker & Lookup Tool",
+    "seo_description": "Check and lookup HTTP status codes online. Quick reference for web developers and API debugging."
+  },
+  "string-obfuscator": {
+    "name": "String Obfuscator",
+    "description": "Obfuscate strings using various encoding methods.",
+    "seo_title": "Free String Obfuscator Online",
+    "seo_description": "Obfuscate strings using Base64, Hex, HTML Entities, URL encoding, and ROT13 online for free. Multiple encoding layers for protection. For testing purposes."
+  },
+  "text-cleaner": {
+    "name": "Text Cleaner",
+    "description": "Clean and format text by removing spaces, lines, and more.",
+    "seo_title": "Free Text Cleaner Online",
+    "seo_description": "Clean and format text by removing extra spaces, empty lines, HTML tags, and more online for free. Normalize whitespace and fix common formatting issues."
+  },
+  "list-randomizer": {
+    "name": "List Randomizer",
+    "description": "Shuffle and randomize lists of items.",
+    "seo_title": "Free List Randomizer Online",
+    "seo_description": "Shuffle and randomize lists of items or names online for free. Perfect for random selection, lottery draws, and fair ordering. Secure randomization."
+  },
+  "sql-generator": {
+    "name": "SQL Generator",
+    "description": "Generate SQL queries for common operations.",
+    "seo_title": "Free SQL Generator Online",
+    "seo_description": "Generate SQL queries for SELECT, INSERT, UPDATE, DELETE, and CREATE TABLE online for free. Visual query builder with syntax highlighting. For all databases."
+  },
+  "htaccess-to-nginx": {
+    "name": "htaccess to Nginx Converter",
+    "description": "Convert Apache .htaccess rules to Nginx configuration.",
+    "seo_title": "Free htaccess to Nginx Converter Online",
+    "seo_description": "Convert Apache htaccess rules to Nginx config online for free. Transform redirects, rewrites, and security rules. Essential for server migration and deployment."
+  },
+  "js-obfuscator": {
+    "name": "JavaScript Obfuscator",
+    "description": "Obfuscate JavaScript code to protect your source.",
+    "seo_title": "Free JavaScript Obfuscator Online",
+    "seo_description": "Obfuscate and protect JavaScript code online for free. Rename variables, encode strings, and add dead code. Protect your intellectual property."
+  },
+  "image-watermark": {
+    "name": "Image Watermark",
+    "description": "Add text watermarks to images.",
+    "seo_title": "Free Image Watermark Tool Online",
+    "seo_description": "Add text watermarks to images online for free. Customize font, size, color, opacity, and position. Protect your photos and artwork from unauthorized use."
+  },
+  "svg-to-image": {
+    "name": "SVG to Image",
+    "description": "Convert SVG files to PNG, JPEG, or WebP images.",
+    "seo_title": "Free SVG to Image Converter Online",
+    "seo_description": "Convert SVG to PNG, JPEG, WebP online for free. Set custom dimensions and background color. Perfect for exporting vector graphics for web and print use."
+  },
+  "hex-base64-converter": {
+    "name": "Hex Base64 Converter",
+    "description": "Convert between hexadecimal and Base64 encoding.",
+    "seo_title": "Free Hex Base64 Converter Online",
+    "seo_description": "Convert between Hex and Base64 online for free. Encode hexadecimal to Base64 or decode Base64 to hex. Essential for cryptography and data encoding tasks."
+  },
+  "pdf-to-base64": {
+    "name": "PDF to Base64",
+    "description": "Convert PDF files to Base64 encoding.",
+    "seo_title": "Free PDF to Base64 Converter Online",
+    "seo_description": "Convert PDF files to Base64 encoding online for free. Embed PDFs in HTML, JSON, or data URIs. Secure browser-based conversion with no file upload to servers."
+  },
+  "audio-to-base64": {
+    "name": "Audio to Base64",
+    "description": "Convert audio files to Base64 encoding.",
+    "seo_title": "Free Audio to Base64 Converter Online",
+    "seo_description": "Convert audio files to Base64 encoding online for free. Support MP3, WAV, OGG formats. Embed audio in HTML, JSON, or data URIs. Browser-based processing."
+  },
+  "video-to-base64": {
+    "name": "Video to Base64",
+    "description": "Convert video files to Base64 encoding.",
+    "seo_title": "Free Video to Base64 Converter Online",
+    "seo_description": "Convert video files to Base64 encoding online for free. Support MP4, WebM, and more formats. Embed videos in HTML, JSON, or data URIs. Browser-based processing."
+  },
+  "file-size-calculator": {
+    "name": "File Size Calculator",
+    "description": "Convert between different file size units.",
+    "seo_title": "Free File Size Calculator Online",
+    "seo_description": "Convert between bytes, KB, MB, GB, TB and more online for free. Calculate file sizes with binary (1024) or decimal (1000) units. Essential for storage planning."
+  },
+  "ascii-table": {
+    "name": "ASCII Table",
+    "description": "Complete ASCII character reference table.",
+    "seo_title": "ASCII Table - Character Code Reference",
+    "seo_description": "Complete ASCII table with decimal, hex, octal, and binary values. Browse all 128 ASCII characters with descriptions. Essential reference for programmers."
+  },
+  "text-to-hex": {
+    "name": "Text to Hex",
+    "description": "Convert text to hexadecimal and vice versa.",
+    "seo_title": "Free Text to Hex Converter Online",
+    "seo_description": "Convert text to hexadecimal encoding and decode hex to text online for free. Support UTF-8 and ASCII encoding. Essential for debugging and data analysis."
+  },
+  "css-variables-generator": {
+    "name": "CSS Variables Generator",
+    "description": "Generate CSS custom properties (variables) with visual editor.",
+    "seo_title": "Free CSS Variables Generator Online",
+    "seo_description": "Generate CSS custom properties with visual color picker and export to CSS, SCSS, or JavaScript. Create design tokens for consistent theming across projects."
+  },
+  "lorem-picsum": {
+    "name": "Lorem Picsum",
+    "description": "Generate random placeholder images from Picsum Photos.",
+    "seo_title": "Free Lorem Picsum Image Generator Online",
+    "seo_description": "Generate random placeholder images with custom dimensions, grayscale, and blur effects. Perfect for mockups, wireframes, and web design prototyping."
+  },
+  "regex-escape": {
+    "name": "Regex Escape",
+    "description": "Escape or unescape special regex characters.",
+    "seo_title": "Free Regex Escape Tool Online",
+    "seo_description": "Escape special characters for use in regular expressions online for free. Handle metacharacters like . * + ? ^ $ '{' '}' [ ] \\ '|' ( ). Essential for patterns."
+  },
+  "html-to-text": {
+    "name": "HTML to Text",
+    "description": "Convert HTML to plain text, stripping all tags.",
+    "seo_title": "Free HTML to Text Converter Online",
+    "seo_description": "Convert HTML to plain text, removing all tags and preserving content structure. Handle links, lists, and tables intelligently. For content extraction."
+  },
+  "binary-to-decimal": {
+    "name": "Binary to Decimal",
+    "description": "Convert between binary, decimal, and hex.",
+    "seo_title": "Binary to Decimal Converter Online",
+    "seo_description": "Convert binary to decimal, decimal to binary, binary to hex, and hex to binary online for free. Support large numbers and instant conversion. For programmers."
+  },
+  "octal-converter": {
+    "name": "Octal Converter",
+    "description": "Convert between octal and other number bases.",
+    "seo_title": "Octal Converter Online",
+    "seo_description": "Convert octal to decimal, binary, and hex online for free. Also convert from decimal, binary, or hex to octal. Essential for Unix permissions and programming."
+  },
+  "text-to-nato": {
+    "name": "Text to NATO",
+    "description": "Convert text to NATO phonetic alphabet.",
+    "seo_title": "Text to NATO Phonetic Alphabet Converter",
+    "seo_description": "Convert letters and numbers to NATO phonetic alphabet words online for free. Alpha, Bravo, Charlie format for clear communication. For radio and phone."
+  },
+  "crc32-calculator": {
+    "name": "CRC32 Calculator",
+    "description": "Calculate CRC32 for text or files.",
+    "seo_title": "CRC32 Checksum Calculator Online",
+    "seo_description": "Calculate CRC32 checksum for text or uploaded files in your browser. Verify data integrity and detect transmission errors. Secure browser-based processing."
+  },
+  "mac-address-generator": {
+    "name": "MAC Address Generator",
+    "description": "Generate random MAC addresses with options.",
+    "seo_title": "MAC Address Generator Online",
+    "seo_description": "Generate random MAC addresses with prefix, separator, and bit flag options. Support unicast/multicast and universal/local flags. For testing and development."
+  },
+  "curl-to-code": {
+    "name": "cURL to Code",
+    "description": "Convert cURL commands to code in multiple programming languages.",
+    "seo_title": "Free Online cURL to Code Converter",
+    "seo_description": "Convert cURL commands to JavaScript, Python, PHP, Go, Java, C#, Ruby and Rust code online for free. Parse requests with headers, body, and authentication."
+  },
+  "ip-validator": {
+    "name": "IP Address Validator",
+    "description": "Validate IPv4 and IPv6 addresses with detailed information.",
+    "seo_title": "Free IP Address Validator Online",
+    "seo_description": "Validate IPv4 and IPv6 addresses online for free. Check if IP is private, loopback, multicast, or reserved. Get detailed information about any IP format."
+  },
+  "json-merger": {
+    "name": "JSON Merger",
+    "description": "Merge multiple JSON objects with different strategies.",
+    "seo_title": "Free JSON Merger Online",
+    "seo_description": "Merge JSON objects online with shallow, deep, or concat strategies. Combine multiple JSON files into one. Handle arrays and nested objects intelligently."
+  },
+  "text-template": {
+    "name": "Text Template",
+    "description": "Replace variables in text templates with values.",
+    "seo_title": "Free Text Template Engine Online",
+    "seo_description": "Simple text template engine. Replace '{{' variables '}}' with values from your data. Support loops, conditionals, and nested objects. Generate dynamic content."
+  },
+  "base-calculator": {
+    "name": "Base Calculator",
+    "description": "Perform calculations in different number bases.",
+    "seo_title": "Free Base Calculator Online",
+    "seo_description": "Calculate in binary, octal, decimal, and hexadecimal. Supports arithmetic and bitwise operations like AND, OR, XOR, NOT, shift. For low-level programming."
+  },
+  "color-name-finder": {
+    "name": "Color Name Finder",
+    "description": "Find the closest color name for any color value.",
+    "seo_title": "Free Color Name Finder Online",
+    "seo_description": "Find the closest named color for any hex color value. Browse CSS color names, X11 colors, and web-safe colors. For designers and accessibility compliance."
+  },
+  "char-frequency": {
+    "name": "Character Frequency Analyzer",
+    "description": "Analyze character frequency in text.",
+    "seo_title": "Free Character Frequency Analyzer Online",
+    "seo_description": "Analyze character frequency and distribution in text. Get counts, percentages, and visual charts for each character. For cryptography and text analysis."
+  },
+  "json-to-dart": {
+    "name": "JSON to Dart",
+    "description": "Convert JSON to Dart class with fromJson and toJson methods.",
+    "seo_title": "Free JSON to Dart Converter Online",
+    "seo_description": "Convert JSON to Dart class code with factory constructors and serialization methods. Support null safety and nested classes. For Flutter app development."
+  },
+  "sql-to-json": {
+    "name": "SQL to JSON",
+    "description": "Convert SQL INSERT statements to JSON array.",
+    "seo_title": "Free SQL to JSON Converter Online",
+    "seo_description": "Convert SQL INSERT statements to JSON array format. Parse multiple INSERT statements and extract data. Perfect for database migration and data export tasks."
+  },
+  "bar-chart-generator": {
+    "name": "Bar Chart Generator",
+    "description": "Create bar charts online. Customize data, colors and export as PNG/SVG.",
+    "seo_title": "Free Online Bar Chart Generator",
+    "seo_description": "Create professional bar charts online for free. Customize data, colors, and styles. Export as PNG or SVG. Perfect for presentations and reports."
+  },
+  "line-chart-generator": {
+    "name": "Line Chart Generator",
+    "description": "Create line charts online. Visualize trends with multiple data series and export as PNG/SVG.",
+    "seo_title": "Free Online Line Chart Generator",
+    "seo_description": "Create professional line charts online for free. Visualize trends and compare multiple data series. Export as PNG or SVG."
+  },
+  "pie-chart-generator": {
+    "name": "Pie Chart Generator",
+    "description": "Create pie charts online. Visualize data proportions and export as PNG/SVG.",
+    "seo_title": "Free Online Pie Chart Generator",
+    "seo_description": "Create professional pie charts online for free. Visualize data proportions, create donut and rose charts. Export as PNG or SVG."
+  },
+  "radar-chart-generator": {
+    "name": "Radar Chart Generator",
+    "description": "Create radar charts online. Compare multiple dimensions and export as PNG/SVG.",
+    "seo_title": "Free Online Radar Chart Generator",
+    "seo_description": "Create professional radar charts online for free. Compare multiple dimensions and data series. Export as PNG or SVG."
+  },
+  "scatter-chart-generator": {
+    "name": "Scatter Chart Generator",
+    "description": "Create scatter charts online. Analyze correlations and export as PNG/SVG.",
+    "seo_title": "Free Online Scatter Chart Generator",
+    "seo_description": "Create professional scatter charts online for free. Analyze data correlations. Export as PNG or SVG."
+  },
+  "area-chart-generator": {
+    "name": "Area Chart Generator",
+    "description": "Create area charts online. Visualize cumulative data and export as PNG/SVG.",
+    "seo_title": "Free Online Area Chart Generator",
+    "seo_description": "Create professional area charts online for free. Visualize cumulative data trends. Export as PNG or SVG."
+  },
+  "funnel-chart-generator": {
+    "name": "Funnel Chart Generator",
+    "description": "Create funnel charts online. Visualize conversion processes and export as PNG/SVG.",
+    "seo_title": "Free Online Funnel Chart Generator",
+    "seo_description": "Create professional funnel charts online for free. Visualize conversion funnels. Export as PNG or SVG."
+  },
+  "gauge-chart-generator": {
+    "name": "Gauge Chart Generator",
+    "description": "Create gauge charts online. Display progress and metrics with PNG/SVG export.",
+    "seo_title": "Free Online Gauge Chart Generator",
+    "seo_description": "Create professional gauge charts online for free. Display progress and KPIs. Export as PNG or SVG."
+  },
+  "heatmap-chart-generator": {
+    "name": "Heatmap Chart Generator",
+    "description": "Create heatmap charts online. Visualize data density and export as PNG/SVG.",
+    "seo_title": "Free Online Heatmap Chart Generator",
+    "seo_description": "Create professional heatmap charts online for free. Visualize data patterns. Export as PNG or SVG."
+  },
+  "treemap-chart-generator": {
+    "name": "Treemap Chart Generator",
+    "description": "Create treemap charts online. Visualize hierarchical data and export as PNG/SVG.",
+    "seo_title": "Free Online Treemap Chart Generator",
+    "seo_description": "Create professional treemap charts online for free. Visualize hierarchical data. Export as PNG or SVG."
+  },
+  "doughnut-chart-generator": {
+    "name": "Doughnut Chart Generator",
+    "description": "Create doughnut charts online. Visualize proportions with hollow center and export as PNG/SVG.",
+    "seo_title": "Free Online Doughnut Chart Generator",
+    "seo_description": "Create professional doughnut charts online for free. Visualize data proportions. Export as PNG or SVG."
+  },
+  "sankey-chart-generator": {
+    "name": "Sankey Chart Generator",
+    "description": "Create sankey diagrams online. Visualize flow data and export as PNG/SVG.",
+    "seo_title": "Free Online Sankey Chart Generator",
+    "seo_description": "Create professional sankey diagrams online for free. Visualize flow and relationships. Export as PNG or SVG."
+  },
+  "sunburst-chart-generator": {
+    "name": "Sunburst Chart Generator",
+    "description": "Create sunburst charts online. Visualize hierarchical data radially and export as PNG/SVG.",
+    "seo_title": "Free Online Sunburst Chart Generator",
+    "seo_description": "Create professional sunburst charts online for free. Visualize hierarchical data. Export as PNG or SVG."
+  },
+  "candlestick-chart-generator": {
+    "name": "Candlestick Chart Generator",
+    "description": "Create candlestick charts online. Visualize stock data and export as PNG/SVG.",
+    "seo_title": "Free Online Candlestick Chart Generator",
+    "seo_description": "Create professional candlestick charts online for free. Visualize OHLC stock data. Export as PNG or SVG."
+  },
+  "boxplot-chart-generator": {
+    "name": "Boxplot Chart Generator",
+    "description": "Create boxplot charts online. Visualize statistical distributions and export as PNG/SVG.",
+    "seo_title": "Free Online Boxplot Chart Generator",
+    "seo_description": "Create professional boxplot charts online for free. Visualize statistical data. Export as PNG or SVG."
+  },
+  "wordcloud-generator": {
+    "name": "Word Cloud Generator",
+    "description": "Create word clouds online. Visualize text data and export as PNG/SVG.",
+    "seo_title": "Free Online Word Cloud Generator",
+    "seo_description": "Create professional word clouds online for free. Visualize text frequency. Export as PNG or SVG."
+  },
+  "graph-chart-generator": {
+    "name": "Graph Chart Generator",
+    "description": "Create graph/network charts online. Visualize relationships and export as PNG/SVG.",
+    "seo_title": "Free Online Graph Chart Generator",
+    "seo_description": "Create professional graph charts online for free. Visualize network relationships. Export as PNG or SVG."
+  },
+  "calendar-heatmap-generator": {
+    "name": "Calendar Heatmap Generator",
+    "description": "Create calendar heatmaps online. Visualize daily data and export as PNG/SVG.",
+    "seo_title": "Free Online Calendar Heatmap Generator",
+    "seo_description": "Create professional calendar heatmaps online for free. Visualize daily activity. Export as PNG or SVG."
+  },
+  "polar-bar-chart-generator": {
+    "name": "Polar Bar Chart Generator",
+    "description": "Create polar bar charts online. Visualize data radially and export as PNG/SVG.",
+    "seo_title": "Free Online Polar Bar Chart Generator",
+    "seo_description": "Create professional polar bar charts online for free. Visualize data in polar coordinates. Export as PNG or SVG."
+  },
+  "parallel-chart-generator": {
+    "name": "Parallel Chart Generator",
+    "description": "Create parallel coordinate charts online. Compare multi-dimensional data and export as PNG/SVG.",
+    "seo_title": "Free Online Parallel Chart Generator",
+    "seo_description": "Create professional parallel coordinate charts online for free. Compare multi-dimensional data. Export as PNG or SVG."
+  },
+  "bubble-chart-generator": {
+    "name": "Bubble Chart Generator",
+    "description": "Create 3D bubble charts showing relationship between X, Y and Size.",
+    "seo_title": "Free Online Bubble Chart Generator",
+    "seo_description": "Create professional bubble charts online for free. Visualize 3-dimensional data (X, Y, Size). Export as PNG or SVG."
+  },
+  "tree-chart-generator": {
+    "name": "Tree Chart Generator",
+    "description": "Create hierarchical tree charts with orthogonal and radial layouts.",
+    "seo_title": "Free Online Tree Chart Generator",
+    "seo_description": "Create professional tree charts online for free. Visualize hierarchical structures. Export as PNG or SVG."
+  },
+  "theme-river-generator": {
+    "name": "Theme River Generator",
+    "description": "Create theme river charts showing data flow over time.",
+    "seo_title": "Free Online Theme River Generator",
+    "seo_description": "Create professional theme river charts online for free. Visualize data flow and trends over time. Export as PNG or SVG."
+  },
+  "gantt-chart-generator": {
+    "name": "Gantt Chart Maker",
+    "description": "Create Gantt charts to visualize project progress and schedules.",
+    "seo_title": "Free Gantt Chart Maker Online - Create Project Timelines | U2Tool",
+    "seo_description": "Create professional Gantt charts online with our free Gantt chart maker. Visualize project schedules, track task progress, manage dependencies. Export to PNG/SVG instantly."
+  },
+  "venn-diagram-generator": {
+    "name": "Venn Diagram Generator",
+    "description": "Create Venn diagrams to show logical relationships between sets.",
+    "seo_title": "Free Online Venn Diagram Generator",
+    "seo_description": "Create 2-set or 3-set Venn diagrams online. Visualize logical relationships and overlaps. Free and easy to use."
+  },
+  "timeline-chart-generator": {
+    "name": "Timeline Chart Generator",
+    "description": "Create timeline charts to show sequences of events.",
+    "seo_title": "Free Online Timeline Chart Generator",
+    "seo_description": "Create vertical or horizontal timeline charts online. Visualize history, milestones, and processes. Export for free."
+  },
+  "nightingale-rose-chart-generator": {
+    "name": "Nightingale Rose Chart Generator",
+    "description": "Create Nightingale rose charts (polar area charts) online. Visualize data with varying radii.",
+    "seo_title": "Free Online Nightingale Rose Chart Generator",
+    "seo_description": "Create beautiful Nightingale rose charts online for free. Visualize data with polar area representation. Export as PNG or SVG."
+  },
+  "grouped-bar-chart-generator": {
+    "name": "Grouped Bar Chart Generator",
+    "description": "Create grouped bar charts online. Compare multiple data series side by side.",
+    "seo_title": "Free Online Grouped Bar Chart Generator",
+    "seo_description": "Create grouped bar charts online for free. Compare multiple data series side by side. Export as PNG or SVG."
+  },
+  "stacked-bar-chart-generator": {
+    "name": "Stacked Bar Chart Generator",
+    "description": "Create stacked bar charts online. Show composition of totals across categories.",
+    "seo_title": "Free Online Stacked Bar Chart Generator",
+    "seo_description": "Create stacked bar charts online for free. Visualize how parts contribute to totals. Export as PNG or SVG."
+  },
+  "grouped-line-chart-generator": {
+    "name": "Grouped Line Chart Generator",
+    "description": "Create multi-series line charts online. Compare trends across different data sets.",
+    "seo_title": "Free Online Grouped Line Chart Generator",
+    "seo_description": "Create multi-series line charts online for free. Compare trends and patterns. Export as PNG or SVG."
+  },
+  "step-line-chart-generator": {
+    "name": "Step Line Chart Generator",
+    "description": "Create step line charts online. Visualize discrete changes in data over time.",
+    "seo_title": "Free Online Step Line Chart Generator",
+    "seo_description": "Create step line charts online for free. Show discrete data changes with step-wise transitions. Export as PNG or SVG."
+  },
+  "waterfall-chart-generator": {
+    "name": "Waterfall Chart Generator",
+    "description": "Create waterfall charts online. Visualize how values increase or decrease sequentially.",
+    "seo_title": "Free Online Waterfall Chart Generator",
+    "seo_description": "Create waterfall charts online for free. Show how initial values change through increases and decreases. Export as PNG or SVG."
+  },
+  "stacked-area-chart-generator": {
+    "name": "Stacked Area Chart Generator",
+    "description": "Create stacked area charts online. Show how components contribute to totals over time.",
+    "seo_title": "Free Online Stacked Area Chart Generator",
+    "seo_description": "Create stacked area charts online for free. Visualize cumulative trends and compositions. Export as PNG or SVG."
+  },
+  "positive-negative-bar-chart-generator": {
+    "name": "Positive Negative Bar Chart Generator",
+    "description": "Create positive/negative bar charts online. Visualize data with both positive and negative values.",
+    "seo_title": "Free Online Positive Negative Bar Chart Generator",
+    "seo_description": "Create positive/negative bar charts online for free. Clearly show gains and losses. Export as PNG or SVG."
+  },
+  "percentage-stacked-bar-chart-generator": {
+    "name": "Percentage Stacked Bar Chart Generator",
+    "description": "Create 100% stacked bar charts online. Show proportional composition across categories.",
+    "seo_title": "Free Online Percentage Stacked Bar Chart Generator",
+    "seo_description": "Create 100% stacked bar charts online for free. Visualize proportional data composition. Export as PNG or SVG."
+  },
+  "mixed-chart-generator": {
+    "name": "Mixed Chart Generator",
+    "description": "Create combined bar and line charts online. Show two data series with different scales.",
+    "seo_title": "Free Online Mixed Bar Line Chart Generator",
+    "seo_description": "Create mixed bar and line charts online for free. Combine two data series with dual Y-axes. Export as PNG or SVG."
+  },
+  "ring-progress-chart-generator": {
+    "name": "Ring Progress Chart Generator",
+    "description": "Create ring progress charts online. Display percentage completion in a circular gauge.",
+    "seo_title": "Free Online Ring Progress Chart Generator",
+    "seo_description": "Create ring progress charts online for free. Visualize percentage completion with animated circular gauges. Export as PNG or SVG."
+  },
+  "liquid-fill-chart-generator": {
+    "name": "Liquid Fill Chart Generator",
+    "description": "Create liquid fill charts online. Display percentage with animated wave effects.",
+    "seo_title": "Free Online Liquid Fill Chart Generator",
+    "seo_description": "Create liquid fill charts online for free. Visualize percentages with animated wave effects. Export as PNG or SVG."
+  },
+  "multi-ring-chart-generator": {
+    "name": "Multi Ring Chart Generator",
+    "description": "Create multi-ring progress charts online. Compare multiple metrics in concentric rings.",
+    "seo_title": "Free Online Multi Ring Progress Chart Generator",
+    "seo_description": "Create multi-ring progress charts online for free. Compare multiple metrics with concentric rings. Export as PNG or SVG."
+  },
+  "half-doughnut-chart-generator": {
+    "name": "Half Doughnut Chart Generator",
+    "description": "Create half doughnut charts online. Display data in a semicircular pie chart.",
+    "seo_title": "Free Online Half Doughnut Chart Generator",
+    "seo_description": "Create half doughnut charts online for free. Visualize proportions in a semicircular format. Export as PNG or SVG."
+  },
+  "nested-pie-chart-generator": {
+    "name": "Nested Pie Chart Generator",
+    "description": "Create nested pie charts online. Show hierarchical data with inner and outer rings.",
+    "seo_title": "Free Online Nested Pie Chart Generator",
+    "seo_description": "Create nested pie charts online for free. Visualize hierarchical data with inner and outer rings. Export as PNG or SVG."
+  },
+  "pictorial-bar-chart-generator": {
+    "name": "Pictorial Bar Chart Generator",
+    "description": "Create pictorial bar charts online. Visualize data with repeated symbols.",
+    "seo_title": "Free Online Pictorial Bar Chart Generator",
+    "seo_description": "Create pictorial bar charts online for free. Visualize data with repeated symbols and shapes. Export as PNG or SVG."
+  },
+  "env-parser": {
+    "name": "Env File Parser",
+    "description": "Parse and validate .env files. Convert between .env, JSON, and YAML formats.",
+    "seo_title": "Free Env File Parser & Validator Online",
+    "seo_description": "Parse and validate .env files online for free. Detect issues, convert to JSON/YAML, mask sensitive values. Perfect for developers."
+  },
+  "json-schema-generator": {
+    "name": "JSON Schema Generator",
+    "description": "Generate JSON Schema from sample JSON data. Supports Draft-07 and Draft-2020-12.",
+    "seo_title": "Free JSON Schema Generator Online",
+    "seo_description": "Generate JSON Schema from sample JSON data online for free. Supports Draft-07 and Draft-2020-12. Infer types automatically."
+  },
+  "time-calculator": {
+    "name": "Time Calculator",
+    "description": "Add, subtract, and calculate differences between times.",
+    "seo_title": "Free Time Calculator Online",
+    "seo_description": "Calculate time differences, add or subtract hours, minutes, and seconds online for free. Supports 12/24 hour formats."
+  },
+  "batch-timestamp-converter": {
+    "name": "Batch Timestamp Converter",
+    "description": "Convert multiple timestamps at once. Auto-detect formats and export results.",
+    "seo_title": "Free Batch Timestamp Converter Online",
+    "seo_description": "Convert multiple timestamps at once online for free. Auto-detect Unix seconds, milliseconds, ISO 8601. Export as CSV or JSON."
+  },
+  "regex-visualizer": {
+    "name": "Regex Visualizer",
+    "description": "Visualize regular expressions as railroad diagrams. Test patterns with sample strings.",
+    "seo_title": "Free Regex Visualizer & Tester Online",
+    "seo_description": "Visualize regular expressions as railroad diagrams online for free. Test patterns, see matches highlighted. Export as SVG or PNG."
+  },
+  "crontab-calendar": {
+    "name": "Crontab Calendar",
+    "description": "Visualize cron schedules on a calendar. See when jobs will run.",
+    "seo_title": "Free Crontab Calendar Visualizer Online",
+    "seo_description": "Visualize cron schedules on a calendar online for free. See next execution times, monthly view of scheduled runs."
+  },
+  "fake-data-generator": {
+    "name": "Fake Data Generator",
+    "description": "Generate realistic fake data for testing. Names, emails, addresses, and more.",
+    "seo_title": "Free Fake Data Generator Online",
+    "seo_description": "Generate realistic fake data online for free. Names, emails, phone numbers, addresses. Export as JSON, CSV, or SQL."
+  },
+  "image-collage": {
+    "name": "Image Collage",
+    "description": "Combine multiple images into one collage with various layout options.",
+    "seo_title": "Free Online Image Collage Maker",
+    "seo_description": "Create beautiful image collages online for free. Multiple layout options including grid, horizontal, and vertical. No upload required, processed locally."
+  },
+  "image-splitter": {
+    "name": "Image Splitter",
+    "description": "Split an image into multiple pieces with custom rows and columns.",
+    "seo_title": "Free Online Image Splitter Tool",
+    "seo_description": "Split images into multiple pieces online for free. Custom rows and columns, batch download. Perfect for creating grid posts."
+  },
+  "image-rounder": {
+    "name": "Image Rounder",
+    "description": "Add rounded corners to images or create circular images.",
+    "seo_title": "Free Online Image Corner Rounder",
+    "seo_description": "Add rounded corners to images online for free. Custom radius, create circular images. Perfect for avatars and profile pictures."
+  },
+  "image-border": {
+    "name": "Image Border",
+    "description": "Add borders and padding to images with custom colors.",
+    "seo_title": "Free Online Image Border Tool",
+    "seo_description": "Add borders and padding to images online for free. Custom border width, color, and style options."
+  },
+  "image-flip-rotate": {
+    "name": "Image Flip & Rotate",
+    "description": "Flip or rotate images horizontally, vertically, or by any angle.",
+    "seo_title": "Free Online Image Flip & Rotate Tool",
+    "seo_description": "Flip and rotate images online for free. Horizontal flip, vertical flip, and custom angle rotation."
+  },
+  "image-adjustment": {
+    "name": "Image Adjustment",
+    "description": "Adjust image brightness, contrast, saturation, and more.",
+    "seo_title": "Free Online Image Adjustment Tool",
+    "seo_description": "Adjust image brightness, contrast, saturation, hue, and more online for free. Real-time preview."
+  },
+  "image-frosted-glass": {
+    "name": "Frosted Glass Effect",
+    "description": "Add frosted glass blur effect to images.",
+    "seo_title": "Free Online Frosted Glass Effect Tool",
+    "seo_description": "Add frosted glass blur effect to images online for free. Custom blur amount and opacity."
+  },
+  "image-to-ico": {
+    "name": "Image to ICO",
+    "description": "Convert images to ICO icon format with multiple sizes.",
+    "seo_title": "Free Online Image to ICO Converter",
+    "seo_description": "Convert PNG, JPG images to ICO icon format online for free. Support 16x16, 32x32, 48x48, 256x256 and more sizes."
+  },
+  "gif-maker": {
+    "name": "GIF Maker",
+    "description": "Create animated GIFs from multiple images.",
+    "seo_title": "Free Online GIF Maker",
+    "seo_description": "Create animated GIFs from images online for free. Custom frame rate, size, and loop count."
+  },
+  "gif-splitter": {
+    "name": "GIF Splitter",
+    "description": "Extract individual frames from animated GIFs.",
+    "seo_title": "Free Online GIF Frame Extractor",
+    "seo_description": "Extract individual frames from GIF animations online for free. Batch download all frames."
+  },
+  "gif-compressor": {
+    "name": "GIF Compressor",
+    "description": "Compress GIF file size while maintaining animation.",
+    "seo_title": "Free Online GIF Compressor",
+    "seo_description": "Compress GIF file size online for free. Reduce colors and skip frames while keeping animation."
+  },
+  "image-to-webp": {
+    "name": "Image to WebP",
+    "description": "Convert images to WebP format for smaller file sizes.",
+    "seo_title": "Free Online Image to WebP Converter",
+    "seo_description": "Convert PNG, JPG images to WebP format online for free. WebP offers smaller file sizes and faster loading."
+  },
+  "exif-viewer": {
+    "name": "EXIF Viewer",
+    "description": "View and remove EXIF metadata from images.",
+    "seo_title": "Free Online EXIF Viewer & Remover",
+    "seo_description": "View image EXIF metadata online for free. See camera info, date, GPS location. Remove EXIF data for privacy."
+  },
+  "color-extractor": {
+    "name": "Color Extractor",
+    "description": "Extract dominant colors and color palette from images.",
+    "seo_title": "Free Online Image Color Extractor",
+    "seo_description": "Extract dominant colors and color palette from images online for free. Get the main colors and color scheme."
+  },
+  "invoice-generator": {
+    "name": "Invoice Generator",
+    "description": "Create professional invoices with customizable templates and PDF export.",
+    "seo_title": "Free Online Invoice Generator - Create Professional Invoices",
+    "seo_description": "Generate professional invoices online for free. Customize templates, add items, calculate taxes, and export to PDF. No signup required."
+  },
+  "resume-builder": {
+    "name": "Resume Builder",
+    "description": "Build professional resumes with multiple templates and PDF export.",
+    "seo_title": "Free Online Resume Builder - Create Professional CV",
+    "seo_description": "Build professional resumes online for free. Multiple templates, real-time preview, and PDF export. No signup required."
+  },
+  "signature-pad": {
+    "name": "Signature Pad",
+    "description": "Create digital signatures with customizable pen colors and export options.",
+    "seo_title": "Free Online Signature Pad - Create Digital Signatures",
+    "seo_description": "Create digital signatures online for free. Customizable pen colors, transparent background, export to PNG/SVG."
+  },
+  "pomodoro-timer": {
+    "name": "Pomodoro Timer",
+    "description": "Boost productivity with the Pomodoro technique timer.",
+    "seo_title": "Free Online Pomodoro Timer - Productivity Tool",
+    "seo_description": "Boost your productivity with the Pomodoro technique. Customizable work and break durations, session tracking, and audio notifications."
+  },
+  "meeting-notes": {
+    "name": "Meeting Notes",
+    "description": "Create structured meeting notes with attendees, agenda, and action items.",
+    "seo_title": "Free Online Meeting Notes Template",
+    "seo_description": "Create structured meeting notes online for free. Add attendees, agenda, notes, and action items. Export to Markdown or text."
+  },
+  "business-days-calculator": {
+    "name": "Business Days Calculator",
+    "description": "Calculate business days between dates excluding weekends and holidays.",
+    "seo_title": "Free Business Days Calculator Online",
+    "seo_description": "Calculate business days between dates online for free. Exclude weekends and custom holidays. Reverse calculation supported."
+  },
+  "salary-calculator": {
+    "name": "Salary Calculator",
+    "description": "Convert salary between hourly, daily, weekly, monthly, and annual rates.",
+    "seo_title": "Free Salary Calculator - Convert Pay Rates",
+    "seo_description": "Convert salary between different pay frequencies online for free. Calculate hourly, daily, weekly, monthly, and annual rates with tax deductions."
+  },
+  "invoice": {
+    "description": "Description"
+  },
+  "resume": {
+    "description": "Description"
+  },
+  "signature": {},
+  "pomodoro": {},
+  "meeting": {},
+  "businessDays": {},
+  "salary": {},
+  "excel-to-json": {
+    "name": "Excel to JSON",
+    "description": "Convert Excel files to JSON format with sheet selection and data preview.",
+    "seo_title": "Free Excel to JSON Converter Online",
+    "seo_description": "Convert Excel files (XLSX, XLS) to JSON format online for free. Support multiple sheets, data preview, and instant download."
+  },
+  "json-to-excel": {
+    "name": "JSON to Excel",
+    "description": "Convert JSON data to Excel spreadsheet with automatic column detection.",
+    "seo_title": "Free JSON to Excel Converter Online",
+    "seo_description": "Convert JSON data to Excel spreadsheet online for free. Automatic column detection, nested JSON flattening, and XLSX export."
+  },
+  "excel-viewer": {
+    "name": "Excel Viewer",
+    "description": "View Excel files online with sorting, filtering, and sheet navigation.",
+    "seo_title": "Free Online Excel Viewer",
+    "seo_description": "View Excel files online for free without Microsoft Office. Support sorting, filtering, and multiple sheet navigation."
+  },
+  "excel-merger": {
+    "name": "Excel Merger",
+    "description": "Merge multiple Excel files into one with vertical or horizontal merge options.",
+    "seo_title": "Free Excel Merger Online",
+    "seo_description": "Merge multiple Excel files into one online for free. Support vertical and horizontal merge with column alignment."
+  },
+  "pdf-to-image": {
+    "name": "PDF to Image",
+    "description": "Convert PDF pages to high-quality PNG or JPEG images.",
+    "seo_title": "Free PDF to Image Converter Online",
+    "seo_description": "Convert PDF pages to PNG or JPEG images online for free. Adjustable DPI, page selection, and batch download as ZIP."
+  },
+  "image-to-pdf": {
+    "name": "Image to PDF",
+    "description": "Convert multiple images to a single PDF document with page settings.",
+    "seo_title": "Free Image to PDF Converter Online",
+    "seo_description": "Convert images to PDF online for free. Support multiple images, drag-and-drop ordering, page size and orientation settings."
+  },
+  "pdf-merger": {
+    "name": "PDF Merger",
+    "description": "Merge multiple PDF files into a single document with drag-and-drop ordering.",
+    "seo_title": "Free PDF Merger Online",
+    "seo_description": "Merge multiple PDF files into one online for free. Drag-and-drop ordering, page count preview, and instant download."
+  },
+  "pdf-splitter": {
+    "name": "PDF Splitter",
+    "description": "Split PDF files by page selection, page range, or extract each page.",
+    "seo_title": "Free PDF Splitter Online",
+    "seo_description": "Split PDF files online for free. Extract specific pages, page ranges, or split into individual pages with ZIP download."
+  },
+  "pdf-compressor": {
+    "name": "PDF Compressor",
+    "description": "Compress PDF files to reduce file size while maintaining quality.",
+    "seo_title": "Free PDF Compressor Online",
+    "seo_description": "Compress PDF files online for free. Reduce file size with adjustable compression levels while maintaining document quality."
+  },
+  "pdf-rotator": {
+    "name": "PDF Rotator",
+    "description": "Rotate PDF pages by 90°, 180°, or 270° individually or in batch.",
+    "seo_title": "Free PDF Page Rotator Online",
+    "seo_description": "Rotate PDF pages online for free. Rotate individual pages or all pages by 90°, 180°, or 270° with visual preview."
+  },
+  "markdown-editor": {
+    "name": "Markdown Editor",
+    "description": "Write and preview Markdown with live rendering. Export to MD or HTML.",
+    "seo_title": "Free Online Markdown Editor with Live Preview",
+    "seo_description": "Write and preview Markdown online for free. Live rendering, syntax highlighting, and export to MD or HTML. Perfect for documentation and notes."
+  },
+  "world-clock": {
+    "name": "World Clock",
+    "description": "View current time in multiple cities around the world simultaneously.",
+    "seo_title": "Free World Clock - Multiple Time Zones",
+    "seo_description": "View current time in multiple cities worldwide. Add custom cities, 12/24 hour format, day/night indicator. Free online world clock tool."
+  },
+  "stopwatch": {
+    "name": "Stopwatch",
+    "description": "Precise stopwatch with lap timing. Track multiple laps with best/worst indicators.",
+    "seo_title": "Free Online Stopwatch with Lap Timer",
+    "seo_description": "Precise online stopwatch with lap timing feature. Track multiple laps, see best and worst times. Free, accurate, and easy to use."
+  },
+  "countdown-timer": {
+    "name": "Countdown Timer",
+    "description": "Set custom countdown timers with visual progress and notifications.",
+    "seo_title": "Free Online Countdown Timer",
+    "seo_description": "Set custom countdown timers online for free. Visual progress circle, preset times, browser notifications. Perfect for productivity and cooking."
+  },
+  "note-pad": {
+    "name": "Note Pad",
+    "description": "Create and organize colorful sticky notes. Auto-save to browser storage.",
+    "seo_title": "Free Online Note Pad - Sticky Notes",
+    "seo_description": "Create and organize colorful sticky notes online for free. Auto-save to browser, search notes, export to JSON. Simple and effective note-taking."
+  },
+  "excelToJson": {},
+  "jsonToExcel": {},
+  "excelViewer": {},
+  "excelMerger": {},
+  "pdfToImage": {},
+  "imageToPdf": {},
+  "pdfMerger": {},
+  "pdfSplitter": {},
+  "pdfCompressor": {},
+  "pdfRotator": {},
+  "markdownEditor": {},
+  "worldClock": {},
+  "stopwatchUI": {},
+  "countdownTimer": {},
+  "notePad": {},
+  "pdf-to-text": {
+    "name": "PDF to Text",
+    "description": "Extract text content from PDF files. Supports multi-page PDFs with page markers.",
+    "seo_title": "Free PDF to Text Converter Online",
+    "seo_description": "Extract text from PDF files online for free. Supports multi-page PDFs, preserves formatting, instant download as TXT file."
+  },
+  "word-to-txt": {
+    "name": "Word to Text",
+    "description": "Convert Word documents (.docx) to plain text format.",
+    "seo_title": "Free Word to Text Converter Online",
+    "seo_description": "Convert Word documents to plain text online for free. Extract text from DOCX files instantly, no software needed."
+  },
+  "word-to-html": {
+    "name": "Word to HTML",
+    "description": "Convert Word documents (.docx) to HTML format with formatting preserved.",
+    "seo_title": "Free Word to HTML Converter Online",
+    "seo_description": "Convert Word documents to HTML online for free. Preserves formatting, headings, and lists. Download clean HTML code."
+  },
+  "excel-to-csv": {
+    "name": "Excel to CSV",
+    "description": "Convert Excel spreadsheets (.xlsx, .xls) to CSV format.",
+    "seo_title": "Free Excel to CSV Converter Online",
+    "seo_description": "Convert Excel files to CSV online for free. Supports multiple sheets, instant preview, and download."
+  },
+  "csv-to-excel": {
+    "name": "CSV to Excel",
+    "description": "Convert CSV files to Excel spreadsheet format (.xlsx).",
+    "seo_title": "Free CSV to Excel Converter Online",
+    "seo_description": "Convert CSV files to Excel online for free. Preview data, instant download as XLSX file."
+  },
+  "loan-calculator": {
+    "name": "Loan Calculator",
+    "description": "Calculate loan payments, interest, and amortization schedules.",
+    "seo_title": "Free Loan Calculator Online - Payment & Amortization",
+    "seo_description": "Calculate loan payments, total interest, and view amortization schedules online for free. Support for monthly, biweekly, and weekly payments."
+  },
+  "bmi-calculator": {
+    "name": "BMI Calculator",
+    "description": "Calculate Body Mass Index and health classification.",
+    "seo_title": "Free BMI Calculator Online - Body Mass Index",
+    "seo_description": "Calculate your BMI (Body Mass Index) online for free. Support for metric and imperial units with health classification."
+  },
+  "age-calculator": {
+    "name": "Age Calculator",
+    "description": "Calculate exact age in years, months, and days.",
+    "seo_title": "Free Age Calculator Online - Exact Age",
+    "seo_description": "Calculate your exact age in years, months, and days online for free. See days until next birthday."
+  },
+  "tip-calculator": {
+    "name": "Tip Calculator",
+    "description": "Calculate tips and split bills among multiple people.",
+    "seo_title": "Free Tip Calculator Online - Bill Splitter",
+    "seo_description": "Calculate tips and split bills online for free. Support for custom tip percentages and multiple people."
+  },
+  "discount-calculator": {
+    "name": "Discount Calculator",
+    "description": "Calculate discounted prices and savings.",
+    "seo_title": "Free Discount Calculator Online - Sale Price",
+    "seo_description": "Calculate discounted prices and savings online for free. Support for multiple discounts and percentage calculations."
+  },
+  "compound-interest-calculator": {
+    "name": "Compound Interest Calculator",
+    "description": "Calculate compound interest and investment growth.",
+    "seo_title": "Free Compound Interest Calculator Online",
+    "seo_description": "Calculate compound interest and investment growth online for free. Support for different compounding frequencies and regular contributions."
+  },
+  "binary-calculator": {
+    "name": "Binary Calculator",
+    "description": "Perform binary arithmetic and bitwise operations.",
+    "seo_title": "Free Binary Calculator Online - Bitwise Operations",
+    "seo_description": "Perform binary arithmetic and bitwise operations online for free. Support for AND, OR, XOR, NOT, and shift operations."
+  },
+  "hex-calculator": {
+    "name": "Hex Calculator",
+    "description": "Perform hexadecimal arithmetic and bitwise operations.",
+    "seo_title": "Free Hex Calculator Online - Hexadecimal Math",
+    "seo_description": "Perform hexadecimal arithmetic and bitwise operations online for free. Convert between hex, decimal, and binary."
+  },
+  "ip-subnet-calculator": {
+    "name": "IP Subnet Calculator",
+    "description": "Calculate IP subnet information and address ranges.",
+    "seo_title": "Free IP Subnet Calculator Online - CIDR Calculator",
+    "seo_description": "Calculate IP subnet information online for free. Get network address, broadcast address, and host range from IP and subnet mask."
+  },
+  "aspect-ratio-calculator-enhanced": {
+    "name": "Aspect Ratio Calculator",
+    "description": "Calculate and convert aspect ratios for images and videos.",
+    "seo_title": "Free Aspect Ratio Calculator Online",
+    "seo_description": "Calculate aspect ratios for images and videos online for free. Convert between dimensions and common presets like 16:9, 4:3."
+  },
+  "chinese-lorem-ipsum": {
+    "name": "Chinese Lorem Ipsum",
+    "description": "Generate Chinese placeholder text for design mockups.",
+    "seo_title": "Free Chinese Lorem Ipsum Generator Online",
+    "seo_description": "Generate Chinese placeholder text online for free. Create paragraphs, sentences, or words of Chinese dummy text for design mockups."
+  },
+  "text-to-image": {
+    "name": "Text to Image",
+    "description": "Convert text to downloadable PNG images.",
+    "seo_title": "Free Text to Image Converter Online",
+    "seo_description": "Convert text to PNG images online for free. Customize font, color, size, and background for your text images."
+  },
+  "text-to-handwriting": {
+    "name": "Text to Handwriting",
+    "description": "Convert text to handwriting-style images.",
+    "seo_title": "Free Text to Handwriting Converter Online",
+    "seo_description": "Convert text to handwriting-style images online for free. Choose from multiple handwriting styles and customize ink color."
+  },
+  "screen-resolution-tester": {
+    "name": "Screen Resolution Tester",
+    "description": "Test and display screen resolution and viewport information.",
+    "seo_title": "Free Screen Resolution Tester Online - Check Display & Viewport Size",
+    "seo_description": "Free online screen resolution tester tool. Check your current screen resolution, viewport size, device pixel ratio, and color depth. Test common device resolutions for responsive web design. Essential tool for web developers and designers."
+  },
+  "keyboard-tester": {
+    "name": "Keyboard Tester",
+    "description": "Test keyboard keys and view key codes.",
+    "seo_title": "Free Keyboard Tester Online - Key Code Viewer",
+    "seo_description": "Test your keyboard keys online for free. View key codes, key names, and detect pressed keys with visual feedback."
+  },
+  "typing-speed-test": {
+    "name": "Typing Speed Test",
+    "description": "Test your typing speed and accuracy.",
+    "seo_title": "Free Typing Speed Test Online - WPM Calculator",
+    "seo_description": "Test your typing speed and accuracy online for free. Measure words per minute (WPM) with different difficulty levels."
+  },
+  "morse-code-player": {
+    "name": "Morse Code Player",
+    "description": "Convert text to Morse code and play audio.",
+    "seo_title": "Free Morse Code Player Online - Audio Generator",
+    "seo_description": "Convert text to Morse code and play audio online for free. Adjust speed and frequency for learning or fun."
+  },
+  "currency-converter": {
+    "name": "Currency Converter",
+    "description": "Convert between 45+ world currencies with real-time exchange rates.",
+    "seo_title": "Free Currency Converter Online - Exchange Rate Calculator",
+    "seo_description": "Convert between 45+ world currencies online for free. Get instant exchange rates for USD, EUR, GBP, JPY, CNY and more. Fast, accurate currency conversion."
+  },
+  "roi-calculator": {
+    "name": "ROI Calculator",
+    "description": "Calculate return on investment with annualized ROI and profit analysis.",
+    "seo_title": "Free ROI Calculator Online - Investment Return Calculator",
+    "seo_description": "Calculate ROI (Return on Investment) online for free. Get instant ROI percentage, annualized returns, and profit/loss analysis. Perfect for investors."
+  },
+  "mortgage-calculator": {
+    "name": "Mortgage Calculator",
+    "description": "Calculate mortgage payments, total interest, and view amortization schedule.",
+    "seo_title": "Free Mortgage Calculator Online - Home Loan Payment Calculator",
+    "seo_description": "Calculate mortgage payments online for free. Get monthly payment, total interest, and amortization schedule. Compare loan scenarios with extra payments."
+  },
+  "tax-calculator": {
+    "name": "Tax Calculator",
+    "description": "Estimate federal income tax with bracket breakdown and effective rate.",
+    "seo_title": "Free Tax Calculator Online - Income Tax Estimator",
+    "seo_description": "Estimate your federal income tax online for free. Get tax bracket breakdown, effective tax rate, and take-home pay calculation. Updated for 2024 tax brackets."
+  },
+  "calorie-calculator": {
+    "name": "Calorie Calculator",
+    "description": "Calculate daily calorie needs based on age, weight, height, and activity level.",
+    "seo_title": "Free Calorie Calculator Online - Daily Calorie Needs",
+    "seo_description": "Calculate your daily calorie needs online for free. Based on Mifflin-St Jeor formula with activity level adjustment."
+  },
+  "water-intake-calculator": {
+    "name": "Water Intake Calculator",
+    "description": "Calculate daily water intake based on weight and activity level.",
+    "seo_title": "Free Water Intake Calculator - Daily Hydration Needs",
+    "seo_description": "Calculate your daily water intake needs online for free. Based on body weight and activity level."
+  },
+  "sleep-calculator": {
+    "name": "Sleep Calculator",
+    "description": "Calculate optimal bedtime or wake time based on sleep cycles.",
+    "seo_title": "Free Sleep Calculator - Optimal Bedtime & Wake Time",
+    "seo_description": "Calculate the best time to sleep or wake up based on 90-minute sleep cycles."
+  },
+  "due-date-calculator": {
+    "name": "Due Date Calculator",
+    "description": "Calculate pregnancy due date and track pregnancy milestones.",
+    "seo_title": "Free Pregnancy Due Date Calculator Online",
+    "seo_description": "Calculate your pregnancy due date online for free. Based on last menstrual period or conception date."
+  },
+  "love-calculator": {
+    "name": "Love Calculator",
+    "description": "Calculate love compatibility between two names for fun.",
+    "seo_title": "Free Love Calculator - Name Compatibility Test",
+    "seo_description": "Calculate love compatibility between two names online for free. Fun love percentage calculator."
+  },
+  "decision-wheel": {
+    "name": "Decision Wheel",
+    "description": "Spin the wheel to make random decisions from your options.",
+    "seo_title": "Free Decision Wheel - Random Choice Spinner",
+    "seo_description": "Spin the wheel to make random decisions online for free. Add your options and let the wheel decide."
+  },
+  "name-generator": {
+    "name": "Name Generator",
+    "description": "Generate random names for characters, babies, or projects.",
+    "seo_title": "Free Random Name Generator Online",
+    "seo_description": "Generate random names online for free. Perfect for baby names, character names, and creative projects."
+  },
+  "random-picker": {
+    "name": "Random Picker",
+    "description": "Pick random items from a list with animation effects.",
+    "seo_title": "Free Random Picker - Random Selection Tool",
+    "seo_description": "Pick random items from your list online for free. Perfect for raffles and giveaways."
+  },
+  "coin-flipper": {
+    "name": "Coin Flipper",
+    "description": "Flip a virtual coin with realistic animation and statistics.",
+    "seo_title": "Free Coin Flipper Online - Virtual Coin Toss",
+    "seo_description": "Flip a virtual coin online for free. Realistic coin flip animation with statistics."
+  },
+  "dice-roller": {
+    "name": "Dice Roller",
+    "description": "Roll virtual dice with multiple dice types and quantities.",
+    "seo_title": "Free Dice Roller Online - Virtual Dice",
+    "seo_description": "Roll virtual dice online for free. Support D4, D6, D8, D10, D12, D20 dice."
+  },
+  "team-generator": {
+    "name": "Team Generator",
+    "description": "Randomly divide people into balanced teams.",
+    "seo_title": "Free Team Generator - Random Team Maker",
+    "seo_description": "Generate random teams from a list of names online for free. Perfect for sports and games."
+  },
+  "countdown-days-calculator": {
+    "name": "Countdown Days Calculator",
+    "description": "Calculate days until or since a specific date.",
+    "seo_title": "Free Countdown Days Calculator Online",
+    "seo_description": "Calculate days until or since any date online for free. Perfect for tracking events and deadlines."
+  },
+  "fuel-cost-calculator": {
+    "name": "Fuel Cost Calculator",
+    "description": "Calculate fuel costs for trips based on distance and fuel efficiency.",
+    "seo_title": "Free Fuel Cost Calculator - Trip Gas Cost",
+    "seo_description": "Calculate fuel costs for your trip online for free. Enter distance, fuel efficiency, and gas price."
+  },
+  "electricity-cost-calculator": {
+    "name": "Electricity Cost Calculator",
+    "description": "Calculate electricity costs for appliances based on usage.",
+    "seo_title": "Free Electricity Cost Calculator Online",
+    "seo_description": "Calculate electricity costs for your appliances online for free. Enter wattage and usage hours."
+  },
+  "gpa-calculator": {
+    "name": "GPA Calculator",
+    "description": "Calculate GPA from grades and credit hours.",
+    "seo_title": "Free GPA Calculator Online - Grade Point Average",
+    "seo_description": "Calculate your GPA online for free. Support 4.0 and 5.0 scales."
+  },
+  "pace-calculator": {
+    "name": "Pace Calculator",
+    "description": "Calculate running pace, time, or distance for races.",
+    "seo_title": "Free Running Pace Calculator Online",
+    "seo_description": "Calculate running pace, finish time, or distance online for free. Perfect for marathon planning."
+  },
+  "shoe-size-converter": {
+    "name": "Shoe Size Converter",
+    "description": "Convert shoe sizes between US, UK, EU, and Asian systems.",
+    "seo_title": "Free Shoe Size Converter - US UK EU Size Chart",
+    "seo_description": "Convert shoe sizes between US, UK, EU, and Asian sizing systems online for free."
+  },
+  "ring-size-calculator": {
+    "name": "Ring Size Calculator",
+    "description": "Find your ring size using different measurement methods.",
+    "seo_title": "Free Ring Size Calculator - Find Your Ring Size",
+    "seo_description": "Find your ring size online for free. Convert between US, UK, EU ring sizes."
+  },
+  "bra-size-calculator": {
+    "name": "Bra Size Calculator",
+    "description": "Calculate bra size from band and bust measurements.",
+    "seo_title": "Free Bra Size Calculator - Find Your Perfect Fit",
+    "seo_description": "Calculate your bra size online for free. Enter band and bust measurements."
+  },
+  "concrete-calculator": {
+    "name": "Concrete Calculator",
+    "description": "Calculate concrete volume needed for slabs, footings, and columns.",
+    "seo_title": "Free Concrete Calculator - Volume & Bags Needed",
+    "seo_description": "Calculate concrete volume and bags needed online for free. Support slabs, footings, columns."
+  },
+  "paint-calculator": {
+    "name": "Paint Calculator",
+    "description": "Calculate paint needed for walls with door and window deductions.",
+    "seo_title": "Free Paint Calculator - How Much Paint Do I Need",
+    "seo_description": "Calculate how much paint you need online for free. Enter room dimensions with deductions."
+  },
+  "tile-calculator": {
+    "name": "Tile Calculator",
+    "description": "Calculate tiles needed for floors and walls with waste factor.",
+    "seo_title": "Free Tile Calculator - How Many Tiles Do I Need",
+    "seo_description": "Calculate how many tiles you need online for free. Enter area and tile size with waste factor."
+  },
+  "instagram-font-generator": {
+    "name": "Instagram Font Generator",
+    "description": "Generate fancy Unicode fonts for Instagram bio and posts.",
+    "seo_title": "Free Instagram Font Generator - Fancy Text Styles",
+    "seo_description": "Generate fancy fonts for Instagram bio and posts online for free. 20+ Unicode font styles."
+  },
+  "social-media-size-guide": {
+    "name": "Social Media Size Guide",
+    "description": "Reference guide for image sizes across social media platforms.",
+    "seo_title": "Social Media Image Size Guide 2024 - All Platforms",
+    "seo_description": "Complete social media image size guide for 2024. Optimal dimensions for all platforms."
+  },
+  "keyword-density-checker": {
+    "name": "Keyword Density Checker",
+    "description": "Analyze keyword frequency and density in your content.",
+    "seo_title": "Free Keyword Density Checker - SEO Analysis Tool",
+    "seo_description": "Check keyword density in your content online for free. Analyze word frequency for SEO."
+  },
+  "text-summarizer": {
+    "name": "Text Summarizer",
+    "description": "Summarize long text by extracting key sentences.",
+    "seo_title": "Free Text Summarizer Online - AI Summary Tool",
+    "seo_description": "Summarize long text online for free. Extract key sentences and main points automatically."
+  },
+  "paraphrase-tool": {
+    "name": "Paraphrase Tool",
+    "description": "Rewrite text in different styles while keeping the meaning.",
+    "seo_title": "Free Paraphrase Tool Online - Text Rewriter",
+    "seo_description": "Paraphrase and rewrite text online for free. Multiple writing styles available."
+  },
+  "graphql-formatter": {
+    "name": "GraphQL Formatter",
+    "description": "Format and beautify GraphQL queries and schemas.",
+    "seo_title": "Free GraphQL Formatter Online - Query Beautifier",
+    "seo_description": "Format and beautify GraphQL queries online for free. Validate syntax and organize code."
+  },
+  "code-screenshot-generator": {
+    "name": "Code Screenshot Generator",
+    "description": "Create beautiful code screenshots with syntax highlighting.",
+    "seo_title": "Free Code Screenshot Generator - Beautiful Code Images",
+    "seo_description": "Create beautiful code screenshots online for free. Syntax highlighting and multiple themes."
+  },
+  "number-system-converter": {
+    "name": "Number System Converter",
+    "description": "Convert numbers between binary, octal, decimal, and hexadecimal.",
+    "seo_title": "Free Number System Converter - Binary Hex Decimal",
+    "seo_description": "Convert numbers between binary, octal, decimal, and hexadecimal online for free."
+  },
+  "subnet-calculator-enhanced": {
+    "name": "Subnet Calculator",
+    "description": "Calculate subnet details including network address, broadcast, and host range.",
+    "seo_title": "Free Subnet Calculator - IP Network Calculator",
+    "seo_description": "Calculate subnet details online for free. Get network address, broadcast address, and host range."
+  },
+  "iban-validator": {
+    "name": "IBAN Validator",
+    "description": "Validate and parse IBAN bank account numbers from European countries.",
+    "seo_title": "Free IBAN Validator Online - Check IBAN Numbers",
+    "seo_description": "Validate IBAN bank account numbers online for free. Check format, country code, and checksum. Supports all European countries. Fast and secure."
+  },
+  "vat-calculator": {
+    "name": "VAT Calculator",
+    "description": "Calculate VAT (Value Added Tax) for European countries with different rates.",
+    "seo_title": "Free VAT Calculator Online - EU Tax Calculator",
+    "seo_description": "Calculate VAT for European countries online for free. Add or remove VAT, support for standard and reduced rates. All EU countries included."
+  },
+  "carbon-footprint-calculator": {
+    "name": "Carbon Footprint Calculator",
+    "description": "Calculate your personal carbon footprint from transportation, energy, and lifestyle.",
+    "seo_title": "Free Carbon Footprint Calculator - CO2 Emissions Calculator",
+    "seo_description": "Calculate your carbon footprint online for free. Track CO2 emissions from transportation, home energy, and diet. Get personalized reduction tips."
+  },
+  "gdpr-consent-generator": {
+    "name": "GDPR Consent Generator",
+    "description": "Generate GDPR-compliant cookie consent banners and privacy policy templates.",
+    "seo_title": "Free GDPR Cookie Consent Generator - Privacy Policy Generator",
+    "seo_description": "Generate GDPR-compliant cookie consent banners and privacy policies online for free. Customizable HTML/CSS code for your website. EU privacy law compliant."
+  },
+  "metric-imperial-converter": {
+    "name": "Metric Imperial Converter",
+    "description": "Convert between metric and imperial units for length, weight, volume, and more.",
+    "seo_title": "Free Metric Imperial Converter - Unit Conversion Calculator",
+    "seo_description": "Convert between metric and imperial units online for free. Length, weight, volume, temperature, area, and speed conversions. Fast and accurate."
+  },
+  "bic-swift-lookup": {
+    "name": "BIC/SWIFT Lookup",
+    "description": "Look up and validate BIC/SWIFT codes for international bank transfers.",
+    "seo_title": "Free BIC SWIFT Code Lookup - Bank Code Validator",
+    "seo_description": "Look up and validate BIC/SWIFT codes online for free. Find bank information from codes. Essential for international wire transfers."
+  },
+  "email-validator": {
+    "name": "Email Validator",
+    "description": "Validate email addresses and check for common typos and disposable domains.",
+    "seo_title": "Free Email Validator Online - Check Email Format",
+    "seo_description": "Validate email addresses online for free. Check format, detect typos, identify disposable emails, and verify domain. Bulk validation supported."
+  },
+  "phone-formatter": {
+    "name": "Phone Number Formatter",
+    "description": "Format phone numbers according to international standards for different countries.",
+    "seo_title": "Free Phone Number Formatter Online - International Format",
+    "seo_description": "Format phone numbers to international standards online for free. Support for 14+ countries including US, UK, China, Japan. Include dial codes."
+  },
+  "credit-card-validator": {
+    "name": "Credit Card Validator",
+    "description": "Validate credit card numbers using the Luhn algorithm and detect card type.",
+    "seo_title": "Free Credit Card Validator Online - Luhn Check",
+    "seo_description": "Validate credit card numbers online for free. Uses Luhn algorithm to verify card numbers. Detects Visa, Mastercard, Amex, and more."
+  },
+  "color-blindness-simulator": {
+    "name": "Color Blindness Simulator",
+    "description": "Simulate how colors and images appear to people with different types of color blindness.",
+    "seo_title": "Free Color Blindness Simulator Online - Accessibility Tool",
+    "seo_description": "Simulate color blindness online for free. Test how colors and images appear to people with protanopia, deuteranopia, tritanopia. Essential for accessible design."
+  },
+  "aspect-ratio-resizer": {
+    "name": "Aspect Ratio Resizer",
+    "description": "Resize images to specific aspect ratios or social media dimensions.",
+    "seo_title": "Free Aspect Ratio Resizer Online - Image Resize Tool",
+    "seo_description": "Resize images to any aspect ratio online for free. Preset sizes for Instagram, Facebook, YouTube, Twitter. Lock ratio or set custom dimensions."
+  },
+  "markdown-to-pdf": {
+    "name": "Markdown to PDF",
+    "description": "Convert Markdown documents to PDF with customizable styling.",
+    "seo_title": "Free Markdown to PDF Converter Online",
+    "seo_description": "Convert Markdown to PDF online for free. Support for headings, lists, tables, code blocks. Customizable font size and page size. No upload required."
+  },
+  "speech-timer": {
+    "name": "Speech Timer",
+    "description": "Time your speeches and presentations with word count estimation",
+    "seo_title": "Free Speech Timer Online - Presentation Timer with Word Count",
+    "seo_description": "Free online speech timer for presentations. Track speaking time, estimate word count, and practice your speeches with our easy-to-use timer tool."
+  },
+  "habit-tracker": {
+    "name": "Habit Tracker",
+    "description": "Track your daily habits and build streaks",
+    "seo_title": "Free Habit Tracker Online - Daily Habit Tracking Tool",
+    "seo_description": "Free online habit tracker to build and maintain daily habits. Track streaks, monitor progress, and achieve your goals with our simple habit tracking tool."
+  },
+  "flip-text": {
+    "name": "Flip Text",
+    "description": "Flip text upside down, mirror, or reverse",
+    "seo_title": "Free Flip Text Generator Online - Upside Down & Mirror Text",
+    "seo_description": "Free online flip text generator. Create upside down text, mirror text, and reversed text for social media, fun messages, and creative content."
+  },
+  "strikethrough-text": {
+    "name": "Strikethrough Text",
+    "description": "Generate strikethrough, underline, and crossed text",
+    "seo_title": "Free Strikethrough Text Generator Online - Cross Out Text Tool",
+    "seo_description": "Free online strikethrough text generator. Create crossed out text, underlined text, and slashed text for social media and messaging apps."
+  },
+  "small-text-generator": {
+    "name": "Small Text Generator",
+    "description": "Generate superscript, subscript, and small caps text",
+    "seo_title": "Free Small Text Generator Online - Tiny Text & Superscript",
+    "seo_description": "Free online small text generator. Create superscript, subscript, and small caps text for social media bios, comments, and creative content."
+  },
+  "binary-to-text": {
+    "name": "Binary to Text",
+    "description": "Convert binary to text and text to binary",
+    "seo_title": "Free Binary to Text Converter Online - Binary Translator",
+    "seo_description": "Free online binary to text converter. Translate binary code to readable text and convert text to binary. Easy-to-use binary translator tool."
+  },
+  "roman-numeral-converter": {
+    "name": "Roman Numeral Converter",
+    "description": "Convert between Roman numerals and Arabic numbers",
+    "seo_title": "Free Roman Numeral Converter Online - Roman Number Calculator",
+    "seo_description": "Free online Roman numeral converter. Convert Roman numerals to Arabic numbers and vice versa. Easy Roman numeral calculator and translator."
+  },
+  "fraction-calculator": {
+    "name": "Fraction Calculator",
+    "description": "Calculate fractions with add, subtract, multiply, divide",
+    "seo_title": "Free Fraction Calculator Online - Add, Subtract, Multiply Fractions",
+    "seo_description": "Free online fraction calculator. Add, subtract, multiply, and divide fractions easily. Get simplified results with decimal equivalents."
+  },
+  "percentage-change-calculator": {
+    "name": "Percentage Change Calculator",
+    "description": "Calculate percentage increase or decrease between values",
+    "seo_title": "Free Percentage Change Calculator Online - Calculate % Increase/Decrease",
+    "seo_description": "Free online percentage change calculator. Calculate percentage increase or decrease between two values. Easy percent change calculator tool."
+  },
+  "random-color-generator": {
+    "name": "Random Color Generator",
+    "description": "Generate random colors with HEX, RGB, and HSL values",
+    "seo_title": "Free Random Color Generator Online - Color Palette Generator",
+    "seo_description": "Free online random color generator. Generate random colors with HEX, RGB, and HSL values. Create color palettes for design projects."
+  },
+  "anagram-solver": {
+    "name": "Anagram Solver",
+    "description": "Find all possible words from scrambled letters",
+    "seo_title": "Free Anagram Solver Online - Word Finder Tool",
+    "seo_description": "Free online anagram solver. Find all possible words from scrambled letters. Perfect for word games like Scrabble and crossword puzzles."
+  },
+  "word-unscrambler": {
+    "name": "Word Unscrambler",
+    "description": "Unscramble letters to find all possible words",
+    "seo_title": "Free Word Unscrambler Online - Letter Unscrambler Tool",
+    "seo_description": "Free online word unscrambler. Find all words that can be made from your letters. Perfect for Scrabble, Words with Friends, and word puzzles."
+  },
+  "text-to-pdf": {
+    "name": "Text to PDF",
+    "description": "Convert plain text to PDF documents",
+    "seo_title": "Free Text to PDF Converter Online - Create PDF from Text",
+    "seo_description": "Free online text to PDF converter. Create professional PDF documents from plain text. Customize fonts, sizes, and page layout."
+  },
+  "unit-price-calculator": {
+    "name": "Unit Price Calculator",
+    "description": "Compare prices per unit to find the best value",
+    "seo_title": "Free Unit Price Calculator Online - Compare Product Values",
+    "seo_description": "Free online unit price calculator. Compare prices per unit to find the best deal. Perfect for smart shopping and price comparison."
+  },
+  "bionic-reading-converter": {
+    "name": "Bionic Reading Converter",
+    "description": "Convert text to bionic reading format for faster reading",
+    "seo_title": "Free Bionic Reading Converter Online - Speed Reading Tool",
+    "seo_description": "Free online bionic reading converter. Transform text to bionic reading format by bolding word beginnings. Read faster and improve focus."
+  },
+  "palindrome-checker": {
+    "name": "Palindrome Checker",
+    "description": "Check if text reads the same forwards and backwards",
+    "seo_title": "Free Palindrome Checker Online - Test Words and Phrases",
+    "seo_description": "Free online palindrome checker. Test if words, phrases, or sentences read the same forwards and backwards. Fun word tool for language lovers."
+  },
+  "character-map": {
+    "name": "Character Map",
+    "description": "Browse and copy special characters and symbols",
+    "seo_title": "Free Character Map Online - Special Symbols & Unicode",
+    "seo_description": "Free online character map. Browse and copy special characters, symbols, emoji, and Unicode characters. Click to copy any character instantly."
+  },
+  "text-repeater": {
+    "name": "Text Repeater",
+    "description": "Repeat text multiple times with custom separators",
+    "seo_title": "Free Text Repeater Online - Duplicate Text Tool",
+    "seo_description": "Free online text repeater. Repeat any text multiple times with custom separators. Perfect for testing, filling content, and creating patterns."
+  },
+  "fake-name-generator": {
+    "name": "Fake Name Generator",
+    "description": "Generate random realistic names from different countries",
+    "seo_title": "Free Fake Name Generator Online - Random Name Generator",
+    "seo_description": "Free online fake name generator. Generate random realistic names from different countries and cultures. Perfect for testing, writing, and privacy."
+  },
+  "invisible-character-generator": {
+    "name": "Invisible Character Generator",
+    "description": "Generate and detect invisible Unicode characters",
+    "seo_title": "Free Invisible Character Generator Online - Zero Width Characters",
+    "seo_description": "Free online invisible character generator. Generate zero-width spaces and other invisible Unicode characters. Detect hidden characters in text."
+  },
+  "json-to-proto": {
+    "name": "JSON to Protocol Buffers",
+    "description": "Convert JSON data to Protocol Buffers schema definition",
+    "seo_title": "Free JSON to Protobuf Converter Online - Generate Proto Schema",
+    "seo_description": "Convert JSON to Protocol Buffers schema online for free. Generate .proto files from JSON data automatically. Essential for gRPC and microservices development."
+  },
+  "svg-to-png": {
+    "name": "SVG to PNG Converter",
+    "description": "Convert SVG vector images to PNG raster format",
+    "seo_title": "Free SVG to PNG Converter Online - High Quality Export",
+    "seo_description": "Convert SVG to PNG online for free. Export vector graphics to high-quality raster images with custom dimensions. No software installation required."
+  },
+  "webp-to-png": {
+    "name": "WebP to PNG Converter",
+    "description": "Convert WebP images to PNG format",
+    "seo_title": "Free WebP to PNG Converter Online - Image Format Converter",
+    "seo_description": "Convert WebP to PNG online for free. Transform modern WebP images to widely compatible PNG format. Fast, secure, browser-based conversion."
+  },
+  "png-to-svg": {
+    "name": "PNG to SVG Converter",
+    "description": "Convert PNG raster images to SVG vector format",
+    "seo_title": "Free PNG to SVG Converter Online - Image Vectorizer",
+    "seo_description": "Convert PNG to SVG vector format online for free. Trace raster images to scalable vector graphics. Perfect for logos and icons."
+  },
+  "html-to-pdf": {
+    "name": "HTML to PDF Converter",
+    "description": "Convert HTML content to PDF documents",
+    "seo_title": "Free HTML to PDF Converter Online - Generate PDF from HTML",
+    "seo_description": "Convert HTML to PDF online for free. Generate PDF documents from HTML code with CSS styling support. Perfect for reports and documentation."
+  },
+  "json-to-table": {
+    "name": "JSON to Table Converter",
+    "description": "Convert JSON data to HTML table format",
+    "seo_title": "Free JSON to Table Converter Online - Visualize JSON Data",
+    "seo_description": "Convert JSON to HTML table online for free. Visualize JSON arrays and objects in tabular format. Export to HTML or copy for spreadsheets."
+  },
+  "yaml-validator": {
+    "name": "YAML Validator",
+    "description": "Validate YAML syntax and structure",
+    "seo_title": "Free YAML Validator Online - Check YAML Syntax",
+    "seo_description": "Validate YAML syntax online for free. Check for errors, formatting issues, and structure problems. Essential for DevOps and configuration files."
+  },
+  "xml-validator": {
+    "name": "XML Validator",
+    "description": "Validate XML syntax and well-formedness",
+    "seo_title": "Free XML Validator Online - Check XML Syntax",
+    "seo_description": "Validate XML syntax online for free. Check well-formedness, find errors, and verify structure. Essential for API development and data exchange."
+  },
+  "css-to-tailwind": {
+    "name": "CSS to Tailwind Converter",
+    "description": "Convert CSS styles to Tailwind CSS classes",
+    "seo_title": "Free CSS to Tailwind Converter Online - Transform CSS to Utility Classes",
+    "seo_description": "Convert CSS to Tailwind CSS classes online for free. Transform traditional CSS into utility-first Tailwind classes. Speed up your migration to Tailwind."
+  },
+  "tailwind-to-css": {
+    "name": "Tailwind to CSS Converter",
+    "description": "Convert Tailwind CSS classes to standard CSS",
+    "seo_title": "Free Tailwind to CSS Converter Online - Generate Standard CSS",
+    "seo_description": "Convert Tailwind CSS classes to standard CSS online for free. Extract CSS from Tailwind utilities. Perfect for understanding Tailwind output."
+  },
+  "svg-editor": {
+    "name": "SVG Editor",
+    "description": "Edit and modify SVG code with live preview",
+    "seo_title": "Free Online SVG Editor - Edit Vector Graphics",
+    "seo_description": "Edit SVG code online for free with live preview. Modify paths, colors, and attributes. Perfect for quick SVG adjustments without design software."
+  },
+  "json-to-form": {
+    "name": "JSON to Form Generator",
+    "description": "Generate HTML forms from JSON schema",
+    "seo_title": "Free JSON to Form Generator Online - Create Forms from JSON",
+    "seo_description": "Generate HTML forms from JSON schema online for free. Create dynamic forms with validation. Perfect for rapid prototyping and form builders."
+  },
+  "api-tester": {
+    "name": "API Tester",
+    "description": "Test REST APIs with custom requests and headers",
+    "seo_title": "Free API Tester Online - Test REST APIs",
+    "seo_description": "Test REST APIs online for free. Send GET, POST, PUT, DELETE requests with custom headers and body. View responses with syntax highlighting."
+  },
+  "jwt-debugger": {
+    "name": "JWT Debugger",
+    "description": "Debug and verify JWT tokens with signature validation",
+    "seo_title": "Free JWT Debugger Online - Decode and Verify JWT Tokens",
+    "seo_description": "Debug JWT tokens online for free. Decode header and payload, verify signatures with secret or public key. Essential for authentication debugging."
+  },
+  "csp-generator": {
+    "name": "CSP Generator",
+    "description": "Generate Content Security Policy headers",
+    "seo_title": "Free CSP Generator Online - Content Security Policy Builder",
+    "seo_description": "Generate Content Security Policy headers online for free. Build secure CSP directives with visual editor. Protect your site from XSS attacks."
+  },
+  "sri-hash-generator": {
+    "name": "SRI Hash Generator",
+    "description": "Generate Subresource Integrity hashes for scripts and styles",
+    "seo_title": "Free SRI Hash Generator Online - Subresource Integrity",
+    "seo_description": "Generate SRI hashes online for free. Create integrity attributes for scripts and stylesheets. Protect against CDN compromises and tampering."
+  },
+  "cors-tester": {
+    "name": "CORS Tester",
+    "description": "Test CORS configuration and headers",
+    "seo_title": "Free CORS Tester Online - Check Cross-Origin Headers",
+    "seo_description": "Test CORS configuration online for free. Check Access-Control headers and debug cross-origin issues. Essential for API and frontend development."
+  },
+  "json-to-zod": {
+    "name": "JSON to Zod Schema",
+    "description": "Convert JSON to Zod validation schema",
+    "seo_title": "Free JSON to Zod Converter Online - Generate Zod Schema",
+    "seo_description": "Convert JSON to Zod validation schema online for free. Generate type-safe Zod schemas from JSON data. Perfect for TypeScript validation."
+  },
+  "typescript-to-json": {
+    "name": "TypeScript to JSON",
+    "description": "Convert TypeScript interfaces to JSON schema",
+    "seo_title": "Free TypeScript to JSON Converter Online - Interface to JSON Schema",
+    "seo_description": "Convert TypeScript interfaces to JSON schema online for free. Generate JSON schema from TS types. Perfect for API documentation and validation."
+  },
+  "markdown-to-slides": {
+    "name": "Markdown to Slides",
+    "description": "Convert Markdown to presentation slides",
+    "seo_title": "Free Markdown to Slides Converter Online - Create Presentations",
+    "seo_description": "Convert Markdown to presentation slides online for free. Create beautiful slideshows from Markdown text. Export to HTML for presenting."
+  },
+  "ai-text-humanizer": {
+    "name": "AI Text Humanizer",
+    "description": "Transform AI-generated text to sound more natural and human-like",
+    "seo_title": "Free AI Text Humanizer Online - Make AI Text Sound Human",
+    "seo_description": "Transform AI-generated text to sound more natural and human-like. Remove robotic patterns, add natural flow, and bypass AI detection. Free online tool."
+  },
+  "text-spinner": {
+    "name": "Text Spinner",
+    "description": "Rewrite text using synonyms to create unique variations",
+    "seo_title": "Free Text Spinner Online - Rewrite Content with Synonyms",
+    "seo_description": "Rewrite text instantly with our free online Text Spinner. No registration required. Get unique variations using synonyms."
+  },
+  "readability-checker": {
+    "name": "Readability Checker",
+    "description": "Analyze text readability with Flesch-Kincaid and other scores",
+    "seo_title": "Free Readability Checker Online - Flesch-Kincaid Calculator",
+    "seo_description": "Check text readability instantly online for free. No registration required. Get Flesch-Kincaid and other scores to improve your content."
+  },
+  "grammar-checker": {
+    "name": "Grammar Checker",
+    "description": "Check text for grammar errors and get correction suggestions",
+    "seo_title": "Free Grammar Checker Online - Fix Grammar Mistakes",
+    "seo_description": "Free online grammar checker. Instantly detect grammar errors and get correction suggestions. No registration required!"
+  },
+  "typescript-playground": {
+    "name": "TypeScript Playground",
+    "description": "Write and compile TypeScript code in the browser",
+    "seo_title": "Free TypeScript Playground Online - Compile TS to JS",
+    "seo_description": "Write, compile & test TypeScript code instantly online for free. No registration required, get instant results with our online TypeScript Playground."
+  },
+  "python-formatter": {
+    "name": "Python Formatter",
+    "description": "Format Python code according to PEP 8 style guide",
+    "seo_title": "Free Python Formatter Online - PEP 8 Code Formatter",
+    "seo_description": "Free online Python code formatter following PEP 8 style guidelines. Automatically format and beautify your Python code with proper indentation, spacing, and line breaks. No installation required."
+  },
+  "go-formatter": {
+    "name": "Go Formatter",
+    "description": "Format Go code in gofmt style",
+    "seo_title": "Free Go Formatter Online - gofmt Style Formatter",
+    "seo_description": "Free online Go code formatter following official gofmt conventions. Automatically format and standardize your Go code with proper indentation and spacing. No installation needed."
+  },
+  "rust-formatter": {
+    "name": "Rust Formatter",
+    "description": "Format Rust code in rustfmt style",
+    "seo_title": "Free Rust Formatter Online - rustfmt Style Formatter",
+    "seo_description": "Free online Rust code formatter following rustfmt style conventions. Automatically format and beautify your Rust code with proper indentation and structure. No setup required."
+  },
+  "yaml-formatter": {
+    "name": "YAML Formatter",
+    "description": "Format and validate YAML with customizable options",
+    "seo_title": "Free YAML Formatter Online - Validate and Format YAML",
+    "seo_description": "Free online YAML formatter and validator. Beautify, validate, and fix indentation in your YAML files instantly. Support for complex nested structures and multi-document YAML."
+  },
+  "text-shadow-generator": {
+    "name": "Text Shadow Generator",
+    "description": "Create CSS text shadows with visual editor",
+    "seo_title": "Free CSS Text Shadow Generator Online",
+    "seo_description": "Free online CSS text shadow generator with live preview. Create stunning text effects with multiple shadows, blur, and colors. Copy ready-to-use CSS code instantly."
+  },
+  "svg-pattern-generator": {
+    "name": "SVG Pattern Generator",
+    "description": "Generate SVG patterns for backgrounds",
+    "seo_title": "Free SVG Pattern Generator Online - Background Patterns",
+    "seo_description": "Free online SVG pattern generator for web backgrounds. Create geometric patterns, stripes, dots, and custom designs. Export as SVG code or CSS background."
+  },
+  "css-triangle-generator": {
+    "name": "CSS Triangle Generator",
+    "description": "Generate CSS triangles using border technique",
+    "seo_title": "Free CSS Triangle Generator Online",
+    "seo_description": "Free online CSS triangle generator using border technique. Create triangles pointing any direction with custom size and color. Copy pure CSS code instantly."
+  },
+  "aspect-ratio-box-generator": {
+    "name": "Aspect Ratio Box Generator",
+    "description": "Generate CSS for responsive aspect ratio containers",
+    "seo_title": "Free CSS Aspect Ratio Box Generator Online",
+    "seo_description": "Free online CSS aspect ratio box generator. Create responsive containers that maintain width-to-height ratio. Support for modern aspect-ratio property and padding-bottom fallback."
+  },
+  "screen-time-calculator": {
+    "name": "Screen Time Calculator",
+    "description": "Calculate daily, weekly, and yearly screen time",
+    "seo_title": "Free Screen Time Calculator Online",
+    "seo_description": "Free online screen time calculator. Track daily device usage, calculate weekly and monthly totals, and get health recommendations. Understand your digital habits better."
+  },
+  "typing-time-calculator": {
+    "name": "Typing Time Calculator",
+    "description": "Estimate time needed to type a document",
+    "seo_title": "Free Typing Time Calculator Online",
+    "seo_description": "Free online typing time calculator. Estimate how long it takes to type any text based on word count and typing speed (WPM). Perfect for writers, students, and content creators."
+  },
+  "download-time-calculator": {
+    "name": "Download Time Calculator",
+    "description": "Calculate file download time based on connection speed",
+    "seo_title": "Free Download Time Calculator Online",
+    "seo_description": "Free online download time calculator. Estimate file download duration for any file size and internet speed. Compare times across different connection types from 3G to fiber."
+  },
+  "ical-parser": {
+    "name": "iCal Parser",
+    "description": "Parse and view iCalendar (.ics) files",
+    "seo_title": "Free iCal Parser Online - View ICS Calendar Files",
+    "seo_description": "Free online iCal/ICS file parser and viewer. Upload or paste ICS calendar data to view events in a readable format. Extract dates, times, locations, and descriptions."
+  },
+  "vcard-parser": {
+    "name": "vCard Parser",
+    "description": "Parse and view vCard (.vcf) contact files",
+    "seo_title": "Free vCard Parser Online - View VCF Contact Files",
+    "seo_description": "Free online vCard/VCF file parser and viewer. Upload or paste VCF contact data to view contact information in a readable format. Support for vCard 2.1, 3.0, and 4.0."
+  },
+  "dockerfile-generator": {
+    "name": "Dockerfile Generator",
+    "description": "Generate Dockerfile configurations for your projects",
+    "seo_title": "Free Dockerfile Generator Online - Create Docker Configurations",
+    "seo_description": "Generate Dockerfile configurations easily with our free online tool. Create optimized Docker images with base image selection, commands, ports, and environment variables. No installation required."
+  },
+  "eslint-config-generator": {
+    "name": "ESLint Config Generator",
+    "description": "Generate ESLint configuration files for JavaScript/TypeScript projects",
+    "seo_title": "Free ESLint Config Generator Online - Create .eslintrc Configuration",
+    "seo_description": "Generate ESLint configuration files easily with our free online tool. Choose from popular style guides like Airbnb, Standard, or Google. Configure rules for React, Vue, TypeScript, and more."
+  },
+  "prettier-config-generator": {
+    "name": "Prettier Config Generator",
+    "description": "Generate Prettier configuration files for code formatting",
+    "seo_title": "Free Prettier Config Generator Online - Create .prettierrc Configuration",
+    "seo_description": "Generate Prettier configuration files easily with our free online tool. Customize tab width, quotes, semicolons, trailing commas, and more. Create consistent code formatting across your team."
+  },
+  "tsconfig-generator": {
+    "name": "TSConfig Generator",
+    "description": "Generate TypeScript configuration files for your projects",
+    "seo_title": "Free TSConfig Generator Online - Create tsconfig.json Configuration",
+    "seo_description": "Generate TypeScript tsconfig.json files easily with our free online tool. Configure compiler options, module resolution, strict mode, and more. Perfect for React, Node.js, and library projects."
+  },
+  "editorconfig-generator": {
+    "name": "EditorConfig Generator",
+    "description": "Generate EditorConfig files for consistent coding styles",
+    "seo_title": "Free EditorConfig Generator Online - Create .editorconfig Files",
+    "seo_description": "Generate EditorConfig files easily with our free online tool. Configure indent style, indent size, end of line, charset, and more. Ensure consistent coding styles across different editors and IDEs."
+  },
+  "github-readme-generator": {
+    "name": "GitHub README Generator",
+    "description": "Generate professional README.md files for GitHub projects",
+    "seo_title": "Free GitHub README Generator Online - Create Professional README Files",
+    "seo_description": "Generate professional README.md files for your GitHub projects with our free online tool. Add badges, features, installation instructions, usage examples, and more. Make your projects stand out."
+  },
+  "changelog-generator": {
+    "name": "Changelog Generator",
+    "description": "Generate CHANGELOG.md files following Keep a Changelog format",
+    "seo_title": "Free Changelog Generator Online - Create CHANGELOG.md Files",
+    "seo_description": "Generate CHANGELOG.md files following the Keep a Changelog format with our free online tool. Track Added, Changed, Deprecated, Removed, Fixed, and Security changes for each version."
+  },
+  "license-generator": {
+    "name": "License Generator",
+    "description": "Generate open source license files for your projects",
+    "seo_title": "Free License Generator Online - Create Open Source License Files",
+    "seo_description": "Generate open source license files with our free online tool. Choose from MIT, Apache 2.0, GPL 3.0, BSD, ISC, and more. Add your name and year automatically. Perfect for GitHub projects."
+  },
+  "rot13-encoder": {
+    "name": "ROT13 Encoder",
+    "description": "Encode and decode text using ROT13 cipher",
+    "seo_title": "Free ROT13 Encoder/Decoder Online - Caesar Cipher Tool",
+    "seo_description": "Encode and decode text using ROT13 cipher with our free online tool. ROT13 is a simple letter substitution cipher that replaces each letter with the letter 13 positions after it in the alphabet."
+  },
+  "caesar-cipher": {
+    "name": "Caesar Cipher",
+    "description": "Encrypt and decrypt text using Caesar cipher with custom shift",
+    "seo_title": "Free Caesar Cipher Tool Online - Encrypt and Decrypt Text",
+    "seo_description": "Encrypt and decrypt text using Caesar cipher with our free online tool. Choose any shift value from 1-25. Learn about one of the oldest encryption methods used by Julius Caesar."
+  },
+  "vigenere-cipher": {
+    "name": "Vigenère Cipher",
+    "description": "Encrypt and decrypt text using Vigenère cipher with a keyword",
+    "seo_title": "Free Vigenère Cipher Tool Online - Polyalphabetic Encryption",
+    "seo_description": "Encrypt and decrypt text using Vigenère cipher with our free online tool. Use a keyword for polyalphabetic substitution. More secure than simple Caesar cipher."
+  },
+  "checksum-verifier": {
+    "name": "Checksum Verifier",
+    "description": "Calculate and verify file checksums (MD5, SHA-1, SHA-256, SHA-512)",
+    "seo_title": "Free Checksum Verifier Online - MD5, SHA-1, SHA-256, SHA-512",
+    "seo_description": "Calculate and verify file checksums with our free online tool. Support for MD5, SHA-1, SHA-256, and SHA-512 hash algorithms. Verify file integrity and detect tampering."
+  },
+  "inflation-calculator": {
+    "name": "Inflation Calculator",
+    "description": "Calculate the effect of inflation on purchasing power over time",
+    "seo_title": "Free Inflation Calculator Online - Calculate Purchasing Power",
+    "seo_description": "Calculate the effect of inflation on purchasing power with our free online tool. See how much money from the past is worth today, or how much you will need in the future."
+  },
+  "break-even-calculator": {
+    "name": "Break-Even Calculator",
+    "description": "Calculate the break-even point for your business",
+    "seo_title": "Free Break-Even Calculator Online - Business Analysis Tool",
+    "seo_description": "Calculate your break-even point with our free online tool. Enter fixed costs, variable costs, and selling price to find how many units you need to sell to cover costs."
+  },
+  "margin-calculator": {
+    "name": "Margin Calculator",
+    "description": "Calculate profit margin and markup percentages",
+    "seo_title": "Free Margin Calculator Online - Profit Margin and Markup",
+    "seo_description": "Calculate profit margin and markup percentages with our free online tool. Enter cost and selling price to see gross margin, markup percentage, and profit amount."
+  },
+  "markup-calculator": {
+    "name": "Markup Calculator",
+    "description": "Calculate selling price based on cost and desired markup",
+    "seo_title": "Free Markup Calculator Online - Calculate Selling Price",
+    "seo_description": "Calculate selling price based on cost and desired markup with our free online tool. Enter cost and markup percentage to find the optimal selling price and profit."
+  },
+  "hashtag-generator": {
+    "name": "Hashtag Generator",
+    "description": "Generate relevant hashtags for social media posts",
+    "seo_title": "Free Hashtag Generator Online - Social Media Hashtags",
+    "seo_description": "Generate relevant hashtags for your social media posts with our free online tool. Enter a topic and get hashtag suggestions for Instagram, Twitter, TikTok, and more."
+  },
+  "email-signature-generator": {
+    "name": "Email Signature Generator",
+    "description": "Create professional email signatures with HTML and plain text",
+    "seo_title": "Free Email Signature Generator Online - Professional Signatures",
+    "seo_description": "Create professional email signatures with our free online tool. Add your name, title, company, contact info, and social links. Generate HTML and plain text versions."
+  },
+  "glassmorphism-generator": {
+    "name": "Glassmorphism Generator",
+    "description": "Create modern glass-like UI effects with customizable blur, transparency, and borders",
+    "seo_title": "Free Glassmorphism CSS Generator Online - Glass Effect Tool",
+    "seo_description": "Generate beautiful glassmorphism CSS effects with our free online tool. Customize blur, transparency, border, and shadow to create modern frosted glass UI designs."
+  },
+  "neumorphism-generator": {
+    "name": "Neumorphism Generator",
+    "description": "Generate soft UI neumorphic effects with customizable shadows and shapes",
+    "seo_title": "Free Neumorphism CSS Generator Online - Soft UI Tool",
+    "seo_description": "Create beautiful neumorphic soft UI effects with our free online generator. Customize shadows, shapes, and colors to design modern skeuomorphic interfaces."
+  },
+  "blob-generator": {
+    "name": "Blob Generator",
+    "description": "Create random organic blob shapes as SVG for backgrounds and decorations",
+    "seo_title": "Free Blob Shape Generator Online - SVG Blob Maker",
+    "seo_description": "Generate unique organic blob shapes with our free online tool. Create random SVG blobs for backgrounds, decorations, and modern web designs."
+  },
+  "wave-generator": {
+    "name": "Wave Generator",
+    "description": "Generate SVG wave patterns for section dividers and backgrounds",
+    "seo_title": "Free SVG Wave Generator Online - Wave Divider Maker",
+    "seo_description": "Create beautiful SVG wave patterns for section dividers with our free online tool. Customize height, frequency, and layers for stunning web designs."
+  },
+  "mesh-gradient-generator": {
+    "name": "Mesh Gradient Generator",
+    "description": "Create beautiful mesh gradients with multiple color points",
+    "seo_title": "Free Mesh Gradient Generator Online - CSS Gradient Tool",
+    "seo_description": "Generate stunning mesh gradients with our free online tool. Create multi-color gradient backgrounds with customizable color points and positions."
+  },
+  "noise-texture-generator": {
+    "name": "Noise Texture Generator",
+    "description": "Generate noise textures and grain effects for backgrounds",
+    "seo_title": "Free Noise Texture Generator Online - Grain Effect Tool",
+    "seo_description": "Create noise textures and grain effects with our free online tool. Generate random, perlin, or film grain patterns for modern web designs."
+  },
+  "commit-message-generator": {
+    "name": "Commit Message Generator",
+    "description": "Generate conventional commit messages following best practices",
+    "seo_title": "Free Git Commit Message Generator Online - Conventional Commits",
+    "seo_description": "Generate well-formatted Git commit messages following conventional commits specification. Create consistent, meaningful commit messages for your projects."
+  },
+  "bandwidth-calculator": {
+    "name": "Bandwidth Calculator",
+    "description": "Calculate required bandwidth from file size and transfer time",
+    "seo_title": "Free Bandwidth Calculator Online - Network Speed Tool",
+    "seo_description": "Calculate required bandwidth from file size and transfer time. Convert between Mbps, Gbps, and other network speed units with our free online tool."
+  },
+  "data-transfer-calculator": {
+    "name": "Data Transfer Calculator",
+    "description": "Calculate file transfer time based on connection speed",
+    "seo_title": "Free Data Transfer Time Calculator Online - Download Time Tool",
+    "seo_description": "Calculate how long it takes to transfer files at different connection speeds. Estimate download and upload times with our free online calculator."
+  },
+  "pixel-density-calculator": {
+    "name": "Pixel Density Calculator",
+    "description": "Calculate PPI and pixel pitch from screen resolution and size",
+    "seo_title": "Free Pixel Density (PPI) Calculator Online - Screen Resolution Tool",
+    "seo_description": "Calculate pixel density (PPI), pixel pitch, and screen dimensions from resolution and display size. Free online tool for display analysis."
+  },
+  "dpi-calculator": {
+    "name": "DPI Calculator",
+    "description": "Calculate DPI for printing or required resolution for target DPI",
+    "seo_title": "Free DPI Calculator Online - Print Resolution Tool",
+    "seo_description": "Calculate DPI from image resolution and print size, or find required pixels for target DPI. Free online tool for print quality planning."
+  },
+  "curl-to-code-generator": {
+    "name": "cURL to Code Generator",
+    "description": "Convert cURL commands to code in Python, JavaScript, Go, PHP and more",
+    "seo_title": "Free cURL to Code Converter Online - Python, JS, Go | U2Tool",
+    "seo_description": "Convert cURL commands to Python, JavaScript, Go, PHP code instantly. Free online tool for API development."
+  },
+  "http-status-code-reference": {
+    "name": "HTTP Status Code Reference",
+    "description": "Complete HTTP status code reference with explanations and solutions",
+    "seo_title": "HTTP Status Codes Reference - Complete List & Solutions | U2Tool",
+    "seo_description": "Complete HTTP status code reference with explanations, causes, and solutions. Search 1xx-5xx codes instantly."
+  },
+  "jwt-payload-decoder": {
+    "name": "JWT Payload Decoder",
+    "description": "Decode and inspect JWT token payloads without verification",
+    "seo_title": "Free JWT Decoder Online - Decode Token Payload | U2Tool",
+    "seo_description": "Decode JWT tokens instantly and inspect payload claims. Free online JWT decoder, view header, payload, expiration."
+  },
+  "base64-image-converter": {
+    "name": "Base64 Image Converter",
+    "description": "Convert images to Base64 strings and Base64 to images",
+    "seo_title": "Free Base64 Image Converter Online - Encode/Decode | U2Tool",
+    "seo_description": "Convert images to Base64 data URIs and decode Base64 to images. Free tool for embedding images in HTML/CSS."
+  },
+  "url-query-string-parser": {
+    "name": "URL Query String Parser",
+    "description": "Parse and analyze URL query parameters into key-value pairs",
+    "seo_title": "Free URL Query String Parser Online - Decode Parameters | U2Tool",
+    "seo_description": "Parse URL query strings into readable key-value pairs. Decode URL-encoded parameters instantly."
+  },
+  "request-header-builder": {
+    "name": "HTTP Request Header Builder",
+    "description": "Build and format HTTP request headers for API testing",
+    "seo_title": "Free HTTP Header Builder Online - API Testing Tool | U2Tool",
+    "seo_description": "Build HTTP request headers easily. Add Authorization, Content-Type, custom headers. Export for cURL, Postman."
+  },
+  "webhook-tester": {
+    "name": "Webhook Tester",
+    "description": "Test and debug webhook endpoints with custom payloads",
+    "seo_title": "Free Webhook Tester Online - Test Endpoints | U2Tool",
+    "seo_description": "Test webhook endpoints with custom JSON payloads. Debug webhook integrations with request/response logging."
+  },
+  "api-response-formatter": {
+    "name": "API Response Formatter",
+    "description": "Format and beautify API responses (JSON, XML) for readability",
+    "seo_title": "Free API Response Formatter Online - JSON/XML Beautifier | U2Tool",
+    "seo_description": "Format and beautify API responses instantly. Support for JSON and XML with syntax highlighting."
+  },
+  "sql-to-mongodb-converter": {
+    "name": "SQL to MongoDB Converter",
+    "description": "Convert SQL queries to MongoDB query syntax",
+    "seo_title": "Free SQL to MongoDB Converter Online - Query Translator | U2Tool",
+    "seo_description": "Convert SQL queries to MongoDB syntax instantly. Support SELECT, INSERT, UPDATE, DELETE."
+  },
+  "json-to-protobuf-converter": {
+    "name": "JSON to Protobuf Converter",
+    "description": "Generate Protocol Buffer definitions from JSON data",
+    "seo_title": "Free JSON to Protobuf Converter Online - Proto Generator | U2Tool",
+    "seo_description": "Generate Protocol Buffer (.proto) definitions from JSON data. Automatic type inference for gRPC."
+  },
+  "regex-to-code-generator": {
+    "name": "Regex to Code Generator",
+    "description": "Generate code snippets for regex patterns in multiple languages",
+    "seo_title": "Free Regex to Code Generator Online - Pattern to Code | U2Tool",
+    "seo_description": "Generate regex code for Python, JavaScript, Java, Go. Convert patterns to working code snippets."
+  },
+  "swagger-to-code-generator": {
+    "name": "Swagger to Code Generator",
+    "description": "Generate API client code from Swagger/OpenAPI specifications",
+    "seo_title": "Free Swagger to Code Generator Online - OpenAPI Client | U2Tool",
+    "seo_description": "Generate API client code from Swagger/OpenAPI specs. Support TypeScript, Python, Go."
+  },
+  "database-migration-generator": {
+    "name": "Database Migration Generator",
+    "description": "Generate database migration scripts for schema changes",
+    "seo_title": "Free Database Migration Generator Online - SQL Scripts | U2Tool",
+    "seo_description": "Generate database migration scripts for MySQL, PostgreSQL, SQLite. Create tables, add columns, indexes."
+  },
+  "environment-variables-generator": {
+    "name": "Environment Variables Generator",
+    "description": "Generate .env files and environment variable configurations",
+    "seo_title": "Free .env File Generator Online - Environment Variables | U2Tool",
+    "seo_description": "Generate .env files with proper formatting. Create environment variable templates."
+  },
+  "docker-compose-generator-advanced": {
+    "name": "Docker Compose Generator",
+    "description": "Generate Docker Compose configurations for multi-container apps",
+    "seo_title": "Free Docker Compose Generator Online - YAML Config | U2Tool",
+    "seo_description": "Generate Docker Compose YAML files easily. Configure services, networks, volumes."
+  },
+  "kubernetes-manifest-generator": {
+    "name": "Kubernetes Manifest Generator",
+    "description": "Generate Kubernetes deployment manifests (YAML)",
+    "seo_title": "Free Kubernetes YAML Generator Online - K8s Manifests | U2Tool",
+    "seo_description": "Generate Kubernetes deployment, service, and ingress manifests. Create K8s YAML files easily."
+  },
+  "code-complexity-analyzer": {
+    "name": "Code Complexity Analyzer",
+    "description": "Analyze code complexity metrics (cyclomatic complexity, LOC)",
+    "seo_title": "Free Code Complexity Analyzer Online - Metrics Tool | U2Tool",
+    "seo_description": "Analyze code complexity with cyclomatic complexity, lines of code, maintainability index."
+  },
+  "dependency-vulnerability-checker": {
+    "name": "Dependency Vulnerability Checker",
+    "description": "Check package dependencies for known security vulnerabilities",
+    "seo_title": "Free Dependency Vulnerability Scanner Online | U2Tool",
+    "seo_description": "Scan package.json, requirements.txt for security vulnerabilities. Check npm, pip dependencies."
+  },
+  "performance-profiler": {
+    "name": "Code Performance Profiler",
+    "description": "Profile code performance and identify bottlenecks",
+    "seo_title": "Free Code Performance Profiler Online - Benchmark Tool | U2Tool",
+    "seo_description": "Profile JavaScript code performance. Measure execution time, identify bottlenecks."
+  },
+  "memory-leak-detector": {
+    "name": "Memory Leak Detector",
+    "description": "Detect potential memory leaks in code patterns",
+    "seo_title": "Free Memory Leak Detector Online - Code Analysis | U2Tool",
+    "seo_description": "Detect potential memory leaks in JavaScript code. Find event listener leaks, closure issues."
+  },
+  "code-duplication-finder": {
+    "name": "Code Duplication Finder",
+    "description": "Find duplicate code blocks and suggest refactoring",
+    "seo_title": "Free Code Duplication Finder Online - DRY Analysis | U2Tool",
+    "seo_description": "Find duplicate code blocks in your codebase. Identify copy-paste code for refactoring."
+  },
+  "unused-imports-finder": {
+    "name": "Unused Imports Finder",
+    "description": "Identify unused imports and dependencies in code",
+    "seo_title": "Free Unused Imports Finder Online - Code Cleanup | U2Tool",
+    "seo_description": "Find unused imports in JavaScript, TypeScript, Python code. Clean up dead imports."
+  },
+  "dead-code-analyzer": {
+    "name": "Dead Code Analyzer",
+    "description": "Find unreachable or dead code that can be removed",
+    "seo_title": "Free Dead Code Analyzer Online - Unreachable Code Finder | U2Tool",
+    "seo_description": "Find dead and unreachable code in your codebase. Identify unused functions and variables."
+  },
+  "sql-query-optimizer": {
+    "name": "SQL Query Optimizer",
+    "description": "Analyze and optimize SQL queries for better performance",
+    "seo_title": "Free SQL Query Optimizer Online - Performance Tips | U2Tool",
+    "seo_description": "Optimize SQL queries for better performance. Get index suggestions, query rewrites."
+  },
+  "database-schema-visualizer": {
+    "name": "Database Schema Visualizer",
+    "description": "Visualize database schemas and table relationships",
+    "seo_title": "Free Database Schema Visualizer Online - ER Diagram | U2Tool",
+    "seo_description": "Visualize database schemas as ER diagrams. See table relationships and foreign keys."
+  },
+  "sql-injection-tester": {
+    "name": "SQL Injection Tester",
+    "description": "Test SQL queries for injection vulnerabilities",
+    "seo_title": "Free SQL Injection Tester Online - Security Scanner | U2Tool",
+    "seo_description": "Test SQL queries for injection vulnerabilities. Identify security risks in database queries."
+  },
+  "database-connection-tester": {
+    "name": "Database Connection Tester",
+    "description": "Test database connection strings and configurations",
+    "seo_title": "Free Database Connection Tester Online - Validate Config | U2Tool",
+    "seo_description": "Test and validate database connection strings. Parse MySQL, PostgreSQL, MongoDB URIs."
+  },
+  "query-execution-planner": {
+    "name": "Query Execution Planner",
+    "description": "Analyze query execution plans and suggest optimizations",
+    "seo_title": "Free Query Execution Plan Analyzer Online | U2Tool",
+    "seo_description": "Analyze SQL query execution plans. Understand EXPLAIN output. Get optimization tips."
+  },
+  "database-backup-scheduler": {
+    "name": "Database Backup Scheduler",
+    "description": "Generate backup schedules and scripts for databases",
+    "seo_title": "Free Database Backup Scheduler Online - Cron Generator | U2Tool",
+    "seo_description": "Generate database backup schedules and scripts. Create cron jobs for MySQL, PostgreSQL backups."
+  },
+  "git-commit-message-generator": {
+    "name": "Git Commit Message Generator",
+    "description": "Generate conventional commit messages following best practices",
+    "seo_title": "Free Git Commit Message Generator Online - Conventional Commits | U2Tool",
+    "seo_description": "Generate conventional commit messages. Follow best practices for git commits."
+  },
+  "git-branch-naming-validator": {
+    "name": "Git Branch Naming Validator",
+    "description": "Validate Git branch names against naming conventions",
+    "seo_title": "Free Git Branch Name Validator Online - Naming Rules | U2Tool",
+    "seo_description": "Validate Git branch names against conventions. Check feature, bugfix, release branch formats."
+  },
+  "merge-conflict-resolver": {
+    "name": "Merge Conflict Resolver",
+    "description": "Help resolve Git merge conflicts with visual diff",
+    "seo_title": "Free Git Merge Conflict Resolver Online - Visual Diff | U2Tool",
+    "seo_description": "Resolve Git merge conflicts visually. Compare conflicting changes side by side."
+  },
+  "git-history-visualizer": {
+    "name": "Git History Visualizer",
+    "description": "Visualize Git commit history and branch structure",
+    "seo_title": "Free Git History Visualizer Online - Commit Graph | U2Tool",
+    "seo_description": "Visualize Git commit history as a graph. See branch structure and merges."
+  },
+  "changelog-generator-advanced": {
+    "name": "Changelog Generator",
+    "description": "Generate changelogs from Git commits in various formats",
+    "seo_title": "Free Changelog Generator Online - From Git Commits | U2Tool",
+    "seo_description": "Generate changelogs from Git commits. Support Keep a Changelog format."
+  },
+  "git-tag-manager": {
+    "name": "Git Tag Manager",
+    "description": "Manage and organize Git tags for releases",
+    "seo_title": "Free Git Tag Manager Online - Version Tags | U2Tool",
+    "seo_description": "Manage Git tags for releases. Generate semantic version tags."
+  },
+  "markdown-to-html-converter": {
+    "name": "Markdown to HTML Converter",
+    "description": "Convert Markdown documents to HTML with styling options",
+    "seo_title": "Free Markdown to HTML Converter Online - MD to HTML | U2Tool",
+    "seo_description": "Convert Markdown to HTML instantly. Support GFM, tables, code blocks."
+  },
+  "document-outline-generator": {
+    "name": "Document Outline Generator",
+    "description": "Generate document outlines from headings and structure",
+    "seo_title": "Free Document Outline Generator Online - Structure Extractor | U2Tool",
+    "seo_description": "Generate document outlines from headings. Extract structure from Markdown, HTML."
+  },
+  "table-of-contents-generator": {
+    "name": "Table of Contents Generator",
+    "description": "Create table of contents from document headings",
+    "seo_title": "Free Table of Contents Generator Online - TOC Creator | U2Tool",
+    "seo_description": "Generate table of contents from Markdown headings. Create TOC with anchor links."
+  },
+  "document-word-counter": {
+    "name": "Document Word Counter",
+    "description": "Count words, characters, sentences, and paragraphs",
+    "seo_title": "Free Document Word Counter Online - Character Count | U2Tool",
+    "seo_description": "Count words, characters, sentences, paragraphs in documents. Reading time estimation."
+  },
+  "document-formatter": {
+    "name": "Document Formatter",
+    "description": "Format and clean up document text with various options",
+    "seo_title": "Free Document Formatter Online - Text Cleanup Tool | U2Tool",
+    "seo_description": "Format and clean up document text. Remove extra spaces, fix line breaks."
+  },
+  "citation-formatter": {
+    "name": "Citation Formatter",
+    "description": "Format citations in APA, MLA, Chicago, and other styles",
+    "seo_title": "Free Citation Formatter Online - APA, MLA, Chicago | U2Tool",
+    "seo_description": "Format citations in APA, MLA, Chicago, Harvard styles. Generate bibliography entries."
+  },
+  "project-estimation-calculator": {
+    "name": "Project Estimation Calculator",
+    "description": "Calculate project effort estimates using PERT and story points",
+    "seo_title": "Free Project Estimation Calculator Online - PERT Tool | U2Tool",
+    "seo_description": "Calculate project estimates using PERT, story points. Estimate development time."
+  },
+  "sprint-velocity-calculator": {
+    "name": "Sprint Velocity Calculator",
+    "description": "Calculate and track sprint velocity for agile teams",
+    "seo_title": "Free Sprint Velocity Calculator Online - Agile Metrics | U2Tool",
+    "seo_description": "Calculate sprint velocity for agile teams. Track story points completed."
+  },
+  "resource-allocation-planner": {
+    "name": "Resource Allocation Planner",
+    "description": "Plan and optimize resource allocation across projects",
+    "seo_title": "Free Resource Allocation Planner Online - Team Planning | U2Tool",
+    "seo_description": "Plan resource allocation across projects. Optimize team utilization."
+  },
+  "project-risk-analyzer": {
+    "name": "Project Risk Analyzer",
+    "description": "Identify and assess project risks with mitigation strategies",
+    "seo_title": "Free Project Risk Analyzer Online - Risk Assessment | U2Tool",
+    "seo_description": "Analyze project risks with probability and impact assessment. Create risk matrices."
+  },
+  "milestone-tracker": {
+    "name": "Milestone Tracker",
+    "description": "Track project milestones and deadlines",
+    "seo_title": "Free Milestone Tracker Online - Project Timeline | U2Tool",
+    "seo_description": "Track project milestones and deadlines. Visualize project timeline."
+  },
+  "team-capacity-planner": {
+    "name": "Team Capacity Planner",
+    "description": "Plan team capacity and workload distribution",
+    "seo_title": "Free Team Capacity Planner Online - Workload Planning | U2Tool",
+    "seo_description": "Plan team capacity and workload. Calculate available hours."
+  },
+  "meeting-minutes-generator": {
+    "name": "Meeting Minutes Generator",
+    "description": "Generate structured meeting minutes from notes",
+    "seo_title": "Free Meeting Minutes Generator Online - Notes Template | U2Tool",
+    "seo_description": "Generate professional meeting minutes. Structured templates for notes."
+  },
+  "timezone-meeting-scheduler": {
+    "name": "Timezone Meeting Scheduler",
+    "description": "Schedule meetings across multiple time zones",
+    "seo_title": "Free Timezone Meeting Scheduler Online - World Clock | U2Tool",
+    "seo_description": "Schedule meetings across time zones. Find best meeting times globally."
+  },
+  "meeting-agenda-builder": {
+    "name": "Meeting Agenda Builder",
+    "description": "Create structured meeting agendas with time allocations",
+    "seo_title": "Free Meeting Agenda Builder Online - Agenda Template | U2Tool",
+    "seo_description": "Create professional meeting agendas. Set time allocations for topics."
+  },
+  "calendar-availability-finder": {
+    "name": "Calendar Availability Finder",
+    "description": "Find common available time slots across calendars",
+    "seo_title": "Free Calendar Availability Finder Online - Schedule Tool | U2Tool",
+    "seo_description": "Find common free time slots across multiple calendars. Schedule meetings easily."
+  },
+  "meeting-room-finder": {
+    "name": "Meeting Room Finder",
+    "description": "Find and book available meeting rooms",
+    "seo_title": "Free Meeting Room Finder Online - Room Booking | U2Tool",
+    "seo_description": "Find available meeting rooms by capacity and amenities. Plan room bookings."
+  },
+  "invoice-template-generator": {
+    "name": "Invoice Template Generator",
+    "description": "Description",
+    "seo_title": "Free Invoice Generator Online - Professional Templates | U2Tool",
+    "seo_description": "Generate professional invoices with customizable templates. Add logo, items, taxes."
+  },
+  "expense-report-generator": {
+    "name": "Expense Report Generator",
+    "description": "Description",
+    "seo_title": "Free Expense Report Generator Online - Expense Tracker | U2Tool",
+    "seo_description": "Create expense reports with categories and totals. Track business expenses."
+  },
+  "budget-variance-analyzer": {
+    "name": "Budget Variance Analyzer",
+    "description": "Analyze budget vs actual spending variances",
+    "seo_title": "Free Budget Variance Analyzer Online - Financial Analysis | U2Tool",
+    "seo_description": "Analyze budget vs actual spending. Calculate variances and percentages."
+  },
+  "cost-benefit-analyzer": {
+    "name": "Cost-Benefit Analyzer",
+    "description": "Description",
+    "seo_title": "Free Cost-Benefit Analyzer Online - ROI Calculator | U2Tool",
+    "seo_description": "Calculate ROI and cost-benefit ratios. Analyze investment decisions."
+  },
+  "financial-forecast-calculator": {
+    "name": "Financial Forecast Calculator",
+    "description": "Create financial forecasts using various models",
+    "seo_title": "Free Financial Forecast Calculator Online - Projections | U2Tool",
+    "seo_description": "Create financial forecasts and projections. Use trend analysis and growth models."
+  },
+  "web-socket-tester": {},
+  "word-cloud-generator": {},
+  "ip-geolocation": {
+    "name": "IP Geolocation",
+    "description": "Look up geographic location information for any IP address",
+    "seo_title": "Free IP Geolocation Lookup Tool Online",
+    "seo_description": "Look up geographic location, ISP, timezone and more for any IP address. Free online IP geolocation tool with accurate results."
+  },
+  "screen-recorder": {
+    "name": "Screen Recorder",
+    "description": "Record your screen directly in the browser",
+    "seo_title": "Free Online Screen Recorder - No Installation Required",
+    "seo_description": "Record your screen directly in the browser. Free online screen recorder with no installation required. Download recordings as WebM."
+  },
+  "pdfToText": {},
+  "wordToTxt": {},
+  "wordToHtml": {},
+  "excelToCsv": {},
+  "csvToExcel": {}
+}

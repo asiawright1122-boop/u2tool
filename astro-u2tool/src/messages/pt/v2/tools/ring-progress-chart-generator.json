@@ -1,0 +1,46 @@
+{
+  "chartTitle": "Título do Gráfico",
+  "chartTitlePlaceholder": "Insira o título do gráfico",
+  "colorTheme": "Tema de Cor",
+  "label": "Rótulo",
+  "labelPlaceholder": "Insira o rótulo",
+  "percentage": "Porcentagem",
+  "ringWidth": "Largura do Anel",
+  "showAnimation": "Mostrar Animação",
+  "loadSample": "Carregar Exemplo",
+  "downloadPng": "Baixar PNG",
+  "downloadSvg": "Baixar SVG",
+  "defaultTitle": "Progresso",
+  "defaultLabel": "Conclusão",
+  "sampleTitle": "Progresso do Projeto",
+  "sampleLabel": "Concluído",
+  "chartPreview": "Visualização do Gráfico",
+  "chartSettings": "Configurações do Gráfico",
+  "themeDefault": "Padrão",
+  "themeOcean": "Oceano",
+  "themeSunset": "Pôr do Sol",
+  "themeForest": "Floresta",
+  "tips": {
+    "title": "Dicas",
+    "tip1": "Arraste o cursor para ajustar o valor da porcentagem",
+    "tip2": "Personalize a largura do anel para diferentes efeitos visuais",
+    "tip3": "Ative a animação para efeito de carregamento dinâmico"
+  },
+  "detailed_description": "O Ring Progress Chart Generator é uma ferramenta técnica especializada para criar gráficos circulares dinâmicos que representam percentuais de progresso. Baseado em SVG (Scalable Vector Graphics) ou Canvas HTML5, o gerador permite renderizar elementos visuais com precisão matemática, adaptáveis a diferentes resoluções. Ele é ideal para desenvolvedores que precisam integrar medidores de desempenho em dashboards, sistemas de monitoramento ou interfaces de usuário. Funciona por meio de um mecanismo que calcula ângulos em radianos para segmentar o anel, aplicando estilos CSS ou atributos SVG diretamente ao elemento DOM. O usuário pode customizar propriedades como gradiente de cores, espessura do traço, animações de transição (via easing functions) e valores dinâmicos vinculados a APIs ou variáveis JavaScript. Diferencia-se por suportar múltiplas camadas de anéis concêntricos, permitindo visualizações complexas de dados compostos, além de exportação em formatos vetoriais (SVG) ou rasterizados (PNG) para compatibilidade em qualquer plataforma.",
+  "usage_steps": [
+    "Acesse a ferramenta e selecione um template de anel pré-definido ou inicie com uma configuração vazia usando o botão 'Novo Gráfico'.",
+    "Defina o valor numérico do progresso no campo 'Porcentagem' e ajuste a espessura do anel com o controle deslizante 'Thickness'.",
+    "Personalize as cores usando o seletor 'Gradient Stops', adicionando múltiplos pontos de transição para efeitos visuais avançados.",
+    "Habilite animações em tempo real marcando a opção 'Enable Transition' e ajuste a duração em milissegundos no campo 'Animation Speed'.",
+    "Visualize a prévia do gráfico em tempo real no painel direito e utilize o botão 'Responsive Mode' para testar ajustes em diferentes tamanhos de tela.",
+    "Exporte o resultado clicando em 'Download' para obter o arquivo SVG/PNG ou copie o código HTML/CSS gerado para integrar diretamente no projeto."
+  ],
+  "usage_examples": [
+    "Um desenvolvedor integrando um medidor de carregamento de arquivos em uma interface web, mostrando o progresso em tempo real com animações suaves.",
+    "Um analista de dados criando um dashboard corporativo para visualizar KPIs trimestrais, com anéis concêntricos representando metas por departamento.",
+    "Um designer de jogos exibindo o progresso de conquistas do usuário, com gradientes dinâmicos que mudam de cor conforme o nível de conclusão.",
+    "Um educador montando um painel educacional para acompanhar o progresso dos alunos em cursos online, com exportação de gráficos para relatórios PDF."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

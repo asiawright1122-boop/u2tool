@@ -1,0 +1,19 @@
+{
+  "detailed_description": "vCard Parser est un outil en ligne pour lire et visualiser les fichiers de contact VCF. Téléchargez un fichier VCF ou collez les données brutes de la carte de visite pour afficher toutes les informations de contact dans un format propre et organisé. L'analyseur extrait les noms, les numéros de téléphone, les adresses e-mail, les adresses physiques, les organisations, les titres de poste, les photos et les profils sociaux. Prise en charge des versions vCard 2.1, 3.0 et 4.0. Parfait pour afficher les exports de contacts, déboguer les problèmes de synchronisation des contacts ou extraire des données des fichiers VCF sans les importer dans votre application de contacts.",
+  "usage_steps": [
+    "Téléchargez le fichier VCF ou collez le contenu",
+    "Affichez les contacts analysés",
+    "Exportez vers JSON"
+  ],
+  "usage_examples": [
+    "Afficher les exports de contacts",
+    "Extraire les données de contact"
+  ],
+  "parse": "Analyser",
+  "uploadFile": "Télécharger Fichier",
+  "vcardContent": "Contenu vCard",
+  "foundContacts": "Contacts Trouvés",
+  "exportJSON": "Exporter JSON",
+  "unnamed": "Sans Nom",
+  "inputPlaceholder": "Collez le contenu vCard/VCF ici ou téléchargez un fichier..."
+}

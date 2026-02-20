@@ -1,0 +1,27 @@
+{
+  "paragraphs": "Paragraphs",
+  "sentences": "Sentences",
+  "words": "Words",
+  "generateType": "Generate Type",
+  "count": "Count",
+  "generatedText": "Generated Text",
+  "output": "Output",
+  "characters": "characters",
+  "about": "About",
+  "aboutText": "This tool uses the Thousand Character Classic as the source for Chinese placeholder text, generating dummy text for design and typography.",
+  "detailed_description": "The Chinese Lorem Ipsum tool generates syntactically valid Mandarin Chinese placeholder text specifically designed for UI/UX prototyping and typographic testing. Unlike Latin Lorem Ipsum, this generator employs algorithmically scrambled modern Mandarin vocabulary with balanced character distribution across simplified and traditional forms. It utilizes statistical language models to produce text blocks that maintain proper grammatical structure while remaining semantically neutral, ensuring accurate representation of whitespace patterns and character density in Chinese typography. The tool integrates Pinyin romanization options and supports CSS-ready text output with precise line height and paragraph spacing control. Developers and designers need this tool to validate responsive layouts for Chinese-speaking markets, test font rendering performance across different character sets, and simulate real-world text flow in multilingual applications. Internally, it leverages a Markov chain-based text generation engine trained on Chinese corpus data, combined with a custom character entropy optimizer to prevent repetitive patterns while maintaining typographic consistency.",
+  "usage_steps": [
+    "Select desired paragraph count (1-10) using the numeric stepper control",
+    "Adjust sentence complexity slider to control clause depth (1-5 levels)",
+    "Choose text type: Modern Mandarin, Classical Chinese, or Technical Jargon",
+    "Toggle Pinyin annotation visibility for pronunciation visualization",
+    "Click 'Generate' to execute the Markov chain text synthesis algorithm",
+    "Copy UTF-8 encoded output with optional CSS white-space preservation"
+  ],
+  "usage_examples": [
+    "Validating grid layout responsiveness for a Chinese e-commerce platform's product description section",
+    "Testing font kerning performance across different CJK typefaces in a mobile app prototype",
+    "Creating realistic text blocks for print magazine mockups targeting Shanghai market segments",
+    "Simulating mixed-script content in internationalized software interfaces requiring Chinese localization"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "pattern": "Patrón Regex",
+  "patternPlaceholder": "^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\\.[a-zA-Z]{2,}$",
+  "testString": "Cadena de Prueba",
+  "testStringPlaceholder": "Introduce texto para probar con el patrón",
+  "visualize": "Visualizar",
+  "matches": "Coincidencias",
+  "noMatches": "No se encontraron coincidencias",
+  "diagram": "Diagrama de Ferrocarril",
+  "exportSvg": "Exportar SVG",
+  "exportPng": "Exportar PNG",
+  "invalidRegex": "Expresión regular no válida",
+  "detailed_description": "El Regex Visualizer es una herramienta técnica que convierte expresiones regulares (regex) en diagramas de ferrocarril (railroad diagrams) mediante algoritmos de análisis léxico y sintáctico. Esta representación gráfica desglosa patrones de regex en componentes visuales como secuencias, alternancias y grupos de captura, facilitando la comprensión de estructuras complejas. Los desarrolladores necesitan esta herramienta para depurar expresiones regulares, optimizar reglas de validación de datos o enseñar conceptos de procesamiento de lenguaje formal. Internamente, el motor tokeniza la regex, construye un árbol sintáctico abstracto (AST) y lo transforma en SVG mediante bibliotecas como Jison o Regexpp. La funcionalidad de prueba permite evaluar coincidencias en tiempo real con cadenas de ejemplo, mostrando resultados destacados según el motor de evaluación Pratt. Esto resuelve casos prácticos como validar formatos de identificación fiscal o extraer subcadenas estructuradas de logs.",
+  "usage_steps": [
+    "Introduce tu expresión regular en el campo de texto principal, incluyendo metacaracteres como ^, $ o grupos con paréntesis.",
+    "Selecciona modificadores (flags) con los checkboxes: i (case-insensitive), m (multiline), g (global search), etc.",
+    "Escribe cadenas de prueba en el área de texto inferior para comprobar coincidencias en tiempo real.",
+    "Haz clic en 'Visualizar Diagrama' para generar el esquema gráfico interactivo con nodos y flechas que representan la regex.",
+    "Usa el cursor para inspeccionar partes específicas del diagrama y ver su equivalente en código regex.",
+    "Descarga el diagrama SVG o copia el código embeddable para documentar la lógica de la expresión regular."
+  ],
+  "usage_examples": [
+    "Validar correos electrónicos corporativos con dominios específicos usando ^[a-zA-Z0-9._%+-]+@empresa\\.(com|es)$.",
+    "Extraer fechas en formato ISO 8601 (YYYY-MM-DD) de un archivo de logs con \\d{4}-\\d{2}-\\d{2}.",
+    "Depurar una regex compleja para validar números de tarjetas de crédito con algoritmo Luhn mediante grupos y lookaheads.",
+    "Crear patrones para enriquecer datos no estructurados, como extraer hashtags de tweets con #([a-zA-Z0-9_]+)."
+  ]
+}

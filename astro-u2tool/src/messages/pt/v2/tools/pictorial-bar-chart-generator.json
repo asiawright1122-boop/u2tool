@@ -1,0 +1,67 @@
+{
+  "chartTitle": "Título do Gráfico",
+  "chartTitlePlaceholder": "Insira o título do gráfico",
+  "colorTheme": "Tema de Cor",
+  "showLegend": "Mostrar Legenda",
+  "horizontal": "Horizontal",
+  "symbol": "Símbolo",
+  "category": "Categoria",
+  "value": "Valor",
+  "item": "Item",
+  "addRow": "Adicionar Linha",
+  "loadSample": "Carregar Exemplo",
+  "downloadPng": "Baixar PNG",
+  "downloadSvg": "Baixar SVG",
+  "defaultTitle": "Comparação de Dados",
+  "sampleTitle": "Vendas de Produtos",
+  "dataEditor": "Editor de Dados",
+  "chartPreview": "Visualização do Gráfico",
+  "chartSettings": "Configurações do Gráfico",
+  "themeDefault": "Padrão",
+  "themeOcean": "Oceano",
+  "themeSunset": "Pôr do Sol",
+  "themeForest": "Floresta",
+  "symbols": {
+    "rect": "Retângulo",
+    "roundRect": "Retângulo Arredondado",
+    "circle": "Círculo",
+    "diamond": "Diamante",
+    "triangle": "Triângulo",
+    "arrow": "Flecha"
+  },
+  "sampleData": {
+    "item1": "Item 1",
+    "item2": "Item 2",
+    "item3": "Item 3",
+    "item4": "Item 4",
+    "item5": "Item 5",
+    "productA": "Produto A",
+    "productB": "Produto B",
+    "productC": "Produto C",
+    "productD": "Produto D",
+    "productE": "Produto E"
+  },
+  "tips": {
+    "title": "Dicas",
+    "tip1": "Escolha símbolos diferentes para efeitos visuais únicos",
+    "tip2": "Ative o modo horizontal para barras horizontais",
+    "tip3": "O fundo mostra o valor máximo para comparação"
+  },
+  "detailed_description": "O Gerador de Gráficos de Barras Pictóricos é uma ferramenta online dedicada à criação de gráficos de barras que utilizam símbolos repetitivos para representar dados. Diferente dos gráficos de barras tradicionais que usam cores e tamanhos, esta ferramenta permite a visualização de informações de maneira mais intuitiva e atraente, especialmente útil em apresentações e relatórios onde a simplicidade e o impacto visual são cruciais. A utilização de símbolos personalizáveis permite uma maior conexão emocional e compreensão rápida dos dados. Profissionais de marketing, educadores e analistas de dados podem se beneficiar significativamente desta ferramenta, pois ela facilita a comunicação de tendências e comparações em um formato visualmente envolvente. Tecnicamente, a ferramenta opera através de um algoritmo que ajusta o número de símbolos em cada barra conforme o valor dos dados de entrada, garantindo precisão e consistência na representação visual.",
+  "usage_steps": [
+    "Acesse a página do Gerador de Gráficos de Barras Pictóricos e clique no botão 'Carregar Dados' para importar o seu conjunto de dados em formato CSV ou JSON.",
+    "Selecione o tipo de símbolo que deseja usar nas barras do gráfico. Você pode escolher entre uma variedade de opções, incluindo figuras geométricas, ícones e emojis.",
+    "Ajuste o tamanho dos símbolos e a espaçamento entre eles usando os sliders disponíveis na seção 'Configurações de Símbolos'.",
+    "Personalize o título do gráfico, os rótulos dos eixos e as legendas, garantindo que todas as informações sejam claras e relevantes para o seu público-alvo.",
+    "Pré-visualize o gráfico ajustando as cores de fundo e a opacidade dos símbolos para atingir o visual desejado. Utilize a ferramenta de zoom para verificar detalhes específicos.",
+    "Quando estiver satisfeito com o resultado, clique no botão 'Exportar' para baixar o gráfico em formatos PNG, SVG ou PDF, adequados para uso em apresentações, relatórios e publicações online."
+  ],
+  "usage_examples": [
+    "Um analista de marketing deseja criar um gráfico que mostre a distribuição de cliques em diferentes anúncios de produtos. Usando o Gerador de Gráficos de Barras Pictóricos, ele seleciona um símbolo de 'punho levantado' para representar cada clique, tornando o gráfico mais envolvente e fácil de entender.",
+    "Um professor de matemática quer explicar aos alunos a frequência de diferentes números em um conjunto de dados. Ele usa o gerador para criar um gráfico com símbolos de 'asteriscos' para representar cada ocorrência, facilitando a visualização das frequências de maneira interativa e divertida.",
+    "Um designer de jogos precisa criar um gráfico que represente o número de jogadores em diferentes níveis do jogo. Ele utiliza o gerador para criar um gráfico com símbolos de 'personagens' para representar cada jogador, tornando o gráfico mais relevante e atraente para a comunidade de jogadores.",
+    "Um gestor de projetos quer apresentar o progresso de diferentes tarefas em um projeto. Ele utiliza o gerador para criar um gráfico com símbolos de 'check' para representar o progresso, permitindo que a equipe veja claramente quais tarefas estão avançando e quais estão atrasadas."
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

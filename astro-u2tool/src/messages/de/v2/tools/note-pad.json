@@ -1,0 +1,36 @@
+{
+  "detailed_description": "Der Online Notizblock ist ein einfaches und praktisches Notizzettelsystem, um schnell farbige Notizzettel zu erstellen und zu verwalten. Unterstützt 6 Farben (gelb, grün, blau, rosa, lila, orange), um Ihre Notizen besser sichtbar und organisiert zu machen. Jeder Notizzettel kann einen Titel und Inhalt haben, mit automatischer Erstellung und Aktualisierungszeitstempel. Alle Notizzettel werden automatisch im Browser-Lokalspeicher gesichert, bleiben auch nach dem Schließen der Seite erhalten. Unterstützt die Suchfunktion, um Notizen schnell zu finden. Exportieren Sie in JSON-Format für Sicherung und Migration. Klarer und intuitiver Benutzerinterface.",
+  "usage_steps": [
+    "Öffnen Sie die Seite des Notizblock-Tools",
+    "Klicken Sie auf die Schaltfläche 'Neue Notiz', um eine neue Notiz zu erstellen",
+    "Geben Sie den Titel und den Inhalt der Notiz ein",
+    "Klicken Sie auf die Farbknöpfe, um die Farbe der Notiz zu ändern",
+    "Klicken Sie auf eine Notizkarte, um ihren Inhalt zu bearbeiten",
+    "Verwenden Sie das Suchfeld, um Notizen schnell zu finden",
+    "Klicken Sie auf 'Exportieren', um alle Notizen zu sichern"
+  ],
+  "usage_examples": [
+    "Erstellen Sie To-Do-Listen und Aufgabenlisten",
+    "Speichern Sie temporäre Ideen und Inspirationen",
+    "Notieren Sie Punkte von Besprechungen und Notizen",
+    "Speichern Sie häufig verwendete Informationen wie Passwort-Hinweise, Kontakte usw."
+  ],
+  "faqs": [
+    {
+      "question": "Werden Notizen automatisch gespeichert?",
+      "answer": "Ja, alle Notizen werden automatisch im Browser-Lokalspeicher gesichert. Selbst nach dem Schließen der Seite oder des Browsers bleiben Notizen erhalten, wenn Sie zurückkehren."
+    },
+    {
+      "question": "Wo wird die Notizdaten gespeichert?",
+      "answer": "Notizdaten werden im localStorage Ihres Browsers gespeichert, nicht auf einem Server hochgeladen. Das Löschen des Browserdaten kann zu einem Verlust der Notizen führen, daher empfehlen wir regelmäßige Exports zur Sicherung."
+    },
+    {
+      "question": "Wie sichere ich meine Notizen?",
+      "answer": "Klicken Sie auf die Schaltfläche 'Exportieren', um alle Notizen als JSON-Datei zu exportieren. Sie können diese Datei als Sicherung speichern."
+    },
+    {
+      "question": "Wie viele Notizen kann ich erstellen?",
+      "answer": "Es gibt keine Begrenzung für die Anzahl der Notizen. Erstellen Sie so viele wie Sie benötigen. Beachten Sie, dass der Lokalspeicher des Browsers Kapazitätsbeschränkungen hat (typischerweise 5-10MB)."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "detailed_description": "O Detector de vazamentos de memória analisa padrões de código para identificar vazamentos de memória潜力 como ouvintes de eventos não removidos.",
+  "usage_steps": [
+    "Cole código JS/TS",
+    "Clique em Analisar",
+    "Visualize os vazamentos detectados",
+    "Leia sugestões de correção",
+    "Aplique as mudanças"
+  ],
+  "usage_examples": [
+    "Encontre vazamentos de componentes React",
+    "Detecte problemas de closures",
+    "Identifique vazamentos de temporizadores"
+  ],
+  "input": "Entrada",
+  "output": "Saída",
+  "process": "Processar",
+  "copy": "Copiar",
+  "clear": "Limpar",
+  "inputPlaceholder": "Cole seu código JavaScript/React aqui...",
+  "outputPlaceholder": "Os resultados aparecerão aqui...",
+  "errors": {
+    "emptyInput": "Por favor, insira algum input"
+  },
+  "loadExample": "Carregar exemplo",
+  "analyze": "Analisar",
+  "generate": "Gerar",
+  "format": "Formatar",
+  "convert": "Converter",
+  "validate": "Validar",
+  "export": "Exportar",
+  "preview": "Visualizar",
+  "reset": "Redefinir",
+  "add": "Adicionar",
+  "remove": "Remover",
+  "save": "Salvar",
+  "cancel": "Cancelar",
+  "settings": "Configurações",
+  "options": "Opções",
+  "results": "Resultados",
+  "noResults": "Sem resultados",
+  "loading": "Carregando...",
+  "success": "Sucesso",
+  "failed": "Falhou",
+  "warning": "Aviso",
+  "info": "Informação",
+  "memorySafetyScore": "Pontuação de Segurança de Memória",
+  "high": "Alto",
+  "medium": "Médio",
+  "low": "Baixo",
+  "potentialMemoryLeaks": "Possíveis Vazamentos de Memória"
+}

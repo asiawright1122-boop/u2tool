@@ -1,0 +1,35 @@
+{
+  "platform": "Plattform",
+  "imageType": "Bildtyp",
+  "dimensions": "Abmessungen",
+  "aspectRatio": "Seitenverhältnis",
+  "fileSize": "Max. Dateigröße",
+  "profilePhoto": "Profilfoto",
+  "coverPhoto": "Titelbild",
+  "post": "Beitrag",
+  "story": "Story",
+  "thumbnail": "Miniaturansicht",
+  "banner": "Banner",
+  "recommended": "Empfohlen",
+  "minimum": "Minimum",
+  "detailed_description": "Der Social Media Size Guide ist ein technisch präziser Referenzgenerator für plattformspezifische Bildanforderungen. Das Tool analysiert dynamisch die aktuellsten Spezifikationen von sozialen Plattformen wie Instagram, LinkedIn, X (Twitter) und Facebook, einschließlich Pixelauflösungen, Seitenverhältnisse, Dateiformate (JPEG/PNG/WEBP), maximaler Dateigrößen und spezieller Anforderungen wie Instagram Story Cropping. Entwickler und Designer nutzen das Tool, um Bildmetadaten (EXIF-Daten, ICC-Profil) zu validieren und Cross-Platform-Optimierung durchzuführen, wodurch manuelle Größenanpassungen in Bildbearbeitungssoftware entfallen. Intern nutzt der Guide eine API, die regelmäßig mit offiziellen Entwicklerdokumentationen synchronisiert wird, um aktuelle Werte für responsive Design-Implementierungen bereitzustellen. Technisch ermöglicht eine Kombination aus JavaScript-Frontend und serverseitiger Datenverarbeitung in Echtzeit plattformübergreifende Vergleiche und Exportfunktionen für optimierte Bilddateien mit spezifischen Komprimierungsparametern.",
+  "usage_steps": [
+    "1. Wählen Sie im Platform-Auswahlmenü die Zielplattform (z.B. Instagram, LinkedIn) aus.",
+    "2. Aktivieren Sie den Bildtyp-Filter (Profilbild, Karussell, Story, Coverfoto).",
+    "3. Nutzen Sie die interaktive Maßtabelle, um minimale/maximale Pixelabmessungen abzurufen.",
+    "4. Laden Sie ein Testbild über das Drag-and-Drop-Feld hoch, um automatische Überlappungsanalysen durchzuführen.",
+    "5. Überprüfen Sie die Metadatenvalidierungsergebnisse (z.B. RGB-Farbprofilkompatibilität).",
+    "6. Exportieren Sie optimierte Versionen mit plattformspezifischen Komprimierungseinstellungen (z.B. 72dpi für Twitter)."
+  ],
+  "usage_examples": [
+    "Ein Influencer-Marketing-Manager passt Instagram-Karussellbilder auf exakt 1080x1080px an, um Kantenabschneidungen zu vermeiden.",
+    "Ein UX-Designer erstellt LinkedIn-Coverfotos mit 1584x396px bei 16:9-Verhältnis, während er X-Tweet-Bilder mit 1200x675px validiert.",
+    "Ein Fotograf optimiert YouTube-Thumbnails für mobile Anzeige, indem er 1280x720px bei max. 2MB WEBP-Ausgabe wählt.",
+    "Ein E-Commerce-Team passt Produktbilder für Facebook-Shops mit exakt 1080x1350px an, um die automatische Hochformatkomprimierung zu umgehen."
+  ],
+  "searchPlaceholder": "Plattformen oder Bildtypen suchen...",
+  "all": "Alle",
+  "type": "Typ",
+  "notes": "Hinweise",
+  "copy": "Kopieren"
+}

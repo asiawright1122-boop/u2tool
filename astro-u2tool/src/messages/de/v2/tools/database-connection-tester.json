@@ -1,0 +1,36 @@
+{
+  "detailed_description": "Der Datenbankverbindungstester parst und validiert Datenbankverbindungszeichenfolgen für verschiedene Datenbanken.",
+  "usage_steps": [
+    "Fügen Sie die Verbindungszeichenfolge ein",
+    "Wählen Sie den Datenbanktyp",
+    "Klicken Sie auf 'Analyisieren'",
+    "Sehen Sie sich die analysierten Details an",
+    "Validieren Sie das Format"
+  ],
+  "usage_examples": [
+    "Vor der Bereitstellung validieren",
+    "MongoDB URIs analysieren",
+    "Verbindungsprobleme debuggen"
+  ],
+  "input": "Eingabe",
+  "output": "Ausgabe",
+  "process": "Prozess",
+  "copy": "Kopieren",
+  "clear": "Leeren",
+  "inputPlaceholder": "Geben Sie hier Ihre Eingabe ein...",
+  "outputPlaceholder": "Ergebnisse werden hier angezeigt...",
+  "errors": {
+    "emptyInput": "Bitte geben Sie eine Eingabe ein"
+  },
+  "useSSL": "SSL/TLS verwenden",
+  "codeSnippet": "Code-Snippet",
+  "note": "Hinweis",
+  "noteText": "Dieses Tool generiert Verbindungszeichenfolgen lokal. Es werden keine Daten an einen Server gesendet. Verwenden Sie in der Produktion immer Umgebungsvariablen für sensible Anmeldedaten.",
+  "databaseType": "Datenbanktyp",
+  "host": "Host",
+  "port": "Port",
+  "database": "Datenbank",
+  "username": "Benutzername",
+  "password": "Passwort",
+  "connectionString": "Verbindungszeichenfolge"
+}

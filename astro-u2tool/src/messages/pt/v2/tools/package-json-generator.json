@@ -1,0 +1,29 @@
+{
+  "detailed_description": "O Package.json Generator é uma ferramenta especializada para criar arquivos de configuração `package.json` com precisão técnica, eliminando erros manuais em projetos JavaScript/Node.js. Ele permite configurar dependências (dependencies e devDependencies), scripts de build/teste, metadados (author, license) e campos avançados como `engines`, `browserslist` ou `eslintConfig`. O usuário precisa deste recurso para evitar problemas como versionamento inconsistente, scripts mal formatados ou conflitos de dependências em ambientes CI/CD. A ferramenta funciona através de uma interface reativa que valida em tempo real campos obrigatórios (nome, versão), sugere versões semânticas e formata automaticamente o JSON final. Internamente, utiliza esquemas de validação baseados em JSON Schema para garantir conformidade com especificações do npm, enquanto permite inserir propriedades customizadas como `private` ou `workspaces` para monorepos. Isso diferencia o gerador de alternativas genéricas, já que aborda casos de uso complexos como projetos escaláveis ou ambientes de múltiplas equipes.",
+  "usage_steps": [
+    "1. Acesse o gerador e selecione o modo de configuração básica ou avançada.",
+    "2. Preencha campos obrigatórios como 'name', 'version' e 'description', com validação automática de formato.",
+    "3. Na seção 'Dependencies', adicione pacotes (ex: 'react', 'typescript') e selecione versões via semver (ex: '^18.2.0').",
+    "4. Configure scripts customizados no painel interativo, especificando alias (ex: 'lint') e comandos CLI associados (ex: 'eslint .').",
+    "5. Personalize metadados como 'author' (formato: 'Nome <email> @github'), 'license' e 'repository' usando campos estruturados.",
+    "6. Clique em 'Gerar JSON' para obter o arquivo finalizado, com preview e opção de download em formato .json."
+  ],
+  "usage_examples": [
+    "1. Configurar um projeto React com dependências 'react' e 'react-dom', scripts de build ('webpack') e metadados para publicação no npm.",
+    "2. Criar um backend Node.js com 'express', 'dotenv' e devDependencies como 'jest', incluindo script 'start' com 'node app.js' e 'test' com 'jest'.",
+    "3. Preparar ambiente TypeScript com dependências 'ts-node', '@types/node' e script 'build' usando 'tsc', além de definir 'types' como 'module'.",
+    "4. Gerar package.json para uma CLI global com campo 'bin' apontando para 'src/index.js' e licença MIT, garantindo compatibilidade com npx."
+  ],
+  "version": "Versão",
+  "main": "Principal",
+  "author": "Autor",
+  "license": "Licença",
+  "type": "Tipo",
+  "keywords": "Palavras-chave",
+  "keywordsPlaceholder": "Digite palavras-chave separadas por vírgula",
+  "private": "Privado",
+  "scripts": "Scripts",
+  "scriptName": "Nome do script",
+  "scriptCommand": "Comando",
+  "commonScripts": "Scripts comuns"
+}

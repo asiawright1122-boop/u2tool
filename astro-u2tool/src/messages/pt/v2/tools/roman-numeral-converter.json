@@ -1,0 +1,27 @@
+{
+  "detailed_description": "O Conversor de Números Romanos traduz entre números romanos e arábicos.",
+  "usage_steps": [
+    "Selecione a direção de conversão",
+    "Digite um número romano ou arábico",
+    "Clique em Converter para ver o resultado",
+    "Copie o valor convertido",
+    "Use o gráfico de referência para ajuda"
+  ],
+  "usage_examples": [
+    "Converta anos para números romanos",
+    "Decodifique números romanos em relógios",
+    "Aprenda o sistema de números romanos"
+  ],
+  "arabicToRoman": "Arábico → Romano",
+  "romanToArabic": "Romano → Arábico",
+  "arabicNumber": "Número Arábico",
+  "romanNumeral": "Número Romano",
+  "arabicPlaceholder": "Digite número (1-3999)...",
+  "romanPlaceholder": "Digite número romano...",
+  "result": "Resultado",
+  "convert": "Converter",
+  "copy": "Copiar",
+  "copied": "Copiado!",
+  "invalidInput": "Entrada inválida",
+  "referenceTitle": "Gráfico de Referência"
+}

@@ -1,0 +1,44 @@
+{
+  "inputLabel": "Geben Sie den BIC/SWIFT-Code ein",
+  "placeholder": "z. B. DEUTDEFF",
+  "formatHint": "Format: 8 oder 11 Zeichen (z. B. DEUTDEFF oder DEUTDEFFXXX)",
+  "lookup": "Auflösen",
+  "validBic": "Gültiger BIC/SWIFT-Code",
+  "bankCode": "Bankcode",
+  "country": "Land",
+  "locationCode": "Ortscode",
+  "branchCode": "Filialcode",
+  "headOffice": "Hauptsitz",
+  "specificBranch": "Spezifische Filiale",
+  "bankInformation": "Bankinformationen",
+  "bankName": "Bankname",
+  "city": "Stadt",
+  "branch": "Filiale",
+  "copyBic": "BIC-Kopieren",
+  "bicStructure": "BIC/SWIFT-Code-Struktur",
+  "structure": {
+    "bank": "Bankcode",
+    "country": "Land",
+    "location": "Ort",
+    "branch": "Filiale (optional)"
+  },
+  "sampleCodes": "Beispiele für BIC-Codes",
+  "errors": {
+    "empty": "Bitte geben Sie einen BIC/SWIFT-Code ein",
+    "invalidFormat": "Ungültiges BIC-Format. Muss aus 8 oder 11 alphanumerischen Zeichen bestehen.",
+    "unknownCountry": "Unbekannter Landcode"
+  },
+  "detailed_description": "Das BIC/SWIFT-Auflösungstool überprüft und liefert Informationen zu Bankidentifikationscodes (BIC), die für internationale Geldüberweisungen verwendet werden. Geben Sie einen BIC-Code ein, um dessen Format zu überprüfen und Details zur Bank, zum Land und zur Filiale zu erhalten. Wichtig für die Sicherstellung genauer internationaler Zahlungen.",
+  "usage_steps": [
+    "Geben Sie einen BIC/SWIFT-Code in das Eingabefeld ein",
+    "Klicken Sie auf „Auflösen“, um Bankinformationen zu erhalten",
+    "Sehen Sie sich die analysierte Codestruktur (Bank, Land, Ort, Filiale) an",
+    "Überprüfen Sie Bankdetails, sofern sie im Datenbankverzeichnis vorhanden sind",
+    "Verwenden Sie Beispiele für BIC-Codes, um verschiedene Banken zu erkunden"
+  ],
+  "usage_examples": [
+    "Überprüfen Sie BIC-Codes vor der Durchführung internationaler Überweisungen",
+    "Suchen Sie Bankinformationen anhand von SWIFT-Codes",
+    "Überprüfen Sie Zahlungsdetails für grenzüberschreitende Transaktionen"
+  ]
+}

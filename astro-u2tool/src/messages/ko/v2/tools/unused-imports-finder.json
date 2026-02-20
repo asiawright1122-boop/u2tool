@@ -1,0 +1,52 @@
+{
+  "detailed_description": "미사용#import 찾기 도구는 코드에서 선언되었지만 사용되지 않은#import을 식별합니다.",
+  "usage_steps": [
+    "import를 포함한 코드를 붙여넣으세요",
+    "언어 선택",
+    "분석하기 클릭",
+    "미사용#import 확인",
+    "정리된 코드 복사"
+  ],
+  "usage_examples": [
+    "npm#import 정리",
+    "배너 크기 감소",
+    "정리된#import 유지"
+  ],
+  "input": "입력",
+  "output": "출력",
+  "process": "처리",
+  "copy": "복사",
+  "clear": "지우기",
+  "inputPlaceholder": "JavaScript/TypeScript 코드를 붙여넣으세요...",
+  "outputPlaceholder": "결과가 여기에 표시됩니다...",
+  "errors": {
+    "emptyInput": "입력을 입력해 주세요"
+  },
+  "loadExample": "예제 로드",
+  "analyze": "분석",
+  "generate": "생성",
+  "format": "포맷",
+  "convert": "변환",
+  "validate": "검증",
+  "export": "내보내기",
+  "preview": "미리보기",
+  "reset": "초기화",
+  "add": "추가",
+  "remove": "제거",
+  "save": "저장",
+  "cancel": "취소",
+  "settings": "설정",
+  "options": "옵션",
+  "results": "결과",
+  "noResults": "결과 없음",
+  "loading": "로딩 중...",
+  "success": "성공",
+  "failed": "실패",
+  "warning": "경고",
+  "info": "정보",
+  "importStatements": "가져오기 문",
+  "unusedImports": "사용되지 않는 가져오기",
+  "usedImports": "사용된 가져오기",
+  "click": "클릭",
+  "clickToAnalyze": "클릭하여 분석"
+}

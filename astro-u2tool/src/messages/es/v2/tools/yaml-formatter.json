@@ -1,0 +1,15 @@
+{
+  "detailed_description": "YAML Formatter es una herramienta en línea integral para formatear y validar archivos YAML. Corrige automáticamente los problemas de indentación, valida la sintaxis y formatea sus archivos de configuración YAML. La herramienta admite estructuras anidadas complejas, matrices, cadenas multilínea y archivos YAML multi-documento. Ideal para ingenieros de DevOps que trabajan con manifiestos de Kubernetes, pipelines de CI/CD o cualquier configuración basada en YAML. Obtenga retroalimentación instantánea sobre errores de sintaxis y produzca una salida YAML limpia y correctamente indentada.",
+  "usage_steps": [
+    "Pega YAML",
+    "Establece el tamaño de la sangría",
+    "Haz clic en Formatear",
+    "Copia el resultado"
+  ],
+  "usage_examples": [
+    "Formatea archivos de configuración",
+    "Valida manifiestos de Kubernetes"
+  ],
+  "inputPlaceholder": "Ingrese contenido YAML...",
+  "indentSize": "Tamaño de Sangría"
+}

@@ -1,0 +1,30 @@
+{
+  "initialInvestment": "Inversión Inicial",
+  "finalValue": "Valor Final",
+  "timePeriod": "Período de Tiempo",
+  "timeUnit": "Unidad de Tiempo",
+  "years": "Años",
+  "months": "Meses",
+  "simpleRoi": "ROI Simple",
+  "annualizedRoi": "ROI Anualizado",
+  "totalReturn": "Retorno Total",
+  "totalGain": "Ganancia/Pérdida Total",
+  "calculationBreakdown": "Desglose del Cálculo",
+  "simpleRoiFormula": "Fórmula de ROI Simple",
+  "annualizedRoiFormula": "Fórmula de ROI Anualizado",
+  "detailed_description": "El Calculador de ROI es una herramienta especializada para evaluar el rendimiento financiero de inversiones mediante el cálculo técnico del Retorno sobre la Inversión (ROI) y su versión anualizada. Permite a usuarios cuantificar la ganancia neta en términos absolutos y relativos, aplicando la fórmula estándar: [(Valor Final - Inversión Inicial)/Inversión Inicial] × 100, mientras genera el ROI anualizado mediante la expresión [(1 + ROI)^(1/Años)] - 1 para comparar oportunidades con horizontes temporales distintos. Incluye análisis de flujo de caja no uniforme mediante el método XIRR (Tasa Interna de Retorno Extendida) cuando se ingresan múltiples periodos. Es indispensable para analistas financieros que requieren optimizar asignación de capital, inversores que evalúan proyectos de equity o bienes raíces, y emprendedores midiendo la eficacia de campañas de marketing. La herramienta procesa automáticamente ajustes por inflación al vincularse a índices macroeconómicos predefinidos, y permite configurar frecuencias de capitalización (diaria, mensual, anual) para cálculos precisos. Su motor matemático implementa aritmética de punto flotante IEEE 754 para garantizar precisión en operaciones con decimales extendidos.",
+  "usage_steps": [
+    "Introduce el monto de la inversión inicial en el campo 'Inversión Inicial (USD)' con soporte para valores entre 1 y 10⁷.",
+    "Especifica el valor final obtenido o proyectado en el campo 'Valor Final (USD)', aceptando hasta 8 dígitos significativos.",
+    "Selecciona el periodo temporal de análisis usando el selector de 'Años/Meses' con rango de 0.1 a 30 años.",
+    "Activa la opción 'Ajustar por Inflación' si deseas normalizar resultados contra el índice de precios al consumidor.",
+    "Elige la frecuencia de capitalización en el desplegable 'Compounding': anual, semestral o mensual.",
+    "Presiona 'Calcular' para obtener resultados detallados: ROI porcentual, ROI anualizado, ganancia absoluta y TIR ajustada."
+  ],
+  "usage_examples": [
+    "Un fondo de capital riesgo evalúa un startup: inversión de $500,000 y salida de $1.2M en 4 años. Calcula ROI de 140% y anualizado de 24.6%.",
+    "Un inversor inmobiliario analiza un departamento: compra en $250,000, renta neta anual de $15,000 y venta en $300,000 a los 5 años.",
+    "Una empresa compara dos campañas de marketing: $50k vs $75k invertidos con ingresos incrementales de $120k y $180k respectivamente.",
+    "Un ingeniero calcula el ROI de un máster ejecutivo: costo de $45,000 y aumento salarial anual de $20,000 durante 8 años post-titulación."
+  ]
+}

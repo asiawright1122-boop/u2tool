@@ -1,0 +1,42 @@
+{
+  "detailed_description": "Le Calculateur d'Estimation de Projet aide à estimer l'effort du projet en utilisant PERT et les points d'histoire.",
+  "usage_steps": [
+    "Saisissez les descriptions des tâches",
+    "Fournissez des estimations",
+    "Ou utilisez les points d'histoire",
+    "Calculez la durée",
+    "Voyez les intervalles de confiance"
+  ],
+  "usage_examples": [
+    "Estimez les projets logiciels",
+    "Calculez la capacité de sprint",
+    "Planifiez les calendriers avec PERT"
+  ],
+  "input": "Entrée",
+  "output": "Sortie",
+  "process": "Processus",
+  "copy": "Copier",
+  "clear": "Effacer",
+  "inputPlaceholder": "Saisissez votre entrée ici...",
+  "outputPlaceholder": "Les résultats apparaîtront ici...",
+  "errors": {
+    "emptyInput": "Veuillez saisir quelques informations"
+  },
+  "hours": "Heures",
+  "days": "Jours",
+  "weeks": "Semaines",
+  "addTask": "+ Ajouter tâche",
+  "taskName": "Nom de la tâche",
+  "optimistic": "Optimiste",
+  "mostLikely": "Plus probable",
+  "pessimistic": "Pessimiste",
+  "expected": "Attendu",
+  "expectedDuration": "Durée prévue",
+  "confidence68": "68% de confiance",
+  "confidence95": "95% de confiance",
+  "pertFormula": "Formule PERT",
+  "standardDeviation": "Écart-type",
+  "hrs": "hrs",
+  "wks": "sem",
+  "taskDefault": "Tâche"
+}

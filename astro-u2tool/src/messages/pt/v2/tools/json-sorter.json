@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O JSON Sorter organiza objetos JSON de acordo com os nomes das chaves em ordem lexicográfica, aplicando algoritmo de ordenação baseado em Unicode code points. Essa ferramenta é essencial para desenvolvedores que lidam com inconsistências em payloads de APIs REST, necessitam normalizar dados para versionamento em sistemas como Git ou desejam garantir integridade em logs estruturados. O processo ocorre em três etapas: primeiro, o parser JSON verifica a sintaxe e constrói uma árvore DOM virtual da estrutura; segundo, aplica recursivamente algoritmo de ordenação por insertion sort nas chaves de objetos, mantendo intactos valores primitivos e arrays; terceiro, reconstrói o JSON ordenado preservando tipos de dados originais (strings, números, booleanos). A implementação client-side em JavaScript evita envio de dados para servidores, protegendo informações sensíveis. Diferente de ferramentas genéricas, suporta ordenação seletiva com opções para manter arrays intactos e priorizar uppercase/lowercase em chaves.",
+  "usage_steps": [
+    "Acesse a página do JSON Sorter no menu de ferramentas de codificação",
+    "Cole seu JSON não ordenado na área de texto com syntax highlighting",
+    "Marque 'Ordenar Objetos Aninhados' para processar estruturas profundas",
+    "Ative 'Preservar Arrays' se quiser manter ordem original de listas",
+    "Clique no botão 'Organizar JSON' para iniciar o processamento",
+    "Copie o resultado formatado ou faça download como arquivo .json"
+  ],
+  "usage_examples": [
+    "Padronizar respostas de múltiplas APIs antes de integrar dados em um data warehouse",
+    "Facilitar diff visual em arquivos de configuração JSON no GitHub comparando versões",
+    "Ordenar campos de logs de auditoria para sistemas de análise como o ELK Stack",
+    "Converter payloads não confiáveis de terceiros para validação contra schemas OpenAPI"
+  ]
+}

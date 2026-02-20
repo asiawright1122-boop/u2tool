@@ -1,0 +1,17 @@
+{
+  "detailed_description": "Der Color Palette Generator analysiert eine Basisfarbe durch Konvertierung in den HSL-Farbraum, um mathematisch präzise harmonische Farbschemata zu erzeugen. Technisch gesehen nutzt das Tool geometrische Beziehungen auf dem Farbkreis: Komplementäre Farben werden durch eine 180°-Rotation, analoge durch 30°-60°-Abstände und triadische durch gleichseitige Dreiecksformationen generiert. Zusätzlich berechnet der Algorithmus Farbnuancen durch variable Modulation von Sättigung (Saturation) und Helligkeit (Lightness), basierend auf dem HSV-Modell. Dies ermöglicht die Erstellung von abgestuften Farbverläufen für UI-Designs oder Data Visualizations. Entwickler:innen profitieren besonders bei der Umsetzung von WCAG-Kontraststandards oder der Automatisierung von Theme-Generierung für CSS-Variables. Die interne Berechnung erfolgt clientseitig mittels JavaScript, wodurch Echtzeit-Interaktivität ohne Serveranbindung gewährleistet ist.",
+  "usage_steps": [
+    "1. Geben Sie eine Basisfarbe im HEX-, RGB- oder HSL-Format in das Eingabefeld ein.",
+    "2. Wählen Sie im Dropdown-Menü zwischen 'Komplementär', 'Analog', 'Triadisch' oder 'Monochromatisch' als Schematyp.",
+    "3. Passen Sie mit den Slidern 'Sättigung' (0-100%) und 'Helligkeit' (0-100%) die Intensität der Farbnuancen an.",
+    "4. Klicken Sie auf 'Palette generieren', um die algorithmisch berechneten Farbwerte anzuzeigen.",
+    "5. Nutzen Sie die interaktive Vorschau, um Farbkombinationen in Echtzeit auf einem Beispiel-Text oder -Bildschirmlayout zu testen.",
+    "6. Exportieren Sie die Ergebnisse im CSS, JSON oder PNG-Format über den 'Export'-Button."
+  ],
+  "usage_examples": [
+    "Ein Webdesigner erstellt ein Dark-Theme mit triadischer Farbstruktur, um visuelle Akzente auf Call-to-Action-Buttons zu setzen, wobei der Kontrast zur Hintergrundbeleuchtung überprüft wird.",
+    "Eine UX-Spezialistin nutzt analoge Farbschemata für eine medizinische App, um eine beruhigende Oberfläche zu gestalten, die gleichzeitig WCAG-2.1-Accessibility-Level einhält.",
+    "Ein Game Developer generiert dynamisch Farbpaletten für verschiedene Spielwelten, indem er HSL-Modulationen mit festgelegten Winkeldifferenzen kombiniert, um thematische Kohärenz zu gewährleisten.",
+    "Ein Branding-Team entwickelt ein Unternehmensfarbsystem, das aus einer Hauptfarbe mit festgelegten Saturation-Offsets mehrere abgestufte Markenvarianten ableitet, um Konsistenz über verschiedene Medien hinweg sicherzustellen."
+  ]
+}

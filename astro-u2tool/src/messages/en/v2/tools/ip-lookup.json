@@ -1,0 +1,27 @@
+{
+  "detailed_description": "The IP Lookup tool leverages multi-source API aggregation to extract granular network metadata, including geolocation coordinates (latitude/longitude), autonomous system number (ASN) allocation, BGP routing tables, and DNSBL integration. This tool parses WHOIS responses from regional internet registries (RIRs) like ARIN and RIPE while cross-referencing commercial geolocation databases to provide enriched context about IP ownership, network latency metrics, and threat intelligence scores. Developers and network engineers use this for security auditing, where identifying the origin of malicious traffic requires ASN-to-organization mapping, or troubleshooting CDN performance by analyzing edge server proximity through geolocation data. The backend employs asynchronous HTTP requests to query MaxMind, IPinfo, and custom WHOIS servers simultaneously, returning normalized JSON output that includes CIDR notation, route summarization details, and ISP infrastructure topology. Technical users benefit from the inclusion of PTR record validation, TCP/UDP service detection, and support for both IPv4 and IPv6 address families, making it indispensable for tasks like forensic analysis of DDoS attack vectors or compliance verification under GDPR data localization requirements.",
+  "usage_steps": [
+    "Access the IP Lookup interface and locate the 'Query Input' field",
+    "Input a valid IPv4/IPv6 address or domain name in the search bar",
+    "Enable advanced options by toggling 'Show Technical Data' to include BGP and DNSBL results",
+    "Click 'Execute Lookup' to initiate parallel API requests across multiple data sources",
+    "Navigate the 'Network Path' tab to visualize hop-by-hop routing information",
+    "Export specific dataset segments using the 'Download Filtered Output' dropdown menu"
+  ],
+  "usage_examples": [
+    "A cybersecurity analyst investigates phishing attack origins by mapping suspicious IPs to known bad ASN ranges",
+    "A DevOps engineer optimizes application performance by comparing latency metrics between AWS and Azure endpoints",
+    "A compliance officer verifies GDPR compliance by checking if user data storage locations match declared geolocation zones",
+    "A game server administrator mitigates DDoS attacks using DNSBL integration to block traffic from malicious IP ranges"
+  ],
+  "lookup": "Lookup",
+  "myIp": "My IP",
+  "loading": "Loading...",
+  "ipAddress": "IP Address",
+  "country": "Country",
+  "region": "Region",
+  "city": "City",
+  "isp": "ISP",
+  "timezone": "Timezone",
+  "coordinates": "Coordinates"
+}

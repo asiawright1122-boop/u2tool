@@ -1,0 +1,90 @@
+{
+  "chartTitle": "图表标题",
+  "chartTitlePlaceholder": "输入图表标题",
+  "colorTheme": "颜色主题",
+  "showLegend": "显示图例",
+  "showLabels": "显示标签",
+  "roseType": "玫瑰图类型",
+  "roseTypeArea": "面积（夜莺图）",
+  "roseTypeRadius": "半径",
+  "columnName": "名称",
+  "value": "值",
+  "item": "项目",
+  "addRow": "添加行",
+  "loadSample": "加载示例",
+  "downloadPng": "下载PNG",
+  "downloadSvg": "下载SVG",
+  "confirmClear": "您确定要清除所有数据吗？",
+  "defaultTitle": "销售分布",
+  "sampleTitle": "产品销售比较",
+  "dataEditor": "数据编辑器",
+  "chartPreview": "图表预览",
+  "chartSettings": "图表设置",
+  "themeDefault": "默认",
+  "themeOcean": "海洋",
+  "themeSunset": "日落",
+  "themeForest": "森林",
+  "sampleData": {
+    "categoryA": "类别A",
+    "categoryB": "类别B",
+    "categoryC": "类别C",
+    "categoryD": "类别D",
+    "categoryE": "类别E",
+    "categoryF": "类别F",
+    "productA": "产品A",
+    "productB": "产品B",
+    "productC": "产品C",
+    "productD": "产品D",
+    "productE": "产品E",
+    "productF": "产品F"
+  },
+  "importCsv": "导入CSV",
+  "csvImportSuccess": "导入{count}行数据",
+  "csvImportError": "CSV格式无效。预期：名称,值",
+  "tips": {
+    "title": "提示",
+    "tip1": "玫瑰图以圆形布局展示不同半径的数据",
+    "tip2": "面积类型显示成比例的面积，半径类型显示成比例的半径",
+    "tip3": "非常适合视觉比较多个类别",
+    "tip4": "导出为PNG或SVG用于演示"
+  },
+  "detailed_description": "Nightingale Rose Chart Generator 是一款在线工具，专门用于创建 Nightingale 玫瑰图（也称为极坐标区域图）。这款图表通过不同的半径来可视化数据，使得数据的对比和趋势更加直观。每个扇区的面积与数据值成正比，从而能够有效展示不同类别的数据分布和大小关系。\n\n用户需要这款工具的原因有很多。首先，Nightingale 玫瑰图非常适合用于展示周期性数据，如季度销售数据、月度天气数据等，能够清晰地反映出数据在不同时间段的变化。其次，这种图表在医疗统计、市场研究、财务分析等领域非常实用，可以帮助用户快速识别数据的峰值和低谷，以及数据之间的相对差异。\n\nNightingale Rose Chart Generator 的工作原理是通过用户输入的数据生成图表。用户可以上传 CSV 文件或直接在在线编辑器中输入数据。工具会自动计算每个扇区的面积，并根据数据值调整扇区的半径。此外，用户还可以自定义图表的颜色、标签、标题等，以满足不同的展示需求。通过这种技术，用户可以轻松创建美观且信息丰富的图表，从而更好地支持数据驱动的决策。",
+  "usage_steps": [
+    "Step 1: 打开 Nightingale Rose Chart Generator 的首页，点击“开始创建”按钮进入数据输入界面。",
+    "Step 2: 在数据输入界面，选择“上传文件”或“手动输入”数据。如果选择上传文件，支持 CSV 格式。",
+    "Step 3: 如果选择手动输入数据，点击“添加数据”按钮，输入每个类别的名称和对应的数值。",
+    "Step 4: 在图表设置区域，选择图表的样式，包括颜色方案、标签显示、图例位置等。",
+    "Step 5: 调整图表的标题和描述，确保图表信息完整且清晰。",
+    "Step 6: 点击“生成图表”按钮，预览并下载生成的 Nightingale 玫瑰图，或直接将其嵌入到您的网页或报告中。"
+  ],
+  "usage_examples": [
+    "Example 1: 市场营销人员可以使用 Nightingale Rose Chart Generator 来展示不同季度的广告投放效果，通过图表直观地比较各季度的投放量和转化率。",
+    "Example 2: 医疗研究人员可以利用这款工具展示不同年龄段的疾病发病率，帮助识别高风险群体并制定相应的预防措施。",
+    "Example 3: 金融分析师可以使用 Nightingale 玫瑰图来展示不同投资组合的收益情况，帮助投资者快速了解各组合的表现。",
+    "Example 4: 气象专家可以利用这款工具展示不同月份的平均气温和降水量，帮助公众更好地理解气候变化趋势。"
+  ],
+  "faqs": [
+    {
+      "question": "Nightingale Rose Chart Generator 是免费的吗？",
+      "answer": "是的，Nightingale Rose Chart Generator 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+    },
+    {
+      "question": "使用 Nightingale Rose Chart Generator 安全吗？",
+      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+    },
+    {
+      "question": "可以批量生成吗？",
+      "answer": "是的，Nightingale Rose Chart Generator 支持批量生成。您可以配置生成数量，一次性生成多个结果。"
+    },
+    {
+      "question": "需要安装软件吗？",
+      "answer": "不需要。Nightingale Rose Chart Generator 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+    },
+    {
+      "question": "处理速度如何？",
+      "answer": "由于所有处理都在浏览器本地完成，Nightingale Rose Chart Generator 的处理速度非常快，通常可以在几毫秒内完成。"
+    }
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

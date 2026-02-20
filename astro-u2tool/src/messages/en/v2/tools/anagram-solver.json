@@ -1,0 +1,25 @@
+{
+  "detailed_description": "The Anagram Solver processes input character sets through a combinatorial permutation engine combined with a lexicon-matching algorithm. By generating all possible rearrangements of input letters using recursive backtracking, the tool systematically explores the permutation tree while pruning branches that cannot form valid dictionary words. This implementation leverages a precompiled trie data structure for efficient prefix validation and employs frequency analysis to eliminate invalid character combinations early in the computation cycle. Users benefit from this optimized approach when solving Scrabble racks, reconstructing forgotten passwords, or generating mnemonic devices. The backend processes UTF-8 encoded character streams, supporting international alphabets through Unicode normalization, while the lexicon database includes over 200,000 dictionary entries with morphological variants. Results are sorted by word length and lexical frequency to prioritize practical outputs.",
+  "usage_steps": [
+    "Enter scrambled letters in the UTF-8 compliant input field (e.g., 'livese')",
+    "Adjust optional filters: enable 'Include proper nouns' for brand name generation",
+    "Set minimum/maximum word length sliders to constrain output",
+    "Toggle 'Show syllable breakdown' for linguistic analysis",
+    "Click 'Generate Permutations' to initiate combinatorial processing",
+    "Export results via CSV or integrate through the documented REST API endpoint"
+  ],
+  "usage_examples": [
+    "A game developer validating possible Scrabble words for a procedural puzzle generator",
+    "A cybersecurity analyst reconstructing potential password variants from partial keylogger data",
+    "A linguistics student analyzing morphological patterns in Romance language derivatives",
+    "A marketing team generating trademarkable brand names from core value keywords"
+  ],
+  "inputLabel": "Enter Letters",
+  "inputPlaceholder": "Type letters to unscramble...",
+  "results": "Results",
+  "noResults": "No words found. Try different letters.",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "tipTitle": "Tips",
+  "tipDescription": "Enter 2-15 letters to find all possible English words. Results are sorted by length."
+}

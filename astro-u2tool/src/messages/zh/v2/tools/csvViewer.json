@@ -1,0 +1,14 @@
+{
+  "defaultInput": "姓名、年龄、城市、国家\nJohn Doe，30 岁，美国纽约\n简·史密斯，25，英国伦敦\n鲍勃·约翰逊，35 岁，澳大利亚悉尼",
+  "delimiterComma": "逗号 (,)",
+  "delimiterSemicolon": "分号 (;)",
+  "delimiterTab": "选项卡",
+  "delimiterPipe": "管道 (|)",
+  "downloadCsv": "下载 CSV 文件",
+  "csvInput": "CSV Input",
+  "csvPlaceholder": "将您的 CSV 数据粘贴到此处...",
+  "tablePreview": "表格预览",
+  "stats": "{rows} 行 × {columns} 列",
+  "noData": "没有数据可显示。在上面输入 CSV 内容。",
+  "tip": "提示：您可以直接从 Excel 或 Google Sheets 粘贴数据。该工具将自动检测格式。"
+}

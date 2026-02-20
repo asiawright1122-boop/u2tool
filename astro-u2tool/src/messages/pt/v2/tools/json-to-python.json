@@ -1,0 +1,28 @@
+{
+  "className": "Nome da Classe",
+  "style": "Estilo",
+  "useOptional": "Use Optional para valores nulos",
+  "loadSample": "Carregar Exemplo",
+  "copy": "Copiar",
+  "convert": "Converter",
+  "inputPlaceholder": "Digite o objeto JSON...",
+  "outputPlaceholder": "Código Python aparecerá aqui...",
+  "detailed_description": "O conversor JSON para Python é uma ferramenta técnica especializada que transforma estruturas de dados JSON em representações nativas do Python, como dataclasses, modelos Pydantic ou TypedDicts. Internamente, o parser analisa a hierarquia e tipos do JSON, mapeando primitivos (strings, números, booleanos) e estruturas aninhadas (arrays, objetos) para equivalentes com anotações de tipo estático. Essa ferramenta é essencial para desenvolvedores que precisam integrar APIs RESTful, validar esquemas com Pydantic, ou criar interfaces de dados fortemente tipadas em ambientes de desenvolvimento ágil. O processo utiliza análise léxica para identificar padrões de dados e gera código otimizado com base em AST (Abstract Syntax Tree), garantindo compatibilidade com PEP 589 (TypedDict) e PEP 557 (dataclasses). Funcionalidades avançadas incluem inferência automática de campos opcionais (Optional[T]) e suporte a tipos complexos como Union e Literals.",
+  "usage_steps": [
+    "Cole o JSON na área de texto com realce de sintaxe para validação prévia",
+    "Selecione o formato de saída desejado no seletor: Dataclass, Pydantic v2 ou TypedDict",
+    "Ative a opção 'Inferir campos opcionais' para detectar valores null e gerar Optional[T]",
+    "Ajuste o nível de indentação do código gerado usando o controle deslizante (2-8 espaços)",
+    "Clique em 'Exportar como Módulo' para incluir imports automáticos de dataclasses ou typing_extensions",
+    "Copie o código gerado com um clique no botão '📋'"
+  ],
+  "usage_examples": [
+    "Gerar um modelo Pydantic para validar payloads de uma API de e-commerce com campos como 'product_id' (UUID) e 'price' (Decimal)",
+    "Converter logs no formato JSON para dataclasses aninhadas, facilitando análise estatística com pandas",
+    "Criar TypedDicts para representar configurações de microserviços com valores obrigatórios e opcionais em arquivos JSON",
+    "Mapear respostas de API externa para objetos Python com type hints, reduzindo erros em pipelines de processamento de dados"
+  ],
+  "pydanticBaseModel": "Pydantic BaseModel",
+  "typedDict": "TypedDict",
+  "plainClass": "Classe Simples"
+}

@@ -1,0 +1,17 @@
+{
+  "detailed_description": "O File Hash Calculator é uma ferramenta de segurança que aplica funções de hash criptográfico em arquivos para gerar identificadores únicos baseados em seu conteúdo binário. Ao processar dados através de algoritmos como MD5, SHA-1, SHA-256 e SHA-512, o usuário obtém checksums que servem como impressões digitais digitais, úteis para verificação de integridade, detecção de alterações não autorizadas ou validação de transferências. Profissionais de TI e desenvolvedores utilizam essa ferramenta para validar downloads de software, garantir consistência em backups, ou auditar sistemas críticos. O funcionamento técnico envolve leitura sequencial do arquivo em blocos, aplicação de operações matemáticas irreversíveis (como XOR, rotações de bits e funções não-lineares) e formatação hexadecimal do resultado. O SHA-256, por exemplo, utiliza uma função de compressão de 64 rodadas para produzir um hash de 256 bits com alta resistência a colisões. A interface emprega WebAssembly para processar arquivos localmente no navegador, garantindo privacidade absoluta, sem upload de dados.",
+  "usage_steps": [
+    "1. Clique em 'Selecionar Arquivo' para carregar o documento, imagem ou executável que deseja analisar.",
+    "2. Escolha o algoritmo desejado no seletor: MD5 (128 bits), SHA-1 (160 bits), SHA-256 ou SHA-512 (1024 bits).",
+    "3. Observe o indicador de progresso em tempo real enquanto o arquivo é processado em chunks de 64KB.",
+    "4. Clique no botão 'Copiar' para salvar o hash hexadecimal gerado na área de transferência do sistema.",
+    "5. Utilize o campo 'Comparar com' para inserir um hash conhecido e verificar se os dados coincidem.",
+    "6. Exporte resultados em formato .txt ou .csv através do ícone de download para documentação de auditoria."
+  ],
+  "usage_examples": [
+    "Verificar a integridade de um firmware baixado de dispositivos IoT comparando seu SHA-256 com o valor publicado pelo fabricante.",
+    "Auditar regularmente backups de servidores gerando hashes SHA-512 para detectar modificações não registradas.",
+    "Certificar que documentos PDF assinados digitalmente não foram alterados desde a emissão, comparando checksums MD5.",
+    "Validar a consistência de imagens forenses criadas com ferramentas como DD ou FTK Imager através de hashes SHA-1."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "detailed_description": "A ferramenta CSV para Excel realiza a conversão de arquivos CSV (Comma-Separated Values) para o formato XLSX do Microsoft Excel, preservando a integridade dos dados estruturados. Técnicamente, o processo envolve a análise léxica das linhas do CSV, identificação de delimitadores (como vírgulas, pontos e vírgulas ou tabs), tratamento de codificações de caracteres (UTF-8, ISO-8859-1) e mapeamento para células em planilhas XLSX, incluindo a criação automática de múltiplas abas caso o arquivo original tenha cabeçalhos múltiplos. Usuários precisam desta ferramenta para integrar dados brutos em sistemas que exigem formatação avançada, como relatórios financeiros que exigem fórmulas ou gráficos, migração de bases de dados entre plataformas ou preparação de datasets para análise em Power BI. O mecanismo utiliza bibliotecas como Apache POI (Java) ou SheetJS (JavaScript) para manipular a estrutura binária do XLSX, garantindo compatibilidade com versões do Excel 2007+. O tratamento de casos especiais, como campos com aspas duplas ou quebras de linha dentro de células, é realizado através de algoritmos de escaping baseados na RFC 4180.",
+  "usage_steps": [
+    "Clique no botão 'Selecionar Arquivo' para carregar seu CSV.",
+    "Escolha o delimitador correto (vírgula, ponto e vírgula ou tabulação) usando o seletor na seção 'Configurações de Formato'.",
+    "Ative a opção 'Primeira linha como cabeçalho' se seu CSV contém títulos de coluna.",
+    "Selecione a codificação de caracteres desejada no menu suspenso 'Codificação de Entrada'.",
+    "Pressione 'Converter para XLSX' para iniciar o processamento.",
+    "Baixe o arquivo Excel gerado através do link dinâmico exibido após a conclusão."
+  ],
+  "usage_examples": [
+    "Um analista financeiro converte extratos bancários CSV para Excel, aplicando fórmulas de soma condicional e criando dashboards de controle.",
+    "Um cientista de dados prepara um dataset com 100.000 linhas para machine learning, convertendo CSVs separados por tabulação em XLSX para integração com o Power Query.",
+    "Um profissional de RH padroniza dados de folha de pagamento de múltiplos fornecedores, consolidando CSVs em uma única planilha com formatação de moeda e validações.",
+    "Um professor exporta notas de alunos de um sistema acadêmico em CSV e converte para Excel para utilizar recursos de filtragem e criação de gráficos de desempenho."
+  ],
+  "faqs": []
+}

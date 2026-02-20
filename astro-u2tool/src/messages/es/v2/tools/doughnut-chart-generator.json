@@ -1,0 +1,63 @@
+{
+  "chartTitle": "Título del Gráfico",
+  "chartTitlePlaceholder": "Introduce el título del gráfico",
+  "colorTheme": "Temas de Color",
+  "showLegend": "Mostrar Leyenda",
+  "showLabel": "Mostrar Etiqueta",
+  "innerRadius": "Radio Interno",
+  "outerRadius": "Radio Externo",
+  "roseType": "Tipo de Rosa",
+  "roseNone": "Ninguno",
+  "roseRadius": "Radio",
+  "roseArea": "Área",
+  "item": "Elemento",
+  "addItem": "Agregar Elemento",
+  "loadSample": "Cargar Ejemplo",
+  "downloadPng": "Descargar PNG",
+  "downloadSvg": "Descargar SVG",
+  "confirmClear": "¿Estás seguro de que deseas borrar todos los datos?",
+  "defaultTitle": "Distribución de Datos",
+  "sampleTitle": "Cuota de Mercado",
+  "dataEditor": "Editor de Datos",
+  "chartPreview": "Vista Previa del Gráfico",
+  "chartSettings": "Ajustes del Gráfico",
+  "namePlaceholder": "Nombre",
+  "valuePlaceholder": "Valor",
+  "themeDefault": "Por defecto",
+  "themeOcean": "Océano",
+  "themeSunset": "Amanecer",
+  "themeForest": "Bosque",
+  "sampleData": {
+    "jan": "Enero",
+    "feb": "Febrero",
+    "mar": "Marzo",
+    "apr": "Abril",
+    "may": "Mayo",
+    "jun": "Junio"
+  },
+  "tips": {
+    "title": "Consejos",
+    "tip1": "Agrega elementos con nombres y valores",
+    "tip2": "Ajusta el radio interno/externo",
+    "tip3": "Elije el tipo de rosa",
+    "tip4": "Habilita las etiquetas",
+    "tip5": "Exporta como PNG o SVG"
+  },
+  "detailed_description": "El Doughnut Chart Generator es una herramienta técnica especializada para crear gráficos de anillo interactivos mediante un motor de renderizado basado en SVG y Canvas. Permite representar visualmente proporciones de datos categóricos mediante segmentos proporcionalmente dimensionados, con la particularidad de un área central vacía que mejora la percepción del peso relativo de cada categoría. Este enfoque es especialmente útil para análisis de mercado, reporting financiero y presentaciones ejecutivas donde se requiere destacar ratios o porcentajes. La herramienta soporta datasets multidimensionales, permitiendo personalizar gradientes radiales para cada segmento, ajustar anchos de trazo (stroke) en píxeles, y configurar radios internos y externos para controlar la proporción del hueco central. Al generar gráficos vectoriales, mantiene la calidad a cualquier resolución, ideal para integración en dashboards web o documentos PDF profesionales.",
+  "usage_steps": [
+    "Accede al generador a través de /doughnut-chart-generator en el navegador",
+    "Introduce tus datos en el formato 'Categoría:Valor' separado por líneas (ej: 'Ventas:45')",
+    "Selecciona un esquema de color predefinido o crea combinaciones personalizadas con el selector HEX",
+    "Ajusta parámetros técnicos: radio interno (20-80% del radio total), grosor del borde (1-10px), y rotación inicial en grados",
+    "Activa/desactiva etiquetas de porcentaje y valores absolutos con el control de anotaciones",
+    "Exporta el resultado como SVG optimizado o imagen PNG de 4K con un clic en el botón correspondiente"
+  ],
+  "usage_examples": [
+    "Visualizar la distribución del presupuesto anual de una empresa por departamentos, destacando segmentos con colores corporativos personalizados",
+    "Mostrar el porcentaje de participación en mercado de distintas marcas de smartphones en un informe de análisis competitivo",
+    "Representar los resultados de una encuesta de satisfacción de clientes con segmentos coloreados por niveles de satisfacción (verde/amarillo/rojo)",
+    "Analizar la composición porcentual de lenguajes de programación utilizados en proyectos open source, con etiquetas dinámicas que muestran estadísticas clave"
+  ],
+  "png": "PNG",
+  "svg": "SVG"
+}

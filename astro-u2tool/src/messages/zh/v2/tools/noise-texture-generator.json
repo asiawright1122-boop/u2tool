@@ -1,0 +1,30 @@
+{
+  "detailed_description": "噪声纹理生成器可为您设计添加可定制的噪声图案。您可以选择随机噪声、类似佩林的模式或胶片颗粒效果。通过调整强度、缩放和颜色，为背景、卡片或任何需要微妙视觉兴趣的设计元素创建完美的纹理叠加。",
+  "usage_steps": [
+    "选择噪声类型：随机、Perlin或颗粒",
+    "调整噪声可见度强度",
+    "设置模式大小",
+    "选择基础色和噪声色",
+    "选择输出尺寸",
+    "下载PNG或复制数据URL"
+  ],
+  "usage_examples": [
+    "为英雄图片添加胶片颗粒",
+    "创建纹理卡片背景",
+    "设计复古风格的叠加层"
+  ],
+  "noiseType": "Noise Type",
+  "types": {
+    "random": "Random",
+    "perlin": "Perlin",
+    "grain": "Grain"
+  },
+  "intensity": "Intensity",
+  "scale": "Scale",
+  "size": "Size",
+  "baseColor": "Base Color",
+  "noiseColor": "Noise Color",
+  "regenerate": "Regenerate",
+  "copyDataUrl": "Copy Data URL",
+  "usage": "Usage"
+}

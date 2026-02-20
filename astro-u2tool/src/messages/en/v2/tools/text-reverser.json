@@ -1,0 +1,17 @@
+{
+  "detailed_description": "The Text Reverser tool performs granular text manipulation by applying reversal operations at three distinct levels: characters, words, or lines. At its core, the tool utilizes Unicode-aware string processing to ensure compatibility with multibyte characters and diverse scripts. When reversing characters, it constructs a grapheme cluster-aware reversed string using UTF-8 decoding algorithms. Word reversal operates through tokenization via regular expressions, splitting text at whitespace boundaries while preserving punctuation attachments. Line reversal employs line termination character detection (CRLF/LF agnostic) to segment and invert line order. This tool is essential for developers debugging string manipulation algorithms, linguists analyzing palindromic patterns, system administrators troubleshooting log files, and cryptographers exploring transposition ciphers. The backend leverages WebAssembly-optimized array reversal techniques for performance, while maintaining zero-server-side processing to ensure data privacy. Input text is processed entirely in memory, with real-time DOM updates through virtualized rendering for large datasets.",
+  "usage_steps": [
+    "Open the tool in your browser and locate the multi-line text input box with 'Paste or type text here' placeholder",
+    "Select the desired reversal mode using the HTML radio button group labeled 'Reversal Granularity': Characters, Words, or Lines",
+    "Toggle the 'Preserve Whitespace' checkbox to maintain original spacing patterns in word/line reversal modes",
+    "Click the 'Process Text' button with embedded SVG refresh icon to execute the reversal operation",
+    "View results in the syntax-highlighted output pane featuring line numbers for reversed line sequences",
+    "Use the 'Copy to Clipboard' button with clipboard icon to export results or 'Clear All' to reset the interface"
+  ],
+  "usage_examples": [
+    "A developer testing edge cases for a string reversal function by comparing tool output against their implementation",
+    "Analyzing genetic sequences by reversing DNA strands to identify palindromic restriction enzyme sites",
+    "System administrators viewing log files in reverse chronological order without altering original timestamps",
+    "Natural language processing researchers creating baseline datasets by reversing word order in training texts"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "input": "UUID Input",
+  "placeholder": "输入 UUID（每行一个）...",
+  "validate": "验证",
+  "valid": "有效的",
+  "invalid": "无效的",
+  "invalidFormat": "格式无效",
+  "versions": "UUID Versions",
+  "v1Desc": "基于时间的 UUID",
+  "v4Desc": "随机 UUID（最常见）",
+  "v5Desc": "基于名称的 UUID (SHA-1)"
+}

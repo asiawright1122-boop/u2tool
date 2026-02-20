@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El SQL Generator es una herramienta de desarrollo especializada que automatiza la creación de consultas SQL complejas mediante un análisis estructural de requisitos definidos por el usuario. Técnicamente, transforma entradas declarativas en instrucciones DDL/DML validadas, soportando operaciones avanzadas como subconsultas anidadas, uniones OUTER JOIN, partición de tablas y manejo de transacciones ACID. Su necesidad radica en la reducción de errores de sintaxis en entornos de desarrollo ágiles donde se requieren consultas repetitivas, como migraciones de base de datos o generación de informes dinámicos. Internamente, utiliza un parser léxico que interpreta esquemas de base de datos proporcionados en formato JSON o DDL previo, aplicando reglas de gramática SQL específica para cada motor (MySQL, PostgreSQL, SQL Server). La herramienta destaca por su capacidad de sugerir optimizaciones de índice basadas en patrones de consulta y generar comentarios de documentación en línea (inline comments) para mantenimiento posterior.",
+  "usage_steps": [
+    "Selecciona el tipo de consulta en el menú desplegable: 'SELECT avanzado', 'CREATE TABLE con restricciones', 'UPDATE masivo' o 'JOIN complejo'.",
+    "Introduce el esquema de base de datos en el editor de texto usando formato JSON o DDL existente.",
+    "Configura parámetros específicos mediante casillas de verificación: 'Incluir hint de índice', 'Usar transacción', 'Agregar comentarios'.",
+    "Ajusta condiciones WHERE dinámicas mediante campos de formulario estructurados por tipo de dato (texto, numérico, fecha).",
+    "Previsualiza la consulta generada en el panel de salida con resaltado de sintaxis y análisis de costo estimado.",
+    "Exporta el código SQL generado mediante botón de descarga o copia directamente al portapapeles."
+  ],
+  "usage_examples": [
+    "Un desarrollador construye una consulta SELECT con múltiples LEFT JOIN para un informe de ventas cruzando tablas de clientes, pedidos y productos.",
+    "Un DBA genera una instrucción CREATE TABLE con restricciones CHECK y claves foráneas para implementar un nuevo módulo de auditoría.",
+    "Un analista crea una subconsulta correlacionada para calcular el promedio móvil de precios de productos en un período específico.",
+    "Un ingeniero de datos diseña una actualización masiva con cláusula WHERE basada en expresiones regulares para normalizar registros históricos."
+  ]
+}

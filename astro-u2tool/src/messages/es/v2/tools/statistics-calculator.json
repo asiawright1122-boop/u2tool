@@ -1,0 +1,17 @@
+{
+  "detailed_description": "El Statistics Calculator es una herramienta especializada para el análisis estadístico descriptivo de conjuntos de datos numéricos. Permite calcular métricas esenciales como media aritmética, mediana, moda, desviación estándar poblacional y muestral, varianza, rango intercuartílico, coeficiente de variación y momentos estadísticos de orden superior. Su algoritmo implementa fórmulas optimizadas para manejar grandes volúmenes de datos con precisión, aplicando correcciones por sesgo en cálculos de varianza muestral. La herramienta está diseñada para profesionales que requieren análisis robustos en investigación académica, análisis de datos empresariales o estudios de calidad industrial. Su motor matemático soporta entrada de datos en formatos decimal, notación científica y fracciones, procesando automáticamente detección de outliers mediante el método Tukey. Al finalizar el cálculo, genera una tabla de frecuencias acumuladas y un histograma aproximado de distribución. Su interfaz permite seleccionar entre cálculos paramétricos y no paramétricos según la naturaleza de los datos, facilitando el análisis de variables discretas y continuas con opciones de agrupamiento.",
+  "usage_steps": [
+    "1. Accede a la herramienta a través de la sección 'Matemáticas Avanzadas' en el sitio web.",
+    "2. Ingresa los datos en el campo de texto principal, separados por comas, puntos y comas o espacios.",
+    "3. Activa las casillas de verificación correspondientes a las métricas requeridas (media, mediana, curtosis, etc.).",
+    "4. Selecciona el tipo de análisis: 'Muestra' o 'Población' usando el botón desplegable en la sección de parámetros.",
+    "5. Haz clic en el botón 'Calcular Estadísticas' para procesar los datos.",
+    "6. Revisa los resultados detallados en la tabla de salida, que incluye fórmulas y pasos intermedios de cálculo."
+  ],
+  "usage_examples": [
+    "Un estudiante de estadística ingresa las calificaciones de 30 compañeros para analizar la distribución de notas, calcular el percentil 75 y determinar el coeficiente de asimetría.",
+    "Un analista financiero procesa datos de ventas diarias durante 6 meses para obtener la desviación estándar y evaluar la estabilidad de ingresos.",
+    "Un investigador científico introduce datos de temperatura de un experimento en el campo 'Valores Muestrales' para generar un intervalo de confianza al 95%.",
+    "Un ingeniero de calidad evalúa el tiempo de respuesta de un servidor mediante el cálculo del rango intercuartílico y detección automática de valores atípicos."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "detailed_description": "Le Calculateur de Prix Unitaire est un outil technique conçu pour effectuer une analyse comparative des coûts en normalisant les prix selon des unités de mesure standardisées. Ce calculateur résout le problème courant des consommateurs et professionnels confrontés à des décisions d'achat complexes, notamment lorsqu'ils comparent des produits disponibles en quantités, unités ou devises différentes. L'outil utilise une formule mathématique de normalisation des prix (prix divisé par quantité d'unité de référence) et intègre un système de conversion de devises en temps réel basé sur les taux d'échange API. Il gère également des cas spécifiques comme les promotions non linéaires (ex: '2 pour 3€') grâce à un moteur de calcul adaptable aux règles de tarification variables. Les données saisies sont validées via des contrôles de cohérence (vérification des unités, détection des valeurs aberrantes) avant d'être traitées par un algorithme de tri par efficacité économique. Ce système permet aux utilisateurs de B2B ou aux consommateurs exigeants d'optimiser leurs dépenses dans des contextes professionnels ou domestiques.",
+  "usage_steps": [
+    "Saisissez les noms des produits dans les champs de texte 'Produit 1' et 'Produit 2'",
+    "Entrez les prix bruts dans les zones numériques associées",
+    "Sélectionnez les unités de mesure (grammes, litres, unités, etc.) dans les menus déroulants correspondants",
+    "Choisissez la devise de référence à l'aide des boutons radio (EUR, USD, GBP)",
+    "Activez l'option 'Promotion' si applicable et spécifiez la règle de tarification",
+    "Cliquez sur le bouton 'Calculer' pour afficher le prix unitaire normalisé et le classement de valeur"
+  ],
+  "usage_examples": [
+    "Un chef cuisinier compare des paquets de farine de 500g à 2,50€ et 1,2kg à 6,00€ pour déterminer le meilleur rapport qualité-prix en restaurant",
+    "Un acheteur informatique analyse des SSD de 256GB à 45€ HT et 512GB à 89€ TTC en intégrant la TVA et les frais de port",
+    "Une entreprise agricole évalue des engrais vendus en sacs de 10kg à 12€ avec offre '3 pour 30€' versus 25kg à 28€",
+    "Un particulier compare des abonnements SaaS facturés mensuellement (19,99€/mois) versus annuellement (199€/an)"
+  ],
+  "item": "Article",
+  "productName": "Nom du produit",
+  "namePlaceholder": "ex., Marque A",
+  "price": "Prix",
+  "quantity": "Quantité",
+  "unitPrice": "Prix unitaire",
+  "addItem": "Ajouter un article",
+  "bestValue": "Meilleure valeur",
+  "bestValueMessage": "L'article surligné offre la meilleure valeur par unité!",
+  "tipTitle": "Conseil d'achat",
+  "tipDescription": "Comparez toujours les prix unitaires lors de vos achats. Les gros emballages ne sont pas toujours moins chers par unité!"
+}
