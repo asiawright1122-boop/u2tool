@@ -217,7 +217,7 @@ for (const slug of relatedToolSlugs) {
 }
 ---
 
-<BaseLayout title={seoTitle} description={seoDescription} locale={locale}>
+<BaseLayout title={`${seoTitle} | U2Tool`} description={seoDescription} locale={locale}>
   {/* SEO: Hreflang tags for all 10 locales + x-default */}
   <HreflangTags path={`/tools/${tool.slug}`} slot="head" />
 
@@ -229,15 +229,29 @@ for (const slug of relatedToolSlugs) {
     <StructuredData type="HowTo" data={howToData} slot="head" />
   )}
 
-  {/* OG Image meta tag */}
-  <meta
-    property="og:image"
+  {/* SEO: BreadcrumbList structured data */}
+  <StructuredData type="BreadcrumbList" data={{
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      item: `${BASE_URL}${item.href}`,
+    })),
+  }} slot="head" />
+
+  {/* OG meta tags */}
+  <meta property="og:title" content={`${seoTitle} | U2Tool`} slot="head" />
+  <meta property="og:description" content={seoDescription} slot="head" />
+  <meta property="og:image"
     content={`${BASE_URL}/api/og?title=${encodeURIComponent(toolName)}&locale=${locale}&icon=${encodeURIComponent(tool.icon)}`}
     slot="head"
   />
   <meta property="og:type" content="website" slot="head" />
   <meta property="og:url" content={`${BASE_URL}/${locale}/tools/${tool.slug}`} slot="head" />
+  <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:title" content={`${seoTitle} | U2Tool`} slot="head" />
+  <meta name="twitter:description" content={seoDescription} slot="head" />
 
   {/* Sidebar - Desktop */}
   <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">

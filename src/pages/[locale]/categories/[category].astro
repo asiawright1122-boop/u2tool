@@ -5,12 +5,22 @@
  * Generates static paths for all 14 categories × all 10 locales
  */
 import type { GetStaticPaths } from 'astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import Sidebar from '@/components/layout/Sidebar.svelte';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import Breadcrumb from '@/components/layout/Breadcrumb.astro';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
+import { tools, categories, getToolsByCategory } from '@/config/tools';
 import type { ToolCategory } from '@/config/tools';
-import { tools } from '@/config/tools';
+import { locales, getLocalizedPath } from '@/lib/i18n';
+import type { Locale } from '@/lib/i18n';
+import { loadBaseMessages } from '@/lib/translations';
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const locales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
-  const categories: ToolCategory[] = [
+  const categoryIds: ToolCategory[] = [
     'text', 'encoding', 'generators', 'converters',
     'development', 'security', 'network', 'image',
     'math', 'charts', 'office', 'lifestyle',
@@ -18,37 +28,140 @@ export const getStaticPaths: GetStaticPaths = () => {
   ];
 
   return locales.flatMap((locale) =>
-    categories.map((category) => {
-      const categoryTools = tools.filter((t) => t.category === category);
-      return {
-        params: { locale, category },
-        props: { locale, category, tools: categoryTools },
-      };
-    })
+    categoryIds.map((category) => ({
+      params: { locale, category },
+      props: { locale, category },
+    }))
   );
 };
 
-interface Props {
-  locale: string;
-  category: string;
-  tools: Array<{ slug: string; name: string }>;
+const { locale, category } = Astro.props as { locale: Locale; category: ToolCategory };
+
+const baseMessages = await loadBaseMessages(locale);
+const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
+
+const categoryName = categoryMessages[category] || category;
+const categoryTools = getToolsByCategory(category);
+const catConfig = categories.find(c => c.id === category);
+const catIcon = catConfig?.icon || '📁';
+
+function getToolName(slug: string): string {
+  const t = toolsObj[slug] as Record<string, unknown> | undefined;
+  return (t?.name as string) || slug;
 }
 
-const { locale, category, tools: categoryTools } = Astro.props;
+function getToolDescription(slug: string): string {
+  const t = toolsObj[slug] as Record<string, unknown> | undefined;
+  return (t?.description as string) || '';
+}
+
+const BASE_URL = 'https://www.u2tool.com';
+const pageTitle = `${categoryName} - U2Tool`;
+const pageDescription = `${categoryTools.length}+ free ${categoryName} tools online.`;
+
+const breadcrumbItems = [
+  { label: navMessages.home || 'Home', href: `/${locale}` },
+  { label: categoryName, href: `/${locale}/categories/${category}` },
+];
+
+// BreadcrumbList structured data
+const breadcrumbData = {
+  itemListElement: breadcrumbItems.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    item: `${BASE_URL}${item.href}`,
+  })),
+};
+
+// CollectionPage structured data
+const collectionData = {
+  name: categoryName,
+  description: pageDescription,
+  url: `${BASE_URL}/${locale}/categories/${category}`,
+  numberOfItems: categoryTools.length,
+  hasPart: categoryTools.slice(0, 10).map(tool => ({
+    '@type': 'SoftwareApplication',
+    name: getToolName(tool.slug),
+    url: `${BASE_URL}/${locale}/tools/${tool.slug}`,
+  })),
+};
 ---
 
-<html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{category} - U2Tool - {locale}</title>
-  </head>
-  <body>
-    <main>
-      <h1>Category: {category}</h1>
-      <p>Locale: {locale}</p>
-      <p>Tools in category: {categoryTools.length}</p>
-      <p>Page type: category</p>
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  locale={locale}
+  canonicalPath={`/categories/${category}`}
+>
+  <HreflangTags path={`/categories/${category}`} slot="head" />
+  <StructuredData type="BreadcrumbList" data={breadcrumbData} slot="head" />
+  <StructuredData type="CollectionPage" data={collectionData} slot="head" />
+
+  <meta property="og:title" content={pageTitle} slot="head" />
+  <meta property="og:description" content={pageDescription} slot="head" />
+  <meta property="og:type" content="website" slot="head" />
+  <meta property="og:url" content={`${BASE_URL}/${locale}/categories/${category}`} slot="head" />
+  <meta property="og:site_name" content="U2Tool" slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
+
+  <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
+    <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
+  </aside>
+  <aside class="hidden md:block lg:hidden fixed left-0 top-0 bottom-0 z-40" style="width: 64px">
+    <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
+  </aside>
+
+  <div class="main-content-with-sidebar main-content-with-mobile-nav">
+    <Header client:load locale={locale} />
+
+    <main class="py-6 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-6">
+          <Breadcrumb locale={locale} items={breadcrumbItems} />
+        </div>
+
+        <div class="mb-8">
+          <h1 class="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
+            <span>{catIcon}</span>
+            <span>{categoryName}</span>
+            <span class="text-lg font-normal text-gray-400">({categoryTools.length})</span>
+          </h1>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {categoryTools.map((tool) => (
+            <a
+              href={getLocalizedPath(locale, `/tools/${tool.slug}`)}
+              class="group flex items-center gap-3 p-4 bg-white dark:bg-gray-800/60
+                     border border-gray-100 dark:border-gray-700/40 rounded-xl
+                     hover:border-blue-400/60 dark:hover:border-blue-500/40
+                     hover:bg-blue-50/50 dark:hover:bg-blue-900/10
+                     cursor-pointer transition-all duration-200"
+            >
+              <span class="text-2xl flex-shrink-0">{tool.icon}</span>
+              <div class="flex-1 min-w-0">
+                <h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  {getToolName(tool.slug)}
+                </h3>
+                <p class="text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5">
+                  {getToolDescription(tool.slug)}
+                </p>
+              </div>
+              {tool.popular && (
+                <span class="text-xs text-orange-500 flex-shrink-0">🔥</span>
+              )}
+            </a>
+          ))}
+        </div>
+      </div>
     </main>
-  </body>
-</html>
+
+    <Footer locale={locale} />
+  </div>
+
+  <MobileBottomNav client:load locale={locale} navMessages={navMessages} />
+</BaseLayout>

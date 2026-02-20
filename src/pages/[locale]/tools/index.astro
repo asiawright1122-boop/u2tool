@@ -17,6 +17,7 @@ import { tools, categories } from '@/config/tools';
 import { locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
+import HreflangTags from '@/components/seo/HreflangTags.astro';
 
 export const getStaticPaths: GetStaticPaths = () => {
   return locales.map((locale) => ({
@@ -53,6 +54,16 @@ const breadcrumbItems = [
   locale={locale}
   canonicalPath="/tools"
 >
+  {/* SEO: Hreflang tags */}
+  <HreflangTags path="/tools" slot="head" />
+
+  {/* OG meta tags */}
+  <meta property="og:title" content={`${navMessages.allTools || 'All Tools'} | U2Tool`} slot="head" />
+  <meta property="og:description" content={`Browse ${tools.length}+ free online tools.`} slot="head" />
+  <meta property="og:type" content="website" slot="head" />
+  <meta property="og:url" content={`https://www.u2tool.com/${locale}/tools`} slot="head" />
+  <meta property="og:site_name" content="U2Tool" slot="head" />
+  <meta name="twitter:card" content="summary_large_image" slot="head" />
   <!-- Sidebar - Desktop -->
   <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
     <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />
