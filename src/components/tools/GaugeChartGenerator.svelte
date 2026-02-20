@@ -270,7 +270,7 @@
     value = 85;
     minValue = 0;
     maxValue = 100;
-    unit = t('sampleData.score');
+    unit = 'Score';
     chartTitle = t('sampleTitle');
     gaugeType = 'grade';
   }

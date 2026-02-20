@@ -100,7 +100,7 @@
     output = '';
 
     if (!input.trim()) {
-      error = t('errors.empty');
+      error = 'Input is empty';
       return;
     }
 
@@ -119,7 +119,7 @@
       
       output = lines.join('\n');
     } catch {
-      error = t('errors.invalidJson');
+      error = 'Invalid JSON';
     }
   }
   function copyToClipboard() {

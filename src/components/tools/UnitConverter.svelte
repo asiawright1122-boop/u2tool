@@ -81,7 +81,7 @@
     <div class="space-y-6">
       <!-- Category Selection -->
       <div>
-        <label class="tool-label">{t('unit.category')}</label>
+        <label class="tool-label">{'Category'}</label>
         <div class="flex flex-wrap gap-2">
           {#each (Object.keys(units) as UnitCategory[]) as cat (cat)}
 <button 
@@ -104,7 +104,7 @@
       <div class="grid md:grid-cols-[1fr,auto,1fr] gap-4 items-stretch">
         <!-- From Section -->
         <div class="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-700 transition-all hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10">
-          <label class="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{t('unit.from')}</label>
+          <label class="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{'From'}</label>
           <div class="space-y-3">
             <input
               type="number"
@@ -146,7 +146,7 @@
 
         <!-- To Section -->
         <div class="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-700 transition-all hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10">
-          <label class="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{t('unit.to')}</label>
+          <label class="tool-label text-xs uppercase tracking-wider text-gray-500 mb-3 block text-center md:text-left">{'To'}</label>
           <div class="space-y-3">
             <div class="tool-input flex items-center justify-center text-2xl md:text-3xl font-mono h-16 bg-white dark:bg-gray-800 shadow-sm overflow-hidden text-ellipsis whitespace-nowrap">
               {result || '0'}
@@ -176,7 +176,7 @@
 
       <!-- Quick Reference -->
       <div class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-        <h3 class="text-sm font-medium mb-3 text-gray-900 dark:text-white">{t('unit.quickRef')}</h3>
+        <h3 class="text-sm font-medium mb-3 text-gray-900 dark:text-white">{'Quick Reference'}</h3>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-gray-600 dark:text-gray-300">
           {#each categoryUnits.slice(0, 6) as [key, def] (key)}
 <div >

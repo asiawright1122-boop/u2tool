@@ -221,14 +221,11 @@
     link.click();
   }
   function loadSampleData() {
-    categories = [
-      t('sampleData.mon'), t('sampleData.tue'), t('sampleData.wed'),
-      t('sampleData.thu'), t('sampleData.fri'), t('sampleData.sat'), t('sampleData.sun'),
-    ];
+    categories = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     series = [
-      { id: generateId(), name: t('sampleData.email'), values: [120, 132, 101, 134, 90, 230, 210] },
-      { id: generateId(), name: t('sampleData.ads'), values: [220, 182, 191, 234, 290, 330, 310] },
-      { id: generateId(), name: t('sampleData.video'), values: [150, 232, 201, 154, 190, 330, 410] },
+      { id: generateId(), name: 'Email', values: [120, 132, 101, 134, 90, 230, 210] },
+      { id: generateId(), name: 'Ads', values: [220, 182, 191, 234, 290, 330, 310] },
+      { id: generateId(), name: 'Video', values: [150, 232, 201, 154, 190, 330, 410] },
     ];
     chartTitle = t('sampleTitle');
     stacked = true;

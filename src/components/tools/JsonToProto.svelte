@@ -107,7 +107,7 @@
     output = '';
     
     if (!input.trim()) {
-      error = t('errors.empty');
+      error = 'Input is empty';
       return;
     }
 
@@ -115,7 +115,7 @@
       const json = JSON.parse(input);
       
       if (typeof json !== 'object' || json === null) {
-        error = t('errors.notObject');
+        error = 'Input must be a JSON object';
         return;
       }
 
@@ -139,7 +139,7 @@
 
       output = lines.join('\n');
     } catch {
-      error = t('errors.invalidJson');
+      error = 'Invalid JSON';
     }
   }
   function copyToClipboard() {

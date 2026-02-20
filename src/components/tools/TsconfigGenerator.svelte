@@ -335,17 +335,17 @@
       <!-- Boolean Options -->
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         {#each [
-          { key: 'strict', label: t('strict') },
-          { key: 'declaration', label: t('declaration') },
-          { key: 'declarationMap', label: t('declarationMap') },
-          { key: 'sourceMap', label: t('sourceMap') },
+          { key: 'strict', label: 'Strict' },
+          { key: 'declaration', label: 'Declaration' },
+          { key: 'declarationMap', label: 'Declaration Map' },
+          { key: 'sourceMap', label: 'Source Map' },
           { key: 'esModuleInterop', label: 'esModuleInterop' },
           { key: 'skipLibCheck', label: 'skipLibCheck' },
           { key: 'forceConsistentCasingInFileNames', label: 'forceConsistentCasingInFileNames' },
           { key: 'resolveJsonModule', label: 'resolveJsonModule' },
           { key: 'isolatedModules', label: 'isolatedModules' },
           { key: 'noEmit', label: 'noEmit' },
-          { key: 'paths', label: t('paths') },
+          { key: 'paths', label: 'Paths' },
         ] as { key, label } (key)}
 <label  class="flex items-center gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
             <input

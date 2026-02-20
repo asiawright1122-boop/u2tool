@@ -60,7 +60,7 @@
     <div class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-[1fr,auto,1fr] gap-4 items-end">
         <div>
-          <label class="block text-sm font-medium mb-2">{t('colorContrast.foreground')}</label>
+          <label class="block text-sm font-medium mb-2">{'Foreground Color'}</label>
           <div class="flex gap-2">
             <input
               type="color"
@@ -81,7 +81,7 @@
         </button>
 
         <div>
-          <label class="block text-sm font-medium mb-2">{t('colorContrast.background')}</label>
+          <label class="block text-sm font-medium mb-2">{'Background Color'}</label>
           <div class="flex gap-2">
             <input
               type="color"
@@ -103,7 +103,7 @@
         class="p-8 rounded-lg text-center"
         style="background-color: {background}; color: {foreground}"
       >
-        <div class="text-4xl font-bold mb-2">{t('colorContrast.preview')}</div>
+        <div class="text-4xl font-bold mb-2">{'Preview'}</div>
         <div class="text-lg">{tc('sampleText')}</div>
         <div class="text-sm mt-2">{tc('smallText')}</div>
       </div>
@@ -113,42 +113,42 @@
         <div class="text-5xl font-bold mb-2" style="color: {ratio >= 7 ? '#22c55e' : ratio >= 4.5 ? '#eab308' : '#ef4444'}">
           {ratio.toFixed(2)}:1
         </div>
-        <div class="text-gray-600 dark:text-gray-300">{t('colorContrast.contrastRatio')}</div>
+        <div class="text-gray-600 dark:text-gray-300">{'Contrast Ratio'}</div>
       </div>
 
       <!-- WCAG Results -->
       <div class="grid grid-cols-2 gap-4">
         <div class="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
-          <h3 class="font-medium mb-3 text-gray-900 dark:text-white">{t('colorContrast.normalText')}</h3>
+          <h3 class="font-medium mb-3 text-gray-900 dark:text-white">{'Normal Text'}</h3>
           <div class="space-y-2 text-gray-900 dark:text-white">
             <div class="flex justify-between items-center">
               <span>AA (4.5:1)</span>
               <span class={`px-2 py-1 rounded text-sm text-white ${wcagNormal.aa ? 'bg-green-600' : 'bg-red-600'}`}>
-                {wcagNormal.aa ? `✓ ${t('colorContrast.pass')}` : `✗ ${t('colorContrast.fail')}`}
+                {wcagNormal.aa ? `✓ ${'Pass'}` : `✗ ${'Fail'}`}
               </span>
             </div>
             <div class="flex justify-between items-center">
               <span>AAA (7:1)</span>
               <span class={`px-2 py-1 rounded text-sm text-white ${wcagNormal.aaa ? 'bg-green-600' : 'bg-red-600'}`}>
-                {wcagNormal.aaa ? `✓ ${t('colorContrast.pass')}` : `✗ ${t('colorContrast.fail')}`}
+                {wcagNormal.aaa ? `✓ ${'Pass'}` : `✗ ${'Fail'}`}
               </span>
             </div>
           </div>
         </div>
 
         <div class="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
-          <h3 class="font-medium mb-3 text-gray-900 dark:text-white">{t('colorContrast.largeText')}</h3>
+          <h3 class="font-medium mb-3 text-gray-900 dark:text-white">{'Large Text'}</h3>
           <div class="space-y-2 text-gray-900 dark:text-white">
             <div class="flex justify-between items-center">
               <span>AA (3:1)</span>
               <span class={`px-2 py-1 rounded text-sm text-white ${wcagLarge.aa ? 'bg-green-600' : 'bg-red-600'}`}>
-                {wcagLarge.aa ? `✓ ${t('colorContrast.pass')}` : `✗ ${t('colorContrast.fail')}`}
+                {wcagLarge.aa ? `✓ ${'Pass'}` : `✗ ${'Fail'}`}
               </span>
             </div>
             <div class="flex justify-between items-center">
               <span>AAA (4.5:1)</span>
               <span class={`px-2 py-1 rounded text-sm text-white ${wcagLarge.aaa ? 'bg-green-600' : 'bg-red-600'}`}>
-                {wcagLarge.aaa ? `✓ ${t('colorContrast.pass')}` : `✗ ${t('colorContrast.fail')}`}
+                {wcagLarge.aaa ? `✓ ${'Pass'}` : `✗ ${'Fail'}`}
               </span>
             </div>
           </div>
@@ -157,7 +157,7 @@
 
       <!-- Presets -->
       <div>
-        <h3 class="text-sm font-medium text-gray-900 dark:text-white mb-3">{t('colorContrast.presets')}</h3>
+        <h3 class="text-sm font-medium text-gray-900 dark:text-white mb-3">{'Presets'}</h3>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
           {#each presets as preset, i (i)}
 <button 
@@ -174,7 +174,7 @@
 
       <!-- Info -->
       <div class="p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg text-sm text-gray-600 dark:text-gray-300">
-        <h3 class="font-medium text-gray-900 dark:text-white mb-2">{t('colorContrast.guidelines')}</h3>
+        <h3 class="font-medium text-gray-900 dark:text-white mb-2">{'WCAG Guidelines'}</h3>
         <ul class="space-y-1">
           <li>• {tc('guidelinesAA')}</li>
           <li>• {tc('guidelinesAAA')}</li>

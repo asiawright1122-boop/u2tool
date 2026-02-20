@@ -60,7 +60,7 @@
 
       if (inputType === 'url') {
         if (!input.trim()) {
-          error = t('errors.noUrl');
+          error = 'Please enter a URL';
           return;
         }
 
@@ -71,12 +71,12 @@
           }
           content = await response.text();
         } catch (e) {
-          error = t('errors.fetchFailed', { error: (e as Error).message });
+          error = `Fetch failed: ${(e as Error).message}`;
           return;
         }
       } else {
         if (!input.trim()) {
-          error = t('errors.noContent');
+          error = 'Please enter content';
           return;
         }
       }

@@ -111,10 +111,10 @@
       <!-- Options -->
       <div class="grid grid-cols-2 gap-4">
         {#each [
-          { key: 'uppercase', label: t('password.uppercase') },
-          { key: 'lowercase', label: t('password.lowercase') },
-          { key: 'numbers', label: t('password.numbers') },
-          { key: 'symbols', label: t('password.symbols') },
+          { key: 'uppercase', label: 'Uppercase (A-Z)' },
+          { key: 'lowercase', label: 'Lowercase (a-z)' },
+          { key: 'numbers', label: 'Numbers (0-9)' },
+          { key: 'symbols', label: 'Symbols (!@#$)' },
         ] as { key, label } (key)}
 <label  class="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-300">
             <input
@@ -130,7 +130,7 @@
 
       <!-- Generate Button -->
       <button onclick={generatePassword} class="btn-primary w-full">
-        {t('generate')} {t('password.newPassword')}
+        {t('generate')}
       </button>
     </div>
   

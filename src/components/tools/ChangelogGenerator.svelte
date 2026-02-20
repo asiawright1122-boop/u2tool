@@ -145,12 +145,12 @@
     output = '';
   }
   const categories: { key: keyof Omit<ChangelogEntry, 'version' | 'date'>; label: string; color: string }[] = [
-    { key: 'added', label: t('added'), color: 'bg-green-100 dark:bg-green-900 border-green-300 dark:border-green-700' },
-    { key: 'changed', label: t('changed'), color: 'bg-yellow-100 dark:bg-yellow-900 border-yellow-300 dark:border-yellow-700' },
-    { key: 'fixed', label: t('fixed'), color: 'bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700' },
-    { key: 'removed', label: t('removed'), color: 'bg-red-100 dark:bg-red-900 border-red-300 dark:border-red-700' },
-    { key: 'deprecated', label: t('deprecated'), color: 'bg-orange-100 dark:bg-orange-900 border-orange-300 dark:border-orange-700' },
-    { key: 'security', label: t('security'), color: 'bg-purple-100 dark:bg-purple-900 border-purple-300 dark:border-purple-700' },
+    { key: 'added', label: 'Added', color: 'bg-green-100 dark:bg-green-900 border-green-300 dark:border-green-700' },
+    { key: 'changed', label: 'Changed', color: 'bg-yellow-100 dark:bg-yellow-900 border-yellow-300 dark:border-yellow-700' },
+    { key: 'fixed', label: 'Fixed', color: 'bg-blue-100 dark:bg-blue-900 border-blue-300 dark:border-blue-700' },
+    { key: 'removed', label: 'Removed', color: 'bg-red-100 dark:bg-red-900 border-red-300 dark:border-red-700' },
+    { key: 'deprecated', label: 'Deprecated', color: 'bg-orange-100 dark:bg-orange-900 border-orange-300 dark:border-orange-700' },
+    { key: 'security', label: 'Security', color: 'bg-purple-100 dark:bg-purple-900 border-purple-300 dark:border-purple-700' },
   ];
 
 </script>

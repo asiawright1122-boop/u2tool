@@ -61,7 +61,7 @@
   }
   async function sendRequest() {
     if (!url) {
-      error = t('errors.noUrl');
+      error = 'Please enter a URL';
       return;
     }
 
@@ -103,7 +103,7 @@
           responseBody = text;
         }
       } catch {
-        responseBody = t('errors.cannotReadBody');
+        responseBody = 'Cannot read response body';
       }
 
       response = {

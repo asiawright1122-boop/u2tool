@@ -67,7 +67,7 @@
     fields = [];
 
     if (!input.trim()) {
-      error = t('errors.empty');
+      error = 'Input is empty';
       return;
     }
 
@@ -75,7 +75,7 @@
       const json = JSON.parse(input);
       
       if (typeof json !== 'object' || json === null || Array.isArray(json)) {
-        error = t('errors.notObject');
+        error = 'Input must be a JSON object';
         return;
       }
 
@@ -103,7 +103,7 @@
       fields = parsedFields;
       formValues = {};
     } catch {
-      error = t('errors.invalidJson');
+      error = 'Invalid JSON';
     }
   }
   function generateHtml(): string {

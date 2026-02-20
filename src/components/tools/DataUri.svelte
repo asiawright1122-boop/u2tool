@@ -69,13 +69,13 @@
     <div class="space-y-4">
       <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500 transition-colors bg-gray-50 dark:bg-transparent" onclick={() => fileRef?.click()}>
         <input bind:this={fileRef} type="file" onchange={handleFile} class="hidden" />
-        <p class="text-gray-600 dark:text-gray-300">{t('dataUri.dropzone')}</p>
+        <p class="text-gray-600 dark:text-gray-300">{'Drop file here or click to browse'}</p>
       </div>
       {#if fileInfo}
 <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 grid grid-cols-3 gap-4 text-sm text-gray-900 dark:text-white">
-          <div><span class="text-gray-600 dark:text-gray-300">{t('dataUri.fileName')}:</span> {fileInfo.name}</div>
-          <div><span class="text-gray-600 dark:text-gray-300">{t('dataUri.fileSize')}:</span> {fileInfo.size}</div>
-          <div><span class="text-gray-600 dark:text-gray-300">{t('dataUri.fileType')}:</span> {fileInfo.type}</div>
+          <div><span class="text-gray-600 dark:text-gray-300">{'File Name'}:</span> {fileInfo.name}</div>
+          <div><span class="text-gray-600 dark:text-gray-300">{'File Size'}:</span> {fileInfo.size}</div>
+          <div><span class="text-gray-600 dark:text-gray-300">{'File Type'}:</span> {fileInfo.type}</div>
         </div>
 {/if}
       <div>
@@ -89,7 +89,7 @@
       {#if dataUri}
 dataUri.startsWith('data:image') && (
         <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 min-h-[200px]">
-          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">{t('dataUri.preview')}</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">{'Preview'}</p>
           <img src={dataUri} alt="Preview" class="max-w-full max-h-64 mx-auto" style="aspect-ratio: auto" />
         </div>
       )

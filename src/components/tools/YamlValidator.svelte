@@ -25,7 +25,7 @@
   // Functions
   function validate() {
     if (!input.trim()) {
-      result = { valid: false, error: t('errors.empty') };
+      result = { valid: false, error: 'Input is empty' };
       return;
     }
 

@@ -88,9 +88,9 @@
     result = null;
   }
   const styles: { id: 'professional' | 'modern' | 'minimal'; name: string }[] = [
-    { id: 'professional', name: t('styleProfessional') },
-    { id: 'modern', name: t('styleModern') },
-    { id: 'minimal', name: t('styleMinimal') },
+    { id: 'professional', name: 'Professional' },
+    { id: 'modern', name: 'Modern' },
+    { id: 'minimal', name: 'Minimal' },
   ];
   const colors = ['#2563eb', '#059669', '#dc2626', '#7c3aed', '#ea580c', '#0891b2', '#4f46e5', '#be185d'];
 

@@ -52,7 +52,7 @@
     tableData = null;
 
     if (!input.trim()) {
-      error = t('errors.empty');
+      error = 'Input is empty';
       return;
     }
 
@@ -65,12 +65,12 @@
       } else if (typeof json === 'object' && json !== null) {
         data = [json];
       } else {
-        error = t('errors.notObjectOrArray');
+        error = 'Input must be a JSON object or array';
         return;
       }
 
       if (data.length === 0) {
-        error = t('errors.emptyArray');
+        error = 'Array is empty';
         return;
       }
 
@@ -83,7 +83,7 @@
 
       tableData = { headers, rows };
     } catch {
-      error = t('errors.invalidJson');
+      error = 'Invalid JSON';
     }
   }
   function copyAsHtml() {

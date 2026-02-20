@@ -201,10 +201,10 @@
   <!-- Settings -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div>
-      <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('method')}</label>
+      <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('forecastMethod')}</label>
       <select bind:value={settings.method} class="w-full px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-900 dark:text-white">
-        <option value="linear">{t('linear')}</option>
-        <option value="exponential">{t('exponential')}</option>
+        <option value="linear">{t('linearRegression')}</option>
+        <option value="exponential">{t('exponentialGrowth')}</option>
         <option value="moving-average">{t('movingAverage')}</option>
       </select>
     </div>
@@ -251,7 +251,7 @@
 
   <!-- Chart -->
   <div>
-    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">{t('chart')}</h3>
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">{t('forecastVisualization')}</h3>
     <div class="space-y-2">
       {#each historicalData as item}
         {@const revenue = item.revenue}
@@ -307,11 +307,11 @@
       <div class="text-lg font-bold text-gray-900 dark:text-white">{formatCurrency(statistics.avgProfit)}</div>
     </div>
     <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3">
-      <div class="text-xs text-gray-500 dark:text-gray-400">{t('revenueGrowth')}</div>
+      <div class="text-xs text-gray-500 dark:text-gray-400">{t('growth')}</div>
       <div class="text-lg font-bold text-gray-900 dark:text-white">{statistics.revenueGrowth.toFixed(1)}%</div>
     </div>
     <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3">
-      <div class="text-xs text-gray-500 dark:text-gray-400">{t('expenseGrowth')}</div>
+      <div class="text-xs text-gray-500 dark:text-gray-400">{t('change')}</div>
       <div class="text-lg font-bold text-gray-900 dark:text-white">{statistics.expenseGrowth.toFixed(1)}%</div>
     </div>
     <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3">
@@ -322,7 +322,7 @@
 
   <!-- Export -->
   <div class="flex justify-end">
-    <button onclick={exportForecast} class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">{t('export')}</button>
+    <button onclick={exportForecast} class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">{t('exportForecastReport')}</button>
   </div>
 </div>
             

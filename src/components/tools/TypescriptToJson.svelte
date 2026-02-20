@@ -125,7 +125,7 @@
     output = '';
 
     if (!input.trim()) {
-      error = t('errors.empty');
+      error = 'Input is empty';
       return;
     }
 
@@ -133,7 +133,7 @@
       const parsed = parseTypeScript(input);
       output = JSON.stringify(parsed, null, 2);
     } catch (e) {
-      error = t('errors.parseFailed', { error: (e as Error).message });
+      error = `Parse failed: ${(e as Error).message}`;
     }
   }
   function copyToClipboard() {
