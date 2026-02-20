@@ -66,15 +66,7 @@ const breadcrumbItems = [
     <Header client:load locale={locale} />
 
     <main class="py-6 px-4">
-      <div class="max-w-5xl mx-auto">
-        <div class="mb-6">
-          <Breadcrumb locale={locale} items={breadcrumbItems} />
-        </div>
-
-        <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-          {navMessages.allTools || 'All Tools'}
-        </h1>
-
+      <div class="max-w-6xl mx-auto">
         <ToolsGrid
           client:load
           locale={locale}

@@ -377,22 +377,20 @@
  * ============================================ */
 
 .sidebar-item {
-  @apply flex items-center gap-3 px-3 py-2.5 rounded-lg;
-  @apply text-gray-600 hover:bg-gray-100 hover:text-gray-900;
+  @apply flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer;
+  @apply text-gray-600 hover:bg-gray-50 hover:text-gray-900;
   transition-property: background-color, color;
-  transition-duration: 200ms;
+  transition-duration: 150ms;
 }
 .dark .sidebar-item {
-  @apply text-gray-400 hover:bg-gray-800 hover:text-white;
+  @apply text-gray-400 hover:bg-gray-800/60 hover:text-white;
 }
 
 .sidebar-item-active {
-  @apply bg-blue-50 text-blue-600;
-  border-left-width: 3px;
-  @apply border-blue-500;
+  @apply bg-blue-50 text-blue-600 font-medium;
 }
 .dark .sidebar-item-active {
-  @apply bg-blue-900/30 text-blue-400;
+  @apply bg-blue-900/20 text-blue-400;
 }
 
 /* ============================================
