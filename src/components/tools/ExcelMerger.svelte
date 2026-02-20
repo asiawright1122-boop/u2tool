@@ -143,7 +143,7 @@
       <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
         <input type="file" accept=".xlsx,.xls" multiple onchange={handleFileUpload} class="hidden" id="excel-merger-upload" />
         <label for="excel-merger-upload" class="cursor-pointer flex flex-col items-center">
-          <span class="text-4xl mb-2">🔗</span>
+          <span class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
           <span class="text-lg font-medium text-gray-700 dark:text-gray-300">{t('excelMerger.uploadFiles')}</span>
           <span class="text-sm text-gray-500 dark:text-gray-400 mt-1">{t('excelMerger.multipleFiles')}</span>
         </label>

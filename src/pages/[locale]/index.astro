@@ -19,6 +19,7 @@ import PopularToolsCarousel from '@/components/PopularToolsCarousel.svelte';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import { tools, categories, getPopularTools, getToolsByCategory } from '@/config/tools';
+import { getIconSvg } from '@/lib/icon-svg';
 import { locales, getLocalizedPath } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
@@ -185,9 +186,7 @@ const carouselTools = popularTools.map(tool => ({
                     href={getLocalizedPath(locale, `/tools/${tool.slug}`)}
                     class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group"
                   >
-                    <span class="text-xl flex-shrink-0">
-                      {tool.icon}
-                    </span>
+                    <span class="text-xl flex-shrink-0 text-blue-500 dark:text-blue-400" set:html={getIconSvg(tool.icon, 20)} />
                     <div class="flex-1 min-w-0">
                       <h4 class="text-sm font-medium text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {getToolName(tool.slug)}
@@ -232,7 +231,7 @@ const carouselTools = popularTools.map(tool => ({
           return (
             <section class="mb-8 content-auto">
               <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                <span>{cat.icon}</span>
+                <span class="text-blue-500 dark:text-blue-400" set:html={getIconSvg(cat.icon, 20)} />
                 <span>{categoryMessages[cat.id] || cat.id}</span>
                 <span class="text-sm font-normal text-gray-400 dark:text-gray-500">({catTools.length})</span>
               </h2>
@@ -246,9 +245,7 @@ const carouselTools = popularTools.map(tool => ({
                            hover:bg-blue-50/50 dark:hover:bg-blue-900/10
                            cursor-pointer transition-all duration-200"
                   >
-                    <span class="text-2xl flex-shrink-0">
-                      {tool.icon}
-                    </span>
+                    <span class="text-2xl flex-shrink-0 text-blue-500 dark:text-blue-400" set:html={getIconSvg(tool.icon, 22)} />
                     <div class="flex-1 min-w-0">
                       <h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {getToolName(tool.slug)}
@@ -258,7 +255,7 @@ const carouselTools = popularTools.map(tool => ({
                       </p>
                     </div>
                     {tool.popular && (
-                      <span class="text-xs text-orange-500 flex-shrink-0">🔥</span>
+                      <span class="inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium rounded-full bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400 flex-shrink-0">HOT</span>
                     )}
                   </a>
                 ))}

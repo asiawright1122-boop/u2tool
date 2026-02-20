@@ -9,6 +9,7 @@
  */
 
 import { getLocalizedPath } from '@/lib/i18n';
+import { getIconSvg } from '@/lib/icon-svg';
 import type { Locale } from '@/lib/i18n';
 
 interface Props {
@@ -28,7 +29,7 @@ const toolsPath = getLocalizedPath(locale as Locale, '/tools');
       <!-- Brand -->
       <div>
         <a href={homePath} class="flex items-center gap-2 text-lg font-bold text-gray-900 dark:text-white">
-          <span class="text-xl">🛠️</span>
+          <span class="text-blue-500" set:html={getIconSvg('wrench', 20)} />
           <span>U2Tool</span>
         </a>
         <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">

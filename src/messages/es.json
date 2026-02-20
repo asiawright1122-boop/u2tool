@@ -224,24 +224,44 @@
       "decodeFromBase64": "Decodificar desde Base64",
       "inputPlaceholder": "Escribe el texto para codificar o la Base64 para decodificar...",
       "outputPlaceholder": "Los resultados aparecerán aquí...",
-      "name": "Codificador/Decodificador Base64",
-      "description": "Codifica texto a Base64 o decodifica cadenas Base64 a texto de forma instantánea.",
-      "seo_title": "Codificador y decodificador Base64 gratis online",
-      "seo_description": "Cambia texto a Base64 o decodifica cadenas Base64 de forma segura online y gratuita. Herramienta basada en el navegador sin subida de datos. Ideal para desarrolladores.",
-      "detailed_description": "El codificador/decodificador Base64 permite transformar datos binarios en una secuencia ASCII mediante el esquema de codificación Base64, que utiliza un alfabeto de 64 caracteres (A-Z, a-z, 0-9, +, /) con padding opcional (=). Esta herramienta es esencial para casos donde se requiere transmitir datos binarios a través de protocolos o formatos que solo admiten texto plano, como JSON, HTML o URLs. Por ejemplo, al incrustar imágenes en CSS como data URIs o preparar payloads para APIs REST que requieren datos en formato Base64. Técnicamente, el proceso divide los datos binarios en segmentos de 6 bits, mapeándolos al alfabeto Base64, mientras que la decodificación invierte este proceso validando padding y verificando caracteres inválidos. La herramienta soporta entrada en UTF-8 y detección automática de datos codificados, evitando errores comunes como la corrupción por caracteres no imprimibles.",
+      "name": "Codificador y Decodificador Base64",
+      "description": "Herramienta gratis para codificar texto a Base64 y decodificar strings online.",
+      "seo_title": "Codificador Base64 | Herramienta Online Gratis para Codificar y Decodificar",
+      "seo_description": "Codifica texto a Base64 o decodifica strings al instante con esta herramienta online gratuita. Sin registro, fácil de usar y sin límites. ¡Pruébalo ahora!",
+      "detailed_description": "Esta herramienta online gratuita permite codificar cualquier texto o cadena de caracteres al formato Base64, y también decodificar datos Base64 de vuelta a texto legible. Es ideal para desarrolladores, administradores de sistemas y cualquier persona que trabaje con datos en la web, APIs o configuraciones. Funciona directamente en tu navegador, no requiere instalación y garantiza la privacidad de tus datos.",
       "usage_steps": [
-        "1. Abre la herramienta Base64 en el sitio web y localiza el área de entrada con el título 'Datos de entrada'.",
-        "2. Pega el texto o arrastra un archivo binario (como una imagen) al área designada para procesar su contenido.",
-        "3. Selecciona la operación deseada: haz clic en 'Codificar a Base64' o 'Decodificar desde Base64' según tus necesidades.",
-        "4. Si decodificas, activa la opción 'Ignorar caracteres no Base64' para limpiar datos dañados antes del procesamiento.",
-        "5. Revisa el resultado en el panel de salida, que muestra el tamaño original y el resultado procesado en tiempo real.",
-        "6. Usa el botón 'Copiar al portapapeles' o exporta el resultado como archivo .txt para integrarlo en tu proyecto."
+        "Pega o escribe tu texto en el campo de entrada.",
+        "Selecciona la operación deseada: 'Codificar a Base64' o 'Decodificar desde Base64'.",
+        "Haz clic en el botón 'Convertir' o 'Procesar'.",
+        "El resultado aparecerá instantáneamente en el campo de salida.",
+        "Copia el resultado con un clic o bórralo para empezar de nuevo."
       ],
       "usage_examples": [
-        "Codificar una imagen PNG de 2KB en Base64 para incrustarla directamente en un archivo CSS como data URI: 'data:image/png;base64,iVBORw0KG...'.",
-        "Decodificar el payload de un token JWT (JSON Web Token) para inspeccionar sus claims sin firmar, p. ej. 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'.",
-        "Preparar un archivo PDF binario para enviarlo como adjunto en una API de correo electrónico que requiere datos en formato Base64.",
-        "Verificar la integridad de un string codificado que contiene caracteres UTF-8 multibyte, como 'Hola mundo ✓', asegurando su correcta decodificación."
+        "Preparar credenciales para una cabecera HTTP de autorización 'Basic Auth'.",
+        "Codificar datos binarios (como imágenes) en formato de texto para incluirlos en archivos JSON o XML.",
+        "Decodificar datos recibidos desde una API que los envía en formato Base64."
+      ],
+      "faqs": [
+        {
+          "question": "¿Esta herramienta maneja caracteres especiales y acentos correctamente?",
+          "answer": "Sí, codifica y decodifica correctamente todos los caracteres Unicode, incluyendo acentos y símbolos especiales."
+        },
+        {
+          "question": "¿Puedo decodificar una imagen en Base64 y verla?",
+          "answer": "No directamente. Esta herramienta convierte el string Base64 a su representación binaria textual. Para ver la imagen, necesitarías un visor específico."
+        },
+        {
+          "question": "¿Hay un límite en la cantidad de texto que puedo procesar?",
+          "answer": "El límite práctico depende de la memoria de tu navegador, pero está diseñado para manejar textos y strings de longitud considerable sin problemas."
+        },
+        {
+          "question": "¿Los datos que proceso se envían a un servidor?",
+          "answer": "No. Toda la codificación y decodificación ocurre localmente en tu navegador (JavaScript del lado del cliente), por lo que tus datos nunca salen de tu dispositivo."
+        },
+        {
+          "question": "¿El resultado de la codificación incluye el prefijo 'data:' para imágenes o archivos?",
+          "answer": "No. Esta herramienta genera solo el string Base64 puro. Debes añadir el prefijo correspondiente (ej., 'data:image/png;base64,') manualmente según su uso."
+        }
       ]
     },
     "json": {
@@ -1542,26 +1562,46 @@
       "resize": "Cambiar tamaño"
     },
     "json-formatter": {
-      "name": "Formatador JSON",
-      "description": "Formatea y mejora datos JSON con resaltado de sintaxis. Valida JSON y corrige errores comunes.",
-      "seo_title": "Herramienta Online Grátis para Formatear JSON - Fixa Erros Fácilmente",
-      "seo_description": "Formate y valida tu JSON con resaltado sintáctico en línea. Corrige errores comunes y obtén datos limpios. ¡Prueba nuestra herramienta gratis ahora!",
+      "name": "Formateador y Validador JSON",
+      "description": "Formatea, valida y embellece datos JSON con resaltado de sintaxis de forma gratuita.",
+      "seo_title": "Formateador JSON Gratis Online | Validador y Embellecedor",
+      "seo_description": "Utiliza nuestra herramienta online gratuita para formatear y validar JSON al instante. Corrige errores, mejora la legibilidad y descarga el resultado. ¡Pruébalo ahora!",
       "inputPlaceholder": "Introduce aquí los datos JSON...",
       "outputPlaceholder": "El JSON formateado aparecerá aquí...",
-      "detailed_description": "El JSON Formatter es una herramienta de formato y validación de datos JSON que proporciona un entorno interactivo para mejorar la legibilidad y la precisión de los archivos JSON. Técnicamente, esta herramienta analiza la estructura del JSON proporcionado, aplica la indentación adecuada y resalta la sintaxis para facilitar su revisión. Además, ofrece la capacidad de minimizar el JSON para su uso en entornos donde el tamaño de los datos es crucial. La herramienta también verifica la validez del JSON y ayuda a identificar y corregir errores comunes, lo que la convierte en un recurso valioso para desarrolladores, ingenieros de software y analistas de datos. La compatibilidad con múltiples navegadores y su naturaleza de código abierto lo hacen accesible y confiable. Mejores prácticas incluyen utilizar la herramienta para validar datos antes de integrarlos en sistemas críticos y aprovechar la función de copia para facilitar la transferencia de datos formateados.",
+      "detailed_description": "Esta herramienta online gratuita está diseñada para desarrolladores, analistas de datos y cualquier persona que trabaje con JSON. Permite dar formato a cadenas JSON desordenadas o minificadas, añadiendo indentación y saltos de línea para una lectura clara. Incluye un validador robusto que detecta errores de sintaxis comunes, como comas faltantes o llaves mal cerradas, y ofrece resaltado de sintaxis por colores para una identificación visual rápida de claves, valores y estructuras.",
       "usage_steps": [
-        "Pega tu JSON no formateado en el campo de entrada 'JSON Input'.",
-        "Haz clic en el botón 'Format JSON' para aplicar la indentación y resaltar la sintaxis.",
-        "Revisa el JSON formateado en el campo de salida 'JSON Output' y corrige cualquier error indicado.",
-        "En caso de encontrar errores, utiliza el botón 'Fix Errors' para obtener sugerencias de corrección.",
-        "Si necesitas un JSON minimizado, haz clic en 'Minify JSON' para eliminar espacios y saltos de línea.",
-        "Utiliza el botón 'Copy JSON' para copiar el JSON formateado o minimizado al portapapeles."
+        "Pega tu cadena JSON en el área de texto principal.",
+        "Haz clic en el botón 'Formatear' o 'Validar'.",
+        "Revisa el resultado formateado con el resaltado de sintaxis aplicado.",
+        "Corrige cualquier error de validación indicado en la interfaz.",
+        "Copia el resultado limpio o descárgalo como un archivo .json."
       ],
       "usage_examples": [
-        "Un desarrollador frontend está trabajando en una API que devuelve datos JSON. Antes de integrar estos datos en su aplicación, utiliza el JSON Formatter para asegurarse de que el JSON es válido y bien formateado, lo que facilita la depuración y la integración.",
-        "Un ingeniero de backend necesita enviar un JSON complejo a un servicio externo. Utiliza el JSON Formatter para minimizar el JSON y reducir su tamaño, optimizando así el rendimiento de la transmisión de datos.",
-        "Un analista de datos recibe un archivo JSON con múltiples niveles de anidamiento. Utiliza el JSON Formatter para formatear el JSON y resaltar la sintaxis, lo que facilita la comprensión y el análisis de los datos.",
-        "Un desarrollador de software está creando un script que genera JSON dinámicamente. Utiliza el JSON Formatter para validar el JSON generado y asegurarse de que no hay errores de sintaxis, lo que garantiza la funcionalidad del script."
+        "Un desarrollador web necesita inspeccionar la respuesta de una API para depurar su aplicación.",
+        "Un analista recibe un archivo de datos JSON minificado y debe entender su estructura rápidamente.",
+        "Un estudiante está aprendiendo programación y quiere verificar la sintaxis correcta de su objeto JSON."
+      ],
+      "faqs": [
+        {
+          "question": "¿Puede esta herramienta reparar automáticamente un JSON con errores de sintaxis?",
+          "answer": "La herramienta identifica y señala la ubicación exacta de los errores, pero la corrección debe realizarla manualmente el usuario."
+        },
+        {
+          "question": "¿Qué tipos de errores de JSON detecta el validador?",
+          "answer": "Detecta errores comunes como comas extra o faltantes, llaves o corchetes desequilibrados, y comillas mal colocadas en cadenas."
+        },
+        {
+          "question": "¿Se puede personalizar el estilo de indentación (espacios o tabulaciones)?",
+          "answer": "Sí, la herramienta ofrece opciones para elegir entre indentación con espacios (2 o 4) o con tabuladores."
+        },
+        {
+          "question": "¿Hay un límite de tamaño para el JSON que puedo formatear?",
+          "answer": "Sí, existe un límite práctico basado en la memoria del navegador, pero es suficiente para la mayoría de documentos de desarrollo."
+        },
+        {
+          "question": "¿Los datos JSON que pego en la herramienta se envían a un servidor externo?",
+          "answer": "No, todo el procesamiento de formateo y validación ocurre localmente en tu navegador, garantizando la privacidad de tus datos."
+        }
       ]
     },
     "uuid-generator": {
@@ -1586,26 +1626,46 @@
       ]
     },
     "url-encoder": {
-      "name": "Codificador/Decodificador de URLs",
-      "description": "Codifica o decodifica URLs y cadenas de consulta de manera segura.",
-      "seo_title": "Codificador y decodificador de URL gratis online",
-      "seo_description": "Codifica y decodifica URLs y cadenas de consulta online de forma segura. Herramienta rápida y segura para el desarrollo web.",
-      "detailed_description": "El codificador/decodificador de URL es una herramienta técnica diseñada para transformar caracteres especiales en una secuencia compatible con el estándar RFC 3986 de codificación URI. Permite convertir caracteres no seguros como espacios, signos de puntuación o símbolos (ej: ' ', '#', '?') en su representación hexadecimal precedida por '%', como '%20' para espacios. Esta implementación utiliza funciones nativas de JavaScript como encodeURIComponent() y decodeURIComponent(), que garantizan el tratamiento correcto de caracteres reservados (ej: '!', '$', '&') y la gestión precisa de codificaciones UTF-8. Los desarrolladores necesitan esta herramienta para resolver problemas críticos en aplicaciones web: asegurar la integridad de parámetros en consultas GET, preparar cabeceras HTTP seguras, o depurar URLs recibidas en redirecciones OAuth. Al decodificar URLs, permite analizar estructuras de datos serializadas en strings de consulta, como los parámetros dinámicos de APIs RESTful. Su funcionalidad es esencial para evitar errores 400 por caracteres inválidos, garantizar la seguridad en transmisiones de tokens JWT, y mantener la compatibilidad cross-browser en aplicaciones que manejan URLs dinámicas con caracteres internacionales.",
+      "name": "Codificador y Decodificador de URL",
+      "description": "Codifica o decodifica URLs y cadenas de consulta de forma segura con esta herramienta online.",
+      "seo_title": "Codificador de URL Gratis | Herramienta Online para Codificar y Decodificar",
+      "seo_description": "Codifica caracteres especiales en URLs o decodifica cadenas de consulta al instante. Herramienta online gratuita, segura y fácil de usar. ¡Pruébala ahora!",
+      "detailed_description": "Esta herramienta online permite codificar caracteres especiales y espacios en una URL para que sea válida y segura en navegadores y aplicaciones web. También realiza la operación inversa, decodificando una URL codificada para leerla en texto plano. Es ideal para desarrolladores web, SEOs y cualquier usuario que trabaje con enlaces y parámetros de consulta. Funciona directamente en tu navegador, sin necesidad de descargas.",
       "usage_steps": [
-        "1. Accede al panel del codificador desde la categoría 'red' del sitio.",
-        "2. Pega la URL o cadena de consulta en el campo de texto con etiqueta 'Entrada Raw'.",
-        "3. Activa el interruptor 'Codificar' o 'Decodificar' según tu necesidad específica.",
-        "4. Marca la opción 'Espacios como +' si requieres el formato application/x-www-form-urlencoded.",
-        "5. Haz clic en el botón 'Procesar URI' para ejecutar la transformación.",
-        "6. Copia el resultado del campo 'Salida Codificada/Decodificada' con el botón 'Copiar al portapapeles'."
+        "Pega la URL o cadena de texto que deseas procesar en el campo de entrada.",
+        "Selecciona la acción deseada: 'Codificar' para convertir caracteres especiales o 'Decodificar' para revertir el proceso.",
+        "Haz clic en el botón 'Convertir' o 'Procesar'.",
+        "El resultado aparecerá inmediatamente en el campo de salida.",
+        "Copia el resultado codificado o decodificado con un solo clic para usarlo donde lo necesites."
       ],
       "usage_examples": [
-        "Codificar un parámetro de API que contiene un correo electrónico: 'user@example.com' → 'user%40example.com' para mantener la validez de la URL.",
-        "Decodificar una URL de retorno OAuth2 que incluye un token JWT con caracteres Base64Url como '+', '/', y '='.",
-        "Preparar un query string para una búsqueda con filtros complejos: 'color=rojo&size>L' → 'color%3Drojo%26size%3EL'.",
-        "Analizar una URL malformada recibida en logs del servidor, identificando caracteres no codificados que causan errores 404."
+        "Codificar espacios y símbolos en un enlace para compartirlo en redes sociales sin errores.",
+        "Decodificar parámetros de una URL recibida por email para entender su contenido legible.",
+        "Preparar datos para una petición API asegurando que los parámetros de consulta estén correctamente formateados."
       ],
-      "inputPlaceholder": "Escribe el texto aquí..."
+      "inputPlaceholder": "Escribe el texto aquí...",
+      "faqs": [
+        {
+          "question": "¿Qué caracteres codifica específicamente esta herramienta?",
+          "answer": "Codifica espacios, símbolos como &, ?, =, #, y caracteres no ASCII, reemplazándolos por su porcentaje de código correspondiente (ej., %20 para un espacio)."
+        },
+        {
+          "question": "¿Puedo decodificar una URL parcialmente codificada?",
+          "answer": "Sí, la herramienta procesará correctamente cualquier cadena de entrada, decodificando solo los códigos de porcentaje válidos que encuentre."
+        },
+        {
+          "question": "¿La herramienta maneja codificación para formularios HTML (application/x-www-form-urlencoded)?",
+          "answer": "Sí, el proceso de codificación es compatible con el formato estándar utilizado en formularios web y parámetros de consulta."
+        },
+        {
+          "question": "¿Existe un límite en la longitud del texto que puedo procesar?",
+          "answer": "No hay un límite práctico para uso normal en el navegador; puede manejar URLs y cadenas de consulta de longitud típica sin problemas."
+        },
+        {
+          "question": "¿Se almacenan o envían mis URLs procesadas a un servidor?",
+          "answer": "No, todo el procesamiento se realiza localmente en tu navegador. Tus datos nunca salen de tu dispositivo, garantizando privacidad total."
+        }
+      ]
     },
     "password-generator": {
       "name": "Generador de Contraseñas",
@@ -1763,23 +1823,46 @@
       ]
     },
     "html-encoder": {
-      "name": "Codificador/Decodificador HTML",
-      "description": "Codifique caracteres especiales en entidades HTML o vuelva a decodificarlos.",
-      "seo_title": "Codificador y decodificador HTML gratis online",
-      "seo_description": "Convierte y decodifica entidades HTML online de forma gratuita. Maneja caracteres especiales de manera segura para el desarrollo web. Evita ataques XSS y muestra HTML correctamente.",
-      "detailed_description": "Codificador/Decodificador HTML es una herramienta en línea práctica que te ayuda a completar rápidamente diversas tareas. Usando Codificador/Decodificador HTML, puedes procesar fácilmente varios datos sin instalar ningún software o complemento. Esta herramienta tiene una interfaz simple y es fácil de usar, permitiéndote comenzar rápidamente y usarla de manera eficiente. Ya seas desarrollador, diseñador o usuario general, Codificador/Decodificador HTML puede ayudarte a mejorar la eficiencia del trabajo. Todo el procesamiento se realiza localmente en tu navegador, garantizando la seguridad de tus datos y no se subirá a ningún servidor. Usa Codificador/Decodificador HTML inmediatamente para experimentar servicios de herramientas en línea rápidos, seguros y gratuitos.",
+      "name": "Codificador y Decodificador HTML",
+      "description": "Herramienta online gratuita para codificar o decodificar caracteres HTML de forma segura.",
+      "seo_title": "Codificador HTML Gratis Online - Codifica y Decodifica Entidades",
+      "seo_description": "Codifica texto a entidades HTML o decodifícalas al instante. Herramienta online gratuita, segura y fácil de usar para desarrolladores web. ¡Pruébala ahora!",
+      "detailed_description": "Esta herramienta permite convertir caracteres especiales (como <, >, &, \", ') en sus equivalentes entidades HTML para un uso seguro en código web. También realiza la operación inversa, decodificando entidades HTML a texto legible. Esencial para desarrolladores que necesitan sanitizar contenido, prevenir ataques XSS o trabajar con datos en formularios y APIs. Funciona directamente en el navegador, sin necesidad de descargas.",
       "usage_steps": [
-        "Abre la página de la herramienta Codificador/Decodificador HTML",
-        "Ingresa o pega el contenido que deseas procesar en el cuadro de entrada",
-        "Ajusta las opciones y configuraciones de la herramienta según sea necesario",
-        "Haz clic en el botón de procesar para ver los resultados",
-        "Copia o descarga los resultados procesados"
+        "Pega tu texto HTML o con entidades en el campo de entrada.",
+        "Selecciona la operación deseada: 'Codificar a HTML' o 'Decodificar desde HTML'.",
+        "Haz clic en el botón 'Convertir' para procesar el texto.",
+        "El resultado convertido aparecerá inmediatamente en el campo de salida.",
+        "Copia el texto resultante con un clic o descárgalo para su uso."
       ],
       "usage_examples": [
-        "Usa Codificador/Decodificador HTML para procesar tus datos",
-        "Obtén resultados de procesamiento rápidamente sin esperar"
+        "Sanitizar entrada de usuario en un formulario web antes de guardarla en una base de datos.",
+        "Preparar contenido dinámico para ser insertado de forma segura en el innerHTML de un elemento DOM.",
+        "Decodificar respuestas de una API que devuelven datos con entidades HTML para mostrarlos correctamente."
       ],
-      "inputPlaceholder": "Ingrese texto aquí..."
+      "inputPlaceholder": "Ingrese texto aquí...",
+      "faqs": [
+        {
+          "question": "¿Qué caracteres convierte exactamente el codificador HTML?",
+          "answer": "Convierte los caracteres reservados en HTML (<, >, &, \", ', y otros) en sus entidades numéricas o con nombre correspondientes."
+        },
+        {
+          "question": "¿Puedo decodificar entidades HTML personalizadas o solo las estándar?",
+          "answer": "Decodifica las entidades HTML estándar definidas por la especificación. Las entidades personalizadas pueden no ser reconocidas."
+        },
+        {
+          "question": "¿El proceso de codificación afecta a los saltos de línea o espacios en blanco?",
+          "answer": "No, los espacios en blanco y saltos de línea se mantienen tal cual, solo se codifican los caracteres especiales."
+        },
+        {
+          "question": "¿Hay un límite de tamaño para el texto que puedo procesar?",
+          "answer": "El procesamiento se realiza en tu navegador, por lo que el límite práctico depende de la memoria disponible de tu dispositivo."
+        },
+        {
+          "question": "¿Se almacena o envía el texto que codifico o decodifico a un servidor?",
+          "answer": "No, toda la conversión ocurre localmente en tu navegador. Tus datos nunca salen de tu ordenador, garantizando máxima privacidad."
+        }
+      ]
     },
     "markdown-preview": {
       "name": "Visualizador de Markdown",
@@ -1846,10 +1929,10 @@
       ]
     },
     "jwt-decoder": {
-      "name": "Decodificador de JWT",
-      "description": "Decodifica y examina tokens JWT. Visualiza encabezado, carga útil y firma.",
-      "seo_title": "Decodificador JWT Online Gratis",
-      "seo_description": "Utiliza nuestra herramienta online para decodificar y examinar JWT sin costo. Ver cabecera, carga y firma sin verificar. Útil para depurar autenticación.",
+      "name": "Decodificador de JWT Online",
+      "description": "Herramienta gratuita para decodificar y analizar tokens JWT, visualizando su cabecera y carga útil.",
+      "seo_title": "Decodificador JWT Gratis - Inspecciona Tokens Online",
+      "seo_description": "Utiliza nuestro decodificador de JWT online y gratuito para inspeccionar cualquier token. Visualiza la cabecera, el payload y la firma al instante. ¡Pruébalo ahora!",
       "enterToken": "Introduce un token JWT",
       "invalidFormat": "Formato de token JWT inválido",
       "invalidToken": "Token JWT inválido",
@@ -1859,25 +1942,45 @@
       "issuedAt": "Emisión (iat)",
       "expires": "Vence (exp)",
       "notBefore": "No antes (nbf)",
-      "detailed_description": "El JWT Decoder es una herramienta esencial para desarrolladores y profesionales de seguridad que necesitan descomponer y analizar tokens JWT (JSON Web Tokens). Este token, que se utiliza ampliamente en la autenticación y autorización de aplicaciones web, consta de tres partes: header, payload y signature. El JWT Decoder permite a los usuarios decodificar estos tokens, visualizar su contenido y verificar su validez. Esta funcionalidad es crucial para asegurar que los tokens no hayan sido manipulados y que la información que contienen sea correcta y confiable. Además, el tool proporciona una vista detallada de cada componente del token, lo que facilita la depuración y el análisis de problemas relacionados con la autenticación.",
+      "detailed_description": "Esta herramienta online permite decodificar y analizar tokens JWT (JSON Web Tokens) de forma rápida y segura. Ideal para desarrolladores, ingenieros de software y profesionales de seguridad que necesitan inspeccionar el contenido de un token para depurar aplicaciones, verificar firmas o entender los datos de autenticación. Desglosa automáticamente el token en sus componentes: cabecera, payload (datos) y firma.",
       "usage_steps": [
-        "Paso 1: Accede a la página del JWT Decoder y asegúrate de que estás en la sección de decodificación.",
-        "Paso 2: Copia el token JWT que deseas decodificar y pégalo en el campo de texto llamado 'Token JWT'.",
-        "Paso 3: Haz clic en el botón 'Decodificar' para procesar el token.",
-        "Paso 4: Observa la sección 'Header' para ver los metadatos del token, incluyendo el tipo de token y el algoritmo de firma utilizado.",
-        "Paso 5: Revisa la sección 'Payload' para acceder a los claims del token, que incluyen información sobre el emisor, el receptor, y otros datos específicos de la aplicación.",
-        "Paso 6: Examina la sección 'Signature' para verificar la integridad del token y asegurarte de que no ha sido alterado."
+        "Pega tu token JWT en el campo de texto designado.",
+        "Haz clic en el botón 'Decodificar' o presiona Enter.",
+        "Revisa la cabecera decodificada, que muestra el algoritmo y tipo de token.",
+        "Examina el payload decodificado, que contiene los datos o 'claims'.",
+        "Verifica la sección de firma para confirmar la integridad del token."
       ],
       "usage_examples": [
-        "Ejemplo 1: Un desarrollador frontend está integrando un sistema de autenticación que usa JWT. Al recibir un token, utiliza el JWT Decoder para verificar que el token contiene los claims correctos y que la firma es válida antes de permitir el acceso del usuario.",
-        "Ejemplo 2: Un ingeniero de seguridad necesita auditar un servicio web que utiliza JWT para autenticación. Utiliza el JWT Decoder para analizar tokens recopilados en el tráfico de red y verificar que no haya tokens comprometidos o manipulados.",
-        "Ejemplo 3: Un equipo de desarrollo está depurando un problema de autorización en una API. Utilizan el JWT Decoder para examinar los tokens generados por el servidor y asegurarse de que los claims y la firma sean correctos.",
-        "Ejemplo 4: Un administrador de sistemas está configurando un servicio de autenticación OAuth 2.0 que emite JWT. Utiliza el JWT Decoder para validar los tokens generados y asegurarse de que cumplen con los estándares de seguridad antes de implementar el servicio en producción."
+        "Un desarrollador backend verifica los datos de usuario contenidos en un token de sesión.",
+        "Un administrador de sistemas depura un error de autenticación inspeccionando los 'claims' de un JWT.",
+        "Un estudiante de ciberseguridad analiza la estructura de un token para un proyecto académico."
       ],
       "input": "Entrada",
       "decode": "Decodificar",
       "copied": "Copiado!",
-      "copy": "Copiar"
+      "copy": "Copiar",
+      "faqs": [
+        {
+          "question": "¿Esta herramienta valida la firma del token JWT?",
+          "answer": "No, este decodificador solo muestra los componentes del token. No valida la firma ni verifica claves secretas."
+        },
+        {
+          "question": "¿Puedo decodificar tokens JWT con algoritmos de encriptación (JWE)?",
+          "answer": "No, esta herramienta está diseñada para decodificar JWT firmados (JWS), no para desencriptar JWE."
+        },
+        {
+          "question": "¿Los datos de mi token se envían a un servidor?",
+          "answer": "No, el procesamiento se realiza completamente en tu navegador. Los tokens nunca salen de tu dispositivo."
+        },
+        {
+          "question": "¿Qué formato de token JWT admite esta herramienta?",
+          "answer": "Admite el formato estándar JWT compacto, que consiste en tres partes separadas por puntos (ej: xxxxx.yyyyy.zzzzz)."
+        },
+        {
+          "question": "¿Puedo copiar fácilmente las secciones decodificadas?",
+          "answer": "Sí, cada sección (cabecera, payload) se muestra en un cuadro de texto desde donde puedes copiar el contenido JSON formateado."
+        }
+      ]
     },
     "diff-checker": {
       "name": "Diff Checker",
@@ -2087,24 +2190,44 @@
       ]
     },
     "xml-formatter": {
-      "name": "XML Formatter",
-      "description": "Format y minificar datos XML, validar la sintaxis XML.",
-      "seo_title": "Formatter online gratis XML",
-      "seo_description": "Formatea, pulimenta y minimiza datos XML online de forma gratuita. Resaltado sintáctico, detección de errores y vista en árbol. Ideal para el desarrollo de API y archivos de configuración.",
-      "detailed_description": "El Formateador XML es una herramienta especializada para manipular documentos XML mediante técnicas de análisis sintáctico y transformación estructural. Permite formatear código XML aplicando sangrías y separación lógica de nodos, así como minificar mediante la eliminación de espacios redundantes y comentarios. La validación se realiza mediante un parser SAX que verifica la correcta estructura de etiquetas, atributos y cierre de nodos, incluyendo soporte para espacios de nombres (namespaces) y secciones CDATA. Los desarrolladores necesitan esta herramienta para depurar errores en archivos de configuración XML, optimizar payloads en servicios web SOAP, o preparar datos intercambiables en sistemas legacy. Su motor de procesamiento basado en DOM permite manipular documentos complejos manteniendo la integridad de referencias externas (DTD/XSD) y procesando instrucciones de procesamiento. Al presionar 'Formatear', el algoritmo aplica reglas de pretty-printing conservando comentarios críticos; al minificar, genera una cadena compacta ideal para transmisiones HTTP. La validación muestra errores con posición exacta en el documento, facilitando correcciones precisas.",
+      "name": "Formateador y Validador de XML",
+      "description": "Herramienta online gratuita para formatear, minificar y validar la sintaxis de XML.",
+      "seo_title": "Formateador de XML Gratis Online | Validador y Minificador",
+      "seo_description": "Formatea, minifica y valida archivos XML al instante con nuestra herramienta online gratuita. Mejora la legibilidad y corrige errores de sintaxis. ¡Pruébala ahora!",
+      "detailed_description": "Nuestro Formateador de XML es una herramienta esencial para desarrolladores, analistas de datos y cualquier profesional que trabaje con archivos XML. Permite transformar código XML desordenado o minificado en una estructura legible y bien indentada. Además, incluye un validador de sintaxis para detectar errores y una función de minificación para reducir el tamaño de los archivos. Todo directamente en tu navegador, sin necesidad de instalar software.",
       "usage_steps": [
-        "1. Pegue el código XML en el campo de texto identificado como 'Documento XML'.",
-        "2. Active la opción 'Formatear' para estructurar visualmente o 'Minificar' para optimizar tamaño.",
-        "3. Haga clic en 'Validar Sintaxis' para ejecutar el análisis de conformidad XML.",
-        "4. Revise los errores reportados en el panel inferior con indicación de línea/columna.",
-        "5. Ajuste las opciones avanzadas de sangría (número de espacios) o eliminación de comentarios.",
-        "6. Descargue el resultado con 'Guardar XML' o copie al portapapeles usando 'Copiar'"
+        "Pega tu código XML en el área de texto principal.",
+        "Selecciona la acción deseada: 'Formatear' para indentar, 'Minificar' para comprimir o 'Validar' para revisar la sintaxis.",
+        "Haz clic en el botón 'Procesar XML'.",
+        "Revisa el resultado formateado, minificado o los mensajes de validación.",
+        "Copia el resultado o descárgalo como un archivo .xml listo para usar."
       ],
       "usage_examples": [
-        "1. Un desarrollador corrige un archivo de configuración de servidor reindentando XML tras un merge de Git.",
-        "2. Un QA minifica una respuesta XML de API para verificar compatibilidad con cliente Android.",
-        "3. Un integrador valida un feed RSS generado mediante XSLT antes de publicarlo en un CMS.",
-        "4. Un ingeniero de datos depura un XML de 5GB eliminando bloques de logs innecesarios en CDATA."
+        "Un desarrollador web formatea una respuesta XML de una API para depurar y entender su estructura.",
+        "Un administrador de sistemas minifica un archivo de configuración XML grande para optimizar su almacenamiento y transmisión.",
+        "Un estudiante valida un documento XML creado manualmente para asegurarse de que cumple con las reglas de sintaxis antes de enviar un trabajo."
+      ],
+      "faqs": [
+        {
+          "question": "¿Mantiene esta herramienta todos los comentarios y espacios de nombres al formatear?",
+          "answer": "Sí, el formateador conserva todos los comentarios (<!-- -->) y declaraciones de espacios de nombres intactas, solo reorganiza la indentación."
+        },
+        {
+          "question": "¿Qué sucede si mi XML tiene un error de sintaxis al intentar validarlo?",
+          "answer": "La herramienta mostrará un mensaje de error claro indicando la línea y el tipo de problema (ej. etiqueta no cerrada, atributo mal formado)."
+        },
+        {
+          "question": "¿Puedo formatear XML que esté en una sola línea (minificado)?",
+          "answer": "Absolutamente. La función principal del formateador es tomar XML minificado o mal indentado y convertirlo en una estructura legible con saltos de línea y sangrías."
+        },
+        {
+          "question": "¿Hay un límite de tamaño para el XML que puedo procesar?",
+          "answer": "El procesamiento se realiza en tu navegador, por lo que el límite práctico depende de la memoria de tu dispositivo. Para archivos extremadamente grandes, recomendamos procesarlos por partes."
+        },
+        {
+          "question": "¿Se envía mi datos XML a un servidor para su procesamiento?",
+          "answer": "No. Todo el procesamiento (formateo, minificación, validación) ocurre localmente en tu navegador web. Tus datos XML nunca abandonan tu computadora, garantizando total privacidad."
+        }
       ]
     },
     "chinese-converter": {

@@ -59,7 +59,7 @@
 <div class="space-y-6">
           <div class={`p-6 rounded-lg text-center ${result.vulnerable ? 'bg-red-50 dark:bg-red-900/20' : 'bg-green-50 dark:bg-green-900/20'}`}>
             <div class={`text-4xl font-bold ${result.vulnerable ? 'text-red-600' : 'text-green-600'}`}>
-              {result.vulnerable ? '⚠️ VULNERABLE' : '✅ SAFE'}
+              {result.vulnerable ? '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> VULNERABLE' : '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> SAFE'}
             </div>
             <div class="text-sm text-gray-500 mt-2">Security Score: {result.score}/100</div>
           </div>
@@ -82,7 +82,7 @@
                     <span class="font-medium text-gray-900 dark:text-white">{issue.type}</span>
                   </div>
                   <p class="text-sm text-gray-600 dark:text-gray-400">{issue.description}</p>
-                  <p class="text-sm text-green-600 dark:text-green-400 mt-2">💡 {issue.fix}</p>
+                  <p class="text-sm text-green-600 dark:text-green-400 mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> {issue.fix}</p>
                 </div>
 {/each}
             </div>

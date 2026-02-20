@@ -154,10 +154,10 @@
                     <td class="px-4 py-2 text-gray-800 dark:text-gray-200">
                       {t('stopwatchUI.lapLabel')} {lap.id}
                       {#if lap.diff === best}
-laps.length > 1 && <span class="ml-2 text-green-600">🏆</span>
+laps.length > 1 && <span class="ml-2 text-green-600 font-bold">BEST</span>
 {/if}
                       {#if lap.diff === worst}
-laps.length > 1 && <span class="ml-2 text-red-600">🐢</span>
+laps.length > 1 && <span class="ml-2 text-red-600"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 10 2 4v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3a8 8 0 1 0-16 0v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3l2-4h4Z"/><path d="M4.82 7.9 8 10"/><path d="M15.18 7.9 12 10"/><path d="M16.93 10H20a2 2 0 0 1 0 4H2"/></svg></span>
 {/if}
                     </td>
                     <td class="px-4 py-2 text-right font-mono text-gray-800 dark:text-gray-200">

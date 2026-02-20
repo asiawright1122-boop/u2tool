@@ -7,6 +7,7 @@
    * Shows all categories when no filter is active.
    */
   import { getLocalizedPath } from '@/lib/i18n';
+  import { getIconSvg } from '@/lib/icon-svg';
   import type { Locale } from '@/lib/i18n';
 
   interface CategoryItem {
@@ -71,7 +72,7 @@
       {#if catTools.length > 0}
     <section id={cat.id} class="mb-8">
       <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-        <span>{cat.icon}</span>
+        <span class="text-blue-500 dark:text-blue-400 inline-flex">{@html getIconSvg(cat.icon, 20)}</span>
         <span>{categoryNames[cat.id] || cat.id}</span>
         <span class="text-sm font-normal text-gray-400 dark:text-gray-500">({catTools.length})</span>
       </h2>
@@ -85,8 +86,8 @@
                    hover:bg-blue-50/50 dark:hover:bg-blue-900/10
                    cursor-pointer transition-all duration-200"
           >
-            <span class="text-2xl flex-shrink-0">
-              {tool.icon}
+            <span class="text-blue-500 dark:text-blue-400 flex-shrink-0 inline-flex">
+              {@html getIconSvg(tool.icon, 22)}
             </span>
             <div class="flex-1 min-w-0">
               <h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -97,7 +98,7 @@
               </p>
             </div>
             {#if tool.popular}
-              <span class="text-xs text-orange-500 flex-shrink-0">🔥</span>
+              <span class="inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium rounded-full bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400 flex-shrink-0">HOT</span>
             {/if}
           </a>
         {/each}

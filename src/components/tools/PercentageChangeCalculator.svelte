@@ -94,7 +94,7 @@
           onclick={swap}
           class="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
         >
-          🔄 {t('swap')}
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg> {t('swap')}
         </button>
       </div>
 
@@ -130,17 +130,17 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
-          <div class="text-2xl mb-1">📈</div>
+          <div class="text-2xl mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
           <div class="font-medium text-gray-900 dark:text-white">{t('example1Title')}</div>
           <div class="text-sm text-gray-600 dark:text-gray-400">{t('example1')}</div>
         </div>
         <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">
-          <div class="text-2xl mb-1">💰</div>
+          <div class="text-2xl mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
           <div class="font-medium text-gray-900 dark:text-white">{t('example2Title')}</div>
           <div class="text-sm text-gray-600 dark:text-gray-400">{t('example2')}</div>
         </div>
         <div class="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg text-center">
-          <div class="text-2xl mb-1">📊</div>
+          <div class="text-2xl mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
           <div class="font-medium text-gray-900 dark:text-white">{t('example3Title')}</div>
           <div class="text-sm text-gray-600 dark:text-gray-400">{t('example3')}</div>
         </div>

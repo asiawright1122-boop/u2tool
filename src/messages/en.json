@@ -224,24 +224,44 @@
       "decodeFromBase64": "Decode from Base64",
       "inputPlaceholder": "Enter text to encode or Base64 to decode...",
       "outputPlaceholder": "Result will appear here...",
-      "name": "Base64 Encoder/Decoder",
-      "description": "Encode text to Base64 or decode Base64 to text instantly.",
-      "seo_title": "Free Base64 Encoder & Decoder Online",
-      "seo_description": "Encode text to Base64 or decode Base64 strings instantly online for free. Secure browser-based tool with no data upload. Perfect for developers.",
-      "detailed_description": "This tool implements Base64 encoding/decoding using the RFC 4648 standard algorithm, converting binary data to ASCII strings through 6-bit chunking. Technically, encoding maps 8-bit byte triplets to 6-bit index values using a 64-character dictionary (A-Z, a-z, 0-9, '+', '/'), with padding ('=') added for data lengths not divisible by 3. Decoding reverses this process by converting Base64 characters back to their 6-bit values and regrouping into 8-bit bytes. Developers need this for scenarios like embedding binary assets in JSON/XML, handling HTTP Basic Authentication headers, parsing JWT tokens, or transmitting binary files through text-based protocols. The tool supports UTF-8 encoded text and raw binary input, preserving null bytes and special characters during conversion. All operations execute client-side in WebAssembly for security, with zero data transmitted to servers.",
+      "name": "Free Online Base64 Encoder Decoder",
+      "description": "Instantly encode text to Base64 or decode strings with this free online tool.",
+      "seo_title": "Base64 Encoder Decoder: Free Online Tool for Instant Conversion",
+      "seo_description": "Use our free online Base64 generator and converter to encode or decode data instantly. Secure, fast, and easy to use. Try the tool now!",
+      "detailed_description": "This powerful online tool allows developers and users to quickly encode plain text into Base64 format or decode Base64 strings back to readable text. Ideal for embedding images in HTML, handling API data, or securing email attachments, this free converter ensures accurate results without software installation.",
       "usage_steps": [
-        "1. Click the 'Encode' or 'Decode' toggle to select operation mode",
-        "2. Paste raw text or binary data into the 'Source Data' textarea",
-        "3. Check the 'Process as Binary' checkbox for non-textual content",
-        "4. Click the 'Convert' button to execute the transformation",
-        "5. Copy the result from the 'Output Result' field using the clipboard icon",
-        "6. (Optional) Download results as .txt file via the 'Save Output' button"
+        "Paste your text or Base64 string into the input box.",
+        "Select either 'Encode' to convert text to Base64 or 'Decode' to reverse it.",
+        "Click the 'Convert' button to process your data instantly.",
+        "Review the generated output in the result field below.",
+        "Copy the final string to your clipboard with one click."
       ],
       "usage_examples": [
-        "Embedding a SVG logo inline in HTML by converting the XML code to Base64 for data URLs",
-        "Extracting payload contents from a JWT token by decoding its Base64Url-encoded middle segment",
-        "Preparing HTTP Basic Auth headers by encoding 'username:password' credentials",
-        "Debugging email attachments by converting Base64-decoded MIME parts back to readable text"
+        "Embedding small images directly into CSS or HTML files to reduce HTTP requests.",
+        "Encoding sensitive user credentials before transmitting them via URL parameters.",
+        "Decoding Base64 payloads received from a REST API for debugging purposes."
+      ],
+      "faqs": [
+        {
+          "question": "Does this tool support UTF-8 characters during encoding?",
+          "answer": "Yes, our encoder fully supports UTF-8, ensuring special characters and emojis convert correctly."
+        },
+        {
+          "question": "Is there a limit on the string length I can process?",
+          "answer": "You can process large strings up to 5MB, though performance may vary slightly on slower devices."
+        },
+        {
+          "question": "Can I decode malformed Base64 strings with padding errors?",
+          "answer": "The tool automatically attempts to fix missing padding characters to successfully decode valid data."
+        },
+        {
+          "question": "Does this converter work on mobile browsers?",
+          "answer": "Absolutely, this responsive online tool functions perfectly on iOS, Android, and desktop browsers."
+        },
+        {
+          "question": "Is my data stored on your servers after conversion?",
+          "answer": "No, all encoding and decoding happens locally in your browser; no data is ever sent to our servers."
+        }
       ]
     },
     "json": {
@@ -1193,26 +1213,46 @@
       "tomlPlaceholder": "Enter TOML...",
       "jsonPlaceholder": "Enter JSON...",
       "outputPlaceholder": "Output will appear here...",
-      "name": "TOML/JSON Converter",
-      "description": "Convert between TOML and JSON formats bidirectionally.",
-      "seo_title": "Free TOML JSON Converter Online",
-      "seo_description": "Convert TOML to JSON or JSON to TOML online for free. Validate and format configuration files with syntax highlighting. Essential for Rust and Python projects.",
-      "detailed_description": "The TOML/JSON Converter is a precision tool for bidirectional translation between TOML (Tom's Obvious, Minimal Language) and JSON (JavaScript Object Notation) formats, enabling seamless data interchange in software development workflows. This tool preserves data types during conversion, including arrays, nested objects, timestamps (via ISO 8601 in JSON), and TOML's explicit key-value pairs. Developers working with configuration files (e.g., Docker Compose, Rust projects) or API services requiring JSON payloads will find this tool essential for maintaining data integrity across ecosystems. The converter uses a two-phase parsing strategy: first constructing an abstract syntax tree (AST) from the source format to normalize structure, then serializing it into the target format while enforcing schema validity. Error handling includes line-numbered syntax validation for TOML and JSON, with specific feedback for invalid date-time formats, missing commas, or mismatched brackets. For JSON-to-TOML conversions, it automatically flattens dot-separated keys into TOML table headers while preserving array-of-tables structures. The tool's zero-IO architecture performs all processing client-side via WebAssembly, eliminating server-side data retention risks. This makes it ideal for handling sensitive configurations in compliance-critical environments.",
+      "name": "TOML JSON Converter",
+      "description": "A free online tool for bidirectional conversion between TOML and JSON formats.",
+      "seo_title": "TOML JSON Converter | Free Online Tool for Bidirectional Format Conversion",
+      "seo_description": "Instantly convert TOML to JSON and JSON to TOML with our free online tool. No registration required. Perfect for developers and configuration management.",
+      "detailed_description": "This free online converter provides seamless, bidirectional translation between TOML (Tom's Obvious, Minimal Language) and JSON (JavaScript Object Notation) formats. It's designed for developers, system administrators, and anyone working with configuration files or data serialization. Key features include real-time conversion, syntax validation, and a clean, intuitive interface for effortless data format switching.",
       "usage_steps": [
-        "Open the converter and select 'TOML to JSON' or 'JSON to TOML' using the format toggle button above the text area.",
-        "Paste or type your structured data into the input panel, ensuring valid syntax (e.g., TOML's '=' separators or JSON's key quotes).",
-        "Enable 'Strict Validation' checkbox to catch format-specific errors like TOML's missing table brackets or JSON's trailing commas.",
-        "Click 'Convert' to execute the transformation, which will populate the output panel with the translated structure and data types.",
-        "Review the 'Conversion Report' showing preserved data types, converted line counts, and any warnings about implicit type coercion.",
-        "Download the result as a file using the format-specific .toml or .json extension button or copy the output directly to clipboard."
+        "Paste your TOML or JSON data into the input field.",
+        "Select the desired conversion direction (TOML to JSON or JSON to TOML).",
+        "Click the 'Convert' button to process the data instantly.",
+        "Review the formatted output in the result panel.",
+        "Copy the converted result or download it as a file for your project."
       ],
       "usage_examples": [
-        "Migrating a legacy Python project's JSON configuration to TOML for compatibility with modern Rust-based microservices.",
-        "Generating JSON payloads from TOML test fixtures to validate API endpoint behavior in Postman during CI/CD pipeline development.",
-        "Debugging configuration drift between Kubernetes Helm charts (YAML) and Consul Template (HCL) by converting both to TOML for side-by-side comparison.",
-        "Transforming GitHub Actions workflow files (YAML) to JSON for ingestion into AWS CloudFormation templates requiring JSON-formatted parameter blocks."
+        "Converting a TOML configuration file to JSON for use in a Node.js application.",
+        "Translating a JSON API response into TOML for a Rust project's configuration.",
+        "Migrating project settings from a JSON-based system to a TOML-based one."
       ],
-      "minified": "Minified"
+      "minified": "Minified",
+      "faqs": [
+        {
+          "question": "Does the converter preserve comments from my TOML file?",
+          "answer": "No, JSON does not natively support comments, so they are stripped during TOML-to-JSON conversion."
+        },
+        {
+          "question": "How does the tool handle invalid TOML or JSON syntax?",
+          "answer": "The tool provides clear error messages highlighting the location and nature of any syntax errors it encounters."
+        },
+        {
+          "question": "Can I convert nested structures and arrays between the formats?",
+          "answer": "Yes, the converter fully supports complex nested objects, arrays, and all standard data types in both formats."
+        },
+        {
+          "question": "Is there a file size limit for conversion?",
+          "answer": "The conversion is performed client-side in your browser, so it's limited by your device's available memory."
+        },
+        {
+          "question": "Is my data secure when using this online converter?",
+          "answer": "Yes, all conversion happens locally in your web browser; no data is sent to any server, ensuring complete privacy."
+        }
+      ]
     },
     "json-to-java": {
       "className": "Class Name",
@@ -1540,26 +1580,46 @@
       "resize": "Resize"
     },
     "json-formatter": {
-      "name": "JSON Formatter",
-      "description": "Format and beautify JSON data with syntax highlighting. Validate JSON and fix common errors.",
-      "seo_title": "Free JSON Formatter & Validator Online",
-      "seo_description": "Format, beautify, and validate JSON data online for free. Syntax highlighting, error detection, and easy copy. Perfect for developers.",
+      "name": "JSON Formatter & Validator",
+      "description": "A free online tool to format, beautify, and validate JSON data with syntax highlighting.",
+      "seo_title": "JSON Formatter - Free Online JSON Beautifier & Validator Tool",
+      "seo_description": "Format, validate, and fix JSON instantly with our free online tool. Beautify JSON for readability and catch errors with syntax highlighting. No registration required.",
       "inputPlaceholder": "Enter JSON data here...",
       "outputPlaceholder": "Formatted JSON will appear here...",
-      "detailed_description": "The JSON Formatter is a powerful tool designed to help developers format, beautify, and validate JSON data. It employs advanced parsing techniques to ensure that the JSON data is not only properly formatted but also free from common syntax errors. The tool leverages syntax highlighting to make the JSON structure more readable, which is particularly useful for debugging and reviewing complex data structures. By converting JSON data into a human-readable format, the JSON Formatter enhances the development workflow, making it easier to work with APIs, configuration files, and data interchange formats. It supports both formatting and minifying JSON, catering to different use cases such as preparing data for production environments or improving readability during development. The tool is web-based and compatible with modern browsers, ensuring that developers can use it on any device with an internet connection. While the tool is highly effective, it is important to note that it should not be used for sensitive data without proper security measures in place.",
+      "detailed_description": "This JSON Formatter is an essential online utility for developers, data analysts, and anyone working with JSON data. It instantly transforms messy, minified, or invalid JSON into a clean, readable, and properly indented structure with syntax highlighting. The tool also validates your JSON for common errors, helping you debug and fix issues quickly. It's perfect for preparing data for documentation, APIs, or configuration files.",
       "usage_steps": [
-        "Paste your JSON data into the 'Input' text area located at the top of the tool interface.",
-        "Click the 'Format' button to convert your JSON data into a well-structured, indented format with syntax highlighting.",
-        "If you need to validate your JSON data, click the 'Validate' button. Any syntax errors will be displayed in the 'Error' section below the output.",
-        "For a compact version of your JSON data, click the 'Minify' button. This will remove all unnecessary whitespace and line breaks.",
-        "Once you are satisfied with the formatted or minified JSON, click the 'Copy to Clipboard' button to copy the output to your clipboard.",
-        "To start over, click the 'Clear All' button to reset the input and output fields."
+        "Paste your raw or minified JSON string into the input field.",
+        "Click the 'Format & Validate' button to process the data.",
+        "View the beautified JSON output with color-coded syntax highlighting.",
+        "Check the validation panel for any errors or warnings in your JSON structure.",
+        "Copy the formatted result or download it as a .txt file for later use."
       ],
       "usage_examples": [
-        "A backend developer working on a REST API can use the JSON Formatter to validate and format the JSON responses from their API endpoints, ensuring that the data is correctly structured and free of errors before it is consumed by client applications.",
-        "A frontend developer integrating with third-party APIs can use the tool to beautify and validate the JSON data received from these APIs, making it easier to debug and integrate into their application.",
-        "A data analyst working with large JSON datasets can use the JSON Formatter to minify the data for efficient storage and transmission, and then format it for easier analysis and visualization.",
-        "A DevOps engineer can use the tool to format and validate the JSON configuration files used in their infrastructure as code (IaC) tools, ensuring that the configurations are correct and consistent across different environments."
+        "Cleaning up a compressed API response for debugging and documentation.",
+        "Validating JSON configuration files before deploying a web application.",
+        "Formatting JSON output from a database query for a readable report."
+      ],
+      "faqs": [
+        {
+          "question": "What happens if my JSON has a syntax error?",
+          "answer": "The validator will pinpoint the exact line and character of the error, such as a missing comma or bracket, to help you fix it."
+        },
+        {
+          "question": "Does this tool support formatting JSON with custom indentation?",
+          "answer": "Yes, you can choose between 2-space or 4-space indentation levels for your formatted output."
+        },
+        {
+          "question": "Can I format extremely large JSON files with this online tool?",
+          "answer": "It handles most common JSON sizes efficiently, but for massive files (over 1MB), performance may vary based on your browser."
+        },
+        {
+          "question": "Is the JSON data I paste stored on your servers?",
+          "answer": "No, all processing happens client-side in your browser. Your data is never sent to or stored on our servers."
+        },
+        {
+          "question": "Does the tool fix common JSON errors automatically?",
+          "answer": "It identifies and reports errors like trailing commas or mismatched quotes but requires manual correction for data integrity."
+        }
       ]
     },
     "uuid-generator": {
@@ -1584,26 +1644,46 @@
       ]
     },
     "url-encoder": {
-      "name": "URL Encoder/Decoder",
-      "description": "Encode or decode URLs and query strings safely.",
-      "seo_title": "Free URL Encoder & Decoder Online",
-      "seo_description": "Encode and decode URLs and query strings online for free. Handle special characters safely for web development. Fast and secure browser tool.",
-      "detailed_description": "The URL Encoder/Decoder tool implements RFC 3986-compliant percent-encoding to convert URLs and query strings into valid URI components. This tool leverages JavaScript's encodeURI, encodeURIComponent, and decodeURIComponent functions to handle UTF-8 character transformation, properly escaping reserved characters (; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #) while preserving URI structural integrity. Developers need this for preparing URLs containing special characters like spaces (converted to %20), creating API request endpoints with dynamic parameters, or decoding server-returned percent-encoded responses. The encoder applies hierarchical processing: full URLs maintain scheme/host structure while query parameters undergo component-level encoding. Decoding reverses this process, converting percent sequences back to original byte representations. Unique features include selective encoding scope (full URL vs query string) and automatic character-set detection for internationalized domain names.",
+      "name": "URL Encoder and Decoder",
+      "description": "A free online tool to safely encode or decode URLs and query strings.",
+      "seo_title": "URL Encoder/Decoder - Free Online Tool for Encoding & Decoding URLs",
+      "seo_description": "Use our free online URL encoder/decoder tool to safely convert URLs and query strings. Instantly encode special characters or decode URLs for web development and data handling. Try it now!",
+      "detailed_description": "This tool provides a simple, secure way to encode URLs for safe transmission over the internet or decode them back into a readable format. It's essential for web developers, SEO specialists, and anyone working with web data. The tool handles all special characters correctly, ensuring your URLs are compliant with web standards and function properly in browsers and applications.",
       "usage_steps": [
-        "Select 'Encode' or 'Decode' from the toggle switch above the input panel",
-        "Paste the URL or query string into the syntax-highlighted textarea",
-        "Choose processing scope via dropdown: 'Full URL' or 'Query String Only'",
-        "Click 'Process' to execute UTF-8 compliant percent-encoding/decoding",
-        "Copy results using the clipboard icon adjacent to the output field",
-        "Validate encoded URLs with the built-in URI structure parser"
+        "Paste your URL or query string into the input field.",
+        "Select either 'Encode' or 'Decode' mode.",
+        "Click the 'Convert' button to process your text.",
+        "Instantly view your encoded or decoded result in the output field.",
+        "Copy the result with one click for immediate use."
       ],
       "usage_examples": [
-        "Encoding a search query parameter: Convert 'q=blue dress' to 'q=blue%20dress' for a shopping API request",
-        "Decoding server logs: Transform '%D1%82%D0%B5%D1%81%D1%82' back to 'тест' Cyrillic text in access logs",
-        "API key handling: Safely encode a base64 'Authorization' header parameter containing '+' characters",
-        "Bookmarklet creation: Convert JavaScript code in 'javascript:(function(){...})' to URI-safe format"
+        "Encoding a search query with spaces and ampersands for a web API call.",
+        "Decoding a complex, percent-encoded URL received from an analytics platform to understand its parameters.",
+        "Preparing a string containing special characters like '&', '?', or '#' for safe inclusion in a webpage link."
       ],
-      "inputPlaceholder": "Enter text here..."
+      "inputPlaceholder": "Enter text here...",
+      "faqs": [
+        {
+          "question": "What's the difference between URL encoding and decoding?",
+          "answer": "Encoding converts unsafe characters (like spaces or &) into a percent-encoded format (%20). Decoding reverses this process, turning codes back into readable characters."
+        },
+        {
+          "question": "Does this tool handle full URLs or just query string parameters?",
+          "answer": "It handles both complete URLs and individual query string fragments, encoding or decoding the entire input you provide."
+        },
+        {
+          "question": "What character set does the encoder use?",
+          "answer": "It uses UTF-8 encoding by default, following modern web standards to correctly handle international characters."
+        },
+        {
+          "question": "Is there a limit to the amount of text I can process?",
+          "answer": "The tool is designed for practical web use; extremely large inputs may be truncated, but it handles standard URLs and queries with ease."
+        },
+        {
+          "question": "Is my data secure when using this online tool?",
+          "answer": "Yes. All processing happens instantly in your browser. Your URLs are never sent to or stored on our servers."
+        }
+      ]
     },
     "password-generator": {
       "name": "Password Generator",
@@ -1761,26 +1841,46 @@
       ]
     },
     "html-encoder": {
-      "name": "HTML Encoder/Decoder",
-      "description": "Encode special characters to HTML entities or decode them back.",
-      "seo_title": "Free HTML Encoder & Decoder Online",
-      "seo_description": "Encode and decode HTML entities online for free. Handle special characters safely for web development. Prevent XSS attacks and display HTML correctly.",
-      "detailed_description": "The HTML Encoder/Decoder is a powerful utility designed to facilitate the conversion of special characters into HTML entities and vice versa. This process is essential for ensuring that web content is displayed correctly and securely in various contexts. By encoding special characters, the tool prevents issues such as HTML injection, which can lead to security vulnerabilities like Cross-Site Scripting (XSS) attacks. Conversely, decoding HTML entities is useful when you need to revert the encoded text back to its original form for further processing or display. The tool leverages a comprehensive set of HTML entity mappings, ensuring that a wide range of special characters, including accented letters, symbols, and punctuation marks, are accurately converted. This is particularly valuable for developers working on web applications, content management systems, and any platform that involves user-generated content. The HTML Encoder/Decoder operates by taking the input text, analyzing it for special characters, and then applying the appropriate encoding or decoding rules based on the selected operation. The result is a string that is safe for use in HTML contexts, enhancing both the functionality and security of web applications.",
+      "name": "HTML Encoder and Decoder",
+      "description": "A free online tool to encode text to HTML entities or decode them back.",
+      "seo_title": "HTML Encoder/Decoder - Free Online HTML Entity Converter Tool",
+      "seo_description": "Use our free online HTML encoder/decoder tool to instantly convert special characters to HTML entities or decode them back to plain text. No registration required.",
+      "detailed_description": "This tool provides a simple way to encode special characters (like <, >, &, \", ') into their corresponding HTML entities (like &lt;, &gt;, &amp;, &quot;, &apos;), ensuring text displays correctly in web browsers. Conversely, it can decode a string of HTML entities back into readable text. It's essential for web developers, content creators, and anyone working with HTML to prevent code injection and ensure proper text rendering.",
       "usage_steps": [
-        "Step 1: Navigate to the HTML Encoder/Decoder tool page on the website.",
-        "Step 2: Locate the input text box labeled 'Enter Text' and paste or type the text you want to encode or decode.",
-        "Step 3: Select the operation you wish to perform from the dropdown menu: 'Encode' or 'Decode'.",
-        "Step 4: If you choose 'Encode', the tool will convert special characters to their corresponding HTML entities. If you choose 'Decode', it will convert HTML entities back to their original characters.",
-        "Step 5: Click the 'Process' button to execute the selected operation.",
-        "Step 6: The processed text will appear in the output text box below. You can then copy the result and use it as needed."
+        "Paste your text into the input field.",
+        "Select 'Encode' to convert characters to HTML entities or 'Decode' to convert entities back to text.",
+        "Click the 'Convert' button.",
+        "Instantly view your converted result in the output field.",
+        "Copy the result for use in your HTML code or project."
       ],
       "usage_examples": [
-        "Example 1: A web developer is creating a form that allows users to submit comments. To prevent XSS attacks, the developer uses the HTML Encoder/Decoder to encode user input before storing it in the database. This ensures that any potentially harmful characters are converted to safe HTML entities.",
-        "Example 2: A content manager is editing an article that includes special characters like é, ñ, and ü. To ensure these characters display correctly in the HTML version of the article, the manager uses the tool to encode the text before publishing it.",
-        "Example 3: A developer is working on a legacy system that stores data in an encoded format. Before displaying the data on a modern web page, the developer uses the HTML Encoder/Decoder to decode the text, making it readable and correctly formatted.",
-        "Example 4: A blogger is writing a post about HTML and needs to include code snippets that contain special characters. To ensure the code is displayed correctly and not interpreted as HTML by the browser, the blogger encodes the snippets using the tool before embedding them in the blog post."
+        "Encoding a copyright symbol (©) to '&copy;' for safe HTML inclusion.",
+        "Decoding '&lt;div&gt;' from a database back to '<div>' for editing.",
+        "Preparing user-generated content for web display by encoding quotes and ampersands."
       ],
-      "inputPlaceholder": "Enter text here..."
+      "inputPlaceholder": "Enter text here...",
+      "faqs": [
+        {
+          "question": "What is the difference between encoding and decoding HTML?",
+          "answer": "Encoding converts special characters (like <) to HTML entities (&lt;). Decoding reverses this process, turning entities back into characters."
+        },
+        {
+          "question": "Does this tool handle all HTML entity references, like numeric codes?",
+          "answer": "Yes, it processes both named entities (e.g., &amp;) and numeric/decimal entities (e.g., &#38;)."
+        },
+        {
+          "question": "Will encoding affect the spaces or line breaks in my text?",
+          "answer": "No, standard spaces and line breaks are preserved. Only characters with specific HTML entities are converted."
+        },
+        {
+          "question": "Is there a limit to the amount of text I can convert at once?",
+          "answer": "The tool is optimized for typical web development tasks. For extremely large documents, processing in sections is recommended."
+        },
+        {
+          "question": "Is my data secure when using this online encoder/decoder?",
+          "answer": "Yes, all processing happens in your browser. Your text is never sent to or stored on our servers."
+        }
+      ]
     },
     "markdown-preview": {
       "name": "Markdown Preview",
@@ -1847,10 +1947,10 @@
       ]
     },
     "jwt-decoder": {
-      "name": "JWT Decoder",
-      "description": "Decode and inspect JWT tokens. View header, payload, and signature.",
-      "seo_title": "Free JWT Decoder Online",
-      "seo_description": "Decode and inspect JWT (JSON Web Tokens) online for free. View header, payload, and signature without verification. Essential for debugging auth.",
+      "name": "JWT Decoder Tool",
+      "description": "A free online tool to decode and inspect JWT tokens instantly.",
+      "seo_title": "JWT Decoder - Free Online Token Inspection & Generator Tool",
+      "seo_description": "Decode any JWT token with our free online tool. Instantly view the header, payload, and signature. No registration required. Try the JWT decoder and converter now!",
       "enterToken": "Please enter a JWT token",
       "invalidFormat": "Invalid JWT format",
       "invalidToken": "Invalid JWT token",
@@ -1860,25 +1960,45 @@
       "issuedAt": "Issued At (iat)",
       "expires": "Expires (exp)",
       "notBefore": "Not Before (nbf)",
-      "detailed_description": "The JWT Decoder is a specialized tool designed to help developers decode and inspect JSON Web Tokens (JWTs). JWTs are a compact, URL-safe means of representing claims to be transferred between two parties. They are widely used in web applications for authentication and authorization processes. By using the JWT Decoder, developers can easily break down a JWT into its constituent parts—header, payload, and signature—and analyze each section in detail. This is particularly useful for debugging issues, verifying token integrity, and understanding the data being transmitted. The tool leverages cryptographic algorithms to validate the token's signature, ensuring that the token has not been tampered with. Additionally, it can handle various JWT formats, including those with custom algorithms and claims. The JWT Decoder supports both encoded and decoded views, making it a versatile tool for any developer working with JWTs in their projects.",
+      "detailed_description": "This JWT Decoder is an essential online utility for developers, security professionals, and API integrators. It instantly parses JSON Web Tokens, separating and displaying the Base64Url-encoded header and payload in a readable JSON format while verifying the token's structure. Key features include a clean, real-time interface, validation of token segments, and the ability to handle malformed tokens for debugging purposes.",
       "usage_steps": [
-        "Step 1: Navigate to the JWT Decoder tool page and locate the input field labeled 'Enter JWT Token'.",
-        "Step 2: Paste the JWT token you want to decode into the input field. Ensure the token is correctly formatted.",
-        "Step 3: Click the 'Decode' button to process the token. The tool will validate the token and display the results.",
-        "Step 4: Review the decoded JWT in the 'Header', 'Payload', and 'Signature' sections. Each section will show the corresponding JSON data.",
-        "Step 5: If the token has a valid signature, the 'Signature Verification' section will display a green checkmark and the algorithm used.",
-        "Step 6: Use the 'Export' button to download the decoded JWT data as a JSON file for further analysis or sharing."
+        "Paste your JWT token into the input field.",
+        "Click the 'Decode JWT' button to process the token.",
+        "Instantly view the decoded Header section in JSON format.",
+        "Examine the decoded Payload section containing the token claims.",
+        "Review the Signature section to verify the token's integrity."
       ],
       "usage_examples": [
-        "Example 1: A backend developer is troubleshooting an authentication issue where a user's token is not being accepted. By using the JWT Decoder, they can verify the token's contents and check if any required claims are missing or malformed.",
-        "Example 2: A frontend developer needs to ensure that the JWT received from the server contains the correct user roles and permissions. The JWT Decoder helps them inspect the payload to validate the claims and ensure the application's security.",
-        "Example 3: A security analyst is reviewing the integrity of JWTs used in a web application. They use the JWT Decoder to validate the token's signature and ensure it has not been tampered with, maintaining the application's security protocols.",
-        "Example 4: A DevOps engineer is setting up a new API that uses JWTs for authentication. They use the JWT Decoder to test the tokens generated by their authentication service, ensuring that the tokens are correctly formatted and contain the necessary claims for the API to function properly."
+        "A backend developer debugging authentication errors by inspecting the claims within a failing JWT.",
+        "A security auditor verifying the contents and expiration of tokens used in a web application.",
+        "A frontend developer confirming the user data embedded in a token received from an API."
       ],
       "input": "Input",
       "decode": "Decode",
       "copied": "Copied!",
-      "copy": "Copy"
+      "copy": "Copy",
+      "faqs": [
+        {
+          "question": "Does this tool validate the JWT signature?",
+          "answer": "No, this is a decoder only. It displays the signature segment but does not perform cryptographic validation."
+        },
+        {
+          "question": "What happens if I paste a malformed or invalid JWT?",
+          "answer": "The tool will clearly indicate which part of the token (header, payload, or formatting) is causing the decoding error."
+        },
+        {
+          "question": "Can I use this tool to decode JWTs with custom, non-standard claims?",
+          "answer": "Yes, the decoder will display all claims present in the payload, including any custom ones you have added."
+        },
+        {
+          "question": "Is there a limit to the token size or number of decodes?",
+          "answer": "No, there are no usage limits. You can decode tokens of standard lengths as many times as needed."
+        },
+        {
+          "question": "Is my JWT token stored or logged when I use this decoder?",
+          "answer": "No. All processing happens client-side in your browser. Your tokens are never sent to our servers."
+        }
+      ]
     },
     "diff-checker": {
       "name": "Diff Checker",
@@ -2088,24 +2208,44 @@
       ]
     },
     "xml-formatter": {
-      "name": "XML Formatter",
-      "description": "Format and minify XML data, validate XML syntax.",
-      "seo_title": "Free XML Formatter Online",
-      "seo_description": "Format, beautify and minify XML data online for free. Syntax highlighting, error detection, and tree view. Perfect for API development and configuration files.",
-      "detailed_description": "The XML Formatter is a specialized tool that parses, transforms, and validates XML documents through precise syntactic analysis. It employs a SAX (Simple API for XML) parser to detect structural errors, enforce well-formedness, and validate against DTD (Document Type Definition) specifications. Users can format raw XML by applying hierarchical indentation (with configurable space/tab depth) or minify by removing superfluous whitespace and comments while maintaining data integrity. The tool's validation engine checks critical elements such as proper tag nesting, attribute quoting, CDATA section boundaries, and correct XML declaration syntax (including encoding attributes like UTF-8/UTF-16). Developers benefit from interactive error highlighting with line/column indicators, while the minification process optimizes documents for API payloads or storage efficiency. Unlike generic beautifiers, this tool preserves XML namespaces, processing instructions, and entity references during transformation.",
+      "name": "XML Formatter & Minifier",
+      "description": "A free online tool to format, minify, and validate XML syntax instantly.",
+      "seo_title": "XML Formatter - Free Online XML Beautifier & Validator Tool",
+      "seo_description": "Format, minify, and validate your XML code with our free online XML formatter tool. No registration required. Clean up messy XML for better readability and debugging.",
+      "detailed_description": "This XML Formatter is an essential online utility for developers, data analysts, and anyone working with XML data. It instantly transforms raw, unformatted XML into a clean, human-readable structure with proper indentation. Conversely, it can minify XML by removing unnecessary whitespace and line breaks to reduce file size. The built-in validator checks for syntax errors, ensuring your XML is well-formed and ready for use in APIs, configuration files, or data exchange.",
       "usage_steps": [
-        "Paste raw XML into the 'Input' textarea or load a file via the 'Upload XML' button.",
-        "Select 'Format' or 'Minify' using the radio buttons in the 'Transformation' panel.",
-        "Adjust indentation settings in the 'Formatting Options' dropdown (1-8 spaces or tabs).",
-        "Enable 'Validate XML' checkbox to activate syntax checking with error line numbers.",
-        "Click 'Process XML' to execute transformations; invalid documents will display parse errors.",
-        "Review output in the 'Result' pane, or use the 'Compare' tab to visualize before/after differences."
+        "Paste your raw XML code into the input field.",
+        "Select your desired action: 'Format' for readability or 'Minify' for compression.",
+        "Click the 'Process XML' button to execute.",
+        "Review the formatted or minified output in the result box.",
+        "Use the 'Validate' option to check for any syntax errors in your code."
       ],
       "usage_examples": [
-        "A backend engineer debugging a malformed SAML response by visualizing tag mismatch errors with line numbers.",
-        "System administrator cleaning up verbose AWS XML logs for SIEM integration by removing comments and whitespace.",
-        "Web developer standardizing indentation across multiple RSS feeds to meet CMS ingestion requirements.",
-        "Data architect validating XSD (XML Schema Definition) compatibility by testing against multiple DTDs."
+        "Preparing a SOAP API request payload for a web service call.",
+        "Cleaning up exported configuration files from a CMS like WordPress.",
+        "Validating an RSS feed XML structure before publishing on a website."
+      ],
+      "faqs": [
+        {
+          "question": "Does this tool preserve comments and CDATA sections in my XML?",
+          "answer": "Yes, our formatter retains all XML comments, CDATA blocks, and processing instructions during formatting and minification."
+        },
+        {
+          "question": "What is the maximum file size for XML processing?",
+          "answer": "The tool can handle large XML documents, but for optimal performance, we recommend files under 5MB for quick processing."
+        },
+        {
+          "question": "Can I format XML that is on a single line without any spaces?",
+          "answer": "Absolutely. The tool is designed to parse and properly indent even densely packed, single-line XML strings."
+        },
+        {
+          "question": "Does the validator check against a specific XML Schema (XSD)?",
+          "answer": "No, this validator performs a syntax check for well-formed XML. It does not validate against an external DTD or XSD schema."
+        },
+        {
+          "question": "Is my XML data stored or logged on your servers?",
+          "answer": "No. All processing occurs in real-time within your browser. Your XML data is never transmitted or stored on our servers."
+        }
       ]
     },
     "chinese-converter": {

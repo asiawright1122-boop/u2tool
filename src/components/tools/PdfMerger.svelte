@@ -113,7 +113,7 @@
       <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
         <input type="file" accept=".pdf" multiple onchange={handleFileUpload} class="hidden" id="pdf-merger-upload" />
         <label for="pdf-merger-upload" class="cursor-pointer flex flex-col items-center">
-          <span class="text-4xl mb-2">📎</span>
+          <span class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg></span>
           <span class="text-lg font-medium text-gray-700 dark:text-gray-300">{t('pdfMerger.uploadPdfs')}</span>
           <span class="text-sm text-gray-500 dark:text-gray-400 mt-1">{t('pdfMerger.multipleFiles')}</span>
         </label>
@@ -138,7 +138,7 @@
             </h3>
             {#each pdfs as pdf, index (pdf.id)}
 <div  class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg">
-                <span class="text-2xl">📄</span>
+                <span class="text-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>
                 <div class="flex-1">
                   <div class="font-medium text-sm truncate">{pdf.name}</div>
                   <div class="text-xs text-gray-500">{pdf.pageCount} {t('pdfMerger.pages')}</div>

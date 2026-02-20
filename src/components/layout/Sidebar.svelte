@@ -2,12 +2,13 @@
   /**
    * Sidebar.svelte
    *
-   * Left sidebar navigation matching the original Next.js GlobalSidebar design.
+   * Left sidebar navigation with Lucide SVG icons (no emoji).
    * - Desktop (≥1024px): expanded, 220px wide
    * - Tablet (768-1023px): collapsed, 64px wide (icons only)
    * - Mobile (<768px): hidden (bottom nav instead)
    */
   import { getLocalizedPath } from '@/lib/i18n';
+  import { getIconSvg } from '@/lib/icon-svg';
   import type { Locale } from '@/lib/i18n';
 
   interface CategoryItem {
@@ -38,10 +39,7 @@
     return getLocalizedPath(locale as Locale, '/tools') + '?category=' + id;
   }
 
-  // Detect collapsed state from CSS media query
   let collapsed = $state(false);
-
-  // Track active category from URL
   let activeCategory = $state<string | null>(null);
 
   $effect(() => {
@@ -67,7 +65,7 @@
   <!-- Logo -->
   <div class="h-16 flex items-center px-4 border-b border-gray-200 dark:border-gray-800">
     <a href={homePath()} class="flex items-center gap-2">
-      <span class="text-2xl">🛠️</span>
+      <span class="text-blue-500">{@html getIconSvg('wrench', 24)}</span>
       {#if !collapsed}
         <span class="text-lg font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
           {siteName}
@@ -84,7 +82,7 @@
       class:justify-center={collapsed}
       title={collapsed ? (navMessages.home || 'Home') : undefined}
     >
-      <span class="text-lg">🏠</span>
+      <span class="sidebar-icon">{@html getIconSvg('home', 18)}</span>
       {#if !collapsed}
         <span class="text-sm font-medium">{navMessages.home || 'Home'}</span>
       {/if}
@@ -98,7 +96,7 @@
         class:justify-center={collapsed}
         title={collapsed ? (navMessages.ranking || 'Ranking') : undefined}
       >
-        <span class="text-lg">🏆</span>
+        <span class="sidebar-icon">{@html getIconSvg('trophy', 18)}</span>
         {#if !collapsed}
           <span class="flex-1 text-sm font-medium text-left">{navMessages.ranking || 'Ranking'}</span>
           <svg class="w-4 h-4 transition-transform {rankingExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,11 +108,11 @@
       {#if !collapsed && rankingExpanded}
         <nav class="mt-1 space-y-0.5">
           <a href={getLocalizedPath(locale as Locale, '/tools/ranking/newest')} class="sidebar-item pl-8">
-            <span class="text-base">🆕</span>
+            <span class="sidebar-icon">{@html getIconSvg('sparkle', 16)}</span>
             <span class="flex-1 text-sm truncate">{navMessages.newest || 'Newest'}</span>
           </a>
           <a href={getLocalizedPath(locale as Locale, '/tools/ranking/popular')} class="sidebar-item pl-8">
-            <span class="text-base">🔥</span>
+            <span class="sidebar-icon">{@html getIconSvg('flame', 16)}</span>
             <span class="flex-1 text-sm truncate">{navMessages.hottest || 'Popular'}</span>
           </a>
         </nav>
@@ -132,7 +130,7 @@
         class:justify-center={collapsed}
         title={collapsed ? (navMessages.toolCategories || 'Categories') : undefined}
       >
-        <span class="text-lg">🛠️</span>
+        <span class="sidebar-icon">{@html getIconSvg('wrench', 18)}</span>
         {#if !collapsed}
           <span class="flex-1 text-sm font-medium text-left">{navMessages.toolCategories || 'Tool Categories'}</span>
           <svg class="w-4 h-4 transition-transform {toolsExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -150,7 +148,7 @@
               class:sidebar-item-active={activeCategory === cat.id}
               title={categoryNames[cat.id] || cat.id}
             >
-              <span class="text-base">{cat.icon}</span>
+              <span class="sidebar-icon">{@html getIconSvg(cat.icon, 16)}</span>
               <span class="flex-1 text-sm truncate">{categoryNames[cat.id] || cat.id}</span>
             </a>
           {/each}
@@ -166,7 +164,7 @@
               class:sidebar-item-active={activeCategory === cat.id}
               title={categoryNames[cat.id] || cat.id}
             >
-              <span class="text-base">{cat.icon}</span>
+              <span class="sidebar-icon">{@html getIconSvg(cat.icon, 18)}</span>
             </a>
           {/each}
         </nav>
@@ -183,10 +181,21 @@
       class:justify-center={collapsed}
       title={collapsed ? (navMessages.tools || 'All Tools') : undefined}
     >
-      <span class="text-lg">📋</span>
+      <span class="sidebar-icon">{@html getIconSvg('list', 18)}</span>
       {#if !collapsed}
         <span class="text-sm font-medium">{navMessages.tools || 'All Tools'}</span>
       {/if}
     </a>
   </div>
 </nav>
+
+<style>
+  .sidebar-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+</style>

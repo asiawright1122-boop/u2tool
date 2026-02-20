@@ -83,7 +83,7 @@
           placeholder={t('emoji.searchPlaceholder')}
           class="w-full px-4 py-3 pl-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-sm text-gray-900 dark:text-white focus:outline-none focus:border-blue-500"
         />
-        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300">🔍</span>
+        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-300"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
       </div>
 
       <!-- 分类标签 -->

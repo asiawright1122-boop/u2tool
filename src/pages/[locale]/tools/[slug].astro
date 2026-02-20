@@ -31,6 +31,7 @@ import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
 import { tools, categories, getToolsByCategory } from '@/config/tools';
 import type { Tool } from '@/config/tools';
+import { getIconSvg } from '@/lib/icon-svg';
 import { locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadToolMessages, loadBaseMessages } from '@/lib/translations';
@@ -274,10 +275,8 @@ for (const slug of relatedToolSlugs) {
       {/* Tool Header */}
       <div class="text-center mb-8">
         {/* Tool icon */}
-        <div class="mx-auto mb-4">
-          <span class="text-5xl" aria-label={toolName} role="img">
-            {tool.icon}
-          </span>
+        <div class="mx-auto mb-4 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/20 text-blue-500 dark:text-blue-400">
+          <Fragment set:html={getIconSvg(tool.icon, 32)} />
         </div>
         {/* Tool name (LCP element) */}
         <h1 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">

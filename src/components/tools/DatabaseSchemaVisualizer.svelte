@@ -66,8 +66,8 @@
                   {#each table.columns as col, cidx (cidx)}
 <div  class="px-4 py-2 flex items-center justify-between">
                       <div class="flex items-center gap-2">
-                        {#if col.pk}<span class="text-yellow-500" title="Primary Key">🔑</span>{/if}
-                        {#if col.fk}<span class="text-blue-500" title={`FK: ${col.fk}`}>🔗</span>{/if}
+                        {#if col.pk}<span class="text-yellow-500" title="Primary Key"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/></svg></span>{/if}
+                        {#if col.fk}<span class="text-blue-500" title={`FK: ${col.fk}`}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>{/if}
                         <span class="font-mono text-sm text-gray-900 dark:text-white">{col.name}</span>
                       </div>
                       <span class="text-xs text-gray-500 dark:text-gray-400">{col.type}</span>

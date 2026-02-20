@@ -143,7 +143,7 @@
       <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
         <input type="file" accept="image/png,image/jpeg,image/jpg,image/webp" multiple onchange={handleFileUpload} class="hidden" id="image-upload" />
         <label for="image-upload" class="cursor-pointer flex flex-col items-center">
-          <span class="text-4xl mb-2">📄</span>
+          <span class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>
           <span class="text-lg font-medium text-gray-700 dark:text-gray-300">{t('imageToPdf.uploadImages')}</span>
           <span class="text-sm text-gray-500 dark:text-gray-400 mt-1">{t('imageToPdf.supportedFormats')}</span>
         </label>

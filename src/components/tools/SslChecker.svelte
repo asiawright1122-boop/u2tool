@@ -109,7 +109,7 @@
 <div class="space-y-4">
           <div class={`p-4 rounded-lg border ${result.valid ? 'bg-green-50 dark:bg-green-900/30 border-green-300 dark:border-green-700' : 'bg-red-50 dark:bg-red-900/30 border-red-300 dark:border-red-700'}`}>
             <div class="flex items-center gap-2">
-              <span class="text-2xl">{result.valid ? '✅' : '❌'}</span>
+              <span class="text-2xl">{result.valid ? '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>'}</span>
               <span class="text-lg font-semibold text-gray-900 dark:text-white">
                 {result.valid ? t('valid') : t('invalid')}
               </span>

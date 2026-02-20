@@ -154,7 +154,7 @@
       <div class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
         <input type="file" accept=".pdf" onchange={handleFileUpload} class="hidden" id="pdf-upload" />
         <label for="pdf-upload" class="cursor-pointer flex flex-col items-center">
-          <span class="text-4xl mb-2">🖼️</span>
+          <span class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></span>
           <span class="text-lg font-medium text-gray-700 dark:text-gray-300">{t('pdfToImage.uploadPdf')}</span>
           <span class="text-sm text-gray-500 dark:text-gray-400 mt-1">{t('pdfToImage.selectPdf')}</span>
         </label>

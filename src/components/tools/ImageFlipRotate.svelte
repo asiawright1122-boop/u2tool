@@ -121,13 +121,13 @@
                 onclick={() => flipH = !flipH}
                 class={`flex-1 px-4 py-2 rounded-lg ${flipH ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
               >
-                ↔️ {t('horizontal')}
+                ↔ {t('horizontal')}
               </button>
               <button
                 onclick={() => flipV = !flipV}
                 class={`flex-1 px-4 py-2 rounded-lg ${flipV ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700'}`}
               >
-                ↕️ {t('vertical')}
+                ↕ {t('vertical')}
               </button>
             </div>
           </div>
@@ -193,7 +193,7 @@
               class="max-w-full max-h-[500px] object-contain"></canvas>
 {:else}
 <div class="text-gray-500 text-center">
-              <p class="text-4xl mb-2">🔄</p>
+              <p class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></p>
               <p>{t('noImage')}</p>
             </div>
 {/if}

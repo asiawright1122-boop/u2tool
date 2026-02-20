@@ -224,24 +224,44 @@
       "decodeFromBase64": "Base64-Code dekodieren",
       "inputPlaceholder": "Text zum Codieren eingeben oder Base64 umzudekodieren...",
       "outputPlaceholder": "Ergebnisse erscheinen hier...",
-      "name": "Base64-Encoder/Decoder",
-      "description": "Text in Base64 kodieren oder Base64 umdekodieren, ohne lange zu warten.",
-      "seo_title": "Kostenlos Online Base64-Encoder & -Decoder",
-      "seo_description": "Kostenlos encode text zu Base64 oder decode Base64-Strings online. Secure browser-basiertes Tool ohne Datenupload. Perfekt für Entwickler.",
-      "detailed_description": "Der Base64 Encoder/Decoder wandelt binäre Daten in ASCII-Zeichenketten um, basierend auf dem MIME-Standard (RFC 2045). Technisch gesehen teilt der Algorithmus Eingabedaten in 6-Bit-Blöcke, die mithilfe einer 64-Zeichen umfassenden Tabelle (A-Z, a-z, 0-9, '+', '/') in druckbare Zeichen übersetzt werden. Nicht durch 3 teilbare Byte-Folgen werden durch Padding-Zeichen ('=') ergänzt, um gültige Ausgabe zu gewährleisten. Dieses Werkzeug ist unverzichtbar für Entwickler, die Daten in Protokollen wie HTTP oder JSON übertragen müssen, die nur Textzeichen akzeptieren, z.B. bei der Einbettung von Bilddaten in CSS oder der Übertragung von Binärdateien über REST-APIs. Der Decoder rekonstruiert durch umgekehrte Zuordnung und Padding-Entfernung die ursprünglichen Binärdaten. Besonders nützlich ist dies bei der Analyse von JWT-Token-Payloads oder der manuellen Prüfung von Base64-kodierten Anhängen in E-Mails. Die clientseitige Verarbeitung garantiert Datenschutz, da keine Daten den Browser verlassen.",
+      "name": "Kostenloser Base64 Encoder Decoder",
+      "description": "Kostenloses Online-Tool zum Base64-Kodieren und Dekodieren von Texten.",
+      "seo_title": "Base64 Encoder Decoder - Kostenloses Online-Tool zum Kodieren",
+      "seo_description": "Kodieren Sie Text in Base64 oder dekodieren Sie Strings sofort mit diesem kostenlosen Online-Tool. Einfach zu bedienen, keine Installation nötig. Jetzt ausprobieren!",
+      "detailed_description": "Dieses kostenlose Online-Tool ermöglicht Ihnen die einfache Konvertierung von Klartext in das Base64-Format und umgekehrt. Perfekt für Entwickler, die Daten für URLs oder APIs kodieren müssen, oder für alle, die mit Base64-kodierten Inhalten arbeiten. Die Bedienung ist intuitiv, schnell und erfordert keine Registrierung. Ihre Daten werden direkt im Browser verarbeitet und nicht auf unseren Servern gespeichert.",
       "usage_steps": [
-        "Geben Sie Klartext oder Binärdaten in das Eingabefeld ein oder laden Sie eine Datei per Drag-and-Drop hoch.",
-        "Wählen Sie die Aktion 'In Base64 kodieren' oder 'Base64 dekodieren' über die entsprechenden Schaltflächen.",
-        "Aktivieren Sie bei Binärdateien die Option 'Bytes statt Text verarbeiten', um korrekte Kodierung sicherzustellen.",
-        "Passen Sie bei Bedarf die Zeilenumbruch-Einstellungen (Standard: 76 Zeichen) an, um z.B. für SMTP-kompatible Ausgabe zu sorgen.",
-        "Kopieren Sie das Ergebnis per Klick auf das Zwischenablage-Symbol oder exportieren Sie es als Datei via 'Speichern unter'.",
-        "Prüfen Sie die hexadezimale Vorschau für dekodierte Binärdaten, um die Integrität der Ausgabe zu validieren."
+        "Wählen Sie im Dropdown-Menü 'Encode' oder 'Decode' aus.",
+        "Fügen Sie Ihren Text in das obere Eingabefeld ein.",
+        "Klicken Sie auf die Schaltfläche 'Konvertieren'.",
+        "Das Ergebnis wird sofort im unteren Feld angezeigt.",
+        "Kopieren Sie das Ergebnis mit einem Klick auf 'Kopieren'."
       ],
       "usage_examples": [
-        "Einbetten einer SVG-Grafik als Data-URL in eine CSS-Datei, um HTTP-Requests zu reduzieren.",
-        "Dekodieren des Payloads eines JWT-Tokens zur manuellen Überprüfung von Claims bei der API-Authentifizierung.",
-        "Konvertierung einer PDF-Datei in Base64 für die Übertragung per XML-RPC, das nur Textknoten unterstützt.",
-        "Analyse von Base64-kodierten Fehlerprotokollen in Serverlogs, um verschlüsselte Metadaten zu extrahieren."
+        "Kodieren von Anmeldedaten für eine Basic-Authentifizierung in HTTP-Headern.",
+        "Sichere Übertragung von Binärdaten (wie Bildern) in reinen Textformaten wie JSON oder XML.",
+        "Verschlüsseln von sensiblen Datenfragmenten in URL-Parametern für Webanwendungen."
+      ],
+      "faqs": [
+        {
+          "question": "Kann dieses Tool auch Dateien wie Bilder in Base64 kodieren?",
+          "answer": "Nein, dieses Tool ist speziell für die Kodierung von Text-Strings ausgelegt. Für Dateien benötigen Sie ein Tool, das den Dateiinhalt zuerst in einen Binärstring umwandelt."
+        },
+        {
+          "question": "Was passiert, wenn ich versuche, einen ungültigen Base64-String zu dekodieren?",
+          "answer": "Das Tool zeigt eine klare Fehlermeldung an, die darauf hinweist, dass die Eingabe kein gültiges Base64-Format hat."
+        },
+        {
+          "question": "Unterstützt das Tool verschiedene Zeichenkodierungen wie UTF-8?",
+          "answer": "Ja, das Tool verarbeitet Unicode-Zeichen (UTF-8) korrekt, sowohl beim Kodieren als auch beim Dekodieren."
+        },
+        {
+          "question": "Gibt es eine Begrenzung der Textlänge für die Konvertierung?",
+          "answer": "Praktisch gibt es keine feste Grenze, aber extrem lange Texte können die Browserleistung beeinträchtigen. Für normale Anwendungsfälle ist es mehr als ausreichend."
+        },
+        {
+          "question": "Werden meine eingegebenen Daten irgendwo gespeichert oder übertragen?",
+          "answer": "Nein, alle Berechnungen finden lokal in Ihrem Browser statt. Es erfolgt keine Übertragung zu unseren Servern, Ihre Daten bleiben privat."
+        }
       ]
     },
     "json": {
@@ -1542,26 +1562,46 @@
       "resize": "Größe ändern"
     },
     "json-formatter": {
-      "name": "JSON-Formatierer",
-      "description": "Formatieren und aufbereiten Sie JSON-Daten mit Syntax-Hervorhebung. Validieren Sie JSON und beheben Sie häufige Fehler.",
-      "seo_title": "Kostenloser JSON Formatter & Validator Online",
-      "seo_description": "Formatieren, befehlsartfarben markieren und validieren Sie JSON-Daten online – einfach und kostenlos. Das perfekte Tool für Entwickler.",
+      "name": "JSON Formatter und Validator",
+      "description": "JSON-Daten kostenlos formatieren, verschönern und auf Fehler überprüfen.",
+      "seo_title": "JSON Formatter - Kostenloses Online-Tool zum Formatieren & Validieren",
+      "seo_description": "Formatieren und verschönern Sie JSON-Daten mit Syntaxhervorhebung. Validieren Sie JSON-Strukturen und beheben Sie häufige Fehler. Unser kostenloses Online-Tool ist sofort einsatzbereit – keine Installation nötig.",
       "inputPlaceholder": "Geben Sie hier Ihre JSON-Daten ein...",
       "outputPlaceholder": "Formatierte JSON wird hier angezeigt...",
-      "detailed_description": "Der JSON Formatter ist ein multifunktionales Online-Tool, das es Benutzern ermöglicht, JSON-Daten zu formatieren, zu schönfärben und zu validieren. Technisch gesehen, nimmt das Tool JSON-Strings entgegen, überprüft deren Syntax, und formatiert sie, um sie lesbarer zu machen. Dabei fügt es Syntax-Highlighting hinzu, was die Struktur und die Elemente des JSON-Objekts hervorhebt. Das Tool kann auch Fehler in JSON-Dateien identifizieren und bei der Korrektur helfen, indem es gezielt auf die Problemstellen hinweist. Die Verwendung des JSON Formatters ist besonders nützlich für Entwickler, die JSON-Daten in APIs, Datenbanken oder Konfigurationsdateien verwenden. Es erleichtert die Fehlersuche und Optimierung von JSON-Strukturen, insbesondere in komplexen Anwendungen. Das Tool ist kompatibel mit modernen Browsern und unterstützt sowohl die Formatierung als auch die Minifizierung von JSON-Daten. Es ist jedoch wichtig, sensitiven Daten nicht zu vertrauen, da sie in einem öffentlichen Umfeld verarbeitet werden. Als Best Practice sollte man immer eine sichere Kopie der ursprünglichen Daten vor dem Formatieren erstellen.",
+      "detailed_description": "Dieses Tool formatiert unübersichtlichen JSON-Code in eine gut lesbare Struktur mit Einrückungen und farblicher Syntaxhervorhebung. Es ist ideal für Entwickler, die mit APIs arbeiten, Daten analysieren oder Konfigurationsdateien prüfen. Zusätzlich validiert es die JSON-Syntax, erkennt Fehler wie fehlende Kommas oder Klammern und hilft bei der Korrektur. Die Nutzung erfolgt direkt im Browser, ohne Daten an Server zu senden.",
       "usage_steps": [
-        "Tragen Sie den rohen JSON-Code in das Eingabefeld auf der Seite ein.",
-        "Klicken Sie auf den Button 'Formatieren', um den JSON-Code lesbar zu gestalten und zu schönfärben.",
-        "Falls Fehler im JSON-Code vorhanden sind, werden diese im Fehlerbereich angezeigt. Korrigieren Sie diese nach Bedarf.",
-        "Nach der Korrektur klicken Sie erneut auf 'Formatieren', um die Änderungen zu übernehmen.",
-        "Um den formatierten JSON-Code in die Zwischenablage zu kopieren, klicken Sie auf den 'Kopieren' Button.",
-        "Um das Eingabe- und Ausgabefeld zu leeren, verwenden Sie den 'Alles löschen' Button."
+        "JSON-Daten in das Eingabefeld einfügen oder hochladen.",
+        "Auf die Schaltfläche 'Formatieren & Validieren' klicken.",
+        "Das formatierte Ergebnis mit farblicher Hervorhebung prüfen.",
+        "Bei Fehlern die Fehlermeldung analysieren und den Code korrigieren.",
+        "Das korrigierte und formatierte JSON kopieren oder herunterladen."
       ],
       "usage_examples": [
-        "Ein Frontend-Entwickler verwendet den JSON Formatter, um die JSON-Antwort einer API zu überprüfen und zu formatieren, um sicherzustellen, dass die Daten korrekt verarbeitet werden können.",
-        "Ein Backend-Entwickler verwendet das Tool, um eine JSON-Konfigurationsdatei zu validieren, bevor sie in einer produktiven Umgebung bereitgestellt wird, um Fehlkonfigurationen zu vermeiden.",
-        "Ein Datenwissenschaftler nutzt den JSON Formatter, um JSON-Dateien, die von einer Datenquelle stammen, zu analysieren und zu verifizieren, um sicherzustellen, dass die Daten die erwartete Struktur haben.",
-        "Ein Systemadministrator verwendet das Tool, um JSON-Logs zu formatieren und zu lesen, die von einem Server generiert werden, um potenzielle Probleme in Anwendungen oder Systemen zu erkennen."
+        "API-Antworten von Webdiensten für Debugging-Zwecke lesbar machen.",
+        "Minifizierte JSON-Konfigurationsdateien für Projekte einrücken und prüfen.",
+        "Rohdaten aus Logs oder Datenbanken strukturieren und validieren, bevor sie weiterverarbeitet werden."
+      ],
+      "faqs": [
+        {
+          "question": "Kann das Tool auch JSON mit Kommentaren verarbeiten?",
+          "answer": "Standard-JSON erlaubt keine Kommentare. Das Tool markiert diese als Fehler, kann sie aber bei der Formatierung entfernen."
+        },
+        {
+          "question": "Was passiert bei sehr großen JSON-Dateien?",
+          "answer": "Die Verarbeitung erfolgt clientseitig im Browser. Sehr große Dateien können die Leistung beeinträchtigen; es gibt ein praktikables Größenlimit."
+        },
+        {
+          "question": "Unterstützt das Tool die Validierung gegen ein JSON-Schema?",
+          "answer": "Nein, der Fokus liegt auf der syntaktischen Validierung und Formatierung, nicht auf der Prüfung gegen ein vordefiniertes Schema."
+        },
+        {
+          "question": "Kann ich das formatierte Ergebnis in verschiedenen Stilen (z.B. 2 oder 4 Leerzeichen Einzug) exportieren?",
+          "answer": "Ja, das Tool bietet in der Regel eine Auswahl gängiger Einzugsstile für die formatierte Ausgabe."
+        },
+        {
+          "question": "Werden meine eingegebenen JSON-Daten auf Ihren Servern gespeichert?",
+          "answer": "Nein, die gesamte Verarbeitung findet lokal in Ihrem Browser statt. Es erfolgt keine Speicherung oder Übertragung Ihrer Daten an unsere Server."
+        }
       ]
     },
     "uuid-generator": {
@@ -1586,26 +1626,46 @@
       ]
     },
     "url-encoder": {
-      "name": "URL-Encoder/Decoder",
-      "description": "Sicher kodieren oder dekodieren Sie URLs und Query Strings.",
-      "seo_title": " Kostenlose Online-Tool: URL Encoder/Decoder – Sicher encode und decode!",
-      "seo_description": "Mit unserem einfachen und kostenlosen Tool sicher encode und decode Ihre URLs und Query Strings. Online und sofort nutzbar – Ihre Daten sind immer sicher!",
-      "detailed_description": "Der URL Encoder/Decoder ist ein spezialisierter Netzwerktool zur präzisen Umwandlung von URLs und Query-Strings gemäß RFC 3986-Standard. Technisch gesehen führt das Tool URL-Encoding (auch Prozentencodierung genannt) durch, bei dem reservierte Zeichen wie Leerzeichen, Umlaute oder Sonderzeichen durch ein Prozentzeichen (%), gefolgt von zwei hexadezimalen Ziffern, ersetzt werden. Dies gewährleistet die korrekte Übertragung von Daten über HTTP(S), da Protokolle wie GET-Requests nur ASCII-Zeichen im URL-String erlauben. Besonders bei internationalisierten Domainnamen (IDN) oder OAuth-Token wird sichergestellt, dass nicht-lateinische Zeichen korrekt in Punycode-kompatible Formate umgewandelt werden. Der Decoder führt diesen Prozess invers durch, inklusive der Behandlung von '+'-Zeichen als Leerzeichen im CGI-Standard. Entwickler benötigen dieses Werkzeug, um sicherzustellen, dass Anfragen an REST-APIs, Formular-Submissions oder Deep-Linking-Strategien in Webanwendungen fehlerfrei funktionieren. Das Tool verarbeitet serverseitig UTF-8-Eingaben und wendet dabei strict RFC-Konformität an, wodurch es sich von einfachen Client-seitigen Implementierungen unterscheidet, die häufig Sicherheitslücken durch unvollständige Zeichenbereinigung öffnen.",
+      "name": "URL-Encoder und Decoder",
+      "description": "Kostenloses Online-Tool zum sicheren Codieren und Decodieren von URLs.",
+      "seo_title": "URL Encoder/Decoder: Kostenloses Online-Tool zur URL-Kodierung",
+      "seo_description": "Codieren oder decodieren Sie URLs und Query-Strings sicher und schnell. Unser kostenloses Online-Tool ist perfekt für Entwickler und Webmaster. Jetzt nutzen!",
+      "detailed_description": "Dieses Tool codiert (verschlüsselt) oder decodiert (entschlüsselt) URLs und Query-Strings. Es wandelt Sonderzeichen in URL-konforme Prozentzeichen-Codes um und umgekehrt. Ideal für Webentwickler, SEO-Experten und alle, die mit Webadressen arbeiten. Die Verarbeitung erfolgt direkt im Browser, Ihre Daten bleiben privat.",
       "usage_steps": [
-        "1. Öffnen Sie den URL Encoder/Decoder im Netzwerk-Toolabschnitt.",
-        "2. Wählen Sie im Dropdown-Menü zwischen 'URL codieren' oder 'URL decodieren'.",
-        "3. Geben Sie die URL oder Query-Parameter in das große Textfeld ein – Umlaute wie 'ü' oder Sonderzeichen wie '#' werden automatisch erkannt.",
-        "4. Aktivieren Sie optional das Kontrollkästchen 'Zeilenumbrüche beibehalten', wenn Sie mehrzeilige URLs verarbeiten.",
-        "5. Klicken Sie auf die 'Verarbeiten'-Schaltfläche, um die Transformation zu starten.",
-        "6. Kopieren Sie das Ergebnis aus dem Ausgabefeld direkt in Ihre Anwendung oder API-Dokumentation."
+        "URL oder Text in das Eingabefeld einfügen.",
+        "Zwischen den Modi 'Encode' (Codieren) und 'Decode' (Decodieren) wählen.",
+        "Auf die Schaltfläche 'Konvertieren' klicken.",
+        "Das Ergebnis im Ausgabefeld ablesen.",
+        "Das Ergebnis mit einem Klick in die Zwischenablage kopieren."
       ],
       "usage_examples": [
-        "1. Ein Entwickler muss einen OAuth2-Authorisierungscode mit dem Wert 'ab%20c#1' sicher in einem Redirect-URI übergeben und muss diesen manuell escapen, bevor er den Token-Server anfragt.",
-        "2. Eine Marketing-Abteilung erstellt Deep-Links für eine Kampagne mit dem Ziel-Parameter '?produkt=café', das in '%3Fprodukt%3Dcaf%C3%A9' umgewandelt werden muss.",
-        "3. Ein Backend-Entwickler decodiert einen von einem Legacy-System übermittelten Query-String 'name=John+Doe%40mail.com' zur Validierung von Benutzereingaben.",
-        "4. Ein API-Tester konstruiert manuell einen GET-Request mit dem Suchparameter '?query=100€' und benötigt die korrekte Kodierung als '?query=100%E2%82%AC'."
+        "Sicherung von Sonderzeichen in einer Webadresse für einen Newsletter-Link.",
+        "Entschlüsselung einer kodierten URL, um deren Bestandteile zu analysieren.",
+        "Vorbereitung von Daten für eine GET-Anfrage an eine API."
       ],
-      "inputPlaceholder": "Hier eingeben..."
+      "inputPlaceholder": "Hier eingeben...",
+      "faqs": [
+        {
+          "question": "Was ist der Unterschied zwischen URL-Encoding und URL-Escaping?",
+          "answer": "Es handelt sich um synonyme Begriffe für denselben Prozess: das Umwandeln von Zeichen in einen Prozentzeichen-Code für URLs."
+        },
+        {
+          "question": "Welche Zeichen werden typischerweise von diesem Tool codiert?",
+          "answer": "Leerzeichen, Umlaute (&auml;, &ouml;, &uuml;), Sonderzeichen wie &, ?, =, # und nicht-ASCII-Zeichen."
+        },
+        {
+          "question": "Kann ich auch komplette Query-Strings (nach dem ?) codieren?",
+          "answer": "Ja, das Tool verarbeitet sowohl die Basis-URL als auch komplette Query-String-Parameter zuverlässig."
+        },
+        {
+          "question": "Funktioniert dieses Tool auch auf mobilen Geräten?",
+          "answer": "Ja, es ist vollständig responsiv und funktioniert in jedem modernen Mobilbrowser."
+        },
+        {
+          "question": "Werden meine eingegebenen Daten auf Ihren Servern gespeichert?",
+          "answer": "Nein, alle Berechnungen finden lokal in Ihrem Webbrowser statt, es erfolgt keine Datenspeicherung auf unseren Servern."
+        }
+      ]
     },
     "password-generator": {
       "name": "Passwortgenerator",
@@ -1763,26 +1823,46 @@
       ]
     },
     "html-encoder": {
-      "name": "HTML-Encoder/Decoder",
-      "description": "Konvertieren Sie besondere Zeichen in HTML-Entitäten oder dekodieren Sie sie zurück.",
-      "seo_title": "Kostenloser HTML-Encoder & -Decoder online",
-      "seo_description": "Kostenloser online-Tool zur Codierung und Decodierung von HTML-Entitäten. Schütze Spezielleichen für Webentwicklung und vermeide XSS-Angriffe.",
-      "detailed_description": "Der HTML Encoder/Decoder ist ein leistungsstarkes Werkzeug, das es Benutzern ermöglicht, spezielle Zeichen in HTML-Entitäten zu konvertieren und umgekehrt. Dies ist besonders wichtig, da bestimmte Zeichen in HTML eine besondere Bedeutung haben und daher nicht direkt im Dokument verwendet werden können, ohne dass es zu Fehlinterpretationen kommt. Zum Beispiel kann das Zeichen „<“ als Anfang eines HTML-Tags interpretiert werden, was zu Syntaxfehlern führt, wenn es nicht ordnungsgemäß kodiert wird. Dieses Tool ermöglicht es, solche Zeichen zu HTML-Entitäten umzuwandeln, die sicher im HTML-Code verwendet werden können. Für die Dekodierung konvertiert es HTML-Entitäten zurück in ihre ursprünglichen Zeichen. Dies ist besonders nützlich für Webentwickler, die Texte in HTML-Dokumenten einbetten oder aus diesen extrahieren müssen. Technisch gesehen verwendet das Tool eine Reihe von regulären Ausdrücken und Unicode-Tabelle Abfragen, um die Konvertierung durchzuführen. Die Verwendung von HTML-Entitäten ist nicht nur für die Vermeidung von Syntaxfehlern wichtig, sondern auch für die Sicherheit von Webanwendungen, da sie Cross-Site Scripting (XSS) Angriffe verhindern können.",
+      "name": "HTML Encoder und Decoder",
+      "description": "Kostenloses Online-Tool zum Kodieren und Dekodieren von HTML-Entities.",
+      "seo_title": "HTML Encoder: Kostenloser Online-Encoder/Decoder für HTML-Entities",
+      "seo_description": "Kodieren Sie Sonderzeichen in HTML-Entities oder dekodieren Sie sie zurück. Unser kostenloses Online-Tool ist schnell, sicher und einfach zu bedienen. Jetzt nutzen!",
+      "detailed_description": "Dieses Tool ermöglicht Webentwicklern und Redakteuren das einfache Umwandeln von Sonderzeichen (wie <, >, &, \") in ihre entsprechenden HTML-Entities (&lt;, &gt;, &amp;, &quot;). Dies ist essenziell, um Code in Webseiten korrekt und sicher anzuzeigen. Ebenso können kodierte Texte wieder in lesbare Zeichen umgewandelt werden. Die Anwendung ist direkt im Browser nutzbar, erfordert keine Installation und verarbeitet Ihre Daten lokal.",
       "usage_steps": [
-        "Öffnen Sie die Seite des HTML Encoder/Decoder auf der Website.",
-        "Navigieren Sie zu der Option „Eingabetext“ und fügen Sie den Text ein, den Sie kodieren oder dekodieren möchten.",
-        "Wählen Sie in der Dropdown-Liste „Kodierung“ die Option „HTML-Entities“.",
-        "Klicken Sie auf den Button „Konvertieren“, um den Text zu kodieren. Für die Dekodierung wählen Sie die Option „HTML-Entitäten in Zeichen“ und klicken erneut auf „Konvertieren“.",
-        "Der konvertierte Text wird in der Ausgabefeld angezeigt. Sie können ihn direkt von dort kopieren.",
-        "Falls erforderlich, können Sie den konvertierten Text in ein Texteditor oder direkt in Ihr HTML-Dokument einfügen."
+        "Geben Sie Ihren Text in das Eingabefeld ein.",
+        "Wählen Sie zwischen 'Kodieren' oder 'Dekodieren'.",
+        "Klicken Sie auf die Schaltfläche 'Umwandeln'.",
+        "Der verarbeitete Text wird sofort im Ausgabefeld angezeigt.",
+        "Kopieren Sie das Ergebnis mit einem Klick."
       ],
       "usage_examples": [
-        "Ein Webentwickler möchte einen Blogbeitrag erstellen, der HTML-Codebeispiele enthält. Um sicherzustellen, dass der HTML-Code korrekt angezeigt wird und nicht als Teil der Seite interpretiert wird, verwendet er den HTML Encoder, um die speziellen Zeichen wie „<“ und „>“ in HTML-Entitäten umzuwandeln.",
-        "Eine Contentmanagerin muss einen Text auf einer Webpage korrigieren, der durch falsche HTML-Entitäten fehlerhaft dargestellt wird. Sie nutzt den HTML Decoder, um die Textpassage in ihre ursprünglichen Zeichen zurückzuwandeln, bevor sie die Korrekturen vornehmen kann.",
-        "Ein Sicherheitsexperte testet eine Webanwendung auf XSS-Anfälligkeiten und muss sicherstellen, dass Benutzereingaben korrekt kodiert werden. Er verwendet den HTML Encoder, um Eingaben zu testen und sicherzustellen, dass sie nicht als HTML-Code interpretiert werden.",
-        "Ein SEO-Experte optimiert den Inhalt einer Website und muss sicherstellen, dass bestimmte Sonderzeichen korrekt angezeigt werden, ohne dass sie die Suchmaschinenoptimierung beeinträchtigen. Er nutzt den HTML Encoder, um diese Zeichen in HTML-Entitäten umzuwandeln, die von Suchmaschinen korrekt interpretiert werden."
+        "Sichere Einbettung von HTML-Code-Snippets in Blog-Artikel.",
+        "Korrekte Anzeige von Nutzereingaben mit Sonderzeichen in Webformularen.",
+        "Entschlüsseln von kodiertem Inhalt aus RSS-Feeds oder APIs."
       ],
-      "inputPlaceholder": "Hier den Text eingeben..."
+      "inputPlaceholder": "Hier den Text eingeben...",
+      "faqs": [
+        {
+          "question": "Welche Zeichen werden standardmäßig kodiert?",
+          "answer": "Alle für HTML relevanten Sonderzeichen wie <, >, &, \", ' sowie nicht-ASCII-Zeichen."
+        },
+        {
+          "question": "Kann ich auch ganze HTML-Dateien kodieren?",
+          "answer": "Ja, das Tool verarbeitet beliebig lange Texte, ideal für komplette Code-Blöcke."
+        },
+        {
+          "question": "Worin unterscheidet sich dieses Tool von einem URL-Encoder?",
+          "answer": "Ein HTML-Encoder wandelt Zeichen für HTML-Code um, ein URL-Encoder für Webadressen (z.B. Leerzeichen zu %20)."
+        },
+        {
+          "question": "Gibt es Einschränkungen bei der Zeichenkodierung (UTF-8, etc.)?",
+          "answer": "Nein, das Tool unterstützt vollständig Unicode (UTF-8) und alle darin enthaltenen Zeichen."
+        },
+        {
+          "question": "Werden meine eingegebenen Daten auf Ihren Servern gespeichert?",
+          "answer": "Nein, alle Berechnungen finden lokal in Ihrem Browser statt. Ihre Daten bleiben privat."
+        }
+      ]
     },
     "markdown-preview": {
       "name": "Markdown-Vorschau",
@@ -1849,10 +1929,10 @@
       ]
     },
     "jwt-decoder": {
-      "name": "JWT Decoder",
-      "description": "Decode und überprüfen Sie JWT Tokens. Header, Payload und Signature anzeigen.",
-      "seo_title": "Kostenloses JWT Decoder Online",
-      "seo_description": "Decode und inspecte JWT online kostenlos. Ohne Verifizierung sieh den Header, Payload und die Signatur. Ein essentieller Tool für die Auth-Debugging.",
+      "name": "JWT Decoder & Analysator",
+      "description": "Kostenloses Online-Tool zum Dekodieren und Inspizieren von JWT-Token.",
+      "seo_title": "JWT Decoder - Kostenloser Online-Token-Analysator",
+      "seo_description": "Dekodieren Sie JWT-Token sofort. Analysieren Sie Header, Payload und Signatur in unserem kostenlosen Online-Tool. Keine Anmeldung erforderlich.",
       "enterToken": "Bitte geben Sie einen JWT Token ein",
       "invalidFormat": "Ungültiger JWT-Format",
       "invalidToken": "Ungültiger JWT Token",
@@ -1862,25 +1942,45 @@
       "issuedAt": "Erfasst am (iat)",
       "expires": "Ablaufdatum (exp)",
       "notBefore": "Nicht vor (nbf)",
-      "detailed_description": "Der JWT Decoder ist ein mächtiges Werkzeug, das es Benutzern ermöglicht, JSON Web Tokens (JWT) zu entschlüsseln und zu inspizieren. JWTs sind von der Industrie anerkannte Standard-Token, die verwendet werden, um Nutzlasten sicher zwischen verschiedenen Systemen zu übertragen. Diese Nutzlasten können beispielsweise Benutzerinformationen, Zugriffsrechte oder andere relevante Daten enthalten. Der JWT Decoder ermöglicht es Entwicklern und Sicherheitsexperten, die Struktur eines JWTs in seinen drei Hauptkomponenten – Header, Nutzlast (Payload) und Signatur – zu zerlegen und diese einzeln zu überprüfen. Dies ist besonders nützlich bei der Fehlersuche, der Analyse von Sicherheitsproblemen und der Validierung der Integrität von Token. Durch die Verwendung des JWT Decoder können Entwickler sicherstellen, dass die Token korrekt signiert sind und die erwarteten Daten enthalten. Dies ist unerlässlich für die Entwicklung und Wartung sicherer und zuverlässiger Anwendungen, insbesondere in Umgebungen, in denen Authentifizierung und Autorisierung von großer Bedeutung sind.",
+      "detailed_description": "Dieses kostenlose Online-Tool ermöglicht Entwicklern und Sicherheitsexperten die einfache Dekodierung und Analyse von JSON Web Tokens (JWT). Geben Sie einfach Ihren JWT-Token ein, um die strukturierten Inhalte von Header und Payload zu entschlüsseln und die Signatur zu überprüfen. Ideal für Debugging, Sicherheitsaudits und das Verständnis von API-Authentifizierung.",
       "usage_steps": [
-        "Öffnen Sie die JWT Decoder Seite und navigieren Sie zum Eingabefeld für den JWT-Token.",
-        "Fügen Sie den zu entschlüsselnden JWT-Token in das Eingabefeld ein. Stellen Sie sicher, dass der gesamte Token eingegeben wird, einschließlich aller Teile (Header, Payload und Signatur).",
-        "Klicken Sie auf die Schaltfläche 'Decode' oder drücken Sie die Enter-Taste, um den Token zu entschlüsseln.",
-        "Der Decoder zeigt nun die drei Hauptkomponenten des Tokens an: Header, Payload und Signatur. Jeder Teil wird separat angezeigt und kann detailliert überprüft werden.",
-        "Für die Payload können Sie die einzelnen Key-Value-Paare auf Validität und Richtigkeit überprüfen. Achten Sie darauf, ob die erwarteten Daten vorliegen und ob keine unerwarteten Felder vorhanden sind.",
-        "Falls erforderlich, können Sie den Token weiter analysieren oder modifizieren. Der Decoder bietet Optionen, um die Daten in verschiedenen Formaten anzuzeigen (z.B. JSON) und die Signatur zu überprüfen."
+        "Fügen Sie Ihren JWT-Token in das Eingabefeld ein.",
+        "Klicken Sie auf die Schaltfläche 'JWT dekodieren'.",
+        "Betrachten Sie die dekodierten Daten im Header-Abschnitt.",
+        "Überprüfen Sie die Nutzdaten (Payload) im separaten Bereich.",
+        "Analysieren Sie die Signatur und die Token-Validität."
       ],
       "usage_examples": [
-        "Ein Entwickler möchte sicherstellen, dass ein von einem Server generierter JWT-Token korrekt signiert ist und die erwarteten Nutzlastdaten enthält. Er verwendet den JWT Decoder, um den Token zu entschlüsseln und die Signatur zu validieren.",
-        "Ein Sicherheitsexperte untersucht einen verdächtigen JWT-Token, der in einem Log-File gefunden wurde. Er verwendet den Decoder, um die Token-Struktur zu überprüfen und mögliche Manipulationen zu erkennen.",
-        "Ein API-Entwickler testet die Authentifizierungsfunktion einer neuen API. Er generiert JWT-Token und verwendet den Decoder, um sicherzustellen, dass die API korrekte Token akzeptiert und ungültige Token ablehnt.",
-        "Ein Systemadministrator möchte die Konfiguration eines JWT-basierten Authentifizierungssystems überprüfen. Er verwendet den JWT Decoder, um die Tokens, die von der Anwendung generiert werden, zu analysieren und sicherzustellen, dass sie die erforderlichen Claims enthalten."
+        "Überprüfung eines eigenen Auth-Tokens nach der Entwicklung einer API.",
+        "Analyse eines JWT von einem Drittanbieter-Dienst zur Fehlersuche.",
+        "Sicherheitsprüfung, um zu verstehen, welche Daten ein Token enthält."
       ],
       "input": "Eingabe",
       "decode": "Decode",
       "copied": "Kopiert!",
-      "copy": "Kopieren"
+      "copy": "Kopieren",
+      "faqs": [
+        {
+          "question": "Kann dieses Tool auch verschlüsselte JWT (JWE) entschlüsseln?",
+          "answer": "Nein, dieses Tool dekodiert nur base64-codierte JWT. Es entschlüsselt keine verschlüsselten JWE-Token."
+        },
+        {
+          "question": "Werden meine eingegebenen Token gespeichert oder übertragen?",
+          "answer": "Nein, die Verarbeitung erfolgt vollständig clientseitig in Ihrem Browser. Keine Daten werden an unsere Server gesendet."
+        },
+        {
+          "question": "Welche JWT-Signaturalgorithmen werden unterstützt?",
+          "answer": "Das Tool zeigt die im Header angegebene Signaturmethode (z.B. HS256, RS256) an, validiert sie aber nicht aktiv."
+        },
+        {
+          "question": "Funktioniert der Decoder mit abgelaufenen oder ungültigen Token?",
+          "answer": "Ja, die reine Dekodierung funktioniert immer, auch wenn die Gültigkeitsdauer (exp) überschritten ist."
+        },
+        {
+          "question": "Kann ich das Ergebnis als JSON exportieren?",
+          "answer": "Ja, Sie können die dekodierten Header- und Payload-Daten als formatiertes JSON kopieren."
+        }
+      ]
     },
     "diff-checker": {
       "name": "Diff Checker",

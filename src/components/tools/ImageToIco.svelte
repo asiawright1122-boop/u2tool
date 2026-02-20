@@ -152,7 +152,7 @@
       {#if !image}
 <label class="block border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center cursor-pointer hover:border-blue-500">
           <input type="file" accept="image/*" onchange={handleImageUpload} class="hidden" />
-          <div class="text-4xl mb-2">🎯</div>
+          <div class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg></div>
           <p class="text-gray-600 dark:text-gray-300">{t('dropzone')}</p>
         </label>
 {:else}

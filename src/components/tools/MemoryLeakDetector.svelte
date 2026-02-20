@@ -107,13 +107,13 @@
                   </div>
                   <code class="block text-xs bg-gray-100 dark:bg-gray-800 p-2 rounded mb-2 font-mono">{issue.code}</code>
                   <p class="text-sm text-gray-600 dark:text-gray-400">{issue.description}</p>
-                  <p class="text-sm text-green-600 dark:text-green-400 mt-2">💡 {issue.fix}</p>
+                  <p class="text-sm text-green-600 dark:text-green-400 mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg> {issue.fix}</p>
                 </div>
 {/each}
             </div>
 {:else}
 <div class="p-6 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">
-              <div class="text-4xl mb-2">✅</div>
+              <div class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></div>
               <p class="text-green-700 dark:text-green-300 font-medium">No potential memory leaks detected!</p>
             </div>
 {/if}

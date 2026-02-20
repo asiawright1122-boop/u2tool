@@ -16,6 +16,7 @@
 
 import { tools, getToolsByCategory } from '@/config/tools';
 import type { Tool, ToolCategory } from '@/config/tools';
+import { getIconSvg } from '@/lib/icon-svg';
 
 interface Props {
   /** Current tool (to exclude from related list) */
@@ -109,11 +110,10 @@ function getToolName(slug: string): string {
               title={toolName}
             >
               <span
-                class="text-2xl mb-2 group-hover:scale-110 transition-transform"
+                class="text-blue-500 dark:text-blue-400 mb-2 group-hover:scale-110 transition-transform inline-flex"
                 aria-hidden="true"
-              >
-                {tool.icon}
-              </span>
+                set:html={getIconSvg(tool.icon, 24)}
+              />
               <span class="text-sm text-gray-700 dark:text-gray-300 text-center line-clamp-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                 {toolName}
               </span>

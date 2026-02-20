@@ -133,7 +133,7 @@
       <div class="tool-dropzone">
         <input type="file" accept=".xlsx,.xls" onchange={handleFileUpload} class="hidden" id="excel-viewer-upload" />
         <label for="excel-viewer-upload" class="cursor-pointer flex flex-col items-center">
-          <span class="text-4xl mb-2">👁️</span>
+          <span class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg></span>
           <span class="text-lg font-medium text-gray-700 dark:text-gray-300">{t('excelViewer.uploadFile')}</span>
           <span class="text-sm text-gray-500 dark:text-gray-400 mt-1">{t('excelViewer.supportedFormats')}</span>
         </label>

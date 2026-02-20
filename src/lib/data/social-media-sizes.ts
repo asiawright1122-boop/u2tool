@@ -19,7 +19,7 @@ export interface PlatformSizes {
 export const socialMediaSizes: PlatformSizes[] = [
   {
     platform: 'Instagram',
-    icon: '📸',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>',
     color: '#E4405F',
     sizes: [
       { name: 'Profile Photo', width: 320, height: 320, aspectRatio: '1:1', description: 'Displays at 110x110' },
@@ -33,7 +33,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'Facebook',
-    icon: '👤',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
     color: '#1877F2',
     sizes: [
       { name: 'Profile Photo', width: 170, height: 170, aspectRatio: '1:1', description: 'Displays at 170x170 on desktop' },
@@ -48,7 +48,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'Twitter/X',
-    icon: '🐦',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h.01"/><path d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20"/></svg>',
     color: '#000000',
     sizes: [
       { name: 'Profile Photo', width: 400, height: 400, aspectRatio: '1:1', description: 'Displays at 200x200' },
@@ -60,7 +60,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'LinkedIn',
-    icon: '💼',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>',
     color: '#0A66C2',
     sizes: [
       { name: 'Profile Photo', width: 400, height: 400, aspectRatio: '1:1' },
@@ -73,7 +73,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'YouTube',
-    icon: '▶️',
+    icon: '▶',
     color: '#FF0000',
     sizes: [
       { name: 'Channel Profile', width: 800, height: 800, aspectRatio: '1:1' },
@@ -85,7 +85,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'TikTok',
-    icon: '🎵',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>',
     color: '#000000',
     sizes: [
       { name: 'Profile Photo', width: 200, height: 200, aspectRatio: '1:1' },
@@ -95,7 +95,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'Pinterest',
-    icon: '📌',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="17" y2="22"/><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"/></svg>',
     color: '#E60023',
     sizes: [
       { name: 'Profile Photo', width: 165, height: 165, aspectRatio: '1:1' },
@@ -108,7 +108,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'Snapchat',
-    icon: '👻',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 10h.01"/><path d="M15 10h.01"/><path d="M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z"/></svg>',
     color: '#FFFC00',
     sizes: [
       { name: 'Snap Ad', width: 1080, height: 1920, aspectRatio: '9:16' },
@@ -118,7 +118,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'Discord',
-    icon: '🎮',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>',
     color: '#5865F2',
     sizes: [
       { name: 'Server Icon', width: 512, height: 512, aspectRatio: '1:1' },
@@ -129,7 +129,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'Twitch',
-    icon: '🎮',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg>',
     color: '#9146FF',
     sizes: [
       { name: 'Profile Photo', width: 256, height: 256, aspectRatio: '1:1' },
@@ -141,7 +141,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'WhatsApp',
-    icon: '💬',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>',
     color: '#25D366',
     sizes: [
       { name: 'Profile Photo', width: 500, height: 500, aspectRatio: '1:1' },
@@ -150,7 +150,7 @@ export const socialMediaSizes: PlatformSizes[] = [
   },
   {
     platform: 'Telegram',
-    icon: '✈️',
+    icon: '✈',
     color: '#0088CC',
     sizes: [
       { name: 'Profile Photo', width: 512, height: 512, aspectRatio: '1:1' },

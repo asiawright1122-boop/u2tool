@@ -113,7 +113,7 @@
       <!-- Transportation Section -->
       <div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
         <h3 class="text-lg font-medium text-blue-800 dark:text-blue-300 mb-4 flex items-center gap-2">
-          🚗 {t('transportation')}
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg> {t('transportation')}
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -190,7 +190,7 @@
       <!-- Energy Section -->
       <div class="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
         <h3 class="text-lg font-medium text-yellow-800 dark:text-yellow-300 mb-4 flex items-center gap-2">
-          ⚡ {t('homeEnergy')}
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg> {t('homeEnergy')}
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
@@ -232,7 +232,7 @@
       <!-- Lifestyle Section -->
       <div class="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
         <h3 class="text-lg font-medium text-green-800 dark:text-green-300 mb-4 flex items-center gap-2">
-          🥗 {t('lifestyle')}
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.13 1.33l-12.44 1.62"/></svg> {t('lifestyle')}
         </h3>
         <div>
           <label class="block text-sm text-gray-600 dark:text-gray-400 mb-2">
@@ -264,19 +264,19 @@
           
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div class="p-4 bg-white dark:bg-gray-800 rounded-lg text-center">
-              <div class="text-sm text-gray-500 dark:text-gray-400">🚗 {t('transportation')}</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg> {t('transportation')}</div>
               <div class="text-xl font-bold text-blue-600">{results.transport.toFixed(2)} t</div>
             </div>
             <div class="p-4 bg-white dark:bg-gray-800 rounded-lg text-center">
-              <div class="text-sm text-gray-500 dark:text-gray-400">⚡ {t('homeEnergy')}</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg> {t('homeEnergy')}</div>
               <div class="text-xl font-bold text-yellow-600">{results.energy.toFixed(2)} t</div>
             </div>
             <div class="p-4 bg-white dark:bg-gray-800 rounded-lg text-center">
-              <div class="text-sm text-gray-500 dark:text-gray-400">🥗 {t('lifestyle')}</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.13 1.33l-12.44 1.62"/></svg> {t('lifestyle')}</div>
               <div class="text-xl font-bold text-green-600">{results.lifestyle.toFixed(2)} t</div>
             </div>
             <div class="p-4 bg-white dark:bg-gray-800 rounded-lg text-center">
-              <div class="text-sm text-gray-500 dark:text-gray-400">🌍 {t('total')}</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> {t('total')}</div>
               <div class={`text-2xl font-bold ${getEmissionLevel(results.total).color}`}>
                 {results.total.toFixed(2)} t CO₂
               </div>
@@ -288,7 +288,7 @@
 
           <div class="p-4 bg-green-100 dark:bg-green-900/30 rounded-lg">
             <div class="flex items-center gap-3">
-              <span class="text-3xl">🌳</span>
+              <span class="text-3xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7l-2-2"/><path d="M17 8v.8A6 6 0 0 1 13.8 20H10A6.5 6.5 0 0 1 7 8h0a5 5 0 0 1 10 0Z"/><path d="m14 14-2 2"/></svg></span>
               <div>
                 <div class="text-sm text-gray-600 dark:text-gray-400">{t('treesNeeded')}</div>
                 <div class="text-xl font-bold text-green-700 dark:text-green-400">

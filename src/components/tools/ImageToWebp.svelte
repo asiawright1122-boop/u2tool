@@ -196,7 +196,7 @@
           onchange={handleImageUpload}
           class="hidden"
         />
-        <div class="text-4xl mb-2">🌐</div>
+        <div class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
         <p class="text-gray-600 dark:text-gray-300">{t('dropzone')}</p>
         <p class="text-sm text-gray-500">{t('supportedFormats')}</p>
       </div>

@@ -240,7 +240,7 @@
 <div class="max-w-full max-h-[400px]" >{@html sanitizeSvg(svgCode)}</div>
 {:else}
 <div class="text-gray-500 dark:text-gray-300 text-center">
-                <p class="text-4xl mb-2">📷</p>
+                <p class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></p>
                 <p>{t('noPreview')}</p>
               </div>
 {/if}

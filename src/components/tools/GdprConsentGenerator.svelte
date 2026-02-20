@@ -81,7 +81,7 @@
   <div style="max-width: 1200px; margin: 0 auto;">
     <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
       <div style="flex: 1; min-width: 300px;">
-        <h3 style="margin: 0 0 10px 0; color: ${textColor}; font-size: 18px;">🍪 ${t('bannerTitle')}</h3>
+        <h3 style="margin: 0 0 10px 0; color: ${textColor}; font-size: 18px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg> ${t('bannerTitle')}</h3>
         <p style="margin: 0; color: ${textColor}; font-size: 14px; line-height: 1.5;">
           ${config.websiteName} uses cookies to enhance your browsing experience, analyze site traffic, and personalize content.
           By clicking "Accept All", you consent to our use of cookies.

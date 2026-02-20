@@ -6,6 +6,8 @@
    * Matches the original Next.js PopularToolsCarousel design.
    */
 
+  import { getIconSvg } from '@/lib/icon-svg';
+
   interface ToolItem {
     slug: string;
     icon: string;
@@ -73,8 +75,8 @@
                        transition-all"
               >
                 <div class="flex items-start gap-4">
-                  <span class="text-3xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    {tool.icon}
+                  <span class="text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300 flex-shrink-0 inline-flex">
+                    {@html getIconSvg(tool.icon, 28)}
                   </span>
                   <div class="flex-1 min-w-0">
                     <h3 class="font-semibold text-lg mb-1 text-gray-900 dark:text-white

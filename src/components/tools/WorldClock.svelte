@@ -167,7 +167,7 @@
               ×
             </button>
             <div class="flex items-center gap-2 mb-2">
-              <span class="text-2xl">{isDaytime(city.timezone) ? '☀️' : '🌙'}</span>
+              <span class="text-2xl">{isDaytime(city.timezone) ? '☀' : '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>'}</span>
               <div>
                 <h3 class="font-semibold text-gray-800 dark:text-gray-200">{city.name}</h3>
                 <p class="text-xs text-gray-500 dark:text-gray-400">{getTimezoneOffset(city.timezone)}</p>

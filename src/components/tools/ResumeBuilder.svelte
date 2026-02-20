@@ -128,16 +128,16 @@ const langLabels = LANG_LEVEL_LABELS[locale] || LANG_LEVEL_LABELS.en;
             <p class="text-xl text-gray-600">{title || t('placeholders.title')}</p>
             <div class="flex flex-wrap gap-4 mt-2 text-sm text-gray-500">
               {#if email}
-<span>📧 {email}</span>
+<span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> {email}</span>
 {/if}
               {#if phone}
-<span>📱 {phone}</span>
+<span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg> {phone}</span>
 {/if}
               {#if location}
-<span>📍 {location}</span>
+<span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> {location}</span>
 {/if}
               {#if website}
-<span>🌐 {website}</span>
+<span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> {website}</span>
 {/if}
             </div>
           </div>
@@ -231,10 +231,10 @@ const langLabels = LANG_LEVEL_LABELS[locale] || LANG_LEVEL_LABELS.en;
                 {#if photo}
 <img src={photo} alt="Photo" class="w-20 h-20 rounded-full object-cover" />
 {:else}
-<div class="w-20 h-20 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-2xl">👤</div>
+<div class="w-20 h-20 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
 {/if}
                 <input bind:this={fileInputRef} type="file" accept="image/*" onchange={handlePhotoUpload} class="hidden" />
-                <button onclick={() => fileInputRef?.click()} class="absolute -bottom-1 -right-1 w-8 h-8 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700">📷</button>
+                <button onclick={() => fileInputRef?.click()} class="absolute -bottom-1 -right-1 w-8 h-8 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></button>
               </div>
               <div class="flex-1 grid grid-cols-2 gap-2">
                 <input value={name} onchange={e => name = e.target.value} placeholder={t('placeholders.name')} class="col-span-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white" />
@@ -260,7 +260,7 @@ const langLabels = LANG_LEVEL_LABELS[locale] || LANG_LEVEL_LABELS.en;
 <div  class="border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
                 <div class="flex justify-between">
                   <input value={exp.company} onchange={e => updateExperience(exp.id, 'company', e.target.value)} placeholder={t('company')} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                  <button onclick={() => removeExperience(exp.id)} class="ml-2 text-red-500 hover:text-red-700">🗑️</button>
+                  <button onclick={() => removeExperience(exp.id)} class="ml-2 text-red-500 hover:text-red-700"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg></button>
                 </div>
                 <input value={exp.position} onchange={e => updateExperience(exp.id, 'position', e.target.value)} placeholder={t('position')} class="w-full px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
                 <div class="flex gap-2 items-center">
@@ -287,7 +287,7 @@ const langLabels = LANG_LEVEL_LABELS[locale] || LANG_LEVEL_LABELS.en;
 <div  class="border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
                 <div class="flex justify-between">
                   <input value={edu.school} onchange={e => updateEducation(edu.id, 'school', e.target.value)} placeholder={t('school')} class="flex-1 px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
-                  <button onclick={() => removeEducation(edu.id)} class="ml-2 text-red-500 hover:text-red-700">🗑️</button>
+                  <button onclick={() => removeEducation(edu.id)} class="ml-2 text-red-500 hover:text-red-700"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg></button>
                 </div>
                 <div class="grid grid-cols-2 gap-2">
                   <input value={edu.degree} onchange={e => updateEducation(edu.id, 'degree', e.target.value)} placeholder={t('degree')} class="px-2 py-1 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm" />
