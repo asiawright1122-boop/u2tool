@@ -52,7 +52,7 @@
     { id: 'node-4', name: 'Category D', value: 40 },
   ]; }
 
-  let data = $state(() => getInitialData());
+  let data = $state(getInitialData());
 
   let chartTitle = $state('');
 

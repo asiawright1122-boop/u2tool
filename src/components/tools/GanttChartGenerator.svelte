@@ -35,6 +35,12 @@
     forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2'],
 };
 
+  // Utility functions
+  function parseDate(dateStr: string): number {
+    const d = new Date(dateStr);
+    return d.getTime();
+  }
+
   // Types
   interface GanttTask {
     id: string;

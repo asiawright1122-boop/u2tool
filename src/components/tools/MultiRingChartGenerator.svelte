@@ -21,6 +21,14 @@
   import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
   import { useChartTheme } from '@/hooks/useChartTheme';
 
+  // Default data
+  const defaultDataValues = [
+    { id: 'def-1', nameKey: 'revenue', value: 80, color: '#5470c6' },
+    { id: 'def-2', nameKey: 'expenses', value: 60, color: '#91cc75' },
+    { id: 'def-3', nameKey: 'profit', value: 45, color: '#fac858' },
+    { id: 'def-4', nameKey: 'growth', value: 70, color: '#ee6666' },
+  ];
+
   // Types
   interface RingData {
   id: string;
@@ -33,7 +41,7 @@
 
   let isInitialized = $state(false);
 
-  let data = $state(() =>
+  let data = $state(
     defaultDataValues.map(item => ({ id: item.id, name: item.nameKey, value: item.value, color: item.color })));
 
   let chartTitle = $state('');

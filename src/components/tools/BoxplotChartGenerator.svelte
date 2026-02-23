@@ -35,6 +35,13 @@
   forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2'],
 };
 
+  // Default data
+  const defaultSeriesData = [
+    { nameKey: 'A', data: [65, 72, 58, 80, 45, 90, 55, 68, 75, 62] },
+    { nameKey: 'B', data: [70, 55, 82, 60, 78, 45, 88, 52, 65, 70] },
+    { nameKey: 'C', data: [50, 80, 65, 55, 90, 70, 48, 85, 60, 75] },
+  ];
+
   // Types
   interface BoxplotSeries {
   name: string;
@@ -51,7 +58,7 @@
 
   let isInitialized = $state(false);
 
-  let series = $state(() => 
+  let series = $state(
     defaultSeriesData.map(item => ({ name: `Group ${item.nameKey}`, data: item.data })));
 
   let timerRef = $state(null);

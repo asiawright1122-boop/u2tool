@@ -35,6 +35,15 @@
   forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#1b4332'],
 };
 
+  // Default data
+  const defaultDataValues = [
+    { id: 'def-1', categoryKey: 'q1', values: [30, 40, 30] },
+    { id: 'def-2', categoryKey: 'q2', values: [25, 35, 40] },
+    { id: 'def-3', categoryKey: 'q3', values: [35, 30, 35] },
+    { id: 'def-4', categoryKey: 'q4', values: [20, 45, 35] },
+  ];
+  const defaultSeriesNames = ['Series 1', 'Series 2', 'Series 3'];
+
   // Types
   interface DataRow {
   id: string;
@@ -46,7 +55,7 @@
 
   let isInitialized = $state(false);
 
-  let data = $state(() =>
+  let data = $state(
     defaultDataValues.map(item => ({ id: item.id, category: item.categoryKey, values: item.values })));
 
   let seriesNames = $state(defaultSeriesNames);

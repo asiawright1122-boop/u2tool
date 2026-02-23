@@ -35,6 +35,28 @@
   forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#1b4332'],
 };
 
+  // Default data
+  const defaultDataValues = [
+    { id: 'def-1', categoryKey: 'productA', value: 320 },
+    { id: 'def-2', categoryKey: 'productB', value: 240 },
+    { id: 'def-3', categoryKey: 'productC', value: 180 },
+    { id: 'def-4', categoryKey: 'productD', value: 290 },
+    { id: 'def-5', categoryKey: 'productE', value: 150 },
+  ];
+
+  function parseCSV(csvText: string): { category: string; value: number }[] {
+    const lines = csvText.trim().split('\n');
+    if (lines.length < 2) return [];
+    const result: { category: string; value: number }[] = [];
+    for (let i = 1; i < lines.length; i++) {
+      const cols = lines[i].split(',').map(c => c.trim());
+      if (cols.length >= 2) {
+        result.push({ category: cols[0], value: Number(cols[1]) || 0 });
+      }
+    }
+    return result;
+  }
+
   // Types
   interface DataRow {
   id: string;
@@ -46,7 +68,7 @@
 
   let isInitialized = $state(false);
 
-  let data = $state(() =>
+  let data = $state(
     defaultDataValues.map(item => ({ id: item.id, category: item.categoryKey, value: item.value })));
 
   let chartTitle = $state('');

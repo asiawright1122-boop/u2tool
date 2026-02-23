@@ -65,7 +65,7 @@
     },
   ]; }
 
-  let series = $state(() => getInitialData());
+  let series = $state(getInitialData());
 
   let chartTitle = $state('');
 

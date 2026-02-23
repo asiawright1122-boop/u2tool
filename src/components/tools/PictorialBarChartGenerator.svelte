@@ -28,6 +28,15 @@
   forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7'],
 };
 
+  // Default data
+  const defaultDataValues = [
+    { id: 'def-1', categoryKey: 'productA', value: 320 },
+    { id: 'def-2', categoryKey: 'productB', value: 240 },
+    { id: 'def-3', categoryKey: 'productC', value: 180 },
+    { id: 'def-4', categoryKey: 'productD', value: 290 },
+    { id: 'def-5', categoryKey: 'productE', value: 150 },
+  ];
+
   // Types
   interface DataRow {
   id: string;
@@ -39,7 +48,7 @@
 
   let isInitialized = $state(false);
 
-  let data = $state(() =>
+  let data = $state(
     defaultDataValues.map(item => ({ id: item.id, category: item.categoryKey, value: item.value })));
 
   let chartTitle = $state('');

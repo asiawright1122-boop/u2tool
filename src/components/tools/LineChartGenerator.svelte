@@ -35,6 +35,35 @@
   forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#1b4332'],
 };
 
+  // Default data
+  const defaultCategories = ['jan', 'feb', 'mar', 'apr', 'may', 'jun'];
+  const defaultSeriesData = [
+    { id: 'def-1', nameKey: 'sales', data: [150, 230, 224, 218, 135, 147] },
+    { id: 'def-2', nameKey: 'profit', data: [80, 120, 110, 95, 70, 85] },
+  ];
+
+  function parseMultiSeriesCSV(csvText: string): { categories: string[]; seriesData: { name: string; data: number[] }[] } | null {
+    const lines = csvText.trim().split('\n');
+    if (lines.length < 2) return null;
+    const headers = lines[0].split(',').map(h => h.trim());
+    if (headers.length < 2) return null;
+    const categories: string[] = [];
+    const seriesMap: Record<string, number[]> = {};
+    for (let i = 1; i < headers.length; i++) {
+      seriesMap[headers[i]] = [];
+    }
+    for (let i = 1; i < lines.length; i++) {
+      const cols = lines[i].split(',').map(c => c.trim());
+      if (cols.length < 2) continue;
+      categories.push(cols[0]);
+      for (let j = 1; j < headers.length; j++) {
+        seriesMap[headers[j]].push(Number(cols[j]) || 0);
+      }
+    }
+    const seriesData = Object.entries(seriesMap).map(([name, data]) => ({ name, data }));
+    return { categories, seriesData };
+  }
+
   // Types
   type LineStyleType = 'solid' | 'dashed' | 'dotted';
   interface DataSeries {
@@ -47,10 +76,10 @@
 
   let isInitialized = $state(false);
 
-  let categories = $state(() =>
+  let categories = $state(
     defaultCategories.map(key => key));
 
-  let series = $state(() =>
+  let series = $state(
     defaultSeriesData.map(item => ({ id: item.id, name: item.nameKey, data: item.data })));
 
   let chartTitle = $state('');

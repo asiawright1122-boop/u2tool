@@ -54,7 +54,7 @@
     { id: 'init-5', name: 'Show', value: 20 },
   ]; }
 
-  let data = $state(() => getInitialData());
+  let data = $state(getInitialData());
 
   let chartTitle = $state('');
 

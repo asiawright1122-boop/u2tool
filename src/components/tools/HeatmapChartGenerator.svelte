@@ -58,11 +58,11 @@
     return data;
   }
 
-  let xAxisData = $state(() => getInitialXAxis());
+  let xAxisData = $state(getInitialXAxis());
 
-  let yAxisData = $state(() => getInitialYAxis());
+  let yAxisData = $state(getInitialYAxis());
 
-  let heatmapData = $state(() => getInitialData());
+  let heatmapData = $state(getInitialData());
 
   let chartTitle = $state('');
 

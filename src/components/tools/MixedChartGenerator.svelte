@@ -35,6 +35,16 @@
   forest: { bar: '#2d6a4f', line: '#95d5b2' },
 };
 
+  // Default data
+  const defaultDataValues = [
+    { id: 'def-1', categoryKey: 'jan', barValue: 150, lineValue: 80 },
+    { id: 'def-2', categoryKey: 'feb', barValue: 230, lineValue: 120 },
+    { id: 'def-3', categoryKey: 'mar', barValue: 224, lineValue: 110 },
+    { id: 'def-4', categoryKey: 'apr', barValue: 218, lineValue: 95 },
+    { id: 'def-5', categoryKey: 'may', barValue: 135, lineValue: 70 },
+    { id: 'def-6', categoryKey: 'jun', barValue: 147, lineValue: 85 },
+  ];
+
   // Types
   interface DataRow {
   id: string;
@@ -47,7 +57,7 @@
 
   let isInitialized = $state(false);
 
-  let data = $state(() =>
+  let data = $state(
     defaultDataValues.map(item => ({ id: item.id, category: item.categoryKey, barValue: item.barValue, lineValue: item.lineValue })));
 
   let chartTitle = $state('');

@@ -50,5 +50,6 @@
     <p>{error}</p>
   </div>
 {:else if loadedComponent}
-  <svelte:component this={loadedComponent} {locale} {translations} />
+  {@const Component = loadedComponent}
+  <Component {locale} {translations} />
 {/if}

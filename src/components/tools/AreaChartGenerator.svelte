@@ -54,9 +54,9 @@
     { id: 'series-1', name: 'Series 1', values: [120, 132, 101, 134, 90, 230] },
   ]; }
 
-  let categories = $state(() => getInitialCategories());
+  let categories = $state(getInitialCategories());
 
-  let series = $state(() => getInitialData());
+  let series = $state(getInitialData());
 
   let chartTitle = $state('');
 

@@ -59,7 +59,7 @@
 
   let smooth = $state(false);
 
-  let dimensions = $state(() => [
+  let dimensions = $state([
     { name: 'Dimension 1', min: 0, max: 100 },
     { name: 'Dimension 2', min: 0, max: 100 },
     { name: 'Dimension 3', min: 0, max: 100 },
@@ -67,7 +67,7 @@
     { name: 'Dimension 5', min: 0, max: 100 },
   ] as Dimension[]);
 
-  let seriesNames = $state(() => [
+  let seriesNames = $state([
     'Series A',
     'Series B',
     'Series C',

@@ -35,6 +35,20 @@
   forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#1b4332'],
 };
 
+  // Default data
+  const defaultIndicators = [
+    { id: 'ind-1', nameKey: 'sales', max: 100 },
+    { id: 'ind-2', nameKey: 'admin', max: 100 },
+    { id: 'ind-3', nameKey: 'tech', max: 100 },
+    { id: 'ind-4', nameKey: 'support', max: 100 },
+    { id: 'ind-5', nameKey: 'develop', max: 100 },
+    { id: 'ind-6', nameKey: 'marketing', max: 100 },
+  ];
+  const defaultSeriesData = [
+    { id: 'ser-1', nameKey: 'budget', values: [80, 90, 70, 85, 95, 60] },
+    { id: 'ser-2', nameKey: 'actual', values: [70, 80, 85, 75, 80, 90] },
+  ];
+
   // Types
   interface RadarIndicator {
   id: string;
@@ -51,10 +65,10 @@
 
   let isInitialized = $state(false);
 
-  let indicators = $state(() => 
+  let indicators = $state(
     defaultIndicators.map(item => ({ id: item.id, name: item.nameKey, max: item.max })));
 
-  let series = $state(() => 
+  let series = $state(
     defaultSeriesData.map(item => ({ id: item.id, name: item.nameKey, values: item.values })));
 
   let chartTitle = $state('');
