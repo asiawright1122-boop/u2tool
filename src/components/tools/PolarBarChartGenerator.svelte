@@ -72,7 +72,29 @@
 
   let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
-  function getChartOption(): EChartsOption {
+  $effect(() => {
+    if (!isInitialized) {
+      chartTitle = t('defaultTitle');
+      data = [
+        { name: t('weekMon'), value: 120 },
+        { name: t('weekTue'), value: 200 },
+        { name: t('weekWed'), value: 150 },
+        { name: t('weekThu'), value: 80 },
+        { name: t('weekFri'), value: 70 },
+        { name: t('weekSat'), value: 110 },
+        { name: t('weekSun'), value: 130 },
+      ];
+      isInitialized = true;
+    }
+  });  onDestroy(() => {
+    if (timerRef) clearTimeout(timerRef);
+  });
+
+  // Functions
+  const chartTheme = useChartTheme();
+  
+  // Cache chart options to avoid unnecessary recalculations
+  const chartOption = $derived(() => {
     const colors = colorThemes[colorTheme as keyof typeof colorThemes];
     const maxValue = Math.max(...data.map(d => d.value));
 
@@ -137,28 +159,8 @@
         },
       ],
     } as EChartsOption;
-  }
-
-  $effect(() => {
-    if (!isInitialized) {
-      chartTitle = t('defaultTitle');
-      data = [
-        { name: t('weekMon'), value: 120 },
-        { name: t('weekTue'), value: 200 },
-        { name: t('weekWed'), value: 150 },
-        { name: t('weekThu'), value: 80 },
-        { name: t('weekFri'), value: 70 },
-        { name: t('weekSat'), value: 110 },
-        { name: t('weekSun'), value: 130 },
-      ];
-      isInitialized = true;
-    }
-  });  onDestroy(() => {
-    if (timerRef) clearTimeout(timerRef);
   });
 
-  // Functions
-  const chartTheme = useChartTheme();
   function exportChart(format: 'png' | 'svg') {
     if (!chartRef) {
       console.warn('Chart ref not available');
@@ -359,7 +361,7 @@
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
               bind:this={chartRef as any}
-              option={getChartOption()}
+              option={chartOption}
               style="height: 400px; width: 100%"
               notMerge={true}
               lazyUpdate={true}
