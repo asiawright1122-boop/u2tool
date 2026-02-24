@@ -1,24 +1,4 @@
 ---
-export const prerender = false;
-
-// Redirect root to user's browser language or default to English
-const acceptLanguage = Astro.request.headers.get('accept-language') || '';
-const supportedLocales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
-
-// Extract language codes from Accept-Language header
-const languagePreferences = acceptLanguage
-  .split(',')
-  .map(item => item.trim().split(';')[0].split('-')[0])
-  .filter(lang => lang);
-
-// Find the first supported language
-let redirectLocale = 'en'; // Default to English
-for (const lang of languagePreferences) {
-  if (supportedLocales.includes(lang)) {
-    redirectLocale = lang;
-    break;
-  }
-}
-
-return Astro.redirect(`/${redirectLocale}`);
+// Redirect root to English homepage (static fallback)
+return Astro.redirect('/en');
 ---
