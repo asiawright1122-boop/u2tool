@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['multi-ring-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['multi-ring-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -18,7 +18,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   // Default data
@@ -52,7 +53,7 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function generateId() {
     const newId = `${baseId}-${idCounter}`;
@@ -91,10 +92,10 @@
         text: chartTitle,
         left: 'center',
         top: 20,
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'item',
+        trigger: 'item' as const as const as const as const,
         formatter: (params: unknown) => {
           const p = params as { name: string; value: number };
           if (!p.name) return '';
@@ -102,7 +103,7 @@
         },
       },
       legend: {
-        orient: 'vertical',
+        orient: 'vertical' as const as const as const as const,
         right: '5%',
         top: 'center',
         data: data.map(d => d.name),
@@ -167,7 +168,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -207,16 +208,16 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input type="text" bind:value={chartTitle}
                   class="tool-input" placeholder={t('chartTitlePlaceholder')} />
               </div>
               <div>
-                <label class="block text-sm font-medium mb-1">{t('ringWidth')}: {ringWidth}px</label>
-                <input type="range" min="8" max="25" value={ringWidth} onchange={(e) => ringWidth = Number(e.target.value)}
+                <label for="{t('ringWidth')}: {ringWidth}px" class="block text-sm font-medium mb-1">{t('ringWidth')}: {ringWidth}px</label>
+                <input type="range" min="8" max="25" value={ringWidth} onchange={(e) => ringWidth = Number((e.target as HTMLInputElement).value)}
                   class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" />
               </div>
               <div class="flex flex-wrap gap-6 text-sm">
@@ -236,11 +237,11 @@
             <div class="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-3 space-y-2">
               {#each data as ring (ring.id)}
 <div  class="flex items-center gap-2 p-2 bg-white dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-600">
-                  <input type="color" value={ring.color} onchange={(e) => updateRing(ring.id, 'color', e.target.value)}
+                  <input type="color" value={ring.color} onchange={(e) => updateRing(ring.id, 'color', (e.target as HTMLInputElement).value)}
                     class="w-8 h-8 rounded cursor-pointer" />
-                  <input type="text" value={ring.name} onchange={(e) => updateRing(ring.id, 'name', e.target.value)}
+                  <input type="text" value={ring.name} onchange={(e) => updateRing(ring.id, 'name', (e.target as HTMLInputElement).value)}
                     class="flex-1 px-2 py-1 bg-transparent border border-gray-200 dark:border-gray-600 rounded text-sm" placeholder={t('ringName')} />
-                  <input type="number" min="0" max="100" value={ring.value} onchange={(e) => updateRing(ring.id, 'value', e.target.value)}
+                  <input type="number" min="0" max="100" value={ring.value} onchange={(e) => updateRing(ring.id, 'value', (e.target as HTMLInputElement).value)}
                     class="w-16 px-2 py-1 bg-transparent border border-gray-200 dark:border-gray-600 rounded text-sm text-center" />
                   <span class="text-sm text-gray-500">%</span>
                   <button onclick={() => deleteRing(ring.id)} class="text-red-400 hover:text-red-300 disabled:opacity-50" disabled={data.length <= 1}>✕</button>
@@ -251,10 +252,10 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
+              bind:this={chartRef as any} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
               lazyUpdate={true}
             />
           </div>

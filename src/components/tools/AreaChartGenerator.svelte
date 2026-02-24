@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['area-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['Area'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,21 +25,22 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
-  default: ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4'],
-  ocean: ['#0077b6', '#00b4d8', '#90e0ef', '#48cae4', '#023e8a', '#0096c7', '#caf0f8', '#03045e'],
-  sunset: ['#ff6b6b', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3', '#ff9f43', '#ee5a24'],
-  forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#1b4332'],
-};
+    default: ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4'],
+    ocean: ['#0077b6', '#00b4d8', '#90e0ef', '#48cae4', '#023e8a', '#0096c7', '#caf0f8', '#03045e'],
+    sunset: ['#ff6b6b', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3', '#ff9f43', '#ee5a24'],
+    forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#1b4332'],
+  };
 
   // Types
   interface AreaSeries {
-  id: string;
-  name: string;
-  values: number[];
+    id: string;
+    name: string;
+    values: number[];
 }
 
   let idCounter = $state(100);
@@ -74,7 +75,7 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function generateId() {
     const newId = `${baseId}-${idCounter}`;
@@ -83,17 +84,17 @@
   }
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     return {
       backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'axis',
+        trigger: 'axis' as const as const as const as const,
         axisPointer: { type: 'cross' },
       },
       legend: {
@@ -109,7 +110,7 @@
         containLabel: true,
       },
       xAxis: {
-        type: 'category',
+        type: 'category' as const as const as const as const,
         boundaryGap: false,
         data: categories,
         splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
@@ -117,7 +118,7 @@
         axisLabel: { color: chartTheme.axisLabelColor },
       },
       yAxis: {
-        type: 'value',
+        type: 'value' as const as const as const as const,
         splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
         axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
         axisLabel: { color: chartTheme.axisLabelColor },
@@ -148,13 +149,16 @@
       ];
       isInitialized = true;
     }
-  });  onDestroy(() => {
+  });
+
+  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
   // Functions
   const baseId = 'id-' + Math.random().toString(36).slice(2, 9);
   const chartTheme = useChartTheme();
+
   function addCategory() {
     const newCategory = `${t('category')}${categories.length + 1}`;
     categories = [...categories, newCategory];
@@ -203,7 +207,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -263,10 +267,10 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -276,10 +280,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
-                  onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                  onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
                 >
                   <option value="default">{t('themeDefault')}</option>
@@ -290,13 +294,13 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('fillOpacity')}: {(fillOpacity * 100).toFixed(0)}%</label>
+                <label for="{t('fillOpacity')}: {(fillOpacity * 100).toFixed(0)}%" class="block text-sm font-medium mb-1">{t('fillOpacity')}: {(fillOpacity * 100).toFixed(0)}%</label>
                 <input
                   type="range"
                   min="0"
                   max="100"
                   value={fillOpacity * 100}
-                  onchange={(e) => fillOpacity = Number(e.target.value) / 100}
+                  onchange={(e) => fillOpacity = Number((e.target as HTMLInputElement).value) / 100}
                   class="w-full"
                 />
               </div>
@@ -363,7 +367,7 @@
                           <input
                             type="text"
                             value={s.name}
-                            onchange={(e) => updateSeriesName(s.id, e.target.value)}
+                            onchange={(e) => updateSeriesName(s.id, (e.target as HTMLInputElement).value)}
                             class="w-20 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-xs"
                           />
                           <button
@@ -386,7 +390,7 @@
                         <input
                           type="text"
                           value={cat}
-                          onchange={(e) => updateCategory(catIndex, e.target.value)}
+                          onchange={(e) => updateCategory(catIndex, (e.target as HTMLInputElement).value)}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
@@ -395,7 +399,7 @@
                           <input
                             type="number"
                             value={s.values[catIndex]}
-                            onchange={(e) => updateSeriesValue(s.id, catIndex, Number(e.target.value) || 0)}
+                            onchange={(e) => updateSeriesValue(s.id, catIndex, Number((e.target as HTMLInputElement).value) || 0)}
                             class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                           />
                         </td>
@@ -419,10 +423,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

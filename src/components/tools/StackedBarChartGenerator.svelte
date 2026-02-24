@@ -8,16 +8,18 @@
 
   let { locale, translations }: Props = $props();
 
+  const translationsTyped = $derived(translations as Record<string, Record<string, unknown>>);
+
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['stacked-bar-chart-generator'] as Record<string, unknown> || {};
+    const scope = translationsTyped['tools']?.['stacked-bar-chart-generator'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
     return typeof value === 'string' ? value : `MISSING: tools.stacked-bar-chart-generator.${key}`;
   }
   function tg(key: string): string {
-    const scope = translations['tools'] as Record<string, unknown> || {};
+    const scope = translationsTyped['tools'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +27,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -62,22 +65,22 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
-  let fileInputRef = $state(null);
+  let fileInputRef = $state<HTMLInputElement | null>(null);
 
-  function getChartOption() {
-    const colors = colorThemes[colorTheme];
+  function getChartOption(): EChartsOption {
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     return {
       backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'axis',
+        trigger: 'axis' as const,
         axisPointer: { type: 'shadow' },
       },
       legend: {
@@ -93,14 +96,14 @@
         containLabel: true,
       },
       xAxis: {
-        type: horizontal ? 'value' : 'category',
+        type: horizontal ? 'value' as const : 'category' as const,
         data: horizontal ? undefined : categories,
         splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
         axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
         axisLabel: { color: chartTheme.axisLabelColor },
       },
       yAxis: {
-        type: horizontal ? 'category' : 'value',
+        type: horizontal ? 'category' as const : 'value' as const,
         data: horizontal ? categories : undefined,
         splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
         axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
@@ -115,7 +118,7 @@
         itemStyle: { color: colors[index % colors.length] },
         emphasis: { focus: 'series' },
       })),
-    };
+    } as EChartsOption;
   }
 
   $effect(() => {
@@ -174,7 +177,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef.getEchartsInstance?.();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -208,7 +211,7 @@
     }
   }
   function handleCsvImport(event: Event) {
-    const file = event.target.files?.[0];
+    const file = (event.target as HTMLInputElement).files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
@@ -237,7 +240,7 @@
       if (newCategories.length > 0 && newSeries.length > 0) {
         categories = newCategories;
         series = newSeries;
-        alert(t('csvImportSuccess', { count: newCategories.length }));
+        alert(t('csvImportSuccess').replace('{count}', String(newCategories.length)));
       } else {
         alert(t('csvImportError'));
       }
@@ -262,15 +265,15 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input type="text" bind:value={chartTitle} class="tool-input" placeholder={t('chartTitlePlaceholder')} />
               </div>
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
-                <select value={colorTheme} onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes} class="tool-input">
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <select value={colorTheme} onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes} class="tool-input">
                   <option value="default">{t('themeDefault')}</option>
                   <option value="ocean">{t('themeOcean')}</option>
                   <option value="sunset">{t('themeSunset')}</option>
@@ -287,7 +290,7 @@
 
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium">{t('dataEditor')}</label>
+              <span class="text-sm font-medium">{t('dataEditor')}</span>
               <div class="flex gap-2">
                 <button onclick={addCategory} class="btn-secondary btn-sm">+ {t('addCategory')}</button>
                 <button onclick={addSeries} class="btn-secondary btn-sm">+ {t('addSeries')}</button>
@@ -301,7 +304,7 @@
                     {#each series as s, i (i)}
 <th  class="text-left py-2 px-2 font-medium">
                         <div class="flex items-center gap-1">
-                          <input type="text" value={s.name} onchange={(e) => updateSeriesName(i, e.target.value)} class="w-20 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-xs" />
+                          <input type="text" value={s.name} onchange={(e) => updateSeriesName(i, (e.target as HTMLInputElement).value)} class="w-20 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-xs" />
                           {#if series.length > 1}
 <button onclick={() => deleteSeries(i)} class="text-red-400 hover:text-red-300 text-xs">✕</button>
 {/if}
@@ -315,11 +318,11 @@
                   {#each categories as cat, catIndex (catIndex)}
 <tr  class="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
                       <td class="py-2 px-2 min-w-[120px]">
-                        <input type="text" value={cat} onchange={(e) => updateCategory(catIndex, e.target.value)} class="w-full min-w-[100px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
+                        <input type="text" value={cat} onchange={(e) => updateCategory(catIndex, (e.target as HTMLInputElement).value)} class="w-full min-w-[100px] px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
                       </td>
                       {#each series as s, seriesIndex (seriesIndex)}
 <td  class="py-2 px-2">
-                          <input type="number" value={s.values[catIndex]} onchange={(e) => updateSeriesValue(seriesIndex, catIndex, parseFloat(e.target.value) || 0)} class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
+                          <input type="number" value={s.values[catIndex]} onchange={(e) => updateSeriesValue(seriesIndex, catIndex, parseFloat((e.target as HTMLInputElement).value) || 0)} class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
                         </td>
 {/each}
                       <td class="py-2 px-2">
@@ -334,10 +337,10 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
+              bind:this={chartRef as any} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
               lazyUpdate={true}
             />
           </div>

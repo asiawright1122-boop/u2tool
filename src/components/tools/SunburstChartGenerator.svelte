@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['sunburst-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['sunburst-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -89,7 +90,7 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   let parsedData = $derived.by(() => {
     try {
@@ -101,7 +102,7 @@
   });
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
     const data = parsedData.data;
 
     return {
@@ -110,10 +111,10 @@
         text: chartTitle,
         left: 'center',
         top: 10,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 16, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'item',
+        trigger: 'item' as const as const as const as const,
         formatter: '{b}: {c}',
         backgroundColor: chartTheme.tooltipBg,
         borderColor: chartTheme.tooltipBorder,
@@ -147,7 +148,7 @@
               r: `${outerRadius}%`,
               label: {
                 show: showLabel,
-                position: 'outside',
+                position: 'outside' as const as const as const,
                 padding: 3,
                 silent: false,
               },
@@ -183,7 +184,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -300,7 +301,7 @@
                 <label class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
-                  onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                  onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
                 >
                   <option value="default">{t('themeDefault')}</option>
@@ -318,7 +319,7 @@
                     min={0}
                     max={40}
                     value={innerRadius}
-                    onchange={(e) => innerRadius = Number(e.target.value)}
+                    onchange={(e) => innerRadius = Number((e.target as HTMLInputElement).value)}
                     class="w-full"
                   />
                 </div>
@@ -329,7 +330,7 @@
                     min={50}
                     max={95}
                     value={outerRadius}
-                    onchange={(e) => outerRadius = Number(e.target.value)}
+                    onchange={(e) => outerRadius = Number((e.target as HTMLInputElement).value)}
                     class="w-full"
                   />
                 </div>
@@ -369,7 +370,7 @@
           <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

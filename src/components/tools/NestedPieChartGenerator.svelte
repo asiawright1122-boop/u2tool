@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['nested-pie-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['nested-pie-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -18,7 +18,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -68,7 +69,7 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function generateId() {
     const newId = `${baseId}-${idCounter}`;
@@ -77,7 +78,7 @@
   }
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     const innerChartData = innerData.map((d, idx) => ({
       value: d.value,
@@ -101,10 +102,10 @@
         text: chartTitle,
         left: 'center',
         top: 10,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 16, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'item',
+        trigger: 'item' as const as const as const as const,
         formatter: '{b}: {c} ({d}%)',
       },
       legend: {
@@ -229,7 +230,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -277,16 +278,16 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input type="text" bind:value={chartTitle}
                   class="tool-input" placeholder={t('chartTitlePlaceholder')} />
               </div>
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
-                <select value={colorTheme} onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes} class="tool-input">
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <select value={colorTheme} onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes} class="tool-input">
                   <option value="default">{t('themeDefault')}</option>
                   <option value="ocean">{t('themeOcean')}</option>
                   <option value="sunset">{t('themeSunset')}</option>
@@ -309,9 +310,9 @@
               {#each innerData as item (item.id)}
 <div  class="p-3 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
                   <div class="flex items-center gap-2 mb-2">
-                    <input type="text" value={item.name} onchange={(e) => updateInnerItem(item.id, 'name', e.target.value)}
+                    <input type="text" value={item.name} onchange={(e) => updateInnerItem(item.id, 'name', (e.target as HTMLInputElement).value)}
                       class="flex-1 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
-                    <input type="number" value={item.value} onchange={(e) => updateInnerItem(item.id, 'value', e.target.value)}
+                    <input type="number" value={item.value} onchange={(e) => updateInnerItem(item.id, 'value', (e.target as HTMLInputElement).value)}
                       class="w-16 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
                     <button onclick={() => deleteInnerItem(item.id)} class="text-red-400 hover:text-red-300 disabled:opacity-50" disabled={innerData.length <= 1}>✕</button>
                   </div>
@@ -322,9 +323,9 @@
                     </div>
                     {#each outerData.filter(d => d.parentId === item.id) as sub (sub.id)}
 <div  class="flex items-center gap-2">
-                        <input type="text" value={sub.name} onchange={(e) => updateOuterItem(sub.id, 'name', e.target.value)}
+                        <input type="text" value={sub.name} onchange={(e) => updateOuterItem(sub.id, 'name', (e.target as HTMLInputElement).value)}
                           class="flex-1 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-xs" />
-                        <input type="number" value={sub.value} onchange={(e) => updateOuterItem(sub.id, 'value', e.target.value)}
+                        <input type="number" value={sub.value} onchange={(e) => updateOuterItem(sub.id, 'value', (e.target as HTMLInputElement).value)}
                           class="w-14 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-xs" />
                         <button onclick={() => deleteOuterItem(sub.id)} class="text-red-400 hover:text-red-300 text-xs">✕</button>
                       </div>
@@ -337,10 +338,10 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
+              bind:this={chartRef as any} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
               lazyUpdate={true}
             />
           </div>

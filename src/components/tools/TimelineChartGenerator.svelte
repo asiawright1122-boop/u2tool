@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['timeline-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['timeline-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -58,10 +59,10 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function getChartOption() {
-        const colors = colorThemes[colorTheme];
+        const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
         // Map events to ECharts data
         // Vertical: X fixed, Y varies
@@ -96,21 +97,21 @@
             title: {
                 text: chartTitle,
                 left: 'center',
-                textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+                textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
             },
-            tooltip: { trigger: 'item' },
+            tooltip: { trigger: 'item' as const as const as const as const },
             grid: {
                 top: '10%', bottom: '10%', left: '10%', right: '10%'
             },
             xAxis: {
                 show: false,
-                type: 'value',
+                type: 'value' as const as const as const as const,
                 min: direction === 'vertical' ? -1 : -0.5,
                 max: direction === 'vertical' ? 1 : events.length - 0.5,
             },
             yAxis: {
                 show: false,
-                type: 'value',
+                type: 'value' as const as const as const as const,
                 min: direction === 'vertical' ? -0.5 : -1,
                 max: direction === 'vertical' ? events.length - 0.5 : 1,
             },
@@ -170,7 +171,7 @@
             return;
         }
         
-        const echartInstance = chartRef.getEchartsInstance();
+        const echartInstance = chartRef?.getEchartsInstance();
         if (!echartInstance) {
             console.warn('ECharts instance not ready');
             return;
@@ -222,7 +223,7 @@
                         <div class="flex gap-4">
                             <select
                                 value={colorTheme}
-                                onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                                onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                                 class="tool-input"
                             >
                                 <option value="default">{t('themeDefault')}</option>
@@ -232,7 +233,7 @@
                             </select>
                             <select
                                 value={direction}
-                                onchange={(e) => direction = e.target.value as 'vertical' | 'horizontal'}
+                                onchange={(e) => direction = (e.target as HTMLInputElement).value as 'vertical' | 'horizontal'}
                                 class="tool-input"
                             >
                                 <option value="vertical">{t('vertical')}</option>
@@ -259,14 +260,14 @@
                                         <input
                                             type="text"
                                             value={event.year}
-                                            onchange={(e) => updateEvent(index, 'year', e.target.value)}
+                                            onchange={(e) => updateEvent(index, 'year', (e.target as HTMLInputElement).value)}
                                             placeholder={t('yearPlaceholder')}
                                             class="tool-input"
                                         />
                                         <input
                                             type="text"
                                             value={event.title}
-                                            onchange={(e) => updateEvent(index, 'title', e.target.value)}
+                                            onchange={(e) => updateEvent(index, 'title', (e.target as HTMLInputElement).value)}
                                             placeholder={t('titlePlaceholder')}
                                             class="tool-input"
                                         />
@@ -274,7 +275,7 @@
                                     <input
                                         type="text"
                                         value={event.description}
-                                        onchange={(e) => updateEvent(index, 'description', e.target.value)}
+                                        onchange={(e) => updateEvent(index, 'description', (e.target as HTMLInputElement).value)}
                                         placeholder={t('descPlaceholder')}
                                         class="tool-input"
                                     />
@@ -288,7 +289,7 @@
                     <h3 class="text-sm font-medium mb-2">{t('chartPreview')}</h3>
                     <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style="min-height: 600px">
                         <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
                             option={getChartOption()}
                             style="height: 600px; width: 100%"
                             notMerge={true}

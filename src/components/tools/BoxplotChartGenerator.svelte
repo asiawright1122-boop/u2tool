@@ -8,16 +8,18 @@
 
   let { locale, translations }: Props = $props();
 
+  const translationsTyped = $derived(translations as Record<string, Record<string, unknown>>);
+
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['boxplot-chart-generator'] as Record<string, unknown> || {};
+    const scope = translationsTyped['tools']?.['boxplot-chart-generator'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
     return typeof value === 'string' ? value : `MISSING: tools.boxplot-chart-generator.${key}`;
   }
   function tg(key: string): string {
-    const scope = translations['tools'] as Record<string, unknown> || {};
+    const scope = translationsTyped['tools'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +27,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -63,9 +66,9 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
-  function calculateBoxplot(data: number[]) {
+  function calculateBoxplot(data: number[]): [number, number, number, number, number] {
     const sorted = [...data].sort((a, b) => a - b);
     const n = sorted.length;
     
@@ -91,8 +94,8 @@
     return data.filter(v => v < lowerBound || v > upperBound);
   }
 
-  function getChartOption() {
-    const colors = colorThemes[colorTheme];
+  function getChartOption(): EChartsOption {
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
     const categories = series.map(s => s.name);
     const boxplotData = series.map(s => calculateBoxplot(s.data));
     
@@ -108,7 +111,7 @@
     }
 
     const xAxisConfig = {
-      type: horizontal ? 'value' : 'category',
+      type: horizontal ? 'value' as const : 'category' as const,
       data: horizontal ? undefined : categories,
       axisLine: { lineStyle: { color: chartTheme.axisLineColor } },
       axisLabel: { color: chartTheme.axisLabelColor },
@@ -116,7 +119,7 @@
     };
 
     const yAxisConfig = {
-      type: horizontal ? 'category' : 'value',
+      type: horizontal ? 'category' as const : 'value' as const,
       data: horizontal ? categories : undefined,
       axisLine: { lineStyle: { color: chartTheme.axisLineColor } },
       axisLabel: { color: chartTheme.axisLabelColor },
@@ -129,10 +132,10 @@
         text: chartTitle,
         left: 'center',
         top: 10,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 16, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'item',
+        trigger: 'item' as const,
         backgroundColor: chartTheme.tooltipBg,
         borderColor: chartTheme.tooltipBorder,
         textStyle: { color: chartTheme.tooltipText },
@@ -162,7 +165,7 @@
       series: [
         {
           name: 'boxplot',
-          type: 'boxplot',
+          type: 'boxplot' as const,
           data: boxplotData,
           itemStyle: {
             color: colors[0],
@@ -178,7 +181,7 @@
           },
         }] : []),
       ],
-    };
+    } as EChartsOption;
   }
 
   $effect(() => {
@@ -202,7 +205,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef.getEchartsInstance?.();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -283,10 +286,10 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -296,10 +299,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
-                  onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                  onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
                 >
                   <option value="default">{t('themeDefault')}</option>
@@ -333,7 +336,7 @@
           <!-- 数据编辑 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium">{t('dataEditor')}</label>
+              <span class="block text-sm font-medium">{t('dataEditor')}</span>
               <button onclick={addSeries} class="btn-secondary btn-sm">
                 + {t('addCategory')}
               </button>
@@ -345,7 +348,7 @@
                     <input
                       type="text"
                       value={s.name}
-                      onchange={(e) => updateSeriesName(index, e.target.value)}
+                      onchange={(e) => updateSeriesName(index, (e.target as HTMLInputElement).value)}
                       class="tool-input flex-1"
                       placeholder={t('categoryName')}
                     />
@@ -359,10 +362,10 @@
                   </div>
                   <textarea
                     value={s.data.join(', ')}
-                    onchange={(e) => updateSeriesData(index, e.target.value)}
+                    onchange={(e) => updateSeriesData(index, (e.target as HTMLInputElement).value)}
                     class="tool-input text-xs h-16"
                     placeholder={t('dataValues')}
-                  />
+                  ></textarea>
                 </div>
 {/each}
             </div>
@@ -371,10 +374,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

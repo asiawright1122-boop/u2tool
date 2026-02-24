@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['tree-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['tree-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -59,7 +60,7 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function generateId() {
         const newId = `${baseId}-${idCounter}`;
@@ -105,7 +106,7 @@
     }
 
   function getChartOption() {
-        const colors = colorThemes[colorTheme];
+        const colors = colorThemes[colorTheme as keyof typeof colorThemes];
         const treeData = buildTree(nodes);
 
         return {
@@ -113,10 +114,10 @@
             title: {
                 text: chartTitle,
                 left: 'center',
-                textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+                textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
             },
             tooltip: {
-                trigger: 'item',
+                trigger: 'item' as const as const as const as const,
                 triggerOn: 'mousemove',
                 formatter: '{b}: {c}'
             },
@@ -217,7 +218,7 @@
             return;
         }
         
-        const echartInstance = chartRef.getEchartsInstance();
+        const echartInstance = chartRef?.getEchartsInstance();
         if (!echartInstance) {
             console.warn('ECharts instance not ready');
             return;
@@ -276,7 +277,7 @@
                                 <label class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('colorTheme')}</label>
                                 <select
                                     value={colorTheme}
-                                    onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                                    onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                                     class="tool-input"
                                 >
                                     <option value="default">{t('themeDefault')}</option>
@@ -291,7 +292,7 @@
                                     <label class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('layout')}</label>
                                     <select
                                         value={layout}
-                                        onchange={(e) => layout = e.target.value as 'orthogonal' | 'radial'}
+                                        onchange={(e) => layout = (e.target as HTMLInputElement).value as 'orthogonal' | 'radial'}
                                         class="tool-input"
                                     >
                                         <option value="orthogonal">{t('orthogonal')}</option>
@@ -303,7 +304,7 @@
                                         <label class="block text-sm font-medium text-gray-700 dark:text-white mb-1">{t('orientation')}</label>
                                         <select
                                             value={orient}
-                                            onchange={(e) => orient = e.target.value as 'LR' | 'RL' | 'TB' | 'BT'}
+                                            onchange={(e) => orient = (e.target as HTMLInputElement).value as 'LR' | 'RL' | 'TB' | 'BT'}
                                             class="tool-input"
                                         >
                                             <option value="LR">{t('orientLR')}</option>
@@ -342,7 +343,7 @@
                                                 <input
                                                     type="text"
                                                     value={node.name}
-                                                    onchange={(e) => updateNode(node.id, 'name', e.target.value)}
+                                                    onchange={(e) => updateNode(node.id, 'name', (e.target as HTMLInputElement).value)}
                                                     class="bg-transparent border-none w-full text-gray-900 dark:text-white focus:ring-0 px-0"
                                                 />
                                             </td>
@@ -350,14 +351,14 @@
                                                 <input
                                                     type="number"
                                                     value={node.value}
-                                                    onchange={(e) => updateNode(node.id, 'value', Number(e.target.value))}
+                                                    onchange={(e) => updateNode(node.id, 'value', Number((e.target as HTMLInputElement).value))}
                                                     class="bg-transparent border-none w-full text-gray-900 dark:text-white focus:ring-0 px-0"
                                                 />
                                             </td>
                                             <td class="px-2 py-2">
                                                 <select
                                                     value={node.parentId || ''}
-                                                    onchange={(e) => updateNode(node.id, 'parentId', e.target.value || null)}
+                                                    onchange={(e) => updateNode(node.id, 'parentId', (e.target as HTMLInputElement).value || null)}
                                                     class="bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 text-xs rounded p-1 w-full max-w-[100px] text-gray-900 dark:text-white"
                                                     disabled={node.parentId === null && nodes.length === 1}
                                                 >
@@ -389,7 +390,7 @@
                     <label class="block text-sm font-medium text-gray-700 dark:text-white mb-2">{t('chartPreview')}</label>
                     <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 500px">
                         <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
                             option={getChartOption()}
                             style="height: 500px; width: 100%"
                             notMerge={true}

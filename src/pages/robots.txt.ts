@@ -9,7 +9,7 @@
 
 import type { APIRoute } from 'astro';
 
-const BASE_URL = 'https://www.u2tool.com';
+const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
 
 export const GET: APIRoute = () => {
   const robotsTxt = `# robots.txt for U2Tool

@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['sankey-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['sankey-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -73,10 +74,10 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     return {
       backgroundColor: chartTheme.backgroundColor,
@@ -84,10 +85,10 @@
         text: chartTitle,
         left: 'center',
         top: 10,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 16, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'item',
+        trigger: 'item' as const as const as const as const,
         triggerOn: 'mousemove',
         backgroundColor: chartTheme.tooltipBg,
         borderColor: chartTheme.tooltipBorder,
@@ -152,7 +153,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -266,10 +267,10 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -280,10 +281,10 @@
 
               <div class="grid grid-cols-2 gap-2">
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                  <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                   <select
                     value={colorTheme}
-                    onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                    onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                     class="tool-input"
                   >
                     <option value="default">{t('themeDefault')}</option>
@@ -293,10 +294,10 @@
                   </select>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('orient')}</label>
+                  <label for="{t('orient')}" class="block text-sm font-medium mb-1">{t('orient')}</label>
                   <select
                     value={orient}
-                    onchange={(e) => orient = e.target.value as 'horizontal' | 'vertical'}
+                    onchange={(e) => orient = (e.target as HTMLInputElement).value as 'horizontal' | 'vertical'}
                     class="tool-input"
                   >
                     <option value="horizontal">{t('orientHorizontal')}</option>
@@ -307,24 +308,24 @@
 
               <div class="grid grid-cols-2 gap-2">
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('nodeWidth')}: {nodeWidth}</label>
+                  <label for="{t('nodeWidth')}: {nodeWidth}" class="block text-sm font-medium mb-1">{t('nodeWidth')}: {nodeWidth}</label>
                   <input
                     type="range"
                     min={10}
                     max={50}
                     value={nodeWidth}
-                    onchange={(e) => nodeWidth = Number(e.target.value)}
+                    onchange={(e) => nodeWidth = Number((e.target as HTMLInputElement).value)}
                     class="w-full"
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('nodeGap')}: {nodeGap}</label>
+                  <label for="{t('nodeGap')}: {nodeGap}" class="block text-sm font-medium mb-1">{t('nodeGap')}: {nodeGap}</label>
                   <input
                     type="range"
                     min={2}
                     max={20}
                     value={nodeGap}
-                    onchange={(e) => nodeGap = Number(e.target.value)}
+                    onchange={(e) => nodeGap = Number((e.target as HTMLInputElement).value)}
                     class="w-full"
                   />
                 </div>
@@ -346,7 +347,7 @@
                   <input
                     type="text"
                     value={node.name}
-                    onchange={(e) => updateNodeName(index, e.target.value)}
+                    onchange={(e) => updateNodeName(index, (e.target as HTMLInputElement).value)}
                     class="bg-transparent border-none text-sm w-24 min-w-[80px] focus:outline-none focus:ring-1 focus:ring-blue-500 rounded px-1"
                   />
                   <button
@@ -374,7 +375,7 @@
 <div  class="flex gap-2 items-center text-sm">
                   <select
                     value={link.source}
-                    onchange={(e) => updateLink(index, 'source', e.target.value)}
+                    onchange={(e) => updateLink(index, 'source', (e.target as HTMLInputElement).value)}
                     class="tool-input flex-1 min-w-[80px]"
                   >
                     {#each nodes as n (n.name)}
@@ -384,7 +385,7 @@
                   <span class="text-gray-500 dark:text-gray-400 shrink-0">→</span>
                   <select
                     value={link.target}
-                    onchange={(e) => updateLink(index, 'target', e.target.value)}
+                    onchange={(e) => updateLink(index, 'target', (e.target as HTMLInputElement).value)}
                     class="tool-input flex-1 min-w-[80px]"
                   >
                     {#each nodes as n (n.name)}
@@ -394,7 +395,7 @@
                   <input
                     type="number"
                     value={link.value}
-                    onchange={(e) => updateLink(index, 'value', e.target.value)}
+                    onchange={(e) => updateLink(index, 'value', (e.target as HTMLInputElement).value)}
                     class="tool-input w-20 shrink-0"
                     placeholder={t('value')}
                   />
@@ -413,10 +414,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

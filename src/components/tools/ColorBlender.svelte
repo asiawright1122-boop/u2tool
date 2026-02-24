@@ -47,6 +47,17 @@
   });
 
   // Functions
+  function hexToRgb(hex: string) {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16),
+    } : null;
+  }
+  function rgbToHex(r: number, g: number, b: number) {
+    return '#' + [r, g, b].map(x => Math.round(x).toString(16).padStart(2, '0')).join('');
+  }
   function copyColor(color: string) {
     navigator.clipboard.writeText(color);
   }
@@ -60,9 +71,10 @@
     <div class="space-y-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('color1')}</label>
+          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1" for="color1">{t('color1')}</label>
           <div class="flex gap-2">
             <input
+              id="color1"
               type="color"
               bind:value={color1}
               class="w-12 h-10 rounded cursor-pointer"
@@ -75,9 +87,10 @@
           </div>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('color2')}</label>
+          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1" for="color2">{t('color2')}</label>
           <div class="flex gap-2">
             <input
+              id="color2"
               type="color"
               bind:value={color2}
               class="w-12 h-10 rounded cursor-pointer"
@@ -90,13 +103,14 @@
           </div>
         </div>
         <div>
-          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1">{t('steps')}</label>
+          <label class="block text-sm text-gray-600 dark:text-gray-300 mb-1" for="steps">{t('steps')}</label>
           <input
+            id="steps"
             type="number"
             value={steps}
             min={1}
             max={20}
-            onchange={(e) => steps = Math.min(20, Math.max(1, Number(e.target.value)))}
+            onchange={(e) => steps = Math.min(20, Math.max(1, Number(e.target.value)))}  
             class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
@@ -112,26 +126,30 @@
       <div class="bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg p-4">
         <div class="flex h-16 rounded-lg overflow-hidden mb-4">
           {#each blendedColors as color, i (i)}
-<div 
+            <div
               class="flex-1 cursor-pointer hover:scale-y-110 transition-transform"
               style="background-color: {color}"
               onclick={() => copyColor(color)}
+              onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') copyColor(color); }}
+              role="button"
+              tabindex="0"
               title={color}
-            />
-{/each}
+            ></div>
+          {/each}
         </div>
         <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
           {#each blendedColors as color, i (i)}
-<div 
+            <button
               class="flex flex-col items-center cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 rounded p-2 transition-colors"
               onclick={() => copyColor(color)}
             >
               <div
                 class="w-10 h-10 rounded-lg mb-1"
-                style="background-color: {color}"></div>
+                style="background-color: {color}"
+              ></div>
               <span class="text-xs font-mono text-gray-600 dark:text-gray-300">{color}</span>
-            </div>
-{/each}
+            </button>
+          {/each}
         </div>
       </div>
     </div>

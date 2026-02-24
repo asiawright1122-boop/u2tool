@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['funnel-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['funnel-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -70,7 +71,7 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function generateId() {
     const newId = `${baseId}-${idCounter}`;
@@ -79,22 +80,22 @@
   }
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     return {
       backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'item',
+        trigger: 'item' as const as const as const as const,
         formatter: '{b}: {c}',
       },
       legend: {
         show: showLegend,
-        orient: 'vertical',
+        orient: 'vertical' as const as const as const as const,
         left: 'left',
         top: 'middle',
         textStyle: { color: chartTheme.legendText },
@@ -117,7 +118,7 @@
           gap: 2,
           label: {
             show: showLabels,
-            position: 'inside',
+            position: 'inside' as const as const as const,
             color: chartTheme.labelColor,
             formatter: '{b}\n{c}',
           },
@@ -130,7 +131,7 @@
             borderWidth: 1,
           },
           emphasis: {
-            label: { fontSize: 14, fontWeight: 'bold' },
+            label: { fontSize: 14, fontWeight: 'bold' as const },
           },
           data: data.map((item, index) => ({
             name: item.name,
@@ -194,7 +195,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -253,10 +254,10 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -266,10 +267,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
-                  onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                  onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
                 >
                   <option value="default">{t('themeDefault')}</option>
@@ -281,10 +282,10 @@
 
               <div class="grid grid-cols-2 gap-2">
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('sortOrder')}</label>
+                  <label for="{t('sortOrder')}" class="block text-sm font-medium mb-1">{t('sortOrder')}</label>
                   <select
                     value={sortOrder}
-                    onchange={(e) => sortOrder = e.target.value as 'descending' | 'ascending' | 'none'}
+                    onchange={(e) => sortOrder = (e.target as HTMLInputElement).value as 'descending' | 'ascending' | 'none'}
                     class="tool-input"
                   >
                     <option value="descending">{t('sortDescending')}</option>
@@ -293,10 +294,10 @@
                   </select>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('funnelAlign')}</label>
+                  <label for="{t('funnelAlign')}" class="block text-sm font-medium mb-1">{t('funnelAlign')}</label>
                   <select
                     value={funnelAlign}
-                    onchange={(e) => funnelAlign = e.target.value as 'center' | 'left' | 'right'}
+                    onchange={(e) => funnelAlign = (e.target as HTMLInputElement).value as 'center' | 'left' | 'right'}
                     class="tool-input"
                   >
                     <option value="center">{t('alignCenter')}</option>
@@ -353,7 +354,7 @@
                         <input
                           type="text"
                           value={row.name}
-                          onchange={(e) => updateRow(row.id, 'name', e.target.value)}
+                          onchange={(e) => updateRow(row.id, 'name', (e.target as HTMLInputElement).value)}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
@@ -361,7 +362,7 @@
                         <input
                           type="number"
                           value={row.value}
-                          onchange={(e) => updateRow(row.id, 'value', e.target.value)}
+                          onchange={(e) => updateRow(row.id, 'value', (e.target as HTMLInputElement).value)}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
@@ -387,10 +388,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

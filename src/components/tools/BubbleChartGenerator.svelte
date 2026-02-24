@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['bubble-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['bubble-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -67,7 +68,7 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function generateId() {
         const newId = `${baseId}-${idCounter}`;
@@ -76,18 +77,18 @@
     }
 
   function getChartOption() {
-        const colors = colorThemes[colorTheme];
+        const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
         return {
             backgroundColor: chartTheme.backgroundColor,
             title: {
                 text: chartTitle,
                 left: 'center',
-                textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+                textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
             },
             tooltip: {
-                trigger: 'item',
-                formatter: (params) => {
+                trigger: 'item' as const as const as const as const,
+                formatter: (params: any) => {
                     let p = params as unknown as { data: [number, number, number, string, string?]; seriesName: string };
                     const { data, seriesName } = p;
                     // data is [x, y, r, id, name]
@@ -108,7 +109,7 @@
                 containLabel: true,
             },
             xAxis: {
-                type: 'value',
+                type: 'value' as const as const as const as const,
                 name: xAxisName,
                 nameTextStyle: { color: chartTheme.axisLabelColor },
                 splitLine: { show: true, lineStyle: { color: chartTheme.splitLineColor, type: 'dashed' } },
@@ -116,7 +117,7 @@
                 axisLabel: { color: chartTheme.axisLabelColor },
             },
             yAxis: {
-                type: 'value',
+                type: 'value' as const as const as const as const,
                 name: yAxisName,
                 nameTextStyle: { color: chartTheme.axisLabelColor },
                 splitLine: { show: true, lineStyle: { color: chartTheme.splitLineColor, type: 'dashed' } },
@@ -217,7 +218,7 @@
             return;
         }
         
-        const echartInstance = chartRef.getEchartsInstance();
+        const echartInstance = chartRef?.getEchartsInstance();
         if (!echartInstance) {
             console.warn('ECharts instance not ready');
             return;
@@ -263,10 +264,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+                        <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
                         <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
                             <div>
-                                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                                 <input
                                     type="text"
                                     bind:value={chartTitle}
@@ -277,7 +278,7 @@
 
                             <div class="grid grid-cols-2 gap-2">
                                 <div>
-                                    <label class="block text-sm font-medium mb-1">{t('xAxisName')}</label>
+                                    <label for="{t('xAxisName')}" class="block text-sm font-medium mb-1">{t('xAxisName')}</label>
                                     <input
                                         type="text"
                                         bind:value={xAxisName}
@@ -285,7 +286,7 @@
                                     />
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium mb-1">{t('yAxisName')}</label>
+                                    <label for="{t('yAxisName')}" class="block text-sm font-medium mb-1">{t('yAxisName')}</label>
                                     <input
                                         type="text"
                                         bind:value={yAxisName}
@@ -295,10 +296,10 @@
                             </div>
 
                             <div>
-                                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                                 <select
                                     value={colorTheme}
-                                    onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                                    onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                                     class="tool-input"
                                 >
                                     <option value="default">{t('themeDefault')}</option>
@@ -336,7 +337,7 @@
                                         <input
                                             type="text"
                                             value={s.name}
-                                            onchange={(e) => updateSeriesName(s.id, e.target.value)}
+                                            onchange={(e) => updateSeriesName(s.id, (e.target as HTMLInputElement).value)}
                                             class="flex-1 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                             placeholder={t('seriesName')}
                                         />
@@ -363,26 +364,26 @@
                                                     <input
                                                         type="text"
                                                         value={p.name || ''}
-                                                        onchange={(e) => updatePoint(sIndex, p.id, 'name', e.target.value)}
+                                                        onchange={(e) => updatePoint(sIndex, p.id, 'name', (e.target as HTMLInputElement).value)}
                                                         class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                                         placeholder="Opt"
                                                     />
                                                     <input
                                                         type="number"
                                                         value={p.x}
-                                                        onchange={(e) => updatePoint(sIndex, p.id, 'x', Number(e.target.value) || 0)}
+                                                        onchange={(e) => updatePoint(sIndex, p.id, 'x', Number((e.target as HTMLInputElement).value) || 0)}
                                                         class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                                     />
                                                     <input
                                                         type="number"
                                                         value={p.y}
-                                                        onchange={(e) => updatePoint(sIndex, p.id, 'y', Number(e.target.value) || 0)}
+                                                        onchange={(e) => updatePoint(sIndex, p.id, 'y', Number((e.target as HTMLInputElement).value) || 0)}
                                                         class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                                     />
                                                     <input
                                                         type="number"
                                                         value={p.r}
-                                                        onchange={(e) => updatePoint(sIndex, p.id, 'r', Number(e.target.value) || 0)}
+                                                        onchange={(e) => updatePoint(sIndex, p.id, 'r', Number((e.target as HTMLInputElement).value) || 0)}
                                                         class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                                     />
                                                     <button
@@ -409,10 +410,10 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+                    <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
                     <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
                         <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
                             option={getChartOption()}
                             style="height: 400px; width: 100%"
                             notMerge={true}

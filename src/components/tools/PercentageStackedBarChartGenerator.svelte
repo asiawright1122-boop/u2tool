@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['percentage-stacked-bar-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['percentage-stacked-bar-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -70,7 +71,7 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function generateId() {
     const newId = `${_baseId}-${_idCounter}`;
@@ -80,7 +81,7 @@
 
   function getChartOption() {
     const categories = data.map(d => d.category);
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     const series = seriesNames.map((name, idx) => ({
       name,
@@ -104,10 +105,10 @@
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'axis',
+        trigger: 'axis' as const as const as const as const,
         axisPointer: { type: 'shadow' },
         formatter: (params: unknown) => {
           const items = params as Array<{ seriesName: string; value: number; marker: string; axisValue?: string }>;
@@ -209,7 +210,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -250,16 +251,16 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input type="text" bind:value={chartTitle}
                   class="tool-input" placeholder={t('chartTitlePlaceholder')} />
               </div>
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
-                <select value={colorTheme} onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes} class="tool-input">
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <select value={colorTheme} onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes} class="tool-input">
                   <option value="default">{t('themeDefault')}</option>
                   <option value="ocean">{t('themeOcean')}</option>
                   <option value="sunset">{t('themeSunset')}</option>
@@ -289,7 +290,7 @@
 <div  class="flex items-center gap-1">
                   <input type="text" value={name} onchange={(e) => {
                     const newNames = [...seriesNames];
-                    newNames[idx] = e.target.value;
+                    newNames[idx] = (e.target as HTMLInputElement).value;
                     seriesNames = newNames;
                   }} class="w-24 px-2 py-1 text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded" />
                   {#if seriesNames.length > 2}
@@ -320,12 +321,12 @@
                   {#each data as row (row.id)}
 <tr  class="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
                       <td class="py-2 px-2">
-                        <input type="text" value={row.category} onchange={(e) => updateRow(row.id, 'category', e.target.value)}
+                        <input type="text" value={row.category} onchange={(e) => updateRow(row.id, 'category', (e.target as HTMLInputElement).value)}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
                       </td>
                       {#each row.values as val, idx (idx)}
 <td  class="py-2 px-2">
-                          <input type="number" value={val} onchange={(e) => updateRow(row.id, idx, e.target.value)}
+                          <input type="number" value={val} onchange={(e) => updateRow(row.id, idx, (e.target as HTMLInputElement).value)}
                             class="w-16 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-sm" />
                         </td>
 {/each}
@@ -342,10 +343,10 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
+              bind:this={chartRef as any} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
               lazyUpdate={true}
             />
           </div>

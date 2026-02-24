@@ -9,8 +9,22 @@ import type { APIRoute } from 'astro';
 import { locales } from '@/lib/i18n';
 import { tools, categories } from '@/config/tools';
 
-const BASE_URL = 'https://www.u2tool.com';
+const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
 const TODAY = new Date().toISOString().split('T')[0];
+
+// Extended hreflang mapping with language-region codes
+const hreflangMap: Record<string, string> = {
+  en: 'en',
+  zh: 'zh-CN',
+  ja: 'ja',
+  ko: 'ko',
+  es: 'es',
+  pt: 'pt-BR',
+  fr: 'fr',
+  de: 'de',
+  ru: 'ru',
+  ar: 'ar',
+};
 
 export const GET: APIRoute = () => {
   const urls: string[] = [];
@@ -50,9 +64,11 @@ function buildUrl(path: string, priority: string, changefreq: string): string {
   const parts = path.split('/');
   const pathAfterLocale = '/' + parts.slice(2).join('/');
 
-  const alternates = locales.map(l =>
-    `    <xhtml:link rel="alternate" hreflang="${l}" href="${esc(`${BASE_URL}/${l}${pathAfterLocale}`)}" />`
-  ).join('\n');
+  // Generate hreflang tags with language-region codes
+  const alternates = locales.map(l => {
+    const hreflang = hreflangMap[l] || l;
+    return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${esc(`${BASE_URL}/${l}${pathAfterLocale}`)}" />`;
+  }).join('\n');
 
   return `  <url>
     <loc>${loc}</loc>

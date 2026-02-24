@@ -8,7 +8,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['treemap-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['treemap-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -23,7 +23,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -64,7 +65,7 @@
 
   let leafDepth = $state(1);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function generateId() {
     const newId = `${baseId}-${idCounter}`;
@@ -73,7 +74,7 @@
   }
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
     const _textColor = '#e5e7eb'; // 保留以备将来使用
 
     // 转换数据格式
@@ -91,7 +92,7 @@
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -251,7 +252,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -334,10 +335,10 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -347,10 +348,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
-                  onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                  onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
                 >
                   <option value="default">{t('themeDefault')}</option>
@@ -361,13 +362,13 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('leafDepth')}: {leafDepth}</label>
+                <label for="{t('leafDepth')}: {leafDepth}" class="block text-sm font-medium mb-1">{t('leafDepth')}: {leafDepth}</label>
                 <input
                   type="range"
                   min="1"
                   max="3"
                   value={leafDepth}
-                  onchange={(e) => leafDepth = Number(e.target.value)}
+                  onchange={(e) => leafDepth = Number((e.target as HTMLInputElement).value)}
                   class="w-full"
                 />
               </div>
@@ -416,10 +417,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

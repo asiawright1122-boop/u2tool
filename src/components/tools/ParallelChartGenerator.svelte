@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['parallel-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['parallel-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -81,10 +82,10 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     // 构建平行坐标轴配置
     const parallelAxis = dimensions.map((dim, index) => ({
@@ -118,10 +119,10 @@
         text: chartTitle,
         left: 'center',
         top: 15,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 16, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'item',
+        trigger: 'item' as const as const as const as const,
         backgroundColor: chartTheme.tooltipBg,
         borderColor: chartTheme.tooltipBorder,
         textStyle: { color: chartTheme.tooltipText },
@@ -139,7 +140,7 @@
         bottom: showLegend ? 60 : 30,
         top: 70,
         parallelAxisDefault: {
-          type: 'value',
+          type: 'value' as const as const as const as const,
           nameLocation: 'end',
           nameGap: 20,
           nameTextStyle: { color: chartTheme.axisLabelColor, fontSize: 12 },
@@ -182,7 +183,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -301,7 +302,7 @@
             <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -311,10 +312,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
-                  onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                  onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
                 >
                   <option value="default">{t('themeDefault')}</option>
@@ -326,24 +327,24 @@
 
               <div class="grid grid-cols-2 gap-2">
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('lineWidth')}: {lineWidth}</label>
+                  <label for="{t('lineWidth')}: {lineWidth}" class="block text-sm font-medium mb-1">{t('lineWidth')}: {lineWidth}</label>
                   <input
                     type="range"
                     min={1}
                     max={5}
                     value={lineWidth}
-                    onchange={(e) => lineWidth = Number(e.target.value)}
+                    onchange={(e) => lineWidth = Number((e.target as HTMLInputElement).value)}
                     class="w-full"
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('lineOpacity')}: {(lineOpacity * 100).toFixed(0)}%</label>
+                  <label for="{t('lineOpacity')}: {(lineOpacity * 100).toFixed(0)}%" class="block text-sm font-medium mb-1">{t('lineOpacity')}: {(lineOpacity * 100).toFixed(0)}%</label>
                   <input
                     type="range"
                     min={10}
                     max={100}
                     value={lineOpacity * 100}
-                    onchange={(e) => lineOpacity = Number(e.target.value) / 100}
+                    onchange={(e) => lineOpacity = Number((e.target as HTMLInputElement).value) / 100}
                     class="w-full"
                   />
                 </div>
@@ -384,21 +385,21 @@
                   <input
                     type="text"
                     value={dim.name}
-                    onchange={(e) => updateDimension(index, 'name', e.target.value)}
+                    onchange={(e) => updateDimension(index, 'name', (e.target as HTMLInputElement).value)}
                     class="tool-input flex-[2] min-w-[80px]"
                     placeholder={t('dimensionName')}
                   />
                   <input
                     type="number"
                     value={dim.min}
-                    onchange={(e) => updateDimension(index, 'min', e.target.value)}
+                    onchange={(e) => updateDimension(index, 'min', (e.target as HTMLInputElement).value)}
                     class="tool-input w-16 shrink-0"
                     placeholder="Min"
                   />
                   <input
                     type="number"
                     value={dim.max}
-                    onchange={(e) => updateDimension(index, 'max', e.target.value)}
+                    onchange={(e) => updateDimension(index, 'max', (e.target as HTMLInputElement).value)}
                     class="tool-input w-16 shrink-0"
                     placeholder="Max"
                   />
@@ -429,7 +430,7 @@
                     <input
                       type="text"
                       value={seriesNames[rowIndex] || ''}
-                      onchange={(e) => updateSeriesName(rowIndex, e.target.value)}
+                      onchange={(e) => updateSeriesName(rowIndex, (e.target as HTMLInputElement).value)}
                       class="tool-input flex-1"
                       placeholder={t('seriesName')}
                     />
@@ -446,7 +447,7 @@
 <input 
                         type="number"
                         value={value}
-                        onchange={(e) => updateDataValue(rowIndex, colIndex, Number(e.target.value) || 0)}
+                        onchange={(e) => updateDataValue(rowIndex, colIndex, Number((e.target as HTMLInputElement).value) || 0)}
                         class="tool-input w-24 text-xs"
                         title={dimensions[colIndex]?.name}
                       />
@@ -463,7 +464,7 @@
           <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

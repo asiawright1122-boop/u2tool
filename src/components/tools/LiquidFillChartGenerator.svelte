@@ -17,7 +17,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['liquid-fill-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['liquid-fill-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
   import 'echarts-liquidfill';
 
@@ -45,10 +46,10 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
     const value = percentage / 100;
 
     return {
@@ -57,7 +58,7 @@
         text: chartTitle,
         left: 'center',
         top: 20,
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       series: [
         {
@@ -81,7 +82,7 @@
           label: {
             show: true,
             fontSize: 40,
-            fontWeight: 'bold',
+            fontWeight: 'bold' as const,
             formatter: () => `${percentage}%`,
             color: chartTheme.textColor,
           },
@@ -121,7 +122,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -157,20 +158,20 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input type="text" bind:value={chartTitle}
                   class="tool-input" placeholder={t('chartTitlePlaceholder')} />
               </div>
               <div>
-                <label class="block text-sm font-medium mb-1">{t('percentage')}: {percentage}%</label>
-                <input type="range" min="0" max="100" value={percentage} onchange={(e) => percentage = Number(e.target.value)}
+                <label for="{t('percentage')}: {percentage}%" class="block text-sm font-medium mb-1">{t('percentage')}: {percentage}%</label>
+                <input type="range" min="0" max="100" value={percentage} onchange={(e) => percentage = Number((e.target as HTMLInputElement).value)}
                   class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" />
               </div>
               <div>
-                <label class="block text-sm font-medium mb-1">{t('shape')}</label>
+                <label for="{t('shape')}" class="block text-sm font-medium mb-1">{t('shape')}</label>
                 <select bind:value={shape} class="tool-input">
                   {#each shapeOptions as s (s)}
 <option  value={s}>{t(`shapes.${s}`)}</option>
@@ -178,8 +179,8 @@
                 </select>
               </div>
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
-                <select value={colorTheme} onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes} class="tool-input">
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <select value={colorTheme} onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes} class="tool-input">
                   <option value="default">{t('themeDefault')}</option>
                   <option value="ocean">{t('themeOcean')}</option>
                   <option value="sunset">{t('themeSunset')}</option>
@@ -201,10 +202,10 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
+              bind:this={chartRef as any} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
               lazyUpdate={true}
             />
           </div>

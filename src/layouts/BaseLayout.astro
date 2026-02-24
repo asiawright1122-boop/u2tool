@@ -12,7 +12,7 @@
  * Requirements: 6.4, 6.5, 6.6
  */
 
-import { isRTL } from '@/lib/i18n';
+import { isRTL, locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import '@/styles/global.css';
 
@@ -25,13 +25,33 @@ interface Props {
 
 const { title, description, locale, canonicalPath } = Astro.props;
 
-const BASE_URL = 'https://www.u2tool.com';
+const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
 
 // Build canonical URL: base + /locale + path (without locale prefix)
 const pathWithoutLocale = canonicalPath || Astro.url.pathname.replace(new RegExp(`^/${locale}`), '');
 const canonical = `${BASE_URL}/${locale}${pathWithoutLocale}`;
 
 const isRtl = isRTL(locale as Locale);
+
+// Map locale to Open Graph locale format
+const ogLocaleMap: Record<string, string> = {
+  en: 'en_US',
+  zh: 'zh_CN',
+  ja: 'ja_JP',
+  ko: 'ko_KR',
+  es: 'es_ES',
+  pt: 'pt_PT',
+  fr: 'fr_FR',
+  de: 'de_DE',
+  ru: 'ru_RU',
+  ar: 'ar_AR',
+};
+const ogLocale = ogLocaleMap[locale] || 'en_US';
+
+// Generate alternate locales for og:locale:alternate
+const alternateLocales = locales
+  .filter(l => l !== locale)
+  .map(l => ogLocaleMap[l] || l);
 ---
 
 <!doctype html>
@@ -44,6 +64,43 @@ const isRtl = isRTL(locale as Locale);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:locale" content={ogLocale} />
+    {alternateLocales.map(altLocale => (
+      <meta property="og:locale:alternate" content={altLocale} />
+    ))}
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "U2Tool",
+        "url": "${BASE_URL}",
+        "logo": "${BASE_URL}/favicon.svg",
+        "description": "Free online tools for developers and designers. 500+ tools including JSON formatter, QR code generator, password generator, and more.",
+        "sameAs": [
+          "https://github.com/u2tool"
+        ]
+      }
+    </script>
+
+    <!-- WebSite Schema with SearchAction -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "U2Tool",
+        "url": "${BASE_URL}",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "${BASE_URL}/{search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
 
     <!-- Additional head content (hreflang, structured data, etc.) -->
     <slot name="head" />

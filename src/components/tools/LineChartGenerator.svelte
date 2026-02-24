@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['line-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['line-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -98,9 +99,9 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
-  let fileInputRef = $state(null);
+  let fileInputRef = $state<HTMLInputElement | null>(null);
 
   function generateId() {
     const newId = `${baseId}-${idCounter}`;
@@ -109,17 +110,17 @@
   }
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     return {
       backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'axis',
+        trigger: 'axis' as const as const as const as const,
       },
       legend: {
         show: showLegend,
@@ -135,7 +136,7 @@
         containLabel: true,
       },
       xAxis: {
-        type: 'category',
+        type: 'category' as const as const as const as const,
         data: categories,
         boundaryGap: false,
         splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
@@ -143,7 +144,7 @@
         axisLabel: { color: chartTheme.axisLabelColor },
       },
       yAxis: {
-        type: 'value',
+        type: 'value' as const as const as const as const,
         splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
         axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
         axisLabel: { color: chartTheme.axisLabelColor },
@@ -239,7 +240,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -278,7 +279,7 @@
     }
   }
   function handleCsvImport(event: Event) {
-    const file = event.target.files?.[0];
+    const file = (event.target as HTMLInputElement).files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
@@ -342,10 +343,10 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -355,10 +356,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
-                  onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                  onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
                 >
                   <option value="default">{t('themeDefault')}</option>
@@ -369,10 +370,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('lineStyle')}</label>
+                <label for="{t('lineStyle')}" class="block text-sm font-medium mb-1">{t('lineStyle')}</label>
                 <select
                   value={lineStyle}
-                  onchange={(e) => lineStyle = e.target.value as LineStyleType}
+                  onchange={(e) => lineStyle = (e.target as HTMLInputElement).value as LineStyleType}
                   class="tool-input"
                 >
                   <option value="solid">{t('styleSolid')}</option>
@@ -444,7 +445,7 @@
                           <input
                             type="text"
                             value={s.name}
-                            onchange={(e) => updateSeriesName(s.id, e.target.value)}
+                            onchange={(e) => updateSeriesName(s.id, (e.target as HTMLInputElement).value)}
                             class="w-20 px-1 py-0.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-xs"
                           />
                           <button
@@ -467,7 +468,7 @@
                         <input
                           type="text"
                           value={cat}
-                          onchange={(e) => updateCategory(catIndex, e.target.value)}
+                          onchange={(e) => updateCategory(catIndex, (e.target as HTMLInputElement).value)}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
@@ -476,7 +477,7 @@
                           <input
                             type="number"
                             value={s.data[catIndex]}
-                            onchange={(e) => updateSeriesData(s.id, catIndex, Number(e.target.value) || 0)}
+                            onchange={(e) => updateSeriesData(s.id, catIndex, Number((e.target as HTMLInputElement).value) || 0)}
                             class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                           />
                         </td>
@@ -500,10 +501,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

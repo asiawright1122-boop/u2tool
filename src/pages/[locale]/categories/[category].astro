@@ -13,7 +13,7 @@ import Footer from '@/components/layout/Footer.astro';
 import Breadcrumb from '@/components/layout/Breadcrumb.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
-import { tools, categories, getToolsByCategory } from '@/config/tools';
+import { categories, getToolsByCategory } from '@/config/tools';
 import type { ToolCategory } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
 import { locales, getLocalizedPath } from '@/lib/i18n';
@@ -59,7 +59,7 @@ function getToolDescription(slug: string): string {
   return (t?.description as string) || '';
 }
 
-const BASE_URL = 'https://www.u2tool.com';
+const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
 const pageTitle = `${categoryName} - U2Tool`;
 const pageDescription = `${categoryTools.length}+ free ${categoryName} tools online.`;
 
@@ -104,10 +104,12 @@ const collectionData = {
 
   <meta property="og:title" content={pageTitle} slot="head" />
   <meta property="og:description" content={pageDescription} slot="head" />
+  <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
   <meta property="og:url" content={`${BASE_URL}/${locale}/categories/${category}`} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
+  <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
 
   <aside class="hidden lg:block fixed left-0 top-0 bottom-0 z-40" style="width: 220px">
     <Sidebar client:load locale={locale} categories={categories} categoryNames={categoryMessages} navMessages={navMessages} siteName={siteMessages.name || 'U2Tool'} />

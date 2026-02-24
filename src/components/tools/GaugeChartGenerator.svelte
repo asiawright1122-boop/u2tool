@@ -17,7 +17,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['gauge-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['gauge-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -32,7 +32,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   let isInitialized = $state(false);
@@ -57,10 +58,10 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     // 根据类型生成不同的配置
     if (gaugeType === 'stage') {
@@ -70,7 +71,7 @@
           text: chartTitle,
           left: 'center',
           top: 10,
-          textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
+          textStyle: { fontSize: 16, fontWeight: 'bold' as const, color: chartTheme.textColor },
         },
         series: [
           {
@@ -111,7 +112,7 @@
               valueAnimation: true,
               formatter: `{value}${unit}`,
               color: chartTheme.textColor,
-              fontWeight: 'bold',
+              fontWeight: 'bold' as const,
               backgroundColor: chartTheme.tooltipBg,
               borderRadius: 4,
               padding: [4, 8],
@@ -129,7 +130,7 @@
           text: chartTitle,
           left: 'center',
           top: 10,
-          textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
+          textStyle: { fontSize: 16, fontWeight: 'bold' as const, color: chartTheme.textColor },
         },
         series: [
           {
@@ -187,7 +188,7 @@
         text: chartTitle,
         left: 'center',
         top: 10,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 16, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       series: [
         {
@@ -218,7 +219,7 @@
             offsetCenter: [0, '70%'],
             formatter: `{value}${unit}`,
             color: chartTheme.textColor,
-            fontWeight: 'bold',
+            fontWeight: 'bold' as const,
           },
           pointer: {
             show: showPointer,
@@ -249,7 +250,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -310,10 +311,10 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -323,10 +324,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('gaugeType')}</label>
+                <label for="{t('gaugeType')}" class="block text-sm font-medium mb-1">{t('gaugeType')}</label>
                 <select
                   value={gaugeType}
-                  onchange={(e) => gaugeType = e.target.value as 'default' | 'stage' | 'grade'}
+                  onchange={(e) => gaugeType = (e.target as HTMLInputElement).value as 'default' | 'stage' | 'grade'}
                   class="tool-input"
                 >
                   <option value="default">{t('typeDefault')}</option>
@@ -336,10 +337,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
-                  onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                  onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
                 >
                   <option value="default">{t('themeDefault')}</option>
@@ -350,38 +351,38 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('currentValue')}: {value}</label>
+                <label for="{t('currentValue')}: {value}" class="block text-sm font-medium mb-1">{t('currentValue')}: {value}</label>
                 <input
                   type="range"
                   min={minValue}
                   max={maxValue}
                   value={value}
-                  onchange={(e) => value = Number(e.target.value)}
+                  onchange={(e) => value = Number((e.target as HTMLInputElement).value)}
                   class="w-full"
                 />
               </div>
 
               <div class="grid grid-cols-3 gap-2">
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('minValue')}</label>
+                  <label for="{t('minValue')}" class="block text-sm font-medium mb-1">{t('minValue')}</label>
                   <input
                     type="number"
                     value={minValue}
-                    onchange={(e) => minValue = Number(e.target.value)}
+                    onchange={(e) => minValue = Number((e.target as HTMLInputElement).value)}
                     class="tool-input"
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('maxValue')}</label>
+                  <label for="{t('maxValue')}" class="block text-sm font-medium mb-1">{t('maxValue')}</label>
                   <input
                     type="number"
                     value={maxValue}
-                    onchange={(e) => maxValue = Number(e.target.value)}
+                    onchange={(e) => maxValue = Number((e.target as HTMLInputElement).value)}
                     class="tool-input"
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('unit')}</label>
+                  <label for="{t('unit')}" class="block text-sm font-medium mb-1">{t('unit')}</label>
                   <input
                     type="text"
                     bind:value={unit}
@@ -413,7 +414,7 @@
 
           <!-- 快速设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('quickPresets')}</label>
+            <label for="label-{t('quickpresets')}" class="block text-sm font-medium mb-2">{t('quickPresets')}</label>
             <div class="flex flex-wrap gap-2">
               <button
                 onclick={() => { value = 25; unit = '%'; }}
@@ -445,10 +446,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

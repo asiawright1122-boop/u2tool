@@ -20,7 +20,7 @@ interface Props {
 
 const { items } = Astro.props;
 
-const BASE_URL = 'https://www.u2tool.com';
+const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
 
 // Generate JSON-LD BreadcrumbList structured data
 const breadcrumbJsonLd = {

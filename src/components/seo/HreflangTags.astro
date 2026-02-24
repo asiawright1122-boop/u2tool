@@ -18,7 +18,7 @@ interface Props {
 
 const { path } = Astro.props;
 
-const BASE_URL = 'https://www.u2tool.com';
+const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
 
 // Ensure path starts with /
 const normalizedPath = path.startsWith('/') ? path : `/${path}`;

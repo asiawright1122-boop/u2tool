@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['bar-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['bar-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,14 +25,15 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
-  default: ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4'],
-  ocean: ['#0077b6', '#00b4d8', '#90e0ef', '#48cae4', '#023e8a', '#0096c7', '#caf0f8', '#03045e'],
-  sunset: ['#ff6b6b', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3', '#ff9f43', '#ee5a24'],
-  forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#1b4332'],
+    default: ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4'],
+    ocean: ['#0077b6', '#00b4d8', '#90e0ef', '#48cae4', '#023e8a', '#0096c7', '#caf0f8', '#03045e'],
+    sunset: ['#ff6b6b', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3', '#ff9f43', '#ee5a24'],
+    forest: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#1b4332'],
 };
 
   // Default data
@@ -83,9 +84,9 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
-  let fileInputRef = $state(null);
+  let fileInputRef = $state<HTMLInputElement | null>(null);
 
   function generateId() {
     const newId = `${baseId}-${idCounter}`;
@@ -96,7 +97,7 @@
   function getChartOption() {
     const categories = data.map(d => d.category);
     const values = data.map(d => d.value);
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     return {
       backgroundColor: chartTheme.backgroundColor,
@@ -105,12 +106,12 @@
         left: 'center',
         textStyle: {
           fontSize: 18,
-          fontWeight: 'bold',
+          fontWeight: 'bold' as const,
           color: chartTheme.textColor,
         },
       },
       tooltip: {
-        trigger: 'axis',
+        trigger: 'axis' as const as const as const as const,
         axisPointer: { type: 'shadow' },
       },
       legend: {
@@ -157,7 +158,7 @@
           type: 'bar',
           data: values,
           itemStyle: {
-            color: (params) => colors[params.dataIndex % colors.length],
+            color: (params: any) => colors[params.dataIndex % colors.length],
           },
           label: {
             show: true,
@@ -179,13 +180,16 @@
       }));
       isInitialized = true;
     }
-  });  onDestroy(() => {
+  });
+
+  onDestroy(() => {
     if (timerRef) clearTimeout(timerRef);
   });
 
   // Functions
   const baseId = 'id-' + Math.random().toString(36).slice(2, 9);
   const chartTheme = useChartTheme();
+
   function addRow() {
     const newId = generateId();
     data = [...data, { id: newId, category: `${t('item')}${data.length + 1}`, value: 100 }];
@@ -206,7 +210,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -244,7 +248,7 @@
     }
   }
   function handleCsvImport(event: Event) {
-    const file = event.target.files?.[0];
+    const file = (event.target as HTMLInputElement).files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
@@ -260,7 +264,7 @@
         }));
         data = newData;
         idCounter = idCounter + parsedData.length;
-        alert(t('csvImportSuccess', { count: parsedData.length }));
+        alert(t('csvImportSuccess').replace('{count}', String(parsedData.length)));
       } else {
         alert(t('csvImportError'));
       }
@@ -308,11 +312,12 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="chart-title-input" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
+                  id="chart-title-input"
                   type="text"
                   bind:value={chartTitle}
                   class="tool-input"
@@ -321,10 +326,11 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="color-theme-select" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
+                  id="color-theme-select"
                   value={colorTheme}
-                  onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                  onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
                 >
                   <option value="default">{t('themeDefault')}</option>
@@ -388,7 +394,7 @@
                         <input
                           type="text"
                           value={row.category}
-                          onchange={(e) => updateRow(row.id, 'category', e.target.value)}
+                          onchange={(e) => updateRow(row.id, 'category', (e.target as HTMLInputElement).value)}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
@@ -396,7 +402,7 @@
                         <input
                           type="number"
                           value={row.value}
-                          onchange={(e) => updateRow(row.id, 'value', e.target.value)}
+                          onchange={(e) => updateRow(row.id, 'value', (e.target as HTMLInputElement).value)}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
@@ -419,10 +425,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
-          <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
+          <label for="chart-preview" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <div id="chart-preview" class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

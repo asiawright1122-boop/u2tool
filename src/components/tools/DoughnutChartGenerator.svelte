@@ -8,16 +8,18 @@
 
   let { locale, translations }: Props = $props();
 
+  const translationsTyped = $derived(translations as Record<string, Record<string, unknown>>);
+
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['doughnut-chart-generator'] as Record<string, unknown> || {};
+    const scope = translationsTyped['tools']?.['doughnut-chart-generator'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
     return typeof value === 'string' ? value : `MISSING: tools.doughnut-chart-generator.${key}`;
   }
   function tg(key: string): string {
-    const scope = translations['tools'] as Record<string, unknown> || {};
+    const scope = translationsTyped['tools'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +27,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -67,10 +70,10 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
-  function getChartOption() {
-    const colors = colorThemes[colorTheme];
+  function getChartOption(): EChartsOption {
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     return {
       backgroundColor: chartTheme.backgroundColor,
@@ -78,10 +81,10 @@
         text: chartTitle,
         left: 'center',
         top: 15,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 16, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'item',
+        trigger: 'item' as const,
         formatter: '{a} <br/>{b}: {c} ({d}%)',
         backgroundColor: chartTheme.tooltipBg,
         borderColor: chartTheme.tooltipBorder,
@@ -89,7 +92,7 @@
       },
       legend: {
         show: showLegend,
-        orient: 'horizontal',
+        orient: 'horizontal' as const,
         bottom: 15,
         textStyle: { color: chartTheme.legendText },
       },
@@ -97,7 +100,7 @@
       series: [
         {
           name: chartTitle,
-          type: 'pie',
+          type: 'pie' as const,
           radius: [`${innerRadius}%`, `${outerRadius}%`],
           center: ['50%', '48%'],
           avoidLabelOverlap: true,
@@ -118,7 +121,7 @@
             label: {
               show: true,
               fontSize: 14,
-              fontWeight: 'bold',
+              fontWeight: 'bold' as const,
             },
             itemStyle: {
               shadowBlur: 10,
@@ -135,7 +138,7 @@
           data: data,
         },
       ],
-    };
+    } as EChartsOption;
   }
 
   $effect(() => {
@@ -155,7 +158,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef.getEchartsInstance?.();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -229,10 +232,10 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -242,10 +245,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                 <select
                   value={colorTheme}
-                  onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                  onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                   class="tool-input"
                 >
                   <option value="default">{t('themeDefault')}</option>
@@ -256,10 +259,10 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('roseType')}</label>
+                <label for="{t('roseType')}" class="block text-sm font-medium mb-1">{t('roseType')}</label>
                 <select
                   value={roseType}
-                  onchange={(e) => roseType = e.target.value as 'none' | 'radius' | 'area'}
+                  onchange={(e) => roseType = (e.target as HTMLInputElement).value as 'none' | 'radius' | 'area'}
                   class="tool-input"
                 >
                   <option value="none">{t('roseNone')}</option>
@@ -270,24 +273,24 @@
 
               <div class="grid grid-cols-2 gap-2">
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('innerRadius')}: {innerRadius}%</label>
+                  <label for="{t('innerRadius')}: {innerRadius}%" class="block text-sm font-medium mb-1">{t('innerRadius')}: {innerRadius}%</label>
                   <input
                     type="range"
                     min={0}
                     max={60}
                     value={innerRadius}
-                    onchange={(e) => innerRadius = Number(e.target.value)}
+                    onchange={(e) => innerRadius = Number((e.target as HTMLInputElement).value)}
                     class="w-full"
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('outerRadius')}: {outerRadius}%</label>
+                  <label for="{t('outerRadius')}: {outerRadius}%" class="block text-sm font-medium mb-1">{t('outerRadius')}: {outerRadius}%</label>
                   <input
                     type="range"
                     min={40}
                     max={90}
                     value={outerRadius}
-                    onchange={(e) => outerRadius = Number(e.target.value)}
+                    onchange={(e) => outerRadius = Number((e.target as HTMLInputElement).value)}
                     class="w-full"
                   />
                 </div>
@@ -317,7 +320,7 @@
           <!-- 数据编辑 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="block text-sm font-medium">{t('dataEditor')}</label>
+              <span class="block text-sm font-medium">{t('dataEditor')}</span>
               <button onclick={addDataItem} class="btn-secondary btn-sm">
                 + {t('addItem')}
               </button>
@@ -328,14 +331,14 @@
                   <input
                     type="text"
                     value={item.name}
-                    onchange={(e) => updateDataItem(index, 'name', e.target.value)}
+                    onchange={(e) => updateDataItem(index, 'name', (e.target as HTMLInputElement).value)}
                     class="tool-input w-32 min-w-[120px]"
                     placeholder={t('namePlaceholder')}
                   />
                   <input
                     type="number"
                     value={item.value}
-                    onchange={(e) => updateDataItem(index, 'value', e.target.value)}
+                    onchange={(e) => updateDataItem(index, 'value', (e.target as HTMLInputElement).value)}
                     class="tool-input w-28"
                     placeholder={t('valuePlaceholder')}
                   />
@@ -354,10 +357,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style="min-height: 480px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 480px; width: 100%"
               notMerge={true}

@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['gantt-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['gantt-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -62,7 +63,7 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function generateId() {
         const newId = `${baseId}-${idCounter}`;
@@ -71,7 +72,7 @@
     }
 
   function getChartOption() {
-        const colors = colorThemes[colorTheme];
+        const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
         // Prepare data for custom series
         // Reverse tasks so the first task appears at the TOP of the Y-axis
@@ -181,10 +182,10 @@
             title: {
                 text: chartTitle,
                 left: 'center',
-                textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+                textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
             },
             tooltip: {
-                formatter: (params) => {
+                formatter: (params: any) => {
                     const p = params as { dataIndex: number; marker: string };
                     const task = chartTasks[p.dataIndex];
                     if (!task) return '';
@@ -201,7 +202,7 @@
                 containLabel: true
             },
             xAxis: {
-                type: 'value', // "value" axis gives us total control over timestamps
+                type: 'value' as const as const as const as const, // "value" axis gives us total control over timestamps
                 min: axisMin,
                 max: axisMax,
                 axisLabel: {
@@ -215,7 +216,7 @@
                 splitLine: { show: true, lineStyle: { color: chartTheme.splitLineColor, type: 'dashed', opacity: 0.3 } },
             },
             yAxis: {
-                type: 'category',
+                type: 'category' as const as const as const as const,
                 data: categories,
                 axisLabel: { color: chartTheme.axisLabelColor },
                 axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
@@ -297,7 +298,7 @@
             return;
         }
         
-        const echartInstance = chartRef.getEchartsInstance();
+        const echartInstance = chartRef?.getEchartsInstance();
         if (!echartInstance) {
             console.warn('ECharts instance not ready');
             return;
@@ -338,10 +339,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+                        <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
                         <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
                             <div>
-                                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                                 <input
                                     type="text"
                                     bind:value={chartTitle}
@@ -351,10 +352,10 @@
                             </div>
 
                             <div>
-                                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                                 <select
                                     value={colorTheme}
-                                    onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                                    onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                                     class="tool-input"
                                 >
                                     <option value="default">{t('themeDefault')}</option>
@@ -387,19 +388,19 @@
                                     <input
                                         type="text"
                                         value={task.name}
-                                        onchange={(e) => updateTask(task.id, 'name', e.target.value)}
+                                        onchange={(e) => updateTask(task.id, 'name', (e.target as HTMLInputElement).value)}
                                         class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                     />
                                     <input
                                         type="date"
                                         value={task.startDate}
-                                        onchange={(e) => updateTask(task.id, 'startDate', e.target.value)}
+                                        onchange={(e) => updateTask(task.id, 'startDate', (e.target as HTMLInputElement).value)}
                                         class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                     />
                                     <input
                                         type="date"
                                         value={task.endDate}
-                                        onchange={(e) => updateTask(task.id, 'endDate', e.target.value)}
+                                        onchange={(e) => updateTask(task.id, 'endDate', (e.target as HTMLInputElement).value)}
                                         class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                     />
                                     <input
@@ -407,7 +408,7 @@
                                         min="0"
                                         max="100"
                                         value={task.progress}
-                                        onchange={(e) => updateTask(task.id, 'progress', parseInt(e.target.value) || 0)}
+                                        onchange={(e) => updateTask(task.id, 'progress', parseInt((e.target as HTMLInputElement).value) || 0)}
                                         class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                                     />
                                     <button
@@ -423,10 +424,10 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+                    <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
                     <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden" style="min-height: 500px">
                         <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
                             option={getChartOption()}
                             style="height: 500px; width: 100%"
                             notMerge={true}

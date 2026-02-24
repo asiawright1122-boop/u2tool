@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['step-line-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['step-line-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -70,9 +71,9 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
-  let fileInputRef = $state(null);
+  let fileInputRef = $state<HTMLInputElement | null>(null);
 
   function generateId() {
     const newId = `${baseId}-${idCounter}`;
@@ -81,7 +82,7 @@
   }
 
   function getChartOption() {
-    const colors = colorThemes[colorTheme];
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
     const categories = data.map(d => d.category);
     const values = data.map(d => d.value);
 
@@ -90,10 +91,10 @@
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'axis',
+        trigger: 'axis' as const as const as const as const,
       },
       legend: {
         show: showLegend,
@@ -108,14 +109,14 @@
         containLabel: true,
       },
       xAxis: {
-        type: 'category',
+        type: 'category' as const as const as const as const,
         data: categories,
         splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
         axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
         axisLabel: { color: chartTheme.axisLabelColor },
       },
       yAxis: {
-        type: 'value',
+        type: 'value' as const as const as const as const,
         splitLine: { show: showGrid, lineStyle: { color: chartTheme.splitLineColor } },
         axisLine: { show: true, lineStyle: { color: chartTheme.axisLineColor } },
         axisLabel: { color: chartTheme.axisLabelColor },
@@ -176,7 +177,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -216,7 +217,7 @@
     }
   }
   function handleCsvImport(event: Event) {
-    const file = event.target.files?.[0];
+    const file = (event.target as HTMLInputElement).files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
@@ -264,15 +265,15 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div class="space-y-4">
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input type="text" bind:value={chartTitle} class="tool-input" placeholder={t('chartTitlePlaceholder')} />
               </div>
               <div>
-                <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
-                <select value={colorTheme} onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes} class="tool-input">
+                <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                <select value={colorTheme} onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes} class="tool-input">
                   <option value="default">{t('themeDefault')}</option>
                   <option value="ocean">{t('themeOcean')}</option>
                   <option value="sunset">{t('themeSunset')}</option>
@@ -280,8 +281,8 @@
                 </select>
               </div>
               <div>
-                <label class="block text-sm font-medium mb-1">{t('stepPosition')}</label>
-                <select value={stepPosition} onchange={(e) => stepPosition = e.target.value as 'start' | 'middle' | 'end'} class="tool-input">
+                <label for="{t('stepPosition')}" class="block text-sm font-medium mb-1">{t('stepPosition')}</label>
+                <select value={stepPosition} onchange={(e) => stepPosition = (e.target as HTMLInputElement).value as 'start' | 'middle' | 'end'} class="tool-input">
                   <option value="start">{t('stepStart')}</option>
                   <option value="middle">{t('stepMiddle')}</option>
                   <option value="end">{t('stepEnd')}</option>
@@ -313,10 +314,10 @@
                   {#each data as row (row.id)}
 <tr  class="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
                       <td class="py-2 px-2">
-                        <input type="text" value={row.category} onchange={(e) => updateRow(row.id, 'category', e.target.value)} class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
+                        <input type="text" value={row.category} onchange={(e) => updateRow(row.id, 'category', (e.target as HTMLInputElement).value)} class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
                       </td>
                       <td class="py-2 px-2">
-                        <input type="number" value={row.value} onchange={(e) => updateRow(row.id, 'value', e.target.value)} class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
+                        <input type="number" value={row.value} onchange={(e) => updateRow(row.id, 'value', (e.target as HTMLInputElement).value)} class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm" />
                       </td>
                       <td class="py-2 px-2">
                         <button onclick={() => deleteRow(row.id)} class="text-red-400 hover:text-red-300 disabled:opacity-50" disabled={data.length <= 1}>✕</button>
@@ -330,10 +331,10 @@
         </div>
 
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-300 dark:border-gray-700 overflow-hidden bg-gray-100 dark:bg-gray-800" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
+              bind:this={chartRef as any} option={getChartOption()} style="height: 400px; width: 100%" notMerge={true}
               lazyUpdate={true}
             />
           </div>

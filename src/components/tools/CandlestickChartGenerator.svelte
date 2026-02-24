@@ -10,7 +10,7 @@
 
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['candlestick-chart-generator'] as Record<string, unknown> || {};
+    const scope = (translations['tools']['candlestick-chart-generator'] as Record<string, unknown>) || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +25,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   // Types
@@ -64,7 +65,7 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
   function calculateMA(dayCount: number) {
     const result: (number | '-')[] = [];
@@ -139,10 +140,10 @@
         text: chartTitle,
         left: 'center',
         top: 10,
-        textStyle: { fontSize: 16, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 16, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'axis',
+        trigger: 'axis' as const as const as const as const,
         axisPointer: { type: 'cross' },
         backgroundColor: chartTheme.tooltipBg,
         borderColor: chartTheme.tooltipBorder,
@@ -160,14 +161,14 @@
         top: 80,
       },
       xAxis: {
-        type: 'category',
+        type: 'category' as const as const as const as const,
         data: dates,
         axisLine: { lineStyle: { color: chartTheme.axisLineColor } },
         axisLabel: { color: chartTheme.axisLabelColor },
         splitLine: { show: false },
       },
       yAxis: {
-        type: 'value',
+        type: 'value' as const as const as const as const,
         scale: true,
         axisLine: { lineStyle: { color: chartTheme.axisLineColor } },
         axisLabel: { color: chartTheme.axisLabelColor },
@@ -209,7 +210,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -316,10 +317,10 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -330,7 +331,7 @@
 
               <div class="grid grid-cols-2 gap-2">
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('upColor')}</label>
+                  <label for="{t('upColor')}" class="block text-sm font-medium mb-1">{t('upColor')}</label>
                   <input
                     type="color"
                     bind:value={upColor}
@@ -338,7 +339,7 @@
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('downColor')}</label>
+                  <label for="{t('downColor')}" class="block text-sm font-medium mb-1">{t('downColor')}</label>
                   <input
                     type="color"
                     bind:value={downColor}
@@ -399,34 +400,34 @@
                     <input
                       type="date"
                       value={item.date}
-                      onchange={(e) => updateDataItem(index, 'date', e.target.value)}
+                      onchange={(e) => updateDataItem(index, 'date', (e.target as HTMLInputElement).value)}
                       class="tool-input text-xs"
                     />
                     <input
                       type="number"
                       value={item.open}
-                      onchange={(e) => updateDataItem(index, 'open', e.target.value)}
+                      onchange={(e) => updateDataItem(index, 'open', (e.target as HTMLInputElement).value)}
                       class="tool-input text-xs"
                       step="0.01"
                     />
                     <input
                       type="number"
                       value={item.close}
-                      onchange={(e) => updateDataItem(index, 'close', e.target.value)}
+                      onchange={(e) => updateDataItem(index, 'close', (e.target as HTMLInputElement).value)}
                       class="tool-input text-xs"
                       step="0.01"
                     />
                     <input
                       type="number"
                       value={item.low}
-                      onchange={(e) => updateDataItem(index, 'low', e.target.value)}
+                      onchange={(e) => updateDataItem(index, 'low', (e.target as HTMLInputElement).value)}
                       class="tool-input text-xs"
                       step="0.01"
                     />
                     <input
                       type="number"
                       value={item.high}
-                      onchange={(e) => updateDataItem(index, 'high', e.target.value)}
+                      onchange={(e) => updateDataItem(index, 'high', (e.target as HTMLInputElement).value)}
                       class="tool-input text-xs"
                       step="0.01"
                     />
@@ -446,10 +447,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}

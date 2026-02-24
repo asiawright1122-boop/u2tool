@@ -57,5 +57,5 @@
 /ar/tools/base64-encode /ar/tools/base64 301
 /ar/tools/base64-decode /ar/tools/base64 301
 
-# Root redirect to English homepage
-/ /en 302
+# Root redirect to English homepage (301 for SEO)
+# / /en 301

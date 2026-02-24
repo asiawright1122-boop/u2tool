@@ -94,7 +94,7 @@ const breadcrumbItems = [
 // ---------------------------------------------------------------------------
 // Structured data: SoftwareApplication
 // ---------------------------------------------------------------------------
-const BASE_URL = 'https://www.u2tool.com';
+const BASE_URL = import.meta.env.PUBLIC_SITE_URL || 'https://www.u2tool.com';
 
 const softwareAppData = {
   name: toolName,
@@ -244,7 +244,7 @@ for (const slug of relatedToolSlugs) {
   <meta property="og:title" content={`${seoTitle} | U2Tool`} slot="head" />
   <meta property="og:description" content={seoDescription} slot="head" />
   <meta property="og:image"
-    content={`${BASE_URL}/api/og?title=${encodeURIComponent(toolName)}&locale=${locale}&icon=${encodeURIComponent(tool.icon)}`}
+    content={`${BASE_URL}/og-default.svg`}
     slot="head"
   />
   <meta property="og:type" content="website" slot="head" />

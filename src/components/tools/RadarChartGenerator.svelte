@@ -8,16 +8,18 @@
 
   let { locale, translations }: Props = $props();
 
+  const translationsTyped = $derived(translations as Record<string, Record<string, unknown>>);
+
   // Translation helpers
   function t(key: string): string {
-    const scope = translations['tools']['radar-chart-generator'] as Record<string, unknown> || {};
+    const scope = translationsTyped['tools']?.['radar-chart-generator'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
     return typeof value === 'string' ? value : `MISSING: tools.radar-chart-generator.${key}`;
   }
   function tg(key: string): string {
-    const scope = translations['tools'] as Record<string, unknown> || {};
+    const scope = translationsTyped['tools'] as Record<string, unknown> || {};
     const keys = key.split('.');
     let value: unknown = scope;
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
@@ -25,7 +27,8 @@
   }
 
   // Imports
-  import EChartsWrapper, { type EChartsWrapperRef, type EChartsOption } from './EChartsWrapper.svelte';
+  import EChartsWrapper, { type EChartsWrapperRef } from './EChartsWrapper.svelte';
+  import type { EChartsOption } from "echarts";
   import { useChartTheme } from '@/hooks/useChartTheme';
 
   const colorThemes = {
@@ -83,9 +86,9 @@
 
   let timerRef = $state(null);
 
-  let chartRef = $state(null);
+  let chartRef = $state<{ getEchartsInstance?: () => any } | null>(null);
 
-  let fileInputRef = $state(null);
+  let fileInputRef = $state<HTMLInputElement | null>(null);
 
   function generateId() {
     const newId = `${baseId}-${idCounter}`;
@@ -93,18 +96,18 @@
     return newId;
   }
 
-  function getChartOption() {
-    const colors = colorThemes[colorTheme];
+  function getChartOption(): EChartsOption {
+    const colors = colorThemes[colorTheme as keyof typeof colorThemes];
 
     return {
       backgroundColor: chartTheme.backgroundColor,
       title: {
         text: chartTitle,
         left: 'center',
-        textStyle: { fontSize: 18, fontWeight: 'bold', color: chartTheme.textColor },
+        textStyle: { fontSize: 18, fontWeight: 'bold' as const, color: chartTheme.textColor },
       },
       tooltip: {
-        trigger: 'item',
+        trigger: 'item' as const,
       },
       legend: {
         show: showLegend,
@@ -116,7 +119,7 @@
       radar: {
         center: ['50%', showLegend ? '48%' : '55%'],
         radius: '65%',
-        shape: shape,
+        shape: shape as 'circle' | 'polygon',
         indicator: indicators.map(ind => ({
           name: ind.name,
           max: ind.max,
@@ -140,7 +143,7 @@
       },
       series: [
         {
-          type: 'radar',
+          type: 'radar' as const,
           data: series.map((s, index) => ({
             name: s.name,
             value: s.values,
@@ -156,7 +159,7 @@
           })),
         },
       ],
-    };
+    } as EChartsOption;
   }
 
   $effect(() => {
@@ -242,7 +245,7 @@
       return;
     }
     
-    const echartInstance = chartRef.getEchartsInstance();
+    const echartInstance = chartRef.getEchartsInstance?.();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
@@ -291,8 +294,43 @@
       chartTitle = t('chartTitle');
     }
   }
+
+  interface ParsedRadarData {
+    indicators: { name: string; max: number }[];
+    seriesData: { name: string; values: number[] }[];
+  }
+
+  function parseRadarCSV(csvText: string): ParsedRadarData | null {
+    const lines = csvText.trim().split('\n');
+    if (lines.length < 2) return null;
+    
+    const headerLine = lines[0];
+    const headers = headerLine.split(',').map(h => h.trim());
+    
+    if (headers.length < 2) return null;
+    
+    const indicatorNames = headers.slice(1);
+    const indicators: { name: string; max: number }[] = indicatorNames.map(name => ({
+      name,
+      max: 100,
+    }));
+    
+    const seriesData: { name: string; values: number[] }[] = [];
+    
+    for (let i = 1; i < lines.length; i++) {
+      const cols = lines[i].split(',').map(c => c.trim());
+      if (cols.length >= 2) {
+        const seriesName = cols[0];
+        const values = cols.slice(1).map(v => Number(v) || 0);
+        seriesData.push({ name: seriesName, values });
+      }
+    }
+    
+    return { indicators, seriesData };
+  }
+
   function handleCsvImport(event: Event) {
-    const file = event.target.files?.[0];
+    const file = (event.target as HTMLInputElement).files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
@@ -314,7 +352,7 @@
         indicators = newIndicators;
         series = newSeries;
         idCounter = idCounter + parsed.indicators.length + parsed.seriesData.length;
-        alert(t('csvImportSuccess', { count: parsed.indicators.length }));
+        alert(t('csvImportSuccess').replace('{count}', String(parsed.indicators.length)));
       } else {
         alert(t('csvImportError'));
       }
@@ -362,10 +400,10 @@
         <div class="space-y-4">
           <!-- 图表设置 -->
           <div>
-            <label class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
+            <label for="label-{t('chartsettings')}" class="block text-sm font-medium mb-2">{t('chartSettings')}</label>
             <div class="space-y-3 p-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               <div>
-                <label class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
+                <label for="{t('chartTitle')}" class="block text-sm font-medium mb-1">{t('chartTitle')}</label>
                 <input
                   type="text"
                   bind:value={chartTitle}
@@ -376,10 +414,10 @@
 
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
+                  <label for="{t('colorTheme')}" class="block text-sm font-medium mb-1">{t('colorTheme')}</label>
                   <select
                     value={colorTheme}
-                    onchange={(e) => colorTheme = e.target.value as keyof typeof colorThemes}
+                    onchange={(e) => colorTheme = (e.target as HTMLInputElement).value as keyof typeof colorThemes}
                     class="tool-input"
                   >
                     <option value="default">{t('themeDefault')}</option>
@@ -389,10 +427,10 @@
                   </select>
                 </div>
                 <div>
-                  <label class="block text-sm font-medium mb-1">{t('shape')}</label>
+                  <label for="{t('shape')}" class="block text-sm font-medium mb-1">{t('shape')}</label>
                   <select
                     value={shape}
-                    onchange={(e) => shape = e.target.value as 'polygon' | 'circle'}
+                    onchange={(e) => shape = (e.target as HTMLInputElement).value as 'polygon' | 'circle'}
                     class="tool-input"
                   >
                     <option value="polygon">{t('shapePolygon')}</option>
@@ -402,14 +440,14 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-1">{t('fillOpacity')}: {fillOpacity}</label>
+                <label for="{t('fillOpacity')}: {fillOpacity}" class="block text-sm font-medium mb-1">{t('fillOpacity')}: {fillOpacity}</label>
                 <input
                   type="range"
                   min="0"
                   max="1"
                   step="0.1"
                   value={fillOpacity}
-                  onchange={(e) => fillOpacity = Number(e.target.value)}
+                  onchange={(e) => fillOpacity = Number((e.target as HTMLInputElement).value)}
                   class="w-full"
                 />
               </div>
@@ -431,7 +469,7 @@
           <!-- 指标编辑器 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium">{t('indicatorEditor')}</label>
+              <span class="text-sm font-medium">{t('indicatorEditor')}</span>
               <button onclick={addIndicator} class="btn-secondary btn-sm">
                 + {t('addIndicator')}
               </button>
@@ -453,7 +491,7 @@
                         <input
                           type="text"
                           value={ind.name}
-                          onchange={(e) => updateIndicator(index, 'name', e.target.value)}
+                          onchange={(e) => updateIndicator(index, 'name', (e.target as HTMLInputElement).value)}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
@@ -461,7 +499,7 @@
                         <input
                           type="number"
                           value={ind.max}
-                          onchange={(e) => updateIndicator(index, 'max', e.target.value)}
+                          onchange={(e) => updateIndicator(index, 'max', (e.target as HTMLInputElement).value)}
                           class="w-full px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
@@ -484,7 +522,7 @@
           <!-- 数据系列编辑器 -->
           <div>
             <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-medium">{t('dataEditor')}</label>
+              <span class="text-sm font-medium">{t('dataEditor')}</span>
               <button onclick={addSeries} class="btn-secondary btn-sm">
                 + {t('addSeries')}
               </button>
@@ -510,7 +548,7 @@
                         <input
                           type="text"
                           value={s.name}
-                          onchange={(e) => updateSeriesName(s.id, e.target.value)}
+                          onchange={(e) => updateSeriesName(s.id, (e.target as HTMLInputElement).value)}
                           class="w-24 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                         />
                       </td>
@@ -519,7 +557,7 @@
                           <input
                             type="number"
                             value={val}
-                            onchange={(e) => updateSeriesValue(s.id, index, Number(e.target.value) || 0)}
+                            onchange={(e) => updateSeriesValue(s.id, index, Number((e.target as HTMLInputElement).value) || 0)}
                             class="w-16 px-2 py-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded text-gray-900 dark:text-gray-100 text-sm"
                           />
                         </td>
@@ -543,10 +581,10 @@
 
         <!-- 右侧：图表预览 -->
         <div>
-          <label class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
+          <label for="label-{t('chartpreview')}" class="block text-sm font-medium mb-2">{t('chartPreview')}</label>
           <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="min-height: 400px">
             <EChartsWrapper
-              bind:this={chartRef}
+              bind:this={chartRef as any}
               option={getChartOption()}
               style="height: 400px; width: 100%"
               notMerge={true}
