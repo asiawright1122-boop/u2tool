@@ -161,7 +161,7 @@
 </script>
 
 <div class="relative flex-1 max-w-md mx-4">
-  <div class="relative">
+  <div class="relative flex items-center">
     <input
       type="text"
       bind:this={searchInputRef}
@@ -170,22 +170,26 @@
       onkeydown={handleKeydown}
       onfocus={handleFocus}
       onblur={handleBlur}
-      placeholder={t('placeholder')}
-      class="w-full h-9 pl-9 pr-4 text-sm rounded-lg border border-gray-200 dark:border-gray-700
+      class="w-full h-9 pl-4 pr-24 text-sm rounded-lg border border-gray-200 dark:border-gray-700
              bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white
-             placeholder-gray-500 dark:placeholder-gray-400
              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
              transition-all duration-200"
     />
-    <Icon.Search class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-    {#if searchQuery}
-      <button
-        onclick={() => { searchQuery = ''; isOpen = false; }}
-        class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-      >
-        <Icon.X class="w-4 h-4" />
-      </button>
-    {/if}
+    <button
+      onclick={() => {
+        const results = searchResults();
+        if (results.length > 0) {
+          navigateToTool(results[0].slug);
+        } else if (searchQuery.trim()) {
+          loadToolsIndex();
+        }
+      }}
+      class="absolute right-1 top-1/2 -translate-y-1/2 h-7 px-3 rounded-md bg-blue-500 hover:bg-blue-600 
+             text-white text-sm font-medium transition-colors flex items-center gap-1"
+    >
+      <Icon.Search class="w-4 h-4" />
+      <span>搜索</span>
+    </button>
   </div>
 
   {#if isOpen}
