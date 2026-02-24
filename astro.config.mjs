@@ -1,9 +1,11 @@
 import { defineConfig } from 'astro/config';
 import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
+import cloudflare from '@astrojs/cloudflare';
 // https://astro.build/config
 export default defineConfig({
-  output: 'static',
+  output: 'server',
+  adapter: cloudflare(),
   site: 'https://www.u2tool.com',
 
   integrations: [
