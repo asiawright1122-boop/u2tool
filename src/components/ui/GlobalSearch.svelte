@@ -1,0 +1,232 @@
+<script lang="ts">
+  /**
+   * GlobalSearch.svelte
+   *
+   * Global search component with natural language search support.
+   * Searches tools by name, description, and category.
+   */
+  import { getLocalizedPath } from '@/lib/i18n';
+  import type { Locale } from '@/lib/i18n';
+  import * as Icon from 'lucide-svelte';
+
+  interface Props {
+    locale: string;
+    translations?: Record<string, unknown>;
+  }
+
+  let { locale, translations = {} }: Props = $props();
+
+  interface ToolIndex {
+    slug: string;
+    name: string;
+    description: string;
+    category: string;
+    categoryName: string;
+  }
+
+  let toolsIndex = $state<ToolIndex[]>([]);
+  let searchQuery = $state('');
+  let isOpen = $state(false);
+  let selectedIndex = $state(0);
+  let searchInputRef: HTMLInputElement | undefined = $state();
+  let isLoading = $state(false);
+
+  const translationsTyped = $derived(translations as Record<string, Record<string, unknown>>);
+
+  function t(key: string): string {
+    const scope = translationsTyped['search'] as Record<string, unknown> || {};
+    const keys = key.split('.');
+    let value: unknown = scope;
+    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
+    return typeof value === 'string' ? value : key;
+  }
+
+  async function loadToolsIndex() {
+    if (toolsIndex.length > 0) return;
+    
+    isLoading = true;
+    try {
+      const response = await fetch(`/${locale}/tools-index.json`);
+      if (response.ok) {
+        toolsIndex = await response.json();
+      }
+    } catch (error) {
+      console.error('Failed to load tools index:', error);
+    } finally {
+      isLoading = false;
+    }
+  }
+
+  $effect(() => {
+    if (isOpen && toolsIndex.length === 0) {
+      loadToolsIndex();
+    }
+  });
+
+  interface SearchResult {
+    slug: string;
+    name: string;
+    description: string;
+    category: string;
+    categoryName: string;
+    score: number;
+  }
+
+  const searchResults = $derived(() => {
+    if (!searchQuery.trim() || toolsIndex.length === 0) return [];
+
+    const query = searchQuery.toLowerCase().trim();
+    const results: SearchResult[] = [];
+
+    for (const tool of toolsIndex) {
+      let score = 0;
+      const nameLower = tool.name.toLowerCase();
+      const descLower = tool.description.toLowerCase();
+      const categoryLower = tool.categoryName.toLowerCase();
+
+      if (nameLower.includes(query)) {
+        score += 100;
+        if (nameLower.startsWith(query)) score += 50;
+      }
+
+      if (descLower.includes(query)) {
+        score += 30;
+      }
+
+      if (categoryLower.includes(query)) {
+        score += 20;
+      }
+
+      const queryWords = query.split(/\s+/);
+      for (const word of queryWords) {
+        if (nameLower.includes(word)) score += 10;
+        if (descLower.includes(word)) score += 5;
+        if (categoryLower.includes(word)) score += 3;
+      }
+
+      if (score > 0) {
+        results.push({
+          slug: tool.slug,
+          name: tool.name,
+          description: tool.description,
+          category: tool.category,
+          categoryName: tool.categoryName,
+          score
+        });
+      }
+    }
+
+    return results.sort((a, b) => b.score - a.score).slice(0, 8);
+  });
+
+  function handleInput() {
+    isOpen = searchQuery.trim().length > 0;
+    selectedIndex = 0;
+  }
+
+  function handleKeydown(e: KeyboardEvent) {
+    const results = searchResults();
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      selectedIndex = Math.min(selectedIndex + 1, results.length - 1);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      selectedIndex = Math.max(selectedIndex - 1, 0);
+    } else if (e.key === 'Enter' && results[selectedIndex]) {
+      e.preventDefault();
+      navigateToTool(results[selectedIndex].slug);
+    } else if (e.key === 'Escape') {
+      isOpen = false;
+      searchInputRef?.blur();
+    }
+  }
+
+  function navigateToTool(slug: string) {
+    const toolPath = getLocalizedPath(locale as Locale, `/tools/${slug}`);
+    window.location.href = toolPath;
+  }
+
+  function handleFocus() {
+    if (searchQuery.trim().length > 0) {
+      isOpen = true;
+    }
+  }
+
+  function handleBlur() {
+    setTimeout(() => {
+      isOpen = false;
+    }, 200);
+  }
+</script>
+
+<div class="relative flex-1 max-w-md mx-4">
+  <div class="relative">
+    <input
+      type="text"
+      bind:this={searchInputRef}
+      bind:value={searchQuery}
+      oninput={handleInput}
+      onkeydown={handleKeydown}
+      onfocus={handleFocus}
+      onblur={handleBlur}
+      placeholder={t('placeholder')}
+      class="w-full h-9 pl-9 pr-4 text-sm rounded-lg border border-gray-200 dark:border-gray-700
+             bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white
+             placeholder-gray-500 dark:placeholder-gray-400
+             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+             transition-all duration-200"
+    />
+    <Icon.Search class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+    {#if searchQuery}
+      <button
+        onclick={() => { searchQuery = ''; isOpen = false; }}
+        class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+      >
+        <Icon.X class="w-4 h-4" />
+      </button>
+    {/if}
+  </div>
+
+  {#if isOpen}
+    <div class="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 
+                border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg 
+                overflow-hidden z-50">
+      {#if isLoading}
+        <div class="px-4 py-3 text-sm text-gray-500 dark:text-gray-400 text-center">
+          Loading...
+        </div>
+      {:else if searchResults().length > 0}
+        <ul class="py-1 max-h-80 overflow-y-auto">
+          {#each searchResults() as result, index}
+            <li>
+              <button
+                onclick={() => navigateToTool(result.slug)}
+                class="w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700
+                       {index === selectedIndex ? 'bg-gray-100 dark:bg-gray-700' : ''}"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-sm text-gray-900 dark:text-white">
+                    {result.name}
+                  </span>
+                  <span class="text-xs text-gray-500 dark:text-gray-400">
+                    {result.categoryName}
+                  </span>
+                </div>
+                {#if result.description}
+                  <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-1">
+                    {result.description}
+                  </p>
+                {/if}
+              </button>
+            </li>
+          {/each}
+        </ul>
+      {:else if searchQuery.trim().length > 0}
+        <div class="px-4 py-3 text-sm text-gray-500 dark:text-gray-400 text-center">
+          {t('noResults')}
+        </div>
+      {/if}
+    </div>
+  {/if}
+</div>
