@@ -49,6 +49,10 @@
       const response = await fetch(`/${locale}/tools-index.json`);
       if (response.ok) {
         toolsIndex = await response.json();
+        // Auto-open results after loading if there's a query
+        if (searchQuery.trim()) {
+          isOpen = true;
+        }
       }
     } catch (error) {
       console.error('Failed to load tools index:', error);
@@ -119,12 +123,30 @@
     return results.sort((a, b) => b.score - a.score).slice(0, 8);
   });
 
-  function handleInput() {
-    isOpen = searchQuery.trim().length > 0;
-    selectedIndex = 0;
+  function handleSearchClick() {
+    const results = searchResults();
+    if (results.length > 0) {
+      navigateToTool(results[0].slug);
+    } else if (searchQuery.trim() && toolsIndex.length === 0) {
+      loadToolsIndex();
+    }
   }
 
-  function handleKeydown(e: KeyboardEvent) {
+  let currentResults = $derived(searchResults());
+ 
+   function handleInput() {
+     if (searchQuery.trim().length > 0) {
+       isOpen = true;
+       if (toolsIndex.length === 0) {
+         loadToolsIndex();
+       }
+     } else {
+       isOpen = false;
+     }
+     selectedIndex = 0;
+   }
+
+   function handleKeydown(e: KeyboardEvent) {
     const results = searchResults();
 
     if (e.key === 'ArrowDown') {
@@ -176,14 +198,7 @@
              transition-all duration-200"
     />
     <button
-      onclick={() => {
-        const results = searchResults();
-        if (results.length > 0) {
-          navigateToTool(results[0].slug);
-        } else if (searchQuery.trim()) {
-          loadToolsIndex();
-        }
-      }}
+      onclick={handleSearchClick}
       class="absolute right-1 top-1/2 -translate-y-1/2 h-7 px-3 rounded-md bg-blue-500 hover:bg-blue-600 
              text-white text-sm font-medium transition-colors flex items-center gap-1"
     >
