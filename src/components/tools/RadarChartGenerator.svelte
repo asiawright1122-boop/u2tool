@@ -252,24 +252,6 @@
     }
     
     const url = echartInstance.getDataURL({
-      type: format,
-      pixelRatio: 2,
-      backgroundColor: chartTheme.backgroundColor,
-    });
-    
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `chart.${format}`;
-    link.click();
-  }
-    
-    const echartInstance = chartRef.getEchartsInstance?.();
-    if (!echartInstance) {
-      console.warn('ECharts instance not ready');
-      return;
-    }
-    
-    const url = echartInstance.getDataURL({
       type: format === 'svg' ? 'svg' : 'png',
       pixelRatio: 2,
       backgroundColor: chartTheme.backgroundColor,

@@ -255,24 +255,6 @@
     link.download = `chart.${format}`;
     link.click();
   }
-    
-    const echartInstance = chartRef.getEchartsInstance?.();
-    if (!echartInstance) {
-      console.warn('ECharts instance not ready');
-      return;
-    }
-    
-    const url = echartInstance.getDataURL({
-      type: format === 'svg' ? 'svg' : 'png',
-      pixelRatio: 2,
-      backgroundColor: chartTheme.backgroundColor,
-    });
-
-    const link = document.createElement('a');
-    link.download = `heatmap-chart-${Date.now()}.${format}`;
-    link.href = url;
-    link.click();
-  }
   function loadSampleData() {
     const hours = ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'];
     const days = [t('sampleData.mon'), t('sampleData.tue'), t('sampleData.wed'), t('sampleData.thu'), t('sampleData.fri'), t('sampleData.sat'), t('sampleData.sun')];
