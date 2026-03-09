@@ -190,12 +190,12 @@
     return ((currentValue / prevValue) * 100).toFixed(1) + '%';
   }
   function exportChart(format: 'png' | 'svg') {
-    if (!chartRef.current) {
+    if (!chartRef) {
       console.warn('Chart ref not available');
       return;
     }
     
-    const echartInstance = chartRef.current.getEchartsInstance();
+    const echartInstance = chartRef?.getEchartsInstance?.();
     if (!echartInstance) {
       console.warn('ECharts instance not ready');
       return;
