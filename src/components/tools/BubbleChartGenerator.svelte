@@ -235,23 +235,6 @@
     link.download = `chart.${format}`;
     link.click();
   }
-        
-        const echartInstance = chartRef?.getEchartsInstance();
-        if (!echartInstance) {
-            console.warn('ECharts instance not ready');
-            return;
-        }
-        
-        const url = echartInstance.getDataURL({
-            type: format,
-            pixelRatio: 2,
-            backgroundColor: chartTheme.backgroundColor,
-        });
-        const link = document.createElement('a');
-        link.download = `bubble-chart-${Date.now()}.${format}`;
-        link.href = url;
-        link.click();
-    }
   function clearData() {
         if (confirm(t('confirmClear'))) {
             series = [{
