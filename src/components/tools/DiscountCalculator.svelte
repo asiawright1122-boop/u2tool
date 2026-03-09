@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { calculateDiscount, DiscountResult } from '@/lib/calculator-utils';
+  import { calculateDiscount, type DiscountResult } from '@/lib/calculator-utils';
 
   let originalPrice = $state('100');
 

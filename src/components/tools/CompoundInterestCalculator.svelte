@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { calculateCompoundInterest, CompoundInterestResult } from '@/lib/calculator-utils';
+  import { calculateCompoundInterest, type CompoundInterestResult } from '@/lib/calculator-utils';
 
   let principal = $state('10000');
 

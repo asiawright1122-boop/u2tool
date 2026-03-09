@@ -16,8 +16,63 @@ export const GET: APIRoute = () => {
 User-agent: *
 Allow: /
 
+# AI Crawlers - Allow for AI citation and training
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: BingBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
 # Sitemap
 Sitemap: ${BASE_URL}/sitemap.xml
+
+# AI LLM discovery
+Sitemap: ${BASE_URL}/llms.txt
 
 # Disallow admin/api paths
 Disallow: /api/

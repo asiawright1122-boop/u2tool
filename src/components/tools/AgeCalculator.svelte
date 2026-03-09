@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { calculateAge, AgeResult } from '@/lib/calculator-utils';
+  import { calculateAge, type AgeResult } from '@/lib/calculator-utils';
 
   let birthDate = $state('');
 

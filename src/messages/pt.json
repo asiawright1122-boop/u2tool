@@ -1232,7 +1232,21 @@
         "Desenvolvedor backend integrando uma API que retorna dados em JSON com um microserviço escrito em Elixir que utiliza TOML para armazenar parâmetros de conexão.",
         "Arquiteto de dados migrando metadados de datasets armazenados em múltiplos arquivos TOML para um repositório centralizado em JSON, mantendo hierarquias complexas intactas."
       ],
-      "minified": "Minificado"
+      "minified": "Minificado",
+      "faqs": [
+        {
+          "q": "O que é TOML?",
+          "a": "TOML (Tom's Obvious, Minimal Language) é um formato de arquivo de configuração mínimo para arquivos de configuração."
+        },
+        {
+          "q": "Por que converter TOML para JSON?",
+          "a": "JSON é mais amplamente suportado e pode ser usado em muitas linguagens de programação e ferramentas."
+        },
+        {
+          "q": "Esta ferramenta é gratuita?",
+          "a": "Sim, é completamente gratuita e não requer registro."
+        }
+      ]
     },
     "json-to-java": {
       "className": "Nome da Classe",

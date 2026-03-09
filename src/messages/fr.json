@@ -1232,7 +1232,21 @@
         "Une équipe DevOps automatise la conversion de fichiers de configuration Kubernetes (YAML) vers JSONnet via TOML comme format intermédiaire",
         "Un ingénieur données transforme des logs structurés en JSON Lines vers TOML pour une meilleure lisibilité humaine dans un rapport"
       ],
-      "minified": "Minifié"
+      "minified": "Minifié",
+      "faqs": [
+        {
+          "q": "Qu'est-ce que TOML ?",
+          "a": "TOML (Tom's Obvious, Minimal Language) est un format de fichier de configuration minimal pour les fichiers de configuration."
+        },
+        {
+          "q": "Pourquoi convertir TOML en JSON ?",
+          "a": "JSON est plus largement pris en charge et peut être utilisé dans de nombreux langages de programmation et outils."
+        },
+        {
+          "q": "Cet outil est-il gratuit ?",
+          "a": "Oui, il est entièrement gratuit et ne nécessite aucune inscription."
+        }
+      ]
     },
     "json-to-java": {
       "className": "Nom de la classe",

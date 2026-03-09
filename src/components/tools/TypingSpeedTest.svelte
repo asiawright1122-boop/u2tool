@@ -16,7 +16,7 @@
   }
 
   // Imports
-  import { calculateTypingStats, TypingTestResult } from '@/lib/calculator-utils';
+  import { calculateTypingStats, type TypingTestResult } from '@/lib/calculator-utils';
 
   let sampleTexts = $derived(({
     easy: [

@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { calculateTip, TipResult } from '@/lib/calculator-utils';
+  import { calculateTip, type TipResult } from '@/lib/calculator-utils';
 
   let billAmount = $state('50');
 

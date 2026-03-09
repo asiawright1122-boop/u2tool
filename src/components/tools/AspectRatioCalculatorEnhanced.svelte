@@ -16,7 +16,7 @@
   }
 
   // Imports
-  import { calculateAspectRatio, calculateDimensionFromRatio, AspectRatioResult } from '@/lib/calculator-utils';
+  import { calculateAspectRatio, calculateDimensionFromRatio, type AspectRatioResult } from '@/lib/calculator-utils';
 
   let width = $state('1920');
 

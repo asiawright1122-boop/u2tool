@@ -8,7 +8,20 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "astro check"
+    "check": "astro check",
+    "cleanup:temp-files": "npx tsx scripts/cleanup/cleanup-temp-files.ts",
+    "cleanup:dry-run": "npx tsx scripts/cleanup/cleanup-temp-files.ts --dry-run",
+    "spec:list": "npx tsx scripts/spec-lifecycle/list-active-specs.ts",
+    "spec:archive": "npx tsx scripts/spec-lifecycle/archive-spec.ts",
+    "spec:archive-all": "npx tsx scripts/spec-lifecycle/archive-all-completed.ts",
+    "fix:types": "npx tsx scripts/type-fixes/fix-type-imports.ts",
+    "validate:fixes": "npx tsx scripts/validation/validate-historical-fixes.ts",
+    "health:check": "npx tsx scripts/maintenance/check-project-health.ts",
+    "build:analyze": "npx tsx scripts/build-optimization/analyze-build.ts",
+    "perf:benchmark": "npx tsx scripts/performance/benchmark.ts run",
+    "perf:compare": "npx tsx scripts/performance/benchmark.ts compare",
+    "deps:audit": "npx tsx scripts/dependency-audit/audit-dependencies.ts",
+    "hooks:install": "npx tsx scripts/git-hooks/install-hooks.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.0",
@@ -42,7 +55,15 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^25.3.5",
     "@types/qrcode": "^1.5.6",
+    "depcheck": "^1.4.7",
+    "fast-check": "^4.6.0",
+    "fs-extra": "^11.3.4",
+    "glob": "^13.0.6",
+    "ignore": "^7.0.5",
+    "puppeteer": "^24.38.0",
     "tailwindcss": "^4.1.0",
     "ts-morph": "^27.0.2",
     "vitest": "^4.0.18"

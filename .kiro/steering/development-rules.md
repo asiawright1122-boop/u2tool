@@ -674,3 +674,215 @@ window.__perfMonitor.printReport()  // 查看性能报告
 - `src/components/tools/ToolWrapper.tsx` - 优化的工具包装器
 - `.kiro/specs/page-unresponsive-fix/` - 完整 SPEC 文档
 
+
+
+---
+
+## 🗂️ 十、文件管理规范
+
+### 10.1 临时文件处理原则
+
+1. **禁止提交临时文件**
+   - 修复脚本：`fix_*.sh`, `fix_*.js`
+   - 测试文件：`test_*.js`, `test_*.ts`
+   - 临时文件：`temp_*`, `*.tmp`, `*.bak`
+   - 数字文件名：`0`, `1`, `2` 等
+
+2. **临时文件归档流程**
+   - 运行 `npm run cleanup:dry-run` 预览要归档的文件
+   - 运行 `npm run cleanup:temp-files` 执行归档
+   - 文件会移动到 `archive/temp-files/{date}/`
+   - 自动生成归档清单 `MANIFEST.md`
+
+3. **何时清理临时文件**
+   - 完成功能开发后
+   - 提交代码前
+   - 定期维护（每周/每月）
+
+### 10.2 文件命名规范
+
+1. **脚本文件**
+   - 使用描述性名称：`analyze-build.ts`, `check-spec-status.ts`
+   - 避免通用名称：`script.ts`, `util.ts`
+   - 使用 kebab-case 命名
+
+2. **避免的文件名**
+   - 单个字符或数字：`0`, `a`, `x`
+   - 通用前缀：`new_`, `old_`, `backup_`
+   - 日期后缀：`file_20240101.ts`
+
+---
+
+## 📦 十一、Spec 生命周期管理
+
+### 11.1 Spec 归档时机
+
+1. **何时归档 Spec**
+   - 所有任务都已完成（100% 进度）
+   - 功能已上线并稳定运行
+   - 不再需要频繁修改
+
+2. **归档前检查**
+   - 运行 `npm run spec:list` 查看所有 Spec 状态
+   - 确认任务完成度为 100%
+   - 确认所有文档都已更新
+
+### 11.2 Spec 归档流程
+
+1. **单个 Spec 归档**
+   ```bash
+   npm run spec:archive .kiro/specs/feature-name
+   ```
+
+2. **批量归档所有已完成的 Spec**
+   ```bash
+   npm run spec:archive-all
+   ```
+
+3. **归档位置**
+   - Feature Spec: `.kiro/specs/archive/feature/{year}/`
+   - Bugfix Spec: `.kiro/specs/archive/bugfix/{year}/`
+   - 自动更新归档索引 `ARCHIVE_INDEX.md`
+
+### 11.3 Spec 文档要求
+
+1. **必需文件**
+   - `requirements.md` 或 `bugfix.md` - 需求文档
+   - `design.md` - 设计文档
+   - `tasks.md` - 任务列表
+   - `.config.kiro` - 配置文件
+
+2. **任务格式**
+   - 使用 Markdown checkbox 语法
+   - `- [ ]` 未开始
+   - `- [-]` 进行中
+   - `- [x]` 已完成
+
+---
+
+## ✅ 十二、代码提交检查清单
+
+### 12.1 提交前必做检查
+
+```bash
+# 1. 清理临时文件
+npm run cleanup:temp-files
+
+# 2. 运行代码检查
+npm run lint
+
+# 3. 运行测试
+npm run test -- --run
+
+# 4. 验证历史修复
+npm run validate:fixes
+
+# 5. 检查项目健康
+npm run health:check
+```
+
+### 12.2 Git Hooks
+
+项目配置了 pre-commit hook，会自动检查：
+
+1. **临时文件检查**
+   - 阻止提交临时文件
+   - 提示使用 `git reset HEAD <file>` 取消暂存
+
+2. **调试代码检查**
+   - 警告 `console.log` 语句
+   - 阻止提交 `debugger` 语句
+
+3. **代码质量检查**
+   - 运行 ESLint 检查暂存的文件
+   - 不允许有 ESLint 错误
+
+4. **跳过检查**
+   ```bash
+   git commit --no-verify  # 仅在紧急情况下使用
+   ```
+
+### 12.3 安装 Git Hooks
+
+```bash
+npm run hooks:install
+```
+
+---
+
+## 📊 十三、项目维护命令
+
+### 13.1 文件清理
+
+```bash
+# 预览要清理的文件
+npm run cleanup:dry-run
+
+# 执行清理
+npm run cleanup:temp-files
+```
+
+### 13.2 Spec 管理
+
+```bash
+# 列出所有活跃的 Spec
+npm run spec:list
+
+# 归档单个 Spec
+npm run spec:archive .kiro/specs/feature-name
+
+# 归档所有已完成的 Spec
+npm run spec:archive-all
+```
+
+### 13.3 代码质量
+
+```bash
+# 修复类型导入
+npm run fix:types
+
+# 验证历史修复
+npm run validate:fixes
+
+# 检查项目健康
+npm run health:check
+```
+
+### 13.4 构建优化
+
+```bash
+# 分析构建产物
+npm run build:analyze
+```
+
+### 13.5 性能监控
+
+```bash
+# 运行性能基准测试
+npm run perf:benchmark
+
+# 对比性能变化
+npm run perf:compare
+```
+
+### 13.6 依赖审计
+
+```bash
+# 运行依赖审计
+npm run deps:audit
+```
+
+---
+
+## 🔄 十四、更新日志
+
+- **2026-03-09**: 添加文件管理规范、Spec 生命周期管理和代码提交检查清单
+- **2026-01-23**: ECharts 图表工具懒加载优化 - 修复 42 个图表组件的"页面无响应"问题，创建 EChartsWrapper 实现真正的懒加载
+- **2026-01-23**: 全面修复 React Hooks 依赖问题 - 修复 88 处翻译函数依赖，分析 41 个内存泄漏误报
+- **2026-01-22 (第四次修复)**: 添加 ECharts exportChart 函数的防御性检查，修复运行时错误
+- **2026-01-22 (第三次修复)**: 批量修复所有 48 个 ECharts 图表工具的 React Hooks 依赖项问题
+- **2026-01-16**: 全面优化 - 清理临时文件、添加环境检查日志、补全所有工具 FAQ（394 个工具 100% 覆盖）
+- **2025-01-07**: 创建综合开发规则文档
+- **2025-01-06**: 修复 Google Search Console 报告的问题
+- **2025-01-05**: 修复 SEO 重复标题问题
+- **2025-01-04**: 修复翻译键缺失问题

@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { performBinaryOperation, validateBinary, BinaryResult } from '@/lib/calculator-utils';
+  import { performBinaryOperation, validateBinary, type BinaryResult } from '@/lib/calculator-utils';
 
   // Types
   type Operation = 'add' | 'subtract' | 'multiply' | 'divide' | 'and' | 'or' | 'xor' | 'not' | 'leftShift' | 'rightShift';

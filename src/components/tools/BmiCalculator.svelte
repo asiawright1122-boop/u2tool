@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { calculateBmi, BmiResult } from '@/lib/calculator-utils';
+  import { calculateBmi, type BmiResult } from '@/lib/calculator-utils';
 
   let weight = $state('70');
 

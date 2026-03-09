@@ -1232,7 +1232,21 @@
         "Ein Data Scientist standardisiert Rohdaten aus einer JSON-API in TOML, um sie mit Python-Skripten zu verarbeiten, die TOML als natives Konfigurationsformat nutzen",
         "Ein SRE-Team migriert Legacy-JSON-ConfigMaps in TOML, um sie in Kubernetes-Cluster mit spezifischen Formatvorgaben für ConfigMaps einzuspielen"
       ],
-      "minified": "Minimiert"
+      "minified": "Minimiert",
+      "faqs": [
+        {
+          "q": "Was ist TOML?",
+          "a": "TOML (Tom's Obvious, Minimal Language) ist ein minimales Konfigurationsdateiformat für Konfigurationsdateien."
+        },
+        {
+          "q": "Warum TOML in JSON konvertieren?",
+          "a": "JSON wird breiter unterstützt und kann in vielen Programmiersprachen und Tools verwendet werden."
+        },
+        {
+          "q": "Ist dieses Tool kostenlos?",
+          "a": "Ja, es ist völlig kostenlos und erfordert keine Registrierung."
+        }
+      ]
     },
     "json-to-java": {
       "className": "Class Name",
@@ -2208,6 +2222,20 @@
         "Ein Systemadministrator formatiert eine 100MB große server.xml Konfigurationsdatei mit Einzugstiefe 4 und deaktiviert Kommentarentfernung zur besseren Lesbarkeit.",
         "Ein Data Engineer minifiziert XML-Daten für eine AWS Lambda-Funktion, um die Payload-Größenbeschränkung von 6MB einzuhalten.",
         "Ein QA-Tester analysiert ein von einem IoT-Gerät generiertes XML-Dokument auf Syntaxfehler nach einem Firmware-Update, das nicht escapte Umlaute enthält."
+      ],
+      "faqs": [
+        {
+          "q": "Was ist XML-Formatierung?",
+          "a": "XML-Formatierung ist der Prozess, XML-Code lesbar und gut strukturiert zu machen."
+        },
+        {
+          "q": "Warum XML formatieren?",
+          "a": "Formatiertes XML ist einfacher zu lesen, zu debuggen und zu warten."
+        },
+        {
+          "q": "Ist dieses Tool sicher?",
+          "a": "Ja, alle Verarbeitungen erfolgen in Ihrem Browser und Daten werden nicht übertragen."
+        }
       ]
     },
     "chinese-converter": {

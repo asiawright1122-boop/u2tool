@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { calculateLoan, LoanResult } from '@/lib/calculator-utils';
+  import { calculateLoan, type LoanResult } from '@/lib/calculator-utils';
 
   let principal = $state('100000');
 

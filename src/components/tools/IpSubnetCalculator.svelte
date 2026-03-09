@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { calculateSubnet, validateIpAddress, validateSubnetMask, SubnetResult } from '@/lib/calculator-utils';
+  import { calculateSubnet, validateIpAddress, validateSubnetMask, type SubnetResult } from '@/lib/calculator-utils';
 
   let ipAddress = $state('192.168.1.100');
 

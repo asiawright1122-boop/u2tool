@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
-  import * as echarts from 'echarts';
   import type { EChartsOption, ECharts as EChartsInstance } from 'echarts';
 
   export { type EChartsOption };
@@ -37,32 +36,47 @@
   let containerEl: HTMLDivElement;
   let chartInstance: EChartsInstance | undefined;
   let resizeObserver: ResizeObserver | undefined;
+  let isLoading = $state(true);
+  let loadError = $state<string | null>(null);
 
   export function getEchartsInstance(): EChartsInstance | undefined {
     return chartInstance;
   }
 
-  onMount(() => {
+  onMount(async () => {
     if (!containerEl) return;
-    chartInstance = echarts.init(containerEl, theme);
-    chartInstance.setOption(option, notMerge, lazyUpdate);
+    
+    try {
+      // 动态导入 echarts（懒加载）
+      const echartsModule = await import('echarts');
+      const echarts = echartsModule.default || echartsModule;
+      
+      isLoading = false;
+      
+      chartInstance = echarts.init(containerEl, theme);
+      chartInstance.setOption(option, notMerge, lazyUpdate);
 
-    if (onChartReady) onChartReady(chartInstance);
+      if (onChartReady) onChartReady(chartInstance);
 
-    if (onEvents) {
-      for (const [eventName, handler] of Object.entries(onEvents)) {
-        chartInstance.on(eventName, handler);
+      if (onEvents) {
+        for (const [eventName, handler] of Object.entries(onEvents)) {
+          chartInstance.on(eventName, handler);
+        }
       }
-    }
 
-    if (showLoading) {
-      chartInstance.showLoading('default', loadingOption);
-    }
+      if (showLoading) {
+        chartInstance.showLoading('default', loadingOption);
+      }
 
-    resizeObserver = new ResizeObserver(() => {
-      chartInstance?.resize();
-    });
-    resizeObserver.observe(containerEl);
+      resizeObserver = new ResizeObserver(() => {
+        chartInstance?.resize();
+      });
+      resizeObserver.observe(containerEl);
+    } catch (error) {
+      console.error('Failed to load ECharts:', error);
+      loadError = 'Failed to load chart library';
+      isLoading = false;
+    }
   });
 
   // Update chart when option changes
@@ -92,4 +106,18 @@
   });
 </script>
 
-<div bind:this={containerEl} class={className} {style}></div>
+{#if isLoading}
+  <div class={className} {style}>
+    <div class="flex items-center justify-center h-full">
+      <div class="text-gray-500">Loading chart...</div>
+    </div>
+  </div>
+{:else if loadError}
+  <div class={className} {style}>
+    <div class="flex items-center justify-center h-full">
+      <div class="text-red-500">{loadError}</div>
+    </div>
+  </div>
+{:else}
+  <div bind:this={containerEl} class={className} {style}></div>
+{/if}

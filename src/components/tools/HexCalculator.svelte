@@ -23,7 +23,7 @@
   }
 
   // Imports
-  import { performHexOperation, validateHex, HexResult } from '@/lib/calculator-utils';
+  import { performHexOperation, validateHex, type HexResult } from '@/lib/calculator-utils';
 
   // Types
   type Operation = 'add' | 'subtract' | 'multiply' | 'divide' | 'and' | 'or' | 'xor' | 'not';
