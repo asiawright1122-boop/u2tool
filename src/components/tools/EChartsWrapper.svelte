@@ -106,18 +106,16 @@
   });
 </script>
 
-{#if isLoading}
-  <div class={className} {style}>
-    <div class="flex items-center justify-center h-full">
+<!-- 图表容器始终渲染，保证 onMount 时 containerEl 可用；loading/error 以覆盖层显示 -->
+<div class="relative {className}" style={style}>
+  <div bind:this={containerEl} class="w-full h-full min-h-[400px]"></div>
+  {#if isLoading}
+    <div class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
       <div class="text-gray-500">Loading chart...</div>
     </div>
-  </div>
-{:else if loadError}
-  <div class={className} {style}>
-    <div class="flex items-center justify-center h-full">
+  {:else if loadError}
+    <div class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
       <div class="text-red-500">{loadError}</div>
     </div>
-  </div>
-{:else}
-  <div bind:this={containerEl} class={className} {style}></div>
-{/if}
+  {/if}
+</div>
