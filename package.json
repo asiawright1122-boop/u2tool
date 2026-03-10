@@ -21,7 +21,8 @@
     "perf:benchmark": "npx tsx scripts/performance/benchmark.ts run",
     "perf:compare": "npx tsx scripts/performance/benchmark.ts compare",
     "deps:audit": "npx tsx scripts/dependency-audit/audit-dependencies.ts",
-    "hooks:install": "npx tsx scripts/git-hooks/install-hooks.ts"
+    "hooks:install": "npx tsx scripts/git-hooks/install-hooks.ts",
+    "validate:sitemap": "npx tsx scripts/validate-sitemap-fix.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.0",
